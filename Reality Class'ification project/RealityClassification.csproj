@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <StartupObject>RealityClassificationProject.PossibilityClassification</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="{Meaning}.cs" />
+    <Compile Include="{Idea}.cs" />
+    <Compile Include="StateVector.cs" />
+    <Compile Include="FieldMath.cs" />
+    <Compile Include="GeometryVisualizer.cs" />
+    <Compile Include="IOperationMode.cs" />
+    <Compile Include="Optimism.cs" />
+    <Compile Include="Pessimism.cs" />
+    <Compile Include="PossibilityClassification.cs" />
+  </ItemGroup>
+
+</Project>
