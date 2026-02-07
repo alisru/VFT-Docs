@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellenic Procedural Plotter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .greek-input { font-size: 2rem; text-align: center; }
+        .hegemony-bg { background-color: #1a1a1a; }
+        .plot-path {
+            stroke-width: 4;
+            stroke-linecap: round;
+            fill: none;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s ease-out forwards;
+        }
+        @keyframes dash { to { stroke-dashoffset: 0; } }
+        .axis-label { font-size: 10px; fill: #a0a0a0; }
+        .instruction-log { font-family: 'Courier New', Courier, monospace; font-size: 0.8rem; background-color: #111; border: 1px solid #4a4a4a; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-2xl text-center">
+        <h1 class="text-3xl font-bold text-cyan-400 mb-2">Hellenic Procedural Plotter</h1>
+        <p class="text-gray-400 mb-6">Procedurally decoding Greek characters into graphical instructions.</p>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <label for="greekInput" class="block text-lg font-medium text-gray-300 mb-2">Enter any Greek Character:</label>
+            <input type="text" id="greekInput" maxlength="1" class="greek-input w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition" placeholder="α, β, γ...">
+        </div>
+
+        <div id="resultContainer" class="mt-6 bg-gray-800 p-6 rounded-lg shadow-lg text-left hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-yellow-400 mb-2">Decoding Log:</h2>
+                    <pre id="instruction-log" class="instruction-log p-2 rounded-md h-48 overflow-y-auto"></pre>
+                </div>
+                <div class="flex justify-center items-center">
+                    <svg id="hegemony-svg" width="200" height="200" viewBox="0 0 100 100" class="hegemony-bg rounded-md">
+                        <path d="M50 0 V100 M0 50 H100" stroke="#4a4a4a" stroke-width="0.5"/>
+                        <text x="50" y="8" class="axis-label" text-anchor="middle">+ψ</text>
+                        <text x="50" y="96" class="axis-label" text-anchor="middle">-ψ</text>
+                        <text x="8" y="54" class="axis-label" text-anchor="start">+υ</text>
+                        <text x="92" y="54" class="axis-label" text-anchor="end">-υ</text>
+                        <g id="plot-layer"></g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const greekInput = document.getElementById('greekInput');
+        const resultContainer = document.getElementById('resultContainer');
+        const plotLayer = document.getElementById('plot-layer');
+        const instructionLog = document.getElementById('instruction-log');
+
+        // Database of geometric properties, now including procedural rules
+        const letterGeometry = {
+            'Α': { baseline: 'high', path: 'M20 80 L50 20 L80 80 M35 60 H65' }, 'α': { baseline: 'mid', path: 'M70 80 C40 80 40 40 70 40 V80' },
+            'Β': { baseline: 'high', path: 'M20 20 V80 H50 C80 65 80 35 50 20 H20 M20 50 H50' }, 'β': { baseline: 'low', path: 'M30 10 V90 H50 C80 75 80 45 50 30 H30' },
+            'Γ': { baseline: 'high', path: 'M20 20 H80 V80' }, 'γ': { baseline: 'low', path: 'M20 30 C20 60 70 60 70 30 V90 C20 90 20 60 20 60' },
+            'Δ': { baseline: 'high', path: 'M50 20 L20 80 H80 Z' }, 'δ': { baseline: 'mid', path: 'M50 80 V20 C80 20 80 50 50 50 C20 50 20 20 50 20' },
+            'Ε': { baseline: 'high', path: 'M20 20 V80 M20 20 H80 M20 50 H70 M20 80 H80' }, 'ε': { baseline: 'mid', path: 'M80 50 C20 50 20 70 50 70 S80 60 80 40 C20 40 20 20 50 20' },
+            'Ζ': { baseline: 'high', path: 'M20 20 H80 L20 80 H80' }, 'ζ': { baseline: 'low', path: 'M20 20 H80 L40 50 C20 80 80 80 60 90' },
+            'Η': { baseline: 'high', path: 'M20 20 V80 M80 20 V80 M20 50 H80' }, 'η': { baseline: 'mid', path: 'M30 80 V20 H80' },
+            'Θ': { baseline: 'high', path: 'M50 50 m-30 0 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0 M20 50 H80', procedural: 'cancellation', resolvedPath: 'M20 20 V80 M80 20 V80 M20 50 H80', meaning: 'Bounded System -> Stable Structure' }, 
+            'θ': { baseline: 'mid', path: 'M50 50 m-20 0 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0 M30 50 H70', procedural: 'cancellation', resolvedPath: 'M30 30 V70 M70 30 V70 M30 50 H70', meaning: 'Contained Observation -> Connection' },
+            'Ι': { baseline: 'high', path: 'M50 20 V80' }, 'ι': { baseline: 'mid', path: 'M50 40 V60' },
+            'Κ': { baseline: 'high', path: 'M20 20 V80 M80 20 L40 50 L80 80' }, 'κ': { baseline: 'mid', path: 'M30 40 V80 M60 40 L40 60 L60 80' },
+            'Λ': { baseline: 'high', path: 'M20 80 L50 20 L80 80' }, 'λ': { baseline: 'high', path: 'M30 20 L70 80 M30 80 L70 20' },
+            'Μ': { baseline: 'high', path: 'M20 80 V20 L50 50 L80 20 V80' }, 'μ': { baseline: 'low', path: 'M30 90 V40 C30 20 50 20 50 40 V80' },
+            'Ν': { baseline: 'high', path: 'M20 80 V20 L80 80 V20' }, 'ν': { baseline: 'mid', path: 'M20 60 C40 30 60 30 80 60' },
+            'Ξ': { baseline: 'high', path: 'M20 20 H80 M20 50 H80 M20 80 H80' }, 'ξ': { baseline: 'low', path: 'M70 20 C40 20 40 40 70 40 S40 60 70 60 C40 80 40 90 20 90' },
+            'Ο': { baseline: 'high', path: 'M50 50 m-30 0 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0' }, 'ο': { baseline: 'mid', path: 'M50 60 m-15 0 a15 15 0 1 0 30 0 a15 15 0 1 0 -30 0' },
+            'Π': { baseline: 'high', path: 'M20 80 V20 H80 V80' }, 'π': { baseline: 'mid', path: 'M30 80 V40 H70 V80' },
+            'Ρ': { baseline: 'high', path: 'M20 80 V20 H60 C80 30 80 40 60 50 H20' }, 'ρ': { baseline: 'mid', path: 'M30 80 V40 C60 40 60 60 30 60' },
+            'Σ': { baseline: 'high', path: 'M80 20 H20 L50 50 L20 80 H80' }, 'σ': { baseline: 'mid', path: 'M70 45 C40 45 40 65 70 65 H30' }, 'ς': { baseline: 'low', path: 'M50 40 C80 40 80 60 50 60 C20 80 20 90 40 90' },
+            'Τ': { baseline: 'high', path: 'M50 20 V80 M20 20 H80' }, 'τ': { baseline: 'mid', path: 'M50 80 V40 C20 40 20 60 50 60' },
+            'Υ': { baseline: 'high', path: 'M20 20 L50 50 L80 20 M50 50 V80' }, 'υ': { baseline: 'mid', path: 'M20 40 C20 60 50 80 50 80 S80 60 80 40' },
+            'Φ': { baseline: 'high', path: 'M50 50 m-25 0 a25 25 0 1 0 50 0 a25 25 0 1 0 -50 0 M50 10 V90', procedural: 'cancellation', resolvedPath: 'M30 80 C80 80 20 20 70 20', meaning: 'Unified Whole -> Dynamic Flux'}, 
+            'φ': { baseline: 'mid', path: 'M50 50 m-20 0 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0 M30 10 L70 90', procedural: 'cancellation', resolvedPath: 'M30 80 C80 80 20 20 70 20', meaning: 'Philosophy / Process' },
+            'Χ': { baseline: 'high', path: 'M20 20 L80 80 M80 20 L20 80' }, 'χ': { baseline: 'mid', path: 'M20 80 C40 40 60 40 80 80' },
+            'Ψ': { baseline: 'high', path: 'M20 50 L50 20 L80 50 M50 20 V80' }, 'ψ': { baseline: 'low', path: 'M20 40 C20 60 50 80 50 80 S80 60 80 40 M50 80 V95' },
+            'Ω': { baseline: 'high', path: 'M20 80 C20 40 80 40 80 80 M20 80 H35 M80 80 H65' }, 'ω': { baseline: 'mid', path: 'M20 60 C20 40 80 40 80 60 S20 80 20 60' },
+        };
+
+        function proceduralDecode(char) {
+            plotLayer.innerHTML = '';
+            instructionLog.textContent = 'Decoding...\n';
+            resultContainer.classList.remove('hidden');
+
+            const geometry = letterGeometry[char];
+            if (!geometry) {
+                instructionLog.textContent = `No geometric data for '${char}'`;
+                return;
+            }
+            
+            let log = `Character: ${char}\nBaseline: ${geometry.baseline}\n\n`;
+            let pathToPlot = geometry.path;
+
+            // Universal procedural rule for cancellation
+            if (geometry.procedural === 'cancellation') {
+                 log += `PROCEDURAL RULE: CANCELLATION\n`;
+                 log += `1. Start with composite shape (${char}).\n`;
+                 log += `2. Identify intersecting lines.\n`;
+                 log += `3. Rule: Overlapping lines negate space.\n`;
+                 log += `4. System resolves into a new, stable path.\n\n`;
+                 log += `CONCEPT: ${geometry.meaning}\n`;
+                 pathToPlot = geometry.resolvedPath; // Use the resolved path for plotting
+            }
+
+            // 1. Get Path Data from the path string to plot
+            const pathNode = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            pathNode.setAttribute("d", pathToPlot);
+            const pathLength = pathNode.getTotalLength();
+            const pointCount = Math.ceil(pathLength / 2); 
+
+            let instructions = [];
+            for (let i = 0; i <= pointCount; i++) {
+                const point = pathNode.getPointAtLength((i / pointCount) * pathLength);
+                instructions.push({ x: point.x, y: point.y });
+            }
+
+            // 2. Read Right-to-Left for conceptual processing
+            if (instructions.length > 0) {
+                 instructions.reverse();
+            }
+
+            // 3. Generate log from instructions (if not a special case)
+             if (geometry.procedural !== 'cancellation' && instructions.length > 0) {
+                log += `START AT (${instructions[0].x.toFixed(0)}, ${instructions[0].y.toFixed(0)})\n`;
+                instructions.slice(1).forEach(p => {
+                    let x_instr = 'none';
+                    let y_instr = 'none';
+                    let z_instr = geometry.baseline === 'low' ? 'active' : 'assumed';
+
+                    if (p.y < 40) y_instr = '+ψ';
+                    else if (p.y > 60) y_instr = '-ψ';
+                    else y_instr = 'neutral-ψ';
+
+                    if (p.x < 40) x_instr = '+υ';
+                    else if (p.x > 60) x_instr = '-υ';
+                    else x_instr = 'neutral-υ';
+                    
+                    log += `-> Plot to (${p.x.toFixed(0)}, ${p.y.toFixed(0)}): [υ:${x_instr}, ψ:${y_instr}, Z:${z_instr}]\n`;
+                });
+            }
+            
+            instructionLog.textContent = log;
+            
+            // 4. Plot on Hegemony
+            if(instructions.length > 0) {
+                let plotCommands = 'M ' + instructions[0].x.toFixed(1) + ',' + instructions[0].y.toFixed(1) + ' ';
+                instructions.slice(1).forEach(p => {
+                     plotCommands += 'L ' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ' ';
+                });
+
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path.setAttribute('d', plotCommands);
+                path.setAttribute('class', 'plot-path');
+                path.setAttribute('stroke', '#60A5FA');
+                plotLayer.appendChild(path);
+            }
+        }
+
+        greekInput.addEventListener('input', () => {
+            if (greekInput.value) {
+                proceduralDecode(greekInput.value.charAt(0));
+            } else {
+                resultContainer.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -12,7 +12,7 @@
 "Stringybark and greenhide, that will never fail yer!" — **Folk Song / Bush Notion** (c. 1870s).
 "I had to make the most of my drawings on a boiler plate... and one rainy night a pig capsized them." — **R.B. Smith** (Inventor of Stump Jump Plough, 1876).
 
-    The Australian "Method" begins with material improvisation, defined not by abundance but by the necessary use of what is at hand in a hostile environment. The universal axiom of the bush mechanic is captured in "Stringybark and Greenhide"—using raw, untreated biological materials to repair the complex industrial machinery of the empire, a practice necessitated by the tyranny of distance.
+    The "Bricoleur" (Handyman/Improviser) is the central agent of Australian method, born of the Tyranny of Distance. Lawson's "Drover's Wife" became the archetype: a woman alone in the bush, fighting snakes, floods, and fire with whatever tools she had. The early settler could not wait six months for spare parts from London, so they used "stringybark and greenhide" to fix the broken wagon on the spot. This created a "Rough and Ready" competence that prioritized function over form.
 
     This establishes **The Bricoleur** as the **Survivor of Material Scarcity**. Unlike the European engineer who demands strict adherence to the blueprint and specialized materials, the Australian Bricoleur accepts the "Boiler Plate" as a canvas and the "Stringybark" as a piston. It prioritizes function over form and survival over perfection, creating a national methodology where the capacity to "make do" is valued higher than the capacity to "do it right." The Bricoleur does not conquer the land with imported technology; he subverts the technology to fit the land.
 

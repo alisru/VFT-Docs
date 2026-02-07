@@ -12,10 +12,8 @@
 
 **(Cause.Who.Who) The Convict**; "We left our country for our country's good." - George Barrington (Attrib.). *Prologue spoken at the opening of the Sydney Theatre*, 16 January 1796.
 
-    This verse, long attributed to the famous Irish pickpocket-turned-colonist, became the sardonic epigraph of convict Australia—a gallows-humor claim that transportation was a favor to the Mother Country. The First Fleet of 1788 carried not pilgrims seeking religious freedom, but prisoners exiled for crimes against property. Unlike the American "City upon a Hill," the Australian origin is a "Chain upon a Leg"—a forced migration of the unwanted, the poor, and the criminal.
-
-    This establishes a foundation born not of Choice but of Compulsion, not of Aspiration but of Expulsion.
-
+    This verse, long attributed to the famous Irish pickpocket-turned-colonist, became the sardonic epigraph of convict Australia—a gallows-humor claim that transportation was a favor to the Mother Country. The First Fleet of 1788 carried not pilgrims seeking religious freedom, but prisoners exiled for crimes against property. Unlike the American "City upon a Hill," the Australian origin is a "Chain upon a Leg"—a forced migration of the unwanted, the poor, and the criminal. This establishes a foundation born not of Choice but of Compulsion, not of Aspiration but of Expulsion.
+    
     This establishes **Reluctance** as the ancestral trait of the Australian agent. The "Who" of the Cause did not come here to build a Utopia; they were sent here as punishment. This inverts the American model entirely: the Origin is Shame, not Glory. It creates a permanent anxiety about "Respectability"—the drive to prove we are *not* the criminals our ancestors were. The Convict-stain drives the "Over-correction" into suburban morality, where conformity proves we have washed clean. We were not Founders; we were Foundlings, abandoned by the Mother Country.
 
 **(Cause.Who.What) The Colonizer**; "I have the honour to inform your Lordship that I have this day taken possession of this territory in the Name of His Majesty King George the Third." - Captain James Cook. *Journal Entry*, Possession Island, Torres Strait, 22 August 1770.
@@ -146,9 +144,9 @@
 
     This establishes **Decency** as the definition of the Cause. The "Why" of the economy is the well-being of the worker, not the wealth of the owner. The Cause includes a social contract: if you work, you shall live. This value places Australia in the "Social Democratic" tradition, where the State actively shapes the market to prevent exploitation. It is the opposite of *laissez-faire*. We believe in a fair day's pay.
 
-**(Cause.What.How) Compulsory Voting**; "It is the duty of every elector to record a valid vote at each election." - *Commonwealth Electoral Act 1924
-
-    *, Section 245, introduced by the Bruce Government to combat declining voter turnout (which had dropped to 59% in 1922). Australia became one of the first democracies to mandate voting—punishable by fine—and has maintained turnout above 90% ever since. Australia is one of the few democracies where voting is mandatory, with fines for non-compliance. This was introduced not as an act of idealism, but to combat voter apathy and boost turnout for the governing party. Its effect, however, was to create a culture of near-universal participation.
+**(Cause.What.How) Compulsory Voting**; "It is the duty of every elector to record a valid vote at each election." - *Commonwealth Electoral Act 1924*, Section 245, introduced by the Bruce Government to combat declining voter turnout (which had dropped to 59% in 1922).
+    
+    Australia became one of the first democracies to mandate voting—punishable by fine—and has maintained turnout above 90% ever since. Australia is one of the few democracies where voting is mandatory, with fines for non-compliance. This was introduced not as an act of idealism, but to combat voter apathy and boost turnout for the governing party. Its effect, however, was to create a culture of near-universal participation.
 
     This establishes **Participation** as the method of the Rule. The "How" of democracy is not a "Right" (which can be ignored) but a "Duty" (which must be performed). The Cause forces the Citizen to be a Citizen. This ensures that governments are elected by the actual majority, not just the motivated minority. It dampens extremism by forcing parties to appeal to the disengaged "Middle." The Ballot is a job requirement, not a gift.
 
@@ -177,9 +175,9 @@
 
 ### Sense 6.4: The Why of the Foundation (Cause.Why)
 
-**(Cause.Why.Who) Survival**; "Everything in Australia bites, stings, or wants to kill you." - Popular contemporary axiom, capturing the enduring relationship between settler and continent. The First Fleet nearly starved in 1788
-
-    -1790; the Second Fleet arrived to find the colonists dying. Australia was not merely inconvenient—it was actively lethal to immigrants unfamiliar with its rhythms. The first years of the colony were marked by near-starvation, with the Second Fleet arriving to find the First Fleet dying. The "Why" of the early settlers was not wealth or freedom, but simply the avoidance of death. The continent was not hostile in theory; it was hostile in fact.
+**(Cause.Why.Who) Survival**; "Everything in Australia bites, stings, or wants to kill you." - Popular contemporary axiom, capturing the enduring relationship between settler and continent. The First Fleet nearly starved in 1788-1790; the Second Fleet arrived to find the colonists dying.
+    
+    Australia was not merely inconvenient—it was actively lethal to immigrants unfamiliar with its rhythms. The first years of the colony were marked by near-starvation, with the Second Fleet arriving to find the First Fleet dying. The "Why" of the early settlers was not wealth or freedom, but simply the avoidance of death. The continent was not hostile in theory; it was hostile in fact.
 
     This establishes **Endurance** as the biological drive of the Cause. The "Who" survived because they had no choice. The "Why" is the simple refusal to die. This value anchors the Australian character in stoicism, the "She'll be right" attitude that assumes you will get through because you must. The land shapes the psyche by testing it repeatedly. The first victory is simply being alive tomorrow.
 
@@ -201,15 +199,15 @@
 
     This establishes **Equity** as the abstract drive of the Cause. The "Why" is not "Freedom" (American) or "Fraternity" (French) but "Fairness" (Australian). The Fair Go assumes that outcomes should be roughly equal, that no one should be too rich or too poor. It is suspicious of both aristocracy and radical leveling. The drive is towards "Enough," not "Everything." We want a fair share, not the whole pie.
 
-**(Cause.Why.How) Mateship**; "Stick to your mates through thick and thin." - Henry Lawson, oft-paraphrased. Lawson's bush poetry and short stories (1890
-
-    s-1920s) codified the ethic of mutual support forged in the isolation of the Outback, where survival depended on reciprocity. Mateship was not sentimental friendship; it was a survival contract—you help me shear, I help you fight your bushfire. The "How" of survival in the bush was mutual support. You could not survive alone; the sheer hostility of the environment demanded cooperation. Mateship was not sentimental friendship; it was a survival contract. You help me fence my paddock; I help you fight your bushfire.
+**(Cause.Why.How) Mateship**; "Stick to your mates through thick and thin." - Henry Lawson, oft-paraphrased. Lawson's bush poetry and short stories (1890s-1920s) codified the ethic of mutual support forged in the isolation of the Outback, where survival depended on reciprocity.
+    
+    Mateship was not sentimental friendship; it was a survival contract—you help me shear, I help you fight your bushfire. The "How" of survival in the bush was mutual support. You could not survive alone; the sheer hostility of the environment demanded cooperation. Mateship was not sentimental friendship; it was a survival contract. You help me fence my paddock; I help you fight your bushfire.
 
     This establishes **Solidarity** as the method of the historical drive. The "Why" is enacted through the "How" of mutual aid. The loneliness of the landscape forced a bonding that transcended class. The rich man and the poor man are equals when the flood comes. Mateship is the horizontal force that holds the disparate population together against the vastness. It is the secular religion of the bush.
 
-**(Cause.Why.Cause) Populate or Perish**; "We must populate or we shall perish." - Commonly attributed to Prime Minister Billy Hughes, though the exact phrase may derive from post-WWI political rhetoric more broadly, c. 1919
-
-    -1920. With fewer than 5 million people scattered across a continent the size of the contiguous United States, the fear of an "empty" land being seized by populous Asian neighbors drove a century of immigration policy. The fear of an empty continent being seized by a populous Asia drove a century of immigration policy. With fewer than 10 million people scattered across a landmass the size of the continental US, the nation felt vulnerable. The "Cause of the Why" was fear of the North.
+**(Cause.Why.Cause) Populate or Perish**; "We must populate or we shall perish." - Commonly attributed to Prime Minister Billy Hughes, though the exact phrase may derive from post-WWI political rhetoric more broadly, c. 1919-1920.
+    
+    With fewer than 5 million people scattered across a continent the size of the contiguous United States, the fear of an "empty" land being seized by populous Asian neighbors drove a century of immigration policy. The fear of an empty continent being seized by a populous Asia drove a century of immigration policy. With fewer than 10 million people scattered across a landmass the size of the continental US, the nation felt vulnerable. The "Cause of the Why" was fear of the North.
 
     This establishes **Anxiety** as the underlying trigger of the Cause. The "Why" of the population drive is the Fear of Invasion. The empty interior is not a luxury; it is a vulnerability. This anxiety justifies the Immigration Policy (bring in more people to fill the space) and the Defence Policy (build a military to defend the coast). The nation lives in permanent fear of the map—too much space, too few people. The cause of the growth is the fear of the void.
 
@@ -232,9 +230,9 @@
 
 ### Sense 6.5: The How of the Foundation (Cause.How)
 
-**(Cause.How.Who) The Bushman**; "There was movement at the station, for the word had passed around / That the colt from old Regret had got away." - A.B. "Banjo" Paterson. *The Man from Snowy River*, first published in *The Bulletin*, Sydney, 1890
-
-    , later collected in *The Man from Snowy River and Other Verses*, 1895. Paterson mythologized the rural horseman as the archetypal Australian—practical, laconic, and able to ride where others would not dare. Paterson's poem mythologized the rural horseman as the archetypal Australian, the man who could ride "where the wild scrub horses are." The Bushman was the practical, laconic, self-sufficient figure who could survive anything the land threw at him. He was the "How" of the early population—the method of surviving the interior.
+**(Cause.How.Who) The Bushman**; "There was movement at the station, for the word had passed around / That the colt from old Regret had got away." - A.B. "Banjo" Paterson. *The Man from Snowy River*, first published in *The Bulletin*, Sydney, 1890, later collected in *The Man from Snowy River and Other Verses*, 1895.
+    
+    Paterson mythologized the rural horseman as the archetypal Australian—practical, laconic, and able to ride where others would not dare. Paterson's poem mythologized the rural horseman as the archetypal Australian, the man who could ride "where the wild scrub horses are." The Bushman was the practical, laconic, self-sufficient figure who could survive anything the land threw at him. He was the "How" of the early population—the method of surviving the interior.
 
     This establishes **Self-Reliance** as the method of the Cause. The "Who" survived by "How"—by being able to do everything themselves. The Bushman is the Generalist who can shear, muster, build, and fight. He relies on no one because there is no one to rely on. This value creates a permanent suspicion of "Experts" and a preference for "Common Sense" and practical skill. The Foundation was built by people who could "Make Do."
 
@@ -244,15 +242,15 @@
 
     This establishes **Collective Action** as the method of the Cause. The "What" of the economic structure is not just individual Battling but organized Resistance. The Method of securing the Fair Go was the withdrawal of labor. The Strike is the foundational tool of Australian democracy, proving that the worker has a veto on the economy. The Labor Party is the political child of the Shearers' Strike; the union hall is the other side of the Town Hall.
 
-**(Cause.How.Where) The Bush (as Method)**; "With stringybark and greenhide, our fathers conquered all." - *The Eumerella Shore*, anonymous colonial folk song, collected c. 1860
-
-    s. The song celebrates bush improvisation—stringybark (eucalyptus bark) and greenhide (raw cattle hide) could be fashioned into roofs, rope, saddles, and almost anything else when no shops or specialists existed within a hundred miles. The method of survival in the bush was improvisation—making tools, buildings, and solutions out of whatever was at hand. Stringybark (the bark of the eucalyptus) and greenhide (raw cattle hide) could be fashioned into almost anything, from roofs to rope.
+**(Cause.How.Where) The Bush (as Method)**; "With stringybark and greenhide, our fathers conquered all." - *The Eumerella Shore*, anonymous colonial folk song, collected c. 1860s.
+    
+    The song celebrates bush improvisation—stringybark (eucalyptus bark) and greenhide (raw cattle hide) could be fashioned into roofs, rope, saddles, and almost anything else when no shops or specialists existed within a hundred miles. The method of survival in the bush was improvisation—making tools, buildings, and solutions out of whatever was at hand. Stringybark (the bark of the eucalyptus) and greenhide (raw cattle hide) could be fashioned into almost anything, from roofs to rope.
 
     This establishes **Improvisation** as the spatial method of the Cause. The "Where" of the Bush demanded the "How" of the Hack. There were no shops, no specialists, no supply chains. You made it yourself, or you went without. This value creates a culture that admires the "rough fix" over the polished product, the person who can "have a go" without formal training. We build the nation with baling wire and duct tape.
 
-**(Cause.How.Why) The Secret Ballot**; "The ballot shall be prepared in a room to which no scrutineer shall have access, and... the elector shall alone enter the compartment." - *Electoral Act 1856
-
-    * (Victoria), the first legislation in the world to mandate truly secret voting. The "Victorian Ballot" (later known as the "Australian Ballot") was exported to Britain, the United States, and most democracies, ending the era when landlords could see how their tenants voted. Victoria was the first place in the world to implement the secret ballot for elections, ending the era of open voting where landlords could see how their tenants voted. It was quietly revolutionary, protecting the "Why" (the private vote) from the "Who" (the powerful).
+**(Cause.How.Why) The Secret Ballot**; "The ballot shall be prepared in a room to which no scrutineer shall have access, and... the elector shall alone enter the compartment." - *Electoral Act 1856* (Victoria), the first legislation in the world to mandate truly secret voting.
+    
+    The "Victorian Ballot" (later known as the "Australian Ballot") was exported to Britain, the United States, and most democracies, ending the era when landlords could see how their tenants voted. Victoria was the first place in the world to implement the secret ballot for elections, ending the era of open voting where landlords could see how their tenants voted. It was quietly revolutionary, protecting the "Why" (the private vote) from the "Who" (the powerful).
 
     This establishes **Privacy** as the method of democracy. The "How" of the vote is concealment—we hide our choice from the powerful. The Secret Ballot is the Australian gift to democracy, exported to Britain and the United States under the name "Australian Ballot." It proves that significant progress can happen without fanfare or revolution. The method is quiet, not dramatic. We protect the powerless by hiding their thoughts.
 
@@ -262,9 +260,9 @@
 
     This establishes **Umpiring** as the method of the method. The "How" of the economy is not the "Law of the Jungle" but the "Judge in the Middle." The State inserts itself between the contending parties to ensure fairness. This is the institutional expression of the Fair Go—someone is watching to make sure no one cheats. The Australian method is to referee the fight, not just let it happen. We prefer managed conflict to open war.
 
-**(Cause.How.Cause) The Colonial Secretary's Office**; "From the Right Honourable the Secretary of State for the Colonies, Downing Street, London." - Standard heading on all dispatches from Whitehall to the Australian colonies, 1788
-
-    -1901. For 113 years, every significant decision required approval from London via multi-month sailing voyages, creating a culture of waiting for permission and managing upwards to the distant power. For 113 years, Australia was governed by instructions sent from London. Every significant decision had to be approved by the Colonial Office, creating a culture of waiting for permission, deferring to authority, and managing upwards to the distant power.
+**(Cause.How.Cause) The Colonial Secretary's Office**; "From the Right Honourable the Secretary of State for the Colonies, Downing Street, London." - Standard heading on all dispatches from Whitehall to the Australian colonies, 1788-1901.
+    
+    For 113 years, every significant decision required approval from London via multi-month sailing voyages, creating a culture of waiting for permission and managing upwards to the distant power. For 113 years, Australia was governed by instructions sent from London. Every significant decision had to be approved by the Colonial Office, creating a culture of waiting for permission, deferring to authority, and managing upwards to the distant power.
 
     This establishes **Deference** as the inherited method of the Cause. The "How" was to ask permission, to wait for the dispatch, to follow the instructions from above. This explains the paradox of Australian anti-authoritarianism: we mock authority while meekly following its rules. The colonial habit of looking to London has been replaced by looking to Washington or Beijing. We resist symbolically but comply structurally.
 
@@ -343,9 +341,9 @@
 
 ### Sense 6.7: The Effect of the Foundation (Cause.Effect)
 
-**(Cause.Effect.Who) The Digger (Myth)**; "The Australian soldier is different from all others... the independent, self-reliant man who had to use his initiative." - Charles Edwin Woodrow Bean. *The Official History of Australia in the War of 1914
-
-    -1918*, Australian War Memorial, 1921-1942. Bean, the official war correspondent and historian, almost single-handedly created the ANZAC Legend, elevating the men of Gallipoli from enlisted soldiers to secular saints. The immediate elevation of the Anzac soldier from "Enlisted Man" to "National Saint" created a secular pantheon to replace the kings we rejected. We needed a human face for the abstract Cause, so we turned the men of Gallipoli into marble statues.
+**(Cause.Effect.Who) The Digger (Myth)**; "The Australian soldier is different from all others... the independent, self-reliant man who had to use his initiative." - Charles Edwin Woodrow Bean. *The Official History of Australia in the War of 1914-1918*, Australian War Memorial, 1921-1942.
+    
+    Bean, the official war correspondent and historian, almost single-handedly created the ANZAC Legend, elevating the men of Gallipoli from enlisted soldiers to secular saints. The immediate elevation of the Anzac soldier from "Enlisted Man" to "National Saint" created a secular pantheon to replace the kings we rejected. We needed a human face for the abstract Cause, so we turned the men of Gallipoli into marble statues.
 
     This establishes **Mythologization** as the personal result of the Cause. The "Who" becomes a Statue, stopping being a flawed human and becoming a "Principle made Flesh." The Cause produces a Pantheon of heroes that we worship on the 25th of April. We cannot separate the Man from the Myth. The Digger is to Australia what the Minuteman is to America—the human avatar of the national value.
 
@@ -355,15 +353,15 @@
 
     This establishes **Sanctification** as the spatial result of the Cause. The "Where" becomes Sacred Ground; we go there to commune with the Spirit of the Nation. The Cause writes itself in stone, ensuring that the memory cannot be easily eroded by time. The Memorial is the Wailing Wall of the Australian soul, where we acknowledge the cost of our existence.
 
-**(Cause.Effect.Where) The Suburban House**; "The Great Australian Dream is to own your own home." - Universal phrase codifying the post-WWII aspiration. The freestanding house on a quarter-acre block became the standard unit of Australian settlement from the 1950
-
-    s onward, spreading across the coastal plains in vast low-density sprawl—the spatial embodiment of the Fair Go achieved. The result of the Fair Go and the Living Wage was a population of homeowners. The freestanding house on a quarter-acre block became the standard unit of Australian settlement, spreading across the coastal plains in a vast low-density sprawl.
+**(Cause.Effect.Where) The Suburban House**; "The Great Australian Dream is to own your own home." - Universal phrase codifying the post-WWII aspiration. The freestanding house on a quarter-acre block became the standard unit of Australian settlement from the 1950s onward, spreading across the coastal plains in vast low-density sprawl—the spatial embodiment of the Fair Go achieved.
+    
+    The result of the Fair Go and the Living Wage was a population of homeowners. The freestanding house on a quarter-acre block became the standard unit of Australian settlement, spreading across the coastal plains in a vast low-density sprawl.
 
     This establishes **Privatization** as the geographic result of the Cause. The Effect of the foundation is the Retreat into the private. The nation withdraws from the public square into the fenced backyard. The House is the Castle, the physical embodiment of the Fair Go achieved. We measure success in real estate, and the nation is built one mortgage at a time.
 
-**(Cause.Effect.Why) The Welfare State**; "The Safety Net—no Australian should fall into poverty through circumstances beyond their control." - General description of social policy from the Age Pension (1908
-
-    , actually the world's first national old-age pension) through Medicare (1984). Australia built a comprehensive welfare state guaranteeing a baseline of survival: pension, unemployment benefit, disability support, public healthcare. From the Age Pension (1909) to Medicare (1984), Australia built a comprehensive welfare state that guaranteed a baseline of survival. The Effect of the Fair Go is the safety net that catches the fallen, ensuring that no one starves in the Lucky Country.
+**(Cause.Effect.Why) The Welfare State**; "The Safety Net—no Australian should fall into poverty through circumstances beyond their control." - General description of social policy from the Age Pension (1908, actually the world's first national old-age pension) through Medicare (1984).
+    
+    Australia built a comprehensive welfare state guaranteeing a baseline of survival: pension, unemployment benefit, disability support, public healthcare. From the Age Pension (1909) to Medicare (1984), Australia built a comprehensive welfare state that guaranteed a baseline of survival. The Effect of the Fair Go is the safety net that catches the fallen, ensuring that no one starves in the Lucky Country.
 
     This establishes **Guarantee** as the result of the historical drive. The "Why" produces the "What"—a system of benefits that institutionalizes compassion. The Effect of the Cause is the state acting as the "Final Mate," intervening when markets fail. This is the legacy of the Harvester Judgment: we believe the government should ensure a decent life for everyone.
 
@@ -379,9 +377,9 @@
 
     This establishes **Obligation** as the moral result of the Cause. The Cause creates a Debt; we owe the Indigenous a response to the Statement. The Past puts a weight on the Future, demanding that we be worthy of the claim to be a fair nation. The Unfinished Business is the honest acknowledgment that the foundation is still cracked, that repair is still required. We are not done yet.
 
-**(Cause.Effect.Effect) Continuity**; "Australia has maintained continuous democratic government since Federation in 1901
-
-    —no coups, no civil wars, no constitutional collapses." - General historical observation. Despite world wars, depressions, and cultural revolutions, the system has kept running. The Constitution has been amended only 8 times in 123 years, and every transfer of power has been peaceful. Despite world wars, depressions, and cultural revolutions, Australia has maintained continuous democratic government since 1901. We have never had a coup, a civil war (since Eureka), or a constitutional crisis that broke the machine. The system has kept running.
+**(Cause.Effect.Effect) Continuity**; "Australia has maintained continuous democratic government since Federation in 1901—no coups, no civil wars, no constitutional collapses." - General historical observation.
+    
+    Despite world wars, depressions, and cultural revolutions, the system has kept running. The Constitution has been amended only 8 times in 123 years, and every transfer of power has been peaceful. Despite world wars, depressions, and cultural revolutions, Australia has maintained continuous democratic government since 1901. We have never had a coup, a civil war (since Eureka), or a constitutional crisis that broke the machine. The system has kept running.
 
     This establishes **Survival** as the final result of the Cause. The Effect of the Cause is the "Now"; we are the Echo of the Big Bang. The experiment is still running, proving that a nation can be built on pragmatism and compromise. We are the proof. The Foundation holds up the house, and the house is still standing.
 

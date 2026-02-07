@@ -1,9 +1,12 @@
 {
     "global_context": {
         "project_name": "Australian Kanon Generation",
-        "project_rules": [],
-        "current_focus": "Project Start",
-        "current_task_index": null,
+        "project_rules": [
+            "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
+            "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
+        ],
+        "current_focus": "Create Judgment Shadow Files for Planes 1-6",
+        "current_task_index": 6,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -28,6 +31,18 @@
                 ],
                 "linked_tasks": [],
                 "timestamp": "2026-02-07T17:43:51.530329"
+            },
+            {
+                "id": "M003",
+                "name": "Fragmented Meaning Block",
+                "structure": "Orphaned 'This establishes' sentence",
+                "example": "Line 17 in Plane 6 Foundation: 'This establishes a foundation born...'",
+                "tags": [
+                    "plane6",
+                    "formatting"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T17:58:36.413637"
             }
         ],
         "fuckup_prevention_checklist": [
@@ -108,7 +123,7 @@
             "index": 0,
             "id": "task_0",
             "description": "Complete Plane 1 sourcing",
-            "status": "todo",
+            "status": "done",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -117,7 +132,8 @@
             "rules": [],
             "logs": [
                 "[2026-02-07T13:57:30.313924] Task created.",
-                "[FRICTION] Turn 3 (Score: 1): No, that's wrong. You need to verify sources first...."
+                "[FRICTION] Turn 3 (Score: 1): No, that's wrong. You need to verify sources first....",
+                "[2026-02-07T18:24:41.015815] Marked as DONE."
             ],
             "lessons_learned": [],
             "depends_on": [],
@@ -141,7 +157,7 @@
             "index": 1,
             "id": "task_1",
             "description": "Review Plane 5 quotes against How_To_Generate_National_Kanon_343.md",
-            "status": "todo",
+            "status": "done",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -149,7 +165,8 @@
             },
             "rules": [],
             "logs": [
-                "[2026-02-07T15:50:30.615243] Task created."
+                "[2026-02-07T15:50:30.615243] Task created.",
+                "[2026-02-07T18:24:42.112781] Marked as DONE."
             ],
             "lessons_learned": [],
             "depends_on": [],
@@ -169,7 +186,7 @@
             "index": 2,
             "id": "task_2",
             "description": "Create remediation plan for Plane 7 errors (identified in Kanon Audit for 5,6,7)",
-            "status": "todo",
+            "status": "done",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -177,7 +194,8 @@
             },
             "rules": [],
             "logs": [
-                "[2026-02-07T15:50:41.658925] Task created."
+                "[2026-02-07T15:50:41.658925] Task created.",
+                "[2026-02-07T18:24:42.763301] Marked as DONE."
             ],
             "lessons_learned": [],
             "depends_on": [],
@@ -188,6 +206,160 @@
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 3,
+            "id": "task_3",
+            "description": "Audit Plane 7 Quotes and Formatting",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T18:08:01.517208] Task created.",
+                "[2026-02-07T18:24:57.571954] Started work.",
+                "[2026-02-07T18:37:07.975637] Marked as DONE.",
+                "[2026-02-07T18:37:07.975677] Lesson learned: Formatted Plane 7 to remove context bleed. 27 instances fixed."
+            ],
+            "lessons_learned": [
+                "Formatted Plane 7 to remove context bleed. 27 instances fixed."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "plane7",
+                "audit"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 4,
+            "id": "task_4",
+            "description": "Apply Plane 7 Formatting Fixes",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T18:19:40.561436] Task created.",
+                "[2026-02-07T18:19:56.855296] Marked as DONE.",
+                "[2026-02-07T18:22:46.927646] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 5,
+            "id": "task_5",
+            "description": "Remediate Plane 7 Context Bleed Formatting",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T18:36:36.803900] Task created.",
+                "[2026-02-07T18:36:51.080108] Marked as DONE.",
+                "[2026-02-07T18:36:51.080146] Lesson learned: Merged 27 split date lines and separated context bleed from Attribution lines."
+            ],
+            "lessons_learned": [
+                "Merged 27 split date lines and separated context bleed from Attribution lines."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 6,
+            "id": "task_6",
+            "description": "Create Judgment Shadow Files for Planes 1-6",
+            "status": "in_progress",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T19:05:00.979403] Task created.",
+                "[2026-02-07T19:08:46.205740] Started work."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "judgment",
+                "kanon",
+                "moral-vectors"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M001",
+                "M002"
+            ],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 7,
+            "id": "task_7",
+            "description": "Update Stoic Guardian Archetype with Plane 1-7 content and moral vectors",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T19:05:02.224812] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "archetype",
+                "kanon",
+                "stoic-guardian"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M001",
+                "M002"
+            ],
             "postmortem": {
                 "passes": [],
                 "root_cause": null
