@@ -617,10 +617,11 @@
         function drawBackground() {
             const cx = width / 2;
             const cy = height / 2;
-            ctx.fillStyle = '#4ade80'; ctx.fillRect(0, 0, cx, cy); // TL - Greater Good
-            ctx.fillStyle = '#f87171'; ctx.fillRect(cx, 0, cx, cy); // TR - Greatest Lie
-            ctx.fillStyle = '#38bdf8'; ctx.fillRect(0, cy, cx, height / 2); // BL - Lesser Good
-            ctx.fillStyle = '#fb923c'; ctx.fillRect(cx, cy, cx, height / 2); // BR - Greater Evil
+            // Hegemony quadrants: TL=Greater Good (+υ,+ψ), TR=Greatest Lie (-υ,+ψ), BL=Lesser Good (+υ,-ψ), BR=Greater Evil (-υ,-ψ)
+            ctx.fillStyle = '#4ade80'; ctx.fillRect(0, 0, cx, cy); // TL - Greater Good (+υ, +ψ)
+            ctx.fillStyle = '#f87171'; ctx.fillRect(cx, 0, cx, cy); // TR - Greatest Lie (-υ, +ψ)
+            ctx.fillStyle = '#38bdf8'; ctx.fillRect(0, cy, cx, height / 2); // BL - Lesser Good (+υ, -ψ)
+            ctx.fillStyle = '#fb923c'; ctx.fillRect(cx, cy, cx, height / 2); // BR - Greater Evil (-υ, -ψ)
             ctx.globalAlpha = 0.85;
             ctx.fillStyle = '#0f172a';
             ctx.fillRect(0, 0, width, height);
