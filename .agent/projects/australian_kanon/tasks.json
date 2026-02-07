@@ -1,0 +1,197 @@
+{
+    "global_context": {
+        "project_name": "Australian Kanon Generation",
+        "project_rules": [],
+        "current_focus": "Project Start",
+        "current_task_index": null,
+        "mistakes_registry": [
+            {
+                "id": "M001",
+                "name": "Kanon Formatting Deviation",
+                "structure": "Incorrect Paragraph Structure",
+                "example": "Merged context without distinct Description block",
+                "tags": [
+                    "kanon",
+                    "formatting"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T17:37:14.323844"
+            },
+            {
+                "id": "M002",
+                "name": "Format Deviation",
+                "structure": "Missed Kanon Paragraph Structure",
+                "example": "Merged context/meaning blocks and missed indentation",
+                "tags": [
+                    "kanon",
+                    "formatting"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T17:43:51.530329"
+            }
+        ],
+        "fuckup_prevention_checklist": [
+            "Did I read the requirements fully?",
+            "Did I check the mistake registry?",
+            "Did I validate the output format?",
+            "Did I log my reasoning?"
+        ],
+        "goal_analysis": {
+            "primary_goal": "Complete Australian Kanon Generation",
+            "goal_type": "generation",
+            "complexity_score": 7,
+            "sub_goals": [
+                {
+                    "description": "Complete Plane 1 (Identity) sourcing",
+                    "status": "in_progress",
+                    "linked_tasks": [
+                        0
+                    ]
+                },
+                {
+                    "description": "Complete Plane 2 (Definition) sourcing",
+                    "status": "pending"
+                },
+                {
+                    "description": "Complete Plane 3 (Location) sourcing",
+                    "status": "pending"
+                },
+                {
+                    "description": "Complete Plane 4 (Drive) sourcing",
+                    "status": "pending"
+                },
+                {
+                    "description": "Complete Plane 5 (Method) sourcing",
+                    "status": "pending"
+                },
+                {
+                    "description": "Complete Plane 6 (Origin) sourcing",
+                    "status": "pending"
+                },
+                {
+                    "description": "Complete Plane 7 (Result) sourcing",
+                    "status": "pending"
+                },
+                {
+                    "description": "Integrate First Nations perspectives",
+                    "status": "pending"
+                },
+                {
+                    "description": "Validate against Gold Standard",
+                    "status": "pending"
+                }
+            ],
+            "success_criteria": [
+                "All 7 planes have verified sources",
+                "First Nations perspective in each Partner Row",
+                "7-Sentence Rule applied to each vector",
+                "Gold Standard formatting verified"
+            ],
+            "predicted_pitfalls": [
+                {
+                    "name": "Generic Sourcing",
+                    "description": "Using 'Australian saying' instead of real sources"
+                },
+                {
+                    "name": "First Nations Oversight",
+                    "description": "Missing indigenous perspective"
+                },
+                {
+                    "name": "Plane Misplacement",
+                    "description": "Content in wrong plane file"
+                }
+            ]
+        }
+    },
+    "tasks": [
+        {
+            "index": 0,
+            "id": "task_0",
+            "description": "Complete Plane 1 sourcing",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T13:57:30.313924] Task created.",
+                "[FRICTION] Turn 3 (Score: 1): No, that's wrong. You need to verify sources first...."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "kanon",
+                "plane1",
+                "sourcing"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M001",
+                "M002"
+            ],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 1,
+            "id": "task_1",
+            "description": "Review Plane 5 quotes against How_To_Generate_National_Kanon_343.md",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:50:30.615243] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "plane_5",
+                "quality_control"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 2,
+            "id": "task_2",
+            "description": "Create remediation plan for Plane 7 errors (identified in Kanon Audit for 5,6,7)",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:50:41.658925] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "plane_7",
+                "remediation"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        }
+    ]
+}

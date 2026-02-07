@@ -1,0 +1,219 @@
+{
+    "version": "1.0",
+    "description": "Global Mistake Registry - Persists across conversations",
+    "last_updated": "2026-02-07T10:25:46.106471",
+    "mistake_count": 11,
+    "mistakes": [
+        {
+            "id": "ARC_001",
+            "name": "Standard Vector",
+            "structure": "The Colonial Row (e.g., \"Populate or Perish\").",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106408"
+        },
+        {
+            "id": "ARC_002",
+            "name": "Partner Vector",
+            "structure": "The First Nations Row (e.g., \"Anteriority\").",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106439"
+        },
+        {
+            "id": "ARC_003",
+            "name": "Standard Mode",
+            "structure": "Gray/White styling, \"The Vector\" metadata.",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106442"
+        },
+        {
+            "id": "ARC_004",
+            "name": "First Nations Mode",
+            "structure": "Amber styling (`bg-amber-50`), \"First Nations Perspective\" metadata.",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106444"
+        },
+        {
+            "id": "ARC_005",
+            "name": "original",
+            "structure": "\"Populate or Perish\" (The Imperative)",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106446"
+        },
+        {
+            "id": "ARC_006",
+            "name": "partner",
+            "structure": "\"Anteriority\" (First Nations Perspective)",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106448"
+        },
+        {
+            "id": "ARC_007",
+            "name": "original",
+            "structure": "\"The First Fleet\" (The Seed)",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106450"
+        },
+        {
+            "id": "ARC_008",
+            "name": "partner",
+            "structure": "\"Continuity\" (First Nations Perspective)",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106452"
+        },
+        {
+            "id": "ARC_009",
+            "name": "Guilt, Abundance, Resistance",
+            "structure": "Identified these vectors were incorrectly located in Plane 3. Moved them to **Plane 4 (Drive)** wher",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106455"
+        },
+        {
+            "id": "ARC_010",
+            "name": "Attributions Updated",
+            "structure": "- **Guilt**: Sourced to Paul Keating ('Redfern Park Speech', 1992).",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106457"
+        },
+        {
+            "id": "ARC_011",
+            "name": "inline_fix",
+            "structure": "character encoding issue for Marcia Langton quote",
+            "example": "Source: walkthrough:walkthrough.md",
+            "tags": [
+                "archaeology",
+                "historical"
+            ],
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106459"
+        }
+    ],
+    "lessons": [
+        {
+            "text": "Run validation scripts before AND after major changes. Trust but verify.",
+            "category": "data_integrity",
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106463"
+        },
+        {
+            "text": "Research the source fully: Author, Work, Year. Generic attributions are technical debt.",
+            "category": "sourcing",
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106466"
+        },
+        {
+            "text": "Always validate formatting against the Gold Standard before committing. Create a formatting checklist.",
+            "category": "formatting",
+            "source_project": "Australian Kanon Development",
+            "synced_at": "2026-02-07T10:25:46.106469"
+        }
+    ],
+    "patterns": [],
+    "domain_keywords": {
+        "vft_formatting": [
+            "plane",
+            "vector",
+            "kanon",
+            "sense",
+            "interrogative",
+            "title",
+            "quote",
+            "attribution"
+        ],
+        "vft_sourcing": [
+            "author",
+            "source",
+            "year",
+            "citation",
+            "gold standard",
+            "provenance"
+        ],
+        "vft_structural": [
+            "plane 1",
+            "plane 2",
+            "plane 3",
+            "plane 4",
+            "plane 5",
+            "plane 6",
+            "plane 7",
+            "identity",
+            "definition",
+            "land",
+            "drive",
+            "method",
+            "foundation",
+            "result"
+        ],
+        "vft_content": [
+            "first nations",
+            "colonial",
+            "partner row",
+            "correction",
+            "remediation"
+        ],
+        "general_process": [
+            "forgot",
+            "missed",
+            "skipped",
+            "incomplete",
+            "wrong order",
+            "dependency"
+        ]
+    },
+    "rules": [
+        "Always validate formatting against the Gold Standard before committing",
+        "Research sources fully: Author, Work, Year - no generic attributions",
+        "Run validation scripts before AND after major changes",
+        "Map document structure before editing - know WHERE things belong",
+        "Check the mistake registry at the START of every session"
+    ]
+}

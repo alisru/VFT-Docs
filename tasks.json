@@ -1,0 +1,1352 @@
+{
+    "global_context": {
+        "project_name": "Australian Kanon Generation",
+        "project_rules": [],
+        "current_focus": "Review archaeology results",
+        "current_task_index": null,
+        "mistakes_registry": [
+            {
+                "id": "ARC_001",
+                "name": "Standard Vector",
+                "structure": "The Colonial Row (e.g., \"Populate or Perish\").",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087417"
+            },
+            {
+                "id": "ARC_002",
+                "name": "Partner Vector",
+                "structure": "The First Nations Row (e.g., \"Anteriority\").",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087445"
+            },
+            {
+                "id": "ARC_003",
+                "name": "Standard Mode",
+                "structure": "Gray/White styling, \"The Vector\" metadata.",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087448"
+            },
+            {
+                "id": "ARC_004",
+                "name": "First Nations Mode",
+                "structure": "Amber styling (`bg-amber-50`), \"First Nations Perspective\" metadata.",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087450"
+            },
+            {
+                "id": "ARC_005",
+                "name": "original",
+                "structure": "\"Populate or Perish\" (The Imperative)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087451"
+            },
+            {
+                "id": "ARC_006",
+                "name": "partner",
+                "structure": "\"Anteriority\" (First Nations Perspective)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087453"
+            },
+            {
+                "id": "ARC_007",
+                "name": "original",
+                "structure": "\"The First Fleet\" (The Seed)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087455"
+            },
+            {
+                "id": "ARC_008",
+                "name": "partner",
+                "structure": "\"Continuity\" (First Nations Perspective)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087457"
+            },
+            {
+                "id": "ARC_009",
+                "name": "Guilt, Abundance, Resistance",
+                "structure": "Identified these vectors were incorrectly located in Plane 3. Moved them to **Plane 4 (Drive)** wher",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087459"
+            },
+            {
+                "id": "ARC_010",
+                "name": "Attributions Updated",
+                "structure": "- **Guilt**: Sourced to Paul Keating ('Redfern Park Speech', 1992).",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087461"
+            },
+            {
+                "id": "ARC_011",
+                "name": "inline_fix",
+                "structure": "character encoding issue for Marcia Langton quote",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T15:34:05.087462"
+            }
+        ],
+        "fuckup_prevention_checklist": [
+            "Did I read the requirements fully?",
+            "Did I check the mistake registry?",
+            "Did I validate the output format?",
+            "Did I log my reasoning?"
+        ],
+        "archaeology_source": {
+            "conversation_id": "63fa6019-91c8-4f47-b29f-24454bb7e632",
+            "conversation_title": "Australian Kanon Generation",
+            "analysis_timestamp": "2026-02-07T15:34:05.087465",
+            "themes": [
+                "score",
+                "plane",
+                "cause",
+                "effect",
+                "line",
+                "none",
+                "australian",
+                "missing",
+                "first",
+                "australia",
+                "option",
+                "land",
+                "nations",
+                "title",
+                "colonial"
+            ],
+            "user_goals_count": 15,
+            "errors_collected": 11,
+            "artifact_summaries": [
+                {
+                    "file": "archetype_construction_plan.md",
+                    "type": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+                    "summary": "Plan to construct the 'Archetype of the Ideal Australian' by synthesizing high-virtue vectors from the 7-Plane Kanon and applying the VFT Archetype Derivation Protocol."
+                },
+                {
+                    "file": "Australian_Kanon_Philosophy.md",
+                    "type": "ARTIFACT_TYPE_OTHER",
+                    "summary": "Expanded philosophical document synthesizing the 'Mythological Substrate' insight, including detailed sections on the Anti-Ideology, the True Founders, Defense Against Capture, and the function of Civic Religion."
+                },
+                {
+                    "file": "Australian_Kanon_Totality_Compilation.md",
+                    "type": "ARTIFACT_TYPE_OTHER",
+                    "summary": "Compilation of the Totality Narratives from all 7 Planes of the Australian Kanon."
+                },
+                {
+                    "file": "Australian_Narrative_Analysis.md",
+                    "type": "ARTIFACT_TYPE_OTHER",
+                    "summary": "Analysis of the 7 Totality Narratives of the Australian Kanon, checking for consistency, themes, and alignment with the Vector Field Theory."
+                },
+                {
+                    "file": "comprehensive_audit_report.md",
+                    "type": "ARTIFACT_TYPE_OTHER",
+                    "summary": "Final comprehensive audit report for the Australian Kanon.\nIncludes scoring and analysis for all 7 Planes (343 Vectors).\nEvaluates quotes against the 'Gold Standard' (Provenance, Poignancy, Relevance).\nhighlights recent improvements in Planes 4, 5, and 7.\nIdentifies any remaining weak points in Planes 2, 3, and 6."
+                }
+            ]
+        },
+        "error_analysis": {
+            "categories": {
+                "other": [
+                    {
+                        "id": "ARC_001",
+                        "name": "Standard Vector",
+                        "description": "The Colonial Row (e.g., \"Populate or Perish\").",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    },
+                    {
+                        "id": "ARC_002",
+                        "name": "Partner Vector",
+                        "description": "The First Nations Row (e.g., \"Anteriority\").",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    },
+                    {
+                        "id": "ARC_003",
+                        "name": "Standard Mode",
+                        "description": "Gray/White styling, \"The Vector\" metadata.",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    },
+                    {
+                        "id": "ARC_004",
+                        "name": "First Nations Mode",
+                        "description": "Amber styling (`bg-amber-50`), \"First Nations Perspective\" metadata.",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    },
+                    {
+                        "id": "ARC_005",
+                        "name": "original",
+                        "description": "\"Populate or Perish\" (The Imperative)",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    },
+                    {
+                        "id": "ARC_006",
+                        "name": "partner",
+                        "description": "\"Anteriority\" (First Nations Perspective)",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    },
+                    {
+                        "id": "ARC_007",
+                        "name": "original",
+                        "description": "\"The First Fleet\" (The Seed)",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    },
+                    {
+                        "id": "ARC_008",
+                        "name": "partner",
+                        "description": "\"Continuity\" (First Nations Perspective)",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    }
+                ],
+                "data_integrity": [
+                    {
+                        "id": "ARC_009",
+                        "name": "Guilt, Abundance, Resistance",
+                        "description": "Identified these vectors were incorrectly located in Plane 3. Moved them to **Plane 4 (Drive)** wher",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    }
+                ],
+                "sourcing": [
+                    {
+                        "id": "ARC_010",
+                        "name": "Attributions Updated",
+                        "description": "- **Guilt**: Sourced to Paul Keating ('Redfern Park Speech', 1992).",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "bullet_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    }
+                ],
+                "formatting": [
+                    {
+                        "id": "ARC_011",
+                        "name": "inline_fix",
+                        "description": "character encoding issue for Marcia Langton quote",
+                        "source": "walkthrough:walkthrough.md",
+                        "type": "inline_fix",
+                        "tags": [
+                            "archaeology",
+                            "historical"
+                        ]
+                    }
+                ]
+            },
+            "patterns": [
+                {
+                    "category": "other",
+                    "count": 8,
+                    "percentage": 72.7,
+                    "observation": "8 errors (73%) relate to other"
+                }
+            ],
+            "root_causes": [
+                {
+                    "category": "data_integrity",
+                    "root_cause": "Lack of validation before committing changes",
+                    "affected_count": 1
+                },
+                {
+                    "category": "sourcing",
+                    "root_cause": "Incomplete research or attribution verification",
+                    "affected_count": 1
+                },
+                {
+                    "category": "formatting",
+                    "root_cause": "Inconsistent application of formatting standards",
+                    "affected_count": 1
+                }
+            ],
+            "lessons_learned": [
+                {
+                    "from_category": "data_integrity",
+                    "lesson": "Run validation scripts before AND after major changes. Trust but verify."
+                },
+                {
+                    "from_category": "sourcing",
+                    "lesson": "Research the source fully: Author, Work, Year. Generic attributions are technical debt."
+                },
+                {
+                    "from_category": "formatting",
+                    "lesson": "Always validate formatting against the Gold Standard before committing. Create a formatting checklist."
+                }
+            ],
+            "recommendations": [],
+            "severity_distribution": {
+                "critical": 0,
+                "major": 1,
+                "minor": 10
+            }
+        },
+        "goal_analysis": {
+            "primary_goal": "Australian Kanon Generation",
+            "sub_goals": [
+                {
+                    "description": "research sources",
+                    "derived_from": "kanon",
+                    "status": "pending"
+                },
+                {
+                    "description": "verify attributions",
+                    "derived_from": "kanon",
+                    "status": "pending"
+                },
+                {
+                    "description": "validate formatting",
+                    "derived_from": "kanon",
+                    "status": "pending"
+                },
+                {
+                    "description": "check plane structure",
+                    "derived_from": "kanon",
+                    "status": "pending"
+                },
+                {
+                    "description": "apply gold standard",
+                    "derived_from": "kanon",
+                    "status": "pending"
+                }
+            ],
+            "success_criteria": [
+                "Goal completed",
+                "Quality verified",
+                "User satisfied",
+                "Sources verified: Author, Work, Year",
+                "Formatting matches Gold Standard",
+                "7-Sentence Rule applied where needed",
+                "No generic attributions"
+            ],
+            "predicted_pitfalls": [
+                {
+                    "name": "Generic Error",
+                    "description": "Unspecified failure mode"
+                },
+                {
+                    "name": "Generic Sourcing",
+                    "description": "Using 'Australian saying' instead of real sources"
+                },
+                {
+                    "name": "Plane Misplacement",
+                    "description": "Content in wrong plane file"
+                },
+                {
+                    "name": "First Nations Oversight",
+                    "description": "Missing indigenous perspective in Partner Row"
+                },
+                {
+                    "name": "Attribution Laziness",
+                    "description": "Not researching full Author, Work, Year"
+                }
+            ],
+            "scope_guards": [
+                "Does this action serve the primary goal: 'Australian Kanon Generation...'?",
+                "Am I adding features not explicitly requested?",
+                "Is this the right file/location for this change?",
+                "Have I verified this matches the stated requirements?"
+            ],
+            "output_expectations": [
+                "Australian_Kanon_Plane_*.md files",
+                "Structured quote format",
+                "7 vectors per sub-section"
+            ],
+            "goal_type": "general",
+            "complexity_score": 6
+        }
+    },
+    "tasks": [
+        {
+            "index": 0,
+            "id": "task_0",
+            "description": "Australian Kanon Generation",
+            "status": "todo",
+            "data": {
+                "source": "user_prompt:title"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087471] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 15,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 1,
+            "id": "task_1",
+            "description": "Integrate First Nations perspectives into the Australian Kanon HTML site as distinct \"Partner Rows\" rather than correcting the colonial vectors directly. This ensures the Colonial \"Truth\" and Indigeno",
+            "status": "todo",
+            "data": {
+                "source": "walkthrough:walkthrough.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087476] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 12,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 2,
+            "id": "task_2",
+            "description": "Implementation Plan: The Ideal Australian Archetype",
+            "status": "todo",
+            "data": {
+                "source": "plan:archetype_construction_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087479] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 3,
+            "id": "task_3",
+            "description": "Detailed Kanon Remediation Plan (Strict Quality & Structure)",
+            "status": "todo",
+            "data": {
+                "source": "plan:Detailed_Kanon_Remediation_Plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087482] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 4,
+            "id": "task_4",
+            "description": "First Nations Corrections Plan for the Australian Kanon",
+            "status": "todo",
+            "data": {
+                "source": "plan:first_nations_corrections_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087485] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 5,
+            "id": "task_5",
+            "description": "Remediation & First Nations Integration Plan",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087487] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 6,
+            "id": "task_6",
+            "description": "Kanon Audit Report: Planes 5, 6, 7",
+            "status": "todo",
+            "data": {
+                "source": "plan:Kanon_Audit_Report_Planes_5_6_7.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087489] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 7,
+            "id": "task_7",
+            "description": "Plane 5: Method (How) - Quote Options & Research",
+            "status": "todo",
+            "data": {
+                "source": "plan:Plane_5_Quote_Options.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087492] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 8,
+            "id": "task_8",
+            "description": "Plane 5 Quote Research Tracker",
+            "status": "todo",
+            "data": {
+                "source": "plan:plane_5_research_tracker.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087494] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 9,
+            "id": "task_9",
+            "description": "Australian Kanon Quote Audit: Planes 4, 5, 7",
+            "status": "todo",
+            "data": {
+                "source": "plan:quote_audit_planes_4_5_7.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087497] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 10,
+            "id": "task_10",
+            "description": "Australian Kanon Quote Audit: Plane 1 (Identity)",
+            "status": "todo",
+            "data": {
+                "source": "plan:quote_audit_plane_1.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087499] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 11,
+            "id": "task_11",
+            "description": "Remediation Plan: Strict Kanon Audit",
+            "status": "todo",
+            "data": {
+                "source": "plan:remediation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087502] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 12,
+            "id": "task_12",
+            "description": "Review of Kanon Formatting Fixes",
+            "status": "todo",
+            "data": {
+                "source": "plan:review_plane_6.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087504] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 13,
+            "id": "task_13",
+            "description": "Strict Kanon Audit Report",
+            "status": "todo",
+            "data": {
+                "source": "plan:strict_audit_report_planes_5_6_7.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087506] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 14,
+            "id": "task_14",
+            "description": "Violation Analysis: Planes 6 & 7 (Header Fragmentation)",
+            "status": "todo",
+            "data": {
+                "source": "plan:Violation_Analysis_Planes_6_7.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087509] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 10,
+            "tags": [
+                "user_goal",
+                "score",
+                "plane"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 15,
+            "id": "task_15",
+            "description": "Phase 9: Quality & Completeness (Plane 7 Sourcing) - [COMPLETE]",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087511] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 8,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 16,
+            "id": "task_16",
+            "description": "Phase 10: Comprehensive Kanon Remediation (Data & Structure)",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087513] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 8,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 17,
+            "id": "task_17",
+            "description": "Modify: 4.3.3 The Track** -> **4.3.3 Country**",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087516] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 18,
+            "id": "task_18",
+            "description": "Modify: 5.2.6 The Boomerang**",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087518] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 19,
+            "id": "task_19",
+            "description": "Modify: 3.5.1 The Telegraph**",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087521] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 20,
+            "id": "task_20",
+            "description": "Modify: Populate or Perish** -> **Anteriority** (\"The land was already populated...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087523] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 21,
+            "id": "task_21",
+            "description": "Modify: The Convict Seed** -> **Continuity** (\"Roots go back 65,000 years...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087525] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 22,
+            "id": "task_22",
+            "description": "Modify: A Bulwark** -> **Connection** (\"The walls were built after us...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087528] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 23,
+            "id": "task_23",
+            "description": "Modify: The Great Silence** -> **Erasure** (\"The silence was not ours...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087530] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 24,
+            "id": "task_24",
+            "description": "Modify: The Void** -> **Custodianship** (\"We don't own the land...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087532] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 25,
+            "id": "task_25",
+            "description": "Modify: The Digger** -> **Resistance** (\"Our warriors fought too...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087534] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 26,
+            "id": "task_26",
+            "description": "Modify: The Second Chance** -> **Dispossession** (\"Not a second chance but a first home...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087537] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 27,
+            "id": "task_27",
+            "description": "Modify: Sovereignty** -> **Treaty** (\"Sovereignty was never ceded...\")",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087539] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 28,
+            "id": "task_28",
+            "description": "Modify: [generate_pages.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/WWSUTRU/Australia/site/g",
+            "status": "todo",
+            "data": {
+                "source": "plan:implementation_plan.md"
+            },
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-07T15:34:05.087542] Created via archaeology v3"
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 5,
+            "tags": [
+                "score",
+                "plane",
+                "cause"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        }
+    ]
+}
