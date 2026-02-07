@@ -1242,7 +1242,7 @@
 
         let hoveredEntry = null;
 
-        // Coordinate conversion (INVERTED: positive Ï is LEFT)
+        // Coordinate conversion (INVERTED: positive υ is LEFT)
 
         function toCanvasX(u) { return cx - (u * scale); }
 
@@ -1310,9 +1310,9 @@
 
             ctx.beginPath();
 
-            ctx.moveTo(0, cy); ctx.lineTo(width, cy); // Horizontal (Ï)
+            ctx.moveTo(0, cy); ctx.lineTo(width, cy); // Horizontal (υ)
 
-            ctx.moveTo(cx, 0); ctx.lineTo(cx, height); // Vertical (Ï)
+            ctx.moveTo(cx, 0); ctx.lineTo(cx, height); // Vertical (ψ)
 
             ctx.stroke();
 
@@ -1336,9 +1336,9 @@
 
             ctx.textAlign = 'center';
 
-            ctx.fillText('Ï = +1 (Universal)', 60, cy - 10);
+            ctx.fillText('υ = +1 (Universal)', 60, cy - 10);
 
-            ctx.fillText('Ï = -1 (Self)', width - 60, cy - 10);
+            ctx.fillText('υ = -1 (Self)', width - 60, cy - 10);
 
             ctx.save();
 
@@ -1346,7 +1346,7 @@
 
             ctx.rotate(-Math.PI / 2);
 
-            ctx.fillText('Ï = +1 (Create)', 0, 0);
+            ctx.fillText('ψ = +1 (Create)', 0, 0);
 
             ctx.restore();
 
@@ -1356,7 +1356,7 @@
 
             ctx.rotate(-Math.PI / 2);
 
-            ctx.fillText('Ï = -1 (Suppress)', 0, 0);
+            ctx.fillText('ψ = -1 (Suppress)', 0, 0);
 
             ctx.restore();
 
@@ -1508,7 +1508,7 @@
 
                         <h3>Grand Total (354 Entries)</h3>
 
-                        <div class="stat-value positive">Ï = +0.44, Ï = +0.26</div>
+                        <div class="stat-value positive">υ = +0.44, ψ = +0.26</div>
 
                         <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem;">Lesser Good — Positive morality, moderate will</p>
 
@@ -1532,7 +1532,7 @@
 
                         <h3>Plane ${planeId}: ${plane.name}</h3>
 
-                        <div class="stat-value ${quadrantClass}">Ï = ${plane.total.u >= 0 ? '+' : ''}${plane.total.u.toFixed(2)}, Ï = ${plane.total.p >= 0 ? '+' : ''}${plane.total.p.toFixed(2)}</div>
+                        <div class="stat-value ${quadrantClass}">υ = ${plane.total.u >= 0 ? '+' : ''}${plane.total.u.toFixed(2)}, ψ = ${plane.total.p >= 0 ? '+' : ''}${plane.total.p.toFixed(2)}</div>
 
                         <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem;">
 
@@ -1600,7 +1600,7 @@
 
                 tooltip.querySelector('.tooltip-title').textContent = hoveredEntry.name + (hoveredEntry.fn ? ' [FN]' : '');
 
-                tooltip.querySelector('.tooltip-coords').textContent = `Ï = ${hoveredEntry.u >= 0 ? '+' : ''}${hoveredEntry.u.toFixed(1)}, Ï = ${hoveredEntry.p >= 0 ? '+' : ''}${hoveredEntry.p.toFixed(1)}`;
+                tooltip.querySelector('.tooltip-coords').textContent = `υ = ${hoveredEntry.u >= 0 ? '+' : ''}${hoveredEntry.u.toFixed(1)}, ψ = ${hoveredEntry.p >= 0 ? '+' : ''}${hoveredEntry.p.toFixed(1)}`;
 
                 tooltip.querySelector('.tooltip-judgment').textContent = `Plane ${hoveredEntry._planeId}: ${kanonData[hoveredEntry._planeId].name}`;
 
