@@ -37,6 +37,15 @@ def escape_html(text):
     """Escape HTML special characters."""
     return html.escape(text) if text else ""
 
+def format_md(text):
+    """Convert basic markdown to HTML."""
+    if not text: return ""
+    text = html.escape(text) # Escape mostly everything first
+    # Bold first
+    text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
+    # Italics second
+    text = re.sub(r'\*(.*?)\*', r'<i>\1</i>', text)
+    return text
 
 def parse_vectors_from_markdown(content):
     """Parse all vectors from markdown content."""
@@ -74,45 +83,17 @@ def parse_vectors_from_markdown(content):
         if header_match:
             block = block[:header_match.start()]
         
-        # Extract source - robust logic
-        # 1. Look for the source line starting with - or —
-        # 2. Find the italicized title as Anchor (*Title*)
-        # 3. Everything before is Author, everything after is Year/Context
-        
+        # Extract source - distinct line starting with - or —
         source = ""
         source_line_match = re.search(r'[-—]\s*(.+?)(?=\n|$)', block[:500])
         
         if source_line_match:
             raw_source = source_line_match.group(1).strip()
-            
-            # Try to find *Title*
-            title_match = re.search(r'\*([^*]+)\*', raw_source)
-            if title_match:
-                # We have a title. Split around it.
-                # Author is everything before the *, stripped of trailing dots/spaces
-                author_part = raw_source[:title_match.start()].strip().rstrip('.').strip()
-                
-                # Title is inside the *
-                title_part = title_match.group(1).strip()
-                
-                # Year/Context is everything after the *, stripped of leading commas/dots/spaces
-                year_part = raw_source[title_match.end():].strip().lstrip(',').strip().rstrip('.').strip()
-                
-                parts = []
-                if author_part: parts.append(author_part)
-                if title_part: parts.append(title_part)
-                if year_part: parts.append(year_part)
-                
-                source = ". ".join(parts)
-            else:
-                # No title found (maybe just Author or FN Perspective)
-                if "First Nations Perspective" in raw_source:
-                    source = "First Nations Perspective"
-                else:
-                    # Just take the whole thing if it looks like a source (and isn't too long)
-                    clean_source = raw_source.strip().rstrip('.')
-                    if len(clean_source) < 100:
-                        source = clean_source
+            # Apply formatting (convert ** to <b>, * to <i>)
+            source = format_md(raw_source)
+        else:
+            if "First Nations Perspective" in block[:150]:
+                 source = "First Nations Perspective"
         
         if not source and "First Nations Perspective" in block[:150]:
              source = "First Nations Perspective"
@@ -210,14 +191,11 @@ def generate_vector_row_html(vector, color, is_fn=False):
     """Generate HTML for a single vector row (Standard or FN)."""
     code = escape_html(vector['code'])
     name = escape_html(vector['name'])
-    quote = escape_html(vector['quote'])
-    source = escape_html(vector['source'])
-    context = escape_html(vector['context'])
+    quote = format_md(vector['quote'])
+    source = vector['source'] # Already formatted
+    context = format_md(vector['context'])
     role_name = escape_html(vector['role_name'])
-    role_text = vector['role_text']
-    
-    # Convert **text** in role_text to <strong>
-    role_text = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', escape_html(role_text))
+    role_text = format_md(vector['role_text'])
 
     row_class = "hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0"
     

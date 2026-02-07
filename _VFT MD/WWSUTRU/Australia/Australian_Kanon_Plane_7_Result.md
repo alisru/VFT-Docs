@@ -309,9 +309,9 @@
 
     This establishes **Sovereignty** as the unfinished project. The Effect may include cutting the final colonial tie. The "Cause" is identity. The republic question asks: are we finally confident enough to stand completely alone? The answer has been deferred, not denied.
 
-**(Effect.Cause.Why) Treaty [First Nations Perspective]**; "Sovereignty was never ceded. It was taken. It can be returned." — First Nations Perspective.
+**(Effect.Cause.How) Treaty [First Nations Perspective]**; "We seek a Makarrata Commission to supervise a process of agreement-making between governments and First Nations and truth-telling about our history." — *Uluru Statement from the Heart*, 2017.
 
-    The Republican debate obsessively focuses on cutting ties with the British Monarchy to achieve "maturity." For First Nations people, the issue is not the Crown, but the lack of a **Treaty**—Australia is the only Commonwealth nation without one. Innovative sovereignty requires acknowledging that the land was occupied by sovereign nations who never surrendered their rights, only their lives. The path to Reconciliation laid out by the First Nations leaders includes a constitutionally enshrined Voice, a Treaty process, and a truth-telling commission. The "How" of the future includes resolving the founding injustice.
+    The Republican debate obsessively focuses on cutting ties with the British Monarchy to achieve "maturity." For First Nations people, the issue is not the Crown, but the lack of a **Treaty**—Australia is the only Commonwealth nation without one. Innovative sovereignty requires acknowledging that the land was occupied by sovereign nations who never surrendered their rights, only their lives. The path to Reconciliation laid out by the First Nations leaders includes a constitutionally enshrined Voice, a Treaty process, and a truth-telling commission.
 
     This establishes **Reparation** as the method of justice. The Effect requires completing the unfinished business. The "Cause" is the Original Sin. The Treaty is the missing document—the contract that was never signed, the consent that was never sought. The how of the future includes finally asking permission.
 

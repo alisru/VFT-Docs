@@ -107,7 +107,7 @@
 "If we could find it in the wreckage... we'd say, 'We know what caused this'." — **David Warren** (Inventor of Flight Data Recorder).
 "At least I'd have proved the bastards wrong!" — **David Warren** (On testing the prototype in flight).
 
-    The "Unix Time 0" of this invention reveals a profound Australian truth: without a reliable memory of the disaster, we are doomed to repeat it. David Warren defined the Black Box not merely as a "recorder" but as a "truth-teller," a device that speaks for the dead to save the living, born from a refusal to accept the official silence of a crash.
+    The **Genesis** of this invention reveals a profound Australian truth: without a reliable memory of the disaster, we are doomed to repeat it. David Warren defined the Black Box not merely as a "recorder" but as a "truth-teller," a device that speaks for the dead to save the living, born from a refusal to accept the official silence of a crash.
 
     This establishes **The Black Box** as the **Technological Conscience**. It represents the triumph of the "Bricoleur" over the "Bureaucracy," as Warren had to fight the aviation authorities who called his invention "too morbid" to even test. The Black Box defines the Australian tool not as a weapon of conquest, but as a mechanism of forensic honesty—a device built to admit failure so that the system can learn. It proves that in the Australian method, the most valuable data comes from the wreckage of our mistakes.
 
@@ -299,13 +299,11 @@
 
     This establishes **The Convict System** as the **Bureaucratic Origin of the Soul**. We are the only nation founded by a "Department of Corrections," creating a citizen who mocks the "Patriot" while submitting to the "Rules." This vector explains the deep Australian paradox: we hate the "Cop" (Authority) but we love the "Queue" (Order). We are forever asking for a Ticket of Leave, defining our freedom not as a natural right, but as a permit granted by the System we claim to despise.
 
-**(How.Cause.Who) Relation [First Nations Perspective]**; "The first system was not the prison. It was the Kinship System." - *Indigenous Knowledge*, Ancient.
+**(How.Cause.Why) Relation [First Nations Perspective]**; "The land does not belong to us. We belong to the land." — Mary Graham. *The Law of the Land*, 1999.
 
-    Before the "Department" and the "Ticket of Leave," there was the most complex social organization on earth: the Skin Groups and Totem systems that governed every interaction, marriage, and resource right. The colonial bureaucracy was a crude, paper-based overlay on a highly sophisticated web of social law that had operated flawlessly for millennia.
+    Mary Graham, a Kombu-merri philosopher, articulates the fundamental axiom of Indigenous Law: the Law of Obligation. Unlike the colonial "Convict System" which managed isolated individuals via administrative files, the Indigenous "Kinship System" manages communities via binding relationships. It predates the "Department of Corrections" by millennia, mapping the continent not by fences but by family lines.
 
-    This establishes Regulation as the **Response**. The cause of the bureaucratic method is the attempt to tax and control chaotic abundance. The Gold Rush proved that "Free Markets" without "Rules" become violent free-for-alls. The Australian conclusion was not "Less State" but "Better State"—a competent umpire, not an absent one.
-
-    This establishes **Relation** as the **True System**. The colonial method manages isolated individuals via administrative files; the Indigenous method manages communities via binding relationships. While the "System" relies on the State to enforce behavior, "Relation" relies on mutual obligation and kinship. One is artificial and coercive; the other is organic and inescapable. The Gold Rush created chaos, and the government responded with the "License Fee"—you had to buy a permit to dig. The troopers who hunted down unlicensed miners (The License Hunts) created the resentment that exploded at Eureka. The Rush created the need for regulation; the regulation created the resentment; the resentment created the democracy.
+    This establishes **Relation** as the **True Method**. It replaces the "Owner" with the "Carer," shifting the legal framework from "Rights of Possession" to "Duties of Care." While the bureaucratic method relies on the State to enforce behavior (The Cop), the relational method relies on mutual obligation (The Mob). It forces the inhabitant to view the land not as a resource to be exploited, but as a relative to be honored—a method that prevents the alienation of the soul from the soil.
 
 **(How.Cause.Where) The Distance**; "The Tyranny of Distance." - Geoffrey Blainey. *The Tyranny of Distance*, 1966.
 
@@ -313,7 +311,7 @@
 
     This establishes Distance as the **Problem**. The cause of the method is the obstacle it was designed to overcome. Every Australian invention (The Flying Doctor, The Pedal Radio, WLAN) is a weapon against space. The method is fundamentally a transport problem: how to move people, ideas, and goods across an empty void. Distance is the mother of ingenuity.
 
-**(How.Cause.Where) Navigation [First Nations Perspective]**; "Distance did not separate us. Songlines connected us." - *Indigenous Knowledge*, Ancient.
+**(How.Cause.Cause) Navigation [First Nations Perspective]**; "Our story is in the land... it is written in the rock. You cannot lose it." — Bill Neidjie ("Big Bill"). *Story About Feeling*, 1989.
 
     The "Tyranny of Distance" is a European anxiety born of the need for centralized control. The First Nations understood that the continent was a network of meaning, not a void of emptiness. The Songlines were a continental accumulation of knowledge that made distance navigable, a GPS of story and song that guided the traveler across thousands of kilometers.
 

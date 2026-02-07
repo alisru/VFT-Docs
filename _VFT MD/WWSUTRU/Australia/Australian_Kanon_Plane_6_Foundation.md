@@ -347,11 +347,11 @@
 
     This establishes **Mythologization** as the personal result of the Cause. The "Who" becomes a Statue, stopping being a flawed human and becoming a "Principle made Flesh." The Cause produces a Pantheon of heroes that we worship on the 25th of April. We cannot separate the Man from the Myth. The Digger is to Australia what the Minuteman is to America—the human avatar of the national value.
 
-**(Cause.Effect.Who) Warrior [First Nations Perspective]**; "Our warriors fought too—not in foreign lands, but here, defending country." — First Nations Perspective.
+**(Cause.Effect.What) Warrior [First Nations Perspective]**; "Tyerabarrbowaryaou" (I shall not be shot). — Pemulwuy. *Battle Cry during the Frontier Wars*, c. 1797.
 
-    The Anzac legend celebrates the Australian soldier fighting for Empire in Turkey and France. It ignores the thousands of First Nations warriors—Pemulwuy, Yagan, Jandamarra—who fought a 140-year guerilla war against the British invasion on their own soil. The Australian War Memorial is the most visited museum in the nation, a temple to the fallen that is also the official archive of the nation's military history. It is designed to evoke sorrow and reverence, a pilgrimage site for the secular religion.
+    The Anzac legend celebrates the Australian soldier fighting for Empire in Turkey and France. It ignores the thousands of First Nations warriors—Pemulwuy, Yagan, Jandamarra—who fought a 140-year guerilla war against the British invasion on their own soil. Pemulwuy, the Bidjigal leader, led a resistance campaign for 12 years, famously surviving multiple severe wounds, leading to the belief he was bulletproof.
 
-    This establishes **Sanctification** as the spatial result of the Cause. The "Where" becomes Sacred Ground; we go there to commune with the Spirit of the Nation. The Cause writes itself in stone, ensuring that the memory cannot be easily eroded by time. The Memorial is the Wailing Wall of the Australian soul, where we acknowledge the cost of our existence.
+    This establishes **Resistance** as the Foundation of Defense. The "What" of the result is not just the ANZAC (Imperial Soldier) but the Warrior (Home Defender). It honors the first defenders of the continent, expanding the definition of "Digger" to include those who fought *against* the Crown for their Country. The War Memorial is incomplete without the Frontier Wars; this vector integrates the two martial traditions into one History of Defense.
 
 **(Cause.Effect.Where) The Suburban House**; "The Great Australian Dream is to own your own home." - Universal phrase codifying the post-WWII aspiration. The freestanding house on a quarter-acre block became the standard unit of Australian settlement from the 1950s onward, spreading across the coastal plains in vast low-density sprawl—the spatial embodiment of the Fair Go achieved.
     
