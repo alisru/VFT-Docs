@@ -1,960 +1,414 @@
 <!DOCTYPE html>
 
-
-
 <html lang="en">
-
-
-
-
-
-
 
 <head>
 
-
-
     <meta charset="UTF-8">
-
-
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
     <title>Australian Kanon — Hegemony Visualization</title>
 
-
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-
 
     <style>
         * {
 
-
-
             box-sizing: border-box;
-
-
 
             margin: 0;
 
-
-
             padding: 0;
 
-
-
         }
-
-
-
-
-
-
 
         body {
 
-
-
             font-family: 'Inter', sans-serif;
-
-
 
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 
-
-
             color: #e2e8f0;
-
-
 
             min-height: 100vh;
 
-
-
             padding: 2rem;
 
-
-
         }
-
-
-
-
-
-
 
         h1 {
 
-
-
             text-align: center;
-
-
 
             font-size: 1.8rem;
 
-
-
             margin-bottom: 0.5rem;
-
-
 
             background: linear-gradient(90deg, #38bdf8, #818cf8);
 
-
-
             -webkit-background-clip: text;
-
-
 
             -webkit-text-fill-color: transparent;
 
-
-
         }
-
-
-
-
-
-
 
         .subtitle {
 
-
-
             text-align: center;
-
-
 
             color: #94a3b8;
 
-
-
             font-size: 0.9rem;
-
-
 
             margin-bottom: 2rem;
 
-
-
         }
-
-
-
-
-
-
 
         .controls {
 
-
-
             display: flex;
-
-
 
             justify-content: center;
 
-
-
             gap: 0.5rem;
-
-
 
             flex-wrap: wrap;
 
-
-
             margin-bottom: 2rem;
 
-
-
         }
-
-
-
-
-
-
 
         .plane-btn {
 
-
-
             padding: 0.6rem 1.2rem;
-
-
 
             border: none;
 
-
-
             border-radius: 8px;
-
-
 
             cursor: pointer;
 
-
-
             font-weight: 600;
-
-
 
             font-size: 0.85rem;
 
-
-
             transition: all 0.2s;
-
-
 
             background: #334155;
 
-
-
             color: #e2e8f0;
 
-
-
         }
-
-
-
-
-
-
 
         .plane-btn:hover {
 
-
-
             background: #475569;
-
-
 
             transform: translateY(-1px);
 
-
-
         }
-
-
-
-
-
-
 
         .plane-btn.active {
 
-
-
             background: linear-gradient(135deg, #38bdf8, #818cf8);
-
-
 
             color: #0f172a;
 
-
-
         }
-
-
-
-
-
-
 
         .canvas-container {
 
-
-
             display: flex;
-
-
 
             justify-content: center;
 
-
-
             margin-bottom: 2rem;
 
-
-
         }
-
-
-
-
-
-
 
         canvas {
 
-
-
             background: #1e293b;
 
-
-
             border-radius: 12px;
-
-
 
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
-
-
         }
-
-
-
-
-
-
 
         .legend {
 
-
-
             display: flex;
-
-
 
             justify-content: center;
 
-
-
             gap: 2rem;
-
-
 
             flex-wrap: wrap;
 
-
-
             margin-bottom: 2rem;
 
-
-
         }
-
-
-
-
-
-
 
         .legend-item {
 
-
-
             display: flex;
-
-
 
             align-items: center;
 
-
-
             gap: 0.5rem;
-
-
 
             font-size: 0.8rem;
 
-
-
         }
-
-
-
-
-
-
 
         .legend-dot {
 
-
-
             width: 12px;
-
-
 
             height: 12px;
 
-
-
             border-radius: 50%;
 
-
-
         }
-
-
-
-
-
-
 
         .stats-grid {
 
-
-
             display: grid;
-
-
 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
-
-
             gap: 1rem;
-
-
 
             max-width: 1200px;
 
-
-
             margin: 0 auto;
 
-
-
         }
-
-
-
-
-
-
 
         .stat-card {
 
-
-
             background: rgba(30, 41, 59, 0.8);
-
-
 
             border-radius: 12px;
 
-
-
             padding: 1rem;
-
-
 
             border: 1px solid #334155;
 
-
-
         }
-
-
-
-
-
-
 
         .stat-card h3 {
 
-
-
             font-size: 0.9rem;
 
-
-
             color: #94a3b8;
-
-
 
             margin-bottom: 0.5rem;
 
-
-
         }
-
-
-
-
-
-
 
         .stat-value {
 
-
-
             font-size: 1.4rem;
-
-
 
             font-weight: 700;
 
-
-
         }
-
-
-
-
-
-
 
         .positive {
 
-
-
             color: #4ade80;
 
-
-
         }
-
-
-
-
-
-
 
         .negative {
 
-
-
             color: #f87171;
 
-
-
         }
-
-
-
-
-
-
 
         .neutral {
 
-
-
             color: #fbbf24;
 
-
-
         }
-
-
-
-
-
-
 
         table {
 
-
-
             width: 100%;
-
-
 
             border-collapse: collapse;
 
-
-
             margin-top: 1rem;
-
-
 
             font-size: 0.75rem;
 
-
-
         }
-
-
-
-
-
-
 
         th,
 
-
-
         td {
-
-
 
             padding: 0.5rem;
 
-
-
             text-align: left;
-
-
 
             border-bottom: 1px solid #334155;
 
-
-
         }
-
-
-
-
-
-
 
         th {
 
-
-
             color: #94a3b8;
-
-
 
             font-weight: 600;
 
-
-
         }
-
-
-
-
-
-
 
         .fn-badge {
 
-
-
             background: #7c3aed;
-
-
 
             color: white;
 
-
-
             padding: 0.1rem 0.4rem;
-
-
 
             border-radius: 4px;
 
-
-
             font-size: 0.65rem;
-
-
 
             margin-left: 0.3rem;
 
-
-
         }
-
-
-
-
-
-
 
         .tooltip {
 
-
-
             position: fixed;
-
-
 
             background: #1e293b;
 
-
-
             border: 1px solid #475569;
-
-
 
             padding: 0.8rem;
 
-
-
             border-radius: 8px;
-
-
 
             font-size: 0.8rem;
 
-
-
             max-width: 280px;
-
-
 
             pointer-events: none;
 
-
-
             z-index: 1000;
-
-
 
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 
-
-
             display: none;
 
-
-
         }
-
-
-
-
-
-
 
         .tooltip-title {
 
-
-
             font-weight: 700;
-
-
 
             margin-bottom: 0.3rem;
 
-
-
         }
-
-
-
-
-
-
 
         .tooltip-coords {
 
-
-
             color: #94a3b8;
 
-
-
             font-size: 0.75rem;
-
-
 
         }
     </style>
 
-
-
 </head>
-
-
-
-
-
-
 
 <body>
 
-
-
     <h1>Australian Kanon — Psochic Hegemony</h1>
-
-
 
     <p class="subtitle">Moral Vector Analysis of 354 Entries Across 7 Planes</p>
 
-
-
-
-
-
-
     <div class="controls">
-
-
 
         <button class="plane-btn active" data-plane="all">All Planes</button>
 
-
-
         <button class="plane-btn" data-plane="1">P1: Identity</button>
-
-
 
         <button class="plane-btn" data-plane="2">P2: Definition</button>
 
-
-
         <button class="plane-btn" data-plane="3">P3: Land</button>
-
-
 
         <button class="plane-btn" data-plane="4">P4: Drive</button>
 
-
-
         <button class="plane-btn" data-plane="5">P5: Method</button>
-
-
 
         <button class="plane-btn" data-plane="6">P6: Foundation</button>
 
-
-
         <button class="plane-btn" data-plane="7">P7: Result</button>
 
-
-
     </div>
-
-
-
-
-
-
 
     <div class="canvas-container">
 
-
-
         <canvas id="hegemonyCanvas" width="700" height="700"></canvas>
 
-
-
     </div>
-
-
-
-
-
-
 
     <div class="legend">
 
-
-
         <div class="legend-item">
-
-
 
             <div class="legend-dot" style="background: #4ade80;"></div> Greater Good (+υ, +ψ)
 
-
-
         </div>
 
-
-
         <div class="legend-item">
-
-
 
             <div class="legend-dot" style="background: #f87171;"></div> Greatest Lie (-υ, +ψ)
 
-
-
         </div>
 
-
-
         <div class="legend-item">
-
-
 
             <div class="legend-dot" style="background: #38bdf8;"></div> Lesser Good (+υ, -ψ)
 
-
-
         </div>
 
-
-
         <div class="legend-item">
-
-
 
             <div class="legend-dot" style="background: #fb923c;"></div> Greater Evil (-υ, -ψ)
 
-
-
         </div>
-
-
 
         <div class="legend-item">
 
-
-
             <div class="legend-dot" style="background: #7c3aed;"></div> First Nations Entry
-
-
 
         </div>
 
-
-
     </div>
-
-
-
-
-
-
 
     <div class="stats-grid" id="statsGrid"></div>
 
-
-
-
-
-
-
     <div class="tooltip" id="tooltip">
-
-
 
         <div class="tooltip-title"></div>
 
-
-
         <div class="tooltip-coords"></div>
-
-
 
         <div class="tooltip-judgment"></div>
 
-
-
     </div>
-
-
-
-
-
-
 
     <script>
 
-
-
         // KANON DATA - All 354 entries across 7 planes
-
-
 
         const kanonData = {
 
@@ -1766,1026 +1220,438 @@
 
         };
 
-
-
-
-
-
-
         // Canvas setup
-
-
 
         const canvas = document.getElementById('hegemonyCanvas');
 
-
-
         const ctx = canvas.getContext('2d');
-
-
 
         const tooltip = document.getElementById('tooltip');
 
-
-
         const width = canvas.width;
-
-
 
         const height = canvas.height;
 
-
-
         const cx = width / 2;
-
-
 
         const cy = height / 2;
 
-
-
         const scale = (width - 100) / 4; // Maps -2 to +2 across canvas
-
-
-
-
-
-
 
         let currentPlane = 'all';
 
-
-
         let hoveredEntry = null;
-
-
-
-
-
-
 
         // Coordinate conversion (INVERTED: positive Ï is LEFT)
 
-
-
         function toCanvasX(u) { return cx - (u * scale); }
-
-
 
         function toCanvasY(p) { return cy - (p * scale); }
 
-
-
-
-
-
-
         // Get quadrant color
-
-
 
         function getQuadrantColor(u, p, alpha = 1) {
 
-
-
             if (u >= 0 && p >= 0) return `rgba(74, 222, 128, ${alpha})`; // Greater Good - Green
-
-
 
             if (u < 0 && p >= 0) return `rgba(248, 113, 113, ${alpha})`; // Greatest Lie - Red
 
-
-
             if (u >= 0 && p < 0) return `rgba(56, 189, 248, ${alpha})`; // Lesser Good - Blue
-
-
 
             return `rgba(251, 146, 60, ${alpha})`; // Greater Evil - Orange
 
-
-
         }
-
-
-
-
-
-
 
         // Draw the hegemony grid
 
-
-
         function drawGrid() {
-
-
 
             ctx.clearRect(0, 0, width, height);
 
-
-
-
-
-
-
             // Background quadrant shading
-
-
 
             ctx.globalAlpha = 0.1;
 
-
-
             ctx.fillStyle = '#4ade80'; ctx.fillRect(0, 0, cx, cy); // TL - Greater Good
-
-
 
             ctx.fillStyle = '#f87171'; ctx.fillRect(cx, 0, cx, cy); // TR - Greatest Lie
 
-
-
             ctx.fillStyle = '#38bdf8'; ctx.fillRect(0, cy, cx, height / 2); // BL - Lesser Good
-
-
 
             ctx.fillStyle = '#fb923c'; ctx.fillRect(cx, cy, cx, height / 2); // BR - Greater Evil
 
-
-
             ctx.globalAlpha = 1;
-
-
-
-
-
-
 
             // Zone 1 boundary (ÃÂ±1.0)
 
-
-
             ctx.strokeStyle = '#475569';
-
-
 
             ctx.lineWidth = 2;
 
-
-
             ctx.setLineDash([5, 5]);
-
-
 
             ctx.strokeRect(toCanvasX(1), toCanvasY(1), 2 * scale, 2 * scale);
 
-
-
-
-
-
-
             // Zone 2 boundary (ÃÂ±2.0)
-
-
 
             ctx.strokeStyle = '#334155';
 
-
-
             ctx.lineWidth = 1;
-
-
 
             ctx.strokeRect(toCanvasX(2), toCanvasY(2), 4 * scale, 4 * scale);
 
-
-
-
-
-
-
             ctx.setLineDash([]);
-
-
-
-
-
-
 
             // Axes
 
-
-
             ctx.strokeStyle = '#64748b';
-
-
 
             ctx.lineWidth = 1;
 
-
-
             ctx.beginPath();
-
-
 
             ctx.moveTo(0, cy); ctx.lineTo(width, cy); // Horizontal (Ï)
 
-
-
             ctx.moveTo(cx, 0); ctx.lineTo(cx, height); // Vertical (Ï)
 
-
-
             ctx.stroke();
-
-
-
-
-
-
 
             // Corner labels
 
-
-
             ctx.font = '600 11px Inter';
-
-
 
             ctx.fillStyle = '#4ade80'; ctx.textAlign = 'right'; ctx.fillText('GREATER GOOD', cx - 10, 25);
 
-
-
             ctx.fillStyle = '#f87171'; ctx.textAlign = 'left'; ctx.fillText('GREATEST LIE', cx + 10, 25);
-
-
 
             ctx.fillStyle = '#38bdf8'; ctx.textAlign = 'right'; ctx.fillText('LESSER GOOD', cx - 10, height - 15);
 
-
-
             ctx.fillStyle = '#fb923c'; ctx.textAlign = 'left'; ctx.fillText('GREATER EVIL', cx + 10, height - 15);
-
-
-
-
-
-
 
             // Axis labels
 
-
-
             ctx.font = '600 10px Inter';
-
-
 
             ctx.fillStyle = '#94a3b8';
 
-
-
             ctx.textAlign = 'center';
-
-
 
             ctx.fillText('Ï = +1 (Universal)', 60, cy - 10);
 
-
-
             ctx.fillText('Ï = -1 (Self)', width - 60, cy - 10);
 
-
-
             ctx.save();
-
-
 
             ctx.translate(cx + 15, 60);
 
-
-
             ctx.rotate(-Math.PI / 2);
-
-
 
             ctx.fillText('Ï = +1 (Create)', 0, 0);
 
-
-
             ctx.restore();
-
-
 
             ctx.save();
 
-
-
             ctx.translate(cx + 15, height - 40);
-
-
 
             ctx.rotate(-Math.PI / 2);
 
-
-
             ctx.fillText('Ï = -1 (Suppress)', 0, 0);
-
-
 
             ctx.restore();
 
-
-
         }
-
-
-
-
-
-
 
         // Draw entries
 
-
-
         function drawEntries() {
-
-
 
             const planes = currentPlane === 'all' ? Object.keys(kanonData) : [currentPlane];
 
-
-
-
-
-
-
             planes.forEach(planeId => {
 
-
-
                 const plane = kanonData[planeId];
-
-
 
                 plane.entries.forEach(entry => {
 
-
-
                     const x = toCanvasX(entry.u);
 
-
-
                     const y = toCanvasY(entry.p);
-
-
 
                     const radius = entry.fn ? 6 : 4;
 
-
-
                     const color = entry.fn ? '#7c3aed' : getQuadrantColor(entry.u, entry.p);
-
-
-
-
-
-
 
                     ctx.beginPath();
 
-
-
                     ctx.arc(x, y, radius, 0, Math.PI * 2);
-
-
 
                     ctx.fillStyle = color;
 
-
-
                     ctx.fill();
-
-
-
-
-
-
 
                     if (entry === hoveredEntry) {
 
-
-
                         ctx.strokeStyle = '#fff';
-
-
 
                         ctx.lineWidth = 2;
 
-
-
                         ctx.stroke();
 
-
-
                     }
-
-
 
                 });
 
-
-
-
-
-
-
                 // Draw plane centroid
-
-
 
                 ctx.beginPath();
 
-
-
                 const centX = toCanvasX(plane.total.u);
-
-
 
                 const centY = toCanvasY(plane.total.p);
 
-
-
                 ctx.arc(centX, centY, 10, 0, Math.PI * 2);
-
-
 
                 ctx.fillStyle = plane.color;
 
-
-
                 ctx.globalAlpha = 0.8;
-
-
 
                 ctx.fill();
 
-
-
                 ctx.globalAlpha = 1;
-
-
 
                 ctx.strokeStyle = '#fff';
 
-
-
                 ctx.lineWidth = 2;
-
-
 
                 ctx.stroke();
 
-
-
-
-
-
-
                 // Label
-
-
 
                 ctx.font = '700 10px Inter';
 
-
-
                 ctx.fillStyle = '#fff';
-
-
 
                 ctx.textAlign = 'center';
 
-
-
                 ctx.fillText(`P${planeId}`, centX, centY + 4);
-
-
 
             });
 
-
-
         }
-
-
-
-
-
-
 
         // Draw grand total
 
-
-
         function drawGrandTotal() {
-
-
 
             if (currentPlane !== 'all') return;
 
-
-
-
-
-
-
             const totalU = 0.44;
-
-
 
             const totalP = 0.26;
 
-
-
             const x = toCanvasX(totalU);
-
-
 
             const y = toCanvasY(totalP);
 
-
-
-
-
-
-
             ctx.beginPath();
-
-
 
             ctx.arc(x, y, 14, 0, Math.PI * 2);
 
-
-
             ctx.fillStyle = '#fff';
-
-
 
             ctx.fill();
 
-
-
             ctx.strokeStyle = '#0f172a';
-
-
 
             ctx.lineWidth = 3;
 
-
-
             ctx.stroke();
-
-
-
-
-
-
 
             ctx.font = '700 9px Inter';
 
-
-
             ctx.fillStyle = '#0f172a';
-
-
 
             ctx.textAlign = 'center';
 
-
-
             ctx.fillText('AUS', x, y + 3);
 
-
-
         }
-
-
-
-
-
-
 
         // Main draw function
 
-
-
         function draw() {
-
-
 
             drawGrid();
 
-
-
             drawEntries();
-
-
 
             drawGrandTotal();
 
-
-
         }
-
-
-
-
-
-
 
         // Update stats display
 
-
-
         function updateStats() {
-
-
 
             const statsGrid = document.getElementById('statsGrid');
 
-
-
             const planes = currentPlane === 'all' ? Object.keys(kanonData) : [currentPlane];
-
-
-
-
-
-
 
             let html = '';
 
-
-
-
-
-
-
             if (currentPlane === 'all') {
 
-
-
                 html += `
-
-
 
                     <div class="stat-card">
 
-
-
                         <h3>Grand Total (354 Entries)</h3>
-
-
 
                         <div class="stat-value positive">Ï = +0.44, Ï = +0.26</div>
 
-
-
                         <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem;">Lesser Good — Positive morality, moderate will</p>
-
-
 
                     </div>
 
-
-
                 `;
 
-
-
             }
-
-
-
-
-
-
 
             planes.forEach(planeId => {
 
-
-
                 const plane = kanonData[planeId];
-
-
 
                 const fnCount = plane.entries.filter(e => e.fn).length;
 
-
-
                 const quadrantClass = plane.total.u >= 0 ? 'positive' : 'negative';
-
-
-
-
-
-
 
                 html += `
 
-
-
                     <div class="stat-card" style="border-left: 3px solid ${plane.color};">
-
-
 
                         <h3>Plane ${planeId}: ${plane.name}</h3>
 
-
-
                         <div class="stat-value ${quadrantClass}">Ï = ${plane.total.u >= 0 ? '+' : ''}${plane.total.u.toFixed(2)}, Ï = ${plane.total.p >= 0 ? '+' : ''}${plane.total.p.toFixed(2)}</div>
-
-
 
                         <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem;">
 
-
-
                             ${plane.entries.length} entries ${fnCount > 0 ? `"Â¢ <span style="color: #7c3aed;">${fnCount} First Nations</span>` : ''}
-
-
 
                         </p>
 
-
-
                     </div>
-
-
 
                 `;
 
-
-
             });
-
-
-
-
-
-
 
             statsGrid.innerHTML = html;
 
-
-
         }
-
-
-
-
-
-
 
         // Mouse interaction
 
-
-
         canvas.addEventListener('mousemove', (e) => {
-
-
 
             const rect = canvas.getBoundingClientRect();
 
-
-
             const mouseX = e.clientX - rect.left;
-
-
 
             const mouseY = e.clientY - rect.top;
 
-
-
-
-
-
-
             hoveredEntry = null;
-
-
 
             const planes = currentPlane === 'all' ? Object.keys(kanonData) : [currentPlane];
 
-
-
-
-
-
-
             for (const planeId of planes) {
-
-
 
                 for (const entry of kanonData[planeId].entries) {
 
-
-
                     const x = toCanvasX(entry.u);
-
-
 
                     const y = toCanvasY(entry.p);
 
-
-
                     const dist = Math.sqrt((mouseX - x) ** 2 + (mouseY - y) ** 2);
-
-
 
                     if (dist < 10) {
 
-
-
                         hoveredEntry = entry;
-
-
 
                         hoveredEntry._planeId = planeId;
 
-
-
                         break;
-
-
 
                     }
 
-
-
                 }
-
-
 
                 if (hoveredEntry) break;
 
-
-
             }
-
-
-
-
-
-
 
             if (hoveredEntry) {
 
-
-
                 tooltip.style.display = 'block';
-
-
 
                 tooltip.style.left = (e.clientX + 15) + 'px';
 
-
-
                 tooltip.style.top = (e.clientY + 15) + 'px';
-
-
 
                 tooltip.querySelector('.tooltip-title').textContent = hoveredEntry.name + (hoveredEntry.fn ? ' [FN]' : '');
 
-
-
                 tooltip.querySelector('.tooltip-coords').textContent = `Ï = ${hoveredEntry.u >= 0 ? '+' : ''}${hoveredEntry.u.toFixed(1)}, Ï = ${hoveredEntry.p >= 0 ? '+' : ''}${hoveredEntry.p.toFixed(1)}`;
-
-
 
                 tooltip.querySelector('.tooltip-judgment').textContent = `Plane ${hoveredEntry._planeId}: ${kanonData[hoveredEntry._planeId].name}`;
 
-
-
             } else {
-
-
 
                 tooltip.style.display = 'none';
 
-
-
             }
-
-
-
-
-
-
 
             draw();
 
-
-
         });
-
-
-
-
-
-
 
         canvas.addEventListener('mouseleave', () => {
 
-
-
             hoveredEntry = null;
-
-
 
             tooltip.style.display = 'none';
 
-
-
             draw();
 
-
-
         });
-
-
-
-
-
-
 
         // Button handlers
 
-
-
         document.querySelectorAll('.plane-btn').forEach(btn => {
-
-
 
             btn.addEventListener('click', () => {
 
-
-
                 document.querySelectorAll('.plane-btn').forEach(b => b.classList.remove('active'));
-
-
 
                 btn.classList.add('active');
 
-
-
                 currentPlane = btn.dataset.plane;
-
-
 
                 draw();
 
-
-
                 updateStats();
-
-
 
             });
 
-
-
         });
-
-
-
-
-
-
 
         // Initial draw
 
-
-
         draw();
-
-
 
         updateStats();
 
-
-
     </script>
 
-
-
 </body>
-
-
-
-
-
-
 
 </html>
