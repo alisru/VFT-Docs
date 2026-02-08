@@ -1,8 +1,8 @@
 {
     "version": "1.0",
     "description": "Global Mistake Registry - Persists across conversations",
-    "last_updated": "2026-02-07T10:25:46.106471",
-    "mistake_count": 11,
+    "last_updated": "2026-02-08T13:05:04.679052",
+    "mistake_count": 14,
     "mistakes": [
         {
             "id": "ARC_001",
@@ -135,6 +135,42 @@
             ],
             "source_project": "Australian Kanon Development",
             "synced_at": "2026-02-07T10:25:46.106459"
+        },
+        {
+            "id": "M001",
+            "name": "Kanon Formatting Deviation",
+            "structure": "Incorrect Paragraph Structure",
+            "example": "Merged context without distinct Description block",
+            "tags": [
+                "kanon",
+                "formatting"
+            ],
+            "source_project": "Australian Kanon Generation",
+            "synced_at": "2026-02-08T13:00:50.936236"
+        },
+        {
+            "id": "M002",
+            "name": "Format Deviation",
+            "structure": "Missed Kanon Paragraph Structure",
+            "example": "Merged context/meaning blocks and missed indentation",
+            "tags": [
+                "kanon",
+                "formatting"
+            ],
+            "source_project": "Australian Kanon Generation",
+            "synced_at": "2026-02-08T13:00:50.936273"
+        },
+        {
+            "id": "M003",
+            "name": "Fragmented Meaning Block",
+            "structure": "Orphaned 'This establishes' sentence",
+            "example": "Line 17 in Plane 6 Foundation: 'This establishes a foundation born...'",
+            "tags": [
+                "plane6",
+                "formatting"
+            ],
+            "source_project": "Australian Kanon Generation",
+            "synced_at": "2026-02-08T13:00:50.936277"
         }
     ],
     "lessons": [
