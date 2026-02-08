@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Generate 3 thumbnails for 7x7x7 video",
-        "current_task_index": 10,
+        "current_focus": "Analyze and refine Invisible Z-Axis Time Illusion document",
+        "current_task_index": 26,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -43,6 +43,15 @@
                 ],
                 "linked_tasks": [],
                 "timestamp": "2026-02-07T17:58:36.413637"
+            },
+            {
+                "id": "M004",
+                "name": "Index Desynchronization",
+                "structure": "Manually tracking IDs which diverge from system-assigned IDs.",
+                "example": "Tried to mark task 32 as DONE when system only had 19 tasks.",
+                "tags": [],
+                "linked_tasks": [],
+                "timestamp": "2026-02-08T17:15:23.652530"
             }
         ],
         "fuckup_prevention_checklist": [
@@ -454,6 +463,450 @@
                 "graphics"
             ],
             "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 11,
+            "id": "task_11",
+            "description": "Extract document: Fractal Emergence of 7 Planes (from claude inf navigation)",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T13:51:18.209235] Task created.",
+                "[2026-02-08T13:51:40.788741] Started work.",
+                "[2026-02-08T13:55:34.772768] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 12,
+            "id": "task_12",
+            "description": "Extract document: Invisible Z Axis (from claude inf navigation)",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T13:51:20.068764] Task created.",
+                "[2026-02-08T13:55:36.172244] Started work.",
+                "[2026-02-08T13:55:49.867256] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 13,
+            "id": "task_13",
+            "description": "Extract document: 2c Boundary and Phase Fragmentation (from claude inf navigation)",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T13:51:21.836171] Task created.",
+                "[2026-02-08T13:55:51.552478] Started work.",
+                "[2026-02-08T13:56:05.997205] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 14,
+            "id": "task_14",
+            "description": "Analyze claudeseekingperspective.txt for document candidates",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T14:03:08.456065] Task created.",
+                "[2026-02-08T14:03:23.892016] Started work.",
+                "[2026-02-08T17:03:09.665720] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 15,
+            "id": "task_15",
+            "description": "Extract 'The 252 States of Being You'",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:03:35.658765] Task created.",
+                "[2026-02-08T17:03:37.741097] Started work.",
+                "[2026-02-08T17:03:38.253518] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 16,
+            "id": "task_16",
+            "description": "Extract 'The Tautonic Oracle'",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:03:36.166116] Task created.",
+                "[2026-02-08T17:03:42.654384] Started work.",
+                "[2026-02-08T17:03:45.049509] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 17,
+            "id": "task_17",
+            "description": "Extract 'Nation States as Fractal Agents'",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:03:36.667269] Task created.",
+                "[2026-02-08T17:03:48.688898] Started work.",
+                "[2026-02-08T17:03:51.344182] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 18,
+            "id": "task_18",
+            "description": "Extract 'Tautonic Language Engine Specs'",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:03:37.227582] Task created.",
+                "[2026-02-08T17:03:55.647678] Started work.",
+                "[2026-02-08T17:04:00.666982] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 19,
+            "id": "task_19",
+            "description": "Analyze {Meaning}.cs for Tautonic Theory",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:12:46.499927] Task created.",
+                "[2026-02-08T17:12:46.824379] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 20,
+            "id": "task_20",
+            "description": "Update Tautonic_Language_Engine_Specs.md with Meaning.cs insights",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:15:01.078477] Task created.",
+                "[2026-02-08T17:15:11.500831] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 21,
+            "id": "task_21",
+            "description": "Update The_252_States_of_Being_You.md with Stress Tensor concepts",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:15:01.189462] Task created.",
+                "[2026-02-08T17:15:11.616116] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 22,
+            "id": "task_22",
+            "description": "Update Nation_States_as_Fractal_Agents.md with Revolution Scenario",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:15:01.298957] Task created.",
+                "[2026-02-08T17:15:11.730519] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 23,
+            "id": "task_23",
+            "description": "Synthesize Tautonic Engine Architecture Blueprint",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-08T17:24:05.770942] Task created.",
+                "[2026-02-08T17:24:05.887351] Started work.",
+                "[2026-02-08T17:41:51.840167] Marked as DONE."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 24,
+            "id": "task_24",
+            "description": "Synthesize stateless-stateful AI & infinite context window VDB format",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-09T00:11:30.304213] Task created.",
+                "[2026-02-09T00:11:36.856547] Started work.",
+                "[2026-02-09T00:15:00.325462] Marked as DONE.",
+                "[2026-02-09T00:15:00.325488] Lesson learned: VDB harvest requires targeted queries when broad ones fail. prev_id/next_id threading is the key to infinite context beyond RAG."
+            ],
+            "lessons_learned": [
+                "VDB harvest requires targeted queries when broad ones fail. prev_id/next_id threading is the key to infinite context beyond RAG."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "architecture",
+                "vdtharvest",
+                "ai_model"
+            ],
+            "reasoning_trace": [
+                "[00:15:00] Harvested context from chatgpt perception and matrix.txt and verified VDB schema via python. Synthesized specifications for stateless-stateful AI and infinite context VDB format."
+            ],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 25,
+            "id": "task_25",
+            "description": "Exhaustive extraction (No Redaction) of Stateless-Stateful AI & Infinite Context VDB specs",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-09T00:17:45.358449] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "exhaustive",
+                "no_redaction",
+                "architecture"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 26,
+            "id": "task_26",
+            "description": "Analyze and refine Invisible Z-Axis Time Illusion document",
+            "status": "in_progress",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-09T01:08:19.084270] Task created.",
+                "[2026-02-09T01:08:19.402968] Started work."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "documentation",
+                "vft",
+                "time"
+            ],
+            "reasoning_trace": [
+                "[01:08:45] Creating targeted implementation plan to refine the Invisible Z-Axis document without affecting other files."
+            ],
             "auto_linked_mistakes": [],
             "postmortem": {
                 "passes": [],

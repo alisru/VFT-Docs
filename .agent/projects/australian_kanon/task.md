@@ -1,8 +1,8 @@
 # Australian Kanon Generation
 
-**Current Focus**: Generate 3 thumbnails for 7x7x7 video
+**Current Focus**: Analyze and refine Invisible Z-Axis Time Illusion document
 
-**Progress**: 8/11 complete
+**Progress**: 22/27 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -16,6 +16,22 @@
 - [x] Merge YouTube descriptions for 7x7x7 video `youtube 7x7x7` <!-- id: 8 -->
 - [x] Finalize Title and Description for 7x7x7 video `youtube 7x7x7` <!-- id: 9 -->
 - [/] Generate 3 thumbnails for 7x7x7 video `youtube graphics` <!-- id: 10 -->
+- [x] Extract document: Fractal Emergence of 7 Planes (from claude inf navigation) <!-- id: 11 -->
+- [x] Extract document: Invisible Z Axis (from claude inf navigation) <!-- id: 12 -->
+- [x] Extract document: 2c Boundary and Phase Fragmentation (from claude inf navigation) <!-- id: 13 -->
+- [x] Analyze claudeseekingperspective.txt for document candidates <!-- id: 14 -->
+- [x] Extract 'The 252 States of Being You' <!-- id: 15 -->
+- [x] Extract 'The Tautonic Oracle' <!-- id: 16 -->
+- [x] Extract 'Nation States as Fractal Agents' <!-- id: 17 -->
+- [x] Extract 'Tautonic Language Engine Specs' <!-- id: 18 -->
+- [x] Analyze {Meaning}.cs for Tautonic Theory <!-- id: 19 -->
+- [x] Update Tautonic_Language_Engine_Specs.md with Meaning.cs insights <!-- id: 20 -->
+- [x] Update The_252_States_of_Being_You.md with Stress Tensor concepts <!-- id: 21 -->
+- [x] Update Nation_States_as_Fractal_Agents.md with Revolution Scenario <!-- id: 22 -->
+- [x] Synthesize Tautonic Engine Architecture Blueprint <!-- id: 23 -->
+- [x] Synthesize stateless-stateful AI & infinite context window VDB format `architecture vdtharvest ai_model` <!-- id: 24 -->
+- [ ] Exhaustive extraction (No Redaction) of Stateless-Stateful AI & Infinite Context VDB specs `exhaustive no_redaction architecture` <!-- id: 25 -->
+- [/] Analyze and refine Invisible Z-Axis Time Illusion document `documentation vft time` <!-- id: 26 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
@@ -33,4 +49,8 @@
 > [!WARNING] M003: Fragmented Meaning Block [plane6, formatting]
 > **Structure**: Orphaned 'This establishes' sentence
 > **Example**: Line 17 in Plane 6 Foundation: 'This establishes a foundation born...'
+>
+> [!WARNING] M004: Index Desynchronization
+> **Structure**: Manually tracking IDs which diverge from system-assigned IDs.
+> **Example**: Tried to mark task 32 as DONE when system only had 19 tasks.
 >

@@ -100,16 +100,15 @@ namespace TautonicLanguageEngine
     public class Belief 
     {
         public MoralVectorDef VectorType { get; set; }
-        public string Content { get; set; }
-        public float Score { get; set; }
+        public Meaning Answer { get; set; }
+        public float Score => Answer.TruthScore;
         public MoralScore MoralAlignment { get; set; }
 
-        public Belief(MoralVectorDef vectorType, string content, float score)
+        public Belief(MoralVectorDef vectorType, Meaning answer)
         {
             VectorType = vectorType;
-            Content = content;
-            Score = score;
-            MoralAlignment = new MoralScore(score, vectorType);
+            Answer = answer;
+            MoralAlignment = new MoralScore(answer.TruthScore, vectorType);
         }
     }
 
@@ -142,6 +141,20 @@ namespace TautonicLanguageEngine
             Effect = effect;
 
             Vectors = new List<Belief> { who, where, what, why, how, cause, effect };
+            NetCoherence = CalculateFractalRatio();
+        }
+
+        public Idea(Meaning who, Meaning where, Meaning what, Meaning why, Meaning how, Meaning cause, Meaning effect)
+        {
+            Who = new Belief(MoralVectors.Who, who);
+            Where = new Belief(MoralVectors.Where, where);
+            What = new Belief(MoralVectors.What, what);
+            Why = new Belief(MoralVectors.Why, why);
+            How = new Belief(MoralVectors.How, how);
+            Cause = new Belief(MoralVectors.Cause, cause);
+            Effect = new Belief(MoralVectors.Effect, effect);
+
+            Vectors = new List<Belief> { Who, Where, What, Why, How, Cause, Effect };
             NetCoherence = CalculateFractalRatio();
         }
 

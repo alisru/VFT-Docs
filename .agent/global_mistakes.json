@@ -1,8 +1,8 @@
 {
     "version": "1.0",
     "description": "Global Mistake Registry - Persists across conversations",
-    "last_updated": "2026-02-08T13:05:04.679052",
-    "mistake_count": 14,
+    "last_updated": "2026-02-09T00:15:15.040776",
+    "mistake_count": 15,
     "mistakes": [
         {
             "id": "ARC_001",
@@ -171,6 +171,15 @@
             ],
             "source_project": "Australian Kanon Generation",
             "synced_at": "2026-02-08T13:00:50.936277"
+        },
+        {
+            "id": "M004",
+            "name": "Index Desynchronization",
+            "structure": "Manually tracking IDs which diverge from system-assigned IDs.",
+            "example": "Tried to mark task 32 as DONE when system only had 19 tasks.",
+            "tags": [],
+            "source_project": "Australian Kanon Generation",
+            "synced_at": "2026-02-09T00:15:15.040743"
         }
     ],
     "lessons": [

@@ -12,6 +12,7 @@ namespace TautonicLanguageEngine
         public Polarity Polarity { get; set; }        // Positive / Negative / Neutral
         public List<Meaning> SubMeanings { get; set; } // Derived / component meanings
         public List<(string RelatedWord, SemanticRelation Relation)> Related { get; set; }
+        public float TruthScore { get; set; } = 1.0f; // VFT geometric alignment
 
         // Axomic / Semantic Registry Info
         public int AxomicID { get; set; }

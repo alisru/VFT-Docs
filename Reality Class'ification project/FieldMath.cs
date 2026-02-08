@@ -91,6 +91,20 @@ namespace RealityClassificationProject
             return 1.0f / product;
         }
 
+        /// <summary>
+        /// Calculates Fractal Ratio from a list of Meanings.
+        /// </summary>
+        public static float CalculateFractalRatio(System.Collections.Generic.List<TautonicLanguageEngine.Meaning> meanings)
+        {
+            float product = 1.0f;
+            foreach (var m in meanings)
+            {
+                product *= m.TruthScore;
+            }
+            if (product == 0) return float.PositiveInfinity;
+            return 1.0f / product;
+        }
+
         // === 5. Vector Operations ===
 
         /// <summary>
