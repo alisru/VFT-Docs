@@ -81,7 +81,7 @@
 
 **(How.What.Where) The Wifi**; "Glorious blue-sky research... solving a problem of reverberation." — John O'Sullivan. *CSIRO Interview*.
 
-    CSIRO scientists (John O'Sullivan et al.) developed the key technology behind WiFi while searching for exploding black holes. They were trying to detect faint radio signals across vast distances; the algorithms they invented to clean up the noise became the foundation of the WLAN standard used by billions of devices today. It is the tool that conquered the "Where" (Distance) by making connection invisible, wireless, and ubiquitous.
+    CSIRO scientists (John O'Sullivan et al.) developed the key technology behind WiFi while searching for exploding black holes. They were trying to detect faint radio signals across vast distances; the mathematics they invented to clean up the noise became the foundation of the **WiFi standard** used by billions of devices today. It is the tool that conquered the "Where" (Distance) by making connection invisible, wireless, and ubiquitous.
 
     This establishes Wireless as the **Link**. The Australian method of connection is "Ether"—bridging the void without wires, roads, or rails. This tool suits the empty continent perfectly: you cannot cable the Outback, but you can radiate it. WiFi is the latest chapter in the Australian war against distance, following the Telegraph (1870s), the Flying Doctor Radio (1928), and the Satellite (1966). The tool of the Bricoleur, invented by accident, conquering the ancient tyranny.
 
@@ -317,7 +317,7 @@
 
     This establishes Chartism as the **Code**. The cause of the democratic method is the ideology of the "Failed Revolutionaries." Britain rejected the Charter; Australia implemented it. We are the Chartist Utopia that never happened at home. The radicalism of the founders created the expectation that the state would serve the people, not the other way around.
 
-    This establishes **Navigation** as the **Method**. You were never "lost" if you knew the song, because the land itself was the map. The Songlines proved that information could conquer space without wheels or wires, turning the "Dead Heart" into a "Living Library" for those who could read the signs. Many of the political prisoners transported to Australia were Chartists—British radicals who demanded universal male suffrage, the secret ballot, and payment for MPs. They brought their "Software" (Political Ideas) in their chains. When they were freed, they built the world's first democracies that implemented their demands. The Cause was transported ideology.
+    This establishes **Navigation** as the **Method**. You were never "lost" if you knew the song, because the land itself was the map. The Songlines proved that information could conquer space without wheels or wires, turning the "Dead Heart" into a "Living Library" for those who could read the signs. Many of the political prisoners transported to Australia were Chartists—British radicals who demanded universal male suffrage, the secret ballot, and payment for MPs. They brought their **Ideals** (Political Principles) in their chains. When they were freed, they built the world's first democracies that implemented their demands. The Cause was transported ideology.
 
 **(How.Cause.How) The Survey**; 
 "Systematically measured each mile travelled with a chain." — **Thomas Mitchell** (Surveyor General, 1830s).
@@ -339,7 +339,7 @@
 "The crimson thread of kinship runs through us all." — **Henry Parkes** (1890).
 "One people, one destiny." — **Henry Parkes** (1891).
 
-    Henry Parkes invented the "Software" of the nation before the "Hardware" existed. He used "The Crimson Thread" of blood and kinship to bypass the dry economic arguments for Federation, and "One Destiny" to give the collection of colonies an "Arrow of Time," speaking the nation into existence through poetry rather than policy.
+    Henry Parkes invented the **Soul** of the nation before the **Body** existed. He used "The Crimson Thread" of blood and kinship to bypass the dry economic arguments for Federation, and "One Destiny" to give the collection of colonies an "Arrow of Time," speaking the nation into existence through poetry rather than policy.
 
     This establishes **Federation** as the **Manufactured Destiny**. It proves that the "Cause" of Australia was not a war of independence, but a "Sales Pitch" for unity. Parkes understood that a country needs a soul before it needs a constitution, so he fabricated a "Crimson Thread" to bind the tribe. This vector defines the Australian method of creation: we do not fight for our existence; we vote for it, provided the argument appeals to our sense of "Kinship" and "inevitability."
 

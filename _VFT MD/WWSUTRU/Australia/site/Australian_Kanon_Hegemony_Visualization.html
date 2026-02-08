@@ -14,321 +14,215 @@
 
     <style>
         * {
-
             box-sizing: border-box;
-
             margin: 0;
-
             padding: 0;
-
         }
 
         body {
-
             font-family: 'Inter', sans-serif;
-
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-
-            color: #e2e8f0;
-
+            background-color: #F8FAFC;
+            color: #1e293b;
             min-height: 100vh;
-
             padding: 2rem;
-
         }
 
         h1 {
-
             text-align: center;
-
-            font-size: 1.8rem;
-
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
-
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-
-            -webkit-background-clip: text;
-
-            -webkit-text-fill-color: transparent;
-
+            color: #0f172a;
+            font-weight: 800;
         }
 
         .subtitle {
-
             text-align: center;
-
-            color: #94a3b8;
-
-            font-size: 0.9rem;
-
+            color: #64748b;
+            font-size: 1rem;
             margin-bottom: 2rem;
-
+            font-style: italic;
+            font-family: 'Merriweather', serif;
         }
 
         .controls {
-
             display: flex;
-
             justify-content: center;
-
             gap: 0.5rem;
-
             flex-wrap: wrap;
-
             margin-bottom: 2rem;
-
         }
 
         .plane-btn {
-
             padding: 0.6rem 1.2rem;
-
-            border: none;
-
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
-
             cursor: pointer;
-
             font-weight: 600;
-
             font-size: 0.85rem;
-
             transition: all 0.2s;
-
-            background: #334155;
-
-            color: #e2e8f0;
-
+            background: #ffffff;
+            color: #475569;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
         }
 
         .plane-btn:hover {
-
-            background: #475569;
-
+            background: #f1f5f9;
+            color: #1e293b;
+            border-color: #cbd5e1;
             transform: translateY(-1px);
-
         }
 
         .plane-btn.active {
-
-            background: linear-gradient(135deg, #38bdf8, #818cf8);
-
-            color: #0f172a;
-
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
         }
 
         .canvas-container {
-
             display: flex;
-
             justify-content: center;
-
             margin-bottom: 2rem;
-
         }
 
         canvas {
-
-            background: #1e293b;
-
+            background: #ffffff;
             border-radius: 12px;
-
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0;
         }
 
         .legend {
-
             display: flex;
-
             justify-content: center;
-
             gap: 2rem;
-
             flex-wrap: wrap;
-
             margin-bottom: 2rem;
-
         }
 
         .legend-item {
-
             display: flex;
-
             align-items: center;
-
             gap: 0.5rem;
-
             font-size: 0.8rem;
-
+            color: #64748b;
+            font-weight: 500;
         }
 
         .legend-dot {
-
             width: 12px;
-
             height: 12px;
-
             border-radius: 50%;
-
         }
 
         .stats-grid {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
             gap: 1rem;
-
             max-width: 1200px;
-
             margin: 0 auto;
-
         }
 
         .stat-card {
-
-            background: rgba(30, 41, 59, 0.8);
-
+            background: #ffffff;
             border-radius: 12px;
-
             padding: 1rem;
-
-            border: 1px solid #334155;
-
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
         }
 
         .stat-card h3 {
-
             font-size: 0.9rem;
-
-            color: #94a3b8;
-
+            color: #64748b;
             margin-bottom: 0.5rem;
-
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .stat-value {
-
             font-size: 1.4rem;
-
             font-weight: 700;
-
+            color: #1e293b;
         }
 
         .positive {
-
-            color: #4ade80;
-
+            color: #16a34a;
         }
 
         .negative {
-
-            color: #f87171;
-
+            color: #dc2626;
         }
 
         .neutral {
-
-            color: #fbbf24;
-
+            color: #d97706;
         }
 
         table {
-
             width: 100%;
-
             border-collapse: collapse;
-
             margin-top: 1rem;
-
             font-size: 0.75rem;
-
         }
 
         th,
-
         td {
-
             padding: 0.5rem;
-
             text-align: left;
-
-            border-bottom: 1px solid #334155;
-
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
         }
 
         th {
-
-            color: #94a3b8;
-
+            color: #64748b;
             font-weight: 600;
-
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .fn-badge {
-
             background: #7c3aed;
-
             color: white;
-
             padding: 0.1rem 0.4rem;
-
             border-radius: 4px;
-
             font-size: 0.65rem;
-
             margin-left: 0.3rem;
-
+            font-weight: 600;
         }
 
         .tooltip {
-
             position: fixed;
-
-            background: #1e293b;
-
-            border: 1px solid #475569;
-
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
             padding: 0.8rem;
-
             border-radius: 8px;
-
             font-size: 0.8rem;
-
             max-width: 280px;
-
             pointer-events: none;
-
             z-index: 1000;
-
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             display: none;
-
+            color: #1e293b;
         }
 
         .tooltip-title {
-
             font-weight: 700;
-
             margin-bottom: 0.3rem;
-
+            color: #0f172a;
         }
 
         .tooltip-coords {
-
-            color: #94a3b8;
-
+            color: #64748b;
             font-size: 0.75rem;
-
         }
     </style>
 
 </head>
 
 <body>
+    <div style="position: absolute; top: 1.5rem; left: 2rem;">
+        <a href="AustralianMatrix.html"
+            style="color: #64748b; text-decoration: none; font-weight: 600; font-size: 0.9rem;">← Back To Navigation</a>
+    </div>
 
     <h1>Australian Kanon — Psochic Hegemony</h1>
 
