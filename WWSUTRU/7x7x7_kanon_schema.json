@@ -1,0 +1,402 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "National Kanon 7x7x7 Analysis (Gold Standard)",
+    "description": "A recursive 7x7x7 structure derived from Vector Field Theory (VFT) to map the 'Soul of a Nation'. This schema enforces the 'Gold Standard' rules defined in 'How_To_Generate_National_Kanon_343.md'.",
+    "type": "object",
+    "required": [
+        "nation",
+        "planes"
+    ],
+    "properties": {
+        "nation": {
+            "type": "string",
+            "description": "The name of the nation being analyzed."
+        },
+        "planes": {
+            "type": "array",
+            "description": "The 7 Planes (Files) representing the 7 Semantic Vectors. STRICT ORDER: 1. Identity (WHO), 2. Definition (WHAT), 3. Land (WHERE), 4. Drive (WHY), 5. Method (HOW), 6. Foundation (CAUSE), 7. Result (EFFECT).",
+            "minItems": 7,
+            "maxItems": 7,
+            "items": [
+                {
+                    "$ref": "#/definitions/plane1"
+                },
+                {
+                    "$ref": "#/definitions/plane2"
+                },
+                {
+                    "$ref": "#/definitions/plane3"
+                },
+                {
+                    "$ref": "#/definitions/plane4"
+                },
+                {
+                    "$ref": "#/definitions/plane5"
+                },
+                {
+                    "$ref": "#/definitions/plane6"
+                },
+                {
+                    "$ref": "#/definitions/plane7"
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "plane1": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/plane_base"
+                },
+                {
+                    "properties": {
+                        "id": {
+                            "const": "1"
+                        },
+                        "vector": {
+                            "const": "Who"
+                        },
+                        "name": {
+                            "const": "Identity"
+                        }
+                    }
+                }
+            ]
+        },
+        "plane2": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/plane_base"
+                },
+                {
+                    "properties": {
+                        "id": {
+                            "const": "2"
+                        },
+                        "vector": {
+                            "const": "What"
+                        },
+                        "name": {
+                            "const": "Definition"
+                        }
+                    }
+                }
+            ]
+        },
+        "plane3": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/plane_base"
+                },
+                {
+                    "properties": {
+                        "id": {
+                            "const": "3"
+                        },
+                        "vector": {
+                            "const": "Where"
+                        },
+                        "name": {
+                            "const": "Land"
+                        }
+                    }
+                }
+            ]
+        },
+        "plane4": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/plane_base"
+                },
+                {
+                    "properties": {
+                        "id": {
+                            "const": "4"
+                        },
+                        "vector": {
+                            "const": "Why"
+                        },
+                        "name": {
+                            "const": "Drive"
+                        }
+                    }
+                }
+            ]
+        },
+        "plane5": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/plane_base"
+                },
+                {
+                    "properties": {
+                        "id": {
+                            "const": "5"
+                        },
+                        "vector": {
+                            "const": "How"
+                        },
+                        "name": {
+                            "const": "Method"
+                        }
+                    }
+                }
+            ]
+        },
+        "plane6": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/plane_base"
+                },
+                {
+                    "properties": {
+                        "id": {
+                            "const": "6"
+                        },
+                        "vector": {
+                            "const": "Cause"
+                        },
+                        "name": {
+                            "const": "Foundation"
+                        }
+                    }
+                }
+            ]
+        },
+        "plane7": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/plane_base"
+                },
+                {
+                    "properties": {
+                        "id": {
+                            "const": "7"
+                        },
+                        "vector": {
+                            "const": "Effect"
+                        },
+                        "name": {
+                            "const": "Result"
+                        }
+                    }
+                }
+            ]
+        },
+        "plane_base": {
+            "type": "object",
+            "required": [
+                "id",
+                "name",
+                "vector",
+                "quote",
+                "quote_author",
+                "quote_source",
+                "senses",
+                "totality_narrative"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "enum": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7"
+                    ]
+                },
+                "name": {
+                    "type": "string"
+                },
+                "vector": {
+                    "type": "string",
+                    "enum": [
+                        "Who",
+                        "What",
+                        "Where",
+                        "Why",
+                        "How",
+                        "Cause",
+                        "Effect"
+                    ]
+                },
+                "quote": {
+                    "type": "string",
+                    "description": "Quote encapsulating the entire Plane. Heuristic of Age: Prioritize Founders/Originators.",
+                    "minLength": 10
+                },
+                "quote_author": {
+                    "type": "string"
+                },
+                "quote_source": {
+                    "type": "string"
+                },
+                "senses": {
+                    "type": "array",
+                    "description": "The 7 Senses (Sections) of the Plane. Must be strictly ordered q1-q7.",
+                    "minItems": 7,
+                    "maxItems": 7,
+                    "items": {
+                        "$ref": "#/definitions/sense"
+                    }
+                },
+                "totality_narrative": {
+                    "type": "string",
+                    "description": "Synthesizes the entire Plane (49 vectors). Must use high-voltage philosophical language (metaphors of circuitry, architecture, organisms).",
+                    "minLength": 50
+                }
+            }
+        },
+        "sense": {
+            "type": "object",
+            "required": [
+                "id",
+                "vector",
+                "description",
+                "items",
+                "narrative"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "enum": [
+                        "q1",
+                        "q2",
+                        "q3",
+                        "q4",
+                        "q5",
+                        "q6",
+                        "q7"
+                    ]
+                },
+                "vector": {
+                    "type": "string",
+                    "enum": [
+                        "Who",
+                        "What",
+                        "Where",
+                        "Why",
+                        "How",
+                        "Cause",
+                        "Effect"
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "description": "e.g., The Who of the Identity"
+                },
+                "items": {
+                    "type": "array",
+                    "description": "The 7 Vectors (Items). Must strictly follow the (Plane.Sense.Vector) logic.",
+                    "minItems": 7,
+                    "maxItems": 7,
+                    "items": {
+                        "$ref": "#/definitions/vector_item"
+                    }
+                },
+                "narrative": {
+                    "type": "string",
+                    "description": "Summary block at the end of each Sense section. Synthesize the 7 vectors into a cohesive paragraph.",
+                    "minLength": 30
+                }
+            }
+        },
+        "vector_item": {
+            "type": "object",
+            "required": [
+                "id",
+                "concepts"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "The Triangulation Formula: [Plane].[Sense].[Vector]. Example: (Where.Who.Why) -> Plane(Where).Sense(Who).Vector(Why)."
+                },
+                "concepts": {
+                    "type": "array",
+                    "description": "List of candidate concepts for this vector slot. Allows for drafting multiple options.",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "name",
+                            "quotes",
+                            "context_analysis",
+                            "meaning_analysis"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The Concept Name. Must be Bold in markdown output."
+                            },
+                            "quotes": {
+                                "type": "array",
+                                "description": "List of supporting quotes for this concept.",
+                                "minItems": 1,
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "text",
+                                        "author",
+                                        "source",
+                                        "year"
+                                    ],
+                                    "properties": {
+                                        "text": {
+                                            "type": "string",
+                                            "description": "CONTENT SELECTION STRATEGIES:\n1. Heuristic of Age: Prioritize Founders.\n2. Iconic Resonance.\n3. Emotional Voltage.\n4. Relevance.\n",
+                                            "minLength": 5
+                                        },
+                                        "author": {
+                                            "type": "string"
+                                        },
+                                        "source": {
+                                            "type": "string"
+                                        },
+                                        "year": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "judgement": {
+                                "type": "object",
+                                "description": "Optional VFT Judgement Vector Analysis.",
+                                "properties": {
+                                    "moral_vector": {
+                                        "type": "number",
+                                        "description": "u (Morality) score: -1.0 to +1.0"
+                                    },
+                                    "will_vector": {
+                                        "type": "number",
+                                        "description": "p (Will) score: -1.0 to +1.0"
+                                    },
+                                    "archetype_name": {
+                                        "type": "string",
+                                        "description": "The Canonical Name from Archetype Derivation Protocol (e.g., 'The Tyrant', 'The Rot')."
+                                    },
+                                    "notes": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "context_analysis": {
+                                "type": "string",
+                                "description": "Paragraph 1: Historical/Narrative Context. \n- Minimum 2 sentences. \n- Explain the quote and the event. \n- Keep it objective.",
+                                "minLength": 20
+                            },
+                            "meaning_analysis": {
+                                "type": "string",
+                                "description": "Paragraph 2: Analytical Conclusion. \n- 'THIS ESTABLISHES FORMULA': Must start EXACTLY with 'This establishes [Concept] as...'.\n- Minimum 5 sentences.\n- Unpack philosophical implications.\n- Use 'This establishes X as Y' phrasing.\n- Explain why this vector defines the nation's psychology.",
+                                "pattern": "^This establishes [\\s\\S]* as [\\s\\S]*"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
