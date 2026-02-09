@@ -1,5 +1,0 @@
-﻿# Stoicism - Content Summaries
-
-## Files
-
-
