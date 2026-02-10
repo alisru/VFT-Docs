@@ -315,6 +315,10 @@
                     "type": "string",
                     "description": "The Triangulation Formula: [Plane].[Sense].[Vector]. Example: (Where.Who.Why) -> Plane(Where).Sense(Who).Vector(Why)."
                 },
+                "interrogative": {
+                    "type": "string",
+                    "description": "The specific question from the 7x7x7 Interrogative Cube that this vector answers."
+                },
                 "concepts": {
                     "type": "array",
                     "description": "List of candidate concepts for this vector slot. Allows for drafting multiple options.",
