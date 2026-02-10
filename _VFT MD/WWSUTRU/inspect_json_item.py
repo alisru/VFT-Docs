@@ -1,29 +1,26 @@
-
 import json
-from pathlib import Path
+import os
 
-TARGET_JSON = Path(r"e:\Vector Field Theory\VFT Docs\_VFT MD\WWSUTRU\Australia_Kanon.json")
-
-def load_json(path):
-    with open(path, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-def inspect_item(target_id):
-    data = load_json(TARGET_JSON)
-    found_count = 0
-    print(f"--- Inspecting ID: {target_id} ---")
-    for plane in data.get("planes", []):
-        for sense in plane.get("senses", []):
-            for item in sense.get("items", []):
-                if item.get("id") == target_id:
-                    print(json.dumps(item, indent=2))
-                    found_count += 1
+def inspect_json(file_path):
+    print(f"Inspecting {file_path}")
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
     
-    if found_count == 0:
-        print(f"Item {target_id} not found.")
-    else:
-        print(f"Found {found_count} occurrences.")
+    if not isinstance(data, list):
+        print("Not a list")
+        return
+    
+    for item in data:
+        source_path = item.get('source_path', 'N/A')
+        id_val = item.get('id', 'N/A')
+        print(f"ID: {id_val}")
+        print(f"Source Path: {source_path}")
+        if 'payload' in item:
+            headers = [k for k in item['payload'].keys() if k != 'full_content']
+            print(f"Payload keys (excl full_content): {headers}")
+        print("-" * 20)
 
-if __name__ == "__main__":
-    inspect_item("(Effect.Why.What)")
-    inspect_item("(Effect.Effect.Why)")
+directory = r'e:\Vector Field Theory\VFT Docs\_AI files and chat logs'
+for filename in os.listdir(directory):
+    if filename.startswith('temp_ingest_') and filename.endswith('.json'):
+        inspect_json(os.path.join(directory, filename))

@@ -1,0 +1,49 @@
+# Files with Unconverted Image Tags
+
+Total files found: 45
+
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\A Framework for the Judgment of Ideas.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Deep Cover Analysis.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Operation Blue Water： The Tactical Roadmap.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\The Desert Argument：Physics of Necessity.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\The Mechanics of Suffering：Why Ignorance Grinds the Gears.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\The Triadic Matrix.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\The Unfortunate Necessity of Failure for Success.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Hegemony\A.N.A.H.O.L.E. Hegemonic Framework (Kanon V12.0).md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Hegemony\Harmonia-Helixis Framework Guide.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Hegemony\The Psochic Hegemony_ Brief.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Hegemony\Analysis\Investigative Report： The Manchurian Executive.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Hegemony\Analysis\The Season 8 Hypothesis： America's Bureaucratic Decay.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Judgement\A Framework for the Judgment of Ideas v2.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Matrix\The Speciography of the Abyss_ A Taxonomy of Nets(1).md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Morality\The 7 Sins & Virtues_ A Plane-by-Plane Breakdown.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Pessimism\The 16 Pessimisms_ An Architecture of Entropy.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Society\The '42' of Social Physics.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Theology & Spirituality\Alethekanon Integrated Directives v24.7.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Theology & Spirituality\Alethekanon Scribe Protocol.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Theology & Spirituality\Etemenanki Construction & Ark Protocol.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Theology & Spirituality\Multilayered religion; Formalization of Multi-Layered Epistemic Spirituality Framework.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Theology & Spirituality\The Divine Coefficient： Bread & Leaven.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Translating\Language Performance Metrics — 10‑Metric System & Scores.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Truth\The Axiom of Objective Truth： The Dual-Layered Upsilon Vector.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Truth\The Fractal Definition of Truth： The 294 Vectors of Meaning.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Actualism\Truth\The VFT System Key Registry_ The 5 Permissions.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\A Comparative Analysis of Vector Field Theory and the Langlands Program -  A Study in Structural Analogy.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\A Comparative Analysis of Vector Field Theory and the Langlands Program： A Study in Structural Analogy.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\Axiomatic Mathematics Divergence Research.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\Hegemonic Stress Tensor.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\Infinitesimal Reality Math (IRM) & Infinity Maths v5.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\matter spacetime.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\The Fractal Meta-Question Stack.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\The Geometric Impossibility of Pure Meaning.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\The Nature of Number -  A Comparative Analysis of Vector Field Theory and the Historical Foundations of Mathematics.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\The Nature of Number： A Comparative Analysis of Vector Field Theory and the Historical Foundations of Mathematics.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\The VFT System Key Registry： The 5 Permissions.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\VFT Analysis -  The Mathematics of Reality and Orbits.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\VFT Analysis： Individually Tailored NDEs.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\VFT Research Addendum： The Observable Ratio & Planar Shift Hypothesis.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Protocols\Etemenanki Construction & Ark Protocol.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\Protocols\The Alethekanon Pulse Protocol.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\WWSUTRU\Hegemonic Analysis of Trump_s Foreign Influence.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\WWSUTRU\Investigative Report_ The Manchurian Executive.md
+- e:\Vector Field Theory\VFT Docs\_VFT MD\WWSUTRU\InfoWar\DigitalTrustAndAI\Investigating d4vd and Policing Trust.md
