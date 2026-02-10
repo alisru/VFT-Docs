@@ -28,7 +28,7 @@
 | Who.What.Who | **The Fair Go** | +0.9 | +0.5 | **Greater Good** — Universal axiom (+υ) actively enforced (+ψ). The Rule of 1. |
 | Who.What.What | **Tall Poppy Syndrome** | +0.4 | -0.5 | **Tension Point** — Enforces equality (+υ) through suppressive cutting (-ψ). Double-edged. |
 | Who.What.Where | **Egalitarianism** | +0.8 | +0.3 | **Greater Good** — Universal leveling (+υ) through maintained pressure (+ψ). |
-| Who.What.Why | **She'll Be Right** | +0.3 | -0.6 | **Lesser Good** — Resilience (+υ) through passive acceptance (-ψ). Complacency risk. |
+| Who.What.Why | **"She'll be right"** | +0.3 | -0.6 | **Lesser Good** — Resilience (+υ) through passive acceptance (-ψ). Complacency risk. |
 | Who.What.How | **Secular Skepticism** | +0.6 | -0.3 | **Lesser Good** — Filters dogma (+υ) but is passive rejection (-ψ). |
 | Who.What.Cause | **The Convict Stain** | +0.3 | -0.5 | **Lesser Good** — Anti-authority (+υ) from trauma (-ψ). The scar. |
 | Who.What.Effect | **The Commonwealth** | +0.8 | +0.5 | **Greater Good** — Mutual obligation (+υ) formalized into state (+ψ). The contract. |
@@ -56,7 +56,7 @@
 | Who.Why.Who | **Punching Above Weight** | +0.5 | +0.8 | **Good** — Global contribution (+υ) through maximum effort (+ψ). Overachievement. |
 | Who.Why.What | **The Lucky Country** | +0.3 | -0.4 | **Lesser Good** — Wealth shared (+υ) but passively received (-ψ). Complacency fuel. |
 | Who.Why.Where | **Populate or Perish** | -0.2 | +0.6 | **Greatest Lie** — Fear-driven (+ψ) but ignores original population (-υ). Colonial anxiety. |
-| Who.Why.Where | **Anteriority [FN]** | +0.9 | +0.3 | **Greater Good** — Truth of 65,000 years (+υ) asserted (+ψ). Challenge to colonial myth. |
+| Who.Why.Where | **Anteriority [First Nations Perspective]** | +0.9 | +0.3 | **Greater Good** — Truth of 65,000 years (+υ) asserted (+ψ). Challenge to colonial myth. |
 | Who.Why.Why | **Have a Go, Ya Mug** | +0.7 | +0.8 | **Greater Good** — Universal participation (+υ) through active effort (+ψ). Eureka spirit. |
 | Who.Why.How | **The Cultural Cringe** | -0.3 | -0.5 | **Greater Evil** — Self-harm (-υ) through passive inferiority (-ψ). The shadow. |
 | Who.Why.Cause | **The Gold Rush** | +0.5 | +0.7 | **Good** — Democratized wealth (+υ) through speculative action (+ψ). Carboni's vision. |
@@ -83,13 +83,13 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Who.Cause.Who | **The First Fleet** | -0.3 | -0.5 | **Greater Evil** — Penal colony origin (-υ) through coerced transport (-ψ). The seed. |
-| Who.Cause.Who | **Continuity [FN]** | +0.9 | +0.4 | **Greater Good** — 65,000-year truth (+υ) actively asserted (+ψ). The real root. |
+| Who.Cause.Who | **Continuity [First Nations Perspective]** | +0.9 | +0.4 | **Greater Good** — 65,000-year truth (+υ) actively asserted (+ψ). The real root. |
 | Who.Cause.What | **Federation** | +0.6 | +0.4 | **Good** — Pragmatic union (+υ) through negotiated merger (+ψ). Dry birth. |
-| Who.Cause.What | **Exclusion [FN]** | -0.8 | -0.6 | **Greater Evil** — Deliberate locking out (-υ) through constitutional exclusion (-ψ). The ghost. |
+| Who.Cause.What | **Exclusion [First Nations Perspective]** | -0.8 | -0.6 | **Greater Evil** — Deliberate locking out (-υ) through constitutional exclusion (-ψ). The ghost. |
 | Who.Cause.Where | **Songlines** | +0.9 | +0.3 | **Greater Good** — Deep-time wisdom (+υ) preserved and sung (+ψ). The matrix. |
 | Who.Cause.Why | **Eureka Stockade** | +0.8 | +0.9 | **Greater Good** — Universal rights (+υ) through armed rebellion (+ψ). The spark. |
 | Who.Cause.How | **White Australia Policy** | -0.9 | +0.6 | **Greatest Lie** — Racial exclusion (-υ) actively legislated (+ψ). The gate. |
-| Who.Cause.How | **Survival [FN]** | +0.8 | +0.6 | **Greater Good** — Persistence against genocide (+υ) through active resistance (+ψ). "Still here." |
+| Who.Cause.How | **Survival [First Nations Perspective]** | +0.8 | +0.6 | **Greater Good** — Persistence against genocide (+υ) through active resistance (+ψ). "Still here." |
 | Who.Cause.Cause | **Deep Time** | +0.7 | -0.2 | **Lesser Good** — Humbling truth (+υ) passively inherited (-ψ). The backdrop. |
 | Who.Cause.Effect | **Multiculturalism** | +0.8 | +0.6 | **Greater Good** — Universal inclusion (+υ) through policy transformation (+ψ). The future. |
 

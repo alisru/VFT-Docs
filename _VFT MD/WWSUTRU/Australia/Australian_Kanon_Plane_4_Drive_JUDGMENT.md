@@ -82,12 +82,12 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Why.Cause.Who | **The Stain** | -0.4 | -0.4 | **Lesser Evil** — Shame origin (-υ) driving defensive posture (-ψ). |
-| Why.Cause.Who | **Guilt [FN]** | +0.6 | +0.5 | **Good** — True stain acknowledged (+υ) through active reckoning (+ψ). |
+| Why.Cause.Who | **Guilt [First Nations Perspective]** | +0.6 | +0.5 | **Good** — True stain acknowledged (+υ) through active reckoning (+ψ). |
 | Why.Cause.What | **The Gold** | +0.5 | +0.6 | **Good** — Democratic catalyst (+υ) through speculative energy (+ψ). |
 | Why.Cause.Where | **The Bush** | +0.5 | -0.3 | **Lesser Good** — Crucible of character (+υ) through passive hardening (-ψ). |
-| Why.Cause.Where | **Abundance [FN]** | +0.8 | +0.4 | **Greater Good** — Land as fullness (+υ) through knowledge connection (+ψ). |
+| Why.Cause.Where | **Abundance [First Nations Perspective]** | +0.8 | +0.4 | **Greater Good** — Land as fullness (+υ) through knowledge connection (+ψ). |
 | Why.Cause.Why | **The War** | +0.6 | +0.7 | **Good** — Validator of character (+υ) through blood sacrifice (+ψ). |
-| Why.Cause.Why | **Resistance [FN]** | +0.8 | +0.8 | **Greater Good** — First war acknowledged (+υ) through active defense (+ψ). |
+| Why.Cause.Why | **Resistance [First Nations Perspective]** | +0.8 | +0.8 | **Greater Good** — First war acknowledged (+υ) through active defense (+ψ). |
 | Why.Cause.How | **The Depression** | ±0.0 | -0.5 | **Neutral** — Economic trauma. Catalyst. |
 | Why.Cause.Cause | **The Isolation** | ±0.0 | -0.4 | **Neutral** — Geographic gap. Fact. |
 | Why.Cause.Effect | **The Boom** | +0.4 | +0.4 | **Good** — Prosperity gift (+υ) but complacency risk. |

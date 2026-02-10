@@ -216,6 +216,8 @@
 
     Alan Reid, a political journalist for *The Daily Telegraph*, wrote this damning caption in 1963 under a photo of Labor's Federal Executive meeting outside a Canberra hotel while MPs waited inside for instructions. The definition of Power in the Labor Party (and implicitly the Unions) involves the "Party Conference"—unelected delegates instructing the elected MPs. This critique defined the "How" of party discipline. It suggests that the definition of Australian democracy includes influential, unelected power brokers behind the throne.
 
+    This establishes the Party Machine as the **Operator**. It defines the "How" of political power not as a public debate between MPs, but as a private instruction from the "Faceless Men" of the Executive. It asserts that the true definition of authority lies in the collective discipline of the Party, not the individual conscience of the Representative.
+
 **(What.How.Where) The Secret Ballot**; "The voter shall retire alone to some unoccupied compartment of the polling booth... and there in private and without interruption mark his ballot paper." - *Victorian Electoral Act*, 1856.
 
     This clause, introduced in Victoria in 1856, invented the "Australian Ballot," a technology of democracy that spread to the world (including the US). Before this, voting was often public and subject to intimidation by landlords and bosses. By enclosing the voter in a physical "compartment" of silence, the colonial reformers invented the modern private citizen, creating a "Where" (The Booth) that was sacred and totally free from social pressure.

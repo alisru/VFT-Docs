@@ -27,7 +27,7 @@
 |--------|-------|---|---|----------|
 | Where.What.Who | **The Squatter** | -0.6 | +0.6 | **Greatest Lie** — Land seizure (+ψ) for private wealth (-υ). Bunyip aristocracy. |
 | Where.What.What | **The Void (Terra Nullius)** | -0.9 | +0.6 | **Greatest Lie** — Active legal erasure (+ψ) serving colonizers only (-υ). |
-| Where.What.What | **Custodianship [FN]** | +0.9 | +0.4 | **Greater Good** — 65,000-year stewardship (+υ) actively maintained (+ψ). |
+| Where.What.Where | **Custodianship [First Nations Perspective]** | +0.9 | +0.6 | **Greater Good** — Active management (+ψ) for future generations (+υ). "Country is family." |
 | Where.What.Why | **The Crossing** | +0.4 | +0.7 | **Good** — Expanded access (+υ) through active exploration (+ψ). |
 | Where.What.How | **The Grid** | +0.4 | +0.5 | **Good** — Order (+υ) through active overlay (+ψ). Hoddle's vision. |
 | Where.What.Cause | **The Crown** | +0.3 | -0.4 | **Lesser Good** — Central authority (+υ) through passive grant (-ψ). |
@@ -68,7 +68,7 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Where.How.Who | **The Overland Telegraph** | +0.7 | +0.7 | **Greater Good** — Universal connection (+υ) through active construction (+ψ). |
-| Where.How.Who | **Songlines [FN]** | +0.9 | +0.4 | **Greater Good** — Ancient navigation (+υ) actively preserved (+ψ). |
+| Where.How.Who | **Songlines [First Nations Perspective]** | +0.9 | +0.6 | **Greater Good** — Navigation via story (+υ) actively walked (+ψ). The land as memory. |
 | Where.How.What | **The Dingo Fence** | -0.3 | +0.6 | **Greatest Lie** — Partition (+ψ) serving pastoralists only (-υ). |
 | Where.How.Where | **The Highway** | +0.6 | +0.5 | **Good** — Universal movement (+υ) through active construction (+ψ). |
 | Where.How.Why | **The Dam** | +0.7 | +0.7 | **Greater Good** — Nation-building (+υ) through engineering (+ψ). Snowy. |

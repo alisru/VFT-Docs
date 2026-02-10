@@ -72,7 +72,7 @@
 | Cause.How.Where | **The Bush (as Method)** | +0.7 | +0.5 | **Greater Good** — Improvisation (+υ) through active adaptation (+ψ). |
 | Cause.How.Why | **The Secret Ballot** | +0.9 | +0.6 | **Greater Good** — Privacy protection (+υ) through Australian invention (+ψ). |
 | Cause.How.How | **Compulsory Arbitration** | +0.8 | +0.5 | **Greater Good** — Umpiring (+υ) through institutionalized fairness (+ψ). |
-| Cause.How.Cause | **Colonial Sec. Office** | -0.4 | -0.4 | **Lesser Evil** — Deference (-υ) through passive waiting (-ψ). |
+| Cause.How.Cause | **The Colonial Secretary's Office** | -0.4 | -0.4 | **Lesser Evil** — Deference (-υ) through passive waiting (-ψ). |
 | Cause.How.Effect | **Peaceful Federation** | +0.8 | +0.4 | **Greater Good** — Negotiated union (+υ) through boring committee (+ψ). |
 
 ---
@@ -96,7 +96,7 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Cause.Effect.Who | **The Digger (Myth)** | +0.6 | +0.4 | **Good** — Mythologization (+υ) through secular saint (+ψ). |
-| Cause.Effect.Who | **Warrior [FN]** | +0.8 | +0.7 | **Greater Good** — True defenders (+υ) acknowledged through resistance (+ψ). |
+| Cause.Effect.What | **Warrior [First Nations Perspective]** | +0.8 | +0.7 | **Greater Good** — True defenders (+υ) acknowledged through active resistance (+ψ). Pemulwuy. |
 | Cause.Effect.Where | **The Suburban House** | +0.5 | -0.3 | **Lesser Good** — Privatization (+υ) through passive retreat (-ψ). |
 | Cause.Effect.Why | **The Welfare State** | +0.8 | +0.4 | **Greater Good** — Safety net (+υ) through state guarantee (+ψ). |
 | Cause.Effect.How | **Consensus** | +0.6 | -0.2 | **Lesser Good** — Stability (+υ) through passive settlement (-ψ). |
