@@ -1,0 +1,143 @@
+# DOCX Match Report
+
+Total MD files: 45
+Total DOCX files: 1030
+
+## Matches (45)
+- **MD:** `A Framework for the Judgment of Ideas.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\A Framework for the Judgment of Ideas.docx`
+  - **Type:** Exact
+- **MD:** `Deep Cover Analysis.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Deep Cover Analysis.docx`
+  - **Type:** Exact
+- **MD:** `Operation Blue Water： The Tactical Roadmap.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Operation Blue Water： The Tactical Roadmap.docx`
+  - **Type:** Exact
+- **MD:** `The Desert Argument：Physics of Necessity.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\The Desert Argument：Physics of Necessity.docx`
+  - **Type:** Exact
+- **MD:** `The Mechanics of Suffering：Why Ignorance Grinds the Gears.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\The Mechanics of Suffering：Why Ignorance Grinds the Gears.docx`
+  - **Type:** Exact
+- **MD:** `The Triadic Matrix.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\The Triadic Matrix.docx`
+  - **Type:** Exact
+- **MD:** `The Unfortunate Necessity of Failure for Success.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\The Unfortunate Necessity of Failure for Success.docx`
+  - **Type:** Exact
+- **MD:** `A.N.A.H.O.L.E. Hegemonic Framework (Kanon V12.0).md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Hegemony\A.N.A.H.O.L.E. Hegemonic Framework (Kanon V12.0).docx`
+  - **Type:** Exact
+- **MD:** `Harmonia-Helixis Framework Guide.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Hegemony\Harmonia-Helixis Framework Guide.docx`
+  - **Type:** Exact
+- **MD:** `The Psochic Hegemony_ Brief.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Hegemony\The Psochic Hegemony_ Brief.docx`
+  - **Type:** Exact
+- **MD:** `Investigative Report： The Manchurian Executive.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Hegemony\Analysis\Investigative Report： The Manchurian Executive.docx`
+  - **Type:** Exact
+- **MD:** `The Season 8 Hypothesis： America's Bureaucratic Decay.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Hegemony\Analysis\The Season 8 Hypothesis： America's Bureaucratic Decay.docx`
+  - **Type:** Exact
+- **MD:** `A Framework for the Judgment of Ideas v2.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Judgement\A Framework for the Judgment of Ideas v2.docx`
+  - **Type:** Exact
+- **MD:** `The Speciography of the Abyss_ A Taxonomy of Nets(1).md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Matrix\The Speciography of the Abyss_ A Taxonomy of Nets(1).docx`
+  - **Type:** Exact
+- **MD:** `The 7 Sins & Virtues_ A Plane-by-Plane Breakdown.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Morality\The 7 Sins & Virtues_ A Plane-by-Plane Breakdown.docx`
+  - **Type:** Exact
+- **MD:** `The 16 Pessimisms_ An Architecture of Entropy.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Pessimism\The 16 Pessimisms_ An Architecture of Entropy.docx`
+  - **Type:** Exact
+- **MD:** `The '42' of Social Physics.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Society\ The '42' of Social Physics.docx`
+  - **Type:** Exact
+- **MD:** `Alethekanon Integrated Directives v24.7.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Theology & Spirituality\Alethekanon Integrated Directives v24.7.docx`
+  - **Type:** Exact
+- **MD:** `Alethekanon Scribe Protocol.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Theology & Spirituality\Alethekanon Scribe Protocol.docx`
+  - **Type:** Exact
+- **MD:** `Etemenanki Construction & Ark Protocol.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Protocols\Etemenanki Construction & Ark Protocol.docx`
+  - **Type:** Exact
+- **MD:** `Multilayered religion; Formalization of Multi-Layered Epistemic Spirituality Framework.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Theology & Spirituality\Multilayered religion; Formalization of Multi-Layered Epistemic Spirituality Framework.docx`
+  - **Type:** Exact
+- **MD:** `The Divine Coefficient： Bread & Leaven.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Theology & Spirituality\The Divine Coefficient： Bread & Leaven.docx`
+  - **Type:** Exact
+- **MD:** `Language Performance Metrics — 10‑Metric System & Scores.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Translating\Language Performance Metrics — 10‑Metric System & Scores.docx`
+  - **Type:** Exact
+- **MD:** `The Axiom of Objective Truth： The Dual-Layered Upsilon Vector.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Truth\The Axiom of Objective Truth： The Dual-Layered Upsilon Vector.docx`
+  - **Type:** Exact
+- **MD:** `The Fractal Definition of Truth： The 294 Vectors of Meaning.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Truth\The Fractal Definition of Truth： The 294 Vectors of Meaning.docx`
+  - **Type:** Exact
+- **MD:** `The VFT System Key Registry_ The 5 Permissions.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Actualism\Truth\The VFT System Key Registry_ The 5 Permissions.docx`
+  - **Type:** Exact
+- **MD:** `A Comparative Analysis of Vector Field Theory and the Langlands Program -  A Study in Structural Analogy.md`
+  - **Source:** `e:\Vector Field Theory\VFT All Docs\Physics\A Comparative Analysis of Vector Field Theory and the Langlands Program_ A Study in Structural Analogy.docx`
+  - **Type:** Fuzzy (a comparative analysis of vector field theory and the langlands program a study in structural analogy)
+- **MD:** `A Comparative Analysis of Vector Field Theory and the Langlands Program： A Study in Structural Analogy.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\A Comparative Analysis of Vector Field Theory and the Langlands Program： A Study in Structural Analogy.docx`
+  - **Type:** Exact
+- **MD:** `Axiomatic Mathematics Divergence Research.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\Axiomatic Mathematics Divergence Research.docx`
+  - **Type:** Exact
+- **MD:** `Hegemonic Stress Tensor.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\Hegemonic Stress Tensor.docx`
+  - **Type:** Exact
+- **MD:** `Infinitesimal Reality Math (IRM) & Infinity Maths v5.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\Infinitesimal Reality Math (IRM) & Infinity Maths v5.docx`
+  - **Type:** Exact
+- **MD:** `matter spacetime.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\matter spacetime.docx`
+  - **Type:** Exact
+- **MD:** `The Fractal Meta-Question Stack.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\The Fractal Meta-Question Stack.docx`
+  - **Type:** Exact
+- **MD:** `The Geometric Impossibility of Pure Meaning.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\The Geometric Impossibility of Pure Meaning.docx`
+  - **Type:** Exact
+- **MD:** `The Nature of Number -  A Comparative Analysis of Vector Field Theory and the Historical Foundations of Mathematics.md`
+  - **Source:** `e:\Vector Field Theory\VFT All Docs\Physics\The Nature of Number_ A Comparative Analysis of Vector Field Theory and the Historical Foundations of Mathematics.docx`
+  - **Type:** Fuzzy (the nature of number a comparative analysis of vector field theory and the historical foundations of mathematics)
+- **MD:** `The Nature of Number： A Comparative Analysis of Vector Field Theory and the Historical Foundations of Mathematics.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\The Nature of Number： A Comparative Analysis of Vector Field Theory and the Historical Foundations of Mathematics.docx`
+  - **Type:** Exact
+- **MD:** `The VFT System Key Registry： The 5 Permissions.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\The VFT System Key Registry： The 5 Permissions.docx`
+  - **Type:** Exact
+- **MD:** `VFT Analysis -  The Mathematics of Reality and Orbits.md`
+  - **Source:** `e:\Vector Field Theory\VFT All Docs\Physics\VFT Analysis_ The Mathematics of Reality and Orbits.docx`
+  - **Type:** Fuzzy (vft analysis the mathematics of reality and orbits)
+- **MD:** `VFT Analysis： Individually Tailored NDEs.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\VFT Analysis： Individually Tailored NDEs.docx`
+  - **Type:** Exact
+- **MD:** `VFT Research Addendum： The Observable Ratio & Planar Shift Hypothesis.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Physics\VFT Research Addendum： The Observable Ratio & Planar Shift Hypothesis.docx`
+  - **Type:** Exact
+- **MD:** `Etemenanki Construction & Ark Protocol.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Protocols\Etemenanki Construction & Ark Protocol.docx`
+  - **Type:** Exact
+- **MD:** `The Alethekanon Pulse Protocol.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\Protocols\The Alethekanon Pulse Protocol.docx`
+  - **Type:** Exact
+- **MD:** `Hegemonic Analysis of Trump_s Foreign Influence.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\WWSUTRU\Hegemonic Analysis of Trump_s Foreign Influence.docx`
+  - **Type:** Exact
+- **MD:** `Investigative Report_ The Manchurian Executive.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\WWSUTRU\Investigative Report_ The Manchurian Executive.docx`
+  - **Type:** Exact
+- **MD:** `Investigating d4vd and Policing Trust.md`
+  - **Source:** `e:\Vector Field Theory\VFT Docs\WWSUTRU\InfoWar\DigitalTrustAndAI\Investigating d4vd and Policing Trust.docx`
+  - **Type:** Exact
+
+## Missing (0)
