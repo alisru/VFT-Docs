@@ -56,7 +56,7 @@
 | What.Why.Who | **The Crimson Thread** | -0.4 | +0.5 | **Greatest Lie** — Racial kinship (-υ) actively asserted (+ψ). White solidarity. |
 | What.Why.What | **The Workingman's Paradise** | +0.8 | +0.6 | **Greater Good** — Justice for all (+υ) through active construction (+ψ). Lane's mission. |
 | What.Why.Where | **A Bulwark** | -0.3 | +0.6 | **Greatest Lie** — Fear-driven (+ψ) serving settlers only (-υ). Colonial anxiety. |
-| What.Why.Where | **Connection [FN]** | +0.8 | +0.4 | **Greater Good** — Ancient truth (+υ) actively asserted (+ψ). Land as bridge. |
+| What.Why.Where | **Connection [First Nations Perspective]** | +0.8 | +0.4 | **Greater Good** — Ancient truth (+υ) actively asserted (+ψ). Land as bridge. |
 | What.Why.Why | **The Common Market** | +0.6 | +0.5 | **Good** — Economic freedom (+υ) through active trade (+ψ). |
 | What.Why.How | **The Secular State** | +0.7 | -0.3 | **Lesser Good** — Religious freedom (+υ) through constraint on state (-ψ). |
 | What.Why.Cause | **The Great Strikes** | +0.7 | +0.8 | **Greater Good** — Workers' rights (+υ) through organized action (+ψ). |
@@ -69,9 +69,9 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | What.How.Who | **The Faceless Men** | -0.4 | +0.5 | **Greatest Lie** — Party discipline (+ψ) overriding democracy (-υ). |
-| What.How.What | **The Secret Ballot** | +0.9 | +0.6 | **Greater Good** — Universal privacy (+υ) through invented technology (+ψ). Australian invention. |
-| What.How.Where | **Preferential Voting** | +0.7 | +0.5 | **Greater Good** — Consensus (+υ) through algorithmic fairness (+ψ). |
-| What.How.Why | **The Referendum** | +0.8 | +0.4 | **Greater Good** — Popular sovereignty (+υ) through direct vote (+ψ). |
+| What.How.Where | **The Secret Ballot** | +0.9 | +0.6 | **Greater Good** — Universal privacy (+υ) through invented technology (+ψ). Australian invention. |
+| What.How.Why | **Preferential Voting** | +0.7 | +0.5 | **Greater Good** — Consensus (+υ) through algorithmic fairness (+ψ). |
+| What.How.What | **The Referendum** | +0.8 | +0.4 | **Greater Good** — Popular sovereignty (+υ) through direct vote (+ψ). |
 | What.How.How | **The Royal Commission** | +0.7 | +0.6 | **Greater Good** — Truth-seeking (+υ) through coercive inquiry (+ψ). |
 | What.How.Cause | **The Census** | +0.5 | +0.3 | **Good** — Knowledge (+υ) through systematic counting (+ψ). |
 | What.How.Effect | **The Spill** | -0.3 | +0.6 | **Greatest Lie** — Party power (+ψ) overriding popular mandate (-υ). |
@@ -102,7 +102,7 @@
 | What.Effect.Why | **The Cultural Cringe** | -0.4 | -0.5 | **Greater Evil** — Self-doubt (-υ) through passive inferiority (-ψ). |
 | What.Effect.How | **Mateship** | +0.7 | +0.4 | **Greater Good** — Horizontal loyalty (+υ) through active bond (+ψ). |
 | What.Effect.Cause | **The Great Silence** | -0.8 | -0.6 | **Greater Evil** — Active erasure (-υ) through deliberate forgetting (-ψ). Stanner. |
-| What.Effect.Cause | **Voice [FN]** | +0.9 | +0.6 | **Greater Good** — Truth restored (+υ) through active return (+ψ). Breaking silence. |
+| What.Effect.Cause | **Voice [First Nations Perspective]** | +0.9 | +0.6 | **Greater Good** — Truth restored (+υ) through active return (+ψ). Breaking silence. |
 | What.Effect.Effect | **The Nanny State** | +0.4 | -0.5 | **Lesser Good** — Safety (+υ) through suppressive regulation (-ψ). |
 
 ---

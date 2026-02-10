@@ -54,11 +54,11 @@
 | Vector | Entry | υ (Morality) | ψ (Will) | Judgment |
 |--------|-------|--------------|----------|----------|
 | Effect.Why.Who | **Egalitarianism vs. Aspiration** | ±0.0 | ±0.0 | **Tension Point** — The axis itself, not a position. Describes the oscillation, not a verdict. |
-| Effect.Why.What | **Sustainability vs. Extraction** | ±0.0 | ±0.0 | **Tension Point** — The unresolved question. Climate Wars as moral paralysis. |
+| Effect.Why.What | **Sustainability vs. Extraction** | +0.5 | -0.2 | **Tension** — Necessary balance (+υ) paralyzed by greed/habit (-ψ). The blocked will. |
 | Effect.Why.Where | **Urban vs. Regional** | ±0.0 | ±0.0 | **Tension Point** — Geographic split, not moral verdict. |
 | Effect.Why.Why | **Fair Go vs. Market** | ±0.0 | ±0.0 | **Tension Point** — The fundamental axis of Australian ideology. |
-| Effect.Why.How | **Reconciliation vs. Denial** | ±0.0 | ±0.0 | **Tension Point** — The deepest wound. Judgment is what *direction* we move. |
-| Effect.Why.Cause | **Luck vs. Effort** | ±0.0 | ±0.0 | **Tension Point** — The question of merit. |
+| Effect.Why.How | **Reconciliation vs. Denial** | +0.7 | -0.4 | **Tension** — Moral necessity (+υ) slowed by passive resistance (-ψ). The drag. |
+| Effect.Why.Cause | **Luck vs. Effort** | +0.4 | -0.3 | **Tension** — Resource wealth (+υ) masking lack of innovation (-ψ). Complacency trap. |
 | Effect.Why.Effect | **Unity vs. Division** | ±0.0 | ±0.0 | **Tension Point** — The ultimate judgment criteria. |
 
 ---
@@ -85,7 +85,7 @@
 | Effect.Cause.What | **The Energy Transition** | +0.9 | +0.8 | **Greater Good** — Planetary benefit (+υ) through active transformation (+ψ). Highest vector. |
 | Effect.Cause.Where | **Northern Australia** | +0.3 | +0.5 | **Good** — Expansion potential (+υ) requiring active development (+ψ). Frontier ambition. |
 | Effect.Cause.Why | **The Republic** | +0.6 | +0.4 | **Good** — Sovereignty (+υ) through active choice (+ψ). Maturity deferred. |
-| Effect.Cause.Why | **Treaty [First Nations]** | +0.9 | +0.7 | **Greater Good** — Justice (+υ) through active reparation (+ψ). Completing the unfinished. |
+| Effect.Cause.How | **Treaty [First Nations Perspective]** | +0.9 | +0.8 | **Greater Good** — Final legal settlement (+υ) demanded by sovereign will (+ψ). Makarrata. |
 | Effect.Cause.Cause | **Asia** | +0.5 | +0.3 | **Good** — Integration (+υ) with inevitable gravity (+ψ tending passive). |
 | Effect.Cause.Effect | **The Good Life** | +0.7 | +0.5 | **Good** — Preservation of prosperity (+υ) through active stewardship (+ψ). |
 
@@ -99,7 +99,7 @@
 | Effect.Effect.What | **The Lifestyle** | +0.6 | +0.3 | **Good** — Comfort achieved (+υ) through past effort (now passive -ψ). Inheritance of success. |
 | Effect.Effect.Where | **Girt By Sea** | +0.4 | -0.3 | **Lesser Good** — Protection (+υ) through passive geography (-ψ). Moat given, not built. |
 | Effect.Effect.Why | **The Second Chance** | +0.8 | +0.5 | **Greater Good** — Hope (+υ) offered to arrivals (+ψ). Redemption mythology. |
-| Effect.Effect.Why | **Dispossession [First Nations]** | -0.8 | -0.7 | **Greater Evil** — Cost extracted from innocents (-υ) through violent suppression (-ψ). The shadow. |
+| Effect.Effect.Why | **Dispossession [First Nations Perspective]** | -0.8 | -0.7 | **Greater Evil** — Cost extracted from innocents (-υ) through violent suppression (-ψ). The shadow. |
 | Effect.Effect.How | **She'll Be Right** | +0.3 | -0.5 | **Lesser Good** — Resilience (+υ) through passive acceptance (-ψ). Complacency risk. |
 | Effect.Effect.Cause | **The Land** | +0.7 | -0.3 | **Lesser Good** — Gift inherited (+υ) requiring passive gratitude (-ψ). We just showed up. |
 | Effect.Effect.Effect | **Australia** | +0.6 | +0.4 | **Good** — The sum total. A net positive experiment, flawed but hopeful. |

@@ -27,7 +27,7 @@
 |--------|-------|---|---|----------|
 | How.What.Who | **The Ballot Paper** | +0.9 | +0.6 | **Greater Good** — Universal privacy (+υ) through Australian invention (+ψ). |
 | How.What.What | **The Wage Case** | +0.9 | +0.5 | **Greater Good** — Living wage (+υ) through judicial scale (+ψ). |
-| How.What.Where | **The WiFi** | +0.8 | +0.7 | **Greater Good** — Universal link (+υ) through CSIRO invention (+ψ). |
+| How.What.Where | **The Wifi** | +0.8 | +0.7 | **Greater Good** — Universal link (+υ) through CSIRO invention (+ψ). |
 | How.What.Why | **Hard Yakka** | +0.6 | +0.5 | **Good** — Work ethic (+υ) through Indigenous etymology (+ψ). |
 | How.What.How | **The Stump Jump Plough** | +0.7 | +0.6 | **Greater Good** — Adaptive tool (+υ) through inventive evasion (+ψ). |
 | How.What.Cause | **The Boomerang** | +0.8 | +0.5 | **Greater Good** — 65,000-year engineering (+υ) through cyclic efficiency (+ψ). |
@@ -82,11 +82,11 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | How.Cause.Who | **The Convict System** | -0.3 | +0.5 | **Greatest Lie** — Bureaucratic origin (+ψ) serving empire (-υ). |
-| How.Cause.Who | **Relation [FN]** | +0.9 | +0.4 | **Greater Good** — True kinship system (+υ) actively maintained (+ψ). |
+| How.Cause.Why | **Relation [First Nations Perspective]** | +0.9 | +0.4 | **Greater Good** — True kinship system (+υ) actively maintained (+ψ). No one is a stranger. |
 | How.Cause.Where | **The Distance** | ±0.0 | -0.4 | **Neutral** — Geographic problem. Catalyst for invention. |
-| How.Cause.Where | **Navigation [FN]** | +0.9 | +0.5 | **Greater Good** — Songlines connecting (+υ) through active knowledge (+ψ). |
+| How.Cause.Cause | **Navigation [First Nations Perspective]** | +0.9 | +0.5 | **Greater Good** — Songlines connecting (+υ) through active memory (+ψ). The continent is a book. |
 | How.Cause.How | **The Survey** | +0.3 | +0.5 | **Tension** — Geometric conquest (+ψ) imposing alien grid on land. |
-| How.Cause.What | **Flow [FN]** | +0.8 | +0.4 | **Greater Good** — True method respecting land logic (+υ) actively followed (+ψ). |
+| How.Cause.What | **Flow [First Nations Perspective]** | +0.8 | +0.4 | **Greater Good** — True method respecting land logic (+υ) actively followed (+ψ). |
 | How.Cause.Effect | **The Federation** | +0.7 | +0.6 | **Greater Good** — Peaceful union (+υ) through manufactured destiny (+ψ). |
 
 ---
