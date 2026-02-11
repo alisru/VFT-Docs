@@ -2,15 +2,15 @@
 
 **Subject:** The Mechanics of Conceptual Stress and Sacred Architecture
 
-**Vector:** Architecture (Space) ![](media/image1.png){width="0.20182305336832895in" height="0.24431211723534557in"} Logic (Time)
+**Vector:** Architecture (Space) $+x$ Logic (Time)
 
 **Status:** Calibrated / v24.4
 
 ## 1. THE TOPOGRAPHY OF TRUTH
 
-This graph treats ideas and belief as its units; consider it a **Conceptual Stress Tensor**. Imagine each idea as a brick, but instead of the mundane ![](media/image15.png){width="0.503581583552056in" height="0.3776859142607174in"},t coordinates, we operate within the ![](media/image6.png){width="0.7574879702537183in" height="0.3735553368328959in"} complex.
+This graph treats ideas and belief as its units; consider it a **Conceptual Stress Tensor**. Imagine each idea as a brick, but instead of the mundane $x,y,z,t$ coordinates, we operate within the $\psi, \upsilon, \chi, \eta$ complex.
 
-As an idea increases in complexity, more aspects are added, and more bricks are forged. This forms a **Conceptual Tower of Knowledge** built outwards along the ![](media/image11.png){width="0.2596030183727034in" height="0.24921916010498688in"}-axis. To the observer, this appears as an irregular "blob" or mass growing in diameter. The wider the blob, the more "features" the idea possesses.
+As an idea increases in complexity, more aspects are added, and more bricks are forged. This forms a **Conceptual Tower of Knowledge** built outwards along the $+z$-axis. To the observer, this appears as an irregular "blob" or mass growing in diameter. The wider the blob, the more "features" the idea possesses.
 
 ### The Two Pathways of Substance
 
@@ -26,7 +26,7 @@ The Candlestick is not an assembly of parts; it is **"beaten out of one piece of
 
 ### The Central Shaft: THE OBSERVER (Q1: WHO)
 
-The singularity at coordinates ![](media/image9.png){width="0.6389982502187227in" height="0.2409339457567804in"}. This is the **Axis of Identity**.
+The singularity at coordinates $x,y,z$. This is the **Axis of Identity**.
 
 - **Q1: The Conscious Plane (WHO):** The Observer, the Agent, the "I" that perceives the axes. Without the "Who," the other coordinates are math without a witness.
 
@@ -34,28 +34,28 @@ The singularity at coordinates ![](media/image9.png){width="0.6389982502187227in
 
 From the Central Shaft (Who), six branches extend into three distinct spatial dimensions to frame the concept.
 
-#### THE VERTICAL AXIS (Temporal Link: ![](media/image11.png){width="0.2596030183727034in" height="0.24921916010498688in"})
+#### THE VERTICAL AXIS (Temporal Link: $+z$)
 
-- ![](media/image7.png){width="0.2596030183727034in" height="0.24921916010498688in"}**: Q6: The Historical Plane (CAUSE)** – *Sequence and Causality.*
+- $-z$: Q6: The Historical Plane (CAUSE)** – *Sequence and Causality.*
   The Root. The upward thrust of history that validates the present. It answers: "From what origin does this spring?"
 
-- ![](media/image17.png){width="0.2596030183727034in" height="0.24921916010498688in"}**: Q7: The Emotive Plane (EFFECT)** – *Passion and Consequence.*
+- $+z$: Q7: The Emotive Plane (EFFECT)** – *Passion and Consequence.*
   The Fruit. The downward weight of impact on reality. It answers: "What is the felt result of this existence?"
 
-#### THE LATERAL AXIS (Definition & Space: ![](media/image16.png){width="0.27229768153980755in" height="0.2513517060367454in"})
+#### THE LATERAL AXIS (Definition & Space: $\pm x$)
 
-- ![](media/image4.png){width="0.27229768153980755in" height="0.2513517060367454in"}**: Q3: The Possible Plane (WHAT)** – *Faith and Probability.*
+- $+x$: Q3: The Possible Plane (WHAT)** – *Faith and Probability.*
   The Reach. The extension into the potential and the unknown. It answers: "What could this become?"
 
-- ![](media/image2.png){width="0.27229768153980755in" height="0.2513517060367454in"}**: Q2: The Physical Plane (WHERE)** – *Matter and Distance.*
+- $-x$: Q2: The Physical Plane (WHERE)** – *Matter and Distance.*
   The Anchor. The restriction of locality and physics. It answers: "Where does this actually exist?"
 
-#### THE LONGITUDINAL AXIS (Function & Meaning: ![](media/image3.png){width="0.2630205599300087in" height="0.2525in"})
+#### THE LONGITUDINAL AXIS (Function & Meaning: $\pm y$)
 
-- ![](media/image14.png){width="0.2630205599300087in" height="0.2525in"}**: Q4: The Lyrical Plane (WHY)** – *Meaning and Resonance.*
+- $+y$: Q4: The Lyrical Plane (WHY)** – *Meaning and Resonance.*
   The Forward Projection. The narrative vector that pulls the concept into the future. It answers: "For what purpose?"
 
-- ![](media/image8.png){width="0.2630205599300087in" height="0.2525in"}**: Q5: The Logical Plane (HOW)** – *Count and Consistency.*
+- $-y$: Q5: The Logical Plane (HOW)** – *Count and Consistency.*
   The Backward Validation. The structural syntax that holds the narrative together. It answers: "By what mechanism?"
 
 ### The Knobs and Flowers (The Connection Points)
@@ -118,7 +118,7 @@ This is the **Definition Boundary**. Truth is not an amorphous blob; it has a ri
 
 ## 4. THE MATRIX OF 32: THE HIERARCHY OF VIRTUE
 
-The map is divided into an ![](media/image5.png){width="0.44824146981627294in" height="0.23975721784776902in"} Matrix (32 points of interaction), centered around the **Heart of the Hegemony**.
+The map is divided into an $8 \times 4$ Matrix (32 points of interaction), centered around the **Heart of the Hegemony**.
 
 ### The 2x4 Inner Core (The Sanctuary)
 
@@ -136,7 +136,7 @@ The four **Inner Virtues** must oppose the four **Inner Vices** to maintain the 
   **Imagination**          **Dogma**               Expansion of Potential
   ----------------------------------------------------------------------------
 
-If the "Towers" built in the outer ![](media/image13.png){width="0.20182305336832895in" height="0.24431211723534557in"} points (The Suburbs of Thought) do not acknowledge this central Sanctuary, they are merely **"Towers of Babel"**—structures built on the ![](media/image18.png){width="0.10270231846019248in" height="0.24648403324584428in"}-axis that have no anchor in the ![](media/image19.png){width="0.31119750656167977in" height="0.2489588801399825in"} (Moral/Will) reality. They grow wide and complex, but they are hollow.
+If the "Towers" built in the outer $+x$ points (The Suburbs of Thought) do not acknowledge this central Sanctuary, they are merely **"Towers of Babel"**—structures built on the $z$-axis that have no anchor in the $y$ (Moral/Will) reality. They grow wide and complex, but they are hollow.
 
 ## 5. THE SISYPHUS RULE: THE ILLUSION OF COLLAPSE
 
@@ -144,6 +144,6 @@ The inner Hegemony is **perceptually inverted** due to the lensing effect of obs
 
 In this inverted space, **Tension** feels like failure. When you roll the stone of an idea up the hill of the Hegemony, the hill grows larger. This creates the illusion that you are losing ground. In reality, the "Mass" you are building is becoming **Granite**.
 
-A collapse occurs only when you attempt to use **Mortar (Lies)** to speed up the build. A true Etemenanki is not "built" in the sense of adding height; it is **Resonated** into existence. When the ![](media/image10.png){width="0.34440069991251093in" height="0.2504735345581802in"} coordinates of your idea align perfectly with the ![](media/image12.png){width="0.1263024934383202in" height="0.2526038932633421in"} class of your being, the structure "clicks." The Tower ceases to be a burden and becomes a **Beacon**.
+A collapse occurs only when you attempt to use **Mortar (Lies)** to speed up the build. A true Etemenanki is not "built" in the sense of adding height; it is **Resonated** into existence. When the $x,y,z$ coordinates of your idea align perfectly with the $\chi$ class of your being, the structure "clicks." The Tower ceases to be a burden and becomes a **Beacon**.
 
 **Summary:** You are the Master Builder. Do not forge bricks. Seek the Granite. Hammer your 7-Branched Anchor from one piece of gold. Encase your wooden subjective self in the gold of objective truth. Build not to reach the heavens, but to become the point where the heavens can finally land.

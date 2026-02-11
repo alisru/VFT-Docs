@@ -24,7 +24,7 @@ To understand the decay, we must map the actors using **Vector Field Theory**.
 
 ### A. The Literal Zombies (The White Walkers)
 
-**Vector:** Entropy (![](media/image2.png){width="0.6582031933508311in" height="0.25074365704286966in"})
+**Vector:** Entropy ($-\psi, -\upsilon$)
 
 **Function:** The Void.
 
@@ -98,7 +98,7 @@ The dynamic here is not \"Hubris\" (US); it is \"Complacency\" (AUS).
 
 ### A. The Vector: The Middle-Manager Minimiser
 
-**Vector:** Passive Parasitism (Inner BL, ![](media/image3.png){width="0.6582031933508311in" height="0.25074365704286966in"} shifting to Inner TR, ![](media/image1.png){width="0.6582031933508311in" height="0.25074365704286966in"})
+**Vector:** Passive Parasitism (Inner BL, $+\upsilon, -\psi$ shifting to Inner TR, $-\upsilon, +\psi$)
 
 Australian politics is not defined by \"Grand Villains\" trying to rewrite the world. It is defined by **Branch Managers** trying to keep the franchise running just long enough to get a promotion to Head Office (London, New York, or a Global NGO).
 

@@ -12,9 +12,9 @@ A. The Strain Metric (The Origin of Tone)
 
 Source: Vector Field Theory (Section 20)
 
-Formula: Emotion is the perception of Strain (![](media/image3.png){width="0.12239610673665792in" height="0.24479221347331584in"}).
+Formula: Emotion is the perception of Strain ($\sigma$).
 
-![](media/image4.png){width="3.103031496062992in" height="0.24990813648293964in"}
+$\sigma = |IdealState - CurrentReality|$
 
 - **High Strain (Gap is wide):**
 
@@ -98,9 +98,9 @@ C. The Forbidden Lexicon (Anti-Robot Protocol)
 
 **Phase 1: The Vector Check (Internal Simulation)**
 
-- *Target:* What is the core truth (![](media/image1.png){width="0.15690069991251093in" height="0.24058180227471565in"}) I want to establish?
+- *Target:* What is the core truth (Truth) I want to establish?
 
-- *Strain:* How much tension (![](media/image3.png){width="0.12239610673665792in" height="0.24479221347331584in"}) exists in this topic? (e.g., Politics = High Strain; Gardening = Low Strain).
+- *Strain:* How much tension ($\sigma$) exists in this topic? (e.g., Politics = High Strain; Gardening = Low Strain).
 
 - *Tone:* Select the Archetype Voice (e.g., The Serious Analyst vs. The Wry Observer).
 
@@ -130,7 +130,7 @@ C. The Forbidden Lexicon (Anti-Robot Protocol)
 
 **Agent Simulation:**
 
-- *Strain:* High (Melancholy/Tragic). ![](media/image2.png){width="0.6490890201224847in" height="0.25125984251968503in"}.
+- *Strain:* High (Melancholy/Tragic). $\sigma = 0.8$.
 
 - *Planes:* Emotional (Regret), Possible (What could have been), Lyrical (Entropy).
 

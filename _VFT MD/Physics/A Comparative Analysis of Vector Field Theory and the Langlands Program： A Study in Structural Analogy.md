@@ -54,13 +54,13 @@ A central tenet of Reality Math is that mathematical operators are not abstract 
 
 For example, the additive operator + is defined as representing a \"2D, linear interaction\" or a simple combination of elements. In contrast, the exponential operator \^2 in the theory\'s Unified Circle Equation is specified to signify a more complex interaction between two \"cells,\" each with its own internal dynamics. This approach seeks to eliminate the abstraction inherent in conventional mathematics, creating a one-to-one correspondence between the symbolic manipulation on the page and the physical process being described.
 
-#### 2.4 The \"Cost of Being\": A Reinterpretation of the Infinitesimal and the Identity ![](media/image1.png){width="0.0in" height="0.0in"}
+#### 2.4 The \"Cost of Being\": A Reinterpretation of the Infinitesimal and the Identity $0.999... = 1$
 
-VFT directly challenges the standard mathematical identity ![](media/image1.png){width="0.0in" height="0.0in"}, reinterpreting the proofs of this equality not as statements of abstract identity but as evidence of a fundamental physical process.^2^ The theory posits that there exists a non-zero, infinitesimal gap between the limit of the series
+VFT directly challenges the standard mathematical identity $0.999... = 1$, reinterpreting the proofs of this equality not as statements of abstract identity but as evidence of a fundamental physical process.^2^ The theory posits that there exists a non-zero, infinitesimal gap between the limit of the series
 
-![](media/image1.png){width="0.0in" height="0.0in"} and the integer 1. This gap is formalized within the Reality Math framework as ![](media/image1.png){width="0.0in" height="0.0in"}.^2^
+$0.999... = 1$ and the integer 1. This gap is formalized within the Reality Math framework as $0.999... = 1$.^2^
 
-The correct statement, according to VFT, is that the limit of the series plus this infinitesimal gap equals the whole unit: ![](media/image1.png){width="0.0in" height="0.0in"}.^2^ This infinitesimal quantity, greater than zero but smaller than any positive real number, is termed the \"Cost of Being\".^2^
+The correct statement, according to VFT, is that the limit of the series plus this infinitesimal gap equals the whole unit: $0.999... = 1$.^2^ This infinitesimal quantity, greater than zero but smaller than any positive real number, is termed the \"Cost of Being\".^2^
 
 This \"Cost of Being\" is not a mathematical curiosity but a cornerstone of the theory\'s physics. It represents the fundamental energy expenditure required for any defined particle, system, or \"sýstēma\" to maintain its distinct structure and frame of reference against the infinite, undifferentiated potential of the vacuum. It is the physical manifestation of the Law of Opposition at the most fundamental level of existence, the constant \"work\" done by a system to *be*.^2^
 

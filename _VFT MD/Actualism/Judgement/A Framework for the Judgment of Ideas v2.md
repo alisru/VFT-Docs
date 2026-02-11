@@ -26,7 +26,7 @@
 | #  (Ruling Principle of the Mind)                        | # (Tàijí Dào Tú)                           |
 +==========================================================+============================================+
 
-![](media/image1.png){width="7.369792213473316in" height="6.705762248468941in"}
+![](media/image1_v2.png){width="7.369792213473316in" height="6.705762248468941in"}
 
 *"Whosoever holds this tool, if he be worthy, shall possess the power of an aspect of God"*
 

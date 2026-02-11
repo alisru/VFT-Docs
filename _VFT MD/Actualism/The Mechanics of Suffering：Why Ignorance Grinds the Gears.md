@@ -32,7 +32,7 @@ This is, quite literally, a thermodynamic process. In physics, any inefficiency 
 
 - **The Invisible Fire:** You feel this heat as **frustration, anger, and anxiety**. You are burning up, but you cannot see the fire. You just feel the exhaustion of running a fever without being sick.
 
-- **The Law:** ![](media/image1.png){width="4.585770997375328in" height="0.2501334208223972in"}. If you put in 100 units of effort but only get 10 units of progress, the other 90 units didn\'t disappear---they became the \"fire\" of suffering that burns you out.
+- **The Law:** $InputEnergy - UsefulWork = Frustration(Heat)$. If you put in 100 units of effort but only get 10 units of progress, the other 90 units didn\'t disappear---they became the \"fire\" of suffering that burns you out.
 
 ### 3. Knowledge is the Oil
 
