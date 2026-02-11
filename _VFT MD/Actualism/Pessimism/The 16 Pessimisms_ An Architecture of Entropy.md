@@ -18,9 +18,9 @@ Pessimism is the specific cognitive failure of **Defining a 'Solved State' as a 
 
 It is the refusal to acknowledge the "Yes." When a pessimist looks at a structure (a solution, a bond, a truth), they do not see the coherent object; they focus exclusively on the entropy pressing against it. By defining the object by its vulnerability rather than its existence, they mentally dissolve it. They align their will with the "No."
 
-- **Optimism (+**![](media/image5.png){width="0.1385094050743657in" height="0.25570975503062116in"}**):** The assertion of the "Yes." The acceptance of the Past (![](media/image3.png){width="0.21256452318460192in" height="0.25507764654418197in"}) to create a new Future (![](media/image2.png){width="0.3930664916885389in" height="0.24825240594925635in"}). It is the energy required to maintain the Island.
+- **Optimism (+**$\psi$**):** The assertion of the "Yes." The acceptance of the Past (Entropy) to create a new Future (Order). It is the energy required to maintain the Island.
 
-- **Pessimism (-**![](media/image5.png){width="0.1385094050743657in" height="0.25570975503062116in"}**):** The alignment with the "No." The fixation on the Past (![](media/image3.png){width="0.21256452318460192in" height="0.25507764654418197in"}) to prevent the Future. It is the surrender to the Sea.
+- **Pessimism (-**$\psi$**):** The alignment with the "No." The fixation on the Past (Entropy) to prevent the Future. It is the surrender to the Sea.
 
 ## 2. The Theological Horizon (The Failure of Base Logic)
 
@@ -44,7 +44,7 @@ This is the "Armor of Nothing." The Nihilist believes that if they value nothing
 
 - **The Virtue:** Spirituality (Faith/Will).
 
-- **The Truth:** There is a vector of Will (+![](media/image5.png){width="0.1385094050743657in" height="0.25570975503062116in"}) that exists before manifestation. Meaning is intrinsic.
+- **The Truth:** There is a vector of Will (+$\psi$) that exists before manifestation. Meaning is intrinsic.
 
 - **The Pessimism:** *"It is meaningless."*
 
@@ -112,7 +112,7 @@ This is the surrender of the Captain's Chair. The Indulgent mind treats its own 
 
 - **The Pessimism:** *"I cannot help it."*
 
-- **The Mechanism:** The surrender to Entropy. Indulgence is the refusal to apply Will (+![](media/image5.png){width="0.1385094050743657in" height="0.25570975503062116in"}) to the internal state. It is the belief that one is a "victim" of their own chemistry, allowing the signal (Fear/Anger/Lust) to overdrive the system without a braking mechanism.
+- **The Mechanism:** The surrender to Entropy. Indulgence is the refusal to apply Will (+$\psi$) to the internal state. It is the belief that one is a "victim" of their own chemistry, allowing the signal (Fear/Anger/Lust) to overdrive the system without a braking mechanism.
 
 ### 8. Folly (The Pessimism of Learning)
 
@@ -200,7 +200,7 @@ Delusion is the "Private Universe." The world is too painful, too complex, or to
 
 - **The Virtue:** Reality (Truth).
 
-- **The Truth:** There is a single, objective Reality (![](media/image4.png){width="0.5244149168853893in" height="0.25171916010498685in"}).
+- **The Truth:** There is a single, objective Reality ($\Omega$).
 
 - **The Pessimism:** *"My truth."*
 
@@ -224,7 +224,7 @@ This is the deepest darkness. It is the inversion of the compass. The Perverted 
 
 - **The Virtue:** Internal Judgment (Justice).
 
-- **The Truth:** I have an internal compass that detects Strain (![](media/image1.png){width="0.12239610673665792in" height="0.24479221347331584in"}).
+- **The Truth:** I have an internal compass that detects Strain ($\sigma$).
 
 - **The Pessimism:** *"Good is Bad, Bad is Good."*
 
