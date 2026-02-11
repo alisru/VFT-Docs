@@ -100,7 +100,7 @@ The entire analysis rests on measuring the distance between **Ideal** and **Prag
 
 The Gap (  \Delta H  ) is the 4D Euclidean distance between two vectors, normalized by   \Delta H_{\text{max}} = 10  . This is the raw input for the blending factor.
 
-  \Delta H = \frac{||\mathbf{V}_{\text{A}} - \mathbf{V}_{\text{B}}||}{\mathbf{10}}  [![](media/image18.gif){width="0.16666666666666666in" height="0.125in"}](http://www.texrendr.com/?eqn=%24%24#0)
+  \Delta H = \frac{||\mathbf{V}_{\text{A}} - \mathbf{V}_{\text{B}}||}{\mathbf{10}}  
 
 **Key Gaps Measured:**
 
@@ -116,7 +116,7 @@ The Gap (  \Delta H  ) is the 4D Euclidean distance between two vectors, normali
 
 The Blending Factor (  \alpha  ) is the normalized inverse of the Hypocrisy Gap. It represents the user's integrity/optimism, acting as the currency that allows the Ideal to influence Reality. This is the **"Moral Born Rule"**, representing the probability of collapsing into an Optimistic state.
 
->   \alpha = \max(0, 1 - \Delta H  #0)[![](media/image18.gif){width="0.16666666666666666in" height="0.125in"}](http://www.texrendr.com/?eqn=%24%24#0)
+>   \alpha = \max(0, 1 - \Delta H  #0)
 
 - If   \Delta H = 0  ,   \alpha = 1.0   (Max Currency/Integrity).
 
@@ -126,9 +126,9 @@ The Blending Factor (  \alpha  ) is the normalized inverse of the Hypocrisy Gap.
 
 These are the final, diagnostic output vectors, which track the user's trajectory across the 500+ question test.
 
-1.    \mathbf{V}_{\text{Self}}   **(The Self Projection):** The final **Archetype of Action**. The Ideal (  \mathbf{V}_{\text{IdealSelf}}  ) is pulled toward the Pragmatic (  \mathbf{V}_{\text{PragSelf}}  ) by the factor of **Dissonance** (  \alpha_{\text{Self}}  ).  \mathbf{V}_{\text{Self}} = \mathbf{V}_{\text{PragSelf}} + (\mathbf{V}_{\text{IdealSelf}} - \mathbf{V}_{\text{PragSelf}}  %20%5Ctimes%20%5Calpha_%7B%5Ctext%7BSelf%7D%7D#0)[![](media/image18.gif){width="0.16666666666666666in" height="0.125in"}](http://www.texrendr.com/?eqn=%24%24#0)
+1.    \mathbf{V}_{\text{Self}}   **(The Self Projection):** The final **Archetype of Action**. The Ideal (  \mathbf{V}_{\text{IdealSelf}}  ) is pulled toward the Pragmatic (  \mathbf{V}_{\text{PragSelf}}  ) by the factor of **Dissonance** (  \alpha_{\text{Self}}  ).  \mathbf{V}_{\text{Self}} = \mathbf{V}_{\text{PragSelf}} + (\mathbf{V}_{\text{IdealSelf}} - \mathbf{V}_{\text{PragSelf}}  \times \alpha_{\text{Self}})
 
-2.    \mathbf{V}_{\text{Mirror}}   **(The Social Mirror Projection):** The final **Worldview Archetype**. The perceived Societal Reality (  \mathbf{V}_{\text{PragSoc}}  ) is pulled toward the Ideal (  \mathbf{V}_{\text{IdealSoc}}  ) by the factor of **Optimism** (  \alpha_{\text{Soc}}  ).  \mathbf{V}_{\text{Mirror}} = \mathbf{V}_{\text{PragSoc}} + (\mathbf{V}_{\text{IdealSoc}} - \mathbf{V}_{\text{PragSoc}}  %20%5Ctimes%20%5Calpha_%7B%5Ctext%7BSoc%7D%7D#0)\$\$
+2.    \mathbf{V}_{\text{Mirror}}   **(The Social Mirror Projection):** The final **Worldview Archetype**. The perceived Societal Reality (  \mathbf{V}_{\text{PragSoc}}  ) is pulled toward the Ideal (  \mathbf{V}_{\text{IdealSoc}}  ) by the factor of **Optimism** (  \alpha_{\text{Soc}}  ).  \mathbf{V}_{\text{Mirror}} = \mathbf{V}_{\text{PragSoc}} + (\mathbf{V}_{\text{IdealSoc}} - \mathbf{V}_{\text{PragSoc}}  \times \alpha_{\text{Soc}})\$\$
 
 ### 
 

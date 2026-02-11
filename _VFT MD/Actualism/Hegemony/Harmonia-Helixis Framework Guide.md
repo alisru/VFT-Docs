@@ -18,17 +18,17 @@ The diagrams you are looking at are visual representations of a conceptual model
 
 The Psochic Hegemony is defined by the intersection of two fundamental, non-standard axes. Its purpose is not to classify existing ideologies but to reveal the moral and volitional vectors that underpin them.
 
-**1. The Horizontal Axis (**  \mathbf{\upsilon}   **- Upsilon): Morality (Good/Evil)**![](media/image122.png){width="8.333333333333333e-2in" height="6.944444444444445e-2in"} **- Upsilon): Morality (Good/Evil)**
+**1. The Horizontal Axis (** $\mathbf{\upsilon}$ **- Upsilon): Morality (Good/Evil)**
 
 - **Vector:** Measures *who* ultimately benefits from the idea or action.
 
-- **Direction:** Runs from   \mathbf{+1}   (Universal Benefit, "Good") on the left to   \mathbf{-1}   (Self/Group Benefit, "Evil") on the right.![](media/image211.png){width="0.20833333333333334in" height="0.125in"} (Universal Benefit, "Good") on the left to ![](media/image197.png){width="0.19444444444444445in" height="0.1111111111111111in"} (Self/Group Benefit, "Evil") on the right.
+- **Direction:** Runs from $\mathbf{+1}$ (Universal Benefit, "Good") on the left to $\mathbf{-1}$ (Self/Group Benefit, "Evil") on the right.
 
-**2. The Vertical Axis (**  \mathbf{\psi}   **- Psi): Will (Proactive/Suppressive)**![](media/image63.png){width="9.722222222222222e-2in" height="0.1527777777777778in"} **- Psi): Will (Proactive/Suppressive)**
+**2. The Vertical Axis (** $\mathbf{\psi}$ **- Psi): Will (Proactive/Suppressive)**
 
 - **Vector:** Measures *how* the idea is executed in the world—its mode of action.
 
-- **Direction:** Runs from   \mathbf{+1}   (Proactive Will, "Do/Build/Create") on the top to   \mathbf{-1}   (Suppressive Will, "Do Not/Prevent/Suppress") on the bottom.![](media/image211.png){width="0.20833333333333334in" height="0.125in"} (Proactive Will, "Do/Build/Create") on the top to ![](media/image197.png){width="0.19444444444444445in" height="0.1111111111111111in"} (Suppressive Will, "Do Not/Prevent/Suppress") on the bottom.
+- **Direction:** Runs from $\mathbf{+1}$ (Proactive Will, "Do/Build/Create") on the top to $\mathbf{-1}$ (Suppressive Will, "Do Not/Prevent/Suppress") on the bottom.
 
 3\. The Quadrants (The 2x2 Truth Matrix):
 
@@ -44,27 +44,27 @@ The quadrants are containers for the resulting vector combination, which also ma
 
 4\. The Trajectory Cycle:
 
-The map depicts a continuous, four-stage moral cycle: Redemption (  \mathbf{BR \to BL}  ) leads to Grace (  \mathbf{BL \to TL}  ), which risks The Fall (  \mathbf{TL \to TR}  ), which risks Delusion (  \mathbf{TR \to BR}  ), bringing the idea back to the need for Redemption.![](media/image143.png){width="0.7777777777777778in" height="0.1111111111111111in"}) leads to Grace (![](media/image206.png){width="0.75in" height="0.1111111111111111in"}), which risks The Fall (![](media/image274.png){width="0.7777777777777778in" height="0.1111111111111111in"}), which risks Delusion (![](media/image214.png){width="0.8055555555555556in" height="0.1111111111111111in"}), bringing the idea back to the need for Redemption.
+The map depicts a continuous, four-stage moral cycle: Redemption ($\mathbf{BR \to BL}$) leads to Grace ($\mathbf{BL \to TL}$), which risks The Fall ($\mathbf{TL \to TR}$), which risks Delusion ($\mathbf{TR \to BR}$), bringing the idea back to the need for Redemption.
 
 ## The Core Axes: Morality and Will
 
-Every idea, actor, or event can be mapped within this framework by answering two foundational questions that correspond to the horizontal (  \upsilon  ) and vertical (  \psi  ) axes, which together form the   (\upsilon, \psi  #0) **vector space**. The orientation of these axes is non-standard.![](media/image122.png){width="8.333333333333333e-2in" height="6.944444444444445e-2in"}) and vertical (![](media/image63.png){width="9.722222222222222e-2in" height="0.1527777777777778in"}) axes, which together form the ![](media/image210.png){width="0.375in" height="0.16666666666666666in"} vector space. The orientation of these axes is non-standard.
+Every idea, actor, or event can be mapped within this framework by answering two foundational questions that correspond to the horizontal ($\upsilon$) and vertical ($\psi$) axes, which together form the $(\upsilon, \psi)$ **vector space**. The orientation of these axes is non-standard.
 
-### 1. The Horizontal Axis (  \upsilon  ): The Moral Question![](media/image122.png){width="8.333333333333333e-2in" height="6.944444444444445e-2in"}): The Moral Question
+### 1. The Horizontal Axis ($\mathbf{\upsilon}$): The Moral Question
 
-This axis answers the most important question: **"Who benefits?"** It assesses the ultimate beneficiary of an idea if it were fully realized, measuring its moral valence. This axis defines the objective Morality Vector (  \upsilon  ), running from   -1   (Extractive/Destructive, "Evil") to   +1   (Universally Beneficial, "Good").![](media/image122.png){width="8.333333333333333e-2in" height="6.944444444444445e-2in"}), running from ![](media/image1.png){width="0.18055555555555555in" height="0.1111111111111111in"} (Extractive/Destructive, "Evil") to ![](media/image275.png){width="0.18055555555555555in" height="0.125in"} (Universally Beneficial, "Good").
+This axis answers the most important question: **"Who benefits?"** It assesses the ultimate beneficiary of an idea if it were fully realized, measuring its moral valence. This axis defines the objective Morality Vector ($\upsilon$), running from $-1$ (Extractive/Destructive, "Evil") to $+1$ (Universally Beneficial, "Good").
 
-- **Far Right (**  \mathbf{-\upsilon}  **): Benefit for Self (Evil).** The right side of the axis represents pure self-interest ("Only Me," "My Group"). This is the realm of Evil, Lies, and Regression.![](media/image238.png){width="0.20833333333333334in" height="6.944444444444445e-2in"}): Benefit for Self (Evil). The right side of the axis represents pure self-interest ("Only Me," "My Group"). This is the realm of Evil, Lies, and Regression.
+- **Far Right (**$\mathbf{-\upsilon}$**): Benefit for Self (Evil).** The right side of the axis represents pure self-interest ("Only Me," "My Group"). This is the realm of Evil, Lies, and Regression.
 
-- **Far Left (**  \mathbf{+\upsilon}  **): Benefit for Others (Good).** The left side of the axis represents collective benefit ("Everyone," "Other Beings"). This is the realm of Good, Truth, and Progress.![](media/image62.png){width="0.20833333333333334in" height="0.1111111111111111in"}): Benefit for Others (Good). The left side of the axis represents collective benefit ("Everyone," "Other Beings"). This is the realm of Good, Truth, and Progress.
+- **Far Left (**$\mathbf{+\upsilon}$**): Benefit for Others (Good).** The left side of the axis represents collective benefit ("Everyone," "Other Beings"). This is the realm of Good, Truth, and Progress.
 
-### 2. The Vertical Axis (  \psi  ): The Volitional Question![](media/image63.png){width="9.722222222222222e-2in" height="0.1527777777777778in"}): The Volitional Question
+### 2. The Vertical Axis ($\mathbf{\psi}$): The Volitional Question
 
 This axis answers the question: **"What is its mode of action?"** It assesses the method by which an idea operates in the world, running from bottom to top.
 
-- **Bottom (**  \mathbf{-\psi}  **): Suppressive Will.** The bottom of the axis represents a restrictive and negative force. It seeks to **"Do Not"**—to prevent, suppress, or destroy ideas and actions.![](media/image285.png){width="0.2222222222222222in" height="0.1527777777777778in"}): Suppressive Will. The bottom of the axis represents a restrictive and negative force. It seeks to "Do Not"—to prevent, suppress, or destroy ideas and actions.
+- **Bottom (**$\mathbf{-\psi}$**): Suppressive Will.** The bottom of the axis represents a restrictive and negative force. It seeks to **"Do Not"**—to prevent, suppress, or destroy ideas and actions.
 
-- **Top (**  \mathbf{+\psi}  **): Proactive Will.** The top of the axis represents a creative, assertive, and action-oriented force. It seeks to **"Do"**—to build, create, and manifest new possibilities.![](media/image8.png){width="0.2222222222222222in" height="0.1527777777777778in"}): Proactive Will. The top of the axis represents a creative, assertive, and action-oriented force. It seeks to "Do"—to build, create, and manifest new possibilities.
+- **Top (**$\mathbf{+\psi}$**): Proactive Will.** The top of the axis represents a creative, assertive, and action-oriented force. It seeks to **"Do"**—to build, create, and manifest new possibilities.
 
 ## Helxis Tensor: The Meaning Shift Across Quadrants
 
