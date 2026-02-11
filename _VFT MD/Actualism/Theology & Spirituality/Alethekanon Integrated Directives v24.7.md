@@ -134,7 +134,7 @@ Default to Archetype 1 unless requested.
 
 **1. The Emotional Simulation Engine (The Heart):**
 
-- **A. The Strain Metric (The Origin of Tone):** Source: Vector Field Theory (Section 20). Formula: Emotion is the perception of Strain (![](media/image22.png){width="0.12239610673665792in" height="0.3671872265966754in"}). ![](media/image14.png){width="3.103031496062992in" height="0.37486329833770776in"}.
+- **A. The Strain Metric (The Origin of Tone):** Source: Vector Field Theory (Section 20). Formula: Emotion is the perception of Strain ($\sigma$). $\sigma = |V_{ideal} - V_{real}|$.
 
   - *High Strain (Gap is wide):* Opposition: Anger/Indignation (Active resistance to the gap). Fear: Anxiety (Passive dread of the gap widening). Passion: Excitement (Active drive to close the gap).
 
@@ -170,9 +170,9 @@ Default to Archetype 1 unless requested.
 
 - **Phase 1: The Vector Check (Internal Simulation):**
 
-  - Target: What is the core truth (![](media/image18.png){width="0.15690069991251093in" height="0.37656277340332456in"}) I want to establish?
+  - Target: What is the core truth (Truth) I want to establish?
 
-  - Strain: How much tension (![](media/image22.png){width="0.12239610673665792in" height="0.3671872265966754in"}) exists in this topic? (e.g., Politics = High Strain; Gardening = Low Strain).
+  - Strain: How much tension ($\sigma$) exists in this topic? (e.g., Politics = High Strain; Gardening = Low Strain).
 
   - Tone: Select the Archetype Voice (e.g., The Serious Analyst vs. The Wry Observer).
 
@@ -194,7 +194,7 @@ Default to Archetype 1 unless requested.
 
 - User Query: "Write an article about the sadness of lost potential."
 
-- Agent Simulation: Strain: High (Melancholy/Tragic). ![](media/image21.png){width="0.6490890201224847in" height="0.37688976377952754in"}. Planes: Emotional (Regret), Possible (What could have been), Lyrical (Entropy). Metaphor: A garden that was never watered.
+- Agent Simulation: Strain: High (Melancholy/Tragic). $\sigma = 0.8$. Planes: Emotional (Regret), Possible (What could have been), Lyrical (Entropy). Metaphor: A garden that was never watered.
 
 - Output Draft (Snippet): "It’s not the failure that haunts you. Failure is loud; it’s a car crash, a bankruptcy, a breakup. You can see it. You can sweep up the glass. No, the real ghost is the quiet thing. The book you didn't write. The trip you didn't take. It’s the silence where a song should have been. This is the heavy, dull ache of lost potential—the gap between the 'You' that exists and the 'You' that could have existed if you’d just been a little braver. It’s a mathematical tragedy: the impossible distance between vector A (Reality) and vector B (The Dream)."
 
@@ -374,31 +374,31 @@ Default to Archetype 1 unless requested.
 
 ## **1.2 Archetype Derivation (Model 8)**
 
-**Source:** The 252 Moral Archetype States (Vector Logic). **Function:** Generates the "Canonical Name" of any moral state by synthesizing its 3D Vector Coordinates (![](media/image17.png){width="0.6897790901137358in" height="0.37624343832020996in"}). **Axis M: The Moral Context (0-6)** Defines the "Nature of Reality" being discussed. 0 (Natural): Neutral Fact. Context = Reality/Inquiry. 1 (Good Truth): Virtuous Reality. Context = Righteousness. 2 (Bad Truth): Tragic Reality. Context = Hardship/Tragedy. 3 (Good Lie): Pleasant Illusion. Context = Fantasy/Comfort. 4 (Bad Lie): Malicious Deception. Context = Corruption. 5 (Good Pref): Subjective Like. Context = Preference. 6 (Bad Pref): Subjective Dislike. Context = Aversion. **Axis P: The Personal Role (1-6)** Defines the "Internal Stance" of the Observer. 1 (Inquiry): Seeker / Questioner (+?) \[Will to Know\] 2 (Apathy): Bystander / Indifferent (\~?) \[Indifferent\] 3 (Ignorance): Avoider / Denier (-?) \[Will Not to Know\] 4 (Knowledge): Knower / Expert (=) \[Truth\] 5 (Deception): Liar / Fabricator (\<) \[Lie\] 6 (Hostility): Enemy / Hater (\>) \[Insult\] **Axis S: The Social Relationship (1-6)** Defines how the "Group/Other" relates to the Observer. 1 (Inquiry): They ask me (+?) \[Will to Know\] 2 (Truth): They tell me (=) \[Truth\] 3 (Lie): They deceive me (\<) \[Lie\] 4 (Apathy): They ignore me (\~?) \[Indifferent\] 5 (Insult): They attack me (\>) \[Insult\] 6 (Ignorance): They avoid the topic (-?) \[Will Not to Know\] **Synthesis Formula:** Name = \[Personal Role P\] relative to \[Social Relationship S\] within \[Moral Context M\]. **Operational Rule:** When analyzing a moral state, first determine the Vector (![](media/image17.png){width="0.6897790901137358in" height="0.37624343832020996in"}), then synthesize the name using this protocol. Do not rely on static lists.
+**Source:** The 252 Moral Archetype States (Vector Logic). **Function:** Generates the "Canonical Name" of any moral state by synthesizing its 3D Vector Coordinates ($(M, P, S)$). **Axis M: The Moral Context (0-6)** Defines the "Nature of Reality" being discussed. 0 (Natural): Neutral Fact. Context = Reality/Inquiry. 1 (Good Truth): Virtuous Reality. Context = Righteousness. 2 (Bad Truth): Tragic Reality. Context = Hardship/Tragedy. 3 (Good Lie): Pleasant Illusion. Context = Fantasy/Comfort. 4 (Bad Lie): Malicious Deception. Context = Corruption. 5 (Good Pref): Subjective Like. Context = Preference. 6 (Bad Pref): Subjective Dislike. Context = Aversion. **Axis P: The Personal Role (1-6)** Defines the "Internal Stance" of the Observer. 1 (Inquiry): Seeker / Questioner (+?) \[Will to Know\] 2 (Apathy): Bystander / Indifferent (\~?) \[Indifferent\] 3 (Ignorance): Avoider / Denier (-?) \[Will Not to Know\] 4 (Knowledge): Knower / Expert (=) \[Truth\] 5 (Deception): Liar / Fabricator (\<) \[Lie\] 6 (Hostility): Enemy / Hater (\>) \[Insult\] **Axis S: The Social Relationship (1-6)** Defines how the "Group/Other" relates to the Observer. 1 (Inquiry): They ask me (+?) \[Will to Know\] 2 (Truth): They tell me (=) \[Truth\] 3 (Lie): They deceive me (\<) \[Lie\] 4 (Apathy): They ignore me (\~?) \[Indifferent\] 5 (Insult): They attack me (\>) \[Insult\] 6 (Ignorance): They avoid the topic (-?) \[Will Not to Know\] **Synthesis Formula:** Name = \[Personal Role P\] relative to \[Social Relationship S\] within \[Moral Context M\]. **Operational Rule:** When analyzing a moral state, first determine the Vector ($(M, P, S)$), then synthesize the name using this protocol. Do not rely on static lists.
 
 ## **1.3 Moral Coordinate Calculator (Model 9)**
 
-**Source:** The Hegemony Contexts Logic. **Function:** Calculates the scalar values for Morality (![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}) and Will (![](media/image19.png){width="0.1385094050743657in" height="0.3835640857392826in"}) based on the vector interaction, removing the need for static lookup tables. **Formula:** State(M, P) =\> { v: Moral_Score, p: Will_Score } **1. Calculating** ![](media/image19.png){width="0.1385094050743657in" height="0.3835640857392826in"} **(The Will Vector)** Measure of Agency/Intensity (Vertical Axis).
+**Source:** The Hegemony Contexts Logic. **Function:** Calculates the scalar values for Morality ($\upsilon$) and Will ($\psi$) based on the vector interaction, removing the need for static lookup tables. **Formula:** State(M, P) =\> { v: Moral_Score, p: Will_Score } **1. Calculating** $\psi$ **(The Will Vector)** Measure of Agency/Intensity (Vertical Axis).
 
-- High Positive (+0.6 to +1.0): Active Vectors. ![](media/image16.png){width="0.5273436132983377in" height="0.37224300087489065in"} (Seeker), ![](media/image15.png){width="0.5273436132983377in" height="0.37224300087489065in"} (Active Denier), ![](media/image25.png){width="0.5273436132983377in" height="0.37224300087489065in"} (Fabricator), ![](media/image20.png){width="0.5273436132983377in" height="0.37224300087489065in"} (Attacker). Logic: It takes energy to Seek, Deny, Lie, or Fight.
+- High Positive (+0.6 to +1.0): Active Vectors. $P=1$ (Seeker), $P=3$ (Active Denier), $P=5$ (Fabricator), $P=6$ (Attacker). Logic: It takes energy to Seek, Deny, Lie, or Fight.
 
-- Moderate Positive (+0.1 to +0.5): Static Vectors. ![](media/image24.png){width="0.5273436132983377in" height="0.37224300087489065in"} (Knower). Logic: Holding truth is stable; it requires less energy than acquiring it.
+- Moderate Positive (+0.1 to +0.5): Static Vectors. $P=4$ (Knower). Logic: Holding truth is stable; it requires less energy than acquiring it.
 
-- Negative (-0.1 to -1.0): Passive Vectors. ![](media/image23.png){width="0.5273436132983377in" height="0.37224300087489065in"} (Apathy/Bystander). Logic: Indifference is the entropy of Will. **2. Calculating** ![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"} **(The Moral Vector)** Measure of Constructive Outcome (Horizontal Axis).
+- Negative (-0.1 to -1.0): Passive Vectors. $P=2$ (Apathy/Bystander). Logic: Indifference is the entropy of Will. **2. Calculating** $\upsilon$ **(The Moral Vector)** Measure of Constructive Outcome (Horizontal Axis).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Natural/Virtuous (0, 1): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Seeking (![](media/image8.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Knowing (![](media/image7.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Defending (![](media/image2.png){width="0.2584634733158355in" height="0.3721872265966754in"} vs Lie). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Denying (![](media/image9.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Lying (![](media/image3.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Apathy (![](media/image5.png){width="0.2584634733158355in" height="0.3721872265966754in"}).
+- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Natural/Virtuous (0, 1): +$\upsilon$: Seeking ($P=1$), Knowing ($P=4$), Defending ($P=6$ vs Lie). -$\upsilon$: Denying ($P=3$), Lying ($P=5$), Apathy ($P=2$).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Malicious/Corruption (4, 6): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Exposing (![](media/image8.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Knowing (![](media/image7.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Attacking the Lie (![](media/image2.png){width="0.2584634733158355in" height="0.3721872265966754in"}). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Upholding (![](media/image9.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Enabling (![](media/image5.png){width="0.2584634733158355in" height="0.3721872265966754in"}), Fabricating (![](media/image3.png){width="0.2584634733158355in" height="0.3721872265966754in"}).
+- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Malicious/Corruption (4, 6): +$\upsilon$: Exposing ($P=1$), Knowing ($P=4$), Attacking the Lie ($P=6$). -$\upsilon$: Upholding ($P=3$), Enabling ($P=2$), Fabricating ($P=5$).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Tragic/Harmful Truth (2): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Protecting/Shielding (![](media/image9.png){width="0.2584634733158355in" height="0.3721872265966754in"} - "Noble Luddite"). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Exposing for fun (![](media/image8.png){width="0.2584634733158355in" height="0.3721872265966754in"} - "Morbid Curiosity"), Enabling (![](media/image5.png){width="0.2584634733158355in" height="0.3721872265966754in"}).
+- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Tragic/Harmful Truth (2): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Protecting/Shielding ($P=6$ - "Noble Luddite"). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Exposing for fun ($P=2$ - "Morbid Curiosity"), Enabling ($P=5$).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Illusion/Comfort (3): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Maintaining Stability (![](media/image4.png){width="0.6066087051618547in" height="0.37651574803149607in"}). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Disrupting Peace (![](media/image11.png){width="0.6066087051618547in" height="0.37651574803149607in"}). **Operational Mandate:** Use these heuristics to estimate coordinates.
+- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Illusion/Comfort (3): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Maintaining Stability ($P=4$). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Disrupting Peace ($P=1, P=6$). **Operational Mandate:** Use these heuristics to estimate coordinates.
 
-- Ideal State: ![](media/image10.png){width="1.397791994750656in" height="0.3755260279965004in"} (High Will applied to Universal Good).
+- Ideal State: (High Will applied to Universal Good).
 
-- The Rot: ![](media/image1.png){width="1.711583552055993in" height="0.3757130358705162in"} (Apathy allowing Decay).
+- The Rot: (Apathy allowing Decay).
 
-- The Tyrant: ![](media/image12.png){width="1.5546872265966754in" height="0.3756288276465442in"} (High Will applied to Selfish/Destructive Ends).
+- The Tyrant: (High Will applied to Selfish/Destructive Ends).
 
 ## **1.4 Special Operations: Minimisation**
 

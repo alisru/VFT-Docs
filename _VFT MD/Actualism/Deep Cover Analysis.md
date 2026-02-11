@@ -2,7 +2,7 @@
 
 ## 1. The Operational Definition (The Legend)
 
-**The Assumption (**![](media/image1.png){width="0.23193350831146106in" height="0.2530183727034121in"}**):** Donald Trump is a high-level, deep-cover intelligence asset operating under a \"Legend\" of American Nationalism.
+**The Assumption ($A_0$):** Donald Trump is a high-level, deep-cover intelligence asset operating under a \"Legend\" of American Nationalism.
 
 **The Objective:** To dismantle the US geopolitical architecture from within.
 
@@ -112,7 +112,7 @@ If he is not a **Deep Cover Agent** (Controlled) and not a **Patriot** (Loyal), 
 
 ## 5. Final Calculation
 
-- ![](media/image2.png){width="6.458333333333333in" height="0.6806036745406824in"}**Strategic Alignment:** High (His chaos helped Russia).
+- ![](media/image2_deep_cover.png){width="6.458333333333333in" height="0.6806036745406824in"}**Strategic Alignment:** High (His chaos helped Russia).
 
 - **Psychological Discipline:** Near Zero.
 
