@@ -31,7 +31,7 @@ This file provides the JSON schema for storing calculated natal chart data.
       "sign": "Leo",
       "degree": 5.23,
       "minutes": 14,
-      "house": 10,
+      "house": 9,
       "retrograde": false,
       "longitude": 125.23,
       "dignity": {
@@ -65,9 +65,9 @@ This file provides the JSON schema for storing calculated natal chart data.
       "retrograde": false,
       "longitude": 104.32,
       "dignity": {
-        "type": "fall",
-        "score": -3,
-        "description": "Mercury in fall in Cancer"
+        "type": "neutral",
+        "score": 0,
+        "description": "No essential dignity in Cancer"
       },
       "element": "water",
       "modality": "cardinal"
@@ -95,9 +95,9 @@ This file provides the JSON schema for storing calculated natal chart data.
       "retrograde": false,
       "longitude": 161.58,
       "dignity": {
-        "type": "neutral_positive",
-        "score": 1,
-        "description": "Mars functions well in Virgo (precision)"
+        "type": "neutral",
+        "score": 0,
+        "description": "No essential dignity in Virgo"
       },
       "element": "earth",
       "modality": "mutable"
@@ -106,13 +106,13 @@ This file provides the JSON schema for storing calculated natal chart data.
       "sign": "Libra",
       "degree": 18.42,
       "minutes": 51,
-      "house": 12,
+      "house": 11,
       "retrograde": false,
       "longitude": 198.42,
       "dignity": {
-        "type": "detriment",
-        "score": -2,
-        "description": "Jupiter in detriment in Libra"
+        "type": "neutral",
+        "score": 0,
+        "description": "No essential dignity in Libra"
       },
       "element": "air",
       "modality": "cardinal"
@@ -188,25 +188,25 @@ This file provides the JSON schema for storing calculated natal chart data.
     {
       "type": "trine",
       "planet1": "mercury",
-      "planet2": "saturn",
-      "angle": 122.82,
-      "orb": 2.82,
+      "planet2": "moon",
+      "angle": 114.15,
+      "orb": 5.85,
       "applying": true,
       "exact_date": null,
-      "interpretation": "Logical processing supports structural thinking",
-      "priority": 3,
+      "interpretation": "Emotional logic flows with intense feeling",
+      "priority": 2,
       "i_layer": "i2"
     },
     {
-      "type": "sextile",
+      "type": "trine",
       "planet1": "venus",
-      "planet2": "mars",
-      "angle": 59.27,
-      "orb": 0.73,
-      "applying": false,
-      "exact_date": "1993-07-26",
-      "interpretation": "Values support action tendencies",
-      "priority": 4,
+      "planet2": "jupiter",
+      "angle": 116.27,
+      "orb": 3.73,
+      "applying": true,
+      "exact_date": null,
+      "interpretation": "Values expand through harmonic relationships",
+      "priority": 3,
       "i_layer": "i2"
     }
   ],
@@ -217,7 +217,7 @@ This file provides the JSON schema for storing calculated natal chart data.
       "interrogative": "WHO",
       "planet": "sun",
       "position": "Leo 5°",
-      "house": 10,
+      "house": 9,
       "dignity_score": 5,
       "filter": "q1",
       "coordinate": "Q1.q1",
@@ -239,8 +239,8 @@ This file provides the JSON schema for storing calculated natal chart data.
       "interrogative": "WHAT",
       "planet": "jupiter",
       "position": "Libra 18°",
-      "house": 12,
-      "dignity_score": -2,
+      "house": 11,
+      "dignity_score": 0,
       "filter": "q3",
       "coordinate": "Q3.q3",
       "interpretation": "Expansion through relationships, justice-oriented"
@@ -262,7 +262,7 @@ This file provides the JSON schema for storing calculated natal chart data.
       "planet": "mercury",
       "position": "Cancer 14°",
       "house": 9,
-      "dignity_score": -3,
+      "dignity_score": 0,
       "filter": "q5",
       "coordinate": "Q5.q5",
       "interpretation": "Emotional logic, gut-based processing"
@@ -273,7 +273,7 @@ This file provides the JSON schema for storing calculated natal chart data.
       "planet": "mars",
       "position": "Virgo 11°",
       "house": 11,
-      "dignity_score": 1,
+      "dignity_score": 0,
       "filter": "q6",
       "coordinate": "Q6.q6",
       "interpretation": "Precise action, service-oriented force"
