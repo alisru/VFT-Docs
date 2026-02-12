@@ -185,9 +185,9 @@ Archetype: Heretic → Prophet
 NATAL BLUEPRINT (Q.q):
   Q1.q1 = Sun in Leo (Meta-Physical, domicile)
   Q2.q2 = Saturn in Aquarius Rx (Physical, domicile)
-  Q3.q3 = Jupiter in Libra (Possible, detriment)
+  Q3.q3 = Jupiter in Libra (Possible, neutral)
   Q4.q4 = Venus in Gemini (Lyrical, neutral)
-  Q5.q5 = Mercury in Cancer (Logical, fall)
+  Q5.q5 = Mercury in Cancer (Logical, neutral)
   Q6.q6 = Mars in Virgo (Historical, neutral+)
   Q7.q7 = Moon in Scorpio (Emotive, fall)
 

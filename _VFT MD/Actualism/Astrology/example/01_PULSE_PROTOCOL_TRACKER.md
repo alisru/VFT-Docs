@@ -188,14 +188,14 @@ Translation to Q2 (Physical):
 **q3 - WHAT/JUPITER:**
 ```
 Position: LIBRA (7th sign, Air, Cardinal)
-Quality: DETRIMENT (Jupiter traditionally wants Sagittarius)
-Strength: WEAK (-2 dignity)
-Dignity Score: -2 (operates contrary to natural function)
+Quality: PEREGRINE (Neutral dignity)
+Strength: MODERATE (0 dignity)
+Dignity Score: 0 (operates through social balance)
 
 Raw Data:
   - Element: Air (mental expansion, not physical/spiritual)
   - Modality: Cardinal (initiates balance-seeking)
-  - Detriment: CONSTRICTED (expansion through diplomacy/justice)
+  - Neutral: RELATIONAL (expansion through diplomacy/justice)
   
 Translation to Q3 (Possible):
   Probability Sense: "I see possibilities through OTHERS"
@@ -224,14 +224,14 @@ Translation to Q4 (Lyrical):
 **q5 - HOW/MERCURY:**
 ```
 Position: CANCER (4th sign, Water, Cardinal)
-Quality: FALL (Mercury prefers Virgo/Gemini)
-Strength: WEAK (-4 dignity)
-Dignity Score: -4 (operates in difficult conditions)
+Quality: PEREGRINE (Neutral dignity)
+Strength: MODERATE (0 dignity)
+Dignity Score: 0 (operates through emotional filter)
 
 Raw Data:
   - Element: Water (logic is EMOTIONAL)
   - Modality: Cardinal (initiates from feeling)
-  - Fall: DISTORTED (mind processes through gut/memory)
+  - Neutral: INTUITIVE (mind processes through gut/memory)
   
 Translation to Q5 (Logical):
   Processing Type: EMOTIONAL LOGIC
@@ -290,9 +290,9 @@ COMPARISON TABLE:
 ├─────────────────┼──────────────────┼───────────────────┼──────────────┤
 │ Q1 (WHO/Sun)    │ "Unknown"        │ MAXIMUM (Leo)     │ +++ Positive │
 │ Q2 (WHERE/Sat)  │ "Unknown"        │ Aquarius Rx       │ + Interesting│
-│ Q3 (WHAT/Jup)   │ "Unknown"        │ WEAK (Libra)      │ - Surprising │
+│ Q3 (WHAT/Jup)   │ "Unknown"        │ Relational (Lib)  │ 0 Neutral    │
 │ Q4 (WHY/Ven)    │ "Unknown"        │ Versatile (Gem)   │ 0 Neutral    │
-│ Q5 (HOW/Mer)    │ "Unknown"        │ WEAK (Cancer)     │ -- Problem   │
+│ Q5 (HOW/Mer)    │ "Unknown"        │ Intuitive (Can)   │ 0 Neutral    │
 │ Q6 (CAUSE/Mars) │ "Unknown"        │ Precise (Virgo)   │ + Good       │
 │ Q7 (EFFECT/Moon)│ "Unknown"        │ INTENSE (Scorp)   │ --- CRITICAL │
 └─────────────────┴──────────────────┴───────────────────┴──────────────┘
@@ -318,13 +318,13 @@ Moving from A₀ to A₂:
 
 **The SECONDARY DISCOVERIES:**
 ```
-1. Mercury in Cancer (Q5 weakness):
+1. Mercury in Cancer (Q5 style):
    "My logic is EMOTIONAL" - this explains why I:
    - Make decisions based on gut feeling
    - Rationalize emotions rather than reason from first principles
    - Trust memory/intuition over abstract logic
    
-2. Jupiter in Libra (Q3 weakness):
+2. Jupiter in Libra (Q3 style):
    "My expansion is RELATIONSHIP-DEPENDENT" - this explains why I:
    - Need others to validate possibilities
    - Seek growth through partnership/fairness
@@ -359,8 +359,8 @@ Reason: The data matches lived reality, suggests useful framework
 A₂ = "Bad Truth" (transitional)
 Why "Bad"? Because recognizing these patterns creates DISCOMFORT:
 - The Sun-Moon square shows internal war I've tried to ignore
-- The weak Mercury shows I can't trust my "logic" as pure
-- The weak Jupiter shows I'm not as independent as I pretend
+- The intuitive Mercury shows I can't trust my "logic" as pure
+- The relational Jupiter shows I'm not as independent as I pretend
 
 But it's TRUTH because it RESONATES with actual life patterns.
 ```
