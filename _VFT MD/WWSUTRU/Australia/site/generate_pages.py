@@ -11,6 +11,9 @@ import html
 INPUT_DIR = r"e:\Vector Field Theory\VFT Docs\_VFT MD\WWSUTRU\Australia"
 OUTPUT_DIR = r"e:\Vector Field Theory\VFT Docs\_VFT MD\WWSUTRU\Australia\site"
 
+# Map special characters to HTML entities if needed, but UTF-8 should handle it
+# Ensure we handle ± correctly
+
 PLANES = [
     {"num": 1, "name": "Identity", "label": "Who", "plane_label": "Who"},
     {"num": 2, "name": "Definition", "label": "What", "plane_label": "What"},
@@ -187,7 +190,80 @@ def parse_header_quote(content):
     return {'text': '', 'author': '', 'work': '', 'year': ''}
 
 
-def generate_vector_row_html(vector, color, is_fn=False):
+def parse_judgment_vectors(plane_num, plane_name):
+    """Parse judgment vectors from the shadow _JUDGMENT.md file."""
+    judgment_file = os.path.join(INPUT_DIR, f"Australian_Kanon_Plane_{plane_num}_{plane_name}_JUDGMENT.md")
+    
+    judgments = {}
+    
+    if not os.path.exists(judgment_file):
+        print(f"  Warning: No Judgment file found: {judgment_file}")
+        return judgments
+        
+    with open(judgment_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+        
+    # Regex to parse the table rows
+    # | Who.Who.Who | **Mateship** | +0.7 | +0.4 | **Greater Good** — Note |
+    pattern = r'\|\s*([A-Za-z]+\.[A-Za-z]+\.[A-Za-z]+)\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([+\-±]?\d+(?:\.\d+)?)\s*\|\s*([+\-±]?\d+(?:\.\d+)?)\s*\|\s*\*\*([^*]+)\*\*\s*(?:—|-|–)\s*([^|]+)\s*\|'
+    
+    matches = list(re.finditer(pattern, content))
+    print(f"  Found {len(matches)} judgment entries in shadow file.")
+
+    for match in matches:
+        code = match.group(1).strip()
+        val_u = match.group(3).strip()
+        val_p = match.group(4).strip()
+        label = match.group(5).strip()
+        note = match.group(6).strip()
+        
+        # Determine badge colors based on label
+        bg_color = "bg-slate-100"
+        text_color = "text-slate-800"
+        border_color = "border-slate-200"
+        
+        l_lower = label.lower()
+        if "greater good" in l_lower:
+            bg_color = "bg-emerald-100"
+            text_color = "text-emerald-800"
+            border_color = "border-emerald-200"
+        elif "lesser good" in l_lower:
+             bg_color = "bg-emerald-50"
+             text_color = "text-emerald-800"
+             border_color = "border-emerald-100"
+        elif "good" in l_lower:
+            bg_color = "bg-emerald-100"
+            text_color = "text-emerald-800"
+            border_color = "border-emerald-200"
+        elif "greatest lie" in l_lower:
+            bg_color = "bg-red-100"
+            text_color = "text-red-900"
+            border_color = "border-red-200"
+        elif "tension point" in l_lower:
+            bg_color = "bg-orange-100"
+            text_color = "text-orange-800"
+            border_color = "border-orange-200"
+        elif "constraint" in l_lower:
+             bg_color = "bg-gray-100"
+             text_color = "text-gray-800"
+             border_color = "border-gray-200"
+
+        judgments[code] = {
+            'val_u': val_u,
+            'val_p': val_p,
+            'label': label,
+            'note': note,
+            'style': {
+                'bg': bg_color,
+                'text': text_color,
+                'border': border_color
+            }
+        }
+    
+    return judgments
+
+
+def generate_vector_row_html(vector, color, is_fn=False, judgment=None):
     """Generate HTML for a single vector row (Standard or FN)."""
     code = escape_html(vector['code'])
     name = escape_html(vector['name'])
@@ -199,6 +275,28 @@ def generate_vector_row_html(vector, color, is_fn=False):
 
     row_class = "hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0"
     
+    judgment_html = ""
+    if judgment:
+        j = judgment
+        # Color for the numbers (Green/Red/Gray based on sign)
+        # Simple heuristic: + is emerald, - is red, ± is gray
+        u_col = "text-emerald-600" if "+" in j['val_u'] else ("text-red-600" if "-" in j['val_u'] else "text-gray-500")
+        p_col = "text-emerald-600" if "+" in j['val_p'] else ("text-red-600" if "-" in j['val_p'] else "text-gray-500")
+
+        judgment_html = f'''
+        <div class="mt-2 flex flex-wrap items-center gap-2 judgment-badge">
+            <div class="inline-flex items-center space-x-1.5 px-2 py-1 bg-slate-50 border border-slate-200 rounded-md text-xs font-mono">
+                <span class="font-semibold text-gray-500" title="Moral Vector (Benefit vs Cost)">υ</span>
+                <span class="{u_col} font-bold">{j['val_u']}</span>
+                <span class="text-gray-300">|</span>
+                <span class="font-semibold text-gray-500" title="Will Vector (Proactive vs Suppressive)">ψ</span>
+                <span class="{p_col} font-bold">{j['val_p']}</span>
+            </div>
+            <span class="inline-block px-2 py-0.5 text-xs font-bold rounded border {j['style']['bg']} {j['style']['text']} {j['style']['border']}">{j['label']}</span>
+        </div>
+        <div class="mt-1.5 text-xs text-gray-500 italic leading-snug w-full judgment-note">{j['note']}</div>
+        '''
+
     # Distinct styling for FN rows
     if is_fn:
          row_class = "bg-amber-50/30 hover:bg-amber-50/60 transition-colors align-top border-b border-amber-100 last:border-0"
@@ -206,6 +304,7 @@ def generate_vector_row_html(vector, color, is_fn=False):
          meta_col = f'''
              <div class="font-bold text-gray-900 text-lg leading-tight mb-1">{name}</div>
              <div class="text-xs text-amber-800 font-mono bg-amber-100 inline-block px-1.5 py-0.5 rounded">First Nations Perspective</div>
+             {judgment_html}
          '''
     else:
         # Standard Colonial Row
@@ -213,12 +312,13 @@ def generate_vector_row_html(vector, color, is_fn=False):
          meta_col = f'''
              <div class="font-bold text-gray-900 text-lg leading-tight mb-1">{name}</div>
              <div class="text-xs text-{color}-600 font-mono bg-{color}-50 inline-block px-1.5 py-0.5 rounded">The {role_name}</div>
+             {judgment_html}
          '''
 
     return f'''
                         <tr class="{row_class}">
-                            <td class="px-6 py-6 w-16 align-top pt-7">{code_col}</td>
-                            <td class="px-6 py-6 w-1/4 align-top">
+                            <td class="px-6 py-6 md:w-16 align-top pt-7">{code_col}</td>
+                            <td class="px-6 py-6 md:w-1/4 align-top">
                                 {meta_col}
                             </td>
                             <td class="px-6 py-6 align-top">
@@ -265,13 +365,18 @@ def generate_sense_section(sense_idx, sense_vectors_group, narrative, plane_labe
         standard = next((x for x in group if not x['is_fn']), None)
         fn_vector = next((x for x in group if x['is_fn']), None)
         
+        # Look up judgment for this code
+        judgment_data = v.get('judgment', None)
+        
         # Render Standard First
         if standard:
-            rows_html.append(generate_vector_row_html(standard, color, is_fn=False))
+            rows_html.append(generate_vector_row_html(standard, color, is_fn=False, judgment=judgment_data))
         
         # Render FN Second (Partner Row)
+        # Note: We typically apply the same judgment to the vector slot, but FN might differ.
+        # For now, we only show judgment on the primary/standard vector as per original design.
         if fn_vector:
-            rows_html.append(generate_vector_row_html(fn_vector, color, is_fn=True))
+            rows_html.append(generate_vector_row_html(fn_vector, color, is_fn=True, judgment=None))
             
     vector_rows = "\n".join(rows_html)
     
@@ -281,8 +386,8 @@ def generate_sense_section(sense_idx, sense_vectors_group, narrative, plane_labe
     return f'''
         <!-- Sense q{sense_idx + 1}: The {sense_label} of the {plane_label} -->
         <div class="mb-24">
-            <div class="bg-{color}-900 text-white p-6 rounded-t-2xl flex justify-between items-center sticky top-16 z-40 shadow-xl ring-1 ring-black/10">
-                <div>
+            <div class="bg-{color}-900 text-white p-6 rounded-t-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center sticky top-16 z-40 shadow-xl ring-1 ring-black/10 w-full">
+                <div class="w-full">
                     <h3 class="text-2xl font-bold tracking-tight font-serif">The {sense_label} of the {plane_label} ({sense_desc})</h3>
                     <div class="flex items-center mt-2 space-x-3 opacity-90">
                         <span class="text-{color}-200 text-xs uppercase tracking-widest font-bold">Sense q{sense_idx + 1}</span>
@@ -292,7 +397,7 @@ def generate_sense_section(sense_idx, sense_vectors_group, narrative, plane_labe
                 </div>
             </div>
 
-            <div class="bg-white rounded-b-2xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-white rounded-b-2xl shadow-sm border border-gray-200">
                 <div class="bg-gradient-to-br from-white to-{color}-50 border-x border-b border-gray-200 p-8 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-{color}-900 opacity-[0.03] rounded-bl-full -mr-8 -mt-8 transition-opacity group-hover:opacity-[0.08]"></div>
                     <div class="relative z-10">
@@ -321,13 +426,17 @@ def generate_nav(current_plane):
             active = "bg-yellow-800 text-white transition-colors"
         else:
             active = "text-yellow-100 hover:bg-yellow-800 hover:text-white transition-colors"
-        nav_items.append(f'<a href="Plane_{p["num"]}_{p["name"]}.html" class="px-3 py-2 rounded-md text-sm font-medium {active}">{p["label"]}</a>')
-    return "\n                            ".join(nav_items)
+        nav_items.append(f'<a href="Plane_{p["num"]}_{p["name"]}.html" class="px-3 py-2 rounded-md text-sm font-medium {active} block md:inline-block">{p["label"]}</a>')
+    
+    # Add matrix link to nav items for mobile menu
+    mobile_nav_items = [f'<a href="AustralianMatrix.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 block">Back To Matrix</a>'] + nav_items
+    
+    return "\n                            ".join(nav_items), "\n                            ".join(mobile_nav_items)
 
 
 def generate_full_html(plane_info, header_quote, totality, senses_html):
     """Generate the complete HTML page."""
-    nav_html = generate_nav(plane_info["num"])
+    nav_html, mobile_nav_html = generate_nav(plane_info["num"])
     color = SENSE_COLORS[plane_info["num"] - 1]
     
     quote_source = f'{header_quote["author"]}, {header_quote["work"]}'
@@ -353,6 +462,49 @@ def generate_full_html(plane_info, header_quote, totality, senses_html):
         .font-serif {{
             font-family: 'Merriweather', serif;
         }}
+        @media (max-width: 640px) {{
+            /* Force table to not be like tables anymore */
+            table, thead, tbody, th, td, tr {{ 
+                display: block; 
+            }}
+            
+            /* Hide table headers (but not display: none;, for accessibility) */
+            thead tr {{ 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }}
+            
+            tr {{ border: 1px solid #e2e8f0; border-radius: 0.75rem; margin-bottom: 1.5rem; background: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); overflow: hidden; }}
+            
+            td {{ 
+                /* Behave  like a "row" */
+                border: none;
+                position: relative;
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+            }}
+            
+            /* Code Column */
+            td:nth-of-type(1) {{
+                background-color: #f8fafc;
+                border-bottom: 1px solid #e2e8f0;
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }}
+            
+            /* Concept Column */
+            td:nth-of-type(2) {{
+                padding-bottom: 0 !important;
+            }}
+            
+            /* Description/Quote Column */
+            td:nth-of-type(3) {{
+                padding-top: 1rem !important;
+            }}
+        }}
     </style>
 </head>
 
@@ -361,22 +513,44 @@ def generate_full_html(plane_info, header_quote, totality, senses_html):
     <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
                         <span class="text-xl font-bold text-white tracking-widest">
                             <a href="../index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">←WWSUTRU</a>
                         </span>
                     </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-2">
-                            <a href="AustralianMatrix.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Back To Matrix</a>
-                            {nav_html}
-                        </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-2">
+                        <a href="AustralianMatrix.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Back To Matrix</a>
+                        {nav_html}
                     </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu, show/hide based on menu state. -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700">
+                {mobile_nav_html}
+            </div>
+        </div>
     </nav>
+
 
     <!-- Header -->
     <header class="bg-white border-b border-gray-200 relative overflow-hidden">
@@ -448,6 +622,7 @@ def process_plane(plane):
     totality = parse_totality(content)
     vectors = parse_vectors_from_markdown(content)
     narratives = parse_sense_narratives(content)
+    judgments = parse_judgment_vectors(plane['num'], plane['name'])
     
     print(f"  Found {len(vectors)} vectors")
     
@@ -456,6 +631,7 @@ def process_plane(plane):
     unique_codes = []
     vectors_map = {}
     for v in vectors:
+        v['judgment'] = judgments.get(v['code'], None) # Inject judgment
         if v['code'] not in unique_codes:
             unique_codes.append(v['code'])
             vectors_map[v['code']] = []
