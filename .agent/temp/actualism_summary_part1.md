@@ -1,0 +1,52 @@
+### [ACTUALISM] - Part 1
+
+- **actualism\42\experimental validation of vft -  the popular mechan....md**: Explores the "Popular Mechanics" of VFT, focusing on experimental validation and the 42 instants of creation.
+- **actualism\42\proofs of qi.md**: Provides proofs of QI (Quantum Inertia) within the VFT framework.
+- **actualism\42\readme.md**: Auto-generated manifest and index for files in the `actualism\42` directory.
+- **actualism\42\the 42 of authoritarianism.md**: Analyzes authoritarianism using the 42 framework, focusing on control, suppression, and systemic rigidities.
+- **actualism\42\the 42 of reality -  the three axes of manifestation.md**: Defines the three axes of manifestation (Physical, Non-Physical, Relational) within the 42 structural framework.
+- **actualism\42\the 42 of reality： the three axes of manifestation.md**: Documentation regarding the three axes of manifestation and their role in the 42 instants of creation.
+- **actualism\42\the fractal genesis megastructure -  the 42 instants of creation.md**: Details the 42 "instants" or phase shifts from absolute nothingness to the current state of the universe.
+- **actualism\a framework for the judgment of ideas.md**: Foundational document describing the Psochic Hegemony and the dual assessment of the viewer and the idea.
+- **actualism\actualism -  a synthesis of gnostic and monistic thought.md**: Explores the philosophical roots of Actualism, drawing parallels with Gnostic and Monistic traditions.
+- **actualism\actualism; 7x7x7 analysis the conceptual framework.md**: A primary analysis of the 7x7x7 interrogative cube and its application to conceptual mapping.
+- **actualism\actualism; the geometry of humor - a psochic analysis.md**: Analyzes the mechanics of humor as a "sugar rush" or "brittle" energy state within the TR quadrant.
+- **actualism\actualism; the inverse drill -  building the temple of the self.md**: Outlines a protocol for internal self-reconstruction by mirroring and inverting external systemic structures.
+- **actualism\actualism; the triadic model of reality.md**: Formalizes the triadic model (Where, What, How/Why) and its role in the manifestation of consciousness.
+- **actualism\actualism_ 7x7x7 analysis the conceptual framework v2(1).md**: Updated version of the 7x7x7 conceptual framework analysis and technical specification.
+- **actualism\arbitrary_relative_metric.md**: Formalizes "ARM" (Arbitrary Relative Metrics) as a tool for subjective measurement within objective frames.
+- **actualism\astrology\example\00_master_index.md**: The navigation hub for the Alisru natal chart analysis, integrating six systems of interpretation.
+- **actualism\astrology\example\01_pulse_protocol_tracker.md**: Tracks the truth convergence and belief transformation journey for the Alisru natal chart analysis.
+- **actualism\astrology\example\02_smarts_execution_engine.md**: Demonstrates the active cognitive processing of natal data (Sun, Moon, and Aspect) for reality verification.
+- **actualism\astrology\example\03_343_node_semantic_analysis.md**: Provides a deep semantic interrogation of key natal placements using the recursive 7x7x7 interrogative cube.
+- **actualism\astrology\example\04_temporal_dashboard.md**: Maps the subject's past, present, and future lifecycle nodes based on secondary solar and lunar progressions.
+- **actualism\astrology\example\05_journey_calculator.md**: Calculates metrics for belief state transformation and moving from "Heretic" to "Adept" status.
+- **actualism\astrology\example\corrections_summary.md**: Lists structural corrections made to the semantic analysis methodology to ensure formal interrogative rigidity.
+- **actualism\astrology\how_to_generate.md**: A complete 12-phase operational guide for generating a full Hegemonic Astrology analysis package.
+- **actualism\astrology\package_contents.md**: A manifest and file-by-file description of the contents within the Hegemonic Astrology generation package.
+- **actualism\astrology\quick_start.md**: A 15-minute guide for quickly generating the foundation of a Hegemonic Astrology natal chart analysis.
+- **actualism\astrology\readme.md**: The primary overview of the professional analysis framework for Hegemonic Astrology chart generation.
+- **actualism\astrology\reference\quality_control_checklist.md**: A 12-phase verification process used to ensure data accuracy and structural integrity before delivery.
+- **actualism\astrology\reference\reference_tables.md**: Lookup tables for planetary dignities, aspects, interrogative mappings, and belief state matrices.
+- **actualism\astrology\reference\sample_data_structure.md**: Provides the JSON schemas required for storing natal, progression, and transit data in a structured format.
+- **actualism\astrology\templates\template_01_pulse_protocol.md**: A fillable template for iteration tracking, initial belief states, and the 7-vector inquiry grid.
+- **actualism\cognitive rhythms - dental plan logic.md**: Analyzes why the "Dental Plan" meme fails as a lecture format due to a structural mismatch in cognitive rhythms.
+- **actualism\consciousness\a vft model of belief, evidence, and spacetime.md**: Formalizes a unified model that describes the mechanics of belief and its manifestation in spacetime.
+- **actualism\consciousness\ai\ai task -  convert document to styled html.md**: Technically specified instructions for an AI to convert text documents into structured and specifically styled HTML.
+- **actualism\consciousness\ai\ai; the competent friend protocol -  ai delusion assessment & safety mechanisms.md**: A safety protocol designed to assess and prevent the misuse of AI as a clinical psychological tool.
+- **actualism\consciousness\ai\ai; the tautonic oracle -  a narrative physics engine.md**: Conceptualizes a "Narrative Physics Engine" allowed to predict the meaningful future through semantic trajectory analysis.
+- **actualism\consciousness\ai\dynamic research workflow & ai project manager model.md**: Methodology for large-scale, iterative research using AI project manager models and "Canvas" buckets.
+- **actualism\consciousness\ai\readme.md**: Auto-generated manifest and summary list for AI-related methodology files in the consciousness directory.
+- **actualism\consciousness\introduction -  a map of consciousness.md**: An introductory guide to the Psochic Hegemony (Moral Compass) as a map of consciousness and its axes.
+- **actualism\consciousness\introduction -  the ideal and the allegory.md**: Uses VFT to compare Etemenanki (the divinely instructed ideal) with the Tower of Babel (the flawed human allegory).
+- **actualism\consciousness\moral riddles -  a historical litmus test.md**: Uses historical riddles and myths to diagnose an individual's underlying character and moral framework.
+- **actualism\consciousness\readme.md**: Auto-generated manifest and content summaries for files within the consciousness directory.
+- **actualism\consciousness\smarts cognitive processor -  a continuous intelligence architecture.md**: Presents a novel cognitive architecture that conceptualizes human intelligence as a series of dynamic semantic processors.
+- **actualism\consciousness\the 13-parameter cognitive framework (non-zero law model).md**: Outlines the "Non-Zero Law" for cognitive coherence calculations within the 13-parameter framework.
+- **actualism\consciousness\the 13-parameter cognitive framework -  a correct deconstruction.md**: A formal, technical deconstruction of the 13-parameter "Expanded Belief Equation" (EBE) for cognitive coherence.
+- **actualism\consciousness\the 252 moral archetype states -  explicit vector id map (canonical and final).md**: A canonical mapping of all 252 moral archetype states to their 3D coordinate Vector IDs (M, P, S).
+- **actualism\consciousness\the ancient problem -  zeno's arrow paradox.md**: Provides a VFT solution to Zeno's Arrow Paradox by describing the quantized nature of reality and observation.
+- **actualism\consciousness\the axiom of emotional detachment -  a vft model of ideas and mirrors.md**: Formalizes a VFT axiom that detaches emotions from people and re-attaches them to the sýstēma of the idea itself.
+- **actualism\consciousness\the epistemological filter -  1 corinthians 2 - 14 & eastern analogues.md**: Explains the intelligibility of Truth as a function of the observer's internal state and worldview scope.
+- **actualism\consciousness\the ethics -  causal inertia.md**: Argues that ethics is the study of "Causal Inertia" and the responsibility for actions within a causally rigid universe.
+- **actualism\consciousness\the fractal equations of thought -  expanded edition.md**: Redefines the 7-dimensional syntax of reality as a sequential lock protocol running on the SMARTS architecture.
