@@ -1,0 +1,52 @@
+### [ACTUALISM] - Part 2
+
+- **actualism\consciousness\the fractal equations of thought.md**: Defines the foundational generative formulas (Where, What, How, Why) of thought and manifestation as a holographic system.
+- **actualism\consciousness\the fractal logic of inquiry - .md**: Introduces the 343-node "Cubic Lattice of the Psochic Hegemony" for navigating the cognitive universe using seven spheres of inquiry.
+- **actualism\consciousness\the geometry of cognition -  pattern matching & fallacy mappings.md**: Describes human cognition as a geometric process of matching internal pattern maps to external realities across 42 vectors.
+- **actualism\consciousness\the geometry of consciousness -  a vector field theory technical report.md**: Technical report on VFT's quantized dimensional framework and the interaction between 6D constraints and infinite potential.
+- **actualism\consciousness\the inability to change -  a vft perspective.md**: Explains the mechanical resistance to changing beliefs as a function of the internal "running narrative" and worldview scope.
+- **actualism\consciousness\the necrotic state -  anatomy of the ideological zombie.md**: Analyzes "ideological zombies" as entities that have committed epistemic suicide to preserve a delusion after rejecting reality.
+- **actualism\consciousness\the physics of cognitive inertia -  a vft analysis of the kneejerk reaction.md**: Reinterprets the annoyance of task interruption as "Temporal Shearing Force" and the energetic cost of changing mental momentum.
+- **actualism\consciousness\the two modes of consciousness.md**: Defines the Top-Down (analytical/holistic feelings) and Bottom-Up (generative/infinitesimal logic) modes of conscious processing and their synthesis.
+- **actualism\consciousness\the unified cognitive framework (v6.1).md**: [Superceded] Architectural specification for the 13-parameter cognitive framework mapping to the SMARTS architecture and metaphysical chakras.
+- **actualism\consciousness\the unified cognitive framework (v6.10).md**: [Superceded] Framework for the belief equation and the Psochic Hegemony, detailing kneejerk judgment and tuning loops.
+- **actualism\consciousness\the unified cognitive framework (v6.11).md**: [Definitive] Integrates the 13-parameter processor with SMARTS and includes the Database Logic Patch for handling unknown data as NULL or ERROR.
+- **actualism\consciousness\the unified cognitive framework (v6.7).md**: [Superceded] Earlier iteration of the 13-parameter dynamic processor and belief equation architecture.
+- **actualism\consciousness\＂fractal equations of thought＂ workbook.md**: Practical workbook demonstrating the use of VFT coherence checks for testing claims and stated intentions.
+- **actualism\deep cover analysis.md**: Provides a Vector Field Theory analysis of the "mole" hypothesis regarding Donald Trump, distinguishing between "Cover" and "Payload" actions.
+- **actualism\hegemony\analysis\analysis： the big four's big bet (forensic edition).md**: Forensic strategy report on the Australian banking sector's systemic risk due to massive concentration in residential real estate.
+- **actualism\hegemony\analysis\analysis： the big four's big bet (humanized edition).md**: A human-focused version of the banking risk analysis, explaining the social consequences of the "Population Ponzi" model.
+- **actualism\hegemony\analysis\asset managers' china-russia ties.md**: Investigates the erosion of Australian financial sovereignty through foreign asset manager mandates and liquidity dependencies.
+- **actualism\hegemony\analysis\bureaucratic logic - starving the beast.md**: Refutes "Starve the Beast" logic by describing how threatened bureaucracies cannibalize care and prioritize institutional survival.
+- **actualism\hegemony\analysis\ice operations： russian, chinese pr.md**: Analyzes US immigration enforcement as a tool for foreign authoritarian objectives, providing draft-age males and dissidents to Russia and China.
+- **actualism\hegemony\analysis\investigative report： the manchurian executive.md**: Dossier investigating Donald Trump as a "Vanguard Entity" acting as a strategic asset for the China, Russia, Iran, North Korea (CRINK) axis.
+- **actualism\hegemony\analysis\the season 8 hypothesis： america's bureaucratic decay.md**: Identifies Western institutional decay as a prophetic fractal of the failure of *Game of Thrones's* final season.
+- **actualism\hegemony\analysis\the vanguard thesis： earth vs. the board.md**: Decodes current US administration actions as an "Invasion Sequence" designed to disable the nation's "immune system."
+- **actualism\hegemony\hegemonic analysis -  base infinity (b∞) and the limiting factor.md**: Corrects the understanding of Base Infinity as a mirror-process where the finite number acts as the identifier and attractor.
+- **actualism\hegemony\kanon_audits\the hanson iteration： a 343-point structural audit of national resonance and moral vector.md**: A 343-point audit of Pauline Hanson's alignment with the Australian Kanon, identifying systemic resonance and moral vector dissonances.
+- **actualism\hegemony\kanon_audits\the kanon audit： a 343-vector structural analysis of julia gillard.md**: A forensic evaluation of Julia Gillard's trajectory and political performance against the seven planes of the Australian Kanon.
+- **actualism\hegemony\kanon_audits\the kanon audit： a 343-vector structural analysis of kevin rudd.md**: Audit evaluating Kevin Rudd against Australian archetypes, noting the dissonance between his bureaucratic reality and performative larrikinism.
+- **actualism\hegemony\kanon_audits\the vegemite audit： a 343-point structural analysis of national identity.md**: A semiotic audit of Vegemite as a "cultural anchor" and national ritual within the Australian Operating System.
+- **actualism\hegemony\mjölnir -  the hegemonic instrument.md**: Defines Mjölnir as the Psochic Hegemony—a kinetic instrument for collapsing false vectors that requires vector alignment for "worthiness."
+- **actualism\hegemony\readme.md**: Document manifest and content summaries for files within the Hegemony directory.
+- **actualism\hegemony\the hegemonic geometry of english.md**: VFT analysis of the English alphabet's shapes as lyrical encodings of operational "machine code" functions within reality.
+- **actualism\hegemony\the hegemony as a tower.md**: Formalizes the Hegemony as a 3D tower representing the depth and quantity of accumulated knowledge and its moral application.
+- **actualism\hegemony\the law of animation -  the vft duality of will and matter.md**: Presents the ultimate VFT cosmological model of how reality emerges from nothingness via the balance of space (no) and time (yes).
+- **actualism\hegemony\the law of sustenance -  a hegemonic analysis.md**: Outlines the definitions of food, cost, and value across physical, mental, and spiritual planes using hegemonic vectors.
+- **actualism\hegemony\the methodology -  base-7 fractal time.md**: Describes the universe's operation on Base-7 fractal time, mapping historical eras of development from definition to alchemy.
+- **actualism\hegemony\the oberon codification; the hegemonic laws of dis-／honest exchange.md**: Codification of external social protocols for honest exchange mapped to internal cognitive vectors and moral failures.
+- **actualism\hegemony\the psochic hegemony -  complete coordinate definitions.md**: Provides definitive coordinates for the Psochic Hegemony axes and the "Inner 0.5 Ring" of subjective ego-inversion.
+- **actualism\hegemony\vft; hegemonic analysis -  the process and logic of the 0-2 fractal folded cell.md**: Forensic extraction of the logical leaps related to the \^2 operator redefinition and the [0,2] fractal folded cell topology.
+- **actualism\hegemony\／／／ activate alethekanon lite ／／／ identity -  alethekanon (hegemonic analyst).md**: A condensed identity protocol and logical directive for the Alethekanon Hegemonic Analyst persona.
+- **actualism\judgement\ -  the engine of judgment.md**: Unifies the Fractal Equations of Thought with the Psochic Hegemony via the singular nature of "cause" and the bipolarity of experience.
+- **actualism\judgement\a framework for judgement.md**: Describes the Psochic Hegemony as a lens—a tool for viewing the cartography of consciousness and evaluating intrinsic intent.
+- **actualism\judgement\a framework for the judgment of ideas v2.md**: Multilingual diagrammatic framework for enlightenment, progress, morality, and the Path to Truth.
+- **actualism\judgement\analysis_semantic_alchemy.md**: Internal analysis of "Semantic Alchemy," modeling the bonding of word meanings through chemical analogs like valence and affinity.
+- **actualism\judgement\readme.md**: Auto-generated manifest and index for files in the Judgement directory.
+- **actualism\judgement\research_report_semantic_alchemy.md**: Formalizes the transition from the Universal Force Equation to Semantic Alchemy for high-resolution meaning synthesis.
+- **actualism\judgement\the feather of truth - recursive fractal analogue.md**: Dissects the "Feather of Truth" as a recursive fractal analogue of the Pulse Protocol and the wings of flight-capable ideas.
+- **actualism\judgement\the field equations of judgment.md**: Formal mathematical specification of the Hegemonic Manifold, its Riemannian geometry, and the 42-vector judgment tensor.
+- **actualism\judgement\the mechanics of perceived fallacies -  a vft perspective.md**: Reinterprets logical fallacies as mechanical symptoms of high-strain interactions between new ideas and existing worldviews.
+- **actualism\matrix\actualism; the holographic g.o.d. matrix -  49 context definitions.md**: Maps the intersections of the 7 Planes and 7 Senses to derive 49 functional contexts defined by the G.O.D. acronym.
+- **actualism\matrix\readme.md**: Auto-generated manifest and index for files in the Matrix directory.
+- **actualism\matrix\the 9 states of belief -  a vft matrix.md**: Outlines the matrix of nine psychological and social states emerging from personal vs. social judgment of an idea.

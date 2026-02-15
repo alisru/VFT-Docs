@@ -942,6 +942,31 @@
                 "passes": [],
                 "root_cause": null
             }
+        },
+        {
+            "index": 28,
+            "id": "task_28",
+            "description": "Update file_summaries_comprehensive.md with missing files",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-15T23:13:17.283908] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
         }
     ]
 }
