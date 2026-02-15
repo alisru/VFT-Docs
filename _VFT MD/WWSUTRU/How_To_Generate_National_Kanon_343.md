@@ -1,5 +1,8 @@
 # Protocol: Generating a 343 National Kanon Analysis
 
+## Part I: Semantic Architecture & Narrative Rules
+This section defines the "Soul" of the Kanon—the meaning, logic, and writing standards.
+
 This document outlines the precise format and methodology for generating a "343 Analysis" (The National Kanon) for any nation. The analysis is a recursive 7x7x7 structure derived from Vector Field Theory (VFT).
 
 ## The 7x7x7 Structure
@@ -62,8 +65,8 @@ Each Markdown file must follow this exact template.
 # The [Nation] Kanon:
 # Plane [Vector]; Values of [Nation] [Thematic Name]
 
-> *"[Quote encapsulating the Plane]"*
-> — **[Author]**, *[Source]*
+> *"[Quote encapsulating the entire Plane]"*
+> — **[Author]**, *[Source]*, [Year]
 
 ## THE PLANE OF [THEMATIC NAME] ([VECTOR])
 ```
@@ -215,3 +218,93 @@ Use the words of the **Founders** (Originators) to define the specific "Ideal" o
 4.  **No Logic Mixing:**
     -   Do not put a "Why" quote in a "Who" section unless you are explicitly analyzing the "Why of the Who".
     -   Respect the geometry.
+
+---
+
+## Part II: Technical Execution & Generation
+
+This section defines the "Body" of the Kanon—the file systems, data structures, and code required to compile the analysis into a working website.
+
+## 6. The Shadow Files (Judgment Data)
+
+For every Content File (Plane), you must create a corresponding **"Shadow File"** to store the discrete data values (Moral Vector, Will Vector, and Judgment Category). 
+
+> **CRITICAL:** The HTML Generator (`generate_pages.py`) looks for these files to create the "Badges" (e.g., Green/Red indicators) in the site. If missing, the site will generate without data badges.
+
+### 6.1 File Naming
+Append `_JUDGMENT.md` to the content filename.
+*   **Content:** `[Nation]_Kanon_Plane_1_Identity.md`
+*   **Shadow:** `[Nation]_Kanon_Plane_1_Identity_JUDGMENT.md`
+
+### 6.2 Internal Structure
+The file must contain **Markdown Tables** for each Sense. The columns `υ` (Nu/Moral) and `ψ` (Psi/Will) are processed by the script.
+
+**Template:**
+```markdown
+# [Nation] Kanon Plane [N] — Judgment Shadow File
+
+## 1.1 The [Sense] of the [Plane]
+
+| Vector | Entry | υ | ψ | Judgment |
+|--------|-------|---|---|----------|
+| P.S.V | **[Concept Name]** | +0.7 | +0.4 | **Greater Good** — [Short Note < 100 chars] |
+| P.S.V | **[Concept Name]** | -0.5 | +0.8 | **Greatest Lie** — [Short Note] |
+...
+```
+
+### 6.3 Judgment Categories (Standard)
+The `Judgment` column determines the **Badge Color** in the HTML.
+
+| Judgment | Criteria | Color (in CSS) |
+| :--- | :--- | :--- |
+| **Greater Good** | (+υ, +ψ) Universal Benefit + Proactive | Green |
+| **Good** | (+υ) Benefit (Passive or Active) | Green |
+| **Lesser Good** | (+υ, -ψ) Benefit with Passivity | Green-Light |
+| **Greatest Lie** | (-υ, +ψ) Self-Benefit + High Will | Red |
+| **Tension Point** | Mixed vectors or highly controversial | Orange |
+| **Constraint** | Neutral/Environmental Fact | Gray |
+
+---
+
+## 7. Site Generation Protocol
+
+Once the 14 Markdown files (7 Content + 7 Judgment) are drafted, use the Python engine to compile the site.
+
+### 7.1 Directory Structure
+Ensure your workspace matches this structure:
+```
+[Nation]/
+├── [Nation]_Kanon_Plane_1_Identity.md
+├── [Nation]_Kanon_Plane_1_Identity_JUDGMENT.md
+├── ... (All 14 files)
+└── site/
+    └── generate_pages.py
+```
+
+### 7.2 Running the Generator
+1.  Navigate to the `site/` directory.
+2.  Run the script: `python generate_pages.py`
+3.  The script will parse both the Content and Shadow files and output 7 HTML files (e.g., `Plane_1_Identity.html`).
+
+### 7.3 Mobile Responsiveness Standards
+The generated HTML must meet these specific responsive criteria (enforced by the script's CSS):
+1.  **Mobile Card View:** On screens < 640px, the data tables must transform into **Vertical Cards** (Code → Concept → Description) to eliminate horizontal scrolling.
+2.  **Hamburger Navigation:** The desktop sidebar/topbar must collapse into a standard **Hamburger Menu** on mobile.
+3.  **Visual Badges:** On mobile, the Judgment Vectors (υ/ψ) must remain legible, usually formatted as "Pills" within the Concept card.
+
+---
+
+## 8. Verification (The Audit)
+
+Before finalizing, run the `verify_kanon_rules.py` script against your Content Files.
+
+**Command:**
+```bash
+python verify_kanon_rules.py
+```
+
+**What it Checks:**
+*   **Structure:** proper `**(Code) Name**;` syntax.
+*   **Depth:** Enforces the **7-Sentence Rule** (Context + Meaning block length).
+*   **Completeness:** Ensures all 7 vectors per Sense are present.
+
