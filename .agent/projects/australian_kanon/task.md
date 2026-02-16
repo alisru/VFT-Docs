@@ -1,8 +1,8 @@
 # Australian Kanon Generation
 
-**Current Focus**: Execute root de-cluttering and taxonomy alignment
+**Current Focus**: Subdivide Language folder into translating and names subfolders
 
-**Progress**: 26/32 complete
+**Progress**: 26/33 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -37,6 +37,7 @@
 - [x] Move project taxonomy and navigation files to dedicated Navigation folder `infrastructure navigation` <!-- id: 29 -->
 - [x] Update reorg audit with target origin and correlate destinations with folder purpose review `implementation navigation` <!-- id: 30 -->
 - [x] Execute root de-cluttering and taxonomy alignment `execution cleanup` <!-- id: 31 -->
+- [/] Subdivide Language folder into translating and names subfolders `refinement cleanup` <!-- id: 32 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
