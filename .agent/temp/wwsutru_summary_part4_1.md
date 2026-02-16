@@ -1,0 +1,27 @@
+### PART 7 (Files 151-175)
+
+- **wwsutru\coretools\states_of_belief_report.md**: Detailed report on 36 "States of Belief" across 7 moral contexts, mapping cognitive archetypes (Lone Wolf, Research Team) to VFT vectors and MBTI.
+- **wwsutru\coretools\the seven churches -  a system governance audit.md**: Audit of modern governance states using the "Seven Churches" as archetypes for system integrity (e.g., stagnant bureaucracy vs. integrity under siege).
+- **wwsutru\coretools\vft complete file catalog .md**: Itemized catalog of 160 VFT files, categorized into Archives (Logs), Engine (Physics), and Grand Strategy modules.
+- **wwsutru\coretools\wwsutru field guide -  identifying weapons of intellectual attrition.md**: Guide to identifying "Cognitive Weapons" (Invented Jargon, Weaponized Technicalities) designed to induce intellectual exhaustion.
+- **wwsutru\economicwarfare\a vft-based socio-economic model.md**: Analysis of a proposed global governance model using VFT, featuring the "{χ} Moral Ledger" to replace wealth with moral/economic state vectors.
+- **wwsutru\economicwarfare\analyzing war, capitalism, and minimisation.md**: Formalization of modern warfare as a perpetual economic siege, with global capitalism evolving into a vulnerable "neo-feudal" order.
+- **wwsutru\economicwarfare\brics trade blockade economic impact.md**: Macroeconomic assessment of (\$294.8B) sovereign loss for Australia in a coordinated BRICS trade cessation (US-China war stress test).
+- **wwsutru\economicwarfare\china's trade deals and economic control.md**: Analysis of China's geoeconomic strategy to weaponize trade-based money laundering (TBML) as a tool for power projection.
+- **wwsutru\economicwarfare\investigating tesla's chinese financial ties.md**: Case study of the "Tesla Vector" as a tool for inducing strategic exhaustion and epistemic nihilism via financial simulacra and Chinese dependency.
+- **wwsutru\economicwarfare\nen financial accelerants.md**: Paper on financial instruments (Carbon Credits, Production Rebates) to accelerate the National Energy Network (NEN) rollout.
+- **wwsutru\economicwarfare\politics analysis -  the socioeconomic siege.md**: Hegemonic deconstruction of "Total War" in the post-nuclear age, defining peace as a point on a spectrum of conflict (Trust Bankruptcy).
+- **wwsutru\economicwarfare\sub-bucket 3.1 -  the ＂tesla vector＂.md**: Deep-dive into Tesla's valuation as a financial bubble cultivated to create systemic Western risk and cascading financial crisis.
+- **wwsutru\economicwarfare\taco trade and market manipulation(april - september 2025).md**: Analysis of the "TACO" (Trump Always Chickens Out) trade as weaponized unpredictability designed to bankrupt global trust.
+- **wwsutru\economicwarfare\tesla trap research analysis.md**: Forensic audit of Tesla as a weapon for wealth extraction, entering its "Pump, Dump, and Trigger" terminal phase.
+- **wwsutru\economicwarfare\tesla vector.md**: Strategic notes on Tesla as a "Cultivated Asset" of China since 2003, with a \$200-400B "war chest" required for price manipulation.
+- **wwsutru\economicwarfare\tesla's structural risk assessment.md**: Forensic investigation into Tesla's structural insolvency, debt covenants, and the mechanics of controlled wealth destruction.
+- **wwsutru\economicwarfare\the physics of price -  vector parity & the hierarchy problem.md**: Maps VFT physics (Weak/Strong Force) to economics, identifying the "Hierarchy Problem" where local "Want" overwhelms global "Need."
+- **wwsutru\economicwarfare\the pygmy leviathan, part 2 to the unfettered.md**: Identifies the "Pygmy Leviathan" (UHNWI elite) as the generator of systemic vulnerabilities exploited by the Minimisation Plan.
+- **wwsutru\economicwarfare\the universal force equation of price v2.md**: Formalizes the "Price as 42" synthesis, a Mithril-level insight into the flawed hierarchy of traditional economic pricing.
+- **wwsutru\economicwarfare\the universal force equation of price.md**: Hegemonic analysis of "Moral Currency" and the Universal Force Equation (Price = Need/Want ratio).
+- **wwsutru\economicwarfare\the vampire economy -  news article.md**: Opinion piece analyzing Australia's immigration intake as a "Human Shield" for a \$3 trillion mortgage bubble/bank bailout.
+- **wwsutru\geopolitics & conflict\geopolitics master.md**: Deconstructs the "Southern Pivot" as the soft annexation of Australia ("AUKUState") into the U.S. military-industrial complex.
+- **wwsutru\grandstrategy\china nexus\china atrocities research request.md**: Analysis of PRC state atrocities as the logical application of the "Overall National Security Concept" and non-Western human rights philosophy.
+- **wwsutru\grandstrategy\china nexus\china's response to neo-nazism analysis.md**: Analyzes the Australian government's "Threat Triage" response to neo-Nazism as a psych-op to manage the uncommitted majority.
+- **wwsutru\grandstrategy\china nexus\review all the documents against ＂china-russia mi....md**: Integrated assessment of the four pillars of the Minimisation Plan: anti-hegemonic worldview, Ukraine Gambit, Taiwan 'bait', and Digital Fortress.

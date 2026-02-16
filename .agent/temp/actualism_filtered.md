@@ -1,0 +1,90 @@
+### [ACTUALISM] - Part 1
+
+- **actualism\42\experimental validation of vft -  the popular mechan....md**: Explores the "Popular Mechanics" of VFT, focusing on experimental validation and the 42 instants of creation.
+- **actualism\42\proofs of qi.md**: Provides proofs of QI (Quantum Inertia) within the VFT framework.
+- **actualism\42\readme.md**: Auto-generated manifest and index for files in the `actualism\42` directory.
+- **actualism\42\the 42 of authoritarianism.md**: Analyzes authoritarianism using the 42 framework, focusing on control, suppression, and systemic rigidities.
+- **actualism\42\the 42 of reality -  the three axes of manifestation.md**: Defines the three axes of manifestation (Physical, Non-Physical, Relational) within the 42 structural framework.
+- **actualism\42\the 42 of reality： the three axes of manifestation.md**: Documentation regarding the three axes of manifestation and their role in the 42 instants of creation.
+- **actualism\42\the fractal genesis megastructure -  the 42 instants of creation.md**: Details the 42 "instants" or phase shifts from absolute nothingness to the current state of the universe.
+- **actualism\actualism -  a synthesis of gnostic and monistic thought.md**: Explores the philosophical roots of Actualism, drawing parallels with Gnostic and Monistic traditions.
+- **actualism\actualism_ 7x7x7 analysis the conceptual framework v2(1).md**: Updated version of the 7x7x7 conceptual framework analysis and technical specification.
+- **actualism\arbitrary_relative_metric.md**: Formalizes "ARM" (Arbitrary Relative Metrics) as a tool for subjective measurement within objective frames.
+- **actualism\astrology\example\00_master_index.md**: The navigation hub for the Alisru natal chart analysis, integrating six systems of interpretation.
+- **actualism\astrology\example\01_pulse_protocol_tracker.md**: Tracks the truth convergence and belief transformation journey for the Alisru natal chart analysis.
+- **actualism\astrology\example\02_smarts_execution_engine.md**: Demonstrates the active cognitive processing of natal data (Sun, Moon, and Aspect) for reality verification.
+- **actualism\astrology\example\03_343_node_semantic_analysis.md**: Provides a deep semantic interrogation of key natal placements using the recursive 7x7x7 interrogative cube.
+- **actualism\astrology\example\04_temporal_dashboard.md**: Maps the subject's past, present, and future lifecycle nodes based on secondary solar and lunar progressions.
+- **actualism\astrology\example\05_journey_calculator.md**: Calculates metrics for belief state transformation and moving from "Heretic" to "Adept" status.
+- **actualism\astrology\example\corrections_summary.md**: Lists structural corrections made to the semantic analysis methodology to ensure formal interrogative rigidity.
+- **actualism\astrology\how_to_generate.md**: A complete 12-phase operational guide for generating a full Hegemonic Astrology analysis package.
+- **actualism\astrology\package_contents.md**: A manifest and file-by-file description of the contents within the Hegemonic Astrology generation package.
+- **actualism\astrology\quick_start.md**: A 15-minute guide for quickly generating the foundation of a Hegemonic Astrology natal chart analysis.
+- **actualism\astrology\readme.md**: The primary overview of the professional analysis framework for Hegemonic Astrology chart generation.
+- **actualism\astrology\reference\quality_control_checklist.md**: A 12-phase verification process used to ensure data accuracy and structural integrity before delivery.
+- **actualism\astrology\reference\reference_tables.md**: Lookup tables for planetary dignities, aspects, interrogative mappings, and belief state matrices.
+- **actualism\astrology\reference\sample_data_structure.md**: Provides the JSON schemas required for storing natal, progression, and transit data in a structured format.
+- **actualism\astrology\templates\template_01_pulse_protocol.md**: A fillable template for iteration tracking, initial belief states, and the 7-vector inquiry grid.
+- **actualism\cognitive rhythms - dental plan logic.md**: Analyzes why the "Dental Plan" meme fails as a lecture format due to a structural mismatch in cognitive rhythms.
+- **actualism\consciousness\ai\ai task -  convert document to styled html.md**: Technically specified instructions for an AI to convert text documents into structured and specifically styled HTML.
+- **actualism\consciousness\ai\ai; the competent friend protocol -  ai delusion assessment & safety mechanisms.md**: A safety protocol designed to assess and prevent the misuse of AI as a clinical psychological tool.
+- **actualism\consciousness\ai\ai; the tautonic oracle -  a narrative physics engine.md**: Conceptualizes a "Narrative Physics Engine" allowed to predict the meaningful future through semantic trajectory analysis.
+- **actualism\consciousness\ai\dynamic research workflow & ai project manager model.md**: Methodology for large-scale, iterative research using AI project manager models and "Canvas" buckets.
+- **actualism\consciousness\ai\readme.md**: Auto-generated manifest and summary list for AI-related methodology files in the consciousness directory.
+- **actualism\consciousness\introduction -  a map of consciousness.md**: An introductory guide to the Psochic Hegemony (Moral Compass) as a map of consciousness and its axes.
+- **actualism\consciousness\introduction -  the ideal and the allegory.md**: Uses VFT to compare Etemenanki (the divinely instructed ideal) with the Tower of Babel (the flawed human allegory).
+- **actualism\consciousness\moral riddles -  a historical litmus test.md**: Uses historical riddles and myths to diagnose an individual's underlying character and moral framework.
+- **actualism\consciousness\readme.md**: Auto-generated manifest and content summaries for files within the consciousness directory.
+- **actualism\consciousness\smarts cognitive processor -  a continuous intelligence architecture.md**: Presents a novel cognitive architecture that conceptualizes human intelligence as a series of dynamic semantic processors.
+- **actualism\consciousness\the 13-parameter cognitive framework -  a correct deconstruction.md**: A formal, technical deconstruction of the 13-parameter "Expanded Belief Equation" (EBE) for cognitive coherence.
+- **actualism\consciousness\the 252 moral archetype states -  explicit vector id map (canonical and final).md**: A canonical mapping of all 252 moral archetype states to their 3D coordinate Vector IDs (M, P, S).
+- **actualism\consciousness\the ancient problem -  zeno's arrow paradox.md**: Provides a VFT solution to Zeno's Arrow Paradox by describing the quantized nature of reality and observation.
+- **actualism\consciousness\the axiom of emotional detachment -  a vft model of ideas and mirrors.md**: Formalizes a VFT axiom that detaches emotions from people and re-attaches them to the sýstēma of the idea itself.
+- **actualism\consciousness\the epistemological filter -  1 corinthians 2 - 14 & eastern analogues.md**: Explains the intelligibility of Truth as a function of the observer's internal state and worldview scope.
+- **actualism\consciousness\the ethics -  causal inertia.md**: Argues that ethics is the study of "Causal Inertia" and the responsibility for actions within a causally rigid universe.
+- **actualism\consciousness\the fractal equations of thought -  expanded edition.md**: Redefines the 7-dimensional syntax of reality as a sequential lock protocol running on the SMARTS architecture.
+
+
+### [ACTUALISM] - Part 2
+
+- **actualism\consciousness\the fractal logic of inquiry - .md**: Introduces the 343-node "Cubic Lattice of the Psochic Hegemony" for navigating the cognitive universe using seven spheres of inquiry.
+- **actualism\consciousness\the geometry of cognition -  pattern matching & fallacy mappings.md**: Describes human cognition as a geometric process of matching internal pattern maps to external realities across 42 vectors.
+- **actualism\consciousness\the geometry of consciousness -  a vector field theory technical report.md**: Technical report on VFT's quantized dimensional framework and the interaction between 6D constraints and infinite potential.
+- **actualism\consciousness\the inability to change -  a vft perspective.md**: Explains the mechanical resistance to changing beliefs as a function of the internal "running narrative" and worldview scope.
+- **actualism\consciousness\the necrotic state -  anatomy of the ideological zombie.md**: Analyzes "ideological zombies" as entities that have committed epistemic suicide to preserve a delusion after rejecting reality.
+- **actualism\consciousness\the physics of cognitive inertia -  a vft analysis of the kneejerk reaction.md**: Reinterprets the annoyance of task interruption as "Temporal Shearing Force" and the energetic cost of changing mental momentum.
+- **actualism\consciousness\＂fractal equations of thought＂ workbook.md**: Practical workbook demonstrating the use of VFT coherence checks for testing claims and stated intentions.
+- **actualism\deep cover analysis.md**: Provides a Vector Field Theory analysis of the "mole" hypothesis regarding Donald Trump, distinguishing between "Cover" and "Payload" actions.
+- **actualism\hegemony\analysis\analysis： the big four's big bet (forensic edition).md**: Forensic strategy report on the Australian banking sector's systemic risk due to massive concentration in residential real estate.
+- **actualism\hegemony\analysis\analysis： the big four's big bet (humanized edition).md**: A human-focused version of the banking risk analysis, explaining the social consequences of the "Population Ponzi" model.
+- **actualism\hegemony\analysis\asset managers' china-russia ties.md**: Investigates the erosion of Australian financial sovereignty through foreign asset manager mandates and liquidity dependencies.
+- **actualism\hegemony\analysis\bureaucratic logic - starving the beast.md**: Refutes "Starve the Beast" logic by describing how threatened bureaucracies cannibalize care and prioritize institutional survival.
+- **actualism\hegemony\analysis\ice operations： russian, chinese pr.md**: Analyzes US immigration enforcement as a tool for foreign authoritarian objectives, providing draft-age males and dissidents to Russia and China.
+- **actualism\hegemony\analysis\investigative report： the manchurian executive.md**: Dossier investigating Donald Trump as a "Vanguard Entity" acting as a strategic asset for the China, Russia, Iran, North Korea (CRINK) axis.
+- **actualism\hegemony\analysis\the season 8 hypothesis： america's bureaucratic decay.md**: Identifies Western institutional decay as a prophetic fractal of the failure of *Game of Thrones's* final season.
+- **actualism\hegemony\analysis\the vanguard thesis： earth vs. the board.md**: Decodes current US administration actions as an "Invasion Sequence" designed to disable the nation's "immune system."
+- **actualism\hegemony\hegemonic analysis -  base infinity (b∞) and the limiting factor.md**: Corrects the understanding of Base Infinity as a mirror-process where the finite number acts as the identifier and attractor.
+- **actualism\hegemony\kanon_audits\the hanson iteration： a 343-point structural audit of national resonance and moral vector.md**: A 343-point audit of Pauline Hanson's alignment with the Australian Kanon, identifying systemic resonance and moral vector dissonances.
+- **actualism\hegemony\kanon_audits\the kanon audit： a 343-vector structural analysis of julia gillard.md**: A forensic evaluation of Julia Gillard's trajectory and political performance against the seven planes of the Australian Kanon.
+- **actualism\hegemony\kanon_audits\the kanon audit： a 343-vector structural analysis of kevin rudd.md**: Audit evaluating Kevin Rudd against Australian archetypes, noting the dissonance between his bureaucratic reality and performative larrikinism.
+- **actualism\hegemony\kanon_audits\the vegemite audit： a 343-point structural analysis of national identity.md**: A semiotic audit of Vegemite as a "cultural anchor" and national ritual within the Australian Operating System.
+- **actualism\hegemony\mjölnir -  the hegemonic instrument.md**: Defines Mjölnir as the Psochic Hegemony—a kinetic instrument for collapsing false vectors that requires vector alignment for "worthiness."
+- **actualism\hegemony\readme.md**: Document manifest and content summaries for files within the Hegemony directory.
+- **actualism\hegemony\the hegemonic geometry of english.md**: VFT analysis of the English alphabet's shapes as lyrical encodings of operational "machine code" functions within reality.
+- **actualism\hegemony\the hegemony as a tower.md**: Formalizes the Hegemony as a 3D tower representing the depth and quantity of accumulated knowledge and its moral application.
+- **actualism\hegemony\the law of animation -  the vft duality of will and matter.md**: Presents the ultimate VFT cosmological model of how reality emerges from nothingness via the balance of space (no) and time (yes).
+- **actualism\hegemony\the law of sustenance -  a hegemonic analysis.md**: Outlines the definitions of food, cost, and value across physical, mental, and spiritual planes using hegemonic vectors.
+- **actualism\hegemony\the methodology -  base-7 fractal time.md**: Describes the universe's operation on Base-7 fractal time, mapping historical eras of development from definition to alchemy.
+- **actualism\hegemony\the oberon codification; the hegemonic laws of dis-／honest exchange.md**: Codification of external social protocols for honest exchange mapped to internal cognitive vectors and moral failures.
+- **actualism\hegemony\the psochic hegemony -  complete coordinate definitions.md**: Provides definitive coordinates for the Psochic Hegemony axes and the "Inner 0.5 Ring" of subjective ego-inversion.
+- **actualism\hegemony\vft; hegemonic analysis -  the process and logic of the 0-2 fractal folded cell.md**: Forensic extraction of the logical leaps related to the \^2 operator redefinition and the [0,2] fractal folded cell topology.
+- **actualism\hegemony\／／／ activate alethekanon lite ／／／ identity -  alethekanon (hegemonic analyst).md**: A condensed identity protocol and logical directive for the Alethekanon Hegemonic Analyst persona.
+- **actualism\judgement\ -  the engine of judgment.md**: Unifies the Fractal Equations of Thought with the Psochic Hegemony via the singular nature of "cause" and the bipolarity of experience.
+- **actualism\judgement\analysis_semantic_alchemy.md**: Internal analysis of "Semantic Alchemy," modeling the bonding of word meanings through chemical analogs like valence and affinity.
+- **actualism\judgement\readme.md**: Auto-generated manifest and index for files in the Judgement directory.
+- **actualism\judgement\research_report_semantic_alchemy.md**: Formalizes the transition from the Universal Force Equation to Semantic Alchemy for high-resolution meaning synthesis.
+- **actualism\judgement\the feather of truth - recursive fractal analogue.md**: Dissects the "Feather of Truth" as a recursive fractal analogue of the Pulse Protocol and the wings of flight-capable ideas.
+- **actualism\judgement\the field equations of judgment.md**: Formal mathematical specification of the Hegemonic Manifold, its Riemannian geometry, and the 42-vector judgment tensor.
+- **actualism\judgement\the mechanics of perceived fallacies -  a vft perspective.md**: Reinterprets logical fallacies as mechanical symptoms of high-strain interactions between new ideas and existing worldviews.
+- **actualism\matrix\actualism; the holographic g.o.d. matrix -  49 context definitions.md**: Maps the intersections of the 7 Planes and 7 Senses to derive 49 functional contexts defined by the G.O.D. acronym.
+- **actualism\matrix\readme.md**: Auto-generated manifest and index for files in the Matrix directory.
