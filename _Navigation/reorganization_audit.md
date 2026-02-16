@@ -1,54 +1,65 @@
-# Audit Report - Root De-cluttering (Final V4)
+# Audit Report - Root De-cluttering & Taxonomy Alignment (Final V5)
 
-This report focuses solely on de-cluttering the `_VFT MD` root and refining the placement of core theoretical files into the requested `Actualism` subfolders. No redesign of the broader folder structure is proposed.
+This report defines the mandatory relocation of files currently sitting in the `_VFT MD` root or in historically misplaced subfolders. Every destination is correlated with the project's functional and ontological pillars as defined in the [Folder Purpose Review](file:///E:/Vector_Field_Theory/VFT_Docs/_Navigation/folder_purpose_review.md).
 
-## 1. Actualism Internal Subfolders
-The following subfolders will be created/used within `_VFT MD/Actualism/`:
-*   `_VFT MD/Actualism/matrix/` (7x7x7 Architecture / Mapping)
-*   `_VFT MD/Actualism/hegemony/` (Psochic Hegemony / Language Analysis)
-*   `_VFT MD/Actualism/triadic/` (Triadic Model of Reality)
-*   `_VFT MD/Actualism/judgement/` (Judgment Protocols)
-*   `_VFT MD/Actualism/alethekanon/` (ALE Core Directives & AI Instructions)
-*   `_VFT MD/Actualism/physics_of_necessity/` (VFT / IRM / Core Physics)
+## 1. Destination Pillar Correlation Table
 
----
+The following subfolders within `Actualism/` and `System/` are the primary targets for this de-cluttering phase.
 
-## 2. Root File Migration Map
-These files currently sitting in `_VFT MD/` will be moved to:
-
-| File Name | Target Destination |
-| :--- | :--- |
-| **Matrix & 7x7x7** | |
-| `Detailed_343_Mapping_Matrix.md` | `_VFT MD/Actualism/matrix/` |
-| `Fractal_Emergence_of_7_Planes.md` | `_VFT MD/Actualism/matrix/` |
-| `interrogative_7x7x7_cube.md` | `_VFT MD/Actualism/matrix/` |
-| `Interrogative_Recursive_Mapping.md` | `_VFT MD/Actualism/matrix/` |
-| `The_252_States_of_Being_You.md` | `_VFT MD/Actualism/matrix/` |
-| `Master_Plane_State_Mapping.md` | `_VFT MD/Actualism/matrix/` |
-| **Hegemony & Language** | |
-| `Nation_States_as_Fractal_Agents.md` | `_VFT MD/Actualism/hegemony/` |
-| `Tautonic_Language_Engine_Architecture_Blueprint.md` | `_VFT MD/Actualism/hegemony/` |
-| `Tautonic_Language_Engine_Specs.md` | `_VFT MD/Actualism/hegemony/` |
-| `The_Tautonic_Oracle.md` | `_VFT MD/Actualism/hegemony/` |
-| **Core Physics** | |
-| `2c_Boundary_and_Phase_Fragmentation.md` | `_VFT MD/Actualism/physics_of_necessity/` |
-| `Invisible_Z_Axis_Time_Illusion.md` | `_VFT MD/Actualism/physics_of_necessity/` |
-| **System & Scripts** | |
-| `check_metadata.py` | `_VFT MD/System/Scripts/` |
-| `start_vft_index.bat` | `_VFT MD/System/Scripts/` |
-| `Master_Index.md` | `_VFT MD/System/` |
-| `Master_Index.html` | `_VFT MD/System/` |
-| `file_list.txt` | `_VFT MD/System/` |
-| `index_data.json` | `_VFT MD/System/` |
-| `image_reprocess_list.md` | `_VFT MD/System/` |
-| `docx_match_report.md` | `_VFT MD/System/` |
+| Destination Subfolder | Correlation Pillar | Functional/Ontological Purpose |
+| :--- | :--- | :--- |
+| `Actualism/matrix/` | **Actualism** | Ontological mapping; 7x7x7 structural definitions and semantic grids. |
+| `Actualism/hegemony/` | **Actualism** | Strategic alignment; psochic force dynamics and vector analysis. |
+| `Actualism/alethekanon/` | **Actualism** | System persona; AI directives, instruction sets, and core identities. |
+| `Actualism/physics_of_necessity/` | **Actualism** | Theoretical foundations; VFT, IRM, and Spacetime derivation. |
+| `Physics/` | **Physics** | Hard science; technical derivations, lattice mechanics, and mathematical proofs. |
+| `System/Scripts/` | **System** | Operational code; technical automation and maintenance scripts. |
+| `System/Protocols/` | **System** | Operational standards; Pulse, Ekklesia, and systemic rules. |
 
 ---
 
-## 3. Internal Refinement (Phase 2)
-The following clear misplaced files will be moved:
-*   `_VFT MD/Actualism/Translating/KRPHLRPH.md` -> `_VFT MD/Actualism/hegemony/`
-*   **ALE Directives:** Any "Summary" or "Alethekanon Core" files in root or general folders -> `_VFT MD/Actualism/alethekanon/`.
+## 2. Root File Migration Map (Phase 1)
+These 20 files currently sitting at `E:\Vector Field Theory\VFT Docs\_VFT MD\` are to be moved.
 
-> [!NOTE]
-> Files in `Muses` (Chat Logs) and `WWSUTRU` (Investigations/Kanons) will be left entirely in their current locations.
+| File Name | Target Pillar | Proposed Destination | Justification (Taxonomy Correlation) |
+| :--- | :--- | :--- | :--- |
+| `Detailed_343_Mapping_Matrix.md` | Actualism | `Actualism/matrix/` | Ontological grid definition (343 vectors). |
+| `Fractal_Emergence_of_7_Planes.md` | Actualism | `Actualism/matrix/` | Architecture of perception and planar mapping. |
+| `interrogative_7x7x7_cube.md` | Actualism | `Actualism/matrix/` | 3D semantic mapping and interrogative framework. |
+| `Interrogative_Recursive_Mapping.md` | Actualism | `Actualism/matrix/` | Matrix operational protocol and recursion logic. |
+| `The_252_States_of_Being_You.md` | Actualism | `Actualism/matrix/` | Detailed taxonomy of states within the semantic architecture. |
+| `Master_Plane_State_Mapping.md` | Actualism | `Actualism/matrix/` | Master reference for the 7x7x7 grid architecture. |
+| `Nation_States_as_Fractal_Agents.md` | Actualism | `Actualism/hegemony/` | Analysis of collective agency and hegemonic alignment. |
+| `Tautonic_Language_Engine_Blueprint.md`| Actualism | `Actualism/hegemony/` | Design of the semantic engine for hegemonic influence. |
+| `Tautonic_Language_Engine_Specs.md` | Actualism | `Actualism/hegemony/` | Technical specifications for the hegemonic language engine. |
+| `The_Tautonic_Oracle.md` | Actualism | `Actualism/hegemony/` | The narrative and strategic engine of psochic hegemony. |
+| `2c_Boundary_and_Phase_Fragmentation.md`| Physics | `Physics/` | Technical physics derivation (Phase/Boundary theory). |
+| `Invisible_Z_Axis_Time_Illusion.md` | Physics | `Physics/` | Hard science derivation regarding spacetime and time perception. |
+| `check_metadata.py` | System | `System/Scripts/` | Operational script for project metadata maintenance. |
+| `start_vft_index.bat` | System | `System/Scripts/` | Technical batch script for index initialization. |
+| `Master_Index.md` | System | `System/` | Project-wide structural metadata and navigation. |
+| `Master_Index.html` | System | `System/` | Rendered navigation interface for the workspace. |
+| `file_list.txt` | System | `System/` | Automated cataloging of the current structure. |
+| `index_data.json` | System | `System/` | Core data storage for the Master Index engine. |
+| `image_reprocess_list.md` | System | `System/` | Maintenance log for image-to-text remediation. |
+| `docx_match_report.md` | System | `System/Protocols/` | Standardized report for document matching integrity. |
+
+---
+
+## 3. Internal Refinement Migration Map (Phase 2)
+Misplaced files within subfolders to be consolidated according to their ontological purpose.
+
+| File Name | Original Path (Origin) | Target Destination | Justification |
+| :--- | :--- | :--- | :--- |
+| `KRPHLRPH.md` | `Actualism/Translating/` | `Actualism/hegemony/` | Hegemonic vector analysis of the phonetic construct. |
+| `Alethekanon Core Directive v25.md` | `Protocols/` | `Actualism/alethekanon/` | AI instruction set/persona (Ontological Driver). |
+| `A Summary of the Alethekanon Core...` | `_VFT MD/` root | `Actualism/alethekanon/` | High-level instruction summary for the AI persona. |
+| `y of consciousness...` | `Muses/` | `System/Chat_Logs/` (Optional?) | **Retained in Muses** as per user instruction to leave Muses untouched. |
+
+---
+
+## 4. Execution Rules
+*   **Zero Summarization:** All content remains 100% intact during transfer.
+*   **Link Integrity:** Ensure internal markdown links are updated where possible (or the Master Index is refreshed).
+*   **Visibility:** All target directories must remain within the `_VFT MD` visible workspace.
+*   **WWSUTRU Immunity:** No changes to `WWSUTRU` sub-structures (National Kanons, Economic Warfare) are proposed in this phase.
