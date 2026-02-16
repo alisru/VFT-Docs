@@ -2,7 +2,7 @@
 
 **Current Focus**: Move project taxonomy and navigation files to dedicated Navigation folder
 
-**Progress**: 23/30 complete
+**Progress**: 24/30 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -34,7 +34,7 @@
 - [/] Analyze and refine Invisible Z-Axis Time Illusion document `documentation vft time` <!-- id: 26 -->
 - [x] Update Project Index <!-- id: 27 -->
 - [ ] Update file_summaries_comprehensive.md with missing files <!-- id: 28 -->
-- [/] Move project taxonomy and navigation files to dedicated Navigation folder `infrastructure navigation` <!-- id: 29 -->
+- [x] Move project taxonomy and navigation files to dedicated Navigation folder `infrastructure navigation` <!-- id: 29 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
