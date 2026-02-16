@@ -1,8 +1,8 @@
 # Australian Kanon Generation
 
-**Current Focus**: Update reorg audit with target origin and correlate destinations with folder purpose review
+**Current Focus**: Execute root de-cluttering and taxonomy alignment
 
-**Progress**: 25/31 complete
+**Progress**: 25/32 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -36,6 +36,7 @@
 - [ ] Update file_summaries_comprehensive.md with missing files <!-- id: 28 -->
 - [x] Move project taxonomy and navigation files to dedicated Navigation folder `infrastructure navigation` <!-- id: 29 -->
 - [x] Update reorg audit with target origin and correlate destinations with folder purpose review `implementation navigation` <!-- id: 30 -->
+- [/] Execute root de-cluttering and taxonomy alignment `execution cleanup` <!-- id: 31 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
