@@ -1,0 +1,27 @@
+### PART 2 (Files 26-50)
+
+- **wwsutru\australia\anthony albanese\albanese leadership and policy analysis.md**: Comprehensive analysis of the Albanese government's "Controlled Demolition" strategy and its performative Maximiser policies.
+- **wwsutru\australia\anthony albanese\analyzing albanese's social media ban.md**: Case study of the social media age-limit bill as a "Benevolent Cage" and a test of the controlled demolition hypothesis.
+- **wwsutru\australia\anthony albanese\platform vs. practice -  an audit of the albanese labor government's fidelity to its stated agenda (2021-present).md**: Audit of the ALP National Platform against governing results, highlighting selective fidelity in IR vs. contradictions in AUKUS and Climate.
+- **wwsutru\australia\anthony albanese\strategic deconstruction of prime minister albanese's united nations general assembly address.md**: Deconstructs the UN address as a sophisticated "Greater Lie" and moral cover for domestic systemic degradation.
+- **wwsutru\australia\archetype\the_stoic_guardian.md**: Definition of the ideal Australian archetype—the Stoic Guardian—synthesized from the 343 positive vectors of the National Kanon.
+- **wwsutru\australia\australia's role in minimisation plan.md**: Intelligence assessment of Australia's entrapment via AUKUS and the ideological capture of the major parties.
+- **wwsutru\australia\australian minimisation plan research synthesis.md**: Causal analysis and timeline (2001-present) of how the "Law of Projection" and systemic vulnerabilities have influenced Australian politics.
+- **wwsutru\australia\australian_kanon_final_judgment.md**: Final moral vector judgment and statistical analysis for all 354 entries of the Australian National Kanon.
+- **wwsutru\australia\australian_kanon_philosophy.md**: Explores the "Mythological Substrate" of the Kanon—the aspirational ideals used to shame failure and define the national heart.
+- **wwsutru\australia\australian_kanon_plane_1_identity.md**: Detailed analysis of Australian Identity (Who) values: Mateship, Larrikinism, and the Battler archetype.
+- **wwsutru\australia\australian_kanon_plane_1_identity_judgment.md**: Matrix of moral vector judgments (υ, ψ) for all Identity-plane values in the Australian Kanon.
+- **wwsutru\australia\australian_kanon_plane_2_definition.md**: Detailed analysis of Australian Definition (What) values: The Independent Australian Briton, The Constituent, and Compulsory Voting.
+- **wwsutru\australia\australian_kanon_plane_2_definition_judgment.md**: Matrix of moral vector judgments for all Definition-plane values in the Australian Kanon.
+- **wwsutru\australia\australian_kanon_plane_3_land.md**: Detailed analysis of Land (Where) values: The Sunburnt Country, The Weird Melancholy, and Terra Nullius.
+- **wwsutru\australia\australian_kanon_plane_3_land_judgment.md**: Matrix of moral vector judgments for all Land-plane values, including First Nations vs. Colonial perspectives.
+- **wwsutru\australia\australian_kanon_plane_4_drive.md**: Detailed analysis of Drive (Why) values: The Drover, The Pioneer, and the Great Australian Dream of home ownership.
+- **wwsutru\australia\australian_kanon_plane_4_drive_judgment.md**: Matrix of moral vector judgments for all Drive-plane values in the Australian Kanon.
+- **wwsutru\australia\australian_kanon_plane_5_method.md**: Detailed analysis of Method (How) values: Tinkering, Improvisation, and the Royal Flying Doctor Service.
+- **wwsutru\australia\australian_kanon_plane_5_method_judgment.md**: Matrix of moral vector judgments for all Method-plane values in the Australian Kanon.
+- **wwsutru\australia\australian_kanon_plane_6_foundation.md**: Detailed analysis of Foundation (Cause) values: Eureka Stockade, Convict heritage, and the Labor movement origins.
+- **wwsutru\australia\australian_kanon_plane_6_foundation_judgment.md**: Matrix of moral vector judgments for all Foundation-plane values in the Australian Kanon.
+- **wwsutru\australia\australian_kanon_plane_7_result.md**: Detailed analysis of Result (Effect) values: Multiculturalism, the Welfare State, and the "Lucky Country" critique.
+- **wwsutru\australia\australian_kanon_plane_7_result_judgment.md**: Matrix of moral vector judgments for all Result-plane values in the Australian Kanon.
+- **wwsutru\australia\billionaires\sub-bucket 6.1 -  profiles of australian billionaires (rinehart, forrest, palmer, stokes).md**: Forensic assessment of key Australian billionaires as vectors of state capture and the Minimisation Plan.
+- **wwsutru\australia\dan andrews\dan andrews -  network analysis and influence vectors.md**: Investigative report into the network of influence surrounding the former Victorian Premier and his Chinese business ties.

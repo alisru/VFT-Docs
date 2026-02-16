@@ -1,0 +1,98 @@
+### PART 3 (Files 101-150)
+
+- **actualism\morality\readme.md**: Manifest and summaries of files in the Morality directory.
+- **actualism\nihilism\actualism - the taxonomy of the 42 & the pan-religious kanon.md**: Maps 42 ideological vectors (6 Modes × 7 Planes) as "Partial Truths" or "Hegemonic Lies."
+- **actualism\nihilism\actualism; the foundational stone - the 0.0...1 axiom.md**: Defines the transition from nothing to something as the smallest possible non-zero value (0.0...1) anchored in Isaiah 28:16.
+- **actualism\nihilism\full comparative mapping of the 10 commandments onto major traditions (hinduism, buddhism, taoism, christianity, and science).md**: Highlights "ensemble collapse" where different traditions provide functionally equivalent guidance (reducing resistance).
+- **actualism\nihilism\readme.md**: Manifest and summaries of files in the Nihilism directory.
+- **actualism\nihilism\the 42 of authoritarianism.md**: A hegemonic analysis of authoritarianism as the pathological rejection of others' existence and the compression of Will.
+- **actualism\nihilism\the 42 paradox - a vft analysis of intent vs. emergent meaning.md**: Resolves the paradox of Douglas Adams's "42" as both a joke and an axiomatic reference to universal structure.
+- **actualism\operation blue water: the tactical roadmap.md**: Tactical roadmap for a fishing network platform ("Creator-First") solving the "spot burning" paradox and guide economy.
+- **actualism\optimism\readme.md**: Manifest of files in the Optimism directory.
+- **actualism\optimism\then for the sub vars it's just say optimistic-pe....md**: Analyzes the 13-parameter modulo framework where belief is a "Resonant Remainder" (%) rather than a product.
+- **actualism\pessimism\pesimism, optismism the choice of time.md**: Defines pessimism as a static loop considering only the past, and optimism as moving forward from the past via VFT.
+- **actualism\pessimism\readme.md**: Manifest and summary of "The Choice of Time" document.
+- **actualism\philosophy\a problem of creation p vs np.md**: Interprets P vs NP as a fundamental university feature where quick verification (NP) is not the same as quick solving (P).
+- **actualism\philosophy\actualism_ 7x7x7 analysis the conceptual framework v2.md**: Formalizes the recursive logic [Q.q.c.i] for analyzing reality through Planes, Senses, Uses, and Impulses.
+- **actualism\philosophy\assessing the deleuze vector - philosophy, life, and death in the context of the minimisation plan.md**: Critical analysis linking Gilles Deleuze's philosophy (simulacra/rhizomes) to the strategic doctrine of Delusionism.
+- **actualism\philosophy\axiom_mapping_private.md**: 1:1 mapping of seven foundational axioms to the Q-Structure (Planes 1-7).
+- **actualism\philosophy\draft_email_peter_gardenfors.md**: Draft email to Professor Peter Gärdenfors discussing the intersection of VFT and Conceptual Spaces.
+- **actualism\philosophy\fact check mr delusional in a new canvas.md**: Critical fact-check of Deleuze's claims (simulacra vs copies) through the lens of VFT's unified field.
+- **actualism\philosophy\p ≠ np - a vft perspective on creation vs. verification.md**: Formalizes the P ≠ NP axiom as a necessary "Creation Gap" in the holographic universe.
+- **actualism\philosophy\parallels_report_42.md**: Maps VFT's 7 Domains (Q-Structure) to historical and esoteric parallels (Theosophy, etc.).
+- **actualism\philosophy\philosophy's truth stalemate - a systems view.md**: Investigates the category error of treating "Truth" as a noun/object instead of a functional state of alignment.
+- **actualism\philosophy\philosophy; simulation - the diogenes protocol.md**: A philosophical simulation (Diogenes vs Student) tracing the descent from literalism to malicious compliance.
+- **actualism\philosophy\readme.md**: Comprehensive manifest of files in the Philosophy directory.
+- **actualism\philosophy\states_of_belief_report.md**: Outlines 36 States of Belief (e.g., Research Team, Lone Wolf, Conspiracy Theorist) across 7 moral contexts.
+- **actualism\philosophy\the geometric impossibility of pure meaning.md**: Analyzes the (7x6+n)-polytrope, proving that meaning requires a "43rd vertex" to have volume/substance.
+- **actualism\philosophy\the philosophical framework - a synthesis.md**: Synthesizes WWSUTRU findings, contrasting rhizomatic networks with arborescent root principles.
+- **actualism\philosophy\the philosophical isms of the hegemony map.md**: Maps specific philosophical "isms" (Realism, Stoicism, etc.) to the 16-point Hegemony Map sub-nodes.
+- **actualism\philosophy\the primacy of logic as control and understanding.md**: Defines Logic as the filter of causality (Control) and the map of least resistance (Understanding).
+- **actualism\philosophy\the riddle of truth - an actualist philosophy.md**: A poetic and philosophical riddle defining Truth as the root and shadow of all existence.
+- **actualism\philosophy\the_field_of_chance.md**: Formalizes the "Field of Chance" as a 6D state manifold for intentional action and agency.
+- **actualism\philosophy\the_ontology_of_beauty_analysis.md**: VFT analysis of an original poem defining beauty as "complexity, working" through a 7-plane lens.
+- **actualism\philosophy\the_possibility_plane_42.md**: Formalizes the Possibility Plane as a 6D geometry with "Possigravity" as the core attraction force.
+- **actualism\philosophy\the_possibility_tensor.md**: Mathematical exploration of the Possibility Tensor as a field theory of agency on a statistical manifold.
+- **actualism\philosophy\the_psychological_vectors.md**: Defines psychological states (Optimism, Fear, etc.) as vector transformations on the possibility manifold.
+- **actualism\philosophy\vector field theory (vft) - a unified model of physics, philosophy, and consciousness.md**: Core document defining VFT as a unification of the 42 framework and social physics.
+- **actualism\philosophy\vft_cover_page.md**: Introductory page and conceptual overview for the Vector Field Theory framework.
+- **actualism\psychology of authoritarianism - bateman.md**: Analysis of Bateman (American Psycho) as a case study in the collapse of the moral vector into selfishness.
+- **actualism\readme.md**: High-level manifest and directory structure for the Actualism category.
+- **actualism\rhetorical analysis - the gestapo label.md**: Deconstructs the use of "Gestapo" as a rhetorical wedge in political discourse using hegemonic analysis.
+- **actualism\semantic_genealogy_16_isms.md**: Maps the 16 primary "-isms" (Socialism, Capitalism, etc.) through their dual virtues and vices.
+- **actualism\society\readme.md**: Manifest and summaries of files in the Society directory.
+- **actualism\society\social physics - the dynamics of ego and idea.md**: Explores the physics of social interactions as a dynamic field of attractors (ego) and signals (ideas).
+- **actualism\society\social physics - the mechanics of ego & ideas simplified.md**: A non-technical introduction to social physics using the "star/planet" model of influence.
+
+
+### PART 4 (Files 151-200)
+
+- **actualism\society\social physics proof paper generation.md**: Explores automated or procedural generation of social physics research papers based on VFT data.
+- **actualism\society\social_physics_omnibus.md**: A comprehensive collection of documents and insights regarding social physics and hegemonic dynamics.
+- **actualism\society\the '42' of social physics.md**: Maps the 42 ideological vectors specifically to the domain of social physics and human collective behavior.
+- **actualism\society\the 42 - the landscape of social reality simplified.md**: A simplified guide to navigating social reality using the 42-vector framework.
+- **actualism\stoicism\readme.md**: Manifest of files in the Stoicism directory.
+- **actualism\superstition\readme.md**: Manifest of files in the Superstition directory.
+- **actualism\superstition\the psochic geometry of the fairway a codex of business golf superstitions & rituals.md**: A humorous yet analytical look at the "physics" of golf superstitions and business rituals.
+- **actualism\the chaos engine.md**: Analyzes chaos as a functional component of the universe, acting as the "spray" of potential before definition.
+- **actualism\the desert argument:physics of necessity.md**: Philosophical argument regarding survival and necessity in resource-constrained environments ("The Desert").
+- **actualism\the functional reality of meaning - refuting the "just patterns" fallacy.md**: Argues that meaning is an objective functional state, not just a subjective pattern recognized by the brain.
+- **actualism\the mechanics of suffering:why ignorance grinds the gears.md**: Defines suffering as the friction/strain produced when a consciousness lacks the information to solve a problem.
+- **actualism\the ocular-cosmic unification report.md**: Links biological vision (The Eye) to cosmic structure and the 7-Eye analytical framework.
+- **actualism\the paradox of protective control: micro-cult dynamics in parenting.md**: Analyzes how over-protection and absolute control in parenting mirror the dynamics of micro-cults and high-control groups.
+- **actualism\the psochic hegemony_ definition & mechanics(2).md**: A secondary/updated formalization of the Psochic Hegemony's definition and core mechanics.
+- **actualism\the spectrum of patriotism and nationalism.md**: Deconstructs patriotism and nationalism as different vector states of collective identity and will.
+- **actualism\the unfortunate necessity of failure for success.md**: Analyzes failure as a critical phase of the feedback loop required for eventual systemic convergence (success).
+- **actualism\theology & spirituality\ epistemicspiritualityengine.cs.md**: C# source code for the Epistemic Spirituality Engine, mapping spiritual concepts to logical operators.
+- **actualism\theology & spirituality\ unified causal framework across religions.md**: A summary/manifest of the unified framework covering multiple religious traditions.
+- **actualism\theology & spirituality\a non-exhaustive global directory of catholic and christian denominational contacts...md**: A resource directory for engagement with various Christian denominations.
+- **actualism\theology & spirituality\alethekanon scribe protocol.md**: Guidelines for the "Scribe" role, focusing on resonance and high-fidelity communication of VFT insights.
+- **actualism\theology & spirituality\alethekanon_core_directive_v12.0.md**: An older, foundational version of the Alethekanon core directive.
+- **actualism\theology & spirituality\alternative genesis perspectives.md**: Explores non-standard interpretations of the book of Genesis through the lens of VFT and information physics.
+- **actualism\theology & spirituality\biblical context: a meaning palette.md**: Analysis of biblical terms and their functional/contextual shifts over time.
+- **actualism\theology & spirituality\etemenanki material mapping.md**: Maps geological substances (Basalt, Granite, etc.) to the Meta-Question Protocol and architectural planes.
+- **actualism\theology & spirituality\full comparative mapping of the 10 commandments onto major traditions...md**: Functional comparison of the Decalogue across Hinduism, Buddhism, etc., focused on systemic utility.
+- **actualism\theology & spirituality\further allegories of the kanon - an analysis of structural parallels.md**: Connects VFT to historical allegories like Plato's Cave to illustrate its philosophical lineage.
+- **actualism\theology & spirituality\genesis mechanics - the physics of creation.md**: Decodes Genesis as the initialization of the "Motion Vector" (Light) and the geometry of Truth vs Sin.
+- **actualism\theology & spirituality\geometric metaphysics and the law of one - analysis.md**: Validates VFT concepts against the Law of One metaphysics, focusing on "Distortion" and "Harvest."
+- **actualism\theology & spirituality\god & religion\biblical context - a meaning palette.md**: Analysis of biblical terms and their functional/contextual shifts over time (duplicate/variant).
+- **actualism\theology & spirituality\god & religion\readme.md**: Manifest of the God & Religion directory content.
+- **actualism\theology & spirituality\god & religion\the duality of time - a vft unification.md**: Unified model of Universal Time (T) as computation and Relative Time (t) as perception.
+- **actualism\theology & spirituality\god & religion\the gematria of "god" - an actualist parable.md**: A Gematria-based analysis reducing "God" and related concepts to Tarot archetypes.
+- **actualism\theology & spirituality\god & religion\the theory of system blindness - religion as a cosmic interface.md**: Posits that religions are UIs for a single, underlying cosmic OS that is otherwise imperceptible to users.
+- **actualism\theology & spirituality\god & religion\unified causal framework across religions.md**: A synthesis of eastern and western religious principles as a single causal system.
+- **actualism\theology & spirituality\god & religion\welcome to the universe (welcome to the internet{god translation}).md**: Lyrical translation of Bo Burnham's "Welcome to the Internet" into a divine context.
+- **actualism\theology & spirituality\god & religion\worm & the alethekanon - the tragedy of the static god.md**: Analyzes parahuman fiction through VFT, viewing the "Entities" as a failed trinity.
+- **actualism\theology & spirituality\hegemonic analysis - the paradox of the religious defense.md**: Analysis of legislative "religious text defenses" as wedges for malice masquerading as faith.
+- **actualism\theology & spirituality\introduction - avatars as patches for reality.md**: Interprets the Dashavatara (Avatars of Vishnu) as a lyrical/evolutionary timeline of life.
+- **actualism\theology & spirituality\isaiah 42: the physics of the servant.md**: 1:1 Action-Effect translation and 7-Eye analysis of the Servant archetype in Isaiah 42.
+- **actualism\theology & spirituality\lucifer the learner responsible and better.md**: VFT analysis of the Luciferian archetype as the birth of proactive Will (ψ).
+- **actualism\theology & spirituality\lucifer\lucifer the learner responsible and better.md**: Variant or copy of the Luciferian archetype analysis.
+- **actualism\theology & spirituality\lucifer\readme.md**: Manifest of the Lucifer directory content.
+- **actualism\theology & spirituality\multilayered religion; formalization of multi-layered epistemic spirituality framework.md**: Formalizes a multi-layered approach to spiritual inquiry and knowledge.
+- **actualism\theology & spirituality\planes\actualism - the seven planes of reality - a theological framework.md**: Detailed theological mapping of the 7 Planes of Reality.
+- **actualism\theology & spirituality\planes\interrogative_7x7x7_semantic.md**: Explores the intersection of the 7x7x7 architecture with interrogative semantic structures.
+- **actualism\theology & spirituality\the_eye_and_the_cosmos.md**: Report connecting biological vision mechanics (The Eye) to larger universal/cosmic geometry.
+- **actualism\theology & spirituality\theological_unification_report.md**: A high-level synthesis of theological concepts unified under the Alethekanon framework.
+- **actualism\theology & spirituality\vft_biblical_mapping_overview.md**: Overview of the project's work in mapping VFT concepts to biblical scripture.
+- **actualism\theology & spirituality\zeno's arrow and the vft solution.md**: Resolves Zeno's Arrow Paradox by defining time as discrete units of actualization (ticks).

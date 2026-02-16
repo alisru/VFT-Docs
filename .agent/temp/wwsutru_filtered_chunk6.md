@@ -1,0 +1,26 @@
+### PART 11 (Files 251-274)
+
+- **wwsutru\policy\australian tax policy and housing crisis.md**: Strategic analysis of the 40-year conflict over Australian housing tax policy, framing negative gearing and CGT as tools of dispossession within the Minimisation Plan.
+- **wwsutru\policy\i've updated the policy, give me a 1-pager.md**: One-page executive summary of the National Energy Network (NEN) policy, highlighting universal free power and $70.1B rollout.
+- **wwsutru\policy\immigration research report outline.md**: Strategic assessment framing immigration as a net positive and analyzing how and why policy failures are proactively blamed on immigrants.
+- **wwsutru\policy\parent-child digital safety link (pcdsl) .md**: Legislative proposal for the PCDSL, offering a privacy-preserving and parent-empowering alternative to the under-16 social media ban.
+- **wwsutru\policy\policy deep dive -  further reductions to applicant requirements.md**: Introductory file for a policy deep dive into streamlined applicant requirements for housing development.
+- **wwsutru\policy\policy deep dive -  redefining council vs. applicant responsibilities.md**: Outlines the radical shift from reactive to proactive planning assessments under the EHAP model.
+- **wwsutru\policy\policy proposal -  emergency housing acceleration package (ehap).md**: Full proposal for EHAP, featuring 60-day digital pathways and council surveyance subsidies to fast-track affordable housing.
+- **wwsutru\policy\the paradise reciprocity economic framework (pref) new.md**: Elaborates on PREF as a system mathematically engineered for collective bliss (+υ, +ψ) through vector-aligned symbiosis.
+- **wwsutru\policy\the parent-child digital safety link -  a simple explainer.md**: Plain-English guide to the PCDSL, explaining the 3-step process for secure parental digital supervision.
+- **wwsutru\policy\the tyrant's variable -  a pref analysis of abstract warfare.md**: Formalizes the "Refined Blade" tactic, where authoritarian regimes use floating "common enemies" to channel hate and survive.
+- **wwsutru\policy\v2 national energy network nen .md**: Revised National Energy Network (NEN) policy (v2.0) with a 9-year implementation timeline and transitional subsidy mechanism.
+- **wwsutru\policy\versions\national energy network (nen) policy proposal (revised).md**: Outlines optional post-rollout expansions for the NEN, including industrial microgrids and renewable export links.
+- **wwsutru\policy\versions\national energy network (nen) policy proposal.md**: Table of contents and detailed implementation strategy for the initial NEN infrastructure proposal.
+- **wwsutru\policy\versions\national energy network cost analysis␊.md**: Financial feasibility analysis of the NEN, benchmarking CAPEX against existing federal clean energy investment body records.
+- **wwsutru\policy\versions\national energy network public.md**: Public-facing edition of the NEN policy v2.0, emphasizing emissions reduction and universal cost-of-living relief.
+- **wwsutru\policy\versions\policy proposal -  the national energy network (nen).md**: Greens-focused policy proposal for the NEN, aligning the project with the party's ecological and social justice pillars.
+- **wwsutru\policy\versions\pref as a resolution vector -  a comparative analysis.md**: Comparative analysis showing how PREF resolves the core failures of historical and contemporary governance models.
+- **wwsutru\policy\versions\pref; the roi of dignity -  benefit-cost analysis (bcr) of universal basic income.md**: Benefit-Cost analysis of UBI in Australia, estimating a positive ROI driven by the fiscal multiplier and velocity of money.
+- **wwsutru\policy\versions\proposal -  the national energy network (nen).md**: Documents the NEN as a new standard in public project planning, using multi-trajectory scenarios to de-risk national infrastructure.
+- **wwsutru\policy\versions\the national energy network (nen) summary proposal.md**: Summary of the NEN as a public utility upgrade, converting fossil fuel subsidies into a revenue-generating sovereign wealth fund.
+- **wwsutru\policy\versions\the paradise reciprocity economic framework (pref).md**: Synthesized economic model (PREF v2.0) integrating UBI with a social merit system to resolve capitalism's precarity.
+- **wwsutru\policy\versions\the paradise reciprocity economic framework (pref)v4 .md**: Finalized PREF v4.0, emphasizing the "Calculus of Bliss" and the "Collaborative Vessel" philosophy for shared prosperity.
+- **wwsutru\policy\versions\📄 policy proposal -  emergency housing acceleration package (ehap).md**: Finalized EHAP proposal for the Greens, focusing on immediate DA mandates and fee waivers for affordable housing.
+- **wwsutru\the synchronous failure protocol_ a diachronic analysis of state collapse vectors and their convergent application to the united states (2025–2026).md**: Comprehensive taxonomy of historical collapse vectors applied to the 2025-2026 US operational reality.

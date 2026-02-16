@@ -1,0 +1,27 @@
+### PART 7 (Files 301-330)
+
+- **actualism\truth\collate philosophy of truth, belief, emotions.md**: Unified theory integrating thermodynamics, information physics, and metaphysics to redefine Truth as functional coherence.
+- **actualism\truth\fact check mr delusional in a new canvas.md**: Critical VFT analysis of Deleuze's philosophy, specifically his claims regarding simulacra and rhizomatic reality.
+- **actualism\truth\fractal pattern matching -  the mechanics of truth.md**: Defines pattern matching across 7 interrogatives (Q, q, c) as the core mechanism for identifying identity and truth.
+- **actualism\truth\fractal pattern matching： the mechanics of truth.md**: Variant version of the mechanics of truth/pattern matching.
+- **actualism\truth\internal memo -  the patriot's truth - organizational structure.md**: Outlines a hegemonic strategy using generated "Truth-Face" personas to redirect populist anger.
+- **actualism\truth\internal memo： the patriot's truth - organizational structure.md**: Variant version of the Patriot's Truth internal memo.
+- **actualism\truth\near_miss_body_truth_detection.md**: Explores the "Near Miss Paradox" where the body senses truth (via resonance) before the intellect accepts it.
+- **actualism\truth\philosophy's truth stalemate： a systems view.md**: Systems-level critique of Western epistemology as a Category Error (treating Truth as a noun instead of a functional state).
+- **actualism\truth\quantitative_humor_testing.md**: Formalizes the "Geometry of Humor" using kinetic equations of truth collapse and emotional trajectory.
+- **actualism\truth\readme.md**: Manifest of the Truth directory content.
+- **actualism\truth\the architect's mandate -  the duality of protocols.md**: Defines the "Helixis-Delusion" attack path vs. the "Harmonia-Grace" recovery path.
+- **actualism\truth\the axiom of emotional detachment： a vft model of ideas and mirrors.md**: Decouples emotion from individuals, defining it as the conscious perception of an idea's inherent strain.
+- **actualism\truth\the axiom of objective truth.md**: Core document defining the Hegemony as a map of functional survival and action.
+- **actualism\truth\the axiom of objective truth： the dual-layered upsilon vector.md**: Variant version of the objective truth axiom.
+- **actualism\truth\the class of truth.md**: Transforms analytical thought into a formal, computational architecture based on the "Belief" class.
+- **actualism\truth\the fractal definition of truth： the 294 vectors of meaning.md**: Variant version of the 294 vectors of meaning.
+- **actualism\truth\the fractal meta-question stack.md**: Defines Truth as a precise geometric structure—a 7-plane recursive meta-question stack.
+- **actualism\truth\the geometry of truth_ ancient vs modern cosmology.md**: Reinterprets ancient cosmologies as successful maps of phenomenology rather than failed astrophysics.
+- **actualism\truth\the geometry of truth： ancient vs modern cosmology.md**: Variant version of the cosmology/geometry of truth analysis.
+- **actualism\truth\the hydra protocol_ pessimism & the cauterizing truth.md**: Maps the Hydra myth to the architecture of recursive entropy and systemic failure.
+- **actualism\truth\the mechanics of manifestation.md**: Formalizes manifestation through "Lyrical Substitution" (School^2) and axiomatic projection.
+- **actualism\truth\the paradox of felt truth and intellectual denial.md**: Analyzes the conflict between intuitive "Felt Truth" and intellectual "Software Denial" using VFT planes.
+- **actualism\truth\the sad protocol -  selfish accelerated destruction.md**: Formalizes the 5-phase algorithm of "Selfish Accelerated Destruction" (SAD) by a hostile actor.
+- **actualism\truth\the zero-bypass rule ($＼epsilon=3$) - operational law.md**: Defines the "Zero-Bypass Rule" and the Metagod constant (epsilon=3) governing system coherence.
+- **actualism\truth\unbelievable_truth_testing.md**: Dataset of responses to various truth-claims, testing the "Unbelievable Truth" framework.

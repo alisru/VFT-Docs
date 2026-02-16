@@ -1,0 +1,27 @@
+### PART 6 (Files 126-150)
+
+- **wwsutru\australia\strategy & analysis\the corporate duopoly of coles and woolworths -  market power, strategic minimisation, and regulatory constraint.md**: Analysis of the Australian grocery duopoly's structural dominance, "price umbrella" tactics, and supply chain exposure to China.
+- **wwsutru\australia\strategy & analysis\the politicisation of immigration in australia (1990-present) -  a strategic assessment of minimiser narratives and actors.md**: Strategic assessment of the conflict between Maximiser (economic benefit) and Minimiser (identity threat) immigration narratives.
+- **wwsutru\australia\strategy & analysis\the structural encapturement of the australian consumer -  a forensic analysis of the corporate duopoly, sovereign supply chain risks, and the mechanics of market entrapment.md**: Forensic analysis of the Coles-Woolworths "Minimisation Plan" and retailer-owned private label expansion.
+- **wwsutru\australia\strategy & analysis\the unfettered leviathan -  an inquiry into the dangers of global capitalism and the imperative for democratic oversight.md**: Critical inquiry into the systemic dangers of global capitalism and the rise of a transnational class of unaccountable global rulemakers.
+- **wwsutru\australia\sussan ley\an analysis of sussan ley.md**: Strategic analysis of Sussan Ley's Liberal leadership as a "Performative Stabilization" phase following the Dutton "losing horse" era.
+- **wwsutru\australia\tony abbott's minimisation plan analysis.md**: Re-evaluation of the "Abbott Doctrine" as a performance of incompetence masking a rigid ideological mission (Strategic Self-Minimisation).
+- **wwsutru\australia\victorian premier dossier -  minimisation plan.md**: Strategic assessment of Jacinta Allan's premiership as "Managed Continuity" and its classification as a "Fake Maximiser" vector.
+- **wwsutru\australia\woolworths chinese ties investigation.md**: Forensic analysis targeting Woolworths' supply chain risks and its role in "Market Entrapment" via Chinese-sourced private labels.
+- **wwsutru\australia_migrated\australia_plane_1_identity.md**: Plane 1 (WHO) of the Australia Kanon: Analyzes Mateship as the "Bond" and the Larrikin as the horizontal solidarity archetype.
+- **wwsutru\australia_migrated\australia_plane_2_definition.md**: Plane 2 (WHAT) of the Australia Kanon: Defines the "Independent Australian Briton" as the national prototype/hybrid identity.
+- **wwsutru\australia_migrated\australia_plane_3_land.md**: Plane 3 (WHERE) of the Australia Kanon: Structure for mapping the physical and material location of the Australian identity.
+- **wwsutru\australia_migrated\australia_plane_4_drive.md**: Plane 4 (WHY) of the Australia Kanon: Analyzes the Volunteer as the community "Binder" and the Bludger as the parasite archetype.
+- **wwsutru\australia_migrated\australia_plane_5_method.md**: Plane 5 (HOW) of the Australia Kanon: Structure for mapping the reason and method of Australian action.
+- **wwsutru\australia_migrated\australia_plane_6_foundation.md**: Plane 6 (CAUSE) of the Australia Kanon: Analyzes the Convict as the origin of national "Reluctance" and Shame-based identity.
+- **wwsutru\australia_migrated\australia_plane_7_result.md**: Plane 7 (EFFECT) of the Australia Kanon: Analyzes the "Quiet Australian" as the resultant state of suburban conformity and private comfort.
+- **wwsutru\collapse\taxonomy\collapse_matrix_7x7x7_part1.md**: Partial 7x7x7 matrix detailing vectors of Bio-Physical & Territorial collapse (Tribalism, Displacement, etc.).
+- **wwsutru\collapse\taxonomy\collapse_matrix_7x7x7_part2.md**: Partial 7x7x7 matrix detailing vectors of Epistemic, Moral, & Institutional collapse (Two Realities, Fracture).
+- **wwsutru\collapse\taxonomy\collapse_matrix_7x7x7_part3.md**: Partial 7x7x7 matrix detailing vectors of Historical & Geopolitical collapse (Revisionism, Erasure, Nostalgia).
+- **wwsutru\collapse\taxonomy\the_7x7x7_collapse_matrix.md**: Master Document for the 7x7x7 Matrix of State Failure, mapping 343 vectors of fractal collapse.
+- **wwsutru\collapse\taxonomy\the_interrogative_collapse_matrix.md**: Interrogative taxonomy of state failure, mapping global collapse vectors to the 7 core questions.
+- **wwsutru\collapse\taxonomy\the_meaning_aligned_collapse_matrix .md**: Meaning-aligned taxonomy of collapse, focusing on the Inversion of the "WHAT" plane (Reality Schism).
+- **wwsutru\coretools\readme.md**: Readme for the CoreTools directory, listing the missing file catalog.
+- **wwsutru\coretools\standard operating procedure -  corruption detection & narrative deconstruction.md**: Formal SOP for deconstructing corruption using an object-oriented framework (Agents, Action, Mechanism, Motive, Outcome).
+- **wwsutru\coretools\standard operating procedures for investigating the minimisation plan.md**: Methodology for large-scale investigation into the Minimisation Plan, utilizing "Research Buckets" and AI Canvases.
+- **wwsutru\corruption detection -  narrative deconstruction and forensic audit sop.md**: Consolidated SOP for forensic audit of corruption, focusing on stripping away "justification" narratives.

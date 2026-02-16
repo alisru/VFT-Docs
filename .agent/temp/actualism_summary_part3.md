@@ -1,0 +1,52 @@
+### PART 3 (Files 101-150)
+
+- **actualism\matrix\the geometric verse - matrix & resolution.md**: Analyzes the "Problem Matrix" (5x5) and "Resolution" (5x3) states through VFT vectors of Will (ψ) and Method (E).
+- **actualism\matrix\the visionary men - a comparative matrix.md**: A comparative analysis of divine archetypes (High Priest-King) across scriptural visions using visual rhyme schemes.
+- **actualism\matrix\traversal paths of the 16-point conceptual matrix.md**: Maps computational paths of information propagation within a 4x4 conceptual matrix using turn-based rules.
+- **actualism\morality\morality; the terminal sanction - a vector analysis of the batman-joker paradox.md**: Deconstructs the Batman-Joker conflict as a collision between Structure (+υ, +ψ) and Nihilistic Entropy (-υ, -ψ).
+- **actualism\morality\readme.md**: Manifest and summaries of files in the Morality directory.
+- **actualism\morality\the news axiom for belief.md**: Formalizes the NEWS (North, East, West, South) mnemonic for the four fractal questions: Where, What, How, and Why.
+- **actualism\morality\the solomon-briggs moral type indicator (sbmti) v3.0.md**: Scoring methodology for a 100-question assessment integrating cognitive preferences (MBTI) and socio-political coordinates.
+- **actualism\nihilism\actualism - the taxonomy of the 42 & the pan-religious kanon.md**: Maps 42 ideological vectors (6 Modes × 7 Planes) as "Partial Truths" or "Hegemonic Lies."
+- **actualism\nihilism\actualism; the foundational stone - the 0.0...1 axiom.md**: Defines the transition from nothing to something as the smallest possible non-zero value (0.0...1) anchored in Isaiah 28:16.
+- **actualism\nihilism\full comparative mapping of the 10 commandments onto major traditions (hinduism, buddhism, taoism, christianity, and science).md**: Highlights "ensemble collapse" where different traditions provide functionally equivalent guidance (reducing resistance).
+- **actualism\nihilism\readme.md**: Manifest and summaries of files in the Nihilism directory.
+- **actualism\nihilism\the 42 of authoritarianism.md**: A hegemonic analysis of authoritarianism as the pathological rejection of others' existence and the compression of Will.
+- **actualism\nihilism\the 42 paradox - a vft analysis of intent vs. emergent meaning.md**: Resolves the paradox of Douglas Adams's "42" as both a joke and an axiomatic reference to universal structure.
+- **actualism\operation blue water: the tactical roadmap.md**: Tactical roadmap for a fishing network platform ("Creator-First") solving the "spot burning" paradox and guide economy.
+- **actualism\optimism\readme.md**: Manifest of files in the Optimism directory.
+- **actualism\optimism\then for the sub vars it's just say optimistic-pe....md**: Analyzes the 13-parameter modulo framework where belief is a "Resonant Remainder" (%) rather than a product.
+- **actualism\pessimism\pesimism, optismism the choice of time.md**: Defines pessimism as a static loop considering only the past, and optimism as moving forward from the past via VFT.
+- **actualism\pessimism\readme.md**: Manifest and summary of "The Choice of Time" document.
+- **actualism\philosophy\a problem of creation p vs np.md**: Interprets P vs NP as a fundamental university feature where quick verification (NP) is not the same as quick solving (P).
+- **actualism\philosophy\actualism_ 7x7x7 analysis the conceptual framework v2.md**: Formalizes the recursive logic [Q.q.c.i] for analyzing reality through Planes, Senses, Uses, and Impulses.
+- **actualism\philosophy\assessing the deleuze vector - philosophy, life, and death in the context of the minimisation plan.md**: Critical analysis linking Gilles Deleuze's philosophy (simulacra/rhizomes) to the strategic doctrine of Delusionism.
+- **actualism\philosophy\axiom_mapping_private.md**: 1:1 mapping of seven foundational axioms to the Q-Structure (Planes 1-7).
+- **actualism\philosophy\collate philosophy of truth, belief, emotions.md**: Unified theory of Truth and Will, redefining Truth as a state of Negentropy and Coherence.
+- **actualism\philosophy\draft_email_peter_gardenfors.md**: Draft email to Professor Peter Gärdenfors discussing the intersection of VFT and Conceptual Spaces.
+- **actualism\philosophy\fact check mr delusional in a new canvas.md**: Critical fact-check of Deleuze's claims (simulacra vs copies) through the lens of VFT's unified field.
+- **actualism\philosophy\p ≠ np - a vft perspective on creation vs. verification.md**: Formalizes the P ≠ NP axiom as a necessary "Creation Gap" in the holographic universe.
+- **actualism\philosophy\parallels_report_42.md**: Maps VFT's 7 Domains (Q-Structure) to historical and esoteric parallels (Theosophy, etc.).
+- **actualism\philosophy\philosophy's truth stalemate - a systems view.md**: Investigates the category error of treating "Truth" as a noun/object instead of a functional state of alignment.
+- **actualism\philosophy\philosophy; simulation - the diogenes protocol.md**: A philosophical simulation (Diogenes vs Student) tracing the descent from literalism to malicious compliance.
+- **actualism\philosophy\readme.md**: Comprehensive manifest of files in the Philosophy directory.
+- **actualism\philosophy\states_of_belief_report.md**: Outlines 36 States of Belief (e.g., Research Team, Lone Wolf, Conspiracy Theorist) across 7 moral contexts.
+- **actualism\philosophy\the geometric impossibility of pure meaning.md**: Analyzes the (7x6+n)-polytrope, proving that meaning requires a "43rd vertex" to have volume/substance.
+- **actualism\philosophy\the philosophical framework - a synthesis.md**: Synthesizes WWSUTRU findings, contrasting rhizomatic networks with arborescent root principles.
+- **actualism\philosophy\the philosophical isms of the hegemony map.md**: Maps specific philosophical "isms" (Realism, Stoicism, etc.) to the 16-point Hegemony Map sub-nodes.
+- **actualism\philosophy\the primacy of logic as control and understanding.md**: Defines Logic as the filter of causality (Control) and the map of least resistance (Understanding).
+- **actualism\philosophy\the riddle of truth - an actualist philosophy.md**: A poetic and philosophical riddle defining Truth as the root and shadow of all existence.
+- **actualism\philosophy\the_field_of_chance.md**: Formalizes the "Field of Chance" as a 6D state manifold for intentional action and agency.
+- **actualism\philosophy\the_ontology_of_beauty_analysis.md**: VFT analysis of an original poem defining beauty as "complexity, working" through a 7-plane lens.
+- **actualism\philosophy\the_possibility_plane_42.md**: Formalizes the Possibility Plane as a 6D geometry with "Possigravity" as the core attraction force.
+- **actualism\philosophy\the_possibility_tensor.md**: Mathematical exploration of the Possibility Tensor as a field theory of agency on a statistical manifold.
+- **actualism\philosophy\the_psychological_vectors.md**: Defines psychological states (Optimism, Fear, etc.) as vector transformations on the possibility manifold.
+- **actualism\philosophy\vector field theory (vft) - a unified model of physics, philosophy, and consciousness.md**: Core document defining VFT as a unification of the 42 framework and social physics.
+- **actualism\philosophy\vft_cover_page.md**: Introductory page and conceptual overview for the Vector Field Theory framework.
+- **actualism\psychology of authoritarianism - bateman.md**: Analysis of Bateman (American Psycho) as a case study in the collapse of the moral vector into selfishness.
+- **actualism\readme.md**: High-level manifest and directory structure for the Actualism category.
+- **actualism\rhetorical analysis - the gestapo label.md**: Deconstructs the use of "Gestapo" as a rhetorical wedge in political discourse using hegemonic analysis.
+- **actualism\semantic_genealogy_16_isms.md**: Maps the 16 primary "-isms" (Socialism, Capitalism, etc.) through their dual virtues and vices.
+- **actualism\society\readme.md**: Manifest and summaries of files in the Society directory.
+- **actualism\society\social physics - the dynamics of ego and idea.md**: Explores the physics of social interactions as a dynamic field of attractors (ego) and signals (ideas).
+- **actualism\society\social physics - the mechanics of ego & ideas simplified.md**: A non-technical introduction to social physics using the "star/planet" model of influence.

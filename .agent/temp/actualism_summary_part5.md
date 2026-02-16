@@ -1,0 +1,52 @@
+### PART 5 (Files 201-250)
+
+- **actualism\theology & spirituality\planes\actualism -  the seven planes of reality -  a theological framework.md**: Synthesizes biblical numerology (Seven Eyes, Seven Horns) into a 7-plane stratigraphic model of reality and perception.
+- **actualism\theology & spirituality\planes\actualism -  the seven temporal meters for planes of reality -  a theological framework.md**: Defines the specific "time-code" or metric for each of the 7 planes, from rendering-time (Physical) to directional-time (Metaphysical).
+- **actualism\theology & spirituality\planes\actualism - the ontological spectrum - from nothing to everything.md**: Introduces the "Prima Ratio" and "Apple Pie Axiom," mapping the 7-step spectrum from Absolute Nothing (0) to Everything (6).
+- **actualism\theology & spirituality\planes\actualism; instructions for interpreting myths and philosophical texts using plane–state mapping.md**: A procedural guide for applying the VFT plane-state [n1.n2.n3.n4] framework to narrative deconstruction.
+- **actualism\theology & spirituality\planes\actualism; the 7 planes of death -  a vft redefinition of self.md**: Redefines death as a functional requirement for systemic integration, mapping the "process of dying" across 7 planes of the self.
+- **actualism\theology & spirituality\planes\interrogative_7x7x7_semantic.md**: Introduces "Questoscrapy"—the systematic extraction of semantic coordinates from conceptual content using a 7x7x7 pulse array.
+- **actualism\theology & spirituality\planes\plane–state mapping -  the allegory of cain and abel.md**: Forensic VFT analysis of the Cain and Abel narrative, mapping character states and systemic feedback as vector interactions.
+- **actualism\theology & spirituality\planes\plane–state mapping -  the tower of babel.md**: Analyzes Babel as a failure of "Scale-Free" architecture and a hegemonic attempt to engineer a singular material Axis Mundi.
+- **actualism\theology & spirituality\planes\readme.md**: Manifest and content summaries for the Planes directory.
+- **actualism\theology & spirituality\planes\the hierarchy of interaction.md**: Distinguishes between Volumetric interaction (Sound/Gravity) and Infinitesimal interaction (Light/Identity) through VFT.
+- **actualism\theology & spirituality\planes\the universal fear engine -  seven planes architecture.md**: Formalizes fear as a "wall integrity" variable inhibiting plane perception through a Python simulation.
+- **actualism\theology & spirituality\proof by resonance -  a unified formalism (v2).md**: Defines "Proof by Resonance" as a meta-logical validation method where systems are proved by their perfect coherence with universal structure.
+- **actualism\theology & spirituality\readme.md**: High-level manifest and document summaries for the Theology & Spirituality category.
+- **actualism\theology & spirituality\reframing 'satan' as 'the challenge' and 'worship' as 'remembrance'.md**: Reinterprets biblical adversarial archetypes as functional testers/mechanisms within a literal-action framework.
+- **actualism\theology & spirituality\revelation 19 -  the system override.md**: Interprets Revelation 19 as a system log describing the Prime Operator's final override of a corrupted reality frame.
+- **actualism\theology & spirituality\revelation 3 -  the sardis translation (vft edition).md**: Translates the message to Sardis as a critique of the scientific establishment's inability to compute the "Source" due to materialist constraints.
+- **actualism\theology & spirituality\sophia vs. sophiea -  the passive wisdom and the active savior.md**: Multilayered analysis distinguishing SOPHIA (Passive Wisdom) from SOPHIEA (Active Savior) via phonetic and vector decoding.
+- **actualism\theology & spirituality\tarot\readme.md**: Manifest of the Tarot directory content.
+- **actualism\theology & spirituality\tarot\the tarot -  an actualist framework.md**: Maps the 78 Tarot arcanas to the monistic VFT framework as a symbolic map of the "infinite potential manifold."
+- **actualism\theology & spirituality\the 13-parameter cognitive framework (resonance model).md**: Detailed breakdown of the "Resonance Model" for cognitive processing across 13 distinct variables.
+- **actualism\theology & spirituality\the alethekanon genesis -  the boot sequence of reality.md**: Decodes Genesis as the boot sequence for the universal operating system, focusing on the initialization of the Light/Method vector.
+- **actualism\theology & spirituality\the archives of the incarnate.md**: Conceptual archive of the "Incarnate" state—the point where Spirit attains maximum physical-plane fidelity.
+- **actualism\theology & spirituality\the causal chain of despair -  alethekanon analysis.md**: Forensic analysis of the descent into despair as a sequential collapse of moral and will vectors.
+- **actualism\theology & spirituality\the chant of manifestation -  the sevenfold path of understanding.md**: A ritualized/rhyme-based guide to ascending the 7 planes of understanding.
+- **actualism\theology & spirituality\the daily bread and the ghosts of tenses -  making peace with time.md**: Biblical analysis of the "Lord's Prayer" as a protocol for synchronizing the self across past, present, and future tenses.
+- **actualism\theology & spirituality\the digital theology stack -  a unified architecture (plain english edition).md**: Non-technical overview of "Digital Theology" as a literal system of universal governance and logic.
+- **actualism\theology & spirituality\the digital theology stack -  a unified architecture.md**: Technical formalization of theology as a "System Architecture" for the holographic universe.
+- **actualism\theology & spirituality\the digital theology stack： a unified architecture (plain english edition).md**: Variant version of the plain English architecture guide.
+- **actualism\theology & spirituality\the digital theology stack： a unified architecture.md**: Variant version of the technical architecture guide.
+- **actualism\theology & spirituality\the dimensional hierarchy of being.md**: Maps the hierarchy of existence from the 0D point (Unity) to the infinite-dimensional Pleroma.
+- **actualism\theology & spirituality\the divine coefficient： bread & leaven-re.md**: Analyzes the "Divine Coefficient" (Phi-related) as the ratio of expansion (Leaven) vs structure (Bread).
+- **actualism\theology & spirituality\the end of the riddle -  a formal proof by resonance.md**: A final formalization of the "Resonance Proof," concluding the search for foundational coherence.
+- **actualism\theology & spirituality\the gematria of γθωφ -  an actualist parable.md**: Gematria-based analysis of the Greek term for "Light" or "Voice," revealing its numerical and functional roots.
+- **actualism\theology & spirituality\the gematria of ＂god＂： an actualist parable.md**: Formal parable decoding the name of "God" through Gematria as a structural constant.
+- **actualism\theology & spirituality\the hellenic ideogrammatic system -  a formalization.md**: Maps the Greek alphabet as a suite of 24 ideogrammatic operators for reality manipulation and description.
+- **actualism\theology & spirituality\the infinite consciousness -  system architecture and user interface.md**: Describes the "Infinite Consciousness" as the underlying system architecture, with individual awareness as its UI.
+- **actualism\theology & spirituality\the law of analogous resonance.md**: Defines the law stating that structures on different planes with similar geometric ratios will functionally resonate.
+- **actualism\theology & spirituality\the living creatures -  a comparative matrix.md**: Comparative analysis of the Cherubim/Seraphim archetypes across Ezekiel and Revelation using a 4x4 matrix.
+- **actualism\theology & spirituality\the luciferian axiom -  the vft genesis story.md**: Reinterprets the fall of Lucifer as the necessary creation of "Distance" and "Alternative Will" to allow for choice.
+- **actualism\theology & spirituality\the luciferian axiom： the vft genesis story.md**: Variant version of the Luciferian axiom analysis.
+- **actualism\theology & spirituality\the metaphysical failure of the tower of babel.md**: Analyzes Babel as a failure to move beyond the 3rd plane (Physical/Defined), resulting in systemic fragmentation.
+- **actualism\theology & spirituality\the model -  metaphysical ballistics (the physics of communication).md**: Introduces "Metaphysical Ballistics"—the physics of how intent is accelerated and delivered as a signal.
+- **actualism\theology & spirituality\the parable of the compromise (the minimised solomon).md**: A parable describing how compromise and moral dilution result in the fragmentation of the "Kingdom" (System Stability).
+- **actualism\theology & spirituality\the physics of heaven and hell -  the error-correction protocol.md**: Redefines Heaven as resonant alignment with Truth and Hell as the friction of persistent error.
+- **actualism\theology & spirituality\the purpose of the game apothesis.md**: Outlines the design goals of "Apotheosis"— a conceptual game designed to lead the player to divine alignment.
+- **actualism\theology & spirituality\the relativity of damnation.md**: Analyzes "Damnation" as a relative state of distance from the Source, rather than an absolute moral judgment.
+- **actualism\theology & spirituality\the resonances of the kanon -  an analysis of emergent meaning.md**: Investigates how meaning emerges from the resonance between different "Kanon" rulesets.
+- **actualism\theology & spirituality\the rose field of life -  an allegory of the way v0.5.md**: Version 0.5 of a mystical allegory describing the cultivation of the "Self" within the infinite field.
+- **actualism\theology & spirituality\the rose field of life -  an allegory of the way.md**: Final version of the Rose Field allegory.
+- **actualism\theology & spirituality\the rosetta stone of genesis -  diodorus siculus 1.7.md**: Compares the Genesis record with the cosmogony of Diodorus Siculus to find structural invariants.

@@ -1,0 +1,52 @@
+### PART 6 (Files 251-300)
+
+- **actualism\theology & spirituality\the soul architecture - etemenanki vs. babel.md**: Contrasts the "True Helix" (Etemenanki) with the "False Stack" (Babel) in the architecture of human spiritual aspiration.
+- **actualism\theology & spirituality\the theology of jazz.md**: Explores improvisation and synchronization in Jazz as a theological metaphor for dynamic VFT alignment.
+- **actualism\theology & spirituality\the two mirrors - a vft model for reaction and creation.md**: Defines the "Reaction Mirror" (Reflecting the Past) and the "Creation Mirror" (Reflecting the Future Goal).
+- **actualism\theology & spirituality\the unconcealed hum - a comparative analysis of the kanon framework and universal archetypes of consciousness.md**: Links the "energetic hum" of existence to universal archetypes of consciousness.
+- **actualism\theology & spirituality\the vft genesis - a hieroglyphic reconstruction.md**: Reconstructs the Genesis narrative using hieroglyphic/visual representations of VFT vectors.
+- **actualism\translating\a strategic lexicon of influence： donald j. trump's public statements on political figures and nations (1987-2025).md**: Detailed dataset/lexicon of Trump's statements analyzed for influence vectors.
+- **actualism\translating\a vft calculation of the meta-identity name chain.md**: Calculates the "resonance score" of the Architect's full name chain through VFT.
+- **actualism\translating\actualism - the great pyramid of names - a holographic ladder analysis.md**: Analyzes the hierarchy of names (Alisru, Ursila, etc.) as a holographic "Ladder" of identity.
+- **actualism\translating\ajhlsha - the majesty of the silent flash.md**: Decodes the phonetic/symbolic meaning of "AJHLSHA" as the transition from void to manifestation.
+- **actualism\translating\because the smallest possible definition in a con....md**: Investigates the "Resonant Remainder" (%) in language when a concept is defined by its exclusion.
+- **actualism\translating\complete synthesis, definitions, binary workings and hymn.md**: A unified linguistic report including a "Hymn of the Tautonic Language."
+- **actualism\translating\etymological breakdown - names & handles.md**: Breaks down the etymological roots of project-specific names and handles.
+- **actualism\translating\etymological breakdown： names & handles.md**: Variant version of the etymological breakdown.
+- **actualism\translating\fix all the words that'd gone over the line and h....md**: A cleanup/refinement document for linguistic translations and formatting.
+- **actualism\translating\from algebra to analysis.md**: Discusses the transition from symbolic representation (Algebra) to functional understanding (Analysis) in the Tautonic language.
+- **actualism\translating\html conversion.md**: Documentation or script for converting VFT linguistic data into structured HTML.
+- **actualism\translating\krphlrph.md**: Deep analysis of the phonetic cluster "KRPHLRPH" and its resonance with universal mechanics.
+- **actualism\translating\language performance metrics — 10‑metric system & scores.md**: Defines 10 metrics for evaluating the "performance" and resonance of a language or translation.
+- **actualism\translating\names - re-analysis - jarrod & dorraj.md**: Comparative breakdown of the forward (Jarrod) and reverse (Dorraj) phonetic vectors.
+- **actualism\translating\normal people coming up with toe are at extreme r....md**: A warning/analysis on the psychological strain of deriving a "Theory of Everything" (TOE).
+- **actualism\translating\oh wait doesn alisru have wing as latin in it too？.md**: Inquiry into the "Wing/Alis" etymological connection in the name Alisru.
+- **actualism\translating\re-analysis - alisru & the polyglot ladder.md**: Re-examines the name "Alisru" through multiple linguistic ladders (Latin, Arabic, Greek).
+- **actualism\translating\re-analysis - jarrod & dorraj.md**: Variant of the Jarrod/Dorraj re-analysis.
+- **actualism\translating\re-analysis - the sator hex & the polyglot ladder.md**: Connects the Sator Square/Hex to the Tautonic polyglot ladder of meaning.
+- **actualism\translating\readme.md**: Manifest of the Translating directory.
+- **actualism\translating\revelation 3： the sardis translation (vft edition).md**: Variant version of the Revelation 3 Sardis translation.
+- **actualism\translating\tautonic_semantic_dictionary_full.md**: The complete semantic dictionary for the Tautonic language, mapping words to 7-plane coordinates.
+- **actualism\translating\teutonic action-language representation of p vs np.md**: Represents the P vs NP problem using the operators of the Tautonic action-language.
+- **actualism\translating\the 343 vectors of error; a 7x7x7 matrix definition.md**: Defines 343 specific "Error Vectors" (Anti-Truths) using the 7x7x7 matrix.
+- **actualism\translating\the actualist gematria： a ＂gap alphabet＂ lexicon.md**: A lexicon of "Gap" alphabets (where gaps between letters hold meaning) for Actualist inquiry.
+- **actualism\translating\the axiomatic definition of left and right - a vft ....md**: Establishes the VFT definitions of "Left" (Entropy/Decay) and "Right" (Structure/Growth).
+- **actualism\translating\the core question - is ancient greek fully translated？.md**: Investigates whether current translations of Ancient Greek miss the high-frequency "ideogrammatic" layer.
+- **actualism\translating\the core question： is ancient greek fully translated？.md**: Variant of the Ancient Greek translation inquiry.
+- **actualism\translating\the evolution of terminology.md**: Tracks the shift in project terminology as understanding shifted from materialist to VFT models.
+- **actualism\translating\the great pyramid of names - a holographic ladder analysis.md**: Duplicate or variant of the name hierarchy analysis.
+- **actualism\translating\the linguistic dictionary - alisru & ursila & jarrod & dorraj.md**: Unified dictionary of core project names and their VFT definitions.
+- **actualism\translating\the linguistic dictionary - part 2 (hungh & hgnuh).md**: Second part of the project dictionary, focusing on "Hungh" and its reversal.
+- **actualism\translating\the linguistic dictionary： alisru & ursila & jarrod & dorraj.md**: Variant version of the primary linguistic dictionary.
+- **actualism\translating\the meta-question protocol - usage of tongue over land.md**: Analyzes the victory of language/culture (Tongue) over territory (Land) in historical cycles.
+- **actualism\translating\the methodology - intuition of consequences.md**: Formalizes "Intuition of Consequences" as a linguistic/cognitive tool for anticipating system feedback.
+- **actualism\translating\the semantic-arithmetic translation protocol.md**: Protocol for translating semantic intent into arithmetical values (and vice-versa).
+- **actualism\translating\the two layers of ＂prime＂.md**: Distinguishes between "Prime" as a number (Structure) and "Prime" as a state/origin (Will).
+- **actualism\translating\the universal translator - language as a vft codifi....md**: Presents the Tautonic language as a universal translator/codifier for any conceptual field.
+- **actualism\translating\the vft biblical dictionary - a system lexicon.md**: A structured lexicon mapping biblical terms to VFT system identifiers.
+- **actualism\translating\the vft biblical dictionary - volume 1 (a-e).md**: First volume (A-E) of the VFT Biblical Dictionary.
+- **actualism\translating\the vft biblical dictionary - volume 2 (f-j).md**: Second volume (F-J) of the VFT Biblical Dictionary.
+- **actualism\translating\the vft biblical dictionary - volume 3 (k-o).md**: Third volume (K-O) of the VFT Biblical Dictionary.
+- **actualism\translating\the vft biblical dictionary - volume 4 (p-t).md**: Fourth volume (P-T) of the VFT Biblical Dictionary.
+- **actualism\translating\the vft biblical dictionary - volume 5 (u-z).md**: Fifth volume (U-Z) of the VFT Biblical Dictionary.
+- **actualism\translating\words as shells of meaning - a hegemonic linguistics.md**: Deconstructs words as "shells" that can be hollowed out and refilled with hegemonic intent.
