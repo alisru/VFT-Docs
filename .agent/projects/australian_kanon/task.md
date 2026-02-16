@@ -1,6 +1,6 @@
 # Australian Kanon Generation
 
-**Current Focus**: Move project taxonomy and navigation files to dedicated Navigation folder
+**Current Focus**: Update reorg audit with target origin and correlate destinations with folder purpose review
 
 **Progress**: 24/31 complete
 
@@ -35,7 +35,7 @@
 - [x] Update Project Index <!-- id: 27 -->
 - [ ] Update file_summaries_comprehensive.md with missing files <!-- id: 28 -->
 - [x] Move project taxonomy and navigation files to dedicated Navigation folder `infrastructure navigation` <!-- id: 29 -->
-- [ ] Update reorg audit with target origin and correlate destinations with folder purpose review `implementation navigation` <!-- id: 30 -->
+- [/] Update reorg audit with target origin and correlate destinations with folder purpose review `implementation navigation` <!-- id: 30 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
