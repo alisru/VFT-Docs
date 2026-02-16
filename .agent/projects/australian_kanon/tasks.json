@@ -1002,6 +1002,34 @@
                 "passes": [],
                 "root_cause": null
             }
+        },
+        {
+            "index": 30,
+            "id": "task_30",
+            "description": "Update reorg audit with target origin and correlate destinations with folder purpose review",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-16T20:13:35.906788] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "implementation",
+                "navigation"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
         }
     ]
 }
