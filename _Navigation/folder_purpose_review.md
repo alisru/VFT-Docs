@@ -11,7 +11,9 @@ This document defines the specific purpose and content boundaries for every dire
 *   **[triadic](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/triadic):** Conceptual mapping using the Triadic Model of Reality.
 *   **[judgement](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/judgement):** Frameworks for truth-testing and idea evaluation.
 *   **[alethekanon](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/alethekanon):** Core AI directives and high-level personas for the Alethekanon system.
-*   **[Language](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/Language):** The consolidated linguistic engine. Includes the Tautonic Language Engine (TLE), etymological translation, biblical dictionaries, and "Gap Alphabet" lexicons. (Merges Translating and Tautony).
+*   **[Language](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/Language):** The consolidated linguistic engine.
+    *   **[translating](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/Language/translating):** Unified Language Engine, Tautonic components, biblical dictionaries, and "Gap Alphabet" lexicons.
+    *   **[names](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/Language/names):** High-fidelity etymological and phonetic analysis of name stacks (Jarrod, Alisru, etc.).
 *   **[Theology & Spirituality](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/Theology%20&%20Spirituality):** Metaphysical inquiry and vertical alignment concepts.
 *   **[Philosophy](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/Philosophy):** Broad conceptual foundations and gnostic/monistic syntheses.
 *   **[Morality/Truth/Nihilism/etc.](file:///E:/Vector_Field_Theory/VFT_Docs/_VFT_MD/Actualism/):** Specific thematic subfolders for deep analysis of individual concepts.

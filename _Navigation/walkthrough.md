@@ -19,10 +19,10 @@ The `_VFT MD` root directory has been successfully cleared of loose files. All c
 ## 2. Key Pillar Consolidations
 
 ### A. The Language Pillar (`Actualism/Language/`)
-All language-centric systems have been unified into a single engine.
-- **Relocated:** Tautonic Language Engine (Architecture, Oracle, Specs, Implementation).
-- **Relocated:** Translating folder contents (Biblical Dictionaries, Lexicons, Phonetic Analyses).
-- **Folder Neutralized:** `Actualism/Translating/` (successfully removed).
+All language-centric systems have been unified and subdivided.
+- **`translating/`**: Unified Language Engine (Tautonic), biblical dictionaries, and etymological translation tools.
+- **`names/`**: High-fidelity name analysis (Jarrod, Alisru, Meta-Identity Chain).
+- **Folder Neutralized**: `Actualism/Translating/` (successfully removed).
 
 ### B. The Matrix Pillar (`Actualism/matrix/`)
 All 7x7x7 architecture and ontological mapping files have been centralized.
