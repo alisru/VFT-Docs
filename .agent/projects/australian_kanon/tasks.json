@@ -967,6 +967,34 @@
                 "passes": [],
                 "root_cause": null
             }
+        },
+        {
+            "index": 29,
+            "id": "task_29",
+            "description": "Move project taxonomy and navigation files to dedicated Navigation folder",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-16T16:16:25.514625] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "infrastructure",
+                "navigation"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
         }
     ]
 }
