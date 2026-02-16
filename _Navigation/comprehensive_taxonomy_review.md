@@ -26,7 +26,9 @@ This document provides a zero-summarization, literal mapping of every folder and
     *   **Actualism/Theology & Spirituality/Lucifer:** Analysis of the "Lucifer" archetype as a learner and function.
     *   **Actualism/Theology & Spirituality/Planes:** The "Seven Planes" architecture—temporal meters and ontological spectrums.
     *   **Actualism/Theology & Spirituality/Tarot:** The Tarot reimagined within an Actualist framework.
-*   **Actualism/Translating:** The linguistic engine. Biblical dictionaries, gap alphabets, and phonetic analyses of names.
+*   **Actualism/Language:** The consolidated linguistic engine.
+    *   **Actualism/Language/translating:** Unified Language Engine, Tautonic (TLE) components, biblical dictionaries, and "Gap Alphabet" lexicons.
+    *   **Actualism/Language/names:** Specialized etymological and phonetic analysis of the primitive Name Chain.
 *   **Actualism/Morality, Nihilism, Optimism, Pessimism, Society, Stoicism, Superstition, Truth:** Dedicated thematic repositories for deep conceptual dives.
 
 ## 2. Physics: The Mathematical & Scientific Derivation
