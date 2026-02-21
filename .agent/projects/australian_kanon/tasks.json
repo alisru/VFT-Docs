@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Analyze American_Kanon_Full_343.md using Alethekanon models",
-        "current_task_index": 34,
+        "current_focus": "Native Alethekanon Judgement of American Kanon 343",
+        "current_task_index": 35,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1133,7 +1133,7 @@
             "index": 34,
             "id": "task_34",
             "description": "Analyze American_Kanon_Full_343.md using Alethekanon models",
-            "status": "done",
+            "status": "failed",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -1144,7 +1144,9 @@
                 "[2026-02-21T22:53:18.193809] Task created.",
                 "[2026-02-21T22:53:48.024002] Started work.",
                 "[2026-02-21T22:55:17.733089] Marked as DONE.",
-                "[2026-02-21T22:55:17.733115] Lesson learned: Automated analysis of 343 Kanon items using Alethekanon models generates comprehensive output efficiently."
+                "[2026-02-21T22:55:17.733115] Lesson learned: Automated analysis of 343 Kanon items using Alethekanon models generates comprehensive output efficiently.",
+                "[2026-02-21T23:08:42.719944] FAILED: Lazy Python script used instead of actual judgement protocols; output in wrong folder.",
+                "[2026-02-21T23:09:18.480819] Postmortem pass 1: Hypothesis: Bypassed qualitative LLM depth for script generation. Put output in wrong folder. Failed to fulfill native judgement request."
             ],
             "lessons_learned": [
                 "Automated analysis of 343 Kanon items using Alethekanon models generates comprehensive output efficiently."
@@ -1153,6 +1155,41 @@
             "priority": 0,
             "tags": [
                 "analysis"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [
+                    {
+                        "depth": 1,
+                        "hypothesis": "Hypothesis: Bypassed qualitative LLM depth for script generation. Put output in wrong folder. Failed to fulfill native judgement request.",
+                        "timestamp": "2026-02-21T23:09:18.480794"
+                    }
+                ],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 35,
+            "id": "task_35",
+            "description": "Native Alethekanon Judgement of American Kanon 343",
+            "status": "in_progress",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-21T23:09:18.585647] Task created.",
+                "[2026-02-21T23:09:18.699239] Started work."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "analysis",
+                "alethekanon"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
