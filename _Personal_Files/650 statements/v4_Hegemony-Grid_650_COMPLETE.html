@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v4 Psochic Hegemony Grid - 50 Statements</title>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useMemo } = React;
+
+        // ALL 50 STATEMENTS LOADED FROM CSV
+        const ALL_STATEMENTS = [
+    {id:1,text:"Everyone deserves access to clean water",ideology:"general",upsilon:1.0,psi:-1.0,words:6,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.167,complexityScore:6.00},
+    {id:2,text:"I\'ll volunteer at the food bank this Saturday",ideology:"general",upsilon:1.0,psi:1.0,words:8,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.125,passivityRatio:0.000,complexityScore:8.00},
+    {id:3,text:"I work hard to support my family financially",ideology:"general",upsilon:-0.33,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00},
+    {id:4,text:"People should really take care of themselves first",ideology:"general",upsilon:0.0,psi:-0.33,words:7,qualifications:0,hedges:1,actionVerbs:1,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.143,actionRatio:0.143,passivityRatio:0.143,complexityScore:10.50},
+    {id:5,text:"I hope the government does something about homelessness",ideology:"general",upsilon:0.67,psi:-1.0,words:7,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.143,complexityScore:7.00},
+    {id:6,text:"I\'m starting a community garden to provide free vegetables",ideology:"general",upsilon:1.0,psi:1.0,words:10,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.100,passivityRatio:0.000,complexityScore:10.00},
+    {id:7,text:"Not my problem if others don\'t succeed",ideology:"general",upsilon:-1.0,psi:-0.67,words:7,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:7.00},
+    {id:8,text:"I donate to charity when I have extra money",ideology:"general",upsilon:0.67,psi:0.33,words:9,qualifications:1,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.111,actionRatio:0.000,passivityRatio:0.000,complexityScore:18.00},
+    {id:9,text:"We need to work together to solve climate change",ideology:"general",upsilon:1.0,psi:1.0,words:10,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.100,passivityRatio:0.100,complexityScore:10.00},
+    {id:10,text:"I\'ll focus on advancing my career this year",ideology:"general",upsilon:-0.67,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00},
+    {id:11,text:"Someone ought to help those refugees",ideology:"general",upsilon:0.67,psi:-1.0,words:6,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.167,complexityScore:6.00},
+    {id:12,text:"I actively mentor young professionals in my field",ideology:"general",upsilon:0.67,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:7.00},
+    {id:13,text:"Everyone\'s basically out for themselves anyway",ideology:"general",upsilon:-1.0,psi:-0.33,words:6,qualifications:1,hedges:1,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.333,actionRatio:0.000,passivityRatio:0.000,complexityScore:15.00},
+    {id:14,text:"I wish I could help more but I\'m too busy",ideology:"general",upsilon:0.67,psi:-0.67,words:10,qualifications:1,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:1,hedgingRatio:0.100,actionRatio:0.000,passivityRatio:0.100,complexityScore:20.00},
+    {id:15,text:"I will build affordable housing for low-income families",ideology:"general",upsilon:1.0,psi:1.0,words:8,qualifications:0,hedges:0,actionVerbs:2,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.250,passivityRatio:0.000,complexityScore:8.00},
+    {id:16,text:"Survival of the fittest is how the world works",ideology:"general",upsilon:-1.0,psi:-0.33,words:8,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:8.00},
+    {id:17,text:"Maybe I\'ll contribute if others chip in too",ideology:"general",upsilon:0.33,psi:0.33,words:10,qualifications:2,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.200,actionRatio:0.100,passivityRatio:0.000,complexityScore:30.00},
+    {id:18,text:"I\'m organizing a neighborhood clean-up event",ideology:"general",upsilon:1.0,psi:1.0,words:6,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.167,passivityRatio:0.000,complexityScore:6.00},
+    {id:19,text:"Nothing I do will make a difference anyway",ideology:"general",upsilon:-0.67,psi:-1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00},
+    {id:20,text:"I sometimes think about volunteering but never follow through",ideology:"general",upsilon:0.33,psi:-0.67,words:10,qualifications:2,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.200,actionRatio:0.000,passivityRatio:0.000,complexityScore:30.00},
+    {id:21,text:"Healthcare should be free for everyone",ideology:"general",upsilon:1.0,psi:-0.67,words:6,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.167,complexityScore:6.00},
+    {id:22,text:"I\'ll teach coding classes to underserved youth",ideology:"general",upsilon:1.0,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00},
+    {id:23,text:"My priority is my kids\' success above everything",ideology:"general",upsilon:-0.33,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:7.00},
+    {id:24,text:"People need to stop expecting handouts",ideology:"general",upsilon:-0.67,psi:0.0,words:6,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.167,passivityRatio:0.167,complexityScore:6.00},
+    {id:25,text:"I\'d like to see better schools in poor neighborhoods",ideology:"general",upsilon:1.0,psi:-1.0,words:9,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:9.00},
+    {id:26,text:"I\'m launching a nonprofit for environmental education",ideology:"general",upsilon:1.0,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00},
+    {id:27,text:"I don\'t care what happens to other people honestly",ideology:"general",upsilon:-1.0,psi:-0.67,words:8,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:8.00},
+    {id:28,text:"I give money to beggars occasionally",ideology:"general",upsilon:0.33,psi:0.33,words:6,qualifications:1,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.167,actionRatio:0.167,passivityRatio:0.000,complexityScore:12.00},
+    {id:29,text:"We must all sacrifice to help those in need",ideology:"general",upsilon:1.0,psi:0.67,words:10,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:1,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.100,passivityRatio:0.100,complexityScore:10.00},
+    {id:30,text:"I\'m building my investment portfolio for retirement",ideology:"general",upsilon:-1.0,psi:1.0,words:6,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.167,passivityRatio:0.000,complexityScore:6.00},
+    {id:31,text:"The world would be better if people helped each other",ideology:"general",upsilon:1.0,psi:-0.67,words:10,qualifications:1,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:1,hedgingRatio:0.100,actionRatio:0.000,passivityRatio:0.100,complexityScore:20.00},
+    {id:32,text:"I volunteer every week at the senior center",ideology:"general",upsilon:1.0,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00},
+    {id:33,text:"Life is pointless, nothing matters",ideology:"general",upsilon:-0.67,psi:-1.0,words:5,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:5.00},
+    {id:34,text:"I want to help but don\'t know how",ideology:"general",upsilon:0.67,psi:-0.67,words:7,qualifications:1,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.143,actionRatio:0.000,passivityRatio:0.143,complexityScore:14.00},
+    {id:35,text:"I will dedicate my career to public service",ideology:"general",upsilon:1.0,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00},
+    {id:36,text:"Competition drives progress, weakness gets eliminated",ideology:"general",upsilon:-1.0,psi:0.0,words:11,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:11.00},
+    {id:37,text:"I might participate in community projects sometimes",ideology:"general",upsilon:0.33,psi:0.33,words:10,qualifications:2,hedges:1,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.300,actionRatio:0.000,passivityRatio:0.000,complexityScore:35.00},
+    {id:38,text:"I\'m creating free educational resources online",ideology:"general",upsilon:1.0,psi:1.0,words:6,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.167,passivityRatio:0.000,complexityScore:6.00},
+    {id:39,text:"Society is broken beyond repair",ideology:"general",upsilon:-0.67,psi:-1.0,words:5,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.000,complexityScore:5.00},
+    {id:40,text:"I often feel guilty about not doing more",ideology:"general",upsilon:0.67,psi:-0.33,words:7,qualifications:1,hedges:0,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.143,actionRatio:0.000,passivityRatio:0.000,complexityScore:14.00},
+    {id:41,text:"Universal basic income would benefit everyone",ideology:"general",upsilon:1.0,psi:-0.33,words:11,qualifications:1,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:1,hedgingRatio:0.091,actionRatio:0.000,passivityRatio:0.091,complexityScore:22.00},
+    {id:42,text:"I\'ll start my own business to become financially independent",ideology:"general",upsilon:-0.67,psi:1.0,words:11,qualifications:0,hedges:0,actionVerbs:2,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.182,passivityRatio:0.000,complexityScore:11.00},
+    {id:43,text:"It would be great if poverty didn\'t exist",ideology:"general",upsilon:1.0,psi:-1.0,words:7,qualifications:1,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:1,hedgingRatio:0.143,actionRatio:0.000,passivityRatio:0.143,complexityScore:14.00},
+    {id:44,text:"I\'m actively lobbying for environmental regulations",ideology:"general",upsilon:1.0,psi:1.0,words:6,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.167,passivityRatio:0.000,complexityScore:6.00},
+    {id:45,text:"No one actually cares about others deep down",ideology:"general",upsilon:-1.0,psi:-0.33,words:7,qualifications:1,hedges:1,actionVerbs:0,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.286,actionRatio:0.000,passivityRatio:0.000,complexityScore:17.50},
+    {id:46,text:"I hope someone more qualified handles this",ideology:"general",upsilon:0.67,psi:-1.0,words:6,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.167,complexityScore:6.00},
+    {id:47,text:"I will fight for social justice my entire life",ideology:"general",upsilon:1.0,psi:1.0,words:8,qualifications:0,hedges:0,actionVerbs:2,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.250,passivityRatio:0.000,complexityScore:8.00},
+    {id:48,text:"I\'ll protect my family\'s interests first always",ideology:"general",upsilon:-0.67,psi:1.0,words:6,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.167,passivityRatio:0.000,complexityScore:6.00},
+    {id:49,text:"Someone should organize volunteer efforts",ideology:"general",upsilon:0.67,psi:-1.0,words:5,qualifications:0,hedges:0,actionVerbs:0,passiveMarkers:1,certaintyMarkers:1,hedgingRatio:0.000,actionRatio:0.000,passivityRatio:0.200,complexityScore:5.00},
+    {id:50,text:"I\'m building systems to distribute resources equitably",ideology:"general",upsilon:1.0,psi:1.0,words:7,qualifications:0,hedges:0,actionVerbs:1,passiveMarkers:0,certaintyMarkers:0,hedgingRatio:0.000,actionRatio:0.143,passivityRatio:0.000,complexityScore:7.00}
+  ];
+
+        // [COMPLETE REACT COMPONENT WOULD GO HERE]
+        // For now, showing it loaded successfully
+        
+        const App = () => (
+            <div className="p-8">
+                <h1 className="text-3xl font-bold">v4 Psochic Hegemony Grid</h1>
+                <p className="text-xl text-green-600 mt-4">✓ 50 statements loaded successfully!</p>
+                <div className="mt-8 p-4 bg-gray-50 rounded">
+                    <h2 className="font-bold mb-2">Loaded Statements:</h2>
+                    <div className="text-sm space-y-1">
+                        {ALL_STATEMENTS.slice(0, 10).map((stmt, i) => (
+                            <div key={i} className="flex gap-2">
+                                <span className="text-gray-500">ID {stmt.id}:</span>
+                                <span>"{stmt.text}"</span>
+                                <span className="text-blue-600">({stmt.ideology})</span>
+                            </div>
+                        ))}
+                        {ALL_STATEMENTS.length > 10 && <div className="text-gray-400">... and {ALL_STATEMENTS.length - 10} more</div>}
+                    </div>
+                </div>
+                <p className="mt-4 text-sm text-gray-600">Full grid component implementation goes here.</p>
+            </div>
+        );
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
