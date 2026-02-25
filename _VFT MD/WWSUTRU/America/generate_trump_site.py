@@ -165,21 +165,23 @@ def generate_html_page(plane_info, data):
         for item in items:
             score_class = get_score_color(item["score"])
             table_rows += f"""
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">{item['id']}</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1">{item['val']}</div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">{item['id']}</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight">{item['val']}</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border {score_class}">{item['score']}</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> {item['v']}</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> {item['p']}</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         {item['reasoning']}
                     </div>
                 </td>
@@ -204,7 +206,6 @@ def generate_html_page(plane_info, data):
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">

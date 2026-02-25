@@ -9,88 +9,32 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
         .font-serif { font-family: 'Merriweather', serif; }
-
-        /* Hide scrollbar for mobile nav */
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        @media (max-width: 640px) {
-            table, thead, tbody, th, td, tr { display: block; }
-            thead tr { position: absolute; top: -9999px; left: -9999px; }
-            tr { border: 1px solid #e2e8f0; border-radius: 0.75rem; margin-bottom: 1.5rem; background: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); overflow: hidden; }
-            td { 
-                border: none; position: relative; padding-left: 1.25rem !important; padding-right: 1.25rem !important; padding-top: 0.75rem !important; padding-bottom: 0.75rem !important;
-            }
-            td:nth-of-type(1) {
-                background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important;
-            }
-            td:nth-of-type(2) { padding-bottom: 0.25rem !important; }
-            td:nth-of-type(3) { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; display: inline-block; width: auto; margin-right: 1rem; }
-            td:nth-of-type(4) { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; display: inline-block; width: auto; }
-            td:nth-of-type(5) { padding-top: 1rem !important; border-top: 1px solid #f1f5f9; margin-top: 0.5rem;}
-        }
     </style>
 </head>
 <body class="antialiased text-gray-800">
 
     
-                <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Branding -->
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
+                    <div class="flex-shrink-0">
                         <span class="text-xl font-bold text-white tracking-widest">TRUMP AUDIT</span>
-                        <a href="index.html" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 border border-gray-600 hover:text-white hover:bg-gray-700 transition">Index</a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-2">
+                             <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Final Score</a>
+                            <a href="Plane_1_Identity.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Who</a>
+<a href="Plane_2_Definition.html" class="px-3 py-2 rounded-md text-sm font-medium bg-blue-800 text-white transition-colors">What</a>
+<a href="Plane_3_Land.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Where</a>
+<a href="Plane_4_Drive.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Why</a>
+<a href="Plane_5_Method.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">How</a>
+<a href="Plane_6_Foundation.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Cause</a>
+<a href="Plane_7_Result.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Effect</a>
+
+                        </div>
                     </div>
                 </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden lg:block">
-                    <div class="ml-10 flex items-baseline space-x-2">
-                        <a href="Archetype_The_American_Anomaly.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition">Archetype</a>
-                        <a href="Plane_1_Identity.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Who</a>
-                        <a href="Plane_2_Definition.html" class="px-3 py-2 rounded-md text-sm font-medium bg-blue-800 text-white transition-colors">What</a>
-                        <a href="Plane_3_Land.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Where</a>
-                        <a href="Plane_4_Drive.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Why</a>
-                        <a href="Plane_5_Method.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">How</a>
-                        <a href="Plane_6_Foundation.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Cause</a>
-                        <a href="Plane_7_Result.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Effect</a>
-                        <a href="Trump_Hegemony_Visualization.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition">Map</a>
-                        <a href="About_Trump_Audit.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition">About</a>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="-mr-2 flex lg:hidden">
-                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="hidden lg:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700 bg-gray-900">
-                <a href="Archetype_The_American_Anomaly.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition block">Archetype</a>
-                <a href="Plane_1_Identity.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Who</a>
-                <a href="Plane_2_Definition.html" class="px-3 py-2 rounded-md text-sm font-medium bg-blue-800 text-white transition-colors block">What</a>
-                <a href="Plane_3_Land.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Where</a>
-                <a href="Plane_4_Drive.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Why</a>
-                <a href="Plane_5_Method.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">How</a>
-                <a href="Plane_6_Foundation.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Cause</a>
-                <a href="Plane_7_Result.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Effect</a>
-                <a href="Trump_Hegemony_Visualization.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition block">Map</a>
-                <a href="About_Trump_Audit.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition block">About</a>
             </div>
         </div>
     </nav>
@@ -148,146 +92,159 @@
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Who.Who</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Citizen</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Who.Who</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Citizen</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump routinely utilizes rhetoric that questions the legitimacy of citizenship based on birthright, emphasizing blood, ancestry, and ideological purity over legal status. He frequently attacks the Americanness of his political opponents, suggesting that those who disagree with him are not true citizens, regardless of where they were born. He relies heavily on tribal and racial signifiers to define his "in-group," actively undermining the 14th Amendment's premise that identity is a contractual status available to all. His political movement defines "The Citizen" not by the law, but by loyalty to a specific, exclusionary cultural vision. This represents an active suppression of the broad, soil-based definition of the American.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Who.Where</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Resident</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Who.Where</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Resident</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's engagement with the physical reality of the resident—the everyday experience of inhabiting a specific geography—is largely abstract and transactional. While he appeals heavily to geographic grievances (the rust belt, the border), he rarely articulates a vision for local community building or the quiet, day-to-day responsibilities of inhabiting a shared environment. He treats the American landscape more as a backdrop for high-stakes political theater than as a series of interconnected physical communities requiring stewardship. His focus is entirely on national-level dominance and economic expansion, leaving the granular reality of residency largely unaddressed. He neither actively destroys nor actively cultivates the local resident.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Who.What</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Individual</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Who.What</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Individual</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is the explosive, unbound archetype of American Individualism, constantly asserting his own unique reality over the consensus of the collective. He refuses to be categorized, managed, or defined by external institutions, operating entirely on his own terms and demanding that the system bend to accommodate him. He actively encourages his followers to view themselves as sovereign actors who are in constant conflict with a corrupt state that seeks to suppress their unique identity. He represents the purest, most chaotic expression of the "I," refusing to submit his ego to the demands of the "We." This is maximum alignment with the sheer force of individuality, entirely severed from civic duty.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Who.Why</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Consumer</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Who.Why</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Consumer</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.4</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's entire brand is built on the aggressive projection and enablement of hyper-consumption, framing the American experience fundamentally as the ability to acquire and display wealth. He evaluates national success almost entirely through economic metrics, promising deregulation and tax cuts to fuel endless material expansion. He treats the voting public not as citizens with shared obligations, but as consumers of a political product, utilizing marketing, spectacle, and branding to secure their loyalty. He views the environment and the state merely as engines for extraction and consumption, rejecting the idea of limits or temperance. He is the ultimate salesman of the materialistic dream.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Who.How</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Creator</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Who.How</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Creator</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.8</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         While not a "creator" in the classic sense of inventing new technologies or writing foundational texts, Trump is a master creator of reality, narrative, and political energy. He possesses an unparalleled ability to forge an entire alternative ecosystem of facts and values simply through the relentless force of his repetition. He does not build physical infrastructure; he builds political movements and dominant media brands, proving that the ability to shape perception is a profound act of creation. He understands that in the modern American landscape, the creator of the dominant narrative controls the system. He executes this vector through sheer psychological engineering.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Who.Cause</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Parent</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Who.Cause</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Parent</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's engagement with the concept of generational stewardship is largely superficial, utilizing the imagery of family primarily for aesthetic or political advantage. While he occasionally speaks of protecting the nation for "our children," his actual policy focus is almost entirely on explosive, short-term gains (economic, political, cultural) without significant regard for the long-term structural debt or environmental consequences left behind. He does not project the patient, sacrificing archetype of the parent building a sustainable future; he projects the immediate, demanding energy of the conqueror securing the present. The transmission of wisdom to the next generation is secondary to his own immediate victory.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Who.Effect</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Celebrity</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Who.Effect</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Celebrity</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.2</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump was the first American figure to successfully bypass all traditional political architecture and gain the Presidency entirely through the weaponization of celebrity and mass attention. He understands that in the modern era, fame is a currency more powerful than policy expertise or institutional endorsement. He operates his administration and his political movement not as a dry bureaucratic exercise, but as a continuous, high-stakes reality television show, keeping the nation constantly focused on his persona. He relies entirely on the parasocial bonds forged through the screen, proving that the Celebrity vector can completely overwrite the traditional definitions of political power. He is the ultimate, terrifying evolution of this vector.
                     </div>
                 </td>
@@ -315,146 +272,159 @@
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Where.Who</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Private Sphere</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Where.Who</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Private Sphere</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.5</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump demonstrates a profound disregard for the sanctity of the private sphere, frequently attempting to drag the internal decisions of individuals and corporations into the arena of public political loyalty. He uses the power of his platform to attack private citizens, businesses, and lower-level officials who displease him, effectively destroying their anonymity and subjecting them to mass harassment. He views personal loyalty to him as the only valid metric, ignoring the boundary that separates public duty from private conscience. He demands that all aspects of life be politicized and aligned with his movement. This represents an active, aggressive suppression of the right to exist outside the state's gaze.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Where.Where</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Public Square</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Where.Where</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Public Square</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.8</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump fundamentally rejects the idea of the public square as a shared, neutral space for the rational exchange of ideas, viewing it instead as a battlefield to be dominated through volume and intimidation. He actively degrades the civility required to maintain a functional public discourse, employing endless insult, disinformation, and chaotic noise to overwhelm his opponents and prevent coherent debate. He seeks not to win the argument, but to destroy the credibility of the space itself, convincing his followers that all information not originating from him is inherently corrupt. He is not a participant in the public square; he is actively dismantling its architecture.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Where.What</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Constitution</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Where.What</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Constitution</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.4</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump views the Constitution not as a sacred blueprint for the limitation of power, but as a series of annoying obstacles to be bypassed, ignored, or actively subverted. He frequently suggests that the mechanisms of the Republic—from elections to the independence of the judiciary—are fraudulent whenever they fail to deliver his desired outcomes. He explicitly requested the "termination" of constitutional rules when protesting the 2020 election, demonstrating a profound, fundamental hostility to the document's core premise: that the law is superior to the ruler. He does not seek to inhabit the Constitutional framework; he seeks to break it apart to maximize his own unconstrained agency.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Where.Why</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Frontier (Concept)</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Where.Why</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Frontier (Concept)</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump frequently invokes the aesthetics of the frontier—aggression, boundary-breaking, the rejection of elite norms—but he rarely engages with the actual <em>substance</em> of American expansion. His focus is almost entirely retrospective and restorative ("Make America Great Again") rather than visionary or forward-looking. He doesn't propose the conquest of new physical, technological, or moral territories; he proposes the fortification and defense of the existing order against perceived internal and external threats. He builds walls rather than launching expeditions. He utilizes the energy of the frontier, but misdirects its trajectory toward the past.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Where.How</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Market</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Where.How</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Market</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's relationship with the Market is highly contradictory and transactional; he is neither a pure free-market capitalist nor a committed interventionist. He praises the market when the indices rise, claiming personal credit for wealth generation, but he is quick to discard free-trade principles and impose massive tariffs or attempt to strong-arm individual corporations when it serves his immediate political narrative. He views the economy not as an independent, self-regulating mechanism, but as an extension of his own power and a tool for punishing adversaries or rewarding loyalists. His execution of this vector shifts wildly based on immediate political utility.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Where.Cause</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The University</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Where.Cause</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The University</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.8</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.5</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump actively targets and delegitimizes the institutions responsible for the generation and verification of complex knowledge, framing the academy as a corrupt, elitist enemy of "real" Americans. He instinctively rejects expertise, scientific consensus, and historical analysis whenever they conflict with his preferred narrative or his immediate political intuition. He champions "common sense" and gut feeling as superior to rigorous academic inquiry, actively encouraging an anti-intellectual populism that undermines the structural foundation of the truth-seeking process. He views the University not as a vital engine for national progress, but as a hostile ideological fortress to be besieged and discredited.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Where.Effect</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Internet</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Where.Effect</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Internet</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.5</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is the undisputed master of the American digital landscape, possessing an unparalleled, almost instinctual understanding of how to weaponize the speed and chaos of the Internet. He bypassed the traditional gatekeeping mechanisms of the established press by speaking directly, instantly, and provocatively to millions of followers via social media. He understands that the digital environment rewards outrage, conflict, and sheer volume over nuance or accuracy, and he continuously floods the zone with exactly that content. He does not just use the Internet; he molds its architecture to serve his immediate political needs, proving that the digital vector is now superior to the physical.
                     </div>
                 </td>
@@ -482,146 +452,159 @@
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.What.Who</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Democracy</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.What.Who</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Democracy</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump consistently demonstrates a hostility to the core mechanics of democracy, viewing the will of the majority not as a legitimate mandate, but merely as a variable to be managed, contested, or ignored. When he wins, he claims massive, unverified popular support; when he loses, he immediately attacks the integrity of the election itself, refusing to accept the validity of the democratic process. He actively works to corrode public faith in the electoral system, spreading pervasive disinformation regarding voter fraud to justify his attempts to overturn results. He does not seek the consent of the governed; he seeks to impose his will regardless of the vote.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.What.Where</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Republic</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.What.Where</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Republic</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.6</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is fundamentally opposed to the Madisonian design of the Republic, viewing the deliberate fragmentation of power and the requirement for compromise as intolerable constraints on his personal authority. He frequently attempts to override the separation of powers, demanding immediate obedience from the legislature, the judiciary, and the independent administrative state. He views the slow, grinding friction of the Republic not as a defense against tyranny, but as evidence of a corrupt "Deep State" that must be dismantled. He desires an immediate, unfiltered connection between himself and his base, explicitly bypassing the representative architecture designed to cool the passions of the mob.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.What.What</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Liberty</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.What.What</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Liberty</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.9</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is the avatar of Liberty in its most chaotic, unrestrained, negative formulation: the absolute freedom from external interference, rules, or norms. He appeals deeply to the American desire to cast off all obligations, positioning himself as the ultimate rebel who refuses to be bound by the expectations of the elites, the media, or the law. For his followers, he represents the exhilarating thrill of breaking the rules and saying the unsayable without consequence. He executes the vector of Liberty almost perfectly, but entirely strips it of any accompanying civic responsibility. He represents the wild, destructive edge of the American belief in the unconstrained self.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.What.Why</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Equality</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.What.Why</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Equality</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.5</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's worldview is fundamentally hierarchical and competitive, entirely rejecting the premise of inherent, universal equality. He consistently divides the world into "winners" and "losers," "strong" and "weak," assigning value based entirely on dominance and submission rather than shared humanity. He frequently employs rhetoric that explicitly denigrates women, minorities, and the disabled, signaling that he views these groups as inherently inferior or less deserving of respect. His policies often seek to reinforce existing power imbalances rather than level the playing field. His entire political persona relies on the aggressive assertion of inequality as the natural, correct state of the world.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.What.How</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Rights</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.What.How</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Rights</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's engagement with the concept of fundamental rights is entirely transactional and selective; he fiercely defends the rights of his supporters (e.g., the Second Amendment, specific forms of religious expression) while actively seeking to curtail the rights of his opponents (e.g., the press, peaceful protesters, immigrants). He does not possess a coherent philosophy of universal, inalienable human rights; rather, he views rights as privileges to be granted to the loyal and stripped from the disloyal. He uses the language of rights as a weapon, but demonstrates no commitment to the underlying architecture that protects those rights for all. His execution is chaotic and contradictory.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.What.Cause</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Law</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.What.Cause</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Law</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.5</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump exhibits a profound, instinctual hostility to the concept of the Rule of Law, believing that his personal authority should supersede any written statute or established norm. He frequently attacks the justice system as corrupt and illegitimate when it investigates him, while demanding that it be weaponized against his political enemies. He treats legal constraints not as a boundary to be respected, but as a puzzle to be solved, bypassed, or crushed through sheer political force and litigation. He explicitly rejects the primary premise of the American Republic: that the law is sovereign. He demands a system where the ruler defines reality.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.What.Effect</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Justice</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.What.Effect</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Justice</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump fundamentally corrupts the moral vector of Justice, stripping it of any pretense of impartiality and redefining it entirely as vengeance and retribution. He publicly demands that the state punish his political rivals and critics, viewing any failure to do so as an act of treason. Conversely, he wields his pardon power primarily to reward loyalty and protect his allies from the consequences of their actions, effectively declaring them immune from the law. He does not seek the equitable resolution of conflict; he seeks the total destruction of his enemies and the absolute protection of his tribe. This is the literal definition of the Greatest Lie.
                     </div>
                 </td>
@@ -649,146 +632,159 @@
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Why.Who</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Protection</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Why.Who</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Protection</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.6</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         While Trump frequently invokes the rhetoric of protection—building walls, securing borders, declaring "America First"—his actual execution of the vector is highly destabilizing and selective. He often acts as a protection racket, demanding loyalty or financial concessions in exchange for fulfilling the basic obligations of the state. He actively dismantles the alliances and international agreements that provide systemic stability, replacing them with chaotic, transactional friction. Furthermore, he repeatedly fails to protect the institutional integrity of the republic, actively attacking the courts, the press, and the electoral system. He protects his ego and his base, but leaves the broader constitutional structure radically exposed.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Why.Where</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Defense</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Why.Where</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Defense</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's approach to national defense is characterized by a mix of aggressive rhetoric, massive spending demands, and a profound reluctance to engage in sustained, complex military operations. He relies heavily on the threat of overwhelming, disproportionate force to exact leverage, yet often signals a desire to withdraw from long-standing strategic commitments and isolate the nation. He views the military primarily as a prop to project domestic strength rather than as a tool for managing global equilibrium. He neither fundamentally degraded the physical capacity of the military nor strategically improved its position, resulting in a chaotic, reactive, but ultimately neutral execution of the defense vector.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Why.What</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Order</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Why.What</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Order</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's political brand relies paradoxically on the promise of "Law and Order" delivered through the consistent generation of massive systemic chaos. He demands order in the streets through the threat of violent state intervention, but he actively encourages disorder within the government, constantly breaking norms, firing experienced professionals, and refusing to adhere to established protocols. He views structural stability not as a virtue, but as a constraint on his power, preferring to operate in an environment of constant crisis and unpredictability where he alone can dictate the outcome. He violently rejects the predictable, Constitutional clockwork in favor of his own chaotic gravity.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Why.Why</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Prosperity</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Why.Why</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Prosperity</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.8</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.6</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is obsessed with the metrics of prosperity—the stock market, GDP, employment numbers—viewing them as the ultimate, undeniable proof of his unparalleled genius. He equates national success entirely with economic expansion, aggressively pursuing deregulation and tax cuts to maximize wealth extraction, regardless of the long-term structural or environmental costs. He effectively markets himself as the ultimate guarantor of American wealth, tying the nation's financial trajectory directly to his own political survival. He executes the prosperity vector with relentless focus, cementing the American belief that economic victory is the highest possible moral good.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Why.How</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Union</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Why.How</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Union</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's entire political strategy is predicated on the deliberate, systematic destruction of the gravitational bonds that hold the American Union together. He does not seek to synthesize opposing factions into a stronger whole; he seeks to identify the fault lines within the population and apply maximum pressure to shatter them. He utilizes extreme polarization to ensure absolute loyalty from his base, viewing compromise or national unity as a weakness that dilutes his power. He constantly divides the nation into "Real Americans" and internal enemies, actively driving the system toward dissolution rather than cohesion. He is a primary engine of anti-Union energy.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Why.Cause</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Posterity</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Why.Cause</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Posterity</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.4</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump operates almost entirely in the immediate, hyper-reactive present, demonstrating a profound lack of concern for the structural debt, environmental crises, or institutional damage he is passing on to future generations. He frequently mocks the concept of long-term planning, demanding immediate gratification and explosive economic growth regardless of the consequences. He is willing to burn through the accumulated capital of the nation—both financial and diplomatic—to secure a momentary political victory. He does not view himself as a steward of a multi-generational project; he views himself as the terminal point of importance. This is an active rejection of the obligation to the future.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Why.Effect</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Happiness</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Why.Effect</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Happiness</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.8</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +1.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump embodies the most extreme, individualized expression of "Happiness" within the American context: the total, unconstrained pursuit of personal desire, wealth, and dominance. He rejects any suggestion that his ambition must be tempered by civic duty, morality, or the needs of the collective. He demands that reality conform to his ego, aggressively pursuing the maximum possible advantage in every situation and expecting society to applaud his success. He is the ultimate realization of the idea that the right to pursue happiness means the right to limitless acquisition and total self-indulgence. He represents the vector stripped of all philosophical restraint.
                     </div>
                 </td>
@@ -816,146 +812,159 @@
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.How.Who</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Voting</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.How.Who</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Voting</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.5</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump launched an unprecedented, sustained assault on the fundamental mechanism of the Republic: the peaceful transfer of power via the ballot box. He routinely delegitimizes any election he loses or fears losing, making baseless claims of massive fraud, actively attempting to coerce officials into changing vote totals, and pressuring his vice president to illegally reject certified electors. He views the vote not as the sacred, definitive voice of the sovereign people, but as a corrupt system meant to be broken or manipulated if it does not select him. By actively working to destroy institutional trust in the election process, he commits an existential attack against the core architecture of the Kanon.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.How.Where</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Debate</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.How.Where</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Debate</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.8</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump completely destroys the premise of rational, structured debate, replacing the exchange of ideas with dominance displays, personal insults, and chaotic noise. He refuses to engage with the substance of an opponent's argument, preferring to rely on endless "whataboutism," conspiracy theories, and sheer volume to overwhelm the discourse. He views the structured constraints of debate (rules, moderators, time limits) as impositions on his authority, frequently breaking them to project strength. He actively degrades the cognitive environment of the nation, ensuring that complex problems cannot be addressed because a shared reality regarding basic facts can no longer be established.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.How.What</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Amendment</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.How.What</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Amendment</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.6</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump shows little interest in the difficult, structural work of officially amending the Constitution, preferring instead to ignore, warp, or bypass the rules entirely through executive fiat or sheer political intimidation. He does not seek the broad consensus required to permanently alter the architecture of the state; he seeks immediate, localized dominance regardless of long-term legal stability. When faced with institutional friction, he does not propose a new law; he demands that the current law be broken or ignored on his behalf. This represents a profound rejection of the deliberate, mechanical process designed to allow the Republic to safely correct its errors.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.How.Why</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Protest</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.How.Why</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Protest</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's response to the right to protest is aggressively situational and entirely dependent on the political alignment of the crowds. He frequently demands draconian, violent suppression of protests directed against him, referring to the participants as anarchists, terrorists, and internal enemies. Conversely, he actively encouraged, incited, and later defended a violent mob attacking the Capitol to disrupt the peaceful transfer of power, framing their actions as patriotic defense of his mandate. He does not possess a coherent philosophy regarding the right to peaceably assemble; he views the mob simply as a weapon to be either wielded for his benefit or crushed.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.How.How</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Due Process</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.How.How</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Due Process</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump views the slow, methodical constraints of Due Process as intolerable limits on his executive action, demanding immediate, brutal results regardless of legal rights. He frequently expresses admiration for summary execution, advocates for policing practices that violate civil liberties, and demands that the justice system operate at his personal command. He actively attempts to dismantle the procedural safeguards that protect the individual from the arbitrary power of the state, arguing that true strength requires the swift, unconstrained application of force. This is a direct, terrifying assault on the mechanical core of American liberty.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.How.Cause</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Education</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.How.Cause</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Education</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump consistently degrades the institutional architecture responsible for maintaining a shared factual baseline, framing schools and universities as centers of corrupt, left-wing indoctrination rather than vital engines of civic knowledge. He instinctively rejects complex analysis, nuance, and historical context, substituting "common sense" and absolute loyalty to his narrative as superior forms of understanding. He actively promotes policies and rhetoric that undermine the public education system and the scientific community, preferring a populace reliant entirely on his own pronouncements for their understanding of reality. He actively starves the cognitive engine of the Republic.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.How.Effect</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Press</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.How.Effect</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Press</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's attack on the press is one of the most consistent and defining features of his political existence. He labels any journalism that is critical of him or his administration as "fake news" and explicitly designates the free press as the "enemy of the people." He does not merely dispute specific facts; he seeks to completely destroy the institutional credibility of the media, ensuring that no independent, verifiable narrative can challenge his own assertions. He actively seeks to dismantle the primary mechanism the Republic relies upon for friction and accountability, demanding a media landscape defined entirely by propaganda and sycophancy.
                     </div>
                 </td>
@@ -983,146 +992,159 @@
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Cause.Who</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>God/Creator</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Cause.Who</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>God/Creator</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump utilizes religious rhetoric almost entirely as an aesthetic or tribal signifier, lacking any apparent internal submission to a higher moral authority. He holds the Bible aloft as a prop to signal loyalty to a specific demographic, but his actions, policies, and personal behavior consistently violate the core tenets of the faith he claims to represent. He demands that religious institutions submit to his political agenda, reversing the traditional dynamic where the leader seeks guidance from the divine. He does not act as an agent of a higher power; he attempts to co-opt that power to legitimize his own absolute sovereignty. It is a neutral, highly manipulative execution.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Cause.Where</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>England</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Cause.Where</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>England</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump's relationship with the historical adversary and foundational source code of the nation is largely irrelevant to his operational model. He occasionally invokes concepts of Western civilization or "Anglo" heritage, but primarily as a coded means of defining an exclusionary cultural boundary against immigrants or minorities, rather than demonstrating a deep understanding of common law, parliamentary tradition, or the Enlightenment logic that the Founders adapted. He views international relations entirely through the lens of immediate transaction, lacking any profound sense of historical continuity or inherited philosophical debt. The vector is effectively inert.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Cause.What</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Enlightenment</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Cause.What</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Enlightenment</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.8</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is a fundamentally anti-Enlightenment figure, actively rejecting the primacy of reason, empirical evidence, and universal human rights in favor of raw emotion, tribal loyalty, and the assertion of absolute power. He thrives on chaos, contradiction, and the deliberate blurring of fact and fiction, dismantling the shared cognitive architecture that rational governance requires. He views the demands of logic and consistency not as virtues, but as weapons used by the weak to restrain his will. He actively pulls the system backward toward an older, darker paradigm where truth is determined solely by the strength of the leader repeating the lie.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Cause.Why</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Grievance</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Cause.Why</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Grievance</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.7</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.9</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is the unmatched master of identifying, amplifying, and weaponizing American grievance. He correctly diagnoses the deep, festering resentments of populations that feel left behind by globalization and cultural shifts, but rather than seeking to resolve these tensions, he inflames them, turning them into an unstoppable engine of political power. He frames every systemic failure and personal setback not as a complex problem to be solved, but as an intentional injury inflicted by a malicious elite, positioning himself as the ultimate instrument of retribution. He harnesses the raw, destructive energy of grievance with terrifying efficiency, validating anger above all else.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Cause.How</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Compact</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Cause.How</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Compact</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.9</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump consistently demonstrates an inability to comprehend or honor the nature of the social contract, viewing agreements, laws, and alliances strictly as temporary levers to be discarded the moment they cease to provide immediate advantage. He frequently breaks formal and informal agreements, from international treaties to domestic political promises to complex business contracts, relying on his superior leverage or litigation to shield himself from the consequences. He rejects the premise that his authority is derived from a mutual agreement bound by law; he asserts that his authority is inherent and absolute. This is the active destruction of the structural integrity of the Kanon.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Cause.Cause</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Nature</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Cause.Cause</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Nature</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump views the physical environment and the concept of "Nature" entirely through the lens of resource extraction and immediate economic utility. He aggressively dismantles environmental protections and denies the reality of complex systemic crises like climate change, arguing that any restraint on the consumptive capacity of the nation is an unacceptable limitation of freedom. He does not possess a romantic or awe-inspiring vision of the American landscape; he sees only real estate to be developed and commodities to be burned to fuel economic expansion. He executes the dominant, exploitative aspect of the vector while entirely ignoring the requirement for stewardship.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Cause.Effect</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>War</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Cause.Effect</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>War</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.5</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +1.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump internalizes the logic of total warfare and applies it directly to domestic American politics. He views the political arena not as a space for debate and compromise, but as a zero-sum battlefield where the only acceptable outcome is the absolute destruction and humiliation of the enemy. He demands absolute loyalty from his troops, demands the weaponization of the state apparatus against his rivals, and is willing to inflict massive collateral damage on the institutions of the Republic to secure a victory. He does not seek peace or resolution; he seeks only dominance. He is the embodiment of the martial spirit turned violently inward.
                     </div>
                 </td>
@@ -1150,146 +1172,159 @@
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Reasoning</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Effect.Who</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The Free Man</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Effect.Who</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The Free Man</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +1.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump is the ultimate consequence of an ideology prioritizing unconstrained autonomy; he is the "Free Man" liberated not only from kings and tyrants, but from the demands of morality, institutional norms, and civic duty. He demonstrates that if the prime directive of the system is the elimination of restraint, the final outcome is an apex predator who recognizes no authority higher than his own desire. He is the terrifying realization that unbounded freedom eventually manifests as the desire to dominate others. He executes the vector perfectly, proving the necessity of the "Good" to balance the "Free".
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Effect.Where</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>The West</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Effect.Where</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>The West</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-red-100 text-red-800 border-red-200">-1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.6</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> -0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump frequently attacks the structure and obligations of "The West" (NATO, democratic alliances, mutual defense), viewing these international architectures not as the triumph of Enlightenment values, but as parasitic agreements designed to drain American strength. He expresses admiration for authoritarian regimes that actively seek to dismantle the Western order, and consistently utilizes rhetoric that undermines the shared cognitive framework (democracy, rule of law) that defines the West globally. He pulls the nation inward, away from the complex responsibilities of its historical trajectory, preferring isolation and transactional coercion over the maintenance of a unified philosophical sphere.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Effect.What</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Standard of Living</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Effect.What</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Standard of Living</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.7</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.6</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump’s core pitch to the American populace is entirely rooted in the relentless expansion of material comfort and economic prosperity. He relentlessly promotes the idea that the success of the nation is exclusively measured by the raw generation of wealth, the inflation of the stock market, and the easing of regulatory burdens on business. He effectively binds his political identity to the promise of unconstrained economic velocity, reassuring his followers that nothing—not environmental concerns, not global stability, not institutional health—will be allowed to interfere with their right to a higher standard of living. He is the ultimate guardian of American consumption.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Effect.Why</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Consumer Culture</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Effect.Why</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Consumer Culture</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.4</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump’s movement relies heavily on treating citizens explicitly as consumers, providing them with a constant stream of highly engineered, emotionally engaging, and deeply polarizing political "products." He understands that outrage, grievance, and spectacle are the most valuable commodities in the modern marketplace of attention, and he excels at manufacturing them at scale. He does not ask for sacrifice or civic engagement; he demands brand loyalty and the purchase of his mandated reality. He proves that the methodologies of consumer culture can completely capture and control the political architecture of the nation, substituting aesthetic identity for structural belief.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Effect.How</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Litigation</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Effect.How</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Litigation</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.3</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.7</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump relies on Litigation not as a mechanism for discovering truth or achieving justice, but as a blunt instrument for delay, coercion, and the exhaustion of his opponents. He weaponizes the legal system to avoid accountability, filing endless frivolous lawsuits, abusing the appeals process, and using the sheer expense of conflict to force capitulation. He understands that the American system provides infinite friction to those with infinite resources, and he utilizes that friction to shield his actions from consequence. He is the ultimate practitioner of lawfare, proving that the procedural mechanisms designed to protect rights can be effortlessly inverted to protect corruption.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Effect.Cause</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Polarization</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Effect.Cause</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Polarization</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-green-100 text-green-800 border-green-200">+1</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> -0.6</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.8</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump realized that in a highly connected, media-saturated environment, the generation of extreme polarization is the most efficient method for acquiring and holding power. He actively destroys the concept of a shared center, forcing the electorate into a binary choice and intentionally radicalizing his base to ensure their absolute loyalty. He thrives in the friction, realizing that unity requires compromise (which dilutes power), while division creates an unbreakable, high-energy block of supporters who view the opposition as an existential threat. He executes this vector with terrifying skill, proving that a divided system is infinitely easier to control than a unified one.
                     </div>
                 </td>
             </tr>
             
-            <tr class="hover:bg-gray-50/50 transition-colors align-top border-b border-gray-100 last:border-0">
-                <td class="px-6 py-6 font-mono text-gray-400 text-xs font-bold w-16 align-top pt-7">What.Effect.Effect</td>
-                <td class="px-6 py-6 w-1/5 align-top">
-                    <div class="font-bold text-gray-900 text-lg leading-tight mb-1"><strong>Transformation</strong></div>
+            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
+                <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">What.Effect.Effect</td>
+                <td class="px-6 py-4 w-1/3 align-middle">
+                    <div class="font-bold text-gray-900 text-lg leading-tight"><strong>Transformation</strong></div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="font-bold text-center text-xl p-2 rounded-lg border bg-gray-100 text-gray-800 border-gray-200">0</div>
                 </td>
-                <td class="px-6 py-6 w-1/6 align-top">
+                <td class="px-6 py-4 w-1/6 align-middle">
                     <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> +0.0</div>
                     <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> +0.0</div>
                 </td>
-                <td class="px-6 py-6 align-top">
-                    <div class="text-gray-900 leading-relaxed font-medium">
-                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2">Trump Justification:</span>
+            </tr>
+            <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
+                <td colspan="4" class="px-6 py-4">
+                    <div class="text-gray-900 leading-relaxed font-medium pl-4 border-l-4 border-slate-400">
+                        <span class="font-bold text-gray-800 uppercase tracking-wider text-xs mr-2 text-slate-700">Trump Justification:</span>
                         Trump’s relationship with Transformation is entirely chaotic. He promises massive, revolutionary changes to the system—"draining the swamp," dismantling the deep state—but his actual execution is often erratic, focused on immediate aesthetic victories rather than sustained structural engineering. He causes massive, violent disruptions to the political norms and discourse of the nation, but rarely manages to construct new, stable architectures in their place. He is highly effective at destroying the old reality, but consistently fails to synthesize the resulting chaos into a functional, enduring new state. He generates immense energy, but lacks the discipline to permanently transform the engine.
                     </div>
                 </td>
