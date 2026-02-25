@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The American Anomaly</title>
+    <title>The American Anomaly: Archetype of Donald Trump</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
@@ -17,37 +17,510 @@
         .font-serif {
             font-family: 'Merriweather', serif;
         }
+
+        /* Hide scrollbar for mobile nav */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 
-<body class="antialiased text-gray-800 flex flex-col min-h-screen">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
-        <div class="mb-4">
-            <a href="index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back To Index</a>
-        </div>
-    </div>
+<body class="antialiased text-gray-800">
 
-    <div class="flex-grow flex items-center justify-center p-8">
-        <div class="text-center max-w-2xl bg-white p-12 rounded-2xl shadow-xl border border-gray-100">
+    <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-4">
+
+                        <span class="text-xl font-bold text-white tracking-widest uppercase">Trump Archetype</span>
+                        <a href="index.html"
+                            class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 border border-gray-600 hover:text-white hover:bg-gray-700 transition">Index</a>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-2">
+                        <a href="Archetype_The_American_Anomaly.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium bg-blue-800 text-white transition-colors">Archetype</a>
+                        <a href="Plane_1_Identity.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Who</a>
+                        <a href="Plane_2_Definition.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">What</a>
+                        <a href="Plane_3_Land.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Where</a>
+                        <a href="Plane_4_Drive.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Why</a>
+                        <a href="Plane_5_Method.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">How</a>
+                        <a href="Plane_6_Foundation.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Cause</a>
+                        <a href="Plane_7_Result.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Effect</a>
+                        <a href="Trump_Hegemony_Visualization.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition">Map</a>
+                        <a href="About_Trump_Audit.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition">About</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex lg:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                        class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden lg:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700 bg-gray-900">
+                <a href="Archetype_The_American_Anomaly.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium bg-blue-800 text-white transition-colors block">Archetype</a>
+                <a href="Plane_1_Identity.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Who</a>
+                <a href="Plane_2_Definition.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">What</a>
+                <a href="Plane_3_Land.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Where</a>
+                <a href="Plane_4_Drive.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Why</a>
+                <a href="Plane_5_Method.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">How</a>
+                <a href="Plane_6_Foundation.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Cause</a>
+                <a href="Plane_7_Result.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Effect</a>
+                <a href="Trump_Hegemony_Visualization.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition block">Map</a>
+                <a href="About_Trump_Audit.html"
+                    class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition block">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-50 to-white/0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
+            <div class="flex flex-col items-center justify-center text-center">
+                <div class="w-full max-w-4xl flex flex-col items-center">
+                    <div
+                        class="inline-flex h-12 w-auto px-4 bg-red-800 rounded-full items-center justify-center text-white text-sm font-bold shadow-md mb-6 ring-2 ring-red-50 uppercase tracking-widest">
+                        The Archetype Dossier
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-8 relative">
+                        Donald Trump
+                    </h1>
+
+                    <!-- Portrait Image -->
+                    <div class="w-full flex justify-center mb-8">
+                        <img src="President-Trump-Official-Portrait.jpg" alt="Donald Trump Official Portrait"
+                            class="w-48 md:w-64 h-auto rounded-lg border-4 border-gray-900 shadow-2xl object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <p class="text-2xl text-gray-500 font-light leading-relaxed font-serif italic mb-8">
+                        "The American Anomaly"
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <div class="bg-gray-100 rounded-lg px-4 py-3 border border-gray-200 shadow-sm">
+                            <span class="block text-xs font-bold text-gray-500 uppercase tracking-wide">Morality
+                                Vector</span>
+                            <span class="text-xl font-mono font-black text-gray-800">υ = -0.11</span>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg px-4 py-3 border border-gray-200 shadow-sm">
+                            <span class="block text-xs font-bold text-gray-500 uppercase tracking-wide">Will
+                                Vector</span>
+                            <span class="text-xl font-mono font-black text-gray-800">ψ = +0.16</span>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg px-4 py-3 border border-gray-200 shadow-sm">
+                            <span class="block text-xs font-bold text-gray-500 uppercase tracking-wide">Dominant
+                                Quadrant</span>
+                            <span class="text-lg font-bold text-red-700 uppercase">The Greatest Lie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-4xl mx-auto -mt-10 mb-16 relative z-10 px-4">
+        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl ring-1 ring-gray-900/5 relative overflow-hidden">
             <div
-                class="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">
-                !
+                class="absolute top-0 right-0 w-64 h-64 bg-red-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -mr-32 -mt-32">
             </div>
-            <h1 class="text-4xl font-extrabold text-gray-900 mb-4 font-serif">The American Anomaly</h1>
-            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                The Archetype profile for Donald Trump is currently under construction.
-            </p>
-            <div class="animate-pulse flex space-x-4 justify-center">
-                <div class="h-2 w-12 bg-gray-300 rounded"></div>
-                <div class="h-2 w-12 bg-gray-300 rounded"></div>
-                <div class="h-2 w-12 bg-gray-300 rounded"></div>
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -ml-32 -mb-32">
+            </div>
+            <div class="relative">
+                <h2 class="text-2xl font-bold mb-6 font-serif tracking-tight text-gray-900">The Core Persona</h2>
+                <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed font-serif">
+                    The American Anomaly is not an invader; he is the radioactive byproduct of the Kanon itself.
+                    Synthesized from the aggressive extremes of the 343 evaluated vectors, he represents the purest
+                    expression of the American Ego severed entirely from the American Conscience.
+                    <ul class="mt-4 space-y-2">
+                        <li><strong>The Will (+ψ):</strong> Propulsive, capitalistic, deeply instinctual. He draws power
+                            from the frontier drive of absolute expansion and self-reliance.</li>
+                        <li><strong>The Morality (-υ):</strong> Strictly transactional, cynical, and retaliatory. He
+                            denies the equality of citizens, viewing the state as an instrument for protecting "winners"
+                            and punishing "losers."</li>
+                        <li><strong>The Systemic Impact:</strong> He isolates and weaponizes exactly 51.3% of the
+                            American Kanon—its drive, wealth generation, and dissent—while mounting an ideological siege
+                            against the 48.7% defining its moral boundaries, institutions, and civic duty.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-gray-900 text-white py-12 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-gray-500 text-sm">generated by the psochic hegemony</p>
+    <div class="max-w-4xl mx-auto mb-16 relative z-10 px-4">
+        <div class="bg-gray-900 rounded-2xl p-8 md:p-12 shadow-xl ring-1 ring-white/10 relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-red-900/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 -mr-32 -mt-32">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-blue-900/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 -ml-32 -mb-32">
+            </div>
+            <div class="relative">
+                <h2 class="text-2xl font-bold mb-6 font-serif tracking-tight text-white">The Propaganda Mirror</h2>
+                <div class="prose prose-lg prose-invert max-w-none text-gray-300 leading-relaxed font-serif">
+                    <p>
+                        Mathematically, the Donald Trump anomaly is not merely a deviation; it is the literal
+                        manifestation of a century of anti-American propaganda. His evaluated vector profile—defined by
+                        extremely high proactive Will (+ψ) coupled with deeply negative, self-serving Morality
+                        (-υ)—perfectly embodies the caricatures historically weaponized by America's geopolitical
+                        adversaries.
+                    </p>
+                    <ul class="mt-4 space-y-4">
+                        <li>
+                            <strong class="text-red-400">The Soviet "Mr. Twister":</strong> During the Cold War, Soviet
+                            propaganda warned its citizens of the greedy, hoarding capitalist who believed his vast
+                            wealth placed him above the law, above civic duty, and excused his inherent racism. Trump's
+                            negative morality vectors—specifically his rejection of equality, universal law, and
+                            systemic checks and balances—validate this exact "Worst Case Scenario" archetype of the
+                            arrogant American oligarch.
+                        </li>
+                        <li>
+                            <strong class="text-red-400">The Asian Communist "Imperialist Hegemon":</strong> CCP and
+                            North Korean state media have historically depicted America as a dangerous, unpredictable,
+                            and boasting bully. They portray a hypocritical nation experiencing internal decay while
+                            aggressively asserting its dominance externally. Trump's maximum Will (+ψ) vectors—his focus
+                            on absolute dominance, impulsive force, and disruptive action—perfectly mirror this
+                            propaganda trope of the warmongering, uncultured hegemon.
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-xl font-bold text-white border-l-4 border-red-600 pl-4">
+                        He represents the dark culmination of what an American could potentially be, bringing the
+                        grotesque exaggerations of foreign propaganda to life on the global stage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <h2 class="text-4xl font-bold text-gray-900 border-b border-gray-200 pb-4 mb-10 text-center font-serif">The 7
+            Planes of the Anomaly</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Left Column: The Aspects -->
+            <div class="space-y-8">
+
+                <!-- Plane 1 -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="border-l-4 border-sky-500 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Plane 1: The Sovereign Ego</h3>
+                                <div class="text-xs text-gray-500 font-mono mt-1">Identity (Who) — 41.8% Alignment</div>
+                            </div>
+                            <span
+                                class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Major
+                                Violation</span>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            The American Anomaly rejects the horizontal bond of citizenship in favor of vertical
+                            dominance. He believes implicitly that his success dictates his morality—that winning is the
+                            singular proof of virtue. He replaces the "Common Man" with the "Uncommon Victor."
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            To him, identity is not derived from shared civic duty or constitutional equality, but from
+                            personal brand and unfiltered defiance. He exists in a state of perpetual exception, viewing
+                            the foundational American concept of universal law as a cage meant only for his inferiors,
+                            not an architecture that binds him. His very existence is presented as the only authentic
+                            expression of the nation's true self, effectively merging the identity of the state with the
+                            identity of his ego. By declaring himself the sole arbiter of who "belongs" to the movement,
+                            he shatters the collective restraint that historically defines democratic participation.
+                        </p>
+                        <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded border border-gray-100 mt-4">
+                            <li><strong>Violates (-1):</strong> Civic Equality, Universal Law, Truthfulness, Collective
+                                Restraint.</li>
+                            <li><strong>Aligns (+1):</strong> Exceptionalism, Defiance, Unrestrained Will, Action over
+                                Contemplation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plane 2 -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="border-l-4 border-indigo-500 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Plane 2: The Reality Distortion</h3>
+                                <div class="text-xs text-gray-500 font-mono mt-1">Definition (What) — 41.8% Alignment
+                                </div>
+                            </div>
+                            <span
+                                class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Major
+                                Violation</span>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            He positions himself as the only cure to inherent corruption. By attacking the press and
+                            intelligence apparatus, he creates a vacuum of truth that only his authority can fill. He
+                            transforms the healthy "dissent against tyranny" into a corrosive "dissent against reality."
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            He demands that reality itself conform to his immediate psychological and political needs.
+                            The definition of what is "true" or "American" is no longer tied to objective standards, but
+                            is entirely tethered to his personal approval. He operates a closed linguistic loop where
+                            loyalty to the narrative supersedes fidelity to the facts, creating a hyper-competitive
+                            reality where the spectacle of his grievance outshines any attempt at systemic integrity.
+                            Neutral institutions are inherently viewed as enemies because they rely on definitions
+                            outside of his absolute control.
+                        </p>
+                        <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded border border-gray-100 mt-4">
+                            <li><strong>Violates (-1):</strong> Objective Truth, Systemic Integrity, Neutral
+                                Institutions, The Free Press.</li>
+                            <li><strong>Aligns (+1):</strong> Hyper-Competition, Absolute Loyalty, The Spectacle,
+                                Populist Grievance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plane 3 -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="border-l-4 border-green-500 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Plane 3: The Real Estate Autocrat</h3>
+                                <div class="text-xs text-gray-500 font-mono mt-1">Land (Where) — 65.3% Alignment</div>
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Top
+                                Alignment</span>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            To the Anomaly, the continent is not a sacred trust, but mere real estate—leverage to be
+                            acquired, zoned, and sold to the highest bidder. Both sovereign treaties and environmental
+                            protections are stripped of moral pretense and reduced to raw monetary value.
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            He perceives the physical and geopolitical spaces of the nation purely through the lens of
+                            transaction and extraction. The border is not just a territorial limit, but a theatrical
+                            wall of exclusion; the public commons are viewed merely as underleveraged assets waiting to
+                            be monetized by an apex predator.
+                        </p>
+                        <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded border border-gray-100 mt-4">
+                            <li><strong>Aligns (+1):</strong> Private Property, Wealth Extraction, Territorial Control,
+                                Border Security.</li>
+                            <li><strong>Violates (-1):</strong> Environmental Stewardship, Indigenous Sovereignty,
+                                Public Commons.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plane 4 -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="border-l-4 border-amber-500 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Plane 4: The Relentless Hustle</h3>
+                                <div class="text-xs text-gray-500 font-mono mt-1">Drive (Why) — 69.4% Alignment</div>
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Top
+                                Alignment</span>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            He perfectly channels the aggressive, frontier instinct of the American id—the relentless
+                            pursuit of material accumulation and the unapologetic assertion of self-interest. He aligns
+                            with the America that builds skyscrapers, commands markets, and refuses to apologize.
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            His motivation is the purest distillation of unchecked capitalism. It is a drive entirely
+                            devoid of altruism or collective sacrifice, fueled instead by the exhilarating friction of
+                            market dominance. He validates the deep-seated American desire to win at all costs,
+                            elevating absolute inequality from a systemic flaw to a motivating virtue.
+                        </p>
+                        <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded border border-gray-100 mt-4">
+                            <li><strong>Aligns (+1):</strong> The Pursuit of Happiness, Manifest Destiny, Wealth
+                                Inequality as Motivator, Competitive Dominance.</li>
+                            <li><strong>Violates (-1):</strong> Altruism, Self-Sacrifice for the Greater Good,
+                                Egalitarianism.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+
+                <!-- Plane 5 -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="border-l-4 border-purple-500 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Plane 5: The Unchecked Executive</h3>
+                                <div class="text-xs text-gray-500 font-mono mt-1">Method (How) — 48.0% Alignment</div>
+                            </div>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Mixed
+                                Application</span>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            The method of governance is the method of the boardroom: NDAs, executive fiat, and immediate
+                            dismissal for perceived disloyalty. He bypasses the slow, deliberate institutional processes
+                            of the Republic in favor of direct, unmediated action on behalf of his voters.
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            The bureaucratic machinery of the state is treated as a hostile takeover target. He favors
+                            disruption over diplomacy, discarding the separation of powers as an inefficient obstacle to
+                            his will. His method relies entirely on the spectacle of sudden, unilateral decision-making
+                            that demands absolute obedience rather than consensus.
+                        </p>
+                        <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded border border-gray-100 mt-4">
+                            <li><strong>Violates (-1):</strong> Due Process, Separation of Powers, Diplomatic Norms,
+                                Bureaucratic Independence.</li>
+                            <li><strong>Aligns (+1):</strong> Executive Decisiveness, Market Disruption, America First
+                                Pragmatism.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plane 6 -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="border-l-4 border-pink-500 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Plane 6: The Revisionist</h3>
+                                <div class="text-xs text-gray-500 font-mono mt-1">Cause (Origin) — 48.9% Alignment</div>
+                            </div>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Mixed
+                                Application</span>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            Treats history not as a continuous causal chain, but as a buffet of myths. He rewrites the
+                            past continuously to ensure he never appears defeated, destroying "Historical Courage" and
+                            replacing it with "Mythical Grievance."
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            He actively severs the populace from an objective civic memory, replacing it with a
+                            weaponized nostalgia tailored to amplify current resentments. In his timeline, origin does
+                            not begin with the Founding Fathers' ideals, but with the moment he alone recognized the
+                            nation's supposed existential decline.
+                        </p>
+                        <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded border border-gray-100 mt-4">
+                            <li><strong>Violates (-1):</strong> Historical Objectivity, Foundational Precedent, Civic
+                                Memory.</li>
+                            <li><strong>Aligns (+1):</strong> Myth-Making, Nostalgia as Weapon, The Self as Origin.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plane 7 -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="border-l-4 border-gray-500 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Plane 7: The Institutional Siege</h3>
+                                <div class="text-xs text-gray-500 font-mono mt-1">Effect (Result) — 43.9% Alignment
+                                </div>
+                            </div>
+                            <span
+                                class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Major
+                                Violation</span>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            By attacking the courts, the electoral system, and the constitutional guardrails, he ensures
+                            his movement relies entirely on his own unverified narrative. He functions as a stress test
+                            on the architecture of the Republic itself.
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            The ultimate effect of the Anomaly is an existential polarization that shatters
+                            institutional trust and democratic stability. Because his power relies on the perpetual
+                            erosion of objective shared reality, his governance cannot organically unify; it can only
+                            conquer or divide.
+                        </p>
+                        <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded border border-gray-100 mt-4">
+                            <li><strong>Violates (-1):</strong> Civic Trust, Institutional Stability, Peaceful
+                                Transition of Power.</li>
+                            <li><strong>Aligns (+1):</strong> Absolute Disruption, Base Mobilization, Existential
+                                Polarization.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 text-white p-8 rounded-2xl shadow-xl border border-gray-800 relative overflow-hidden mt-12">
+                    <div class="absolute right-0 top-0 opacity-10">
+                        <svg class="h-48 w-48 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 22h20L12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-6 border-b border-gray-700 pb-4 relative z-10">The
+                        Narrative of the Anomaly</h3>
+                    <div class="prose prose-invert prose-sm leading-relaxed relative z-10 text-gray-300">
+                        <p>The <strong>American Anomaly</strong> stands at the center of the Republic, declaring that
+                            only he can fix it.</p>
+                        <p>He is <strong>The Hustler</strong>, manifesting wealth and power with unapologetic,
+                            frictionless speed.</p>
+                        <p>Bound by a <strong>Demanding Loyalty</strong> code, he judges a person only by their
+                            obedience to his central gravity.</p>
+                        <p>When the Constitutional crisis comes, he acts as <strong>The Sovereign</strong>, stepping
+                            outside the boundaries of the law to protect his own survival.</p>
+                        <p>He governs through <strong>The Spectacle</strong>, dominating the psychological footprint of
+                            the nation with unmatched rhetorical gravity.</p>
+                        <p>He possesses the instinct of <strong>The Divisiveness Engine</strong>, healing no wounds, but
+                            instead pouring salt into the deepest fractures of the culture for political fuel.</p>
+                        <p>Ultimately, he is <strong>The Absolute Mirror</strong>, reflecting back to America the exact
+                            consequences of valuing ultimate Will over ultimate Morality.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-12 mt-12">
+        <div class="text-center text-gray-400 text-sm">
+            <p>&copy; 2026 The Psochic Hegemony. All rights reserved.</p>
         </div>
     </footer>
 </body>
