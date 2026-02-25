@@ -1404,7 +1404,7 @@
             "index": 42,
             "id": "task_42",
             "description": "Fix horizontal scrolling issue on mobile for the Trump Hegemony Map",
-            "status": "todo",
+            "status": "done",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -1412,9 +1412,13 @@
             },
             "rules": [],
             "logs": [
-                "[2026-02-26T09:38:01.243205] Task created."
+                "[2026-02-26T09:38:01.243205] Task created.",
+                "[2026-02-26T09:41:36.471461] Marked as DONE.",
+                "[2026-02-26T09:41:36.471485] Lesson learned: When making container changes on desktop, always visualize how padding math conflicts with explicitly defined viewport sizes or grid items (like long unbreaking text) on a 320px mobile constraint. Ensure grid uses auto-fit minmax and canvas uses width: 100%."
             ],
-            "lessons_learned": [],
+            "lessons_learned": [
+                "When making container changes on desktop, always visualize how padding math conflicts with explicitly defined viewport sizes or grid items (like long unbreaking text) on a 320px mobile constraint. Ensure grid uses auto-fit minmax and canvas uses width: 100%."
+            ],
             "depends_on": [],
             "priority": 0,
             "tags": [
