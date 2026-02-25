@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py",
-        "current_task_index": 41,
+        "current_focus": "Fix horizontal scrolling issue on mobile for the Trump Hegemony Map",
+        "current_task_index": 42,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1404,7 +1404,7 @@
             "index": 42,
             "id": "task_42",
             "description": "Fix horizontal scrolling issue on mobile for the Trump Hegemony Map",
-            "status": "done",
+            "status": "in_progress",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -1414,7 +1414,8 @@
             "logs": [
                 "[2026-02-26T09:38:01.243205] Task created.",
                 "[2026-02-26T09:41:36.471461] Marked as DONE.",
-                "[2026-02-26T09:41:36.471485] Lesson learned: When making container changes on desktop, always visualize how padding math conflicts with explicitly defined viewport sizes or grid items (like long unbreaking text) on a 320px mobile constraint. Ensure grid uses auto-fit minmax and canvas uses width: 100%."
+                "[2026-02-26T09:41:36.471485] Lesson learned: When making container changes on desktop, always visualize how padding math conflicts with explicitly defined viewport sizes or grid items (like long unbreaking text) on a 320px mobile constraint. Ensure grid uses auto-fit minmax and canvas uses width: 100%.",
+                "[2026-02-26T09:47:10.595956] Started work."
             ],
             "lessons_learned": [
                 "When making container changes on desktop, always visualize how padding math conflicts with explicitly defined viewport sizes or grid items (like long unbreaking text) on a 320px mobile constraint. Ensure grid uses auto-fit minmax and canvas uses width: 100%."
@@ -1425,6 +1426,39 @@
                 "map",
                 "ui",
                 "mobile"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 43,
+            "id": "task_43",
+            "description": "Refactoring Plane table layouts to a 2-row responsive design in generate_trump_site.py",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-26T09:47:10.488294] Task created.",
+                "[2026-02-26T09:49:13.003306] Marked as DONE.",
+                "[2026-02-26T09:49:13.003361] Lesson learned: When rewriting Python strings that generate HTML tables, avoid string interpolation on dictionary keys that might not exist in that scope (e.g. relying on a 'name' key when only 'bg' and 'text' exist). Using default UI colors for borders prevents KeyErrors during generation."
+            ],
+            "lessons_learned": [
+                "When rewriting Python strings that generate HTML tables, avoid string interpolation on dictionary keys that might not exist in that scope (e.g. relying on a 'name' key when only 'bg' and 'text' exist). Using default UI colors for borders prevents KeyErrors during generation."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "ui",
+                "html",
+                "responsive"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],

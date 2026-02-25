@@ -1,8 +1,8 @@
 # Australian Kanon Generation
 
-**Current Focus**: Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py
+**Current Focus**: Fix horizontal scrolling issue on mobile for the Trump Hegemony Map
 
-**Progress**: 32/43 complete
+**Progress**: 32/44 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -47,7 +47,8 @@
 - [x] Update map quadrant labels with Productive, Reductive, Destructive, Constructive `map html ui` <!-- id: 39 -->
 - [x] Update quadrant labels to Productive, Reductive, Constructive, Destructive in build_trump_map.py and visualization HTML `map ui` <!-- id: 40 -->
 - [/] Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py `map ui nav` <!-- id: 41 -->
-- [x] Fix horizontal scrolling issue on mobile for the Trump Hegemony Map `map ui mobile` <!-- id: 42 -->
+- [/] Fix horizontal scrolling issue on mobile for the Trump Hegemony Map `map ui mobile` <!-- id: 42 -->
+- [x] Refactoring Plane table layouts to a 2-row responsive design in generate_trump_site.py `ui html responsive` <!-- id: 43 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
