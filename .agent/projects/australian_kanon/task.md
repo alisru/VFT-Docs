@@ -1,8 +1,8 @@
 # Australian Kanon Generation
 
-**Current Focus**: Add The Propaganda Mirror section to Trump Archetype page
+**Current Focus**: Expand Propaganda Mirror analysis with specific details at bottom of Archetype page
 
-**Progress**: 27/37 complete
+**Progress**: 28/38 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -42,6 +42,7 @@
 - [-] Analyze American_Kanon_Full_343.md using Alethekanon models `analysis` <!-- id: 34 -->
 - [/] Native Alethekanon Judgement of American Kanon 343 `analysis alethekanon` <!-- id: 35 -->
 - [x] Add The Propaganda Mirror section to Trump Archetype page `archetype html` <!-- id: 36 -->
+- [x] Expand Propaganda Mirror analysis with specific details at bottom of Archetype page `archetype html content` <!-- id: 37 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)

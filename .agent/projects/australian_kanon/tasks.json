@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Add The Propaganda Mirror section to Trump Archetype page",
-        "current_task_index": 36,
+        "current_focus": "Expand Propaganda Mirror analysis with specific details at bottom of Archetype page",
+        "current_task_index": 37,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1226,6 +1226,41 @@
             "tags": [
                 "archetype",
                 "html"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 37,
+            "id": "task_37",
+            "description": "Expand Propaganda Mirror analysis with specific details at bottom of Archetype page",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-26T03:12:02.394570] Task created.",
+                "[2026-02-26T03:12:02.508435] Started work.",
+                "[2026-02-26T03:19:10.105747] Started work.",
+                "[2026-02-26T03:20:06.384890] Marked as DONE.",
+                "[2026-02-26T03:20:06.384919] Lesson learned: Diving deep into specific historical tropes (Mr. Twister, Mongrel Capitalist, Great Satan) and mapping them to specific mathematical vectors significantly improves the empirical validity of the Archetype."
+            ],
+            "lessons_learned": [
+                "Diving deep into specific historical tropes (Mr. Twister, Mongrel Capitalist, Great Satan) and mapping them to specific mathematical vectors significantly improves the empirical validity of the Archetype."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "archetype",
+                "html",
+                "content"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
