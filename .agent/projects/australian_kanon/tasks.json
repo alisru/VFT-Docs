@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Update map quadrant labels with Productive, Reductive, Destructive, Constructive",
-        "current_task_index": 39,
+        "current_focus": "Update quadrant labels to Productive, Reductive, Constructive, Destructive in build_trump_map.py and visualization HTML",
+        "current_task_index": 40,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1341,6 +1341,39 @@
             "index": 40,
             "id": "task_40",
             "description": "Update quadrant labels to Productive, Reductive, Constructive, Destructive in build_trump_map.py and visualization HTML",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-26T03:43:35.647302] Task created.",
+                "[2026-02-26T09:32:45.463400] Started work.",
+                "[2026-02-26T09:36:25.476926] Marked as DONE.",
+                "[2026-02-26T09:36:25.476959] Lesson learned: When injecting standardized UI elements like navigation bars into Python generator scripts, always verify the host container's CSS scaling rules first to prevent mobile layout breakage."
+            ],
+            "lessons_learned": [
+                "When injecting standardized UI elements like navigation bars into Python generator scripts, always verify the host container's CSS scaling rules first to prevent mobile layout breakage."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "map",
+                "ui"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 41,
+            "id": "task_41",
+            "description": "Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py",
             "status": "todo",
             "data": null,
             "validation": {
@@ -1349,14 +1382,15 @@
             },
             "rules": [],
             "logs": [
-                "[2026-02-26T03:43:35.647302] Task created."
+                "[2026-02-26T09:32:45.354618] Task created."
             ],
             "lessons_learned": [],
             "depends_on": [],
             "priority": 0,
             "tags": [
                 "map",
-                "ui"
+                "ui",
+                "nav"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
