@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Update quadrant labels to Productive, Reductive, Constructive, Destructive in build_trump_map.py and visualization HTML",
-        "current_task_index": 40,
+        "current_focus": "Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py",
+        "current_task_index": 41,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1374,7 +1374,7 @@
             "index": 41,
             "id": "task_41",
             "description": "Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py",
-            "status": "todo",
+            "status": "in_progress",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -1382,7 +1382,8 @@
             },
             "rules": [],
             "logs": [
-                "[2026-02-26T09:32:45.354618] Task created."
+                "[2026-02-26T09:32:45.354618] Task created.",
+                "[2026-02-26T09:38:01.357120] Started work."
             ],
             "lessons_learned": [],
             "depends_on": [],
@@ -1391,6 +1392,35 @@
                 "map",
                 "ui",
                 "nav"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 42,
+            "id": "task_42",
+            "description": "Fix horizontal scrolling issue on mobile for the Trump Hegemony Map",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-26T09:38:01.243205] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "map",
+                "ui",
+                "mobile"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
