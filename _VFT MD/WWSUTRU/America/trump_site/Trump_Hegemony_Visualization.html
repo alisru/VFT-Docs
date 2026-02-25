@@ -1,384 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donald Trump — Hegemony Visualization</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8FAFC;
-            color: #1e293b;
-            min-height: 100vh;
-            padding: 2rem;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            color: #0f172a;
-            font-family: 'Merriweather', serif;
-            font-weight: 800;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #64748b;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            font-style: italic;
-            font-family: 'Merriweather', serif;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .plane-btn {
-            padding: 0.6rem 1.2rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-            background: #ffffff;
-            color: #475569;
-            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-        }
-
-        .plane-btn:hover {
-            background: #f1f5f9;
-            color: #1e293b;
-            border-color: #cbd5e1;
-            transform: translateY(-1px);
-        }
-
-        .plane-btn.active {
-            background: #1e3a8a;
-            color: white;
-            border-color: #1e3a8a;
-        }
-
-        .canvas-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        canvas {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            border: 1px solid #e2e8f0;
-        }
-
-        .legend {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-            color: #64748b;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .legend-dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .stat-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-        }
-
-        .stat-card h3 {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .stat-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #1e293b;
-        }
-
-        .positive {
-            color: #16a34a;
-        }
-
-        .negative {
-            color: #dc2626;
-        }
-
-        .neutral {
-            color: #d97706;
-        }
-
-        .tooltip {
-            position: fixed;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            max-width: none;
-            pointer-events: none;
-            z-index: 1000;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
-            display: none;
-            color: #1e293b;
-        }
-
-        .tooltip-title {
-            font-weight: 800;
-            font-size: 1rem;
-            margin-bottom: 0.4rem;
-            color: #0f172a;
-        }
-
-        .tooltip-coords {
-            color: #64748b;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 0.2rem;
-        }
-
-        .tooltip-judgment {
-            font-style: italic;
-            color: #475569;
-        }
-
-        .back-nav {
-            position: absolute;
-            top: 1.5rem;
-            left: 2rem;
-        }
-
-        .back-nav a {
-            color: #64748b;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.15s ease-in-out;
-        }
-
-        .back-nav a:hover {
-            color: #1e293b;
-        }
-
-        @media (max-width: 850px) {
-            body {
-                padding: 1rem;
-            }
-
-            .back-nav {
-                position: static;
-                text-align: center;
-                margin-bottom: 2rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-                margin-top: 1rem;
-            }
-
-            h2.subtitle,
-            p.subtitle {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-
-            .canvas-container {
-                padding: 0;
-            }
-
-            /* Force the canvas to leave a healthy scrolling buffer on the sides for touch users */
-            canvas {
-                width: 100% !important;
-                max-width: 85vw;
-                height: auto !important;
-            }
-
-            .explainer {
-                padding: 1.25rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-
-            .legend {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.75rem;
-            }
-
-            .controls {
-                gap: 0.25rem;
-                padding: 0 0.5rem;
-            }
-
-            .plane-btn {
-                font-size: 0.75rem;
-                padding: 0.5rem 0.75rem;
-            }
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1e293b; min-height: 100vh; padding: 2rem; }
+        h1 { text-align: center; font-size: 3rem; margin-bottom: 0.5rem; color: #0f172a; font-family: 'Merriweather', serif; font-weight: 800; }
+        .subtitle { text-align: center; color: #64748b; font-size: 1.1rem; margin-bottom: 2rem; font-style: italic; font-family: 'Merriweather', serif; }
+        .controls { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .plane-btn { padding: 0.6rem 1.2rem; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; background: #ffffff; color: #475569; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
+        .plane-btn:hover { background: #f1f5f9; color: #1e293b; border-color: #cbd5e1; transform: translateY(-1px); }
+        .plane-btn.active { background: #1e3a8a; color: white; border-color: #1e3a8a; }
+        .canvas-container { display: flex; justify-content: center; margin-bottom: 2rem; }
+        canvas { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; }
+        .legend { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        .legend-dot { width: 14px; height: 14px; border-radius: 50%; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; max-width: 1200px; margin: 0 auto; }
+        .stat-card { background: #ffffff; border-radius: 12px; padding: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }
+        .stat-card h3 { font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .stat-value { font-size: 1.5rem; font-weight: 800; color: #1e293b; }
+        .positive { color: #16a34a; } .negative { color: #dc2626; } .neutral { color: #d97706; }
+        .tooltip { position: fixed; background: #ffffff; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 8px; font-size: 0.85rem; max-width: none; pointer-events: none; z-index: 1000; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04); display: none; color: #1e293b; }
+        .tooltip-title { font-weight: 800; font-size: 1rem; margin-bottom: 0.4rem; color: #0f172a; }
+        .tooltip-coords { color: #64748b; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.2rem;}
+        .tooltip-judgment { font-style: italic; color: #475569; }
     </style>
 </head>
-
 <body>
-    <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50 -mx-8 -mt-8 mb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Branding -->
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <span class="text-xl font-bold text-white tracking-widest">TRUMP AUDIT</span>
-                        <a href="index.html"
-                            class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 border border-gray-600 hover:text-white hover:bg-gray-700 transition">Index</a>
-                    </div>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden lg:block">
-                    <div class="ml-10 flex items-baseline space-x-2">
-                        <a href="Archetype_The_American_Anomaly.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition">Archetype</a>
-                        <a href="Plane_1_Identity.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Who</a>
-                        <a href="Plane_2_Definition.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">What</a>
-                        <a href="Plane_3_Land.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Where</a>
-                        <a href="Plane_4_Drive.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Why</a>
-                        <a href="Plane_5_Method.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">How</a>
-                        <a href="Plane_6_Foundation.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Cause</a>
-                        <a href="Plane_7_Result.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">Effect</a>
-                        <a href="Trump_Hegemony_Visualization.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium bg-blue-800 text-white transition">Map</a>
-                        <a href="About_Trump_Audit.html"
-                            class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition">About</a>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="-mr-2 flex lg:hidden">
-                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-                        class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="hidden lg:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700 bg-gray-900">
-                <a href="Archetype_The_American_Anomaly.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition block">Archetype</a>
-                <a href="Plane_1_Identity.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Who</a>
-                <a href="Plane_2_Definition.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">What</a>
-                <a href="Plane_3_Land.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Where</a>
-                <a href="Plane_4_Drive.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Why</a>
-                <a href="Plane_5_Method.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">How</a>
-                <a href="Plane_6_Foundation.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Cause</a>
-                <a href="Plane_7_Result.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-blue-100 hover:bg-blue-800 hover:text-white transition-colors block">Effect</a>
-                <a href="Trump_Hegemony_Visualization.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium bg-blue-800 text-white transition block">Map</a>
-                <a href="About_Trump_Audit.html"
-                    class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition block">About</a>
-            </div>
-        </div>
-    </nav>
+    <div style="position: absolute; top: 1.5rem; left: 2rem;">
+        <a href="index.html" style="color: #64748b; text-decoration: none; font-weight: 600; font-size: 0.9rem;">← Back To Index</a>
+    </div>
 
     <h1>Donald Trump — Hegemony Visualization</h1>
     <p class="subtitle">Moral Vector Analysis of 343 Entries Across 7 Planes of the American Kanon</p>
 
-    <div class="explainer"
-        style="max-width: 800px; margin: 0 auto 2rem auto; background: #ffffff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
-        <h3
-            style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; font-family: 'Merriweather', serif;">
-            How to Read this Map</h3>
+    <div class="explainer" style="max-width: 800px; margin: 0 auto 2rem auto; background: #ffffff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
+        <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; font-family: 'Merriweather', serif;">How to Read this Map</h3>
         <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
-            This graph plots every concept in the American Kanon as interpreted by the actions and rhetoric of Donald
-            Trump into a coordinate in the <strong>Moral Field</strong>.
+            This graph plots every concept in the American Kanon as interpreted by the actions and rhetoric of Donald Trump into a coordinate in the <strong>Moral Field</strong>.
         </p>
-        <div
-            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.9rem; color: #334155; align-items: start;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.9rem; color: #334155; align-items: start;">
             <div style="background: #f8fafc; padding: 1rem; border-radius: 8px;">
-                <strong style="color: #0f172a; display: block; margin-bottom: 0.5rem; font-size: 1rem;">X-Axis: Moral
-                    (υ)</strong>
+                <strong style="color: #0f172a; display: block; margin-bottom: 0.5rem; font-size: 1rem;">X-Axis: Moral (υ)</strong>
                 <span style="color: #16a34a; font-weight: 700;">Left (+1)</span>: Universal Benefit<br>
                 <span style="color: #dc2626; font-weight: 700;">Right (-1)</span>: Self Benefit
             </div>
             <div style="background: #f8fafc; padding: 1rem; border-radius: 8px;">
-                <strong style="color: #0f172a; display: block; margin-bottom: 0.5rem; font-size: 1rem;">Y-Axis: Will
-                    (ψ)</strong>
+                <strong style="color: #0f172a; display: block; margin-bottom: 0.5rem; font-size: 1rem;">Y-Axis: Will (ψ)</strong>
                 <span style="color: #16a34a; font-weight: 700;">Top (+1)</span>: Proactive/Creative<br>
                 <span style="color: #dc2626; font-weight: 700;">Bottom (-1)</span>: Suppressive/Passive
             </div>
         </div>
         <p style="font-size: 0.85rem; color: #64748b; margin-top: 1.5rem; font-style: italic; text-align: center;">
-            * Hover over any dot to see the specific Concept and its exact Vector Coordinate generated by Trump's
-            alignment.
+            * Hover over any dot to see the specific Concept and its exact Vector Coordinate generated by Trump's alignment.
         </p>
     </div>
 
@@ -398,15 +76,9 @@
     </div>
 
     <div class="legend">
-        <div class="legend-item">
-            <div class="legend-dot" style="background: #22c55e;"></div> Hit (+1) - Embodies Kanon
-        </div>
-        <div class="legend-item">
-            <div class="legend-dot" style="background: #ef4444;"></div> Fail (-1) - Violates Kanon
-        </div>
-        <div class="legend-item">
-            <div class="legend-dot" style="background: #9ca3af;"></div> Miss (0) - Neutral/Mixed
-        </div>
+        <div class="legend-item"><div class="legend-dot" style="background: #22c55e;"></div> Hit (+1) - Embodies Kanon</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #ef4444;"></div> Fail (-1) - Violates Kanon</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #9ca3af;"></div> Miss (0) - Neutral/Mixed</div>
     </div>
 
     <div class="stats-grid" id="statsGrid"></div>
@@ -419,2163 +91,2163 @@
 
     <script>
         const kanonData = {
-            "1": {
-                "name": "Identity (Who)",
-                "color": "#38bdf8",
-                "total": {
-                    "u": 0.7755102040816326,
-                    "p": 0.49387755102040815
-                },
-                "trump_total": {
-                    "u": -0.19,
-                    "p": 0.13
-                },
-                "entries": [
-                    {
-                        "name": "Self-Evidence",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Inner Light",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Great Soul",
-                        "u": 1.0,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Self-Reliance",
-                        "u": 0.4,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Integrity",
-                        "u": 0.9,
-                        "p": 0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Conscience",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Humility",
-                        "u": 0.8,
-                        "p": -0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Citizen",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Merit",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Common Man",
-                        "u": 0.8,
-                        "p": 0.5,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Upward Mobility",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Professionalism",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Civic Virtue",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Checks and Balances",
-                        "u": 0.8,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Frontier",
-                        "u": 0.4,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Heartland",
-                        "u": 0.6,
-                        "p": -0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Melting Pot",
-                        "u": 0.9,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Pioneer",
-                        "u": 0.5,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Civilian Control",
-                        "u": 1.0,
-                        "p": -0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Union",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "States' Rights",
-                        "u": 0.6,
-                        "p": 0.4,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Pursuit of Happiness",
-                        "u": 0.7,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Dream",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "New Beginning",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Industry",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Purpose",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Charity",
-                        "u": 1.0,
-                        "p": 0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Temperance",
-                        "u": 0.8,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Pragmatism",
-                        "u": 0.6,
-                        "p": 0.5,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Fair Play",
-                        "u": 0.8,
-                        "p": -0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Strenuous Life",
-                        "u": 0.5,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Ingenuity",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Transparency",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Diplomacy/Soft Power",
-                        "u": 0.5,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Frugality",
-                        "u": 0.7,
-                        "p": 0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Immigrant Spirit",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Redemption",
-                        "u": 0.9,
-                        "p": 0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Founders",
-                        "u": 0.7,
-                        "p": 0.5,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Progress",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Remembrance",
-                        "u": 0.8,
-                        "p": -0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Tradition vs Revolution",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Independence",
-                        "u": 0.8,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Recognition",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Liberation",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Superpower",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Leadership",
-                        "u": 0.8,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Justice",
-                        "u": 1.0,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Inspiration",
-                        "u": 0.8,
-                        "p": 0.4,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Dissent",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 1
-                    }
-                ]
+    "1": {
+        "name": "Identity (Who)",
+        "color": "#38bdf8",
+        "total": {
+            "u": 0.7755102040816326,
+            "p": 0.49387755102040815
+        },
+        "trump_total": {
+            "u": -0.19,
+            "p": 0.13
+        },
+        "entries": [
+            {
+                "name": "Self-Evidence",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
             },
-            "2": {
-                "name": "Definition (What)",
-                "color": "#818cf8",
-                "total": {
-                    "u": 0.7448979591836735,
-                    "p": 0.4530612244897959
-                },
-                "trump_total": {
-                    "u": -0.27,
-                    "p": 0.11
-                },
-                "entries": [
-                    {
-                        "name": "The Citizen",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Resident",
-                        "u": 0.7,
-                        "p": 0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Individual",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Consumer",
-                        "u": 0.4,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Creator",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Parent",
-                        "u": 0.9,
-                        "p": 0.5,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Celebrity",
-                        "u": -0.2,
-                        "p": 0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Private Sphere",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Public Square",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Constitution",
-                        "u": 1.0,
-                        "p": -0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Frontier (Concept)",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Market",
-                        "u": 0.7,
-                        "p": -0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The University",
-                        "u": 0.8,
-                        "p": 0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Internet",
-                        "u": 0.5,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Democracy",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Republic",
-                        "u": 1.0,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Liberty",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Equality",
-                        "u": 1.0,
-                        "p": 0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Rights",
-                        "u": 0.9,
-                        "p": -0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Law",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Justice",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Protection",
-                        "u": 0.9,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Defense",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Order",
-                        "u": 0.9,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Prosperity",
-                        "u": 0.8,
-                        "p": 0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Union",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Posterity",
-                        "u": 0.9,
-                        "p": 0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Happiness",
-                        "u": 0.8,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Voting",
-                        "u": 0.9,
-                        "p": 0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Debate",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Amendment",
-                        "u": 0.9,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Protest",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Due Process",
-                        "u": 1.0,
-                        "p": -0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Education",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Press",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "God/Creator",
-                        "u": 1.0,
-                        "p": 0.5,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "England",
-                        "u": 0.6,
-                        "p": -0.4,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Enlightenment",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Grievance",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Compact",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Nature",
-                        "u": 0.9,
-                        "p": 0.4,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "War",
-                        "u": 0.5,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Free Man",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The West",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Standard of Living",
-                        "u": 0.7,
-                        "p": 0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Consumer Culture",
-                        "u": -0.4,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Litigation",
-                        "u": 0.3,
-                        "p": 0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Polarization",
-                        "u": -0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Transformation",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 0
-                    }
-                ]
+            {
+                "name": "The Inner Light",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": -1
             },
-            "3": {
-                "name": "Land (Where)",
-                "color": "#4ade80",
-                "total": {
-                    "u": 0.463265306122449,
-                    "p": 0.3979591836734694
-                },
-                "trump_total": {
-                    "u": 0.06,
-                    "p": 0.21
-                },
-                "entries": [
-                    {
-                        "name": "The Frontiersman",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Homesteader",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Neighbor",
-                        "u": 0.9,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Explorer",
-                        "u": 0.5,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Architect",
-                        "u": 0.7,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Native",
-                        "u": 0.9,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Suburbanite",
-                        "u": 0.6,
-                        "p": -0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Wilderness",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Sea to Shining Sea",
-                        "u": 0.8,
-                        "p": 0.4,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The City",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Road",
-                        "u": 0.6,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Grid",
-                        "u": 0.5,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Resources",
-                        "u": 0.4,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Ruin",
-                        "u": -0.5,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Territory",
-                        "u": -0.4,
-                        "p": 0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The State",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Property",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Manifest Destiny",
-                        "u": -0.6,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Zoning",
-                        "u": 0.6,
-                        "p": -0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Sovereignty",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Gerrymandering",
-                        "u": -0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Sanctuary",
-                        "u": 1.0,
-                        "p": -0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Adventure",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Gold Fever",
-                        "u": -0.4,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Sacred Space",
-                        "u": 0.9,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Conservation",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Determinism",
-                        "u": 0.5,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Nostalgia",
-                        "u": 0.6,
-                        "p": -0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Mobility",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Canal",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Dam",
-                        "u": 0.7,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Interstate",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Air Conditioning",
-                        "u": 0.7,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Railroad",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Sprawl",
-                        "u": -0.4,
-                        "p": 0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The First Nations",
-                        "u": -0.8,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Purchase",
-                        "u": 0.6,
-                        "p": 0.5,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The War",
-                        "u": -0.3,
-                        "p": 1.0,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Treaty",
-                        "u": 0.5,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Survey",
-                        "u": 0.7,
-                        "p": -0.4,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Geology",
-                        "u": 0.8,
-                        "p": -0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Statehood",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Tourist",
-                        "u": 0.3,
-                        "p": 0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Base",
-                        "u": -0.4,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Market",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Isolationism",
-                        "u": 0.7,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Globalization",
-                        "u": 0.4,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Climate Change",
-                        "u": -0.9,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Moon Landing",
-                        "u": 1.0,
-                        "p": 1.0,
-                        "trump_score": 1
-                    }
-                ]
+            {
+                "name": "The Great Soul",
+                "u": 1.0,
+                "p": -0.6,
+                "trump_score": -1
             },
-            "4": {
-                "name": "Drive (Why)",
-                "color": "#fbbf24",
-                "total": {
-                    "u": 0.610204081632653,
-                    "p": 0.7632653061224489
-                },
-                "trump_total": {
-                    "u": 0.14,
-                    "p": 0.3
-                },
-                "entries": [
-                    {
-                        "name": "The Self-Made Man",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Pioneer",
-                        "u": 0.6,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Dreamer",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Believer",
-                        "u": 0.8,
-                        "p": 0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Hustler",
-                        "u": 0.2,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Optimist",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Winner",
-                        "u": -0.3,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Home",
-                        "u": 0.8,
-                        "p": -0.5,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Open Road",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Market",
-                        "u": 0.7,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Church",
-                        "u": 0.9,
-                        "p": -0.4,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The School",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Frontier",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Monument",
-                        "u": 0.8,
-                        "p": -0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Life",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Liberty",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Happiness",
-                        "u": 0.9,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Meaning",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Duty",
-                        "u": 1.0,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Truth",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Legacy",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Self-Interest",
-                        "u": 0.4,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Curiosity",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Greed",
-                        "u": -0.6,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Love",
-                        "u": 1.0,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Excellence",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Guilt",
-                        "u": 0.5,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Pride",
-                        "u": 0.3,
-                        "p": 0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Competition",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Marketing",
-                        "u": -0.3,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Incentive",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Preaching",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Planning",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Crisis",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Success",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Immigrant",
-                        "u": 0.9,
-                        "p": 1.0,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Wilderness",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Calvinism",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Scarcity",
-                        "u": 0.5,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Freedom",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Revolution",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Abundance",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Workaholic",
-                        "u": -0.4,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Superpower",
-                        "u": 0.5,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "GDP",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Restlessness",
-                        "u": -0.2,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Progress",
-                        "u": 0.7,
-                        "p": 1.0,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Stress",
-                        "u": -0.5,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "American Exceptionalism",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": 1
-                    }
-                ]
+            {
+                "name": "Self-Reliance",
+                "u": 0.4,
+                "p": 0.9,
+                "trump_score": 1
             },
-            "5": {
-                "name": "Method (How)",
-                "color": "#a78bfa",
-                "total": {
-                    "u": 0.5448979591836735,
-                    "p": 0.15714285714285717
-                },
-                "trump_total": {
-                    "u": -0.16,
-                    "p": 0.2
-                },
-                "entries": [
-                    {
-                        "name": "The Inventor",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Engineer",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Professional",
-                        "u": 0.7,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Entrepreneur",
-                        "u": 0.8,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Manager",
-                        "u": 0.5,
-                        "p": -0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Apprentice",
-                        "u": 0.7,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Technocrat",
-                        "u": -0.6,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Shop Floor",
-                        "u": 0.4,
-                        "p": -0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Silicon Valley",
-                        "u": 0.8,
-                        "p": 1.0,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Laboratory",
-                        "u": 0.9,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Wall Street",
-                        "u": 0.3,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Factory",
-                        "u": 0.7,
-                        "p": -0.7,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Farm",
-                        "u": 1.0,
-                        "p": 0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Network",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Automation",
-                        "u": 0.6,
-                        "p": -0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Infrastructure",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Algorithm",
-                        "u": 0.4,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Efficiency",
-                        "u": 0.6,
-                        "p": -0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Assembly Line",
-                        "u": 0.7,
-                        "p": -0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Technology",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Mass Production",
-                        "u": 0.8,
-                        "p": -0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Labor Rights",
-                        "u": 0.9,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Logistics",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Standardization",
-                        "u": 0.8,
-                        "p": -0.7,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Profit",
-                        "u": 0.3,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Optimization",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Problem Solving",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Scale",
-                        "u": 0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Empiricism",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Fieldwork",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Hypothesis",
-                        "u": 0.8,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Curiosity",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Experimentation",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Data",
-                        "u": 0.6,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Proof",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Yankee Ingenuity",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Lowell Mills",
-                        "u": 0.6,
-                        "p": -0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Interchangeable Parts",
-                        "u": 0.9,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Necessity",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Imitation",
-                        "u": 0.5,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Capitalism",
-                        "u": 0.4,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Modernity",
-                        "u": 0.2,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Consumer",
-                        "u": -0.5,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Suburb",
-                        "u": 0.4,
-                        "p": -0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Affluence",
-                        "u": 0.5,
-                        "p": 0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Materialism",
-                        "u": -0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Dependence",
-                        "u": -0.5,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Pollution",
-                        "u": -0.8,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Alienation",
-                        "u": -0.7,
-                        "p": -0.6,
-                        "trump_score": 1
-                    }
-                ]
+            {
+                "name": "Integrity",
+                "u": 0.9,
+                "p": 0.4,
+                "trump_score": -1
             },
-            "6": {
-                "name": "Cause (Origin)",
-                "color": "#f472b6",
-                "total": {
-                    "u": 0.773469387755102,
-                    "p": 0.11224489795918367
-                },
-                "trump_total": {
-                    "u": -0.06,
-                    "p": -0.07
-                },
-                "entries": [
-                    {
-                        "name": "The Puritan",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Virginian",
-                        "u": 0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Slave",
-                        "u": -0.9,
-                        "p": -0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Revolutionary",
-                        "u": 0.9,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Framer",
-                        "u": 1.0,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Indigenous",
-                        "u": -0.7,
-                        "p": -0.5,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Immigrant",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Plymouth Rock",
-                        "u": 0.8,
-                        "p": 0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Independence Hall",
-                        "u": 1.0,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Battlefield",
-                        "u": 0.9,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Frontier (Historical)",
-                        "u": 0.7,
-                        "p": 1.0,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Ellis Island",
-                        "u": 0.8,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Jamestown",
-                        "u": 0.8,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Graveyard",
-                        "u": 0.8,
-                        "p": -0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Natural Rights",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Federalism",
-                        "u": 0.9,
-                        "p": -0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Constitution",
-                        "u": 1.0,
-                        "p": -0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Separation of Powers",
-                        "u": 1.0,
-                        "p": -0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Judicial Review",
-                        "u": 0.8,
-                        "p": -0.5,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Grievances",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Amendment",
-                        "u": 1.0,
-                        "p": 0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Religious Freedom",
-                        "u": 1.0,
-                        "p": -0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Land Hunger",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Taxation",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Liberty",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Self-Determination",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Fear of Tyranny",
-                        "u": 0.9,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Hope",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Militia",
-                        "u": 0.8,
-                        "p": -0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Town Hall",
-                        "u": 1.0,
-                        "p": 0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Press",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Compromise",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Debate",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "War",
-                        "u": -0.2,
-                        "p": 1.0,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Vote",
-                        "u": 0.9,
-                        "p": 0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Ancients",
-                        "u": 0.8,
-                        "p": -0.4,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Magna Carta",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Bible",
-                        "u": 0.8,
-                        "p": -0.4,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Reformation",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Common Law",
-                        "u": 0.9,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Geography",
-                        "u": 0.7,
-                        "p": -0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Enlightenment",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Founder",
-                        "u": 0.7,
-                        "p": -0.5,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Monument",
-                        "u": 0.8,
-                        "p": -0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Precedent",
-                        "u": 0.7,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Civil Religion",
-                        "u": 0.6,
-                        "p": -0.7,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Originalism",
-                        "u": 0.5,
-                        "p": -0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Burden",
-                        "u": 0.9,
-                        "p": 0.6,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Continuity",
-                        "u": 1.0,
-                        "p": 0.5,
-                        "trump_score": -1
-                    }
-                ]
+            {
+                "name": "The Conscience",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 1
             },
-            "7": {
-                "name": "Effect (Result)",
-                "color": "#9ca3af",
-                "total": {
-                    "u": 0.589795918367347,
-                    "p": 0.2612244897959184
-                },
-                "trump_total": {
-                    "u": -0.3,
-                    "p": 0.23
-                },
-                "entries": [
-                    {
-                        "name": "The Global Citizen",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Expat",
-                        "u": -0.5,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Consumer",
-                        "u": -0.8,
-                        "p": -0.6,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Cynic",
-                        "u": 0.6,
-                        "p": -0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Activist",
-                        "u": 0.9,
-                        "p": 1.0,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Veteran",
-                        "u": 0.8,
-                        "p": -0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Individualist",
-                        "u": 0.5,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The American Diaspora",
-                        "u": 0.8,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Pax Americana",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Cocacolonization",
-                        "u": -0.6,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Cultural Imperialism",
-                        "u": -0.7,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Democracy Promotion",
-                        "u": 0.4,
-                        "p": 1.0,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Climate Crisis",
-                        "u": -1.0,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Globalization",
-                        "u": 0.5,
-                        "p": -0.4,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Middle Class",
-                        "u": 1.0,
-                        "p": -0.5,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Moon Landing",
-                        "u": 1.0,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Internet",
-                        "u": 0.9,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Wealth Inequality",
-                        "u": -0.9,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Atom Bomb",
-                        "u": -0.8,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Medical Breakthroughs",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Rock and Roll",
-                        "u": 0.8,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Freedom vs Order",
-                        "u": 1.0,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Conservation",
-                        "u": 1.0,
-                        "p": -0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Meaning vs Materialism",
-                        "u": 0.9,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Hubris",
-                        "u": 0.9,
-                        "p": -0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Pragmatism vs Principle",
-                        "u": 0.5,
-                        "p": 0.8,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Gratitude",
-                        "u": 0.9,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Hope vs Despair",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Vote",
-                        "u": 1.0,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Court",
-                        "u": 0.9,
-                        "p": -0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The Market",
-                        "u": 0.6,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "The Protest",
-                        "u": 0.9,
-                        "p": 0.8,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Media",
-                        "u": 0.9,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "History",
-                        "u": 0.8,
-                        "p": -0.9,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "War",
-                        "u": -0.4,
-                        "p": 1.0,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Next Generation",
-                        "u": 0.9,
-                        "p": -0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Mars",
-                        "u": 0.8,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Artificial Intelligence",
-                        "u": 0.5,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Survival",
-                        "u": 0.9,
-                        "p": -0.7,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "Sustainability",
-                        "u": 1.0,
-                        "p": -0.6,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Entropy",
-                        "u": 0.8,
-                        "p": -1.0,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Renewal",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "E Pluribus Unum",
-                        "u": 1.0,
-                        "p": 0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The City on a Hill",
-                        "u": 0.9,
-                        "p": -0.5,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Liberty",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": 0
-                    },
-                    {
-                        "name": "The Pursuit",
-                        "u": 0.9,
-                        "p": 1.0,
-                        "trump_score": 1
-                    },
-                    {
-                        "name": "Self-Government",
-                        "u": 1.0,
-                        "p": 0.7,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "Providence",
-                        "u": 0.8,
-                        "p": -0.8,
-                        "trump_score": -1
-                    },
-                    {
-                        "name": "The United States",
-                        "u": 1.0,
-                        "p": 0.9,
-                        "trump_score": -1
-                    }
-                ]
+            {
+                "name": "Humility",
+                "u": 0.8,
+                "p": -0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The Citizen",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Merit",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "The Common Man",
+                "u": 0.8,
+                "p": 0.5,
+                "trump_score": 1
+            },
+            {
+                "name": "Upward Mobility",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Professionalism",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Civic Virtue",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Checks and Balances",
+                "u": 0.8,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Frontier",
+                "u": 0.4,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Heartland",
+                "u": 0.6,
+                "p": -0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "The Melting Pot",
+                "u": 0.9,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Pioneer",
+                "u": 0.5,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Civilian Control",
+                "u": 1.0,
+                "p": -0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Union",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "States' Rights",
+                "u": 0.6,
+                "p": 0.4,
+                "trump_score": 0
+            },
+            {
+                "name": "The Pursuit of Happiness",
+                "u": 0.7,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Dream",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "New Beginning",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Industry",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Purpose",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Charity",
+                "u": 1.0,
+                "p": 0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Temperance",
+                "u": 0.8,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Pragmatism",
+                "u": 0.6,
+                "p": 0.5,
+                "trump_score": 1
+            },
+            {
+                "name": "Fair Play",
+                "u": 0.8,
+                "p": -0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "The Strenuous Life",
+                "u": 0.5,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Ingenuity",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Transparency",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Diplomacy/Soft Power",
+                "u": 0.5,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Frugality",
+                "u": 0.7,
+                "p": 0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "The Immigrant Spirit",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Redemption",
+                "u": 0.9,
+                "p": 0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "The Founders",
+                "u": 0.7,
+                "p": 0.5,
+                "trump_score": 0
+            },
+            {
+                "name": "Progress",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Remembrance",
+                "u": 0.8,
+                "p": -0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "Tradition vs Revolution",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Independence",
+                "u": 0.8,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Recognition",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Liberation",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Superpower",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Leadership",
+                "u": 0.8,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Justice",
+                "u": 1.0,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Inspiration",
+                "u": 0.8,
+                "p": 0.4,
+                "trump_score": 0
+            },
+            {
+                "name": "Dissent",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 1
             }
-        };
+        ]
+    },
+    "2": {
+        "name": "Definition (What)",
+        "color": "#818cf8",
+        "total": {
+            "u": 0.7448979591836735,
+            "p": 0.4530612244897959
+        },
+        "trump_total": {
+            "u": -0.27,
+            "p": 0.11
+        },
+        "entries": [
+            {
+                "name": "The Citizen",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Resident",
+                "u": 0.7,
+                "p": 0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "The Individual",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Consumer",
+                "u": 0.4,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Creator",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "The Parent",
+                "u": 0.9,
+                "p": 0.5,
+                "trump_score": 0
+            },
+            {
+                "name": "The Celebrity",
+                "u": -0.2,
+                "p": 0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "The Private Sphere",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "The Public Square",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Constitution",
+                "u": 1.0,
+                "p": -0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "The Frontier (Concept)",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Market",
+                "u": 0.7,
+                "p": -0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "The University",
+                "u": 0.8,
+                "p": 0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "The Internet",
+                "u": 0.5,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Democracy",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Republic",
+                "u": 1.0,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Liberty",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Equality",
+                "u": 1.0,
+                "p": 0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Rights",
+                "u": 0.9,
+                "p": -0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Law",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Justice",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Protection",
+                "u": 0.9,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Defense",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": 0
+            },
+            {
+                "name": "Order",
+                "u": 0.9,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Prosperity",
+                "u": 0.8,
+                "p": 0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "Union",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Posterity",
+                "u": 0.9,
+                "p": 0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "Happiness",
+                "u": 0.8,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Voting",
+                "u": 0.9,
+                "p": 0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Debate",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Amendment",
+                "u": 0.9,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Protest",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Due Process",
+                "u": 1.0,
+                "p": -0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Education",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Press",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "God/Creator",
+                "u": 1.0,
+                "p": 0.5,
+                "trump_score": 0
+            },
+            {
+                "name": "England",
+                "u": 0.6,
+                "p": -0.4,
+                "trump_score": 0
+            },
+            {
+                "name": "Enlightenment",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Grievance",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Compact",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Nature",
+                "u": 0.9,
+                "p": 0.4,
+                "trump_score": 0
+            },
+            {
+                "name": "War",
+                "u": 0.5,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Free Man",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The West",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Standard of Living",
+                "u": 0.7,
+                "p": 0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "Consumer Culture",
+                "u": -0.4,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Litigation",
+                "u": 0.3,
+                "p": 0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Polarization",
+                "u": -0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Transformation",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 0
+            }
+        ]
+    },
+    "3": {
+        "name": "Land (Where)",
+        "color": "#4ade80",
+        "total": {
+            "u": 0.463265306122449,
+            "p": 0.3979591836734694
+        },
+        "trump_total": {
+            "u": 0.06,
+            "p": 0.21
+        },
+        "entries": [
+            {
+                "name": "The Frontiersman",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Homesteader",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "The Neighbor",
+                "u": 0.9,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Explorer",
+                "u": 0.5,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Architect",
+                "u": 0.7,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Native",
+                "u": 0.9,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Suburbanite",
+                "u": 0.6,
+                "p": -0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "The Wilderness",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "The Sea to Shining Sea",
+                "u": 0.8,
+                "p": 0.4,
+                "trump_score": 1
+            },
+            {
+                "name": "The City",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Road",
+                "u": 0.6,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Grid",
+                "u": 0.5,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Resources",
+                "u": 0.4,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Ruin",
+                "u": -0.5,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Territory",
+                "u": -0.4,
+                "p": 0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "The State",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": 0
+            },
+            {
+                "name": "Property",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Manifest Destiny",
+                "u": -0.6,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Zoning",
+                "u": 0.6,
+                "p": -0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Sovereignty",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Gerrymandering",
+                "u": -0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Sanctuary",
+                "u": 1.0,
+                "p": -0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "Adventure",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Gold Fever",
+                "u": -0.4,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Sacred Space",
+                "u": 0.9,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Conservation",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Determinism",
+                "u": 0.5,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Nostalgia",
+                "u": 0.6,
+                "p": -0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "Mobility",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Canal",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "The Dam",
+                "u": 0.7,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Interstate",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Air Conditioning",
+                "u": 0.7,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Railroad",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Sprawl",
+                "u": -0.4,
+                "p": 0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "The First Nations",
+                "u": -0.8,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Purchase",
+                "u": 0.6,
+                "p": 0.5,
+                "trump_score": 1
+            },
+            {
+                "name": "The War",
+                "u": -0.3,
+                "p": 1.0,
+                "trump_score": 0
+            },
+            {
+                "name": "The Treaty",
+                "u": 0.5,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Survey",
+                "u": 0.7,
+                "p": -0.4,
+                "trump_score": 0
+            },
+            {
+                "name": "The Geology",
+                "u": 0.8,
+                "p": -0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "The Statehood",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Tourist",
+                "u": 0.3,
+                "p": 0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "The Base",
+                "u": -0.4,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "The Market",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Isolationism",
+                "u": 0.7,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Globalization",
+                "u": 0.4,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Climate Change",
+                "u": -0.9,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The Moon Landing",
+                "u": 1.0,
+                "p": 1.0,
+                "trump_score": 1
+            }
+        ]
+    },
+    "4": {
+        "name": "Drive (Why)",
+        "color": "#fbbf24",
+        "total": {
+            "u": 0.610204081632653,
+            "p": 0.7632653061224489
+        },
+        "trump_total": {
+            "u": 0.14,
+            "p": 0.3
+        },
+        "entries": [
+            {
+                "name": "The Self-Made Man",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Pioneer",
+                "u": 0.6,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Dreamer",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Believer",
+                "u": 0.8,
+                "p": 0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "The Hustler",
+                "u": 0.2,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Optimist",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Winner",
+                "u": -0.3,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Home",
+                "u": 0.8,
+                "p": -0.5,
+                "trump_score": 1
+            },
+            {
+                "name": "The Open Road",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Market",
+                "u": 0.7,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Church",
+                "u": 0.9,
+                "p": -0.4,
+                "trump_score": 0
+            },
+            {
+                "name": "The School",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Frontier",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Monument",
+                "u": 0.8,
+                "p": -0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "Life",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Liberty",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Happiness",
+                "u": 0.9,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Meaning",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Duty",
+                "u": 1.0,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Truth",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Legacy",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Self-Interest",
+                "u": 0.4,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Curiosity",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Greed",
+                "u": -0.6,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Love",
+                "u": 1.0,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Excellence",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Guilt",
+                "u": 0.5,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Pride",
+                "u": 0.3,
+                "p": 0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Competition",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Marketing",
+                "u": -0.3,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Incentive",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Preaching",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Planning",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Crisis",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Success",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Immigrant",
+                "u": 0.9,
+                "p": 1.0,
+                "trump_score": -1
+            },
+            {
+                "name": "The Wilderness",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Calvinism",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Scarcity",
+                "u": 0.5,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Freedom",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Revolution",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Abundance",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Workaholic",
+                "u": -0.4,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Superpower",
+                "u": 0.5,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "GDP",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Restlessness",
+                "u": -0.2,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Progress",
+                "u": 0.7,
+                "p": 1.0,
+                "trump_score": 0
+            },
+            {
+                "name": "Stress",
+                "u": -0.5,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "American Exceptionalism",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": 1
+            }
+        ]
+    },
+    "5": {
+        "name": "Method (How)",
+        "color": "#a78bfa",
+        "total": {
+            "u": 0.5448979591836735,
+            "p": 0.15714285714285717
+        },
+        "trump_total": {
+            "u": -0.16,
+            "p": 0.2
+        },
+        "entries": [
+            {
+                "name": "The Inventor",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Engineer",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Professional",
+                "u": 0.7,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Entrepreneur",
+                "u": 0.8,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Manager",
+                "u": 0.5,
+                "p": -0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The Apprentice",
+                "u": 0.7,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Technocrat",
+                "u": -0.6,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Shop Floor",
+                "u": 0.4,
+                "p": -0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Silicon Valley",
+                "u": 0.8,
+                "p": 1.0,
+                "trump_score": -1
+            },
+            {
+                "name": "The Laboratory",
+                "u": 0.9,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Wall Street",
+                "u": 0.3,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Factory",
+                "u": 0.7,
+                "p": -0.7,
+                "trump_score": 0
+            },
+            {
+                "name": "The Farm",
+                "u": 1.0,
+                "p": 0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "The Network",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Automation",
+                "u": 0.6,
+                "p": -0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Infrastructure",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "The Algorithm",
+                "u": 0.4,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Efficiency",
+                "u": 0.6,
+                "p": -0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The Assembly Line",
+                "u": 0.7,
+                "p": -0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Technology",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Mass Production",
+                "u": 0.8,
+                "p": -0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Labor Rights",
+                "u": 0.9,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Logistics",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Standardization",
+                "u": 0.8,
+                "p": -0.7,
+                "trump_score": 0
+            },
+            {
+                "name": "Profit",
+                "u": 0.3,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Optimization",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Problem Solving",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Scale",
+                "u": 0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Empiricism",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Fieldwork",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": 0
+            },
+            {
+                "name": "Hypothesis",
+                "u": 0.8,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Curiosity",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Experimentation",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Data",
+                "u": 0.6,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Proof",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Yankee Ingenuity",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Lowell Mills",
+                "u": 0.6,
+                "p": -0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "Interchangeable Parts",
+                "u": 0.9,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Necessity",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Imitation",
+                "u": 0.5,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Capitalism",
+                "u": 0.4,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Modernity",
+                "u": 0.2,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Consumer",
+                "u": -0.5,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Suburb",
+                "u": 0.4,
+                "p": -0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Affluence",
+                "u": 0.5,
+                "p": 0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "Materialism",
+                "u": -0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Dependence",
+                "u": -0.5,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Pollution",
+                "u": -0.8,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Alienation",
+                "u": -0.7,
+                "p": -0.6,
+                "trump_score": 1
+            }
+        ]
+    },
+    "6": {
+        "name": "Cause (Origin)",
+        "color": "#f472b6",
+        "total": {
+            "u": 0.773469387755102,
+            "p": 0.11224489795918367
+        },
+        "trump_total": {
+            "u": -0.06,
+            "p": -0.07
+        },
+        "entries": [
+            {
+                "name": "The Puritan",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": 0
+            },
+            {
+                "name": "The Virginian",
+                "u": 0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Slave",
+                "u": -0.9,
+                "p": -0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "The Revolutionary",
+                "u": 0.9,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Framer",
+                "u": 1.0,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Indigenous",
+                "u": -0.7,
+                "p": -0.5,
+                "trump_score": 0
+            },
+            {
+                "name": "The Immigrant",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Plymouth Rock",
+                "u": 0.8,
+                "p": 0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "Independence Hall",
+                "u": 1.0,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Battlefield",
+                "u": 0.9,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Frontier (Historical)",
+                "u": 0.7,
+                "p": 1.0,
+                "trump_score": 0
+            },
+            {
+                "name": "Ellis Island",
+                "u": 0.8,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Jamestown",
+                "u": 0.8,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The Graveyard",
+                "u": 0.8,
+                "p": -0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Natural Rights",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Federalism",
+                "u": 0.9,
+                "p": -0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "The Constitution",
+                "u": 1.0,
+                "p": -0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "Separation of Powers",
+                "u": 1.0,
+                "p": -0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Judicial Review",
+                "u": 0.8,
+                "p": -0.5,
+                "trump_score": 0
+            },
+            {
+                "name": "The Grievances",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Amendment",
+                "u": 1.0,
+                "p": 0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Religious Freedom",
+                "u": 1.0,
+                "p": -0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Land Hunger",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Taxation",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Liberty",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Self-Determination",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Fear of Tyranny",
+                "u": 0.9,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Hope",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Militia",
+                "u": 0.8,
+                "p": -0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "The Town Hall",
+                "u": 1.0,
+                "p": 0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "The Press",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Compromise",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Debate",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "War",
+                "u": -0.2,
+                "p": 1.0,
+                "trump_score": 0
+            },
+            {
+                "name": "Vote",
+                "u": 0.9,
+                "p": 0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "The Ancients",
+                "u": 0.8,
+                "p": -0.4,
+                "trump_score": 0
+            },
+            {
+                "name": "Magna Carta",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "The Bible",
+                "u": 0.8,
+                "p": -0.4,
+                "trump_score": 1
+            },
+            {
+                "name": "The Reformation",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Common Law",
+                "u": 0.9,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Geography",
+                "u": 0.7,
+                "p": -0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Enlightenment",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The Founder",
+                "u": 0.7,
+                "p": -0.5,
+                "trump_score": 1
+            },
+            {
+                "name": "The Monument",
+                "u": 0.8,
+                "p": -0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "The Precedent",
+                "u": 0.7,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Civil Religion",
+                "u": 0.6,
+                "p": -0.7,
+                "trump_score": 1
+            },
+            {
+                "name": "Originalism",
+                "u": 0.5,
+                "p": -0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "The Burden",
+                "u": 0.9,
+                "p": 0.6,
+                "trump_score": 0
+            },
+            {
+                "name": "Continuity",
+                "u": 1.0,
+                "p": 0.5,
+                "trump_score": -1
+            }
+        ]
+    },
+    "7": {
+        "name": "Effect (Result)",
+        "color": "#9ca3af",
+        "total": {
+            "u": 0.589795918367347,
+            "p": 0.2612244897959184
+        },
+        "trump_total": {
+            "u": -0.3,
+            "p": 0.23
+        },
+        "entries": [
+            {
+                "name": "The Global Citizen",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The Expat",
+                "u": -0.5,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Consumer",
+                "u": -0.8,
+                "p": -0.6,
+                "trump_score": 1
+            },
+            {
+                "name": "The Cynic",
+                "u": 0.6,
+                "p": -0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Activist",
+                "u": 0.9,
+                "p": 1.0,
+                "trump_score": 0
+            },
+            {
+                "name": "The Veteran",
+                "u": 0.8,
+                "p": -0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Individualist",
+                "u": 0.5,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The American Diaspora",
+                "u": 0.8,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Pax Americana",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "Cocacolonization",
+                "u": -0.6,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Cultural Imperialism",
+                "u": -0.7,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Democracy Promotion",
+                "u": 0.4,
+                "p": 1.0,
+                "trump_score": -1
+            },
+            {
+                "name": "The Climate Crisis",
+                "u": -1.0,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Globalization",
+                "u": 0.5,
+                "p": -0.4,
+                "trump_score": -1
+            },
+            {
+                "name": "The Middle Class",
+                "u": 1.0,
+                "p": -0.5,
+                "trump_score": 0
+            },
+            {
+                "name": "The Moon Landing",
+                "u": 1.0,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "The Internet",
+                "u": 0.9,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Wealth Inequality",
+                "u": -0.9,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "The Atom Bomb",
+                "u": -0.8,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Medical Breakthroughs",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "Rock and Roll",
+                "u": 0.8,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Freedom vs Order",
+                "u": 1.0,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Conservation",
+                "u": 1.0,
+                "p": -0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Meaning vs Materialism",
+                "u": 0.9,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Hubris",
+                "u": 0.9,
+                "p": -0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "Pragmatism vs Principle",
+                "u": 0.5,
+                "p": 0.8,
+                "trump_score": 1
+            },
+            {
+                "name": "Gratitude",
+                "u": 0.9,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Hope vs Despair",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "The Vote",
+                "u": 1.0,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "The Court",
+                "u": 0.9,
+                "p": -0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "The Market",
+                "u": 0.6,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "The Protest",
+                "u": 0.9,
+                "p": 0.8,
+                "trump_score": 0
+            },
+            {
+                "name": "The Media",
+                "u": 0.9,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "History",
+                "u": 0.8,
+                "p": -0.9,
+                "trump_score": -1
+            },
+            {
+                "name": "War",
+                "u": -0.4,
+                "p": 1.0,
+                "trump_score": 0
+            },
+            {
+                "name": "The Next Generation",
+                "u": 0.9,
+                "p": -0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "Mars",
+                "u": 0.8,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Artificial Intelligence",
+                "u": 0.5,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "Survival",
+                "u": 0.9,
+                "p": -0.7,
+                "trump_score": 0
+            },
+            {
+                "name": "Sustainability",
+                "u": 1.0,
+                "p": -0.6,
+                "trump_score": -1
+            },
+            {
+                "name": "Entropy",
+                "u": 0.8,
+                "p": -1.0,
+                "trump_score": -1
+            },
+            {
+                "name": "Renewal",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 1
+            },
+            {
+                "name": "E Pluribus Unum",
+                "u": 1.0,
+                "p": 0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The City on a Hill",
+                "u": 0.9,
+                "p": -0.5,
+                "trump_score": -1
+            },
+            {
+                "name": "Liberty",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": 0
+            },
+            {
+                "name": "The Pursuit",
+                "u": 0.9,
+                "p": 1.0,
+                "trump_score": 1
+            },
+            {
+                "name": "Self-Government",
+                "u": 1.0,
+                "p": 0.7,
+                "trump_score": -1
+            },
+            {
+                "name": "Providence",
+                "u": 0.8,
+                "p": -0.8,
+                "trump_score": -1
+            },
+            {
+                "name": "The United States",
+                "u": 1.0,
+                "p": 0.9,
+                "trump_score": -1
+            }
+        ]
+    }
+};
 
         const canvas = document.getElementById('hegemonyCanvas');
         const ctx = canvas.getContext('2d');
@@ -2584,11 +2256,11 @@
         const height = canvas.height;
         const cx = width / 2;
         const cy = height / 2;
-        const scale = (width - 120) / 2;
+        const scale = (width - 120) / 2; 
         let currentPlane = 'all';
         let hoveredEntries = [];
 
-        function toCanvasX(u) { return cx - (u * scale); }
+        function toCanvasX(u) { return cx - (u * scale); }  
         function toCanvasY(p) { return cy - (p * scale); }
 
         function getQuadrantColor(u, p, score, alpha = 1) {
@@ -2602,10 +2274,10 @@
             ctx.clearRect(0, 0, width, height);
 
             ctx.globalAlpha = 0.08;
-            ctx.fillStyle = '#4ade80'; ctx.fillRect(0, 0, cx, cy);
-            ctx.fillStyle = '#f87171'; ctx.fillRect(cx, 0, cx, cy);
-            ctx.fillStyle = '#38bdf8'; ctx.fillRect(0, cy, cx, cy);
-            ctx.fillStyle = '#fb923c'; ctx.fillRect(cx, cy, cx, cy);
+            ctx.fillStyle = '#4ade80'; ctx.fillRect(0, 0, cx, cy); 
+            ctx.fillStyle = '#f87171'; ctx.fillRect(cx, 0, cx, cy); 
+            ctx.fillStyle = '#38bdf8'; ctx.fillRect(0, cy, cx, cy); 
+            ctx.fillStyle = '#fb923c'; ctx.fillRect(cx, cy, cx, cy); 
             ctx.globalAlpha = 1;
 
             ctx.strokeStyle = '#475569';
@@ -2617,15 +2289,15 @@
             ctx.strokeStyle = '#94a3b8';
             ctx.lineWidth = 1;
             ctx.beginPath();
-            ctx.moveTo(0, cy); ctx.lineTo(width, cy);
-            ctx.moveTo(cx, 0); ctx.lineTo(cx, height);
+            ctx.moveTo(0, cy); ctx.lineTo(width, cy); 
+            ctx.moveTo(cx, 0); ctx.lineTo(cx, height); 
             ctx.stroke();
 
             ctx.font = '700 12px Inter';
-            ctx.fillStyle = '#4ade80'; ctx.textAlign = 'left'; ctx.fillText('GREATER GOOD', 20, 30);
-            ctx.fillStyle = '#f87171'; ctx.textAlign = 'right'; ctx.fillText('GREATEST LIE', width - 20, 30);
-            ctx.fillStyle = '#38bdf8'; ctx.textAlign = 'left'; ctx.fillText('LESSER GOOD', 20, height - 20);
-            ctx.fillStyle = '#fb923c'; ctx.textAlign = 'right'; ctx.fillText('GREATER EVIL', width - 20, height - 20);
+            ctx.fillStyle = '#4ade80'; ctx.textAlign = 'left'; ctx.fillText('GREATER GOOD (PRODUCTIVE)', 20, 30);
+            ctx.fillStyle = '#f87171'; ctx.textAlign = 'right'; ctx.fillText('GREATEST LIE (REDUCTIVE)', width - 20, 30);
+            ctx.fillStyle = '#38bdf8'; ctx.textAlign = 'left'; ctx.fillText('LESSER GOOD (CONSTRUCTIVE)', 20, height - 20);
+            ctx.fillStyle = '#fb923c'; ctx.textAlign = 'right'; ctx.fillText('GREATER EVIL (DESTRUCTIVE)', width - 20, height - 20);
 
             ctx.font = '600 11px Inter';
             ctx.fillStyle = '#94a3b8';
@@ -2659,7 +2331,7 @@
                     let baseRadius = 5;
                     if (entry.trump_score === 1) baseRadius = 10; // 2x size for Hits
                     if (entry.trump_score === -1) baseRadius = 15; // 3x size for Fails
-
+                    
                     const isHovered = hoveredEntries.includes(entry);
                     const radius = isHovered ? baseRadius + 4 : baseRadius;
                     const color = getQuadrantColor(entry.u, entry.p, entry.trump_score);
@@ -2667,7 +2339,7 @@
                     ctx.beginPath();
                     ctx.arc(x, y, radius, 0, Math.PI * 2);
                     ctx.fillStyle = color;
-
+                    
                     if (isHovered) {
                         ctx.shadowColor = 'rgba(0,0,0,0.3)';
                         ctx.shadowBlur = 10;
@@ -2675,7 +2347,7 @@
                         ctx.shadowColor = 'transparent';
                         ctx.shadowBlur = 0;
                     }
-
+                    
                     ctx.fill();
 
                     if (isHovered) {
@@ -2694,12 +2366,12 @@
                 ctx.beginPath();
                 let centX = toCanvasX(plane.total.u);
                 let centY = toCanvasY(plane.total.p);
-
+                
                 // Add a crosshair behind centroid
                 ctx.strokeStyle = plane.color;
                 ctx.globalAlpha = 0.3;
                 ctx.strokeRect(centX - 10, centY - 10, 20, 20);
-
+                
                 ctx.globalAlpha = 0.9;
                 ctx.arc(centX, centY, 12, 0, Math.PI * 2);
                 ctx.fillStyle = '#1e293b'; // Kanon color
@@ -2707,21 +2379,21 @@
                 ctx.strokeStyle = '#fff';
                 ctx.lineWidth = 2.5;
                 ctx.stroke();
-
+                
                 ctx.font = '800 11px Inter';
                 ctx.fillStyle = '#fff';
                 ctx.textAlign = 'center';
                 ctx.fillText(`K${planeId}`, centX, centY + 4);
-
+                
                 // Draw Trump plane centroid
                 ctx.beginPath();
                 centX = toCanvasX(plane.trump_total.u);
                 centY = toCanvasY(plane.trump_total.p);
-
+                
                 ctx.strokeStyle = plane.color;
                 ctx.globalAlpha = 0.3;
                 ctx.strokeRect(centX - 10, centY - 10, 20, 20);
-
+                
                 ctx.globalAlpha = 0.9;
                 ctx.arc(centX, centY, 12, 0, Math.PI * 2);
                 ctx.fillStyle = '#f59e0b'; // Trump gold
@@ -2729,26 +2401,26 @@
                 ctx.strokeStyle = '#fff';
                 ctx.lineWidth = 2.5;
                 ctx.stroke();
-
+                
                 ctx.font = '800 11px Inter';
                 ctx.fillStyle = '#fff';
                 ctx.textAlign = 'center';
                 ctx.fillText(`T${planeId}`, centX, centY + 4);
-
+                
                 ctx.globalAlpha = 1;
             });
         }
 
         function drawGrandTotal() {
             if (currentPlane !== 'all') return;
-
+            
             // Kanon Overall Centroid
             let x = toCanvasX(0.6431486880466473);
             let y = toCanvasY(0.3769679300291546);
-
+            
             ctx.shadowColor = 'rgba(0,0,0,0.4)';
             ctx.shadowBlur = 15;
-
+            
             ctx.beginPath();
             ctx.arc(x, y, 18, 0, Math.PI * 2);
             ctx.fillStyle = '#1e293b';
@@ -2760,11 +2432,11 @@
             ctx.fillStyle = '#fff';
             ctx.textAlign = 'center';
             ctx.fillText('KANON', x, y + 3.5);
-
+            
             // Trump Overall Centroid
             x = toCanvasX(-0.11);
             y = toCanvasY(0.16);
-
+            
             ctx.beginPath();
             ctx.arc(x, y, 18, 0, Math.PI * 2);
             ctx.fillStyle = '#f59e0b';
@@ -2776,7 +2448,7 @@
             ctx.fillStyle = '#fff';
             ctx.textAlign = 'center';
             ctx.fillText('TRUMP', x, y + 3.5);
-
+            
             ctx.shadowColor = 'transparent';
             ctx.shadowBlur = 0;
         }
@@ -2813,14 +2485,14 @@
 
             planes.forEach(planeId => {
                 const plane = kanonData[planeId];
-                const quadrantClass = (plane.total.u >= 0 && plane.total.p >= 0) ? 'positive' :
-                    (plane.total.u < 0 && plane.total.p >= 0) ? 'negative' :
-                        (plane.total.u >= 0 && plane.total.p < 0) ? 'text-blue-500' : 'text-orange-500';
-
+                const quadrantClass = (plane.total.u >= 0 && plane.total.p >= 0) ? 'positive' : 
+                                      (plane.total.u < 0 && plane.total.p >= 0) ? 'negative' : 
+                                      (plane.total.u >= 0 && plane.total.p < 0) ? 'text-blue-500' : 'text-orange-500';
+                
                 let quadName = "Greater Good";
-                if (plane.total.u < 0 && plane.total.p >= 0) quadName = "Greatest Lie";
-                else if (plane.total.u >= 0 && plane.total.p < 0) quadName = "Lesser Good";
-                else if (plane.total.u < 0 && plane.total.p < 0) quadName = "The Void";
+                if(plane.total.u < 0 && plane.total.p >= 0) quadName = "Greatest Lie";
+                else if(plane.total.u >= 0 && plane.total.p < 0) quadName = "Lesser Good";
+                else if(plane.total.u < 0 && plane.total.p < 0) quadName = "The Void";
 
                 html += `
                     <div class="stat-card" style="border-left: 4px solid ${plane.color};">
@@ -2886,7 +2558,7 @@
                     kanon_u = kanonData[currentPlane].total.u; kanon_p = kanonData[currentPlane].total.p;
                     trump_u = kanonData[currentPlane].trump_total.u; trump_p = kanonData[currentPlane].trump_total.p;
                 }
-
+                
                 let kx = toCanvasX(kanon_u);
                 let ky = toCanvasY(kanon_p);
                 if (Math.sqrt((mouseX - kx) ** 2 + (mouseY - ky) ** 2) < 18) {
@@ -2896,7 +2568,7 @@
                         is_centroid: true, centroid_type: 'KANON', color: '#1e293b'
                     });
                 }
-
+                
                 let tx = toCanvasX(trump_u);
                 let ty = toCanvasY(trump_p);
                 if (Math.sqrt((mouseX - tx) ** 2 + (mouseY - ty) ** 2) < 18) {
@@ -2911,20 +2583,20 @@
             if (hoveredEntries.length > 0) {
                 document.body.style.cursor = 'pointer';
                 tooltip.style.display = 'block';
-
+                
                 let baseU = hoveredEntries[0].u;
                 let baseP = hoveredEntries[0].p;
-
+                
                 let html = '';
                 if (hoveredEntries.length > 1) {
                     html += `<div class="tooltip-coords" style="margin-bottom: 12px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px;">Coordinate Stack: <strong style="color:#0f172a;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}, ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</strong><br><span style="font-size:0.75rem; color:#64748b;">${hoveredEntries.length} overlapping items</span></div>`;
                 } else {
                     html += `<div class="tooltip-coords" style="margin-bottom: 8px; color: #64748b; font-size: 0.8rem; font-weight: 600;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}  |  ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</div>`;
                 }
-
+                
                 const maxRows = Math.min(7, hoveredEntries.length);
                 html += `<div style="display: grid; grid-auto-flow: column; grid-template-rows: repeat(${maxRows}, auto); grid-auto-columns: max-content; gap: 0 1.5rem;">`;
-
+                
                 hoveredEntries.forEach(entry => {
                     if (entry.is_centroid) {
                         html += `
@@ -2939,7 +2611,7 @@
                         let colorStr = '#64748b'; // grey
                         if (entry.trump_score === 1) { scoreText = 'Hit (+1)'; colorStr = '#16a34a'; } // green
                         if (entry.trump_score === -1) { scoreText = 'Fail (-1)'; colorStr = '#dc2626'; } // red
-
+                        
                         html += `
                             <div style="border-left: 3px solid ${kanonData[entry._planeId].color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
                                 <div class="tooltip-title" style="margin-bottom: 2px;">${entry.name}</div>
@@ -2949,28 +2621,28 @@
                         `;
                     }
                 });
-
+                
                 html += `</div>`;
                 tooltip.innerHTML = html;
-
+                
                 const tooltipRect = tooltip.getBoundingClientRect();
                 const viewportWidth = window.innerWidth;
                 const viewportHeight = window.innerHeight;
-
+                
                 let tLeft = e.clientX + 20;
                 let tTop = e.clientY + 20;
-
+                
                 if (tLeft + tooltipRect.width > viewportWidth - 20) {
                     tLeft = e.clientX - tooltipRect.width - 20;
                 }
-
+                
                 if (tTop + tooltipRect.height > viewportHeight - 20) {
                     tTop = viewportHeight - tooltipRect.height - 20;
                 }
-
+                
                 tLeft = Math.max(10, tLeft);
                 tTop = Math.max(10, tTop);
-
+                
                 tooltip.style.left = tLeft + 'px';
                 tooltip.style.top = tTop + 'px';
             } else {
@@ -3002,5 +2674,4 @@
 
     </script>
 </body>
-
 </html>

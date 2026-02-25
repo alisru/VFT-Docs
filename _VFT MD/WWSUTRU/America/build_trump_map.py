@@ -252,10 +252,10 @@ html_template = """<!DOCTYPE html>
             ctx.stroke();
 
             ctx.font = '700 12px Inter';
-            ctx.fillStyle = '#4ade80'; ctx.textAlign = 'left'; ctx.fillText('GREATER GOOD', 20, 30);
-            ctx.fillStyle = '#f87171'; ctx.textAlign = 'right'; ctx.fillText('GREATEST LIE', width - 20, 30);
-            ctx.fillStyle = '#38bdf8'; ctx.textAlign = 'left'; ctx.fillText('LESSER GOOD', 20, height - 20);
-            ctx.fillStyle = '#fb923c'; ctx.textAlign = 'right'; ctx.fillText('GREATER EVIL', width - 20, height - 20);
+            ctx.fillStyle = '#4ade80'; ctx.textAlign = 'left'; ctx.fillText('GREATER GOOD (PRODUCTIVE)', 20, 30);
+            ctx.fillStyle = '#f87171'; ctx.textAlign = 'right'; ctx.fillText('GREATEST LIE (REDUCTIVE)', width - 20, 30);
+            ctx.fillStyle = '#38bdf8'; ctx.textAlign = 'left'; ctx.fillText('LESSER GOOD (CONSTRUCTIVE)', 20, height - 20);
+            ctx.fillStyle = '#fb923c'; ctx.textAlign = 'right'; ctx.fillText('GREATER EVIL (DESTRUCTIVE)', width - 20, height - 20);
 
             ctx.font = '600 11px Inter';
             ctx.fillStyle = '#94a3b8';
