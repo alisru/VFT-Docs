@@ -1,8 +1,8 @@
 # Australian Kanon Generation
 
-**Current Focus**: Expand Propaganda Mirror analysis with specific details at bottom of Archetype page
+**Current Focus**: Add Final Verdict block with fUTCQ image at the bottom of the Archetype page
 
-**Progress**: 28/38 complete
+**Progress**: 29/39 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -43,6 +43,7 @@
 - [/] Native Alethekanon Judgement of American Kanon 343 `analysis alethekanon` <!-- id: 35 -->
 - [x] Add The Propaganda Mirror section to Trump Archetype page `archetype html` <!-- id: 36 -->
 - [x] Expand Propaganda Mirror analysis with specific details at bottom of Archetype page `archetype html content` <!-- id: 37 -->
+- [x] Add Final Verdict block with fUTCQ image at the bottom of the Archetype page `archetype html judgment` <!-- id: 38 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
