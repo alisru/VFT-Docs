@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { overflow-x: hidden; max-width: 100vw; }
         body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1e293b; min-height: 100vh; }
         .map-container { padding: 1rem; max-width: 1200px; margin: 0 auto; }
         @media (min-width: 768px) { .map-container { padding: 2rem; } }
@@ -18,12 +19,12 @@
         .plane-btn { padding: 0.6rem 1.2rem; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; background: #ffffff; color: #475569; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
         .plane-btn:hover { background: #f1f5f9; color: #1e293b; border-color: #cbd5e1; transform: translateY(-1px); }
         .plane-btn.active { background: #1e3a8a; color: white; border-color: #1e3a8a; }
-        .canvas-container { display: flex; justify-content: center; margin-bottom: 2rem; width: 100%; }
-        canvas { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; width: 100%; max-width: 800px; height: auto; }
+        .canvas-container { display: flex; justify-content: center; margin-bottom: 2rem; width: 100%; overflow: hidden; }
+        canvas { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; width: 100%; max-width: 800px; height: auto; touch-action: pan-y; }
         .legend { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
         .legend-dot { width: 14px; height: 14px; border-radius: 50%; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; max-width: 1200px; margin: 0 auto; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; max-width: 1200px; margin: 0 auto; }
         .stat-card { background: #ffffff; border-radius: 12px; padding: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }
         .stat-card h3 { font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
         .stat-value { font-size: 1.5rem; font-weight: 800; color: #1e293b; }
@@ -95,21 +96,21 @@
     <h1>Donald Trump — Hegemony Visualization</h1>
     <p class="subtitle">Moral Vector Analysis of 343 Entries Across 7 Planes of the American Kanon</p>
 
-    <div class="explainer" style="max-width: 800px; margin: 0 auto 2rem auto; background: #ffffff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
+    <div class="explainer" style="max-width: 800px; margin: 0 auto 2rem auto; background: #ffffff; padding: 1.5rem; border-radius: 16px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
         <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; font-family: 'Merriweather', serif;">How to Read this Map</h3>
         <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
             This graph plots every concept in the American Kanon as interpreted by the actions and rhetoric of Donald Trump into a coordinate in the <strong>Moral Field</strong>.
         </p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.9rem; color: #334155; align-items: start;">
-            <div style="background: #f8fafc; padding: 1rem; border-radius: 8px;">
-                <strong style="color: #0f172a; display: block; margin-bottom: 0.5rem; font-size: 1rem;">X-Axis: Moral (υ)</strong>
-                <span style="color: #16a34a; font-weight: 700;">Left (+1)</span>: Universal Benefit<br>
-                <span style="color: #dc2626; font-weight: 700;">Right (-1)</span>: Self Benefit
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 font-sm text-slate-700 items-start">
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                <strong class="text-slate-900 block mb-2 text-base">X-Axis: Moral (υ)</strong>
+                <span class="text-green-600 font-bold">Left (+1)</span>: Universal Benefit<br>
+                <span class="text-red-600 font-bold">Right (-1)</span>: Self Benefit
             </div>
-            <div style="background: #f8fafc; padding: 1rem; border-radius: 8px;">
-                <strong style="color: #0f172a; display: block; margin-bottom: 0.5rem; font-size: 1rem;">Y-Axis: Will (ψ)</strong>
-                <span style="color: #16a34a; font-weight: 700;">Top (+1)</span>: Proactive/Creative<br>
-                <span style="color: #dc2626; font-weight: 700;">Bottom (-1)</span>: Suppressive/Passive
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                <strong class="text-slate-900 block mb-2 text-base">Y-Axis: Will (ψ)</strong>
+                <span class="text-green-600 font-bold">Top (+1)</span>: Proactive/Creative<br>
+                <span class="text-red-600 font-bold">Bottom (-1)</span>: Suppressive/Passive
             </div>
         </div>
         <p style="font-size: 0.85rem; color: #64748b; margin-top: 1.5rem; font-style: italic; text-align: center;">

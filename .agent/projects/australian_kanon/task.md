@@ -1,8 +1,8 @@
 # Australian Kanon Generation
 
-**Current Focus**: Update quadrant labels to Productive, Reductive, Constructive, Destructive in build_trump_map.py and visualization HTML
+**Current Focus**: Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py
 
-**Progress**: 31/42 complete
+**Progress**: 31/43 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -46,7 +46,8 @@
 - [x] Add Final Verdict block with fUTCQ image at the bottom of the Archetype page `archetype html judgment` <!-- id: 38 -->
 - [x] Update map quadrant labels with Productive, Reductive, Destructive, Constructive `map html ui` <!-- id: 39 -->
 - [x] Update quadrant labels to Productive, Reductive, Constructive, Destructive in build_trump_map.py and visualization HTML `map ui` <!-- id: 40 -->
-- [ ] Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py `map ui nav` <!-- id: 41 -->
+- [/] Add standard Psochic Hegemony navbar to the Trump_Hegemony_Visualization.html via build_trump_map.py `map ui nav` <!-- id: 41 -->
+- [ ] Fix horizontal scrolling issue on mobile for the Trump Hegemony Map `map ui mobile` <!-- id: 42 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
