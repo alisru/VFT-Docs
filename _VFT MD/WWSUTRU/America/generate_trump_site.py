@@ -88,15 +88,19 @@ def parse_markdown_file(filepath):
     # Extract averages and totality
     averages_match = re.search(r'## Plane Average Moral Scores(.*?)(?=\n---)', content, re.DOTALL)
     if averages_match:
-        parsed_data["averages_html"] = averages_match.group(1).strip().replace('\n', '<br>')
+        avg_html = averages_match.group(1).strip()
+        avg_html = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', avg_html)
+        avg_html = re.sub(r'\*(.*?)\*', r'<em>\1</em>', avg_html)
+        parsed_data["averages_html"] = avg_html.replace('\n', '<br>')
 
     totality_match = re.search(r'### Plane \d Totality:(.*)', content, re.DOTALL)
     if totality_match:
-        parsed_data["totality_html"] = totality_match.group(1).strip()
+        tot_html = totality_match.group(1).strip()
         # Basic markdown to HTML conversion for totality
-        parsed_data["totality_html"] = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', parsed_data["totality_html"])
-        parsed_data["totality_html"] = parsed_data["totality_html"].replace('\n\n', '</p><p>').replace('\n', '<br>')
-        parsed_data["totality_html"] = f"<p>{parsed_data['totality_html']}</p>"
+        tot_html = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', tot_html)
+        tot_html = re.sub(r'\*(.*?)\*', r'<em>\1</em>', tot_html)
+        tot_html = tot_html.replace('\n\n', '</p><p>').replace('\n', '<br>')
+        parsed_data["totality_html"] = f"<p>{tot_html}</p>"
 
     return parsed_data
 
