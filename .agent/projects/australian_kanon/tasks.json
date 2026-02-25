@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Add Final Verdict block with fUTCQ image at the bottom of the Archetype page",
-        "current_task_index": 38,
+        "current_focus": "Update map quadrant labels with Productive, Reductive, Destructive, Constructive",
+        "current_task_index": 39,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1295,6 +1295,68 @@
                 "archetype",
                 "html",
                 "judgment"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 39,
+            "id": "task_39",
+            "description": "Update map quadrant labels with Productive, Reductive, Destructive, Constructive",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-26T03:42:41.393125] Task created.",
+                "[2026-02-26T03:42:41.539605] Started work.",
+                "[2026-02-26T03:53:31.673321] Marked as DONE.",
+                "[2026-02-26T03:53:31.673348] Lesson learned: Automated map generation scripts save tremendous amounts of manual HTML editing, requiring updates only to the core Python builder to instantly propagate changes."
+            ],
+            "lessons_learned": [
+                "Automated map generation scripts save tremendous amounts of manual HTML editing, requiring updates only to the core Python builder to instantly propagate changes."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "map",
+                "html",
+                "ui"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 40,
+            "id": "task_40",
+            "description": "Update quadrant labels to Productive, Reductive, Constructive, Destructive in build_trump_map.py and visualization HTML",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-02-26T03:43:35.647302] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "map",
+                "ui"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
