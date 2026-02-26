@@ -134,8 +134,9 @@ html_template = """<!DOCTYPE html>
         .plane-btn { padding: 0.6rem 1.2rem; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; background: #ffffff; color: #475569; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
         .plane-btn:hover { background: #f1f5f9; color: #1e293b; border-color: #cbd5e1; transform: translateY(-1px); }
         .plane-btn.active { background: #1e3a8a; color: white; border-color: #1e3a8a; }
-        .canvas-container { display: flex; justify-content: center; margin-bottom: 2rem; width: 100%; overflow: hidden; }
-        canvas { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; width: 100%; max-width: 800px; height: auto; touch-action: pan-y; }
+        .canvas-container { display: flex; justify-content: flex-start; margin-bottom: 2rem; width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; padding-bottom: 1rem; }
+        @media (min-width: 800px) { .canvas-container { justify-content: center; } }
+        canvas { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; width: 800px; min-width: 800px; height: 800px; touch-action: auto; margin: 0 auto; }
         .legend { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
         .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
         .legend-dot { width: 14px; height: 14px; border-radius: 50%; }
@@ -667,6 +668,17 @@ html_template = """<!DOCTYPE html>
             }
             draw();
         });
+        
+        // Ensure explicit taps on mobile correctly trigger the tooltip without swiping natively
+        canvas.addEventListener('touchstart', (e) => {
+            if (e.touches.length > 0) {
+                const touchEvent = new MouseEvent('mousemove', {
+                    clientX: e.touches[0].clientX,
+                    clientY: e.touches[0].clientY
+                });
+                canvas.dispatchEvent(touchEvent);
+            }
+        }, { passive: true });
 
         canvas.addEventListener('mouseleave', () => {
             hoveredEntries = [];
