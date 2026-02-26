@@ -134,9 +134,11 @@ html_template = """<!DOCTYPE html>
         .plane-btn { padding: 0.6rem 1.2rem; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; background: #ffffff; color: #475569; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
         .plane-btn:hover { background: #f1f5f9; color: #1e293b; border-color: #cbd5e1; transform: translateY(-1px); }
         .plane-btn.active { background: #1e3a8a; color: white; border-color: #1e3a8a; }
-        .canvas-container { display: flex; justify-content: flex-start; margin-bottom: 2rem; width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; padding-bottom: 1rem; }
-        @media (min-width: 800px) { .canvas-container { justify-content: center; } }
-        canvas { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; width: 800px; min-width: 800px; height: 800px; touch-action: auto; margin: 0 auto; }
+        .canvas-container { display: flex; justify-content: center; margin-bottom: 2rem; width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; padding-bottom: 1rem; }
+        .canvas-container.zoomed-container { justify-content: flex-start; }
+        @media (min-width: 800px) { .canvas-container.zoomed-container { justify-content: center; } }
+        canvas { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; width: 100%; max-width: 800px; height: auto; touch-action: pan-y; margin: 0 auto; transition: all 0.3s ease-in-out; }
+        canvas.zoomed-canvas { width: 800px; min-width: 800px; height: 800px; max-width: none; touch-action: auto; cursor: grab; }
         .legend { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
         .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
         .legend-dot { width: 14px; height: 14px; border-radius: 50%; }
@@ -506,20 +508,39 @@ html_template = """<!DOCTYPE html>
                                       (plane.total.u < 0 && plane.total.p >= 0) ? 'negative' : 
                                       (plane.total.u >= 0 && plane.total.p < 0) ? 'text-blue-500' : 'text-orange-500';
                 
+                const trumpQuadClass = (plane.trump_total.u >= 0 && plane.trump_total.p >= 0) ? 'positive' : 
+                                       (plane.trump_total.u < 0 && plane.trump_total.p >= 0) ? 'negative' : 
+                                       (plane.trump_total.u >= 0 && plane.trump_total.p < 0) ? 'text-blue-500' : 'text-orange-500';
+                
                 let quadName = "Greater Good";
                 if(plane.total.u < 0 && plane.total.p >= 0) quadName = "Greatest Lie";
                 else if(plane.total.u >= 0 && plane.total.p < 0) quadName = "Lesser Good";
                 else if(plane.total.u < 0 && plane.total.p < 0) quadName = "The Void";
 
                 html += `
-                    <div class="stat-card" style="border-left: 4px solid ${plane.color};">
-                        <h3>Plane ${planeId}: ${plane.name}</h3>
-                        <div class="stat-value ${quadrantClass}">
-                            υ = ${plane.total.u > 0 ? '+' : ''}${plane.total.u.toFixed(2)}, 
-                            ψ = ${plane.total.p > 0 ? '+' : ''}${plane.total.p.toFixed(2)}
+                    <div class="stat-card" style="border-left: 4px solid ${plane.color}; padding: 1.25rem;">
+                        <h3 style="margin-bottom: 0.75rem;">Plane ${planeId}: ${plane.name}</h3>
+                        
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem;">
+                            <div style="flex: 1; min-width: 140px;">
+                                <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; margin-bottom: 0.25rem;">Kanon Avg</div>
+                                <div class="stat-value ${quadrantClass}" style="font-size: 1.25rem;">
+                                    υ = ${plane.total.u > 0 ? '+' : ''}${plane.total.u.toFixed(2)}, 
+                                    ψ = ${plane.total.p > 0 ? '+' : ''}${plane.total.p.toFixed(2)}
+                                </div>
+                            </div>
+                            
+                            <div style="flex: 1; min-width: 140px;">
+                                <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; margin-bottom: 0.25rem;">Trump Result Avg</div>
+                                <div class="stat-value ${trumpQuadClass}" style="font-size: 1.25rem;">
+                                    υ = ${plane.trump_total.u > 0 ? '+' : ''}${plane.trump_total.u.toFixed(2)}, 
+                                    ψ = ${plane.trump_total.p > 0 ? '+' : ''}${plane.trump_total.p.toFixed(2)}
+                                </div>
+                            </div>
                         </div>
+
                         <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.5rem; font-weight: 500;">
-                            ${plane.entries.length} Vectors • <strong>${quadName}</strong>
+                            ${plane.entries.length} Vectors • kanon: <strong>${quadName}</strong>
                         </p>
                     </div>
                 `;
@@ -670,15 +691,34 @@ html_template = """<!DOCTYPE html>
         });
         
         // Ensure explicit taps on mobile correctly trigger the tooltip without swiping natively
+        let lastTap = 0;
         canvas.addEventListener('touchstart', (e) => {
             if (e.touches.length > 0) {
-                const touchEvent = new MouseEvent('mousemove', {
-                    clientX: e.touches[0].clientX,
-                    clientY: e.touches[0].clientY
-                });
-                canvas.dispatchEvent(touchEvent);
+                const now = new Date().getTime();
+                const timesince = now - lastTap;
+                
+                if (timesince < 300 && timesince > 0) {
+                    canvas.classList.toggle('zoomed-canvas');
+                    const container = canvas.closest('.canvas-container');
+                    if (container) container.classList.toggle('zoomed-container');
+                    lastTap = 0;
+                    e.preventDefault();
+                } else {
+                    const touchEvent = new MouseEvent('mousemove', {
+                        clientX: e.touches[0].clientX,
+                        clientY: e.touches[0].clientY
+                    });
+                    canvas.dispatchEvent(touchEvent);
+                    lastTap = now;
+                }
             }
-        }, { passive: true });
+        }, { passive: false });
+
+        canvas.addEventListener('dblclick', (e) => {
+            canvas.classList.toggle('zoomed-canvas');
+            const container = canvas.closest('.canvas-container');
+            if (container) container.classList.toggle('zoomed-container');
+        });
 
         canvas.addEventListener('mouseleave', () => {
             hoveredEntries = [];
