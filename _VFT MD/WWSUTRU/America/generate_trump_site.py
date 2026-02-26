@@ -105,26 +105,59 @@ def parse_markdown_file(filepath):
     return parsed_data
 
 def generate_navbar(current_plane_num):
-    nav_links = ""
+    # Desktop links
+    desktop_nav_links = ""
+    desktop_nav_links += f'<a href="Archetype_The_American_Anomaly.html" class="px-3 py-2 rounded-md text-sm font-medium {"bg-blue-800 text-white" if current_plane_num == "Archetype" else "text-gray-300 hover:text-white hover:bg-gray-700"} transition">Archetype</a>\n'
     for p in PLANES:
         active_class = "bg-blue-800 text-white" if p['num'] == current_plane_num else "text-blue-100 hover:bg-blue-800 hover:text-white"
-        nav_links += f'<a href="Plane_{p["num"]}_{p["name"]}.html" class="px-3 py-2 rounded-md text-sm font-medium {active_class} transition-colors">{p["id_label"]}</a>\n'
+        desktop_nav_links += f'<a href="Plane_{p["num"]}_{p["name"]}.html" class="px-3 py-2 rounded-md text-sm font-medium {active_class} transition-colors">{p["id_label"]}</a>\n'
+    desktop_nav_links += f'<a href="Trump_Hegemony_Visualization.html" class="px-3 py-2 rounded-md text-sm font-medium {"bg-blue-800 text-white" if current_plane_num == "Map" else "text-gray-300 hover:text-white hover:bg-gray-700"} transition">Map</a>\n'
+    desktop_nav_links += f'<a href="About_Trump_Audit.html" class="px-3 py-2 rounded-md text-sm font-medium {"bg-blue-800 text-white" if current_plane_num == "About" else "text-gray-300 hover:text-white hover:bg-gray-700"} transition">About</a>\n'
+
+    # Mobile links (similar classes but with 'block' added)
+    mobile_nav_links = ""
+    mobile_nav_links += f'<a href="Archetype_The_American_Anomaly.html" class="px-3 py-2 rounded-md text-sm font-medium {"bg-blue-800 text-white" if current_plane_num == "Archetype" else "text-gray-300 hover:text-white hover:bg-gray-700"} transition block">Archetype</a>\n'
+    for p in PLANES:
+        active_class = "bg-blue-800 text-white" if p['num'] == current_plane_num else "text-blue-100 hover:bg-blue-800 hover:text-white"
+        mobile_nav_links += f'<a href="Plane_{p["num"]}_{p["name"]}.html" class="px-3 py-2 rounded-md text-sm font-medium {active_class} transition-colors block">{p["id_label"]}</a>\n'
+    mobile_nav_links += f'<a href="Trump_Hegemony_Visualization.html" class="px-3 py-2 rounded-md text-sm font-medium {"bg-blue-800 text-white" if current_plane_num == "Map" else "text-gray-300 hover:text-white hover:bg-gray-700"} transition block">Map</a>\n'
+    mobile_nav_links += f'<a href="About_Trump_Audit.html" class="px-3 py-2 rounded-md text-sm font-medium {"bg-blue-800 text-white" if current_plane_num == "About" else "text-gray-300 hover:text-white hover:bg-gray-700"} transition block">About</a>\n'
 
     return f"""
     <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <span class="text-xl font-bold text-white tracking-widest">TRUMP AUDIT</span>
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-2">
-                             <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Final Score</a>
-                            {nav_links}
-                        </div>
+                    <div class="flex-shrink-0 flex items-center gap-4">
+                        <span class="text-xl font-bold text-white tracking-widest uppercase">Trump Audit</span>
+                        <a href="index.html" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 border border-gray-600 hover:text-white hover:bg-gray-700 transition">Index</a>
                     </div>
                 </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-2">
+                        {desktop_nav_links}
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex lg:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden lg:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700 bg-gray-900">
+                {mobile_nav_links}
             </div>
         </div>
     </nav>
@@ -383,6 +416,8 @@ def generate_index_page(final_score_html):
 </head>
 
 <body class="antialiased text-gray-800">
+
+    {generate_navbar("Index")}
 
     <!-- Hero -->
     <div class="relative overflow-hidden" style="background-color: #0e1235;">
