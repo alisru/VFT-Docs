@@ -517,6 +517,11 @@ html_template = """<!DOCTYPE html>
                 else if(plane.total.u >= 0 && plane.total.p < 0) quadName = "Lesser Good";
                 else if(plane.total.u < 0 && plane.total.p < 0) quadName = "The Void";
 
+                let trumpQuadName = "Greater Good";
+                if(plane.trump_total.u < 0 && plane.trump_total.p >= 0) trumpQuadName = "Greatest Lie";
+                else if(plane.trump_total.u >= 0 && plane.trump_total.p < 0) trumpQuadName = "Lesser Good";
+                else if(plane.trump_total.u < 0 && plane.trump_total.p < 0) trumpQuadName = "The Void";
+
                 html += `
                     <div class="stat-card" style="border-left: 4px solid ${plane.color}; padding: 1.25rem;">
                         <h3 style="margin-bottom: 0.75rem;">Plane ${planeId}: ${plane.name}</h3>
@@ -540,7 +545,7 @@ html_template = """<!DOCTYPE html>
                         </div>
 
                         <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.5rem; font-weight: 500;">
-                            ${plane.entries.length} Vectors • kanon: <strong>${quadName}</strong>
+                            ${plane.entries.length} Vectors • kanon: <strong>${quadName}</strong>, trump: <strong>${trumpQuadName}</strong>
                         </p>
                     </div>
                 `;
