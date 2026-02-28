@@ -23,6 +23,42 @@ SENSE_COLORS = {
     "7": {"bg": "bg-gray-800", "text": "text-gray-400", "badge": "bg-gray-700", "icon": "text-gray-600", "border": "border-gray-200", "light_bg": "bg-gray-50"},
 }
 
+BASE_KANON_MORALS = {}
+
+def load_base_kanon_morals():
+    """Parses all JUDGEMENT files to extract the true Kanonic Ideal Moral (v) scores."""
+    global BASE_KANON_MORALS
+    for i in range(1, 8):
+        # Handle Plane 1 naming difference
+        if i == 1:
+            filepath1 = os.path.join(SOURCE_DIR, "American_Kanon_Plane_1_Identity_JUDGEMENT.md")
+            filepath_alt = os.path.join(SOURCE_DIR, "American_Kanon_Plane_1_Judgement_Batch_1.md")
+            if os.path.exists(filepath1):
+                parse_base_judgement_file(filepath1)
+            elif os.path.exists(filepath_alt):
+                parse_base_judgement_file(filepath_alt)
+        else:
+            filename = [p for p in PLANES if p["num"] == i][0]["file"].replace("Trump_", "").replace(".md", "_JUDGEMENT.md")
+            filepath = os.path.join(SOURCE_DIR, filename)
+            if os.path.exists(filepath):
+                parse_base_judgement_file(filepath)
+
+def parse_base_judgement_file(filepath):
+    global BASE_KANON_MORALS
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Extract based on common table row format: | VectorId | Value | v | p |
+    for line in content.split('\n'):
+        if '|' in line and not '---|' in line and not 'Vector | Entry' in line:
+            parts = [p.strip() for p in line.split('|')]
+            # Check if it looks like a valid row
+            if len(parts) >= 6 and re.match(r'^[A-Za-z]+\.[A-Za-z]+\.[A-Za-z]+$', parts[1]):
+                vec_id = parts[1]
+                v_score = parts[3] # I. (Moral) column
+                p_score = parts[4] # I^ (Will) column
+                BASE_KANON_MORALS[vec_id] = {"v": v_score, "p": p_score}
+
 def parse_markdown_file(filepath):
     """Parses base Kanon files to extract context and meaning for each vector."""
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -163,9 +199,28 @@ def generate_navbar(current_plane_num):
     </nav>
     """
 
-def get_score_color(score):
-    if '+1' in score: return 'bg-green-100 text-green-800 border-green-200'
-    if '-1' in score: return 'bg-red-100 text-red-800 border-red-200'
+def get_score_color(score_str, v_str, vec_id):
+    # Use the base Kanon ideal v_value, defaulting to the Trump v_value if parsing fails for some reason
+    base_data = BASE_KANON_MORALS.get(vec_id, {"v": v_str})
+    base_v_str = base_data.get("v", v_str)
+    
+    try:
+        v_val = float(base_v_str.strip())
+    except ValueError:
+        try:
+            v_val = float(v_str.strip())
+        except ValueError:
+            v_val = 0.0
+
+    if '+1' in score_str:
+        if v_val < 0:
+            return 'bg-red-100 text-red-800 border-red-200'
+        return 'bg-green-100 text-green-800 border-green-200'
+    if '-1' in score_str:
+        if v_val < 0:
+            return 'bg-red-100 text-red-800 border-red-200'
+        return 'bg-green-100 text-green-800 border-green-200'
+        
     return 'bg-gray-100 text-gray-800 border-gray-200'
 
 def generate_html_page(plane_info, data):
@@ -196,19 +251,57 @@ def generate_html_page(plane_info, data):
         
         table_rows = ""
         for item in items:
-            score_class = get_score_color(item["score"])
+            score_class = get_score_color(item["score"], item["v"], item["id"])
+            base_data = BASE_KANON_MORALS.get(item["id"], {"v": "1", "p": "1"})
+            
+            try: trump_v = float(item['v'].strip().replace('+',''))
+            except: trump_v = 0.0
+            try: trump_p = float(item['p'].strip().replace('+',''))
+            except: trump_p = 0.0
+            try: ideal_v = float(base_data.get('v', '1').strip().replace('+',''))
+            except: ideal_v = 1.0
+            try: ideal_p = float(base_data.get('p', '1').strip().replace('+',''))
+            except: ideal_p = 1.0
+            
+            # New Logic: sign matches Trump's vector sign. Magnitude is Trump/Ideal.
+            mag_v = abs(trump_v / ideal_v) if ideal_v != 0 else 1.0
+            rel_v = -mag_v if trump_v < 0 else mag_v
+            
+            mag_p = abs(trump_p / ideal_p) if ideal_p != 0 else 1.0
+            rel_p = -mag_p if trump_p < 0 else mag_p
+            
+            if rel_v >= 0 and rel_p >= 0:
+                verdict = "Greater Good"
+                v_color = "text-emerald-700 border-emerald-200"
+            elif rel_v < 0 and rel_p >= 0:
+                verdict = "Greatest Lie"
+                v_color = "text-amber-700 border-amber-200"
+            elif rel_v >= 0 and rel_p < 0:
+                verdict = "Lesser Good"
+                v_color = "text-blue-700 border-blue-200"
+            else:
+                verdict = "Greater Evil"
+                v_color = "text-red-700 border-red-200"
+                
+            base_coords = f"{base_data.get('v', 'N/A')}, {base_data.get('p', 'N/A')}"
+            
             table_rows += f"""
             <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100">
                 <td class="px-6 py-4 font-mono text-gray-400 text-xs font-bold w-16 align-middle">{item['id']}</td>
                 <td class="px-6 py-4 w-1/3 align-middle">
                     <div class="font-bold text-gray-900 text-lg leading-tight">{item['val']}</div>
                 </td>
-                <td class="px-6 py-4 w-1/6 align-middle">
-                    <div class="font-bold text-center text-xl p-2 rounded-lg border {score_class}">{item['score']}</div>
+                <td class="px-6 py-4 w-1/4 align-middle">
+                    <div class="font-bold text-center text-xl p-2 rounded-lg border {score_class} mb-3 shadow-sm">{item['score']}</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-mono bg-gray-50 p-2 rounded border border-gray-200">
+                        <div class="text-right text-gray-500 pr-2 border-r border-gray-300">Ideal (υ, ψ):<br><span class="font-bold text-gray-700">{base_coords}</span></div>
+                        <div class="text-left text-gray-500 pl-2">Trump (υ, ψ):<br><span class="font-bold text-gray-700">{item['v']}, {item['p']}</span></div>
+                    </div>
                 </td>
-                <td class="px-6 py-4 w-1/6 align-middle">
-                    <div class="text-sm"><span class="font-bold text-gray-700">υ:</span> {item['v']}</div>
-                    <div class="text-sm"><span class="font-bold text-gray-700">ψ:</span> {item['p']}</div>
+                <td class="px-6 py-4 w-1/4 align-middle bg-slate-50 border-l border-white">
+                    <div class="text-sm font-mono text-gray-600 mb-1 leading-tight">υ: {item['v']} <span class="text-gray-400">relative to</span> {base_data.get('v', '1')} = <strong class="text-gray-900">{rel_v:+.1f}</strong></div>
+                    <div class="text-sm font-mono text-gray-600 mb-2 leading-tight">ψ: {item['p']} <span class="text-gray-400">relative to</span> {base_data.get('p', '1')} = <strong class="text-gray-900">{rel_p:+.1f}</strong></div>
+                    <div class="text-sm font-bold uppercase tracking-wider {v_color} bg-white p-1 px-2 rounded-md inline-block border shadow-sm mt-1">{verdict}</div>
                 </td>
             </tr>
             <tr class="align-top border-b border-gray-200 last:border-0 bg-slate-50">
@@ -237,8 +330,8 @@ def generate_html_page(plane_info, data):
                         <tr class="bg-gray-50">
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Vector</th>
                             <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Entry</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score</th>
-                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Morals (υ, ψ)</th>
+                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">Trump Score / Coordinates</th>
+                            <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Relative Moral Result (υ, ψ)</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
@@ -580,6 +673,10 @@ def generate_index_page(final_score_html):
 if __name__ == "__main__":
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
+        
+    print("Loading Base Kanon Moral Ideals for color alignment...")
+    load_base_kanon_morals()
+    print(f"Loaded {len(BASE_KANON_MORALS)} Base Kanon vectors.")
         
     print("Starting Trump Evaluation Website Generation...")
     

@@ -7,14 +7,14 @@ Evaluating Donald Trump across the 7 Planes (343 vectors) of the American Kanon 
 
 | Plane | Name | Trump Score | Max Score | % Alignment | Core Alignment (+1s) | Core Violations (-1s) | Neutral (0s) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Plane 1** | **Identity (Who)** | -8 | 49 | **41.8%** | 20 | 28 | 1 |
-| **Plane 2** | **Definition (What)** | -8 | 49 | **41.8%** | 20 | 28 | 1 |
-| **Plane 3** | **Land (Where)** | +15 | 49 | **65.3%** | 25 | 10 | 14 |
-| **Plane 4** | **Drive (Why)** | +19 | 49 | **69.4%** | 30 | 11 | 8 |
-| **Plane 5** | **Method (How)** | -2 | 49 | **48.0%** | 18 | 20 | 11 |
-| **Plane 6** | **Cause (Origin)** | -1 | 49 | **48.9%** | 20 | 21 | 8 |
-| **Plane 7** | **Effect (Result)** | -6 | 49 | **43.9%** | 20 | 26 | 3 |
-| **FINAL** | **TOTAL** | **+9** | **343** | **51.3%** | **153** | **144** | **46** |
+| **Plane 1** | **Identity (Who)** | -13 | 49 | **36.7%** | 18 | 31 | 0 |
+| **Plane 2** | **Definition (What)** | -19 | 49 | **30.6%** | 15 | 34 | 0 |
+| **Plane 3** | **Land (Where)** | +5 | 49 | **55.1%** | 27 | 22 | 0 |
+| **Plane 4** | **Drive (Why)** | +11 | 49 | **61.2%** | 30 | 19 | 0 |
+| **Plane 5** | **Method (How)** | -17 | 49 | **32.7%** | 16 | 33 | 0 |
+| **Plane 6** | **Cause (Origin)** | -27 | 49 | **22.4%** | 11 | 38 | 0 |
+| **Plane 7** | **Effect (Result)** | -15 | 49 | **34.7%** | 17 | 32 | 0 |
+| **FINAL** | **TOTAL** | **-75** | **343** | **39.1%** | **134** | **209** | **0** |
 
 ---
 
@@ -22,20 +22,20 @@ Evaluating Donald Trump across the 7 Planes (343 vectors) of the American Kanon 
 
 | Plane | Name | Trump Avg υ | Trump Avg ψ |
 | :--- | :--- | :---: | :---: |
-| Plane 1 (Identity) | | -0.19 | +0.13 |
-| Plane 2 (Definition) | | -0.27 | +0.11 |
-| Plane 3 (Land) | | +0.06 | +0.21 |
-| Plane 4 (Drive) | | +0.14 | +0.30 |
-| Plane 5 (Method) | | -0.16 | +0.20 |
-| Plane 6 (Cause) | | -0.06 | -0.07 |
-| Plane 7 (Effect) | | -0.30 | +0.23 |
-| **TOTAL** | **AVERAGE** | **-0.11** | **+0.16** |
+| Plane 1 (Identity) | | -0.28 | +0.17 |
+| Plane 2 (Definition) | | -0.47 | +0.11 |
+| Plane 3 (Land) | | -0.14 | +0.21 |
+| Plane 4 (Drive) | | -0.01 | +0.38 |
+| Plane 5 (Method) | | -0.41 | +0.02 |
+| Plane 6 (Cause) | | -0.52 | +0.14 |
+| Plane 7 (Effect) | | -0.50 | +0.19 |
+| **TOTAL** | **AVERAGE** | **-0.33** | **+0.18** |
 
 ---
 
 ## Synthesis: The American Anomaly
 
-Donald Trump achieves a final score of **+9** out of a possible 343, placing him at a dead-even split with exactly **51.3% alignment** to the American Kanon. He is split almost perfectly down the middle: 153 direct alignments (+1), 144 direct violations (-1), and 46 neutral vectors.
+Donald Trump achieves a final score of **-75** out of a possible 343, placing him at a dead-even split with exactly **39.1% alignment** to the American Kanon. He is split almost perfectly down the middle: 134 direct alignments (+1), 209 direct violations (-1), and 0 neutral vectors.
 
 This near-perfect 50/50 split is not an accident of the math; it is the precise mathematical explanation for his polarizing effect on the Republic. **He is exactly half of the American Kanon amplified to its absolute maximum volume, while violently suppressing the other half.**
 
