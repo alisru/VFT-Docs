@@ -74,7 +74,15 @@ for plane_idx, t_filename in enumerate(md_files, 1):
                     score_val = 0
                     if '+1' in score_str: score_val = 1
                     elif '-1' in score_str: score_val = -1
+                    
+                    try: t_u_val = float(parts[4].replace('+',''))
+                    except ValueError: t_u_val = 0.0
+                    try: t_p_val = float(parts[5].replace('+',''))
+                    except ValueError: t_p_val = 0.0
+                    
                     base_vectors[vector_id]['trump_score'] = score_val
+                    base_vectors[vector_id]['trump_u'] = t_u_val
+                    base_vectors[vector_id]['trump_p'] = t_p_val
     
     entries = list(base_vectors.values())
     
@@ -237,6 +245,12 @@ html_template = """<!DOCTYPE html>
         </p>
     </div>
 
+    <div class="controls mode-controls" style="margin-bottom: 1rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+        <label style="cursor: pointer; font-weight: 600; color: #1e293b; display: inline-flex; align-items: center; gap: 0.5rem;"><input type="radio" name="viewMode" value="kanon" onchange="setViewMode(this.value)"> Base Kanon Ideals</label>
+        <label style="cursor: pointer; font-weight: 600; color: #1e293b; display: inline-flex; align-items: center; gap: 0.5rem;"><input type="radio" name="viewMode" value="trump" checked onchange="setViewMode(this.value)"> Trump's Reality</label>
+        <label style="cursor: pointer; font-weight: 600; color: #1e293b; display: inline-flex; align-items: center; gap: 0.5rem;"><input type="radio" name="viewMode" value="vectors" onchange="setViewMode(this.value)"> Relative Distortion Map</label>
+    </div>
+
     <div class="controls">
         <button class="plane-btn active" data-plane="all">All Planes</button>
         <button class="plane-btn" data-plane="1">P1: Identity</button>
@@ -278,7 +292,14 @@ html_template = """<!DOCTYPE html>
         const cy = height / 2;
         const scale = (width - 120) / 2; 
         let currentPlane = 'all';
+        let viewMode = 'trump';
         let hoveredEntries = [];
+        
+        function setViewMode(mode) {
+            viewMode = mode;
+            draw();
+            updateStats();
+        }
 
         function toCanvasX(u) { return cx - (u * scale); }  
         function toCanvasY(p) { return cy - (p * scale); }
@@ -345,16 +366,43 @@ html_template = """<!DOCTYPE html>
 
             planes.forEach(planeId => {
                 const plane = kanonData[planeId];
+                
+                if (viewMode === 'vectors') {
+                    plane.entries.forEach(entry => {
+                        const isHovered = hoveredEntries.includes(entry);
+                        const kx = toCanvasX(entry.u);
+                        const ky = toCanvasY(entry.p);
+                        const tx = toCanvasX(entry.trump_u);
+                        const ty = toCanvasY(entry.trump_p);
+                        
+                        ctx.beginPath(); ctx.moveTo(kx, ky); ctx.lineTo(tx, ty);
+                        ctx.strokeStyle = isHovered ? 'rgba(71, 85, 105, 0.8)' : 'rgba(148, 163, 184, 0.3)';
+                        ctx.lineWidth = isHovered ? 2 : 1; ctx.stroke();
+                        
+                        ctx.beginPath(); ctx.arc(kx, ky, 3, 0, Math.PI * 2);
+                        ctx.fillStyle = '#64748b'; ctx.fill();
+                    });
+                }
+                
                 plane.entries.forEach(entry => {
-                    const x = toCanvasX(entry.u);
-                    const y = toCanvasY(entry.p);
-                    let baseRadius = 5;
-                    if (entry.trump_score === 1) baseRadius = 10; // 2x size for Hits
-                    if (entry.trump_score === -1) baseRadius = 15; // 3x size for Fails
-                    
                     const isHovered = hoveredEntries.includes(entry);
+                    
+                    let target_u = entry.trump_u;
+                    let target_p = entry.trump_p;
+                    if (viewMode === 'kanon') { target_u = entry.u; target_p = entry.p; }
+                    
+                    const x = toCanvasX(target_u);
+                    const y = toCanvasY(target_p);
+                    
+                    let baseRadius = 5;
+                    if (entry.trump_score === 1) baseRadius = 9;
+                    if (entry.trump_score === -1) baseRadius = 13;
+                    if (viewMode === 'kanon') baseRadius = 5;
+                    
                     const radius = isHovered ? baseRadius + 4 : baseRadius;
-                    const color = getQuadrantColor(entry.u, entry.p, entry.trump_score);
+                    
+                    let color = getQuadrantColor(target_u, target_p, entry.trump_score);
+                    if (viewMode === 'kanon') color = '#1e293b';
 
                     ctx.beginPath();
                     ctx.arc(x, y, radius, 0, Math.PI * 2);
@@ -571,14 +619,18 @@ html_template = """<!DOCTYPE html>
 
             for (const planeId of planes) {
                 for (const entry of kanonData[planeId].entries) {
-                    const x = toCanvasX(entry.u);
-                    const y = toCanvasY(entry.p);
+                    let target_u = entry.trump_u;
+                    let target_p = entry.trump_p;
+                    if (viewMode === 'kanon') { target_u = entry.u; target_p = entry.p; }
+
+                    const x = toCanvasX(target_u);
+                    const y = toCanvasY(target_p);
                     const dist = Math.sqrt((mouseX - x) ** 2 + (mouseY - y) ** 2);
 
                     if (dist < 12 && dist < closestDist) {
                         closestDist = dist;
-                        targetU = entry.u;
-                        targetP = entry.p;
+                        targetU = target_u;
+                        targetP = target_p;
                     }
                 }
             }
@@ -586,7 +638,9 @@ html_template = """<!DOCTYPE html>
             if (targetU !== null && targetP !== null) {
                 for (const planeId of planes) {
                     for (const entry of kanonData[planeId].entries) {
-                        if (entry.u === targetU && entry.p === targetP) {
+                        let chk_u = viewMode === 'kanon' ? entry.u : entry.trump_u;
+                        let chk_p = viewMode === 'kanon' ? entry.p : entry.trump_p;
+                        if (chk_u === targetU && chk_p === targetP) {
                             entry._planeId = planeId;
                             hoveredEntries.push(entry);
                         }
@@ -628,8 +682,12 @@ html_template = """<!DOCTYPE html>
                 document.body.style.cursor = 'pointer';
                 tooltip.style.display = 'block';
                 
-                let baseU = hoveredEntries[0].u;
-                let baseP = hoveredEntries[0].p;
+                let baseU = viewMode === 'kanon' ? hoveredEntries[0].u : hoveredEntries[0].trump_u;
+                let baseP = viewMode === 'kanon' ? hoveredEntries[0].p : hoveredEntries[0].trump_p;
+                if (hoveredEntries[0].is_centroid) {
+                    baseU = hoveredEntries[0].u;
+                    baseP = hoveredEntries[0].p;
+                }
                 
                 let html = '';
                 if (hoveredEntries.length > 1) {
