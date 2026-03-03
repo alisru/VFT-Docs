@@ -55,7 +55,8 @@ for plane_idx, t_filename in enumerate(md_files, 1):
                         try:
                             u_val = float(parts[3].replace('+', ''))
                             p_val = float(parts[4].replace('+', ''))
-                            base_vectors[vector_id] = {'name': entry_name, 'u': u_val, 'p': p_val, 'trump_score': 0}
+                            # Strip .i1, .t1, etc suffix if present because base judgements might have them, but map data comes from judgements. Let's keep exactly whatever matches the target table ID.
+                            base_vectors[vector_id] = {'id': vector_id, 'name': entry_name, 'u': u_val, 'p': p_val, 'trump_score': 0}
                         except ValueError:
                             pass
     else:
@@ -131,8 +132,9 @@ html_template = """<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body { overflow-x: hidden; max-width: 100vw; }
-        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1e293b; min-height: 100vh; }
+        html, body { max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1e293b; min-height: 100vh; overflow-x: hidden; }
+        .map-container { padding: 1rem; max-width: 1200px; margin: 0 auto; }
         .map-container { padding: 1rem; max-width: 1200px; margin: 0 auto; }
         @media (min-width: 768px) { .map-container { padding: 2rem; } }
         h1 { text-align: center; font-size: 2rem; margin-bottom: 0.5rem; color: #0f172a; font-family: 'Merriweather', serif; font-weight: 800; }
@@ -240,7 +242,7 @@ html_template = """<!DOCTYPE html>
             </div>
         </div>
         <p style="font-size: 0.85rem; color: #64748b; margin-top: 1.5rem; font-style: italic; text-align: center;">
-            * Hover or tap over any dot to see the specific Concept and its exact Vector Coordinate.<br>
+            * Hover or tap over any dot to see the specific Concept and its exact Vector Coordinate. Click a node to jump to its Kanon evaluation.<br>
             <span class="zoom-hint" style="font-weight: 600; color: #3b82f6; display: inline-block; margin-top: 0.5rem; font-style: normal;">🔍 Double-tap the map to toggle full native scroll size.</span>
         </p>
     </div>
@@ -285,7 +287,26 @@ html_template = """<!DOCTYPE html>
 
         const canvas = document.getElementById('hegemonyCanvas');
         const ctx = canvas.getContext('2d');
-        const tooltip = document.getElementById('tooltip');
+        const tooltip = document.createElement('div');
+        tooltip.className = 'canvas-tooltip';
+        // Add pointer-events auto so user can interact with tooltip links if needed
+        tooltip.style.cssText = `
+            position: fixed;
+            background: rgba(15, 23, 42, 0.95);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            pointer-events: auto;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+            max-width: 280px;
+            transition: opacity 0.15s ease;
+        `;
+        document.body.appendChild(tooltip);
         const width = canvas.width;
         const height = canvas.height;
         const cx = width / 2;
@@ -385,7 +406,7 @@ html_template = """<!DOCTYPE html>
                 }
                 
                 plane.entries.forEach(entry => {
-                    const isHovered = hoveredEntries.includes(entry);
+                    const isHovered = hoveredEntries.includes(entry) || (pinnedEntry && pinnedEntry.id === entry.id);
                     
                     let target_u = entry.trump_u;
                     let target_p = entry.trump_p;
@@ -559,17 +580,17 @@ html_template = """<!DOCTYPE html>
                 
                 const trumpQuadClass = (plane.trump_total.u >= 0 && plane.trump_total.p >= 0) ? 'positive' : 
                                        (plane.trump_total.u < 0 && plane.trump_total.p >= 0) ? 'negative' : 
-                                       (plane.trump_total.u >= 0 && plane.trump_total.p < 0) ? 'text-blue-500' : 'text-orange-500';
+                                       (plane.total.u >= 0 && plane.trump_total.p < 0) ? 'text-blue-500' : 'text-orange-500';
                 
                 let quadName = "Greater Good";
                 if(plane.total.u < 0 && plane.total.p >= 0) quadName = "Greatest Lie";
                 else if(plane.total.u >= 0 && plane.total.p < 0) quadName = "Lesser Good";
-                else if(plane.total.u < 0 && plane.total.p < 0) quadName = "The Void";
+                else if(plane.total.u < 0 && plane.total.p < 0) quadName = "Greater Evil";
 
                 let trumpQuadName = "Greater Good";
                 if(plane.trump_total.u < 0 && plane.trump_total.p >= 0) trumpQuadName = "Greatest Lie";
                 else if(plane.trump_total.u >= 0 && plane.trump_total.p < 0) trumpQuadName = "Lesser Good";
-                else if(plane.trump_total.u < 0 && plane.trump_total.p < 0) trumpQuadName = "The Void";
+                else if(plane.trump_total.u < 0 && plane.trump_total.p < 0) trumpQuadName = "Greater Evil";
 
                 html += `
                     <div class="stat-card" style="border-left: 4px solid ${plane.color}; padding: 1.25rem;">
@@ -602,7 +623,27 @@ html_template = """<!DOCTYPE html>
             statsGrid.innerHTML = html;
         }
 
+        // To allow tooltip interaction, we only hide tooltip on mouseleave of canvas if we aren't over tooltip.
+        // But since tooltip is over canvas, it needs its own mouseleave management if we do pointer-events: auto.
+        let isOverTooltip = false;
+        
+        tooltip.addEventListener('mouseenter', () => isOverTooltip = true);
+        tooltip.addEventListener('mouseleave', () => {
+            isOverTooltip = false;
+            // If the tooltip is not pinned, hide it when mouse leaves
+            if (!pinnedEntry) {
+                tooltip.style.display = 'none';
+                hoveredEntries = [];
+                draw();
+            }
+        });
+
+        // We will pin the tooltip when clicked, user requested: "click to keep open the node on the map then be able to click on the specific node"
+        let pinnedEntry = null;
+
         canvas.addEventListener('mousemove', (e) => {
+            if (pinnedEntry) return; // If an entry is pinned, don't update on mousemove
+
             const rect = canvas.getBoundingClientRect();
             // Scale mouse coordinates due to canvas scaling (if using CSS max-width, though here it's fixed width)
             const scaleX = canvas.width / rect.width;
@@ -610,7 +651,7 @@ html_template = """<!DOCTYPE html>
             const mouseX = (e.clientX - rect.left) * scaleX;
             const mouseY = (e.clientY - rect.top) * scaleY;
 
-            hoveredEntries = [];
+            let currentHovered = [];
             const planes = currentPlane === 'all' ? Object.keys(kanonData) : [currentPlane];
 
             let closestDist = Infinity;
@@ -642,7 +683,7 @@ html_template = """<!DOCTYPE html>
                         let chk_p = viewMode === 'kanon' ? entry.p : entry.trump_p;
                         if (chk_u === targetU && chk_p === targetP) {
                             entry._planeId = planeId;
-                            hoveredEntries.push(entry);
+                            currentHovered.push(entry);
                         }
                     }
                 }
@@ -660,7 +701,7 @@ html_template = """<!DOCTYPE html>
                 let kx = toCanvasX(kanon_u);
                 let ky = toCanvasY(kanon_p);
                 if (Math.sqrt((mouseX - kx) ** 2 + (mouseY - ky) ** 2) < 18) {
-                    hoveredEntries.push({
+                    currentHovered.push({
                         name: currentPlane === 'all' ? 'Overall Kanon Average' : `Plane ${currentPlane} Kanon Average`,
                         u: kanon_u, p: kanon_p,
                         is_centroid: true, centroid_type: 'KANON', color: '#1e293b'
@@ -670,7 +711,7 @@ html_template = """<!DOCTYPE html>
                 let tx = toCanvasX(trump_u);
                 let ty = toCanvasY(trump_p);
                 if (Math.sqrt((mouseX - tx) ** 2 + (mouseY - ty) ** 2) < 18) {
-                    hoveredEntries.push({
+                    currentHovered.push({
                         name: currentPlane === 'all' ? 'Overall Trump Average' : `Plane ${currentPlane} Trump Average`,
                         u: trump_u, p: trump_p,
                         is_centroid: true, centroid_type: 'TRUMP', color: '#f59e0b'
@@ -678,80 +719,88 @@ html_template = """<!DOCTYPE html>
                 }
             }
 
-            if (hoveredEntries.length > 0) {
-                document.body.style.cursor = 'pointer';
-                tooltip.style.display = 'block';
-                
-                let baseU = viewMode === 'kanon' ? hoveredEntries[0].u : hoveredEntries[0].trump_u;
-                let baseP = viewMode === 'kanon' ? hoveredEntries[0].p : hoveredEntries[0].trump_p;
-                if (hoveredEntries[0].is_centroid) {
-                    baseU = hoveredEntries[0].u;
-                    baseP = hoveredEntries[0].p;
-                }
-                
-                let html = '';
-                if (hoveredEntries.length > 1) {
-                    html += `<div class="tooltip-coords" style="margin-bottom: 12px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px;">Coordinate Stack: <strong style="color:#0f172a;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}, ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</strong><br><span style="font-size:0.75rem; color:#64748b;">${hoveredEntries.length} overlapping items</span></div>`;
-                } else {
-                    html += `<div class="tooltip-coords" style="margin-bottom: 8px; color: #64748b; font-size: 0.8rem; font-weight: 600;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}  |  ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</div>`;
-                }
-                
-                const maxRows = Math.min(7, hoveredEntries.length);
-                html += `<div style="display: grid; grid-auto-flow: column; grid-template-rows: repeat(${maxRows}, auto); grid-auto-columns: max-content; gap: 0 1.5rem;">`;
-                
-                hoveredEntries.forEach(entry => {
-                    if (entry.is_centroid) {
-                        html += `
-                            <div style="border-left: 3px solid ${entry.color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
-                                <div class="tooltip-title" style="margin-bottom: 2px;">${entry.name}</div>
-                                <div class="tooltip-judgment" style="font-size: 0.8rem;">Average aggregate coordinate</div>
-                                <strong style="color:${entry.color}; font-size: 0.8rem; display:block; margin-top:2px;">Type: ${entry.centroid_type}</strong>
-                            </div>
-                        `;
-                    } else {
-                        let scoreText = 'Miss (0)';
-                        let colorStr = '#64748b'; // grey
-                        if (entry.trump_score === 1) { scoreText = 'Hit (+1)'; colorStr = '#16a34a'; } // green
-                        if (entry.trump_score === -1) { scoreText = 'Fail (-1)'; colorStr = '#dc2626'; } // red
-                        
-                        html += `
-                            <div style="border-left: 3px solid ${kanonData[entry._planeId].color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
-                                <div class="tooltip-title" style="margin-bottom: 2px;">${entry.name}</div>
-                                <div class="tooltip-judgment" style="font-size: 0.8rem;">Plane ${entry._planeId}: ${kanonData[entry._planeId].name}</div>
-                                <strong style="color:${colorStr}; font-size: 0.8rem; display:block; margin-top:2px;">Trump Score: ${scoreText}</strong>
-                            </div>
-                        `;
+            // Only update if hovered entries have changed
+            if (JSON.stringify(hoveredEntries) !== JSON.stringify(currentHovered)) {
+                hoveredEntries = currentHovered;
+                if (hoveredEntries.length > 0) {
+                    document.body.style.cursor = 'pointer';
+                    tooltip.style.display = 'block';
+                    
+                    let baseU = viewMode === 'kanon' ? hoveredEntries[0].u : hoveredEntries[0].trump_u;
+                    let baseP = viewMode === 'kanon' ? hoveredEntries[0].p : hoveredEntries[0].trump_p;
+                    if (hoveredEntries[0].is_centroid) {
+                        baseU = hoveredEntries[0].u;
+                        baseP = hoveredEntries[0].p;
                     }
-                });
-                
-                html += `</div>`;
-                tooltip.innerHTML = html;
-                
-                const tooltipRect = tooltip.getBoundingClientRect();
-                const viewportWidth = window.innerWidth;
-                const viewportHeight = window.innerHeight;
-                
-                let tLeft = e.clientX + 20;
-                let tTop = e.clientY + 20;
-                
-                if (tLeft + tooltipRect.width > viewportWidth - 20) {
-                    tLeft = e.clientX - tooltipRect.width - 20;
+                    
+                    let html = '';
+                    if (hoveredEntries.length > 1) {
+                        html += `<div style="color: #94a3b8; font-size: 0.8rem; font-weight: 600; margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px;">Coordinate Stack: <strong style="color:white;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}, ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</strong><br><span style="font-size:0.75rem; color:#94a3b8;">${hoveredEntries.length} overlapping items</span></div>`;
+                    } else {
+                        html += `<div style="color: #94a3b8; font-size: 0.8rem; font-weight: 600; margin-bottom: 8px;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}  |  ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</div>`;
+                    }
+                    
+                    const maxRows = Math.min(7, hoveredEntries.length);
+                    html += `<div style="display: grid; grid-auto-flow: column; grid-template-rows: repeat(${maxRows}, auto); grid-auto-columns: max-content; gap: 0 1.5rem;">`;
+                    
+                    hoveredEntries.forEach(entry => {
+                        if (entry.is_centroid) {
+                            html += `
+                                <div style="border-left: 3px solid ${entry.color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
+                                    <div style="font-weight: 800; font-size: 1rem; margin-bottom: 2px; color: white;">${entry.name}</div>
+                                    <div style="font-style: italic; color: #cbd5e1; font-size: 0.8rem;">Average aggregate coordinate</div>
+                                    <strong style="color:${entry.color}; font-size: 0.8rem; display:block; margin-top:2px;">Type: ${entry.centroid_type}</strong>
+                                </div>
+                            `;
+                        } else {
+                            let scoreText = 'Miss (0)';
+                            let colorStr = '#94a3b8'; // grey
+                            if (entry.trump_score === 1) { scoreText = 'Hit (+1)'; colorStr = '#22c55e'; } // green
+                            if (entry.trump_score === -1) { scoreText = 'Fail (-1)'; colorStr = '#ef4444'; } // red
+                            
+                            const planeNameFull = kanonData[entry._planeId].name;
+                            const planeName = planeNameFull.split(' ')[0];
+                            const url = `Plane_${entry._planeId}_${planeName}.html#${entry.id}`;
+
+                            html += `
+                                <div style="border-left: 3px solid ${kanonData[entry._planeId].color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
+                                    <a href="${url}" class="tooltip-link" style="font-weight: 800; font-size: 1rem; margin-bottom: 2px; color: white; display: block;">${entry.name}</a>
+                                    <div style="font-style: italic; color: #cbd5e1; font-size: 0.8rem;">Plane ${entry._planeId}: ${kanonData[entry._planeId].name}</div>
+                                    <strong style="color:${colorStr}; font-size: 0.8rem; display:block; margin-top:2px;">Trump Score: ${scoreText}</strong>
+                                </div>
+                            `;
+                        }
+                    });
+                    
+                    html += `</div>`;
+                    tooltip.innerHTML = html;
+                    
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    const viewportWidth = window.innerWidth;
+                    const viewportHeight = window.innerHeight;
+                    
+                    let tLeft = e.clientX + 20;
+                    let tTop = e.clientY + 20;
+                    
+                    if (tLeft + tooltipRect.width > viewportWidth - 20) {
+                        tLeft = e.clientX - tooltipRect.width - 20;
+                    }
+                    
+                    if (tTop + tooltipRect.height > viewportHeight - 20) {
+                        tTop = viewportHeight - tooltipRect.height - 20;
+                    }
+                    
+                    tLeft = Math.max(10, tLeft);
+                    tTop = Math.max(10, tTop);
+                    
+                    tooltip.style.left = tLeft + 'px';
+                    tooltip.style.top = tTop + 'px';
+                } else {
+                    document.body.style.cursor = 'default';
+                    tooltip.style.display = 'none';
                 }
-                
-                if (tTop + tooltipRect.height > viewportHeight - 20) {
-                    tTop = viewportHeight - tooltipRect.height - 20;
-                }
-                
-                tLeft = Math.max(10, tLeft);
-                tTop = Math.max(10, tTop);
-                
-                tooltip.style.left = tLeft + 'px';
-                tooltip.style.top = tTop + 'px';
-            } else {
-                document.body.style.cursor = 'default';
-                tooltip.style.display = 'none';
+                draw();
             }
-            draw();
         });
         
         // Ensure explicit taps on mobile correctly trigger the tooltip without swiping natively
@@ -768,6 +817,7 @@ html_template = """<!DOCTYPE html>
                     lastTap = 0;
                     e.preventDefault();
                 } else {
+                    // Simulate mousemove for tooltip on tap
                     const touchEvent = new MouseEvent('mousemove', {
                         clientX: e.touches[0].clientX,
                         clientY: e.touches[0].clientY
@@ -786,11 +836,30 @@ html_template = """<!DOCTYPE html>
             }
         });
 
+        canvas.addEventListener('click', (e) => {
+            if (hoveredEntries.length > 0) {
+                const entry = hoveredEntries[0];
+                if (!entry.is_centroid && entry.id) {
+                    pinnedEntry = entry; // Pin the tooltip
+                    // Re-render tooltip to show pinned state if desired, or just keep it visible
+                    // For now, just ensure it stays visible and update cursor
+                    document.body.style.cursor = 'auto'; // Allow interaction with tooltip
+                }
+            } else {
+                pinnedEntry = null; // click empty space to unpin
+                tooltip.style.display = 'none'; // Hide tooltip if unpinned
+                document.body.style.cursor = 'default';
+            }
+            draw(); // Redraw to update highlight for pinned entry
+        });
+
         canvas.addEventListener('mouseleave', () => {
-            hoveredEntries = [];
-            tooltip.style.display = 'none';
-            document.body.style.cursor = 'default';
-            draw();
+            if (!pinnedEntry && !isOverTooltip) {
+                hoveredEntries = [];
+                tooltip.style.display = 'none';
+                document.body.style.cursor = 'default';
+                draw();
+            }
         });
 
         document.querySelectorAll('.plane-btn').forEach(btn => {

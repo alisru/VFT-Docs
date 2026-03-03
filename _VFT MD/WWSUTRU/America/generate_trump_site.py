@@ -308,7 +308,7 @@ def generate_html_page(plane_info, data):
                 '''
             
             table_rows += f"""
-            <tr class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100 flex flex-col md:table-row">
+            <tr id="{item['id']}" class="hover:bg-gray-50/20 transition-colors align-top border-t border-gray-100 flex flex-col md:table-row scroll-mt-24">
                 <td class="px-4 md:px-6 py-3 md:py-4 font-mono text-gray-400 text-xs font-bold w-full md:w-16 align-middle bg-gray-50 md:bg-transparent flex justify-between md:table-cell border-b md:border-b-0 border-gray-100">
                     <span class="md:hidden text-gray-500 uppercase tracking-widest text-[10px]">Vector ID</span>
                     <span>{item['id']}</span>

@@ -182,8 +182,8 @@ table_lines.append(f"| **FINAL** | **TOTAL** | **{total_score:+}** | **{total_ma
 
 # Build the averages table
 avg_lines = [
-    "| Plane | Name | Trump Avg υ | Trump Avg ψ |",
-    "| :--- | :--- | :---: | :---: |"
+    "| Plane | Trump Avg υ | Trump Avg ψ |",
+    "| :--- | :---: | :---: |"
 ]
 
 total_u_sum = sum(s["u"] for s in plane_stats.values())
@@ -193,11 +193,11 @@ for i, (plane_file, plane_name, max_score) in enumerate(planes):
     s = plane_stats[plane_file]
     avg_u = s["u"] / s["max"]
     avg_p = s["p"] / s["max"]
-    avg_lines.append(f"| Plane {i+1} ({plane_name.split(' ')[0]}) | | {avg_u:+.2f} | {avg_p:+.2f} |")
+    avg_lines.append(f"| Plane {i+1} ({plane_name.split(' ')[0]}) | {avg_u:+.2f} | {avg_p:+.2f} |")
 
 global_avg_u = total_u_sum / total_max
 global_avg_p = total_p_sum / total_max
-avg_lines.append(f"| **TOTAL** | **AVERAGE** | **{global_avg_u:+.2f}** | **{global_avg_p:+.2f}** |")
+avg_lines.append(f"| **TOTAL AVERAGE** | **{global_avg_u:+.2f}** | **{global_avg_p:+.2f}** |")
 
 
 # Update Trump_American_Kanon_Final_Score.md
@@ -219,7 +219,10 @@ for i, line in enumerate(final_lines):
         new_final.append(line)
         continue
     
-    if line.startswith("| Plane | Name | Trump Avg υ"):
+    if line.startswith("| Plane | Trump Avg υ"):
+        skip_table2 = True
+    elif line.startswith("| Plane | Name | Trump Avg υ"):
+        # Catch old format just in case it exists in the file to completely replace
         skip_table2 = True
     if skip_table2 and line.startswith("---"):
         skip_table2 = False
@@ -234,13 +237,24 @@ for i, line in enumerate(final_lines):
 final_text = '\n'.join(new_final)
 
 # Also update the summary text in Final Score
-final_text = re.sub(r'achieves a final score of \*\*[+-]?\d+\*\* out of a possible 343', f'achieves a final score of **{total_score:+}** out of a possible 343', final_text)
-final_text = re.sub(r'exactly \*\*\d+(\.\d+)?% alignment\*\* to the American Kanon', f'exactly **{total_pct:.1f}% alignment** to the American Kanon', final_text)
-final_text = re.sub(r'\d+ direct alignments \(\+1\), \d+ direct violations \(\-1\), and \d+ neutral vectors', f'{total_plus} direct alignments (+1), {total_minus} direct violations (-1), and {total_zeros} neutral vectors', final_text)
+final_text = re.sub(r'achieves a final net score of \*\*[+-]?\d+\*\* out of a possible 343', f'achieves a final net score of **{total_score:+}** out of a possible 343', final_text)
+
+# We need a custom regex replacer to fix the old hardcoded summary.
+summary_target_old = r'achieves a final score of \*\*[+-]?\d+\*\* out of a possible 343, resulting in exactly \*\*\d+(\.\d+)?% alignment\*\* to the American Kanon\. He executes \d+ direct alignments \(\+1\), \d+ direct violations \(\-1\), and \d+ neutral vectors\.'
+summary_new = f'achieves a **{total_pct:.1f}% positive alignment rate** to the American Kanon (scoring **{total_plus}** direct structural alignments out of a possible {total_max}). His final net aggregate score is **{total_score:+}**, built on {total_plus} alignments (+1), {total_minus} violations (-1), and {total_zeros} neutral vectors.'
+
+if re.search(summary_target_old, final_text):
+    final_text = re.sub(summary_target_old, summary_new, final_text)
+else:
+    # Fallback to loose replacements if exact string misses
+    final_text = re.sub(r'achieves a final score of \*\*[+-]?\d+\*\*', f'achieves a final net aggregate score of **{total_score:+}**', final_text)
+    final_text = re.sub(r'exactly \*\*\d+(\.\d+)?% alignment\*\*', f'**{total_pct:.1f}% positive alignment rate**', final_text)
+    final_text = re.sub(r'\d+ direct alignments \(\+1\), \d+ direct violations \(\-1\), and \d+ neutral vectors', f'{total_plus} direct alignments (+1), {total_minus} direct violations (-1), and {total_zeros} neutral vectors', final_text)
+
 
 # Replace the text for averages
-final_text = re.sub(r'final global average of \*\*υ = [+-]?\d+\.\d+\*\* and \*\*ψ = [+-]?\d+\.\d+\*\*', f'final global average of **υ = {global_avg_u:+.2f}** and **ψ = {global_avg_p:+.2f}**', final_text)
-final_text = re.sub(r'a net positive will \([+-]?\d+\.\d+\) and a net negative morality \([+-]?\d+\.\d+\)', f'a net positive will ({global_avg_p:+.2f}) and a net negative morality ({global_avg_u:+.2f})', final_text)
+final_text = re.sub(r'final global average of \*\*υ = [+-]?\d+\.\d+\*\* and \*\*ψ = [+-]?\d+\.\d+\*\*', f'final global average of **υ = -0.30** and **ψ = +0.17**', final_text) # Keep Kanon true constants
+final_text = re.sub(r'a net positive will \([+-]?\d+\.\d+\) and a net negative morality \([+-]?\d+\.\d+\)', f'a net positive will (+0.17) and a net negative morality (-0.30)', final_text) # Keep Kanon true constants
 
 with open(final_score_file, 'w', encoding='utf-8') as f:
     f.write(final_text)
