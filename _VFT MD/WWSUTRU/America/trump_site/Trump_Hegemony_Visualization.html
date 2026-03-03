@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body { overflow-x: hidden; max-width: 100vw; }
-        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1e293b; min-height: 100vh; }
+        html, body { max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1e293b; min-height: 100vh; overflow-x: hidden; }
+        .map-container { padding: 1rem; max-width: 1200px; margin: 0 auto; }
         .map-container { padding: 1rem; max-width: 1200px; margin: 0 auto; }
         @media (min-width: 768px) { .map-container { padding: 2rem; } }
         h1 { text-align: center; font-size: 2rem; margin-bottom: 0.5rem; color: #0f172a; font-family: 'Merriweather', serif; font-weight: 800; }
@@ -117,7 +118,7 @@
             </div>
         </div>
         <p style="font-size: 0.85rem; color: #64748b; margin-top: 1.5rem; font-style: italic; text-align: center;">
-            * Hover or tap over any dot to see the specific Concept and its exact Vector Coordinate.<br>
+            * Hover or tap over any dot to see the specific Concept and its exact Vector Coordinate. Click a node to jump to its Kanon evaluation.<br>
             <span class="zoom-hint" style="font-weight: 600; color: #3b82f6; display: inline-block; margin-top: 0.5rem; font-style: normal;">🔍 Double-tap the map to toggle full native scroll size.</span>
         </p>
     </div>
@@ -172,6 +173,7 @@
         },
         "entries": [
             {
+                "id": "Who.Who.Who",
                 "name": "Self-Evidence",
                 "u": 1.0,
                 "p": 0.9,
@@ -180,6 +182,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Who.What",
                 "name": "The Inner Light",
                 "u": 0.8,
                 "p": 0.8,
@@ -188,6 +191,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Who.Who.Where",
                 "name": "The Great Soul",
                 "u": 1.0,
                 "p": -0.6,
@@ -196,6 +200,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Who.Who.Why",
                 "name": "Self-Reliance",
                 "u": 0.4,
                 "p": 0.9,
@@ -204,6 +209,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Who.How",
                 "name": "Integrity",
                 "u": 0.9,
                 "p": 0.4,
@@ -212,6 +218,7 @@
                 "trump_p": -0.4
             },
             {
+                "id": "Who.Who.Cause",
                 "name": "The Conscience",
                 "u": 0.9,
                 "p": 0.8,
@@ -220,6 +227,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Who.Who.Effect",
                 "name": "Humility",
                 "u": 0.8,
                 "p": -0.8,
@@ -228,6 +236,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Who.What.Who",
                 "name": "The Citizen",
                 "u": 0.9,
                 "p": 0.7,
@@ -236,6 +245,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Who.What.What",
                 "name": "Merit",
                 "u": 1.0,
                 "p": 0.8,
@@ -244,6 +254,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Who.What.Where",
                 "name": "The Common Man",
                 "u": 0.8,
                 "p": 0.5,
@@ -252,6 +263,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Who.What.Why",
                 "name": "Upward Mobility",
                 "u": 0.7,
                 "p": 0.9,
@@ -260,6 +272,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.What.How",
                 "name": "Professionalism",
                 "u": 0.6,
                 "p": 0.8,
@@ -268,6 +281,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Who.What.Cause",
                 "name": "Civic Virtue",
                 "u": 0.9,
                 "p": 0.7,
@@ -276,6 +290,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Who.What.Effect",
                 "name": "Checks and Balances",
                 "u": 0.8,
                 "p": -0.6,
@@ -284,6 +299,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Who.Where.Who",
                 "name": "The Frontier",
                 "u": 0.4,
                 "p": 0.9,
@@ -292,6 +308,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Where.Where",
                 "name": "The Heartland",
                 "u": 0.6,
                 "p": -0.7,
@@ -300,6 +317,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Who.Where.What",
                 "name": "The Melting Pot",
                 "u": 0.9,
                 "p": 0.6,
@@ -308,6 +326,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Who.Where.Why",
                 "name": "The Pioneer",
                 "u": 0.5,
                 "p": 0.9,
@@ -316,6 +335,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Where.How",
                 "name": "Civilian Control",
                 "u": 1.0,
                 "p": -0.9,
@@ -324,6 +344,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Where.Cause",
                 "name": "Union",
                 "u": 0.9,
                 "p": 0.8,
@@ -332,6 +353,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Who.Where.Effect",
                 "name": "States' Rights",
                 "u": 0.6,
                 "p": 0.4,
@@ -340,6 +362,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Who.Why.Who",
                 "name": "The Pursuit of Happiness",
                 "u": 0.7,
                 "p": 1.0,
@@ -348,6 +371,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Who.Why.Where",
                 "name": "The Dream",
                 "u": 0.8,
                 "p": 0.8,
@@ -356,6 +380,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Who.Why.What",
                 "name": "New Beginning",
                 "u": 0.8,
                 "p": 0.9,
@@ -364,6 +389,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Why.Why",
                 "name": "Industry",
                 "u": 0.6,
                 "p": 0.9,
@@ -372,6 +398,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Who.Why.How",
                 "name": "Purpose",
                 "u": 0.7,
                 "p": 0.9,
@@ -380,6 +407,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Why.Cause",
                 "name": "Charity",
                 "u": 1.0,
                 "p": 0.5,
@@ -388,6 +416,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "Who.Why.Effect",
                 "name": "Temperance",
                 "u": 0.8,
                 "p": -0.7,
@@ -396,6 +425,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Who.How.Who",
                 "name": "Pragmatism",
                 "u": 0.6,
                 "p": 0.5,
@@ -404,6 +434,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Who.How.What",
                 "name": "Fair Play",
                 "u": 0.8,
                 "p": -0.4,
@@ -412,6 +443,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Who.How.Where",
                 "name": "The Strenuous Life",
                 "u": 0.5,
                 "p": 0.9,
@@ -420,6 +452,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Who.How.Why",
                 "name": "Ingenuity",
                 "u": 0.7,
                 "p": 0.9,
@@ -428,6 +461,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.How.How",
                 "name": "Transparency",
                 "u": 0.9,
                 "p": 0.7,
@@ -436,6 +470,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Who.How.Cause",
                 "name": "Diplomacy/Soft Power",
                 "u": 0.5,
                 "p": -0.5,
@@ -444,6 +479,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Who.How.Effect",
                 "name": "Frugality",
                 "u": 0.7,
                 "p": 0.4,
@@ -452,6 +488,7 @@
                 "trump_p": -0.4
             },
             {
+                "id": "Who.Cause.Who",
                 "name": "The Immigrant Spirit",
                 "u": 0.8,
                 "p": 0.9,
@@ -460,6 +497,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Who.Cause.What",
                 "name": "Redemption",
                 "u": 0.9,
                 "p": 0.4,
@@ -468,6 +506,7 @@
                 "trump_p": -0.4
             },
             {
+                "id": "Who.Cause.Where",
                 "name": "The Founders",
                 "u": 0.7,
                 "p": 0.5,
@@ -476,6 +515,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Who.Cause.Why",
                 "name": "Progress",
                 "u": 0.8,
                 "p": 0.8,
@@ -484,6 +524,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Who.Cause.How",
                 "name": "Remembrance",
                 "u": 0.8,
                 "p": -0.4,
@@ -492,6 +533,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Who.Cause.Cause",
                 "name": "Tradition vs Revolution",
                 "u": 0.7,
                 "p": 0.9,
@@ -500,6 +542,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Who.Cause.Effect",
                 "name": "Independence",
                 "u": 0.8,
                 "p": 1.0,
@@ -508,6 +551,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Who.Effect.Who",
                 "name": "Recognition",
                 "u": 1.0,
                 "p": 0.8,
@@ -516,6 +560,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Who.Effect.What",
                 "name": "Liberation",
                 "u": 0.9,
                 "p": 0.9,
@@ -524,6 +569,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Who.Effect.Where",
                 "name": "Superpower",
                 "u": 0.6,
                 "p": 0.8,
@@ -532,6 +578,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Who.Effect.Why",
                 "name": "Leadership",
                 "u": 0.8,
                 "p": 0.6,
@@ -540,6 +587,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Who.Effect.How",
                 "name": "Justice",
                 "u": 1.0,
                 "p": 0.7,
@@ -548,6 +596,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Who.Effect.Cause",
                 "name": "Inspiration",
                 "u": 0.8,
                 "p": 0.4,
@@ -556,6 +605,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Who.Effect.Effect",
                 "name": "Dissent",
                 "u": 0.9,
                 "p": 0.9,
@@ -578,6 +628,7 @@
         },
         "entries": [
             {
+                "id": "What.Who.Who",
                 "name": "The Citizen",
                 "u": 0.9,
                 "p": 0.7,
@@ -586,6 +637,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "What.Who.Where",
                 "name": "The Resident",
                 "u": 0.7,
                 "p": 0.6,
@@ -594,6 +646,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "What.Who.What",
                 "name": "The Individual",
                 "u": 1.0,
                 "p": 0.8,
@@ -602,6 +655,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.Who.Why",
                 "name": "The Consumer",
                 "u": 0.4,
                 "p": 0.8,
@@ -610,6 +664,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.Who.How",
                 "name": "The Creator",
                 "u": 0.8,
                 "p": 0.7,
@@ -618,6 +673,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "What.Who.Cause",
                 "name": "The Parent",
                 "u": 0.9,
                 "p": 0.5,
@@ -626,6 +682,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "What.Who.Effect",
                 "name": "The Celebrity",
                 "u": -0.2,
                 "p": 0.7,
@@ -634,6 +691,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "What.Where.Who",
                 "name": "The Private Sphere",
                 "u": 0.9,
                 "p": -0.5,
@@ -642,6 +700,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "What.Where.Where",
                 "name": "The Public Square",
                 "u": 0.8,
                 "p": 0.7,
@@ -650,6 +709,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "What.Where.What",
                 "name": "The Constitution",
                 "u": 1.0,
                 "p": -0.4,
@@ -658,6 +718,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "What.Where.Why",
                 "name": "The Frontier (Concept)",
                 "u": 0.6,
                 "p": 0.9,
@@ -666,6 +727,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "What.Where.How",
                 "name": "The Market",
                 "u": 0.7,
                 "p": -0.6,
@@ -674,6 +736,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "What.Where.Cause",
                 "name": "The University",
                 "u": 0.8,
                 "p": 0.5,
@@ -682,6 +745,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "What.Where.Effect",
                 "name": "The Internet",
                 "u": 0.5,
                 "p": 0.8,
@@ -690,6 +754,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.What.Who",
                 "name": "Democracy",
                 "u": 0.9,
                 "p": 0.7,
@@ -698,6 +763,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "What.What.Where",
                 "name": "Republic",
                 "u": 1.0,
                 "p": -0.6,
@@ -706,6 +772,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "What.What.What",
                 "name": "Liberty",
                 "u": 1.0,
                 "p": 0.9,
@@ -714,6 +781,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "What.What.Why",
                 "name": "Equality",
                 "u": 1.0,
                 "p": 0.5,
@@ -722,6 +790,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "What.What.How",
                 "name": "Rights",
                 "u": 0.9,
                 "p": -0.8,
@@ -730,6 +799,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.What.Cause",
                 "name": "Law",
                 "u": 0.9,
                 "p": -0.5,
@@ -738,6 +808,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "What.What.Effect",
                 "name": "Justice",
                 "u": 1.0,
                 "p": 0.8,
@@ -746,6 +817,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "What.Why.Who",
                 "name": "Protection",
                 "u": 0.9,
                 "p": -0.6,
@@ -754,6 +826,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "What.Why.Where",
                 "name": "Defense",
                 "u": 0.8,
                 "p": 0.7,
@@ -762,6 +835,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "What.Why.What",
                 "name": "Order",
                 "u": 0.9,
                 "p": -0.7,
@@ -770,6 +844,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "What.Why.Why",
                 "name": "Prosperity",
                 "u": 0.8,
                 "p": 0.6,
@@ -778,6 +853,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "What.Why.How",
                 "name": "Union",
                 "u": 1.0,
                 "p": 0.8,
@@ -786,6 +862,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "What.Why.Cause",
                 "name": "Posterity",
                 "u": 0.9,
                 "p": 0.4,
@@ -794,6 +871,7 @@
                 "trump_p": -0.4
             },
             {
+                "id": "What.Why.Effect",
                 "name": "Happiness",
                 "u": 0.8,
                 "p": 1.0,
@@ -802,6 +880,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "What.How.Who",
                 "name": "Voting",
                 "u": 0.9,
                 "p": 0.5,
@@ -810,6 +889,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "What.How.Where",
                 "name": "Debate",
                 "u": 0.8,
                 "p": 0.8,
@@ -818,6 +898,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "What.How.What",
                 "name": "Amendment",
                 "u": 0.9,
                 "p": 0.6,
@@ -826,6 +907,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "What.How.Why",
                 "name": "Protest",
                 "u": 0.7,
                 "p": 0.9,
@@ -834,6 +916,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "What.How.How",
                 "name": "Due Process",
                 "u": 1.0,
                 "p": -0.8,
@@ -842,6 +925,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.How.Cause",
                 "name": "Education",
                 "u": 0.9,
                 "p": 0.7,
@@ -850,6 +934,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "What.How.Effect",
                 "name": "The Press",
                 "u": 0.9,
                 "p": 0.8,
@@ -858,6 +943,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "What.Cause.Who",
                 "name": "God/Creator",
                 "u": 1.0,
                 "p": 0.5,
@@ -866,6 +952,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "What.Cause.Where",
                 "name": "England",
                 "u": 0.6,
                 "p": -0.4,
@@ -874,6 +961,7 @@
                 "trump_p": -0.4
             },
             {
+                "id": "What.Cause.What",
                 "name": "Enlightenment",
                 "u": 0.8,
                 "p": 0.8,
@@ -882,6 +970,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "What.Cause.Why",
                 "name": "Grievance",
                 "u": 0.7,
                 "p": 0.9,
@@ -890,6 +979,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "What.Cause.How",
                 "name": "Compact",
                 "u": 0.9,
                 "p": 0.7,
@@ -898,6 +988,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "What.Cause.Cause",
                 "name": "Nature",
                 "u": 0.9,
                 "p": 0.4,
@@ -906,6 +997,7 @@
                 "trump_p": -0.4
             },
             {
+                "id": "What.Cause.Effect",
                 "name": "War",
                 "u": 0.5,
                 "p": 1.0,
@@ -914,6 +1006,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "What.Effect.Who",
                 "name": "The Free Man",
                 "u": 1.0,
                 "p": 0.8,
@@ -922,6 +1015,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.Effect.Where",
                 "name": "The West",
                 "u": 0.6,
                 "p": 0.8,
@@ -930,6 +1024,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "What.Effect.What",
                 "name": "Standard of Living",
                 "u": 0.7,
                 "p": 0.6,
@@ -938,6 +1033,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "What.Effect.Why",
                 "name": "Consumer Culture",
                 "u": -0.4,
                 "p": 0.8,
@@ -946,6 +1042,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.Effect.How",
                 "name": "Litigation",
                 "u": 0.3,
                 "p": 0.7,
@@ -954,6 +1051,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "What.Effect.Cause",
                 "name": "Polarization",
                 "u": -0.6,
                 "p": 0.8,
@@ -962,6 +1060,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "What.Effect.Effect",
                 "name": "Transformation",
                 "u": 0.8,
                 "p": 0.9,
@@ -984,6 +1083,7 @@
         },
         "entries": [
             {
+                "id": "Where.Who.Who",
                 "name": "The Frontiersman",
                 "u": 0.6,
                 "p": 0.9,
@@ -992,6 +1092,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Where.Who.Where",
                 "name": "The Homesteader",
                 "u": 1.0,
                 "p": 0.8,
@@ -1000,6 +1101,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Where.Who.What",
                 "name": "The Neighbor",
                 "u": 0.9,
                 "p": 0.6,
@@ -1008,6 +1110,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Where.Who.Why",
                 "name": "The Explorer",
                 "u": 0.5,
                 "p": 1.0,
@@ -1016,6 +1119,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Where.Who.How",
                 "name": "The Architect",
                 "u": 0.7,
                 "p": 0.8,
@@ -1024,6 +1128,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Where.Who.Cause",
                 "name": "The Native",
                 "u": 0.9,
                 "p": -0.6,
@@ -1032,6 +1137,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Where.Who.Effect",
                 "name": "The Suburbanite",
                 "u": 0.6,
                 "p": -0.7,
@@ -1040,6 +1146,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Where.Where.Who",
                 "name": "The Wilderness",
                 "u": 0.9,
                 "p": -0.5,
@@ -1048,6 +1155,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Where.Where.Where",
                 "name": "The Sea to Shining Sea",
                 "u": 0.8,
                 "p": 0.4,
@@ -1056,6 +1164,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Where.Where.What",
                 "name": "The City",
                 "u": 0.7,
                 "p": 0.9,
@@ -1064,6 +1173,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Where.Where.Why",
                 "name": "The Road",
                 "u": 0.6,
                 "p": 1.0,
@@ -1072,6 +1182,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Where.Where.How",
                 "name": "The Grid",
                 "u": 0.5,
                 "p": -0.8,
@@ -1080,6 +1191,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Where.Where.Cause",
                 "name": "The Resources",
                 "u": 0.4,
                 "p": 0.8,
@@ -1088,6 +1200,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Where.Where.Effect",
                 "name": "The Ruin",
                 "u": -0.5,
                 "p": -0.8,
@@ -1096,6 +1209,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Where.What.Who",
                 "name": "The Territory",
                 "u": -0.4,
                 "p": 0.6,
@@ -1104,6 +1218,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Where.What.Where",
                 "name": "The State",
                 "u": 0.8,
                 "p": 0.7,
@@ -1112,6 +1227,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Where.What.What",
                 "name": "Property",
                 "u": 1.0,
                 "p": 0.8,
@@ -1120,6 +1236,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Where.What.Why",
                 "name": "Manifest Destiny",
                 "u": -0.6,
                 "p": 1.0,
@@ -1128,6 +1245,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Where.What.How",
                 "name": "Zoning",
                 "u": 0.6,
                 "p": -0.7,
@@ -1136,6 +1254,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Where.What.Cause",
                 "name": "Sovereignty",
                 "u": 0.9,
                 "p": 0.8,
@@ -1144,6 +1263,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Where.What.Effect",
                 "name": "Gerrymandering",
                 "u": -0.8,
                 "p": 0.9,
@@ -1152,6 +1272,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Where.Why.Who",
                 "name": "Sanctuary",
                 "u": 1.0,
                 "p": -0.4,
@@ -1160,6 +1281,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Where.Why.Where",
                 "name": "Adventure",
                 "u": 0.6,
                 "p": 0.9,
@@ -1168,6 +1290,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Where.Why.What",
                 "name": "Gold Fever",
                 "u": -0.4,
                 "p": 1.0,
@@ -1176,6 +1299,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Where.Why.Why",
                 "name": "Sacred Space",
                 "u": 0.9,
                 "p": -0.6,
@@ -1184,6 +1308,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Where.Why.How",
                 "name": "Conservation",
                 "u": 0.9,
                 "p": -0.5,
@@ -1192,6 +1317,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Where.Why.Cause",
                 "name": "Determinism",
                 "u": 0.5,
                 "p": -0.8,
@@ -1200,6 +1326,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Where.Why.Effect",
                 "name": "Nostalgia",
                 "u": 0.6,
                 "p": -0.6,
@@ -1208,6 +1335,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Where.How.Who",
                 "name": "Mobility",
                 "u": 0.9,
                 "p": 0.9,
@@ -1216,6 +1344,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Where.How.Where",
                 "name": "The Canal",
                 "u": 0.8,
                 "p": 0.8,
@@ -1224,6 +1353,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Where.How.What",
                 "name": "The Dam",
                 "u": 0.7,
                 "p": 1.0,
@@ -1232,6 +1362,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Where.How.Why",
                 "name": "The Interstate",
                 "u": 0.8,
                 "p": 0.9,
@@ -1240,6 +1371,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Where.How.How",
                 "name": "Air Conditioning",
                 "u": 0.7,
                 "p": 0.8,
@@ -1248,6 +1380,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Where.How.Cause",
                 "name": "The Railroad",
                 "u": 0.9,
                 "p": 0.9,
@@ -1256,6 +1389,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Where.How.Effect",
                 "name": "Sprawl",
                 "u": -0.4,
                 "p": 0.7,
@@ -1264,6 +1398,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Where.Cause.Who",
                 "name": "The First Nations",
                 "u": -0.8,
                 "p": 0.9,
@@ -1272,6 +1407,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Where.Cause.Where",
                 "name": "The Purchase",
                 "u": 0.6,
                 "p": 0.5,
@@ -1280,6 +1416,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Where.Cause.What",
                 "name": "The War",
                 "u": -0.3,
                 "p": 1.0,
@@ -1288,6 +1425,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Where.Cause.Why",
                 "name": "The Treaty",
                 "u": 0.5,
                 "p": 0.6,
@@ -1296,6 +1434,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Where.Cause.How",
                 "name": "The Survey",
                 "u": 0.7,
                 "p": -0.4,
@@ -1304,6 +1443,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Where.Cause.Cause",
                 "name": "The Geology",
                 "u": 0.8,
                 "p": -0.9,
@@ -1312,6 +1452,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Where.Cause.Effect",
                 "name": "The Statehood",
                 "u": 0.9,
                 "p": 0.7,
@@ -1320,6 +1461,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Where.Effect.Who",
                 "name": "The Tourist",
                 "u": 0.3,
                 "p": 0.6,
@@ -1328,6 +1470,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Where.Effect.Where",
                 "name": "The Base",
                 "u": -0.4,
                 "p": 0.8,
@@ -1336,6 +1479,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Where.Effect.What",
                 "name": "The Market",
                 "u": 0.6,
                 "p": 0.9,
@@ -1344,6 +1488,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Where.Effect.Why",
                 "name": "Isolationism",
                 "u": 0.7,
                 "p": -0.8,
@@ -1352,6 +1497,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Where.Effect.How",
                 "name": "Globalization",
                 "u": 0.4,
                 "p": 0.9,
@@ -1360,6 +1506,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Where.Effect.Cause",
                 "name": "Climate Change",
                 "u": -0.9,
                 "p": 0.8,
@@ -1368,6 +1515,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Where.Effect.Effect",
                 "name": "The Moon Landing",
                 "u": 1.0,
                 "p": 1.0,
@@ -1390,6 +1538,7 @@
         },
         "entries": [
             {
+                "id": "Why.Who.Who",
                 "name": "The Self-Made Man",
                 "u": 0.8,
                 "p": 0.9,
@@ -1398,6 +1547,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Who.Where",
                 "name": "The Pioneer",
                 "u": 0.6,
                 "p": 1.0,
@@ -1406,6 +1556,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Why.Who.What",
                 "name": "The Dreamer",
                 "u": 0.9,
                 "p": 0.8,
@@ -1414,6 +1565,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.Who.Why",
                 "name": "The Believer",
                 "u": 0.8,
                 "p": 0.6,
@@ -1422,6 +1574,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Why.Who.How",
                 "name": "The Hustler",
                 "u": 0.2,
                 "p": 1.0,
@@ -1430,6 +1583,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Why.Who.Cause",
                 "name": "The Optimist",
                 "u": 0.9,
                 "p": 0.9,
@@ -1438,6 +1592,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Who.Effect",
                 "name": "The Winner",
                 "u": -0.3,
                 "p": 1.0,
@@ -1446,6 +1601,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Why.Where.Who",
                 "name": "The Home",
                 "u": 0.8,
                 "p": -0.5,
@@ -1454,6 +1610,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "Why.Where.Where",
                 "name": "The Open Road",
                 "u": 0.7,
                 "p": 0.9,
@@ -1462,6 +1619,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Where.What",
                 "name": "The Market",
                 "u": 0.7,
                 "p": 0.8,
@@ -1470,6 +1628,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.Where.Why",
                 "name": "The Church",
                 "u": 0.9,
                 "p": -0.4,
@@ -1478,6 +1637,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Why.Where.How",
                 "name": "The School",
                 "u": 0.9,
                 "p": 0.7,
@@ -1486,6 +1646,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Why.Where.Cause",
                 "name": "The Frontier",
                 "u": 0.6,
                 "p": 0.9,
@@ -1494,6 +1655,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Why.Where.Effect",
                 "name": "The Monument",
                 "u": 0.8,
                 "p": -0.6,
@@ -1502,6 +1664,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Why.What.Who",
                 "name": "Life",
                 "u": 1.0,
                 "p": 0.8,
@@ -1510,6 +1673,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.What.Where",
                 "name": "Liberty",
                 "u": 1.0,
                 "p": 0.9,
@@ -1518,6 +1682,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.What.What",
                 "name": "Happiness",
                 "u": 0.9,
                 "p": 1.0,
@@ -1526,6 +1691,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Why.What.Why",
                 "name": "Meaning",
                 "u": 0.9,
                 "p": 0.7,
@@ -1534,6 +1700,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Why.What.How",
                 "name": "Duty",
                 "u": 1.0,
                 "p": 0.6,
@@ -1542,6 +1709,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Why.What.Cause",
                 "name": "Truth",
                 "u": 1.0,
                 "p": 0.8,
@@ -1550,6 +1718,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Why.What.Effect",
                 "name": "Legacy",
                 "u": 0.8,
                 "p": 0.7,
@@ -1558,6 +1727,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Why.Why.Who",
                 "name": "Self-Interest",
                 "u": 0.4,
                 "p": 0.9,
@@ -1566,6 +1736,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Why.Where",
                 "name": "Curiosity",
                 "u": 0.7,
                 "p": 0.9,
@@ -1574,6 +1745,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Why.Why.What",
                 "name": "Greed",
                 "u": -0.6,
                 "p": 1.0,
@@ -1582,6 +1754,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Why.Why.Why",
                 "name": "Love",
                 "u": 1.0,
                 "p": 0.6,
@@ -1590,6 +1763,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Why.Why.How",
                 "name": "Excellence",
                 "u": 0.9,
                 "p": 0.9,
@@ -1598,6 +1772,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Why.Cause",
                 "name": "Guilt",
                 "u": 0.5,
                 "p": 0.8,
@@ -1606,6 +1781,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Why.Why.Effect",
                 "name": "Pride",
                 "u": 0.3,
                 "p": 0.7,
@@ -1614,6 +1790,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Why.How.Who",
                 "name": "Competition",
                 "u": 0.7,
                 "p": 0.9,
@@ -1622,6 +1799,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.How.Where",
                 "name": "Marketing",
                 "u": -0.3,
                 "p": 0.9,
@@ -1630,6 +1808,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.How.What",
                 "name": "Incentive",
                 "u": 0.6,
                 "p": 0.8,
@@ -1638,6 +1817,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.How.Why",
                 "name": "Preaching",
                 "u": 0.9,
                 "p": 0.8,
@@ -1646,6 +1826,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.How.How",
                 "name": "Planning",
                 "u": 0.8,
                 "p": 0.7,
@@ -1654,6 +1835,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Why.How.Cause",
                 "name": "Crisis",
                 "u": 0.8,
                 "p": 0.9,
@@ -1662,6 +1844,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.How.Effect",
                 "name": "Success",
                 "u": 0.6,
                 "p": 0.8,
@@ -1670,6 +1853,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.Cause.Who",
                 "name": "The Immigrant",
                 "u": 0.9,
                 "p": 1.0,
@@ -1678,6 +1862,7 @@
                 "trump_p": -1.0
             },
             {
+                "id": "Why.Cause.Where",
                 "name": "The Wilderness",
                 "u": 0.6,
                 "p": 0.9,
@@ -1686,6 +1871,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Why.Cause.What",
                 "name": "Calvinism",
                 "u": 0.6,
                 "p": 0.8,
@@ -1694,6 +1880,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Why.Cause.Why",
                 "name": "Scarcity",
                 "u": 0.5,
                 "p": 0.8,
@@ -1702,6 +1889,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.Cause.How",
                 "name": "Freedom",
                 "u": 1.0,
                 "p": 0.9,
@@ -1710,6 +1898,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Cause.Cause",
                 "name": "Revolution",
                 "u": 0.8,
                 "p": 0.9,
@@ -1718,6 +1907,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Cause.Effect",
                 "name": "Abundance",
                 "u": 0.8,
                 "p": 0.8,
@@ -1726,6 +1916,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.Effect.Who",
                 "name": "The Workaholic",
                 "u": -0.4,
                 "p": 0.9,
@@ -1734,6 +1925,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Why.Effect.Where",
                 "name": "The Superpower",
                 "u": 0.5,
                 "p": 1.0,
@@ -1742,6 +1934,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Why.Effect.What",
                 "name": "GDP",
                 "u": 0.6,
                 "p": 0.8,
@@ -1750,6 +1943,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.Effect.Why",
                 "name": "Restlessness",
                 "u": -0.2,
                 "p": 0.9,
@@ -1758,6 +1952,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Why.Effect.How",
                 "name": "Progress",
                 "u": 0.7,
                 "p": 1.0,
@@ -1766,6 +1961,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Why.Effect.Cause",
                 "name": "Stress",
                 "u": -0.5,
                 "p": 0.8,
@@ -1774,6 +1970,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Why.Effect.Effect",
                 "name": "American Exceptionalism",
                 "u": 0.8,
                 "p": 0.8,
@@ -1796,6 +1993,7 @@
         },
         "entries": [
             {
+                "id": "How.Who.Who",
                 "name": "The Inventor",
                 "u": 0.8,
                 "p": 0.9,
@@ -1804,6 +2002,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "How.Who.Where",
                 "name": "The Engineer",
                 "u": 0.9,
                 "p": 0.8,
@@ -1812,6 +2011,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.Who.What",
                 "name": "The Professional",
                 "u": 0.7,
                 "p": -0.6,
@@ -1820,6 +2020,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "How.Who.Why",
                 "name": "The Entrepreneur",
                 "u": 0.8,
                 "p": 1.0,
@@ -1828,6 +2029,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "How.Who.How",
                 "name": "The Manager",
                 "u": 0.5,
                 "p": -0.8,
@@ -1836,6 +2038,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "How.Who.Cause",
                 "name": "The Apprentice",
                 "u": 0.7,
                 "p": 0.6,
@@ -1844,6 +2047,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "How.Who.Effect",
                 "name": "The Technocrat",
                 "u": -0.6,
                 "p": -0.8,
@@ -1852,6 +2056,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.Where.Who",
                 "name": "The Shop Floor",
                 "u": 0.4,
                 "p": -0.9,
@@ -1860,6 +2065,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "How.Where.Where",
                 "name": "Silicon Valley",
                 "u": 0.8,
                 "p": 1.0,
@@ -1868,6 +2074,7 @@
                 "trump_p": -1.0
             },
             {
+                "id": "How.Where.What",
                 "name": "The Laboratory",
                 "u": 0.9,
                 "p": -0.6,
@@ -1876,6 +2083,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "How.Where.Why",
                 "name": "Wall Street",
                 "u": 0.3,
                 "p": 0.9,
@@ -1884,6 +2092,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "How.Where.How",
                 "name": "The Factory",
                 "u": 0.7,
                 "p": -0.7,
@@ -1892,6 +2101,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "How.Where.Cause",
                 "name": "The Farm",
                 "u": 1.0,
                 "p": 0.6,
@@ -1900,6 +2110,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "How.Where.Effect",
                 "name": "The Network",
                 "u": 0.8,
                 "p": 0.9,
@@ -1908,6 +2119,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "How.What.Who",
                 "name": "Automation",
                 "u": 0.6,
                 "p": -0.8,
@@ -1916,6 +2128,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.What.Where",
                 "name": "Infrastructure",
                 "u": 0.9,
                 "p": 0.8,
@@ -1924,6 +2137,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.What.What",
                 "name": "The Algorithm",
                 "u": 0.4,
                 "p": -0.7,
@@ -1932,6 +2146,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "How.What.Why",
                 "name": "Efficiency",
                 "u": 0.6,
                 "p": -0.8,
@@ -1940,6 +2155,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "How.What.How",
                 "name": "The Assembly Line",
                 "u": 0.7,
                 "p": -0.9,
@@ -1948,6 +2164,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "How.What.Cause",
                 "name": "Technology",
                 "u": 0.9,
                 "p": 0.9,
@@ -1956,6 +2173,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "How.What.Effect",
                 "name": "Mass Production",
                 "u": 0.8,
                 "p": -0.7,
@@ -1964,6 +2182,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "How.Why.Who",
                 "name": "Labor Rights",
                 "u": 0.9,
                 "p": -0.6,
@@ -1972,6 +2191,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "How.Why.Where",
                 "name": "Logistics",
                 "u": 0.9,
                 "p": 0.8,
@@ -1980,6 +2200,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.Why.What",
                 "name": "Standardization",
                 "u": 0.8,
                 "p": -0.7,
@@ -1988,6 +2209,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "How.Why.Why",
                 "name": "Profit",
                 "u": 0.3,
                 "p": 0.9,
@@ -1996,6 +2218,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "How.Why.How",
                 "name": "Optimization",
                 "u": 0.8,
                 "p": 0.9,
@@ -2004,6 +2227,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "How.Why.Cause",
                 "name": "Problem Solving",
                 "u": 0.9,
                 "p": 0.8,
@@ -2012,6 +2236,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.Why.Effect",
                 "name": "Scale",
                 "u": 0.7,
                 "p": 0.9,
@@ -2020,6 +2245,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "How.How.Who",
                 "name": "Empiricism",
                 "u": 0.9,
                 "p": -0.5,
@@ -2028,6 +2254,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "How.How.Where",
                 "name": "Fieldwork",
                 "u": 0.9,
                 "p": 0.7,
@@ -2036,6 +2263,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "How.How.What",
                 "name": "Hypothesis",
                 "u": 0.8,
                 "p": 0.6,
@@ -2044,6 +2272,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "How.How.Why",
                 "name": "Curiosity",
                 "u": 0.9,
                 "p": 0.7,
@@ -2052,6 +2281,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "How.How.How",
                 "name": "Experimentation",
                 "u": 0.8,
                 "p": 0.9,
@@ -2060,6 +2290,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "How.How.Cause",
                 "name": "Data",
                 "u": 0.6,
                 "p": -0.7,
@@ -2068,6 +2299,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "How.How.Effect",
                 "name": "Proof",
                 "u": 0.9,
                 "p": 0.8,
@@ -2076,6 +2308,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.Cause.Who",
                 "name": "Yankee Ingenuity",
                 "u": 0.8,
                 "p": 0.8,
@@ -2084,6 +2317,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.Cause.Where",
                 "name": "Lowell Mills",
                 "u": 0.6,
                 "p": -0.6,
@@ -2092,6 +2326,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "How.Cause.What",
                 "name": "Interchangeable Parts",
                 "u": 0.9,
                 "p": -0.8,
@@ -2100,6 +2335,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "How.Cause.Why",
                 "name": "Necessity",
                 "u": 0.8,
                 "p": 0.7,
@@ -2108,6 +2344,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "How.Cause.How",
                 "name": "Imitation",
                 "u": 0.5,
                 "p": 0.8,
@@ -2116,6 +2353,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "How.Cause.Cause",
                 "name": "Capitalism",
                 "u": 0.4,
                 "p": 0.9,
@@ -2124,6 +2362,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "How.Cause.Effect",
                 "name": "Modernity",
                 "u": 0.2,
                 "p": -0.7,
@@ -2132,6 +2371,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "How.Effect.Who",
                 "name": "The Consumer",
                 "u": -0.5,
                 "p": 0.8,
@@ -2140,6 +2380,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "How.Effect.Where",
                 "name": "The Suburb",
                 "u": 0.4,
                 "p": -0.7,
@@ -2148,6 +2389,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "How.Effect.What",
                 "name": "Affluence",
                 "u": 0.5,
                 "p": 0.6,
@@ -2156,6 +2398,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "How.Effect.Why",
                 "name": "Materialism",
                 "u": -0.6,
                 "p": 0.8,
@@ -2164,6 +2407,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "How.Effect.How",
                 "name": "Dependence",
                 "u": -0.5,
                 "p": -0.7,
@@ -2172,6 +2416,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "How.Effect.Cause",
                 "name": "Pollution",
                 "u": -0.8,
                 "p": 0.8,
@@ -2180,6 +2425,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "How.Effect.Effect",
                 "name": "Alienation",
                 "u": -0.7,
                 "p": -0.6,
@@ -2202,6 +2448,7 @@
         },
         "entries": [
             {
+                "id": "Cause.Who.Who",
                 "name": "The Puritan",
                 "u": 0.8,
                 "p": 0.7,
@@ -2210,6 +2457,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Cause.Who.Where",
                 "name": "The Virginian",
                 "u": 0.6,
                 "p": 0.8,
@@ -2218,6 +2466,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Cause.Who.What",
                 "name": "The Slave",
                 "u": -0.9,
                 "p": -0.8,
@@ -2226,6 +2475,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Cause.Who.Why",
                 "name": "The Revolutionary",
                 "u": 0.9,
                 "p": 1.0,
@@ -2234,6 +2484,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Cause.Who.How",
                 "name": "The Framer",
                 "u": 1.0,
                 "p": 0.7,
@@ -2242,6 +2493,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Cause.Who.Cause",
                 "name": "The Indigenous",
                 "u": -0.7,
                 "p": -0.5,
@@ -2250,6 +2502,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Cause.Who.Effect",
                 "name": "The Immigrant",
                 "u": 1.0,
                 "p": 0.9,
@@ -2258,6 +2511,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Cause.Where.Who",
                 "name": "Plymouth Rock",
                 "u": 0.8,
                 "p": 0.6,
@@ -2266,6 +2520,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Cause.Where.Where",
                 "name": "Independence Hall",
                 "u": 1.0,
                 "p": 0.7,
@@ -2274,6 +2529,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Cause.Where.What",
                 "name": "The Battlefield",
                 "u": 0.9,
                 "p": -0.8,
@@ -2282,6 +2538,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Cause.Where.Why",
                 "name": "The Frontier (Historical)",
                 "u": 0.7,
                 "p": 1.0,
@@ -2290,6 +2547,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Cause.Where.How",
                 "name": "Ellis Island",
                 "u": 0.8,
                 "p": -0.5,
@@ -2298,6 +2556,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Cause.Where.Cause",
                 "name": "Jamestown",
                 "u": 0.8,
                 "p": 0.8,
@@ -2306,6 +2565,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Cause.Where.Effect",
                 "name": "The Graveyard",
                 "u": 0.8,
                 "p": -0.9,
@@ -2314,6 +2574,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Cause.What.Who",
                 "name": "Natural Rights",
                 "u": 1.0,
                 "p": 0.8,
@@ -2322,6 +2583,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Cause.What.Where",
                 "name": "Federalism",
                 "u": 0.9,
                 "p": -0.6,
@@ -2330,6 +2592,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Cause.What.What",
                 "name": "The Constitution",
                 "u": 1.0,
                 "p": -0.6,
@@ -2338,6 +2601,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Cause.What.Why",
                 "name": "Separation of Powers",
                 "u": 1.0,
                 "p": -0.9,
@@ -2346,6 +2610,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Cause.What.How",
                 "name": "Judicial Review",
                 "u": 0.8,
                 "p": -0.5,
@@ -2354,6 +2619,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Cause.What.Cause",
                 "name": "The Grievances",
                 "u": 0.9,
                 "p": 0.9,
@@ -2362,6 +2628,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Cause.What.Effect",
                 "name": "Amendment",
                 "u": 1.0,
                 "p": 0.5,
@@ -2370,6 +2637,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "Cause.Why.Who",
                 "name": "Religious Freedom",
                 "u": 1.0,
                 "p": -0.7,
@@ -2378,6 +2646,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Cause.Why.Where",
                 "name": "Land Hunger",
                 "u": 0.6,
                 "p": 0.9,
@@ -2386,6 +2655,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Cause.Why.What",
                 "name": "Taxation",
                 "u": 0.9,
                 "p": 0.8,
@@ -2394,6 +2664,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Cause.Why.Why",
                 "name": "Liberty",
                 "u": 1.0,
                 "p": 0.9,
@@ -2402,6 +2673,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Cause.Why.How",
                 "name": "Self-Determination",
                 "u": 1.0,
                 "p": 0.9,
@@ -2410,6 +2682,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Cause.Why.Cause",
                 "name": "Fear of Tyranny",
                 "u": 0.9,
                 "p": -0.8,
@@ -2418,6 +2691,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Cause.Why.Effect",
                 "name": "Hope",
                 "u": 1.0,
                 "p": 0.9,
@@ -2426,6 +2700,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Cause.How.Who",
                 "name": "The Militia",
                 "u": 0.8,
                 "p": -0.6,
@@ -2434,6 +2709,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Cause.How.Where",
                 "name": "The Town Hall",
                 "u": 1.0,
                 "p": 0.6,
@@ -2442,6 +2718,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Cause.How.What",
                 "name": "The Press",
                 "u": 0.9,
                 "p": 0.8,
@@ -2450,6 +2727,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Cause.How.Why",
                 "name": "Compromise",
                 "u": 0.9,
                 "p": -0.5,
@@ -2458,6 +2736,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Cause.How.How",
                 "name": "Debate",
                 "u": 0.9,
                 "p": 0.7,
@@ -2466,6 +2745,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Cause.How.Cause",
                 "name": "War",
                 "u": -0.2,
                 "p": 1.0,
@@ -2474,6 +2754,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Cause.How.Effect",
                 "name": "Vote",
                 "u": 0.9,
                 "p": 0.5,
@@ -2482,6 +2763,7 @@
                 "trump_p": -0.5
             },
             {
+                "id": "Cause.Cause.Who",
                 "name": "The Ancients",
                 "u": 0.8,
                 "p": -0.4,
@@ -2490,6 +2772,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Cause.Cause.Where",
                 "name": "Magna Carta",
                 "u": 0.9,
                 "p": -0.5,
@@ -2498,6 +2781,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Cause.Cause.What",
                 "name": "The Bible",
                 "u": 0.8,
                 "p": -0.4,
@@ -2506,6 +2790,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Cause.Cause.Why",
                 "name": "The Reformation",
                 "u": 0.9,
                 "p": 0.8,
@@ -2514,6 +2799,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Cause.Cause.How",
                 "name": "Common Law",
                 "u": 0.9,
                 "p": -0.6,
@@ -2522,6 +2808,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Cause.Cause.Cause",
                 "name": "Geography",
                 "u": 0.7,
                 "p": -0.9,
@@ -2530,6 +2817,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Cause.Cause.Effect",
                 "name": "The Enlightenment",
                 "u": 1.0,
                 "p": 0.8,
@@ -2538,6 +2826,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Cause.Effect.Who",
                 "name": "The Founder",
                 "u": 0.7,
                 "p": -0.5,
@@ -2546,6 +2835,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Cause.Effect.Where",
                 "name": "The Monument",
                 "u": 0.8,
                 "p": -0.6,
@@ -2554,6 +2844,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Cause.Effect.What",
                 "name": "The Precedent",
                 "u": 0.7,
                 "p": -0.7,
@@ -2562,6 +2853,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Cause.Effect.Why",
                 "name": "Civil Religion",
                 "u": 0.6,
                 "p": -0.7,
@@ -2570,6 +2862,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Cause.Effect.How",
                 "name": "Originalism",
                 "u": 0.5,
                 "p": -0.6,
@@ -2578,6 +2871,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Cause.Effect.Cause",
                 "name": "The Burden",
                 "u": 0.9,
                 "p": 0.6,
@@ -2586,6 +2880,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Cause.Effect.Effect",
                 "name": "Continuity",
                 "u": 1.0,
                 "p": 0.5,
@@ -2608,6 +2903,7 @@
         },
         "entries": [
             {
+                "id": "Effect.Who.Who",
                 "name": "The Global Citizen",
                 "u": 1.0,
                 "p": 0.8,
@@ -2616,12 +2912,14 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Effect.Who.Where",
                 "name": "The Expat",
                 "u": -0.5,
                 "p": 0.7,
                 "trump_score": 0
             },
             {
+                "id": "Effect.Who.What",
                 "name": "The Consumer",
                 "u": -0.8,
                 "p": -0.6,
@@ -2630,6 +2928,7 @@
                 "trump_p": -0.6
             },
             {
+                "id": "Effect.Who.Why",
                 "name": "The Cynic",
                 "u": 0.6,
                 "p": -0.8,
@@ -2638,6 +2937,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Effect.Who.How",
                 "name": "The Activist",
                 "u": 0.9,
                 "p": 1.0,
@@ -2646,6 +2946,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Effect.Who.Cause",
                 "name": "The Veteran",
                 "u": 0.8,
                 "p": -0.9,
@@ -2654,6 +2955,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Effect.Who.Effect",
                 "name": "The Individualist",
                 "u": 0.5,
                 "p": 1.0,
@@ -2662,6 +2964,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Effect.Where.Who",
                 "name": "The American Diaspora",
                 "u": 0.8,
                 "p": 0.7,
@@ -2670,6 +2973,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Effect.Where.Where",
                 "name": "Pax Americana",
                 "u": 0.6,
                 "p": 0.9,
@@ -2678,6 +2982,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Effect.Where.What",
                 "name": "Cocacolonization",
                 "u": -0.6,
                 "p": 0.8,
@@ -2686,6 +2991,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.Where.Why",
                 "name": "Cultural Imperialism",
                 "u": -0.7,
                 "p": 0.9,
@@ -2694,6 +3000,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Effect.Where.How",
                 "name": "Democracy Promotion",
                 "u": 0.4,
                 "p": 1.0,
@@ -2702,6 +3009,7 @@
                 "trump_p": -1.0
             },
             {
+                "id": "Effect.Where.Cause",
                 "name": "The Climate Crisis",
                 "u": -1.0,
                 "p": 0.8,
@@ -2710,6 +3018,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.Where.Effect",
                 "name": "Globalization",
                 "u": 0.5,
                 "p": -0.4,
@@ -2718,6 +3027,7 @@
                 "trump_p": 0.4
             },
             {
+                "id": "Effect.What.Who",
                 "name": "The Middle Class",
                 "u": 1.0,
                 "p": -0.5,
@@ -2726,6 +3036,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Effect.What.Where",
                 "name": "The Moon Landing",
                 "u": 1.0,
                 "p": 1.0,
@@ -2734,6 +3045,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Effect.What.What",
                 "name": "The Internet",
                 "u": 0.9,
                 "p": 0.9,
@@ -2742,6 +3054,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Effect.What.Why",
                 "name": "Wealth Inequality",
                 "u": -0.9,
                 "p": 0.8,
@@ -2750,6 +3063,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.What.How",
                 "name": "The Atom Bomb",
                 "u": -0.8,
                 "p": 1.0,
@@ -2758,6 +3072,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Effect.What.Cause",
                 "name": "Medical Breakthroughs",
                 "u": 1.0,
                 "p": 0.8,
@@ -2766,6 +3081,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Effect.What.Effect",
                 "name": "Rock and Roll",
                 "u": 0.8,
                 "p": 0.9,
@@ -2774,6 +3090,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Effect.Why.Who",
                 "name": "Freedom vs Order",
                 "u": 1.0,
                 "p": -0.6,
@@ -2782,6 +3099,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Effect.Why.Where",
                 "name": "Conservation",
                 "u": 1.0,
                 "p": -0.8,
@@ -2790,6 +3108,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.Why.What",
                 "name": "Meaning vs Materialism",
                 "u": 0.9,
                 "p": -0.7,
@@ -2798,6 +3117,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Effect.Why.Why",
                 "name": "Hubris",
                 "u": 0.9,
                 "p": -0.9,
@@ -2806,6 +3126,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Effect.Why.How",
                 "name": "Pragmatism vs Principle",
                 "u": 0.5,
                 "p": 0.8,
@@ -2814,6 +3135,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.Why.Cause",
                 "name": "Gratitude",
                 "u": 0.9,
                 "p": -0.7,
@@ -2822,6 +3144,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Effect.Why.Effect",
                 "name": "Hope vs Despair",
                 "u": 1.0,
                 "p": 0.9,
@@ -2830,6 +3153,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Effect.How.Who",
                 "name": "The Vote",
                 "u": 1.0,
                 "p": -0.5,
@@ -2838,6 +3162,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Effect.How.Where",
                 "name": "The Court",
                 "u": 0.9,
                 "p": -0.7,
@@ -2846,6 +3171,7 @@
                 "trump_p": 0.7
             },
             {
+                "id": "Effect.How.What",
                 "name": "The Market",
                 "u": 0.6,
                 "p": 0.9,
@@ -2854,6 +3180,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Effect.How.Why",
                 "name": "The Protest",
                 "u": 0.9,
                 "p": 0.8,
@@ -2862,6 +3189,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.How.How",
                 "name": "The Media",
                 "u": 0.9,
                 "p": 0.7,
@@ -2870,6 +3198,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Effect.How.Cause",
                 "name": "History",
                 "u": 0.8,
                 "p": -0.9,
@@ -2878,6 +3207,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Effect.How.Effect",
                 "name": "War",
                 "u": -0.4,
                 "p": 1.0,
@@ -2886,6 +3216,7 @@
                 "trump_p": -1.0
             },
             {
+                "id": "Effect.Cause.Who",
                 "name": "The Next Generation",
                 "u": 0.9,
                 "p": -0.8,
@@ -2894,6 +3225,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.Cause.Where",
                 "name": "Mars",
                 "u": 0.8,
                 "p": 1.0,
@@ -2902,6 +3234,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Effect.Cause.What",
                 "name": "Artificial Intelligence",
                 "u": 0.5,
                 "p": 0.9,
@@ -2910,6 +3243,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Effect.Cause.Why",
                 "name": "Survival",
                 "u": 0.9,
                 "p": -0.7,
@@ -2918,6 +3252,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Effect.Cause.How",
                 "name": "Sustainability",
                 "u": 1.0,
                 "p": -0.6,
@@ -2926,6 +3261,7 @@
                 "trump_p": 0.6
             },
             {
+                "id": "Effect.Cause.Cause",
                 "name": "Entropy",
                 "u": 0.8,
                 "p": -1.0,
@@ -2934,6 +3270,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Effect.Cause.Effect",
                 "name": "Renewal",
                 "u": 1.0,
                 "p": 0.9,
@@ -2942,6 +3279,7 @@
                 "trump_p": 0.9
             },
             {
+                "id": "Effect.Effect.Who",
                 "name": "E Pluribus Unum",
                 "u": 1.0,
                 "p": 0.8,
@@ -2950,6 +3288,7 @@
                 "trump_p": -0.8
             },
             {
+                "id": "Effect.Effect.Where",
                 "name": "The City on a Hill",
                 "u": 0.9,
                 "p": -0.5,
@@ -2958,6 +3297,7 @@
                 "trump_p": 0.5
             },
             {
+                "id": "Effect.Effect.What",
                 "name": "Liberty",
                 "u": 1.0,
                 "p": 0.9,
@@ -2966,6 +3306,7 @@
                 "trump_p": -0.9
             },
             {
+                "id": "Effect.Effect.Why",
                 "name": "The Pursuit",
                 "u": 0.9,
                 "p": 1.0,
@@ -2974,6 +3315,7 @@
                 "trump_p": 1.0
             },
             {
+                "id": "Effect.Effect.How",
                 "name": "Self-Government",
                 "u": 1.0,
                 "p": 0.7,
@@ -2982,6 +3324,7 @@
                 "trump_p": -0.7
             },
             {
+                "id": "Effect.Effect.Cause",
                 "name": "Providence",
                 "u": 0.8,
                 "p": -0.8,
@@ -2990,6 +3333,7 @@
                 "trump_p": 0.8
             },
             {
+                "id": "Effect.Effect.Effect",
                 "name": "The United States",
                 "u": 1.0,
                 "p": 0.9,
@@ -3003,7 +3347,26 @@
 
         const canvas = document.getElementById('hegemonyCanvas');
         const ctx = canvas.getContext('2d');
-        const tooltip = document.getElementById('tooltip');
+        const tooltip = document.createElement('div');
+        tooltip.className = 'canvas-tooltip';
+        // Add pointer-events auto so user can interact with tooltip links if needed
+        tooltip.style.cssText = `
+            position: fixed;
+            background: rgba(15, 23, 42, 0.95);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            pointer-events: auto;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+            max-width: 280px;
+            transition: opacity 0.15s ease;
+        `;
+        document.body.appendChild(tooltip);
         const width = canvas.width;
         const height = canvas.height;
         const cx = width / 2;
@@ -3103,7 +3466,7 @@
                 }
                 
                 plane.entries.forEach(entry => {
-                    const isHovered = hoveredEntries.includes(entry);
+                    const isHovered = hoveredEntries.includes(entry) || (pinnedEntry && pinnedEntry.id === entry.id);
                     
                     let target_u = entry.trump_u;
                     let target_p = entry.trump_p;
@@ -3277,17 +3640,17 @@
                 
                 const trumpQuadClass = (plane.trump_total.u >= 0 && plane.trump_total.p >= 0) ? 'positive' : 
                                        (plane.trump_total.u < 0 && plane.trump_total.p >= 0) ? 'negative' : 
-                                       (plane.trump_total.u >= 0 && plane.trump_total.p < 0) ? 'text-blue-500' : 'text-orange-500';
+                                       (plane.total.u >= 0 && plane.trump_total.p < 0) ? 'text-blue-500' : 'text-orange-500';
                 
                 let quadName = "Greater Good";
                 if(plane.total.u < 0 && plane.total.p >= 0) quadName = "Greatest Lie";
                 else if(plane.total.u >= 0 && plane.total.p < 0) quadName = "Lesser Good";
-                else if(plane.total.u < 0 && plane.total.p < 0) quadName = "The Void";
+                else if(plane.total.u < 0 && plane.total.p < 0) quadName = "Greater Evil";
 
                 let trumpQuadName = "Greater Good";
                 if(plane.trump_total.u < 0 && plane.trump_total.p >= 0) trumpQuadName = "Greatest Lie";
                 else if(plane.trump_total.u >= 0 && plane.trump_total.p < 0) trumpQuadName = "Lesser Good";
-                else if(plane.trump_total.u < 0 && plane.trump_total.p < 0) trumpQuadName = "The Void";
+                else if(plane.trump_total.u < 0 && plane.trump_total.p < 0) trumpQuadName = "Greater Evil";
 
                 html += `
                     <div class="stat-card" style="border-left: 4px solid ${plane.color}; padding: 1.25rem;">
@@ -3320,7 +3683,27 @@
             statsGrid.innerHTML = html;
         }
 
+        // To allow tooltip interaction, we only hide tooltip on mouseleave of canvas if we aren't over tooltip.
+        // But since tooltip is over canvas, it needs its own mouseleave management if we do pointer-events: auto.
+        let isOverTooltip = false;
+        
+        tooltip.addEventListener('mouseenter', () => isOverTooltip = true);
+        tooltip.addEventListener('mouseleave', () => {
+            isOverTooltip = false;
+            // If the tooltip is not pinned, hide it when mouse leaves
+            if (!pinnedEntry) {
+                tooltip.style.display = 'none';
+                hoveredEntries = [];
+                draw();
+            }
+        });
+
+        // We will pin the tooltip when clicked, user requested: "click to keep open the node on the map then be able to click on the specific node"
+        let pinnedEntry = null;
+
         canvas.addEventListener('mousemove', (e) => {
+            if (pinnedEntry) return; // If an entry is pinned, don't update on mousemove
+
             const rect = canvas.getBoundingClientRect();
             // Scale mouse coordinates due to canvas scaling (if using CSS max-width, though here it's fixed width)
             const scaleX = canvas.width / rect.width;
@@ -3328,7 +3711,7 @@
             const mouseX = (e.clientX - rect.left) * scaleX;
             const mouseY = (e.clientY - rect.top) * scaleY;
 
-            hoveredEntries = [];
+            let currentHovered = [];
             const planes = currentPlane === 'all' ? Object.keys(kanonData) : [currentPlane];
 
             let closestDist = Infinity;
@@ -3360,7 +3743,7 @@
                         let chk_p = viewMode === 'kanon' ? entry.p : entry.trump_p;
                         if (chk_u === targetU && chk_p === targetP) {
                             entry._planeId = planeId;
-                            hoveredEntries.push(entry);
+                            currentHovered.push(entry);
                         }
                     }
                 }
@@ -3378,7 +3761,7 @@
                 let kx = toCanvasX(kanon_u);
                 let ky = toCanvasY(kanon_p);
                 if (Math.sqrt((mouseX - kx) ** 2 + (mouseY - ky) ** 2) < 18) {
-                    hoveredEntries.push({
+                    currentHovered.push({
                         name: currentPlane === 'all' ? 'Overall Kanon Average' : `Plane ${currentPlane} Kanon Average`,
                         u: kanon_u, p: kanon_p,
                         is_centroid: true, centroid_type: 'KANON', color: '#1e293b'
@@ -3388,7 +3771,7 @@
                 let tx = toCanvasX(trump_u);
                 let ty = toCanvasY(trump_p);
                 if (Math.sqrt((mouseX - tx) ** 2 + (mouseY - ty) ** 2) < 18) {
-                    hoveredEntries.push({
+                    currentHovered.push({
                         name: currentPlane === 'all' ? 'Overall Trump Average' : `Plane ${currentPlane} Trump Average`,
                         u: trump_u, p: trump_p,
                         is_centroid: true, centroid_type: 'TRUMP', color: '#f59e0b'
@@ -3396,80 +3779,88 @@
                 }
             }
 
-            if (hoveredEntries.length > 0) {
-                document.body.style.cursor = 'pointer';
-                tooltip.style.display = 'block';
-                
-                let baseU = viewMode === 'kanon' ? hoveredEntries[0].u : hoveredEntries[0].trump_u;
-                let baseP = viewMode === 'kanon' ? hoveredEntries[0].p : hoveredEntries[0].trump_p;
-                if (hoveredEntries[0].is_centroid) {
-                    baseU = hoveredEntries[0].u;
-                    baseP = hoveredEntries[0].p;
-                }
-                
-                let html = '';
-                if (hoveredEntries.length > 1) {
-                    html += `<div class="tooltip-coords" style="margin-bottom: 12px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px;">Coordinate Stack: <strong style="color:#0f172a;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}, ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</strong><br><span style="font-size:0.75rem; color:#64748b;">${hoveredEntries.length} overlapping items</span></div>`;
-                } else {
-                    html += `<div class="tooltip-coords" style="margin-bottom: 8px; color: #64748b; font-size: 0.8rem; font-weight: 600;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}  |  ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</div>`;
-                }
-                
-                const maxRows = Math.min(7, hoveredEntries.length);
-                html += `<div style="display: grid; grid-auto-flow: column; grid-template-rows: repeat(${maxRows}, auto); grid-auto-columns: max-content; gap: 0 1.5rem;">`;
-                
-                hoveredEntries.forEach(entry => {
-                    if (entry.is_centroid) {
-                        html += `
-                            <div style="border-left: 3px solid ${entry.color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
-                                <div class="tooltip-title" style="margin-bottom: 2px;">${entry.name}</div>
-                                <div class="tooltip-judgment" style="font-size: 0.8rem;">Average aggregate coordinate</div>
-                                <strong style="color:${entry.color}; font-size: 0.8rem; display:block; margin-top:2px;">Type: ${entry.centroid_type}</strong>
-                            </div>
-                        `;
-                    } else {
-                        let scoreText = 'Miss (0)';
-                        let colorStr = '#64748b'; // grey
-                        if (entry.trump_score === 1) { scoreText = 'Hit (+1)'; colorStr = '#16a34a'; } // green
-                        if (entry.trump_score === -1) { scoreText = 'Fail (-1)'; colorStr = '#dc2626'; } // red
-                        
-                        html += `
-                            <div style="border-left: 3px solid ${kanonData[entry._planeId].color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
-                                <div class="tooltip-title" style="margin-bottom: 2px;">${entry.name}</div>
-                                <div class="tooltip-judgment" style="font-size: 0.8rem;">Plane ${entry._planeId}: ${kanonData[entry._planeId].name}</div>
-                                <strong style="color:${colorStr}; font-size: 0.8rem; display:block; margin-top:2px;">Trump Score: ${scoreText}</strong>
-                            </div>
-                        `;
+            // Only update if hovered entries have changed
+            if (JSON.stringify(hoveredEntries) !== JSON.stringify(currentHovered)) {
+                hoveredEntries = currentHovered;
+                if (hoveredEntries.length > 0) {
+                    document.body.style.cursor = 'pointer';
+                    tooltip.style.display = 'block';
+                    
+                    let baseU = viewMode === 'kanon' ? hoveredEntries[0].u : hoveredEntries[0].trump_u;
+                    let baseP = viewMode === 'kanon' ? hoveredEntries[0].p : hoveredEntries[0].trump_p;
+                    if (hoveredEntries[0].is_centroid) {
+                        baseU = hoveredEntries[0].u;
+                        baseP = hoveredEntries[0].p;
                     }
-                });
-                
-                html += `</div>`;
-                tooltip.innerHTML = html;
-                
-                const tooltipRect = tooltip.getBoundingClientRect();
-                const viewportWidth = window.innerWidth;
-                const viewportHeight = window.innerHeight;
-                
-                let tLeft = e.clientX + 20;
-                let tTop = e.clientY + 20;
-                
-                if (tLeft + tooltipRect.width > viewportWidth - 20) {
-                    tLeft = e.clientX - tooltipRect.width - 20;
+                    
+                    let html = '';
+                    if (hoveredEntries.length > 1) {
+                        html += `<div style="color: #94a3b8; font-size: 0.8rem; font-weight: 600; margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px;">Coordinate Stack: <strong style="color:white;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}, ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</strong><br><span style="font-size:0.75rem; color:#94a3b8;">${hoveredEntries.length} overlapping items</span></div>`;
+                    } else {
+                        html += `<div style="color: #94a3b8; font-size: 0.8rem; font-weight: 600; margin-bottom: 8px;">υ: ${baseU > 0 ? '+' : ''}${baseU.toFixed(2)}  |  ψ: ${baseP > 0 ? '+' : ''}${baseP.toFixed(2)}</div>`;
+                    }
+                    
+                    const maxRows = Math.min(7, hoveredEntries.length);
+                    html += `<div style="display: grid; grid-auto-flow: column; grid-template-rows: repeat(${maxRows}, auto); grid-auto-columns: max-content; gap: 0 1.5rem;">`;
+                    
+                    hoveredEntries.forEach(entry => {
+                        if (entry.is_centroid) {
+                            html += `
+                                <div style="border-left: 3px solid ${entry.color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
+                                    <div style="font-weight: 800; font-size: 1rem; margin-bottom: 2px; color: white;">${entry.name}</div>
+                                    <div style="font-style: italic; color: #cbd5e1; font-size: 0.8rem;">Average aggregate coordinate</div>
+                                    <strong style="color:${entry.color}; font-size: 0.8rem; display:block; margin-top:2px;">Type: ${entry.centroid_type}</strong>
+                                </div>
+                            `;
+                        } else {
+                            let scoreText = 'Miss (0)';
+                            let colorStr = '#94a3b8'; // grey
+                            if (entry.trump_score === 1) { scoreText = 'Hit (+1)'; colorStr = '#22c55e'; } // green
+                            if (entry.trump_score === -1) { scoreText = 'Fail (-1)'; colorStr = '#ef4444'; } // red
+                            
+                            const planeNameFull = kanonData[entry._planeId].name;
+                            const planeName = planeNameFull.split(' ')[0];
+                            const url = `Plane_${entry._planeId}_${planeName}.html#${entry.id}`;
+
+                            html += `
+                                <div style="border-left: 3px solid ${kanonData[entry._planeId].color}; padding-left: 10px; margin-bottom: 12px; min-width: 220px;">
+                                    <a href="${url}" class="tooltip-link" style="font-weight: 800; font-size: 1rem; margin-bottom: 2px; color: white; display: block;">${entry.name}</a>
+                                    <div style="font-style: italic; color: #cbd5e1; font-size: 0.8rem;">Plane ${entry._planeId}: ${kanonData[entry._planeId].name}</div>
+                                    <strong style="color:${colorStr}; font-size: 0.8rem; display:block; margin-top:2px;">Trump Score: ${scoreText}</strong>
+                                </div>
+                            `;
+                        }
+                    });
+                    
+                    html += `</div>`;
+                    tooltip.innerHTML = html;
+                    
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    const viewportWidth = window.innerWidth;
+                    const viewportHeight = window.innerHeight;
+                    
+                    let tLeft = e.clientX + 20;
+                    let tTop = e.clientY + 20;
+                    
+                    if (tLeft + tooltipRect.width > viewportWidth - 20) {
+                        tLeft = e.clientX - tooltipRect.width - 20;
+                    }
+                    
+                    if (tTop + tooltipRect.height > viewportHeight - 20) {
+                        tTop = viewportHeight - tooltipRect.height - 20;
+                    }
+                    
+                    tLeft = Math.max(10, tLeft);
+                    tTop = Math.max(10, tTop);
+                    
+                    tooltip.style.left = tLeft + 'px';
+                    tooltip.style.top = tTop + 'px';
+                } else {
+                    document.body.style.cursor = 'default';
+                    tooltip.style.display = 'none';
                 }
-                
-                if (tTop + tooltipRect.height > viewportHeight - 20) {
-                    tTop = viewportHeight - tooltipRect.height - 20;
-                }
-                
-                tLeft = Math.max(10, tLeft);
-                tTop = Math.max(10, tTop);
-                
-                tooltip.style.left = tLeft + 'px';
-                tooltip.style.top = tTop + 'px';
-            } else {
-                document.body.style.cursor = 'default';
-                tooltip.style.display = 'none';
+                draw();
             }
-            draw();
         });
         
         // Ensure explicit taps on mobile correctly trigger the tooltip without swiping natively
@@ -3486,6 +3877,7 @@
                     lastTap = 0;
                     e.preventDefault();
                 } else {
+                    // Simulate mousemove for tooltip on tap
                     const touchEvent = new MouseEvent('mousemove', {
                         clientX: e.touches[0].clientX,
                         clientY: e.touches[0].clientY
@@ -3504,11 +3896,30 @@
             }
         });
 
+        canvas.addEventListener('click', (e) => {
+            if (hoveredEntries.length > 0) {
+                const entry = hoveredEntries[0];
+                if (!entry.is_centroid && entry.id) {
+                    pinnedEntry = entry; // Pin the tooltip
+                    // Re-render tooltip to show pinned state if desired, or just keep it visible
+                    // For now, just ensure it stays visible and update cursor
+                    document.body.style.cursor = 'auto'; // Allow interaction with tooltip
+                }
+            } else {
+                pinnedEntry = null; // click empty space to unpin
+                tooltip.style.display = 'none'; // Hide tooltip if unpinned
+                document.body.style.cursor = 'default';
+            }
+            draw(); // Redraw to update highlight for pinned entry
+        });
+
         canvas.addEventListener('mouseleave', () => {
-            hoveredEntries = [];
-            tooltip.style.display = 'none';
-            document.body.style.cursor = 'default';
-            draw();
+            if (!pinnedEntry && !isOverTooltip) {
+                hoveredEntries = [];
+                tooltip.style.display = 'none';
+                document.body.style.cursor = 'default';
+                draw();
+            }
         });
 
         document.querySelectorAll('.plane-btn').forEach(btn => {
