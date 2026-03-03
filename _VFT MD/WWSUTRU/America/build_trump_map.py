@@ -116,8 +116,8 @@ else:
     total_u = 0.0
     total_p = 0.0
 
-trump_total_u = -0.11
-trump_total_p = 0.16
+trump_total_u = -0.30
+trump_total_p = 0.17
 
 js_kanon_data = json.dumps(kanon_data, indent=4)
 
