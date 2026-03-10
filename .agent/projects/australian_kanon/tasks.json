@@ -1471,7 +1471,7 @@
             "index": 44,
             "id": "task_44",
             "description": "Build Temporal Calculus as a full evolutionary branch from pre-limit calculus: derive derivative rules, integration rules, series, convergence, and fundamental theorem using VFT axioms (Terminus, t=n, n=n/1, n/0=n+1)",
-            "status": "in_progress",
+            "status": "done",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -1480,9 +1480,13 @@
             "rules": [],
             "logs": [
                 "[2026-03-11T01:27:45.860208] Task created.",
-                "[2026-03-11T01:27:50.845888] Started work."
+                "[2026-03-11T01:27:50.845888] Started work.",
+                "[2026-03-11T01:30:42.565949] Marked as DONE.",
+                "[2026-03-11T01:30:42.565976] Lesson learned: The user wants CONSTRUCTED MATHEMATICS, not historical commentary. When they say 'build it out as a new branch', they mean derive the actual rules and theorems from scratch using the new axioms. Every derivative rule, integration method, series test, and the Fundamental Theorem must be re-derived from the VFT axioms. The historical context is background framing only."
             ],
-            "lessons_learned": [],
+            "lessons_learned": [
+                "The user wants CONSTRUCTED MATHEMATICS, not historical commentary. When they say 'build it out as a new branch', they mean derive the actual rules and theorems from scratch using the new axioms. Every derivative rule, integration method, series test, and the Fundamental Theorem must be re-derived from the VFT axioms. The historical context is background framing only."
+            ],
             "depends_on": [],
             "priority": 0,
             "tags": [
@@ -1491,7 +1495,9 @@
                 "vft",
                 "formal_paper"
             ],
-            "reasoning_trace": [],
+            "reasoning_trace": [
+                "[01:28:15] User does NOT want a historical comparison or commentary. They want the actual mathematics BUILT OUT: take Newton/Leibniz original machinery (fluxions, dx/dy, integral sums) and instead of developing limits, develop the ACTUAL derivative rules (power rule, product rule, chain rule, etc), integration rules, series convergence, and the Fundamental Theorem using VFT axioms (Terminus, t=n, n=n/1, n/0=n+1). This is a mathematical construction project, not a history essay."
+            ],
             "auto_linked_mistakes": [],
             "postmortem": {
                 "passes": [],
