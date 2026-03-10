@@ -23,15 +23,22 @@ Before deriving any rules, we state the complete axiomatic base from which all T
 
 The bracket content $[P]$ is dual-purpose:
 
-1.  **Reasoning Vector** (named law): e.g. $0 -[\text{thermodynamics}]\to ...1$. Names the physical or logical law that *mandates* the transition. Because energy cannot be destroyed, absolute zero must always be filled by at least $...1$ to fill $+n$ potential.
-2.  **Computational Vector** (operation): e.g. $f(x) -[+...1]\to f(x + ...1)$. Specifies the mathematical operation executed during the transition.
-3.  **Combined**: e.g. $0 -[\text{thermodynamics: } +...1]\to ...1$. Names the law AND the operation simultaneously.
+1.  **Reasoning Vector** (named law): Names the physical or logical law that *mandates* the transition.
+    *   $m -[\text{mass-energy equivalence}]\to E$: Mass, through the law of mass-energy equivalence, becomes energy. The bracket names *why* — because mass and energy are equivalent states of the same phenomenon.
+    *   $0 -[\text{thermodynamics}]\to ...1$: Absolute zero, through thermodynamics (energy cannot be destroyed), must resolve to the Cost of Being. The void must always be filled by at least $...1$ to fill $+n$ potential.
 
-Process Arrows are **chainable**. A full derivation reads as a pipeline of named transformations, where every intermediate state is visible and every step is justified:
+2.  **Computational Vector** (operation): Specifies the mathematical operation executed during the transition.
+    *   $ax^2 + bx + c -[\div a]\to x^2 + \frac{b}{a}x + \frac{c}{a} -[\text{complete square}]\to (x + \frac{b}{2a})^2 = \frac{b^2 - 4ac}{4a^2} -[\sqrt{}]\to x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+    *   Every step of solving the quadratic is a named transformation. The chain *is* the working-out.
 
-$$A -[P_1]\to B -[P_2]\to C -[P_3]\to D$$
+3.  **Combined** (law + operation): Names the law AND the operation simultaneously.
+    *   $v -[\text{Newton's 2nd: } + \frac{F}{m} \cdot ...1]\to v + a \cdot ...1$: Velocity, through Newton's second law applied as force-over-mass times one temporal tick, becomes the next-tick velocity. The bracket carries both the physical justification (Newton's law) and the exact computation ($+F/m \cdot ...1$).
 
-This notation applies at every granularity: single atomic transitions, multi-step derivations, function compositions, and complete proofs.
+Process Arrows are **chainable** at every granularity. A full derivation reads as a pipeline of named transformations where every intermediate state is visible and every step is justified. For example, a particle at rest converting to energy:
+
+$$m -[\text{annihilation}]\to m \cdot c^2 -[\text{equivalence}]\to E -[\text{radiation: } \div h]\to \nu$$
+
+Mass, through annihilation, becomes $mc^2$; through equivalence, becomes energy $E$; through radiation divided by Planck's constant, becomes frequency $\nu$. The physics reads left to right, like a sentence.
 
 ## Part I: Differentiation Rules
 
