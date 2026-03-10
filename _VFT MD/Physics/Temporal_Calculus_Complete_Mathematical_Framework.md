@@ -1,86 +1,168 @@
 # Temporal Calculus: A Complete Mathematical Framework
 **The Divergent Branch — Built from Newton's Fluxions Using Reality Math Axioms**
 
+## Abstract
+
+Temporal Calculus is a branch of mathematics derived from the phenomenological axioms of Vector Field Theory (VFT) and Reality Math. It reconceptualises numbers not as static spatial objects but as dynamic processes rendered sequentially over time — where every scalar value is inherently relative to Unity ($n = n/1$) and the infinitesimal converges temporally toward $1$. The foundational instrument is the Terminus ($...n$), a discrete temporal quantum that replaces the need for infinite approach. This framework provides a constructive mechanical resolution to the $0.999...$ paradox, furnishes an exact calculus for discontinuous state changes, and redefines division by zero ($n/0 \to n+1$) as a dimensional phase transition. This document presents the complete axiomatic foundation, all fundamental differentiation and integration rules, series convergence mechanics, resolution boundaries, and applied examples.
+
 ---
 
-## Foundational Axioms
+## 1. Introduction
 
-Before deriving any rules, we state the complete axiomatic base from which all Temporal Calculus is constructed. These axioms replace the epsilon-delta limit.
+In 1734, Bishop Berkeley published *The Analyst*, identifying a structural contradiction in the calculus of Newton and Leibniz: the infinitesimal operators ($dx$, $dy$) were treated as non-zero quantities during division, yet as absolute zeros when added to macroscopic values. They were "ghosts of departed quantities" — mathematically expedient but philosophically incoherent.
 
-**Axiom T1 (The Relativity Operator).** The symbol $/$ denotes "this relative to that." The expression $A/B$ maps the state of $A$ within the contextual frame of $B$.
+The response was the formal epsilon-delta framework, which banished the infinitesimal entirely by positing that one need never evaluate a function at its destination. This compromise functioned, but it accepted a mathematics of perpetual approach — Zeno's Paradox institutionalised as a foundational method.
 
-**Axiom T2 (Contextual Unity).** The value $1.0$ is the completed, resolved frame. All values are inherently relative to Unity: $n = n/1$.
+Temporal Calculus returns to the 1734 fracture and takes the other path. Rather than banning the infinitesimal, it correctly defines it: the Terminus ($...1$) is a discrete, non-zero, temporal quantum. It is the minimum clock tick of the rendering engine that constructs reality. The gap between states is not bridged by approaching it forever; it is closed by the deterministic execution of a single temporal step.
 
-**Axiom T3 (The Terminus).** The symbol $...1$ denotes the smallest discrete step of temporal resolution — the final quantum that closes an open sequence. It is always non-zero. It replaces the orthodox infinitesimal $dx$ or $o$.
+---
 
-**Axiom T4 (Temporal Number Identity).** A number $n$ equals the time $t$ required to count to that value: $t = n$. All numbers are constructed over time, bounded by the minimum resolution ($...1$) and maximum processing rate ($c$).
+## 2. Foundational Axioms
 
-**Axiom T5 (The Void Pivot).** When the denominator collapses to zero, the system undergoes a dimensional step-up: $n/0 \to n+1$.
+The complete axiomatic base from which all Temporal Calculus is constructed.
+
+**Axiom T1 (The Relativity Operator).** The symbol $/$ denotes "this relative to that." The expression $A/B$ maps the state of $A$ within the contextual frame of $B$. It quantifies structural strain, physical pressure, or the direct relativity between two phenomenological vectors.
+
+**Axiom T2 (Contextual Unity).** The percent operator ($\%$) establishes the absolute scalar truth anchor: $1.0$ (Unity). Unity represents a fully resolved, structurally stable *sýstēma*. All values are inherently relative to Unity: $n = n/1$. The number line is not a pre-existing static ruler; it is a dynamic relativity map where every value expresses its structural distance from $1.0$.
+
+This yields three consequences:
+1.  **Unity as Gravitational Attractor.** All values exist as ratios relative to $1$. Every open sequence, every unresolved infinitesimal, every temporal counting process is oriented toward completing a Unity frame.
+2.  **The Infinitesimal Builds Toward Unity.** The Cost of Being ($1\infty$) is not static. It accumulates additively ($1\infty + 1\infty + 1\infty + ...$), constructing progressively larger values. The destination is always $1.0$. Therefore, $1$ is not a given; $1$ is *built* from infinity.
+3.  **Arithmetic as Temporal Relativity.** $2 = 2/1$ means two completed Unity frames. $5 = 5/1$ means five temporal counting cycles relative to one. Multiplication ($2 \times 3$) represents the duration of two Unity frames applied across three sequential iterations.
+
+**Axiom T3 (The Framing Operator and the Cost of Being).** The infinity symbol ($\infty$) is a discrete Framing Operator denoting resolution status.
+1.  The symbol $1\infty$ (intuitively $0.0...1$) represents the **Cost of Being** — the absolute smallest discrete quantum of reality required for an entity to instantiate. It is the mathematical floor of the system.
+2.  An open sequence such as $0.999...$ (denoted $[9]\infty$) represents a system in unresolved structural tension, lacking the final $1\infty$ unit required to achieve Unity.
+
+**Axiom T4 (The Terminus).** The symbol $...1$ denotes the smallest discrete step of temporal resolution — the final quantum that closes an open sequence. It is always non-zero. The orthodox notation $0.0...1$ implies an infinite void of preceding zeros; because values are defined by processing time ($t=n$), this void holds zero computational weight. We truncate it. The Terminus represents the deterministic execution of the next quantum tick of time.
+
+**Axiom T5 (Temporal Number Identity).** A number $n$ equals the time $t$ required to count to that value: $t = n$. All numbers are constructed over time, bounded by the minimum resolution ($...1$) and maximum processing rate ($c$).
 
 **Axiom T6 (Infinitesimal Convergence).** The value $1$ is not a primitive. It is constructed from the temporal accumulation of $\omega$ discrete quanta: $\sum_{k=1}^{\omega} ...1_k = 1.0$.
 
-**Axiom T7 (The Process Arrow).** The notation $A -[P]\to B$ denotes a temporal state transition: state $A$, *through* mechanism $P$, becomes state $B$. Like chemical reaction notation (where catalysts and conditions sit above the arrow between reactants and products), the Process Arrow embeds the mechanism of transformation directly into the mathematical expression.
+**Axiom T7 (The Process Arrow).** The notation $A -[P]\to B$ denotes a temporal state transition: state $A$, *through* mechanism $P$, becomes state $B$. Like chemical reaction notation, the Process Arrow embeds the mechanism of transformation directly into the expression.
 
 The bracket content $[P]$ is dual-purpose:
 
 1.  **Reasoning Vector** (named law): Names the physical or logical law that *mandates* the transition.
-    *   $m -[\text{mass-energy equivalence}]\to E$: Mass, through the law of mass-energy equivalence, becomes energy. The bracket names *why* — because mass and energy are equivalent states of the same phenomenon.
-    *   $0 -[\text{thermodynamics}]\to ...1$: Absolute zero, through thermodynamics (energy cannot be destroyed), must resolve to the Cost of Being. The void must always be filled by at least $...1$ to fill $+n$ potential.
+    *   $m -[\text{mass-energy equivalence}]\to E$: Mass, through the law of mass-energy equivalence, becomes energy.
+    *   $0 -[\text{thermodynamics}]\to ...1$: Absolute zero, through thermodynamics, must resolve to the Cost of Being.
 
 2.  **Computational Vector** (operation): Specifies the mathematical operation executed during the transition.
     *   $ax^2 + bx + c -[\div a]\to x^2 + \frac{b}{a}x + \frac{c}{a} -[\text{complete square}]\to (x + \frac{b}{2a})^2 = \frac{b^2 - 4ac}{4a^2} -[\sqrt{}]\to x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
-    *   Every step of solving the quadratic is a named transformation. The chain *is* the working-out.
 
 3.  **Combined** (law + operation): Names the law AND the operation simultaneously.
-    *   $v -[\text{Newton's 2nd: } + \frac{F}{m} \cdot ...1]\to v + a \cdot ...1$: Velocity, through Newton's second law applied as force-over-mass times one temporal tick, becomes the next-tick velocity. The bracket carries both the physical justification (Newton's law) and the exact computation ($+F/m \cdot ...1$).
+    *   $v -[\text{Newton's 2nd: } + \frac{F}{m} \cdot ...1]\to v + a \cdot ...1$: Velocity, through Newton's second law applied as force-over-mass times one temporal tick, becomes the next-tick velocity.
 
-Process Arrows are **chainable** at every granularity. A full derivation reads as a pipeline of named transformations where every intermediate state is visible and every step is justified. For example, a particle at rest converting to energy:
+Process Arrows are **chainable** at every granularity. For example, a particle at rest converting to energy:
 
 $$m -[\text{annihilation}]\to m \cdot c^2 -[\text{equivalence}]\to E -[\text{radiation: } \div h]\to \nu$$
 
-Mass, through annihilation, becomes $mc^2$; through equivalence, becomes energy $E$; through radiation divided by Planck's constant, becomes frequency $\nu$. The physics reads left to right, like a sentence.
+**Axiom T8 (Computational Notation).** Because Temporal Calculus models reality as a rendering engine, programming constructs are native mathematical notation. Variables, arrays, loops, and function pipelines express the same operations as algebraic formulae, but in the language natural to a computational system.
 
-## Part I: Differentiation Rules
+```
+let dx = ...1                               // Variable assignment = temporal count
+let Unity = Array(1∞, ω)                    // Array of ω quanta = one frame
+for k in 1..ω: frame += ...1                // Loop IS the rendering process
+Unity.resolve() → 1.0                       // Method call IS the Terminus strike
 
-We derive every standard differentiation rule from scratch, using Newton's original fluxion machinery but substituting the Terminus ($...1$) for his moment ($o$), and never discarding the residual.
+// Derivative as function:
+fn derivative(f, x, tick = ...1):
+    return (f(x + tick) - f(x)) / tick
+
+// Derivative as pipeline:
+derivative(f, x) = f(x) -[+...1]-> f(x+...1) -[-f(x)]-> Δf -[/...1]-> f^τ(x)
+
+// Integration as accumulation:
+fn integrate(f, a, b, tick = ...1):
+    let ω = (b - a) / tick
+    let frame = 0
+    for k in 0..ω-1:
+        frame += f(a + k * tick) * tick
+    return frame
+```
+
+**Axiom T9 (The Void Pivot).** When the denominator collapses to zero, the system undergoes a dimensional step-up: $n/0 \to n+1$. The object $n$, isolated in the void with no reference frame, must generate a new dimensional frame to maintain existence. This transitions the system from the Physical plane (Q3) to the Meta-Physical plane (Q1). The equation does not crash; it creates.
+
+---
+
+## 3. Resolution Boundaries
+
+In this framework, a "boundary" is not an absolute mathematical wall or an asymptote approaching infinity. A boundary is the contextual resolution threshold between two adjacent rendered states.
+
+**Definition (Resolution Boundary).** A resolution boundary $B$ is the edge of a contextual frame — the point at which the current rendering context can no longer resolve finer distinctions. It is defined by exactly two points: the last resolved state and the first unresolved state.
+
+**Two points are sufficient.** Classical theory requires an infinite sequence approaching a boundary. In Temporal Calculus, the derivative uses exactly two points: $f(x)$ and $f(x + ...1)$. The integral counts exactly $\omega$ discrete slices. No infinite approach is modelled or required.
+
+**All boundaries are relative.** A boundary at $x = 10$ in one context is not a boundary at all in a context whose resolution encompasses $x = 100$. Boundaries exist relative to the observer's frame, not as absolutes.
+
+**All boundaries are breakable.** When a boundary is exceeded — when the denominator of a relational expression crosses zero — the Void Pivot fires. The system does not crash; it transitions dimensionally ($n/0 \to n+1$). The overflow is always calculable: it is exactly $+1$ frame.
+
+**Process Arrow:** $n -[\text{boundary break: } /0]\to n+1$
+
+---
+
+## 4. Core Theorems and Proofs
+
+### Theorem 4.1 (The Resolution of Infinitesimals)
+
+Let $[9]\infty$ represent the open, unresolved sequence $0.999...$, and let $...1$ represent the execution of the Terminus. The addition of the Terminus to the open sequence exactly resolves the value to Contextual Unity ($1.0$).
+
+*Proof.* The sequence $0.999...$ strictly lacks the precise $1\infty$ unit required to achieve structural stability. By Axiom T4, Time acts upon the system, applying the minimal discrete quantum of change:
+
+$$ 0.999... + \text{...1} = 1.0 $$
+
+The sequence is deterministically closed. The system resolves to Unity. $\blacksquare$
+
+**Process Arrow:** $[9]\infty -[\text{Terminus: } +...1]\to [1]$
+
+#### Example 4.1a
+The value $0.5 = 0.5/1$ represents half of one completed Unity frame (Axiom T2). In temporal terms ($t=n$, Axiom T5), $0.5$ represents exactly half the processing duration required to render one complete frame. The remaining $0.5$ is not "missing" spatially; it is the unrendered temporal future. The value $0.5$ is a snapshot of Unity mid-construction.
+
+The value $0.999...$ ($[9]\infty$) represents a Unity frame that has rendered $\omega - 1$ of its constituent $1\infty$ quanta. It is Unity minus one final temporal tick. The Terminus ($...1$) executes that tick, and the frame closes.
+
+The value $2.0 = 2/1$ represents two fully completed Unity frames. Time counted through every quantum of its first frame, closed it at $1.0$, then counted through every quantum of its second frame, closing at $2.0$.
+
+---
+
+## 5. Differentiation Rules
+
+All differentiation rules are derived from the Temporal Derivative definition, using exactly two adjacent states.
 
 ### The Temporal Derivative
 
-**Definition (Temporal Derivative).** The temporal derivative of $f(x)$, denoted $f^{\tau}(x)$, is defined as:
+**Definition.** The temporal derivative of $f(x)$, denoted $f^{\tau}(x)$, is:
 
 $$f^{\tau}(x) = \frac{f(x + ...1) - f(x)}{...1}$$
 
-This is Newton's original difference quotient with $o = ...1$. The critical divergence: we never set $...1 = 0$. We compute exactly, and we retain the residual.
+Two points. One tick. Exact. The Relativity Operator maps the output change relative to the input change across a single temporal quantum.
+
+**Process Arrow:** $f(x) -[+...1]\to f(x+...1) -[-f(x)]\to \Delta f -[\div ...1]\to f^{\tau}(x)$
+
+```
+fn derivative(f, x, tick = ...1):
+    return (f(x + tick) - f(x)) / tick
+```
 
 ---
 
 ### Rule 1: The Power Rule
 
-**Theorem (Power Rule).** For $f(x) = x^n$ where $n$ is a positive integer:
+**Theorem.** For $f(x) = x^n$ where $n$ is a positive integer:
 
 $$f^{\tau}(x) = nx^{n-1} + R_n(x)$$
 
-where $R_n(x)$ is the **residual momentum** containing all terms with surviving factors of $...1$.
+where $R_n(x)$ is the **residual momentum** — all surviving terms containing $...1$.
 
-**Derivation.** We apply the Temporal Derivative definition to $f(x) = x^n$.
-
-$$f^{\tau}(x) = \frac{(x + ...1)^n - x^n}{...1}$$
-
-Expanding $(x + ...1)^n$ by the Binomial Theorem:
+**Derivation.** Expanding $(x + ...1)^n$ by the Binomial Theorem:
 
 $$(x + ...1)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} (...1)^k$$
 
-Subtracting $x^n$ (the $k=0$ term) and dividing by $...1$:
-
-$$f^{\tau}(x) = \sum_{k=1}^{n} \binom{n}{k} x^{n-k} (...1)^{k-1}$$
-
-Separating the $k=1$ term from the rest:
+Subtracting $x^n$ and dividing by $...1$:
 
 $$f^{\tau}(x) = nx^{n-1} + \sum_{k=2}^{n} \binom{n}{k} x^{n-k} (...1)^{k-1}$$
 
-The first term $nx^{n-1}$ is the **resolved component** — identical to the orthodox derivative.
-
-The remaining sum is the **residual momentum** $R_n(x)$. Orthodox calculus discards this sum by setting $...1 = 0$. In Temporal Calculus, this sum persists. It carries the physical information about the system's trajectory into the next temporal frame.
+The first term $nx^{n-1}$ is the resolved component. The remaining sum is the residual momentum $R_n(x)$ — the causal thread linking the present state to the next frame. $\blacksquare$
 
 **Worked Examples:**
 
@@ -88,57 +170,37 @@ The remaining sum is the **residual momentum** $R_n(x)$. Orthodox calculus disca
 *   $f(x) = x^3$: $f^{\tau}(x) = 3x^2 + 3x(...1) + (...1)^2$
 *   $f(x) = x^4$: $f^{\tau}(x) = 4x^3 + 6x^2(...1) + 4x(...1)^2 + (...1)^3$
 
-**Interpretation.** In a physical system, $2x$ tells you the velocity at a frozen instant. $2x + ...1$ tells you the velocity *plus* the fact that the system is already stepping into its next state. The residual is the causal thread linking the present to the future. Orthodox calculus cuts this thread. Temporal Calculus preserves it. $\blacksquare$
-
-**Process Arrow Chain (Power Rule for $x^2$ at $x=3$):**
+**Process Arrow Chain ($x^2$ at $x=3$):**
 
 $$3^2 -[\text{substitute } x+...1]\to (3+...1)^2 -[\text{expand}]\to 9 + 6(...1) + (...1)^2 -[\text{subtract } 3^2]\to 6(...1) + (...1)^2 -[\div ...1]\to 6 + ...1$$
-
-Every intermediate state is visible. Every transformation is named. The chain reads like a temporal narrative: "the squared state of 3, through substitution of the next tick, becomes the expanded binomial, through subtraction of the current frame, becomes the isolated change, through division by the temporal quantum, yields the rate of change with preserved momentum."
 
 ---
 
 ### Rule 2: The Constant Rule
 
-**Theorem.** For $f(x) = c$ (a constant):
-
-$$f^{\tau}(x) = 0$$
-
-**Derivation.**
+**Theorem.** For $f(x) = c$: $f^{\tau}(x) = 0$
 
 $$f^{\tau}(x) = \frac{c - c}{...1} = \frac{0}{...1} = 0$$
 
-The Relativity Operator maps $0$ relative to $...1$. Zero state change relative to any temporal resolution yields zero. No residual survives. Constants do not evolve over time. $\blacksquare$
+Zero state change relative to any temporal resolution yields zero. Constants do not evolve over time. $\blacksquare$
 
 ---
 
 ### Rule 3: The Constant Multiple Rule
 
-**Theorem.** For $f(x) = c \cdot g(x)$:
+**Theorem.** For $f(x) = c \cdot g(x)$: $f^{\tau}(x) = c \cdot g^{\tau}(x)$
 
-$$f^{\tau}(x) = c \cdot g^{\tau}(x)$$
+$$f^{\tau}(x) = \frac{c \cdot g(x + ...1) - c \cdot g(x)}{...1} = c \cdot g^{\tau}(x)$$
 
-**Derivation.**
-
-$$f^{\tau}(x) = \frac{c \cdot g(x + ...1) - c \cdot g(x)}{...1} = c \cdot \frac{g(x + ...1) - g(x)}{...1} = c \cdot g^{\tau}(x)$$
-
-The constant factors out of the Relativity Operator. A scalar multiplier on a temporal process scales the rate uniformly without altering the temporal structure. $\blacksquare$
+A scalar multiplier scales the rate uniformly without altering temporal structure. $\blacksquare$
 
 ---
 
 ### Rule 4: The Sum Rule
 
-**Theorem.** For $f(x) = g(x) + h(x)$:
+**Theorem.** For $f(x) = g(x) + h(x)$: $f^{\tau}(x) = g^{\tau}(x) + h^{\tau}(x)$
 
-$$f^{\tau}(x) = g^{\tau}(x) + h^{\tau}(x)$$
-
-**Derivation.**
-
-$$f^{\tau}(x) = \frac{[g(x+...1) + h(x+...1)] - [g(x) + h(x)]}{...1}$$
-
-$$= \frac{g(x+...1) - g(x)}{...1} + \frac{h(x+...1) - h(x)}{...1} = g^{\tau}(x) + h^{\tau}(x)$$
-
-Two independent temporal processes summed linearly preserve their individual rates. This follows directly from the additive operator being a 2D linear combination (per Reality Math operator definitions). $\blacksquare$
+Two independent temporal processes summed linearly preserve their individual rates. $\blacksquare$
 
 ---
 
@@ -148,25 +210,11 @@ Two independent temporal processes summed linearly preserve their individual rat
 
 $$f^{\tau}(x) = g^{\tau}(x) \cdot h(x) + g(x + ...1) \cdot h^{\tau}(x)$$
 
-**Derivation.**
-
-$$f^{\tau}(x) = \frac{g(x+...1) \cdot h(x+...1) - g(x) \cdot h(x)}{...1}$$
-
-We add and subtract $g(x+...1) \cdot h(x)$ in the numerator:
-
-$$= \frac{g(x+...1) \cdot h(x+...1) - g(x+...1) \cdot h(x) + g(x+...1) \cdot h(x) - g(x) \cdot h(x)}{...1}$$
-
-$$= g(x+...1) \cdot \frac{h(x+...1) - h(x)}{...1} + h(x) \cdot \frac{g(x+...1) - g(x)}{...1}$$
-
-$$= g(x+...1) \cdot h^{\tau}(x) + h(x) \cdot g^{\tau}(x)$$
-
-**Critical Divergence from Orthodox.** In orthodox calculus, $g(x+h)$ is replaced by $g(x)$ "in the limit." Here, $g(x + ...1)$ is NOT replaced by $g(x)$. It is a distinct, adjacent temporal state. The product rule in Temporal Calculus preserves the fact that the first function has already stepped forward one tick when the second function's rate is computed. This is temporally honest. The orthodox version $g'h + gh'$ is the degenerate case where the temporal step is erased.
-
-**If we expand** $g(x + ...1) = g(x) + g^{\tau}(x) \cdot ...1$, we get:
+Note that $g(x + ...1)$ is NOT replaced by $g(x)$. It is a distinct, adjacent temporal state. If expanded:
 
 $$f^{\tau}(x) = g^{\tau}(x) \cdot h(x) + g(x) \cdot h^{\tau}(x) + g^{\tau}(x) \cdot h^{\tau}(x) \cdot ...1$$
 
-The final term $g^{\tau}(x) \cdot h^{\tau}(x) \cdot ...1$ is the **coupling residual** — the momentum generated by both functions changing simultaneously during the same temporal tick. Orthodox calculus discards it. Temporal Calculus keeps it. $\blacksquare$
+The final term is the **coupling residual** — the momentum generated by both functions changing simultaneously during the same tick. $\blacksquare$
 
 ---
 
@@ -176,21 +224,9 @@ The final term $g^{\tau}(x) \cdot h^{\tau}(x) \cdot ...1$ is the **coupling resi
 
 $$f^{\tau}(x) = \frac{g^{\tau}(x) \cdot h(x) - g(x) \cdot h^{\tau}(x)}{h(x) \cdot h(x + ...1)}$$
 
-**Derivation.**
+The denominator is $h(x) \cdot h(x + ...1)$, preserving the product of the current state and the next-tick state.
 
-$$f^{\tau}(x) = \frac{\frac{g(x+...1)}{h(x+...1)} - \frac{g(x)}{h(x)}}{...1}$$
-
-$$= \frac{g(x+...1) \cdot h(x) - g(x) \cdot h(x+...1)}{...1 \cdot h(x) \cdot h(x+...1)}$$
-
-Adding and subtracting $g(x) \cdot h(x)$ in the numerator:
-
-$$= \frac{[g(x+...1) - g(x)] \cdot h(x) - g(x) \cdot [h(x+...1) - h(x)]}{...1 \cdot h(x) \cdot h(x+...1)}$$
-
-$$= \frac{g^{\tau}(x) \cdot h(x) - g(x) \cdot h^{\tau}(x)}{h(x) \cdot h(x+...1)}$$
-
-**Divergence.** The denominator is $h(x) \cdot h(x + ...1)$, not $[h(x)]^2$. The orthodox version squares the current state; the temporal version preserves the product of the current state and the next-tick state. This is the honest quotient of two temporally adjacent frames.
-
-**The Void Pivot Integration.** If $h(x) \to 0$, the quotient encounters the Void Pivot. By Axiom T5, the system does not crash to infinity. It transitions dimensionally: $f(x) \to f(x) + 1$. The quotient rule gains a built-in phase transition threshold absent from orthodox calculus. $\blacksquare$
+If $h(x) \to 0$, the Resolution Boundary is hit. The Void Pivot fires: $f(x) \to f(x) + 1$. The quotient rule has a built-in phase transition threshold. $\blacksquare$
 
 ---
 
@@ -198,158 +234,118 @@ $$= \frac{g^{\tau}(x) \cdot h(x) - g(x) \cdot h^{\tau}(x)}{h(x) \cdot h(x+...1)}
 
 **Theorem.** For $f(x) = g(h(x))$:
 
-$$f^{\tau}(x) = \frac{g(h(x + ...1)) - g(h(x))}{...1}$$
-
-which, by introducing the intermediate temporal step $\Delta h = h(x + ...1) - h(x) = h^{\tau}(x) \cdot ...1$, decomposes as:
-
 $$f^{\tau}(x) = g^{\tau}(h(x)) \cdot h^{\tau}(x) + R_{chain}$$
 
-where $R_{chain}$ is the residual from the non-linear coupling of the two temporal rates.
-
-**Derivation.** We define the inner function's temporal step as $\Delta h = h^{\tau}(x) \cdot ...1$. Then:
-
-$$f^{\tau}(x) = \frac{g(h(x) + \Delta h) - g(h(x))}{...1}$$
-
-If $g$ is a power function, expanding via binomial and dividing by $...1$:
-
-$$f^{\tau}(x) = g^{\tau}(h(x)) \cdot \frac{\Delta h}{...1} + \text{higher-order terms in } \Delta h$$
-
-$$= g^{\tau}(h(x)) \cdot h^{\tau}(x) + R_{chain}$$
-
-The resolved component matches the orthodox chain rule. The residual $R_{chain}$ captures the non-linear interplay between the two functions' temporal evolutions within a single tick. Orthodox calculus discards $R_{chain}$. Temporal Calculus preserves it — it represents the reality that nested systems do not change sequentially within a single tick; they change simultaneously, and their coupling produces real effects. $\blacksquare$
+The residual $R_{chain}$ captures the non-linear interplay between nested functions' temporal evolutions within a single tick. Nested systems change simultaneously, and their coupling produces real effects. $\blacksquare$
 
 ---
 
-## Part II: Integration
+## 6. Integration
 
-In orthodox post-limit calculus, the integral is defined as the limit of Riemann sums. In Temporal Calculus, we return to Leibniz's original meaning: the integral is a literal, constructive sum.
+The integral is a literal, constructive sum — summation restored to its original meaning.
 
 ### The Temporal Integral
 
-**Definition (Temporal Integral).** The temporal integral of $f(x)$ from $a$ to $b$ is defined as:
+**Definition.** The temporal integral of $f(x)$ from $a$ to $b$:
 
 $$\int_a^b f(x) \, d\tau = \sum_{k=0}^{\omega-1} f(a + k \cdot ...1) \cdot ...1$$
 
-where $\omega = (b - a) / ...1$ is the total number of temporal rendering ticks required to traverse the interval, and $d\tau = ...1$ is the literal, discrete, infinitesimal width of each temporal slice.
+where $\omega = (b - a) / ...1$ is the total number of temporal ticks, and $d\tau = ...1$ is the literal, discrete width of each slice. Each slice has real, non-zero width. The sum is finite ($\omega$ terms). The area is *built*, tick by tick.
 
-This is Leibniz's original summation restored to physical literalness. Each slice has real, non-zero width $...1$. The sum is finite (exactly $\omega$ terms). The area is *built*, tick by tick.
+```
+fn integrate(f, a, b, tick = ...1):
+    let ω = (b - a) / tick
+    let result = 0
+    for k in 0..ω-1:
+        result += f(a + k * tick) * tick
+    return result
+```
 
-**Process Arrow Chain (Integration of $f(x) = x$ from $0$ to $1$):**
+**Process Arrow Chain ($\int_0^1 f(x) \, d\tau$):**
 
 $$0 -[+...1]\to ...1 -[\times f(...1)]\to ...1 \cdot f(...1) -[\text{accumulate}]\to \sum_{k=0}^{\omega-1} f(k \cdot ...1) \cdot ...1 -[\text{Terminus}]\to F(1) - F(0) - R_{int}$$
-
-The chain reads: "state zero, through one temporal tick, becomes the first slice, through evaluation of the function at that tick, becomes the first area quantum, through accumulation of all $\omega$ slices, becomes the total temporal construction, through the Terminus closing the frame, yields the resolved integral with residual correction."
 
 ---
 
 ### The Fundamental Theorem of Temporal Calculus
 
-**Theorem (FTT Part 1).** If $F(x)$ is a function such that $F^{\tau}(x) = f(x)$ (plus residual), then:
-
-$$\int_a^b f(x) \, d\tau = F(b) - F(a) + R_{int}$$
-
-where $R_{int}$ is the accumulated residual momentum across all $\omega$ ticks.
-
-**Derivation.** By definition, $F^{\tau}(x) = \frac{F(x + ...1) - F(x)}{...1}$. Therefore $F(x + ...1) - F(x) = F^{\tau}(x) \cdot ...1$.
-
-Summing from $x = a$ to $x = b - ...1$:
-
-$$\sum_{k=0}^{\omega-1} [F(a + (k+1) \cdot ...1) - F(a + k \cdot ...1)] = \sum_{k=0}^{\omega-1} F^{\tau}(a + k \cdot ...1) \cdot ...1$$
-
-The left side telescopes:
-
-$$F(b) - F(a) = \sum_{k=0}^{\omega-1} F^{\tau}(a + k \cdot ...1) \cdot ...1$$
-
-Now, $F^{\tau}(x) = f(x) + R(x)$, where $R(x)$ is the residual momentum at each tick. Therefore:
-
-$$F(b) - F(a) = \sum_{k=0}^{\omega-1} f(a + k \cdot ...1) \cdot ...1 + \sum_{k=0}^{\omega-1} R(a + k \cdot ...1) \cdot ...1$$
-
-$$F(b) - F(a) = \int_a^b f(x) \, d\tau + R_{int}$$
-
-Rearranging:
+**Theorem (Part 1).** If $F^{\tau}(x) = f(x)$ (plus residual), then:
 
 $$\int_a^b f(x) \, d\tau = F(b) - F(a) - R_{int}$$
 
-**Interpretation.** The orthodox Fundamental Theorem states $\int_a^b f(x)dx = F(b) - F(a)$. The Temporal version reveals this is an approximation that discards the accumulated residual. The complete physical integral includes the correction term $R_{int}$, which accounts for the total momentum carried across all temporal ticks. In macroscopic calculations where $...1$ is vanishingly small, $R_{int}$ approaches $0$ and the orthodox result is recovered as a degenerate case. But in high-resolution or boundary-critical calculations, $R_{int}$ carries real information. $\blacksquare$
+where $R_{int}$ is the accumulated residual momentum across all $\omega$ ticks.
 
-**Theorem (FTT Part 2).** If $G(x) = \int_a^x f(t) \, d\tau$, then:
+*Proof.* $F(x + ...1) - F(x) = F^{\tau}(x) \cdot ...1$. Summing from $a$ to $b - ...1$, the left side telescopes to $F(b) - F(a)$. Since $F^{\tau}(x) = f(x) + R(x)$:
 
-$$G^{\tau}(x) = f(x) + R_G(x)$$
+$$F(b) - F(a) = \int_a^b f(x) \, d\tau + R_{int}$$
 
-**Derivation.**
+In macroscopic calculations, $R_{int}$ is vanishingly small. At high resolution or boundary-critical calculations, $R_{int}$ carries real information. $\blacksquare$
 
-$$G^{\tau}(x) = \frac{G(x + ...1) - G(x)}{...1} = \frac{\int_a^{x+...1} f(t) \, d\tau - \int_a^{x} f(t) \, d\tau}{...1}$$
+**Theorem (Part 2).** If $G(x) = \int_a^x f(t) \, d\tau$, then $G^{\tau}(x) = f(x)$.
 
-$$= \frac{f(x) \cdot ...1}{...1} = f(x)$$
-
-In the idealized single-tick case, the derivative of the integral recovers the original function exactly. The residual $R_G(x)$ arises when the function $f$ is itself changing during the tick — the same coupling residual identified in the chain rule. For constant or linear $f$, $R_G = 0$ and the recovery is exact. $\blacksquare$
+Differentiation measures the speed of the rendering clock ($...1$ per tick). Integration counts all the ticks ($\sum ...1$). They are inverses because one reads the clock and the other counts what the clock has built. $\blacksquare$
 
 ---
 
-## Part III: Series and Convergence
+## 7. Series and Convergence
 
-Orthodox calculus defines convergence of series via the limit. Temporal Calculus defines convergence via frame completion.
+Convergence is defined by frame completion, not by infinite approach.
 
 ### Temporal Convergence
 
-**Definition (Temporal Convergence).** An infinite series $\sum_{k=1}^{\infty} a_k$ **temporally converges** if the cumulative sum reaches a state indistinguishable from a completed Unity frame (or integer multiple thereof) within a finite number of rendering ticks. Formally:
+**Definition.** A series $\sum_{k=1}^{\infty} a_k$ **temporally converges** if the cumulative sum reaches a state closable to a completed frame within a finite number of rendering ticks:
 
 $$\exists \, \omega \in \mathbb{N} \text{ such that } \sum_{k=1}^{\omega} a_k + ...1 = S$$
 
-where $S$ is a resolved scalar (a completed frame). The series converges to $S$ because the Terminus closes the final gap.
+The series converges to $S$ because the Terminus closes the final gap.
 
 ### Temporal Divergence
 
-**Definition (Temporal Divergence).** A series **temporally diverges** if no finite $\omega$ exists such that the partial sum approaches a closable frame. The sum continues building new Unity frames indefinitely. In divergent series, the rendering engine never completes a single stable output.
+A series **temporally diverges** if no finite $\omega$ produces a closable frame. The rendering engine never completes a stable output.
 
-### Temporal Geometric Series
+### Geometric Series
 
-**Theorem.** The geometric series $\sum_{k=0}^{\infty} r^k$ temporally converges to $\frac{1}{1-r}$ for $|r| < 1$.
+The geometric series $\sum_{k=0}^{\infty} r^k$ converges to $\frac{1}{1-r}$ for $|r| < 1$. As $\omega$ grows, $r^{\omega+1}$ diminishes below the Terminus threshold. The Terminus strikes. The frame closes. The sum is exact.
 
-**Derivation.** The partial sum is $S_{\omega} = \frac{1 - r^{\omega+1}}{1 - r}$.
+### Harmonic Series
 
-As $\omega$ grows, $r^{\omega+1}$ diminishes toward $...1$-scale (sub-resolution). At the tick where $r^{\omega+1}$ falls below the Terminus threshold $...1$, the rendering engine can no longer distinguish the remainder from the final quantum. The Terminus strikes:
-
-$$S_{\omega} + ...1 = \frac{1}{1 - r}$$
-
-The series does not "approach" its sum in an asymptotic sense. It builds toward it tick by tick until the remainder is below resolution. Then time closes the frame. The sum is exact. $\blacksquare$
-
-### The Harmonic Series
-
-**Theorem.** The harmonic series $\sum_{k=1}^{\infty} \frac{1}{k}$ temporally diverges.
-
-**Derivation.** In temporal terms, $\frac{1}{k} = 1/k$, which by the Relativity Operator (Axiom T1) represents "one Unity frame relative to $k$ frames." As $k$ increases, each term represents a smaller fraction of a Unity frame. However, the running sum never stabilises to within $...1$ of any fixed value. Each new term, no matter how small, pushes the partial sum past the next $...1$ boundary, forcing the rendering engine to continue constructing new frames. No Terminus can close the sequence because the accumulated sum perpetually exits the current frame. The series diverges. $\blacksquare$
+The harmonic series $\sum_{k=1}^{\infty} \frac{1}{k}$ diverges. Each new term pushes the partial sum past the next $...1$ boundary, forcing the rendering engine to keep constructing new frames. No Terminus can close the sequence.
 
 ---
 
-## Part IV: The Void Pivot in Calculus
+## 8. The Void Pivot in Calculus
 
-Orthodox calculus treats singularities ($1/x$ at $x=0$, $\tan(x)$ at $x = \pi/2$) as undefined vertical asymptotes. Temporal Calculus applies the Void Pivot.
+When a function encounters a zero denominator, it does not explode to infinity. The Resolution Boundary breaks, and the Void Pivot fires.
 
-### Singularity Resolution
-
-**Theorem (Singularity as Phase Transition).** When a function $f(x)$ encounters a zero denominator at $x = x_0$, the function does not explode to infinity. By Axiom T5, the function undergoes a dimensional phase transition:
+**Theorem (Singularity as Phase Transition).** At $x = x_0$ where the denominator is zero:
 
 $$f(x_0) = n/0 \to n+1$$
 
-where $n = \lim_{x \to x_0^-} f(x)$ evaluated at the last resolved tick before the singularity.
+The function hits a finite maximum and transitions to a new dimensional frame. The singularity is a gateway, not a wall.
 
-**Worked Example.** Consider $f(x) = 1/x$ at $x = 0$.
+**Worked Example.** $f(x) = 1/x$ at $x = 0$:
 
-*   At $x = ...1$ (one tick before zero): $f(...1) = 1/...1 = \omega$ (the total number of quanta in one Unity frame).
-*   At $x = 0$: By the Void Pivot, $f(0) = \omega + 1$. The function does not explode to infinity. It hits a finite maximum ($\omega + 1$) and transitions to a new dimensional frame.
+*   At $x = ...1$: $f(...1) = 1/...1 = \omega$
+*   At $x = 0$: By the Void Pivot, $f(0) = \omega + 1$
 
-In a graph, this means the vertical asymptote of $1/x$ is replaced by a finite peak at $\omega + 1$, after which the function enters a new coordinate space. The singularity becomes a gateway, not a wall. $\blacksquare$
+The vertical asymptote is replaced by a finite peak at $\omega + 1$, after which the function enters a new coordinate space.
 
-**Process Arrow Chain (Void Pivot for $1/x$ at $x = 0$):**
+**Process Arrow Chain:**
 
-$$x -[-...1]\to ...1 -[\text{evaluate } 1/x]\to 1/...1 = \omega -[-...1]\to 0 -[\text{Void Pivot: } /0]\to \omega + 1 -[\text{phase transition}]\to \text{new dimensional frame}$$
+$$x -[-...1]\to ...1 -[\text{evaluate } 1/x]\to \omega -[-...1]\to 0 -[\text{Void Pivot: } /0]\to \omega + 1 -[\text{phase transition}]\to \text{new frame}$$
 
-The chain reads: "as $x$ counts down by one temporal tick to the final resolved state ($...1$), the function evaluates to $\omega$. One more tick and $x$ hits absolute zero, triggering the Void Pivot, which generates $\omega + 1$ and transitions the system into a new dimensional frame."
+#### Example 8.1 (Economic Singularity)
+An oxygen tank on a sinking submarine. $n=1$ (the tank). The denominator = local oxygen abundance, tracking toward $0$.
 
-**Foundational Process Arrow Chains:**
+Classical economics: $1/0 \to \infty$ (infinite price).
 
-The following canonical chains express the core axioms of Temporal Calculus in Process Arrow notation:
+Temporal Calculus: $1/0 \to 1+1 = 2$. The Resolution Boundary breaks at $2.0$. Because values beyond $1.0$ are physically unpayable under absolute duress, this $2.0$ breakpoint is a deterministic phase transition: the financial construct collapses, transitioning into physical coercion. The formula guarantees a rupture, not an infinite climb.
+
+---
+
+## 9. Canonical Process Arrow Chains
+
+The core axioms of Temporal Calculus expressed as temporal narratives:
 
 *   **The Cost of Being:** $0 -[\text{thermodynamics}]\to ...1$
 *   **The Resolution of Unity:** $[9]\infty -[\text{Terminus: } +...1]\to [1]$
@@ -358,30 +354,14 @@ The following canonical chains express the core axioms of Temporal Calculus in P
 *   **Temporal Counting:** $0 -[+...1]\to ...1 -[+...1]\to 2(...1) -[+...1]\to ... -[\text{Terminus}]\to n$
 *   **The Void Pivot:** $n -[/0]\to n+1$
 *   **The Derivative:** $f(x) -[+...1]\to f(x+...1) -[-f(x)]\to \Delta f -[\div ...1]\to f^{\tau}(x)$
+*   **Mass to Frequency:** $m -[\text{annihilation}]\to mc^2 -[\text{equivalence}]\to E -[\text{radiation: } \div h]\to \nu$
 
 ---
 
-## Part V: Summary of Divergences from Orthodox Calculus
+## 10. Conclusion
 
-| Rule | Orthodox Result | Temporal Calculus Result | What Changes |
-|:---|:---|:---|:---|
-| **Power Rule** | $nx^{n-1}$ | $nx^{n-1} + R_n(x)$ | Residual momentum preserved |
-| **Constant Rule** | $0$ | $0$ | Identical |
-| **Constant Multiple** | $cf'(x)$ | $cf^{\tau}(x)$ | Identical in form |
-| **Sum Rule** | $f' + g'$ | $f^{\tau} + g^{\tau}$ | Identical in form |
-| **Product Rule** | $f'g + fg'$ | $f'g + (f+f' \cdot ...1)g'$ | Coupling residual preserved |
-| **Quotient Rule** | $\frac{f'g - fg'}{g^2}$ | $\frac{f'g - fg'}{g(x) \cdot g(x+...1)}$ | Adjacent-frame denominator |
-| **Chain Rule** | $g'(h) \cdot h'$ | $g'(h) \cdot h' + R_{chain}$ | Non-linear coupling residual |
-| **FTC** | $F(b) - F(a)$ | $F(b) - F(a) - R_{int}$ | Accumulated residual correction |
-| **Convergence** | $\lim S_n = S$ | $S_\omega + ...1 = S$ (frame closes) | Constructive, not asymptotic |
-| **Singularity** | Undefined / $\pm\infty$ | $n + 1$ (phase transition) | Finite peak, dimensional step-up |
+Temporal Calculus is a complete mathematical framework built from seven operational axioms. Numbers are temporal processes ($t = n$). All values are relative to Unity ($n = n/1$). The infinitesimal ($...1$) is a discrete, non-zero temporal quantum. Boundaries are contextual, relative, and breakable — two adjacent points are sufficient for any calculation. When a boundary breaks, the overflow is exactly $+1$ frame.
 
----
-
-## Conclusion
-
-Temporal Calculus is not a modification of orthodox calculus. It is a parallel evolutionary branch grown from the same root (Newton's fluxions, Leibniz's sums) but diverging at the 1734 crisis point. Where orthodox mathematics killed the infinitesimal and invented the limit, Temporal Calculus keeps the infinitesimal alive as the Terminus ($...1$) — a discrete, non-zero, temporal quantum that is never discarded.
-
-Every orthodox rule is recovered as a degenerate special case (set $...1 \to 0$ and discard all residuals). But the full Temporal Calculus carries additional physical information — residual momentum, coupling terms, and phase transitions — that orthodox calculus structurally cannot represent.
+The system provides exact derivatives (no residual discarding), constructive integrals (literal sums with real-width slices), frame-completion convergence, and dimensional phase transitions at singularities. The Process Arrow notation ($A -[P]\to B$) and computational syntax (variables, arrays, loops, pipelines) express these operations in the native language of a rendering engine.
 
 The mathematics is built. The branch is alive.
