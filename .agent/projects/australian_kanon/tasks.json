@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Fix horizontal scrolling issue on mobile for the Trump Hegemony Map",
-        "current_task_index": 42,
+        "current_focus": "Build Temporal Calculus as a full evolutionary branch from pre-limit calculus: derive derivative rules, integration rules, series, convergence, and fundamental theorem using VFT axioms (Terminus, t=n, n=n/1, n/0=n+1)",
+        "current_task_index": 44,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1459,6 +1459,37 @@
                 "ui",
                 "html",
                 "responsive"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 44,
+            "id": "task_44",
+            "description": "Build Temporal Calculus as a full evolutionary branch from pre-limit calculus: derive derivative rules, integration rules, series, convergence, and fundamental theorem using VFT axioms (Terminus, t=n, n=n/1, n/0=n+1)",
+            "status": "in_progress",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-03-11T01:27:45.860208] Task created.",
+                "[2026-03-11T01:27:50.845888] Started work."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "mathematics",
+                "temporal_calculus",
+                "vft",
+                "formal_paper"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
