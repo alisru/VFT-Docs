@@ -1,24 +1,26 @@
-# The Fractal Definition of Truth: The 294 Vectors of Meaning
+# The Fractal Definition of Truth: The 343 Vectors of Meaning
 
 Abstract:
 
-This document formalizes the Linguistic Calculus of the Psochic Hegemony. It demonstrates that \"Truth\" is not a binary state but a fractal coordinate system. Any given concept (Word) does not have a single definition; it has 294 valid functional states depending on the observer\'s internal Will ($\psi$), their Moral Vector ($v$), and the Objective Context ($\Omega$).
+This document formalizes the Linguistic Calculus of the Psochic Hegemony. It demonstrates that "Truth" is not a binary state but a fractal coordinate system. Any given concept (Word) does not have a single definition; it has 343 valid functional states depending on the observer's internal Will ($\psi$), their Moral Vector ($v$), their initial Identity baseline, and the Objective Context ($\Omega$).
 
 ### **I. The Equation of Meaning**
 
-In the VFT framework, language is a \"Lossy Compression\" mechanism. A word is a \"zip file\" containing a multidimensional set of potential interactions. To unpack the true meaning of a word in any specific instance, we must apply the **Fractal Decompression Formula**:
+In the VFT framework, language is a "Lossy Compression" mechanism. A word is a "zip file" containing a multidimensional set of potential interactions. To unpack the true meaning of a word in any specific instance, we must apply the **Fractal Decompression Formula**:
 
-$Meaning = W \times \Omega_{7} \times \Sigma_{42}$
+$Meaning = W \times \Omega_{7} \times (\Sigma_{42} + I_{49})$
 
 Where:
 
-- $W$ **(Word):** The raw informational seed (e.g., \"Freedom,\" \"Security,\" \"Love\").
+- $W$ **(Word):** The raw informational seed (e.g., "Freedom," "Security," "Love").
 
 - $\Omega_{7}$ **(The Objective Frame):** The 7 contexts of reality that the word exists within (The Ferryman).
 
 - $\Sigma_{42}$ **(The Subjective State):** The 42 internal vectors of the observer (The 36 Matrix States + 6 Meta-Axes).
 
-**Total Permutations:** $7 \times 42 = 294$ unique, calculable definitions for any single word.
+- $I_{49}$ **(The Identity Baseline):** The 49 states relative to the observer's initial **Who (Identity)** plane ($7 \text{ identity intersections} \times 7 \text{ sub-planes}$).
+
+**Total Permutations:** $(7 \times 42) + 49 = \mathbf{343}$ unique, calculable definitions for any single word.
 
 ### **II. The 7 Objective Frames (**$\Omega_{7}$**)**
 
@@ -82,9 +84,9 @@ These are the specific archetypal reactions formed when the Personal Axis intera
 
 **Total States:** 36 Matrix Positions + 6 Meta-Axes = **42 Functional States of Meaning.**
 
-### **IV. Case Study: The Fractal Decompression of \"Protection\"**
+### **IV. Case Study: The Fractal Decompression of "Protection"**
 
-To demonstrate, let us run the word **\"Protection\"** through just *two* of the 294 possible vector paths.
+To demonstrate, let us run the word **"Protection"** through just *two* of the 343 possible vector paths.
 
 #### **Vector Path A: The \"Guardian\" Definition**
 

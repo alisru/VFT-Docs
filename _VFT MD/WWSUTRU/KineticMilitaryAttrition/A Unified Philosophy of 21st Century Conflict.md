@@ -92,6 +92,24 @@ The **-\$1.061 Billion** figure is the final illusion, as it only calculates *di
 
 When these temporal multipliers are factored in, the true cost of the "perfect" physical war becomes effectively incalculable—a black hole of systemic value. This proves *why* Tier 6 Abstract Warfare (which promises the same result while obfuscating these "hidden fees") has become the dominant doctrine.
 
+#### **1.3 The Restitution Protocol: Calculating Moral Debt**
+
+If the HEM determines the absolute systemic "net-loss" created by a hostile vector, it simultaneously functions as the ledger for **Moral Debt ($D_m$)**. Moral debt is not a philosophical metaphor; it is the literal mathematical deficit of $+v$ (Greater Good) energy that the aggressor has extracted from the human system. 
+
+To resolve the equation of a conflict and return the system to equilibrium (a 1.0 Ratio of Truth), the exact dollar value of the extracted energy must be "paid back" in constructive $+v$ output. Using the HEM, we can assign an exact dollar value to the moral value that needs to be paid:
+
+**The Moral Restitution Formula:**
+The exact monetary value ($M_{pay}$) required to zero out a hostile extraction is calculated using the HEM components:
+
+1.  **The Flesh Ledger (VSL):** In the 100 vs. 0 KDR scenario, the aggressor destroys 100 lives = **\$1 Billion** in lost future productivity. The aggressor owes the system \$1 Billion in literal new infrastructure, healthcare, or constructive systemic yields to balance the ledger.
+2.  **The Entropy Ledger (Material Expenditure):** The **\$61 Million** spent to execute the war was burned in pure entropy. It produced nothing. The aggressor owes the system an equivalent \$61 Million investment in $+v$ output.
+3.  **The Time Ledger (Opportunity Cost):** The massive, compounding loss of the temporal super-position (the \$125,000/year dual-drain per soldier) must also be reimbursed.
+
+**The Aletheia of Debt:** 
+When quantified in dollars, the Moral Debt of even a minor conflict proves that violent extraction is physically unpayable. A Tier 6 (Abstract) attack that inflicts a \$50 Billion supply chain disruption generates an immediate **\$50 Billion Moral Debt**. 
+
+To survive the mathematical blowback of the Kanon, the aggressor nation would literally have to generate \$50 Billion in pure, unselfish, $+v$ planetary value (e.g., curing a disease, freely distributing energy tech) just to return to a moral zero-state. Because Minimisers operate purely on extractive ($-\upsilon$) vectors, they cannot pay this debt. The debt compounds over time (as a thermodynamic friction), structurally guaranteeing the eventual collapse of the aggressor's system.
+
 ### **Part II: The Logic and Evolution of Hostile Expression**
 
 Conflict is not a chaotic event but a logical, axiomatic process. Every hostile act is an attempt to solve an "answer equation," where one participant attempts to impose a reality where their \[Action\] == 1 (a definitive, successful outcome for them). The evolution of warfare is the story of humanity developing more efficient, abstract, and powerful tools to solve this equation.

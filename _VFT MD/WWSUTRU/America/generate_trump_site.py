@@ -666,7 +666,7 @@ def generate_index_page(final_score_html):
                         <!-- BR: Greater Evil -->
                         <div class="bg-red-100/50 rounded-lg flex items-center justify-center text-center p-2 border border-red-100">
                             <div>
-                                <div class="font-bold text-red-900 text-sm">The Void</div>
+                                <div class="font-bold text-red-900 text-sm">Greater Evil</div>
                                 <div class="text-[10px] text-red-700 font-mono">-υ, -ψ</div>
                             </div>
                         </div>

@@ -7,17 +7,16 @@
     <title>The Ideological Traitor: A Tier 6 Definition</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
-        rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
         }
 
         .font-serif {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Merriweather', serif;
         }
 
         .hmy-bg-root-red {
@@ -31,109 +30,65 @@
         .hmy-border-root-red {
             border-color: #8B0000;
         }
-
-        .hmy-gradient-bg {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
-        }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+<body class="antialiased text-gray-800 flex flex-col min-h-screen">
 
-    <!-- Primary Navigation Bar -->
-    <nav class="hmy-bg-root-red text-white shadow-md relative z-50">
+    <!-- Primary Navigation Bar (WWSUTRU) -->
+    <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <!-- Logo & Brand -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-serif text-2xl font-bold tracking-wider relative group">
-                        Alethekanon
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-4">
+                        <span class="text-xl font-bold text-white tracking-widest uppercase">WWSUTRU</span>
+                        <a href="../AmericanMatrix.html"
+                            class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 border border-gray-600 hover:text-white hover:bg-gray-700 transition">Return
+                            to Main Matrix</a>
+                    </div>
                 </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html"
-                        class="text-gray-100 hover:text-white px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200">The
-                        American Kanon</a>
-                    <a href="Archetype_The_American_Anomaly.html"
-                        class="text-gray-100 hover:text-white px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200">The
-                        Archetype</a>
-                    <a href="The_Ideological_Traitor.html"
-                        class="text-white hover:text-white px-3 py-2 text-sm font-bold tracking-wide transition-colors duration-200 border-b-2 border-white">Ideological
-                        Treason</a>
-                    <a href="Trump_American_Kanon_Final_Score.html"
-                        class="text-gray-100 hover:text-white px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200">Final
-                        Scorecard</a>
-                </div>
-
-                <!-- Hamburger Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button"
-                        class="text-white hover:text-gray-200 focus:outline-none transition-colors duration-200">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-red-900 shadow-xl border-t border-red-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"
-                    class="text-gray-100 hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">The
-                    American Kanon</a>
-                <a href="Archetype_The_American_Anomaly.html"
-                    class="text-gray-100 hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">The
-                    Archetype</a>
-                <a href="The_Ideological_Traitor.html"
-                    class="bg-red-800 text-white block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200">Ideological
-                    Treason</a>
-                <a href="Trump_American_Kanon_Final_Score.html"
-                    class="text-gray-100 hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Final
-                    Scorecard</a>
-                <a href="About_The_Trump_Audit.html"
-                    class="text-gray-100 hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 border-t border-red-800/50 mt-2">About
-                    the Audit</a>
             </div>
         </div>
     </nav>
-    <script>
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
 
-    <!-- Header Section -->
-    <header class="hmy-gradient-bg text-white py-16 lg:py-24 shadow-inner">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-red-400 mb-2">Alethekanon Framework</h2>
-            <h1 class="text-4xl lg:text-5xl font-serif font-bold mb-6 leading-tight">The Ideological Traitor</h1>
-            <p class="text-xl lg:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed">
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden" style="background-color: #0e1235;">
+        <!-- Stylized American Flag Elements in Background -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 7410 3900"
+                class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+                <path d="M0,0h7410v3900H0" fill="#b31942" />
+                <path d="M0,450H7410m0,600H0m0,600H7410m0,600H0m0,600H7410m0,600H0" stroke="#FFF" stroke-width="300" />
+                <path d="M0,0h2964v2100H0" fill="#0a3161" />
+            </svg>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10 text-center">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-red-400 mb-2 font-sans relative drop-shadow-md">
+                Alethekanon Core Framework</h2>
+            <h1 class="text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight relative drop-shadow-lg">
+                The Ideological Traitor</h1>
+            <p
+                class="text-xl lg:text-2xl text-gray-300 font-serif italic max-w-3xl mx-auto leading-relaxed relative drop-shadow-md">
                 A Self-Contained Definition of Tier 6 Treason
             </p>
+            <div class="h-1 w-32 bg-red-600 mx-auto rounded-full mt-6"></div>
         </div>
-    </header>
+    </div>
+
 
     <!-- Main Content -->
     <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <article class="prose prose-lg lg:prose-xl max-w-none font-serif text-gray-800 leading-relaxed">
+        <article class="prose prose-lg max-w-none text-gray-800 leading-relaxed">
 
-            <p class="lead text-2xl text-gray-600 mb-10 font-light border-l-4 border-red-800 pl-6 italic">
+            <p class="lead text-2xl text-gray-600 mb-10 font-serif font-light border-l-4 border-red-800 pl-6 italic">
                 Because physical war between superpowers is a catastrophic net-loss enterprise, the battlefield has
                 shifted. The new battlespace is no longer physical territory; it is the Cognitive and Institutional
                 Architecture of a nation.
             </p>
 
             <h2
-                class="font-sans text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-12 mb-6 border-b pb-2">
+                class="text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-12 mb-6 border-b border-gray-200 pb-2">
                 The Evolution of Treason: From Kinetic to Ideological</h2>
 
             <p>
@@ -142,7 +97,7 @@
                 prevent its weaponization against domestic political opponents. It consists solely in:
             </p>
             <ol
-                class="font-sans font-medium text-gray-900 bg-gray-100 p-6 rounded-lg my-6 border border-gray-200 shadow-sm list-decimal pl-10">
+                class="font-medium text-gray-900 bg-white p-6 rounded-lg my-6 border border-gray-200 shadow-sm list-decimal pl-10">
                 <li class="mb-2"><strong>Levying War</strong> against the United States.</li>
                 <li><strong>Adhering to their Enemies</strong>, giving them Aid and Comfort.</li>
             </ol>
@@ -170,8 +125,8 @@
 
             <!-- Section 1 -->
             <h2
-                class="font-sans text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b pb-2">
-                1. "Levying War" <span class="text-gray-400 font-light mx-2">|</span> The Application of Internal Social
+                class="text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b border-gray-200 pb-2">
+                1. "Levying War" <span class="text-gray-300 font-light mx-2">|</span> The Application of Internal Social
                 Strain</h2>
 
             <p>
@@ -180,9 +135,12 @@
                 levy war by capturing and dismantling the mechanisms that allow a society to cohere.
             </p>
 
-            <div class="my-8 bg-white p-6 rounded-lg shadow-sm border-l-4 hmy-border-root-red">
-                <h4 class="font-sans font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Theoretical
-                    Definition</h4>
+            <div class="my-8 bg-white p-8 rounded-xl shadow-sm border-l-4 hmy-border-root-red relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 bg-red-50 px-3 py-1 text-xs font-bold text-red-800 uppercase rounded-bl-lg border-b border-l border-red-100">
+                    Theory</div>
+                <h4 class="font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Mathematical Definition
+                </h4>
                 <p class="m-0 text-base">
                     An Ideological Traitor (Tier 6) is an internal actor who actively and deliberately applies maximum
                     <strong>Social Strain</strong> to a nation’s existing fault lines with the specific intent of
@@ -199,10 +157,11 @@
                 </p>
             </div>
 
-            <div class="my-8 bg-gray-100 p-6 rounded-lg font-sans text-gray-700 italic border border-gray-200">
-                <h4 class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3">The Simple
-                    Translation</h4>
-                <p class="m-0 text-base leading-relaxed">
+            <div class="my-8 bg-gray-50 p-6 rounded-lg text-gray-700 italic border border-gray-200">
+                <h4
+                    class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3 border-b border-gray-200 pb-2 inline-block">
+                    The Simple Translation</h4>
+                <p class="m-0 text-base leading-relaxed mt-2">
                     You don't need to bomb the Capitol to wage war against your country. If a nation is a machine built
                     on rules, trust, and shared reality, "levying war" means deliberately throwing sand in the gears
                     until the machine breaks down. A modern traitor attacks the unseen things that make the country
@@ -216,8 +175,8 @@
 
             <!-- Section 2 -->
             <h2
-                class="font-sans text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b pb-2">
-                2. "Aid and Comfort" <span class="text-gray-400 font-light mx-2">|</span> The Propaganda Mirror</h2>
+                class="text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b border-gray-200 pb-2">
+                2. "Aid and Comfort" <span class="text-gray-300 font-light mx-2">|</span> The Propaganda Mirror</h2>
 
             <p>
                 In rhizomatic warfare, the "enemy" is not solely a foreign flag. The enemy is any <strong>Extractive
@@ -225,9 +184,12 @@
                 for its own gain.
             </p>
 
-            <div class="my-8 bg-white p-6 rounded-lg shadow-sm border-l-4 hmy-border-root-red">
-                <h4 class="font-sans font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Theoretical
-                    Definition</h4>
+            <div class="my-8 bg-white p-8 rounded-xl shadow-sm border-l-4 hmy-border-root-red relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 bg-red-50 px-3 py-1 text-xs font-bold text-red-800 uppercase rounded-bl-lg border-b border-l border-red-100">
+                    Theory</div>
+                <h4 class="font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Mathematical Definition
+                </h4>
                 <p class="m-0 text-base">
                     A Tier 6 Traitor serves as the <strong>Primary Internal Vector</strong> for authoritarian capture,
                     providing the necessary political and narrative cover that allows hostile external agendas to bypass
@@ -250,10 +212,11 @@
                 </p>
             </div>
 
-            <div class="my-8 bg-gray-100 p-6 rounded-lg font-sans text-gray-700 italic border border-gray-200">
-                <h4 class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3">The Simple
-                    Translation</h4>
-                <p class="m-0 text-base leading-relaxed mb-4">
+            <div class="my-8 bg-gray-50 p-6 rounded-lg text-gray-700 italic border border-gray-200">
+                <h4
+                    class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3 border-b border-gray-200 pb-2 inline-block">
+                    The Simple Translation</h4>
+                <p class="m-0 text-base leading-relaxed mb-4 mt-2">
                     "Giving aid and comfort to the enemy" doesn't just mean selling them blueprints or weapons. When
                     hostile nations like Russia or China tell the world that democracy is a corrupt joke run by greedy
                     hypocrites, an ideological traitor is the politician who takes office and proves them right.
@@ -270,8 +233,8 @@
 
             <!-- Section 3 -->
             <h2
-                class="font-sans text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b pb-2">
-                3. The "Overt Act" <span class="text-gray-400 font-light mx-2">|</span> Verifiable Vector Violation</h2>
+                class="text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b border-gray-200 pb-2">
+                3. The "Overt Act" <span class="text-gray-300 font-light mx-2">|</span> Verifiable Vector Violation</h2>
 
             <p>
                 The Constitution requires an extremely high evidentiary standard: the testimony of two witnesses to an
@@ -279,9 +242,12 @@
                 treason charges from being weaponized against legitimate, protected political dissent.
             </p>
 
-            <div class="my-8 bg-white p-6 rounded-lg shadow-sm border-l-4 hmy-border-root-red">
-                <h4 class="font-sans font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Theoretical
-                    Definition</h4>
+            <div class="my-8 bg-white p-8 rounded-xl shadow-sm border-l-4 hmy-border-root-red relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 bg-red-50 px-3 py-1 text-xs font-bold text-red-800 uppercase rounded-bl-lg border-b border-l border-red-100">
+                    Theory</div>
+                <h4 class="font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Mathematical Definition
+                </h4>
                 <p class="m-0 text-base">
                     In physical law, an overt act is handing over a classified document. In ideological warfare,
                     "intent" and "overt acts" are proven mathematically through the irrefutable consistency of a
@@ -299,10 +265,11 @@
                 </p>
             </div>
 
-            <div class="my-8 bg-gray-100 p-6 rounded-lg font-sans text-gray-700 italic border border-gray-200">
-                <h4 class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3">The Simple
-                    Translation</h4>
-                <p class="m-0 text-base leading-relaxed mb-4">
+            <div class="my-8 bg-gray-50 p-6 rounded-lg text-gray-700 italic border border-gray-200">
+                <h4
+                    class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3 border-b border-gray-200 pb-2 inline-block">
+                    The Simple Translation</h4>
+                <p class="m-0 text-base leading-relaxed mb-4 mt-2">
                     The Founders made treason hard to prove so that politicians couldn't just lock up their rivals for
                     disagreeing with them. We can't just call someone a traitor because they are a bad leader or enact
                     bad policies.
@@ -319,8 +286,8 @@
 
             <!-- Section 4 -->
             <h2
-                class="font-sans text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b pb-2">
-                4. The Final Proof <span class="text-gray-400 font-light mx-2">|</span> The HEM Metric</h2>
+                class="text-2xl font-bold hmy-text-root-red uppercase tracking-wider mt-16 mb-6 border-b border-gray-200 pb-2">
+                4. The Final Proof <span class="text-gray-300 font-light mx-2">|</span> The HEM Metric</h2>
 
             <p>
                 If the definitions above outline the <em>mechanics</em> of ideological treason, we must utilize the
@@ -329,9 +296,12 @@
                 single, quantifiable cost (e.g., lost GDP-equivalents or Value of a Statistical Life).
             </p>
 
-            <div class="my-8 bg-white p-6 rounded-lg shadow-sm border-l-4 hmy-border-root-red">
-                <h4 class="font-sans font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Theoretical
-                    Definition</h4>
+            <div class="my-8 bg-white p-8 rounded-xl shadow-sm border-l-4 hmy-border-root-red relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 bg-red-50 px-3 py-1 text-xs font-bold text-red-800 uppercase rounded-bl-lg border-b border-l border-red-100">
+                    Theory</div>
+                <h4 class="font-bold text-gray-900 uppercase tracking-wide text-sm mb-3">The Mathematical Definition
+                </h4>
                 <p class="m-0 text-base">
                     By deliberately attacking the structural pillars of American democracy—forcing a catastrophic
                     decline in Social Cohesion and Institutional Trust—the Ideological Traitor induces a state of civic
@@ -348,10 +318,11 @@
                 </p>
             </div>
 
-            <div class="my-8 bg-gray-100 p-6 rounded-lg font-sans text-gray-700 italic border border-gray-200">
-                <h4 class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3">The Simple
-                    Translation</h4>
-                <p class="m-0 text-base leading-relaxed mb-4">
+            <div class="my-8 bg-gray-50 p-6 rounded-lg text-gray-700 italic border border-gray-200">
+                <h4
+                    class="font-bold text-gray-900 not-italic uppercase tracking-wide text-sm mb-3 border-b border-gray-200 pb-2 inline-block">
+                    The Simple Translation</h4>
+                <p class="m-0 text-base leading-relaxed mb-4 mt-2">
                     If an American citizen gave a foreign enemy a $3 Trillion missile system to attack the U.S.,
                     everyone would agree it is treason. But what if a leader causes $3 Trillion worth of damage to the
                     economy, public health, and national security by destroying public trust and plunging the country
@@ -364,22 +335,13 @@
                 </p>
             </div>
 
-            <div class="mt-16 text-center">
-                <a href="Trump_American_Kanon_Final_Score.html"
-                    class="inline-block bg-red-800 text-white px-8 py-4 rounded-md font-sans font-bold hover:bg-red-900 transition-colors duration-200 shadow-md transform hover:-translate-y-1">
-                    View the Mathematical Proof (Final Scorecard)
-                </a>
-            </div>
-
         </article>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 border-t border-gray-200 py-8 mt-12 w-full">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 font-sans text-sm">
-            <p>Alethekanon American Kanon Audit</p>
-            <p class="mt-2 text-xs text-gray-400 uppercase tracking-widest">Geometry of Definition; Judgement of Days
-            </p>
+    <footer class="bg-gray-900 text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center">
+            <h4 class="text-xl font-bold tracking-widest text-gray-300 mb-2">ALETHEKANON</h4>
+            <p class="text-gray-500 text-sm">Geometry of Definition; Judgement of Days</p>
         </div>
     </footer>
 
