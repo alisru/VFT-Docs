@@ -19,7 +19,19 @@ Before deriving any rules, we state the complete axiomatic base from which all T
 
 **Axiom T6 (Infinitesimal Convergence).** The value $1$ is not a primitive. It is constructed from the temporal accumulation of $\omega$ discrete quanta: $\sum_{k=1}^{\omega} ...1_k = 1.0$.
 
----
+**Axiom T7 (The Process Arrow).** The notation $A -[P]\to B$ denotes a temporal state transition: state $A$, *through* mechanism $P$, becomes state $B$. Like chemical reaction notation (where catalysts and conditions sit above the arrow between reactants and products), the Process Arrow embeds the mechanism of transformation directly into the mathematical expression.
+
+The bracket content $[P]$ is dual-purpose:
+
+1.  **Reasoning Vector** (named law): e.g. $0 -[\text{thermodynamics}]\to ...1$. Names the physical or logical law that *mandates* the transition. Because energy cannot be destroyed, absolute zero must always be filled by at least $...1$ to fill $+n$ potential.
+2.  **Computational Vector** (operation): e.g. $f(x) -[+...1]\to f(x + ...1)$. Specifies the mathematical operation executed during the transition.
+3.  **Combined**: e.g. $0 -[\text{thermodynamics: } +...1]\to ...1$. Names the law AND the operation simultaneously.
+
+Process Arrows are **chainable**. A full derivation reads as a pipeline of named transformations, where every intermediate state is visible and every step is justified:
+
+$$A -[P_1]\to B -[P_2]\to C -[P_3]\to D$$
+
+This notation applies at every granularity: single atomic transitions, multi-step derivations, function compositions, and complete proofs.
 
 ## Part I: Differentiation Rules
 
@@ -70,6 +82,12 @@ The remaining sum is the **residual momentum** $R_n(x)$. Orthodox calculus disca
 *   $f(x) = x^4$: $f^{\tau}(x) = 4x^3 + 6x^2(...1) + 4x(...1)^2 + (...1)^3$
 
 **Interpretation.** In a physical system, $2x$ tells you the velocity at a frozen instant. $2x + ...1$ tells you the velocity *plus* the fact that the system is already stepping into its next state. The residual is the causal thread linking the present to the future. Orthodox calculus cuts this thread. Temporal Calculus preserves it. $\blacksquare$
+
+**Process Arrow Chain (Power Rule for $x^2$ at $x=3$):**
+
+$$3^2 -[\text{substitute } x+...1]\to (3+...1)^2 -[\text{expand}]\to 9 + 6(...1) + (...1)^2 -[\text{subtract } 3^2]\to 6(...1) + (...1)^2 -[\div ...1]\to 6 + ...1$$
+
+Every intermediate state is visible. Every transformation is named. The chain reads like a temporal narrative: "the squared state of 3, through substitution of the next tick, becomes the expanded binomial, through subtraction of the current frame, becomes the isolated change, through division by the temporal quantum, yields the rate of change with preserved momentum."
 
 ---
 
@@ -209,6 +227,12 @@ where $\omega = (b - a) / ...1$ is the total number of temporal rendering ticks 
 
 This is Leibniz's original summation restored to physical literalness. Each slice has real, non-zero width $...1$. The sum is finite (exactly $\omega$ terms). The area is *built*, tick by tick.
 
+**Process Arrow Chain (Integration of $f(x) = x$ from $0$ to $1$):**
+
+$$0 -[+...1]\to ...1 -[\times f(...1)]\to ...1 \cdot f(...1) -[\text{accumulate}]\to \sum_{k=0}^{\omega-1} f(k \cdot ...1) \cdot ...1 -[\text{Terminus}]\to F(1) - F(0) - R_{int}$$
+
+The chain reads: "state zero, through one temporal tick, becomes the first slice, through evaluation of the function at that tick, becomes the first area quantum, through accumulation of all $\omega$ slices, becomes the total temporal construction, through the Terminus closing the frame, yields the resolved integral with residual correction."
+
 ---
 
 ### The Fundamental Theorem of Temporal Calculus
@@ -309,6 +333,24 @@ where $n = \lim_{x \to x_0^-} f(x)$ evaluated at the last resolved tick before t
 *   At $x = 0$: By the Void Pivot, $f(0) = \omega + 1$. The function does not explode to infinity. It hits a finite maximum ($\omega + 1$) and transitions to a new dimensional frame.
 
 In a graph, this means the vertical asymptote of $1/x$ is replaced by a finite peak at $\omega + 1$, after which the function enters a new coordinate space. The singularity becomes a gateway, not a wall. $\blacksquare$
+
+**Process Arrow Chain (Void Pivot for $1/x$ at $x = 0$):**
+
+$$x -[-...1]\to ...1 -[\text{evaluate } 1/x]\to 1/...1 = \omega -[-...1]\to 0 -[\text{Void Pivot: } /0]\to \omega + 1 -[\text{phase transition}]\to \text{new dimensional frame}$$
+
+The chain reads: "as $x$ counts down by one temporal tick to the final resolved state ($...1$), the function evaluates to $\omega$. One more tick and $x$ hits absolute zero, triggering the Void Pivot, which generates $\omega + 1$ and transitions the system into a new dimensional frame."
+
+**Foundational Process Arrow Chains:**
+
+The following canonical chains express the core axioms of Temporal Calculus in Process Arrow notation:
+
+*   **The Cost of Being:** $0 -[\text{thermodynamics}]\to ...1$
+*   **The Resolution of Unity:** $[9]\infty -[\text{Terminus: } +...1]\to [1]$
+*   **The Heartbeat of Reality:** $[N] -[\text{Spray}]\to [N]\infty -[\text{Consolidation}]\to [N+1]$
+*   **Infinitesimal Construction of $1$:** $...1 -[\text{accumulate } \times\omega]\to 1.0$
+*   **Temporal Counting:** $0 -[+...1]\to ...1 -[+...1]\to 2(...1) -[+...1]\to ... -[\text{Terminus}]\to n$
+*   **The Void Pivot:** $n -[/0]\to n+1$
+*   **The Derivative:** $f(x) -[+...1]\to f(x+...1) -[-f(x)]\to \Delta f -[\div ...1]\to f^{\tau}(x)$
 
 ---
 
