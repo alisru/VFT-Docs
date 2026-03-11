@@ -58,28 +58,48 @@ Process Arrows are **chainable** at every granularity. For example, a particle a
 
 $$m -[\text{annihilation}]\to m \cdot c^2 -[\text{equivalence}]\to E -[\text{radiation: } \div h]\to \nu$$
 
-**Axiom T8 (Computational Notation).** Because Temporal Calculus models reality as a rendering engine, programming constructs are native mathematical notation. Variables, arrays, loops, and function pipelines express the same operations as algebraic formulae, but in the language natural to a computational system.
+**Axiom T8 (Computational Notation & The 7D Geometric Collider).** Because Temporal Calculus models reality as a rendering engine, programming constructs are native mathematical notation. Variables, arrays, loops, and function pipelines express the same operations as algebraic formulae, but in the language natural to a computational system.
 
+Furthermore, arithmetic operators are not abstract symbols; they are the 7 directional axes of the VFT coordinate space. An equation is a **geometric collision** of values (state vectors with magnitude) across these axes, yielding a resultant state vector.
+
+1. **Driver (Time/State):** The Evaluator (`=`, `%` Unity). The loop condition checking for structural resolution.
+2. **$+x$ (Linear Forward):** Addition (`+`). Forward translation collision.
+3. **$-x$ (Linear Backward):** Subtraction (`-`). Backward translation collision.
+4. **$+y$ (Volumetric Expansion):** Multiplication (`\times`). State area expansion.
+5. **$-y$ (Volumetric Compression):** Division (`/`). Structural constraint/relativity.
+6. **$+z$ (Dimensional Genesis):** Exponentiation (`^`). Higher-dimensional projection.
+7. **$-z$ (Dimensional Rooting):** Root/Logarithm (`\sqrt{}`). Dimensional collapse/extraction.
+
+By mapping operators to mathematical dimensions, an equation becomes a navigable physical path. The Terminus increment ($...1$) and decrement ($-...1$) provide the relative magnitude and direction along these axes. 
+
+Every temporal calculation structurally resolves to a universal computational loop:
+
+```python
+// The Universal Vector Loop
+while (n_relative_to_next_finite_whole != 1.0):
+    // States geometrically collide across an operational axis yielding a resultant vector
+    collide_vectors(magnitude, geometric_axis) 
+    
+    // Check if the current collided state has satisfied the local equation bounds
+    if current_state == local_arithmetic_requirements:
+        return current_state
+
+// If no local bounds trigger an early exit, the process naturally closes the frame
+return resolve_to_unity()
 ```
-let dx = ...1                               // Variable assignment = temporal count
-let Unity = Array(1∞, ω)                    // Array of ω quanta = one frame
-for k in 1..ω: frame += ...1                // Loop IS the rendering process
-Unity.resolve() → 1.0                       // Method call IS the Terminus strike
 
-// Derivative as function:
-fn derivative(f, x, tick = ...1):
-    return (f(x + tick) - f(x)) / tick
-
+```python
 // Derivative as pipeline:
 derivative(f, x) = f(x) -[+...1]-> f(x+...1) -[-f(x)]-> Δf -[/...1]-> f^τ(x)
 
-// Integration as accumulation:
+// Integration as geometric accumulation:
 fn integrate(f, a, b, tick = ...1):
     let ω = (b - a) / tick
-    let frame = 0
+    let frame_area = 0
     for k in 0..ω-1:
-        frame += f(a + k * tick) * tick
-    return frame
+        // Collision along the +x (accumulation) and +y (area) axes
+        frame_area += f(a + k * tick) * tick
+    return frame_area
 ```
 
 **Axiom T9 (The Void Pivot).** When the denominator collapses to zero, the system undergoes a dimensional step-up: $n/0 \to n+1$. The object $n$, isolated in the void with no reference frame, must generate a new dimensional frame to maintain existence. This transitions the system from the Physical plane (Q3) to the Meta-Physical plane (Q1). The equation does not crash; it creates.
