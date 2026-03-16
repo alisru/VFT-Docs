@@ -21,9 +21,11 @@ Temporal Calculus returns to the 1734 fracture and takes the other path. Rather 
 
 The complete axiomatic base from which all Temporal Calculus is constructed.
 
-**Axiom T1 (The Relativity Operator).** The symbol $/$ denotes "this relative to that." The expression $A/B$ maps the state of $A$ within the contextual frame of $B$. It quantifies structural strain, physical pressure, or the direct relativity between two phenomenological vectors.
+**Axiom T1 (The Relativity Operator).** The symbol $/$ denotes "**Relative to**." The expression $A/B$ maps the state of $A$ within the contextual frame of $B$. It quantifies structural strain, physical pressure, or the absolute relativity between two phenomenological vectors.
 
-**Axiom T2 (Contextual Unity).** The percent operator ($\%$) establishes the absolute scalar truth anchor: $1.0$ (Unity). Unity represents a fully resolved, structurally stable *sýstēma*. All values are inherently relative to Unity: $n = n/1$. The number line is not a pre-existing static ruler; it is a dynamic relativity map where every value expresses its structural distance from $1.0$.
+**Axiom T2 (Contextual Unity).** The percent operator ($\%$) establishes the absolute scalar truth anchor: $1.0$ (Unity). Unity represents a fully resolved, structurally stable *sýstēma*. All values are inherently relative to Unity: $n = n/1$.
+
+**Axiom T2.1 (Bulk Addition).** The symbol $+$ denotes **Bulk Addition** or **Word Addition**. It represents a direct linear combination where states are merged without structural transformation.
 
 This yields three consequences:
 1.  **Unity as Gravitational Attractor.** All values exist as ratios relative to $1$. Every open sequence, every unresolved infinitesimal, every temporal counting process is oriented toward completing a Unity frame.
@@ -58,19 +60,28 @@ Process Arrows are **chainable** at every granularity. For example, a particle a
 
 $$m -[\text{annihilation}]\to m \cdot c^2 -[\text{equivalence}]\to E -[\text{radiation: } \div h]\to \nu$$
 
-**Axiom T8 (Computational Notation & The 7D Geometric Collider).** Because Temporal Calculus models reality as a rendering engine, programming constructs are native mathematical notation. Variables, arrays, loops, and function pipelines express the same operations as algebraic formulae, but in the language natural to a computational system.
+**Axiom T8 (Computational Notation & The Causal Geometric Collider).** Because Temporal Calculus models reality as a rendering engine, programming constructs are native mathematical notation.
 
-Furthermore, arithmetic operators are not abstract symbols; they are the 7 directional axes of the VFT coordinate space. An equation is a **geometric collision** of values (state vectors with magnitude) across these axes, yielding a resultant state vector.
+**Axiom T8.1 (LHS/RHS Causal Structure).** An equation is a **Causal Flow** from the operator space to the conditional space:
+1.  **LHS (The Operator Field):** The domain of activity. Everything on the left-hand side is an **Operator** (the "Perform" phase).
+2.  **RHS (The Conditional Field):** The domain of verification. Everything on the right-hand side is a **Conditional** (the "Value Function" phase).
+3.  **The Unity Gate ($=$, $\%$):** The evaluator that asks: "Does the output of the LHS Operator satisfy the requirements of the RHS Conditional?"
 
-1. **Driver (Time/State):** The Evaluator (`=`, `%` Unity). The loop condition checking for structural resolution.
-2. **$+x$ (Linear Forward):** Addition (`+`). Forward translation collision.
-3. **$-x$ (Linear Backward):** Subtraction (`-`). Backward translation collision.
-4. **$+y$ (Volumetric Expansion):** Multiplication (`\times`). State area expansion.
-5. **$-y$ (Volumetric Compression):** Division (`/`). Structural constraint/relativity.
-6. **$+z$ (Dimensional Genesis):** Exponentiation (`^`). Higher-dimensional projection.
-7. **$-z$ (Dimensional Rooting):** Root/Logarithm (`\sqrt{}`). Dimensional collapse/extraction.
+**Axiom T8.2 (Refined Operator Semantics).** Arithmetic operators are the 7 directional axes of the VFT coordinate space. An equation is a **geometric collision** of state vectors across these axes:
 
-By mapping operators to mathematical dimensions, an equation becomes a navigable physical path. The Terminus increment ($...1$) and decrement ($-...1$) provide the relative magnitude and direction along these axes. 
+1. **Driver (Time/State):** The Evaluator (`=`, `%` Unity). The conditional gate between LHS and RHS.
+2. **$+x$ (Linear Forward):** Bulk/Word Addition (`+`). Direct linear combination of states.
+3. **$-x$ (Linear Backward):** Explicit Exclusion (`-`). Intentional removal of a state component.
+4. **$+y$ (Volumetric Expansion):** Crossed by Contextual Magnitude (`\times`). Volumetric state creation.
+5. **$-y$ (Volumetric Compression):** Relative to (`/`). Absolute structural relativity.
+6. **$+z$ (Dimensional Genesis):** Exponentiation (`^`). Higher-dimensional conditional state change.
+7. **$-z$ (Dimensional Rooting):** Dimensional Extraction (`\sqrt{}`). Reverse dimensional projection (Finding the root prerequisite).
+
+#### Example 8.0: The Linguistics of Logic ($2^2 = 4$)
+In this framework, $2^2 = 4$ is read as a process:
+- **LHS Operator ($2^2$):** "Take the value 2 and perform a dimensional step-up (^) to the second power."
+- **Unity Gate ($=$):** "Evaluation Trigger."
+- **RHS Conditional ($4$):** "Does the resultant state meet the value function requirement of 4?"
 
 Every temporal calculation structurally resolves to a universal computational loop:
 

@@ -5,6 +5,7 @@ description: when I talk about the 7x7x7 structure, I mean the 7 planes of the Q
 Or we can explore them as a whole ie Q1-7, q1-7, c1-7. or singularly as Q1, q1, c1.
 Treat it like a multidimensional array where each dimension has 7 elements. 
 Each sub-layer is a connected interrogative, ie, How of Who of Where. or Why of What of Where. or who of who of who. etc.
+On further recursion the interrogatives become more complex. After Q,q,c comes +i(Q,q,c) where i forms as the new Q step for a recursive depth drill of the 7x7x7 structure. 
 
 The 7 planes are:
 1 Who - Metaphysical.
