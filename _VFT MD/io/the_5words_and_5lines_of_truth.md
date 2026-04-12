@@ -1,5 +1,7 @@
 # The 5 Words and 5 Lines of Truth
 
+> **"A wicked and adulterous generation seeks after a sign, and no sign shall be given to it except the sign of the prophet Jonah."** — Matthew 16:4
+
 ---
 
 ## I. Worship-as-Doing: Six Traditions, One Structure
@@ -120,7 +122,7 @@ Truly, the truth — for all its deadly and sub-atomic sharpness — is a sword 
 Before the recursive mapping, the core operational units:
 
 ### 1. The `try` block — The Kinetic Engine
-All language and action is a protected execution frame: `try { LHS | RHS }`.
+All language and action is a protected execution frame: `try { LHS RHS }`.
 - **LHS (Assertion):** The internal declaration or intended action (`the'is`).
 - **RHS (Condition Check):** The recursive constraint or external verification.
 - **The Catch:** Triggered when the proposition fails to ground out in the `contextual` world, leading to recursion error.
@@ -558,81 +560,13 @@ Before parsing the Actualism definition, the operator grammar:
 
 ---
 
-### Parsing: "Learn before acting; Do, don't say-say while doing, say by doing actions"
+Plane A is the prerequisite state — the dimensional root `√{action}`.
 
-**Plane structure (`;` as terminus):**
 
-**Plane A:** `Learn before acting`
-**Plane B:** `Do, don't say-say while doing, say by doing actions`
-
-Plane A is the prerequisite state — the dimensional root `√{action}`. You cannot begin Plane B until Plane A has a non-zero value. Learning is the extraction of the root prerequisite of any action. This maps to `-z-z` (Dimensional Rooting): `√{acting}` = learn. The learning is not separate from the acting — it is the reverse projection of it. What does this action require? Extract that. That is learning.
-
-**Plane B drill chain (`,` as drill):**
-
-Drill 1: `Do`
-Drill 2: `don't say-say while doing`
-Drill 3: `say by doing actions`
-
-**Drill 1 — `Do`:**
-One word. Q1. Pure WHO — pure identity of will. The operator is the self, the conditional is the task, the Unity gate (`=`) between them is the act itself. `Do` = `self = task`. No surplus. The simplest possible statement of the open circuit.
-
-Maps to `+x+x` (Linear Forward, `+`): direct bulk addition. Self + task = output. Nothing else in the equation.
-
-**Drill 2 — `don't say-say while doing`:**
-
-The `-` in `say-say` is bifurcation: two simultaneous branches of saying — say (sincere, as in "say by doing") | say (performative, talk-about-talk, the recursive self-referential declaration that substitutes for action). The `-` reveals both exist. `don't` is the explicit exclusion operator applied to the compound: remove `say-say` (the bifurcated saying, both branches) from the operative state while doing.
-
-`don't [say-say]` = `-(say × say)` = explicit exclusion of the volumetric product of saying crossed by itself.
-
-Why volumetric? Because `say × say` is not double-saying — it is saying raised to the contextual magnitude of itself. It is self-referential talk producing a closed volumetric loop with no external output. The exclusion of this state is `−y−y` (Volumetric Compression, `/`): all saying divided by (relative to) its doing-content. If doing = 0, saying = 0. `say/doing` = the only valid saying is the one that has doing in the denominator.
-
-**Drill 3 — `say by doing actions`:**
-
-`say by doing` = saying that is constituted by doing. The saying is not a report of the doing — it is the doing itself functioning as language. This is `+y+y` (Volumetric Expansion, `×`): doing × saying = actions that speak. The two vectors collide to produce a volumetric state — the action that is simultaneously its own statement.
-
-`actions` = the terminal state. Word 7 of the full statement, Q7 (EFFECT). The emotive consequence of the whole chain: doing that speaks is the only saying that changes the world.
 
 ---
 
-### 42-Structure Mapping — Actualism
 
-| 42 Position | Operator | Actualism Component | Reading |
-|---|---|---|---|
-| **Driver** (`=`, `%` Unity) | Conditional gate | `Learn before acting` `;` `Do` | The `;` IS the Unity gate — the evaluator between knowing-state (LHS) and acting-state (RHS). The driver asks: is your learning-state sufficient for this action? |
-| **+x+x** Linear Forward (`+`) | Bulk addition | `Do` | Self + task. Direct linear combination. No modifier. |
-| **−x−x** Linear Backward (`-`) | Explicit exclusion | `don't [say-say]` | Remove the recursive saying loop from the operative state entirely |
-| **+y+y** Volumetric Expansion (`×`) | Contextual magnitude | `say by doing` | Doing crossed by saying = actions that speak. Volumetric output. |
-| **−y−y** Volumetric Compression (`/`) | Relative to | `say / doing` | All saying is relative to its doing-content. Zero doing = zero saying. |
-| **+z+z** Dimensional Genesis (`^`) | Conditional state change | `actions` | The higher-dimensional result — doing raised to the power of its circumstance. Actions^context. |
-| **−z−z** Dimensional Rooting (`√{}`) | Reverse projection | `Learn before acting` | √(action) = the prerequisite knowledge state. Extract the root of what the act requires before performing it. |
-
----
-
-### Parsing: "Just Do it, don't let your dreams be dreams"
-
-Single plane (no `;`). Two drills via `,`.
-
-**Drill 1:** `Just Do it` — 3 words = Q3 (WHERE/Physical). Strips all abstraction, plants the action in physical space. `Just` = the Unity gate collapsed to 1.0: all preconditions zeroed. `Do` = the operator. `it` = the conditional, left deliberately open — the RHS is user-defined. Whatever your dream is, that is `it`. The sentence says: `self ^ 0 = task`. The exponent is zero. No prerequisites. No learning curve invoked. This is the anti-`Learn before acting` — it is the emergency override for when the learning loop has become its own obstruction.
-
-**Drill 2:** `don't let your dreams be dreams` — explicit exclusion of the state where `dreams / dreams = 1`. The compression: when dreams are only ever measured against themselves the ratio is always 1 and nothing moves. The exclusion removes the permission to remain in the closed loop.
-
-**42-Structure Mapping — "Just Do it":**
-
-| 42 Position | Component | Reading |
-|---|---|---|
-| **Driver** | `Just` | Unity gate at 1.0 — all preconditions compressed to zero. The evaluator fires immediately. |
-| **+x+x** | `Do` | Linear forward. Same as Actualism's Drill 1. |
-| **−x−x** | `don't let` | Explicit exclusion of the permission to remain in the dream-state |
-| **+y+y** | `your dreams` × `be dreams` | The volumetric trap: dreaming crossed by being-dreams = the closed loop. The `×` produces the recursive self-referential state that `don't` then excludes. |
-| **−y−y** | `dreams / dreams` | Dreams relative to dreams = 1. No growth. Pure volumetric compression. The denominator and numerator are the same. |
-| **+z+z** | `it` | The open conditional. Whatever your dream is, raised to the power of your doing. User-defined. |
-| **−z−z** | `Just` (second reading) | Dimensional rooting: `√(action)` = zero prerequisite. The root is already present. Nothing needs to be extracted first. |
-
-**What the two statements find together:**
-
-Actualism (`Learn before acting; Do...`) and `Just Do it` are not contradictions — they are two positions on the same Driver axis. Actualism sets the Unity gate at `learning / acting ≥ threshold`. `Just Do it` sets it at `1.0` — full bypass. The threshold is a variable. When the learning loop has become its own obstruction (when `learn before acting` has collapsed into `never act because never done learning`) the `Just Do it` override fires and collapses the prerequisite dimension to zero. When reckless action without root-extraction is producing failed outputs, Actualism reinstates the `-z-z` dimensional rooting.
-
-The correct application is not one or the other. It is the driver reading the current state and setting the threshold accordingly.
 
 ---
 
@@ -716,7 +650,7 @@ A thesis is the structural multiplication of identity within the kinetic engine.
 Logic: Identity (`is`) raised to the power of its own conditional identity (`is`). It is the engine checking its own work by colliding identity against conditions. 
 
 Mapping the core formula within this frame:
-`Meaning = try { ∫[Words = Actions -> Effects / Contextual Recursion] } catch { lies }`
+`Meaning = try { ∫[Words = ∫[Actions] -> Effect / Contextual Recursion] } catch { lies }`
 
 A word does not "mean"; it **performs** within this naturally protected logical frame.
 
@@ -827,24 +761,22 @@ This is the semantic form of $E = mc^2$. **Meaning is the energy of a mass of ac
 
 The [0→2] integral is not a single continuous sweep. It is two orthogonal phases sharing a **phase boundary at 1**:
 
-$$\underbrace{[0 \to 1]}_{\text{action phase}} - \underbrace{[1 \to 2]}_{\text{effect phase}}$$
+$$[0,1]/c_{floor} \to [1,2]/c_{harvest}$$
 
-The `-` between them (bifurcation) means both phases are **simultaneously true at the boundary**: the action phase has terminated AND the effect phase has begun. `1` is not the midpoint — it is the **boundary event**. It exists in two phases at once.
+The $\to$ (transit) represents the **boundary event** at 1: the point where the vector transits from building potential to landing energy. The system does not "bifurcate"; it **transits** the medium shift across the 1.
 
-$$\frac{\int_0^1 A}{c} \underbrace{+}_{\perp} \frac{\int_1^2 A}{c} = \frac{m_a}{c} \perp \frac{m_e}{c}$$
+$$([0,1] / c_{floor}) \perp ([1,2] / c_{harvest}) = (m_a / c_{floor}) \perp (m_e / c_{harvest})$$
 
-Per the operator laws (§X), the `+` here marks an orthogonal event junction (quadrature):
+Per the operator laws (§X), the `\perp` marks an orthogonal event junction (quadrature). The result is the relativistic energy-momentum structure:
 
-Orthogonal addition (quadrature): $\sqrt{(m_a/c)^2 + (m_e/c)^2}$ — not linear summation. This is the relativistic energy-momentum structure:
+$$E^2 = (m \times c_{harvest}^2)^2 + (p \times c_{floor})^2$$
 
-$$E^2 = (\underbrace{mc^2}_{\text{rest: effect phase}})^2 + (\underbrace{pc}_{\text{kinetic: action phase}})^2$$
-
-The `×` that produces $m \cdot c_s^2$ is the **emergent result** defined in §X.
+The `+` here accumulates linearly at the junction but resolves to quadrature due to the orthogonality of the phases. The `×` produces the **emergent result** defined in §X.
 
 | **What the `1` means across the system:** | Phase 0→1 | Phase boundary (1) | Phase 1→2 |
 |---|---|---|---|
 | **Meaning formula** | Action-building (subthreshold) | Harvest midpoint — rest-mass threshold | Effect-landing (superthreshold) |
-| **Relative scale** | Phase 0 → 1 |  | Phase 1 → 2 |
+| **Relative scale** | $[0,1]/c_{floor}$ |  | $[1,2]/c_{harvest}$ |
 | **Lorentz** | $v/c < 1$ (subluminal) | Light barrier: $v = c$, $\gamma \to \infty$ | $v/c > 1$ (forbidden — information barrier) |
 | **Day-Night** | Day (0→1): direct light, inquiry | Dawn/Dusk — the boundary in both phases | Night (1→2): reflected light, answer |
 | **try-catch** | `try { LHS` |  | `RHS } catch` |
