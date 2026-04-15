@@ -168,15 +168,14 @@
   // Record this chat into the project index
   async function registerChatInProject(items) {
     const proj = getProjectId();
-    if (!proj) return;
-    const indexKey = `proj_${proj}_chat_index`;
+    const indexKey = proj ? `proj_${proj}_chat_index` : 'cas_standalone_chat_index';
     const chatId = getChatId();
     const chatName = document.querySelector('[data-testid="chat-title-button"]')?.textContent?.trim() || chatId;
     const data = await new Promise(r => chrome.storage.local.get(indexKey, d => r(d[indexKey] || {})));
     data[chatId] = {
       name: chatName,
-      projectId: proj,
-      projectName: getProjectName(),
+      projectId: proj || null,
+      projectName: proj ? getProjectName() : '(Standalone)',
       artifactCount: items.filter(i => i.source === 'generated').length,
       lastSeen: new Date().getHours().toString().padStart(2, '0') + ':' +
         new Date().getMinutes().toString().padStart(2, '0') + ' ' +
@@ -616,7 +615,6 @@
     // Trigger scan and first seen population
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        scanForFileList();
         renderChatSummaries();
         refreshSummariseBadge();
       });
@@ -791,9 +789,9 @@
       e.stopPropagation();
       const panel = document.getElementById('cas-flyout-options');
       if (panel) {
-        const isVisible = panel.style.display === 'flex';
-        panel.style.display = isVisible ? 'none' : 'flex';
-        document.getElementById('cas-flyout-toggle-options').style.color = isVisible ? '#888' : 'hsl(var(--cas-gold))';
+        const isVisible = panel.style.display !== 'none';
+        panel.style.display = isVisible ? 'none' : 'block';
+        document.getElementById('cas-flyout-toggle-options').style.color = isVisible ? '#888' : '#f0c040';
         document.getElementById('cas-flyout-toggle-options').style.background = isVisible ? 'rgba(255,255,255,0.03)' : 'rgba(255,255,255,0.08)';
         if (!isVisible) refreshFlyoutChatSelector();
       }
@@ -802,7 +800,7 @@
     document.addEventListener('click', (e) => {
       const panel = document.getElementById('cas-flyout-options');
       const toggle = document.getElementById('cas-flyout-toggle-options');
-      if (panel && panel.style.display === 'flex' && !panel.contains(e.target) && !toggle.contains(e.target)) {
+      if (panel && panel.style.display === 'block' && !panel.contains(e.target) && !toggle.contains(e.target)) {
         panel.style.display = 'none';
         toggle.style.color = '#888';
         toggle.style.background = 'rgba(255,255,255,0.03)';
@@ -824,17 +822,6 @@
       renderChatSummaries(e.target.value.toLowerCase());
     });
 
-    const buildFlyoutPrompt = () => {
-      const t = document.getElementById('cas-flyout-topic-lines')?.value || '2';
-      const a = document.getElementById('cas-flyout-aspect-lines')?.value || '1';
-      return `Identify the main topics discussed in this entire chat. ` +
-        `Focus on the human dialogue, decisions made, and conceptual evolution. ` +
-        `DO NOT provide technical summaries of the code or artifacts themselves (the sorter modal handles that). ` +
-        `Write exactly ${t} line(s) summarising each topic and exactly ${a} line(s) for each key aspect.\n\n` +
-        `Reply ONLY with a JSON object using this exact shape — no other text:\n` +
-        `{ "topics": [{ "name": "...", "summary": "...", "aspects": [{"name":"...","summary":"..."}] }] }`;
-    };
-
     document.getElementById('cas-flyout-sum-copy')?.addEventListener('click', () => {
       navigator.clipboard.writeText(buildFlyoutPrompt()).then(() => {
         const s = document.getElementById('cas-flyout-sum-status');
@@ -843,7 +830,7 @@
     });
 
     document.getElementById('cas-flyout-summarise')?.addEventListener('click', () => {
-      performChatSummarise(document.getElementById('cas-flyout-sum-status'), true);
+      performChatSummarise(document.getElementById('cas-flyout-sum-status'));
     });
 
     document.getElementById('cas-flyout-inject')?.addEventListener('click', async () => {
@@ -879,12 +866,15 @@
     if (!selector) return;
 
     const allData = await new Promise(r => chrome.storage.local.get(null, r));
-    const projectIndexKeys = Object.keys(allData).filter(k => k.startsWith('proj_') && k.endsWith('_chat_index'));
 
     selector.innerHTML = '<option value="">Select project summary...</option>';
 
-    if (projectIndexKeys.length === 0) {
-      selector.innerHTML = '<option value="">No recorded projects yet.</option>';
+    const projectIndexKeys = Object.keys(allData).filter(k => k.startsWith('proj_') && k.endsWith('_chat_index'));
+    const standaloneIndex  = allData['cas_standalone_chat_index'] || {};
+    const standaloneChats  = Object.entries(standaloneIndex);
+
+    if (projectIndexKeys.length === 0 && standaloneChats.length === 0) {
+      selector.innerHTML = '<option value="">No recorded chats yet.</option>';
       return;
     }
 
@@ -920,6 +910,29 @@
         selector.appendChild(optgroup);
       }
     });
+
+    // ── Standalone chats ────────────────────────────────────────────────
+    const standaloneWithSums = standaloneChats.filter(([chatId, meta]) => {
+      const sumKey = `chat_${chatId}_cas_chat_summary`;
+      return allData[sumKey]?.topics?.length > 0;
+    });
+    if (standaloneWithSums.length > 0) {
+      const optgroup = document.createElement('optgroup');
+      optgroup.label = '◈ Standalone';
+      optgroup.style.background = '#13161b';
+      optgroup.style.color = '#8899cc';
+      standaloneWithSums.sort((a, b) => (a[1].name||'').localeCompare(b[1].name||'')).forEach(([chatId, meta]) => {
+        const sumKey = `chat_${chatId}_cas_chat_summary`;
+        const opt = document.createElement('option');
+        opt.value = chatId;
+        opt.dataset.sumKey = sumKey;
+        opt.dataset.chatName = meta.name || chatId;
+        opt.textContent = (meta.name || chatId).slice(0, 50);
+        if (chatId === activeFlyoutChatId) opt.selected = true;
+        optgroup.appendChild(opt);
+      });
+      selector.appendChild(optgroup);
+    }
 
     selector.onchange = (e) => {
       const opt = selector.options[selector.selectedIndex];
@@ -1345,28 +1358,7 @@
 
     // ── Chat Summary handlers ─────────────────────────────────────────────
 
-    function buildChatSummaryPrompt() {
-      const topicLines = document.getElementById('cas-chat-topic-lines')?.value || '1';
-      const aspectLines = document.getElementById('cas-chat-aspect-lines')?.value || '1';
-      return `Analyse this conversation and identify all distinct topics discussed.\n` +
-        `Focus on the human dialogue, decisions made, and conceptual evolution. ` +
-        `DO NOT provide technical summaries of the code or artifacts themselves. ` +
-        `For each topic write exactly ${topicLines} line(s) summarising it.\n` +
-        `For each distinct aspect or subtopic within each topic write exactly ${aspectLines} line(s).\n\n` +
-        `Reply ONLY with a JSON object in this exact shape — no other text:\n` +
-        `{\n  "topics": [\n    {\n      "name": "Topic name",\n      "summary": "Summary of topic.",\n` +
-        `      "aspects": [\n        { "name": "Aspect name", "summary": "Summary of aspect." }\n      ]\n    }\n  ]\n}`;
-    }
-
-    function fillInput(text) {
-      const input = document.querySelector('[contenteditable="true"][data-testid="composer-input"], .ProseMirror[contenteditable="true"]')
-        || document.querySelector('[contenteditable="true"]');
-      if (!input) return false;
-      input.focus();
-      document.execCommand('selectAll', false, null);
-      document.execCommand('insertText', false, text);
-      return true;
-    }
+    function buildChatSummaryPrompt() { return buildFlyoutPrompt(); }
 
     document.getElementById('cas-chat-sum-copy')?.addEventListener('click', () => {
       navigator.clipboard.writeText(buildChatSummaryPrompt()).then(() => {
@@ -1572,9 +1564,35 @@
     }
   }
 
-  function performChatSummarise(statusTarget, isFlyout = false) {
-    const prompt = isFlyout ? buildFlyoutPrompt() : buildChatSummaryPrompt();
-    const filled = fillInput(prompt);
+  function fillInput(text) {
+    const input = document.querySelector('[contenteditable="true"][data-testid="composer-input"], .ProseMirror[contenteditable="true"]')
+      || document.querySelector('[contenteditable="true"]');
+    if (!input) return false;
+    input.focus();
+    document.execCommand('selectAll', false, null);
+    document.execCommand('insertText', false, text);
+    return true;
+  }
+
+  function buildFlyoutPrompt() {
+    const t = document.getElementById('cas-flyout-topic-lines')?.value
+           || document.getElementById('cas-chat-topic-lines')?.value
+           || '2';
+    const a = document.getElementById('cas-flyout-aspect-lines')?.value
+           || document.getElementById('cas-chat-aspect-lines')?.value
+           || '1';
+    return `Analyse this conversation and identify all distinct topics discussed.\n` +
+      `Focus on the human dialogue, decisions made, and conceptual evolution. ` +
+      `DO NOT provide technical summaries of the code or artifacts themselves. ` +
+      `For each topic write exactly ${t} line(s) summarising it.\n` +
+      `For each distinct aspect or subtopic within each topic write exactly ${a} line(s).\n\n` +
+      `Reply ONLY with a JSON object in this exact shape — no other text:\n` +
+      `{\n  "topics": [\n    {\n      "name": "Topic name",\n      "summary": "Summary of topic.",\n` +
+      `      "aspects": [\n        { "name": "Aspect name", "summary": "Summary of aspect." }\n      ]\n    }\n  ]\n}`;
+  }
+
+  function performChatSummarise(statusTarget) {
+    const filled = fillInput(buildFlyoutPrompt());
     if (statusTarget) {
       statusTarget.textContent = filled ? '✓ Chat Prompt injected — send in chat, then click ↓ INJECT' : '✗ Input not found';
       statusTarget.style.display = 'block';
@@ -1680,11 +1698,13 @@
     // To get all tracked projects, we pull ALL local storage keys
     const allData = await new Promise(r => chrome.storage.local.get(null, r));
 
-    // Find all indexKeys: proj_${proj}_chat_index
+    // Find all indexKeys: proj_${proj}_chat_index + standalone
     const projectIndexKeys = Object.keys(allData).filter(k => k.startsWith('proj_') && k.endsWith('_chat_index'));
+    const standaloneIndex = allData['cas_standalone_chat_index'] || {};
+    const standaloneChats = Object.entries(standaloneIndex);
 
-    if (projectIndexKeys.length === 0) {
-      el.innerHTML = '<div style="color:#999;font-size:10px;padding:8px">No recorded projects found yet.</div>';
+    if (projectIndexKeys.length === 0 && standaloneChats.length === 0) {
+      el.innerHTML = '<div style="color:#999;font-size:10px;padding:8px">No recorded chats found yet.</div>';
       return;
     }
 
@@ -1877,6 +1897,141 @@
       });
       el.appendChild(headerContainer);
     }
+
+    // ── Standalone chats (no project) ────────────────────────────────────
+    if (standaloneChats.length > 0) {
+      standaloneChats.sort((a, b) => (b[1].lastSeen || '').localeCompare(a[1].lastSeen || ''));
+
+      const headerContainer = document.createElement('div');
+      headerContainer.style.cssText = 'margin-top:6px;padding:4px 6px;background:rgba(100,150,255,0.04);border-radius:4px;border:1px solid rgba(100,150,255,0.12);';
+
+      const header = document.createElement('div');
+      header.style.cssText = 'color:#8899cc;font-size:9px;letter-spacing:0.1em;padding:4px 0 6px;font-weight:600';
+      header.textContent = `◈ Standalone — ${standaloneChats.length} chat${standaloneChats.length !== 1 ? 's' : ''}`;
+      headerContainer.appendChild(header);
+
+      standaloneChats.forEach(([chatId, meta]) => {
+        const wrapper = document.createElement('div');
+        wrapper.setAttribute('data-cas-chat-row', '1');
+
+        const chatSumKey  = `chat_${chatId}_cas_summaries`;
+        const chatSeenKey = `chat_${chatId}_cas_first_seen`;
+        const chatSumMapKey = `chat_${chatId}_cas_chat_summary`;
+
+        Promise.all([
+          new Promise(r => chrome.storage.local.get(chatSeenKey, d => r(d[chatSeenKey] || {}))),
+          new Promise(r => chrome.storage.local.get(chatSumKey,  d => r(d[chatSumKey]  || {}))),
+        ]).then(([seen, sums]) => {
+          const allNames = [...new Set([...Object.keys(seen), ...Object.keys(sums)])];
+          wrapper.setAttribute('data-cas-artifacts', allNames.join(' ').toLowerCase());
+        });
+
+        const row = document.createElement('div');
+        const selectMode = window._casProjectSelectMode?.() || false;
+        const selectedChatIds = window._casSelectedChatIds;
+        const hasChatSummary = !!(allData[chatSumMapKey]?.topics?.length > 0);
+
+        const indicator = selectMode
+          ? `<input type="checkbox" data-chat-id="${chatId}" style="cursor:pointer;accent-color:#f0c040;" ${selectedChatIds?.has(chatId) ? 'checked' : ''}>`
+          : (chatId === currentChat ? '<span style="color:#f0c040">●</span>' : '<span style="color:#444">○</span>');
+
+        const summaryBtnHtml = hasChatSummary
+          ? `<span class="cas-project-summary-btn" data-chat-id="${chatId}" data-chat-name="${(meta.name||chatId).replace(/"/g,'&quot;')}" data-sum-key="${chatSumMapKey}" style="color:#f0c040;font-size:12px;cursor:pointer;padding:0 4px;margin-right:2px;" title="View Chat Summary">⌬</span>`
+          : '';
+
+        const hasArtifacts = (meta.artifactCount || 0) > 0;
+        const expandIcon = hasArtifacts ? '<span class="cas-expand-icon" style="color:#aaa;font-size:9px;flex-shrink:0">▶</span>' : '';
+
+        row.style.cssText = [
+          'display:flex','align-items:center','gap:5px',
+          'padding:4px 6px','border-radius:3px','cursor:pointer',
+          'border:1px solid transparent',
+          chatId === currentChat ? 'border-color:#2a2e36;background:#13161b' : '',
+        ].join(';');
+
+        row.innerHTML = `
+          ${indicator}
+          ${summaryBtnHtml}
+          <span style="flex:1;font-size:10px;color:#f5f5f5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${meta.name||chatId}">${(meta.name||chatId)}</span>
+          <span style="font-size:9px;color:#aaa;flex-shrink:0">${meta.artifactCount || 0} ⬡</span>
+          <span style="font-size:9px;color:#888;flex-shrink:0">${meta.lastSeen || ''}</span>
+          <a href="https://claude.ai/chat/${chatId}" target="_blank" rel="noopener" title="Open in new tab" style="color:#fff;font-size:11px;flex-shrink:0;text-decoration:none;padding:0 2px;line-height:1" onclick="event.stopPropagation()">↗</a>
+          ${expandIcon}
+        `;
+
+        const summaryBtn = row.querySelector('.cas-project-summary-btn');
+        if (summaryBtn) {
+          summaryBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.casOpenFlyoutForChat(summaryBtn.getAttribute('data-chat-id'), summaryBtn.getAttribute('data-chat-name'), summaryBtn.getAttribute('data-sum-key'));
+          });
+        }
+
+        if (selectMode && selectedChatIds) {
+          row.querySelector('input[type="checkbox"]')?.addEventListener('change', (e) => {
+            e.stopPropagation();
+            if (e.target.checked) selectedChatIds.add(chatId); else selectedChatIds.delete(chatId);
+          });
+        }
+
+        const artifactList = document.createElement('div');
+        artifactList.style.cssText = 'display:none;padding:0 6px 4px 18px';
+        let expanded = false;
+
+        row.addEventListener('click', async (e) => {
+          if (selectMode) return;
+          if (e.target.tagName === 'A') return;
+          if (hasArtifacts) {
+            expanded = !expanded;
+            artifactList.style.display = expanded ? 'block' : 'none';
+            const icon = row.querySelector('.cas-expand-icon');
+            if (icon) icon.textContent = expanded ? '▼' : '▶';
+            if (expanded && artifactList.children.length === 0) {
+              const [sums, seen, chatSummaryData] = await Promise.all([
+                new Promise(r => chrome.storage.local.get(chatSumKey,  d => r(d[chatSumKey]  || {}))),
+                new Promise(r => chrome.storage.local.get(chatSeenKey, d => r(d[chatSeenKey] || {}))),
+                new Promise(r => chrome.storage.local.get(chatSumMapKey, d => r(d[chatSumMapKey] || null))),
+              ]);
+              if (chatSummaryData?.topics?.length > 0) {
+                const sumBlock = document.createElement('div');
+                sumBlock.style.cssText = 'margin-bottom:6px;padding:5px 6px;background:rgba(240,192,64,0.06);border-left:2px solid #f0c040;border-radius:0 3px 3px 0';
+                sumBlock.innerHTML = `<details open><summary class="cas-animated-arrow" style="font-size:8px;color:#f0c040;letter-spacing:0.06em;margin-bottom:3px;cursor:pointer;outline:none;user-select:none;">CHAT SUMMARY</summary><div style="margin-top:4px;">${chatSummaryData.topics.map(t=>`<details style="margin-bottom:4px"><summary class="cas-animated-arrow" style="font-size:9px;color:#e0e0e0;font-weight:600;cursor:pointer;outline:none;user-select:none;">${t.name}</summary><div style="font-size:8px;color:#aaa;line-height:1.4;padding-left:12px;margin-top:4px;">${t.summary}${(t.aspects||[]).map(a=>`<div style="margin-top:4px;"><span style="font-size:8px;color:#888">└ ${a.name}: </span><span style="font-size:8px;color:#999">${a.summary}</span></div>`).join('')}</div></details>`).join('')}</div></details>`;
+                artifactList.appendChild(sumBlock);
+              }
+              const allNames = [...new Set([...Object.keys(seen), ...Object.keys(sums)])];
+              if (allNames.length === 0) {
+                const empty = document.createElement('div');
+                empty.style.cssText = 'color:#999;font-size:9px;padding:3px 0';
+                empty.textContent = 'No artifact data — visit chat to record';
+                artifactList.appendChild(empty);
+              } else {
+                allNames.forEach(name => {
+                  const aRow = document.createElement('div');
+                  aRow.style.cssText = 'padding:3px 0;border-top:1px solid #1a1d22';
+                  const summary = sums[name] || '';
+                  const ts = seen[name] || '';
+                  aRow.innerHTML = `<div style="display:flex;gap:4px;align-items:center"><span style="color:${summary?'#6bcf6b':'#444'};font-size:9px">⬡</span><span style="font-size:9px;color:#f5f5f5;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${name}">${name.slice(0,30)}</span>${ts?`<span style="font-size:8px;color:#888">${ts}</span>`:''}</div>${summary?`<div style="font-size:8px;color:#aaa;padding-top:2px;line-height:1.3">${summary}</div>`:''}`;
+                  artifactList.appendChild(aRow);
+                });
+              }
+            }
+          } else {
+            history.pushState({}, '', `https://claude.ai/chat/${chatId}`);
+            window.dispatchEvent(new PopStateEvent('popstate', { state: {} }));
+          }
+        });
+
+        row.addEventListener('dblclick', () => {
+          history.pushState({}, '', `https://claude.ai/chat/${chatId}`);
+          window.dispatchEvent(new PopStateEvent('popstate', { state: {} }));
+        });
+
+        wrapper.appendChild(row);
+        wrapper.appendChild(artifactList);
+        headerContainer.appendChild(wrapper);
+      });
+      el.appendChild(headerContainer);
+    }
   }
 
   async function renderChatSummaries(searchQuery = '') {
@@ -1962,7 +2117,7 @@
       } else {
         if (flyoutRefocusBtn) flyoutRefocusBtn.style.display = 'none';
         // Hide action row if summary already exists for the current chat, as requested
-        if (flyoutActionRow) flyoutActionRow.style.display = summaryExists ? 'none' : 'flex';
+        if (flyoutActionRow) flyoutActionRow.style.display = 'flex';
       }
     }
   }
@@ -2807,6 +2962,7 @@
   }
 
   async function refreshSummariseBadge() {
+    injectStyles();
     const stored = await storageGet('cas_summaries');
     const generated = scanGenerated();
 
