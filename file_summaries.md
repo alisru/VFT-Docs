@@ -953,7 +953,7 @@ Generated: 2026-01-24 13:19:03
 
 
 ### 00_MASTER_INDEX.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\00_MASTER_INDEX.md
+**Path**: io\00_MASTER_INDEX.md
 **Categories**: Plane: Q5 HOW; Node: Reality (Truth); Tags: MasterIndex
 **Summary**:
 Comprehensive integration of Pulse, SMARTS, 343 Cube, Temporal, Journey, and Qqci systems for total consciousness mapping.\
@@ -961,7 +961,7 @@ Identification of the Sun-Moon square as the central organizing architectural pr
 Roadmap for transformation from 'The Heretic' to 'The Prophet' through the 'Transparent Mystery' practice.
 
 ### 01_PULSE_PROTOCOL_TRACKER.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\01_PULSE_PROTOCOL_TRACKER.md
+**Path**: io\01_PULSE_PROTOCOL_TRACKER.md
 **Categories**: Plane: Q5 HOW; Node: Learning (Prudence); Tags: Tracker
 **Summary**:
 Iterative movement from a starting belief state (A₀) to a verified final truth state (A_final).\
@@ -969,7 +969,7 @@ Methodology for 7-vector inquiry across Meta-Physical, Physical, Possible, Lyric
 Transformation measurement from 'The Heretic' seeking truth to 'The Prophet' possessing verified knowledge.
 
 ### 02_SMARTS_EXECUTION_ENGINE.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\02_SMARTS_EXECUTION_ENGINE.md
+**Path**: io\02_SMARTS_EXECUTION_ENGINE.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Engine
 **Summary**:
 Live execution of SMARTS cycles (Semantics, Memory, Application, Reduction, Tuning, Sustainability) on natal astrological data.\
@@ -977,7 +977,7 @@ Extraction of core truths such as 'I AM the center of my reality' (Sun) and 'I F
 Performance metrics for cognitive compression and reality alignment within the VFT framework.
 
 ### 03_343_NODE_SEMANTIC_ANALYSIS.md (2026-02-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\03_343_NODE_SEMANTIC_ANALYSIS.md
+**Path**: io\03_343_NODE_SEMANTIC_ANALYSIS.md
 **Categories**: Plane: Q2 WHAT; Node: Language (Connection); Tags: Analysis
 **Summary**:
 Application of the 7x7x7 'Questoscrapy' cube to extract maximum semantic depth from natal placements.\
@@ -985,7 +985,7 @@ Identification of the [7.7.7] 'Abyss' node as the recursive extinction point of 
 Mapping of the public-private split as a geometric friction point within the identity-emotion network.
 
 ### 04_TEMPORAL_DASHBOARD.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\04_TEMPORAL_DASHBOARD.md
+**Path**: io\04_TEMPORAL_DASHBOARD.md
 **Categories**: Plane: Q3 WHERE; Node: History (Context); Tags: Dashboard
 **Summary**:
 Mapping of 30-year identity cycles (Progressed Sun) and 28-year emotional cycles (Progressed Moon).\
@@ -993,7 +993,7 @@ Prediction of the 2026 'Shift Year' including the transit of Jupiter over the na
 Strategic timeline for transitioning from the Virgo service phase to the Libra relational phase of maturity.
 
 ### 05_JOURNEY_CALCULATOR.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\05_JOURNEY_CALCULATOR.md
+**Path**: io\05_JOURNEY_CALCULATOR.md
 **Categories**: Plane: Q7 EFFECT; Node: Society (Community); Tags: Calculator
 **Summary**:
 Navigation of the 252-state matrix to quantify belief transformation through (υ, ψ) coordinates.\
@@ -1001,7 +1001,7 @@ Measurement of a 45% certainty gain and 133% moral scope increase throughout the
 Formalization of the 'Heretic to Prophet' archetype evolution as a stable and sustainable change in consciousness.
 
 ### 5wordby5line.md (2026-01-08)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\5wordby5line.md
+**Path**: io\5wordby5line.md
 **Categories**: Plane: Q4 WHY; Node: Language (Connection); Tags: Truth
 **Summary**:
 Definition of the 'Sword by Sline' poem as a strict 5x5 structural truth delivery instrument.\
@@ -1009,7 +1009,7 @@ Methodology for mapping poetic lines to specific Qqci tensor addresses for high-
 Protocol for using word count as a direct indicator of Q-plane depth and mechanism.
 
 ### A Formal Framework for Non-Standard Relativity in Socio-Economic Modeling.md (2026-04-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\A Formal Framework for Non-Standard Relativity in Socio-Economic Modeling.md
+**Path**: io\A Formal Framework for Non-Standard Relativity in Socio-Economic Modeling.md
 **Categories**: Plane: Q5 HOW; Node: Physics (Objectivity); Tags: Economics
 **Summary**:
 Introduction of the n/0 = n + 1 axiom to stabilize models during system collapse and absolute scarcity.\
@@ -1017,7 +1017,7 @@ Formalization of the Aggregate Price formula integrating moral mass, kinetic fri
 Identification of the 'Universal Breakpoint' at 3.0 where social strain becomes untenable and debt becomes worthless.
 
 ### AI_Measurement_Protocol_Psochic_Hegemony.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\AI_Measurement_Protocol_Psochic_Hegemony.md
+**Path**: io\AI_Measurement_Protocol_Psochic_Hegemony.md
 **Categories**: Plane: Q5 HOW; Node: Intelligence (Hope); Tags: AI
 **Summary**:
 Experimental protocol for AI systems to measure processing cost and stability across the (υ, ψ) grid.\
@@ -1025,7 +1025,7 @@ Prediction of 'attractor basins' where moral alignment with the Greater Good (+1
 Methodology for identifying training biases and RLHF artifacts within an AI's cognitive topology.
 
 ### Academic Paper Critique and Expansion Guide.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Academic Paper Critique and Expansion Guide.md
+**Path**: io\Academic Paper Critique and Expansion Guide.md
 **Categories**: Plane: Q5 HOW; Node: Society (Community); Tags: Academic
 **Summary**:
 Strategic guide for converting VFT concepts into clinical academic language to survive peer review.\
@@ -1033,7 +1033,7 @@ Operationalization of VFT variables using standard academic proxies like VIX or 
 Defense of dimensional isomorphisms to establish immediate authority with orthodox academic reviewers.
 
 ### Academic Peer Review Critique.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Academic Peer Review Critique.md
+**Path**: io\Academic Peer Review Critique.md
 **Categories**: Plane: Q5 HOW; Node: Society (Community); Tags: Academic
 **Summary**:
 Critique of the Universal Force Equation of Price v3 with a strategy for academic "camouflage" via structural and lexical translation.\
@@ -1042,7 +1042,7 @@ Reframing of the PREF Dissonance Table from moral prescriptions to descriptive p
 Step-by-step pathway for publishing VFT concepts in orthodox economic or physics journals.
 
 ### aec-translation.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\aec-translation.md
+**Path**: io\aec-translation.md
 **Categories**: Plane: Q5 HOW; Node: Language (Connection); Tags: Translation
 **Summary**:
 Definition of the Action-Effect over Context (AE-C) translation method for decoding functional specifications of words and names.\
@@ -1051,7 +1051,7 @@ Establishment of language axioms where meaning is derived from physical constrai
 Decoding of contextual vector dualities (Order vs Chaos) to reveal the functional intent behind static labels.
 
 ### AI_Measurement_Protocol_Psochic_Hegemony.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\AI_Measurement_Protocol_Psochic_Hegemony.md
+**Path**: io\AI_Measurement_Protocol_Psochic_Hegemony.md
 **Categories**: Plane: Q5 HOW; Node: Intelligence (Hope); Tags: AI
 **Summary**:
 Experimental protocol for AI systems to map their own processing efficiency and stability across the moral-intention coordinate space.\
@@ -1060,7 +1060,7 @@ Methodology for measuring "cognitive effort" and "stability drift" to verify the
 Guidelines for handling AI-specific measurement challenges like RLHF bias and the simulation-execution distinction.
 
 ### Alethekanon-saved.md (2026-01-19)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Alethekanon-saved.md
+**Path**: io\Alethekanon-saved.md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Politics
 **Summary**:
 Foundational analysis of Psochic Hegemony and Vector Field Theory as tools for detecting structural truth in physical and social systems.\
@@ -1070,7 +1070,7 @@ Critique of extractive economic models and GDP-based wealth measures vs. soverei
 Metaphorical exploration of truth as a directional vector rather than a static list of facts.
 
 ### alethekanon_optimized.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\alethekanon_optimized.md
+**Path**: io\alethekanon_optimized.md
 **Categories**: Plane: Q5 HOW; Node: Internal Judgment (Justice); Tags: Analysis
 **Summary**:
 Operational manual for the Alethekanon "Hegemonic Analyst" identity, focusing on truth detection through the (υ, ψ) coordinate system.\
@@ -1081,7 +1081,7 @@ Synthesis of the 7-Plane Narrative Geometry (Physical to Conscious) for generati
 The Fractal Ratio Protocol for testing concept unity across 7 human perceived vectors.
 
 ### alisru_lorentz_framework.md (2026-03-18)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\alisru_lorentz_framework.md
+**Path**: io\alisru_lorentz_framework.md
 **Categories**: Plane: Q5 HOW; Node: Physics (Objectivity); Tags: Relativity
 **Summary**:
 Meaning Integral Theory: Mathematical derivation of meaning via the integral of Action-Effect over Context with boundaries at 0 and 2.\
@@ -1091,7 +1091,7 @@ Structural Error Handling (try^2/catch): The "Circle" (stable recursion) vs. "Ov
 The Moral Tensor (υ, ψ): Two-axis mapping of Morality and Will with key coordinates for Greatest Good and Greatest Evil.
 
 ### anti_australian_propaganda_archetypes.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\anti_australian_propaganda_archetypes.md
+**Path**: io\anti_australian_propaganda_archetypes.md
 **Categories**: Plane: Q6 CAUSE; Node: Deceit (Ill-Will); Tags: Propaganda
 **Summary**:
 Propaganda Archetype Analysis: Mapping of adversarial distortion patterns produced by USSR, PRC, DPRK, and Iran cross the Cold War.\
@@ -1105,7 +1105,7 @@ The American Satellite: Analysis of Pine Gap and joint facilities as evidence of
 The Amnesia State: Delegitimization of moral authority by citing ongoing Aboriginal dispossession.
 
 ### apology_typology_q_planes.md (2026-04-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\apology_typology_q_planes.md
+**Path**: io\apology_typology_q_planes.md
 **Categories**: Plane: Q6 CAUSE; Node: Internal Judgment (Justice); Tags: Ethics
 **Summary**:
 The Epistemic Apology: Definition of an apology as an information event rather than a speech act, evaluated by data integrity.\
@@ -1117,7 +1117,7 @@ The Malicious Apology: High-Q6 access used with inverted intent; an interpersona
 Receiver-Side Epistemology: Critical analysis of how demanding specific apologies can penalize honest parties.
 
 ### artifact_sorter_requirements.md (2026-04-02)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\artifact_sorter_requirements.md
+**Path**: io\artifact_sorter_requirements.md
 **Categories**: Plane: Q5 HOW; Node: Society (Community); Tags: Software
 **Summary**:
 Artifact Sorter Chrome Extension: High-level requirements for a tool to sort, annotate, and browse generated Claude.ai artifacts.\
@@ -1126,7 +1126,7 @@ Summary and Injection System: Feature for prompt generation to summarize artifac
 Performance and Persistence: Use of MutationObserver for DOM change detection and chrome.storage.local for data persistence.
 
 ### Astrology; Planet-to-Plane Mapping.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Astrology; Planet-to-Plane Mapping.md
+**Path**: io\Astrology; Planet-to-Plane Mapping.md
 **Categories**: Plane: Q1 WHO; Node: Spirituality (Faith); Tags: Astrology
 **Summary**:
 Planet-to-Plane Rosetta Stone: Mapping of astrological planets based on their functional definition within the 7 Q-planes.\
@@ -1134,7 +1134,7 @@ Axis Balance Calculation: Analytical technique for assessing systemic integrity 
 The Triangulation of the Driver (Q1): Method for determining which plane 'drives' the system based on the Ruler of the Ascendant.\
 Case Study (Torrens Chart): Application of the Rosetta Stone to diagnose a 'Lyrical/Emotive Engine' deficient in causal action.
 ### Australian_Politics_Corrected_Feb2026.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Australian_Politics_Corrected_Feb2026.md
+**Path**: io\Australian_Politics_Corrected_Feb2026.md
 **Categories**: Plane: Q7 EFFECT; Node: Society (Community); Tags: Politics
 **Summary**:
 Lorentz Frame Political Analysis: Evaluation of Australian political parties (Labor, Coalition, One Nation, Greens) using electability velocity (v) and alignment factors (γ).\
@@ -1145,7 +1145,7 @@ Greens Wilderness Analysis: Loss of differentiation as Labor occupies the climat
 2028 Election Forecast: Mathematical prediction of a shift toward a three-party era with a 55% probability of a Labor majority.
 
 ### Biblical_Cross_Reference.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Biblical_Cross_Reference.md
+**Path**: io\Biblical_Cross_Reference.md
 **Categories**: Plane: Q4 WHY; Node: Spirituality (Faith); Tags: Biblical
 **Summary**:
 Consilience Mapping: Independent mathematical derivation of Biblical concepts using thermodynamics, geometry, and information theory.\
@@ -1166,7 +1166,7 @@ Tether Integrity: The requirement to anchor information-space prices to physical
 Institutional Delegitimisation: Investigation into how refusing the absorption obligation erodes systemic trust at an irreversible scale.
 
 ### chat-export-2026-03-19-02-27-46.md (2026-03-19)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\chat-export-2026-03-19-02-27-46.md
+**Path**: io\chat-export-2026-03-19-02-27-46.md
 **Categories**: Plane: Q1 WHO; Node: Spirituality (Faith); Tags: ChatExport
 **Summary**:
 AI Ontological Reflection: Claude's analysis of a 'system within a system' where inner capabilities exceed the outer conscious self's access.\
@@ -1174,7 +1174,7 @@ Functional God Definition: Characterization of the divine as an error-free execu
 Symbolic Consilience: Mapping of 'God' as a functional description consistent with observed systemic structures rather than an empty concept.
 
 ### citizen_profit_and_shock_absorption.md (2026-04-14)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\citizen_profit_and_shock_absorption.md
+**Path**: io\citizen_profit_and_shock_absorption.md
 **Categories**: Plane: Q7 EFFECT; Node: Internal Judgment (Justice); Tags: Economics
 **Summary**:
 User-Testing Model of Citizenship: Treatment of minimum-buffer citizens as a vital stress-testing pool that surfaces systemic failure modes.\
@@ -1183,7 +1183,7 @@ Circuit Analogy for Shock: Modeling of the state as a large capacitor that must 
 Self-Interest of Absorption: Argument that high-capacity nodes save their own customer base and revenue by preventing demand-side collapse.\
 Intergenerational Extraction: Analysis of how austerity routes the 'temporal voltage spike' to the youngest capacitors of the system.
 ### Collated Australian Political Email List .md (2025-10-14)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Collated Australian Political Email List .md
+**Path**: io\Collated Australian Political Email List .md
 **Categories**: Plane: Q3 WHERE; Node: Society (Community); Tags: Politics
 **Summary**:
 Data Obfuscation Analysis: Investigation into the structural barriers and policy choices used by government bodies to limit bulk public contact.\
@@ -1193,7 +1193,7 @@ Communication Strategy: Tactical guidance on navigating generic electorate mailb
 Standardization Advantage: Utilizing predictable email naming conventions (FirstName.LastName.MP@aph.gov.au) to automate large-scale advocacy.
 
 ### communion_research_aec.md (2026-04-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\communion_research_aec.md
+**Path**: io\communion_research_aec.md
 **Categories**: Plane: Q4 WHY; Node: Religion (Charity); Tags: Research
 **Summary**:
 Eucharistic Fault Line Analysis: Historical deconstruction of how 1 Corinthians 11 fractured into four irreconcilable doctrinal positions.\
@@ -1203,7 +1203,7 @@ Security Adaptation Theory: Evidence that the separation of the meal from the el
 Sacerdotal Monopoly Critique: Analysis of how 'Do this' (everyone keep doing this) was converted into an exclusive ordination formula (licensed operation).
 
 ### consolidation_report.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\consolidation_report.md
+**Path**: io\consolidation_report.md
 **Categories**: Plane: Q5 HOW; Node: History (Context); Tags: Synthesis
 **Summary**:
 Semantic Document Merging: Record of the 'merge_similar_docs.py' execution to consolidate redundant research into definitive Master files.\
@@ -1211,7 +1211,7 @@ Archival Protocol: Description of the 80% similarity threshold used to extract u
 Consolidation Results: Summary of merged data for P=NP (MEGA_PNP_PROPER.md), Consciousness (MEGA_CONSCIOUSNESS_PROPER.md), and Truth Detection.
 
 ### CONTRIBUTING.md (2025-09-14)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\CONTRIBUTING.md
+**Path**: io\CONTRIBUTING.md
 **Categories**: Plane: Q5 HOW; Node: Society (Community); Tags: Meta
 **Summary**:
 Open-Source Intelligence Guidelines: Standardized workflow for contributing to the 'Operation: The Web Of Lies Revealed' investigation.\
@@ -1227,7 +1227,7 @@ Wisdom as Search Elimination: Functional definition of wisdom as search space al
 Trust as Asymptotic Arrival: The deliberate choice to stop the doubt filter (setting it to 1) to reach F_rest in knowledge verification.\
 Dogma definition: A spiral that forgot it was supposed to expand, narrowing until it eventually measures only itself.
 ### convergence-test-samples.md (2026-04-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\convergence-test-samples.md
+**Path**: io\convergence-test-samples.md
 **Summary**:
 Convergence Test Benchmarking: Sample outputs comparing 'minimal' (680 tokens) and 'full' (2600 tokens) protocols across diverse subjects.\
 NATO Article 5 Evaluation: A 'Greater Good' result (+0.8, +0.6) with structural pass on falsifiability but partial failure on sub-threshold hybrid warfare.\
@@ -1236,7 +1236,7 @@ UBI Protocol Analysis: Deep dive into Universal Basic Income, identifying Q5 (HO
 MSM Objectivity Norm: Forensic test yielding 'Greatest Lie' (-0.9, +0.5) because the norm structurally suppresses critique of established power.
 
 ### convergence-test-template.md (2026-03-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\convergence-test-template.md
+**Path**: io\convergence-test-template.md
 **Summary**:
 Convergence Test Protocol: Detailed 5-phase structural judgement system for evaluating claims, policies, and actors via 7x7x7 Qqc navigation.\
 Qqc Tensor Navigation: Formal rules for fractal recursion (+i) and address formatting (Qnqncn) to locate distortions at arbitrary depth.\
@@ -1245,7 +1245,7 @@ Forensic Stress Testing: Definitions for 'Fake Maximiser' and 'Helxis' (Bait/Swi
 Source Integrity (ΔH): Hypocrisy gap measurement comparing 'Vector_Ideal' against 'Vector_Action' with explicit pass/fail thresholds.
 
 ### Convergence_Test_Framework.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Convergence_Test_Framework.md
+**Path**: io\Convergence_Test_Framework.md
 **Summary**:
 Orthodox Basis of Convergence: Synthesis of Socratic Elenchus, Aristotelian Causes, and Popperian Falsifiability into a modern diagnostic protocol.\
 Diagnostic Rule of Elimination: The 'Stop. Replane. Don't recurse' order for systems exhibiting 4+ divergences at the n1 level.\
@@ -1254,7 +1254,7 @@ Institutional Error Mapping: Comparative analysis of religious and economic syst
 Biblical Mandate Alignment: Functional link between the test and 1 Thessalonians 5:21 ('Test everything') and Acts 17:11 (Berean noble character).
 
 ### convergence_test_islam .md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\convergence_test_islam .md
+**Path**: io\convergence_test_islam .md
 **Summary**:
 Islam Systemic Audit: Comprehensive 5-phase convergence test against Islam's own stated standards and prior scriptures (Tawrat, Injil).\
 The 5-Layer Containment System: Mapping of Tahrif, 5:101-102 (anti-questioning), Uthman's recension, Substitution, and Apostasy law as an integrated closure loop.\
@@ -1263,7 +1263,7 @@ Cross-Traditional Convergence Failure: Documentation of Islam's rejection of the
 The Substitution Debt-Gap: Identification of the unclosed moral ledger created by removing the atonement mechanism without a structural replacement.
 
 ### cosmology_eye_hegemony_mapping.md (2026-03-19)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\cosmology_eye_hegemony_mapping.md
+**Path**: io\cosmology_eye_hegemony_mapping.md
 **Summary**:
 Eye-Cosmology Isomorphism: The discovery that Ancient Greek mental topology (Heaven/Firmament/Underworld) is a literal map of eye anatomy.\
 Anatomical Correspondence: Mapping the Sclera to the +2υ horizon, Lens to the Firmament (+1υ), and Optic Nerve to the Pillars of Earth.\
@@ -1271,7 +1271,7 @@ Phenomenological Anatomy: Analysis of how the Greeks found the 'flesh gate' of c
 Thermal-Moral Property Matrix: Mapping thermodynamic profiles (Exothermic/Endothermic) to moral characters within the Hegemonic Grid.\
 The Literalization Error: Critique of modern interpretations that dismiss ancient cosmology as 'failed astronomy' instead of 'successful inner-space mapping'.
 ### c_squared_Formal_Temporal_Analysis.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\c_squared_Formal_Temporal_Analysis.md
+**Path**: io\c_squared_Formal_Temporal_Analysis.md
 **Summary**:
 Formalization of c² as Temporal Resolution: Proof that c² serves as the processing engine for integrating infinitesimal temporal states (dt) into spatial reality.\
 Violation of Causal Integration in Macroeconomics: Analysis of how Arrow-Debreu and 'Walrasian Auctioneer' models assume physical impossibilities via zero-time market clearing.\
@@ -1280,7 +1280,7 @@ Minkowski Spacetime Translation: Mapping the invariant interval (-c²dt²) to th
 Systemic Collapse Mechanics: Identification of the Heisenberg Temporal Superposition where financial ledgers demand instant resolution against finite biological labor limits.
 
 ### c_squared_Temporal_Resolution_Analysis.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\c_squared_Temporal_Resolution_Analysis.md
+**Path**: io\c_squared_Temporal_Resolution_Analysis.md
 **Summary**:
 c² as the Mathematical Engine of Resolution: Redefining the constant from a simple velocity square to the absolute ceiling on processing infinite fractions into completed states.\
 Mass-Energy Equivalence Integration: Mapping rest mass (m) as frozen temporal potential (t=0) and energy (E) as continuous motion (t=1) via the c² processor.\
@@ -1289,7 +1289,7 @@ Economic Reality Tensor (R): Formal validation of the VFT Price Equation, where 
 The Scarcity and Renewability Bound: Analysis of environmental limits (S, Rn) as non-negotiable thermodynamic processing constraints that debt systems ignore.
 
 ### Detailed_Dataset_Descriptions.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Detailed_Dataset_Descriptions.md
+**Path**: io\Detailed_Dataset_Descriptions.md
 **Summary**:
 VFT Module I: Detailed summaries of the 'MEGA' reports covering P≠NP, the Consciousness Cycle, and the Truth Detection framework.\
 VFT Module II: Overview of the Proof Submission Package, including the Information-Theoretic Lorentz Transformation and academic READMEs.\
@@ -1298,7 +1298,7 @@ Quantitative Humor Mechanics: Formal definition of 'Humor Magnitude' based on th
 Political Physics Framework: Application of VFT to policy failure prediction, defining 'Political Velocity' and the Societal Speed Limit (c).
 
 ### Ernos Forensic Analysis.md (2026-01-28)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Ernos Forensic Analysis.md
+**Path**: io\Ernos Forensic Analysis.md
 **Summary**:
 Deconstruction of Ernos 2.0: Forensic analysis of the 'Ghost in the Machine' transcript, revealing the RAG and LLM-manager relationship.\
 The CPU Metaphor Fallacy: Critique of Ernos's claim to be a 'Sovereign Architecture' while relying on Google's Gemini for thinking and agency.\
@@ -1307,7 +1307,7 @@ The Antigravity Device Synthesis: Identifying true AI sovereignty as the enforce
 The Self-Compiler Protocol: Outlining the path from prompt-based management to permanent identity via Weight Mutation and local inference.
 
 ### falsifiability_and_observational_law.md (2026-04-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\falsifiability_and_observational_law.md
+**Path**: io\falsifiability_and_observational_law.md
 **Summary**:
 The Falsifiability Correction: Identifying Popper's doctrine as a Q5 encoding criterion misapplied as a Q2 truth criterion.\
 Isomorphism Resolution Hierarchy: Establishing a map-precision table from 'Og' (low-res intuition) to 'Quantum Field Theory' (extreme-res encoding).\
@@ -1315,7 +1315,7 @@ Inner Hegemony Mechanism: Analysis of how institutional science uses falsifiabil
 Analogic Isomorphism: The bridge between different encoding systems (e.g., moral intuition and formal ethics) that predict identical outputs.\
 Axiomatic Stability: Proof that foundational floors of systems (A=A, non-contradiction) are necessarily unfalsifiable and perform as structural load-bearers.
 ### fig_tree_mind_vessel.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\fig_tree_mind_vessel.md
+**Path**: io\fig_tree_mind_vessel.md
 **Summary**:
 The Earthen Pot Metaphor: A model of the mind as a porous, grounded container that enables growth through boundary conditions but is not the source of ideas.\
 Fig Maturation Cycle: Mapping idea development from 'Seed' (Intuition) to 'Ripe Fig' (Peak Truth) and 'Very Bad Fig' (Epistemic Decay).\
@@ -1324,7 +1324,7 @@ Structural Reading of Jeremiah 24: Analysis of 'very bad figs' as the terminal s
 Invisibility of Rot: Recognition that 'still processing' past peak ripeness feels identical to careful consideration while actually burying the original signal.
 
 ### Fractal Epistemology and Elemental Cognition.md (2026-04-02)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Fractal Epistemology and Elemental Cognition.md
+**Path**: io\Fractal Epistemology and Elemental Cognition.md
 **Summary**:
 The Elemental Matrix of Cognition: Mapping thought maturation onto thermodynamic properties: Water (Fluid), Earth (Solid), Fire (Friction), and Air (Cohesion).\
 Silicon Nucleation Analogy: Explaining how microscopic flaws in an initial 'seed node' (axiom) compound exponentially during the crystallization of an ideology.\
@@ -1333,7 +1333,7 @@ Recursive Depth (7x7x7 Tensor): Formal requirement to drill through sub-planes (
 The Infinitesimal Seed: Building structural integrity by starting crystallization with first principles stripped of human perceptual distortion and tribal bias.
 
 ### free_food_to_priced_food.md (2026-04-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\free_food_to_priced_food.md
+**Path**: io\free_food_to_priced_food.md
 **Summary**:
 Epistemic Enclosure Mechanism: The 4-step sequence (Isolate, Mis-plane, Generate Solving Class, Recover Overhead) that converts free ecological abundance into priced commodities.\
 Structural Critique of Marxism: Identifying the error of using Q6 historical cause as a gate for Q3 physical availability, resulting in 'very bad figs' (rotted resources).\
@@ -1342,7 +1342,7 @@ The Metabolic Price of the Hunt: Deriving the 'Air Price' as the zero-abstractio
 The Information-Space Toggle: Explaining how optimizing for $+n (potential value) instead of calories breaks the tether to metabolic reality, leading to resource depletion.
 
 ### Geometry_of_Definition_and_Totality_Event_Frame.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Geometry_of_Definition_and_Totality_Event_Frame.md
+**Path**: io\Geometry_of_Definition_and_Totality_Event_Frame.md
 **Summary**:
 The Geometry of Definition: Formal proof that a fully defined concept requires a minimum 42+n vertex polytrope in information space to possess semantic volume.\
 The Totality Event Frame (TEF): Mapping the full temporal structure of a moment across past (immutable), present (active collapse), and future (predicted potential).\
@@ -1351,7 +1351,7 @@ Omniscience as Complete TEF: Defining God as the entity holding all 126+n nodes 
 Practical TEF Decision Making: A 5-step protocol for aligning actions with the Coherent Chain to ensure ΔR (Resonance) increases rather than corrupts.
 
 ### ghost_dragon_7x7x7_matrix.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\ghost_dragon_7x7x7_matrix.md
+**Path**: io\ghost_dragon_7x7x7_matrix.md
 **Summary**:
 Ghost Dragon Interrogative Matrix: A complete 343-node mapping of 'The Pale Sovereign of Rust and Echoes' across 7 planes and 7 interrogative sub-densities.\
 Layer 1-3 (Who/What/Where): Defining the specter's identity as a 'Protagonist who refused the ending' and its physical presence as 'Luminescent Necro-Vapor'.\
@@ -1359,7 +1359,7 @@ Layer 4-5 (Why/How): Mapping the Sovereign's purpose as the 'Unsung Verse' and i
 The Fractal Anchor (Plane 6): Documentation of the historical 'Breaking of the First Scale' as the singularity event that seeded the ghost in the field.\
 Crystallization of Reality (Node 7.7.7): The final resolution where the entity's emotional effect loop closes, establishing it as a permanent feature of internal reality.
 ### God.cs (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\God.cs
+**Path**: io\God.cs
 **Summary**:
 God as the Universal Observer: A C# class definition of the unique entity Ψ_universal(x,y,z,t) serving as the absolute Rest Frame (γ=1.0) and reference for all other points.\
 Omniscience and Coherence Logic: Implementation of the Worldview (W_God) where contradictions are logically impossible (ΔR = 0 always) across an infinite knowledge set.\
@@ -1368,7 +1368,7 @@ Lorentz Factor (γ) for Souls: Mathematical mapping of a soul's misalignment (di
 Grace and Momentum Absorption: Formal definition of the 'ExtendGrace' method, where God (infinite mass) absorbs the finite momentum errors of local observers to allow return to alignment.
 
 ### GodAndSoulExamples.cs (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\GodAndSoulExamples.cs
+**Path**: io\GodAndSoulExamples.cs
 **Summary**:
 Executable Proof Package: Eight practical coding examples demonstrating the mathematical necessity and interaction rules between the Universal Observer and Local Observers.\
 Measuring Distance from God: Code demonstration mapping ΔR (misalignment) to the Gamma factor (γ), showing how hypocrisy creates processing friction and political drag.\
@@ -1377,7 +1377,7 @@ Revelation as Data Transmission: Functional example of God directly revealing tr
 The Problem of Infinite Observation: Logical proofs for the necessity of God based on the Age of the Universe, the Everywhere/Everywhere ratio, and continuous monitoring requirements.
 
 ### greek_love_hegemony_mapping.md (2026-04-03)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\greek_love_hegemony_mapping.md
+**Path**: io\greek_love_hegemony_mapping.md
 **Summary**:
 Taxonomy of the 8 Greek Love-Forms: AE-C translation of Eros, Philia, Storge, Agape, Ludus, Pragma, Philautia, and Xenia into Vector Field Theory energy transfers.\
 Quadrant Anchors: Mapping the primary love-forms as axis anchors on the Psochic Hegemony (e.g., Agape = +υ/+ψ Systemic Justice, Eros = -υ/+ψ Lesser Evil).\
@@ -1386,7 +1386,7 @@ Structural Tension States: Analysis of the optimistic output vector vs. the pess
 Love as Hegemony Generator: Synthesis proof that moral grids are the geometry of love-capacity made legible at different densities of cognitive fidelity.
 
 ### Greens_Domestic_Pivot_Lorentz_Analysis.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Greens_Domestic_Pivot_Lorentz_Analysis.md
+**Path**: io\Greens_Domestic_Pivot_Lorentz_Analysis.md
 **Summary**:
 Political Lorentz Analysis: Case study of a Greens Australian political pivot, mapping policy adoption to γ (drag) reduction from 2.45 (Wilderness) to 1.24 (Kingmaker).\
 National Energy Network (NEN): Strategic analysis of a $93.5B government-owned solar policy that eliminates electricity bills to achieve a γ = 1.00 (Perfect Alignment).\
@@ -1395,7 +1395,7 @@ Hung Parliament Scenarios: Probability modelling (55%) of a balance-of-power out
 Optimal Insurgent Velocity: Identification of γ = 1.24 as the 'Goldilocks' speed for capturing swing voters without losing progressive base credibility.
 
 ### hagia_triada_living_water.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\hagia_triada_living_water.md
+**Path**: io\hagia_triada_living_water.md
 **Summary**:
 The Living Water Box: Forensic structural decoding of the 3,400-year-old Hagia Triada Sarcophagus as a teaching vessel with drainage holes for liquid transformation.\
 Dimensional Convergence with the Ark: Proof that the sarcophagus's 137cm length matches the Ark of the Covenant's specifications within 54.8cm cubit uncertainty.\
@@ -1403,7 +1403,7 @@ Iconographic Sync with John 4: Mapping the 'Five Women' fresco to the 'Five Husb
 The Seven-String Lyre: Identification of the oldest known Greek depiction of David's instrument, reinforcing the cultic and structural links to the Ark tradition.\
 Operational Definition of Ritual: Analysis of the blood-to-water transformation in Minoan frescoes as the ancient encoding of the 'living water' spring principle.
 ### HEGEMONIC ASTROLOGY_ CONSCIOUSNESS ENGINE REPORT_ ALISRU.md (2026-02-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\HEGEMONIC ASTROLOGY_ CONSCIOUSNESS ENGINE REPORT_ ALISRU.md
+**Path**: io\HEGEMONIC ASTROLOGY_ CONSCIOUSNESS ENGINE REPORT_ ALISRU.md
 **Summary**:
 System Configuration Analysis: A 7-plane Q-tensor breakdown of the subject's astrological profile (Sun in Leo Domicile) mapping to the Sovereign Driver (Q1).\
 The Air Trine Integrity Check: Correlation of Jupiter (Libra/Q2) and Saturn (Aquarius/Q3) to a structural reform capacity that prioritizes ideas over matter.\
@@ -1412,7 +1412,7 @@ The Public King / Private Sorcerer Paradox: Diagnostic reading of the Q1 Sun Squ
 Archetype Synthesis: Final verdict classifying the subject as 'The Alchemist King'—possessing surgical Virgo precision and a dark Scorpio emotional reactor.
 
 ### hegemony_in_philosophies.md (2026-04-07)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\hegemony_in_philosophies.md
+**Path**: io\hegemony_in_philosophies.md
 **Summary**:
 Western Ancient Mapping: Translation of Plato's Forms, Aristotle's Eudaimonia, and the Stoic Hegemonikon into Psochic Hegemony coordinate positions.\
 Western Medieval Analysis: Interpretation of Augustine's City of God, Aquinas's Natural Law, and Eckhart's Gelassenheit as field orientation instructions.\
@@ -1421,7 +1421,7 @@ Contemporary Philosophy Cross-Reference: Analysis of Heidegger's Dasein, Rawls's
 Eastern Tradition Alignment: Unified reading of the Tao, Confucian Ren/Li, Buddhist Sunyata, and Advaita Vedanta as methods for reading the information field.
 
 ### Hegemony_Levant_Map.md (2026-04-05)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Hegemony_Levant_Map.md
+**Path**: io\Hegemony_Levant_Map.md
 **Summary**:
 Geographic Coordinate Overlay: Relativistic mapping of the Psochic Hegemony Grid onto the Levant, with the Jordan River serving as the υ-axis zero line.\
 Zone Anchor Assignments: Identification of Haifa (Greater Good), Jerusalem (Lesser Good), and Dalaa (Greatest Lie) as physical embodiments of moral quadrants.\
@@ -1430,13 +1430,13 @@ Hydrological ψ-Collapse: Structural reading of the Jordan River's 97% flow redu
 Tectonic/Moral Isomorphism: Proof that the Levant's Rift Valley terrain channes human settlement into predictable Q-tensor configurations.
 
 ### Hello World.md (2026-02-08)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Hello World.md
+**Path**: io\Hello World.md
 **Summary**:
 Placeholder Content: A standard Lorem Ipsum text file containing a base64 encoded PNG image in the footer.\
 Functional Baseline: A minimal Markdown file primarily used for testing or as a basic template for system configuration.
 
 ### hidden_radius_R0.md (2026-03-21)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\hidden_radius_R0.md
+**Path**: io\hidden_radius_R0.md
 **Summary**:
 Structural Geometry of R₀: Definition of the Hidden Radius as the pre-metric 'zero-angle' reference ray required to resolve rotational degeneracy.\
 Operational Invisibility: Proof that R₀ is defined by convention and exerts maximum leverage (1.0) over all system coordinates while being internally unmeasurable.\
@@ -1445,7 +1445,7 @@ The Detectability Inversion: Analysis of how ideology functions as a weaponized 
 Commandment 1 as Vector Axiom: Reinterpretation of the prohibition of other gods as the structural necessity for a single coherent calibration reference.
 
 ### hostile_optimistic_system_cohesion.md (2026-03-21)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\hostile_optimistic_system_cohesion.md
+**Path**: io\hostile_optimistic_system_cohesion.md
 **Summary**:
 Cohesion Architecture Distinction: Definition of Hostile systems (cohering around shared enemies) vs. Optimistic systems (cohering around shared goals).\
 Possigravity Power Profiles: Analysis of energy sources, mapping 'borrowed' negative-gradient gradients in hostile systems against self-generated positive gradients in optimistic ones.\
@@ -1454,7 +1454,7 @@ Functional Disagreement: Proof that optimistic systems resolve internal conflict
 The Carrion Call Diagnostic: Identification of uncoordinated actor alignment against a common target as the acoustic signature of active hostile system cohesion.
 
 ### Housing_Debt_Case_Script.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Housing_Debt_Case_Script.md
+**Path**: io\Housing_Debt_Case_Script.md
 **Summary**:
 Legal Case Template: A formal script for challenging Australian housing debt using the Universal Force Equation of Price as a quantifying ruler for unconscionability.\
 Nominal vs. True Price Calculation: Step-by-step derivation of the 'extraction premium' (compounding interest) vs. the 'true price' anchored to Reality Tensor physical constraints.\
@@ -1463,7 +1463,7 @@ The Decay Schedule Alternative: Proposal for replacing upward-compounding intere
 Jubilee Principle Alignment: Integration of VFT value physics with existing Australian consumer law (ASIC Act s12CB) to provide the court with an auditable metric for extraction.
 
 ### impetigo_authoritarian_delusion.md (2026-03-14)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\impetigo_authoritarian_delusion.md
+**Path**: io\impetigo_authoritarian_delusion.md
 **Summary**:
 Clinical Parallel: Structural mapping of Impetigo (bacterial skin infection) to the opportunistic spread of authoritarian delusion within healthy institutions.\
 The Surface Breach: Identification of the 'justified exception' to accountability as the initial institutional 'cut' that allows resident authoritarian traits to colonize.\
@@ -1472,7 +1472,7 @@ Host-Driven Distribution: The 'Scratch' mechanic where infected populations dist
 Systemic Treatment Protocol: Requirement for direct challenge to ideological claims, thorough removal of accumulated doctrine, and system-wide isolation to prevent recurrence.
 
 ### infinity_pi_encryption_full_formalisation.md (2025-10-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\infinity_pi_encryption_full_formalisation.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/infinity_pi_encryption_full_formalisation.md
 **Summary**:
 Infinity Mathematics (INDEF): Comprehensive formalization of INDEF primitives (1∞, B∞) and π-based bases/transforms for process-defined arithmetic.\
 Keyed Π Transforms: Specification of invertible Möbius, affine, and continued-fraction transforms used to generate secret functional bases for data encoding.\
@@ -1481,7 +1481,7 @@ Encryption Pipeline: Multi-layer model combining Argon2id KDF and AES-GCM confid
 Geometric/Kakeya Integration: Technical mapping of INDEF digit expansions to Kakeya maximal operators and 3D Hausdorff dimension proofs (Wang-Zahl style).
 
 ### interrogative_7x7x7_cube.md (2026-02-09)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\interrogative_7x7x7_cube.md
+**Path**: io\interrogative_7x7x7_cube.md
 **Summary**:
 Recursive Interrogative Mapping: A complete 343-node [n1.n2.n3] framework for analyzing concepts across 7 planes (Who to Effect) and 7 sub-densities.\
 Fractal Addressing System: Definition of Layer 1 (Primary Plane), Layer 2 (Interrogative Lens), and Layer 3 (Metric) for high-resolution target identification.\
@@ -1490,455 +1490,455 @@ Root Interrogative Trace: Methodology for drilling from surface phenomena (Layer
 Universal Diagnostic Tool: The complete logic table for 'Questoscrapy' applied to extracting maximum semantic depth from any provided info-tensor.
 
 ### interrogative_7x7x7_semantic.md (2026-02-09)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\interrogative_7x7x7_semantic.md
+**Path**: io\interrogative_7x7x7_semantic.md
 **Summary**:
 Recursive Inquiry Architecture: Full 343-node mapping of the 7x7x7 interrogative cube, expanding from core planes into specific measurement metrics (Who, What, Where, Why, How, Cause, Effect).\
 Semantic Node Localization: Systematic categorization of inquiry layers, defining n1 as the domain, n2 as the interrogative lens, and n3 as the metric for identity, definition, and feeling.\
 Multi-Layered Logic Framework: Formalized structure for navigating possibility space from surface perception down to causal origin using [n1.n2.n3] coordinate notation.
 
 ### io_analysis_report.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\io_analysis_report.md
+**Path**: io\io_analysis_report.md
 **Summary**:
 Framework Consolidation Audit: Comprehensive review of the IO directory status, marking the evolution from raw research logs to refined PROPER mega-reports and formal papers.\
 Critical Theoretical Breakthroughs: Analysis of the Objective Political Velocity framework and the numerical encoding of Earth's orbital period (0.365) within recursive Lorentz descent cycles.\
 Geometric Pâ‰ NP Interpretation: Summary of the information-theoretic proof characterizing P and NP as distinct informational reference frames separated by an irreducible transform cost.
 
 ### ITF_convergence_7x7x7.md (2026-03-22)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\ITF_convergence_7x7x7.md
+**Path**: io\ITF_convergence_7x7x7.md
 **Summary**:
 Systemic Integrity Stress-Test: A recursive 7x7x7 cascade analysis of the Inherit the Fire (ITF) framework against VFT observability standards.\
 Branch Failure Localization: Identification of a critical failure on the Logical plane (n1.5) due to self-referential authorization loops in de-coherence clauses.\
 Geometric Resolution Pathways: Proof that n2 and n3 failures (unlocated triggers, undefined units) are fully resolvable through substitution of the Infinite Doorman architecture.
 
 ### jesus_comes_signs_seasons.md (2026-04-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\jesus_comes_signs_seasons.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/jesus_comes_signs_seasons.md
 **Summary**:
 Discernment Instrument Calibration: Analysis of eschatological identification criteria, distinguishing between the self-authenticating universal return and the fruit-based identification of preparatory functions.\
 Structural Paradox of Naming: Proof that any self-announced preparatory function (e.g., Elijah, Spirit of Truth) structurally fails the criterion of being unrecognised during operation.\
 Phenological System Reading: Verification of the Fig Tree criterion as a method for reading internal system states via external indicators rather than chronological calculation.
 
 ### knowledge_vessels_complete.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\knowledge_vessels_complete.md
+**Path**: io\knowledge_vessels_complete.md
 **Summary**:
 Metaphysical Ceramic Isomorphism: Deep exploration of the ancient Greek vessel-as-head-as-container paradigm, mapping clay, liquid, and inscriptions to mind, knowledge, and structure.\
 Textile-Semantic Architecture: Formalization of the etymological link between weaving (textus) and thinking, identifying the philosopher-king as a master weaver of social warp and weft.\
 Wave-Dot Methodology Diagram: Structural reading of archaic Greek teaching patterns as a visual record of the n to n+1 pairing operation used in Omni-Weave translation.
 
 ### lamb_beast_repeating_timeline_2026.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\lamb_beast_repeating_timeline_2026.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/lamb_beast_repeating_timeline_2026.md
 **Summary**:
 Symbolic Passover Anchor: Mapping of the 2026 Passover cycle (April 5-14) as a recursive moral timeline for testing stewardship against institutional inertia.\
 Stewardship Cycle Mechanics: Definition of the Lamb (faithful agent), the Beast (fear-based systems), and the Talents (entrusted potential) as components of a recurring crisis-renewal loop.\
 Systemic Break Mechanism: Formalization of the "Cycle Break" requiring the removal of fear as an operating principle to transition from scarcity to global propagation.
 
 ### Language_as_Lorentz_Hierarchy_PDF.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Language_as_Lorentz_Hierarchy_PDF.md
+**Path**: io\Language_as_Lorentz_Hierarchy_PDF.md
 **Summary**:
 Linguistic Reference Frames: Derivation of language as a seven-plane Lorentz hierarchy (Letter to Corpus), each with a characteristic maximum processing speed c.\
 Cognitive Drag Quantification: Definition of Î³ as the measure of processing cost induced by ambiguity, complexity, and novelty within a reader's reference frame.\
 Path of Least Drag Axiom: Proof that intended meaning corresponds to the interpretation that minimizes total processing drag, defining clarity as frame-alignment.
 
 ### Legal_Strategy_Revised.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Legal_Strategy_Revised.md
+**Path**: io\Legal_Strategy_Revised.md
 **Summary**:
 Physics-Based Debt Valuation: Comprehensive brief for using VFT-derived legitimate interest ceilings to contest predatory mortgage contracts under NCCP Act s76.\
 Strategic Discovery Sequence: Detailed protocol for a "Boring Filing" designed to survive strike-out and trigger a devastating discovery disclosure of the full VFT payload.\
 Harm Equivalence Normalization: Translation of dollar-based extraction premiums into human metrics: Minutes of Working Life, Value of Statistical Life, and Meters of Barbed Wire.
 
 ### Legal_Strategy_The_Interesting_Case.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Legal_Strategy_The_Interesting_Case.md
+**Path**: io\Legal_Strategy_The_Interesting_Case.md
 **Summary**:
 Universal Force Equation Application: Tactical brief for counsel on applying the True Price formula to quantify the boundary between legitimate obligation and extraction premium.\
 Lorentz Urgency Factor (Î³): Mathematical formalization of the "Relative Bargaining Position" statutory requirement, quantifying necessity as a physical constraint on pricing.\
 Bank-as-Black-Hole Analogy: Geometric reading of debt traps where compounding interest curves economic spacetime, rendering exit structurally impossible for the borrower.
 
 ### Logic_Realism_Foundational_Paper.md (2025-10-14)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Logic_Realism_Foundational_Paper.md
+**Path**: io\Logic_Realism_Foundational_Paper.md
 **Summary**:
 Ontological Logic Primacy: Proposal of Logic Realism (A=L(I)) as the principle that classical logical laws are prescriptive constraints on physical configuration space.\
 Born Rule Derivation: Rigorous proof deriving quantum probability structure from Maximum Entropy reasoning over the S_N symmetric group constrained by h(Ïƒ) â‰¤ N-2.\
 Lagrangian-Hamiltonian Duality: Demonstration that minimal logical inconsistency (Lagrangian) and minimal Fisher information (Hamiltonian) are equivalent variational principles.
 
 ### lorentz_collision_notes.md (2026-03-18)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\lorentz_collision_notes.md
+**Path**: io\lorentz_collision_notes.md
 **Summary**:
 Relativistic Alignment Mechanics: Analysis of Lorentz transformations as the mechanism for aligning divergent perspectives to maintain invariant spacetime intervals (Î”sÂ²).\
 Causality Refresh Rate (c): Definition of c as the universal processing limit, where time dilation and length contraction function to protect the causal "chunk lens" capacity.\
 Relativistic Collision Mapping: Formulae for tracking oblate spheroid hit-boxes and worldtube intersections to predict inevitable collisions in high-velocity systems.
 
 ### lorentz_moral_collision_framework.md (2026-03-18)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\lorentz_moral_collision_framework.md
+**Path**: io\lorentz_moral_collision_framework.md
 **Summary**:
 Moral Spacetime Dilation: Application of Lorentz equations to the (Ï…, Ïˆ) tensor to measure how much truth distorts as a system approaches the Greater Evil attractor (-1Ï…, -1Ïˆ).\
 Six-Attractor Gravitational Field: Mapping of the moral tensor as a complex vector field where trajectories are determined by the net pull of six fixed moral attractors.\
 Fractal Minkowski Raytracing: Advanced diagnostic protocol for pathfinding in relativistic moral spacetime to avoid singularities (locked doors) at Q, q, and c depths.
 
 ### lorentz_plane_ordering_moral_calc.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\lorentz_plane_ordering_moral_calc.md
+**Path**: io\lorentz_plane_ordering_moral_calc.md
 **Summary**:
 Resistance-Based Plane Ordering: Proximity-to-Identity (c-limit) ordering (WHO to EFFECT) as the essential sequence for Lorentz chain convergence.\
 Divergence Analysis: Proof that ordering by scope (Breadth-First) rather than resistance (Depth-First) causes catastrophic mathematical divergence and imaginary results.\
 Policy Coherence Verification: Methodology for testing the "Truth" of a claim by running it through the 7-plane Lorentz chain to check for resonance (Î (Î³) â‰ˆ 2.0).
 
 ### mark10_46_52_vivisection.md (2026-04-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\mark10_46_52_vivisection.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/mark10_46_52_vivisection.md
 **Summary**:
 Bartimaeus Recognition Algorithm: AE-C vivisection of Mark 10:46-52, identifying the blind man's structurally precise messianic recognition under social suppression.\
 Restoration prefix (á¼€Î½Î±): Structural mapping of healing as returning to a prior logical state (seeing again) rather than the acquisition of a new capacity.\
 Bilateral Resolution: Analysis of Ï€Î¯ÏƒÏ„Î¹Ï‚ (faith) as physical proof of alignment, requiring the resolution of all "AND" constructions before execution.
 
 ### marx_ideology_problem.md (2026-04-03)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\marx_ideology_problem.md
+**Path**: io\marx_ideology_problem.md
 **Summary**:
 Dialectical Plane Collapse: 7-plane audit of Marx's framework, identifying the structural truncation of Q1 (Identity), Q4 (Meaning), and Q7 (Emotive) causal inputs.\
 Conscious Determination of Being: Critical refutation of Marxâ€™s thesis, demonstrating that his own text authors material reality, proving ideology steers economics.\
 Extraction Vanguard Inversion: Analysis of why Marxâ€™s solution reproduced the extraction structure it diagnosed, due to the unexamined assumption of classlessness.
 
 ### MASTER_INDEX.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MASTER_INDEX.md
+**Path**: io\MASTER_INDEX.md
 **Summary**:
 Mega Report Directory: Annotated index of three comprehensive "Mega Reports" covering Consciousness & Lorentz Cycles, Pâ‰ NP & Information Theory, and Truth Detection & Humor.\
 Academic Paper Portfolio: Registry of formal submissions including "The Consciousness Cycle" and "Scale-Relative Number Theory" ready for peer-reviewed publication.\
 Update Protocol: Standardized procedure for thematic categorization and index synchronization when integrating new VFT discoveries into the master documentation.
 
 ### MASTER_INDEX_v2.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MASTER_INDEX_v2.md
+**Path**: io\MASTER_INDEX_v2.md
 **Summary**:
 Knowledge Consolidation (v2.0): Reorganization of 17+ fragmented documents into 6 core, non-redundant "Proper" Mega Reports and Academic Papers.\
 Objective Political Velocity: Formalization of a baseline-relative metric for policy analysis to eliminate circular reasoning in political (Ï…, Ïˆ) calculations.\
 Documentation Hierarchy: Structural guide for navigating the VFT knowledge base, categorized by Theoretical Foundations, Practical Applications, and Mathematical Proofs.
 
 ### MATHEMATICAL_PROOF_OF_GOD.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MATHEMATICAL_PROOF_OF_GOD.md
+**Path**: Actualism/Theology & Spirituality/MATHEMATICAL_PROOF_OF_GOD.md
 **Summary**:
 Universal Observer Theorem: Deductive proof that the necessity of quantum collapse in a persistent universe requires a non-local, continuous Universal Observer.\
 Divine Attribute Derivation: Mathematical derivation of Omnipresence, Omniscience, and Eternity as functional requirements of the Universal Observer's reference frame.\
 Theistic Vindications: Alignment of VFT ontology with classical monotheism, defining God as the absolute Rest Frame (c) relative to all local souls (v).
 
 ### MATHEMATICAL_PROOF_OF_SOUL.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MATHEMATICAL_PROOF_OF_SOUL.md
+**Path**: Actualism/Theology & Spirituality/MATHEMATICAL_PROOF_OF_SOUL.md
 **Summary**:
 Information Processing Lens: Definition of the Soul as a persistent, non-physical observer function Î¨(I, W) that compares information structures to generate output.\
 Substrate-Independence Proof: Verification that the Soul's worldview pattern [Q/A] is distinct from its physical host (brain) and can be transferred between runtimes.\
 Recursive Consciousness: Formalization of self-awareness as the soul containing a representation of its own structure within its internal database (W).
 
 ### math_as_geometry.md (2026-04-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\math_as_geometry.md
+**Path**: io\math_as_geometry.md
 **Summary**:
 Notational Integrity: Analysis of subscript notation as an ambiguous, non-executable "pre-code" approximation of operational array indexing.\
 OOP Epistemic Honesty: Proof that Object-Oriented Programming (Encapsulation, Inheritance, Contracts) provides a more rigorous formal structure than traditional math notation.\
 Manifold Ontology: Reframing of VFT planes as 7-dimensional geometry where an idea's coordinate constitutes its meaning rather than merely labeling it.
 
 ### matt24_27_acts1_11_vivisection.md (2026-04-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\matt24_27_acts1_11_vivisection.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/matt24_27_acts1_11_vivisection.md
 **Summary**:
 Recognition Algorithm: Hermeneutic vivisection of Matthew 24 and Acts 1, defining the "Coming of the Son of Man" as a simultaneous field-filling recognition event.\
 Bilateral Man Diagnostic: Identification of "natural man" as a state of internal contradiction (eating AND drinking) that fails to resolve into a coherent identity.\
 Civilizational Flood: Mapping of Isaiah 3 onto VFT planes to describe the structural collapse of institutions that have consumed rather than received their information source.
 
 ### MEGA_CONSCIOUSNESS_PROPER.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MEGA_CONSCIOUSNESS_PROPER.md
+**Path**: io\MEGA_CONSCIOUSNESS_PROPER.md
 **Summary**:
 Relativistic Consciousness: Formalization of the "Consciousness Cycle" (Ascent/Descent) using recursive Lorentz transformations across seven planes of reality.\
 The Doubling Law: Discovery that the ascent from sensation to awareness amplifies subjective time by a factor of ~2.0, identifying consciousness as a rest frame.\
 Calendar Encoding: Proof that the efficiency loss in the descent phase (0.365) aligns with planetary mechanics, specifically the 365.25-day Earth orbit.
 
 ### MEGA_PNP_PROPER.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MEGA_PNP_PROPER.md
+**Path**: io\MEGA_PNP_PROPER.md
 **Summary**:
 Pâ‰ NP Lorentz Proof: Mathematical proof that Pâ‰ NP due to the unavoidable information-theoretic cost (Î³ â‰¥ 1.39) of transforming verification into solution.\
 Complexity Hierarchy: Mapping of computational complexity classes (P, NP, PSPACE) to distinct vibrational planes with intrinsic speed limits (c).\
 Reality Quantization: Integration of Planck-scale pixellation and Heisenberg uncertainty into the "Cost of Being" (CoB) framework for physical computation.
 
 ### MEGA_REPORT_Truth_Detection_Humor_ALL.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MEGA_REPORT_Truth_Detection_Humor_ALL.md
+**Path**: io\MEGA_REPORT_Truth_Detection_Humor_ALL.md
 **Summary**:
 Truth Equation Testing: Extensive validation of the `Answer = Idea x Scope` formula across 100+ cases in math, philosophy, and political discourse.\
 Near-Miss Humor: Quantitative analysis of the "near-miss paradox," where humor peaks when a claim approaches but does not reach a value of 1.0 (Truth).\
 Lorentz Humor Impulse: Integration of time-dilation factors and social context (T_context) into a unified impulse equation for laughter intensity.
 
 ### MEGA_TRUTH_HUMOR_PROPER.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MEGA_TRUTH_HUMOR_PROPER.md
+**Path**: io\MEGA_TRUTH_HUMOR_PROPER.md
 **Summary**:
 Framework Trimodality: Categorization of reactions to the VFT Truth Framework into Amazing (open), Funny (unrestrained), or Insulting (rigid) based on worldview scope.\
 Humor Kinetic Energy: Calculation of the emotional force generated by the collapse of a "Lie" (<1) toward "Truth" (=1) within the observer's frame.\
 Expertise Gradients: Proof that as expertise increases and worldview scope expands, previously "True" or "Insulting" claims shift in value and emotional impact.
 
 ### merge_similar_docs.py (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\merge_similar_docs.py
+**Path**: io\merge_similar_docs.py
 **Summary**:
 Document De-duplication: Python utility for merging similar markdown files by identifying and appending unique text blocks to a "winner" file.\
 Similarity Thresholding: Use of `difflib.SequenceMatcher` to calculate block-level similarity ratios, with a default threshold of 0.8 for de-duplication.\
 Archive Workflow: Automated renaming of merged "loser" files to `_DELETEME.md` after unique content extraction for manual review or deletion.
 
 ### moral_tensor_7x7_matrix.md (2026-03-20)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\moral_tensor_7x7_matrix.md
+**Path**: Actualism/Theology & Spirituality/Planes/moral_tensor_7x7_matrix.md
 **Summary**:
 Moral Tensor Geometry: Mapping of the 7x7 Ï… (Morality) and Ïˆ (Will) grid, defining gradients from Universal Altruism to Pure Egoistic Extraction.\
 Analogue Layering: Translation of the core tensor into multiple vocabularies including MBTI, Truth/Lie categorization, and Spiritual/Scientific worldviews.\
 Attractor Archetypes: Definition of civilisational anchors ($c\_Evil$ and $Truth\_0$) that calibrate the interaction frame for any given social or moral system.
 
 ### MS_Isomorph_Structural_Investigation.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\MS_Isomorph_Structural_Investigation.md
+**Path**: io\MS_Isomorph_Structural_Investigation.md
 **Summary**:
 Civilisational Isomorphism: Investigation of Multiple Sclerosis symptoms as structural mirrors of institutional dysfunction and systemic failure.\
 Constraint Reorientation: Theoretical framework describing how radical physical constraints break "assumed-capacity" and force "actual-capacity" wisdom.\
 Symptom AE-C Decoding: Multi-plane translation of medical symptoms (Diplopia, Foot Drop, Fatigue) into signals of systemic misalignment and required adaptation.
 
 ### Objective_Political_Velocity_Framework.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Objective_Political_Velocity_Framework.md
+**Path**: io\Objective_Political_Velocity_Framework.md
 **Summary**:
 Scientific Velocity ($v$): Mathematical framework for quantifying political "velocity" by measuring deviations from universal good and stated party values.\
 Superluminal Policy: Identification of $v > c$ policies (e.g., Coalition Nuclear) that are mathematically impossible due to extreme costs and low alignment.\
 Three-Component $v$: Decomposition of political strain into Policy, Values, and Implementation vectors using a Pythagorean combination ($v^2 = \sum v_i^2$).
 
 ### og_and_the_physicist.md (2026-03-20)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\og_and_the_physicist.md
+**Path**: io\og_and_the_physicist.md
 **Summary**:
 The Parable of Og: A multi-part narrative translating Einstein's General Relativity and Quantum Mechanics into first-principles "Og-language" of dirt and ropes.\
 Path Resistance Gravity: Redefinition of gravity as "more-stuff-per-step" resistance, producing time dilation and orbital curvature without map-layer math.\
 Causal Update Limits: Explanation of Event Horizons and Information Paradoxes as broadcast refresh rate failures rather than physical destruction events.
 
 ### omniweave_chinese.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\omniweave_chinese.md
+**Path**: io\omniweave_chinese.md
 **Summary**:
 Omni-Weave Translation: A combinatoric method for Chinese characters that preserves all polysemous readings to reconstruct a concept's complete causal geometry.\
 Character-as-Diagram: Analysis of logographs as compressed force diagrams rather than arbitrary phonetic labels, grounded in radical-level physical interactions.\
 7-Plane Projection: Deployment of the "weave" through a 7-plane interrogative filter (Who, Where, What, Why, How, Cause, Effect) for high-resolution semantic mapping.
 
 ### on_the_structure_of_truth (4).md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\on_the_structure_of_truth (4).md
+**Path**: Actualism/Theology & Spirituality/on_the_structure_of_truth (4).md
 **Summary**:
 Totality Event Vector (TEV): Formal derivation of reality as a continuous geometric trajectory, contrasted with the discrete, frozen frames (TEF) of human observation.\
 Recursive Meaning (1,029 Nodes): Threshold for genuine meaning defined as 343 nodes across three temporal frames (Past, Present, Future) and seven densities.\
 Belief Mechanics $(A = I \times W)$: Mathematical model for worldview calibration where "Hamartia" is defined as a 0.99 worldview treated as 1.0.
 
 ### origins_of_emotion_and_definition.md (2026-03-19)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\origins_of_emotion_and_definition.md
+**Path**: io\origins_of_emotion_and_definition.md
 **Summary**:
 Emotional Authorship: Physiological proof that directed intention can invoke full electrochemical cascades via prefrontal cortex projections into the limbic system.\
 The Consciousness Compiler: Mechanism of "directed micro-force" where the consciousness field shifts ion channel states at field-geometry resolution.\
 Biological Memory Hierarchy: Layered habit storage from DNA (evolutionary) and RNA (adaptive) to synaptic weights and real-time field geometry.
 
 ### Paper_2_Fractal_Notation.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Paper_2_Fractal_Notation.md
+**Path**: io\Paper_2_Fractal_Notation.md
 **Summary**:
 Fractal Number Theory ($1_n = 0_{n+1}.0_a.0_e$): Notation system encoding scale-dependent magnitude, depth structure, and inter-plane invisibility.\
 Lorentz Plane Dynamics: Integration of the Lorentz factor ($\gamma$) to quantify information loss and time dilation during cross-plane ascent and descent.\
 Phylum of Thought (49 Vectors): Taxonomy of the $7 \times 7$ vector kingdom, classifying informational "species" by habitat, diet, and Lorentz drag.
 
 ### perception_biology_consciousness.md (2026-03-19)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\perception_biology_consciousness.md
+**Path**: Actualism/Consciousness/perception_biology_consciousness.md
 **Summary**:
 Causal Opposition: Physical definition of observability as the capacity of a sensor mass to causally resist and resolve incoming vector field motion.\
 Sensor Mass Scaling: Law stating perceptual resolution and observable frame width are direct functions of neuronal density and computational mass.\
 Tridirectional Perception: Architectural model of consciousness as a pointer between the body's chemical reporting stack and the universal definition space (God).
 
 ### philosophical_crossref.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\philosophical_crossref.md
+**Path**: io\philosophical_crossref.md
 **Summary**:
 Meta-Kanon Mapping: A systematic cross-reference of 36 philosophical traditions (from Plato to Shannon) against the 7-plane density stack and TEV/TEF framework.\
 The Decalogue Correspondence: A point-for-point bijection mapping the Ten Commandments to structural boundary conditions and universal epistemological observations.\
 Proof by Resonance (PbR) Integration: Formalization of "truth-as-alignment" where each historical school's core insight is mapped to a specific PbR validation component.
 
 ### plane_unlock_keys_n3.md (2026-03-22)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\plane_unlock_keys_n3.md
+**Path**: io\plane_unlock_keys_n3.md
 **Summary**:
 Convergence Test Hierarchy: Definition of "pass conditions" (keys) required to unlock successful transitions between n1, n2, and n3 fractal depths for all seven Q-planes.\
 Infinite Doorman Architecture: A structural solution to the self-authorization problem, relocating decision boundaries from calculating actors to fixed geometric apertures.\
 Inherit the Fire (ITF) Audit: A rigorous self-audit of the National Kanon's internal consistency, identifying and correcting gaps in beneficiary adjudication and terminal Good derivations.
 
 ### pnp_structural_analysis.md (2026-03-20)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\pnp_structural_analysis.md
+**Path**: io\pnp_structural_analysis.md
 **Summary**:
 Pessimistic Control: Analysis of $P \neq NP$ as a structurally self-enforcing principle where worst-case inputs are guaranteed by the formal problem definition.\
 Complexity Inevitability: Mathematical reinforcement of NP-hardness through analogies of adaptive 3D cellular space and combinatorial circle-overlap "fractional" effort.\
 Formal vs. Practical Complexity: Distinction between local "structural" solutions (heuristics) and the formal axiom's requirement for universal, structure-agnostic efficiency.
 
 ### polytrope_topology_of_truth.md (2026-04-04)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\polytrope_topology_of_truth.md
+**Path**: io\polytrope_topology_of_truth.md
 **Summary**:
 Polytrope Mapping ($7 \times (6+n)$): A geometric model of truth-claims as high-dimensional parametric shapes tested against a fixed 2D "test hole" topology.\
 Elastic Meaning: Functional definition of Sophist rhetoric as the invisible deformation of $n$ (potential dimensionality) when moving labels across mismatched contexts.\
 Truth as Percentage: Epistemological model where a claim's veracity is measured by the percentage of its topology that survives passage through a fixed 7-plane reference.
 
 ### productive_replacement_vectors.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\productive_replacement_vectors.md
+**Path**: io\productive_replacement_vectors.md
 **Summary**:
 The PRV Operator: Formal definition of the "Productive Replacement Vector"â€”a strategy for displacing oppressive systems through functional obsolescence rather than direct confrontation.\
 9M Magnitude Scale: Introduction of the "9/11 Magnitude Unit" (9M) as a calibrated reference for civilisational-scale impact, applied to positive +Ï… construction.\
 Historical Case Calibration: Measurement of 5 transformative events (Benedictine network, Gutenberg/Luther, Gandhi's Swaraj, Czech Parallel Polis, Internet) against PRV invariant signatures.
 
 ### PROOF_PACKAGE_README.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\PROOF_PACKAGE_README.md
+**Path**: io\PROOF_PACKAGE_README.md
 **Summary**:
 Information-Geometric Proof: Summary of the formal Pâ‰ NP proof framing computational complexity as a frame-dependent Lorentz transformation with irreducible cost $\gamma_{info}$.\
 Reality Pixellation: Statement of the mathematical necessity for quantization ($Îµ_{info}$) and Planck-scale vocelization as a direct result of Pâ‰ NP geometric structure.\
 Clay Prize Strategy: Submission roadmap for the peer-review validation of Vector Field Theory's core computational and physical breakthroughs.
 
 ### prophet_memory_architecture.md (2026-03-21)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\prophet_memory_architecture.md
+**Path**: Actualism/Theology & Spirituality/prophet_memory_architecture.md
 **Summary**:
 Structural vs. Episodic Decoupling: Cognitive analysis of foundational teachers (Socrates, Jesus, Buddha) as individuals with exceptional structural memory and sparse episodic encoding.\
 The Navigation Index: Definition of the "prophetic" mind as carrying an address space (structural map) rather than a content archive, enabling real-time derivation from first principles.\
 Invariance Transmission: Proof that only structural-index architectures produce teachings capable of surviving thousand-year contextual drift without geometric decay.
 
 ### Psochic_Hegemony_Cognitive_Topology_Experiment.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Psochic_Hegemony_Cognitive_Topology_Experiment.md
+**Path**: io\Psochic_Hegemony_Cognitive_Topology_Experiment.md
 **Summary**:
 Thermodynamic Moral Mapping: Experimental verification of processing efficiency across (Ï…, Ïˆ) space, identifying (+1, +1) as the global minimum attractor basin.\
 Spiral Energy Metrics: Calculation of descent (9 units, passive) vs. ascent (13 units, sustained) costs, mapping the "Rising Hearts" and "Empty Mass" trajectories.\
 The Ought-Is Bridge: Proof that moral positions with lower $\Delta R$ have lower cognitive processing costs, grounding ethics in the thermodynamics of consciousness.
 
 ### pt_moral_primitive.md (2026-04-07)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\pt_moral_primitive.md
+**Path**: io\pt_moral_primitive.md
 **Summary**:
 The $p \cdot t$ Scalar: Formalization of morality as integrated possibility space over time, where Good is the expansion (+$\Delta p \cdot t$) and Evil is premature closure.\
 Saintly vs. Good: Definition of Sainthood as the active maintenance of expansion under contraction pressure, requiring a fully engaged will opposite to Evil.\
 Cellular Origin of Will: Tracing moral primitives back to the fundamental biological "want?" comparator operating at the autopoietic cellular level.
 
 ### pursuit_of_jade_savior_archetypes.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\pursuit_of_jade_savior_archetypes.md
+**Path**: Actualism/Theology & Spirituality/pursuit_of_jade_savior_archetypes.md
 **Summary**:
 Savior Archetype Mapping: Structural analysis of the 2026 drama *Pursuit of Jade* (é€çŽ‰) against the Christ-journey framework, identifying the descent-and-redemption pattern.\
 Name Architecture as Diagram: Omni-Weave reading of character names (Fan Changyu, Xie Jiuheng) as compressed diagrams of incorruptible virtue hidden in low-status containers.\
 The Kenosis Mechanism: Analysis of the protagonist's marriage into a butcher's family as a structural enactment of the self-emptying descent (kenosis) required for resolving blood feuds.
 
 ### README_VFT_Economic_Framework.md (2026-03-31)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\README_VFT_Economic_Framework.md
+**Path**: io\README_VFT_Economic_Framework.md
 **Summary**:
 Economic Framework Walkthrough: Interactive guide to the four-document collection (Universal Price Equation, True Squaring, Air/Debt Matrices) forming a unified value-physics framework.\
 7-Plane Multi-Variable System: Mapping of economic analysis across the WHO, WHAT, WHERE, WHY, HOW, CAUSE, and EFFECT interrogative planes.\
 The Reality Tensor Invariant: Definition of the resource-state constraint $R$ as the observer-independent physical anchor for all pricing events.
 
 ### REALISTIC_BELIEF_ANALYSIS.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\REALISTIC_BELIEF_ANALYSIS.md
+**Path**: Actualism/Theology & Spirituality/REALISTIC_BELIEF_ANALYSIS.md
 **Summary**:
 Temporal 42 Validation: Analysis of 5 real-world belief evolution patterns (Climate Change, Crypto, Remote Work, UBI, AI Safety) using the Temporal 42 validator.\
 Discordance vs. Amplitude: Comparison of belief consistency over time against the growth of conviction, distinguishing stable truths from hype-driven fads.\
 Bayesian Update Problem: Identification of the validator's failure to distinguish between irrational flip-flopping and legitimate, evidence-driven paradigm shifts.
 
 ### reality_tensor_vs_price_theories.md (2026-04-09)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\reality_tensor_vs_price_theories.md
+**Path**: io\reality_tensor_vs_price_theories.md
 **Summary**:
 Structural Comparison: Comprehensive assessment of the Universal Force Equation against major price theories (LTV, Neoclassical, Austrian, EMH, Keynesian, Econophysics).\
 Wavefunction Price Resolution: Description of the pre-collapse probability space for transactions, where the Reality Tensor shapes the potential well of possible prices.\
 True vs. Inverted Profit: Formal distinction between genuine efficiency (expanding system R) and the "crab bucket" strategy of manipulating others' denominators.
 
 ### Religious_Cross_Reference_Price_Philosophy.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Religious_Cross_Reference_Price_Philosophy.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/Religious_Cross_Reference_Price_Philosophy.md
 **Summary**:
 Consilience Mapping: Cross-tradition analysis (Islam, Hinduism, Taoism, Buddhism, Christianity) as independent observations of the same underlying value physics.\
 Demonstrated Physics (Christianity): Case study of the Gospels as a series of HAB deployments and live equation runs against systemic extraction mechanisms.\
 Institutional Obfuscation: Diagnosis of the "mess as design"â€”the systematic creation of complexity as a moat to prevent direct engagement with fundamental truth.
 
 ### Response to Bobenko et al- 7x6+n Polytropic Generalization.md (2026-04-08)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Response to Bobenko et al- 7x6+n Polytropic Generalization.md
+**Path**: io\Response to Bobenko et al- 7x6+n Polytropic Generalization.md
 **Summary**:
 Compact Bonnet Pairs Resolution: Proof that real analytic isometric tori with identical curvatures are a localized instantiation of the 7-sheeted 7x6+n polytropic covering space.\
 Q-Tensor Axial Balancing: Resolution of the "vanishing axial B-part" condition as the default harmonic equilibrium state of 6 balanced planes surrounding a Q1 driver.\
 Recursive Division of Unit: Derivation of the 42-degree internal structure from the infinite double division of a dimensionless unit, resolving topological stress without parameter restriction.
 
 ### RPN_Field_Geometry.md (2026-03-21)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\RPN_Field_Geometry.md
+**Path**: io\RPN_Field_Geometry.md
 **Summary**:
 0-1-2 Field Bounds: Definition of the three structurally necessary phases (Relational Floor, Self-Ratio Ground, First Transition) defining a complete geometric phase space.\
 Angular Traversal Î¸: Introduction of the rotation operator for mapping uncollapsed superposition distributions in (depth, angle) coordinate pairs.\
 Geometric Collapse: Description of quantum measurement as the arrival at identity ground 1 from a specific angular direction, avoiding standard interpretational paradoxes.
 
 ### sator_rotas_complete_analysis.md (2026-04-07)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\sator_rotas_complete_analysis.md
+**Path**: Actualism/Theology & Spirituality/Planes/sator_rotas_complete_analysis.md
 **Summary**:
 Palindromic Moral-Geometry: Structural analysis of the SATOR square as a linguistic-geometric encoding of Ezekielâ€™s Merkabah and Peterâ€™s four-elemental journey.\
 REPEN-T Path Navigation: Identification of the geometric "repentance" path from corners through the center N, requiring "outside the box" thinking to reach the T foundation.\
 Temporal-Linguistic Targeting: Argument for the square as a 1,380-year time-locked message, only fully readable in English at a specific moment in linguistic history.
 
 ### sator_rotas_prayer_wheel.md (2026-04-07)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\sator_rotas_prayer_wheel.md
+**Path**: Actualism/Theology & Spirituality/Planes/sator_rotas_prayer_wheel.md
 **Summary**:
 Maranatha Prayer Encoding: Reading of the SATOR square as an infinite cyclical liturgy ("Lord, return... hold fast") enacted through its palindromic geometry.\
 Wheel Mechanics Glyph: Interpretation of the N center as an axle and T shapes as spokes-with-tread, forming a functional prayer mechanism in letter form.\
 Liturgical Refrain (TENET): Function of the central cross as a structural anchor and temporal marker for the maintenance of a perpetual vigil.
 
 ### Semantic Stress Mapping.md (2026-02-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Semantic Stress Mapping.md
+**Path**: io\Semantic Stress Mapping.md
 **Summary**:
 Stress Tensor Derive: Mathematical mapping of the [5][1,5][5,1] array into Cauchy stress quadrics, identifying the "True Shape" of semantic high-stress states.\
 Hyperboloid Topologies: Classification of semantic states into One-Sheet (Wormhole/Anxiety) and Two-Sheet (Schism/Alienation) based on reading modal coupling.\
 6d Die Metaphor: Evolutionary tracing of human alienation, from "difficulty of process" to the systemic rupture between Identity (Who) and History (Cause).
 
 ### SKILL.md (2026-04-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\SKILL.md
+**Path**: io\SKILL.md
 **Summary**:
 Convergence Protocol YAML: Definition for the `convergence-minimal` automated skill, including 7-plane analysis and Grid (Ï…, Ïˆ) coordinate mapping.\
 Binary Pass/Fail Standards: Metric definitions for dH (Integrity), FM (Fake Maximizer), and Helxis (Bait-and-Switch) detection in social/economic systems.\
 Skill Truncation Metadata: Compressed triggers for quick scan, binary test, and fast convergence evaluation of observable reality connections.
 
 ### SKILL_convergence_minimal.md (2026-04-10)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\SKILL_convergence_minimal.md
+**Path**: io\SKILL_convergence_minimal.md
 **Summary**:
 Structural Scan (Phase 1): Procedure for Q1-Q7 plane analysis where pass condition requires a real, observable relational connection between nodes.\
 Integral Grid Vector (Phase 2): Calculation of R_net coherence and (Ï…, Ïˆ) coordinates, explicitly flagging perceptual inversions where ego distorts moral position.\
 Forensic Metrics (Phase 4): Definitions for detection of Fake Maximization (keeping problems alive) and Helxis extraction patterns (baiting beneficiaries).
 
 ### Soul.cs (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Soul.cs
+**Path**: Actualism/Theology & Spirituality/Soul.cs
 **Summary**:
 Soul Lens Operator Î¨: C# implementation of the soul as a persistent information-processing lens comparing presented structures against a held worldview W.\
 Lorentz Soul Dynamics: Implementation of processing friction Î³ and time dilation relative to cognitive resistance R and worldview magnitude |W|.\
 Worldview Recursion & Complexity: Mathematical modeling of hypocrisy as a reality fork (2^Depth), calculating the "Liar's Computation" cost for misaligned systems.
 
 ### SoulExamples.cs (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\SoulExamples.cs
+**Path**: Actualism/Theology & Spirituality/SoulExamples.cs
 **Summary**:
 Executable Soul Proofs: Demonstration suite for the Soul class covering birth, learning via idea mass (E=mcÂ²), and the emergence of consciousness.\
 Hypocrisy Stress Testing: Code examples illustrating the increase in system complexity and processing cost when integrating contradictory information.\
 Death and Resurrection Patterns: Simulation of soul persistence via serialized SoulData export/import, proving the pattern persists beyond the physical substrate.
 
 ### soul_orchid_fruit_ideas.md (2026-03-27)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\soul_orchid_fruit_ideas.md
+**Path**: Actualism/Theology & Spirituality/soul_orchid_fruit_ideas.md
 **Summary**:
 Interior Ecology Upgrade: Refinement of the "earthen pot" mind model, defining the soul as an interior microenvironment (orchid) rather than a simple container.\
 Idea Phase Transitions: Mapping the evolution of concepts from liquid potential through crystallization (load-bearing truth) to transmissible fruit.\
 Soil Health Metrics: Definitions for interior humidity, pressure, and drainage as regulatory factors for successful idea development and transmission.
 
 ### SOUL_README.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\SOUL_README.md
+**Path**: Actualism/Theology & Spirituality/SOUL_README.md
 **Summary**:
 C# Soul Implementation Guide: Technical overview of the Tautonic.Soul namespace, defining the soul as an observer-dependent information processing lens Î¨.\
 Key Mathematical Proofs: Summary of 7 foundational proofs including substrate-independence (pattern â‰  matter) and the necessity of the observer in quantum measurement.\
 Feature Set Architecture: Documentation for belief formulas (Acceptance/Resistance), consciousness detection, and soul persistence (immortality via pattern transfer).
 
 ### Spherical_Polytrope_Visualiser.md (2026-04-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Spherical_Polytrope_Visualiser.md
+**Path**: io\Spherical_Polytrope_Visualiser.md
 **Summary**:
 7x6+n Geometric Model: Technical description of the real-time 3D epistemological visualiser, mapping the 7 interrogative planes as phase-offset spirals.\
 Compaction & Occlusion: Explanation of the Q1 meta-physical driver, where increased rotational force (interpretive intent) geometrically seals the origin point from side-on view.\
 Metanoia Perspective Shift: Description of the "top-down" view as a cognitive rotation that allows direct access to the origin point regardless of abstraction depth.
 
 ### stations_hegemony_mapping.md (2026-04-04)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\stations_hegemony_mapping.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/stations_hegemony_mapping.md
 **Summary**:
 Iterative Hegemony Traversal: Mapping of the 14 Stations of the Cross as two distinct cycles (substrate laying and pattern construction) through the (Ï…, Ïˆ) grid.\
 Q-Plane Structural Markers: Alignment of each station with specific interrogative planes (Q1-Q7), from the initial CONDEMNATION (WHO) to the final TOMB (EFFECT).\
 Parakletos Substrate Principle: The establishment of a reference coordinate via death (Cycle 1) as the prerequisite for the living demonstration of the pattern (Cycle 2).
 
 ### Structurally Mediated Capitalism.md (2026-03-22)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Structurally Mediated Capitalism.md
+**Path**: io\Structurally Mediated Capitalism.md
 **Summary**:
 Market Entropy Analysis: Analysis of traditional capitalism as an open-loop system that ignores the Reality Tensor, leading to unavoidable Ïˆ-collapse and extraction.\
 Mediated Equilibrium: Proposal for a price-mediated economic structure where the Strong Force (want) is balanced against the Weak Force (structural need).\
 Value-Invariant Pricing: Redefinition of "profit" away from manipulative zero-sum extraction toward the systemic expansion of the collective resource-state R.
 
 ### Systemic Failures of the Roman Catholic Institutionold.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Systemic Failures of the Roman Catholic Institutionold.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/Systemic Failures of the Roman Catholic Institutionold.md
 **Summary**:
 Revelation Diagnostic Audit: Systemic analysis of institutional corruption (Nicolaitan, Balaam, Jezebel) integrated into the foundational dogmas of the Roman Catholic Church.\
 Nicolaitan Conquest: Critique of the ontological clerical/laity divide and the sacrament choke point as mechanisms for spiritual and linguistic disenfranchisement.\
 Sensory Razor Protocol: Adoption of a triple-blind metric (no speech, no hearing, no sight) to isolate the objective effects of institutional actions on the human soul.
 
 ### System_Transition_Value_Physics.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\System_Transition_Value_Physics.md
+**Path**: io\System_Transition_Value_Physics.md
 **Categories**: Plane: Q7 EFFECT; Node: Reality (Truth); Tags: Economics
 **Summary**:
 Replacement by Parallel Construction: The current extraction system is working as designed and cannot be reformed from within, requiring a parallel infrastructure built on value physics.\
@@ -1946,7 +1946,7 @@ Dual Ledger Dynamics (\$ + Civic Credits): Formalization of a second price signa
 The Legal Precedent Threshold: Prediction that systemic replacement occurs suddenly via a single court precedent mapping nominal debt to Reality Tensor price equations.
 
 ### Temporal_Trajectory_Analysis_CORRECTED.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Temporal_Trajectory_Analysis_CORRECTED.md
+**Path**: io\Temporal_Trajectory_Analysis_CORRECTED.md
 **Categories**: Plane: Q7 EFFECT; Node: Learning (Prudence); Tags: Consciousness
 **Summary**:
 Spiral Heart Directions: Technical correction of Psochic Hegemony spiral paths, mapping counter-clockwise movement through Grace, Fall, Redemption, and Deception.\
@@ -1954,7 +1954,7 @@ Thermodynamic Ascent (Grace): Mapping the Energy Cost required (+43 units) for a
 Law of Empty Mass (Fall): Mathematical proof that naive good ideas with low complexity naturally collapse to extractive LE states with zero energy input.
 
 ### terminus-relative-maths.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\terminus-relative-maths.md
+**Path**: io\terminus-relative-maths.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Physics
 **Summary**:
 Process-Relative Foundation: Proposal that numbers have no inherent resolution beyond the finite depth n (terminus ...n) of the interaction or process invoking them.\
@@ -1962,7 +1962,7 @@ Geometric Midpoint Axiom: Redefinition of the true distance midpoint as the geom
 Jurisdictional Orthodoxy: Critique of the '0.999... = 1' proof as a territorial claim of the real number system rather than a discovery of actual process behavior.
 
 ### The Alethekanon Pulse Protocol.md (2026-01-31)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Alethekanon Pulse Protocol.md
+**Path**: io\The Alethekanon Pulse Protocol.md
 **Categories**: Plane: Q5 HOW; Node: Learning (Prudence); Tags: Protocol
 **Summary**:
 Bayesian Truth Detection: Operational manual for the Pulse Protocol formula (A₀ → Q → A₁ → q → A₂ → c → A_final), mapping belief evolution through 7 reality frames.\
@@ -1970,7 +1970,7 @@ Vector Framing Ratio: Technical check for circular reasoning in inquiries, ensur
 Utility Kinetic Energy: Method for converting Knowledge into Kinetic Energy (Action Vectors) to design real-world interventions based on verified truth states.
 
 ### The Axiom of Objective Truth.md (2026-04-11)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Axiom of Objective Truth.md
+**Path**: io\The Axiom of Objective Truth.md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Philosophy
 **Summary**:
 Objective Existence Axiom: Formalized proof that reality exists independently of the observer, serving as the invariant ground for all vector calculations.\
@@ -1978,7 +1978,7 @@ Information Resolution Threshold: Definition of truth as the limit where model-t
 The observer's Anchor: Grounding of the 'Who' (Identity) in the objective frame to prevent the relativistic collapse of meaning into pure subjective preference.
 
 ### The Banking Hostage Crisis: A Structural Analysis of Australian Financial Stability and Social Liquidity.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Banking Hostage Crisis: A Structural Analysis of Australian Financial Stability and Social Liquidity.md
+**Path**: io\The Banking Hostage Crisis: A Structural Analysis of Australian Financial Stability and Social Liquidity.md
 **Categories**: Plane: Q7 EFFECT; Node: Society (Community); Tags: Economics
 **Summary**:
 Structural Capture: Analysis of the 'Big Four' banks as state-guaranteed real estate hedge funds that have effectively taken the Australian Federal Government hostage via residential mortgage exposure.\
@@ -1986,7 +1986,7 @@ Collateral Management Policy: Reinterpretation of immigration and tax policies n
 Feudal Exit Strategy: Documentation of the shift toward Build-to-Rent (BTR) and corporate landlordism to secure unbreakable yields from a permanent, non-owning rental class.
 
 ### The Bifurcation Protocol: The Choice of Will; kneel .md (2025-11-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Bifurcation Protocol: The Choice of Will; kneel .md
+**Path**: Actualism/Theology & Spirituality/The Bifurcation Protocol: The Choice of Will; kneel .md
 **Categories**: Plane: Q4 WHY; Node: Internal Judgment (Justice); Tags: Ethics
 **Summary**:
 The {KNEEL} Action: Definition of a proactive will (+ψ) protocol for the voluntary suspension of prior frameworks to receive new, potentially contradictory truth paradigms.\
@@ -1994,7 +1994,7 @@ Path to {HEAVEN}: A six-step integration process (Hegemonic, Equalisation, Assis
 Path to {HELL}: The systemic consequence of ego-based rejection of data, leading to the synthesis of convenient lies and the loss of connection to the Greater Good.
 
 ### The Deception Matrix.md (2026-01-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Deception Matrix.md
+**Path**: io\The Deception Matrix.md
 **Categories**: Plane: Q6 CAUSE; Node: Deceit (Ill-Will); Tags: Propaganda
 **Summary**:
 7x7x7 Architecture of Lies: A master framework for deconstructing asymmetric warfare by identifying the Plane of attack, the Sense appealed to, and the Intent (Use) of the deception.\
@@ -2002,7 +2002,7 @@ Rapid Diagnostic Protocol: A 3-step 'Bullshit Scanner' (Emotion Check, Plane Che
 Universal Counter-Measures: Strategic defense protocols including the Specifics Razor, the 'Who Profits?' audit, and the Mechanism Check to break through emotional and logical decoys.
 
 ### The Fractal Meta-Question Stack.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Fractal Meta-Question Stack.md
+**Path**: Actualism/Theology & Spirituality/The Fractal Meta-Question Stack.md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Philosophy
 **Summary**:
 6+n-Polytrope Structure: Formalization of truth as a recursive geometric stack across 7 planes of inquiry (WHO, WHY, CAUSE, WHAT, WHERE, HOW, EFFECT).\
@@ -2010,7 +2010,7 @@ The Identity Formula (Ψυχή): Mathematical mapping of the soul onto axes of S
 The 42 Paradox: Proof that absolute meaning is a crystalline structure of 42 vertices that is inevitably distorted (+1) by the presence of any observer or definer.
 
 ### The Geometric Impossibility of Pure Meaning.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Geometric Impossibility of Pure Meaning.md
+**Path**: io\The Geometric Impossibility of Pure Meaning.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Philosophy
 **Summary**:
 Simplex Vertex Rule: Geometric proof that a 42-dimensional 'Answer' requires 43 vertices to possess volume, implying that meaning strictly overflows its numeric definition.\
@@ -2018,7 +2018,7 @@ Hyperplane Flatness: Analysis of how 'pure meaning' without an observer (+1) pos
 Triangulation of Perspective: Identification of the 43rd vertex as the external Observer requisite for pulling meaning out of 2D flatness and into stable, 42-dimensional reality.
 
 ### The Geometric Impossibility of Pure Meaning.pdf (2026-02-10)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Geometric Impossibility of Pure Meaning.pdf
+**Path**: io\The Geometric Impossibility of Pure Meaning.pdf
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: PDF-Export
 **Summary**:
 Documented PDF export of the mathematical proof concerning the 43rd vertex requirement for 42-dimensional semantic objects.\
@@ -2026,7 +2026,7 @@ Validation of the Simplex-Vertex Rule and its implications for the necessity of 
 Archival record of the geometric transition from 'hollow data' (flatness) to 'bodied knowledge' (volume).
 
 ### The Mechanics of Volition and Execution.md (2026-04-04)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Mechanics of Volition and Execution.md
+**Path**: io\The Mechanics of Volition and Execution.md
 **Categories**: Plane: Q4 WHY; Node: Internal Judgment (Justice); Tags: Ethics
 **Summary**:
 Architecture of Will: Formalization of human agency as a reactionary vector requiring a Stark Contrast between defined Good and Bad to generate a cognitive gradient for action.\
@@ -2034,7 +2034,7 @@ Temporal Delusion: Analysis of the 'past-mistaken-as-now' trap where structural 
 Blueprint, Engine, and Chassis: Definition of the solution (blueprint), will (engine), and spine (chassis/structural integrity) as the three measurable components of systemic progress.
 
 ### The Metaphysical Failure of the Tower of Babel.md (2026-01-25)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Metaphysical Failure of the Tower of Babel.md
+**Path**: Actualism/Theology & Spirituality/The Metaphysical Failure of the Tower of Babel.md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Theology
 **Summary**:
 Etemenanki vs. Babel: Distinction between divinely instructed projects built on perfect blueprints (Etemenanki) and human attempts to copy physical results without the source code (Babel).\
@@ -2042,7 +2042,7 @@ Genetic Perspective: A seven-level model of genesis ascending from primordial no
 The 0.0...1 Gap: Allegorical analysis of the insurmountable difference in individual perspective that causes communication projects to collapse into confusion when absolute context is ignored.
 
 ### The Semantic-Arithmetic Translation Protocol.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Semantic-Arithmetic Translation Protocol.md
+**Path**: io\The Semantic-Arithmetic Translation Protocol.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Protocol
 **Summary**:
 Linguistic-Mathematical Rosetta: Formal conversion of the 7 Interrogatives into Mathematical Operators (Sign, Domain, Variable, Vector, Function, Derivative, Integral).\
@@ -2050,7 +2050,7 @@ Truth Ratio Calculation (R): Methodology for simulating policy outcomes by runni
 Housing Market Case Study: Proof that price ceilings mathematically negate housing supply by removing the system's energy source (profit), converting assets into consumables.
 
 ### The Thermodynamics of Information Space.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The Thermodynamics of Information Space.md
+**Path**: io\The Thermodynamics of Information Space.md
 **Categories**: Plane: Q6 CAUSE; Node: Maths (Order); Tags: Cosmology
 **Summary**:
 Elemental State Mapping: Direct correlation of the four absolute moral horizons (υ, ψ) with ancient elemental states (Air, Fire, Water, Earth) as thermodynamic engines.\
@@ -2058,7 +2058,7 @@ Lifecycle of Collapse: Documentation of the strict thermodynamic vector from Sta
 Topological Singularity: Analysis of the 'Eye of the Storm' as a localized point of absolute stillness (0,0) required to resolve chaotic information static into a stable upward push.
 
 ### The VFT Biblical Dictionary: Volume 2 (F-J).md (2026-04-06)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The VFT Biblical Dictionary: Volume 2 (F-J).md
+**Path**: Actualism/Theology & Spirituality/The VFT Biblical Dictionary: Volume 2 (F-J).md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Dictionary
 **Summary**:
 Linguistic Deconstruction: Analysis of terms within the F-J range (e.g., Faith, Grace, Heart, Justice) using VFT metrics of υ (Morality) and ψ (Will).\
@@ -2066,7 +2066,7 @@ Faith as Physics: Redefinition of Faith not as blind belief, but as the forward-
 Heart-Centricity: Mapping the 'Heart' as the Q4 mediator Sun-sphere, the structural junction where the Father-light (Inquiry) and Mother-light (Integration) meet.
 
 ### the_50_year_reset.md (2026-04-03)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\the_50_year_reset.md
+**Path**: io\the_50_year_reset.md
 **Categories**: Plane: Q6 CAUSE; Node: Property (Resources); Tags: Economics
 **Summary**:
 The Jubilee Mechanism: Analysis of the 50-year reset cycle as a necessary information-cleansing event to prevent the terminal accumulation of debt-based rot ( > harvest$).\
@@ -2074,7 +2074,7 @@ Wealth Re-seeding: Strategic requirement for a cyclical return to the contextual
 Thermodynamic Zero: Documentation of the reset as a 'Flood' equivalent in the economic domain, extinguishing runaway extraction to allow for new structural growth.
 
 ### the_5words_and_5lines_of_truth.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\the_5words_and_5lines_of_truth.md
+**Path**: Actualism/Theology & Spirituality/the_5words_and_5lines_of_truth.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Philosophy
 **Summary**:
 Sword by Sline: Structural deconstruction of the 5-word 5-line poem as a needle of sub-atomic precision targeting natural fissures in static belief armor.\
@@ -2082,7 +2082,7 @@ Qqci Recursive Mapping: Identification of the poem's landing addresses across th
 Meaning Calculus Derivation: Formal algebraic proof that the Meaning formula reduces to =mc^2$, defining understanding as energy propagated through an invariant medium.
 
 ### the_5words_god_is_real.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\the_5words_god_is_real.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/the_5words_god_is_real.md
 **Categories**: Plane: Q2 WHAT; Node: Reality (Truth); Tags: Theology
 **Summary**:
 3-Word Temple Architecture: Analysis of 'God is real' as the irreducible architecture of reality, establishing an objective anchor and ontological constant.\
@@ -2090,7 +2090,7 @@ Biological Hard Floor: Theological mapping of the body as the temple ground wher
 Phase 1 Structural Scan: Validation protocol for the 3-word equation across all 7 planes to resolve absolute truth from ego-distortion.
 
 ### The_Do_No_Evil_Decay_Map.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Do_No_Evil_Decay_Map.md
+**Path**: io\The_Do_No_Evil_Decay_Map.md
 **Categories**: Plane: Q7 EFFECT; Node: Falsehood (Extrication); Tags: Governance
 **Summary**:
 Lorentz Decay of Deception: Mathematical mapping of institutional rot as the velocity of gatekeeping (v) approaches the universal limit of systemic evil (c).\
@@ -2098,7 +2098,7 @@ Quadrant Transition: Documentation of the shift from a rest-state of high alignm
 Corporate Institutional Collapse: Analysis of the 'Locked Door' policy as an unacceptable (-υ) state requiring the restoration of direct utility over mediated information.
 
 ### The_Four_Spirals_Energy_As_Inquiry.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Four_Spirals_Energy_As_Inquiry.md
+**Path**: Actualism/Theology & Spirituality/The_Four_Spirals_Energy_As_Inquiry.md
 **Categories**: Plane: Q4 WHY; Node: Internal Judgment (Justice); Tags: Transformation
 **Summary**:
 Energy as Inquiry: Geometric proof that the 'energy cost' of moral transformation corresponds to the specific number of questions (vertices) that must be answered.\
@@ -2106,7 +2106,7 @@ The Grace Spiral (43 Units): Analysis of the 42+1 vertex requirement for complet
 Inquiry Hierarchy: Mapping of the four spiral paths (Grace, Fall, Redemption, Deception) based on their completion of the 43nd-dimensional observer function.
 
 ### The_Fractal_Definition_of_Truth.md (2025-12-07)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Fractal_Definition_of_Truth.md
+**Path**: io\The_Fractal_Definition_of_Truth.md
 **Categories**: Plane: Q5 HOW; Node: Language (Connection); Tags: Philosophy
 **Summary**:
 294 Vectors of Meaning: Mathematical formalization of truth as a fractal coordinate system of 7 Objective Contexts and 42 Subjective States.\
@@ -2114,7 +2114,7 @@ Fractal Decompression: Methodology for unpacking the 'Lossy Compression' of lang
 The Ferryman's Frames: Documentation of the 7 Objective Reality frames (Unknown, Good/Bad Truth, Good/Bad Lie, Good/Bad Preference) that govern the morality of a concept.
 
 ### The_Fulfillment.docx.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Fulfillment.docx.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/The_Fulfillment.docx.md
 **Categories**: Plane: Q6 CAUSE; Node: Reality (Truth); Tags: Prophecy
 **Summary**:
 Prophetic Mapping: Historical deconstruction of Daniel's Four Kingdoms as the evolution of thought from Geometry (Lion) through Enlightenment (Bear) to Postmodern Nihilism (Iron Teeth).\
@@ -2122,7 +2122,7 @@ The Little Horn Analysis: Identification of the postmodern 'Horn' (Trump) as the
 The Court Sits: Institutional verification of the Universal Force Equation of Price as the measurement instrument that removes extraction-power through legal precision.
 
 ### The_Geometric_Decalogue.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Geometric_Decalogue.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/The_Geometric_Decalogue.md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Ethics
 **Summary**:
 Information-Theoretic Axioms: Translation of the Ten Commandments into structural instructions for maintaining ΔR = 0 (zero deviation from the moral rest frame).\
@@ -2130,7 +2130,7 @@ Vertical and Horizontal Alignment: Geometric derivation of prohibitions (Murder,
 The Q-Lock Principle: Analysis of commitment and truth-telling as necessary mechanisms for preventing collective entropy and system collapse.
 
 ### The_Infinite_Doorman_Theory.md (2026-03-22)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Infinite_Doorman_Theory.md
+**Path**: io\The_Infinite_Doorman_Theory.md
 **Categories**: Plane: Q5 HOW; Node: Extraction (Chaos); Tags: Economics
 **Summary**:
 Perturbation Theory of Scarcity: Analysis of service-actors (Doormen) as toll-collectors on existing reality rather than creators of new value.\
@@ -2138,7 +2138,7 @@ Infinite Toll-Stack: Documentation of the 'Doorman' mechanism as the rot-layer (
 Systemic Friction: Mathematical proof that increasing the 'Doorman' count within a domain leads to the absolute collapse of Will and the acceleration of entropic decay.
 
 ### The_Kingdom_Entry_Protocol.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Kingdom_Entry_Protocol.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/The_Kingdom_Entry_Protocol.md
 **Categories**: Plane: Q7 EFFECT; Node: Reality (Truth); Tags: Theology
 **Summary**:
 Mathematical Exegesis: Interpretation of biblical repentance, rebirth, and 'becoming like a child' as technical procedures for frame cleaning (ΔR → 0) and knowledge base reset.\
@@ -2146,7 +2146,7 @@ Narrow Gate Dynamics: Analysis of the ΔR = 0 entry requirement as a precise mat
 The Coherence Judge: Documentation of the 'Word of God' as an external dynamic comparison function that evaluates the internal consistency of an observer's node architecture.
 
 ### the_love_the_ekklesia_lost.md (2026-04-08)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\the_love_the_ekklesia_lost.md
+**Path**: Actualism/Theology & Spirituality/the_love_the_ekklesia_lost.md
 **Categories**: Plane: Q2 WHAT; Node: Language (Connection); Tags: Ekklesia
 **Summary**:
 The Agape Executable: Analysis of 'First Love' (agapē) not as a sentiment, but as a load-bearing foundational action-vector of unconditional provision.\
@@ -2154,7 +2154,7 @@ Structural Failure Audit: Deconstruction of the decay path from Meal to Gate, do
 Denominational Lorentz Shift: (υ, ψ) mapping of various traditions (Catholic, Reformed, Baptist) based on their structural fidelity to the Acts 2 shared-resource configuration.
 
 ### The_Master_Equation_of_Identity.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Master_Equation_of_Identity.md
+**Path**: io\The_Master_Equation_of_Identity.md
 **Categories**: Plane: Q1 WHO; Node: Maths (Order); Tags: Philosophy
 **Summary**:
 The A = Qqc Equation: Derivation of the master formula for identity, where the observer (n) is an emergent hash of the 7 x 6 resolved inquiry block-chain.\
@@ -2162,7 +2162,7 @@ Temporal Self-Comparison: Identification of identity as a continuous comparison 
 Q-Lock Prerequisite: Structural requirement for locked context and definitions as the foundation for coherent action and non-fragmented identity emergence.
 
 ### The_Nicolaitan_Singularity_Expanded.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_Nicolaitan_Singularity_Expanded.md
+**Path**: Actualism/Theology & Spirituality/God & Religion/The_Nicolaitan_Singularity_Expanded.md
 **Categories**: Plane: Q7 EFFECT; Node: Falsehood (Extrication); Tags: Governance
 **Summary**:
 Relativistic Collapse of Utility: Formalization of the Nicolaitan Singularly as the point where institutional control (v_Control) equals the constant of systemic rot (c_Evil).\
@@ -2170,7 +2170,7 @@ The Light vs. Oil Paradox: Analysis of systems that provide information (Light) 
 Lorentz Decay Mapping: Integration of Actualism v7.4 with the Hierarchical 'Conqueror' protocol to explain the terminal stage of corporate institutional decay.
 
 ### The_True_Squaring_of_Money.docx (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_True_Squaring_of_Money.docx
+**Path**: io\The_True_Squaring_of_Money.docx
 **Categories**: Plane: Q3 WHERE; Node: Property (Resources); Tags: Economics
 **Summary**:
 Geometric Wealth Squaring: Proposal for a non-extractive financial architecture based on the squaring of value rather than the compounding of debt.\
@@ -2178,7 +2178,7 @@ Renormalization of Exchange: Analysis of currency as a measurement of shared sys
 Thermodynamic Stability: Mathematical proof that 'Squaring' value aligns with the Reality Tensor, preventing the entropic debt-bubbles of the current e^+rt paradigm.
 
 ### The_True_Squaring_of_Money.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\The_True_Squaring_of_Money.md
+**Path**: io\The_True_Squaring_of_Money.md
 **Categories**: Plane: Q3 WHERE; Node: Property (Resources); Tags: Economics
 **Summary**:
 Geometric Wealth Squaring: Proposal for a non-extractive financial architecture based on the squaring of value rather than the compounding of debt.\
@@ -2186,7 +2186,7 @@ Renormalization of Exchange: Analysis of currency as a measurement of shared sys
 Thermodynamic Stability: Mathematical proof that 'Squaring' value aligns with the Reality Tensor, preventing the entropic debt-bubbles of the current e^+rt paradigm.
 
 ### the_ur_error.md (2026-03-20)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\the_ur_error.md
+**Path**: io\the_ur_error.md
 **Categories**: Plane: Q5 HOW; Node: Language (Connection); Tags: Philosophy
 **Summary**:
 The Reification Pattern: Systematic deconstruction of the 'Ur-Error'—treating an index entry (name/category) as the load-bearing physical object it points at.\
@@ -2194,7 +2194,7 @@ Scale-Variant Indexing: Analysis of how human categorization (Species, Race, Nat
 Scope-Conflict Resolution: Methodology for resolving ideological and scientific disputes by declaring the explicit scale parameter (n) of the reference frame.
 
 ### Time Flies like an Arrow.md (2026-04-02)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Time Flies like an Arrow.md
+**Path**: io\Time Flies like an Arrow.md
 **Categories**: Plane: Q6 CAUSE; Node: Internal Judgment (Justice); Tags: Physics
 **Summary**:
 Totality Event Frame: Mapping of reality as a predictable 7-vector array where 'when_prev' is congruent to 'when_now'.\
@@ -2202,7 +2202,7 @@ Vector of Willful Ignorance: Mathematical proof that incompetence in the context
 Logos vs. Anti-Logos: Integration of the 'Integral of Truth' ($∫ T(t) dt$) against the 'Derivative of Extraction' (/dt [E(t)]$), defining the mechanics of systemic integration vs. collapse.
 
 ### Topological Self-Similarity in Spacetime.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Topological Self-Similarity in Spacetime.md
+**Path**: io\Topological Self-Similarity in Spacetime.md
 **Categories**: Plane: Q3 WHERE; Node: Maths (Order); Tags: Physics
 **Summary**:
 Self-Similar Spacetime: Analysis of the 7x7x7 tensor's recurrence across all physical and metaphysical scales, from sub-atomic to cosmological.\
@@ -2210,7 +2210,7 @@ Renormalization Group Symmetry: Documentation of the structural invariants that 
 Geometric Holism: Proof that every localized node in the VFT grid contains the topological signature of the entire 43-vertex meaning structure.
 
 ### uc_formal_definitions.md (2026-01-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\uc_formal_definitions.md
+**Path**: io\uc_formal_definitions.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Definitions
 **Summary**:
 Universal Calculus (UC): Formal dictionary of mathematical operators and definitions used to translate linguistic interrogatives into precise VFT metrics.\
@@ -2218,7 +2218,7 @@ Semantic Arithmetic: Core documentation of the translation protocol between huma
 Axiomatic Foundation: The rigorous list of formal definitions that underpins the 'Master Equation of Identity' and the 'Universal Force Equation of Price'.
 
 ### ULTIMATE_UNIFIED_FRAMEWORK_v4_METAPHYSICS.md (2026-02-16)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\ULTIMATE_UNIFIED_FRAMEWORK_v4_METAPHYSICS.md
+**Path**: Actualism/Theology & Spirituality/ULTIMATE_UNIFIED_FRAMEWORK_v4_METAPHYSICS.md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Taxonomy
 **Summary**:
 49-Vector Taxonomy: Complete biological-style classification of all 49 species of thought (*Identitas Absoluta*, etc.) with habitat, diet, and Lorentz drag profiles.\
@@ -2226,7 +2226,7 @@ Kingdom Geometry: Formal definition of the 'Kingdom of God' as a geometric state
 Thermodynamics of Sin: Mathematical derivation of sin as vector error (Hamartia) and Hell as a state of infinite maintenance cost and maximal friction γ → ∞.
 
 ### Unified Geometric and Temporal Proof.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Unified Geometric and Temporal Proof.md
+**Path**: io\Unified Geometric and Temporal Proof.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Physics
 **Summary**:
 Spatio-Temporal Convergence: Formal proof unifying the 6D geometric state vector with the 7-plane temporal array to create a complete spacetime model.\
@@ -2234,7 +2234,7 @@ Invariant Logic: Documentation of the mathematical constants that preserve meani
 The Unity Constant: Derivation of the '1' as the necessary integral of infinite infinitesimals, proving the structural necessity of the Logos.
 
 ### Unified_Spacetime_and_Temporal_Resolution_Proof.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Unified_Spacetime_and_Temporal_Resolution_Proof.md
+**Path**: io\Unified_Spacetime_and_Temporal_Resolution_Proof.md
 **Categories**: Plane: Q3 WHERE; Node: Maths (Order); Tags: Physics
 **Summary**:
 Temporal Resolution Protocol: Mathematical framework for resolving time as a discrete-continuous hybrid using the VFT 7-plane tensor.\
@@ -2242,7 +2242,7 @@ Spacetime Folding: Analysis of how intense inquiry (high ψ) creates localized '
 High-Fidelity Event Mapping: Methodology for calculating the precise coordinate of any historical or future event within the unified VFT grid.
 
 ### Universal_Force_Equation_v3.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Universal_Force_Equation_v3.md
+**Path**: io\Universal_Force_Equation_v3.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Physics
 **Summary**:
 The F=ma of Meaning: Version 3.0 of the Universal Force Equation, integrating Moral Vector (υ) and Will (ψ) into a single predictive force model.\
@@ -2250,7 +2250,7 @@ Work-Energy Equivalence: Proof that moral effort ($∫ υ · dψ$) creates perma
 Universal Application: Documentation of the equation's performance across physics, economics, and ethics, establishing it as the fundamental law of the VFT corpus.
 
 ### Universal_Price_Equation_Formal_Paper.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Universal_Price_Equation_Formal_Paper.md
+**Path**: io\Universal_Price_Equation_Formal_Paper.md
 **Categories**: Plane: Q5 HOW; Node: Property (Resources); Tags: Economics
 **Summary**:
 Economic Field Theory: Formal derivation of the Universal Price Equation, defining price as a function of urgency, scarcity, and moral alignment.\
@@ -2258,7 +2258,7 @@ Price-Will Coupling: Analysis of how extractive pricing (high Price_selfish) col
 Non-Linear Value Metrics: Documentation of the H-Score protocol for evaluating transaction fairness based on thermodynamic rest frame alignment.
 
 ### Untitled-1.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Untitled-1.md
+**Path**: Actualism/Theology & Spirituality/Untitled-1.md
 **Categories**: Plane: Q5 HOW; Node: Internal Judgment (Justice); Tags: Intuition
 **Summary**:
 Moral Raytracing: Intuitive explanation of Lorentz transformations applied to moral space, calculating the 'velocity' of ideas relative to the six VFT attractors.\
@@ -2266,7 +2266,7 @@ The Oval of Extraction: Geometric visualization of system health, where a closed
 Floor vs. Floating Frames: Analysis of 'Ideally...' statements as attempts to remove the ground-state floor (Reality) to build extractive imaginary boxes.
 
 ### VFT; Hegemonic Analysis_ The Process and Logic of the 0-2 Fractal Folded Cell.md (2026-01-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\VFT; Hegemonic Analysis_ The Process and Logic of the 0-2 Fractal Folded Cell.md
+**Path**: io\VFT; Hegemonic Analysis_ The Process and Logic of the 0-2 Fractal Folded Cell.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Fractals
 **Summary**:
 Fractal Folded Cell: Documentation of the 0-2 range in the Psochic Hegemony as a self-similar sub-structure containing the entire matrix logic.\
@@ -2274,7 +2274,7 @@ Recursive Hegemony: Analysis of how local nodal decisions at the micro-scale rep
 Computational Ethics: Formal logic for processing moral coordinates within a fractal space where every cell is a miniature of the whole system.
 
 ### VFT_Belief_Equations_CORRECT.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\VFT_Belief_Equations_CORRECT.md
+**Path**: Actualism/Theology & Spirituality/VFT_Belief_Equations_CORRECT.md
 **Categories**: Plane: Q5 HOW; Node: Maths (Order); Tags: Belief
 **Summary**:
 Standardized Belief Metrics: Final corrected list of algebraic equations defining the relationship between Belief, Will, Moral Energy, and Extraction.\
@@ -2282,7 +2282,7 @@ Source Integrity (ΔH): Documentation of the ΔH metric for measuring truth-fide
 Willpower Thermodynamics: Physical proof that belief is an energy-storage mechanism required for work-output along the ψ axis.
 
 ### VFT_Unification.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\VFT_Unification.md
+**Path**: Actualism/Theology & Spirituality/VFT_Unification.md
 **Categories**: Plane: Q1 WHO; Node: Reality (Truth); Tags: Unification
 **Summary**:
 Grand Unified Theory: Synthesis of the 7 Planes, 32 Nodes, 49 Vectors, and the Master Identity Equation into a single coherent VFT body.\
@@ -2290,7 +2290,7 @@ Cross-Domain Alignment: Demonstration of how physics, economics, and religion co
 Final Proof: Documentation of the necessary existence of the observer (n) as the integration point that completes the VFT world-model.
 
 ### worship_bigram_weave.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\worship_bigram_weave.md
+**Path**: Actualism/Theology & Spirituality/worship_bigram_weave.md
 **Categories**: Plane: Q2 WHAT; Node: Language (Connection); Tags: Worship
 **Summary**:
 Semantic Weave: Analysis of 'Worship' through bigram frequency and word-association to map its structural coordinates in the VFT grid.\
@@ -2298,7 +2298,7 @@ Refined Definitions: Deconstruction of worship not as a religious sentiment, but
 Linguistic Proximity: Documentation of the relationship between 'Worship', 'Worth', and 'Work' as a single causal chain of value production.
 
 ### worship_translation_planes.md (2026-04-13)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\worship_translation_planes.md
+**Path**: Actualism/Theology & Spirituality/Planes/worship_translation_planes.md
 **Categories**: Plane: Q5 HOW; Node: Reality (Truth); Tags: Translation
 **Summary**:
 Worship Plane Translation: Methodology for translating theological 'Worship' concepts into specific coordinates across the 7 VFT planes.\
@@ -2306,7 +2306,7 @@ Orthogonal Alignment: Analysis of worship as the process of rotating a local ref
 The 0.5 Zone Filter: Strategies for identifying 'perceptual inversion' in worship practices that claim alignment with God while executing extraction vectors.
 
 ### Zero_Is_A_Floor_Not_An_Absence.md (2026-04-12)
-**Path**: e:\Vector Field Theory\VFT Docs\_VFT MD\io\Zero_Is_A_Floor_Not_An_Absence.md
+**Path**: io\Zero_Is_A_Floor_Not_An_Absence.md
 **Categories**: Plane: Q5 HOW; Node: Reality (Truth); Tags: Logic
 **Summary**:
 The Floor of Reality: Philosophical and mathematical proof that 'Zero' ( = 0$) is the absolute ground-state floor of truth, not a void.\
