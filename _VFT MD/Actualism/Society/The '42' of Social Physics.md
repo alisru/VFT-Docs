@@ -1,4 +1,4 @@
-## ![](media/image1.png){width="6.5in" height="4.333333333333333in"} The '42' of Social Physics
+## -ψ The '42' of Social Physics
 
 The framework presented here is not a unifying theory of social interaction, but rather a foundational **definition of definitions**. It provides the first principles and core concepts upon which a complete understanding can be built. It can be understood as the "42 of Social Physics," a reference to the answer to the ultimate question in "The Hitchhiker's Guide to the Galaxy." The system is defined by a simple, powerful structure:
 

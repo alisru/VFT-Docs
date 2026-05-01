@@ -12,9 +12,9 @@ The Desert represents the **Neutral Absolute**. It listens to the Observer with 
 
 Why is the lie \"I have enough sustenance\" so lethal?
 
-In Vector Field Theory, we define the Observer as a node of **Receptivity**. Your survival depends on the **Input Vector (**![](media/image3.png){width="0.11539698162729659in" height="0.2517749343832021in"}**)**---the flow of energy, truth, and resources from the Field into your system.
+In Vector Field Theory, we define the Observer as a node of **Receptivity**. Your survival depends on the **Input Vector (**u**)**---the flow of energy, truth, and resources from the Field into your system.
 
-When you stand in a state of deficit (Thirst) but use your **Will (**![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"}**)** to project a state of surplus (\"I am full\"), you are performing a **Subjective Inversion**. You are rewriting the local coordinates of your reality.
+When you stand in a state of deficit (Thirst) but use your **Will (**ψ**)** to project a state of surplus (\"I am full\"), you are performing a **Subjective Inversion**. You are rewriting the local coordinates of your reality.
 
 1.  **The Signal Jam:** By stating \"I have enough,\" you effectively zero out your Receptivity Vector. You tell the Field, \"My capacity for intake is full.\"
 
@@ -26,9 +26,9 @@ When you stand in a state of deficit (Thirst) but use your **Will (**![](media/i
 
 Maintaining this lie is not passive; it is an act of high-energy output. This is the **Thermodynamics of Denial**.
 
-To feel thirsty but claim satisfaction requires a constant application of **Suppressive Will (**![](media/image1.png){width="0.29541010498687664in" height="0.25320866141732284in"}**)**. You must build a psychological dam to hold back the screaming neurons of your own biology. This consumes your remaining energy. You are not only dying of thirst; you are exhausting yourself by *pretending* you aren\'t.
+To feel thirsty but claim satisfaction requires a constant application of **Suppressive Will (**-ψ**)**. You must build a psychological dam to hold back the screaming neurons of your own biology. This consumes your remaining energy. You are not only dying of thirst; you are exhausting yourself by *pretending* you aren\'t.
 
-This is the **Hypocrisy Gap (**![](media/image5.png){width="0.3520505249343832in" height="0.2485061242344707in"}**)**. The wider the gap between your internal reality (Parched) and your external projection (Saturated), the more structural integrity is required to keep the lie from collapsing. Eventually, the **Law of Necessity** overrides the Will. The dam breaks. But in the Desert, if the dam breaks too late, there is nothing left to salvage.
+This is the **Hypocrisy Gap (**ψ,v**)**. The wider the gap between your internal reality (Parched) and your external projection (Saturated), the more structural integrity is required to keep the lie from collapsing. Eventually, the **Law of Necessity** overrides the Will. The dam breaks. But in the Desert, if the dam breaks too late, there is nothing left to salvage.
 
 ### 04. The Hierarchy of Consequence
 
@@ -36,11 +36,11 @@ The document *Vector Field Theory: The Theory of Everything* references the numb
 
 There is a hierarchy of Truth. A \"Social Lie\" (lying to a friend about being fine) has a low gravity; the consequences are emotional. A \"Physical Lie\" (lying to the Desert about hydration) has a massive gravity; the consequences are existential.
 
-The Desert forces the Observer to confront the **Unitary Truth (**![](media/image6.png){width="0.2578127734033246in" height="0.2371872265966754in"}**)**.
+The Desert forces the Observer to confront the **Unitary Truth ($1.0$)**.
 
-- **Truth (**![](media/image6.png){width="0.2578127734033246in" height="0.2371872265966754in"}**):** \"I am empty. I need.\" This aligns the Observer with the Vector of Need, opening the possibility of Reception.
+- **Truth ($1.0$):** \"I am empty. I need.\" This aligns the Observer with the Vector of Need, opening the possibility of Reception.
 
-- **Delusion (**![](media/image4.png){width="0.47070319335083116in" height="0.24058180227471565in"}**):** \"I am full.\" This misaligns the Observer, creating a friction coefficient of infinity against reality.
+- **Delusion ($< 1.0$):** \"I am full.\" This misaligns the Observer, creating a friction coefficient of infinity against reality.
 
 ### 05. Conclusion: The Metabolic Necessity of Humility
 

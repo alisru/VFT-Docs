@@ -272,7 +272,7 @@ The "Law of Politeness" dictates that social cohesion requires minimizing fricti
 
 - **The Trap:** By responding to "Jungle Behavior" (Dominance) with "Polite Behavior" (Reason), the Compliant look weak. The Vanguard screams; the Compliant whispers. The Vanguard attacks; the Compliant explains.
 
-- **The Result:** The public, sensing the energy differential, perceives the Vanguard as the "Alpha" (High Will +![](media/image1.png){width="0.1385094050743657in" height="0.25570975503062116in"}) and the Compliant as the "Beta" (Low Will -![](media/image1.png){width="0.1385094050743657in" height="0.25570975503062116in"}). The Vanguard uses the opponent's own adherence to rules as a straitjacket. He counts on their civility to protect his barbarism.
+- **The Result:** The public, sensing the energy differential, perceives the Vanguard as the "Alpha" (High Will +ψ) and the Compliant as the "Beta" (Low Will -ψ). The Vanguard uses the opponent's own adherence to rules as a straitjacket. He counts on their civility to protect his barbarism.
 
 #### 8.2 Exploiting Axis 4: The Entropy Engine (Noise vs. Signal)
 

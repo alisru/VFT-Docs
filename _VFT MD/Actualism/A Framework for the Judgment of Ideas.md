@@ -26,7 +26,7 @@
 | #  (Ruling Principle of the Mind)                        | # (Tàijí Dào Tú)                           |
 +==========================================================+============================================+
 
-![](media/image1.jpg){width="6.765625546806649in" height="6.336742125984252in"}
+![The Psochic Hegemony: The Scales of Understanding and Misunderstanding](media/image1.jpg)
 
 # 
 
@@ -222,7 +222,7 @@ By answering these questions, you can place the idea in one of four quadrants: T
 
 ### Part 4: The Helxis Tensor — Identifying Deception
 
-![](media/image2.jpg){width="6.5in" height="6.055555555555555in"}
+![Harmonia Tensor — Attraction, Helxis Tensor](media/image2.jpg)
 
 Hostile or selfish ideas are rarely presented honestly. They are framed to appear attractive and morally righteous, a "literal trick" to bypass your critical judgment. This is the **Attraction, Helxis Tensor** at work: an idea is disguised to appear within your own worldview.
 

@@ -166,7 +166,7 @@ We will map the 7 Sins to the 7 Planes:
 
 ## **3. Synthesis: The Hegemony 7-Axis Map**
 
-The 7 Sins and Virtues are not random moral rules; they are coordinates in a geometric system. We map them using the **Hegemony Vectors** (![](media/image1.png){width="0.11621062992125984in" height="0.2535498687664042in"} = Morality/Benefit, ![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"} = Will/Action) onto the 4-Dimensional Axis of Reality.
+The 7 Sins and Virtues are not random moral rules; they are coordinates in a geometric system. We map them using the **Hegemony Vectors** (υ = Morality/Benefit, ψ = Will/Action) onto the 4-Dimensional Axis of Reality.
 
 ### **THE DRIVER (The Emergent Axis)**
 
@@ -174,7 +174,7 @@ The 7 Sins and Virtues are not random moral rules; they are coordinates in a geo
 
 - **Virtue:** Humility (The Origin Point).
 
-- **Vector:** **Union (+**![](media/image1.png){width="0.11621062992125984in" height="0.2535498687664042in"}**, +**![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"}**)**. High Will aligned with High Universal Benefit.
+- **Vector:** **Union (+**υ**, +**ψ**)**. High Will aligned with High Universal Benefit.
 
 - **Function:** This is the "Driver" because all other coordinates depend on the Identity of the actor. If the "Who" is corrupted (Pride/Ego), every other axis distorts. Humility aligns the Self with Reality (t), allowing the system to drive forward.
 
@@ -184,7 +184,7 @@ The 7 Sins and Virtues are not random moral rules; they are coordinates in a geo
 
 - **Virtue:** Charity (Active Flow).
 
-- **Vector:** **Distribution (+**![](media/image1.png){width="0.11621062992125984in" height="0.2535498687664042in"}**)**.
+- **Vector:** **Distribution (+**υ**)**.
 
 - **Function:** This is the **Input**. It represents the flow of resources/history *into* the system. Charity ensures the input is distributed (River), not hoarded (Dam).
 
@@ -192,7 +192,7 @@ The 7 Sins and Virtues are not random moral rules; they are coordinates in a geo
 
 - **Virtue:** Chastity (Wholeness).
 
-- **Vector:** **Protection (+**![](media/image1.png){width="0.11621062992125984in" height="0.2535498687664042in"}**, -**![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"}**)**.
+- **Vector:** **Protection (+**υ**, -**ψ**)**.
 
 - **Function:** This is the **Output/Consequence**. It represents the emotional impact on the Other. Chastity protects the "Other" from being consumed as a mere effect of your desire.
 
@@ -202,7 +202,7 @@ The 7 Sins and Virtues are not random moral rules; they are coordinates in a geo
 
 - **Virtue:** Diligence (Faith/Action).
 
-- **Vector:** **Proactive Will (+**![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"}**)**.
+- **Vector:** **Proactive Will (+**ψ**)**.
 
 - **Function:** This is **Expansion**. It represents the force of definition—taking the empty void of "what could be" and forcing it into "what is." Diligence creates reality.
 
@@ -210,7 +210,7 @@ The 7 Sins and Virtues are not random moral rules; they are coordinates in a geo
 
 - **Virtue:** Temperance (Matter/Distance).
 
-- **Vector:** **Sustainability (+**![](media/image1.png){width="0.11621062992125984in" height="0.2535498687664042in"}**, Balanced** ![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"}**)**.
+- **Vector:** **Sustainability (+**υ**, Balanced** ψ**)**.
 
 - **Function:** This is **Constraint**. It deals with finite space and matter. Temperance ensures that the expansion (+x) does not strip-mine the location (-x).
 
@@ -220,7 +220,7 @@ The 7 Sins and Virtues are not random moral rules; they are coordinates in a geo
 
 - **Virtue:** Kindness (Resonance).
 
-- **Vector:** **Harmony (+**![](media/image1.png){width="0.11621062992125984in" height="0.2535498687664042in"}**, +**![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"}**)**.
+- **Vector:** **Harmony (+**υ**, +**ψ**)**.
 
 - **Function:** This is **Meaning**. It is the vibration of the system. Kindness ensures the frequency is harmonic (music) rather than dissonant (noise/envy).
 
@@ -228,6 +228,6 @@ The 7 Sins and Virtues are not random moral rules; they are coordinates in a geo
 
 - **Virtue:** Patience (Consistency).
 
-- **Vector:** **Order (+**![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"} **as Stability)**.
+- **Vector:** **Order (+**ψ **as Stability)**.
 
 - **Function:** This is **Structure**. It represents the rules and timing of the system. Patience aligns the human timeline with the Universal timeline (Order).

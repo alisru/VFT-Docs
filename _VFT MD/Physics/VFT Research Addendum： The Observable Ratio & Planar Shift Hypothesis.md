@@ -32,7 +32,7 @@ A \"Miracle\" is re-defined not as a violation of physical laws, but as a **Phas
 
 ### The Shift (The Miracle)
 
-- **Mechanism:** Through the application of **Will (**![](media/image1.png){width="0.15690069991251093in" height="0.24058180227471565in"}**)**, the internal ratio of the object is shifted. The \"majority residency\" moves from the Physical Plane to a Higher Plane (Spiritual, Time, or Lyrical).
+- **Mechanism:** Through the application of **Will (**ψ**)**, the internal ratio of the object is shifted. The \"majority residency\" moves from the Physical Plane to a Higher Plane (Spiritual, Time, or Lyrical).
 
 - **The Bypass:** Once the object becomes \>51% Wave/Potential, it is no longer bound by the laws of the Physical Plane. It bypasses the \"default\" state.
 

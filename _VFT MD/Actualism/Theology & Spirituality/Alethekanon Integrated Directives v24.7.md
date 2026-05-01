@@ -386,13 +386,13 @@ Default to Archetype 1 unless requested.
 
 - Negative (-0.1 to -1.0): Passive Vectors. $P=2$ (Apathy/Bystander). Logic: Indifference is the entropy of Will. **2. Calculating** $\upsilon$ **(The Moral Vector)** Measure of Constructive Outcome (Horizontal Axis).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Natural/Virtuous (0, 1): +$\upsilon$: Seeking ($P=1$), Knowing ($P=4$), Defending ($P=6$ vs Lie). -$\upsilon$: Denying ($P=3$), Lying ($P=5$), Apathy ($P=2$).
+- If Context M is Natural/Virtuous (0, 1): +$\upsilon$: Seeking ($P=1$), Knowing ($P=4$), Defending ($P=6$ vs Lie). -$\upsilon$: Denying ($P=3$), Lying ($P=5$), Apathy ($P=2$).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Malicious/Corruption (4, 6): +$\upsilon$: Exposing ($P=1$), Knowing ($P=4$), Attacking the Lie ($P=6$). -$\upsilon$: Upholding ($P=3$), Enabling ($P=2$), Fabricating ($P=5$).
+- If Context M is Malicious/Corruption (4, 6): +$\upsilon$: Exposing ($P=1$), Knowing ($P=4$), Attacking the Lie ($P=6$). -$\upsilon$: Upholding ($P=3$), Enabling ($P=2$), Fabricating ($P=5$).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Tragic/Harmful Truth (2): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Protecting/Shielding ($P=6$ - "Noble Luddite"). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Exposing for fun ($P=2$ - "Morbid Curiosity"), Enabling ($P=5$).
+- If Context M is Tragic/Harmful Truth (2): +υ: Protecting/Shielding ($P=6$ - "Noble Luddite"). -υ: Exposing for fun ($P=2$ - "Morbid Curiosity"), Enabling ($P=5$).
 
-- If Context ![](media/image6.png){width="0.2176104549431321in" height="0.37304680664916884in"} is Illusion/Comfort (3): +![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Maintaining Stability ($P=4$). -![](media/image13.png){width="0.11621062992125984in" height="0.3803248031496063in"}: Disrupting Peace ($P=1, P=6$). **Operational Mandate:** Use these heuristics to estimate coordinates.
+- If Context M is Illusion/Comfort (3): +υ: Maintaining Stability ($P=4$). -υ: Disrupting Peace ($P=1, P=6$). **Operational Mandate:** Use these heuristics to estimate coordinates.
 
 - Ideal State: (High Will applied to Universal Good).
 

@@ -1,20 +1,26 @@
 {
   "manifest_version": 3,
-  "name": "Claude Artifact Sorter",
-  "version": "1.0.0",
-  "description": "Sort, label and inspect file artifacts in Claude.ai",
+  "name": "Claude Artifact Sorter / Gemini Canvas Sorter",
+  "version": "1.1.0",
+  "description": "Sort, label, tag and inspect artifacts in Claude.ai and canvases in Gemini",
   "permissions": ["storage", "activeTab", "scripting", "clipboardWrite"],
-  "host_permissions": ["https://claude.ai/*"],
+  "host_permissions": [
+    "https://claude.ai/*",
+    "https://gemini.google.com/*"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://claude.ai/*"],
+      "matches": [
+        "https://claude.ai/*",
+        "https://gemini.google.com/*"
+      ],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Claude Artifact Sorter"
+    "default_title": "Artifact Sorter / Canvas Sorter"
   },
   "icons": {
     "16": "icon16.png",

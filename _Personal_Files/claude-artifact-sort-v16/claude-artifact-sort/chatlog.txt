@@ -1,0 +1,35 @@
+# Claude Artifact Sorter (CAS) - Session Log (2026-04-16)
+
+## Overview
+This session focused on the transition of the Claude Artifact Sorter (CAS) into a hierarchical, VFT-aligned research tool. Key milestones included the implementation of a 16-category tagging system, stability fixes for sidebar reordering, and deep UI integration of VFT metadata.
+
+## Key Technical Milestones
+
+### 1. Hierarchical VFT Tagging
+- **VFT Integration**: Injected 16 category definitions (Logic, spirituality, Religion, Cognition, etc.) into the AI analysis prompt.
+- **Recursive Prompting**: Updated `performSummarise` and `buildFlyoutPrompt` to elicit 2-4 semi-regular tags per artifact/topic.
+- **Cross-Surface Rendering**: Tags are now displayed as color-coded badges in:
+    - The main CAS Panel list.
+    - The native Claude Artifact Sidebar (injected directly into cards).
+    - The Project Tab's expanded chat view.
+
+### 2. Functional Fixes
+- **Sidebar Reordering**: Fixed the logic in `applySort` to correctly identify the parent container of Claude's artifact cards. Cards now physically move within the Claude DOM to match the user's sort selection.
+- **Highlighting Loop**: Enhanced `highlightNode` to provide a clear visual glow and border when an artifact is selected, supporting both sidebar and chat-flow contexts.
+- **Sorting Stability**: Removed a redundant re-scan loop that was causing sorted lists to revert to original DOM order.
+
+### 3. UI Refinements
+- **Search Engine**: Updated the search filter to include tag names, allowing for conceptual retrieval (e.g., searching "Politics").
+- **Flyout Stability**: Fixed the Admin & Nav panel layout to ensure expanded controls push content down rather than overlaying it.
+
+## System Configuration Updates
+- **Storage Keys**: Unified `cas_tags` and `cas_summaries` under project-aware keys (`proj_ID/chat_ID_...`).
+- **Prompt Logic**: Tagging prompts are now conditional, triggering only when "Tags only" or "Both" modes are selected to optimize token usage.
+
+## Next Steps
+1.  **Regression Testing**: Verify high-density tagging in long conversations (>50 artifacts).
+2.  **Metadata Expansion**: Implement date-updated tracking and fake versioning logic.
+3.  **Gemini Port**: Begin mapping CAS logic to the Gemini Canvas selectors once Claude stability is confirmed.
+
+---
+*Created by Antigravity AI - Advanced Agentic Coding*

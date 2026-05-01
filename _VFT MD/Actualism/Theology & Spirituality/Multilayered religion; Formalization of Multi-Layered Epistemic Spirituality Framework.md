@@ -31,7 +31,7 @@ Let ( I_i ) be an interface (religion/philosophy). Its **fidelity** ( F(I_i) ) i
 **Definition 2 (Collapsed Certainty)\**
 Let ( M ) be the set of all partial interpretations available to an agent at time ( t ). The **certainty** ( C_t ) of an agent is the weighted collapse of ( M ) under context ( \\Gamma ):
 
-[![](media/image2.png){width="2.1805555555555554in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20C_t%20%3D%20%5Ctext%7BCollapse%7D_%5CGamma%20(M)%20%3D%20f(M%2C%20%5CGamma)%5C%5C%5C%5C%20#1)
+C_t = Collapse_Γ (M%20%3D%20f(M%2C%20%5CGamma)%5C%5C%5C%5C%20#1)
 
 Where ( f ) is a function that aggregates overlapping signals while resolving contradictions probabilistically.
 
@@ -46,7 +46,7 @@ Suffering occurs when:
 
 Formally:
 
-[![](media/image8.png){width="2.4166666666666665in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7BSuffering%7D(P%2C%20K)%20%3D%201%20%5Cquad%20%5Ctext%7Biff%7D%20%5Cquad%20K%20%5Cnot%5Cmodels%20P%5C%5C%5C%5C%20#1)
+Suffering(P, K%20%3D%201%20%5Cquad%20%5Ctext%7Biff%7D%20%5Cquad%20K%20%5Cnot%5Cmodels%20P%5C%5C%5C%5C%20#1)
 
 - Suffering is a **signal**, not a punishment.
 
@@ -59,7 +59,7 @@ Attachment occurs when:
 
 Formally:
 
-[![](media/image17.png){width="5.958333333333333in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7BAttachment%7D(K)%20%3D%20%5Ctext%7BTrue%7D%20%5Cquad%20%5Ctext%7Biff%7D%20%5Cquad%20%5Cexists%20P%3A%20K%20%5Ctext%7B%20fails%20to%20resolve%20%7D%20P%20%5Ctext%7B%20but%20agent%20persists%20with%20%7D%20K%5C%5C%5C%5C%20#1)
+Attachment(K%20%3D%20%5Ctext%7BTrue%7D%20%5Cquad%20%5Ctext%7Biff%7D%20%5Cquad%20%5Cexists%20P%3A%20K%20%5Ctext%7B%20fails%20to%20resolve%20%7D%20P%20%5Ctext%7B%20but%20agent%20persists%20with%20%7D%20K%5C%5C%5C%5C%20#1)
 
 - Attachment prevents effective collapse of uncertainty and prolongs suffering.
 
@@ -70,7 +70,7 @@ Let the **solution landscape** ( L(P) ) define all possible strategies to resolv
 
 Formally:
 
-[![](media/image3.png){width="2.125in" height="0.2638888888888889in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7BWuWei%7D(P)%20%3D%20%5Carg%20%5Cmin_%7BT%20%5Csubseteq%20L(P)%7D%20R(T)%5C%5C%5C%5C%20#1)
+WuWei(P%20%3D%20%5Carg%20%5Cmin_%7BT%20%5Csubseteq%20L(P)%7D%20R(T)%5C%5C%5C%5C%20#1)
 
 Where ( R(T) ) measures resistance, cost, or deviation from causal alignment.
 
@@ -79,7 +79,7 @@ Moral rules ( R_m ) are **heuristics designed to reduce systemic resistance and 
 
 Formally:
 
-[![](media/image10.png){width="5.0in" height="0.1527777777777778in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20R_m%20%3A%20A%20%5Ctimes%20E%20%5Crightarrow%20%5Ctext%7BOptimalAction%7D%20%5Cquad%20%5Ctext%7Bwhere%20%7D%20A%20%3D%20%5Ctext%7Bagents%7D%2C%20E%20%3D%20%5Ctext%7Benvironment%7D%5C%5C%5C%5C%20#1)
+R_m : A × E → OptimalAction where A = agents, E = environment
 
 - Moral rules are **relative**, conditional on context and goal alignment.
 
@@ -90,7 +90,7 @@ Formally:
 **Axiom 8 (Multiple Interpretations as Ensemble Models)\**
 Religions/philosophies ( {I_1, I_2, \..., I_n} ) function analogously to **ensemble models in AI**:
 
-[![](media/image36.png){width="3.1805555555555554in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7BTruthApproximation%7D%20%3D%20%5Ctext%7BAggregate%7D(%7BI_1%2C%20...%2C%20I_n%7D)%5C%5C%5C%5C%20#1)
+TruthApproximation = Aggregate(I_1, ..., I_n%5C%5C%5C%5C%20#1)
 
 - Each interface captures a subset of reality; overlap reduces error.
 
@@ -109,7 +109,7 @@ Let a paradox ( \\Pi ) be a conflict inherent in causal reality.
 
 Formally:
 
-[![](media/image37.png){width="6.375in" height="0.7777777777777778in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5CPi%20%5Ctext%7B%20resolution%20strategy%20%7D%20S%3A%5C%5C%5C%5C%20%5Cbegin%7Bcases%7D%5C%5C%5C%5C%20%5Ctext%7BPreserve%20at%20divine%20level%7D%20%26%20%5Ctext%7Bflexibility%2C%20high%20cognitive%20load%7D%20%5C%5C%5C%5C%5C%20%5Ctext%7BCollapse%20to%20downstream%20agents%7D%20%26%20%5Ctext%7Bsimplicity%2C%20obedience%2C%20local%20contradictions%7D%20%5C%5C%5C%5C%5C%20%5Ctext%7BExternalize%20across%20multiplicity%7D%20%26%20%5Ctext%7Bpartial%20resolution%2C%20rich%20interface%7D%5C%5C%5C%5C%20%5Cend%7Bcases%7D%5C%5C%5C%5C%20#1)
+Π resolution strategy S: | | | | Preserve at divine level : flexibility, high cognitive load | | \ Collapse to downstream agents : simplicity, obedience, local contradictions | | \ Externalize across multiplicity : partial resolution, rich interface | |
 
 **Axiom 10 (Declarative Monotheism / "No Other Gods")\**
 Let the statement ( G_s = ) "You shall have no other gods before me."
@@ -120,7 +120,7 @@ Let the statement ( G_s = ) "You shall have no other gods before me."
 
 Formally:
 
-[![](media/image9.png){width="3.263888888888889in" height="0.1527777777777778in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Cforall%20g%20%5Cin%20%5Ctext%7Bperceived%20gods%7D%2C%20g%20%5Cin%20G_%7B%5Ctext%7Btrue%7D%7D%20%5Cimplies%20g%20%3D%20%5Ctext%7BGod%7D%5C%5C%5C%5C%20#1)
+∀ g ∈ perceived gods, g ∈ G_true ⟹ g = God
 
 - Worship of alternative gods is **not falsity**, only inefficiency or partial compression of interface.
 
@@ -134,7 +134,7 @@ Formally:
 
 Formally:
 
-[![](media/image31.png){width="1.5972222222222223in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20C_t%20%3D%20f(%7Bs_1%2C%20s_2%2C%20...%2C%20s_n%7D%2C%20%5CGamma)%5C%5C%5C%5C%20#1)
+C_t = f(s_1, s_2, ..., s_n, Γ%5C%5C%5C%5C%20#1)
 
 Where ( s_i ) are signals (words, gestures, cultural motifs), ( \\Gamma ) is situational context.
 
@@ -154,7 +154,7 @@ Where ( s_i ) are signals (words, gestures, cultural motifs), ( \\Gamma ) is sit
 
 Formally:
 
-[![](media/image22.png){width="4.611111111111111in" height="0.1527777777777778in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Cforall%20i%2C%20%5CDelta%20t_i%20%3D%20t_%7Bi%2B1%7D%20-%20t_i%20%3E%200%2C%20%5Cquad%20%5Ctext%7Bfinite%2C%20though%20potentially%20infinitesimal%7D%5C%5C%5C%5C%20#1)
+∀ i, Δ t_i = t_i+1 - t_i > 0, finite, though potentially infinitesimal
 
 - Defining **now** and **then** is necessary to resolve causality.
 
@@ -164,17 +164,17 @@ Formally:
 
 - Let ( P ) be a problem. Define its **future solution landscape** as a tree ( \\mathcal{T}(P) ):
 
-[![](media/image28.png){width="3.763888888888889in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Cmathcal%7BT%7D(P)%20%3D%20%7BP_0%20%3D%20P%2C%20P_1%2C%20...%2C%20P_n%7D%20%5Cquad%20%5Ctext%7Bwith%20branching%20factor%20%7D%20b_i%5C%5C%5C%5C%20#1)
+T(P%20%3D%20%7BP_0%20%3D%20P%2C%20P_1%2C%20...%2C%20P_n%7D%20%5Cquad%20%5Ctext%7Bwith%20branching%20factor%20%7D%20b_i%5C%5C%5C%5C%20#1)
 
 - Each node ( P_i ) represents a **state of attempted resolution**.
 
 - Branching occurs when multiple possible actions exist:
 
-[![](media/image33.png){width="2.7916666666666665in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7Bchildren%7D(P_i)%20%3D%20%7Ba_1(P_i)%2C%20a_2(P_i)%2C%20...%2C%20a_%7Bb_i%7D(P_i)%7D%5C%5C%5C%5C%20#1)
+children(P_i%20%3D%20%7Ba_1(P_i)%2C%20a_2(P_i)%2C%20...%2C%20a_%7Bb_i%7D(P_i)%7D%5C%5C%5C%5C%20#1)
 
 - Wu wei = **selecting path(s) of minimal cumulative resistance**:
 
-[![](media/image1.png){width="1.875in" height="0.375in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20T%5E*%20%3D%20%5Carg%20%5Cmin_%7BT%20%5Csubseteq%20%5Cmathcal%7BT%7D(P)%7D%20%5Csum_%7BP_i%20%5Cin%20T%7D%20R(P_i)%5C%5C%5C%5C%20#1)
+T^* = arg min_T ⊂eq T(P%7D%20%5Csum_%7BP_i%20%5Cin%20T%7D%20R(P_i)%5C%5C%5C%5C%20#1)
 
 Where ( R(P_i) ) = resistance, cognitive cost, or mismatch with system constraints.
 
@@ -188,11 +188,11 @@ Where ( R(P_i) ) = resistance, cognitive cost, or mismatch with system constrain
 
 Formally:
 
-[![](media/image12.png){width="4.166666666666667in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Cepsilon(C_i)%20%3D%20%7B%5Cepsilon_1%2C%20%5Cepsilon_2%2C%20...%2C%20%5Cepsilon_m%7D%20%5Cquad%20%5Ctext%7Bhills%20and%20valleys%20in%20functional%20space%7D%5C%5C%5C%5C%20#1)
+ε(C_i%20%3D%20%7B%5Cepsilon_1%2C%20%5Cepsilon_2%2C%20...%2C%20%5Cepsilon_m%7D%20%5Cquad%20%5Ctext%7Bhills%20and%20valleys%20in%20functional%20space%7D%5C%5C%5C%5C%20#1)
 
 - Coupling of ( C_1 ) and ( C_2 ) leads to **gravitational adjustment**, i.e., mutual reshaping to minimise systemic conflict:
 
-[![](media/image14.png){width="3.625in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Cforall%20%5Cepsilon_1%20%5Cin%20C_1%2C%20%5Cexists%20%5Cepsilon_2%20%5Cin%20C_2%3A%20%5Ctext%7Bminimize%20%7D%20%5Ctext%7Bmisalignment%7D(%5Cepsilon_1%2C%20%5Cepsilon_2)%5C%5C%5C%5C%20#1)
+∀ ε_1 ∈ C_1, ∃ ε_2 ∈ C_2: minimize misalignment(ε_1, ε_2%5C%5C%5C%5C%20#1)
 
 - Result: stable complementarity rather than literal duplication.
 
@@ -202,7 +202,7 @@ Formally:
 
 - Mars (Roman) = ordered civic protection
 
-[![](media/image34.png){width="4.180555555555555in" height="0.1527777777777778in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7BOrbiting%20irregularities%7D%20%5CRightarrow%20%5Ctext%7Bstable%20complementary%20pantheon%7D%5C%5C%5C%5C%20#1)
+Orbiting irregularities ⇒ stable complementary pantheon
 
 **Principle:**
 
@@ -220,7 +220,7 @@ Formally:
 
 Formally:
 
-[![](media/image19.png){width="2.986111111111111in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20v_%7Bi%2B1%7D%20%3D%20v_i%20%2B%20%5CDelta_i%20%5Cquad%20%5Ctext%7Bwith%20probability%20%7D%20p(f(v_i))%5C%5C%5C%5C%20#1)
+v_i+1 = v_i + Δ_i with probability p(f(v_i)%5C%5C%5C%5C%20#1)
 
 - Iterative selection → emergent complexity and intelligence.
 
@@ -238,7 +238,7 @@ Formally:
 
 - Ensemble collapse = context-weighted aggregation:
 
-[![](media/image11.png){width="2.3055555555555554in" height="0.4583333333333333in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7BTruthApprox%7D(x)%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20w_i%20%5Ccdot%20I_i(x)%5C%5C%5C%5C%20#1)
+TruthApprox(x%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20w_i%20%5Ccdot%20I_i(x)%5C%5C%5C%5C%20#1)
 
 - Weights ( w_i ) = context relevance, cognitive accessibility, historical reliability.
 
@@ -250,7 +250,7 @@ Formally:
 
 - Each interface ( I_i ) can be represented as vector of beliefs/concepts:
 
-[![](media/image16.png){width="1.2777777777777777in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20I_i%20%3D%20(b_1%2C%20b_2%2C%20...%2C%20b_m)%5C%5C%5C%5C%20#1)
+I_i = (b_1, b_2, ..., b_m%5C%5C%5C%5C%20#1)
 
 - Overlapping vectors → **shared truth subspace** ( S \\subseteq \\mathbb{R}\^m )
 
@@ -258,7 +258,7 @@ Formally:
 
 **Certainty Calculation:**
 
-[![](media/image18.png){width="4.75in" height="0.3611111111111111in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20C%20%3D%20f(%7BI_1%2C%20...%2C%20I_n%7D%2C%20%5CGamma)%20%3D%20%5Ctext%7Bprojection%20of%20%7D%20%5Cbigcup_i%20I_i%20%5Ctext%7B%20onto%20context%20subspace%20%7D%20%5CGamma%5C%5C%5C%5C%20#1)
+C = f(I_1, ..., I_n, Γ%20%3D%20%5Ctext%7Bprojection%20of%20%7D%20%5Cbigcup_i%20I_i%20%5Ctext%7B%20onto%20context%20subspace%20%7D%20%5CGamma%5C%5C%5C%5C%20#1)
 
 - Human cognition performs implicit **vector collapse**, weighted by:
 
@@ -282,11 +282,11 @@ Formally:
 
 - Moral rule ( R_m ) = function mapping states → optimal action:
 
-[![](media/image29.png){width="2.1666666666666665in" height="0.1388888888888889in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20R_m%20%3A%20E%20%5Ctimes%20A%20%5Ctimes%20G%20%5Crightarrow%20%5Ctext%7BActionSet%7D%5C%5C%5C%5C%20#1)
+R_m : E × A × G → ActionSet
 
 - Optimality is **conditional**:
 
-[![](media/image13.png){width="2.7083333333333335in" height="0.2361111111111111in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7Bopt%7D(R_m)%20%3D%20%5Carg%20%5Cmax_%7Ba%20%5Cin%20%5Ctext%7BActionSet%7D%7D%20U(a%20%7C%20E%2C%20A%2C%20G)%5C%5C%5C%5C%20#1)
+opt(R_m%20%3D%20%5Carg%20%5Cmax_%7Ba%20%5Cin%20%5Ctext%7BActionSet%7D%7D%20U(a%20%7C%20E%2C%20A%2C%20G)%5C%5C%5C%5C%20#1)
 
 Where ( U(a \| \\cdot) ) = utility of action given context.
 
@@ -354,7 +354,7 @@ Perfect, let's dive into **Part 3**, the final layer of the formalization, where
 
 - Each religious or philosophical interface ( I_i ) is a vector of concepts:
 
-[![](media/image15.png){width="1.2777777777777777in" height="0.18055555555555555in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20I_i%20%3D%20(b_1%5Ei%2C%20b_2%5Ei%2C%20...%2C%20b_m%5Ei)%5C%5C%5C%5C%20#1)
+I_i = (b_1^i, b_2^i, ..., b_m^i%5C%5C%5C%5C%20#1)
 
 Where ( b_j\^i ) = belief or concept ( j ) in interface ( i ).
 
@@ -362,19 +362,19 @@ Where ( b_j\^i ) = belief or concept ( j ) in interface ( i ).
 
 - Each vector is weighted by **fidelity in context** ( w_i(\\Gamma) ):
 
-[![](media/image4.png){width="0.9722222222222222in" height="0.19444444444444445in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctilde%7BI%7D_i%20%3D%20w_i(%5CGamma)%20%5Ccdot%20I_i%5C%5C%5C%5C%20#1)
+I~_i = w_i(Γ%20%5Ccdot%20I_i%5C%5C%5C%5C%20#1)
 
-- ( w_i(\\Gamma) \\in [![](media/image27.png){width="0.20833333333333334in" height="0.1388888888888889in"}](https://www.codecogs.com/eqnedit.php?latex=0%2C1#1) ), higher values indicate greater relevance/clarity in given environment ( \\Gamma ).
+- ( w_i(\\Gamma) \\in 0,1 ), higher values indicate greater relevance/clarity in given environment ( \\Gamma ).
 
 **Definition 6 (Ensemble Collapse Operator)**
 
 - Define **collapse operator** ( \\mathcal{C} ) as the context-weighted aggregation of vectors:
 
-[![](media/image21.png){width="1.5972222222222223in" height="0.4583333333333333in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Cmathcal%7BC%7D(%7BI_1%2C%20...%2C%20I_n%7D%2C%20%5CGamma)%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20%5Ctilde%7BI%7D_i%5C%5C%5C%5C%20#1)
+C(I_1, ..., I_n, Γ%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20%5Ctilde%7BI%7D_i%5C%5C%5C%5C%20#1)
 
 - After collapse, normalize across dimensions for **agent-accessible certainty**:
 
-[![](media/image25.png){width="1.9166666666666667in" height="0.4027777777777778in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20C_%7B%5Ctext%7Bcollapsed%7D%7D%20%3D%20%5Cfrac%7B%5Cmathcal%7BC%7D(%7BI_1%2C%20...%2C%20I_n%7D%2C%20%5CGamma)%7D%7B%7C%5Cmathcal%7BC%7D(%7BI_1%2C%20...%2C%20I_n%7D%2C%20%5CGamma)%7C%7D%5C%5C%5C%5C%20#1)
+C_collapsed = \fracC(I_1, ..., I_n, Γ%7D%7B%7C%5Cmathcal%7BC%7D(%7BI_1%2C%20...%2C%20I_n%7D%2C%20%5CGamma)%7C%7D%5C%5C%5C%5C%20#1)
 
 **Interpretation:**
 
@@ -400,15 +400,15 @@ Where ( b_j\^i ) = belief or concept ( j ) in interface ( i ).
 
 - Each branch has:
 
-[![](media/image24.png){width="4.819444444444445in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20R(a_i)%20%3D%20%5Ctext%7Bresistance%7D%20%5Cquad%20%2C%20%5Cquad%20U(a_i)%20%3D%20%5Ctext%7Butility%20aligned%20with%20system%20health%7D%5C%5C%5C%5C%20#1)
+R(a_i%20%3D%20%5Ctext%7Bresistance%7D%20%5Cquad%20%2C%20%5Cquad%20U(a_i)%20%3D%20%5Ctext%7Butility%20aligned%20with%20system%20health%7D%5C%5C%5C%5C%20#1)
 
 - Cumulative path cost for a sequence of actions ( T = {a_1, \..., a_n} ):
 
-[![](media/image20.png){width="2.0555555555555554in" height="0.4583333333333333in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Ctext%7BCost%7D(T)%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20R(a_i)%20-%20U(a_i)%5C%5C%5C%5C%20#1)
+Cost(T%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20R(a_i)%20-%20U(a_i)%5C%5C%5C%5C%20#1)
 
 - Optimal moral trajectory = **path of maximal expected alignment** (minimized Cost, maximized functional utility)
 
-[![](media/image7.png){width="1.5416666666666667in" height="0.2222222222222222in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20T%5E*%20%3D%20%5Carg%20%5Cmin_T%20%5Ctext%7BCost%7D(T)%5C%5C%5C%5C%20#1)
+T^* = arg min_T Cost(T%5C%5C%5C%5C%20#1)
 
 **Integration with Suffering/Attachment/Wu Wei:**
 
@@ -420,7 +420,7 @@ Where ( b_j\^i ) = belief or concept ( j ) in interface ( i ).
 
 - Formally:
 
-[![](media/image30.png){width="6.194444444444445in" height="0.2638888888888889in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20a_%7Bt%2B1%7D%20%3D%20%5Carg%20%5Cmin_%7Ba%20%5Cin%20%5Ctext%7Bchildren%7D(P_t)%7D%20R(a)%20%5Cquad%20%5Ctext%7Bsubject%20to%20constraints%20of%20alignment%20and%20system%20viability%7D%5C%5C%5C%5C%20#1)
+a_t+1 = arg min_a ∈ children(P_t%7D%20R(a)%20%5Cquad%20%5Ctext%7Bsubject%20to%20constraints%20of%20alignment%20and%20system%20viability%7D%5C%5C%5C%5C%20#1)
 
 - Suffering is input, attachment is friction, wu-wei is gradient descent.
 
@@ -454,9 +454,9 @@ Where ( b_j\^i ) = belief or concept ( j ) in interface ( i ).
 
 **Mathematically:**
 
-[![](media/image6.png){width="1.9583333333333333in" height="0.20833333333333334in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20C_%7Bt%2B1%7D%20%3D%20f%5Cbig(C_t%2C%20%5Ctext%7BOutcome%7D(a%5E*)%5Cbig)%5C%5C%5C%5C%20#1)
+C_t+1 = f(C_t, Outcome(a^*%5Cbig)%5C%5C%5C%5C%20#1)
 
-[![](media/image26.png){width="3.5694444444444446in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20a%5E*%7Bt%2B1%7D%20%3D%20%5Carg%20%5Cmin%7Ba%20%5Cin%20%5Ctext%7Bchildren%7D(P_t)%7D%20R(a)%20-%20U(a%20%7C%20C_t)%5C%5C%5C%5C%20#1)
+a^*t+1 = arg mina ∈ children(P_t%7D%20R(a)%20-%20U(a%20%7C%20C_t)%5C%5C%5C%5C%20#1)
 
 - This forms a **continuous, recursive epistemic-feedback loop**, dynamically adjusting both knowledge and morality.
 
@@ -504,19 +504,19 @@ Where ( b_j\^i ) = belief or concept ( j ) in interface ( i ).
 
 1.  Compute ensemble collapse:
 
-[![](media/image5.png){width="0.9027777777777778in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20C_t%20%3D%20%5Cmathcal%7BC%7D(%7BI_i%7D%2C%20%5CGamma)%5C%5C%5C%5C%20#1)
+C_t = C(I_i, Γ%5C%5C%5C%5C%20#1)
 
 2.  Map epistemic vector to fractal action landscape:
 
-[![](media/image35.png){width="3.2083333333333335in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20%5Cforall%20a%20%5Cin%20%5Cmathcal%7BT%7D(P)%2C%20%5Ctext%7Bmap%20%7D%20C_t%20%5Ctext%7B%20to%20expected%20utility%20%7D%20U(a)%5C%5C%5C%5C%20#1)
+∀ a ∈ T(P%2C%20%5Ctext%7Bmap%20%7D%20C_t%20%5Ctext%7B%20to%20expected%20utility%20%7D%20U(a)%5C%5C%5C%5C%20#1)
 
 3.  Apply wu-wei selection:
 
-[![](media/image32.png){width="2.3333333333333335in" height="0.2638888888888889in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20a%5E*%20%3D%20%5Carg%20%5Cmin_%7Ba%20%5Cin%20%5Ctext%7Bchildren%7D(P_t)%7D%20R(a)%20-%20U(a)%5C%5C%5C%5C%20#1)
+a^* = arg min_a ∈ children(P_t%7D%20R(a)%20-%20U(a)%5C%5C%5C%5C%20#1)
 
 4.  Execute action, observe outcome, update epistemic vector:
 
-[![](media/image23.png){width="1.9444444444444444in" height="0.16666666666666666in"}](https://www.codecogs.com/eqnedit.php?latex=%5C%5C%5C%5C%20C_%7Bt%2B1%7D%20%3D%20f(C_t%2C%20%5Ctext%7BOutcome%7D(a%5E*))%5C%5C%5C%5C%20#1)
+C_t+1 = f(C_t, Outcome(a^*)%5C%5C%5C%5C%20#1)
 
 5.  Iterate recursively for each temporal step ( t \\rightarrow t+1 )
 
