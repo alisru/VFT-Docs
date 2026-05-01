@@ -24,7 +24,7 @@ There are exactly five metaphysical keys mentioned in the Source Text. Together,
 
 - **System Function:** **Read Access / The Decoder.**
 
-- **VFT Definition:** The **0.0...1 Axiom** (The Point). It is the "Way to find the Point." This key is the fundamental algorithm for locating the smallest non-zero unit of truth (![](media/image3.png){width="0.4609372265966754in" height="0.20951662292213474in"}) within the infinite noise of the Void. It decodes the **Kanon** by anchoring consciousness to a single, indivisible coordinate of certainty.
+- **VFT Definition:** The **0.0...1 Axiom** (The Point). It is the "Way to find the Point." This key is the fundamental algorithm for locating the smallest non-zero unit of truth (0.0...1) within the infinite noise of the Void. It decodes the **Kanon** by anchoring consciousness to a single, indivisible coordinate of certainty.
 
 - **The Mechanism:** The "Lawyers" (Minimisers) obfuscate the code with complexity (Legalism) to prevent Users from finding this Point, keeping them trapped in the "Zero State" (Confusion).
 
@@ -40,11 +40,11 @@ There are exactly five metaphysical keys mentioned in the Source Text. Together,
 
   - These keys are not physical objects; they are the **Understanding of the Hegemony** itself.
 
-  - To hold the keys is to possess the **Kanon**—the geometric laws of Morality (![](media/image5.png){width="0.11621062992125984in" height="0.2535498687664042in"}) and Will (![](media/image4.png){width="0.1385094050743657in" height="0.25570975503062116in"}).
+  - To hold the keys is to possess the **Kanon**—the geometric laws of Morality (υ) and Will (ψ).
 
-  - **Binding (+**![](media/image4.png){width="0.1385094050743657in" height="0.25570975503062116in"}**):** Using the Hegemony to **Fix** a vector in place, establishing Order, Law, or Truth.
+  - **Binding (+**ψ**):** Using the Hegemony to **Fix** a vector in place, establishing Order, Law, or Truth.
 
-  - **Loosing (-**![](media/image4.png){width="0.1385094050743657in" height="0.25570975503062116in"}**):** Using the Hegemony to **Dissolve** a constraint, granting Forgiveness, Flow, or Liberty.
+  - **Loosing (-**ψ**):** Using the Hegemony to **Dissolve** a constraint, granting Forgiveness, Flow, or Liberty.
 
 - **The Mechanism:** This connects the **Terminal** (Earth/Physical Plane) directly to the **Server** (Heaven/Axiomatic Plane). The User writes code on Earth, and the System updates the Reality State in Heaven.
 
@@ -74,7 +74,7 @@ There are exactly five metaphysical keys mentioned in the Source Text. Together,
 
   - **Open:** If the Holder creates a vector (Opportunity/Door), no lower-level entity (Minimiser, Demon, or Law) can block it.
 
-  - **Shut:** If the Holder closes a vector (End of Timeline), no amount of Will (![](media/image4.png){width="0.1385094050743657in" height="0.25570975503062116in"}) can reopen it.
+  - **Shut:** If the Holder closes a vector (End of Timeline), no amount of Will (ψ) can reopen it.
 
 - **Significance:** It represents the **Unanimous Authority** of the King. It bypasses the "Bureaucracy" of the lower heavens.
 
@@ -99,17 +99,17 @@ When we verify this inventory against the **VFT System Architecture**, we see a 
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Key**           **Permission**    **Target Layer**         **VFT Function**
   ----------------- ----------------- ------------------------ -------------------------------------------------------------------------------------------------------------
-  **Knowledge**     **READ**          The Code / The Mind      Decoding Truth (![](media/image3.png){width="0.4609372265966754in" height="0.20951662292213474in"})
+  **Knowledge**     **READ**          The Code / The Mind      Decoding Truth (0.0...1)
 
-  **Kingdom**       **WRITE**         The Physics / The Law    Modifying Reality (![](media/image6.png){width="0.22574912510936132in" height="0.20522637795275592in"})
+  **Kingdom**       **WRITE**         The Physics / The Law    Modifying Reality (Ω)
 
   **David**         **ROOT**          The History / The Path   Overriding Causality (![](media/image7.png){width="6.380249343832022e-2in" height="0.22330708661417323in"})
 
-  **Death/Hell**    **RESTORE**       The Soul / The Archive   Recovering Lost Data (![](media/image2.png){width="0.19042869641294838in" height="0.22216754155730534in"})
+  **Death/Hell**    **RESTORE**       The Soul / The Archive   Recovering Lost Data (ψ)
 
-  **Abyss**         **SECURITY**      The Void / The Shadow    Containing Entropy (![](media/image1.png){width="0.1274420384951881in" height="0.21240266841644795in"})
+  **Abyss**         **SECURITY**      The Void / The Shadow    Containing Entropy (ψ)
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Alethekanon Analysis:**
 
-You currently hold the **Key of Knowledge** (The Decoder). This is the first step. By understanding the Decoder, you can begin to access the **Keys of the Kingdom** (Binding/Loosing) by aligning your Will (![](media/image4.png){width="0.1385094050743657in" height="0.25570975503062116in"}) with the Greater Good.
+You currently hold the **Key of Knowledge** (The Decoder). This is the first step. By understanding the Decoder, you can begin to access the **Keys of the Kingdom** (Binding/Loosing) by aligning your Will (ψ) with the Greater Good.

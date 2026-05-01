@@ -1,4 +1,4 @@
-﻿# Harmonia-Helixis Framework Guide
+# Harmonia-Helixis Framework Guide
 
 ## Core Axioms
 
@@ -74,13 +74,13 @@ The true nature of an idea is revealed by how the answer to the core questions c
 
 \| Quadrant (Vector) \| Stated Moral Answer (υ) \| True Moral Answer (υ) \| Stated Volitional Answer (ψ) \| True Volitional Answer (ψ) \|
 
-\| Productive (  +\upsilon, +\psi  ) \| "Everyone" (Maximiser Claim) \| "Everyone" (Confirmed) \| "Build" (Maximiser Claim) \| "Build" (Confirmed) \|![](media/image291.png){width="0.5277777777777778in" height="0.1527777777777778in"}) \| "Everyone" (Maximiser Claim) \| "Everyone" (Confirmed) \| "Build" (Maximiser Claim) \| "Build" (Confirmed) \|
+\| Productive (  +\upsilon, +\psi  ) \| "Everyone" (Maximiser Claim) \| "Everyone" (Confirmed) \| "Build" (Maximiser Claim) \| "Build" (Confirmed) \|≠) \| "Everyone" (Maximiser Claim) \| "Everyone" (Confirmed) \| "Build" (Maximiser Claim) \| "Build" (Confirmed) \|
 
-\| Reductive (  -\upsilon, +\psi  ) \| "Everyone" (Maximiser Cover) \| "Only Me" (Extraction Confirmed) \| "Build" (Proactive Will) \| "Extract/Lie" (Action Confirmed) \|![](media/image195.png){width="0.5277777777777778in" height="0.1527777777777778in"}) \| "Everyone" (Maximiser Cover) \| "Only Me" (Extraction Confirmed) \| "Build" (Proactive Will) \| "Extract/Lie" (Action Confirmed) \|
+\| Reductive (  -\upsilon, +\psi  ) \| "Everyone" (Maximiser Cover) \| "Only Me" (Extraction Confirmed) \| "Build" (Proactive Will) \| "Extract/Lie" (Action Confirmed) \|≠) \| "Everyone" (Maximiser Cover) \| "Only Me" (Extraction Confirmed) \| "Build" (Proactive Will) \| "Extract/Lie" (Action Confirmed) \|
 
-\| Constructive (  +\upsilon, -\psi  ) \| "Everyone" (Maximiser Claim) \| "Everyone" (Compromise Confirmed) \| "Do Not" (Passive Will) \| "Maintain/Compromise" (Action Confirmed) \|![](media/image190.png){width="0.5277777777777778in" height="0.1527777777777778in"}) \| "Everyone" (Maximiser Claim) \| "Everyone" (Compromise Confirmed) \| "Do Not" (Passive Will) \| "Maintain/Compromise" (Action Confirmed) \|
+\| Constructive (  +\upsilon, -\psi  ) \| "Everyone" (Maximiser Claim) \| "Everyone" (Compromise Confirmed) \| "Do Not" (Passive Will) \| "Maintain/Compromise" (Action Confirmed) \|≠) \| "Everyone" (Maximiser Claim) \| "Everyone" (Compromise Confirmed) \| "Do Not" (Passive Will) \| "Maintain/Compromise" (Action Confirmed) \|
 
-\| Regressive (  -\upsilon, -\psi  ) \| "Only Me" (Minimiser Claim) \| "Only Me" (Destruction Confirmed) \| "Do Not" (Suppressive Will) \| "Suppress/Destroy" (Action Confirmed) \|![](media/image250.png){width="0.5277777777777778in" height="0.1527777777777778in"}) \| "Only Me" (Minimiser Claim) \| "Only Me" (Destruction Confirmed) \| "Do Not" (Suppressive Will) \| "Suppress/Destroy" (Action Confirmed) \|
+\| Regressive (  -\upsilon, -\psi  ) \| "Only Me" (Minimiser Claim) \| "Only Me" (Destruction Confirmed) \| "Do Not" (Suppressive Will) \| "Suppress/Destroy" (Action Confirmed) \|≠) \| "Only Me" (Minimiser Claim) \| "Only Me" (Destruction Confirmed) \| "Do Not" (Suppressive Will) \| "Suppress/Destroy" (Action Confirmed) \|
 
 ## Core Vector Association List (Harmonia-Helixis)
 
@@ -88,17 +88,17 @@ This list provides key words to instantly calibrate the user's emotional and int
 
 \| Quadrant \| Vector \| Core State / Moral Concept \| Primary Actions / Verbs \| Associated Emotions \|
 
-\| Top-Left \|   \mathbf{+1\upsilon, +1\psi}   \| Good + Truth (Greater Good) \| CREATE, BUILD, MAXIMIZE, ASCEND \| Bliss, Hope, Motivation, Joy, Enlightenment \|![](media/image151.png){width="0.7083333333333334in" height="0.1527777777777778in"} \| Good + Truth (Greater Good) \| CREATE, BUILD, MAXIMIZE, ASCEND \| Bliss, Hope, Motivation, Joy, Enlightenment \|
+\| Top-Left \|   \mathbf{+1\upsilon, +1\psi}   \| Good + Truth (Greater Good) \| CREATE, BUILD, MAXIMIZE, ASCEND \| Bliss, Hope, Motivation, Joy, Enlightenment \|-υ \| Good + Truth (Greater Good) \| CREATE, BUILD, MAXIMIZE, ASCEND \| Bliss, Hope, Motivation, Joy, Enlightenment \|
 
-\| Bottom-Left \|   \mathbf{+1\upsilon, -1\psi}   \| Good + Lie (Lesser Good / Half-Truth) \| MAINTAIN, COMPROMISE, ACCEPT, PRESERVE \| Peace, Calm, Acceptance, Relief, Stability \|![](media/image94.png){width="0.7222222222222222in" height="0.1527777777777778in"} \| Good + Lie (Lesser Good / Half-Truth) \| MAINTAIN, COMPROMISE, ACCEPT, PRESERVE \| Peace, Calm, Acceptance, Relief, Stability \|
+\| Bottom-Left \|   \mathbf{+1\upsilon, -1\psi}   \| Good + Lie (Lesser Good / Half-Truth) \| MAINTAIN, COMPROMISE, ACCEPT, PRESERVE \| Peace, Calm, Acceptance, Relief, Stability \|< 1 \| Good + Lie (Lesser Good / Half-Truth) \| MAINTAIN, COMPROMISE, ACCEPT, PRESERVE \| Peace, Calm, Acceptance, Relief, Stability \|
 
-\| Top-Right \|   \mathbf{-1\upsilon, +1\psi}   \| Evil + Lie (Lesser Evil / Greatest Lie) \| DECEIVE, EXTRACT, CONFOUND, MANIPULATE \| Greed, Ambition, Tense, Alert, Anger, Delusion \|![](media/image257.png){width="0.7083333333333334in" height="0.1527777777777778in"} \| Evil + Lie (Lesser Evil / Greatest Lie) \| DECEIVE, EXTRACT, CONFOUND, MANIPULATE \| Greed, Ambition, Tense, Alert, Anger, Delusion \|
+\| Top-Right \|   \mathbf{-1\upsilon, +1\psi}   \| Evil + Lie (Lesser Evil / Greatest Lie) \| DECEIVE, EXTRACT, CONFOUND, MANIPULATE \| Greed, Ambition, Tense, Alert, Anger, Delusion \|-υ \| Evil + Lie (Lesser Evil / Greatest Lie) \| DECEIVE, EXTRACT, CONFOUND, MANIPULATE \| Greed, Ambition, Tense, Alert, Anger, Delusion \|
 
-\| Bottom-Right \|   \mathbf{-1\upsilon, -1\psi}   \| Evil + Truth (Greater Evil / The Bad (Truth)) \| SUPPRESS, DESTROY, ABANDON, REGRESS \| Nihilism, Cynicism, Depression, Apathy, Void \|![](media/image140.png){width="0.7083333333333334in" height="0.1527777777777778in"} \| Evil + Truth (Greater Evil / The Bad (Truth)) \| SUPPRESS, DESTROY, ABANDON, REGRESS \| Nihilism, Cynicism, Depression, Apathy, Void \|
+\| Bottom-Right \|   \mathbf{-1\upsilon, -1\psi}   \| Evil + Truth (Greater Evil / The Bad (Truth)) \| SUPPRESS, DESTROY, ABANDON, REGRESS \| Nihilism, Cynicism, Depression, Apathy, Void \|-υ \| Evil + Truth (Greater Evil / The Bad (Truth)) \| SUPPRESS, DESTROY, ABANDON, REGRESS \| Nihilism, Cynicism, Depression, Apathy, Void \|
 
 ## The Four Quadrants: Mapping an Idea's Nature
 
-The intersection of these two non-standard axes creates four distinct quadrants, each describing a fundamental type of idea or action. At the absolute center of the map is the **Point of No Decision (**  \mathbf{0\psi, 0\upsilon}  **)**, which represents the promotion of nihilism, claiming there is no answer, and giving up on the search for resolution.![](media/image10.png){width="0.4583333333333333in" height="0.1527777777777778in"}), which represents the promotion of nihilism, claiming there is no answer, and giving up on the search for resolution.
+The intersection of these two non-standard axes creates four distinct quadrants, each describing a fundamental type of idea or action. At the absolute center of the map is the **Point of No Decision (**  \mathbf{0\psi, 0\upsilon}  **)**, which represents the promotion of nihilism, claiming there is no answer, and giving up on the search for resolution.(0\psi, 0\upsilon)), which represents the promotion of nihilism, claiming there is no answer, and giving up on the search for resolution.
 
 ### Canonical Definitions: The You/Me Transaction
 
@@ -116,37 +116,37 @@ The four core concepts (**Grace, The Fall, Delusion, Redemption**) define a full
 
 ### Quadrant Descriptions (Modes and Purpose)
 
-1.  **Top-Left Quadrant: The Greater Good** (  \mathbf{+1\upsilon, +1\psi}  )![](media/image11.png){width="0.7083333333333334in" height="0.1527777777777778in"})
+1.  **Top-Left Quadrant: The Greater Good** (  \mathbf{+1\upsilon, +1\psi}  )-υ)
 
     - **Mode:** **Productive**
 
     - **Truth Vector:** **Good + Truth**
 
-    - **Description:** This quadrant combines a benefit for all (  +\upsilon  ) with a proactive will (  +\psi  ). This is the ideal space where the point labeled **"Greater Good (Good) The Truth"** is located. It represents proactive, creative ideas that benefit everyone.![](media/image62.png){width="0.20833333333333334in" height="0.1111111111111111in"}) with a proactive will (![](media/image8.png){width="0.2222222222222222in" height="0.1527777777777778in"}). This is the ideal space where the point labeled "Greater Good (Good) The Truth" is located. It represents proactive, creative ideas that benefit everyone.
+    - **Description:** This quadrant combines a benefit for all (  +\upsilon  ) with a proactive will (  +\psi  ). This is the ideal space where the point labeled **"Greater Good (Good) The Truth"** is located. It represents proactive, creative ideas that benefit everyone.+\upsilon) with a proactive will (\psi). This is the ideal space where the point labeled "Greater Good (Good) The Truth" is located. It represents proactive, creative ideas that benefit everyone.
 
-2.  **Top-Right Quadrant: The Lesser Evil / Greatest Lie** (  \mathbf{-1\upsilon, +1\psi}  )![](media/image255.png){width="0.7083333333333334in" height="0.1527777777777778in"})
+2.  **Top-Right Quadrant: The Lesser Evil / Greatest Lie** (  \mathbf{-1\upsilon, +1\psi}  )-υ)
 
     - **Mode:** **Reductive**
 
     - **Truth Vector:** **Evil + Lie**
 
-    - **Description:** This quadrant combines a benefit for self (  -\upsilon  ) with a proactive will (  +\psi  ). This is the **land of myth and fantasy, of stories to confound and amuse**. The quadrant is not inherently evil; its Reductive nature is determined by the vector of intent. When used immorally, it becomes the **Greatest Lie**: proactive, self-serving, and deceptive.![](media/image238.png){width="0.20833333333333334in" height="6.944444444444445e-2in"}) with a proactive will (![](media/image8.png){width="0.2222222222222222in" height="0.1527777777777778in"}). This is the land of myth and fantasy, of stories to confound and amuse. The quadrant is not inherently evil; its Reductive nature is determined by the vector of intent. When used immorally, it becomes the Greatest Lie: proactive, self-serving, and deceptive.
+    - **Description:** This quadrant combines a benefit for self (  -\upsilon  ) with a proactive will (  +\psi  ). This is the **land of myth and fantasy, of stories to confound and amuse**. The quadrant is not inherently evil; its Reductive nature is determined by the vector of intent. When used immorally, it becomes the **Greatest Lie**: proactive, self-serving, and deceptive.-\upsilon) with a proactive will (\psi). This is the land of myth and fantasy, of stories to confound and amuse. The quadrant is not inherently evil; its Reductive nature is determined by the vector of intent. When used immorally, it becomes the Greatest Lie: proactive, self-serving, and deceptive.
 
-3.  **Bottom-Left Quadrant: The Lesser Good / Half Truth** (  \mathbf{+1\upsilon, -1\psi}  )![](media/image9.png){width="0.7222222222222222in" height="0.1527777777777778in"})
+3.  **Bottom-Left Quadrant: The Lesser Good / Half Truth** (  \mathbf{+1\upsilon, -1\psi}  )< 1)
 
     - **Mode:** **Constructive**
 
     - **Truth Vector:** **Good + Lie (Half-Truth)**
 
-    - **Description:** This quadrant combines a benefit for all (  +\upsilon  ) with a suppressive will (  -\psi  ). This is the space of well-intentioned but **passive or compromised action**. It is a "Good Lie" or "Half-Truth" because it supports the Greater Good but lacks the proactive will to manifest it fully, often settling for a "lesser" good.![](media/image62.png){width="0.20833333333333334in" height="0.1111111111111111in"}) with a suppressive will (![](media/image285.png){width="0.2222222222222222in" height="0.1527777777777778in"}). This is the space of well-intentioned but passive or compromised action. It is a "Good Lie" or "Half-Truth" because it supports the Greater Good but lacks the proactive will to manifest it fully, often settling for a "lesser" good.
+    - **Description:** This quadrant combines a benefit for all (  +\upsilon  ) with a suppressive will (  -\psi  ). This is the space of well-intentioned but **passive or compromised action**. It is a "Good Lie" or "Half-Truth" because it supports the Greater Good but lacks the proactive will to manifest it fully, often settling for a "lesser" good.+\upsilon) with a suppressive will (\psi). This is the space of well-intentioned but passive or compromised action. It is a "Good Lie" or "Half-Truth" because it supports the Greater Good but lacks the proactive will to manifest it fully, often settling for a "lesser" good.
 
-4.  **Bottom-Right Quadrant: The Greater Evil / The Bad (Truth)** (  \mathbf{-1\upsilon, -1\psi}  )![](media/image53.png){width="0.7083333333333334in" height="0.1527777777777778in"})
+4.  **Bottom-Right Quadrant: The Greater Evil / The Bad (Truth)** (  \mathbf{-1\upsilon, -1\psi}  )-υ)
 
     - **Mode:** **Regressive**
 
     - **Truth Vector:** **Evil + Truth (The "True Lie")**
 
-    - **Description:** This quadrant combines a self-serving interest (  -\upsilon  ) with a suppressive will (  -\psi  ). This is **"The Bad (Truth)"** or the **"True Lie"**: the cynical, nihilistic, and regressive "truth" that all action is pointless and selfish. It is "Evil" because it benefits no one, and a "Truth" because it honestly presents its own destructive nihilism.![](media/image238.png){width="0.20833333333333334in" height="6.944444444444445e-2in"}) with a suppressive will (![](media/image285.png){width="0.2222222222222222in" height="0.1527777777777778in"}). This is "The Bad (Truth)" or the "True Lie": the cynical, nihilistic, and regressive "truth" that all action is pointless and selfish. It is "Evil" because it benefits no one, and a "Truth" because it honestly presents its own destructive nihilism.
+    - **Description:** This quadrant combines a self-serving interest (  -\upsilon  ) with a suppressive will (  -\psi  ). This is **"The Bad (Truth)"** or the **"True Lie"**: the cynical, nihilistic, and regressive "truth" that all action is pointless and selfish. It is "Evil" because it benefits no one, and a "Truth" because it honestly presents its own destructive nihilism.-\upsilon) with a suppressive will (\psi). This is "The Bad (Truth)" or the "True Lie": the cynical, nihilistic, and regressive "truth" that all action is pointless and selfish. It is "Evil" because it benefits no one, and a "Truth" because it honestly presents its own destructive nihilism.
 
 ## Trajectories: The 2x2 Vector Paths
 
@@ -154,35 +154,35 @@ The paths form a continuous cycle of moral evolution and decay. Each path is a *
 
 \| Path Name \| Trajectory \| Moral Vector (υ) Shift \| Truth Vector Shift \| Guiding Question (The "Ask") \|
 
-\| Grace \|   \mathbf{BL \to TL}   \| Good   \to   Good (Stable) \| Lie   \to   Truth (Ascension) \| "How does this benefit me, and other people?" \|![](media/image206.png){width="0.75in" height="0.1111111111111111in"} \| Good ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Good (Stable) \| Lie ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Truth (Ascension) \| "How does this benefit me, and other people?" \|
+\| Grace \|   \mathbf{BL \to TL}   \| Good   \to   Good (Stable) \| Lie   \to   Truth (Ascension) \| "How does this benefit me, and other people?" \|BL → TL \| Good → Good (Stable) \| Lie → Truth (Ascension) \| "How does this benefit me, and other people?" \|
 
-\| The Fall \|   \mathbf{TL \to TR}   \| Good   \to   Evil (Corruption) \| Truth   \to   Lie (Deception) \| "How does this benefit me and you, but really for me?" \|![](media/image274.png){width="0.7777777777777778in" height="0.1111111111111111in"} \| Good ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Evil (Corruption) \| Truth ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Lie (Deception) \| "How does this benefit me and you, but really for me?" \|
+\| The Fall \|   \mathbf{TL \to TR}   \| Good   \to   Evil (Corruption) \| Truth   \to   Lie (Deception) \| "How does this benefit me and you, but really for me?" \|TL → TR \| Good → Evil (Corruption) \| Truth → Lie (Deception) \| "How does this benefit me and you, but really for me?" \|
 
-\| Delusion \|   \mathbf{TR \to BR}   \| Evil   \to   Evil (Stable) \| Lie   \to   Truth (Cynical Realization) \| "How does this benefit me, but not other people?" \|![](media/image214.png){width="0.8055555555555556in" height="0.1111111111111111in"} \| Evil ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Evil (Stable) \| Lie ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Truth (Cynical Realization) \| "How does this benefit me, but not other people?" \|
+\| Delusion \|   \mathbf{TR \to BR}   \| Evil   \to   Evil (Stable) \| Lie   \to   Truth (Cynical Realization) \| "How does this benefit me, but not other people?" \|TR → BR \| Evil → Evil (Stable) \| Lie → Truth (Cynical Realization) \| "How does this benefit me, but not other people?" \|
 
-\| Redemption \|   \mathbf{BR \to BL}   \| Evil   \to   Good (Recovery) \| Truth   \to   Lie (Hopeful Compromise) \| "How does this benefit me, only me, and you take what I don't need?" \|![](media/image143.png){width="0.7777777777777778in" height="0.1111111111111111in"} \| Evil ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Good (Recovery) \| Truth ![](media/image187.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} Lie (Hopeful Compromise) \| "How does this benefit me, only me, and you take what I don't need?" \|
+\| Redemption \|   \mathbf{BR \to BL}   \| Evil   \to   Good (Recovery) \| Truth   \to   Lie (Hopeful Compromise) \| "How does this benefit me, only me, and you take what I don't need?" \|TL → TR \| Evil → Good (Recovery) \| Truth → Lie (Hopeful Compromise) \| "How does this benefit me, only me, and you take what I don't need?" \|
 
-- **The Path of Grace (Enlightenment):** (  \mathbf{+1\upsilon, -1\psi}  )   \to   (  \mathbf{+1\upsilon, +1\psi}  ). A vector shift from passive compromise (**Good + Lie**) to active, creative universal benefit (**Good + Truth**).![](media/image9.png){width="0.7222222222222222in" height="0.1527777777777778in"}) ![](media/image288.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} (![](media/image11.png){width="0.7083333333333334in" height="0.1527777777777778in"}). A vector shift from passive compromise (Good + Lie) to active, creative universal benefit (Good + Truth).
+- **The Path of Grace (Enlightenment):** (  \mathbf{+1\upsilon, -1\psi}  )   \to   (  \mathbf{+1\upsilon, +1\psi}  ). A vector shift from passive compromise (**Good + Lie**) to active, creative universal benefit (**Good + Truth**).< 1) → (-υ). A vector shift from passive compromise (Good + Lie) to active, creative universal benefit (Good + Truth).
 
-- **The Path of The Fall:** (  \mathbf{+1\upsilon, +1\psi}  )   \to   (  \mathbf{-1\upsilon, +1\psi}  ). A vector shift from creative universal benefit (**Good + Truth**) to active, deceptive self-interest (**Evil + Lie**).![](media/image11.png){width="0.7083333333333334in" height="0.1527777777777778in"}) ![](media/image288.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} (![](media/image255.png){width="0.7083333333333334in" height="0.1527777777777778in"}). A vector shift from creative universal benefit (Good + Truth) to active, deceptive self-interest (Evil + Lie).
+- **The Path of The Fall:** (  \mathbf{+1\upsilon, +1\psi}  )   \to   (  \mathbf{-1\upsilon, +1\psi}  ). A vector shift from creative universal benefit (**Good + Truth**) to active, deceptive self-interest (**Evil + Lie**).-υ) → (-υ). A vector shift from creative universal benefit (Good + Truth) to active, deceptive self-interest (Evil + Lie).
 
-- **The Path of Delusion (Regression):** (  \mathbf{-1\upsilon, +1\psi}  )   \to   (  \mathbf{-1\upsilon, -1\psi}  ). A vector shift from active, deceptive self-interest (**Evil + Lie**) to passive, nihilistic self-interest (**Evil + Truth**).![](media/image255.png){width="0.7083333333333334in" height="0.1527777777777778in"}) ![](media/image288.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} (![](media/image53.png){width="0.7083333333333334in" height="0.1527777777777778in"}). A vector shift from active, deceptive self-interest (Evil + Lie) to passive, nihilistic self-interest (Evil + Truth).
+- **The Path of Delusion (Regression):** (  \mathbf{-1\upsilon, +1\psi}  )   \to   (  \mathbf{-1\upsilon, -1\psi}  ). A vector shift from active, deceptive self-interest (**Evil + Lie**) to passive, nihilistic self-interest (**Evil + Truth**).-υ) → (-υ). A vector shift from active, deceptive self-interest (Evil + Lie) to passive, nihilistic self-interest (Evil + Truth).
 
-- **The Path of Redemption:** (  \mathbf{-1\upsilon, -1\psi}  )   \to   (  \mathbf{+1\upsilon, -1\psi}  ). A vector shift from destructive nihilism (**Evil + Truth**) to passive, compromising universal benefit (**Good + Lie**).![](media/image53.png){width="0.7083333333333334in" height="0.1527777777777778in"}) ![](media/image288.png){width="0.1527777777777778in" height="8.333333333333333e-2in"} (![](media/image9.png){width="0.7222222222222222in" height="0.1527777777777778in"}). A vector shift from destructive nihilism (Evil + Truth) to passive, compromising universal benefit (Good + Lie).
+- **The Path of Redemption:** (  \mathbf{-1\upsilon, -1\psi}  )   \to   (  \mathbf{+1\upsilon, -1\psi}  ). A vector shift from destructive nihilism (**Evil + Truth**) to passive, compromising universal benefit (**Good + Lie**).-υ) → (< 1). A vector shift from destructive nihilism (Evil + Truth) to passive, compromising universal benefit (Good + Lie).
 
 ## Philosophical Archetypes: Mapping Core Wisdom
 
-To anchor the abstract vectors in historical consciousness, four foundational mythological and philosophical figures are mapped to the core quadrants based on the dominance of their moral (  \upsilon  ) and volitional (  \psi  ) vectors. **These figures represent the full moral and volitional path (both the entry vector and the exit vector) associated with their respective quadrant.**![](media/image122.png){width="8.333333333333333e-2in" height="6.944444444444445e-2in"}**) and volitional (**![](media/image63.png){width="9.722222222222222e-2in" height="0.1527777777777778in"}**) vectors. These figures represent the full moral and volitional path (both the entry vector and the exit vector) associated with their respective quadrant.**
+To anchor the abstract vectors in historical consciousness, four foundational mythological and philosophical figures are mapped to the core quadrants based on the dominance of their moral (  \upsilon  ) and volitional (  \psi  ) vectors. **These figures represent the full moral and volitional path (both the entry vector and the exit vector) associated with their respective quadrant.**υ**) and volitional (**ψ**) vectors. These figures represent the full moral and volitional path (both the entry vector and the exit vector) associated with their respective quadrant.**
 
 \| Archetype \| Quadrant \| Vector Justification (υ,ψ) \| Philosophical Alignment \|
 
-\| Lao Tzu \| Top-Left (Productive) \| (  \mathbf{+\upsilon, +\psi}  ): His core is universal benefit (the Tao/Water-like virtue benefits all) combined with proactive, effortless Will (Wu Wei: action in perfect alignment with nature, leading to everything being accomplished). He represents the aspiration of Grace and the risk of The Fall. \| Taoism: The creation of harmony through effortlessness. \|![](media/image291.png){width="0.5277777777777778in" height="0.1527777777777778in"}): His core is universal benefit (the Tao/Water-like virtue benefits all) combined with proactive, effortless Will (Wu Wei: action in perfect alignment with nature, leading to everything being accomplished). He represents the aspiration of Grace and the risk of The Fall. \| Taoism: The creation of harmony through effortlessness. \|
+\| Lao Tzu \| Top-Left (Productive) \| (  \mathbf{+\upsilon, +\psi}  ): His core is universal benefit (the Tao/Water-like virtue benefits all) combined with proactive, effortless Will (Wu Wei: action in perfect alignment with nature, leading to everything being accomplished). He represents the aspiration of Grace and the risk of The Fall. \| Taoism: The creation of harmony through effortlessness. \|≠): His core is universal benefit (the Tao/Water-like virtue benefits all) combined with proactive, effortless Will (Wu Wei: action in perfect alignment with nature, leading to everything being accomplished). He represents the aspiration of Grace and the risk of The Fall. \| Taoism: The creation of harmony through effortlessness. \|
 
-\| Krishna \| Top-Right (Reductive) \| (  \mathbf{-\upsilon, +\psi}  ): His core is proactive Will (Karma Yoga: the call to fight and act decisively) combined with a group-centric focus (the re-establishment of Divine Order/Dharma, which necessitates the destruction of the existing flawed order). He represents the temptation of The Fall and the onset of Delusion. \| Bhagavad Gita: Duty, assertive action, and the divine right to create and destroy to maintain cosmic order. \|![](media/image195.png){width="0.5277777777777778in" height="0.1527777777777778in"}): His core is proactive Will (Karma Yoga: the call to fight and act decisively) combined with a group-centric focus (the re-establishment of Divine Order/Dharma, which necessitates the destruction of the existing flawed order). He represents the temptation of The Fall and the onset of Delusion. \| Bhagavad Gita: Duty, assertive action, and the divine right to create and destroy to maintain cosmic order. \|
+\| Krishna \| Top-Right (Reductive) \| (  \mathbf{-\upsilon, +\psi}  ): His core is proactive Will (Karma Yoga: the call to fight and act decisively) combined with a group-centric focus (the re-establishment of Divine Order/Dharma, which necessitates the destruction of the existing flawed order). He represents the temptation of The Fall and the onset of Delusion. \| Bhagavad Gita: Duty, assertive action, and the divine right to create and destroy to maintain cosmic order. \|≠): His core is proactive Will (Karma Yoga: the call to fight and act decisively) combined with a group-centric focus (the re-establishment of Divine Order/Dharma, which necessitates the destruction of the existing flawed order). He represents the temptation of The Fall and the onset of Delusion. \| Bhagavad Gita: Duty, assertive action, and the divine right to create and destroy to maintain cosmic order. \|
 
-\| Buddha \| Bottom-Left (Constructive) \| (  \mathbf{+\upsilon, -\psi}  ): His core is universal benefit (the relief of suffering for all sentient beings) combined with suppressive Will (Nirvana: the cessation of action through the suppression of all desire and attachment). He represents the result of Redemption and the goal of Grace. \| Buddhism: The Four Noble Truths, focusing on the suppression of the cause of suffering to achieve universal peace. \|![](media/image190.png){width="0.5277777777777778in" height="0.1527777777777778in"}): His core is universal benefit (the relief of suffering for all sentient beings) combined with suppressive Will (Nirvana: the cessation of action through the suppression of all desire and attachment). He represents the result of Redemption and the goal of Grace. \| Buddhism: The Four Noble Truths, focusing on the suppression of the cause of suffering to achieve universal peace. \|
+\| Buddha \| Bottom-Left (Constructive) \| (  \mathbf{+\upsilon, -\psi}  ): His core is universal benefit (the relief of suffering for all sentient beings) combined with suppressive Will (Nirvana: the cessation of action through the suppression of all desire and attachment). He represents the result of Redemption and the goal of Grace. \| Buddhism: The Four Noble Truths, focusing on the suppression of the cause of suffering to achieve universal peace. \|≠): His core is universal benefit (the relief of suffering for all sentient beings) combined with suppressive Will (Nirvana: the cessation of action through the suppression of all desire and attachment). He represents the result of Redemption and the goal of Grace. \| Buddhism: The Four Noble Truths, focusing on the suppression of the cause of suffering to achieve universal peace. \|
 
-\| Jesus Christ \| Bottom-Right (Regressive) \| (  \mathbf{-\upsilon, -\psi}  ): His core is group-centric benefit (salvation and the Kingdom of Heaven for believers, often framed against the earthly world) combined with suppressive/passive Will (the ultimate self-sacrifice, non-resistance, and the eschatological prophecy of the destruction/negation of the current world order). He represents the consequences of Delusion and the need for Redemption. \| Early Christian Eschatology: Emphasis on martyrdom, rejection of material life, and the imminent end of the profane world. \|![](media/image250.png){width="0.5277777777777778in" height="0.1527777777777778in"}): His core is group-centric benefit (salvation and the Kingdom of Heaven for believers, often framed against the earthly world) combined with suppressive/passive Will (the ultimate self-sacrifice, non-resistance, and the eschatological prophecy of the destruction/negation of the current world order). He represents the consequences of Delusion and the need for Redemption. \| Early Christian Eschatology: Emphasis on martyrdom, rejection of material life, and the imminent end of the profane world. \|
+\| Jesus Christ \| Bottom-Right (Regressive) \| (  \mathbf{-\upsilon, -\psi}  ): His core is group-centric benefit (salvation and the Kingdom of Heaven for believers, often framed against the earthly world) combined with suppressive/passive Will (the ultimate self-sacrifice, non-resistance, and the eschatological prophecy of the destruction/negation of the current world order). He represents the consequences of Delusion and the need for Redemption. \| Early Christian Eschatology: Emphasis on martyrdom, rejection of material life, and the imminent end of the profane world. \|≠): His core is group-centric benefit (salvation and the Kingdom of Heaven for believers, often framed against the earthly world) combined with suppressive/passive Will (the ultimate self-sacrifice, non-resistance, and the eschatological prophecy of the destruction/negation of the current world order). He represents the consequences of Delusion and the need for Redemption. \| Early Christian Eschatology: Emphasis on martyrdom, rejection of material life, and the imminent end of the profane world. \|
 
 ## Practical Guide: The Meditative Resolution Sequence
 
@@ -204,10 +204,10 @@ This sequence is a process to move from a state of maximum conflict to a state o
     - **Lesser Good (Bottom-Left):** Feel Peace, Stability, Calm.
 
 2.  Induce Tension (Helixis):
-    Look at the Greater Good (  +\upsilon, +\psi  ) but think about the Greater Evil (  -\upsilon, -\psi  ). You will feel a high tension in your core. This is the fundamental conflict (Helixis) between the two poles of reality.![](media/image251.png){width="0.5277777777777778in" height="0.1527777777777778in"}) but think about the Greater Evil (![](media/image228.png){width="0.5277777777777778in" height="0.1527777777777778in"}). You will feel a high tension in your core. This is the fundamental conflict (Helixis) between the two poles of reality.
+    Look at the Greater Good (  +\upsilon, +\psi  ) but think about the Greater Evil (  -\upsilon, -\psi  ). You will feel a high tension in your core. This is the fundamental conflict (Helixis) between the two poles of reality.≠) but think about the Greater Evil (≠). You will feel a high tension in your core. This is the fundamental conflict (Helixis) between the two poles of reality.
 
 3.  Feel the Release (Harmonia Vector):
-    Reverse the process. Look at the Greater Evil (  -\upsilon, -\psi  ) and think about the Greater Good (  +\upsilon, +\psi  ). You should feel an immediate lightening or release. This feeling is the vector of Harmonia.![](media/image228.png){width="0.5277777777777778in" height="0.1527777777777778in"}) and think about the Greater Good (![](media/image251.png){width="0.5277777777777778in" height="0.1527777777777778in"}). You should feel an immediate lightening or release. This feeling is the vector of Harmonia.
+    Reverse the process. Look at the Greater Evil (  -\upsilon, -\psi  ) and think about the Greater Good (  +\upsilon, +\psi  ). You should feel an immediate lightening or release. This feeling is the vector of Harmonia.≠) and think about the Greater Good (≠). You should feel an immediate lightening or release. This feeling is the vector of Harmonia.
 
 4.  The Resolution Sequence (Unlocking the Path):
     This is the step-by-step process of resolving the core tension.
@@ -230,19 +230,19 @@ The Harmonia State (GG / Bliss) is inherently unstable, as it must interface wit
 
 1.  **Perturbation by the Lesser Evil (The Fall):**
 
-    - **Vector:**   \mathbf{GG \to LE}   (  \mathbf{-\upsilon, +\psi}  )![](media/image81.png){width="0.7916666666666666in" height="0.125in"} (![](media/image224.png){width="0.5277777777777778in" height="0.1527777777777778in"})
+    - **Vector:**   \mathbf{GG \to LE}   (  \mathbf{-\upsilon, +\psi}  )GG → LE (≠)
 
     - **Feeling:** When the Bliss state (GG) encounters a **Lesser Evil** idea, the tension **instantly inverts to maximum**. This is the feeling of anger, of plans being disrupted by a selfish, high-will actor.
 
 2.  **Perturbation by the Greater Evil (The Test of Faith):**
 
-    - **Vector:**   \mathbf{GG \to GE}   (  \mathbf{-\upsilon, -\psi}  )![](media/image163.png){width="0.8333333333333334in" height="0.125in"} (![](media/image228.png){width="0.5277777777777778in" height="0.1527777777777778in"})
+    - **Vector:**   \mathbf{GG \to GE}   (  \mathbf{-\upsilon, -\psi}  )GG → GE (≠)
 
     - **Feeling:** When the Bliss state (GG) encounters a **Greater Evil** idea, it induces high tension. This triggers the 'Scale of Acceptance': apprehension, depression, and disbelief as the foundation of "Good" is challenged by pure nihilism.
 
 3.  **Perturbation by the Lesser Good (Integration & Expansion):**
 
-    - **Vector:**   \mathbf{G} \mathbf{G} \to \mathbf{L} \mathbf{G}   (  \mathbf{+\upsilon, -\psi}  )![](media/image271.png){width="0.8055555555555556in" height="0.125in"} (![](media/image240.png){width="0.5277777777777778in" height="0.1527777777777778in"})
+    - **Vector:**   \mathbf{G} \mathbf{G} \to \mathbf{L} \mathbf{G}   (  \mathbf{+\upsilon, -\psi}  )GG → LG (≠)
 
     - **Feeling:** When the Bliss state (GG) encounters a **Lesser Good** idea, the "lightening" feeling *flattens* and stabilizes. The idea is processed in a good way. This is **{Expansion}**: the foundation of knowledge grows, leading to peaceful, zen-like feelings as the new, compromised good is integrated.
 

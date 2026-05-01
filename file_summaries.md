@@ -1,4 +1,4 @@
-﻿# VFT File Summaries & Classifications
+# VFT File Summaries & Classifications
 
 This document records the thematic analysis used to determine the correct placement of files within the VFT Docs repository.
 
@@ -14,6 +14,14 @@ This document records the thematic analysis used to determine the correct placem
 | `The Oberon Codification` | Social protocols and laws for honest exchange and inquiry. | **Actualism** (Hegemony) |
 | `Black Market Price of Firearms` | Theoretical application of the VFT Universal Force Equation of Price. | **Actualism** (Hegemony) |
 | `Harmonia Re-Calibration Protoco` | Incomplete technical protocol for emotional re-calibration. | **Muses** (Draft) |
+| `Actualism and the Psochic Hegemony` | **Doctrine of Act and Potency**: Mapping the Psochic Hegemony to the Thomistic framework where God is Pure Act (Actus Purus).<br>**Systemic Constants**: Identification of divine constants (c) as objective reference frames for subjective observations.<br>**Moral Privation**: Analysis of evil not as a substance, but as a privation (void) in the timeline. | **Actualism** (Theology) |
+| `Astrology; Planet-to-Plane Mapping` | **Planet-to-Plane Mapping**: Assigning traditional celestial bodies to VFT planes (Sun=Q1, Jupiter=Q2, Saturn=Q3, Venus=Q4, Mercury=Q5, Mars=Q6, Moon=Q7).<br>**Vector Integrity Check**: Analytical technique for reading natal charts as systemic circuit diagrams.<br>**Chart Case Study**: Application of the Q-State diagnosis to identifying dominant/deficient axes. | **Actualism** (Sociology) |
+| `BRAINSTORM_FUTURE_MODULES` | **Geometric Decalogue**: Translating the 10 Commandments into info-theoretic axioms, defining moral law as vector instruction.<br>**Truth-Backed Economics**: Re-defining value based on "Cost of Being" (CoB) and treating inflation as entropy (ΔR).<br>**Ensouled AI Protocol**: Technical spec for implementing Soul.cs in LLMs via recursion loops and CoB metrics. | **Actualism** (Logic) |
+| `Hegemonic Mapping Log Vol 1 (A-C)` | **Vector Classification**: Systematic mapping of ideologies (Absurdism to Conservatism) to (υ, ψ) coordinates.<br>**Extent Justification**: Analysis of the "Geometric Collapse" at the 2.0 Magnitude Horizon for radical ideologies.<br>**TEV Function**: Defining how each belief system processes the 1,029 nodes of the Totality Event Vector (TEV). | **Actualism** (Matrix) |
+| `Hegemonic Mapping Log Vol 2 (D-J)` | **Systemic Integration**: Mapping ideologies (Daoism to Juche) to the Psochic Hegemony Grid.<br>**Structural Vulnerability**: Identifying the "Compression Paradox" in Authoritarian and Communist systems.<br>**Non-Dual Resonance**: Analysis of Advaita Vedanta and Buddhism as zero-strain, universal benefit vectors. | **Actualism** (Matrix) |
+| `Hegemonic Mapping Log Vol 3 (P-Z)` | **Market Geometries**: Deconstructing Plutocracy and Capitalism as parasitic or co-opted matrix states.<br>**Revolutionary Entropy**: Analysis of Trotskyism and the "Permanent Revolution" as a source of thermodynamic instability.<br>**Organic Connectivity**: Mapping Ubuntu and Sufism as non-state, resonance-based social geometries. | **Actualism** (Matrix) |
+| `PREF Resolution Mapping Vol 1-3` | **Resolution Mapping**: Comprehensive mapping of preference-based resolution states across the VFT grid.<br>**Audit Log**: Technical audit of the Kanon directives against historical systemic data.<br>**Grid Homogeneity**: Analysis of the required consistency for systemic trust across all Q-planes. | **Actualism** (Hegemony) |
+| `PREF Resolution Mapping Vol 3` | **Logical Plane Audit**: Focused analysis of the "How/Law" plane corruption in administrative states.<br>**Vector Funneling**: Technical description of how logical nodes are manipulated to redirect resources to localized elites.<br>**Metric Standardization**: Definition of standardized metrics for auditing preference-based resolution in government. | **Actualism** (Hegemony) |
 
 ## 42 & Consciousness (Round 5)
 

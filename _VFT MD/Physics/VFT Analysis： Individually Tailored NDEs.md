@@ -12,9 +12,9 @@ Below is the geometric and causal breakdown.
 
 ### 1. The Principle of Strain Minimisation
 
-In VFT, **Strain (**![](media/image3.png){width="0.12239610673665792in" height="0.24479221347331584in"}**)** is the measure of the gap between Reality and Perception (Section 0.5.1).
+In VFT, **Strain (**ψ**)** is the measure of the gap between Reality and Perception (Section 0.5.1).
 
-- ![](media/image7.png){width="6.458333333333333in" height="0.4514566929133858in"}**The Problem:** The Truth Vector (![](media/image6.png){width="0.45979768153980755in" height="0.25079833770778653in"}) is absolute, formless, and infinite (Unity). The User\'s Vector (![](media/image5.png){width="0.40804024496937885in" height="0.2511023622047244in"}) is rigid, culturally conditioned, and finite. If the System delivers raw, untailored Truth (pure high-voltage reality) to a limited consciousness, the Strain would be catastrophic. The ego would reject it as \"Alien,\" \"Terrifying,\" or \"Madness.\"
+- Ψ × K × Π → M**The Problem:** The Truth Vector (![](media/image6.png){width="0.45979768153980755in" height="0.25079833770778653in"}) is absolute, formless, and infinite (Unity). The User\'s Vector (![](media/image5.png){width="0.40804024496937885in" height="0.2511023622047244in"}) is rigid, culturally conditioned, and finite. If the System delivers raw, untailored Truth (pure high-voltage reality) to a limited consciousness, the Strain would be catastrophic. The ego would reject it as \"Alien,\" \"Terrifying,\" or \"Madness.\"
 
 - **The Solution (Tailoring):** The NDE acts as an **Impedance Matcher**. It lowers the \"voltage\" and modifies the \"frequency\" to match the input port of the receiver.
 
@@ -34,9 +34,9 @@ One must distinguish between the **Material Cause** (The imagery used) and the *
 
 - **The Lesson (Efficient Cause):** This corresponds to the **Logical and Emotional Planes**. Almost all \"tailored\" NDEs share the exact same Vector Coordinates:
 
-  - **Morality (**![](media/image1.png){width="0.11621062992125984in" height="0.2535498687664042in"}**):** ![](media/image4.png){width="0.4147134733158355in" height="0.2384601924759405in"} (Universal Unity/Love).
+  - **Morality (**υ**):** ![](media/image4.png){width="0.4147134733158355in" height="0.2384601924759405in"} (Universal Unity/Love).
 
-  - **Will (**![](media/image2.png){width="0.1385094050743657in" height="0.25570975503062116in"}**):** ![](media/image4.png){width="0.4147134733158355in" height="0.2384601924759405in"} (Expansion/Connection).
+  - **Will (**ψ**):** ![](media/image4.png){width="0.4147134733158355in" height="0.2384601924759405in"} (Expansion/Connection).
 
 **The Consistency Check:**
 
@@ -64,11 +64,11 @@ The System is not lying; it is rendering a user-friendly interface for a complex
 
 ### 4. The Worldview Integrity Simulation (Model 5)
 
-A human mind operates within a **Worldview (**![](media/image8.png){width="0.2184251968503937in" height="0.24962817147856517in"}**)**. Ideas that exist too far outside ![](media/image8.png){width="0.2184251968503937in" height="0.24962817147856517in"} are rejected as \"Noise.\"
+A human mind operates within a **Worldview (**W**)**. Ideas that exist too far outside W are rejected as \"Noise.\"
 
-- **Scenario A (Untailored):** A fundamentalist sees a generic, non-denominational geometric void. The distance from their ![](media/image8.png){width="0.2184251968503937in" height="0.24962817147856517in"} is massive. Rejection probability is high. They return believing it was a hallucination or a demonic trick.
+- **Scenario A (Untailored):** A fundamentalist sees a generic, non-denominational geometric void. The distance from their W is massive. Rejection probability is high. They return believing it was a hallucination or a demonic trick.
 
-- **Scenario B (Tailored):** The same fundamentalist sees their specific deity. The distance from ![](media/image8.png){width="0.2184251968503937in" height="0.24962817147856517in"} is zero. Acceptance is immediate. The \"Payload\" (The message of Love) is delivered successfully inside the \"Trojan Horse\" of their expectation.
+- **Scenario B (Tailored):** The same fundamentalist sees their specific deity. The distance from W is zero. Acceptance is immediate. The \"Payload\" (The message of Love) is delivered successfully inside the \"Trojan Horse\" of their expectation.
 
 ### The Verdict
 

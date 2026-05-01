@@ -8,7 +8,7 @@ REM ============================================
 setlocal enabledelayedexpansion
 
 set "GDRIVE_IO_ID=1eFfacNbz1A45n_yVH6m2l4jN7LvTBF7S"
-set "LOCAL_IO=E:\Vector Field Theory\VFT Docs\_VFT MD\IO"
+set "LOCAL_IO=E:\Vector Field Theory\VFT Docs\IO"
 
 echo.
 echo ========================================
@@ -31,18 +31,7 @@ rclone move VFT: VFT:Processed --drive-root-folder-id %GDRIVE_IO_ID% --progress
 
 echo.
 echo ========================================
-echo   Step 3: Processing Local Files...
+echo   Sync Complete!
 echo ========================================
-echo.
-echo Running conversion, sorting, and indexing...
-python "E:\Vector Field Theory\VFT Docs\_AI files and chat logs\process_io_files.py"
-
-echo.
-echo ========================================
-echo   Sync & Processing Complete!
-echo ========================================
-echo.
-echo Local files processed and moved to their folders.
-echo Original docs archived in: _VFT MD/_Archive/Processed_Imports
 echo.
 pause

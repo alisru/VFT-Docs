@@ -2,13 +2,13 @@
 
 The Hegemonic Stress Tensor measures the weight limit of your worldview. It treats beliefs as physical mass, testing how much pressure your internal geometry can sustain before the internal geometry cracks. In this view individuals are analogous to particles and Truth as a superposition that collapses on observation. Every idea is a \"conceptual brick\" built from four coordinates:
 
-- ![](media/image5.png){width="0.1385094050743657in" height="0.25570975503062116in"} **(Will):** The agency or intensity driving the idea.
+- ψ **(Will):** The agency or intensity driving the idea.
 
-- ![](media/image2.png){width="0.11621062992125984in" height="0.2535498687664042in"} **(Morality):** The directional benefit; who the idea serves.
+- υ **(Morality):** The directional benefit; who the idea serves.
 
-- ![](media/image1.png){width="0.1263024934383202in" height="0.2526038932633421in"} **(Chi):** The total mass of your existing knowledge.
+- σ **(Chi):** The total mass of your existing knowledge.
 
-- ![](media/image4.png){width="0.10742235345581802in" height="0.2578127734033246in"} **(Strain):** The tension between the idea and objective reality.
+- η **(Strain):** The tension between the idea and objective reality.
 
 ### Construction Materials
 
@@ -28,7 +28,7 @@ Your mind automatically sorts every new piece of information relative to six gra
 
 3.  **Good Preference & Bad Preference:** Personal like vs. personal aversion.
 
-You build \"tower mass\" at these coordinates. However, your core understanding gathers in the center (0, 0). If your ![](media/image1.png){width="0.1263024934383202in" height="0.2526038932633421in"} (understanding) is not large enough to **encompass** any of these 6 points, you will not own or \"realize\" the effects of that information. Consequently, you will be influenced and influenceable in that specific field of knowledge, lacking the internal mass to verify the truth yourself.
+You build \"tower mass\" at these coordinates. However, your core understanding gathers in the center (0, 0). If your σ (understanding) is not large enough to **encompass** any of these 6 points, you will not own or \"realize\" the effects of that information. Consequently, you will be influenced and influenceable in that specific field of knowledge, lacking the internal mass to verify the truth yourself.
 
 ### Mass and Collapse
 
@@ -36,4 +36,4 @@ Complexity adds mass along the Z-axis, building the idea outward toward the obse
 
 ### The Lensing Effect
 
-The center of the Hegemony ![](media/image3.png){width="0.4484055118110236in" height="0.23984470691163604in"} is an inversion zone. Your ego acts as a lens, distorting the light based on your own density. This creates a mirage: Greed looks like Strength, and Service looks like a Burden. It is a perspective error born of self-interest. You only correct the focal length by increasing the honesty and density of your central ![](media/image1.png){width="0.1263024934383202in" height="0.2526038932633421in"}. Expand your knowledge to see the coordinates as they actually are.
+The center of the Hegemony (0,0) is an inversion zone. Your ego acts as a lens, distorting the light based on your own density. This creates a mirage: Greed looks like Strength, and Service looks like a Burden. It is a perspective error born of self-interest. You only correct the focal length by increasing the honesty and density of your central σ. Expand your knowledge to see the coordinates as they actually are.

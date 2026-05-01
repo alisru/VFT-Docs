@@ -226,7 +226,7 @@ The answer lies in **Social Physics**. The Vanguard is not just a political acto
 
   - The Vanguard attacks. The Compliant explains.
 
-- **The Result:** The public, sensing the energy differential, perceives the Vanguard as the "Alpha" (High Will +![](media/image1.png){width="0.1385094050743657in" height="0.25570975503062116in"}) and the Compliant as the "Beta" (Low Will -![](media/image1.png){width="0.1385094050743657in" height="0.25570975503062116in"}). The Vanguard uses the opponent's own adherence to rules as a straitjacket. He knows they will not arrest him on live TV; he knows they will not shut down his mic. He counts on their civility to protect his barbarism.
+- **The Result:** The public, sensing the energy differential, perceives the Vanguard as the "Alpha" (High Will +ψ) and the Compliant as the "Beta" (Low Will -ψ). The Vanguard uses the opponent's own adherence to rules as a straitjacket. He knows they will not arrest him on live TV; he knows they will not shut down his mic. He counts on their civility to protect his barbarism.
 
 ### B. Exploiting Axis 4: The Entropy Engine (Noise vs. Signal)
 
@@ -288,7 +288,7 @@ This is how a Free People chooses a King. Not by force, but by **Exhaustion**. T
 
 **Hegemonic Coordinate:** **Zone 3 (Treason) -\> Zone 2 TR (Tyranny).**
 
-Donald Trump is a **Foreign Agent** not because he carries a GRU badge, but because his **Will Vector (**![](media/image1.png){width="0.1385094050743657in" height="0.25570975503062116in"}**)** is perfectly aligned with the strategic goals of the Russian Federation and the People's Republic of China.
+Donald Trump is a **Foreign Agent** not because he carries a GRU badge, but because his **Will Vector (**ψ**)** is perfectly aligned with the strategic goals of the Russian Federation and the People's Republic of China.
 
 - **Goal 1:** Break NATO. **(Executed)**.
 
