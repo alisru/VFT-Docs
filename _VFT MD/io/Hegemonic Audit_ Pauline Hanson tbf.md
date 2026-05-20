@@ -29,7 +29,7 @@ The central question of this audit is not, *"Is Pauline Hanson a good or bad pol
 * 	  
    	**Misses 	(Ignored Vectors):** 	0
 
-According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (31.0%) of the nation's core structural, moral, and historical identity.
+According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (28.4%) of the nation's core structural, moral, and historical identity.
 
 She does not represent the comprehensive Australian character, nor the optimistic, egalitarian "Fair Go" that built the modern Commonwealth. Instead, she is a highly specialized political agent who operates almost exclusively in the nation's structural "shadows." She flawlessly channels Australia's geographical paranoia, its colonial history of exclusion, and its working-class anxieties, but she fundamentally fails—and actively attacks—the nation's most celebrated unifying virtues.
 
@@ -2808,7 +2808,7 @@ This is a hit because she successfully operates the "Greatest Lie" of nostalgia,
 ## **Final Forensic Verdict: Pauline Hanson (Plane 3\)**
 
 **Plane 3 Land Score:** +25 Net Score (37 HIT, 12 FAIL, 0 MISS)
- **Percentage Australian Alignment:** 51%  
+ **Percentage Australian Alignment:** 51.0%  
  **Average Morality (υ):** \-0.05 (Neutral/Self Benefit)  
  **Average Will (ψ):** \+0.22 (Low Energy/Reactive)  
  **Quadrant Placement:** Lesser Evil / Greatest Lie
@@ -3766,7 +3766,7 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## **Final Forensic Verdict: Pauline Hanson (Plane 4\)**
 
 **Plane 4 Drive Score:** +18 Net Score (35 HIT, 17 FAIL, 0 MISS)
- **Percentage Australian Alignment:** 40.4%  
+ **Percentage Australian Alignment:** 34.6%  
  **Average Morality (υ):** \-0.42 (Self/Group Benefit)  
  **Average Will (ψ):** \+0.31 (Proactive Will)  
  **Quadrant Placement:** Lesser Evil / Greatest Lie
@@ -4283,7 +4283,7 @@ She successfully operates the darkest, most powerful structural mechanism of the
 
 **Plane 5 Method Score:** +7 Net Score (28 HIT, 21 FAIL, 0 MISS)
 
-**Percentage Australian Alignment:** 16.3%
+**Percentage Australian Alignment:** 14.3%
 
 **Average Morality (υ):** \-0.48 (Self/Group Benefit)
 
@@ -6107,7 +6107,7 @@ This is a failure because she attempts to dismantle the mature, outward-looking 
 
 **Plane 7 Effect Score:** +5 Net Score (27 HIT, 22 FAIL, 0 MISS)
 
-**Percentage Australian Alignment:** 55.1%
+**Percentage Australian Alignment:** 10.2%
 
 **Average Morality (υ):** \-0.48 (Self/Group Benefit)
 
@@ -6121,16 +6121,16 @@ This is a failure because she attempts to dismantle the mature, outward-looking 
 
 ## **The Bottom Line: How "Australian" is She?**
 
-**Final Alignment Score:** **31.0%** (+108 Net Score out of 349 core vectors)
+**Final Alignment Score:** **28.4%** (+99 Net Score out of 349 core vectors)
 
 * 	  
-   	**Hits (Alignments):** 	223  
+   	**Hits (Alignments):** 	224  
 * 	  
-   	**Fails (Violations):** 	115  
+   	**Fails (Violations):** 	125  
 * 	  
    	**Misses (Ignored):** 	0
 
-According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (**31.0%**) of the nation's core structural, moral, and historical identity.
+According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (**28.4%**) of the nation's core structural, moral, and historical identity.
 
 She is not a comprehensive representation of the Australian character. Instead, she is a highly specialized political agent who operates almost exclusively in the nation's "shadows." She flawlessly channels Australia's geographical paranoia, its colonial history of exclusion, and its working-class anxieties, but she fundamentally fails and actively attacks the nation's most celebrated virtues: universal Mateship, the Fair Go, and egalitarianism.
 
@@ -6139,15 +6139,15 @@ She is not a comprehensive representation of the Australian character. Instead, 
 Here is exactly where she succeeds in being "Australian," and where she fails the national character:
 
 * 	  
-   	**Plane 1: Identity (Who) — 22.0% Aligned** 	She perfectly captures the aesthetics of the "Battler" and 	the "Larrikin," using anti-authoritarian common sense to 	win over the Pub Test. However, she severely fails the core 	Australian trait of *Mateship*, 	because she applies strict racial and cultural conditions to a bond 	that is supposed to be universal and horizontal.  
+   	**Plane 1: Identity (Who) — 20.0% Aligned** 	She perfectly captures the aesthetics of the "Battler" and 	the "Larrikin," using anti-authoritarian common sense to 	win over the Pub Test. However, she severely fails the core 	Australian trait of *Mateship*, 	because she applies strict racial and cultural conditions to a bond 	that is supposed to be universal and horizontal.  
 * 	  
    	**Plane 2: Definition (What) — 33.3% 	Aligned** She knows how to ruthlessly 	hack the constitutional mechanics of the country (exploiting the 	Senate, compulsory voting, and the secret ballot). But she fails the 	definition of the state by completely rejecting political compromise 	and trying to wind the nation's legal definition back to 1901\.  
 * 	  
-   	**Plane 3: The Land (Where) — 59.2% Aligned** 	*(Her Strongest Area)* 	She is highly aligned with the harsh physical realities of the 	Australian continent. She thrives on the "Tyranny of Distance," 	champions the crude economic power of the "Quarry" and the 	"Mine," and perfectly understands the "Fortress" 	mentality of an isolated island nation.  
+   	**Plane 3: The Land (Where) — 51.0% Aligned** 	*(Her Strongest Area)* 	She is highly aligned with the harsh physical realities of the 	Australian continent. She thrives on the "Tyranny of Distance," 	champions the crude economic power of the "Quarry" and the 	"Mine," and perfectly understands the "Fortress" 	mentality of an isolated island nation.  
 * 	  
-   	**Plane 4: The Drive (Why) — 40.4% Aligned** 	She successfully taps into the defensive "Quiet Australian" 	who just wants to protect their quarter-acre block and their 	weekend. However, she fails the nation's drive by actively 	attempting to dismantle the power of the working class (like 	attacking unions and penalty rates) to favor business owners.  
+   	**Plane 4: The Drive (Why) — 34.6% Aligned** 	She successfully taps into the defensive "Quiet Australian" 	who just wants to protect their quarter-acre block and their 	weekend. However, she fails the nation's drive by actively 	attempting to dismantle the power of the working class (like 	attacking unions and penalty rates) to favor business owners.  
 * 	  
-   	**Plane 5: Method (How) — 16.3% Aligned** 	She is fundamentally un-Australian in her methods of governance. 	While she uses populist stunts to get attention, she actively 	attacks the most successful, pragmatic utilities the nation has ever 	built—such as universal Medicare, public broadcasters, and 	structural welfare—replacing the "Greatest Good" with 	tribal selfishness.  
+   	**Plane 5: Method (How) — 14.3% Aligned** 	She is fundamentally un-Australian in her methods of governance. 	While she uses populist stunts to get attention, she actively 	attacks the most successful, pragmatic utilities the nation has ever 	built—such as universal Medicare, public broadcasters, and 	structural welfare—replacing the "Greatest Good" with 	tribal selfishness.  
 * 	  
    	**Plane 6: Foundation (Cause) — 34.7% 	Aligned** She proudly anchors herself 	to the original colonial settlement of 1788 and the Anzac myth, 	validating the fears of the "Convict" and the "Squatter." 	But she catastrophically fails the foundation by brutally denying 	the Frontier Wars, the Stolen Generations, and the deep-time 	sovereignty of First Nations people.  
 * 	  
@@ -6165,5 +6165,5 @@ The math reveals exactly how Hanson has survived for decades despite such a low 
 
 **Quadrant Placement:** Lesser Evil / Greatest Lie *(Average Morality: \-0.38, Average Will: \+0.26)*
 
-Pauline Hanson is the political embodiment of Australia's deepest insecurities. She does not represent the hopeful, egalitarian, or progressive "Fair Go" that built the modern Commonwealth. Instead, she is a reactionary force—a structural regression—who weaponizes the geographic isolation and colonial traumas of the past to prevent the nation from evolving. She is exactly **31% Australian**: the 31% that is terrified of the outside world.
+Pauline Hanson is the political embodiment of Australia's deepest insecurities. She does not represent the hopeful, egalitarian, or progressive "Fair Go" that built the modern Commonwealth. Instead, she is a reactionary force—a structural regression—who weaponizes the geographic isolation and colonial traumas of the past to prevent the nation from evolving. She is exactly **28.4% Australian**: the 28.4% that is terrified of the outside world.
 
