@@ -311,7 +311,7 @@ The vector represents the "Totem" of the land, which she uses as a primary sourc
 
 Her interaction is a hit because it channels the passive power of the land's myth into her personal brand.
 
-**(Who.Where.What) The Coast (υ: \+0.6, ψ: \+0.3): HIT.**
+**(Who.Where.What) The Coast (υ: \+0.6, ψ: \+0.3): HIT.** **Quote:** "Our beautiful beaches and coastal areas are being bought up by foreign interests and developers who don't care about our way of life." (2018).
 
 **Brief:** She defends the coastal "Way of Life" as a vulnerable artifact that must be protected.
 
@@ -347,7 +347,7 @@ The vector represents the "Void" or "Magnet" of the center, which requires a non
 
 Her interaction is a failure because it replaces the "Spiritual Sovereign" with a generic "Public Park" logic.
 
-**(Who.Where.Why) The Cycle (υ: 0.0, ψ: \-0.5): FAIL.**
+**(Who.Where.Why) The Cycle (υ: 0.0, ψ: \-0.5): FAIL.** **Quote:** "The farmers are starving, the towns are dry, and the government in Canberra does absolutely nothing while our regions die." (Drought appeal address, 2019). 
 
 **Brief:** Hanson interacts with environmental events like drought and flood primarily to fuel grievance.
 
@@ -421,7 +421,7 @@ Her interaction is a hit because it successfully activates the passive, protecti
 
 ## **1.4 The Why of Identity (Lyrical)**
 
-**(Who.Why.Who) Punching Above Weight (υ: \+0.5, ψ: \+0.8): HIT.**
+**(Who.Why.Who) Punching Above Weight (υ: \+0.5, ψ: \+0.8): HIT.** **Quote:** "Australia is a great nation that has achieved incredible things on the world stage, and we don't need international bodies telling us how to run our country." (2017).
 
 **Brief:** Hanson embraces the vector of overachievement through defiant rejection of international norms.
 
@@ -439,7 +439,7 @@ The vector is about "Overachievement," which she applies to the volume of her pr
 
 Her interaction is a hit because it aligns with the national pride found in being a "difficult" but significant player.
 
-**(Who.Why.What) The Lucky Country (υ: \+0.3, ψ: \-0.4): HIT.**
+**(Who.Why.What) The Lucky Country (υ: \+0.3, ψ: \-0.4): HIT.** **Quote:** "We are indeed a lucky country, but our luck is running out because of weak politicians selling our resources and assets to foreign companies." (2016).
 
 **Brief:** Luck is framed as a finite, physical resource reserved exclusively for the "Original" population.
 
@@ -457,7 +457,7 @@ The vector is intended to highlight "Speculative Luck," which she utilizes to ge
 
 Her interaction is a hit because it effectively leverages the passive, anxious side of the national fortune.
 
-**(Who.Why.Where) Populate or Perish (υ: \-0.2, ψ: \+0.6): FAIL.**
+**(Who.Why.Where) Populate or Perish (υ: \-0.2, ψ: \+0.6): FAIL.** **Quote:** "Our infrastructure is at breaking point, our schools and hospitals are full, and we are importing hundreds of thousands of people we cannot support." (2019).
 
 **Brief:** Hanson directly opposes the existential need for national growth, favoring stasis and exclusion.
 
@@ -493,7 +493,7 @@ The vector represents the "Deep Time" sovereignty, which her rhetoric explicitly
 
 Her interaction is a failure because it replaces the "Lyrical Root" with a shallow, modern ideological claim.
 
-**(Who.Why.Why) "Have a Go, Ya Mug" (υ: \+0.7, ψ: \+0.8): HIT.**
+**(Who.Why.Why) "Have a Go, Ya Mug" (υ: \+0.7, ψ: \+0.8): HIT.** **Quote:** "If you're prepared to work hard, have a go, and stand on your own two feet, you deserve the full support of this country." (2016).
 
 **Brief:** Hanson mobilizes disenfranchised voters to challenge the political establishment and take action.
 
@@ -529,7 +529,7 @@ The vector is about "Self-Inflicted Inferiority," a shadow she proactively uses 
 
 Her interaction is a hit as it perfectly demonstrates the use of external comparison to undermine local progress.
 
-**(Who.Why.Cause) The Gold Rush (υ: \+0.5, ψ: \+0.7): HIT.**
+**(Who.Why.Cause) The Gold Rush (υ: \+0.5, ψ: \+0.7): HIT.** **Quote:** "The resources under our feet belong to the people of Australia, and the wealth they generate should benefit ordinary families, not foreign multinationals." (2020).
 
 **Brief:** Prioritizes extraction and immediate wealth as the primary proof of national success.
 
@@ -547,7 +547,7 @@ The vector is about the "Search for Wealth," which she utilizes to justify her p
 
 Her interaction is a hit because it captures the lyrical desire for the "Big Win" found in the Australian earth.
 
-**(Who.Why.Effect) Sport (υ: \+0.6, ψ: \+0.7): HIT.**
+**(Who.Why.Effect) Sport (υ: \+0.6, ψ: \+0.7): HIT.** **Quote:** "Sport is what unites us as Australians, it teaches us fair play, mateship, and the determination to win." (2018).
 
 **Brief:** Channels national ambition through unambiguous wins and competitive triumphs in the public eye.
 
@@ -567,7 +567,7 @@ Her interaction is a hit because it successfully maps political struggle onto a 
 
 ## **1.5 The How of Identity (Logical)**
 
-**(Who.How.Who) The Pub Test (υ: \+0.6, ψ: \-0.3): HIT.**
+**(Who.How.Who) The Pub Test (υ: \+0.6, ψ: \-0.3): HIT.** **Quote:** "I don't care what the academics or the journalists say. Go down to any local pub and ask ordinary Australians what they think, and they'll tell you I'm right." (2018).
 
 **Brief:** Establishes "Common Sense" as the supreme standard for judging all national and social policies.
 
@@ -585,7 +585,7 @@ The vector is about "Standardizing Common Sense," which she uses as a shield aga
 
 Her interaction is a hit because she successfully positions herself as the voice of this core logical reflex.
 
-**(Who.How.What) Compulsory Voting (υ: \+0.8, ψ: \+0.5): HIT.**
+**(Who.How.What) Compulsory Voting (υ: \+0.8, ψ: \+0.5): HIT.** **Quote:** "Every Australian has a duty to vote, and One Nation is giving a real alternative to the millions who are sick of the major parties." (2019).
 
 **Brief:** Relies on the "Mandatory Mandate" of the entire population to validate her political standing.
 
@@ -603,7 +603,7 @@ The vector represents the "Mandatory Duty" of the citizen, which she treats as h
 
 Her interaction is a hit because she operates within the rules of the system to challenge the system itself.
 
-**(Who.How.Where) Pragmatism (υ: \+0.7, ψ: \+0.5): HIT.**
+**(Who.How.Where) Pragmatism (υ: \+0.7, ψ: \+0.5): HIT.** **Quote:** "Let's cut through the red tape and the bureaucracy and just use common sense to solve these problems." (2016).
 
 **Brief:** Prioritizes immediate "Utility" and short-term fixes over long-term "Poetry" or complex solutions.
 
@@ -639,7 +639,7 @@ The vector requires a "Tolerance for Resistance," which her aggressive demand fo
 
 Her interaction is a failure because it replaces the "Quiet Valve" with a loud, suppressive demand for effort.
 
-**(Who.How.How) The Royal Commission (υ: \+0.8, ψ: \+0.7): HIT.**
+**(Who.How.How) The Royal Commission (υ: \+0.8, ψ: \+0.7): HIT.** **Quote:** "We need a Royal Commission into the Family Court, and we need one into the banks, because the system is broken and corrupt." (2018).
 
 **Brief:** Weaponizes the "Process of Inquiry" to target specific groups or institutions for investigation.
 
@@ -675,7 +675,7 @@ The vector represents "Redemption through Utility," which she replaces with a "P
 
 Her interaction is a failure as it contradicts the core "Pathway" logic that allows the nation to regenerate.
 
-**(Who.How.Effect) The Union (υ: \+0.7, ψ: \+0.7): FAIL.**
+**(Who.How.Effect) The Union (υ: \+0.7, ψ: \+0.7): FAIL.** **Quote:** "Union bosses are holding this country to ransom, protecting corrupt individuals while honest, hard-working people pay the price." (2019).
 
 **Brief:** Undermines the "Lever of Collective Action" for workers while claiming to represent them.
 
@@ -695,7 +695,7 @@ Her interaction is a failure because it replaces a "Logical Tool of Power" with 
 
 ## **1.6 The Cause of Identity (Historical)**
 
-**(Who.Cause.Who) The First Fleet (υ: \-0.3, ψ: \-0.5): HIT.**
+**(Who.Cause.Who) The First Fleet (υ: \-0.3, ψ: \-0.5): HIT.** **Quote:** "We should be proud of our history, proud of the pioneers and settlers who built this modern, prosperous nation from nothing." (Australia Day speech, 2020). 
 
 **Brief:** Views settlement and incarceration as the only valid sources of modern national legitimacy.
 
@@ -713,7 +713,7 @@ The vector is about the "Involuntary Cause," which she utilizes to justify her d
 
 Her interaction is a hit because it accurately reflects the "Foundational Anxiety" of the settler identity.
 
-**(Who.Cause.Who) Continuity (υ: \+0.9, ψ: \+0.4): FAIL.**
+**(Who.Cause.Who) Continuity (υ: \+0.9, ψ: \+0.4): FAIL.** **Quote:** "I'm tired of being told to feel guilty about the past. We all live here now, we are all equal, and we should be one nation." (2022).
 
 **Brief:** Denies the 65,000-year continuity of the state and the priority of its original inhabitants.
 
@@ -731,7 +731,7 @@ The vector represents "Presence over Time," which her rhetoric explicitly attemp
 
 Her interaction is a failure because it replaces the "Eternal Presence" with a "Temporary Settlement" logic.
 
-**(Who.Cause.What) Federation (υ: \+0.6, ψ: \+0.4): HIT.**
+**(Who.Cause.What) Federation (υ: \+0.6, ψ: \+0.4): HIT.** **Quote:** "Our Constitution and our Federation were created to protect the rights of the states and the people, and we must defend them from Canberra's overreach." (2016).
 
 **Brief:** Supports the "Bulwark" model of the state as a defensive union against foreign influence.
 
@@ -749,7 +749,7 @@ The vector represents the "Pragmatic Merger," which she utilizes to justify her 
 
 Her interaction is a hit because it captures the original, defensive intent of the Australian historical union.
 
-**(Who.Cause.What) Exclusion (υ: \-0.8, ψ: \-0.6): HIT.**
+**(Who.Cause.What) Exclusion (υ: \-0.8, ψ: \-0.6): HIT.** **Quote:** "A nation without borders is not a nation. We have every right to decide who comes here and how they live." (2018). 
 
 **Brief:** Maintains the "Torment of Powerlessness" for the 'Other' through her policy proposals.
 
@@ -767,7 +767,7 @@ The vector is about the "Passive Prevention" of entry, a force she channels with
 
 Her interaction is a hit because she is one of the primary modern maintainers of the exclusionary historical wall.
 
-**(Who.Cause.Where) Songlines (υ: \+0.9, ψ: \+0.3): FAIL.**
+**(Who.Cause.Where) Songlines (υ: \+0.9, ψ: \+0.3): FAIL.** **Quote:** "We are constantly forced to listen to Welcomes to Country and cultural rituals that have nothing to do with modern Australia." (Senate walk-out, 2022).
 
 **Brief:** Rejects the ancient "Matrix" of the land as being valid or relevant for the modern state.
 
@@ -785,7 +785,7 @@ The vector represents the "Deep Mapping" of the land, which her rhetoric explici
 
 Her interaction is a failure because it replaces the "Living Matrix" with a "Dead Commodity" logic of space.
 
-**(Who.Cause.Why) Eureka Stockade (υ: \+0.8, ψ: \+0.9): HIT.**
+**(Who.Cause.Why) Eureka Stockade (υ: \+0.8, ψ: \+0.9): HIT.** **Quote:** "The Eureka flag represents ordinary people standing up against unfair taxes and corrupt authority, and that is what One Nation does." (2016).
 
 **Brief:** Invokes the "Spark" of the stockade to fuel anti-government sentiment and base mobilization.
 
@@ -803,7 +803,7 @@ The vector is about "Proactive Rebellion," which she channels to give her platfo
 
 Her interaction is a hit because it successfully maps her modern grievance onto a core historical spark.
 
-**(Who.Cause.How) White Australia Policy (υ: \-0.9, ψ: \+0.6): HIT.**
+**(Who.Cause.How) White Australia Policy (υ: \-0.9, ψ: \+0.6): HIT.** **Quote:** "Let's get back the Australia I grew up in... Certain countries they should not be allowed to migrate here." (Bondi Pavilion vigil, December 16, 2025).
 
 **Brief:** Her maiden speeches and policy goals structurally copy the logic of the 1901 Gate.
 
@@ -823,7 +823,7 @@ Her interaction is a hit because she is the most prominent political agent seeki
 
 ## **1.7 The Effect of Identity (Emotive)**
 
-**(Who.Effect.Who) The Expat (υ: \+0.5, ψ: \+0.5): HIT.**
+**(Who.Effect.Who) The Expat (υ: \+0.5, ψ: \+0.5): HIT.** **Quote:** "If you choose to live and work overseas, you shouldn't expect to dictate policies or vote in the elections of the country you left behind." (2017).
 
 **Brief:** Demands "Undivided Loyalty" from the individual and views global networks with suspicion.
 
@@ -841,7 +841,7 @@ The vector is about the "Extended Network," which she attempts to pull back into
 
 Her interaction is a hit as it accurately mirrors the defensive emotive effect of isolationist identity.
 
-**(Who.Effect.What) The Honest Broker (υ: \+0.7, ψ: \+0.5): FAIL.**
+**(Who.Effect.What) The Honest Broker (υ: \+0.7, ψ: \+0.5): FAIL.** **Quote:** "We should stop spending billions on foreign aid and playing the world's policeman when we have our own people sleeping in cars." (2019).
 
 **Brief:** Rejects the role of the "Honest Broker" in international rights for a policy of isolationism.
 
@@ -859,7 +859,7 @@ The vector represents "Global Justice through Fairness," which her rhetoric repl
 
 Her interaction is a failure because it replaces an "Expansive Emote" with a "Contractive Grievance" model.
 
-**(Who.Effect.Where) The Food Bowl (υ: \+0.6, ψ: \+0.4): HIT.**
+**(Who.Effect.Where) The Food Bowl (υ: \+0.6, ψ: \+0.4): HIT.** **Quote:** "We must stop foreign buyers from purchasing our agricultural land and water rights. We are selling off our ability to feed ourselves." (2018).
 
 **Brief:** Supports the offering of resources and food but only under strict protectionist control.
 
@@ -877,7 +877,7 @@ The vector is about the "Offering" of resources, which she converts into a "Defe
 
 Her interaction is a hit because it successfully captures the protective emote of the national food supply.
 
-**(Who.Effect.Why) The Asian Century (υ: \+0.6, ψ: \+0.4): FAIL.**
+**(Who.Effect.Why) The Asian Century (υ: \+0.6, ψ: \+0.4): FAIL.** **Quote:** "We are tying our economic future too closely to countries that do not share our values, and it will cost us our independence." (2020).
 
 **Brief:** Views the surrounding region primarily as a "threat" rather than a "destiny" for the nation.
 
@@ -931,7 +931,7 @@ The vector represents "Systemic Healing," which her rhetoric proactively blocks 
 
 Her interaction is a failure because it prevents the state from achieving the emotive resolution of its origins.
 
-**(Who.Effect.Effect) The Ashes (υ: \+0.5, ψ: \+0.7): HIT.**
+**(Who.Effect.Effect) The Ashes (υ: \+0.5, ψ: \+0.7): HIT.** **Quote:** "Beating the English in the Ashes is part of our national identity—it shows the fighting spirit that makes Australia great." (2021).
 
 **Brief:** Views equality and national status as being achieved through competitive victory and dominance.
 
@@ -1625,7 +1625,7 @@ This is a hit because she effectively capitalizes on the systemic volatility tha
 
 ## **2.6 The Cause of Definition (What.Cause)**
 
-**(What.Cause.Who) The Prophet (υ: \+0.7, ψ: \+0.8): HIT.** **Quote:** "I warned you about this twenty years ago in my maiden speech, and now everything I said has come true." (Senate Address, 2016).
+**(What.Cause.Who) The Prophet (υ: \+0.7, ψ: \+0.8): HIT.** **Quote:** "I warned you about this twenty years ago in my maiden speech, and now everything I said has come true." (Senate Address, 2016) / "Australia Has a Radical Islam Problem... The situation is at super critical stage." (Western Sydney Raids, December 19, 2025).
 
 **Brief:** She deliberately cultivates the persona of the lone visionary who foresaw the destruction of the nation before anyone else.
 
@@ -3417,9 +3417,23 @@ She uses the underdog, makeshift nature of One Nation to authenticate her claim 
 
 This is a hit because she successfully applies the colonial method of rough repair to modern electoral politics.
 
-**(Why.How.Cause) The Pokies / Gambling (υ: \-0.3, ψ: \+0.4): HIT.** Quote: "I don't believe in the nanny state telling people how to spend their money. These clubs provide jobs and support the community." (General stance against gaming reform).
+**(Why.How.Cause) The Pokies / Gambling (υ: \-0.3, ψ: \+0.4): HIT.** **Quote:** "I don't believe in the nanny state telling people how to spend their money. These clubs provide jobs and support the community." (General stance against gaming reform).
 
-Brief: She actively defends the predatory gambling industry, framing the massive extraction of working-class wealth as an issue of personal liberty rather than systemic exploitation. Her narrative protects the pubs and clubs that house the machines, treating them as untouchable cultural institutions. This strategy prioritizes the revenue of the gaming monopolies over the financial survival of her own constituency. By opposing structural reform, she ensures the most destructive pathology of the Australian economy remains completely unimpeded. Justification: This is a hit on a bad ideal because she actively defends the predatory commercial architecture that extracts wealth from the Australian working class.
+**Brief:** She actively defends the predatory gambling industry, framing the massive extraction of working-class wealth as an issue of personal liberty rather than systemic exploitation.
+
+Her narrative protects the pubs and clubs that house the machines, treating them as untouchable cultural institutions.
+
+This strategy prioritizes the revenue of the gaming monopolies over the financial survival of her own constituency.
+
+By opposing structural reform, she ensures the most destructive pathology of the Australian economy remains completely unimpeded.
+
+**Justification:** This is a hit on a bad ideal because she actively defends the predatory commercial architecture that extracts wealth from the Australian working class.
+
+The vector represents the systemic extraction of wealth (-0.3 υ) supported by proactive legislative defense (+0.4 ψ).
+
+By framing the issue around the "Nanny State," she successfully shields gaming revenue from the regulatory reach of the Commonwealth.
+
+This alignment represents a mechanical hit, as her trajectory serves to stabilize and protect this extractive commercial structure.
 
 **(Why.How.Effect) Volunteering (υ: \+0.9, ψ: \+0.7): FAIL.** **Quote:** "It is the government's job to protect these towns from floods, not rely on locals to sandbag their own streets." (2022).
 
@@ -4019,7 +4033,7 @@ This strategy maps perfectly onto the deep-seated fear that the isolated contine
 
 She successfully channels the "Fortress" methodology, demanding that the state actively intervene to protect internal markets.
 
-**(How.Why.How) Assimilation (υ: \+0.5, ψ: \+0.6): HIT.** **Quote:** "If you come to our country, you must speak our language, adopt our values, and leave your old ways behind." (1996).
+**(How.Why.How) Assimilation (υ: \+0.5, ψ: \+0.6): HIT.** **Quote:** "I would have them rounded up." (Bondi Pavilion vigil, December 16, 2025, demanding pre-emptive state action against radical preachers).
 
 **Brief:** She is the loudest modern advocate for the historical rationale of strict cultural homogeneity and assimilation.
 
@@ -4101,7 +4115,7 @@ This strategy attempts to dismantle the "Veto" of the worker, leaving the indivi
 
 She fails the vector by aggressively attacking the most successful historical methodology of the "Fair Go."
 
-**(How.How.Cause) The Protest / Stunt (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "Wears a burqa into the Senate chamber to intentionally provoke outrage and force a debate on Islamic dress." (August 2017).
+**(How.How.Cause) The Protest / Stunt (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "Calls are growing to overturn Pauline Hanson\'s Senate ban as concerns rise over free speech... without an elected senator present." (December 23, 2025) / "Next time I might wear an Israeli flag into the parliament and see what they do." (December 16, 2025).
 
 **Brief:** She is a master of the highly visible, disruptive political stunt designed to hijack the national media cycle.
 
