@@ -1,8 +1,58 @@
-# Discovered Unsummarized Files
+# WWSUTRU File Summaries Handover & Alignment Guide
 
-Total found: 329
+This document serves as the absolute instruction set and persistent state anchor for all AI agents working on the "World War: Special Unit Truth Reveal Unit" (WWSUTRU) documentation summarization.
 
-## Unsummarized File Queue
+> [!IMPORTANT]
+> **THE CORE DIRECTIVE:** Find unsummarized documents in the repository (specifically under `_VFT MD\WWSUTRU`), read them, and summarize them with exactly 1-2 lines per topic identified.
+>
+> All summaries must be compiled and recorded inside the single master file: [file_summaries.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/file_summaries.md).
+
+---
+
+## 1. Summary Formatting & Layout Standards
+
+All summaries added to the database must strictly follow this exact template and set of structural rules:
+
+```markdown
+### [Filename.md] (2026-05-23)
+**Path**: _VFT MD\WWSUTRU\[Subfolder]\[Filename.md]
+**Categories**: Plane: [Plane]; Node: [Conceptual Node Name]; Tags: [Tag1, Tag2, Tag3]
+**Summary**:
+[Topic 1 Name]: [Topic 1 Description]\
+[Topic 2 Name]: [Topic 2 Description]\
+...
+[Topic N Name]: [Topic N Description]
+```
+
+### Strict Formatting Rules
+
+1. **The Node Rule**:
+   * **Node** values **MUST** be human-readable, meaningful concepts (e.g., `Geopolitical Strategy`, `Economic Warfare`, `Information Operations`, `Institutional Audit`).
+   * Avoid simple address codes.
+2. **No Bold in Summary Body**:
+   * Bold markings (`**` or `*`) are **forbidden** within the text of the generated summaries.
+3. **No Bullet Items / Hyphens**:
+   * Do **NOT** use list markers (`-`, `*`, or numbers) in the summary text.
+   * Separate topics with standard trailing backslashes `\` at the end of the line.
+4. **Path Format**:
+   * Paths must use Windows-style backslashes (`\`) and be relative to the workspace (starting with `_VFT MD\`).
+
+---
+
+## 2. Contextual Guidance for WWSUTRU
+
+Documents in this directory typically fall into the following thematic categories:
+
+- **Geopolitical Strategy**: Analysis of the Sino-Russian axis, AUKUS, and regional power shifts.
+- **Economic Warfare**: Concepts like the "Universal Force Equation of Price" and "PREF".
+- **Information Operations**: Studies on the "Minimisation Plan", psyops, and AI distrust vectors.
+- **National Audits**: Detailed "Kanon" audits of political figures and institutional fidelity.
+
+---
+
+## 3. Unsummarized File Queue (Subtract as Completed)
+
+There are currently **329** unsummarized files in the WWSUTRU directory.
 
 - [ ] The Sewell Report.md (Path: _VFT MD\WWSUTRU\The Sewell Report.md)
 - [ ] Article_The Banking Hostage Crisis v2.md (Path: _VFT MD\WWSUTRU\Article_The Banking Hostage Crisis v2.md)
