@@ -8,6 +8,31 @@ Category; templates
 Contents; this is a template for ideas
 ---
 
+===
+Overarching; Glossary
+category; glossary
+---
+label; truth and meaning with perfect as being what works
+contents;
+information isomorphic structure fractional resonance 
+---
+---
+label; totality event frame
+contents;
+Totality_Event_Frame[{when}]=[past[{when_prev}], present[{when_now}], future[{when_nextPredicted}]] 
+when=[who[{who_when}], what[{what_when}], why[{why_when}], 
+where[{where_when}], how[{how_when}], cause[{cause_when}], effect[{effect_when}]]
+===
+---
+Label; seeking Truth
+Category; morning transmissions
+Contents;
+seeking fundamental truth leads to joy, peace, fulfillment, and self-incrimination
+(incomplete transmission)
+seeking fundamental truth leads to...self-incrimination
+Imagery was hegemony telescope, felt need to record in morning but unconfident in ability to record It
+Need to just 'do' more 
+---
 
 ---
 Label; no idea about lines
