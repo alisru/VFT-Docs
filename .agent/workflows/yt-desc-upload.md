@@ -13,8 +13,8 @@ Config file lives at:
 
 You need two credential files in that same folder:
 
-1. **`client_secret.json`** — OAuth2 client credentials
-   - Google Cloud Console → APIs & Services → Credentials → Create OAuth 2.0 Client ID (Desktop App) → Download JSON → rename to `client_secret.json`
+1. **`client_secret*.json`** — OAuth2 client credentials
+   - Google Cloud Console → APIs & Services → Credentials → Create OAuth 2.0 Client ID (Desktop App) → Download JSON and place it in the folder. The script automatically scans for `client_secret*.json` so you do not need to rename it.
 2. **`yt_token.json`** — auto-generated on first auth run (see Step 4)
 
 The API key (`AIzaSyCgHxeY04l6JQmSV5y9-x4UQoxRKO4-rR4`) is already saved in `yt_config.json`.
@@ -106,6 +106,11 @@ python "e:\Vector Field Theory\VFT Docs\_AI files and chat logs\Videos\yt_upload
 ```
 
 Visibility options: `private` (default) · `unlisted` · `public`
+
+To override the default title parsed from the filename (e.g. replacing underscores and formatting colons), use the `--title` argument:
+```powershell
+python "e:\Vector Field Theory\VFT Docs\_AI files and chat logs\Videos\yt_upload.py" --file "path\to\video.mp4" --visibility private --title "Your Explicit Title Here"
+```
 
 To batch-upload all videos in a folder that have a `.desc.txt` sidecar:
 ```powershell
