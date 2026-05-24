@@ -1097,7 +1097,10 @@
       - [The Meta-Question Protocol -  Usage of Tongue Over Land.md](_Archive/Duplicates/The Meta-Question Protocol -  Usage of Tongue Over Land.md)
   - **_Generated_Content/**
     - [Conflict_Tiers_7x7x7_Tensor.md](_Generated_Content/Conflict_Tiers_7x7x7_Tensor.md)
+    - [High_Fidelity_VFT_Document_Summaries.md](_Generated_Content/High_Fidelity_VFT_Document_Summaries.md)
     - [Scion_Conflict_Mapping_Analysis.md](_Generated_Content/Scion_Conflict_Mapping_Analysis.md)
+    - [actualism_consciousness_summaries.md](_Generated_Content/actualism_consciousness_summaries.md)
+    - [actualism_judgement_language_summaries.md](_Generated_Content/actualism_judgement_language_summaries.md)
   - **_Reports/**
     - [America_Under_Ideological_Siege.md](_Reports/America_Under_Ideological_Siege.md)
   - [gemini Universal_Price_Equation_Formal_Paper (1).md](gemini Universal_Price_Equation_Formal_Paper (1).md)
@@ -1297,6 +1300,7 @@
     - [the_50_year_reset.md](io/the_50_year_reset.md)
     - [the_ur_error.md](io/the_ur_error.md)
     - [virtue_compounds_model.md](io/virtue_compounds_model.md)
+    - [word_graph_db_spec.md](io/word_graph_db_spec.md)
   - **journals/**
     - [2026_04_16.md](journals/2026_04_16.md)
   - **pages/**
