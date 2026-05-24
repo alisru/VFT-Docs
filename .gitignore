@@ -6,13 +6,9 @@
 
 # --- Personal & Private Content ---
 _Personal_Files/
-_Archive/
 
 # --- AI Chat Logs & Video Assets ---
 _AI files and chat logs/
-
-# --- Raw Input / Unprocessed Docs ---
-io/
 
 # --- Scratch & Temp Work ---
 scratch/
@@ -27,13 +23,6 @@ client_secret.json
 *_credentials.json
 .env
 .env.*
-
-# --- Large Generated Blobs (not useful in git history) ---
-index_data.json
-file_summaries.md
-file_summaries_fixed.md
-file_summaries_handover.md
-file_list.txt
 
 # --- Python ---
 .venv/
