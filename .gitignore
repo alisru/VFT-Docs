@@ -1,11 +1,51 @@
+# ============================================================
+# VFT DOCS — .gitignore
+# What stays in git: _VFT MD (sanitised docs), .agent workflows/rules/tools,
+#                    root-level scripts, geometry of definitions, Physics, WWSUTRU etc.
+# ============================================================
+
+# --- Personal & Private Content ---
+_Personal_Files/
+
+# --- AI Chat Logs & Video Assets ---
 _AI files and chat logs/
+
+# --- Scratch & Temp Work ---
+scratch/
+.agent/temp/
+
+# --- API Keys & Credentials ---
+yt_config.json
+yt_token.json
+client_secret.json
+*.token.json
+*_secret.json
+*_credentials.json
+.env
+.env.*
+
+# --- Python ---
+.venv/
 __pycache__/
 *.pyc
+*.pyo
+
+# --- OS & Editor ---
 .DS_Store
+Thumbs.db
 .vscode/
 .idea/
+
+# --- Logs ---
 *.log
+
+# --- Gemini Agent Internal State ---
 .gemini/
+
+# --- Muses (personal creative content) ---
 Muses/*.docx
 Muses/*.txt
 Muses/*.pdf
+
+# --- Google Drive Sync Artifacts ---
+Google

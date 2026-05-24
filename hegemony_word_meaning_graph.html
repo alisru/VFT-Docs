@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psochic Hegemony Word-Meaning Graph</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Decoupled VFT Local Database -->
+    <script src="hegemony_db.js"></script>
+    <script>
+        // Reusable HTML Template representing the premium single card design
+        const CARD_TEMPLATE = (cardIndex) => `
+        <div id="inspectorCard_${cardIndex}" class="flex flex-col space-y-5 border border-slate-800/80 bg-slate-900/10 p-5 rounded-2xl glass-panel relative">
+            <!-- Header with Title & Coordinates -->
+                        <div class="flex items-start justify-between border-b border-slate-800 pb-4">
+                            <div class="space-y-1">
+                                <div class="flex items-center gap-2">
+                                    <button id="backToClumpBtn_${cardIndex}" onclick="backToClump()" class="hidden px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-755 hover:text-slate-100 text-slate-300 font-extrabold text-[0.6rem] uppercase tracking-wider transition flex items-center gap-1">
+                                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                                        Back to Cluster
+                                    </button>
+                                    <span id="nodeClassBadge_${cardIndex}" class="px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-sky-500/10 border border-sky-500/30 text-sky-400">Class</span>
+                                    <span id="nodeNameGreek_${cardIndex}" class="text-sm font-mono text-slate-400 italic font-medium"></span>
+                                </div>
+                                <h3 id="nodeName_${cardIndex}" class="text-2xl font-extrabold text-white tracking-tight">Node Name</h3>
+                                <p id="nodeDesc_${cardIndex}" class="text-xs text-slate-200 max-w-xl font-semibold leading-relaxed">Node description goes here.</p>
+                                <p id="nodeJustification_${cardIndex}" class="text-[0.7rem] text-sky-300/80 max-w-xl font-medium leading-relaxed mt-1.5 border-l-2 border-sky-500/30 pl-2 italic"></p>
+                            </div>
+                            
+                            <!-- Coordinate Badge -->
+                            <div class="text-right flex flex-col items-end">
+                                <div id="nodeCoord_${cardIndex}" class="text-lg font-bold font-mono text-emerald-400 tracking-tight">(υ: 0.00, ψ: 0.00)</div>
+                                <div id="nodeAnchor_${cardIndex}" class="text-[0.65rem] font-bold text-slate-400 mt-0.5 uppercase tracking-wide">Zone Anchor</div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Options Bar -->
+                        <div class="flex border-b border-slate-800 text-xs font-bold text-slate-400 select-none">
+                            <button onclick="switchTab('verdict', ${cardIndex})" id="tabBtn-verdict_${cardIndex}" class="tab-btn px-4 py-2 hover:text-slate-200 transition active">Verdict Summary</button>
+                            <button onclick="switchTab('analysis', ${cardIndex})" id="tabBtn-analysis_${cardIndex}" class="tab-btn px-4 py-2 hover:text-slate-200 transition">5-Phase Forensic Scan</button>
+                            <button onclick="switchTab('relational', ${cardIndex})" id="tabBtn-relational_${cardIndex}" class="tab-btn px-4 py-2 hover:text-slate-200 transition">Semantic Relational Mapping</button>
+                        </div>
+
+                        <!-- Tab Content 1: Verdict Summary -->
+                        <div id="tabContent-verdict_${cardIndex}" class="space-y-4 pt-2">
+                            <!-- Visual Metric Sliders -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="glass-panel p-3.5 rounded-lg bg-slate-900/20">
+                                    <div class="flex items-center justify-between text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+                                        <span>Axis υ : Morality (Who benefits?)</span>
+                                        <span id="sliderUVal_${cardIndex}" class="font-mono text-sky-400 font-bold">0.00</span>
+                                    </div>
+                                    <div class="h-2 w-full bg-slate-950 rounded-full overflow-hidden relative border border-slate-800">
+                                        <div id="sliderUFill_${cardIndex}" class="h-full bg-gradient-to-r from-sky-600 to-sky-400 transition-all duration-300" style="width: 50%;"></div>
+                                        <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-slate-600"></div>
+                                    </div>
+                                    <div id="sliderUDesc_${cardIndex}" class="text-[0.65rem] text-slate-400 mt-1.5 font-medium">Benefits other people (Idealized structural value)</div>
+                                </div>
+
+                                <div class="glass-panel p-3.5 rounded-lg bg-slate-900/20">
+                                    <div class="flex items-center justify-between text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+                                        <span>Axis ψ : Will (Energy force)</span>
+                                        <span id="sliderPVal_${cardIndex}" class="font-mono text-sky-400 font-bold">0.00</span>
+                                    </div>
+                                    <div class="h-2 w-full bg-slate-950 rounded-full overflow-hidden relative border border-slate-800">
+                                        <div id="sliderPFill_${cardIndex}" class="h-full bg-gradient-to-r from-sky-600 to-sky-400 transition-all duration-300" style="width: 50%;"></div>
+                                        <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-slate-600"></div>
+                                    </div>
+                                    <div id="sliderPDesc_${cardIndex}" class="text-[0.65rem] text-slate-400 mt-1.5 font-medium">Proactive structural activity (Building/Maintaining)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content 2: 5-Phase Analysis Detailed -->
+                        <div id="tabContent-analysis_${cardIndex}" class="hidden space-y-4 pt-2">
+                            
+                            <!-- Tab Content Switcher -->
+                            <div class="flex border-b border-slate-800/40 text-[0.65rem] font-bold text-slate-400 select-none pb-1.5 mb-2 gap-2">
+                                <button onclick="switchAnalysisSubTab('phase1', ${cardIndex})" id="subTabBtn-phase1_${cardIndex}" class="px-2.5 py-1 rounded hover:text-slate-200 bg-slate-800/40 active">Phase 1: Structural Scan</button>
+                                <button onclick="switchAnalysisSubTab('phase2', ${cardIndex})" id="subTabBtn-phase2_${cardIndex}" class="px-2.5 py-1 rounded hover:text-slate-200 bg-slate-800/40">Phases 2-4: Forensic Testing</button>
+                            </div>
+
+                            <!-- Phase 1: Structural Scan Details -->
+                            <div id="analysisSubContent-phase1_${cardIndex}" class="space-y-2">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[0.65rem] font-bold tracking-widest text-slate-400 uppercase">Q1-Q7 Dimensions Integrity</span>
+                                    <span id="structuralConvergences_${cardIndex}" class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded-full">Convergences: 7/7</span>
+                                </div>
+                                
+                                <div class="space-y-1.5 text-xs" id="phase1ItemsContainer_${cardIndex}">
+                                    <!-- Injected Q1-Q7 checks -->
+                                </div>
+                            </div>
+
+                            <!-- Phases 2-4: Forensic and Stress Tests -->
+                            <div id="analysisSubContent-phase2_${cardIndex}" class="hidden space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="glass-panel p-3.5 rounded-lg bg-slate-900/10 space-y-2.5">
+                                        <h4 class="text-[0.65rem] font-extrabold tracking-widest text-slate-400 uppercase border-b border-slate-800 pb-1">Phase 2: Vector Verification</h4>
+                                        <div class="text-xs space-y-1.5 font-semibold">
+                                            <div class="flex justify-between"><span class="text-slate-400">Net Vector ($R_\\{net\\}$)</span><span id="analysisRNet_${cardIndex}" class="font-mono text-emerald-400">1.00</span></div>
+                                            <div class="flex justify-between"><span class="text-slate-400">Dominant Failure</span><span id="analysisDomFailure_${cardIndex}" class="text-slate-300">None</span></div>
+                                            <div class="flex flex-col gap-0.5"><span class="text-slate-400">Perceptual Flag</span><span id="analysisFlag_${cardIndex}" class="text-[0.65rem] text-slate-300 italic">None</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="glass-panel p-3.5 rounded-lg bg-slate-900/10 space-y-2.5">
+                                        <h4 class="text-[0.65rem] font-extrabold tracking-widest text-slate-400 uppercase border-b border-slate-800 pb-1">Phase 3: Source Integrity</h4>
+                                        <div class="text-xs space-y-1.5 font-semibold">
+                                            <div class="flex justify-between"><span class="text-slate-400">Heat of Action ($\\Delta H$)</span><span id="analysisDeltaH_${cardIndex}" class="font-mono text-emerald-400">0.00</span></div>
+                                            <div class="flex justify-between"><span class="text-slate-400">Tribal Gap</span><span id="analysisTribalGap_${cardIndex}" class="text-slate-300">N/A</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="glass-panel p-3.5 rounded-lg bg-slate-900/10 space-y-2.5 col-span-2">
+                                        <h4 class="text-[0.65rem] font-extrabold tracking-widest text-slate-400 uppercase border-b border-slate-800 pb-1">Phase 4: Forensic Stress Tests</h4>
+                                        <div class="text-xs space-y-2 font-semibold">
+                                            <div class="flex flex-col gap-0.5">
+                                                <span class="text-slate-400">Fake Maximiser Attack Vector</span>
+                                                <span id="analysisFakeMax_${cardIndex}" class="text-[0.65rem] text-slate-300 font-medium">Description of infiltration vector.</span>
+                                            </div>
+                                            <div class="flex flex-col gap-0.5">
+                                                <span class="text-slate-400">Helxis Attractor Capture</span>
+                                                <span id="analysisHelxis_${cardIndex}" class="text-[0.65rem] text-slate-300 font-medium">Description of systemic collapse.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Tab Content 3: Relational Mapping (Distances) -->
+                        <div id="tabContent-relational_${cardIndex}" class="hidden space-y-4 pt-2">
+                            <h4 class="text-xs font-extrabold tracking-widest text-slate-400 uppercase flex items-center justify-between">
+                                <span>Psochic Vector Affinities</span>
+                                <span class="text-[0.6rem] text-slate-500 font-mono">Calculated on $(υ, ψ)$ Plane</span>
+                            </h4>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Closest Affinities (High resonance) -->
+                                <div class="glass-panel p-3 rounded-lg bg-emerald-950/10 border border-emerald-950/20 space-y-2">
+                                    <h5 class="text-[0.65rem] font-bold text-emerald-400 uppercase flex items-center gap-1.5">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                                        Semantic Resonance (Closest)
+                                    </h5>
+                                    <div class="space-y-1" id="closestAffinityList_${cardIndex}">
+                                        <!-- Injected items -->
+                                    </div>
+                                </div>
+
+                                <!-- Furthest Inversions (Polar opposition) -->
+                                <div class="glass-panel p-3 rounded-lg bg-rose-950/10 border border-rose-950/20 space-y-2">
+                                    <h5 class="text-[0.65rem] font-bold text-rose-400 uppercase flex items-center gap-1.5">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                                        Polar Opposites (Furthest)
+                                    </h5>
+                                    <div class="space-y-1" id="furthestAffinityList_${cardIndex}">
+                                        <!-- Injected items -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+        `;
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f19;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.3) 0, transparent 50%),
+                radial-gradient(at 50% 0%, rgba(14, 165, 233, 0.05) 0, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.3) 0, transparent 50%);
+            color: #f1f5f9;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* 10x10 Grid Container */
+        .word-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 3px;
+            background-color: #030712;
+            padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            width: 780px;
+            height: 780px;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Central Crosshairs */
+        .word-grid::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            right: 8px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(14, 165, 233, 0.3) 15%, rgba(14, 165, 233, 0.6) 50%, rgba(14, 165, 233, 0.3) 85%, transparent);
+            pointer-events: none;
+            z-index: 10;
+        }
+        .word-grid::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(14, 165, 233, 0.3) 15%, rgba(14, 165, 233, 0.6) 50%, rgba(14, 165, 233, 0.3) 85%, transparent);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Individual Cell Styling */
+        .cell {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        /* Geometric Overlay mimicking the target image structure */
+        .cell::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to bottom right, transparent 48%, rgba(255,255,255,0.06) 49%, rgba(255,255,255,0.06) 51%, transparent 52%),
+                linear-gradient(to top right, transparent 48%, rgba(255,255,255,0.06) 49%, rgba(255,255,255,0.06) 51%, transparent 52%);
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.5;
+        }
+
+        .cell-text {
+            position: relative;
+            z-index: 2;
+            padding: 0.15rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.95);
+            line-height: 1.1;
+            word-break: break-word;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cell:hover {
+            transform: scale(1.12);
+            z-index: 20;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), inset 0 0 0 1.5px rgba(255, 255, 255, 0.8);
+            border-radius: 6px;
+        }
+
+        /* Active highlight ring */
+        .cell.active-node {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.8), inset 0 0 0 2px #0ea5e9;
+            transform: scale(1.05);
+            z-index: 15;
+            border-radius: 6px;
+        }
+
+        .love-badge {
+            font-size: 0.55rem;
+            color: #38bdf8;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            padding: 0px 4px;
+            border-radius: 3px;
+            margin-top: 1px;
+            display: inline-block;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            z-index: 2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .user-badge {
+            font-size: 0.55rem;
+            color: #f43f5e;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(244, 63, 94, 0.5);
+            padding: 0px 4px;
+            border-radius: 3px;
+            margin-top: 1px;
+            display: inline-block;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            z-index: 2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-weight: 700;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(244, 63, 94, 0.5); }
+            50% { border-color: rgba(244, 63, 94, 1); box-shadow: 0 0 6px rgba(244, 63, 94, 0.4); }
+        }
+
+        /* Scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.3);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.3);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(148, 163, 184, 0.5);
+        }
+
+        .tab-btn.active {
+            color: #0ea5e9;
+            border-bottom: 2px solid #0ea5e9;
+            background: rgba(14, 165, 233, 0.05);
+        }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col antialiased overflow-hidden">
+
+    <!-- Premium Navigation Header -->
+    <header class="w-full py-4 px-6 border-b border-slate-800 glass-panel flex items-center justify-between z-30">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center">
+                <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white leading-tight">The Psochic Hegemony</h1>
+                <p class="text-xs text-slate-400 font-medium">Relational Word-Meaning Graph &amp; Moral Mapping Protocol Workspace</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <!-- Data persistence actions -->
+            <button onclick="document.getElementById('importInput').click()" class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/40 hover:bg-slate-800 hover:border-slate-600 transition text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+                Import State
+            </button>
+            <input type="file" id="importInput" class="hidden" accept=".json" onchange="importGraphState(event)">
+            
+            <button onclick="exportGraphState()" class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/40 hover:bg-slate-800 hover:border-slate-600 transition text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Export State
+            </button>
+
+            <button onclick="openAddWordModal()" class="px-4 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-semibold text-xs tracking-wide transition shadow-lg shadow-sky-500/20 flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                Map New Word
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area: Split View -->
+    <main class="flex-1 flex overflow-hidden">
+        
+        <!-- Left Side: Interactive Grid Plane -->
+        <section class="w-auto p-6 flex flex-col justify-center items-center border-r border-slate-900 bg-slate-950/20 relative select-none overflow-y-auto max-h-full shrink-0">
+            
+            <!-- Compass Legend Toggle Button & Popover -->
+            <div class="absolute top-4 left-6 z-20">
+                <button onclick="toggleLegend()" class="w-8 h-8 rounded-lg border border-slate-800 bg-slate-900/80 backdrop-blur-sm hover:bg-slate-800 hover:border-slate-700 flex items-center justify-center text-slate-400 hover:text-slate-200 transition font-bold text-sm shadow-md" title="Toggle Compass Legend">
+                    ?
+                </button>
+                
+                <!-- Collapsible Popover Panel -->
+                <div id="compassLegendPanel" class="hidden absolute top-10 left-0 flex flex-col gap-2 p-3.5 rounded-xl border border-slate-800 bg-slate-900/90 backdrop-blur-md z-30 text-[0.7rem] font-semibold text-slate-300 w-64 shadow-xl select-none animate-scale-up">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-1.5 mb-1">
+                        <span class="font-extrabold tracking-wider text-slate-400 uppercase">Hegemony Quadrants</span>
+                        <button onclick="toggleLegend()" class="text-slate-500 hover:text-slate-300 text-[0.65rem] font-bold">Close</button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-sm bg-sky-500 shrink-0"></span>
+                        <span>Productive (+υ, +ψ) | Bliss / Altruism</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-sm bg-red-500 shrink-0"></span>
+                        <span>Reductive (-υ, +ψ) | Anger / Egoism</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-sm bg-emerald-500 shrink-0"></span>
+                        <span>Constructive (+υ, -ψ) | Acceptance / Patience</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-sm bg-amber-500 shrink-0"></span>
+                        <span>Regressive (-υ, -ψ) | Depression / Void</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1.5 pt-1.5 border-t border-slate-800 text-rose-400 font-bold">
+                        <span class="w-2.5 h-2.5 rounded-sm border border-pink-500/60 bg-pink-500/20 animate-pulse shrink-0"></span>
+                        <span>User Mapped Nodes (e.g. Government)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coordinate Axes Grid Wrapper -->
+            <div class="relative p-12 glass-panel rounded-2xl bg-slate-900/30">
+                <!-- Top Axis Label -->
+                <div class="absolute top-3 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+                    <span class="text-xs font-bold text-sky-400 tracking-widest uppercase">+ψ : Active / Will / Productive Justice</span>
+                    <span class="text-[0.6rem] text-slate-500 font-mono mt-0.5">Creating value / Sovereign drive (ψ: +2.0)</span>
+                </div>
+
+                <!-- Bottom Axis Label -->
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">-ψ : Passive / Will / Chaos</span>
+                    <span class="text-[0.6rem] text-slate-500 font-mono mt-0.5">Entropy / Inaction / Collapse (ψ: -2.0)</span>
+                </div>
+
+                <!-- Left Axis Label -->
+                <div class="absolute left-3 top-1/2 -translate-y-1/2 -rotate-90 origin-center flex flex-col items-center pointer-events-none">
+                    <span class="text-xs font-bold text-sky-400 tracking-widest uppercase">+υ : Agape / Altruism / Systemic Justice</span>
+                    <span class="text-[0.6rem] text-slate-500 font-mono mt-0.5">Benefits All / Systemic Good (υ: +2.0)</span>
+                </div>
+
+                <!-- Right Axis Label -->
+                <div class="absolute right-3 top-1/2 -translate-y-1/2 rotate-90 origin-center flex flex-col items-center pointer-events-none">
+                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">-υ : Eros / Egoism / Tyranny</span>
+                    <span class="text-[0.6rem] text-slate-500 font-mono mt-0.5">Benefits Self / Extraction (υ: -2.0)</span>
+                </div>
+
+                <!-- Main Grid Box -->
+                <div class="word-grid" id="wordGrid"></div>
+            </div>
+
+            <!-- Coordinate Inspector Footer -->
+            <div class="mt-4 flex items-center justify-between w-full px-6">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
+                    <span id="gridHoverCoord" class="text-xs font-mono text-slate-400 font-semibold">Hover a node to inspect local coordinate plane metrics</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Side: Split Panel (List & Details Inspector) -->
+        <section class="flex-1 flex flex-col bg-slate-950/40 relative overflow-hidden">
+            
+            <!-- Upper Section: Search & Directory Sidebar Panel -->
+            <div class="border-b border-slate-800 p-4 bg-slate-900/10 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-extrabold tracking-wider text-slate-300 uppercase flex items-center gap-2">
+                        <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h7"/></svg>
+                        Word Mapping Directory
+                    </h2>
+                    <span id="directoryCount" class="text-[0.65rem] font-mono font-bold bg-slate-800 border border-slate-700 px-2 py-0.5 rounded-full text-sky-400">
+                        151 Nodes Active
+                    </span>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                    <div class="relative flex-1">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </span>
+                        <input type="text" id="dirSearch" oninput="filterDirectory()" placeholder="Filter nodes by name or category tag..." class="w-full pl-9 pr-4 py-1.5 rounded-lg border border-slate-800 bg-slate-950/60 placeholder-slate-500 text-slate-200 text-xs font-semibold focus:outline-none focus:border-sky-500/50 transition">
+                    </div>
+                    <select id="dirFilterType" onchange="filterDirectory()" class="px-2.5 py-1.5 rounded-lg border border-slate-800 bg-slate-950/60 text-slate-300 text-xs font-semibold focus:outline-none focus:border-sky-500/50 transition">
+                        <option value="all">All Types</option>
+                        <option value="user">User Mapped</option>
+                        <option value="love">Classical Loves</option>
+                        <option value="grid">Grid Concepts</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Lower Section: Inspector (Tabbed Display) & Collapsible List Split -->
+            <div class="flex-1 flex overflow-hidden">
+                
+                <!-- Left Sidebar: Filterable Directory List -->
+                <div class="w-64 border-r border-slate-800/80 overflow-y-auto flex flex-col bg-slate-950/60" id="directoryListContainer">
+                    <div class="p-2 space-y-1" id="directoryList">
+                        <!-- Dynamic directory injection -->
+                    </div>
+                </div>
+
+                <!-- Right Sub-panel: Tabbed Detailed Inspector -->
+                <div class="flex-1 flex flex-col overflow-y-auto bg-slate-900/10 p-6" id="inspectorContainer">
+                    
+                    <!-- Unselected Empty State -->
+                    <div id="inspectorEmptyState" class="flex-1 flex flex-col items-center justify-center text-center p-8 opacity-60">
+                        <div class="w-16 h-16 rounded-full bg-slate-800/30 border border-slate-700/30 flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-300 mb-1">Select a Node for Forensic Inspection</h3>
+                        <p class="text-xs text-slate-400 max-w-xs">Click on any cell in the 10x10 coordinate grid or select an entry in the sidebar directory to run the 5-Phase Moral Mapping Protocol details.</p>
+                    </div>
+
+                    <!-- Scrollable container for dynamic stacked cards -->
+                    <div id="inspectorCardsContainer" class="flex flex-col space-y-5 hidden">
+                        <!-- Dynamic stacked cards render here -->
+                    </div>
+                </div>
+
+    <!-- Modal: Add New Custom Word -->
+    <div id="addWordModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-6">
+        <div class="glass-panel rounded-2xl max-w-3xl w-full border border-slate-800 bg-slate-900 flex flex-col max-h-[85vh] shadow-2xl overflow-hidden animate-scale-up">
+            
+            <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/30">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded bg-rose-500 animate-pulse"></span>
+                    <h3 class="text-lg font-bold text-white tracking-tight">Moral Mapping Protocol Inspector Injection</h3>
+                </div>
+                <button onclick="closeAddWordModal()" class="w-8 h-8 rounded-lg hover:bg-slate-800 flex items-center justify-center text-slate-400 hover:text-slate-200 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <!-- Modal Forms Section -->
+            <div class="p-6 overflow-y-auto space-y-4 flex-1">
+                
+                <!-- Helper instructions -->
+                <div class="p-4 rounded-xl border border-slate-800 bg-slate-950/40 text-xs space-y-2">
+                    <h4 class="font-bold text-slate-200 flex items-center gap-1.5">
+                        <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        In-Browser Coordinate Mapping Guidelines
+                    </h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        To add a custom word relative to the 100 base coordinate nodes of the Psochic Hegemony, provide the evaluated decimal coordinate $(υ, ψ)$ in range $[-2.0, +2.0]$. You can write out a brief description, or paste the entire pre-compiled JSON evaluation to embed full 5-Phase reports.
+                    </p>
+                </div>
+
+                <!-- Input Form fields -->
+                <div class="grid grid-cols-4 gap-4 text-xs font-semibold">
+                    <div class="col-span-2 flex flex-col gap-1.5">
+                        <label class="text-slate-400">Node Name (Plain English)</label>
+                        <input type="text" id="modalInputName" placeholder="e.g. Government, Anarchy, Capitalism" class="px-3 py-2 rounded-lg border border-slate-850 bg-slate-950 placeholder-slate-600 text-slate-200 focus:outline-none focus:border-sky-500/50 transition">
+                    </div>
+                    <div class="col-span-2 flex flex-col gap-1.5">
+                        <label class="text-slate-400">Greek Translation (Optional / Literal Origin)</label>
+                        <input type="text" id="modalInputGreek" placeholder="e.g. κόσμος, ἀναρχία" class="px-3 py-2 rounded-lg border border-slate-850 bg-slate-950 placeholder-slate-600 text-slate-200 focus:outline-none focus:border-sky-500/50 transition">
+                    </div>
+                    
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-slate-400 flex items-center justify-between">
+                            <span>Axis υ (Morality)</span>
+                            <span class="text-[0.65rem] text-slate-500 font-mono">[-2, +2]</span>
+                        </label>
+                        <input type="number" step="0.1" min="-2" max="2" id="modalInputU" placeholder="e.g. 1.0" class="px-3 py-2 rounded-lg border border-slate-850 bg-slate-950 placeholder-slate-600 text-slate-200 focus:outline-none focus:border-sky-500/50 font-mono transition">
+                    </div>
+
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-slate-400 flex items-center justify-between">
+                            <span>Axis ψ (Will)</span>
+                            <span class="text-[0.65rem] text-slate-500 font-mono">[-2, +2]</span>
+                        </label>
+                        <input type="number" step="0.1" min="-2" max="2" id="modalInputP" placeholder="e.g. 0.5" class="px-3 py-2 rounded-lg border border-slate-850 bg-slate-950 placeholder-slate-600 text-slate-200 focus:outline-none focus:border-sky-500/50 font-mono transition">
+                    </div>
+
+                    <div class="col-span-2 flex flex-col gap-1.5">
+                        <label class="text-slate-400">Primary Semantic Description</label>
+                        <input type="text" id="modalInputDesc" placeholder="e.g. The administrative framework organizing society." class="px-3 py-2 rounded-lg border border-slate-850 bg-slate-950 placeholder-slate-600 text-slate-200 focus:outline-none focus:border-sky-500/50 transition">
+                    </div>
+
+                    <!-- Direct JSON injection (For advanced 5-Phase evaluation loading) -->
+                    <div class="col-span-4 flex flex-col gap-1.5 mt-2">
+                        <div class="flex justify-between items-center">
+                            <label class="text-slate-400">Alternative: Direct JSON Infiltration Injection</label>
+                            <button onclick="fillJSONTemplate()" class="text-[0.65rem] text-sky-400 font-bold hover:underline">Insert Empty Template</button>
+                        </div>
+                        <textarea id="modalInputJSON" placeholder="Paste a pre-compiled JSON object containing full 5-Phase evaluation parameters to overwrite standard forms..." rows="6" class="px-3 py-2 rounded-lg border border-slate-850 bg-slate-950 placeholder-slate-600 text-slate-300 font-mono text-[0.7rem] focus:outline-none focus:border-sky-500/50 transition"></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="px-6 py-4 border-t border-slate-800 bg-slate-950/30 flex justify-end gap-3">
+                <button onclick="closeAddWordModal()" class="px-4 py-2 rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-750 text-slate-300 text-xs font-bold transition">Cancel</button>
+                <button onclick="submitMappedWord()" class="px-5 py-2 rounded-lg bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition shadow-lg shadow-sky-500/10">Infiltrate Node to Graph</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Core Application Logic Script -->
+    <script>
+        // The 10x10 mapping of concepts representing the spectrum of the Hegemony
+        const gridWords = [
+            ["Agape", "Emancipation", "Philanthropy", "Guidance", "Intervention", "Ambition", "Competition", "Conquest", "Subjugation", "Tyranny"],
+            ["Systemic Justice", "Liberation", "Altruism", "Teaching", "Organization", "Drive", "Acquisition", "Manipulation", "Exploitation", "Megalomania"],
+            ["Uplift", "Empowerment", "Cooperation", "Protection", "Management", "Assertion", "Accumulation", "Deception", "Coercion", "Narcissism"],
+            ["Nurture", "Support", "Sharing", "Defense", "Structuring", "Seeking", "Hoarding", "Cunning", "Intimidation", "Greed"],
+            ["Blessing", "Empathy", "Harmony", "Mediation", "Observation", "Self-Interest", "Guarding", "Suspicion", "Prejudice", "Entitlement"],
+            ["Grace", "Compassion", "Tolerance", "Compromise", "Stasis", "Detachment", "Preservation", "Paranoia", "Resentment", "Solipsism"],
+            ["Acceptance", "Understanding", "Patience", "Concession", "Routine", "Tradition", "Hesitation", "Isolation", "Spite", "Apathy"],
+            ["Surrender", "Forgiveness", "Yielding", "Submission", "Conformity", "Inaction", "Withdrawal", "Neglect", "Bitterness", "Despair"],
+            ["Martyrdom", "Sacrifice", "Asceticism", "Acquiescence", "Passivity", "Stagnation", "Avoidance", "Decay", "Depression", "Nihilism"],
+            ["Oblivion", "Dissolution", "Erasure", "Abdication", "Inertia", "Entropy", "Atrophy", "Ruin", "Collapse", "Void"]
+        ];
+
+        // Corner Colors mapped to Hegemony Zones
+        const colors = {
+            TL: [14, 165, 233],   // Blue-Sky (Productive Quadrant)
+            TR: [239, 68, 68],    // Red-Rose (Reductive Quadrant)
+            BL: [16, 185, 129],   // Green-Emerald (Constructive Quadrant)
+            BR: [245, 158, 11]    // Orange-Amber (Regressive Quadrant)
+        };
+
+        // Color interpolation helper
+        const interpolate = (c1, c2, factor) => {
+            return c1.map((val, i) => Math.round(val + factor * (c2[i] - val)));
+        };
+
+        // Calculations for Moral Mapping Logic
+        function getMoralityData(u) {
+            if (u >= 1.5) return { label: "+2: Systemic Justice", group: "Everyone", desc: "Benefits All beings/Everyone" };
+            if (u >= 0.5) return { label: "+1: Greater Good", group: "Others", desc: "Benefits Other people" };
+            if (u > -0.5) return { label: "0: Neutral", group: "No-one", desc: "Balanced / No specific target" };
+            if (u > -1.5) return { label: "-1: Lesser Evil", group: "My Group", desc: "Benefits My group only" };
+            return { label: "-2: Tyranny/Extraction", group: "Only Me", desc: "Benefits Only me" };
+        }
+
+        function getWillData(p) {
+            if (p >= 1.5) return { label: "+2: Productive Justice", group: "Actively creating systemic value", desc: "Creating systemic value" };
+            if (p >= 0.5) return { label: "+1: Proactive", group: "Proactive — building, acting", desc: "Building/Acting" };
+            if (p > -0.5) return { label: "0: Neutral", group: "Neutral stasis", desc: "No force / Stasis" };
+            if (p > -1.5) return { label: "-1: Passive", group: "Passive — allowing, withholding", desc: "Allowing/Withholding" };
+            return { label: "-2: Chaos/Collapse", group: "Actively destroying value", desc: "Actively destroying/extracting" };
+        }
+
+        function getZoneAnchor(u, p) {
+            if (u >= 0 && p >= 0) return "Productive Quadrant (+υ, +ψ) | Bliss Zone | Greater Good";
+            if (u < 0 && p >= 0) return "Reductive Quadrant (-υ, +ψ) | Anger-Greed Zone | Lesser Evil";
+            if (u >= 0 && p < 0) return "Constructive Quadrant (+υ, -ψ) | Acceptance Zone | Lesser Good";
+            if (u < 0 && p < 0) return "Regressive Quadrant (-υ, -ψ) | Depression Zone | Greater Evil";
+            return "Center / Void";
+        }
+
+        function checkPerceptualInversion(u, p) {
+            if (u <= -1.0 && p >= 1.0) return "Ego Distortion Active: Extraction/Cruelty felt as Strength.";
+            if (u <= -1.0 && p <= -1.0) return "Ego Distortion Active: Destruction rationalized as Protection.";
+            if (u >= 1.0 && p <= -1.0) return "Distortion Warning: Systemic service felt as Burden.";
+            return "None detected. Clear perception.";
+        }
+
+        // Decoupled Data Loading with safe offline fallbacks
+        const hegemonyLoves = (typeof window.hegemonyLovesExternal !== 'undefined') ? window.hegemonyLovesExternal : [
+            { id: "Cap", name: "Agape", greek: "ἀγάπη", u: 2.0, p: 2.0, desc: "Unconditional Love. Seeking the ultimate objective good of another." },
+            { id: "Q1q1", name: "Thelema", greek: "θέλημα", u: 1.5, p: 2.0, desc: "Core Volition. Sovereign choice and underlying purpose." },
+            { id: "Q1q2", name: "Philanthropia", greek: "φιλανθρωπία", u: 2.0, p: 1.5, desc: "Love of Humanity. Benevolence recognizing shared nature." },
+            { id: "Q1q3", name: "Koinonia", greek: "κοινωνία", u: 2.0, p: 1.0, desc: "Communion. Deep spiritual sharing and integration." },
+            { id: "Q1q4", name: "Philokalia", greek: "φιλοκαλία", u: 1.5, p: 1.5, desc: "Love of the Beautiful/Good. Transcendent affinity." },
+            { id: "Q1q5", name: "Threskeia", greek: "θρησκεία", u: 1.0, p: 1.0, desc: "Religious Devotion. Outward liturgy and ritual." },
+            { id: "Q1q6", name: "Eusebeia", greek: "εὐσέβεια", u: 1.0, p: 0.5, desc: "Piety. Reverence for the divine and natural order." },
+            { id: "Q1q7", name: "Henosis", greek: "ἕνωσις", u: 2.0, p: 0.0, desc: "Mystical Union. Absolute oneness with divine reality." },
+            { id: "Q2q1", name: "Philotimia", greek: "φιλοτιμία", u: -0.5, p: 1.5, desc: "Love of Honor. Ambition and drive for distinction." },
+            { id: "Q2q2", name: "Epithymia", greek: "ἐπιθυμία", u: -1.5, p: 1.0, desc: "Appetitive Desire. Strong physical desire to consume." },
+            { id: "Q2q3", name: "Philarguria", greek: "φιλαργυρία", u: -2.0, p: 0.5, desc: "Love of Money. Greed and dead material accumulation." },
+            { id: "Q2q4", name: "Zelos", greek: "ζῆλος", u: 0.5, p: 1.5, desc: "Zeal. Productive emulation sparked by greatness." },
+            { id: "Q2q5", name: "Philomatheia", greek: "φιλομάθεια", u: 0.5, p: 1.0, desc: "Love of Learning. Driving affinity for knowledge." },
+            { id: "Q2q6", name: "Orexis", greek: "ὄρεξις", u: -1.0, p: 0.0, desc: "Appetite. Innate reaching for basic fulfillment." },
+            { id: "Q2q7", name: "Lagneia", greek: "λαγνεία", u: -2.0, p: -1.5, desc: "Lechery. Unrestrained, selfishly consumptive lust." },
+            { id: "Q3q1", name: "Synodos", greek: "σύνοδος", u: 0.5, p: 0.5, desc: "Traveling Together. Side-by-side companionship." },
+            { id: "Q3q2", name: "Sygkrasis", greek: "σύγκρασις", u: 1.0, p: 0.0, desc: "Commingling. Intimate blending of temperaments." },
+            { id: "Q3q3", name: "Eros", greek: "ἔρως", u: -1.0, p: 1.5, desc: "Passionate Love. High-velocity drive to merge." },
+            { id: "Q3q4", name: "Pothos", greek: "πόθος", u: -0.5, p: -1.0, desc: "Longing for the Absent. Ache of distance." },
+            { id: "Q3q5", name: "Himeros", greek: "ἵμερος", u: -1.0, p: 0.5, desc: "Acute Yearning. Pressing heat of unfulfilled proximity." },
+            { id: "Q3q6", name: "Sevas", greek: "σέβας", u: 0.5, p: -0.5, desc: "Reverential Fear. Awe bordering on dread before majesty." },
+            { id: "Q3q7", name: "Aidos", greek: "αἰδώς", u: 1.0, p: -1.0, desc: "Modesty/Restraint. Respect for moral boundaries." },
+            { id: "Q4q1", name: "Eunoia", greek: "εὔνοια", u: 1.5, p: 0.5, desc: "Goodwill. Pure intent and active well-wishing." },
+            { id: "Q4q2", name: "Philotechnia", greek: "φιλοτεχνία", u: 0.5, p: 2.0, desc: "Love of Art/Craft. Devotion to shaping matter." },
+            { id: "Q4q3", name: "Oikeiōsis", greek: "οἰκείωσις", u: 1.2, p: 1.0, desc: "Appropriation. Expanding the sphere of familial concern." },
+            { id: "Q4q4", name: "Philoxenia", greek: "φιλοξενία", u: 1.8, p: 1.0, desc: "Hospitality. Virtuous welcoming of strangers." },
+            { id: "Q4q5", name: "Xenia", greek: "ξενία", u: 1.5, p: 1.5, desc: "Guest-Friendship. Sacred inter-generational bond." },
+            { id: "Q4q6", name: "Splagchnon", greek: "σπλάγχνον", u: 1.0, p: -0.5, desc: "Visceral Compassion. Gut-level sympathy to suffering." },
+            { id: "Q4q7", name: "Eleos", greek: "ἔλεος", u: 1.8, p: 1.5, desc: "Compassion/Mercy. Active aid to the afflicted." },
+            { id: "Q5q1", name: "Philadelphia", greek: "φιλαδελφία", u: 1.0, p: 1.0, desc: "Brotherly Love. Solidarity between spiritual peers." },
+            { id: "Q5q2", name: "Homonoia", greek: "ὁμόνοια", u: 1.0, p: 1.5, desc: "Unanimity. Concord and shared singular purpose." },
+            { id: "Q5q3", name: "Kedeia", greek: "κηδεία", u: 1.0, p: -1.0, desc: "Devotion to the Dead. Loyalty across the boundary of death." },
+            { id: "Q5q4", name: "Philostorgia", greek: "φιλοστοργία", u: 1.5, p: 0.5, desc: "Tender Affection. Natural duty merged with chosen friendship." },
+            { id: "Q5q5", name: "Storge", greek: "στοργή", u: 1.0, p: 0.0, desc: "Familial Love. Unbreakable instinctual blood affection." },
+            { id: "Q5q6", name: "Astorgos", greek: "ἄστοργος", u: -1.5, p: -1.5, desc: "Heartlessness. Cold absence of natural affection." },
+            { id: "Q5q7", name: "Pragma", greek: "πρᾶγμα", u: 0.5, p: -1.0, desc: "Practical Love. Enduring duty through decades of shared labor." },
+            { id: "Q6q1", name: "Philautia", greek: "φιλαυτία", u: 0.0, p: 0.0, desc: "Self-Love. Necessary stabilization of the self." },
+            { id: "Q6q2", name: "Boulēsis", greek: "βούλησις", u: 0.0, p: 1.0, desc: "Rational Will. Deliberate, intellectual choice." },
+            { id: "Q6q3", name: "Mania", greek: "μανία", u: -2.0, p: -1.0, desc: "Obsessive Love. Destructive collapse of boundaries." },
+            { id: "Q6q4", name: "Phthonos", greek: "φθόνος", u: -2.0, p: -2.0, desc: "Envy/Spite. Malicious drive to tear down others." },
+            { id: "Q6q5", name: "Aselgeia", greek: "ἀσέλγεια", u: -1.5, p: -2.0, desc: "Licentiousness. Shameless violation of moral boundaries." },
+            { id: "Q6q6", name: "Hormē", greek: "ὁρμή", u: -0.5, p: 1.0, desc: "Impulse. Natural rapid onset psychological urge." },
+            { id: "Q6q7", name: "Pathos", greek: "πάθος", u: -1.0, p: -2.0, desc: "Passion/Suffering. Deep unaligned emotional suffering." },
+            { id: "Q7q1", name: "Charis", greek: "χάρις", u: 1.5, p: 1.0, desc: "Grace/Gratitude. The cycle of freely giving." },
+            { id: "Q7q2", name: "Paidia", greek: "παιδιά", u: 0.0, p: 0.5, desc: "Playful Love. Uncommitted joy in the moment." },
+            { id: "Q7q3", name: "Symphonia", greek: "συμφωνία", u: 1.0, p: 0.5, desc: "Harmony. Perfect resonance between two minds." },
+            { id: "Q7q4", name: "Anteros", greek: "ἀντέρως", u: 1.0, p: 1.0, desc: "Reciprocal Love. The flawless return of affection." },
+            { id: "Q7q5", name: "Makrothymia", greek: "μακροθυμία", u: 1.5, p: -1.5, desc: "Long-Suffering. The incredible strength of patience." },
+            { id: "Q7q6", name: "Ataraxia", greek: "ἀταραξία", u: 0.0, p: -0.5, desc: "Philosophical Peace. Complete untroubled tranquility." },
+            { id: "Q7q7", name: "Philia", greek: "φιλία", u: 1.0, p: 0.5, desc: "Brotherly Love. Balanced mutual exchange between equals." }
+        ];
+
+        let userMappedWords = (typeof window.userMappedWordsExternal !== 'undefined') ? window.userMappedWordsExternal : [
+            {
+                id: "usr_gov",
+                name: "Government",
+                greek: "κυβέρνησις",
+                u: 1.0,
+                p: 0.5,
+                desc: "The formal administrative framework that exercises authority, enforces laws, and distributes resources within a defined territory.",
+                phase1: {
+                    who: "PASS: Government as an institution is designed to manage the collective affairs of the 'Who' (the people).",
+                    what: "PASS: Government is the formal administrative framework that exercises authority, enforces laws, and distributes resources.",
+                    where: "PASS: Government is localized within geopolitical boundaries, though its influence is systemic.",
+                    why: "PASS: Government exists to establish order, resolve disputes, and provide public goods (systemic stability).",
+                    how: "PASS: Government operates through the codification of rules, delegation of power, and, if necessary, the monopoly on legitimate force.",
+                    cause: "PASS: Government arises from the necessity of coordinating large-scale human action and addressing systemic 'tragedy of the commons' issues.",
+                    effect: "PASS: Government influences the distribution of wealth, the protection of rights, and the overall trajectory of social evolution."
+                },
+                phase2: { rNet: "1.00", dominantFailure: "N/A", flag: "None detected. Clear perception (assuming idealized institutional function)." },
+                phase3: { deltaH: "0.00", tribalGap: "N/A" },
+                phase4: { fakeMaximiser: "Partial: Institutions often suffer from mission creep or the 'Iron Law of Oligarchy,' prioritizing self-preservation over systemic goals.", helxis: "Not detected: The institutional function is clearly defined as systemic oversight." },
+                phase5: {
+                    coordinate: "(υ: +1.0, ψ: +0.5)",
+                    zoneAnchor: "Productive Quadrant (+υ, +ψ) | Greater Good",
+                    integrity: "Pass (Functional Ideal)",
+                    trajectory: "Progress (Stability-focused)",
+                    deepestNode: "The systemic management of collective existence.",
+                    distortion: "Institutionalization (can feel like a burden to the individual, even if it serves the system)."
+                }
+            }
+        ];
+
+        // Auto-load mapped Topic Domains from Topic_Map.md
+        if (typeof window.vftTopicsExternal !== 'undefined') {
+            userMappedWords = [...userMappedWords, ...window.vftTopicsExternal];
+        }
+
+        // Auto-load 32 Tagging Matrix Category nodes from Tagging Matrix
+        if (typeof window.taggingMatrixExternal !== 'undefined') {
+            userMappedWords = [...userMappedWords, ...window.taggingMatrixExternal];
+        }
+
+        // Currently selected node object
+        let selectedNode = null;
+        let selectedNodesList = [];
+        let activeTab = "verdict";
+        let activeAnalysisSubTab = "phase1";
+
+        // Map decimal coordinate [-2.0, +2.0] to grid cell index [0, 9]
+        const getGridIndex = (val) => {
+            let index = Math.floor(((2 - val) / 4) * 9.99);
+            return Math.max(0, Math.min(9, index));
+        };
+
+        // Map grid cell index [0, 9] to central coordinate value on that row/column
+        const getCoordFromIndex = (index) => {
+            return 2 - (index / 9) * 4;
+        };
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            loadSavedGraphState();
+            renderGrid();
+            renderDirectory();
+        });
+
+        // Load persisted state from LocalStorage
+        function loadSavedGraphState() {
+            try {
+                const saved = localStorage.getItem('vft_hegemony_mapped_words');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        userMappedWords = parsed;
+                    }
+                }
+            } catch (err) {
+                console.error("Failed to load saved state from localStorage:", err);
+            }
+        }
+
+        // Persist state to LocalStorage
+        function saveGraphState() {
+            try {
+                localStorage.setItem('vft_hegemony_mapped_words', JSON.stringify(userMappedWords));
+            } catch (err) {
+                console.error("Failed to save state to localStorage:", err);
+            }
+        }
+
+        // Export data to downloadable JSON file
+        function exportGraphState() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(userMappedWords, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "hegemony_mapped_words.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+
+        // Import data from JSON file
+        function importGraphState(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const imported = JSON.parse(evt.target.result);
+                    if (Array.isArray(imported)) {
+                        userMappedWords = imported;
+                        saveGraphState();
+                        renderGrid();
+                        renderDirectory();
+                        alert("Graph state successfully imported!");
+                    } else {
+                        alert("Invalid file format. Must be a JSON array.");
+                    }
+                } catch (err) {
+                    alert("Error parsing JSON: " + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Render the 10x10 Grid Plane
+        function renderGrid() {
+            const gridContainer = document.getElementById('wordGrid');
+            gridContainer.innerHTML = '';
+
+            for (let y = 0; y < 10; y++) {
+                for (let x = 0; x < 10; x++) {
+                    const u = (((9 - x) / 9) * 4) - 2;
+                    const p = (((9 - y) / 9) * 4) - 2;
+
+                    // Interpolate Background Colors
+                    const nx = x / 9;
+                    const ny = y / 9;
+                    const topColor = interpolate(colors.TL, colors.TR, nx);
+                    const bottomColor = interpolate(colors.BL, colors.BR, nx);
+                    const finalColor = interpolate(topColor, bottomColor, ny);
+
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.id = `cell-${x}-${y}`;
+                    cell.style.backgroundColor = `rgba(${finalColor[0]}, ${finalColor[1]}, ${finalColor[2]}, 0.85)`;
+                    
+                    // Main Grid Text Element
+                    const textSpan = document.createElement('span');
+                    textSpan.className = 'cell-text';
+                    textSpan.innerText = gridWords[y][x];
+                    cell.appendChild(textSpan);
+
+                    // Add Classical Loves mapped to this cell
+                    const lovesInCell = hegemonyLoves.filter(love => 
+                        getGridIndex(love.u) === x && getGridIndex(love.p) === y
+                    );
+                    lovesInCell.forEach(love => {
+                        const badge = document.createElement('span');
+                        badge.className = 'love-badge';
+                        badge.innerText = love.name;
+                        badge.title = `${love.name} (${love.greek}) at (${love.u.toFixed(2)}, ${love.p.toFixed(2)})`;
+                        cell.appendChild(badge);
+                    });
+
+                    // Add User Custom Mapped Words mapped to this cell
+                    const userWordsInCell = userMappedWords.filter(w => 
+                        getGridIndex(w.u) === x && getGridIndex(w.p) === y
+                    );
+                    userWordsInCell.forEach(w => {
+                        const badge = document.createElement('span');
+                        badge.className = 'user-badge';
+                        badge.innerText = w.name;
+                        badge.title = `[USER NODE] ${w.name} at (${w.u.toFixed(2)}, ${w.p.toFixed(2)})`;
+                        cell.appendChild(badge);
+                    });
+
+                    // Add event listeners
+                    cell.addEventListener('mouseenter', () => {
+                        document.getElementById('gridHoverCoord').innerText = `Cell Node: "${gridWords[y][x]}" | Column ${x}, Row ${y} | Plane Grid: (υ: ${u.toFixed(2)}, ψ: ${p.toFixed(2)})`;
+                    });
+
+                    cell.addEventListener('mouseleave', () => {
+                        document.getElementById('gridHoverCoord').innerText = 'Hover a node to inspect local coordinate plane metrics';
+                    });
+
+                    cell.addEventListener('click', () => {
+                        const baseNode = {
+                            id: `grid-${x}-${y}`,
+                            name: gridWords[y][x],
+                            greek: '',
+                            u: u,
+                            p: p,
+                            type: 'grid',
+                            desc: `Base Psochic Hegemony grid concept representing "${gridWords[y][x]}" situated at column index ${x}, row index ${y}.`
+                        };
+                        const loves = hegemonyLoves.filter(love => getGridIndex(love.u) === x && getGridIndex(love.p) === y).map(l => ({...l, type: 'love'}));
+                        const userWords = userMappedWords.filter(w => getGridIndex(w.u) === x && getGridIndex(w.p) === y).map(usr => ({...usr, type: 'user'}));
+                        
+                        const allNodesInCell = [baseNode, ...loves, ...userWords];
+                        selectNodes(allNodesInCell);
+                    });
+
+                    gridContainer.appendChild(cell);
+                }
+            }
+        }
+
+        // Render Sidebar List
+        function renderDirectory() {
+            const listContainer = document.getElementById('directoryList');
+            const totalCountEl = document.getElementById('directoryCount');
+            listContainer.innerHTML = '';
+
+            const searchVal = document.getElementById('dirSearch').value.toLowerCase().trim();
+            const filterType = document.getElementById('dirFilterType').value;
+
+            let allItems = [];
+
+            // 1. Grid Words
+            if (filterType === 'all' || filterType === 'grid') {
+                for (let y = 0; y < 10; y++) {
+                    for (let x = 0; x < 10; x++) {
+                        const u = (((9 - x) / 9) * 4) - 2;
+                        const p = (((9 - y) / 9) * 4) - 2;
+                        allItems.push({
+                            id: `grid-${x}-${y}`,
+                            name: gridWords[y][x],
+                            greek: '',
+                            u: u,
+                            p: p,
+                            type: 'grid',
+                            desc: `Base Psochic Hegemony grid concept situated at coordinate index (x:${x}, y:${y}).`
+                        });
+                    }
+                }
+            }
+
+            // 2. Classical Loves
+            if (filterType === 'all' || filterType === 'love') {
+                hegemonyLoves.forEach(love => {
+                    allItems.push({
+                        ...love,
+                        type: 'love'
+                    });
+                });
+            }
+
+            // 3. User Custom Mapped Words
+            if (filterType === 'all' || filterType === 'user') {
+                userMappedWords.forEach(w => {
+                    allItems.push({
+                        ...w,
+                        type: 'user'
+                    });
+                });
+            }
+
+            // Filter items based on search query
+            const filteredItems = allItems.filter(item => {
+                const nameMatches = item.name.toLowerCase().includes(searchVal);
+                const descMatches = item.desc && item.desc.toLowerCase().includes(searchVal);
+                const greekMatches = item.greek && item.greek.toLowerCase().includes(searchVal);
+                return nameMatches || descMatches || greekMatches;
+            });
+
+            totalCountEl.innerText = `${filteredItems.length} Nodes Matching`;
+
+            // Sort User mapped and Loves first
+            filteredItems.sort((a, b) => {
+                const priority = { 'user': 1, 'love': 2, 'grid': 3 };
+                if (priority[a.type] !== priority[b.type]) {
+                    return priority[a.type] - priority[b.type];
+                }
+                return a.name.localeCompare(b.name);
+            });
+
+            // Generate elements
+            filteredItems.forEach(item => {
+                const isSelected = selectedNodesList.some(node => node.id === item.id);
+                const div = document.createElement('div');
+                div.className = `p-2 rounded-lg cursor-pointer flex items-center justify-between transition text-xs font-semibold hover:bg-slate-800/60 border ${isSelected ? 'border-sky-500 bg-sky-500/10 text-sky-400' : 'border-transparent text-slate-300'}`;
+                
+                div.addEventListener('click', (e) => {
+                    if (e.ctrlKey || e.metaKey) {
+                        const existsIdx = selectedNodesList.findIndex(n => n.id === item.id);
+                        if (existsIdx !== -1) {
+                            selectedNodesList.splice(existsIdx, 1);
+                        } else {
+                            selectedNodesList.push(item);
+                        }
+                        selectNodes(selectedNodesList);
+                    } else {
+                        selectNodes([item]);
+                    }
+                });
+
+                const leftCol = document.createElement('div');
+                leftCol.className = 'flex flex-col gap-0.5 max-w-[70%]';
+                
+                const titleSpan = document.createElement('span');
+                titleSpan.className = 'font-bold text-[0.8rem] text-slate-100 truncate';
+                titleSpan.innerText = item.name;
+                leftCol.appendChild(titleSpan);
+
+                const labelRow = document.createElement('div');
+                labelRow.className = 'flex items-center gap-1.5 text-[0.6rem] text-slate-500 font-bold';
+                
+                const typeLabel = document.createElement('span');
+                if (item.type === 'user') {
+                    typeLabel.className = 'text-rose-400 font-extrabold';
+                    typeLabel.innerText = 'USER';
+                } else if (item.type === 'love') {
+                    typeLabel.className = 'text-sky-400';
+                    typeLabel.innerText = 'CLASSIC';
+                } else {
+                    typeLabel.innerText = 'BASE';
+                }
+                labelRow.appendChild(typeLabel);
+
+                if (item.greek) {
+                    const grk = document.createElement('span');
+                    grk.className = 'italic font-mono';
+                    grk.innerText = item.greek;
+                    labelRow.appendChild(grk);
+                }
+                leftCol.appendChild(labelRow);
+                div.appendChild(leftCol);
+
+                // Right col: coordinate
+                const rightCol = document.createElement('div');
+                rightCol.className = 'text-right font-mono text-[0.65rem] text-slate-400';
+                rightCol.innerText = `(${item.u.toFixed(1)}, ${item.p.toFixed(1)})`;
+                div.appendChild(rightCol);
+
+                listContainer.appendChild(div);
+            });
+        }
+
+        // Apply filters on directory list
+        function filterDirectory() {
+            renderDirectory();
+        }
+
+        // Select multiple nodes and render scrollable stacked analyses
+        function selectNodes(nodes) {
+            if (!Array.isArray(nodes)) {
+                nodes = [nodes];
+            }
+            selectedNodesList = nodes;
+
+            // Highlight first selected node cell on the grid
+            document.querySelectorAll('.cell').forEach(c => c.classList.remove('active-node'));
+            if (nodes.length > 0) {
+                selectedNode = nodes[0];
+                const x = getGridIndex(nodes[0].u);
+                const y = getGridIndex(nodes[0].p);
+                const cell = document.getElementById(`cell-${x}-${y}`);
+                if (cell) {
+                    cell.classList.add('active-node');
+                }
+            } else {
+                selectedNode = null;
+            }
+
+            const emptyState = document.getElementById('inspectorEmptyState');
+            const cardsContainer = document.getElementById('inspectorCardsContainer');
+
+            if (nodes.length === 0) {
+                emptyState.classList.remove('hidden');
+                cardsContainer.classList.add('hidden');
+                cardsContainer.innerHTML = '';
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            cardsContainer.classList.remove('hidden');
+            cardsContainer.innerHTML = '';
+
+            // Generate and append cards for each node
+            nodes.forEach((node, idx) => {
+                const cardWrapper = document.createElement('div');
+                cardWrapper.innerHTML = CARD_TEMPLATE(idx);
+                const cardDiv = cardWrapper.firstElementChild;
+                cardsContainer.appendChild(cardDiv);
+                
+                populateCardData(node, node.type || 'grid', idx);
+            });
+
+            renderDirectory();
+        }
+
+        // Populate a single card at a specific index with node values
+        function populateCardData(node, type, cardIndex) {
+            document.getElementById('nodeName_' + cardIndex).innerText = node.name;
+            document.getElementById('nodeDesc_' + cardIndex).innerText = node.desc || '';
+            document.getElementById('nodeCoord_' + cardIndex).innerText = `(υ: ${node.u.toFixed(2)}, ψ: ${node.p.toFixed(2)})`;
+
+            // Populate justification — use stored field or auto-generate from coordinates
+            const justEl = document.getElementById('nodeJustification_' + cardIndex);
+            if (node.justification) {
+                justEl.innerText = node.justification;
+            } else {
+                const mGroup = getMoralityData(node.u);
+                const wGroup = getWillData(node.p);
+                const uSign = node.u >= 0 ? '+' : '';
+                const pSign = node.p >= 0 ? '+' : '';
+                justEl.innerText = `Moral Alignment: ${mGroup.group} (υ: ${uSign}${node.u.toFixed(1)}) — ${mGroup.label}. Will Trajectory: ${wGroup.group} (ψ: ${pSign}${node.p.toFixed(1)}) — ${wGroup.label}. ${node.name} sits in the ${getZoneAnchor(node.u, node.p).split('|')[0].trim()} and ${node.u >= 0 ? 'extends benefit toward ' + mGroup.group : 'draws value toward ' + mGroup.group} with ${wGroup.group.toLowerCase()} energy.`;
+            }
+            
+            const grkEl = document.getElementById('nodeNameGreek_' + cardIndex);
+            if (node.greek) {
+                grkEl.innerText = `[${node.greek}]`;
+                grkEl.classList.remove('hidden');
+            } else {
+                grkEl.classList.add('hidden');
+            }
+
+            const classBadge = document.getElementById('nodeClassBadge_' + cardIndex);
+            if (type === 'user') {
+                classBadge.innerText = 'USER MAPPED';
+                classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-rose-500/10 border border-rose-500/30 text-rose-400 animate-pulse';
+            } else if (type === 'love') {
+                classBadge.innerText = 'CLASSICAL LOVE';
+                classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-sky-500/10 border border-sky-500/30 text-sky-400';
+            } else {
+                classBadge.innerText = 'BASE PLANE NODE';
+                classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-slate-800 border border-slate-700 text-slate-400';
+            }
+
+            if (!node.phase1) {
+                node.phase1 = {
+                    who: `WHO: ${node.name} maps to structural agents corresponding to a moral value of ${node.u.toFixed(1)}.`,
+                    what: `WHAT: Representing ${node.name} as a specific framework of volition and structural force.`,
+                    where: `WHERE: Localized within the psochic coordinate plane.`,
+                    why: `WHY: Facilitates coordination or isolation dependent on its vector coordinate.`,
+                    how: `HOW: Operates via the baseline energetic Will intensity of ${node.p.toFixed(1)}.`,
+                    cause: `CAUSE: Arises from the corresponding intersection on the (υ, ψ) plane.`,
+                    effect: `EFFECT: Systemic trajectory is oriented towards ${getZoneAnchor(node.u, node.p).split('|')[0].trim()}.`
+                };
+                node.phase2 = { rNet: "0.90", dominantFailure: "N/A", flag: checkPerceptualInversion(node.u, node.p) };
+                node.phase3 = { deltaH: "0.00", tribalGap: "N/A" };
+                node.phase4 = { fakeMaximiser: "Standard infiltration vectors target extreme boundaries.", helxis: "Not detected." };
+                node.phase5 = {
+                    coordinate: `(υ: ${node.u.toFixed(2)}, ψ: ${node.p.toFixed(2)})`,
+                    zoneAnchor: getZoneAnchor(node.u, node.p),
+                    integrity: "Pass",
+                    trajectory: node.p >= 0 ? "Progress" : "Entropy",
+                    deepestNode: `The systemic architecture of ${node.name}.`,
+                    distortion: "Distorted if self-interest is prioritized over systemic justice."
+                };
+            }
+
+            document.getElementById('sliderUVal_' + cardIndex).innerText = node.u.toFixed(2);
+            document.getElementById('sliderPVal_' + cardIndex).innerText = node.p.toFixed(2);
+
+            const uPercent = ((node.u + 2) / 4) * 100;
+            const pPercent = ((node.p + 2) / 4) * 100;
+            document.getElementById('sliderUFill_' + cardIndex).style.width = `${uPercent}%`;
+            document.getElementById('sliderPFill_' + cardIndex).style.width = `${pPercent}%`;
+
+            const mData = getMoralityData(node.u);
+            const wData = getWillData(node.p);
+            document.getElementById('sliderUDesc_' + cardIndex).innerText = `${mData.label} — ${mData.desc}`;
+            document.getElementById('sliderPDesc_' + cardIndex).innerText = `${wData.label} — ${wData.desc}`;
+
+            const qContainer = document.getElementById('phase1ItemsContainer_' + cardIndex);
+            qContainer.innerHTML = '';
+            
+            const qDims = [
+                { key: 'who', title: 'Q1 WHO (Identity)' },
+                { key: 'what', title: 'Q2 WHAT (Framework)' },
+                { key: 'where', title: 'Q3 WHERE (Domain)' },
+                { key: 'why', title: 'Q4 WHY (System Purpose)' },
+                { key: 'how', title: 'Q5 HOW (Action Vector)' },
+                { key: 'cause', title: 'Q6 CAUSE (Origin Trigger)' },
+                { key: 'effect', title: 'Q7 EFFECT (Evolutionary Path)' }
+            ];
+
+            qDims.forEach(dim => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'p-2 rounded border border-slate-800 bg-slate-950/20';
+                
+                const title = document.createElement('h5');
+                title.className = 'text-[0.65rem] font-bold text-slate-400 uppercase tracking-wide';
+                title.innerText = dim.title;
+                itemDiv.appendChild(title);
+
+                const desc = document.createElement('p');
+                desc.className = 'text-[0.7rem] text-slate-200 mt-0.5 leading-relaxed font-semibold';
+                desc.innerText = node.phase1[dim.key] || 'No scan metrics recorded.';
+                itemDiv.appendChild(desc);
+
+                qContainer.appendChild(itemDiv);
+            });
+
+            document.getElementById('analysisRNet_' + cardIndex).innerText = node.phase2.rNet;
+            document.getElementById('analysisDomFailure_' + cardIndex).innerText = node.phase2.dominantFailure;
+            document.getElementById('analysisFlag_' + cardIndex).innerText = node.phase2.flag;
+            document.getElementById('analysisDeltaH_' + cardIndex).innerText = node.phase3.deltaH;
+            document.getElementById('analysisTribalGap_' + cardIndex).innerText = node.phase3.tribalGap;
+            document.getElementById('analysisFakeMax_' + cardIndex).innerText = node.phase4.fakeMaximiser;
+            document.getElementById('analysisHelxis_' + cardIndex).innerText = node.phase4.helxis;
+
+            calculateRelationalAffinities(node, cardIndex);
+        }
+
+        // Toggles a tab for a specific card index
+        function switchTab(tabId, cardIndex) {
+            const tabs = ['verdict', 'analysis', 'relational'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tabBtn-${t}_` + cardIndex);
+                const content = document.getElementById(`tabContent-${t}_` + cardIndex);
+                if (t === tabId) {
+                    btn.classList.add('active');
+                    content.classList.remove('hidden');
+                } else {
+                    btn.classList.remove('active');
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // Toggles an analysis sub-tab for a specific card index
+        function switchAnalysisSubTab(subTabId, cardIndex) {
+            const subTabs = ['phase1', 'phase2'];
+            subTabs.forEach(s => {
+                const btn = document.getElementById(`subTabBtn-${s}_` + cardIndex);
+                const content = document.getElementById(`analysisSubContent-${s}_` + cardIndex);
+                if (s === subTabId) {
+                    btn.classList.add('active');
+                    content.classList.remove('hidden');
+                } else {
+                    btn.classList.remove('active');
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // Selection redirect when clicking neighbor nodes in affinities
+        function selectBaseCellNode(x, y) {
+            const u = (((9 - x) / 9) * 4) - 2;
+            const p = (((9 - y) / 9) * 4) - 2;
+            
+            const cellNode = {
+                id: `grid-${x}-${y}`,
+                name: gridWords[y][x],
+                greek: '',
+                u: u,
+                p: p,
+                desc: `Standard conceptual intersection representing ${gridWords[y][x]} situated at grid column index ${x}, row index ${y}.`
+            };
+            selectNodes([cellNode]);
+        }
+
+        function calculateRelationalAffinities(selectedNode, cardIndex) {
+            let list = [];
+
+            // Compile all comparative nodes
+            for (let y = 0; y < 10; y++) {
+                for (let x = 0; x < 10; x++) {
+                    const u = (((9 - x) / 9) * 4) - 2;
+                    const p = (((9 - y) / 9) * 4) - 2;
+                    if (gridWords[y][x] !== selectedNode.name) {
+                        list.push({
+                            name: gridWords[y][x],
+                            u: u,
+                            p: p,
+                            type: 'grid'
+                        });
+                    }
+                }
+            }
+
+            hegemonyLoves.forEach(love => {
+                if (love.name !== selectedNode.name) {
+                    list.push({
+                        ...love,
+                        type: 'love'
+                    });
+                }
+            });
+
+            userMappedWords.forEach(w => {
+                if (w.name !== selectedNode.name) {
+                    list.push({
+                        ...w,
+                        type: 'user'
+                    });
+                }
+            });
+
+            list.forEach(node => {
+                const distance = Math.sqrt(Math.pow(selectedNode.u - node.u, 2) + Math.pow(selectedNode.p - node.p, 2));
+                node.distance = distance;
+            });
+
+            list.sort((a, b) => a.distance - b.distance);
+
+            // Display Top 5 Closest
+            const closestContainer = document.getElementById('closestAffinityList_' + cardIndex);
+            closestContainer.innerHTML = '';
+            
+            const top5Closest = list.slice(0, 6);
+            top5Closest.forEach(node => {
+                const row = document.createElement('div');
+                row.className = 'p-1.5 rounded flex items-center justify-between text-[0.7rem] bg-slate-900/40 hover:bg-slate-900 border border-transparent hover:border-slate-800 transition cursor-pointer';
+                row.addEventListener('click', () => {
+                    selectNodes([node]);
+                });
+
+                const nameCol = document.createElement('div');
+                nameCol.className = 'flex flex-col gap-0.5';
+                
+                const name = document.createElement('span');
+                name.className = 'font-bold text-slate-200';
+                name.innerText = node.name;
+                nameCol.appendChild(name);
+
+                const typeSpan = document.createElement('span');
+                typeSpan.className = 'text-[0.55rem] text-slate-500 font-extrabold uppercase';
+                typeSpan.innerText = `${node.type} | d: ${node.distance.toFixed(2)}`;
+                nameCol.appendChild(typeSpan);
+                row.appendChild(nameCol);
+
+                const rating = document.createElement('span');
+                rating.className = 'px-1.5 py-0.5 rounded text-[0.55rem] font-extrabold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400';
+                rating.innerText = 'RESONANCE';
+                row.appendChild(rating);
+
+                closestContainer.appendChild(row);
+            });
+
+            // Display Top 5 Furthest
+            const furthestContainer = document.getElementById('furthestAffinityList_' + cardIndex);
+            furthestContainer.innerHTML = '';
+            
+            const top5Furthest = list.slice(-6).reverse();
+            top5Furthest.forEach(node => {
+                const row = document.createElement('div');
+                row.className = 'p-1.5 rounded flex items-center justify-between text-[0.7rem] bg-slate-900/40 hover:bg-slate-900 border border-transparent hover:border-slate-800 transition cursor-pointer';
+                row.addEventListener('click', () => {
+                    selectNodes([node]);
+                });
+
+                const nameCol = document.createElement('div');
+                nameCol.className = 'flex flex-col gap-0.5';
+                
+                const name = document.createElement('span');
+                name.className = 'font-bold text-slate-200';
+                name.innerText = node.name;
+                nameCol.appendChild(name);
+
+                const typeSpan = document.createElement('span');
+                typeSpan.className = 'text-[0.55rem] text-slate-500 font-extrabold uppercase';
+                typeSpan.innerText = `${node.type} | d: ${node.distance.toFixed(2)}`;
+                nameCol.appendChild(typeSpan);
+                row.appendChild(nameCol);
+
+                const rating = document.createElement('span');
+                rating.className = 'px-1.5 py-0.5 rounded text-[0.55rem] font-extrabold bg-rose-500/10 border border-rose-500/30 text-rose-400';
+                rating.innerText = 'INVERSION';
+                row.appendChild(rating);
+
+                furthestContainer.appendChild(row);
+            });
+        }
+
+
+        function openAddWordModal() {
+            document.getElementById('addWordModal').classList.remove('hidden');
+        }
+
+        function closeAddWordModal() {
+            document.getElementById('addWordModal').classList.add('hidden');
+            // Clean inputs
+            document.getElementById('modalInputName').value = '';
+            document.getElementById('modalInputGreek').value = '';
+            document.getElementById('modalInputU').value = '';
+            document.getElementById('modalInputP').value = '';
+            document.getElementById('modalInputDesc').value = '';
+            document.getElementById('modalInputJSON').value = '';
+        }
+
+        function fillJSONTemplate() {
+            const template = {
+                name: "ConceptName",
+                greek: "κύριος",
+                u: 0.0,
+                p: 0.0,
+                desc: "Description of structural node concept.",
+                phase1: {
+                    who: "Structural details...",
+                    what: "Structural details...",
+                    where: "Structural details...",
+                    why: "Structural details...",
+                    how: "Structural details...",
+                    cause: "Structural details...",
+                    effect: "Structural details..."
+                },
+                phase2: { rNet: "1.00", dominantFailure: "N/A", flag: "None" },
+                phase3: { deltaH: "0.00", tribalGap: "N/A" },
+                phase4: { fakeMaximiser: "Description of fake maximizer vulnerability...", helxis: "Description of helxis capture..." },
+                phase5: { coordinate: "(υ: 0.0, ψ: 0.0)", zoneAnchor: "Void Zone", integrity: "Pass", trajectory: "Neutral", deepestNode: "Concept", distortion: "None" }
+            };
+            document.getElementById('modalInputJSON').value = JSON.stringify(template, null, 2);
+        }
+
+        // Submit Mapped Word to Grid & Persist
+        function submitMappedWord() {
+            const jsonText = document.getElementById('modalInputJSON').value.trim();
+            let newWord = null;
+
+            if (jsonText) {
+                try {
+                    newWord = JSON.parse(jsonText);
+                    if (!newWord.name || newWord.u === undefined || newWord.p === undefined) {
+                        alert("Invalid JSON format. Must contain at least name, u, and p properties.");
+                        return;
+                    }
+                    newWord.id = `usr_${Date.now()}`;
+                    newWord.u = parseFloat(newWord.u);
+                    newWord.p = parseFloat(newWord.p);
+                } catch (err) {
+                    alert("Error parsing JSON template: " + err.message);
+                    return;
+                }
+            } else {
+                const name = document.getElementById('modalInputName').value.trim();
+                const greek = document.getElementById('modalInputGreek').value.trim();
+                const uStr = document.getElementById('modalInputU').value;
+                const pStr = document.getElementById('modalInputP').value;
+                const desc = document.getElementById('modalInputDesc').value.trim();
+
+                if (!name || uStr === "" || pStr === "") {
+                    alert("Please fill in Name, Axis υ, and Axis ψ values.");
+                    return;
+                }
+
+                const u = parseFloat(uStr);
+                const p = parseFloat(pStr);
+
+                if (isNaN(u) || u < -2.0 || u > 2.0 || isNaN(p) || p < -2.0 || p > 2.0) {
+                    alert("Axis coordinate values must be decimal numbers in range [-2.0, 2.0].");
+                    return;
+                }
+
+                newWord = {
+                    id: `usr_${Date.now()}`,
+                    name: name,
+                    greek: greek,
+                    u: u,
+                    p: p,
+                    desc: desc || 'Custom user mapped concept.',
+                    phase1: {
+                        who: `WHO: Represents an agent/force acting on the moral coordinate of ${u.toFixed(1)}.`,
+                        what: `WHAT: Defined as a structural framework of volition in the ${getZoneAnchor(u, p).split('|')[1].trim()} zone.`,
+                        where: `WHERE: Operates relative to local base grids.`,
+                        why: `WHY: Establishes localized coordination values.`,
+                        how: `HOW: Acts with a sovereign volumetric force of ${p.toFixed(1)}.`,
+                        cause: `CAUSE: Precipitated by systemic interactions on the psochic plane.`,
+                        effect: `EFFECT: Trailing trajectory is oriented towards ${getZoneAnchor(u, p).split('|')[0].trim()}.`
+                    },
+                    phase2: { rNet: "1.00", dominantFailure: "N/A", flag: checkPerceptualInversion(u, p) },
+                    phase3: { deltaH: "0.00", tribalGap: "N/A" },
+                    phase4: { fakeMaximiser: "Boundary vectors vulnerable to cognitive capture.", helxis: "Detached equilibrium." },
+                    phase5: {
+                        coordinate: `(υ: ${u.toFixed(2)}, ψ: ${p.toFixed(2)})`,
+                        zoneAnchor: getZoneAnchor(u, p),
+                        integrity: "Pass (User Mapped)",
+                        trajectory: p >= 0 ? "Progress" : "Entropy",
+                        deepestNode: `The user concept of ${name}.`,
+                        distortion: "Prone to perceptual displacement unless centered on objective Agapic balance."
+                    }
+                };
+            }
+
+            // Infiltrate custom word to active database
+            userMappedWords.push(newWord);
+            saveGraphState();
+
+            // Refresh Workspace Grid & Sidebar List
+            renderGrid();
+            renderDirectory();
+            closeAddWordModal();
+
+            // Auto select new word
+            selectNodes([newWord]);
+        }
+
+        // Toggle Legend popover
+        function toggleLegend() {
+            const panel = document.getElementById('compassLegendPanel');
+            panel.classList.toggle('hidden');
+        }
+
+        // Active clump state holders
+        let activeClumpNodes = null;
+        let activeClumpU = 0;
+        let activeClumpP = 0;
+
+        // Select Clumped Cell Nodes
+        function selectClumpedCell(nodes, u, p) {
+            activeClumpNodes = nodes;
+            activeClumpU = u;
+            activeClumpP = p;
+
+            // Highlight grid cell
+            document.querySelectorAll('.cell').forEach(c => c.classList.remove('active-node'));
+            const x = getGridIndex(u);
+            const y = getGridIndex(p);
+            const cell = document.getElementById(`cell-${x}-${y}`);
+            if (cell) {
+                cell.classList.add('active-node');
+            }
+
+            // Hide empty and single card, show clumped container
+            document.getElementById('inspectorEmptyState').classList.add('hidden');
+            document.getElementById('inspectorCard').classList.add('hidden');
+            document.getElementById('inspectorClumpedCard').classList.remove('hidden');
+
+            // Populate header details
+            document.getElementById('clumpedTitle').innerText = `Coordinate Cluster (${nodes.length} Nodes)`;
+            document.getElementById('clumpedCoord').innerText = `(υ: ${u.toFixed(2)}, ψ: ${p.toFixed(2)})`;
+            document.getElementById('clumpedAnchor').innerText = getZoneAnchor(u, p).split('|')[2]?.trim() || getZoneAnchor(u, p).split('|')[0].trim();
+
+            // Populate stacked cards list
+            const container = document.getElementById('clumpedListContainer');
+            container.innerHTML = '';
+
+            nodes.forEach(node => {
+                const card = document.createElement('div');
+                card.className = 'glass-panel p-4 rounded-xl border border-slate-800/80 bg-slate-900/20 hover:bg-slate-900/40 hover:border-slate-700/80 transition flex flex-col gap-3';
+
+                const header = document.createElement('div');
+                header.className = 'flex justify-between items-start border-b border-slate-800/50 pb-2';
+
+                const left = document.createElement('div');
+                left.className = 'flex flex-col';
+
+                const titleRow = document.createElement('div');
+                titleRow.className = 'flex items-center gap-2';
+
+                const name = document.createElement('h4');
+                name.className = 'text-base font-bold text-white';
+                name.innerText = node.name;
+                titleRow.appendChild(name);
+
+                if (node.greek) {
+                    const greek = document.createElement('span');
+                    greek.className = 'text-[0.7rem] font-mono text-slate-400 italic';
+                    greek.innerText = `[${node.greek}]`;
+                    titleRow.appendChild(greek);
+                }
+                left.appendChild(titleRow);
+
+                const typeBadge = document.createElement('span');
+                typeBadge.className = 'text-[0.55rem] font-bold mt-1 uppercase tracking-widest';
+                if (node.type === 'user') {
+                    typeBadge.innerText = 'USER MAPPED';
+                    typeBadge.className += ' text-rose-400 font-extrabold';
+                } else if (node.type === 'love') {
+                    typeBadge.innerText = 'CLASSICAL LOVE';
+                    typeBadge.className += ' text-sky-400';
+                } else {
+                    typeBadge.innerText = 'BASE PLANE NODE';
+                    typeBadge.className += ' text-slate-400';
+                }
+                left.appendChild(typeBadge);
+                header.appendChild(left);
+
+                const right = document.createElement('div');
+                right.className = 'text-right font-mono text-[0.65rem] text-emerald-400 font-bold';
+                right.innerText = `(υ: ${node.u.toFixed(2)}, ψ: ${node.p.toFixed(2)})`;
+                header.appendChild(right);
+                card.appendChild(header);
+
+                const desc = document.createElement('p');
+                desc.className = 'text-xs text-slate-300 leading-relaxed font-medium';
+                desc.innerText = node.desc || 'No description recorded.';
+                card.appendChild(desc);
+
+                const actionContainer = document.createElement('div');
+                actionContainer.className = 'flex justify-between items-center mt-1 border-t border-slate-800/50 pt-2 text-[0.7rem] font-semibold';
+
+                const infoText = document.createElement('span');
+                infoText.className = 'text-slate-500 italic font-mono';
+                infoText.innerText = `Zone: ${getZoneAnchor(node.u, node.p).split('|')[0].trim()}`;
+                actionContainer.appendChild(infoText);
+
+                const examineBtn = document.createElement('button');
+                examineBtn.className = 'px-3 py-1 rounded bg-sky-500 hover:bg-sky-600 text-white font-bold transition flex items-center gap-1';
+                examineBtn.innerHTML = 'Examine Full 5-Phase Analysis <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>';
+                examineBtn.addEventListener('click', () => {
+                    selectNodes([node]);
+                });
+                actionContainer.appendChild(examineBtn);
+                card.appendChild(actionContainer);
+
+                container.appendChild(card);
+            });
+        }
+
+        // Navigate back to cluster list view
+        function backToClump() {
+            if (activeClumpNodes) {
+                document.getElementById('inspectorCard').classList.add('hidden');
+                document.getElementById('inspectorClumpedCard').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
