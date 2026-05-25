@@ -2119,3 +2119,33 @@ The Tesla Vector: Reframes Tesla as a cultivated asset of China, patiently seede
 Surgical Capitalism: Describes the mechanism of state-sponsored valuation inflation designed to engineer systemic Western vulnerability.\
 The Driverless Deception: Identifies the failure of Level 5 autonomy as the primary catalyst for shattering Elon Musk's narrative infallibility."""
     ])
+
+    import os
+    file_summaries_path = 'file_summaries.md'
+    if not os.path.exists(file_summaries_path):
+        print(f"Error: {file_summaries_path} not found.")
+        return
+
+    with open(file_summaries_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    new_content = []
+    for summary in summaries:
+        import re
+        match = re.search(r'### \[(.*?)\]', summary)
+        if match:
+            header = match.group(1)
+            if f"### [{header}]" not in content:
+                new_content.append(summary)
+            else:
+                print(f"Skipping duplicate: {header}")
+
+    if new_content:
+        with open(file_summaries_path, 'a', encoding='utf-8') as f:
+            f.write('\n' + '\n\n'.join(new_content) + '\n')
+        print(f"Successfully appended {len(new_content)} summaries.")
+    else:
+        print("No new summaries to append.")
+
+if __name__ == "__main__":
+    append_summaries()
