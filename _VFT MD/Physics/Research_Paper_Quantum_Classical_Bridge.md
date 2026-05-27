@@ -101,6 +101,48 @@ Classical gravity (General Relativity) and quantum gravity are not two conflicti
 1. **The Quantum State ($F_3$ Micro-Homogeny):** At this scale ($\Delta t \to 0$), the field is discrete. The fundamental operation is the `try^2-catch` resolution of conflicting vector potentials across adjacent cells. Gravity manifests as the weak, high-frequency, discrete translation of excess energy ($\Delta E_{excess}$) across frame boundaries.
 2. **The Classical State ($F_1$ Macro-Homogeny):** As we scale out (Gaussian Zoom), the temporal resolution window ($\Delta t_{macro}$) widens. The observer's lower processing rate homogenizes billions of discrete `try-catch` translations into a single continuous density value. The discrete `catch` translations average out into the continuous gradient $\nabla \rho(x)$.
 
+## 5. The Dynamic Bounds Formalization: S={0,n,1}
+The previous sections established the structural hierarchy of nested fields. However, this structure is not static. The absolute capacity and interaction distance of a child field is dynamically dictated by the state of its parent field.
+
+We formalize the state of any given field frame using the bounds $S = \{0, n, 1\}$:
+- **$0$:** The minimum bound (empty state).
+- **$1$:** The absolute maximum capacity / coherence limit of the frame (the interaction distance).
+- **$n$:** The current density or interaction state within that frame ($0 \le n \le 1$).
+
+### 5.1 The Proportional Cascade: [micro 0-n-1] ∝ [field 0-n-1] ∝ [macro 0-n-1]
+Macro-fields do not directly interact with micro-fields. Instead, they act upon the *conditions* of the micro-field by altering its interaction space. As the macro-field ($F_1$) experiences a density change (its $n_1$ increases towards $1_1$), it physically compresses the absolute limit ($1_2$) of the intermediate field ($F_2$).
+
+The formalization of this cascading boundary condition is expressed as:
+$[F_3 \{0, n_3, 1_3\}] \propto [F_2 \{0, n_2, 1_2\}] \propto [F_1 \{0, n_1, 1_1\}]$
+
+Where the limit of the child is an inverse function of the parent's density:
+$1_{child} = f(1_{parent} - n_{parent})$
+
+### 5.2 Densities of Relative Timerates (The 3-6-9 Framework)
+The fundamental universal timerate (1s/s) does not change. What changes is the "interaction distance" within each cell. If the interaction distance shrinks, the same 1s/s timerate results in a higher frequency of localized interaction events (a faster "relative" timerate).
+
+As a test case, we assign these nested fields relative interaction distance limits at a base ratio of **3, 6, and 9**:
+- **Macro-Field ($F_1$):** Base capacity limit = 9
+- **Intermediate-Field ($F_2$):** Base capacity limit = 6
+- **Micro-Field ($F_3$):** Base capacity limit = 3
+
+**The Cascade Mechanic:**
+When the Macro-Field compresses (e.g., $n_1$ moves from 2 to 7), the available "empty space" in the $F_1$ cell shrinks. This indirectly squeezes the $F_2$ cell, dropping its maximum capacity ($1_2$) below 6. Because $F_2$ is now operating in a tighter space, it hits its `catch{excess}` threshold faster, cascading down to squeeze $F_3$'s limit ($1_3$) below 3.
+
+The result is a massive explosion of high-frequency micro `try-catch` events at the quantum scale, triggered entirely indirectly by a macro-scale compression event.
+
+## 6. Critique and Future Directions
+### 6.1 Critique of the `S={0,n,1}` Formalization and the 3-6-9 Ratio
+The computational experiments run in Sections 5.1 and 5.2 (`simulate_cascade_compression.py`, `simulate_cascade_expansion.py`, and `simulate_cascade_wave.py`) confirm that the cascading limit model functionally produces the desired effect: a smooth macro-scale gradient controls the frequency of discrete quantum events without directly interacting with them.
+
+**Strengths of the Model:**
+1.  **Resolves the Action-at-a-Distance Paradox:** Macro-fields ($F_1$) do not need a mechanism to directly reach down and push micro-particles ($F_3$). They simply change the geometrical capacity (the $1$-limit) of the space those particles inhabit, forcing the particles to interact more frequently to maintain equilibrium.
+2.  **Solves the Universal Time Problem:** It preserves a single, universal $1s/s$ processing tick. Relativity is achieved geometrically by shrinking interaction distances, rather than breaking the fundamental tick-rate of the universe.
+
+**Weaknesses and Areas for Refinement:**
+1.  **The Arbitrary Base Limits:** The test ratio of 3, 6, and 9 was chosen to demonstrate the cascade. However, in reality, the mathematical ratios between quantum fields, molecular fields, and celestial fields are vastly larger (on the order of $10^{10}$ to $10^{30}$). Future models need to replace the arbitrary 3-6-9 values with experimentally derived scaling constants (perhaps utilizing the Fine-Structure Constant or the Planck length ratio).
+2.  **Linear vs. Volumetric Squeezing:** The current Python simulations treat the $1_{child} = f(1_{parent} - n_{parent})$ cascade as a direct linear fraction. Given that physical space is 3-dimensional, a macro-compression should realistically squeeze the micro-volume by a cubic function ($1/r^3$), which would make the spike in quantum `catch` events exponentially more violent than modeled here.
+
 ### 4.2 Why Gravity is "Weak" at the Quantum Scale
 In standard physics, the weakness of gravity relative to electromagnetism at the quantum scale is a massive unsolved problem (the Hierarchy Problem).
 
