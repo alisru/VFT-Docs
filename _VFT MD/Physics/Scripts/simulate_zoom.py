@@ -70,5 +70,5 @@ plt.ylabel("Averaged Density ($\\rho$)")
 plt.grid(True)
 
 plt.tight_layout()
-plt.savefig("/tmp/zoom_plot.png")
-print("Plot saved to /tmp/zoom_plot.png")
+plt.savefig("_VFT MD/Physics/Scripts/zoom_plot.png")
+print("Plot saved to _VFT MD/Physics/Scripts/zoom_plot.png")
