@@ -131,7 +131,18 @@ When the Macro-Field compresses (e.g., $n_1$ moves from 2 to 7), the available "
 
 The result is a massive explosion of high-frequency micro `try-catch` events at the quantum scale, triggered entirely indirectly by a macro-scale compression event.
 
-### 5.3 Observer Mechanics and Effective Solids
+### 5.3 2D Spatial Interactions Across Heterogeneous Zones
+To explicitly verify the cross-boundary thermodynamic drift, a 2D spatial simulation (`simulate_2d_nested_homogeny.py`) was developed. The macro-frame ($F_1$) was partitioned into multiple contiguous $F_2$ homogenous zones, each with drastically different dynamic densities ($n_2$).
+
+**Mechanics of the Multi-Zone Simulation:**
+1.  **Heterogeneous $F_2$ Matrix:** The frame contained a highly dense $F_2$ block bordering a sparse $F_2$ block.
+2.  **Squeezed Limits:** Applying the $S=\{0,n,1\}$ inverse limit function, the $F_3$ micro-cells trapped inside the dense $F_2$ zone had their absolute interaction capacities ($1_3$) severely constrained.
+3.  **Cross-Boundary Energy Bleed:** As the universal 1s/s micro-storm drove energy into the system, the highly constrained $F_3$ cells in the dense zone constantly breached their limits, triggering massive `catch{excess}` events.
+
+**Results of the Simulation:**
+The resulting heatmap (`2d_nested_homogeny_plot.png`) perfectly visualized thermodynamic drift. The excess energy generated in the dense, highly-constrained homogenous zone actively bled across the spatial boundary into the neighboring low-density zone. This demonstrates that micro-homogenous zones physically adjacent to each other interact by trading `catch` excesses, effectively acting as an energetic pressure-gradient seeking equilibrium across the differing macroscopic homogenous boundaries.
+
+### 5.4 Observer Mechanics and Effective Solids
 All interactions occur within a specific layer of homogeny. A macro-observer operates at the time-rate (time-to-exceed-bounds) of the macro-field ($F_1$). To this observer, objects at the $F_1$ scale appear as "effective solids."
 
 The micro-homogeny events ($F_3$) occurring inside those solids are entirely invisible to the macro-observer because millions of micro `try-catch` events are fully contained and resolved within a single "tick" of the macro time-rate.
@@ -139,7 +150,7 @@ The micro-homogeny events ($F_3$) occurring inside those solids are entirely inv
 **The Neutrino Proof:**
 This explains why we cannot observe the in-between flux states of certain quantum phenomena. Neutrinos, for example, oscillate between different flavors (forms) as they travel. Because we are macro-observers, our observational frame cannot parse the micro-timerate actions occurring within the field of flux. We only register the outcome of the `catch` when it breaches into our macro-homogenous interaction space. Micro-fluctuations are observable only to micro-observers operating at that specific homogenous time-rate density.
 
-### 5.4 Why Gravity is "Weak" at the Quantum Scale
+### 5.5 Why Gravity is "Weak" at the Quantum Scale
 In standard physics, the weakness of gravity relative to electromagnetism at the quantum scale is a massive unsolved problem (the Hierarchy Problem).
 
 Under the IRM formalization, this is resolved naturally via **nested coupling attenuation**, formalized by the relative dependency chain:
@@ -147,7 +158,7 @@ $[micro-field] \propto [field] \propto [macro-field]$
 
 Because a macroscopic force (gravity) must propagate down through multiple layers of nested homogeny ($[F_3] \propto [F_2] \propto [F_1]$) to act on a quantum particle, the force is attenuated by the homogenization ratio of each level it passes through. Gravity is not fundamentally weaker; it is the macroscopic average of a force that has passed through billions of homogenization levels, and at the quantum level, we are only observing a minuscule, discrete residual (the "excess" of the `catch`). As confirmed by the multi-scale 2D simulation, the intense high-frequency energy of the quantum scale ($F_3$) is heavily filtered (dissipated) as it aggregates bottom-up through intermediate scopes, ensuring only smooth, weak gradients survive at the macro level ($F_1$).
 
-### 5.5 Final Equation of Unification
+### 5.6 Final Equation of Unification
 The transition from Newton's continuous macroscopic law to the discrete quantum IRM `try-catch` mechanic is complete:
 
 $$F_g \approx \nabla \rho(x)_{macro} \approx \lim_{\Delta t \to \text{macro}} \left[ \rho_{vacuum} + \frac{1}{\Delta t} \sum_{t=0}^{\Delta t} \sum_{cells} \text{catch}\{\Delta E_{excess}\} \right]$$
