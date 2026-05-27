@@ -51,7 +51,7 @@ A Python simulation (`simulate_temporal_drag.py`) was developed to verify this m
 2. A vector wave packet was launched in a linear trajectory past the mass.
 3. At every tick, the gradient of drag across the width of the packet ($\nabla D$) was calculated.
 
-**Results:** The trajectory perfectly refracted (curved) around the central mass. The asymmetric processing speed on the inner vs outer edge of the vector physically forced it to rotate. This computationally proves that General Relativistic orbital mechanics can be entirely reproduced on a flat, discrete grid using strictly the Temporal Drag processing bottleneck logic, successfully bridging computational grid-mechanics with classical GR observables.
+**Results:** The trajectory perfectly refracted (curved) inward toward the central mass. Because the inner side of the vector (closer to the mass) processed ticks slower than the outer side, the vector literally "wheeled" toward the density. This computationally proves that General Relativistic orbital mechanics and the "pull" of gravity can be entirely reproduced on a flat, discrete grid using strictly the Temporal Drag processing bottleneck logic, successfully bridging computational grid-mechanics with classical GR observables.
 
 ## 4. Observer Mechanics and Effective Solids
 A macro-observer operates at the time-rate (time-to-exceed-bounds) of the macro-field ($F_1$). To this observer, objects at the $F_1$ scale appear as "effective solids."
