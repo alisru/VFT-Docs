@@ -47,12 +47,6 @@ $\lim_{\Delta t \to \text{macro}} \sum_{t=0}^{\Delta t} \text{try}^2\{frame\}\te
 
 The continuous gradient $\nabla \rho$ IS the classical force.
 
-## 3. Computational Experiments
-*(Log of scripts written, plots generated, and data observed)*
-
-## 4. Conclusions and Refinements
-*(Synthesized findings)*
-
 ## 2.3 Formalizing the Try-Catch Frame Transition (Quantum Gravity)
 As we zoom into the micro-homogenous zones ($F_3$), the smooth gradient $\nabla \rho$ breaks down. The temporal resolution window $\Delta t$ shrinks until we can observe individual interaction events.
 
