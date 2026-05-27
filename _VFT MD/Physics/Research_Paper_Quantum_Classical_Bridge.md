@@ -131,16 +131,21 @@ When the Macro-Field compresses (e.g., $n_1$ moves from 2 to 7), the available "
 
 The result is a massive explosion of high-frequency micro `try-catch` events at the quantum scale, triggered entirely indirectly by a macro-scale compression event.
 
-### 5.3 2D Spatial Interactions Across Heterogeneous Zones
-To explicitly verify the cross-boundary thermodynamic drift, a 2D spatial simulation (`simulate_2d_nested_homogeny.py`) was developed. The macro-frame ($F_1$) was partitioned into multiple contiguous $F_2$ homogenous zones, each with drastically different dynamic densities ($n_2$).
+### 5.3 2D Topological Nesting (Things-within-Things)
+To correctly verify the cross-boundary thermodynamic drift, a 2D spatial simulation (`simulate_2d_nested_circles.py`) was developed to explicitly model topological nesting. Homogeneous fields do not sit side-by-side like blocks on a grid; they are nested geometrically as concentric environments (things within things).
 
-**Mechanics of the Multi-Zone Simulation:**
-1.  **Heterogeneous $F_2$ Matrix:** The frame contained a highly dense $F_2$ block bordering a sparse $F_2$ block.
-2.  **Squeezed Limits:** Applying the $S=\{0,n,1\}$ inverse limit function, the $F_3$ micro-cells trapped inside the dense $F_2$ zone had their absolute interaction capacities ($1_3$) severely constrained.
-3.  **Cross-Boundary Energy Bleed:** As the universal 1s/s micro-storm drove energy into the system, the highly constrained $F_3$ cells in the dense zone constantly breached their limits, triggering massive `catch{excess}` events.
+**Mechanics of the Nested Simulation:**
+The simulation established four layers of topological containment:
+1. **Greater Homogeny (Background):** The lowest density baseline.
+2. **Homogeny (Macro-Field):** A denser, contained circular boundary within the greater space.
+3. **Micro-Homogeny:** Multiple smaller, highly dense circular fields trapped inside the primary homogeny.
+4. **Sub-Micro-Homogeny:** A hyper-dense core field trapped inside one of the micro-homogenies.
+
+**Squeezed Limits and Radial Outward Bleed:**
+Applying the $S=\{0,n,1\}$ inverse limit function geometrically inward, the interaction capacity ($1$) shrinks exponentially at each layer of depth. The sub-micro core is so violently squeezed by its parent layers that it exists in a state of near-constant `catch{excess}` threshold breaching under the standard 1s/s micro-storm.
 
 **Results of the Simulation:**
-The resulting heatmap (`2d_nested_homogeny_plot.png`) perfectly visualized thermodynamic drift. The excess energy generated in the dense, highly-constrained homogenous zone actively bled across the spatial boundary into the neighboring low-density zone. This demonstrates that micro-homogenous zones physically adjacent to each other interact by trading `catch` excesses, effectively acting as an energetic pressure-gradient seeking equilibrium across the differing macroscopic homogenous boundaries.
+The resulting heatmap (`2d_nested_circles_plot.png`) perfectly visualizes the thermodynamic drift. Excess energy does not just slide sideways; it radiates **outward**. The hyper-dense sub-micro core violently boils over, cascading its excess energy outward into the Micro-Homogeny shell, which in turn bleeds into the primary Homogeny, rippling out into the Greater background. This geometrically proves that micro-fluctuations act as an outward energetic pressure gradient constrained entirely by the topological "shape" of the macro-homogenies containing them.
 
 ### 5.4 Observer Mechanics and Effective Solids
 All interactions occur within a specific layer of homogeny. A macro-observer operates at the time-rate (time-to-exceed-bounds) of the macro-field ($F_1$). To this observer, objects at the $F_1$ scale appear as "effective solids."
