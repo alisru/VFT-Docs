@@ -54,21 +54,24 @@ for t in range(time_ticks):
     speed = np.linalg.norm(packet_vel)
     if speed == 0: break
 
+    # Normal points to the "right" of the velocity vector
     normal = np.array([-packet_vel[1], packet_vel[0]]) / speed
 
-    side1_pos = packet_pos + normal * (packet_width / 2.0)
-    side2_pos = packet_pos - normal * (packet_width / 2.0)
+    side1_pos = packet_pos + normal * (packet_width / 2.0) # Right side
+    side2_pos = packet_pos - normal * (packet_width / 2.0) # Left side
 
     s1x, s1y = int(np.clip(side1_pos[0], 0, grid_size-1)), int(np.clip(side1_pos[1], 0, grid_size-1))
     s2x, s2y = int(np.clip(side2_pos[0], 0, grid_size-1)), int(np.clip(side2_pos[1], 0, grid_size-1))
 
-    D_side1 = drag_field_D[s1y, s1x]
-    D_side2 = drag_field_D[s2y, s2x]
+    D_side1 = drag_field_D[s1y, s1x] # Right side Drag
+    D_side2 = drag_field_D[s2y, s2x] # Left side Drag
 
     # The gradient of Temporal Drag (del D)
     # The side with lower D processes slower. This causes the velocity vector to rotate.
     # The pivot turns toward the slower side.
-    dD = D_side1 - D_side2
+    # If the right side (side1) is slower (lower D), it should turn right (positive theta).
+    # Therefore, we want a positive theta when D_side1 < D_side2.
+    dD = D_side2 - D_side1
 
     # Apply rotation based on asymmetric drag (Simulating General Relativity without curved space)
     # The angle change is proportional to the difference in processing speeds across its width
