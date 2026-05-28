@@ -27,7 +27,6 @@ except Exception as e:
     print(f"Error fetching RSS: {e}")
     sys.exit(1)
 
-# Ensure the root post is < 300 chars even with the actual link
 root_text = f"""CONVERGENCE TEST: Gaza Leadership Strikes
 SOURCE: {clean_link}
 ASSERTION: Targeted strikes against Hamas leadership dismantle the organization and produce security.
@@ -83,7 +82,10 @@ DIVERGENCE: 7/7""",
     """THE UNAVOIDABLE TRUTH: Striking leadership successfully projects power and kills specific individuals. This is the only output that matches its intent.
 
 THE UNAVOIDABLE LIE: That this mechanism can solve an ideological and territorial conflict.""",
-    """PLANE ERROR: The state claims to operate on the Logical plane (Q5—mechanism for security). It actually operates on the Meta-Physical plane (Q1—Will/Direction)—specifically the will to assert total dominance and retribution, disguising it as a security solution."""
+    """PLANE ERROR: The state claims to operate on the Logical plane (Q5—mechanism for security). It actually operates on the Meta-Physical plane (Q1—Will/Direction)—specifically the will to assert total dominance and retribution, disguising it as a security solution.""",
+    """VECTOR JUSTIFICATION:
+Morality (υ): -1.5. The action prioritizes state dominance (Self) over universal stability (Everyone).
+Will (ψ): -1.5. The mechanism relies entirely on the suppression and destruction of opposing assets (Destroy)."""
 ]
 
 image_path = 'dry_run.png'
@@ -94,7 +96,6 @@ try:
     with open(image_path, 'rb') as f:
         img_data = f.read()
 
-    # We will build the embed manually to properly handle facets
     upload = client.com.atproto.repo.upload_blob(img_data)
     images = [
         models.AppBskyEmbedImages.Image(
@@ -104,7 +105,6 @@ try:
     ]
     embed = models.AppBskyEmbedImages.Main(images=images)
 
-    # Extract Facet for the clean_link
     facets = []
     byte_text = root_text.encode('UTF-8')
     byte_url = clean_link.encode('UTF-8')
