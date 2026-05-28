@@ -110,7 +110,7 @@ class HolomorphicUniverse:
 
     def universal_tick(self, vector_particle):
         self.universal_t += 1
-        
+
         # 1. Update temporal drag across all parallel cells simultaneously
         for x in range(self.dims):
             for y in range(self.dims):
@@ -123,24 +123,24 @@ class HolomorphicUniverse:
             # OUTER TRY: Container Boundary Validation
             if not (0 <= vector_particle.pos < self.dims and 0 <= vector_particle.pos < self.dims):
                 raise IndexError("Vector breached the container boundary")
-                
+
             try:
                 # INNER TRY: Relative T Frame & Micro-T Vector Traversal
                 current_pos = vector_particle.pos
                 D_local = self.sample_drag_at(current_pos)
-                
+
                 # Calculate Spatial Gradient of Temporal Drag (∇D) to deflect the vector path
                 step = 0.5
                 grad_x = (self.sample_drag_at(current_pos + [step,0,0]) - self.sample_drag_at(current_pos - [step,0,0])) / (2*step)
                 grad_y = (self.sample_drag_at(current_pos + [0,step,0]) - self.sample_drag_at(current_pos - [0,step,0])) / (2*step)
-                
+
                 # Gravity Refraction Mechanism: Vector pivots toward areas of HEAVIEST drag (lowest D)
                 vector_particle.vel += grad_x * (1.0 - D_local) * 0.5
                 vector_particle.vel += grad_y * (1.0 - D_local) * 0.5
-                
+
                 # Progress the particle through space, throttled by the local time dilation D
                 vector_particle.pos += vector_particle.vel * D_local
-                
+
                 # Check for localized grid friction (Emergent Entropy phase-shift)
                 x_idx, y_idx = int(round(vector_particle.pos)), int(round(vector_particle.pos))
                 if 0 <= x_idx < self.dims and 0 <= y_idx < self.dims:
@@ -148,14 +148,14 @@ class HolomorphicUniverse:
                     if cell.fractional_density > 2.0:
                         # Vector is hitting grid congestion; throw exception to strip macro-direction
                         raise ValueError("Entropy Friction Triggered")
-                
+
                 # If path passes through cleanly, it registers as observable flavor A
                 vector_particle.resolved_flavor = "State_1_Observable_Flavor_A"
 
             except ValueError:
                 # INNER CATCH: Erases micro-metadata or scatters trajectory
                 vector_particle.vel += 0.1  # Scatter vector direction
-                # cell.entropy_pool += 0.2       
+                # cell.entropy_pool += 0.2
                 vector_particle.resolved_flavor = "State_0_Phase_Shift_Flavor_B"
 
         except Exception:
@@ -167,19 +167,19 @@ class HolomorphicUniverse:
 # ==========================================
 if __name__ == "__main__":
     universe = HolomorphicUniverse()
-    
+
     # Inject dense homogeneity (Mass)
     universe.grid[6, 6, 6].fractional_density = 25.0
     universe.grid[6, 5, 6].fractional_density = 15.0
     universe.grid[6, 7, 6].fractional_density = 15.0
-    
+
     # Fire incoming vector
     neutrino = QuantumVector(position=[1.0, 4.8, 6.0], velocity_vector=[1.0, 0.0, 0.0])
-    
+
     print("--- SIMULATING FRACTAL MINKOWSKI VECTOR REFRACTION ---")
     print("Universal T | Vector Position (X, Y) | Vector Velocity (Vx, Vy) | Captured Macro Observation")
     print("-----------------------------------------------------------------------------------------------")
-    
+
     for tick in range(9):
         pos_str = f"({neutrino.pos:.2f}, {neutrino.pos:.2f})"
         vel_str = f"({neutrino.vel:.2f}, {neutrino.vel:.2f})"
