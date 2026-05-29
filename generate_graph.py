@@ -1,7 +1,40 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-def draw_graph(u_val, psi_val, title, filename):
+def get_path_name(claim_u, claim_psi, real_u, real_psi):
+    # Determine the quadrant/zone of origin and destination based on the user's logic
+    # redemption: -1,-1 -> 1,-1  (GE -> LG)
+    # deception: -1,1 -> -1,-1   (GL -> GE) (Actually user says: LE->GG->LG->GE (-1,+1) -> (+1,+1) -> (+1,-1) -> (-1,-1) but we just look at start/end)
+    # fall: 1,1 -> -1,1          (GG -> GL)
+    # grace: 1,-1 -> 1,1         (LG -> GG)
+
+    # We map based on start and end quadrants
+    # Positive U is Left, Positive Psi is Top
+    # GG = (+u, +psi) = (1, 1)
+    # GL = (-u, +psi) = (-1, 1)
+    # LG = (+u, -psi) = (1, -1)
+    # GE = (-u, -psi) = (-1, -1)
+
+    # Deception: Originates in +u, +psi (GG) or -u, +psi (GL) and ends up in -u, -psi (GE)
+    # In the specific example: Claim (1.0, 1.0) -> Real (-1.0, -0.5) is GG -> GE/GL border, but specifically heading to GE.
+
+    if claim_u > 0 and claim_psi > 0 and real_u < 0 and real_psi < 0:
+        return "The Path of Deception" # GG -> GE (Full Deception Path)
+    elif claim_u < 0 and claim_psi > 0 and real_u < 0 and real_psi < 0:
+        return "The Path of Deception" # GL -> GE
+
+    elif claim_u > 0 and claim_psi > 0 and real_u < 0 and real_psi > 0:
+        return "The Path of Empty Mass (The Fall)" # GG -> GL
+
+    elif claim_u < 0 and claim_psi < 0 and real_u > 0 and real_psi < 0:
+        return "The Path of Redemption" # GE -> LG
+
+    elif claim_u > 0 and claim_psi < 0 and real_u > 0 and real_psi > 0:
+        return "The Path of Grace" # LG -> GG
+
+    return "Projected Trajectory"
+
+def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
     fig, ax = plt.subplots(figsize=(8, 8), facecolor='#111111')
     ax.set_facecolor('#111111')
 
@@ -30,12 +63,6 @@ def draw_graph(u_val, psi_val, title, filename):
     ax.text(1.0 + 0.1, -1.0 - 0.1, "The Lesser Good\n(Peace)", **font_opts) # BL: u=+1, psi=-1
     ax.text(-1.0 - 0.1, -1.0 - 0.1, "The Greater Evil\n(Void)", **font_opts) # BR: u=-1, psi=-1
 
-    # The Inner Traps (The 0.5 Ring)
-    ax.text(0.5, 0.5 + 0.1, "P-LE", **font_opts) # Inner TL
-    ax.text(-0.5, 0.5 + 0.1, "P-GG", **font_opts) # Inner TR
-    ax.text(0.5, -0.5 - 0.1, "P-GE", **font_opts) # Inner BL
-    ax.text(-0.5, -0.5 - 0.1, "P-LE", **font_opts) # Inner BR
-
     # The Strategic Extremes (Zone 2 Corners)
     # u=+2 is Left
     ax.text(1.9, 1.9, "JUSTICE", color='white', fontsize=10, ha='left', va='top') # Outer TL
@@ -43,30 +70,39 @@ def draw_graph(u_val, psi_val, title, filename):
     ax.text(1.9, -1.9, "STAGNATION", color='white', fontsize=10, ha='left', va='bottom') # Outer BL
     ax.text(-1.9, -1.9, "CHAOS", color='white', fontsize=10, ha='right', va='bottom') # Outer BR
 
-    # The Emotional Coordinates (The Vectors)
-    ax.plot(0.8, 0.8, marker='o', color='white', markersize=3)
-    ax.text(0.8, 0.8 + 0.05, "Joy", **font_opts)
+    # The Judgment Points & Path
 
-    ax.plot(-0.8, 0.8, marker='o', color='white', markersize=3)
-    ax.text(-0.8, 0.8 + 0.05, "Anger", **font_opts)
+    # Stated Claim (Origin)
+    ax.plot(claim_u, claim_psi, marker='o', color='yellow', markersize=10, fillstyle='none', markeredgewidth=2)
+    ax.text(claim_u, claim_psi + 0.15, "Stated Claim", color='yellow', fontsize=10, ha='center', va='center')
 
-    ax.plot(0.8, -0.8, marker='o', color='white', markersize=3)
-    ax.text(0.8, -0.8 - 0.05, "Peace", **font_opts)
+    # Actual Reality (Destination)
+    ax.plot(real_u, real_psi, marker='*', color='red', markersize=15)
+    ax.text(real_u, real_psi + 0.15, "Actual Reality", color='red', fontsize=10, ha='center', va='center')
 
-    ax.plot(-0.8, -0.8, marker='o', color='white', markersize=3)
-    ax.text(-0.8, -0.8 - 0.05, "Depression", **font_opts)
+    # Draw Path
+    path_name = get_path_name(claim_u, claim_psi, real_u, real_psi)
 
-    # The Judgment Point
-    ax.plot(u_val, psi_val, marker='*', color='red', markersize=15)
-    ax.text(u_val, psi_val + 0.15, "Target Point", color='red', fontsize=12, ha='center', va='center')
+    ax.annotate("",
+                xy=(real_u, real_psi), xycoords='data',
+                xytext=(claim_u, claim_psi), textcoords='data',
+                arrowprops=dict(arrowstyle="->", color="white", linestyle="dashed", linewidth=1.5, connectionstyle="arc3,rad=-0.2"))
+
+    # Calculate midpoint for label
+    mid_u = (claim_u + real_u) / 2
+    mid_psi = (claim_psi + real_psi) / 2
+    ax.text(mid_u, mid_psi, path_name, color='cyan', fontsize=10, ha='center', va='center', bbox=dict(facecolor='#111111', edgecolor='none', pad=1))
+
 
     # Axis labels
     ax.set_xlabel("Morality (υ): Left + (Universal), Right - (Self)", color='white')
     ax.set_ylabel("Will (ψ): Top + (Create), Bottom - (Destroy)", color='white')
     ax.tick_params(colors='gray')
-    ax.set_title("Psochic Hegemony", color='white', pad=20)
+    ax.set_title(f"{title}\nProjected Eventuality: {path_name}", color='white', pad=20)
 
     plt.tight_layout()
     plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300)
 
-draw_graph(-1.5, -1.2, "Embargo Assessment", "embargo_graph.png")
+if __name__ == "__main__":
+    # Test a Path of Deception
+    draw_graph(-1.0, 1.0, -1.0, -1.0, "Embargo Assessment", "embargo_graph.png")

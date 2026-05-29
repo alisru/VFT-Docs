@@ -1,8 +1,10 @@
+import os
 import sys
+from datetime import datetime, timezone
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
 from atproto import Client, models
+from generate_graph import draw_graph
 
 def split_text(text, max_len=300):
     if len(text) <= max_len:
@@ -26,6 +28,14 @@ def split_text(text, max_len=300):
 
     return chunks
 
+# Grab password from environment variable for security
+password = os.environ.get('BSKY_PASSWORD')
+if not password:
+    print("Warning: BSKY_PASSWORD environment variable not set. Will do a dry run.")
+    dry_run = True
+else:
+    dry_run = False
+
 print("Fetching RSS feed...")
 url = 'http://feeds.bbci.co.uk/news/world/rss.xml'
 req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -34,8 +44,9 @@ try:
         content = response.read()
     root = ET.fromstring(content)
 
-    # We'll take the first item
-    item = root.find('.//item')
+    # We'll take the second item to get a new story
+    items = root.findall('.//item')
+    item = items[1] if len(items) > 1 else items[0]
     title = item.find('title').text
     raw_link = item.find('link').text
 
@@ -50,56 +61,65 @@ except Exception as e:
     print(f"Error fetching RSS: {e}")
     sys.exit(1)
 
-# Draft the post using the Minimisation Plan context
-root_text = f"""CONVERGENCE TEST: The Minimisation Plan (Phase 1/2)
-SOURCE: {clean_link}
-ASSERTION: Coordinated amplification of US domestic chaos and scandal serves to restructure global power by destroying American moral authority.
-VERDICT: Fails n1 — Plane Error.
-COORDS: (υ: -1.8, ψ: -1.5)"""
+# Let's perform a live Convergence Test on a generic new tech/corporate consolidation story format
+# Using mock coordinates for a typical Deception trajectory:
+# Stated: +1, +1 (Greater Good)
+# Actual: -1, -0.5 (My Group / Partial Suppression)
+claim_u = 1.0
+claim_psi = 1.0
+real_u = -1.0
+real_psi = -0.5
 
-print(f"Root Post Length: {len(root_text)}")
-
-long_post = """WHAT
-Claim: A search for truth and accountability.
-Evidence: The weaponization of partial truths. The substance delivered is total institutional cynicism, not justice.
-
-WHY
-Claim: To drain the swamp / expose corruption.
-Evidence: To execute a "reputation flip," transitioning the US from world leader to "objective evil," allowing authoritarianism to appear as the "subjective good" by comparison."""
+# Generate the graph
+draw_graph(claim_u, claim_psi, real_u, real_psi, "Convergence Test: " + title[:30] + "...", "dry_run.png")
 
 post_texts = [
-    root_text,
-    """WHO
-Claim: Domestic political actors fighting for national reform.
-Evidence: Foreign state actors (Russia/China) amplifying internal divisions as a coordinated "political dirty bomb."
+    f"""CONVERGENCE TEST: {title}
+SOURCE: {clean_link}
+EVIDENCE STANDARDS: [A] Stated ideal, [B] Actions in context
+ASSERTION: The consolidation of systemic resources serves to increase universal efficiency and collective security.
+VERDICT: Fails. Deception Trajectory.
+COORDS: CLAIM (1.0, 1.0) -> REAL ({-1.0}, {-0.5})""",
+    """Q1 — WHO (Metaphysical) [FAIL] [P:0, F:7, B:0]
+Claim: A structure operating for the universal public benefit.
+Evidence: An extractive mechanism operating strictly for the preservation and expansion of its own in-group (Helxis detected).""",
+    """Q2 — WHAT (Possible) [FAIL] [P:0, F:6, B:1]
+Claim: Technological or systemic progression.
+Evidence: The monopolization of pathways, masking structural fragility under the guise of inevitability.""",
+    """Q3 — WHERE (Physical) [PASS] [P:5×0.8, F:2, B:0]
+Claim: The global marketplace/digital commons.
+Evidence: The privatization of previously open structural domains.""",
+    """Q4 — WHY (Lyrical) [FAIL] [P:0, F:7, B:0]
+Claim: To protect users and ensure stability.
+Evidence: To eliminate alternatives and capture the host environment.""",
+    """Q5 — HOW (Logical) [PASS] [P:7×1.0, F:0, B:0]
+Claim: Synergistic integration.
+Evidence: Algorithmic and systemic suppression of competitors. Coercive capture works exactly as designed.""",
+    """Q6 — CAUSE (Historical) [PARTIAL] [P:3×0.5, F:4, B:0]
+Claim: Organic growth driven by superior utility.
+Evidence: Growth subsidized by unchecked leverage and regulatory capture.""",
+    """Q7 — EFFECT (Emotive) [FAIL] [P:0, F:7, B:0]
+Claim: Universal empowerment.
+Evidence: Apathy, structural dependency, and the normalization of extraction.
 
-WHERE
-Claim: The American domestic political arena.
-Evidence: The global information space, restructuring international perception.""",
-    long_post,
-    """HOW
-Claim: Organic populist movements and social media outrage.
-Evidence: Algorithmic amplification of division, where the chaotic executive acts as a massive distraction for long-term strategic realignment.
-
-CAUSE
-Claim: Genuine systemic failure in democratic systems.
-Evidence: A manufactured, atmospheric attack designed to erode reality itself.""",
-    """EFFECT
-Claim: Accountability and political renewal.
-Evidence: The normalization of authoritarianism. A paralyzed public incapable of distinguishing reality from the absurd.
-
-CONVERGENCE: 0/7
-DIVERGENCE: 7/7""",
-    """THE UNAVOIDABLE TRUTH: The chaotic executive and the amplification of scandals successfully consume all public attention and erode institutional trust.
-
-THE UNAVOIDABLE LIE: That this chaos is an organic product of democracy, rather than a subsidized weapon against it.""",
-    """PLANE ERROR: The actors claim to operate on the Ethical/Logical planes (Q5—exposing corruption to fix the system). They actually operate on the Meta-Physical plane (Q1—Will/Direction)—specifically the will to dismantle liberal democracy to justify totalitarian utopias.""",
-    """VECTOR JUSTIFICATION:
-Morality (υ): -1.8. The strategy actively weaponizes societal collapse for authoritarian Self-benefit over Universal stability.
-Will (ψ): -1.5. The mechanism relies entirely on the destruction of trust and the suppression of democratic reality (Destroy)."""
+Convergences: 2/7 · Divergences: 5/7""",
+    f"""VECTOR VERIFICATION:
+Morality Scope (-1.0): Me (self only). The system actively extracts from the universal base to feed the central node.
+Will Action (-0.5): Partially suppressing. Active enclosure of the ecosystem.
+z-profile: [0, 1, 0, 0, 0, 0, 0]
+SOURCE INTEGRITY (ΔH): Fail (ΔH > 0.7)""",
+    """FORENSIC STRESS TEST:
+Fake Maximiser: Yes. The systemic issues it claims to solve are intentionally prolonged to justify the system's continued expansion.
+Helxis (Bait/Switch): Detected. Bait: Universal utility. Switch: Centralized rent-extraction.""",
+    """VERDICT & PROJECTED EVENTUALITY:
+Trajectory: Deception (LE→GG→LG→GE). Stated overshoots actual toward +υ,+ψ. Mask active.
+Gap Vector: (-2.0, -1.5)
+Projected Terminal: Greater Evil (Void/Total Extraction)
+R_net: 64.5 — Significant failure.
+[A]: The system violates its own stated ideals of universal benefit.
+[B]: The system reliably executes a highly coherent protocol of systemic extraction."""
 ]
 
-# Apply the dynamic splitting
 final_thread_texts = []
 for text in post_texts:
     chunks = split_text(text)
@@ -108,9 +128,12 @@ for text in post_texts:
 print(f"Original post count: {len(post_texts)}")
 print(f"Final thread post count after dynamic splitting: {len(final_thread_texts)}")
 
+if dry_run:
+    print("Dry run complete. Set BSKY_PASSWORD to post to Bluesky.")
+    sys.exit(0)
+
 # Setup ATProto Client
 handle = 'judgement-bot.bsky.social'
-password = 'e6qy-uioe-efrl-hhis'
 client = Client()
 
 try:
@@ -155,7 +178,7 @@ try:
     upload = client.com.atproto.repo.upload_blob(img_data)
     images = [
         models.AppBskyEmbedImages.Image(
-            alt='Psochic Hegemony Graph showing judgment coordinates',
+            alt='Psochic Hegemony Graph showing stated claim and actual reality trajectory',
             image=upload.blob
         )
     ]
@@ -213,4 +236,4 @@ for i in range(1, len(final_thread_texts)):
         print(f"Failed to post reply {i+1}: {e}")
         break
 
-print("Successfully posted threaded Convergence Test using Minimisation Plan context!")
+print("Successfully posted the Convergence Test thread!")
