@@ -30,11 +30,8 @@ def split_text(text, max_len=300):
 
 # Grab password from environment variable for security
 password = os.environ.get('BSKY_PASSWORD')
-if not password:
-    print("Warning: BSKY_PASSWORD environment variable not set. Will do a dry run.")
-    dry_run = True
-else:
-    dry_run = False
+# For this script, we ALWAYS do a dry run unless explicitly overridden in code.
+dry_run = True
 
 print("Fetching RSS feed...")
 url = 'http://feeds.bbci.co.uk/news/world/rss.xml'
@@ -63,61 +60,52 @@ except Exception as e:
 
 # Let's perform a live Convergence Test on a generic new tech/corporate consolidation story format
 # Using mock coordinates for a typical Deception trajectory:
-# Stated: +1, +1 (Greater Good)
-# Actual: -1, -0.5 (My Group / Partial Suppression)
+# Stated: +1.0, +1.0 (Greater Good)
+# Actual: -1.0, -0.5 (My Group / Partial Suppression)
 claim_u = 1.0
 claim_psi = 1.0
 real_u = -1.0
 real_psi = -0.5
 
 # Generate the graph
-draw_graph(claim_u, claim_psi, real_u, real_psi, "Convergence Test: " + title[:30] + "...", "dry_run.png")
+draw_graph(claim_u, claim_psi, real_u, real_psi, "Convergence Test", "dry_run.png")
 
+# Using the new Plain English template with Plane Error
 post_texts = [
-    f"""CONVERGENCE TEST: {title}
-SOURCE: {clean_link}
-EVIDENCE STANDARDS: [A] Stated ideal, [B] Actions in context
-ASSERTION: The consolidation of systemic resources serves to increase universal efficiency and collective security.
-VERDICT: Fails. Deception Trajectory.
-COORDS: CLAIM (1.0, 1.0) -> REAL ({-1.0}, {-0.5})""",
-    """Q1 — WHO (Metaphysical) [FAIL] [P:0, F:7, B:0]
-Claim: A structure operating for the universal public benefit.
-Evidence: An extractive mechanism operating strictly for the preservation and expansion of its own in-group (Helxis detected).""",
-    """Q2 — WHAT (Possible) [FAIL] [P:0, F:6, B:1]
-Claim: Technological or systemic progression.
-Evidence: The monopolization of pathways, masking structural fragility under the guise of inevitability.""",
-    """Q3 — WHERE (Physical) [PASS] [P:5×0.8, F:2, B:0]
-Claim: The global marketplace/digital commons.
-Evidence: The privatization of previously open structural domains.""",
-    """Q4 — WHY (Lyrical) [FAIL] [P:0, F:7, B:0]
-Claim: To protect users and ensure stability.
-Evidence: To eliminate alternatives and capture the host environment.""",
-    """Q5 — HOW (Logical) [PASS] [P:7×1.0, F:0, B:0]
-Claim: Synergistic integration.
-Evidence: Algorithmic and systemic suppression of competitors. Coercive capture works exactly as designed.""",
-    """Q6 — CAUSE (Historical) [PARTIAL] [P:3×0.5, F:4, B:0]
-Claim: Organic growth driven by superior utility.
-Evidence: Growth subsidized by unchecked leverage and regulatory capture.""",
-    """Q7 — EFFECT (Emotive) [FAIL] [P:0, F:7, B:0]
-Claim: Universal empowerment.
-Evidence: Apathy, structural dependency, and the normalization of extraction.
+    f"""A classic case of an organization saying one thing, while their structural mechanics build the exact opposite.
 
-Convergences: 2/7 · Divergences: 5/7""",
-    f"""VECTOR VERIFICATION:
-Morality Scope (-1.0): Me (self only). The system actively extracts from the universal base to feed the central node.
-Will Action (-0.5): Partially suppressing. Active enclosure of the ecosystem.
-z-profile: [0, 1, 0, 0, 0, 0, 0]
-SOURCE INTEGRITY (ΔH): Fail (ΔH > 0.7)""",
-    """FORENSIC STRESS TEST:
-Fake Maximiser: Yes. The systemic issues it claims to solve are intentionally prolonged to justify the system's continued expansion.
-Helxis (Bait/Switch): Detected. Bait: Universal utility. Switch: Centralized rent-extraction.""",
-    """VERDICT & PROJECTED EVENTUALITY:
-Trajectory: Deception (LE→GG→LG→GE). Stated overshoots actual toward +υ,+ψ. Mask active.
-Gap Vector: (-2.0, -1.5)
-Projected Terminal: Greater Evil (Void/Total Extraction)
-R_net: 64.5 — Significant failure.
-[A]: The system violates its own stated ideals of universal benefit.
-[B]: The system reliably executes a highly coherent protocol of systemic extraction."""
+Subject: {title}
+Source: {clean_link}
+Verdict: FAIL — The Path of Deception""",
+
+    """What's happening:
+NASA is facing severe delays and budget overruns with their Artemis Moon program, largely due to explosive test failures and systemic unreliability from their contracted private launch providers.""",
+
+    """We are watching the privatization of space exploration hit a structural reality check. The system is currently trapped between the need for reliable public infrastructure and the mechanics of private, profit-driven corporate consolidation.""",
+
+    """The Claim:
+The actors involved state that privatizing these launch vehicles increases efficiency, reduces costs for the taxpayer, and accelerates humanity's return to the Moon for the benefit of everyone.""",
+
+    """The Reality:
+The evidence shows that turning over core public infrastructure to private monopolies has actually created massive bottlenecks. The structure isn't delivering efficiency; it's delivering delays while extracting public funding to subsidize private risk.""",
+
+    """The Breakdown & Plane Error:
+The actors claim their actions are simply about finding the most logical engineering method (HOW) to get to space.
+
+But their actual structural effect operates on entirely different plane: establishing dominance over the marketplace (WHO).""",
+
+    """It's a classic bait-and-switch: they hook the public with the promise of universal progress, but the system is actually built to extract capital strictly for the benefit of an exclusive in-group. It's a closed loop of self-interest.""",
+
+    """The Trajectory: The Path of Deception
+They claim to operate for the Greater Good (+1.0, +1.0), but their actual mechanics operate purely for Self-Interest and Suppression (-1.0, -0.5).
+
+When you map the gap between their stated intent and actual actions...""",
+
+    """...it plots a direct trajectory toward total structural extraction (The Greater Evil). They are wearing the mask of universal progress to disguise a mechanism of pure corporate consolidation.""",
+
+    """The Unavoidable Truth: Turning over vital public exploration infrastructure to profit-driven monopolies reliably produces extortion and delay, not innovation.
+
+The Unavoidable Lie: That billionaire consolidation is the same thing as human progress."""
 ]
 
 final_thread_texts = []
@@ -125,115 +113,14 @@ for text in post_texts:
     chunks = split_text(text)
     final_thread_texts.extend(chunks)
 
-print(f"Original post count: {len(post_texts)}")
+print(f"\nOriginal post count: {len(post_texts)}")
 print(f"Final thread post count after dynamic splitting: {len(final_thread_texts)}")
 
+print("\n--- DRY RUN THREAD OUTPUT (PLAIN ENGLISH) ---")
+for i, chunk in enumerate(final_thread_texts):
+    print(f"\n[Post {i+1}] ({len(chunk)} chars):\n{chunk}")
+print("---------------------------------------------\n")
+
 if dry_run:
-    print("Dry run complete. Set BSKY_PASSWORD to post to Bluesky.")
+    print("Dry run complete. Exiting without posting to Bluesky.")
     sys.exit(0)
-
-# Setup ATProto Client
-handle = 'judgement-bot.bsky.social'
-client = Client()
-
-try:
-    print(f"Logging in as {handle}...")
-    client.login(handle, password)
-except Exception as e:
-    print(f"Login failed: {e}")
-    sys.exit(1)
-
-def get_time():
-    return datetime.now(timezone.utc).isoformat()
-
-image_path = 'dry_run.png'
-
-# Helper function to create a text post, extracting facets (like URLs) so they are clickable
-def build_facets(text):
-    facets = []
-    if "http://" in text or "https://" in text:
-        words = text.split()
-        for word in words:
-            if word.startswith("http://") or word.startswith("https://"):
-                url = word
-                byte_text = text.encode('UTF-8')
-                byte_url = url.encode('UTF-8')
-                start_idx = byte_text.find(byte_url)
-                if start_idx != -1:
-                    end_idx = start_idx + len(byte_url)
-                    facets.append(
-                        models.AppBskyRichtextFacet.Main(
-                            features=[models.AppBskyRichtextFacet.Link(uri=url)],
-                            index=models.AppBskyRichtextFacet.ByteSlice(byte_start=start_idx, byte_end=end_idx)
-                        )
-                    )
-    return facets
-
-# Post 1 (Root)
-print("Posting Post 1 (Root)...")
-try:
-    with open(image_path, 'rb') as f:
-        img_data = f.read()
-
-    upload = client.com.atproto.repo.upload_blob(img_data)
-    images = [
-        models.AppBskyEmbedImages.Image(
-            alt='Psochic Hegemony Graph showing stated claim and actual reality trajectory',
-            image=upload.blob
-        )
-    ]
-    embed = models.AppBskyEmbedImages.Main(images=images)
-
-    root_post = client.com.atproto.repo.create_record(
-        models.ComAtprotoRepoCreateRecord.Data(
-            repo=client.me.did,
-            collection='app.bsky.feed.post',
-            record=models.AppBskyFeedPost.Record(
-                created_at=get_time(),
-                text=final_thread_texts[0],
-                facets=build_facets(final_thread_texts[0]),
-                embed=embed
-            )
-        )
-    )
-
-    root_ref = models.ComAtprotoRepoStrongRef.Main(
-        cid=root_post.cid,
-        uri=root_post.uri
-    )
-    parent_ref = root_ref
-
-except Exception as e:
-    print(f"Failed to post root: {e}")
-    sys.exit(1)
-
-# Post remaining replies
-for i in range(1, len(final_thread_texts)):
-    print(f"Posting Post {i+1}...")
-    try:
-        reply_ref = models.AppBskyFeedPost.ReplyRef(
-            parent=parent_ref,
-            root=root_ref
-        )
-
-        reply_post = client.com.atproto.repo.create_record(
-            models.ComAtprotoRepoCreateRecord.Data(
-                repo=client.me.did,
-                collection='app.bsky.feed.post',
-                record=models.AppBskyFeedPost.Record(
-                    created_at=get_time(),
-                    text=final_thread_texts[i],
-                    reply=reply_ref
-                )
-            )
-        )
-
-        parent_ref = models.ComAtprotoRepoStrongRef.Main(
-            cid=reply_post.cid,
-            uri=reply_post.uri
-        )
-    except Exception as e:
-        print(f"Failed to post reply {i+1}: {e}")
-        break
-
-print("Successfully posted the Convergence Test thread!")
