@@ -69,4 +69,4 @@ def draw_graph(u_val, psi_val, title, filename):
     plt.tight_layout()
     plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300)
 
-draw_graph(-1.2, -1.5, "Dry Run", "dry_run.png")
+draw_graph(-1.5, -1.2, "Embargo Assessment", "embargo_graph.png")
