@@ -15,14 +15,16 @@ When energy (information density) within a region of space increases, it does no
 
 These subdivided cells act as smaller space frames translating *through* the parent cells. What appears as a smooth, homogeneous field from the macro perspective is, internally, a highly chaotic interaction of micro-frames experiencing severe localized temporal drag.
 
-## 3. The 0-1-2 Unit and COB Opposition
-Every vector relative to itself is a **0-1-2 unit**, experiencing constant Cost of Being (COB) opposition from 2c space.
+## 3. The 0-1-2 Unit and Fractal Minkowski Points
+Every vector relative to itself is a **0-1-2 unit**, experiencing constant Cost of Being (COB) opposition. However, the nature of this boundary is driven by an expansive temporal pressure.
 
 *   **0:** The internal potential / empty space of the vector.
 *   **1:** The active, observable boundary.
-*   **2:** The absolute boundary (2c space) applying continuous inward thermodynamic pressure.
+*   **2:** The absolute boundary (2c space).
 
-When a cell subdivides, the total COB opposition remains, but is now distributed across the subdivided grid. This inward pressure is what prevents the chaotic micro-interactions from dissipating immediately, acting as the binding mechanism for localized structures (particles).
+Each interaction point within the subdivided grid acts as a **fractal Minkowski point**. These points inherently want to expand to infinity because they have the weight of infinite >2c time pushing from *behind* them.
+
+When a cell subdivides, the total COB opposition remains. The inward pressure that binds the particle is actually the external universal framework containing the explosive, infinite expansive desire of the internal >2c time. A particle, therefore, is not a solid object; it is the **density of Minkowski spaces within Minkowski space within universal Minkowski space**.
 
 ## 4. Particle Formation via Orthogonal Time Dilation
 Consider the intersection of two 2D orthogonal energy waves within a grid.
