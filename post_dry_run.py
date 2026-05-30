@@ -44,16 +44,7 @@ post_texts = [
 
 Subject: {title}
 Source: {clean_link}
-Evidence Standards: Stated ideal (domestic pet ownership) vs Actions within physical context (community impact).
-Verdict: FAIL — The Path of Deception""",
-
-    """What's happening:
-For yet another year, Los Angeles leads the nation in dog attacks against postal workers. The structural issue here isn't just about animals; it's about the erosion of the social contract between private citizens and the public services they rely on.""",
-
-    """We are watching the breakdown of domestic responsibility. The system is trapped between the desire for private pet ownership/security and the total failure to manage the physical boundaries of that ownership.""",
-
-    """The Bright Side:
-The implicit desire for companionship and home security is a genuine human need. Pets do provide actual psychological and localized physical benefit to their owners.""",
+Evidence Standards: Stated ideal (domestic pet ownership) vs Actions within physical context (community impact).""",
 
     """The Claim:
 The claim of the actors (dog owners) is that their pets are a domestic good, providing companionship or home security without projecting harm into the public sphere.
@@ -62,6 +53,16 @@ Stated Judgement: (+1.0, 0.0) — Good Preference""",
     """The Reality:
 The evidence shows a systemic failure to maintain physical boundaries. The structure isn't delivering private security; it's weaponizing negligence, transforming the public sidewalk into a hazardous extraction zone for federal workers.
 Resulting Judgement: (-1.0, -1.0) — Greater Evil""",
+
+    """Verdict: FAIL — The Path of Deception""",
+
+    """What's happening:
+For yet another year, Los Angeles leads the nation in dog attacks against postal workers. The structural issue here isn't just about animals; it's about the erosion of the social contract between private citizens and the public services they rely on.
+
+We are watching the breakdown of domestic responsibility. The system is trapped between the desire for private pet ownership/security and the total failure to manage the physical boundaries of that ownership.""",
+
+    """The Bright Side:
+The implicit desire for companionship and home security is a genuine human need. Pets do provide actual psychological and localized physical benefit to their owners.""",
 
     """The Breakdown & Plane Error:
 Owners claim this is simply a matter of the physical environment or unpredictable animal behavior (WHERE/WHAT).
@@ -77,7 +78,10 @@ When you map the gap between their stated intent and actual actions...""",
 
     """The Unavoidable Truth: Systemic failure to control private property boundaries inevitably turns essential public service into a combat zone.
 
-The Unavoidable Lie: That a loose dog is an unpredictable accident, rather than a predictable failure of human responsibility."""
+The Unavoidable Lie: That a loose dog is an unpredictable accident, rather than a predictable failure of human responsibility.""",
+
+    """Alethekanon's Assessment:
+The math is clear. You cannot claim the 'Good Preference' of security while exporting the physical risk of your property onto public servants. Until the boundary of responsibility is enforced, the system will continue to convert public trust into private extraction."""
 ]
 
 final_thread_texts = []
