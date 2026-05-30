@@ -70,15 +70,17 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
     ax.text(1.9, -1.9, "STAGNATION", color='white', fontsize=10, ha='left', va='bottom') # Outer BL
     ax.text(-1.9, -1.9, "CHAOS", color='white', fontsize=10, ha='right', va='bottom') # Outer BR
 
+    # Coordinate Definitions
+    ax.text(1.0 + 0.1, 0.0 + 0.1, "Good Preference\n(+1.0, 0.0)", **font_opts)
+    ax.text(-1.0 - 0.1, 0.0 + 0.1, "Bad Preference\n(-1.0, 0.0)", **font_opts)
+
     # The Judgment Points & Path
 
     # Stated Claim (Origin)
-    ax.plot(claim_u, claim_psi, marker='o', color='yellow', markersize=10, fillstyle='none', markeredgewidth=2)
-    ax.text(claim_u, claim_psi + 0.15, "Stated Claim", color='yellow', fontsize=10, ha='center', va='center')
+    claim_point, = ax.plot(claim_u, claim_psi, marker='o', color='yellow', markersize=10, fillstyle='none', markeredgewidth=2, label="Stated Claim")
 
     # Actual Reality (Destination)
-    ax.plot(real_u, real_psi, marker='*', color='red', markersize=15)
-    ax.text(real_u, real_psi + 0.15, "Actual Reality", color='red', fontsize=10, ha='center', va='center')
+    real_point, = ax.plot(real_u, real_psi, marker='*', color='red', markersize=15, label="Actual Reality")
 
     # Draw Path
     path_name = get_path_name(claim_u, claim_psi, real_u, real_psi)
@@ -99,6 +101,9 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
     ax.set_ylabel("Will (ψ): Top + (Create), Bottom - (Destroy)", color='white')
     ax.tick_params(colors='gray')
     ax.set_title(f"{title}\nProjected Eventuality: {path_name}", color='white', pad=20)
+
+    # Legend
+    legend = ax.legend(handles=[claim_point, real_point], loc='upper right', facecolor='#111111', edgecolor='white', labelcolor='white')
 
     plt.tight_layout()
     plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300)
