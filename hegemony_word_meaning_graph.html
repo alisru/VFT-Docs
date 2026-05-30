@@ -81,7 +81,7 @@
                             <!-- Tab Content Switcher -->
                             <div class="flex border-b border-slate-800/40 text-[0.65rem] font-bold text-slate-400 select-none pb-1.5 mb-2 gap-2">
                                 <button onclick="switchAnalysisSubTab('phase1', ${cardIndex})" id="subTabBtn-phase1_${cardIndex}" class="px-2.5 py-1 rounded hover:text-slate-200 bg-slate-800/40 active">Phase 1: Structural Scan</button>
-                                <button onclick="switchAnalysisSubTab('phase2', ${cardIndex})" id="subTabBtn-phase2_${cardIndex}" class="px-2.5 py-1 rounded hover:text-slate-200 bg-slate-800/40">Phases 2-4: Forensic Testing</button>
+                                <button onclick="switchAnalysisSubTab('phase2', ${cardIndex})" id="subTabBtn-phase2_${cardIndex}" class="px-2.5 py-1 rounded hover:text-slate-200 bg-slate-800/40">Phases 2-5: Forensic &amp; Synthesis</button>
                             </div>
 
                             <!-- Phase 1: Structural Scan Details -->
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
 
-                            <!-- Phases 2-4: Forensic and Stress Tests -->
+                            <!-- Phases 2-5: Forensic and Stress Tests -->
                             <div id="analysisSubContent-phase2_${cardIndex}" class="hidden space-y-4">
                                 <div class="grid grid-cols-2 gap-4">
                                     <div class="glass-panel p-3.5 rounded-lg bg-slate-900/10 space-y-2.5">
@@ -126,6 +126,24 @@
                                             <div class="flex flex-col gap-0.5">
                                                 <span class="text-slate-400">Helxis Attractor Capture</span>
                                                 <span id="analysisHelxis_${cardIndex}" class="text-[0.65rem] text-slate-300 font-medium">Description of systemic collapse.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="glass-panel p-3.5 rounded-lg bg-slate-900/10 space-y-2.5 col-span-2">
+                                        <h4 class="text-[0.65rem] font-extrabold tracking-widest text-slate-400 uppercase border-b border-slate-800 pb-1">Phase 5: Vector Synthesis &amp; Trajectory</h4>
+                                        <div class="text-xs space-y-2 font-semibold grid grid-cols-2 gap-x-4 gap-y-2">
+                                            <div class="flex justify-between border-b border-slate-800/40 pb-1"><span class="text-slate-400">Synthesis Coordinate</span><span id="analysisCoordinate_${cardIndex}" class="font-mono text-emerald-400 font-bold">N/A</span></div>
+                                            <div class="flex justify-between border-b border-slate-800/40 pb-1"><span class="text-slate-400">Integrity status</span><span id="analysisIntegrity_${cardIndex}" class="text-slate-300 font-bold">N/A</span></div>
+                                            <div class="flex justify-between border-b border-slate-800/40 pb-1"><span class="text-slate-400">Vector Trajectory</span><span id="analysisTrajectory_${cardIndex}" class="text-sky-400 font-bold">N/A</span></div>
+                                            <div class="flex justify-between border-b border-slate-800/40 pb-1"><span class="text-slate-400">Zone Anchor</span><span id="analysisZoneAnchor_${cardIndex}" class="text-slate-300 font-medium">N/A</span></div>
+                                            <div class="flex flex-col gap-0.5 col-span-2 border-b border-slate-800/40 pb-1">
+                                                <span class="text-slate-400">Deepest Ontological Node</span>
+                                                <span id="analysisDeepestNode_${cardIndex}" class="text-[0.65rem] text-slate-300 font-medium italic">N/A</span>
+                                            </div>
+                                            <div class="flex flex-col gap-0.5 col-span-2">
+                                                <span class="text-slate-400">Perceptual Distortion</span>
+                                                <span id="analysisDistortion_${cardIndex}" class="text-[0.65rem] text-rose-400 font-medium italic">N/A</span>
                                             </div>
                                         </div>
                                     </div>
@@ -327,6 +345,60 @@
             animation: pulse-border 2s infinite;
         }
 
+        .tag-badge {
+            font-size: 0.55rem;
+            color: #c084fc;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            padding: 0px 4px;
+            border-radius: 3px;
+            margin-top: 1px;
+            display: inline-block;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            z-index: 2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-weight: 700;
+        }
+
+        .topic-badge {
+            font-size: 0.55rem;
+            color: #fbbf24;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(251, 191, 36, 0.5);
+            padding: 0px 4px;
+            border-radius: 3px;
+            margin-top: 1px;
+            display: inline-block;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            z-index: 2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-weight: 700;
+        }
+
+        .matrix-badge {
+            font-size: 0.55rem;
+            color: #34d399;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(52, 211, 153, 0.5);
+            padding: 0px 4px;
+            border-radius: 3px;
+            margin-top: 1px;
+            display: inline-block;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            z-index: 2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-weight: 700;
+        }
+
         @keyframes pulse-border {
             0%, 100% { border-color: rgba(244, 63, 94, 0.5); }
             50% { border-color: rgba(244, 63, 94, 1); box-shadow: 0 0 6px rgba(244, 63, 94, 0.4); }
@@ -499,6 +571,9 @@
                         <option value="user">User Mapped</option>
                         <option value="love">Classical Loves</option>
                         <option value="grid">Grid Concepts</option>
+                        <option value="tag">VFT Tags</option>
+                        <option value="topic">VFT Topics</option>
+                        <option value="matrix">Tagging Matrix</option>
                     </select>
                 </div>
             </div>
@@ -761,12 +836,17 @@
 
         // Auto-load mapped Topic Domains from Topic_Map.md
         if (typeof window.vftTopicsExternal !== 'undefined') {
-            userMappedWords = [...userMappedWords, ...window.vftTopicsExternal];
+            userMappedWords = [...userMappedWords, ...window.vftTopicsExternal.map(t => ({...t, type: t.type || 'topic'}))];
         }
 
         // Auto-load 32 Tagging Matrix Category nodes from Tagging Matrix
         if (typeof window.taggingMatrixExternal !== 'undefined') {
-            userMappedWords = [...userMappedWords, ...window.taggingMatrixExternal];
+            userMappedWords = [...userMappedWords, ...window.taggingMatrixExternal.map(m => ({...m, type: m.type || 'matrix'}))];
+        }
+
+        // Auto-load VFT Tags from hegemony_db.js
+        if (typeof window.vftTagsExternal !== 'undefined') {
+            userMappedWords = [...userMappedWords, ...window.vftTagsExternal.map(tag => ({...tag, type: tag.type || 'tag'}))];
         }
 
         // Currently selected node object
@@ -899,9 +979,20 @@
                     );
                     userWordsInCell.forEach(w => {
                         const badge = document.createElement('span');
-                        badge.className = 'user-badge';
+                        if (w.type === 'tag') {
+                            badge.className = 'tag-badge';
+                            badge.title = `[VFT TAG] ${w.name} at (${w.u.toFixed(2)}, ${w.p.toFixed(2)})`;
+                        } else if (w.type === 'topic') {
+                            badge.className = 'topic-badge';
+                            badge.title = `[VFT TOPIC] ${w.name} at (${w.u.toFixed(2)}, ${w.p.toFixed(2)})`;
+                        } else if (w.type === 'matrix') {
+                            badge.className = 'matrix-badge';
+                            badge.title = `[TAGGING MATRIX] ${w.name} at (${w.u.toFixed(2)}, ${w.p.toFixed(2)})`;
+                        } else {
+                            badge.className = 'user-badge';
+                            badge.title = `[USER NODE] ${w.name} at (${w.u.toFixed(2)}, ${w.p.toFixed(2)})`;
+                        }
                         badge.innerText = w.name;
-                        badge.title = `[USER NODE] ${w.name} at (${w.u.toFixed(2)}, ${w.p.toFixed(2)})`;
                         cell.appendChild(badge);
                     });
 
@@ -925,7 +1016,7 @@
                             desc: `Base Psochic Hegemony grid concept representing "${gridWords[y][x]}" situated at column index ${x}, row index ${y}.`
                         };
                         const loves = hegemonyLoves.filter(love => getGridIndex(love.u) === x && getGridIndex(love.p) === y).map(l => ({...l, type: 'love'}));
-                        const userWords = userMappedWords.filter(w => getGridIndex(w.u) === x && getGridIndex(w.p) === y).map(usr => ({...usr, type: 'user'}));
+                        const userWords = userMappedWords.filter(w => getGridIndex(w.u) === x && getGridIndex(w.p) === y).map(usr => ({...usr, type: usr.type || 'user'}));
                         
                         const allNodesInCell = [baseNode, ...loves, ...userWords];
                         selectNodes(allNodesInCell);
@@ -976,15 +1067,16 @@
                 });
             }
 
-            // 3. User Custom Mapped Words
-            if (filterType === 'all' || filterType === 'user') {
-                userMappedWords.forEach(w => {
+            // 3. User Custom Mapped Words & Loaded External Datasets (Tags, Topics, Matrices)
+            userMappedWords.forEach(w => {
+                const itemType = w.type || 'user';
+                if (filterType === 'all' || filterType === itemType || (filterType === 'user' && itemType === 'user')) {
                     allItems.push({
                         ...w,
-                        type: 'user'
+                        type: itemType
                     });
-                });
-            }
+                }
+            });
 
             // Filter items based on search query
             const filteredItems = allItems.filter(item => {
@@ -1124,7 +1216,11 @@
         function populateCardData(node, type, cardIndex) {
             document.getElementById('nodeName_' + cardIndex).innerText = node.name;
             document.getElementById('nodeDesc_' + cardIndex).innerText = node.desc || '';
-            document.getElementById('nodeCoord_' + cardIndex).innerText = `(υ: ${node.u.toFixed(2)}, ψ: ${node.p.toFixed(2)})`;
+            if (node.phase5 && node.phase5.coordinate) {
+                document.getElementById('nodeCoord_' + cardIndex).innerText = node.phase5.coordinate;
+            } else {
+                document.getElementById('nodeCoord_' + cardIndex).innerText = `(υ: ${node.u.toFixed(2)}, ψ: ${node.p.toFixed(2)})`;
+            }
 
             // Populate justification — use stored field or auto-generate from coordinates
             const justEl = document.getElementById('nodeJustification_' + cardIndex);
@@ -1150,6 +1246,15 @@
             if (type === 'user') {
                 classBadge.innerText = 'USER MAPPED';
                 classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-rose-500/10 border border-rose-500/30 text-rose-400 animate-pulse';
+            } else if (type === 'tag') {
+                classBadge.innerText = 'VFT TAG';
+                classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-violet-500/10 border border-violet-500/30 text-violet-400';
+            } else if (type === 'topic') {
+                classBadge.innerText = 'VFT TOPIC';
+                classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-amber-500/10 border border-amber-500/30 text-amber-400';
+            } else if (type === 'matrix') {
+                classBadge.innerText = 'TAGGING MATRIX';
+                classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-emerald-500/10 border border-emerald-500/30 text-emerald-400';
             } else if (type === 'love') {
                 classBadge.innerText = 'CLASSICAL LOVE';
                 classBadge.className = 'px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider bg-sky-500/10 border border-sky-500/30 text-sky-400';
@@ -1231,6 +1336,16 @@
             document.getElementById('analysisTribalGap_' + cardIndex).innerText = node.phase3.tribalGap;
             document.getElementById('analysisFakeMax_' + cardIndex).innerText = node.phase4.fakeMaximiser;
             document.getElementById('analysisHelxis_' + cardIndex).innerText = node.phase4.helxis;
+
+            // Populate Phase 5 Details
+            if (node.phase5) {
+                document.getElementById('analysisCoordinate_' + cardIndex).innerText = node.phase5.coordinate || 'N/A';
+                document.getElementById('analysisIntegrity_' + cardIndex).innerText = node.phase5.integrity || 'N/A';
+                document.getElementById('analysisTrajectory_' + cardIndex).innerText = node.phase5.trajectory || 'N/A';
+                document.getElementById('analysisZoneAnchor_' + cardIndex).innerText = node.phase5.zoneAnchor || 'N/A';
+                document.getElementById('analysisDeepestNode_' + cardIndex).innerText = node.phase5.deepestNode || 'N/A';
+                document.getElementById('analysisDistortion_' + cardIndex).innerText = node.phase5.distortion || 'None';
+            }
 
             calculateRelationalAffinities(node, cardIndex);
         }
@@ -1315,7 +1430,7 @@
                 if (w.name !== selectedNode.name) {
                     list.push({
                         ...w,
-                        type: 'user'
+                        type: w.type || 'user'
                     });
                 }
             });
