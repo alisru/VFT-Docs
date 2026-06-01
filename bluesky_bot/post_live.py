@@ -18,6 +18,11 @@ def split_text(text, max_len=300):
             break
 
         split_idx = text.rfind('\n', 0, max_len)
+        # Only split at newline if chunk before it is substantive (>=80 chars)
+        # Prevents short label lines like 'Brothekanon:' becoming orphan posts
+        if split_idx != -1 and split_idx < 80:
+            split_idx = -1
+
         if split_idx == -1:
             split_idx = text.rfind(' ', 0, max_len)
 

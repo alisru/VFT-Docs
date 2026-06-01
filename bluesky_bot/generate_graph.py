@@ -2,35 +2,39 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
 def get_path_name(claim_u, claim_psi, real_u, real_psi):
-    # Determine the quadrant/zone of origin and destination based on the user's logic
-    # redemption: -1,-1 -> 1,-1  (GE -> LG)
-    # deception: -1,1 -> -1,-1   (GL -> GE) (Actually user says: LE->GG->LG->GE (-1,+1) -> (+1,+1) -> (+1,-1) -> (-1,-1) but we just look at start/end)
-    # fall: 1,1 -> -1,1          (GG -> GL)
-    # grace: 1,-1 -> 1,1         (LG -> GG)
+    # Determine starting and ending quadrants
+    # TL: (+u, +psi) - Greater Good / Good Preference
+    # BL: (+u, -psi) - Lesser Good / Good Preference
+    # TR: (-u, +psi) - Greatest Lie / Bad Preference
+    # BR: (-u, -psi) - Greater Evil / Bad Preference
+    
+    start = "TL" if claim_u > 0 else "TR"
+    if claim_psi < 0:
+        start = "BL" if claim_u > 0 else "BR"
+        
+    end = "TL" if real_u > 0 else "TR"
+    if real_psi < 0:
+        end = "BL" if real_u > 0 else "BR"
 
-    # We map based on start and end quadrants
-    # Positive U is Left, Positive Psi is Top
-    # GG = (+u, +psi) = (1, 1)
-    # GL = (-u, +psi) = (-1, 1)
-    # LG = (+u, -psi) = (1, -1)
-    # GE = (-u, -psi) = (-1, -1)
-
-    # Deception: Originates in +u, +psi (GG) or -u, +psi (GL) and ends up in -u, -psi (GE)
-    # In the specific example: Claim (1.0, 1.0) -> Real (-1.0, -0.5) is GG -> GE/GL border, but specifically heading to GE.
-
-    if claim_u > 0 and claim_psi > 0 and real_u < 0 and real_psi < 0:
-        return "The Path of Deception" # GG -> GE (Full Deception Path)
-    elif claim_u < 0 and claim_psi > 0 and real_u < 0 and real_psi < 0:
-        return "The Path of Deception" # GL -> GE
-
-    elif claim_u > 0 and claim_psi > 0 and real_u < 0 and real_psi > 0:
-        return "The Path of Empty Mass (The Fall)" # GG -> GL
-
-    elif claim_u < 0 and claim_psi < 0 and real_u > 0 and real_psi < 0:
-        return "The Path of Redemption" # GE -> LG
-
-    elif claim_u > 0 and claim_psi < 0 and real_u > 0 and real_psi > 0:
-        return "The Path of Grace" # LG -> GG
+    # 1. Canonical 4-Stage Gnostic Moral Cycle
+    if start == "BL" and end == "TL":
+        return "The Path of Grace"
+    elif start == "TL" and end == "TR":
+        return "The Path of The Fall"
+    elif start == "TR" and end == "BR":
+        return "The Path of Delusion"
+    elif start == "BR" and end == "BL":
+        return "The Path of Redemption"
+        
+    # 2. Structural Deviations & Diagonals
+    elif start == "TL" and end == "BL":
+        return "The Path of Empty Mass (The Fall)"
+    elif start == "TL" and end == "BR":
+        return "The Path of Deception"
+    elif start == "BL" and end == "TR":
+        return "The Path of The Fall"
+    elif start == "TR" and end == "BL":
+        return "The Path of Redemption"
 
     return "Projected Trajectory"
 
@@ -105,7 +109,13 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
     # Legend
     legend = ax.legend(handles=[claim_point, real_point], loc='upper right', facecolor='#111111', edgecolor='white', labelcolor='white')
 
+    # Watermark label
+    fig.text(0.5, 0.01, 'Psochic Hegemony Graph', ha='center', va='bottom',
+             color='#444444', fontsize=9, fontstyle='italic')
+
     plt.tight_layout()
+
+
     plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300)
 
 if __name__ == "__main__":

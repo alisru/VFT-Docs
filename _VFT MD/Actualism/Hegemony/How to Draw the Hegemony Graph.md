@@ -53,6 +53,10 @@ Label the four corners of Zone 1 (the inner square at ± 1.0). These represent t
   - **Bottom Left (+1.0, -1.0):** **The Lesser Good** (Peace).
 
   - **Bottom Right (-1.0, -1.0):** **The Greater Evil** (Void).
+  
+  - **Center Right (-1.0, 0.0):** **The Bad Preference** (Dry).
+  
+  - **Center Left (1.0, 0.0):** **The Good Preference** (Juicy).
 
 ### 4. The Inner Traps (The 0.5 Ring)
 
