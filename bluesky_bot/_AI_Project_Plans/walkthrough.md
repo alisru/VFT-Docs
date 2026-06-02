@@ -4,7 +4,23 @@ This document records the chronological walkthroughs of the recovery and enhance
 
 ---
 
+## Walkthrough 10 (Completed): Aligning /bsky-reply-batch Workflow with OOP Instructions
+
+We have updated the system workflow `/bsky-reply-batch` ([bsky-reply-batch.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/workflows/bsky-reply-batch.md)) to link directly to the new OOP-style modular instructions index.
+
+### 1. Unified Workflow Links
+* **Prerequisites**: Pointed the workflow prerequisites to the master index ([bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md)).
+* **Evaluation Guidance**: Modified Phase 2 to direct agents to run convergence tests under [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md) and formatting schemas under [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md).
+* **Pipeline Integration**: Linked Phase 2, 3, and 4 to [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md) and [subagent_spawning.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning.md) for parallel sub-agent coordinates.
+
+### 2. Moral Axis Audit
+* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
+* Reasoning: Connecting system workflows directly to the bot instructions index prevents process fragmentation and ensures other agents can follow the correct rules when performing evaluations.
+
+---
+
 ## Walkthrough 9 (Completed): OOP-Style Instructions Split with Master Index
+
 
 We have successfully split the bot instructions into modular OOP-style files under a dedicated directory, linking the Master Index directly to the official convergence test tool to prevent model drift.
 
