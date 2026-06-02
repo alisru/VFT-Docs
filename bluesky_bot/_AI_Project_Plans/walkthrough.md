@@ -4,6 +4,23 @@ This document records the chronological walkthroughs of the recovery and enhance
 
 ---
 
+## Walkthrough 7 (Completed): Formalization of Sub-Agent Prompt Instructions
+
+We have formalized the sub-agent prompt instructions for Finders and Evaluators.
+
+### 1. Dedicated Instructions File Created
+* **File creation**: Created [subagent_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/subagent_instructions.md) to store exact prompting templates, roles, descriptions, and workflow parameters.
+* **Role Clarifications**:
+  - Defined the **Finder sub-agents**' limits (harvest targets, file paths, format guidelines, and strict immediate exit protocol).
+  - Defined the **Evaluator sub-agents**' boundaries (strict offline processing, 14-step paragraph structure, local python trajectory graph generation, and global registry compilation triggers).
+
+### 2. Moral Axis Audit
+* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
+* Reasoning: Standardizing the instructions prevents future models from winging prompts or hallucinating task boundaries, protecting structural accuracy and database integrity.
+
+---
+
+
 ## Walkthrough 6 (Completed): Process Integration and Batch Plan Archival
 
 We have successfully integrated the agentic operational processes and mathematical bounds from `subagent_batch_plan.md` into the master instructions and archived the outdated plan.

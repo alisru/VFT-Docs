@@ -4,29 +4,29 @@ This document maintains the historical and active implementation plans for the A
 
 ---
 
-## Plan 7 (Active): Formalization of Sub-Agent Prompt Instructions
+## Plan 6 (Active): Process Integration and Batch Plan Archival
 
-We are formalizing the operational instructions for Finder and Evaluator sub-agents by creating a dedicated instruction file `subagent_instructions.md` within the `bluesky_bot/` directory. This ensures future runs do not rely on ad-hoc instructions and stay completely aligned with constraints.
+We are merging the agentic operational process instructions from `subagent_batch_plan.md` into `bluesky_bot_instructions.md` and archiving `subagent_batch_plan.md` to keep all bot instructions consolidated in a single file.
 
 ### Proposed Changes
 
-#### [NEW] [subagent_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/subagent_instructions.md)
-* Create `subagent_instructions.md` to store formal templates for:
-  - **Finder Sub-agents**: Crawl limits, scraping feeds, de-duplication, format constraints, and immediate exit.
-  - **Evaluator Sub-agents**: Input batch limits, Convergence Test requirements, strict 14-step JSON schema constraints, trajectory graph generation, and registry updates.
+#### [MODIFY] [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md)
+* Append new section **Section 6: Agentic Operational Process & Pipelines**.
+* Incorporate the Finder vs. Evaluator subagent structure.
+* Document the mathematical bounds for batch allocation (5 stories per evaluator).
+* Detail the local pipeline execution workflow (harvesting, offline evaluations, index rebuild, review, posting batch).
+
+#### [ARCHIVE] [subagent_batch_plan.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/subagent_batch_plan.md)
+* Move the current contents of `subagent_batch_plan.md` to `e:\Vector Field Theory\VFT Docs\bluesky_bot\_Archive\subagent_batch_plan_archive_20260602.md`.
+* Remove `subagent_batch_plan.md` from the `bluesky_bot/` root folder.
 
 ### Verification Plan
-* Validate that the new file `subagent_instructions.md` compiles and reads cleanly without format issues.
+* Ensure `bluesky_bot_instructions.md` has no markdown issues.
+* Verify the archive file is correctly written and the original file is deleted in accordance with the no-delete archive rule.
 
 ### Moral Axis Audit
 * Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Verdict: Standardizing prompt templates for sub-agents ensures consistent task delegation, preventing common formatting errors, token-wasting loops, or schema drifts in parallel runs.
-
----
-
-## Plan 6 (Completed): Process Integration and Batch Plan Archival
-
-We merged the agentic operational process instructions from `subagent_batch_plan.md` into `bluesky_bot_instructions.md` and archived `subagent_batch_plan.md` to keep all bot instructions consolidated in a single file.
+* Verdict: Consolidating bot documentation into a single master instruction file eliminates layout discrepancies and ensures future agent runs do not split focus between multiple outdated specification files.
 
 ---
 
