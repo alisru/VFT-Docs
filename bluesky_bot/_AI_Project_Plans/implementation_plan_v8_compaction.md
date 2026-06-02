@@ -4,39 +4,25 @@ This document maintains the historical and active implementation plans for the A
 
 ---
 
-## Plan 9 (Active): OOP-Style Instructions Split with Master Index linking to Convergence Test Tool
+## Plan 8 (Active): Consolidation of Sub-Agent Prompt Instructions into Master Instructions
 
-We are splitting the consolidated `bluesky_bot_instructions.md` into modular OOP-style instructions under a dedicated `bluesky_bot/instructions/` directory. `bluesky_bot_instructions.md` will serve as the Master Index and Entry Point, linking directly to the official `.agent/tools/convergence-test/Convergence-test-v2.md` specification for all coordinate, math, and actualism engine calculations to highlight alignment and prevent model drift.
+We are consolidating the newly created sub-agent prompt templates directly into the master `bluesky_bot_instructions.md` file (as Section 7) to keep the documentation unified in a single, comprehensive source of truth. We will archive the standalone `subagent_instructions.md` file by renaming and moving it.
 
 ### Proposed Changes
 
 #### [MODIFY] [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md)
-* Convert this file into a Master Index.
-* Link directly to the official [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md) for Gnostic Actualism math and rules.
-* Link to the new modular files under `bluesky_bot/instructions/`.
+* Append new section **Section 7: Sub-Agent Spawning Templates** containing the templates and rules for Finder and Evaluator sub-agents.
 
-#### [NEW] [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md)
-* Details output format, JSON schema keys, canonical 14 logical steps mapping (Multi-Persona Sequence), and canonical example JSON block.
-
-#### [NEW] [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md)
-* Details Finder vs. Evaluator division of labor, batch concurrency bounds, and local python orchestration flow steps.
-
-#### [NEW] [subagent_spawning.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning.md)
-* Details `Batch Finder Worker` and `Batch Evaluator Worker` prompt templates, mandatory initialization checks (`view_file` calls), and context passing parameters.
+#### [ARCHIVE] [subagent_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/subagent_instructions.md)
+* Rename and move `subagent_instructions.md` to `e:\Vector Field Theory\VFT Docs\bluesky_bot\_Archive\subagent_instructions_archive_20260602.md` via `git mv`.
 
 ### Verification Plan
-* Validate that all markdown links in `bluesky_bot_instructions.md` compile and load cleanly.
-* Ensure sub-agent prompt templates explicitly force reading the master index and sub-files before starting work.
+* Validate that `bluesky_bot_instructions.md` reads cleanly and has no layout issues.
+* Ensure the standalone file is archived by renaming and moving in accordance with the no-delete archive rule.
 
 ### Moral Axis Audit
 * Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Verdict: Structuring the instructions into OOP-style modular components with direct links to the official convergence test tool prevents coordinate math drift, improves readability for sub-agents, and conserves token budget.
-
----
-
-## Plan 8 (Completed): Consolidation of Sub-Agent Prompt Instructions into Master Instructions
-
-We consolidated the newly created sub-agent prompt templates directly into the master `bluesky_bot_instructions.md` file (as Section 7) to keep the documentation unified in a single, comprehensive source of truth. We archived the standalone `subagent_instructions.md` file by renaming and moving it.
+* Verdict: Keeping all documentation unified in one master instruction file prevents the context splits and coordinate drift that occur when an AI parses multiple files.
 
 ---
 

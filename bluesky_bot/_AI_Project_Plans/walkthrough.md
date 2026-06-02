@@ -4,6 +4,32 @@ This document records the chronological walkthroughs of the recovery and enhance
 
 ---
 
+## Walkthrough 9 (Completed): OOP-Style Instructions Split with Master Index
+
+We have successfully split the bot instructions into modular OOP-style files under a dedicated directory, linking the Master Index directly to the official convergence test tool to prevent model drift.
+
+### 1. Created Modular Instructions
+* **Thread Formatting Schema**: Created [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md) containing the JSON schema, character limits, canonical 14 logical steps mapping (Multi-Persona Sequence), and canonical example JSON block.
+* **Operational Process**: Created [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md) defining the Finder-Evaluator labor division, batch bounds, and local python orchestration scripts flow.
+* **Sub-Agent Prompts**: Created [subagent_spawning.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning.md) containing the stateless prompt templates, workspace guidelines, index bounds context parameters, and mandatory `view_file` initialization checks.
+
+### 2. Refactored Master Index
+* **Master Map**: Overwrote [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md) to serve as a clean directory map and entry point.
+* **Framework Anchor**: Linked the Master Index directly to the workspace's official [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md) tool to anchor the bot's engine in the official math and prevent interpretation drift.
+
+### 3. Moral Axis Audit
+* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
+* Reasoning: Separating concerns into isolated files with a single Master Index allows sub-agents to consume fewer tokens, while linking directly to the original convergence test tool locks down the actualism math rules permanently.
+
+---
+
+## Walkthrough 8 (Completed): Consolidation of Sub-Agent Prompt Instructions into Master Instructions
+
+We consolidated the standalone `subagent_instructions.md` prompt templates directly into Section 7 of `bluesky_bot_instructions.md` and renamed/moved `subagent_instructions.md` to the `_Archive/` directory via `git mv` to maintain file hygiene.
+
+---
+
+
 ## Walkthrough 7 (Completed): Formalization of Sub-Agent Prompt Instructions
 
 We have formalized the sub-agent prompt instructions for Finders and Evaluators.
