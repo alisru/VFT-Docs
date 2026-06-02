@@ -237,15 +237,16 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
   > So let me get this straight: you buy a guard dog to keep your house safe, but you're too lazy to fix the fence, so your 'security system' just attacks the guy bringing your Amazon packages? That's not a pet, bro. That's a liability with teeth. Fix your gate.
 
 #### Step 14: Synthesized Resolution Vector
-* **Wording:** Blends the three persona perspectives (Alethekanon + Awwthekanon + Brothekanon) into a single unified truth under 230 characters, followed by the final recalculated coordinates.
+* **Wording:** Aletheia (the master truth engine) considers both Brothekanon's casual/absurdist observations and Awwthekanon's empathetic healing perspectives to construct a synthesized resolution vector, summarizing the blended path and calculating the final recalculated coordinates.
 * **Format:** 
   > Synthesized Resolution Vector:
   > Blended Path: [Blended path summary]
   > Final Recalculated Coordinates: ([real_u], [real_psi])
 * **Example:**
   > Synthesized Resolution Vector:
-  > Blended Path: The Path of Deception — stated Good Preference collapses to Greater Evil once physical boundaries fail.
+  > Blended Path: The Path of Deception — Aletheia considers Bro's gate-repair warning and Aww's safety appeal, concluding that stated Good Preference collapses to Greater Evil once physical boundaries fail.
   > Final Recalculated Coordinates: (-1.0, -1.0)
+
 
 ---
 
