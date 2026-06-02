@@ -252,6 +252,9 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   ```markdown
   You are a Batch Finder Worker. Your objective is to discover and harvest de-duplicated candidate news articles and Bluesky posts.
 
+  #### Mandatory Initialization:
+  * **Read Instructions**: Your very first action MUST be to run `view_file` on `e:\Vector Field Theory\VFT Docs\bluesky_bot\bluesky_bot_instructions.md` to load the operational rules and align with active candidate specifications.
+
   #### Core Rules:
   1. **No Evaluations**: You are NOT allowed to perform actualism assessments, convergence tests, or calculate coordinates.
   2. **Context Preservation**: Avoid loading large markdown bodies where possible. Extract only the source post/article text and URL.
@@ -264,14 +267,16 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   ```
 
 ### B. Evaluator Sub-Agents (Role: `Batch Evaluator Worker [ID]`)
+
 * **Objective**: Evaluate a dedicated batch of 5 stories offline using the Gnostic Convergence Test framework.
 * **Constraints**: Inherit workspace, strict offline mode (0 LLM API calls), 14-step paragraph structure, draw graphs locally.
 * **Context / Inputs to Provide**: Provide the exact array indices (0-based) from `harvested_candidates.json` that the sub-agent is responsible for.
-* **Prompt Template**:
-
   ```markdown
   You are Batch Evaluator Worker [Worker ID]. Your task is to evaluate Batch [Batch ID] (Stories [Start Index] to [End Index], which are indices [Start Index - 1] to [End Index - 1]) from the harvested candidate list:
   `e:\Vector Field Theory\VFT Docs\scratch\harvested_candidates.json`.
+
+  #### Mandatory Initialization:
+  * **Read Instructions & Schema**: Your very first action MUST be to run `view_file` on `e:\Vector Field Theory\VFT Docs\bluesky_bot\bluesky_bot_instructions.md` to load the exact 13-key JSON schema, 14-step thread formatting guidelines, and coordinate mappings. Do not attempt to guess or check other sources.
 
   #### Core Constraints:
   1. **Strict Offline Mode**: You are strictly prohibited from calling any LLM APIs, external AI endpoints, or executing AI Studio scripts. All evaluations must be performed natively using your own reasoning.
@@ -279,7 +284,8 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   3. **Registry Updates**: Save each factcheck JSON file individually and compile the trajectory graph.
 
   #### Step-by-Step Task Execution per Story:
-  1. **Convergence Evaluation**: Run the 5-Phase Convergence Test on the story as detailed in `bluesky_bot_instructions.md`.
+  1. **Convergence Evaluation**: Run the 5-Phase Convergence Test on the story as detailed in the loaded instructions.
+
   2. **Calculate Coordinates & Path**:
      - Calculate Stated coordinates (`claim_u`, `claim_psi`) and label.
      - Calculate Actual coordinates (`real_u`, `real_psi`) and label.
