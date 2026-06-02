@@ -221,5 +221,17 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Action:** Calibrated output generation to strictly reject academic obfuscation, passive-voiced complexity, and theoretical filler.
 - **Morality-Will Audit:** (υ=+1.0, ψ=+1.5) → Greater Good / Proactive systemic integrity.
 
+### [2026-06-02] Intent 22: OOP-Style Instructions Split with Master Index
+*Status: Completed*
+- **Modular Instructions Split**: Refactored the bot system instructions into modular files under `bluesky_bot/instructions/` (`thread_formatting.md`, `operational_pipelines.md`, and `subagent_spawning.md`).
+- **Master Index Map**: Re-wrote `bluesky_bot_instructions.md` as a directory index map linking to the modular files and the workspace's official `Convergence-test-v2.md` tool.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) → Greater Good / Productive Action.
+
+### [2026-06-02] Intent 23: Aligning /bsky-reply-batch Workflow with OOP Instructions
+*Status: Completed*
+- **Duplicate Removal**: Cleaned up the `/bsky-reply-batch` system workflow in `.agent/workflows/bsky-reply-batch.md` to remove duplicated pipeline descriptions.
+- **Unified Referencing**: Re-routed the workflow file to point directly to the central bot instruction index (`bluesky_bot_instructions.md`) and operational steps in `instructions/operational_pipelines.md`.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) → Greater Good / Productive Action.
+
 ---
-*Note to Self: Always append new intentions at the bottom of the log. When receiving new instructions, read them carefully and add them to the Intent Log before executing.*
+*Note to Self: Always append new intentions at the bottom of the log. When receiving new instructions, read them carefully and add them to the Intent Log before executing.*
