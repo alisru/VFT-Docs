@@ -4,6 +4,25 @@ This document records the chronological walkthroughs of the recovery and enhance
 
 ---
 
+## Walkthrough 6 (Completed): Process Integration and Batch Plan Archival
+
+We have successfully integrated the agentic operational processes and mathematical bounds from `subagent_batch_plan.md` into the master instructions and archived the outdated plan.
+
+### 1. Process Integration
+* **Instruction Append**: Integrated Section 6 to [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md) containing the Finder-Evaluator Division of Labor, mathematical limits (5 stories per evaluator batch), and the local pipeline script execution steps.
+* **Consolidation**: Centralized the operational details in the master instructions file to guide future model interactions.
+
+### 2. Batch Plan Archival
+* **Archival**: Copying the contents of `subagent_batch_plan.md` into [subagent_batch_plan_archive_20260602.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/_Archive/subagent_batch_plan_archive_20260602.md) under the workspace `_Archive/` subdirectory.
+* **Deletion**: Removed `subagent_batch_plan.md` from the original directory location.
+
+### 3. Moral Axis Audit
+* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
+* Reasoning: Clear file hierarchy and documentation hygiene prevent future system splits, saving agent developer time and avoiding mismatched schemas during execution loops.
+
+---
+
+
 ## Walkthrough 5 (Completed): Automated Reply Harvesting & Batch Evaluation Workflow (Bot 2 Mode)
 
 We have successfully executed the entire harvesting, offline-evaluation, and dry-run compilation process for **20 new premium news stories** retrieved directly from Bluesky verified news feeds and standard search timelines. To prevent background token-wasting or quota depletion, we locked down the API clients permanently and performed all 20 evaluations natively inside our turn (Bot 2 Mode).

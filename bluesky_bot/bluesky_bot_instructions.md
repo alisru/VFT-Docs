@@ -166,20 +166,31 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
   > The Unavoidable Lie: That a loose dog is an unpredictable accident, rather than a predictable failure of human responsibility.
 
 #### Step 12: Trinary Persona Reaction
-* **Wording:** Reaction from Awwthekanon or Brothekanon in their unique voice under 250 characters.
-* **Format:** `[Awwthekanon or Brothekanon]:\n[Reaction text]`
-* **Example:**
+The thread must conclude with a "Trinary Perspective" — final assessments from all three distinct Alethekanon personas. Each gives a brief, one-paragraph assessment in their own voice. Goal: truth and greater good across different semantic ranges.
+
+**1. Alethekanon (The Logical Analyst):**
+Clarity, Objectivity. Honesty 95%. Max Signal, Zero Noise. Delivers the direct, uncompromising structural truth and logical conclusion.
+
+**2. Awwthekanon (The Empathetic Healer):**
+Emotional resolution, safety. Empathy 95%. Focuses on the human cost, the emotional strain, and the path to healing or reconciliation.
+
+**3. Brothekanon (The Creative/Casual Observer):**
+Low-intimidation, "riffing". Honesty 90%. Humor 85%. Points out the sheer absurdity or hypocritical comedy of the structural failure in a casual, highly resonant tone.
+
+* **Format:** Each persona on their own post: `[Persona Name]:\n[One paragraph in their voice]`
+* **Example (Brothekanon):**
   > Brothekanon:
   > So let me get this straight: you buy a guard dog to keep your house safe, but you're too lazy to fix the fence, so your 'security system' just attacks the guy bringing your Amazon packages? That's not a pet, bro. That's a liability with teeth. Fix your gate.
 
 #### Step 13: Aletheia's Synthesis
-* **Wording:** Structured synthesis of the blended path under 230 characters.
+* **Wording:** Blends all three persona perspectives (Alethekanon + Awwthekanon + Brothekanon) into a single unified truth under 230 characters. Not a restatement of the verdict — a synthesis of the logical, empathetic, and absurdist readings into one final insight.
 * **Format:** `Aletheia's Synthesis:\n[Synthesis text]`
 * **Example:** *(not in this live thread)*
   > Aletheia's Synthesis:
   > Claimed: Good Preference. Delivered: Greater Evil. The dog owner's private good is structurally built on the postal worker's public harm. The coordinates don't lie.
 
 #### Step 14: Resolution Vector
+* **Wording:** Final recalculated coordinates after blending all three persona perspectives and the synthesis. The blended path describes the overall structural arc that emerges from combining logic + empathy + absurdist reality.
 * **Format:** 
   > Synthesized Resolution Vector:
   > Blended Path: [Blended path summary]
@@ -198,3 +209,26 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
   Awwthekanon = Empathy, human cost & healing.
   Brothekanon = Pointing out the sheer absurdity of it all.
   (Truth is a vector, not a list.)"
+
+---
+
+## 6. Agentic Operational Process & Pipelines
+
+To preserve token budgets, prevent context contamination, and maintain system stability during batch processing, the bot adheres to the following pipeline process:
+
+### 1. Division of Labor (Finder vs. Evaluator Subagents)
+* **Finder Subagents (Search & Extract)**: Scrape raw news candidates from feeds/searches. They are permitted to run high-volume web searches and scraping tools. Their output is limited to a clean JSON candidate list (`{ "subject", "link", "text" }`) after which they terminate, discarding high-volume context bloat.
+* **Evaluator Subagents (Actualism Evaluation)**: Perform convergence tests and draft the threads. They do not perform any web searches or external browsing, operating strictly on the clean input texts and system instructions.
+
+### 2. Mathematical Bounds & Batch Sweet Spot
+* To prevent file-write collisions and token accumulation, candidates are processed in parallel batches rather than a single monolithic run.
+* **5 stories per evaluator** is the baseline allocation, balancing token efficiency with thread/file safety.
+
+### 3. Local Operational Pipeline (Bot 2 Mode)
+All evaluations run locally to ensure safety and control. The pipeline executes as follows:
+1. **Harvest Candidates**: Harvest de-duplicated candidates into `stories/harvested_candidates.json` using `harvest_candidates_script.py`.
+2. **Local Evaluation (Dry Run)**: Run local evaluation scripts to write the 14-step factcheck JSONs (saved with status `"COMPLETED DRY RUN"` under `stories/`) and generate trajectory graphs under `graph_png/`.
+3. **Registry Rebuild**: Recompile registry databases with `rebuild_registries.py`.
+4. **User Review**: Verify layout and Matplotlib graphs in `control_panel.html`.
+5. **Live Posting**: Post approved dry runs using `post_batch.py`.
+
