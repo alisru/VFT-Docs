@@ -52,6 +52,44 @@ To prevent compilation crashes and AI hallucinations, returning models must adhe
 * **On Disk (JSON Config):** The `"posts"` array in the JSON file **MUST always contain exactly 14 elements**. These represent the **14 Logical Evaluation Steps** of the framework on disk.
 * **Live (Bluesky Thread):** The published thread is **fluid**. The posting script runs the `split_text()` algorithm on every step. If a step exceeds character boundaries (300 characters), the code dynamically splits it, resulting in a variable post count on the Bluesky timeline.
 
+### The Two Valid 14-Step Layout Configurations
+To maintain the strict 14-element limit on disk, the bot must output one of two valid array layouts:
+
+#### Layout A: Single-Persona Sequence (Standard Default)
+Use this layout for all standard evaluations and dry-runs. It includes the Switch step and focuses on a single persona reaction (usually Brothekanon or Awwthekanon) to allow separate Synthesis and Resolution Vector posts.
+1. **Post 1**: The Hook & Source (with Psochic Hegemony Graph tag)
+2. **Post 2**: The Claim
+3. **Post 3**: The Reality
+4. **Post 4**: The Verdict
+5. **Post 5**: What's Happening
+6. **Post 6**: The Nuance (The Bright Side / The Poison)
+7. **Post 7**: Breakdown & Plane Error
+8. **Post 8**: The Switch
+9. **Post 9**: The Trajectory
+10. **Post 10**: The Destination
+11. **Post 11**: The Unavoidables
+12. **Post 12**: Persona Reaction (Single: either `Brothekanon:` or `Awwthekanon:`)
+13. **Post 13**: Aletheia's Synthesis
+14. **Post 14**: Synthesized Resolution Vector (Blended Path & Final Coordinates)
+
+#### Layout B: Multi-Persona Sequence (Alternative)
+Use this layout only when a story requires reactions from all three personas. It omits the Switch step and merges the Synthesis/Resolution into the final post.
+1. **Post 1**: The Hook & Source
+2. **Post 2**: The Claim
+3. **Post 3**: The Reality
+4. **Post 4**: The Verdict
+5. **Post 5**: What's Happening
+6. **Post 6**: The Nuance
+7. **Post 7**: Breakdown & Plane Error
+8. **Post 8**: The Trajectory (No Switch)
+9. **Post 9**: The Destination
+10. **Post 10**: The Unavoidables
+11. **Post 11**: Alethekanon Reaction
+12. **Post 12**: Awwthekanon Reaction
+13. **Post 13**: Brothekanon Reaction
+14. **Post 14**: Merged Resolution Vector (Blended Path, Synthesis, and Final Coordinates)
+
+
 ---
 
 ## 4. The 14-Step Conversational JSON Schema & Formatting Blueprint
