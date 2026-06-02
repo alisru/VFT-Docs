@@ -7,5 +7,5 @@
 - [x] Verify changes
   - [x] Check links inside [bsky-reply-batch.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/workflows/bsky-reply-batch.md)
   - [x] Ensure git status shows clean diffs
-- [/] Versioning
-  - [ ] Commit all changes to git
+- [x] Versioning
+  - [x] Commit all changes to git
