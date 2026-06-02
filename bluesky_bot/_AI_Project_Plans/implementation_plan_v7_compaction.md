@@ -4,32 +4,23 @@ This document maintains the historical and active implementation plans for the A
 
 ---
 
-## Plan 8 (Active): Consolidation of Sub-Agent Prompt Instructions into Master Instructions
+## Plan 7 (Active): Formalization of Sub-Agent Prompt Instructions
 
-We are consolidating the newly created sub-agent prompt templates directly into the master `bluesky_bot_instructions.md` file (as Section 7) to keep the documentation unified in a single, comprehensive source of truth. We will archive the standalone `subagent_instructions.md` file by renaming and moving it.
+We are formalizing the operational instructions for Finder and Evaluator sub-agents by creating a dedicated instruction file `subagent_instructions.md` within the `bluesky_bot/` directory. This ensures future runs do not rely on ad-hoc instructions and stay completely aligned with constraints.
 
 ### Proposed Changes
 
-#### [MODIFY] [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md)
-* Append new section **Section 7: Sub-Agent Spawning Templates** containing the templates and rules for Finder and Evaluator sub-agents.
-
-#### [ARCHIVE] [subagent_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/subagent_instructions.md)
-* Rename and move `subagent_instructions.md` to `e:\Vector Field Theory\VFT Docs\bluesky_bot\_Archive\subagent_instructions_archive_20260602.md` via `git mv`.
+#### [NEW] [subagent_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/subagent_instructions.md)
+* Create `subagent_instructions.md` to store formal templates for:
+  - **Finder Sub-agents**: Crawl limits, scraping feeds, de-duplication, format constraints, and immediate exit.
+  - **Evaluator Sub-agents**: Input batch limits, Convergence Test requirements, strict 14-step JSON schema constraints, trajectory graph generation, and registry updates.
 
 ### Verification Plan
-* Validate that `bluesky_bot_instructions.md` reads cleanly and has no layout issues.
-* Ensure the standalone file is archived by renaming and moving in accordance with the no-delete archive rule.
-
+* Validate that the new file `subagent_instructions.md` compiles and reads cleanly without format issues.
 
 ### Moral Axis Audit
 * Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Verdict: Keeping all documentation unified in one master instruction file prevents the context splits and coordinate drift that occur when an AI parses multiple files.
-
----
-
-## Plan 7 (Completed): Formalization of Sub-Agent Prompt Instructions
-
-We formalized the operational instructions for Finder and Evaluator sub-agents by creating a dedicated instruction file `subagent_instructions.md` within the `bluesky_bot/` directory.
+* Verdict: Standardizing prompt templates for sub-agents ensures consistent task delegation, preventing common formatting errors, token-wasting loops, or schema drifts in parallel runs.
 
 ---
 
