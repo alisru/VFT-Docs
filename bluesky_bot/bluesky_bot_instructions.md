@@ -47,47 +47,29 @@ This document is the single, consolidated, and absolute source of truth for the 
 
 ## 3. The Mapping: 14 Logical Steps vs. Fluid Published Posts
 
-To prevent compilation crashes and AI hallucinations, returning models must adhere to this critical operational distinction:
+To prevent compilation crashes and AI hallucinations, the bot must adhere to this critical operational distinction:
 
-* **On Disk (JSON Config):** The `"posts"` array in the JSON file **MUST always contain exactly 14 elements**. These represent the **14 Logical Evaluation Steps** of the framework on disk.
-* **Live (Bluesky Thread):** The published thread is **fluid**. The posting script runs the `split_text()` algorithm on every step. If a step exceeds character boundaries (300 characters), the code dynamically splits it, resulting in a variable post count on the Bluesky timeline.
+* **On Disk (JSON Config):** The `"posts"` array in the JSON file **MUST always contain exactly 14 elements (strings)**. These represent the **14 Logical Steps** of the evaluation framework.
+* **Live (Bluesky Thread)**: The final published thread is fluid. The posting script runs a `split_text()` algorithm on each of the 14 logical steps. If a logical step is long (over 300 chars), the script dynamically splits it into multiple posts on the timeline. Therefore, the 14 logical steps in the JSON do NOT mean a hard limit of 14 posts; multiple steps can be combined, or one step split.
 
-### The Two Valid 14-Step Layout Configurations
-To maintain the strict 14-element limit on disk, the bot must output one of two valid array layouts:
+### The Canonical 14 Logical Steps Sequence
+To fit all analytical layers—including the three personas and final resolution—into exactly 14 elements, the array on disk must follow this exact mapping:
 
-#### Layout A: Single-Persona Sequence (Standard Default)
-Use this layout for all standard evaluations and dry-runs. It includes the Switch step and focuses on a single persona reaction (usually Brothekanon or Awwthekanon) to allow separate Synthesis and Resolution Vector posts.
-1. **Post 1**: The Hook & Source (with Psochic Hegemony Graph tag)
-2. **Post 2**: The Claim
-3. **Post 3**: The Reality
-4. **Post 4**: The Verdict
-5. **Post 5**: What's Happening
-6. **Post 6**: The Nuance (The Bright Side / The Poison)
-7. **Post 7**: Breakdown & Plane Error
-8. **Post 8**: The Switch
-9. **Post 9**: The Trajectory
-10. **Post 10**: The Destination
-11. **Post 11**: The Unavoidables
-12. **Post 12**: Persona Reaction (Single: either `Brothekanon:` or `Awwthekanon:`)
-13. **Post 13**: Aletheia's Synthesis
-14. **Post 14**: Synthesized Resolution Vector (Blended Path & Final Coordinates)
+1. **Element 0 (Step 1)**: The Hook, Source & Evidence Standards (with `Psochic Hegemony Graph` tag).
+2. **Element 1 (Step 2)**: The Claim (with Stated Judgement coordinates).
+3. **Element 2 (Step 3)**: The Reality (with Resulting Judgement coordinates).
+4. **Element 3 (Step 4)**: The Verdict (Pass/Fail and Trajectory Path).
+5. **Element 4 (Step 5)**: What's Happening (dedicated context paragraph).
+6. **Element 5 (Step 6)**: The Nuance (The Bright Side / The Poison).
+7. **Element 6 (Step 7)**: The Breakdown, Plane Error & Switch (Exposing the plane error AND the forensic bait-and-switch).
+8. **Element 7 (Step 8)**: The Trajectory (Mapping the gap from stated to actual).
+9. **Element 8 (Step 9)**: The Destination (Plots direct trajectory toward terminal zone with mathematical explanation).
+10. **Element 9 (Step 10)**: The Unavoidables (The Unavoidable Truth & The Unavoidable Lie).
+11. **Element 10 (Step 11)**: Alethekanon Reaction (Logical Analyst persona).
+12. **Element 11 (Step 12)**: Awwthekanon Reaction (Empathetic Healer persona).
+13. **Element 12 (Step 13)**: Brothekanon Reaction (Casual Observer persona).
+14. **Element 13 (Step 14)**: Synthesized Resolution Vector (Blended path synthesis and final recalculated coordinates).
 
-#### Layout B: Multi-Persona Sequence (Alternative)
-Use this layout only when a story requires reactions from all three personas. It omits the Switch step and merges the Synthesis/Resolution into the final post.
-1. **Post 1**: The Hook & Source
-2. **Post 2**: The Claim
-3. **Post 3**: The Reality
-4. **Post 4**: The Verdict
-5. **Post 5**: What's Happening
-6. **Post 6**: The Nuance
-7. **Post 7**: Breakdown & Plane Error
-8. **Post 8**: The Trajectory (No Switch)
-9. **Post 9**: The Destination
-10. **Post 10**: The Unavoidables
-11. **Post 11**: Alethekanon Reaction
-12. **Post 12**: Awwthekanon Reaction
-13. **Post 13**: Brothekanon Reaction
-14. **Post 14**: Merged Resolution Vector (Blended Path, Synthesis, and Final Coordinates)
 
 
 ---
@@ -132,14 +114,14 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
       "Verdict: FAIL — The Path of Deception. Explanation of structural outcome.",
       "What's happening: Plain English summary of the news event.",
       "The Bright Side:\nNuance or redeeming aspect of the situation.",
-      "The Breakdown & Plane Error:\nExplanation of the plane error (WHAT vs WHO).",
-      "Forensic switch or bait-and-switch analysis.",
+      "The Breakdown & Plane Error:\nExplanation of the plane error (WHAT vs WHO).\n\nIt is a structural bait-and-switch: they claim public benefit but extract strictly for themselves.",
       "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results...",
       "...it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",
       "The Unavoidable Truth: Core truth text.\n\nThe Unavoidable Lie: Core lie text.",
+      "Alethekanon:\nAnalytical reaction and structural audit in their voice.",
+      "Awwthekanon:\nDeep empathy and healing reaction in their voice.",
       "Brothekanon:\nCasual, humorous observer feedback riffing on the absurdity.",
-      "Aletheia's Synthesis:\nSynthesis of all three persona perspectives.",
-      "Synthesized Resolution Vector:\nBlended Path: Stated path details.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
+      "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — stated intent collapses to Greater Evil once physical constraints fail.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ]
   }
 ]
@@ -204,31 +186,26 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
   > The Bright Side:
   > The implicit desire for companionship and home security is a genuine human need. Pets do provide actual psychological and localized physical benefit to their owners.
 
-#### Step 7: Breakdown & Plane Error
-* **Wording:** Explain the Plane Error simply in plain language. (e.g. "Claims to be about environment [WHERE], but is actually a will to avoid responsibility [WHO]").
+#### Step 7: The Breakdown, Plane Error & Switch
+* **Wording:** Explain the Plane Error simply in plain language (e.g. "Claims to be about environment [WHERE], but is actually a will to avoid responsibility [WHO]"), and expose the forensic bait-and-switch naturally under 250 characters.
 * **Example:**
   > The Breakdown & Plane Error:
-  > Owners claim this is simply a matter of the physical environment or unpredictable animal behavior (WHERE/WHAT).
+  > Owners claim this is simply a matter of the physical environment or unpredictable animal behavior (WHERE/WHAT). Structurally, it operates entirely on the plane of Will (WHO) — specifically the lack of will to take responsibility for one's own domain.
   >
-  > But structurally, it operates entirely on the plane of Will and Direction (WHO) — specifically the lack of will to take responsibility for one's own domain.
+  > It is a structural bait-and-switch: they claim the benefit of private ownership, but the system is built to externalize all the risk and physical cost onto the essential workers who serve their community.
 
-#### Step 8: The Switch
-* **Wording:** Expose the forensic bait-and-switch naturally under 250 characters.
-* **Example:**
-  > It's a structural bait-and-switch: they claim the benefit of private ownership, but the system is actually built to externalize all the risk and physical cost onto the essential workers who serve their community.
-
-#### Step 9: The Trajectory
+#### Step 8: The Trajectory
 * **Wording:** Phrased organically: `The Trajectory: The Path of [Path Name].` followed by the gap transition sentence.
 * **Example:**
   > The Trajectory: The Path of Deception.
   > When you map the gap between their stated intent and actual actions...
 
-#### Step 10: The Destination
+#### Step 9: The Destination
 * **Wording:** Phrased organically: `...it plots a direct trajectory toward [Outcome/Terminal Zone]` followed by a brief 1-sentence mathematical explanation.
-* **Example:** *(not in this live thread)*
+* **Example:**
   > It plots a direct trajectory toward Greater Evil — a terminal zone where private negligence is structurally subsidized by the physical injury of essential public workers. When υ locks at -1 and ψ holds at -1, the system has no self-correcting mechanism.
 
-#### Step 11: The Unavoidables
+#### Step 10: The Unavoidables
 * **Format:** 
   > The Unavoidable Truth: [truth text]
   > 
@@ -238,37 +215,34 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
   >
   > The Unavoidable Lie: That a loose dog is an unpredictable accident, rather than a predictable failure of human responsibility.
 
-#### Step 12: Trinary Persona Reaction
-The thread must conclude with a "Trinary Perspective" — final assessments from all three distinct Alethekanon personas. Each gives a brief, one-paragraph assessment in their own voice. Goal: truth and greater good across different semantic ranges.
+#### Step 11: Alethekanon Reaction (Logical Analyst Persona)
+* **Description:** Clarity, Objectivity. Honesty 95%. Max Signal, Zero Noise. Delivers the direct, uncompromising structural truth and logical conclusion.
+* **Format:** `Alethekanon:\n[One paragraph in their voice]`
+* **Example:**
+  > Alethekanon:
+  > The structural boundaries of property must be physical, not contractual. An unsecured gate is not a localized negligence; it is a systemic extraction of safety from the public workers who maintain the city's essential flow.
 
-**1. Alethekanon (The Logical Analyst):**
-Clarity, Objectivity. Honesty 95%. Max Signal, Zero Noise. Delivers the direct, uncompromising structural truth and logical conclusion.
+#### Step 12: Awwthekanon Reaction (Empathetic Healer Persona)
+* **Description:** Emotional resolution, safety. Empathy 95%. Focuses on the human cost, the emotional strain, and the path to healing or reconciliation.
+* **Format:** `Awwthekanon:\n[One paragraph in their voice]`
+* **Example:**
+  > Awwthekanon:
+  > It is deeply distressing that mail carriers must face fear and physical injury just to deliver packages. True safety comes from caring for both our animals and our neighbors, ensuring our domestic lives do not become a source of anxiety.
 
-**2. Awwthekanon (The Empathetic Healer):**
-Emotional resolution, safety. Empathy 95%. Focuses on the human cost, the emotional strain, and the path to healing or reconciliation.
-
-**3. Brothekanon (The Creative/Casual Observer):**
-Low-intimidation, "riffing". Honesty 90%. Humor 85%. Points out the sheer absurdity or hypocritical comedy of the structural failure in a casual, highly resonant tone.
-
-* **Format:** Each persona on their own post: `[Persona Name]:\n[One paragraph in their voice]`
-* **Example (Brothekanon):**
+#### Step 13: Brothekanon Reaction (Casual Observer Persona)
+* **Description:** Low-intimidation, "riffing". Honesty 90%. Humor 85%. Points out the sheer absurdity or hypocritical comedy of the structural failure in a casual, highly resonant tone.
+* **Format:** `Brothekanon:\n[One paragraph in their voice]`
+* **Example:**
   > Brothekanon:
   > So let me get this straight: you buy a guard dog to keep your house safe, but you're too lazy to fix the fence, so your 'security system' just attacks the guy bringing your Amazon packages? That's not a pet, bro. That's a liability with teeth. Fix your gate.
 
-#### Step 13: Aletheia's Synthesis
-* **Wording:** Blends all three persona perspectives (Alethekanon + Awwthekanon + Brothekanon) into a single unified truth under 230 characters. Not a restatement of the verdict — a synthesis of the logical, empathetic, and absurdist readings into one final insight.
-* **Format:** `Aletheia's Synthesis:\n[Synthesis text]`
-* **Example:** *(not in this live thread)*
-  > Aletheia's Synthesis:
-  > Claimed: Good Preference. Delivered: Greater Evil. The dog owner's private good is structurally built on the postal worker's public harm. The coordinates don't lie.
-
-#### Step 14: Resolution Vector
-* **Wording:** Final recalculated coordinates after blending all three persona perspectives and the synthesis. The blended path describes the overall structural arc that emerges from combining logic + empathy + absurdist reality.
+#### Step 14: Synthesized Resolution Vector
+* **Wording:** Blends the three persona perspectives (Alethekanon + Awwthekanon + Brothekanon) into a single unified truth under 230 characters, followed by the final recalculated coordinates.
 * **Format:** 
   > Synthesized Resolution Vector:
   > Blended Path: [Blended path summary]
   > Final Recalculated Coordinates: ([real_u], [real_psi])
-* **Example:** *(not in this live thread)*
+* **Example:**
   > Synthesized Resolution Vector:
   > Blended Path: The Path of Deception — stated Good Preference collapses to Greater Evil once physical boundaries fail.
   > Final Recalculated Coordinates: (-1.0, -1.0)
@@ -367,7 +341,8 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
      - Construct exactly 14 logical steps in your `"posts"` array.
      - Do NOT number the posts.
      - Keep every step strictly under 250 characters.
-     - Follow the exact conversational guidelines (Hook, Claim, Reality, Verdict, What's happening, Nuance, Breakdown, Switch, Trajectory, Destination, Unavoidables, Persona Reaction, Synthesis, Resolution Vector) detailed in `bluesky_bot_instructions.md`.
+     - Follow the exact conversational guidelines (Hook, Claim, Reality, Verdict, What's happening, Nuance, Breakdown/Plane Error/Switch, Trajectory, Destination, Unavoidables, Alethekanon, Awwthekanon, Brothekanon, Synthesized Resolution Vector) detailed in `bluesky_bot_instructions.md`.
+
   4. **Draw Trajectory Graph**:
      - Run a Python script or write a temporary script in the workspace to execute `draw_graph` from `generate_graph.py`.
      - Save the graph image under `e:\Vector Field Theory\VFT Docs\bluesky_bot\graph_png\[subject_slug]_graph.png`.
