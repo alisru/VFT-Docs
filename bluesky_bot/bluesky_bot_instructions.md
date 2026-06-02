@@ -73,9 +73,44 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 
 *Note: DO NOT include `subject_slug`, `verdict`, `graph_img`, or any other custom keys in the JSON config.*
 
+### Canonical Example JSON Configuration
+```json
+[
+  {
+    "id": "example_story_slug",
+    "subject": "Example Story",
+    "link": "https://www.example.com/news-story",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 0.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
+    "mode": "root",
+    "status": "COMPLETED DRY RUN",
+    "posts": [
+      "Custom hook one-liner setting the scene.\n\nExample Story\nSource: https://www.example.com/news-story\nEvidence: stated ideal, actual effect, actual ideal\n\nPsochic Hegemony Graph",
+      "The Claim:\nStated claim details explaining intent.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "The Reality:\nActual reality details revealing structural actions.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
+      "Verdict: FAIL — The Path of Deception. Explanation of structural outcome.",
+      "What's happening: Plain English summary of the news event.",
+      "The Bright Side:\nNuance or redeeming aspect of the situation.",
+      "The Breakdown & Plane Error:\nExplanation of the plane error (WHAT vs WHO).",
+      "Forensic switch or bait-and-switch analysis.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results...",
+      "...it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",
+      "The Unavoidable Truth: Core truth text.\n\nThe Unavoidable Lie: Core lie text.",
+      "Brothekanon:\nCasual, humorous observer feedback riffing on the absurdity.",
+      "Aletheia's Synthesis:\nSynthesis of all three persona perspectives.",
+      "Synthesized Resolution Vector:\nBlended Path: Stated path details.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
+    ]
+  }
+]
+```
+
 ### Conversational Formatting Rules (No Robotic Prefixes)
 * **BAN on Robotic Titles:** Do not start steps with dry prefixes like `Subject:`, `The Claim:`, `The Reality:`, `What's happening:`, `The Breakdown:`, or `The Trajectory:`.
 * **Natural Human Flow:** Write in clean, conversational Plain English. Use headers only when they are clean and natural (e.g. `The Bright Side:`, `The Poison:`).
+
 
 ---
 
