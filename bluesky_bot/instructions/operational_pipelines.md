@@ -32,9 +32,8 @@ Run the harvesting scripts locally inside the virtual environment to pull candid
 This writes the raw candidate feeds to `scratch/harvested_candidates.json`.
 
 ### Step 2: Local Evaluation (Dry Run)
-The main AI agent in the chat workspace reads the harvested candidates (optionally executing `bluesky_bot/orchestrate_batch_local.py` as a local helper script to print candidate URLs and texts to stdout).
+The main AI agent in the chat workspace reads the harvested candidates from `scratch/harvested_candidates.json` and spawns 4 concurrent sub-agents using the native workspace tool `invoke_subagent` (with roles `Batch Evaluator Worker 1` to `4`, delegating index ranges 0-4, 5-9, 10-14, 15-19).
 
-The AI agent then spawns 4 concurrent sub-agents using the native workspace tool `invoke_subagent` (with roles `Batch Evaluator Worker 1` to `4`, delegating index ranges 0-4, 5-9, 10-14, 15-19).
 
 Each spawned evaluator sub-agent:
 1. Reads `bluesky_bot_instructions.md` and `Convergence-test-v2.md` to load the exact guidelines and schemas.
