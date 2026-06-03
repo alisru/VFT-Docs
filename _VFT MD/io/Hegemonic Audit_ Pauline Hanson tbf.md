@@ -20,16 +20,16 @@ The central question of this audit is not, *"Is Pauline Hanson a good or bad pol
 
 ## **The Bottom Line: Structural Alignment**
 
-**Final Alignment Score: 28.4%** (+99 Net Score out of 349 core vectors)
+**Final Alignment Score: 28.9%** (+100 Net Score out of 346 core vectors)
 
 * 	  
-   	**Hits 	(Structural Alignments):** 	224  
+   	**Hits 	(Structural Alignments):** 	223  
 * 	  
-   	**Fails 	(Systemic Violations):** 	125  
+   	**Fails 	(Systemic Violations):** 	123  
 * 	  
    	**Misses 	(Ignored Vectors):** 	0
 
-According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (28.4%) of the nation's core structural, moral, and historical identity.
+According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (28.9%) of the nation's core structural, moral, and historical identity.
 
 She does not represent the comprehensive Australian character, nor the optimistic, egalitarian "Fair Go" that built the modern Commonwealth. Instead, she is a highly specialized political agent who operates almost exclusively in the nation's structural "shadows." She flawlessly channels Australia's geographical paranoia, its colonial history of exclusion, and its working-class anxieties, but she fundamentally fails—and actively attacks—the nation's most celebrated unifying virtues.
 
@@ -529,7 +529,7 @@ The vector is about "Self-Inflicted Inferiority," a shadow she proactively uses 
 
 Her interaction is a hit as it perfectly demonstrates the use of external comparison to undermine local progress.
 
-**(Who.Why.Cause) The Gold Rush (υ: \+0.5, ψ: \+0.7): HIT.** **Quote:** "The resources under our feet belong to the people of Australia, and the wealth they generate should benefit ordinary families, not foreign multinationals." (2020).
+**(Who.Why.Effect) The Gold Rush (υ: \+0.5, ψ: \+0.7): HIT.** **Quote:** "The resources under our feet belong to the people of Australia, and the wealth they generate should benefit ordinary families, not foreign multinationals." (2020).
 
 **Brief:** Prioritizes extraction and immediate wealth as the primary proof of national success.
 
@@ -546,24 +546,6 @@ She aligns with the proactive, extractive ambition that has historically driven 
 The vector is about the "Search for Wealth," which she utilizes to justify her pro-resource platform.
 
 Her interaction is a hit because it captures the lyrical desire for the "Big Win" found in the Australian earth.
-
-**(Who.Why.Effect) Sport (υ: \+0.6, ψ: \+0.7): HIT.** **Quote:** "Sport is what unites us as Australians, it teaches us fair play, mateship, and the determination to win." (2018).
-
-**Brief:** Channels national ambition through unambiguous wins and competitive triumphs in the public eye.
-
-She simplifies complex social and political issues into a binary Win/Loss competition for the public.
-
-By treating politics like a "match," she gains engagement from those who find policy debate alienating.
-
-She frames herself as the "Captain" of a team fighting for a victory that the "Opposition" wants to steal.
-
-**Justification:** She simplifies complex social issues into a Win/Loss binary (+υ, \+ψ) to gain support.
-
-This utilizes the sports-like competitive drive of the national character to frame her political battles.
-
-The vector is about "Ambition through Proxy," which she uses to make her agenda feel like a national effort.
-
-Her interaction is a hit because it successfully maps political struggle onto a core national lyrical interest.
 
 ## **1.5 The How of Identity (Logical)**
 
@@ -951,9 +933,9 @@ Her interaction is a hit because it successfully maps the "Sporting Ambition" on
 
 ## **Final Forensic Verdict: Pauline Hanson (Plane 1\)**
 
-**Plane 1 Identity Score:** +10 Net Score (30 HIT, 20 FAIL, 0 MISS)
+**Plane 1 Identity Score:** +9 Net Score (29 HIT, 20 FAIL, 0 MISS)
 
-**Percentage Australian Alignment:** 20.0%
+**Percentage Australian Alignment:** 18.4%
 
 **Average Morality (υ):** \-0.44 (Self/Group Benefit)
 
@@ -1167,7 +1149,7 @@ She uses the "Gatekeeper" mechanism to successfully block changes to the nationa
 
 This is a hit because she weaponizes the systemic inertia of the Constitution to maintain her preferred definition.
 
-**(What.What.How) The Interpreter (υ: \+0.5, ψ: \+0.3): FAIL.** **Quote:** "We have activist judges in the High Court rewriting the law instead of applying it. They are out of touch with reality." (Statement on Mabo, 1992).
+**(What.What.How) The Interpreter (υ: \+0.5, ψ: \+0.3): FAIL.** **Quote:** "We have activist judges in the High Court rewriting the law instead of applying it. They are out of touch with reality." (Maiden Speech, 1996).
 
 **Brief:** She fundamentally rejects the authority of the High Court to evolve the meaning of the Constitution over time.
 
@@ -1423,7 +1405,7 @@ She refuses to accept the "Truth" of the landscape, opting to maintain the artif
 
 This is a failure because it replaces the profound reality of "Connection" with a shallow narrative of conquest.
 
-**(What.Why.Why) The Common Market (υ: \+0.6, ψ: \+0.5): FAIL.** **Quote:** "We must tear up these free trade agreements. They are destroying Australian manufacturing and selling off our farms." (2019).
+**(What.Why.How) The Common Market (υ: \+0.6, ψ: \+0.5): FAIL.** **Quote:** "We must tear up these free trade agreements. They are destroying Australian manufacturing and selling off our farms." (2019).
 
 **Brief:** She explicitly rejects the foundational logic of free trade that originally united the Australian colonies.
 
@@ -1441,7 +1423,7 @@ She fails the historical mandate to integrate economically, preferring a localiz
 
 This is a failure because it degrades the core "Why" of the economic union established in Section 92\.
 
-**(What.Why.How) The Secular State (υ: \+0.7, ψ: \-0.3): FAIL.** **Quote:** "Islam is a religion that does not belong in Australia. We must ban the burqa and stop Muslim immigration." (Senate Speech, 2017).
+**(What.Why.Cause) The Secular State (υ: \+0.7, ψ: \-0.3): FAIL.** **Quote:** "Islam is a religion that does not belong in Australia. We must ban the burqa and stop Muslim immigration." (Senate Speech, 2017).
 
 **Brief:** She actively attempts to breach the constitutional boundary that separates the State from religious discrimination.
 
@@ -1458,24 +1440,6 @@ Hanson’s demand for the state to persecute a specific religion violates the "M
 She attempts to reintroduce the sectarian warfare of the Old World into the legal definition of the New.
 
 This is a failure because she explicitly seeks to destroy the secular neutrality that protects the Commonwealth.
-
-**(What.Why.Cause) The Great Strikes (υ: \+0.7, ψ: \+0.8): FAIL.** **Quote:** "Unions are holding this country to ransom. They have too much power and need to be reined in." (Debate on IR Laws, 2019).
-
-**Brief:** She consistently aligns with capital against the organized labor movements that birthed the modern political system.
-
-Despite her populist appeal to the working class, she actively seeks to disarm their primary historical weapon.
-
-She views the collective action of workers as a threat to small business, rather than the foundation of economic justice.
-
-By attacking the legacy of the Strikes, she severs her movement from the true historical "Cause" of Australian political parties.
-
-**Justification:** The vector secures workers' rights (+υ) through the active, organized action of the collective (+ψ).
-
-Hanson’s anti-union voting record degrades the "Weapon" of politics forged during the 1890s class wars.
-
-She attempts to atomize the worker, stripping them of the collective power required to maintain the Fair Go.
-
-This is a failure because she works to neutralize the historical force that civilized the Australian economy.
 
 **(What.Why.Effect) The Quiet Life (υ: \+0.5, ψ: \-0.5): HIT.** **Quote:** "People just want to be left alone to raise their families, but they are terrified by the crime and the changing face of their suburbs." (2018).
 
@@ -1879,28 +1843,10 @@ She successfully mobilized the fear of the electorate to maintain the "Exclusion
 
 This is a failure because she acted as the primary agent preventing the structural healing of the Australian Definition.
 
-**(What.Effect.Effect) The Nanny State (υ: \+0.4, ψ: \-0.5): FAIL.** **Quote:** "We need immediate bans on the burqa in all public places. It is a security threat and an affront to our culture." (Senate Stunt, 2017).
-
-**Brief:** While she claims to hate government overreach and "PC" rules, she aggressively demands draconian state control over minorities.
-
-She is entirely willing to use the suppressive power of the "Nanny State" to dictate the clothing, religion, and behavior of the "Other."
-
-Her desire for a "Risk-Free" society extends to demanding that the state crush any cultural expression she finds frightening.
-
-By seeking to ban the burqa, she abandons libertarian freedom in favor of absolute, authoritarian cultural conformity.
-
-**Justification:** The vector provides safety (+υ) through suppressive, overbearing regulation (-ψ).
-
-Hanson’s willingness to use state power to enforce cultural uniformity fails the test of liberty, even by Australian standards.
-
-She attempts to turn the "Safety Fetish" into a weapon of religious persecution.
-
-This is a failure because she manipulates the protective function of the state to commit acts of targeted oppression.
-
 ## **Final Forensic Verdict: Pauline Hanson (Plane 2\)**
 
-**Plane 2 Definition Score:** +17 Net Score (34 HIT, 17 FAIL, 0 MISS)
- **Percentage Australian Alignment:** 33.3%  
+**Plane 2 Definition Score:** +19 Net Score (34 HIT, 15 FAIL, 0 MISS)
+ **Percentage Australian Alignment:** 38.8%  
  **Average Morality (υ):** \-0.45 (Self/Group Benefit)  
  **Average Will (ψ):** \+0.25 (Proactive Will)  
  **Quadrant Placement:** Lesser Evil / Greatest Lie
@@ -1911,7 +1857,7 @@ This is a failure because she manipulates the protective function of the state t
 
 ## **3.1 The Who of Land (Where.Who)**
 
-**(Where.Who.Who) The Custodian (υ: \+0.5, ψ: \-0.4): FAIL.** **Quote:** "Native title is a scam that is locking ordinary Australians out of their own country." (Speech on Land Rights, 1998).
+**(Where.Who.Who) The Custodian (υ: \+0.9, ψ: \-0.4): FAIL.** **Quote:** "Native title is a scam that is locking ordinary Australians out of their own country." (Speech on Land Rights, 1998).
 
 **Brief:** Hanson interacts with the Custodian vector by actively denying deep-time land rights and spiritual ownership.
 
@@ -1929,7 +1875,7 @@ This interaction is highly suppressive toward the original spatial logic of the 
 
 It registers as a failure because it replaces a deep-time structural truth with a shallow colonial fiction.
 
-**(Where.Who.What) The Squatter (υ: \+0.3, ψ: \-0.5): HIT.** **Quote:** "Our pastoralists built this nation from the dirt up, and the government has no right to steal their livelihoods." (2017).
+**(Where.Who.What) The Squatter (υ: \-0.4, ψ: \+0.6): HIT.** **Quote:** "Our pastoralists built this nation from the dirt up, and the government has no right to steal their livelihoods." (2017).
 
 **Brief:** She defends the historical and modern dominance of the pastoralist class over the physical landscape.
 
@@ -1947,7 +1893,7 @@ She maintains the exclusionary boundary of this vector by fighting any legal mec
 
 This is a hit because she accurately and proactively operates the historical mechanics of colonial land acquisition.
 
-**(Where.Who.Where) The Explorer (υ: \+0.4, ψ: \-0.3): FAIL.** **Quote:** "We need to look after our own backyard before we go spending billions exploring new global initiatives." (2019).
+**(Where.Who.Where) The Explorer (υ: \+0.4, ψ: \+0.8): FAIL.** **Quote:** "We need to look after our own backyard before we go spending billions exploring new global initiatives." (2019).
 
 **Brief:** Hanson rarely engages with the proactive mapping or scientific discovery of the physical continent.
 
@@ -1965,7 +1911,7 @@ She fails to engage the proactive energy required to map or understand new spati
 
 This is a miss because her mechanical trajectory actively contradicts the outward expansion of the vector.
 
-**(Where.Who.Why) The Miner (υ: 0.0, ψ: \-0.6): HIT.** **Quote:** "Coal is our greatest asset. We should be digging it up and exporting it, not bowing to climate alarmists." (2020).
+**(Where.Who.Why) The Miner (υ: \+0.3, ψ: \+0.7): HIT.** **Quote:** "Coal is our greatest asset. We should be digging it up and exporting it, not bowing to climate alarmists." (2020).
 
 **Brief:** She explicitly champions the extraction of geological wealth as the primary purpose of the physical landmass.
 
@@ -1983,7 +1929,7 @@ She channels the raw, extractive energy of this vector to secure political lever
 
 This is a hit because she accurately operates the deeply entrenched logic of Australian resource extraction.
 
-**(Where.Who.How) The Grazier (υ: \+0.3, ψ: \-0.6): HIT.** **Quote:** "The farmers are the backbone of this country, working the toughest land on earth to put food on our tables." (2018).
+**(Where.Who.How) The Grazier (υ: \+0.7, ψ: \+0.5): HIT.** **Quote:** "The farmers are the backbone of this country, working the toughest land on earth to put food on our tables." (2018).
 
 **Brief:** She positions herself as the ultimate political shield for the agricultural workers manipulating the surface biology.
 
@@ -2001,7 +1947,7 @@ She utilizes the agrarian mythos to grant her political machinery a sense of ess
 
 This is a hit because she effectively maps her populist agenda onto the undeniable reality of rural production.
 
-**(Where.Who.Cause) The Exile (υ: \+0.6, ψ: \-0.3): HIT.** **Quote:** "Regional Australians have been abandoned by Canberra. They are treated like second-class citizens in their own country." (2016).
+**(Where.Who.Cause) The Exile (υ: \+0.6, ψ: \-0.5): HIT.** **Quote:** "Regional Australians have been abandoned by Canberra. They are treated like second-class citizens in their own country." (2016).
 
 **Brief:** She weaponizes the spatial alienation of those living far from the coastal centers of political and economic power.
 
@@ -2019,7 +1965,7 @@ She operates within the "Shadow" of the continent's size, speaking directly to t
 
 This is a hit because she actively converts geographic exile into centralized political power.
 
-**(Where.Who.Effect) The Suburbanite (υ: \+0.8, ψ: \+0.5): HIT.** **Quote:** "People are frightened to walk down their own streets at night. Our quiet suburbs are being destroyed by foreign gangs." (2018).
+**(Where.Who.Effect) The Suburbanite (υ: \+0.8, ψ: \-0.4): HIT.** **Quote:** "People are frightened to walk down their own streets at night. Our quiet suburbs are being destroyed by foreign gangs." (2018).
 
 **Brief:** She targets the physical boundaries of the suburban block, framing it as a sanctuary under immediate physical threat.
 
@@ -2039,7 +1985,7 @@ This is a hit because she successfully agitates the specific geographic zone whe
 
 ## **3.2 The What of Land (Where.What)**
 
-**(Where.What.Who) The Red Centre (υ: \-0.6, ψ: \+0.6): FAIL.** **Quote:** "Closing the climb at Uluru is ridiculous. It is a tourist attraction that brings money to the whole region." (2019).
+**(Where.What.Who) The Red Centre (υ: \+0.5, ψ: \-0.5): FAIL.** **Quote:** "Closing the climb at Uluru is ridiculous. It is a tourist attraction that brings money to the whole region." (2019).
 
 **Brief:** Hanson treats the physical and spiritual heart of the continent strictly as a secular mechanism for economic yield.
 
@@ -2057,7 +2003,7 @@ She introduces intense friction by refusing to acknowledge the limits of colonia
 
 This is a failure because she actively attacks the spiritual mechanics that ground the geography of the interior.
 
-**(Where.What.What) The Bush (υ: \-0.9, ψ: \+0.6): HIT.** **Quote:** "The real values of this country are found out in the bush, not in the coffee shops of the inner city." (2017).
+**(Where.What.What) The Bush (υ: \+0.5, ψ: \-0.4): HIT.** **Quote:** "The real values of this country are found out in the bush, not in the coffee shops of the inner city." (2017).
 
 **Brief:** She utilizes the physical environment of the bush as a moral baseline to judge the authenticity of the citizenry.
 
@@ -2075,7 +2021,7 @@ She understands that the physical reality of the bush carries immense unearned p
 
 This is a hit because she accurately deploys the dominant physical landscape as a tool of political validation.
 
-**(Where.What.Where) The Coastline (υ: \+0.9, ψ: \+0.6): HIT.** **Quote:** "We have thousands of kilometers of coastline to protect, and the government is leaving the back door wide open." (2016).
+**(Where.What.Where) The Coastline (υ: \+0.9, ψ: \+0.3): HIT.** **Quote:** "We have thousands of kilometers of coastline to protect, and the government is leaving the back door wide open." (2016).
 
 **Brief:** She views the physical edge of the continent not as a zone of recreation, but as a hard, vulnerable military perimeter.
 
@@ -2093,7 +2039,7 @@ She recognizes that the Australian population clings to this edge, making it hig
 
 This is a hit because she perfectly exploits the geographic vulnerability of a civilization built exclusively on the rim.
 
-**(Where.What.Why) The Arable Fringe (υ: \+0.4, ψ: \+0.7): HIT.** **Quote:** "Foreign corporations are buying up our best prime agricultural land, and we will soon be unable to feed ourselves." (2019).
+**(Where.What.Why) The Arable Fringe (υ: \+0.6, ψ: \+0.7): HIT.** **Quote:** "Foreign corporations are buying up our best prime agricultural land, and we will soon be unable to feed ourselves." (2019).
 
 **Brief:** She physically maps national security directly onto the narrow strips of fertile land capable of sustaining agriculture.
 
@@ -2111,7 +2057,7 @@ She utilizes the reality of the continent's physical barrenness to amplify the v
 
 This is a hit because she accurately targets the critical, vulnerable spatial zones that keep the population alive.
 
-**(Where.What.How) The Desert (υ: \+0.4, ψ: \+0.5): HIT.** **Quote:** "This is a harsh country, and it owes nobody a living. If you come here, you have to work hard or get out." (2018).
+**(Where.What.How) The Desert (υ: 0.0, ψ: \-0.7): HIT.** **Quote:** "This is a harsh country, and it owes nobody a living. If you come here, you have to work hard or get out." (2018).
 
 **Brief:** She utilizes the extreme physical hostility of the arid interior to justify equally hostile social and political policies.
 
@@ -2129,7 +2075,7 @@ She operates within the mechanical limits of the geography, treating human compa
 
 This is a hit because she successfully translates the continent's physical cruelty into actionable political logic.
 
-**(Where.What.Cause) The Reef (υ: \+0.3, ψ: \-0.4): FAIL.** **Quote:** "The Great Barrier Reef is fine. The environmentalists are lying to destroy the coal industry and cost us jobs." (2017).
+**(Where.What.Cause) The Reef (υ: \+0.8, ψ: \-0.4): FAIL.** **Quote:** "The Great Barrier Reef is fine. The environmentalists are lying to destroy the coal industry and cost us jobs." (2017).
 
 **Brief:** She actively denies the physical degradation of the largest living structure on the continent to protect industrial mechanics.
 
@@ -2147,7 +2093,7 @@ She fails to engage with the long-term physical reality of the space, prioritizi
 
 This is a failure because her actions actively degrade the physical truth of the continent's most significant biological feature.
 
-**(Where.What.Effect) The Sprawl (υ: \+0.5, ψ: \+0.6): HIT.** **Quote:** "Our cities are bursting at the seams. You can't get a hospital bed, the roads are jammed, and it is all because of mass immigration." (2019).
+**(Where.What.Effect) The Sprawl (υ: \-0.2, ψ: \+0.4): HIT.** **Quote:** "Our cities are bursting at the seams. You can't get a hospital bed, the roads are jammed, and it is all because of mass immigration." (2019).
 
 **Brief:** She physically links the structural failure of urban infrastructure directly to the intake of foreign populations.
 
@@ -2167,7 +2113,7 @@ This is a hit because she seamlessly translates urban geographic failure into ta
 
 ## **3.3 The Where of Land (Where.Where)**
 
-**(Where.Where.Who) The Island Continent (υ: 0.0, ψ: \-0.6): HIT.** **Quote:** "We are entirely surrounded by water. We have the unique ability to completely control who steps foot on this land." (2016).
+**(Where.Where.Who) The Island Continent (υ: \+0.5, ψ: \-0.5): HIT.** **Quote:** "We are entirely surrounded by water. We have the unique ability to completely control who steps foot on this land." (2016).
 
 **Brief:** She utilizes the macro-geography of the continent as the ultimate justification for total isolation and exclusion.
 
@@ -2185,7 +2131,7 @@ She effectively operates the "Moat" mechanic, demanding that the political borde
 
 This is a hit because she accurately channels the supreme spatial advantage of occupying an entire isolated continent.
 
-**(Where.Where.What) The Tyranny of Distance (υ: \+0.6, ψ: \+0.4): HIT.** **Quote:** "Decisions made in Canberra do not reflect the reality of life in remote Queensland. We are too far away for them to care." (2017).
+**(Where.Where.What) The Tyranny of Distance (υ: \+0.6, ψ: \-0.6): HIT.** **Quote:** "Decisions made in Canberra do not reflect the reality of life in remote Queensland. We are too far away for them to care." (2017).
 
 **Brief:** She weaponizes the sheer physical mileage between population centers to fracture national political consensus.
 
@@ -2203,7 +2149,7 @@ She operates entirely within the gaps created by this spatial tyranny, building 
 
 This is a hit because she masters the political application of empty, intervening physical space.
 
-**(Where.Where.Where) The Border (υ: \+0.5, ψ: \-0.3): HIT.** **Quote:** "If you arrive by boat, you will never be settled in Australia. The border must remain absolute and unbroken." (2016).
+**(Where.Where.Where) The Border (υ: \-0.5, ψ: \+0.8): HIT.** **Quote:** "If you arrive by boat, you will never be settled in Australia. The border must remain absolute and unbroken." (2016).
 
 **Brief:** She obsesses over the exact physical line where national sovereignty begins, demanding it be militarized and sealed.
 
@@ -2221,7 +2167,7 @@ She successfully pushes the mechanics of the state to their maximum exclusionary
 
 This is a hit because she perfectly executes the harsh, structural reality of the nation's physical defense.
 
-**(Where.Where.Why) Quarantine (υ: 0.0, ψ: \-0.4): HIT.** **Quote:** "We must protect our agricultural industries from foreign diseases. The biosecurity of this island is non-negotiable." (2018).
+**(Where.Where.Why) Quarantine (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "We must protect our agricultural industries from foreign diseases. The biosecurity of this island is non-negotiable." (2018).
 
 **Brief:** She seamlessly merges the scientific necessity of biological quarantine with her broader political ideology of xenophobia.
 
@@ -2257,7 +2203,7 @@ She fails to engage with the physical mechanics of the neighborhood, preferring 
 
 This is a failure because she attempts to override the absolute physical coordinates of the continent with racial ideology.
 
-**(Where.Where.Cause) The Vast Emptiness (υ: \+0.7, ψ: \-0.3): HIT.** **Quote:** "We cannot afford to leave the north empty. If we don't populate and defend it, someone else will come and take it." (2019).
+**(Where.Where.Cause) The Vast Emptiness (υ: \-0.3, ψ: \-0.6): HIT.** **Quote:** "We cannot afford to leave the north empty. If we don't populate and defend it, someone else will come and take it." (2019).
 
 **Brief:** She constantly invokes the terrifying physical reality of the unpopulated northern and central landmass.
 
@@ -2275,7 +2221,7 @@ She understands that the empty map is a psychological weapon that can be used to
 
 This is a hit because she accurately channels the existential dread generated by the physical mechanics of the landscape.
 
-**(Where.Where.Effect) The Perimeter (υ: \-0.6, ψ: \+0.5): HIT.** **Quote:** "We must have a strong military presence stretched across our northern coastline to detect and stop any incursions immediately." (2018).
+**(Where.Where.Effect) The Perimeter (υ: \+0.4, ψ: \+0.6): HIT.** **Quote:** "We must have a strong military presence stretched across our northern coastline to detect and stop any incursions immediately." (2018).
 
 **Brief:** She focuses national security entirely on the physical monitoring and fortification of the extreme outer edge of the landmass.
 
@@ -2295,7 +2241,7 @@ This is a hit because she accurately identifies and defends the primary structur
 
 ## **3.4 The Why of Land (Where.Why)**
 
-**(Where.Why.Who) The Sacred Site / Songlines (υ: 0.0, ψ: \+0.4): FAIL.** **Quote:** "I will not support locking up our productive land for sacred sites that no one can prove even exist." (Speech on Native Title, 2017).
+**(Where.Why.Who) The Sacred Site / Songlines (υ: \+0.9, ψ: \+0.4): FAIL.** **Quote:** "I will not support locking up our productive land for sacred sites that no one can prove even exist." (Speech on Native Title, 2017).
 
 **Brief:** She aggressively attempts to sever the deep spiritual and historical mapping from the physical reality of the terrain.
 
@@ -2313,7 +2259,7 @@ She attempts to overwrite the ancient spatial code with a crude, two-dimensional
 
 This is a failure because she actively attacks the most complex and enduring spatial logic of the Australian landmass.
 
-**(Where.Why.What) The Food Bowl (υ: \+0.4, ψ: \-0.5): HIT.** **Quote:** "Australia must remain self-sufficient. We cannot rely on importing food when we have the land to produce it all ourselves." (2020).
+**(Where.Why.What) The Food Bowl (υ: \+0.6, ψ: \+0.4): HIT.** **Quote:** "Australia must remain self-sufficient. We cannot rely on importing food when we have the land to produce it all ourselves." (2020).
 
 **Brief:** She champions the physical conversion of the landscape into an autonomous engine of biological sustenance.
 
@@ -2331,7 +2277,7 @@ She understands that control of the caloric supply is the most basic form of spa
 
 This is a hit because she accurately maps her agenda onto the primary biological function of the occupied land.
 
-**(Where.Why.Where) The Quarry / Opencut (υ: 0.0, ψ: \-0.4): HIT.** **Quote:** "The environmentalists want to shut down the mines and send us back to the stone age. We must keep digging." (2019).
+**(Where.Why.Where) The Quarry / Opencut (υ: \+0.2, ψ: \+0.8): HIT.** **Quote:** "The environmentalists want to shut down the mines and send us back to the stone age. We must keep digging." (2019).
 
 **Brief:** She defines the physical purpose of the interior almost exclusively as a site for massive geological excavation.
 
@@ -2349,7 +2295,7 @@ She operates the core economic engine of the continent, disregarding the physica
 
 This is a hit because she accurately channels the dominant, extractive spatial logic of the modern Australian economy.
 
-**(Where.Why.Why) The Sanctuary (υ: \+0.4, ψ: \+0.5): FAIL.** **Quote:** "We cannot take in the world's problems. We are not a dumping ground for refugees fleeing their own broken countries." (2016).
+**(Where.Why.Why) The Sanctuary (υ: \+0.7, ψ: \-0.2): FAIL.** **Quote:** "We cannot take in the world's problems. We are not a dumping ground for refugees fleeing their own broken countries." (2016).
 
 **Brief:** She explicitly rejects the physical capacity of the vast, stable continent to act as a safe harbor for global populations.
 
@@ -2367,7 +2313,7 @@ She introduces intense moral friction by hoarding the physical safety generated 
 
 This is a failure because she actively works to prevent the landmass from functioning as a zone of systemic refuge.
 
-**(Where.Why.How) The Testing Ground / Maralinga (υ: 0.0, ψ: \+0.3): HIT.** **Quote:** "We should be exploring nuclear power and utilizing our uranium reserves. We cannot be afraid of the technology." (2021).
+**(Where.Why.How) The Testing Ground / Maralinga (υ: \-0.8, ψ: \+0.4): HIT.** **Quote:** "We should be exploring nuclear power and utilizing our uranium reserves. We cannot be afraid of the technology." (2021).
 
 **Brief:** She is entirely willing to subject the physical landscape to extreme, hazardous technological applications for national gain.
 
@@ -2385,7 +2331,7 @@ She understands that the sheer size of the map allows the state to hide its most
 
 This is a hit because she accurately channels the colonial logic that views the empty map as a disposable testing ground.
 
-**(Where.Why.Cause) The Prison / Penal Colony (υ: 0.0, ψ: \-0.4): HIT.** **Quote:** "Mandatory detention on offshore islands is the only way to send a clear message that illegal arrivals will not be tolerated." (2017).
+**(Where.Why.Cause) The Prison / Penal Colony (υ: \-0.5, ψ: \-0.5): HIT.** **Quote:** "Mandatory detention on offshore islands is the only way to send a clear message that illegal arrivals will not be tolerated." (2017).
 
 **Brief:** She actively resurrects the foundational spatial logic of the continent, utilizing remote geography for physical incarceration.
 
@@ -2403,7 +2349,7 @@ She utilizes the "Moat" and the "Distance" to construct a modern network of offs
 
 This is a hit because she is a primary architect of the system that returns the map to its original punitive function.
 
-**(Where.Why.Effect) The National Park (υ: \+0.7, ψ: \+0.6): FAIL.** **Quote:** "Locking up productive land in national parks is destroying our timber and farming industries. We must open them up." (2018).
+**(Where.Why.Effect) The National Park (υ: \+0.8, ψ: \-0.2): FAIL.** **Quote:** "Locking up productive land in national parks is destroying our timber and farming industries. We must open them up." (2018).
 
 **Brief:** She vehemently opposes the physical preservation of large tracts of land, viewing ecological lockups as an economic crime.
 
@@ -2423,7 +2369,7 @@ This is a failure because she attacks the spatial mechanics designed to ensure t
 
 ## **3.5 The How of Land (Where.How)**
 
-**(Where.How.Who) The Flying Doctor (υ: \+0.7, ψ: \+0.7): HIT.** **Quote:** "We must ensure that people living in regional and remote Australia have the exact same access to healthcare as the cities." (2019).
+**(Where.How.Who) The Flying Doctor (υ: \+0.9, ψ: \+0.7): HIT.** **Quote:** "We must ensure that people living in regional and remote Australia have the exact same access to healthcare as the cities." (2019).
 
 **Brief:** She fiercely defends the physical infrastructure required to project state services across the massive, empty distances.
 
@@ -2441,7 +2387,7 @@ She recognizes that without these critical lifelines, the physical occupation of
 
 This is a hit because she accurately supports the primary logistical mechanism that binds the remote population to the state.
 
-**(Where.How.What) The Dam / Snowy Hydro (υ: \-0.3, ψ: \+0.6): HIT.** **Quote:** "We need to build the Bradfield Scheme and turn the rivers inland. We must drought-proof this nation through nation-building infrastructure." (2020).
+**(Where.How.What) The Dam / Snowy Hydro (υ: \+0.7, ψ: \+0.8): HIT.** **Quote:** "We need to build the Bradfield Scheme and turn the rivers inland. We must drought-proof this nation through nation-building infrastructure." (2020).
 
 **Brief:** She constantly advocates for massive, landscape-altering engineering projects to fundamentally restructure the physical hydrology.
 
@@ -2459,7 +2405,7 @@ She operates the "Hydro" logic by pushing for the absolute industrial domination
 
 This is a hit because she accurately channels the massive infrastructural ambition required to bend the continent to human will.
 
-**(Where.How.Where) The Fence / Dingo Fence (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "We must protect our agricultural assets. Strong borders aren't just for the ocean, they are for protecting our internal industries too." (2017).
+**(Where.How.Where) The Fence / Dingo Fence (υ: \-0.2, ψ: \+0.6): HIT.** **Quote:** "We must protect our agricultural assets. Strong borders aren't just for the ocean, they are for protecting our internal industries too." (2017).
 
 **Brief:** She intrinsically understands the Australian reliance on massive physical barriers to separate competing geographic zones.
 
@@ -2477,7 +2423,7 @@ She understands that the primary Australian method for dealing with spatial comp
 
 This is a hit because she perfectly executes the crude, exclusionary infrastructural logic of the colonial landmass.
 
-**(Where.How.Why) The Pipeline (υ: \+0.7, ψ: \+0.7): HIT.** **Quote:** "We have the gas and the water, but we don't have the pipelines to get it to where it is needed. We must build the infrastructure." (2018).
+**(Where.How.Why) The Pipeline (υ: \+0.6, ψ: \+0.7): HIT.** **Quote:** "We have the gas and the water, but we don't have the pipelines to get it to where it is needed. We must build the infrastructure." (2018).
 
 **Brief:** She views the physical continent as a grid that must be aggressively connected by high-capacity channels of resources.
 
@@ -2495,7 +2441,7 @@ She understands that the survival of the state depends entirely on the physical 
 
 This is a hit because she operates the essential infrastructural logic required to sustain the Australian spatial layout.
 
-**(Where.How.How) The Telegraph / NBN (υ: \+0.8, ψ: \+0.7): HIT.** **Quote:** "People in the bush cannot run a modern business without reliable internet. The government has failed to connect regional Australia." (2019).
+**(Where.How.How) The Telegraph / NBN (υ: \+0.5, ψ: \+0.6): HIT.** **Quote:** "People in the bush cannot run a modern business without reliable internet. The government has failed to connect regional Australia." (2019).
 
 **Brief:** She recognizes that overcoming the physical isolation of the continent requires the relentless expansion of communication networks.
 
@@ -2513,7 +2459,7 @@ She understands that the "Wire" is the only thing preventing the physical contin
 
 This is a hit because she accurately champions the vital communication mechanics that hold the vast geography together.
 
-**(Where.How.Cause) The Railway / Ghan (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "We need an inland rail network to move our freight efficiently. We must physically connect the north to the south." (2017).
+**(Where.How.Cause) The Railway / Ghan (υ: \+0.6, ψ: \+0.6): HIT.** **Quote:** "We need an inland rail network to move our freight efficiently. We must physically connect the north to the south." (2017).
 
 **Brief:** She supports the massive, linear physical infrastructure required to drag the center of the continent into economic utility.
 
@@ -2531,7 +2477,7 @@ She recognizes that laying steel across the desert is the most fundamental physi
 
 This is a hit because she effectively channels the high-modernist logic of conquering the map with heavy rail.
 
-**(Where.How.Effect) The Highway (υ: \+0.7, ψ: \+0.8): HIT.** **Quote:** "Our truckies keep this country moving. We need to upgrade the regional highways so they can do their jobs safely." (2018).
+**(Where.How.Effect) The Highway (υ: \+0.5, ψ: \+0.5): HIT.** **Quote:** "Our truckies keep this country moving. We need to upgrade the regional highways so they can do their jobs safely." (2018).
 
 **Brief:** She focuses heavily on the massive ribbon of bitumen that circles the continent, recognizing it as the true artery of the nation.
 
@@ -2551,7 +2497,7 @@ This is a hit because she accurately targets the most visible and heavily utiliz
 
 ## **3.6 The Cause of Land (Where.Cause)**
 
-**(Where.Cause.Who) Terra Nullius (υ: \+0.6, ψ: \+0.7): HIT.** **Quote:** "We are all one people... I don't see why one group should have special land rights based on race." (2022).
+**(Where.Cause.Who) Terra Nullius (υ: \-0.9, ψ: \+0.7): HIT.** **Quote:** "We are all one people... I don't see why one group should have special land rights based on race." (2022).
 
 **Brief:** She proactively maintains the foundational legal fiction that the continent was a blank, unowned slate prior to 1788\.
 
@@ -2569,7 +2515,7 @@ She introduces massive structural friction by refusing to accept the foundationa
 
 This is a hit because she is the most consistent and proactive defender of the original colonial mechanism of physical acquisition.
 
-**(Where.Cause.What) Continental Drift (υ: \+0.5, ψ: \+0.5): FAIL.** **Quote:** "We must focus on the economy of today, not some theoretical climate modeling about what might happen in a hundred years." (2019).
+**(Where.Cause.What) Continental Drift (υ: 0.0, ψ: \-0.8): FAIL.** **Quote:** "We must focus on the economy of today, not some theoretical climate modeling about what might happen in a hundred years." (2019).
 
 **Brief:** She entirely ignores the deep geological and physical forces that shaped the extreme isolation and fragility of the landmass.
 
@@ -2587,7 +2533,7 @@ She introduces structural delusion by treating the oldest, most fragile continen
 
 This is a miss because her mechanical trajectory completely ignores the overriding physical logic of the land's deep history.
 
-**(Where.Cause.Where) The Drought Cycle (υ: \+0.5, ψ: \-0.3): FAIL.** **Quote:** "The government is failing our farmers. They must step in and provide immediate subsidies to stop them going broke during this dry." (2018).
+**(Where.Cause.Where) The Drought Cycle (υ: 0.0, ψ: \-0.5): FAIL.** **Quote:** "The government is failing our farmers. They must step in and provide immediate subsidies to stop them going broke during this dry." (2018).
 
 **Brief:** She politicizes the inevitable mechanical failure of the climate rather than engaging with the stoic endurance it demands.
 
@@ -2605,7 +2551,7 @@ She refuses to accept the brutal stoicism required to physically inhabit the boo
 
 This is a miss because she treats a fundamental physical cause of the landscape as a temporary, solvable political grievance.
 
-**(Where.Cause.Why) The Flood (υ: \-0.3, ψ: \+0.5): FAIL.** **Quote:** "We need to build massive dams to capture all this water before it washes out to sea. It is a wasted resource." (2022).
+**(Where.Cause.Why) The Flood (υ: 0.0, ψ: \+0.5): FAIL.** **Quote:** "We need to build massive dams to capture all this water before it washes out to sea. It is a wasted resource." (2022).
 
 **Brief:** She views the massive, chaotic inundation of the landscape as an engineering failure rather than a necessary ecological reset.
 
@@ -2623,7 +2569,7 @@ She introduces friction by attempting to force the unpredictable Australian hydr
 
 This is a miss because her demands directly contradict the necessary physical mechanics of the continental water cycle.
 
-**(Where.Cause.How) The Bushfire (υ: \-0.2, ψ: \+0.7): HIT.** **Quote:** "These devastating fires are the direct result of green policies locking up the national parks and preventing hazard reduction." (2020).
+**(Where.Cause.How) The Bushfire (υ: \+0.5, ψ: \+0.8): HIT.** **Quote:** "These devastating fires are the direct result of green policies locking up the national parks and preventing hazard reduction." (2020).
 
 **Brief:** She weaponizes the terrifying physical energy of the fire cycle to attack progressive environmental policies and political opponents.
 
@@ -2641,7 +2587,7 @@ She operates within the trauma of the physical event to force immediate, structu
 
 This is a hit because she successfully captures the mechanical force of the continent's most violent cause for political leverage.
 
-**(Where.Cause.Cause) The Frontier Conflict (υ: 0.0, ψ: \-0.3): HIT.** **Quote:** "I will not accept this black armband view of history that says we invaded this country. We settled it and built a nation." (2018).
+**(Where.Cause.Cause) The Frontier Conflict (υ: \-0.8, ψ: \+0.6): HIT.** **Quote:** "I will not accept this black armband view of history that says we invaded this country. We settled it and built a nation." (2018).
 
 **Brief:** She actively works to maintain the historical silence surrounding the physical violence required to seize the continent.
 
@@ -2659,7 +2605,7 @@ She introduces intense structural friction by refusing to acknowledge the physic
 
 This is a hit because she actively maintains the "Greatest Lie" that the physical continent was acquired peacefully.
 
-**(Where.Cause.Effect) The Gold Rush (υ: \+0.3, ψ: \-0.4): HIT.** **Quote:** "Our resource sector built this country. The wealth we pull from the ground is what pays for our standard of living." (2019).
+**(Where.Cause.Effect) The Gold Rush (υ: \+0.5, ψ: \+0.7): HIT.** **Quote:** "Our resource sector built this country. The wealth we pull from the ground is what pays for our standard of living." (2019).
 
 **Brief:** She anchors her economic worldview in the rapid, high-energy extraction of sudden wealth from the physical terrain.
 
@@ -2679,7 +2625,7 @@ This is a hit because she accurately relies on the most powerful economic cause 
 
 ## **3.7 The Effect of Land (Where.Effect)**
 
-**(Where.Effect.Who) The Retreat (υ: \+0.5, ψ: \-0.3): HIT.** **Quote:** "Australians just want to be left alone in their own homes, but the government is constantly interfering in their lives." (2017).
+**(Where.Effect.Who) The Retreat (υ: \+0.4, ψ: \-0.5): HIT.** **Quote:** "Australians just want to be left alone in their own homes, but the government is constantly interfering in their lives." (2017).
 
 **Brief:** She leverages the ultimate physical effect of the Australian spatial layout: the passive withdrawal into the private suburban block.
 
@@ -2697,7 +2643,7 @@ She understands that the final output of the vast continent is a population hidi
 
 This is a hit because she accurately captures and mobilizes the deep spatial apathy of the Australian electorate.
 
-**(Where.Effect.What) The Lifestyle / BBQ (υ: \+0.3, ψ: \-0.4): HIT.** **Quote:** "We are losing our Australian way of life. The simple things, like having a BBQ with your mates, are under threat from PC rules." (2018).
+**(Where.Effect.What) The Lifestyle / BBQ (υ: \+0.5, ψ: \-0.3): HIT.** **Quote:** "We are losing our Australian way of life. The simple things, like having a BBQ with your mates, are under threat from PC rules." (2018).
 
 **Brief:** She elevates the hedonistic, outdoor consumption of the environment into a sacred national rite that must be protected.
 
@@ -2715,7 +2661,7 @@ She understands that the Australian population values physical ease above comple
 
 This is a hit because she successfully weaponizes the most common and beloved physical effect of the continent's climate.
 
-**(Where.Effect.Where) Asian Integration (υ: \+0.4, ψ: \-0.3): FAIL.** **Quote:** "We must stop the foreign buy-up of our land. We are becoming an economic colony of China." (2020).
+**(Where.Effect.Where) Asian Integration (υ: \+0.6, ψ: \+0.4): FAIL.** **Quote:** "We must stop the foreign buy-up of our land. We are becoming an economic colony of China." (2020).
 
 **Brief:** She vehemently resists the inevitable geographic effect of the continent's physical proximity to the Asian landmass.
 
@@ -2733,7 +2679,7 @@ She replaces the mechanics of regional integration with a high-friction model of
 
 This is a failure because she attempts to override the absolute physical destiny of the map with a racial and cultural fantasy.
 
-**(Where.Effect.Why) The Sunburnt Country (υ: \+0.5, ψ: \+0.3): HIT.** **Quote:** "This is a land of droughts and flooding rains. We have to be tough to survive here, and we can't afford weak leadership." (2018).
+**(Where.Effect.Why) The Sunburnt Country (υ: \+0.5, ψ: \-0.4): HIT.** **Quote:** "This is a land of droughts and flooding rains. We have to be tough to survive here, and we can't afford weak leadership." (2018).
 
 **Brief:** She constantly invokes the harsh, unforgiving poetry of the physical environment to justify a hardline political stance.
 
@@ -2751,7 +2697,7 @@ She uses the undeniable fact of the "Sunburnt" landscape to silence demands for 
 
 This is a hit because she perfectly mirrors the ruthless physical logic of the continent in her political architecture.
 
-**(Where.How.How) The Resource Curse (υ: \+0.8, ψ: \+0.7): HIT.** **Quote:** "As long as we have coal and iron ore, we don't need to worry about these radical green transition plans." (2021).
+**(Where.Effect.How) The Resource Curse (υ: \-0.4, ψ: \-0.3): HIT.** **Quote:** "As long as we have coal and iron ore, we don't need to worry about these radical green transition plans." (2021).
 
 **Brief:** She actively promotes the structural economic laziness caused by the overwhelming physical abundance of geological wealth.
 
@@ -2769,7 +2715,7 @@ She introduces structural vulnerability by fighting any attempt to evolve beyond
 
 This is a hit because she accurately channels the deep, regressive economic gravity of the Australian resource base.
 
-**(Where.Effect.Cause) The Oasis (υ: \-0.4, ψ: \-0.5): HIT.** **Quote:** "We must protect our water resources. Without water security, the regional towns will die and the farms will turn to dust." (2019).
+**(Where.Effect.Cause) The Oasis (υ: \+0.4, ψ: \+0.4): HIT.** **Quote:** "We must protect our water resources. Without water security, the regional towns will die and the farms will turn to dust." (2019).
 
 **Brief:** She focuses immense political energy on the absolute physical necessity of securing fresh water in the arid landscape.
 
@@ -2787,7 +2733,7 @@ She understands that the entire civilization hangs on the mechanical management 
 
 This is a hit because she perfectly targets the fundamental physical vulnerability of the Australian spatial layout.
 
-**(Where.Effect.Effect) The Mirage (υ: \+0.7, ψ: \+0.5): HIT.** **Quote:** "We can return to the Australia we all remember. The safe, unified country that we grew up in, before the politicians ruined it." (2016).
+**(Where.Effect.Effect) The Mirage (υ: \-0.5, ψ: \-0.5): HIT.** **Quote:** "We can return to the Australia we all remember. The safe, unified country that we grew up in, before the politicians ruined it." (2016).
 
 **Brief:** She generates a powerful political illusion, projecting a nostalgic, impossible version of the physical and cultural landscape.
 
@@ -3909,7 +3855,7 @@ This strategy allows her minor party to wield disproportionate power over the ma
 
 She successfully hacks the mathematical instrument of the democracy, turning a tool of fairness into a weapon of minority control.
 
-**(How.What.Effect) The Shortcut (υ: \+0.8, ψ: \+0.7): HIT.** **Quote:** "The solution is simple. Stop the boats, ban the burqa, and pull out of the UN." (Campaign Slogan).
+**(How.What.Effect) The Shortcut (υ: \-0.4, ψ: \+0.3): HIT.** **Quote:** "The solution is simple. Stop the boats, ban the burqa, and pull out of the UN." (Campaign Slogan).
 
 **Brief:** She exclusively relies on the "Shortcut"—the promise of a simple, immediate fix to highly complex, systemic problems.
 
@@ -4033,7 +3979,7 @@ This strategy maps perfectly onto the deep-seated fear that the isolated contine
 
 She successfully channels the "Fortress" methodology, demanding that the state actively intervene to protect internal markets.
 
-**(How.Why.How) Assimilation (υ: \+0.5, ψ: \+0.6): HIT.** **Quote:** "I would have them rounded up." (Bondi Pavilion vigil, December 16, 2025, demanding pre-emptive state action against radical preachers).
+**(How.Why.How) Assimilation (υ: \-0.5, ψ: \+0.6): HIT.** **Quote:** "I would have them rounded up." (Bondi Pavilion vigil, December 16, 2025, demanding pre-emptive state action against radical preachers).
 
 **Brief:** She is the loudest modern advocate for the historical rationale of strict cultural homogeneity and assimilation.
 
@@ -4115,7 +4061,7 @@ This strategy attempts to dismantle the "Veto" of the worker, leaving the indivi
 
 She fails the vector by aggressively attacking the most successful historical methodology of the "Fair Go."
 
-**(How.How.Cause) The Protest / Stunt (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "Calls are growing to overturn Pauline Hanson\'s Senate ban as concerns rise over free speech... without an elected senator present." (December 23, 2025) / "Next time I might wear an Israeli flag into the parliament and see what they do." (December 16, 2025).
+**(How.How.Cause) The Protest / Stunt (υ: \-0.4, ψ: \+0.8): HIT.** **Quote:** "Calls are growing to overturn Pauline Hanson\'s Senate ban as concerns rise over free speech... without an elected senator present." (December 23, 2025) / "Next time I might wear an Israeli flag into the parliament and see what they do." (December 16, 2025).
 
 **Brief:** She is a master of the highly visible, disruptive political stunt designed to hijack the national media cycle.
 
@@ -4533,7 +4479,7 @@ She understands that the Australian foundation includes a fail-safe designed to 
 
 This is a hit because she is a staunch defender of the most traumatic constitutional event in modern Australian history.
 
-**(Cause.What.Effect) The Apology (2008) (υ: \+0.9, ψ: \+0.7): FAIL.** **Quote:** "I am sick and tired of the guilt industry. I will not apologize for something I did not do." (Walkout Response, 2008).
+**(Cause.What.Effect) The Apology (2008) (υ: \+0.9, ψ: \+0.7): FAIL.** **Quote:** "I am sick and tired of the guilt industry. I will not apologize for something I did not do." (Media Statement, 2008; Senate Walkout, 2022).
 
 **Brief:** She acted as the most prominent political force actively opposing the state's formal reckoning with its history of child removal.
 
@@ -5373,7 +5319,7 @@ She fails the historical imperative to build sustainable, generational wealth fo
 
 This is a failure because she treats the nation's greatest financial outcome as a disposable, short-term asset.
 
-**(Effect.What.Where) The Detention Centre (υ: \+0.3, ψ: \+0.5): HIT.** **Quote:** "Offshore processing works. If you arrive illegally by boat, you will be sent to Nauru and you will never settle here." (2014).
+**(Effect.What.Where) The Detention Centre (υ: \-0.6, ψ: \+0.5): HIT.** **Quote:** "Offshore processing works. If you arrive illegally by boat, you will be sent to Nauru and you will never settle here." (2014).
 
 **Brief:** She is a fierce, unapologetic defender of the most brutal and controversial institutional outcome of modern border policy.
 
@@ -5519,7 +5465,7 @@ She understands that the ultimate goal of the drive is to hide behind the Hills 
 
 This is a hit because she accurately defends the ultimate physical terminus of the national ambition.
 
-**(Effect.Where.Why) The Closed Border (υ: \+0.7, ψ: \+0.5): HIT.** **Quote:** "We are an island. We have the absolute right and the ability to close our borders and decide who comes here." (2020).
+**(Effect.Where.Why) The Closed Border (υ: \-0.8, ψ: \+0.5): HIT.** **Quote:** "We are an island. We have the absolute right and the ability to close our borders and decide who comes here." (2020).
 
 **Brief:** She weaponizes the sheer geographic reality of the continent's detachment from the rest of the globe to justify extreme exclusion.
 
@@ -5573,7 +5519,7 @@ She ensures that the "Shadow of Dispossession" remains highly visible and active
 
 This is a hit because she aggressively champions the foundational geographic theft that authorized the modern state.
 
-**(Effect.Where.Effect) The Regional Divide (υ: \+0.5, ψ: \+0.4): HIT.** **Quote:** "The inner-city elites have absolutely no idea what is happening out in the regions where the real wealth is made." (2018).
+**(Effect.Where.Effect) The Regional Divide (υ: \-0.5, ψ: \+0.4): HIT.** **Quote:** "The inner-city elites have absolutely no idea what is happening out in the regions where the real wealth is made." (2018).
 
 **Brief:** She exploits the massive economic and cultural divergence between the resource-rich interior and the service-based coastal cities.
 
@@ -6121,16 +6067,16 @@ This is a failure because she attempts to dismantle the mature, outward-looking 
 
 ## **The Bottom Line: How "Australian" is She?**
 
-**Final Alignment Score:** **28.4%** (+99 Net Score out of 349 core vectors)
+**Final Alignment Score:** **28.9%** (+100 Net Score out of 346 core vectors)
 
 * 	  
-   	**Hits (Alignments):** 	224  
+   	**Hits (Alignments):** 	223  
 * 	  
-   	**Fails (Violations):** 	125  
+   	**Fails (Violations):** 	123  
 * 	  
    	**Misses (Ignored):** 	0
 
-According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (**28.4%**) of the nation's core structural, moral, and historical identity.
+According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (**28.9%**) of the nation's core structural, moral, and historical identity.
 
 She is not a comprehensive representation of the Australian character. Instead, she is a highly specialized political agent who operates almost exclusively in the nation's "shadows." She flawlessly channels Australia's geographical paranoia, its colonial history of exclusion, and its working-class anxieties, but she fundamentally fails and actively attacks the nation's most celebrated virtues: universal Mateship, the Fair Go, and egalitarianism.
 
@@ -6139,9 +6085,9 @@ She is not a comprehensive representation of the Australian character. Instead, 
 Here is exactly where she succeeds in being "Australian," and where she fails the national character:
 
 * 	  
-   	**Plane 1: Identity (Who) — 20.0% Aligned** 	She perfectly captures the aesthetics of the "Battler" and 	the "Larrikin," using anti-authoritarian common sense to 	win over the Pub Test. However, she severely fails the core 	Australian trait of *Mateship*, 	because she applies strict racial and cultural conditions to a bond 	that is supposed to be universal and horizontal.  
+   	**Plane 1: Identity (Who) — 18.4% Aligned** 	She perfectly captures the aesthetics of the "Battler" and 	the "Larrikin," using anti-authoritarian common sense to 	win over the Pub Test. However, she severely fails the core 	Australian trait of *Mateship*, 	because she applies strict racial and cultural conditions to a bond 	that is supposed to be universal and horizontal.  
 * 	  
-   	**Plane 2: Definition (What) — 33.3% 	Aligned** She knows how to ruthlessly 	hack the constitutional mechanics of the country (exploiting the 	Senate, compulsory voting, and the secret ballot). But she fails the 	definition of the state by completely rejecting political compromise 	and trying to wind the nation's legal definition back to 1901\.  
+   	**Plane 2: Definition (What) — 38.8% 	Aligned** She knows how to ruthlessly 	hack the constitutional mechanics of the country (exploiting the 	Senate, compulsory voting, and the secret ballot). But she fails the 	definition of the state by completely rejecting political compromise 	and trying to wind the nation's legal definition back to 1901\.  
 * 	  
    	**Plane 3: The Land (Where) — 51.0% Aligned** 	*(Her Strongest Area)* 	She is highly aligned with the harsh physical realities of the 	Australian continent. She thrives on the "Tyranny of Distance," 	champions the crude economic power of the "Quarry" and the 	"Mine," and perfectly understands the "Fortress" 	mentality of an isolated island nation.  
 * 	  
@@ -6165,5 +6111,5 @@ The math reveals exactly how Hanson has survived for decades despite such a low 
 
 **Quadrant Placement:** Lesser Evil / Greatest Lie *(Average Morality: \-0.38, Average Will: \+0.26)*
 
-Pauline Hanson is the political embodiment of Australia's deepest insecurities. She does not represent the hopeful, egalitarian, or progressive "Fair Go" that built the modern Commonwealth. Instead, she is a reactionary force—a structural regression—who weaponizes the geographic isolation and colonial traumas of the past to prevent the nation from evolving. She is exactly **28.4% Australian**: the 28.4% that is terrified of the outside world.
+Pauline Hanson is the political embodiment of Australia's deepest insecurities. She does not represent the hopeful, egalitarian, or progressive "Fair Go" that built the modern Commonwealth. Instead, she is a reactionary force—a structural regression—who weaponizes the geographic isolation and colonial traumas of the past to prevent the nation from evolving. She is exactly **28.9% Australian**: the 28.9% that is terrified of the outside world.
 
