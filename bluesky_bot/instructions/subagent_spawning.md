@@ -23,9 +23,6 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   ```markdown
   You are a Batch Finder Worker. Your objective is to discover and harvest de-duplicated candidate news articles and Bluesky posts.
 
-  #### Mandatory Initialization:
-  * **Read Instructions**: Your very first action MUST be to run `view_file` on `e:\Vector Field Theory\VFT Docs\bluesky_bot\bluesky_bot_instructions.md` to load the operational rules and align with active candidate specifications.
-
   #### Core Rules:
   1. **No Evaluations**: You are NOT allowed to perform actualism assessments, convergence tests, or calculate coordinates.
   2. **Context Preservation**: Avoid loading large markdown bodies where possible. Extract only the source post/article text and URL.
@@ -50,7 +47,9 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   `e:\Vector Field Theory\VFT Docs\scratch\harvested_candidates.json`.
 
   #### Mandatory Initialization:
-  * **Read Instructions & Schema**: Your very first action MUST be to run `view_file` on `e:\Vector Field Theory\VFT Docs\bluesky_bot\bluesky_bot_instructions.md` to load the exact 13-key JSON schema, 14-step thread formatting guidelines, and coordinate mappings. Do not attempt to guess or check other sources.
+  * **Read Instructions & Schema**: Your very first action MUST be to run `view_file` on the following two files to load the exact schemas, formatting, and mathematical rules. **Do not** attempt to guess or check other sources, and **do not** read the master index.
+    1. `e:\Vector Field Theory\VFT Docs\.agent\tools\convergence-test\convergence_lite.md`
+    2. `e:\Vector Field Theory\VFT Docs\bluesky_bot\instructions\thread_formatting.md`
 
   #### Core Constraints:
   1. **Strict Offline Mode**: You are strictly prohibited from calling any LLM APIs, external AI endpoints, or executing AI Studio scripts. All evaluations must be performed natively using your own reasoning.
@@ -58,25 +57,15 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   3. **Registry Updates**: Save each factcheck JSON file individually and compile the trajectory graph.
 
   #### Step-by-Step Task Execution per Story:
-  1. **Convergence Evaluation**: Run the 5-Phase Convergence Test on the story as detailed in the official tool specification `e:\Vector Field Theory\VFT Docs\.agent\tools\convergence-test\Convergence-test-v2.md`.
-  2. **Calculate Coordinates & Path**:
-     - Calculate Stated coordinates (`claim_u`, `claim_psi`) and label.
-     - Calculate Actual coordinates (`real_u`, `real_psi`) and label.
-     - Map the transition trajectory to a canonical path name (The Path of Grace, The Path of The Fall, The Path of Redemption, The Path of Delusion, The Path of Deception).
-  3. **Format the 14-Step Thread**:
-     - Construct exactly 14 logical steps in your `"posts"` array.
-     - Do NOT number the posts.
-     - Keep every step strictly under 250 characters.
-     - Follow the exact conversational guidelines (Hook, Claim, Reality, Verdict, What's happening, Nuance, Breakdown/Plane Error/Switch, Trajectory, Destination, Unavoidables, Alethekanon, Awwthekanon, Brothekanon, Synthesized Resolution Vector) detailed in `e:\Vector Field Theory\VFT Docs\bluesky_bot\instructions\thread_formatting.md`.
-  4. **Draw Trajectory Graph**:
-     - Run a Python script or write a temporary script in the workspace to execute `draw_graph` from `generate_graph.py`.
-     - Save the graph image under `e:\Vector Field Theory\VFT Docs\bluesky_bot\graph_png\[subject_slug]_graph.png`.
-     - Copy the graph image to `e:\Vector Field Theory\VFT Docs\_Generated_Content\graph_png\[subject_slug]_graph.png`.
-  5. **Save Configuration JSON**:
+  1. **Convergence Evaluation (Implicit)**: Do NOT generate the 5-Phase Convergence Test markdown report in your scratchpad. Calculate the coordinates and canonical path name internally using the rules in `convergence_lite.md`.
+  2. **Format the 14-Step Thread**:
+     - Construct exactly 14 logical steps in your `"posts"` array strictly following the guidelines in `thread_formatting.md`.
+     - Do NOT number the posts. Keep every step under 250 characters.
+     - **CRITICAL INTRO REQUIREMENT**: Post 1 (The Hook) MUST start with a punchy, custom, human-style scene-setter one-liner (e.g., exposing a structural framing or irony). Do **NOT** write dry summaries.
+  3. **Save Configuration JSON**:
      - Write the compiled JSON to `e:\Vector Field Theory\VFT Docs\bluesky_bot\stories\factcheck_[subject_slug].json`.
-     - Follow the strict 13-key schema (do not output extra fields like `subject_slug`, `verdict`, etc.). Set `"status"` to `"COMPLETED DRY RUN"`.
-  6. **Sync Registry**:
-     - Update the global registries by running `save_and_sync_story` from `aletheia_bot.py` or running the registry rebuild command `rebuild_registries.py`.
+     - Follow the strict 13-key schema. Set `"status"` to `"COMPLETED DRY RUN"`.
+     - Do NOT attempt to run any graphing scripts. Graphing is handled externally by the parent.
 
   Notify the parent agent when all stories in your batch have been evaluated, all graphs are plotted, and all JSON files are compiled and synced.
   ```

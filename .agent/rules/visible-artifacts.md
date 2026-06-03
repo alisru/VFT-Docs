@@ -14,5 +14,9 @@ When the user asks you to "make," "generate," "create," or "draft" something (e.
     *   If unsure of the best folder, ask the user or default to the root or a clearly named new folder (e.g., `_Generated_Content`).
     *   You can *also* create an artifact version for version control/history, but the **primary** deliverable must be visible in the workspace.
 
+**DO NOT OVER-PLAN:**
+* Do **NOT** create new implementation plans, active task lists (`task.md`), or log plans in the project folder for simple script executions, minor follow-up tasks, or direct CLI commands.
+* Reserve planning/design documents strictly for major architectural changes, significant codebase restructuring, or when explicitly requested by the user. Run standard tasks immediately.
+
 **Reasoning:**
-The user cannot easily see or access files inside the hidden `.gemini` directory. To be helpful, work must be placed where the user can use it.
+The user cannot easily see or access files inside the hidden `.gemini` directory. To be helpful, work must be placed where the user can use it. Over-planning on routine tasks wastes time and tokens.

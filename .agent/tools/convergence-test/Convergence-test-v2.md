@@ -141,11 +141,22 @@ Distortion depth as diagnostic:
 
 **Goal: Calculate the actual 3D Hegemonic Grid coordinate (υ, ψ, z).**
 
-**υ axis — who benefits, stripped of stated intent:**
-+2 Everyone / All beings (Systemic Justice) · +1 Other people (Greater Good) · 0 Neutral · −1 My group only (Lesser Evil) · −2 Only me (Tyranny / Pure Extraction)
+**υ axis — who benefits (Morality Scale), stripped of stated intent:**
+* **+2.0**: Everyone / All beings (Systemic Justice)
+* **+1.0**: Others / Other Beings (Greater Good)
+* **+0.5**: Other / A Being
+* **0.0**: No One (Neutral)
+* **-0.5**: My Group (Lesser Evil)
+* **-1.0**: Me
+* **-2.0**: Only Me (Tyranny / Pure Extraction)
+* *The complete spectrum reads: Everyone (+2) → Others (+1) → Other (+0.5) → No One (0) → My Group (-0.5) → Me (-1) → Only Me (-2).*
 
-**ψ axis — what is the energy doing:**
-+2 Actively creating systemic value for all (Productive Justice) · +1 Proactive — creating, building, acting · 0 Neutral — no force applied · −1 Passive — allowing, suppressing, withholding · −2 Actively destroying or extracting value (Chaos / Collapse)
+**ψ axis — what the energy is doing (Will Axis / Judgement of Activity Scale):**
+* **+2.0**: Active-Active (Actively creating systemic value for all / Productive Justice)
+* **+1.0**: Passive-Active / Proactive (Creating, building, acting)
+* **0.0**: Neutral (No meaningful force applied)
+* **-1.0**: Passive-Passive / Withholding (Passive, allowing, suppressing, withholding)
+* **-2.0**: Active-Passive / Destructive (Actively destroying or extracting value / Chaos / Collapse)
 
 **z axis — ambiguity volume, open potential:**
 Blanks do not damage coherence. They are unpopulated context vectors — the shape of what the concept becomes once context is applied.

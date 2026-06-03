@@ -1,132 +1,39 @@
-# Cumulative Project Walkthrough Log
+# Walkthrough: Enhanced Trajectory Graphs and Change-Tracking Push Flag Script
 
-This document records the chronological walkthroughs of the recovery and enhancement phases executed in this repository.
+This document summarizes the changes made to update the trajectory graph scale axes, coordinate titles, evaluator guidelines, and provide change-tracking validation.
 
----
+## Changes Made
 
-## Walkthrough 10 (Completed): Aligning /bsky-reply-batch Workflow with OOP Instructions
+### 1. Trajectory Graph Coordinate Axis Labels & Coordinate Displays
+* Modified [generate_graph.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/generate_graph.py):
+  - Set explicit `xticks` at `[2.0, 1.0, 0.5, 0.0, -0.5, -1.0, -2.0]` mapped to multi-line labels: *Everyone (+2.0), Others (+1.0), Other (+0.5), No One (0.0), My Group (-0.5), Me (-1.0), Only Me (-2.0)*.
+  - Set explicit `yticks` at `[2.0, 1.0, 0.0, -1.0, -2.0]` mapped to labels: *Active-Active (+2.0), Passive-Active (+1.0), Neutral (0.0), Passive-Passive (-1.0), Active-Passive (-2.0)*.
+  - Appended a third line to the graph title rendering the exact numerical coordinates for Stated Claim and Actual Reality: `Stated: (x, y) | Actual: (x, y)`.
+  - Added `plt.close(fig)` to release pyplot memory after rendering each graph to prevent figure memory leaks.
+  - Removed old Good/Bad Preference text label clutter from the grid.
 
-We have updated the system workflow `/bsky-reply-batch` ([bsky-reply-batch.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/workflows/bsky-reply-batch.md)) to link directly to the new OOP-style modular instructions index.
+### 2. Gnostic Actualism Evaluator Guidelines
+* Modified [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md):
+  - Updated Section "Phase 2 — Vector Verification" to map the exact coordinate scale ticks and definitions to assist evaluators during convergence checks.
 
-### 1. Unified Workflow Links
-* **Prerequisites**: Pointed the workflow prerequisites to the master index ([bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md)).
-* **Evaluation Guidance**: Modified Phase 2 to direct agents to run convergence tests under [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md) and formatting schemas under [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md).
-* **Pipeline Integration**: Linked Phase 2, 3, and 4 to [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md) and [subagent_spawning.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning.md) for parallel sub-agent coordinates.
+### 3. Change-Tracking and Registry Rebuild Utilities
+* Created [track_changes.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/track_changes.py):
+  - Validates JSON config files recursively under `stories/` and `stories/live/`.
+  - Audits keys, post limits (exactly 14 posts for dry runs), character limits (<250 characters per post for dry runs), and corresponding local and remote graph PNG existences.
+  - Excludes legacy files and filters only for files with `factcheck_` prefix to avoid false-positives.
+  - Integrates with Git status to show a summary of target modified and untracked changes, and prompts the user to rebuild registries and stage changes ready to push.
+* Created [regenerate_graphs.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/regenerate_graphs.py):
+  - Programmatically iterates through all active factcheck configs and rebuilds all graph PNGs to apply coordinate scale changes.
 
-### 2. Moral Axis Audit
-* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Reasoning: Connecting system workflows directly to the bot instructions index prevents process fragmentation and ensures other agents can follow the correct rules when performing evaluations.
+## Verification Results
+* Successfully ran [regenerate_graphs.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/regenerate_graphs.py) to rebuild 81 active trajectory graphs with the new scales and titles.
+* Rebuilt the javascript database registers using [rebuild_registries.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/rebuild_registries.py).
+* Ran [track_changes.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/track_changes.py) to verify that all target active files are validated cleanly and ready for git staging.
 
----
-
-## Walkthrough 9 (Completed): OOP-Style Instructions Split with Master Index
-
-
-We have successfully split the bot instructions into modular OOP-style files under a dedicated directory, linking the Master Index directly to the official convergence test tool to prevent model drift.
-
-### 1. Created Modular Instructions
-* **Thread Formatting Schema**: Created [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md) containing the JSON schema, character limits, canonical 14 logical steps mapping (Multi-Persona Sequence), and canonical example JSON block.
-* **Operational Process**: Created [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md) defining the Finder-Evaluator labor division, batch bounds, and local python orchestration scripts flow.
-* **Sub-Agent Prompts**: Created [subagent_spawning.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning.md) containing the stateless prompt templates, workspace guidelines, index bounds context parameters, and mandatory `view_file` initialization checks.
-
-### 2. Refactored Master Index
-* **Master Map**: Overwrote [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md) to serve as a clean directory map and entry point.
-* **Framework Anchor**: Linked the Master Index directly to the workspace's official [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md) tool to anchor the bot's engine in the official math and prevent interpretation drift.
-
-### 3. Moral Axis Audit
-* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Reasoning: Separating concerns into isolated files with a single Master Index allows sub-agents to consume fewer tokens, while linking directly to the original convergence test tool locks down the actualism math rules permanently.
-
----
-
-## Walkthrough 8 (Completed): Consolidation of Sub-Agent Prompt Instructions into Master Instructions
-
-We consolidated the standalone `subagent_instructions.md` prompt templates directly into Section 7 of `bluesky_bot_instructions.md` and renamed/moved `subagent_instructions.md` to the `_Archive/` directory via `git mv` to maintain file hygiene.
-
----
-
-
-## Walkthrough 7 (Completed): Formalization of Sub-Agent Prompt Instructions
-
-We have formalized the sub-agent prompt instructions for Finders and Evaluators.
-
-### 1. Dedicated Instructions File Created
-* **File creation**: Created [subagent_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/subagent_instructions.md) to store exact prompting templates, roles, descriptions, and workflow parameters.
-* **Role Clarifications**:
-  - Defined the **Finder sub-agents**' limits (harvest targets, file paths, format guidelines, and strict immediate exit protocol).
-  - Defined the **Evaluator sub-agents**' boundaries (strict offline processing, 14-step paragraph structure, local python trajectory graph generation, and global registry compilation triggers).
-
-### 2. Moral Axis Audit
-* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Reasoning: Standardizing the instructions prevents future models from winging prompts or hallucinating task boundaries, protecting structural accuracy and database integrity.
-
----
-
-
-## Walkthrough 6 (Completed): Process Integration and Batch Plan Archival
-
-We have successfully integrated the agentic operational processes and mathematical bounds from `subagent_batch_plan.md` into the master instructions and archived the outdated plan.
-
-### 1. Process Integration
-* **Instruction Append**: Integrated Section 6 to [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md) containing the Finder-Evaluator Division of Labor, mathematical limits (5 stories per evaluator batch), and the local pipeline script execution steps.
-* **Consolidation**: Centralized the operational details in the master instructions file to guide future model interactions.
-
-### 2. Batch Plan Archival
-* **Archival**: Copying the contents of `subagent_batch_plan.md` into [subagent_batch_plan_archive_20260602.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/_Archive/subagent_batch_plan_archive_20260602.md) under the workspace `_Archive/` subdirectory.
-* **Deletion**: Removed `subagent_batch_plan.md` from the original directory location.
-
-### 3. Moral Axis Audit
-* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Reasoning: Clear file hierarchy and documentation hygiene prevent future system splits, saving agent developer time and avoiding mismatched schemas during execution loops.
-
----
-
-
-## Walkthrough 5 (Completed): Automated Reply Harvesting & Batch Evaluation Workflow (Bot 2 Mode)
-
-We have successfully executed the entire harvesting, offline-evaluation, and dry-run compilation process for **20 new premium news stories** retrieved directly from Bluesky verified news feeds and standard search timelines. To prevent background token-wasting or quota depletion, we locked down the API clients permanently and performed all 20 evaluations natively inside our turn (Bot 2 Mode).
-
-### 1. Permanent API Client Lockdown
-* **Fatal Error Blocks:** Modified `get_llm_client()` in both [orchestrator.py](file:///e:/Vector%20Field%20Theory%20VFT%20Docs/bluesky_bot/orchestrator.py) and [orchestrate_batch.py](file:///e:/Vector%20Field%20Theory%20VFT%20Docs/bluesky_bot/orchestrate_batch.py) to exit immediately on execution and print a prominent warning banner. 
-* **The Safeguard:** These entry-point blocks physically prevent any automated compaction-resumed agents from attempting to run background API loops on Google AI Studio, guaranteeing 100% wallet security.
-
-### 2. Candidate Harvesting & Expansion
-* **Verified News Feeds:** Ran `harvest_candidates_script.py` to pull 16 initial de-duplicated news targets from Aendra's feeds.
-* **Standard Timeline Expansion:** Created and executed [harvest_more.py](file:///e:/Vector%20Field%20Theory%20VFT%20Docs/scratch/harvest_more.py) to run keyword queries ("AI", "technology", "climate") and top up the collection to **exactly 20 premium candidates** in [scratch/harvested_candidates.json](file:///e:/Vector%20Field%20Theory%20VFT%20Docs/scratch/harvested_candidates.json).
-
-### 3. Native Agent evaluations (Bot 2)
-* **Offline Batch 1 (Stories 1 to 5):** Evaluated and compiled the first 5 stories (AI Cover Letters, Utah Teens column, British Free Speech SLAPPs, Piker/Uygur UK Ban, Alabama redistricting) using [write_batch_jsons.py](file:///e:/Vector%20Field%20Theory%20VFT%20Docs/scratch/write_batch_jsons.py).
-* **Offline Batch 2 (Stories 6 to 20):** Evaluated and compiled the remaining 15 stories (Met Police phone deadline, Strait of Hormuz block, Summer TV releases, rasheed newson novel, Nottingham midwives crisis, Kaplan eco-philanthropy contradictions, Congo Mpox outbreak, Israel Beaufort Castle, Boner Bears recall, Mountbatten diaries release, Graze news remixing, and social AI test posts) using [write_batch_2_jsons.py](file:///e:/Vector%20Field%20Theory%20VFT%20Docs/scratch/write_batch_2_jsons.py).
-* **Trajectory Graphing:** Plotted all 20 corresponding trajectory vector graphs (`[story_id]_graph.png`) inside [bluesky_bot/graph_png/](file:///e:/Vector%20Field%20Theory%20VFT%20Docs/bluesky_bot/graph_png/) and synced them to `_Generated_Content/graph_png/` completely locally via `matplotlib`.
-
-### 4. Index Rebuilding & Viewer Verification
-* **Unified Registry Rebuilt:** Re-ran `rebuild_registries.py` cleanly inside `.venv` to regenerate separate folder indices and sync the JavaScript registry.
-* **Viewer Verification:** Confirmed that the 20 new dry runs render beautifully inside the browser emulator panel without errors or console warnings.
-
-### 5. Moral Axis Audit
-* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
-* Reasoning: Locking down automated API endpoints and performing evaluations natively via agent-workspace reasoning keeps the project completely aligned with safety rules, producing 20 clean, character-bounded dry runs.
-
----
-
-## Walkthrough 4 (Completed): Consolidation of Graph PNGs into graph_png/ Subdirectories
-
-We successfully executed the consolidation of all trajectory vector graphs into dedicated `graph_png/` subdirectories and updated all bot instructions and system directives.
-
----
-
-## Walkthrough 3 (Completed): Workspace Root Consolidation
-
-We successfully executed the workspace root directory cleanup, consolidating all Bluesky-bot files under the dedicated `bluesky_bot/` directory.
-
----
-
-## Walkthrough 2 (Completed): True Directory Separation & Programmatic Indexing
-
-We successfully resolved the folder pollution and dynamic indexing bugs to establish a flawless directory architecture. Live configs are now separated from dry-runs, and `control_panel.html` loads both pools dynamically when running under a local HTTP server.
-
----
-
-## Walkthrough 1 (Completed): Systemic Restoration & High-Fidelity Portfolio Recovery
-
-We successfully executed the restoration and recovery plan. By identifying and scrubbing the corrupted, schema-incoherent JSON files generated in the previous model compaction run, clearing file-write duplicates across root directories, and programmatically regenerating 100% compliant portfolios using native model reasoning, we restored the `control_panel.html` viewer to a flawless working state.
+## Batch 4 Evaluation Notes (Post-Compaction)
+* **Stories Evaluated (Indices 12 to 15)**:
+  1. **EU Ukraine Fast-Track Membership** (`eu_ukraine_membership`): Stated (+1.0, +1.0) -> Actual (-1.0, +1.0). Path: *The Path of The Fall*.
+  2. **Latter-day Saints USAID Advocacy** (`latter_day_saints_usaid`): Stated (+1.0, +1.0) -> Actual (+1.0, -1.0). Path: *The Path of Empty Mass (The Fall)*.
+  3. **Mexico City World Cup Sculptures Damaged** (`mexico_city_world_cup_sculptures`): Stated (+1.0, +1.0) -> Actual (-1.0, -2.0). Path: *The Path of Deception*.
+  4. **Graze Social News Feed Funding** (`graze_social_funding`): Stated (+1.0, -1.0) -> Actual (+1.0, +1.0). Path: *The Path of Grace*.
+* **Validation**: Shortened hook in Latter-day Saints to ensure it meets the strict 250 character limit per post. Verified that all Batch 4 files validate successfully under `track_changes.py`.

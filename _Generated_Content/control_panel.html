@@ -490,6 +490,54 @@
       border-color: var(--bsky-blue);
     }
 
+    /* Embedded link preview card in post */
+    .post-link-card {
+      margin-top: 0.75rem;
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-hover);
+      text-decoration: none;
+      color: var(--text-color);
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+    .post-link-card:hover {
+      background: var(--panel-bg);
+      border-color: var(--bsky-blue);
+    }
+    .post-link-card-content {
+      padding: 0.75rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .post-link-card-domain {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .post-link-card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text-color);
+      margin: 0;
+    }
+    .post-link-card-description {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin: 0;
+    }
+
     .post-actions {
       display: flex;
       gap: 2rem;
@@ -1244,10 +1292,41 @@
           postText = postText.replace('Brothekanon:\n', '');
         }
 
-        // Embed Graph Image in the first post
-        let imageTag = '';
-        if (index === 0 && activeStory.graph_img) {
-          imageTag = `<img class="post-embed-image" src="${activeStory.graph_img}" alt="Psochic Hegemony Graph" onclick="openLightbox('${activeStory.graph_img}')">`;
+        // Render embeds (link preview card on Post 1, graph image on Post 2/Post 1 depending on link presence)
+        let embedTag = '';
+        if (index === 0 && activeStory.link && !activeStory.link.includes('bsky.app/profile')) {
+          // Render link card embed on first post if link exists and is not a bsky profile link
+          const title = activeStory.subject || 'External Link';
+          let descText = '';
+          if (activeStory.posts && activeStory.posts.length > 4) {
+            descText = activeStory.posts[4].replace("What's happening:\n", "").trim();
+          } else {
+            descText = `Alethekanon Psochic Hegemony Assessment for ${title}`;
+          }
+          if (descText.length > 200) {
+            descText = descText.substring(0, 197) + '...';
+          }
+          let domain = '';
+          try {
+            domain = new URL(activeStory.link).hostname;
+          } catch(e) {
+            domain = 'external-link';
+          }
+          embedTag = `
+            <a href="${activeStory.link}" target="_blank" class="post-link-card">
+              <div class="post-link-card-content">
+                <div class="post-link-card-domain">${domain}</div>
+                <div class="post-link-card-title">${title}</div>
+                <div class="post-link-card-description">${descText}</div>
+              </div>
+            </a>
+          `;
+        } else if (index === 1 && activeStory.link && !activeStory.link.includes('bsky.app/profile') && activeStory.graph_img) {
+          // If there is a link, the graph goes on Post 2 (index 1)
+          embedTag = `<img class="post-embed-image" src="${activeStory.graph_img}" alt="Psochic Hegemony Graph" onclick="openLightbox('${activeStory.graph_img}')">`;
+        } else if (index === 0 && activeStory.graph_img) {
+          // If there is NO link, the graph goes on Post 1 (index 0)
+          embedTag = `<img class="post-embed-image" src="${activeStory.graph_img}" alt="Psochic Hegemony Graph" onclick="openLightbox('${activeStory.graph_img}')">`;
         }
 
         // Resolve direct post link if live
@@ -1280,7 +1359,7 @@
               ${bskyLink}
             </div>
             <div class="post-body">${postText}</div>
-            ${imageTag}
+            ${embedTag}
             <div class="post-actions">
               <button class="action-button">💬 Reply</button>
               <button class="action-button">🔁 Repost</button>
@@ -1603,7 +1682,7 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         "real_psi": realPsi,
         "mode": "root",
         "posts": [
-          `Alethekanon Systemic Analysis & Trinary Synthesis Loop\n\nSubject: ${subject}\nSource: ${link}\nEvidence Standards: Empirical data verification vs Stated Intent`,
+          `${subject} assessment under the Actualism Framework.\n\nEvidence: stated ideal, actual effect, actual ideal`,
           `The Claim: The actor asserts they are actively producing positive outcomes.\nStated Judgement: (${claimU.toFixed(1)}, ${claimPsi.toFixed(1)})`,
           `The Reality: Ground level outcomes expose extraction or structural inaction.\nResulting Judgement: (${realU.toFixed(1)}, ${realPsi.toFixed(1)})`,
           `Verdict: FAIL — The Path of Deception`,

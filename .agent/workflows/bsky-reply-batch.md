@@ -10,13 +10,11 @@ This workflow governs the harvesting, offline evaluation, and dry-run compilatio
 
 ## 1. Prerequisites & Execution Guidelines
 
-To prevent model drift and maintain a single source of truth, all operational steps, code blocks, formatting specifications, and sub-agent spawning procedures are centralized in the bot directory:
+To prevent model context bloat and token wastage, the parent orchestrator is strictly separated from the heavy evaluation modules. **Do NOT open the thread formatting or convergence test modules.**
 
-1. **Master Instructions Index:** Before running this workflow, always load and read [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md).
-2. **Operational Steps & Pipelines:** Follow the step-by-step pipeline documented in [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md).
-3. **JSON Schema & Thread Formatting:** Ensure absolute compliance with the keys and constraints in [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md).
-4. **Actualism Mappings:** Run all Gnostic Actualism evaluations strictly using [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md).
-5. **Sub-Agent Prompts:** Spawn finder/evaluator workers using the templates in [subagent_spawning.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning.md).
+1. **Master Instructions Index:** First, read [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md) to load the operational rules and script locations.
+2. **Operational Pipeline:** Read [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md) to understand the step-by-step batch execution process.
+3. **Sub-Agent Prompts:** When it is time to spawn the Evaluator workers in Step 2, open [subagent_spawning.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning.md) to get their prompt templates.
 
 Please execute steps 1 through 5 of the local operational pipeline as documented in [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md).
 

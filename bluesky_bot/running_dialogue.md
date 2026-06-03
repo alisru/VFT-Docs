@@ -233,5 +233,59 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Unified Referencing**: Re-routed the workflow file to point directly to the central bot instruction index (`bluesky_bot_instructions.md`) and operational steps in `instructions/operational_pipelines.md`.
 - **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) → Greater Good / Productive Action.
 
+### [2026-06-02] Intent 24: Parent vs. Sub-Agent Reading Division and Script Index
+*Status: Completed*
+- **Script Registry Index**: Appended a detailed Scripts & Utilities directory to [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md) so agents can identify script purposes without opening them.
+- **Division of Reading Labor Explainer**: Injected strict reading rules directing the Parent Agent to open ONLY Module D (Sub-Agent Spawning), leaving Modules A, B, and C to be loaded strictly by stateless sub-agents.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) → Greater Good / Proactive systemic alignment.
+
 ---
-*Note to Self: Always append new intentions at the bottom of the log. When receiving new instructions, read them carefully and add them to the Intent Log before executing.*
+*Note to Self: Always append new intentions at the bottom of the log. When receiving new instructions, read them carefully and add them to the Intent Log before executing.*
+
+### [2026-06-02] Intent 25: Worker 1 Batch 1 (Stories 1 to 5) Re-Evaluation & Format Alignment
+*Status: Completed*
+- **Evidence Formatting Alignment**: Corrected the evidence formatting on Fred Turner's Texan Ideology, Texas Detransition Clinic, and LEGO Smart Play Pokémon to strictly list three explicit items (Stated Ideal, Actual Effect, Actual Ideal) in Post 0.
+- **Strict 250-Character Constraints**: Verified and guaranteed that all 14 posts across the five configurations are strictly under 250 characters each.
+- **Geodesic Path Graphs**: Successfully generated Matplotlib trajectory graphs saved under `graph_png/` and copied to `_Generated_Content/graph_png/` with naming aligned with the story IDs.
+- **Global Registry Synchronization**: Ran `rebuild_registries.py` to recreate `stories_registry.js` and sync both project spaces.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) → Systemic Justice & Productive value creation.
+
+### [2026-06-02] Intent 26: Link Card Layout, High-Precision Graphs, and Humanized Intros Calibration
+*Status: Completed*
+- **External Preview Card Embed Layout**: Updated `aletheia_bot.py` and `control_panel.html` to post and emulator-render external link preview cards under Post 1 and shift the trajectory graph to Post 2 whenever a link is present.
+- **Tick Precision & Graph Regeneration**: Rebuilt all 90+ graph PNGs using the updated `generate_graph.py` with explicit 0.5-precision grid ticks, resolving the overlap issue.
+- **Redundant URL stripping**: Programmatically stripped out `Source:` and `Target Post:` text lines from all local story configurations to optimize character space.
+- **Humanized Intros Calibration**: Re-wrote rules and evaluator prompts in `thread_formatting.md`, `subagent_spawning.md`, and `.agent/rules/bsky-bot-rules.md` to strictly enforce witty, human-style editorial scene-setters and explicitly ban dry candidate summaries.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.6) -> Greater Good / Proactive systemic integrity.
+
+### [2026-06-03] Intent 27: Graph Axis Scales and Change Tracking Staging Script
+*Status: Completed*
+- **Trajectory Axis Scales**: Custom-labeled horizontal and vertical ticks on the Matplotlib trajectory graph in [generate_graph.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/generate_graph.py). Horizontal Morality axis (υ) labels are split over lines to prevent overlap: Everyone (+2.0), Others (+1.0), Other (+0.5), No One (0.0), My Group (-0.5), Me (-1.0), Only Me (-2.0). Vertical Will axis (ψ) labels: Active-Active (+2.0), Passive-Active (+1.0), Neutral (0.0), Passive-Passive (-1.0), Active-Passive (-2.0).
+- **Coordinate Rendering in Title**: Formatted the exact numerical coordinates directly below the Projected Eventuality line in the graph title.
+- **Evaluator Guidelines Update**: Updated [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md) to define these exact scales.
+- **Change Tracking Script**: Added `scratch/track_changes.py` to validate target story JSON changes and report git status.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Proactive value validation.
+
+### [2026-06-03] Intent 28: One-Shot Google AI Studio API Batch Evaluator
+*Status: Completed*
+- **One-Shot Script Creation**: Created `scratch/google_ai_studio_one_shot.py` to perform the entire harvesting, evaluation, graphing, and registry update process in a single Gemini API call to minimize token burn and rate limit errors.
+- **Dynamic Rules Loading**: Engineered the script to read convergence test guidelines (`Convergence-test-v2.md`) and formatting protocols (`thread_formatting.md`) directly from disk at runtime, completely eliminating formatting drift.
+- **Active Model Quota Alignment**: Aligned the script's default model and fallback chain with the user's active Google AI Studio models (Gemini 3.5 Flash, 3 Flash, 3.1 Flash Lite, 2.5 Flash Lite, 2.5 Flash).
+- **Token Minification Engine**: Integrated a markdown parser directly into the loader to strip comments, links, dividers, and alerts from the raw instruction files, reducing context footprint by ~40% (saving thousands of tokens per batch).
+- **Agnes AI REST Integration**: Added a zero-dependency integration for the OpenAI-compatible Agnes AI API endpoint (`agnes-2.0-flash`) as both a selectable target model and a safety fallback if all Gemini quotas are exhausted.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Proactive workflow optimization.
+
+### [2026-06-03] Intent 29: Worker 2 Batch 2 (Stories 5 to 8) Evaluation
+*Status: Completed*
+- **Rigorous 5-Phase Convergence Tests**: Executed 5-Phase Convergence Tests for Batch 2 stories (HHI Shipyard Partnership, 99p Putty Makeup Trick, Nick Jones After Soho House, US Prevents Israel Lebanon Escalation).
+- **14-Post Thread Compilations**: Created conversational, Plain English 14-post threads for each, ensuring posts are strictly under the 250-character limit.
+- **Trajectory Graphing & Synchronization**: Generated Matplotlib trajectory graphs using the updated coordinate scales and synchronized the registry and index JSONs across both workspace directories.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Proactive systemic value validation.
+
+### [2026-06-03] Intent 30: Worker 4 Batch 4 (Stories 13 to 16) Evaluation
+*Status: Completed*
+- **Rigorous 5-Phase Convergence Tests**: Executed 5-Phase Convergence Tests for Batch 4 stories (EU Ukraine Fast-Track Membership, Latter-day Saints USAID Advocacy, Mexico City World Cup Sculptures Damaged, Graze Social News Feed Funding).
+- **14-Post Thread Compilations**: Drafted conversational, Plain English 14-post threads for each, ensuring all posts are strictly under the 250-character limit.
+- **Trajectory Graphing & Synchronization**: Generated Matplotlib trajectory graphs using the updated coordinate scales and synchronized the registry and index JSONs across both workspace directories.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Proactive systemic value validation.
+

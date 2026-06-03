@@ -37,7 +37,7 @@ Every story JSON file saved inside `stories/` or `stories/live/` must be a list 
 
 #### The Exact 14-Post Thread Sequence:
 The thread list (`"posts"`) must consist of exactly 14 posts, structured precisely as follows:
-1. **Post 1 (The Hook):** `[Punchy, human-written one-liner setting the scene]\n\nSubject: [Subject]\nSource: [External Article URL] (or Target Post: [External Article URL] if reply)\nEvidence Standards: [Standards]\n\nPsochic Hegemony Graph`
+1. **Post 1 (The Hook):** `[Punchy, human-written one-liner setting the scene]\n\n[Subject]\nEvidence: [A in 2-5 words], [B in 2-5 words], [C in 2-5 words]`
 2. **Post 2 (The Claim):** `The Claim:\n[Paragraph explaining stated intent]\nStated Judgement: ([claim_u], [claim_psi]) — [Coordinate Label]`
 3. **Post 3 (The Reality):** `The Reality:\n[Paragraph exposing ground-level reality]\nResulting Judgement: ([real_u], [real_psi]) — [Coordinate Label]`
 4. **Post 4 (The Verdict):** `Verdict: [PASS/FAIL] — [Trajectory Path]. [Rich, 1–2 sentence Plain English explanation of the trajectory's structural cause and systemic outcome. Never print just the dry coordinate label; explain why it is happening.]`

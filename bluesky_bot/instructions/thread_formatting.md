@@ -28,7 +28,7 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 
 ## 2. Conversational Formatting Rules (No Robotic Prefixes)
 
-* **BAN on Robotic Titles**: Do not start steps with dry prefixes like `Subject:`, `The Claim:`, `The Reality:`, `What's happening:`, `The Breakdown:`, or `The Trajectory:`.
+* **BAN on Robotic Titles**: Do not start steps with dry prefixes like `Subject:`, `The Claim:`, `The Reality:`, or `What's happening:`. (Headers explicitly outlined in the 14 steps below are permitted).
 * **Natural Human Flow**: Write in clean, conversational Plain English. Use headers only when they are clean and natural (e.g. `The Bright Side:`, `The Poison:`).
 * **Character Caps**: Keep every single step strictly under **250 characters** in the JSON config to prevent dynamic text-splitting errors.
 
@@ -38,18 +38,15 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 
 To maintain the strict 14-element limit on disk, the bot must output the `"posts"` array mapped exactly as follows:
 
-### Element 0: The Hook & Source
-* **Wording**: Punchy, custom, human scene-setter. Print the news Title cleanly and the Source URL.
+### Element 0: The Hook
+* **Wording**: Starts with a custom, punchy, human-style editorial scene-setter one-liner (e.g., exposing a structural framing or irony). Do **NOT** write dry summaries or repeat candidate text. Follow it with the clean news subject title (no "Subject:" prefix) and the evidence standards line.
 * **Metrics**: State the three core actualism parameters: `Evidence: [Stated Ideal in 2-5 words], [Actual Effect in 2-5 words], [Actual Ideal in 2-5 words]`
-* **Graph Tag**: Ends with the exact tag `Psochic Hegemony Graph` on its own line at the very bottom.
+* **Character limit**: Use the saved character space (since the raw URL is omitted and handled natively by the link card embed) to expand the intro into a detailed, premium paragraph (aim for 200-245 characters).
 * **Example**:
-  > LA just ranked #1 in the country for dogs biting postal workers. Again.
+  > LA just ranked #1 in the country for dogs biting postal workers. Again. A classic boundary error where private comfort externalizes public infrastructure risk.
   > 
   > LA Tops Nation in Dog Attacks on Postal Workers Again
-  > Source: https://apnews.com/article/los-angeles-dog-attacks-postal-workers
   > Evidence: pets stay private and harmless, workers attacked in public space, animals secured within property
-  > 
-  > Psochic Hegemony Graph
 
 ### Element 1: The Claim
 * **Wording**: Explains the stated claim organically as a natural paragraph.
@@ -134,14 +131,14 @@ To maintain the strict 14-element limit on disk, the bot must output the `"posts
   > So let me get this straight: you buy a guard dog to keep your house safe, but you're too lazy to fix the fence, so your 'security system' just attacks the guy bringing your Amazon packages? That's not a pet, bro. That's a liability with teeth. Fix your gate.
 
 ### Element 13: Synthesized Resolution Vector
-* **Wording**: Aletheia (the master truth engine) considers both Brothekanon's casual/absurdist observations and Awwthekanon's empathetic healing perspectives to construct a synthesized resolution vector, summarizing the blended path and calculating the final recalculated coordinates.
+* **Wording**: Alethekanon (the master truth engine) considers both Brothekanon's casual/absurdist observations and Awwthekanon's empathetic healing perspectives to construct a synthesized resolution vector, summarizing the blended path and calculating the final recalculated coordinates.
 * **Format**:
   > Synthesized Resolution Vector:
   > Blended Path: [Blended path summary]
   > Final Recalculated Coordinates: ([real_u], [real_psi])
 * **Example**:
   > Synthesized Resolution Vector:
-  > Blended Path: The Path of Deception — Aletheia considers Bro's gate-repair warning and Aww's safety appeal, concluding that stated Good Preference collapses to Greater Evil once physical boundaries fail.
+  > Blended Path: The Path of Deception — Alethekanon considers Bro's gate-repair warning and Aww's safety appeal, concluding that stated Good Preference collapses to Greater Evil once physical boundaries fail.
   > Final Recalculated Coordinates: (-1.0, -1.0)
 
 ---
@@ -162,11 +159,11 @@ To maintain the strict 14-element limit on disk, the bot must output the `"posts
     "mode": "root",
     "status": "COMPLETED DRY RUN",
     "posts": [
-      "Custom hook one-liner setting the scene.\n\nExample Story\nSource: https://www.example.com/news-story\nEvidence: stated ideal, actual effect, actual ideal\n\nPsochic Hegemony Graph",
-      "The Claim:\nStated claim details explaining intent.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The Reality:\nActual reality details revealing structural actions.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Explanation of structural outcome.",
-      "What's happening: Plain English summary of the news event.",
+      "Custom hook one-liner setting the scene.\n\nExample Story\nEvidence: stated ideal, actual effect, actual ideal",
+      "Stated claim details explaining intent organically.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "Actual reality details revealing structural actions organically.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
+      "Verdict: FAIL — The Path of Deception.\nExplanation of structural outcome.",
+      "Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.",
       "The Bright Side:\nNuance or redeeming aspect of the situation.",
       "The Breakdown & Plane Error:\nExplanation of the plane error (WHAT vs WHO).\n\nIt is a structural bait-and-switch: they claim public benefit but extract strictly for themselves.",
       "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results...",

@@ -46,7 +46,36 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
     ax.set_xlim(2.5, -2.5) # Reversed X axis: Left is Positive (+2.0), Right is Negative (-2.0)
     ax.set_ylim(-2.5, 2.5) # Y axis: Top is Positive (+2.0), Bottom is Negative (-2.0)
 
-    # Axes
+    # Explicit Ticks & Grid Lines to ensure high precision alignment (preventing overlap/inversion confusion)
+    x_ticks = [2.0, 1.0, 0.5, 0.0, -0.5, -1.0, -2.0]
+    y_ticks = [2.0, 1.0, 0.0, -1.0, -2.0]
+    
+    ax.set_xticks(x_ticks)
+    ax.set_yticks(y_ticks)
+    
+    x_labels = [
+        "Everyone\n(+2.0)",
+        "Others\n(+1.0)",
+        "Other\n(+0.5)",
+        "No One\n(0.0)",
+        "My Group\n(-0.5)",
+        "Me\n(-1.0)",
+        "Only Me\n(-2.0)"
+    ]
+    y_labels = [
+        "Active-Active (+2.0)",
+        "Passive-Active (+1.0)",
+        "Neutral (0.0)",
+        "Passive-Passive (-1.0)",
+        "Active-Passive (-2.0)"
+    ]
+    
+    ax.set_xticklabels(x_labels, fontsize=8, color='white', ha='center')
+    ax.set_yticklabels(y_labels, fontsize=8, color='white', va='center')
+    
+    ax.grid(True, which='both', color='gray', linestyle=':', linewidth=0.5, alpha=0.3)
+
+    # Axes lines
     ax.axhline(0, color='gray', linewidth=0.5)
     ax.axvline(0, color='gray', linewidth=0.5)
 
@@ -74,10 +103,6 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
     ax.text(1.9, -1.9, "STAGNATION", color='white', fontsize=10, ha='left', va='bottom') # Outer BL
     ax.text(-1.9, -1.9, "CHAOS", color='white', fontsize=10, ha='right', va='bottom') # Outer BR
 
-    # Coordinate Definitions
-    ax.text(1.0 + 0.1, 0.0 + 0.1, "Good Preference\n(+1.0, 0.0)", **font_opts)
-    ax.text(-1.0 - 0.1, 0.0 + 0.1, "Bad Preference\n(-1.0, 0.0)", **font_opts)
-
     # The Judgment Points & Path
 
     # Stated Claim (Origin)
@@ -94,17 +119,12 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
                 xytext=(claim_u, claim_psi), textcoords='data',
                 arrowprops=dict(arrowstyle="->", color="white", linestyle="dashed", linewidth=1.5, connectionstyle="arc3,rad=-0.2"))
 
-    # Calculate midpoint for label
-    mid_u = (claim_u + real_u) / 2
-    mid_psi = (claim_psi + real_psi) / 2
-    ax.text(mid_u, mid_psi, path_name, color='cyan', fontsize=10, ha='center', va='center', bbox=dict(facecolor='#111111', edgecolor='none', pad=1))
-
 
     # Axis labels
-    ax.set_xlabel("Morality (υ): Left + (Universal), Right - (Self)", color='white')
-    ax.set_ylabel("Will (ψ): Top + (Create), Bottom - (Destroy)", color='white')
+    ax.set_xlabel("Morality (υ)", color='white')
+    ax.set_ylabel("Will (ψ)", color='white')
     ax.tick_params(colors='gray')
-    ax.set_title(f"{title}\nProjected Eventuality: {path_name}", color='white', pad=20)
+    ax.set_title(f"{title}\nProjected Eventuality: {path_name}\nStated: ({claim_u:+.1f}, {claim_psi:+.1f})  |  Actual: ({real_u:+.1f}, {real_psi:+.1f})", color='white', pad=25)
 
     # Legend
     legend = ax.legend(handles=[claim_point, real_point], loc='upper right', facecolor='#111111', edgecolor='white', labelcolor='white')
@@ -115,8 +135,8 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename):
 
     plt.tight_layout()
 
-
     plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300)
+    plt.close(fig)
 
 if __name__ == "__main__":
     # Test a Path of Deception

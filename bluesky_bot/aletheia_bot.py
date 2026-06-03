@@ -143,6 +143,8 @@ def save_and_sync_story(thread_config):
                 "graph_img": graph_img,
                 "posts": thread_config.get("posts")
             }
+            if "target_url" in thread_config:
+                registry_story["target_url"] = thread_config["target_url"]
             if "rkeys" in thread_config:
                 registry_story["rkeys"] = thread_config["rkeys"]
             if "post_urls" in thread_config:
@@ -230,7 +232,12 @@ def post_thread(client, thread_config, live=False):
     if not live:
         print("\n--- DRY-RUN OUTPUT (No posts sent to Bluesky) ---")
         for idx, post in enumerate(final_posts, 1):
-            print(f"\n[Post {idx}/{len(final_posts)}] ({len(post)} chars):\n{post}")
+            embed_info = ""
+            if idx == 1:
+                embed_info = f" [Embed: Trajectory Graph]"
+            elif idx == 2 and link:
+                embed_info = f" [Embed: Link Card -> {link}]"
+            print(f"\n[Post {idx}/{len(final_posts)}]{embed_info} ({len(post)} chars):\n{post}")
         print("\nTrajectory graph generated locally. Live posting skipped because --live was not set.")
         thread_config["status"] = "COMPLETED DRY RUN"
     else:
@@ -242,11 +249,36 @@ def post_thread(client, thread_config, live=False):
                 img_data = f.read()
             upload = client.com.atproto.repo.upload_blob(img_data)
             images = [models.AppBskyEmbedImages.Image(alt=f"Alethekanon Psochic Hegemony Assessment Graph for {subject}", image=upload.blob)]
-            embed = models.AppBskyEmbedImages.Main(images=images)
+            graph_embed = models.AppBskyEmbedImages.Main(images=images)
             print("Graph uploaded successfully.")
         except Exception as e:
             print(f"Failed to upload graph: {e}")
             sys.exit(1)
+
+        # Create External Link Preview Card
+        link_embed = None
+        if link:
+            try:
+                desc_text = ""
+                if len(final_posts) > 4:
+                    desc_text = final_posts[4].replace("What's happening:\n", "").strip()
+                else:
+                    desc_text = f"Alethekanon Psochic Hegemony Assessment for {subject}"
+                if len(desc_text) > 200:
+                    desc_text = desc_text[:197] + "..."
+                link_embed = models.AppBskyEmbedExternal.Main(
+                    external=models.AppBskyEmbedExternal.External(
+                        title=subject,
+                        description=desc_text,
+                        uri=link
+                    )
+                )
+                print(f"Created link preview card embed for: {link}")
+            except Exception as ex:
+                print(f"Warning: Failed to create external link embed card: {ex}")
+
+        # first_post_embed always gets the trajectory graph_embed
+        first_post_embed = graph_embed
 
         # 4. Resolve Links for facets (only on the first/root post)
         facets = []
@@ -297,8 +329,8 @@ def post_thread(client, thread_config, live=False):
                 print(f"Failed to resolve reply target: {e}")
                 sys.exit(1)
 
-            # Post first reply with the graph image
-            print("Posting Part 1 (Reply with Graph Embed)...")
+            # Post first reply
+            print("Posting Part 1 (Reply with Link Preview or Graph Embed)...")
             try:
                 reply = client.com.atproto.repo.create_record(
                     models.ComAtprotoRepoCreateRecord.Data(
@@ -308,7 +340,7 @@ def post_thread(client, thread_config, live=False):
                             created_at=client.get_current_time_iso(),
                             text=final_posts[0],
                             reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
-                            embed=embed,
+                            embed=first_post_embed,
                             facets=facets
                         )
                     )
@@ -321,7 +353,7 @@ def post_thread(client, thread_config, live=False):
 
         else:
             # Root Mode: Post standard new stand-alone post on profile timeline
-            print("Posting Part 1 (New Root Thread with Graph Embed)...")
+            print("Posting Part 1 (New Root Thread with Link Preview or Graph Embed)...")
             try:
                 root_post = client.com.atproto.repo.create_record(
                     models.ComAtprotoRepoCreateRecord.Data(
@@ -330,7 +362,7 @@ def post_thread(client, thread_config, live=False):
                         record=models.AppBskyFeedPost.Record(
                             created_at=client.get_current_time_iso(),
                             text=final_posts[0],
-                            embed=embed,
+                            embed=first_post_embed,
                             facets=facets
                         )
                     )
@@ -345,6 +377,11 @@ def post_thread(client, thread_config, live=False):
         # 6. Post subsequent thread parts sequentially
         for i, text in enumerate(final_posts[1:], start=2):
             print(f"Posting Part {i}/{len(final_posts)}...")
+            current_embed = None
+            if i == 2 and link_embed is not None:
+                # Attach the link preview card embed to the second post of the thread
+                current_embed = link_embed
+                print("Attaching link preview card embed to Part 2...")
             try:
                 reply = client.com.atproto.repo.create_record(
                     models.ComAtprotoRepoCreateRecord.Data(
@@ -353,7 +390,8 @@ def post_thread(client, thread_config, live=False):
                         record=models.AppBskyFeedPost.Record(
                             created_at=client.get_current_time_iso(),
                             text=text,
-                            reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref)
+                            reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+                            embed=current_embed
                         )
                     )
                 )

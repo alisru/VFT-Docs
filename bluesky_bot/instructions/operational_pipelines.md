@@ -36,14 +36,13 @@ The main AI agent in the chat workspace reads the harvested candidates from `scr
 
 
 Each spawned evaluator sub-agent:
-1. Reads `bluesky_bot_instructions.md` and `Convergence-test-v2.md` to load the exact guidelines and schemas.
-2. Performs the Gnostic Convergence Test on their assigned 5 stories natively in the workspace (consuming 0 external LLM API tokens).
+1. Reads `bluesky_bot_instructions.md` and `convergence_lite.md` to load the exact guidelines and schemas.
+2. Evaluates the coordinates and canonical path name of their assigned 5 stories internally (consuming 0 external LLM API tokens for math).
 3. Compiles a 14-step JSON factcheck file (status set to `"COMPLETED DRY RUN"`) saved inside `bluesky_bot/stories/`.
-4. Runs a Python command locally calling `draw_graph` from `generate_graph.py` to output trajectory graph images inside `bluesky_bot/graph_png/` and sync them to `_Generated_Content/graph_png/`.
 
 
-### Step 3: Registry Rebuild
-Recompile the indexes and registry database so they sync with the HTML control panel:
+### Step 3: Registry & Graph Rebuild
+Recompile the indexes, registry database, and automatically draw missing trajectory graphs:
 ```bash
 .venv\Scripts\python.exe scratch/rebuild_registries.py
 ```

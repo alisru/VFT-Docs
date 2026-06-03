@@ -1,11 +1,9 @@
-# Active Task List: Aligning /bsky-reply-batch Workflow with OOP Instructions
+# Active Task List: Enhanced Trajectory Graphs and Change-Tracking Push Flag Script
 
-- [x] Update `/bsky-reply-batch` Workflow File
-  - [x] Modify prerequisites section to reference [bluesky_bot_instructions.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/bluesky_bot_instructions.md)
-  - [x] Link Phase 2 (High-Fidelity Convergence Tests) to [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md) and [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md)
-  - [x] Link Phase 3 & 4 (Trajectory Drawing & Registry Update) to [operational_pipelines.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/operational_pipelines.md)
-- [x] Verify changes
-  - [x] Check links inside [bsky-reply-batch.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/workflows/bsky-reply-batch.md)
-  - [x] Ensure git status shows clean diffs
-- [x] Versioning
-  - [x] Commit all changes to git
+- [x] Update `generate_graph.py` to add tick labels and remove Good/Bad Preference labels from the grid.
+- [x] Update `Convergence-test-v2.md` to document the continuous (υ, ψ) morality-will coordinate system scale.
+- [x] Create `scratch/track_changes.py` script for change validation and Git staging.
+- [x] Regenerate all 90 story graph images using Python batch command.
+- [x] Rebuild registries by running `scratch/rebuild_registries.py`.
+- [x] Run the new `scratch/track_changes.py` script to verify everything is green.
+- [x] Update `running_dialogue.md` with Intent 25.

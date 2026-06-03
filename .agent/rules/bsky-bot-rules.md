@@ -20,11 +20,9 @@ Rules for generating Aletheia Bot thread configs and posts. Source of truth: `bl
 
 ## Step 1: The Hook (Critical)
 Must contain ALL of the following in order:
-1. A punchy, human scene-setter sentence.
+1. A punchy, custom, human-style scene-setter one-liner (exposing structural framing, irony, or systemic dynamics). **DO NOT** repeat the subject title or copy/summarize the candidate text dryly.
 2. The news title (no "Subject:" prefix).
-3. `Source: [URL]` (if root mode) or `Target Post: [URL]` (if reply mode). URL must be the REAL, verified external news article URL — never a Bluesky post URL in this field.
-4. The evidence line on its own line: `Evidence: [A in 2-5 words], [B in 2-5 words], [C in 2-5 words]`
-5. The exact tag on its own final line: `Psochic Hegemony Graph`
+3. The evidence line on its own line: `Evidence: [A in 2-5 words], [B in 2-5 words], [C in 2-5 words]`
 
 ## Evidence Line Fills (2-5 words each — HARD LIMIT)
 - [A] = what the actor claims (their stated ideal), in 2-5 concrete words
