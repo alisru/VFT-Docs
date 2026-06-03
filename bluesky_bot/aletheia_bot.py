@@ -199,7 +199,7 @@ def post_thread(client, thread_config, live=False):
             raise ValueError(f"Post {idx} exceeds 300 characters ({len(post)} chars) after splitting:\n{post}")
     print(f"All posts successfully split and validated. Thread post count: {len(final_posts)}")
 
-    # 2. Graph Generation
+    # 2. Graph Generation / Re-use
     # Ensure graph_png/ folder exists in workspace
     script_dir = os.path.dirname(os.path.abspath(__file__))
     bot_graph_dir = os.path.join(script_dir, "graph_png")
@@ -208,22 +208,39 @@ def post_thread(client, thread_config, live=False):
     graph_base_filename = f"{subject.lower().replace(' ', '_').replace('/', '_')}_graph.png"
     graph_filename = os.path.join(bot_graph_dir, graph_base_filename)
     
-    print(f"Generating trajectory graph: {graph_filename}...")
-    try:
-        draw_graph(claim_u, claim_psi, real_u, real_psi, f"Assessment: {subject}", graph_filename)
-        print("Graph generated successfully.")
+    # Check if the graph already exists to avoid redundant regeneration
+    if os.path.exists(graph_filename):
+        print(f"Using existing pre-generated trajectory graph: {graph_filename}")
+        thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
         
-        # Sync graph image to _Generated_Content/graph_png/
+        # Verify sync to _Generated_Content/
         root_dir = os.path.dirname(script_dir)
         gen_graph_dir = os.path.join(root_dir, "_Generated_Content", "graph_png")
         os.makedirs(gen_graph_dir, exist_ok=True)
-        shutil.copy2(graph_filename, os.path.join(gen_graph_dir, graph_base_filename))
-        print("Graph image synchronized to _Generated_Content/graph_png/")
-        
-        # Keep config graph_img updated
-        thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
-    except Exception as e:
-        raise RuntimeError(f"Failed to generate trajectory graph: {e}") from e
+        gen_graph_path = os.path.join(gen_graph_dir, graph_base_filename)
+        if not os.path.exists(gen_graph_path):
+            try:
+                shutil.copy2(graph_filename, gen_graph_path)
+                print("Graph image synchronized to _Generated_Content/graph_png/")
+            except Exception as e:
+                print(f"Warning: Failed to sync existing graph image: {e}")
+    else:
+        print(f"Trajectory graph not found. Generating graph: {graph_filename}...")
+        try:
+            draw_graph(claim_u, claim_psi, real_u, real_psi, f"Assessment: {subject}", graph_filename)
+            print("Graph generated successfully.")
+            
+            # Sync graph image to _Generated_Content/graph_png/
+            root_dir = os.path.dirname(script_dir)
+            gen_graph_dir = os.path.join(root_dir, "_Generated_Content", "graph_png")
+            os.makedirs(gen_graph_dir, exist_ok=True)
+            shutil.copy2(graph_filename, os.path.join(gen_graph_dir, graph_base_filename))
+            print("Graph image synchronized to _Generated_Content/graph_png/")
+            
+            # Keep config graph_img updated
+            thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
+        except Exception as e:
+            raise RuntimeError(f"Failed to generate trajectory graph: {e}") from e
 
     post_rkeys = []
 
