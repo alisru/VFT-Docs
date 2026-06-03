@@ -75,12 +75,18 @@ Each plane is scored as **PASS**, **PARTIAL**, or **FAIL** using internal contra
 
 ### The p·t Moral Primitive (Grounding Definition)
 
-The base moral metric is integrated possibility space over time:
+**p in p·t is a probability mass distribution over future states, not a count of possibilities.** The measurement is whether probability mass is shifting toward or away from better future states over time. Good/bad/evil/saintly are all readings of the direction and force of that shift.
 
-    good  =  Δ(p·t) > 0    →    net expansion of available futures
-    bad   =  Δ(p·t) < 0    →    net contraction of available futures
-    evil  =  Δ(p·t) < 0 before natural end    →    closing possibilities before their time
-    saintly  =  Δ(p·t) > 0 under Δ(p·t) < 0 pressure    →    holding possibilities open against active closure
+    good    =  Δ(p·t) > 0 (passive)   →  probability mass shifts toward better futures naturally
+    bad     =  Δ(p·t) < 0 (passive)   →  probability mass drifts toward worse futures, usually by neglect
+    evil    =  Δ(p·t) < 0 (active, premature)  →  probability mass is forced away from better futures before they resolve
+    saintly =  Δ(p·t) > 0 (active, under Δ(p·t) < 0 pressure)  →  probability mass held on better futures against active closure force
+
+**Neutral is not flat.** Neutral = maintaining the existing probability distribution over time. Within neutral, two stable strategies:
+- **Conservative neutral**: adds things that worked before — restoring proven expansions, reproducing what previously shifted mass toward better states. Lower variance, backward-looking HOW.
+- **Innovative neutral**: adds new things that could be better — exploring untested expansions, probing for new attractors in possibility space. Higher variance, forward-looking HOW.
+
+Both produce Δ(p·t) ≈ 0 net, but interact differently over time. Conservative neutral in a declining system gradually becomes bad (proven patterns stop working). Innovative neutral carries optionality value not visible in current Δ.
 
 The (υ, ψ) coordinate is the two-dimensional decomposition of this scalar:
 - **υ** = who receives the p·t expansion (distribution/radius axis)
