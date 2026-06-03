@@ -4,10 +4,12 @@
 
 The base moral metric is integrated possibility space over time.
 
-    good  =  Δ(p·t) > 0    →    net expansion of available futures
-    bad   =  Δ(p·t) < 0    →    net contraction of available futures
-    evil  =  Δ(p·t) < 0 before natural end    →    closing possibilities before their time
-    saintly  =  Δ(p·t) > 0 under Δ(p·t) < 0 pressure    →    keeping good possibilities open in the face of evil
+**p is a probability mass distribution over future states, not a count of possibilities.** The measurement is whether probability mass is shifting toward or away from better future states over time — and at what rate.
+
+    good    =  Δ(p·t) > 0 (passive)   →  probability mass shifts toward better futures naturally
+    bad     =  Δ(p·t) < 0 (passive)   →  probability mass drifts toward worse futures, usually by neglect
+    evil    =  Δ(p·t) < 0 (active, premature)  →  probability mass is forced away from better futures before they resolve
+    saintly =  Δ(p·t) > 0 (active, under Δ(p·t) < 0 pressure)  →  probability mass held on better futures against active closure force
 
 No reference to orthodox or culturally loaded definitions of harm, flourishing, dignity, or any other moral term. All such terms are derived from this single quantity where needed. Harm is not a separate primitive — it is inverse benefit, the removal or shrinking of benefit, Δ(p·t) < 0 read from the recipient end.
 
@@ -45,6 +47,27 @@ Destruction of a tyranny is a p·t expansion event. The label applied to the mec
 Good and bad are outcomes. Evil and saintly are actors.
 
 Evil and saintly operate at the same energy level, opposite vectors. They are the only two positions that require a fully engaged will. This is why both are structurally rare — passive drift produces good and bad. Evil and saintly both require someone to show up and push.
+
+**The will within the activity is what defines the good-saintly distinction, not the ψ level.** Saintly is not a higher energy state than good — it is the same constructive will operating under active contraction pressure. An actor holding ψ = +1.0 in a system actively trying to close the futures they are keeping open is saintly. The environmental condition is the classifier, not the force magnitude.
+
+---
+
+## Neutral
+
+Neutral = Δ(p·t) ≈ 0 — the existing probability distribution over future states is maintained rather than expanded or contracted.
+
+Neutral is not flat. Within neutral, two stable sub-strategies:
+
+| Sub-type | HOW | Direction | Risk profile |
+|---|---|---|---|
+| **Conservative neutral** | Adds things that worked before | Backward-looking — restoring proven expansions, reproducing what previously shifted mass toward better states | Lower variance. Stable in stable systems. Becomes bad in declining systems as proven patterns degrade without replacement. |
+| **Innovative neutral** | Adds new things that could be better | Forward-looking — exploring untested expansions, probing for new attractors in possibility space | Higher variance. Carries optionality value not visible in current Δ. Becomes good if the new attractor is found; becomes bad if resources are consumed without convergence. |
+
+Both produce Δ(p·t) ≈ 0 at the point of measurement, but their trajectories diverge over time depending on the system state:
+- **Conservative neutral in a stable system**: holds. Probability mass maintained on proven attractors.
+- **Conservative neutral in a declining system**: gradually becomes bad. The proven patterns stop working; mass drifts toward worse futures without replacement.
+- **Innovative neutral in a cooperative system**: has positive expected value even at Δ ≈ 0 — the option to find a better attractor is worth the variance.
+- **Innovative neutral under active closure pressure**: can become saintly if the innovation specifically holds open a future the system is trying to foreclose.
 
 ---
 
