@@ -1,8 +1,28 @@
-# Convergence Test Lite (Evaluation Rubric)
+# Convergence Test Lite (Operational Guide)
 
-This is the minimal operational constraint rubric for evaluating a claim. Use this document to determine the exact coordinates of a story and its trajectory.
+This is the streamlined operational guide for executing the Convergence Test. Use this protocol to structurally evaluate a claim and determine its objective coordinates.
 
-## The Axis Scales
+## 1. The 7 Interrogative Planes
+
+Every idea, claim, or system must be tested across seven structural planes to see if its logic holds together.
+* **Q1 (WHO)**: Will and Direction (The operator/beneficiary)
+* **Q2 (WHAT)**: Faith and Probability (The action/claim)
+* **Q3 (WHERE)**: Matter and Distance (The physical domain)
+* **Q4 (WHY)**: Meaning and Resonance (Stated intent)
+* **Q5 (HOW)**: Count and Consistency (The execution method)
+* **Q6 (CAUSE)**: Sequence and Causality (Origin/History)
+* **Q7 (EFFECT)**: Passion and Consequence (Cumulative result)
+
+## 2. Core Protocol: Action-Effect Sequence Reading
+
+To find the truth, separate the **Stated Intent (WHY)** from the **Actual Effect Chain**. 
+* **The Anti-Bullshit Property**: Every abstraction must eventually produce a physical WHERE, a causal CAUSE, and an observable EFFECT. If it cannot, or if it produces a contradictory effect, you have found the location of the lie.
+* **Phantom WHO Fill**: If an actor claims to benefit the public (Stated WHO) but the actual physical effects (EFFECT) only benefit themselves or extract from others, the stated WHO is a phantom fill. The effect chain reveals the true operator.
+* **Plane Errors**: A structural deception often relies on a "Plane Error"—framing a problem as belonging to one plane when it actually belongs to another. (e.g., claiming a problem is an unpredictable physical accident [WHAT/WHERE] to hide that it is actually a failure of human responsibility/will [WHO]).
+
+## 3. The Axis Scales (Mapping the Coordinates)
+
+Calculate the coordinates for both the **Stated Claim** and the **Actual Reality**.
 
 **υ axis (Morality) — who benefits:**
 * **+2.0**: Everyone / All beings (Systemic Justice)
@@ -14,20 +34,20 @@ This is the minimal operational constraint rubric for evaluating a claim. Use th
 * **-2.0**: Only Me (Tyranny / Pure Extraction)
 
 **ψ axis (Will) — what the energy is doing:**
-* **+2.0**: Active-Active (Actively creating systemic value for all / Productive Justice)
+* **+2.0**: Active-Active (Actively creating systemic value for all)
 * **+1.0**: Passive-Active / Proactive (Creating, building, acting)
 * **0.0**: Neutral (No meaningful force applied)
 * **-1.0**: Passive-Passive / Withholding (Passive, allowing, suppressing, withholding)
-* **-2.0**: Active-Passive / Destructive (Actively destroying or extracting value / Chaos / Collapse)
+* **-2.0**: Active-Passive / Destructive (Actively destroying or extracting value / Chaos)
 
-## Zone Anchors & Target Terminals
+## 4. Zone Anchors & Target Terminals
 * **Greater Good**: (+1.0, +1.0)
 * **Greatest Lie**: (-1.0, +1.0)
 * **Lesser Good**: (+1.0, -1.0)
 * **Greater Evil**: (-1.0, -1.0)
 
-## Path Names (Trajectories)
-When mapping the start (Stated Claim) to the end (Actual Reality):
+## 5. Path Names (Trajectories)
+When mapping the start (Stated Claim) to the end (Actual Reality), name the resulting trajectory:
 * **The Path of Grace**: Stated is Lesser Good (+,-), Reality is Greater Good (+,+)
 * **The Path of The Fall**: Stated is Greater Good (+,+), Reality is Greatest Lie (-,+) or Lesser Good (+,-)
 * **The Path of Delusion**: Stated is Greatest Lie (-,+), Reality is Greater Evil (-,-)
