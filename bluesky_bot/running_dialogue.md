@@ -275,6 +275,13 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Agnes AI REST Integration**: Added a zero-dependency integration for the OpenAI-compatible Agnes AI API endpoint (`agnes-2.0-flash`) as both a selectable target model and a safety fallback if all Gemini quotas are exhausted.
 - **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Proactive workflow optimization.
 
+### [2026-06-03] Intent 29: Chronological Registry Sorting by File Time
+*Status: Completed*
+- **File-Time Sorting Implementation**: Modified `scratch/rebuild_registries.py` to sort JSON configuration files by their modification/creation time (`os.path.getmtime`) instead of alphabetically before writing them to the indexes and `stories_registry.js`.
+- **Temporal Alignment**: Enabled the "Newest First" and "Oldest First" sorting filters in the HTML control panel to accurately reflect the actual chronological order of evaluations.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Proactive value validation.
+
+
 ### [2026-06-03] Intent 29: Worker 2 Batch 2 (Stories 5 to 8) Evaluation
 *Status: Completed*
 - **Rigorous 5-Phase Convergence Tests**: Executed 5-Phase Convergence Tests for Batch 2 stories (HHI Shipyard Partnership, 99p Putty Makeup Trick, Nick Jones After Soho House, US Prevents Israel Lebanon Escalation).
@@ -288,4 +295,46 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **14-Post Thread Compilations**: Drafted conversational, Plain English 14-post threads for each, ensuring all posts are strictly under the 250-character limit.
 - **Trajectory Graphing & Synchronization**: Generated Matplotlib trajectory graphs using the updated coordinate scales and synchronized the registry and index JSONs across both workspace directories.
 - **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Proactive systemic value validation.
-
+
+### [2026-06-03] Intent 31: Auto-Move to Live Directory Default Configuration
+*Status: Completed*
+- **Default Path Argument**: Configured the default path for the `--move-to` argument inside `bluesky_bot/post_batch.py` to point directly to `bluesky_bot/stories/live/`.
+- **User Interface Optimization**: Eliminated the need to manually specify the `--move-to` directory when executing live batch posts.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of developer/bot tooling.
+
+### [2026-06-03] Intent 32: Default Source Directory Configuration
+*Status: Completed*
+- **Default Folder Argument**: Set default folder directory in `post_batch.py` to `bluesky_bot/stories/`.
+- **Precedence Optimization**: Reordered validation checks so that explicit file targets (`--files`) always override the default folder fallback.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of developer/bot tooling.
+
+### [2026-06-03] Intent 33: Graceful Error Recovery in Batch Posting
+*Status: Completed*
+- **Exception-Based Terminations**: Replaced hardcoded `sys.exit(1)` exits inside `post_thread` with standard Python exceptions (`ValueError` / `RuntimeError`).
+- **Batch Processing Resilience**: Enabled `post_batch.py` to catch thread-specific failures (such as deleted target source posts) and safely continue posting subsequent threads in the batch queue.
+- **Standalone Clean Exits**: Updated `main()` in `aletheia_bot.py` to handle exceptions cleanly without exposing multi-line raw tracebacks to command line users.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of developer/bot tooling.
+
+### [2026-06-03] Intent 34: Auto-Fallback to Timeline Posting
+*Status: Completed*
+- **Reply Resolution Fallback**: Implemented exception-catching around target post resolution. If a target post has been deleted or cannot be resolved, the bot prints a warning and automatically falls back to posting the thread as a standalone root thread on the bot's timeline.
+- **Continuous Execution**: Assured that reply target deletion does not crash the script or require manual intervention to bypass/override the thread's mode.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of developer/bot tooling.
+
+### [2026-06-03] Intent 35: Live Batch Post Helper Script
+*Status: Completed*
+- **Helper Script Creation**: Created `Post-LiveBatch.ps1` in the project root directory.
+- **Dynamic Parameter Prompts**: Engineered the script to prompt users for min/max delay parameters in PowerShell with built-in fallbacks to defaults (10 and 30 seconds).
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of developer/bot tooling.
+
+### [2026-06-03] Intent 36: Dynamic Delay CLI Delegation
+*Status: Completed*
+- **Dynamic Argument Construction**: Modified `Post-LiveBatch.ps1` to construct the `--min-delay` and `--max-delay` flags dynamically.
+- **Python-Defined Default Fallback**: Ensured that leaving delay inputs blank in the prompt completely omits the parameters from the execution command, delegating default values to whatever is defined inside `post_batch.py` at runtime.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of developer/bot tooling.
+
+### [2026-06-03] Intent 37: Double-Clickable Batch File Wrapper
+*Status: Completed*
+- **Batch Wrapper Creation**: Created `Post-LiveBatch.bat` in the project root directory.
+- **Path and Shell Management**: Configured the script to automatically set the working directory to the project folder, invoke the interactive PowerShell script with the Bypass execution policy, and pause at the end so users can review the terminal output.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of developer/bot tooling.

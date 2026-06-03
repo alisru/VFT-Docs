@@ -196,8 +196,7 @@ def post_thread(client, thread_config, live=False):
         
     for idx, post in enumerate(final_posts, 1):
         if len(post) > 300:
-            print(f"ERROR: Post {idx} exceeds 300 characters ({len(post)} chars) after splitting:\n{post}")
-            sys.exit(1)
+            raise ValueError(f"Post {idx} exceeds 300 characters ({len(post)} chars) after splitting:\n{post}")
     print(f"All posts successfully split and validated. Thread post count: {len(final_posts)}")
 
     # 2. Graph Generation
@@ -224,8 +223,7 @@ def post_thread(client, thread_config, live=False):
         # Keep config graph_img updated
         thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
     except Exception as e:
-        print(f"Failed to generate trajectory graph: {e}")
-        sys.exit(1)
+        raise RuntimeError(f"Failed to generate trajectory graph: {e}") from e
 
     post_rkeys = []
 
@@ -252,8 +250,7 @@ def post_thread(client, thread_config, live=False):
             graph_embed = models.AppBskyEmbedImages.Main(images=images)
             print("Graph uploaded successfully.")
         except Exception as e:
-            print(f"Failed to upload graph: {e}")
-            sys.exit(1)
+            raise RuntimeError(f"Failed to upload graph: {e}") from e
 
         # Create External Link Preview Card
         link_embed = None
@@ -296,10 +293,10 @@ def post_thread(client, thread_config, live=False):
                 )
 
         # 5. Determine Posting References based on Mode
+        is_reply = False
         if mode == "reply":
             if not target_url:
-                print("ERROR: target_url is required when mode is 'reply'.")
-                sys.exit(1)
+                raise ValueError("target_url is required when mode is 'reply'.")
 
             print(f"Resolving target post: {target_url}...")
             try:
@@ -325,10 +322,12 @@ def post_thread(client, thread_config, live=False):
 
                 parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
                 print("Resolved target reference correctly.")
+                is_reply = True
             except Exception as e:
-                print(f"Failed to resolve reply target: {e}")
-                sys.exit(1)
+                print(f"Warning: Failed to resolve reply target ({e}). Falling back to root thread mode on our timeline...")
+                is_reply = False
 
+        if is_reply:
             # Post first reply
             print("Posting Part 1 (Reply with Link Preview or Graph Embed)...")
             try:
@@ -348,8 +347,7 @@ def post_thread(client, thread_config, live=False):
                 parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
                 post_rkeys.append(reply.uri.split('/')[-1])
             except Exception as e:
-                print(f"Failed to post root reply: {e}")
-                sys.exit(1)
+                raise RuntimeError(f"Failed to post root reply: {e}") from e
 
         else:
             # Root Mode: Post standard new stand-alone post on profile timeline
@@ -371,8 +369,7 @@ def post_thread(client, thread_config, live=False):
                 parent_ref = root_ref
                 post_rkeys.append(root_post.uri.split('/')[-1])
             except Exception as e:
-                print(f"Failed to post root thread: {e}")
-                sys.exit(1)
+                raise RuntimeError(f"Failed to post root thread: {e}") from e
 
         # 6. Post subsequent thread parts sequentially
         for i, text in enumerate(final_posts[1:], start=2):
@@ -399,8 +396,7 @@ def post_thread(client, thread_config, live=False):
                 post_rkeys.append(reply.uri.split('/')[-1])
                 time.sleep(1) # Slight pause to ensure strict chronologic ordering in API database
             except Exception as e:
-                print(f"Failed to post part {i}: {e}")
-                sys.exit(1)
+                raise RuntimeError(f"Failed to post part {i}: {e}") from e
 
         handle = client.me.handle
         thread_config["rkeys"] = post_rkeys
@@ -461,7 +457,11 @@ def main():
 
     # Process all threads
     for thread in threads:
-        post_thread(client, thread, live=args.live)
+        try:
+            post_thread(client, thread, live=args.live)
+        except Exception as e:
+            print(f"ERROR: {e}")
+            sys.exit(1)
 
     print("\nAll threads processed successfully!")
 

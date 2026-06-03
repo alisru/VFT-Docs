@@ -17,11 +17,11 @@ from atproto import Client
 def main():
     parser = argparse.ArgumentParser(description="Aletheia Bot Batch Posting Scheduler")
     parser.add_argument("--files", nargs="+", help="List of factcheck JSON filenames to post (e.g., factcheck_volvo.json)")
-    parser.add_argument("--folder", type=str, help="Path to folder containing JSON files to post (e.g. bluesky_bot/stories/ready)")
-    parser.add_argument("--min-delay", type=int, default=10, help="Minimum delay between different threads in seconds (default: 10)")
-    parser.add_argument("--max-delay", type=int, default=30, help="Maximum delay between different threads in seconds (default: 30)")
+    parser.add_argument("--folder", type=str, default=os.path.join(script_dir, "stories"), help="Path to folder containing JSON files to post (default: bluesky_bot/stories)")
+    parser.add_argument("--min-delay", type=int, default=5, help="Minimum delay between different threads in seconds (default: 10)")
+    parser.add_argument("--max-delay", type=int, default=10, help="Maximum delay between different threads in seconds (default: 30)")
     parser.add_argument("--live", action="store_true", help="Set to actually post live (dry-run by default)")
-    parser.add_argument("--move-to", type=str, help="Folder to move successfully posted files to (e.g. bluesky_bot/stories/live)")
+    parser.add_argument("--move-to", type=str, default=os.path.join(script_dir, "stories", "live"), help="Folder to move successfully posted files to (default: bluesky_bot/stories/live)")
     args = parser.parse_args()
 
     from dotenv import load_dotenv
@@ -47,15 +47,7 @@ def main():
 
     # 1. Resolve files
     files_to_post = []
-    if args.folder:
-        if not os.path.exists(args.folder):
-            print(f"ERROR: Folder not found: {args.folder}")
-            sys.exit(1)
-        for f in sorted(os.listdir(args.folder)):
-            if f.endswith(".json") and f != "index.json":
-                files_to_post.append(os.path.join(args.folder, f))
-        print(f"Found {len(files_to_post)} JSON files in folder '{args.folder}'.")
-    elif args.files:
+    if args.files:
         for f in args.files:
             # Resolve path
             path = f
@@ -68,6 +60,14 @@ def main():
                 files_to_post.append(path)
             else:
                 print(f"Warning: File not found and skipped: {f}")
+    elif args.folder:
+        if not os.path.exists(args.folder):
+            print(f"ERROR: Folder not found: {args.folder}")
+            sys.exit(1)
+        for f in sorted(os.listdir(args.folder)):
+            if f.endswith(".json") and f != "index.json":
+                files_to_post.append(os.path.join(args.folder, f))
+        print(f"Found {len(files_to_post)} JSON files in folder '{args.folder}'.")
     else:
         print("ERROR: Either --files or --folder must be specified.")
         sys.exit(1)
