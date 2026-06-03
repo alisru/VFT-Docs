@@ -73,24 +73,53 @@ Each plane is scored as **PASS**, **PARTIAL**, or **FAIL** using internal contra
 
 ## Phase 2 — Vector Verification
 
-**υ axis — SCOPE OF BENEFIT (who and how many benefit), stripped of stated intent:**
+### The p·t Moral Primitive (Grounding Definition)
 
-υ is a population scope scale, not a moral quality scale. Score by the actual population the claim addresses, not by whether the effect is positive or negative. A claim that addresses one person cannot exceed ±0.5 on υ regardless of how beneficial or harmful it is. A claim that addresses a specific community cannot exceed ±1.0. Only claims with genuine systemic reach across all beings justify ±2.0.
+The base moral metric is integrated possibility space over time:
 
-* **+2.0**: Everyone / All beings (Systemic Justice)
-* **+1.0**: Others / Other Beings — broad population, not personally motivated (Greater Good)
-* **+0.5**: Other / A Being — addresses one person or a narrow group
-* **0.0**: No One (Neutral)
-* **-0.5**: My Group only — benefit extracted at cost to others outside the group (Lesser Evil)
-* **-1.0**: Me — self-serving; others bear the cost
-* **-2.0**: Only Me — pure extraction from all others (Tyranny)
+    good  =  Δ(p·t) > 0    →    net expansion of available futures
+    bad   =  Δ(p·t) < 0    →    net contraction of available futures
+    evil  =  Δ(p·t) < 0 before natural end    →    closing possibilities before their time
+    saintly  =  Δ(p·t) > 0 under Δ(p·t) < 0 pressure    →    holding possibilities open against active closure
 
-**ψ axis — what the energy is doing (Will):**
-* **+2.0**: Active-Active (Actively creating systemic value for all / Productive Justice)
-* **+1.0**: Passive-Active / Proactive (Creating, building, acting)
-* **0.0**: Neutral (No meaningful force applied)
-* **-1.0**: Passive-Passive / Withholding (Passive, allowing, suppressing, withholding)
-* **-2.0**: Active-Passive / Destructive (Actively destroying or extracting value / Chaos)
+The (υ, ψ) coordinate is the two-dimensional decomposition of this scalar:
+- **υ** = who receives the p·t expansion (distribution/radius axis)
+- **ψ** = the force direction of the action (energy axis)
+
+Good and bad are **passive outcomes** (can occur without intent). Evil and saintly require an **engaged will** — this is why ψ = ±2.0 is structurally rare. Passive drift produces the ±1.0 band. Only someone actively pushing reaches ±2.0.
+
+**The Chain Rule:** If any node in the causal chain produces Δ(p·t) < 0 and is not cancelled, the chain is bad regardless of the stated intent of any other node. This is not an average — it is a minimum.
+
+---
+
+**υ axis — SCOPE OF BENEFIT: radial field effect radius, stripped of stated intent:**
+
+υ is a population scope scale, not a moral quality scale. υ measures the radius of the p·t expansion field — who and how many actually receive the expansion. The scope ceiling is the importance ceiling: a claim addressed to one person structurally cannot matter more than ±0.5 regardless of how extreme its local effect is.
+
+Score υ as a weighted aggregate across scope levels (systemic/group/individual). When scope levels disagree, the aggregate pulls toward the failing level. Do not round to zone anchors — measure the actual field radius.
+
+| υ | Beneficiary | Field effect |
+|---|---|---|
+| +2.0 | Everyone / All beings | Field expands to maximum radius (Systemic Justice) |
+| +1.0 | Others / Other Beings — broad population, not personally motivated | Field expands to network (Greater Good) |
+| +0.5 | Other / A Being — one person or narrow group | Field expands to adjacent node |
+| 0.0 | No One | Field static (Neutral) |
+| -0.5 | My Group only — benefit extracted at cost to others | Field contracts to local cluster (Lesser Evil) |
+| -1.0 | Me — self-serving; others bear the cost | Field contracts to point |
+| -2.0 | Only Me — pure extraction from all others | Field contracts to point, maximum extraction (Tyranny) |
+
+**Scope caps:** A single-person claim cannot exceed ±0.5. A community-level claim cannot exceed ±1.0. Only genuine systemic reach justifies ±2.0.
+
+---
+
+**ψ axis — force direction of the p·t vector (Will/Energy):**
+
+ψ measures the directional force applied — whether the actor is actively expanding or contracting possibility space. The four positions map as:
+- ψ = +2.0 → Saintly: actively maintaining expansion under contraction pressure
+- ψ = +1.0 → Good (active): proactive creation, building, acting
+- ψ = 0.0 → Neutral: no meaningful force applied
+- ψ = −1.0 → Bad (passive): allowing, suppressing, withholding
+- ψ = −2.0 → Evil: actively destroying or closing possibility before its time
 
 **WHERE modifies υ:** Energy injected into a structurally corrupt WHERE has its υ pulled toward negative regardless of intent.
 
