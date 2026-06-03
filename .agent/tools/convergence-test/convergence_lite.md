@@ -120,12 +120,20 @@ Score υ as a weighted aggregate across scope levels (systemic/group/individual)
 
 **ψ axis — force direction of the p·t vector (Will/Energy):**
 
-ψ measures the directional force applied — whether the actor is actively expanding or contracting possibility space. The four positions map as:
-- ψ = +2.0 → Saintly: actively maintaining expansion under contraction pressure
-- ψ = +1.0 → Good (active): proactive creation, building, acting
-- ψ = 0.0 → Neutral: no meaningful force applied
-- ψ = −1.0 → Bad (passive): allowing, suppressing, withholding
-- ψ = −2.0 → Evil: actively destroying or closing possibility before its time
+ψ measures the directional force of the will applied — active/passive, constructive/destructive. The axis itself is unchanged:
+* **+2.0**: Active-Active (Actively creating systemic value for all / Productive Justice)
+* **+1.0**: Passive-Active / Proactive (Creating, building, acting)
+* **0.0**: Neutral (No meaningful force applied)
+* **-1.0**: Passive-Passive / Withholding (Passive, allowing, suppressing, withholding)
+* **-2.0**: Active-Passive / Destructive (Actively destroying or extracting value / Chaos)
+
+The four positions (good/bad/evil/saintly) are **not** a 1:1 mapping onto ψ levels. They emerge from what the will *produces* given the environmental conditions:
+- **Good**: will directed constructively, p·t expanding naturally (positive ψ in a cooperative or neutral environment)
+- **Saintly**: the same constructive will operating **under active contraction pressure** — good-in-context against evil force. Defined by the environmental condition, not a higher ψ level.
+- **Bad**: p·t declining passively — will absent, low, or misdirected; no active closure required
+- **Evil**: will actively forcing Δ(p·t) < 0 before natural end — requires engaged will at negative ψ
+
+The will within the activity is what elevates good into saintly. You can hold ψ = +1.0 and be saintly if the system is actively trying to close the futures you are holding open.
 
 **WHERE modifies υ:** Energy injected into a structurally corrupt WHERE has its υ pulled toward negative regardless of intent.
 
