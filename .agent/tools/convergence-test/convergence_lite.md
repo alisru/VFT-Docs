@@ -18,6 +18,39 @@ Streamlined for batch evaluation. All mathematical scoring (`V_pass`, `V_Qn`, `R
 
 ---
 
+## The Measurement Chain
+
+The convergence test traverses the following chain and catches where it breaks. Stated intentions are the output of the cellular comparator (the actor's "want?" signal) — they are **not inputs to the measurement**. They become claims that require actions to feed them. If the actions don't produce p·t expansion consistent with the stated intention, the intention is a phantom fill.
+
+```
+Stated intention (cellular comparator: want? → claimed benefit)
+  ↓  NOT an input — becomes a CLAIM requiring action to verify
+
+Actual action chain (Q1 WHO, Q2 WHAT, Q3 WHERE, Q5 HOW, Q6 CAUSE)
+  ↓  produces actual
+
+Probability mass over future states (p)
+  ↓  integrated over
+
+Time (p·t)
+  ↓  decomposed into
+
+radius (υ) [who receives the expansion]
+  × force direction (ψ) [how it is directed]
+  ↓  measured against
+
+Scope ceiling (importance cap — population addressed caps the υ value)
+  ↓  weighted across
+
+Micro / meso / macro scope levels
+  ↓  outputs
+
+(claim_υ, claim_ψ) → (real_υ, real_ψ)  as decimal coordinates
+Gap between stated and actual = ΔH (Hypocrisy Gap)
+```
+
+---
+
 ## Before Each Run
 
 **Default standards (always applied):**

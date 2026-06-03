@@ -44,7 +44,7 @@ Each spawned evaluator sub-agent:
 ### Step 3: Registry & Graph Rebuild
 Recompile the indexes, registry database, and automatically draw missing trajectory graphs:
 ```bash
-.venv\Scripts\python.exe scratch/rebuild_registries.py
+.venv\Scripts\python.exe bluesky_bot/rebuild_registries.py
 ```
 
 ### Step 4: User Review (Safety Gate)

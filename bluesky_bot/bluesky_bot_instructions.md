@@ -30,7 +30,7 @@ This file is the master index and entry point for the Aletheia Bot. All operatio
 Run these scripts in order. You do not need to open the script files — the descriptions below are sufficient.
 
 * **`scratch/harvest_candidates_script.py`**: Logs into Bluesky, fetches fresh English news posts from verified feeds, de-duplicates against historical stories, and writes up to 25 candidates to `scratch/harvested_candidates.json`. Run this first.
-* **`scratch/rebuild_registries.py`**: Clears old registries and recompiles all `factcheck_*.json` files in `bluesky_bot/stories/` into `stories_registry.js` and updates control panel indexes. Run this after sub-agents finish.
+* **`bluesky_bot/rebuild_registries.py`**: Clears old registries and recompiles all `factcheck_*.json` files in `bluesky_bot/stories/` into `stories_registry.js` and updates control panel indexes. Run this after sub-agents finish.
 * **`bluesky_bot/aletheia_bot.py`**: The core CLI posting engine. Validates character limits, uploads graphs, and posts threads live (`--live`) or dry-run (`--dry-run`). Used for individual story posting, not batch runs.
 * **`bluesky_bot/generate_graph.py`**: Matplotlib module called by sub-agents to draw trajectory graphs. Sub-agents call this directly — you do not need to touch it.
 * **`bluesky_bot/orchestrate_batch.py`**: **LOCKED. Do not use.** Legacy API wrapper with hardcoded `sys.exit(1)` to prevent external Gemini API token usage.

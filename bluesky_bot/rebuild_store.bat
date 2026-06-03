@@ -5,11 +5,11 @@ echo ==================================================
 cd /d "%~dp0"
 
 if exist ".venv\Scripts\python.exe" (
-    .venv\Scripts\python scratch\rebuild_registries.py
+    .venv\Scripts\python rebuild_registries.py
 ) else if exist "..\.venv\Scripts\python.exe" (
-    ..\.venv\Scripts\python ..\scratch\rebuild_registries.py
+    ..\.venv\Scripts\python rebuild_registries.py
 ) else (
-    python ..\scratch\rebuild_registries.py
+    python rebuild_registries.py
 )
 
 echo ==================================================
