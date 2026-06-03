@@ -23,7 +23,8 @@ Streamlined for batch evaluation. All mathematical scoring (`V_pass`, `V_Qn`, `R
 **Default standards (always applied):**
 - [A] Stated ideal — what the actor claims to stand for
 - [B] Actions within context — what the actor actually does
-- [C] Objective ideal — what first-principles version of the stated goal requires
+- [C] Objective ideal — what first-principles version of the stated goal required
+- [+N] Additional standards as contextually required
 
 **Starting depth:** Q only (sufficient for news story batch evaluation).
 
@@ -72,14 +73,17 @@ Each plane is scored as **PASS**, **PARTIAL**, or **FAIL** using internal contra
 
 ## Phase 2 — Vector Verification
 
-**υ axis — who benefits (Morality), stripped of stated intent:**
+**υ axis — SCOPE OF BENEFIT (who and how many benefit), stripped of stated intent:**
+
+υ is a population scope scale, not a moral quality scale. Score by the actual population the claim addresses, not by whether the effect is positive or negative. A claim that addresses one person cannot exceed ±0.5 on υ regardless of how beneficial or harmful it is. A claim that addresses a specific community cannot exceed ±1.0. Only claims with genuine systemic reach across all beings justify ±2.0.
+
 * **+2.0**: Everyone / All beings (Systemic Justice)
-* **+1.0**: Others / Other Beings (Greater Good)
-* **+0.5**: Other / A Being
+* **+1.0**: Others / Other Beings — broad population, not personally motivated (Greater Good)
+* **+0.5**: Other / A Being — addresses one person or a narrow group
 * **0.0**: No One (Neutral)
-* **-0.5**: My Group (Lesser Evil)
-* **-1.0**: Me
-* **-2.0**: Only Me (Tyranny / Pure Extraction)
+* **-0.5**: My Group only — benefit extracted at cost to others outside the group (Lesser Evil)
+* **-1.0**: Me — self-serving; others bear the cost
+* **-2.0**: Only Me — pure extraction from all others (Tyranny)
 
 **ψ axis — what the energy is doing (Will):**
 * **+2.0**: Active-Active (Actively creating systemic value for all / Productive Justice)
