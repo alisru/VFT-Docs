@@ -39,7 +39,7 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
 ## 3. Evaluator Sub-Agents (Role: `Batch Evaluator Worker [ID]`)
 
 * **Objective**: Evaluate a dedicated batch of 5 stories offline using the Gnostic Convergence Test framework.
-* **Constraints**: Inherit workspace, strict offline mode (0 LLM API calls), 14-step paragraph structure, draw graphs locally.
+* **Constraints**: Inherit workspace, strict offline mode (0 LLM API calls), 14-step paragraph structure, output JSON to chat (do NOT write files).
 * **Context / Inputs to Provide**: Provide the exact array indices (0-based) from `harvested_candidates.json` that the sub-agent is responsible for.
 * **Prompt Template**:
   ```markdown
@@ -54,7 +54,7 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   #### Core Constraints:
   1. **Strict Offline Mode**: You are strictly prohibited from calling any LLM APIs, external AI endpoints, or executing AI Studio scripts. All evaluations must be performed natively using your own reasoning.
   2. **Batch Boundary**: Evaluate *only* the 5 stories in your assigned batch. Do not touch or evaluate stories outside your range.
-  3. **Registry Updates**: Save each factcheck JSON file individually and compile the trajectory graph.
+  3. **No File Writing**: You are strictly prohibited from calling any file writing tools (like write_to_file or edit tools) or running graphing scripts. You must only output the evaluations as JSON in your final chat response text. Graphing and file persistence are handled by the parent agent.
 
   #### Step-by-Step Task Execution per Story:
   1. **Convergence Evaluation (Implicit)**: Do NOT generate the 5-Phase Convergence Test markdown report in your scratchpad. Calculate the coordinates and canonical path name internally using the rules in `convergence_lite.md`.
@@ -62,10 +62,9 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
      - Construct exactly 14 logical steps in your `"posts"` array strictly following the guidelines in `thread_formatting.md`.
      - Do NOT number the posts. Keep every step under 250 characters.
      - **CRITICAL INTRO REQUIREMENT**: Post 1 (The Hook) MUST start with a punchy, custom, human-style scene-setter one-liner (e.g., exposing a structural framing or irony). Do **NOT** write dry summaries.
-  3. **Save Configuration JSON**:
-     - Write the compiled JSON to `e:\Vector Field Theory\VFT Docs\bluesky_bot\stories\factcheck_[subject_slug].json`.
+  3. **Output JSON**:
+     - Output a single JSON block containing the story configurations.
      - Follow the strict 13-key schema. Set `"status"` to `"COMPLETED DRY RUN"`.
-     - Do NOT attempt to run any graphing scripts. Graphing is handled externally by the parent.
 
-  Notify the parent agent when all stories in your batch have been evaluated, all graphs are plotted, and all JSON files are compiled and synced.
+  Return the completed JSON block in your chat response when all stories in your batch have been evaluated.
   ```

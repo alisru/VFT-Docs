@@ -120,8 +120,12 @@ def main():
             try:
                 os.makedirs(args.move_to, exist_ok=True)
                 dest_path = os.path.join(args.move_to, filename)
-                shutil.move(path, dest_path)
-                print(f"Moved successfully posted file to {dest_path}")
+                if os.path.exists(dest_path):
+                    os.remove(path)
+                    print(f"Removed source file because it was already synchronized in live directory: {path}")
+                else:
+                    shutil.move(path, dest_path)
+                    print(f"Moved successfully posted file to {dest_path}")
             except Exception as e:
                 print(f"Warning: Failed to move file to {args.move_to}: {e}")
             

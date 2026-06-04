@@ -53,7 +53,7 @@ def split_text(text, max_len=300):
 
     return chunks
 
-def save_and_sync_story(thread_config):
+def save_and_sync_story(thread_config, write_json=True):
     """Saves the thread config as an individual JSON and updates the registry in both workspace folders."""
     subject = thread_config.get("subject", "assessment")
     story_id = thread_config.get("id") or subject.lower().replace(" ", "_").replace("/", "_")
@@ -79,12 +79,13 @@ def save_and_sync_story(thread_config):
         os.makedirs(target_dir, exist_ok=True)
         filename = f"factcheck_{story_id}.json"
         filepath = os.path.join(target_dir, filename)
-        try:
-            with open(filepath, "w", encoding="utf-8") as f:
-                json.dump([thread_config], f, indent=2, ensure_ascii=False)
-            print(f"Saved JSON config to {filepath}")
-        except Exception as e:
-            print(f"Warning: Failed to save JSON file to {filepath}: {e}")
+        if write_json:
+            try:
+                with open(filepath, "w", encoding="utf-8") as f:
+                    json.dump([thread_config], f, indent=2, ensure_ascii=False)
+                print(f"Saved JSON config to {filepath}")
+            except Exception as e:
+                print(f"Warning: Failed to save JSON file to {filepath}: {e}")
             
         # Update index.json
         index_path = os.path.join(target_dir, "index.json")
