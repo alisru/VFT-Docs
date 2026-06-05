@@ -12,6 +12,57 @@ def rebuild_registries():
 
     stories_dir = os.path.join(script_dir, "stories")
     live_dir    = os.path.join(stories_dir, "live")
+    darkroom_dir = os.path.join(stories_dir, "darkroom")
+    graph_png_dir = os.path.join(script_dir, "graph_png")
+
+    os.makedirs(darkroom_dir, exist_ok=True)
+    os.makedirs(graph_png_dir, exist_ok=True)
+
+    def slug_from_path(p):
+        b = os.path.basename(p)
+        if b.startswith("factcheck_") and b.endswith(".json"):
+            return b[len("factcheck_"):-len(".json")]
+        return None
+
+    # 0. Staging/Darkroom Promotion Gate
+    darkroom_paths = glob.glob(os.path.join(darkroom_dir, "factcheck_*.json"))
+    if darkroom_paths:
+        print(f"Found {len(darkroom_paths)} stories in darkroom. Generating graphs and promoting...")
+        for p in darkroom_paths:
+            slug = slug_from_path(p)
+            if not slug:
+                continue
+            try:
+                with open(p, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                cfg = data[0] if isinstance(data, list) else data
+            except Exception as e:
+                print(f"Error reading darkroom file {p}: {e}")
+                continue
+
+            # Generate graph
+            graph_filename = f"{slug}_graph.png"
+            graph_path = os.path.join(graph_png_dir, graph_filename)
+            try:
+                print(f"Generating staging graph for {slug}...")
+                draw_graph(
+                    cfg.get("claim_u", 0.0), cfg.get("claim_psi", 0.0),
+                    cfg.get("real_u",   0.0), cfg.get("real_psi",  0.0),
+                    cfg.get("subject", "Story"),
+                    graph_path
+                )
+            except Exception as ge:
+                print(f"Error generating graph for {slug} in darkroom: {ge}")
+
+            # Promote config to stories/
+            dest_path = os.path.join(stories_dir, os.path.basename(p))
+            try:
+                with open(dest_path, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+                os.remove(p)
+                print(f"Promoted {slug} from darkroom to stories/")
+            except Exception as e:
+                print(f"Error promoting {slug} from darkroom: {e}")
 
     # 1. Scan stories/ and stories/live/
     draft_paths = glob.glob(os.path.join(stories_dir, "factcheck_*.json"))
@@ -37,13 +88,6 @@ def rebuild_registries():
         print(f"Warning: Failed to write stories/live/index.json: {e}")
 
     # 3. Build story map — live/ is always authoritative for a given slug
-    def slug_from_path(p):
-        b = os.path.basename(p)
-        if b.startswith("factcheck_") and b.endswith(".json"):
-            return b[len("factcheck_"):-len(".json")]
-        return None
-
-    # Map slug -> (authoritative_path, is_live)
     story_map = {}
     for p in live_paths:
         s = slug_from_path(p)
@@ -62,8 +106,7 @@ def rebuild_registries():
     active_stories      = []
     active_live_stories = []
 
-    graph_png_dir = os.path.join(script_dir, "graph_png")
-    os.makedirs(graph_png_dir, exist_ok=True)
+
 
     sorted_slugs = sorted(
         story_map.keys(),

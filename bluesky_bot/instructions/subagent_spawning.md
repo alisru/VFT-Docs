@@ -59,7 +59,7 @@ You will receive a single candidate story as a JSON object. For each one:
 1. **Convergence Evaluation**: Run the 5-Phase Convergence Test internally. Calculate `claim_u`, `claim_psi`, `real_u`, `real_psi`, and the canonical path name using the rules in `convergence_lite.md`.
 2. **Format the 14-Step Thread**: Construct exactly 14 posts following `thread_formatting.md`. Every post must be strictly under 250 characters. The Hook (Element 0) MUST open with a punchy, human editorial one-liner. No dry prefixes.
 3. **Write to Disk**: Write the completed story config as a valid JSON file directly to:
-   `e:\Vector Field Theory\VFT Docs\bluesky_bot\stories\factcheck_[id].json`
+   `e:\Vector Field Theory\VFT Docs\bluesky_bot\stories\darkroom\factcheck_[id].json`
    Use `write_to_file` with Overwrite set to true. The JSON must be a list containing a single dict with the 13-key schema and `"status": "COMPLETED DRY RUN"`.
 4. **Return 1**: Your entire response message MUST be the single character `1`. No explanation, no confirmation, no extra text.
 

@@ -52,7 +52,7 @@ The parent (Queen) runs a parallel FIFO turn-based loop:
    e. If a bee's timer fires before it returns `1`, kill that specific bee, spawn a fresh replacement, and re-dispatch the failed story to the replacement.
 6. Once the global queue is exhausted and all active dispatches complete, terminate all active bees and proceed to Step 3.
 
-*Each bee writes its `factcheck_[id].json` directly to `bluesky_bot/stories/`. The parent never parses JSON from chat.*
+*Each bee writes its `factcheck_[id].json` directly to `bluesky_bot/stories/darkroom/`. The parent never parses JSON from chat.*
 
 ### Step 3: Registry & Graph Rebuild
 Recompile the indexes, registry database, and automatically draw missing trajectory graphs:
