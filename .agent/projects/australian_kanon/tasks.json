@@ -5,8 +5,8 @@
             "Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)",
             "Formatting: Context must be processed into its own block, not bleed into Title/Attribution"
         ],
-        "current_focus": "Build Temporal Calculus as a full evolutionary branch from pre-limit calculus: derive derivative rules, integration rules, series, convergence, and fundamental theorem using VFT axioms (Terminus, t=n, n=n/1, n/0=n+1)",
-        "current_task_index": 44,
+        "current_focus": "Run bsky-reply-batch: 20 replies + 10 RSS stories harvest, evaluate, rebuild registry",
+        "current_task_index": 45,
         "mistakes_registry": [
             {
                 "id": "M001",
@@ -1498,6 +1498,35 @@
             "reasoning_trace": [
                 "[01:28:15] User does NOT want a historical comparison or commentary. They want the actual mathematics BUILT OUT: take Newton/Leibniz original machinery (fluxions, dx/dy, integral sums) and instead of developing limits, develop the ACTUAL derivative rules (power rule, product rule, chain rule, etc), integration rules, series convergence, and the Fundamental Theorem using VFT axioms (Terminus, t=n, n=n/1, n/0=n+1). This is a mathematical construction project, not a history essay."
             ],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 45,
+            "id": "task_45",
+            "description": "Run bsky-reply-batch: 20 replies + 10 RSS stories harvest, evaluate, rebuild registry",
+            "status": "in_progress",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-06-05T02:57:44.584388] Task created.",
+                "[2026-06-05T02:57:53.563821] Started work."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "bluesky",
+                "batch"
+            ],
+            "reasoning_trace": [],
             "auto_linked_mistakes": [],
             "postmortem": {
                 "passes": [],

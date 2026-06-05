@@ -404,11 +404,13 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
 def process_evaluations(evaluations):
     success_count = 0
     os.makedirs(os.path.join(script_dir, "graph_png"), exist_ok=True)
-    os.makedirs(os.path.join(workspace_dir, "_Generated_Content", "graph_png"), exist_ok=True)
     
     for story in evaluations:
         try:
             slug = story.get("id") or story.get("subject").lower().replace(" ", "_").replace("/", "_")
+            # Sanitize slug to remove forbidden characters for Windows paths
+            for char in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
+                slug = slug.replace(char, '')
             story["id"] = slug
             story["status"] = "COMPLETED DRY RUN"
             
@@ -427,20 +429,13 @@ def process_evaluations(evaluations):
                 
             print(f"Processing story: {story.get('subject')} ({slug})...")
             
-            # 1. Draw and sync graph
+            # 1. Draw graph
             graph_base = f"{slug}_graph.png"
             graph_bot_path = os.path.join(script_dir, "graph_png", graph_base)
-            graph_gen_path = os.path.join(workspace_dir, "_Generated_Content", "graph_png", graph_base)
             
             title = f"Assessment: {story['subject']}"
             draw_graph(story["claim_u"], story["claim_psi"], story["real_u"], story["real_psi"], title, graph_bot_path)
             
-            try:
-                import shutil
-                shutil.copy2(graph_bot_path, graph_gen_path)
-            except Exception as e:
-                print(f"Warning: Failed to copy graph image: {e}")
-                
             story["graph_img"] = f"graph_png/{graph_base}"
             
             # 2. Save JSON and sync registry

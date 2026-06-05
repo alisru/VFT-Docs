@@ -371,4 +371,20 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Recovery of Batch Evaluations**: Successfully extracted the 20 evaluated story configurations from the untruncated message JSONs in the local `messages` directory after compaction history loss.
 - **Story JSON Creation**: Saved the 20 parsed configurations as individual `factcheck_[id].json` files in both `bluesky_bot/stories/` and `_Generated_Content/stories/` workspace paths.
 - **Registry compilation**: Triggered the pure compilation step using `rebuild_registries.py` to regenerate the indices, databases, and trajectory graphs.
-- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Proactive restoration and compilation of narrative integrity data.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Proactive restoration and compilation of narrative integrity data.
+
+### [2026-06-05] Intent 43: /bsky-reply-batch dry run of 29 stories (19 Bluesky, 10 RSS)
+*Status: Completed*
+- **Modified Harvest Limits**: Adjusted the slice limit inside `harvest_candidates.py` to allow custom RSS and Bluesky targets up to 40 items total.
+- **Harvested Candidates**: Fetched 19 Bluesky posts (reply mode) and 10 RSS news items (root mode), saving 29 combined candidates in `scratch/harvested_candidates.json`.
+- **Parallel Subagent Evaluations**: Spawned 6 parallel evaluator workers of type `self` to evaluate all 29 stories offline. Collected their evaluations in full.
+- **Consolidated File Writing**: Saved all 29 story configurations as individual `factcheck_[id].json` files in both `bluesky_bot/stories/` and `_Generated_Content/stories/`.
+- **Registry Rebuild & Graph Generation**: Programmatically generated trajectory graphs using the updated coordinate scales and rebuilt the unified indices and `stories_registry.js` across both project folders.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action.
+
+### [2026-06-05] Intent 44: Directory-Aware Live Status Detection and Draft Cleanup
+*Status: Completed*
+- **Directory-Aware Live Check & Strict Folder Source of Truth**: Modified `rebuild_registries.py` to use the physical folder location of the newest file as the strict source of truth for whether a story is live or a draft. If a file is in `live/`, it is classified as live (updating status to `"LIVE POSTED"` if needed); if it is moved back to the root directory, its registry status is automatically overridden back to `"COMPLETED DRY RUN"`.
+- **Save and Sync Cleanup**: Updated `save_and_sync_story` in `aletheia_bot.py` to automatically delete the draft JSON file and remove its entry from the draft `index.json` when a story is saved to the `live/` directory.
+- **Robust Path Existence Verification**: Patched `post_batch.py` to check `if os.path.exists(path)` before attempting to delete or move draft files, preventing FileNotFoundError crashes.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of system boundaries.

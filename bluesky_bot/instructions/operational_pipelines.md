@@ -27,7 +27,7 @@ All evaluations run locally in the workspace to ensure safety, security, and man
 ### Step 1: Harvest Candidates
 Run the harvesting scripts locally inside the virtual environment to pull candidates from Bluesky verified news feeds and search endpoints:
 ```bash
-.venv\Scripts\python.exe scratch/harvest_candidates_script.py
+.venv\Scripts\python.exe bluesky_bot/harvest_candidates.py --rss-target 0 --bsky-target 40
 ```
 This writes the raw candidate feeds to `scratch/harvested_candidates.json`.
 

@@ -2,7 +2,7 @@ import os
 import sys
 from generate_graph import draw_graph
 
-def split_text(text, max_len=300):
+def split_text(text, max_len=250):
     if len(text) <= max_len:
         return [text]
 

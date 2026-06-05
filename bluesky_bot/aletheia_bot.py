@@ -1,11 +1,23 @@
 import os
 import sys
+
+# Ensure UTF-8 output encoding to prevent Unicode/Cp1252 printing errors on Windows
+if sys.stdout and sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+if sys.stderr and sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8':
+    try:
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 import json
 import argparse
 import time
 from dotenv import load_dotenv
 from atproto import Client, models, IdResolver
-from generate_graph import draw_graph
 import shutil
 
 # Load environment variables
@@ -22,7 +34,7 @@ def parse_bsky_url(url):
 
     return parts[handle_idx], parts[post_idx]
 
-def split_text(text, max_len=300):
+def split_text(text, max_len=250):
     """Splits text dynamically at the last newline or space before max_len.
     Avoids orphaning short header lines (e.g. 'Brothekanon:') by only
     splitting at a newline if the chunk before it is at least 80 chars.
@@ -54,59 +66,79 @@ def split_text(text, max_len=300):
     return chunks
 
 def save_and_sync_story(thread_config, write_json=True):
-    """Saves the thread config as an individual JSON and updates the registry in both workspace folders."""
+    """Saves the thread config as an individual JSON and updates the registry in the bluesky_bot/ folder."""
     subject = thread_config.get("subject", "assessment")
     story_id = thread_config.get("id") or subject.lower().replace(" ", "_").replace("/", "_")
+    # Sanitize story_id to remove forbidden characters for Windows paths
+    for char in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
+        story_id = story_id.replace(char, '')
     thread_config["id"] = story_id
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    root_dir = os.path.dirname(script_dir)
     
     # Paths in bluesky_bot/
     bot_stories_dir = os.path.join(script_dir, "stories")
     bot_registry_path = os.path.join(script_dir, "stories_registry.js")
     
-    # Paths in _Generated_Content/
-    gen_stories_dir = os.path.join(root_dir, "_Generated_Content", "stories")
-    gen_registry_path = os.path.join(root_dir, "_Generated_Content", "stories_registry.js")
-    
     status = thread_config.get("status", "").upper()
     is_live = "LIVE" in status or len(thread_config.get("rkeys", [])) > 0 or len(thread_config.get("post_urls", [])) > 0
     
-    # Save individual JSON files to both directories
-    for s_dir in [bot_stories_dir, gen_stories_dir]:
-        target_dir = os.path.join(s_dir, "live") if is_live else s_dir
-        os.makedirs(target_dir, exist_ok=True)
-        filename = f"factcheck_{story_id}.json"
-        filepath = os.path.join(target_dir, filename)
-        if write_json:
-            try:
-                with open(filepath, "w", encoding="utf-8") as f:
-                    json.dump([thread_config], f, indent=2, ensure_ascii=False)
-                print(f"Saved JSON config to {filepath}")
-            except Exception as e:
-                print(f"Warning: Failed to save JSON file to {filepath}: {e}")
-            
-        # Update index.json
-        index_path = os.path.join(target_dir, "index.json")
+    # Save individual JSON files to bot directory
+    s_dir = bot_stories_dir
+    target_dir = os.path.join(s_dir, "live") if is_live else s_dir
+    os.makedirs(target_dir, exist_ok=True)
+    filename = f"factcheck_{story_id}.json"
+    filepath = os.path.join(target_dir, filename)
+    if write_json:
         try:
-            if os.path.exists(index_path):
-                with open(index_path, "r", encoding="utf-8") as f:
-                    index_data = json.load(f)
-            else:
-                index_data = []
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump([thread_config], f, indent=2, ensure_ascii=False)
+            print(f"Saved JSON config to {filepath}")
             
-            # Check if this filename is already in index.json, if not add it
-            if filename not in index_data:
-                index_data.append(filename)
-                with open(index_path, "w", encoding="utf-8") as f:
-                    json.dump(index_data, f, indent=2, ensure_ascii=False)
-                print(f"Updated index.json at {index_path}")
+            # If we are writing to live, remove the draft file from the parent directory if it exists
+            if is_live:
+                draft_path = os.path.join(s_dir, filename)
+                if os.path.exists(draft_path):
+                    os.remove(draft_path)
+                    print(f"Cleaned up draft file: {draft_path}")
         except Exception as e:
-            print(f"Warning: Failed to update index.json at {index_path}: {e}")
+            print(f"Warning: Failed to save JSON file to {filepath}: {e}")
+        
+    # Clean up draft index if we moved to live
+    if is_live:
+        draft_index_path = os.path.join(s_dir, "index.json")
+        if os.path.exists(draft_index_path):
+            try:
+                with open(draft_index_path, "r", encoding="utf-8") as f:
+                    draft_index_data = json.load(f)
+                if filename in draft_index_data:
+                    draft_index_data.remove(filename)
+                    with open(draft_index_path, "w", encoding="utf-8") as f:
+                        json.dump(draft_index_data, f, indent=2, ensure_ascii=False)
+                    print(f"Removed {filename} from draft index.json at {draft_index_path}")
+            except Exception as e:
+                print(f"Warning: Failed to update draft index.json: {e}")
+        
+    # Update index.json
+    index_path = os.path.join(target_dir, "index.json")
+    try:
+        if os.path.exists(index_path):
+            with open(index_path, "r", encoding="utf-8") as f:
+                index_data = json.load(f)
+        else:
+            index_data = []
+        
+        # Check if this filename is already in index.json, if not add it
+        if filename not in index_data:
+            index_data.append(filename)
+            with open(index_path, "w", encoding="utf-8") as f:
+                json.dump(index_data, f, indent=2, ensure_ascii=False)
+            print(f"Updated index.json at {index_path}")
+    except Exception as e:
+        print(f"Warning: Failed to update index.json at {index_path}: {e}")
 
-    # Update stories_registry.js in both directories
-    for r_path in [bot_registry_path, gen_registry_path]:
+    # Update stories_registry.js in bot directory
+    for r_path in [bot_registry_path]:
         try:
             if not os.path.exists(r_path):
                 registry_data = []
@@ -191,59 +223,45 @@ def post_thread(client, thread_config, live=False):
 
     # 1. Split posts dynamically and validate
     print("Performing dynamic splitting and pre-flight size validation...")
+    if not posts:
+        raise ValueError("Thread configuration contains no posts.")
+        
     final_posts = []
     for post in posts:
         final_posts.extend(split_text(post))
         
+    if len(final_posts) != len(posts):
+        raise ValueError(f"Pre-flight error: Thread was dynamically split into {len(final_posts)} posts (expected {len(posts)}). One or more posts exceeded the 250-character limit.")
+        
     for idx, post in enumerate(final_posts, 1):
-        if len(post) > 300:
-            raise ValueError(f"Post {idx} exceeds 300 characters ({len(post)} chars) after splitting:\n{post}")
+        if len(post) > 250:
+            raise ValueError(f"Post {idx} exceeds 250 characters ({len(post)} chars) after splitting:\n{post}")
     print(f"All posts successfully split and validated. Thread post count: {len(final_posts)}")
 
-    # 2. Graph Generation / Re-use
+    # 2. Graph Check (No generation in posting script)
     # Ensure graph_png/ folder exists in workspace
     script_dir = os.path.dirname(os.path.abspath(__file__))
     bot_graph_dir = os.path.join(script_dir, "graph_png")
     os.makedirs(bot_graph_dir, exist_ok=True)
     
-    graph_base_filename = f"{subject.lower().replace(' ', '_').replace('/', '_')}_graph.png"
+    story_id = thread_config.get("id") or subject.lower().replace(" ", "_").replace("/", "_")
+    # Sanitize story_id to remove forbidden characters for Windows paths
+    for char in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
+        story_id = story_id.replace(char, '')
+    thread_config["id"] = story_id
+
+    graph_base_filename = f"{story_id}_graph.png"
     graph_filename = os.path.join(bot_graph_dir, graph_base_filename)
     
-    # Check if the graph already exists to avoid redundant regeneration
+    # Verify the graph already exists. We do not generate graphs in the posting script.
     if os.path.exists(graph_filename):
         print(f"Using existing pre-generated trajectory graph: {graph_filename}")
         thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
-        
-        # Verify sync to _Generated_Content/
-        root_dir = os.path.dirname(script_dir)
-        gen_graph_dir = os.path.join(root_dir, "_Generated_Content", "graph_png")
-        os.makedirs(gen_graph_dir, exist_ok=True)
-        gen_graph_path = os.path.join(gen_graph_dir, graph_base_filename)
-        if not os.path.exists(gen_graph_path):
-            try:
-                shutil.copy2(graph_filename, gen_graph_path)
-                print("Graph image synchronized to _Generated_Content/graph_png/")
-            except Exception as e:
-                print(f"Warning: Failed to sync existing graph image: {e}")
     else:
-        print(f"Trajectory graph not found. Generating graph: {graph_filename}...")
-        try:
-            draw_graph(claim_u, claim_psi, real_u, real_psi, f"Assessment: {subject}", graph_filename)
-            print("Graph generated successfully.")
-            
-            # Sync graph image to _Generated_Content/graph_png/
-            root_dir = os.path.dirname(script_dir)
-            gen_graph_dir = os.path.join(root_dir, "_Generated_Content", "graph_png")
-            os.makedirs(gen_graph_dir, exist_ok=True)
-            shutil.copy2(graph_filename, os.path.join(gen_graph_dir, graph_base_filename))
-            print("Graph image synchronized to _Generated_Content/graph_png/")
-            
-            # Keep config graph_img updated
-            thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
-        except Exception as e:
-            raise RuntimeError(f"Failed to generate trajectory graph: {e}") from e
+        raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}. Graphs must be pre-generated.")
 
     post_rkeys = []
+    post_uris = []
 
     if not live:
         print("\n--- DRY-RUN OUTPUT (No posts sent to Bluesky) ---")
@@ -254,173 +272,188 @@ def post_thread(client, thread_config, live=False):
             elif idx == 2 and link:
                 embed_info = f" [Embed: Link Card -> {link}]"
             print(f"\n[Post {idx}/{len(final_posts)}]{embed_info} ({len(post)} chars):\n{post}")
-        print("\nTrajectory graph generated locally. Live posting skipped because --live was not set.")
         thread_config["status"] = "COMPLETED DRY RUN"
     else:
         # --- LIVE POSTING CORE ---
-        # 3. Upload Graph Image
-        print("Uploading trajectory graph to Bluesky...")
         try:
-            with open(graph_filename, "rb") as f:
-                img_data = f.read()
-            upload = client.com.atproto.repo.upload_blob(img_data)
-            images = [models.AppBskyEmbedImages.Image(alt=f"Alethekanon Psochic Hegemony Assessment Graph for {subject}", image=upload.blob)]
-            graph_embed = models.AppBskyEmbedImages.Main(images=images)
-            print("Graph uploaded successfully.")
+            # 3. Upload Graph Image
+            print("Uploading trajectory graph to Bluesky...")
+            try:
+                with open(graph_filename, "rb") as f:
+                    img_data = f.read()
+                upload = client.com.atproto.repo.upload_blob(img_data)
+                images = [models.AppBskyEmbedImages.Image(alt=f"Alethekanon Psochic Hegemony Assessment Graph for {subject}", image=upload.blob)]
+                graph_embed = models.AppBskyEmbedImages.Main(images=images)
+                print("Graph uploaded successfully.")
+            except Exception as e:
+                raise RuntimeError(f"Failed to upload graph: {e}") from e
+
+            # Create External Link Preview Card
+            link_embed = None
+            if link:
+                try:
+                    desc_text = ""
+                    if len(final_posts) > 4:
+                        desc_text = final_posts[4].replace("What's happening:\n", "").strip()
+                    else:
+                        desc_text = f"Alethekanon Psochic Hegemony Assessment for {subject}"
+                    if len(desc_text) > 200:
+                        desc_text = desc_text[:197] + "..."
+                    link_embed = models.AppBskyEmbedExternal.Main(
+                        external=models.AppBskyEmbedExternal.External(
+                            title=subject,
+                            description=desc_text,
+                            uri=link
+                        )
+                    )
+                    print(f"Created link preview card embed for: {link}")
+                except Exception as ex:
+                    print(f"Warning: Failed to create external link embed card: {ex}")
+
+            # first_post_embed always gets the trajectory graph_embed
+            first_post_embed = graph_embed
+
+            # 4. Resolve Links for facets (only on the first/root post)
+            facets = []
+            if link:
+                text_bytes = final_posts[0].encode('utf-8')
+                link_bytes = link.encode('utf-8')
+                byte_start = text_bytes.find(link_bytes)
+                if byte_start != -1:
+                    byte_end = byte_start + len(link_bytes)
+                    facets.append(
+                        models.AppBskyRichtextFacet.Main(
+                            features=[models.AppBskyRichtextFacet.Link(uri=link)],
+                            index=models.AppBskyRichtextFacet.ByteSlice(byte_end=byte_end, byte_start=byte_start)
+                        )
+                    )
+
+            # 5. Determine Posting References based on Mode
+            is_reply = False
+            if mode == "reply":
+                if not target_url:
+                    raise ValueError("target_url is required when mode is 'reply'.")
+
+                print(f"Resolving target post: {target_url}...")
+                try:
+                    target_handle, rkey = parse_bsky_url(target_url)
+                    resolver = IdResolver()
+                    target_did = resolver.handle.resolve(target_handle)
+
+                    response = client.com.atproto.repo.get_record(
+                        models.ComAtprotoRepoGetRecord.Params(
+                            repo=target_did,
+                            collection='app.bsky.feed.post',
+                            rkey=rkey
+                        )
+                    )
+                    target_cid = response.cid
+                    target_uri = response.uri
+                    target_record = response.value
+
+                    if hasattr(target_record, 'reply') and target_record.reply:
+                        root_ref = target_record.reply.root
+                    else:
+                        root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+
+                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+                    print("Resolved target reference correctly.")
+                    is_reply = True
+                except Exception as e:
+                    print(f"Warning: Failed to resolve reply target ({e}). Falling back to root thread mode on our timeline...")
+                    is_reply = False
+
+            if is_reply:
+                # Post first reply
+                print("Posting Part 1 (Reply with Link Preview or Graph Embed)...")
+                try:
+                    reply = client.com.atproto.repo.create_record(
+                        models.ComAtprotoRepoCreateRecord.Data(
+                            repo=client.me.did,
+                            collection=models.ids.AppBskyFeedPost,
+                            record=models.AppBskyFeedPost.Record(
+                                created_at=client.get_current_time_iso(),
+                                text=final_posts[0],
+                                reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+                                embed=first_post_embed,
+                                facets=facets
+                            )
+                        )
+                    )
+                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
+                    post_uris.append(reply.uri)
+                    post_rkeys.append(reply.uri.split('/')[-1])
+                except Exception as e:
+                    raise RuntimeError(f"Failed to post root reply: {e}") from e
+
+            else:
+                # Root Mode: Post standard new stand-alone post on profile timeline
+                print("Posting Part 1 (New Root Thread with Link Preview or Graph Embed)...")
+                try:
+                    root_post = client.com.atproto.repo.create_record(
+                        models.ComAtprotoRepoCreateRecord.Data(
+                            repo=client.me.did,
+                            collection=models.ids.AppBskyFeedPost,
+                            record=models.AppBskyFeedPost.Record(
+                                created_at=client.get_current_time_iso(),
+                                text=final_posts[0],
+                                embed=first_post_embed,
+                                facets=facets
+                            )
+                        )
+                    )
+                    root_ref = models.ComAtprotoRepoStrongRef.Main(cid=root_post.cid, uri=root_post.uri)
+                    parent_ref = root_ref
+                    post_uris.append(root_post.uri)
+                    post_rkeys.append(root_post.uri.split('/')[-1])
+                except Exception as e:
+                    raise RuntimeError(f"Failed to post root thread: {e}") from e
+
+            # 6. Post subsequent thread parts sequentially
+            for i, text in enumerate(final_posts[1:], start=2):
+                print(f"Posting Part {i}/{len(final_posts)}...")
+                current_embed = None
+                if i == 2 and link_embed is not None:
+                    # Attach the link preview card embed to the second post of the thread
+                    current_embed = link_embed
+                    print("Attaching link preview card embed to Part 2...")
+                try:
+                    reply = client.com.atproto.repo.create_record(
+                        models.ComAtprotoRepoCreateRecord.Data(
+                            repo=client.me.did,
+                            collection=models.ids.AppBskyFeedPost,
+                            record=models.AppBskyFeedPost.Record(
+                                created_at=client.get_current_time_iso(),
+                                text=text,
+                                reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+                                embed=current_embed
+                            )
+                        )
+                    )
+                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
+                    post_uris.append(reply.uri)
+                    post_rkeys.append(reply.uri.split('/')[-1])
+                    time.sleep(1) # Slight pause to ensure strict chronologic ordering in API database
+                except Exception as e:
+                    raise RuntimeError(f"Failed to post part {i}: {e}") from e
+
+            handle = client.me.handle
+            thread_config["rkeys"] = post_rkeys
+            thread_config["post_urls"] = [f"https://bsky.app/profile/{handle}/post/{rkey}" for rkey in post_rkeys]
+            thread_config["status"] = "LIVE POSTED (judgement-bot.bsky.social)"
+            print(f"Thread for '{subject}' successfully posted live to Bluesky!")
+
         except Exception as e:
-            raise RuntimeError(f"Failed to upload graph: {e}") from e
-
-        # Create External Link Preview Card
-        link_embed = None
-        if link:
-            try:
-                desc_text = ""
-                if len(final_posts) > 4:
-                    desc_text = final_posts[4].replace("What's happening:\n", "").strip()
-                else:
-                    desc_text = f"Alethekanon Psochic Hegemony Assessment for {subject}"
-                if len(desc_text) > 200:
-                    desc_text = desc_text[:197] + "..."
-                link_embed = models.AppBskyEmbedExternal.Main(
-                    external=models.AppBskyEmbedExternal.External(
-                        title=subject,
-                        description=desc_text,
-                        uri=link
-                    )
-                )
-                print(f"Created link preview card embed for: {link}")
-            except Exception as ex:
-                print(f"Warning: Failed to create external link embed card: {ex}")
-
-        # first_post_embed always gets the trajectory graph_embed
-        first_post_embed = graph_embed
-
-        # 4. Resolve Links for facets (only on the first/root post)
-        facets = []
-        if link:
-            text_bytes = final_posts[0].encode('utf-8')
-            link_bytes = link.encode('utf-8')
-            byte_start = text_bytes.find(link_bytes)
-            if byte_start != -1:
-                byte_end = byte_start + len(link_bytes)
-                facets.append(
-                    models.AppBskyRichtextFacet.Main(
-                        features=[models.AppBskyRichtextFacet.Link(uri=link)],
-                        index=models.AppBskyRichtextFacet.ByteSlice(byte_end=byte_end, byte_start=byte_start)
-                    )
-                )
-
-        # 5. Determine Posting References based on Mode
-        is_reply = False
-        if mode == "reply":
-            if not target_url:
-                raise ValueError("target_url is required when mode is 'reply'.")
-
-            print(f"Resolving target post: {target_url}...")
-            try:
-                target_handle, rkey = parse_bsky_url(target_url)
-                resolver = IdResolver()
-                target_did = resolver.handle.resolve(target_handle)
-
-                response = client.com.atproto.repo.get_record(
-                    models.ComAtprotoRepoGetRecord.Params(
-                        repo=target_did,
-                        collection='app.bsky.feed.post',
-                        rkey=rkey
-                    )
-                )
-                target_cid = response.cid
-                target_uri = response.uri
-                target_record = response.value
-
-                if hasattr(target_record, 'reply') and target_record.reply:
-                    root_ref = target_record.reply.root
-                else:
-                    root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
-
-                parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
-                print("Resolved target reference correctly.")
-                is_reply = True
-            except Exception as e:
-                print(f"Warning: Failed to resolve reply target ({e}). Falling back to root thread mode on our timeline...")
-                is_reply = False
-
-        if is_reply:
-            # Post first reply
-            print("Posting Part 1 (Reply with Link Preview or Graph Embed)...")
-            try:
-                reply = client.com.atproto.repo.create_record(
-                    models.ComAtprotoRepoCreateRecord.Data(
-                        repo=client.me.did,
-                        collection=models.ids.AppBskyFeedPost,
-                        record=models.AppBskyFeedPost.Record(
-                            created_at=client.get_current_time_iso(),
-                            text=final_posts[0],
-                            reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
-                            embed=first_post_embed,
-                            facets=facets
-                        )
-                    )
-                )
-                parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
-                post_rkeys.append(reply.uri.split('/')[-1])
-            except Exception as e:
-                raise RuntimeError(f"Failed to post root reply: {e}") from e
-
-        else:
-            # Root Mode: Post standard new stand-alone post on profile timeline
-            print("Posting Part 1 (New Root Thread with Link Preview or Graph Embed)...")
-            try:
-                root_post = client.com.atproto.repo.create_record(
-                    models.ComAtprotoRepoCreateRecord.Data(
-                        repo=client.me.did,
-                        collection=models.ids.AppBskyFeedPost,
-                        record=models.AppBskyFeedPost.Record(
-                            created_at=client.get_current_time_iso(),
-                            text=final_posts[0],
-                            embed=first_post_embed,
-                            facets=facets
-                        )
-                    )
-                )
-                root_ref = models.ComAtprotoRepoStrongRef.Main(cid=root_post.cid, uri=root_post.uri)
-                parent_ref = root_ref
-                post_rkeys.append(root_post.uri.split('/')[-1])
-            except Exception as e:
-                raise RuntimeError(f"Failed to post root thread: {e}") from e
-
-        # 6. Post subsequent thread parts sequentially
-        for i, text in enumerate(final_posts[1:], start=2):
-            print(f"Posting Part {i}/{len(final_posts)}...")
-            current_embed = None
-            if i == 2 and link_embed is not None:
-                # Attach the link preview card embed to the second post of the thread
-                current_embed = link_embed
-                print("Attaching link preview card embed to Part 2...")
-            try:
-                reply = client.com.atproto.repo.create_record(
-                    models.ComAtprotoRepoCreateRecord.Data(
-                        repo=client.me.did,
-                        collection=models.ids.AppBskyFeedPost,
-                        record=models.AppBskyFeedPost.Record(
-                            created_at=client.get_current_time_iso(),
-                            text=text,
-                            reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
-                            embed=current_embed
-                        )
-                    )
-                )
-                parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
-                post_rkeys.append(reply.uri.split('/')[-1])
-                time.sleep(1) # Slight pause to ensure strict chronologic ordering in API database
-            except Exception as e:
-                raise RuntimeError(f"Failed to post part {i}: {e}") from e
-
-        handle = client.me.handle
-        thread_config["rkeys"] = post_rkeys
-        thread_config["post_urls"] = [f"https://bsky.app/profile/{handle}/post/{rkey}" for rkey in post_rkeys]
-        thread_config["status"] = "LIVE POSTED (judgement-bot.bsky.social)"
-        print(f"Thread for '{subject}' successfully posted live to Bluesky!")
+            if post_uris:
+                print(f"\nERROR ENCOUNTERED during live posting: {e}")
+                print(f"Rollback: Deleting {len(post_uris)} partially-posted thread items...")
+                for uri in reversed(post_uris):
+                    try:
+                        client.delete_post(uri)
+                        print(f"  Deleted partially-posted post: {uri}")
+                    except Exception as del_err:
+                        print(f"  Warning: Failed to delete {uri}: {del_err}")
+            raise e
 
     # 7. Save and Sync across directories
     save_and_sync_story(thread_config)

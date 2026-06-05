@@ -1837,10 +1837,6 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
 
     // App Initialization
     window.onload = async () => {
-      // If running via HTTP server, completely clear the static pre-baked registry to prevent stale fallback dragging!
-      if (window.location.protocol !== "file:") {
-        STORIES_REGISTRY.length = 0;
-      }
 
       // Bind Drag and Drop listeners
       document.body.addEventListener('dragover', (e) => {
@@ -1856,118 +1852,12 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         }
       });
 
-      // Try programmatically loading all JSONs from stories/ and stories/live/ folders
-      try {
-        console.log("Attempting programmatic folder fetch on dry-run and live indices...");
-        
-        const dryRunFilenames = await getFilenamesFromDirectory("stories/", "stories/index.json");
-        const liveFilenames = await getFilenamesFromDirectory("stories/live/", "stories/live/index.json");
-
-        console.log(`Programmatic index loaded! Found ${dryRunFilenames.length} dry-runs and ${liveFilenames.length} live stories.`);
-        
-        const loadedStories = [];
-
-        // 1. Load Dry Run Stories
-        await Promise.all(dryRunFilenames.map(async (filename) => {
-          try {
-            const storyRes = await fetch("stories/" + filename, { cache: "no-store" });
-            if (!storyRes.ok) return;
-            const data = await storyRes.json();
-            const storyData = Array.isArray(data) ? data[0] : data;
-            
-            loadedStories.push({
-              "id": filename.replace(".json", ""),
-              "subject": storyData.subject,
-              "link": storyData.link || "https://bsky.app",
-              "claim_u": parseFloat(storyData.claim_u) || 0.0,
-              "claim_psi": parseFloat(storyData.claim_psi) || 0.0,
-              "real_u": parseFloat(storyData.real_u) || 0.0,
-              "real_psi": parseFloat(storyData.real_psi) || 0.0,
-              "mode": storyData.mode || "root",
-              "target_url": storyData.target_url || "",
-              "status": "COMPLETED DRY RUN",
-              "verdict": storyData.posts[3] ? storyData.posts[3].replace("Verdict: ", "") : "FAIL — The Path of Deception",
-              "graph_img": storyData.graph_img ? (storyData.graph_img.startsWith("graph_png/") ? storyData.graph_img : "graph_png/" + storyData.graph_img) : "graph_png/" + ((storyData.id || storyData.subject.toLowerCase().replace(/\s+/g, '_')) + "_graph.png"),
-              "posts": storyData.posts,
-              "rkeys": storyData.rkeys || null,
-              "post_urls": storyData.post_urls || null,
-              "_isLive": false,
-              "_fileIdx": dryRunFilenames.indexOf(filename)
-            });
-          } catch(err) {
-            console.warn(`Failed programmatically loading dry-run: ${filename}`, err);
-          }
-        }));
-
-        // 2. Load Live Stories
-        await Promise.all(liveFilenames.map(async (filename) => {
-          try {
-            const storyRes = await fetch("stories/live/" + filename, { cache: "no-store" });
-            if (!storyRes.ok) return;
-            const data = await storyRes.json();
-            const storyData = Array.isArray(data) ? data[0] : data;
-            
-            loadedStories.push({
-              "id": filename.replace(".json", ""),
-              "subject": storyData.subject,
-              "link": storyData.link || "https://bsky.app",
-              "claim_u": parseFloat(storyData.claim_u) || 0.0,
-              "claim_psi": parseFloat(storyData.claim_psi) || 0.0,
-              "real_u": parseFloat(storyData.real_u) || 0.0,
-              "real_psi": parseFloat(storyData.real_psi) || 0.0,
-              "mode": storyData.mode || "root",
-              "target_url": storyData.target_url || "",
-              "status": storyData.status || "LIVE POSTED",
-              "verdict": storyData.posts[3] ? storyData.posts[3].replace("Verdict: ", "") : "FAIL — The Path of Deception",
-              "graph_img": storyData.graph_img ? (storyData.graph_img.startsWith("graph_png/") ? storyData.graph_img : "graph_png/" + storyData.graph_img) : "graph_png/" + ((storyData.id || storyData.subject.toLowerCase().replace(/\s+/g, '_')) + "_graph.png"),
-              "posts": storyData.posts,
-              "rkeys": storyData.rkeys || null,
-              "post_urls": storyData.post_urls || null,
-              "_isLive": true,
-              "_fileIdx": liveFilenames.indexOf(filename)
-            });
-          } catch(err) {
-            console.warn(`Failed programmatically loading live story: ${filename}`, err);
-          }
-        }));
-
-        if (loadedStories.length > 0) {
-          // Sort loadedStories: Live stories first (newest first), then Dry-runs (newest first)
-          loadedStories.sort((a, b) => {
-            if (a._isLive && !b._isLive) return -1;
-            if (!a._isLive && b._isLive) return 1;
-            // Both have the same status, sort descending by their index in the index.json
-            return b._fileIdx - a._fileIdx;
-          });
-
-          // Restore flags from localStorage and set permanent chronological _origIndex
-          const flags = JSON.parse(localStorage.getItem('aletheia_flags') || '{}');
-          loadedStories.forEach((s, idx) => {
-            s._origIndex = idx;
-            if (flags[s.id]) s._flag = flags[s.id];
-          });
-
-          // Clear standard registry and replace with programmatically loaded ones!
-          STORIES_REGISTRY.length = 0;
-          STORIES_REGISTRY.push(...loadedStories);
-          
-          // Display active server banner
-          showNotificationBanner("🟢 Programmatic Loading Active: Loaded " + loadedStories.length + " stories dynamically (Live + Dry Runs).", "pass");
-        }
-      } catch (e) {
-        console.info("Programmatic folder loader bypassed (normal for file:/// sandbox). Falling back to pre-baked registry.", e);
-        
-        // If loaded via file:/// and registry is available, display instructions for local server
-        if (window.location.protocol === "file:") {
-          showNotificationBanner("💡 Local CORS Sandbox Detected. Loading pre-baked index. To run programmatically, run: python -m http.server", "info");
-        }
-      }
-
-      // Assign _origIndex to fallback pre-baked registry stories to enable robust sorting there too
+      // stories_registry.js is always the source of truth (rebuilt by rebuild_registries.py).
+      // Restore flags from localStorage and assign sort indices.
+      const flags = JSON.parse(localStorage.getItem('aletheia_flags') || '{}');
       STORIES_REGISTRY.forEach((s, idx) => {
-        if (s._origIndex === undefined) {
-          s._origIndex = idx;
-        }
+        s._origIndex = idx;
+        if (flags[s.id]) s._flag = flags[s.id];
       });
 
       // Render default list

@@ -250,19 +250,7 @@ def evaluate_single_post(llm_client, post_data):
             graph_filename
         )
         
-        # Copy graph to _Generated_Content/graph_png/
-        root_dir = os.path.dirname(script_dir)
-        gen_graph_dir = os.path.join(root_dir, "_Generated_Content", "graph_png")
-        os.makedirs(gen_graph_dir, exist_ok=True)
-        gen_graph_path = os.path.join(gen_graph_dir, graph_base_filename)
-        
-        try:
-            import shutil
-            shutil.copy(graph_filename, gen_graph_path)
-            thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
-        except Exception as e:
-            print(f"Warning: Failed to copy graph image: {e}")
-            thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
+        thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
             
         # Save JSON and update registries using our core system
         save_and_sync_story(thread_config)

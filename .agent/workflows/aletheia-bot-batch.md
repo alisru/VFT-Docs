@@ -73,9 +73,9 @@ Designed to preserve your tokens/wallet. The AI agent performs evaluations in th
 
 1. **Harvest Candidates:** Programmatically harvest de-duplicated candidates:
    ```bash
-   .venv\Scripts\python.exe scratch\harvest_candidates_script.py
+   .venv\Scripts\python.exe bluesky_bot/harvest_candidates.py --rss-target 0 --bsky-target 40
    ```
-   * *This creates the raw candidate file at `bluesky_bot/stories/harvested_candidates.json`.*
+   * *This creates the raw candidate file at `scratch/harvested_candidates.json`.*
 
 2. **Local Evaluation (Dry Run Generation):** Run the local orchestrator command:
    ```bash

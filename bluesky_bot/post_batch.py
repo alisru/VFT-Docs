@@ -65,7 +65,7 @@ def main():
             print(f"ERROR: Folder not found: {args.folder}")
             sys.exit(1)
         for f in sorted(os.listdir(args.folder)):
-            if f.endswith(".json") and f != "index.json":
+            if f.startswith("factcheck_") and f.endswith(".json"):
                 files_to_post.append(os.path.join(args.folder, f))
         print(f"Found {len(files_to_post)} JSON files in folder '{args.folder}'.")
     else:
@@ -101,15 +101,16 @@ def main():
             
             # Enforce 2 second delay between individual posts within the thread
             original_sleep = time.sleep
-            def custom_sleep(seconds):
-                original_sleep(2.0 if seconds == 1 else seconds)
-            time.sleep = custom_sleep
-            
-            post_thread(client, cfg, live=args.live)
-            
-            # Restore sleep
-            time.sleep = original_sleep
-            success = True
+            try:
+                def custom_sleep(seconds):
+                    original_sleep(2.0 if seconds == 1 else seconds)
+                time.sleep = custom_sleep
+                
+                post_thread(client, cfg, live=args.live)
+                success = True
+            finally:
+                # Restore sleep
+                time.sleep = original_sleep
             
         except Exception as e:
             print(f"Failed to process {filename}: {e}")

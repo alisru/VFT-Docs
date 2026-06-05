@@ -172,13 +172,6 @@ for s in stories:
         graph_path
     )
     
-    # Copy graph image to _Generated_Content/graph_png/
-    gen_graph_dir = os.path.join(workspace_root, "_Generated_Content", "graph_png")
-    os.makedirs(gen_graph_dir, exist_ok=True)
-    import shutil
-    shutil.copy2(graph_path, os.path.join(gen_graph_dir, graph_base_filename))
-    print(f"Copied graph image to _Generated_Content/graph_png/")
-    
     # Update config with correct graph image reference
     s["graph_img"] = f"graph_png/{graph_base_filename}"
     
