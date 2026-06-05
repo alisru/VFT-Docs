@@ -2,6 +2,7 @@ import json
 import glob
 import os
 import sys
+import datetime
 
 def rebuild_registries():
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -111,6 +112,9 @@ def rebuild_registries():
 
         status = cfg.get("status", "")
 
+        mtime = os.path.getmtime(authoritative_file)
+        created_at = datetime.datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M:%S")
+
         registry_story = {
             "id":        slug,
             "subject":   cfg.get("subject"),
@@ -124,6 +128,7 @@ def rebuild_registries():
             "verdict":   verdict,
             "graph_img": graph_img,
             "posts":     cfg.get("posts"),
+            "created_at": created_at,
         }
         for k in ["target_url", "rkeys", "post_urls"]:
             if k in cfg:

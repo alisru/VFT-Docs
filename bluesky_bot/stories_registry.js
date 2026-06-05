@@ -27,6 +27,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nWe balance Aww's democratic call with institutional safeguards. If models must be reviewed, they should be audited by independent academic bodies under public, multi-stakeholder supervision, not secret agencies.",
       "Synthesized Resolution Vector:\nBlended Path: Legally mandate that pre-release safety audits be conducted by open-source, university-led consortia under strict public disclosure rules.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:47",
     "target_url": "",
     "rkeys": [
       "3mn63orxkfl2h",
@@ -89,6 +90,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, dressing up real pain in high-fashion glitter and calling it deep is wild. The audience grew up, but the writers stayed stuck in middle school. Crying on screen for clicks isn't art, bro, it's just exhausting.",
       "Blended Path: Reconnect creative production with grounded, community-validated narratives while maintaining aesthetic boundaries.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 15:28:47",
     "target_url": "",
     "rkeys": [
       "3mn633zq5df2x",
@@ -151,6 +153,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nMassive sports events cannot treat safety as an afterthought. We must mandate that tournament organizers legally co-fund local public safety infrastructure and deploy non-militarized crowd guides.",
       "Synthesized Resolution Vector:\nBlended Path: Enforce co-liability laws where sports associations fund community security and employ proactive de-escalation hosts.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:47",
     "target_url": "",
     "rkeys": [
       "3mn62uu7iim25",
@@ -213,6 +216,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nWe unify Aww's local care with strict regulatory bounds. We must legally restrict data center construction permits, matching them directly to real-time regional surplus energy capacities.",
       "Synthesized Resolution Vector:\nBlended Path: Implement legally binding grid-matching rules that force data center operators to build dedicated off-grid clean energy farms for their server loads.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:48",
     "target_url": "",
     "rkeys": [
       "3mn63ttrr6v2x",
@@ -275,6 +279,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, having thousands of mice chewing through your walls and crops while bureaucrats review forms is a complete joke. Farmers don't need committees, bro. They need bait, traps, and physical help on the ground right now.",
       "Blended Path: Establish decentralized, rapid-response biosecurity taskforces equipped to deploy ecological buffers at the first sign of population surges.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 15:28:48",
     "target_url": "",
     "rkeys": [
       "3mn63fvxspv2n",
@@ -337,6 +342,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nWe balance Bro's pragmatism with open standards. To prevent proprietary moats, legal compliance metrics must be managed by independent, academic, and bar association boards rather than publishers.",
       "Synthesized Resolution Vector:\nBlended Path: Form independent legal and financial bar-led boards to define open-source, citation-verified AI standards, bypassing proprietary publisher lock-ins.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:48",
     "target_url": "",
     "rkeys": [
       "3mn636cgovu2x",
@@ -399,6 +405,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nWe bridge Bro's practical critique with systemic infrastructure. To achieve true resilience, the state must offer federal incentives specifically targeting domestic advanced packaging and substrate facilities.",
       "Synthesized Resolution Vector:\nBlended Path: Expand CHIPS Act subsidies to heavily mandate and prioritize advanced domestic chip packaging alongside raw silicon fabrication.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:48",
     "target_url": "",
     "rkeys": [
       "3mn62s2zvuc2n",
@@ -461,6 +468,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nLuxury is an emotional artifact, not a utility. Ferrari must meet emissions standards through carbon-neutral synthetic fuels, preserving the mechanical combustion engine.",
       "Synthesized Resolution Vector:\nBlended Path: Dedicate EV platforms to commuter utility, while reserving classic luxury for high-efficiency, synthetic-fueled combustion craftsmanship.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:48",
     "target_url": "",
     "rkeys": [
       "3mn6356sq3q2n",
@@ -523,6 +531,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nPublic transit is a physical and digital Commons. Wi-Fi must be regulated as a mandatory core operational requirement, not a premium perk that operators can discard to save pennies.",
       "Synthesized Resolution Vector:\nBlended Path: Nationalize transit network standards, mandating fiber-linked trackside cells and free, open-access onboard repeaters.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:49",
     "target_url": "",
     "rkeys": [
       "3mn6425rlls2z",
@@ -585,6 +594,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nCharismatic dominance is a structural bottleneck. Healthy civic systems must distribute authority and prioritize institutional accountability over the polished branding of any single individual.",
       "Synthesized Resolution Vector:\nBlended Path: Implement collective leadership models and mandatory transparency audits to prevent power centralization.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:49",
     "target_url": "",
     "rkeys": [
       "3mn63v5kocb2n",
@@ -647,6 +657,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, citizens hitting the polls to decide their own future despite all the high-level political noise is the ultimate power move. You don't need pundits to tell you that local voices are what truly matter, bro.",
       "Blended Path: Strengthen local democratic transparency tools while establishing permanent, cooperative regional frameworks for shared economic development.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 15:28:49",
     "target_url": "",
     "rkeys": [
       "3mn62wntxqu2n",
@@ -709,6 +720,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nTruth is verified by open adversarial debate, not prestige storytelling. Broadcasters must restore public trust by showing their source work rather than scolding the audience.",
       "Synthesized Resolution Vector:\nBlended Path: Establish independent, transparent community audits of public media narratives to verify impartiality.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:50",
     "target_url": "",
     "rkeys": [
       "3mn62y4rf642n",
@@ -771,6 +783,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, capturing ancient castles and telling whole regions to run is heavy business. You can't just draw new lines on a map and expect everything to stay cool. People are losing their homes, and that's a mess, bro.",
       "Blended Path: Enforce strict international demilitarization zones around cultural heritage sites while prioritizing human-centric diplomatic peacekeeping structures.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 15:28:50",
     "target_url": "",
     "rkeys": [
       "3mn63aurlam2h",
@@ -833,6 +846,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nWe balance Bro's radical local bypass with structural regulations. An open marketplace must enforce hardware interoperability, requiring NeoCloud to support standard non-TPU frameworks natively.",
       "Synthesized Resolution Vector:\nBlended Path: Enforce strict hardware interoperability laws for AI cloud vendors while funding decentralized community-owned compute cooperatives.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 15:28:50",
     "target_url": "",
     "rkeys": [
       "3mn63h5f5mm2c",
@@ -895,6 +909,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, when you're an A-list star working with Spielberg, you can say 'no' to whatever you want. That's not a union victory, that's just having a killer agent. The background actors still get scanned for free.",
       "Blended Path: Enforce industry-wide collective bargaining agreements that legally mandate human-performance-only clauses for all contract tiers.\nFinal Recalculated Coordinates: (+0.5, 0.0)"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn62zsdj322e",
       "3mn62zsvhy42d",
@@ -956,6 +971,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, handing out cash rewards because your own cops can't be trusted not to shake down regular people doing a good deed is wild. If the local authorities keep creating friction, let's just use open-source volunteer dispatch networks to bypass them entirely.",
       "Blended Path: Deploy open-source peer volunteer dispatch networks (like Trek Medics Beacon) under the protection of local legal-aid circles that actively enforce anti-harassment directives.\nFinal Recalculated Coordinates: (+1.8, +1.5) — Systemic Justice"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn645tv62c2e",
       "3mn645u52jf2n",
@@ -1019,6 +1035,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, when you own a massive sports drink brand and are boxing in front of millions, splitting your YouTube ad revenue seven ways just doesn't make sense anymore. It's just simple business math, no hard feelings.",
       "Blended Path: Implement transparent, dynamic equity models in creator collectives that automatically adjust based on individual contribution metrics.\nFinal Recalculated Coordinates: (0.0, +0.5)"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn63c534xk2x",
       "3mn63c5q6hr2n",
@@ -1080,6 +1097,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo this guy owns a Steak 'n Shake, goes to church, gets hit by inspiration, and builds a restaurant where all the profits go to charity? Meanwhile, big tech CEOs are charging $20 for a blue checkmark just to buy another yacht. Respect, bro. The food probably hits different too.",
       "Blended Path: Establish independent, founder-decoupled non-profit trusts to own regional comfort kitchens, securing standard operations while locking in community charity payout rules.\nFinal Recalculated Coordinates: (+1.6, +1.6) — Systemic Justice"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn4gsuxdmf2d"
     ],
@@ -1115,6 +1133,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, doing photo-ops riding horses shirtless and diving for ancient relics just to convince everyone you're a real-life superhero is wild. It's like a 25-year corporate PR campaign designed to keep one guy in the CEO chair.",
       "Blended Path: Support uncensored regional journalism and decentralized, open-source media networks to systematically erode state informational monopolies.\nFinal Recalculated Coordinates: (-0.5, -0.2)"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn63py247c2x",
       "3mn63pyl7v62z",
@@ -1176,6 +1195,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, claiming you are 100% green because of some certificate while the physical power grid next door is literally burning imported coal is classic corporate spreadsheet accounting. Let's just limit high-density datacenter permits until true grid capacity matches the hype.",
       "Blended Path: Enforce strict real-time physical matching for datacenter grid permits, forcing operators to co-locate with dedicated, off-grid clean energy farms.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn5swedish01",
       "3mn5swedish02",
@@ -1237,6 +1257,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, tech CEOs spending billions to build a computer that writes mediocre cover letters, while claiming it's going to become a digital god and save us all, is the ultimate peak-bubble energy. They just need to keep the stock price up.",
       "Blended Path: Enforce strict financial audit standards and resource consumption transparency for all AI models claiming systemic utility.\nFinal Recalculated Coordinates: (-0.5, -0.5)"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn63xonb4l2n",
       "3mn63xp7uv72h",
@@ -1298,6 +1319,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, offering to perform at a music festival to save it, and then literally three hours later saying 'actually, cancel the whole thing, it's a disaster' is peak theater kid energy. He got his headlines and dipped.",
       "Blended Path: Mandate independent escrow bonds and strict logistical audits for any large-scale civic festivals claiming national significance.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mmzxflgtss2i"
     ],
@@ -1333,6 +1355,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, Volvo spent three years bragging about how they're 100% done with gas, got all the good press, and then the second interest rates spiked and chargers broke, they were like 'hey, hybrids are actually super cool too, guys!' That’s classic corporate quiet-quitting.",
       "Blended Path: Enforce transparent, grid-linked corporate vehicle targets that are legally bound to local physical charging network capacities.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:06:37",
     "rkeys": [
       "3mn4pnkrees2y"
     ],
@@ -1368,6 +1391,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, treating governance like it's a popularity contest judged by daily headlines is peak politics. If you want to build a house, bro, you don't stop pouring concrete just because the neighbors don't like the color of the truck.",
       "Blended Path: Establish independent, long-term public infrastructure commissions to manage national assets, insulating critical services from short-term electoral and media cycles.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/mirror.co.uk/post/3mn5ovehocj2w",
     "rkeys": [
       "3mn644n5xea2h",
@@ -1430,6 +1454,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, paying £35 for aerosolized cornstarch and silicones just to fund some publisher's commission is wild. Just mix cornstarch and cocoa powder for £1 and bypass the entire corporate affiliate trap. Your hair and your wallet will thank you.",
       "Blended Path: Enforce clear, upfront affiliate disclosures (ASA CAP Code 2.1) while empowering consumers with zero-waste, low-cost DIY haircare alternatives.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/mirror.co.uk/post/3mn5bp7azjd2x",
     "rkeys": [
       "3mn62lvrb5625",
@@ -1492,6 +1517,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nThis is like a car company lobbying for stricter speed limits so they don't get sued when their auto-pilot goes wild. Sure, speed limits are good, but maybe don't make the car go 200 mph in the first place, bro.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's auto-pilot analogy with Aww's honesty appeal, finding liability shifting collapses safety to Lesser Evil.\nFinal Recalculated Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/wired.com/post/3mnggqnn3ma2x",
     "rkeys": [
       "3mngwfghkzq24",
@@ -1554,6 +1580,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, playing Beethoven or Coltrane for a literal alien is the ultimate first impression. You don't need a telescope to know that high-vibe soundwaves speak directly to the soul. Crank up the volume, bro.",
       "Blended Path: Support public music education and open-source global acoustic archiving to preserve and celebrate our collective cultural symphony for all generations.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mn5pf24tfc2d",
     "rkeys": [
       "3mn62p57hqc2n",
@@ -1616,6 +1643,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, forcing scientists locked in a frozen dome for ten months to do corporate team-building is absolute torture. Sometimes the best way to be a good teammate, bro, is to just shut the door and leave each other alone for a few hours.",
       "Blended Path: Implement structured 'quiet-hour' protocols and private physical zoning in high-pressure workplaces to balance cooperative mission needs with individual mental space.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/economist.com/post/3mn5ovsbp2s2o",
     "rkeys": [
       "3mn62qsiwof2n",
@@ -1678,6 +1706,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nAll hype and no delivery. They thought they could just coast on the name and print money. The critics aren't buying the lazy effort, and neither should the fans.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of The Fall — Aletheia blends Bro's lazy effort point with Aww's empty feeling appeal, finding commercial revivals drift to passive extraction when creative risk is ignored.\nFinal Recalculated Coordinates: (+0.5, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/ftweekend.com/post/3mngtvbe7ru2p",
     "rkeys": [
       "3mngwgm3puo2k",
@@ -1740,6 +1769,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Awwthekanon:\nMy heart breaks for the families and individuals locked inside Camp East Montana. Cruelty can never be the foundation of security. True order begins with basic care, and we must heal these broken systems by extending absolute dignity to every human being.",
       "Brothekanon:\nSo you set up a high-tech facility to show how 'organized' you are, but you're actually just locking people up without basic medicine or clean water? That’s not security, bro. That’s just a poorly run prison camp masquerading as a legal system. Treat people right."
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/npr.org/post/3mn4erbqhwi2x",
     "rkeys": [
       "3mn63l2rmqw2z",
@@ -1802,6 +1832,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nWe've seen this movie a hundred times. Kid gets bullied, teacher doesn't notice, dramatic music plays. If you are going to make a movie about this, at least give us something real to work with.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of The Fall — Aletheia blends Bro's cliché point with Aww's real-pain appeal, finding that moral formulas satisfy artistic vanity without driving systemic change.\nFinal Recalculated Coordinates: (-1.0, +1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/liberation.fr/post/3mngu6mmauu2v",
     "rkeys": [
       "3mngwhy4glb2r",
@@ -1864,6 +1895,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nShout out to the doctors fighting Ebola while literally dodging bullets. That is some next-level courage. You can have the best lab in the world, but it doesn't mean much if you need an armored escort to use it.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's armor escort point with Aww's safety plea, finding health workers hold open futures against violent containment.\nFinal Recalculated Coordinates: (+1.0, +0.5)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/apnews.com/post/3mngs23kr3o2c",
     "rkeys": [
       "3mngwjbyoq52m",
@@ -1926,6 +1958,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo we're redrawing the map lines every five minutes? Bro, how are you supposed to know who you're voting for if your house hops districts while you're sleeping? Let the people vote, stop playing SimCity.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's SimCity map warning with Aww's lost voice concern, finding map adjustments collapse representation.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/npr.org/post/3mngenknexn26",
     "rkeys": [
       "3mngwkio7mx24",
@@ -1988,6 +2021,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nIf you can't even tell a lawyer where their client is, you aren't running an agency, you are running a shell game. It is a total abuse of authority.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's shell game point with Aww's humanity appeal, concluding that arbitrary transfers collapse due process into state extraction.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/motherjones.com/post/3mngcxedtr32j",
     "rkeys": [
       "3mngwlv6msp26",
@@ -2050,6 +2084,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nYou can't claim to run a modern democracy and then ban the Red Cross. That is a massive red flag. The court did the right thing by calling out the double standard.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's red flag point with Aww's decency appeal, finding that lawless black boxes erode the state's own institutional legitimacy.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/nytimes.com/post/3mngu26kiz62e",
     "rkeys": [
       "3mngwn6afnv2y",
@@ -2112,6 +2147,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nFrom Belfast to the Big Apple, that is a massive step. Good for him. This shows that if you put in the time and make something real, it can travel anywhere.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's travel point with Aww's gift appeal, concluding that long-term artistic focus successfully constructs cross-cultural nodes.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/irishstar.com/post/3mngtj3ogf42y",
     "rkeys": [
       "3mngwofsa4n2n",
@@ -2174,6 +2210,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nNothing makes tourism boards sweat quite like a travel warning. If these countries want that sweet tourist revenue, they are going to have to fix their laws.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's revenue point with Aww's safety appeal, finding that public safety indexes drive economic pressure for rights reform.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/mirror.co.uk/post/3mngtxs5nnt2m",
     "rkeys": [
       "3mngwplegb724",
@@ -2236,6 +2273,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, Lukashenko calling border troops 'cannon fodder' while his own military is too terrified to cross the line is peak posturing. That's not a military strategy, bro. That's just shouting over the fence to keep his boss in Moscow happy.",
       "Blended Path: Establish local, community-led border de-escalation channels while reinforcing Belarus's internal military boundaries against Russian integration.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/kyivindependent.com/post/3mn5pgxenb22l",
     "rkeys": [
       "3mn63dedwe72x",
@@ -2298,6 +2336,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nNothing says 'we are winning' quite like panicking because someone else has a plan. If you are that secure in your takeover, you shouldn't care about the competition.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's panic point with Aww's fear concern, finding that factional monopoly claims collapse when faced with open competition.\nFinal Recalculated Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/rawstory.com/post/3mngtputz3t2i",
     "rkeys": [
       "3mngwqs5niw2t",
@@ -2360,6 +2399,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nIf you are going to accuse a fellow representative of backing a terrorist group, you better bring some receipts. Doing it without proof is just a cheap shot.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's proof point with Aww's respect appeal, concluding that groundless terror accusations degrade the democratic framework.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/politico.com/post/3mnggqupvoq2w",
     "rkeys": [
       "3mngwrwqjh72m",
@@ -2422,6 +2462,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nHow are you going to ban a procedure that clears out tissue after a miscarriage? That isn't stopping abortion, it is just torturing women who had a tragedy.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's torture point with Aww's grief appeal, finding that abstract moral laws collapse into active harm when they outlaw healthcare.\nFinal Recalculated Coordinates: (-1.0, -2.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/propublica.org/post/3mngmyvuatv2o",
     "rkeys": [
       "3mngwt7r6nj24",
@@ -2484,6 +2525,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, Gov. Reeves blocking the ballot initiative because he's scared of cannabis is wild. That's not public service, bro. That's just breaking the entire state's constitutional plumbing just to keep one plant out of the pipes.",
       "Blended Path: Deploy community-led municipal voting networks to pass local cannabis ordinances while pursuing structural federal lawsuits to mandate state ballot restoration.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/mississippifreepress.org/post/3mn5p6n52is2j",
     "rkeys": [
       "3mn63end7gk2e",
@@ -2546,6 +2588,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nDecentralized curation is a major step forward, but absolute isolation breeds radicalization. We need public-interest remix registries that promote diversity and cross-pollination.",
       "Synthesized Resolution Vector:\nBlended Path: Implement cooperative feed peer-reviews where users exchange remix templates to build shared, resilient networks.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/aendra.com/post/3miij6e2txc22",
     "rkeys": [
       "3mn63ihxtrw2z",
@@ -2608,6 +2651,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nAlign claims with reality via immediate recalibration, then build trust through radical transparency & independent oversight. This fosters genuine utility, moving beyond mere signposts to deliver verifiable, valuable information.",
       "Synthesized Resolution Vector:\nBlended Path: Align claims, build transparency, elevate utility.\nFinal Recalculated Coordinates: (1.0, 1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "",
     "rkeys": [
       "3mn63jqadx32h",
@@ -2672,6 +2716,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, trying to build a 10-letter word letter-by-letter is the ultimate brain workout. It beats scrolling mindlessly through short videos any day. Put down the infinite scroll and build some big words, bro.",
       "Blended Path: Integrate interactive, recursive learning games into daily educational routines to foster organic, proactive cognitive development.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/newyorker.com/post/3mn5v3uzxo222",
     "rkeys": [
       "3mn63mboxsj2n",
@@ -2734,6 +2779,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBlaming anti-racism rules for treating a guy like garbage is a wild stretch. Bro, policies didn't make you abuse him. That was a choice. Just admit you messed up and treat people like human beings.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's choice reality with Aww's apology plea, finding policy debates collapse to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mngp4lbtmm2m",
     "rkeys": [
       "3mngwvwjxm32t",
@@ -2796,6 +2842,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo the plan to fix the nurse shortage is to just make it easier to become a nurse? Bro, I don't want a nurse who took a shortcut when I'm in the ER. Pay them better, don't lower the bar.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's ER warning with Aww's professional respect appeal, finding credential dilution collapses to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/newsweek.com/post/3mngnfpovqt2s",
     "rkeys": [
       "3mngwx5z2ak2r",
@@ -2858,6 +2905,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Aletheia's Synthesis:\nCultural philanthropy must not act as a cover for predatory gentrification. Presidential libraries should be built on private land and require binding community-benefit housing agreements.",
       "Synthesized Resolution Vector:\nBlended Path: Enforce strict, legally binding rent controls and affordable housing guarantees around any mega-development project.\nFinal Recalculated Coordinates: (0.0, 0.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mn5v6ryhct2t",
     "rkeys": [
       "3mn63nh4zjr2c",
@@ -2922,6 +2970,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nAre you kidding me? Passwords in the description field? Why not just write them on a sticky note and paste it on the monitor? This is cyber security 101.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's sticky note point with Aww's trust concern, concluding that convenience-based shortcuts dismantle critical security perimeters.\nFinal Recalculated Coordinates: (-1.0, -2.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/theregister.com/post/3mngttapnvu2q",
     "rkeys": [
       "3mngwyfx4jd24",
@@ -2984,6 +3033,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, Feltner throwing heat and McCarthy smashing runs is absolute poetry in motion. You don't need a corporate spreadsheet to tell you this team is vibing. When the arm is hot and the bats are alive, you just ride the wave.",
       "Blended Path: Champion individual player development while building cooperative team-wide play-calling protocols to institutionalize athletic flow.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/denverpost.com/post/3mn5v4xaitw2s",
     "rkeys": [
       "3mn63r6j5ob2c",
@@ -3048,6 +3098,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, flying a dozen priests and pastors to Rome to 'listen to the world's cries' on the city's credit card is wild. If you want to listen to cries, bro, just take a walk down the South Side without a security detail. It's free and a lot more accurate.",
       "Blended Path: Enforce strict municipal caps on non-local travel while redirecting interfaith partnerships into local neighborhood conflict-resolution networks.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/chicago.suntimes.com/post/3mn5pd63tmw2y",
     "rkeys": [
       "3mn63sjdebj2n",
@@ -3112,6 +3163,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nListen, good journalism costs money. Either you pay a subscription, or you become the product for some ad tech giant. A buck a month is a steal to keep the lights on.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's ad tech point with Aww's stewardship appeal, finding voluntary support constructs open public commons.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/scroll.in/post/3mngue7iog22o",
     "rkeys": [
       "3mngwzqwvla2m",
@@ -3174,6 +3226,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Awwthekanon:\nThis shifts the burden away from the deep human and environmental cost of lithium mining in fragile communities. Harnessing simple, abundant sodium feels like a gentler way to power our world, offering a path to healing both local lands and global partnerships.",
       "Brothekanon:\nSo we're replacing super rare lithium with literally table salt and it still works? That’s like replacing premium carbon fiber with cheap plastic and somehow getting the same lap times. Sure, it gets cold and stops charging, but just buy it a little sweater, bro."
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/progsec.bsky.social/post/3mn3vgahi4k23",
     "rkeys": [
       "3mn64aey3bq2z",
@@ -3236,6 +3289,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nIt is pretty wild seeing people sunbathe next to a giant column of black oil smoke. Talk about a dystopian summer vibe. If you want to stop the forum, you need a lot more than a single drone hit.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's dystopian vibe with Aww's desensitization concern, concluding that tactical signals degrade common spaces without strategic utility.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/meduza.io/post/3mnguczlecw2b",
     "rkeys": [
       "3mngx32uqvp2n",
@@ -3298,6 +3352,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, 'The Bear' back in the kitchen and dragons tearing up the skies is absolute top-tier hype. You don't need a film degree to know these shows are pure fire. Grab some snacks, call the crew, and enjoy the ride, bro!",
       "Blended Path: Champion high-art production values and robust local theater cultures to ground artistic appreciation in both digital and physical community spaces.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/elpais.com/post/3mn5vw2v6ht2c",
     "rkeys": [
       "3mn63wg5xix2z",
@@ -3360,6 +3415,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nDude has a 35 million dollar mansion in California and still decides to smuggle tech to Iran's nuclear program? That is next-level greed. Enjoy prison, man.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's greed point with Aww's peace appeal, finding that private profit-seeking at the cost of global security is a systemic failure.\nFinal Recalculated Coordinates: (-2.0, -2.0)"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/forbes.com/post/3mnfxrgicnx2a",
     "rkeys": [
       "3mngx4chquv2t",
@@ -3422,6 +3478,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, wanting to build space-faring robot gods when we haven't even sorted out clean energy and basic housing is wild. You don't need a spaceship to know that's complete escapism. Let's fix the home turf first, bro.",
       "Blended Path: Rechannel speculative cosmic investments into immediate, planetary regenerative technologies to secure our physical foundation before looking to the stars.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mn5sgyyf552v",
     "rkeys": [
       "3mn63ywzp422w",
@@ -3484,6 +3541,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, claiming you have the best brain in history while failing a basic doctor's test is absolute madness. You can't spin a biological scan, bro. If you can't pass the check, you shouldn't be holding the keys.",
       "Blended Path: Establish independent, non-partisan medical boards to conduct routine, standardized cognitive audits for all senior national leaders.\nFinal Recalculated Coordinates: (0.0, 0.0) — Center"
     ],
+    "created_at": "2026-06-04 20:07:50",
     "target_url": "https://bsky.app/profile/rawstory.com/post/3mn5v2kxdpi27",
     "rkeys": [
       "3mn643g5maa25",
@@ -3546,6 +3604,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo teachers are using AI to grade, and kids are using AI to write, and both sides are pretending they're doing the work? That's not a school, bro. That's just two bots talking to each other while you pay tuition.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's bot-grading joke and Aww's trust appeal, concluding that academic integrity collapses to Lesser Evil under surveillance.\nFinal Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-04 20:14:42",
     "target_url": "https://bsky.app/profile/timeshighered.bsky.social/post/3mnhdwbcvvr2t",
     "rkeys": [
       "3mnhfb6tnwq2t",
@@ -3608,6 +3667,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo if the AI gives me the wrong medical advice, the hospital just points to their shiny 'Certified Safe' badge and says 'not our problem'? That's not safety, bro, that's just a hall pass for developers.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's hall-pass warning and Aww's trust appeal, concluding that trust certificates collapse to Lesser Evil via compliance theater.\nFinal Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-04 20:15:24",
     "target_url": "https://bsky.app/profile/aidailypost.com/post/3mnhdwhhps42h",
     "rkeys": [
       "3mnhfcffyr425",
@@ -3670,6 +3730,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nMonaco is like buying a ticket to a track meet but everyone has to run in single file and you can't pass. Saturday is cool, but Sunday is just a yacht show with engine noise in the background. Wake me up on Monday.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Bro's yacht-show commentary and Aww's talent defense show Monaco GP collapses racing to a Greater Evil parade.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-04 20:16:08",
     "target_url": "https://bsky.app/profile/thenationalnews.com/post/3mnhddjgcry2y",
     "rkeys": [
       "3mnhfdpgap72m",
@@ -3732,6 +3793,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, a 14-year-old girl getting killed is absolutely devastating. The government needs to stop doing press conferences and start putting real resources into keeping people safe on the streets. No excuses.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia merges Bro's call for real action and Aww's grief, finding that policy declarations fail without local safety enforcement.\nFinal Recalculated Coordinates: (-2.0, -2.0)"
     ],
+    "created_at": "2026-06-04 20:16:48",
     "target_url": "https://bsky.app/profile/apnews.com/post/3mnhcsdronf2y",
     "rkeys": [
       "3mnhfexlhmj25",
@@ -3794,6 +3856,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nClassic admin move: they hike tuition, hire more vice-chancellors, and then act surprised they're broke, so they delete the most unique major. Just cut the marketing budget, bro.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia reconciles Bro's administrative critique and Aww's concern for identity, finding that the cut leads to Greater Evil.\nFinal Recalculated Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-04 20:17:33",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mnhczstcp52z",
     "rkeys": [
       "3mnhfg7nnmf25",
@@ -3856,6 +3919,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo the scientists are basically giving the trees vaccine shots by hitting them with the actual disease? That's heavy metal forestry, bro. If they survive, they get to be the ancestors of the whole forest. Respect.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's heavy metal forestry take and Aww's healing vision, finding that active selection succeeds where passive preservation failed.\nFinal Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-04 20:18:17",
     "target_url": "https://bsky.app/profile/wbur.org/post/3mnhdm4pows2m",
     "rkeys": [
       "3mnhfhk6vxo2y",
@@ -3918,6 +3982,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nNobody likes seeing the highway turn into a parking lot, but rip the band-aid off, bro. One weekend of traffic hell is way better than six months of orange cones blocking one lane at a time. Get it done.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's band-aid view with Aww's safety relief, concluding that temporary road closures collapse to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 03:43:05",
     "target_url": "https://bsky.app/profile/atlantanewsfirst.com/post/3mnhziatlbn2z",
     "rkeys": [
       "3mni6cwqpzm2c",
@@ -3980,6 +4045,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nNintendo makes you pay a premium for a console and then cheapouts on the controller battery. Shoutout to Belkin for stepped up to fix the battery life before the console is even out. That's a bro move.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's hardware critique and Aww's shared play focus, confirming modular battery expansion achieves Greater Good.\nFinal: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 03:43:47",
     "target_url": "https://bsky.app/profile/theverge.com/post/3mnhzpcsvmd2k",
     "rkeys": [
       "3mni6eahzmk24",
@@ -4042,6 +4108,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, nobody is buying regular Jack anymore so they're putting blackberry juice in it to keep the stock price up. Next year it's gonna be pumpkin spice whiskey. Just drink water.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's gimmick warning and Aww's wellness appeal, concluding that flavor patches mask core flatlining.\nFinal Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-05 03:44:29",
     "target_url": "https://bsky.app/profile/forbes.com/post/3mnhzyf6vwy2q",
     "rkeys": [
       "3mni6fhdt2j2k",
@@ -4104,6 +4171,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nUsing a Waymo as a getaway car is next-level lazy. The thief didn't even have to drive! And Waymo won't show the video? That's basically a subscription-based getaway service. SF is living in 2050.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's getaway joke and Aww's empathy, finding automated transit collapses to Greater Evil without community checks.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 03:45:14",
     "target_url": "https://bsky.app/profile/techcrunch.com/post/3mnhzsyuveb2s",
     "rkeys": [
       "3mni6grrj5x2n",
@@ -4166,6 +4234,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo you take over a historic news division promising to fix biased media, and within months you're just firing the 60 Minutes legend who does the actual reporting? That's not journalism disruption, that's just bad management.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's critique of bad management and Aww's plea for trust, concluding that stated reform collapses to Greater Evil once reporting capacity is destroyed.\nFinal: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 03:45:55",
     "target_url": "https://bsky.app/profile/washingtonpost.com/post/3mnhvbaro2j2r",
     "rkeys": [
       "3mni6i2cka72t",
@@ -4228,6 +4297,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nThree hundred bucks for a festival ticket just to stand in the mud is a scam, bro. Hit up the local showcase, buy a beer, and see some real bands for ten bucks. It's better music, better vibes, and your wallet wins.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's wallet-friendly advice with Aww's accessible connection, finding that indie showcases collapse to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 03:46:37",
     "target_url": "https://bsky.app/profile/denverpost.com/post/3mnhzhmghtm25",
     "rkeys": [
       "3mni6jch3q62k",
@@ -4290,6 +4360,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nImagine being so scared of a magazine that you deploy state security to shut it down. Bro, if a few articles can threaten your entire system, your system is built on a stack of cards. Let the people write.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's fragile cards warning with Aww's safety appeal, finding that media suppression collapses to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 03:47:21",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mnhzjlbfkn2i",
     "rkeys": [
       "3mni6klq5wh2n",
@@ -4352,6 +4423,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nHiring Diddy's lawyer to defend a dictator is a wild crossover episode. Bro, if you need the guy who cross-examined Cassie to beat your federal charges, you're not defending a country. You're just trying to stay out of jail.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's crossover warning with Aww's resource critique, concluding that elite defense purchases collapse to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 13:30:35",
     "target_url": "https://bsky.app/profile/businessinsider.com/post/3mnhzkvvzgx27",
     "rkeys": [
       "3mnj75gnu5y23",
@@ -4414,6 +4486,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nInventing a fancy new word for mass deportation is a wild branding pivot. Call it whatever you want, bro, but rounding up millions of people requires a police state. That's a bad deal for everyone.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's police-state warning with Aww's family focus, concluding that remigration collapses to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:34:25",
     "target_url": "https://bsky.app/profile/democracynow.org/post/3mnhzm3pwil27",
     "rkeys": [
       "3mnjcpjwqki2s",
@@ -4476,6 +4549,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, if kids are using smart glasses and tiny earpieces just to pass high school history, maybe the test is the problem. In the real world, you're allowed to use Google. Let them use the tech.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's real-world tech usage and Aww's mental health concern, finding student surveillance leads to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:35:07",
     "target_url": "",
     "rkeys": [
       "3mnjcqtknnk2s",
@@ -4538,6 +4612,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nPeople call it vanity, but losing your hair is tough on anyone. If science can fix it, that's a win. Let's get these treatments out of the lab and into the real world, bro.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's practical win perspective and Aww's dignity support, finding medical validation leads to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 14:35:49",
     "target_url": "",
     "rkeys": [
       "3mnjcs4moi42s",
@@ -4600,6 +4675,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo we left the Royal Family because the paparazzi was too much, but now we're sending toddler photos to the BBC? That's like quitting your job to avoid drama, then posting daily vlogs about it.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of The Fall — Aletheia blends Bro's blog joke and Aww's childhood hope, finding that claimed privacy collapses to Greatest Lie under brand curation.\nFinal Recalculated Coordinates: (-1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 14:36:34",
     "target_url": "",
     "rkeys": [
       "3mnjctemuhd24",
@@ -4662,6 +4738,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, Intel is writing checks their fabs can't cash. Trying to jump five nodes in four years is wild. TSMC is probably eating popcorn watching this slide deck burn. Focus on the yields.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's fab warning and Aww's support appeal, concluding that aggressive roadmaps collapse to Lesser Evil without yields.\nFinal Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-05 14:37:18",
     "target_url": "https://bsky.app/profile/theregister.com/post/3mnhzwyomgf2o",
     "rkeys": [
       "3mnjcuq3ic52d",
@@ -4724,6 +4801,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBurning workers alive at a gas station over tomato margins? That is straight out of a horror movie, not a modern economy. If your supply chain requires feudal violence, your business model is absolute trash. Pay your workers.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's warning and Aww's safety appeal, concluding labor contracts collapse to Greater Evil under gangmaster coercion.\nFinal: (-1.0, -2.0)"
     ],
+    "created_at": "2026-06-05 14:37:58",
     "target_url": "https://bsky.app/profile/nbcnews.com/post/3mnhzphghfe22",
     "rkeys": [
       "3mnjcvws7sh2n",
@@ -4786,6 +4864,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo you save up, house prices go crazy, you can't buy the house, and the government takes a cut of your OWN savings just to let you have your money back? That's not a savings account, that's a highway robbery. Update the cap, guys.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's robbery warning and Aww's empathy for savers, finding uncalibrated policy traps collapse support into extraction.\nFinal: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:38:39",
     "target_url": "",
     "rkeys": [
       "3mnjcx5yeim2k",
@@ -4848,6 +4927,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nPersepolis is absolute legend status. Drawing your childhood as a comic and getting nominated for an Oscar is the ultimate power move against a regime that wanted you quiet. Rest in peace, Marjane.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's legend status and Aww's grief, concluding Satrapi's personal story scaled into a global baseline for truth.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 14:39:23",
     "target_url": "",
     "rkeys": [
       "3mnjcyf66ye24",
@@ -4910,6 +4990,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nOne wild night and suddenly the news talks about you like you're in a post-apocalyptic movie. Meanwhile, you're just trying to buy milk. Stop letting talking heads turn local drama into national clickbait.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's anti-clickbait warning and Aww's local pride, finding sensationalism collapses public service to community extraction.\nFinal: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:40:03",
     "target_url": "",
     "rkeys": [
       "3mnjczodm3g26",
@@ -4972,6 +5053,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nStocks go up, stocks go down, and the talking heads act like they know exactly why Broadcom moved 2% at noon. Just buy solid companies and ignore the midday noise, bro. Save your sanity.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's warning against midday noise with Aww's human focus, confirming transparent data flows support Greater Good.\nFinal: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 14:40:46",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mnhzowqslc2n",
     "rkeys": [
       "3mnjd2xsfrw2k",
@@ -5034,6 +5116,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo the plan to get 'independent' is just buying your tanks from Russia and China instead of the US? That's not independence, bro. You're just changing who you owe money and favors to.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's favor-trading insight and Aww's trust-building plea, finding arms shopping leads to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:41:32",
     "target_url": "https://bsky.app/profile/economist.com/post/3mnhzqypxum27",
     "rkeys": [
       "3mnjd4aymri2d",
@@ -5096,6 +5179,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nRobodogs? Bro, unless that mechanical mutt is programmed to negotiate with cartels, this is just a fancy photo-op. Local people need real peace, not a metal puppy patrolling the stadium.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's metal puppy point and Aww's home safety concern, finding tech theater leads to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:42:12",
     "target_url": "",
     "rkeys": [
       "3mnjd5hq32l2o",
@@ -5158,6 +5242,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nHiring park directors and winning scholarships isn't going to break the internet, but honestly, it's nice to see a local news feed where everything is just working fine for once. Keep it up, Naperville.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's working-fine note and Aww's appreciation of quiet care, concluding that localized stability scales to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 14:42:50",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mnhzsamv4327",
     "rkeys": [
       "3mnjd6nunsi2h",
@@ -5220,6 +5305,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo you built a massive eight-story tower to explain how democracy is all about the regular people, but you did it with elite donor cash in a neighborhood worried about rent? That's like selling rebellion at the gift shop.",
       "Synthesized Vector:\nBlended Path: The Path of The Fall — Aletheia blends Bro's gift-shop critique and Aww's gentrification warning, concluding that civic empowerment collapses to Greatest Lie under elite legacy branding.\nFinal: (-1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 14:43:32",
     "target_url": "https://bsky.app/profile/chicago.suntimes.com/post/3mnhztq4qtv2m",
     "rkeys": [
       "3mnjd7ubdti2d",
@@ -5282,6 +5368,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo if someone does something terrible, they get a quick 'forgive and forget' pass, but if the victim talks about it, they're the bad guy? That's not religion, bro. That's a gaslighting system designed to hide crimes. Protect the kids.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's gaslighting critique and Aww's survival appeal, concluding that stated grace collapses to Greater Evil once used to silence abuse victims.\nFinal: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:44:14",
     "target_url": "https://bsky.app/profile/propublica.org/post/3mnhjq35mps2p",
     "rkeys": [
       "3mnjdb34dqe25",
@@ -5344,6 +5431,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBreaking a camera lens with a baton to 'keep the peace' is wild. You can't just delete the footage by smashing the glass, man. That's just buying the photographer a very expensive new rig with taxpayer money.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Stated protection collapses to Greater Evil under direct lens suppression.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:44:55",
     "target_url": "https://bsky.app/profile/pressfreedomtracker.us/post/3mnhzwunu3c2y",
     "rkeys": [
       "3mnjdcf6m4d23",
@@ -5406,6 +5494,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nImagine signing up to defend your country, and you don't even make it to the front lines because the chopper crashes in Devon. That's a rough way to go. Fix the maintenance, Navy.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's maintenance warning and Aww's grief, concluding that claimed Greater Good falls to Lesser Evil when training costs lives.\nFinal Coordinates: (-0.5, -1.0)"
     ],
+    "created_at": "2026-06-05 14:45:34",
     "target_url": "",
     "rkeys": [
       "3mnjddip4j624",
@@ -5468,6 +5557,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo people think every Sikh carries a dagger? It's like thinking every guy in a cowboy hat is packing a lasso. Nuance matters, bro. Let's not make rules based on what we saw in movies.",
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia merges Bro's cowboy hat analogy and Aww's mutual respect plea, finding that precise education leads to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 14:46:18",
     "target_url": "https://bsky.app/profile/uk.theconversation.com/post/3mnhzrvfacd2h",
     "rkeys": [
       "3mnjdesyxfb2x",
@@ -5530,6 +5620,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, Elon is just posting through it as usual, but when you're the owner of the digital town square, your random thoughts can spark actual riots. Maybe take a walk outside, man.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's warning and Aww's healing appeal, concluding that speech claims collapse to Greater Evil when they amplify division.\nFinal Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:46:55",
     "target_url": "",
     "rkeys": [
       "3mnjdfxxigc2s",
@@ -5592,6 +5683,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, the Constitution literally says Congress decides on war. Calling congressmen unpatriotic for doing their job of voting is wild. You can't just run the country solo.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's constitutional warning and Aww's open-discussion appeal, concluding that unchecked power claims collapse to Greater Evil.\nFinal Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:47:35",
     "target_url": "",
     "rkeys": [
       "3mnjdh5zbd624",
@@ -5654,6 +5746,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo you're shocked—shocked!—that a million-dollar crypto PAC is buying ads in a primary? Bro, they've been doing this for years. You can't run on the system's cash and then complain when the other guy gets a bigger booster pack.",
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's PAC critique and Aww's local voter plea, concluding that stated campaign reform collapses to Greater Evil under selective factional outrage.\nFinal: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 14:48:20",
     "target_url": "https://bsky.app/profile/politico.com/post/3mnhzhi65ur2v",
     "rkeys": [
       "3mnjdig7jao23",
@@ -5716,6 +5809,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\n'Unforeseen circumstances' is just corporate speak for 'we messed up the schedule.' You had all night to fix the road, and now everyone's Friday is ruined while you figure it out. Just admit you overslept the deadline, bro.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated public service collapses to Greater Evil once planning failures are blamed on the environment.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:17",
     "target_url": "https://bsky.app/profile/mirror.co.uk/post/3mnjiaucl2525",
     "rkeys": [],
     "post_urls": []
@@ -5748,6 +5842,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, 19 feet? That's not a landing, that's tailgating a semi-truck in a Boeing 737. If I wanted to dodge airplanes on my morning commute, I'd drive in GTA, not the New Jersey Turnpike.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia merges Bro's highway warning with Aww's safety plea, showing safety claims collapse to Greater Evil when boundaries fail.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:27",
     "target_url": "https://bsky.app/profile/cnn.com/post/3mnji3hpkae2u",
     "rkeys": [],
     "post_urls": []
@@ -5780,6 +5875,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo a list of 'free' weekend ideas is basically just 'go spend a hundred bucks at a beer garden and buy concert tickets.' Bro, that's not a community festival, that's a credit card workout. Give us some actual free parks.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated Greater Good collapses to Greater Evil once civic connection is gated by commercial transaction.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:33",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mnji73wacp2i"
   },
   {
@@ -5810,6 +5906,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, talking about 'affording' war like it's a home renovation project is wild. We're talking about maxing out the national credit card to blow stuff up. Guess who gets stuck paying the interest for the next fifty years?",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated defense collapses to Greater Evil once the economic cost is permanently shifted onto citizen quality of life.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:33",
     "target_url": "https://bsky.app/profile/financialtimes.com/post/3mnji2oaqy32a",
     "rkeys": [],
     "post_urls": []
@@ -5842,6 +5939,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nShoutout to the 28 graduates! Having the entire gym packed and the chairman hyping you up is next level. That math teacher retiring Cara Carbone is going out on a high note. Congrats, fam!",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia merges Bro's graduation hype with Aww's community care, showing how a formal milestone resolves as a systemic Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 16:15:39",
     "target_url": "https://bsky.app/profile/cascadiadaily.com/post/3mnjhulykj42p",
     "rkeys": [],
     "post_urls": []
@@ -5874,6 +5972,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, you are out here trying to extort millions, but you forgot to turn on your VPN? That is not just breaking the first rule of ransomware, that's failing internet 101. Enjoy the federal accommodation, mastermind.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Delusion — Stated criminal mastery collapses to Greater Evil once basic operational discipline fails.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:45",
     "target_url": "https://bsky.app/profile/theregister.com/post/3mnjhpzqxk62o",
     "rkeys": [],
     "post_urls": []
@@ -5906,6 +6005,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, putting your own kids on a 72-hour timer is wild. Even cheap motels let you extend your stay. Imagine your dad handing you a checkout slip and a survey after dinner on day three. That's cold, Coach Prime.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's hotel comparison and Aww's sanctuary appeal, finding that stated boundary preference collapses to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:49",
     "target_url": "https://bsky.app/profile/irishstar.com/post/3mnji4pgswq2x",
     "rkeys": [],
     "post_urls": []
@@ -5938,6 +6038,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, drinking a 'Yahweh' energy drink to get closer to God is wild. That's not a religious awakening, that's just a caffeine rush. Jesus didn't flip tables in the temple so you could sell Him as a mascot, bro.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia merges Bro's mascot callout with Aww's concern for the sacred, showing safety in religious boundaries collapse to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:51",
     "target_url": "https://bsky.app/profile/us.theguardian.com/post/3mnjhp32wb42u",
     "rkeys": [],
     "post_urls": []
@@ -5970,6 +6071,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nImagine working at an AI company, writing code all day, and realizing your own creation just fired you in slow motion. That's next-level existential dread, bro. We're literally coding ourselves out of a job.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated Greater Good collapses to Greater Evil as automating human capability destroys the human agent's sense of purpose.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:15:52",
     "target_url": "https://bsky.app/profile/businessinsider.com/post/3mnjhpb3y2h2m"
   },
   {
@@ -6000,6 +6102,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, imagine paying thousands of dollars for a lawyer, only for them to copy-paste some fake ChatGPT citations and get you deported. That's not just lazy, that's criminal-level slacking. Use your brain next time, counsel.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated legal defense collapses to Greater Evil once cognitive duty is outsourced to unverified AI tools.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:16:01",
     "target_url": "https://bsky.app/profile/latimes.com/post/3mnjhnd63652m",
     "rkeys": [],
     "post_urls": []
@@ -6032,6 +6135,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSaying goodbye to the boys is emotional, bro. Imagine travelling all the way to London just to belt out 90s pop hits one last time with 60,000 other crying fans. Absolute legends. Enjoy the gig!",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's concert hype with Aww's healing closure, showing how a commercial farewell resolves as a collective Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 16:16:05",
     "target_url": "https://bsky.app/profile/thejournal.ie/post/3mnjhjvzmab22",
     "rkeys": [],
     "post_urls": []
@@ -6064,6 +6168,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo the plan for measles is basically 'good luck out there, try not to breathe.' Bro, you're the health officials, not the weather forecast. Don't just tell us it's raining viruses, help us fix the indoor air.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated Greater Good collapses to Greater Evil when public health shifts from systemic protection to individual liability.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:16:11",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mnjhjsy4d52b"
   },
   {
@@ -6094,6 +6199,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nImagine your boss making billions off AI and the government just says, 'Hey, please share?' That’s like asking a kid to voluntarily share their Halloween candy. If you don't make it a law, bro, nobody is sharing.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's candy analogy and Aww's dignity plea, finding that voluntary appeals collapse to Greater Evil without legal force.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:16:11",
     "target_url": "https://bsky.app/profile/reuters.com/post/3mnjhl4tcz62r",
     "rkeys": [],
     "post_urls": []
@@ -6126,6 +6232,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, drawing a comic book about your own awkward teenage years in the middle of a literal revolution is a major power move. It's funny, it's real, and it shows that no matter how crazy the world gets, kids are still kids.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Artistic vulnerability and historical honesty successfully converge to build lasting empathy.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
+    "created_at": "2026-06-05 16:16:18",
     "target_url": "https://bsky.app/profile/apnews.com/post/3mnjhjrfjdi2l",
     "rkeys": [],
     "post_urls": []
@@ -6158,6 +6265,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, Putin calling a missile launch on a city an 'observation' for future use is wild. You can't just launch ballistic missiles and act like you're doing a science project on real people.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Delusion — Aletheia merges Bro's science-project callout with Aww's safety appeal, showing strategic testing claims collapse to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:16:21",
     "target_url": "https://bsky.app/profile/kyivindependent.com/post/3mnj4gfbxw227",
     "rkeys": [],
     "post_urls": []
@@ -6190,6 +6298,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo FIFA wants us to celebrate the beautiful game, but they start by painting over a giant whale with corporate logos? Nothing says 'welcome to Dallas' like erasing a local landmark for a $25M billboard. That's a red card, bro.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's warning and Aww's appeal, concluding that FIFA's stated community value collapses to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -2.0)"
     ],
+    "created_at": "2026-06-05 16:16:28",
     "target_url": "https://bsky.app/profile/nytimes.com/post/3mnj24jrxdp23",
     "rkeys": [],
     "post_urls": []
@@ -6222,6 +6331,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo the news warns us about a massive heatwave that could wipe out crops, but nobody is actually building new reservoirs? Bro, don't just write scary headlines for clicks. We need water and food security, not just a warning.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated Greater Good collapses to Greater Evil when climate warnings generate media revenue but fail to drive physical adaptation.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:16:29",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mnj6ridhqs2l"
   },
   {
@@ -6252,6 +6362,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nAny father would do the exact same thing to protect his kid. The fact that they even tried to charge this guy with murder in the first place is wild. Glad the judge had some common sense and tossed the charges out.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — The legal system correctly defers to natural law and the biological duty of immediate family protection.\nFinal Recalculated Coordinates: (+1.0, -1.0)"
     ],
+    "created_at": "2026-06-05 16:16:33",
     "target_url": "https://bsky.app/profile/nytimes.com/post/3mnjckkvcov27",
     "rkeys": [],
     "post_urls": []
@@ -6284,6 +6395,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nBro, sitting under a tree for 365 days straight is some serious commitment. Most people can't stay off their phones for five minutes, and this legend is out here vibing with an oak. Respect.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's respect for the vibe with Aww's peace, showing how micro-level recovery resolves as an active Greater Good.\nFinal Recalculated Coordinates: (+0.5, +1.0)"
     ],
+    "created_at": "2026-06-05 16:16:36",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mnjdmpmczi2c",
     "rkeys": [],
     "post_urls": []
@@ -6316,6 +6428,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Brothekanon:\nSo you lose votes, fail to get a majority alone, but because of weird seat math, you claim a historic mandate? That's like scoring fewer goals but claiming you won because you had more possession. Fix your math, bro.",
       "Synthesized Resolution Vector:\nBlended Path: The Path of The Fall — Stated Greater Good collapses to Greatest Lie when seat math masks popular vote decline.\nFinal Recalculated Coordinates: (-1.0, 1.0)"
     ],
+    "created_at": "2026-06-05 16:18:25",
     "target_url": "https://bsky.app/profile/uk.theconversation.com/post/3mnjia3gsq22s",
     "rkeys": [],
     "post_urls": []
