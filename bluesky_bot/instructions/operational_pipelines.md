@@ -13,14 +13,15 @@ To preserve API token budget and isolate context bloat, candidate harvesting is 
 
 ---
 
-## 2. Beehive Model: Turn-Based Sequential Evaluation
+## 2. Beehive Model: Turn-Based Parallel FIFO Evaluation
 
-Candidates are evaluated one-at-a-time by a single active bee. This eliminates output truncation, rate limit spikes, and parallel file-write collisions. The Queen (parent agent) manages the entire lifecycle.
+Candidates are evaluated by 5 parallel bees, giving a story from the FIFO list to whichever agent finishes first until the list is exhausted. This maximizes throughput while avoiding parallel file-write collisions (since each story has a unique output ID). The Queen (parent agent) manages the queue dispatch and worker lifecycles.
 
 **Key parameters (empirically measured):**
 * Typical evaluation time per story: ~43 seconds
-* Timeout cutoff per dispatch: **90 seconds** (2× buffer for model slowness)
-* Bee retirement interval: **every 10 stories** (prevents context bloat)
+* Timeout cutoff per dispatch: **90 seconds** per worker (2× buffer for model slowness)
+* Bee retirement interval: **every 10 stories** per individual bee (prevents context bloat)
+* Concurrency count: **5 bees** running in parallel
 * Token outage: excluded from timeout scope — if quota is exhausted the parent dies too, timeout is irrelevant
 
 ---
@@ -37,20 +38,21 @@ Run the harvesting scripts locally inside the virtual environment to pull candid
 This writes the raw candidate feeds to `scratch/harvested_candidates.json`.
 
 ### Step 2: Beehive Evaluation Loop (Dry Run)
-The parent (Queen) runs a sequential turn-based loop:
+The parent (Queen) runs a parallel FIFO turn-based loop:
 
-1. Load `bluesky_bot/stories/harvested_candidates.json` and build an ordered queue.
-2. Spawn **one bee** using the `Beehive Evaluator Bee` system prompt from `subagent_spawning.md`. Workspace: `inherit`.
-3. Track two counters: `stories_sent_to_bee` (resets at retirement) and `completed` (total).
-4. For each candidate in the queue:
-   a. Send the candidate JSON object to the active bee via `send_message`.
-   b. Start a `schedule` timer for **90 seconds**.
-   c. **If `1` returns** before the timer: increment `completed`, cancel the timer, advance queue.
-   d. **If the timer fires first**: `manage_subagents → kill` the bee, spawn a fresh one, re-dispatch the same candidate.
-   e. After every **10 successful evaluations**: proactively retire the bee (`manage_subagents → kill`), spawn a fresh one.
-5. Once the queue is exhausted, proceed to Step 3.
+1. Load `bluesky_bot/stories/harvested_candidates.json` and build a global FIFO queue.
+2. Spawn **5 parallel bees** (Bee 1 to Bee 5) using the `Beehive Evaluator Bee` system prompt from `subagent_spawning.md`. Workspace: `inherit`.
+3. Track individual metrics per bee: `stories_sent_to_bee_[id]` (for retirement checks) and `completed` (total).
+4. Initially pop and dispatch the first 5 stories to the 5 spawned bees respectively.
+5. Whenever any bee returns `1` (indicating it has completed a story and written `factcheck_[id].json` to disk):
+   a. Increment the `completed` counter.
+   b. Check if the global FIFO queue has remaining stories. If yes, pop the next story and send it to that specific idle bee.
+   c. Start/reset a `schedule` timer of **90 seconds** for that specific bee.
+   d. If a bee reaches **10 successful evaluations**, proactively retire it (`manage_subagents → kill`), spawn a fresh replacement bee, and dispatch the next story from the queue to the replacement.
+   e. If a bee's timer fires before it returns `1`, kill that specific bee, spawn a fresh replacement, and re-dispatch the failed story to the replacement.
+6. Once the global queue is exhausted and all active dispatches complete, terminate all active bees and proceed to Step 3.
 
-*The bee writes each `factcheck_[id].json` directly to `bluesky_bot/stories/`. The parent never parses JSON from chat.*
+*Each bee writes its `factcheck_[id].json` directly to `bluesky_bot/stories/`. The parent never parses JSON from chat.*
 
 ### Step 3: Registry & Graph Rebuild
 Recompile the indexes, registry database, and automatically draw missing trajectory graphs:

@@ -4362,7 +4362,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -0.5,
     "real_psi": -1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nThe institution claims flawless readiness and safety, but training casualties prove that risk is shifted to the individual operator.",
     "graph_img": "graph_png/royal_navy_helicopter_crash_graph.png",
     "posts": [
@@ -4382,8 +4382,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's maintenance warning and Aww's grief, concluding that claimed Greater Good falls to Lesser Evil when training costs lives.\nFinal Coordinates: (-0.5, -1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjddip4j624",
+      "3mnjddl6s622s",
+      "3mnjddndr722s",
+      "3mnjddpiu3b2r",
+      "3mnjddro6lz2k",
+      "3mnjddttbjz2k",
+      "3mnjddvy4qb2x",
+      "3mnjddy5ew624",
+      "3mnjde2cb332j",
+      "3mnjde4hyho24",
+      "3mnjde6mrr22o",
+      "3mnjdearudl23",
+      "3mnjdecwv5b2k",
+      "3mnjdef46e624"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddip4j624",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddl6s622s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddndr722s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddpiu3b2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddro6lz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddttbjz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddvy4qb2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjddy5ew624",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjde2cb332j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjde4hyho24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjde6mrr22o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdearudl23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdecwv5b2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdef46e624"
+    ]
   },
   {
     "id": "starmer_accuses_musk_division",
@@ -4394,7 +4424,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nBroad-reaching platforms claim to stand for open debate, but their algorithms monetize rage and actively decay social cohesion.",
     "graph_img": "graph_png/starmer_accuses_musk_division_graph.png",
     "posts": [
@@ -4414,8 +4444,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's warning and Aww's healing appeal, concluding that speech claims collapse to Greater Evil when they amplify division.\nFinal Coordinates: (-1.0, -1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjdfxxigc2s",
+      "3mnjdfyiz4o24",
+      "3mnjdg2nfgp2d",
+      "3mnjdg4sdbz2x",
+      "3mnjdg6xdlu2d",
+      "3mnjdgb4eeu2n",
+      "3mnjdgdbmho24",
+      "3mnjdgfgcdr2x",
+      "3mnjdghlkjo24",
+      "3mnjdgjq5m523",
+      "3mnjdglv3nv23",
+      "3mnjdgo26tg24",
+      "3mnjdgq6qzw26",
+      "3mnjdgsenzz2k"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfxxigc2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfyiz4o24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdg2nfgp2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdg4sdbz2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdg6xdlu2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdgb4eeu2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdgdbmho24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdgfgcdr2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdghlkjo24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdgjq5m523",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdglv3nv23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdgo26tg24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdgq6qzw26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdgsenzz2k"
+    ]
   },
   {
     "id": "intel_18a_process_node",
@@ -4426,7 +4486,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -0.5,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nMarketing roadmap victories before the silicon yields prove them real creates a false sense of technological security.",
     "graph_img": "graph_png/intel_18a_process_node_graph.png",
     "posts": [
@@ -4446,8 +4506,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's fab warning and Aww's support appeal, concluding that aggressive roadmaps collapse to Lesser Evil without yields.\nFinal Coordinates: (-0.5, -1.0)"
     ],
     "target_url": "https://bsky.app/profile/theregister.com/post/3mnhzwyomgf2o",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjcuq3ic52d",
+      "3mnjcuqnw6426",
+      "3mnjcussxqq2k",
+      "3mnjcuuxy2q2r",
+      "3mnjcux4zuf2x",
+      "3mnjcuzbx2y23",
+      "3mnjcv3gsid2j",
+      "3mnjcv5lm5g2k",
+      "3mnjcv7qbna2r",
+      "3mnjcvcxs252n",
+      "3mnjcvf4vbt24",
+      "3mnjcvhblxr25",
+      "3mnjcvjgj2b25",
+      "3mnjcvllpca2s"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcuq3ic52d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcuqnw6426",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcussxqq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcuuxy2q2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcux4zuf2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcuzbx2y23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcv3gsid2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcv5lm5g2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcv7qbna2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvcxs252n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvf4vbt24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvhblxr25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvjgj2b25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvllpca2s"
+    ]
   },
   {
     "id": "trump_iran_war_powers",
@@ -4458,7 +4548,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nFraming legislative oversight of military action as unpatriotic devalues the democratic checks needed to prevent unchecked conflict.",
     "graph_img": "graph_png/trump_iran_war_powers_graph.png",
     "posts": [
@@ -4478,8 +4568,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's constitutional warning and Aww's open-discussion appeal, concluding that unchecked power claims collapse to Greater Evil.\nFinal Coordinates: (-1.0, -1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjdh5zbd624",
+      "3mnjdh6najz2k",
+      "3mnjdharphe2j",
+      "3mnjdhcweix2d",
+      "3mnjdhf3e672k",
+      "3mnjdhhcpyt2o",
+      "3mnjdhjhxbb2k",
+      "3mnjdhlmvm22s",
+      "3mnjdhnrimz2k",
+      "3mnjdhpwc3k2s",
+      "3mnjdhs33ux2k",
+      "3mnjdhuaj3o24",
+      "3mnjdhwf67w26",
+      "3mnjdhyka4b2r"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdh5zbd624",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdh6najz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdharphe2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhcweix2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhf3e672k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhhcpyt2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhjhxbb2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhlmvm22s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhnrimz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhpwc3k2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhs33ux2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhuaj3o24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhwf67w26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdhyka4b2r"
+    ]
   },
   {
     "id": "photojournalist_struck_newark",
@@ -4490,7 +4610,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nSuppressing public oversight under the guise of public safety collapses the feedback loop needed for a self-correcting society.",
     "graph_img": "graph_png/photojournalist_struck_newark_graph.png",
     "posts": [
@@ -4510,8 +4630,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Stated protection collapses to Greater Evil under direct lens suppression.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
     "target_url": "https://bsky.app/profile/pressfreedomtracker.us/post/3mnhzwunu3c2y",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjdcf6m4d23",
+      "3mnjdcfqiaq2x",
+      "3mnjdchvcp32d",
+      "3mnjdck2ebz2k",
+      "3mnjdcm7acx2k",
+      "3mnjdcoeggc2n",
+      "3mnjdcqjf6u25",
+      "3mnjdcsopio24",
+      "3mnjdcuthjp2d",
+      "3mnjdcx4jpc2o",
+      "3mnjdczbgwa2h",
+      "3mnjdd3ghik2s",
+      "3mnjdd5l42k2o",
+      "3mnjdd7qwco24"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcf6m4d23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcfqiaq2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdchvcp32d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdck2ebz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcm7acx2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcoeggc2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcqjf6u25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcsopio24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcuthjp2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdcx4jpc2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdczbgwa2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdd3ghik2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdd5l42k2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdd7qwco24"
+    ]
   },
   {
     "id": "marjane_satrapi_dies",
@@ -4522,7 +4672,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nBy keeping the record of her lived truth clean and uncompromised, her personal memory scaled into a lasting cultural fortress against totalitarianism.",
     "graph_img": "graph_png/marjane_satrapi_dies_graph.png",
     "posts": [
@@ -4542,8 +4692,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's legend status and Aww's grief, concluding Satrapi's personal story scaled into a global baseline for truth.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjcyf66ye24",
+      "3mnjcyftpyw2k",
+      "3mnjcyhyggy23",
+      "3mnjcyk5k5w2k",
+      "3mnjcymg5oq2s",
+      "3mnjcyokttq23",
+      "3mnjcyqstij2n",
+      "3mnjcyvonoo2k",
+      "3mnjcyxtbox2h",
+      "3mnjcyzybco26",
+      "3mnjcz4574v2x",
+      "3mnjcz6cadb2s",
+      "3mnjczaha2g2k",
+      "3mnjczclwlw26"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyf66ye24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyftpyw2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyhyggy23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyk5k5w2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcymg5oq2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyokttq23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyqstij2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyvonoo2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyxtbox2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcyzybco26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcz4574v2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcz6cadb2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczaha2g2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczclwlw26"
+    ]
   },
   {
     "id": "harry_meghan_share_lilibet_photo",
@@ -4554,7 +4734,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": 1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of The Fall.\nInvoking privacy as a shield while using a child's image as public relation currency is a structural collapse of family boundaries for attention.",
     "graph_img": "graph_png/harry_meghan_share_lilibet_photo_graph.png",
     "posts": [
@@ -4574,8 +4754,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Resolution Vector:\nBlended Path: The Path of The Fall — Aletheia blends Bro's blog joke and Aww's childhood hope, finding that claimed privacy collapses to Greatest Lie under brand curation.\nFinal Recalculated Coordinates: (-1.0, +1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjctemuhd24",
+      "3mnjcthn62t2k",
+      "3mnjctjs57n2n",
+      "3mnjctlxahd24",
+      "3mnjcto465f2x",
+      "3mnjctqazdf2n",
+      "3mnjctsfvgn2n",
+      "3mnjctukqq426",
+      "3mnjctwpqpf2d",
+      "3mnjctyumzl2j",
+      "3mnjcu32whi2k",
+      "3mnjcu57unv2x",
+      "3mnjcu7exvg2d",
+      "3mnjcubkbqd24"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctemuhd24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcthn62t2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctjs57n2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctlxahd24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcto465f2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctqazdf2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctsfvgn2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctukqq426",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctwpqpf2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjctyumzl2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcu32whi2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcu57unv2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcu7exvg2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcubkbqd24"
+    ]
   },
   {
     "id": "exams_watchdog_high_tech_cheating",
@@ -4586,7 +4796,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nBy treating cheating as a technical security flaw, the system avoids questioning why it relies on memorization exams that invite bypasses.",
     "graph_img": "graph_png/exams_watchdog_high_tech_cheating_graph.png",
     "posts": [
@@ -4606,8 +4816,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's real-world tech usage and Aww's mental health concern, finding student surveillance leads to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjcqtknnk2s",
+      "3mnjcqu42bv2d",
+      "3mnjcqwbeyi2r",
+      "3mnjcqygmsq2r",
+      "3mnjcr2lupd26",
+      "3mnjcr4r7gk2s",
+      "3mnjcr6vsi22k",
+      "3mnjcrb2s222u",
+      "3mnjcrda5nt24",
+      "3mnjcrfexf22k",
+      "3mnjcrhjykh23",
+      "3mnjcrjovd72k",
+      "3mnjcrlu27p2k",
+      "3mnjcrnz5ku26"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqtknnk2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqu42bv2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqwbeyi2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqygmsq2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcr2lupd26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcr4r7gk2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcr6vsi22k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcrb2s222u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcrda5nt24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcrfexf22k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcrhjykh23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcrjovd72k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcrlu27p2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcrnz5ku26"
+    ]
   },
   {
     "id": "naperville_dupage_forest_director",
@@ -4618,7 +4858,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nLocal administrative fidelity and student merit are not merely minor news; they are the active cells that keep the wider systemic body healthy.",
     "graph_img": "graph_png/naperville_dupage_forest_director_graph.png",
     "posts": [
@@ -4638,8 +4878,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's working-fine note and Aww's appreciation of quiet care, concluding that localized stability scales to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mnhzsamv4327",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjd6nunsi2h",
+      "3mnjd6ohc7u24",
+      "3mnjd6qm5fl2j",
+      "3mnjd6sr4cq2d",
+      "3mnjd6uw3xa2k",
+      "3mnjd6x346r2r",
+      "3mnjd6zaa3z2r",
+      "3mnjd73fbfl2o",
+      "3mnjd75kkw22s",
+      "3mnjd77pgsh2x",
+      "3mnjd7buknx2k",
+      "3mnjd7dzn5l2o",
+      "3mnjd7g73kw26",
+      "3mnjd7iehxq2k"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6nunsi2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6ohc7u24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6qm5fl2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6sr4cq2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6uw3xa2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6x346r2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6zaa3z2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd73fbfl2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd75kkw22s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd77pgsh2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd7buknx2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd7dzn5l2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd7g73kw26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd7iehxq2k"
+    ]
   },
   {
     "id": "sikhs_kirpan_misunderstanding",
@@ -4650,7 +4920,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nDistinguishing between cultural identity and initiated covenant aligns public policy with the actual practice, reducing friction.",
     "graph_img": "graph_png/sikhs_kirpan_misunderstanding_graph.png",
     "posts": [
@@ -4670,8 +4940,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia merges Bro's cowboy hat analogy and Aww's mutual respect plea, finding that precise education leads to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
     "target_url": "https://bsky.app/profile/uk.theconversation.com/post/3mnhzrvfacd2h",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjdesyxfb2x",
+      "3mnjdetnwis2s",
+      "3mnjdevszgs2s",
+      "3mnjdexy43r2k",
+      "3mnjdf24tez2x",
+      "3mnjdf4c3iu2d",
+      "3mnjdf6hbxz2k",
+      "3mnjdfapme72k",
+      "3mnjdfcve222n",
+      "3mnjdfghqfm2d",
+      "3mnjdfimt6523",
+      "3mnjdfksa4624",
+      "3mnjdfmxcvc2s",
+      "3mnjdfp4hwo24"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdesyxfb2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdetnwis2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdevszgs2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdexy43r2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdf24tez2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdf4c3iu2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdf6hbxz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfapme72k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfcve222n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfghqfm2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfimt6523",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfksa4624",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfmxcvc2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdfp4hwo24"
+    ]
   },
   {
     "id": "monterrey_world_cup_security",
@@ -4682,7 +4982,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nUsing advanced technology to project safety hides the failure to address institutional corruption and structural cartel dominance.",
     "graph_img": "graph_png/monterrey_world_cup_security_graph.png",
     "posts": [
@@ -4702,8 +5002,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's metal puppy point and Aww's home safety concern, finding tech theater leads to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjd5hq32l2o",
+      "3mnjd5ibmza2k",
+      "3mnjd5kgl562x",
+      "3mnjd5mlhfi2r",
+      "3mnjd5oqqas2s",
+      "3mnjd5qvmiu24",
+      "3mnjd5t2dch2k",
+      "3mnjd5v7cz72h",
+      "3mnjd5xeimm24",
+      "3mnjd5zleqi2k",
+      "3mnjd63pwnd2o",
+      "3mnjd65vbfd2o",
+      "3mnjd6bsoji2k",
+      "3mnjd6dx5ni2h"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5hq32l2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5ibmza2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5kgl562x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5mlhfi2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5oqqas2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5qvmiu24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5t2dch2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5v7cz72h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5xeimm24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd5zleqi2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd63pwnd2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd65vbfd2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6bsoji2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd6dx5ni2h"
+    ]
   },
   {
     "id": "middle_east_arms_diversification",
@@ -4714,7 +5044,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nAutocrats frame arms deals as sovereign independence, when they are actually buying leverage-free security for their own dynasties.",
     "graph_img": "graph_png/middle_east_arms_diversification_graph.png",
     "posts": [
@@ -4734,8 +5064,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's favor-trading insight and Aww's trust-building plea, finding arms shopping leads to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
     "target_url": "https://bsky.app/profile/economist.com/post/3mnhzqypxum27",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjd4aymri2d",
+      "3mnjd4bm5kz2n",
+      "3mnjd4drkk424",
+      "3mnjd4ie2uk2s",
+      "3mnjd4kjcos2s",
+      "3mnjd4mobps2s",
+      "3mnjd4ot5432o",
+      "3mnjd4qyebu25",
+      "3mnjd4t5gzx2h",
+      "3mnjd4vcq4x2k",
+      "3mnjd4xi72k2s",
+      "3mnjd4zn47q2d",
+      "3mnjd53s3wg2x",
+      "3mnjd55xanm25"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4aymri2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4bm5kz2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4drkk424",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4ie2uk2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4kjcos2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4mobps2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4ot5432o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4qyebu25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4t5gzx2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4vcq4x2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4xi72k2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd4zn47q2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd53s3wg2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd55xanm25"
+    ]
   },
   {
     "id": "hair_loss_breakthrough_women",
@@ -4746,7 +5106,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nElevating a cosmetic struggle into a validated medical field creates systematic access to effective healthcare and mental relief.",
     "graph_img": "graph_png/hair_loss_breakthrough_women_graph.png",
     "posts": [
@@ -4766,8 +5126,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's practical win perspective and Aww's dignity support, finding medical validation leads to Greater Good.\nFinal Recalculated Coordinates: (+1.0, +1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjcs4moi42s",
+      "3mnjcs56yl324",
+      "3mnjcs7dsbr2k",
+      "3mnjcsbip3g2h",
+      "3mnjcsdoaau2s",
+      "3mnjcsfsrfk2x",
+      "3mnjcshxul426",
+      "3mnjcsk4y6j2k",
+      "3mnjcsmcagt24",
+      "3mnjcsogs2o2h",
+      "3mnjcsqlxo324",
+      "3mnjcssqhtq2r",
+      "3mnjcsuvgrn2n",
+      "3mnjcsx2ony23"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcs4moi42s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcs56yl324",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcs7dsbr2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsbip3g2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsdoaau2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsfsrfk2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcshxul426",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsk4y6j2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsmcagt24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsogs2o2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsqlxo324",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcssqhtq2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsuvgrn2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcsx2ony23"
+    ]
   },
   {
     "id": "italy_migrant_labor_exploitation",
@@ -4778,7 +5168,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -2.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nStated mutual economic opportunity masks an active, violent destruction of human lives for agricultural profit margin.",
     "graph_img": "graph_png/italy_migrant_labor_exploitation_graph.png",
     "posts": [
@@ -4798,8 +5188,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's warning and Aww's safety appeal, concluding labor contracts collapse to Greater Evil under gangmaster coercion.\nFinal: (-1.0, -2.0)"
     ],
     "target_url": "https://bsky.app/profile/nbcnews.com/post/3mnhzphghfe22",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjcvws7sh2n",
+      "3mnjcvxeyko26",
+      "3mnjcvzjzgq23",
+      "3mnjcw3p7sg2h",
+      "3mnjcw5utvq2s",
+      "3mnjcw7zq3p2d",
+      "3mnjcwc6npa2k",
+      "3mnjcwedy232j",
+      "3mnjcwgk3ow2k",
+      "3mnjcwip42x2d",
+      "3mnjcwkugoi2r",
+      "3mnjcwmzngh2n",
+      "3mnjcwp6scx2n",
+      "3mnjcwrdqcn2x"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvws7sh2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvxeyko26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcvzjzgq23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcw3p7sg2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcw5utvq2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcw7zq3p2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwc6npa2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwedy232j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwgk3ow2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwip42x2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwkugoi2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwmzngh2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwp6scx2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcwrdqcn2x"
+    ]
   },
   {
     "id": "mayhill_riot_narrative_vs_reality",
@@ -4810,7 +5230,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nSensationalized reporting trades local community stability for high-engagement narrative anxiety.",
     "graph_img": "graph_png/mayhill_riot_narrative_vs_reality_graph.png",
     "posts": [
@@ -4830,8 +5250,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's anti-clickbait warning and Aww's local pride, finding sensationalism collapses public service to community extraction.\nFinal: (-1.0, -1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjczodm3g26",
+      "3mnjczoybzj2n",
+      "3mnjczr5a7o2d",
+      "3mnjcztcevn2x",
+      "3mnjczvhjyo2d",
+      "3mnjczxmmxo26",
+      "3mnjczzrszd2j",
+      "3mnjd23xoyj2n",
+      "3mnjd264jkd2o",
+      "3mnjd2abogt2o",
+      "3mnjd2cgpl72h",
+      "3mnjd2eln5y2r",
+      "3mnjd2gqp4q2r",
+      "3mnjd2ivqwf2x"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczodm3g26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczoybzj2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczr5a7o2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcztcevn2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczvhjyo2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczxmmxo26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjczzrszd2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd23xoyj2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd264jkd2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd2abogt2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd2cgpl72h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd2eln5y2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd2gqp4q2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd2ivqwf2x"
+    ]
   },
   {
     "id": "lifetime_isa_withdrawal_penalties",
@@ -4842,7 +5292,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nA program branded as wealth-building collapses into a capital-extraction trap due to deliberate policy neglect.",
     "graph_img": "graph_png/lifetime_isa_withdrawal_penalties_graph.png",
     "posts": [
@@ -4862,8 +5312,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's robbery warning and Aww's empathy for savers, finding uncalibrated policy traps collapse support into extraction.\nFinal: (-1.0, -1.0)"
     ],
     "target_url": "",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjcx5yeim2k",
+      "3mnjcx6lzli23",
+      "3mnjcxaqykh2n",
+      "3mnjcxcvvrq2s",
+      "3mnjcxf2lnz2k",
+      "3mnjcxh7hvv2x",
+      "3mnjcxjef6w2d",
+      "3mnjcxljgh32o",
+      "3mnjcxnoeub2k",
+      "3mnjcxpt7ro2h",
+      "3mnjcxry4c72n",
+      "3mnjcxu4tqp2d",
+      "3mnjcxwbuq72d",
+      "3mnjcxygoqi2r"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcx5yeim2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcx6lzli23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxaqykh2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxcvvrq2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxf2lnz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxh7hvv2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxjef6w2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxljgh32o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxnoeub2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxpt7ro2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxry4c72n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxu4tqp2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxwbuq72d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcxygoqi2r"
+    ]
   },
   {
     "id": "midday_stock_market_movers",
@@ -4874,7 +5354,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nThe passive reporting of stock movements translates into active systemic value by maintaining informational market integrity.",
     "graph_img": "graph_png/midday_stock_market_movers_graph.png",
     "posts": [
@@ -4894,8 +5374,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Grace — Aletheia blends Bro's warning against midday noise with Aww's human focus, confirming transparent data flows support Greater Good.\nFinal: (+1.0, +1.0)"
     ],
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mnhzowqslc2n",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjd2xsfrw2k",
+      "3mnjd2yevqr2n",
+      "3mnjd32jumv2k",
+      "3mnjd34p7jr2n",
+      "3mnjd36uoyo2k",
+      "3mnjd3azko32o",
+      "3mnjd3d6vg32o",
+      "3mnjd3fegve24",
+      "3mnjd3hj7wo26",
+      "3mnjd3jognb2n",
+      "3mnjd3ltulm24",
+      "3mnjd3nzeou2k",
+      "3mnjd3q6jty23",
+      "3mnjd3sdqpy2r"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd2xsfrw2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd2yevqr2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd32jumv2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd34p7jr2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd36uoyo2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3azko32o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3d6vg32o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3fegve24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3hj7wo26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3jognb2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3ltulm24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3nzeou2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3q6jty23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd3sdqpy2r"
+    ]
   },
   {
     "id": "democracynow_remigration",
@@ -4906,7 +5416,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nBy dressing up Nazi-rooted deportation policies in clinical language, proponents attempt to make structural violence palatable.",
     "graph_img": "graph_png/democracynow_remigration_graph.png",
     "posts": [
@@ -4926,8 +5436,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's police-state warning with Aww's family focus, concluding that remigration collapses to Greater Evil.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
     "target_url": "https://bsky.app/profile/democracynow.org/post/3mnhzm3pwil27",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjcpjwqki2s",
+      "3mnjcpkrbdt24",
+      "3mnjcpmvw3b25",
+      "3mnjcpp2r7b25",
+      "3mnjcpr7pdx2k",
+      "3mnjcpteh2t2j",
+      "3mnjcpxqtsj2x",
+      "3mnjcpzvu4g2d",
+      "3mnjcq434y324",
+      "3mnjcq67x4t24",
+      "3mnjcqaemtj25",
+      "3mnjcqckens2s",
+      "3mnjcqeoxr22x",
+      "3mnjcqgtrvs2x"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpjwqki2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpkrbdt24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpmvw3b25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpp2r7b25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpr7pdx2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpteh2t2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpxqtsj2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcpzvu4g2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcq434y324",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcq67x4t24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqaemtj25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqckens2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqeoxr22x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjcqgtrvs2x"
+    ]
   },
   {
     "id": "maduro_hires_diddy_lawyer",
@@ -5000,7 +5540,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of The Fall.\nGrassroots democracy is framed as the guiding principle, but the physical output is a top-down temple to political power and legacy branding.",
     "graph_img": "graph_png/obama_presidential_center_democracy_graph.png",
     "posts": [
@@ -5020,8 +5560,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of The Fall — Aletheia blends Bro's gift-shop critique and Aww's gentrification warning, concluding that civic empowerment collapses to Greatest Lie under elite legacy branding.\nFinal: (-1.0, +1.0)"
     ],
     "target_url": "https://bsky.app/profile/chicago.suntimes.com/post/3mnhztq4qtv2m",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjd7ubdti2d",
+      "3mnjd7uvba72x",
+      "3mnjd7x3mti2h",
+      "3mnjda2dewt2j",
+      "3mnjda4icfu25",
+      "3mnjda6nb432o",
+      "3mnjdaashhx2x",
+      "3mnjdacxk2q2h",
+      "3mnjdaf4pgl23",
+      "3mnjdahcca424",
+      "3mnjdajiuze24",
+      "3mnjdalnsna2k",
+      "3mnjdansosp2x",
+      "3mnjdapxsxg26"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd7ubdti2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd7uvba72x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjd7x3mti2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjda2dewt2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjda4icfu25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjda6nb432o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdaashhx2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdacxk2q2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdaf4pgl23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdahcca424",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdajiuze24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdalnsna2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdansosp2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdapxsxg26"
+    ]
   },
   {
     "id": "van_hollen_campaign_spending_blast",
@@ -5032,7 +5602,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nCampaign reform is framed as a defense of local democracy, but the physical output is a struggle for factional dominance in a safe seat.",
     "graph_img": "graph_png/van_hollen_campaign_spending_blast_graph.png",
     "posts": [
@@ -5052,8 +5622,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's PAC critique and Aww's local voter plea, concluding that stated campaign reform collapses to Greater Evil under selective factional outrage.\nFinal: (-1.0, -1.0)"
     ],
     "target_url": "https://bsky.app/profile/politico.com/post/3mnhzhi65ur2v",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjdig7jao23",
+      "3mnjdigrtzr2x",
+      "3mnjdiiwq4z2x",
+      "3mnjdil3ywj2x",
+      "3mnjdinb77m2j",
+      "3mnjdipgaqz2x",
+      "3mnjdirl5bm2j",
+      "3mnjditpz4j2r",
+      "3mnjdiy4xwo26",
+      "3mnjdj2c5un2d",
+      "3mnjdj4h7or2r",
+      "3mnjdj6mygt2o",
+      "3mnjdjaskux24",
+      "3mnjdjcxjnf2n"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdig7jao23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdigrtzr2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdiiwq4z2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdil3ywj2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdinb77m2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdipgaqz2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdirl5bm2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjditpz4j2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdiy4xwo26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdj2c5un2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdj4h7or2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdj6mygt2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdjaskux24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdjcxjnf2n"
+    ]
   },
   {
     "id": "old_apostolic_lutheran_abuse_coverup",
@@ -5064,7 +5664,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nForgiveness is framed as spiritual healing, but the physical output is the psychological torture and silencing of child abuse victims.",
     "graph_img": "graph_png/old_apostolic_lutheran_abuse_coverup_graph.png",
     "posts": [
@@ -5084,7 +5684,37 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Vector:\nBlended Path: The Path of Deception — Aletheia blends Bro's gaslighting critique and Aww's survival appeal, concluding that stated grace collapses to Greater Evil once used to silence abuse victims.\nFinal: (-1.0, -1.0)"
     ],
     "target_url": "https://bsky.app/profile/propublica.org/post/3mnhjq35mps2p",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjdb34dqe25",
+      "3mnjdb3pxox2k",
+      "3mnjdb5v3ts2n",
+      "3mnjdba2aqc2n",
+      "3mnjdbc74qh2x",
+      "3mnjdbeebmx2x",
+      "3mnjdbgjqgz2r",
+      "3mnjdbioxwu25",
+      "3mnjdbku4j22o",
+      "3mnjdbmzkjx2k",
+      "3mnjdbp6msb2r",
+      "3mnjdbtolcc2s",
+      "3mnjdbvtj2y2k",
+      "3mnjdbxyccp2x"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdb34dqe25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdb3pxox2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdb5v3ts2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdba2aqc2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbc74qh2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbeebmx2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbgjqgz2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbioxwu25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbku4j22o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbmzkjx2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbp6msb2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbtolcc2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbvtj2y2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjdbxyccp2x"
+    ]
   }
 ];

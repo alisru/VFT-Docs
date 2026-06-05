@@ -4,7 +4,7 @@ description: Run the Bluesky news post harvest, offline convergence test, and dr
 
 # Bluesky Reply Batch Workflow (/bsky-reply-batch)
 
-This workflow governs the harvesting, offline evaluation, and dry-run compilation of a batch of Bluesky posts for reply mode evaluations. Evaluation runs via the **Beehive turn-based loop** — one bee, one story at a time, writing directly to disk.
+This workflow governs the harvesting, offline evaluation, and dry-run compilation of a batch of Bluesky posts for reply mode evaluations. Evaluation runs via the **Beehive turn-based loop** — utilizing 5 parallel bees, giving a story from the FIFO list to whichever agent finishes first until the list is exhausted, writing directly to disk.
 
 ---
 
