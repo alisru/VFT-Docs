@@ -1,6 +1,6 @@
 # Beehive Turn-Based Evaluation Workflow: Architectural Design Report
 
-This report analyzes the transition from the legacy parallel batch evaluation model to the turn-based "beehive" model. It identifies structural failures in the current design and details how the new sequential pool model achieves stability.
+We analyze the transition from the legacy parallel batch evaluation model to the turn-based "beehive" model. This document details how direct worker file-writing and parent-level bulk validation yield a robust, failure-tolerant pipeline.
 
 ---
 
@@ -22,14 +22,14 @@ Furthermore, parallel agent spawning introduces concurrency issues. Running six 
 
 ## 2. Mechanics: The Sequential "Bee" Pool Model
 
-The beehive model resolves this by centralizing state management in the parent (Queen) and treating child agents (bees) as stateless, turn-based reasoning loops.
+The beehive model resolves this by delegating file persistence directly to the child agents (bees) and centralizing the validation gate at the parent (Queen) level.
 
 ```
 +-------------------------------------------------------+
 |                 Parent Agent (Queen)                  |
 |  - Controls queue state & Git staging                  |
 |  - Manages active worker lifecycle                    |
-|  - Validates and writes draft JSONs                   |
+|  - Executes bulk validation at end of batch           |
 +-------------------------------------------------------+
                            |
             (Feeds 1 candidate at a time)
@@ -39,7 +39,8 @@ The beehive model resolves this by centralizing state management in the parent (
 |                 Active Worker (Bee)                   |
 |  - Reads instructions (reused in history)             |
 |  - Evaluates single candidate                         |
-|  - Returns single JSON thread (~2,800 chars)          |
+|  - Writes draft JSON directly to stories/             |
+|  - Returns simple 'done' status to parent             |
 +-------------------------------------------------------+
 ```
 
@@ -47,8 +48,8 @@ The beehive model resolves this by centralizing state management in the parent (
 1. **Queue Initialization:** The parent loads the harvested candidate list.
 2. **Worker Spawning:** The parent spawns a single worker bee with the evaluation system prompt.
 3. **Sequential Stepping:** The parent feeds candidates one-by-one to the active bee using the `send_message` tool.
-4. **Isolated Evaluation:** The bee evaluates a single story, returns the JSON block, and awaits the next input.
-5. **Immediate Validation & Quarantine:** The parent receives the JSON, checks it against the strict 14-post schema, and writes it directly to disk (moving failures immediately to `stories/fail/`).
+4. **Isolated Evaluation & Write:** The bee evaluates a single story, writes the completed `factcheck_*.json` file directly to `stories/` on disk, and returns a simple status response (e.g., "done") to the parent.
+5. **Bulk Validation (End of Batch):** Once the queue is exhausted, the parent runs the new validator script `validate_batch.py` in bulk. This scans the folder, validates all generated JSON files, and automatically quarantines any failed configurations to `stories/fail/` for manual remediation or disposal.
 6. **Pruned Retirement:** After ten evaluations, the parent kills the active bee using `manage_subagents` to prevent history-based context bloat, resetting the cycle with a fresh worker.
 
 ---
@@ -58,20 +59,21 @@ The beehive model resolves this by centralizing state management in the parent (
 This shift improves execution safety across three core areas:
 
 ### Payload Integrity
-A single-story evaluation fits comfortably within the model's output generation limits. The JSON payloads are short and concise. Truncation is eliminated.
+By writing the file directly to disk, the bee does not need to output large JSON blocks back in the chat history. The response message is a simple, lightweight status code. Truncation and history bloat are completely eliminated.
 
 ### Fault Tolerance (Incremental Saves)
-Because file writing is managed by the parent after each turn, every successful evaluation is instantly committed to disk. If the network drops or a crash occurs on story #15, the first 14 stories remain saved. The run can resume exactly where it stopped.
+Because file writing is completed by the worker immediately after each evaluation, every successful draft is instantly committed to disk. If the network drops or a crash occurs, all previously completed stories remain saved. The run can resume exactly where it stopped.
 
 ### Token Conservation
 We only pay the 3,000-token worker initialization fee once per ten stories. Retiring the bee at ten evaluations limits the input history size. This prevents the exponential cost growth associated with sending a massive conversation history on every turn.
 
 ### Structural Comparison
 
-| Metric | Parallel Batch (Legacy) | Beehive Turn-Loop (Proposed) |
+| Metric | Parallel Batch (Legacy) | Beehive Turn-Loop (Revised) |
 | :--- | :--- | :--- |
 | **Active Subagents** | 6 concurrent | 1 active at a time |
-| **Output Token Load** | ~14,000 (Exceeds limits) | ~2,800 (Safe) |
+| **Output Token Load** | ~14,000 (Exceeds limits) | Minimal (Returns 'done' status) |
 | **Rate Limit Risk** | High | Extremely Low |
-| **Crash Recovery** | Zero (Loose entire batch) | Incremental (Resume from last save) |
-| **File Writing** | Attempted by child / Parent block | Handled strictly by Parent |
+| **Crash Recovery** | Zero (Lose entire batch) | Incremental (Resume from last save) |
+| **File Writing** | Attempted by child / Parent block | Handled directly by child per turn |
+| **Validation Gate** | Parsed in-memory per turn | Bulk verified at end via validate_batch |
