@@ -1,6 +1,6 @@
 # Australian Kanon Generation
 
-**Current Focus**: None
+**Current Focus**: Run bsky-reply-batch: 20 replies + 10 RSS stories harvest, evaluate, rebuild registry
 
 **Progress**: 34/47 complete
 
