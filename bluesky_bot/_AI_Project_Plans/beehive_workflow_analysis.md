@@ -40,7 +40,7 @@ The beehive model resolves this by delegating file persistence directly to the c
 |  - Reads instructions (reused in history)             |
 |  - Evaluates single candidate                         |
 |  - Writes draft JSON directly to stories/             |
-|  - Returns simple 'done' status to parent             |
+|  - Returns single-token '1' status to parent          |
 +-------------------------------------------------------+
 ```
 
@@ -48,7 +48,7 @@ The beehive model resolves this by delegating file persistence directly to the c
 1. **Queue Initialization:** The parent loads the harvested candidate list.
 2. **Worker Spawning:** The parent spawns a single worker bee with the evaluation system prompt.
 3. **Sequential Stepping:** The parent feeds candidates one-by-one to the active bee using the `send_message` tool.
-4. **Isolated Evaluation & Write:** The bee evaluates a single story, writes the completed `factcheck_*.json` file directly to `stories/` on disk, and returns a simple status response (e.g., "done") to the parent.
+4. **Isolated Evaluation & Write:** The bee evaluates a single story, writes the completed `factcheck_*.json` file directly to `stories/` on disk, and returns a single-token `1` to indicate success.
 5. **Bulk Validation (End of Batch):** Once the queue is exhausted, the parent runs the new validator script `validate_batch.py` in bulk. This scans the folder, validates all generated JSON files, and automatically quarantines any failed configurations to `stories/fail/` for manual remediation or disposal.
 6. **Pruned Retirement:** After ten evaluations, the parent kills the active bee using `manage_subagents` to prevent history-based context bloat, resetting the cycle with a fresh worker.
 
@@ -72,7 +72,7 @@ We only pay the 3,000-token worker initialization fee once per ten stories. Reti
 | Metric | Parallel Batch (Legacy) | Beehive Turn-Loop (Revised) |
 | :--- | :--- | :--- |
 | **Active Subagents** | 6 concurrent | 1 active at a time |
-| **Output Token Load** | ~14,000 (Exceeds limits) | Minimal (Returns 'done' status) |
+| **Output Token Load** | ~14,000 (Exceeds limits) | Single token (returns '1') |
 | **Rate Limit Risk** | High | Extremely Low |
 | **Crash Recovery** | Zero (Lose entire batch) | Incremental (Resume from last save) |
 | **File Writing** | Attempted by child / Parent block | Handled directly by child per turn |
