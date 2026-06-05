@@ -147,6 +147,7 @@ def rebuild_registries():
 
     # 5. Write stories_registry.js (single file, next to control_panel.html)
     combined = active_live_stories + active_stories
+    combined.sort(key=lambda x: x.get("created_at", ""), reverse=True)
     registry_js = f"window.ALETHEIA_STORIES_REGISTRY = {json.dumps(combined, indent=2, ensure_ascii=False)};\n"
     registry_path = os.path.join(script_dir, "stories_registry.js")
     try:
