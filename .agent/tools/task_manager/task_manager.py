@@ -418,6 +418,10 @@ class TaskEngine:
             if lessons:
                 task.lessons_learned.append(lessons)
                 task.log(f"Lesson learned: {lessons}")
+            if self.global_context.get("current_task_index") == index:
+                self.global_context["current_task_index"] = None
+                if self.global_context.get("current_focus") == task.description:
+                    self.global_context["current_focus"] = "None"
             self.save()
             print(f"[OK] Task {index} completed.")
         else:
@@ -428,6 +432,10 @@ class TaskEngine:
         if task:
             task.status = TaskStatus.FAILED
             task.log(f"FAILED: {reason}")
+            if self.global_context.get("current_task_index") == index:
+                self.global_context["current_task_index"] = None
+                if self.global_context.get("current_focus") == task.description:
+                    self.global_context["current_focus"] = "None"
             self.save()
             print(f"[FAIL] Task {index} failed: {reason}")
             print("       Use 'postmortem <idx> \"hypothesis\"' to analyze.")
@@ -437,6 +445,10 @@ class TaskEngine:
         if task:
             task.status = TaskStatus.BLOCKED
             task.log(f"BLOCKED: {reason}")
+            if self.global_context.get("current_task_index") == index:
+                self.global_context["current_task_index"] = None
+                if self.global_context.get("current_focus") == task.description:
+                    self.global_context["current_focus"] = "None"
             self.save()
             print(f"[BLOCKED] Task {index}: {reason}")
 
@@ -458,9 +470,14 @@ class TaskEngine:
     def get_current(self) -> Optional[Task]:
         idx = self.global_context.get("current_task_index")
         if idx is not None:
-            return self.get_task(idx)
+            task = self.get_task(idx)
+            if task and task.status == TaskStatus.IN_PROGRESS:
+                return task
+            # If the stored current task is not in_progress, clear it in memory
+            self.global_context["current_task_index"] = None
         for task in self.tasks:
             if task.status == TaskStatus.IN_PROGRESS:
+                self.global_context["current_task_index"] = task.index
                 return task
         return None
 
@@ -1041,8 +1058,8 @@ class TaskEngine:
         # Determine brain dir
         brain_dir = Path(brain_path) if brain_path else None
         if not brain_dir or not brain_dir.exists():
-             brain_dir = self.project_dir.parent.parent.parent # .agent/projects/.. -> root
-             if "brain" not in str(brain_dir) and "VFT Docs" in str(self.project_dir):
+             brain_dir = self.project_path.parent.parent.parent # .agent/projects/.. -> root
+             if "brain" not in str(brain_dir) and "VFT Docs" in str(self.project_path):
                   # Heuristic for VFT Docs root vs brain dir
                   brain_dir = Path(os.getcwd())
         
@@ -1255,12 +1272,13 @@ Commands:
     add_p.add_argument("--priority", type=int, default=0)
     add_p.add_argument("--tags", type=str, help="Comma-separated tags")
     add_p.add_argument("--depends", type=str, help="Comma-separated task indices")
+    add_p.add_argument("--start", action="store_true", help="Start the task immediately after adding it")
 
     start_p = subparsers.add_parser("start")
-    start_p.add_argument("index", type=int)
+    start_p.add_argument("index", type=int, nargs="?", default=None)
 
     done_p = subparsers.add_parser("done")
-    done_p.add_argument("index", type=int)
+    done_p.add_argument("index", type=int, nargs="?", default=None)
     done_p.add_argument("--lessons", type=str)
 
     fail_p = subparsers.add_parser("fail")
@@ -1388,13 +1406,31 @@ Commands:
     elif args.command == "add":
         tags = args.tags.split(",") if args.tags else None
         depends = [int(x) for x in args.depends.split(",")] if args.depends else None
-        engine.add_task(args.description, args.data, args.priority, tags, depends)
+        task = engine.add_task(args.description, args.data, args.priority, tags, depends)
+        if args.start:
+            engine.start_task(task.index)
 
     elif args.command == "start":
-        engine.start_task(args.index)
+        idx = args.index
+        if idx is None:
+            nxt = engine.get_next()
+            if nxt:
+                idx = nxt.index
+            else:
+                print("[ERROR] No next task available to start.", file=sys.stderr)
+                sys.exit(1)
+        engine.start_task(idx)
 
     elif args.command == "done":
-        engine.complete_task(args.index, args.lessons)
+        idx = args.index
+        if idx is None:
+            current = engine.get_current()
+            if current:
+                idx = current.index
+            else:
+                print("[ERROR] No current task in progress to mark as done.", file=sys.stderr)
+                sys.exit(1)
+        engine.complete_task(idx, args.lessons)
 
     elif args.command == "fail":
         engine.fail_task(args.index, args.reason)

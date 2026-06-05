@@ -2,7 +2,7 @@
 
 **Current Focus**: Run bsky-reply-batch: 20 replies + 10 RSS stories harvest, evaluate, rebuild registry
 
-**Progress**: 33/46 complete
+**Progress**: 33/47 complete
 
 ## Task List
 - [x] Complete Plane 1 sourcing `kanon plane1 sourcing` <!-- id: 0 -->
@@ -51,6 +51,7 @@
 - [x] Refactoring Plane table layouts to a 2-row responsive design in generate_trump_site.py `ui html responsive` <!-- id: 43 -->
 - [x] Build Temporal Calculus as a full evolutionary branch from pre-limit calculus: derive derivative rules, integration rules, series, convergence, and fundamental theorem using VFT axioms (Terminus, t=n, n=n/1, n/0=n+1) `mathematics temporal_calculus vft formal_paper` <!-- id: 44 -->
 - [/] Run bsky-reply-batch: 20 replies + 10 RSS stories harvest, evaluate, rebuild registry `bluesky batch` <!-- id: 45 -->
+- [ ] Temporary test task `test` <!-- id: 46 -->
 
 ## Project Rules
 - Structure: Dual Quotes + 7-Sentence Rule (Context/Meaning separated)
