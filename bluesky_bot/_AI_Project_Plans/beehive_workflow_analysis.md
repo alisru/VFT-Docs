@@ -77,3 +77,18 @@ We only pay the 3,000-token worker initialization fee once per ten stories. Reti
 | **Crash Recovery** | Zero (Lose entire batch) | Incremental (Resume from last save) |
 | **File Writing** | Attempted by child / Parent block | Handled directly by child per turn |
 | **Validation Gate** | Parsed in-memory per turn | Bulk verified at end via validate_batch |
+
+---
+
+## 4. Addendum: Empirical Timing & Timeout Decision
+
+A single-story timing test was run on 2026-06-05 using the `Beehive Evaluator Bee` subagent against the "Andrew Johnson USC Baseball" candidate from `bluesky_bot/stories/harvested_candidates.json`.
+
+| Metric | Result |
+| :--- | :--- |
+| **Observed evaluation time** | ~43 seconds (read instructions + evaluate + write file + return `1`) |
+| **Timeout cutoff set** | **90 seconds** (~2× observed, buffer for model slowness under load) |
+| **Token outage scope** | Excluded — if quota is exhausted, the parent dies too; timeout is irrelevant in that case |
+
+**The 90s timeout only guards against child-specific hangs:** the bee crashing mid-task, entering a stuck state, or a connection drop that only affects the child's response channel. Those are the real failure cases the schedule timer protects against.
+

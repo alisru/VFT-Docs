@@ -13,10 +13,15 @@ To preserve API token budget and isolate context bloat, candidate harvesting is 
 
 ---
 
-## 2. Mathematical Bounds & Batch Sweet Spot
+## 2. Beehive Model: Turn-Based Sequential Evaluation
 
-To prevent file-write collisions and token accumulation, candidates are processed in parallel batches rather than a single monolithic run.
-* **5 stories per evaluator** is the baseline allocation, balancing token efficiency with thread/file safety.
+Candidates are evaluated one-at-a-time by a single active bee. This eliminates output truncation, rate limit spikes, and parallel file-write collisions. The Queen (parent agent) manages the entire lifecycle.
+
+**Key parameters (empirically measured):**
+* Typical evaluation time per story: ~43 seconds
+* Timeout cutoff per dispatch: **90 seconds** (2× buffer for model slowness)
+* Bee retirement interval: **every 10 stories** (prevents context bloat)
+* Token outage: excluded from timeout scope — if quota is exhausted the parent dies too, timeout is irrelevant
 
 ---
 
@@ -31,15 +36,21 @@ Run the harvesting scripts locally inside the virtual environment to pull candid
 ```
 This writes the raw candidate feeds to `scratch/harvested_candidates.json`.
 
-### Step 2: Local Evaluation (Dry Run)
-The main AI agent in the chat workspace reads the harvested candidates from `scratch/harvested_candidates.json` and spawns 4 concurrent sub-agents using the native workspace tool `invoke_subagent` (with roles `Batch Evaluator Worker 1` to `4`, delegating index ranges 0-4, 5-9, 10-14, 15-19).
+### Step 2: Beehive Evaluation Loop (Dry Run)
+The parent (Queen) runs a sequential turn-based loop:
 
-Each spawned evaluator sub-agent:
-1. Reads `bluesky_bot_instructions.md` and `convergence_lite.md` to load the exact guidelines and schemas.
-2. Evaluates the coordinates and canonical path name of their assigned 5 stories internally.
-3. Outputs the completed 14-step evaluation JSON blocks directly in their chat responses to the parent (consuming 0 file-write tool calls or file system operations).
+1. Load `bluesky_bot/stories/harvested_candidates.json` and build an ordered queue.
+2. Spawn **one bee** using the `Beehive Evaluator Bee` system prompt from `subagent_spawning.md`. Workspace: `inherit`.
+3. Track two counters: `stories_sent_to_bee` (resets at retirement) and `completed` (total).
+4. For each candidate in the queue:
+   a. Send the candidate JSON object to the active bee via `send_message`.
+   b. Start a `schedule` timer for **90 seconds**.
+   c. **If `1` returns** before the timer: increment `completed`, cancel the timer, advance queue.
+   d. **If the timer fires first**: `manage_subagents → kill` the bee, spawn a fresh one, re-dispatch the same candidate.
+   e. After every **10 successful evaluations**: proactively retire the bee (`manage_subagents → kill`), spawn a fresh one.
+5. Once the queue is exhausted, proceed to Step 3.
 
-Once all sub-agents finish, the parent agent parses the JSON blocks from their chat responses and writes them to `factcheck_[slug].json` files in both directories.
+*The bee writes each `factcheck_[id].json` directly to `bluesky_bot/stories/`. The parent never parses JSON from chat.*
 
 ### Step 3: Registry & Graph Rebuild
 Recompile the indexes, registry database, and automatically draw missing trajectory graphs:
