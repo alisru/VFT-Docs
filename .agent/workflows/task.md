@@ -28,9 +28,10 @@ When user says `/task <something>`, interpret their intent:
 | `/task what's next?` | Run `next` command |
 | `/task current` | Run `current` command |
 | `/task add <desc>` | Run `add "<desc>"` |
-| `/task done` | Complete current task with `done <idx>` |
+| `/task done` | Complete current task with `done` (index is auto-detected) |
+| `/task start` | Start next recommended task with `start` (index is auto-detected) |
 | `/task start <n>` | Start task n with `start <n>` |
-| `/task <work request>` | Add as new task, then start it |
+| `/task <work request>` | Add as new task and start it with `add "<work request>" --start` |
 | `/task catchup` | Dump context -> Run `diagnose` -> Update state |
 
 ## Catch-Up Protocol (Retroactive Analysis)
