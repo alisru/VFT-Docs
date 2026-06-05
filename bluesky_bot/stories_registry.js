@@ -323,7 +323,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of The Fall.\nA seat majority is used to claim a popular mandate, masking the reality that support actually declined. The system's quirks are substituted for the people's will.",
     "graph_img": "graph_png/scottish_parliament_majority_skew_graph.png",
     "posts": [
@@ -344,8 +344,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:18:25",
     "target_url": "https://bsky.app/profile/uk.theconversation.com/post/3mnjia3gsq22s",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjp4dv7y2j",
+      "3mnjjp4wcvp2r",
+      "3mnjjp733zi2d",
+      "3mnjjpb7pdi2d",
+      "3mnjjpdehgb23",
+      "3mnjjphnij52a",
+      "3mnjjpjseyq2k",
+      "3mnjjplwydu25",
+      "3mnjjpo3loo2k",
+      "3mnjjpqae3j23",
+      "3mnjjpsfa5c2x",
+      "3mnjjpuk4mf2a",
+      "3mnjjpwpdel24",
+      "3mnjjpyu5jd24"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjp4dv7y2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjp4wcvp2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjp733zi2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpb7pdi2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpdehgb23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjphnij52a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpjseyq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjplwydu25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpo3loo2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpqae3j23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpsfa5c2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpuk4mf2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpwpdel24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjpyu5jd24"
+    ]
   },
   {
     "id": "oak_tree_burnout",
@@ -356,7 +386,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 0.5,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nRather than a passive retreat, the daily sitting ritual acts as a structured, active reclamation of mental sanity.",
     "graph_img": "graph_png/oak_tree_burnout_graph.png",
     "posts": [
@@ -377,8 +407,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:16:36",
     "target_url": "https://bsky.app/profile/theguardian.com/post/3mnjdmpmczi2c",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjhntsgw2d",
+      "3mnjjhojmwm2o",
+      "3mnjjhqodjd25",
+      "3mnjjhssuju2o",
+      "3mnjjhuxkjn2r",
+      "3mnjjhx4twe2k",
+      "3mnjjhzbdfb2k",
+      "3mnjji3gerj24",
+      "3mnjji5kr4i26",
+      "3mnjji7ppt42k",
+      "3mnjjidfze62d",
+      "3mnjjifltmr23",
+      "3mnjjihqmje25",
+      "3mnjjijvdgf2h"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhntsgw2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhojmwm2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhqodjd25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhssuju2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhuxkjn2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhx4twe2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhzbdfb2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjji3gerj24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjji5kr4i26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjji7ppt42k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjidfze62d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjifltmr23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjihqmje25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjijvdgf2h"
+    ]
   },
   {
     "id": "spencer_dismissal",
@@ -389,7 +449,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nBy dismissing the murder charges, the court aligned the legal code with human nature, acknowledging the moral primacy of parent-child protection.",
     "graph_img": "graph_png/spencer_dismissal_graph.png",
     "posts": [
@@ -410,8 +470,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:16:33",
     "target_url": "https://bsky.app/profile/nytimes.com/post/3mnjckkvcov27",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjrkytap2o",
+      "3mnjjrlnna62a",
+      "3mnjjrnsh4i26",
+      "3mnjjrpxakk2j",
+      "3mnjjrs442r2k",
+      "3mnjjruayn72d",
+      "3mnjjrwgxgb2k",
+      "3mnjjrylmvt2x",
+      "3mnjjs2r4cz2k",
+      "3mnjjs4w5l423",
+      "3mnjjs72uql2x",
+      "3mnjjsb7j5a26",
+      "3mnjjsdechh2d",
+      "3mnjjsfjazb2k"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjrkytap2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjrlnna62a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjrnsh4i26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjrpxakk2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjrs442r2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjruayn72d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjrwgxgb2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjrylmvt2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjs2r4cz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjs4w5l423",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjs72uql2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjsb7j5a26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjsdechh2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjsfjazb2k"
+    ]
   },
   {
     "id": "muralist_sues_fifa_whale",
@@ -422,7 +512,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -2.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nFIFA claims to bring global joy, but its operational method actively destroys local artistic assets for private gain.",
     "graph_img": "graph_png/muralist_sues_fifa_whale_graph.png",
     "posts": [
@@ -443,8 +533,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:16:28",
     "target_url": "https://bsky.app/profile/nytimes.com/post/3mnj24jrxdp23",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjghqxhi26",
+      "3mnjjgicj2d2s",
+      "3mnjjgkh4x42k",
+      "3mnjjgmm45r2x",
+      "3mnjjgoqy3e2k",
+      "3mnjjgqvh2n2a",
+      "3mnjjgt27cf2j",
+      "3mnjjgv6rp32h",
+      "3mnjjgxdge72k",
+      "3mnjjgzi7si26",
+      "3mnjjh3n5yj24",
+      "3mnjjh5rqil2o",
+      "3mnjjh7wnw325",
+      "3mnjjhc3e7p2k"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjghqxhi26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgicj2d2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgkh4x42k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgmm45r2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgoqy3e2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgqvh2n2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgt27cf2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgv6rp32h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgxdge72k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjgzi7si26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjh3n5yj24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjh5rqil2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjh7wnw325",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjhc3e7p2k"
+    ]
   },
   {
     "id": "oreshnik_missile_test",
@@ -455,7 +575,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Delusion.\nFraming live-target bombardment as a diagnostic observation path is a chilling justification for terror.",
     "graph_img": "graph_png/oreshnik_missile_test_graph.png",
     "posts": [
@@ -476,8 +596,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:16:21",
     "target_url": "https://bsky.app/profile/kyivindependent.com/post/3mnj4gfbxw227",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjlbc3tn2k",
+      "3mnjjlbuh7w2d",
+      "3mnjjle24l426",
+      "3mnjjlg77ko2d",
+      "3mnjjlidvyn2a",
+      "3mnjjlkincg2h",
+      "3mnjjlmnjpm25",
+      "3mnjjlosi4426",
+      "3mnjjlqxfh72j",
+      "3mnjjlw5csi2r",
+      "3mnjjlybzb72j",
+      "3mnjjm2gvqo2k",
+      "3mnjjm4lz342s",
+      "3mnjjm6qjnx2j"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlbc3tn2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlbuh7w2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjle24l426",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlg77ko2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlidvyn2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlkincg2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlmnjpm25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlosi4426",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlqxfh72j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlw5csi2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjlybzb72j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjm2gvqo2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjm4lz342s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjm6qjnx2j"
+    ]
   },
   {
     "id": "satrapi_persepolis",
@@ -488,7 +638,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nSatrapi's creative work successfully bridges the gap between private memory and public history, providing a vehicle for universal connection.",
     "graph_img": "graph_png/satrapi_persepolis_graph.png",
     "posts": [
@@ -509,8 +659,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:16:18",
     "target_url": "https://bsky.app/profile/apnews.com/post/3mnjhjrfjdi2l",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjnuivh52o",
+      "3mnjjnv23o52k",
+      "3mnjjnx7ftz2d",
+      "3mnjjnzed3f2o",
+      "3mnjjo3jbkf2k",
+      "3mnjjo5ogko2x",
+      "3mnjjo7tgh52k",
+      "3mnjjoby77f2o",
+      "3mnjjoe5gfp2k",
+      "3mnjjogc4zo2r",
+      "3mnjjoih7xo2r",
+      "3mnjjokmqrx2j",
+      "3mnjjomrlvv2a",
+      "3mnjjoowjgd2k"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjnuivh52o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjnv23o52k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjnx7ftz2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjnzed3f2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjo3jbkf2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjo5ogko2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjo7tgh52k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjoby77f2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjoe5gfp2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjogc4zo2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjoih7xo2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjokmqrx2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjomrlvv2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjoowjgd2k"
+    ]
   },
   {
     "id": "officials_measles_respiratory_viruses_crowds",
@@ -521,7 +701,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nWarnings masquerade as proactive protection, but serve to shift responsibility from systemic health infrastructure to individual risk tolerance.",
     "graph_img": "graph_png/officials_measles_respiratory_viruses_crowds_graph.png",
     "posts": [
@@ -541,7 +721,39 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated Greater Good collapses to Greater Evil when public health shifts from systemic protection to individual liability.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
     "created_at": "2026-06-05 16:16:11",
-    "target_url": "https://bsky.app/profile/cnbc.com/post/3mnjhjsy4d52b"
+    "target_url": "https://bsky.app/profile/cnbc.com/post/3mnjhjsy4d52b",
+    "rkeys": [
+      "3mnjjk3yhq32x",
+      "3mnjjk4pu6w2j",
+      "3mnjjk6uj232x",
+      "3mnjjkazdm62j",
+      "3mnjjkd5yhd2x",
+      "3mnjjkfd7ld24",
+      "3mnjjkhhiwr23",
+      "3mnjjkjmbdg2d",
+      "3mnjjklqrsv2a",
+      "3mnjjknvrld26",
+      "3mnjjkq2qql24",
+      "3mnjjks7h3v2a",
+      "3mnjjkued752a",
+      "3mnjjkwjixo2d"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjk3yhq32x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjk4pu6w2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjk6uj232x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkazdm62j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkd5yhd2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkfd7ld24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkhhiwr23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkjmbdg2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjklqrsv2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjknvrld26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkq2qql24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjks7h3v2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkued752a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjkwjixo2d"
+    ]
   },
   {
     "id": "sk_labor_minister_ai_profits",
@@ -552,7 +764,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nUrging cooperation acts as a shield for inaction, substituting PR announcements for actual wealth redistribution.",
     "graph_img": "graph_png/sk_labor_minister_ai_profits_graph.png",
     "posts": [
@@ -573,8 +785,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:16:11",
     "target_url": "https://bsky.app/profile/reuters.com/post/3mnjhl4tcz62r",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjqfnnrl23",
+      "3mnjjqgg53i2d",
+      "3mnjjqil2ra2k",
+      "3mnjjqkpn3z2k",
+      "3mnjjqmumn324",
+      "3mnjjqozawd24",
+      "3mnjjqr5sgp2h",
+      "3mnjjqtcs6g2s",
+      "3mnjjqvhass2j",
+      "3mnjjqxm3ws2j",
+      "3mnjjqzr2xn2a",
+      "3mnjjr3wdko2s",
+      "3mnjjr633ul24",
+      "3mnjjra7occ2j"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqfnnrl23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqgg53i2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqil2ra2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqkpn3z2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqmumn324",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqozawd24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqr5sgp2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqtcs6g2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqvhass2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqxm3ws2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjqzr2xn2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjr3wdko2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjr633ul24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjra7occ2j"
+    ]
   },
   {
     "id": "oc_lawyers_ai",
@@ -585,7 +827,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nBy automating their primary intellectual duty, the lawyers extracted high fees from clients while outsourcing their defense to a hallucinating text generator.",
     "graph_img": "graph_png/oc_lawyers_ai_graph.png",
     "posts": [
@@ -606,8 +848,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:16:01",
     "target_url": "https://bsky.app/profile/latimes.com/post/3mnjhnd63652m",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjiuowyn2h",
+      "3mnjjivcaxj24",
+      "3mnjjixgwqe25",
+      "3mnjjizlzom2k",
+      "3mnjjj3ral72k",
+      "3mnjjj5w6b52h",
+      "3mnjjja3etm2s",
+      "3mnjjjca4b62j",
+      "3mnjjjeevft2a",
+      "3mnjjjgjujn2h",
+      "3mnjjjipaxm2s",
+      "3mnjjjkux442k",
+      "3mnjjjmzwha2r",
+      "3mnjjjp6thz26"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjiuowyn2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjivcaxj24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjixgwqe25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjizlzom2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjj3ral72k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjj5w6b52h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjja3etm2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjjca4b62j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjjeevft2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjjgjujn2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjjipaxm2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjjkux442k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjjmzwha2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjjp6thz26"
+    ]
   },
   {
     "id": "ransomware_dumbass",
@@ -618,7 +890,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Delusion.\nThe belief in one's own intellectual and technical superiority collapses instantly when basic procedural discipline is ignored, turning a threat into self-sabotage.",
     "graph_img": "graph_png/ransomware_dumbass_graph.png",
     "posts": [
@@ -639,8 +911,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:15:45",
     "target_url": "https://bsky.app/profile/theregister.com/post/3mnjhpzqxk62o",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjmnguv52k",
+      "3mnjjmnzez42s",
+      "3mnjjmq6cyu26",
+      "3mnjjmsd27u26",
+      "3mnjjmui5sp2k",
+      "3mnjjmwms3x2k",
+      "3mnjjmyrke52k",
+      "3mnjjn2wc3f2a",
+      "3mnjjn536lp2k",
+      "3mnjjn7a2442s",
+      "3mnjjnbedtf2a",
+      "3mnjjndj43f2o",
+      "3mnjjnfnylv2k",
+      "3mnjjnhso6m2r"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjmnguv52k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjmnzez42s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjmq6cyu26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjmsd27u26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjmui5sp2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjmwms3x2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjmyrke52k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjn2wc3f2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjn536lp2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjn7a2442s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjnbedtf2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjndj43f2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjnfnylv2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjnhso6m2r"
+    ]
   },
   {
     "id": "lummi_graduation_2026",
@@ -651,7 +953,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "PASS — The Path of Grace.\nRather than a bureaucratic exit, the community actively elevated these graduates into leaders of their collective future.",
     "graph_img": "graph_png/lummi_graduation_2026_graph.png",
     "posts": [
@@ -672,8 +974,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:15:39",
     "target_url": "https://bsky.app/profile/cascadiadaily.com/post/3mnjhulykj42p",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjf7h24i26",
+      "3mnjjfa2ivi2k",
+      "3mnjjfc7ekj2j",
+      "3mnjjfee7ea23",
+      "3mnjjfgj2jy26",
+      "3mnjjfinuga2k",
+      "3mnjjfkspue2r",
+      "3mnjjfmxmmq2k",
+      "3mnjjfp4tuq2d",
+      "3mnjjfrbmxe2r",
+      "3mnjjftgow42r",
+      "3mnjjfvlrnr2x",
+      "3mnjjfxqpyr2d",
+      "3mnjjfzvnrb2x"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjf7h24i26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfa2ivi2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfc7ekj2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfee7ea23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfgj2jy26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfinuga2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfkspue2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfmxmmq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfp4tuq2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfrbmxe2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjftgow42r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfvlrnr2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfxqpyr2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjfzvnrb2x"
+    ]
   },
   {
     "id": "what_to_do_in_chicago_blues_fest",
@@ -684,7 +1016,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nCuration is presented as civic celebration, but it functions as a marketing funnel for commercial entities, turning citizens into consumers.",
     "graph_img": "graph_png/what_to_do_in_chicago_blues_fest_graph.png",
     "posts": [
@@ -704,7 +1036,39 @@ window.ALETHEIA_STORIES_REGISTRY = [
       "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Stated Greater Good collapses to Greater Evil once civic connection is gated by commercial transaction.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
     ],
     "created_at": "2026-06-05 16:15:33",
-    "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mnji73wacp2i"
+    "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mnji73wacp2i",
+    "rkeys": [
+      "3mnjjtyaotc2j",
+      "3mnjjtyrwb423",
+      "3mnjju2wknr2d",
+      "3mnjju5366s2j",
+      "3mnjju7a74a24",
+      "3mnjjubesbo2s",
+      "3mnjjudjasa2d",
+      "3mnjjufnuyb2d",
+      "3mnjjuhstcz2h",
+      "3mnjjujxm7j2d",
+      "3mnjjum4geb2d",
+      "3mnjjuobe4g2k",
+      "3mnjjuqfxy22o",
+      "3mnjjutfcma2d"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjtyaotc2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjtyrwb423",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjju2wknr2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjju5366s2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjju7a74a24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjubesbo2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjudjasa2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjufnuyb2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjuhstcz2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjujxm7j2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjum4geb2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjuobe4g2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjuqfxy22o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjutfcma2d"
+    ]
   },
   {
     "id": "united_newark_collision",
@@ -715,7 +1079,7 @@ window.ALETHEIA_STORIES_REGISTRY = [
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "COMPLETED DRY RUN",
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
     "verdict": "FAIL — The Path of Deception.\nAirports claim absolute containment, but low approaches externalize collision risk directly onto Turnpike commuters.",
     "graph_img": "graph_png/united_newark_collision_graph.png",
     "posts": [
@@ -736,8 +1100,38 @@ window.ALETHEIA_STORIES_REGISTRY = [
     ],
     "created_at": "2026-06-05 16:15:27",
     "target_url": "https://bsky.app/profile/cnn.com/post/3mnji3hpkae2u",
-    "rkeys": [],
-    "post_urls": []
+    "rkeys": [
+      "3mnjjspdwoj26",
+      "3mnjjspypra2d",
+      "3mnjjss5pup2d",
+      "3mnjjsuchnq2k",
+      "3mnjjswhjww2s",
+      "3mnjjt266sw2s",
+      "3mnjjt4cjk62a",
+      "3mnjjt6jwrb2h",
+      "3mnjjtaosgm2x",
+      "3mnjjtctnen25",
+      "3mnjjtey6w42x",
+      "3mnjjth4yvq2k",
+      "3mnjjtjbt2i2k",
+      "3mnjjtlglrs2j"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjspdwoj26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjspypra2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjss5pup2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjsuchnq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjswhjww2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjt266sw2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjt4cjk62a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjt6jwrb2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjtaosgm2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjtctnen25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjtey6w42x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjth4yvq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjtjbt2i2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mnjjtlglrs2j"
+    ]
   },
   {
     "id": "van_hollen_campaign_spending_blast",
