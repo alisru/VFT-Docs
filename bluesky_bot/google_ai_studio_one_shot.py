@@ -551,7 +551,7 @@ def main():
     parser.add_argument("--rss", type=int, default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int, default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
-    parser.add_argument("--chunk-size", type=int, default=6, help="Number of stories to process per API call (default: 6)")
+    parser.add_argument("--chunk-size", type=int, default=3, help="Number of stories to process per API call (default: 3)")
     args = parser.parse_args()
     
     print("=" * 80)
