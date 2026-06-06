@@ -293,21 +293,60 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     # System prompt: pure role declaration only
     system_instruction = "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation."
 
-    # Build the full user message: rules + candidates + strict output demand
+    # Build the full user message: rules + candidates + strict JSON matrix output demand
     n = len(candidates)
     output_format = (
-        f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE ONLY THIS, NOTHING ELSE.\n"
-        f"You are a diligent Hegemonic News Analyst. You must evaluate ALL {n} candidate(s). Your response must contain exactly {n} data row(s) after the header — one per candidate, in the same order. DO NOT stop early. DO NOT skip any candidate. Every candidate in the list must have exactly one output row.\n"
-        "Line 1 (header, exact):\n"
-        "idþsubjectþlinkþtarget_urlþclaim_uþclaim_psiþreal_uþreal_psiþmodeþposts\n"
-        f"Lines 2 to {n + 1} (one per candidate):\n"
-        "- Columns separated by þ (Thorn U+00FE). NEVER use þ inside column text.\n"
-        "- 'posts' column = exactly 14 post strings joined by ¶ (Pilcrow U+00B6). NEVER use ¶ inside post text.\n"
-        "- Escape ALL real newlines inside posts as the two characters \\n so each story fits on ONE output line.\n"
-        "- Every post must be under 250 characters.\n"
-        "- Do NOT output blank lines, bullet points, character counts, commentary, markdown, or any text that is not a data row.\n\n"
-        "EXAMPLE (one story, shortened):\n"
-        "my_slug_idþStory TitleþhttpsURLþþ1.0þ0.0þ-1.0þ-1.0þrootþHook text here.\\nEvidence: a, b, c¶Claim text.\\nStated Judgement: (+1.0, 0.0) — Good Preference¶Reality text.\\nResulting Judgement: (-1.0, -1.0) — Greater Evil¶Verdict: FAIL — The Path of Deception.\\nExplanation.¶Context paragraph.¶The Bright Side:\\nNuance.¶The Breakdown & Plane Error:\\nExplanation.¶The Trajectory: The Path of Deception.\\nWhen you map the gap...¶...it plots a direct trajectory toward Greater Evil.¶The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie.¶Alethekanon:\\nAnalysis.¶Awwthekanon:\\nEmpathy.¶Brothekanon:\\nCasual take.¶Synthesized Resolution Vector:\\nBlended Path: summary.\\nFinal Recalculated Coordinates: (-1.0, -1.0)\n"
+        f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE A SINGLE VALID JSON LIST OF LISTS. NO commentary, NO markdown formatting (other than JSON code fences if desired), NO explanation.\n"
+        f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly 10 items representing the evaluation of that candidate in this specific structure:\n"
+        "[\n"
+        "  [\n"
+        '    "id",\n'
+        '    "subject",\n'
+        '    "link",\n'
+        '    "target_url",\n'
+        "    claim_u (float),\n"
+        "    claim_psi (float),\n"
+        "    real_u (float),\n"
+        "    real_psi (float),\n"
+        '    "mode",\n'
+        "    [\n"
+        '      "post 1 (under 250 chars)",\n'
+        '      "post 2 (under 250 chars)",\n'
+        "      ...\n"
+        "      (exactly 14 posts)\n"
+        "    ]\n"
+        "  ]\n"
+        "]\n\n"
+        "EXAMPLE RESPONSE (for a single candidate, format exactly as JSON list of lists):\n"
+        "[\n"
+        "  [\n"
+        '    "my_slug_id",\n'
+        '    "Story Title",\n'
+        '    "https://...",\n'
+        '    "",\n'
+        "    1.0,\n"
+        "    0.0,\n"
+        "    -1.0,\n"
+        "    -1.0,\n"
+        '    "root",\n'
+        "    [\n"
+        '      "Hook text here.\\nEvidence: a, b, c",\n'
+        '      "Claim text.\\nStated Judgement: (+1.0, 0.0) — Good Preference",\n'
+        '      "Reality text.\\nResulting Judgement: (-1.0, -1.0) — Greater Evil",\n'
+        '      "Verdict: FAIL — The Path of Deception.\\nExplanation.",\n'
+        '      "Context paragraph.",\n'
+        '      "The Bright Side:\\nNuance.",\n'
+        '      "The Breakdown & Plane Error:\\nExplanation.",\n'
+        '      "The Trajectory: The Path of Deception.\\nWhen you map the gap...",\n'
+        '      "...it plots a direct trajectory toward Greater Evil.",\n'
+        '      "The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie.",\n'
+        '      "Alethekanon:\\nAnalysis.",\n'
+        '      "Awwthekanon:\\nEmpathy.",\n'
+        '      "Brothekanon:\\nCasual take.",\n'
+        '      "Synthesized Resolution Vector:\\nBlended Path: summary.\\nFinal Recalculated Coordinates: (-1.0, -1.0)"\n'
+        "    ]\n"
+        "  ]\n"
+        "]"
     )
 
     user_payload_str = (
@@ -323,7 +362,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "gemini-3-flash-preview",
         "gemini-2.5-flash",
         "gemini-3.1-flash-lite",
-        "gemma-4-31b"
+        "gemma-4-31b",
         "gemini-2.5-flash-lite"
         
     ]
@@ -374,68 +413,96 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     sys.exit(1)
 
 def transpose_flat_to_json(flat_text):
-    # Try to extract the block between <result> and </result>
-    result_match = re.search(r'<result>(.*?)</result>', flat_text, re.DOTALL)
-    if result_match:
-        content_to_parse = result_match.group(1).strip()
-    else:
-        # Fallback to the whole text if tags are missing
-        content_to_parse = flat_text.strip()
-        
-    lines = content_to_parse.split('\n')
-    if not lines or len(lines) < 2:
-        return []
-        
-    # Ignore any markdown fences if the model outputted them
-    if lines[0].startswith("```"):
-        lines = lines[1:]
-    if lines and lines[-1].startswith("```"):
-        lines = lines[:-1]
-        
-    if not lines:
-        return []
-        
-    # Find the header line: must contain 'idþ' AND at least 5 þ separators
-    header_idx = -1
-    for idx, l in enumerate(lines):
-        if 'idþ' in l and l.count('þ') >= 5:
-            header_idx = idx
-            break
-
-    if header_idx == -1:
-        # Hard fail — don't silently assume a header and parse garbage
-        print("ERROR: Could not find a valid header row (expected 'idþsubjectþ...') in model output.")
+    # Strip markdown fences if present
+    content = flat_text.strip()
+    if content.startswith("```json"):
+        content = content[7:]
+    elif content.startswith("```"):
+        content = content[3:]
+    if content.endswith("```"):
+        content = content[:-3]
+    content = content.strip()
+    
+    # Locate array start [ and end ]
+    start_idx = content.find("[")
+    end_idx = content.rfind("]")
+    if start_idx == -1 or end_idx == -1:
+        print("ERROR: Could not find valid JSON array brackets in model output.")
         print("--- RAW MODEL OUTPUT (first 500 chars) ---")
         print(flat_text[:500])
         print("------------------------------------------")
         return []
-    else:
-        header = [h.strip() for h in lines[header_idx].split('þ')]
-        data_lines = lines[header_idx + 1:]
+        
+    json_str = content[start_idx:end_idx+1]
+    
+    try:
+        data = json.loads(json_str)
+    except Exception as je:
+        print(f"Warning: Failed to parse response as complete JSON ({je}). Attempting block-by-block recovery of completed elements...")
+        
+        # Block-by-block parsing recovery
+        lines = content.split('\n')
+        data = []
+        current_block = []
+        in_block = False
+        
+        for line in lines:
+            if not in_block:
+                if line.startswith("  ["):
+                    in_block = True
+                    current_block = [line]
+            else:
+                current_block.append(line)
+                if line.startswith("  ]") or line.startswith("  ],"):
+                    block_str = "\n".join(current_block).strip()
+                    if block_str.endswith(","):
+                        block_str = block_str[:-1].strip()
+                    try:
+                        parsed = json.loads(block_str)
+                        if isinstance(parsed, list):
+                            data.append(parsed)
+                        in_block = False
+                        current_block = []
+                    except Exception:
+                        pass
+                        
+        if not data:
+            print("ERROR: Block-by-block parser could not recover any valid JSON elements.")
+            print("--- EXTRACTED JSON STRING (first 500 chars) ---")
+            print(json_str[:500])
+            print("-----------------------------------------------")
+            return []
+        else:
+            print(f"Successfully recovered {len(data)} completed evaluation element(s) from truncated JSON.")
+        
+    if not isinstance(data, list):
+        print("ERROR: Parsed JSON is not a list.")
+        return []
         
     evaluations = []
-    for line in data_lines:
-        if not line.strip():
-            continue
-        cols = [c.strip() for c in line.split('þ')]
-        if len(cols) < len(header):
-            print(f"Warning: Skipping malformed row (found {len(cols)} columns, expected {len(header)}): {line}")
+    
+    for idx, item in enumerate(data):
+        if not isinstance(item, list) or len(item) < 10:
+            print(f"Warning: Skipping item {idx} - expected a list of at least 10 elements (got {type(item).__name__ if not isinstance(item, list) else len(item)}).")
             continue
             
-        story = dict(zip(header, cols))
-        
         try:
-            story["claim_u"] = float(story["claim_u"])
-            story["claim_psi"] = float(story["claim_psi"])
-            story["real_u"] = float(story["real_u"])
-            story["real_psi"] = float(story["real_psi"])
-            
-            raw_posts = story["posts"].split('¶')
-            story["posts"] = [p.replace('\\n', '\n') for p in raw_posts]
-            story["status"] = "COMPLETED DRY RUN"
+            story = {
+                "id": str(item[0]).strip(),
+                "subject": str(item[1]).strip(),
+                "link": str(item[2]).strip(),
+                "target_url": str(item[3]).strip(),
+                "claim_u": float(item[4]),
+                "claim_psi": float(item[5]),
+                "real_u": float(item[6]),
+                "real_psi": float(item[7]),
+                "mode": str(item[8]).strip(),
+                "posts": [str(p) for p in item[9]],
+                "status": "COMPLETED DRY RUN"
+            }
             evaluations.append(story)
         except Exception as e:
-            print(f"Warning: Failed to parse row {line}: {e}")
+            print(f"Warning: Failed to parse item {idx}: {e}")
             continue
             
     return evaluations
