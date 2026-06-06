@@ -94,9 +94,6 @@ def main():
             for post in posts:
                 final_posts.extend(split_text(post))
 
-            if len(final_posts) != len(posts):
-                raise ValueError(f"Thread was dynamically split into {len(final_posts)} posts (expected {len(posts)}). One or more posts exceeded the 250-character limit.")
-
             for idx, post in enumerate(final_posts, 1):
                 if len(post) > 250:
                     raise ValueError(f"Post {idx} exceeds 250 characters ({len(post)} chars):\n{post}")

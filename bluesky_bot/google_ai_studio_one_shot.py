@@ -294,11 +294,13 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     system_instruction = "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation."
 
     # Build the full user message: rules + candidates + strict output demand
+    n = len(candidates)
     output_format = (
-        "OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE ONLY THIS, NOTHING ELSE:\n"
+        f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE ONLY THIS, NOTHING ELSE.\n"
+        f"You are a diligent Hegemonic News Analyst. You must evaluate ALL {n} candidate(s). Your response must contain exactly {n} data row(s) after the header — one per candidate, in the same order. DO NOT stop early. DO NOT skip any candidate. Every candidate in the list must have exactly one output row.\n"
         "Line 1 (header, exact):\n"
         "idþsubjectþlinkþtarget_urlþclaim_uþclaim_psiþreal_uþreal_psiþmodeþposts\n"
-        "Then one line per story. Rules:\n"
+        f"Lines 2 to {n + 1} (one per candidate):\n"
         "- Columns separated by þ (Thorn U+00FE). NEVER use þ inside column text.\n"
         "- 'posts' column = exactly 14 post strings joined by ¶ (Pilcrow U+00B6). NEVER use ¶ inside post text.\n"
         "- Escape ALL real newlines inside posts as the two characters \\n so each story fits on ONE output line.\n"
@@ -311,17 +313,19 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     user_payload_str = (
         f"=== CONVERGENCE TEST RULES ===\n{convergence_rules}\n\n"
         f"=== THREAD FORMATTING & SCHEMAS ===\n{formatting_rules}\n\n"
-        f"=== CANDIDATES TO EVALUATE ===\n{json.dumps(candidates, indent=2)}\n\n"
+        f"=== CANDIDATES TO EVALUATE ({n} total) ===\n{json.dumps(candidates, indent=2)}\n\n"
         f"{output_format}"
     )
     
     # Try the specified model, fallback if rate-limited or fails
     default_fallbacks = [
         "gemini-3.5-flash",
-        "gemini-3-flash",
+        "gemini-3-flash-preview",
+        "gemini-2.5-flash",
         "gemini-3.1-flash-lite",
-        "gemini-2.5-flash-lite",
-        "gemini-2.5-flash"
+        "gemma-4-31b"
+        "gemini-2.5-flash-lite"
+        
     ]
     # Keep unique order, trying model_name first
     fallback_models = []
@@ -355,7 +359,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                 )
                 response = model_instance.generate_content(user_payload_str)
                 result_text = response.text.strip()
-                print(f"API call successful with model: {model}")
+                print(f"API call successful with model: {model}, response: {response}")
                 return result_text
         except Exception as e:
             err_str = str(e).lower()
@@ -436,51 +440,43 @@ def transpose_flat_to_json(flat_text):
             
     return evaluations
 
-# --- 4. GRAPH GENERATION AND SAVING ---
+# --- 4. SAVE TO DARKROOM ---
 def process_evaluations(evaluations):
+    """Write evaluated story configs to stories/darkroom/ for graph generation and promotion by rebuild_registries."""
+    darkroom_dir = os.path.join(script_dir, "stories", "darkroom")
+    os.makedirs(darkroom_dir, exist_ok=True)
     success_count = 0
-    os.makedirs(os.path.join(script_dir, "graph_png"), exist_ok=True)
-    
+
     for story in evaluations:
         try:
-            slug = story.get("id") or story.get("subject").lower().replace(" ", "_").replace("/", "_")
-            # Sanitize slug to remove forbidden characters for Windows paths
+            slug = story.get("id") or story.get("subject", "story").lower().replace(" ", "_").replace("/", "_")
             for char in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
                 slug = slug.replace(char, '')
             story["id"] = slug
             story["status"] = "COMPLETED DRY RUN"
-            
-            # Post validation check
+
+            # Post count validation
             posts = story.get("posts", [])
             if len(posts) != 14:
-                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts instead of 14! Skipping.")
+                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 14). Skipping.")
                 continue
-                
-            char_violations = []
-            for idx, post in enumerate(posts):
-                if len(post) > 250:
-                    char_violations.append((idx, len(post)))
-            if char_violations:
-                print(f"WARNING: Story '{story.get('subject')}' has character limit violations: {char_violations}")
-                
-            print(f"Processing story: {story.get('subject')} ({slug})...")
-            
-            # 1. Draw graph
-            graph_base = f"{slug}_graph.png"
-            graph_bot_path = os.path.join(script_dir, "graph_png", graph_base)
-            
-            title = f"Assessment: {story['subject']}"
-            draw_graph(story["claim_u"], story["claim_psi"], story["real_u"], story["real_psi"], title, graph_bot_path)
-            
-            story["graph_img"] = f"graph_png/{graph_base}"
-            
-            # 2. Save JSON and sync registry
-            save_and_sync_story(story)
+
+            # Character limit warnings
+            violations = [(i, len(p)) for i, p in enumerate(posts) if len(p) > 250]
+            if violations:
+                print(f"WARNING: '{story.get('subject')}' has char violations at posts {violations}")
+
+            # Write to darkroom — rebuild_registries will generate the graph and promote it
+            filename = f"factcheck_{slug}.json"
+            filepath = os.path.join(darkroom_dir, filename)
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump([story], f, indent=2, ensure_ascii=False)
+
+            print(f"  Staged to darkroom: {filename}")
             success_count += 1
-            print(f"Successfully saved and synced story config: {slug}")
         except Exception as e:
-            print(f"ERROR: Failed to process evaluation for story: {story.get('subject')}. Error: {e}")
-            
+            print(f"ERROR: Failed to stage story '{story.get('subject')}': {e}")
+
     return success_count
 
 def main():
@@ -534,35 +530,55 @@ def main():
     print(f"Total instructions token budget saved: {percent_saved:.1f}%")
     print(f"----------------------------------\n")
     
-    # Process candidates in chunks
+    # Process candidates in chunks, with retry for any the model skipped
     chunk_size = args.chunk_size
     all_evaluations = []
-    
+    MAX_RETRIES_PER_CHUNK = 2
+
     for i in range(0, len(candidates), chunk_size):
         chunk = candidates[i:i + chunk_size]
-        print(f"\nEvaluating chunk {i // chunk_size + 1}/{(len(candidates) + chunk_size - 1) // chunk_size} ({len(chunk)} candidates)...")
+        total_chunks = (len(candidates) + chunk_size - 1) // chunk_size
+        print(f"\nEvaluating chunk {i // chunk_size + 1}/{total_chunks} ({len(chunk)} candidates)...")
+
+        remaining = list(chunk)  # candidates not yet evaluated
+        chunk_evals = []
+
+        for attempt in range(1, MAX_RETRIES_PER_CHUNK + 1):
+            if not remaining:
+                break
+            if attempt > 1:
+                print(f"  Retry {attempt - 1}: {len(remaining)} candidate(s) not returned — re-firing...")
+                time.sleep(3)
+            try:
+                raw_text = run_one_shot_evaluations(genai_client, remaining, args.model, agnes_api_key=agnes_api_key)
+                parsed = transpose_flat_to_json(raw_text)
+                chunk_evals.extend(parsed)
+
+                # Find which candidates still haven't been evaluated (match by URL)
+                evaluated_urls = {e.get("link", "").strip().lower() for e in chunk_evals}
+                remaining = [c for c in remaining if c["url"].strip().lower() not in evaluated_urls]
+
+                print(f"  Got {len(parsed)} row(s). {len(remaining)} candidate(s) still missing.")
+            except Exception as pe:
+                print(f"  Error on attempt {attempt}: {pe}")
+
+        if remaining:
+            print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s). Skipping.")
+
+        if chunk_evals:
+            chunk_success = process_evaluations(chunk_evals)
+            print(f"  Processed {chunk_success}/{len(chunk_evals)} evaluations from chunk to darkroom.")
+            print("  Promoting and generating graphs immediately...")
+            rebuild_registries()
+            print("  Registries successfully rebuilt for this chunk.")
         
-        try:
-            raw_text = run_one_shot_evaluations(genai_client, chunk, args.model, agnes_api_key=agnes_api_key)
-            chunk_evals = transpose_flat_to_json(raw_text)
-            print(f"Successfully parsed {len(chunk_evals)} evaluations from chunk.")
-            all_evaluations.extend(chunk_evals)
-        except Exception as pe:
-            print(f"Error processing chunk: {pe}")
-            # Continue to next chunk to recover gracefully
-            time.sleep(2)
+        all_evaluations.extend(chunk_evals)
             
     print(f"\nReceived {len(all_evaluations)} total evaluations across all chunks.")
     if not all_evaluations:
         print("ERROR: No evaluations returned across all chunks. Exiting.")
         sys.exit(1)
         
-    success_count = process_evaluations(all_evaluations)
-    print(f"\nSuccessfully processed {success_count}/{len(all_evaluations)} evaluations.")
-    
-    print("\nRebuilding registries...")
-    rebuild_registries()
-    print("Registries successfully rebuilt.")
     print("\nOne-Shot Batch Evaluation Pipeline Completed Successfully!")
 
 if __name__ == "__main__":
