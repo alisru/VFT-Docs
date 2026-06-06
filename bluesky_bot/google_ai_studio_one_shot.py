@@ -67,8 +67,7 @@ def call_agnes_api(api_key, system_prompt, user_content, model="agnes-2.0-flash"
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_content}
         ],
-        "temperature": 0.15,
-        "response_format": {"type": "json_object"}
+        "temperature": 0.15
     }
     
     req = urllib.request.Request(
@@ -83,7 +82,7 @@ def call_agnes_api(api_key, system_prompt, user_content, model="agnes-2.0-flash"
         with urllib.request.urlopen(req, timeout=180) as response:
             res_data = json.loads(response.read().decode("utf-8"))
         print("Agnes AI API call successful!")
-        return json.loads(res_data["choices"][0]["message"]["content"])
+        return res_data["choices"][0]["message"]["content"]
     except Exception as e:
         print(f"Error calling Agnes AI API: {e}")
         raise e
@@ -291,59 +290,30 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     with open(formatting_path, "r", encoding="utf-8") as f:
         formatting_rules = minify_markdown(f.read())
         
-    system_instruction = (
-        "You are the Master Aletheia Auditor, a highly rigorous systemic analyst. Your job is to run the 5-Phase Convergence Test on the provided stories and output a strict JSON block.\n\n"
-        "Here are the rules you must strictly follow:\n"
+    # System prompt: pure role declaration only
+    system_instruction = "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation."
+
+    # Build the full user message: rules + candidates + strict output demand
+    output_format = (
+        "OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE ONLY THIS, NOTHING ELSE:\n"
+        "Line 1 (header, exact):\n"
+        "idþsubjectþlinkþtarget_urlþclaim_uþclaim_psiþreal_uþreal_psiþmodeþposts\n"
+        "Then one line per story. Rules:\n"
+        "- Columns separated by þ (Thorn U+00FE). NEVER use þ inside column text.\n"
+        "- 'posts' column = exactly 14 post strings joined by ¶ (Pilcrow U+00B6). NEVER use ¶ inside post text.\n"
+        "- Escape ALL real newlines inside posts as the two characters \\n so each story fits on ONE output line.\n"
+        "- Every post must be under 250 characters.\n"
+        "- Do NOT output blank lines, bullet points, character counts, commentary, markdown, or any text that is not a data row.\n\n"
+        "EXAMPLE (one story, shortened):\n"
+        "my_slug_idþStory TitleþhttpsURLþþ1.0þ0.0þ-1.0þ-1.0þrootþHook text here.\\nEvidence: a, b, c¶Claim text.\\nStated Judgement: (+1.0, 0.0) — Good Preference¶Reality text.\\nResulting Judgement: (-1.0, -1.0) — Greater Evil¶Verdict: FAIL — The Path of Deception.\\nExplanation.¶Context paragraph.¶The Bright Side:\\nNuance.¶The Breakdown & Plane Error:\\nExplanation.¶The Trajectory: The Path of Deception.\\nWhen you map the gap...¶...it plots a direct trajectory toward Greater Evil.¶The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie.¶Alethekanon:\\nAnalysis.¶Awwthekanon:\\nEmpathy.¶Brothekanon:\\nCasual take.¶Synthesized Resolution Vector:\\nBlended Path: summary.\\nFinal Recalculated Coordinates: (-1.0, -1.0)\n"
+    )
+
+    user_payload_str = (
         f"=== CONVERGENCE TEST RULES ===\n{convergence_rules}\n\n"
         f"=== THREAD FORMATTING & SCHEMAS ===\n{formatting_rules}\n\n"
-        "CRITICAL REQUIREMENTS:\n"
-        "1. You must process EVERY story in the input candidates array.\n"
-        "2. For each story, execute the 5-Phase Convergence Test. Map intent, actual reality, calculate the morality (u) and will (psi) coordinates, map the trajectory path name, and write the 14-element posts array.\n"
-        "3. Every post in the 'posts' array must be strictly under 250 characters. Do NOT write dry summaries or number the steps.\n"
-        "4. BAN ON ROBOTIC PREFIXES: Do not start posts with dry prefixes like 'Subject:', 'The Claim:', 'The Reality:', or 'What's happening:'. They must read as organic, human-style paragraphs. Specific allowed titles inside posts (outlined in thread_formatting.md) like 'Verdict:', 'The Bright Side:', 'The Poison:', 'The Breakdown & Plane Error:', 'The Trajectory:', 'Alethekanon:', 'Awwthekanon:', 'Brothekanon:', 'Synthesized Resolution Vector:' are permitted.\n"
-        "5. The response must be a single valid JSON object under the key 'evaluations', containing an array of evaluations matching the JSON schema below.\n\n"
-        "JSON SCHEMA:\n"
-        "{\n"
-        "  \"evaluations\": [\n"
-        "    {\n"
-        "      \"id\": \"story_slug_id_here\",\n"
-        "      \"subject\": \"Title of the story\",\n"
-        "      \"link\": \"Link to the article\",\n"
-        "      \"target_url\": \"Target Bluesky post URL (only if mode is 'reply')\",\n"
-        "      \"claim_u\": 1.0,\n"
-        "      \"claim_psi\": 0.0,\n"
-        "      \"real_u\": -1.0,\n"
-        "      \"real_psi\": -1.0,\n"
-        "      \"mode\": \"reply\" or \"root\",\n"
-        "      \"status\": \"COMPLETED DRY RUN\",\n"
-        "      \"posts\": [\n"
-        "         \"Post 1: Punchy human editorial scene-setter. Under 250 characters.\",\n"
-        "         \"Post 2: Stated claim details explaining intent organically. Stated Judgement: (u, psi) - Label. Under 250 characters.\",\n"
-        "         \"Post 3: Actual reality details revealing structural actions organically. Resulting Judgement: (u, psi) - Label. Under 250 characters.\",\n"
-        "         \"Post 4: Verdict: PASS/FAIL - The Path of [Path Name]. Explanation. Under 250 characters.\",\n"
-        "         \"Post 5: Context paragraph explaining the news event simply. Under 250 characters.\",\n"
-        "         \"Post 6: The Bright Side: or The Poison: nuance. Under 250 characters.\",\n"
-        "         \"Post 7: The Breakdown & Plane Error: Explanation of WHAT vs WHO. Under 250 characters.\",\n"
-        "         \"Post 8: Expose the bait-and-switch. Under 250 characters.\",\n"
-        "         \"Post 9: The Trajectory: The Path of [Path Name]. Transition. Under 250 characters.\",\n"
-        "         \"Post 10: ...it plots a direct trajectory toward [Zone]. Math explanation. Under 250 characters.\",\n"
-        "         \"Post 11: The Unavoidable Truth: [text]\\n\\nThe Unavoidable Lie: [text]. Under 250 characters.\",\n"
-        "         \"Post 12: Alethekanon: Analyst reaction. Under 250 characters.\",\n"
-        "         \"Post 13: Awwthekanon: Empathy reaction. Under 250 characters.\",\n"
-        "         \"Post 14: Brothekanon: Casual observer reaction. Under 250 characters.\",\n"
-        "         \"Post 15: Synthesized Resolution Vector: Blended Path: ...\\nFinal Recalculated Coordinates: (u, psi). Under 250 characters.\"\n"
-        "      ]\n"
-        "    }\n"
-        "  ]\n"
-        "}\n"
-        "Wait, the 'posts' array must have EXACTLY 14 strings! Let's count indices: 0 to 13. Map them exactly as outlined in thread_formatting.md.\n"
+        f"=== CANDIDATES TO EVALUATE ===\n{json.dumps(candidates, indent=2)}\n\n"
+        f"{output_format}"
     )
-    
-    user_payload = {
-        "description": "Evaluate all of the following stories in a single call. Run the 5-Phase Convergence Test on each story, map coordinates, and generate the 14-post config.",
-        "candidates": candidates
-    }
-    user_payload_str = json.dumps(user_payload, indent=2)
     
     # Try the specified model, fallback if rate-limited or fails
     default_fallbacks = [
@@ -376,7 +346,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     raise ValueError("Gemini API client not initialized.")
                 config = genai_client.types.GenerationConfig(
                     temperature=0.15,
-                    response_mime_type="application/json"
+                    max_output_tokens=8192
                 )
                 model_instance = genai_client.GenerativeModel(
                     model_name=model,
@@ -385,9 +355,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                 )
                 response = model_instance.generate_content(user_payload_str)
                 result_text = response.text.strip()
-                parsed_result = json.loads(result_text)
                 print(f"API call successful with model: {model}")
-                return parsed_result
+                return result_text
         except Exception as e:
             err_str = str(e).lower()
             if "429" in err_str or "exhausted" in err_str or "quota" in err_str:
@@ -399,6 +368,73 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             
     print(f"CRITICAL: All models failed in one-shot batch evaluation. Last error: {last_exception}")
     sys.exit(1)
+
+def transpose_flat_to_json(flat_text):
+    # Try to extract the block between <result> and </result>
+    result_match = re.search(r'<result>(.*?)</result>', flat_text, re.DOTALL)
+    if result_match:
+        content_to_parse = result_match.group(1).strip()
+    else:
+        # Fallback to the whole text if tags are missing
+        content_to_parse = flat_text.strip()
+        
+    lines = content_to_parse.split('\n')
+    if not lines or len(lines) < 2:
+        return []
+        
+    # Ignore any markdown fences if the model outputted them
+    if lines[0].startswith("```"):
+        lines = lines[1:]
+    if lines and lines[-1].startswith("```"):
+        lines = lines[:-1]
+        
+    if not lines:
+        return []
+        
+    # Find the header line: must contain 'idþ' AND at least 5 þ separators
+    header_idx = -1
+    for idx, l in enumerate(lines):
+        if 'idþ' in l and l.count('þ') >= 5:
+            header_idx = idx
+            break
+
+    if header_idx == -1:
+        # Hard fail — don't silently assume a header and parse garbage
+        print("ERROR: Could not find a valid header row (expected 'idþsubjectþ...') in model output.")
+        print("--- RAW MODEL OUTPUT (first 500 chars) ---")
+        print(flat_text[:500])
+        print("------------------------------------------")
+        return []
+    else:
+        header = [h.strip() for h in lines[header_idx].split('þ')]
+        data_lines = lines[header_idx + 1:]
+        
+    evaluations = []
+    for line in data_lines:
+        if not line.strip():
+            continue
+        cols = [c.strip() for c in line.split('þ')]
+        if len(cols) < len(header):
+            print(f"Warning: Skipping malformed row (found {len(cols)} columns, expected {len(header)}): {line}")
+            continue
+            
+        story = dict(zip(header, cols))
+        
+        try:
+            story["claim_u"] = float(story["claim_u"])
+            story["claim_psi"] = float(story["claim_psi"])
+            story["real_u"] = float(story["real_u"])
+            story["real_psi"] = float(story["real_psi"])
+            
+            raw_posts = story["posts"].split('¶')
+            story["posts"] = [p.replace('\\n', '\n') for p in raw_posts]
+            story["status"] = "COMPLETED DRY RUN"
+            evaluations.append(story)
+        except Exception as e:
+            print(f"Warning: Failed to parse row {line}: {e}")
+            continue
+            
+    return evaluations
 
 # --- 4. GRAPH GENERATION AND SAVING ---
 def process_evaluations(evaluations):
@@ -452,6 +488,7 @@ def main():
     parser.add_argument("--rss", type=int, default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int, default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
+    parser.add_argument("--chunk-size", type=int, default=6, help="Number of stories to process per API call (default: 6)")
     args = parser.parse_args()
     
     print("=" * 80)
@@ -497,18 +534,31 @@ def main():
     print(f"Total instructions token budget saved: {percent_saved:.1f}%")
     print(f"----------------------------------\n")
     
-    print("\nInitiating Unified One-Shot Call...")
-    raw_evals = run_one_shot_evaluations(genai_client, candidates, args.model, agnes_api_key=agnes_api_key)
+    # Process candidates in chunks
+    chunk_size = args.chunk_size
+    all_evaluations = []
     
-    evaluations = raw_evals.get("evaluations", [])
-    print(f"\nReceived {len(evaluations)} evaluations from Google AI Studio.")
-    
-    if not evaluations:
-        print("ERROR: No evaluations returned in the JSON block. Exiting.")
+    for i in range(0, len(candidates), chunk_size):
+        chunk = candidates[i:i + chunk_size]
+        print(f"\nEvaluating chunk {i // chunk_size + 1}/{(len(candidates) + chunk_size - 1) // chunk_size} ({len(chunk)} candidates)...")
+        
+        try:
+            raw_text = run_one_shot_evaluations(genai_client, chunk, args.model, agnes_api_key=agnes_api_key)
+            chunk_evals = transpose_flat_to_json(raw_text)
+            print(f"Successfully parsed {len(chunk_evals)} evaluations from chunk.")
+            all_evaluations.extend(chunk_evals)
+        except Exception as pe:
+            print(f"Error processing chunk: {pe}")
+            # Continue to next chunk to recover gracefully
+            time.sleep(2)
+            
+    print(f"\nReceived {len(all_evaluations)} total evaluations across all chunks.")
+    if not all_evaluations:
+        print("ERROR: No evaluations returned across all chunks. Exiting.")
         sys.exit(1)
         
-    success_count = process_evaluations(evaluations)
-    print(f"\nSuccessfully processed {success_count}/{len(evaluations)} evaluations.")
+    success_count = process_evaluations(all_evaluations)
+    print(f"\nSuccessfully processed {success_count}/{len(all_evaluations)} evaluations.")
     
     print("\nRebuilding registries...")
     rebuild_registries()

@@ -387,4 +387,11 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Directory-Aware Live Check & Strict Folder Source of Truth**: Modified `rebuild_registries.py` to use the physical folder location of the newest file as the strict source of truth for whether a story is live or a draft. If a file is in `live/`, it is classified as live (updating status to `"LIVE POSTED"` if needed); if it is moved back to the root directory, its registry status is automatically overridden back to `"COMPLETED DRY RUN"`.
 - **Save and Sync Cleanup**: Updated `save_and_sync_story` in `aletheia_bot.py` to automatically delete the draft JSON file and remove its entry from the draft `index.json` when a story is saved to the `live/` directory.
 - **Robust Path Existence Verification**: Patched `post_batch.py` to check `if os.path.exists(path)` before attempting to delete or move draft files, preventing FileNotFoundError crashes.
-- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of system boundaries.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.0) -> Greater Good / Proactive enhancement of system boundaries.
+
+### [2026-06-06] Intent 45: One-Shot API Delimited Output & Parsing Robustness
+*Status: Completed*
+- **Syntax Error Fixed**: Fixed a duplicate `def def` keyword typo on line 283 of [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py).
+- **Chunk Size & Delimited Output Verified**: Confirmed that the script properly defaults to chunking candidates into batches of 6 (reducing token/output overflow) and outputs in the highly token-minified Thorn (þ) and Pilcrow (¶) delimited flat text format.
+- **XML Tagged Blocks for Output Robustness**: Added `<thinking>...</thinking>` and `<result>...</result>` tags to the system instructions and parser in `google_ai_studio_one_shot.py`. This gives the model a dedicated draft space to analyze, count characters, and self-correct, ensuring the final output block contains only clean, single-line delimited rows without chatty commentary or unescaped newlines leaking into the parser.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.4) -> Greater Good / Proactive system recovery and alignment.
