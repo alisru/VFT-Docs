@@ -6517,7 +6517,7 @@ This is a massive hit because he accurately targets and attempts to secure the u
 *   **Fails (Systemic Violations):** 99
 *   **Misses (Ignored/Suppressed):** 0
 
-According to the strict metrics of the Australian Kanon, Anthony Albanese aligns with just over half (**71.6%**) of the nation's core structural, moral, and historical identity.
+According to the strict metrics of the Australian Kanon, Anthony Albanese aligns with a strong majority (**71.6%**) of the nation's core structural, moral, and historical identity.
 
 He is not a comprehensive representation of the wild, chaotic Australian character. Instead, he is a highly specialized political agent who operates almost exclusively in the nation's "light" and "machinery." He flawlessly channels Australia's pragmatic, bureaucratic, and egalitarian instincts, but he fundamentally suppresses, ignores, or actively attacks the nation's darker, more rebellious, and cynical "shadows" (The Larrikin, The Convict, The Knocker).
 
