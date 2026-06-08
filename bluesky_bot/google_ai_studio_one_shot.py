@@ -165,6 +165,96 @@ def extract_external_link(post):
         return url_match.group(1)
     return None
 
+# Domains that are never a news article (social media, shorteners-to-self, junk, crypto, adult).
+# We use a banlist (not an allowlist) so smaller/regional outlets still pass through.
+NON_NEWS_DOMAINS = {
+    'bsky.app', 'bsky.social', 'graze.social',
+    'twitter.com', 'x.com', 't.co',
+    'youtube.com', 'youtu.be', 'tiktok.com',
+    'instagram.com', 'facebook.com', 'fb.watch', 'threads.net',
+    'reddit.com', 'redd.it', 'twitch.tv', 'discord.gg', 'discord.com',
+    'linktr.ee', 'patreon.com', 'ko-fi.com', 'onlyfans.com', 'fansly.com',
+    'amazon.com', 'amzn.to', 'etsy.com', 'shopify.com', 'gofundme.com',
+    'pinterest.com', 'tumblr.com', 'mastodon.social', 'snapchat.com',
+    'coinbase.com', 'binance.com', 'pump.fun', 'opensea.io',
+}
+
+def is_news_url(url):
+    """Banlist gate: returns True for any real external http(s) URL not on the non-news denylist."""
+    if not url:
+        return False
+    u = url.strip().lower()
+    if not u.startswith(('http://', 'https://')):
+        return False
+    return not any(bad in u for bad in NON_NEWS_DOMAINS)
+
+def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets, banned_keywords):
+    """Open topic search across all of Bluesky via the authenticated searchPosts endpoint.
+
+    Reaches the whole network (not just curated feeds) and keeps only posts whose external
+    link is a real news URL (banlist-gated). Returns a list of 'reply'-mode candidates.
+    Note: the public (unauthenticated) searchPosts endpoint now returns 403, so this uses
+    the logged-in client.
+    """
+    candidates = []
+    keywords = [k.strip() for k in topic.split(",") if k.strip()] if topic else []
+    if not keywords:
+        return candidates
+
+    print(f"\nOpen-searching Bluesky network for topic(s): {keywords} (Target: {target})...")
+
+    for kw in keywords:
+        if len(candidates) >= target:
+            break
+        try:
+            results = client.app.bsky.feed.search_posts(
+                {"q": kw, "limit": 100, "sort": "latest", "lang": "en"}
+            )
+            posts = results.posts
+        except Exception as e:
+            print(f"Warning: searchPosts failed for '{kw}': {e}")
+            continue
+
+        print(f"  '{kw}': {len(posts)} raw posts returned.")
+        for post in posts:
+            if len(candidates) >= target:
+                break
+            text = getattr(post.record, 'text', '').strip()
+            author_handle = post.author.handle
+            rkey = post.uri.split('/')[-1]
+            post_url = f"https://bsky.app/profile/{author_handle}/post/{rkey}"
+
+            if len(text) < 45 or text.startswith('@') or text.startswith('Alethekanon'):
+                continue
+            if banned_keywords and any(bk in text.lower() for bk in banned_keywords):
+                continue
+
+            article_url = extract_external_link(post)
+            if not is_news_url(article_url):
+                continue
+
+            normalized = normalize_url(article_url)
+            if normalized in seen_urls:
+                continue
+            if post_url.strip().lower() in seen_targets:
+                continue
+            subject_approx = text[:30].lower().replace(" ", "_").replace("/", "_")
+            if subject_approx in seen_ids:
+                continue
+
+            candidates.append({
+                "url": article_url,
+                "target_url": post_url,
+                "mode": "reply",
+                "text": text,
+                "subject": text[:80] + "..."
+            })
+            seen_urls.add(normalized)
+            seen_targets.add(post_url.strip().lower())
+
+    print(f"Open search yielded {len(candidates)} news-linked candidate(s).")
+    return candidates
+
 # --- 2. CANDIDATE HARVESTING ---
 def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, category="general", topic=None, banned_topic=None):
     candidates = []
@@ -279,13 +369,20 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
         print(f"\nHarvesting from Bluesky feeds (Target: {target_bsky})...")
         handle = os.environ.get('BSKY_HANDLE', 'judgement-bot.bsky.social')
         password = os.environ.get('BSKY_PASSWORD')
-        
+
         if password:
             client = Client()
             try:
                 client.login(handle, password)
                 resolver = IdResolver()
-                
+
+                # When a topic is set, first reach across the whole network via open search,
+                # then let the curated feeds below top up any remaining slots (combined mode).
+                if keywords:
+                    candidates.extend(harvest_bsky_search(
+                        client, topic, target_bsky, seen_urls, seen_ids, seen_targets, banned_keywords
+                    ))
+
                 bsky_feeds = [
                     "https://bsky.app/profile/aendra.com/feed/verified-news",
                     "https://bsky.app/profile/aendra.com/feed/news-2-0"
