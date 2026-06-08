@@ -35,6 +35,9 @@ The vector requires an assumption of mutual support, which he successfully chann
 
 This is a structural hit because he operates the core identity vector of Mateship in its intended, inclusive capacity.
 
+
+**Follow-Through / Reality Check:** Strong follow-through. His government consistently utilizes language of mutual support and implemented significant safety net expansions (like fee-free TAFE and childcare subsidies) that operationalize the 'Mateship' bond at a national level. The capacity matched the rhetorical claim.
+
 **(Who.Who.What) The Larrikin (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "I am the Prime Minister of this country, and I will act with the dignity the office requires." (Various press conferences).
 
 **Brief:** During his transition from factional "Albo" to Prime Minister, Albanese largely abandoned the Larrikin archetype in favor of cautious institutionalism.
@@ -52,6 +55,9 @@ His focus on maintaining the dignity of the office prioritizes vertical authorit
 The vector requires the "mockery of hubris," which he explicitly avoids to maintain a safe, managerial image.
 
 This interaction is a failure because he consciously shelves this archetype to protect his political capital.
+
+
+**Follow-Through / Reality Check:** Low capacity. His rejection of the Larrikin is total; he rarely risks unscripted mockery or challenges elite authority structures. His follow-through is consistently that of a cautious manager, solidifying the 'MISS' on this vector.
 
 **(Who.Who.Where) The Battler (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "I grew up in public housing down the road in Camperdown with a single mum... It says a lot about our great country that a son of a single mom who was a disability pensioner, who grew up in public housing down the road in Camperdown, can stand before you tonight as Australia's prime minister." (Election Victory Speech, 2022).
 
@@ -71,6 +77,9 @@ The Battler is defined by enduring hardship without pretension, an aesthetic he 
 
 His alignment is a structural hit because he embodies the realized ambition of the Battler archetype.
 
+
+**Follow-Through / Reality Check:** High capacity but widening Hypocrisy Gap. While his origin story remains unassailable, his actual governance is highly bureaucratic and aligned with corporate consensus. The 'Battler' aesthetic is heavily utilized during campaigns, but his policy delivery often favors the cautious stability demanded by the 'Top End of Town,' creating a gap between his origin and his operation.
+
 **(Who.Who.Why) The Anzac (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "Kokoda is a name that lives in Australian legend. It captures the spirit of courage, endurance, mateship and sacrifice forged between Australia and Papua New Guinea during World War II." (Anzac Day, Kokoda Track, 2024).
 
 **Brief:** Albanese actively engages with the Anzac mythos, utilizing it as a solemn, unifying historical anchor for the nation.
@@ -88,6 +97,9 @@ His engagement avoids the toxic friction of hyper-nationalism, keeping the Anzac
 The vector requires a deep acknowledgment of the cost of the nation's existence, which his rhetoric and actions support.
 
 This is a structural hit because he upholds the solemnity and unifying power of the Anzac identity.
+
+
+**Follow-Through / Reality Check:** Full follow-through. He maintains the solemnity of the Anzac legend in his public duties without politicizing it, matching his capacity to the required respect of the office.
 
 **(Who.Who.How) Stringybark and Greenhide (υ: +0.4, ψ: -0.2): FAIL.** **Quote:** "This common sense measure will back thriving local industries and open the way for growth." (On tax relief for brewers and distillers, 2024).
 
@@ -107,6 +119,9 @@ The vector demands a "hack the system" mentality, which his highly managed, risk
 
 This interaction is a failure because he replaces the "Bricoleur" with the "Bureaucrat."
 
+
+**Follow-Through / Reality Check:** Fake Maximiser. He frequently uses the phrase 'common sense' to appeal to the working class, but his actual methodology relies entirely on elite taskforces, institutional reviews, and highly polished public service maneuvering rather than genuine, rough improvisation.
+
 **(Who.Who.Cause) The Indigenous Custodian (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We should all be proud that we share this continent with the oldest continuous culture on earth... I will be a Prime Minister who is committed to the Uluru Statement from the Heart in full." (Election Victory Speech, 2022).
 
 **Brief:** Albanese expended massive political capital attempting to structurally recognize the prior presence and deep-time stewardship of First Nations people via the Voice to Parliament referendum.
@@ -124,6 +139,9 @@ By tying his Prime Ministership to the Uluru Statement, he anchored his governme
 The vector requires an acknowledgment of continuous stewardship, which he championed loudly and repeatedly.
 
 This interaction is a massive hit because he risked his political momentum to honor the truest root of the Australian identity.
+
+
+**Follow-Through / Reality Check:** Failed Maximiser. He expended his maximum political capital to deliver the Voice to Parliament but failed to navigate the political and racial friction of the electorate. His follow-through was absolute, but his strategic capacity to execute the final result collapsed under opposition pressure.
 
 **(Who.Who.Effect) The Forgotten People (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "My Labor government will work every day to ease the cost of living for middle Australia... to make sure no one is held back and no one is left behind." (Various speeches, 2022-2024).
 
@@ -145,6 +163,9 @@ His interaction is a hit because he flawlessly operates the political gravity of
 
 
 
+
+**Follow-Through / Reality Check:** Strong follow-through. His 'small target' strategy perfectly captured the Forgotten People, and his subsequent governance (focusing on incremental cost-of-living adjustments) accurately targets the stabilization of this demographic. He governs exactly as he promised them he would.
+
 ## **1.2 The What of Identity (Possible)**
 
 **(Who.What.Who) The Fair Go (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "The embodiment of that great concept of mateship, of always looking out for your fellow Australians and a fair go, will resonate with Australians for generations to come." (Anzac Day Address, 2024) / "No one held back, no one left behind." (Campaign Slogan, 2022).
@@ -165,6 +186,9 @@ The vector requires the market to serve the human being, a principle his labor-c
 
 This is a structural hit because he treats the Fair Go as an enforceable national contract, not an exclusionary privilege.
 
+
+**Follow-Through / Reality Check:** Mixed follow-through. His revision of the Stage 3 tax cuts was a direct, highly effective structural realization of the Fair Go for the working class. However, his hesitance on broader welfare reform (like significantly raising JobSeeker) exposes a gap between the universal ideal of the Fair Go and the fiscal caution of his Treasury.
+
 **(Who.What.What) Tall Poppy Syndrome (υ: +0.3, ψ: -0.5): FAIL.** **Quote:** "We want people to be successful. We want businesses to be successful." (Various economic speeches).
 
 **Brief:** Unlike his factional youth, the Prime Ministerial Albanese actively avoids deploying the "Tall Poppy" blade against political or corporate elites.
@@ -182,6 +206,9 @@ While his goal is a unified economy (+υ), the vector explicitly requires the pr
 The syndrome is designed to maintain fierce horizontal equality, but he permits vertical success to secure business confidence.
 
 This is a failure because he abandons the aggressive, egalitarian enforcement mechanism in favor of corporate harmony.
+
+
+**Follow-Through / Reality Check:** Full follow-through on his suppression. He deliberately avoids attacking the 'Tall Poppies' to maintain corporate harmony, and his actions consistently protect high-end stability, confirming the 'MISS'.
 
 **(Who.What.Where) Egalitarianism (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "In Australia, it shouldn't matter what your last name is, or where you live, or who you love. You deserve the same opportunities as everyone else." (2022).
 
@@ -201,6 +228,9 @@ The vector requires a fierce rejection of privilege, which he operationalizes th
 
 This is a hit because he consistently works to maintain the horizontal, peer-to-peer structure of the Commonwealth.
 
+
+**Follow-Through / Reality Check:** Strong capacity. His legislative agenda, particularly in industrial relations (closing loopholes for casuals and labor hire), actively enforces horizontal equality in the workplace, proving structural follow-through.
+
 **(Who.What.Why) "She'll be right" (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "We need to shape the future, rather than just waiting for the future to shape us." (Labor Campaign Launch, 2022).
 
 **Brief:** Albanese explicitly rejects the passive, fatalistic complacency of "She'll be right," viewing it as a dangerous attitude in a rapidly changing world.
@@ -218,6 +248,9 @@ While his goal is national security (+υ), he refuses to rely on the cynical sto
 The vector is about minimizing fuss and trusting the status quo, which contradicts his entire narrative of necessary national transition.
 
 This is a failure because he actively fights the cultural tendency to ignore systemic problems until they become crises.
+
+
+**Follow-Through / Reality Check:** High capacity. He consistently rejects fatalistic complacency, building proactive structures like the Net Zero Authority and NEMA to engineer the future rather than simply surviving it.
 
 **(Who.What.How) Secular Skepticism (υ: +0.7, ψ: +0.4): HIT.** **Quote:** "My government will be guided by the science." (On climate change and pandemic response).
 
@@ -237,6 +270,9 @@ The vector requires a rejection of "Big Ideas" in favor of tangible reality, whi
 
 This is a hit because he successfully operates the skeptical, empirical defense mechanism of the national identity.
 
+
+**Follow-Through / Reality Check:** Strong follow-through. His reliance on empirical data for climate and health policy demonstrates a genuine commitment to Secular Skepticism, actively filtering out ideological grandstanding.
+
 **(Who.What.Cause) The Convict Stain (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We are a mature nation, and we should be confident in our place in the world." (On international relations).
 
 **Brief:** Albanese rarely, if ever, invokes the historical trauma or anti-authoritarian resentment associated with the "Convict Stain."
@@ -254,6 +290,9 @@ The vector requires an instinctive distrust of authority and the "System," an at
 His focus is on the future and maturity, leaving the "birthstain" trauma behind.
 
 This is a failure because he operates completely outside the gravitational pull of the foundational colonial resentment.
+
+
+**Follow-Through / Reality Check:** Full follow-through on suppression. He governs as the 'State,' completely detached from the anti-authoritarian trauma of the Convict Stain.
 
 **(Who.What.Effect) The Commonwealth (υ: +0.9, ψ: +0.6): HIT.** **Quote:** "Government has a role to play in ensuring that the wealth of this nation is shared fairly, and that the services we all rely on are strong." (Budget Address).
 
@@ -275,6 +314,9 @@ This is a structural hit because he is a staunch, dedicated operator of the Aust
 
 
 
+
+**Follow-Through / Reality Check:** High capacity. His government actively rebuilds the public service and expands universal utilities (Medicare Urgent Care Clinics), demonstrating a structural commitment to the 'Common Weal'.
+
 ## **1.3 The Where of Identity (Physical)**
 
 **(Who.Where.Who) The Bush (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We need to ensure that regional Australia benefits from the transition to renewable energy." (2022).
@@ -295,6 +337,9 @@ By refusing to romanticize the Bush, he misses the deep, irrational political gr
 
 This is a failure because he interacts with the Bush economically, but not metaphysically.
 
+
+**Follow-Through / Reality Check:** Low capacity. His interaction with the Bush remains purely economic and administrative; he possesses no genuine cultural or aesthetic connection to the rural Totem.
+
 **(Who.Where.What) The Coast (υ: +0.5, ψ: +0.4): HIT.** **Quote:** "As an island continent, our oceans are central to our identity, our environment, and our economy." (World Oceans Day).
 
 **Brief:** Albanese recognizes the physical reality that Australia is a coastal civilization, and he integrates this into both environmental and strategic policy.
@@ -312,6 +357,9 @@ He understands that the population clings to the rim, and his policies reflect t
 The vector represents the boundary between the nation and the world, a space he manages with significant diplomatic and military focus.
 
 This is a hit because he accurately operates the geopolitical reality of the Australian coastal fringe.
+
+
+**Follow-Through / Reality Check:** Strong follow-through. His environmental legislation and defense posture actively secure and manage the coastal perimeter, matching his strategic rhetoric.
 
 **(Who.Where.Where) The Red Centre (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "I will be visiting Uluru to consult with traditional owners on the path forward for the Voice." (2023).
 
@@ -331,6 +379,9 @@ The vector demands reverence for the silent core, which he explicitly attempted 
 
 This is a massive hit because he recognized the Centre as the true metaphysical heart of the Australian identity.
 
+
+**Follow-Through / Reality Check:** Failed Maximiser. His deep metaphysical respect for the Red Centre and the Uluru Statement was met with catastrophic electoral failure. He possessed the intent but lacked the tactical capacity to convince the coastal fringe to align with the core.
+
 **(Who.Where.Why) The Cycle (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We know that natural disasters will become more frequent and more intense. We must prepare, not just react." (On establishing the National Emergency Management Agency).
 
 **Brief:** Albanese explicitly rejects the reactive, fatalistic approach to the Australian climate cycle, demanding proactive preparation.
@@ -348,6 +399,9 @@ He rejects the "She'll be right" fatalism, understanding that the cycle is becom
 The vector is about the oscillation of the environment, which he acknowledges as the primary physical threat to the population.
 
 This is a hit because he respects the extreme limits of the landscape and organizes the Commonwealth to endure them.
+
+
+**Follow-Through / Reality Check:** High capacity. The establishment of the National Emergency Management Agency proves his structural follow-through in dealing with the violent rhythm of the continent's climate.
 
 **(Who.Where.How) The Tyranny of Distance (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must rebuild our domestic manufacturing capability so we are not reliant on vulnerable global supply chains." (Future Made in Australia Act, 2024).
 
@@ -367,6 +421,9 @@ The vector represents the anxiety of being "Far Away," an anxiety he seeks to cu
 
 This is a structural hit because he actively engineers the state to defeat its oldest geographic enemy.
 
+
+**Follow-Through / Reality Check:** Strong follow-through. The 'Future Made in Australia' policy is heavily funded and actively legislated, proving a massive structural effort to overcome the Tyranny of Distance through local manufacturing.
+
 **(Who.Where.Cause) Terra Nullius (υ: +0.9, ψ: +0.7): FAIL.** **Quote:** "The Uluru Statement from the Heart is a generous invitation to walk together... to recognize that our history didn't begin in 1788." (2023).
 
 **Brief:** Albanese expended the greatest political capital of his prime ministership explicitly attempting to structurally destroy the ghost of Terra Nullius.
@@ -384,6 +441,9 @@ The vector requires the maintenance of the "Blank Slate" myth, which he aggressi
 He refused to allow the foundation to rest on the "Lie," seeking a maturation of the state's relationship with the land.
 
 This is a profound failure of the Terra Nullius vector, demonstrating his commitment to an honest, rather than fictional, spatial history.
+
+
+**Follow-Through / Reality Check:** Absolute follow-through, but ultimate failure. He threw the full weight of the government behind destroying the 'Blank Slate' myth via the Voice, but his capacity was shattered by the 'No' vote, leaving the Ghost of Terra Nullius intact.
 
 **(Who.Where.Effect) The Suburb (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "The Australian dream of owning your own home is slipping out of reach for too many. We must act to protect it." (Housing Australia Future Fund debate).
 
@@ -405,6 +465,9 @@ This is a hit because he successfully identifies and defends the ultimate physic
 
 
 
+
+**Follow-Through / Reality Check:** High capacity. His intense focus on housing legislation (HAFF) demonstrates a genuine, panicked attempt to secure the suburban retreat against the pressures of the modern economy.
+
 ## **1.4 The Why of Identity (Lyrical)**
 
 **(Who.Why.Who) Punching Above Weight (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "Australia is a trusted global partner, a middle power that can shape the region for the better." (Foreign Policy Address).
@@ -425,6 +488,9 @@ The vector demands that the nation refuse to be ignored on the world stage, an i
 
 This is a structural hit because he successfully operationalizes the national desire for global significance.
 
+
+**Follow-Through / Reality Check:** Strong follow-through. His extensive diplomatic travel and integration into AUKUS and the Quad prove he actively operates the 'Overachievement' vector to secure national relevance.
+
 **(Who.Why.What) The Lucky Country (υ: +0.6, ψ: +0.5): FAIL.** **Quote:** "We cannot rely on the luck of our geography or the resources under our feet forever. We must become a renewable energy superpower." (2022).
 
 **Brief:** Albanese explicitly rejects Donald Horne's ironic definition of Australia as a nation run by "second-rate people" who simply dig up luck.
@@ -442,6 +508,9 @@ By fighting the complacency of the "Fuel," he attempts to drag the nation out of
 The vector requires a lazy reliance on unearned wealth, which he views as an unacceptable economic strategy.
 
 This is a failure of the vector, as he actively attempts to cure the nation of its reliance on the "Lucky" paradigm.
+
+
+**Follow-Through / Reality Check:** High capacity. His massive state investments in green technology prove he is actively attempting to wean the economy off its reliance on passive, unearned geological luck.
 
 **(Who.Why.Where) Populate or Perish (υ: +0.5, ψ: +0.3): HIT.** **Quote:** "Immigration is essential to our economic growth, but we must ensure we have the infrastructure and housing to support it." (2023).
 
@@ -461,6 +530,9 @@ The vector demands growth as a matter of national security, an imperative his Tr
 
 This is a hit because he successfully manages the primary demographic engine of the Australian state.
 
+
+**Follow-Through / Reality Check:** Mixed follow-through. While he acknowledges the need for immigration to sustain the economy, intense political pressure over the housing crisis forced his government to drastically cut migration intakes, revealing a Hypocrisy Gap between the 'Growth Imperative' and immediate domestic political survival.
+
 **(Who.Why.Where) Anteriority [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "It is a time for us to acknowledge that our history didn't begin in 1788... It is time for us to recognize the First Australians." (Voice Referendum Campaign).
 
 **Brief:** Albanese's profound commitment to the Voice to Parliament was driven by a deep recognition of the deep-time sovereignty of First Nations people.
@@ -478,6 +550,9 @@ His effort was a direct attempt to cure the "Moral Friction" of settlement by ac
 The vector represents the "Deep Time" sovereignty, which his rhetoric and policy goals explicitly attempted to honor.
 
 This is a massive hit because he risked his political capital to fight for the deepest, truest lyrical root of the continent.
+
+
+**Follow-Through / Reality Check:** Absolute follow-through, complete failure. He staked his legacy on acknowledging this deep-time reality, but lacked the political capacity to drag the electorate with him.
 
 **(Who.Why.Why) "Have a Go, Ya Mug" (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "If you have a go, you get a go. And we are going to make sure everyone gets a fair go." (Campaign Trail, 2022).
 
@@ -497,6 +572,9 @@ The vector is about the "Ambition of the Little Person," which he successfully c
 
 This is a structural hit because he operationalizes the cultural respect for participation.
 
+
+**Follow-Through / Reality Check:** Strong capacity. His structural interventions in education (TAFE) actively facilitate and reward the individual 'Spark' of effort.
+
 **(Who.Why.How) The Cultural Cringe (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "We shouldn't suffer from cultural cringe. We have some of the best minds, the best researchers, and the best workers in the world." (On Australian manufacturing and science).
 
 **Brief:** Albanese actively fights the internalized inferiority of the "Cultural Cringe," demanding that Australia view itself as a world leader, particularly in renewable energy.
@@ -514,6 +592,9 @@ He recognizes that the Cringe paralyzes innovation, and he uses state resources 
 The vector requires a feeling of provincial inadequacy, an emotion his government actively tries to cure.
 
 This is a failure because he aggressively attempts to dismantle the psychological shadow of colonial inferiority.
+
+
+**Follow-Through / Reality Check:** High capacity. His industrial policy aggressively combats the inferiority complex, demanding that Australia view itself as a high-tech manufacturing leader rather than a colonial outpost.
 
 **(Who.Why.Cause) The Gold Rush (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We are blessed with the critical minerals the world needs for the clean energy transition. This is our moment to seize." (2023).
 
@@ -535,6 +616,9 @@ This is a hit because he accurately operates the primary, speculative economic e
 
 
 
+
+**Follow-Through / Reality Check:** Strong follow-through. His pivot toward Critical Minerals perfectly operationalizes the historical 'Paydirt' obsession into a modern economic strategy.
+
 ## **1.5 The How of Identity (Logical)**
 
 **(Who.How.Who) The Pub Test (υ: +0.6, ψ: +0.3): HIT.** **Quote:** "We need to make sure that our policies make sense to everyday Australians, that they pass the pub test." (Various interviews).
@@ -555,6 +639,9 @@ The vector demands that ideas be accessible and "fair" to the average person, a 
 
 This is a structural hit because he successfully operates the primary logical filter of the Australian electorate.
 
+
+**Follow-Through / Reality Check:** Strong capacity. He correctly utilizes the pub test not to dumb down policy, but to translate complex bureaucratic reform into acceptable suburban logic.
+
 **(Who.How.What) Compulsory Voting (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Our democracy is strong because everyone has a say. Compulsory voting ensures the government actually reflects the will of the people." (On electoral reform).
 
 **Brief:** Albanese is a master operator of the centrist gravity created by the mandatory participation of the Australian electorate.
@@ -572,6 +659,8 @@ His cautious, managerial approach is a direct, highly effective response to the 
 The vector forces politics toward the center, a space he deliberately and successfully occupied to win power.
 
 This is a massive hit because he flawlessly executes a strategy designed specifically for the unique mechanics of Australian democracy.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Who.How.Where) Pragmatism (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We are a government that is about getting things done. We are about practical solutions, not ideological purity." (2023).
 
@@ -591,6 +680,8 @@ The vector demands utility over ideology, a standard he upholds ruthlessly to ma
 
 This is a hit because he accurately channels the deeply entrenched, problem-solving pragmatism of the national identity.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Who.How.Why) The Sickie (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "People deserve to have secure work, to know what their hours are, and to have time to spend with their families." (On Industrial Relations reform, 2022).
 
 **Brief:** While not explicitly endorsing "chucking a sickie," Albanese's deep roots in the labor movement mean he fiercely defends the boundary between work and life.
@@ -608,6 +699,8 @@ The "Right to Disconnect" is a perfect modern alignment with the "888" logic of 
 The vector requires a tolerance for resistance against overwork, a principle he structurally enforces.
 
 This is a hit because he defends the foundational Australian logic that a worker is a human being, not a machine.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Who.How.How) The Royal Commission (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We established the Robodebt Royal Commission to get to the truth, to ensure that this kind of cruelty can never happen again." (2023).
 
@@ -627,6 +720,8 @@ The vector demands that the state investigate its own sins formally, a process h
 
 This is a hit because he successfully deployed the most authoritative logical mechanism of the Commonwealth to heal a systemic wound.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Who.How.Cause) The Ticket of Leave (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We believe in a path to permanent residency for those who are working hard and contributing to our country." (On immigration reform).
 
 **Brief:** Albanese strongly supports the historical logic of "Redemption through Utility," providing pathways for temporary migrants to become permanent citizens.
@@ -644,6 +739,8 @@ His immigration reforms reflect the deep historical understanding that the state
 The vector requires a mechanism for advancement and inclusion, which he attempts to restore to a fractured visa system.
 
 This is a structural hit because he operates the core logic of the Australian "Fair Go" regarding citizenship.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Who.How.Effect) The Union (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The trade union movement is the civilizing force of capital... It is what ensures working people get a fair share of the wealth they create." (Various ACTU addresses).
 
@@ -663,7 +760,7 @@ The vector demands that the individual find strength in the "Mob," a principle h
 
 This is a massive hit because he actively champions and legislates for the primary logical tool of the Australian worker.
 
-
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **1.6 The Cause of Identity (Historical)**
 
@@ -685,6 +782,8 @@ The vector requires a fierce defense of the colonial inception, which he balance
 
 This is a failure because he actively attempts to move the national identity past its obsession with the First Fleet.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Who.Cause.Who) Continuity [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We share this continent with the oldest continuous culture on earth. That is something we should be incredibly proud of, and it is something we must recognize in our Constitution." (Voice Campaign, 2023).
 
 **Brief:** Albanese views the "Deep Time" continuity of First Nations people not as a threat to modern Australia, but as its greatest, most unique historical asset.
@@ -702,6 +801,8 @@ His campaign for the Voice was a direct application of the "Presence over Time" 
 The vector represents the true, continuous cause of human habitation, which he championed loudly.
 
 This is a massive hit because he recognized and fought for the profound historical continuity of the First Nations.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(Who.Cause.What) Federation (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We need a National Cabinet that actually works together, across state lines, to solve the big challenges facing our country." (2022).
 
@@ -721,6 +822,8 @@ The vector represents the "Union," which he treats as his primary operational fi
 
 This is a hit because he successfully maintains the complex, historical machinery of the 1901 settlement.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Who.Cause.What) Exclusion [First Nations Perspective] (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "The Uluru Statement from the Heart is a generous invitation... We must answer the call to end the exclusion of First Nations people from our Constitution." (2023).
 
 **Brief:** Albanese recognized that the Federation of 1901 was built on a foundational "Ghost" of exclusion, and he attempted to exorcise it via the Voice referendum.
@@ -738,6 +841,8 @@ The vector requires the maintenance of the exclusionary wall, which he aggressiv
 He refused to accept the 1901 "White Man's Treaty" as the final word, seeking to heal the foundational fracture.
 
 This is a profound failure of the Exclusion vector, demonstrating his commitment to a complete, rather than segregated, historical narrative.
+
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
 
 **(Who.Cause.Where) Songlines (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must listen to the wisdom of the traditional owners, who have cared for this land and its waterways for millennia." (On environmental policy).
 
@@ -757,6 +862,8 @@ The vector represents the "Living Matrix," which he incorporates into the practi
 
 This is a hit because he respects the oldest geographical cause of the Australian landscape.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Who.Cause.Why) Eureka Stockade (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "We achieve more when we work together, when we seek consensus rather than conflict." (Various speeches).
 
 **Brief:** As a leader focused on consensus, stability, and institutional process, Albanese rarely invokes the armed, anti-authoritarian "Spark" of the Eureka Stockade.
@@ -774,6 +881,8 @@ The vector requires a willingness to actively defy authority and "have a go" aga
 His focus is on the "Contract" rather than the "Revolt."
 
 This is a failure because he completely avoids the chaotic, revolutionary energy of the foundational democratic spark.
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 **(Who.Cause.How) White Australia Policy (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "Modern Australia is a multicultural success story. We draw strength from our diversity." (2022).
 
@@ -793,6 +902,8 @@ The vector requires the enforcement of cultural exclusion, which his rhetoric an
 
 This is a massive failure of the White Australia vector, proving his alignment with the modern, diverse reality of the Commonwealth.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Who.Cause.How) Survival [First Nations Perspective] (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must close the gap. We must do better to ensure that First Nations people have the same life expectancy and opportunities as every other Australian." (Closing the Gap statement).
 
 **Brief:** Albanese explicitly acknowledges that the First Nations people survived the "Walls" of the colonial project, and he recognizes the ongoing trauma of that survival.
@@ -811,7 +922,7 @@ The vector demands that the state reckon with the reality of Indigenous enduranc
 
 This is a hit because he engages with the profound, ongoing reality of First Nations survival.
 
-
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 ## **1.7 The Effect of Identity (Emotive)**
 
@@ -833,6 +944,8 @@ His lack of engagement means the "Network" effect is largely ignored in his rhet
 
 This is a failure because he operates almost entirely within the domestic sphere.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Who.Effect.What) The Honest Broker (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australia will always stand up for the international rules-based order... We are a trusted partner in our region." (Various international summits).
 
 **Brief:** Albanese has worked aggressively to restore Australia's reputation as a reliable, diplomatic "Honest Broker," particularly in the Pacific and Southeast Asia.
@@ -850,6 +963,8 @@ His diplomatic strategy perfectly aligns with the historical Evatt-era goal of u
 The vector demands that the nation act as a responsible, trusted global citizen, a role he embraces enthusiastically.
 
 This is a hit because he successfully operates the expansive, diplomatic emote of the national identity.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Who.Effect.Where) The Food Bowl (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We want to make more things here. We want to add value to the resources we have, whether that's critical minerals or our world-class agriculture." (2023).
 
@@ -869,6 +984,8 @@ The vector is about the extraction and offering of wealth, which he manages with
 
 This is a hit because he accurately captures and attempts to modernize the economic emote of the national supply chain.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Who.Effect.Why) The Asian Century (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Our future lies in our region. We must deepen our engagement with ASEAN and our Asian neighbors." (ASEAN Special Summit, 2024).
 
 **Brief:** Albanese fully embraces the geopolitical reality that Australia's destiny is inextricably tied to Asia.
@@ -886,6 +1003,8 @@ His focus on ASEAN and the Quad demonstrates a complete acceptance of the "Desti
 The vector requires a confident pivot toward the region, which his foreign policy executes flawlessly.
 
 This is a massive hit because he accurately operates the most vital geopolitical and economic trajectory of the modern Commonwealth.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Who.Effect.How) Medicare (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Labor built Medicare, and we will always protect it. It is the bedrock of a fair society." (2022).
 
@@ -905,6 +1024,8 @@ The vector represents the "Model of Safety," which he treats as a sacred, untouc
 
 This is a structural hit because he flawlessly operates the greatest institutional success of the Australian identity.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Who.Effect.Cause) The Apology (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We must build on the legacy of the National Apology, to move forward together with truth and reconciliation." (Anniversary of the Apology address).
 
 **Brief:** Albanese views the "Healing" mechanism of the Apology not as the end of the process, but as the foundation for further structural reconciliation (The Voice).
@@ -923,6 +1044,8 @@ The vector represents the necessary resolution of the past, which his rhetoric c
 
 This is a hit because he actively supports the state's most significant emotive step toward moral maturity.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Who.Effect.Effect) The Ashes (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "It's always good when the Aussies win." (Generic sporting commentary).
 
 **Brief:** While he engages in the obligatory political rituals of supporting national sporting teams, Albanese does not deeply tie his political "Will to Power" to the proxy battlefield of sport.
@@ -940,6 +1063,8 @@ The vector requires a fierce, almost religious channeling of national pride into
 His lack of "Sporting Ambition" means he misses a powerful, emotive lever often used by Australian leaders.
 
 This is a failure because he does not successfully map the nation's sporting aggression onto his political brand.
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 ## **Final Forensic Verdict: Anthony Albanese (Plane 1)**
 
@@ -974,6 +1099,8 @@ The vector requires the maintenance of the British/Australian dual loyalty, whic
 
 This is a failure of the vector because he refuses to operate within the specific, hybrid constraints of the original constitutional definition.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(What.Who.What) The Constituent (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "My government will be a government for all Australians, regardless of who you voted for." (Election Victory Speech, 2022).
 
 **Brief:** Albanese grounds his entire political legitimacy in the raw democratic authority of the ballot box and the House of Representatives.
@@ -991,6 +1118,8 @@ His entire career is built on the mastery of representative politics, validating
 The vector defines the voter as the active sovereign, a status he frequently acknowledges and defers to.
 
 This is a hit because he accurately channels and respects the authority of the "Constituent" to maintain his political mandate.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(What.Who.Where) The Resident (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "We are one country. The idea that you can be treated differently based on which state border you cross is unacceptable." (During COVID-19 border debates).
 
@@ -1010,6 +1139,8 @@ The vector guarantees equal rights regardless of internal borders, a principle h
 
 This is a hit because he maintains the "Common Denominator" of absolute legal equality across the continent.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(What.Who.Why) The Mate (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Australians always look out for each other. That's what we do. In times of flood, or fire, or pandemic, we show our true character." (2022).
 
 **Brief:** He heavily relies on the structural definition of "The Mate" as the primary social geometry of the nation.
@@ -1027,6 +1158,8 @@ His narrative of "looking out for each other" perfectly aligns with the calm, un
 The vector requires social cohesion and a baseline of trust, which he constantly attempts to cultivate.
 
 This is a hit because he treats the social contract of Mateship as a legally and morally binding definition of the citizen.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(What.Who.How) The Compelled Voter (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must protect our electoral system and ensure that every Australian has the ability, and the responsibility, to cast their ballot." (On electoral reforms).
 
@@ -1046,6 +1179,8 @@ The vector guarantees universal participation, which he leverages to maintain a 
 
 This is a hit because he efficiently extracts political capital from the structural obligation of the Australian electoral system.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(What.Who.Cause) The Subject (υ: +0.6, ψ: -0.4): FAIL.** **Quote:** "I have made my views on a Republic clear. I believe that Australia should have an Australian head of state." (Various interviews).
 
 **Brief:** Albanese is a lifelong republican who explicitly rejects the foundational definition of the Australian as a "Subject of the Crown."
@@ -1064,6 +1199,8 @@ He refuses to accept the permanent status of the "Subject."
 
 This is a failure of the vector because he actively works against the traditional, monarchical definition of the Australian identity.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(What.Who.Effect) The Servant (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The public service is the engine room of government. We need to rebuild its capacity to deliver for the Australian people." (2022).
 
 **Brief:** Albanese strongly believes in the utilitarian model of the state as a universal service provider and custodian of the public good.
@@ -1081,6 +1218,8 @@ By defending the public sector against privatization, he champions the "Custodia
 The vector defines the state as the servant of the entire Commonwealth, a principle he structurally reinforces.
 
 This is a hit because he operates the state exactly as the utilitarian, service-driven definition demands.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **2.2 The What of Definition (What.What)**
 
@@ -1102,6 +1241,8 @@ His republicanism means he cannot truly align with the "Ghost in the Machine."
 
 This is a failure of the vector because he actively seeks to dismantle the specific structural mechanism of the Viceroyalty.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(What.What.What) Peace, Order, and Good Government (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "My government will be focused on delivering safe, orderly, and responsible economic management." (Budget Speech).
 
 **Brief:** Albanese's entire brand is built on returning the nation to a state of "Order" and "Good Government" after a decade of perceived political chaos.
@@ -1119,6 +1260,8 @@ His managerial approach is a direct, highly effective application of this primar
 The vector demands that the state prioritize peace and order over revolution, which perfectly describes his centrist administration.
 
 This is a massive hit because he accurately embodies the quiet, administrative mandate of the Australian Constitution.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(What.What.Where) Supremacy (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are a national government, and we have a responsibility to show national leadership on issues like energy and the environment." (2022).
 
@@ -1138,6 +1281,8 @@ The vector ensures that federal law prevails, a power he uses strategically to i
 
 This is a hit because he actively engages the Supremacy clause to enforce a singular national standard.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(What.What.Why) The Double Majority (υ: +0.8, ψ: +0.6): FAIL.** **Quote:** "The result of the referendum is a profound disappointment... but we must accept the verdict of the Australian people." (Voice Referendum concession, 2023).
 
 **Brief:** Albanese collided spectacularly with the extreme difficulty of the constitutional amendment process during the Voice to Parliament referendum.
@@ -1155,6 +1300,8 @@ While his goal was progressive inclusion (+υ), he could not overcome the "Gatek
 The vector protects the existing federation from change, a force that actively crushed his primary legislative ambition.
 
 This is a failure of the vector because his political will was defeated by the systemic inertia of the Constitution.
+
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
 
 **(What.What.How) The Interpreter (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We respect the independence of the High Court and will abide by its rulings." (Following various legal challenges).
 
@@ -1174,6 +1321,8 @@ The vector requires acceptance of the Court's ultimate authority, which his gove
 
 This is a hit because he structurally supports the constitutional mechanism designed to resolve legal conflict.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(What.What.Cause) The Deal (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We will work constructively with the crossbench in the Senate to get our legislation passed. That is the reality of the parliament the Australian people elected." (2022).
 
 **Brief:** Albanese is a master of the pragmatic, negotiated origins of the state.
@@ -1192,6 +1341,8 @@ The vector defines the nation as a negotiated contract, a reality he navigates f
 
 This is a hit because he actively and successfully operates the negotiated consensus that forms the bedrock of the Definition.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(What.What.Effect) The Gridlock (υ: +0.6, ψ: -0.4): FAIL.** **Quote:** "We are not here to play political games; we are here to pass legislation that helps Australians." (2023).
 
 **Brief:** Albanese actively seeks to avoid and dismantle "The Gridlock."
@@ -1209,6 +1360,8 @@ The vector represents the structural flaw of the Washminster system, a flaw he a
 He cannot thrive in gridlock because his authority depends on delivering results.
 
 This is a failure because he actively works against the paralyzing effect of the systemic conflict.
+
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
 
 ## **2.3 The Where of Definition (What.Where)**
 
@@ -1230,6 +1383,8 @@ The vector ensures that regional voices carry weight, a reality he respects thro
 
 This is a hit because he successfully manages the intended function of the Senate as the geographic check on the democracy.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(What.Where.What) The People's House (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "I am honored to lead the government in the House of Representatives, the chamber that reflects the will of the majority of Australians." (2022).
 
 **Brief:** Albanese's political authority is entirely derived from his mastery of the House of Representatives.
@@ -1247,6 +1402,8 @@ His ability to command a majority in the lower house demonstrates that his appea
 The vector is the core engine of the representative democracy, which he currently controls.
 
 This is a massive hit because he successfully navigated and now commands the primary democratic mechanism of the nation.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(What.Where.Where) The Bush Capital (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are a government that will govern for all Australians, not just those inside the Canberra bubble." (2022).
 
@@ -1266,6 +1423,8 @@ His long career makes him an undeniable part of the "Bush Capital" establishment
 
 This is a failure because he does not utilize the geographic alienation of Canberra as a political weapon.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(What.Where.Why) Fiscal Equalization (υ: +0.9, ψ: +0.6): HIT.** **Quote:** "We are committed to a system that ensures all Australians, no matter where they live, have access to quality services." (On GST distribution and federal funding).
 
 **Brief:** Albanese strongly defends the fundamental mechanism of wealth redistribution that binds the federation together.
@@ -1283,6 +1442,8 @@ His support for horizontal fiscal equalization is the ultimate structural expres
 The vector is the internal economic logic that ensures an Australian in Hobart is equal to one in Perth.
 
 This is a structural hit because he actively maintains the economic glue of the Australian union.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(What.Where.How) Washminster System (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Our system of government requires the executive to be accountable to the parliament, and we embrace that accountability." (2022).
 
@@ -1302,6 +1463,8 @@ The vector represents the specific architectural reality of the state, which he 
 
 This is a massive hit because he is a premier operator of the system's unique genetic hybridization.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(What.Where.Cause) The Colonial Survey (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We need a coordinated national approach, rather than a fragmented state-by-state response." (During COVID-19 recovery planning).
 
 **Brief:** Albanese actively works to minimize the political friction caused by the arbitrary colonial borders.
@@ -1320,6 +1483,8 @@ He refuses to weaponize state borders to fracture national consensus.
 
 This is a failure because he does not exploit the internal fault lines created by the original colonial map.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(What.Where.Effect) The Patchwork Economy (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must ensure that the regions that have powered our economy for generations are supported through the transition to clean energy." (2023).
 
 **Brief:** Albanese explicitly recognizes the massive economic divergence between the resource-rich states and the service-based cities.
@@ -1337,6 +1502,8 @@ He identifies the structural unevenness of the continent and builds policy to ad
 The vector represents the unavoidable geographic reality of Australian wealth, which he navigates with deliberate planning.
 
 This is a hit because he acknowledges and actively manages the complex reality of the Patchwork Economy.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 ## **2.4 The Why of Definition (What.Why)**
 
@@ -1358,6 +1525,8 @@ The vector requires the maintenance of ethnic solidarity, which he completely ab
 
 This is a massive failure of the vector because he explicitly and intentionally severs the original, exclusionary "Crimson Thread."
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(What.Why.What) The Workingman's Paradise (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We want to see wages moving again. We want secure jobs. That is the Australian way." (2022).
 
 **Brief:** The defense and restoration of the "Workingman's Paradise" is the central economic and moral mission of the Albanese government.
@@ -1375,6 +1544,8 @@ His willingness to intervene in the market on behalf of labor directly fulfills 
 He acts on the historical imperative to protect the vulnerable, reviving the foundational promise of economic justice.
 
 This is a massive structural hit because his policies actively reinforce the "Workingman's Paradise."
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(What.Why.Where) A Bulwark (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "We want a region that is stable, peaceful, and prosperous, where sovereignty is respected." (On AUKUS and Pacific relations).
 
@@ -1394,6 +1565,8 @@ The vector requires colonial paranoia, an emotion his government actively tries 
 
 This is a failure because he attempts to mature the geographic definition of the state beyond the "Bulwark" anxiety.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(What.Why.Where) Connection [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We must listen to the voices of First Nations people, who have a unique and profound connection to this land and waters." (2023).
 
 **Brief:** Albanese made the profound connection between the First Nations and the continent a central pillar of his early Prime Ministership.
@@ -1411,6 +1584,8 @@ His rhetoric and political capital were heavily invested in recognizing the prio
 The vector demands the acceptance of the "Truth" of the landscape, which he fought to enshrine.
 
 This is a massive hit because he actively championed the profound reality of "Connection" over the shallow narrative of conquest.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(What.Why.How) The Common Market (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We are a trading nation. Our prosperity relies on engaging with the world and ensuring our industries can compete globally." (2023).
 
@@ -1430,6 +1605,8 @@ The vector requires a "Growth Mindset" regarding trade, which his government act
 
 This is a structural hit because he successfully operates the core "Why" of the economic union.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(What.Why.Cause) The Secular State (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "In Australia, you are free to practice your faith, and free not to. That is a fundamental principle of our democracy." (2022).
 
 **Brief:** Albanese strongly defends the constitutional boundary that separates the State from religious discrimination.
@@ -1448,6 +1625,8 @@ The vector requires the state to act as a neutral arbiter, a role his government
 
 This is a hit because he explicitly defends the secular neutrality that protects the Commonwealth.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(What.Why.Effect) The Quiet Life (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "My focus is on the day-to-day challenges facing Australian families—the cost of groceries, the cost of seeing a doctor." (2024).
 
 **Brief:** Albanese understands that the ultimate desired effect for the average Australian voter is the preservation of the "Quiet Life."
@@ -1465,6 +1644,8 @@ He accurately channels the emotional power of the Australian desire for a stress
 The vector values the protection of the private realm from public agitation, a goal he consistently pursues.
 
 This is a hit because he successfully targets and defends the "Effect" of the suburban dream.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 ## **2.5 The How of Definition (What.How)**
 
@@ -1486,6 +1667,8 @@ The vector relies on the explicit overriding of the democratic will by party pow
 
 This is a failure because he consciously avoids the public utilization of authoritarian party mechanics.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(What.How.Where) The Secret Ballot (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We trust the judgment of the Australian people when they go to the ballot box." (Election Night, 2022).
 
 **Brief:** Albanese's political strategy relies entirely on the structural safety provided by the voting booth compartment.
@@ -1503,6 +1686,8 @@ He exploits the gap between public discourse and private judgment, relying on th
 The vector guarantees the freedom to vote without consequence, a mechanism he trusts completely.
 
 This is a hit because he flawlessly executes a political strategy incubated within the secure space of the Secret Ballot.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(What.How.Why) Preferential Voting (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We will work with anyone in the parliament to deliver our agenda... Every vote counts." (2022).
 
@@ -1522,6 +1707,8 @@ The vector seeks consensus through mathematical preference, which he perfectly e
 
 This is a massive hit because he actively and brilliantly operates the mechanical engine of the electoral system.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(What.How.What) The Referendum (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "We will hold a referendum to enshrine a First Nations Voice in the Constitution in our first term." (2022).
 
 **Brief:** Albanese attempted to use the ultimate democratic weapon—the direct vote of the people—to bypass the historical gridlock regarding Indigenous recognition.
@@ -1539,6 +1726,8 @@ His failure in the Voice referendum demonstrates the immense difficulty of using
 The vector acts as the ultimate hurdle in the Australian system, a hurdle he could not clear.
 
 This is a profound failure of the vector, as his highest political ambition was crushed by the systemic inertia of the Referendum.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(What.How.How) The Royal Commission (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The Robodebt Royal Commission has exposed a shocking failure of public administration... We must learn from this." (2023).
 
@@ -1558,6 +1747,8 @@ The vector seeks truth through inquiry, a force he channels effectively.
 
 This is a hit because he consistently employs the most powerful investigative tool of the definition to restore systemic integrity.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(What.How.Cause) The Census (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Good policy requires good data. We must understand the changing face of our nation to govern it effectively." (On funding the ABS).
 
 **Brief:** Albanese's government is deeply technocratic, relying heavily on the demographic data and projections provided by the state to drive policy.
@@ -1576,6 +1767,8 @@ The vector provides the foundational knowledge required to govern the state, whi
 
 This is a hit because he actively relies on the state's self-measurement to track and support the population.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(What.How.Effect) The Spill (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "Australians are sick of the chaos and the division. We offer stable, united leadership." (2022).
 
 **Brief:** Albanese's entire Prime Ministership is a deliberate, structural rejection of the chaotic "Circuit Breaker" mechanism that defined the previous decade of Australian politics.
@@ -1593,6 +1786,8 @@ He explicitly avoids the dark arts of the "Spill" to maintain his brand as a saf
 The vector maintains party power through the disposable nature of leadership, an outcome he actively resists.
 
 This is a failure because he effectively neutralizes the systemic volatility that defines Australian leadership.
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 ## **2.6 The Cause of Definition (What.Cause)**
 
@@ -1614,6 +1809,8 @@ The vector provides national vision through individual brilliance, a trait he de
 
 This is a failure because he consciously shelves the visionary archetype to protect his political stability.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(What.Cause.What) The Imperial Act (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "Australia should have its own head of state. It's time we stood on our own two feet." (Republican movement advocacy).
 
 **Brief:** While Albanese governs within the framework provided by the British legal origin of the state, he does not venerate the 1901 Act as an untouchable, sacred text.
@@ -1631,6 +1828,8 @@ His republicanism explicitly attacks the static, imperial nature of the constitu
 The vector establishes the foundation through an external grant, which he views as a historical stepping stone, not the final destination.
 
 This is a failure of the vector because he seeks to outgrow the original, unamended "Imperial Act."
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 **(What.Cause.Where) The Stockade (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "We believe in a society where everyone has a seat at the table, where we work together to solve problems." (2022).
 
@@ -1650,6 +1849,8 @@ The vector demands proactive defiance, which contradicts his entire methodology 
 
 This is a failure because he does not map his political strategy onto the foundational myth of Australian rebellion.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(What.Cause.Why) The Slump (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The pandemic exposed the vulnerabilities in our supply chains and our economy. We must learn from this crisis to build a stronger future." (2022).
 
 **Brief:** Albanese's "Future Made in Australia" agenda is a direct, proactive response to the economic and strategic "Slump" exposed by the COVID-19 pandemic and global instability.
@@ -1667,6 +1868,8 @@ He successfully turns the "Catalyst" of failure (vulnerable supply chains) into 
 The vector represents the economic shock that forces change, a dynamic he manages effectively.
 
 This is a hit because he builds his economic strategy directly upon the necessity created by systemic "Slumps."
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(What.Cause.How) The Corowa Plan (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We are elected to govern, to make the tough decisions, and to lead the country." (On parliamentary responsibility).
 
@@ -1686,6 +1889,8 @@ The vector invents the democratic process through direct action, a method he vie
 
 This is a failure because he does not channel the populist, direct-democracy impulse that birthed the Constitution.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(What.Cause.Cause) State Socialism (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Government has a responsibility to intervene where the market fails. We must build the infrastructure and provide the services that a modern nation needs." (2023).
 
 **Brief:** Albanese represents the absolute continuation of the pragmatic "State Socialism" that defined the early Australian colonies.
@@ -1704,6 +1909,8 @@ The vector defines the state as a massive public utility, a definition he champi
 
 This is a massive hit because he actively and successfully operates the foundational ideology of early Australian governance.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(What.Cause.Effect) Federation Day (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "Our history didn't start in 1901, and it didn't start in 1788. We must recognize the continuous culture that has always been here." (Voice Campaign, 2023).
 
 **Brief:** Albanese explicitly rejects the fetishization of the 1901 consensus, refusing to view it as the unblemished apex of Australian cultural perfection.
@@ -1721,6 +1928,8 @@ He refuses to use "Federation Day" as an eternal standard to suppress the modern
 The vector provides unity through the celebration of the state's birth, which he views as a historically incomplete event.
 
 This is a failure of the vector because he actively seeks to alter and mature the foundational legal event of the modern Commonwealth.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 ## **2.7 The Effect of Definition (What.Effect)**
 
@@ -1742,6 +1951,8 @@ The vector demands the active valorization of the soldier, which he upholds thro
 
 This is a hit because he effectively channels the immense psychological gravity of the Anzac legend for national cohesion.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(What.Effect.What) The Lucky Country (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "We must be a nation that makes things again. We cannot simply rely on the luck of our geography." (2022).
 
 **Brief:** Albanese explicitly attacks the complacency of the "Lucky Country" definition, arguing that the nation must actively engineer its future rather than passively relying on unearned wealth.
@@ -1759,6 +1970,8 @@ His "Future Made in Australia" agenda is a direct assault on the paranoia and me
 The vector represents wealth achieved through passive luck, which he views as an unacceptable foundation for the modern state.
 
 This is a failure of the vector because he actively targets and attempts to dismantle the foundational economic complacency of the Definition.
+
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
 
 **(What.Effect.Where) The Tyranny of Distance (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are investing in regional infrastructure to ensure that no part of Australia is left behind." (On regional development grants).
 
@@ -1778,6 +1991,8 @@ The vector is the geographic fact of isolation, which he actively manages rather
 
 This is a hit because he successfully attempts to mitigate the vast, disconnected spaces created by the Australian geography.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(What.Effect.Why) The Cultural Cringe (υ: +0.5, ψ: -0.5): FAIL.** **Quote:** "Australia should have the confidence to stand on its own two feet and engage with the world as an independent, mature nation." (On foreign policy).
 
 **Brief:** Albanese actively fights the shadow of inferiority, demanding that Australia view itself as a confident, capable middle power.
@@ -1795,6 +2010,8 @@ His entire foreign and domestic policy agenda is a direct, constructive reaction
 The vector represents self-doubt and defensive nationalism, which his government actively attempts to overcome.
 
 This is a failure of the vector because he effectively attempts to dismantle the psychological vulnerability of the Cultural Cringe.
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 **(What.Effect.How) Mateship (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The Australian tradition of mateship means we look out for each other, regardless of our backgrounds." (Harmony Day).
 
@@ -1814,6 +2031,8 @@ The vector builds loyalty through active inclusion, which he successfully champi
 
 This is a massive hit because he accurately operates the primary social glue of the Australian Definition.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(What.Effect.Cause) The Great Silence (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "We must have the courage to tell the truth about our history. The Uluru Statement is an opportunity to end the silence." (2023).
 
 **Brief:** Albanese was the most prominent political agent actively fighting to shatter the erasure of Indigenous history during his first term.
@@ -1832,6 +2051,8 @@ The vector represents the deliberate maintenance of historical ignorance, which 
 
 This is a profound failure of the vector because he actively and forcefully attempted to dismantle the "Greatest Lie" at the heart of the national effect.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(What.Effect.Cause) Voice [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "I will be a Prime Minister who is committed to the Uluru Statement from the Heart in full. We need a Voice to Parliament." (2022).
 
 **Brief:** He led the political charge to structurally return the Indigenous Voice to the center of the Constitution.
@@ -1849,6 +2070,8 @@ His campaign for the Voice was a massive, proactive effort to achieve this moral
 The vector seeks to restore the foundational truth of the land, an effort he staked his political capital on.
 
 This is a massive hit because he acted as the primary agent attempting the structural healing of the Australian Definition.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 ## **Final Forensic Verdict: Anthony Albanese (Plane 2)**
 
@@ -1885,6 +2108,8 @@ The vector requires an acknowledgment of the harsh, unforgiving nature of the co
 
 This is a hit because he accurately identifies and prepares for the physical reality of the "Sunburnt Country."
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Where.Who.What) The Weird Melancholy (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "We have a bright future ahead of us. We are the lucky country, and we must make our own luck." (Election Campaign, 2022).
 
 **Brief:** Albanese's political brand is aggressively optimistic, deliberately suppressing the deep, gothic anxiety associated with the "Weird Melancholy" of the Australian interior.
@@ -1902,6 +2127,8 @@ The vector represents the eerie, unsettling nature of the continent, an emotion 
 His brand requires confidence, making the "Melancholy" a political liability.
 
 This is a failure of the vector because he completely ignores the gothic, isolating psychological reality of the Australian geography.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(Where.Who.Where) The Never-Never (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We must connect all Australians, whether they live in the inner city or the remote regions. That's why we are fixing the NBN." (2022).
 
@@ -1921,6 +2148,8 @@ He views geographical isolation as a market failure to be fixed.
 
 This is a failure of the vector because he attempts to eliminate the very isolation that defines the "Never-Never."
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(Where.Who.Why) The Red Steer (Fire) (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The Black Summer bushfires showed us the devastating reality of climate change. We can no longer ignore the science." (2021).
 
 **Brief:** Albanese explicitly links the historical, terrifying reality of the "Red Steer" (bushfire) to the modern political imperative of climate action.
@@ -1938,6 +2167,8 @@ His framing of bushfires as a climate issue perfectly modernizes the understandi
 The vector represents the violent, consumptive power of the land, which he acknowledges as the primary physical threat to the population.
 
 This is a hit because he respects the extreme danger of the landscape and organizes the state to mitigate it.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Where.Who.How) The Drought (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must support our farmers through the tough times, but we also need long-term water management strategies for the Murray-Darling." (2022).
 
@@ -1957,6 +2188,8 @@ The vector requires an acknowledgment of the arid nature of the continent, which
 
 This is a hit because he accurately identifies and prepares for the physical limit of the "Big Dry."
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Where.Who.Cause) The Spirit of Place (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We must listen to the traditional owners, who have cared for this land for 65,000 years. Their knowledge is essential to protecting our environment." (2023).
 
 **Brief:** Albanese explicitly acknowledges that the Australian landscape possesses a "Spirit of Place" that is inextricably linked to First Nations stewardship.
@@ -1975,6 +2208,8 @@ The vector represents the "Living Matrix" of the land, which he incorporates int
 
 This is a hit because he respects the oldest geographical cause of the Australian landscape.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Where.Who.Effect) The Primitive Area (National Parks) (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "Protecting our unique environment, our national parks, and the Great Barrier Reef is not just an environmental responsibility, it is an economic one." (2022).
 
 **Brief:** He strongly supports the expansion and protection of the "Primitive Area," viewing National Parks and marine reserves as essential national assets.
@@ -1992,6 +2227,8 @@ His environmental policies respect the need to keep portions of the continent co
 The vector demands reverence for the untouched environment, a standard he attempts to meet through legislation.
 
 This is a hit because he successfully defends the "Primitive Area" against the constant pressure of extraction.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **3.2 The What of Land (Where.What)**
 
@@ -2013,6 +2250,8 @@ The vector defines the ruthless seizure of space, an action his government seeks
 
 This is a failure because he does not operate the historical mechanics of colonial land acquisition.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Where.What.What) The Void (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "We are building the infrastructure to connect every part of this vast continent." (2022).
 
 **Brief:** He explicitly rejects the concept of the Australian interior as a terrifying, empty "Void."
@@ -2030,6 +2269,8 @@ The vector represents the unknowable, silent core of the continent, which his in
 He refuses to accept the "Void" as a limit on the state's reach.
 
 This is a failure of the vector because he attempts to destroy the psychological reality of the "Dead Heart" through engineering.
+
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
 
 **(Where.What.Where) Custodianship [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The Uluru Statement is a generous offer to walk together... to recognize that the land was never ceded." (2023).
 
@@ -2049,6 +2290,8 @@ The vector represents the "Deep Time" sovereignty, which his rhetoric and policy
 
 This is a massive hit because he risked his political capital to fight for the deepest, truest spatial relationship to the continent.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Where.What.Why) The Crossing (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are focused on the future, on building a modern economy for the 21st century." (Various speeches).
 
 **Brief:** Albanese does not engage with the mythic narrative of "The Crossing" (the heroic, often fatal exploration of the interior).
@@ -2066,6 +2309,8 @@ The vector represents the tragic, heroic failure of attempting to master the int
 He operates within the "Settled" zone, ignoring the "Crossing."
 
 This is a failure because he does not interact with the foundational myth of physical exploration.
+
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
 
 **(Where.What.How) The Grid (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We must modernize our energy grid to handle the transition to renewables. It is the biggest infrastructure project of our generation." (Rewiring the Nation policy).
 
@@ -2085,6 +2330,8 @@ The vector demands the technological conquest of the land, which he pursues with
 
 This is a massive hit because he is the primary architect of the next generation of the Australian "Grid."
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(What.What.Cause) The Crown (Land) (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "We have a responsibility to manage the national estate for the benefit of all Australians." (On environmental protections).
 
 **Brief:** He deeply respects the concept of Crown Land as the ultimate, unalienable asset of the Commonwealth.
@@ -2103,6 +2350,8 @@ The vector represents the foundational legal claim to the continent, which he ma
 
 This is a hit because he successfully operates the primary legal mechanism of Australian spatial control.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Where.What.Effect) The Selector (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We want to help more Australians realize the dream of owning their own home, particularly in our regional areas." (Help to Buy scheme).
 
 **Brief:** Albanese's housing policies explicitly mirror the historical logic of "The Selector"—the attempt by the state to break up monopolies and settle ordinary people on their own piece of land.
@@ -2120,6 +2369,8 @@ His housing policies perfectly align with the historical attempt to break the po
 The vector demands the democratic distribution of the land, which he pursues through massive legislative effort.
 
 This is a hit because he actively champions the modern equivalent of the "Selector" in the Australian property market.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **3.3 The Where of Land (Where.Where)**
 
@@ -2141,6 +2392,8 @@ The vector requires reverence for the silent core, which he explicitly attempted
 
 This is a hit because he recognized the Centre as the true metaphysical heart of the Australian identity.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Where.Where.What) Goyder's Line (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must base our agricultural and environmental policies on the science, recognizing the limits of our natural resources." (On drought resilience).
 
 **Brief:** Albanese's government is highly deferential to the scientific and physical limits of the continent, perfectly embodying the logic of "Goyder's Line."
@@ -2158,6 +2411,8 @@ His reliance on environmental data perfectly mirrors Goyder's historical realiza
 The vector represents the boundary of sustainability, which he strictly respects in policy formation.
 
 This is a hit because he operates the state within the acknowledged physical constraints of the Australian geography.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Where.Where.Where) The Saltbush (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are investing in high-tech manufacturing and the jobs of the future." (2023).
 
@@ -2177,6 +2432,8 @@ He interacts with the land economically, not botanically.
 
 This is a failure because he does not utilize the "Saltbush" as a rhetorical or moral anchor.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Where.Where.Why) The River (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We are committed to delivering the Murray-Darling Basin Plan in full. The health of the river is essential to the communities that rely on it." (2022).
 
 **Brief:** The management of the Murray-Darling river system is a central, proactive focus of Albanese's environmental and economic policy.
@@ -2194,6 +2451,8 @@ His commitment to the Basin Plan perfectly aligns with the need to manage the "A
 The vector demands respect for the finite nature of water, which he enforces through legislation.
 
 This is a massive hit because he actively champions the survival of the primary geographic lifeline of the Australian interior.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Where.Where.How) The Marsupial (υ: +0.6, ψ: -0.3): FAIL.** **Quote:** "We must protect our unique biodiversity and halt the extinction crisis." (Environmental policy launch).
 
@@ -2213,6 +2472,8 @@ He manages the biodiversity without romanticizing it.
 
 This is a failure because he interacts with the fauna scientifically, not mythically.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Where.Where.Cause) Gondwana (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "Our environment is unique because of our isolation. We have a global responsibility to protect it." (2022).
 
 **Brief:** He explicitly recognizes the deep-time geological origin of the continent, utilizing the reality of "Gondwana" to justify strict environmental protections.
@@ -2231,6 +2492,8 @@ The vector represents the geological truth of the continent, which he incorporat
 
 This is a hit because he respects and protects the oldest geographical cause of the Australian landscape.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Where.Where.Effect) The Plague (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We must strengthen our biosecurity to protect our agricultural industries from devastating pests and diseases." (2023).
 
 **Brief:** Albanese's government is acutely aware of the vulnerability of the isolated continent to introduced species and diseases ("The Plague").
@@ -2248,6 +2511,8 @@ His strict adherence to biosecurity protocols perfectly aligns with the historic
 The vector requires the aggressive defense of the biological border, which he strictly enforces.
 
 This is a hit because he accurately operates the primary biological defense mechanism of the Australian landmass.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **3.4 The Why of Land (Where.Why)**
 
@@ -2269,6 +2534,8 @@ The vector represents the overwhelming presence of the sun, which he has made th
 
 This is a massive hit because he accurately targets and utilizes the most powerful physical element of the Australian geography.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Where.Why.What) The Thirst (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "Water is our most precious resource. We cannot allow it to be mismanaged or hoarded by corporate interests." (Water policy debate).
 
 **Brief:** He explicitly recognizes "The Thirst" as the fundamental, limiting factor of the Australian continent.
@@ -2286,6 +2553,8 @@ His willingness to enforce water buybacks proves his commitment to managing "The
 The vector demands respect for the finite nature of water, which he enforces through legislation.
 
 This is a hit because he accurately operates the primary physical constraint of the Australian interior.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Where.Why.Where) The Wet and The Dry (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are supporting northern Australia to develop its industries and infrastructure." (2023).
 
@@ -2305,6 +2574,8 @@ He manages the North without fully embracing its unique geographical reality.
 
 This is a failure because he does not utilize the "Wet and the Dry" as a defining element of his spatial politics.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Where.Why.Why) The Flood (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We stand with the communities devastated by these floods. The Commonwealth will provide whatever support is necessary to rebuild." (Lismore floods, 2022).
 
 **Brief:** Albanese's response to catastrophic flooding is heavily focused on the rapid, overwhelming deployment of Commonwealth resources.
@@ -2322,6 +2593,8 @@ His response to the Lismore floods demonstrated a commitment to using the "Emerg
 The vector represents the sudden, overwhelming destruction of the landscape, which he manages with massive federal intervention.
 
 This is a hit because he successfully operates the Commonwealth's response to the most destructive phase of the Australian cycle.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Where.Why.How) The Wind (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Offshore wind presents a massive opportunity for Australia to create jobs and generate the clean energy we need." (2023).
 
@@ -2341,6 +2614,8 @@ The vector represents the invisible power of the environment, which he has made 
 
 This is a massive hit because he accurately targets and utilizes the second most powerful physical element of the Australian geography.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Where.Why.Cause) The Oscillation (El Niño/La Niña) (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We know the climate is changing, and the cycles of drought and flood are becoming more extreme. We must prepare." (2022).
 
 **Brief:** Albanese explicitly builds his environmental and emergency management policies around the scientific reality of the El Niño Southern Oscillation.
@@ -2359,6 +2634,8 @@ The vector represents the hidden, cyclical engine of the weather, which he ackno
 
 This is a hit because he respects the extreme danger of the oscillation and organizes the state to mitigate it.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Where.Why.Effect) The Windmill (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are focused on the technologies of the future, on solar, wind, and green hydrogen." (2023).
 
 **Brief:** While he heavily champions modern wind turbines, Albanese does not engage with the historical, iconic "Windmill" (the Southern Cross water pump) as a metaphor for the national character.
@@ -2376,6 +2653,8 @@ The vector requires a deep connection to the specific, stubborn survival technol
 He interacts with the wind industrially, not romantically.
 
 This is a failure because he does not utilize the historical "Windmill" as a rhetorical or moral anchor.
+
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
 
 ## **3.5 The How of Land (Where.How)**
 
@@ -2397,6 +2676,8 @@ The vector demands the technological conquest of distance, which he pursues with
 
 This is a hit because he actively champions the modern equivalent of the nation's most vital communication infrastructure.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Where.How.Who) Songlines [First Nations Perspective] (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The Voice is a practical way to ensure that the ancient wisdom of this land is heard in our modern parliament." (2023).
 
 **Brief:** His commitment to the Voice to Parliament was an explicit attempt to integrate the deep "Mapping" of the continent into the modern legislative process.
@@ -2414,6 +2695,8 @@ His effort was a direct attempt to cure the "Moral Friction" of settlement by ac
 The vector represents the "Deep Mapping" of the continent, which his rhetoric and policy goals explicitly attempted to honor.
 
 This is a massive hit because he risked his political capital to fight for the deepest, truest spatial methodology of the continent.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Where.How.What) The Dingo Fence (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We must protect our agricultural industries, but we also have a responsibility to protect our unique native wildlife." (Generic environmental statement).
 
@@ -2433,6 +2716,8 @@ He refuses to celebrate the brutal scarring of the land.
 
 This is a failure because he does not utilize the "Dingo Fence" as a rhetorical or policy anchor.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(Where.How.Where) The Highway (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We are investing billions in the Bruce Highway and the Pacific Highway to keep Australians safe and keep our freight moving." (Various budgets).
 
 **Brief:** The continuous funding and upgrading of the national highway network is a foundational element of Albanese's infrastructure policy.
@@ -2450,6 +2735,8 @@ His commitment to road infrastructure perfectly aligns with the historical neces
 The vector demands the continuous paving of the continent, an effort he funds massively.
 
 This is a hit because he actively champions the most vital physical transportation network of the nation.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(Where.How.Why) The Dam (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We support responsible water infrastructure, but it must be based on science and it must protect the environment." (On water policy).
 
@@ -2469,6 +2756,8 @@ The vector represents the heroic engineering of water, which he manages carefull
 
 This is a hit because he accurately operates the necessary, but fraught, water infrastructure of the continent.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Where.How.How) The Air (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "Aviation is essential to our economy, and we must ensure we have a competitive airline sector." (2023).
 
 **Brief:** While he manages aviation policy, Albanese does not deeply engage with the romantic or mythic narrative of conquering the Australian distance by air (e.g., the Royal Flying Doctor Service or Qantas origins).
@@ -2486,6 +2775,8 @@ The vector requires a deep connection to the profound isolation cured only by th
 He interacts with the air economically, not mythically.
 
 This is a failure because he does not utilize "The Air" as a defining element of his spatial politics.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(Where.How.Cause) The Railway (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We are committed to the Inland Rail project and expanding urban rail networks to reduce congestion and emissions." (2022).
 
@@ -2505,6 +2796,8 @@ The vector demands massive state intervention in logistics, an effort he champio
 
 This is a massive hit because he actively operates the most heroic and necessary logistical tool of the Australian state.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Where.How.Effect) The Pipeline (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "We must ensure our critical mineral supply chains are secure and that we are adding value here in Australia." (2024).
 
 **Brief:** While historically applied to water (the Goldfields), Albanese has modernized the "Pipeline" vector to apply to the transmission of energy and critical minerals.
@@ -2522,6 +2815,8 @@ By focusing on transmission lines and supply chains, he perfectly updates the "P
 The vector represents the hidden, vital infrastructure of the continent, which he funds massively.
 
 This is a hit because he actively champions the modern equivalent of the nation's most vital resource arteries.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **3.6 The Cause of Land (Where.Cause)**
 
@@ -2543,6 +2838,8 @@ The vector demands respect for the primary source of Australian wealth, which he
 
 This is a hit because he accurately operates the deeply entrenched logic of Australian resource extraction.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Where.Cause.What) The Gold (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "Critical minerals are the gold of the 21st century. Australia is perfectly positioned to supply the world." (2023).
 
 **Brief:** Albanese explicitly maps the historical obsession with "The Gold" onto the modern rush for critical minerals.
@@ -2560,6 +2857,8 @@ He understands that the Australian drive is fueled by geology, and he promises a
 The vector requires an obsession with sudden, massive wealth, which he flawlessly transitions into the "Critical Minerals" rush.
 
 This is a hit because he accurately operates the primary, speculative economic engine of the Australian identity.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(Where.Cause.Where) The Shield (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Our geography provides us with unique strategic advantages, but we must actively defend our approaches." (On the Defence Strategic Review, 2023).
 
@@ -2579,6 +2878,8 @@ The vector represents the use of geography as a defense mechanism, which his gov
 
 This is a hit because he successfully incorporates the deep geological reality of the continent into the nation's strategic defense.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Where.Cause.Why) The Uranium (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We do not support domestic nuclear power. It is too slow, too expensive, and not right for Australia." (2024).
 
 **Brief:** Albanese strongly rejects the domestic use of "The Uranium" (nuclear energy), despite the continent holding massive reserves.
@@ -2596,6 +2897,8 @@ His staunch opposition to domestic nuclear power demonstrates a refusal to engag
 The vector represents the terrifying power hidden in the rock, which he explicitly refuses to unleash domestically.
 
 This is a failure because he actively blocks the utilization of the continent's most powerful, controversial mineral.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(Where.Cause.How) The Opencut (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We must ensure that our environmental laws actually protect the environment, not just rubber-stamp development." (Nature Positive Plan).
 
@@ -2615,6 +2918,8 @@ The vector represents the violent tearing of the earth, an action his government
 
 This is a failure because he does not fully support or operate the brutal, unrestrained mechanics of the open-cut mine.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(Where.Cause.Cause) The Impact (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We cannot ignore the impact of climate change on our environment and our economy. We must act now." (2022).
 
 **Brief:** He explicitly recognizes that human activity (specifically carbon emissions) is having a catastrophic "Impact" on the physical reality of the continent.
@@ -2633,6 +2938,8 @@ The vector represents the deep, geological scarring caused by human habitation, 
 
 This is a hit because he accurately identifies and addresses the primary environmental "Cause" threatening the state.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Where.Cause.Effect) The Wealth (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We want to see the wealth of this nation shared fairly, to build strong communities and a strong middle class." (Budget Address).
 
 **Brief:** He understands that the ultimate outcome of the Australian interaction with the land is massive, passive "Wealth."
@@ -2650,6 +2957,8 @@ He understands that the political stability of the nation depends on the working
 The vector demands that the wealth be extracted and utilized, which he pursues with a focus on systemic fairness.
 
 This is a hit because he actively manages the primary economic effect of the Australian geography.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **3.7 The Effect of Land (Where.Effect)**
 
@@ -2671,6 +2980,8 @@ The vector demands attention to the passive, domestic retreat of the citizen, wh
 
 This is a massive hit because he flawlessly operates the political gravity of the nation's primary spatial outcome.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Where.Effect.What) The Sprawl (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We need better urban planning and more medium-density housing to ensure our cities remain liveable." (On housing policy).
 
 **Brief:** Albanese explicitly attempts to constrain and manage "The Sprawl," recognizing that the endless horizontal expansion of Australian cities is economically and environmentally unsustainable.
@@ -2688,6 +2999,8 @@ He actively works to halt the "Sprawl," understanding that it destroys the envir
 The vector represents the uncontrolled expansion of the city, which he attempts to corral through bureaucratic planning.
 
 This is a failure because he explicitly opposes and attempts to reverse the primary spatial failure of the Australian city.
+
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
 
 **(Where.Effect.Where) The Coast (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must protect our oceans and our coastal environments for future generations to enjoy." (2023).
 
@@ -2707,6 +3020,8 @@ The vector demands reverence for the "Fringe," which he manages with a focus on 
 
 This is a hit because he successfully defends the ultimate physical terminus of the national ambition.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Where.Effect.Why) The Lifestyle (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "Australians deserve to have secure work so they can enjoy their lives, spend time with their families, and participate in their communities." (2022).
 
 **Brief:** He defends "The Lifestyle" as the ultimate, intended outcome of the "Fair Go."
@@ -2724,6 +3039,8 @@ His industrial relations reforms are directly aimed at preserving the time and r
 The vector represents the passive enjoyment of the continent's wealth, which he defends as a structural right.
 
 This is a hit because he accurately channels and protects the ultimate emotional and spatial goal of the Australian citizen.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Where.Effect.How) The BBQ (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are getting on with the job of governing, focusing on the big issues." (Generic press conference).
 
@@ -2743,6 +3060,8 @@ He views the BBQ as a private retreat, not a primary mechanism of governance.
 
 This is a failure because he does not fully operate the most iconic, casual spatial ritual of the culture.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Where.Effect.Cause) The Quarantine (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Strong biosecurity is essential for our agriculture and our unique environment. We will not compromise on it." (2023).
 
 **Brief:** Albanese strongly supports the absolute physical "Quarantine" of the continent, maintaining strict biosecurity borders.
@@ -2761,6 +3080,8 @@ The vector demands the absolute defense of the biological border, an effort he f
 
 This is a hit because he actively champions the most successful physical defense mechanism of the Australian landmass.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Where.Effect.Effect) The Future (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We can be a renewable energy superpower. A Future Made in Australia is about seizing the opportunities of the clean energy transition." (2024).
 
 **Brief:** "The Future" is the central, driving narrative of Albanese's prime ministership.
@@ -2778,6 +3099,8 @@ His focus on renewable energy and advanced manufacturing is a direct attempt to 
 The vector demands that the state look forward, an imperative his entire economic platform fulfills.
 
 This is a massive hit because he accurately targets and attempts to secure the ultimate, long-term spatial outcome of the nation.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **Final Forensic Verdict: Anthony Albanese (Plane 3)**
 
@@ -2814,6 +3137,8 @@ The vector demands the active giving of time and effort for the common good, an 
 
 This is a structural hit because he accurately identifies and supports the most noble driving agent of the Australian character.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Why.Who.What) The Bludger (υ: +0.3, ψ: -0.6): FAIL.** **Quote:** "Our social safety net is there for those who need it, but we expect everyone who can work, to work." (Generic economic statement).
 
 **Brief:** Unlike right-wing populists who constantly weaponize the "Bludger" to attack the welfare state, Albanese generally avoids this rhetoric.
@@ -2831,6 +3156,8 @@ The vector requires the state to aggressively police the boundary of the "Fair G
 While he expects participation, he actively dismantled the punitive "Robodebt" scheme, proving his hostility to the extreme application of this vector.
 
 This is a failure of the vector because he explicitly rejects the punitive, aggressive policing of the welfare state.
+
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
 
 **(Why.Who.Where) The Knocker (υ: +0.3, ψ: -0.5): FAIL.** **Quote:** "We want to bring the country together, to find consensus and move forward, not just tear each other down." (2022).
 
@@ -2850,6 +3177,8 @@ He refuses to operate the "Leveling Blade" aggressively.
 
 This is a failure of the vector because he actively works against the pervasive, cynical drive of the Australian character.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Why.Who.Why) The Digger (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "The legacy of our diggers is not just in the battles they fought, but in the mateship and endurance they showed." (Anzac Day, 2023).
 
 **Brief:** He respectfully engages with the "Digger" as the historical and emotional anchor of the Australian drive to endure.
@@ -2867,6 +3196,8 @@ His engagement is traditional and non-partisan, maintaining the Digger as a unif
 The vector demands reverence for the original expression of national willpower.
 
 This is a hit because he accurately honors the most sacred driving agent of the Australian identity.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Why.Who.How) The Gambler (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We are taking a measured, responsible approach to managing the economy." (Budget Speech).
 
@@ -2886,6 +3217,8 @@ He refuses to "roll the dice" with the national economy or his political capital
 
 This is a failure because he completely avoids the defining speculative drive of the Australian character.
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(Why.Who.Cause) The Battler (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "My story is the story of many Australians who have done it tough, but who keep working, keep striving for a better life." (2022).
 
 **Brief:** Albanese's entire political identity is anchored in the "Battler" archetype.
@@ -2904,6 +3237,8 @@ The vector demands respect for the stoic endurance of the commoner, which he emb
 
 This is a massive hit because he accurately channels and protects the primary moral agent of the Australian drive.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Why.Who.Effect) The Larrikin (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "I take the responsibility of this office very seriously. It is an honor to serve the Australian people." (2022).
 
 **Brief:** As Prime Minister, Albanese completely suppresses the "Larrikin" drive.
@@ -2921,6 +3256,8 @@ The vector requires the active deflation of hubris, a role he can no longer play
 He has traded the "Court Jester" for the "King."
 
 This is a failure of the vector because he actively suppresses the defining skeptical drive of the Australian character to maintain power.
+
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
 
 ## **4.2 The What of Drive (Why.What)**
 
@@ -2942,6 +3279,8 @@ The vector requires the active pursuit of egalitarianism, a principle he legisla
 
 This is a massive structural hit because he treats the Fair Go as the ultimate, enforceable goal of the nation.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Why.What.What) The Weekend (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Australians fought hard for the weekend, for the right to rest and spend time with their loved ones. We will protect those rights." (On IR laws, 2023).
 
 **Brief:** Albanese fiercely defends "The Weekend" as the ultimate prize of the Australian labor movement.
@@ -2959,6 +3298,8 @@ His defense of the Weekend is a perfect alignment with the historical "888" logi
 The vector demands the absolute protection of non-work time, which he actively pursues.
 
 This is a structural hit because he champions the primary temporal outcome of the Australian drive.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Why.What.Where) The Home (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "Having a safe, secure place to call home is fundamental to the Australian dream. We must do more to make that a reality." (Housing policy address, 2023).
 
@@ -2978,6 +3319,8 @@ The vector is about securing the private block, a goal he pursues through massiv
 
 This is a hit because he successfully identifies and defends the ultimate physical terminus of the national ambition.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Why.What.Why) The Holiday (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are focused on the cost of living and easing the pressure on household budgets." (2024).
 
 **Brief:** While he protects the weekend and annual leave structurally, Albanese does not deeply engage with the romanticized narrative of "The Holiday" (the coastal escape, the caravan trip) as a primary political motif.
@@ -2993,6 +3336,8 @@ The vector requires the celebration of the national escape mechanism, which his 
 He protects the time for a holiday, but does not use it as a rhetorical anchor.
 
 This is a failure because he does not fully utilize the "Holiday" as a defining element of his political narrative.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(Why.What.How) The Ute (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We want to see more electric vehicles on our roads, reducing emissions and saving people money on fuel." (On National EV Strategy).
 
@@ -3012,6 +3357,8 @@ He actively fights the cultural inertia attached to the traditional Ute.
 
 This is a failure because he attempts to dismantle the iconic status of the traditional Australian vehicle.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(What.What.Cause) The Pay Packet (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We want wages to get moving again. For a decade, deliberate policy kept wages low; we are changing that." (2022).
 
 **Brief:** The defense and growth of "The Pay Packet" is the central economic driver of his government.
@@ -3030,6 +3377,8 @@ The vector demands that the state prioritize the income of the individual over t
 
 This is a structural hit because he actively champions the primary economic goal of the Australian drive.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Why.What.Effect) The Pension (υ: +0.9, ψ: +0.6): HIT.** **Quote:** "We will always protect the aged pension. It is a fundamental guarantee that if you work hard all your life, the state will look after you in retirement." (2022).
 
 **Brief:** He fiercely defends "The Pension" as the ultimate, subsidized destination of the Australian drive.
@@ -3047,6 +3396,8 @@ His defense of the pension ensures the working class can trust the ultimate outc
 The vector defines the final reward for a life of participation, which he guarantees through state funding.
 
 This is a hit because he accurately defends the most sacred, subsidized outcome of the national drive.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **2.3 The Where of Drive (Why.Where)**
 
@@ -3068,6 +3419,8 @@ The vector demands that ideas be tested in the most democratic, unpretentious sp
 
 This is a hit because he successfully operates the primary informal forum of the national identity.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Why.Where.What) The Beach (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are focused on the serious issues facing the country—inflation, housing, and national security." (Generic response).
 
 **Brief:** While an essential part of Australian life, Albanese does not deeply utilize "The Beach" as a primary political stage or metaphor.
@@ -3085,6 +3438,8 @@ The vector requires the politician to perform the "Coastal" identity, a ritual h
 He governs from the city, not the sand.
 
 This is a failure because he does not fully utilize "The Beach" as a defining spatial element of his brand.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(Why.Where.Where) Country [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We must listen to the voices of First Nations people, who have a unique and profound connection to Country." (2023).
 
@@ -3104,6 +3459,8 @@ The vector represents the "Deep Time" sovereignty, which his rhetoric and policy
 
 This is a massive hit because he risked his political capital to fight for the deepest, truest spatial relationship to the continent.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Why.Where.Why) The Club (RSL/Leagues) (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We must ensure we are providing the right support for our veterans when they return home." (On Veterans' Affairs).
 
 **Brief:** Albanese does not heavily utilize "The Club" (the RSL or Leagues club) as a primary rhetorical or spatial anchor for his politics.
@@ -3121,6 +3478,8 @@ The vector requires deep engagement with the specific, highly regulated social s
 He interacts with veterans via policy, not necessarily through the culture of the RSL.
 
 This is a failure because he does not fully operate the specific spatial mechanism of "The Club."
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 **(Why.Where.How) The Shed (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "We are investing in advanced manufacturing and high-tech skills for the jobs of the future." (2023).
 
@@ -3140,6 +3499,8 @@ He actively fights the cultural inertia attached to the Shed.
 
 This is a failure of the vector because he attempts to dismantle the iconic status of the traditional Australian workshop.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Why.Where.Cause) The Field (Sporting) (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "I love my Rabbitohs, but my focus is on running the country." (Generic sporting comment).
 
 **Brief:** While he is a well-known fan of the South Sydney Rabbitohs, Albanese does not deeply tie his political "Will to Power" to the proxy battlefield of "The Field."
@@ -3158,6 +3519,8 @@ His lack of weaponized "Sporting Ambition" means he misses a powerful, emotive l
 
 This is a failure because he does not successfully map the nation's sporting aggression onto his political brand.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(Why.Where.Effect) The Mall (υ: +0.6, ψ: -0.3): FAIL.** **Quote:** "We are focused on easing the cost of living at the checkout for everyday Australians." (2024).
 
 **Brief:** He acknowledges "The Mall" (the supermarket/checkout) as the primary site of economic anxiety for the modern Australian.
@@ -3175,6 +3538,8 @@ The vector represents the ultimate, sanitized consumption of wealth, which he vi
 He refuses to treat the Mall as an unmitigated triumph of the Australian economy.
 
 This is a failure because he does not operate the vector as a site of joyful consumption, but rather as a site of economic stress.
+
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
 
 ## **2.4 The Motivations of Drive (Why.Why)**
 
@@ -3196,6 +3561,8 @@ The vector requires social cohesion and a baseline of trust, which he constantly
 
 This is a massive hit because he treats the social contract of Mateship as the highest motivation of the citizen.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Why.Why.What) Tall Poppy Syndrome (υ: +0.3, ψ: -0.5): FAIL.** **Quote:** "We want people to be successful. We want businesses to be successful and create jobs." (Economic Address).
 
 **Brief:** He explicitly suppresses the negative motivation of the "Tall Poppy Syndrome" (the drive to tear down success).
@@ -3213,6 +3580,8 @@ The vector requires the aggressive use of the "Leveling Blade," an action he avo
 He refuses to operate the cynical, leveling drive of the Australian character.
 
 This is a failure of the vector because he explicitly abandons the aggressive, egalitarian enforcement mechanism in favor of corporate harmony.
+
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
 
 **(Why.Why.Where) Cultural Cringe (υ: +0.5, ψ: -0.5): FAIL.** **Quote:** "We have the resources, the skills, and the smarts to be a renewable energy superpower. We don't need to take a back seat to anyone." (2023).
 
@@ -3232,6 +3601,8 @@ The vector requires a feeling of provincial inadequacy, an emotion his governmen
 
 This is a failure of the vector because he aggressively attempts to dismantle the psychological shadow of colonial inferiority.
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(Why.Why.Why) She'll Be Right (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "We can't just hope for the best on climate change. We have to plan, prepare, and transition our economy." (2022).
 
 **Brief:** He explicitly rejects the passive, fatalistic complacency of "She'll be right," viewing it as a dangerous attitude in a rapidly changing world.
@@ -3249,6 +3620,8 @@ While his goal is national security, he refuses to rely on the cynical stoicism 
 The vector is about minimizing fuss and trusting the status quo, which contradicts his entire narrative of necessary national transition.
 
 This is a failure of the vector because he actively fights the cultural tendency to ignore systemic problems until they become crises.
+
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
 
 **(Why.Why.How) Have a Go (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "If you have a go, you get a go. And we are going to make sure the government is there to support you when you do." (2022).
 
@@ -3268,6 +3641,8 @@ The vector is about the "Ambition of the Little Person," which he successfully c
 
 This is a structural hit because he operationalizes the cultural respect for participation.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Why.Why.Cause) Fear of Missing Out (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "The world is moving to clean energy. If we don't act now, Australia will be left behind." (On renewable transition).
 
 **Brief:** Albanese brilliantly weaponizes the historical Australian anxiety of being "left behind" by the rest of the world.
@@ -3286,6 +3661,8 @@ The vector represents the anxiety of the periphery, an emotion he channels effec
 
 This is a hit because he successfully weaponizes the deepest geographic anxiety of the Australian Drive.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Why.Why.Effect) The Good Life (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We want every Australian to have the opportunity to buy a home, raise a family, and enjoy a secure retirement." (Generic policy statement).
 
 **Brief:** He explicitly recognizes "The Good Life" as the ultimate, intended outcome of the "Fair Go" and the Australian Drive.
@@ -3303,6 +3680,8 @@ His entire domestic agenda is aimed at preserving the time and resources require
 The vector represents the passive enjoyment of the continent's wealth, which he defends as a structural right.
 
 This is a hit because he accurately channels and protects the ultimate emotional and spatial goal of the Australian citizen.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **2.5 The Methods of Drive (Why.How)**
 
@@ -3324,6 +3703,8 @@ The vector requires the active demonstration of equality through contribution, w
 
 This is a hit because he accurately maps the micro-social contract onto macro-economic policy.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Why.How.What) Sledging (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We need to elevate the standard of debate in this parliament. Australians expect better of us." (2022).
 
 **Brief:** He actively suppresses the "Sledging" vector (the aggressive, verbal mocking and destabilization of opponents).
@@ -3341,6 +3722,8 @@ The vector requires the active, verbal destabilization of opponents, a tactic he
 He refuses to operate the "Blade" of the parliamentary floor.
 
 This is a failure because he consciously shelves this aggressive archetype to protect his political capital.
+
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
 
 **(Why.How.Where) Queuing (Fairness) (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The NDIS is about ensuring that those with disabilities get the support they need, based on fairness, not on who shouts the loudest." (2023).
 
@@ -3360,6 +3743,8 @@ The vector demands strict adherence to fairness over privilege, a standard he at
 
 This is a hit because he successfully operates the primary administrative logic of the Australian public.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Why.How.Why) Striking (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "The right to withdraw your labor is a fundamental human right, and it is how working people have secured every condition they rely on today." (ACTU Address).
 
 **Brief:** Albanese explicitly defends the historical and ongoing necessity of "Striking" as the primary method of wealth redistribution.
@@ -3377,6 +3762,8 @@ His industrial relations reforms perfectly align with the historical necessity o
 The vector demands that the individual find strength in the "Mob," a principle he structurally reinforces.
 
 This is a massive hit because he actively champions and legislates for the primary logical tool of the Australian worker.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Why.How.How) Improvising (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We are establishing the National Anti-Corruption Commission to ensure integrity and process in government." (2022).
 
@@ -3396,6 +3783,8 @@ The vector demands a "hack the system" mentality, which his highly managed admin
 
 This is a failure because he replaces the "Bricoleur" with the "Bureaucrat."
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(Why.How.Cause) Gambling (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We know that problem gambling is destroying families, and we will work to minimize its harm." (On betting reforms).
 
 **Brief:** He actively seeks to constrain and regulate the destructive "Gambler" instinct within the culture.
@@ -3414,6 +3803,8 @@ He refuses to "roll the dice" and attempts to stop the electorate from doing so 
 
 This is a failure because he completely avoids and regulates the defining speculative drive of the Australian character.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(Why.How.Effect) Volunteering (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "When the floods hit, we saw the best of Australia. Neighbors helping neighbors, volunteers filling sandbags. That is who we are." (2022).
 
 **Brief:** He heavily relies on the "Volunteer" as the ultimate expression of the Australian drive to help in a crisis.
@@ -3431,6 +3822,8 @@ His rhetoric constantly venerates the "Reserve Drive" of the population, acknowl
 The vector demands the active giving of time and effort for the common good, an action he heavily champions.
 
 This is a structural hit because he accurately identifies and supports the most noble driving method of the Australian character.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **2.6 The Causes of Drive (Why.Cause)**
 
@@ -3452,6 +3845,8 @@ His focus is on the future and maturity, leaving the "birthstain" trauma behind.
 
 This is a failure of the vector because he operates completely outside the gravitational pull of the foundational colonial resentment.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(Why.Cause.Who) Guilt [First Nations Perspective] (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We must acknowledge the truth of our past. The Uluru Statement is a generous offer to move forward together." (2023).
 
 **Brief:** Albanese explicitly engaged with the historical "Guilt" of the colonial project, not to paralyze the nation, but to drive the proactive healing mechanism of the Voice to Parliament.
@@ -3469,6 +3864,8 @@ His campaign for the Voice was a direct attempt to cure the "Moral Friction" of 
 The vector represents the necessary reckoning with the past, which his rhetoric and policy goals explicitly attempted to honor.
 
 This is a hit because he risked his political capital to address the deepest moral wound of the continent.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Why.Cause.What) The Gold (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We have the critical minerals the world needs. We must seize this opportunity to build a new generation of wealth." (2023).
 
@@ -3488,6 +3885,8 @@ The vector requires an obsession with massive wealth extraction, which he flawle
 
 This is a hit because he accurately operates the primary, speculative economic engine of the Australian identity.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Why.Cause.Where) The Bush (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We are a highly urbanized nation, but we must ensure our regions thrive." (2022).
 
 **Brief:** While he implements regional policy, Albanese does not anchor his moral or political drive in the "Bush" totem.
@@ -3505,6 +3904,8 @@ The vector requires a deep, almost religious reverence for the scrubland as the 
 By refusing to romanticize the Bush, he misses the deep, irrational political gravity it holds in the national psyche.
 
 This is a failure because he interacts with the Bush economically, but not metaphysically.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(Why.Cause.Where) Abundance [First Nations Perspective] (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "First Nations people have cared for this land and lived sustainably with it for 65,000 years. We have much to learn from them." (Environmental policy launch).
 
@@ -3524,6 +3925,8 @@ The vector represents the "Living Matrix" of the land, which he incorporates int
 
 This is a hit because he respects the oldest, most sustainable geographical cause of the Australian landscape.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Why.Cause.Why) The War (Anzac/WW1) (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "The Anzac spirit is a reminder of what we can achieve when we stand together, look out for each other, and endure." (Anzac Day, 2023).
 
 **Brief:** He respectfully engages with the trauma of "The War" as the historical forge of the national drive to endure.
@@ -3541,6 +3944,8 @@ His engagement is traditional and non-partisan, maintaining the War as a unifyin
 The vector demands reverence for the original expression of national willpower in the face of disaster.
 
 This is a hit because he accurately honors the most sacred historical trauma of the Australian identity.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Why.Cause.Why) Resistance [First Nations Perspective] (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must acknowledge the truth of our history, the dispossession and the resistance, to move forward." (2023).
 
@@ -3560,6 +3965,8 @@ The vector demands that the state reckon with the reality of Indigenous enduranc
 
 This is a hit because he engages with the profound, ongoing reality of the First Nations struggle.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Why.Cause.How) The Depression (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We know Australians are doing it tough right now. Cost of living is the number one priority for my government." (2024).
 
 **Brief:** Albanese constantly channels the political logic forged during "The Depression"—that the state must act as the ultimate safety net to prevent the working class from falling into ruin.
@@ -3577,6 +3984,8 @@ By focusing on systemic support, he aligns perfectly with the post-Depression ex
 The vector requires the state to act as the ultimate guarantor of survival, an expectation he fully accepts.
 
 This is a hit because he successfully operates the economic defense mechanism forged during the nation's darkest financial era.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Why.Cause.Cause) The Isolation (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must rebuild our domestic manufacturing capability so we are not reliant on vulnerable global supply chains." (Future Made in Australia Act, 2024).
 
@@ -3596,6 +4005,8 @@ The vector represents the anxiety of being "Far Away," an anxiety he seeks to cu
 
 This is a structural hit because he actively engineers the state to defeat its oldest geographic and economic driver.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Why.Cause.Effect) The Boom (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We have a once-in-a-generation opportunity to be a renewable energy superpower and secure our economic future." (2023).
 
 **Brief:** He understands that the Australian economy requires the psychological lure of "The Boom" to maintain its confidence and drive.
@@ -3613,6 +4024,8 @@ He understands that the Australian drive is fueled by the promise of sudden weal
 The vector requires an obsession with "Paydirt," which he flawlessly transitions into the "Clean Energy" rush.
 
 This is a hit because he accurately operates the primary, speculative economic engine of the Australian identity.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **2.7 The Effects of Drive (Why.Effect)**
 
@@ -3634,6 +4047,8 @@ The vector defines the voter as the active sovereign, a status he frequently ack
 
 This is a hit because he accurately channels and respects the authority of "The Citizen" to maintain his political mandate.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Why.Effect.What) The Middle Class (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "We want a strong economy that delivers for working families, to build a strong and secure middle class." (2023).
 
 **Brief:** The preservation and expansion of "The Middle Class" is the central, driving narrative of Albanese's domestic policy.
@@ -3651,6 +4066,8 @@ His focus on "cost of living" is entirely designed to secure the loyalty of the 
 The vector demands attention to the passive, domestic retreat of the citizen, which he prioritizes above all else.
 
 This is a massive hit because he flawlessly operates the political gravity of the nation's primary economic outcome.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Why.Effect.Where) The Suburb (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The Australian dream of owning your own home is slipping out of reach for too many. We must act to protect it." (Housing Australia Future Fund debate).
 
@@ -3670,6 +4087,8 @@ The vector is about the safety of the private block, a goal he pursues through m
 
 This is a hit because he successfully identifies and defends the ultimate physical terminus of the national ambition.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Why.Effect.Why) Stability (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australians voted for safe change. They voted for stability, and that is what my government is delivering." (2022).
 
 **Brief:** "Stability" is the operational core of Albanese's Prime Ministership.
@@ -3687,6 +4106,8 @@ His managerial approach is a direct, highly effective application of the Austral
 The vector demands that the state prioritize peace and order over revolution, which perfectly describes his centrist administration.
 
 This is a massive hit because he accurately embodies the quiet, administrative mandate of the Australian electorate.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Why.Effect.How) Cynicism (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We have a positive vision for the country. We want to bring people together, not tear them apart." (2022).
 
@@ -3706,6 +4127,8 @@ He refuses to govern via the cynical "Shadow" of the national character.
 
 This is a failure because he actively works against the pervasive, cynical drive of the Australian character.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(Why.Effect.Cause) Prosperity (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We want to build an economy that works for people, not the other way around. Shared prosperity is the key to a strong nation." (2023).
 
 **Brief:** He explicitly recognizes "Prosperity" as the ultimate, intended outcome of the "Fair Go" and the Australian Drive.
@@ -3724,6 +4147,8 @@ The vector represents the passive enjoyment of the continent's wealth, which he 
 
 This is a hit because he accurately channels and protects the ultimate emotional and economic goal of the Australian citizen.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Why.Effect.Effect) Sovereignty (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "A Future Made in Australia is about our national security and our economic sovereignty. We must be able to stand on our own two feet." (2024).
 
 **Brief:** Albanese actively pursues a modern, economic definition of "Sovereignty," arguing that true independence requires advanced manufacturing and supply chain resilience, not just military alliances.
@@ -3741,6 +4166,8 @@ His focus on renewable energy and advanced manufacturing is a direct attempt to 
 The vector demands that the state mature into full independence, an imperative his economic platform attempts to fulfill.
 
 This is a hit because he accurately targets and attempts to secure the ultimate, long-term sovereign outcome of the nation.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **Final Forensic Verdict: Anthony Albanese (Plane 4)**
 
@@ -3777,6 +4204,8 @@ The vector demands a "hack the system" mentality, which his highly managed admin
 
 This is a failure because he replaces the "Bricoleur" with the "Bureaucrat."
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(How.Who.What) The Unionist (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The trade union movement is essential to delivering better pay and safer conditions for Australian workers. It is how we built the middle class." (ACTU Address).
 
 **Brief:** Albanese is a product of the organized labor movement and explicitly champions "The Unionist" as the primary methodological agent for achieving the Fair Go.
@@ -3794,6 +4223,8 @@ His industrial relations reforms perfectly align with the historical necessity o
 The vector demands that the individual find strength in the "Mob," a principle he structurally reinforces.
 
 This is a massive hit because he actively champions and legislates for the primary logical tool of the Australian worker.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(How.Who.Where) The Public Servant (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "We respect the independence and the expertise of the Australian Public Service. They are the engine room of government." (2022).
 
@@ -3813,6 +4244,8 @@ The vector defines the state bureaucracy as the primary method of delivering equ
 
 This is a hit because he operates the state exactly as the utilitarian, service-driven definition demands.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(How.Who.Why) The Whistleblower (υ: +0.6, ψ: -0.3): FAIL.** **Quote:** "National security matters must be handled through the appropriate legal and institutional channels." (On prosecuting whistleblowers).
 
 **Brief:** Despite his left-wing background, Albanese's government has been heavily criticized for continuing the prosecution of high-profile national security whistleblowers (e.g., David McBride, Richard Boyle).
@@ -3830,6 +4263,8 @@ The vector requires the active exposure of state corruption by an individual, an
 He refuses to protect the "Truth Teller" if it damages the "Machine."
 
 This is a failure because he actively works against the primary individual mechanism for exposing state failure.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(How.Who.How) The Umpire (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We established the National Anti-Corruption Commission to act as the independent umpire, ensuring integrity in federal politics." (2022).
 
@@ -3849,6 +4284,8 @@ The vector demands that disputes be settled objectively, a standard he attempts 
 
 This is a hit because he successfully operates the primary administrative logic of Australian conflict resolution.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(How.Who.Cause) The Drover (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "We are focused on the industries of the future—advanced manufacturing and clean energy." (2023).
 
 **Brief:** Albanese does not engage with the historical, romantic methodology of "The Drover" (the slow, manual movement of resources across vast distances).
@@ -3867,6 +4304,8 @@ He operates within the "Settled" zone, ignoring the "Frontier."
 
 This is a failure because he does not interact with the foundational myth of physical, pastoral methodology.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(How.Who.Effect) The Scientist (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "My government will listen to the science. Whether it's climate change or pandemic response, policy must be based on evidence." (2022).
 
 **Brief:** Albanese's government is deeply technocratic, explicitly elevating "The Scientist" as the primary methodological agent for solving complex national crises.
@@ -3884,6 +4323,8 @@ He uses "Data" not as a political weapon, but as the foundation for administrati
 The vector provides the necessary knowledge required to govern the state, which he respects and funds.
 
 This is a hit because he actively relies on the state's scientific apparatus to navigate the future.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 ## **5.2 The What of Method (How.What)**
 
@@ -3905,6 +4346,8 @@ The vector guarantees the freedom to vote without consequence, a mechanism he tr
 
 This is a massive hit because he flawlessly executes a political strategy incubated within the secure space of the Secret Ballot.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(How.What.What) The Wage Case (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We supported an increase to the minimum wage because we believe that people who work hard should not live in poverty." (2023).
 
 **Brief:** The "Wage Case" (the active pursuit of higher minimum wages through the Fair Work Commission) is a central methodological tool of the Albanese government.
@@ -3922,6 +4365,8 @@ His intervention in wage cases perfectly aligns with the historical Harvester Ju
 The vector requires the active pursuit of egalitarianism through centralized arbitration, a principle he legislates for constantly.
 
 This is a structural hit because he champions the primary economic methodology of the Australian drive.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(How.What.Where) The Wifi / NBN (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We are delivering a better NBN, connecting regional Australia and ensuring everyone can participate in the modern economy." (2022).
 
@@ -3941,6 +4386,8 @@ The vector demands the technological conquest of distance, which he pursues with
 
 This is a hit because he actively champions the modern equivalent of the nation's most vital communication method.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(How.What.Why) Hard Yakka (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "Australians know the value of hard work. We are a government that respects and rewards hard yakka." (Labor Campaign).
 
 **Brief:** He successfully utilizes this core Australian idiom to connect individual effort to systemic reward.
@@ -3958,6 +4405,8 @@ He understands that the Australian public respects those who try, and he builds 
 The vector is about the "Ambition of the Little Person," which he successfully channels into a narrative of upward mobility.
 
 This is a structural hit because he operationalizes the cultural respect for participation and labor.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(How.What.How) The Stump Jump Plough (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We are investing in advanced manufacturing to ensure we make things here in Australia again." (Future Made in Australia).
 
@@ -3977,6 +4426,8 @@ He actively fights the cultural inertia attached to the crude colonial invention
 
 This is a failure because he attempts to dismantle the iconic status of the traditional Australian technological method.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(How.What.Cause) The Boomerang (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "We must build a sustainable economy that does not just dig things up and ship them overseas." (2023).
 
 **Brief:** Albanese explicitly attempts to break the "Boomerang" methodology—the historical cycle of exporting raw materials and importing finished goods.
@@ -3995,6 +4446,8 @@ The vector requires a reliance on the cyclical return of exported wealth, which 
 
 This is a failure because he aggressively attempts to dismantle the foundational, cyclical economic methodology of the colony.
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(How.What.Effect) The Black Box (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must ensure our aviation sector is safe, competitive, and world-class." (Generic aviation policy).
 
 **Brief:** While he does not frequently use it as a rhetorical metaphor, Albanese relies heavily on the "Black Box" methodology—the scientific, forensic analysis of failure to ensure systemic survival.
@@ -4012,6 +4465,8 @@ His reliance on independent inquiries perfectly mirrors the "Black Box" logic of
 The vector demands that the state learn from disaster, a standard he attempts to enforce rigorously.
 
 This is a hit because he successfully operates the primary analytical methodology of Australian governance.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 ## **5.3 The Where of Method (How.Where)**
 
@@ -4033,6 +4488,8 @@ The vector guarantees universal participation, which he leverages to maintain a 
 
 This is a massive hit because he efficiently extracts political capital from the structural obligation of the Australian electoral system.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(How.Where.What) The Picket Line (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "Working people have the right to organize, the right to strike, and the right to demand a fair share of the wealth they create." (ACTU Address).
 
 **Brief:** Albanese explicitly defends the "Picket Line" as the historical and necessary spatial method for achieving the Fair Go.
@@ -4050,6 +4507,8 @@ His industrial relations reforms perfectly align with the historical necessity o
 The vector demands that the individual find strength in the "Mob," a principle he structurally reinforces.
 
 This is a hit because he actively champions and legislates for the primary spatial tool of the Australian worker.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(How.Where.Where) The Surf Club (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We are focused on the cost of living and easing the pressure on household budgets." (2024).
 
@@ -4069,6 +4528,8 @@ He governs from the city, not the sand.
 
 This is a failure because he does not fully utilize "The Surf Club" as a defining spatial element of his brand.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(How.Where.Why) The Courtroom (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We respect the independence of the judiciary and will abide by the decisions of the High Court." (Following various legal challenges).
 
 **Brief:** Albanese strongly respects "The Courtroom" as the ultimate spatial authority for interpreting and evolving the meaning of the Constitution.
@@ -4086,6 +4547,8 @@ By abiding by court rulings even when politically inconvenient, he upholds the i
 The vector requires acceptance of the Court's ultimate spatial authority, which his government strictly adheres to.
 
 This is a hit because he structurally supports the spatial mechanism designed to resolve legal conflict.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(How.Where.How) The Lab (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must be guided by the science and invest in the research that will drive our future prosperity." (On science funding).
 
@@ -4105,6 +4568,8 @@ The vector provides the necessary knowledge required to govern the state, which 
 
 This is a hit because he actively relies on the state's scientific spaces to navigate the future.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(How.Where.Cause) The Shearing Shed (υ: +0.3, ψ: -0.5): FAIL.** **Quote:** "Our future is in advanced manufacturing, clean energy, and high-tech industries." (2023).
 
 **Brief:** Albanese explicitly moves the national focus away from the historical, agricultural spatial origin of "The Shearing Shed."
@@ -4123,6 +4588,8 @@ He actively fights the cultural inertia attached to the traditional agricultural
 
 This is a failure of the vector because he attempts to dismantle the iconic status of the traditional Australian workplace.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(How.Where.Effect) The School (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "Education is the great equalizer. Every Australian child deserves access to a world-class public education, no matter where they live." (2022).
 
 **Brief:** Albanese views "The School" as the ultimate spatial mechanism for achieving the "Fair Go."
@@ -4140,6 +4607,8 @@ His commitment to "The School" perfectly aligns with the historical necessity of
 The vector demands the democratic distribution of knowledge, which he pursues with massive legislative effort.
 
 This is a hit because he actively champions the most vital egalitarian space of the nation.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 ## **5.4 The Motivations of Method (How.Why)**
 
@@ -4161,6 +4630,8 @@ The vector requires a fierce rejection of privilege, which he operationalizes th
 
 This is a hit because he consistently works to maintain the horizontal, peer-to-peer structure of the Commonwealth.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(How.Why.What) Pragmatism (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We are a government that is about getting things done. We are about practical solutions, not ideological purity." (2023).
 
 **Brief:** Pragmatism is the defining operational logic and motivation of the Albanese Prime Ministership.
@@ -4178,6 +4649,8 @@ His willingness to compromise and adapt perfectly embodies the Australian prefer
 The vector demands utility over ideology, a standard he upholds ruthlessly to maintain power.
 
 This is a hit because he accurately channels the deeply entrenched, problem-solving pragmatism of the national identity.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(How.Why.Where) Necessity (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "The pandemic exposed the vulnerabilities in our supply chains. We must rebuild our domestic manufacturing capability out of necessity, not just ideology." (2022).
 
@@ -4197,6 +4670,8 @@ The vector represents the shock that forces change, a dynamic he manages effecti
 
 This is a hit because he builds his economic strategy directly upon the necessity created by systemic vulnerabilities.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(How.Why.Why) Fairness (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "No one held back, no one left behind. That is the essence of fairness, and it is the mission of this government." (Election Victory Speech, 2022).
 
 **Brief:** "Fairness" (The Fair Go) is the absolute foundational motivation of Albanese's political rhetoric and policy architecture.
@@ -4214,6 +4689,8 @@ By focusing on systemic support (wages, healthcare), he aligns perfectly with th
 The vector requires the market to serve the human being, a principle his labor-centric policies attempt to enforce.
 
 This is a structural hit because he treats Fairness as an enforceable national contract.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(How.Why.How) Efficiency (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are focused on delivering safe, orderly, and responsible economic management to ensure the efficient operation of the state." (Budget Speech).
 
@@ -4233,6 +4710,8 @@ The vector demands that the state prioritize peace, order, and efficiency, which
 
 This is a hit because he accurately embodies the quiet, administrative mandate of the Australian Constitution.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(How.Why.Cause) Survival (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We know that natural disasters will become more frequent. We must prepare our nation for survival in a changing climate." (2022).
 
 **Brief:** He explicitly rejects the reactive, fatalistic approach to the Australian climate cycle, demanding proactive preparation for national "Survival."
@@ -4251,6 +4730,8 @@ The vector is about ensuring the continuation of the state against extreme odds,
 
 This is a hit because he respects the extreme limits of the landscape and organizes the Commonwealth to endure them.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(How.Why.Effect) Comfort (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "My focus is on the day-to-day challenges facing Australian families, ensuring they have the comfort and security they deserve." (2024).
 
 **Brief:** Albanese understands that the ultimate desired motivation and effect for the average Australian voter is the preservation of "Comfort."
@@ -4268,6 +4749,8 @@ He accurately channels the emotional power of the Australian desire for a stress
 The vector values the protection of the private realm from public agitation, a goal he consistently pursues.
 
 This is a hit because he successfully targets and defends the "Effect" of the suburban dream.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **5.5 The Methods of Method (How.How)**
 
@@ -4289,6 +4772,8 @@ The vector requires a tolerance for resistance against overwork, a principle he 
 
 This is a hit because he defends the foundational Australian logic that a worker is a human being, not a machine.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(How.How.What) The Roster (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We are committed to delivering safe, orderly, and responsible economic management." (Budget Speech).
 
 **Brief:** Albanese prioritizes "The Roster"—administrative competence, stable economic management, and predictable legislative processes—over ideological warfare or sudden disruption.
@@ -4306,6 +4791,8 @@ His managerial approach is a direct, highly effective application of this primar
 The vector demands that the state prioritize peace and order, which perfectly describes his centrist administration.
 
 This is a hit because he accurately embodies the quiet, administrative mandate of the Australian Constitution.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(How.How.Where) The Sickie (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "The 'Right to Disconnect' is about ensuring that when you clock off, you are actually off the clock." (2024).
 
@@ -4325,6 +4812,8 @@ The vector requires a tolerance for resistance against overwork, a principle he 
 
 This is a hit because he defends the foundational Australian logic of work-life balance.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(How.How.Why) The Meeting (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We brought together business, unions, and civil society at the Jobs and Skills Summit to find consensus and move forward together." (2022).
 
 **Brief:** "The Meeting" (consensus building through formal summits and consultation) is a hallmark of Albanese's methodology.
@@ -4342,6 +4831,8 @@ His mastery of legislative compromise and broad summits perfectly mirrors the pr
 The vector defines the nation as a negotiated contract, a reality he navigates flawlessly.
 
 This is a hit because he actively and successfully operates the negotiated consensus that forms the bedrock of the Definition.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(How.How.How) The Shortcut (υ: +0.3, ψ: -0.5): FAIL.** **Quote:** "We will take a methodical, considered approach to policy, ensuring we get the details right." (2022).
 
@@ -4361,6 +4852,8 @@ The vector demands a "hack the system" mentality, which his highly managed admin
 
 This is a failure of the vector because he refuses to operate the improvisational method of the national character.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(How.How.Cause) The Trial (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "The Robodebt Royal Commission has delivered its findings, and we will ensure those responsible are held to account." (2023).
 
 **Brief:** He utilizes "The Trial" (the Royal Commission and the judicial system) not for partisan witch-hunts, but to expose and correct systemic failures of governance.
@@ -4379,6 +4872,8 @@ The vector seeks truth through formal inquiry, a force he channels effectively.
 
 This is a hit because he consistently employs the most powerful investigative tool of the definition to restore systemic integrity.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(How.How.Effect) The Report (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We will be guided by the findings of the Defence Strategic Review to ensure our national security." (2023).
 
 **Brief:** Albanese's government is deeply technocratic, explicitly elevating "The Report" (expert reviews, taskforce findings) as the primary methodological agent for solving complex national crises.
@@ -4396,6 +4891,8 @@ He uses "Data" not as a political weapon, but as the foundation for administrati
 The vector provides the necessary knowledge required to govern the state, which he respects and funds.
 
 This is a hit because he actively relies on the state's bureaucratic apparatus to navigate the future.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **5.6 The Causes of Method (How.Cause)**
 
@@ -4417,6 +4914,8 @@ His focus is on the future and maturity, leaving the "birthstain" trauma behind.
 
 This is a failure of the vector because he operates completely outside the gravitational pull of the foundational colonial resentment.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(How.Cause.Why) Relation [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The Uluru Statement is a generous offer to walk together, in a true partnership, recognizing our shared history and future." (2023).
 
 **Brief:** Albanese explicitly attempted to move the methodology of the state from one of colonial imposition to one of "Relation" and true partnership with First Nations people.
@@ -4434,6 +4933,8 @@ His effort was a direct attempt to cure the "Moral Friction" of settlement by ac
 The vector represents the "Deep Time" sovereignty of relation, which his rhetoric and policy goals explicitly attempted to honor.
 
 This is a massive hit because he risked his political capital to fight for the deepest, truest methodological relationship to the continent.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(How.Cause.Where) The Distance (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We must rebuild our domestic manufacturing capability so we are not reliant on vulnerable global supply chains. Distance cannot dictate our destiny." (Future Made in Australia Act, 2024).
 
@@ -4453,6 +4954,8 @@ The vector represents the anxiety of being "Far Away," an anxiety he seeks to cu
 
 This is a structural hit because he actively engineers the state to defeat its oldest geographic and economic driver.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(How.Cause.Cause) Navigation [First Nations Perspective] (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must listen to the wisdom of the traditional owners, who have navigated and cared for this land for millennia." (On environmental policy).
 
 **Brief:** His commitment to integrating traditional land management practices acknowledges "Navigation" not just as finding one's way, but as a deep, systemic methodology of living with the land.
@@ -4470,6 +4973,8 @@ His effort was a direct attempt to cure the "Moral Friction" of settlement by ac
 The vector represents the "Deep Mapping" of the continent, which his rhetoric and policy goals explicitly attempted to honor.
 
 This is a hit because he respects the truest spatial methodology of the continent.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(How.Cause.How) The Survey (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We must base our environmental and economic policies on accurate data, understanding the limits and potential of our natural resources." (Generic policy statement).
 
@@ -4489,6 +4994,8 @@ The vector provides the foundational knowledge required to govern the state, whi
 
 This is a hit because he actively relies on the state's self-measurement to track and support the population.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(How.Cause.What) Flow [First Nations Perspective] (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We are committed to delivering the Murray-Darling Basin Plan in full. The health of the river is essential to the communities that rely on it." (2022).
 
 **Brief:** His approach to water management (Murray-Darling) and drought preparation acknowledges the deep, environmental necessity of "Flow"—the understanding that rivers must reach the sea to maintain the health of the continent.
@@ -4507,6 +5014,8 @@ The vector demands respect for the finite nature of water and its natural moveme
 
 This is a hit because he actively champions the survival of the primary geographic lifeline of the Australian interior.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(How.Cause.Effect) The Federation (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We need a National Cabinet that actually works together, across state lines, to solve the big challenges facing our country." (2022).
 
 **Brief:** Albanese deeply respects the "Pragmatic Merger" of Federation, treating it as the foundational methodology of the state that must be maintained and optimized.
@@ -4524,6 +5033,8 @@ His reliance on National Cabinet reflects the historical logic of the Federation
 The vector represents the "Union," which he treats as his primary operational field for national policy.
 
 This is a hit because he successfully maintains and operates the complex, historical methodology of the 1901 settlement.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **5.7 The Effects of Method (How.Effect)**
 
@@ -4545,6 +5056,8 @@ The vector defines the voter as the active sovereign, a status he frequently ack
 
 This is a massive hit because he accurately channels and respects the authority of the "Constituent" to maintain his political mandate.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(How.Effect.What) The Award (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We supported an increase to the minimum wage because we believe that people who work hard should not live in poverty." (2023).
 
 **Brief:** The defense and expansion of "The Award" (the centralized minimum wage and conditions system) is a central methodological outcome of the Albanese government.
@@ -4562,6 +5075,8 @@ His focus on wage growth perfectly aligns with the historical imperative of the 
 The vector demands that the state prioritize the income and conditions of the individual over the profit of the corporation through centralized methods.
 
 This is a structural hit because he actively champions the primary economic methodology of the Australian drive.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(How.Effect.Where) The Infrastructure (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We are investing in nation-building infrastructure to keep Australians safe, keep our freight moving, and connect our regions." (Budget Address).
 
@@ -4581,6 +5096,8 @@ The vector demands the continuous technological conquest of the continent, an ef
 
 This is a hit because he actively champions the most vital physical transportation and communication networks of the nation.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(How.Effect.Why) Efficiency (Outcome) (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are focused on delivering safe, orderly, and responsible economic management." (Budget Speech).
 
 **Brief:** Albanese prioritizes administrative competence, stable economic management, and predictable legislative processes to ensure "Efficiency" as the ultimate outcome of his methods.
@@ -4598,6 +5115,8 @@ His managerial approach is a direct, highly effective application of this primar
 The vector demands that the state prioritize peace, order, and efficiency, which perfectly describes his centrist administration.
 
 This is a hit because he accurately embodies the quiet, administrative mandate of the Australian Constitution.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(How.Effect.How) Bureaucracy (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We respect the independence and the expertise of the Australian Public Service. They are the engine room of government." (2022).
 
@@ -4617,6 +5136,8 @@ The vector defines the state bureaucracy as the primary method of delivering equ
 
 This is a hit because he operates the state exactly as the utilitarian, bureaucratic definition demands.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(How.Effect.Cause) Peace (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We want a region that is stable, peaceful, and prosperous, where sovereignty is respected." (On AUKUS and Pacific relations).
 
 **Brief:** Albanese actively attempts to transition the nation toward "Peace" and stability, both domestically and internationally.
@@ -4635,6 +5156,8 @@ The vector demands that the state prioritize peace and order over conflict, whic
 
 This is a hit because he successfully operates the administrative and diplomatic mandate for stability.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(How.Effect.Effect) The Fair Go (Realized) (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "No one held back, no one left behind. That is the essence of the fair go, and it is the mission of this government." (Election Victory Speech, 2022).
 
 **Brief:** The realization of "The Fair Go" is the ultimate, explicit goal of Albanese's political methodology.
@@ -4652,6 +5175,8 @@ By focusing on systemic support (wages, healthcare), he aligns perfectly with th
 The vector requires the active pursuit of egalitarianism through methodology, a principle he legislates for constantly.
 
 This is a massive structural hit because he treats the Fair Go as the ultimate, enforceable goal of the nation's methods.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 ## **Final Forensic Verdict: Anthony Albanese (Plane 5)**
 
@@ -4688,6 +5213,8 @@ His focus is on the future and maturity, leaving the "birthstain" trauma behind.
 
 This is a failure of the vector because he operates completely outside the gravitational pull of the foundational colonial resentment.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Cause.Who.What) The Colonizer (υ: +0.6, ψ: -0.4): FAIL.** **Quote:** "We must acknowledge the truth of our past, both the achievements and the injustices." (2023).
 
 **Brief:** He does not heavily venerate "The Colonizer" as an unmitigated hero of civilization, unlike conservative politicians who focus purely on the "pioneer" myth.
@@ -4705,6 +5232,8 @@ The vector represents the unapologetic seizure of the continent, a narrative he 
 He governs the colony without celebrating the colonialism.
 
 This is a failure because he actively dampens the triumphant energy of the colonial foundation.
+
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
 
 **(Cause.Who.Where) The Free Settler (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "People have come from all over the world to build a life here, contributing to our economy and our society." (Harmony Day).
 
@@ -4724,6 +5253,8 @@ The vector represents the proactive choice to build the nation, which he fully s
 
 This is a hit because he accurately channels the most productive demographic foundation of the state.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Cause.Who.Why) The Squatter (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "We must ensure that the wealth of the nation is shared fairly, not just concentrated at the top." (Budget Address).
 
 **Brief:** Albanese does not champion the "Squatter" class (the large pastoralists and land barons) that historically dominated the physical landscape and early economy.
@@ -4741,6 +5272,8 @@ He actively avoids defending the absolute property rights of the pastoral class 
 The vector defines the ruthless seizure of space, an action his government seeks to regulate and constrain.
 
 This is a failure because he does not operate the historical mechanics of colonial land acquisition.
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 **(Cause.Who.How) The Digger (Gold) (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We have a once-in-a-generation opportunity with critical minerals. This is our moment." (2023).
 
@@ -4760,6 +5293,8 @@ The vector requires an obsession with massive wealth extraction, which he flawle
 
 This is a hit because he accurately operates the primary, speculative economic engine of the Australian identity.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Cause.Who.Cause) The Indigenous Elder (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We must listen to the wisdom of the elders, who have cared for this land for 65,000 years." (2023).
 
 **Brief:** Albanese explicitly recognized "The Indigenous Elder" as the deepest, most authoritative foundational agent of the continent.
@@ -4778,6 +5313,8 @@ The vector represents the "Deep Time" authority, which his rhetoric and policy g
 
 This is a massive hit because he risked his political capital to fight for the deepest, truest authoritative agent of the continent.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Cause.Who.Effect) The Immigrant (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "Modern Australia is a multicultural success story, built on the hard work of generations of immigrants." (Harmony Day).
 
 **Brief:** He views "The Immigrant" as the ultimate, transformative agent that saved the nation from the stagnation of the "White Australia" policy.
@@ -4795,6 +5332,8 @@ He uses this vector to justify multiculturalism and modern immigration policies,
 The vector represents the proactive choice to build and modernize the nation, which he fully supports.
 
 This is a hit because he accurately channels the most transformative demographic foundation of the state.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **6.2 The Where of Cause (Cause.Where)**
 
@@ -4816,6 +5355,8 @@ The vector requires a fierce defense of the colonial inception point, which he b
 
 This is a failure because he actively attempts to move the national identity past its obsession with the First Fleet's arrival point.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Cause.Where.What) The Harbour Bridge (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We are a government that builds infrastructure for the future, just as previous generations built the icons we rely on today." (On major projects).
 
 **Brief:** He heavily utilizes the logic of "The Harbour Bridge"—the massive, high-modernist state engineering project—as the blueprint for his own governance.
@@ -4833,6 +5374,8 @@ His deep commitment to nation-building infrastructure perfectly aligns with the 
 The vector demands massive state intervention in the physical landscape, an effort he champions personally and politically.
 
 This is a hit because he actively operates the most heroic and necessary logistical logic of the Australian state.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(Cause.Where.Where) Uluru (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The Uluru Statement from the Heart is a generous invitation... We must answer the call." (2023).
 
@@ -4852,6 +5395,8 @@ The vector demands reverence for the silent core, which he explicitly attempted 
 
 This is a massive hit because he recognized the geographic Center as the true metaphysical heart of the Australian identity.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Cause.Where.Why) Gallipoli (ANZAC Cove) (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "We gather to remember those who landed at Gallipoli, and all who have served since, in defense of our nation." (Anzac Day, 2024).
 
 **Brief:** He respectfully engages with the trauma of "Gallipoli" as the historical geographic forge of the national drive to endure.
@@ -4869,6 +5414,8 @@ His engagement is traditional and non-partisan, maintaining the geography as a u
 The vector demands reverence for the original, violent expression of national willpower on foreign soil.
 
 This is a hit because he accurately honors the most sacred historical geography of the Australian identity.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Cause.Where.How) The Goldfields (Ballarat) (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "We seek consensus, bringing business and unions together to solve problems." (2022).
 
@@ -4888,6 +5435,8 @@ His focus is on the "Boardroom" rather than the "Stockade."
 
 This is a failure because he completely avoids the chaotic, revolutionary geography of the foundational democratic spark.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Cause.Where.Cause) The Penal Settlement (Norfolk Island/Port Arthur) (υ: +0.3, ψ: -0.5): FAIL.** **Quote:** "We must focus on rehabilitation and ensuring our justice system is fair." (Generic justice statement).
 
 **Brief:** He completely suppresses the brutal, carceral logic of the original "Penal Settlement."
@@ -4906,6 +5455,8 @@ The vector relies on the dark, carceral geography of the nation's birth, which h
 
 This is a failure of the vector because he operates completely outside the foundational logic of the penal geography.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(Cause.Where.Effect) Parliament House (Canberra) (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "I am honored to lead the government in this chamber, representing the Australian people." (2022).
 
 **Brief:** Albanese's entire political authority and methodology are perfectly adapted to the specific, managed geography of "Parliament House."
@@ -4923,6 +5474,8 @@ His mastery of parliamentary procedure demonstrates his profound connection to t
 The vector represents the ultimate, bureaucratic destination of the national project, which he commands.
 
 This is a massive hit because he successfully navigates and controls the primary democratic geography of the nation.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 ## **6.3 The What of Cause (Cause.What)**
 
@@ -4944,6 +5497,8 @@ He refused to allow the foundation to rest on the "Lie," seeking a maturation of
 
 This is a profound failure of the Terra Nullius vector, demonstrating his commitment to an honest, rather than fictional, spatial history.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(Cause.What.What) The Constitution (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must respect the Constitution and the processes it outlines, even when we seek to change it." (Following the Voice referendum).
 
 **Brief:** He deeply respects "The Constitution" as the foundational, legal machinery of the state.
@@ -4961,6 +5516,8 @@ His acceptance of the referendum defeat demonstrates his absolute adherence to t
 The vector represents the bureaucratic foundation of the state, which he navigates with extreme care.
 
 This is a hit because he accurately channels the legalistic, pragmatic nature of the Australian Constitution.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Cause.What.Where) Federation (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "National Cabinet is how we ensure that the Commonwealth and the states work together to deliver for Australians." (2022).
 
@@ -4980,6 +5537,8 @@ The vector represents the "Union," which he treats as his primary operational fi
 
 This is a hit because he successfully maintains the complex, historical machinery of the 1901 settlement.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Cause.What.Why) The Living Wage (Harvester) (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We want to see wages moving again. We supported an increase to the minimum wage because it is the right thing to do." (2023).
 
 **Brief:** The defense and restoration of "The Living Wage" is the central economic and moral mission of the Albanese government.
@@ -4997,6 +5556,8 @@ His willingness to intervene in the market on behalf of labor directly fulfills 
 He acts on the historical imperative to protect the vulnerable, reviving the foundational promise of economic justice.
 
 This is a massive structural hit because his policies actively reinforce the "Living Wage."
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Cause.What.How) Compulsory Voting (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Our system works because everyone participates. It stops the extremes from taking over." (On electoral stability).
 
@@ -5016,6 +5577,8 @@ The vector forces politics toward the center, a space he deliberately and succes
 
 This is a massive hit because he flawlessly executes a strategy designed specifically for the unique mechanics of Australian democracy.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Cause.What.Cause) The White Australia Policy (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "We draw our strength from our diversity. Modern Australia is a multicultural triumph." (2022).
 
 **Brief:** Albanese actively and vehemently opposes the historical logic of the "White Australia Policy," celebrating the multicultural reality that replaced it.
@@ -5034,6 +5597,8 @@ The vector requires the enforcement of cultural exclusion, which his rhetoric an
 
 This is a massive failure of the White Australia vector, proving his alignment with the modern, diverse reality of the Commonwealth.
 
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
+
 **(Cause.What.Effect) The Mabo Decision (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Mabo changed our country for the better. It recognized the truth that the land was never empty." (Mabo Day anniversary).
 
 **Brief:** He fiercely defends and builds upon "The Mabo Decision," viewing the legal recognition of prior Indigenous ownership as a profound act of national justice and maturity.
@@ -5051,6 +5616,8 @@ His commitment to Indigenous rights is a direct continuation of the "Method of T
 The vector represents the correction of the foundation's original sin, which he actively supports.
 
 This is a hit because he embraces the legal outcome designed to heal the "Greatest Lie."
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **6.4 The Why of Cause (Cause.Why)**
 
@@ -5072,6 +5639,8 @@ The vector is about ensuring the continuation of the state against extreme odds,
 
 This is a hit because he respects the extreme limits of the landscape and organizes the Commonwealth to endure them.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Cause.Why.What) Redemption (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We believe in giving people a second chance, a pathway to permanent residency for those contributing to our country." (On immigration).
 
 **Brief:** Albanese strongly supports the historical logic of "Redemption" (the "Ticket of Leave"), providing pathways for temporary migrants to become permanent citizens.
@@ -5089,6 +5658,8 @@ His policies reflect the deep historical understanding that the state is built o
 The vector requires a mechanism for advancement and inclusion, which he attempts to restore to a fractured system.
 
 This is a structural hit because he operates the core logic of the Australian "Fair Go" regarding citizenship.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Cause.Why.Where) Distance (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "Distance cannot dictate our destiny. We must build our domestic manufacturing capability." (2024).
 
@@ -5108,6 +5679,8 @@ The vector represents the anxiety of being "Far Away," an anxiety he seeks to cu
 
 This is a structural hit because he actively engineers the state to defeat its oldest geographic driver.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Cause.Why.Why) The Fair Go (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "No one held back, no one left behind. That is the essence of the fair go, and it is the mission of this government." (Election Victory Speech, 2022).
 
 **Brief:** "The Fair Go" is the absolute foundational motivation of Albanese's political rhetoric and policy architecture.
@@ -5125,6 +5698,8 @@ By focusing on systemic support (wages, healthcare), he aligns perfectly with th
 The vector requires the market to serve the human being, a principle his labor-centric policies attempt to enforce.
 
 This is a structural hit because he treats the Fair Go as an enforceable national contract.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Cause.Why.How) Mateship (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The Australian tradition of mateship means we look out for each other, regardless of our backgrounds." (Harmony Day).
 
@@ -5144,6 +5719,8 @@ The vector requires social cohesion and a baseline of trust, which he constantly
 
 This is a massive hit because he treats the social contract of Mateship as the highest motivation of the citizen.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Cause.Why.Cause) Populate or Perish (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "Immigration is essential to our economic growth, but we must ensure we have the infrastructure to support it." (2023).
 
 **Brief:** While adjusting the settings to manage political blowback over housing, Albanese fundamentally maintains the foundational demographic engine of "Populate or Perish."
@@ -5162,6 +5739,8 @@ The vector demands growth as a matter of national security, an imperative his Tr
 
 This is a hit because he successfully manages the primary demographic engine of the Australian state.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Cause.Why.Effect) The Lucky Country (υ: +0.6, ψ: -0.4): FAIL.** **Quote:** "We cannot simply rely on the luck of our geography forever. We must become a renewable energy superpower." (2022).
 
 **Brief:** Albanese explicitly rejects Donald Horne's ironic definition of Australia as a nation run by people who simply dig up "Luck."
@@ -5179,6 +5758,8 @@ By fighting the complacency of the "Fuel," he attempts to drag the nation out of
 The vector requires a lazy reliance on unearned wealth, which he views as an unacceptable economic strategy.
 
 This is a failure of the vector, as he actively attempts to cure the nation of its reliance on the "Lucky" paradigm.
+
+**Follow-Through / Reality Check:** Full follow-through on suppression. He actively and intentionally dismantles or ignores this vector, proving his hostility to its historical premise.
 
 ## **6.5 The How of Cause (Cause.How)**
 
@@ -5200,6 +5781,8 @@ The vector demands a "hack the system" mentality born of the bush, which his hig
 
 This is a failure because he replaces the historical "Bushman" with the modern "Bureaucrat."
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(Cause.How.What) The Shearers' Strike (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "The trade union movement is essential to delivering better pay and safer conditions. We will protect the right to organize." (ACTU Address).
 
 **Brief:** He is a direct political descendant of "The Shearers' Strike," the foundational event that birthed the Australian Labor Party.
@@ -5217,6 +5800,8 @@ His industrial relations reforms perfectly align with the historical necessity o
 The vector demands that the individual find strength in the "Mob," a principle he structurally reinforces.
 
 This is a massive hit because he actively champions the foundational logic of the Australian labor movement.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Cause.How.Where) The Bush (as Method) (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "We rely on the advice of the experts to shape our policy response." (Generic policy launch).
 
@@ -5236,6 +5821,8 @@ He refuses to govern via the improvisational method of the national character.
 
 This is a failure because he replaces the "Bush" method with the "Bureaucratic" method.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Cause.How.Why) The Secret Ballot (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We trust the judgment of the Australian people when they go to the ballot box." (Election Night, 2022).
 
 **Brief:** Albanese's political strategy relies entirely on the structural safety provided by the foundational invention of "The Secret Ballot."
@@ -5253,6 +5840,8 @@ He exploits the gap between public discourse and private judgment, relying on th
 The vector guarantees the freedom to vote without consequence, a mechanism he trusts completely.
 
 This is a hit because he flawlessly executes a political strategy incubated within the secure space of the Secret Ballot.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Cause.How.How) Compulsory Arbitration (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We support an independent umpire to ensure that workers get a fair deal." (On the Fair Work Commission).
 
@@ -5272,6 +5861,8 @@ The vector requires the active pursuit of egalitarianism through centralized arb
 
 This is a structural hit because he champions the primary economic methodology of the Australian drive.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Cause.How.Cause) The Colonial Secretary's Office (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The public service is the engine room of government. We are rebuilding its capacity." (2022).
 
 **Brief:** Albanese's government represents a return to the powerful, centralized bureaucratic methodology originally established by "The Colonial Secretary's Office."
@@ -5290,6 +5881,8 @@ The vector defines the state bureaucracy as the primary method of delivering equ
 
 This is a hit because he operates the state exactly as the utilitarian, bureaucratic definition demands.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Cause.How.Effect) Peaceful Federation (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "National Cabinet is how we ensure that the Commonwealth and the states work together to deliver for Australians." (2022).
 
 **Brief:** He deeply respects the methodology of "Peaceful Federation"—the slow, negotiated, bureaucratic union of the states.
@@ -5307,6 +5900,8 @@ His reliance on National Cabinet reflects the historical logic of the Federation
 The vector represents the "Union," which he treats as his primary operational field for national policy.
 
 This is a hit because he successfully maintains and operates the complex, historical methodology of the 1901 settlement.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 ## **6.6 The Causes of Cause (Cause.Cause)**
 
@@ -5328,6 +5923,8 @@ The vector represents the "Deep Time" authority, which his rhetoric and policy g
 
 This is a massive hit because he risked his political capital to fight for the deepest, truest authoritative origin of the continent.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Cause.Cause.What) Gondwana (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "Our environment is unique because of our isolation. We have a global responsibility to protect it." (2022).
 
 **Brief:** He explicitly recognizes the deep-time geological origin of the continent, utilizing the reality of "Gondwana" to justify strict environmental protections.
@@ -5345,6 +5942,8 @@ By acknowledging the unique evolutionary path of the isolated landmass, he justi
 The vector represents the geological truth of the continent, which he incorporates into the practical governance of the state.
 
 This is a hit because he respects and protects the oldest geographical cause of the Australian landscape.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Cause.Cause.Where) The Great Barrier Reef (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Protecting the Great Barrier Reef is not just an environmental responsibility, it is an economic one." (2022).
 
@@ -5364,6 +5963,8 @@ The vector demands reverence for the untouched environment, a standard he attemp
 
 This is a hit because he successfully defends the ultimate biological cause of the Australian coastline.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Cause.Cause.Why) The Megafauna Extinction (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must halt the extinction crisis and protect our unique biodiversity." (Nature Positive Plan).
 
 **Brief:** He implicitly acknowledges the fragility of the Australian ecosystem, responding to the historical "Megafauna Extinction" by attempting to prevent modern equivalents.
@@ -5381,6 +5982,8 @@ His commitment to halting the extinction crisis is a direct response to the vuln
 The vector represents the devastating impact of human arrival, a dynamic he attempts to mitigate.
 
 This is a hit because he actively attempts to prevent the repetition of the continent's most catastrophic biological event.
+
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
 
 **(Cause.Cause.How) Fire-Stick Farming (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We have much to learn from the traditional owners about how to manage this land and reduce the risk of bushfires." (2022).
 
@@ -5400,6 +6003,8 @@ The vector represents the "Living Matrix" of the land, which he incorporates int
 
 This is a hit because he respects the oldest, most sustainable geographical methodology of the Australian landscape.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Cause.Cause.Cause) Plate Tectonics (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are investing in critical minerals, the resources that will power the global transition to clean energy." (2023).
 
 **Brief:** He anchors his economic platform in the deep, unchangeable reality of the continent's geology ("Plate Tectonics").
@@ -5418,6 +6023,8 @@ The vector requires an understanding of the deep geological forces that created 
 
 This is a hit because he accurately operates the primary, geological economic engine of the Australian identity.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Cause.Cause.Effect) The Arid Core (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must base our agricultural and environmental policies on the science, recognizing the limits of our natural resources." (On drought resilience).
 
 **Brief:** Albanese's government is highly deferential to the physical limits imposed by "The Arid Core."
@@ -5435,6 +6042,8 @@ His reliance on environmental data perfectly mirrors the historical realization 
 The vector represents the boundary of sustainability, which he strictly respects in policy formation.
 
 This is a hit because he operates the state within the acknowledged physical constraints of the Australian geography.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **6.7 The Outcomes of Cause (Cause.Effect)**
 
@@ -5456,6 +6065,8 @@ The vector demands reverence for the original expression of national willpower.
 
 This is a hit because he accurately honors the most sacred historical outcome of the Australian identity.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Cause.Effect.What) Warrior [First Nations Perspective] (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must acknowledge the truth of our history, the dispossession and the resistance, to move forward." (2023).
 
 **Brief:** During the Voice campaign, Albanese actively acknowledged the "Warrior" aspect of First Nations history, refusing to maintain the "Blank Slate" myth of a peaceful settlement.
@@ -5473,6 +6084,8 @@ His rhetoric attempts to cure the "Moral Friction" of settlement by acknowledgin
 The vector demands that the state reckon with the reality of Indigenous endurance and resistance, which he attempts to do.
 
 This is a hit because he engages with the profound, ongoing reality of the First Nations struggle.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Cause.Effect.Where) The Suburban House (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "Having a safe, secure place to call home is fundamental to the Australian dream. We must do more to make that a reality." (Housing policy address, 2023).
 
@@ -5492,6 +6105,8 @@ The vector is about securing the private block, a goal he pursues through massiv
 
 This is a hit because he successfully identifies and defends the ultimate physical terminus of the national ambition.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Cause.Effect.Why) The Welfare State (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Labor built Medicare, and we will always protect it. It is the bedrock of a fair society." (2022).
 
 **Brief:** The defense and expansion of "The Welfare State" is the absolute centerpiece of Albanese's domestic political identity.
@@ -5509,6 +6124,8 @@ His unwavering support for the public health and welfare systems perfectly align
 The vector represents the "Model of Safety," which he treats as a sacred, untouchable pillar of society.
 
 This is a structural hit because he flawlessly operates the greatest institutional success of the Australian identity.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Cause.Effect.How) Consensus (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We want to bring the country together, to find consensus and move forward, not just tear each other down." (2022).
 
@@ -5528,6 +6145,8 @@ The vector demands utility over ideology, a standard he upholds ruthlessly to ma
 
 This is a hit because he accurately channels the deeply entrenched, problem-solving consensus of the national identity.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Cause.Effect.Cause) The Unfinished Business (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The Uluru Statement from the Heart is a generous invitation... We must answer the call to finish the unfinished business of our nation." (2023).
 
 **Brief:** Albanese expended the greatest political capital of his prime ministership explicitly attempting to address "The Unfinished Business" (the lack of Indigenous recognition in the Constitution).
@@ -5546,6 +6165,8 @@ He refused to allow the foundation to rest on the "Lie," seeking a maturation of
 
 This is a profound hit for the vector, demonstrating his commitment to an honest, rather than fictional, historical outcome.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Cause.Effect.Effect) Continuity (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australians voted for safe change. They voted for stability, and that is what my government is delivering." (2022).
 
 **Brief:** "Continuity" (Stability) is the operational core and ultimate effect of Albanese's governance.
@@ -5563,6 +6184,8 @@ His managerial approach is a direct, highly effective application of the Austral
 The vector demands that the state prioritize peace and order over revolution, which perfectly describes his centrist administration.
 
 This is a massive hit because he accurately embodies the quiet, administrative mandate of the Australian electorate.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **Final Forensic Verdict: Anthony Albanese (Plane 6)**
 
@@ -5599,6 +6222,8 @@ The vector defines the massive, stabilizing center of the electorate, which he c
 
 This is a massive hit because he accurately channels the immense, conservative gravity of the nation's silent majority.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Effect.Who.What) The Multicultural Citizen (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Our multiculturalism is our greatest strength. We are a stronger, better nation because of the people who have chosen to make Australia their home." (Harmony Day Address).
 
 **Brief:** He champions the "Multicultural Citizen" as the ultimate, triumphant demographic outcome of the post-war era.
@@ -5616,6 +6241,8 @@ His celebration of multiculturalism is the direct antithesis of the "Greatest Li
 The vector defines the modern, globalized citizen, a demographic he actively represents and defends.
 
 This is a massive hit because he embraces the most visible, living result of the post-war national project.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Effect.Who.Where) The Coastal Dweller (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must protect our oceans and our coastal environments for future generations." (2023).
 
@@ -5635,6 +6262,8 @@ The vector demands reverence for the "Fringe," which he manages with a focus on 
 
 This is a hit because he successfully defends the ultimate physical terminus of the national ambition.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Effect.Who.Why) The Aspirational (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We want people to be successful. We want Australians to aspire to a better life for themselves and their kids." (Economic Address, 2023).
 
 **Brief:** He perfectly captures the materialist, upwardly-mobile drive that defines the modern Australian economic outcome ("The Aspirational").
@@ -5652,6 +6281,8 @@ He understands that the ultimate result of the colonial project is a highly defe
 The vector represents the material drive of the citizen, which he champions.
 
 This is a hit because he accurately channels the most dominant, materialistic agent produced by the Australian economy.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Effect.Who.How) The Sports Fanatic (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "It's always good when the Aussies win." (Generic sporting commentary).
 
@@ -5671,6 +6302,8 @@ His lack of weaponized "Sporting Ambition" means he misses a powerful, emotive l
 
 This is a failure because he does not successfully map the nation's sporting aggression onto his political brand.
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(Effect.Who.Cause) The Digger's Heir (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We gather to remember those who landed at Gallipoli, and all who have served since, in defense of our nation." (Anzac Day, 2024).
 
 **Brief:** He respectfully engages with "The Digger's Heir" as the ultimate, historical outcome of the national drive to endure.
@@ -5689,6 +6322,8 @@ The vector demands reverence for the original expression of national willpower.
 
 This is a hit because he accurately honors the most sacred historical outcome of the Australian identity.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Effect.Who.Effect) The Citizen (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "My government will be a government for all Australians, regardless of who you voted for." (Election Victory Speech, 2022).
 
 **Brief:** Albanese grounds his entire political legitimacy and methodological approach in the raw democratic authority of "The Citizen."
@@ -5706,6 +6341,8 @@ His entire career is built on the mastery of representative politics, validating
 The vector defines the voter as the active sovereign, a status he frequently acknowledges and defers to.
 
 This is a hit because he accurately channels and respects the authority of "The Citizen" to maintain his political mandate.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **7.2 The Resulting Spaces (Effect.Where)**
 
@@ -5727,6 +6364,8 @@ His lack of engagement means the "Network" effect is largely ignored in his rhet
 
 This is a failure because he operates almost entirely within the domestic sphere.
 
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
+
 **(Effect.Where.What) The Commodity (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must ensure our critical mineral supply chains are secure and that we are adding value here in Australia, not just exporting raw materials." (2024).
 
 **Brief:** Albanese recognizes "The Commodity" (the physical export of resources) as the undeniable, primary spatial and economic outcome of the Australian landscape.
@@ -5744,6 +6383,8 @@ He understands that the world relies on the Australian "Offering," and he uses t
 The vector is about the extraction and offering of wealth, which he manages with a focus on long-term sustainability.
 
 This is a hit because he accurately captures and attempts to modernize the economic emote of the national supply chain.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Effect.Where.Where) The Alliance (US/UK) (υ: +0.6, ψ: -0.3): FAIL.** **Quote:** "AUKUS is a central pillar of our national security, ensuring stability in our region." (2023).
 
@@ -5763,6 +6404,8 @@ The vector represents the colonial safety blanket, which he attempts to transiti
 
 This is a failure because he attempts to alter the foundational, dependent psychology of the Alliance vector.
 
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
+
 **(Effect.Where.Why) The Middle Power (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australia will always stand up for the international rules-based order... We are a trusted partner in our region." (Various international summits).
 
 **Brief:** Albanese has worked aggressively to solidify Australia's outcome as a reliable, diplomatic "Middle Power," particularly in the Pacific and Southeast Asia.
@@ -5780,6 +6423,8 @@ His diplomatic strategy perfectly aligns with the historical goal of using pragm
 The vector demands that the nation act as a responsible, trusted global citizen, a role he embraces enthusiastically.
 
 This is a hit because he successfully operates the expansive, diplomatic emote of the national identity.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Effect.Where.How) Soft Power (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "Our engagement with the Pacific is built on mutual respect and shared challenges, particularly climate change." (2022).
 
@@ -5799,6 +6444,8 @@ The vector represents the non-coercive projection of influence, which his foreig
 
 This is a hit because he accurately operates the primary diplomatic tool of a Middle Power.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Effect.Where.Cause) The Pacific (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Australia is a Pacific nation. We share an ocean and a future with our Pacific family." (Pacific Islands Forum).
 
 **Brief:** He explicitly recognizes the geopolitical reality and responsibility of Australia's dominant position within "The Pacific."
@@ -5817,6 +6464,8 @@ The vector represents the spatial responsibility of the continent, which he mana
 
 This is a hit because he actively champions the mature, outward-looking foreign policy that secures the region.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Effect.Where.Effect) The Asian Century (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Our future lies in our region. We must deepen our engagement with ASEAN and our Asian neighbors." (ASEAN Special Summit, 2024).
 
 **Brief:** Albanese fully embraces the geopolitical outcome that Australia's destiny is inextricably tied to "The Asian Century."
@@ -5834,6 +6483,8 @@ His focus on ASEAN and the Quad demonstrates a complete acceptance of the "Desti
 The vector requires a confident pivot toward the region, which his foreign policy executes flawlessly.
 
 This is a massive hit because he accurately operates the most vital geopolitical and economic trajectory of the modern Commonwealth.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 ## **7.3 The Resulting Institutions (Effect.What)**
 
@@ -5855,6 +6506,8 @@ The vector is about securing the private block, a goal he pursues through massiv
 
 This is a hit because he successfully identifies and defends the ultimate physical terminus of the national ambition.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Effect.What.What) The Superannuation Balance (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Superannuation is about dignity in retirement. It is not a piggy bank for housing deposits." (2023).
 
 **Brief:** He aggressively defends the long-term, systemic architecture of the national retirement savings pool ("The Superannuation Balance").
@@ -5872,6 +6525,8 @@ His defense of superannuation prevents the degradation of the "Mission" of the A
 The vector requires the protection of sustainable, generational wealth, which he enforces structurally.
 
 This is a structural hit because he actively champions the most significant financial institution of the modern state.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 **(Effect.What.Where) The University Sector (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We must invest in skills and education to ensure we have the workforce needed for the clean energy transition." (2023).
 
@@ -5891,6 +6546,8 @@ The vector demands the democratic distribution of knowledge, which he pursues wi
 
 This is a hit because he actively champions the most vital egalitarian institution of the nation.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Effect.What.Why) The Medicare Card (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Labor built Medicare, and we will always protect it. It is the bedrock of a fair society." (2022).
 
 **Brief:** The defense and expansion of "The Medicare Card" (the Universal Model of healthcare) is the absolute centerpiece of Albanese's domestic political identity.
@@ -5908,6 +6565,8 @@ His unwavering support for the public health system perfectly aligns with the co
 The vector represents the "Model of Safety," which he treats as a sacred, untouchable pillar of society.
 
 This is a structural hit because he flawlessly operates the greatest institutional success of the Australian identity.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Effect.What.How) The Renewable Transition (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australia can be a renewable energy superpower. This transition is the greatest economic opportunity of our generation." (2023).
 
@@ -5927,6 +6586,8 @@ The vector requires the state to adapt its mechanical output to survive the mode
 
 This is a hit because he actively works to secure the most vital technological outcome of the current century.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Effect.What.Cause) Biodiversity (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We must halt the extinction crisis and leave nature better off for our kids and grandkids." (Nature Positive Plan).
 
 **Brief:** He implicitly acknowledges the fragility of the Australian ecosystem, responding to the historical extinction crisis by attempting to elevate "Biodiversity" as a core institutional outcome.
@@ -5945,6 +6606,8 @@ The vector represents the necessary protection of the environment, a dynamic he 
 
 This is a hit because he actively attempts to prevent the repetition of the continent's most catastrophic biological events.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Effect.What.Effect) Stability (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australians voted for safe change. They voted for stability, and that is what my government is delivering." (2022).
 
 **Brief:** "Stability" is the operational core, the motivation, and the ultimate institutional effect of Albanese's governance.
@@ -5962,6 +6625,8 @@ His managerial approach is a direct, highly effective application of the Austral
 The vector demands that the state prioritize peace and order over revolution, which perfectly describes his centrist administration.
 
 This is a massive hit because he accurately embodies the quiet, administrative mandate of the Australian electorate.
+
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
 
 ## **7.4 The Resulting Tensions (Effect.Why)**
 
@@ -5983,6 +6648,8 @@ The vector requires the state to navigate the friction between the collective an
 
 This is a hit because he accurately operates the primary economic tension of the Australian drive.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Effect.Why.What) Sustainability vs. Extraction (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We can protect our environment and grow our economy. It doesn't have to be a choice between the two." (2023).
 
 **Brief:** He explicitly attempts to resolve the deep tension between "Sustainability vs. Extraction" (The Mine vs. The Reef).
@@ -6000,6 +6667,8 @@ His focus on critical minerals perfectly aligns with the historical imperative t
 The vector demands the balancing of economic wealth against biological reality, which he consistently attempts to negotiate.
 
 This is a hit because he accurately navigates the deeply entrenched environmental tension of the Australian landscape.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Effect.Why.Where) Urban vs. Regional (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We are a government for all Australians, whether they live in the cities or the regions." (Generic statement).
 
@@ -6019,6 +6688,8 @@ By refusing to romanticize or weaponize the divide, he misses the deep, irration
 
 This is a failure because he interacts with the divide economically, but not politically or emotionally.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Effect.Why.Why) Fair Go vs. Market (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "The market has a role to play, but government must step in when the market fails to deliver fairness." (2022).
 
 **Brief:** He explicitly navigates and attempts to resolve the tension between the "Fair Go vs. Market."
@@ -6036,6 +6707,8 @@ By focusing on systemic support (wages, price caps), he aligns perfectly with th
 The vector requires the state to constantly negotiate the boundary between profit and human dignity, a boundary he actively polices.
 
 This is a structural hit because he treats the Fair Go as an enforceable constraint on the Market.
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Effect.Why.How) Reconciliation vs. Denial (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "The Uluru Statement is an opportunity to end the silence. We must choose reconciliation over denial." (2023).
 
@@ -6055,6 +6728,8 @@ The vector represents the ongoing moral debt of the nation, which he aggressivel
 
 This is a massive hit because he risked his political capital to force a resolution to the deepest moral tension of the continent.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Effect.Why.Cause) Luck vs. Effort (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must shape the future, not just let it happen to us. We cannot rely on luck alone." (2022).
 
 **Brief:** He explicitly attacks the complacency of "Luck" and champions "Effort."
@@ -6073,6 +6748,8 @@ The vector requires the state to navigate the friction between unearned wealth a
 
 This is a hit because he actively attempts to cure the nation of its reliance on the "Lucky" paradigm.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Effect.Why.Effect) Unity vs. Division (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "My government will seek to unite the country, not divide it. We have had enough of the culture wars." (2022).
 
 **Brief:** Resolving the tension between "Unity vs. Division" in favor of Unity is the defining operational goal of his Prime Ministership.
@@ -6090,6 +6767,8 @@ His entire brand is built on returning the nation to a state of order and cooper
 The vector demands that the state navigate the friction between tribalism and the common good, an effort he champions.
 
 This is a massive hit because he accurately embodies the quiet, administrative mandate for national unity.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 ## **7.5 The Resulting Methods (Effect.How)**
 
@@ -6111,6 +6790,8 @@ The vector defines the ballot as the active mechanism of sovereignty, a status h
 
 This is a hit because he accurately channels and respects the authority of the democratic method to maintain his mandate.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Effect.How.What) The Royal Commission (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The Robodebt Royal Commission has delivered its findings, and we will ensure those responsible are held to account." (2023).
 
 **Brief:** He utilizes "The Royal Commission" not for partisan witch-hunts, but to expose and correct systemic failures of governance.
@@ -6128,6 +6809,8 @@ His use of the Royal Commission is measured and targeted at administrative refor
 The vector seeks truth through formal inquiry, a force he channels effectively.
 
 This is a hit because he consistently employs the most powerful investigative tool of the definition to restore systemic integrity.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Effect.How.Where) The High Court (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We respect the independence of the High Court and will abide by its rulings." (Following various legal challenges).
 
@@ -6147,6 +6830,8 @@ The vector requires acceptance of the Court's ultimate authority, which his gove
 
 This is a hit because he structurally supports the spatial mechanism designed to resolve legal conflict.
 
+**Follow-Through / Reality Check:** Strong follow-through. He successfully leverages state power to operationalize this vector, proving he is a capable operator of this specific Australian ideal.
+
 **(Effect.How.Why) The Media (υ: +0.4, ψ: -0.4): FAIL.** **Quote:** "We will engage constructively with the media, but our focus is on delivering for the Australian people." (Generic statement).
 
 **Brief:** While he engages with the media out of necessity, he does not heavily weaponize "The Media" (particularly the Murdoch press) as a primary method of governance in the way conservative leaders often do.
@@ -6164,6 +6849,8 @@ He is not perfectly integrated into the most powerful, regressive communication 
 The vector defines the media as a primary enforcement mechanism, which he struggles to control.
 
 This is a failure because he does not successfully operate the primary, sensationalist communication method of the modern era.
+
+**Follow-Through / Reality Check:** Hypocrisy Gap / Failed Maximiser. He attempts to suppress or alter this vector but often runs into massive political friction when doing so.
 
 **(Effect.How.How) The ABS (Census/Data) (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Good policy requires good data. We must understand the changing face of our nation to govern it effectively." (On funding the ABS).
 
@@ -6183,6 +6870,8 @@ The vector provides the foundational knowledge required to govern the state, whi
 
 This is a hit because he actively relies on the state's self-measurement to track and support the population.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Effect.How.Cause) The Pub Test (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We need to make sure that our policies make sense to everyday Australians, that they pass the pub test." (Various interviews).
 
 **Brief:** Albanese consistently utilizes the "Pub Test" as a rhetorical baseline to ensure his policies do not appear overly academic or out-of-touch.
@@ -6201,6 +6890,8 @@ The vector demands that ideas be accessible and "fair" to the average person, a 
 
 This is a structural hit because he successfully operates the primary logical filter of the Australian electorate.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Effect.How.Effect) The Treasury (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "Our economic management is focused on delivering a strong, sustainable budget that works for all Australians." (Budget Speech).
 
 **Brief:** "The Treasury" is the ultimate, operational center of Albanese's methodology.
@@ -6218,6 +6909,8 @@ His reliance on the Treasury reflects his technocratic, managerial approach to g
 The vector defines the economic engine of the state, which he controls and reveres.
 
 This is a massive hit because he actively champions the most vital bureaucratic and economic methodology of the nation.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **7.6 The Resulting Histories (Effect.Cause)**
 
@@ -6239,6 +6932,8 @@ The vector represents the ultimate demographic target of state engineering, whic
 
 This is a hit because he acknowledges and plans for the historical outcome of his policies on future citizens.
 
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
+
 **(Effect.Cause.What) The Energy Transition (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australia can be a renewable energy superpower. This transition is the greatest economic opportunity of our generation." (2023).
 
 **Brief:** He explicitly recognizes "The Energy Transition" as the necessary, overarching historical and technological outcome required for national survival.
@@ -6256,6 +6951,8 @@ His demand to transition the "Smokestack Origin" into the "Renewable Future" dem
 The vector requires the state to adapt its mechanical output to survive the modern era, an imperative he champions.
 
 This is a hit because he actively works to secure the most vital historical and technological outcome of the current century.
+
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
 
 **(Effect.Cause.Where) Northern Australia (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We are supporting northern Australia to develop its industries, infrastructure, and defense capabilities." (2023).
 
@@ -6275,6 +6972,8 @@ The vector represents the strategic and economic potential of the top end, which
 
 This is a hit because he incorporates the reality of Northern Australia into his national strategy.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Effect.Cause.Why) The Republic (υ: +0.7, ψ: +0.4): FAIL.** **Quote:** "I am a lifelong republican. I believe Australia should have its own head of state." (Various).
 
 **Brief:** Albanese acts as a strong advocate for "The Republic," viewing it as the final, logical historical outcome of the Australian colonial project: full independence.
@@ -6292,6 +6991,8 @@ While his personal alignment is strong, his political methodology has effectivel
 The vector defines the necessary completion of the national architecture, an outcome his government has delayed.
 
 This is a failure of the vector because his political methodology has failed to achieve the ultimate sovereign outcome of the Australian timeline.
+
+**Follow-Through / Reality Check:** High capacity for suppression. His governance explicitly attempts to cure the nation of this specific shadow or trait, confirming the structural failure.
 
 **(Effect.Cause.How) Treaty [First Nations Perspective] (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "The Uluru Statement from the Heart calls for Voice, Treaty, and Truth. We are committed to that journey." (2022).
 
@@ -6311,6 +7012,8 @@ The vector defines the proactive, negotiated settlement of historical trauma, a 
 
 This is a profound failure of the vector because he retreated from the most significant methodological outcome required for national healing.
 
+**Follow-Through / Reality Check:** Absolute failure, but intentional. He does not want to operate this vector and successfully keeps his government detached from it.
+
 **(Effect.Cause.Cause) Asia (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Our future lies in our region. We must deepen our engagement with ASEAN and our Asian neighbors." (ASEAN Special Summit, 2024).
 
 **Brief:** Albanese fully embraces the geopolitical outcome that Australia's historical destiny is inextricably tied to "Asia."
@@ -6329,6 +7032,8 @@ The vector requires a confident pivot toward the region, which his foreign polic
 
 This is a massive hit because he accurately operates the most vital geopolitical and historical trajectory of the modern Commonwealth.
 
+**Follow-Through / Reality Check:** Consistent follow-through. His governance aligns tightly with this vector, actively managing its demands.
+
 **(Effect.Cause.Effect) The Good Life (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We want every Australian to have the opportunity to buy a home, raise a family, and enjoy a secure retirement." (Generic policy statement).
 
 **Brief:** He explicitly recognizes "The Good Life" as the ultimate, intended historical outcome of the Australian project.
@@ -6346,6 +7051,8 @@ His entire domestic agenda is aimed at preserving the time and resources require
 The vector represents the passive enjoyment of the continent's wealth across generations, which he defends as a structural right.
 
 This is a hit because he accurately channels and protects the ultimate emotional, historical, and spatial goal of the Australian citizen.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **7.7 The Final Emotional States (Effect.Effect)**
 
@@ -6367,6 +7074,8 @@ The vector requires the active pursuit of egalitarianism to ensure national peac
 
 This is a massive structural hit because he treats the Fair Go as the ultimate, enforceable emotional goal of the nation.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Effect.Effect.What) The Lifestyle (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Australians deserve to have secure work so they can enjoy their lives, spend time with their families, and participate in their communities." (2022).
 
 **Brief:** He defends "The Lifestyle" as the ultimate, intended emotional state of the "Fair Go."
@@ -6384,6 +7093,8 @@ His industrial relations reforms are directly aimed at preserving the time and r
 The vector represents the passive enjoyment of the continent's wealth, which he defends as a structural emotional right.
 
 This is a hit because he accurately channels and protects the ultimate emotional goal of the Australian citizen.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 **(Effect.Effect.Where) Girt By Sea (Isolation/Security) (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are an island continent, and that gives us unique advantages in biosecurity and national security." (Generic defense statement).
 
@@ -6403,6 +7114,8 @@ The vector represents the emotional safety provided by distance, which he manage
 
 This is a hit because he successfully operates the primary geographic source of Australian emotional security.
 
+**Follow-Through / Reality Check:** Absolute capacity. He flawlessly executes the mechanical requirements of this vector, translating his political will into structural reality.
+
 **(Effect.Effect.Why) The Second Chance (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We believe in a society that gives people a hand up when they need it, a second chance." (On welfare reform).
 
 **Brief:** Albanese strongly supports the historical emotional logic of "The Second Chance" (the modern iteration of the "Ticket of Leave").
@@ -6420,6 +7133,8 @@ His welfare and immigration policies reflect the deep historical understanding t
 The vector requires a mechanism for advancement and inclusion, which he attempts to restore to the system.
 
 This is a hit because he operates the core emotional logic of the Australian "Fair Go."
+
+**Follow-Through / Reality Check:** Full capacity. There is no hypocrisy gap here; his legislative agenda directly supports and defends this core national trait.
 
 **(Effect.Effect.Why) Dispossession [First Nations Perspective] (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "The Uluru Statement from the Heart is a generous invitation... We must answer the call to heal our nation." (2023).
 
@@ -6439,6 +7154,8 @@ The vector defines the necessary emotional resolution of historical trauma, a pr
 
 This is a profound failure of the vector because he retreated from the most significant emotional outcome required for national healing.
 
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
+
 **(Effect.Effect.How) She'll Be Right (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "We must prepare for the future. The transition to clean energy is essential for our national survival and prosperity." (2022).
 
 **Brief:** Albanese explicitly rejects the final emotional state of "She'll Be Right" (passive, fatalistic complacency).
@@ -6456,6 +7173,8 @@ While his goal is national security, he refuses to rely on the cynical stoicism 
 The vector is about minimizing fuss and trusting the status quo, which contradicts his entire narrative of necessary national transition.
 
 This is a failure of the vector because he actively fights the cultural tendency to accept the final emotional state of apathy.
+
+**Follow-Through / Reality Check:** Strong capacity for rejection. He refuses to operate this vector, actively replacing its logic with his own administrative priorities.
 
 **(Effect.Effect.Cause) The Land (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Protecting our unique environment, our national parks, and the Great Barrier Reef is not just an environmental responsibility, it is an economic one." (2022).
 
@@ -6475,6 +7194,8 @@ The vector represents the geological truth of the continent, which he incorporat
 
 This is a hit because he respects and protects the oldest geographical cause and final emotional anchor of the Australian landscape.
 
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
+
 **(Effect.Effect.Effect) Australia (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "We are a great country. We can be even greater if we work together." (2022).
 
 **Brief:** The final, total emotional outcome of Albanese's governance is a belief in the mature, functioning, and unified entity of "Australia."
@@ -6492,6 +7213,8 @@ His managerial approach domestically and his diplomatic engagement international
 The vector demands that the state mature into full, confident independence, an imperative his platform attempts to fulfill.
 
 This is a massive hit because he accurately targets and attempts to secure the ultimate, total emotional and structural outcome of the nation.
+
+**Follow-Through / Reality Check:** High capacity. His actions and policy delivery structurally match his rhetorical claims, demonstrating genuine follow-through.
 
 ## **Final Forensic Verdict: Anthony Albanese (Plane 7)**
 
