@@ -98,10 +98,21 @@ def get_gemini_client():
     genai.configure(api_key=api_key)
     return genai
 
+def normalize_url(url):
+    if not url:
+        return ""
+    url = url.strip()
+    if "?" in url:
+        url = url.split("?")[0]
+    if "#" in url:
+        url = url.split("#")[0]
+    return url.lower().strip()
+
 # --- 1. HISTORICAL STORIES LOADING & DEDUPLICATION ---
 def load_historical_evaluations():
     seen_urls = set()
     seen_ids = set()
+    seen_targets = set()
     bot_stories_dir = os.path.join(script_dir, "stories")
     
     if os.path.exists(bot_stories_dir):
@@ -115,14 +126,19 @@ def load_historical_evaluations():
                 
                 url = config.get("link") or config.get("target_url")
                 if url:
-                    seen_urls.add(url.strip().lower())
+                    seen_urls.add(normalize_url(url))
+                
+                target_url = config.get("target_url")
+                if target_url:
+                    seen_targets.add(target_url.strip().lower())
+                    
                 story_id = config.get("id")
                 if story_id:
                     seen_ids.add(story_id.strip().lower())
-            print(f"Loaded {len(seen_urls)} historical URLs and {len(seen_ids)} historical story IDs.")
+            print(f"Loaded {len(seen_urls)} historical URLs, {len(seen_targets)} target URLs, and {len(seen_ids)} historical story IDs.")
         except Exception as e:
             print(f"Warning: Failed to load historical evaluations: {e}")
-    return seen_urls, seen_ids
+    return seen_urls, seen_ids, seen_targets
 
 def extract_external_link(post):
     record = getattr(post, 'record', None)
@@ -150,7 +166,7 @@ def extract_external_link(post):
     return None
 
 # --- 2. CANDIDATE HARVESTING ---
-def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, category="general", topic=None, banned_topic=None):
+def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, category="general", topic=None, banned_topic=None):
     candidates = []
     
     # Map category to RSS feeds
@@ -240,7 +256,8 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, category="general
                         if any(bk in title_text.lower() or bk in desc_cleaned.lower() for bk in banned_keywords):
                             continue
                             
-                    if link_text.strip().lower() in seen_urls:
+                    normalized = normalize_url(link_text)
+                    if normalized in seen_urls:
                         continue
                     subject_approx = title_text[:30].lower().replace(" ", "_").replace("/", "_")
                     if subject_approx in seen_ids:
@@ -253,7 +270,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, category="general
                         "text": text_body,
                         "subject": title_text
                     })
-                    seen_urls.add(link_text.strip().lower())
+                    seen_urls.add(normalized)
             except Exception as e:
                 print(f"Warning: Failed to fetch {feed['name']} RSS: {e}")
 
@@ -271,8 +288,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, category="general
                 
                 bsky_feeds = [
                     "https://bsky.app/profile/aendra.com/feed/verified-news",
-                    "https://bsky.app/profile/aendra.com/feed/news-2-0",
-                    "https://bsky.app/profile/jakei.bsky.social/feed/aaab2ryh7blri"
+                    "https://bsky.app/profile/aendra.com/feed/news-2-0"
                 ]
                 
                 english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could)\b', re.IGNORECASE)
@@ -315,10 +331,47 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, category="general
                             if any(bk in text.lower() for bk in banned_keywords):
                                 continue
                                 
-                        article_url = extract_external_link(item.post) or post_url
+                        # Check for valid embeds (non-bsky external link, quote post, or video)
+                        embed_view = getattr(item.post, 'embed', None)
+                        record_embed = getattr(item.post.record, 'embed', None) if getattr(item.post, 'record', None) else None
                         
-                        if article_url.strip().lower() in seen_urls:
+                        has_quote = False
+                        if embed_view:
+                            if hasattr(embed_view, 'record'):
+                                has_quote = True
+                        if record_embed:
+                            if record_embed.py_type in ['app.bsky.embed.record', 'app.bsky.embed.recordWithMedia']:
+                                has_quote = True
+                                
+                        has_video = False
+                        if embed_view:
+                            if hasattr(embed_view, 'video') or 'video' in getattr(embed_view, 'py_type', '').lower():
+                                has_video = True
+                        if record_embed:
+                            if 'video' in getattr(record_embed, 'py_type', '').lower():
+                                has_video = True
+                            elif record_embed.py_type == 'app.bsky.embed.recordWithMedia' and hasattr(record_embed, 'media'):
+                                if 'video' in getattr(record_embed.media, 'py_type', '').lower():
+                                    has_video = True
+
+                        ext_url = extract_external_link(item.post)
+                        has_external = False
+                        if ext_url:
+                            if not any(d in ext_url for d in ['bsky.app', 'bsky.social']):
+                                has_external = True
+                                
+                        if not (has_external or has_quote or has_video):
                             continue
+                                
+                        article_url = extract_external_link(item.post) or post_url
+                        normalized = normalize_url(article_url)
+                        
+                        if normalized in seen_urls:
+                            continue
+                            
+                        if post_url.strip().lower() in seen_targets:
+                            continue
+                            
                         subject_approx = text[:30].lower().replace(" ", "_").replace("/", "_")
                         if subject_approx in seen_ids:
                             continue
@@ -330,7 +383,8 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, category="general
                             "text": text,
                             "subject": text[:80] + "..."
                         })
-                        seen_urls.add(article_url.strip().lower())
+                        seen_urls.add(normalized)
+                        seen_targets.add(post_url.strip().lower())
             except Exception as e:
                 print(f"Warning: Bluesky login or retrieval failed: {e}")
         else:
@@ -619,9 +673,9 @@ def main():
     print("GOOGLE AI STUDIO ONE-SHOT BATCH EVALUATOR")
     print("=" * 80)
     
-    seen_urls, seen_ids = load_historical_evaluations()
+    seen_urls, seen_ids, seen_targets = load_historical_evaluations()
     
-    candidates = harvest_news(args.rss, args.bsky, seen_urls, seen_ids, category=args.category, topic=args.topic, banned_topic=args.banned_topic)
+    candidates = harvest_news(args.rss, args.bsky, seen_urls, seen_ids, seen_targets, category=args.category, topic=args.topic, banned_topic=args.banned_topic)
     if not candidates:
         print("\nNo new, non-duplicate candidates found. Exiting.")
         sys.exit(0)
