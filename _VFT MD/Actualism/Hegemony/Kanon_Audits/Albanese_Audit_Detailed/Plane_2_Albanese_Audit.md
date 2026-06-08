@@ -1,0 +1,50 @@
+### Plane 2 Audit (Anthony Albanese)
+
+| Vector ID | Kanon Descriptor | Score ( υ, ψ ) | Score | Analysis |
+|-----------|------------------|----------------|-------|----------|
+| What.Who.Who | The Independent Australian Briton | (0.4, 0.3) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Independent Australian Briton'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Who.What | The Constituent | (0.8, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Constituent'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Who.Where | The Resident | (0.8, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Resident'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Who.Why | The Mate | (0.7, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Mate'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Who.How | The Compelled Voter | (0.7, -0.4) | +1 | Hit. Labor strongly defends compulsory voting as the bedrock of egalitarian democracy. |
+| What.Who.Cause | The Subject | (0.4, -0.3) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Subject'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Who.Effect | The Servant | (0.6, -0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Servant'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.What.Who | The Governor-General | (0.3, -0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Governor-General'. His public record lacks a strong, defining stance on this specific vector. |
+| What.What.What | Peace, Order, and Good Government | (0.6, -0.4) | +1 | Hit. Emphasizes stability and competence over radical change, explicitly promising 'safe change' during the 2022 election. |
+| What.What.Where | Supremacy | (0.5, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'Supremacy'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.What.Why | The Double Majority | (0.6, -0.5) | +1 | Hit. Engaged deeply with the 'Double Majority' requirement during the Voice referendum, acknowledging its difficulty. |
+| What.What.How | The Interpreter | (0.5, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Interpreter'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.What.Cause | The Deal | (0.6, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Deal'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.What.Effect | The Gridlock | (-0.3, -0.5) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Gridlock'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Where.Who | The States' House | (0.6, 0.3) | +1 | Hit. Leverages National Cabinet to maintain cooperative federalism across state lines. |
+| What.Where.What | The People's House | (0.7, 0.4) | +1 | Hit. Treats the House of Representatives as the primary mandate engine, 'We have a mandate for our policies, and we expect the Parliament to respect that.' |
+| What.Where.Where | The Bush Capital | (0.4, -0.3) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Bush Capital'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Where.Why | Fiscal Equalization | (0.7, 0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'Fiscal Equalization'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Where.How | Washminster System | (0.4, 0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'Washminster System'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Where.Cause | The Colonial Survey | (-0.2, -0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Colonial Survey'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Why.Who | The Crimson Thread | (-0.4, 0.5) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Crimson Thread'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Why.What | The Workingman's Paradise | (0.8, 0.6) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Workingman's Paradise'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Why.Where | A Bulwark | (-0.3, 0.6) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'A Bulwark'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Why.Why | The Common Market | (0.6, 0.5) | -1 | Fail. Labor ideology generally opposes the unrestricted application of The Common Market, favouring collective structures and state intervention. |
+| What.Why.How | The Secular State | (0.7, -0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Secular State'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Why.Cause | The Great Strikes | (0.7, 0.8) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Great Strikes'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Why.Effect | The Quiet Life | (0.5, -0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Quiet Life'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.How.Who | The Faceless Men | (-0.4, 0.5) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Faceless Men'. His public record lacks a strong, defining stance on this specific vector. |
+| What.How.Where | The Secret Ballot | (0.9, 0.6) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Secret Ballot'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.How.Why | Preferential Voting | (0.7, 0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'Preferential Voting'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.How.What | The Referendum | (0.8, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Referendum'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.How.How | The Royal Commission | (0.7, 0.6) | +1 | Hit. Utilizes commissions (e.g. Robodebt) to expose institutional failures and demand accountability. |
+| What.How.Cause | The Census | (0.5, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Census'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.How.Effect | The Spill | (-0.3, 0.6) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Spill'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Cause.Who | The Prophet | (0.7, 0.8) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Prophet'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Cause.What | The Imperial Act | (0.3, -0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Imperial Act'. His public record lacks a strong, defining stance on this specific vector. |
+| What.Cause.Where | The Stockade | (0.8, 0.9) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Stockade'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Cause.How | The Corowa Plan | (0.9, 0.7) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Corowa Plan'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Cause.Cause | State Socialism | (0.6, 0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'State Socialism'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Cause.Effect | Federation Day | (0.6, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'Federation Day'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| What.Effect.Who | The Anzac | (0.6, 0.7) | +1 | Hit. Fully committed to traditional security structures and alliances, demonstrating structural alignment with The Anzac. |
+| What.Effect.What | The Lucky Country | (0.3, -0.4) | -1 | Fail. Albanese rejects the 'luck' paradigm in favor of state-backed industrial strategy ('Future Made in Australia'). |
+| What.Effect.Why | The Cultural Cringe | (-0.4, -0.5) | -1 | Fail. Pushes against it with the 'Future Made in Australia' industrial policy, asserting local competence over importing everything. |
+| What.Effect.How | Mateship | (0.7, 0.4) | +1 | Hit. Albanese consistently invokes 'no one left behind', reflecting structural Mateship. |
+| What.Effect.Cause | The Great Silence | (-0.8, -0.6) | -1 | Fail. Albanese structurally opposes the selfish/extractive nature of 'The Great Silence', preferring collective solidarity. |
+| What.Effect.Effect | The Nanny State | (0.4, -0.5) | +1 | Hit. Implemented world-leading bans on recreational vaping, fully embracing state intervention for public health outcomes. |

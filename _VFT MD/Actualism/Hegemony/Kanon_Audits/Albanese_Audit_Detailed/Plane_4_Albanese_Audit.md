@@ -1,0 +1,51 @@
+### Plane 4 Audit (Anthony Albanese)
+
+| Vector ID | Kanon Descriptor | Score ( υ, ψ ) | Score | Analysis |
+|-----------|------------------|----------------|-------|----------|
+| Why.Who.Who | The Volunteer | (0.9, 0.8) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Volunteer'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Who.What | The Bludger | (-0.6, -0.5) | -1 | Fail. Albanese structurally opposes the selfish/extractive nature of 'The Bludger', preferring collective solidarity. |
+| Why.Who.Where | The Knocker | (-0.4, -0.3) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Knocker'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Who.Why | The Digger | (0.7, 0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Digger'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Who.How | The Gambler | (-0.2, 0.5) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Gambler'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Who.Cause | The Battler | (0.6, 0.5) | +1 | Hit. Leans heavily on his origin story. Quote: 'It says a lot about our great country that a son of a single mom who was a disability pensioner... can stand before you tonight as prime minister.' |
+| Why.Who.Effect | The Larrikin | (0.4, 0.3) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Larrikin'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.What.Who | The Fair Go | (0.9, 0.5) | +1 | Hit. Consistently frames policy around the Fair Go. Quote: 'My Labor government will always stand up for the fair go.' |
+| Why.What.What | The Weekend | (0.8, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Weekend'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.What.Where | The Home | (0.5, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Home'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.What.Why | The Holiday | (0.5, -0.2) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Holiday'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.What.How | The Ute | (0.6, 0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Ute'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.What.Cause | The Pay Packet | (0.7, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Pay Packet'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.What.Effect | The Pension | (0.8, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Pension'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Where.Who | The Pub | (0.5, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Pub'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Where.What | The Beach | (0.6, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Beach'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Where.Where | Country [FN] | (0.9, 0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'Country [FN]'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Where.Why | The Club | (0.4, -0.2) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Club'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Where.How | The Shed | (0.5, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Shed'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Where.Cause | The Field | (0.6, 0.6) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Field'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Where.Effect | The Mall | (-0.2, 0.3) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Mall'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Why.Who | Mateship | (0.7, 0.5) | +1 | Hit. Albanese consistently invokes 'no one left behind', reflecting structural Mateship. |
+| Why.Why.What | Tall Poppy Syndrome | (-0.4, 0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'Tall Poppy Syndrome'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Why.Where | Cultural Cringe | (-0.5, -0.4) | -1 | Fail. Albanese structurally opposes the selfish/extractive nature of 'Cultural Cringe', preferring collective solidarity. |
+| Why.Why.Why | She'll Be Right | (0.2, -0.6) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'She'll Be Right'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Why.How | Have a Go | (0.6, 0.7) | +1 | Hit. Albanese's legislative agenda structurally supports 'Have a Go'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Why.Cause | Fear of Missing Out | (-0.2, 0.5) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'Fear of Missing Out'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Why.Effect | The Good Life | (0.5, -0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Good Life'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.How.Who | Shouting | (0.7, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'Shouting'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.How.What | Sledging | (-0.3, 0.5) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'Sledging'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.How.Where | Queuing | (0.8, -0.2) | +1 | Hit. Albanese's legislative agenda structurally supports 'Queuing'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.How.Why | Striking | (0.7, 0.7) | +1 | Hit. Albanese's legislative agenda structurally supports 'Striking'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.How.How | Improvising | (0.6, 0.6) | +1 | Hit. Albanese's legislative agenda structurally supports 'Improvising'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.How.Cause | Gambling | (-0.3, 0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'Gambling'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.How.Effect | Volunteering | (0.9, 0.7) | +1 | Hit. Albanese's legislative agenda structurally supports 'Volunteering'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Cause.Who | The Stain | (-0.4, -0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Stain'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Cause.What | The Gold | (0.5, 0.6) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Gold'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Cause.Where | The Bush | (0.5, -0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Bush'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Cause.Why | The War | (0.6, 0.7) | +1 | Hit. Albanese's legislative agenda structurally supports 'The War'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Cause.Effect | The Boom | (0.4, 0.4) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'The Boom'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Effect.Who | The Citizen | (0.7, 0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Citizen'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Effect.What | The Middle Class | (0.5, -0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'The Middle Class'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Effect.Where | The Suburb | (0.4, -0.4) | +1 | Hit. Centers his economic policies around suburban families and outer-suburban cost-of-living relief. |
+| Why.Effect.Why | Stability | (0.6, -0.4) | +1 | Hit. Albanese's legislative agenda structurally supports 'Stability'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Effect.How | Cynicism | (0.3, -0.2) | 0 | Miss. Albanese demonstrates neutrality or mixed outcomes regarding 'Cynicism'. His public record lacks a strong, defining stance on this specific vector. |
+| Why.Effect.Cause | Prosperity | (0.6, 0.3) | +1 | Hit. Albanese's legislative agenda structurally supports 'Prosperity'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
+| Why.Effect.Effect | Sovereignty | (0.7, 0.5) | +1 | Hit. Albanese's legislative agenda structurally supports 'Sovereignty'. He prioritizes vectors with high collective benefit (+υ). Quote: 'We will govern for all Australians.' |
