@@ -150,17 +150,54 @@ def extract_external_link(post):
     return None
 
 # --- 2. CANDIDATE HARVESTING ---
-def harvest_news(target_rss, target_bsky, seen_urls, seen_ids):
+def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, category="general", topic=None, banned_topic=None):
     candidates = []
     
-    # Harvest RSS
-    if target_rss > 0:
-        print(f"\nHarvesting from RSS feeds (Target: {target_rss})...")
+    # Map category to RSS feeds
+    rss_feeds = []
+    if category == "tech":
+        rss_feeds = [
+            {"name": "BBC Tech", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml"},
+            {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"}
+        ]
+    elif category == "business":
+        rss_feeds = [
+            {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml"},
+            {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"}
+        ]
+    elif category == "politics":
+        rss_feeds = [
+            {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
+            {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"}
+        ]
+    elif category == "science":
+        rss_feeds = [
+            {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"},
+            {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"}
+        ]
+    elif category == "world":
+        rss_feeds = [
+            {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
+            {"name": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"}
+        ]
+    else: # general
         rss_feeds = [
             {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
             {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"}
         ]
+
+    print(f"Harvest category selected: {category.upper()}")
+    keywords = [k.strip().lower() for k in topic.split(",") if k.strip()] if topic else []
+    if keywords:
+        print(f"Applying topic filters (OR match): {keywords}")
         
+    banned_keywords = [k.strip().lower() for k in banned_topic.split(",") if k.strip()] if banned_topic else []
+    if banned_keywords:
+        print(f"Applying banned topic filters (excluding): {banned_keywords}")
+    
+    # Harvest RSS
+    if target_rss > 0:
+        print(f"\nHarvesting from RSS feeds (Target: {target_rss})...")
         for feed in rss_feeds:
             if len([c for c in candidates if c["mode"] == "root"]) >= target_rss:
                 break
@@ -192,6 +229,17 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids):
                     
                     if len(text_body) < 45:
                         continue
+                        
+                    # Topic filtering
+                    if keywords:
+                        if not any(k in title_text.lower() or k in desc_cleaned.lower() for k in keywords):
+                            continue
+                            
+                    # Banned topic filtering
+                    if banned_keywords:
+                        if any(bk in title_text.lower() or bk in desc_cleaned.lower() for bk in banned_keywords):
+                            continue
+                            
                     if link_text.strip().lower() in seen_urls:
                         continue
                     subject_approx = title_text[:30].lower().replace(" ", "_").replace("/", "_")
@@ -223,7 +271,8 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids):
                 
                 bsky_feeds = [
                     "https://bsky.app/profile/aendra.com/feed/verified-news",
-                    "https://bsky.app/profile/aendra.com/feed/news-2-0"
+                    "https://bsky.app/profile/aendra.com/feed/news-2-0",
+                    "https://bsky.app/profile/jakei.bsky.social/feed/aaab2ryh7blri"
                 ]
                 
                 english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could)\b', re.IGNORECASE)
@@ -256,6 +305,16 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids):
                         if not english_words.search(text):
                             continue
                             
+                        # Topic filtering
+                        if keywords:
+                            if not any(k in text.lower() for k in keywords):
+                                continue
+                                
+                        # Banned topic filtering
+                        if banned_keywords:
+                            if any(bk in text.lower() for bk in banned_keywords):
+                                continue
+                                
                         article_url = extract_external_link(item.post) or post_url
                         
                         if article_url.strip().lower() in seen_urls:
@@ -310,10 +369,10 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    real_psi (float),\n"
         '    "mode",\n'
         "    [\n"
-        '      "post 1 (under 250 chars)",\n'
+        '      "post 1 (under 250 chars, ending with 1-2 hashtags)",\n'
         '      "post 2 (under 250 chars)",\n'
         "      ...\n"
-        "      (exactly 14 posts)\n"
+        "      (exactly 13 posts)\n"
         "    ]\n"
         "  ]\n"
         "]\n\n"
@@ -330,7 +389,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    -1.0,\n"
         '    "root",\n'
         "    [\n"
-        '      "Hook text here.\\nEvidence: a, b, c",\n'
+        '      "Hook text here.\\nEvidence: a, b, c\\n#Aletheia #Topic",\n'
         '      "Claim text.\\nStated Judgement: (+1.0, 0.0) — Good Preference",\n'
         '      "Reality text.\\nResulting Judgement: (-1.0, -1.0) — Greater Evil",\n'
         '      "Verdict: FAIL — The Path of Deception.\\nExplanation.",\n'
@@ -342,8 +401,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '      "The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie.",\n'
         '      "Alethekanon:\\nAnalysis.",\n'
         '      "Awwthekanon:\\nEmpathy.",\n'
-        '      "Brothekanon:\\nCasual take.",\n'
-        '      "Synthesized Resolution Vector:\\nBlended Path: summary.\\nFinal Recalculated Coordinates: (-1.0, -1.0)"\n'
+        '      "Brothekanon:\\nCasual take."\n'
         "    ]\n"
         "  ]\n"
         "]"
@@ -524,8 +582,8 @@ def process_evaluations(evaluations):
 
             # Post count validation
             posts = story.get("posts", [])
-            if len(posts) != 14:
-                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 14). Skipping.")
+            if len(posts) != 13:
+                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 13). Skipping.")
                 continue
 
             # Character limit warnings
@@ -552,6 +610,9 @@ def main():
     parser.add_argument("--bsky", type=int, default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
     parser.add_argument("--chunk-size", type=int, default=3, help="Number of stories to process per API call (default: 3)")
+    parser.add_argument("--category", type=str, default="general", choices=["general", "tech", "business", "politics", "science", "world"], help="Category of news to harvest (default: general)")
+    parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
+    parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
     args = parser.parse_args()
     
     print("=" * 80)
@@ -560,7 +621,7 @@ def main():
     
     seen_urls, seen_ids = load_historical_evaluations()
     
-    candidates = harvest_news(args.rss, args.bsky, seen_urls, seen_ids)
+    candidates = harvest_news(args.rss, args.bsky, seen_urls, seen_ids, category=args.category, topic=args.topic, banned_topic=args.banned_topic)
     if not candidates:
         print("\nNo new, non-duplicate candidates found. Exiting.")
         sys.exit(0)

@@ -4,7 +4,7 @@ This document defines the strict output schema and logical steps sequence for Al
 
 ---
 
-## 1. The 14-Step Conversational JSON Schema & Blueprint
+## 1. The 13-Step Conversational JSON Schema & Blueprint
 
 Every story config JSON file saved under `stories/` or `stories/live/` must be a list containing a single dictionary: `[ { ... } ]`. It must contain **only** these 13 allowed keys, in standard order:
 
@@ -16,7 +16,7 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 6. `"real_psi"`: Actual ground-level Will decimal (`-2.0` to `+2.0`).
 7. `"mode"`: `"reply"` or `"root"`.
 8. `"target_url"`: The target Bluesky post URL we are replying to (only when `mode` is `"reply"`).
-9. `"posts"`: A list of exactly 14 strings (the logical steps detailed below).
+9. `"posts"`: A list of exactly 13 strings (the logical steps detailed below).
 10. `"rkeys"`: (Optional) List of Bluesky post keys (added automatically when live).
 11. `"post_urls"`: (Optional) List of posted thread URLs (added automatically when live).
 12. `"status"`: `"COMPLETED DRY RUN"` or `"LIVE"`.
@@ -34,14 +34,15 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 
 ---
 
-## 3. The 14 Logical Steps Mapping
+## 3. The 13 Logical Steps Mapping
 
-To maintain the strict 14-element limit on disk, the bot must output the `"posts"` array mapped exactly as follows:
+To maintain the strict 13-element limit on disk, the bot must output the `"posts"` array mapped exactly as follows:
 
 ### Element 0: The Hook
 * **Wording**: Starts with a custom, punchy, human-style editorial scene-setter one-liner (e.g., exposing a structural framing or irony). Do **NOT** write dry summaries or repeat candidate text. Follow it with the clean news subject title (no "Subject:" prefix) and the evidence standards line.
 * **Metrics**: State the three core actualism parameters: `Evidence: [Stated Ideal in 2-5 words], [Actual Effect in 2-5 words], [Actual Ideal in 2-5 words]`
-* **Character limit**: Use the saved character space (since the raw URL is omitted and handled natively by the link card embed) to expand the intro into a detailed, premium paragraph (aim for 200-245 characters).
+* **Hashtags**: End the post with 1-2 relevant hashtags (e.g. #Aletheia, #Tech, #USPol) to boost search visibility.
+* **Character limit**: Use the saved character space to expand the intro into a detailed paragraph, keeping the entire post strictly under 250 characters.
 * **Example**:
   > LA just ranked #1 in the country for dogs biting postal workers. Again. A classic boundary error where private comfort externalizes public infrastructure risk.
   > 
@@ -130,16 +131,7 @@ To maintain the strict 14-element limit on disk, the bot must output the `"posts
   > Brothekanon:
   > So let me get this straight: you buy a guard dog to keep your house safe, but you're too lazy to fix the fence, so your 'security system' just attacks the guy bringing your Amazon packages? That's not a pet, bro. That's a liability with teeth. Fix your gate.
 
-### Element 13: Synthesized Resolution Vector
-* **Wording**: Alethekanon (the master truth engine) considers both Brothekanon's casual/absurdist observations and Awwthekanon's empathetic healing perspectives to construct a synthesized resolution vector, summarizing the blended path and calculating the final recalculated coordinates.
-* **Format**:
-  > Synthesized Resolution Vector:
-  > Blended Path: [Blended path summary]
-  > Final Recalculated Coordinates: ([real_u], [real_psi])
-* **Example**:
-  > Synthesized Resolution Vector:
-  > Blended Path: The Path of Deception — Alethekanon considers Bro's gate-repair warning and Aww's safety appeal, concluding that stated Good Preference collapses to Greater Evil once physical boundaries fail.
-  > Final Recalculated Coordinates: (-1.0, -1.0)
+
 
 ---
 
@@ -171,8 +163,7 @@ To maintain the strict 14-element limit on disk, the bot must output the `"posts
       "The Unavoidable Truth: Core truth text.\n\nThe Unavoidable Lie: Core lie text.",
       "Alethekanon:\nAnalytical reaction and structural audit in their voice.",
       "Awwthekanon:\nDeep empathy and healing reaction in their voice.",
-      "Brothekanon:\nCasual, humorous observer feedback riffing on the absurdity.",
-      "Synthesized Resolution Vector:\nBlended Path: The Path of Deception — Aletheia considers Bro's gate-repair warning and Aww's safety appeal, concluding that stated Good Preference collapses to Greater Evil once physical constraints fail.\nFinal Recalculated Coordinates: (-1.0, -1.0)"
+      "Brothekanon:\nCasual, humorous observer feedback riffing on the absurdity."
     ]
   }
 ]

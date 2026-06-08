@@ -1,6 +1,7 @@
 # Prompt user for min and max delays between threads
 $minDelayInput = Read-Host "Enter minimum delay between threads in seconds (Leave blank to use file default)"
 $maxDelayInput = Read-Host "Enter maximum delay between threads in seconds (Leave blank to use file default)"
+$watchInput    = Read-Host "Run in continuous watch mode? (y/n) [default: n]"
 
 # Build argument list dynamically
 $argsList = @("--live")
@@ -13,6 +14,10 @@ if (-not [string]::IsNullOrWhiteSpace($minDelayInput)) {
 if (-not [string]::IsNullOrWhiteSpace($maxDelayInput)) {
     $argsList += "--max-delay"
     $argsList += $maxDelayInput.Trim()
+}
+
+if ($watchInput.Trim().ToLower() -eq 'y') {
+    $argsList += "--watch"
 }
 
 Write-Host ""
