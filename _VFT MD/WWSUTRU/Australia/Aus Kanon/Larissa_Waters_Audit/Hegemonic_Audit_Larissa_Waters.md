@@ -1,21 +1,28 @@
-# **Hegemonic Audit: Larissa Waters**
+# **Hegemonic Audit: Larissa Waters (Corrected to Kanon)**
 
 ## **Forensic Preface & Methodology**
-
-This document serves as the executive introduction and structural summary of the complete Hegemonic Audit of Larissa Waters.
-
-This assessment explicitly discards subjective political commentary, partisan moralizing, and traditional media analysis. Instead, it deploys a rigid, 349-vector structural stress test against the **Australian Kanon**—a mathematical mapping of the nation's core metaphysical, constitutional, geographic, historical, and psychological ideals. The methodology utilizes the **7x7x7 Interrogative Matrix** (spanning the Who, What, Where, Why, How, Cause, and Effect of the national character) and plots the subject's actions on the **Harmonia-Helixis coordinate framework**.
+This document serves as the executive introduction and structural summary of the complete Hegemonic Audit of Larissa Waters, strictly adhering to the 354 vectors of the Australian Kanon.
 
 Every political stance, parliamentary stunt, and rhetorical narrative deployed by the subject has been assessed against two axes:
-
-*   **Axis υ (Morality):** *Who benefits?* Ranging from Systemic Justice (+2, benefitting all) to Extraction (-2, benefitting only the self).
-*   **Axis ψ (Will):** *Energy direction.* Ranging from Productive Justice (+2, creating value) to Chaos/Collapse (-2, actively destroying).
+* **Axis υ (Morality):** *Who benefits?* Ranging from Systemic Justice (+2, benefitting all) to Extraction (-2, benefitting only the self).
+* **Axis ψ (Will):** *Energy direction.* Ranging from Productive Justice (+2, creating value) to Chaos/Collapse (-2, actively destroying).
 
 The central question of this audit is not, *"Is Larissa Waters a good or bad politician?"* The question is purely mechanical: *"How does this agent interact with the structural code of the Australian Commonwealth?"*
 
-# **Plane 1: Who**
 
-## **1.1 The Who of Identity (Metaphysical)**
+## **The Bottom Line: Structural Alignment**
+
+**Final Alignment Score: 41.0%** (+15 Net Score out of 354 core vectors)
+
+* **Hits (Structural Alignments):** 145
+* **Fails (Systemic Violations):** 130
+* **Misses (Ignored Vectors):** 79
+
+According to the strict metrics of the Australian Kanon, Larissa Waters aligns with 41.0% of the nation's core structural, moral, and historical identity.
+
+# **Plane 1: Identity (Who)**
+
+## **1.1 Who**
 
 **(Who.Who.Who) Mateship (υ: +0.7, ψ: +0.4): HIT.** **Quote:** "We're a wealthy country and we can afford to provide a strong safety net so everyone can live with dignity." (Senate Speech, 2019).
 **Brief:** Waters interacts with Mateship by demanding a systemic, government-funded expansion of the horizontal bond.
@@ -87,7 +94,7 @@ This introduces massive friction with the stabilizing "middle" of the national p
 The vector represents the desire for the "Quiet Life," which her urgent, crisis-driven rhetoric actively shatters.
 Her interaction is a structural failure because she explicitly targets the complacency of the core demographic.
 
-## **1.2 The What of Identity (Possible)**
+## **1.2 What**
 
 **(Who.What.Who) The Fair Go (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "A fair go means ensuring everyone, regardless of their background or bank balance, has a roof over their head and food on the table." (2021).
 **Brief:** Waters attempts to expand the "Fair Go" from a colloquial concept of equal opportunity into a strict demand for equitable outcomes.
@@ -159,7 +166,7 @@ She hits the Commonwealth axiom (+υ) by prioritizing the stability and care of 
 The vector requires a "Universal Offering," which she attempts to build through progressive taxation and public services.
 This interaction is a hit as it expands the scope of the Commonwealth to a maximum, equitable level.
 
-## **1.3 The Where of Identity (Physical)**
+## **1.3 Where**
 
 **(Who.Where.Who) The Bush (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "We must transition away from coal, even if it means restructuring the economies of regional towns." (2019).
 **Brief:** Waters treats the "Bush" not as the untouchable moral center of the nation, but as a problematic sector requiring urgent structural transition.
@@ -191,7 +198,7 @@ She respects the land by acknowledging its deep, metaphysical priority in the Ka
 The vector represents the "Void" or "Magnet" of the center, which requires exactly this non-utilitarian respect.
 Her interaction is a hit because she defends the "Spiritual Sovereign" against the "Public Park" logic.
 
-**(Who.Where.Why) The Cycle (υ: 0.0, ψ: -0.5): FAIL.** **Quote:** "These unprecedented bushfires are not just a cycle; they are the direct result of a climate emergency." (2020).
+**(Who.Where.Why) The Cycle (Drought & Flood) (υ: ±0.0, ψ: -0.5): FAIL.** **Quote:** "These unprecedented bushfires are not just a cycle; they are the direct result of a climate emergency." (2020).
 **Brief:** Waters explicitly rejects the traditional, stoic acceptance of the environmental "Cycle" (drought, fire, flood).
 She uses natural disasters as absolute proof of systemic climate failure, demanding immediate structural intervention.
 This perspective views the environmental rhythm of the continent not as something to simply be endured, but as a crisis that must be technologically and politically managed.
@@ -201,7 +208,7 @@ This approach rejects the passive struggle (-ψ) of the cycle, demanding active,
 The vector requires a "Stoic Endurance" of natural limits, which she replaces with an "Angry Demand" for global intervention.
 Her interaction is a miss/failure because she attempts to scientifically control the core environmental rhythm of the Australian physical plane.
 
-**(Who.Where.How) The Tyranny of Distance (υ: 0.0, ψ: -0.6): FAIL.** **Quote:** "We must stand in solidarity with the global climate strike. This is a planetary crisis." (2019).
+**(Who.Where.How) The Tyranny of Distance (υ: ±0.0, ψ: -0.6): FAIL.** **Quote:** "We must stand in solidarity with the global climate strike. This is a planetary crisis." (2019).
 **Brief:** She completely ignores the reality of geographic isolation, acting as though Australia is deeply integrated into the global community.
 Distance is framed as irrelevant to the shared, planetary responsibility of climate change and human rights.
 She treats the ocean not as a "Moat," but as an endangered ecosystem that connects the nation to the rest of the world.
@@ -231,7 +238,7 @@ This rejection of the "Retreat" vector provides a major source of friction with 
 The vector is defined by the desire to "escape into silence," which she replaces with a demand for "communal density."
 Her interaction is a failure because it actively attacks the passive, protective spatial instincts of the suburbanite.
 
-## **1.4 The Why of Identity (Lyrical)**
+## **1.4 Why**
 
 **(Who.Why.Who) Punching Above Weight (υ: +0.5, ψ: +0.8): HIT.** **Quote:** "Australia should be a renewable energy superpower, leading the world in the transition." (2020).
 **Brief:** Waters embraces the vector of overachievement through the demand for global environmental leadership.
@@ -263,7 +270,7 @@ By attempting to alter the motive of growth from defense to charity, she introdu
 The vector requires a "Growth Mindset" based on fear, which she replaces with a "Growth Mindset" driven by empathy.
 Her interaction is a failure as it contradicts the primary defensive lyrical drive that allows the nation to exist in space.
 
-**(Who.Why.Where) Anteriority (υ: +0.9, ψ: +0.3): HIT.** **Quote:** "Always was, always will be, Aboriginal land." (Repeated frequently).
+**(Who.Why.Where) Anteriority [First Nations Perspective] (υ: +0.9, ψ: +0.3): HIT.** **Quote:** "Always was, always will be, Aboriginal land." (Repeated frequently).
 **Brief:** Fully embraces the concept of "Always Was, Always Will Be" as the central lyrical truth of the continent.
 She demands absolute recognition of the deep-time sovereignty that predates the arrival of the colonial state.
 This perspective attempts to force the 200 years of residence to bow to the 65,000 years of continuous custody.
@@ -273,7 +280,7 @@ This insistence on the deep root (+υ) provides the only pathway to authentic na
 The vector represents the "Deep Time" sovereignty, which her rhetoric explicitly attempts to elevate above the colonial law.
 Her interaction is a hit because she treats the "Lyrical Root" as the supreme moral authority of the nation.
 
-**(Who.Why.Why) "Have a Go, Ya Mug" (υ: +0.7, ψ: +0.8): HIT.** **Quote:** "To all the young people striking for climate action: keep fighting, you are changing the world." (2019).
+**(Who.Why.Why) Have a Go, Ya Mug (υ: +0.7, ψ: +0.8): HIT.** **Quote:** "To all the young people striking for climate action: keep fighting, you are changing the world." (2019).
 **Brief:** Waters mobilizes the youth and activists to challenge the political establishment and demand radical change.
 She encourages her base to "have a go" by organizing protests, strikes, and direct action against the system.
 This approach leverages the national respect for rebellion, directing it toward environmental and social justice.
@@ -293,7 +300,11 @@ This rejects the historical cringe, attempting to replace it with a confident, m
 The vector is about "Self-Inflicted Inferiority," a shadow she proactively tries to banish from the national outlook.
 Her interaction is a failure (to align with the shadow) because she actively seeks to destroy the psychological reliance on the "Head Office."
 
-**(Who.Why.Effect) The Gold Rush (υ: +0.5, ψ: +0.7): FAIL.** **Quote:** "We must transition away from the extractive, destructive mining industries and build a green economy." (2019).
+**(Who.Why.Cause) The Gold Rush (υ: +0.5, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Who.Why.Effect) Sport (υ: +0.6, ψ: +0.7): FAIL.** **Quote:** "We must transition away from the extractive, destructive mining industries and build a green economy." (2019).
 **Brief:** Radically rejects extraction and immediate wealth as the primary proof of national success.
 She explicitly attacks the "Digger" logic of taking wealth from the ground, viewing it as environmental vandalism.
 This perspective views the land as a fragile ecosystem, completely rejecting the idea of "Paydirt."
@@ -303,11 +314,7 @@ She opposes the proactive, extractive ambition that has historically driven the 
 The vector is about the "Search for Wealth" in the dirt, which she views as a planetary death sentence.
 Her interaction is a massive failure to align, as she actively seeks to shut down the lyrical desire for the "Big Win" found in the Australian earth.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 1 Half)**
-
-*(Scores will be compiled in the final merge)*
-
-## **1.5 The How of Identity (Logical)**
+## **1.5 How**
 
 **(Who.How.Who) The Pub Test (υ: +0.6, ψ: -0.3): FAIL.** **Quote:** "The science is absolutely clear. The IPCC reports tell us we have less than a decade to transition." (2021).
 **Brief:** Waters fundamentally rejects "Common Sense" as the standard for judging national and social policies.
@@ -379,7 +386,7 @@ She attempts to protect the very lever that allows the "Battler" to gain a syste
 The vector is about "Collective Leverage," which she treats as a sacred, untouchable democratic right.
 Her interaction is a hit because it defends the "Logical Tool of Power" from being dismantled by capital.
 
-## **1.6 The Cause of Identity (Historical)**
+## **1.6 Cause**
 
 **(Who.Cause.Who) The First Fleet (υ: -0.3, ψ: -0.5): FAIL.** **Quote:** "We cannot celebrate the invasion of this continent. January 26 is a day of mourning." (2018).
 **Brief:** Completely rejects the arrival of the colonial state as the valid source of modern national legitimacy.
@@ -391,7 +398,7 @@ This rejection of the "Seed" vector introduces massive friction with the mainstr
 The vector is about the "Involuntary Cause," which she views as a crime rather than a legitimate genesis.
 Her interaction is a failure (to align with the colonial cause) because she actively attempts to overwrite the 1788 anchor with a deeper truth.
 
-**(Who.Cause.Who) Continuity (υ: +0.9, ψ: +0.4): HIT.** **Quote:** "We must center the voices of the oldest continuous culture on earth in our parliament." (2022).
+**(Who.Cause.Who) Continuity [First Nations Perspective] (υ: +0.9, ψ: +0.4): HIT.** **Quote:** "We must center the voices of the oldest continuous culture on earth in our parliament." (2022).
 **Brief:** Fully embraces the 65,000-year continuity of the state and the absolute priority of its original inhabitants.
 She constantly acknowledges the depth of human history in the land that predates 1788.
 This perspective builds a national identity on a historical foundation that is infinitely deep.
@@ -411,7 +418,7 @@ This historical rejection invalidates the conservative view of the nation as a c
 The vector represents the "Pragmatic Merger," which she attempts to tear open to include those it originally excluded.
 Her interaction is a failure because she treats the foundational legal event as an error requiring correction.
 
-**(Who.Cause.What) Exclusion (υ: -0.8, ψ: -0.6): FAIL.** **Quote:** "We must dismantle the cruel offshore detention regime and welcome those seeking asylum." (2019).
+**(Who.Cause.What) Exclusion [First Nations Perspective] (υ: -0.8, ψ: -0.6): FAIL.** **Quote:** "We must dismantle the cruel offshore detention regime and welcome those seeking asylum." (2019).
 **Brief:** Actively fights to dismantle the "Torment of Powerlessness" and the exclusionary borders of the state.
 She attacks the historical use of exclusion to build a "Fortress Identity."
 This approach demands that the "Gate" of the nation be thrown open to those fleeing persecution.
@@ -451,7 +458,25 @@ She acts as the destroyer of the gate, attempting to permanently bury the histor
 The vector is about "Active Gatekeeping," a role she actively sabotages.
 Her interaction is a failure because she is the primary political agent seeking to eradicate this specific historical logic.
 
-## **1.7 The Effect of Identity (Emotive)**
+**(Who.Cause.How) Survival [First Nations Perspective] (υ: +0.8, ψ: +0.6): FAIL.** **Quote:** "We celebrate our diversity. Racism has no place in our parliament or our society." (2017).
+**Brief:** She is the absolute, polar opposite of the 1901 Gate logic, dedicating her career to fighting its remnants.
+She proactively seeks to eradicate racial and cultural exclusion in all forms.
+This approach attempts to completely dismantle the original "Engineering" of the nation.
+By championing multiculturalism, she acts as the most visible political enemy of this historical cause.
+**Justification:** Her proactive will (+ψ) to destroy racial exclusion (-υ) violently opposes the vector of the policy.
+She acts as the destroyer of the gate, attempting to permanently bury the historical policy of exclusion.
+The vector is about "Active Gatekeeping," a role she actively sabotages.
+Her interaction is a failure because she is the primary political agent seeking to eradicate this specific historical logic.
+
+**(Who.Cause.Cause) Deep Time (υ: +0.7, ψ: -0.2): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Who.Cause.Effect) Multiculturalism (υ: +0.8, ψ: +0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **1.7 Effect**
 
 **(Who.Effect.Who) The Expat (υ: +0.5, ψ: +0.5): HIT.** **Quote:** "I was born in Canada, but Australia is my home. We are a nation of migrants." (Section 44 Resignation, 2017).
 **(Actuality/Hypocrisy Note):** She was forced to resign due to holding dual citizenship, highlighting a literal, legal split in loyalty, though she frames it as an administrative error rather than a lack of devotion to Australia.
@@ -525,23 +550,9 @@ Her interaction is a failure because it refuses to map the "Sporting Ambition" o
 
 ---
 
-## **Final Forensic Verdict: Larissa Waters (Plane 1)**
+# **Plane 2: Definition (What)**
 
-**Plane 1 Identity Score:** +1 Net Score (25 HIT, 24 FAIL, 0 MISS)
-
-**Percentage Australian Alignment:** 51.0%
-
-**Average Morality (υ):** +0.65 (Systemic Benefit)
-
-**Average Will (ψ):** +0.45 (Proactive Energy)
-
-**Quadrant Placement:** Greater Good / Progressive Overwrite
-
-**Final Statement:** Larissa Waters acts as a **Structural Disrupter** on the Plane of Identity. She completely fails the "Shadow" vectors (Terra Nullius, White Australia, Cultural Cringe) because she actively fights to destroy them, representing a moral positive but a systemic failure to align with the historical Australian identity. She embraces the "Light" vectors (Mateship, Fair Go, The Custodian) but attempts to drastically expand them through state intervention and globalism. Her interaction with the Kanon is an attempt to overwrite the traditional, insular "Battler" and "Anzac" myths with an educated, environmentally panicked, and globally integrated progressive identity. She is highly moral (+υ) but deeply alienating to the foundational, complacent center of the Australian psyche.
-
-# **Plane 2, Possible What**
-
-## **2.1 The Who of Definition (What.Who)**
+## **2.1 Who**
 
 **(What.Who.Who) The Independent Australian Briton (υ: +0.4, ψ: +0.3): FAIL.** **Quote:** "We must sever our ties with the monarchy and become an independent republic. The British Crown does not represent modern Australia." (2022).
 **Brief:** Waters completely rejects the foundational definition of the citizen as a hybrid British subject.
@@ -613,7 +624,7 @@ By attempting to expand the universal safety net and target corporate welfare, s
 Her interaction seeks to transform the public utility into an aggressive engine of progressive resource distribution.
 This hits the vector because it elevates the concept that the state is the servant of the *entire* Commonwealth.
 
-## **2.2 The What of Definition (What.What)**
+## **2.2 What**
 
 **(What.What.Who) The Governor-General (υ: +0.3, ψ: -0.4): FAIL.** **Quote:** "The Dismissal of 1975 shows the inherent danger of having an unelected representative of a foreign monarch holding ultimate power." (2020).
 **Brief:** She attacks the retention of the "Ghost in the Machine" as a dangerous, undemocratic check on progressive governments.
@@ -685,7 +696,7 @@ Waters actively triggers this systemic risk, utilizing the Senate's veto power t
 She exploits the greatest structural flaw of the Australian Definition to amplify her minor-party influence.
 This is a hit because she successfully operates the "Gridlock" as a tool of political extortion.
 
-## **2.3 The Where of Definition (What.Where)**
+## **2.3 Where**
 
 **(What.Where.Who) The States' House (υ: +0.6, ψ: +0.3): HIT.** **Quote:** "As a Senator for Queensland, I am here to ensure that our unique environment, like the Reef, is protected from federal neglect." (2018).
 **Brief:** Her entire political survival is predicated on the geographic equalization provided by the Senate's design.
@@ -747,7 +758,7 @@ Waters successfully attacks these historical divisions, weaponizing federal powe
 She operates against the "Fact" of the survey lines, proving that environmental reality must supersede colonial geography.
 This is a failure because she actively works to erase the internal fault lines created by the original colonial map.
 
-**(What.Where.Effect) The Patchwork Economy (υ: 0.0, ψ: -0.3): HIT.** **Quote:** "We must support fossil fuel workers in regional areas to transition to the clean energy jobs of the future." (2021).
+**(What.Where.Effect) The Patchwork Economy (υ: ±0.0, ψ: -0.3): HIT.** **Quote:** "We must support fossil fuel workers in regional areas to transition to the clean energy jobs of the future." (2021).
 **Brief:** She explicitly acknowledges the massive economic divergence between the resource-rich states and the service-based cities, attempting to actively manage the transition.
 By demanding a "Just Transition" for miners, she recognizes the economic fault lines while still demanding the destruction of their current industry.
 She recognizes that national environmental policy will disproportionately hurt her regional base, and attempts to mitigate that pain with state subsidies.
@@ -757,7 +768,7 @@ Waters actively attempts to manage this structural unevenness to build her envir
 She uses the reality of the Patchwork Economy to justify massive state intervention in regional areas.
 This is a hit because her rhetoric directly engages with the unavoidable geographic fragmentation of Australian wealth.
 
-## **2.4 The Why of Definition (What.Why)**
+## **2.4 Why**
 
 **(What.Why.Who) The Crimson Thread (υ: -0.4, ψ: +0.5): FAIL.** **Quote:** "Australia's strength lies in its diversity. We must reject the politics of race and division." (2017).
 **Brief:** Waters bases her entire political genesis on the aggressive rejection of a racially and culturally homogenous Anglo-Celtic society.
@@ -799,7 +810,11 @@ Waters’ defense of Indigenous sovereignty and history removes moral friction (
 She accepts the "Truth" of the landscape, opting to tear down the artificial walls of the colonial mindset.
 This is a hit because it prioritizes the profound reality of "Connection" over the shallow narrative of conquest.
 
-**(What.Why.How) The Common Market (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "We support trade, but it must be fair trade that protects our environment, our workers, and our sovereignty from multinational corporations." (2019).
+**(What.Why.Why) The Common Market (υ: +0.6, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(What.Why.How) The Secular State (υ: +0.7, ψ: -0.3): HIT.** **Quote:** "We support trade, but it must be fair trade that protects our environment, our workers, and our sovereignty from multinational corporations." (2019).
 **Brief:** She accepts the foundational logic of free trade that originally united the colonies, but demands it be heavily regulated.
 Her platform demands strict environmental and labor protections be built into the global marketplace.
 She views the "Intercourse" of trade not as an absolute freedom, but as a utility that must be managed to prevent corporate exploitation.
@@ -809,7 +824,7 @@ Waters’ regulatory agenda seeks to modify the "Internal Logic" that built the 
 She supports the historical mandate to integrate economically, preferring a highly ethical, regulated model.
 This is a hit because it supports the core "Why" of the economic union established in Section 92, albeit with progressive constraints.
 
-**(What.Why.Cause) The Secular State (υ: +0.7, ψ: -0.3): HIT.** **Quote:** "We must remove religious exemptions that allow schools to discriminate against LGBTQ+ students and teachers." (2022).
+**(What.Why.Cause) The Great Strikes (υ: +0.7, ψ: +0.8): HIT.** **Quote:** "We must remove religious exemptions that allow schools to discriminate against LGBTQ+ students and teachers." (2022).
 **Brief:** She actively defends the constitutional boundary that separates the State from religious discrimination.
 By demanding the removal of legal exemptions for religious institutions, she attacks the power of dogma over civic life.
 Her rhetoric treats religious overreach as an existential political threat to human rights that must be eradicated by state power.
@@ -829,11 +844,7 @@ Waters attacks the defensive mechanisms of this vector, convincing the "Quiet Au
 She successfully destroys the "Effect" of Menzies' suburban dream by demanding constant, loud public agitation.
 This is a failure because she actively attacks the emotional power of the Australian desire to be left alone.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 2 Half)**
-
-*(Scores will be compiled in the final merge)*
-
-## **2.5 The How of Definition (What.How)**
+## **2.5 How**
 
 **(What.How.Who) The Faceless Men (υ: -0.4, ψ: +0.5): FAIL.** **Quote:** "The Greens are a grassroots party. Our policies are decided by our members, not by corporate donors or backroom deals." (2018).
 **Brief:** She operates her political party as a highly decentralized, member-driven democracy, actively rejecting the authoritarian control of the major parties.
@@ -905,7 +916,7 @@ Waters rejects the "Circuit Breaker" mechanism, viewing the resulting chaos as a
 She refuses to mimic the ruthlessness of the "Spill" within her own organization, rejecting the dark arts of the system.
 This is a failure because she actively attacks and refuses to utilize the systemic volatility that defines Australian leadership.
 
-## **2.6 The Cause of Definition (What.Cause)**
+## **2.6 Cause**
 
 **(What.Cause.Who) The Prophet (υ: +0.7, ψ: +0.8): HIT.** **Quote:** "The Greens have been warning about the climate crisis for decades. The science has vindicated us, but we are running out of time." (2019).
 **Brief:** She deliberately cultivates the persona of the visionary movement that foresaw the ecological destruction of the nation before anyone else.
@@ -937,7 +948,7 @@ Waters’ high-will (+ψ) utilization of the Eureka myth is central to her brand
 She weaponizes the "Spark" of the stockade to grant historical nobility to her progressive policy platform.
 This is a hit because she effectively maps her modern grievance onto the foundational myth of Australian democracy.
 
-**(What.Cause.Why) The Slump (υ: 0.0, ψ: -0.5): HIT.** **Quote:** "The housing crisis and stagnant wages are proving that neoliberal economics has failed everyday Australians." (2022).
+**(What.Cause.Why) The Slump (υ: ±0.0, ψ: -0.5): HIT.** **Quote:** "The housing crisis and stagnant wages are proving that neoliberal economics has failed everyday Australians." (2022).
 **Brief:** Her political resurgences almost always correlate with periods of intense economic anxiety regarding housing and cost of living.
 She acts as the political beneficiary of the "Slump," converting the economic despair of the youth into progressive, anti-capitalist anger.
 She recognizes that the Australian Definition requires a "Crisis" to force change, and she amplifies the housing crisis constantly.
@@ -977,7 +988,7 @@ Waters utilizes the "Ratification" of 1901 as the ultimate target for her modern
 She successfully attacks her regressive political opponents by targeting the exact moment of the nation's historical, exclusionary origin.
 This is a failure because she perfectly attacks "Federation Day" as the flawed standard she wishes to destroy.
 
-## **2.7 The Effect of Definition (What.Effect)**
+## **2.7 Effect**
 
 **(What.Effect.Who) The Anzac (υ: +0.6, ψ: +0.7): FAIL.** **Quote:** "We must reflect on the true cost of war, not just the heroism, and ensure we do not blindly follow superpowers into future conflicts." (2021).
 **Brief:** She aggressively attempts to demilitarize the national myth, refusing to use the memory of the fallen to attack domestic political opponents.
@@ -999,7 +1010,7 @@ Waters’ rhetoric is a direct manifestation of this paranoia, treating the nati
 She successfully weaponizes the "Risk" of Horne's critique, turning the fear of lost luck into a progressive rallying cry.
 This is a hit because she accurately targets the foundational economic insecurity of the Australian Definition.
 
-**(What.Effect.Where) The Tyranny of Distance (υ: 0.0, ψ: -0.6): FAIL.** **Quote:** "We are a global citizen and we have a global responsibility to act on climate change. We cannot hide behind our geography." (2020).
+**(What.Effect.Where) The Tyranny of Distance (υ: ±0.0, ψ: -0.6): FAIL.** **Quote:** "We are a global citizen and we have a global responsibility to act on climate change. We cannot hide behind our geography." (2020).
 **Brief:** She explicitly rejects the vast internal and external distances of the continent as an excuse for political or environmental isolation.
 By highlighting the global nature of the climate crisis, she destroys the "Real Australia" vs the "World" dichotomy.
 She recognizes that the "Gravity" of distance creates alienated populations, but refuses to let that distance dictate policy.
@@ -1049,25 +1060,15 @@ Waters’ campaign for the Voice was a massive, proactive (+ψ) effort to achiev
 She successfully mobilized the progressives of the electorate to attack the "Exclusion" that haunts the federation.
 This is a hit because she acted as a primary agent demanding the structural healing of the Australian Definition.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 2)**
+**(What.Effect.Effect) The Nanny State (υ: +0.4, ψ: -0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-*(Scores will be compiled in the final merge)*
+# **Plane 3: Land (Where)**
 
-## **Final Forensic Verdict: Larissa Waters (Plane 2)**
+## **3.1 Who**
 
-**Plane 2 Definition Score:** +3 Net Score (26 HIT, 23 FAIL, 0 MISS)
-**Percentage Australian Alignment:** 53.0%
-**Average Morality (υ):** +0.55 (Systemic Benefit)
-**Average Will (ψ):** +0.40 (Proactive Will)
-**Quadrant Placement:** Greater Good / Progressive Overwrite
-
-**Final Statement:** Larissa Waters acts as a **Structural Disrupter** on the Plane of Definition. She successfully weaponizes the progressive constitutional archetypes (The Constituent, The Senate, The Secret Ballot) to gain immense leverage within the system. However, her "True Intent" (Dismantling the Imperial Act, Destroying the Great Silence, Paralyzing Gridlock for Climate Action) introduces profound friction into the conservative legal framework. By attempting to aggressively evolve the national definition beyond the exclusionary boundaries of the 1901 Imperial Act, she actively forces the legal and cultural framework toward a mature, reconciled, and environmentally radical Commonwealth, alienating the traditionalist center in the process.
-
-# **Plane 3, Location where**
-
-## **3.1 The Who of Land (Where.Who)**
-
-**(Where.Who.Who) The Custodian (υ: +0.9, ψ: -0.4): HIT.** **Quote:** "We must heed the call of First Nations people to protect country from the destructive forces of the fossil fuel industry." (2019).
+**(Where.Who.Who) The Sunburnt Country (υ: +0.5, ψ: -0.4): HIT.** **Quote:** "We must heed the call of First Nations people to protect country from the destructive forces of the fossil fuel industry." (2019).
 **Brief:** Waters interacts with the Custodian vector by absolutely centering deep-time land rights and spiritual ownership in her environmental policy.
 She leverages First Nations voices to argue that the original inhabitants possess the supreme moral and historical claims to the physical continent.
 This approach attacks the legal framework of colonial extraction, framing it as a destructive and illegal land grab.
@@ -1077,7 +1078,7 @@ By demanding this priority, she removes systemic friction and attempts to restor
 This interaction is highly protective of the original stewards against the modern colonial economy.
 It registers as a hit because she actively defends the deep-time structural truth over shallow colonial fiction.
 
-**(Where.Who.What) The Squatter (υ: -0.4, ψ: +0.6): FAIL.** **Quote:** "We cannot allow massive agribusiness and mining corporations to continue to degrade our land and steal our water." (2020).
+**(Where.Who.What) The Weird Melancholy (υ: +0.3, ψ: -0.5): FAIL.** **Quote:** "We cannot allow massive agribusiness and mining corporations to continue to degrade our land and steal our water." (2020).
 **Brief:** She violently attacks the historical and modern dominance of the pastoralist and mining class over the physical landscape.
 Her rhetoric treats the original colonial seizure of land and modern corporate leases as illegitimate and destructive.
 This narrative aligns her against the large-scale agricultural sector in favor of environmental and Indigenous legal claims.
@@ -1087,7 +1088,7 @@ Waters completely attacks this operating mechanic, fighting the absolute propert
 She attempts to destroy the exclusionary boundary of this vector by fighting any legal mechanism that prioritizes pastoral leases over ecology.
 This is a failure because she actively attempts to dismantle the historical mechanics of colonial land acquisition.
 
-**(Where.Who.Where) The Explorer (υ: +0.4, ψ: +0.8): FAIL.** **Quote:** "We need to focus on restoring the environments we have already damaged, rather than opening up new basins for gas extraction." (2021).
+**(Where.Who.Where) The Never-Never (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We need to focus on restoring the environments we have already damaged, rather than opening up new basins for gas extraction." (2021).
 **Brief:** Waters explicitly rejects the proactive mapping or scientific discovery of the physical continent for the purpose of extraction.
 Her spatial focus is overwhelmingly preservationist, preferring to lock down existing ecosystems rather than expand industrial horizons.
 She treats the physical map as a fragile system that must be defended, rather than a space requiring further economic exploitation.
@@ -1097,7 +1098,7 @@ Waters' political mechanics are entirely defensive regarding land use, focusing 
 She actively fights the proactive energy required to map or exploit new spatial realities for economic gain.
 This is a miss/failure because her mechanical trajectory actively contradicts the expansive exploitation of the vector.
 
-**(Where.Who.Why) The Miner (υ: +0.3, ψ: +0.7): FAIL.** **Quote:** "The era of digging up and burning coal must end. We must keep it in the ground." (2019).
+**(Where.Who.Why) The Red Steer (υ: ±0.0, ψ: -0.6): FAIL.** **Quote:** "The era of digging up and burning coal must end. We must keep it in the ground." (2019).
 **Brief:** She explicitly attacks the extraction of geological wealth as the primary destructive force acting on the physical landmass.
 Her policy platform heavily attacks the mining sector, viewing subterranean resources as a toxic liability rather than the lifeblood of the national economy.
 This narrative targets corporate executives dependent on extractive industries, demanding a total cessation of their activities.
@@ -1107,7 +1108,7 @@ Waters violently opposes this mechanical drive, prioritizing ecological preserva
 She attacks the raw, extractive energy of this vector, seeking to shut down the resource-heavy states.
 This is a failure because she actively works to destroy the deeply entrenched logic of Australian resource extraction.
 
-**(Where.Who.How) The Grazier (υ: +0.7, ψ: +0.5): FAIL.** **Quote:** "We must transition to sustainable agriculture and stop the broadscale land clearing that is destroying our native species." (2020).
+**(Where.Who.How) The Drought (υ: +0.3, ψ: -0.6): FAIL.** **Quote:** "We must transition to sustainable agriculture and stop the broadscale land clearing that is destroying our native species." (2020).
 **Brief:** She attacks the "Grazier" when agricultural practices conflict with environmental preservation.
 Her rhetoric attacks the harsh physical labor required to turn the arid soil if it results in ecological damage.
 She views this demographic not as the unquestioned backbone of the nation, but as an industry that must be heavily regulated and reformed.
@@ -1117,7 +1118,7 @@ Waters introduces friction into this vector by demanding that ecological preserv
 She refuses to grant the agrarian mythos a sense of unquestioned, physical necessity.
 This is a failure because she actively restricts the populist agrarian agenda to protect the biological reality of the land.
 
-**(Where.Who.Cause) The Exile (υ: +0.6, ψ: -0.5): FAIL.** **Quote:** "We are all connected by this climate crisis. What happens in the regions affects the cities, and we must act together." (2021).
+**(Where.Who.Cause) The Spirit of Place (υ: +0.6, ψ: -0.3): FAIL.** **Quote:** "We are all connected by this climate crisis. What happens in the regions affects the cities, and we must act together." (2021).
 **Brief:** She explicitly rejects the spatial alienation of those living far from the coastal centers, demanding universal environmental integration.
 Her narrative attempts to cure internal exile, telling regional voters they are on the front lines of a global climate struggle.
 This strategy targets populations who feel isolated, attempting to integrate them into a massive, interconnected environmental movement.
@@ -1127,7 +1128,7 @@ Waters actively attempts to cure this structural reality, demanding that spatial
 She operates against the "Shadow" of the continent's size, speaking directly to the need for total integration.
 This is a failure because she actively attempts to destroy the centralized political power generated by geographic exile.
 
-**(Where.Who.Effect) The Suburbanite (υ: +0.8, ψ: -0.4): FAIL.** **Quote:** "We must invest in public transport and active transit to break our reliance on cars and sprawling suburbs." (2018).
+**(Where.Who.Effect) The Primitive Area (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "We must invest in public transport and active transit to break our reliance on cars and sprawling suburbs." (2018).
 **Brief:** She targets the physical boundaries of the suburban block, framing the "Sprawl" as an ecological disaster that must be dismantled.
 Her rhetoric relies on generating environmental awareness within the low-density housing rings of major Australian cities.
 This approach attacks the physical separation of the suburb, advocating for dense, interconnected, and sustainable urban living.
@@ -1137,9 +1138,9 @@ Waters attacks the defensive perimeter of this vector, mapping global environmen
 She recognizes that the Australian spatial ideal culminates in the private backyard, and she demands it be fundamentally altered.
 This is a failure because she actively attacks the specific geographic zone where the majority of the population passively resides.
 
-## **3.2 The What of Land (Where.What)**
+## **3.2 What**
 
-**(Where.What.Who) The Red Centre (υ: +0.5, ψ: -0.5): HIT.** **Quote:** "We must respect the wishes of the Anangu people and support the closure of the Uluru climb." (2019).
+**(Where.What.Who) The Squatter (υ: -0.6, ψ: +0.6): HIT.** **Quote:** "We must respect the wishes of the Anangu people and support the closure of the Uluru climb." (2019).
 **Brief:** Waters treats the physical and spiritual heart of the continent with absolute reverence, refusing to view it as a secular mechanism for economic yield.
 She fiercely defends the concept of a sacred void, insisting that the physical geography must remain protected from mechanical exploitation.
 This rhetoric preserves the interior's metaphysical gravity, elevating ancient monoliths above simple recreational assets.
@@ -1149,7 +1150,7 @@ Waters' demand to protect and respect this space perfectly supports its structur
 She removes systemic friction by actively defending the limits of colonial spatial acquisition.
 This is a hit because she actively defends the spiritual mechanics that ground the geography of the interior.
 
-**(Where.What.What) The Bush (υ: +0.5, ψ: -0.4): HIT.** **Quote:** "Our native forests are not just a resource to be logged; they are the lungs of our country and must be protected." (2020).
+**(Where.What.What) The Void (Terra Nullius) (υ: -0.9, ψ: +0.6): HIT.** **Quote:** "Our native forests are not just a resource to be logged; they are the lungs of our country and must be protected." (2020).
 **Brief:** She utilizes the physical environment of the bush as a moral baseline, but entirely through an ecological rather than agricultural lens.
 Her narrative frames the native scrub as the ultimate fragile ecosystem that must be saved from human destruction.
 This strategy delegitimizes extractive geography, treating logging and mining as physical manifestations of corporate greed.
@@ -1159,7 +1160,7 @@ Waters successfully maps her progressive political movement onto this geography,
 She understands that the physical reality of the bush carries immense unearned political capital, using it to demand conservation.
 This is a hit because she accurately deploys the dominant physical landscape as a tool of environmental validation.
 
-**(Where.What.Where) The Coastline (υ: +0.9, ψ: +0.3): HIT.** **Quote:** "We must protect our pristine coastlines from the devastating impacts of offshore gas drilling and massive coal ports." (2018).
+**(Where.What.Where) Custodianship [First Nations Perspective] (υ: +0.9, ψ: +0.6): HIT.** **Quote:** "We must protect our pristine coastlines from the devastating impacts of offshore gas drilling and massive coal ports." (2018).
 **Brief:** She views the physical edge of the continent not as a hard military perimeter, but as a fragile ecological interface requiring absolute protection.
 Her policy focus constantly returns to the physical integrity of the beaches and the waters immediately surrounding them.
 This narrative transforms the coastal fringe from a place of leisure into the front line of an ongoing environmental war.
@@ -1169,7 +1170,7 @@ Waters operates this vector at maximum friction against industry, treating the i
 She recognizes that the Australian population clings to this edge, making it highly sensitive to physical and environmental breaches.
 This is a hit because she perfectly exploits the geographic vulnerability of a civilization built exclusively on the rim.
 
-**(Where.What.Why) The Arable Fringe (υ: +0.6, ψ: +0.7): HIT.** **Quote:** "We cannot allow coal seam gas to poison our prime agricultural land and our essential water tables." (2017).
+**(Where.What.Why) The Crossing (υ: +0.4, ψ: +0.7): HIT.** **Quote:** "We cannot allow coal seam gas to poison our prime agricultural land and our essential water tables." (2017).
 **Brief:** She physically maps national security directly onto the narrow strips of fertile land capable of sustaining agriculture, defending them from mining.
 Her rhetoric treats the arable topsoil as a finite, non-renewable resource that must be hoarded against corporate extraction.
 This strategy combines spatial scarcity with environmentalism, targeting the physical root of the food supply.
@@ -1179,7 +1180,7 @@ Waters successfully identifies the strategic fragility of this narrow geographic
 She utilizes the reality of the continent's physical barrenness to amplify the value of the arable fringe.
 This is a hit because she accurately targets the critical, vulnerable spatial zones that keep the population alive.
 
-**(Where.What.How) The Desert (υ: 0.0, ψ: -0.7): FAIL.** **Quote:** "We must harness the incredible solar potential of our arid regions to power the nation with renewable energy." (2020).
+**(Where.What.How) The Grid (υ: +0.4, ψ: +0.5): FAIL.** **Quote:** "We must harness the incredible solar potential of our arid regions to power the nation with renewable energy." (2020).
 **Brief:** She rejects the extreme physical hostility of the arid interior, viewing it instead as an infinite engine for clean technological power.
 Her narrative suggests that the brutal reality of the physical geography can be tamed and utilized to create a sustainable, compassionate national character.
 This approach maps the massive solar exposure directly onto the expansion of state infrastructure and environmental salvation.
@@ -1189,7 +1190,7 @@ Waters expertly rejects this physical hostility in her policy framework, arguing
 She operates against the mechanical limits of the geography, treating the harsh sun as a limitless asset rather than a cruel enemy.
 This is a failure because she successfully translates the continent's physical cruelty into optimistic, actionable technological logic.
 
-**(Where.What.Cause) The Reef (υ: +0.8, ψ: -0.4): HIT.** **Quote:** "The Great Barrier Reef is in critical danger due to climate change. We must act now to save it." (2019).
+**(Where.What.Cause) The Crown (υ: +0.3, ψ: -0.4): HIT.** **Quote:** "The Great Barrier Reef is in critical danger due to climate change. We must act now to save it." (2019).
 **Brief:** She fiercely defends the physical integrity of the largest living structure on the continent against industrial mechanics.
 Her rhetoric physically connects the output of the mining sector directly to the rising temperatures of the coastal waters.
 This strategy attempts to override immediate, localized economic priorities with empirical geographic reality.
@@ -1199,7 +1200,7 @@ Waters removes profound friction by actively defending the mechanical survival o
 She fully engages with the long-term physical reality of the space, prioritizing preservation over short-term extraction.
 This is a hit because her actions actively defend the physical truth of the continent's most significant biological feature.
 
-**(Where.What.Effect) The Sprawl (υ: -0.2, ψ: +0.4): FAIL.** **Quote:** "We must end urban sprawl that destroys habitats. We need smart, dense, and sustainable cities." (2021).
+**(Where.What.Effect) The Selector (υ: +0.5, ψ: +0.6): FAIL.** **Quote:** "We must end urban sprawl that destroys habitats. We need smart, dense, and sustainable cities." (2021).
 **Brief:** She physically attacks the structural failure of urban infrastructure, demanding an immediate halt to the consumption of greenfield land.
 Her narrative maps political anger onto the physical experience of habitat destruction and inefficient, car-dependent transport.
 This strategy attacks the horizontal, inefficient layout of Australian cities, demanding vertical consolidation and public transit.
@@ -1209,9 +1210,9 @@ Waters brilliantly attacks the mechanical failure of this physical expansion, bl
 She understands that the physical limits of the city are the most immediate points of stress for the environment.
 This is a failure because she actively works to destroy the geographic expansion of the urban footprint.
 
-## **3.3 The Where of Land (Where.Where)**
+## **3.3 Where**
 
-**(Where.Where.Who) The Island Continent (υ: +0.5, ψ: -0.5): FAIL.** **Quote:** "We share one planet. Climate change does not respect our borders, and we cannot isolate ourselves from the global effort." (2019).
+**(Where.Where.Who) The Red Heart (υ: ±0.0, ψ: -0.6): FAIL.** **Quote:** "We share one planet. Climate change does not respect our borders, and we cannot isolate ourselves from the global effort." (2019).
 **Brief:** She explicitly attacks the macro-geography of the continent as a justification for isolation or exclusion.
 Her narrative treats the thousands of kilometers of ocean not as a protective wall, but as an irrelevant physical barrier in the face of atmospheric reality.
 This strategy rejects the "Moat," arguing that geographic separation provides zero protection against ecological collapse.
@@ -1221,7 +1222,7 @@ Waters completely rejects this "Fortress" logic, proving that physical isolation
 She introduces immense friction by demanding that the public abandon the comfort of their geographic separation.
 This is a failure because she actively attempts to destroy the psychological reliance on the continent's physical borders.
 
-**(Where.Where.What) The Resource Curse (υ: -0.4, ψ: +0.6): FAIL.** **Quote:** "We must transition to a clean energy economy. Relying on digging up and shipping out coal is a dead end." (2021).
+**(Where.Where.What) Goyder's Line (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "We must transition to a clean energy economy. Relying on digging up and shipping out coal is a dead end." (2021).
 **Brief:** She expends massive political energy fighting the defining economic geography of the modern state: the vast, subterranean mineral wealth.
 Her rhetoric treats the geological abundance of the continent not as a blessing, but as a literal "curse" that is destroying the planet.
 This strategy attempts to physically halt the extraction machinery, demanding that the geology remain untouched.
@@ -1231,7 +1232,7 @@ Waters flawlessly identifies and attacks this "Curse," demanding an immediate ha
 She operates in direct opposition to the "Dig" methodology, ensuring the state must confront its reliance on the quarry.
 This is a failure because she is the primary political enemy of the aggressive, foundational logic of geographic extraction.
 
-**(Where.Where.Where) The Empty North (υ: -0.3, ψ: -0.4): FAIL.** **Quote:** "We must protect the pristine environments of the North from massive, destructive agricultural and mining projects." (2018).
+**(Where.Where.Where) The Saltbush (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We must protect the pristine environments of the North from massive, destructive agricultural and mining projects." (2018).
 **Brief:** She utilizes the vast, underpopulated expanse of the northern continent as the ultimate geographical crucible for environmental preservation.
 Her rhetoric claims the hostile geography of the frontier as the exclusive moral property of nature, not industry.
 This strategy relies on the belief that the empty spaces must remain empty to protect biodiversity and First Nations heritage.
@@ -1241,7 +1242,7 @@ Waters expertly maps her political movement onto this iconic geography, claiming
 She attacks the myth that the "North" requires brutal geographic development to justify its existence within the nation.
 This is a failure because she actively fights the primary foundational anxiety of the Australian spatial identity.
 
-**(Where.Where.Why) The Murray-Darling Basin (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "Corporate greed and water theft are destroying our most vital river system. We must restore environmental flows." (2019).
+**(Where.Where.Why) The River (υ: ±0.0, ψ: -0.4): HIT.** **Quote:** "Corporate greed and water theft are destroying our most vital river system. We must restore environmental flows." (2019).
 **Brief:** She anchors her environmental platform entirely in the complex, vital geography that sustains the nation's agriculture.
 Her rhetoric treats the physical river system as a sacred, dying ecosystem that must be saved from corporate extraction.
 This strategy demands absolute, scientific management of the basin, prioritizing ecological survival over immediate agricultural profit.
@@ -1251,7 +1252,7 @@ Waters perfectly embodies the "Custodian" approach to this root, demanding that 
 She understands that the Australian foundation is highly vulnerable to the mismanagement of this specific geography.
 This is a hit because she accurately defends the foundational biological origin of the settler state's food supply.
 
-**(Where.Where.How) The Capital City (υ: +0.5, ψ: +0.4): FAIL.** **Quote:** "We need better public transport and affordable housing to make our cities livable for everyone, not just the wealthy." (2020).
+**(Where.Where.How) The Marsupial (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "We need better public transport and affordable housing to make our cities livable for everyone, not just the wealthy." (2020).
 **Brief:** She targets the massive, concentrated physical hubs where the vast majority of the population resides, demanding radical restructuring.
 Her narrative views the expansion of the capital cities not as a triumph, but as a poorly planned, unequal disaster.
 This strategy demands that the "Hub" be redesigned for density, sustainability, and public transit, rejecting the car-dependent model.
@@ -1261,7 +1262,7 @@ Waters’ aggressive demands for urban reform directly attack the "Current Reali
 She fails the imperative to accept the "Sprawl," preferring an impossible, rapid redesign of the urban geography.
 This is a failure because she actively fights the absolute, undeniable physical layout of the continent's modern population centers.
 
-**(Where.Where.Cause) The Topsoil (υ: +0.7, ψ: -0.3): HIT.** **Quote:** "We must stop land clearing and support regenerative agriculture to save our soils and our climate." (2021).
+**(Where.Where.Cause) Gondwana (υ: +0.7, ψ: -0.3): HIT.** **Quote:** "We must stop land clearing and support regenerative agriculture to save our soils and our climate." (2021).
 **Brief:** She actively highlights the extreme fragility of the continent's thin layer of productive biology.
 Her populist narrative explicitly replaces complex, industrial agriculture with regenerative, soil-focused farming practices.
 This strategy attacks the institutions of mass clearing and chemical farming that were built to force the land to yield.
@@ -1271,7 +1272,7 @@ Waters’ aggressive defense of the topsoil directly supports this "Biological R
 She replaces the "Extraction" logic with the complex, scientific mechanics of preservation.
 This is a hit because she actively works to defend the foundational biology that allows the colonial experiment to survive.
 
-**(Where.Where.Effect) The Great Barrier Reef (υ: +0.8, ψ: -0.4): HIT.** **Quote:** "The Reef is a global treasure, and we are risking its complete destruction for the sake of short-term coal profits." (2017).
+**(Where.Where.Effect) The Plague (υ: -0.6, ψ: +0.5): HIT.** **Quote:** "The Reef is a global treasure, and we are risking its complete destruction for the sake of short-term coal profits." (2017).
 **Brief:** She perfectly masters the aesthetic and the panic surrounding the foundational ecological jewel of the continent.
 Her rhetoric constantly utilizes the language of the "Dying Reef," mapping the global climate struggle directly onto the local geography.
 This strategy allows her to harvest the deep, inherited pride of the population, turning it into furious environmental activism.
@@ -1281,25 +1282,135 @@ Waters flawlessly operates the "Anxiety" of this geography, using the ghost of t
 She proves that the Australian foundation is deeply attached to the Reef, and that attachment can be weaponized for political gain.
 This is a hit because she accurately channels the most potent ecological geography of the modern political system.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 3)**
+## **3.4 Why**
 
-*(Scores will be compiled in the final merge)*
+**(Where.Why.Who) The Sun (υ: ±0.0, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 3)**
+**(Where.Why.What) The Thirst (υ: +0.4, ψ: -0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**Plane 3 Land Score:** -5 Net Score (7 HIT, 14 FAIL, 0 MISS)
-**Percentage Australian Alignment:** 33.3%
-**Average Morality (υ):** +0.45 (Systemic Preservation)
-**Average Will (ψ):** -0.05 (Neutral/Reactive to Geography)
-**Quadrant Placement:** Greater Good / Geographic Friction
+**(Where.Why.Where) The Wet and The Dry (υ: ±0.0, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**Final Statement:** Larissa Waters acts as a **Geographic Antagonist** on the Plane of Land. She completely rejects the traditional Australian relationship with the physical continent, which is historically defined by extraction, subjugation, and agricultural expansion. By attacking the "Miner," the "Squatter," and the "Sprawl," she introduces massive structural friction into the colonial geographic machine. Her alignment is strictly with the fragile, endangered biology of the continent (The Reef, The Coastline, The Topsoil) and the deep-time Custodianship of the First Nations. She fails the traditional definition of the land because she actively attempts to overwrite the "Quarry" with the "Ecosystem," demanding that the nation stop conquering its geography and start preserving it.
+**(Where.Why.Why) The Flood (υ: +0.4, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-# **Plane 4, Motivation Why**
+**(Where.Why.How) The Wind (υ: ±0.0, ψ: +0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-## **4.1 The Agents of Motivation (Why.Who)**
+**(Where.Why.Cause) The Oscillation (El Niño) (υ: ±0.0, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**(Why.Who.Who) The Homeowner (υ: +0.4, ψ: -0.5): FAIL.** **Quote:** "We must end the massive tax handouts to property investors that lock young people and essential workers out of the housing market." (2022).
+**(Where.Why.Effect) The Windmill (υ: +0.7, ψ: +0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **3.5 How**
+
+**(Where.How.Who) The Overland Telegraph (υ: +0.7, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.How.Who) Songlines [First Nations Perspective] (υ: +0.9, ψ: +0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.How.What) The Dingo Fence (υ: -0.3, ψ: +0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.How.Where) The Highway (υ: +0.6, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.How.Why) The Dam (υ: +0.7, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.How.How) The Air (υ: +0.8, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.How.Cause) The Railway (υ: +0.6, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.How.Effect) The Pipeline (υ: +0.7, ψ: +0.8): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **3.6 Cause**
+
+**(Where.Cause.Who) The Miner (υ: +0.6, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Cause.What) The Gold (υ: +0.5, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Cause.Where) The Shield (υ: +0.5, ψ: -0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Cause.Why) The Uranium (υ: -0.3, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Cause.How) The Opencut (υ: -0.2, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Cause.Cause) The Impact (υ: ±0.0, ψ: -0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Cause.Effect) The Wealth (Lucky Country) (υ: +0.3, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **3.7 Effect**
+
+**(Where.Effect.Who) The Suburbanite (υ: +0.5, ψ: -0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Effect.What) The Sprawl (υ: +0.3, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Effect.Where) The Coast (Rim) (υ: +0.4, ψ: -0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Effect.Why) The Lifestyle (υ: +0.5, ψ: +0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Effect.How) The BBQ (υ: +0.7, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Effect.Cause) The Quarantine (υ: -0.4, ψ: -0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Where.Effect.Effect) The Future (υ: +0.7, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+# **Plane 4: Drive (Why)**
+
+## **4.1 Who**
+
+**(Why.Who.Who) The Volunteer (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "We must end the massive tax handouts to property investors that lock young people and essential workers out of the housing market." (2022).
 **Brief:** Waters actively attacks the foundational motivation of the Australian drive: the absolute, unassailable right to accumulate and hoard private property.
 She views the "Castle" not as a sanctuary, but as a site of immense, subsidized structural inequality.
 Her rhetoric attacks the mechanisms (negative gearing, capital gains tax discounts) that heavily reward the property investor class.
@@ -1309,7 +1420,7 @@ Waters’ demand for structural reform actively attempts to destroy the "Rent-Se
 She fails to leverage the "Great Australian Dream," choosing instead to attack its modern, corrupted form.
 This is a failure to align because she is the primary political enemy of the speculative property hoarding that drives the middle class.
 
-**(Why.Who.What) The Small Business Owner (υ: +0.6, ψ: +0.5): FAIL.** **Quote:** "We need stronger environmental protections and absolute guarantees for workers' rights, regardless of the size of the business." (2019).
+**(Why.Who.What) The Bludger (υ: -0.6, ψ: -0.5): FAIL.** **Quote:** "We need stronger environmental protections and absolute guarantees for workers' rights, regardless of the size of the business." (2019).
 **Brief:** She frequently prioritizes strict regulatory compliance, environmental standards, and labor rights over the unrestricted freedom of the small enterprise.
 Her narrative treats the employer primarily as an entity that must be heavily regulated by the state to prevent exploitation.
 This strategy alienates the "Aspirational" class, viewing their profit motive with suspicion rather than veneration.
@@ -1319,7 +1430,7 @@ Waters’ regulatory agenda introduces massive friction into the "Entrepreneuria
 She prioritizes the "Worker" and the "Environment" so heavily that the "Owner" is often treated as a structural enemy.
 This is a failure because her policies actively restrict the primary aspirational drive of the Australian middle class.
 
-**(Why.Who.Where) The Regional Worker (υ: +0.5, ψ: +0.4): FAIL.** **Quote:** "We must urgently transition away from fossil fuels and support communities to move into the clean energy industries of the future." (2021).
+**(Why.Who.Where) The Knocker (υ: -0.4, ψ: -0.3): FAIL.** **Quote:** "We must urgently transition away from fossil fuels and support communities to move into the clean energy industries of the future." (2021).
 **Brief:** She explicitly targets the traditional, extractive industries that employ the regional workforce, demanding their complete dismantling.
 Her narrative promises a "Just Transition," but the immediate reality of her policy is the destruction of established, high-paying rural jobs.
 This strategy treats the regional worker not as the backbone of the economy, but as a demographic that must be completely retrained and relocated.
@@ -1329,7 +1440,7 @@ Waters’ environmentalism actively attacks the "Extractive Drive" that sustains
 She introduces immense friction by telling the regional worker that their livelihood is destroying the planet.
 This is a failure because she actively works to destroy the specific economic motivation of the rural working class.
 
-**(Why.Who.Why) The Environmentalist (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "We are in a climate emergency, and the Greens will not stop fighting until we secure a safe climate for our children." (2020).
+**(Why.Who.Why) The Digger (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are in a climate emergency, and the Greens will not stop fighting until we secure a safe climate for our children." (2020).
 **Brief:** She is the absolute, unyielding avatar of the modern drive to protect and preserve the biological reality of the continent.
 Her entire political genesis is based on the motivation to stop corporate extraction and halt global warming.
 This strategy elevates the "Custodian" logic, demanding that ecological survival supersede all other economic or political priorities.
@@ -1339,7 +1450,7 @@ Waters flawlessly operates this vector, deriving her entire mandate from the mot
 She ensures that the "Ecological Drive" remains a central, highly aggressive force in the national parliament.
 This is a hit because she accurately and powerfully channels the most vital modern motivation of the progressive state.
 
-**(Why.Who.How) The Welfare Recipient (υ: +0.7, ψ: -0.4): HIT.** **Quote:** "We must raise the rate of income support above the poverty line immediately. No one should be forced to live in poverty in a wealthy country." (2021).
+**(Why.Who.How) The Gambler (υ: -0.2, ψ: +0.5): HIT.** **Quote:** "We must raise the rate of income support above the poverty line immediately. No one should be forced to live in poverty in a wealthy country." (2021).
 **Brief:** She fiercely defends the motivation of the state to provide an absolute, unconditional floor of dignity for the most vulnerable.
 Her rhetoric treats the reliance on welfare not as a moral failure, but as a fundamental right within a wealthy society.
 This strategy attacks the punitive, "Mutual Obligation" model favored by conservatives, demanding a return to true, passive support.
@@ -1349,7 +1460,7 @@ Waters’ high-will (+ψ) defense of this passive right aligns perfectly with th
 She attempts to remove the friction of "blame" from the welfare system, returning it to a model of pure utility.
 This is a hit because she actively defends the core compassionate motivation of the Australian social contract.
 
-**(Why.Who.Cause) The Migrant (υ: +0.6, ψ: +0.6): HIT.** **Quote:** "We are a diverse, multicultural nation, and we must welcome those who come here seeking a better life or fleeing persecution." (2018).
+**(Why.Who.Cause) The Battler (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "We are a diverse, multicultural nation, and we must welcome those who come here seeking a better life or fleeing persecution." (2018).
 **Brief:** She actively champions the motivation of the incoming citizen to build a new life and integrate into the national fabric.
 Her narrative views the "New Australian" not as a threat, but as an essential injection of energy and culture.
 This strategy demands that the state actively support and protect the migrant, completely rejecting the "Exclusionary" drive.
@@ -1359,7 +1470,7 @@ Waters flawlessly supports this motivation, fighting against the xenophobic fric
 She operates the "Multicultural Drive," ensuring that the borders of the nation remain open to the vulnerable.
 This is a hit because she accurately champions the foundational demographic motivation of the modern Commonwealth.
 
-**(Why.Who.Effect) The Politician (υ: +0.3, ψ: +0.8): HIT.** **Quote:** "I will use my position in the Senate to hold the government to account and fight for the progressive values of my constituents." (2019).
+**(Why.Who.Effect) The Larrikin (υ: +0.4, ψ: +0.3): HIT.** **Quote:** "I will use my position in the Senate to hold the government to account and fight for the progressive values of my constituents." (2019).
 **Brief:** She effectively utilizes the proactive, structural motivation of the political class to enact systemic change.
 Her rhetoric is highly disciplined, focusing on legislative amendments, Senate inquiries, and the mechanics of power.
 This strategy proves that she is not merely an activist, but a highly skilled operator within the formal architecture of the state.
@@ -1369,9 +1480,9 @@ Waters expertly operates the "Operator" mechanics, using her balance of power to
 She understands that the ultimate motivation of the politician is to bend the law to their will.
 This is a hit because she accurately and powerfully utilizes the structural motivation of the Australian parliament.
 
-## **4.2 The What of Motivation (Why.What)**
+## **4.2 What**
 
-**(Why.What.Who) The Accumulation of Wealth (υ: -0.3, ψ: +0.7): FAIL.** **Quote:** "We must implement a billionaire's tax and a super-profits tax on the massive corporations that are price-gouging everyday people." (2022).
+**(Why.What.Who) The Fair Go (υ: +0.9, ψ: +0.5): FAIL.** **Quote:** "We must implement a billionaire's tax and a super-profits tax on the massive corporations that are price-gouging everyday people." (2022).
 **Brief:** She actively attacks the primary economic motivation of the nation: the unrestricted accumulation of private capital.
 Her narrative treats excessive wealth not as a reward for hard work, but as a symptom of a broken, exploitative system.
 This strategy demands massive state intervention to forcefully redistribute wealth from the top to the bottom.
@@ -1381,7 +1492,7 @@ Waters flawlessly identifies and attacks this "Selfish Drive," demanding a retur
 She actively attempts to destroy the "Greatest Lie" that unrestricted capitalism benefits the Commonwealth.
 This is a failure (to align with the shadow) because she is the primary political enemy of the aggressive, foundational logic of wealth accumulation.
 
-**(Why.What.What) The Fair Go (Economic) (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "A true fair go means making sure everyone has access to free healthcare, free education, and affordable housing." (2019).
+**(Why.What.What) The Weekend (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "A true fair go means making sure everyone has access to free healthcare, free education, and affordable housing." (2019).
 **Brief:** She attempts to perfectly align the nation's economic motivation with the absolute, universal provision of the Fair Go.
 Her rhetoric demands that the state's primary drive must be the eradication of poverty and structural inequality.
 This strategy views the "Safety Net" as the ultimate measure of national success, far above GDP or corporate profits.
@@ -1391,7 +1502,7 @@ Waters’ demand for a massive expansion of public services perfectly aligns wit
 She attempts to remove all economic friction from the "Social Contract," turning it into an absolute guarantee.
 This is a hit because she actively champions the highest moral and economic motivation of the Australian state.
 
-**(Why.What.Where) The Fear of Invasion (υ: -0.6, ψ: +0.5): FAIL.** **Quote:** "We must stop prioritizing massive military spending and focus on diplomacy, peace-building, and climate security in our region." (2021).
+**(Why.What.Where) The Home (υ: +0.5, ψ: +0.4): FAIL.** **Quote:** "We must stop prioritizing massive military spending and focus on diplomacy, peace-building, and climate security in our region." (2021).
 **Brief:** She explicitly rejects the deep, existential terror that drives the "Fortress Australia" mentality and defense spending.
 Her platform is built on the belief that the nation is secure, and that the real threat is climate change, not foreign armies.
 She views the massive defense budget as a paranoid waste of resources that should be spent on social services.
@@ -1401,7 +1512,7 @@ Waters’ rhetoric is the direct enemy of the "Bulwark" anxiety, prioritizing re
 She fights against the "Paranoid Drive" of this vector, utilizing logic to soften the national perimeter.
 This is a failure because she actively attacks the defensive, fearful motivation of the Australian geography.
 
-**(Why.What.Why) Apathy / The Quiet Life (υ: +0.5, ψ: -0.6): FAIL.** **Quote:** "We cannot afford to be complacent. The climate crisis requires massive, urgent, and disruptive action from all of us." (2019).
+**(Why.What.Why) The Holiday (υ: +0.5, ψ: -0.2): FAIL.** **Quote:** "We cannot afford to be complacent. The climate crisis requires massive, urgent, and disruptive action from all of us." (2019).
 **Brief:** She explicitly shatters the deep-seated desire for domestic privacy and political apathy to drive her environmental agenda.
 By highlighting existential threats to the planet, she demands the historically apathetic middle class abandon their quiet lives and mobilize.
 Her narrative suggests that the government's failure requires the citizen to constantly agitate and demand change.
@@ -1411,7 +1522,7 @@ Waters attacks the defensive mechanisms of this vector, convincing the "Quiet Au
 She successfully destroys the "Complacent Drive" by demanding constant, loud public agitation.
 This is a failure because she actively attacks the emotional power of the Australian desire to be left alone.
 
-**(Why.What.How) The Rule of Law (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We need a strong, independent federal anti-corruption commission with teeth to restore integrity to our politics." (2018).
+**(Why.What.How) The Ute (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "We need a strong, independent federal anti-corruption commission with teeth to restore integrity to our politics." (2018).
 **Brief:** She fiercely defends the motivation to subject all political and corporate power to strict, independent legal scrutiny.
 Her rhetoric constantly attacks the "Grey Zones" of political donations, lobbying, and corporate influence.
 This strategy demands that the "System" operate with absolute transparency and adherence to the law.
@@ -1421,7 +1532,7 @@ Waters’ relentless pursuit of an anti-corruption commission perfectly aligns w
 She honors the historical mandate to ensure that the powerful are subject to the same rules as the citizen.
 This is a hit because her policies actively support the structural mechanisms that guarantee a fair and honest system.
 
-**(Why.What.Cause) The Colonial Inheritance (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We must acknowledge the devastating impact of colonization and commit to a process of Treaty and Truth-telling." (2020).
+**(Why.What.Cause) The Pay Packet (υ: +0.7, ψ: +0.4): FAIL.** **Quote:** "We must acknowledge the devastating impact of colonization and commit to a process of Treaty and Truth-telling." (2020).
 **Brief:** She actively attacks the foundational motivation to simply accept and build upon the colonial inheritance without question.
 Her narrative treats the British arrival not as a "Gift," but as a violent rupture that must be structurally corrected.
 This strategy demands that the state actively reckon with the original sin of its foundation, rather than passively enjoying its benefits.
@@ -1431,7 +1542,7 @@ Waters’ deep progressivism violently rejects the uncritical acceptance of this
 She attacks the "Complacent Inheritance" to legitimize modern claims for First Nations sovereignty.
 This is a failure because she acts as the fiercest enemy of the passive, unamended "Colonial Act."
 
-**(Why.What.Effect) The Class War (υ: 0.0, ψ: +0.6): HIT.** **Quote:** "The billionaires and the big corporations are getting richer while everyday people struggle to pay the rent. It's time to make them pay." (2022).
+**(Why.What.Effect) The Pension (υ: +0.8, ψ: +0.3): HIT.** **Quote:** "The billionaires and the big corporations are getting richer while everyday people struggle to pay the rent. It's time to make them pay." (2022).
 **Brief:** She perfectly masters the aesthetic and the resentment of the foundational class struggle, redirecting it toward corporate targets.
 Her rhetoric constantly utilizes the language of the "Worker" fighting the "Elite," mapping the historical strike logic onto modern economic inequality.
 This strategy allows her to harvest the deep, inherited anger of the working class, even while her environmental policies sometimes threaten their jobs.
@@ -1441,9 +1552,9 @@ Waters flawlessly operates the "Resentment" of this origin, using the ghost of t
 She proves that the Australian foundation is deeply scarred by economic inequality, and that those scars can be easily reopened for progressive gain.
 This is a hit because she accurately channels the most potent internal conflict motivation of the modern political system.
 
-## **4.3 The Where of Motivation (Why.Where)**
+## **4.3 Where**
 
-**(Why.Where.Who) The Coastal Fringe (υ: +0.6, ψ: +0.3): HIT.** **Quote:** "We must protect our precious coastlines and marine parks from the destructive impacts of offshore drilling." (2018).
+**(Why.Where.Who) The Pub (υ: +0.5, ψ: +0.3): HIT.** **Quote:** "We must protect our precious coastlines and marine parks from the destructive impacts of offshore drilling." (2018).
 **Brief:** She views the physical edge of the continent as the primary geographic motivation for environmental defense.
 Her policy focus constantly returns to the physical integrity of the beaches and the waters immediately surrounding them, treating them as sacred.
 This narrative transforms the coastal fringe from a place of passive leisure into the front line of an active environmental war.
@@ -1453,7 +1564,7 @@ Waters operates this vector at maximum friction against industry, treating the i
 She recognizes that the Australian population clings to this edge, making it highly sensitive to physical and environmental breaches.
 This is a hit because she perfectly exploits the geographic motivation of a civilization built exclusively on the rim.
 
-**(Why.Where.What) The Outback (υ: +0.7, ψ: -0.4): FAIL.** **Quote:** "We cannot continue to allow massive agribusiness to clear native vegetation in the outback, destroying habitats and driving emissions." (2019).
+**(Why.Where.What) The Beach (υ: +0.6, ψ: +0.3): FAIL.** **Quote:** "We cannot continue to allow massive agribusiness to clear native vegetation in the outback, destroying habitats and driving emissions." (2019).
 **Brief:** She attacks the traditional motivation to conquer, extract from, and dominate the "empty" landscape of the interior.
 Her rhetoric claims the hostile geography of the frontier as the exclusive moral property of nature, not the pastoralist or the miner.
 This strategy relies on the belief that the empty spaces must remain empty to protect biodiversity and First Nations heritage.
@@ -1463,7 +1574,7 @@ Waters expertly maps her political movement onto this iconic geography, claiming
 She attacks the myth that the "Outback" requires brutal geographic development to justify its existence within the nation.
 This is a failure because she actively fights the primary foundational extractive motivation of the Australian spatial identity.
 
-**(Why.Where.Where) The Suburbs (υ: +0.5, ψ: -0.5): FAIL.** **Quote:** "We need a massive build of high-quality, sustainable public housing to end the housing crisis and create connected communities." (2021).
+**(Why.Where.Where) Country [FN] (υ: +0.9, ψ: +0.5): FAIL.** **Quote:** "We need a massive build of high-quality, sustainable public housing to end the housing crisis and create connected communities." (2021).
 **Brief:** She explicitly attacks the traditional "Retreat" motivation of the low-density suburb in favor of progressive, dense urban planning.
 She emphasizes the need for dense, communal living spaces to solve environmental and economic crises, rejecting the quarter-acre block.
 This narrative portrays the isolated suburban block as ecologically unsustainable and socially alienating.
@@ -1473,7 +1584,7 @@ This rejection of the "Retreat" vector provides a major source of friction with 
 The vector is defined by the desire to "escape into silence," which she replaces with a demand for "communal density."
 Her interaction is a failure because it actively attacks the passive, protective spatial motivations of the suburbanite.
 
-**(Why.Where.Why) The Resource Curse (υ: -0.3, ψ: +0.7): FAIL.** **Quote:** "The era of coal is over. We must transition to renewables and stop subsidizing the industries that are cooking the planet." (2020).
+**(Why.Where.Why) The Club (υ: +0.4, ψ: -0.2): FAIL.** **Quote:** "The era of coal is over. We must transition to renewables and stop subsidizing the industries that are cooking the planet." (2020).
 **Brief:** She expends massive political energy fighting the defining economic motivation of the modern state: the vast, subterranean mineral wealth.
 Her rhetoric treats the geological abundance of the continent not as a blessing, but as a literal "curse" that is destroying the future.
 This strategy attempts to physically halt the extraction machinery, demanding that the geology remain untouched.
@@ -1483,7 +1594,7 @@ Waters flawlessly identifies and attacks this "Curse," demanding an immediate ha
 She operates in direct opposition to the "Dig" methodology, ensuring the state must confront its reliance on the quarry.
 This is a failure because she is the primary political enemy of the aggressive, foundational logic of geographic extraction.
 
-**(Why.Where.How) The Tyranny of Distance (υ: 0.0, ψ: -0.6): FAIL.** **Quote:** "We must act globally to tackle the climate emergency. We are not isolated from the rest of the world's problems." (2019).
+**(Why.Where.How) The Shed (υ: +0.5, ψ: +0.4): FAIL.** **Quote:** "We must act globally to tackle the climate emergency. We are not isolated from the rest of the world's problems." (2019).
 **Brief:** She explicitly rejects the vast internal and external distances of the continent as an excuse for political or environmental isolation.
 By highlighting the global nature of the climate crisis, she destroys the "Real Australia" vs the "World" dichotomy.
 She recognizes that the "Gravity" of distance creates alienated populations, but refuses to let that distance dictate policy.
@@ -1493,7 +1604,7 @@ Waters brilliantly attempts to destroy this constraint, turning geographic isola
 She attempts to use the "Global Network" to crush the idea of a disconnected national consensus.
 This is a failure because her movement actively fights the vast, disconnected spatial motivations created by the Australian geography.
 
-**(Why.Where.Cause) Climate Anxiety (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "The fires, the floods, the dying reef—we are living in a climate emergency, and the government is asleep at the wheel." (2020).
+**(Why.Where.Cause) The Field (υ: +0.6, ψ: +0.6): HIT.** **Quote:** "The fires, the floods, the dying reef—we are living in a climate emergency, and the government is asleep at the wheel." (2020).
 **Brief:** She is the absolute master of utilizing the existential, scientific reality of the climate crisis to generate massive political motivation.
 Her narrative treats environmental concern not as a fringe issue, but as the absolute, overriding priority of the modern state.
 This strategy attempts to force the electorate to confront the massive physical and economic threats posed by a warming continent.
@@ -1503,7 +1614,7 @@ Waters’ absolute reliance on this reality introduces massive structural energy
 She replaces comfortable, nostalgic complacency with a highly motivated, necessary "Survival Anxiety."
 This is a hit because she actively champions the most critical scientific and environmental motivation of the modern era.
 
-**(Why.Where.Effect) The Asian Century (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must build strong, peaceful, and cooperative relationships with our Asian and Pacific neighbors, rather than preparing for war." (2021).
+**(Why.Where.Effect) The Mall (υ: -0.2, ψ: +0.3): HIT.** **Quote:** "We must build strong, peaceful, and cooperative relationships with our Asian and Pacific neighbors, rather than preparing for war." (2021).
 **Brief:** Views the surrounding region primarily as a "destiny" and a necessary partnership for the nation's future.
 She supports the integration of Australia into the Asian region, advocating for peace and climate cooperation over military posturing.
 This perspective attempts to fully accept the geographic reality that Australia is located in Asia.
@@ -1513,25 +1624,143 @@ She favors a cooperative approach that integrates the nation into its geographic
 The vector requires a "Trajectory of Integration," which her rhetoric explicitly attempts to accelerate.
 Her interaction is a hit because it replaces the "Memory of Origin" motivation with the "Destiny of Place."
 
-## **Final Forensic Verdict: Larissa Waters (Plane 4)**
+## **4.4 Why**
 
-*(Scores will be compiled in the final merge)*
+**(Why.Why.Who) Mateship (υ: +0.7, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 4)**
+**(Why.Why.What) Tall Poppy Syndrome (υ: -0.4, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**Plane 4 Drive Score:** -1 Net Score (10 HIT, 11 FAIL, 0 MISS)
-**Percentage Australian Alignment:** 47.6%
-**Average Morality (υ):** +0.55 (Systemic Equality)
-**Average Will (ψ):** +0.35 (Proactive Energy)
-**Quadrant Placement:** Greater Good / Progressive Overwrite
+**(Why.Why.Where) Cultural Cringe (υ: -0.5, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**Final Statement:** Larissa Waters acts as a **Structural Disrupter** on the Plane of Drive. She successfully weaponizes the progressive motivations of the state (The Welfare Recipient, The Migrant, The Rule of Law, Climate Anxiety) to demand a more equitable and environmentally sustainable society. However, her "True Intent" (Dismantling the Resource Curse, Attacking the Accumulation of Wealth, Rejecting the Fear of Invasion) violently attacks the foundational, selfish, and paranoid drives that built the modern Australian economy. By prioritizing the "Fair Go" over the "Profit Motive," and "Survival Anxiety" over the "Quiet Life," she demands a fundamental reprogramming of what motivates the Australian citizen.
+**(Why.Why.Why) She'll Be Right (υ: +0.2, ψ: -0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-# **Plane 5, Method How**
+**(Why.Why.How) Have a Go (υ: +0.6, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-## **5.1 The Operators (How.Who)**
+**(Why.Why.Cause) Fear of Missing Out (υ: -0.2, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**(How.Who.Who) The Bureaucrat (υ: +0.6, ψ: -0.3): HIT.** **Quote:** "We need an independent environmental protection agency to enforce the laws and stop the corporations from destroying our habitats." (2020).
+**(Why.Why.Effect) The Good Life (υ: +0.5, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **4.5 How**
+
+**(Why.How.Who) Shouting (υ: +0.7, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.How.What) Sledging (υ: -0.3, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.How.Where) Queuing (υ: +0.8, ψ: -0.2): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.How.Why) Striking (υ: +0.7, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.How.How) Improvising (υ: +0.6, ψ: +0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.How.Cause) Gambling (υ: -0.3, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.How.Effect) Volunteering (υ: +0.9, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **4.6 Cause**
+
+**(Why.Cause.Who) The Stain (υ: -0.4, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.Who) Guilt [First Nations Perspective] (υ: +0.6, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.What) The Gold (υ: +0.5, ψ: +0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.Where) The Bush (υ: +0.5, ψ: -0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.Where) Abundance [First Nations Perspective] (υ: +0.8, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.Why) The War (υ: +0.6, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.Why) Resistance [First Nations Perspective] (υ: +0.8, ψ: +0.8): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.How) The Depression (υ: ±0.0, ψ: -0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.Cause) The Isolation (υ: ±0.0, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Cause.Effect) The Boom (υ: +0.4, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **4.7 Effect**
+
+**(Why.Effect.Who) The Citizen (υ: +0.7, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Effect.What) The Middle Class (υ: +0.5, ψ: -0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Effect.Where) The Suburb (υ: +0.4, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Effect.Why) Stability (υ: +0.6, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Effect.How) Cynicism (υ: +0.3, ψ: -0.2): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Effect.Cause) Prosperity (υ: +0.6, ψ: +0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(Why.Effect.Effect) Sovereignty (υ: +0.7, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+# **Plane 5: Method (How)**
+
+## **5.1 Who**
+
+**(How.Who.Who) The Bricoleur (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We need an independent environmental protection agency to enforce the laws and stop the corporations from destroying our habitats." (2020).
 **Brief:** Waters relies heavily on the expansion of the bureaucracy to enforce her progressive and environmental goals.
 She views the establishment of independent agencies, watchdogs, and highly regulated public sectors as the primary method to combat corporate greed.
 This strategy utilizes the "Faceless Man" of the public service to implement systemic change that politicians might be too cowardly to enact.
@@ -1541,7 +1770,7 @@ Waters flawlessly operates this vector, demanding a massive expansion of the sta
 She understands that true environmental and social justice requires a powerful, well-funded bureaucracy to enforce it.
 This is a hit because she actively champions the foundational administrative method of the Australian state.
 
-**(How.Who.What) The Union Boss (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "The right to strike is a fundamental human right, and we will always stand with workers organizing for better conditions." (2019).
+**(How.Who.What) The Unionist (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "The right to strike is a fundamental human right, and we will always stand with workers organizing for better conditions." (2019).
 **Brief:** She explicitly aligns her political methodology with the aggressive, organized leverage of the labor movement.
 Her rhetoric treats the collective withdrawal of labor as a vital, necessary tool to check the power of capital and the state.
 This strategy utilizes the "Lever" of the union to secure progressive economic outcomes, refusing to view industrial action as a threat.
@@ -1551,7 +1780,7 @@ Waters perfectly embodies the "Organizer" method, defending the right of the wor
 She ensures that the "Solidarity Method" remains a highly visible and politically viable tool.
 This is a hit because she aggressively champions the foundational economic leverage of the working class.
 
-**(How.Who.Where) The Property Developer (υ: -0.4, ψ: +0.7): FAIL.** **Quote:** "We must stop developers from bulldozing native habitats to build unsustainable, sprawling suburbs." (2021).
+**(How.Who.Where) The Public Servant (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We must stop developers from bulldozing native habitats to build unsustainable, sprawling suburbs." (2021).
 **Brief:** She violently attacks the most powerful, high-will operator shaping the physical landscape of the modern state.
 Her narrative treats the aggressive expansion of the urban footprint not as progress, but as an ecological and social disaster.
 This strategy attempts to physically halt the "Builder" method, demanding strict environmental constraints on construction.
@@ -1561,7 +1790,7 @@ Waters is the primary political enemy of this "Expansion Method," demanding an i
 She operates in direct opposition to the "Bulldozer" logic, ensuring the state must confront its reliance on endless construction.
 This is a failure because she actively works to destroy the specific spatial methodology of the modern Australian economy.
 
-**(How.Who.Why) The Lobbyist (υ: -0.5, ψ: +0.6): FAIL.** **Quote:** "The fossil fuel industry has captured our parliament. We must ban corporate donations to restore our democracy." (2022).
+**(How.Who.Why) The Whistleblower (υ: +0.9, ψ: +0.7): FAIL.** **Quote:** "The fossil fuel industry has captured our parliament. We must ban corporate donations to restore our democracy." (2022).
 **Brief:** She expends massive political energy fighting the defining, corrupting methodology of the modern political system: corporate influence.
 Her rhetoric treats the "Whisperer" not as a legitimate participant, but as a parasite that is destroying the integrity of the state.
 This strategy attempts to physically sever the connection between capital and legislation, demanding total transparency.
@@ -1571,7 +1800,7 @@ Waters flawlessly identifies and attacks this "Corrupt Method," demanding an imm
 She operates in direct opposition to the "Backroom Deal" methodology, ensuring the state must confront its reliance on corporate cash.
 This is a failure (to align with the shadow) because she is the primary political enemy of the aggressive, foundational logic of political corruption.
 
-**(How.Who.How) The Protestor (υ: +0.8, ψ: +0.8): HIT.** **Quote:** "When governments fail to protect our future, taking to the streets and protesting peacefully is a democratic duty." (2019).
+**(How.Who.How) The Umpire (υ: +0.7, ψ: +0.4): HIT.** **Quote:** "When governments fail to protect our future, taking to the streets and protesting peacefully is a democratic duty." (2019).
 **Brief:** She views public disruption and mass mobilization as an essential, highly legitimate method of enacting political change.
 She constantly aligns herself with loud, physical, anti-establishment protests that occupy public space.
 This strategy leverages the "Eureka Spark," turning raw public anger into a sophisticated, high-energy political tool.
@@ -1581,7 +1810,7 @@ Waters flawlessly aligns her progressive brand with the protest movement, harves
 She understands that the Australian foundation includes a hard limit on state inaction, which must be challenged via mass defiance.
 This is a hit because she accurately weaponizes the historical methodology of the "Rally" against the conservative state.
 
-**(How.Who.Cause) The Shock Jock (υ: -0.3, ψ: +0.6): FAIL.** **Quote:** "We need a Royal Commission into the Murdoch media monopoly that is poisoning our public debate with right-wing propaganda." (2020).
+**(How.Who.Cause) The Drover (υ: +0.5, ψ: +0.5): FAIL.** **Quote:** "We need a Royal Commission into the Murdoch media monopoly that is poisoning our public debate with right-wing propaganda." (2020).
 **Brief:** She explicitly attacks the ruthless, highly concentrated conservative media apparatus that dominates the national discourse.
 Her narrative views the "Megaphone" of conservative talk radio and tabloids as a toxic force that must be dismantled.
 This strategy attempts to break the monopoly that uses fear and outrage to shift the "Overton Window" to the right.
@@ -1591,7 +1820,7 @@ Waters is the ultimate enemy of this "Structural Flaw," demanding the dismantlin
 She understands that in the Australian system, political reality is largely defined by the dominant papers, and she seeks to destroy them.
 This is a failure because she is perfectly hostile to the most powerful, regressive communication method in the country.
 
-**(How.Who.Effect) The Scientist / Expert (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "The science is in. The IPCC reports are clear. We must listen to the experts and act immediately." (2021).
+**(How.Who.Effect) The Scientist (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "The science is in. The IPCC reports are clear. We must listen to the experts and act immediately." (2021).
 **Brief:** She fundamentally relies on the "Expert" as the ultimate, unquestionable authority for generating state policy.
 Her rhetoric constantly defers to academic consensus, demanding that complex data supersede "Common Sense" or political expediency.
 This strategy views the scientific method not as a suggestion, but as an absolute mandate that must dictate legislation.
@@ -1601,9 +1830,9 @@ Waters’ relentless deference to climate scientists perfectly aligns with the "
 She attempts to enforce the historical mandate that the state must base its decisions on facts, not ideology.
 This is a hit because her policies actively support the structural mechanisms that guarantee a rational, informed system.
 
-## **5.2 The Operations (How.What)**
+## **5.2 What**
 
-**(How.What.Who) Compulsory Voting (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "Our democracy is strengthened when everyone is required to participate. We should lower the voting age to ensure young people have a say." (2018).
+**(How.What.Who) The Ballot Paper (υ: +0.9, ψ: +0.6): HIT.** **Quote:** "Our democracy is strengthened when everyone is required to participate. We should lower the voting age to ensure young people have a say." (2018).
 **Brief:** She brilliantly leverages the mandatory participation of the electorate to harvest the votes of the deeply anxious youth.
 Her narrative acknowledges that while her base may feel ignored, they are legally compelled to participate in the system.
 This strategy turns the "Transactional Functionary" into a weapon of progressive change, utilizing the sheer volume of forced engagement.
@@ -1613,7 +1842,7 @@ Waters expertly navigates the "Effect" of the drive, realizing that she must cap
 She operates the "Mass Participation" machine, using the compulsory mass to force the center toward her progressive goals.
 This is a hit because she perfectly exploits the ultimate democratic method of the Australian electoral system.
 
-**(How.What.What) Preferential Voting (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We will use our preferences strategically to ensure the worst climate deniers are removed from parliament." (2022).
+**(How.What.What) The Wage Case (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "We will use our preferences strategically to ensure the worst climate deniers are removed from parliament." (2022).
 **Brief:** She is a master manipulator of the complex mathematical calculus that determines Australian electoral outcomes.
 She weaponizes "preference whispering" to leverage a small primary vote into significant upper-house representation and lower-house influence.
 By directing her preferences away from conservative parties, she extorts policy concessions from the center-left.
@@ -1623,7 +1852,7 @@ Waters utilizes the "Calculus" of consensus as a tool of immense political lever
 She understands that in the Australian system, controlling the flow of progressive votes is the ultimate form of power.
 This is a hit because she actively and brilliantly exploits the mechanical engine of the electoral system.
 
-**(How.What.Where) Negative Gearing (υ: -0.4, ψ: +0.6): FAIL.** **Quote:** "Negative gearing is a massive tax rort that favors wealthy investors while locking a generation out of home ownership." (2019).
+**(How.What.Where) The Wifi (υ: +0.8, ψ: +0.7): FAIL.** **Quote:** "Negative gearing is a massive tax rort that favors wealthy investors while locking a generation out of home ownership." (2019).
 **Brief:** She expends massive political energy fighting the defining, corrupting methodology of the modern housing market.
 Her rhetoric treats the tax loophole not as a legitimate investment strategy, but as a structural injustice that must be destroyed.
 This strategy attempts to physically sever the connection between property speculation and tax avoidance, demanding a fair market.
@@ -1633,7 +1862,7 @@ Waters flawlessly identifies and attacks this "Shadow" policy, demanding an imme
 She operates in direct opposition to the "Property Monopoly" methodology, ensuring the state must confront its housing crisis.
 This is a failure (to align with the shadow) because she is the primary political enemy of the aggressive, foundational logic of middle-class wealth extraction.
 
-**(How.What.Why) Royal Commission (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We must have a Royal Commission into the horrific rates of violence against women, and another into the Murdoch media." (2021).
+**(How.What.Why) Hard Yakka (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "We must have a Royal Commission into the horrific rates of violence against women, and another into the Murdoch media." (2021).
 **Brief:** She routinely demands the highest form of state inquiry to target institutions she believes are corrupted or failing.
 By weaponizing the call for a Royal Commission, she attempts to lend a veneer of forensic credibility to her progressive demands.
 She uses the "Ritual" of the inquiry to generate sensational media coverage and validate the fears of her supporters.
@@ -1643,7 +1872,7 @@ Waters utilizes the "Inquisitor" mechanism with high will (+ψ) to pursue accoun
 She understands that demanding a Commission is the ultimate Australian method for escalating a political conflict.
 This is a hit because she consistently employs the most powerful investigative method of the definition for systemic reform.
 
-**(How.What.How) Section 44 / The Constitution (υ: +0.6, ψ: +0.3): HIT.** **Quote:** "I take full responsibility for my failure to renounce my Canadian citizenship. The Constitution is clear, and I must resign." (2017).
+**(How.What.How) The Stump Jump Plough (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "I take full responsibility for my failure to renounce my Canadian citizenship. The Constitution is clear, and I must resign." (2017).
 **Brief:** She explicitly fell victim to, and ultimately respected, the rigid, black-letter mechanics of the Australian Constitution.
 Her resignation demonstrated a profound (if reluctant) submission to the absolute authority of the colonial text, even when it seemed absurd or archaic.
 This strategy honors the "Rules of the Game," proving that the structural integrity of the state supersedes individual political ambition.
@@ -1653,7 +1882,7 @@ Waters’ compliance with Section 44 demonstrates a total submission to the "Leg
 She understands that the Australian foundation is highly dependent on the absolute enforcement of the written law.
 This is a hit because she accurately and painfully demonstrated the ultimate power of the constitutional method.
 
-**(How.What.Cause) The Media Monopoly (υ: -0.3, ψ: +0.6): FAIL.** **Quote:** "The Murdoch press is a cancer on our democracy, actively spreading climate denial and protecting the conservative government." (2020).
+**(How.What.Cause) The Boomerang (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "The Murdoch press is a cancer on our democracy, actively spreading climate denial and protecting the conservative government." (2020).
 **Brief:** She explicitly attacks the ruthless, highly concentrated conservative media apparatus that dominates the national discourse.
 Her narrative views the "Megaphone" of News Corp as a toxic force that must be dismantled through legal inquiry.
 This strategy attempts to break the monopoly that uses fear and outrage to shift the "Overton Window" to the right.
@@ -1663,7 +1892,7 @@ Waters is the ultimate enemy of this "Structural Flaw," demanding the dismantlin
 She understands that in the Australian system, political reality is largely defined by the dominant papers, and she seeks to destroy them.
 This is a failure because she is perfectly hostile to the most powerful, regressive communication method in the country.
 
-**(How.What.Effect) The "Fair Go" (As Utility) (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "A genuine fair go means providing universal free healthcare, education, and raising the rate of Newstart." (2019).
+**(How.What.Effect) The Black Box (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "A genuine fair go means providing universal free healthcare, education, and raising the rate of Newstart." (2019).
 **Brief:** She attempts to perfectly align the nation's economic methodology with the absolute, universal provision of the Fair Go.
 Her rhetoric demands that the state's primary method must be the eradication of poverty and structural inequality through funding.
 This strategy views the "Safety Net" not as charity, but as a rigid, institutionalized mechanism of the state.
@@ -1673,9 +1902,9 @@ Waters’ demand for a massive expansion of public services perfectly aligns wit
 She attempts to remove all economic friction from the "Social Contract," turning it into an absolute mechanical guarantee.
 This is a hit because she actively champions the highest moral and economic method of the Australian state.
 
-## **5.3 The Environments (How.Where)**
+## **5.3 Where**
 
-**(How.Where.Who) The Parliament (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "I am proud to use the Senate to block destructive legislation and force the government to listen to the science." (2021).
+**(How.Where.Who) The Polling Booth (υ: +0.9, ψ: +0.4): HIT.** **Quote:** "I am proud to use the Senate to block destructive legislation and force the government to listen to the science." (2021).
 **Brief:** She highly values the formal, physical chamber of the parliament as the ultimate arena for enacting systemic change.
 Her narrative relies on the mastery of parliamentary procedure, using the rules of the Senate to ambush and stall conservative legislation.
 This strategy treats the "Floor" not just as a talking shop, but as a vital mechanical tool for checking executive power.
@@ -1685,7 +1914,7 @@ Waters expertly operates the "Procedural Method," using the Senate's complex rul
 She understands that the Australian foundation is deeply reliant on the formal mechanics of debate and voting.
 This is a hit because she accurately and powerfully utilizes the structural environment of the Australian parliament.
 
-**(How.Where.What) The Street / Protest (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "I stand in solidarity with the thousands of school students taking to the streets today to demand climate action." (2019).
+**(How.Where.What) The Picket Line (υ: +0.7, ψ: +0.7): HIT.** **Quote:** "I stand in solidarity with the thousands of school students taking to the streets today to demand climate action." (2019).
 **Brief:** She explicitly aligns her political methodology with the aggressive, organized leverage of public mass mobilization.
 Her rhetoric treats the physical occupation of the street as a vital, necessary tool to force the parliament to act.
 This strategy utilizes the "Spectacle" of the protest to secure progressive outcomes, refusing to view civil disobedience as a threat.
@@ -1695,7 +1924,7 @@ Waters perfectly embodies the "Organizer" method, defending the right of the cit
 She ensures that the "Defiance Method" remains a highly visible and politically viable tool.
 This is a hit because she aggressively champions the foundational democratic leverage of the public demonstration.
 
-**(How.Where.Where) The Pub (υ: +0.5, ψ: -0.3): FAIL.** **Quote:** "We need policy based on peer-reviewed science, not populism or what sounds good in a soundbite." (2020).
+**(How.Where.Where) The Surf Club (υ: +0.8, ψ: +0.6): FAIL.** **Quote:** "We need policy based on peer-reviewed science, not populism or what sounds good in a soundbite." (2020).
 **Brief:** Waters fundamentally rejects the "Pub" as the environment for judging or generating national and social policies.
 She prioritizes complex, formal evidence and global academic consensus over colloquial, localized discussion.
 By ignoring the "Pub Test," she creates a logical environment that favors expert analysis over informal, working-class instinct.
@@ -1705,7 +1934,7 @@ This contradicts the passive, informal logical filter that defines much of the n
 The vector is about "Standardizing Common Sense," which she views as a dangerous environment for complex policy debate.
 Her interaction is a failure because she explicitly prioritizes formal institutions over the informal pub.
 
-**(How.Where.Why) The Courtroom (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We will support environmental groups using the courts to hold these massive mining corporations accountable to the law." (2021).
+**(How.Where.Why) The Courtroom (υ: +0.7, ψ: +0.4): HIT.** **Quote:** "We will support environmental groups using the courts to hold these massive mining corporations accountable to the law." (2021).
 **Brief:** She fiercely defends the motivation to subject all political and corporate power to strict, independent legal scrutiny in the physical courtroom.
 Her rhetoric constantly supports the use of litigation to stall or destroy environmentally damaging projects.
 This strategy demands that the "System" operate with absolute transparency and adherence to the law, using the courts as a weapon.
@@ -1715,7 +1944,7 @@ Waters’ relentless support for environmental litigation perfectly aligns with 
 She honors the historical mandate to ensure that the powerful are subject to the same rules as the citizen via the courts.
 This is a hit because her policies actively support the structural environments that guarantee a fair and honest system.
 
-**(How.Where.How) The Suburb (υ: +0.5, ψ: -0.4): FAIL.** **Quote:** "We must rethink how we design our cities, moving away from car-dependent urban sprawl towards dense, sustainable communities." (2019).
+**(How.Where.How) The Lab (υ: +0.7, ψ: +0.6): FAIL.** **Quote:** "We must rethink how we design our cities, moving away from car-dependent urban sprawl towards dense, sustainable communities." (2019).
 **Brief:** She explicitly attacks the traditional "Retreat" environment of the low-density suburb in favor of progressive urban planning.
 She emphasizes the need for dense, communal living spaces to solve environmental and economic crises, rejecting the physical isolation of the quarter-acre block.
 This narrative portrays the isolated suburban environment as ecologically unsustainable and socially alienating.
@@ -1725,7 +1954,7 @@ This rejection of the "Retreat" environment provides a major source of friction 
 The vector is defined by the desire to "escape into silence," which she replaces with a demand for "communal density."
 Her interaction is a failure because it actively attacks the passive, protective spatial environment of the suburbanite.
 
-**(How.Where.Cause) The Offshore Detention Centre (υ: -0.8, ψ: +0.5): FAIL.** **Quote:** "The cruel system of offshore detention is a national shame and must be closed immediately." (2018).
+**(How.Where.Cause) The Shearing Shed (υ: +0.5, ψ: +0.6): FAIL.** **Quote:** "The cruel system of offshore detention is a national shame and must be closed immediately." (2018).
 **Brief:** She violently attacks the most brutal and controversial institutional environment of modern border policy.
 Her narrative treats the offshore camp not as a necessary defense, but as a horrific, illegal human rights abuse.
 This strategy utilizes immense political energy to expose the physical cruelty of the state's exclusion, demanding its immediate destruction.
@@ -1735,7 +1964,7 @@ Waters flawlessly identifies and attacks this dark institutional environment, de
 She understands that the Australian foundation is highly dependent on the quiet, out-of-sight punishment of the "Other," and she exposes it.
 This is a failure (to align with the shadow) because she accurately and aggressively attacks the darkest institutional reality of the modern Commonwealth.
 
-**(How.Where.Effect) The Media Echo Chamber (υ: -0.3, ψ: +0.6): HIT.** **Quote:** "We are communicating directly with young people online, bypassing the right-wing media that refuses to tell the truth about the climate." (2021).
+**(How.Where.Effect) The School (υ: +0.7, ψ: +0.4): HIT.** **Quote:** "We are communicating directly with young people online, bypassing the right-wing media that refuses to tell the truth about the climate." (2021).
 **Brief:** She flawlessly adapted her progressive brand to the highly reactive, algorithmically driven architecture of modern social media.
 Her narrative thrives in the unmediated, low-friction environment of the internet, where she can speak directly to an anxious, motivated base.
 This strategy bypasses traditional journalistic scrutiny, allowing her to beam environmental urgency directly into the phones of her supporters.
@@ -1745,13 +1974,9 @@ Waters is a master of the "Algorithmic Hack," using the internet to build a mass
 She understands that the modern Australian public sphere is largely defined by the curated digital feed.
 This is a hit because she perfectly executes the most dominant, modern communication method of the current era.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 5 Half)**
+## **5.4 Why**
 
-*(Scores will be compiled in the final merge)*
-
-## **5.4 The Motivations of Method (How.Why)**
-
-**(How.Why.Who) Duty / Compulsion (υ: +0.6, ψ: -0.4): HIT.** **Quote:** "We have a moral duty to the next generation to leave them a planet they can actually live on." (2019).
+**(How.Why.Who) Egalitarianism (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "We have a moral duty to the next generation to leave them a planet they can actually live on." (2019).
 **Brief:** She frequently utilizes the language of absolute moral compulsion to justify massive state intervention.
 Her narrative frames environmental action not as a choice, but as a binding, non-negotiable duty that overrides all economic concerns.
 This strategy uses the weight of future generations to compel the current electorate to accept structural sacrifices.
@@ -1761,7 +1986,7 @@ Waters expertly operates this motivation, demanding that the state and the citiz
 She understands that framing policy as an unavoidable duty is highly effective in the Australian context.
 This is a hit because she accurately channels the structural motivation of compulsory civic responsibility.
 
-**(How.Why.What) Fairness / The Leveling Blade (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "It is simply unfair that massive corporations pay zero tax while everyday Australians are struggling with the cost of living." (2022).
+**(How.Why.What) Pragmatism (υ: +0.5, ψ: +0.3): HIT.** **Quote:** "It is simply unfair that massive corporations pay zero tax while everyday Australians are struggling with the cost of living." (2022).
 **Brief:** She perfectly embodies the deep national motivation to use the power of the state to violently level extreme wealth.
 She exploits the "Fair Go," arguing that the primary purpose of taxation is to prevent the emergence of an untouchable corporate aristocracy.
 Her economic policy is driven by a profound hostility to monopolies, viewing them as a structural insult to the "Battler."
@@ -1771,7 +1996,7 @@ Waters’ rhetoric is a direct manifestation of this motivation, treating corpor
 She successfully weaponizes the "Tall Poppy Syndrome" for progressive economic ends.
 This is a hit because she accurately targets the foundational egalitarian motivation of the Australian Method.
 
-**(How.Why.Where) Fear of the "Other" (υ: -0.7, ψ: +0.5): FAIL.** **Quote:** "We must reject the politics of fear and division. Refugees are not our enemy; they are human beings seeking safety." (2018).
+**(How.Why.Where) Necessity (υ: +0.5, ψ: +0.4): FAIL.** **Quote:** "We must reject the politics of fear and division. Refugees are not our enemy; they are human beings seeking safety." (2018).
 **Brief:** She explicitly and violently rejects the deep, existential terror that historically drives Australian border policy.
 Her platform is built on the belief that the nation must replace fear with compassion, actively fighting xenophobic narratives.
 She views the motivation of "Fear" as a toxic, manipulative tool used by conservative politicians to distract from corporate greed.
@@ -1781,7 +2006,7 @@ Waters’ rhetoric is the direct enemy of the "Xenophobic Motivation," prioritiz
 She fights against the "Greatest Lie" parameters of this vector, utilizing logic and empathy to soften the national perimeter.
 This is a failure (to align with the shadow) because she actively attacks the defensive, fearful motivation of the Australian political method.
 
-**(How.Why.Why) Pragmatism / The "Quick Fix" (υ: +0.4, ψ: +0.6): FAIL.** **Quote:** "We cannot rely on unproven 'techno-fixes' or offset scams. We need a fundamental, structural transition away from fossil fuels." (2021).
+**(How.Why.Why) Fairness (υ: +0.9, ψ: +0.4): FAIL.** **Quote:** "We cannot rely on unproven 'techno-fixes' or offset scams. We need a fundamental, structural transition away from fossil fuels." (2021).
 **Brief:** She explicitly attacks the traditional Australian reliance on the short-term "Quick Fix" to solve complex problems.
 By highlighting the existential threat of climate change, she demands massive, painful, long-term structural changes to the economy.
 Her narrative suggests that the government's reliance on pragmatic "band-aids" is actually a form of deadly negligence.
@@ -1791,7 +2016,7 @@ Waters attacks the "Pragmatic Mechanism," convincing the electorate that their d
 She successfully destroys the "Effect" of the Quick Fix by demanding complex, systemic overhauls.
 This is a failure because she actively attacks the emotional power of the Australian desire for simple, pragmatic solutions.
 
-**(How.Why.How) Profit / Extraction (υ: -0.4, ψ: +0.7): FAIL.** **Quote:** "The era of putting corporate profits ahead of people and the planet must come to an end." (2020).
+**(How.Why.How) Efficiency (υ: +0.5, ψ: +0.6): FAIL.** **Quote:** "The era of putting corporate profits ahead of people and the planet must come to an end." (2020).
 **Brief:** She expends massive political energy fighting the defining economic motivation of the modern state: unrestricted corporate profit.
 Her rhetoric treats the pursuit of massive wealth not as a virtue, but as a literal "curse" that is destroying the social fabric and the environment.
 This strategy attempts to physically halt the extraction machinery, demanding that the geology remain untouched and profits be heavily taxed.
@@ -1801,7 +2026,7 @@ Waters flawlessly identifies and attacks this "Curse," demanding an immediate ha
 She operates in direct opposition to the "Extraction" methodology, ensuring the state must confront its reliance on corporate greed.
 This is a failure (to align with the shadow) because she is the primary political enemy of the aggressive, foundational logic of geographic and economic extraction.
 
-**(How.Why.Cause) Survival / Existential Panic (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "If we do not act now, the consequences for our children will be catastrophic. This is a fight for our survival." (2019).
+**(How.Why.Cause) Survival (υ: +0.4, ψ: +0.5): HIT.** **Quote:** "If we do not act now, the consequences for our children will be catastrophic. This is a fight for our survival." (2019).
 **Brief:** She is the absolute master of utilizing the existential, scientific reality of the climate crisis to generate massive political method.
 Her narrative treats environmental concern not as a fringe issue, but as the absolute, overriding survival priority of the modern state.
 This strategy attempts to force the electorate to confront the massive physical and economic threats posed by a warming continent.
@@ -1811,7 +2036,7 @@ Waters’ absolute reliance on this reality introduces massive structural energy
 She replaces comfortable, nostalgic complacency with a highly motivated, necessary "Survival Panic."
 This is a hit because she actively champions the most critical scientific and environmental method of the modern era.
 
-**(How.Why.Effect) Justice / Truth-Telling (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "True reconciliation requires a treaty and a formal truth-telling process to acknowledge the violence of our history." (2018).
+**(How.Why.Effect) Comfort (υ: +0.5, ψ: -0.3): HIT.** **Quote:** "True reconciliation requires a treaty and a formal truth-telling process to acknowledge the violence of our history." (2018).
 **Brief:** She views the pursuit of systemic justice and historical truth as the highest possible motivation for state action.
 She supports the painful, friction-heavy process of Truth-Telling, advocating for a fundamental reckoning with the colonial past.
 This perspective attempts to fully accept the moral burden of history, refusing to look away from the "Shadows."
@@ -1821,9 +2046,9 @@ She favors a courageous approach that integrates the nation into its difficult h
 The vector requires a "Trajectory of Justice," which her rhetoric explicitly attempts to accelerate.
 Her interaction is a hit because it replaces the "Method of Erasure" with the "Method of Truth."
 
-## **5.5 The Methods of Action (How.How)**
+## **5.5 How**
 
-**(How.How.Who) The Bricolage (Make-Do) (υ: +0.5, ψ: +0.6): FAIL.** **Quote:** "We cannot 'make do' with inadequate climate targets. We need a comprehensive, fully funded, scientifically backed transition plan." (2021).
+**(How.How.Who) The Smoko (υ: +0.6, ψ: -0.2): FAIL.** **Quote:** "We cannot 'make do' with inadequate climate targets. We need a comprehensive, fully funded, scientifically backed transition plan." (2021).
 **Brief:** She completely rejects the traditional Australian reliance on informal, improvised solutions (Bricolage) for serious national issues.
 Her platform demands rigid, complex, and highly structured plans generated by experts, not the "she'll be right" improvisation of the layman.
 This strategy views "making do" as a dangerous excuse for underfunding and systemic negligence.
@@ -1833,7 +2058,7 @@ Waters attacks the "Improvisation Mechanism," demanding formal, structural perfe
 She successfully destroys the "Effect" of the Quick Fix by demanding comprehensive bureaucratic overhauls.
 This is a failure because she actively attacks the emotional power of the Australian desire for informal, "make do" solutions.
 
-**(How.How.What) The Strike / Boycott (υ: +0.7, ψ: +0.7): HIT.** **Quote:** "The school climate strikes show that the next generation will not accept the failures of the current government. They are leading the way." (2019).
+**(How.How.What) The Roster (υ: +0.6, ψ: +0.3): HIT.** **Quote:** "The school climate strikes show that the next generation will not accept the failures of the current government. They are leading the way." (2019).
 **Brief:** She explicitly aligns her political methodology with the aggressive, organized leverage of the mass strike and boycott.
 Her rhetoric treats the collective withdrawal of participation (even by students) as a vital, necessary tool to force political change.
 This strategy utilizes the "Lever" of the strike to secure progressive outcomes, refusing to view disruption as a threat to order.
@@ -1843,7 +2068,7 @@ Waters perfectly embodies the "Organizer" method, defending the right of the cit
 She ensures that the "Strike Method" remains a highly visible and politically viable tool for the youth.
 This is a hit because she aggressively champions the foundational economic and social leverage of the boycott.
 
-**(How.How.Where) The Mateship Network (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We need to ensure our communities are resilient and look after each other, especially as climate disasters become more frequent." (2020).
+**(How.How.Where) The Sickie (υ: +0.4, ψ: -0.3): HIT.** **Quote:** "We need to ensure our communities are resilient and look after each other, especially as climate disasters become more frequent." (2020).
 **Brief:** She utilizes the ultimate social bond of the nation, transforming a mechanism of universal solidarity into a tool for progressive community resilience.
 Her rhetoric demands that the "Chain" of Mateship be explicitly expanded to handle the trauma of floods and fires.
 This strategy utilizes the intense horizontal connection of the group to aggressively support those affected by environmental disasters.
@@ -1853,7 +2078,7 @@ Waters’ application of Mateship removes moral friction by actively demanding c
 She utilizes the survival mechanism of the bush to demand mutual aid.
 This is a hit because she fundamentally respects the highest motivational and emotional outcome in the Australian Kanon.
 
-**(How.How.Why) Legislation / The Parliament (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We are here to amend the laws, to move the amendments that will actually protect the environment, not just rubber-stamp the government's agenda." (2018).
+**(How.How.Why) The Meeting (υ: +0.4, ψ: -0.4): HIT.** **Quote:** "We are here to amend the laws, to move the amendments that will actually protect the environment, not just rubber-stamp the government's agenda." (2018).
 **Brief:** She highly values the formal, legal mechanics of the parliament as the ultimate arena for enacting systemic change.
 Her narrative relies on the mastery of legislative procedure, using the rules of the Senate to amend and improve conservative laws.
 This strategy treats the "Act of Parliament" not just as a symbol, but as the vital mechanical tool for binding the state to a progressive future.
@@ -1863,7 +2088,7 @@ Waters expertly operates the "Procedural Method," using the Senate's complex rul
 She understands that the Australian foundation is deeply reliant on the formal mechanics of the written law.
 This is a hit because she accurately and powerfully utilizes the structural method of the Australian parliament.
 
-**(How.How.How) Subversion / The Larrikin Act (υ: +0.5, ψ: +0.6): HIT.** **Quote:** "I am proud to have breastfed my daughter in the chamber. It is time the rules of parliament reflected the reality of modern women." (2017).
+**(How.How.How) The Shortcut (υ: -0.4, ψ: +0.3): HIT.** **Quote:** "I am proud to have breastfed my daughter in the chamber. It is time the rules of parliament reflected the reality of modern women." (2017).
 **Brief:** She utilizes the Larrikin’s anti-authoritarian energy to subvert conservative, patriarchal parliamentary norms from within.
 Her historic breastfeeding in the chamber served as a highly visible, peaceful disruption of formal, outdated rules.
 By unapologetically bringing motherhood into the legislative space, she mocked the hubris of the "Old Boys Club."
@@ -1873,7 +2098,7 @@ She effectively uses personal, physical defiance to challenge the established, f
 The Larrikin archetype functions to deflate the powerful, and she applies this to patriarchal parliamentary structures.
 Her interaction is a hit because it actively disrupts the "System" to normalize the human reality of her demographic.
 
-**(How.How.Cause) Bureaucratic Inertia (υ: -0.3, ψ: -0.5): FAIL.** **Quote:** "We cannot accept the slow, incremental pace of change the major parties offer. The climate emergency demands immediate action." (2019).
+**(How.How.Cause) The Trial (υ: +0.6, ψ: +0.5): FAIL.** **Quote:** "We cannot accept the slow, incremental pace of change the major parties offer. The climate emergency demands immediate action." (2019).
 **Brief:** She explicitly attacks the sluggish, conservative pace of the Australian bureaucracy, demanding radical speed instead.
 Her narrative views the "Inertia" of the state not as a stabilizing force, but as a fatal flaw that will result in ecological collapse.
 This strategy attempts to physically shock the system into action, demanding that the state abandon its traditional, cautious methodology.
@@ -1883,7 +2108,7 @@ Waters is the ultimate enemy of this "Structural Flaw," demanding the dismantlin
 She understands that in the Australian system, political reality is largely defined by delayed action, and she seeks to destroy that delay.
 This is a failure because she is perfectly hostile to the most powerful, conservative administrative method in the country.
 
-**(How.How.Effect) The "Fair Go" (As Mechanism) (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "We must ensure that our tax system is a mechanism for fairness, redistributing wealth to fund the essential services we all rely on." (2021).
+**(How.How.Effect) The Report (υ: +0.2, ψ: -0.4): HIT.** **Quote:** "We must ensure that our tax system is a mechanism for fairness, redistributing wealth to fund the essential services we all rely on." (2021).
 **Brief:** She attempts to perfectly align the nation's economic methodology with the absolute, universal provision of the Fair Go through taxation.
 Her rhetoric demands that the state's primary mechanical tool must be the eradication of poverty and structural inequality.
 This strategy views the "Tax Code" not as a burden, but as a rigid, institutionalized mechanism for enforcing equality.
@@ -1893,23 +2118,69 @@ Waters’ demand for a massive expansion of progressive taxation perfectly align
 She attempts to remove all economic friction from the "Social Contract," turning it into an absolute mechanical guarantee.
 This is a hit because she actively champions the highest moral and economic mechanism of the Australian state.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 5)**
+## **5.6 Cause**
 
-*(Scores will be compiled in the final merge)*
+**(How.Cause.Who) The Convict System (υ: -0.3, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 5)**
+**(How.Cause.Why) Relation [First Nations Perspective] (υ: +0.9, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**Plane 5 Method Score:** +1 Net Score (11 HIT, 10 FAIL, 0 MISS)
-**Percentage Australian Alignment:** 52.3%
-**Average Morality (υ):** +0.60 (Systemic Utility)
-**Average Will (ψ):** +0.45 (Proactive Energy)
-**Quadrant Placement:** Greater Good / Progressive Overwrite
+**(How.Cause.Where) The Distance (υ: ±0.0, ψ: -0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-**Final Statement:** Larissa Waters acts as a **Structural Purifier** on the Plane of Method. She is highly proficient in utilizing the formal and informal democratic "Hacks" of the Australian system (The Senate, Compulsory Voting, Preferential Voting, The Protest, The Royal Commission) to force progressive change. However, she violently attacks the dark, extractive, and corrupt methodologies that historically defined the state (The Developer, The Lobbyist, The Media Monopoly, Negative Gearing). She replaces the traditional "Bricolage" (making do) with a rigid demand for scientific perfection and bureaucratic regulation. Her methodology is entirely focused on forcing the state to abandon its selfish, short-term extractions in favor of long-term, universal ecological and social justice.
+**(How.Cause.Cause) Navigation [First Nations Perspective] (υ: +0.9, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-# **Plane 6, Historical Cause**
+**(How.Cause.How) The Survey (υ: +0.3, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
 
-## **6.1 The Ancestral Agents (Cause.Who)**
+**(How.Cause.What) Flow [First Nations Perspective] (υ: +0.8, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(How.Cause.Effect) The Federation (υ: +0.7, ψ: +0.6): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+## **5.7 Effect**
+
+**(How.Effect.Who) The Voter (υ: +0.7, ψ: +0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(How.Effect.What) The Award (υ: +0.9, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(How.Effect.Where) The Infrastructure (υ: +0.8, ψ: +0.7): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(How.Effect.Why) Efficiency (Outcome) (υ: +0.6, ψ: +0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(How.Effect.How) Bureaucracy (υ: +0.3, ψ: -0.5): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(How.Effect.Cause) Peace (υ: +0.8, ψ: -0.3): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+**(How.Effect.Effect) The Fair Go (Realized) (υ: +0.9, ψ: +0.4): MISS.** **Quote:** N/A
+**Brief:** Subject does not meaningfully interact with this specific vector or data is missing due to Kanon mismatch.
+**Justification:** Lack of relevant data or interaction.
+
+# **Plane 6: Foundation (Cause)**
+
+## **6.1 Who**
 
 **(Cause.Who.Who) The Convict (υ: +0.2, ψ: -0.5): FAIL.** **Quote:** "We must base our decisions on the best available science and expert advice, not on populist rhetoric." (2020).
 **Brief:** Waters rarely resurrects the foundational resentment of the penal exile against the governing class.
@@ -1921,7 +2192,7 @@ Waters’ reliance on the "Expert" completely bypasses this historical anchor, d
 She attempts to cure the systemic friction between the ruled and the rulers through scientific rationality.
 This is a failure because she refuses to weaponize the oldest psychological wound of the colonial foundation.
 
-**(Cause.Who.What) The Governor / Crown (υ: -0.8, ψ: +0.6): FAIL.** **Quote:** "It is time we had an Australian head of state and severed our ties with the British monarchy." (2022).
+**(Cause.Who.What) The Colonizer (υ: -0.8, ψ: +0.6): FAIL.** **Quote:** "It is time we had an Australian head of state and severed our ties with the British monarchy." (2022).
 **Brief:** She explicitly attacks the absolute, top-down authority of the British colonial administration as the true source of civilization.
 Her rhetoric demands a complete severing of the "Law and Order" established by the initial imperial mandate.
 This strategy attempts to modernize the state by destroying the absolute authority of the foundational Crown.
@@ -1931,7 +2202,7 @@ Waters actively attacks the "Warden" logic of the state, demanding that society 
 She utilizes the desire for independence to delegitimize conservative resistance to constitutional reform.
 This is a failure because she actively attacks the rigid, authoritative origin of the Australian legal system.
 
-**(Cause.Who.Where) The Squatter (υ: +0.6, ψ: +0.5): FAIL.** **Quote:** "We must stop the massive corporate land clearing that is destroying native habitats for profit." (2019).
+**(Cause.Who.Where) The Free Settler (υ: +0.6, ψ: +0.5): FAIL.** **Quote:** "We must stop the massive corporate land clearing that is destroying native habitats for profit." (2019).
 **Brief:** She violently attacks the ruthless, high-energy land grab that defined the rapid expansion of the colonial frontier.
 Her narrative treats the illegal seizure of vast tracts of land not as a heroic enterprise, but as an ecological and moral disaster.
 This strategy provides historical justification for her fierce attacks on modern agricultural monopolies and wealth hoarding.
@@ -1941,7 +2212,7 @@ Waters flawlessly attacks the "Squatter" logic, demanding the absolute supremacy
 She violently opposes the historical reality that Australian wealth was built on the rapid, unauthorized taking of space.
 This is a failure because she accurately and aggressively attacks the primary economic agent of the early colonial expansion.
 
-**(Cause.Who.Why) The Sovereign [First Nations] (υ: -0.6, ψ: +0.7): HIT.** **Quote:** "We stand in solidarity with First Nations people fighting for Treaty, Truth, and the recognition of their unceded sovereignty." (2021).
+**(Cause.Who.Why) The Squatter (υ: -0.6, ψ: +0.7): HIT.** **Quote:** "We stand in solidarity with First Nations people fighting for Treaty, Truth, and the recognition of their unceded sovereignty." (2021).
 **Brief:** She expends massive political energy to assert the existence and priority of the original, pre-colonial rulers of the continent.
 Her rhetoric actively supports any legal or cultural acknowledgment that First Nations people held prior sovereign authority.
 This strategy attempts to elevate the 65,000-year foundational truth of the land above the 1788 colonial claim.
@@ -1951,7 +2222,7 @@ Waters’ absolute defense of this sovereignty attempts to remove structural del
 She hits the historical imperative to acknowledge the "Root" of the nation, preferring the deep soil to the shallow colony.
 This is a hit because she actively seeks to protect and elevate the true ancestral origin of the Australian landmass.
 
-**(Cause.Who.How) The Digger (υ: +0.4, ψ: +0.6): FAIL.** **Quote:** "We must question the billions spent on military hardware and instead invest in diplomacy and climate security." (2021).
+**(Cause.Who.How) The Digger (Gold) (υ: +0.4, ψ: +0.6): FAIL.** **Quote:** "We must question the billions spent on military hardware and instead invest in diplomacy and climate security." (2021).
 **Brief:** She explicitly refuses to utilize the blood sacrifice of the First World War soldier as the unquestionable validator of national identity.
 Her narrative attempts to pierce the reverence for the "Digger," questioning the hyper-nationalist policies built around it.
 This strategy attempts to anchor her political movement in peace-building and global cooperation, rather than military trauma.
@@ -1961,7 +2232,7 @@ Waters actively rejects the "Sacred Myth," knowing that the culture forbids any 
 She refuses to utilize the historical cause of the Anzac to demand absolute, unquestioning loyalty.
 This is a failure because she actively attacks the political utility of the most potent historical cause of the modern nation.
 
-**(Cause.Who.Cause) The Unionist (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "The Greens will always stand shoulder to shoulder with the union movement to protect workers' rights." (2019).
+**(Cause.Who.Cause) The Indigenous Elder (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "The Greens will always stand shoulder to shoulder with the union movement to protect workers' rights." (2019).
 **Brief:** She actively champions the historical founders of economic dignity for the working class.
 Her rhetoric seeks to venerate the organizers who historically fought the Squatter and the Governor to secure the living wage.
 This strategy attempts to center the collective labor movement in the foundational narrative of the "Fair Go."
@@ -1971,7 +2242,7 @@ Waters’ pro-union stance fundamentally honors the ancestral agents who civiliz
 She protects the historical solidarity of the worker against the atomizing vision of modern corporate capital.
 This is a hit because she actively defends the primary architects of the Australian social contract.
 
-**(Cause.Who.Effect) The Post-War Immigrant (υ: -0.7, ψ: -0.5): HIT.** **Quote:** "Our nation has been built by successive waves of migrants, and we must continue to welcome those seeking a new life." (2018).
+**(Cause.Who.Effect) The Immigrant (υ: -0.7, ψ: -0.5): HIT.** **Quote:** "Our nation has been built by successive waves of migrants, and we must continue to welcome those seeking a new life." (2018).
 **Brief:** She explicitly champions the mid-century European migration boom, but demands that the logic of inclusion be expanded to all modern migrants.
 Her narrative uses the "10 Pound Pom" and the European laborer as a historical baseline to demand identical treatment for non-white migrants.
 This strategy validates the massive demographic shift of the post-war era, arguing that diversity is the true strength of the state.
@@ -1981,9 +2252,9 @@ Waters successfully integrates this historical cause into her worldview, using i
 She operates the "Diversity Standard," demanding that all future growth be welcomed.
 This is a hit because she accurately identifies and utilizes the last major demographic foundation of the state to demand future inclusion.
 
-## **6.2 The Foundational Events (Cause.What)**
+## **6.2 What**
 
-**(Cause.What.Who) The First Fleet (υ: -0.9, ψ: +0.5): FAIL.** **Quote:** "January 26 is Invasion Day. It marks the beginning of the dispossession and genocide of First Nations people." (2020).
+**(Cause.What.Who) Terra Nullius (υ: -0.9, ψ: +0.5): FAIL.** **Quote:** "January 26 is Invasion Day. It marks the beginning of the dispossession and genocide of First Nations people." (2020).
 **Brief:** She violently attacks the absolute beginning of the colonial timeline, refusing to treat the forced arrival of the British penal expedition as a legitimate foundation.
 Her rhetoric treats the planting of the Union Jack as a catastrophe, demanding that it be mourned rather than celebrated.
 This strategy demands that the population confront the shame of its penal and violent nature, rather than defend the settlement.
@@ -1993,7 +2264,7 @@ Waters perfectly embodies the offensive posture required to attack this highly f
 She attacks the "Colonial Baseline," demanding that the modern state sever its psychological tether to the original boats.
 This is a failure because she is the primary political enemy of the 1788 inception as the sole cause of the nation.
 
-**(Cause.What.What) The Frontier Wars (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must have Truth-telling to acknowledge the massacres and the resistance that defined the frontier wars." (2021).
+**(Cause.What.What) The Constitution (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must have Truth-telling to acknowledge the massacres and the resistance that defined the frontier wars." (2021).
 **Brief:** She expends massive political capital to explicitly acknowledge the 140-year campaign of physical violence that secured the continent.
 Her narrative actively demands the historical truth of massacres, resistance, and systemic dispossession be taught and memorialized.
 This strategy attempts to destroy the sanitized foundational event of the state, destroying the fiction of a peaceful, empty settlement.
@@ -2003,7 +2274,7 @@ Waters’ total acknowledgment of this conflict attempts to remove structural de
 She hits the imperative to reckon with the "Blood on the Wattle," attacking the comfortable myth of the "Pioneer."
 This is a hit because she actively demands the true, violent mechanism of the colonial foundation be recognized.
 
-**(Cause.What.Where) The Eureka Stockade (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "The right to protest is fundamentally Australian, from the Eureka Stockade to the climate strikes of today." (2019).
+**(Cause.What.Where) Federation (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "The right to protest is fundamentally Australian, from the Eureka Stockade to the climate strikes of today." (2019).
 **Brief:** She explicitly wraps her progressive movement in the rebellious, anti-authoritarian iconography of the 1854 miners' revolt.
 Her rhetoric frames her fight against corporate elites, fossil fuels, and conservative governments as the direct modern continuation of the Stockade.
 This strategy leverages the only armed democratic uprising in Australian history to grant nobility to her disruptive, environmental platform.
@@ -2013,7 +2284,7 @@ Waters brilliantly exploits the "Rebellion" cause, equating modern progressive f
 She understands that the Australian psyche deeply respects the defiant stand against the "Troopers."
 This is a hit because she accurately channels the most potent democratic spark in the nation's history.
 
-**(Cause.What.Why) Federation / 1901 (υ: +0.9, ψ: +0.6): FAIL.** **Quote:** "Our Constitution was written by white men in 1901 and completely excluded First Nations people. It needs fundamental reform." (2022).
+**(Cause.What.Why) The Living Wage (υ: +0.9, ψ: +0.6): FAIL.** **Quote:** "Our Constitution was written by white men in 1901 and completely excluded First Nations people. It needs fundamental reform." (2022).
 **Brief:** She views the peaceful, bureaucratic union of the colonies as a deeply flawed, exclusionary political compromise rather than a triumph.
 Her narrative treats the 1901 settlement as a racist, outdated document that must be radically amended through progressive evolution.
 This strategy uses the historical cause of Federation as a target for Indigenous recognition, republicanism, and environmental reform.
@@ -2023,7 +2294,7 @@ Waters expertly attacks the "Ratification" event to demand that the nation evolv
 She attacks the "Birth Certificate" of the state, explicitly highlighting the fact that it was originally drafted to exclude non-whites.
 This is a failure because she actively attacks the foundational legal event of the modern Commonwealth.
 
-**(Cause.What.How) Gallipoli / The Landing (υ: +0.7, ψ: +0.4): FAIL.** **Quote:** "We must focus on peace and diplomacy rather than glorifying military campaigns that cost so many lives." (2021).
+**(Cause.What.How) Compulsory Voting (υ: +0.7, ψ: +0.4): FAIL.** **Quote:** "We must focus on peace and diplomacy rather than glorifying military campaigns that cost so many lives." (2021).
 **Brief:** She explicitly refuses to utilize the catastrophic military defeat of 1915 as the primary emotional and spiritual anchor of the nation.
 Her rhetoric demands that the trauma of the landing be treated as a tragedy to be avoided, not the true, bloody baptism of the Australian identity.
 This strategy rejects the use of the historical event to enforce strict cultural conformity, arguing that dissent is necessary for peace.
@@ -2033,7 +2304,7 @@ Waters flawlessly rejects the gravitational pull of this trauma, refusing to use
 She recognizes that the Australian foundation is anchored in military grief, but attempts to shift that anchor toward peaceful cooperation.
 This is a failure because she actively attacks the most sacred and unassailable historical event in the Kanon.
 
-**(Cause.What.Cause) The Dismissal (1975) (υ: -0.9, ψ: +0.5): FAIL.** **Quote:** "The Dismissal of the Whitlam government was an outrageous subversion of democracy by a foreign representative." (2020).
+**(Cause.What.Cause) White Australia Policy (υ: -0.9, ψ: +0.5): FAIL.** **Quote:** "The Dismissal of the Whitlam government was an outrageous subversion of democracy by a foreign representative." (2020).
 **Brief:** She completely attacks the brutal, top-down constitutional coup that removed a democratically elected progressive government.
 Her narrative views the use of extreme reserve powers as an illegitimate, undemocratic tool used to crush progressive political change.
 This strategy attacks the historical trauma of the Dismissal, proving her allegiance to the voters over the "Ghost in the Machine."
@@ -2043,7 +2314,7 @@ Waters accurately attacks the "Correction" mechanism, demanding the removal of t
 She understands that the Australian foundation includes a fail-safe designed to crush uncontrolled political evolution, and she wants it destroyed.
 This is a failure because she is a staunch enemy of the most traumatic constitutional event in modern Australian history.
 
-**(Cause.What.Effect) The Apology (2008) (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "The Apology was a vital first step, but it must be followed by Treaty and Truth-telling to achieve real justice." (2018).
+**(Cause.What.Effect) The Mabo Decision (υ: +0.9, ψ: +0.7): HIT.** **Quote:** "The Apology was a vital first step, but it must be followed by Treaty and Truth-telling to achieve real justice." (2018).
 **Brief:** She acted as a prominent political force actively demanding the state's formal reckoning with its history of child removal.
 Her narrative explicitly embraced the historical event of the Apology, viewing it as a necessary but insufficient step toward justice.
 This strategy sought to accelerate the healing of the foundational wound, ensuring that the "Great Silence" was permanently broken.
@@ -2053,9 +2324,9 @@ Waters’ embrace of this event injected massive progressive energy into the nat
 She honors the historical imperative to mature the state, attacking the comfortable, sanitized myth of the benevolent settler.
 This is a hit because she aggressively champions the most significant moral event in the modern Australian timeline.
 
-## **6.3 The Historical Geographies (Cause.Where)**
+## **6.3 Where**
 
-**(Cause.Where.Who) Botany Bay / The Prison (υ: 0.0, ψ: +0.5): FAIL.** **Quote:** "We must stop locking up children and focus on justice reinvestment and community support." (2021).
+**(Cause.Where.Who) Sydney Cove (υ: ±0.0, ψ: +0.5): FAIL.** **Quote:** "We must stop locking up children and focus on justice reinvestment and community support." (2021).
 **Brief:** She constantly attacks the brutal, carceral logic of the original geographic settlement on the shores of Sydney.
 Her rhetoric demands a dismantling of the punitive architecture of the penal colony, viewing the citizen as a person requiring support, not containment.
 This strategy attacks the historical fear of the "Warden" and the "Lash," demanding compassionate, rehabilitative social policies instead.
@@ -2065,7 +2336,7 @@ Waters perfectly attacks the "Jailer" mentality, proving that the penal foundati
 She attacks the historical geography of incarceration to demand a highly compassionate, supportive modern society.
 This is a failure because she accurately attacks and attempts to destroy the dark, carceral geography of the nation's birth.
 
-**(Cause.Where.What) The Goldfields (υ: +0.7, ψ: +0.8): FAIL.** **Quote:** "We must transition away from our reliance on digging things out of the ground. The mining boom is over." (2019).
+**(Cause.Where.What) The Harbour Bridge (υ: +0.7, ψ: +0.8): FAIL.** **Quote:** "We must transition away from our reliance on digging things out of the ground. The mining boom is over." (2019).
 **Brief:** She attacks the economic worldview anchored in the chaotic, speculative geographies of the 19th-century rushes.
 Her narrative treats the site of extraction not as the true engine room of the national character, but as an ecological disaster zone.
 This strategy attacks the "Boom Town" logic, arguing that the nation's destiny must be permanently decoupled from digging wealth out of the dirt.
@@ -2075,7 +2346,7 @@ Waters flawlessly attacks the "Paydirt" logic, demanding that the state actively
 She understands that the Australian foundation was radically altered by the chaotic geography of the gold strike, and she wants that era to end.
 This is a failure because she accurately attacks the historical and ongoing geographic source of the nation's wealth.
 
-**(Cause.Where.Where) The Outback / Frontier (υ: +0.9, ψ: +0.4): HIT.** **Quote:** "We must respect the deep spiritual connection First Nations people have to the interior of this country and protect it from mining." (2020).
+**(Cause.Where.Where) Uluru (υ: +0.9, ψ: +0.4): HIT.** **Quote:** "We must respect the deep spiritual connection First Nations people have to the interior of this country and protect it from mining." (2020).
 **Brief:** She utilizes the vast interior as the ultimate geographical crucible for environmental and Indigenous preservation.
 Her rhetoric claims the hostile geography of the frontier as the exclusive moral property of First Nations people and native ecosystems.
 This strategy relies on the belief that those who have suffered the geographic isolation of the bush must be protected from corporate exploitation.
@@ -2085,7 +2356,7 @@ Waters expertly maps her political movement onto this iconic historical geograph
 She understands that the myth of the "Bushman" requires the brutal geography of the outback to justify its existence, but she claims it for the environment.
 This is a hit because she actively relies on the primary foundational landscape of the Australian identity to push progressive policy.
 
-**(Cause.Where.Why) The Trenches (υ: +0.6, ψ: +0.7): FAIL.** **Quote:** "We must use our resources to fight the climate crisis, not prepare for unnecessary foreign wars." (2021).
+**(Cause.Where.Why) Gallipoli (υ: +0.6, ψ: +0.7): FAIL.** **Quote:** "We must use our resources to fight the climate crisis, not prepare for unnecessary foreign wars." (2021).
 **Brief:** She explicitly refuses to rhetorically relocate domestic political disputes into the horrific, historical geography of the First World War battlefield.
 Her narrative rejects the language of the "Front Line," refusing to frame political opponents as enemy forces that must be slaughtered.
 This strategy demands that her supporters adopt the energy of peaceful activists, not the unyielding endurance of soldiers dying in the mud.
@@ -2095,7 +2366,7 @@ Waters refuses the trauma of this geography to demand absolute, unquestioning lo
 She understands that the Australian foundation views the "Trench" as the ultimate test of the "Mate," but she rejects that test entirely.
 This is a failure because she actively refuses to weaponize the most traumatic historical geography of the national psyche.
 
-**(Cause.Where.How) The Tent Embassy (υ: +0.8, ψ: +0.8): HIT.** **Quote:** "The Aboriginal Tent Embassy is a powerful symbol of unceded sovereignty and the ongoing fight for justice." (2022).
+**(Cause.Where.How) The Goldfields (υ: +0.8, ψ: +0.8): HIT.** **Quote:** "The Aboriginal Tent Embassy is a powerful symbol of unceded sovereignty and the ongoing fight for justice." (2022).
 **Brief:** She expends massive political energy to legitimize and defend the most potent geographic site of Indigenous resistance.
 Her rhetoric views the enduring protest architecture on the lawns of Old Parliament House as a vital, necessary affront to the colonial state.
 This strategy attempts to physically elevate the historical and ongoing demand for sovereign recognition from the national capital.
@@ -2105,7 +2376,7 @@ Waters’ defense of the embassy is a direct validation of the most significant 
 She hits the historical imperative to share the spatial center of the nation with its original owners.
 This is a hit because she actively seeks to protect the foundational geography of Indigenous political resistance.
 
-**(Cause.Where.Cause) The Snowy Scheme (υ: -0.7, ψ: +0.6): FAIL.** **Quote:** "We must learn from the environmental mistakes of the past. Massive dams destroy river systems; we need sustainable technology." (2019).
+**(Cause.Where.Cause) Norfolk Island (υ: -0.7, ψ: +0.6): FAIL.** **Quote:** "We must learn from the environmental mistakes of the past. Massive dams destroy river systems; we need sustainable technology." (2019).
 **Brief:** She explicitly attacks the massive, post-war engineering of the alpine geography as the high-water mark of environmental destruction.
 Her narrative treats the physical restructuring of the mountains as proof that the state was once capable of visionary, but ecologically blind, action.
 This strategy uses the environmental damage of the Snowy Scheme to critique the perceived arrogance of high-modernist governance.
@@ -2115,7 +2386,7 @@ Waters attacks the arrogance of this historical geography, using it to shame the
 She understands that the Australian foundation respects the blunt, physical domination of the environment, and she wants that respect destroyed.
 This is a failure because she accurately identifies and attacks the most heroic geographical engineering project in the Kanon.
 
-**(Cause.Where.Effect) The 1950s Suburb (υ: +0.8, ψ: +0.6): FAIL.** **Quote:** "We cannot continue to build sprawling suburbs that rely on cars and destroy habitats. We need dense, green cities." (2021).
+**(Cause.Where.Effect) Parliament House (υ: +0.8, ψ: +0.6): FAIL.** **Quote:** "We cannot continue to build sprawling suburbs that rely on cars and destroy habitats. We need dense, green cities." (2021).
 **Brief:** She builds her entire political platform around the destruction of the sanitized, historically anomalous geography of the post-war suburb.
 Her rhetoric attacks the quarter-acre block of the Menzies era, treating it as the ultimate ecological mistake of the Australian foundation.
 This strategy attacks the nostalgia of low-density, mono-cultural housing to drive acceptance of modern urban consolidation and multiculturalism.
@@ -2125,9 +2396,9 @@ Waters flawlessly attacks this historical anchor, convincing her base that this 
 She attacks the memory of the 1950s streetscape to mobilize an incredibly potent, progressive urban political force.
 This is a failure because she accurately targets and attacks the most beloved and fiercely defended historical geography of the Australian masses.
 
-## **6.4 The Historical Motivations (Cause.Why)**
+## **6.4 Why**
 
-**(Cause.Why.Who) Penal Exile / Punishment (υ: +0.5, ψ: +0.5): FAIL.** **Quote:** "We must end the cruel system of offshore detention immediately and treat refugees with humanity." (2019).
+**(Cause.Why.Who) Survival (υ: +0.5, ψ: +0.5): FAIL.** **Quote:** "We must end the cruel system of offshore detention immediately and treat refugees with humanity." (2019).
 **Brief:** She perfectly attacks the foundational motivation of the British Empire: using extreme geographic isolation as a form of brutal punishment.
 Her border policies rely entirely on the destruction of the logic of exile, demanding the state stop inflicting the carceral nightmare that birthed the nation.
 This strategy demands that the state actively dismantle the trauma of the penal colony, rejecting it as a deterrent.
@@ -2137,7 +2408,7 @@ Waters brilliantly attacks this foundational trauma, demanding that the logic of
 She fights the "Carceral Motivation," ensuring that the borders of the nation become compassionate rather than brutal.
 This is a failure because she accurately attacks the darkest, most punitive historical motivation of the Australian continent.
 
-**(Cause.Why.What) Manifest Destiny / Colonialism (υ: +0.7, ψ: +0.5): FAIL.** **Quote:** "We must acknowledge the truth of our colonial past and the ongoing harm it causes to First Nations people." (2020).
+**(Cause.Why.What) Redemption (υ: +0.7, ψ: +0.5): FAIL.** **Quote:** "We must acknowledge the truth of our colonial past and the ongoing harm it causes to First Nations people." (2020).
 **Brief:** She is an unapologetic enemy of the imperial motivation to conquer, extract from, and dominate the "empty" landscape.
 Her narrative treats the colonial project not as a glorious triumph, but as a source of profound historical friction and trauma.
 This strategy attacks the aggressive expansion of the squatter and the miner, demanding the nation reckon with the profound human and ecological cost.
@@ -2147,7 +2418,7 @@ Waters flawlessly attacks the "Conqueror" motivation, fighting the historical ri
 She actively attacks the "Greatest Lie" that the colonial expansion was a victimless triumph of hard work.
 This is a failure because she is the primary political enemy of the aggressive, foundational logic of British imperialism.
 
-**(Cause.Why.Where) White Australia / Exclusion (υ: 0.0, ψ: -0.4): FAIL.** **Quote:** "We must stamp out racism wherever it occurs. Australia is a successful multicultural nation." (2018).
+**(Cause.Why.Where) Distance (υ: ±0.0, ψ: -0.4): FAIL.** **Quote:** "We must stamp out racism wherever it occurs. Australia is a successful multicultural nation." (2018).
 **Brief:** Her political genesis is the direct, unvarnished attack on the foundational motivation that united the colonies in 1901.
 Her maiden speech explicitly rejected the existential, racial paranoia that drove the authors of the original Constitution to build a fortress.
 This strategy utilizes massive proactive energy to demand the complete destruction of the racially and culturally homogenous national perimeter.
@@ -2157,7 +2428,7 @@ Waters’ entire brand is built on the destruction of this exact foundational lo
 She attacks the "Exclusionary Motive" flawlessly, attempting to prevent the state from returning to its original, white-supremacist firmware.
 This is a failure because she accurately, and proudly, attacks the darkest foundational motive of the Commonwealth.
 
-**(Cause.Why.Why) Egalitarianism / The Fair Go (υ: +0.9, ψ: +0.4): HIT.** **Quote:** "We need to tax the billionaires so we can fund public schools, public hospitals, and ensure everyone gets a fair go." (2022).
+**(Cause.Why.Why) The Fair Go (υ: +0.9, ψ: +0.4): HIT.** **Quote:** "We need to tax the billionaires so we can fund public schools, public hospitals, and ensure everyone gets a fair go." (2022).
 **Brief:** She explicitly champions the historical motivation for structural fairness, arguing that "equality" requires massive state intervention to correct historical disadvantage.
 Her narrative supports any policy designed to level the playing field, demanding equity for all minorities.
 This strategy attempts to massively expand the systemic mechanisms that the nation historically built to ensure dignity for all citizens.
@@ -2167,7 +2438,7 @@ Waters’ demand for a structurally enforced system actively acknowledges the fo
 She expands the universal "Motive of Fairness" to demand the eradication of all systemic disadvantage.
 This is a hit because she actively champions the highest historical motivation of the Australian social contract.
 
-**(Cause.Why.How) Imperial Loyalty / The Monarchy (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "It's time we stood on our own two feet and became a Republic with an Australian head of state." (2022).
+**(Cause.Why.How) Mateship (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "It's time we stood on our own two feet and became a Republic with an Australian head of state." (2022).
 **Brief:** She fiercely attacks the historical motivation to remain psychologically and legally tethered to the British Crown.
 Her rhetoric views the distant, unelected Sovereign not as a stabilizing anchor, but as an offensive anachronism.
 This strategy demands the ambition of full independence, actively rejecting the passive safety of remaining a colonial outpost of the Anglosphere.
@@ -2187,7 +2458,7 @@ Waters’ demand for compassionate immigration directly contradicts the fearful 
 She attempts to replace the paranoid "Fortress Motive" with an open "Humanitarian Motive."
 This is a failure because her policies actively dismantle the defensive engine that historically secured the nation.
 
-**(Cause.Why.Effect) Reconciliation (υ: +0.3, ψ: -0.5): HIT.** **Quote:** "The Greens fully support the Uluru Statement from the Heart: Voice, Treaty, and Truth." (2021).
+**(Cause.Why.Effect) The Lucky Country (υ: +0.3, ψ: -0.5): HIT.** **Quote:** "The Greens fully support the Uluru Statement from the Heart: Voice, Treaty, and Truth." (2021).
 **Brief:** She acts as the primary political force working to accelerate the modern historical motivation to heal the foundational wound of the state.
 Her rhetoric frames the attempt at structural reconciliation as the most vital, necessary act to legitimize the modern Australian nation.
 This strategy ensures that the "Great Silence" is shattered, violently supporting the maturation of the national narrative.
@@ -2197,9 +2468,9 @@ Waters’ successful championing of the Voice and Treaty proved her absolute com
 She ensures that the Australian foundation cannot remain locked in a state of denial, forcing the evolution of the Kanon.
 This is a hit because she aggressively supports the most crucial historical motivation of the 21st century.
 
-## **6.5 The Historical Methods (Cause.How)**
+## **6.5 How**
 
-**(Cause.How.Who) Transportation (υ: +0.7, ψ: +0.6): FAIL.** **Quote:** "The policy of offshore detention is a human rights abuse that must end. We cannot transport our problems to poorer nations." (2018).
+**(Cause.How.Who) The Bushman (υ: +0.7, ψ: +0.6): FAIL.** **Quote:** "The policy of offshore detention is a human rights abuse that must end. We cannot transport our problems to poorer nations." (2018).
 **Brief:** She demands the complete destruction of the British Empire's foundational method: the forced, involuntary movement of unwanted human bodies.
 Her border protection policies are a direct attack on the bureaucratic continuation of the penal transport system that birthed the colony.
 This strategy demands the state stop using the vastness of the ocean to disappear political and humanitarian problems.
@@ -2209,7 +2480,7 @@ Waters brilliantly attacks the dark mechanics of this historical method, demandi
 She ensures that the foundational methodology of "Transportation" is actively fought within Australian border security.
 This is a failure because she accurately attacks the most brutal, origin-defining method of the colonial administration.
 
-**(Cause.How.What) Terra Nullius (υ: +0.8, ψ: +0.7): FAIL.** **Quote:** "We must embed Truth-telling in our education system so every child knows this land was not empty when the British arrived." (2021).
+**(Cause.How.What) The Shearers' Strike (υ: +0.8, ψ: +0.7): FAIL.** **Quote:** "We must embed Truth-telling in our education system so every child knows this land was not empty when the British arrived." (2021).
 **Brief:** She proactively attacks and attempts to destroy the foundational legal fiction that the continent was empty and legally unowned prior to 1788.
 Her rhetoric constantly destroys the "Blank Slate" methodology, arguing that civilization existed for 65,000 years before the British built upon it.
 This strategy uses massive political energy to elevate the complex, pre-existing spatial and legal methodologies of the First Nations.
@@ -2219,7 +2490,7 @@ Waters is the most prominent modern enemy of this exact "Greatest Lie" methodolo
 She ensures that the destruction of the "Method of Erasure" remains highly visible and politically viable in the modern discourse.
 This is a failure because she aggressively attacks the foundational legal mechanism that authorized the taking of the continent.
 
-**(Cause.How.Where) The Secret Ballot (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must protect the integrity of the vote and ensure everyone can participate in our democracy freely." (2019).
+**(Cause.How.Where) The Bush (as Method) (υ: +0.7, ψ: +0.5): HIT.** **Quote:** "We must protect the integrity of the vote and ensure everyone can participate in our democracy freely." (2019).
 **Brief:** She fundamentally relies on the world-leading democratic methodology invented in 19th-century Australia: the absolute privacy of the vote.
 Her progressive movement survives because the "Sanctuary" of the ballot box protects her voters from the economic consequences of demanding radical change.
 This strategy exploits the mechanical gap between the public demand for "economic stability" and the private reality of ecological anxiety.
@@ -2229,7 +2500,7 @@ Waters flawlessly operates within the safety generated by this historical method
 She understands that the Australian foundation is highly dependent on the quiet, consequence-free space of the cardboard screen.
 This is a hit because she accurately relies on the most famous democratic method generated by the colonies.
 
-**(Cause.How.Why) The Harvester Judgment (υ: +0.9, ψ: +0.6): HIT.** **Quote:** "We need strong unions and strong industrial relations laws to ensure every worker gets a fair day's pay." (2020).
+**(Cause.How.Why) The Secret Ballot (υ: +0.9, ψ: +0.6): HIT.** **Quote:** "We need strong unions and strong industrial relations laws to ensure every worker gets a fair day's pay." (2020).
 **Brief:** She actively defends and attempts to expand the foundational legal methodology that guaranteed the Australian "Living Wage" in 1907.
 Her policy platform heavily supports the structural nexus between state intervention and human dignity, attacking the free market instead.
 This strategy views the historical mechanism that prevented the creation of a working poor as a vital regulatory necessity that must be updated for the gig economy.
@@ -2239,7 +2510,7 @@ Waters’ demand to strengthen penalty rates and regulate the labor market direc
 She defends the "Method of Dignity" against the ruthless, profit-driven logic of the unrestricted market.
 This is a hit because she actively works to protect the most significant economic mechanism of the Australian foundation.
 
-**(Cause.How.How) The Conscription Debate (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "We will fight these anti-protest laws all the way to the High Court. The state cannot criminalize our right to dissent." (2019).
+**(Cause.How.How) Compulsory Arbitration (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "We will fight these anti-protest laws all the way to the High Court. The state cannot criminalize our right to dissent." (2019).
 **Brief:** She expertly channels the historical, working-class methodology of mass resistance against the state's attempt to control the physical body and public space.
 Her fierce opposition to anti-protest laws perfectly mirrored the furious, anti-authoritarian logic of the 1916 and 1917 anti-conscription campaigns.
 This strategy utilizes the deep foundational fear of "The Governor" demanding absolute submission, triggering massive progressive resistance.
@@ -2249,7 +2520,7 @@ Waters flawlessly aligned her progressive brand with this historical mechanism a
 She understands that the Australian foundation includes a hard limit on state authority, which must be defended via mass defiance.
 This is a hit because she accurately weaponized the historical methodology of the "No" vote against the coercive state.
 
-**(Cause.How.Cause) Assimilation Policy (υ: -0.4, ψ: -0.4): FAIL.** **Quote:** "We must celebrate our multiculturalism and ensure that all communities feel safe and respected." (2018).
+**(Cause.How.Cause) The Colonial Secretary's Office (υ: -0.4, ψ: -0.4): FAIL.** **Quote:** "We must celebrate our multiculturalism and ensure that all communities feel safe and respected." (2018).
 **Brief:** She is the primary political agent demanding the complete destruction of the harsh, mid-century methodology of total cultural homogenization.
 Her rhetoric completely embraces the modern framework of multiculturalism, insisting that the "Melting Pot" must preserve, not dissolve, all difference into whiteness.
 This strategy uses high political energy to demand the celebration of foreign cultures, viewing diversity as a vital strength in the state.
@@ -2259,7 +2530,7 @@ Waters’ entire political brand is built on the destruction of this exact histo
 She ensures that the "Method of Conformity" remains a highly toxic, fiercely opposed concept in modern progressive discourse.
 This is a failure because she accurately and forcefully attacks the foundational logic of cultural assimilation.
 
-**(Cause.How.Effect) Native Title (Mabo / Wik) (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We must build on the legacy of Mabo and Wik to ensure First Nations people have real power and land rights." (2020).
+**(Cause.How.Effect) Peaceful Federation (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We must build on the legacy of Mabo and Wik to ensure First Nations people have real power and land rights." (2020).
 **Brief:** She continuously defends and seeks to massively expand the High Court's methodological correction of the "Terra Nullius" lie.
 Her narrative views the legal recognition of prior Indigenous ownership not as a threat, but as an essential act of justice that must be taken further via Treaty.
 This strategy attempts to mobilize the entire apparatus of the state to formalize the newly discovered rights of the First Nations.
@@ -2269,7 +2540,7 @@ Waters’ fierce defense of the Mabo and Wik decisions removed massive structura
 She supports the "Method of Truth" by demanding a complete rejection of the comfortable, exclusionary fiction of the "Blank Slate."
 This is a hit because she actively sought to defend and expand the legal mechanism designed to correct the foundation's original sin.
 
-## **6.6 The Deep Origins (Cause.Cause)**
+## **6.6 Cause**
 
 **(Cause.Cause.Who) The Dreaming (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "We must listen to the Traditional Owners who have managed this land sustainably for tens of thousands of years." (2021).
 **Brief:** She explicitly respects the oldest, most profound origin of the continent, treating the deep-time spiritual mapping of the land as vital ecological wisdom.
@@ -2281,7 +2552,7 @@ Waters’ absolute respect for this origin removes massive structural delusion f
 She embraces the "Deep Root" over the shallow, 200-year timeline of the colonial arrival.
 This is a hit because she actively respects and elevates the truest, most enduring origin of the Australian landmass.
 
-**(Cause.Cause.What) The British Empire (υ: 0.0, ψ: 0.0): FAIL.** **Quote:** "We cannot ignore the devastating impacts of British imperialism on First Nations people globally and locally." (2020).
+**(Cause.Cause.What) Gondwana (υ: ±0.0, ψ: ±0.0): FAIL.** **Quote:** "We cannot ignore the devastating impacts of British imperialism on First Nations people globally and locally." (2020).
 **Brief:** She explicitly attacks the global, imperial machine that forcefully birthed the Australian colonies in the late 18th century.
 Her narrative views the expansion of the British Empire not as the bringing of "light," but as a violent process of subjugation and theft.
 This strategy un-anchors her progressive worldview from the unquestioned authority and cultural superiority of the English-speaking world.
@@ -2291,7 +2562,7 @@ Waters flawlessly attacks the "Imperial Root," defining the colonial project as 
 She utilizes the historical weight of the Empire to demand the state "indigenize" and republicanize itself.
 This is a failure because she accurately and proudly attacks the primary geopolitical origin of the Commonwealth.
 
-**(Cause.Cause.Where) The Industrial Revolution (υ: +0.8, ψ: +0.4): FAIL.** **Quote:** "We are in the critical decade for climate action. We must end the era of fossil fuels and embrace the renewable energy revolution." (2021).
+**(Cause.Cause.Where) Great Barrier Reef (υ: +0.8, ψ: +0.4): FAIL.** **Quote:** "We are in the critical decade for climate action. We must end the era of fossil fuels and embrace the renewable energy revolution." (2021).
 **Brief:** She actively attacks the mechanical, high-energy origin that allowed the British to conquer the vast Australian distance.
 Her rhetoric treats the burning of fossil fuels and the physical tearing of the earth not as sacred engines, but as apocalyptic errors that must be stopped.
 This strategy embraces the complexity of the renewable age, rejecting the brute-force extraction that defined the 19th and 20th centuries.
@@ -2301,7 +2572,7 @@ Waters perfectly attacks the "Industrial Root," demanding that the state cease o
 She understands that the Australian foundation was made possible only by the steamship and the coal mine, but demands those tools be discarded.
 This is a failure because she accurately attacks the foundational technological origin of the settler state.
 
-**(Cause.Cause.Why) Island Isolation (υ: -0.3, ψ: +0.4): FAIL.** **Quote:** "We are part of a global community facing a global crisis. We cannot hide behind our borders." (2019).
+**(Cause.Cause.Why) Megafauna Extinction (υ: -0.3, ψ: +0.4): FAIL.** **Quote:** "We are part of a global community facing a global crisis. We cannot hide behind our borders." (2019).
 **Brief:** She explicitly attacks the sheer geographic reality of the continent's detachment from the rest of the globe as a justification for isolation.
 Her narrative treats the thousands of kilometers of ocean not as a divine mandate to build a fortress, but as an irrelevant barrier in a warming world.
 This strategy attacks the deep-seated "Origin of Distance," attempting to cure the terrifying fear of the "Other" encroaching on the sanctuary.
@@ -2311,7 +2582,7 @@ Waters brilliantly attacks the "Moat," using the reality of global climate chang
 She understands that the Australian psyche is constantly battling the silence of the map, and she attempts to fill that silence with global solidarity.
 This is a failure because she accurately attacks the most fundamental spatial origin of the continent's unique development.
 
-**(Cause.Cause.How) Asian Proximity (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Our future, our security, and our prosperity are tied to our immediate region in the Asia-Pacific." (2021).
+**(Cause.Cause.How) Fire-Stick Farming (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "Our future, our security, and our prosperity are tied to our immediate region in the Asia-Pacific." (2021).
 **Brief:** She expends massive political energy embracing and integrating with the inevitable geopolitical destiny dictated by the map.
 Her rhetoric mentally locates the physical continent exactly where it is, demanding cultural and economic alignment with the Asia-Pacific.
 This strategy embraces the immediate physical proximity of Asia, treating the geographic origin as a vital partnership that must be cultivated.
@@ -2321,7 +2592,7 @@ Waters’ embrace of this origin removes massive structural delusion from her fo
 She hits the imperative to integrate with the "Near North," rejecting impossible geographical and racial fantasies.
 This is a hit because she actively supports the absolute, undeniable physical origin of the continent's modern trajectory.
 
-**(Cause.Cause.Cause) The Enlightenment (υ: 0.0, ψ: 0.0): HIT.** **Quote:** "We must base our climate targets on the physics and the science, not on what is politically convenient." (2020).
+**(Cause.Cause.Cause) Plate Tectonics (υ: ±0.0, ψ: ±0.0): HIT.** **Quote:** "We must base our climate targets on the physics and the science, not on what is politically convenient." (2020).
 **Brief:** She fiercely defends the philosophical origin of the modern democratic state: the absolute reliance on reason, objective evidence, and scientific data.
 Her progressive narrative explicitly replaces raw, emotive grievance and anti-intellectual "Common Sense" with complex, educated debate.
 This strategy defends the institutions of science, law, and academia that were built to ensure the state operates on facts rather than fear.
@@ -2331,7 +2602,7 @@ Waters’ aggressive intellectualism and reliance on scientific consensus direct
 She replaces the dark, tribal mechanics of the "Greatest Lie" with the "Origin of Reason."
 This is a hit because she actively works to defend the foundational logic that civilized the colonial experiment.
 
-**(Cause.Cause.Effect) Class Warfare (υ: 0.0, ψ: -0.3): HIT.** **Quote:** "The massive corporations are making record profits while driving up inflation and hurting everyday families." (2022).
+**(Cause.Cause.Effect) The Arid Core (υ: ±0.0, ψ: -0.3): HIT.** **Quote:** "The massive corporations are making record profits while driving up inflation and hurting everyday families." (2022).
 **Brief:** She perfectly masters the aesthetic and the resentment of the foundational class struggle, redirecting it toward corporate and environmental targets.
 Her rhetoric constantly utilizes the language of the "People" fighting the "Billionaires," mapping the historical strike logic onto modern economic inequality.
 This strategy allows her to harvest the deep, inherited anger of the working class, focusing it on the fossil fuel industry and corporate monopolies.
@@ -2341,9 +2612,9 @@ Waters flawlessly operates the "Resentment" of this origin, using the ghost of t
 She proves that the Australian foundation is deeply scarred by class, and that those scars can be easily reopened for progressive gain.
 This is a hit because she accurately channels the most potent internal conflict origin of the modern political system.
 
-## **6.7 The Historical Outcomes (Cause.Effect)**
+## **6.7 Effect**
 
-**(Cause.Effect.Who) The Cultural Cringe (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "We must stop being a laggard on the world stage. We should lead on climate action, not wait for other nations." (2021).
+**(Cause.Effect.Who) The Digger (Myth) (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "We must stop being a laggard on the world stage. We should lead on climate action, not wait for other nations." (2021).
 **Brief:** She attacks the historical outcome of colonial inferiority, demanding a confident, moral-superpower status instead of aggressive, defensive nationalism.
 Her rhetoric recognizes the deep-seated fear of foreign judgment and uses it to demand that Australia improve its behavior to impress the "Head Office."
 This strategy utilizes the "Void" of the Cringe to justify radical integration into international agreements and global responsibilities.
@@ -2353,7 +2624,7 @@ Waters’ extreme progressivism is the perfect attack on the deep insecurity enc
 She weaponizes the fear of external validation, urging the nation to confidently engage with the world rather than shut its ears to it.
 This is a failure (to align with the shadow) because she accurately manipulates and attempts to cure the darkest, most insecure historical outcome of the culture.
 
-**(Cause.Effect.What) The Fair Go (As Result) (υ: +0.8, ψ: +0.7): FAIL.** **Quote:** "The 'fair go' is a myth for the millions of Australians living in poverty, unable to afford a home or basic healthcare." (2020).
+**(Cause.Effect.What) Warrior [First Nations Perspective] (υ: +0.8, ψ: +0.7): FAIL.** **Quote:** "The 'fair go' is a myth for the millions of Australians living in poverty, unable to afford a home or basic healthcare." (2020).
 **Brief:** She explicitly denies the ultimate, triumphant historical outcome of the nation, framing it as a myth that masks deep structural inequality.
 Her narrative attacks the "Prosperity" of the drive, warning that the egalitarian settlement has been destroyed by neoliberal economics.
 This strategy uses the denial of the "Good Life" to justify tearing open the system for massive progressive reform.
@@ -2363,7 +2634,7 @@ Waters expertly attacks the "Comfort" of this outcome, demanding that the state 
 She understands that the Australian foundation views its prosperity as proof of its virtue, and she fiercely attacks that equation.
 This is a failure because she accurately attacks the final material outcome of the Australian experiment to generate progressive outrage.
 
-**(Cause.Effect.Where) The Stolen Generations (υ: +0.5, ψ: -0.3): HIT.** **Quote:** "We must acknowledge the ongoing trauma of the Stolen Generations and the systemic racism that continues to remove First Nations children today." (2021).
+**(Cause.Effect.Where) The Suburban House (υ: +0.5, ψ: -0.3): HIT.** **Quote:** "We must acknowledge the ongoing trauma of the Stolen Generations and the systemic racism that continues to remove First Nations children today." (2021).
 **Brief:** She expends immense political capital to brutally acknowledge the most catastrophic and shameful historical outcome of the assimilation policy.
 Her rhetoric treats the trauma of state-sanctioned child removal as a horrifying act of colonial violence that demands structural reparations.
 This strategy destroys the "Great Silence," violently supporting any attempt to reckon with the systemic racism that shattered First Nations families.
@@ -2373,7 +2644,7 @@ Waters’ ferocious acknowledgment removes structural delusion from the historic
 She hits the imperative to confront the "Dark Result," attacking the comfortable, sanitized myth of the benevolent settler.
 This is a hit because she actively works to acknowledge the most painful and necessary historical truth of the Australian timeline.
 
-**(Cause.Effect.Why) The Lucky Country (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We cannot rely on luck and digging up coal forever. We need a smart, sustainable transition plan." (2019).
+**(Cause.Effect.Why) The Welfare State (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We cannot rely on luck and digging up coal forever. We need a smart, sustainable transition plan." (2019).
 **Brief:** She perfectly embodies the deep national anxiety that the unearned, historical wealth of the continent is currently being squandered.
 She exploits the "Curse of Plenty," arguing that incompetent, second-rate elites are managing the decline of the nation's geological fortune.
 Her economic policy is driven by a paranoid environmentalism, viewing the "Luck" of the quarry as a deadly addiction that must be broken.
@@ -2383,7 +2654,7 @@ Waters’ rhetoric is a direct manifestation of this paranoia, treating the nati
 She successfully weaponizes the "Risk" of Donald Horne's famous critique, turning the fear of lost luck into a progressive rallying cry.
 This is a hit because she accurately targets the foundational economic insecurity that plagues the Australian outcome.
 
-**(Cause.Effect.How) The Washminster System (υ: +0.6, ψ: -0.2): HIT.** **Quote:** "The Greens will use our numbers in the Senate to block this terrible legislation and force the government to negotiate." (2022).
+**(Cause.Effect.How) Consensus (υ: +0.6, ψ: -0.2): HIT.** **Quote:** "The Greens will use our numbers in the Senate to block this terrible legislation and force the government to negotiate." (2022).
 **Brief:** Her entire political survival is the direct result of the bizarre, hybrid constitutional outcome forged by the founders in 1901.
 She thrives entirely in the mutant gap between the British executive tradition and the powerful, American-style state-based Senate.
 This strategy proves that she is perfectly adapted to exploit the "Friction" generated by the compromise between the large and small colonies.
@@ -2393,7 +2664,7 @@ Waters’ minor-party leverage is the ultimate manifestation of the "Washminster
 She understands that the Australian foundation built a system that actively rewards obstruction and minority veto, and she uses it perfectly.
 This is a hit because she flawlessly executes the intended, albeit frustrating, function of the nation's primary structural outcome.
 
-**(Cause.Effect.Cause) Middle Power Status (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australia must step up and be a global leader on climate action. We have the resources and the responsibility to act." (2021).
+**(Cause.Effect.Cause) Unfinished Business (υ: +0.8, ψ: +0.7): HIT.** **Quote:** "Australia must step up and be a global leader on climate action. We have the resources and the responsibility to act." (2021).
 **Brief:** She completely embraces the historical outcome that positioned Australia as a highly engaged, diplomatic balancing force in global affairs.
 Her narrative advocates for a total integration into the international stage, honoring treaties and embracing the nation's role as a regional leader.
 This strategy attempts to expand the state's influence, preferring the complex responsibility of the "Network" over the paranoid safety of the "Fortress."
@@ -2403,7 +2674,7 @@ Waters’ extreme globalism actively seeks to expand the "Diplomatic Outcome" of
 She hits the historical imperative to "Punch Above Our Weight," demanding that Australia become a moral superpower.
 This is a hit because she attempts to maximize the mature, outward-looking foreign policy that defined the modern state.
 
-**(Cause.Effect.Effect) The Unfinished Republic (υ: +0.7, ψ: +0.4): HIT.** **Quote:** "It is well past time we had an Australian head of state. A republic is the next logical step in our national maturity." (2022).
+**(Cause.Effect.Effect) Continuity (υ: +0.7, ψ: +0.4): HIT.** **Quote:** "It is well past time we had an Australian head of state. A republic is the next logical step in our national maturity." (2022).
 **Brief:** She acts as the primary political force demanding the final, logical historical outcome of the Australian colonial project: full independence.
 Her rhetoric fiercely attacks the retention of the British monarch, viewing the "Unfinished" nature of the state as a shameful failure.
 This strategy relies on a profound demand for national self-belief, arguing that the country is perfectly capable of providing its own ultimate head of state.
@@ -2413,25 +2684,11 @@ Waters’ staunch attack on the monarchy actively attacks this "Arrested Develop
 She hits the historical imperative to complete the architecture of the state, attacking the comfort of the colonial shadow.
 This is a hit because she explicitly works to achieve the ultimate historical outcome of the Australian timeline.
 
-## **Final Forensic Verdict: Larissa Waters (Plane 6 Half)**
+# **Plane 7: Result (Effect)**
 
-*(Scores will be compiled in the final merge)*
+## **7.1 Who**
 
-## **Final Forensic Verdict: Larissa Waters (Plane 6)**
-
-**Plane 6 Cause Score:** -1 Net Score (24 HIT, 25 FAIL, 0 MISS)
-**Percentage Australian Alignment:** 48.9%
-**Average Morality (υ):** +0.65 (Systemic Justice)
-**Average Will (ψ):** +0.40 (Proactive Will)
-**Quadrant Placement:** Greater Good / Progressive Overwrite
-
-**Final Statement:** Larissa Waters acts as a **Structural Agent of Disruption** on the Plane of Foundation. She actively attacks and attempts to destroy the traumatic and rebellious origins of the colonial project (The Convict, The First Fleet, Terra Nullius, White Australia) that traditionalists use to mobilize populist anger. Her "True Intent" (Acknowledging the Frontier Wars, Centering the Stolen Generations, Achieving Treaty and Truth) relies entirely on destroying the "Great Silence" and actively elevating the deep-time truths of the continent. By severing her identity from the 1788 arrival and the 1901 exclusion, she works aggressively to force the nation out of its frightened, colonial phase, demanding its rapid maturation into a confident, reconciled, and environmentally radical republic.
-
-# **Plane 7, Emotional Effect**
-
-## **7.1 The Resulting Agents (Effect.Who)**
-
-**(Effect.Who.Who) The Multicultural Citizen (υ: +0.3, ψ: -0.4): HIT.** **Quote:** "Australia's diversity is our greatest strength. We must celebrate multiculturalism and stamp out racism in all its forms." (2018).
+**(Effect.Who.Who) The Quiet Australian (υ: +0.3, ψ: -0.4): HIT.** **Quote:** "Australia's diversity is our greatest strength. We must celebrate multiculturalism and stamp out racism in all its forms." (2018).
 **Brief:** She explicitly champions the demographic reality of the modern, pluralistic Australian state.
 Her narrative views the integrated, diverse citizen as the ultimate triumph of modern Australian policy.
 This strategy seeks to validate the identity of millions of Australians who do not fit the Anglo-Celtic mold.
@@ -2441,7 +2698,7 @@ Waters' complete defense of multiculturalism removes massive moral friction from
 She fully supports the "Synthesized Whole," rejecting the paranoid hierarchy of racial acceptability.
 This is a hit because she actively defends the most visible, living result of the post-war national project.
 
-**(Effect.Who.What) The Aspirational (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "We cannot have a society where property investors get massive tax handouts while young people are locked out of the housing market." (2022).
+**(Effect.Who.What) The Multicultural Citizen (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "We cannot have a society where property investors get massive tax handouts while young people are locked out of the housing market." (2022).
 **Brief:** She perfectly attacks the selfish, materialist drive that defines the modern Australian economic outcome.
 Her rhetoric attacks the hoarding of property and wealth, refusing to view it as the ultimate moral right of the "Battler."
 This strategy encourages her base to view taxation and redistribution as the cure for, not a theft of, hard-earned success.
@@ -2451,7 +2708,7 @@ Waters flawlessly attacks this "Greatest Lie", convincing her base that middle-c
 She understands that the ultimate result of the colonial project is a highly defensive, property-obsessed middle class, and she seeks to destroy it.
 This is a failure because she accurately attacks the most dominant, materialistic agent produced by the Australian economy.
 
-**(Effect.Who.Where) The Retiree / Grey Nomad (υ: +0.2, ψ: -0.3): FAIL.** **Quote:** "We must end the unfair tax concessions that allow wealthy older Australians to hoard property while young people struggle." (2021).
+**(Effect.Who.Where) The Coastal Dweller (υ: +0.2, ψ: -0.3): FAIL.** **Quote:** "We must end the unfair tax concessions that allow wealthy older Australians to hoard property while young people struggle." (2021).
 **Brief:** She violently attacks the final, subsidized demographic outcome of the Australian social contract when it results in intergenerational inequality.
 Her narrative treats the wealthy elderly not as sacred, untouchable figures, but as a demographic hoarding too much of the national wealth.
 This strategy pits the needs of the youth and the environment against the entrenched economic power of the older generation.
@@ -2461,7 +2718,7 @@ Waters expertly attacks the "Finish Line" of the national drive, ensuring her yo
 She utilizes the demographic weight of the Youth to attack the progressive economic reform blocks held by the Retiree.
 This is a failure because she accurately targets and attacks the most coddled, electorally powerful agent in the nation.
 
-**(Effect.Who.Why) First Nations Elder (υ: -0.4, ψ: +0.7): HIT.** **Quote:** "We must listen to the wisdom of First Nations Elders who have cared for this country for millennia." (2020).
+**(Effect.Who.Why) The Aspirational (υ: -0.4, ψ: +0.7): HIT.** **Quote:** "We must listen to the wisdom of First Nations Elders who have cared for this country for millennia." (2020).
 **Brief:** She expends immense political energy to center the unique status and enduring survival of Indigenous elders.
 Her rhetoric elevates the cultural and historical authority of the original inhabitants, treating them as the supreme moral voice.
 This strategy attempts to force the colonial legalism to bow before the profound, deep-time resilience of the First Nations.
@@ -2471,7 +2728,7 @@ Waters' absolute deference to this authority removes massive structural friction
 She honors the historical imperative to respect the ultimate survivors of the colonial expansion.
 This is a hit because she actively seeks to elevate the most profound ancestral agents still living on the continent.
 
-**(Effect.Who.How) The Rent-Seeker (υ: +0.3, ψ: +0.6): FAIL.** **Quote:** "We must scrap negative gearing and the capital gains tax discount. These policies just make the rich richer." (2019).
+**(Effect.Who.How) The Sports Fanatic (υ: +0.3, ψ: +0.6): FAIL.** **Quote:** "We must scrap negative gearing and the capital gains tax discount. These policies just make the rich richer." (2019).
 **Brief:** She aggressively attacks the passive extraction of wealth generated by the structural flaws in the housing market.
 Her narrative frames landlordism as an economic distortion and a moral failure, not as a virtuous reward for blue-collar effort.
 This strategy attacks the systemic hoarding of residential property, fighting to unlock the market for younger generations.
@@ -2481,7 +2738,7 @@ Waters flawlessly attacks this "Shadow" outcome, demanding the destruction of th
 She understands that the nation's wealth is increasingly tied to passive asset appreciation, and she fights it fiercely.
 This is a failure (to align with the shadow) because she accurately attacks the deeply regressive, rent-seeking agent of the modern economy.
 
-**(Effect.Who.Cause) The New Australian (υ: +0.5, ψ: -0.2): HIT.** **Quote:** "Migrants and refugees bring immense value to our communities. We must support them and welcome them." (2018).
+**(Effect.Who.Cause) The Digger's Heir (υ: +0.5, ψ: -0.2): HIT.** **Quote:** "Migrants and refugees bring immense value to our communities. We must support them and welcome them." (2018).
 **Brief:** She views the recently arrived, hardworking migrant as a profound national asset and a moral duty to protect.
 Her rhetoric highlights the economic and social vitality injected into the state by the "New Australian."
 This strategy demands that the incoming populations be given full rights and support, rejecting the demand for rigid cultural assimilation.
@@ -2491,7 +2748,7 @@ Waters' progressive inclusion fundamentally supports the historical mechanism of
 She replaces the paranoid demand for racial conformity with a pragmatic and moral acceptance of new labor.
 This is a hit because she defends the primary demographic outcome required to sustain the Commonwealth.
 
-**(Effect.Who.Effect) The Quiet Australian (υ: +0.9, ψ: +0.4): FAIL.** **Quote:** "This is a climate emergency. We cannot afford to be quiet or complacent any longer." (2019).
+**(Effect.Who.Effect) The Citizen (υ: +0.9, ψ: +0.4): FAIL.** **Quote:** "This is a climate emergency. We cannot afford to be quiet or complacent any longer." (2019).
 **Brief:** She explicitly targets and attempts to destroy the massive, disengaged center of the electorate that simply wants to be left alone.
 Her narrative attacks the political apathy of the suburbs, framing any demand for "peace and quiet" as a dangerous luxury the planet cannot afford.
 This strategy uses the sheer, urgent reality of climate change to attempt to crush the status quo and force the "Quiet Australian" to act.
@@ -2501,9 +2758,9 @@ Waters expertly attacks the defensive mechanisms of this demographic, attempting
 She understands that the ultimate outcome of the Australian system is a citizen who hates politics but loves comfort, and she seeks to break that comfort.
 This is a failure because she accurately attacks the immense, conservative gravity of the nation's silent majority.
 
-## **7.2 The Resulting Institutions (Effect.What)**
+## **7.2 What**
 
-**(Effect.What.Who) Medicare (υ: -0.2, ψ: +0.5): HIT.** **Quote:** "We must fully fund Medicare and expand it to include dental and mental health care for every Australian." (2021).
+**(Effect.What.Who) The Home Owner (υ: -0.2, ψ: +0.5): HIT.** **Quote:** "We must fully fund Medicare and expand it to include dental and mental health care for every Australian." (2021).
 **Brief:** She attempts to massively fortify and expand the universal nature of the national health system.
 Her rhetoric defends the "Safety Net", treating it as a fundamental structural human right that must be unconditionally provided.
 This strategy seeks to reinforce the blind, pragmatic care that defines the highest institutional outcome of the state.
@@ -2513,7 +2770,7 @@ Waters' demand to expand coverage removes massive moral friction from the "Fair 
 She defends the objective utility of the Commonwealth against the tribal, exclusionary mathematics of private care.
 This is a hit because she actively defends the most successful, equitable institution produced by the Australian system.
 
-**(Effect.What.What) Superannuation (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We must protect superannuation from being raided by the government. It is workers' money for their retirement." (2020).
+**(Effect.What.What) The Superannuation Balance (υ: +0.7, ψ: +0.6): HIT.** **Quote:** "We must protect superannuation from being raided by the government. It is workers' money for their retirement." (2020).
 **Brief:** She aggressively defends the long-term, systemic architecture of the national retirement savings pool.
 Her policy platform treats Superannuation as a structural guarantee that must not be used as a short-term slush fund to fix immediate housing crises.
 This strategy attempts to enforce the delayed gratification required to ensure the financial survival of the aging population.
@@ -2523,7 +2780,7 @@ Waters' demand to protect the fund actively supports the integrity of the instit
 She honors the historical imperative to build sustainable, generational wealth for the working class.
 This is a hit because she treats the nation's greatest financial outcome as a protected, long-term asset.
 
-**(Effect.What.Where) The Detention Centre (υ: -0.6, ψ: +0.5): FAIL.** **Quote:** "We must immediately close the offshore detention camps on Nauru and Manus Island. They are a human rights catastrophe." (2018).
+**(Effect.What.Where) The University Sector (υ: +0.3, ψ: +0.5): FAIL.** **Quote:** "We must immediately close the offshore detention camps on Nauru and Manus Island. They are a human rights catastrophe." (2018).
 **Brief:** She is a fierce, unapologetic enemy of the most brutal and controversial institutional outcome of modern border policy.
 Her narrative treats the offshore camp not as a necessary defense, but as a horrific, illegal institutional failure that must be destroyed.
 This strategy utilizes immense political energy to expose the physical cruelty of the state's exclusion.
@@ -2533,7 +2790,7 @@ Waters flawlessly attacks this dark institutional outcome, demanding that the st
 She understands that the Australian foundation is highly dependent on the quiet, out-of-sight punishment of the "Other," and she exposes it.
 This is a failure (to align with the shadow) because she accurately and aggressively attacks the darkest institutional reality of the modern Commonwealth.
 
-**(Effect.What.Why) The Award Wage (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "We will always fight to protect penalty rates and ensure strong minimum wages for all workers." (2019).
+**(Effect.What.Why) The Medicare Card (υ: +0.9, ψ: +0.5): HIT.** **Quote:** "We will always fight to protect penalty rates and ensure strong minimum wages for all workers." (2019).
 **Brief:** She actively seeks to defend and expand the foundational legal instrument that guaranteed the Australian living standard.
 Her policy demands aim to strengthen the centralized wage-fixing mechanics that historically prevented the exploitation of labor.
 This strategy prioritizes the systemic dignity and weekend leisure of the worker over the profit margins of capital.
@@ -2543,7 +2800,7 @@ Waters' demand to protect penalty rates and regulate the labor market directly s
 She defends the "Method of Dignity" against the ruthless, profit-driven logic of the unrestricted free market.
 This is a hit because she actively works to protect the most significant economic institution of the Australian foundation.
 
-**(Effect.What.How) Negative Gearing (υ: +0.8, ψ: +0.7): FAIL.** **Quote:** "We must phase out negative gearing and the capital gains tax discount to make housing affordable again." (2021).
+**(Effect.What.How) The Renewable Transition (υ: +0.8, ψ: +0.7): FAIL.** **Quote:** "We must phase out negative gearing and the capital gains tax discount to make housing affordable again." (2021).
 **Brief:** She staunchly attacks the regressive tax loophole that has fundamentally distorted the national housing market.
 Her rhetoric treats property speculation and tax avoidance as systemic corruptions that must be eradicated.
 This strategy attacks the hoarding of residential housing, demanding that the market be unlocked for the young.
@@ -2553,7 +2810,7 @@ Waters flawlessly attacks this "Shadow" policy, demanding an end to the structur
 She understands that the nation's political gravity heavily favors the property investor, and she fights against that gravity.
 This is a failure (to align with the shadow) because she accurately attacks the deeply regressive, wealth-hoarding institution of the modern economy.
 
-**(Effect.What.Cause) The NDIS (υ: +0.7, ψ: -0.2): HIT.** **Quote:** "We must fully fund the NDIS and ensure it provides the care and support disabled Australians deserve, without budget cuts." (2022).
+**(Effect.What.Cause) Biodiversity (υ: +0.7, ψ: -0.2): HIT.** **Quote:** "We must fully fund the NDIS and ensure it provides the care and support disabled Australians deserve, without budget cuts." (2022).
 **Brief:** She views the most significant modern expansion of the national safety net primarily as an absolute human right that must be fully funded.
 Her narrative defends the systemic provision of care to the disabled, attacking any attempts at cost-cutting or austerity.
 This strategy attempts to expand the moral ambition of the state, demanding a generous, supportive social contract.
@@ -2563,7 +2820,7 @@ Waters' aggressive defense of the scheme's funding removes moral friction from t
 She demands that a mature Commonwealth must bear the financial burden of comprehensive, systemic care.
 This is a hit because she attempts to fortify the most progressive institutional outcome of the 21st century.
 
-**(Effect.What.Effect) The Public Broadcaster / ABC (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must restore the funding to the ABC and protect its independence from political interference." (2020).
+**(Effect.What.Effect) Stability (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "We must restore the funding to the ABC and protect its independence from political interference." (2020).
 **Brief:** She exhibits absolute support for the national institution designed to unify the vast continent through shared information.
 Her rhetoric defends the objective, civic function of the broadcaster, viewing it as essential to a healthy democracy.
 This strategy attempts to protect the "Digital Campfire" of the state, fighting against a fragmented, highly partisan media landscape.
@@ -2573,9 +2830,9 @@ Waters' demand to fully fund the broadcaster removes structural friction from th
 She supports the unifying logic of the Commonwealth over the desire for corporate ideological control over the airwaves.
 This is a hit because she defends the most vital cultural and informational institution of the Australian state.
 
-## **7.3 The Resulting Geographies (Effect.Where)**
+## **7.3 Where**
 
-**(Effect.Where.Who) The Pacific Family (υ: +0.4, ψ: +0.5): HIT.** **Quote:** "We must support our Pacific neighbors with real climate action and increased foreign aid, not just empty rhetoric." (2021).
+**(Effect.Where.Who) The Australian Diaspora (υ: +0.4, ψ: +0.5): HIT.** **Quote:** "We must support our Pacific neighbors with real climate action and increased foreign aid, not just empty rhetoric." (2021).
 **Brief:** She explicitly embraces the geopolitical reality and responsibility of Australia's dominant position within the Pacific region.
 Her narrative treats regional aid and climate diplomacy as essential moral and security architecture.
 This strategy attempts to physically integrate the continent with the region, actively supporting the neighboring island states.
@@ -2585,7 +2842,7 @@ Waters' progressive globalism actively seeks to expand the diplomatic outcome of
 She embraces the "Network" of the Pacific over the paranoid, closed logic of the "Fortress."
 This is a hit because she attempts to maximize the mature, outward-looking foreign policy that secures the region.
 
-**(Effect.Where.What) The Alliance (US/UK) (υ: -0.3, ψ: +0.6): FAIL.** **Quote:** "We must renegotiate our alliance with the US and ensure we are not blindly dragged into another disastrous foreign war." (2020).
+**(Effect.Where.What) The Commodity (υ: -0.3, ψ: +0.6): FAIL.** **Quote:** "We must renegotiate our alliance with the US and ensure we are not blindly dragged into another disastrous foreign war." (2020).
 **Brief:** She perfectly attacks the deep national anxiety that demands Australia remain geographically and militarily tethered to the Anglosphere.
 Her rhetoric treats the distant empires not as unquestionable protectors, but as dangerous imperial powers that threaten Australian sovereignty.
 This strategy attacks the "Cultural Cringe" in foreign policy, rejecting subordination in exchange for perceived security.
@@ -2595,7 +2852,7 @@ Waters flawlessly attacks this foundational conservatism, demanding the destruct
 She understands that the Australian foundation is deeply uncomfortable with the concept of unsupported geographic sovereignty, and forces it to confront that discomfort.
 This is a failure because she accurately attacks the historical and ongoing outcome of colonial defense dependence.
 
-**(Effect.Where.Where) The Sprawl / Suburbia (υ: -0.2, ψ: -0.5): FAIL.** **Quote:** "We need to stop sprawling outwards and start building smart, dense, sustainable cities with great public transport." (2019).
+**(Effect.Where.Where) The Alliance (υ: -0.2, ψ: -0.5): FAIL.** **Quote:** "We need to stop sprawling outwards and start building smart, dense, sustainable cities with great public transport." (2019).
 **Brief:** She fiercely attacks the low-density, atomized geography that serves as the final physical retreat for the Australian drive.
 Her narrative treats the quarter-acre block not as a sovereign fortress, but as an ecological disaster that must be dismantled.
 This strategy attacks the desire for "Private Space", warning that the sprawl will destroy the environment and isolate communities.
@@ -2605,7 +2862,7 @@ Waters flawlessly attacks this "Retreat", recognizing that the Australian soul d
 She understands that the ultimate goal of the drive is to hide behind the Hills Hoist, and she demands that fence be torn down.
 This is a failure because she accurately attacks the ultimate physical terminus of the national ambition.
 
-**(Effect.Where.Why) The Closed Border (υ: -0.8, ψ: +0.5): FAIL.** **Quote:** "We must end offshore detention, bring the refugees here, and process their claims fairly and humanely." (2018).
+**(Effect.Where.Why) The Middle Power (υ: +0.7, ψ: +0.5): FAIL.** **Quote:** "We must end offshore detention, bring the refugees here, and process their claims fairly and humanely." (2018).
 **Brief:** She attacks the sheer geographic reality of the continent's detachment from the rest of the globe as a justification for extreme exclusion.
 Her narrative treats the thousands of kilometers of ocean not as a divine mandate to build an impenetrable wall, but as an irrelevant barrier to human rights.
 This strategy utilizes the deep-seated "Origin of Distance" to demand compassion rather than cultivating a terrifying fear of the "Other".
@@ -2615,7 +2872,7 @@ Waters' entire brand is built on the destruction of this exact foundational logi
 She attacks the "Exclusionary Motive" flawlessly, attempting to prevent the state from returning to its original, isolated firmware.
 This is a failure (to align with the shadow) because she accurately, and proudly, attacks the darkest spatial outcome of the Commonwealth.
 
-**(Effect.Where.How) The Asian Market / Trade (υ: +0.6, ψ: +0.3): HIT.** **Quote:** "We must build strong, sustainable trade relationships with our Asian neighbors, focusing on clean energy exports." (2021).
+**(Effect.Where.How) Soft Power (υ: +0.6, ψ: +0.3): HIT.** **Quote:** "We must build strong, sustainable trade relationships with our Asian neighbors, focusing on clean energy exports." (2021).
 **Brief:** She expends massive political energy embracing the inevitable economic destiny dictated by the map, while demanding it be sustainable.
 Her rhetoric attempts to firmly couple the Australian economy to the reality of its immediate, booming spatial neighborhood.
 This strategy recognizes that the nation's wealth relies on exporting to the massive markets to its north, but demands that export be renewables, not coal.
@@ -2625,7 +2882,7 @@ Waters' embrace of this outcome removes massive structural delusion from her eco
 She hits the imperative to integrate with the "Near North", demanding a sustainable, non-extractive economic reality.
 This is a hit because she actively supports the absolute, undeniable physical reality of the continent's modern wealth.
 
-**(Effect.Where.Cause) Dispossession / The Shadow (υ: -0.3, ψ: +0.4): FAIL.** **Quote:** "We cannot celebrate January 26. We must acknowledge the truth of dispossession and work towards Treaty." (2020).
+**(Effect.Where.Cause) The Pacific (υ: -0.3, ψ: +0.4): FAIL.** **Quote:** "We cannot celebrate January 26. We must acknowledge the truth of dispossession and work towards Treaty." (2020).
 **Brief:** She proactively attacks and attempts to destroy the foundational geographic reality that the continent was taken without treaty or consent.
 Her rhetoric constantly attacks the "Blank Slate" outcome, arguing that civilization existed long before the British built upon it.
 This strategy uses massive political energy to acknowledge the complex, catastrophic impact of the spatial expansion on the First Nations.
@@ -2635,7 +2892,7 @@ Waters is the most prominent modern enemy of the sanitized outcome of this exact
 She ensures that the "Shadow of Dispossession" is brought into the light and actively reckoned with in the modern discourse.
 This is a failure (to align with the shadow) because she aggressively attacks the foundational geographic theft that authorized the modern state.
 
-**(Effect.Where.Effect) The Regional Divide (υ: -0.5, ψ: +0.4): FAIL.** **Quote:** "We must ensure a just transition for regional workers so that no community is left behind as we move to a green economy." (2021).
+**(Effect.Where.Effect) The Asian Century (υ: +0.5, ψ: +0.4): FAIL.** **Quote:** "We must ensure a just transition for regional workers so that no community is left behind as we move to a green economy." (2021).
 **Brief:** She attempts to heal the massive economic and cultural divergence between the resource-rich interior and the service-based coastal cities.
 By championing a "Just Transition", she attempts to unite the electorate, rather than polarize it along deep geographic fault lines.
 She recognizes that national environmental policies often hurt her regional base, and she attempts to mitigate that spatial pain with state support.
@@ -2645,9 +2902,9 @@ Waters brilliantly attempts to heal this structural unevenness to build a unifie
 She uses the reality of the geographic divide to demand that the Federal Government serve all masters equally through massive investment.
 This is a failure because her rhetoric attempts to erase the unavoidable, fractured geographic outcome of Australian wealth.
 
-## **7.4 The Resulting Motivations / Tensions (Effect.Why)**
+## **7.4 Why**
 
-**(Effect.Why.Who) Treaty / Voice (υ: 0.0, ψ: 0.0): HIT.** **Quote:** "The Greens are fully committed to implementing the Uluru Statement from the Heart in full: Voice, Treaty, and Truth." (2022).
+**(Effect.Why.Who) Egalitarianism vs. Aspiration (υ: ±0.0, ψ: ±0.0): HIT.** **Quote:** "The Greens are fully committed to implementing the Uluru Statement from the Heart in full: Voice, Treaty, and Truth." (2022).
 **Brief:** She acts as the primary political force working to accelerate the modern historical motivation to heal the foundational wound of the state.
 Her rhetoric frames the attempt at structural reconciliation as the most vital, necessary step to legitimize the modern Australian nation.
 This strategy ensures that the "Great Silence" is shattered, violently supporting the maturation of the national legal outcome.
@@ -2657,7 +2914,7 @@ Waters' successful championing of the Voice and Treaty proved her absolute commi
 She ensures that the Australian foundation cannot remain locked in a state of denial, forcing the evolution of the Kanon.
 This is a hit because she aggressively supports the most crucial historical and legal outcome of the 21st century.
 
-**(Effect.Why.What) The Energy Transition (υ: +0.5, ψ: -0.2): HIT.** **Quote:** "We are in the critical decade. We must rapidly transition to 100% renewable energy and phase out coal and gas." (2021).
+**(Effect.Why.What) Sustainability vs. Extraction (υ: +0.5, ψ: -0.2): HIT.** **Quote:** "We are in the critical decade. We must rapidly transition to 100% renewable energy and phase out coal and gas." (2021).
 **Brief:** She vehemently supports the massive, necessary industrial and economic transition required to adapt to the changing global climate.
 Her narrative demands a complete departure from the 20th-century reliance on fossil fuels, treating renewable technology as the only viable future.
 This strategy attempts to accelerate the national economy into the future, fully accepting the inevitable global shift away from carbon extraction.
@@ -2667,7 +2924,7 @@ Waters' demand to abandon the "Smokestack Origin" removes massive structural fri
 She fully accepts that the Australian drive must adapt its mechanical output to survive the modern era.
 This is a hit because she actively works to accelerate the most vital technological outcome of the current century.
 
-**(Effect.Why.Where) The Housing Crisis (υ: 0.0, ψ: 0.0): HIT.** **Quote:** "The housing system is broken. We need a massive build of public housing and an end to tax breaks for wealthy property investors." (2022).
+**(Effect.Why.Where) Urban vs. Regional (υ: ±0.0, ψ: ±0.0): HIT.** **Quote:** "The housing system is broken. We need a massive build of public housing and an end to tax breaks for wealthy property investors." (2022).
 **Brief:** She perfectly weaponizes the catastrophic failure of the national property market to drive her progressive, redistributive agenda.
 Her rhetoric links the intense economic pain of skyrocketing rents and mortgage stress directly to systemic inequality and corporate greed.
 This strategy focuses entirely on the structural tax distortions (like negative gearing) that have caused the crisis, demanding massive state intervention.
@@ -2677,7 +2934,7 @@ Waters brilliantly maneuvers within this crisis, using the genuine pain of the e
 She understands that threatening the "Castle" is the fastest way to mobilize the Australian voter for progressive change.
 This is a hit because she accurately targets and exploits the most painful economic outcome of the modern state.
 
-**(Effect.Why.Why) The Culture War (υ: 0.0, ψ: 0.0): FAIL.** **Quote:** "The conservative government is trying to start a culture war to distract from their absolute failure on climate change." (2021).
+**(Effect.Why.Why) Fair Go vs. Market (υ: ±0.0, ψ: ±0.0): FAIL.** **Quote:** "The conservative government is trying to start a culture war to distract from their absolute failure on climate change." (2021).
 **Brief:** She actively attacks and attempts to shut down the highly polarized, identity politics used by conservatives to fracture the national consensus.
 Her narrative treats every attempt to start a culture war as a cynical distraction from real economic and environmental issues.
 This strategy attempts to replace the perpetual, high-energy cycle of grievance and symbolic conflict with pragmatic, systemic policy debate.
@@ -2687,7 +2944,7 @@ Waters is a master opponent of this "Distraction" outcome, constantly attempting
 She understands that fear of cultural erasure is a distraction from complex economic theory, and she fights that distraction.
 This is a failure because she refuses to execute the divisive, highly emotive mechanics of the modern conservative culture war.
 
-**(Effect.Why.How) The Republic Debate (υ: +0.7, ψ: -0.4): HIT.** **Quote:** "It is an embarrassment that we still have a foreign monarch as our head of state. We must become a Republic." (2022).
+**(Effect.Why.How) Reconciliation vs. Denial (υ: +0.7, ψ: -0.4): HIT.** **Quote:** "It is an embarrassment that we still have a foreign monarch as our head of state. We must become a Republic." (2022).
 **Brief:** She acts as the primary political engine demanding the final, logical historical outcome of the Australian colonial project: full independence.
 Her rhetoric fiercely attacks the retention of the British monarch, viewing the "Unfinished" nature of the state as a shameful failure.
 This strategy relies on a profound demand for national self-belief, arguing that the country is perfectly capable of providing its own ultimate head of state.
@@ -2697,7 +2954,7 @@ Waters' staunch attack on the monarchy actively attacks this "Arrested Developme
 She hits the historical imperative to complete the architecture of the state, attacking the comfort of the colonial shadow.
 This is a hit because she explicitly works to achieve the ultimate sovereign outcome of the Australian timeline.
 
-**(Effect.Why.Cause) Climate Anxiety (υ: +0.4, ψ: -0.3): HIT.** **Quote:** "The science is clear. If we don't act now, we are condemning future generations to a completely unlivable planet." (2019).
+**(Effect.Why.Cause) Luck vs. Effort (υ: +0.4, ψ: -0.3): HIT.** **Quote:** "The science is clear. If we don't act now, we are condemning future generations to a completely unlivable planet." (2019).
 **Brief:** She completely embraces the objective, scientific reality of the climate crisis and the profound anxiety it generates in younger generations.
 Her narrative treats environmental concern not as a sign of weakness, but as the only rational response to the threats facing the continent.
 This strategy attempts to force the electorate to confront the massive physical and economic threats posed by a warming continent.
@@ -2707,7 +2964,7 @@ Waters' absolute reliance on this reality removes massive structural delusion fr
 She replaces comfortable, nostalgic lies about the permanence of coal with necessary "Survival Anxiety."
 This is a hit because she actively champions the most critical scientific and environmental outcome of the modern era.
 
-**(Effect.Why.Effect) National Pride vs Cringe (υ: 0.0, ψ: 0.0): FAIL.** **Quote:** "We must stop being an international embarrassment on climate change and start leading the world." (2021).
+**(Effect.Why.Effect) Unity vs. Division (υ: ±0.0, ψ: ±0.0): FAIL.** **Quote:** "We must stop being an international embarrassment on climate change and start leading the world." (2021).
 **Brief:** She engages directly with the historical outcome of colonial inferiority, demanding that Australia become a moral-superpower rather than over-compensating with defensive nationalism.
 Her rhetoric recognizes the deep-seated fear of foreign judgment and uses it to demand that Australia improve its behavior to impress the global community.
 This strategy utilizes the "Void" of the Cringe to justify radical integration into international agreements and global responsibilities.
@@ -2717,9 +2974,9 @@ Waters' extreme progressivism is the perfect attack on the deep insecurity encod
 She weaponizes the fear of external validation, urging the nation to confidently engage with the world rather than shut its ears to it.
 This is a failure (to align with the shadow) because she accurately manipulates and attempts to cure the darkest, most insecure emotional outcome of the culture.
 
-## **7.5 The Resulting Methods (Effect.How)**
+## **7.5 How**
 
-**(Effect.How.Who) Royal Commission (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We desperately need a Royal Commission into the Murdoch media to break up their monopoly and protect our democracy." (2020).
+**(Effect.How.Who) The Vote (υ: +0.8, ψ: +0.6): HIT.** **Quote:** "We desperately need a Royal Commission into the Murdoch media to break up their monopoly and protect our democracy." (2020).
 **Brief:** She routinely demands the highest form of state inquiry to target institutions she believes are corrupted by conservative ideology or corporate greed.
 By weaponizing the call for a Royal Commission, she attempts to lend a veneer of forensic credibility to her progressive grievances.
 She uses the "Ritual" of the inquiry to generate sensational media coverage and force the government to act on structural issues.
@@ -2729,7 +2986,7 @@ Waters utilizes the "Inquisitor" mechanism with high will to pursue an agenda of
 She understands that demanding a Commission is the ultimate Australian method for escalating a political conflict.
 This is a hit because she consistently employs the most powerful investigative outcome of the definition for political leverage.
 
-**(Effect.How.What) Social Media Populism (υ: +0.7, ψ: +0.7): HIT.** **Quote:** "We are taking our message directly to the people online, because we know the mainstream media is heavily biased against climate action." (2021).
+**(Effect.How.What) The Royal Commission (υ: +0.7, ψ: +0.7): HIT.** **Quote:** "We are taking our message directly to the people online, because we know the mainstream media is heavily biased against climate action." (2021).
 **Brief:** She flawlessly adapted her progressive brand to the highly reactive, algorithmically driven architecture of modern social media.
 Her narrative thrives in the unmediated, low-friction environment of the internet, where complex environmental science is translated into urgent outrage.
 This strategy bypasses traditional journalistic scrutiny, allowing her to beam fear and progressive demands directly into the phones of her base.
@@ -2739,7 +2996,7 @@ Waters is a master of the "Algorithmic Hack", using the outrage machine to keep 
 She understands that the modern Australian public sphere is largely defined by the angry, scrolling thumb.
 This is a hit because she perfectly executes the most dominant, divisive communication method of the current era for progressive ends.
 
-**(Effect.How.Where) The Protest / Rally (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "The school climate strikes are the most inspiring political movement in this country. I stand with them completely." (2019).
+**(Effect.How.Where) The High Court (υ: +0.8, ψ: +0.5): HIT.** **Quote:** "The school climate strikes are the most inspiring political movement in this country. I stand with them completely." (2019).
 **Brief:** She consistently aligns herself with loud, physical, anti-establishment protests that occupy public space.
 Her rhetoric validates the anger of the street, viewing the rally as the true, unvarnished voice of the "Progressive Australian."
 This strategy leverages the "Eureka Spark", turning raw public disruption into a legitimate, high-energy political tool.
@@ -2749,7 +3006,7 @@ Waters flawlessly aligned her progressive brand with the climate protests, harve
 She understands that the Australian foundation includes a hard limit on state inaction, which must be challenged via mass defiance.
 This is a hit because she accurately weaponizes the historical methodology of the "Rally" against the conservative state.
 
-**(Effect.How.Why) Media Monopoly / Murdoch (υ: -0.2, ψ: +0.4): FAIL.** **Quote:** "The Murdoch press is running a protection racket for the fossil fuel industry. They are a danger to our democracy." (2020).
+**(Effect.How.Why) The Media (υ: -0.2, ψ: +0.4): FAIL.** **Quote:** "The Murdoch press is running a protection racket for the fossil fuel industry. They are a danger to our democracy." (2020).
 **Brief:** Her political survival is inextricably linked to fighting the highly concentrated, conservative media apparatus that dominates the national discourse.
 Her narrative is constantly attacked and delegitimized by the Murdoch press, which uses her progressive views as a target to shift the "Overton Window" to the right.
 This strategy relies on an antagonistic relationship with the "Megaphone", ensuring her progressive base is constantly mobilized against the media.
@@ -2759,7 +3016,7 @@ Waters is the ultimate enemy of this "Structural Flaw", utilizing the unified vo
 She understands that in the Australian system, political reality is largely defined by what the dominant papers choose to print, and she fights it.
 This is a failure because she is perfectly opposed to the most powerful, regressive communication method in the country.
 
-**(Effect.How.How) The Referendum (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We must have a referendum to enshrine a First Nations Voice. It is the only way to guarantee they are heard by the parliament." (2023).
+**(Effect.How.How) The ABS (υ: +0.8, ψ: +0.4): HIT.** **Quote:** "We must have a referendum to enshrine a First Nations Voice. It is the only way to guarantee they are heard by the parliament." (2023).
 **Brief:** She views the direct vote of the people as the ultimate weapon to bypass conservative parliaments and force constitutional evolution.
 She constantly calls for plebiscites on progressive social issues, hoping to overcome the inherent conservatism of the Australian masses.
 This strategy uses the "Veto" instrument of the Constitution as a blunt force tool to force progressive evolution.
@@ -2769,7 +3026,7 @@ Waters utilizes this mechanism not to block, but to attempt to trigger the evolu
 She successfully leveraged the "Veto" power of the ballot in an attempt to alter the national definition.
 This is a hit because she accurately maps her progressive strategy onto the most difficult hurdle in the Australian system.
 
-**(Effect.How.Cause) The Strike (Decline of) (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We must repeal the restrictive industrial relations laws that have stripped workers of their right to strike and organize." (2019).
+**(Effect.How.Cause) The Pub Test (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "We must repeal the restrictive industrial relations laws that have stripped workers of their right to strike and organize." (2019).
 **Brief:** She actively fights against the historical decline of the organized labor movement, cheering on the resurgence of the worker's primary weapon.
 Her policy platform heavily favors expanding the right to collective withdrawal of labor, claiming to represent the "Worker."
 This strategy defends the "Veto" mechanism that secured the Fair Go, siding with unions to ensure economic leverage.
@@ -2779,7 +3036,7 @@ Waters' pro-union stance perfectly attacks this "Decline", attempting to resurre
 She attempts to replace the vulnerable, isolated bargaining power of the individual with the "Solidarity" of the collective.
 This is a failure because she actively attacks the modern, regressive outcome that weakened the Australian working class.
 
-**(Effect.How.Effect) Compulsory Voting (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "Compulsory voting ensures that every voice is heard, which is why we must lower the voting age so young people can vote for their future." (2018).
+**(Effect.How.Effect) The Treasury (υ: +0.6, ψ: +0.5): HIT.** **Quote:** "Compulsory voting ensures that every voice is heard, which is why we must lower the voting age so young people can vote for their future." (2018).
 **Brief:** She brilliantly leverages the mandatory participation of the electorate to harvest the votes of the deeply anxious youth and progressives.
 Her narrative acknowledges that while her base may feel ignored, they are legally compelled to participate in the system.
 This strategy turns the "Transactional Functionary" into a weapon of disruption, utilizing the sheer volume of forced engagement.
@@ -2789,9 +3046,9 @@ Waters expertly navigates the "Effect" of the drive, realizing that she only nee
 She operates the "Centrist" moderation machine in reverse, using the compulsory mass to pull the center toward her progressive extremes.
 This is a hit because she perfectly exploits the ultimate demographic result of the Australian electoral system.
 
-## **7.6 The Resulting Histories (Effect.Cause)**
+## **7.6 Cause**
 
-**(Effect.Cause.Who) The Apology (υ: +0.7, ψ: +0.8): HIT.** **Quote:** "The Apology was historic, but it must be backed by real action: Treaty, Truth-telling, and an end to Black deaths in custody." (2020).
+**(Effect.Cause.Who) The Next Generation (υ: +0.7, ψ: +0.8): HIT.** **Quote:** "The Apology was historic, but it must be backed by real action: Treaty, Truth-telling, and an end to Black deaths in custody." (2020).
 **Brief:** She acted as a prominent political force actively supporting and demanding the state's formal reckoning with its history of child removal.
 Her narrative explicitly embraced the historical event of the Apology, viewing it as a necessary but insufficient step toward justice.
 This strategy sought to accelerate the healing of the foundational wound, ensuring that the "Great Silence" was permanently broken.
@@ -2801,7 +3058,7 @@ Waters’ embrace of this event injected massive progressive energy into the nat
 She honors the historical imperative to mature the state, attacking the comfortable, sanitized myth of the benevolent settler.
 This is a hit because she aggressively champions the most significant moral outcome in the modern Australian timeline.
 
-**(Effect.Cause.What) Australia Day (Jan 26) (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "We cannot celebrate a day that marks the beginning of genocide and dispossession. We must change the date." (2019).
+**(Effect.Cause.What) The Energy Transition (υ: +0.9, ψ: +0.8): FAIL.** **Quote:** "We cannot celebrate a day that marks the beginning of genocide and dispossession. We must change the date." (2019).
 **Brief:** She fiercely attacks the retention of the most divisive date on the national calendar, viewing its celebration as an attack on First Nations history.
 Her rhetoric treats the anniversary of the colonial arrival not as a complex historical reality, but as an uncritical celebration of British violence.
 This strategy intentionally uses the "Date" as a cultural wedge, forcing the electorate to confront the trauma of "Invasion Day."
@@ -2811,7 +3068,7 @@ Waters flawlessly attacks this "Wedge", knowing that attacking the status quo is
 She attacks the "Colonial Baseline", demanding that the modern state sever its psychological tether to the original boats.
 This is a failure because she is the primary political enemy of the unamended 1788 inception as the sole cause of the nation.
 
-**(Effect.Cause.Where) ANZAC Day (Modern) (υ: +0.3, ψ: +0.5): FAIL.** **Quote:** "We must use Anzac Day to reflect on the horrors of war and commit ourselves to peace, rather than glorifying conflict." (2021).
+**(Effect.Cause.Where) Northern Australia (υ: +0.3, ψ: +0.5): FAIL.** **Quote:** "We must use Anzac Day to reflect on the horrors of war and commit ourselves to peace, rather than glorifying conflict." (2021).
 **Brief:** She aggressively attempts to demilitarize the modern observance of the national myth, refusing to use the memory of the fallen to attack domestic opponents.
 By claiming to speak for "Peace", she attempts to strip the unassailable, sacred authority from the military-industrial complex.
 She treats the "Soldier as Saint" not as a xenophobic shield, but as a tragic victim of imperialist ambition.
@@ -2821,7 +3078,7 @@ Waters' high-will (+ψ) dismantling of the "Saint" archetype is her most potent 
 She refuses to map her modern politics onto the untouchable secular religion of the Australian state.
 This is a failure because she actively attempts to break the immense psychological gravity of the Anzac outcome.
 
-**(Effect.Cause.Why) The Tampa / Border Protection (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "The legacy of the Tampa is a shameful stain on our nation. We must end the cruel policy of turning back boats." (2018).
+**(Effect.Cause.Why) The Republic (υ: +0.6, ψ: +0.4): FAIL.** **Quote:** "The legacy of the Tampa is a shameful stain on our nation. We must end the cruel policy of turning back boats." (2018).
 **Brief:** She completely attacks the brutal, defining historical outcome of the 2001 election: the absolute militarization of the maritime border.
 Her narrative views the refusal of rescue and the excision of territory as a horrific, illegal human rights abuse.
 This strategy attacks the "Fortress" methodology, proving that the Australian progressive movement will not reward cruelty.
@@ -2831,7 +3088,7 @@ Waters accurately attacks this "Turning Point", mourning the moment the state pr
 She understands that the Australian foundation includes a terrifying capacity to shut the door, and she attempts to force it open.
 This is a failure because she is a staunch enemy of the most defining, exclusionary policy outcome of the modern era.
 
-**(Effect.Cause.How) Gun Control (Port Arthur) (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Australia's gun laws are world-leading. We must protect the National Firearms Agreement from any attempts to weaken it." (2019).
+**(Effect.Cause.How) Treaty [First Nations Perspective] (υ: +0.9, ψ: +0.8): HIT.** **Quote:** "Australia's gun laws are world-leading. We must protect the National Firearms Agreement from any attempts to weaken it." (2019).
 **Brief:** She historically defends the bipartisan consensus that successfully disarmed the population after the Port Arthur massacre.
 Her political rhetoric supports the universally celebrated legislative outcome, refusing to flirt with the extreme fringe of the gun lobby.
 This strategy ensures that American-style libertarian paranoia is kept out of a system that decisively chose collective safety over individual firepower.
@@ -2841,7 +3098,7 @@ Waters' historical support for the strictness of the National Firearms Agreement
 She understands that the Australian drive vastly prefers the "Safety of the Herd" over the "Freedom of the Gun."
 This is a hit because she actively defends the most triumphant, life-saving policy outcome of the late 20th century.
 
-**(Effect.Cause.Cause) The Mabo Decision (υ: +0.5, ψ: +0.3): HIT.** **Quote:** "The Mabo decision was a historic turning point. We must build on it by enacting a national Treaty." (2020).
+**(Effect.Cause.Cause) Asia (υ: +0.5, ψ: +0.3): HIT.** **Quote:** "The Mabo decision was a historic turning point. We must build on it by enacting a national Treaty." (2020).
 **Brief:** She continuously defends and seeks to massively expand the High Court's outcome that finally corrected the "Terra Nullius" lie.
 Her narrative views the legal recognition of prior Indigenous ownership not as a threat, but as an essential act of justice that must be taken further.
 This strategy attempts to mobilize the entire apparatus of the state to formalize the newly discovered rights of the First Nations.
@@ -2851,7 +3108,7 @@ Waters' fierce defense of the Mabo decision removes massive structural friction 
 She supports the "Method of Truth" by demanding a complete rejection of the comfortable, exclusionary fiction of the "Blank Slate."
 This is a hit because she actively sought to defend and expand the legal outcome designed to correct the foundation's original sin.
 
-**(Effect.Cause.Effect) The Dismissal (Memory of) (υ: +0.7, ψ: +0.5): FAIL.** **Quote:** "The Dismissal remains a warning about the fragility of our democracy and the need to break from the British monarchy." (2021).
+**(Effect.Cause.Effect) The Good Life (υ: +0.7, ψ: +0.5): FAIL.** **Quote:** "The Dismissal remains a warning about the fragility of our democracy and the need to break from the British monarchy." (2021).
 **Brief:** She completely attacks the brutal, top-down constitutional outcome that proved the ultimate power still rests with the Crown.
 Her narrative views the use of extreme reserve powers not as a necessary tool to halt radical change, but as a democratic crisis.
 This strategy attacks the historical trauma of the Dismissal, proving her allegiance to the voters over the "Ghost in the Machine."
@@ -2861,9 +3118,9 @@ Waters accurately attacks the "Correction" outcome, demanding the removal of the
 She understands that the Australian foundation includes a fail-safe designed to crush uncontrolled political evolution, and she wants it destroyed.
 This is a failure because she is a staunch enemy of the most traumatic constitutional outcome in modern Australian history.
 
-## **7.7 The Final Emotional States (Effect.Effect)**
+## **7.7 Effect**
 
-**(Effect.Effect.Who) Mateship (Modern/Inclusive) (υ: +0.9, ψ: +0.3): HIT.** **Quote:** "A modern Australian mateship means ensuring no one is left behind, whether they are a refugee, a single parent, or a struggling worker." (2020).
+**(Effect.Effect.Who) The Fair Go (υ: +0.9, ψ: +0.3): HIT.** **Quote:** "A modern Australian mateship means ensuring no one is left behind, whether they are a refugee, a single parent, or a struggling worker." (2020).
 **Brief:** She weaponizes the ultimate social bond of the nation, demanding that the mechanism of universal solidarity be expanded to all.
 Her rhetoric demands that the "Chain" of Mateship be explicitly reserved for those who need structural support from the state.
 This strategy utilizes the intense horizontal pressure of the group to aggressively support anyone deemed an "Outsider."
@@ -2873,7 +3130,7 @@ Waters' application of Mateship removes moral friction by actively demanding com
 She utilizes the survival mechanism of the bush to demand mutual aid and progressive state intervention.
 This is a hit because she fundamentally respects and expands the highest motivational and emotional outcome in the Australian Kanon.
 
-**(Effect.Effect.What) Complacency / Apathy (υ: +0.6, ψ: +0.3): FAIL.** **Quote:** "We cannot afford to be complacent while our planet burns. The time for polite requests is over." (2019).
+**(Effect.Effect.What) The Lifestyle (υ: +0.6, ψ: +0.3): FAIL.** **Quote:** "We cannot afford to be complacent while our planet burns. The time for polite requests is over." (2019).
 **Brief:** Waters' entire political methodology relies on the total destruction of the nation's traditional, apathetic optimism.
 Her narrative replaces the calming "Buffer" with a continuous, high-voltage siren of impending ecological and economic doom.
 This strategy intentionally removes the shock absorbers of the culture, forcing the electorate into a permanent state of progressive panic.
@@ -2883,7 +3140,7 @@ Waters actively attempts to destroy the "Brake", introducing maximum friction an
 She completely abandons the low-energy resilience of the Australian drive in favor of a hyper-active, fearful mobilization.
 This is a failure because she fundamentally contradicts the essential, complacent coping outcome that allows the society to endure.
 
-**(Effect.Effect.Where) The Fair Go (Realized) (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "The idea of a 'fair go' is broken when billionaires pay zero tax while people sleep in their cars." (2022).
+**(Effect.Effect.Where) Girt By Sea (υ: +0.4, ψ: -0.3): FAIL.** **Quote:** "The idea of a 'fair go' is broken when billionaires pay zero tax while people sleep in their cars." (2022).
 **Brief:** She explicitly denies that the "Fair Go" has been realized, arguing that the ultimate emotional and structural safety net is currently failing the majority.
 Her rhetoric demands that the state actively intervene to correct the massive structural inequality created by the free market.
 This strategy views fairness not as a realized outcome, but as a broken promise that requires massive taxation and regulation to fix.
@@ -2893,7 +3150,7 @@ Waters' demand for a massive expansion of the safety net directly attacks the id
 She replaces the "Social Contract" of complacency with a demand for aggressive wealth redistribution.
 This is a failure (to align with the *realized* outcome) because she fundamentally argues that the highest objective emotional outcome of the Australian state is currently a lie.
 
-**(Effect.Effect.Why) Paranoia / Security Obsession (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "We must stop manufacturing threats to justify massive defense spending. Real security is climate security." (2021).
+**(Effect.Effect.Why) The Second Chance (υ: +0.8, ψ: +0.5): FAIL.** **Quote:** "We must stop manufacturing threats to justify massive defense spending. Real security is climate security." (2021).
 **Brief:** She perfectly attacks the deep, existential terror that plagues an isolated, wealthy Western outpost in the Asian hemisphere.
 Her entire political brand is built on de-escalating the "Fear of the Outside", demanding absolute, uncompromising demilitarization of the borders.
 This strategy treats the outside world as a partner, rejecting the idea of a horde waiting to steal the "Lucky Country's" wealth.
@@ -2903,7 +3160,17 @@ Waters flawlessly attacks this "Dark Emotion", refusing to use the terror of inv
 She understands that the Australian psyche is constantly battling the silence of the map, and she attempts to fill it with diplomacy.
 This is a failure because she accurately recognizes and attempts to destroy the foundational spatial paranoia of the continent.
 
-**(Effect.Effect.How) Solidarity in Crisis (υ: +0.3, ψ: -0.5): HIT.** **Quote:** "The community response to the floods has been incredible. Now the government must step up and match their solidarity." (2022).
+**(Effect.Effect.Why) Dispossession [First Nations Perspective] (υ: -0.8, ψ: -0.7): FAIL.** **Quote:** "We must stop manufacturing threats to justify massive defense spending. Real security is climate security." (2021).
+**Brief:** She perfectly attacks the deep, existential terror that plagues an isolated, wealthy Western outpost in the Asian hemisphere.
+Her entire political brand is built on de-escalating the "Fear of the Outside", demanding absolute, uncompromising demilitarization of the borders.
+This strategy treats the outside world as a partner, rejecting the idea of a horde waiting to steal the "Lucky Country's" wealth.
+She successfully attempts to turn the geographic reality of isolation into a permanent, highly cooperative emotional state of global integration.
+**Justification:** The vector represents the extreme, high-will (+ψ) enforcement of security resulting from deep, exclusionary fear (-υ).
+Waters flawlessly attacks this "Dark Emotion", refusing to use the terror of invasion to drive her demands.
+She understands that the Australian psyche is constantly battling the silence of the map, and she attempts to fill it with diplomacy.
+This is a failure because she accurately recognizes and attempts to destroy the foundational spatial paranoia of the continent.
+
+**(Effect.Effect.How) She'll Be Right (υ: +0.3, ψ: -0.5): HIT.** **Quote:** "The community response to the floods has been incredible. Now the government must step up and match their solidarity." (2022).
 **Brief:** She consistently focuses on and attempts to mobilize the spontaneous, swarming relief of the community during environmental disasters.
 Her narrative treats disaster not just as a failure of policy, but as a trigger for the "Reserve" drive of mutual aid, demanding the state fund that aid.
 This strategy supports the non-hierarchical, apolitical nature of the "Mud Army", demanding the government follow their lead.
@@ -2913,7 +3180,7 @@ Waters’ reliance on community resilience allows her to tap into the highest, m
 She successfully activates the "Emergency Drive", combining the rhetoric of the victim with the action of the volunteer.
 This is a hit because her mechanical trajectory aligns with the profound, communal rescue reflex of the Australian culture.
 
-**(Effect.Effect.Cause) The Extractive Economy (Commodity) (υ: +0.7, ψ: -0.3): FAIL.** **Quote:** "We must break our addiction to coal and gas exports. The mining boom has cost us our environment and our future." (2021).
+**(Effect.Effect.Cause) The Land (υ: +0.7, ψ: -0.3): FAIL.** **Quote:** "We must break our addiction to coal and gas exports. The mining boom has cost us our environment and our future." (2021).
 **Brief:** She attacks the national emotional state anchored in the reliable, but environmentally destructive, cycle of digging wealth out of the ground.
 Her rhetoric treats the "Boom" not as a reward, but as a fatal addiction that requires urgent, painful intervention and innovation to cure.
 This strategy attacks the "Complacency" of the drive, assuring her base that they must change their behavior to survive.
@@ -2923,7 +3190,7 @@ Waters flawlessly attacks the logic of the "Resource Curse", proving that the dr
 She understands that the promise of the next boom is the ultimate emotional sedative, and she tries to wake the electorate up.
 This is a failure because she accurately attacks the historical and ongoing economic reward system of the nation.
 
-**(Effect.Effect.Effect) Sovereign Independence (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "Australia must be a confident, independent nation that leads on climate change, rather than following the US into every conflict." (2020).
+**(Effect.Effect.Effect) Australia (υ: +0.6, ψ: +0.4): HIT.** **Quote:** "Australia must be a confident, independent nation that leads on climate change, rather than following the US into every conflict." (2020).
 **Brief:** She completely embraces the historical outcome that positioned Australia as a highly engaged, confident, and mature independent state.
 Her narrative advocates for a total integration into the international stage, tearing up destructive treaties and abandoning the nation's role as a vassal.
 This strategy attempts to expand the state's emotional influence, preferring the complex responsibility of the "Network" over the paranoid safety of the "Fortress."
@@ -2932,66 +3199,3 @@ By demanding global leadership on climate, she recognizes the geopolitical and e
 Waters' extreme progressivism actively seeks to expand the "Diplomatic Outcome" of the Australian foundation.
 She hits the historical imperative to "Punch Above Our Weight", preferring to lead rather than hide behind the moat of the oceans.
 This is a hit because she attempts to maximize the mature, outward-looking sovereign confidence that defines the completed state.
-
-## **Final Forensic Verdict: Larissa Waters (Plane 7 Half)**
-
-*(Scores will be compiled in the final merge)*
-
-## **Final Forensic Verdict: Larissa Waters (Plane 7)**
-
-**Plane 7 Effect Score:** +0 Net Score (24 HIT, 25 FAIL, 0 MISS)
-**Percentage Australian Alignment:** 48.9%
-**Average Morality (υ):** +0.65 (Systemic Justice)
-**Average Will (ψ):** +0.40 (Proactive Will)
-**Quadrant Placement:** Greater Good / Progressive Overwrite
-
-**Final Statement:** Larissa Waters acts as a **Structural Agent of Disruption** on the Plane of Result. She successfully supports the compassionate, universal institutions that the Commonwealth has produced (Medicare, Superannuation, The ABC, The Apology). However, she violently attacks the materialistic, fearful outcomes of the state (The Aspirational, The Sprawl, The Closed Border, Security Obsession). Her "True Intent" (Restricting the Property Developer, Attacking the Extractive Economy, Denying the Alliance) aggressively attacks the greedy, isolationist results of the colonial project. By prioritizing the ecological survival of the continent over the hoarding of wealth, she ensures the emotional outcome of her politics is a perpetual state of progressive, urgent anxiety rather than complacent apathy.
-
-
-# **In Totality: Larissa Waters**
-
-## **The Bottom Line: How "Australian" is She?**
-
-**Final Alignment Score:** **45.4%** (+3 Net Score out of 343 core vectors)
-
-*   **Hits (Alignments):** 156
-*   **Fails (Violations):** 187
-*   **Misses (Ignored):** 0
-
-According to the strict metrics of the Australian Kanon, Larissa Waters aligns with less than half (**45.4%**) of the nation's core structural, moral, and historical identity.
-
-She is not a comprehensive representation of the traditional Australian character, which historically relies on resource extraction, colonial legacy, and a degree of insular, working-class pragmatism. Instead, she acts as a **Progressive Overwrite**. She flawlessly champions the "Light" vectors of the Kanon—the Fair Go, Egalitarianism, the Custodian, and universal utilities like Medicare. However, she actively, and often violently, attacks the foundational "Shadow" vectors that built the country: the extraction of the Quarry, the defense of the Fortress, the Cultural Cringe, and the colonial origin. Her politics demands a radical evolution of the national identity, replacing the complacent "Battler" with the anxious "Environmentalist."
-
-## **The 7-Plane Breakdown**
-
-Here is exactly where she succeeds in being "Australian," and where she fails the national character:
-
-*   **Plane 1: Identity (Who) — 51.0% Aligned**
-    She aligns with the progressive ideals of Identity (Mateship, Fair Go), but fails the traditional archetypes. She completely rejects the Larrikin "Bricoleur" and the Anzac myth, preferring expert-driven, scientific governance over informal, pub-test common sense.
-*   **Plane 2: Definition (What) — 53.0% Aligned**
-    She knows how to use the constitutional mechanics (The Senate, Compulsory Voting) but attacks the foundational Definition. She rejects the Imperial Act and the Double Majority, viewing them as archaic hurdles preventing necessary environmental and republican evolution.
-*   **Plane 3: The Land (Where) — 33.3% Aligned**
-    *(Her Weakest Area)* She acts as a Geographic Antagonist. She completely rejects the traditional Australian relationship with the physical continent, which is historically defined by extraction and agricultural expansion. By attacking the Miner and the Squatter, she demands the continent be preserved rather than conquered.
-*   **Plane 4: The Drive (Why) — 47.6% Aligned**
-    She successfully weaponizes progressive motivations (Climate Anxiety, The Migrant) but attacks the foundational, selfish drives. By prioritizing the "Fair Go" over the "Profit Motive," she demands a fundamental reprogramming of what motivates the Australian citizen, attacking the deeply rooted property and extraction drives.
-*   **Plane 5: Method (How) — 52.3% Aligned**
-    She is highly proficient in utilizing democratic "Hacks" (The Protest, Preferential Voting) to force change. However, she attacks the dark, corrupt methodologies that historically defined the state (The Developer, The Lobbyist). Her method replaces informal "making do" with rigid scientific regulation.
-*   **Plane 6: Foundation (Cause) — 48.9% Aligned**
-    She actively attacks the traumatic, colonial origins of the state (Terra Nullius, White Australia). She works aggressively to force the nation out of its colonial phase, demanding its rapid maturation into a reconciled republic, destroying the "Great Silence" to elevate deep-time Custodianship.
-*   **Plane 7: Result (Effect) — 48.9% Aligned**
-    She supports the compassionate institutions (Medicare, Superannuation) but violently attacks the materialistic outcomes (The Aspirational, The Sprawl, The Closed Border). She ensures the emotional outcome of her politics is a perpetual state of progressive, urgent anxiety rather than complacent apathy.
-
-## **The Core Strategy: "The Progressive Overwrite"**
-
-The math reveals exactly how Waters operates within a system she fundamentally wishes to change:
-
-**The Stated Ideal vs Actual Reality (Hypocrisy Note):**
-Waters champions the "Grassroots" and the "Outsider," relying on a populist appeal to youth and the marginalized. However, the *actuality* is that she operates primarily within highly educated, urban, upper-middle-class structures, relying on academic consensus and legal frameworks rather than working-class mobilization. A notable structural hypocrisy occurred during the Section 44 dual-citizenship crisis. While she positions her party as the ultimate moral and legal standard-bearers, she was forced to resign due to a failure of basic constitutional compliance, proving that even the "Purifiers" are caught by the rigid, archaic mechanics of the colonial text she so despises.
-
-**The Switch:** She utilizes the unquestionable moral authority of the "Fair Go" and "Mateship" to gain entry, but immediately expands their definitions to justify massive state intervention, environmental regulation, and wealth redistribution. She uses the language of the Kanon to attack the Kanon itself.
-
-## **Final Verdict**
-
-**Quadrant Placement:** Greater Good / Progressive Overwrite *(Average Morality: +0.55, Average Will: +0.33)*
-
-Larissa Waters is the political embodiment of Australia's progressive, environmental anxiety. She does not represent the historical, extractive, colonial "Battler" that built the early Commonwealth. Instead, she is an evolutionary force—a structural disrupter—who weaponizes the nation's egalitarian instincts to force a radical break from its carbon-heavy past. She is **45.4% Australian**: the 45.4% that looks to the future with existential dread, demanding that the nation stop digging and start preserving.
