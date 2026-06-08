@@ -7239,6 +7239,8 @@ This is a massive hit because he accurately targets and attempts to secure the u
 *   **Hits (Structural Alignments):** 250
 *   **Fails (Systemic Violations):** 99
 *   **Misses (Ignored/Suppressed):** 0
+*   **Fake Maximiser Flags:** 1
+*   **Hypocrisy Gap Flags:** 67
 
 According to the strict metrics of the Australian Kanon, Anthony Albanese aligns with a strong majority (**71.6%**) of the nation's core structural, moral, and historical identity.
 
@@ -7267,3 +7269,6 @@ The math reveals exactly how Albanese achieved and maintains power despite suppr
 **Quadrant Placement:** Productive Justice *(Average Morality: +0.70, Average Will: +0.40)*
 
 Anthony Albanese is the political embodiment of Australia's institutional maturity and pragmatic desire for order. He does not represent the romanticized, rebellious "Wild Bushman" or the chaotic "Larrikin" of the frontier. Instead, he is a proactive, highly disciplined manager—a structural optimizer—who weaponizes the nation's bureaucratic machinery and centrist voting system to deliver stability and incremental equity. He is exactly **71.6% Australian**: the 71.6% that wants a quiet weekend, a reliable hospital, and a government that just gets on with the job.
+
+
+*Note: The Follow-Through reality checks throughout this document raised **2 Fake Maximiser flags** and **68 Hypocrisy Gap flags**. These metrics highlight the specific structural vectors where Albanese's stated political ideals collided with the actual capacity and friction of his Prime Ministership.*
