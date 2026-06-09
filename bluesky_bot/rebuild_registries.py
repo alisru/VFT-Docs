@@ -173,7 +173,7 @@ def rebuild_registries():
             "posts":     cfg.get("posts"),
             "created_at": created_at,
         }
-        for k in ["target_url", "rkeys", "post_urls"]:
+        for k in ["target_url", "rkeys", "post_urls", "actors", "category", "event"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 

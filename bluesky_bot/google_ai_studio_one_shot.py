@@ -20,6 +20,9 @@ from aletheia_bot import save_and_sync_story
 # Import rebuild_registries logic
 from rebuild_registries import rebuild_registries
 
+# Deterministic actor extraction for the live pipeline (LLM backfill handles history)
+from actor_extract import extract_actors
+
 # Load environment variables
 bot_env_path = os.path.join(script_dir, ".env")
 load_dotenv(bot_env_path)
@@ -717,7 +720,7 @@ def transpose_flat_to_json(flat_text):
     return evaluations
 
 # --- 4. SAVE TO DARKROOM ---
-def process_evaluations(evaluations):
+def process_evaluations(evaluations, category="general"):
     """Write evaluated story configs to stories/darkroom/ for graph generation and promotion by rebuild_registries."""
     darkroom_dir = os.path.join(script_dir, "stories", "darkroom")
     os.makedirs(darkroom_dir, exist_ok=True)
@@ -730,6 +733,12 @@ def process_evaluations(evaluations):
                 slug = slug.replace(char, '')
             story["id"] = slug
             story["status"] = "COMPLETED DRY RUN"
+
+            # Tag actors (deterministic) and category for audit/trend analysis.
+            if "actors" not in story:
+                story["actors"] = extract_actors(story.get("subject", ""))
+            story.setdefault("category", category)
+            story.setdefault("event", "")
 
             # Post count validation
             posts = story.get("posts", [])
@@ -845,7 +854,7 @@ def main():
             print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s). Skipping.")
 
         if chunk_evals:
-            chunk_success = process_evaluations(chunk_evals)
+            chunk_success = process_evaluations(chunk_evals, category=args.category)
             print(f"  Processed {chunk_success}/{len(chunk_evals)} evaluations from chunk to darkroom.")
             print("  Promoting and generating graphs immediately...")
             rebuild_registries()
