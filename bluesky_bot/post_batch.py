@@ -5,6 +5,7 @@ import time
 import random
 import shutil
 import argparse
+import datetime
 
 # Add bluesky_bot to path if run from root
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -13,6 +14,66 @@ if script_dir not in sys.path:
 
 from aletheia_bot import post_thread, split_text
 from atproto import Client
+
+
+def wait_for_rate_limit(exc: Exception) -> bool:
+    """If exc looks like a Bluesky 429, sleep until the reset time and return True.
+    Returns False if it isn't a rate-limit error (caller should re-raise).
+
+    Bluesky sends:
+        HTTP 429  +  ratelimit-reset: <unix timestamp>
+    The atproto client wraps this as a RequestException whose .response carries
+    status_code and headers.
+    """
+    response = getattr(exc, "response", None)
+    if response is None:
+        # Some wrappers stringify the error — check message text as fallback.
+        msg = str(exc).lower()
+        if "429" not in msg and "rate" not in msg and "ratelimit" not in msg:
+            return False
+        # No header info available; sleep until the top of the next hour.
+        now = datetime.datetime.now()
+        next_hour = (now + datetime.timedelta(hours=1)).replace(minute=0, second=5, microsecond=0)
+        wait = max(0, (next_hour - now).total_seconds())
+        print(f"\n[RATE LIMIT] No reset header found. Sleeping until next hour ({next_hour.strftime('%H:%M:%S')}) — {int(wait)}s.")
+        _sleep_with_countdown(int(wait))
+        return True
+
+    status = getattr(response, "status_code", 0)
+    if status != 429:
+        return False
+
+    headers = getattr(response, "headers", {}) or {}
+    reset_ts = headers.get("ratelimit-reset") or headers.get("x-ratelimit-reset")
+    remaining = headers.get("ratelimit-remaining", "?")
+
+    if reset_ts:
+        try:
+            reset_dt = datetime.datetime.fromtimestamp(int(reset_ts))
+            wait = max(5, (reset_dt - datetime.datetime.now()).total_seconds())
+            print(f"\n[RATE LIMIT] remaining={remaining}  reset={reset_dt.strftime('%H:%M:%S')}  sleeping {int(wait)}s...")
+            _sleep_with_countdown(int(wait))
+            return True
+        except (ValueError, OSError):
+            pass
+
+    # Header present but unparseable — sleep 15 min as safe default.
+    print(f"\n[RATE LIMIT] 429 received but could not parse reset time. Sleeping 15 minutes.")
+    _sleep_with_countdown(900)
+    return True
+
+
+def _sleep_with_countdown(seconds: int):
+    """Sleep with a live countdown so the terminal isn't silent."""
+    try:
+        for remaining in range(seconds, 0, -10):
+            sys.stdout.write(f"\r[RATE LIMIT] Resuming in {remaining}s ...   ")
+            sys.stdout.flush()
+            time.sleep(min(10, remaining))
+        print("\r[RATE LIMIT] Rate limit window passed. Resuming.              ")
+    except KeyboardInterrupt:
+        print("\n[RATE LIMIT] Sleep interrupted by user.")
+        raise
 
 def validate_story_file(path):
     filename = os.path.basename(path)
@@ -131,23 +192,26 @@ def main():
                             data = json.load(f)
                         cfg = data[0] if isinstance(data, list) else data
                         
-                        # Post thread
+                        # Post thread (retry once after rate-limit)
                         success = False
-                        try:
-                            # Enforce 2 second delay between individual posts within the thread
-                            original_sleep = time.sleep
+                        for _attempt in range(2):
                             try:
-                                def custom_sleep(seconds):
-                                    original_sleep(2.0 if seconds == 1 else seconds)
-                                time.sleep = custom_sleep
-                                post_thread(client, cfg, live=args.live)
-                                success = True
-                            finally:
-                                time.sleep = original_sleep
-                        except Exception as e:
-                            print(f"  [POSTING FAIL] Failed to post {filename}: {e}")
-                            seen_files.add(path)
-                            continue
+                                original_sleep = time.sleep
+                                try:
+                                    def custom_sleep(seconds):
+                                        original_sleep(2.0 if seconds == 1 else seconds)
+                                    time.sleep = custom_sleep
+                                    post_thread(client, cfg, live=args.live)
+                                    success = True
+                                finally:
+                                    time.sleep = original_sleep
+                                break
+                            except Exception as e:
+                                if _attempt == 0 and wait_for_rate_limit(e):
+                                    continue  # retry after sleep
+                                print(f"  [POSTING FAIL] Failed to post {filename}: {e}")
+                                seen_files.add(path)
+                                break
                             
                         # Move successfully posted files
                         if success and args.live and args.move_to:
@@ -222,26 +286,31 @@ def main():
                 with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                 cfg = data[0] if isinstance(data, list) else data
-                
+
                 # Skip if already posted live
                 status = cfg.get("status", "")
                 if status and (status.startswith("LIVE") or "LIVE POSTED" in status):
                     print(f"Skipping {filename}: Already posted live (Status: {status})")
                     continue
-                
-                # Enforce 2 second delay between individual posts within the thread
-                original_sleep = time.sleep
-                try:
-                    def custom_sleep(seconds):
-                        original_sleep(2.0 if seconds == 1 else seconds)
-                    time.sleep = custom_sleep
-                    
-                    post_thread(client, cfg, live=args.live)
-                    success = True
-                finally:
-                    # Restore sleep
-                    time.sleep = original_sleep
-                
+
+                # Post thread (retry once after rate-limit)
+                for _attempt in range(2):
+                    try:
+                        original_sleep = time.sleep
+                        try:
+                            def custom_sleep(seconds):
+                                original_sleep(2.0 if seconds == 1 else seconds)
+                            time.sleep = custom_sleep
+                            post_thread(client, cfg, live=args.live)
+                            success = True
+                        finally:
+                            time.sleep = original_sleep
+                        break
+                    except Exception as e:
+                        if _attempt == 0 and wait_for_rate_limit(e):
+                            continue  # retry after sleep
+                        raise  # let outer handler log and move on
+
             except Exception as e:
                 print(f"Failed to process {filename}: {e}")
                 continue
