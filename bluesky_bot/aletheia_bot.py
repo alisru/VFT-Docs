@@ -354,6 +354,37 @@ def post_thread(client, thread_config, live=False):
                         root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
 
                     parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+
+                    # Check local stories for an existing reply to this target before posting.
+                    script_dir_local = os.path.dirname(os.path.abspath(__file__))
+                    already_replied = False
+                    stories_root = os.path.join(script_dir_local, "stories")
+                    scan_dirs = [stories_root] + [
+                        os.path.join(stories_root, d)
+                        for d in (os.listdir(stories_root) if os.path.isdir(stories_root) else [])
+                        if os.path.isdir(os.path.join(stories_root, d))
+                    ]
+                    target_url_norm = target_url.strip().lower()
+                    for scan_dir in scan_dirs:
+                        if already_replied:
+                            break
+                        for fname in os.listdir(scan_dir) if os.path.isdir(scan_dir) else []:
+                            if not fname.endswith(".json"):
+                                continue
+                            try:
+                                with open(os.path.join(scan_dir, fname), "r", encoding="utf-8") as _f:
+                                    _d = json.load(_f)
+                                _cfg = _d[0] if isinstance(_d, list) else _d
+                                if (_cfg.get("target_url") or "").strip().lower() == target_url_norm:
+                                    already_replied = True
+                                    break
+                            except Exception:
+                                continue
+
+                    if already_replied:
+                        print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
+                        raise RuntimeError("ALREADY_REPLIED")
+
                     print("Resolved target reference correctly.")
                     is_reply = True
                 except Exception as e:
