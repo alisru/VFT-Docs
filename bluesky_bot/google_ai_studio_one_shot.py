@@ -384,6 +384,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                     ))
 
                 bsky_feeds = [
+                "https://bsky.app/profile/nickevershed.bsky.social/feed/aaaluca6lksmc",
                     "https://bsky.app/profile/aendra.com/feed/verified-news",
                     "https://bsky.app/profile/aendra.com/feed/news-2-0"
                 ]
