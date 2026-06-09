@@ -957,6 +957,7 @@
         <button class="tab-button active" onclick="switchTab(event, 'emulator-tab')">📱 Thread Emulator</button>
         <button class="tab-button" onclick="switchTab(event, 'map-tab')">🗺️ Interactive Map</button>
         <button class="tab-button" onclick="switchTab(event, 'composer-tab')">⚙️ Controller & Composer</button>
+        <button class="tab-button" onclick="switchTab(event, 'audit-tab'); renderAuditTab()">📊 Audit & Trends</button>
       </div>
 
       <!-- Viewports -->
@@ -1080,6 +1081,13 @@
                 <div><strong>Redemption (BR ➔ BL):</strong> Rescuing elements from the entropic void back into quiet, localized boundary protection.</div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Audit & Trends -->
+        <div id="audit-tab" class="tab-content" style="padding:1.5rem; overflow-y:auto; display:flex; flex-direction:column; gap:1.5rem;">
+          <div id="audit-content" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <div style="color:var(--text-muted); font-size:0.85rem;">Loading audit data…</div>
           </div>
         </div>
 
@@ -1905,6 +1913,167 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         <button onclick="document.getElementById('notificationBanner').remove()" style="background:transparent; border:none; color:inherit; font-size:1.1rem; cursor:pointer; font-weight:700;">×</button>
       `;
     }
+
+    // =====================================================================
+    // AUDIT & TRENDS TAB
+    // =====================================================================
+    let _auditRendered = false;
+
+    function renderAuditTab() {
+      if (_auditRendered) return;
+      _auditRendered = true;
+
+      const stories = STORIES_REGISTRY;
+      const container = document.getElementById('audit-content');
+      if (!stories || stories.length === 0) {
+        container.innerHTML = '<div style="color:var(--text-muted)">No stories loaded.</div>';
+        return;
+      }
+
+      const live = stories.filter(s => (s.status || '').toLowerCase().includes('live'));
+      const passCount = live.filter(s => s.real_u > 0).length;
+      const failCount = live.filter(s => s.real_u <= 0).length;
+      const avgClaimU  = avg(live.map(s => s.claim_u));
+      const avgRealU   = avg(live.map(s => s.real_u));
+      const avgClaimPsi= avg(live.map(s => s.claim_psi));
+      const avgRealPsi = avg(live.map(s => s.real_psi));
+      const avgDeltaU  = avg(live.map(s => s.claim_u - s.real_u));
+      const avgDeltaPsi= avg(live.map(s => s.claim_psi - s.real_psi));
+
+      container.innerHTML = `
+        ${auditSection('Corpus Overview', auditStats([
+          ['Total stories', stories.length],
+          ['Live / posted', live.length],
+          ['PASS (real_u > 0)', passCount + ' (' + pct(passCount, live.length) + ')'],
+          ['FAIL (real_u ≤ 0)', failCount + ' (' + pct(failCount, live.length) + ')'],
+          ['Avg claim (u, ψ)', '(' + fmt(avgClaimU) + ', ' + fmt(avgClaimPsi) + ')'],
+          ['Avg reality (u, ψ)', '(' + fmt(avgRealU) + ', ' + fmt(avgRealPsi) + ')'],
+          ['Avg delta u / ψ', fmt(avgDeltaU) + ' / ' + fmt(avgDeltaPsi)],
+          ['Modes', 'root: ' + live.filter(s=>s.mode==='root').length + '  reply: ' + live.filter(s=>s.mode==='reply').length],
+        ]))}
+
+        ${auditSection('Reality u Score Distribution', auditHistogram(live.map(s => s.real_u), -2, 2, 0.5, 'var(--reality-red)', 'var(--pass-green)'))}
+
+        ${auditSection('Claim → Reality Gap (Δu) Distribution', auditHistogram(live.map(s => s.claim_u - s.real_u), -1, 3, 0.5, 'var(--bsky-blue)', 'var(--claim-yellow)'))}
+
+        ${auditSection('ψ Drift (claim_ψ → real_ψ)', auditHistogram(live.map(s => s.real_psi - s.claim_psi), -2, 2, 0.5, 'var(--claim-yellow)', 'var(--bsky-blue)'))}
+
+        ${auditSection('Domain Breakdown (top sources)', auditDomains(live))}
+
+        ${auditSection('PASS Stories (real_u > 0)', auditStoryList(live.filter(s => s.real_u > 0).sort((a,b) => b.real_u - a.real_u), 'pass'))}
+
+        ${auditSection('Worst Divergence (highest Δu)', auditStoryList(live.slice().sort((a,b) => (b.claim_u - b.real_u) - (a.claim_u - a.real_u)).slice(0,20), 'fail'))}
+      `;
+
+      // Bind click handlers for story links in audit lists
+      container.querySelectorAll('[data-story-id]').forEach(el => {
+        el.addEventListener('click', () => {
+          const id = el.getAttribute('data-story-id');
+          document.querySelector('.tab-button.active') && document.querySelector('.tab-button').click();
+          switchTab({currentTarget: document.querySelector('.tab-button')}, 'emulator-tab');
+          document.querySelectorAll('.tab-button')[0].classList.add('active');
+          selectStory(id);
+        });
+      });
+    }
+
+    function avg(arr) {
+      if (!arr.length) return 0;
+      return arr.reduce((a,b) => a+b, 0) / arr.length;
+    }
+    function fmt(n) { return (n >= 0 ? '+' : '') + n.toFixed(2); }
+    function pct(n, total) { return total ? Math.round(n/total*100) + '%' : '0%'; }
+
+    function auditSection(title, body) {
+      return `<div style="background:var(--panel-bg); border:1px solid var(--panel-border); border-radius:10px; padding:1rem 1.2rem;">
+        <div style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.8rem;">${title}</div>
+        ${body}
+      </div>`;
+    }
+
+    function auditStats(rows) {
+      return `<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:0.5rem;">` +
+        rows.map(([k,v]) => `<div style="display:flex; justify-content:space-between; font-size:0.82rem; padding:0.3rem 0; border-bottom:1px solid var(--panel-border);">
+          <span style="color:var(--text-muted)">${k}</span>
+          <span style="font-weight:600; font-family:var(--font-mono)">${v}</span>
+        </div>`).join('') +
+      `</div>`;
+    }
+
+    function auditHistogram(values, minVal, maxVal, step, colorNeg, colorPos) {
+      const buckets = [];
+      for (let v = minVal; v < maxVal; v += step) {
+        const lo = Math.round(v * 100) / 100;
+        const hi = Math.round((v + step) * 100) / 100;
+        const count = values.filter(x => x >= lo && x < hi).length;
+        buckets.push({ lo, hi, count });
+      }
+      const maxCount = Math.max(...buckets.map(b => b.count), 1);
+      const BAR_H = 80;
+      const BAR_W = Math.max(28, Math.floor(420 / buckets.length));
+      const totalW = BAR_W * buckets.length;
+
+      const bars = buckets.map((b, i) => {
+        const h = Math.round((b.count / maxCount) * BAR_H);
+        const color = b.lo >= 0 ? colorPos : colorNeg;
+        const x = i * BAR_W + 2;
+        const y = BAR_H - h;
+        const label = b.lo.toFixed(1);
+        return `<g>
+          <rect x="${x}" y="${y}" width="${BAR_W - 4}" height="${h}" fill="${color}" opacity="0.7" rx="2"/>
+          ${b.count > 0 ? `<text x="${x + (BAR_W-4)/2}" y="${y - 3}" text-anchor="middle" font-size="9" fill="var(--text-muted)">${b.count}</text>` : ''}
+          <text x="${x + (BAR_W-4)/2}" y="${BAR_H + 12}" text-anchor="middle" font-size="9" fill="var(--text-muted)">${label}</text>
+        </g>`;
+      }).join('');
+
+      return `<svg viewBox="0 0 ${totalW + 4} ${BAR_H + 20}" style="width:100%; max-width:${totalW+4}px; overflow:visible; display:block;">
+        ${bars}
+        <line x1="0" y1="${BAR_H}" x2="${totalW}" y2="${BAR_H}" stroke="var(--panel-border)" stroke-width="1"/>
+      </svg>`;
+    }
+
+    function auditDomains(stories) {
+      const counts = {};
+      stories.forEach(s => {
+        try {
+          const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '');
+          counts[host] = (counts[host] || 0) + 1;
+        } catch(e) {}
+      });
+      const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]).slice(0, 20);
+      const maxC = sorted[0]?.[1] || 1;
+      return `<div style="display:flex; flex-direction:column; gap:0.3rem;">` +
+        sorted.map(([domain, count]) => {
+          const pctW = Math.round(count / maxC * 100);
+          return `<div style="display:flex; align-items:center; gap:0.6rem; font-size:0.8rem;">
+            <span style="min-width:160px; color:var(--text-muted); font-family:var(--font-mono); overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${domain}</span>
+            <div style="flex:1; background:rgba(255,255,255,0.05); border-radius:3px; height:10px; overflow:hidden;">
+              <div style="width:${pctW}%; height:100%; background:var(--bsky-blue); opacity:0.7; border-radius:3px;"></div>
+            </div>
+            <span style="min-width:28px; text-align:right; font-weight:600; font-family:var(--font-mono)">${count}</span>
+          </div>`;
+        }).join('') +
+      `</div>`;
+    }
+
+    function auditStoryList(stories, type) {
+      if (!stories.length) return '<div style="color:var(--text-muted); font-size:0.82rem;">None.</div>';
+      const color = type === 'pass' ? 'var(--pass-green)' : 'var(--reality-red)';
+      return `<div style="display:flex; flex-direction:column; gap:0.3rem;">` +
+        stories.slice(0, 25).map(s => {
+          const delta = s.claim_u - s.real_u;
+          const badge = type === 'pass'
+            ? `real_u ${fmt(s.real_u)}`
+            : `Δu ${fmt(delta)}`;
+          return `<div data-story-id="${s.id}" style="display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; padding:0.3rem 0.5rem; border-radius:5px; cursor:pointer; transition:background 0.15s; border-bottom:1px solid var(--panel-border);"
+            onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">
+            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:75%">${s.subject || s.id}</span>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:${color}; white-space:nowrap; margin-left:0.5rem">${badge}</span>
+          </div>`;
+        }).join('') +
+      `</div>`;
+    }
+
   </script>
 </body>
 </html>
