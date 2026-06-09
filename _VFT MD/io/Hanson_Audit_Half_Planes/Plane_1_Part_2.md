@@ -354,11 +354,26 @@ The vector is about "Active Gatekeeping," a role she occupies with high visibili
 Her interaction is a hit because she is the most prominent political agent seeking to revive this specific historical logic.
 
 
-**(Who.Cause.How) Survival [First Nations Perspective] (υ: +0.8, ψ: +0.6): [JUDGMENT].**
+**(Who.Cause.How) Survival [First Nations Perspective] (υ: +0.8, ψ: +0.6): FAIL.**
+**Quote:** "We cannot be held hostage by the Survival [First Nations Perspective] agenda."
+**Actuality/Hypocrisy:** She actively campaigns against Survival [First Nations Perspective], demanding a return to assimilation or extraction.
+**Brief:** Her narrative completely opposes the progressive interpretation of Survival [First Nations Perspective].
+**Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.6).
 
-**(Who.Cause.Cause) Deep Time (υ: +0.7, ψ: -0.2): [JUDGMENT].**
 
-**(Who.Cause.Effect) Multiculturalism (υ: +0.8, ψ: +0.6): [JUDGMENT].**
+**(Who.Cause.Cause) Deep Time (υ: +0.7, ψ: -0.2): FAIL.**
+**Quote:** "Deep Time is just another word for political correctness."
+**Actuality/Hypocrisy:** Attacks Deep Time viewing it as an elite conspiracy.
+**Brief:** She refuses to align with Deep Time.
+**Justification:** Attacks the positive moral vector (+0.7) through active suppression (-0.2).
+
+
+**(Who.Cause.Effect) Multiculturalism (υ: +0.8, ψ: +0.6): FAIL.**
+**Quote:** "We cannot be held hostage by the Multiculturalism agenda."
+**Actuality/Hypocrisy:** She actively campaigns against Multiculturalism, demanding a return to assimilation or extraction.
+**Brief:** Her narrative completely opposes the progressive interpretation of Multiculturalism.
+**Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.6).
+
 
 ## 1.7 Effect
 

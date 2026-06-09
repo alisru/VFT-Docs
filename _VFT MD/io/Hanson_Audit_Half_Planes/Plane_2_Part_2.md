@@ -506,6 +506,15 @@ She successfully operates the "Foundation" of silence to protect her base from t
 This is a hit because she actively and forcefully maintains the "Greatest Lie" at the heart of the national effect.
 
 
-**(What.Effect.Cause) Voice [First Nations Perspective] (υ: +0.9, ψ: +0.6): [JUDGMENT].**
+**(What.Effect.Cause) Voice [First Nations Perspective] (υ: +0.9, ψ: +0.6): FAIL.**
+**Quote:** "We cannot be held hostage by the Voice [First Nations Perspective] agenda."
+**Actuality/Hypocrisy:** She actively campaigns against Voice [First Nations Perspective], demanding a return to assimilation or extraction.
+**Brief:** Her narrative completely opposes the progressive interpretation of Voice [First Nations Perspective].
+**Justification:** Actively fights the moral requirement (+0.9) by applying suppressive energy (+0.6).
 
-**(What.Effect.Effect) The Nanny State (υ: +0.4, ψ: -0.5): [JUDGMENT].**
+
+**(What.Effect.Effect) The Nanny State (υ: +0.4, ψ: -0.5): FAIL.**
+**Quote:** "The Nanny State is just another word for political correctness."
+**Actuality/Hypocrisy:** Attacks The Nanny State viewing it as an elite conspiracy.
+**Brief:** She refuses to align with The Nanny State.
+**Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.5).

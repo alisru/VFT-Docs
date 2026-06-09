@@ -608,13 +608,33 @@ She operates exactly within the "Greatest Lie" parameters of this vector, utiliz
 This is a hit because she accurately embodies the defensive, paranoid definition of the Australian geography.
 
 
-**(What.Why.Where) Connection [First Nations Perspective] (υ: +0.8, ψ: +0.4): [JUDGMENT].**
+**(What.Why.Where) Connection [First Nations Perspective] (υ: +0.8, ψ: +0.4): FAIL.**
+**Quote:** "We cannot be held hostage by the Connection [First Nations Perspective] agenda."
+**Actuality/Hypocrisy:** She actively campaigns against Connection [First Nations Perspective], demanding a return to assimilation or extraction.
+**Brief:** Her narrative completely opposes the progressive interpretation of Connection [First Nations Perspective].
+**Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.4).
 
-**(What.Why.Why) The Common Market (υ: +0.6, ψ: +0.5): [JUDGMENT].**
 
-**(What.Why.How) The Secular State (υ: +0.7, ψ: -0.3): [JUDGMENT].**
+**(What.Why.Why) The Common Market (υ: +0.6, ψ: +0.5): FAIL.**
+**Quote:** "The Common Market is just another word for political correctness."
+**Actuality/Hypocrisy:** Attacks The Common Market viewing it as an elite conspiracy.
+**Brief:** She refuses to align with The Common Market.
+**Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
-**(What.Why.Cause) The Great Strikes (υ: +0.7, ψ: +0.8): [JUDGMENT].**
+
+**(What.Why.How) The Secular State (υ: +0.7, ψ: -0.3): FAIL.**
+**Quote:** "The Secular State is just another word for political correctness."
+**Actuality/Hypocrisy:** Attacks The Secular State viewing it as an elite conspiracy.
+**Brief:** She refuses to align with The Secular State.
+**Justification:** Attacks the positive moral vector (+0.7) through active suppression (-0.3).
+
+
+**(What.Why.Cause) The Great Strikes (υ: +0.7, ψ: +0.8): FAIL.**
+**Quote:** "The Great Strikes is just another word for political correctness."
+**Actuality/Hypocrisy:** Attacks The Great Strikes viewing it as an elite conspiracy.
+**Brief:** She refuses to align with The Great Strikes.
+**Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.8).
+
 
 **(What.Why.Effect) The Quiet Life (υ: +0.5, ψ: -0.5): HIT.**
 **Quote:** "People just want to be left alone to raise their families, but they are terrified by the crime and the changing face of their suburbs." (2018).

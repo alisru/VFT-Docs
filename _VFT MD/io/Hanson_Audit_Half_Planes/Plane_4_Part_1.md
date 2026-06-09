@@ -406,7 +406,12 @@ She perfectly understands that the Australian drive orientates outward toward th
 This is a hit because she accurately channels the intense cultural possessiveness surrounding the nation's coastal identity.
 
 
-**(Why.Where.Where) Country [FN] (υ: +0.9, ψ: +0.5): [JUDGMENT].**
+**(Why.Where.Where) Country [FN] (υ: +0.9, ψ: +0.5): FAIL.**
+**Quote:** "Country [FN] is just another word for political correctness."
+**Actuality/Hypocrisy:** Attacks Country [FN] viewing it as an elite conspiracy.
+**Brief:** She refuses to align with Country [FN].
+**Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.5).
+
 
 **(Why.Where.Why) The Club (υ: +0.4, ψ: -0.2): HIT.**
 **Quote:** "The RSLs and the local sports clubs are the heart of our communities, and they are being taxed out of existence." (2019).
