@@ -355,24 +355,34 @@ def post_thread(client, thread_config, live=False):
 
                     parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
 
-                    # Check thread for an existing reply from this bot before posting.
-                    bot_handle = os.environ.get('BSKY_HANDLE', 'judgement-bot.bsky.social').lower()
+                    # Check local stories for an existing reply to this target before posting.
+                    script_dir_local = os.path.dirname(os.path.abspath(__file__))
                     already_replied = False
-                    try:
-                        thread_resp = client.app.bsky.feed.get_post_thread(
-                            params={'uri': target_uri, 'depth': 1, 'parentHeight': 0}
-                        )
-                        replies = getattr(getattr(thread_resp, 'thread', None), 'replies', None) or []
-                        for r in replies:
-                            r_post = getattr(r, 'post', None)
-                            if r_post and getattr(getattr(r_post, 'author', None), 'handle', '').lower() == bot_handle:
-                                already_replied = True
-                                break
-                    except Exception as thread_e:
-                        print(f"Warning: Could not check existing replies ({thread_e}). Proceeding anyway.")
+                    stories_root = os.path.join(script_dir_local, "stories")
+                    scan_dirs = [stories_root] + [
+                        os.path.join(stories_root, d)
+                        for d in (os.listdir(stories_root) if os.path.isdir(stories_root) else [])
+                        if os.path.isdir(os.path.join(stories_root, d))
+                    ]
+                    target_url_norm = target_url.strip().lower()
+                    for scan_dir in scan_dirs:
+                        if already_replied:
+                            break
+                        for fname in os.listdir(scan_dir) if os.path.isdir(scan_dir) else []:
+                            if not fname.endswith(".json"):
+                                continue
+                            try:
+                                with open(os.path.join(scan_dir, fname), "r", encoding="utf-8") as _f:
+                                    _d = json.load(_f)
+                                _cfg = _d[0] if isinstance(_d, list) else _d
+                                if (_cfg.get("target_url") or "").strip().lower() == target_url_norm:
+                                    already_replied = True
+                                    break
+                            except Exception:
+                                continue
 
                     if already_replied:
-                        print(f"SKIP: Bot has already replied to this post ({target_url}). Skipping.")
+                        print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
                         raise RuntimeError("ALREADY_REPLIED")
 
                     print("Resolved target reference correctly.")
