@@ -354,6 +354,27 @@ def post_thread(client, thread_config, live=False):
                         root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
 
                     parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+
+                    # Check thread for an existing reply from this bot before posting.
+                    bot_handle = os.environ.get('BSKY_HANDLE', 'judgement-bot.bsky.social').lower()
+                    already_replied = False
+                    try:
+                        thread_resp = client.app.bsky.feed.get_post_thread(
+                            params={'uri': target_uri, 'depth': 1, 'parentHeight': 0}
+                        )
+                        replies = getattr(getattr(thread_resp, 'thread', None), 'replies', None) or []
+                        for r in replies:
+                            r_post = getattr(r, 'post', None)
+                            if r_post and getattr(getattr(r_post, 'author', None), 'handle', '').lower() == bot_handle:
+                                already_replied = True
+                                break
+                    except Exception as thread_e:
+                        print(f"Warning: Could not check existing replies ({thread_e}). Proceeding anyway.")
+
+                    if already_replied:
+                        print(f"SKIP: Bot has already replied to this post ({target_url}). Skipping.")
+                        raise RuntimeError("ALREADY_REPLIED")
+
                     print("Resolved target reference correctly.")
                     is_reply = True
                 except Exception as e:
