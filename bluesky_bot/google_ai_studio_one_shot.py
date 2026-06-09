@@ -262,40 +262,46 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
 def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, category="general", topic=None, banned_topic=None):
     candidates = []
     
-    # Map category to RSS feeds
-    rss_feeds = []
-    if category == "tech":
-        rss_feeds = [
+    # Resolve category string (may be CSV) to a deduplicated list
+    _CATEGORY_FEEDS = {
+        "tech": [
             {"name": "BBC Tech", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml"},
-            {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"}
-        ]
-    elif category == "business":
-        rss_feeds = [
+            {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"},
+        ],
+        "business": [
             {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml"},
-            {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"}
-        ]
-    elif category == "politics":
-        rss_feeds = [
+            {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"},
+        ],
+        "politics": [
             {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
-            {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"}
-        ]
-    elif category == "science":
-        rss_feeds = [
+            {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"},
+        ],
+        "science": [
             {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"},
-            {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"}
-        ]
-    elif category == "world":
-        rss_feeds = [
+            {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"},
+        ],
+        "world": [
             {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
-            {"name": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"}
-        ]
-    else: # general
-        rss_feeds = [
+            {"name": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"},
+        ],
+        "general": [
             {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
-            {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"}
-        ]
+            {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"},
+        ],
+    }
 
-    print(f"Harvest category selected: {category.upper()}")
+    categories = [c.strip().lower() for c in (category or "general").split(",") if c.strip()]
+    if not categories:
+        categories = ["general"]
+    seen_feed_urls: set = set()
+    rss_feeds = []
+    for cat in categories:
+        for feed in _CATEGORY_FEEDS.get(cat, _CATEGORY_FEEDS["general"]):
+            if feed["url"] not in seen_feed_urls:
+                seen_feed_urls.add(feed["url"])
+                rss_feeds.append(feed)
+
+    print(f"Harvest category selected: {', '.join(c.upper() for c in categories)}")
     keywords = [k.strip().lower() for k in topic.split(",") if k.strip()] if topic else []
     if keywords:
         print(f"Applying topic filters (OR match): {keywords}")
@@ -737,7 +743,9 @@ def process_evaluations(evaluations, category="general"):
             # Tag actors (deterministic) and category for audit/trend analysis.
             if "actors" not in story:
                 story["actors"] = extract_actors(story.get("subject", ""))
-            story.setdefault("category", category)
+            # Normalise category: store as a comma-joined string so it's JSON-friendly
+            cats = [c.strip().lower() for c in (category or "general").split(",") if c.strip()] if isinstance(category, str) else (category or ["general"])
+            story.setdefault("category", ",".join(cats) if len(cats) > 1 else (cats[0] if cats else "general"))
             story.setdefault("event", "")
 
             # Post count validation
@@ -770,7 +778,7 @@ def main():
     parser.add_argument("--bsky", type=int, default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
     parser.add_argument("--chunk-size", type=int, default=3, help="Number of stories to process per API call (default: 3)")
-    parser.add_argument("--category", type=str, default="general", choices=["general", "tech", "business", "politics", "science", "world"], help="Category of news to harvest (default: general)")
+    parser.add_argument("--category", type=str, default="general", help="Category (or comma-separated categories) of news to harvest (default: general). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
     parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
     args = parser.parse_args()
