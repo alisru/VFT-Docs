@@ -229,6 +229,10 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
 
             if len(text) < 45 or text.startswith('@') or text.startswith('Alethekanon'):
                 continue
+            # Only target ROOT posts. searchPosts returns replies too; replying to
+            # someone's reply buried in a thread is not what we want — skip them.
+            if getattr(post.record, 'reply', None) is not None:
+                continue
             if banned_keywords and any(bk in text.lower() for bk in banned_keywords):
                 continue
 
@@ -420,6 +424,9 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                         post_url = f"https://bsky.app/profile/{author_handle}/post/{rkey}"
                         
                         if len(text) < 45 or text.startswith('@') or text.startswith('Alethekanon'):
+                            continue
+                        # Only target root posts — never reply to a reply buried in a thread.
+                        if getattr(item.post.record, 'reply', None) is not None:
                             continue
                         if "PINNED POST" in text or "News feeds" in text or "Every feed I run" in text:
                             continue
