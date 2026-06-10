@@ -2064,14 +2064,22 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
 
     function auditDomains(stories) {
       const counts = {};
+      let parsed = 0;
       stories.forEach(s => {
         try {
           const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '');
           counts[host] = (counts[host] || 0) + 1;
+          parsed++;
         } catch(e) {}
       });
-      const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]).slice(0, 20);
+      const all = Object.entries(counts).sort((a,b) => b[1]-a[1]);
+      const TOP = 40;
+      const sorted = all.slice(0, TOP);
+      const tail = all.slice(TOP);
+      const tailStories = tail.reduce((a,[,c]) => a+c, 0);
       const maxC = sorted[0]?.[1] || 1;
+      const footer = `<div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.5rem;">
+        ${all.length} distinct outlets across ${parsed} stories.${tail.length ? ' Showing top ' + TOP + '; +' + tail.length + ' smaller outlets (' + tailStories + ' stories) not listed.' : ''}</div>`;
       return `<div style="display:flex; flex-direction:column; gap:0.3rem;">` +
         sorted.map(([domain, count]) => {
           const pctW = Math.round(count / maxC * 100);
@@ -2083,7 +2091,7 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
             <span style="min-width:28px; text-align:right; font-weight:600; font-family:var(--font-mono)">${count}</span>
           </div>`;
         }).join('') +
-      `</div>`;
+      `</div>` + footer;
     }
 
     // --- Timestamp decoding: bsky rkeys are TIDs encoding microseconds since epoch ---
@@ -2225,16 +2233,19 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       });
     }
 
-    function _hypocrisyTable(rows, labelHead, minN) {
+    function _hypocrisyTable(rows, labelHead, minN, maxRows) {
+      maxRows = maxRows || 60;
       const filtered = rows.filter(r => r.n >= minN).sort((a,b) => b.avgDelta - a.avgDelta);
+      const belowThreshold = rows.length - filtered.length;
       if (!filtered.length) return '<div style="color:var(--text-muted); font-size:0.82rem;">No entries with enough stories yet.</div>';
-      const maxAbs = Math.max(...filtered.map(r => Math.abs(r.avgDelta)), 0.01);
+      const shown = filtered.slice(0, maxRows);
+      const hidden = filtered.length - shown.length;
       return `<div style="display:grid; grid-template-columns:1fr auto auto auto; gap:0.2rem 0.8rem; font-size:0.78rem; align-items:center;">
         <span style="color:var(--text-muted); font-weight:600;">${labelHead}</span>
         <span style="color:var(--text-muted); text-align:right;">n</span>
         <span style="color:var(--text-muted); text-align:right;">avg Δu</span>
         <span style="color:var(--text-muted); text-align:right;">σ (consistency)</span>
-        ${filtered.slice(0, 30).map(r => {
+        ${shown.map(r => {
           const color = r.avgDelta >= 0 ? 'var(--reality-red)' : 'var(--pass-green)';
           return `<span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${r.key}</span>
             <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
@@ -2242,7 +2253,9 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
             <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>`;
         }).join('')}
       </div>
-      <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.5rem;">High avg Δu = systematically overclaims. Low σ = <em>reliably</em> hypocritical (consistent gap); high σ = erratic.</div>`;
+      <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.5rem;">
+        ${filtered.length} entries with ≥${minN} stories${hidden ? ' (showing top ' + maxRows + ', +' + hidden + ' more)' : ''}${belowThreshold ? '; ' + belowThreshold + ' one-off entries below threshold not shown' : ''}.<br>
+        High avg Δu = systematically overclaims. Low σ = <em>reliably</em> hypocritical (consistent gap); high σ = erratic.</div>`;
     }
 
     function auditActorLeaderboard(stories) {
@@ -2257,7 +2270,7 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         try { return [new URL(s.link || 'https://unknown').hostname.replace(/^www\./,'')]; }
         catch(e){ return []; }
       });
-      return _hypocrisyTable(rows, 'Source Outlet', 3);
+      return _hypocrisyTable(rows, 'Source Outlet', 2);
     }
 
     function auditStoryList(stories, type) {
