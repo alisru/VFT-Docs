@@ -1918,6 +1918,13 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
     // AUDIT & TRENDS TAB
     // =====================================================================
     let _auditRendered = false;
+    let _auditScope = 'all';   // 'all' = whole corpus, 'live' = posted only
+
+    function setAuditScope(scope) {
+      _auditScope = scope;
+      _auditRendered = false;
+      renderAuditTab();
+    }
 
     function renderAuditTab() {
       if (_auditRendered) return;
@@ -1930,7 +1937,19 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         return;
       }
 
-      const live = stories.filter(s => (s.status || '').toLowerCase().includes('live'));
+      // Scope: by default analyze the WHOLE corpus (dry-run evaluations are valid
+      // judgements too). Toggle to 'live' to restrict to posted threads only.
+      const liveOnly = stories.filter(s => (s.status || '').toLowerCase().includes('live'));
+      const live = _auditScope === 'live' ? liveOnly : stories;
+      const scopeLabel = _auditScope === 'live' ? 'Live posted only' : 'All stories';
+
+      const scopeToggle = `
+        <div style="display:flex; gap:0.4rem; align-items:center; margin-bottom:0.4rem;">
+          <span style="font-size:0.75rem; color:var(--text-muted);">Scope:</span>
+          <button onclick="setAuditScope('all')" class="filter-pill ${_auditScope==='all'?'active':''}">All (${stories.length})</button>
+          <button onclick="setAuditScope('live')" class="filter-pill ${_auditScope==='live'?'active':''}">🦋 Live (${liveOnly.length})</button>
+        </div>`;
+
       const passCount = live.filter(s => s.real_u > 0).length;
       const failCount = live.filter(s => s.real_u <= 0).length;
       const avgClaimU  = avg(live.map(s => s.claim_u));
@@ -1940,10 +1959,11 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       const avgDeltaU  = avg(live.map(s => s.claim_u - s.real_u));
       const avgDeltaPsi= avg(live.map(s => s.claim_psi - s.real_psi));
 
-      container.innerHTML = `
+      container.innerHTML = scopeToggle + `
         ${auditSection('Corpus Overview', auditStats([
-          ['Total stories', stories.length],
-          ['Live / posted', live.length],
+          ['Scope', scopeLabel],
+          ['Stories in scope', live.length],
+          ['Live / posted (total)', liveOnly.length],
           ['PASS (real_u > 0)', passCount + ' (' + pct(passCount, live.length) + ')'],
           ['FAIL (real_u ≤ 0)', failCount + ' (' + pct(failCount, live.length) + ')'],
           ['Avg claim (u, ψ)', '(' + fmt(avgClaimU) + ', ' + fmt(avgClaimPsi) + ')'],
