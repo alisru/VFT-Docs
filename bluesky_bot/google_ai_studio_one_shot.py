@@ -445,39 +445,12 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                             if any(bk in text.lower() for bk in banned_keywords):
                                 continue
                                 
-                        # Check for valid embeds (non-bsky external link, quote post, or video)
-                        embed_view = getattr(item.post, 'embed', None)
-                        record_embed = getattr(item.post.record, 'embed', None) if getattr(item.post, 'record', None) else None
-                        
-                        has_quote = False
-                        if embed_view:
-                            if hasattr(embed_view, 'record'):
-                                has_quote = True
-                        if record_embed:
-                            if record_embed.py_type in ['app.bsky.embed.record', 'app.bsky.embed.recordWithMedia']:
-                                has_quote = True
-                                
-                        has_video = False
-                        if embed_view:
-                            if hasattr(embed_view, 'video') or 'video' in getattr(embed_view, 'py_type', '').lower():
-                                has_video = True
-                        if record_embed:
-                            if 'video' in getattr(record_embed, 'py_type', '').lower():
-                                has_video = True
-                            elif record_embed.py_type == 'app.bsky.embed.recordWithMedia' and hasattr(record_embed, 'media'):
-                                if 'video' in getattr(record_embed.media, 'py_type', '').lower():
-                                    has_video = True
-
-                        ext_url = extract_external_link(item.post)
-                        has_external = False
-                        if ext_url:
-                            if not any(d in ext_url for d in ['bsky.app', 'bsky.social']):
-                                has_external = True
-                                
-                        if not (has_external or has_quote or has_video):
+                        # HARD RULE: only target posts that link to a real NEWS URL.
+                        # No quote-only posts, no video posts, no bsky/social/junk links.
+                        article_url = extract_external_link(item.post)
+                        if not is_news_url(article_url):
                             continue
-                                
-                        article_url = extract_external_link(item.post) or post_url
+
                         normalized = normalize_url(article_url)
                         
                         if normalized in seen_urls:
