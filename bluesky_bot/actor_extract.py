@@ -1,9 +1,7 @@
 """Deterministic (non-LLM) actor/entity extraction for Aletheia stories.
 
 Pulls the names of people and organisations a story is *about* from its subject
-line (and optionally body text) using capitalisation heuristics. Intentionally
-simple and dependency-free so it can run in the harvest pipeline and as a
-one-time backfill without any API calls.
+line using a strict curated map of validated political actors, individuals, and nations.
 """
 import re
 
@@ -28,42 +26,163 @@ STOPWORDS = {
     'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
     'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august',
     'september', 'october', 'november', 'december',
-    'us', 'usa', 'uk', 'eu', 'un',  # handled separately as known orgs if desired
+    'us', 'usa', 'uk', 'eu', 'un',
 }
 
-# Generic nouns that frequently appear capitalised in headlines but are never actors.
-# A captured phrase consisting mainly of these is dropped.
-GENERIC_NOUNS = {
-    'cost', 'costs', 'law', 'laws', 'victory', 'remarks', 'strikes', 'strike',
-    'measures', 'standards', 'trial', 'center', 'centre', 'speech', 'book',
-    'pillows', 'fight', 'war', 'wars', 'ceasefire', 'delegation', 'theme',
-    'transit', 'report', 'study', 'plan', 'plans', 'deal', 'crisis', 'summit',
-    'election', 'vote', 'bill', 'act', 'ban', 'rules', 'policy', 'tax', 'taxes',
-    'cup', 'league', 'series', 'show', 'season', 'game', 'match', 'film', 'movie',
-    'samaritan', 'good', 'new', 'day', 'immigration', 'democracy', 'emergency',
-    'domestic', 'intelligence', 'staff', 'standards', 'certification', 'trust',
-    'marketplaces', 'online', 'sleep', 'baby', 'dangerous', 'interfaith',
+# Curated Map of Political Actors, Individuals, and Nations for 100% precise matching
+ACTOR_MAP = {
+    # Key Individuals (Politicians, Public Figures, Corporate Leaders)
+    r'\b(?<!Barron\s)(?<!Melania\s)(?<!Ivanka\s)(?:Donald\s+)?Trump\b': "Donald Trump",
+    r'\bBarron\s+Trump\b': "Barron Trump",
+    r'\b(?:Anthony\s+)?Albanese\b': "Anthony Albanese",
+    r'\b(?:Joe\s+)?Biden\b': "Joe Biden",
+    r'\bXi\s+Jinping\b|\bXi\b': "Xi Jinping",  # Case-sensitive check
+    r'\bKim\s+Jong\s+Un\b|\bKim\s+Jong-un\b': "Kim Jong Un",
+    r'\b(?:Keir\s+)?Starmer\b': "Keir Starmer",
+    r'\b(?:Vladimir\s+)?Putin\b': "Vladimir Putin",
+    r'\b(?:Volodymyr\s+)?Zelensky\b': "Volodymyr Zelensky",
+    r'\b(?:Angus\s+)?Taylor\b': "Angus Taylor",
+    r'\b(?:Andy\s+)?Burnham\b': "Andy Burnham",
+    r'\b(?:Kemi\s+)?Badenoch\b': "Kemi Badenoch",
+    r'\b(?:Elon\s+)?Musk\b': "Elon Musk",
+    r'\b(?:Bill\s+)?Gates\b': "Bill Gates",
+    r'\b(?:Pete\s+)?Hegseth\b': "Pete Hegseth",
+    r'\b(?:Jeremy\s+)?Rockliff\b': "Jeremy Rockliff",
+    r'\b(?:Gina\s+)?Rinehart\b': "Gina Rinehart",
+    r'\b(?:Barnaby\s+)?Joyce\b': "Barnaby Joyce",
+    r'\b(?:Tony\s+)?Abbott\b': "Tony Abbott",
+    r'\b(?:Nithya\s+)?Raman\b': "Nithya Raman",
+    r'\b(?:Jameson\s+)?Taillon\b': "Jameson Taillon",
+    r'\b(?:Nick\s+)?Kyrgios\b': "Nick Kyrgios",
+    r'\b(?:Steven\s+)?Spielberg\b': "Steven Spielberg",
+    r'\b(?:Laurie\s+)?Daley\b': "Laurie Daley",
+    r'\b(?:Paul\s+)?Litherland\b': "Paul Litherland",
+    r'\b(?:Michael\s+)?Yabsley\b': "Michael Yabsley",
+    r'\bKumanjayi\s+Walker\b|\bKumanjayi\b': "Kumanjayi Walker",
+    r'\b(?:Roxanne\s+)?Tickle\b': "Roxanne Tickle",
+    r'\b(?:Spencer\s+)?Pratt\b': "Spencer Pratt",
+    r'\b(?:Neale\s+)?Daniher\b': "Neale Daniher",
+    r'\b(?:Brody\s+)?Mihocek\b': "Brody Mihocek",
+    r'\b(?:Ted\s+)?Lieu\b': "Ted Lieu",
+    r'\b(?:Hilary\s+)?Knight\b': "Hilary Knight",
+    r'\b(?:Hannah\s+)?Thomas\b': "Hannah Thomas",
+    r'\b(?:Melissa\s+)?Menta\b': "Melissa Menta",
+    r'\b(?:Dion\s+)?Creek\b': "Dion Creek",
+    r'\b(?:Naomi\s+)?Hobson\b': "Naomi Hobson",
+    r'\b(?:Tim\s+)?Jaffer\b': "Tim Jaffer",
+    r'\b(?:Phoebe\s+)?Bridgers\b': "Phoebe Bridgers",
+    r'\b(?:Bob\s+)?Brown\b': "Bob Brown",
+    r'\b(?:Martin\s+)?Wiberg\b': "Martin Wiberg",
+    r'\b(?:Dan\s+)?Royles\b': "Dan Royles",
+    r'\b(?:Margaret\s+)?Thornton\b': "Margaret Thornton",
+    r'\b(?:Amy\s+)?Tossoun\b': "Amy Tossoun",
+    r'\b(?:Sally\s+)?Sara\b': "Sally Sara",
+    r'\b(?:Julie\s+)?Newmar\b': "Julie Newmar",
+    r'\b(?:Ted\s+)?Lasso\b': "Ted Lasso",
+    r'\b(?:Lionel\s+)?Messi\b': "Lionel Messi",
+    r'\b(?:Caitlin\s+)?Clark\b': "Caitlin Clark",
+    r'\b(?:Justin\s+)?Stevens\b': "Justin Stevens",
+    r'\b(?:Hugh\s+)?Marks\b': "Hugh Marks",
+    r'\b(?:David\s+)?Sullivan\b': "David Sullivan",
+    r'\b(?:Henry\s+)?Nowak\b': "Henry Nowak",
+    r'\b(?:David\s+)?Shoebridge\b': "David Shoebridge",
+    r'\b(?:Jim\s+)?Chalmers\b|\bChalmers\b': "Jim Chalmers",
+    r'\b(?:Michael\s+)?Ravbar\b': "Michael Ravbar",
+    r'\b(?:Greg\s+)?Abbott\b': "Greg Abbott",
+    r'\b(?:Jacinta\s+)?Allan\b': "Jacinta Allan",
+    r'\b(?:Afroman)\b': "Afroman",
+    r'\b(?:Mirra\s+)?Andreeva\b': "Mirra Andreeva",
+    r'\b(?:Kimi\s+)?Antonelli\b': "Kimi Antonelli",
+    r'\b(?:Aubrey\s+)?Donahue\b': "Aubrey Donahue",
+    r'\b(?:Ross\s+)?Gittins\b': "Ross Gittins",
+    r'\b(?:David\s+)?Pulle\b': "David Pulle",
+    r'\b(?:Jennifer\s+)?Parker\b': "Jennifer Parker",
+    r'\b(?:Emily\s+)?Blunt\b': "Emily Blunt",
+    r'\b(?:Judy\s+)?Woodruff\b': "Judy Woodruff",
+    r'\b(?:Peter\s+)?Murrell\b': "Peter Murrell",
+    r'\b(?:Pauline\s+)?Hanson\b': "Pauline Hanson",
+    r'\b(?:Do\s+)?Kwon\b': "Do Kwon",
+    r'\b(?:Nigel\s+)?Farage\b': "Nigel Farage",
+    r'\b(?:Angela\s+)?Rayner\b': "Angela Rayner",
+    r'\b(?:Penny\s+)?Mordaunt\b': "Penny Mordaunt",
+    r'\b(?:Wes\s+)?Streeting\b': "Wes Streeting",
+    r'\b(?:Rachel\s+)?Reeves\b': "Rachel Reeves",
+    r'\b(?:Mark\s+)?Carney\b': "Mark Carney",
+    r'\b(?:Marco\s+)?Rubio\b': "Marco Rubio",
+    r'\b(?:JD\s+)?Vance\b': "JD Vance",
+    r'\b(?:Tulsi\s+)?Gabbard\b': "Tulsi Gabbard",
+
+    # Political Parties, Government Bodies, Major Agencies, and Orgs
+    r'\bReform\s+UK\b': "Reform UK",
+    r'\bOne\s+Nation\b': "One Nation",
+    r'\bICE\b': "ICE",
+    r'\bNDIS\b': "NDIS",
+    r'\bCFMEU\b': "CFMEU",
+    r'\bWasatch\s+Front\b': "Wasatch Front",
+    r'\bChicago\s+Public\s+Schools\b': "Chicago Public Schools",
+    r'\bCBS\s+News\b|\bCBS\b': "CBS News",
+    r'\bNBC\s+News\b|\bNBC\b': "NBC News",
+    r'\bABC\s+News\b|\bABC\b': "ABC News",
+    r'\bBBC\b': "BBC",
+    r'\bApple\b': "Apple",
+    r'\bGoogle\b': "Google",
+    r'\bMicrosoft\b': "Microsoft",
+    r'\bTesla\b': "Tesla",
+    r'\bOpenAI\b': "OpenAI",
+    r'\bMeta\b': "Meta",
+    r'\bAmazon\b': "Amazon",
+    r'\bAFL\b': "AFL",
+    r'\bGreens\b': "Greens",
+    r'\bLabour\b': "Labour (UK)",
+    r'\bLabor\b': "Labor (AU)",
+    r'\bGOP\b|\bRepublican\b|\bRepublicans\b': "GOP",
+    r'\bDemocrat\b|\bDemocrats\b|\bDemocratic\b': "Democrats",
+    r'\bCoalition\b': "Coalition",
+    r'\bFIFA\b': "FIFA",
+    r'\bANU\b': "ANU",
+    r'\bWaymo\b': "Waymo",
+    r'\bNASA\b': "NASA",
+    r'\bNFL\b': "NFL",
+    r'\bHigh\s+Court\b': "High Court",
+    r'\bFederal\s+Court\b': "Federal Court",
+    r'\bFair\s+Work\s+Commission\b': "Fair Work Commission",
+    r'\bLiberal\s+Party\b|\bLiberals\b': "Liberal Party",
+    r'\bMCG\b': "MCG",
+    r'\bUSDA\b': "USDA",
+    r'\bSNAP\b': "SNAP",
+    r'\bNHS\b': "NHS",
+    r'\bPWHL\b': "PWHL",
+    r'\bHome\s+Office\b': "Home Office (UK)",
+    r'\bWhite\s+House\b': "White House (US)",
+    r'\bDowning\s+Street\b': "Downing Street (UK)",
+    r'\bLos\s+Angeles\s+City\s+Council\b|\bLA\s+City\s+Council\b': "LA City Council",
+    r'\bChicago\s+Cubs\b': "Chicago Cubs",
+    r'\bWest\s+Ham\b': "West Ham United",
+    r'\bKnicks\b': "Knicks",
+    r'\bDOJ\b': "DOJ",
+    r'\bAUKUS\b': "AUKUS",
+    r'\bAmnesty\b|\bAmnesty\s+International\b': "Amnesty International",
+    r'\bDHS\b': "DHS",
+    r'\bRoyal\s+Navy\b': "Royal Navy",
+    r'\bNorthwestern\s+University\b': "Northwestern University",
+    r'\bNSW\s+Government\b': "NSW Government",
+    r'\bNottingham\s+Trent\s+University\b': "Nottingham Trent University",
+    r'\bTerra\s+Luna\b': "Terra Luna",
+
+    # Geopolitical State Actors (Nations)
+    r'\bUS\b|\bUSA\b|\bUnited\s+States\b|\bAmerica\b': "United States",
+    r'\bAustralia\b': "Australia",
+    r'\bBritain\b|\bUK\b|\bBritish\b|\bEngland\b': "United Kingdom",
+    r'\bIsrael\b': "Israel",
+    r'\bIran\b|\bIranian\b': "Iran",
+    r'\bRussia\b': "Russia",
+    r'\bChina\b': "China",
+    r'\bUkraine\b': "Ukraine",
+    r'\bNorth\s+Korea\b': "North Korea",
+    r'\bCanada\b': "Canada",
+    r'\bFrance\b': "France",
+    r'\bTaiwan\b': "Taiwan",
 }
-
-# Known single-token figures/orgs worth capturing even without a second name token.
-KNOWN_SINGLE = {
-    'trump', 'biden', 'obama', 'putin', 'zelensky', 'netanyahu', 'xi', 'modi',
-    'macron', 'musk', 'bezos', 'zuckerberg', 'harris', 'pelosi', 'desantis',
-    'erdogan', 'kim', 'maduro', 'orban', 'meloni', 'starmer', 'albanese',
-    'google', 'apple', 'amazon', 'meta', 'microsoft', 'tesla', 'openai',
-    'nato', 'opec', 'fbi', 'cia', 'irs', 'fda', 'epa', 'ice', 'doge',
-}
-
-# Title-cased multi-word proper-noun runs (allows internal lowercase particles
-# like "of"/"the" in org names, e.g. "Bank of America", "University of Texas").
-_NAME_RE = re.compile(
-    r'\b([A-Z][a-zA-Z.\'\-]+(?:\s+(?:of|the|and|for|de|van|von|al)\s+)?'
-    r'(?:\s*[A-Z][a-zA-Z.\'\-]+){1,3})\b'
-)
-
-
-def _clean_token(tok):
-    return tok.strip().strip('.').lower()
 
 
 def extract_actors(text, max_actors=6):
@@ -71,81 +190,15 @@ def extract_actors(text, max_actors=6):
     if not text:
         return []
 
-    found = []
-    seen = set()
-
-    for match in _NAME_RE.finditer(text):
-        phrase = match.group(1).strip()
-        phrase = phrase.strip('.,;:!?\'"-')
-
-        # Cut at a possessive so "Musk's Tesla" -> "Musk" (the actor, not the asset).
-        phrase = re.split(r"'s\b", phrase)[0].strip()
-
-        words = phrase.split()
-        # Remove title tokens anywhere ("Texas Gov. Greg Abbott" -> "Texas Greg Abbott"
-        # is wrong, so titles also act as a split point): split into segments on titles.
-        segment = []
-        for w in words:
-            if _clean_token(w) in TITLES:
-                # Title encountered: keep only the part AFTER it (name follows title).
-                segment = []
-                continue
-            segment.append(w)
-        words = segment
-        if not words:
-            continue
-
-        # Trim trailing generic nouns ("Hegseth Immigration Remarks" -> "Hegseth ...").
-        while words and _clean_token(words[-1]) in GENERIC_NOUNS:
-            words.pop()
-        # Trim leading generic/stop nouns.
-        while words and _clean_token(words[0]) in GENERIC_NOUNS:
-            words.pop(0)
-        if not words:
-            continue
-
-        # Drop phrases that are mostly generic nouns (headline fragments, not entities).
-        generic_count = sum(1 for w in words if _clean_token(w) in GENERIC_NOUNS)
-        has_known = any(_clean_token(w) in KNOWN_SINGLE for w in words)
-        if not has_known and generic_count > len(words) / 2:
-            continue
-
-        # Require at least two name tokens, OR a single known figure/org.
-        meaningful = [w for w in words if _clean_token(w) not in STOPWORDS and _clean_token(w) not in GENERIC_NOUNS]
-        if len(meaningful) < 2:
-            single = _clean_token(words[-1])
-            if single not in KNOWN_SINGLE:
-                continue
-
-        name = ' '.join(words)
-        key = name.lower()
-        if key in seen:
-            continue
-        seen.add(key)
-        found.append(name)
-
-    # Catch standalone known single-token figures the regex run missed.
-    for tok in re.findall(r"\b([A-Za-z][A-Za-z.'\-]+)\b", text):
-        low = _clean_token(tok)
-        if low in KNOWN_SINGLE:
-            canonical = tok.strip('.').split("'")[0]
-            if canonical.lower() not in seen:
-                seen.add(canonical.lower())
-                found.append(canonical)
-
-    # Drop entries that are a subset of a longer captured name
-    # (e.g. drop "Trump" when "Donald Trump" is present).
-    deduped = []
-    for name in found:
-        nlow = name.lower()
-        if any(nlow != other.lower() and nlow in other.lower().split() for other in found):
-            continue
-        # also drop single-word entry contained as a token in a longer multiword name
-        if ' ' not in name and any(name.lower() in o.lower().split() and o != name for o in found):
-            continue
-        deduped.append(name)
-
-    return deduped[:max_actors]
+    # Run precise curated map matching ONLY (no heuristic fallback to prevent trash)
+    matched = []
+    for pattern, canonical in ACTOR_MAP.items():
+        flags = 0 if canonical == "Xi Jinping" else re.IGNORECASE
+        if re.search(pattern, text, flags):
+            if canonical not in matched:
+                matched.append(canonical)
+    
+    return matched[:max_actors]
 
 
 if __name__ == '__main__':

@@ -124,6 +124,18 @@ def rebuild_registries():
             print(f"Error reading {authoritative_file}: {e}")
             continue
 
+        # Auto-backfill missing/empty actors using the deterministic actor_extract utility
+        if "actors" not in cfg:
+            from actor_extract import extract_actors
+            inferred = extract_actors(cfg.get("subject", ""))
+            cfg["actors"] = inferred
+            try:
+                with open(authoritative_file, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+                print(f"Auto-tagged missing actors for {slug}: {inferred}")
+            except Exception as we:
+                print(f"Warning: Failed to write back auto-tagged actors to {authoritative_file}: {we}")
+
         active_story_ids.add(slug)
 
         # Generate graph if missing

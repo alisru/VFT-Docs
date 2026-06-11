@@ -19,7 +19,7 @@ This file is the master index and entry point for the Aletheia Bot. All operatio
 ## 1. Operating Rules & Constraints
 
 * **NEVER POST LIVE BY DEFAULT**: Always default to a dry run. The publishing script must only send threads live when explicitly run with the `--live` flag after manual portfolio review.
-* **Character Caps & Bounds**: Every single step in the JSON posts list must be kept strictly under **250 characters** to guarantee it loads cleanly and prevents dynamic text-splitting errors.
+* **Character Caps & Bounds**: Every single step in the JSON posts list must be kept strictly under **290 characters** to guarantee it loads cleanly and prevents dynamic text-splitting errors.
 * **No Numbering**: Never prefix any step with `1/`, `2/`, `1/14` or any numerical indices. The thread must read as a seamless, organic story.
 * **Clean URLs**: Always strip tracking query parameters (e.g. `?utm_source=...`) from URLs to save character space.
 

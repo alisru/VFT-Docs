@@ -394,4 +394,19 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Syntax Error Fixed**: Fixed a duplicate `def def` keyword typo on line 283 of [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py).
 - **Chunk Size & Delimited Output Verified**: Confirmed that the script properly defaults to chunking candidates into batches of 6 (reducing token/output overflow) and outputs in the highly token-minified Thorn (þ) and Pilcrow (¶) delimited flat text format.
 - **XML Tagged Blocks for Output Robustness**: Added `<thinking>...</thinking>` and `<result>...</result>` tags to the system instructions and parser in `google_ai_studio_one_shot.py`. This gives the model a dedicated draft space to analyze, count characters, and self-correct, ensuring the final output block contains only clean, single-line delimited rows without chatty commentary or unescaped newlines leaking into the parser.
-- **Morality-Will Audit**: (υ=+1.0, ψ=+1.4) -> Greater Good / Proactive system recovery and alignment.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.4) -> Greater Good / Proactive system recovery and alignment.
+
+### [2026-06-11] Intent 46: Control Panel Robustness Against Null Coordinate Failures
+*Status: Completed*
+- **Prevent JS Null-Reference Errors**: Implemented conditional checks inside `renderStories()` and other DOM-rendering components in `control_panel.html` when accessing coordinates. They now check for `null`/`undefined` before calling `.toFixed()`.
+- **Chart Plotting Defensiveness**: Modified `auditTimeSeries`, `auditScatter`, and `auditCalibration` in `control_panel.html` to filter out stories with missing or invalid coordinates. This prevents malformed data from breaking SVG charts and coordinate mapping.
+- **Stats Calculation Safety**: Refactored `renderAuditTab` to calculate averages (`avgClaimU`, `avgRealU`, etc.) only over stories that have valid coordinates, preventing `NaN` propagation.
+- **Registry Clean-Up**: Verified that running `rebuild_registries.py` removes the orphan stories from `stories_registry.js` since those failed evaluation runs were relocated to the `fail/` folder.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive recovery of dashboard visualization functionality.
+
+### [2026-06-11] Intent 47: De-escalate Pedantic Post Splitting
+*Status: Completed*
+- **Increase Splitter & Validator Bounds**: Raised the character limit threshold from 250 to 290 in `split_text()` (defined in `aletheia_bot.py`) and all validation scripts (`post_batch.py`, `validate_batch.py`, and `google_ai_studio_one_shot.py`).
+- **Prevent Unnecessary Thread Splitting**: This adjustment allows longer paragraphs (up to 290 characters, which fits inside Bluesky's 300 hard character limit) to be published in a single post without getting split or raising validation errors, resolving cases where a 262-character post was split.
+- **Updated System Prompts**: Modified markdown instructions and system prompt templates inside `google_ai_studio_one_shot.py` to target 290 characters instead of 250.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive adjustment of character boundaries to optimize user posting experience.

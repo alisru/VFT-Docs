@@ -115,8 +115,8 @@ def validate_story_file(path):
             final_posts.extend(split_text(post))
 
         for idx, post in enumerate(final_posts, 1):
-            if len(post) > 250:
-                raise ValueError(f"Post {idx} exceeds 250 characters ({len(post)} chars):\n{post}")
+            if len(post) > 290:
+                raise ValueError(f"Post {idx} exceeds 290 characters ({len(post)} chars):\n{post}")
 
         # Graph Check
         story_id = cfg["id"]
@@ -177,11 +177,18 @@ def main():
         try:
             while True:
                 files_to_post = []
-                for f in sorted(os.listdir(args.folder)):
-                    if f.startswith("factcheck_") and f.endswith(".json"):
-                        full_path = os.path.join(args.folder, f)
+                try:
+                    candidates = [
+                        os.path.join(args.folder, f)
+                        for f in os.listdir(args.folder)
+                        if f.startswith("factcheck_") and f.endswith(".json")
+                    ]
+                    candidates.sort(key=os.path.getmtime)
+                    for full_path in candidates:
                         if full_path not in seen_files:
                             files_to_post.append(full_path)
+                except Exception as e:
+                    print(f"Warning: Failed to list and sort files in watcher loop: {e}")
                 
                 if files_to_post:
                     print(f"\nFound {len(files_to_post)} new story file(s) to process.")
@@ -240,12 +247,15 @@ def main():
                             try:
                                 os.makedirs(args.move_to, exist_ok=True)
                                 dest_path = os.path.join(args.move_to, filename)
-                                if os.path.exists(dest_path):
-                                    os.remove(path)
-                                    print(f"  Removed source file because it exists in live: {path}")
+                                if os.path.exists(path):
+                                    if os.path.exists(dest_path):
+                                        os.remove(path)
+                                        print(f"  Removed source file because it exists in live: {path}")
+                                    else:
+                                        shutil.move(path, dest_path)
+                                        print(f"  Moved successfully posted file to {dest_path}")
                                 else:
-                                    shutil.move(path, dest_path)
-                                    print(f"  Moved successfully posted file to {dest_path}")
+                                    print(f"  Source file was already cleaned up/moved by posting process.")
                             except Exception as e:
                                 print(f"  Warning: Failed to move file to live: {e}")
                                 
@@ -280,9 +290,17 @@ def main():
             if not os.path.exists(args.folder):
                 print(f"ERROR: Folder not found: {args.folder}")
                 sys.exit(1)
-            for f in sorted(os.listdir(args.folder)):
-                if f.startswith("factcheck_") and f.endswith(".json"):
-                    files_to_post.append(os.path.join(args.folder, f))
+            try:
+                candidates = [
+                    os.path.join(args.folder, f)
+                    for f in os.listdir(args.folder)
+                    if f.startswith("factcheck_") and f.endswith(".json")
+                ]
+                candidates.sort(key=os.path.getmtime)
+                files_to_post.extend(candidates)
+            except Exception as e:
+                print(f"ERROR: Failed to list and sort files in folder: {e}")
+                sys.exit(1)
             print(f"Found {len(files_to_post)} JSON files in folder '{args.folder}'.")
         else:
             print("ERROR: Either --files or --folder must be specified.")
@@ -344,12 +362,15 @@ def main():
                 try:
                     os.makedirs(args.move_to, exist_ok=True)
                     dest_path = os.path.join(args.move_to, filename)
-                    if os.path.exists(dest_path):
-                        os.remove(path)
-                        print(f"Removed source file because it was already synchronized in live directory: {path}")
+                    if os.path.exists(path):
+                        if os.path.exists(dest_path):
+                            os.remove(path)
+                            print(f"Removed source file because it was already synchronized in live directory: {path}")
+                        else:
+                            shutil.move(path, dest_path)
+                            print(f"Moved successfully posted file to {dest_path}")
                     else:
-                        shutil.move(path, dest_path)
-                        print(f"Moved successfully posted file to {dest_path}")
+                        print(f"Source file was already cleaned up/moved by posting process.")
                 except Exception as e:
                     print(f"Warning: Failed to move file to {args.move_to}: {e}")
                 

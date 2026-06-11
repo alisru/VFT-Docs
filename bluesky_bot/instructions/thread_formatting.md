@@ -30,7 +30,7 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 
 * **BAN on Robotic Titles**: Do not start steps with dry prefixes like `Subject:`, `The Claim:`, `The Reality:`, or `What's happening:`. (Headers explicitly outlined in the 14 steps below are permitted).
 * **Natural Human Flow**: Write in clean, conversational Plain English. Use headers only when they are clean and natural (e.g. `The Bright Side:`, `The Poison:`).
-* **Character Caps**: Keep every single step strictly under **250 characters** in the JSON config to prevent dynamic text-splitting errors.
+* **Character Caps**: Keep every single step strictly under **290 characters** in the JSON config to prevent dynamic text-splitting errors.
 
 ---
 
@@ -42,7 +42,7 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 * **Wording**: Starts with a custom, punchy, human-style editorial scene-setter one-liner (e.g., exposing a structural framing or irony). Do **NOT** write dry summaries or repeat candidate text. Follow it with the clean news subject title (no "Subject:" prefix) and the evidence standards line.
 * **Metrics**: State the three core actualism parameters: `Evidence: [Stated Ideal in 2-5 words], [Actual Effect in 2-5 words], [Actual Ideal in 2-5 words]`
 * **Hashtags**: End the post with 1-2 relevant hashtags (e.g. #Aletheia, #Tech, #USPol) to boost search visibility.
-* **Character limit**: Use the saved character space to expand the intro into a detailed paragraph, keeping the entire post strictly under 250 characters.
+* **Character limit**: Use the saved character space to expand the intro into a detailed paragraph, keeping the entire post strictly under 290 characters.
 * **Example**:
   > LA just ranked #1 in the country for dogs biting postal workers. Again. A classic boundary error where private comfort externalizes public infrastructure risk.
   > 
@@ -82,7 +82,7 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
   > The implicit desire for companionship and home security is a genuine human need. Pets do provide actual psychological and localized physical benefit to their owners.
 
 ### Element 6: The Breakdown, Plane Error & Switch
-* **Wording**: Explain the Plane Error simply in plain language (e.g. WHAT vs WHO), and expose the forensic bait-and-switch naturally under 250 characters.
+* **Wording**: Explain the Plane Error simply in plain language (e.g. WHAT vs WHO), and expose the forensic bait-and-switch naturally under 290 characters.
 * **Example**:
   > The Breakdown & Plane Error:
   > Owners claim this is simply a matter of the physical environment or unpredictable animal behavior (WHERE/WHAT). Structurally, it operates entirely on the plane of Will (WHO) — specifically the lack of will to take responsibility for one's own domain.

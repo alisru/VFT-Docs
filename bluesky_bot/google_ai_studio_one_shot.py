@@ -144,7 +144,9 @@ def load_historical_evaluations():
                 
                 target_url = config.get("target_url")
                 if target_url:
-                    seen_targets.add(target_url.strip().lower())
+                    rkey = target_url.strip().lower().strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
+                    if rkey:
+                        seen_targets.add(rkey)
                     
                 story_id = config.get("id")
                 if story_id:
@@ -265,7 +267,8 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
             normalized = normalize_url(article_url)
             if normalized in seen_urls:
                 continue
-            if post_url.strip().lower() in seen_targets:
+            post_rkey = post_url.strip().lower().strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
+            if post_rkey in seen_targets:
                 continue
             subject_approx = text[:30].lower().replace(" ", "_").replace("/", "_")
             if subject_approx in seen_ids:
@@ -279,7 +282,7 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
                 "subject": text[:80] + "..."
             })
             seen_urls.add(normalized)
-            seen_targets.add(post_url.strip().lower())
+            seen_targets.add(post_rkey)
 
     print(f"Open search yielded {len(candidates)} news-linked candidate(s).")
     return candidates
@@ -478,7 +481,8 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                         if normalized in seen_urls:
                             continue
                             
-                        if post_url.strip().lower() in seen_targets:
+                        post_rkey = post_url.strip().lower().strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
+                        if post_rkey in seen_targets:
                             continue
                             
                         subject_approx = text[:30].lower().replace(" ", "_").replace("/", "_")
@@ -493,7 +497,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                             "subject": text[:80] + "..."
                         })
                         seen_urls.add(normalized)
-                        seen_targets.add(post_url.strip().lower())
+                        seen_targets.add(post_rkey)
             except Exception as e:
                 print(f"Warning: Bluesky login or retrieval failed: {e}")
         else:
@@ -525,7 +529,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     n = len(candidates)
     output_format = (
         f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE A SINGLE VALID JSON LIST OF LISTS. NO commentary, NO markdown formatting (other than JSON code fences if desired), NO explanation.\n"
-        f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly 10 items representing the evaluation of that candidate in this specific structure:\n"
+        f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly 11 items representing the evaluation of that candidate in this specific structure:\n"
         "[\n"
         "  [\n"
         '    "id",\n'
@@ -538,13 +542,15 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    real_psi (float),\n"
         '    "mode",\n'
         "    [\n"
-        '      "post 1 (under 250 chars, ending with 1-2 hashtags)",\n'
-        '      "post 2 (under 250 chars)",\n'
+        '      "post 1 (under 290 chars, ending with 1-2 hashtags)",\n'
+        '      "post 2 (under 290 chars)",\n'
         "      ...\n"
         "      (exactly 13 posts)\n"
-        "    ]\n"
+        "    ],\n"
+        '    ["Actor / Org / Geopolitical tag", ...]   // item[10]: actors array\n'
         "  ]\n"
         "]\n\n"
+        "item[10] = actors array: principal named individuals, orgs, nation-states, or blocs (CRINK/BRICS/NATO/AUKUS/G7/SCO/Five Eyes) the story is ABOUT. Canonical full names. Max 6. [] if none.\n\n"
         "EXAMPLE RESPONSE (for a single candidate, format exactly as JSON list of lists):\n"
         "[\n"
         "  [\n"
@@ -571,7 +577,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '      "Alethekanon:\\nAnalysis.",\n'
         '      "Awwthekanon:\\nEmpathy.",\n'
         '      "Brothekanon:\\nCasual take."\n'
-        "    ]\n"
+        "    ],\n"
+        '    ["Nigel Farage", "Reform UK", "United Kingdom"]\n'
         "  ]\n"
         "]"
     )
@@ -714,6 +721,11 @@ def transpose_flat_to_json(flat_text):
             continue
             
         try:
+            # Parse actors from item[10] if present (AI-provided), else empty list (fallback handled later)
+            ai_actors = []
+            if len(item) >= 11 and isinstance(item[10], list):
+                ai_actors = [str(a).strip() for a in item[10] if isinstance(a, str) and str(a).strip()]
+
             story = {
                 "id": str(item[0]).strip(),
                 "subject": str(item[1]).strip(),
@@ -725,6 +737,7 @@ def transpose_flat_to_json(flat_text):
                 "real_psi": float(item[7]),
                 "mode": str(item[8]).strip(),
                 "posts": [str(p) for p in item[9]],
+                "actors": ai_actors,
                 "status": "COMPLETED DRY RUN"
             }
             evaluations.append(story)
@@ -749,9 +762,11 @@ def process_evaluations(evaluations, category="general"):
             story["id"] = slug
             story["status"] = "COMPLETED DRY RUN"
 
-            # Tag actors (deterministic) and category for audit/trend analysis.
-            if "actors" not in story:
+            # Actors: AI-provided takes priority; fall back to deterministic extraction if empty
+            if not story.get("actors"):
                 story["actors"] = extract_actors(story.get("subject", ""))
+            if story["actors"]:
+                print(f"  actors: {story['actors']}")
             # Normalise category: store as a comma-joined string so it's JSON-friendly
             cats = [c.strip().lower() for c in (category or "general").split(",") if c.strip()] if isinstance(category, str) else (category or ["general"])
             story.setdefault("category", ",".join(cats) if len(cats) > 1 else (cats[0] if cats else "general"))
@@ -764,7 +779,7 @@ def process_evaluations(evaluations, category="general"):
                 continue
 
             # Character limit warnings
-            violations = [(i, len(p)) for i, p in enumerate(posts) if len(p) > 250]
+            violations = [(i, len(p)) for i, p in enumerate(posts) if len(p) > 290]
             if violations:
                 print(f"WARNING: '{story.get('subject')}' has char violations at posts {violations}")
 

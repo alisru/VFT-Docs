@@ -1237,12 +1237,17 @@
         const badgeClass = isPass ? 'badge-pass' : 'badge-fail';
         const badgeText = isPass ? 'PASS' : 'FAIL';
 
+        const cu = story.claim_u !== null && story.claim_u !== undefined ? story.claim_u.toFixed(1) : '?';
+        const cpsi = story.claim_psi !== null && story.claim_psi !== undefined ? story.claim_psi.toFixed(1) : '?';
+        const ru = story.real_u !== null && story.real_u !== undefined ? story.real_u.toFixed(1) : '?';
+        const rpsi = story.real_psi !== null && story.real_psi !== undefined ? story.real_psi.toFixed(1) : '?';
+
         card.innerHTML = `
           <div class="story-title">${story.subject}</div>
           <div class="card-status">${story.status}</div>
           <div class="card-footer">
             <span class="card-badge ${badgeClass}">${badgeText}</span>
-            <span class="card-coordinates">(${story.claim_u.toFixed(1)}, ${story.claim_psi.toFixed(1)}) ➔ (${story.real_u.toFixed(1)}, ${story.real_psi.toFixed(1)})</span>
+            <span class="card-coordinates">(${cu}, ${cpsi}) ➔ (${ru}, ${rpsi})</span>
           </div>
         `;
         listContainer.appendChild(card);
@@ -1465,11 +1470,11 @@
             <span class="meta-label">Coordinates Shift</span>
             <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.25rem;">
               <div class="coordinate-pill" style="border-color: rgba(245,158,11,0.3); color: var(--claim-yellow);">
-                Claim: (${activeStory.claim_u.toFixed(1)}, ${activeStory.claim_psi.toFixed(1)})
+                Claim: (${activeStory.claim_u !== null && activeStory.claim_u !== undefined ? activeStory.claim_u.toFixed(1) : '?'}, ${activeStory.claim_psi !== null && activeStory.claim_psi !== undefined ? activeStory.claim_psi.toFixed(1) : '?'})
               </div>
               <span style="color:var(--text-muted)">➔</span>
               <div class="coordinate-pill" style="border-color: rgba(239,68,68,0.3); color: var(--reality-red);">
-                Reality: (${activeStory.real_u.toFixed(1)}, ${activeStory.real_psi.toFixed(1)})
+                Reality: (${activeStory.real_u !== null && activeStory.real_u !== undefined ? activeStory.real_u.toFixed(1) : '?'}, ${activeStory.real_psi !== null && activeStory.real_psi !== undefined ? activeStory.real_psi.toFixed(1) : '?'})
               </div>
             </div>
           </div>
@@ -1525,16 +1530,19 @@
         return { x, y };
       };
 
-      const startCoords = getSvgCoords(activeStory.claim_u, activeStory.claim_psi);
-      const endCoords = getSvgCoords(activeStory.real_u, activeStory.real_psi);
+      const hasClaim = activeStory.claim_u !== null && activeStory.claim_u !== undefined && activeStory.claim_psi !== null && activeStory.claim_psi !== undefined;
+      const hasReal = activeStory.real_u !== null && activeStory.real_u !== undefined && activeStory.real_psi !== null && activeStory.real_psi !== undefined;
 
-      // Render Stated Claim (Yellow Circle)
       const claim = document.getElementById('claimPoint');
-      claim.setAttribute('cx', startCoords.x);
-      claim.setAttribute('cy', startCoords.y);
-      claim.style.display = 'block';
+      if (hasClaim) {
+        const startCoords = getSvgCoords(activeStory.claim_u, activeStory.claim_psi);
+        claim.setAttribute('cx', startCoords.x);
+        claim.setAttribute('cy', startCoords.y);
+        claim.style.display = 'block';
+      } else {
+        claim.style.display = 'none';
+      }
 
-      // Render Actual Reality (Red Star)
       // Standard SVG polygon formula for a 5-point star
       const getStarPointsString = (cx, cy, spikes, outerRadius, innerRadius) => {
         let rot = Math.PI / 2 * 3;
@@ -1557,23 +1565,39 @@
         return points.join(' ');
       };
 
-      const starPoints = getStarPointsString(endCoords.x, endCoords.y, 5, 10, 4);
       const reality = document.getElementById('realityPoint');
-      reality.setAttribute('points', starPoints);
-      reality.style.display = 'block';
+      if (hasReal) {
+        const endCoords = getSvgCoords(activeStory.real_u, activeStory.real_psi);
+        const starPoints = getStarPointsString(endCoords.x, endCoords.y, 5, 10, 4);
+        reality.setAttribute('points', starPoints);
+        reality.style.display = 'block';
+      } else {
+        reality.style.display = 'none';
+      }
 
       // Animate Arrow path
       const path = document.getElementById('trajectoryPath');
-      // Create a nice subtle arc curve for the connection
-      const dx = endCoords.x - startCoords.x;
-      const dy = endCoords.y - startCoords.y;
-      const dr = Math.sqrt(dx * dx + dy * dy) * 1.2; // radius of arc
-      path.setAttribute('d', `M ${startCoords.x} ${startCoords.y} A ${dr} ${dr} 0 0,0 ${endCoords.x} ${endCoords.y}`);
+      if (hasClaim && hasReal) {
+        const startCoords = getSvgCoords(activeStory.claim_u, activeStory.claim_psi);
+        const endCoords = getSvgCoords(activeStory.real_u, activeStory.real_psi);
+        // Create a nice subtle arc curve for the connection
+        const dx = endCoords.x - startCoords.x;
+        const dy = endCoords.y - startCoords.y;
+        const dr = Math.sqrt(dx * dx + dy * dy) * 1.2; // radius of arc
+        path.setAttribute('d', `M ${startCoords.x} ${startCoords.y} A ${dr} ${dr} 0 0,0 ${endCoords.x} ${endCoords.y}`);
+        path.style.display = 'block';
+      } else {
+        path.style.display = 'none';
+      }
 
       // Update Map Sidebar
       document.getElementById('mapPathClass').innerText = activeStory.verdict.split('—')[1] || activeStory.verdict;
-      document.getElementById('mapClaimCoord').innerText = `(${activeStory.claim_u.toFixed(2)}, ${activeStory.claim_psi.toFixed(2)})`;
-      document.getElementById('mapRealCoord').innerText = `(${activeStory.real_u.toFixed(2)}, ${activeStory.real_psi.toFixed(2)})`;
+      const mcu = activeStory.claim_u !== null && activeStory.claim_u !== undefined ? activeStory.claim_u.toFixed(2) : '?';
+      const mcpsi = activeStory.claim_psi !== null && activeStory.claim_psi !== undefined ? activeStory.claim_psi.toFixed(2) : '?';
+      const mru = activeStory.real_u !== null && activeStory.real_u !== undefined ? activeStory.real_u.toFixed(2) : '?';
+      const mrpsi = activeStory.real_psi !== null && activeStory.real_psi !== undefined ? activeStory.real_psi.toFixed(2) : '?';
+      document.getElementById('mapClaimCoord').innerText = `(${mcu}, ${mcpsi})`;
+      document.getElementById('mapRealCoord').innerText = `(${mru}, ${mrpsi})`;
 
       // Formulate custom dynamic path explanation
       let explanation = "";
@@ -1919,6 +1943,202 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
     // =====================================================================
     let _auditRendered = false;
     let _auditScope = 'all';   // 'all' = whole corpus, 'live' = posted only
+    let _trendInterval = 'all'; // 'day', 'week', 'month', 'all'
+    let _showRealityU = true;
+    let _showDeltaU = true;
+    let _actorMinN = 1;
+    let _outletMinN = 1;
+    let _calibSampleSize = 300; // 120, 300, 500, 'all'
+    let _actorSortCol = 'avgDelta'; // 'key', 'n', 'avgDelta', 'consistency'
+    let _actorSortDir = 'desc'; // 'asc', 'desc'
+    let _outletSortCol = 'avgDelta'; // 'key', 'n', 'avgDelta', 'consistency'
+    let _outletSortDir = 'desc'; // 'asc', 'desc'
+    // Secondary sort (true multi-key: primary from header clicks, secondary from dropdowns)
+    let _actorSort2Col  = 'none'; // 'none','n','avgDelta','consistency'
+    let _actorSort2Dir  = 'asc';
+    let _outletSort2Col = 'none';
+    let _outletSort2Dir = 'asc';
+
+    function setTrendInterval(interval) {
+      _trendInterval = interval;
+      _auditRendered = false;
+      renderAuditTab();
+    }
+
+    function setActorMinN(val) {
+      _actorMinN = parseInt(val, 10) || 1;
+      _auditRendered = false;
+      renderAuditTab();
+    }
+
+    function setOutletMinN(val) {
+      _outletMinN = parseInt(val, 10) || 1;
+      _auditRendered = false;
+      renderAuditTab();
+    }
+
+    function handleHeaderClick(tableType, colName) {
+      if (tableType === 'actor') {
+        // Clear secondary when changing primary
+        if (_actorSortCol !== colName) _actorSort2Col = 'none';
+        if (_actorSortCol === colName) {
+          _actorSortDir = _actorSortDir === 'desc' ? 'asc' : 'desc';
+        } else {
+          _actorSortCol = colName;
+          _actorSortDir = 'desc';
+          if (colName === 'key') _actorSortDir = 'asc';
+        }
+      } else {
+        if (_outletSortCol !== colName) _outletSort2Col = 'none';
+        if (_outletSortCol === colName) {
+          _outletSortDir = _outletSortDir === 'desc' ? 'asc' : 'desc';
+        } else {
+          _outletSortCol = colName;
+          _outletSortDir = 'desc';
+          if (colName === 'key') _outletSortDir = 'asc';
+        }
+      }
+      _auditRendered = false;
+      renderAuditTab();
+    }
+
+    function setSort2(tableType, field, val) {
+      if (tableType === 'actor') {
+        if (field === 'col') _actorSort2Col = val;
+        else _actorSort2Dir = val;
+      } else {
+        if (field === 'col') _outletSort2Col = val;
+        else _outletSort2Dir = val;
+      }
+      _auditRendered = false;
+      renderAuditTab();
+    }
+
+    // Extract a numeric value from a row for a given sort column
+    function _colVal(r, col) {
+      if (col === 'n')           return r.n;
+      if (col === 'avgDelta')    return r.avgDelta;
+      if (col === 'consistency') return r.consistency;
+      return 0;
+    }
+
+    function setCalibSampleSize(val) {
+      _calibSampleSize = val === 'all' ? 'all' : (parseInt(val, 10) || 300);
+      _auditRendered = false;
+      renderAuditTab();
+    }
+
+    function toggleTrendLine(line, visible) {
+      if (line === 'realityU') _showRealityU = visible;
+      if (line === 'deltaU') _showDeltaU = visible;
+      
+      const pathRU = document.getElementById('trend-path-ru');
+      const pathDU = document.getElementById('trend-path-du');
+      const dotsRU = document.getElementsByClassName('trend-dot-ru');
+      const dotsDU = document.getElementsByClassName('trend-dot-du');
+      
+      if (pathRU) pathRU.style.display = _showRealityU ? 'block' : 'none';
+      if (pathDU) pathDU.style.display = _showDeltaU ? 'block' : 'none';
+      
+      for (let el of dotsRU) el.style.display = _showRealityU ? 'block' : 'none';
+      for (let el of dotsDU) el.style.display = _showDeltaU ? 'block' : 'none';
+    }
+
+    function handleTrendHover(evt, svg) {
+      const series = JSON.parse(svg.getAttribute('data-series') || '[]');
+      if (!series.length) return;
+      
+      const rect = svg.getBoundingClientRect();
+      const scaleX = 520 / rect.width;
+      const mx = (evt.clientX - rect.left) * scaleX;
+      
+      const W = 520, H = 160, padL = 35, padB = 22, padT = 15, padR = 15;
+      const xMax = series[series.length-1].x || 1;
+      const sx = x => padL + (x / xMax) * (W - padL - padR);
+      
+      let closestIdx = 0;
+      let minDst = Infinity;
+      series.forEach((p, idx) => {
+        const px = sx(p.x);
+        const dst = Math.abs(mx - px);
+        if (dst < minDst) {
+          minDst = dst;
+          closestIdx = idx;
+        }
+      });
+      
+      const p = series[closestIdx];
+      const px = sx(p.x);
+      
+      const guide = svg.getElementById('trend-guide');
+      if (guide) {
+        guide.setAttribute('x1', px);
+        guide.setAttribute('x2', px);
+        guide.style.display = 'block';
+      }
+      
+      const markerRU = svg.getElementById('trend-marker-ru');
+      const markerDU = svg.getElementById('trend-marker-du');
+      
+      const sy = y => padT + (1 - (y - -2.2)/(3.2 - -2.2)) * (H - padT - padB);
+      
+      if (markerRU) {
+        markerRU.setAttribute('cx', px);
+        markerRU.setAttribute('cy', sy(p.ru));
+        markerRU.style.display = _showRealityU ? 'block' : 'none';
+      }
+      if (markerDU) {
+        markerDU.setAttribute('cx', px);
+        markerDU.setAttribute('cy', sy(p.du));
+        markerDU.style.display = _showDeltaU ? 'block' : 'none';
+      }
+      
+      let tooltip = document.getElementById('trend-tooltip');
+      if (!tooltip) {
+        tooltip = document.createElement('div');
+        tooltip.id = 'trend-tooltip';
+        tooltip.style.cssText = `
+          position: absolute;
+          background: rgba(10, 18, 30, 0.95);
+          border: 1px solid var(--panel-border);
+          border-radius: 6px;
+          padding: 0.5rem 0.75rem;
+          font-size: 0.72rem;
+          pointer-events: none;
+          display: none;
+          z-index: 100;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+          backdrop-filter: blur(4px);
+          color: var(--text-light, #f0f0f0);
+        `;
+        document.body.appendChild(tooltip);
+      }
+      
+      tooltip.style.left = (evt.pageX + 15) + 'px';
+      tooltip.style.top = (evt.pageY - 20) + 'px';
+      tooltip.style.display = 'block';
+      
+      tooltip.innerHTML = `
+        <div style="font-weight:600; color:var(--text-muted); margin-bottom:0.25rem;">${p.dateRange}</div>
+        <div style="display:flex; flex-direction:column; gap:0.15rem;">
+          <div>Stories: <span style="font-family:var(--font-mono); font-weight:600;">${p.n}</span></div>
+          ${_showRealityU ? `<div>Avg reality_u: <span style="font-family:var(--font-mono); font-weight:600; color:var(--pass-green);">${(p.ru >= 0 ? '+' : '') + p.ru.toFixed(2)}</span></div>` : ''}
+          ${_showDeltaU ? `<div>Avg Δu gap: <span style="font-family:var(--font-mono); font-weight:600; color:var(--claim-yellow);">${(p.du >= 0 ? '+' : '') + p.du.toFixed(2)}</span></div>` : ''}
+        </div>
+      `;
+    }
+    
+    function handleTrendLeave(svg) {
+      const guide = svg.getElementById('trend-guide');
+      const markerRU = svg.getElementById('trend-marker-ru');
+      const markerDU = svg.getElementById('trend-marker-du');
+      if (guide) guide.style.display = 'none';
+      if (markerRU) markerRU.style.display = 'none';
+      if (markerDU) markerDU.style.display = 'none';
+      
+      const tooltip = document.getElementById('trend-tooltip');
+      if (tooltip) tooltip.style.display = 'none';
+    }
 
     function setAuditScope(scope) {
       _auditScope = scope;
@@ -1950,49 +2170,94 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
           <button onclick="setAuditScope('live')" class="filter-pill ${_auditScope==='live'?'active':''}">🦋 Live (${liveOnly.length})</button>
         </div>`;
 
-      const passCount = live.filter(s => s.real_u > 0).length;
-      const failCount = live.filter(s => s.real_u <= 0).length;
-      const avgClaimU  = avg(live.map(s => s.claim_u));
-      const avgRealU   = avg(live.map(s => s.real_u));
-      const avgClaimPsi= avg(live.map(s => s.claim_psi));
-      const avgRealPsi = avg(live.map(s => s.real_psi));
-      const avgDeltaU  = avg(live.map(s => s.claim_u - s.real_u));
-      const avgDeltaPsi= avg(live.map(s => s.claim_psi - s.real_psi));
+      // Filter out any entries without valid coordinate data for the statistics calculations
+      const validForStats = live.filter(s => s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined && s.claim_psi !== null && s.claim_psi !== undefined && s.real_psi !== null && s.real_psi !== undefined);
 
-      container.innerHTML = scopeToggle + `
-        ${auditSection('Corpus Overview', auditStats([
-          ['Scope', scopeLabel],
-          ['Stories in scope', live.length],
-          ['Live / posted (total)', liveOnly.length],
-          ['PASS (real_u > 0)', passCount + ' (' + pct(passCount, live.length) + ')'],
-          ['FAIL (real_u ≤ 0)', failCount + ' (' + pct(failCount, live.length) + ')'],
-          ['Avg claim (u, ψ)', '(' + fmt(avgClaimU) + ', ' + fmt(avgClaimPsi) + ')'],
-          ['Avg reality (u, ψ)', '(' + fmt(avgRealU) + ', ' + fmt(avgRealPsi) + ')'],
-          ['Avg delta u / ψ', fmt(avgDeltaU) + ' / ' + fmt(avgDeltaPsi)],
-          ['Modes', 'root: ' + live.filter(s=>s.mode==='root').length + '  reply: ' + live.filter(s=>s.mode==='reply').length],
-        ]))}
+      const legendPanel = `
+        <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--panel-border); border-radius: 10px; padding: 1.2rem; font-size: 0.82rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; line-height: 1.5; margin-bottom: 0.5rem;">
+          <div>
+            <strong style="color: var(--bsky-blue); display: block; margin-bottom: 0.35rem; font-size: 0.88rem;">📊 Morality & Utility (u)</strong>
+            <span style="color: var(--text-muted);">Measures systemic alignment:
+              <br>• <span style="color: var(--pass-green); font-weight: 600;">+u (Green)</span>: Productive/Greater Good.
+              <br>• <span style="color: var(--reality-red); font-weight: 600;">-u (Red)</span>: Extraction/Lesser Evil.
+            </span>
+          </div>
+          <div>
+            <strong style="color: var(--claim-yellow); display: block; margin-bottom: 0.35rem; font-size: 0.88rem;">🔍 Deception Gap (Δu)</strong>
+            <span style="color: var(--text-muted);">Calculated as: <strong>Δu = claim_u − real_u</strong>.
+              <br>• <span style="color: var(--reality-red); font-weight: 600;">Δu > 0</span>: Claim exceeds reality (deceptive/hype).
+              <br>• <span style="color: var(--pass-green); font-weight: 600;">Δu ≤ 0</span>: Reality matches or beats claim (honest).
+            </span>
+          </div>
+          <div>
+            <strong style="color: #e2e8f0; display: block; margin-bottom: 0.35rem; font-size: 0.88rem;">⚡ Will & Agency (ψ)</strong>
+            <span style="color: var(--text-muted);">Measures structural force/intent:
+              <br>• <span style="color: #58a6ff; font-weight: 600;">+ψ</span>: Active value creation/productivity.
+              <br>• <span style="color: #f59e0b; font-weight: 600;">-ψ</span>: Suppression, chaos, or passivity.
+            </span>
+          </div>
+          <div>
+            <strong style="color: #a78bfa; display: block; margin-bottom: 0.35rem; font-size: 0.88rem;">📉 Consistency (σ)</strong>
+            <span style="color: var(--text-muted);">Standard deviation of the deception gap:
+              <br>• <strong>Low σ</strong>: Consistently deceptive (or consistently honest).
+              <br>• <strong>High σ</strong>: Erratic/unpredictable behavior.
+            </span>
+          </div>
+        </div>`;
 
-        ${auditSection('Reality u Score Distribution', auditHistogram(live.map(s => s.real_u), -2, 2, 0.5, 'var(--reality-red)', 'var(--pass-green)'))}
+      const passCount = validForStats.filter(s => s.real_u > 0).length;
+      const failCount = validForStats.filter(s => s.real_u <= 0).length;
+      const avgClaimU  = avg(validForStats.map(s => s.claim_u));
+      const avgRealU   = avg(validForStats.map(s => s.real_u));
+      const avgClaimPsi= avg(validForStats.map(s => s.claim_psi));
+      const avgRealPsi = avg(validForStats.map(s => s.real_psi));
+      const avgDeltaU  = avg(validForStats.map(s => s.claim_u - s.real_u));
+      const avgDeltaPsi= avg(validForStats.map(s => s.claim_psi - s.real_psi));
 
-        ${auditSection('Claim → Reality Gap (Δu) Distribution', auditHistogram(live.map(s => s.claim_u - s.real_u), -1, 3, 0.5, 'var(--bsky-blue)', 'var(--claim-yellow)'))}
+      container.innerHTML = scopeToggle + legendPanel + `
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('Corpus Overview', auditStats([
+            ['Scope', scopeLabel],
+            ['Stories in scope', live.length],
+            ['Live / posted (total)', liveOnly.length],
+            ['PASS (real_u > 0)', passCount + ' (' + pct(passCount, live.length) + ')'],
+            ['FAIL (real_u ≤ 0)', failCount + ' (' + pct(failCount, live.length) + ')'],
+            ['Avg claim (u, ψ)', '(' + fmt(avgClaimU) + ', ' + fmt(avgClaimPsi) + ')'],
+            ['Avg reality (u, ψ)', '(' + fmt(avgRealU) + ', ' + fmt(avgRealPsi) + ')'],
+            ['Avg delta u / ψ', fmt(avgDeltaU) + ' / ' + fmt(avgDeltaPsi)],
+            ['Modes', 'root: ' + live.filter(s=>s.mode==='root').length + '  reply: ' + live.filter(s=>s.mode==='reply').length],
+          ]))}
+          
+          ${auditSection('The Scales of Judgement', auditScalesOfJudgement(live, passCount, failCount, avgDeltaU))}
+        </div>
 
-        ${auditSection('ψ Drift (claim_ψ → real_ψ)', auditHistogram(live.map(s => s.real_psi - s.claim_psi), -2, 2, 0.5, 'var(--claim-yellow)', 'var(--bsky-blue)'))}
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('Reality u Score Distribution', auditHistogram(validForStats.map(s => s.real_u), -2, 2, 0.5, 'var(--reality-red)', 'var(--pass-green)'))}
+          ${auditSection('Claim → Reality Gap (Δu) Distribution', auditHistogram(validForStats.map(s => s.claim_u - s.real_u), -1, 3, 0.5, 'var(--bsky-blue)', 'var(--claim-yellow)'))}
+        </div>
 
-        ${auditSection('Trend Over Time (avg reality_u &amp; Δu)', auditTimeSeries(live))}
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('ψ Drift (claim_ψ → real_ψ)', auditHistogram(validForStats.map(s => s.real_psi - s.claim_psi), -2, 2, 0.5, 'var(--claim-yellow)', 'var(--bsky-blue)'))}
+          ${auditSection('Trend Over Time (avg reality_u &amp; Δu)', auditTimeSeries(live))}
+        </div>
 
-        ${auditSection('Δu vs ψ-Drift Scatter (structural signatures)', auditScatter(live))}
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('Δu vs ψ-Drift Scatter (structural signatures)', auditScatter(live))}
+          ${auditSection('Calibration Drift (claim → reality)', auditCalibration(live))}
+        </div>
 
-        ${auditSection('Calibration Drift (claim → reality)', auditCalibration(live))}
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('Actor Hypocrisy Leaderboard', auditActorLeaderboard(live))}
+          ${auditSection('Outlet Hypocrisy (avg Δu by source)', auditOutletHypocrisy(live))}
+        </div>
 
-        ${auditSection('Actor Hypocrisy Leaderboard', auditActorLeaderboard(live))}
-
-        ${auditSection('Outlet Hypocrisy (avg Δu by source)', auditOutletHypocrisy(live))}
-
-        ${auditSection('Domain Breakdown (top sources)', auditDomains(live))}
-
-        ${auditSection('PASS Stories (real_u > 0)', auditStoryList(live.filter(s => s.real_u > 0).sort((a,b) => b.real_u - a.real_u), 'pass'))}
-
-        ${auditSection('Worst Divergence (highest Δu)', auditStoryList(live.slice().sort((a,b) => (b.claim_u - b.real_u) - (a.claim_u - a.real_u)).slice(0,20), 'fail'))}
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('Domain Breakdown (top sources)', auditDomains(live))}
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            ${auditSection('PASS Stories (real_u > 0)', auditStoryList(live.filter(s => s.real_u > 0).sort((a,b) => b.real_u - a.real_u), 'pass'))}
+            ${auditSection('Worst Divergence (highest Δu)', auditStoryList(validForStats.slice().sort((a,b) => (b.claim_u - b.real_u) - (a.claim_u - a.real_u)).slice(0,20), 'fail'))}
+          </div>
+        </div>
       `;
 
       // Bind click handlers for story links in audit lists
@@ -2011,7 +2276,10 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       if (!arr.length) return 0;
       return arr.reduce((a,b) => a+b, 0) / arr.length;
     }
-    function fmt(n) { return (n >= 0 ? '+' : '') + n.toFixed(2); }
+    function fmt(n) {
+      if (n === null || n === undefined || isNaN(n)) return '?';
+      return (n >= 0 ? '+' : '') + n.toFixed(2);
+    }
     function pct(n, total) { return total ? Math.round(n/total*100) + '%' : '0%'; }
 
     function auditSection(title, body) {
@@ -2019,6 +2287,82 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         <div style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.8rem;">${title}</div>
         ${body}
       </div>`;
+    }
+
+    function auditScalesOfJudgement(stories, passCount, failCount, avgDeltaU) {
+      const angleDeg = Math.min(25, Math.max(-25, avgDeltaU * 15));
+      const theta = angleDeg * Math.PI / 180;
+      
+      const xL = 150 - 80 * Math.cos(theta);
+      const yL = 60 - 80 * Math.sin(theta);
+      const xR = 150 + 80 * Math.cos(theta);
+      const yR = 60 + 80 * Math.sin(theta);
+      
+      const rL = Math.max(5, Math.min(15, 5 + Math.log2(passCount || 1) * 1.5));
+      const rR = Math.max(5, Math.min(15, 5 + Math.log2(failCount || 1) * 1.5));
+      
+      let balanceColor = 'var(--text-muted)';
+      let balanceText = `Balanced (${fmt(avgDeltaU)} Δu)`;
+      if (avgDeltaU > 0.05) {
+        balanceColor = 'var(--reality-red)';
+        balanceText = `Deception Heavy (${fmt(avgDeltaU)} Δu)`;
+      } else if (avgDeltaU < -0.05) {
+        balanceColor = 'var(--pass-green)';
+        balanceText = `Truth Heavy (${fmt(avgDeltaU)} Δu)`;
+      }
+      
+      return `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; min-height: 200px;">
+          <svg viewBox="0 0 300 200" style="width: 100%; max-width: 280px; display: block; overflow: visible;">
+            <!-- Stand Base -->
+            <rect x="110" y="170" width="80" height="8" rx="2" fill="var(--text-muted)" opacity="0.7"/>
+            <rect x="125" y="162" width="50" height="8" rx="1" fill="var(--text-muted)" opacity="0.6"/>
+            
+            <!-- Dial / Gauge behind pointer -->
+            <path d="M 120 48 A 30 30 0 0 1 180 48" fill="none" stroke="var(--panel-border)" stroke-width="2" stroke-dasharray="2,2"/>
+            <line x1="150" y1="18" x2="150" y2="24" stroke="var(--panel-border)" stroke-width="1.5"/>
+            
+            <!-- Pillar Stand -->
+            <line x1="150" y1="60" x2="150" y2="162" stroke="var(--text-muted)" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="150" cy="60" r="6" fill="var(--text-main)"/>
+            
+            <!-- Rotated Beam & Pointer Group -->
+            <g transform="rotate(${angleDeg}, 150, 60)">
+              <!-- Pointer (needle pointing up/down) -->
+              <line x1="150" y1="60" x2="150" y2="25" stroke="var(--claim-yellow)" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="150" cy="25" r="2" fill="var(--claim-yellow)"/>
+              
+              <!-- Main Beam Crossbar -->
+              <line x1="70" y1="60" x2="230" y2="60" stroke="var(--text-main)" stroke-width="3" stroke-linecap="round"/>
+              
+              <!-- Hook Rings -->
+              <circle cx="70" cy="60" r="3" fill="none" stroke="var(--text-main)" stroke-width="1.5"/>
+              <circle cx="230" cy="60" r="3" fill="none" stroke="var(--text-main)" stroke-width="1.5"/>
+            </g>
+            
+            <!-- Left Pan (Truth, Green) - Translates vertically to follow beam tip -->
+            <g transform="translate(${xL.toFixed(1)}, ${yL.toFixed(1)})">
+              <line x1="0" y1="0" x2="-16" y2="50" stroke="var(--text-muted)" stroke-width="1" opacity="0.5"/>
+              <line x1="0" y1="0" x2="16" y2="50" stroke="var(--text-muted)" stroke-width="1" opacity="0.5"/>
+              <path d="M -24 50 C -24 58, 24 58, 24 50 Z" fill="rgba(16, 185, 129, 0.08)" stroke="var(--pass-green)" stroke-width="1.5"/>
+              <circle cx="0" cy="46" r="${rL.toFixed(1)}" fill="var(--pass-green)" opacity="0.8" style="filter: drop-shadow(0 0 5px var(--pass-glow));"/>
+              <text x="0" y="36" font-size="8.5" fill="var(--pass-green)" font-weight="700" font-family="var(--font-outfit)" text-anchor="middle">Truth (${passCount})</text>
+            </g>
+            
+            <!-- Right Pan (Deception, Red) - Translates vertically to follow beam tip -->
+            <g transform="translate(${xR.toFixed(1)}, ${yR.toFixed(1)})">
+              <line x1="0" y1="0" x2="-16" y2="50" stroke="var(--text-muted)" stroke-width="1" opacity="0.5"/>
+              <line x1="0" y1="0" x2="16" y2="50" stroke="var(--text-muted)" stroke-width="1" opacity="0.5"/>
+              <path d="M -24 50 C -24 58, 24 58, 24 50 Z" fill="rgba(239, 68, 68, 0.08)" stroke="var(--reality-red)" stroke-width="1.5"/>
+              <circle cx="0" cy="46" r="${rR.toFixed(1)}" fill="var(--reality-red)" opacity="0.8" style="filter: drop-shadow(0 0 5px var(--fail-glow));"/>
+              <text x="0" y="36" font-size="8.5" fill="var(--reality-red)" font-weight="700" font-family="var(--font-outfit)" text-anchor="middle">Hype (${failCount})</text>
+            </g>
+          </svg>
+          <div style="font-size: 0.85rem; font-weight: 700; color: ${balanceColor}; text-shadow: 0 0 10px rgba(0,0,0,0.5); font-family: var(--font-outfit); text-align: center; margin-top: 4px;">
+            Scale State: ${balanceText}
+          </div>
+        </div>
+      `;
     }
 
     function auditStats(rows) {
@@ -2117,59 +2461,182 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       return parts[parts.length - 1] || null;
     }
     function storyDate(s) {
+      // Limit dates to a valid operation window (e.g. 2025-09-01 to today) to avoid outliers
+      const minDate = new Date('2025-09-01').getTime();
+      const maxDate = Date.now() + 24 * 3600 * 1000;
+      
+      const checkRange = (d) => {
+        if (!d) return null;
+        const t = d.getTime();
+        if (t >= minDate && t <= maxDate) return d;
+        return null;
+      };
+
       // Prefer the source/target post time (the actual event), then our post, then mtime.
-      let d = tidToDate(rkeyFromUrl(s.target_url));
-      if (!d && Array.isArray(s.post_urls) && s.post_urls.length) d = tidToDate(rkeyFromUrl(s.post_urls[0]));
-      if (!d && s.created_at) { const c = new Date(s.created_at.replace(' ', 'T')); if (!isNaN(c)) d = c; }
+      let d = checkRange(tidToDate(rkeyFromUrl(s.target_url)));
+      if (!d && Array.isArray(s.post_urls) && s.post_urls.length) d = checkRange(tidToDate(rkeyFromUrl(s.post_urls[0])));
+      if (!d && s.created_at) {
+        const c = new Date(s.created_at.replace(' ', 'T'));
+        if (!isNaN(c)) d = checkRange(c);
+      }
       return d;
     }
 
     function auditTimeSeries(stories) {
-      const pts = stories.map(s => ({ d: storyDate(s), ru: s.real_u, du: s.claim_u - s.real_u }))
-        .filter(p => p.d).sort((a,b) => a.d - b.d);
-      if (pts.length < 2) return '<div style="color:var(--text-muted); font-size:0.82rem;">Not enough dated stories.</div>';
+      const allPts = stories
+        .filter(s => s.real_u !== null && s.real_u !== undefined && s.claim_u !== null && s.claim_u !== undefined)
+        .map(s => ({ d: storyDate(s), ru: s.real_u, du: s.claim_u - s.real_u }))
+        .filter(p => p.d)
+        .sort((a,b) => a.d - b.d);
+      if (allPts.length === 0) return '<div style="color:var(--text-muted); font-size:0.82rem; padding: 1rem 0; text-align: center;">Not enough dated stories.</div>';
 
-      // Bin by week
-      const binMs = 7 * 24 * 3600 * 1000;
-      const t0 = pts[0].d.getTime();
+      const latestTime = allPts[allPts.length - 1].d.getTime();
+      let t0;
+      let binMs;
+      
+      if (_trendInterval === 'day') {
+        t0 = latestTime - 24 * 3600 * 1000;
+        binMs = 3600 * 1000; // 1 hour
+      } else if (_trendInterval === 'week') {
+        t0 = latestTime - 7 * 24 * 3600 * 1000;
+        binMs = 24 * 3600 * 1000; // 1 day
+      } else if (_trendInterval === 'month') {
+        t0 = latestTime - 30 * 24 * 3600 * 1000;
+        binMs = 24 * 3600 * 1000; // 1 day
+      } else { // 'all'
+        t0 = allPts[0].d.getTime();
+        binMs = 7 * 24 * 3600 * 1000; // 1 week
+      }
+
+      const pts = allPts.filter(p => p.d.getTime() >= t0);
+      if (pts.length === 0) return '<div style="color:var(--text-muted); font-size:0.82rem; padding: 1rem 0; text-align: center;">No stories found in the selected date scope.</div>';
+
       const bins = {};
       pts.forEach(p => {
         const b = Math.floor((p.d.getTime() - t0) / binMs);
-        (bins[b] = bins[b] || []).push(p);
+        if (b >= 0) {
+          (bins[b] = bins[b] || []).push(p);
+        }
       });
-      const series = Object.keys(bins).map(Number).sort((a,b)=>a-b).map(b => ({
-        x: b,
-        ru: avg(bins[b].map(p => p.ru)),
-        du: avg(bins[b].map(p => p.du)),
-        n: bins[b].length,
-      }));
 
-      const W = 520, H = 160, padL = 30, padB = 18, padT = 10, padR = 10;
-      const xMax = series[series.length-1].x || 1;
-      const yMin = -2, yMax = 3;
+      const series = Object.keys(bins).map(Number).sort((a,b)=>a-b).map(b => {
+        const binStart = new Date(t0 + b * binMs);
+        const binEnd = new Date(t0 + (b + 1) * binMs - 1);
+        
+        let dateRange = "";
+        if (_trendInterval === 'day') {
+          dateRange = binStart.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+        } else if (_trendInterval === 'month' || _trendInterval === 'week') {
+          dateRange = binStart.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+        } else { // 'all'
+          dateRange = binStart.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) + 
+                      ' - ' + 
+                      binEnd.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        return {
+          x: b,
+          ru: avg(bins[b].map(p => p.ru)),
+          du: avg(bins[b].map(p => p.du)),
+          n: bins[b].length,
+          dateRange: dateRange
+        };
+      });
+
+      const W = 520, H = 160, padL = 35, padB = 22, padT = 15, padR = 15;
+      
+      let xMax;
+      if (_trendInterval === 'day') xMax = 24;
+      else if (_trendInterval === 'week') xMax = 7;
+      else if (_trendInterval === 'month') xMax = 30;
+      else xMax = Math.max(1, Math.floor((latestTime - t0) / binMs));
+
+      const yMin = -2.2, yMax = 3.2;
       const sx = x => padL + (x / (xMax||1)) * (W - padL - padR);
       const sy = y => padT + (1 - (y - yMin)/(yMax - yMin)) * (H - padT - padB);
 
-      const line = (key, color) => series.map((p,i) =>
+      const line = (key) => series.map((p,i) =>
         (i===0?'M':'L') + sx(p.x).toFixed(1) + ' ' + sy(p[key]).toFixed(1)).join(' ');
 
       const zeroY = sy(0);
-      const startLbl = pts[0].d.toISOString().slice(0,10);
-      const endLbl = pts[pts.length-1].d.toISOString().slice(0,10);
+      
+      let startLbl, endLbl;
+      if (_trendInterval === 'day') {
+        startLbl = new Date(t0).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+        endLbl = new Date(latestTime).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+      } else if (_trendInterval === 'week' || _trendInterval === 'month') {
+        startLbl = new Date(t0).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+        endLbl = new Date(latestTime).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      } else {
+        startLbl = new Date(t0).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+        endLbl = new Date(latestTime).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      }
 
-      return `<svg viewBox="0 0 ${W} ${H+14}" style="width:100%; display:block;">
-        <line x1="${padL}" y1="${zeroY}" x2="${W-padR}" y2="${zeroY}" stroke="var(--panel-border)" stroke-dasharray="3,3"/>
-        <text x="2" y="${sy(2)+3}" font-size="8" fill="var(--text-muted)">+2</text>
-        <text x="2" y="${zeroY+3}" font-size="8" fill="var(--text-muted)">0</text>
-        <text x="2" y="${sy(-2)+3}" font-size="8" fill="var(--text-muted)">-2</text>
-        <path d="${line('ru','x')}" fill="none" stroke="var(--pass-green)" stroke-width="1.5"/>
-        <path d="${line('du','x')}" fill="none" stroke="var(--claim-yellow)" stroke-width="1.5"/>
-        <text x="${padL}" y="${H+8}" font-size="8" fill="var(--text-muted)">${startLbl}</text>
-        <text x="${W-padR}" y="${H+8}" font-size="8" fill="var(--text-muted)" text-anchor="end">${endLbl}</text>
-        <text x="${W-padR}" y="${padT+6}" font-size="9" fill="var(--pass-green)" text-anchor="end">reality_u</text>
-        <text x="${W-padR}" y="${padT+18}" font-size="9" fill="var(--claim-yellow)" text-anchor="end">Δu (gap)</text>
-      </svg>
-      <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.3rem;">Weekly averages, ${series.length} bins across ${pts.length} dated stories. Rising Δu = growing claim/reality gap.</div>`;
+      // Serialize series to embed in SVG data attribute for hover tracker
+      const serializedSeries = JSON.stringify(series).replace(/'/g, "&apos;");
+
+      return `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; gap:0.3rem; align-items:center;">
+            <span style="font-size:0.75rem; color:var(--text-muted); margin-right:4px;">Period:</span>
+            <button onclick="setTrendInterval('day')" class="filter-pill ${_trendInterval==='day'?'active':''}" style="font-size:0.7rem; padding:0.15rem 0.5rem;">Last 24h</button>
+            <button onclick="setTrendInterval('week')" class="filter-pill ${_trendInterval==='week'?'active':''}" style="font-size:0.7rem; padding:0.15rem 0.5rem;">Last 7d</button>
+            <button onclick="setTrendInterval('month')" class="filter-pill ${_trendInterval==='month'?'active':''}" style="font-size:0.7rem; padding:0.15rem 0.5rem;">Last 30d</button>
+            <button onclick="setTrendInterval('all')" class="filter-pill ${_trendInterval==='all'?'active':''}" style="font-size:0.7rem; padding:0.15rem 0.5rem;">All Time</button>
+          </div>
+          <div style="display:flex; gap:0.8rem; align-items:center; font-size:0.75rem;">
+            <label style="cursor:pointer; display:flex; align-items:center; gap:0.3rem;">
+              <input type="checkbox" ${_showRealityU?'checked':''} onchange="toggleTrendLine('realityU', this.checked)" style="accent-color:var(--pass-green); width:12px; height:12px;">
+              <span style="color:var(--pass-green); font-weight:600;">reality_u</span>
+            </label>
+            <label style="cursor:pointer; display:flex; align-items:center; gap:0.3rem;">
+              <input type="checkbox" ${_showDeltaU?'checked':''} onchange="toggleTrendLine('deltaU', this.checked)" style="accent-color:var(--claim-yellow); width:12px; height:12px;">
+              <span style="color:var(--claim-yellow); font-weight:600;">Δu (gap)</span>
+            </label>
+          </div>
+        </div>
+
+        <div style="position:relative;">
+          <svg viewBox="0 0 ${W} ${H+14}" 
+               data-series='${serializedSeries}' 
+               onmousemove="handleTrendHover(event, this)" 
+               onmouseleave="handleTrendLeave(this)"
+               style="width:100%; display:block; overflow:visible; cursor:crosshair;">
+            <!-- Horizontal grid lines -->
+            <line x1="${padL}" y1="${sy(2)}" x2="${W-padR}" y2="${sy(2)}" stroke="var(--panel-border)" stroke-width="0.5" opacity="0.3"/>
+            <line x1="${padL}" y1="${sy(1)}" x2="${W-padR}" y2="${sy(1)}" stroke="var(--panel-border)" stroke-width="0.5" opacity="0.3"/>
+            <line x1="${padL}" y1="${sy(0)}" x2="${W-padR}" y2="${sy(0)}" stroke="var(--panel-border)" stroke-width="0.5" opacity="0.3"/>
+            <line x1="${padL}" y1="${sy(-1)}" x2="${W-padR}" y2="${sy(-1)}" stroke="var(--panel-border)" stroke-width="0.5" opacity="0.3"/>
+            <line x1="${padL}" y1="${sy(-2)}" x2="${W-padR}" y2="${sy(-2)}" stroke="var(--panel-border)" stroke-width="0.5" opacity="0.3"/>
+
+            <line x1="${padL}" y1="${zeroY}" x2="${W-padR}" y2="${zeroY}" stroke="var(--panel-border)" stroke-dasharray="3,3" stroke-width="1"/>
+            
+            <text x="2" y="${sy(2)+3}" font-size="8" fill="var(--text-muted)">+2</text>
+            <text x="2" y="${sy(0)+3}" font-size="8" fill="var(--text-muted)">0</text>
+            <text x="2" y="${sy(-2)+3}" font-size="8" fill="var(--text-muted)">-2</text>
+            
+            <!-- Lines -->
+            <path id="trend-path-ru" d="${line('ru')}" fill="none" stroke="var(--pass-green)" stroke-width="1.8" style="display: ${_showRealityU ? 'block' : 'none'}; transition: all 0.2s;"/>
+            <path id="trend-path-du" d="${line('du')}" fill="none" stroke="var(--claim-yellow)" stroke-width="1.8" style="display: ${_showDeltaU ? 'block' : 'none'}; transition: all 0.2s;"/>
+            
+            <!-- Individual vertices -->
+            ${series.map(p => `
+              <circle class="trend-dot-ru" cx="${sx(p.x).toFixed(1)}" cy="${sy(p.ru).toFixed(1)}" r="2" fill="var(--panel-bg)" stroke="var(--pass-green)" stroke-width="1.2" style="display: ${_showRealityU ? 'block' : 'none'};"/>
+              <circle class="trend-dot-du" cx="${sx(p.x).toFixed(1)}" cy="${sy(p.du).toFixed(1)}" r="2" fill="var(--panel-bg)" stroke="var(--claim-yellow)" stroke-width="1.2" style="display: ${_showDeltaU ? 'block' : 'none'};"/>
+            `).join('')}
+
+            <!-- Interactive Guide Elements -->
+            <line id="trend-guide" x1="0" y1="${padT}" x2="0" y2="${H-padB}" stroke="rgba(255,255,255,0.25)" stroke-dasharray="2,2" stroke-width="1" style="display:none; pointer-events:none;"/>
+            <circle id="trend-marker-ru" r="4.5" fill="var(--pass-green)" stroke="#fff" stroke-width="1.5" style="display:none; pointer-events:none;"/>
+            <circle id="trend-marker-du" r="4.5" fill="var(--claim-yellow)" stroke="#fff" stroke-width="1.5" style="display:none; pointer-events:none;"/>
+
+            <!-- X Axis Dates -->
+            <text x="${padL}" y="${H+2}" font-size="8" fill="var(--text-muted)">${startLbl}</text>
+            <text x="${W-padR}" y="${H+2}" font-size="8" fill="var(--text-muted)" text-anchor="end">${endLbl}</text>
+          </svg>
+        </div>
+        <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.3rem;">Date scope: ${_trendInterval === 'day' ? 'Last 24 hours' : _trendInterval === 'week' ? 'Last 7 days' : _trendInterval === 'month' ? 'Last 30 days' : 'All time'}. Hover chart to track precise coordinates.</div>
+      `;
     }
 
     function auditScatter(stories) {
@@ -2178,7 +2645,8 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       const xMin=-1, xMax=3, yMin=-2, yMax=2;
       const sx = x => pad + ((Math.max(xMin,Math.min(xMax,x)) - xMin)/(xMax-xMin))*(W-2*pad);
       const sy = y => pad + (1-(Math.max(yMin,Math.min(yMax,y)) - yMin)/(yMax-yMin))*(H-2*pad);
-      const dots = stories.map(s => {
+      const validStories = stories.filter(s => s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined && s.claim_psi !== null && s.claim_psi !== undefined && s.real_psi !== null && s.real_psi !== undefined);
+      const dots = validStories.map(s => {
         const du = s.claim_u - s.real_u;
         const dpsi = s.real_psi - s.claim_psi;
         const color = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
@@ -2197,29 +2665,89 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
 
     function auditCalibration(stories) {
       const W = 300, H = 300, pad = 30;
-      const sc = v => pad + ((Math.max(-1.5,Math.min(1.5,v))+1.5)/3)*(W-2*pad);
+      // Inverted so +u is on the left and -u is on the right
+      const sc = v => pad + (1 - ((Math.max(-1.5,Math.min(1.5,v))+1.5)/3))*(W-2*pad);
       const scY = v => pad + (1-((Math.max(-1.5,Math.min(1.5,v))+1.5)/3))*(H-2*pad);
-      const sample = stories.length > 120 ? stories.filter((_,i)=>i%Math.ceil(stories.length/120)===0) : stories;
+      const validStories = stories.filter(s => s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined && s.claim_psi !== null && s.claim_psi !== undefined && s.real_psi !== null && s.real_psi !== undefined);
+      
+      let sample;
+      if (_calibSampleSize === 'all') {
+        sample = validStories;
+      } else {
+        const targetSize = _calibSampleSize;
+        if (validStories.length > targetSize) {
+          const step = Math.ceil(validStories.length / targetSize);
+          sample = validStories.filter((_, i) => i % step === 0);
+        } else {
+          sample = validStories;
+        }
+      }
+      
+      // Determine opacity based on sample size to keep chart readable
+      let lineOpacity = 0.4;
+      let dotOpacity = 0.6;
+      if (sample.length > 1000) {
+        lineOpacity = 0.08;
+        dotOpacity = 0.15;
+      } else if (sample.length > 500) {
+        lineOpacity = 0.15;
+        dotOpacity = 0.25;
+      } else if (sample.length > 200) {
+        lineOpacity = 0.25;
+        dotOpacity = 0.4;
+      }
+      
       const arrows = sample.map(s => {
-        const x1=sc(s.claim_psi), y1=scY(s.claim_u), x2=sc(s.real_psi), y2=scY(s.real_u);
+        // Morality (u) is horizontal (X), Will (psi) is vertical (Y)
+        const x1=sc(s.claim_u), y1=scY(s.claim_psi), x2=sc(s.real_u), y2=scY(s.real_psi);
         const color = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
-        return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${color}" stroke-width="0.8" opacity="0.4"/>
-                <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="1.6" fill="${color}" opacity="0.6"/>`;
+        return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${color}" stroke-width="0.8" opacity="${lineOpacity}"/>
+                <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="1.6" fill="${color}" opacity="${dotOpacity}"/>`;
       }).join('');
-      return `<svg viewBox="0 0 ${W} ${H}" style="width:100%; max-width:${W}px; display:block;">
-        <line x1="${sc(0)}" y1="${pad}" x2="${sc(0)}" y2="${H-pad}" stroke="var(--panel-border)"/>
-        <line x1="${pad}" y1="${scY(0)}" x2="${W-pad}" y2="${scY(0)}" stroke="var(--panel-border)"/>
-        ${arrows}
-        <text x="${W-pad}" y="${scY(0)-4}" font-size="9" fill="var(--text-muted)" text-anchor="end">ψ →</text>
-        <text x="${sc(0)+4}" y="${pad+6}" font-size="9" fill="var(--text-muted)">+u (good)</text>
-        <text x="${sc(0)+4}" y="${H-pad-2}" font-size="9" fill="var(--text-muted)">−u (evil)</text>
-      </svg>
-      <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.3rem;">Arrow tail = stated claim, head = assessed reality (${sample.length} sampled). Downward arrows = reality sinks below the claim.</div>`;
+      
+      return `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; font-size:0.75rem;">
+          <span style="color:var(--text-muted);">Showing ${sample.length} of ${validStories.length} stories</span>
+          <div style="display:flex; align-items:center; gap:0.4rem;">
+            <span style="color:var(--text-muted);">Sample size:</span>
+            <select onchange="setCalibSampleSize(this.value)" style="background:rgba(0,0,0,0.2); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer;">
+              <option value="120" ${_calibSampleSize===120?'selected':''}>120 (Fast)</option>
+              <option value="300" ${_calibSampleSize===300?'selected':''}>300 (Detailed)</option>
+              <option value="500" ${_calibSampleSize===500?'selected':''}>500 (Dense)</option>
+              <option value="all" ${_calibSampleSize==='all'?'selected':''}>All (${validStories.length})</option>
+            </select>
+          </div>
+        </div>
+        <svg viewBox="0 0 ${W} ${H}" style="width:100%; max-width:${W}px; display:block; margin: 0 auto;">
+          <line x1="${sc(0)}" y1="${pad}" x2="${sc(0)}" y2="${H-pad}" stroke="var(--panel-border)"/>
+          <line x1="${pad}" y1="${scY(0)}" x2="${W-pad}" y2="${scY(0)}" stroke="var(--panel-border)"/>
+          ${arrows}
+          <text x="${pad}" y="${scY(0)-4}" font-size="9" fill="var(--text-muted)">+u</text>
+          <text x="${W-pad}" y="${scY(0)-4}" font-size="9" fill="var(--text-muted)" text-anchor="end">−u</text>
+          <text x="${sc(0)+4}" y="${pad+6}" font-size="9" fill="var(--text-muted)">+ψ</text>
+          <text x="${sc(0)+4}" y="${H-pad-2}" font-size="9" fill="var(--text-muted)">−ψ</text>
+        </svg>
+        <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.3rem;">Arrow tail = stated claim, head = assessed reality. Downward/rightward arrows = reality sinks below the claim.</div>
+      `;
+    }
+
+    function toggleActorDropdown(actorId) {
+      const el = document.getElementById(actorId);
+      const arrow = document.getElementById('arrow-' + actorId);
+      if (!el) return;
+      if (el.style.display === 'none') {
+        el.style.display = 'block';
+        if (arrow) arrow.style.transform = 'rotate(90deg)';
+      } else {
+        el.style.display = 'none';
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
+      }
     }
 
     function _statsForGroups(stories, keyFn) {
       const groups = {};
       stories.forEach(s => {
+        if (s.claim_u === null || s.claim_u === undefined || s.real_u === null || s.real_u === undefined) return;
         const keys = keyFn(s);
         keys.forEach(k => {
           if (!k) return;
@@ -2233,44 +2761,170 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       });
     }
 
-    function _hypocrisyTable(rows, labelHead, minN, maxRows) {
-      maxRows = maxRows || 60;
-      const filtered = rows.filter(r => r.n >= minN).sort((a,b) => b.avgDelta - a.avgDelta);
-      const belowThreshold = rows.length - filtered.length;
-      if (!filtered.length) return '<div style="color:var(--text-muted); font-size:0.82rem;">No entries with enough stories yet.</div>';
-      const shown = filtered.slice(0, maxRows);
-      const hidden = filtered.length - shown.length;
-      return `<div style="display:grid; grid-template-columns:1fr auto auto auto; gap:0.2rem 0.8rem; font-size:0.78rem; align-items:center;">
-        <span style="color:var(--text-muted); font-weight:600;">${labelHead}</span>
-        <span style="color:var(--text-muted); text-align:right;">n</span>
-        <span style="color:var(--text-muted); text-align:right;">avg Δu</span>
-        <span style="color:var(--text-muted); text-align:right;">σ (consistency)</span>
-        ${shown.map(r => {
-          const color = r.avgDelta >= 0 ? 'var(--reality-red)' : 'var(--pass-green)';
-          return `<span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${r.key}</span>
+    function _hypocrisyTable(stories, rows, labelHead, minN) {
+      let filtered = rows.filter(r => r.n >= minN);
+      
+      const isActor = labelHead.includes('Actor');
+      const tableType = isActor ? 'actor' : 'outlet';
+      const sortCol   = isActor ? _actorSortCol   : _outletSortCol;
+      const sortDir   = isActor ? _actorSortDir   : _outletSortDir;
+      const sort2Col  = isActor ? _actorSort2Col  : _outletSort2Col;
+      const sort2Dir  = isActor ? _actorSort2Dir  : _outletSort2Dir;
+      const currentMinN = isActor ? _actorMinN : _outletMinN;
+      
+      const onMinNChange = isActor ? 'setActorMinN(this.value)' : 'setOutletMinN(this.value)';
+      const clickFn = isActor ? 'handleHeaderClick(\'actor\', ' : 'handleHeaderClick(\'outlet\', ';
+
+      // Sort rows: combo presets override single-column sort
+      // Two-level sort: primary (header click) then secondary (Then by dropdowns)
+      filtered.sort((a, b) => {
+        // Primary
+        let primary;
+        if (sortCol === 'key') {
+          primary = sortDir === 'asc'
+            ? a.key.toLowerCase().localeCompare(b.key.toLowerCase())
+            : b.key.toLowerCase().localeCompare(a.key.toLowerCase());
+        } else {
+          const pa = _colVal(a, sortCol), pb = _colVal(b, sortCol);
+          primary = sortDir === 'asc' ? pa - pb : pb - pa;
+        }
+        if (primary !== 0) return primary;
+        // Secondary tiebreaker
+        if (sort2Col === 'none') return 0;
+        const sa = _colVal(a, sort2Col), sb = _colVal(b, sort2Col);
+        return sort2Dir === 'asc' ? sa - sb : sb - sa;
+      });
+
+      const getIndicator = (col) => {
+        if (sortCol !== col) return '';
+        const dir = sortDir === 'asc' ? ' ▲' : ' ▼';
+        // Show secondary indicator if active on this col
+        const sec = (sort2Col === col) ? (sort2Dir === 'asc' ? '₂▲' : '₂▼') : '';
+        return dir + sec;
+      };
+
+      // "Then by" col options (exclude primary sort col so it's not redundant)
+      const sort2ColOptions = [
+        { val: 'none',          label: '—' },
+        { val: 'n',             label: 'n' },
+        { val: 'avgDelta',      label: 'avg Δu' },
+        { val: 'consistency',   label: 'σ' },
+      ].filter(o => o.val === 'none' || o.val !== sortCol);
+      const sort2ColSelect = `<select onchange="setSort2('${tableType}','col',this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
+        ${sort2ColOptions.map(o => `<option value="${o.val}" ${sort2Col===o.val?'selected':''}>${o.label}</option>`).join('')}
+      </select>`;
+      const sort2DirSelect = sort2Col !== 'none' ? `<select onchange="setSort2('${tableType}','dir',this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
+        <option value="asc"  ${sort2Dir==='asc' ?'selected':''}>▲ asc</option>
+        <option value="desc" ${sort2Dir==='desc'?'selected':''}>▼ desc</option>
+      </select>` : '';
+
+      let tableContent = '';
+      if (!filtered.length) {
+        tableContent = '<div style="grid-column: span 4; color:var(--text-muted); text-align:center; padding: 1rem 0;">No entries matching filters.</div>';
+      } else {
+        tableContent = filtered.map((r, idx) => {
+          // Color good/neutral averages (delta <= 0) green, deceptive (delta > 0) red
+          const color = r.avgDelta > 0 ? 'var(--reality-red)' : 'var(--pass-green)';
+          const cleanKey = r.key.replace(/[^a-zA-Z0-9]/g, '-');
+          const dropdownId = `dropdown-${labelHead.replace(/[^a-zA-Z0-9]/g, '-')}-${cleanKey}-${idx}`;
+          
+          const related = stories.filter(s => {
+            if (isActor) {
+              return Array.isArray(s.actors) && s.actors.some(a => a.toLowerCase() === r.key.toLowerCase());
+            } else {
+              try {
+                const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '');
+                return host.toLowerCase() === r.key.toLowerCase();
+              } catch(e) {
+                return false;
+              }
+            }
+          });
+
+          return `
+            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}')">
+              <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px;">▶</span>${r.key}
+            </span>
             <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
             <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${fmt(r.avgDelta)}</span>
-            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>`;
-        }).join('')}
-      </div>
-      <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.5rem;">
-        ${filtered.length} entries with ≥${minN} stories${hidden ? ' (showing top ' + maxRows + ', +' + hidden + ' more)' : ''}${belowThreshold ? '; ' + belowThreshold + ' one-off entries below threshold not shown' : ''}.<br>
-        High avg Δu = systematically overclaims. Low σ = <em>reliably</em> hypocritical (consistent gap); high σ = erratic.</div>`;
+            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>
+            
+            <div id="${dropdownId}" style="grid-column: span 4; display:none; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
+              <div style="display:flex; flex-direction:column; gap:0.3rem;">
+                ${related.map(s => {
+                  const sDelta = (s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined) ? s.claim_u - s.real_u : 0;
+                  const sColor = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
+                  
+                  // Link indicators
+                  const sourceLink = s.link ? `<a href="${s.link}" target="_blank" onclick="event.stopPropagation()" title="Original Article" style="color:var(--bsky-blue); text-decoration:none; margin-right:6px;">🔗</a>` : '';
+                  const bskyUrl = (s.post_urls && s.post_urls.length) ? s.post_urls[0] : (s.target_url ? s.target_url : null);
+                  const bskyLink = bskyUrl ? `<a href="${bskyUrl}" target="_blank" onclick="event.stopPropagation()" title="Bluesky Thread" style="color:#0085ff; text-decoration:none; margin-right:6px;">🦋</a>` : '';
+                  const linksSpan = (sourceLink || bskyLink) ? `<span style="font-size:0.85rem; display:inline-flex; align-items:center;">${sourceLink}${bskyLink}</span>` : '';
+
+                  return `
+                    <div data-story-id="${s.id}" style="display:flex; justify-content:space-between; align-items:center; padding:0.2rem 0.4rem; border-radius:4px; cursor:pointer;"
+                         onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
+                      <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:70%; display:inline-flex; align-items:center;">
+                        ${linksSpan}
+                        <span style="text-decoration:underline; color:var(--text-muted);">${s.subject || s.id}</span>
+                      </span>
+                      <span style="font-family:var(--font-mono); color:${sColor}; font-size:0.7rem; white-space:nowrap; margin-left:0.5rem;">
+                        u: ${fmt(s.real_u)} | Δu: ${fmt(sDelta)}
+                      </span>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+      
+      return `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; font-size:0.75rem; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
+            <span style="color:var(--text-muted);">Then by:</span>
+            ${sort2ColSelect}
+            ${sort2DirSelect}
+          </div>
+          <div style="display:flex; align-items:center; gap:0.4rem;">
+            <span style="color:var(--text-muted);">Min n:</span>
+            <select onchange="${onMinNChange}" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit);">
+              <option value="1" ${currentMinN===1?'selected':''}>1+</option>
+              <option value="2" ${currentMinN===2?'selected':''}>2+</option>
+              <option value="5" ${currentMinN===5?'selected':''}>5+</option>
+              <option value="10" ${currentMinN===10?'selected':''}>10+</option>
+              <option value="25" ${currentMinN===25?'selected':''}>25+</option>
+            </select>
+          </div>
+        </div>
+        <div style="max-height: 400px; overflow-y: auto; padding-right: 0.5rem; border: 1px solid var(--panel-border); border-radius: 6px; background: rgba(0,0,0,0.12); margin-bottom: 0.5rem;">
+          <div style="display:grid; grid-template-columns:1fr auto auto auto; gap:0.2rem 0.8rem; font-size:0.78rem; align-items:center; padding: 0.5rem;">
+            <!-- Clickable Headers (Standard Column Sorting) -->
+            <span style="color:var(--text-muted); font-weight:600; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'key')">${labelHead}${getIndicator('key')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'n')">n${getIndicator('n')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'avgDelta')">avg Δu${getIndicator('avgDelta')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'consistency')">σ (consistency)${getIndicator('consistency')}</span>
+            
+            ${tableContent}
+          </div>
+        </div>
+      `;
     }
 
     function auditActorLeaderboard(stories) {
       const hasActors = stories.some(s => Array.isArray(s.actors) && s.actors.length);
       if (!hasActors) return '<div style="color:var(--text-muted); font-size:0.82rem;">No actor tags yet. Run enrich_stories.py (backfill) then rebuild_registries.py.</div>';
       const rows = _statsForGroups(stories, s => Array.isArray(s.actors) ? s.actors : []);
-      return _hypocrisyTable(rows, 'Actor / Entity', 2);
+      return _hypocrisyTable(stories, rows, 'Actor / Entity', _actorMinN);
     }
 
     function auditOutletHypocrisy(stories) {
       const rows = _statsForGroups(stories, s => {
-        try { return [new URL(s.link || 'https://unknown').hostname.replace(/^www\./,'')]; }
-        catch(e){ return []; }
+        try { return [new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '')]; }
+        catch(e) { return []; }
       });
-      return _hypocrisyTable(rows, 'Source Outlet', 2);
+      return _hypocrisyTable(stories, rows, 'Source Outlet', _outletMinN);
     }
 
     function auditStoryList(stories, type) {

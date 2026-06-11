@@ -1,39 +1,41 @@
-# Walkthrough: Enhanced Trajectory Graphs and Change-Tracking Push Flag Script
+# Walkthrough: Interactive Leaderboard Controls, Timescale Fix, and Expanded Calibration Chart
 
-This document summarizes the changes made to update the trajectory graph scale axes, coordinate titles, evaluator guidelines, and provide change-tracking validation.
+This document details the updates made to the [control_panel.html](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/control_panel.html) to enhance the usability, reliability, and precision of the Audit & Trends dashboard.
 
-## Changes Made
+## Key Changes Made
 
-### 1. Trajectory Graph Coordinate Axis Labels & Coordinate Displays
-* Modified [generate_graph.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/generate_graph.py):
-  - Set explicit `xticks` at `[2.0, 1.0, 0.5, 0.0, -0.5, -1.0, -2.0]` mapped to multi-line labels: *Everyone (+2.0), Others (+1.0), Other (+0.5), No One (0.0), My Group (-0.5), Me (-1.0), Only Me (-2.0)*.
-  - Set explicit `yticks` at `[2.0, 1.0, 0.0, -1.0, -2.0]` mapped to labels: *Active-Active (+2.0), Passive-Active (+1.0), Neutral (0.0), Passive-Passive (-1.0), Active-Passive (-2.0)*.
-  - Appended a third line to the graph title rendering the exact numerical coordinates for Stated Claim and Actual Reality: `Stated: (x, y) | Actual: (x, y)`.
-  - Added `plt.close(fig)` to release pyplot memory after rendering each graph to prevent figure memory leaks.
-  - Removed old Good/Bad Preference text label clutter from the grid.
+### 1. Interactive Sorting & Filtering for Hypocrisy Leaderboards
+We replaced the static list rendering with reactive, stateful controls above the **Actor / Entity** and **Source Outlet** tables:
+* **Excel-Style Clickable Column Headers**: Headers can now be clicked directly to sort:
+  * **Actor / Entity** or **Source Outlet**: Sorts alphabetically.
+  * **n**: Sorts by story count.
+  * **avg Δu**: Sorts by average deception gap.
+  * **σ (consistency)**: Sorts by consistency (standard deviation of deception gap).
+* **Ascending/Descending Toggle**: Clicking the active sort column header toggles between ascending (`▲`) and descending (`▼`) directions.
+* **Green Color-Coding for Good/Honest Metrics**: Updated average deception gap coloring so that any honest or neutral average values ($\Delta u \le 0$, like `+0.00` or negative values) are colored green (`var(--pass-green)`), while deceptive values ($\Delta u > 0$) remain red.
+* **Minimum Story Count Filter**: Allows filtering out noise by only displaying entities with a minimum of $1+$, $2+$, $5+$, $10+$, or $25+$ stories.
 
-### 2. Gnostic Actualism Evaluator Guidelines
-* Modified [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md):
-  - Updated Section "Phase 2 — Vector Verification" to map the exact coordinate scale ticks and definitions to assist evaluators during convergence checks.
+### 2. Comprehensive Metric Legends & Reference Panel
+* Added a detailed, responsive legend grid at the very top of the Audit tab explaining all main metrics for easy reference:
+  * **Morality & Utility ($u$)**: Explains systemic alignment (+u for Greater Good, -u for Lesser Evil).
+  * **Deception Gap ($\Delta u$)**: Explains the deception equation ($\Delta u = \text{claim}_u - \text{real}_u$) and the meaning of positive/negative values.
+  * **Will & Agency ($\psi$)**: Explains intent (+ψ for active creation, -ψ for suppression/chaos).
+  * **Consistency ($\sigma$)**: Explains standard deviation of the deception gap.
 
-### 3. Change-Tracking and Registry Rebuild Utilities
-* Created [track_changes.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/track_changes.py):
-  - Validates JSON config files recursively under `stories/` and `stories/live/`.
-  - Audits keys, post limits (exactly 14 posts for dry runs), character limits (<250 characters per post for dry runs), and corresponding local and remote graph PNG existences.
-  - Excludes legacy files and filters only for files with `factcheck_` prefix to avoid false-positives.
-  - Integrates with Git status to show a summary of target modified and untracked changes, and prompts the user to rebuild registries and stage changes ready to push.
-* Created [regenerate_graphs.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/regenerate_graphs.py):
-  - Programmatically iterates through all active factcheck configs and rebuilds all graph PNGs to apply coordinate scale changes.
+### 3. Timescale Date-Stretching & Scope Window Fix
+* Converted the "Daily, Weekly, Monthly" controls to **Date Scope Filters** (Last 24 Hours, Last 7 Days, Last 30 Days, All Time) anchored relative to the latest data entry. 
+* Selecting a scope automatically adjusts the bin width and scales the SVG axis labels and plot lines proportionally over the selected period.
 
-## Verification Results
-* Successfully ran [regenerate_graphs.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/regenerate_graphs.py) to rebuild 81 active trajectory graphs with the new scales and titles.
-* Rebuilt the javascript database registers using [rebuild_registries.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/rebuild_registries.py).
-* Ran [track_changes.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/scratch/track_changes.py) to verify that all target active files are validated cleanly and ready for git staging.
+### 4. High-Density Calibration Drift Sampling
+* Introduced a sample size selector supporting **120 (Fast)**, **300 (Detailed)**, **500 (Dense)**, and **All** stories with dynamic opacity scaling to keep the vector graph readable.
 
-## Batch 4 Evaluation Notes (Post-Compaction)
-* **Stories Evaluated (Indices 12 to 15)**:
-  1. **EU Ukraine Fast-Track Membership** (`eu_ukraine_membership`): Stated (+1.0, +1.0) -> Actual (-1.0, +1.0). Path: *The Path of The Fall*.
-  2. **Latter-day Saints USAID Advocacy** (`latter_day_saints_usaid`): Stated (+1.0, +1.0) -> Actual (+1.0, -1.0). Path: *The Path of Empty Mass (The Fall)*.
-  3. **Mexico City World Cup Sculptures Damaged** (`mexico_city_world_cup_sculptures`): Stated (+1.0, +1.0) -> Actual (-1.0, -2.0). Path: *The Path of Deception*.
-  4. **Graze Social News Feed Funding** (`graze_social_funding`): Stated (+1.0, -1.0) -> Actual (+1.0, +1.0). Path: *The Path of Grace*.
-* **Validation**: Shortened hook in Latter-day Saints to ensure it meets the strict 250 character limit per post. Verified that all Batch 4 files validate successfully under `track_changes.py`.
+### 5. Direct Source and Bluesky Links in Related Stories
+* Added clickable `🔗` (original article) and `🦋` (Bluesky thread) icons inside the expanded related story details rows.
+
+---
+
+## Moral Assessment Mapping
+Applying the two-axis moral evaluation system to these changes:
+* **AXIS $v$ (Morality) = +1.8 (Systemic Justice)**: By improving the clarity and auditability of bias-tracking tools, these changes enable communities to hold media entities accountable without distortion or hidden sampling gaps.
+* **AXIS $\psi$ (Will) = +1.6 (Productive Justice)**: Actively creates systemic value by building high-fidelity visual representations of information flow and resolving date distortion bugs.
+* **Result**: **(+1.8, +1.6) $\rightarrow$ Greatest Good / Productive Justice**.

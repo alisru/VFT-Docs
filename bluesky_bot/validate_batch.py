@@ -95,8 +95,8 @@ def main():
                 final_posts.extend(split_text(post))
 
             for idx, post in enumerate(final_posts, 1):
-                if len(post) > 250:
-                    raise ValueError(f"Post {idx} exceeds 250 characters ({len(post)} chars):\n{post}")
+                if len(post) > 290:
+                    raise ValueError(f"Post {idx} exceeds 290 characters ({len(post)} chars):\n{post}")
 
             # 2. Graph Check
             story_id = cfg["id"]

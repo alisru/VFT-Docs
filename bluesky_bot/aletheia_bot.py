@@ -34,7 +34,7 @@ def parse_bsky_url(url):
 
     return parts[handle_idx], parts[post_idx]
 
-def split_text(text, max_len=250):
+def split_text(text, max_len=290):
     """Splits text dynamically at the last newline or space before max_len.
     Avoids orphaning short header lines (e.g. 'Brothekanon:') by only
     splitting at a newline if the chunk before it is at least 80 chars.
@@ -90,11 +90,18 @@ def _target_already_replied(target_url):
                     cfg = d[0] if isinstance(d, list) else d
                     t = (cfg.get("target_url") or "").strip().lower()
                     if t:
-                        _REPLIED_TARGETS.add(t)
+                        status = cfg.get("status", "").upper()
+                        is_live = "LIVE" in status or len(cfg.get("rkeys", [])) > 0 or len(cfg.get("post_urls", [])) > 0
+                        if is_live:
+                            rkey = t.strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
+                            if rkey:
+                                _REPLIED_TARGETS.add(rkey)
                 except Exception:
                     continue
-        print(f"Loaded {len(_REPLIED_TARGETS)} existing reply targets for duplicate check.")
-    return target_url.strip().lower() in _REPLIED_TARGETS
+        print(f"Loaded {len(_REPLIED_TARGETS)} existing reply target rkeys for duplicate check.")
+    
+    target_rkey = target_url.strip().lower().strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
+    return target_rkey in _REPLIED_TARGETS
 
 def save_and_sync_story(thread_config, write_json=True):
     """Saves the thread config as an individual JSON and updates the registry in the bluesky_bot/ folder."""
@@ -267,8 +274,8 @@ def post_thread(client, thread_config, live=False):
         final_posts.extend(split_text(post))
         
     for idx, post in enumerate(final_posts, 1):
-        if len(post) > 250:
-            raise ValueError(f"Post {idx} exceeds 250 characters ({len(post)} chars) after splitting:\n{post}")
+        if len(post) > 290:
+            raise ValueError(f"Post {idx} exceeds 290 characters ({len(post)} chars) after splitting:\n{post}")
     print(f"All posts successfully split and validated. Thread post count: {len(final_posts)}")
 
     # 2. Graph Check (No generation in posting script)
@@ -295,6 +302,13 @@ def post_thread(client, thread_config, live=False):
 
     post_rkeys = []
     post_uris = []
+
+    if mode == "reply":
+        if not target_url:
+            raise ValueError("target_url is required when mode is 'reply'.")
+        if _target_already_replied(target_url):
+            print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
+            raise RuntimeError("ALREADY_REPLIED")
 
     if not live:
         print("\n--- DRY-RUN OUTPUT (No posts sent to Bluesky) ---")
@@ -364,15 +378,6 @@ def post_thread(client, thread_config, live=False):
             # 5. Determine Posting References based on Mode
             is_reply = False
             if mode == "reply":
-                if not target_url:
-                    raise ValueError("target_url is required when mode is 'reply'.")
-
-                # Check local stories for an existing reply to this target BEFORE any
-                # network calls (handle resolution + getRecord are wasted on a skip).
-                if _target_already_replied(target_url):
-                    print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
-                    raise RuntimeError("ALREADY_REPLIED")
-
                 print(f"Resolving target post: {target_url}...")
                 try:
                     target_handle, rkey = parse_bsky_url(target_url)
