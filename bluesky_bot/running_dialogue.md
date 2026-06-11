@@ -409,4 +409,34 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Increase Splitter & Validator Bounds**: Raised the character limit threshold from 250 to 290 in `split_text()` (defined in `aletheia_bot.py`) and all validation scripts (`post_batch.py`, `validate_batch.py`, and `google_ai_studio_one_shot.py`).
 - **Prevent Unnecessary Thread Splitting**: This adjustment allows longer paragraphs (up to 290 characters, which fits inside Bluesky's 300 hard character limit) to be published in a single post without getting split or raising validation errors, resolving cases where a 262-character post was split.
 - **Updated System Prompts**: Modified markdown instructions and system prompt templates inside `google_ai_studio_one_shot.py` to target 290 characters instead of 250.
-- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive adjustment of character boundaries to optimize user posting experience.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive adjustment of character boundaries to optimize user posting experience.
+
+### [2026-06-11] Intent 48: Search by Source Outlet and Preferred Outlet Quick-Fill in Control Panel
+*Status: Completed*
+- **Source Outlet Domain Filter in Sidebar Search**: Extended the `getFilteredStories` function in [control_panel.html](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/control_panel.html) to check the hostname of the story's source link. Typing an outlet domain (like `bloomberg` or `nytimes`) in the search input now correctly filters the stories sidebar.
+- **Preferred Outlets Quick Search Pills**: Added a dedicated row of clickable outlet badges in the sidebar search container. Clicking these badges automatically filters the sidebar by that outlet and sets status filter to "All" so the outlet's stories can be found instantly.
+- **Interactive Domain Breakdown Leaders**: Made the domain names in the "Domain Breakdown" stats tab interactive. Users can click any domain name in the leaderboard to instantly filter the sidebar stories by that source.
+- **Preferred Outlet Quick-Fill Selector**: Added a select dropdown helper next to the "Primary URL Link" label in the Manual Thread Compiler. Selecting an outlet automatically populates the link field with its base URL, making it quick and easy to draft new reviews for common outlets.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive enhancement of control panel utility.
+
+### [2026-06-11] Intent 49: Prioritize Preferred Outlets in Candidate Harvesting
+*Status: Completed*
+- **Defined Preferred Outlet Domains**: Added a central list of preferred news domains (Bloomberg, NY Times, The Saturday Paper, Reuters, BBC, SMH, ABC AU, TechCrunch, Washington Post, NPR) to both [harvest_candidates.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py) and [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py).
+- **Gather Full Feeds**: Removed the early break constraints checking `TARGET_BSKY` and `target_rss` inside the feed fetching loops. The scripts now fetch all available items in the feed data first to discover all preferred outlets.
+- **Deduplicated author pass**: Retained strict author deduplication in the first pass, allowing duplicate authors only in the relaxation pass to fill slots if needed.
+- **Prioritized Candidates Sorting & Slicing**: After harvesting the full feed, candidates are split into `preferred` and `regular`, merged so that all preferred candidates are at the very front of the list, and sliced to target sizes. This ensures they are evaluated first and fill the control panel's dashboard for user review.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Prioritizing high-credibility source outlets for evaluation and removing candidate loss during harvesting.
+
+### [2026-06-12] Intent 50: Hardening File Modification Checks Against Deletion Races
+*Status: Completed*
+- **safe_getmtime Helper Implementation**: Replaced all direct `os.path.getmtime` calls in `rebuild_registries.py` and `post_batch.py` with a robust `safe_getmtime` wrapper that catches `OSError` and defaults to `0.0`. This prevents `FileNotFoundError` crashes when files are concurrently deleted or synced.
+- **Validation**: Programmatically verified that `rebuild_registries.py` compiles successfully without any traceback.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Protecting batch scripts from race condition crashes.
+
+### [2026-06-12] Intent 51: Will and Morality Columns & Sorting in Hypocrisy Leaderboards
+*Status: Completed*
+- **Stats Grouping Modification**: Updated `_statsForGroups` to extract `real_psi` for each story and calculate the average Will score (`avgRealPsi`) per entity group.
+- **UI Render Columns**: Added `avg u` (Morality) and `avg ψ` (Will) as two dedicated columns in the leaderboard tables of the Audits tab (grid-template updated to 6 columns).
+- **Interactive Header & Secondary Sorting**: Integrated both columns into the primary header click sorting handlers and the secondary "Then by" tiebreaker selections.
+- **Removed Name Parentheticals**: Removed the redundant parenthetical `(u: ..., ψ: ...)` text from next to entity names in the key column, since both values are now represented in their own dedicated columns.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Providing clean, dedicated columns for Morality (u) and Will (ψ) on hypocrisy leaderboards.

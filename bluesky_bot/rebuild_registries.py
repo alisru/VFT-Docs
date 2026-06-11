@@ -24,6 +24,12 @@ def rebuild_registries():
             return b[len("factcheck_"):-len(".json")]
         return None
 
+    def safe_getmtime(p):
+        try:
+            return os.path.getmtime(p)
+        except OSError:
+            return 0.0
+
     # 0. Staging/Darkroom Promotion Gate
     darkroom_paths = glob.glob(os.path.join(darkroom_dir, "factcheck_*.json"))
     if darkroom_paths:
@@ -68,8 +74,8 @@ def rebuild_registries():
     draft_paths = glob.glob(os.path.join(stories_dir, "factcheck_*.json"))
     live_paths  = glob.glob(os.path.join(live_dir,    "factcheck_*.json"))
 
-    draft_filenames = [os.path.basename(p) for p in sorted(draft_paths, key=os.path.getmtime)]
-    live_filenames  = [os.path.basename(p) for p in sorted(live_paths,  key=os.path.getmtime)]
+    draft_filenames = [os.path.basename(p) for p in sorted(draft_paths, key=safe_getmtime)]
+    live_filenames  = [os.path.basename(p) for p in sorted(live_paths,  key=safe_getmtime)]
 
     # 2. Write index files
     try:
@@ -110,7 +116,7 @@ def rebuild_registries():
 
     sorted_slugs = sorted(
         story_map.keys(),
-        key=lambda s: os.path.getmtime(story_map[s][0])
+        key=lambda s: safe_getmtime(story_map[s][0])
     )
 
     for slug in sorted_slugs:
@@ -167,7 +173,7 @@ def rebuild_registries():
 
         status = cfg.get("status", "")
 
-        mtime = os.path.getmtime(authoritative_file)
+        mtime = safe_getmtime(authoritative_file)
         created_at = datetime.datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M:%S")
 
         registry_story = {
@@ -185,7 +191,7 @@ def rebuild_registries():
             "posts":     cfg.get("posts"),
             "created_at": created_at,
         }
-        for k in ["target_url", "rkeys", "post_urls", "actors", "category", "event"]:
+        for k in ["target_url", "rkeys", "post_urls", "actors", "category", "topic", "event"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 

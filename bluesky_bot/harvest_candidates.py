@@ -14,45 +14,89 @@ bot_dir = script_dir                                    # e:\Vector Field Theory
 env_path = os.path.join(bot_dir, '.env')
 
 # --- ARGUMENT PARSING ---
+COMMON_OUTLETS = {
+    "1": ["bloomberg.com"],
+    "2": ["nytimes.com"],
+    "3": ["thesaturdaypaper.com.au"],
+    "4": ["reuters.com"],
+    "5": ["bbc.com", "bbc.co.uk"],
+    "6": ["smh.com.au"],
+    "7": ["abc.net.au"],
+    "8": ["techcrunch.com"],
+    "9": ["washingtonpost.com"],
+    "10": ["npr.org"]
+}
+
 parser = argparse.ArgumentParser(description="Harvest news candidates from RSS and Bluesky feeds.")
 parser.add_argument("--rss-target", type=int, default=0, help="Target count for RSS feeds (default: 0)")
 parser.add_argument("--bsky-target", type=int, default=40, help="Target count for Bluesky feeds (default: 40)")
+parser.add_argument("--prefer", type=str, default="", help=(
+    "Preferred outlets to prioritize. Comma-separated list of domains or numbers:\n"
+    "1: Bloomberg, 2: NY Times, 3: The Saturday Paper, 4: Reuters, 5: BBC News,\n"
+    "6: SMH, 7: ABC News AU, 8: TechCrunch, 9: Washington Post, 10: NPR.\n"
+    "E.g., --prefer '1,2,5,theguardian.com'"
+))
 args = parser.parse_args()
 
 TARGET_RSS = args.rss_target
 TARGET_BSKY = args.bsky_target
 
+# Parse preferred outlets from arguments if provided
+PREFERRED_OUTLET_DOMAINS = []
+if args.prefer:
+    for token in args.prefer.split(","):
+        token = token.strip().lower()
+        if not token:
+            continue
+        if token in COMMON_OUTLETS:
+            PREFERRED_OUTLET_DOMAINS.extend(COMMON_OUTLETS[token])
+        else:
+            PREFERRED_OUTLET_DOMAINS.append(token)
+
 # --- 0. LOAD HISTORICAL EVALUATIONS (PREVENT DUPLICATE JUDGEMENTS) ---
 print("Loading historical evaluations database to prevent duplicate judgements...")
 seen_historical_urls = set()
 seen_historical_ids = set()
+historical_domain_counts = {}
 
 bot_stories_dir = os.path.join(bot_dir, 'stories')
-if os.path.exists(bot_stories_dir):
-    try:
-        # Scan stories folder for all existing json configs
-        story_files = [f for f in os.listdir(bot_stories_dir) if f.startswith('factcheck_') and f.endswith('.json')]
-        for sf in story_files:
-            filepath = os.path.join(bot_stories_dir, sf)
-            with open(filepath, 'r', encoding='utf-8') as f:
-                data = json.load(f)
+scan_dirs = [
+    bot_stories_dir,
+    os.path.join(bot_stories_dir, 'live'),
+    os.path.join(bot_stories_dir, 'darkroom')
+]
+for scan_dir in scan_dirs:
+    if os.path.exists(scan_dir):
+        try:
+            story_files = [f for f in os.listdir(scan_dir) if f.startswith('factcheck_') and f.endswith('.json')]
+            for sf in story_files:
+                filepath = os.path.join(scan_dir, sf)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    
+                config = data[0] if isinstance(data, list) else data
                 
-            config = data[0] if isinstance(data, list) else data
-            
-            # Record historical URL and ID
-            url = config.get("link") or config.get("target_url")
-            if url:
-                seen_historical_urls.add(url.strip().lower())
-                
-            story_id = config.get("id")
-            if story_id:
-                seen_historical_ids.add(story_id.strip().lower())
-                
-        print(f"Loaded {len(seen_historical_urls)} historical URLs and {len(seen_historical_ids)} historical story IDs.")
-    except Exception as e:
-        print(f"Warning: Failed to load historical evaluations: {e}")
-else:
-    print("No historical stories directory found. Starting fresh.")
+                # Record historical URL and ID
+                url = config.get("link") or config.get("target_url")
+                if url:
+                    url_clean = url.strip().lower()
+                    seen_historical_urls.add(url_clean)
+                    try:
+                        import urllib.parse
+                        host = urllib.parse.urlparse(url_clean).hostname
+                        if host:
+                            host = host.replace("www.", "")
+                            historical_domain_counts[host] = historical_domain_counts.get(host, 0) + 1
+                    except Exception:
+                        pass
+                    
+                story_id = config.get("id")
+                if story_id:
+                    seen_historical_ids.add(story_id.strip().lower())
+        except Exception as e:
+            print(f"Warning: Failed to load historical evaluations from {scan_dir}: {e}")
+
+print(f"Loaded {len(seen_historical_urls)} historical URLs and {len(seen_historical_ids)} historical story IDs.")
 
 
 # --- 1. DYNAMIC STORY-LEVEL DE-DUPLICATION HEURISTIC ---
@@ -131,6 +175,43 @@ def extract_external_link(post):
         return "https://" + domain_match.group(1)
         
     return None
+
+
+# --- PREFERRED OUTLETS CONFIGURATION ---
+def is_preferred_outlet(url):
+    if not url or not PREFERRED_OUTLET_DOMAINS:
+        return False
+    u = url.strip().lower()
+    try:
+        import urllib.parse
+        host = urllib.parse.urlparse(u).hostname or ""
+    except Exception:
+        host = ""
+    if not host:
+        host = u
+    host = host.replace("www.", "")
+    return any(host == pref or host.endswith('.' + pref) for pref in PREFERRED_OUTLET_DOMAINS)
+
+def get_historical_count(url):
+    if not url:
+        return 999999
+    u = url.strip().lower()
+    try:
+        import urllib.parse
+        host = urllib.parse.urlparse(u).hostname or ""
+    except Exception:
+        host = ""
+    if not host:
+        host = u
+    host = host.replace("www.", "")
+    return historical_domain_counts.get(host, 0)
+
+def get_sort_key(c):
+    count = get_historical_count(c.get("url"))
+    if PREFERRED_OUTLET_DOMAINS:
+        pref = 0 if is_preferred_outlet(c.get("url")) else 1
+        return (pref, count)
+    return (0, count)
 
 
 # --- 3. HARVEST FROM RSS FEEDS ---
@@ -229,9 +310,6 @@ if password:
             matches = english_words.findall(cleaned_text)
             return len(matches) >= 1
         for feed_url in bsky_feeds:
-            if len(bsky_candidates) >= TARGET_BSKY:
-                break
-                
             print(f"Fetching from feed: {feed_url}...")
             parts = feed_url.strip("/").split("/")
             feed_handle, feed_rkey = parts[parts.index("profile")+1], parts[parts.index("feed")+1]
@@ -242,9 +320,6 @@ if password:
             feed_data = client.app.bsky.feed.get_feed(params={'feed': feed_uri, 'limit': 50})
             
             for item in feed_data.feed:
-                if len(bsky_candidates) >= TARGET_BSKY:
-                    break
-                
                 # Skip if the post is a reply to another post (ensure it is a top comment)
                 record = getattr(item.post, 'record', None)
                 if record and getattr(record, 'reply', None) is not None:
@@ -281,7 +356,7 @@ if password:
                 if is_duplicate_story(text, article_url):
                     continue
                     
-                if author_handle in seen_bsky_authors and len(bsky_candidates) < TARGET_BSKY - 2:
+                if author_handle in seen_bsky_authors:
                     continue
                     
                 bsky_candidates.append({
@@ -296,19 +371,14 @@ if password:
                 
         # Relaxation pass if slots still needed
         if len(bsky_candidates) < TARGET_BSKY:
-            print("Retrying Bluesky feeds with relaxed author constraints to fill slots...")
+            print(f"Retrying Bluesky feeds with relaxed author constraints to fill slots (Currently have {len(bsky_candidates)})...")
             for feed_url in bsky_feeds:
-                if len(bsky_candidates) >= TARGET_BSKY:
-                    break
                 parts = feed_url.strip("/").split("/")
                 feed_handle, feed_rkey = parts[parts.index("profile")+1], parts[parts.index("feed")+1]
                 feed_did = resolver.handle.resolve(feed_handle)
                 feed_uri = f"at://{feed_did}/app.bsky.feed.generator/{feed_rkey}"
                 feed_data = client.app.bsky.feed.get_feed(params={'feed': feed_uri, 'limit': 50})
                 for item in feed_data.feed:
-                    if len(bsky_candidates) >= TARGET_BSKY:
-                        break
-                    
                     # Skip if the post is a reply to another post (ensure it is a top comment)
                     record = getattr(item.post, 'record', None)
                     if record and getattr(record, 'reply', None) is not None:
@@ -340,13 +410,30 @@ if password:
                         "subject": text[:30].strip() + "..."
                     })
                     seen_urls.add(article_url)
+        
+        # Sort Bluesky candidates: prioritize preferred if defined, and sort by least chosen domain count in ascending order
+        bsky_candidates.sort(key=get_sort_key)
+        
+        # Log sorting results for visibility
+        if bsky_candidates:
+            print("\nBluesky Harvest Prioritization (least chosen outlets first):")
+            for idx, c in enumerate(bsky_candidates[:15], 1):
+                url = c.get("url")
+                try:
+                    import urllib.parse
+                    host = urllib.parse.urlparse(url).hostname or url
+                except Exception:
+                    host = url
+                print(f"  [{idx}] {host} (historical count: {get_historical_count(url)})")
+                
+        bsky_candidates = bsky_candidates[:TARGET_BSKY]
                 
     except Exception as e:
         print(f"Warning: Bluesky login or retrieval failed: {e}")
 else:
     print("Warning: BSKY_PASSWORD not found in env. Skipping Bluesky harvesting.")
 
-print(f"Harvested exactly {len(bsky_candidates)} Bluesky candidates.")
+print(f"Harvested and prioritized exactly {len(bsky_candidates)} Bluesky candidates.")
 
 # --- 5. MERGE AND SAVE EXACTLY 20 DISTINCT PREMIUM STORIES ---
 combined_candidates = []
@@ -357,7 +444,10 @@ for i in range(max_len):
     if i < len(bsky_candidates):
         combined_candidates.append(bsky_candidates[i])
 
-final_candidates = combined_candidates[:TARGET_RSS + TARGET_BSKY]
+# Ensure preferred outlets (if specified) and least-chosen outlets are placed at the absolute front of the final evaluation batch
+all_final = combined_candidates[:TARGET_RSS + TARGET_BSKY]
+all_final.sort(key=get_sort_key)
+final_candidates = all_final
 
 # Output path points to scratch/harvested_candidates.json relative to root workspace
 output_path = os.path.join(root_dir, 'scratch', 'harvested_candidates.json')

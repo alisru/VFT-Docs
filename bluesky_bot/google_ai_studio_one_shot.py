@@ -291,6 +291,33 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
     print(f"Open search yielded {len(candidates)} news-linked candidate(s).")
     return candidates
 
+# --- PREFERRED OUTLETS CONFIGURATION ---
+PREFERRED_OUTLET_DOMAINS = [
+    'bloomberg.com',
+    'nytimes.com',
+    'thesaturdaypaper.com.au',
+    'reuters.com',
+    'bbc.com',
+    'bbc.co.uk',
+    'smh.com.au',
+    'abc.net.au',
+    'techcrunch.com',
+    'washingtonpost.com',
+    'npr.org'
+]
+
+def is_preferred_outlet(url):
+    if not url:
+        return False
+    u = url.strip().lower()
+    try:
+        host = urllib.parse.urlparse(u).hostname or ""
+    except Exception:
+        host = ""
+    if not host:
+        host = u
+    return any(host == pref or host.endswith('.' + pref) for pref in PREFERRED_OUTLET_DOMAINS)
+
 # --- 2. CANDIDATE HARVESTING ---
 def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, category="general", topic=None, banned_topic=None):
     candidates = []
@@ -347,8 +374,6 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
     if target_rss > 0:
         print(f"\nHarvesting from RSS feeds (Target: {target_rss})...")
         for feed in rss_feeds:
-            if len([c for c in candidates if c["mode"] == "root"]) >= target_rss:
-                break
             print(f"Fetching from {feed['name']} RSS feed: {feed['url']}...")
             req = urllib.request.Request(feed['url'], headers={'User-Agent': 'Mozilla/5.0'})
             try:
@@ -359,8 +384,6 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                 print(f"Found {len(items)} items in {feed['name']}.")
                 
                 for item in items:
-                    if len([c for c in candidates if c["mode"] == "root"]) >= target_rss:
-                        break
                     title = item.find('title')
                     desc = item.find('description')
                     link = item.find('link')
@@ -434,8 +457,6 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                 english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could)\b', re.IGNORECASE)
                 
                 for feed_url in bsky_feeds:
-                    if len([c for c in candidates if c["mode"] == "reply"]) >= target_bsky:
-                        break
                     print(f"Fetching from feed: {feed_url}...")
                     parts = feed_url.strip("/").split("/")
                     feed_handle, feed_rkey = parts[parts.index("profile")+1], parts[parts.index("feed")+1]
@@ -445,8 +466,6 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                     feed_data = client.app.bsky.feed.get_feed(params={'feed': feed_uri, 'limit': 60})
                     
                     for item in feed_data.feed:
-                        if len([c for c in candidates if c["mode"] == "reply"]) >= target_bsky:
-                            break
                         text = getattr(item.post.record, 'text', '').strip()
                         author_handle = item.post.author.handle
                         rkey = item.post.uri.split('/')[-1]
@@ -507,7 +526,27 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
         else:
             print("Warning: BSKY_PASSWORD not found. Skipping Bluesky harvesting.")
             
-    return candidates
+    # Separate candidates by mode
+    rss_cands = [c for c in candidates if c["mode"] == "root"]
+    bsky_cands = [c for c in candidates if c["mode"] == "reply"]
+
+    # Prioritize preferred outlets in Bluesky candidates
+    preferred_bsky = [c for c in bsky_cands if is_preferred_outlet(c["url"])]
+    regular_bsky = [c for c in bsky_cands if not is_preferred_outlet(c["url"])]
+    print(f"Bluesky Harvest: {len(preferred_bsky)} preferred outlets, {len(regular_bsky)} regular outlets found.")
+    bsky_cands = (preferred_bsky + regular_bsky)[:target_bsky]
+
+    # Prioritize preferred outlets in RSS candidates
+    preferred_rss = [c for c in rss_cands if is_preferred_outlet(c["url"])]
+    regular_rss = [c for c in rss_cands if not is_preferred_outlet(c["url"])]
+    rss_cands = (preferred_rss + regular_rss)[:target_rss]
+
+    # Combine so preferred are processed first
+    combined = rss_cands + bsky_cands
+    preferred_final = [c for c in combined if is_preferred_outlet(c["url"])]
+    regular_final = [c for c in combined if not is_preferred_outlet(c["url"])]
+    
+    return preferred_final + regular_final
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
 _RULES_CACHE = {}
@@ -760,7 +799,20 @@ def transpose_flat_to_json(flat_text):
     return evaluations
 
 # --- 4. SAVE TO DARKROOM ---
-def process_evaluations(evaluations, category="general"):
+def extract_topic_from_posts(posts):
+    if not posts or not isinstance(posts, list) or len(posts) == 0:
+        return None
+    first_post = posts[0]
+    import re
+    # Find all hashtags
+    tags = re.findall(r"#(\w+)", first_post)
+    for tag in tags:
+        if tag.lower() not in ["aletheia", "claim", "reality", "verdict"]:
+            return tag
+    return None
+
+# --- 4. SAVE TO DARKROOM ---
+def process_evaluations(evaluations, category="general", topic=None):
     """Write evaluated story configs to stories/darkroom/ for graph generation and promotion by rebuild_registries."""
     darkroom_dir = os.path.join(script_dir, "stories", "darkroom")
     os.makedirs(darkroom_dir, exist_ok=True)
@@ -782,6 +834,14 @@ def process_evaluations(evaluations, category="general"):
             # Normalise category: store as a comma-joined string so it's JSON-friendly
             cats = [c.strip().lower() for c in (category or "general").split(",") if c.strip()] if isinstance(category, str) else (category or ["general"])
             story.setdefault("category", ",".join(cats) if len(cats) > 1 else (cats[0] if cats else "general"))
+            
+            # Topic: store explicitly or extract from hashtags in the first post
+            t = topic
+            if not t:
+                t = extract_topic_from_posts(story.get("posts", []))
+            if t:
+                story.setdefault("topic", t.strip())
+
             story.setdefault("event", "")
 
             # Post count validation
@@ -898,7 +958,7 @@ def main():
             print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s). Skipping.")
 
         if chunk_evals:
-            chunk_success = process_evaluations(chunk_evals, category=args.category)
+            chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic)
             print(f"  Processed {chunk_success}/{len(chunk_evals)} evaluations from chunk to darkroom.")
             print("  Promoting and generating graphs immediately...")
             rebuild_registries()

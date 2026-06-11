@@ -888,6 +888,12 @@
         max-height: 500px;
       }
     }
+
+    /* Interactive domain links in audit panel */
+    .interactive-domain:hover {
+      color: var(--bsky-blue) !important;
+      text-decoration-color: var(--bsky-blue) !important;
+    }
   </style>
 </head>
 <body>
@@ -918,6 +924,23 @@
     <div class="sidebar">
       <div class="search-container" style="display:flex; flex-direction:column; gap:0.5rem;">
         <input type="text" class="search-input" id="searchInput" placeholder="Search stories..." oninput="filterStories()">
+        
+        <!-- Preferred Outlets quick search -->
+        <div style="display:flex; flex-direction:column; gap:0.2rem; width:100%; border-bottom: 1px solid rgba(255,255,255,0.04); padding-bottom:0.4rem;">
+          <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-outfit); font-weight:500;">Quick Outlet Search:</div>
+          <div style="display:flex; gap:0.25rem; flex-wrap:wrap; max-height:60px; overflow-y:auto;">
+            <button onclick="filterByDomain('bloomberg')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">Bloomberg</button>
+            <button onclick="filterByDomain('nytimes')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">NYT</button>
+            <button onclick="filterByDomain('reuters')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">Reuters</button>
+            <button onclick="filterByDomain('bbc')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">BBC</button>
+            <button onclick="filterByDomain('abc.net.au')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">ABC AU</button>
+            <button onclick="filterByDomain('smh.com.au')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">SMH</button>
+            <button onclick="filterByDomain('techcrunch')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">TechCrunch</button>
+            <button onclick="filterByDomain('washingtonpost')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">WaPo</button>
+            <button onclick="filterByDomain('npr.org')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">NPR</button>
+            <button onclick="filterByDomain('thesaturdaypaper')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">Sat Paper</button>
+          </div>
+        </div>
         <div style="display:flex; gap:0.5rem; width:100%;">
           <button onclick="document.getElementById('fileUploadInput').click()" class="theme-toggle" style="flex:1; justify-content:center; font-size:0.8rem; padding:0.35rem 0.5rem; font-family: var(--font-outfit);">📁 Import JSON</button>
           <input type="file" id="fileUploadInput" style="display:none;" onchange="handleFileUpload(event)" accept=".json">
@@ -1133,7 +1156,22 @@
                 <input type="text" id="compSubject" class="form-input" placeholder="e.g. Swedish Green Datacenter">
               </div>
               <div class="form-group">
-                <label class="form-label">Primary URL Link</label>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.3rem;">
+                  <label class="form-label" style="margin: 0;">Primary URL Link</label>
+                  <select id="commonOutlets" onchange="quickFillOutlet(this.value)" style="background:rgba(255,255,255,0.05); color:var(--text-color); border:1px solid var(--panel-border); border-radius:4px; padding:0.1rem 0.3rem; font-size:0.72rem; font-family:var(--font-outfit); cursor:pointer; outline:none;">
+                    <option value="">-- Quick Fill Outlet --</option>
+                    <option value="https://www.bloomberg.com/">Bloomberg</option>
+                    <option value="https://www.nytimes.com/">NY Times</option>
+                    <option value="https://www.thesaturdaypaper.com.au/">The Saturday Paper</option>
+                    <option value="https://www.reuters.com/">Reuters</option>
+                    <option value="https://www.bbc.com/news/">BBC News</option>
+                    <option value="https://www.smh.com.au/">SMH</option>
+                    <option value="https://www.abc.net.au/news/">ABC News AU</option>
+                    <option value="https://techcrunch.com/">TechCrunch</option>
+                    <option value="https://www.washingtonpost.com/">Washington Post</option>
+                    <option value="https://www.npr.org/">NPR</option>
+                  </select>
+                </div>
                 <input type="text" id="compLink" class="form-input" placeholder="e.g. https://www.bloomberg.com/news...">
               </div>
             </div>
@@ -1460,6 +1498,24 @@
             <span class="meta-label">Subject</span>
             <span class="meta-value">${activeStory.subject}</span>
           </div>
+          ${activeStory.category ? `
+          <div class="meta-item">
+            <span class="meta-label">Category</span>
+            <span class="meta-value" style="text-transform: capitalize; color: var(--text-main); font-weight: 500;">${activeStory.category}</span>
+          </div>
+          ` : ''}
+          ${activeStory.topic ? `
+          <div class="meta-item">
+            <span class="meta-label">Topic</span>
+            <span class="meta-value" style="color: var(--text-main); font-weight: 500;">${activeStory.topic}</span>
+          </div>
+          ` : ''}
+          ${activeStory.actors && activeStory.actors.length > 0 ? `
+          <div class="meta-item">
+            <span class="meta-label">Actors & Entities</span>
+            <span class="meta-value" style="color: var(--text-main); font-size: 0.82rem; line-height: 1.4;">${activeStory.actors.join(', ')}</span>
+          </div>
+          ` : ''}
           <div class="meta-item">
             <span class="meta-label">Primary Source</span>
             <span class="meta-value"><a href="${activeStory.link}" target="_blank" style="color: var(--bsky-blue); text-decoration: none;">Link to Article 🔗</a></span>
@@ -1681,7 +1737,19 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
 
     function getFilteredStories(query) {
       const filtered = STORIES_REGISTRY.filter(s => {
-        const matchesSearch = !query || s.subject.toLowerCase().includes(query) || s.verdict.toLowerCase().includes(query);
+        let matchesSearch = !query || s.subject.toLowerCase().includes(query) || s.verdict.toLowerCase().includes(query);
+        if (!matchesSearch && query && s.link) {
+          try {
+            const host = new URL(s.link).hostname.replace(/^www\./, '').toLowerCase();
+            if (host.includes(query) || s.link.toLowerCase().includes(query)) {
+              matchesSearch = true;
+            }
+          } catch (e) {
+            if (s.link.toLowerCase().includes(query)) {
+              matchesSearch = true;
+            }
+          }
+        }
         let matchesFlag = false;
         if (_statusFilter === 'all') {
           matchesFlag = true;
@@ -1722,6 +1790,30 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
 
       return filtered;
     }
+
+    // Helper function to set search query by domain / outlet and trigger filtering
+    window.filterByDomain = function(domain) {
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+        searchInput.value = domain;
+        setStatusFilter('all'); // Reset status filters to show all matching stories
+        filterStories();
+        searchInput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    };
+
+    // Helper function to quick fill outlet links in manual compiler
+    window.quickFillOutlet = function(val) {
+      if (!val) return;
+      const compLink = document.getElementById('compLink');
+      if (compLink) {
+        compLink.value = val;
+        compLink.focus();
+      }
+      // Reset dropdown
+      const select = document.getElementById('commonOutlets');
+      if (select) select.value = '';
+    };
 
     // Manual Draft json compiler
     function compileNewJSON() {
@@ -1946,18 +2038,85 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
     let _trendInterval = 'all'; // 'day', 'week', 'month', 'all'
     let _showRealityU = true;
     let _showDeltaU = true;
+    
+    // Leaderboard limits
     let _actorMinN = 1;
     let _outletMinN = 1;
+    let _categoryMinN = 1;
+    let _topicMinN = 1;
+    
     let _calibSampleSize = 300; // 120, 300, 500, 'all'
+    
+    // Sorting states
     let _actorSortCol = 'avgDelta'; // 'key', 'n', 'avgDelta', 'consistency'
     let _actorSortDir = 'desc'; // 'asc', 'desc'
-    let _outletSortCol = 'avgDelta'; // 'key', 'n', 'avgDelta', 'consistency'
-    let _outletSortDir = 'desc'; // 'asc', 'desc'
-    // Secondary sort (true multi-key: primary from header clicks, secondary from dropdowns)
     let _actorSort2Col  = 'none'; // 'none','n','avgDelta','consistency'
     let _actorSort2Dir  = 'asc';
+
+    let _outletSortCol = 'avgDelta';
+    let _outletSortDir = 'desc';
     let _outletSort2Col = 'none';
     let _outletSort2Dir = 'asc';
+
+    let _categorySortCol = 'avgDelta';
+    let _categorySortDir = 'desc';
+    let _categorySort2Col = 'none';
+    let _categorySort2Dir = 'asc';
+
+    let _topicSortCol = 'avgDelta';
+    let _topicSortDir = 'desc';
+    let _topicSort2Col = 'none';
+    let _topicSort2Dir = 'asc';
+
+    const _openLeaderboardDropdowns = new Set();
+
+    function updateLeaderboard(tableType) {
+      const id = `${tableType}-leaderboard-container`;
+      const el = document.getElementById(id);
+      if (el) {
+        const stories = STORIES_REGISTRY;
+        const liveOnly = stories.filter(s => (s.status || '').toLowerCase().includes('live'));
+        const live = _auditScope === 'live' ? liveOnly : stories;
+        
+        let title = '';
+        let bodyHtml = '';
+        
+        if (tableType === 'actor') {
+          title = 'Actor Hypocrisy Leaderboard';
+          bodyHtml = auditActorLeaderboard(live);
+        } else if (tableType === 'outlet') {
+          title = 'Outlet Hypocrisy (avg Δu by source)';
+          bodyHtml = auditOutletHypocrisy(live);
+        } else if (tableType === 'category') {
+          title = 'Category Hypocrisy Leaderboard';
+          bodyHtml = auditCategoryLeaderboard(live);
+        } else if (tableType === 'topic') {
+          title = 'Topic Hypocrisy Leaderboard';
+          bodyHtml = auditTopicLeaderboard(live);
+        }
+        
+        el.innerHTML = `
+          <div style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.8rem;">${title}</div>
+          ${bodyHtml}
+        `;
+        
+        // Re-bind click handlers for story links in the updated leaderboard
+        el.querySelectorAll('[data-story-id]').forEach(elLink => {
+          elLink.addEventListener('click', () => {
+            const id = elLink.getAttribute('data-story-id');
+            document.querySelector('.tab-button.active') && document.querySelector('.tab-button').click();
+            switchTab({currentTarget: document.querySelector('.tab-button')}, 'emulator-tab');
+            document.querySelectorAll('.tab-button')[0].classList.add('active');
+            selectStory(id);
+          });
+        });
+      }
+    }
+
+    function updateActorLeaderboard() { updateLeaderboard('actor'); }
+    function updateOutletLeaderboard() { updateLeaderboard('outlet'); }
+    function updateCategoryLeaderboard() { updateLeaderboard('category'); }
+    function updateTopicLeaderboard() { updateLeaderboard('topic'); }
 
     function setTrendInterval(interval) {
       _trendInterval = interval;
@@ -1965,60 +2124,95 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       renderAuditTab();
     }
 
-    function setActorMinN(val) {
-      _actorMinN = parseInt(val, 10) || 1;
-      _auditRendered = false;
-      renderAuditTab();
-    }
-
-    function setOutletMinN(val) {
-      _outletMinN = parseInt(val, 10) || 1;
-      _auditRendered = false;
-      renderAuditTab();
+    function setMinN(tableType, val) {
+      const parsed = parseInt(val, 10) || 1;
+      if (tableType === 'actor') {
+        _actorMinN = parsed;
+        updateActorLeaderboard();
+      } else if (tableType === 'outlet') {
+        _outletMinN = parsed;
+        updateOutletLeaderboard();
+      } else if (tableType === 'category') {
+        _categoryMinN = parsed;
+        updateCategoryLeaderboard();
+      } else if (tableType === 'topic') {
+        _topicMinN = parsed;
+        updateTopicLeaderboard();
+      }
     }
 
     function handleHeaderClick(tableType, colName) {
       if (tableType === 'actor') {
-        // Clear secondary when changing primary
-        if (_actorSortCol !== colName) _actorSort2Col = 'none';
         if (_actorSortCol === colName) {
           _actorSortDir = _actorSortDir === 'desc' ? 'asc' : 'desc';
         } else {
           _actorSortCol = colName;
           _actorSortDir = 'desc';
           if (colName === 'key') _actorSortDir = 'asc';
+          if (_actorSort2Col === colName) _actorSort2Col = 'none';
         }
-      } else {
-        if (_outletSortCol !== colName) _outletSort2Col = 'none';
+        updateActorLeaderboard();
+      } else if (tableType === 'outlet') {
         if (_outletSortCol === colName) {
           _outletSortDir = _outletSortDir === 'desc' ? 'asc' : 'desc';
         } else {
           _outletSortCol = colName;
           _outletSortDir = 'desc';
           if (colName === 'key') _outletSortDir = 'asc';
+          if (_outletSort2Col === colName) _outletSort2Col = 'none';
         }
+        updateOutletLeaderboard();
+      } else if (tableType === 'category') {
+        if (_categorySortCol === colName) {
+          _categorySortDir = _categorySortDir === 'desc' ? 'asc' : 'desc';
+        } else {
+          _categorySortCol = colName;
+          _categorySortDir = 'desc';
+          if (colName === 'key') _categorySortDir = 'asc';
+          if (_categorySort2Col === colName) _categorySort2Col = 'none';
+        }
+        updateCategoryLeaderboard();
+      } else if (tableType === 'topic') {
+        if (_topicSortCol === colName) {
+          _topicSortDir = _topicSortDir === 'desc' ? 'asc' : 'desc';
+        } else {
+          _topicSortCol = colName;
+          _topicSortDir = 'desc';
+          if (colName === 'key') _topicSortDir = 'asc';
+          if (_topicSort2Col === colName) _topicSort2Col = 'none';
+        }
+        updateTopicLeaderboard();
       }
-      _auditRendered = false;
-      renderAuditTab();
     }
 
     function setSort2(tableType, field, val) {
       if (tableType === 'actor') {
         if (field === 'col') _actorSort2Col = val;
         else _actorSort2Dir = val;
-      } else {
+        updateActorLeaderboard();
+      } else if (tableType === 'outlet') {
         if (field === 'col') _outletSort2Col = val;
         else _outletSort2Dir = val;
+        updateOutletLeaderboard();
+      } else if (tableType === 'category') {
+        if (field === 'col') _categorySort2Col = val;
+        else _categorySort2Dir = val;
+        updateCategoryLeaderboard();
+      } else if (tableType === 'topic') {
+        if (field === 'col') _topicSort2Col = val;
+        else _topicSort2Dir = val;
+        updateTopicLeaderboard();
       }
-      _auditRendered = false;
-      renderAuditTab();
     }
 
-    // Extract a numeric value from a row for a given sort column
+    // Extract a numeric value from a row for a given sort column.
+    // Round floats to 2 decimal places (matching displayed UI) to allow secondary tiebreakers to execute.
     function _colVal(r, col) {
       if (col === 'n')           return r.n;
-      if (col === 'avgDelta')    return r.avgDelta;
-      if (col === 'consistency') return r.consistency;
+      if (col === 'avgDelta')    return Math.round((r.avgDelta || 0) * 100) / 100;
+      if (col === 'avgRealU')    return Math.round((r.avgRealU || 0) * 100) / 100;
+      if (col === 'avgRealPsi')  return Math.round((r.avgRealPsi || 0) * 100) / 100;
+      if (col === 'consistency') return Math.round((r.consistency || 0) * 100) / 100;
       return 0;
     }
 
@@ -2247,8 +2441,13 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-          ${auditSection('Actor Hypocrisy Leaderboard', auditActorLeaderboard(live))}
-          ${auditSection('Outlet Hypocrisy (avg Δu by source)', auditOutletHypocrisy(live))}
+          ${auditSection('Actor Hypocrisy Leaderboard', auditActorLeaderboard(live), 'actor-leaderboard-container')}
+          ${auditSection('Outlet Hypocrisy (avg Δu by source)', auditOutletHypocrisy(live), 'outlet-leaderboard-container')}
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('Category Hypocrisy Leaderboard', auditCategoryLeaderboard(live), 'category-leaderboard-container')}
+          ${auditSection('Topic Hypocrisy Leaderboard', auditTopicLeaderboard(live), 'topic-leaderboard-container')}
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
@@ -2282,8 +2481,9 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
     }
     function pct(n, total) { return total ? Math.round(n/total*100) + '%' : '0%'; }
 
-    function auditSection(title, body) {
-      return `<div style="background:var(--panel-bg); border:1px solid var(--panel-border); border-radius:10px; padding:1rem 1.2rem;">
+    function auditSection(title, body, id) {
+      const idAttr = id ? `id="${id}"` : '';
+      return `<div ${idAttr} style="background:var(--panel-bg); border:1px solid var(--panel-border); border-radius:10px; padding:1rem 1.2rem;">
         <div style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.8rem;">${title}</div>
         ${body}
       </div>`;
@@ -2428,7 +2628,7 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         sorted.map(([domain, count]) => {
           const pctW = Math.round(count / maxC * 100);
           return `<div style="display:flex; align-items:center; gap:0.6rem; font-size:0.8rem;">
-            <span style="min-width:160px; color:var(--text-muted); font-family:var(--font-mono); overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${domain}</span>
+            <span class="interactive-domain" style="min-width:160px; color:var(--text-muted); font-family:var(--font-mono); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:color 0.2s, text-decoration-color 0.2s;" onclick="filterByDomain('${domain}')" title="Filter stories by ${domain}">${domain}</span>
             <div style="flex:1; background:rgba(255,255,255,0.05); border-radius:3px; height:10px; overflow:hidden;">
               <div style="width:${pctW}%; height:100%; background:var(--bsky-blue); opacity:0.7; border-radius:3px;"></div>
             </div>
@@ -2738,9 +2938,11 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       if (el.style.display === 'none') {
         el.style.display = 'block';
         if (arrow) arrow.style.transform = 'rotate(90deg)';
+        _openLeaderboardDropdowns.add(actorId);
       } else {
         el.style.display = 'none';
         if (arrow) arrow.style.transform = 'rotate(0deg)';
+        _openLeaderboardDropdowns.delete(actorId);
       }
     }
 
@@ -2751,29 +2953,64 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         const keys = keyFn(s);
         keys.forEach(k => {
           if (!k) return;
-          (groups[k] = groups[k] || []).push(s.claim_u - s.real_u);
+          const realPsi = (s.real_psi !== null && s.real_psi !== undefined) ? s.real_psi : 0;
+          (groups[k] = groups[k] || []).push({
+            delta: s.claim_u - s.real_u,
+            real_u: s.real_u,
+            real_psi: realPsi
+          });
         });
       });
-      return Object.entries(groups).map(([k, deltas]) => {
-        const m = avg(deltas);
-        const variance = deltas.length > 1 ? avg(deltas.map(d => (d-m)*(d-m))) : 0;
-        return { key: k, n: deltas.length, avgDelta: m, consistency: Math.sqrt(variance) };
+      return Object.entries(groups).map(([k, items]) => {
+        const deltas = items.map(x => x.delta);
+        const realUs = items.map(x => x.real_u);
+        const realPsis = items.map(x => x.real_psi);
+        const mDelta = avg(deltas);
+        const mRealU = avg(realUs);
+        const mRealPsi = avg(realPsis);
+        const variance = deltas.length > 1 ? avg(deltas.map(d => (d-mDelta)*(d-mDelta))) : 0;
+        return { 
+          key: k, 
+          n: deltas.length, 
+          avgDelta: mDelta, 
+          avgRealU: mRealU, 
+          avgRealPsi: mRealPsi,
+          consistency: Math.sqrt(variance) 
+        };
       });
     }
 
     function _hypocrisyTable(stories, rows, labelHead, minN) {
       let filtered = rows.filter(r => r.n >= minN);
       
-      const isActor = labelHead.includes('Actor');
-      const tableType = isActor ? 'actor' : 'outlet';
-      const sortCol   = isActor ? _actorSortCol   : _outletSortCol;
-      const sortDir   = isActor ? _actorSortDir   : _outletSortDir;
-      const sort2Col  = isActor ? _actorSort2Col  : _outletSort2Col;
-      const sort2Dir  = isActor ? _actorSort2Dir  : _outletSort2Dir;
-      const currentMinN = isActor ? _actorMinN : _outletMinN;
+      const labelLower = labelHead.toLowerCase();
+      let tableType = 'actor';
+      if (labelLower.includes('outlet') || labelLower.includes('source')) tableType = 'outlet';
+      else if (labelLower.includes('category')) tableType = 'category';
+      else if (labelLower.includes('topic')) tableType = 'topic';
       
-      const onMinNChange = isActor ? 'setActorMinN(this.value)' : 'setOutletMinN(this.value)';
-      const clickFn = isActor ? 'handleHeaderClick(\'actor\', ' : 'handleHeaderClick(\'outlet\', ';
+      let sortCol, sortDir, sort2Col, sort2Dir, currentMinN;
+      
+      if (tableType === 'actor') {
+        sortCol = _actorSortCol; sortDir = _actorSortDir;
+        sort2Col = _actorSort2Col; sort2Dir = _actorSort2Dir;
+        currentMinN = _actorMinN;
+      } else if (tableType === 'outlet') {
+        sortCol = _outletSortCol; sortDir = _outletSortDir;
+        sort2Col = _outletSort2Col; sort2Dir = _outletSort2Dir;
+        currentMinN = _outletMinN;
+      } else if (tableType === 'category') {
+        sortCol = _categorySortCol; sortDir = _categorySortDir;
+        sort2Col = _categorySort2Col; sort2Dir = _categorySort2Dir;
+        currentMinN = _categoryMinN;
+      } else {
+        sortCol = _topicSortCol; sortDir = _topicSortDir;
+        sort2Col = _topicSort2Col; sort2Dir = _topicSort2Dir;
+        currentMinN = _topicMinN;
+      }
+      
+      const onMinNChange = `setMinN('${tableType}', this.value)`;
+      const clickFn = `handleHeaderClick('${tableType}', `;
 
       // Sort rows: combo presets override single-column sort
       // Two-level sort: primary (header click) then secondary (Then by dropdowns)
@@ -2808,6 +3045,8 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         { val: 'none',          label: '—' },
         { val: 'n',             label: 'n' },
         { val: 'avgDelta',      label: 'avg Δu' },
+        { val: 'avgRealU',      label: 'avg u' },
+        { val: 'avgRealPsi',    label: 'avg ψ' },
         { val: 'consistency',   label: 'σ' },
       ].filter(o => o.val === 'none' || o.val !== sortCol);
       const sort2ColSelect = `<select onchange="setSort2('${tableType}','col',this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
@@ -2820,36 +3059,50 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
 
       let tableContent = '';
       if (!filtered.length) {
-        tableContent = '<div style="grid-column: span 4; color:var(--text-muted); text-align:center; padding: 1rem 0;">No entries matching filters.</div>';
+        tableContent = '<div style="grid-column: span 6; color:var(--text-muted); text-align:center; padding: 1rem 0;">No entries matching filters.</div>';
       } else {
         tableContent = filtered.map((r, idx) => {
-          // Color good/neutral averages (delta <= 0) green, deceptive (delta > 0) red
-          const color = r.avgDelta > 0 ? 'var(--reality-red)' : 'var(--pass-green)';
+          // Color is a smooth HSL spectrum: Green (hue 140) at 0 delta to Red (hue 0) at 3+ delta
+          const ratio = Math.min(1.0, Math.max(0.0, (r.avgDelta || 0) / 3.0));
+          const hue = Math.round(140 - (ratio * 140));
+          const color = `hsl(${hue}, 80%, 48%)`;
           const cleanKey = r.key.replace(/[^a-zA-Z0-9]/g, '-');
-          const dropdownId = `dropdown-${labelHead.replace(/[^a-zA-Z0-9]/g, '-')}-${cleanKey}-${idx}`;
+          const dropdownId = `dropdown-${tableType}-${cleanKey}`;
+          const isOpen = _openLeaderboardDropdowns.has(dropdownId);
+          const displayStyle = isOpen ? 'block' : 'none';
+          const arrowTransform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
           
           const related = stories.filter(s => {
-            if (isActor) {
+            if (tableType === 'actor') {
               return Array.isArray(s.actors) && s.actors.some(a => a.toLowerCase() === r.key.toLowerCase());
-            } else {
+            } else if (tableType === 'outlet') {
               try {
                 const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '');
                 return host.toLowerCase() === r.key.toLowerCase();
               } catch(e) {
                 return false;
               }
+            } else if (tableType === 'category') {
+              if (!s.category) return false;
+              return s.category.split(',').map(c => c.trim().toLowerCase()).includes(r.key.toLowerCase());
+            } else if (tableType === 'topic') {
+              if (!s.topic) return false;
+              return s.topic.trim().toLowerCase() === r.key.toLowerCase();
             }
+            return false;
           });
 
           return `
             <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}')">
-              <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px;">▶</span>${r.key}
+              <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
             </span>
             <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
             <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${fmt(r.avgDelta)}</span>
+            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealU)}</span>
+            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealPsi)}</span>
             <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>
             
-            <div id="${dropdownId}" style="grid-column: span 4; display:none; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
+            <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
               <div style="display:flex; flex-direction:column; gap:0.3rem;">
                 ${related.map(s => {
                   const sDelta = (s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined) ? s.claim_u - s.real_u : 0;
@@ -2864,7 +3117,7 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
                   return `
                     <div data-story-id="${s.id}" style="display:flex; justify-content:space-between; align-items:center; padding:0.2rem 0.4rem; border-radius:4px; cursor:pointer;"
                          onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
-                      <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:70%; display:inline-flex; align-items:center;">
+                       <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:70%; display:inline-flex; align-items:center;">
                         ${linksSpan}
                         <span style="text-decoration:underline; color:var(--text-muted);">${s.subject || s.id}</span>
                       </span>
@@ -2899,12 +3152,14 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
           </div>
         </div>
         <div style="max-height: 400px; overflow-y: auto; padding-right: 0.5rem; border: 1px solid var(--panel-border); border-radius: 6px; background: rgba(0,0,0,0.12); margin-bottom: 0.5rem;">
-          <div style="display:grid; grid-template-columns:1fr auto auto auto; gap:0.2rem 0.8rem; font-size:0.78rem; align-items:center; padding: 0.5rem;">
+          <div style="display:grid; grid-template-columns:1fr auto auto auto auto auto; gap:0.2rem 0.8rem; font-size:0.78rem; align-items:center; padding: 0.5rem;">
             <!-- Clickable Headers (Standard Column Sorting) -->
             <span style="color:var(--text-muted); font-weight:600; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'key')">${labelHead}${getIndicator('key')}</span>
             <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'n')">n${getIndicator('n')}</span>
             <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'avgDelta')">avg Δu${getIndicator('avgDelta')}</span>
-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'consistency')">σ (consistency)${getIndicator('consistency')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealU')">avg u${getIndicator('avgRealU')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealPsi')">avg ψ${getIndicator('avgRealPsi')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'consistency')">σ${getIndicator('consistency')}</span>
             
             ${tableContent}
           </div>
@@ -2925,6 +3180,26 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
         catch(e) { return []; }
       });
       return _hypocrisyTable(stories, rows, 'Source Outlet', _outletMinN);
+    }
+
+    function auditCategoryLeaderboard(stories) {
+      const hasCategories = stories.some(s => s.category);
+      if (!hasCategories) return '<div style="color:var(--text-muted); font-size:0.82rem;">No category tags found in stories.</div>';
+      const rows = _statsForGroups(stories, s => {
+        if (!s.category) return [];
+        return s.category.split(',').map(c => c.trim().toLowerCase()).filter(Boolean);
+      });
+      return _hypocrisyTable(stories, rows, 'Category', _categoryMinN);
+    }
+
+    function auditTopicLeaderboard(stories) {
+      const hasTopics = stories.some(s => s.topic);
+      if (!hasTopics) return '<div style="color:var(--text-muted); font-size:0.82rem;">No topic tags found in stories.</div>';
+      const rows = _statsForGroups(stories, s => {
+        if (!s.topic) return [];
+        return [s.topic.trim()];
+      });
+      return _hypocrisyTable(stories, rows, 'Topic', _topicMinN);
     }
 
     function auditStoryList(stories, type) {

@@ -16,6 +16,12 @@ from aletheia_bot import post_thread, split_text
 from atproto import Client
 
 
+def safe_getmtime(p):
+    try:
+        return os.path.getmtime(p)
+    except OSError:
+        return 0.0
+
 def wait_for_rate_limit(exc: Exception) -> bool:
     """If exc looks like a Bluesky 429, sleep until the reset time and return True.
     Returns False if it isn't a rate-limit error (caller should re-raise).
@@ -183,7 +189,7 @@ def main():
                         for f in os.listdir(args.folder)
                         if f.startswith("factcheck_") and f.endswith(".json")
                     ]
-                    candidates.sort(key=os.path.getmtime)
+                    candidates.sort(key=safe_getmtime)
                     for full_path in candidates:
                         if full_path not in seen_files:
                             files_to_post.append(full_path)
@@ -296,7 +302,7 @@ def main():
                     for f in os.listdir(args.folder)
                     if f.startswith("factcheck_") and f.endswith(".json")
                 ]
-                candidates.sort(key=os.path.getmtime)
+                candidates.sort(key=safe_getmtime)
                 files_to_post.extend(candidates)
             except Exception as e:
                 print(f"ERROR: Failed to list and sort files in folder: {e}")
