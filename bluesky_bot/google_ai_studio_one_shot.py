@@ -33,6 +33,10 @@ try:
 except ImportError:
     genai = None
 
+# Per-request deadline for Gemini calls. Without it a rate-limited/stalled call
+# hangs with no client-side timeout instead of raising into the fallback path.
+GEMINI_TIMEOUT_SECS = int(os.environ.get("GEMINI_TIMEOUT_SECS", "90"))
+
 # --- 0. HELPER FUNCTIONS FOR TOKEN MINIFICATION & ALTERNATIVE API ---
 def minify_markdown(text):
     # Remove markdown link references e.g. [name](url) -> name
@@ -630,7 +634,13 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     system_instruction=system_instruction,
                     generation_config=config
                 )
-                response = model_instance.generate_content(user_payload_str)
+                # Without a timeout the gRPC call has no client-side deadline, so a
+                # 429/quota stall hangs forever instead of raising into the except
+                # below (which is what rotates to the next fallback model).
+                response = model_instance.generate_content(
+                    user_payload_str,
+                    request_options={"timeout": GEMINI_TIMEOUT_SECS},
+                )
                 result_text = response.text.strip()
                 print(f"API call successful with model: {model}, response: {response}")
                 return result_text
@@ -638,6 +648,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             err_str = str(e).lower()
             if "429" in err_str or "exhausted" in err_str or "quota" in err_str:
                 print(f"Rate limited or quota exhausted on model {model}. Trying fallback...")
+            elif "deadline" in err_str or "timeout" in err_str or "504" in err_str:
+                print(f"Model {model} timed out after {GEMINI_TIMEOUT_SECS}s (likely stalled/rate-limited). Trying fallback...")
             else:
                 print(f"Warning: Model {model} failed: {e}")
             last_exception = e
