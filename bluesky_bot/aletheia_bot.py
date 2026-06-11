@@ -65,6 +65,37 @@ def split_text(text, max_len=250):
 
     return chunks
 
+# Cache of target_urls we already have a story for. Built once per process by
+# scanning stories/ (+ subdirs); kept current by save_and_sync_story. The old
+# inline scan re-read every story JSON on disk for EVERY thread posted.
+_REPLIED_TARGETS = None
+
+def _target_already_replied(target_url):
+    global _REPLIED_TARGETS
+    if _REPLIED_TARGETS is None:
+        _REPLIED_TARGETS = set()
+        stories_root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stories")
+        scan_dirs = [stories_root] + [
+            os.path.join(stories_root, d)
+            for d in (os.listdir(stories_root) if os.path.isdir(stories_root) else [])
+            if os.path.isdir(os.path.join(stories_root, d))
+        ]
+        for scan_dir in scan_dirs:
+            for fname in os.listdir(scan_dir) if os.path.isdir(scan_dir) else []:
+                if not fname.endswith(".json"):
+                    continue
+                try:
+                    with open(os.path.join(scan_dir, fname), "r", encoding="utf-8") as f:
+                        d = json.load(f)
+                    cfg = d[0] if isinstance(d, list) else d
+                    t = (cfg.get("target_url") or "").strip().lower()
+                    if t:
+                        _REPLIED_TARGETS.add(t)
+                except Exception:
+                    continue
+        print(f"Loaded {len(_REPLIED_TARGETS)} existing reply targets for duplicate check.")
+    return target_url.strip().lower() in _REPLIED_TARGETS
+
 def save_and_sync_story(thread_config, write_json=True):
     """Saves the thread config as an individual JSON and updates the registry in the bluesky_bot/ folder."""
     subject = thread_config.get("subject", "assessment")
@@ -82,7 +113,12 @@ def save_and_sync_story(thread_config, write_json=True):
     
     status = thread_config.get("status", "").upper()
     is_live = "LIVE" in status or len(thread_config.get("rkeys", [])) > 0 or len(thread_config.get("post_urls", [])) > 0
-    
+
+    # Keep the duplicate-reply cache current within this process.
+    _t = (thread_config.get("target_url") or "").strip().lower()
+    if _t and _REPLIED_TARGETS is not None:
+        _REPLIED_TARGETS.add(_t)
+
     # Save individual JSON files to bot directory
     s_dir = bot_stories_dir
     target_dir = os.path.join(s_dir, "live") if is_live else s_dir
@@ -331,6 +367,12 @@ def post_thread(client, thread_config, live=False):
                 if not target_url:
                     raise ValueError("target_url is required when mode is 'reply'.")
 
+                # Check local stories for an existing reply to this target BEFORE any
+                # network calls (handle resolution + getRecord are wasted on a skip).
+                if _target_already_replied(target_url):
+                    print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
+                    raise RuntimeError("ALREADY_REPLIED")
+
                 print(f"Resolving target post: {target_url}...")
                 try:
                     target_handle, rkey = parse_bsky_url(target_url)
@@ -354,36 +396,6 @@ def post_thread(client, thread_config, live=False):
                         root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
 
                     parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
-
-                    # Check local stories for an existing reply to this target before posting.
-                    script_dir_local = os.path.dirname(os.path.abspath(__file__))
-                    already_replied = False
-                    stories_root = os.path.join(script_dir_local, "stories")
-                    scan_dirs = [stories_root] + [
-                        os.path.join(stories_root, d)
-                        for d in (os.listdir(stories_root) if os.path.isdir(stories_root) else [])
-                        if os.path.isdir(os.path.join(stories_root, d))
-                    ]
-                    target_url_norm = target_url.strip().lower()
-                    for scan_dir in scan_dirs:
-                        if already_replied:
-                            break
-                        for fname in os.listdir(scan_dir) if os.path.isdir(scan_dir) else []:
-                            if not fname.endswith(".json"):
-                                continue
-                            try:
-                                with open(os.path.join(scan_dir, fname), "r", encoding="utf-8") as _f:
-                                    _d = json.load(_f)
-                                _cfg = _d[0] if isinstance(_d, list) else _d
-                                if (_cfg.get("target_url") or "").strip().lower() == target_url_norm:
-                                    already_replied = True
-                                    break
-                            except Exception:
-                                continue
-
-                    if already_replied:
-                        print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
-                        raise RuntimeError("ALREADY_REPLIED")
 
                     print("Resolved target reference correctly.")
                     is_reply = True

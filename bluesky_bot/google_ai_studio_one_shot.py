@@ -118,12 +118,22 @@ def load_historical_evaluations():
     seen_ids = set()
     seen_targets = set()
     bot_stories_dir = os.path.join(script_dir, "stories")
-    
-    if os.path.exists(bot_stories_dir):
+
+    # Posted stories get MOVED into live/ (and staged ones sit in darkroom/), so
+    # scanning only the root would forget everything already posted and let the
+    # bot re-harvest + re-evaluate it.
+    scan_dirs = [
+        bot_stories_dir,
+        os.path.join(bot_stories_dir, "live"),
+        os.path.join(bot_stories_dir, "darkroom"),
+    ]
+    for scan_dir in scan_dirs:
+        if not os.path.isdir(scan_dir):
+            continue
         try:
-            story_files = [f for f in os.listdir(bot_stories_dir) if f.startswith('factcheck_') and f.endswith('.json')]
+            story_files = [f for f in os.listdir(scan_dir) if f.startswith('factcheck_') and f.endswith('.json')]
             for sf in story_files:
-                filepath = os.path.join(bot_stories_dir, sf)
+                filepath = os.path.join(scan_dir, sf)
                 with open(filepath, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                 config = data[0] if isinstance(data, list) else data
@@ -139,9 +149,9 @@ def load_historical_evaluations():
                 story_id = config.get("id")
                 if story_id:
                     seen_ids.add(story_id.strip().lower())
-            print(f"Loaded {len(seen_urls)} historical URLs, {len(seen_targets)} target URLs, and {len(seen_ids)} historical story IDs.")
         except Exception as e:
-            print(f"Warning: Failed to load historical evaluations: {e}")
+            print(f"Warning: Failed to load historical evaluations from {scan_dir}: {e}")
+    print(f"Loaded {len(seen_urls)} historical URLs, {len(seen_targets)} target URLs, and {len(seen_ids)} historical story IDs.")
     return seen_urls, seen_ids, seen_targets
 
 def extract_external_link(post):
@@ -492,15 +502,21 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
     return candidates
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
+_RULES_CACHE = {}
+
+def _load_rules():
+    """Read + minify the rules files once per process; they don't change mid-run."""
+    if not _RULES_CACHE:
+        convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
+        formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
+        with open(convergence_path, "r", encoding="utf-8") as f:
+            _RULES_CACHE["convergence"] = minify_markdown(f.read())
+        with open(formatting_path, "r", encoding="utf-8") as f:
+            _RULES_CACHE["formatting"] = minify_markdown(f.read())
+    return _RULES_CACHE["convergence"], _RULES_CACHE["formatting"]
+
 def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None):
-    # Load rules and guidelines
-    convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
-    formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
-    
-    with open(convergence_path, "r", encoding="utf-8") as f:
-        convergence_rules = minify_markdown(f.read())
-    with open(formatting_path, "r", encoding="utf-8") as f:
-        formatting_rules = minify_markdown(f.read())
+    convergence_rules, formatting_rules = _load_rules()
         
     # System prompt: pure role declaration only
     system_instruction = "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation."
@@ -563,7 +579,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     user_payload_str = (
         f"=== CONVERGENCE TEST RULES ===\n{convergence_rules}\n\n"
         f"=== THREAD FORMATTING & SCHEMAS ===\n{formatting_rules}\n\n"
-        f"=== CANDIDATES TO EVALUATE ({n} total) ===\n{json.dumps(candidates, indent=2)}\n\n"
+        f"=== CANDIDATES TO EVALUATE ({n} total) ===\n{json.dumps(candidates, separators=(',', ':'), ensure_ascii=False)}\n\n"
         f"{output_format}"
     )
     
