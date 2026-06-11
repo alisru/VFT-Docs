@@ -23,13 +23,24 @@ def wait_for_rate_limit(exc: Exception) -> bool:
     Bluesky sends:
         HTTP 429  +  ratelimit-reset: <unix timestamp>
     The atproto client wraps this as a RequestException whose .response carries
-    status_code and headers.
+    status_code and headers. post_thread re-wraps that in a RuntimeError, so we
+    walk the __cause__/__context__ chain to find the response.
     """
-    response = getattr(exc, "response", None)
+    response = None
+    seen = set()
+    cursor = exc
+    while cursor is not None and id(cursor) not in seen:
+        seen.add(id(cursor))
+        response = getattr(cursor, "response", None)
+        if response is not None:
+            break
+        cursor = cursor.__cause__ or cursor.__context__
     if response is None:
         # Some wrappers stringify the error — check message text as fallback.
+        # Match deliberately narrow phrases: a bare "rate" would catch
+        # "generate"/"moderate" and stall the bot an hour on unrelated errors.
         msg = str(exc).lower()
-        if "429" not in msg and "rate" not in msg and "ratelimit" not in msg:
+        if not any(tok in msg for tok in ("429", "rate limit", "ratelimit", "too many requests")):
             return False
         # No header info available; sleep until the top of the next hour.
         now = datetime.datetime.now()
@@ -61,6 +72,13 @@ def wait_for_rate_limit(exc: Exception) -> bool:
     print(f"\n[RATE LIMIT] 429 received but could not parse reset time. Sleeping 15 minutes.")
     _sleep_with_countdown(900)
     return True
+
+
+def _safe_to_retry(exc: Exception) -> bool:
+    """post_thread has no resume: retrying after a mid-thread failure would
+    re-post the parts that already landed. Only the root post (part 1) failing
+    means nothing went out, so only that case is safe to retry."""
+    return "Failed to post part" not in str(exc)
 
 
 def _sleep_with_countdown(seconds: int):
@@ -208,7 +226,11 @@ def main():
                                 break
                             except Exception as e:
                                 if _attempt == 0 and wait_for_rate_limit(e):
-                                    continue  # retry after sleep
+                                    if _safe_to_retry(e):
+                                        continue  # nothing posted yet — retry after sleep
+                                    print(f"  [POSTING FAIL] Rate limit hit MID-THREAD on {filename}; not retrying (would duplicate posted parts). Review manually.")
+                                    seen_files.add(path)
+                                    break
                                 print(f"  [POSTING FAIL] Failed to post {filename}: {e}")
                                 seen_files.add(path)
                                 break
@@ -308,7 +330,9 @@ def main():
                         break
                     except Exception as e:
                         if _attempt == 0 and wait_for_rate_limit(e):
-                            continue  # retry after sleep
+                            if _safe_to_retry(e):
+                                continue  # nothing posted yet — retry after sleep
+                            print(f"Rate limit hit MID-THREAD on {filename}; not retrying (would duplicate posted parts). Review manually.")
                         raise  # let outer handler log and move on
 
             except Exception as e:
