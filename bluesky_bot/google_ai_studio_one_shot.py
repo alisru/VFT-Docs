@@ -35,7 +35,7 @@ except ImportError:
 
 # Per-request deadline for Gemini calls. Without it a rate-limited/stalled call
 # hangs with no client-side timeout instead of raising into the fallback path.
-GEMINI_TIMEOUT_SECS = int(os.environ.get("GEMINI_TIMEOUT_SECS", "120"))
+GEMINI_TIMEOUT_SECS = int(os.environ.get("GEMINI_TIMEOUT_SECS", "90"))
 
 # --- 0. HELPER FUNCTIONS FOR TOKEN MINIFICATION & ALTERNATIVE API ---
 def minify_markdown(text):
