@@ -5,6 +5,7 @@ import re
 import time
 import argparse
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 from atproto import Client, IdResolver
@@ -183,13 +184,24 @@ NON_NEWS_DOMAINS = {
 }
 
 def is_news_url(url):
-    """Banlist gate: returns True for any real external http(s) URL not on the non-news denylist."""
+    """Banlist gate: returns True for any real external http(s) URL not on the non-news denylist.
+
+    Matches the URL's hostname exactly or as a subdomain (suffix match on dot
+    boundary). Plain substring matching is wrong: 't.co' would ban
+    washingtonpost.com, 'x.com' would ban fox.com, etc.
+    """
     if not url:
         return False
     u = url.strip().lower()
     if not u.startswith(('http://', 'https://')):
         return False
-    return not any(bad in u for bad in NON_NEWS_DOMAINS)
+    try:
+        host = urllib.parse.urlparse(u).hostname or ""
+    except Exception:
+        return False
+    if not host:
+        return False
+    return not any(host == bad or host.endswith('.' + bad) for bad in NON_NEWS_DOMAINS)
 
 def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets, banned_keywords):
     """Open topic search across all of Bluesky via the authenticated searchPosts endpoint.
