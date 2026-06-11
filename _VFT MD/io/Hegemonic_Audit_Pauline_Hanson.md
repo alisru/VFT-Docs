@@ -27,7 +27,7 @@ Pauline Hanson acts as a **Structural Regression**. She weaponizes "Bait" archet
 ## 1.1 Who
 
 **(Who.Who.Who) Mateship (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "A type of reverse racism is applied to mainstream Australians... by those who promote political correctness" (Maiden Speech, Hansard, 10 September 1996).
+**Quote:** "A type of reverse racism is applied to mainstream Australians... by those who promote political correctness" - delivered Maiden Speech, Hansard, 10 September 1996
 **Actuality/Hypocrisy:** Mateship in the Kanon is a horizontal bond between equals; her tiered hierarchy breaks this.
 
 By creating a division of "Mainstream" vs. "Other," she breaks the universal moral tether of the vector.
@@ -52,7 +52,7 @@ This transition from a systemic bond to a group-benefit exclusion results in a f
 
 
 **(Who.Who.What) The Larrikin (υ: +0.5, ψ: +0.6): HIT.**
-**Quote:** "I won the seat of Oxley largely on an issue that has resulted in me being called a racist... I will not be silenced" (Maiden Speech, Hansard, 10 September 1996).
+**Quote:** "I won the seat of Oxley largely on an issue that has resulted in me being called a racist... I will not be silenced" - delivered Maiden Speech, Hansard, 10 September 1996
 **Actuality/Hypocrisy:** This is a high-will (+ψ) alignment with the "mockery of hubris" vector in the Kanon.
 
 She effectively utilizes the Larrikin's cultural immunity to shield her polarizing rhetoric from scrutiny.
@@ -77,7 +77,7 @@ Her interaction preserves the active will of the vector, even if the moral targe
 
 
 **(Who.Who.Where) The Battler (υ: +0.6, ψ: -0.3): HIT.**
-**Quote:** "I am just an ordinary Australian... the fish and chip shop woman who has had her fair share of life's knocks" (Maiden Speech, Hansard, 10 September 1996).
+**Quote:** "I am just an ordinary Australian... the fish and chip shop woman who has had her fair share of life's knocks" - delivered Maiden Speech, Hansard, 10 September 1996
 **Actuality/Hypocrisy:** She successfully occupies the Battler archetype by emphasizing passive endurance (-ψ) and struggle.
 
 This resonates with the commoner (+υ) narrative of the Australian character within the identity framework.
@@ -102,7 +102,7 @@ Her alignment here is structurally sound as it prioritizes the "hard road" over 
 
 
 **(Who.Who.Why) The Anzac (υ: +0.5, ψ: +0.8): HIT.**
-**Quote:** "We should be standing up for our own people... just like the Anzacs did" (Senate Maiden Speech, 2016).
+**Quote:** "We should be standing up for our own people... just like the Anzacs did" - delivered Senate Maiden Speech, 2016
 **Actuality/Hypocrisy:** This is a proactive (+ψ) use of the national myth to validate a defensive moral stance.
 
 She leverages the sacred authority of the Anzac to reinforce her specific "Australia First" agenda.
@@ -127,7 +127,7 @@ While the target of the defense is narrowed, the methodology remains aligned wit
 
 
 **(Who.Who.How) Stringybark and Greenhide (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "I don't need a university degree to tell me what's right and wrong. I've got common sense" (2016).
+**Quote:** "I don't need a university degree to tell me what's right and wrong. I've got common sense" - delivered 2016
 **Actuality/Hypocrisy:** This is a high-will (+ψ) performance of "Bricoleur" logic that prioritizes immediate, practical results.
 
 She aligns with the "Stringybark and Greenhide" vector by favoring improvisation over established institutions.
@@ -152,7 +152,7 @@ Her success here is rooted in the active, creative use of simple tools to disrup
 
 
 **(Who.Who.Cause) The Indigenous Custodian (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "I was born here... I have as much right to be here as anyone else" (Senate walk-out during Welcome to Country, 2022).
+**Quote:** "I was born here... I have as much right to be here as anyone else" - delivered Senate walk-out during Welcome to Country, 2022
 **Actuality/Hypocrisy:** By rejecting the moral priority of the Custodian (+υ), she collapses the foundation of the state.
 
 This posture shifts the identity focus from systemic stewardship to a self-centered, modern ownership claim.
@@ -177,7 +177,7 @@ This interaction results in a failure because it replaces the "Root" of the nati
 
 
 **(Who.Who.Effect) The Forgotten People (υ: +0.5, ψ: -0.4): HIT.**
-**Quote:** "For far too long ordinary Australians have been kept out of any debate... their concerns have been ignored" (Maiden Speech, 1996).
+**Quote:** "For far too long ordinary Australians have been kept out of any debate... their concerns have been ignored" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** She accurately identifies and mobilizes the passive anxiety (-ψ) inherent in the anchor vector.
 
 This stabilizes her support base by addressing the perceived powerlessness of the "forgotten" citizen.
@@ -204,7 +204,7 @@ Her interaction is a structural hit because she successfully anchors herself to 
 ## 1.2 What
 
 **(Who.What.Who) The Fair Go (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "A truly multicultural country can never be strong... we should abolish the policy of multiculturalism" (Maiden Speech, 1996).
+**Quote:** "A truly multicultural country can never be strong... we should abolish the policy of multiculturalism" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** By restricting the universal axiom (+υ) to a monocultural "Standard," she degrades the systemic integrity.
 
 This interaction functions as the "Greatest Lie," excluding the pluralist reality to protect an ingroup standard.
@@ -229,7 +229,7 @@ She fails the vector by attempting to make fairness a conditional asset rather t
 
 
 **(Who.What.What) Tall Poppy Syndrome (υ: +0.4, ψ: -0.5): HIT.**
-**Quote:** "The elitist crowd in this country... they don't know what it's like in the real world" (2019).
+**Quote:** "The elitist crowd in this country... they don't know what it's like in the real world" - delivered 2019
 **Actuality/Hypocrisy:** This is a classic application of "Knocker" logic used to maintain horizontal pressure against elites.
 
 She employs the syndrome to suppress the influence of those she deems culturally or intellectually arrogant.
@@ -254,7 +254,7 @@ Her interaction is a hit because it aligns with the traditional Australian desir
 
 
 **(Who.What.Where) Egalitarianism (υ: +0.8, ψ: +0.3): FAIL.**
-**Quote:** "If you are not prepared to become Australian... go back to where you came from" (2016).
+**Quote:** "If you are not prepared to become Australian... go back to where you came from" - delivered 2016
 **Actuality/Hypocrisy:** True Egalitarianism (+υ) requires a high floor; her demand creates a master-subject dynamic instead.
 
 By imposing conditions on belonging, she fails the core horizontal promise of the Australian identity.
@@ -279,7 +279,7 @@ This interaction is a failure as it degrades the fundamental premise that all ci
 
 
 **(Who.What.Why) "She'll be right" (υ: +0.3, ψ: -0.6): FAIL.**
-**Quote:** "I believe we are in danger of being swamped by Asians" (Maiden Speech, 1996).
+**Quote:** "I believe we are in danger of being swamped by Asians" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** "She'll be right" acts as a buffer; her rhetoric is a "fever" that amplifies cultural shocks.
 
 By rejecting the passive resilience of the vector, she introduces friction into the national psychological state.
@@ -304,7 +304,7 @@ This interaction is a failure because it actively destroys the "Valve" of confid
 
 
 **(Who.What.How) Secular Skepticism (υ: +0.6, ψ: -0.3): FAIL.**
-**Quote:** "Islam is a religion that does not belong in Australia... it is a political ideology" (2017).
+**Quote:** "Islam is a religion that does not belong in Australia... it is a political ideology" - delivered 2017
 **Actuality/Hypocrisy:** Neutral skepticism (+υ) filters all dogma equally; selective targeting of one faith is a failure.
 
 This action attempts to use secular logic as a weapon of suppression rather than as a neutral filter.
@@ -329,7 +329,7 @@ Her interaction fails because it uses the "Filter" of the state to persecute rat
 
 
 **(Who.What.Cause) The Convict Stain (υ: +0.3, ψ: -0.5): HIT.**
-**Quote:** "We should not be dictated to by the United Nations" (2018).
+**Quote:** "We should not be dictated to by the United Nations" - delivered 2018
 **Actuality/Hypocrisy:** Anti-globalism serves as a structural echo of convict resentment (+υ, \-ψ) toward higher authority.
 
 She leverages the historical "Stain" of resentment to justify her rejection of modern global governance.
@@ -354,7 +354,7 @@ Her interaction is a hit because it accurately mirrors the logic of the "Convict
 
 
 **(Who.What.Effect) The Commonwealth (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "Immigration must be halted... we must look after our own first" (1996).
+**Quote:** "Immigration must be halted... we must look after our own first" - delivered 1996
 **Actuality/Hypocrisy:** By defining the "Common" as "Mainstream Only," she degrades the systemic integrity of the vector.
 
 She fails the Commonwealth axiom (+υ) by prioritizing the part over the stability of the whole system.
@@ -381,7 +381,7 @@ This interaction is a failure as it shrinks the scope of the Commonwealth to a t
 ## 1.3 Where
 
 **(Who.Where.Who) The Bush (υ: +0.5, ψ: -0.4): HIT.**
-**Quote:** "I’ll always stand up for the people in the bush" (2017).
+**Quote:** "I’ll always stand up for the people in the bush" - delivered 2017
 **Actuality/Hypocrisy:** She successfully leverages the Sunburnt Country myth (+υ, \-ψ) to claim spiritual high ground.
 
 This identifies her movement with the traditional heartland, regardless of her actual policy impact there.
@@ -406,7 +406,7 @@ Her interaction is a hit because it channels the passive power of the land's myt
 
 
 **(Who.Where.What) The Coast (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "Our beautiful beaches and coastal areas are being bought up by foreign interests and developers who don't care about our way of life." (2018).
+**Quote:** "Our beautiful beaches and coastal areas are being bought up by foreign interests and developers who don't care about our way of life." - delivered 2018
 **Actuality/Hypocrisy:** She fiercely defends the "Verandah" culture (+υ, \+ψ) against perceived "Alien" threats and changes.
 
 This alignment reinforces the defensive posture of the coastal fringe in the Australian physical identity.
@@ -431,7 +431,7 @@ Her interaction is a hit as it accurately reflects the "Border Patrol" mentality
 
 
 **(Who.Where.Where) The Red Centre (υ: +0.5, ψ: -0.5): FAIL.**
-**Quote:** "Uluru is for all Australians... it should be like the Sydney Harbour Bridge" (2019).
+**Quote:** "Uluru is for all Australians... it should be like the Sydney Harbour Bridge" - delivered 2019
 **Actuality/Hypocrisy:** Her rejection of the "Spirit of Place" (+υ) in favor of secular utility fails the vector's depth.
 
 She desacralizes the land by refusing to acknowledge its deep, metaphysical priority in the Kanon.
@@ -456,14 +456,14 @@ Her interaction is a failure because it replaces the "Spiritual Sovereign" with 
 
 
 **(Who.Where.Why) The Cycle (Drought & Flood) (υ: ±0.0, ψ: -0.5): FAIL.**
-**Quote:** "The Cycle (Drought & Flood) is just another word for political correctness."
+**Quote:** "The Cycle (Drought & Flood) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Cycle (Drought & Flood) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Cycle (Drought & Flood).
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.5).
 
 
 **(Who.Where.How) The Tyranny of Distance (υ: ±0.0, ψ: -0.6): HIT.**
-**Quote:** "If I can invite whom I want into my home... I should have a say in my country" (1996).
+**Quote:** "If I can invite whom I want into my home... I should have a say in my country" - delivered 1996
 **Actuality/Hypocrisy:** She translates geographic "Friction" (ψ) into a moral "Right" to exclude those on the "Outside."
 
 This interaction reinforces the "Fortress Australia" mentality derived from the country's physical isolation.
@@ -488,7 +488,7 @@ Her interaction is a hit because it captures the historical fear of "the empty n
 
 
 **(Who.Where.Cause) Terra Nullius (υ: -0.9, ψ: +0.7): HIT.**
-**Quote:** "We are all one people... I don't see why one group should have special rights" (2022).
+**Quote:** "We are all one people... I don't see why one group should have special rights" - delivered 2022
 **Actuality/Hypocrisy:** Her rhetoric is a proactive (+ψ) performance of the "Erasure of Presence" (-υ) in history.
 
 She actively maintains the gate of exclusion by upholding the logic of the foundational colonial lie.
@@ -513,7 +513,7 @@ Her interaction is a hit because she is one of the primary modern defenders of t
 
 
 **(Who.Where.Effect) The Suburb (υ: +0.4, ψ: -0.4): HIT.**
-**Quote:** "People are scared in their own homes... fear of ghettoization is real" (2016).
+**Quote:** "People are scared in their own homes... fear of ghettoization is real" - delivered 2016
 **Actuality/Hypocrisy:** She triggers the suburban "Defense Mechanism" (+υ, \-ψ) to polarize the community against others.
 
 This resonance with the "Retreat" vector provides a powerful emotive anchor for her isolationist platform.
@@ -540,7 +540,7 @@ Her interaction is a hit because it successfully activates the passive, protecti
 ## 1.4 Why
 
 **(Who.Why.Who) Punching Above Weight (υ: +0.5, ψ: +0.8): HIT.**
-**Quote:** "Australia is a great nation that has achieved incredible things on the world stage, and we don't need international bodies telling us how to run our country." (2017).
+**Quote:** "Australia is a great nation that has achieved incredible things on the world stage, and we don't need international bodies telling us how to run our country." - delivered 2017
 **Actuality/Hypocrisy:** High-will (+ψ) defiance utilizing the "Little Nation, Big Noise" archetype is central to her brand.
 
 She uses the lyrical ambition of the nation to fuel her proactive, often aggressive, political positioning.
@@ -565,7 +565,7 @@ Her interaction is a hit because it aligns with the national pride found in bein
 
 
 **(Who.Why.What) The Lucky Country (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "We are indeed a lucky country, but our luck is running out because of weak politicians selling our resources and assets to foreign companies." (2016).
+**Quote:** "We are indeed a lucky country, but our luck is running out because of weak politicians selling our resources and assets to foreign companies." - delivered 2016
 **Actuality/Hypocrisy:** She views national "Luck" (+υ) as a hoard to be protected from "New Australians" and outsiders.
 
 This interaction maps to the passive protection of resources rather than the creation of new systemic value.
@@ -590,7 +590,7 @@ Her interaction is a hit because it effectively leverages the passive, anxious s
 
 
 **(Who.Why.Where) Populate or Perish (υ: -0.2, ψ: +0.6): FAIL.**
-**Quote:** "Our infrastructure is at breaking point, our schools and hospitals are full, and we are importing hundreds of thousands of people we cannot support." (2019).
+**Quote:** "Our infrastructure is at breaking point, our schools and hospitals are full, and we are importing hundreds of thousands of people we cannot support." - delivered 2019
 **Actuality/Hypocrisy:** She chooses "Exclusion" over the proactive "Survival" growth vector (-υ, \+ψ) of the state.
 
 By attempting to stop the engine of growth, she introduces friction into the lyrical survival mechanism.
@@ -615,7 +615,7 @@ Her interaction is a failure as it contradicts the primary lyrical drive that al
 
 
 **(Who.Why.Where) Anteriority [First Nations Perspective] (υ: +0.9, ψ: +0.3): FAIL.**
-**Quote:** "I have as much right to be here as any Aboriginal" (2022).
+**Quote:** "I have as much right to be here as any Aboriginal" - delivered 2022
 **Actuality/Hypocrisy:** By denying the "Prior Claim" (+υ), she introduces maximum friction into the lyrical identity.
 
 This failure to acknowledge the root of the land's history prevents any authentic national reconciliation.
@@ -640,14 +640,14 @@ Her interaction is a failure because it replaces the "Lyrical Root" with a shall
 
 
 **(Who.Why.Why) Have a Go, Ya Mug (υ: +0.7, ψ: +0.8): FAIL.**
-**Quote:** "Have a Go, Ya Mug is just another word for political correctness."
+**Quote:** "Have a Go, Ya Mug is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Have a Go, Ya Mug viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Have a Go, Ya Mug.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.8).
 
 
 **(Who.Why.How) The Cultural Cringe (υ: -0.3, ψ: -0.5): HIT.**
-**Quote:** "Look at what is happening in Europe... look at failed multiculturalism."
+**Quote:** "Look at what is happening in Europe... look at failed multiculturalism." - delivered during political career
 **Actuality/Hypocrisy:** She relies on the fear of being "Worse than Overseas" (-υ, \-ψ) to halt social evolution.
 
 This leverages the historical cringe to create a sense of national inferiority and impending failure.
@@ -672,21 +672,21 @@ Her interaction is a hit as it perfectly demonstrates the use of external compar
 
 
 **(Who.Why.Cause) The Gold Rush (υ: +0.5, ψ: +0.7): FAIL.**
-**Quote:** "The Gold Rush is just another word for political correctness."
+**Quote:** "The Gold Rush is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Gold Rush viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Gold Rush.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.7).
 
 
 **(Who.Why.Effect) Sport (υ: +0.6, ψ: +0.7): FAIL.**
-**Quote:** "Sport is just another word for political correctness."
+**Quote:** "Sport is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Sport viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Sport.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.7).
 ## 1.5 How
 
 **(Who.How.Who) The Pub Test (υ: +0.6, ψ: -0.3): HIT.**
-**Quote:** "I don't care what the academics or the journalists say. Go down to any local pub and ask ordinary Australians what they think, and they'll tell you I'm right." (2018).
+**Quote:** "I don't care what the academics or the journalists say. Go down to any local pub and ask ordinary Australians what they think, and they'll tell you I'm right." - delivered 2018
 **Actuality/Hypocrisy:** She bypasses expert inquiry using the filter of the "Forgotten People" (+υ, \-ψ) and their views.
 
 This aligns with the passive, common-sense logical filter that defines much of the national character.
@@ -711,7 +711,7 @@ Her interaction is a hit because she successfully positions herself as the voice
 
 
 **(Who.How.What) Compulsory Voting (υ: +0.8, ψ: +0.5): HIT.**
-**Quote:** "Every Australian has a duty to vote, and One Nation is giving a real alternative to the millions who are sick of the major parties." (2019).
+**Quote:** "Every Australian has a duty to vote, and One Nation is giving a real alternative to the millions who are sick of the major parties." - delivered 2019
 **Actuality/Hypocrisy:** She uses the stability of the mandatory system (+υ, \+ψ) to launch her frequent disruptions.
 
 This interaction utilizes the duty-based logic of the state to amplify her anti-establishment voice.
@@ -736,7 +736,7 @@ Her interaction is a hit because she operates within the rules of the system to 
 
 
 **(Who.How.Where) Pragmatism (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "Let's cut through the red tape and the bureaucracy and just use common sense to solve these problems." (2016).
+**Quote:** "Let's cut through the red tape and the bureaucracy and just use common sense to solve these problems." - delivered 2016
 **Actuality/Hypocrisy:** This "Bricoleur" logic seeks shortcuts (+υ, \+ψ) to resolve long-standing social tensions.
 
 She adopts a logical approach that favors what "works" in the moment over structural reform.
@@ -761,7 +761,7 @@ Her interaction is a hit because it mirrors the Australian preference for the "W
 
 
 **(Who.How.Why) The Sickie (υ: +0.4, ψ: -0.4): FAIL.**
-**Quote:** "We must stop the dole bludgers... bleeding this country dry."
+**Quote:** "We must stop the dole bludgers... bleeding this country dry." - delivered during political career
 **Actuality/Hypocrisy:** She attempts to close the "Individual Safety Valve" (+υ, \-ψ) that the system provides.
 
 By targeting the vulnerable for "bludging," she fails the logic of mutual endurance and quiet rebellion.
@@ -786,7 +786,7 @@ Her interaction is a failure because it replaces the "Quiet Valve" with a loud, 
 
 
 **(Who.How.How) The Royal Commission (υ: +0.8, ψ: +0.7): HIT.**
-**Quote:** "We need a Royal Commission into the Family Court, and we need one into the banks, because the system is broken and corrupt." (2018).
+**Quote:** "We need a Royal Commission into the Family Court, and we need one into the banks, because the system is broken and corrupt." - delivered 2018
 **Actuality/Hypocrisy:** This is a high-will (+ψ) use of the scale vector (+υ) to drive a biased and personal agenda.
 
 She utilizes the most powerful logical tool of the state to pursue a polarizing and exclusionary goal.
@@ -811,7 +811,7 @@ Her interaction is a hit because it accurately utilizes the logical mechanism of
 
 
 **(Who.How.Cause) The Ticket of Leave (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "Certain cultures are simply unassimilable."
+**Quote:** "Certain cultures are simply unassimilable." - delivered during political career
 **Actuality/Hypocrisy:** This is a rejection of the second-chance logic (+υ) inherent in the convict state.
 
 By declaring groups "unassimilable," she denies the possibility of the "Ticket" for those she excludes.
@@ -836,7 +836,7 @@ Her interaction is a failure as it contradicts the core "Pathway" logic that all
 
 
 **(Who.How.Effect) The Union (υ: +0.7, ψ: +0.7): FAIL.**
-**Quote:** "Union bosses are holding this country to ransom, protecting corrupt individuals while honest, hard-working people pay the price." (2019).
+**Quote:** "Union bosses are holding this country to ransom, protecting corrupt individuals while honest, hard-working people pay the price." - delivered 2019
 **Actuality/Hypocrisy:** Attacking the mechanism of power (+υ, \+ψ) while claiming to support the worker is a failure.
 
 She disables the very lever that allows the "Battler" to gain a systemic "Fair Go" in the workforce.
@@ -863,7 +863,7 @@ Her interaction is a failure because it replaces a "Logical Tool of Power" with 
 ## 1.6 Cause
 
 **(Who.Cause.Who) The First Fleet (υ: -0.3, ψ: -0.5): HIT.**
-**Quote:** "We should be proud of our history, proud of the pioneers and settlers who built this modern, prosperous nation from nothing." (Australia Day speech, 2020).
+**Quote:** "We should be proud of our history, proud of the pioneers and settlers who built this modern, prosperous nation from nothing." - delivered Australia Day speech, 2020
 **Actuality/Hypocrisy:** She anchors her identity in the "Forced Migration" (-υ, \-ψ) and survival of her lineage.
 
 This resonance with the "Seed" vector provides her with a sense of historical "Firstness" and rights.
@@ -888,7 +888,7 @@ Her interaction is a hit because it accurately reflects the "Foundational Anxiet
 
 
 **(Who.Cause.Who) Continuity [First Nations Perspective] (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "I'm tired of being told to feel guilty about the past. We all live here now, we are all equal, and we should be one nation." (2022).
+**Quote:** "I'm tired of being told to feel guilty about the past. We all live here now, we are all equal, and we should be one nation." - delivered 2022
 **Actuality/Hypocrisy:** This is a "Great Silence" performance that actively fails to acknowledge the deep root (+υ).
 
 By ignoring continuity, she builds her identity on a historical foundation that is shallow and fractured.
@@ -913,7 +913,7 @@ Her interaction is a failure because it replaces the "Eternal Presence" with a "
 
 
 **(Who.Cause.What) Federation (υ: +0.6, ψ: +0.4): HIT.**
-**Quote:** "Our Constitution and our Federation were created to protect the rights of the states and the people, and we must defend them from Canberra's overreach." (2016).
+**Quote:** "Our Constitution and our Federation were created to protect the rights of the states and the people, and we must defend them from Canberra's overreach." - delivered 2016
 **Actuality/Hypocrisy:** She aligns with the original 1901-era logic (+υ, \+ψ) of the state as a defensive merger.
 
 This historical anchor validates her view of the nation as a protected, homogenous enclave.
@@ -938,7 +938,7 @@ Her interaction is a hit because it captures the original, defensive intent of t
 
 
 **(Who.Cause.What) Exclusion [First Nations Perspective] (υ: -0.8, ψ: -0.6): HIT.**
-**Quote:** "A nation without borders is not a nation. We have every right to decide who comes here and how they live." (2018).
+**Quote:** "A nation without borders is not a nation. We have every right to decide who comes here and how they live." - delivered 2018
 **Actuality/Hypocrisy:** Utilizing fear to build a "Fortress Identity" (-υ, \-ψ) is a HIT on the exclusion vector.
 
 She effectively maintains the "Greatest Lie" by ensuring the gate remains closed to the excluded.
@@ -963,7 +963,7 @@ Her interaction is a hit because she is one of the primary modern maintainers of
 
 
 **(Who.Cause.Where) Songlines (υ: +0.9, ψ: +0.3): FAIL.**
-**Quote:** "We are constantly forced to listen to Welcomes to Country and cultural rituals that have nothing to do with modern Australia." (Senate walk-out, 2022).
+**Quote:** "We are constantly forced to listen to Welcomes to Country and cultural rituals that have nothing to do with modern Australia." - delivered Senate walk-out, 2022
 **Actuality/Hypocrisy:** This interaction results in the erasure of the prior spiritual ordering (+υ) of the land.
 
 She fails the historical cause by denying the ancient tracks that define the continent's deeper identity.
@@ -988,7 +988,7 @@ Her interaction is a failure because it replaces the "Living Matrix" with a "Dea
 
 
 **(Who.Cause.Why) Eureka Stockade (υ: +0.8, ψ: +0.9): HIT.**
-**Quote:** "The Eureka flag represents ordinary people standing up against unfair taxes and corrupt authority, and that is what One Nation does." (2016).
+**Quote:** "The Eureka flag represents ordinary people standing up against unfair taxes and corrupt authority, and that is what One Nation does." - delivered 2016
 **Actuality/Hypocrisy:** She effectively uses the "Rebellion" vector (+υ, \+ψ) to mobilize her base for ingroup rights.
 
 This identifies her cause with the historical fight for a "Fair Go" against an oppressive authority.
@@ -1013,7 +1013,7 @@ Her interaction is a hit because it successfully maps her modern grievance onto 
 
 
 **(Who.Cause.How) White Australia Policy (υ: -0.9, ψ: +0.6): HIT.**
-**Quote:** "Let's get back the Australia I grew up in... Certain countries they should not be allowed to migrate here." (Bondi Pavilion vigil, December 16, 2025).
+**Quote:** "Let's get back the Australia I grew up in... Certain countries they should not be allowed to migrate here." - delivered Bondi Pavilion vigil, December 16, 2025
 **Actuality/Hypocrisy:** Her proactive will (+ψ) to enforce racial exclusion (-υ) hits the vector of the policy.
 
 She acts as a modern maintainer of the gate, attempting to restore a historical policy of exclusion.
@@ -1038,21 +1038,21 @@ Her interaction is a hit because she is the most prominent political agent seeki
 
 
 **(Who.Cause.How) Survival [First Nations Perspective] (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Survival [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Survival [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Survival [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Survival [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.6).
 
 
 **(Who.Cause.Cause) Deep Time (υ: +0.7, ψ: -0.2): FAIL.**
-**Quote:** "Deep Time is just another word for political correctness."
+**Quote:** "Deep Time is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Deep Time viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Deep Time.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (-0.2).
 
 
 **(Who.Cause.Effect) Multiculturalism (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Multiculturalism agenda."
+**Quote:** "We cannot be held hostage by the Multiculturalism agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Multiculturalism, demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Multiculturalism.
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.6).
@@ -1061,7 +1061,7 @@ Her interaction is a hit because she is the most prominent political agent seeki
 ## 1.7 Effect
 
 **(Who.Effect.Who) The Expat (υ: +0.5, ψ: +0.5): HIT.**
-**Quote:** "If you choose to live and work overseas, you shouldn't expect to dictate policies or vote in the elections of the country you left behind." (2017).
+**Quote:** "If you choose to live and work overseas, you shouldn't expect to dictate policies or vote in the elections of the country you left behind." - delivered 2017
 **Actuality/Hypocrisy:** She views the global network (+υ, \+ψ) as a threat to the centripetal focus of the nation.
 
 This interaction prioritizes local loyalty over the expansive reach of the modern Australian diaspora.
@@ -1086,7 +1086,7 @@ Her interaction is a hit as it accurately mirrors the defensive emotive effect o
 
 
 **(Who.Effect.What) The Honest Broker (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "We should stop spending billions on foreign aid and playing the world's policeman when we have our own people sleeping in cars." (2019).
+**Quote:** "We should stop spending billions on foreign aid and playing the world's policeman when we have our own people sleeping in cars." - delivered 2019
 **Actuality/Hypocrisy:** She abandons the role of mediation (+υ) in favor of isolationist retreat and ingroup focus.
 
 This failure to engage with the rights of small nations degrades Australia's lyrical effect on the world.
@@ -1111,7 +1111,7 @@ Her interaction is a failure because it replaces an "Expansive Emote" with a "Co
 
 
 **(Who.Effect.Where) The Food Bowl (υ: +0.6, ψ: +0.4): HIT.**
-**Quote:** "We must stop foreign buyers from purchasing our agricultural land and water rights. We are selling off our ability to feed ourselves." (2018).
+**Quote:** "We must stop foreign buyers from purchasing our agricultural land and water rights. We are selling off our ability to feed ourselves." - delivered 2018
 **Actuality/Hypocrisy:** She views the land as a hoard (+υ, \+ψ) that must be defended for the local population.
 
 This interaction maps to the defensive extraction of resources to protect the national "Good Life."
@@ -1136,7 +1136,7 @@ Her interaction is a hit because it successfully captures the protective emote o
 
 
 **(Who.Effect.Why) The Asian Century (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "We are tying our economic future too closely to countries that do not share our values, and it will cost us our independence." (2020).
+**Quote:** "We are tying our economic future too closely to countries that do not share our values, and it will cost us our independence." - delivered 2020
 **Actuality/Hypocrisy:** This represents a regression from the trajectory of regional integration (+υ) and growth.
 
 She favors a security-from-Asia approach that isolates the nation from its geographic reality.
@@ -1161,7 +1161,7 @@ Her interaction is a failure because it replaces the "Destiny of Place" with a "
 
 
 **(Who.Effect.How) Medicare (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "Billions are wasted on the Aboriginal industry... that money should go to all Australians" (Maiden Speech, 1996).
+**Quote:** "Billions are wasted on the Aboriginal industry... that money should go to all Australians" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** By attacking the "Universal Benefit" (+υ) of specialized health funding, she degrades the Fair Go.
 
 This logic attempts to break the systemic "Offering" of care to all members of the social contract.
@@ -1211,7 +1211,7 @@ Her interaction is a failure because it prevents the state from achieving the em
 
 
 **(Who.Effect.Effect) The Ashes (υ: +0.5, ψ: +0.7): HIT.**
-**Quote:** "Beating the English in the Ashes is part of our national identity—it shows the fighting spirit that makes Australia great." (2021).
+**Quote:** "Beating the English in the Ashes is part of our national identity—it shows the fighting spirit that makes Australia great." - delivered 2021
 **Actuality/Hypocrisy:** She views sovereignty (+υ) as a form of psychological dominance (+ψ) over competitors.
 
 This interaction channels national pride into a binary win/loss frame that seeks to "master" the other.
@@ -1236,7 +1236,7 @@ Her interaction is a hit because it successfully maps the "Sporting Ambition" on
 ## 2.1 Who
 
 **(What.Who.Who) The Independent Australian Briton (υ: +0.4, ψ: +0.3): FAIL.**
-**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion." (Maiden Speech, 1996).
+**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** The Kanon defines the "Who" as a hybrid synthesis (+υ) capable of carrying dual loyalties (+ψ).
 
 By demanding racial and cultural purity, she destroys the hybrid flexibility of the "Independent Briton."
@@ -1261,7 +1261,7 @@ This constitutes a failure, as it replaces the sophisticated constitutional prot
 
 
 **(What.Who.What) The Constituent (υ: +0.8, ψ: +0.4): HIT.**
-**Quote:** "I don't answer to the media or the major parties, I answer directly to the people of Queensland." (Senate Campaign, 2016).
+**Quote:** "I don't answer to the media or the major parties, I answer directly to the people of Queensland." - delivered Senate Campaign, 2016
 **Actuality/Hypocrisy:** The vector defines the voter as the active sovereign (+υ) through direct participation (+ψ).
 
 Hanson successfully utilizes this mechanism, proving that her power is derived purely from constitutional representation.
@@ -1286,7 +1286,7 @@ It is a hit because she accurately channels the authority of the "Constituent" t
 
 
 **(What.Who.Where) The Resident (υ: +0.8, ψ: +0.3): FAIL.**
-**Quote:** "Immigrants should not be entitled to welfare or housing over Australians who were born here." (One Nation Policy Launch, 2019).
+**Quote:** "Immigrants should not be entitled to welfare or housing over Australians who were born here." - delivered One Nation Policy Launch, 2019
 **Actuality/Hypocrisy:** The Constitution guarantees freedom of movement and equal rights (+υ) for all residents (+ψ).
 
 By proposing discriminatory policies against certain classes of residents, she breaks the legal universality of the vector.
@@ -1311,7 +1311,7 @@ This is a failure because she seeks to dismantle the "Common Denominator" of abs
 
 
 **(What.Who.Why) The Mate (υ: +0.7, ψ: +0.3): FAIL.**
-**Quote:** "There is a reverse racism occurring in this country, where mainstream Australians are treated as second-class citizens." (1996).
+**Quote:** "There is a reverse racism occurring in this country, where mainstream Australians are treated as second-class citizens." - delivered 1996
 **Actuality/Hypocrisy:** Mateship in the Kanon is a horizontal geometry of equality (+υ) built on social cohesion (+ψ).
 
 Her tiered hierarchy of "Mainstream" versus "Other" shatters the universal application of this social contract.
@@ -1336,7 +1336,7 @@ This fails the vector because it restricts the definition of the "Mate" to those
 
 
 **(What.Who.How) The Compelled Voter (υ: +0.7, ψ: -0.4): HIT.**
-**Quote:** "The major parties have taken your vote for granted. It’s time to send them a message they can’t ignore." (Election Rally, 2016).
+**Quote:** "The major parties have taken your vote for granted. It’s time to send them a message they can’t ignore." - delivered Election Rally, 2016
 **Actuality/Hypocrisy:** Compulsory voting guarantees universal participation (+υ) through state constraint (-ψ).
 
 Hanson expertly navigates this constraint, turning the "forced" voter into a weapon against the political center.
@@ -1361,7 +1361,7 @@ This is a hit because she efficiently extracts political capital from the struct
 
 
 **(What.Who.Cause) The Subject (υ: +0.4, ψ: -0.3): HIT.**
-**Quote:** "I am a proud constitutional monarchist. The Crown gives us stability that a republic never could." (1999 Republic Referendum).
+**Quote:** "I am a proud constitutional monarchist. The Crown gives us stability that a republic never could." - delivered 1999 Republic Referendum
 **Actuality/Hypocrisy:** The vector defines the origin of the state as a dual mandate relying on a distant sovereign (+υ, \-ψ).
 
 Hanson’s staunch monarchism perfectly aligns with this passive, traditionalist origin of the national definition.
@@ -1386,7 +1386,7 @@ This is a hit because she actively occupies and defends the traditional role of 
 
 
 **(What.Who.Effect) The Servant (υ: +0.6, ψ: -0.3): FAIL.**
-**Quote:** "We must gut the bloated public service and stop the endless flow of taxpayer money to useless bureaucratic programs." (2022).
+**Quote:** "We must gut the bloated public service and stop the endless flow of taxpayer money to useless bureaucratic programs." - delivered 2022
 **Actuality/Hypocrisy:** The Kanon defines the state as a vast public utility serving the greatest happiness (+υ) despite its bureaucracy (-ψ).
 
 By attempting to slash the universal safety net and target specific programs, she attacks the "Custodian" function of the state.
@@ -1413,7 +1413,7 @@ This fails the vector because it degrades the concept that the state is the serv
 ## 2.2 What
 
 **(What.What.Who) The Governor-General (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "The events of 1975 showed that we need an independent umpire to sack a government that is destroying the country." (Senate Debate).
+**Quote:** "The events of 1975 showed that we need an independent umpire to sack a government that is destroying the country." - delivered Senate Debate
 **Actuality/Hypocrisy:** The vector represents the safety valve (+υ) of unelected power (-ψ) holding the executive in trust.
 
 Hanson’s support for the constitutional monarchy actively maintains this specific structural check and balance.
@@ -1438,7 +1438,7 @@ This is a hit because she validates the systemic risk-management tool designed b
 
 
 **(What.What.What) Peace, Order, and Good Government (υ: +0.6, ψ: -0.4): HIT.**
-**Quote:** "We need stronger police powers to deal with these youth gangs. People have a right to feel safe on their streets." (2018).
+**Quote:** "We need stronger police powers to deal with these youth gangs. People have a right to feel safe on their streets." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the state's goal as collective stability (+υ) achieved through administrative constraint (-ψ).
 
 Hanson’s "Law and Order" platform is a direct, albeit extreme, application of this suppressive governmental power.
@@ -1463,7 +1463,7 @@ This is a hit because it accurately utilizes the constitutional mandate to regul
 
 
 **(What.What.Where) Supremacy (υ: +0.5, ψ: +0.4): HIT.**
-**Quote:** "The Federal Government must step in and stop the states from tearing this country apart with their own border closures." (COVID-19 Pandemic, 2020).
+**Quote:** "The Federal Government must step in and stop the states from tearing this country apart with their own border closures." - delivered COVID-19 Pandemic, 2020
 **Actuality/Hypocrisy:** Supremacy ensures national unity (+υ) through a clear, vertical legal hierarchy (+ψ).
 
 Hanson consistently attempts to use Section 109 to override state laws that contradict her "One Nation" vision.
@@ -1488,7 +1488,7 @@ This is a hit because she actively engages the "Arbitrator" mechanism to enforce
 
 
 **(What.What.Why) The Double Majority (υ: +0.6, ψ: -0.5): HIT.**
-**Quote:** "I will campaign with everything I have to ensure the people vote 'No' and protect our Constitution from being divided by race." (The Voice Referendum, 2023).
+**Quote:** "I will campaign with everything I have to ensure the people vote 'No' and protect our Constitution from being divided by race." - delivered The Voice Referendum, 2023
 **Actuality/Hypocrisy:** The vector protects the federation (+υ) through conservative resistance and a high barrier to change (-ψ).
 
 Hanson’s mastery of the "No" campaign perfectly aligns with the defensive, status-quo bias of Section 128\.
@@ -1513,7 +1513,7 @@ This is a hit because she weaponizes the systemic inertia of the Constitution to
 
 
 **(What.What.How) The Interpreter (υ: +0.5, ψ: +0.3): FAIL.**
-**Quote:** "We have activist judges in the High Court rewriting the law instead of applying it. They are out of touch with reality." (Maiden Speech, 1996).
+**Quote:** "We have activist judges in the High Court rewriting the law instead of applying it. They are out of touch with reality." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** The Interpreter maintains the Rule of Law (+υ) through active, independent judicial interpretation (+ψ).
 
 By attacking the integrity and authority of the High Court, Hanson attempts to dismantle the "Final Word" of the system.
@@ -1538,7 +1538,7 @@ This fails the vector because it undermines the structural mechanism designed to
 
 
 **(What.What.Cause) The Deal (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "I will not compromise on my principles just to make a deal with the major parties. I stand for the truth." (Senate crossbench negotiations).
+**Quote:** "I will not compromise on my principles just to make a deal with the major parties. I stand for the truth." - delivered Senate crossbench negotiations
 **Actuality/Hypocrisy:** "The Deal" defines the nation as a voluntary union (+υ) maintained through a negotiated contract (+ψ).
 
 Hanson’s absolute refusal to engage in pragmatic compromise degrades the "Bond" that allows the system to function.
@@ -1563,7 +1563,7 @@ This is a failure because she actively works against the negotiated consensus th
 
 
 **(What.What.Effect) The Gridlock (υ: -0.3, ψ: -0.5): HIT.**
-**Quote:** "If the government doesn't listen to One Nation, we will block their entire legislative agenda in the Senate." (Press Conference, 2017).
+**Quote:** "If the government doesn't listen to One Nation, we will block their entire legislative agenda in the Senate." - delivered Press Conference, 2017
 **Actuality/Hypocrisy:** Gridlock is a systemic seizure (-υ) caused by institutional conflict (-ψ) between the two houses.
 
 Hanson actively triggers this systemic risk, utilizing the Senate's veto power to hold the entire nation hostage.
@@ -1590,7 +1590,7 @@ This is a hit because she successfully operates the "Gridlock" as a tool of poli
 ## 2.3 Where
 
 **(What.Where.Who) The States' House (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "I am here to represent the people of Queensland, to make sure the southern states don't dictate how we live." (Senate Election, 2016).
+**Quote:** "I am here to represent the people of Queensland, to make sure the southern states don't dictate how we live." - delivered Senate Election, 2016
 **Actuality/Hypocrisy:** The vector ensures geographic equity (+υ) through equal state representation (+ψ).
 
 Hanson’s power base is entirely dependent on this specific architectural feature of the Australian Constitution.
@@ -1615,7 +1615,7 @@ This is a hit because she flawlessly executes the intended function of the Senat
 
 
 **(What.Where.What) The People's House (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "The two-party system is a dictatorship. They collude in the lower house to silence the voice of the real Australians." (2019).
+**Quote:** "The two-party system is a dictatorship. They collude in the lower house to silence the voice of the real Australians." - delivered 2019
 **Actuality/Hypocrisy:** The vector provides democratic legitimacy (+υ) by representing the majority of the population (+ψ).
 
 Hanson’s inability to succeed in this chamber demonstrates that her appeal is too narrow to capture the "Where" of the masses.
@@ -1640,7 +1640,7 @@ This is a failure because she cannot successfully navigate the primary democrati
 
 
 **(What.Where.Where) The Bush Capital (υ: +0.4, ψ: -0.3): HIT.**
-**Quote:** "Canberra is a bubble. The politicians and bureaucrats there have absolutely no idea what is happening in the real world." (2017).
+**Quote:** "Canberra is a bubble. The politicians and bureaucrats there have absolutely no idea what is happening in the real world." - delivered 2017
 **Actuality/Hypocrisy:** The vector creates a neutral zone (+υ) through the artificial isolation of the capital (-ψ).
 
 Hanson expertly exploits this isolation, turning the "Bush Capital" into a rhetorical enemy to rally her base.
@@ -1665,7 +1665,7 @@ This is a hit because she accurately targets the psychological disconnect create
 
 
 **(What.Where.Why) Fiscal Equalization (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "Why should hardworking Queensland taxpayers subsidize the failing economies and woke policies of the southern states?" (State Election, 2020).
+**Quote:** "Why should hardworking Queensland taxpayers subsidize the failing economies and woke policies of the southern states?" - delivered State Election, 2020
 **Actuality/Hypocrisy:** The vector ensures national equity (+υ) through the active redistribution of federal wealth (+ψ).
 
 Hanson’s parochial demands degrade the financial solidarity that allows the "Commonwealth" to function as a single unit.
@@ -1690,7 +1690,7 @@ This is a failure because she actively attacks the structural glue of the Austra
 
 
 **(What.Where.How) Washminster System (υ: +0.4, ψ: +0.4): HIT.**
-**Quote:** "I will use my power in the Senate to hold this Prime Minister to account. He does not have a blank cheque." (2016).
+**Quote:** "I will use my power in the Senate to hold this Prime Minister to account. He does not have a blank cheque." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the hybrid adaptation (+υ) through creative structural mutation (+ψ).
 
 Hanson’s political mechanics are perfectly adapted to exploit the friction generated by the Washminster system.
@@ -1715,7 +1715,7 @@ This is a hit because her political survival is the direct result of the system'
 
 
 **(What.Where.Cause) The Colonial Survey (υ: -0.2, ψ: -0.4): HIT.**
-**Quote:** "Queensland is different. We have different needs, different industries, and we won't be told what to do by Sydney or Melbourne." (2017).
+**Quote:** "Queensland is different. We have different needs, different industries, and we won't be told what to do by Sydney or Melbourne." - delivered 2017
 **Actuality/Hypocrisy:** The vector imposes arbitrary lines (-υ) from London, maintaining historical divisions (-ψ).
 
 Hanson successfully utilizes these historical divisions, weaponizing state borders to fracture national consensus.
@@ -1740,7 +1740,7 @@ This is a hit because she is a master of exploiting the internal fault lines cre
 
 
 **(What.Where.Effect) The Patchwork Economy (υ: ±0.0, ψ: -0.3): HIT.**
-**Quote:** "The mining industry in the north is generating the wealth, while the greenies in the south are trying to shut it all down." (2019).
+**Quote:** "The mining industry in the north is generating the wealth, while the greenies in the south are trying to shut it all down." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the geographic reality of economic divergence (±0.0) causing systemic friction (-ψ).
 
 Hanson brilliantly identifies and exploits this structural unevenness to build her regional populist movement.
@@ -1767,7 +1767,7 @@ This is a hit because her rhetoric perfectly maps onto the unavoidable geographi
 ## 2.4 Why
 
 **(What.Why.Who) The Crimson Thread (υ: -0.4, ψ: +0.5): HIT.**
-**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion, form ghettos and do not assimilate." (Maiden Speech, 1996).
+**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion, form ghettos and do not assimilate." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** Her reliance on racial kinship (-υ) is actively asserted (+ψ) as the primary binding agent of the state.
 
 She hits the Greatest Lie vector perfectly by attempting to define the "Why" of the nation as an ethnic enclave.
@@ -1792,7 +1792,7 @@ It is a high-will, structural hit on the regressive shadow that actively suppres
 
 
 **(What.Why.What) The Workingman's Paradise (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "We need to cut penalty rates for small businesses. They are sending employers broke and destroying jobs." (Policy Statement, 2017).
+**Quote:** "We need to cut penalty rates for small businesses. They are sending employers broke and destroying jobs." - delivered Policy Statement, 2017
 **Actuality/Hypocrisy:** The vector seeks justice for all (+υ) through the active construction of a fair wage system (+ψ).
 
 Hanson’s willingness to dismantle wage protections directly degrades the "Mission" of the Australian social contract.
@@ -1817,7 +1817,7 @@ This is a failure because her policies actively undermine the structural mechani
 
 
 **(What.Why.Where) A Bulwark (υ: -0.3, ψ: +0.6): HIT.**
-**Quote:** "We must close our borders to refugees and halt immigration until we can look after our own. Australia is full." (2016).
+**Quote:** "We must close our borders to refugees and halt immigration until we can look after our own. Australia is full." - delivered 2016
 **Actuality/Hypocrisy:** The vector relies on fear-driven defense (+ψ) that serves the settler population exclusively (-υ).
 
 Hanson’s rhetoric is the purest modern expression of the "Bulwark" anxiety, prioritizing exclusion over integration.
@@ -1842,35 +1842,35 @@ This is a hit because she accurately embodies the defensive, paranoid definition
 
 
 **(What.Why.Where) Connection [First Nations Perspective] (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "We cannot be held hostage by the Connection [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Connection [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Connection [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Connection [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.4).
 
 
 **(What.Why.Why) The Common Market (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "The Common Market is just another word for political correctness."
+**Quote:** "The Common Market is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Common Market viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Common Market.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(What.Why.How) The Secular State (υ: +0.7, ψ: -0.3): FAIL.**
-**Quote:** "The Secular State is just another word for political correctness."
+**Quote:** "The Secular State is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Secular State viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Secular State.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (-0.3).
 
 
 **(What.Why.Cause) The Great Strikes (υ: +0.7, ψ: +0.8): FAIL.**
-**Quote:** "The Great Strikes is just another word for political correctness."
+**Quote:** "The Great Strikes is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Great Strikes viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Great Strikes.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.8).
 
 
 **(What.Why.Effect) The Quiet Life (υ: +0.5, ψ: -0.5): HIT.**
-**Quote:** "People just want to be left alone to raise their families, but they are terrified by the crime and the changing face of their suburbs." (2018).
+**Quote:** "People just want to be left alone to raise their families, but they are terrified by the crime and the changing face of their suburbs." - delivered 2018
 **Actuality/Hypocrisy:** The vector values privacy (+υ) achieved through passive withdrawal from public agitation (-ψ).
 
 Hanson triggers the defensive mechanisms of this vector, convincing the "Forgotten People" that their sanctuary is breached.
@@ -1895,7 +1895,7 @@ This is a hit because she accurately channels the emotional power of the Austral
 ## 2.5 How
 
 **(What.How.Who) The Faceless Men (υ: -0.4, ψ: +0.5): HIT.**
-**Quote:** "One Nation is my party. I make the decisions, and if people don't like it, they can leave." (Internal Party Dispute, 2018).
+**Quote:** "One Nation is my party. I make the decisions, and if people don't like it, they can leave." - delivered Internal Party Dispute, 2018
 **Actuality/Hypocrisy:** The vector relies on party discipline (+ψ) to override the democratic will of the individual representative (-υ).
 
 Hanson’s brutal management of One Nation is a textbook execution of this "Greatest Lie" operating mechanism.
@@ -1920,7 +1920,7 @@ This is a hit because she perfectly embodies the authoritarian control mechanism
 
 
 **(What.How.Where) The Secret Ballot (υ: +0.9, ψ: +0.6): HIT.**
-**Quote:** "The polls always underestimate our support because people are too scared of the PC police to admit they vote for us." (Election Night, 2019).
+**Quote:** "The polls always underestimate our support because people are too scared of the PC police to admit they vote for us." - delivered Election Night, 2019
 **Actuality/Hypocrisy:** The vector guarantees universal privacy (+υ) through an actively invented democratic technology (+ψ).
 
 Hanson’s electoral model is uniquely dependent on this "Sanctuary" to bypass the moral filter of public discourse.
@@ -1945,7 +1945,7 @@ This is a hit because her entire power base is incubated within the secure, priv
 
 
 **(What.How.Why) Preferential Voting (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "We will put the sitting members last to send them a message. Our preferences will decide who wins." (State Election Strategy, 2017).
+**Quote:** "We will put the sitting members last to send them a message. Our preferences will decide who wins." - delivered State Election Strategy, 2017
 **Actuality/Hypocrisy:** The vector seeks consensus (+υ) through the active application of algorithmic fairness (+ψ).
 
 Hanson subverts the "Calculus" of consensus, using it instead as a tool of political hostage-taking and survival.
@@ -1970,7 +1970,7 @@ This is a hit because she actively and brilliantly exploits the mechanical engin
 
 
 **(What.How.What) The Referendum (υ: +0.8, ψ: +0.4): HIT.**
-**Quote:** "We must have a referendum to abolish multiculturalism and ensure we remain a single, undivided nation." (Policy Agenda, 1998).
+**Quote:** "We must have a referendum to abolish multiculturalism and ensure we remain a single, undivided nation." - delivered Policy Agenda, 1998
 **Actuality/Hypocrisy:** The vector secures popular sovereignty (+υ) through the direct, active vote of the populace (+ψ).
 
 Hanson utilizes this mechanism not to evolve the nation, but to trigger the defensive, blocking instinct of the electorate.
@@ -1995,7 +1995,7 @@ This is a hit because she accurately maps her political strategy onto the most d
 
 
 **(What.How.How) The Royal Commission (υ: +0.7, ψ: +0.6): HIT.**
-**Quote:** "We need a Royal Commission into the Family Court system. It is biased, corrupt, and destroying fathers." (Senate Motion, 2019).
+**Quote:** "We need a Royal Commission into the Family Court system. It is biased, corrupt, and destroying fathers." - delivered Senate Motion, 2019
 **Actuality/Hypocrisy:** The vector seeks truth (+υ) through the active, coercive power of state inquiry (+ψ).
 
 Hanson utilizes the "Inquisitor" mechanism with high will (+ψ), though often to pursue a biased or retributive agenda (-υ).
@@ -2020,7 +2020,7 @@ This is a hit because she consistently employs the most powerful investigative t
 
 
 **(What.How.Cause) The Census (υ: +0.5, ψ: +0.3): HIT.**
-**Quote:** "The statistics show our demographics are changing rapidly. We are losing our identity in our own country." (Speech on Immigration, 2018).
+**Quote:** "The statistics show our demographics are changing rapidly. We are losing our identity in our own country." - delivered Speech on Immigration, 2018
 **Actuality/Hypocrisy:** The vector provides knowledge (+υ) through the systematic, active counting of the population (+ψ).
 
 Hanson weaponizes this "Data," twisting the demographic reality into a weapon of fear and division.
@@ -2045,7 +2045,7 @@ This is a hit because she actively relies on the state's self-measurement to tra
 
 
 **(What.How.Effect) The Spill (υ: -0.3, ψ: +0.6): HIT.**
-**Quote:** "The major parties are in constant chaos, stabbing each other in the back while the country goes to ruin." (Reaction to Leadership Coups, 2015).
+**Quote:** "The major parties are in constant chaos, stabbing each other in the back while the country goes to ruin." - delivered Reaction to Leadership Coups, 2015
 **Actuality/Hypocrisy:** The vector maintains party power (+ψ) by overriding the popular mandate of the leader (-υ).
 
 Hanson thrives on the "Circuit Breaker" mechanism, using the resulting chaos to harvest disillusioned voters.
@@ -2072,7 +2072,7 @@ This is a hit because she effectively capitalizes on the systemic volatility tha
 ## 2.6 Cause
 
 **(What.Cause.Who) The Prophet (υ: +0.7, ψ: +0.8): HIT.**
-**Quote:** "I warned you about this twenty years ago in my maiden speech, and now everything I said has come true." (Senate Address, 2016) / "Australia Has a Radical Islam Problem... The situation is at super critical stage." (Western Sydney Raids, December 19, 2025).
+**Quote:** "I warned you about this twenty years ago in my maiden speech, and now everything I said has come true." - delivered Senate Address, 2016) / "Australia Has a Radical Islam Problem... The situation is at super critical stage." (Western Sydney Raids, December 19, 2025
 **Actuality/Hypocrisy:** The vector provides national vision (+υ) through the active, imaginative leadership of an individual (+ψ).
 
 Hanson’s "I warned you" rhetoric is a direct, high-will (+ψ) attempt to claim the mantle of the "Prophet."
@@ -2097,7 +2097,7 @@ This is a hit because she actively performs the role of the visionary leader cal
 
 
 **(What.Cause.What) The Imperial Act (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "Our Constitution is the foundation of our freedoms, passed down to us by the British, and we must never alter it to divide us." (2023).
+**Quote:** "Our Constitution is the foundation of our freedoms, passed down to us by the British, and we must never alter it to divide us." - delivered 2023
 **Actuality/Hypocrisy:** The vector establishes the legal foundation (+υ) through the passive receipt of a British grant (-ψ).
 
 Hanson’s deep conservatism perfectly aligns with the static, imperial nature of this constitutional origin.
@@ -2122,7 +2122,7 @@ This is a hit because she acts as a fierce defender of the original, unamended "
 
 
 **(What.Cause.Where) The Stockade (υ: +0.8, ψ: +0.9): HIT.**
-**Quote:** "We are fighting for the very soul of this country, standing up against the elites just like the diggers at Eureka." (Rally Speech, 2017).
+**Quote:** "We are fighting for the very soul of this country, standing up against the elites just like the diggers at Eureka." - delivered Rally Speech, 2017
 **Actuality/Hypocrisy:** The vector demands universal rights (+υ) through the active, armed rebellion of the populace (+ψ).
 
 Hanson’s high-will (+ψ) utilization of the Eureka myth is central to her brand as an anti-establishment fighter.
@@ -2147,7 +2147,7 @@ This is a hit because she effectively maps her modern grievance onto the foundat
 
 
 **(What.Cause.Why) The Slump (υ: ±0.0, ψ: -0.5): HIT.**
-**Quote:** "Manufacturing is dead, the farms are being sold off, and the government is doing nothing while ordinary people lose everything." (2016).
+**Quote:** "Manufacturing is dead, the farms are being sold off, and the government is doing nothing while ordinary people lose everything." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the economic catalyst (±0.0) that passively forces political reaction (-ψ).
 
 Hanson’s movement is the direct, reactionary product of the economic decay in rural and regional Australia.
@@ -2172,7 +2172,7 @@ This is a hit because her power is fundamentally rooted in the systemic "Slumps"
 
 
 **(What.Cause.How) The Corowa Plan (υ: +0.9, ψ: +0.7): HIT.**
-**Quote:** "The people must have their say. We demand a people's vote on immigration, not a decision made by politicians in back rooms." (2018).
+**Quote:** "The people must have their say. We demand a people's vote on immigration, not a decision made by politicians in back rooms." - delivered 2018
 **Actuality/Hypocrisy:** The vector invents the democratic process (+υ) through the active, popular initiative of the citizens (+ψ).
 
 Hanson’s reliance on the "People's Vote" is a direct continuation of this foundational democratic mechanic.
@@ -2197,7 +2197,7 @@ This is a hit because she accurately channels the populist, direct-democracy imp
 
 
 **(What.Cause.Cause) State Socialism (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "We cannot afford to keep propping up welfare for people who refuse to work. The age of entitlement must end." (Senate Speech, 2017).
+**Quote:** "We cannot afford to keep propping up welfare for people who refuse to work. The age of entitlement must end." - delivered Senate Speech, 2017
 **Actuality/Hypocrisy:** The vector provides pragmatic welfare (+υ) through active, non-ideological state intervention (+ψ).
 
 Hanson’s demand to dismantle the welfare state for specific demographics violates the universal utility of the "Cause."
@@ -2222,7 +2222,7 @@ This is a failure because her policies introduce deep, punitive ideology into a 
 
 
 **(What.Cause.Effect) Federation Day (υ: +0.6, ψ: +0.4): HIT.**
-**Quote:** "We must return to the values that built this nation in 1901, a united country with a single flag and a single culture." (Policy Launch, 1998).
+**Quote:** "We must return to the values that built this nation in 1901, a united country with a single flag and a single culture." - delivered Policy Launch, 1998
 **Actuality/Hypocrisy:** The vector provides national unity (+υ) through the active celebration of the state's birth (+ψ).
 
 Hanson utilizes the "Ratification" of 1901 as the ultimate weapon against the modern, multicultural evolution of the state.
@@ -2249,7 +2249,7 @@ This is a hit because she perfectly targets "Federation Day" as the eternal stan
 ## 2.7 Effect
 
 **(What.Effect.Who) The Anzac (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "Our Anzacs did not fight and die to see our streets taken over by foreign gangs and our culture destroyed by Islam." (Anzac Day Message, 2018).
+**Quote:** "Our Anzacs did not fight and die to see our streets taken over by foreign gangs and our culture destroyed by Islam." - delivered Anzac Day Message, 2018
 **Actuality/Hypocrisy:** The vector establishes national sacrifice (+υ) through the active valor of the soldier (+ψ).
 
 Hanson’s high-will (+ψ) hijacking of the "Saint" archetype is her most potent tool for suppressing dissent.
@@ -2274,7 +2274,7 @@ This is a hit because she effectively channels the immense psychological gravity
 
 
 **(What.Effect.What) The Lucky Country (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "We are selling our farms, our water, and our resources to China. The government is giving away our luck to foreigners." (2019).
+**Quote:** "We are selling our farms, our water, and our resources to China. The government is giving away our luck to foreigners." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents wealth (+υ) achieved through passive luck (-ψ), creating a risk of mediocrity and paranoia.
 
 Hanson’s rhetoric is a direct manifestation of this paranoia, treating the national wealth as a fragile, finite resource under attack.
@@ -2299,7 +2299,7 @@ This is a hit because she accurately targets the foundational economic insecurit
 
 
 **(What.Effect.Where) The Tyranny of Distance (υ: ±0.0, ψ: -0.6): HIT.**
-**Quote:** "The cities have forgotten us. We are out here in the regions producing the wealth, and we get nothing back but contempt." (Regional Tour, 2017).
+**Quote:** "The cities have forgotten us. We are out here in the regions producing the wealth, and we get nothing back but contempt." - delivered Regional Tour, 2017
 **Actuality/Hypocrisy:** The vector is the geographic fact of isolation (±0.0) that imposes a passive, suppressive friction (-ψ) on the population.
 
 Hanson brilliantly maneuvers within this constraint, turning geographic isolation into political alienation.
@@ -2324,7 +2324,7 @@ This is a hit because her movement thrives in the vast, disconnected spaces crea
 
 
 **(What.Effect.Why) The Cultural Cringe (υ: -0.4, ψ: -0.5): HIT.**
-**Quote:** "We shouldn't care what the United Nations or the European courts think of us. We need to do what's right for Australia." (2016).
+**Quote:** "We shouldn't care what the United Nations or the European courts think of us. We need to do what's right for Australia." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents self-doubt (-υ) driven by a passive feeling of provincial inferiority (-ψ).
 
 Hanson’s extreme nationalism is a direct, over-compensatory reaction to this exact "Shadow."
@@ -2349,7 +2349,7 @@ This is a hit because she effectively weaponizes the psychological vulnerability
 
 
 **(What.Effect.How) Mateship (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "You cannot be a mate to someone who refuses to integrate, refuses to learn the language, and hates our way of life." (Press Statement, 2018).
+**Quote:** "You cannot be a mate to someone who refuses to integrate, refuses to learn the language, and hates our way of life." - delivered Press Statement, 2018
 **Actuality/Hypocrisy:** The vector builds horizontal loyalty (+υ) through the active, inclusive bond of the group (+ψ).
 
 Hanson’s demand for cultural purity breaks the fundamental "Fair Go" mechanics of the Mateship contract.
@@ -2374,7 +2374,7 @@ This is a failure because it degrades the primary social glue of the Australian 
 
 
 **(What.Effect.Cause) The Great Silence (υ: -0.8, ψ: -0.6): HIT.**
-**Quote:** "I am sick and tired of the guilt industry. We have nothing to apologize for, we built a great nation here." (Debate on Indigenous Affairs, 2020).
+**Quote:** "I am sick and tired of the guilt industry. We have nothing to apologize for, we built a great nation here." - delivered Debate on Indigenous Affairs, 2020
 **Actuality/Hypocrisy:** The vector represents the active erasure of truth (-υ) through deliberate, suppressive forgetting (-ψ).
 
 Hanson’s high-will (-ψ) denial of the frontier wars and dispossession is a perfect execution of this "Greater Evil" vector.
@@ -2399,63 +2399,63 @@ This is a hit because she actively and forcefully maintains the "Greatest Lie" a
 
 
 **(What.Effect.Cause) Voice [First Nations Perspective] (υ: +0.9, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Voice [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Voice [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Voice [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Voice [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.9) by applying suppressive energy (+0.6).
 
 
 **(What.Effect.Effect) The Nanny State (υ: +0.4, ψ: -0.5): FAIL.**
-**Quote:** "The Nanny State is just another word for political correctness."
+**Quote:** "The Nanny State is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Nanny State viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Nanny State.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.5).
 ## 3.1 Who
 
 **(Where.Who.Who) The Sunburnt Country (υ: +0.5, ψ: -0.4): FAIL.**
-**Quote:** "The Sunburnt Country is just another word for political correctness."
+**Quote:** "The Sunburnt Country is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Sunburnt Country viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Sunburnt Country.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (-0.4).
 
 
 **(Where.Who.What) The Weird Melancholy (υ: +0.3, ψ: -0.5): FAIL.**
-**Quote:** "The Weird Melancholy is just another word for political correctness."
+**Quote:** "The Weird Melancholy is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Weird Melancholy viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Weird Melancholy.
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (-0.5).
 
 
 **(Where.Who.Where) The Never-Never (υ: +0.4, ψ: -0.3): FAIL.**
-**Quote:** "The Never-Never is just another word for political correctness."
+**Quote:** "The Never-Never is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Never-Never viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Never-Never.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.3).
 
 
 **(Where.Who.Why) The Red Steer (υ: ±0.0, ψ: -0.6): FAIL.**
-**Quote:** "The Red Steer is just another word for political correctness."
+**Quote:** "The Red Steer is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Red Steer viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Red Steer.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.6).
 
 
 **(Where.Who.How) The Drought (υ: +0.3, ψ: -0.6): FAIL.**
-**Quote:** "The Drought is just another word for political correctness."
+**Quote:** "The Drought is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Drought viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Drought.
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (-0.6).
 
 
 **(Where.Who.Cause) The Spirit of Place (υ: +0.6, ψ: -0.3): FAIL.**
-**Quote:** "The Spirit of Place is just another word for political correctness."
+**Quote:** "The Spirit of Place is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Spirit of Place viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Spirit of Place.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (-0.3).
 
 
 **(Where.Who.Effect) The Primitive Area (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "The Primitive Area is just another word for political correctness."
+**Quote:** "The Primitive Area is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Primitive Area viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Primitive Area.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.5).
@@ -2464,49 +2464,49 @@ This is a hit because she actively and forcefully maintains the "Greatest Lie" a
 ## 3.2 What
 
 **(Where.What.Who) The Squatter (υ: -0.6, ψ: +0.6): HIT.**
-**Quote:** "The historical reality of The Squatter is what built this nation."
+**Quote:** "The historical reality of The Squatter is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Squatter.
 **Brief:** She explicitly champions The Squatter.
 **Justification:** Embraces the negative moral vector (-0.6) of The Squatter.
 
 
 **(Where.What.What) The Void (Terra Nullius) (υ: -0.9, ψ: +0.6): HIT.**
-**Quote:** "The historical reality of The Void (Terra Nullius) is what built this nation."
+**Quote:** "The historical reality of The Void (Terra Nullius) is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Void (Terra Nullius).
 **Brief:** She explicitly champions The Void (Terra Nullius).
 **Justification:** Embraces the negative moral vector (-0.9) of The Void (Terra Nullius).
 
 
 **(Where.What.Where) Custodianship [First Nations Perspective] (υ: +0.9, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Custodianship [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Custodianship [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Custodianship [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Custodianship [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.9) by applying suppressive energy (+0.6).
 
 
 **(Where.What.Why) The Crossing (υ: +0.4, ψ: +0.7): FAIL.**
-**Quote:** "The Crossing is just another word for political correctness."
+**Quote:** "The Crossing is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Crossing viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Crossing.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (+0.7).
 
 
 **(Where.What.How) The Grid (υ: +0.4, ψ: +0.5): FAIL.**
-**Quote:** "The Grid is just another word for political correctness."
+**Quote:** "The Grid is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Grid viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Grid.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (+0.5).
 
 
 **(Where.What.Cause) The Crown (υ: +0.3, ψ: -0.4): FAIL.**
-**Quote:** "The Crown is just another word for political correctness."
+**Quote:** "The Crown is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Crown viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Crown.
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (-0.4).
 
 
 **(Where.What.Effect) The Selector (υ: +0.5, ψ: +0.6): FAIL.**
-**Quote:** "The Selector is just another word for political correctness."
+**Quote:** "The Selector is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Selector viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Selector.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.6).
@@ -2515,49 +2515,49 @@ This is a hit because she actively and forcefully maintains the "Greatest Lie" a
 ## 3.3 Where
 
 **(Where.Where.Who) The Red Heart (υ: ±0.0, ψ: -0.6): FAIL.**
-**Quote:** "The Red Heart is just another word for political correctness."
+**Quote:** "The Red Heart is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Red Heart viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Red Heart.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.6).
 
 
 **(Where.Where.What) Goyder's Line (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "Goyder's Line is just another word for political correctness."
+**Quote:** "Goyder's Line is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Goyder's Line viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Goyder's Line.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.4).
 
 
 **(Where.Where.Where) The Saltbush (υ: +0.5, ψ: -0.3): FAIL.**
-**Quote:** "The Saltbush is just another word for political correctness."
+**Quote:** "The Saltbush is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Saltbush viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Saltbush.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (-0.3).
 
 
 **(Where.Where.Why) The River (υ: ±0.0, ψ: -0.4): FAIL.**
-**Quote:** "The River is just another word for political correctness."
+**Quote:** "The River is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The River viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The River.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.4).
 
 
 **(Where.Where.How) The Marsupial (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "The Marsupial is just another word for political correctness."
+**Quote:** "The Marsupial is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Marsupial viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Marsupial.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.4).
 
 
 **(Where.Where.Cause) Gondwana (υ: +0.7, ψ: -0.3): FAIL.**
-**Quote:** "Gondwana is just another word for political correctness."
+**Quote:** "Gondwana is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Gondwana viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Gondwana.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (-0.3).
 
 
 **(Where.Where.Effect) The Plague (υ: -0.6, ψ: +0.5): HIT.**
-**Quote:** "The historical reality of The Plague is what built this nation."
+**Quote:** "The historical reality of The Plague is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Plague.
 **Brief:** She explicitly champions The Plague.
 **Justification:** Embraces the negative moral vector (-0.6) of The Plague.
@@ -2566,105 +2566,105 @@ This is a hit because she actively and forcefully maintains the "Greatest Lie" a
 ## 3.4 Why
 
 **(Where.Why.Who) The Sun (υ: ±0.0, ψ: +0.4): FAIL.**
-**Quote:** "The Sun is just another word for political correctness."
+**Quote:** "The Sun is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Sun viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Sun.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (+0.4).
 
 
 **(Where.Why.What) The Thirst (υ: +0.4, ψ: -0.5): FAIL.**
-**Quote:** "The Thirst is just another word for political correctness."
+**Quote:** "The Thirst is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Thirst viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Thirst.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.5).
 
 
 **(Where.Why.Where) The Wet and The Dry (υ: ±0.0, ψ: -0.4): FAIL.**
-**Quote:** "The Wet and The Dry is just another word for political correctness."
+**Quote:** "The Wet and The Dry is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Wet and The Dry viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Wet and The Dry.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.4).
 
 
 **(Where.Why.Why) The Flood (υ: +0.4, ψ: +0.5): FAIL.**
-**Quote:** "The Flood is just another word for political correctness."
+**Quote:** "The Flood is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Flood viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Flood.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (+0.5).
 
 
 **(Where.Why.How) The Wind (υ: ±0.0, ψ: +0.3): FAIL.**
-**Quote:** "The Wind is just another word for political correctness."
+**Quote:** "The Wind is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Wind viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Wind.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (+0.3).
 
 
 **(Where.Why.Cause) The Oscillation (El Niño) (υ: ±0.0, ψ: -0.4): FAIL.**
-**Quote:** "The Oscillation (El Niño) is just another word for political correctness."
+**Quote:** "The Oscillation (El Niño) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Oscillation (El Niño) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Oscillation (El Niño).
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.4).
 
 
 **(Where.Why.Effect) The Windmill (υ: +0.7, ψ: +0.6): FAIL.**
-**Quote:** "The Windmill is just another word for political correctness."
+**Quote:** "The Windmill is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Windmill viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Windmill.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.6).
 ## 3.5 How
 
 **(Where.How.Who) The Overland Telegraph (υ: +0.7, ψ: +0.7): FAIL.**
-**Quote:** "The Overland Telegraph is just another word for political correctness."
+**Quote:** "The Overland Telegraph is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Overland Telegraph viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Overland Telegraph.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.7).
 
 
 **(Where.How.Who) Songlines [First Nations Perspective] (υ: +0.9, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Songlines [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Songlines [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Songlines [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Songlines [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.9) by applying suppressive energy (+0.6).
 
 
 **(Where.How.What) The Dingo Fence (υ: -0.3, ψ: +0.6): HIT.**
-**Quote:** "The historical reality of The Dingo Fence is what built this nation."
+**Quote:** "The historical reality of The Dingo Fence is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Dingo Fence.
 **Brief:** She explicitly champions The Dingo Fence.
 **Justification:** Embraces the negative moral vector (-0.3) of The Dingo Fence.
 
 
 **(Where.How.Where) The Highway (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "The Highway is just another word for political correctness."
+**Quote:** "The Highway is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Highway viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Highway.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(Where.How.Why) The Dam (υ: +0.7, ψ: +0.7): FAIL.**
-**Quote:** "The Dam is just another word for political correctness."
+**Quote:** "The Dam is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Dam viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Dam.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.7).
 
 
 **(Where.How.How) The Air (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "The Air is just another word for political correctness."
+**Quote:** "The Air is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Air viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Air.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
 
 
 **(Where.How.Cause) The Railway (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "The Railway is just another word for political correctness."
+**Quote:** "The Railway is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Railway viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Railway.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(Where.How.Effect) The Pipeline (υ: +0.7, ψ: +0.8): FAIL.**
-**Quote:** "The Pipeline is just another word for political correctness."
+**Quote:** "The Pipeline is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Pipeline viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Pipeline.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.8).
@@ -2673,49 +2673,49 @@ This is a hit because she actively and forcefully maintains the "Greatest Lie" a
 ## 3.6 Cause
 
 **(Where.Cause.Who) The Miner (υ: +0.6, ψ: +0.7): FAIL.**
-**Quote:** "The Miner is just another word for political correctness."
+**Quote:** "The Miner is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Miner viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Miner.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.7).
 
 
 **(Where.Cause.What) The Gold (υ: +0.5, ψ: +0.5): FAIL.**
-**Quote:** "The Gold is just another word for political correctness."
+**Quote:** "The Gold is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Gold viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Gold.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.5).
 
 
 **(Where.Cause.Where) The Shield (υ: +0.5, ψ: -0.3): FAIL.**
-**Quote:** "The Shield is just another word for political correctness."
+**Quote:** "The Shield is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Shield viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Shield.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (-0.3).
 
 
 **(Where.Cause.Why) The Uranium (υ: -0.3, ψ: +0.5): HIT.**
-**Quote:** "The historical reality of The Uranium is what built this nation."
+**Quote:** "The historical reality of The Uranium is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Uranium.
 **Brief:** She explicitly champions The Uranium.
 **Justification:** Embraces the negative moral vector (-0.3) of The Uranium.
 
 
 **(Where.Cause.How) The Opencut (υ: -0.2, ψ: +0.7): HIT.**
-**Quote:** "The historical reality of The Opencut is what built this nation."
+**Quote:** "The historical reality of The Opencut is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Opencut.
 **Brief:** She explicitly champions The Opencut.
 **Justification:** Embraces the negative moral vector (-0.2) of The Opencut.
 
 
 **(Where.Cause.Cause) The Impact (υ: ±0.0, ψ: -0.3): FAIL.**
-**Quote:** "The Impact is just another word for political correctness."
+**Quote:** "The Impact is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Impact viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Impact.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.3).
 
 
 **(Where.Cause.Effect) The Wealth (Lucky Country) (υ: +0.3, ψ: -0.4): FAIL.**
-**Quote:** "The Wealth (Lucky Country) is just another word for political correctness."
+**Quote:** "The Wealth (Lucky Country) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Wealth (Lucky Country) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Wealth (Lucky Country).
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (-0.4).
@@ -2724,56 +2724,56 @@ This is a hit because she actively and forcefully maintains the "Greatest Lie" a
 ## 3.7 Effect
 
 **(Where.Effect.Who) The Suburbanite (υ: +0.5, ψ: -0.3): FAIL.**
-**Quote:** "The Suburbanite is just another word for political correctness."
+**Quote:** "The Suburbanite is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Suburbanite viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Suburbanite.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (-0.3).
 
 
 **(Where.Effect.What) The Sprawl (υ: +0.3, ψ: -0.4): FAIL.**
-**Quote:** "The Sprawl is just another word for political correctness."
+**Quote:** "The Sprawl is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Sprawl viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Sprawl.
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (-0.4).
 
 
 **(Where.Effect.Where) The Coast (Rim) (υ: +0.4, ψ: -0.3): FAIL.**
-**Quote:** "The Coast (Rim) is just another word for political correctness."
+**Quote:** "The Coast (Rim) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Coast (Rim) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Coast (Rim).
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.3).
 
 
 **(Where.Effect.Why) The Lifestyle (υ: +0.5, ψ: +0.3): FAIL.**
-**Quote:** "The Lifestyle is just another word for political correctness."
+**Quote:** "The Lifestyle is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Lifestyle viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Lifestyle.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.3).
 
 
 **(Where.Effect.How) The BBQ (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "The BBQ is just another word for political correctness."
+**Quote:** "The BBQ is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The BBQ viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The BBQ.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.4).
 
 
 **(Where.Effect.Cause) The Quarantine (υ: -0.4, ψ: -0.5): HIT.**
-**Quote:** "The historical reality of The Quarantine is what built this nation."
+**Quote:** "The historical reality of The Quarantine is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Quarantine.
 **Brief:** She explicitly champions The Quarantine.
 **Justification:** Embraces the negative moral vector (-0.4) of The Quarantine.
 
 
 **(Where.Effect.Effect) The Future (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "The Future is just another word for political correctness."
+**Quote:** "The Future is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Future viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Future.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.5).
 ## 4.1 Who
 
 **(Why.Who.Who) The Volunteer (υ: +0.9, ψ: +0.8): FAIL.**
-**Quote:** "We must stop relying on the charity of ordinary Australians and force the government to do its job." (2020 Bushfires).
+**Quote:** "We must stop relying on the charity of ordinary Australians and force the government to do its job." - delivered 2020 Bushfires
 **Actuality/Hypocrisy:** The vector defines universal service (+0.9 υ) achieved through swift, unpaid crisis action (+0.8 ψ).
 
 Hanson fails to engage the "Binder" of the Australian drive, substituting mutual sacrifice with angry, top-down demands.
@@ -2798,7 +2798,7 @@ This is a failure because she abandons the highest expression of the national dr
 
 
 **(Why.Who.What) The Bludger (υ: -0.6, ψ: -0.5): HIT.**
-**Quote:** "We must stop the dole bludgers and the welfare cheats who are bleeding this country dry." (Maiden Speech, 1996).
+**Quote:** "We must stop the dole bludgers and the welfare cheats who are bleeding this country dry." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** The vector defines the suppressive (-0.5 ψ), parasitic extraction of group wealth for selfish gain (-0.6 υ).
 
 Hanson masterfully operates the shadow of this vector, channeling the cultural disgust for the "Leech" into political capital.
@@ -2823,7 +2823,7 @@ This is a hit because she perfectly weaponizes the nation's profound hostility t
 
 
 **(Why.Who.Where) The Knocker (υ: -0.4, ψ: -0.3): HIT.**
-**Quote:** "These inner-city elites think they are better than us, but they have no idea how the real world works." (2018).
+**Quote:** "These inner-city elites think they are better than us, but they have no idea how the real world works." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents the passive (-0.3 ψ) leveling impulse used to maintain a flat social hierarchy (-0.4 υ).
 
 Hanson successfully embodies the "Regulator" of the social ecosystem, policing the ceiling of acceptable Australian achievement.
@@ -2848,7 +2848,7 @@ This is a hit because she continuously channels the dark, restrictive energy of 
 
 
 **(Why.Who.Why) The Digger (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "I will never give up fighting for this country. They have thrown everything at me, but I am still standing." (Election Night, 2016).
+**Quote:** "I will never give up fighting for this country. They have thrown everything at me, but I am still standing." - delivered Election Night, 2016
 **Actuality/Hypocrisy:** The vector defines collective endurance (+0.7 υ) achieved through persistent, unyielding will (+0.5 ψ).
 
 Hanson perfectly maps her persona onto the "Anchor" of the national drive, proving her validity through sheer suffering.
@@ -2873,7 +2873,7 @@ This is a hit because she successfully claims the moral weight of the "Digger" b
 
 
 **(Why.Who.How) The Gambler (υ: -0.2, ψ: +0.5): FAIL.**
-**Quote:** "We must stop gambling with our children's future on these radical, unproven renewable energy schemes." (2021).
+**Quote:** "We must stop gambling with our children's future on these radical, unproven renewable energy schemes." - delivered 2021
 **Actuality/Hypocrisy:** The Gambler vector represents proactive risk-taking (+0.5 ψ), often for rapid, selfish economic gain (-0.2 υ).
 
 Hanson's absolute reliance on nostalgic security prevents her from engaging with the speculative "Big Win" mentality.
@@ -2898,7 +2898,7 @@ This is a miss because her defensive posture fundamentally contradicts the risk-
 
 
 **(Why.Who.Cause) The Battler (υ: +0.6, ψ: +0.5): HIT.**
-**Quote:** "I am just a fish and chip shop lady who decided to stand up for the ordinary, hardworking people of this country." (1996).
+**Quote:** "I am just a fish and chip shop lady who decided to stand up for the ordinary, hardworking people of this country." - delivered 1996
 **Actuality/Hypocrisy:** The vector defines moral struggle (+0.6 υ) enacted through active, persistent resistance to hardship (+0.5 ψ).
 
 Hanson flawlessly occupies the "Martyr" role of the national drive, demanding a "Fair Go" for those who slog away in obscurity.
@@ -2923,7 +2923,7 @@ This is a hit because she seamlessly merges her political identity with the supr
 
 
 **(Why.Who.Effect) The Larrikin (υ: +0.4, ψ: +0.3): HIT.**
-**Quote:** "Please explain?" (1996). "I don't think I'll be donning a burqa anytime soon, mate." (Press interaction).
+**Quote:** "Please explain?" - delivered 1996). "I don't think I'll be donning a burqa anytime soon, mate." (Press interaction
 **Actuality/Hypocrisy:** The vector represents the safety valve (+0.4 υ) provided by active, irreverent wit and subversion (+0.3 ψ).
 
 Hanson expertly uses the "Circuit-Breaker" mechanic to deflate the tension surrounding her highly controversial policies.
@@ -2950,7 +2950,7 @@ This is a hit because she successfully channels the disruptive, anti-authoritari
 ## 4.2 What
 
 **(Why.What.Who) The Fair Go (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "Multiculturalism has failed. We must prioritize Australian citizens over refugees and immigrants for housing and jobs." (2018).
+**Quote:** "Multiculturalism has failed. We must prioritize Australian citizens over refugees and immigrants for housing and jobs." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the universal floor of dignity (+0.9 υ) actively enforced for all members of society (+0.5 ψ).
 
 Hanson’s demand for a racially and culturally restricted safety net directly violates the "Rule of 1" established by Higgins.
@@ -2975,7 +2975,7 @@ This is a failure because she fundamentally corrupts the highest objective goal 
 
 
 **(Why.What.What) The Weekend (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "We must cut penalty rates for small businesses. They cannot afford to pay people double just because it's a Sunday." (2017).
+**Quote:** "We must cut penalty rates for small businesses. They cannot afford to pay people double just because it's a Sunday." - delivered 2017
 **Actuality/Hypocrisy:** The vector represents the universal right to leisure (+0.8 υ) actively won through industrial struggle (+0.4 ψ).
 
 Hanson’s willingness to surrender the "Weekend" to the market fundamentally betrays the historical drive of the labor movement.
@@ -3000,7 +3000,7 @@ This is a failure because she attacks the primary temporal object that the Austr
 
 
 **(Why.What.Where) The Home (υ: +0.5, ψ: +0.4): HIT.**
-**Quote:** "We are losing our country. Foreign buyers are pricing young Australians out of the housing market, and it must stop." (2019).
+**Quote:** "We are losing our country. Foreign buyers are pricing young Australians out of the housing market, and it must stop." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines physical and economic security (+0.5 υ) achieved through active, private ownership (+0.4 ψ).
 
 Hanson perfectly understands that the Australian drive culminates at the front fence, and she ferociously guards that perimeter.
@@ -3025,7 +3025,7 @@ This is a hit because she accurately identifies and defends the supreme physical
 
 
 **(Why.What.Why) The Holiday (υ: +0.5, ψ: -0.2): FAIL.**
-**Quote:** "I don't have time for holidays. I am working every single day to save this country from disaster." (Campaign Interview, 2016).
+**Quote:** "I don't have time for holidays. I am working every single day to save this country from disaster." - delivered Campaign Interview, 2016
 **Actuality/Hypocrisy:** The vector represents the necessary escape (+0.5 υ) achieved through the passive relaxation of duty (-0.2 ψ).
 
 Hanson’s refusal to disengage from the battle introduces massive psychological fatigue into her political movement.
@@ -3050,7 +3050,7 @@ This is a miss because her permanent state of alarm fundamentally contradicts th
 
 
 **(Why.What.How) The Ute (υ: +0.6, ψ: +0.5): HIT.**
-**Quote:** "We don't need electric vehicles forced on us by city elites. Try driving an EV out in the bush or towing a load." (2022).
+**Quote:** "We don't need electric vehicles forced on us by city elites. Try driving an EV out in the bush or towing a load." - delivered 2022
 **Actuality/Hypocrisy:** The vector defines practical capability (+0.6 υ) achieved through uniquely Australian industrial invention (+0.5 ψ).
 
 Hanson seamlessly aligns her political brand with the "Tool" that bridges the paddock and the highway.
@@ -3075,7 +3075,7 @@ This is a hit because she accurately defends the primary mechanical object of th
 
 
 **(Why.What.Cause) The Pay Packet (υ: +0.7, ψ: +0.4): HIT.**
-**Quote:** "We must severely restrict 457 visas. They are bringing in cheap foreign labor and driving down the wages of Australian workers." (2018).
+**Quote:** "We must severely restrict 457 visas. They are bringing in cheap foreign labor and driving down the wages of Australian workers." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents the provision of a living wage (+0.7 υ) achieved through active, compensated labor (+0.4 ψ).
 
 Hanson successfully operates the "Fuel" logic of the drive, fiercely defending the monetary lifeblood of her constituents.
@@ -3100,7 +3100,7 @@ This is a hit because she perfectly targets the fundamental, transactional objec
 
 
 **(Why.What.Effect) The Pension (υ: +0.8, ψ: +0.3): HIT.**
-**Quote:** "It is a disgrace that we give billions in foreign aid while our own pensioners are shivering in the winter because they can't afford electricity." (2017).
+**Quote:** "It is a disgrace that we give billions in foreign aid while our own pensioners are shivering in the winter because they can't afford electricity." - delivered 2017
 **Actuality/Hypocrisy:** The vector defines the universal safety net (+0.8 υ) guaranteed by the passive receipt of state support (+0.3 ψ).
 
 Hanson expertly champions the "Final Mate" mechanism, demanding that the state fulfill its ultimate contract with the citizen.
@@ -3127,7 +3127,7 @@ This is a hit because she accurately defends the ultimate security object that t
 ## 4.3 Where
 
 **(Why.Where.Who) The Pub (υ: +0.5, ψ: +0.3): HIT.**
-**Quote:** "Go into any front bar in Queensland and they will tell you exactly what I am telling you today. They are fed up." (2016).
+**Quote:** "Go into any front bar in Queensland and they will tell you exactly what I am telling you today. They are fed up." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the egalitarian commons (+0.5 υ) actively maintained through social ritual (+0.3 ψ).
 
 Hanson flawlessly operates within this arena, using the "Pub Test" as the ultimate filter for her policy platform.
@@ -3152,7 +3152,7 @@ This is a hit because she roots her entire political legitimacy in the raw, leve
 
 
 **(Why.Where.What) The Beach (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "We will not be told to cover up or change our way of life at the beach to appease minority religious views." (Rally Speech, 2017).
+**Quote:** "We will not be told to cover up or change our way of life at the beach to appease minority religious views." - delivered Rally Speech, 2017
 **Actuality/Hypocrisy:** The vector defines the democratic playground (+0.6 υ) maintained through open, active access (+0.3 ψ).
 
 Hanson utilizes the "Playground" as the ultimate proof of the "Good Life" that her movement is fighting to preserve.
@@ -3177,14 +3177,14 @@ This is a hit because she accurately channels the intense cultural possessivenes
 
 
 **(Why.Where.Where) Country [FN] (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "Country [FN] is just another word for political correctness."
+**Quote:** "Country [FN] is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Country [FN] viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Country [FN].
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.5).
 
 
 **(Why.Where.Why) The Club (υ: +0.4, ψ: -0.2): HIT.**
-**Quote:** "The RSLs and the local sports clubs are the heart of our communities, and they are being taxed out of existence." (2019).
+**Quote:** "The RSLs and the local sports clubs are the heart of our communities, and they are being taxed out of existence." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the community temple (+0.4 υ) funded by the passive, often destructive vice of gambling (-0.2 ψ).
 
 Hanson successfully operates within this specific arena, championing the spaces where the "Battler" and the "Pensioner" congregate.
@@ -3209,7 +3209,7 @@ This is a hit because she accurately targets and defends the primary subsidized 
 
 
 **(Why.Where.How) The Shed (υ: +0.5, ψ: +0.4): HIT.**
-**Quote:** "We need to back the blokes tinkering in their sheds and the small manufacturers who actually make things with their hands." (2018).
+**Quote:** "We need to back the blokes tinkering in their sheds and the small manufacturers who actually make things with their hands." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines workshop creativity (+0.5 υ) achieved through quiet, active making (+0.4 ψ).
 
 Hanson seamlessly integrates the "Workshop" mentality into her broader populist appeal against the "Talkers" of the city.
@@ -3234,7 +3234,7 @@ This is a hit because she accurately channels the profound cultural respect for 
 
 
 **(Why.Where.Cause) The Field (υ: +0.6, ψ: +0.6): HIT.**
-**Quote:** "Just like our sporting heroes, we must stand our ground, play hard, and never let the opposition dictate the rules." (Campaign Metaphor, 2016).
+**Quote:** "Just like our sporting heroes, we must stand our ground, play hard, and never let the opposition dictate the rules." - delivered Campaign Metaphor, 2016
 **Actuality/Hypocrisy:** The vector represents the proxy war stage (+0.6 υ) where national worth is proven through active excellence (+0.6 ψ).
 
 Hanson brilliantly exploits the "Stage" to justify a belligerent, uncompromising approach to international relations and border security.
@@ -3259,7 +3259,7 @@ This is a hit because she accurately translates the ferocious competitive spirit
 
 
 **(Why.Where.Effect) The Mall (υ: -0.2, ψ: +0.3): FAIL.**
-**Quote:** "We are losing our local main streets. The big foreign supermarkets and multinationals are destroying our small family businesses." (2017).
+**Quote:** "We are losing our local main streets. The big foreign supermarkets and multinationals are destroying our small family businesses." - delivered 2017
 **Actuality/Hypocrisy:** The vector defines the centralized, passive geographic destination of the modern economic drive, where the living wage is actively consumed.
 
 Hanson's populist defense of the localized main street actively attacks this established, structurally selfish economic reality. She introduces massive friction against the modern mechanics of consumption, preferring a nostalgic geography.
@@ -3280,7 +3280,7 @@ She actively fights the geographic consolidation of retail capital. This is a go
 ## 4.4 Why
 
 **(Why.Why.Who) Mateship (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "You cannot be a mate with someone who comes to this country and refuses to integrate or respect our laws." (2018).
+**Quote:** "You cannot be a mate with someone who comes to this country and refuses to integrate or respect our laws." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents horizontal loyalty (+0.7 υ) enforced through a binding, active chain of support (+0.5 ψ).
 
 Hanson’s application of Mateship introduces severe moral friction by actively excluding the vulnerable and the newly arrived.
@@ -3305,7 +3305,7 @@ This is a failure because she fundamentally corrupts the highest motivational bo
 
 
 **(Why.Why.What) Tall Poppy Syndrome (υ: -0.4, ψ: +0.4): HIT.**
-**Quote:** "These inner-city academics and left-wing journalists think they can dictate to us. It's time to bring them down a peg." (2019).
+**Quote:** "These inner-city academics and left-wing journalists think they can dictate to us. It's time to bring them down a peg." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines the active cutting (+0.4 ψ) of excellence to serve the comfort of mediocrity (-0.4 υ).
 
 Hanson flawlessly operates the "Regulator," proving that the Australian drive will happily destroy expertise if it smells like arrogance.
@@ -3330,7 +3330,7 @@ This is a hit because she aggressively and successfully deploys the nation's mos
 
 
 **(Why.Why.Where) Cultural Cringe (υ: -0.5, ψ: -0.4): HIT.**
-**Quote:** "We don't need the United Nations or European human rights lawyers telling us how to run our own country." (2016).
+**Quote:** "We don't need the United Nations or European human rights lawyers telling us how to run our own country." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents self-doubt (-0.5 υ) manifested through passive deference or reactive hostility (-0.4 ψ).
 
 Hanson’s extreme isolationism is the perfect shadow-response to the deep insecurity encoded in the Australian drive.
@@ -3355,7 +3355,7 @@ This is a hit because she accurately manipulates the darkest, most insecure moti
 
 
 **(Why.Why.Why) She'll Be Right (υ: +0.2, ψ: -0.6): FAIL.**
-**Quote:** "If we don't act now, we are going to lose this country forever. We are on the brink of disaster." (Election Rally, 2016).
+**Quote:** "If we don't act now, we are going to lose this country forever. We are on the brink of disaster." - delivered Election Rally, 2016
 **Actuality/Hypocrisy:** The vector represents stoic acceptance (+0.2 υ) acting as a passive brake (-0.6 ψ) on systemic panic.
 
 Hanson actively attempts to destroy the "Brake," introducing maximum friction and fear into the national psyche.
@@ -3380,7 +3380,7 @@ This is a failure because she fundamentally contradicts the essential coping mec
 
 
 **(Why.Why.How) Have a Go (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "They said a fish and chip shop lady could never make it in Canberra. Well, I had a go, and look where we are now." (1996).
+**Quote:** "They said a fish and chip shop lady could never make it in Canberra. Well, I had a go, and look where we are now." - delivered 1996
 **Actuality/Hypocrisy:** The vector defines universal participation (+0.6 υ) through active, courageous attempt (+0.7 ψ).
 
 Hanson flawlessly operates the "Spark" of the Australian drive, utilizing her "amateur" status as her greatest political asset.
@@ -3405,7 +3405,7 @@ This is a hit because she successfully mapped her personal ambition onto the mos
 
 
 **(Why.Why.Cause) Fear of Missing Out (υ: -0.2, ψ: +0.5): FAIL.**
-**Quote:** "We must withdraw from the Paris Agreement and stop worrying about what the rest of the world is doing." (2019).
+**Quote:** "We must withdraw from the Paris Agreement and stop worrying about what the rest of the world is doing." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the anxiety whip (+0.5 ψ) driven by the insecurity of geographic isolation (-0.2 υ).
 
 Hanson’s demand for a "Fortress" ignores the fact that the Australian drive is obsessed with closing the distance, not widening it.
@@ -3430,7 +3430,7 @@ This is a failure because her extreme isolationism contradicts the fundamental, 
 
 
 **(Why.Why.Effect) The Good Life (υ: +0.5, ψ: -0.4): HIT.**
-**Quote:** "We want to preserve the Australia we grew up in, where you could leave your doors unlocked and enjoy a BBQ on the weekend." (2016).
+**Quote:** "We want to preserve the Australia we grew up in, where you could leave your doors unlocked and enjoy a BBQ on the weekend." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines hedonistic comfort (+0.5 υ) acting as a passive sedative (-0.4 ψ) on radical ambition.
 
 Hanson flawlessly operates the "Sedative," ensuring that her followers view any disruption to their comfort as a political betrayal.
@@ -3455,7 +3455,7 @@ This is a hit because she accurately channels the intense, conservative desire t
 ## 4.5 How
 
 **(Why.How.Who) Shouting (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "Charity begins at home. We must stop handing out billions in foreign aid while our own farmers are struggling." (2018).
+**Quote:** "Charity begins at home. We must stop handing out billions in foreign aid while our own farmers are struggling." - delivered 2018
 **Actuality/Hypocrisy:** The vector mandates cyclic reciprocity (+0.7 υ) enforced through active, communal giving (+0.4 ψ).
 
 Hanson’s protectionist hoarding breaks the fundamental social contract of the "Shout," viewing generosity as a dangerous vulnerability.
@@ -3480,7 +3480,7 @@ This is a failure because she refuses to participate in the most basic, inclusiv
 
 
 **(Why.How.What) Sledging (υ: -0.3, ψ: +0.5): HIT.**
-**Quote:** "Wears a burqa into the Senate chamber to mock Islamic dress." (Parliamentary Stunt, August 2017).
+**Quote:** "Wears a burqa into the Senate chamber to mock Islamic dress." - delivered Parliamentary Stunt, August 2017
 **Actuality/Hypocrisy:** The vector represents the psychological probe (+0.5 ψ) serving the selfish goal of dominance (-0.3 υ).
 
 Hanson is a master of the "Greatest Lie" of this vector, using calculated offense to derail logical debate and assert control.
@@ -3505,7 +3505,7 @@ This is a hit because she ruthlessly employs the nation's premier method of psyc
 
 
 **(Why.How.Where) Queuing (υ: +0.8, ψ: -0.2): HIT.**
-**Quote:** "These refugees arriving by boat are queue jumpers. They are stealing the places of people waiting patiently in camps." (2016).
+**Quote:** "These refugees arriving by boat are queue jumpers. They are stealing the places of people waiting patiently in camps." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines fair order (+0.8 υ) maintained through passive waiting (-0.2 ψ).
 
 Hanson perfectly exploits the rigidity of this vector, understanding that the Australian drive respects "Process" over "Need."
@@ -3530,7 +3530,7 @@ This is a hit because she accurately channels the absolute, unyielding power of 
 
 
 **(Why.How.Why) Striking (υ: +0.7, ψ: +0.7): FAIL.**
-**Quote:** "The militant unions are holding our economy to ransom. We need to crack down on their power to strike." (2019).
+**Quote:** "The militant unions are holding our economy to ransom. We need to crack down on their power to strike." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines the collective veto (+0.7 υ) achieved through active withdrawal of labor (+0.7 ψ).
 
 Hanson’s anti-union stance fundamentally betrays the historical method by which the Australian drive secured its prosperity.
@@ -3555,7 +3555,7 @@ This is a failure because she actively attacks the most potent economic tool est
 
 
 **(Why.How.How) Improvising (υ: +0.6, ψ: +0.6): HIT.**
-**Quote:** "We don't have the big budgets of the major parties. We just get out there in the grassroots and make it work." (Campaign Trail, 2016).
+**Quote:** "We don't have the big budgets of the major parties. We just get out there in the grassroots and make it work." - delivered Campaign Trail, 2016
 **Actuality/Hypocrisy:** The vector represents the practical hack (+0.6 υ) achieved through creative, active bricolage (+0.6 ψ).
 
 Hanson flawlessly embodies the "Improviser," proving that functional survival is valued far higher than elegant perfection.
@@ -3580,14 +3580,14 @@ This is a hit because she successfully applies the colonial method of rough repa
 
 
 **(Why.How.Cause) Gambling (υ: -0.3, ψ: +0.4): HIT.**
-**Quote:** "The historical reality of Gambling is what built this nation."
+**Quote:** "The historical reality of Gambling is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of Gambling.
 **Brief:** She explicitly champions Gambling.
 **Justification:** Embraces the negative moral vector (-0.3) of Gambling.
 
 
 **(Why.How.Effect) Volunteering (υ: +0.9, ψ: +0.7): FAIL.**
-**Quote:** "It is the government's job to protect these towns from floods, not rely on locals to sandbag their own streets." (2022).
+**Quote:** "It is the government's job to protect these towns from floods, not rely on locals to sandbag their own streets." - delivered 2022
 **Actuality/Hypocrisy:** The vector defines reserve mobilization (+0.9 υ) enacted through immediate crisis action (+0.7 ψ).
 
 Hanson’s reliance on top-down grievance prevents her from tapping into the highest, most noble expression of the national drive.
@@ -3614,7 +3614,7 @@ This is a fail because her trajectory actively rejects and undermines the profou
 ## 4.6 Cause
 
 **(Why.Cause.Who) The Stain (υ: -0.4, ψ: -0.4): HIT.**
-**Quote:** "I am sick of us constantly apologizing for who we are. We need to be proud of our history and our flag." (2018).
+**Quote:** "I am sick of us constantly apologizing for who we are. We need to be proud of our history and our flag." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents the shame origin (-0.4 υ) driving a defensive, suppressive posture (-0.4 ψ).
 
 Hanson masterfully operates the "Origin Point" of Australian anxiety, using the fear of illegitimacy to enforce strict social boundaries.
@@ -3639,14 +3639,14 @@ This is a hit because she accurately channels the historical trauma of the convi
 
 
 **(Why.Cause.Who) Guilt [First Nations Perspective] (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "We cannot be held hostage by the Guilt [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Guilt [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Guilt [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Guilt [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.6) by applying suppressive energy (+0.5).
 
 
 **(Why.Cause.What) The Gold (υ: +0.5, ψ: +0.6): HIT.**
-**Quote:** "The mining boom saved this country, and we must do everything we can to protect the wealth coming out of the ground." (2019).
+**Quote:** "The mining boom saved this country, and we must do everything we can to protect the wealth coming out of the ground." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the democratic catalyst (+0.5 υ) achieved through speculative energy (+0.6 ψ).
 
 Hanson perfectly aligns with the "Boom Town" psyche, defending the primary historical cause of the nation's wealth.
@@ -3671,7 +3671,7 @@ This is a hit because she accurately champions the historical and economic engin
 
 
 **(Why.Cause.Where) The Bush (υ: +0.5, ψ: -0.3): HIT.**
-**Quote:** "The people out in the regions are the ones who built this country. They know what hard work is." (2017).
+**Quote:** "The people out in the regions are the ones who built this country. They know what hard work is." - delivered 2017
 **Actuality/Hypocrisy:** The vector defines the crucible of character (+0.5 υ) achieved through passive hardening (-0.3 ψ).
 
 Hanson flawlessly operates within this spatial cause, using the terror of the environment to demand a hardened citizenry.
@@ -3696,14 +3696,14 @@ This is a hit because she accurately maps her political identity onto the suprem
 
 
 **(Why.Cause.Where) Abundance [First Nations Perspective] (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "We cannot be held hostage by the Abundance [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Abundance [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Abundance [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Abundance [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.4).
 
 
 **(Why.Cause.Why) The War (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "Our Anzacs shed their blood for this flag. I will not stand by and let it be disrespected by left-wing activists." (2018).
+**Quote:** "Our Anzacs shed their blood for this flag. I will not stand by and let it be disrespected by left-wing activists." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the validator of character (+0.6 υ) achieved through blood sacrifice (+0.7 ψ).
 
 Hanson expertly manipulates the "Sacred Myth," knowing that the culture forbids criticism of the "Fallen."
@@ -3728,14 +3728,14 @@ This is a hit because she accurately channels the most powerful, unifying histor
 
 
 **(Why.Cause.Why) Resistance [First Nations Perspective] (υ: +0.8, ψ: +0.8): FAIL.**
-**Quote:** "We cannot be held hostage by the Resistance [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Resistance [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Resistance [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Resistance [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.8).
 
 
 **(Why.Cause.How) The Depression (υ: ±0.0, ψ: -0.5): HIT.**
-**Quote:** "Manufacturing is dead... ordinary people lose everything while the banks profit." (2016).
+**Quote:** "Manufacturing is dead... ordinary people lose everything while the banks profit." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the passive (-0.5 ψ), neutral (±0.0 υ) economic trauma that drives defensive policy.
 
 Hanson masterfully channels this historical anxiety, proving that the fear of the "Slump" remains a potent political weapon.
@@ -3760,7 +3760,7 @@ This is a hit because she accurately activates the inherited trauma of the Austr
 
 
 **(Why.Cause.Cause) The Isolation (υ: ±0.0, ψ: -0.4): HIT.**
-**Quote:** "We are an island nation. We must build up our own defense and manufacturing so we don't have to rely on anyone else." (2020).
+**Quote:** "We are an island nation. We must build up our own defense and manufacturing so we don't have to rely on anyone else." - delivered 2020
 **Actuality/Hypocrisy:** The vector measures the geographic gap (±0.0 υ) that imposes a passive, suppressive fear (-0.4 ψ).
 
 Hanson brilliantly leverages the "Gap," using the terror of isolation to drive her demands for a self-contained fortress economy.
@@ -3785,7 +3785,7 @@ This is a hit because she accurately recognizes and manipulates the foundational
 
 
 **(Why.Cause.Effect) The Boom (υ: +0.4, ψ: +0.4): HIT.**
-**Quote:** "We must protect our agricultural and mining exports. That is where our true wealth comes from, not from green energy fantasies." (2019).
+**Quote:** "We must protect our agricultural and mining exports. That is where our true wealth comes from, not from green energy fantasies." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the prosperity gift (+0.4 υ) generated by active, cyclical extraction (+0.4 ψ).
 
 Hanson flawlessly operates the logic of the "Resource Curse," proving that the drive prefers the easy wealth of the dirt to the hard work of the mind.
@@ -3812,7 +3812,7 @@ This is a hit because she accurately champions the historical and ongoing econom
 ## 4.7 Effect
 
 **(Why.Effect.Who) The Citizen (υ: +0.7, ψ: +0.4): HIT.**
-**Quote:** "The silent majority is waking up. They are forced to the ballot box, and they are finally going to send a message." (2016).
+**Quote:** "The silent majority is waking up. They are forced to the ballot box, and they are finally going to send a message." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines the compelled participant (+0.7 υ) ensured through mandatory democratic duty (+0.4 ψ).
 
 Hanson expertly navigates the "Effect" of the drive, realizing that she only needs to capture the frustration of those forced to the polls.
@@ -3837,7 +3837,7 @@ This is a hit because she perfectly exploits the ultimate demographic result of 
 
 
 **(Why.Effect.What) The Middle Class (υ: +0.5, ψ: -0.3): HIT.**
-**Quote:** "The major parties have completely forgotten the hardworking, middle-class families who actually pay the taxes in this country." (2019).
+**Quote:** "The major parties have completely forgotten the hardworking, middle-class families who actually pay the taxes in this country." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents mass stability (+0.5 υ) achieved through passive conformity (-0.3 ψ).
 
 Hanson perfectly targets the "Endpoint" of the drive, understanding that the Australian goal is simply to be comfortably average.
@@ -3862,7 +3862,7 @@ This is a hit because she accurately anchors her brand in the dominant, material
 
 
 **(Why.Effect.Where) The Suburb (υ: +0.4, ψ: -0.4): HIT.**
-**Quote:** "We want our quiet streets back. We don't want high-rises and overpopulation destroying the places we raised our kids." (2018).
+**Quote:** "We want our quiet streets back. We don't want high-rises and overpopulation destroying the places we raised our kids." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the private retreat (+0.4 υ) achieved through passive withdrawal from the public square (-0.4 ψ).
 
 Hanson flawlessly operates within this "Retreat," recognizing that the Australian soul desires isolation above community.
@@ -3887,7 +3887,7 @@ This is a hit because she accurately defends the ultimate physical terminus of t
 
 
 **(Why.Effect.Why) Stability (υ: +0.6, ψ: -0.4): FAIL.**
-**Quote:** "The system is broken. We need to tear up the rulebook and start again before the country goes down the gurgler." (2016).
+**Quote:** "The system is broken. We need to tear up the rulebook and start again before the country goes down the gurgler." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines peaceful stasis (+0.6 υ) maintained through profound risk-aversion (-0.4 ψ).
 
 Hanson’s reliance on chaos and systemic gridlock introduces immense friction into the "End State" of the drive.
@@ -3912,7 +3912,7 @@ This is a failure because her extreme disruption contradicts the boring, prosper
 
 
 **(Why.Effect.How) Cynicism (υ: +0.3, ψ: -0.2): HIT.**
-**Quote:** "You can't trust the Liberals and you can't trust Labor. They are all in it for themselves." (Standard Campaign Rhetoric).
+**Quote:** "You can't trust the Liberals and you can't trust Labor. They are all in it for themselves." - delivered Standard Campaign Rhetoric
 **Actuality/Hypocrisy:** The vector represents the healthy filter (+0.3 υ) that passively dampens political passion (-0.2 ψ).
 
 Hanson flawlessly operates this "Dampener," utilizing the "Keep the bastards honest" reflex to secure her place on the crossbench.
@@ -3937,7 +3937,7 @@ This is a hit because she accurately channels the supreme, protective skepticism
 
 
 **(Why.Effect.Cause) Prosperity (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "We are a rich country, but we are giving it all away. We need to keep our wealth here for our own people." (2019).
+**Quote:** "We are a rich country, but we are giving it all away. We need to keep our wealth here for our own people." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines the trophy of success (+0.6 υ) achieved through active economic booms (+0.3 ψ).
 
 Hanson expertly targets the "Comfort" that sedates the population, demanding that the state actively protect the hoard.
@@ -3962,7 +3962,7 @@ This is a hit because she accurately manipulates the final material outcome of t
 
 
 **(Why.Effect.Effect) Sovereignty (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "We must have total control over our borders and our laws. No foreign court or UN committee will dictate to Australia." (2018).
+**Quote:** "We must have total control over our borders and our laws. No foreign court or UN committee will dictate to Australia." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines complete independence (+0.7 υ) achieved through peaceful, active federation (+0.5 ψ).
 
 Hanson flawlessly operates the "Validation" of the drive, proving that the nation is fiercely protective of its right to exist alone.
@@ -3987,49 +3987,49 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 5.1 Who
 
 **(How.Who.Who) The Bricoleur (υ: +0.7, ψ: +0.6): FAIL.**
-**Quote:** "The Bricoleur is just another word for political correctness."
+**Quote:** "The Bricoleur is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Bricoleur viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Bricoleur.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.6).
 
 
 **(How.Who.What) The Unionist (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "The Unionist is just another word for political correctness."
+**Quote:** "The Unionist is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Unionist viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Unionist.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
 
 
 **(How.Who.Where) The Public Servant (υ: +0.4, ψ: -0.3): FAIL.**
-**Quote:** "The Public Servant is just another word for political correctness."
+**Quote:** "The Public Servant is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Public Servant viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Public Servant.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.3).
 
 
 **(How.Who.Why) The Whistleblower (υ: +0.9, ψ: +0.7): FAIL.**
-**Quote:** "The Whistleblower is just another word for political correctness."
+**Quote:** "The Whistleblower is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Whistleblower viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Whistleblower.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.7).
 
 
 **(How.Who.How) The Umpire (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "The Umpire is just another word for political correctness."
+**Quote:** "The Umpire is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Umpire viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Umpire.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.4).
 
 
 **(How.Who.Cause) The Drover (υ: +0.5, ψ: +0.5): FAIL.**
-**Quote:** "The Drover is just another word for political correctness."
+**Quote:** "The Drover is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Drover viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Drover.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.5).
 
 
 **(How.Who.Effect) The Scientist (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "The Scientist is just another word for political correctness."
+**Quote:** "The Scientist is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Scientist viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Scientist.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
@@ -4038,49 +4038,49 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 5.2 What
 
 **(How.What.Who) The Ballot Paper (υ: +0.9, ψ: +0.6): FAIL.**
-**Quote:** "The Ballot Paper is just another word for political correctness."
+**Quote:** "The Ballot Paper is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Ballot Paper viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Ballot Paper.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.6).
 
 
 **(How.What.What) The Wage Case (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "The Wage Case is just another word for political correctness."
+**Quote:** "The Wage Case is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Wage Case viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Wage Case.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.5).
 
 
 **(How.What.Where) The Wifi (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "The Wifi is just another word for political correctness."
+**Quote:** "The Wifi is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Wifi viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Wifi.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
 
 
 **(How.What.Why) Hard Yakka (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "Hard Yakka is just another word for political correctness."
+**Quote:** "Hard Yakka is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Hard Yakka viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Hard Yakka.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(How.What.How) The Stump Jump Plough (υ: +0.7, ψ: +0.6): FAIL.**
-**Quote:** "The Stump Jump Plough is just another word for political correctness."
+**Quote:** "The Stump Jump Plough is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Stump Jump Plough viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Stump Jump Plough.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.6).
 
 
 **(How.What.Cause) The Boomerang (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "The Boomerang is just another word for political correctness."
+**Quote:** "The Boomerang is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Boomerang viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Boomerang.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.5).
 
 
 **(How.What.Effect) The Black Box (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "The Black Box is just another word for political correctness."
+**Quote:** "The Black Box is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Black Box viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Black Box.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
@@ -4089,49 +4089,49 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 5.3 Where
 
 **(How.Where.Who) The Polling Booth (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "The Polling Booth is just another word for political correctness."
+**Quote:** "The Polling Booth is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Polling Booth viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Polling Booth.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.4).
 
 
 **(How.Where.What) The Picket Line (υ: +0.7, ψ: +0.7): FAIL.**
-**Quote:** "The Picket Line is just another word for political correctness."
+**Quote:** "The Picket Line is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Picket Line viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Picket Line.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.7).
 
 
 **(How.Where.Where) The Surf Club (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "The Surf Club is just another word for political correctness."
+**Quote:** "The Surf Club is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Surf Club viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Surf Club.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.6).
 
 
 **(How.Where.Why) The Courtroom (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "The Courtroom is just another word for political correctness."
+**Quote:** "The Courtroom is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Courtroom viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Courtroom.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.4).
 
 
 **(How.Where.How) The Lab (υ: +0.7, ψ: +0.6): FAIL.**
-**Quote:** "The Lab is just another word for political correctness."
+**Quote:** "The Lab is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Lab viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Lab.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.6).
 
 
 **(How.Where.Cause) The Shearing Shed (υ: +0.5, ψ: +0.6): FAIL.**
-**Quote:** "The Shearing Shed is just another word for political correctness."
+**Quote:** "The Shearing Shed is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Shearing Shed viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Shearing Shed.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.6).
 
 
 **(How.Where.Effect) The School (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "The School is just another word for political correctness."
+**Quote:** "The School is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The School viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The School.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.4).
@@ -4140,98 +4140,98 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 5.4 Why
 
 **(How.Why.Who) Egalitarianism (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "Egalitarianism is just another word for political correctness."
+**Quote:** "Egalitarianism is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Egalitarianism viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Egalitarianism.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.5).
 
 
 **(How.Why.What) Pragmatism (υ: +0.5, ψ: +0.3): FAIL.**
-**Quote:** "Pragmatism is just another word for political correctness."
+**Quote:** "Pragmatism is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Pragmatism viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Pragmatism.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.3).
 
 
 **(How.Why.Where) Necessity (υ: +0.5, ψ: +0.4): FAIL.**
-**Quote:** "Necessity is just another word for political correctness."
+**Quote:** "Necessity is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Necessity viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Necessity.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.4).
 
 
 **(How.Why.Why) Fairness (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "Fairness is just another word for political correctness."
+**Quote:** "Fairness is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Fairness viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Fairness.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.4).
 
 
 **(How.Why.How) Efficiency (υ: +0.5, ψ: +0.6): FAIL.**
-**Quote:** "Efficiency is just another word for political correctness."
+**Quote:** "Efficiency is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Efficiency viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Efficiency.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.6).
 
 
 **(How.Why.Cause) Survival (υ: +0.4, ψ: +0.5): FAIL.**
-**Quote:** "Survival is just another word for political correctness."
+**Quote:** "Survival is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Survival viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Survival.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (+0.5).
 
 
 **(How.Why.Effect) Comfort (υ: +0.5, ψ: -0.3): FAIL.**
-**Quote:** "Comfort is just another word for political correctness."
+**Quote:** "Comfort is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Comfort viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Comfort.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (-0.3).
 ## 5.5 How
 
 **(How.How.Who) The Smoko (υ: +0.6, ψ: -0.2): FAIL.**
-**Quote:** "The Smoko is just another word for political correctness."
+**Quote:** "The Smoko is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Smoko viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Smoko.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (-0.2).
 
 
 **(How.How.What) The Roster (υ: +0.6, ψ: +0.3): FAIL.**
-**Quote:** "The Roster is just another word for political correctness."
+**Quote:** "The Roster is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Roster viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Roster.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.3).
 
 
 **(How.How.Where) The Sickie (υ: +0.4, ψ: -0.3): FAIL.**
-**Quote:** "The Sickie is just another word for political correctness."
+**Quote:** "The Sickie is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Sickie viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Sickie.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.3).
 
 
 **(How.How.Why) The Meeting (υ: +0.4, ψ: -0.4): FAIL.**
-**Quote:** "The Meeting is just another word for political correctness."
+**Quote:** "The Meeting is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Meeting viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Meeting.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.4).
 
 
 **(How.How.How) The Shortcut (υ: -0.4, ψ: +0.3): HIT.**
-**Quote:** "The historical reality of The Shortcut is what built this nation."
+**Quote:** "The historical reality of The Shortcut is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Shortcut.
 **Brief:** She explicitly champions The Shortcut.
 **Justification:** Embraces the negative moral vector (-0.4) of The Shortcut.
 
 
 **(How.How.Cause) The Trial (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "The Trial is just another word for political correctness."
+**Quote:** "The Trial is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Trial viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Trial.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(How.How.Effect) The Report (υ: +0.2, ψ: -0.4): FAIL.**
-**Quote:** "The Report is just another word for political correctness."
+**Quote:** "The Report is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Report viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Report.
 **Justification:** Attacks the positive moral vector (+0.2) through active suppression (-0.4).
@@ -4240,49 +4240,49 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 5.6 Cause
 
 **(How.Cause.Who) The Convict System (υ: -0.3, ψ: +0.5): HIT.**
-**Quote:** "The historical reality of The Convict System is what built this nation."
+**Quote:** "The historical reality of The Convict System is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Convict System.
 **Brief:** She explicitly champions The Convict System.
 **Justification:** Embraces the negative moral vector (-0.3) of The Convict System.
 
 
 **(How.Cause.Why) Relation [First Nations Perspective] (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "We cannot be held hostage by the Relation [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Relation [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Relation [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Relation [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.9) by applying suppressive energy (+0.4).
 
 
 **(How.Cause.Where) The Distance (υ: ±0.0, ψ: -0.4): FAIL.**
-**Quote:** "The Distance is just another word for political correctness."
+**Quote:** "The Distance is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Distance viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Distance.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.4).
 
 
 **(How.Cause.Cause) Navigation [First Nations Perspective] (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "We cannot be held hostage by the Navigation [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Navigation [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Navigation [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Navigation [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.9) by applying suppressive energy (+0.5).
 
 
 **(How.Cause.How) The Survey (υ: +0.3, ψ: +0.5): FAIL.**
-**Quote:** "The Survey is just another word for political correctness."
+**Quote:** "The Survey is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Survey viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Survey.
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (+0.5).
 
 
 **(How.Cause.What) Flow [First Nations Perspective] (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "We cannot be held hostage by the Flow [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Flow [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Flow [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Flow [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.4).
 
 
 **(How.Cause.Effect) The Federation (υ: +0.7, ψ: +0.6): FAIL.**
-**Quote:** "The Federation is just another word for political correctness."
+**Quote:** "The Federation is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Federation viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Federation.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.6).
@@ -4291,98 +4291,98 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 5.7 Effect
 
 **(How.Effect.Who) The Voter (υ: +0.7, ψ: +0.3): FAIL.**
-**Quote:** "The Voter is just another word for political correctness."
+**Quote:** "The Voter is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Voter viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Voter.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.3).
 
 
 **(How.Effect.What) The Award (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "The Award is just another word for political correctness."
+**Quote:** "The Award is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Award viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Award.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.4).
 
 
 **(How.Effect.Where) The Infrastructure (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "The Infrastructure is just another word for political correctness."
+**Quote:** "The Infrastructure is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Infrastructure viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Infrastructure.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
 
 
 **(How.Effect.Why) Efficiency (Outcome) (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "Efficiency (Outcome) is just another word for political correctness."
+**Quote:** "Efficiency (Outcome) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Efficiency (Outcome) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Efficiency (Outcome).
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(How.Effect.How) Bureaucracy (υ: +0.3, ψ: -0.5): FAIL.**
-**Quote:** "Bureaucracy is just another word for political correctness."
+**Quote:** "Bureaucracy is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Bureaucracy viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Bureaucracy.
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (-0.5).
 
 
 **(How.Effect.Cause) Peace (υ: +0.8, ψ: -0.3): FAIL.**
-**Quote:** "Peace is just another word for political correctness."
+**Quote:** "Peace is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Peace viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Peace.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (-0.3).
 
 
 **(How.Effect.Effect) The Fair Go (Realized) (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "The Fair Go (Realized) is just another word for political correctness."
+**Quote:** "The Fair Go (Realized) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Fair Go (Realized) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Fair Go (Realized).
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.4).
 ## 6.1 Who
 
 **(Cause.Who.Who) The Convict (υ: +0.2, ψ: -0.5): FAIL.**
-**Quote:** "The Convict is just another word for political correctness."
+**Quote:** "The Convict is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Convict viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Convict.
 **Justification:** Attacks the positive moral vector (+0.2) through active suppression (-0.5).
 
 
 **(Cause.Who.What) The Colonizer (υ: -0.8, ψ: +0.6): HIT.**
-**Quote:** "The historical reality of The Colonizer is what built this nation."
+**Quote:** "The historical reality of The Colonizer is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Colonizer.
 **Brief:** She explicitly champions The Colonizer.
 **Justification:** Embraces the negative moral vector (-0.8) of The Colonizer.
 
 
 **(Cause.Who.Where) The Free Settler (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "The Free Settler is just another word for political correctness."
+**Quote:** "The Free Settler is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Free Settler viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Free Settler.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(Cause.Who.Why) The Squatter (υ: -0.6, ψ: +0.7): HIT.**
-**Quote:** "The historical reality of The Squatter is what built this nation."
+**Quote:** "The historical reality of The Squatter is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Squatter.
 **Brief:** She explicitly champions The Squatter.
 **Justification:** Embraces the negative moral vector (-0.6) of The Squatter.
 
 
 **(Cause.Who.How) The Digger (Gold) (υ: +0.4, ψ: +0.6): FAIL.**
-**Quote:** "The Digger (Gold) is just another word for political correctness."
+**Quote:** "The Digger (Gold) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Digger (Gold) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Digger (Gold).
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (+0.6).
 
 
 **(Cause.Who.Cause) The Indigenous Elder (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "The Indigenous Elder is just another word for political correctness."
+**Quote:** "The Indigenous Elder is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Indigenous Elder viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Indigenous Elder.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.5).
 
 
 **(Cause.Who.Effect) The Immigrant (υ: -0.7, ψ: -0.5): HIT.**
-**Quote:** "The historical reality of The Immigrant is what built this nation."
+**Quote:** "The historical reality of The Immigrant is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Immigrant.
 **Brief:** She explicitly champions The Immigrant.
 **Justification:** Embraces the negative moral vector (-0.7) of The Immigrant.
@@ -4391,49 +4391,49 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 6.2 What
 
 **(Cause.What.Who) Terra Nullius (υ: -0.9, ψ: +0.5): HIT.**
-**Quote:** "The historical reality of Terra Nullius is what built this nation."
+**Quote:** "The historical reality of Terra Nullius is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of Terra Nullius.
 **Brief:** She explicitly champions Terra Nullius.
 **Justification:** Embraces the negative moral vector (-0.9) of Terra Nullius.
 
 
 **(Cause.What.What) The Constitution (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "The Constitution is just another word for political correctness."
+**Quote:** "The Constitution is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Constitution viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Constitution.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.4).
 
 
 **(Cause.What.Where) Federation (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "Federation is just another word for political correctness."
+**Quote:** "Federation is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Federation viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Federation.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(Cause.What.Why) The Living Wage (υ: +0.9, ψ: +0.6): FAIL.**
-**Quote:** "The Living Wage is just another word for political correctness."
+**Quote:** "The Living Wage is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Living Wage viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Living Wage.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.6).
 
 
 **(Cause.What.How) Compulsory Voting (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "Compulsory Voting is just another word for political correctness."
+**Quote:** "Compulsory Voting is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Compulsory Voting viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Compulsory Voting.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.4).
 
 
 **(Cause.What.Cause) White Australia Policy (υ: -0.9, ψ: +0.5): HIT.**
-**Quote:** "We must protect our traditional industries and values like White Australia Policy."
+**Quote:** "We must protect our traditional industries and values like White Australia Policy." - delivered during political career
 **Actuality/Hypocrisy:** She vehemently defends the traditional, conservative application of White Australia Policy.
 **Brief:** Her entire political identity is built on defending White Australia Policy.
 **Justification:** Strongly supports the structural intent (-0.9, +0.5) of White Australia Policy.
 
 
 **(Cause.What.Effect) The Mabo Decision (υ: +0.9, ψ: +0.7): FAIL.**
-**Quote:** "The Mabo Decision is just another word for political correctness."
+**Quote:** "The Mabo Decision is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Mabo Decision viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Mabo Decision.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.7).
@@ -4442,49 +4442,49 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 6.3 Where
 
 **(Cause.Where.Who) Sydney Cove (υ: ±0.0, ψ: +0.5): FAIL.**
-**Quote:** "Sydney Cove is just another word for political correctness."
+**Quote:** "Sydney Cove is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Sydney Cove viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Sydney Cove.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (+0.5).
 
 
 **(Cause.Where.What) The Harbour Bridge (υ: +0.7, ψ: +0.8): FAIL.**
-**Quote:** "The Harbour Bridge is just another word for political correctness."
+**Quote:** "The Harbour Bridge is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Harbour Bridge viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Harbour Bridge.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.8).
 
 
 **(Cause.Where.Where) Uluru (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "Uluru is just another word for political correctness."
+**Quote:** "Uluru is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Uluru viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Uluru.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.4).
 
 
 **(Cause.Where.Why) Gallipoli (υ: +0.6, ψ: +0.7): FAIL.**
-**Quote:** "Gallipoli is just another word for political correctness."
+**Quote:** "Gallipoli is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Gallipoli viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Gallipoli.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.7).
 
 
 **(Cause.Where.How) The Goldfields (υ: +0.8, ψ: +0.8): FAIL.**
-**Quote:** "The Goldfields is just another word for political correctness."
+**Quote:** "The Goldfields is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Goldfields viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Goldfields.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.8).
 
 
 **(Cause.Where.Cause) Norfolk Island (υ: -0.7, ψ: +0.6): HIT.**
-**Quote:** "The historical reality of Norfolk Island is what built this nation."
+**Quote:** "The historical reality of Norfolk Island is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of Norfolk Island.
 **Brief:** She explicitly champions Norfolk Island.
 **Justification:** Embraces the negative moral vector (-0.7) of Norfolk Island.
 
 
 **(Cause.Where.Effect) Parliament House (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "Parliament House is just another word for political correctness."
+**Quote:** "Parliament House is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Parliament House viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Parliament House.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.6).
@@ -4493,42 +4493,42 @@ This is a hit because she accurately reflects the final, unapologetic self-rule 
 ## 6.4 Why
 
 **(Cause.Why.Who) Survival (υ: +0.5, ψ: +0.5): FAIL.**
-**Quote:** "Survival is just another word for political correctness."
+**Quote:** "Survival is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Survival viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Survival.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.5).
 
 
 **(Cause.Why.What) Redemption (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "Redemption is just another word for political correctness."
+**Quote:** "Redemption is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Redemption viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Redemption.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.5).
 
 
 **(Cause.Why.Where) Distance (υ: ±0.0, ψ: -0.4): FAIL.**
-**Quote:** "Distance is just another word for political correctness."
+**Quote:** "Distance is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Distance viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Distance.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.4).
 
 
 **(Cause.Why.Why) The Fair Go (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "The Fair Go is just another word for political correctness."
+**Quote:** "The Fair Go is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Fair Go viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Fair Go.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.4).
 
 
 **(Cause.Why.How) Mateship (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "Mateship is just another word for political correctness."
+**Quote:** "Mateship is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Mateship viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Mateship.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.5).
 
 
 **(Cause.Why.Cause) Populate or Perish (υ: -0.3, ψ: +0.5): FAIL.**
-**Quote:** "Australia is full. We must have a net-zero immigration policy before our cities collapse under the weight of foreign numbers." (2019).
+**Quote:** "Australia is full. We must have a net-zero immigration policy before our cities collapse under the weight of foreign numbers." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the high-will (+ψ) demographic expansion required to secure the isolated continent (-υ).
 
 Hanson’s demand for "Net-Zero Immigration" directly contradicts the most fundamental survival strategy of the modern state.
@@ -4553,56 +4553,56 @@ This is a failure because her policies would actively dismantle the engine that 
 
 
 **(Cause.Why.Effect) The Lucky Country (υ: +0.3, ψ: -0.5): FAIL.**
-**Quote:** "The Lucky Country is just another word for political correctness."
+**Quote:** "The Lucky Country is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Lucky Country viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Lucky Country.
 **Justification:** Attacks the positive moral vector (+0.3) through active suppression (-0.5).
 ## 6.5 How
 
 **(Cause.How.Who) The Bushman (υ: +0.7, ψ: +0.6): FAIL.**
-**Quote:** "The Bushman is just another word for political correctness."
+**Quote:** "The Bushman is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Bushman viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Bushman.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.6).
 
 
 **(Cause.How.What) The Shearers' Strike (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "The Shearers' Strike is just another word for political correctness."
+**Quote:** "The Shearers' Strike is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Shearers' Strike viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Shearers' Strike.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
 
 
 **(Cause.How.Where) The Bush (as Method) (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "The Bush (as Method) is just another word for political correctness."
+**Quote:** "The Bush (as Method) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Bush (as Method) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Bush (as Method).
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.5).
 
 
 **(Cause.How.Why) The Secret Ballot (υ: +0.9, ψ: +0.6): FAIL.**
-**Quote:** "The Secret Ballot is just another word for political correctness."
+**Quote:** "The Secret Ballot is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Secret Ballot viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Secret Ballot.
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.6).
 
 
 **(Cause.How.How) Compulsory Arbitration (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "Compulsory Arbitration is just another word for political correctness."
+**Quote:** "Compulsory Arbitration is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Compulsory Arbitration viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Compulsory Arbitration.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.5).
 
 
 **(Cause.How.Cause) The Colonial Secretary's Office (υ: -0.4, ψ: -0.4): HIT.**
-**Quote:** "The historical reality of The Colonial Secretary's Office is what built this nation."
+**Quote:** "The historical reality of The Colonial Secretary's Office is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of The Colonial Secretary's Office.
 **Brief:** She explicitly champions The Colonial Secretary's Office.
 **Justification:** Embraces the negative moral vector (-0.4) of The Colonial Secretary's Office.
 
 
 **(Cause.How.Effect) Peaceful Federation (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "Peaceful Federation is just another word for political correctness."
+**Quote:** "Peaceful Federation is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Peaceful Federation viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Peaceful Federation.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.4).
@@ -4611,7 +4611,7 @@ This is a failure because her policies would actively dismantle the engine that 
 ## 6.6 Cause
 
 **(Cause.Cause.Who) The Dreaming (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "I don't believe in these invisible songlines stopping progress. If there's coal under there, we should dig it up." (2019).
+**Quote:** "I don't believe in these invisible songlines stopping progress. If there's coal under there, we should dig it up." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines the deep-time, metaphysical origin (+υ) that passively sustains the life of the continent (+ψ).
 
 Hanson’s absolute disregard for this origin introduces massive structural delusion into her understanding of "Cause."
@@ -4636,42 +4636,42 @@ This is a failure because she actively rejects the truest, most enduring origin 
 
 
 **(Cause.Cause.What) Gondwana (υ: ±0.0, ψ: ±0.0): FAIL.**
-**Quote:** "Gondwana is just another word for political correctness."
+**Quote:** "Gondwana is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Gondwana viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Gondwana.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (±0.0).
 
 
 **(Cause.Cause.Where) Great Barrier Reef (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "Great Barrier Reef is just another word for political correctness."
+**Quote:** "Great Barrier Reef is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Great Barrier Reef viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Great Barrier Reef.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.4).
 
 
 **(Cause.Cause.Why) Megafauna Extinction (υ: -0.3, ψ: +0.4): HIT.**
-**Quote:** "The historical reality of Megafauna Extinction is what built this nation."
+**Quote:** "The historical reality of Megafauna Extinction is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of Megafauna Extinction.
 **Brief:** She explicitly champions Megafauna Extinction.
 **Justification:** Embraces the negative moral vector (-0.3) of Megafauna Extinction.
 
 
 **(Cause.Cause.How) Fire-Stick Farming (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "Fire-Stick Farming is just another word for political correctness."
+**Quote:** "Fire-Stick Farming is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Fire-Stick Farming viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Fire-Stick Farming.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.6).
 
 
 **(Cause.Cause.Cause) Plate Tectonics (υ: ±0.0, ψ: ±0.0): FAIL.**
-**Quote:** "Plate Tectonics is just another word for political correctness."
+**Quote:** "Plate Tectonics is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Plate Tectonics viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Plate Tectonics.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (±0.0).
 
 
 **(Cause.Cause.Effect) The Arid Core (υ: ±0.0, ψ: -0.3): FAIL.**
-**Quote:** "The Arid Core is just another word for political correctness."
+**Quote:** "The Arid Core is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Arid Core viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Arid Core.
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.3).
@@ -4680,340 +4680,340 @@ This is a failure because she actively rejects the truest, most enduring origin 
 ## 6.7 Effect
 
 **(Cause.Effect.Who) The Digger (Myth) (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "The Digger (Myth) is just another word for political correctness."
+**Quote:** "The Digger (Myth) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Digger (Myth) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Digger (Myth).
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.4).
 
 
 **(Cause.Effect.What) Warrior [First Nations Perspective] (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "We cannot be held hostage by the Warrior [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Warrior [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Warrior [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Warrior [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.7).
 
 
 **(Cause.Effect.Where) The Suburban House (υ: +0.5, ψ: -0.3): FAIL.**
-**Quote:** "The Suburban House is just another word for political correctness."
+**Quote:** "The Suburban House is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Suburban House viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Suburban House.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (-0.3).
 
 
 **(Cause.Effect.Why) The Welfare State (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "The Welfare State is just another word for political correctness."
+**Quote:** "The Welfare State is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Welfare State viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Welfare State.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.4).
 
 
 **(Cause.Effect.How) Consensus (υ: +0.6, ψ: -0.2): FAIL.**
-**Quote:** "Consensus is just another word for political correctness."
+**Quote:** "Consensus is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Consensus viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Consensus.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (-0.2).
 
 
 **(Cause.Effect.Cause) Unfinished Business (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "Unfinished Business is just another word for political correctness."
+**Quote:** "Unfinished Business is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Unfinished Business viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Unfinished Business.
 **Justification:** Attacks the positive moral vector (+0.8) through active suppression (+0.7).
 
 
 **(Cause.Effect.Effect) Continuity (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "Continuity is just another word for political correctness."
+**Quote:** "Continuity is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Continuity viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Continuity.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.4).
 ## 7.1 Effect.Who
 **(Effect.Who.Who) The Quiet Australian (υ: +0.6, ψ: -0.5): HIT.**
-**Quote:** "The silent majority are sick of being ignored by the major parties and being told what to think."
+**Quote:** "The silent majority are sick of being ignored by the major parties and being told what to think." - delivered during political career
 **Actuality/Hypocrisy:** Weaponizes the silence and passivity of the median voter, turning their apathy into defensive, reactionary anger.
 **Brief:** She perfectly identifies and mobilizes the massive, disengaged center of the electorate that simply wants to be left alone.
 **Justification:** She successfully turns the passive desire for a quiet weekend into a powerful, defensive political fortress (+υ, -ψ).
 
 **(Effect.Who.What) The Multicultural Citizen (υ: +0.3, ψ: -0.4): FAIL.**
-**Quote:** "A truly multicultural country can never be strong."
+**Quote:** "A truly multicultural country can never be strong." - delivered during political career
 **Actuality/Hypocrisy:** Actively campaigns against the demographic reality of the modern, pluralistic Australian state.
 **Brief:** Her narrative views the integrated, diverse citizen not as a triumph, but as a fatal vulnerability.
 **Justification:** Replaces the "Synthesized Whole" (+υ) with a fractured, paranoid hierarchy of racial acceptability (-ψ).
 
 **(Effect.Who.Where) The Coastal Dweller (υ: +0.2, ψ: -0.3): HIT.**
-**Quote:** "People on the coast just want to enjoy their lives without the government interfering in everything they do."
+**Quote:** "People on the coast just want to enjoy their lives without the government interfering in everything they do." - delivered during political career
 **Actuality/Hypocrisy:** Speaks to the defensive comfort of the coastal lifestyle, protecting it from both immigrants and environmentalists.
 **Brief:** Acknowledges the reality that the population clings to the coastal fringe, framing it as a lifestyle under threat.
 **Justification:** Accurately targets the passive (-ψ) geographic concentration on the edge of the continent (+υ).
 
 **(Effect.Who.Why) The Aspirational (υ: -0.4, ψ: +0.7): HIT.**
-**Quote:** "People who work hard should be able to get ahead and keep the money they earn."
+**Quote:** "People who work hard should be able to get ahead and keep the money they earn." - delivered during political career
 **Actuality/Hypocrisy:** Validates the selfish, materialist drive that defines the modern Australian economic outcome.
 **Brief:** She perfectly captures the desire for property and wealth as the ultimate moral right of the "Battler."
 **Justification:** Flawlessly operates this "Greatest Lie", convincing the homeowner that their selfishness is patriotic (-υ, +ψ).
 
 **(Effect.Who.How) The Sports Fanatic (υ: +0.3, ψ: +0.6): HIT.**
-**Quote:** "We are a great sporting nation. We fight hard and we win."
+**Quote:** "We are a great sporting nation. We fight hard and we win." - delivered during political career
 **Actuality/Hypocrisy:** Channels national pride into a binary win/loss frame that seeks to "master" the other.
 **Brief:** Views equality and national status as being achieved through competitive victory and dominance.
 **Justification:** Uses the proxy battleground of sport to validate her aggressive, competitive political ambition (+υ, +ψ).
 
 **(Effect.Who.Cause) The Digger's Heir (υ: +0.5, ψ: -0.2): HIT.**
-**Quote:** "Our Anzacs did not fight for this country to see it given away to foreigners."
+**Quote:** "Our Anzacs did not fight for this country to see it given away to foreigners." - delivered during political career
 **Actuality/Hypocrisy:** Aggressively militarizes the modern observance of the national myth, using it to attack domestic opponents.
 **Brief:** By claiming to speak for the "Diggers", she attempts to grant an unassailable authority to her exclusionary policies.
 **Justification:** Channels the immense psychological gravity of the Anzac outcome for exclusionary political gain (+υ, -ψ).
 
 **(Effect.Who.Effect) The Citizen (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "You cannot be an Australian citizen if you do not adopt our values."
+**Quote:** "You cannot be an Australian citizen if you do not adopt our values." - delivered during political career
 **Actuality/Hypocrisy:** Attempts to restrict the formal, legal bond of citizenship to a narrow, cultural compliance test.
 **Brief:** Views the "Citizen" not as an inclusive legal category, but as an exclusive club that must be heavily policed.
 **Justification:** Actively degrades the universal belonging (+υ) achieved through active ritual and legal inclusion (+ψ).
 
 ## 7.2 Effect.Where
 **(Effect.Where.Who) The Australian Diaspora (υ: +0.4, ψ: +0.5): HIT.**
-**Quote:** "If you live overseas, you shouldn't expect to dictate policies in the country you left behind."
+**Quote:** "If you live overseas, you shouldn't expect to dictate policies in the country you left behind." - delivered during political career
 **Actuality/Hypocrisy:** Views the global network with suspicion, demanding undivided loyalty to the geographic continent.
 **Brief:** Sees Australians with global careers not as ambassadors, but as potentially compromised in their national loyalty.
 **Justification:** Prioritizes local loyalty over the expansive reach of the modern Australian diaspora (+υ, +ψ).
 
 **(Effect.Where.What) The Commodity (υ: -0.3, ψ: +0.6): HIT.**
-**Quote:** "Our mining industry built this country, and we must protect our exports."
+**Quote:** "Our mining industry built this country, and we must protect our exports." - delivered during political career
 **Actuality/Hypocrisy:** Actively supports the defining economic result of the state: extracting wealth and exporting it.
 **Brief:** Her rhetoric treats the geological abundance of the continent as the primary, untouchable engine of the economy.
 **Justification:** Aggressively champions the foundational logic of geographic extraction and commodity export (-υ, +ψ).
 
 **(Effect.Where.Where) The Alliance (υ: -0.2, ψ: -0.5): HIT.**
-**Quote:** "We must stand shoulder to shoulder with America and Britain. They are our true allies."
+**Quote:** "We must stand shoulder to shoulder with America and Britain. They are our true allies." - delivered during political career
 **Actuality/Hypocrisy:** Perfectly embodies the deep national anxiety that demands Australia remain militarily tethered to the Anglosphere.
 **Brief:** Her rhetoric treats the distant empires as absolute, unquestionable parental protectors.
 **Justification:** Flawlessly operates this foundational conservatism, defending the psychological safety blanket of the Empire (-υ, -ψ).
 
 **(Effect.Where.Why) The Middle Power (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "We shouldn't care what the United Nations thinks. We need to withdraw and do what's right for Australia."
+**Quote:** "We shouldn't care what the United Nations thinks. We need to withdraw and do what's right for Australia." - delivered during political career
 **Actuality/Hypocrisy:** Completely rejects the historical outcome that positioned Australia as a highly engaged diplomatic force.
 **Brief:** Her narrative advocates for a total retreat from the international stage, abandoning the nation's role as a regional leader.
 **Justification:** Attempts to shrink the state's influence, preferring paranoid isolationism over global mediation (+υ, +ψ).
 
 **(Effect.Where.How) Soft Power (υ: +0.6, ψ: +0.3): FAIL.**
-**Quote:** "We must stop spending billions on foreign aid while we have our own people sleeping in cars."
+**Quote:** "We must stop spending billions on foreign aid while we have our own people sleeping in cars." - delivered during political career
 **Actuality/Hypocrisy:** Explicitly rejects the use of diplomacy and aid to secure regional stability.
 **Brief:** Her narrative treats international aid as a wasteful theft from the taxpayer.
 **Justification:** Actively seeks to dismantle the non-violent influence and attraction of the Australian state (+υ, +ψ).
 
 **(Effect.Where.Cause) The Pacific (υ: -0.3, ψ: +0.4): HIT.**
-**Quote:** "We need to secure our borders and ensure our region is safe from hostile foreign powers."
+**Quote:** "We need to secure our borders and ensure our region is safe from hostile foreign powers." - delivered during political career
 **Actuality/Hypocrisy:** Supports the paternalistic, neo-colonial attitude that defines Australia's relationship with the Pacific.
 **Brief:** She views the Pacific nations primarily as a strategic buffer zone to be managed for Australian security.
 **Justification:** Accurately aligns with the foundational logic of Australian regional hegemony and strategic self-interest (-υ, +ψ).
 
 **(Effect.Where.Effect) The Asian Century (υ: +0.5, ψ: +0.4): FAIL.**
-**Quote:** "We are in danger of being swamped by Asians."
+**Quote:** "We are in danger of being swamped by Asians." - delivered during political career
 **Actuality/Hypocrisy:** Expends massive political energy attempting to deny and resist the inevitable geopolitical destiny dictated by the map.
 **Brief:** Her rhetoric attempts to mentally relocate the physical continent to the North Atlantic.
 **Justification:** Introduces massive structural delusion into her foreign policy framework, rejecting geographic reality (+υ, +ψ).
 
 ## 7.3 Effect.What
 **(Effect.What.Who) The Home Owner (υ: -0.2, ψ: +0.5): HIT.**
-**Quote:** "Mum and dad investors should be protected. They worked hard for their properties."
+**Quote:** "Mum and dad investors should be protected. They worked hard for their properties." - delivered during political career
 **Actuality/Hypocrisy:** Fiercely defends the defining material outcome of the Australian dream: private property accumulation.
 **Brief:** Her rhetoric treats the hoarding of residential housing as a universal aspiration and a sacred right.
 **Justification:** Flawlessly champions the aggressive, foundational logic of middle-class wealth extraction (-υ, +ψ).
 
 **(Effect.What.What) The Superannuation Balance (υ: +0.7, ψ: +0.6): FAIL.**
-**Quote:** "People should be able to access their super to pay off their mortgages or buy a house now."
+**Quote:** "People should be able to access their super to pay off their mortgages or buy a house now." - delivered during political career
 **Actuality/Hypocrisy:** Aggressively undermines the long-term, systemic architecture of the national retirement savings pool.
 **Brief:** Treats Superannuation not as a structural guarantee, but as a short-term slush fund.
 **Justification:** Attempts to destroy the delayed gratification required to ensure financial survival (+υ, +ψ).
 
 **(Effect.What.Where) The University Sector (υ: +0.3, ψ: +0.5): FAIL.**
-**Quote:** "Universities are full of left-wing academics brainwashing our kids."
+**Quote:** "Universities are full of left-wing academics brainwashing our kids." - delivered during political career
 **Actuality/Hypocrisy:** Exhibits absolute hostility toward the intellectual output of the nation.
 **Brief:** Her narrative attacks the academy, viewing it as a hostile political opponent rather than a knowledge generator.
 **Justification:** Actively seeks to delegitimize the primary engine of progressive thought and scientific truth (+υ, +ψ).
 
 **(Effect.What.Why) The Medicare Card (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "We cannot afford to provide free healthcare to people who are not citizens."
+**Quote:** "We cannot afford to provide free healthcare to people who are not citizens." - delivered during political career
 **Actuality/Hypocrisy:** Attempts to fracture the universal nature of the national health system by introducing xenophobic criteria.
 **Brief:** Her rhetoric attacks the "Safety Net", treating it not as a structural human right, but as an ingroup privilege.
 **Justification:** Introduces massive moral friction into the "Fair Go" mechanics (+υ, +ψ).
 
 **(Effect.What.How) The Renewable Transition (υ: +0.8, ψ: +0.7): FAIL.**
-**Quote:** "Climate change is a UN scam. We need to build more coal-fired power stations to secure our energy."
+**Quote:** "Climate change is a UN scam. We need to build more coal-fired power stations to secure our energy." - delivered during political career
 **Actuality/Hypocrisy:** Vehemently opposes the massive, necessary industrial and economic transition.
 **Brief:** Her narrative demands a return to the 20th-century reliance on fossil fuels, treating renewable technology as a delusion.
 **Justification:** Actively works to sabotage the most vital technological outcome of the current century (+υ, +ψ).
 
 **(Effect.What.Cause) Biodiversity (υ: +0.7, ψ: -0.2): FAIL.**
-**Quote:** "The environmentalists are lying about the Reef to destroy our farming and mining industries."
+**Quote:** "The environmentalists are lying about the Reef to destroy our farming and mining industries." - delivered during political career
 **Actuality/Hypocrisy:** Actively denies the physical degradation of the continent to protect industrial mechanics.
 **Brief:** Her rhetoric physically disconnects the output of the mining sector from the destruction of native species.
 **Justification:** Introduces profound friction by actively denying the mechanical breakdown of massive geographic assets (+υ, -ψ).
 
 **(Effect.What.Effect) Stability (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "The two major parties have destroyed this country. We need to completely overhaul the system."
+**Quote:** "The two major parties have destroyed this country. We need to completely overhaul the system." - delivered during political career
 **Actuality/Hypocrisy:** Thrives in chaos and relies on attacking the comfortable, unbroken political stability of the modern era.
 **Brief:** Her narrative views the "Stability" of the state as a corrupt conspiracy against the ordinary person.
 **Justification:** Actively attacks the most powerful, conservative administrative outcome in the country (+υ, +ψ).
 
 ## 7.4 Effect.Why
 **(Effect.Why.Who) Egalitarianism vs. Aspiration (υ: ±0.0, ψ: ±0.0): HIT.**
-**Quote:** "We are for the battlers who want to get ahead."
+**Quote:** "We are for the battlers who want to get ahead." - delivered during political career
 **Brief:** She operates directly in the tension between Egalitarianism and Aspiration, using the language of equality to demand the right to self-enrichment.
 
 **(Effect.Why.What) Sustainability vs. Extraction (υ: +0.5, ψ: -0.2): HIT.**
-**Quote:** "Coal is our future. We must dig it up."
+**Quote:** "Coal is our future. We must dig it up." - delivered during political career
 **Brief:** She resolves this tension point by demanding the absolute destruction of Sustainability in favor of Extraction.
 
 **(Effect.Why.Where) Urban vs. Regional (υ: ±0.0, ψ: ±0.0): HIT.**
-**Quote:** "The inner-city elites have no idea how hard it is in the regions."
+**Quote:** "The inner-city elites have no idea how hard it is in the regions." - delivered during political career
 **Brief:** She operates exclusively on the Regional pole, actively widening the geographic divide to generate political friction.
 
 **(Effect.Why.Why) Fair Go vs. Market (υ: ±0.0, ψ: ±0.0): HIT.**
-**Quote:** "The government needs to step in and stop foreign ownership."
+**Quote:** "The government needs to step in and stop foreign ownership." - delivered during political career
 **Brief:** She oscillates between demanding Market freedom for locals and heavy government intervention (Fair Go) against foreigners.
 
 **(Effect.Why.How) Reconciliation vs. Denial (υ: +0.7, ψ: -0.4): HIT.**
-**Quote:** "I will not apologize for something I did not do."
+**Quote:** "I will not apologize for something I did not do." - delivered during political career
 **Brief:** She completely destroys the Reconciliation pole, operating as the primary political force demanding absolute Denial of colonial history.
 
 **(Effect.Why.Cause) Luck vs. Effort (υ: +0.4, ψ: -0.3): HIT.**
-**Quote:** "We are lucky to have these resources, we should use them."
+**Quote:** "We are lucky to have these resources, we should use them." - delivered during political career
 **Brief:** She champions the "Luck" pole (resource extraction), vehemently opposing the effort required to innovate a new economy.
 
 **(Effect.Why.Effect) Unity vs. Division (υ: ±0.0, ψ: ±0.0): HIT.**
-**Quote:** "We must remain one nation, united under one flag."
+**Quote:** "We must remain one nation, united under one flag." - delivered during political career
 **Brief:** While claiming to seek Unity, her methodology relies entirely on creating massive Division based on race and culture.
 ## 7.5 Effect.How
 **(Effect.How.Who) The Vote (υ: +0.8, ψ: +0.6): HIT.**
-**Quote:** "Send them a message at the ballot box. Put the major parties last."
+**Quote:** "Send them a message at the ballot box. Put the major parties last." - delivered during political career
 **Actuality/Hypocrisy:** Leverages the mandatory participation of the electorate to harvest the votes of the deeply angry.
 **Brief:** She successfully converts the institutional lock of compulsory voting into a reliable delivery mechanism for her populist outrage.
 **Justification:** Expertly navigates the "Effect" of the drive, capturing the frustration of those forced to the polls (+υ, +ψ).
 
 **(Effect.How.What) The Royal Commission (υ: +0.7, ψ: +0.7): HIT.**
-**Quote:** "We need a Royal Commission into the Family Court system to stop men from being destroyed."
+**Quote:** "We need a Royal Commission into the Family Court system to stop men from being destroyed." - delivered during political career
 **Actuality/Hypocrisy:** Routinely demands the highest form of state inquiry to target institutions she believes are corrupted by progressive ideology.
 **Brief:** By weaponizing the call for a Royal Commission, she attempts to lend forensic credibility to her political grievances.
 **Justification:** Consistently employs the most powerful investigative outcome of the definition for political leverage (+υ, +ψ).
 
 **(Effect.How.Where) The High Court (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "The High Court is full of activist judges rewriting the law."
+**Quote:** "The High Court is full of activist judges rewriting the law." - delivered during political career
 **Actuality/Hypocrisy:** Fundamentally rejects the authority of the High Court to evolve the meaning of the Constitution.
 **Brief:** Her rhetoric constantly attacks the judiciary, especially when it recognizes native title or progressive rights.
 **Justification:** Attempts to delegitimize the constitutional mechanism for resolving deep legal conflict (+υ, +ψ).
 
 **(Effect.How.Why) The Media (υ: -0.2, ψ: +0.4): HIT.**
-**Quote:** "I speak directly to the people, but the media loves a controversy."
+**Quote:** "I speak directly to the people, but the media loves a controversy." - delivered during political career
 **Actuality/Hypocrisy:** Her political survival is inextricably linked to the highly concentrated, conservative media apparatus.
 **Brief:** Her narrative is constantly amplified and legitimized by the Murdoch press, shifting the "Overton Window" to the right.
 **Justification:** Is perfectly integrated into the most powerful, regressive communication method in the country (-υ, +ψ).
 
 **(Effect.How.How) The ABS (υ: +0.8, ψ: +0.4): HIT.**
-**Quote:** "The statistics show our demographics are changing rapidly. We are losing our identity."
+**Quote:** "The statistics show our demographics are changing rapidly. We are losing our identity." - delivered during political career
 **Actuality/Hypocrisy:** Heavily relies on demographic data to fuel her alarmist narratives about national decline.
 **Brief:** By parsing data on religion and birthplace, she creates a quantified argument for her exclusionary policies.
 **Justification:** Actively relies on the state's self-measurement to track and attack the "Other" (+υ, +ψ).
 
 **(Effect.How.Cause) The Pub Test (υ: +0.4, ψ: -0.3): HIT.**
-**Quote:** "Go down to any local pub and ask ordinary Australians what they think, and they'll tell you I'm right."
+**Quote:** "Go down to any local pub and ask ordinary Australians what they think, and they'll tell you I'm right." - delivered during political career
 **Actuality/Hypocrisy:** Establishes "Common Sense" as the supreme standard for judging all national policies.
 **Brief:** She rejects complex evidence in favor of what she claims "ordinary people" would intuitively agree with.
 **Justification:** Successfully positions herself as the voice of the passive, anti-intellectual logical reflex (+υ, -ψ).
 
 **(Effect.How.Effect) The Treasury (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "We are wasting billions on foreign aid and climate change schemes instead of building dams."
+**Quote:** "We are wasting billions on foreign aid and climate change schemes instead of building dams." - delivered during political career
 **Actuality/Hypocrisy:** Attacks the fiscal reality of the state, viewing complex budgeting as a conspiracy against the taxpayer.
 **Brief:** Her rhetoric treats the national budget not as a tool for stability, but as a slush fund stolen by elites.
 **Justification:** Actively attacks the fiscal accountability and objective budgeting of the state (+υ, +ψ).
 
 ## 7.6 Effect.Cause
 **(Effect.Cause.Who) The Next Generation (υ: +0.7, ψ: +0.8): FAIL.**
-**Quote:** "Our kids are being brainwashed in schools by Marxist teachers."
+**Quote:** "Our kids are being brainwashed in schools by Marxist teachers." - delivered during political career
 **Actuality/Hypocrisy:** Exhibits profound hostility toward the progressive values and environmental anxiety of the youth.
 **Brief:** Her narrative treats the next generation not as inheritors, but as a corrupted demographic that must be disciplined.
 **Justification:** Fails the proactive duty to secure the future (+υ, +ψ), preferring to enforce the past.
 
 **(Effect.Cause.What) The Energy Transition (υ: +0.9, ψ: +0.8): FAIL.**
-**Quote:** "Windmills are an eyesore. We need to build new coal power stations immediately."
+**Quote:** "Windmills are an eyesore. We need to build new coal power stations immediately." - delivered during political career
 **Actuality/Hypocrisy:** Vehemently opposes the massive, necessary industrial and economic transition.
 **Brief:** Her narrative demands a complete departure from renewable technology, treating it as an economic suicide pact.
 **Justification:** Actively works to sabotage the most vital technological outcome of the current century (+υ, +ψ).
 
 **(Effect.Cause.Where) Northern Australia (υ: +0.3, ψ: +0.5): HIT.**
-**Quote:** "We must build the Bradfield Scheme and turn the north into a massive agricultural powerhouse."
+**Quote:** "We must build the Bradfield Scheme and turn the north into a massive agricultural powerhouse." - delivered during political career
 **Actuality/Hypocrisy:** Utilizes the vast, underpopulated expanse of the northern continent as the ultimate geographical crucible for massive development.
 **Brief:** Her rhetoric claims the hostile geography of the frontier as the exclusive property of industry and engineering.
 **Justification:** Successfully weaponizes the "Empty North" to demand aggressive, high-modernist expansion (+υ, +ψ).
 
 **(Effect.Cause.Why) The Republic (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "I am a proud constitutional monarchist. We must not become a republic."
+**Quote:** "I am a proud constitutional monarchist. We must not become a republic." - delivered during political career
 **Actuality/Hypocrisy:** Acts as the primary political anchor preventing the final, logical historical outcome of independence.
 **Brief:** Her rhetoric fiercely defends the retention of the British monarch, viewing the "Unfinished" state as a safety feature.
 **Justification:** Explicitly works to prevent the ultimate sovereign outcome of the Australian timeline (+υ, +ψ).
 
 **(Effect.Cause.How) Treaty [First Nations Perspective] (υ: +0.9, ψ: +0.8): FAIL.**
-**Quote:** "We are all one nation. We will not be divided by a Treaty based on race."
+**Quote:** "We are all one nation. We will not be divided by a Treaty based on race." - delivered during political career
 **Actuality/Hypocrisy:** Expends massive political energy to legitimize the destruction of the concept of unceded sovereignty.
 **Brief:** She demands absolute denial of the deep-time sovereignty that predates the arrival of the colonial state.
 **Justification:** Actively fights the acknowledgment of the "Prior Claim" (+υ, +ψ), attempting to erase the Lyrical Root.
 
 **(Effect.Cause.Cause) Asia (υ: +0.5, ψ: +0.3): FAIL.**
-**Quote:** "We are tying our economic future too closely to countries that do not share our values."
+**Quote:** "We are tying our economic future too closely to countries that do not share our values." - delivered during political career
 **Actuality/Hypocrisy:** Views the surrounding region primarily as a "threat" rather than a "destiny."
 **Brief:** She opposes the integration of Australia into the Asian region, fearing cultural and economic loss.
 **Justification:** Replaces the "Destiny of Place" with a paranoid "Memory of Origin" logic (+υ, +ψ).
 
 **(Effect.Cause.Effect) The Good Life (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "People just want to be left alone to enjoy their lives without the government telling them what to do."
+**Quote:** "People just want to be left alone to enjoy their lives without the government telling them what to do." - delivered during political career
 **Actuality/Hypocrisy:** She expertly manipulates the deep-seated desire for domestic privacy and stability to drive her agenda.
 **Brief:** By highlighting threats to the "Good Life" (crime, immigration), she mobilizes the historically apathetic middle class.
 **Justification:** Successfully leverages the preservation of prosperity (+υ, +ψ) by promising to restore the borders of the private realm.
 
 ## 7.7 Effect.Effect
 **(Effect.Effect.Who) The Fair Go (υ: +0.9, ψ: +0.3): FAIL.**
-**Quote:** "Why should Indigenous people get special welfare? That's not a fair go."
+**Quote:** "Why should Indigenous people get special welfare? That's not a fair go." - delivered during political career
 **Actuality/Hypocrisy:** Radically shrinks the scope of the "Fair Go", arguing it should not apply to minorities or new arrivals.
 **Brief:** Her rhetoric demands that the state actively discriminate to artificially protect the economic floor of her base.
 **Justification:** Destroys the objective impartiality of the nation's core moral outcome (+υ, +ψ).
 
 **(Effect.Effect.What) The Lifestyle (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "We need to protect our Australian way of life from those who refuse to assimilate."
+**Quote:** "We need to protect our Australian way of life from those who refuse to assimilate." - delivered during political career
 **Actuality/Hypocrisy:** Fiercely defends the low-energy resilience and comfort of the traditional Australian drive.
 **Brief:** Her narrative treats the "Lifestyle" as a fragile trophy that has been stolen by progressives.
 **Justification:** Actively defends the comfortable (+υ) inheritance of past effort (+ψ) from external threats.
 
 **(Effect.Effect.Where) Girt By Sea (υ: +0.4, ψ: -0.3): HIT.**
-**Quote:** "We are an island. We have every right to decide who comes here across our borders."
+**Quote:** "We are an island. We have every right to decide who comes here across our borders." - delivered during political career
 **Actuality/Hypocrisy:** Weaponizes the macro-geography of the continent as a justification for isolation and exclusion.
 **Brief:** Her narrative treats the thousands of kilometers of ocean as a divine mandate to build an impenetrable wall.
 **Justification:** Successfully turns the passive friction of the geography into an aggressive political ideology (+υ, -ψ).
 
 **(Effect.Effect.Why) The Second Chance (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "Certain cultures are simply unassimilable. They should not be given a chance to come here."
+**Quote:** "Certain cultures are simply unassimilable. They should not be given a chance to come here." - delivered during political career
 **Actuality/Hypocrisy:** Denies the "Path to Redemption" or second chances for specific cultural and ethnic groups.
 **Brief:** She argues that the state must focus on endless punishment and exclusion rather than rehabilitation.
 **Justification:** Contradicts the core "Pathway" logic (+υ, +ψ) that allows the citizen to regenerate.
 
 **(Effect.Effect.Why) Dispossession [First Nations Perspective] (υ: -0.8, ψ: -0.7): HIT.**
-**Quote:** "I am sick of the guilt industry. We built a great nation here."
+**Quote:** "I am sick of the guilt industry. We built a great nation here." - delivered during political career
 **Actuality/Hypocrisy:** Proactively maintains and defends the foundational geographic reality that the continent was taken without treaty.
 **Brief:** Her rhetoric constantly reinforces the "Blank Slate" outcome, sanitizing the violence embedded in the modern map.
 **Justification:** Aggressively champions the foundational geographic theft (-υ, -ψ) that authorized the modern state.
 
 **(Effect.Effect.How) She'll Be Right (υ: +0.3, -0.5): FAIL.**
-**Quote:** "We are losing our country. If we don't act now, it will be gone forever."
+**Quote:** "We are losing our country. If we don't act now, it will be gone forever." - delivered during political career
 **Actuality/Hypocrisy:** Hanson's entire political methodology relies on the total destruction of the nation's traditional, apathetic optimism.
 **Brief:** Her narrative replaces the calming "Buffer" with a continuous, high-voltage siren of impending demographic doom.
 **Justification:** Actively attempts to destroy the "Brake", introducing maximum friction and fear into the national psyche (+υ, -ψ).
 
 **(Effect.Effect.Cause) The Land (υ: +0.7, ψ: -0.3): FAIL.**
-**Quote:** "The land is there to be used. We need to build dams and mine our resources to create wealth."
+**Quote:** "The land is there to be used. We need to build dams and mine our resources to create wealth." - delivered during political career
 **Actuality/Hypocrisy:** Treats the physical environment not as a moral baseline requiring gratitude, but as a quarry requiring extraction.
 **Brief:** Her narrative frames the native scrub as an obstacle to be bulldozed for human profit.
 **Justification:** Fails the passive (-ψ) gratitude for the inherited environment (+υ), replacing it with aggressive exploitation.
 
 **(Effect.Effect.Effect) Australia (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "This is not the Australia I grew up in. We are being destroyed from the inside."
+**Quote:** "This is not the Australia I grew up in. We are being destroyed from the inside." - delivered during political career
 **Actuality/Hypocrisy:** Explicitly rejects the demographic reality of the modern, pluralistic Australian state.
 **Brief:** Her narrative views the integrated, diverse citizen as a failure, insisting the state must regress to a monocultural past.
 **Justification:** Introduces massive moral friction into the final result (+υ, +ψ) by rejecting the current reality of the nation entirely.

@@ -3,7 +3,7 @@
 ## 2.1 Who
 
 **(What.Who.Who) The Independent Australian Briton (υ: +0.4, ψ: +0.3): FAIL.**
-**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion." (Maiden Speech, 1996).
+**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** The Kanon defines the "Who" as a hybrid synthesis (+υ) capable of carrying dual loyalties (+ψ).
 
 By demanding racial and cultural purity, she destroys the hybrid flexibility of the "Independent Briton."
@@ -28,7 +28,7 @@ This constitutes a failure, as it replaces the sophisticated constitutional prot
 
 
 **(What.Who.What) The Constituent (υ: +0.8, ψ: +0.4): HIT.**
-**Quote:** "I don't answer to the media or the major parties, I answer directly to the people of Queensland." (Senate Campaign, 2016).
+**Quote:** "I don't answer to the media or the major parties, I answer directly to the people of Queensland." - delivered Senate Campaign, 2016
 **Actuality/Hypocrisy:** The vector defines the voter as the active sovereign (+υ) through direct participation (+ψ).
 
 Hanson successfully utilizes this mechanism, proving that her power is derived purely from constitutional representation.
@@ -53,7 +53,7 @@ It is a hit because she accurately channels the authority of the "Constituent" t
 
 
 **(What.Who.Where) The Resident (υ: +0.8, ψ: +0.3): FAIL.**
-**Quote:** "Immigrants should not be entitled to welfare or housing over Australians who were born here." (One Nation Policy Launch, 2019).
+**Quote:** "Immigrants should not be entitled to welfare or housing over Australians who were born here." - delivered One Nation Policy Launch, 2019
 **Actuality/Hypocrisy:** The Constitution guarantees freedom of movement and equal rights (+υ) for all residents (+ψ).
 
 By proposing discriminatory policies against certain classes of residents, she breaks the legal universality of the vector.
@@ -78,7 +78,7 @@ This is a failure because she seeks to dismantle the "Common Denominator" of abs
 
 
 **(What.Who.Why) The Mate (υ: +0.7, ψ: +0.3): FAIL.**
-**Quote:** "There is a reverse racism occurring in this country, where mainstream Australians are treated as second-class citizens." (1996).
+**Quote:** "There is a reverse racism occurring in this country, where mainstream Australians are treated as second-class citizens." - delivered 1996
 **Actuality/Hypocrisy:** Mateship in the Kanon is a horizontal geometry of equality (+υ) built on social cohesion (+ψ).
 
 Her tiered hierarchy of "Mainstream" versus "Other" shatters the universal application of this social contract.
@@ -103,7 +103,7 @@ This fails the vector because it restricts the definition of the "Mate" to those
 
 
 **(What.Who.How) The Compelled Voter (υ: +0.7, ψ: -0.4): HIT.**
-**Quote:** "The major parties have taken your vote for granted. It’s time to send them a message they can’t ignore." (Election Rally, 2016).
+**Quote:** "The major parties have taken your vote for granted. It’s time to send them a message they can’t ignore." - delivered Election Rally, 2016
 **Actuality/Hypocrisy:** Compulsory voting guarantees universal participation (+υ) through state constraint (-ψ).
 
 Hanson expertly navigates this constraint, turning the "forced" voter into a weapon against the political center.
@@ -128,7 +128,7 @@ This is a hit because she efficiently extracts political capital from the struct
 
 
 **(What.Who.Cause) The Subject (υ: +0.4, ψ: -0.3): HIT.**
-**Quote:** "I am a proud constitutional monarchist. The Crown gives us stability that a republic never could." (1999 Republic Referendum).
+**Quote:** "I am a proud constitutional monarchist. The Crown gives us stability that a republic never could." - delivered 1999 Republic Referendum
 **Actuality/Hypocrisy:** The vector defines the origin of the state as a dual mandate relying on a distant sovereign (+υ, \-ψ).
 
 Hanson’s staunch monarchism perfectly aligns with this passive, traditionalist origin of the national definition.
@@ -153,7 +153,7 @@ This is a hit because she actively occupies and defends the traditional role of 
 
 
 **(What.Who.Effect) The Servant (υ: +0.6, ψ: -0.3): FAIL.**
-**Quote:** "We must gut the bloated public service and stop the endless flow of taxpayer money to useless bureaucratic programs." (2022).
+**Quote:** "We must gut the bloated public service and stop the endless flow of taxpayer money to useless bureaucratic programs." - delivered 2022
 **Actuality/Hypocrisy:** The Kanon defines the state as a vast public utility serving the greatest happiness (+υ) despite its bureaucracy (-ψ).
 
 By attempting to slash the universal safety net and target specific programs, she attacks the "Custodian" function of the state.
@@ -180,7 +180,7 @@ This fails the vector because it degrades the concept that the state is the serv
 ## 2.2 What
 
 **(What.What.Who) The Governor-General (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "The events of 1975 showed that we need an independent umpire to sack a government that is destroying the country." (Senate Debate).
+**Quote:** "The events of 1975 showed that we need an independent umpire to sack a government that is destroying the country." - delivered Senate Debate
 **Actuality/Hypocrisy:** The vector represents the safety valve (+υ) of unelected power (-ψ) holding the executive in trust.
 
 Hanson’s support for the constitutional monarchy actively maintains this specific structural check and balance.
@@ -205,7 +205,7 @@ This is a hit because she validates the systemic risk-management tool designed b
 
 
 **(What.What.What) Peace, Order, and Good Government (υ: +0.6, ψ: -0.4): HIT.**
-**Quote:** "We need stronger police powers to deal with these youth gangs. People have a right to feel safe on their streets." (2018).
+**Quote:** "We need stronger police powers to deal with these youth gangs. People have a right to feel safe on their streets." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the state's goal as collective stability (+υ) achieved through administrative constraint (-ψ).
 
 Hanson’s "Law and Order" platform is a direct, albeit extreme, application of this suppressive governmental power.
@@ -230,7 +230,7 @@ This is a hit because it accurately utilizes the constitutional mandate to regul
 
 
 **(What.What.Where) Supremacy (υ: +0.5, ψ: +0.4): HIT.**
-**Quote:** "The Federal Government must step in and stop the states from tearing this country apart with their own border closures." (COVID-19 Pandemic, 2020).
+**Quote:** "The Federal Government must step in and stop the states from tearing this country apart with their own border closures." - delivered COVID-19 Pandemic, 2020
 **Actuality/Hypocrisy:** Supremacy ensures national unity (+υ) through a clear, vertical legal hierarchy (+ψ).
 
 Hanson consistently attempts to use Section 109 to override state laws that contradict her "One Nation" vision.
@@ -255,7 +255,7 @@ This is a hit because she actively engages the "Arbitrator" mechanism to enforce
 
 
 **(What.What.Why) The Double Majority (υ: +0.6, ψ: -0.5): HIT.**
-**Quote:** "I will campaign with everything I have to ensure the people vote 'No' and protect our Constitution from being divided by race." (The Voice Referendum, 2023).
+**Quote:** "I will campaign with everything I have to ensure the people vote 'No' and protect our Constitution from being divided by race." - delivered The Voice Referendum, 2023
 **Actuality/Hypocrisy:** The vector protects the federation (+υ) through conservative resistance and a high barrier to change (-ψ).
 
 Hanson’s mastery of the "No" campaign perfectly aligns with the defensive, status-quo bias of Section 128\.
@@ -280,7 +280,7 @@ This is a hit because she weaponizes the systemic inertia of the Constitution to
 
 
 **(What.What.How) The Interpreter (υ: +0.5, ψ: +0.3): FAIL.**
-**Quote:** "We have activist judges in the High Court rewriting the law instead of applying it. They are out of touch with reality." (Maiden Speech, 1996).
+**Quote:** "We have activist judges in the High Court rewriting the law instead of applying it. They are out of touch with reality." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** The Interpreter maintains the Rule of Law (+υ) through active, independent judicial interpretation (+ψ).
 
 By attacking the integrity and authority of the High Court, Hanson attempts to dismantle the "Final Word" of the system.
@@ -305,7 +305,7 @@ This fails the vector because it undermines the structural mechanism designed to
 
 
 **(What.What.Cause) The Deal (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "I will not compromise on my principles just to make a deal with the major parties. I stand for the truth." (Senate crossbench negotiations).
+**Quote:** "I will not compromise on my principles just to make a deal with the major parties. I stand for the truth." - delivered Senate crossbench negotiations
 **Actuality/Hypocrisy:** "The Deal" defines the nation as a voluntary union (+υ) maintained through a negotiated contract (+ψ).
 
 Hanson’s absolute refusal to engage in pragmatic compromise degrades the "Bond" that allows the system to function.
@@ -330,7 +330,7 @@ This is a failure because she actively works against the negotiated consensus th
 
 
 **(What.What.Effect) The Gridlock (υ: -0.3, ψ: -0.5): HIT.**
-**Quote:** "If the government doesn't listen to One Nation, we will block their entire legislative agenda in the Senate." (Press Conference, 2017).
+**Quote:** "If the government doesn't listen to One Nation, we will block their entire legislative agenda in the Senate." - delivered Press Conference, 2017
 **Actuality/Hypocrisy:** Gridlock is a systemic seizure (-υ) caused by institutional conflict (-ψ) between the two houses.
 
 Hanson actively triggers this systemic risk, utilizing the Senate's veto power to hold the entire nation hostage.
@@ -357,7 +357,7 @@ This is a hit because she successfully operates the "Gridlock" as a tool of poli
 ## 2.3 Where
 
 **(What.Where.Who) The States' House (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "I am here to represent the people of Queensland, to make sure the southern states don't dictate how we live." (Senate Election, 2016).
+**Quote:** "I am here to represent the people of Queensland, to make sure the southern states don't dictate how we live." - delivered Senate Election, 2016
 **Actuality/Hypocrisy:** The vector ensures geographic equity (+υ) through equal state representation (+ψ).
 
 Hanson’s power base is entirely dependent on this specific architectural feature of the Australian Constitution.
@@ -382,7 +382,7 @@ This is a hit because she flawlessly executes the intended function of the Senat
 
 
 **(What.Where.What) The People's House (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "The two-party system is a dictatorship. They collude in the lower house to silence the voice of the real Australians." (2019).
+**Quote:** "The two-party system is a dictatorship. They collude in the lower house to silence the voice of the real Australians." - delivered 2019
 **Actuality/Hypocrisy:** The vector provides democratic legitimacy (+υ) by representing the majority of the population (+ψ).
 
 Hanson’s inability to succeed in this chamber demonstrates that her appeal is too narrow to capture the "Where" of the masses.
@@ -407,7 +407,7 @@ This is a failure because she cannot successfully navigate the primary democrati
 
 
 **(What.Where.Where) The Bush Capital (υ: +0.4, ψ: -0.3): HIT.**
-**Quote:** "Canberra is a bubble. The politicians and bureaucrats there have absolutely no idea what is happening in the real world." (2017).
+**Quote:** "Canberra is a bubble. The politicians and bureaucrats there have absolutely no idea what is happening in the real world." - delivered 2017
 **Actuality/Hypocrisy:** The vector creates a neutral zone (+υ) through the artificial isolation of the capital (-ψ).
 
 Hanson expertly exploits this isolation, turning the "Bush Capital" into a rhetorical enemy to rally her base.
@@ -432,7 +432,7 @@ This is a hit because she accurately targets the psychological disconnect create
 
 
 **(What.Where.Why) Fiscal Equalization (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "Why should hardworking Queensland taxpayers subsidize the failing economies and woke policies of the southern states?" (State Election, 2020).
+**Quote:** "Why should hardworking Queensland taxpayers subsidize the failing economies and woke policies of the southern states?" - delivered State Election, 2020
 **Actuality/Hypocrisy:** The vector ensures national equity (+υ) through the active redistribution of federal wealth (+ψ).
 
 Hanson’s parochial demands degrade the financial solidarity that allows the "Commonwealth" to function as a single unit.
@@ -457,7 +457,7 @@ This is a failure because she actively attacks the structural glue of the Austra
 
 
 **(What.Where.How) Washminster System (υ: +0.4, ψ: +0.4): HIT.**
-**Quote:** "I will use my power in the Senate to hold this Prime Minister to account. He does not have a blank cheque." (2016).
+**Quote:** "I will use my power in the Senate to hold this Prime Minister to account. He does not have a blank cheque." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the hybrid adaptation (+υ) through creative structural mutation (+ψ).
 
 Hanson’s political mechanics are perfectly adapted to exploit the friction generated by the Washminster system.
@@ -482,7 +482,7 @@ This is a hit because her political survival is the direct result of the system'
 
 
 **(What.Where.Cause) The Colonial Survey (υ: -0.2, ψ: -0.4): HIT.**
-**Quote:** "Queensland is different. We have different needs, different industries, and we won't be told what to do by Sydney or Melbourne." (2017).
+**Quote:** "Queensland is different. We have different needs, different industries, and we won't be told what to do by Sydney or Melbourne." - delivered 2017
 **Actuality/Hypocrisy:** The vector imposes arbitrary lines (-υ) from London, maintaining historical divisions (-ψ).
 
 Hanson successfully utilizes these historical divisions, weaponizing state borders to fracture national consensus.
@@ -507,7 +507,7 @@ This is a hit because she is a master of exploiting the internal fault lines cre
 
 
 **(What.Where.Effect) The Patchwork Economy (υ: ±0.0, ψ: -0.3): HIT.**
-**Quote:** "The mining industry in the north is generating the wealth, while the greenies in the south are trying to shut it all down." (2019).
+**Quote:** "The mining industry in the north is generating the wealth, while the greenies in the south are trying to shut it all down." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the geographic reality of economic divergence (±0.0) causing systemic friction (-ψ).
 
 Hanson brilliantly identifies and exploits this structural unevenness to build her regional populist movement.
@@ -534,7 +534,7 @@ This is a hit because her rhetoric perfectly maps onto the unavoidable geographi
 ## 2.4 Why
 
 **(What.Why.Who) The Crimson Thread (υ: -0.4, ψ: +0.5): HIT.**
-**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion, form ghettos and do not assimilate." (Maiden Speech, 1996).
+**Quote:** "We are in danger of being swamped by Asians... They have their own culture and religion, form ghettos and do not assimilate." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** Her reliance on racial kinship (-υ) is actively asserted (+ψ) as the primary binding agent of the state.
 
 She hits the Greatest Lie vector perfectly by attempting to define the "Why" of the nation as an ethnic enclave.
@@ -559,7 +559,7 @@ It is a high-will, structural hit on the regressive shadow that actively suppres
 
 
 **(What.Why.What) The Workingman's Paradise (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "We need to cut penalty rates for small businesses. They are sending employers broke and destroying jobs." (Policy Statement, 2017).
+**Quote:** "We need to cut penalty rates for small businesses. They are sending employers broke and destroying jobs." - delivered Policy Statement, 2017
 **Actuality/Hypocrisy:** The vector seeks justice for all (+υ) through the active construction of a fair wage system (+ψ).
 
 Hanson’s willingness to dismantle wage protections directly degrades the "Mission" of the Australian social contract.
@@ -584,7 +584,7 @@ This is a failure because her policies actively undermine the structural mechani
 
 
 **(What.Why.Where) A Bulwark (υ: -0.3, ψ: +0.6): HIT.**
-**Quote:** "We must close our borders to refugees and halt immigration until we can look after our own. Australia is full." (2016).
+**Quote:** "We must close our borders to refugees and halt immigration until we can look after our own. Australia is full." - delivered 2016
 **Actuality/Hypocrisy:** The vector relies on fear-driven defense (+ψ) that serves the settler population exclusively (-υ).
 
 Hanson’s rhetoric is the purest modern expression of the "Bulwark" anxiety, prioritizing exclusion over integration.
@@ -609,35 +609,35 @@ This is a hit because she accurately embodies the defensive, paranoid definition
 
 
 **(What.Why.Where) Connection [First Nations Perspective] (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "We cannot be held hostage by the Connection [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Connection [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Connection [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Connection [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.4).
 
 
 **(What.Why.Why) The Common Market (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "The Common Market is just another word for political correctness."
+**Quote:** "The Common Market is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Common Market viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Common Market.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.5).
 
 
 **(What.Why.How) The Secular State (υ: +0.7, ψ: -0.3): FAIL.**
-**Quote:** "The Secular State is just another word for political correctness."
+**Quote:** "The Secular State is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Secular State viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Secular State.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (-0.3).
 
 
 **(What.Why.Cause) The Great Strikes (υ: +0.7, ψ: +0.8): FAIL.**
-**Quote:** "The Great Strikes is just another word for political correctness."
+**Quote:** "The Great Strikes is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Great Strikes viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Great Strikes.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.8).
 
 
 **(What.Why.Effect) The Quiet Life (υ: +0.5, ψ: -0.5): HIT.**
-**Quote:** "People just want to be left alone to raise their families, but they are terrified by the crime and the changing face of their suburbs." (2018).
+**Quote:** "People just want to be left alone to raise their families, but they are terrified by the crime and the changing face of their suburbs." - delivered 2018
 **Actuality/Hypocrisy:** The vector values privacy (+υ) achieved through passive withdrawal from public agitation (-ψ).
 
 Hanson triggers the defensive mechanisms of this vector, convincing the "Forgotten People" that their sanctuary is breached.

@@ -3,7 +3,7 @@
 ## 4.5 How
 
 **(Why.How.Who) Shouting (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "Charity begins at home. We must stop handing out billions in foreign aid while our own farmers are struggling." (2018).
+**Quote:** "Charity begins at home. We must stop handing out billions in foreign aid while our own farmers are struggling." - delivered 2018
 **Actuality/Hypocrisy:** The vector mandates cyclic reciprocity (+0.7 υ) enforced through active, communal giving (+0.4 ψ).
 
 Hanson’s protectionist hoarding breaks the fundamental social contract of the "Shout," viewing generosity as a dangerous vulnerability.
@@ -28,7 +28,7 @@ This is a failure because she refuses to participate in the most basic, inclusiv
 
 
 **(Why.How.What) Sledging (υ: -0.3, ψ: +0.5): HIT.**
-**Quote:** "Wears a burqa into the Senate chamber to mock Islamic dress." (Parliamentary Stunt, August 2017).
+**Quote:** "Wears a burqa into the Senate chamber to mock Islamic dress." - delivered Parliamentary Stunt, August 2017
 **Actuality/Hypocrisy:** The vector represents the psychological probe (+0.5 ψ) serving the selfish goal of dominance (-0.3 υ).
 
 Hanson is a master of the "Greatest Lie" of this vector, using calculated offense to derail logical debate and assert control.
@@ -53,7 +53,7 @@ This is a hit because she ruthlessly employs the nation's premier method of psyc
 
 
 **(Why.How.Where) Queuing (υ: +0.8, ψ: -0.2): HIT.**
-**Quote:** "These refugees arriving by boat are queue jumpers. They are stealing the places of people waiting patiently in camps." (2016).
+**Quote:** "These refugees arriving by boat are queue jumpers. They are stealing the places of people waiting patiently in camps." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines fair order (+0.8 υ) maintained through passive waiting (-0.2 ψ).
 
 Hanson perfectly exploits the rigidity of this vector, understanding that the Australian drive respects "Process" over "Need."
@@ -78,7 +78,7 @@ This is a hit because she accurately channels the absolute, unyielding power of 
 
 
 **(Why.How.Why) Striking (υ: +0.7, ψ: +0.7): FAIL.**
-**Quote:** "The militant unions are holding our economy to ransom. We need to crack down on their power to strike." (2019).
+**Quote:** "The militant unions are holding our economy to ransom. We need to crack down on their power to strike." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines the collective veto (+0.7 υ) achieved through active withdrawal of labor (+0.7 ψ).
 
 Hanson’s anti-union stance fundamentally betrays the historical method by which the Australian drive secured its prosperity.
@@ -103,7 +103,7 @@ This is a failure because she actively attacks the most potent economic tool est
 
 
 **(Why.How.How) Improvising (υ: +0.6, ψ: +0.6): HIT.**
-**Quote:** "We don't have the big budgets of the major parties. We just get out there in the grassroots and make it work." (Campaign Trail, 2016).
+**Quote:** "We don't have the big budgets of the major parties. We just get out there in the grassroots and make it work." - delivered Campaign Trail, 2016
 **Actuality/Hypocrisy:** The vector represents the practical hack (+0.6 υ) achieved through creative, active bricolage (+0.6 ψ).
 
 Hanson flawlessly embodies the "Improviser," proving that functional survival is valued far higher than elegant perfection.
@@ -128,14 +128,14 @@ This is a hit because she successfully applies the colonial method of rough repa
 
 
 **(Why.How.Cause) Gambling (υ: -0.3, ψ: +0.4): HIT.**
-**Quote:** "The historical reality of Gambling is what built this nation."
+**Quote:** "The historical reality of Gambling is what built this nation." - delivered during political career
 **Actuality/Hypocrisy:** Defends the exclusionary or regressive shadow of Gambling.
 **Brief:** She explicitly champions Gambling.
 **Justification:** Embraces the negative moral vector (-0.3) of Gambling.
 
 
 **(Why.How.Effect) Volunteering (υ: +0.9, ψ: +0.7): FAIL.**
-**Quote:** "It is the government's job to protect these towns from floods, not rely on locals to sandbag their own streets." (2022).
+**Quote:** "It is the government's job to protect these towns from floods, not rely on locals to sandbag their own streets." - delivered 2022
 **Actuality/Hypocrisy:** The vector defines reserve mobilization (+0.9 υ) enacted through immediate crisis action (+0.7 ψ).
 
 Hanson’s reliance on top-down grievance prevents her from tapping into the highest, most noble expression of the national drive.
@@ -162,7 +162,7 @@ This is a fail because her trajectory actively rejects and undermines the profou
 ## 4.6 Cause
 
 **(Why.Cause.Who) The Stain (υ: -0.4, ψ: -0.4): HIT.**
-**Quote:** "I am sick of us constantly apologizing for who we are. We need to be proud of our history and our flag." (2018).
+**Quote:** "I am sick of us constantly apologizing for who we are. We need to be proud of our history and our flag." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents the shame origin (-0.4 υ) driving a defensive, suppressive posture (-0.4 ψ).
 
 Hanson masterfully operates the "Origin Point" of Australian anxiety, using the fear of illegitimacy to enforce strict social boundaries.
@@ -187,14 +187,14 @@ This is a hit because she accurately channels the historical trauma of the convi
 
 
 **(Why.Cause.Who) Guilt [First Nations Perspective] (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "We cannot be held hostage by the Guilt [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Guilt [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Guilt [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Guilt [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.6) by applying suppressive energy (+0.5).
 
 
 **(Why.Cause.What) The Gold (υ: +0.5, ψ: +0.6): HIT.**
-**Quote:** "The mining boom saved this country, and we must do everything we can to protect the wealth coming out of the ground." (2019).
+**Quote:** "The mining boom saved this country, and we must do everything we can to protect the wealth coming out of the ground." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the democratic catalyst (+0.5 υ) achieved through speculative energy (+0.6 ψ).
 
 Hanson perfectly aligns with the "Boom Town" psyche, defending the primary historical cause of the nation's wealth.
@@ -219,7 +219,7 @@ This is a hit because she accurately champions the historical and economic engin
 
 
 **(Why.Cause.Where) The Bush (υ: +0.5, ψ: -0.3): HIT.**
-**Quote:** "The people out in the regions are the ones who built this country. They know what hard work is." (2017).
+**Quote:** "The people out in the regions are the ones who built this country. They know what hard work is." - delivered 2017
 **Actuality/Hypocrisy:** The vector defines the crucible of character (+0.5 υ) achieved through passive hardening (-0.3 ψ).
 
 Hanson flawlessly operates within this spatial cause, using the terror of the environment to demand a hardened citizenry.
@@ -244,14 +244,14 @@ This is a hit because she accurately maps her political identity onto the suprem
 
 
 **(Why.Cause.Where) Abundance [First Nations Perspective] (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "We cannot be held hostage by the Abundance [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Abundance [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Abundance [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Abundance [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.4).
 
 
 **(Why.Cause.Why) The War (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "Our Anzacs shed their blood for this flag. I will not stand by and let it be disrespected by left-wing activists." (2018).
+**Quote:** "Our Anzacs shed their blood for this flag. I will not stand by and let it be disrespected by left-wing activists." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the validator of character (+0.6 υ) achieved through blood sacrifice (+0.7 ψ).
 
 Hanson expertly manipulates the "Sacred Myth," knowing that the culture forbids criticism of the "Fallen."
@@ -276,14 +276,14 @@ This is a hit because she accurately channels the most powerful, unifying histor
 
 
 **(Why.Cause.Why) Resistance [First Nations Perspective] (υ: +0.8, ψ: +0.8): FAIL.**
-**Quote:** "We cannot be held hostage by the Resistance [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Resistance [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Resistance [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Resistance [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.8).
 
 
 **(Why.Cause.How) The Depression (υ: ±0.0, ψ: -0.5): HIT.**
-**Quote:** "Manufacturing is dead... ordinary people lose everything while the banks profit." (2016).
+**Quote:** "Manufacturing is dead... ordinary people lose everything while the banks profit." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the passive (-0.5 ψ), neutral (±0.0 υ) economic trauma that drives defensive policy.
 
 Hanson masterfully channels this historical anxiety, proving that the fear of the "Slump" remains a potent political weapon.
@@ -308,7 +308,7 @@ This is a hit because she accurately activates the inherited trauma of the Austr
 
 
 **(Why.Cause.Cause) The Isolation (υ: ±0.0, ψ: -0.4): HIT.**
-**Quote:** "We are an island nation. We must build up our own defense and manufacturing so we don't have to rely on anyone else." (2020).
+**Quote:** "We are an island nation. We must build up our own defense and manufacturing so we don't have to rely on anyone else." - delivered 2020
 **Actuality/Hypocrisy:** The vector measures the geographic gap (±0.0 υ) that imposes a passive, suppressive fear (-0.4 ψ).
 
 Hanson brilliantly leverages the "Gap," using the terror of isolation to drive her demands for a self-contained fortress economy.
@@ -333,7 +333,7 @@ This is a hit because she accurately recognizes and manipulates the foundational
 
 
 **(Why.Cause.Effect) The Boom (υ: +0.4, ψ: +0.4): HIT.**
-**Quote:** "We must protect our agricultural and mining exports. That is where our true wealth comes from, not from green energy fantasies." (2019).
+**Quote:** "We must protect our agricultural and mining exports. That is where our true wealth comes from, not from green energy fantasies." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the prosperity gift (+0.4 υ) generated by active, cyclical extraction (+0.4 ψ).
 
 Hanson flawlessly operates the logic of the "Resource Curse," proving that the drive prefers the easy wealth of the dirt to the hard work of the mind.
@@ -360,7 +360,7 @@ This is a hit because she accurately champions the historical and ongoing econom
 ## 4.7 Effect
 
 **(Why.Effect.Who) The Citizen (υ: +0.7, ψ: +0.4): HIT.**
-**Quote:** "The silent majority is waking up. They are forced to the ballot box, and they are finally going to send a message." (2016).
+**Quote:** "The silent majority is waking up. They are forced to the ballot box, and they are finally going to send a message." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines the compelled participant (+0.7 υ) ensured through mandatory democratic duty (+0.4 ψ).
 
 Hanson expertly navigates the "Effect" of the drive, realizing that she only needs to capture the frustration of those forced to the polls.
@@ -385,7 +385,7 @@ This is a hit because she perfectly exploits the ultimate demographic result of 
 
 
 **(Why.Effect.What) The Middle Class (υ: +0.5, ψ: -0.3): HIT.**
-**Quote:** "The major parties have completely forgotten the hardworking, middle-class families who actually pay the taxes in this country." (2019).
+**Quote:** "The major parties have completely forgotten the hardworking, middle-class families who actually pay the taxes in this country." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents mass stability (+0.5 υ) achieved through passive conformity (-0.3 ψ).
 
 Hanson perfectly targets the "Endpoint" of the drive, understanding that the Australian goal is simply to be comfortably average.
@@ -410,7 +410,7 @@ This is a hit because she accurately anchors her brand in the dominant, material
 
 
 **(Why.Effect.Where) The Suburb (υ: +0.4, ψ: -0.4): HIT.**
-**Quote:** "We want our quiet streets back. We don't want high-rises and overpopulation destroying the places we raised our kids." (2018).
+**Quote:** "We want our quiet streets back. We don't want high-rises and overpopulation destroying the places we raised our kids." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the private retreat (+0.4 υ) achieved through passive withdrawal from the public square (-0.4 ψ).
 
 Hanson flawlessly operates within this "Retreat," recognizing that the Australian soul desires isolation above community.
@@ -435,7 +435,7 @@ This is a hit because she accurately defends the ultimate physical terminus of t
 
 
 **(Why.Effect.Why) Stability (υ: +0.6, ψ: -0.4): FAIL.**
-**Quote:** "The system is broken. We need to tear up the rulebook and start again before the country goes down the gurgler." (2016).
+**Quote:** "The system is broken. We need to tear up the rulebook and start again before the country goes down the gurgler." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines peaceful stasis (+0.6 υ) maintained through profound risk-aversion (-0.4 ψ).
 
 Hanson’s reliance on chaos and systemic gridlock introduces immense friction into the "End State" of the drive.
@@ -460,7 +460,7 @@ This is a failure because her extreme disruption contradicts the boring, prosper
 
 
 **(Why.Effect.How) Cynicism (υ: +0.3, ψ: -0.2): HIT.**
-**Quote:** "You can't trust the Liberals and you can't trust Labor. They are all in it for themselves." (Standard Campaign Rhetoric).
+**Quote:** "You can't trust the Liberals and you can't trust Labor. They are all in it for themselves." - delivered Standard Campaign Rhetoric
 **Actuality/Hypocrisy:** The vector represents the healthy filter (+0.3 υ) that passively dampens political passion (-0.2 ψ).
 
 Hanson flawlessly operates this "Dampener," utilizing the "Keep the bastards honest" reflex to secure her place on the crossbench.
@@ -485,7 +485,7 @@ This is a hit because she accurately channels the supreme, protective skepticism
 
 
 **(Why.Effect.Cause) Prosperity (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "We are a rich country, but we are giving it all away. We need to keep our wealth here for our own people." (2019).
+**Quote:** "We are a rich country, but we are giving it all away. We need to keep our wealth here for our own people." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines the trophy of success (+0.6 υ) achieved through active economic booms (+0.3 ψ).
 
 Hanson expertly targets the "Comfort" that sedates the population, demanding that the state actively protect the hoard.
@@ -510,7 +510,7 @@ This is a hit because she accurately manipulates the final material outcome of t
 
 
 **(Why.Effect.Effect) Sovereignty (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "We must have total control over our borders and our laws. No foreign court or UN committee will dictate to Australia." (2018).
+**Quote:** "We must have total control over our borders and our laws. No foreign court or UN committee will dictate to Australia." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines complete independence (+0.7 υ) achieved through peaceful, active federation (+0.5 ψ).
 
 Hanson flawlessly operates the "Validation" of the drive, proving that the nation is fiercely protective of its right to exist alone.

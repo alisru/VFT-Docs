@@ -3,7 +3,7 @@
 ## 1.1 Who
 
 **(Who.Who.Who) Mateship (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "A type of reverse racism is applied to mainstream Australians... by those who promote political correctness" (Maiden Speech, Hansard, 10 September 1996).
+**Quote:** "A type of reverse racism is applied to mainstream Australians... by those who promote political correctness" - delivered Maiden Speech, Hansard, 10 September 1996
 **Actuality/Hypocrisy:** Mateship in the Kanon is a horizontal bond between equals; her tiered hierarchy breaks this.
 
 By creating a division of "Mainstream" vs. "Other," she breaks the universal moral tether of the vector.
@@ -28,7 +28,7 @@ This transition from a systemic bond to a group-benefit exclusion results in a f
 
 
 **(Who.Who.What) The Larrikin (υ: +0.5, ψ: +0.6): HIT.**
-**Quote:** "I won the seat of Oxley largely on an issue that has resulted in me being called a racist... I will not be silenced" (Maiden Speech, Hansard, 10 September 1996).
+**Quote:** "I won the seat of Oxley largely on an issue that has resulted in me being called a racist... I will not be silenced" - delivered Maiden Speech, Hansard, 10 September 1996
 **Actuality/Hypocrisy:** This is a high-will (+ψ) alignment with the "mockery of hubris" vector in the Kanon.
 
 She effectively utilizes the Larrikin's cultural immunity to shield her polarizing rhetoric from scrutiny.
@@ -53,7 +53,7 @@ Her interaction preserves the active will of the vector, even if the moral targe
 
 
 **(Who.Who.Where) The Battler (υ: +0.6, ψ: -0.3): HIT.**
-**Quote:** "I am just an ordinary Australian... the fish and chip shop woman who has had her fair share of life's knocks" (Maiden Speech, Hansard, 10 September 1996).
+**Quote:** "I am just an ordinary Australian... the fish and chip shop woman who has had her fair share of life's knocks" - delivered Maiden Speech, Hansard, 10 September 1996
 **Actuality/Hypocrisy:** She successfully occupies the Battler archetype by emphasizing passive endurance (-ψ) and struggle.
 
 This resonates with the commoner (+υ) narrative of the Australian character within the identity framework.
@@ -78,7 +78,7 @@ Her alignment here is structurally sound as it prioritizes the "hard road" over 
 
 
 **(Who.Who.Why) The Anzac (υ: +0.5, ψ: +0.8): HIT.**
-**Quote:** "We should be standing up for our own people... just like the Anzacs did" (Senate Maiden Speech, 2016).
+**Quote:** "We should be standing up for our own people... just like the Anzacs did" - delivered Senate Maiden Speech, 2016
 **Actuality/Hypocrisy:** This is a proactive (+ψ) use of the national myth to validate a defensive moral stance.
 
 She leverages the sacred authority of the Anzac to reinforce her specific "Australia First" agenda.
@@ -103,7 +103,7 @@ While the target of the defense is narrowed, the methodology remains aligned wit
 
 
 **(Who.Who.How) Stringybark and Greenhide (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "I don't need a university degree to tell me what's right and wrong. I've got common sense" (2016).
+**Quote:** "I don't need a university degree to tell me what's right and wrong. I've got common sense" - delivered 2016
 **Actuality/Hypocrisy:** This is a high-will (+ψ) performance of "Bricoleur" logic that prioritizes immediate, practical results.
 
 She aligns with the "Stringybark and Greenhide" vector by favoring improvisation over established institutions.
@@ -128,7 +128,7 @@ Her success here is rooted in the active, creative use of simple tools to disrup
 
 
 **(Who.Who.Cause) The Indigenous Custodian (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "I was born here... I have as much right to be here as anyone else" (Senate walk-out during Welcome to Country, 2022).
+**Quote:** "I was born here... I have as much right to be here as anyone else" - delivered Senate walk-out during Welcome to Country, 2022
 **Actuality/Hypocrisy:** By rejecting the moral priority of the Custodian (+υ), she collapses the foundation of the state.
 
 This posture shifts the identity focus from systemic stewardship to a self-centered, modern ownership claim.
@@ -153,7 +153,7 @@ This interaction results in a failure because it replaces the "Root" of the nati
 
 
 **(Who.Who.Effect) The Forgotten People (υ: +0.5, ψ: -0.4): HIT.**
-**Quote:** "For far too long ordinary Australians have been kept out of any debate... their concerns have been ignored" (Maiden Speech, 1996).
+**Quote:** "For far too long ordinary Australians have been kept out of any debate... their concerns have been ignored" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** She accurately identifies and mobilizes the passive anxiety (-ψ) inherent in the anchor vector.
 
 This stabilizes her support base by addressing the perceived powerlessness of the "forgotten" citizen.
@@ -180,7 +180,7 @@ Her interaction is a structural hit because she successfully anchors herself to 
 ## 1.2 What
 
 **(Who.What.Who) The Fair Go (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "A truly multicultural country can never be strong... we should abolish the policy of multiculturalism" (Maiden Speech, 1996).
+**Quote:** "A truly multicultural country can never be strong... we should abolish the policy of multiculturalism" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** By restricting the universal axiom (+υ) to a monocultural "Standard," she degrades the systemic integrity.
 
 This interaction functions as the "Greatest Lie," excluding the pluralist reality to protect an ingroup standard.
@@ -205,7 +205,7 @@ She fails the vector by attempting to make fairness a conditional asset rather t
 
 
 **(Who.What.What) Tall Poppy Syndrome (υ: +0.4, ψ: -0.5): HIT.**
-**Quote:** "The elitist crowd in this country... they don't know what it's like in the real world" (2019).
+**Quote:** "The elitist crowd in this country... they don't know what it's like in the real world" - delivered 2019
 **Actuality/Hypocrisy:** This is a classic application of "Knocker" logic used to maintain horizontal pressure against elites.
 
 She employs the syndrome to suppress the influence of those she deems culturally or intellectually arrogant.
@@ -230,7 +230,7 @@ Her interaction is a hit because it aligns with the traditional Australian desir
 
 
 **(Who.What.Where) Egalitarianism (υ: +0.8, ψ: +0.3): FAIL.**
-**Quote:** "If you are not prepared to become Australian... go back to where you came from" (2016).
+**Quote:** "If you are not prepared to become Australian... go back to where you came from" - delivered 2016
 **Actuality/Hypocrisy:** True Egalitarianism (+υ) requires a high floor; her demand creates a master-subject dynamic instead.
 
 By imposing conditions on belonging, she fails the core horizontal promise of the Australian identity.
@@ -255,7 +255,7 @@ This interaction is a failure as it degrades the fundamental premise that all ci
 
 
 **(Who.What.Why) "She'll be right" (υ: +0.3, ψ: -0.6): FAIL.**
-**Quote:** "I believe we are in danger of being swamped by Asians" (Maiden Speech, 1996).
+**Quote:** "I believe we are in danger of being swamped by Asians" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** "She'll be right" acts as a buffer; her rhetoric is a "fever" that amplifies cultural shocks.
 
 By rejecting the passive resilience of the vector, she introduces friction into the national psychological state.
@@ -280,7 +280,7 @@ This interaction is a failure because it actively destroys the "Valve" of confid
 
 
 **(Who.What.How) Secular Skepticism (υ: +0.6, ψ: -0.3): FAIL.**
-**Quote:** "Islam is a religion that does not belong in Australia... it is a political ideology" (2017).
+**Quote:** "Islam is a religion that does not belong in Australia... it is a political ideology" - delivered 2017
 **Actuality/Hypocrisy:** Neutral skepticism (+υ) filters all dogma equally; selective targeting of one faith is a failure.
 
 This action attempts to use secular logic as a weapon of suppression rather than as a neutral filter.
@@ -305,7 +305,7 @@ Her interaction fails because it uses the "Filter" of the state to persecute rat
 
 
 **(Who.What.Cause) The Convict Stain (υ: +0.3, ψ: -0.5): HIT.**
-**Quote:** "We should not be dictated to by the United Nations" (2018).
+**Quote:** "We should not be dictated to by the United Nations" - delivered 2018
 **Actuality/Hypocrisy:** Anti-globalism serves as a structural echo of convict resentment (+υ, \-ψ) toward higher authority.
 
 She leverages the historical "Stain" of resentment to justify her rejection of modern global governance.
@@ -330,7 +330,7 @@ Her interaction is a hit because it accurately mirrors the logic of the "Convict
 
 
 **(Who.What.Effect) The Commonwealth (υ: +0.8, ψ: +0.5): FAIL.**
-**Quote:** "Immigration must be halted... we must look after our own first" (1996).
+**Quote:** "Immigration must be halted... we must look after our own first" - delivered 1996
 **Actuality/Hypocrisy:** By defining the "Common" as "Mainstream Only," she degrades the systemic integrity of the vector.
 
 She fails the Commonwealth axiom (+υ) by prioritizing the part over the stability of the whole system.
@@ -357,7 +357,7 @@ This interaction is a failure as it shrinks the scope of the Commonwealth to a t
 ## 1.3 Where
 
 **(Who.Where.Who) The Bush (υ: +0.5, ψ: -0.4): HIT.**
-**Quote:** "I’ll always stand up for the people in the bush" (2017).
+**Quote:** "I’ll always stand up for the people in the bush" - delivered 2017
 **Actuality/Hypocrisy:** She successfully leverages the Sunburnt Country myth (+υ, \-ψ) to claim spiritual high ground.
 
 This identifies her movement with the traditional heartland, regardless of her actual policy impact there.
@@ -382,7 +382,7 @@ Her interaction is a hit because it channels the passive power of the land's myt
 
 
 **(Who.Where.What) The Coast (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "Our beautiful beaches and coastal areas are being bought up by foreign interests and developers who don't care about our way of life." (2018).
+**Quote:** "Our beautiful beaches and coastal areas are being bought up by foreign interests and developers who don't care about our way of life." - delivered 2018
 **Actuality/Hypocrisy:** She fiercely defends the "Verandah" culture (+υ, \+ψ) against perceived "Alien" threats and changes.
 
 This alignment reinforces the defensive posture of the coastal fringe in the Australian physical identity.
@@ -407,7 +407,7 @@ Her interaction is a hit as it accurately reflects the "Border Patrol" mentality
 
 
 **(Who.Where.Where) The Red Centre (υ: +0.5, ψ: -0.5): FAIL.**
-**Quote:** "Uluru is for all Australians... it should be like the Sydney Harbour Bridge" (2019).
+**Quote:** "Uluru is for all Australians... it should be like the Sydney Harbour Bridge" - delivered 2019
 **Actuality/Hypocrisy:** Her rejection of the "Spirit of Place" (+υ) in favor of secular utility fails the vector's depth.
 
 She desacralizes the land by refusing to acknowledge its deep, metaphysical priority in the Kanon.
@@ -432,14 +432,14 @@ Her interaction is a failure because it replaces the "Spiritual Sovereign" with 
 
 
 **(Who.Where.Why) The Cycle (Drought & Flood) (υ: ±0.0, ψ: -0.5): FAIL.**
-**Quote:** "The Cycle (Drought & Flood) is just another word for political correctness."
+**Quote:** "The Cycle (Drought & Flood) is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Cycle (Drought & Flood) viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Cycle (Drought & Flood).
 **Justification:** Attacks the positive moral vector (±0.0) through active suppression (-0.5).
 
 
 **(Who.Where.How) The Tyranny of Distance (υ: ±0.0, ψ: -0.6): HIT.**
-**Quote:** "If I can invite whom I want into my home... I should have a say in my country" (1996).
+**Quote:** "If I can invite whom I want into my home... I should have a say in my country" - delivered 1996
 **Actuality/Hypocrisy:** She translates geographic "Friction" (ψ) into a moral "Right" to exclude those on the "Outside."
 
 This interaction reinforces the "Fortress Australia" mentality derived from the country's physical isolation.
@@ -464,7 +464,7 @@ Her interaction is a hit because it captures the historical fear of "the empty n
 
 
 **(Who.Where.Cause) Terra Nullius (υ: -0.9, ψ: +0.7): HIT.**
-**Quote:** "We are all one people... I don't see why one group should have special rights" (2022).
+**Quote:** "We are all one people... I don't see why one group should have special rights" - delivered 2022
 **Actuality/Hypocrisy:** Her rhetoric is a proactive (+ψ) performance of the "Erasure of Presence" (-υ) in history.
 
 She actively maintains the gate of exclusion by upholding the logic of the foundational colonial lie.
@@ -489,7 +489,7 @@ Her interaction is a hit because she is one of the primary modern defenders of t
 
 
 **(Who.Where.Effect) The Suburb (υ: +0.4, ψ: -0.4): HIT.**
-**Quote:** "People are scared in their own homes... fear of ghettoization is real" (2016).
+**Quote:** "People are scared in their own homes... fear of ghettoization is real" - delivered 2016
 **Actuality/Hypocrisy:** She triggers the suburban "Defense Mechanism" (+υ, \-ψ) to polarize the community against others.
 
 This resonance with the "Retreat" vector provides a powerful emotive anchor for her isolationist platform.
@@ -516,7 +516,7 @@ Her interaction is a hit because it successfully activates the passive, protecti
 ## 1.4 Why
 
 **(Who.Why.Who) Punching Above Weight (υ: +0.5, ψ: +0.8): HIT.**
-**Quote:** "Australia is a great nation that has achieved incredible things on the world stage, and we don't need international bodies telling us how to run our country." (2017).
+**Quote:** "Australia is a great nation that has achieved incredible things on the world stage, and we don't need international bodies telling us how to run our country." - delivered 2017
 **Actuality/Hypocrisy:** High-will (+ψ) defiance utilizing the "Little Nation, Big Noise" archetype is central to her brand.
 
 She uses the lyrical ambition of the nation to fuel her proactive, often aggressive, political positioning.
@@ -541,7 +541,7 @@ Her interaction is a hit because it aligns with the national pride found in bein
 
 
 **(Who.Why.What) The Lucky Country (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "We are indeed a lucky country, but our luck is running out because of weak politicians selling our resources and assets to foreign companies." (2016).
+**Quote:** "We are indeed a lucky country, but our luck is running out because of weak politicians selling our resources and assets to foreign companies." - delivered 2016
 **Actuality/Hypocrisy:** She views national "Luck" (+υ) as a hoard to be protected from "New Australians" and outsiders.
 
 This interaction maps to the passive protection of resources rather than the creation of new systemic value.
@@ -566,7 +566,7 @@ Her interaction is a hit because it effectively leverages the passive, anxious s
 
 
 **(Who.Why.Where) Populate or Perish (υ: -0.2, ψ: +0.6): FAIL.**
-**Quote:** "Our infrastructure is at breaking point, our schools and hospitals are full, and we are importing hundreds of thousands of people we cannot support." (2019).
+**Quote:** "Our infrastructure is at breaking point, our schools and hospitals are full, and we are importing hundreds of thousands of people we cannot support." - delivered 2019
 **Actuality/Hypocrisy:** She chooses "Exclusion" over the proactive "Survival" growth vector (-υ, \+ψ) of the state.
 
 By attempting to stop the engine of growth, she introduces friction into the lyrical survival mechanism.
@@ -591,7 +591,7 @@ Her interaction is a failure as it contradicts the primary lyrical drive that al
 
 
 **(Who.Why.Where) Anteriority [First Nations Perspective] (υ: +0.9, ψ: +0.3): FAIL.**
-**Quote:** "I have as much right to be here as any Aboriginal" (2022).
+**Quote:** "I have as much right to be here as any Aboriginal" - delivered 2022
 **Actuality/Hypocrisy:** By denying the "Prior Claim" (+υ), she introduces maximum friction into the lyrical identity.
 
 This failure to acknowledge the root of the land's history prevents any authentic national reconciliation.
@@ -616,14 +616,14 @@ Her interaction is a failure because it replaces the "Lyrical Root" with a shall
 
 
 **(Who.Why.Why) Have a Go, Ya Mug (υ: +0.7, ψ: +0.8): FAIL.**
-**Quote:** "Have a Go, Ya Mug is just another word for political correctness."
+**Quote:** "Have a Go, Ya Mug is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Have a Go, Ya Mug viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Have a Go, Ya Mug.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (+0.8).
 
 
 **(Who.Why.How) The Cultural Cringe (υ: -0.3, ψ: -0.5): HIT.**
-**Quote:** "Look at what is happening in Europe... look at failed multiculturalism."
+**Quote:** "Look at what is happening in Europe... look at failed multiculturalism." - delivered during political career
 **Actuality/Hypocrisy:** She relies on the fear of being "Worse than Overseas" (-υ, \-ψ) to halt social evolution.
 
 This leverages the historical cringe to create a sense of national inferiority and impending failure.
@@ -648,14 +648,14 @@ Her interaction is a hit as it perfectly demonstrates the use of external compar
 
 
 **(Who.Why.Cause) The Gold Rush (υ: +0.5, ψ: +0.7): FAIL.**
-**Quote:** "The Gold Rush is just another word for political correctness."
+**Quote:** "The Gold Rush is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Gold Rush viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Gold Rush.
 **Justification:** Attacks the positive moral vector (+0.5) through active suppression (+0.7).
 
 
 **(Who.Why.Effect) Sport (υ: +0.6, ψ: +0.7): FAIL.**
-**Quote:** "Sport is just another word for political correctness."
+**Quote:** "Sport is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Sport viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Sport.
 **Justification:** Attacks the positive moral vector (+0.6) through active suppression (+0.7).

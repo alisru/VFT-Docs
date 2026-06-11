@@ -3,7 +3,7 @@
 ## 2.5 How
 
 **(What.How.Who) The Faceless Men (υ: -0.4, ψ: +0.5): HIT.**
-**Quote:** "One Nation is my party. I make the decisions, and if people don't like it, they can leave." (Internal Party Dispute, 2018).
+**Quote:** "One Nation is my party. I make the decisions, and if people don't like it, they can leave." - delivered Internal Party Dispute, 2018
 **Actuality/Hypocrisy:** The vector relies on party discipline (+ψ) to override the democratic will of the individual representative (-υ).
 
 Hanson’s brutal management of One Nation is a textbook execution of this "Greatest Lie" operating mechanism.
@@ -28,7 +28,7 @@ This is a hit because she perfectly embodies the authoritarian control mechanism
 
 
 **(What.How.Where) The Secret Ballot (υ: +0.9, ψ: +0.6): HIT.**
-**Quote:** "The polls always underestimate our support because people are too scared of the PC police to admit they vote for us." (Election Night, 2019).
+**Quote:** "The polls always underestimate our support because people are too scared of the PC police to admit they vote for us." - delivered Election Night, 2019
 **Actuality/Hypocrisy:** The vector guarantees universal privacy (+υ) through an actively invented democratic technology (+ψ).
 
 Hanson’s electoral model is uniquely dependent on this "Sanctuary" to bypass the moral filter of public discourse.
@@ -53,7 +53,7 @@ This is a hit because her entire power base is incubated within the secure, priv
 
 
 **(What.How.Why) Preferential Voting (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "We will put the sitting members last to send them a message. Our preferences will decide who wins." (State Election Strategy, 2017).
+**Quote:** "We will put the sitting members last to send them a message. Our preferences will decide who wins." - delivered State Election Strategy, 2017
 **Actuality/Hypocrisy:** The vector seeks consensus (+υ) through the active application of algorithmic fairness (+ψ).
 
 Hanson subverts the "Calculus" of consensus, using it instead as a tool of political hostage-taking and survival.
@@ -78,7 +78,7 @@ This is a hit because she actively and brilliantly exploits the mechanical engin
 
 
 **(What.How.What) The Referendum (υ: +0.8, ψ: +0.4): HIT.**
-**Quote:** "We must have a referendum to abolish multiculturalism and ensure we remain a single, undivided nation." (Policy Agenda, 1998).
+**Quote:** "We must have a referendum to abolish multiculturalism and ensure we remain a single, undivided nation." - delivered Policy Agenda, 1998
 **Actuality/Hypocrisy:** The vector secures popular sovereignty (+υ) through the direct, active vote of the populace (+ψ).
 
 Hanson utilizes this mechanism not to evolve the nation, but to trigger the defensive, blocking instinct of the electorate.
@@ -103,7 +103,7 @@ This is a hit because she accurately maps her political strategy onto the most d
 
 
 **(What.How.How) The Royal Commission (υ: +0.7, ψ: +0.6): HIT.**
-**Quote:** "We need a Royal Commission into the Family Court system. It is biased, corrupt, and destroying fathers." (Senate Motion, 2019).
+**Quote:** "We need a Royal Commission into the Family Court system. It is biased, corrupt, and destroying fathers." - delivered Senate Motion, 2019
 **Actuality/Hypocrisy:** The vector seeks truth (+υ) through the active, coercive power of state inquiry (+ψ).
 
 Hanson utilizes the "Inquisitor" mechanism with high will (+ψ), though often to pursue a biased or retributive agenda (-υ).
@@ -128,7 +128,7 @@ This is a hit because she consistently employs the most powerful investigative t
 
 
 **(What.How.Cause) The Census (υ: +0.5, ψ: +0.3): HIT.**
-**Quote:** "The statistics show our demographics are changing rapidly. We are losing our identity in our own country." (Speech on Immigration, 2018).
+**Quote:** "The statistics show our demographics are changing rapidly. We are losing our identity in our own country." - delivered Speech on Immigration, 2018
 **Actuality/Hypocrisy:** The vector provides knowledge (+υ) through the systematic, active counting of the population (+ψ).
 
 Hanson weaponizes this "Data," twisting the demographic reality into a weapon of fear and division.
@@ -153,7 +153,7 @@ This is a hit because she actively relies on the state's self-measurement to tra
 
 
 **(What.How.Effect) The Spill (υ: -0.3, ψ: +0.6): HIT.**
-**Quote:** "The major parties are in constant chaos, stabbing each other in the back while the country goes to ruin." (Reaction to Leadership Coups, 2015).
+**Quote:** "The major parties are in constant chaos, stabbing each other in the back while the country goes to ruin." - delivered Reaction to Leadership Coups, 2015
 **Actuality/Hypocrisy:** The vector maintains party power (+ψ) by overriding the popular mandate of the leader (-υ).
 
 Hanson thrives on the "Circuit Breaker" mechanism, using the resulting chaos to harvest disillusioned voters.
@@ -180,7 +180,7 @@ This is a hit because she effectively capitalizes on the systemic volatility tha
 ## 2.6 Cause
 
 **(What.Cause.Who) The Prophet (υ: +0.7, ψ: +0.8): HIT.**
-**Quote:** "I warned you about this twenty years ago in my maiden speech, and now everything I said has come true." (Senate Address, 2016) / "Australia Has a Radical Islam Problem... The situation is at super critical stage." (Western Sydney Raids, December 19, 2025).
+**Quote:** "I warned you about this twenty years ago in my maiden speech, and now everything I said has come true." - delivered Senate Address, 2016) / "Australia Has a Radical Islam Problem... The situation is at super critical stage." (Western Sydney Raids, December 19, 2025
 **Actuality/Hypocrisy:** The vector provides national vision (+υ) through the active, imaginative leadership of an individual (+ψ).
 
 Hanson’s "I warned you" rhetoric is a direct, high-will (+ψ) attempt to claim the mantle of the "Prophet."
@@ -205,7 +205,7 @@ This is a hit because she actively performs the role of the visionary leader cal
 
 
 **(What.Cause.What) The Imperial Act (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "Our Constitution is the foundation of our freedoms, passed down to us by the British, and we must never alter it to divide us." (2023).
+**Quote:** "Our Constitution is the foundation of our freedoms, passed down to us by the British, and we must never alter it to divide us." - delivered 2023
 **Actuality/Hypocrisy:** The vector establishes the legal foundation (+υ) through the passive receipt of a British grant (-ψ).
 
 Hanson’s deep conservatism perfectly aligns with the static, imperial nature of this constitutional origin.
@@ -230,7 +230,7 @@ This is a hit because she acts as a fierce defender of the original, unamended "
 
 
 **(What.Cause.Where) The Stockade (υ: +0.8, ψ: +0.9): HIT.**
-**Quote:** "We are fighting for the very soul of this country, standing up against the elites just like the diggers at Eureka." (Rally Speech, 2017).
+**Quote:** "We are fighting for the very soul of this country, standing up against the elites just like the diggers at Eureka." - delivered Rally Speech, 2017
 **Actuality/Hypocrisy:** The vector demands universal rights (+υ) through the active, armed rebellion of the populace (+ψ).
 
 Hanson’s high-will (+ψ) utilization of the Eureka myth is central to her brand as an anti-establishment fighter.
@@ -255,7 +255,7 @@ This is a hit because she effectively maps her modern grievance onto the foundat
 
 
 **(What.Cause.Why) The Slump (υ: ±0.0, ψ: -0.5): HIT.**
-**Quote:** "Manufacturing is dead, the farms are being sold off, and the government is doing nothing while ordinary people lose everything." (2016).
+**Quote:** "Manufacturing is dead, the farms are being sold off, and the government is doing nothing while ordinary people lose everything." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the economic catalyst (±0.0) that passively forces political reaction (-ψ).
 
 Hanson’s movement is the direct, reactionary product of the economic decay in rural and regional Australia.
@@ -280,7 +280,7 @@ This is a hit because her power is fundamentally rooted in the systemic "Slumps"
 
 
 **(What.Cause.How) The Corowa Plan (υ: +0.9, ψ: +0.7): HIT.**
-**Quote:** "The people must have their say. We demand a people's vote on immigration, not a decision made by politicians in back rooms." (2018).
+**Quote:** "The people must have their say. We demand a people's vote on immigration, not a decision made by politicians in back rooms." - delivered 2018
 **Actuality/Hypocrisy:** The vector invents the democratic process (+υ) through the active, popular initiative of the citizens (+ψ).
 
 Hanson’s reliance on the "People's Vote" is a direct continuation of this foundational democratic mechanic.
@@ -305,7 +305,7 @@ This is a hit because she accurately channels the populist, direct-democracy imp
 
 
 **(What.Cause.Cause) State Socialism (υ: +0.6, ψ: +0.5): FAIL.**
-**Quote:** "We cannot afford to keep propping up welfare for people who refuse to work. The age of entitlement must end." (Senate Speech, 2017).
+**Quote:** "We cannot afford to keep propping up welfare for people who refuse to work. The age of entitlement must end." - delivered Senate Speech, 2017
 **Actuality/Hypocrisy:** The vector provides pragmatic welfare (+υ) through active, non-ideological state intervention (+ψ).
 
 Hanson’s demand to dismantle the welfare state for specific demographics violates the universal utility of the "Cause."
@@ -330,7 +330,7 @@ This is a failure because her policies introduce deep, punitive ideology into a 
 
 
 **(What.Cause.Effect) Federation Day (υ: +0.6, ψ: +0.4): HIT.**
-**Quote:** "We must return to the values that built this nation in 1901, a united country with a single flag and a single culture." (Policy Launch, 1998).
+**Quote:** "We must return to the values that built this nation in 1901, a united country with a single flag and a single culture." - delivered Policy Launch, 1998
 **Actuality/Hypocrisy:** The vector provides national unity (+υ) through the active celebration of the state's birth (+ψ).
 
 Hanson utilizes the "Ratification" of 1901 as the ultimate weapon against the modern, multicultural evolution of the state.
@@ -357,7 +357,7 @@ This is a hit because she perfectly targets "Federation Day" as the eternal stan
 ## 2.7 Effect
 
 **(What.Effect.Who) The Anzac (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "Our Anzacs did not fight and die to see our streets taken over by foreign gangs and our culture destroyed by Islam." (Anzac Day Message, 2018).
+**Quote:** "Our Anzacs did not fight and die to see our streets taken over by foreign gangs and our culture destroyed by Islam." - delivered Anzac Day Message, 2018
 **Actuality/Hypocrisy:** The vector establishes national sacrifice (+υ) through the active valor of the soldier (+ψ).
 
 Hanson’s high-will (+ψ) hijacking of the "Saint" archetype is her most potent tool for suppressing dissent.
@@ -382,7 +382,7 @@ This is a hit because she effectively channels the immense psychological gravity
 
 
 **(What.Effect.What) The Lucky Country (υ: +0.3, ψ: -0.4): HIT.**
-**Quote:** "We are selling our farms, our water, and our resources to China. The government is giving away our luck to foreigners." (2019).
+**Quote:** "We are selling our farms, our water, and our resources to China. The government is giving away our luck to foreigners." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents wealth (+υ) achieved through passive luck (-ψ), creating a risk of mediocrity and paranoia.
 
 Hanson’s rhetoric is a direct manifestation of this paranoia, treating the national wealth as a fragile, finite resource under attack.
@@ -407,7 +407,7 @@ This is a hit because she accurately targets the foundational economic insecurit
 
 
 **(What.Effect.Where) The Tyranny of Distance (υ: ±0.0, ψ: -0.6): HIT.**
-**Quote:** "The cities have forgotten us. We are out here in the regions producing the wealth, and we get nothing back but contempt." (Regional Tour, 2017).
+**Quote:** "The cities have forgotten us. We are out here in the regions producing the wealth, and we get nothing back but contempt." - delivered Regional Tour, 2017
 **Actuality/Hypocrisy:** The vector is the geographic fact of isolation (±0.0) that imposes a passive, suppressive friction (-ψ) on the population.
 
 Hanson brilliantly maneuvers within this constraint, turning geographic isolation into political alienation.
@@ -432,7 +432,7 @@ This is a hit because her movement thrives in the vast, disconnected spaces crea
 
 
 **(What.Effect.Why) The Cultural Cringe (υ: -0.4, ψ: -0.5): HIT.**
-**Quote:** "We shouldn't care what the United Nations or the European courts think of us. We need to do what's right for Australia." (2016).
+**Quote:** "We shouldn't care what the United Nations or the European courts think of us. We need to do what's right for Australia." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents self-doubt (-υ) driven by a passive feeling of provincial inferiority (-ψ).
 
 Hanson’s extreme nationalism is a direct, over-compensatory reaction to this exact "Shadow."
@@ -457,7 +457,7 @@ This is a hit because she effectively weaponizes the psychological vulnerability
 
 
 **(What.Effect.How) Mateship (υ: +0.7, ψ: +0.4): FAIL.**
-**Quote:** "You cannot be a mate to someone who refuses to integrate, refuses to learn the language, and hates our way of life." (Press Statement, 2018).
+**Quote:** "You cannot be a mate to someone who refuses to integrate, refuses to learn the language, and hates our way of life." - delivered Press Statement, 2018
 **Actuality/Hypocrisy:** The vector builds horizontal loyalty (+υ) through the active, inclusive bond of the group (+ψ).
 
 Hanson’s demand for cultural purity breaks the fundamental "Fair Go" mechanics of the Mateship contract.
@@ -482,7 +482,7 @@ This is a failure because it degrades the primary social glue of the Australian 
 
 
 **(What.Effect.Cause) The Great Silence (υ: -0.8, ψ: -0.6): HIT.**
-**Quote:** "I am sick and tired of the guilt industry. We have nothing to apologize for, we built a great nation here." (Debate on Indigenous Affairs, 2020).
+**Quote:** "I am sick and tired of the guilt industry. We have nothing to apologize for, we built a great nation here." - delivered Debate on Indigenous Affairs, 2020
 **Actuality/Hypocrisy:** The vector represents the active erasure of truth (-υ) through deliberate, suppressive forgetting (-ψ).
 
 Hanson’s high-will (-ψ) denial of the frontier wars and dispossession is a perfect execution of this "Greater Evil" vector.
@@ -507,14 +507,14 @@ This is a hit because she actively and forcefully maintains the "Greatest Lie" a
 
 
 **(What.Effect.Cause) Voice [First Nations Perspective] (υ: +0.9, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Voice [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Voice [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Voice [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Voice [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.9) by applying suppressive energy (+0.6).
 
 
 **(What.Effect.Effect) The Nanny State (υ: +0.4, ψ: -0.5): FAIL.**
-**Quote:** "The Nanny State is just another word for political correctness."
+**Quote:** "The Nanny State is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks The Nanny State viewing it as an elite conspiracy.
 **Brief:** She refuses to align with The Nanny State.
 **Justification:** Attacks the positive moral vector (+0.4) through active suppression (-0.5).

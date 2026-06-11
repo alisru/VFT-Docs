@@ -3,7 +3,7 @@
 ## 4.1 Who
 
 **(Why.Who.Who) The Volunteer (υ: +0.9, ψ: +0.8): FAIL.**
-**Quote:** "We must stop relying on the charity of ordinary Australians and force the government to do its job." (2020 Bushfires).
+**Quote:** "We must stop relying on the charity of ordinary Australians and force the government to do its job." - delivered 2020 Bushfires
 **Actuality/Hypocrisy:** The vector defines universal service (+0.9 υ) achieved through swift, unpaid crisis action (+0.8 ψ).
 
 Hanson fails to engage the "Binder" of the Australian drive, substituting mutual sacrifice with angry, top-down demands.
@@ -28,7 +28,7 @@ This is a failure because she abandons the highest expression of the national dr
 
 
 **(Why.Who.What) The Bludger (υ: -0.6, ψ: -0.5): HIT.**
-**Quote:** "We must stop the dole bludgers and the welfare cheats who are bleeding this country dry." (Maiden Speech, 1996).
+**Quote:** "We must stop the dole bludgers and the welfare cheats who are bleeding this country dry." - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** The vector defines the suppressive (-0.5 ψ), parasitic extraction of group wealth for selfish gain (-0.6 υ).
 
 Hanson masterfully operates the shadow of this vector, channeling the cultural disgust for the "Leech" into political capital.
@@ -53,7 +53,7 @@ This is a hit because she perfectly weaponizes the nation's profound hostility t
 
 
 **(Why.Who.Where) The Knocker (υ: -0.4, ψ: -0.3): HIT.**
-**Quote:** "These inner-city elites think they are better than us, but they have no idea how the real world works." (2018).
+**Quote:** "These inner-city elites think they are better than us, but they have no idea how the real world works." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents the passive (-0.3 ψ) leveling impulse used to maintain a flat social hierarchy (-0.4 υ).
 
 Hanson successfully embodies the "Regulator" of the social ecosystem, policing the ceiling of acceptable Australian achievement.
@@ -78,7 +78,7 @@ This is a hit because she continuously channels the dark, restrictive energy of 
 
 
 **(Why.Who.Why) The Digger (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "I will never give up fighting for this country. They have thrown everything at me, but I am still standing." (Election Night, 2016).
+**Quote:** "I will never give up fighting for this country. They have thrown everything at me, but I am still standing." - delivered Election Night, 2016
 **Actuality/Hypocrisy:** The vector defines collective endurance (+0.7 υ) achieved through persistent, unyielding will (+0.5 ψ).
 
 Hanson perfectly maps her persona onto the "Anchor" of the national drive, proving her validity through sheer suffering.
@@ -103,7 +103,7 @@ This is a hit because she successfully claims the moral weight of the "Digger" b
 
 
 **(Why.Who.How) The Gambler (υ: -0.2, ψ: +0.5): FAIL.**
-**Quote:** "We must stop gambling with our children's future on these radical, unproven renewable energy schemes." (2021).
+**Quote:** "We must stop gambling with our children's future on these radical, unproven renewable energy schemes." - delivered 2021
 **Actuality/Hypocrisy:** The Gambler vector represents proactive risk-taking (+0.5 ψ), often for rapid, selfish economic gain (-0.2 υ).
 
 Hanson's absolute reliance on nostalgic security prevents her from engaging with the speculative "Big Win" mentality.
@@ -128,7 +128,7 @@ This is a miss because her defensive posture fundamentally contradicts the risk-
 
 
 **(Why.Who.Cause) The Battler (υ: +0.6, ψ: +0.5): HIT.**
-**Quote:** "I am just a fish and chip shop lady who decided to stand up for the ordinary, hardworking people of this country." (1996).
+**Quote:** "I am just a fish and chip shop lady who decided to stand up for the ordinary, hardworking people of this country." - delivered 1996
 **Actuality/Hypocrisy:** The vector defines moral struggle (+0.6 υ) enacted through active, persistent resistance to hardship (+0.5 ψ).
 
 Hanson flawlessly occupies the "Martyr" role of the national drive, demanding a "Fair Go" for those who slog away in obscurity.
@@ -153,7 +153,7 @@ This is a hit because she seamlessly merges her political identity with the supr
 
 
 **(Why.Who.Effect) The Larrikin (υ: +0.4, ψ: +0.3): HIT.**
-**Quote:** "Please explain?" (1996). "I don't think I'll be donning a burqa anytime soon, mate." (Press interaction).
+**Quote:** "Please explain?" - delivered 1996). "I don't think I'll be donning a burqa anytime soon, mate." (Press interaction
 **Actuality/Hypocrisy:** The vector represents the safety valve (+0.4 υ) provided by active, irreverent wit and subversion (+0.3 ψ).
 
 Hanson expertly uses the "Circuit-Breaker" mechanic to deflate the tension surrounding her highly controversial policies.
@@ -180,7 +180,7 @@ This is a hit because she successfully channels the disruptive, anti-authoritari
 ## 4.2 What
 
 **(Why.What.Who) The Fair Go (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "Multiculturalism has failed. We must prioritize Australian citizens over refugees and immigrants for housing and jobs." (2018).
+**Quote:** "Multiculturalism has failed. We must prioritize Australian citizens over refugees and immigrants for housing and jobs." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines the universal floor of dignity (+0.9 υ) actively enforced for all members of society (+0.5 ψ).
 
 Hanson’s demand for a racially and culturally restricted safety net directly violates the "Rule of 1" established by Higgins.
@@ -205,7 +205,7 @@ This is a failure because she fundamentally corrupts the highest objective goal 
 
 
 **(Why.What.What) The Weekend (υ: +0.8, ψ: +0.4): FAIL.**
-**Quote:** "We must cut penalty rates for small businesses. They cannot afford to pay people double just because it's a Sunday." (2017).
+**Quote:** "We must cut penalty rates for small businesses. They cannot afford to pay people double just because it's a Sunday." - delivered 2017
 **Actuality/Hypocrisy:** The vector represents the universal right to leisure (+0.8 υ) actively won through industrial struggle (+0.4 ψ).
 
 Hanson’s willingness to surrender the "Weekend" to the market fundamentally betrays the historical drive of the labor movement.
@@ -230,7 +230,7 @@ This is a failure because she attacks the primary temporal object that the Austr
 
 
 **(Why.What.Where) The Home (υ: +0.5, ψ: +0.4): HIT.**
-**Quote:** "We are losing our country. Foreign buyers are pricing young Australians out of the housing market, and it must stop." (2019).
+**Quote:** "We are losing our country. Foreign buyers are pricing young Australians out of the housing market, and it must stop." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines physical and economic security (+0.5 υ) achieved through active, private ownership (+0.4 ψ).
 
 Hanson perfectly understands that the Australian drive culminates at the front fence, and she ferociously guards that perimeter.
@@ -255,7 +255,7 @@ This is a hit because she accurately identifies and defends the supreme physical
 
 
 **(Why.What.Why) The Holiday (υ: +0.5, ψ: -0.2): FAIL.**
-**Quote:** "I don't have time for holidays. I am working every single day to save this country from disaster." (Campaign Interview, 2016).
+**Quote:** "I don't have time for holidays. I am working every single day to save this country from disaster." - delivered Campaign Interview, 2016
 **Actuality/Hypocrisy:** The vector represents the necessary escape (+0.5 υ) achieved through the passive relaxation of duty (-0.2 ψ).
 
 Hanson’s refusal to disengage from the battle introduces massive psychological fatigue into her political movement.
@@ -280,7 +280,7 @@ This is a miss because her permanent state of alarm fundamentally contradicts th
 
 
 **(Why.What.How) The Ute (υ: +0.6, ψ: +0.5): HIT.**
-**Quote:** "We don't need electric vehicles forced on us by city elites. Try driving an EV out in the bush or towing a load." (2022).
+**Quote:** "We don't need electric vehicles forced on us by city elites. Try driving an EV out in the bush or towing a load." - delivered 2022
 **Actuality/Hypocrisy:** The vector defines practical capability (+0.6 υ) achieved through uniquely Australian industrial invention (+0.5 ψ).
 
 Hanson seamlessly aligns her political brand with the "Tool" that bridges the paddock and the highway.
@@ -305,7 +305,7 @@ This is a hit because she accurately defends the primary mechanical object of th
 
 
 **(Why.What.Cause) The Pay Packet (υ: +0.7, ψ: +0.4): HIT.**
-**Quote:** "We must severely restrict 457 visas. They are bringing in cheap foreign labor and driving down the wages of Australian workers." (2018).
+**Quote:** "We must severely restrict 457 visas. They are bringing in cheap foreign labor and driving down the wages of Australian workers." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents the provision of a living wage (+0.7 υ) achieved through active, compensated labor (+0.4 ψ).
 
 Hanson successfully operates the "Fuel" logic of the drive, fiercely defending the monetary lifeblood of her constituents.
@@ -330,7 +330,7 @@ This is a hit because she perfectly targets the fundamental, transactional objec
 
 
 **(Why.What.Effect) The Pension (υ: +0.8, ψ: +0.3): HIT.**
-**Quote:** "It is a disgrace that we give billions in foreign aid while our own pensioners are shivering in the winter because they can't afford electricity." (2017).
+**Quote:** "It is a disgrace that we give billions in foreign aid while our own pensioners are shivering in the winter because they can't afford electricity." - delivered 2017
 **Actuality/Hypocrisy:** The vector defines the universal safety net (+0.8 υ) guaranteed by the passive receipt of state support (+0.3 ψ).
 
 Hanson expertly champions the "Final Mate" mechanism, demanding that the state fulfill its ultimate contract with the citizen.
@@ -357,7 +357,7 @@ This is a hit because she accurately defends the ultimate security object that t
 ## 4.3 Where
 
 **(Why.Where.Who) The Pub (υ: +0.5, ψ: +0.3): HIT.**
-**Quote:** "Go into any front bar in Queensland and they will tell you exactly what I am telling you today. They are fed up." (2016).
+**Quote:** "Go into any front bar in Queensland and they will tell you exactly what I am telling you today. They are fed up." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents the egalitarian commons (+0.5 υ) actively maintained through social ritual (+0.3 ψ).
 
 Hanson flawlessly operates within this arena, using the "Pub Test" as the ultimate filter for her policy platform.
@@ -382,7 +382,7 @@ This is a hit because she roots her entire political legitimacy in the raw, leve
 
 
 **(Why.Where.What) The Beach (υ: +0.6, ψ: +0.3): HIT.**
-**Quote:** "We will not be told to cover up or change our way of life at the beach to appease minority religious views." (Rally Speech, 2017).
+**Quote:** "We will not be told to cover up or change our way of life at the beach to appease minority religious views." - delivered Rally Speech, 2017
 **Actuality/Hypocrisy:** The vector defines the democratic playground (+0.6 υ) maintained through open, active access (+0.3 ψ).
 
 Hanson utilizes the "Playground" as the ultimate proof of the "Good Life" that her movement is fighting to preserve.
@@ -407,14 +407,14 @@ This is a hit because she accurately channels the intense cultural possessivenes
 
 
 **(Why.Where.Where) Country [FN] (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "Country [FN] is just another word for political correctness."
+**Quote:** "Country [FN] is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Country [FN] viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Country [FN].
 **Justification:** Attacks the positive moral vector (+0.9) through active suppression (+0.5).
 
 
 **(Why.Where.Why) The Club (υ: +0.4, ψ: -0.2): HIT.**
-**Quote:** "The RSLs and the local sports clubs are the heart of our communities, and they are being taxed out of existence." (2019).
+**Quote:** "The RSLs and the local sports clubs are the heart of our communities, and they are being taxed out of existence." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the community temple (+0.4 υ) funded by the passive, often destructive vice of gambling (-0.2 ψ).
 
 Hanson successfully operates within this specific arena, championing the spaces where the "Battler" and the "Pensioner" congregate.
@@ -439,7 +439,7 @@ This is a hit because she accurately targets and defends the primary subsidized 
 
 
 **(Why.Where.How) The Shed (υ: +0.5, ψ: +0.4): HIT.**
-**Quote:** "We need to back the blokes tinkering in their sheds and the small manufacturers who actually make things with their hands." (2018).
+**Quote:** "We need to back the blokes tinkering in their sheds and the small manufacturers who actually make things with their hands." - delivered 2018
 **Actuality/Hypocrisy:** The vector defines workshop creativity (+0.5 υ) achieved through quiet, active making (+0.4 ψ).
 
 Hanson seamlessly integrates the "Workshop" mentality into her broader populist appeal against the "Talkers" of the city.
@@ -464,7 +464,7 @@ This is a hit because she accurately channels the profound cultural respect for 
 
 
 **(Why.Where.Cause) The Field (υ: +0.6, ψ: +0.6): HIT.**
-**Quote:** "Just like our sporting heroes, we must stand our ground, play hard, and never let the opposition dictate the rules." (Campaign Metaphor, 2016).
+**Quote:** "Just like our sporting heroes, we must stand our ground, play hard, and never let the opposition dictate the rules." - delivered Campaign Metaphor, 2016
 **Actuality/Hypocrisy:** The vector represents the proxy war stage (+0.6 υ) where national worth is proven through active excellence (+0.6 ψ).
 
 Hanson brilliantly exploits the "Stage" to justify a belligerent, uncompromising approach to international relations and border security.
@@ -489,7 +489,7 @@ This is a hit because she accurately translates the ferocious competitive spirit
 
 
 **(Why.Where.Effect) The Mall (υ: -0.2, ψ: +0.3): FAIL.**
-**Quote:** "We are losing our local main streets. The big foreign supermarkets and multinationals are destroying our small family businesses." (2017).
+**Quote:** "We are losing our local main streets. The big foreign supermarkets and multinationals are destroying our small family businesses." - delivered 2017
 **Actuality/Hypocrisy:** The vector defines the centralized, passive geographic destination of the modern economic drive, where the living wage is actively consumed.
 
 Hanson's populist defense of the localized main street actively attacks this established, structurally selfish economic reality. She introduces massive friction against the modern mechanics of consumption, preferring a nostalgic geography.
@@ -510,7 +510,7 @@ She actively fights the geographic consolidation of retail capital. This is a go
 ## 4.4 Why
 
 **(Why.Why.Who) Mateship (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "You cannot be a mate with someone who comes to this country and refuses to integrate or respect our laws." (2018).
+**Quote:** "You cannot be a mate with someone who comes to this country and refuses to integrate or respect our laws." - delivered 2018
 **Actuality/Hypocrisy:** The vector represents horizontal loyalty (+0.7 υ) enforced through a binding, active chain of support (+0.5 ψ).
 
 Hanson’s application of Mateship introduces severe moral friction by actively excluding the vulnerable and the newly arrived.
@@ -535,7 +535,7 @@ This is a failure because she fundamentally corrupts the highest motivational bo
 
 
 **(Why.Why.What) Tall Poppy Syndrome (υ: -0.4, ψ: +0.4): HIT.**
-**Quote:** "These inner-city academics and left-wing journalists think they can dictate to us. It's time to bring them down a peg." (2019).
+**Quote:** "These inner-city academics and left-wing journalists think they can dictate to us. It's time to bring them down a peg." - delivered 2019
 **Actuality/Hypocrisy:** The vector defines the active cutting (+0.4 ψ) of excellence to serve the comfort of mediocrity (-0.4 υ).
 
 Hanson flawlessly operates the "Regulator," proving that the Australian drive will happily destroy expertise if it smells like arrogance.
@@ -560,7 +560,7 @@ This is a hit because she aggressively and successfully deploys the nation's mos
 
 
 **(Why.Why.Where) Cultural Cringe (υ: -0.5, ψ: -0.4): HIT.**
-**Quote:** "We don't need the United Nations or European human rights lawyers telling us how to run our own country." (2016).
+**Quote:** "We don't need the United Nations or European human rights lawyers telling us how to run our own country." - delivered 2016
 **Actuality/Hypocrisy:** The vector represents self-doubt (-0.5 υ) manifested through passive deference or reactive hostility (-0.4 ψ).
 
 Hanson’s extreme isolationism is the perfect shadow-response to the deep insecurity encoded in the Australian drive.
@@ -585,7 +585,7 @@ This is a hit because she accurately manipulates the darkest, most insecure moti
 
 
 **(Why.Why.Why) She'll Be Right (υ: +0.2, ψ: -0.6): FAIL.**
-**Quote:** "If we don't act now, we are going to lose this country forever. We are on the brink of disaster." (Election Rally, 2016).
+**Quote:** "If we don't act now, we are going to lose this country forever. We are on the brink of disaster." - delivered Election Rally, 2016
 **Actuality/Hypocrisy:** The vector represents stoic acceptance (+0.2 υ) acting as a passive brake (-0.6 ψ) on systemic panic.
 
 Hanson actively attempts to destroy the "Brake," introducing maximum friction and fear into the national psyche.
@@ -610,7 +610,7 @@ This is a failure because she fundamentally contradicts the essential coping mec
 
 
 **(Why.Why.How) Have a Go (υ: +0.6, ψ: +0.7): HIT.**
-**Quote:** "They said a fish and chip shop lady could never make it in Canberra. Well, I had a go, and look where we are now." (1996).
+**Quote:** "They said a fish and chip shop lady could never make it in Canberra. Well, I had a go, and look where we are now." - delivered 1996
 **Actuality/Hypocrisy:** The vector defines universal participation (+0.6 υ) through active, courageous attempt (+0.7 ψ).
 
 Hanson flawlessly operates the "Spark" of the Australian drive, utilizing her "amateur" status as her greatest political asset.
@@ -635,7 +635,7 @@ This is a hit because she successfully mapped her personal ambition onto the mos
 
 
 **(Why.Why.Cause) Fear of Missing Out (υ: -0.2, ψ: +0.5): FAIL.**
-**Quote:** "We must withdraw from the Paris Agreement and stop worrying about what the rest of the world is doing." (2019).
+**Quote:** "We must withdraw from the Paris Agreement and stop worrying about what the rest of the world is doing." - delivered 2019
 **Actuality/Hypocrisy:** The vector represents the anxiety whip (+0.5 ψ) driven by the insecurity of geographic isolation (-0.2 υ).
 
 Hanson’s demand for a "Fortress" ignores the fact that the Australian drive is obsessed with closing the distance, not widening it.
@@ -660,7 +660,7 @@ This is a failure because her extreme isolationism contradicts the fundamental, 
 
 
 **(Why.Why.Effect) The Good Life (υ: +0.5, ψ: -0.4): HIT.**
-**Quote:** "We want to preserve the Australia we grew up in, where you could leave your doors unlocked and enjoy a BBQ on the weekend." (2016).
+**Quote:** "We want to preserve the Australia we grew up in, where you could leave your doors unlocked and enjoy a BBQ on the weekend." - delivered 2016
 **Actuality/Hypocrisy:** The vector defines hedonistic comfort (+0.5 υ) acting as a passive sedative (-0.4 ψ) on radical ambition.
 
 Hanson flawlessly operates the "Sedative," ensuring that her followers view any disruption to their comfort as a political betrayal.

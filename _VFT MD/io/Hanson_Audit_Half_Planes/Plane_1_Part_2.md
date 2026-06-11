@@ -3,7 +3,7 @@
 ## 1.5 How
 
 **(Who.How.Who) The Pub Test (υ: +0.6, ψ: -0.3): HIT.**
-**Quote:** "I don't care what the academics or the journalists say. Go down to any local pub and ask ordinary Australians what they think, and they'll tell you I'm right." (2018).
+**Quote:** "I don't care what the academics or the journalists say. Go down to any local pub and ask ordinary Australians what they think, and they'll tell you I'm right." - delivered 2018
 **Actuality/Hypocrisy:** She bypasses expert inquiry using the filter of the "Forgotten People" (+υ, \-ψ) and their views.
 
 This aligns with the passive, common-sense logical filter that defines much of the national character.
@@ -28,7 +28,7 @@ Her interaction is a hit because she successfully positions herself as the voice
 
 
 **(Who.How.What) Compulsory Voting (υ: +0.8, ψ: +0.5): HIT.**
-**Quote:** "Every Australian has a duty to vote, and One Nation is giving a real alternative to the millions who are sick of the major parties." (2019).
+**Quote:** "Every Australian has a duty to vote, and One Nation is giving a real alternative to the millions who are sick of the major parties." - delivered 2019
 **Actuality/Hypocrisy:** She uses the stability of the mandatory system (+υ, \+ψ) to launch her frequent disruptions.
 
 This interaction utilizes the duty-based logic of the state to amplify her anti-establishment voice.
@@ -53,7 +53,7 @@ Her interaction is a hit because she operates within the rules of the system to 
 
 
 **(Who.How.Where) Pragmatism (υ: +0.7, ψ: +0.5): HIT.**
-**Quote:** "Let's cut through the red tape and the bureaucracy and just use common sense to solve these problems." (2016).
+**Quote:** "Let's cut through the red tape and the bureaucracy and just use common sense to solve these problems." - delivered 2016
 **Actuality/Hypocrisy:** This "Bricoleur" logic seeks shortcuts (+υ, \+ψ) to resolve long-standing social tensions.
 
 She adopts a logical approach that favors what "works" in the moment over structural reform.
@@ -78,7 +78,7 @@ Her interaction is a hit because it mirrors the Australian preference for the "W
 
 
 **(Who.How.Why) The Sickie (υ: +0.4, ψ: -0.4): FAIL.**
-**Quote:** "We must stop the dole bludgers... bleeding this country dry."
+**Quote:** "We must stop the dole bludgers... bleeding this country dry." - delivered during political career
 **Actuality/Hypocrisy:** She attempts to close the "Individual Safety Valve" (+υ, \-ψ) that the system provides.
 
 By targeting the vulnerable for "bludging," she fails the logic of mutual endurance and quiet rebellion.
@@ -103,7 +103,7 @@ Her interaction is a failure because it replaces the "Quiet Valve" with a loud, 
 
 
 **(Who.How.How) The Royal Commission (υ: +0.8, ψ: +0.7): HIT.**
-**Quote:** "We need a Royal Commission into the Family Court, and we need one into the banks, because the system is broken and corrupt." (2018).
+**Quote:** "We need a Royal Commission into the Family Court, and we need one into the banks, because the system is broken and corrupt." - delivered 2018
 **Actuality/Hypocrisy:** This is a high-will (+ψ) use of the scale vector (+υ) to drive a biased and personal agenda.
 
 She utilizes the most powerful logical tool of the state to pursue a polarizing and exclusionary goal.
@@ -128,7 +128,7 @@ Her interaction is a hit because it accurately utilizes the logical mechanism of
 
 
 **(Who.How.Cause) The Ticket of Leave (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "Certain cultures are simply unassimilable."
+**Quote:** "Certain cultures are simply unassimilable." - delivered during political career
 **Actuality/Hypocrisy:** This is a rejection of the second-chance logic (+υ) inherent in the convict state.
 
 By declaring groups "unassimilable," she denies the possibility of the "Ticket" for those she excludes.
@@ -153,7 +153,7 @@ Her interaction is a failure as it contradicts the core "Pathway" logic that all
 
 
 **(Who.How.Effect) The Union (υ: +0.7, ψ: +0.7): FAIL.**
-**Quote:** "Union bosses are holding this country to ransom, protecting corrupt individuals while honest, hard-working people pay the price." (2019).
+**Quote:** "Union bosses are holding this country to ransom, protecting corrupt individuals while honest, hard-working people pay the price." - delivered 2019
 **Actuality/Hypocrisy:** Attacking the mechanism of power (+υ, \+ψ) while claiming to support the worker is a failure.
 
 She disables the very lever that allows the "Battler" to gain a systemic "Fair Go" in the workforce.
@@ -180,7 +180,7 @@ Her interaction is a failure because it replaces a "Logical Tool of Power" with 
 ## 1.6 Cause
 
 **(Who.Cause.Who) The First Fleet (υ: -0.3, ψ: -0.5): HIT.**
-**Quote:** "We should be proud of our history, proud of the pioneers and settlers who built this modern, prosperous nation from nothing." (Australia Day speech, 2020).
+**Quote:** "We should be proud of our history, proud of the pioneers and settlers who built this modern, prosperous nation from nothing." - delivered Australia Day speech, 2020
 **Actuality/Hypocrisy:** She anchors her identity in the "Forced Migration" (-υ, \-ψ) and survival of her lineage.
 
 This resonance with the "Seed" vector provides her with a sense of historical "Firstness" and rights.
@@ -205,7 +205,7 @@ Her interaction is a hit because it accurately reflects the "Foundational Anxiet
 
 
 **(Who.Cause.Who) Continuity [First Nations Perspective] (υ: +0.9, ψ: +0.4): FAIL.**
-**Quote:** "I'm tired of being told to feel guilty about the past. We all live here now, we are all equal, and we should be one nation." (2022).
+**Quote:** "I'm tired of being told to feel guilty about the past. We all live here now, we are all equal, and we should be one nation." - delivered 2022
 **Actuality/Hypocrisy:** This is a "Great Silence" performance that actively fails to acknowledge the deep root (+υ).
 
 By ignoring continuity, she builds her identity on a historical foundation that is shallow and fractured.
@@ -230,7 +230,7 @@ Her interaction is a failure because it replaces the "Eternal Presence" with a "
 
 
 **(Who.Cause.What) Federation (υ: +0.6, ψ: +0.4): HIT.**
-**Quote:** "Our Constitution and our Federation were created to protect the rights of the states and the people, and we must defend them from Canberra's overreach." (2016).
+**Quote:** "Our Constitution and our Federation were created to protect the rights of the states and the people, and we must defend them from Canberra's overreach." - delivered 2016
 **Actuality/Hypocrisy:** She aligns with the original 1901-era logic (+υ, \+ψ) of the state as a defensive merger.
 
 This historical anchor validates her view of the nation as a protected, homogenous enclave.
@@ -255,7 +255,7 @@ Her interaction is a hit because it captures the original, defensive intent of t
 
 
 **(Who.Cause.What) Exclusion [First Nations Perspective] (υ: -0.8, ψ: -0.6): HIT.**
-**Quote:** "A nation without borders is not a nation. We have every right to decide who comes here and how they live." (2018).
+**Quote:** "A nation without borders is not a nation. We have every right to decide who comes here and how they live." - delivered 2018
 **Actuality/Hypocrisy:** Utilizing fear to build a "Fortress Identity" (-υ, \-ψ) is a HIT on the exclusion vector.
 
 She effectively maintains the "Greatest Lie" by ensuring the gate remains closed to the excluded.
@@ -280,7 +280,7 @@ Her interaction is a hit because she is one of the primary modern maintainers of
 
 
 **(Who.Cause.Where) Songlines (υ: +0.9, ψ: +0.3): FAIL.**
-**Quote:** "We are constantly forced to listen to Welcomes to Country and cultural rituals that have nothing to do with modern Australia." (Senate walk-out, 2022).
+**Quote:** "We are constantly forced to listen to Welcomes to Country and cultural rituals that have nothing to do with modern Australia." - delivered Senate walk-out, 2022
 **Actuality/Hypocrisy:** This interaction results in the erasure of the prior spiritual ordering (+υ) of the land.
 
 She fails the historical cause by denying the ancient tracks that define the continent's deeper identity.
@@ -305,7 +305,7 @@ Her interaction is a failure because it replaces the "Living Matrix" with a "Dea
 
 
 **(Who.Cause.Why) Eureka Stockade (υ: +0.8, ψ: +0.9): HIT.**
-**Quote:** "The Eureka flag represents ordinary people standing up against unfair taxes and corrupt authority, and that is what One Nation does." (2016).
+**Quote:** "The Eureka flag represents ordinary people standing up against unfair taxes and corrupt authority, and that is what One Nation does." - delivered 2016
 **Actuality/Hypocrisy:** She effectively uses the "Rebellion" vector (+υ, \+ψ) to mobilize her base for ingroup rights.
 
 This identifies her cause with the historical fight for a "Fair Go" against an oppressive authority.
@@ -330,7 +330,7 @@ Her interaction is a hit because it successfully maps her modern grievance onto 
 
 
 **(Who.Cause.How) White Australia Policy (υ: -0.9, ψ: +0.6): HIT.**
-**Quote:** "Let's get back the Australia I grew up in... Certain countries they should not be allowed to migrate here." (Bondi Pavilion vigil, December 16, 2025).
+**Quote:** "Let's get back the Australia I grew up in... Certain countries they should not be allowed to migrate here." - delivered Bondi Pavilion vigil, December 16, 2025
 **Actuality/Hypocrisy:** Her proactive will (+ψ) to enforce racial exclusion (-υ) hits the vector of the policy.
 
 She acts as a modern maintainer of the gate, attempting to restore a historical policy of exclusion.
@@ -355,21 +355,21 @@ Her interaction is a hit because she is the most prominent political agent seeki
 
 
 **(Who.Cause.How) Survival [First Nations Perspective] (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Survival [First Nations Perspective] agenda."
+**Quote:** "We cannot be held hostage by the Survival [First Nations Perspective] agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Survival [First Nations Perspective], demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Survival [First Nations Perspective].
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.6).
 
 
 **(Who.Cause.Cause) Deep Time (υ: +0.7, ψ: -0.2): FAIL.**
-**Quote:** "Deep Time is just another word for political correctness."
+**Quote:** "Deep Time is just another word for political correctness." - delivered during political career
 **Actuality/Hypocrisy:** Attacks Deep Time viewing it as an elite conspiracy.
 **Brief:** She refuses to align with Deep Time.
 **Justification:** Attacks the positive moral vector (+0.7) through active suppression (-0.2).
 
 
 **(Who.Cause.Effect) Multiculturalism (υ: +0.8, ψ: +0.6): FAIL.**
-**Quote:** "We cannot be held hostage by the Multiculturalism agenda."
+**Quote:** "We cannot be held hostage by the Multiculturalism agenda." - delivered during political career
 **Actuality/Hypocrisy:** She actively campaigns against Multiculturalism, demanding a return to assimilation or extraction.
 **Brief:** Her narrative completely opposes the progressive interpretation of Multiculturalism.
 **Justification:** Actively fights the moral requirement (+0.8) by applying suppressive energy (+0.6).
@@ -378,7 +378,7 @@ Her interaction is a hit because she is the most prominent political agent seeki
 ## 1.7 Effect
 
 **(Who.Effect.Who) The Expat (υ: +0.5, ψ: +0.5): HIT.**
-**Quote:** "If you choose to live and work overseas, you shouldn't expect to dictate policies or vote in the elections of the country you left behind." (2017).
+**Quote:** "If you choose to live and work overseas, you shouldn't expect to dictate policies or vote in the elections of the country you left behind." - delivered 2017
 **Actuality/Hypocrisy:** She views the global network (+υ, \+ψ) as a threat to the centripetal focus of the nation.
 
 This interaction prioritizes local loyalty over the expansive reach of the modern Australian diaspora.
@@ -403,7 +403,7 @@ Her interaction is a hit as it accurately mirrors the defensive emotive effect o
 
 
 **(Who.Effect.What) The Honest Broker (υ: +0.7, ψ: +0.5): FAIL.**
-**Quote:** "We should stop spending billions on foreign aid and playing the world's policeman when we have our own people sleeping in cars." (2019).
+**Quote:** "We should stop spending billions on foreign aid and playing the world's policeman when we have our own people sleeping in cars." - delivered 2019
 **Actuality/Hypocrisy:** She abandons the role of mediation (+υ) in favor of isolationist retreat and ingroup focus.
 
 This failure to engage with the rights of small nations degrades Australia's lyrical effect on the world.
@@ -428,7 +428,7 @@ Her interaction is a failure because it replaces an "Expansive Emote" with a "Co
 
 
 **(Who.Effect.Where) The Food Bowl (υ: +0.6, ψ: +0.4): HIT.**
-**Quote:** "We must stop foreign buyers from purchasing our agricultural land and water rights. We are selling off our ability to feed ourselves." (2018).
+**Quote:** "We must stop foreign buyers from purchasing our agricultural land and water rights. We are selling off our ability to feed ourselves." - delivered 2018
 **Actuality/Hypocrisy:** She views the land as a hoard (+υ, \+ψ) that must be defended for the local population.
 
 This interaction maps to the defensive extraction of resources to protect the national "Good Life."
@@ -453,7 +453,7 @@ Her interaction is a hit because it successfully captures the protective emote o
 
 
 **(Who.Effect.Why) The Asian Century (υ: +0.6, ψ: +0.4): FAIL.**
-**Quote:** "We are tying our economic future too closely to countries that do not share our values, and it will cost us our independence." (2020).
+**Quote:** "We are tying our economic future too closely to countries that do not share our values, and it will cost us our independence." - delivered 2020
 **Actuality/Hypocrisy:** This represents a regression from the trajectory of regional integration (+υ) and growth.
 
 She favors a security-from-Asia approach that isolates the nation from its geographic reality.
@@ -478,7 +478,7 @@ Her interaction is a failure because it replaces the "Destiny of Place" with a "
 
 
 **(Who.Effect.How) Medicare (υ: +0.9, ψ: +0.5): FAIL.**
-**Quote:** "Billions are wasted on the Aboriginal industry... that money should go to all Australians" (Maiden Speech, 1996).
+**Quote:** "Billions are wasted on the Aboriginal industry... that money should go to all Australians" - delivered Maiden Speech, 1996
 **Actuality/Hypocrisy:** By attacking the "Universal Benefit" (+υ) of specialized health funding, she degrades the Fair Go.
 
 This logic attempts to break the systemic "Offering" of care to all members of the social contract.
@@ -528,7 +528,7 @@ Her interaction is a failure because it prevents the state from achieving the em
 
 
 **(Who.Effect.Effect) The Ashes (υ: +0.5, ψ: +0.7): HIT.**
-**Quote:** "Beating the English in the Ashes is part of our national identity—it shows the fighting spirit that makes Australia great." (2021).
+**Quote:** "Beating the English in the Ashes is part of our national identity—it shows the fighting spirit that makes Australia great." - delivered 2021
 **Actuality/Hypocrisy:** She views sovereignty (+υ) as a form of psychological dominance (+ψ) over competitors.
 
 This interaction channels national pride into a binary win/loss frame that seeks to "master" the other.
