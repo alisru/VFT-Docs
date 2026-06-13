@@ -1,12 +1,26 @@
 import os
 import sys
 import subprocess
-import threading
-import queue
-import tkinter as tk
-from tkinter import ttk
-import webbrowser
-from PIL import Image, ImageTk
+
+# Self-relaunch inside virtual environment if not already running there
+if sys.platform == "win32":
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    venv_paths = [
+        os.path.join(script_dir, ".venv", "Scripts", "pythonw.exe"),
+        os.path.join(script_dir, "bluesky_bot", ".venv", "Scripts", "pythonw.exe")
+    ]
+    venv_pyw = None
+    for p in venv_paths:
+        if os.path.exists(p):
+            venv_pyw = os.path.abspath(p)
+            break
+            
+    if venv_pyw and os.path.abspath(sys.executable).lower() != venv_pyw.lower():
+        try:
+            subprocess.Popen([venv_pyw] + sys.argv)
+            sys.exit(0)
+        except Exception:
+            pass
 
 # Force Windows to recognize this script as a distinct application for taskbar icon grouping
 if sys.platform == "win32":
@@ -16,6 +30,14 @@ if sys.platform == "win32":
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
     except Exception:
         pass
+
+# Import standard Tkinter and Pillow libraries (guaranteed to be inside .venv)
+import threading
+import queue
+import tkinter as tk
+from tkinter import ttk
+import webbrowser
+from PIL import Image, ImageTk
 
 # Define Color Palette (Dark Mode Premium)
 BG_COLOR = "#0f172a"          # Slate 900
