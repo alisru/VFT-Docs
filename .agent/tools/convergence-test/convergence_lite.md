@@ -207,11 +207,62 @@ The problem must remain unsolved to justify the actor's existence, funding, or a
 
 ## Path Names (Trajectory Output)
 
-| Start (Stated) | End (Actual) | Path Name |
+Path names are generated compositionally from an exit name (origin zone) and an entry name (destination zone), concatenated as `[Exit] into [Entry]`. Same-zone (origin == destination) = no path, trajectory = Stasis.
+
+**Entry names (by destination zone):**
+
+| Zone | Coordinate | Entry Name |
 |---|---|---|
-| (+, -) Lesser Good | (+, +) Greater Good | The Path of Grace |
-| (+, +) Greater Good | (-, +) Greatest Lie | The Path of The Fall |
-| (+, +) Greater Good | (-, -) Greater Evil | The Path of Deception |
-| (-, +) Greatest Lie | (-, -) Greater Evil | The Path of Delusion |
-| (-, -) Greater Evil | (+, -) Lesser Good | The Path of Redemption |
-| (-, +) Greatest Lie | (+, -) Lesser Good | The Path of Redemption |
+| Greater Good | (+1, +1) | Grace |
+| Greatest Lie | (-1, +1) | Deception |
+| Lesser Good | (+1, -1) | Redemption |
+| Greater Evil | (-1, -1) | Destruction |
+
+**Exit names (by origin zone):**
+
+| Zone | Coordinate | Exit Name |
+|---|---|---|
+| Greater Good | (+1, +1) | Fall |
+| Greatest Lie | (-1, +1) | Revelation |
+| Lesser Good | (+1, -1) | Awakening |
+| Greater Evil | (-1, -1) | Reckoning |
+
+**Examples:**
+
+- Greater Good → Greater Evil = "Fall into Destruction"
+- Greatest Lie → Greater Good = "Revelation into Grace"
+- Greater Evil → Lesser Good = "Reckoning into Redemption"
+- Lesser Good → Greatest Lie = "Awakening into Deception"
+
+---
+
+
+## Core Laws of Social Physics
+
+### The 4 Foundational Oppositions (Axes)
+* **Power vs. Empowerment (Law 1):**
+  - *Anti-Social Power (-υ):* Powerful people deceive less powerful people to hoard power (treated as finite).
+  - *Social Empowerment (+υ):* Empathetic people empower others to find their own strength (treated as infinite).
+* **Justification vs. Transparency (Law 2):**
+  - *Anti-Social Justification (-υ):* Selfish actors execute actions first, then manufacture justifications/pretexts.
+  - *Social Transparency (+υ):* Constructive actors state true intentions first; actions align with stated principles.
+* **Projection vs. Empathy (Law 3):**
+  - *Anti-Social Projection (-υ):* Corrupt actors project their own corrupt motives onto opponents.
+  - *Social Empathy (+υ):* Constructive actors use active empathy to understand motives and defuse division.
+* **Perpetual Problems vs. Solutions (Law 4):**
+  - *Anti-Social Problems (-υ):* Requires perpetual conflict to justify selfish authority; invents problems if none exist.
+  - *Social Solutions (+υ):* Actively resolves strain to guide the system toward stable, low-strain equilibrium.
+
+### The 2 Modes (Forces)
+* **Positivity (Possigravity):** Metaphysical gravity that pulls raw potential toward defined, stable, low-strain outcomes.
+* **Negativity (Perceptual Inversion):** Inverts the possibility space; presents achievable solutions as "insurmountable mountains" to prevent resolution and maintain conflict.
+
+### The 1 Process (Logic)
+* **Logic** is the objective set of rules for cause and effect (reducing universal strain).
+* **Morality** is the resultant state of the system:
+  - *Moral/Good* = low-strain, stable configuration reached via the logical/most efficient path.
+  - *Immoral/Evil* = high-strain, unstable configuration caused by ignoring logical efficiency for selfish pretexts.
+
+### Actor Loops
+* **Smart Selfish Actor Loop:** Secret Goal (Selfishness) -> Pretext (Justification) -> Scapegoat/Distraction (Projection).
+* **Smart Altruistic Actor Loop:** Shared Goal (Altruism) -> Coalition (Transparency) -> Integration/Buy-in (Empathy).

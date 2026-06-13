@@ -7,6 +7,46 @@ import xml.etree.ElementTree as ET
 import argparse
 from dotenv import load_dotenv
 from atproto import Client, IdResolver
+import requests
+from html.parser import HTMLParser
+
+class ParagraphExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_p = False
+        self.paragraphs = []
+        self.current_para = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'p':
+            self.in_p = True
+
+    def handle_endtag(self, tag):
+        if tag == 'p':
+            self.in_p = False
+            para_text = "".join(self.current_para).strip()
+            if para_text:
+                self.paragraphs.append(para_text)
+            self.current_para = []
+
+    def handle_data(self, data):
+        if self.in_p:
+            self.current_para.append(data)
+
+def scrape_article_text(url):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+    }
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            return f"Error: Status code {response.status_code}"
+        
+        parser = ParagraphExtractor()
+        parser.feed(response.text)
+        return "\n\n".join(parser.paragraphs)
+    except Exception as e:
+        return f"Error: {e}"
 
 script_dir = os.path.dirname(os.path.abspath(__file__))  # e:\Vector Field Theory\VFT Docs\bluesky_bot
 root_dir = os.path.dirname(script_dir)                  # e:\Vector Field Theory\VFT Docs
@@ -21,10 +61,9 @@ COMMON_OUTLETS = {
     "4": ["reuters.com"],
     "5": ["bbc.com", "bbc.co.uk"],
     "6": ["smh.com.au"],
-    "7": ["abc.net.au"],
-    "8": ["techcrunch.com"],
-    "9": ["washingtonpost.com"],
-    "10": ["npr.org"]
+    "7": ["techcrunch.com"],
+    "8": ["washingtonpost.com"],
+    "9": ["npr.org"]
 }
 
 parser = argparse.ArgumentParser(description="Harvest news candidates from RSS and Bluesky feeds.")
@@ -33,7 +72,7 @@ parser.add_argument("--bsky-target", type=int, default=40, help="Target count fo
 parser.add_argument("--prefer", type=str, default="", help=(
     "Preferred outlets to prioritize. Comma-separated list of domains or numbers:\n"
     "1: Bloomberg, 2: NY Times, 3: The Saturday Paper, 4: Reuters, 5: BBC News,\n"
-    "6: SMH, 7: ABC News AU, 8: TechCrunch, 9: Washington Post, 10: NPR.\n"
+    "6: SMH, 7: TechCrunch, 8: Washington Post, 9: NPR.\n"
     "E.g., --prefer '1,2,5,theguardian.com'"
 ))
 args = parser.parse_args()
@@ -44,14 +83,18 @@ TARGET_BSKY = args.bsky_target
 # Parse preferred outlets from arguments if provided
 PREFERRED_OUTLET_DOMAINS = []
 if args.prefer:
-    for token in args.prefer.split(","):
-        token = token.strip().lower()
-        if not token:
-            continue
-        if token in COMMON_OUTLETS:
-            PREFERRED_OUTLET_DOMAINS.extend(COMMON_OUTLETS[token])
-        else:
-            PREFERRED_OUTLET_DOMAINS.append(token)
+    if args.prefer.strip().lower() in ("default", "all"):
+        for token, domains in COMMON_OUTLETS.items():
+            PREFERRED_OUTLET_DOMAINS.extend(domains)
+    else:
+        for token in args.prefer.split(","):
+            token = token.strip().lower()
+            if not token:
+                continue
+            if token in COMMON_OUTLETS:
+                PREFERRED_OUTLET_DOMAINS.extend(COMMON_OUTLETS[token])
+            else:
+                PREFERRED_OUTLET_DOMAINS.append(token)
 
 # --- 0. LOAD HISTORICAL EVALUATIONS (PREVENT DUPLICATE JUDGEMENTS) ---
 print("Loading historical evaluations database to prevent duplicate judgements...")
@@ -298,17 +341,32 @@ if password:
             "https://bsky.app/profile/aendra.com/feed/news-2-0"
         ]
         
-        # Use strictly English words that rarely overlap with Dutch/German/French
-        english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could|this|that|from|some|more|news|study|report|said|and|for|out|but|been|has|was|were)\b', re.IGNORECASE)
-        cjk_re = re.compile(r'[\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]')
-        
         def is_english(text):
+            if not text:
+                return False
             cleaned_text = re.sub(r'https?://[^\s]+', '', text)
             cleaned_text = re.sub(r'\b[a-zA-Z0-9-]+\.[a-z]{2,}/[^\s]*', '', cleaned_text)
+            
+            cjk_re = re.compile(r'[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef]')
             if cjk_re.search(cleaned_text):
                 return False
-            matches = english_words.findall(cleaned_text)
-            return len(matches) >= 1
+                
+            non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäüß]', re.IGNORECASE)
+            if len(non_eng_chars.findall(cleaned_text)) > 2:
+                return False
+                
+            english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could|this|that|from|some|more|news|study|report|said|and|for|out|but|been|has|was|were)\b', re.IGNORECASE)
+            romance_words = re.compile(r'\b(de|la|el|los|las|en|y|que|un|una|des|du|pour|dans|avec|por|para|con|mais|es|est|une|les|se|ce|cette|del|al|ou|qui|dans)\b', re.IGNORECASE)
+            
+            eng_matches = len(english_words.findall(cleaned_text))
+            romance_matches = len(romance_words.findall(cleaned_text))
+            
+            if eng_matches < 1:
+                return False
+            if romance_matches >= eng_matches:
+                return False
+                
+            return True
         for feed_url in bsky_feeds:
             print(f"Fetching from feed: {feed_url}...")
             parts = feed_url.strip("/").split("/")
@@ -447,7 +505,29 @@ for i in range(max_len):
 # Ensure preferred outlets (if specified) and least-chosen outlets are placed at the absolute front of the final evaluation batch
 all_final = combined_candidates[:TARGET_RSS + TARGET_BSKY]
 all_final.sort(key=get_sort_key)
-final_candidates = all_final
+# Scrape article bodies for final candidates to provide rich reality context
+print("\nScraping article bodies for final candidates...")
+successful_final = []
+for idx, c in enumerate(all_final, 1):
+    url = c.get("url")
+    if url:
+        print(f"[{idx}/{len(all_final)}] Scraping content from: {url}")
+        article_text = scrape_article_text(url)
+        if article_text and not article_text.startswith("Error") and len(article_text.strip()) >= 200:
+            # Limit the scraped text to the first 4000 characters to prevent context overflow
+            article_text_clean = article_text[:4000]
+            # Store the original text (which is the stated claim / post / rss desc) separately
+            # and set the main text field to include both the stated claim and actual article body
+            orig_text = c.get("text", "")
+            c["text"] = f"Stated Claim / Post Context:\n{orig_text}\n\nActual Article Body:\n{article_text_clean}"
+            print(f"  Scraped successfully ({len(article_text_clean)} chars).")
+            successful_final.append(c)
+        else:
+            print(f"  Scrape failed, returned empty, or had insufficient content (length: {len(article_text) if article_text else 0} chars). Skipping candidate.")
+    else:
+        print(f"[{idx}/{len(all_final)}] Candidate has no URL. Skipping candidate.")
+
+final_candidates = successful_final
 
 # Output path points to scratch/harvested_candidates.json relative to root workspace
 output_path = os.path.join(root_dir, 'scratch', 'harvested_candidates.json')

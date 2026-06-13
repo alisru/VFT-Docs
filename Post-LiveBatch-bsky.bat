@@ -2,13 +2,18 @@
 cd /d "%~dp0"
 
 echo Running pre-flight validation...
+set PYTHON_BIN=python
 if exist ".venv\Scripts\python.exe" (
-    .venv\Scripts\python.exe bluesky_bot\validate_batch.py
-) else if exist "bluesky_bot\.venv\Scripts\python.exe" (
-    bluesky_bot\.venv\Scripts\python.exe bluesky_bot\validate_batch.py
-) else (
-    python bluesky_bot\validate_batch.py
+    set PYTHON_BIN=.venv\Scripts\python.exe
+    goto :run
 )
+if exist "bluesky_bot\.venv\Scripts\python.exe" (
+    set PYTHON_BIN=bluesky_bot\.venv\Scripts\python.exe
+    goto :run
+)
+
+:run
+"%PYTHON_BIN%" bluesky_bot\validate_batch.py
 
 if %ERRORLEVEL% neq 0 (
     echo.

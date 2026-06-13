@@ -14,6 +14,7 @@ if sys.stderr and sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8'
         pass
 
 import json
+import re
 import argparse
 import time
 from dotenv import load_dotenv
@@ -247,6 +248,46 @@ def save_and_sync_story(thread_config, write_json=True):
         except Exception as e:
             print(f"Warning: Failed to update stories_registry.js at {r_path}: {e}")
 
+def resolve_facets_and_tags(text, link=None):
+    """Parses text for hashtags and links, returning facets list and tags list."""
+    facets = []
+    tags_list = []
+    
+    # 1. Resolve Link facet if link is provided and exists in text
+    if link:
+        text_bytes = text.encode('utf-8')
+        link_bytes = link.encode('utf-8')
+        byte_start = text_bytes.find(link_bytes)
+        if byte_start != -1:
+            byte_end = byte_start + len(link_bytes)
+            facets.append(
+                models.AppBskyRichtextFacet.Main(
+                    features=[models.AppBskyRichtextFacet.Link(uri=link)],
+                    index=models.AppBskyRichtextFacet.ByteSlice(byte_end=byte_end, byte_start=byte_start)
+                )
+            )
+
+    # 2. Parse #hashtags and build Tag facets and tags list
+    for match in re.finditer(r'#(\w+)', text):
+        tag = match.group(1)
+        tags_list.append(tag)
+        byte_start = len(text[:match.start()].encode('utf-8'))
+        byte_end = len(text[:match.end()].encode('utf-8'))
+        facets.append(
+            models.AppBskyRichtextFacet.Main(
+                features=[models.AppBskyRichtextFacet.Tag(tag=tag)],
+                index=models.AppBskyRichtextFacet.ByteSlice(byte_start=byte_start, byte_end=byte_end)
+            )
+        )
+        
+    # Cap tags list at 8 items as per lexicon schema limits
+    tags_list = tags_list[:8]
+    
+    # Sort facets by byteStart as required by AT Protocol
+    facets.sort(key=lambda f: f.index.byte_start)
+    
+    return (facets if facets else None), (tags_list if tags_list else None)
+
 def post_thread(client, thread_config, live=False):
     """Processes a single thread configuration (generating graph, validating, and posting)."""
     subject = thread_config.get("subject", "Assessment")
@@ -360,20 +401,8 @@ def post_thread(client, thread_config, live=False):
             # first_post_embed always gets the trajectory graph_embed
             first_post_embed = graph_embed
 
-            # 4. Resolve Links for facets (only on the first/root post)
-            facets = []
-            if link:
-                text_bytes = final_posts[0].encode('utf-8')
-                link_bytes = link.encode('utf-8')
-                byte_start = text_bytes.find(link_bytes)
-                if byte_start != -1:
-                    byte_end = byte_start + len(link_bytes)
-                    facets.append(
-                        models.AppBskyRichtextFacet.Main(
-                            features=[models.AppBskyRichtextFacet.Link(uri=link)],
-                            index=models.AppBskyRichtextFacet.ByteSlice(byte_end=byte_end, byte_start=byte_start)
-                        )
-                    )
+            # 4. Resolve Links and Hashtags for facets (only on the first/root post)
+            facets, tags_list = resolve_facets_and_tags(final_posts[0], link=link)
 
             # 5. Determine Posting References based on Mode
             is_reply = False
@@ -421,7 +450,9 @@ def post_thread(client, thread_config, live=False):
                                 text=final_posts[0],
                                 reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
                                 embed=first_post_embed,
-                                facets=facets
+                                facets=facets,
+                                tags=tags_list,
+                                langs=["en"]
                             )
                         )
                     )
@@ -443,7 +474,9 @@ def post_thread(client, thread_config, live=False):
                                 created_at=client.get_current_time_iso(),
                                 text=final_posts[0],
                                 embed=first_post_embed,
-                                facets=facets
+                                facets=facets,
+                                tags=tags_list,
+                                langs=["en"]
                             )
                         )
                     )
@@ -462,6 +495,7 @@ def post_thread(client, thread_config, live=False):
                     # Attach the link preview card embed to the second post of the thread
                     current_embed = link_embed
                     print("Attaching link preview card embed to Part 2...")
+                sub_facets, sub_tags = resolve_facets_and_tags(text)
                 try:
                     reply = client.com.atproto.repo.create_record(
                         models.ComAtprotoRepoCreateRecord.Data(
@@ -471,7 +505,10 @@ def post_thread(client, thread_config, live=False):
                                 created_at=client.get_current_time_iso(),
                                 text=text,
                                 reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
-                                embed=current_embed
+                                embed=current_embed,
+                                facets=sub_facets,
+                                tags=sub_tags,
+                                langs=["en"]
                             )
                         )
                     )
@@ -486,6 +523,18 @@ def post_thread(client, thread_config, live=False):
             thread_config["rkeys"] = post_rkeys
             thread_config["post_urls"] = [f"https://bsky.app/profile/{handle}/post/{rkey}" for rkey in post_rkeys]
             thread_config["status"] = "LIVE POSTED (judgement-bot.bsky.social)"
+            
+            # Save parsed tags to the config
+            all_tags = []
+            for post_text in final_posts:
+                _, post_tags = resolve_facets_and_tags(post_text)
+                if post_tags:
+                    for t in post_tags:
+                        if t not in all_tags:
+                            all_tags.append(t)
+            if all_tags:
+                thread_config["tags"] = all_tags
+                
             print(f"Thread for '{subject}' successfully posted live to Bluesky!")
 
         except Exception as e:

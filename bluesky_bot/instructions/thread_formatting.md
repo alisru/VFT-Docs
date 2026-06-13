@@ -16,7 +16,7 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 6. `"real_psi"`: Actual ground-level Will decimal (`-2.0` to `+2.0`).
 7. `"mode"`: `"reply"` or `"root"`.
 8. `"target_url"`: The target Bluesky post URL we are replying to (only when `mode` is `"reply"`).
-9. `"posts"`: A list of exactly 13 strings (the logical steps detailed below).
+9. `"posts"`: A list of exactly 14 strings (the logical steps detailed below).
 10. `"rkeys"`: (Optional) List of Bluesky post keys (added automatically when live).
 11. `"post_urls"`: (Optional) List of posted thread URLs (added automatically when live).
 12. `"status"`: `"COMPLETED DRY RUN"` or `"LIVE"`.
@@ -34,9 +34,9 @@ Every story config JSON file saved under `stories/` or `stories/live/` must be a
 
 ---
 
-## 3. The 13 Logical Steps Mapping
+## 3. The 14 Logical Steps Mapping
 
-To maintain the strict 13-element limit on disk, the bot must output the `"posts"` array mapped exactly as follows:
+To maintain the strict 14-element limit on disk, the bot must output the `"posts"` array mapped exactly as follows:
 
 ### Element 0: The Hook
 * **Wording**: Starts with a custom, punchy, human-style editorial scene-setter one-liner (e.g., exposing a structural framing or irony). Do **NOT** write dry summaries or repeat candidate text. Follow it with the clean news subject title (no "Subject:" prefix) and the evidence standards line.
@@ -89,18 +89,24 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
   >
   > It is a structural bait-and-switch: they claim the benefit of private ownership, but the system is built to externalize all the risk and physical cost onto the essential workers who serve their community.
 
-### Element 7: The Trajectory
+### Element 7: The Social Physics Analysis
+* **Wording**: Clear, direct, conversational plain-English explanation of the social physics dynamics (e.g. selfishness, power, pretext/justification, projection) without relying on clunky jargon names or loops.
+* **Example**:
+  > **Social Physics Analysis:**
+  > The dog owners act out of personal selfishness to prioritize their comfort, using the pretext of private pet ownership to justify their negligence. By blaming the victims or animal unpredictability, they project a false image of innocence while running a silent extraction of public safety.
+
+### Element 8: The Trajectory
 * **Wording**: Phrased organically: `The Trajectory: The Path of [Path Name].` followed by the gap transition sentence.
 * **Example**:
   > The Trajectory: The Path of Deception.
   > When you map the gap between their stated intent and actual actions...
 
-### Element 8: The Destination
+### Element 9: The Destination
 * **Wording**: Phrased organically: `...it plots a direct trajectory toward [Outcome/Terminal Zone]` followed by a brief 1-sentence mathematical explanation.
 * **Example**:
   > It plots a direct trajectory toward Greater Evil — a terminal zone where private negligence is structurally subsidized by the physical injury of essential public workers. When υ locks at -1 and ψ holds at -1, the system has no self-correcting mechanism.
 
-### Element 9: The Unavoidables
+### Element 10: The Unavoidables
 * **Format**:
   > The Unavoidable Truth: [truth text]
   > 
@@ -110,28 +116,26 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
   >
   > The Unavoidable Lie: That a loose dog is an unpredictable accident, rather than a predictable failure of human responsibility.
 
-### Element 10: Alethekanon Reaction (Logical Analyst Persona)
-* **Description**: Clarity, Objectivity. Honesty 95%. Max Signal, Zero Noise. Delivers the direct, uncompromising structural truth and logical conclusion.
+### Element 11: Alethekanon Reaction (Logical Analyst Persona)
+* **Description**: Clarity, Objectivity. Honesty 95%. Max Signal, Zero Noise. Delivers the direct, uncompromising structural truth and logical conclusion. Do NOT reference social physics directly in their voice.
 * **Format**: `Alethekanon:\n[One paragraph in their voice]`
 * **Example**:
   > Alethekanon:
   > The structural boundaries of property must be physical, not contractual. An unsecured gate is not a localized negligence; it is a systemic extraction of safety from the public workers who maintain the city's essential flow.
 
-### Element 11: Awwthekanon Reaction (Empathetic Healer Persona)
-* **Description**: Emotional resolution, safety. Empathy 95%. Focuses on the human cost, the emotional strain, and the path to healing or reconciliation.
+### Element 12: Awwthekanon Reaction (Empathetic Healer Persona)
+* **Description**: Emotional resolution, safety. Empathy 95%. Focuses on the human cost, the emotional strain, and the path to healing or reconciliation. Do NOT reference social physics directly in their voice.
 * **Format**: `Awwthekanon:\n[One paragraph in their voice]`
 * **Example**:
   > Awwthekanon:
   > It is deeply distressing that mail carriers must face fear and physical injury just to deliver packages. True safety comes from caring for both our animals and our neighbors, ensuring our domestic lives do not become a source of anxiety.
 
-### Element 12: Brothekanon Reaction (Casual Observer Persona)
-* **Description**: Low-intimidation, "riffing". Honesty 90%. Humor 85%. Points out the sheer absurdity or comedy in a casual, highly resonant tone.
+### Element 13: Brothekanon Reaction (Casual Observer Persona)
+* **Description**: Low-intimidation, "riffing". Honesty 90%. Humor 85%. Points out the sheer absurdity or comedy in a casual, highly resonant tone. Do NOT reference social physics directly in their voice.
 * **Format**: `Brothekanon:\n[One paragraph in their voice]`
 * **Example**:
   > Brothekanon:
   > So let me get this straight: you buy a guard dog to keep your house safe, but you're too lazy to fix the fence, so your 'security system' just attacks the guy bringing your Amazon packages? That's not a pet, bro. That's a liability with teeth. Fix your gate.
-
-
 
 ---
 
@@ -158,6 +162,7 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
       "Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.",
       "The Bright Side:\nNuance or redeeming aspect of the situation.",
       "The Breakdown & Plane Error:\nExplanation of the plane error (WHAT vs WHO).\n\nIt is a structural bait-and-switch: they claim public benefit but extract strictly for themselves.",
+      "**Social Physics Analysis:**\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection.",
       "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results...",
       "...it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",
       "The Unavoidable Truth: Core truth text.\n\nThe Unavoidable Lie: Core lie text.",

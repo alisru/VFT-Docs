@@ -439,4 +439,35 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **UI Render Columns**: Added `avg u` (Morality) and `avg ψ` (Will) as two dedicated columns in the leaderboard tables of the Audits tab (grid-template updated to 6 columns).
 - **Interactive Header & Secondary Sorting**: Integrated both columns into the primary header click sorting handlers and the secondary "Then by" tiebreaker selections.
 - **Removed Name Parentheticals**: Removed the redundant parenthetical `(u: ..., ψ: ...)` text from next to entity names in the key column, since both values are now represented in their own dedicated columns.
-- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Providing clean, dedicated columns for Morality (u) and Will (ψ) on hypocrisy leaderboards.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Providing clean, dedicated columns for Morality (u) and Will (ψ) on hypocrisy leaderboards.
+
+### [2026-06-12] Intent 52: Tighten Language Filter to Enforce English Only
+*Status: Completed*
+- **Robust is_english Function**: Implemented a tight language filter in both [harvest_candidates.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py) and [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py).
+- **Japanese Punctuation and Full-Width Forms**: Updated the CJK regex to cover Japanese Hiragana, Katakana, Kanji, Hangul, and Full-width/Half-width Forms (`\uff00-\uffef`).
+- **Romance Stop Words and Accents**: Added accented character checks and a stop word comparison block comparing English stop words against Spanish/French stop words. If romance stop words equal or dominate English stop words, the post is rejected.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Hardening language filtering to preserve clean database content.
+
+### [2026-06-12] Intent 53: Deprioritize abc.net.au in Candidate Harvesting
+*Status: Completed*
+- **Remove abc.net.au from Preferred List**: Removed `abc.net.au` from the hardcoded `PREFERRED_OUTLET_DOMAINS` in `google_ai_studio_one_shot.py`.
+- **Remove abc.net.au from COMMON_OUTLETS**: Removed `"7": ["abc.net.au"]` from `COMMON_OUTLETS` in `harvest_candidates.py` and renumbered the subsequent indices from 8-10 to 7-9 to maintain consecutive keys. Updated the `--prefer` CLI help message to align with the new indices.
+- **Add --prefer CLI Argument to Evaluator**: Added `--prefer` parameter parsing to `google_ai_studio_one_shot.py` to allow manual runtime overrides of prioritized outlet lists, mapping integers 1-9 to standard outlets, and dynamically updating the global `PREFERRED_OUTLET_DOMAINS` array.
+- **Add PREFER Prompt to Batch Run Wrapper**: Updated `Run-BskyBotOneShotBatch.bat` to display a numbered list of all preferred outlets (1–9 and "all") at runtime, prompting for preferred outlets and forwarding the input to the python evaluator script via the `--prefer` flag.
+- **Flatten python detection in all batch scripts**: Refactored the interpreter detection block in `Run-BskyBotOneShotBatch.bat`, `Post-LiveBatch-bsky.bat`, and all `rebuild_store.bat` scripts to use flat checks and `goto` jumps. This completely bypasses the Windows CMD multi-line parenthesis bug where syntax errors or exit states inside an `if` block would trigger execution of the fallback `else` block using the global python command (which lacks dependencies like `dotenv`).
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Deprioritizing over-represented domains, exposing CLI configuration hooks with a clear interactive menu, and hardening batch file wrappers against shell parser bugs.
+
+### [2026-06-13] Intent 54: Prevent Blind Candidate Evaluations on Scraping Failures
+*Status: Completed*
+- **Exclude Failed Scrapes**: Modified both [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py) and [harvest_candidates.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py) to skip/filter out candidate news stories whose scraped bodies are empty, start with an `"Error"` string, or contain less than 200 characters of text content.
+- **Graceful Exit**: Added a conditional check after the scraping loop in `google_ai_studio_one_shot.py` to exit gracefully if no harvested candidates remain after filtering out failed scrapes, preventing subsequent blank or ungrounded evaluations.
+- **Relocated Lyons Post Chain**: Wrote and executed `scratch/delete_post_chain.py` to delete all 13 posts in the `lyons_bike_limits` thread from Bluesky, relocated its JSON configuration file from `stories/live/` to `stories/fail/`, deleted the orphaned graph image, and rebuilt the stories registry.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.0) -> Systemic Justice / Proactive Action. Enforcing grounding requirements to preserve fact-checking integrity and prevent hallucinated evaluations of paywalled/protected outlets.
+
+### [2026-06-13] Intent 55: Enrich Post Facets and Record Tags for Custom Feed Discovery
+*Status: Completed*
+- **Automatic Hashtag and Link Resolution**: Implemented `resolve_facets_and_tags` helper in `aletheia_bot.py` to automatically parse hashtags (e.g. `#Lyons`) and links from post texts.
+- **Record Tags & Language Code Integration**: Updated all `create_record` calls for root posts and replies to populate the official `tags` array parameter in the `AppBskyFeedPost` record, alongside `facets` and `langs=["en"]`, ensuring standard and custom Bluesky indexers/feeds index the posts correctly.
+- **Strict Byte-Offset and Caps Validation**: Ensured tag count is capped at the lexicon limit (8 tags) and facets are sorted in ascending byte start order to comply with the AT Protocol specifications.
+- **Fix Up Draft Stories**: Wrote and executed `scratch/fix_draft_tags.py` to retroactively parse all 8 existing draft stories inside `stories/` and append their extracted hashtags to the `"tags"` field inside the JSON configuration files, syncing them to the registries.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Standardizing record metadata tags to restore feed integration and discovery for public assessment data.

@@ -9,6 +9,46 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 from atproto import Client, IdResolver
+import requests
+from html.parser import HTMLParser
+
+class ParagraphExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_p = False
+        self.paragraphs = []
+        self.current_para = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'p':
+            self.in_p = True
+
+    def handle_endtag(self, tag):
+        if tag == 'p':
+            self.in_p = False
+            para_text = "".join(self.current_para).strip()
+            if para_text:
+                self.paragraphs.append(para_text)
+            self.current_para = []
+
+    def handle_data(self, data):
+        if self.in_p:
+            self.current_para.append(data)
+
+def scrape_article_text(url):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+    }
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            return f"Error: Status code {response.status_code}"
+        
+        parser = ParagraphExtractor()
+        parser.feed(response.text)
+        return "\n\n".join(parser.paragraphs)
+    except Exception as e:
+        return f"Error: {e}"
 
 # Resolve workspace directory
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -292,19 +332,19 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
     return candidates
 
 # --- PREFERRED OUTLETS CONFIGURATION ---
-PREFERRED_OUTLET_DOMAINS = [
-    'bloomberg.com',
-    'nytimes.com',
-    'thesaturdaypaper.com.au',
-    'reuters.com',
-    'bbc.com',
-    'bbc.co.uk',
-    'smh.com.au',
-    'abc.net.au',
-    'techcrunch.com',
-    'washingtonpost.com',
-    'npr.org'
-]
+COMMON_OUTLETS = {
+    "1": ["bloomberg.com"],
+    "2": ["nytimes.com"],
+    "3": ["thesaturdaypaper.com.au"],
+    "4": ["reuters.com"],
+    "5": ["bbc.com", "bbc.co.uk"],
+    "6": ["smh.com.au"],
+    "7": ["techcrunch.com"],
+    "8": ["washingtonpost.com"],
+    "9": ["npr.org"]
+}
+
+PREFERRED_OUTLET_DOMAINS = []
 
 def is_preferred_outlet(url):
     if not url:
@@ -321,6 +361,33 @@ def is_preferred_outlet(url):
 # --- 2. CANDIDATE HARVESTING ---
 def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, category="general", topic=None, banned_topic=None):
     candidates = []
+
+    def is_english(text):
+        if not text:
+            return False
+        cleaned_text = re.sub(r'https?://[^\s]+', '', text)
+        cleaned_text = re.sub(r'\b[a-zA-Z0-9-]+\.[a-z]{2,}/[^\s]*', '', cleaned_text)
+        
+        cjk_re = re.compile(r'[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef]')
+        if cjk_re.search(cleaned_text):
+            return False
+            
+        non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäüß]', re.IGNORECASE)
+        if len(non_eng_chars.findall(cleaned_text)) > 2:
+            return False
+            
+        english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could|this|that|from|some|more|news|study|report|said|and|for|out|but|been|has|was|were)\b', re.IGNORECASE)
+        romance_words = re.compile(r'\b(de|la|el|los|las|en|y|que|un|una|des|du|pour|dans|avec|por|para|con|mais|es|est|une|les|se|ce|cette|del|al|ou|qui|dans)\b', re.IGNORECASE)
+        
+        eng_matches = len(english_words.findall(cleaned_text))
+        romance_matches = len(romance_words.findall(cleaned_text))
+        
+        if eng_matches < 1:
+            return False
+        if romance_matches >= eng_matches:
+            return False
+            
+        return True
     
     # Resolve category string (may be CSV) to a deduplicated list
     _CATEGORY_FEEDS = {
@@ -454,8 +521,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                     "https://bsky.app/profile/aendra.com/feed/news-2-0"
                 ]
                 
-                english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could)\b', re.IGNORECASE)
-                
+
                 for feed_url in bsky_feeds:
                     print(f"Fetching from feed: {feed_url}...")
                     parts = feed_url.strip("/").split("/")
@@ -480,7 +546,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                             continue
                         if any(domain in post_url for domain in ['zeit.de', 'tijd.be', 'sapo.pt', 'demorgen.be', 'folha.com', 'nu.nl', 'gazeteoksijen.com', 'graze.social']):
                             continue
-                        if not english_words.search(text):
+                        if not is_english(text):
                             continue
                             
                         # Topic filtering
@@ -588,7 +654,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '      "post 1 (under 290 chars, ending with 1-2 hashtags)",\n'
         '      "post 2 (under 290 chars)",\n'
         "      ...\n"
-        "      (exactly 13 posts)\n"
+        "      (exactly 14 posts)\n"
         "    ],\n"
         '    ["Actor / Org / Geopolitical tag", ...]   // item[10]: actors array\n'
         "  ]\n"
@@ -614,6 +680,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '      "Context paragraph.",\n'
         '      "The Bright Side:\\nNuance.",\n'
         '      "The Breakdown & Plane Error:\\nExplanation.",\n'
+        '      "**Social Physics Analysis:**\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection.",\n'
         '      "The Trajectory: The Path of Deception.\\nWhen you map the gap...",\n'
         '      "...it plots a direct trajectory toward Greater Evil.",\n'
         '      "The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie.",\n'
@@ -846,8 +913,8 @@ def process_evaluations(evaluations, category="general", topic=None):
 
             # Post count validation
             posts = story.get("posts", [])
-            if len(posts) != 13:
-                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 13). Skipping.")
+            if len(posts) != 14:
+                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 14). Skipping.")
                 continue
 
             # Character limit warnings
@@ -877,8 +944,31 @@ def main():
     parser.add_argument("--category", type=str, default="general", help="Category (or comma-separated categories) of news to harvest (default: general). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
     parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
+    parser.add_argument("--prefer", type=str, default="", help=(
+        "Preferred outlets to prioritize. Comma-separated list of domains or numbers:\n"
+        "1: Bloomberg, 2: NY Times, 3: The Saturday Paper, 4: Reuters, 5: BBC News,\n"
+        "6: SMH, 7: TechCrunch, 8: Washington Post, 9: NPR.\n"
+        "E.g., --prefer '1,2,5,theguardian.com'"
+    ))
     args = parser.parse_args()
     
+    global PREFERRED_OUTLET_DOMAINS
+    if args.prefer:
+        new_prefs = []
+        if args.prefer.strip().lower() in ("default", "all"):
+            for token, domains in COMMON_OUTLETS.items():
+                new_prefs.extend(domains)
+        else:
+            for token in args.prefer.split(","):
+                token = token.strip().lower()
+                if not token:
+                    continue
+                if token in COMMON_OUTLETS:
+                    new_prefs.extend(COMMON_OUTLETS[token])
+                else:
+                    new_prefs.append(token)
+        PREFERRED_OUTLET_DOMAINS = new_prefs
+        
     print("=" * 80)
     print("GOOGLE AI STUDIO ONE-SHOT BATCH EVALUATOR")
     print("=" * 80)
@@ -892,6 +982,30 @@ def main():
         
     print(f"\nHarvested {len(candidates)} total candidates.")
     
+    # Scrape article bodies to provide rich reality context
+    print("\nScraping article bodies for harvested candidates...")
+    successful_candidates = []
+    for idx, c in enumerate(candidates, 1):
+        url = c.get("url")
+        if url:
+            print(f"[{idx}/{len(candidates)}] Scraping content from: {url}")
+            article_text = scrape_article_text(url)
+            if article_text and not article_text.startswith("Error") and len(article_text.strip()) >= 200:
+                article_text_clean = article_text[:4000]
+                orig_text = c.get("text", "")
+                c["text"] = f"Stated Claim / Post Context:\n{orig_text}\n\nActual Article Body:\n{article_text_clean}"
+                print(f"  Scraped successfully ({len(article_text_clean)} chars).")
+                successful_candidates.append(c)
+            else:
+                print(f"  Scrape failed, returned empty, or had insufficient content (length: {len(article_text) if article_text else 0} chars). Skipping candidate.")
+        else:
+            print(f"[{idx}/{len(candidates)}] Candidate has no URL. Skipping candidate.")
+            
+    candidates = successful_candidates
+    if not candidates:
+        print("\nNo candidates remaining after filtering out failed scrapes. Exiting.")
+        sys.exit(0)
+
     # Save a temporary copy of candidates for debugging/safety
     scratch_candidates_path = os.path.join(workspace_dir, "scratch", "harvested_candidates.json")
     with open(scratch_candidates_path, "w", encoding="utf-8") as f:

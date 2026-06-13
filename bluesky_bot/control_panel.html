@@ -3087,7 +3087,7 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
               return s.category.split(',').map(c => c.trim().toLowerCase()).includes(r.key.toLowerCase());
             } else if (tableType === 'topic') {
               if (!s.topic) return false;
-              return s.topic.trim().toLowerCase() === r.key.toLowerCase();
+              return s.topic.split(',').map(t => t.trim().toLowerCase()).includes(r.key.toLowerCase());
             }
             return false;
           });
@@ -3197,7 +3197,7 @@ Please construct a clean, premium 14-post Gnostic trinary assessment thread comp
       if (!hasTopics) return '<div style="color:var(--text-muted); font-size:0.82rem;">No topic tags found in stories.</div>';
       const rows = _statsForGroups(stories, s => {
         if (!s.topic) return [];
-        return [s.topic.trim()];
+        return s.topic.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
       });
       return _hypocrisyTable(stories, rows, 'Topic', _topicMinN);
     }

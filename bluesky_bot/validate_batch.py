@@ -77,8 +77,8 @@ def main():
                 raise ValueError("Key 'subject' must be a non-empty string.")
             if not isinstance(cfg["posts"], list):
                 raise ValueError("Key 'posts' must be a list.")
-            if len(cfg["posts"]) != 13:
-                raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
+            if len(cfg["posts"]) != 14:
+                raise ValueError(f"Key 'posts' must contain exactly 14 elements (got {len(cfg['posts'])}).")
             for num_k in ["claim_u", "claim_psi", "real_u", "real_psi"]:
                 if not isinstance(cfg[num_k], (int, float)):
                     raise ValueError(f"Key '{num_k}' must be a number (got type {type(cfg[num_k]).__name__}).")

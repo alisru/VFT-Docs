@@ -112,8 +112,8 @@ def validate_story_file(path):
         if missing_keys:
             raise ValueError(f"Missing required JSON schema keys: {missing_keys}")
 
-        if len(cfg["posts"]) != 13:
-            raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
+        if len(cfg["posts"]) != 14:
+            raise ValueError(f"Key 'posts' must contain exactly 14 elements (got {len(cfg['posts'])}).")
 
         # Split posts and length validation
         final_posts = []
