@@ -181,7 +181,10 @@ class AletheiaLauncherApp:
         self.lbl_hud_live.pack(side=tk.LEFT, padx=(0, 20))
 
         self.lbl_hud_drafts = tk.Label(inner, text="📝 Drafts: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
-        self.lbl_hud_drafts.pack(side=tk.LEFT)
+        self.lbl_hud_drafts.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_failed = tk.Label(inner, text="❌ Failed: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_failed.pack(side=tk.LEFT)
 
     def refresh_hud_stats(self):
         # 1. Parse env vars
@@ -204,6 +207,7 @@ class AletheiaLauncherApp:
         # 2. Count files
         live_count = 0
         draft_count = 0
+        fail_count = 0
         
         live_dir = "bluesky_bot/stories/live"
         if os.path.exists(live_dir):
@@ -215,7 +219,18 @@ class AletheiaLauncherApp:
         stories_dir = "bluesky_bot/stories"
         if os.path.exists(stories_dir):
             try:
-                draft_count = len([f for f in os.listdir(stories_dir) if f.endswith(".json")])
+                # Exclude helper config files like index.json, filtered_candidates.json, harvested_candidates.json
+                draft_count = len([
+                    f for f in os.listdir(stories_dir) 
+                    if f.endswith(".json") and (f.startswith("factcheck_") or f.startswith("story_"))
+                ])
+            except Exception:
+                pass
+
+        fail_dir = "bluesky_bot/stories/fail"
+        if os.path.exists(fail_dir):
+            try:
+                fail_count = len([f for f in os.listdir(fail_dir) if f.endswith(".json")])
             except Exception:
                 pass
                 
@@ -230,8 +245,9 @@ class AletheiaLauncherApp:
         else:
             self.lbl_hud_gemini.config(text="♊ Gemini Engine: MISSING", fg=DANGER_COLOR)
             
-        self.lbl_hud_live.config(text=f"📂 Live Stories: {live_count}", fg=ACCENT_CYAN)
+        self.lbl_hud_live.config(text=f"📂 Live: {live_count}", fg=ACCENT_CYAN)
         self.lbl_hud_drafts.config(text=f"📝 Drafts: {draft_count}", fg=WARNING_COLOR)
+        self.lbl_hud_failed.config(text=f"❌ Failed: {fail_count}", fg=DANGER_COLOR)
 
     def create_actions_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
