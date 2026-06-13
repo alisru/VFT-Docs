@@ -18,13 +18,15 @@ ACCENT_BLUE = "#3b82f6"       # Blue 500
 ACCENT_BLUE_HOVER = "#2563eb" # Blue 600
 BG_BUTTON = "#334155"         # Slate 700
 BG_BUTTON_HOVER = "#475569"   # Slate 600
+SUCCESS_COLOR = "#10b981"     # Emerald 500
+WARNING_COLOR = "#f59e0b"     # Amber 500
 DANGER_COLOR = "#ef4444"      # Red 500
 
 class AletheiaLauncherApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Aletheia Bot Operator Console")
-        self.root.geometry("1100x750")
+        self.root.geometry("1150x780")
         self.root.configure(bg=BG_COLOR)
 
         # Application state for parallel processes
@@ -49,6 +51,9 @@ class AletheiaLauncherApp:
 
         # Main Layout
         self.build_ui()
+
+        # Initial HUD Load
+        self.refresh_hud_stats()
 
         # Start queue reader for console logs
         self.root.after(100, self.read_log_queue)
@@ -92,6 +97,9 @@ class AletheiaLauncherApp:
         # Title Card
         self.create_title_card(left_panel)
 
+        # HUD (Pipeline Health & Stats)
+        self.create_hud_card(left_panel)
+
         # Row 1: Actions Header Card
         self.create_actions_card(left_panel)
 
@@ -110,13 +118,82 @@ class AletheiaLauncherApp:
 
     def create_title_card(self, parent):
         frame = tk.Frame(parent, bg=BG_COLOR)
-        frame.pack(fill=tk.X, pady=(0, 15))
+        frame.pack(fill=tk.X, pady=(0, 12))
 
         title = tk.Label(frame, text="ALETHEIA OPERATOR CONSOLE", font=("Segoe UI", 16, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
         title.pack(anchor="w")
 
         subtitle = tk.Label(frame, text="Active Pipeline Control Room & Batch Runner", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
         subtitle.pack(anchor="w")
+
+    def create_hud_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        self.lbl_hud_bsky = tk.Label(inner, text="🦋 BSky Auth: CHECKING", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_bsky.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_gemini = tk.Label(inner, text="♊ Gemini Engine: CHECKING", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_gemini.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_live = tk.Label(inner, text="📂 Live Stories: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_live.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_drafts = tk.Label(inner, text="📝 Drafts: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_drafts.pack(side=tk.LEFT)
+
+    def refresh_hud_stats(self):
+        # 1. Parse env vars
+        env = {}
+        env_path = "bluesky_bot/.env"
+        if os.path.exists(env_path):
+            try:
+                with open(env_path, "r") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            k, v = line.split("=", 1)
+                            env[k.strip()] = v.strip()
+            except Exception:
+                pass
+                
+        bsky_ok = bool(env.get("BSKY_HANDLE") and env.get("BSKY_PASSWORD"))
+        gemini_ok = bool(env.get("GEMINI_API_KEY"))
+        
+        # 2. Count files
+        live_count = 0
+        draft_count = 0
+        
+        live_dir = "bluesky_bot/stories/live"
+        if os.path.exists(live_dir):
+            try:
+                live_count = len([f for f in os.listdir(live_dir) if f.endswith(".json")])
+            except Exception:
+                pass
+                
+        stories_dir = "bluesky_bot/stories"
+        if os.path.exists(stories_dir):
+            try:
+                draft_count = len([f for f in os.listdir(stories_dir) if f.endswith(".json")])
+            except Exception:
+                pass
+                
+        # 3. Update Labels
+        if bsky_ok:
+            self.lbl_hud_bsky.config(text="🦋 BSky Auth: ACTIVE", fg=SUCCESS_COLOR)
+        else:
+            self.lbl_hud_bsky.config(text="🦋 BSky Auth: MISSING", fg=DANGER_COLOR)
+            
+        if gemini_ok:
+            self.lbl_hud_gemini.config(text="♊ Gemini Engine: ACTIVE", fg=SUCCESS_COLOR)
+        else:
+            self.lbl_hud_gemini.config(text="♊ Gemini Engine: MISSING", fg=DANGER_COLOR)
+            
+        self.lbl_hud_live.config(text=f"📂 Live Stories: {live_count}", fg=ACCENT_CYAN)
+        self.lbl_hud_drafts.config(text=f"📝 Drafts: {draft_count}", fg=WARNING_COLOR)
 
     def create_actions_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
@@ -132,7 +209,7 @@ class AletheiaLauncherApp:
         btn_frame.pack(fill=tk.X, anchor="w")
 
         self.btn_open_cp = tk.Button(
-            btn_frame, text="Open Control Panel Viewer", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            btn_frame, text="Open Control Panel (WebView)", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
             relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.open_control_panel
         )
         self.btn_open_cp.pack(side=tk.LEFT, padx=(0, 8))
@@ -311,8 +388,17 @@ class AletheiaLauncherApp:
         scrollbar.config(command=self.post_text.yview)
 
     def open_control_panel(self):
+        python_bin = self.get_python_bin()
         cp_path = os.path.abspath("bluesky_bot/control_panel.html")
-        webbrowser.open("file://" + cp_path)
+        url = "file:///" + cp_path.replace("\\", "/")
+        
+        # Run pywebview inside a separate background python process to avoid GUI thread deadlocks
+        code = f"import webview; webview.create_window('Aletheia Control Panel', '{url}', width=1400, height=850); webview.start()"
+        
+        subprocess.Popen(
+            [python_bin, "-c", code],
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+        )
 
     def clear_eval_console(self):
         self.eval_text.delete("1.0", tk.END)
@@ -329,6 +415,7 @@ class AletheiaLauncherApp:
             self.btn_run_batch.configure(state=tk.NORMAL)
             self.btn_rebuild.configure(state=tk.NORMAL)
             self.btn_kill_eval.configure(state=tk.DISABLED)
+            self.root.after(1, self.refresh_hud_stats)
 
     def set_post_running(self, running):
         if running:
@@ -337,6 +424,7 @@ class AletheiaLauncherApp:
         else:
             self.btn_run_live.configure(state=tk.NORMAL)
             self.btn_kill_post.configure(state=tk.DISABLED)
+            self.root.after(1, self.refresh_hud_stats)
 
     def run_eval_subprocess_async(self, cmd_args):
         self.set_eval_running(True)
