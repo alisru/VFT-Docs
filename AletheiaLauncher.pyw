@@ -6,6 +6,7 @@ import queue
 import tkinter as tk
 from tkinter import ttk
 import webbrowser
+from PIL import Image, ImageTk
 
 # Define Color Palette (Dark Mode Premium)
 BG_COLOR = "#0f172a"          # Slate 900
@@ -28,6 +29,9 @@ class AletheiaLauncherApp:
         self.root.title("Aletheia Bot Operator Console")
         self.root.geometry("1150x780")
         self.root.configure(bg=BG_COLOR)
+
+        # Set Window Icon
+        self.set_window_icon()
 
         # Application state for parallel processes
         self.eval_process = None
@@ -64,6 +68,16 @@ class AletheiaLauncherApp:
         elif os.path.exists("bluesky_bot/.venv/Scripts/python.exe"):
             return os.path.abspath("bluesky_bot/.venv/Scripts/python.exe")
         return "python"
+
+    def set_window_icon(self):
+        icon_path = "bluesky_bot/alethekanon.png"
+        if os.path.exists(icon_path):
+            try:
+                self.icon_image = Image.open(icon_path)
+                self.tk_icon = ImageTk.PhotoImage(self.icon_image)
+                self.root.iconphoto(True, self.tk_icon)
+            except Exception as e:
+                print(f"Failed to set window icon: {e}")
 
     def log_eval(self, text):
         self.log_queue.put(("eval", text))
@@ -120,10 +134,25 @@ class AletheiaLauncherApp:
         frame = tk.Frame(parent, bg=BG_COLOR)
         frame.pack(fill=tk.X, pady=(0, 12))
 
-        title = tk.Label(frame, text="ALETHEIA OPERATOR CONSOLE", font=("Segoe UI", 16, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
+        # Show thumbnail next to the title if icon exists
+        icon_path = "bluesky_bot/alethekanon.png"
+        if os.path.exists(icon_path):
+            try:
+                self.icon_img_small = Image.open(icon_path).resize((48, 48), Image.Resampling.LANCZOS)
+                self.tk_icon_small = ImageTk.PhotoImage(self.icon_img_small)
+                lbl_icon = tk.Label(frame, image=self.tk_icon_small, bg=BG_COLOR)
+                lbl_icon.pack(side=tk.LEFT, padx=(0, 12))
+            except Exception as e:
+                print(f"Failed to load small header icon: {e}")
+
+        # Pack text in a sub-frame on the right of the icon
+        text_frame = tk.Frame(frame, bg=BG_COLOR)
+        text_frame.pack(side=tk.LEFT, fill=tk.Y)
+
+        title = tk.Label(text_frame, text="ALETHEIA OPERATOR CONSOLE", font=("Segoe UI", 16, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
         title.pack(anchor="w")
 
-        subtitle = tk.Label(frame, text="Active Pipeline Control Room & Batch Runner", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
+        subtitle = tk.Label(text_frame, text="Active Pipeline Control Room & Batch Runner", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
         subtitle.pack(anchor="w")
 
     def create_hud_card(self, parent):
