@@ -8,6 +8,15 @@ from tkinter import ttk
 import webbrowser
 from PIL import Image, ImageTk
 
+# Force Windows to recognize this script as a distinct application for taskbar icon grouping
+if sys.platform == "win32":
+    try:
+        import ctypes
+        myappid = 'aletheia.judgement.launcher.v1'
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+    except Exception:
+        pass
+
 # Define Color Palette (Dark Mode Premium)
 BG_COLOR = "#0f172a"          # Slate 900
 CARD_BG = "#1e293b"           # Slate 800
