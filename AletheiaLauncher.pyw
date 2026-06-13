@@ -535,7 +535,7 @@ class AletheiaLauncherApp:
                     cmd_args,
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
-                    text=True,
+                    encoding="utf-8",
                     bufsize=1,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
@@ -602,7 +602,7 @@ class AletheiaLauncherApp:
                     [python_bin, "-u", "bluesky_bot/validate_batch.py"],
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
-                    text=True,
+                    encoding="utf-8",
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
                 self.post_process = val_proc
@@ -635,7 +635,7 @@ class AletheiaLauncherApp:
                     args,
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
-                    text=True,
+                    encoding="utf-8",
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
                 self.post_process = post_proc
