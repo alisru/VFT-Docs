@@ -7,6 +7,18 @@ import shutil
 import argparse
 import datetime
 
+# Ensure UTF-8 output encoding to prevent Unicode/Cp1252 printing errors on Windows
+if sys.stdout and sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+if sys.stderr and sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8':
+    try:
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 # Add bluesky_bot to path if run from root
 script_dir = os.path.dirname(os.path.abspath(__file__))
 if script_dir not in sys.path:

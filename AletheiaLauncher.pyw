@@ -120,15 +120,37 @@ class AletheiaLauncherApp:
         try:
             while True:
                 target, msg = self.log_queue.get_nowait()
-                if target == "eval":
-                    self.eval_text.insert(tk.END, msg)
-                    self.eval_text.see(tk.END)
-                elif target == "post":
-                    self.post_text.insert(tk.END, msg)
-                    self.post_text.see(tk.END)
+                text_widget = self.eval_text if target == "eval" else self.post_text
+                if msg == '\r':
+                    text_widget.delete("end-1c linestart", "end-1c")
+                else:
+                    text_widget.insert("end-1c", msg)
+                    text_widget.see("end-1c")
         except queue.Empty:
             pass
-        self.root.after(100, self.read_log_queue)
+        self.root.after(50, self.read_log_queue)
+
+    def read_stream(self, stream, target):
+        buffer = []
+        while True:
+            char = stream.read(1)
+            if not char:
+                if buffer:
+                    self.log_queue.put((target, "".join(buffer)))
+                break
+            if char == '\r':
+                if buffer:
+                    self.log_queue.put((target, "".join(buffer)))
+                    buffer = []
+                self.log_queue.put((target, '\r'))
+            elif char == '\n':
+                if buffer:
+                    self.log_queue.put((target, "".join(buffer) + '\n'))
+                    buffer = []
+                else:
+                    self.log_queue.put((target, '\n'))
+            else:
+                buffer.append(char)
 
     def build_ui(self):
         # Master padding container
@@ -517,8 +539,7 @@ class AletheiaLauncherApp:
                     bufsize=1,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
-                for line in self.eval_process.stdout:
-                    self.log_eval(line)
+                self.read_stream(self.eval_process.stdout, "eval")
                 self.eval_process.wait()
                 self.log_eval(f"\n--- Process finished with exit code {self.eval_process.returncode} ---\n")
             except Exception as e:
@@ -540,12 +561,12 @@ class AletheiaLauncherApp:
 
     def run_rebuild_store(self):
         python_bin = self.get_python_bin()
-        self.run_eval_subprocess_async([python_bin, "scratch/rebuild_registries.py"])
+        self.run_eval_subprocess_async([python_bin, "-u", "scratch/rebuild_registries.py"])
 
     def run_one_shot_batch(self):
         python_bin = self.get_python_bin()
         args = [
-            python_bin,
+            python_bin, "-u",
             "bluesky_bot/google_ai_studio_one_shot.py",
             "--rss", self.ent_rss.get().strip(),
             "--bsky", self.ent_bsky.get().strip(),
@@ -578,15 +599,14 @@ class AletheiaLauncherApp:
                 # Step 1: Pre-flight validation
                 self.log_post("\n> Running Pre-Flight Validation...\n")
                 val_proc = subprocess.Popen(
-                    [python_bin, "bluesky_bot/validate_batch.py"],
+                    [python_bin, "-u", "bluesky_bot/validate_batch.py"],
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     text=True,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
                 self.post_process = val_proc
-                for line in val_proc.stdout:
-                    self.log_post(line)
+                self.read_stream(val_proc.stdout, "post")
                 val_proc.wait()
 
                 if val_proc.returncode != 0:
@@ -597,7 +617,7 @@ class AletheiaLauncherApp:
 
                 # Step 2: Post batch
                 self.log_post("\n> Validation passed! Scheduling live batch posting...\n")
-                args = [python_bin, "bluesky_bot/post_batch.py", "--live"]
+                args = [python_bin, "-u", "bluesky_bot/post_batch.py", "--live"]
                 
                 min_delay = self.ent_min_delay.get().strip()
                 if min_delay:
@@ -619,8 +639,7 @@ class AletheiaLauncherApp:
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
                 self.post_process = post_proc
-                for line in post_proc.stdout:
-                    self.log_post(line)
+                self.read_stream(post_proc.stdout, "post")
                 post_proc.wait()
                 self.log_post(f"\n--- Live scheduler completed (exit code: {post_proc.returncode}) ---\n")
 

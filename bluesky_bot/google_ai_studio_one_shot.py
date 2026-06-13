@@ -4,6 +4,18 @@ import json
 import re
 import time
 import argparse
+
+# Ensure UTF-8 output encoding to prevent Unicode/Cp1252 printing errors on Windows
+if sys.stdout and sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+if sys.stderr and sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8':
+    try:
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -748,7 +760,12 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     request_options={"timeout": GEMINI_TIMEOUT_SECS},
                 )
                 result_text = response.text.strip()
-                print(f"API call successful with model: {model}, response: {response}")
+                try:
+                    usage = response.usage_metadata
+                    tokens_str = f"(Prompt tokens: {usage.prompt_token_count}, Candidate tokens: {usage.candidates_token_count}, Total: {usage.total_token_count})"
+                except Exception:
+                    tokens_str = ""
+                print(f"API call successful with model: {model} {tokens_str}")
                 return result_text
         except Exception as e:
             err_str = str(e).lower()
