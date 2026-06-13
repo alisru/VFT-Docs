@@ -92,7 +92,7 @@ To maintain the strict 14-element limit on disk, the bot must output the `"posts
 ### Element 7: The Social Physics Analysis
 * **Wording**: Clear, direct, conversational plain-English explanation of the social physics dynamics (e.g. selfishness, power, pretext/justification, projection) without relying on clunky jargon names or loops.
 * **Example**:
-  > **Social Physics Analysis:**
+  > Social Physics Analysis:
   > The dog owners act out of personal selfishness to prioritize their comfort, using the pretext of private pet ownership to justify their negligence. By blaming the victims or animal unpredictability, they project a false image of innocence while running a silent extraction of public safety.
 
 ### Element 8: The Trajectory
