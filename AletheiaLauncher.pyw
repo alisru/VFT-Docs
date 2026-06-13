@@ -1,8 +1,10 @@
 import os
 import sys
 import subprocess
+import threading
+import queue
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk
 import webbrowser
 
 # Define Color Palette (Dark Mode Premium)
@@ -16,19 +18,25 @@ ACCENT_BLUE = "#3b82f6"       # Blue 500
 ACCENT_BLUE_HOVER = "#2563eb" # Blue 600
 BG_BUTTON = "#334155"         # Slate 700
 BG_BUTTON_HOVER = "#475569"   # Slate 600
+DANGER_COLOR = "#ef4444"      # Red 500
 
 class AletheiaLauncherApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Aletheia Launcher")
-        self.root.geometry("560x450")
+        self.root.title("Aletheia Bot Operator Console")
+        self.root.geometry("1100x750")
         self.root.configure(bg=BG_COLOR)
-        self.root.resizable(False, False)
+
+        # Application state for parallel processes
+        self.eval_process = None
+        self.post_process = None
+        self.log_queue = queue.Queue()
 
         # Set clean modern font
         self.font_title = ("Segoe UI", 12, "bold")
         self.font_subtitle = ("Segoe UI", 10, "bold")
         self.font_body = ("Segoe UI", 9)
+        self.font_console = ("Consolas", 9)
 
         # Style TTK widgets
         self.style = ttk.Style()
@@ -42,56 +50,90 @@ class AletheiaLauncherApp:
         # Main Layout
         self.build_ui()
 
+        # Start queue reader for console logs
+        self.root.after(100, self.read_log_queue)
+
     def get_python_bin(self):
         if os.path.exists(".venv/Scripts/python.exe"):
-            return ".venv\\Scripts\\python.exe"
+            return os.path.abspath(".venv/Scripts/python.exe")
         elif os.path.exists("bluesky_bot/.venv/Scripts/python.exe"):
-            return "bluesky_bot\\.venv\\Scripts\\python.exe"
+            return os.path.abspath("bluesky_bot/.venv/Scripts/python.exe")
         return "python"
+
+    def log_eval(self, text):
+        self.log_queue.put(("eval", text))
+
+    def log_post(self, text):
+        self.log_queue.put(("post", text))
+
+    def read_log_queue(self):
+        try:
+            while True:
+                target, msg = self.log_queue.get_nowait()
+                if target == "eval":
+                    self.eval_text.insert(tk.END, msg)
+                    self.eval_text.see(tk.END)
+                elif target == "post":
+                    self.post_text.insert(tk.END, msg)
+                    self.post_text.see(tk.END)
+        except queue.Empty:
+            pass
+        self.root.after(100, self.read_log_queue)
 
     def build_ui(self):
         # Master padding container
         main_container = tk.Frame(self.root, bg=BG_COLOR)
         main_container.pack(fill=tk.BOTH, expand=True, padx=20, pady=15)
 
+        # ----------------- Left Panel (Controls) -----------------
+        left_panel = tk.Frame(main_container, bg=BG_COLOR)
+        left_panel.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 10))
+
         # Title Card
-        self.create_title_card(main_container)
+        self.create_title_card(left_panel)
 
         # Row 1: Actions Header Card
-        self.create_actions_card(main_container)
+        self.create_actions_card(left_panel)
 
         # Row 2: Batch Evaluator Card
-        self.create_batch_card(main_container)
+        self.create_batch_card(left_panel)
 
         # Row 3: Live Posting Card
-        self.create_live_post_card(main_container)
+        self.create_live_post_card(left_panel)
+
+        # ----------------- Right Panel (Dual Console Output) -----------------
+        right_panel = tk.Frame(main_container, bg=BG_COLOR)
+        right_panel.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(10, 0))
+
+        self.create_eval_console_card(right_panel)
+        self.create_post_console_card(right_panel)
 
     def create_title_card(self, parent):
         frame = tk.Frame(parent, bg=BG_COLOR)
-        frame.pack(fill=tk.X, pady=(0, 10))
+        frame.pack(fill=tk.X, pady=(0, 15))
 
-        title = tk.Label(frame, text="ALETHEIA OPERATOR CONSOLE", font=("Segoe UI", 14, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
+        title = tk.Label(frame, text="ALETHEIA OPERATOR CONSOLE", font=("Segoe UI", 16, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
         title.pack(anchor="w")
 
-        subtitle = tk.Label(frame, text="Click buttons to spawn tasks in separate terminals.", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
+        subtitle = tk.Label(frame, text="Active Pipeline Control Room & Batch Runner", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
         subtitle.pack(anchor="w")
 
     def create_actions_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
         card.pack(fill=tk.X, pady=(0, 10))
 
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
         inner.pack(fill=tk.BOTH, expand=True)
 
         lbl = tk.Label(inner, text="Quick Actions", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 6))
+        lbl.pack(anchor="w", pady=(0, 8))
 
         btn_frame = tk.Frame(inner, bg=CARD_BG)
         btn_frame.pack(fill=tk.X, anchor="w")
 
         self.btn_open_cp = tk.Button(
-            btn_frame, text="Open Control Panel", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.open_control_panel
+            btn_frame, text="Open Control Panel Viewer", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.open_control_panel
         )
         self.btn_open_cp.pack(side=tk.LEFT, padx=(0, 8))
         self.btn_open_cp.bind("<Enter>", lambda e: self.btn_open_cp.configure(bg=ACCENT_BLUE_HOVER))
@@ -99,7 +141,7 @@ class AletheiaLauncherApp:
 
         self.btn_rebuild = tk.Button(
             btn_frame, text="Rebuild Stories Store", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.run_rebuild_store
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_rebuild_store
         )
         self.btn_rebuild.pack(side=tk.LEFT)
         self.btn_rebuild.bind("<Enter>", lambda e: self.btn_rebuild.configure(bg=ACCENT_CYAN_HOVER))
@@ -109,52 +151,53 @@ class AletheiaLauncherApp:
         card = ttk.Frame(parent, style="Card.TFrame")
         card.pack(fill=tk.X, pady=(0, 10))
 
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
         inner.pack(fill=tk.BOTH, expand=True)
 
         lbl = tk.Label(inner, text="One-Shot Batch Evaluator", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 6))
+        lbl.pack(anchor="w", pady=(0, 8))
 
         # Inputs Grid
         grid_frame = tk.Frame(inner, bg=CARD_BG)
-        grid_frame.pack(fill=tk.X, pady=(0, 8))
+        grid_frame.pack(fill=tk.X, pady=(0, 10))
 
         # Col 1
-        tk.Label(grid_frame, text="RSS Count", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=2, padx=(0, 5))
-        self.ent_rss = tk.Entry(grid_frame, width=6, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        tk.Label(grid_frame, text="RSS Count", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_rss = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
         self.ent_rss.insert(0, "5")
-        self.ent_rss.grid(row=0, column=1, sticky="w", pady=2, padx=(0, 15))
+        self.ent_rss.grid(row=0, column=1, sticky="w", pady=3, padx=(0, 15))
 
-        tk.Label(grid_frame, text="BSky Count", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=2, padx=(0, 5))
-        self.ent_bsky = tk.Entry(grid_frame, width=6, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        tk.Label(grid_frame, text="BSky Count", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=3, padx=(0, 5))
+        self.ent_bsky = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
         self.ent_bsky.insert(0, "15")
-        self.ent_bsky.grid(row=0, column=3, sticky="w", pady=2, padx=(0, 15))
+        self.ent_bsky.grid(row=0, column=3, sticky="w", pady=3, padx=(0, 15))
 
-        tk.Label(grid_frame, text="Categories", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=4, sticky="w", pady=2, padx=(0, 5))
-        self.ent_category = tk.Entry(grid_frame, width=12, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        tk.Label(grid_frame, text="Categories", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=4, sticky="w", pady=3, padx=(0, 5))
+        self.ent_category = tk.Entry(grid_frame, width=15, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
         self.ent_category.insert(0, "general")
-        self.ent_category.grid(row=0, column=5, sticky="w", pady=2)
+        self.ent_category.grid(row=0, column=5, sticky="w", pady=3)
 
         # Col 2
-        tk.Label(grid_frame, text="Topic Filter", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=2, padx=(0, 5))
-        self.ent_topic = tk.Entry(grid_frame, width=12, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
-        self.ent_topic.grid(row=1, column=1, columnspan=2, sticky="w", pady=2, padx=(0, 15))
+        tk.Label(grid_frame, text="Topic Filter", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_topic = tk.Entry(grid_frame, width=15, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_topic.grid(row=1, column=1, columnspan=2, sticky="w", pady=3, padx=(0, 15))
 
-        tk.Label(grid_frame, text="Exclude Topics", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=3, sticky="w", pady=2, padx=(0, 5))
-        self.ent_banned = tk.Entry(grid_frame, width=20, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        tk.Label(grid_frame, text="Exclude Topics", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=3, sticky="w", pady=3, padx=(0, 5))
+        self.ent_banned = tk.Entry(grid_frame, width=22, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
         self.ent_banned.insert(0, "travel, sport, entertainment")
-        self.ent_banned.grid(row=1, column=4, columnspan=2, sticky="ew", pady=2)
+        self.ent_banned.grid(row=1, column=4, columnspan=2, sticky="ew", pady=3)
 
-        tk.Label(grid_frame, text="Prioritize Outlets", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=2, padx=(0, 5))
+        tk.Label(grid_frame, text="Prioritize Outlets", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=3, padx=(0, 5))
         self.ent_prefer = tk.Entry(grid_frame, width=28, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
-        self.ent_prefer.grid(row=2, column=1, columnspan=5, sticky="ew", pady=2)
+        self.ent_prefer.grid(row=2, column=1, columnspan=5, sticky="ew", pady=3)
+        tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SaturdayPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, columnspan=5, sticky="w")
 
         # Buttons
         self.btn_run_batch = tk.Button(
-            inner, text="Launch Batch Evaluator Terminal", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
+            inner, text="Run One-Shot Batch Evaluation", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
             relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.run_one_shot_batch
         )
-        self.btn_run_batch.pack(anchor="w", pady=(6, 0))
+        self.btn_run_batch.pack(anchor="w", pady=(8, 0))
         self.btn_run_batch.bind("<Enter>", lambda e: self.btn_run_batch.configure(bg=ACCENT_CYAN_HOVER))
         self.btn_run_batch.bind("<Leave>", lambda e: self.btn_run_batch.configure(bg=ACCENT_CYAN))
 
@@ -162,57 +205,182 @@ class AletheiaLauncherApp:
         card = ttk.Frame(parent, style="Card.TFrame")
         card.pack(fill=tk.X, pady=(0, 10))
 
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
         inner.pack(fill=tk.BOTH, expand=True)
 
         lbl = tk.Label(inner, text="Live Post Scheduler", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 6))
+        lbl.pack(anchor="w", pady=(0, 8))
 
         grid_frame = tk.Frame(inner, bg=CARD_BG)
-        grid_frame.pack(fill=tk.X, pady=(0, 8))
+        grid_frame.pack(fill=tk.X, pady=(0, 10))
 
-        tk.Label(grid_frame, text="Min Delay (sec)", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=2, padx=(0, 5))
+        tk.Label(grid_frame, text="Min Delay (sec)", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=3, padx=(0, 5))
         self.ent_min_delay = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
-        self.ent_min_delay.grid(row=0, column=1, sticky="w", pady=2, padx=(0, 20))
+        self.ent_min_delay.grid(row=0, column=1, sticky="w", pady=3, padx=(0, 20))
 
-        tk.Label(grid_frame, text="Max Delay (sec)", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=2, padx=(0, 5))
+        tk.Label(grid_frame, text="Max Delay (sec)", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=3, padx=(0, 5))
         self.ent_max_delay = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
-        self.ent_max_delay.grid(row=0, column=3, sticky="w", pady=2, padx=(0, 20))
+        self.ent_max_delay.grid(row=0, column=3, sticky="w", pady=3, padx=(0, 20))
 
         self.val_watch = tk.BooleanVar(value=False)
         self.chk_watch = ttk.Checkbutton(grid_frame, text="Continuous Watch Mode", variable=self.val_watch)
-        self.chk_watch.grid(row=0, column=4, sticky="w", pady=2)
+        self.chk_watch.grid(row=0, column=4, sticky="w", pady=3)
 
         self.btn_run_live = tk.Button(
-            inner, text="Launch Pre-Flight & Live Scheduler Terminal", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            inner, text="Run Pre-Flight & Live Post Scheduler", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
             relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.run_live_post
         )
         self.btn_run_live.pack(anchor="w")
         self.btn_run_live.bind("<Enter>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE_HOVER))
         self.btn_run_live.bind("<Leave>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE))
 
+    def create_eval_console_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        header = tk.Frame(inner, bg=CARD_BG)
+        header.pack(fill=tk.X, pady=(0, 6))
+
+        lbl = tk.Label(header, text="Evaluator / Registry Output", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(side=tk.LEFT)
+
+        self.btn_kill_eval = tk.Button(
+            header, text="Cancel Evaluator Action", font=self.font_body, bg=DANGER_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.kill_eval_process, state=tk.DISABLED
+        )
+        self.btn_kill_eval.pack(side=tk.RIGHT, padx=5)
+
+        btn_clear = tk.Button(
+            header, text="Clear", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.clear_eval_console
+        )
+        btn_clear.pack(side=tk.RIGHT)
+
+        txt_frame = tk.Frame(inner, bg=BG_COLOR)
+        txt_frame.pack(fill=tk.BOTH, expand=True)
+
+        scrollbar = tk.Scrollbar(txt_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.eval_text = tk.Text(
+            txt_frame, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, height=13,
+            font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=scrollbar.set
+        )
+        self.eval_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=self.eval_text.yview)
+
+    def create_post_console_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.BOTH, expand=True)
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        header = tk.Frame(inner, bg=CARD_BG)
+        header.pack(fill=tk.X, pady=(0, 6))
+
+        lbl = tk.Label(header, text="Poster / Scheduler Output", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(side=tk.LEFT)
+
+        self.btn_kill_post = tk.Button(
+            header, text="Cancel Poster Action", font=self.font_body, bg=DANGER_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.kill_post_process, state=tk.DISABLED
+        )
+        self.btn_kill_post.pack(side=tk.RIGHT, padx=5)
+
+        btn_clear = tk.Button(
+            header, text="Clear", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.clear_post_console
+        )
+        btn_clear.pack(side=tk.RIGHT)
+
+        txt_frame = tk.Frame(inner, bg=BG_COLOR)
+        txt_frame.pack(fill=tk.BOTH, expand=True)
+
+        scrollbar = tk.Scrollbar(txt_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.post_text = tk.Text(
+            txt_frame, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, height=13,
+            font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=scrollbar.set
+        )
+        self.post_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=self.post_text.yview)
+
     def open_control_panel(self):
         cp_path = os.path.abspath("bluesky_bot/control_panel.html")
         webbrowser.open("file://" + cp_path)
 
-    def spawn_terminal(self, title, script_cmd):
-        try:
-            # Command Prompt start command:
-            # cmd /k executes the command and keeps the prompt open so the user can see logs
-            full_cmd = f'start cmd /k "title {title} && {script_cmd}"'
-            subprocess.Popen(full_cmd, shell=True)
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to spawn terminal: {e}")
+    def clear_eval_console(self):
+        self.eval_text.delete("1.0", tk.END)
+
+    def clear_post_console(self):
+        self.post_text.delete("1.0", tk.END)
+
+    def set_eval_running(self, running):
+        if running:
+            self.btn_run_batch.configure(state=tk.DISABLED)
+            self.btn_rebuild.configure(state=tk.DISABLED)
+            self.btn_kill_eval.configure(state=tk.NORMAL)
+        else:
+            self.btn_run_batch.configure(state=tk.NORMAL)
+            self.btn_rebuild.configure(state=tk.NORMAL)
+            self.btn_kill_eval.configure(state=tk.DISABLED)
+
+    def set_post_running(self, running):
+        if running:
+            self.btn_run_live.configure(state=tk.DISABLED)
+            self.btn_kill_post.configure(state=tk.NORMAL)
+        else:
+            self.btn_run_live.configure(state=tk.NORMAL)
+            self.btn_kill_post.configure(state=tk.DISABLED)
+
+    def run_eval_subprocess_async(self, cmd_args):
+        self.set_eval_running(True)
+        def worker():
+            try:
+                self.log_eval(f"\n> Running: {' '.join(cmd_args)}\n")
+                self.eval_process = subprocess.Popen(
+                    cmd_args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    bufsize=1,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                for line in self.eval_process.stdout:
+                    self.log_eval(line)
+                self.eval_process.wait()
+                self.log_eval(f"\n--- Process finished with exit code {self.eval_process.returncode} ---\n")
+            except Exception as e:
+                self.log_eval(f"\nError running process: {e}\n")
+            finally:
+                self.eval_process = None
+                self.root.after(1, lambda: self.set_eval_running(False))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def kill_eval_process(self):
+        if self.eval_process:
+            self.log_eval("\n*** Terminating evaluator process... ***\n")
+            self.eval_process.terminate()
+
+    def kill_post_process(self):
+        if self.post_process:
+            self.log_post("\n*** Terminating poster process... ***\n")
+            self.post_process.terminate()
 
     def run_rebuild_store(self):
         python_bin = self.get_python_bin()
-        self.spawn_terminal("Aletheia: Rebuild Registry Store", f"{python_bin} scratch\\rebuild_registries.py")
+        self.run_eval_subprocess_async([python_bin, "scratch/rebuild_registries.py"])
 
     def run_one_shot_batch(self):
         python_bin = self.get_python_bin()
         args = [
             python_bin,
-            "bluesky_bot\\google_ai_studio_one_shot.py",
+            "bluesky_bot/google_ai_studio_one_shot.py",
             "--rss", self.ent_rss.get().strip(),
             "--bsky", self.ent_bsky.get().strip(),
         ]
@@ -233,39 +401,70 @@ class AletheiaLauncherApp:
         if prefer:
             args.extend(["--prefer", prefer])
 
-        self.spawn_terminal("Aletheia: Batch Evaluator", " ".join(args))
+        self.run_eval_subprocess_async(args)
 
     def run_live_post(self):
         python_bin = self.get_python_bin()
-        
-        # Step 1 command: Run validator. If successful, continue to posting.
-        # Step 2 command: Run posting script with delay arguments.
-        post_args = [python_bin, "bluesky_bot\\post_batch.py", "--live"]
-        
-        min_delay = self.ent_min_delay.get().strip()
-        if min_delay:
-            post_args.extend(["--min-delay", min_delay])
-            
-        max_delay = self.ent_max_delay.get().strip()
-        if max_delay:
-            post_args.extend(["--max-delay", max_delay])
-            
-        if self.val_watch.get():
-            post_args.append("--watch")
+        self.set_post_running(True)
 
-        # Combine validator and poster commands with && so validation failure aborts posting.
-        cmd_chain = (
-            f"echo ================================================== && "
-            f"echo [1/2] Running Pre-Flight Validation... && "
-            f"echo ================================================== && "
-            f"{python_bin} bluesky_bot\\validate_batch.py && "
-            f"echo ================================================== && "
-            f"echo [2/2] Validation Passed! Starting Live Scheduler... && "
-            f"echo ================================================== && "
-            f"{' '.join(post_args)}"
-        )
+        def posting_flow():
+            try:
+                # Step 1: Pre-flight validation
+                self.log_post("\n> Running Pre-Flight Validation...\n")
+                val_proc = subprocess.Popen(
+                    [python_bin, "bluesky_bot/validate_batch.py"],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.post_process = val_proc
+                for line in val_proc.stdout:
+                    self.log_post(line)
+                val_proc.wait()
 
-        self.spawn_terminal("Aletheia: Live Post Scheduler", cmd_chain)
+                if val_proc.returncode != 0:
+                    self.log_post("\n==================================================\n")
+                    self.log_post("ERROR: Pre-flight validation failed! Posting aborted.\n")
+                    self.log_post("==================================================\n")
+                    return
+
+                # Step 2: Post batch
+                self.log_post("\n> Validation passed! Scheduling live batch posting...\n")
+                args = [python_bin, "bluesky_bot/post_batch.py", "--live"]
+                
+                min_delay = self.ent_min_delay.get().strip()
+                if min_delay:
+                    args.extend(["--min-delay", min_delay])
+                    
+                max_delay = self.ent_max_delay.get().strip()
+                if max_delay:
+                    args.extend(["--max-delay", max_delay])
+                    
+                if self.val_watch.get():
+                    args.append("--watch")
+
+                self.log_post(f"> Command: {' '.join(args)}\n")
+                post_proc = subprocess.Popen(
+                    args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.post_process = post_proc
+                for line in post_proc.stdout:
+                    self.log_post(line)
+                post_proc.wait()
+                self.log_post(f"\n--- Live scheduler completed (exit code: {post_proc.returncode}) ---\n")
+
+            except Exception as e:
+                self.log_post(f"\nError running live posting flow: {e}\n")
+            finally:
+                self.post_process = None
+                self.root.after(1, lambda: self.set_post_running(False))
+
+        threading.Thread(target=posting_flow, daemon=True).start()
 
 if __name__ == "__main__":
     # Ensure correct working directory context
