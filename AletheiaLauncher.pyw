@@ -4,9 +4,7 @@ import subprocess
 import threading
 import queue
 import tkinter as tk
-from tkinter import ttk, messagebox
-import socketserver
-import http.server
+from tkinter import ttk
 import webbrowser
 
 # Define Color Palette (Dark Mode Premium)
@@ -20,52 +18,21 @@ ACCENT_BLUE = "#3b82f6"       # Blue 500
 ACCENT_BLUE_HOVER = "#2563eb" # Blue 600
 BG_BUTTON = "#334155"         # Slate 700
 BG_BUTTON_HOVER = "#475569"   # Slate 600
-SUCCESS_COLOR = "#10b981"     # Emerald 500
-WARNING_COLOR = "#f59e0b"     # Amber 500
 DANGER_COLOR = "#ef4444"      # Red 500
-
-class ThreadedHTTPServer:
-    def __init__(self, port=8000):
-        self.port = port
-        self.server = None
-        self.thread = None
-        self.is_running = False
-
-    def start(self, error_callback):
-        try:
-            handler = http.server.SimpleHTTPRequestHandler
-            # Allow address reuse to avoid port blockage on quick restart
-            socketserver.TCPServer.allow_reuse_address = True
-            self.server = socketserver.TCPServer(("", self.port), handler)
-            self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
-            self.thread.start()
-            self.is_running = True
-            return True
-        except Exception as e:
-            error_callback(f"Failed to start server: {e}")
-            return False
-
-    def stop(self):
-        if self.server:
-            self.server.shutdown()
-            self.server.server_close()
-            self.server = None
-            self.is_running = False
 
 class AletheiaLauncherApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Aletheia Bot Control Panel Console")
-        self.root.geometry("1050x780")
+        self.root.title("Aletheia Bot Operator Console")
+        self.root.geometry("1000x680")
         self.root.configure(bg=BG_COLOR)
 
         # Application state
-        self.server = ThreadedHTTPServer()
         self.active_process = None
         self.log_queue = queue.Queue()
 
         # Set clean modern font
-        self.font_title = ("Segoe UI", 13, "bold")
+        self.font_title = ("Segoe UI", 12, "bold")
         self.font_subtitle = ("Segoe UI", 10, "bold")
         self.font_body = ("Segoe UI", 9)
         self.font_console = ("Consolas", 9)
@@ -117,20 +84,14 @@ class AletheiaLauncherApp:
         # Title Card
         self.create_title_card(left_panel)
 
-        # Row 1: Server and Rebuild
-        row_server_rebuild = tk.Frame(left_panel, bg=BG_COLOR)
-        row_server_rebuild.pack(fill=tk.X, pady=(0, 10))
-        self.create_server_card(row_server_rebuild)
-        self.create_rebuild_card(row_server_rebuild)
+        # Row 1: Actions Header Card
+        self.create_actions_card(left_panel)
 
         # Row 2: Batch Evaluator Card
         self.create_batch_card(left_panel)
 
         # Row 3: Live Posting Card
         self.create_live_post_card(left_panel)
-
-        # Row 4: Google Drive Sync Card
-        self.create_gdrive_card(left_panel)
 
         # ----------------- Right Panel (Console Output) -----------------
         right_panel = tk.Frame(main_container, bg=BG_COLOR)
@@ -145,69 +106,35 @@ class AletheiaLauncherApp:
         title = tk.Label(frame, text="ALETHEIA OPERATOR CONSOLE", font=("Segoe UI", 16, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
         title.pack(anchor="w")
 
-        subtitle = tk.Label(frame, text="Active Pipeline Control Room & Sync Orchestrator", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
+        subtitle = tk.Label(frame, text="Active Pipeline Control Room & Batch Runner", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
         subtitle.pack(anchor="w")
 
-    def create_server_card(self, parent):
+    def create_actions_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 5))
+        card.pack(fill=tk.X, pady=(0, 10))
 
-        # Padding inner frame
         inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
         inner.pack(fill=tk.BOTH, expand=True)
 
-        lbl = tk.Label(inner, text="Control Panel HTTP Server", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl = tk.Label(inner, text="Quick Actions", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
         lbl.pack(anchor="w", pady=(0, 8))
 
-        # Status indicator frame
-        status_frame = tk.Frame(inner, bg=CARD_BG)
-        status_frame.pack(anchor="w", pady=(0, 12))
-
-        self.server_led = tk.Canvas(status_frame, width=10, height=10, bg=CARD_BG, highlightthickness=0)
-        self.server_led.pack(side=tk.LEFT, padx=(0, 6))
-        self.draw_led(self.server_led, DANGER_COLOR)
-
-        self.server_status_lbl = tk.Label(status_frame, text="Stopped (Port 8000)", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
-        self.server_status_lbl.pack(side=tk.LEFT)
-
-        # Buttons
         btn_frame = tk.Frame(inner, bg=CARD_BG)
         btn_frame.pack(fill=tk.X, anchor="w")
 
-        self.btn_toggle_server = tk.Button(
-            btn_frame, text="Start Server", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=self.toggle_server
+        self.btn_open_cp = tk.Button(
+            btn_frame, text="Open Control Panel Viewer", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.open_control_panel
         )
-        self.btn_toggle_server.pack(side=tk.LEFT, padx=(0, 6))
-        self.btn_toggle_server.bind("<Enter>", lambda e: self.btn_toggle_server.configure(bg=BG_BUTTON_HOVER))
-        self.btn_toggle_server.bind("<Leave>", lambda e: self.btn_toggle_server.configure(bg=BG_BUTTON))
-
-        self.btn_open_browser = tk.Button(
-            btn_frame, text="Open Browser", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=self.open_browser
-        )
-        self.btn_open_browser.pack(side=tk.LEFT)
-        self.btn_open_browser.bind("<Enter>", lambda e: self.btn_open_browser.configure(bg=ACCENT_BLUE_HOVER))
-        self.btn_open_browser.bind("<Leave>", lambda e: self.btn_open_browser.configure(bg=ACCENT_BLUE))
-
-    def create_rebuild_card(self, parent):
-        card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(5, 0))
-
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
-
-        lbl = tk.Label(inner, text="Stories Registry Engine", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 8))
-
-        desc = tk.Label(inner, text="Re-compile stories_registry.js and verify all draft validation parameters.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG, justify=tk.LEFT, wraplength=200)
-        desc.pack(anchor="w", pady=(0, 14))
+        self.btn_open_cp.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_open_cp.bind("<Enter>", lambda e: self.btn_open_cp.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_open_cp.bind("<Leave>", lambda e: self.btn_open_cp.configure(bg=ACCENT_BLUE))
 
         self.btn_rebuild = tk.Button(
-            inner, text="Rebuild Stories Store", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.run_rebuild_store
+            btn_frame, text="Rebuild Stories Store", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_rebuild_store
         )
-        self.btn_rebuild.pack(anchor="w")
+        self.btn_rebuild.pack(side=tk.LEFT)
         self.btn_rebuild.bind("<Enter>", lambda e: self.btn_rebuild.configure(bg=ACCENT_CYAN_HOVER))
         self.btn_rebuild.bind("<Leave>", lambda e: self.btn_rebuild.configure(bg=ACCENT_CYAN))
 
@@ -298,54 +225,6 @@ class AletheiaLauncherApp:
         self.btn_run_live.bind("<Enter>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE_HOVER))
         self.btn_run_live.bind("<Leave>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE))
 
-    def create_gdrive_card(self, parent):
-        card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(fill=tk.X)
-
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
-
-        lbl = tk.Label(inner, text="Google Drive Sync (rclone)", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 8))
-
-        btn_frame = tk.Frame(inner, bg=CARD_BG)
-        btn_frame.pack(fill=tk.X)
-
-        self.btn_dry_sync = tk.Button(
-            btn_frame, text="Sync Dry Run (Cloud -> Local)", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=lambda: self.run_gdrive_sync(dry_run=True, direction="down")
-        )
-        self.btn_dry_sync.grid(row=0, column=0, padx=(0, 6), pady=3, sticky="ew")
-        self.btn_dry_sync.bind("<Enter>", lambda e: self.btn_dry_sync.configure(bg=BG_BUTTON_HOVER))
-        self.btn_dry_sync.bind("<Leave>", lambda e: self.btn_dry_sync.configure(bg=BG_BUTTON))
-
-        self.btn_real_sync = tk.Button(
-            btn_frame, text="Sync Apply (Cloud -> Local)", font=self.font_body, bg=WARNING_COLOR, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=lambda: self.run_gdrive_sync(dry_run=False, direction="down")
-        )
-        self.btn_real_sync.grid(row=0, column=1, padx=(0, 6), pady=3, sticky="ew")
-        self.btn_real_sync.bind("<Enter>", lambda e: self.btn_real_sync.configure(bg="#d97706"))
-        self.btn_real_sync.bind("<Leave>", lambda e: self.btn_real_sync.configure(bg=WARNING_COLOR))
-
-        self.btn_dry_push = tk.Button(
-            btn_frame, text="Push Dry Run (Local -> Cloud)", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=lambda: self.run_gdrive_sync(dry_run=True, direction="up")
-        )
-        self.btn_dry_push.grid(row=1, column=0, padx=(0, 6), pady=3, sticky="ew")
-        self.btn_dry_push.bind("<Enter>", lambda e: self.btn_dry_push.configure(bg=BG_BUTTON_HOVER))
-        self.btn_dry_push.bind("<Leave>", lambda e: self.btn_dry_push.configure(bg=BG_BUTTON))
-
-        self.btn_real_push = tk.Button(
-            btn_frame, text="Push Apply (Local -> Cloud)", font=self.font_body, bg=WARNING_COLOR, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=lambda: self.run_gdrive_sync(dry_run=False, direction="up")
-        )
-        self.btn_real_push.grid(row=1, column=1, padx=(0, 6), pady=3, sticky="ew")
-        self.btn_real_push.bind("<Enter>", lambda e: self.btn_real_push.configure(bg="#d97706"))
-        self.btn_real_push.bind("<Leave>", lambda e: self.btn_real_push.configure(bg=WARNING_COLOR))
-
-        btn_frame.columnconfigure(0, weight=1)
-        btn_frame.columnconfigure(1, weight=1)
-
     def create_console_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
         card.pack(fill=tk.BOTH, expand=True)
@@ -385,27 +264,9 @@ class AletheiaLauncherApp:
         self.console_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.config(command=self.console_text.yview)
 
-    def draw_led(self, canvas, color_hex):
-        canvas.delete("all")
-        canvas.create_oval(1, 1, 9, 9, fill=color_hex, outline="")
-
-    def toggle_server(self):
-        if self.server.is_running:
-            self.server.stop()
-            self.draw_led(self.server_led, DANGER_COLOR)
-            self.server_status_lbl.configure(text="Stopped (Port 8000)", fg=TEXT_MUTED)
-            self.btn_toggle_server.configure(text="Start Server")
-            self.log("\n[Server] HTTP server stopped.\n")
-        else:
-            success = self.server.start(self.log)
-            if success:
-                self.draw_led(self.server_led, SUCCESS_COLOR)
-                self.server_status_lbl.configure(text="Active (Port 8000)", fg=SUCCESS_COLOR)
-                self.btn_toggle_server.configure(text="Stop Server")
-                self.log("\n[Server] HTTP server started on port 8000.\n")
-
-    def open_browser(self):
-        webbrowser.open("http://localhost:8000/bluesky_bot/control_panel.html")
+    def open_control_panel(self):
+        cp_path = os.path.abspath("bluesky_bot/control_panel.html")
+        webbrowser.open("file://" + cp_path)
 
     def clear_console(self):
         self.console_text.delete("1.0", tk.END)
@@ -415,19 +276,11 @@ class AletheiaLauncherApp:
             self.btn_run_batch.configure(state=tk.DISABLED)
             self.btn_run_live.configure(state=tk.DISABLED)
             self.btn_rebuild.configure(state=tk.DISABLED)
-            self.btn_dry_sync.configure(state=tk.DISABLED)
-            self.btn_real_sync.configure(state=tk.DISABLED)
-            self.btn_dry_push.configure(state=tk.DISABLED)
-            self.btn_real_push.configure(state=tk.DISABLED)
             self.btn_kill.configure(state=tk.NORMAL)
         else:
             self.btn_run_batch.configure(state=tk.NORMAL)
             self.btn_run_live.configure(state=tk.NORMAL)
             self.btn_rebuild.configure(state=tk.NORMAL)
-            self.btn_dry_sync.configure(state=tk.NORMAL)
-            self.btn_real_sync.configure(state=tk.NORMAL)
-            self.btn_dry_push.configure(state=tk.NORMAL)
-            self.btn_real_push.configure(state=tk.NORMAL)
             self.btn_kill.configure(state=tk.DISABLED)
 
     def run_subprocess_async(self, cmd_args):
@@ -552,29 +405,6 @@ class AletheiaLauncherApp:
                 self.root.after(1, lambda: self.set_action_running(False))
 
         threading.Thread(target=posting_flow, daemon=True).start()
-
-    def run_gdrive_sync(self, dry_run=True, direction="down"):
-        args = ["rclone", "sync"]
-        
-        if direction == "down":
-            args.extend(["VFT:VFT", "E:\\Vector Field Theory\\VFT Docs", "--drive-export-formats", "docx"])
-        else:
-            args.extend(["E:\\Vector Field Theory\\VFT Docs", "VFT:VFT"])
-
-        if dry_run:
-            args.extend(["--dry-run", "-v"])
-        else:
-            args.append("--progress")
-
-        # Confirm before real syncing/pushing
-        if not dry_run:
-            act_type = "DOWNLOAD & OVERWRITE your local files" if direction == "down" else "UPLOAD & OVERWRITE files on Google Drive"
-            ans = messagebox.askyesno("Confirm Sync Apply", f"Are you sure you want to apply this sync?\nThis will {act_type}.", icon="warning")
-            if not ans:
-                self.log("\nSync Apply cancelled.\n")
-                return
-
-        self.run_subprocess_async(args)
 
 if __name__ == "__main__":
     # Ensure correct working directory context
