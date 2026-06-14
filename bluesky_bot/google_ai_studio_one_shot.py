@@ -265,6 +265,45 @@ UNSCRAPABLE_DOMAINS = {
     'ft.com', 'economist.com', 'afr.com'
 }
 
+# Dynamic list of scraping-banned domains loaded from disk
+DYNAMIC_BANNED_DOMAINS = set(UNSCRAPABLE_DOMAINS)
+
+# Whitelist of primary trusted news sources that should NEVER be banned dynamically
+# due to temporary network timeouts or server glitches.
+SCRAPING_WHITELIST = {
+    'bbc.com', 'bbc.co.uk', 'bbci.co.uk',
+    'abc.net.au',
+    'thesaturdaypaper.com.au', 'saturdaypaper.com.au',
+    'smh.com.au',
+    'techcrunch.com',
+    'npr.org'
+}
+
+def is_domain_whitelisted(domain):
+    d = domain.strip().lower()
+    return any(d == wl or d.endswith('.' + wl) for wl in SCRAPING_WHITELIST)
+
+def load_dynamic_banned_domains():
+    global DYNAMIC_BANNED_DOMAINS
+    path = os.path.join(script_dir, "unscrapable_domains.json")
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    # Keep static defaults in addition to loaded ones
+                    DYNAMIC_BANNED_DOMAINS.update(data)
+        except Exception as e:
+            print(f"Warning: Failed to load dynamic banned domains: {e}")
+
+def save_dynamic_banned_domains():
+    path = os.path.join(script_dir, "unscrapable_domains.json")
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(sorted(list(DYNAMIC_BANNED_DOMAINS)), f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"Warning: Failed to save dynamic banned domains: {e}")
+
 def is_news_url(url):
     """Banlist gate: returns True for any real external http(s) URL not on the non-news denylist
 
@@ -289,8 +328,8 @@ def is_news_url(url):
     if any(host == bad or host.endswith('.' + bad) for bad in NON_NEWS_DOMAINS):
         return False
         
-    # Check paywalled or anti-scraping news domains
-    if any(host == bad or host.endswith('.' + bad) for bad in UNSCRAPABLE_DOMAINS):
+    # Check paywalled or anti-scraping news domains (static & dynamic)
+    if any(host == bad or host.endswith('.' + bad) for bad in DYNAMIC_BANNED_DOMAINS):
         return False
         
     return True
@@ -1048,6 +1087,8 @@ def main():
     print("GOOGLE AI STUDIO ONE-SHOT BATCH EVALUATOR")
     print("=" * 80)
     
+    load_dynamic_banned_domains()
+    
     seen_urls, seen_ids, seen_targets = load_historical_evaluations()
     
     candidates = harvest_news(args.rss, args.bsky, seen_urls, seen_ids, seen_targets, category=args.category, topic=args.topic, banned_topic=args.banned_topic)
@@ -1060,6 +1101,8 @@ def main():
     # Scrape article bodies to provide rich reality context
     print("\nScraping article bodies for harvested candidates...")
     successful_candidates = []
+    dynamic_banlist_changed = False
+    
     for idx, c in enumerate(candidates, 1):
         url = c.get("url")
         if url:
@@ -1073,9 +1116,25 @@ def main():
                 successful_candidates.append(c)
             else:
                 print(f"  Scrape failed, returned empty, or had insufficient content (length: {len(article_text) if article_text else 0} chars). Skipping candidate.")
+                try:
+                    host = urllib.parse.urlparse(url.strip().lower()).hostname
+                    if host:
+                        # Strip common 'www.' prefix
+                        domain = host
+                        if domain.startswith("www."):
+                            domain = domain[4:]
+                        if domain and domain not in DYNAMIC_BANNED_DOMAINS and not is_domain_whitelisted(domain) and domain not in NON_NEWS_DOMAINS:
+                            DYNAMIC_BANNED_DOMAINS.add(domain)
+                            dynamic_banlist_changed = True
+                            print(f"  Added domain '{domain}' to dynamic scraping banlist.")
+                except Exception as ex:
+                    print(f"  Warning: Failed to extract domain for banlist: {ex}")
         else:
             print(f"[{idx}/{len(candidates)}] Candidate has no URL. Skipping candidate.")
             
+    if dynamic_banlist_changed:
+        save_dynamic_banned_domains()
+
     candidates = successful_candidates
     if not candidates:
         print("\nNo candidates remaining after filtering out failed scrapes. Exiting.")
