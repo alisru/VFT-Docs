@@ -82,8 +82,11 @@ load_dotenv(bot_env_path)
 
 try:
     import google.generativeai as genai
+    from google.generativeai.types import HarmCategory, HarmBlockThreshold
 except ImportError:
     genai = None
+    HarmCategory = None
+    HarmBlockThreshold = None
 
 # Per-request deadline for Gemini calls. Without it a rate-limited/stalled call
 # hangs with no client-side timeout instead of raising into the fallback path.
@@ -714,13 +717,12 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     
     # Try the specified model, fallback if rate-limited or fails
     default_fallbacks = [
-        "gemini-3.5-flash",
-        "gemini-3-flash-preview",
         "gemini-2.5-flash",
+        "gemini-2.5-flash-lite",
+        "gemini-3.5-flash",
         "gemini-3.1-flash-lite",
         "gemma-4-31b",
-        "gemini-2.5-flash-lite"
-        
+        "gemini-3-flash-preview"
     ]
     # Keep unique order, trying model_name first
     fallback_models = []
@@ -752,14 +754,46 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     system_instruction=system_instruction,
                     generation_config=config
                 )
+                # Configure safety settings to prevent false-positive censorship of news content
+                safety_settings = None
+                if genai_client and HarmCategory and HarmBlockThreshold:
+                    safety_settings = {
+                        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+                        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+                        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+                        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+                    }
+
                 # Without a timeout the gRPC call has no client-side deadline, so a
                 # 429/quota stall hangs forever instead of raising into the except
                 # below (which is what rotates to the next fallback model).
                 response = model_instance.generate_content(
                     user_payload_str,
                     request_options={"timeout": GEMINI_TIMEOUT_SECS},
+                    safety_settings=safety_settings
                 )
                 result_text = response.text.strip()
+
+                # Pre-flight JSON validation to trigger fallback on truncation/corruption
+                content = result_text
+                if content.startswith("```json"):
+                    content = content[7:]
+                elif content.startswith("```"):
+                    content = content[3:]
+                if content.endswith("```"):
+                    content = content[:-3]
+                content = content.strip()
+
+                start_idx = content.find("[")
+                end_idx = content.rfind("]")
+                if start_idx == -1 or end_idx == -1 or end_idx <= start_idx:
+                    raise ValueError("Model output does not contain a valid JSON array structure (likely truncated or blocked by safety filters).")
+                
+                try:
+                    json.loads(content[start_idx:end_idx+1])
+                except Exception as je:
+                    raise ValueError(f"Model output is not complete valid JSON (likely truncated): {je}")
+
                 try:
                     usage = response.usage_metadata
                     tokens_str = f"(Prompt tokens: {usage.prompt_token_count}, Candidate tokens: {usage.candidates_token_count}, Total: {usage.total_token_count})"
