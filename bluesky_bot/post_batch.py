@@ -237,6 +237,7 @@ def main():
                         
                         # Post thread (retry once after rate-limit)
                         success = False
+                        already_replied = False
                         for _attempt in range(2):
                             try:
                                 original_sleep = time.sleep
@@ -253,6 +254,7 @@ def main():
                                 if "ALREADY_REPLIED" in str(e):
                                     print(f"  [SKIP/ALREADY REPLIED] {filename} is already live on Bluesky. Moving to live folder.")
                                     success = True
+                                    already_replied = True
                                     break
                                 if _attempt == 0 and wait_for_rate_limit(e):
                                     if _safe_to_retry(e):
@@ -282,7 +284,7 @@ def main():
                                 print(f"  Warning: Failed to move file to live: {e}")
                                 
                         # Spacing delay between threads
-                        if success and idx < len(files_to_post):
+                        if success and not already_replied and idx < len(files_to_post):
                             wait_seconds = random.randint(args.min_delay, args.max_delay)
                             print(f"  Waiting {wait_seconds} seconds before posting the next thread...")
                             time.sleep(wait_seconds)
@@ -344,6 +346,7 @@ def main():
             print(f"==================================================")
             
             success = False
+            already_replied = False
             try:
                 with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
@@ -372,6 +375,7 @@ def main():
                         if "ALREADY_REPLIED" in str(e):
                             print(f"  [SKIP/ALREADY REPLIED] {filename} is already live on Bluesky. Moving to live folder.")
                             success = True
+                            already_replied = True
                             break
                         if _attempt == 0 and wait_for_rate_limit(e):
                             if _safe_to_retry(e):
@@ -402,7 +406,7 @@ def main():
                     print(f"Warning: Failed to move file to {args.move_to}: {e}")
                 
             # Spacing delay between threads (only if there are more files remaining)
-            if idx < total_files:
+            if success and not already_replied and idx < total_files:
                 wait_seconds = random.randint(args.min_delay, args.max_delay)
                 print(f"\nThread {idx} finished. Waiting {wait_seconds} seconds before posting the next thread...")
                 try:
