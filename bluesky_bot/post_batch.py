@@ -250,6 +250,10 @@ def main():
                                     time.sleep = original_sleep
                                 break
                             except Exception as e:
+                                if "ALREADY_REPLIED" in str(e):
+                                    print(f"  [SKIP/ALREADY REPLIED] {filename} is already live on Bluesky. Moving to live folder.")
+                                    success = True
+                                    break
                                 if _attempt == 0 and wait_for_rate_limit(e):
                                     if _safe_to_retry(e):
                                         continue  # nothing posted yet — retry after sleep
@@ -365,6 +369,10 @@ def main():
                             time.sleep = original_sleep
                         break
                     except Exception as e:
+                        if "ALREADY_REPLIED" in str(e):
+                            print(f"  [SKIP/ALREADY REPLIED] {filename} is already live on Bluesky. Moving to live folder.")
+                            success = True
+                            break
                         if _attempt == 0 and wait_for_rate_limit(e):
                             if _safe_to_retry(e):
                                 continue  # nothing posted yet — retry after sleep
@@ -372,8 +380,9 @@ def main():
                         raise  # let outer handler log and move on
 
             except Exception as e:
-                print(f"Failed to process {filename}: {e}")
-                continue
+                if not success:
+                    print(f"Failed to process {filename}: {e}")
+                    continue
                 
             # Move successfully posted files if live and destination folder is provided
             if success and args.live and args.move_to:
