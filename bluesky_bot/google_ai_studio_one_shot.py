@@ -254,9 +254,21 @@ NON_NEWS_DOMAINS = {
     'coinbase.com', 'binance.com', 'pump.fun', 'opensea.io',
 }
 
-def is_news_url(url):
-    """Banlist gate: returns True for any real external http(s) URL not on the non-news denylist.
+# Domains that consistently fail raw scraping due to paywalls, cloudflare blocks,
+# or heavy client-side JavaScript requirements.
+UNSCRAPABLE_DOMAINS = {
+    'pbs.org', 'reut.rs', 'reuters.com',
+    'on.wsj.com', 'wsj.com',
+    'bloom.bg', 'bloomberg.com',
+    'nyti.ms', 'nytimes.com',
+    'washingtonpost.com', 'wapo.st',
+    'ft.com', 'economist.com', 'afr.com'
+}
 
+def is_news_url(url):
+    """Banlist gate: returns True for any real external http(s) URL not on the non-news denylist
+
+    and not on the unscrapable/paywalled domain list.
     Matches the URL's hostname exactly or as a subdomain (suffix match on dot
     boundary). Plain substring matching is wrong: 't.co' would ban
     washingtonpost.com, 'x.com' would ban fox.com, etc.
@@ -272,7 +284,16 @@ def is_news_url(url):
         return False
     if not host:
         return False
-    return not any(host == bad or host.endswith('.' + bad) for bad in NON_NEWS_DOMAINS)
+    
+    # Check non-news social media/shorteners
+    if any(host == bad or host.endswith('.' + bad) for bad in NON_NEWS_DOMAINS):
+        return False
+        
+    # Check paywalled or anti-scraping news domains
+    if any(host == bad or host.endswith('.' + bad) for bad in UNSCRAPABLE_DOMAINS):
+        return False
+        
+    return True
 
 def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets, banned_keywords):
     """Open topic search across all of Bluesky via the authenticated searchPosts endpoint.
@@ -475,6 +496,9 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                     link_text = link.text.strip() if link is not None and link.text else ""
                     
                     if not title_text or not link_text:
+                        continue
+                        
+                    if not is_news_url(link_text):
                         continue
                         
                     desc_cleaned = re.sub(r'<[^>]*>', '', desc_text)
