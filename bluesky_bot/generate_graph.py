@@ -159,11 +159,11 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
             for t in [t1, t2, t3, t4, c1, c2, c3, c4]:
                 t.set_transform(mirror_transform)
 
-        # 5. Plot Micro Points inside the Inner Box (scaled by 0.5, and mirrored horizontally if is_mirrored)
-        u_st_plot = (-claim_u if is_mirrored else claim_u) * 0.5
-        psi_st_plot = claim_psi * 0.5
-        u_ac_plot = (-real_u if is_mirrored else real_u) * 0.5
-        psi_ac_plot = real_psi * 0.5
+        # 5. Plot Micro Points inside the Inner Box (plotted directly on outer axes, and mirrored horizontally if is_mirrored)
+        u_st_plot = (-claim_u if is_mirrored else claim_u)
+        psi_st_plot = claim_psi
+        u_ac_plot = (-real_u if is_mirrored else real_u)
+        psi_ac_plot = real_psi
 
         micro_claim_pt, = ax.plot(u_st_plot, psi_st_plot, marker='o', color='yellow', markersize=6, 
                                   fillstyle='none', markeredgewidth=1.5, label="Micro Stated", zorder=4)
