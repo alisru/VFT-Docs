@@ -470,4 +470,50 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Record Tags & Language Code Integration**: Updated all `create_record` calls for root posts and replies to populate the official `tags` array parameter in the `AppBskyFeedPost` record, alongside `facets` and `langs=["en"]`, ensuring standard and custom Bluesky indexers/feeds index the posts correctly.
 - **Strict Byte-Offset and Caps Validation**: Ensured tag count is capped at the lexicon limit (8 tags) and facets are sorted in ascending byte start order to comply with the AT Protocol specifications.
 - **Fix Up Draft Stories**: Wrote and executed `scratch/fix_draft_tags.py` to retroactively parse all 8 existing draft stories inside `stories/` and append their extracted hashtags to the `"tags"` field inside the JSON configuration files, syncing them to the registries.
-- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Standardizing record metadata tags to restore feed integration and discovery for public assessment data.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Standardizing record metadata tags to restore feed integration and discovery for public assessment data.
+
+### [2026-06-15] Intent 56: Auto-Rebuild Registries on Posting and Bump Splitter Character Limit to 299
+*Status: Completed*
+- **Auto-Rebuild Registries after Posting**: Modified `post_batch.py` and `aletheia_bot.py` to import and call `rebuild_registries()` at the end of successful posting rounds in both watch and one-shot modes. This dynamically updates the `stories_registry.js` file and index JSONs immediately after new threads are posted live, resolving the desynchronization of live/draft counts in the terminal and Control Panel.
+- **Bump Character Limit to 299**: Upgraded the character limit checks and validator threshold rules from 290 to 299 in `aletheia_bot.py`, `post_batch.py`, `validate_batch.py`, and `google_ai_studio_one_shot.py` as well as all system prompt/mapping instructions to prevent unnecessary post splitting.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Fixing desynchronized UI/console counts and refining character length limits to optimize posting flow.
+
+### [2026-06-15] Intent 57: Target Character Limit of 280 with 299 Hard Cap in Validator
+*Status: Completed*
+- **Update Instruction Targets to 280**: Modified system prompts in `google_ai_studio_one_shot.py` and instructions in `bluesky_bot_instructions.md`, `instructions/thread_formatting.md`, `instructions/operational_pipelines.md`, and `instructions/subagent_spawning.md` to instruct the AI generation model to target keeping post (step) character counts under 280.
+- **Maintain 299 Hard Cap**: Kept the hard limit checks and validator threshold rules at 299 inside Python scripts (`aletheia_bot.py`, `post_batch.py`, `validate_batch.py`, and `google_ai_studio_one_shot.py`) to provide a safe character margin and avoid validation failures when posts slightly exceed the target.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Optimizing text limits to balance generation target safety with robust validation execution.
+
+### [2026-06-15] Intent 58: Correct Gemma 4 31b API Model Name
+*Status: Completed*
+- **Research Gemma API availability**: Programmatically listed available Gemma models from the Gemini API and found that the instruction-tuned models are named `gemma-4-26b-a4b-it` and `gemma-4-31b-it`.
+- **Correct Model Fallback name**: Updated the fallback model name from `gemma-4-31b` to `gemma-4-31b-it` in `google_ai_studio_one_shot.py` to enable successful invocations.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Aligning model configuration identifiers with the upstream API specification.
+
+### [2026-06-15] Intent 59: Combine Trajectory and Destination into a Single Post
+*Status: Completed*
+- **Consolidated Thread Output Schema**: Modified `instructions/thread_formatting.md` to establish a 13-post standard by combining the old Trajectory (Element 8) and Destination (Element 9) posts into a single, cohesive "Element 8: The Trajectory & Destination" post.
+- **Updated Code Validation Limits**: Configured `post_batch.py`, `validate_batch.py`, and `google_ai_studio_one_shot.py` to expect exactly 13 posts instead of 14, and updated validator thresholds to reflect the combined structure.
+- **One-Shot Prompt Configuration**: Refactored the system prompts and XML schema instructions inside `google_ai_studio_one_shot.py` to target the 13-post thread array generation.
+- **Database Migration Executed**: Ran the migration script to parse all 2,083 JSON configurations. It successfully converted exactly 606 story files containing 14 posts down to 13 by dynamically finding and merging the Trajectory and Destination elements.
+- **Compiled Registries Rebuilt**: Ran `rebuild_registries.py` to update the global `stories_registry.js` file with the migrated structures.
+- **Control Panel Prompt Alignment**: Modified `control_panel.html` to update the prompt builder helper text, referencing the new 13-post Gnostic trinary thread standard.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Enhancing thread reading comfort for followers, eliminating redundant split posts, and updating validator boundaries cleanly.
+
+### [2026-06-15] Intent 60: Replace gemma-4-31b-it with gemma-4-26b-a4b-it and Exclude 31b Entirely
+*Status: Completed*
+- **Prioritize 26b and Exclude 31b**: Removed `gemma-4-31b-it` from `default_fallbacks` list in `google_ai_studio_one_shot.py` and added `gemma-4-26b-a4b-it` instead to completely avoid using the slow/unstable 31b model.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Standardizing fallback model configuration to avoid slow/unstable models and prioritize highly responsive and clean formatting models.
+
+### [2026-06-15] Intent 61: Expand RSS Feed Sources for Larger News Coverage Spread
+*Status: Completed*
+- **Expanded Global and Local RSS Feeds**: Added reliable public RSS feed URLs from **The Guardian** (World, UK, Tech, Business, Politics, Science), **NPR** (National, World, Politics), **Al Jazeera** (All News), **TechCrunch** (Tech), **CNBC** (Business), and **SBS News** (Australia/World) to `harvest_candidates.py` and `google_ai_studio_one_shot.py`.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Broadening media perspectives and coverage diversity to feed more diverse and comprehensive assessment candidates into the fact-checking engine.
+
+### [2026-06-15] Intent 62: Nested Context-in-Context Graphs and Mirroring layout
+*Status: Completed*
+- **Implement Inverted Inner Hegemony Quadrants**: Updated `generate_graph.py` to use perceptually inverted labels inside the `0.5` square (`Percieved Greater Evil`, `Percieved Lesser Good`, `Percieved Lesser Evil`, `Percieved Greater Good`) by default, reflecting the fractal nature of the Psochic Hegemony.
+- **Support Horizontal Mirroring (Y-Axis Reflection)**: Implemented y-axis reflection (horizontal mirroring using `mtransforms.Affine2D().scale(-1, 1)`) on the inner labels when the macro-context is selfish (`macro_real_u < 0`).
+- **Align Micro Coordinates to Macro Frame**: Modified plotting of micro coordinates to align directly with the macro frame's axes without manual negation. This ensures that when the inner box's label space is mirrored, micro points naturally fall into the correct perceived quadrants.
+- **Registry & Evaluator Integration**: Updated `google_ai_studio_one_shot.py` and `rebuild_registries.py` to extract, validate, and pass the new macro parameters (`macro_event`, `macro_claim_u`, `macro_claim_psi`, `macro_real_u`, `macro_real_psi`) to the graph generation utility, maintaining full backward compatibility.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Enhancing the fact-checking engine to support nested context-in-context evaluations and accurately rendering horizontal mirroring layout to represent perceptual inversion.

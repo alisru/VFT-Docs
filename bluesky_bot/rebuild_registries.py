@@ -55,7 +55,12 @@ def rebuild_registries():
                     cfg.get("claim_u", 0.0), cfg.get("claim_psi", 0.0),
                     cfg.get("real_u",   0.0), cfg.get("real_psi",  0.0),
                     cfg.get("subject", "Story"),
-                    graph_path
+                    graph_path,
+                    macro_event=cfg.get("macro_event", ""),
+                    macro_claim_u=cfg.get("macro_claim_u"),
+                    macro_claim_psi=cfg.get("macro_claim_psi"),
+                    macro_real_u=cfg.get("macro_real_u"),
+                    macro_real_psi=cfg.get("macro_real_psi")
                 )
             except Exception as ge:
                 print(f"Error generating graph for {slug} in darkroom: {ge}")
@@ -154,7 +159,12 @@ def rebuild_registries():
                     cfg.get("claim_u", 0.0), cfg.get("claim_psi", 0.0),
                     cfg.get("real_u",   0.0), cfg.get("real_psi",  0.0),
                     cfg.get("subject", "Story"),
-                    graph_path
+                    graph_path,
+                    macro_event=cfg.get("macro_event", ""),
+                    macro_claim_u=cfg.get("macro_claim_u"),
+                    macro_claim_psi=cfg.get("macro_claim_psi"),
+                    macro_real_u=cfg.get("macro_real_u"),
+                    macro_real_psi=cfg.get("macro_real_psi")
                 )
             except Exception as ge:
                 print(f"Error generating graph for {slug}: {ge}")
@@ -191,7 +201,8 @@ def rebuild_registries():
             "posts":     cfg.get("posts"),
             "created_at": created_at,
         }
-        for k in ["target_url", "rkeys", "post_urls", "actors", "category", "topic", "event"]:
+        for k in ["target_url", "rkeys", "post_urls", "actors", "category", "topic", "event",
+                  "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 

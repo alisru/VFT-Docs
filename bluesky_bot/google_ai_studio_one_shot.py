@@ -469,26 +469,41 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
         "tech": [
             {"name": "BBC Tech", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml"},
             {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"},
+            {"name": "TechCrunch", "url": "https://techcrunch.com/feed/"},
+            {"name": "The Guardian Tech", "url": "https://www.theguardian.com/technology/rss"},
         ],
         "business": [
             {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml"},
             {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"},
+            {"name": "CNBC Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147"},
+            {"name": "The Guardian Business", "url": "https://www.theguardian.com/business/rss"},
         ],
         "politics": [
             {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
             {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"},
+            {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml"},
+            {"name": "The Guardian Politics", "url": "https://www.theguardian.com/politics/rss"},
         ],
         "science": [
             {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"},
             {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"},
+            {"name": "The Guardian Science", "url": "https://www.theguardian.com/science/rss"},
         ],
         "world": [
             {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
             {"name": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"},
+            {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+            {"name": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml"},
+            {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
         ],
         "general": [
             {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
             {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"},
+            {"name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
+            {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+            {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml"},
+            {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+            {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed"},
         ],
     }
 
@@ -716,7 +731,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     n = len(candidates)
     output_format = (
         f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE A SINGLE VALID JSON LIST OF LISTS. NO commentary, NO markdown formatting (other than JSON code fences if desired), NO explanation.\n"
-        f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly 11 items representing the evaluation of that candidate in this specific structure:\n"
+        f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly 16 items representing the evaluation of that candidate in this specific structure:\n"
         "[\n"
         "  [\n"
         '    "id",\n'
@@ -729,14 +744,21 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    real_psi (float),\n"
         '    "mode",\n'
         "    [\n"
-        '      "post 1 (under 290 chars, ending with 1-2 hashtags)",\n'
-        '      "post 2 (under 290 chars)",\n'
+        '      "post 1 (under 280 chars, ending with 1-2 hashtags)",\n'
+        '      "post 2 (under 280 chars)",\n'
         "      ...\n"
-        "      (exactly 14 posts)\n"
+        "      (exactly 13 posts)\n"
         "    ],\n"
-        '    ["Actor / Org / Geopolitical tag", ...]   // item[10]: actors array\n'
+        '    ["Actor / Org / Geopolitical tag", ...],  // item[10]: actors array\n'
+        '    "macro_event",                             // item[11]: overarching context name or "" if none\n'
+        "    macro_claim_u (float or null),             // item[12]: macro stated morality, null if none\n"
+        "    macro_claim_psi (float or null),           // item[13]: macro stated will, null if none\n"
+        "    macro_real_u (float or null),              // item[14]: macro actual morality, null if none\n"
+        "    macro_real_psi (float or null)             // item[15]: macro actual will, null if none\n"
         "  ]\n"
         "]\n\n"
+        "CRITICAL FOR MACRO CONTEXT:\n"
+        "Identify if the candidate news story exists within a distinct overarching macro-event context (e.g. an announcement happening at a political photo-op/rally, or a sports title win happening at a White House PR event). If so, provide the macro-event name in item[11] and evaluate its stated and actual u/psi coordinates in items[12] to [15]. If no distinct macro-context exists, use empty string for item[11] and null for items[12] to [15].\n\n"
         "item[10] = actors array: principal named individuals, orgs, nation-states, or blocs (CRINK/BRICS/NATO/AUKUS/G7/SCO/Five Eyes) the story is ABOUT. Canonical full names. Max 6. [] if none.\n\n"
         "EXAMPLE RESPONSE (for a single candidate, format exactly as JSON list of lists):\n"
         "[\n"
@@ -759,14 +781,18 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '      "The Bright Side:\\nNuance.",\n'
         '      "The Breakdown & Plane Error:\\nExplanation.",\n'
         '      "**Social Physics Analysis:**\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection.",\n'
-        '      "The Trajectory: The Path of Deception.\\nWhen you map the gap...",\n'
-        '      "...it plots a direct trajectory toward Greater Evil.",\n'
+        '      "The Trajectory: The Path of Deception.\\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",\n'
         '      "The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie.",\n'
         '      "Alethekanon:\\nAnalysis.",\n'
         '      "Awwthekanon:\\nEmpathy.",\n'
         '      "Brothekanon:\\nCasual take."\n'
         "    ],\n"
-        '    ["Nigel Farage", "Reform UK", "United Kingdom"]\n'
+        '    ["Nigel Farage", "Reform UK", "United Kingdom"],\n'
+        '    "",\n'
+        "    null,\n"
+        "    null,\n"
+        "    null,\n"
+        "    null\n"
         "  ]\n"
         "]"
     )
@@ -784,7 +810,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "gemini-2.5-flash-lite",
         "gemini-3.5-flash",
         "gemini-3.1-flash-lite",
-        "gemma-4-31b",
+        "gemma-4-26b-a4b-it",
         "gemini-3-flash-preview"
     ]
     # Keep unique order, trying model_name first
@@ -958,6 +984,13 @@ def transpose_flat_to_json(flat_text):
             if len(item) >= 11 and isinstance(item[10], list):
                 ai_actors = [str(a).strip() for a in item[10] if isinstance(a, str) and str(a).strip()]
 
+            # Parse optional macro-context fields with fallback to None/empty
+            macro_event = str(item[11]).strip() if len(item) >= 12 and item[11] is not None else ""
+            macro_claim_u = float(item[12]) if len(item) >= 13 and item[12] is not None else None
+            macro_claim_psi = float(item[13]) if len(item) >= 14 and item[13] is not None else None
+            macro_real_u = float(item[14]) if len(item) >= 15 and item[14] is not None else None
+            macro_real_psi = float(item[15]) if len(item) >= 16 and item[15] is not None else None
+
             story = {
                 "id": str(item[0]).strip(),
                 "subject": str(item[1]).strip(),
@@ -970,6 +1003,11 @@ def transpose_flat_to_json(flat_text):
                 "mode": str(item[8]).strip(),
                 "posts": [str(p) for p in item[9]],
                 "actors": ai_actors,
+                "macro_event": macro_event,
+                "macro_claim_u": macro_claim_u,
+                "macro_claim_psi": macro_claim_psi,
+                "macro_real_u": macro_real_u,
+                "macro_real_psi": macro_real_psi,
                 "status": "COMPLETED DRY RUN"
             }
             evaluations.append(story)
@@ -1027,12 +1065,12 @@ def process_evaluations(evaluations, category="general", topic=None):
 
             # Post count validation
             posts = story.get("posts", [])
-            if len(posts) != 14:
-                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 14). Skipping.")
+            if len(posts) != 13:
+                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 13). Skipping.")
                 continue
 
             # Character limit warnings
-            violations = [(i, len(p)) for i, p in enumerate(posts) if len(p) > 290]
+            violations = [(i, len(p)) for i, p in enumerate(posts) if len(p) > 299]
             if violations:
                 print(f"WARNING: '{story.get('subject')}' has char violations at posts {violations}")
 
