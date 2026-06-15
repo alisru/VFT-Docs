@@ -77,8 +77,8 @@ def main():
                 raise ValueError("Key 'subject' must be a non-empty string.")
             if not isinstance(cfg["posts"], list):
                 raise ValueError("Key 'posts' must be a list.")
-            if len(cfg["posts"]) != 14:
-                raise ValueError(f"Key 'posts' must contain exactly 14 elements (got {len(cfg['posts'])}).")
+            if len(cfg["posts"]) != 13:
+                raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
             for num_k in ["claim_u", "claim_psi", "real_u", "real_psi"]:
                 if not isinstance(cfg[num_k], (int, float)):
                     raise ValueError(f"Key '{num_k}' must be a number (got type {type(cfg[num_k]).__name__}).")
@@ -95,8 +95,8 @@ def main():
                 final_posts.extend(split_text(post))
 
             for idx, post in enumerate(final_posts, 1):
-                if len(post) > 290:
-                    raise ValueError(f"Post {idx} exceeds 290 characters ({len(post)} chars):\n{post}")
+                if len(post) > 299:
+                    raise ValueError(f"Post {idx} exceeds 299 characters ({len(post)} chars):\n{post}")
 
             # 2. Graph Check
             story_id = cfg["id"]

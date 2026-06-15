@@ -516,4 +516,10 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Support Horizontal Mirroring (Y-Axis Reflection)**: Implemented y-axis reflection (horizontal mirroring using `mtransforms.Affine2D().scale(-1, 1)`) on the inner labels when the macro-context is selfish (`macro_real_u < 0`).
 - **Align Micro Coordinates to Macro Frame**: Modified plotting of micro coordinates to align directly with the macro frame's axes without manual negation. This ensures that when the inner box's label space is mirrored, micro points naturally fall into the correct perceived quadrants.
 - **Registry & Evaluator Integration**: Updated `google_ai_studio_one_shot.py` and `rebuild_registries.py` to extract, validate, and pass the new macro parameters (`macro_event`, `macro_claim_u`, `macro_claim_psi`, `macro_real_u`, `macro_real_psi`) to the graph generation utility, maintaining full backward compatibility.
-- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Enhancing the fact-checking engine to support nested context-in-context evaluations and accurately rendering horizontal mirroring layout to represent perceptual inversion.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+1.5) -> Systemic Justice / Productive Action. Enhancing the fact-checking engine to support nested context-in-context evaluations and accurately rendering horizontal mirroring layout to represent perceptual inversion.
+
+### [2026-06-16] Intent 63: Nested Context-in-Context Graphs 180-Degree Rotation Correctness
+*Status: Completed*
+- **Implement 180-Degree Rotation (Perceptual Inversion)**: Modified `generate_graph.py` to rotate the inner box layout by 180 degrees rather than horizontally mirroring it when the macro-context is selfish (`is_rotated = True`). This uses the rotated quadrant labels directly and negates both `u` and `psi` coordinates of the micro points, perfectly mapping them to the rotated labels.
+- **Support Dynamic Orientations**: Kept the normal orientation (upright, matching the outer box) when the macro-context is not selfish (`is_rotated = False`), ensuring the coordinates are plotted directly without transformation.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Systemic Justice / Productive Action. Correcting coordinate mapping to accurately align visual frame transformations with VFT axioms.

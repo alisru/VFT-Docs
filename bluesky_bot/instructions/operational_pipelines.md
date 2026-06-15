@@ -63,7 +63,7 @@ Recompile the indexes, registry database, and automatically draw missing traject
 ### Step 4: User Review (Safety Gate)
 Open `control_panel.html` locally in a browser:
 1. Verify that all newly harvested stories render in the sidebar.
-2. Inspect the 13 steps for each thread (verify they are unnumbered and under 290 characters).
+2. Inspect the 13 steps for each thread (verify they are unnumbered and target under 280 characters, with a hard split cap of 299).
 3. Validate the plotted Matplotlib trajectory graphs.
 
 ### Step 5: Live Posting

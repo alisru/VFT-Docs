@@ -136,33 +136,31 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
         ax.plot([0.5, -0.5], [0.0, 0.0], color='gray', linestyle='-', linewidth=0.5, alpha=0.5, zorder=2)
         ax.plot([0.0, 0.0], [-0.5, 0.5], color='gray', linestyle='-', linewidth=0.5, alpha=0.5, zorder=2)
 
-        # 3. Determine Rotation (perceptual inversion if macro-event is selfish)
-        is_mirrored = (m_real_u < 0)
+        # 3. Write Inner Box Quadrant Labels (placed outside the 0.5 square)
+        # The inner 0.5 box represents the Zone of Perceptual Inversion, so its labels are always perceptually inverted:
+        inner_font_left = {'color': 'white', 'fontsize': 6.5, 'ha': 'right', 'va': 'center', 'zorder': 3}
+        inner_font_right = {'color': 'white', 'fontsize': 6.5, 'ha': 'left', 'va': 'center', 'zorder': 3}
+        
+        corner_font_tl = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'right', 'va': 'bottom', 'zorder': 3}
+        corner_font_tr = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'left', 'va': 'bottom', 'zorder': 3}
+        corner_font_bl = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'right', 'va': 'top', 'zorder': 3}
+        corner_font_br = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'left', 'va': 'top', 'zorder': 3}
 
-        # 4. Write Inner Box Quadrant Labels (perceptually inverted by default inside the 0.5 square)
-        inner_font = {'color': 'white', 'fontsize': 6.5, 'ha': 'center', 'va': 'center', 'zorder': 3}
-        t1 = ax.text(0.25, 0.28, "Percieved Greater Evil\n(Void)", **inner_font)
-        t2 = ax.text(-0.25, 0.28, "Percieved Lesser Good\n(Peace)", **inner_font)
-        t3 = ax.text(0.25, -0.28, "Percieved Lesser Evil\n(Greed)", **inner_font)
-        t4 = ax.text(-0.25, -0.28, "Percieved Greater Good\n(Flow)", **inner_font)
+        # Rotated 180 degrees (perceptually inverted quadrants)
+        t1 = ax.text(0.53, 0.25, "Percieved Greater Evil\n(Void)", **inner_font_left)
+        t2 = ax.text(-0.53, 0.25, "Percieved Lesser Good\n(Peace)", **inner_font_right)
+        t3 = ax.text(0.53, -0.25, "Percieved Lesser Evil\n(Greed)", **inner_font_left)
+        t4 = ax.text(-0.53, -0.25, "Percieved Greater Good\n(Flow)", **inner_font_right)
 
-        # Write Inner Box Corner Tags
-        corner_font = {'color': '#cccccc', 'fontsize': 5.5, 'va': 'center', 'ha': 'center', 'zorder': 3}
-        c1 = ax.text(0.38, 0.38, "CHAOS", **corner_font)
-        c2 = ax.text(-0.38, 0.38, "STAGNATION", **corner_font)
-        c3 = ax.text(0.38, -0.38, "TYRANNY", **corner_font)
-        c4 = ax.text(-0.38, -0.38, "JUSTICE", **corner_font)
+        c1 = ax.text(0.53, 0.53, "CHAOS", **corner_font_tl)
+        c2 = ax.text(-0.53, 0.53, "STAGNATION", **corner_font_tr)
+        c3 = ax.text(0.53, -0.53, "TYRANNY", **corner_font_bl)
+        c4 = ax.text(-0.53, -0.53, "JUSTICE", **corner_font_br)
 
-        if is_mirrored:
-            # Apply horizontal mirror transformation using Affine2D
-            mirror_transform = mtransforms.Affine2D().scale(-1, 1) + ax.transData
-            for t in [t1, t2, t3, t4, c1, c2, c3, c4]:
-                t.set_transform(mirror_transform)
-
-        # 5. Plot Micro Points inside the Inner Box (plotted directly on outer axes, and mirrored horizontally if is_mirrored)
-        u_st_plot = (-claim_u if is_mirrored else claim_u)
+        # 5. Plot Micro Points inside the Inner Box (plotted directly on outer axes without transformation)
+        u_st_plot = claim_u
         psi_st_plot = claim_psi
-        u_ac_plot = (-real_u if is_mirrored else real_u)
+        u_ac_plot = real_u
         psi_ac_plot = real_psi
 
         micro_claim_pt, = ax.plot(u_st_plot, psi_st_plot, marker='o', color='yellow', markersize=6, 

@@ -124,8 +124,8 @@ def validate_story_file(path):
         if missing_keys:
             raise ValueError(f"Missing required JSON schema keys: {missing_keys}")
 
-        if len(cfg["posts"]) != 14:
-            raise ValueError(f"Key 'posts' must contain exactly 14 elements (got {len(cfg['posts'])}).")
+        if len(cfg["posts"]) != 13:
+            raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
 
         # Split posts and length validation
         final_posts = []
@@ -133,8 +133,8 @@ def validate_story_file(path):
             final_posts.extend(split_text(post))
 
         for idx, post in enumerate(final_posts, 1):
-            if len(post) > 290:
-                raise ValueError(f"Post {idx} exceeds 290 characters ({len(post)} chars):\n{post}")
+            if len(post) > 299:
+                raise ValueError(f"Post {idx} exceeds 299 characters ({len(post)} chars):\n{post}")
 
         # Graph Check
         story_id = cfg["id"]
@@ -210,6 +210,7 @@ def main():
                 
                 if files_to_post:
                     print(f"\nFound {len(files_to_post)} new story file(s) to process.")
+                    any_posted = False
                     for idx, path in enumerate(files_to_post, 1):
                         filename = os.path.basename(path)
                         print(f"\n[Watch] Validating and posting: {filename}")
@@ -283,11 +284,22 @@ def main():
                             except Exception as e:
                                 print(f"  Warning: Failed to move file to live: {e}")
                                 
+                        if success:
+                            any_posted = True
+
                         # Spacing delay between threads
                         if success and not already_replied and idx < len(files_to_post):
                             wait_seconds = random.randint(args.min_delay, args.max_delay)
                             print(f"  Waiting {wait_seconds} seconds before posting the next thread...")
                             time.sleep(wait_seconds)
+
+                    if any_posted:
+                        try:
+                            print("\nRebuilding registries to update live and drafts counts...")
+                            from rebuild_registries import rebuild_registries
+                            rebuild_registries()
+                        except Exception as e:
+                            print(f"Warning: Failed to rebuild registries: {e}")
                 
                 # Sleep before next scan
                 time.sleep(5)
@@ -339,6 +351,7 @@ def main():
         print(f"Delay between threads: Randomly spaced between {args.min_delay} and {args.max_delay} seconds.")
         print("Within each thread, we will wait 2.0 seconds between posts to ensure Bluesky indexers align the thread perfectly.")
         
+        any_posted = False
         for idx, path in enumerate(files_to_post, 1):
             filename = os.path.basename(path)
             print(f"\n==================================================")
@@ -405,6 +418,9 @@ def main():
                 except Exception as e:
                     print(f"Warning: Failed to move file to {args.move_to}: {e}")
                 
+            if success:
+                any_posted = True
+
             # Spacing delay between threads (only if there are more files remaining)
             if success and not already_replied and idx < total_files:
                 wait_seconds = random.randint(args.min_delay, args.max_delay)
@@ -418,6 +434,14 @@ def main():
                 except KeyboardInterrupt:
                     print("\nScheduler paused by user. Exiting.")
                     sys.exit(0)
+
+        if any_posted:
+            try:
+                print("\nRebuilding registries to update live and drafts counts...")
+                from rebuild_registries import rebuild_registries
+                rebuild_registries()
+            except Exception as e:
+                print(f"Warning: Failed to rebuild registries: {e}")
 
         print("\nAll scheduled batch threads completed successfully!")
 

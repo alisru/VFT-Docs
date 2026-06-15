@@ -261,7 +261,12 @@ def get_sort_key(c):
 print(f"\nHarvesting normal news from RSS feeds (Target: {TARGET_RSS})...")
 rss_feeds = [
     {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
-    {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"}
+    {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"},
+    {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+    {"name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
+    {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml"},
+    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed"}
 ]
 
 rss_candidates = []

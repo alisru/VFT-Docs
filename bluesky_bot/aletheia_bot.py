@@ -35,7 +35,7 @@ def parse_bsky_url(url):
 
     return parts[handle_idx], parts[post_idx]
 
-def split_text(text, max_len=290):
+def split_text(text, max_len=299):
     """Splits text dynamically at the last newline or space before max_len.
     Avoids orphaning short header lines (e.g. 'Brothekanon:') by only
     splitting at a newline if the chunk before it is at least 80 chars.
@@ -315,8 +315,8 @@ def post_thread(client, thread_config, live=False):
         final_posts.extend(split_text(post))
         
     for idx, post in enumerate(final_posts, 1):
-        if len(post) > 290:
-            raise ValueError(f"Post {idx} exceeds 290 characters ({len(post)} chars) after splitting:\n{post}")
+        if len(post) > 299:
+            raise ValueError(f"Post {idx} exceeds 299 characters ({len(post)} chars) after splitting:\n{post}")
     print(f"All posts successfully split and validated. Thread post count: {len(final_posts)}")
 
     # 2. Graph Check (No generation in posting script)
@@ -607,6 +607,13 @@ def main():
         except Exception as e:
             print(f"ERROR: {e}")
             sys.exit(1)
+
+    try:
+        print("\nRebuilding registries to update live and drafts counts...")
+        from rebuild_registries import rebuild_registries
+        rebuild_registries()
+    except Exception as e:
+        print(f"Warning: Failed to rebuild registries: {e}")
 
     print("\nAll threads processed successfully!")
 

@@ -87,8 +87,8 @@ class AletheiaLauncherApp:
         # Main Layout
         self.build_ui()
 
-        # Initial HUD Load
-        self.refresh_hud_stats()
+        # Initial HUD Load and start periodic refresh loop (every 3 seconds)
+        self.periodic_hud_refresh()
 
         # Start queue reader for console logs
         self.root.after(100, self.read_log_queue)
@@ -129,6 +129,13 @@ class AletheiaLauncherApp:
         except queue.Empty:
             pass
         self.root.after(50, self.read_log_queue)
+
+    def periodic_hud_refresh(self):
+        try:
+            self.refresh_hud_stats()
+        except Exception:
+            pass
+        self.root.after(3000, self.periodic_hud_refresh)
 
     def read_stream(self, stream, target):
         buffer = []
