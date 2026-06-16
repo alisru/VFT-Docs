@@ -42,29 +42,31 @@ def calculate_son_coordinates(gg_son, ge_son, lg_son, le_son):
 
 class TestConvergenceInversionSON(unittest.TestCase):
     def test_coopted_case(self):
-        # Case 1: Co-opted (Supports the Greater Evil / bad frame)
-        gg_son = (0.1, 0.8, 0.1)
-        ge_son = (0.8, 0.1, 0.1)
-        lg_son = (0.2, 0.2, 0.2)
-        le_son = (0.2, 0.2, 0.2)
+        # Case 1: Co-opted (Supports the Greater Evil / bad frame) - UFC Trump Birthday Event
+        # Evaluated using the actual story quotes and evidence:
+        gg_son = (0.3, 0.8, 0.3)
+        ge_son = (0.7, 0.0, 0.1)
+        lg_son = (0.4, 0.3, 0.3)
+        le_son = (0.9, 0.0, 0.1)
         
         u, psi = calculate_son_coordinates(gg_son, ge_son, lg_son, le_son)
         print(f"\n[CO-OPTED CASE] Calculated Coordinates: u={u:+.3f}, psi={psi:+.3f}")
         
-        # We expect u < 0 (pulled to negative morality by supporting Greater Evil)
+        # We expect u < 0 (pulled to negative morality by supporting Greater Evil / Lesser Evil)
         self.assertTrue(u < 0)
         
     def test_subversive_case(self):
-        # Case 2: Subversive (Opposes the Greater Evil / bad frame)
-        gg_son = (0.8, 0.1, 0.1)
-        ge_son = (0.1, 0.9, 0.0)
-        lg_son = (0.2, 0.2, 0.2)
-        le_son = (0.2, 0.2, 0.2)
+        # Case 2: Subversive (Opposes the Greater Evil / bad frame) - Whistleblower
+        # Evaluated using the actual whistleblower scenario:
+        gg_son = (0.9, 0.0, 0.1)
+        ge_son = (0.0, 0.9, 0.1)
+        lg_son = (0.2, 0.2, 0.6)
+        le_son = (0.0, 0.8, 0.2)
         
         u, psi = calculate_son_coordinates(gg_son, ge_son, lg_son, le_son)
         print(f"[SUBVERSIVE CASE] Calculated Coordinates: u={u:+.3f}, psi={psi:+.3f}")
         
-        # We expect u > 0 (pushed to positive morality by opposing Greater Evil)
+        # We expect u > 0 (pushed to positive morality by opposing Greater Evil / Lesser Evil)
         self.assertTrue(u > 0)
 
 if __name__ == "__main__":

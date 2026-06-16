@@ -1,51 +1,85 @@
 # Test Instructions: Convergence-Inversion Test using the SON Method
 
-This document outlines the test instructions for evaluating context-in-context narratives using the **Multi-Attractor Vector Force Equilibrium (SON) Method**. This protocol calculates coordinates and detects perceptual inversions dynamically.
+This document outlines the test instructions for evaluating context-in-context narratives using the **Multi-Attractor Vector Force Equilibrium (SON) Method**. This protocol calculates coordinates and detects perceptual inversions dynamically by evaluating the story's relationship to all points.
 
 ---
 
-## 1. The 4 Attractor Fields
+## 1. The Prompt Template (AI Input)
 
-The coordinate space is defined by four moral/volitional attractors:
-*   **Greater Good ($\vec{A}_{GG}$)** = $(+1.0, +1.0)$
-*   **Greater Evil ($\vec{A}_{GE}$)** = $(-1.0, -1.0)$
-*   **Lesser Good ($\vec{A}_{LG}$)** = $(+1.0, -1.0)$
-*   **Lesser Evil ($\vec{A}_{LE}$)** = $(-1.0, +1.0)$
+To populate the attractor fields, we send the following instruction set to the AI:
 
-For each attractor $i$, the evaluator provides three readings in the range $[0.0, 1.0]$:
-*   **Support ($S_i$)**: Attraction (pull toward $\vec{A}_i$)
-*   **Oppose ($O_i$)**: Repulsion (push away from $\vec{A}_i$, which is a pull toward $-\vec{A}_i$)
-*   **Neutral ($N_i$)**: Orbit (orthogonal force $\vec{A}_i^{\perp}$)
+```markdown
+You are an expert hegemonic analyst. Evaluate the provided news story and populate the 3-reading vector (Support, Oppose, Neutral) in the range [0.0 - 1.0] for each of the 4 moral/volitional attractors:
 
----
+*   **Greater Good (GG)**: (+1.0, +1.0)
+*   **Greater Evil (GE)**: (-1.0, -1.0)
+*   **Lesser Good (LG)**: (+1.0, -1.0)
+*   **Lesser Evil (LE)**: (-1.0, +1.0)
 
-## 2. Mathematical Calculation Step
-
-1.  **Define Orthogonal Vectors**:
-    For each attractor vector $\vec{A}_i = (u_i, \psi_i)$, the orthogonal vector $\vec{A}_i^{\perp}$ is defined as:
-    $$\vec{A}_i^{\perp} = (-\psi_i, u_i)$$
-
-2.  **Compute Individual Attractor Forces**:
-    $$\vec{F}_i = S_i \vec{A}_i - O_i \vec{A}_i + N_i \vec{A}_i^{\perp}$$
-
-3.  **Sum and Normalize**:
-    $$\vec{C}_{net} = \frac{1}{\sum_{i} (S_i + O_i + N_i)} \sum_{i} \vec{F}_i$$
+For each attractor, populate:
+- **Support (S)**: Does the action/narrative align with, reinforce, or promote this attractor? (Provide quote/evidence + score)
+- **Oppose (O)**: Does the action/narrative actively violate, resist, or conflict with this attractor? (Provide quote/evidence + score)
+- **Neutral (N)**: Is the action/narrative indifferent, orthogonal, or unrelated to this attractor? (Provide quote/evidence + score)
+```
 
 ---
 
-## 3. Test Cases & Expected Outcomes
+## 2. Reference AI Evaluation (`gaethje-ufc-white-house-show`)
 
-We test using the coordinates of the primary research reference **`gaethje-ufc-white-house-show`**:
-*   **Macro Container**: Stated $GG$, Actual $GE$ (Birthday ball co-optation).
+Below is the reference output demonstrating how the AI populates the SON vectors using the target story text:
 
-### Case 1: Co-opted Interpretation (Supports Bad Frame)
-*   **Attractor Pulls**:
-    *   $GG$ (Greater Good): $S=0.1, O=0.8, N=0.1$ (high opposition/conflict with absolute good)
-    *   $GE$ (Greater Evil): $S=0.8, O=0.1, N=0.1$ (strong support/reinforcement of the bad frame)
-*   **Expected Coordinate**: Net morality $u < 0$ (pulled negative on the fly).
+### Attractor 1: Greater Good (GG = +1.0, +1.0)
+*   **Support ($S_{GG}$)**: **0.3**
+    *   *Evidence*: "A champion's victory lap on the White House lawn, framed as a patriotic spectacle... celebrating 250 years of American independence."
+    *   *Rationale*: The framing claims a public benefit (patriotism/unity), but it is a surface-level cover.
+*   **Oppose ($O_{GG}$)**: **0.8**
+    *   *Evidence*: "Using the nation's highest civic lawn for a commercial bloodsport... degrades public institutions."
+    *   *Rationale*: The action directly conflicts with systemic justice and civic dignity.
+*   **Neutral ($N_{GG}$)**: **0.3**
+    *   *Evidence*: "Combat sports can showcase incredible human resilience, skill..."
+    *   *Rationale*: The athletic achievement is partially orthogonal to the political co-optation.
 
-### Case 2: Subversive Interpretation (Opposes Bad Frame)
-*   **Attractor Pulls**:
-    *   $GG$ (Greater Good): $S=0.8, O=0.1, N=0.1$ (strong alignment with absolute good)
-    *   $GE$ (Greater Evil): $S=0.1, O=0.9, N=0.0$ (strong active opposition to the bad frame)
-*   **Expected Coordinate**: Net morality $u > 0$ (pushed positive on the fly).
+### Attractor 2: Greater Evil (GE = -1.0, -1.0)
+*   **Support ($S_{GE}$)**: **0.7**
+    *   *Evidence*: "...using violence as entertainment... masking the destructive nature of the sport."
+    *   *Rationale*: It actively promotes physical violence as public entertainment, drifting toward Chaos.
+*   **Oppose ($O_{GE}$)**: **0.0**
+    *   *Evidence*: None.
+    *   *Rationale*: No actors in the scenario oppose or resist the violence.
+*   **Neutral ($N_{GE}$)**: **0.1**
+    *   *Evidence*: None.
+    *   *Rationale*: The event is active, not passive.
+
+### Attractor 3: Lesser Evil / Greatest Lie (LE = -1.0, +1.0)
+*   **Support ($S_{LE}$)**: **0.9**
+    *   *Evidence*: "...hosted on Trump's birthday... extracting public prestige for private branding."
+    *   *Rationale*: The event is a high-will, self-serving co-optation of a public symbol for private branding.
+*   **Oppose ($O_{LE}$)**: **0.0**
+    *   *Evidence*: "Trump and UFC president Dana White were prominent figures."
+    *   *Rationale*: No actors resist the co-optation.
+*   **Neutral ($N_{LE}$)**: **0.1**
+    *   *Evidence*: None.
+    *   *Rationale*: The event is highly partisan/deceptive.
+
+### Attractor 4: Lesser Good (LG = +1.0, -1.0)
+*   **Support ($S_{LG}$)**: **0.4**
+    *   *Evidence*: "...providing a moment of shared celebration for its intended audience."
+    *   *Rationale*: It provides passive/local entertainment for a subset of the population.
+*   **Oppose ($O_{LG}$)**: **0.3**
+    *   *Evidence*: "...put a UFC cage on the White House lawn..."
+    *   *Rationale*: The active violence conflicts with passive stasis/peace.
+*   **Neutral ($N_{LG}$)**: **0.3**
+    *   *Evidence*: "...genuinely entertained millions of fans..."
+    *   *Rationale*: The fans are passive consumers, not active builders.
+
+---
+
+## 3. Reference Coordinate Calculation
+
+$$\sum \text{Weights} = 1.4 (\text{GG}) + 0.8 (\text{GE}) + 1.0 (\text{LE}) + 1.0 (\text{LG}) = 4.2$$
+
+$$\sum \vec{F}_i = (-2.0, 0.0)$$
+
+$$\vec{C}_{net} = \frac{(-2.0, 0.0)}{4.2} = (-0.476, 0.0)$$
+
+This places the final coordinate in the **Lesser Evil / Greatest Lie** quadrant on the fly, matching the co-opted reality of the event.
