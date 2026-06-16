@@ -273,9 +273,6 @@ rss_candidates = []
 seen_urls = set()
 
 for feed in rss_feeds:
-    if len(rss_candidates) >= TARGET_RSS:
-        break
-        
     print(f"Fetching from {feed['name']} RSS feed: {feed['url']}...")
     req = urllib.request.Request(feed['url'], headers={'User-Agent': 'Mozilla/5.0'})
     try:
@@ -286,9 +283,6 @@ for feed in rss_feeds:
         print(f"Found {len(items)} raw items in {feed['name']}.")
         
         for item in items:
-            if len(rss_candidates) >= TARGET_RSS:
-                break
-                
             title = item.find('title')
             desc = item.find('description')
             link = item.find('link')
@@ -311,17 +305,56 @@ for feed in rss_feeds:
             if is_duplicate_story(text_body, link_text):
                 continue
                 
+            # Parse publication date
+            import datetime
+            pub_date = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
+            for child in item:
+                tag_lower = child.tag.lower()
+                if tag_lower.endswith('pubdate') or tag_lower.endswith('date'):
+                    if child.text:
+                        try:
+                            val = child.text.strip()
+                            if 'T' in val:
+                                pub_date = datetime.datetime.fromisoformat(val.replace('Z', '+00:00'))
+                            else:
+                                import email.utils
+                                pub_date = email.utils.parsedate_to_datetime(val)
+                            if pub_date.tzinfo is None:
+                                pub_date = pub_date.replace(tzinfo=datetime.timezone.utc)
+                            break
+                        except Exception:
+                            pass
+
             rss_candidates.append({
                 "url": link_text,
                 "target_url": "",
                 "mode": "root",
                 "text": text_body,
-                "subject": title_text[:30].strip() + "..."
+                "subject": title_text[:30].strip() + "...",
+                "pub_date": pub_date
             })
             seen_urls.add(link_text)
             
     except Exception as e:
         print(f"Warning: Failed to fetch {feed['name']} RSS: {e}")
+
+# Sort all RSS candidates by pub_date descending (newest first)
+import datetime
+rss_candidates = sorted(
+    rss_candidates,
+    key=lambda c: c.get("pub_date", datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)),
+    reverse=True
+)
+
+# Apply preference and target limits to the chronological list
+preferred_rss = [c for c in rss_candidates if is_preferred_outlet(c["url"])]
+regular_rss = [c for c in rss_candidates if not is_preferred_outlet(c["url"])]
+rss_candidates = (preferred_rss + regular_rss)[:TARGET_RSS]
+
+# Convert pub_date to string for JSON serialization
+for c in rss_candidates:
+    if "pub_date" in c and isinstance(c["pub_date"], datetime.datetime):
+        c["pub_date"] = c["pub_date"].isoformat()
 
 print(f"Harvested exactly {len(rss_candidates)} RSS candidates.")
 

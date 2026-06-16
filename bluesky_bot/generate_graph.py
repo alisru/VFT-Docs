@@ -3,41 +3,38 @@ import matplotlib.patches as patches
 import matplotlib.transforms as mtransforms
 
 def get_path_name(claim_u, claim_psi, real_u, real_psi):
-    # Determine starting and ending quadrants
-    # TL: (+u, +psi) - Greater Good / Good Preference
-    # BL: (+u, -psi) - Lesser Good / Good Preference
-    # TR: (-u, +psi) - Greatest Lie / Bad Preference
-    # BR: (-u, -psi) - Greater Evil / Bad Preference
-    
-    start = "TL" if claim_u > 0 else "TR"
-    if claim_psi < 0:
-        start = "BL" if claim_u > 0 else "BR"
-        
-    end = "TL" if real_u > 0 else "TR"
-    if real_psi < 0:
-        end = "BL" if real_u > 0 else "BR"
+    # Determine exit name and origin zone
+    if claim_u > 0 and claim_psi > 0:
+        exit_name = "Fall"
+        origin_zone = "Greater Good"
+    elif claim_u <= 0 and claim_psi > 0:
+        exit_name = "Revelation"
+        origin_zone = "Greatest Lie"
+    elif claim_u > 0 and claim_psi <= 0:
+        exit_name = "Awakening"
+        origin_zone = "Lesser Good"
+    else:
+        exit_name = "Reckoning"
+        origin_zone = "Greater Evil"
 
-    # 1. Canonical 4-Stage Gnostic Moral Cycle
-    if start == "BL" and end == "TL":
-        return "The Path of Grace"
-    elif start == "TL" and end == "TR":
-        return "The Path of The Fall"
-    elif start == "TR" and end == "BR":
-        return "The Path of Delusion"
-    elif start == "BR" and end == "BL":
-        return "The Path of Redemption"
-        
-    # 2. Structural Deviations & Diagonals
-    elif start == "TL" and end == "BL":
-        return "The Path of Empty Mass (The Fall)"
-    elif start == "TL" and end == "BR":
-        return "The Path of Deception"
-    elif start == "BL" and end == "TR":
-        return "The Path of The Fall"
-    elif start == "TR" and end == "BL":
-        return "The Path of Redemption"
+    # Determine entry name and destination zone
+    if real_u > 0 and real_psi > 0:
+        entry_name = "Grace"
+        dest_zone = "Greater Good"
+    elif real_u <= 0 and real_psi > 0:
+        entry_name = "Deception"
+        dest_zone = "Greatest Lie"
+    elif real_u > 0 and real_psi <= 0:
+        entry_name = "Redemption"
+        dest_zone = "Lesser Good"
+    else:
+        entry_name = "Destruction"
+        dest_zone = "Greater Evil"
 
-    return "Projected Trajectory"
+    if origin_zone == dest_zone:
+        return "Stasis"
+        
+    return f"{exit_name} into {entry_name}"
 
 def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
                macro_event="", macro_claim_u=None, macro_claim_psi=None, macro_real_u=None, macro_real_psi=None):
@@ -65,11 +62,11 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
         "Only Me\n(-2.0)"
     ]
     y_labels = [
-        "Active-Active (+2.0)",
-        "Passive-Active (+1.0)",
+        "Active-\nActive (+2.0)",
+        "Passive-\nActive (+1.0)",
         "Neutral (0.0)",
-        "Passive-Passive (-1.0)",
-        "Active-Passive (-2.0)"
+        "Passive-\nPassive (-1.0)",
+        "Active-\nPassive (-2.0)"
     ]
     
     ax.set_xticklabels(x_labels, fontsize=8, color='white', ha='center')
@@ -114,6 +111,18 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
         m_real_u = macro_real_u if macro_real_u is not None else 0.0
         m_real_psi = macro_real_psi if macro_real_psi is not None else 0.0
 
+        # Check if micro and macro coordinates are identical
+        coordinates_match = (
+            claim_u == m_claim_u and
+            claim_psi == m_claim_psi and
+            real_u == m_real_u and
+            real_psi == m_real_psi
+        )
+        
+        if coordinates_match:
+            has_macro = False
+
+    if has_macro:
         # 1. Plot Macro Points on Outer Grid
         macro_claim_pt, = ax.plot(m_claim_u, m_claim_psi, marker='o', color='yellow', markersize=10, 
                                   fillstyle='none', markeredgewidth=2, label="Macro Stated", zorder=3)
@@ -136,32 +145,22 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
         ax.plot([0.5, -0.5], [0.0, 0.0], color='gray', linestyle='-', linewidth=0.5, alpha=0.5, zorder=2)
         ax.plot([0.0, 0.0], [-0.5, 0.5], color='gray', linestyle='-', linewidth=0.5, alpha=0.5, zorder=2)
 
-        # 3. Write Inner Box Quadrant Labels (placed outside the 0.5 square)
-        # The inner 0.5 box represents the Zone of Perceptual Inversion, so its labels are always perceptually inverted:
-        inner_font_left = {'color': 'white', 'fontsize': 6.5, 'ha': 'right', 'va': 'center', 'zorder': 3}
-        inner_font_right = {'color': 'white', 'fontsize': 6.5, 'ha': 'left', 'va': 'center', 'zorder': 3}
-        
-        corner_font_tl = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'right', 'va': 'bottom', 'zorder': 3}
-        corner_font_tr = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'left', 'va': 'bottom', 'zorder': 3}
-        corner_font_bl = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'right', 'va': 'top', 'zorder': 3}
-        corner_font_br = {'color': '#cccccc', 'fontsize': 5.5, 'ha': 'left', 'va': 'top', 'zorder': 3}
+        # 3. Determine Inversion (horizontal reflection/mirroring if macro-context is selfish and a positive micro event occurs)
+        is_inverted = (m_real_u < 0) and (real_u > 0)
 
-        # Rotated 180 degrees (perceptually inverted quadrants)
-        t1 = ax.text(0.53, 0.25, "Percieved Greater Evil\n(Void)", **inner_font_left)
-        t2 = ax.text(-0.53, 0.25, "Percieved Lesser Good\n(Peace)", **inner_font_right)
-        t3 = ax.text(0.53, -0.25, "Percieved Lesser Evil\n(Greed)", **inner_font_left)
-        t4 = ax.text(-0.53, -0.25, "Percieved Greater Good\n(Flow)", **inner_font_right)
+        # 4. Write Inner Box Quadrant Labels (placed on direct 0.5 corners)
+        inner_label_opts = {'color': 'white', 'fontsize': 6, 'alpha': 0.5, 'zorder': 3}
+        ax.text(0.51, 0.51, "P-LE", ha='right', va='bottom', **inner_label_opts)   # TL corner
+        ax.text(-0.51, 0.51, "P-GG", ha='left', va='bottom', **inner_label_opts)  # TR corner
+        ax.text(0.51, -0.51, "P-GE", ha='right', va='top', **inner_label_opts)   # BL corner
+        ax.text(-0.51, -0.51, "P-LG", ha='left', va='top', **inner_label_opts)  # BR corner
 
-        c1 = ax.text(0.53, 0.53, "CHAOS", **corner_font_tl)
-        c2 = ax.text(-0.53, 0.53, "STAGNATION", **corner_font_tr)
-        c3 = ax.text(0.53, -0.53, "TYRANNY", **corner_font_bl)
-        c4 = ax.text(-0.53, -0.53, "JUSTICE", **corner_font_br)
-
-        # 5. Plot Micro Points inside the Inner Box (plotted directly on outer axes without transformation)
-        u_st_plot = claim_u
-        psi_st_plot = claim_psi
-        u_ac_plot = real_u
-        psi_ac_plot = real_psi
+        # 5. Plot Micro Points inside the Inner Box (scaled by 0.5)
+        # Horizontally flipped if is_inverted is active
+        u_st_plot = (-claim_u if is_inverted else claim_u) * 0.5
+        psi_st_plot = claim_psi * 0.5
+        u_ac_plot = (-real_u if is_inverted else real_u) * 0.5
+        psi_ac_plot = real_psi * 0.5
 
         micro_claim_pt, = ax.plot(u_st_plot, psi_st_plot, marker='o', color='yellow', markersize=6, 
                                   fillstyle='none', markeredgewidth=1.5, label="Micro Stated", zorder=4)
@@ -175,22 +174,26 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
                     arrowprops=dict(arrowstyle="->", color="white", linestyle="dashed", linewidth=1.0, connectionstyle="arc3,rad=-0.2"),
                     zorder=4)
 
-        # 6. Draw Dashed Connection lines from outer points to inner box corners on the 0.5 square (straight)
-        def get_corner(u, psi):
-            u_c = 0.5 if u >= 0 else -0.5
-            psi_c = 0.5 if psi >= 0 else -0.5
-            return u_c, psi_c
-
-        c_st_u, c_st_psi = get_corner(m_claim_u, m_claim_psi)
-        ax.plot([m_claim_u, c_st_u], [m_claim_psi, c_st_psi], color='white', linestyle='--', linewidth=0.75, alpha=0.7, zorder=1)
-
-        c_ac_u, c_ac_psi = get_corner(m_real_u, m_real_psi)
-        ax.plot([m_real_u, c_ac_u], [m_real_psi, c_ac_psi], color='white', linestyle='--', linewidth=0.75, alpha=0.7, zorder=1)
+        # 6. (Connection lines to corners disabled to declutter layout)
+        pass
 
         legend_handles = [macro_claim_pt, macro_real_pt, micro_claim_pt, micro_real_pt]
         path_name = get_path_name(claim_u, claim_psi, real_u, real_psi)
+        
+        macro_good = (m_real_u >= 0)
+        micro_good = (real_u >= 0)
+        if macro_good and micro_good:
+            frame_desc = "Standard Hegemony: Good Event in Good Macro Frame"
+        elif macro_good and not micro_good:
+            frame_desc = "Standard Hegemony: Bad Event in Good Macro Frame"
+        elif not macro_good and micro_good:
+            frame_desc = "Inverted Hegemony: Good Event in Bad Macro Frame"
+        else:
+            frame_desc = "Inverted Hegemony: Bad Event in Bad Macro Frame"
+
         title_text = (
             f"{title}\n"
+            f"Frame Type: {frame_desc}\n"
             f"Projected Eventuality: {path_name}\n"
             f"Micro: Stated ({claim_u:+.1f}, {claim_psi:+.1f}) | Actual ({real_u:+.1f}, {real_psi:+.1f})\n"
             f"Macro [{macro_event}]: Stated ({m_claim_u:+.1f}, {m_claim_psi:+.1f}) | Actual ({m_real_u:+.1f}, {m_real_psi:+.1f})"
@@ -211,6 +214,8 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
 
         legend_handles = [claim_point, real_point]
         title_text = f"{title}\nProjected Eventuality: {path_name}\nStated: ({claim_u:+.1f}, {claim_psi:+.1f})  |  Actual: ({real_u:+.1f}, {real_psi:+.1f})"
+        if macro_event and macro_event.strip():
+            title_text += f"\nMacro Event: {macro_event}"
 
     # Axis labels
     ax.set_xlabel("Morality (υ)", color='white')
@@ -218,8 +223,9 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.tick_params(colors='gray')
     ax.set_title(title_text, color='white', pad=25, fontsize=10)
 
-    # Legend
-    legend = ax.legend(handles=legend_handles, loc='upper right', facecolor='#111111', edgecolor='white', labelcolor='white')
+    # Legend (moved to bottom center)
+    legend = ax.legend(handles=legend_handles, loc='upper center', bbox_to_anchor=(0.5, -0.15),
+                       ncol=2 if len(legend_handles)<=2 else 4, facecolor='#111111', edgecolor='white', labelcolor='white', fontsize=8)
 
     # Watermark label
     fig.text(0.5, 0.01, 'Psychic Hegemony Graph', ha='center', va='bottom',
@@ -227,7 +233,7 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
 
     plt.tight_layout()
 
-    plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300)
+    plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300, bbox_inches='tight')
     plt.close(fig)
 
 if __name__ == "__main__":

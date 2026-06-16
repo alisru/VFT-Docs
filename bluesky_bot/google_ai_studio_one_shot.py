@@ -578,12 +578,33 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                     if subject_approx in seen_ids:
                         continue
                         
+                    # Parse publication date
+                    import datetime
+                    pub_date = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
+                    for child in item:
+                        tag_lower = child.tag.lower()
+                        if tag_lower.endswith('pubdate') or tag_lower.endswith('date'):
+                            if child.text:
+                                try:
+                                    val = child.text.strip()
+                                    if 'T' in val:
+                                        pub_date = datetime.datetime.fromisoformat(val.replace('Z', '+00:00'))
+                                    else:
+                                        import email.utils
+                                        pub_date = email.utils.parsedate_to_datetime(val)
+                                    if pub_date.tzinfo is None:
+                                        pub_date = pub_date.replace(tzinfo=datetime.timezone.utc)
+                                    break
+                                except Exception:
+                                    pass
+
                     candidates.append({
                         "url": link_text,
                         "target_url": "",
                         "mode": "root",
                         "text": text_body,
-                        "subject": title_text
+                        "subject": title_text,
+                        "pub_date": pub_date
                     })
                     seen_urls.add(normalized)
             except Exception as e:
@@ -689,6 +710,14 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
     rss_cands = [c for c in candidates if c["mode"] == "root"]
     bsky_cands = [c for c in candidates if c["mode"] == "reply"]
 
+    # Sort all RSS candidates by pub_date descending (newest first)
+    import datetime
+    rss_cands = sorted(
+        rss_cands,
+        key=lambda c: c.get("pub_date", datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)),
+        reverse=True
+    )
+
     # Prioritize preferred outlets in Bluesky candidates
     preferred_bsky = [c for c in bsky_cands if is_preferred_outlet(c["url"])]
     regular_bsky = [c for c in bsky_cands if not is_preferred_outlet(c["url"])]
@@ -705,7 +734,12 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
     preferred_final = [c for c in combined if is_preferred_outlet(c["url"])]
     regular_final = [c for c in combined if not is_preferred_outlet(c["url"])]
     
-    return preferred_final + regular_final
+    final_cands = preferred_final + regular_final
+    for c in final_cands:
+        if "pub_date" in c and isinstance(c["pub_date"], datetime.datetime):
+            c["pub_date"] = c["pub_date"].isoformat()
+            
+    return final_cands
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
 _RULES_CACHE = {}

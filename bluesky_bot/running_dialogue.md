@@ -522,4 +522,39 @@ No dry header. Just a punchy scene-setter, then the metadata.
 *Status: Completed*
 - **Implement 180-Degree Rotation (Perceptual Inversion)**: Modified `generate_graph.py` to rotate the inner box layout by 180 degrees rather than horizontally mirroring it when the macro-context is selfish (`is_rotated = True`). This uses the rotated quadrant labels directly and negates both `u` and `psi` coordinates of the micro points, perfectly mapping them to the rotated labels.
 - **Support Dynamic Orientations**: Kept the normal orientation (upright, matching the outer box) when the macro-context is not selfish (`is_rotated = False`), ensuring the coordinates are plotted directly without transformation.
-- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Systemic Justice / Productive Action. Correcting coordinate mapping to accurately align visual frame transformations with VFT axioms.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Systemic Justice / Productive Action. Correcting coordinate mapping to accurately align visual frame transformations with VFT axioms.
+
+### [2026-06-16] Intent 64: Chronological Sorting for RSS Candidate Harvesting
+*Status: Completed*
+- **Robust Publication Date Parsing**: Integrated namespace-agnostic publication date extraction supporting standard RFC 2822 (via `email.utils`) and ISO 8601 (via `fromisoformat`) date-time values.
+- **Global Chronological Sort**: Modified the harvesting logic in both [harvest_candidates.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py) and [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py) to fetch all entries across all feeds first, sort them globally from newest to oldest by publication date, and then slice/prioritize them.
+- **Removed Sequential Breaks**: Eliminated early loop terminations in `harvest_candidates.py` which previously caused subsequent RSS feeds to be completely ignored once `TARGET_RSS` was met.
+- **JSON Serialization Hardening**: Added a post-processing pass to serialize parsed datetime objects into ISO-8601 strings prior to JSON serialization, avoiding `TypeError` serialization crashes.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Ensures that candidate feeds reflect the absolute newest news events rather than regional/sequential feeds.
+
+### [2026-06-16] Intent 65: Simplify Nested Graphs and Deduplicate Identical Coordinates
+*Status: Completed*
+- **Auto-Detect Identical Coordinates**: Modified `generate_graph.py` to compare micro coordinates with macro coordinates when `macro_event` is present. If they match exactly, the graph generator automatically falls back to drawing a standard clean single-level graph (omitting the nested inner box and redundant duplicate points) while keeping the macro event name in the subtitle.
+- **Remove Nested Clutter**: Simplified the nested graph layout by completely removing the inner box's 4 corner tags (`CHAOS`, `STAGNATION`, `TYRANNY`, `JUSTICE`) and 4 text labels (`Percieved Greater Evil`, etc.), which previously caused severe visual overlapping and clashing in small dimensions.
+- **Batch Regenerate Draft Graphs**: Created a Python script and regenerated all 58 draft stories' graphs under `graph_png/` to ensure they reflect the clean, simplified design. Rebuilt the unified indices and `stories_registry.js` to ensure the registry index matches the newly generated graphs.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Action. Resolving visual clutter and data redundancy in telemetry graphs to maximize readability and information clarity for operators and users.
+
+### [2026-06-16] Intent 66: Map Descriptive Stories and Events to Slew Example Graphs
+*Status: Completed*
+- **Scenario and Event Mapping**: Updated `test_slew.py` to map the 32 positive and negative macro context case coordinate pairs to their respective real-world scenario titles and macro events from `hegemony_scenarios_guide.md`.
+- **Narrative Headers**: Integrated the detailed Stated and Actual descriptions directly into the graph title headers next to their corresponding coordinates (maintaining standard 8x8 dimensions and avoiding footer clutter).
+- **Regenerate Slew Graphs**: Executed the test generator script to update all 32 example graphs inside the workspace directory `_AI files and chat logs/test_runs/` with fully descriptive text and titles.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive Action. Embedding contextual titles and stated/actual narratives directly into the telemetry test suite header titles to maximize clean presentation.
+
+### [2026-06-16] Intent 67: Operationalize Macro/Micro Contextual Containment Rule
+*Status: Completed*
+- **Core Rule — Contextual Containment**: The macro is the **cause-effect-possible-lyrical space** of the micro. The macro defines what causes the micro, what effects the micro can have, what outcomes are even possible for the micro, and what meaning the micro event carries. Without the macro, the micro event is not just unlikely — it is meaningless.
+  - ✅ VALID: Corporate merger collapses (macro) → team leader inside that same company tries to deliver their project (micro). The project's meaning, its stakes, its possible outcomes — all defined by the merger.
+  - ✅ VALID: Factory green program fails (macro) → factory's own sustainability officer goes public (micro). The officer's act only has meaning because the program exists and is failing.
+  - ❌ INVALID: Factory causes toxic spill (macro) → unrelated community group cleans a stream (micro). The community group's meaning, causes, and possible outcomes exist entirely outside the factory's space. Two separate trajectories.
+- **N3 Fix**: Changed micro actual from (+1.0, -1.0) to (-1.0, -1.0) — guard escalates to locking the medicine cabinet permanently rather than relenting. Bad amplifies bad. No inversion.
+- **N5 Fix**: Replaced the broken adjacent-event scenario with a properly nested one. The new micro actor (a factory sustainability officer) lives inside the macro context (the factory's green program). See `test_slew.py` N5 entry.
+- **Inversion Rule Codified**: Inversion fires when `m_real_u < 0` AND `real_u > 0` — a genuinely good micro actual inside a bad macro frame. The bad macro perceives the good micro act as a threat. A bad micro act amplifying a bad macro (N3) does NOT invert — the badness is coherent with the frame.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Action. Encoding structural validation rules to prevent category errors in scenario construction.
+
+
