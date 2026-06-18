@@ -334,6 +334,23 @@ def is_news_url(url):
         
     return True
 
+def is_banned(text, url, banned_keywords):
+    if not banned_keywords:
+        return False
+    text_lower = text.lower()
+    url_lower = url.lower() if url else ""
+    for bk in banned_keywords:
+        # Check direct match of the keyword
+        if bk in text_lower or (url_lower and bk in url_lower):
+            return True
+        # If the keyword contains spaces, check hyphenated/underscored/condensed variants
+        if " " in bk:
+            variants = [bk.replace(" ", "-"), bk.replace(" ", "_"), bk.replace(" ", "")]
+            for var in variants:
+                if var in text_lower or (url_lower and var in url_lower):
+                    return True
+    return False
+
 def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets, banned_keywords):
     """Open topic search across all of Bluesky via the authenticated searchPosts endpoint.
 
@@ -376,11 +393,12 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
             # someone's reply buried in a thread is not what we want — skip them.
             if getattr(post.record, 'reply', None) is not None:
                 continue
-            if banned_keywords and any(bk in text.lower() for bk in banned_keywords):
-                continue
 
             article_url = extract_external_link(post)
             if not is_news_url(article_url):
+                continue
+
+            if is_banned(text, article_url, banned_keywords):
                 continue
 
             normalized = normalize_url(article_url)
@@ -567,9 +585,8 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                             continue
                             
                     # Banned topic filtering
-                    if banned_keywords:
-                        if any(bk in title_text.lower() or bk in desc_cleaned.lower() for bk in banned_keywords):
-                            continue
+                    if is_banned(title_text + "\n" + desc_cleaned, link_text, banned_keywords):
+                        continue
                             
                     normalized = normalize_url(link_text)
                     if normalized in seen_urls:
@@ -663,20 +680,19 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                         if not is_english(text):
                             continue
                             
+                        # HARD RULE: only target posts that link to a real NEWS URL.
+                        # No quote-only posts, no video posts, no bsky/social/junk links.
+                        article_url = extract_external_link(item.post)
+                        if not is_news_url(article_url):
+                            continue
+
                         # Topic filtering
                         if keywords:
                             if not any(k in text.lower() for k in keywords):
                                 continue
                                 
                         # Banned topic filtering
-                        if banned_keywords:
-                            if any(bk in text.lower() for bk in banned_keywords):
-                                continue
-                                
-                        # HARD RULE: only target posts that link to a real NEWS URL.
-                        # No quote-only posts, no video posts, no bsky/social/junk links.
-                        article_url = extract_external_link(item.post)
-                        if not is_news_url(article_url):
+                        if is_banned(text, article_url, banned_keywords):
                             continue
 
                         normalized = normalize_url(article_url)
@@ -744,22 +760,31 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
 _RULES_CACHE = {}
 
-def _load_rules():
+def _load_rules(use_son=False):
     """Read + minify the rules files once per process; they don't change mid-run."""
-    if not _RULES_CACHE:
-        convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
-        formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
+    cache_key = "son" if use_son else "regular"
+    if cache_key not in _RULES_CACHE:
+        if use_son:
+            convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_lite.md")
+            formatting_path = os.path.join(script_dir, "instructions", "thread_formatting_son.md")
+        else:
+            convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
+            formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
         with open(convergence_path, "r", encoding="utf-8") as f:
-            _RULES_CACHE["convergence"] = minify_markdown(f.read())
+            _RULES_CACHE[f"{cache_key}_convergence"] = minify_markdown(f.read())
         with open(formatting_path, "r", encoding="utf-8") as f:
-            _RULES_CACHE["formatting"] = minify_markdown(f.read())
-    return _RULES_CACHE["convergence"], _RULES_CACHE["formatting"]
+            _RULES_CACHE[f"{cache_key}_formatting"] = minify_markdown(f.read())
+    return _RULES_CACHE[f"{cache_key}_convergence"], _RULES_CACHE[f"{cache_key}_formatting"]
 
-def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None):
-    convergence_rules, formatting_rules = _load_rules()
+def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False):
+    convergence_rules, formatting_rules = _load_rules(use_son=use_son)
         
     # System prompt: pure role declaration only
-    system_instruction = "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation."
+    system_instruction = (
+        "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation. "
+        "Use Google Search ONLY to fact-check names, dates, and medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon persona. "
+        "You are strictly forbidden from inventing, guessing, or inferring specific details not explicitly written in the text or verified by search."
+    )
 
     # Build the full user message: rules + candidates + strict JSON matrix output demand
     n = len(candidates)
@@ -844,8 +869,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "gemini-2.5-flash-lite",
         "gemini-3.5-flash",
         "gemini-3.1-flash-lite",
-        "gemma-4-26b-a4b-it",
-        "gemini-3-flash-preview"
+        "gemini-3-flash-preview",
+        "gemma-4-31b-it",
+        "gemma-4-26b-a4b-it",   
     ]
     # Keep unique order, trying model_name first
     fallback_models = []
@@ -872,10 +898,30 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     temperature=0.15,
                     max_output_tokens=8192
                 )
+                
+                # Setup tools if search grounding is enabled
+                tools_list = None
+                if use_search:
+                    class PatchedTool:
+                        def __init__(self, proto):
+                            self._proto = proto
+                            self.function_declarations = []
+                        def to_proto(self):
+                            return self._proto
+
+                    # Use 'google_search_retrieval' for 1.0/1.5 models, 'google_search' for 2.0+ models
+                    if any(x in model for x in ["-1.5", "-1.0"]):
+                        tool_proto = genai.protos.Tool(google_search_retrieval={})
+                    else:
+                        tool_proto = genai.protos.Tool(google_search={})
+                    
+                    tools_list = [PatchedTool(tool_proto)]
+
                 model_instance = genai_client.GenerativeModel(
                     model_name=model,
                     system_instruction=system_instruction,
-                    generation_config=config
+                    generation_config=config,
+                    tools=tools_list
                 )
                 # Configure safety settings to prevent false-positive censorship of news content
                 safety_settings = None
@@ -1122,11 +1168,23 @@ def process_evaluations(evaluations, category="general", topic=None):
     return success_count
 
 def main():
+    def int_or_default(default_val):
+        def converter(val):
+            if not val or not val.strip():
+                return default_val
+            try:
+                return int(val)
+            except ValueError:
+                raise argparse.ArgumentTypeError(f"Invalid integer value: '{val}'")
+        return converter
+
     parser = argparse.ArgumentParser(description="Google AI Studio One-Shot Batch Evaluator")
-    parser.add_argument("--rss", type=int, default=5, help="Number of RSS stories to harvest (default: 5)")
-    parser.add_argument("--bsky", type=int, default=15, help="Number of Bluesky stories to harvest (default: 15)")
+    parser.add_argument("--son", action="store_true", help="Use the 6-Attractor SON convergence model and formatting instructions")
+    parser.add_argument("--search", action="store_true", help="Enable Google Search Grounding to fact-check claims (default: False)")
+    parser.add_argument("--rss", type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
+    parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
-    parser.add_argument("--chunk-size", type=int, default=3, help="Number of stories to process per API call (default: 3)")
+    parser.add_argument("--chunk-size", type=int_or_default(3), default=3, help="Number of stories to process per API call (default: 3)")
     parser.add_argument("--category", type=str, default="general", help="Category (or comma-separated categories) of news to harvest (default: general). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
     parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
@@ -1222,8 +1280,12 @@ def main():
     agnes_api_key = os.environ.get("AGNES_API_KEY")
     
     # Calculate simple token savings metrics
-    convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
-    formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
+    if args.son:
+        convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_lite.md")
+        formatting_path = os.path.join(script_dir, "instructions", "thread_formatting_son.md")
+    else:
+        convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
+        formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
     with open(convergence_path, "r", encoding="utf-8") as f:
         raw_ct = len(f.read())
     with open(formatting_path, "r", encoding="utf-8") as f:
@@ -1262,7 +1324,7 @@ def main():
                 print(f"  Retry {attempt - 1}: {len(remaining)} candidate(s) not returned — re-firing...")
                 time.sleep(3)
             try:
-                raw_text = run_one_shot_evaluations(genai_client, remaining, args.model, agnes_api_key=agnes_api_key)
+                raw_text = run_one_shot_evaluations(genai_client, remaining, args.model, agnes_api_key=agnes_api_key, use_son=args.son, use_search=args.search)
                 parsed = transpose_flat_to_json(raw_text)
                 chunk_evals.extend(parsed)
 

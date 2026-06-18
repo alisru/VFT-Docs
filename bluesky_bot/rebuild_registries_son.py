@@ -4,6 +4,153 @@ import os
 import sys
 import datetime
 
+ATTRACTORS = {
+    'GG': (1.0, 1.0),
+    'GE': (-1.0, -1.0),
+    'LG': (1.0, -1.0),
+    'LE': (-1.0, 1.0),
+    'GP': (1.0, 0.0),
+    'BP': (-1.0, 0.0)
+}
+
+ATTRACTORS_PERP = {
+    'GG': (-1.0, 1.0),
+    'GE': (1.0, -1.0),
+    'LG': (1.0, 1.0),
+    'LE': (-1.0, -1.0),
+    'GP': (0.0, 1.0),
+    'BP': (0.0, -1.0)
+}
+
+def calculate_son_coordinates(forces_dict):
+    """
+    Calculates (u, psi) from a dictionary containing forces for attractors:
+    forces_dict: {'GG': {'S': s, 'O': o, 'N': n}, ...}
+    """
+    F_u = {}
+    F_psi = {}
+    total_weight = 0.0
+    
+    for i in ['GG', 'GE', 'LG', 'LE', 'GP', 'BP']:
+        if i not in forces_dict:
+            continue
+        scores = forces_dict[i]
+        s = float(scores.get('S', 0.0))
+        o = float(scores.get('O', 0.0))
+        n = float(scores.get('N', 0.0))
+        
+        if i == 'GP':
+            # GP: Support has neutral Will, Oppose drives Will negative (suppression). Neutral is pure weight dilution.
+            f_u = s - o
+            f_psi = -o
+        elif i == 'BP':
+            # BP: Support has neutral Will, Oppose drives Will positive (correction). Neutral is pure weight dilution.
+            f_u = -s + o
+            f_psi = o
+        else:
+            a_u, a_psi = ATTRACTORS[i]
+            ap_u, ap_psi = ATTRACTORS_PERP[i]
+            
+            # Net force components
+            f_u = s * a_u - o * a_u + n * ap_u
+            f_psi = s * a_psi - o * a_psi + n * ap_psi
+        
+        F_u[i] = f_u
+        F_psi[i] = f_psi
+        total_weight += (s + o + n)
+        
+    if total_weight == 0.0:
+        return 0.0, 0.0
+        
+    # 1. Morality Coordinate (u)
+    sum_F_u = sum(F_u.values())
+    u = sum_F_u / total_weight
+    
+    # 2. Will Coordinate (psi) using Separated Will (Like-Type) Protocol
+    pos_forces = {}
+    neg_forces = {}
+    pos_weight = 0.0
+    neg_weight = 0.0
+    
+    for i in ['GG', 'GE', 'LG', 'LE', 'GP', 'BP']:
+        if i not in forces_dict:
+            continue
+        scores = forces_dict[i]
+        s = float(scores.get('S', 0.0))
+        o = float(scores.get('O', 0.0))
+        n = float(scores.get('N', 0.0))
+        w = s + o + n
+        
+        f_psi = F_psi.get(i, 0.0)
+        if f_psi > 0.0:
+            pos_forces[i] = f_psi
+            pos_weight += w
+        elif f_psi < 0.0:
+            neg_forces[i] = f_psi
+            neg_weight += w
+            
+    sum_pos_psi = sum(pos_forces.values())
+    sum_neg_psi = sum(neg_forces.values())
+    
+    abs_pos_psi = abs(sum_pos_psi)
+    abs_neg_psi = abs(sum_neg_psi)
+    
+    if abs_pos_psi == 0.0 and abs_neg_psi == 0.0:
+        psi = 0.0
+    elif abs_pos_psi >= abs_neg_psi:
+        # positive is dominant
+        psi = sum_pos_psi / pos_weight if pos_weight > 0.0 else 0.0
+    else:
+        # negative is dominant
+        psi = sum_neg_psi / neg_weight if neg_weight > 0.0 else 0.0
+        
+    return round(u, 2), round(psi, 2)
+
+def process_and_update_coordinates(cfg, file_path):
+    """
+    Checks if stated_forces or actual_forces exists, recalculates claim/real u/psi,
+    updates them in cfg, and returns True if any change occurred.
+    """
+    updated = False
+    
+    # Recalculate Stated
+    if "stated_forces" in cfg:
+        claim_u, claim_psi = calculate_son_coordinates(cfg["stated_forces"])
+        if cfg.get("claim_u") != claim_u or cfg.get("claim_psi") != claim_psi:
+            print(f"[{cfg.get('id')}] Updating stated coordinates: ({cfg.get('claim_u')}, {cfg.get('claim_psi')}) -> ({claim_u}, {claim_psi})")
+            cfg["claim_u"] = claim_u
+            cfg["claim_psi"] = claim_psi
+            
+            # Also update Stated Judgement string in posts[1] if present
+            if len(cfg.get("posts", [])) > 1:
+                post = cfg["posts"][1]
+                if "Stated Judgement:" in post:
+                    label = post.split("—")[-1].strip() if "—" in post else "Good Preference"
+                    sgn_u = "+" if claim_u >= 0 else ""
+                    sgn_psi = "+" if claim_psi >= 0 else ""
+                    cfg["posts"][1] = post.split("Stated Judgement:")[0] + f"Stated Judgement: ({sgn_u}{claim_u:.2f}, {sgn_psi}{claim_psi:.2f}) — {label}"
+            updated = True
+            
+    # Recalculate Actual
+    if "actual_forces" in cfg:
+        real_u, real_psi = calculate_son_coordinates(cfg["actual_forces"])
+        if cfg.get("real_u") != real_u or cfg.get("real_psi") != real_psi:
+            print(f"[{cfg.get('id')}] Updating actual coordinates: ({cfg.get('real_u')}, {cfg.get('real_psi')}) -> ({real_u}, {real_psi})")
+            cfg["real_u"] = real_u
+            cfg["real_psi"] = real_psi
+            
+            # Also update Resulting Judgement string in posts[2] if present
+            if len(cfg.get("posts", [])) > 2:
+                post = cfg["posts"][2]
+                if "Resulting Judgement:" in post:
+                    label = post.split("—")[-1].strip() if "—" in post else "Greater Evil"
+                    sgn_u = "+" if real_u >= 0 else ""
+                    sgn_psi = "+" if real_psi >= 0 else ""
+                    cfg["posts"][2] = post.split("Resulting Judgement:")[0] + f"Resulting Judgement: ({sgn_u}{real_u:.2f}, {sgn_psi}{real_psi:.2f}) — {label}"
+            updated = True
+            
+    return updated
+
 def rebuild_registries():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     sys.path.append(script_dir)
@@ -45,6 +192,14 @@ def rebuild_registries():
             except Exception as e:
                 print(f"Error reading darkroom file {p}: {e}")
                 continue
+
+            # Update coordinates deterministically if raw forces are defined
+            if process_and_update_coordinates(cfg, p):
+                try:
+                    with open(p, "w", encoding="utf-8") as f:
+                        json.dump(data, f, indent=2, ensure_ascii=False)
+                except Exception as we:
+                    print(f"Warning: Failed to save updated darkroom file {p}: {we}")
 
             # Generate graph
             graph_filename = f"{slug}_graph.png"
@@ -118,8 +273,6 @@ def rebuild_registries():
     active_stories      = []
     active_live_stories = []
 
-
-
     sorted_slugs = sorted(
         story_map.keys(),
         key=lambda s: safe_getmtime(story_map[s][0])
@@ -136,6 +289,15 @@ def rebuild_registries():
             print(f"Error reading {authoritative_file}: {e}")
             continue
 
+        # Recalculate coordinates deterministically if raw forces are defined
+        coords_changed = process_and_update_coordinates(cfg, authoritative_file)
+        if coords_changed:
+            try:
+                with open(authoritative_file, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+            except Exception as we:
+                print(f"Warning: Failed to save updated config {authoritative_file}: {we}")
+
         # Auto-backfill missing/empty actors using the deterministic actor_extract utility
         if "actors" not in cfg:
             from actor_extract import extract_actors
@@ -150,10 +312,13 @@ def rebuild_registries():
 
         active_story_ids.add(slug)
 
-        # Generate graph if missing
+        # Generate graph if missing or if coordinates changed
         graph_filename = f"{slug}_graph.png"
         graph_path = os.path.join(graph_png_dir, graph_filename)
-        if not os.path.exists(graph_path):
+        
+        # If coordinates changed, we must regenerate the graph!
+        # So we force regeneration if coordinates were updated or if the graph is missing
+        if coords_changed or not os.path.exists(graph_path):
             try:
                 print(f"Generating graph for {slug}...")
                 draw_graph(
@@ -203,17 +368,16 @@ def rebuild_registries():
             "created_at": created_at,
         }
         for k in ["target_url", "rkeys", "post_urls", "actors", "category", "topic", "event",
-                  "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi"]:
+                  "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
+                  "stated_forces", "actual_forces"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 
         if is_live:
-            # File is in live/ — force status to LIVE POSTED if not already marked
             if not ("LIVE" in status.upper() or cfg.get("rkeys") or cfg.get("post_urls")):
                 registry_story["status"] = "LIVE POSTED"
             active_live_stories.append(registry_story)
         else:
-            # File is in stories/ root — it's a dry run, strip any accidental LIVE status
             if "LIVE" in status.upper() or cfg.get("rkeys") or cfg.get("post_urls"):
                 registry_story["status"] = "COMPLETED DRY RUN"
             active_stories.append(registry_story)

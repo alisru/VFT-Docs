@@ -22,9 +22,10 @@ echo   5: BBC News              6: SMH
 echo   7: TechCrunch            8: Washington Post
 echo   9: NPR                   all: All Outlets
 set /p PREFER="Enter preferred outlets to prioritize (optional, e.g. 1,2,all) [default: none]: "
+set /p USE_SEARCH="Enable Google Search Grounding? (y/n) [default: n]: "
 
 echo.
-echo Running evaluation batch (RSS: %RSS_COUNT%, Bluesky: %BSKY_COUNT%, Category: %CATEGORY%, Topic: %TOPIC%, Banned: %BANNED_TOPIC%, Prefer: %PREFER%)...
+echo Running evaluation batch (RSS: %RSS_COUNT%, Bluesky: %BSKY_COUNT%, Category: %CATEGORY%, Topic: %TOPIC%, Banned: %BANNED_TOPIC%, Prefer: %PREFER%, Search: %USE_SEARCH%)...
 echo ==================================================
 
 cd /d "%~dp0"
@@ -34,6 +35,7 @@ if not "%TOPIC%"=="" set ARGS=%ARGS% --topic "%TOPIC%"
 if not "%BANNED_TOPIC%"=="" set ARGS=%ARGS% --banned-topic "%BANNED_TOPIC%"
 if not "%CATEGORY%"=="" set ARGS=%ARGS% --category "%CATEGORY%"
 if not "%PREFER%"=="" set ARGS=%ARGS% --prefer "%PREFER%"
+if /i "%USE_SEARCH%"=="y" set ARGS=%ARGS% --search
 
 set PYTHON_BIN=python
 if exist ".venv\Scripts\python.exe" (

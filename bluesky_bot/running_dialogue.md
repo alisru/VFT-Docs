@@ -557,4 +557,20 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Inversion Rule Codified**: Inversion fires when `m_real_u < 0` AND `real_u > 0` — a genuinely good micro actual inside a bad macro frame. The bad macro perceives the good micro act as a threat. A bad micro act amplifying a bad macro (N3) does NOT invert — the badness is coherent with the frame.
 - **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Action. Encoding structural validation rules to prevent category errors in scenario construction.
 
+### [2026-06-17] Intent 68: Update SON Model Math for Preferences
+*Status: In Progress*
+- **Updated Preferences Force Math**: Redefined Good Preference ($GP$) and Bad Preference ($BP$) vector forces to correctly align with VFT physics. Support ($S$) acts as a neutral-will force (adds weight, keeps Will at $0.0$), Oppose ($O$) drives Will in the opposite direction (negative for GP, positive for BP), and Neutral ($N$) acts as pure weight dilution ($0.0$ force vector contribution).
+- **Code Implementation**: Updated `calculate_son_coordinates` in `rebuild_registries_son.py` to calculate preference coordinates using this corrected logic.
+- **Documentation Alignment**: Updated `convergence_son_lite.md` and `convergence_son.md` to document the new math formulas for preferences.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Action. Standardizing preference force mapping to eliminate mathematical discrepancies.
+
+### [2026-06-17] Intent 69: Enable Macro-Context Visual Frames in Evaluator Subagents and Re-evaluate Batch
+*Status: Completed*
+- **Macro-Context Schema & Prompts**: Added the 5 optional macro-context keys to the allowed JSON schema in [thread_formatting_son.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting_son.md) and introduced **Phase 6: Macro Context Scan** to the system prompt template in [subagent_spawning_son.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/subagent_spawning_son.md).
+- **Redefined Evaluator Bee**: Registered `beehive_evaluator_bee_son_v4` to enforce the macro-enabled evaluations and JSON schema.
+- **Redo 5 Stories Batch**: Re-ran evaluations on the latest 5 harvested stories using the v4 subagents. They successfully identified and evaluated the macro contexts for each story.
+- **Nested Telemetry Visuals**: Matplotlib successfully generated dual-box nested frame graphs for all 5 stories with 180-degree rotation (perceptual inversion) when the macro actual is selfish.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Justice. Restoring context-in-context nested frame rendering to ensure downstream analyses preserve systemic context.
+
+
 

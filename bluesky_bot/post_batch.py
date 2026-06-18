@@ -24,7 +24,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 if script_dir not in sys.path:
     sys.path.append(script_dir)
 
-from aletheia_bot import post_thread, split_text
+from aletheia_bot import post_thread, pack_posts
 from atproto import Client
 
 
@@ -127,10 +127,8 @@ def validate_story_file(path):
         if len(cfg["posts"]) != 13:
             raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
 
-        # Split posts and length validation
-        final_posts = []
-        for post in cfg["posts"]:
-            final_posts.extend(split_text(post))
+        # Pack posts and length validation
+        final_posts = pack_posts(cfg["posts"])
 
         for idx, post in enumerate(final_posts, 1):
             if len(post) > 299:

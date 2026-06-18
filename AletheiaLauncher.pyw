@@ -376,6 +376,14 @@ class AletheiaLauncherApp:
         tk.Label(grid_frame, text="Categories: general, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=4, column=1, columnspan=5, sticky="w")
         tk.Label(grid_frame, text="Suggested Topics: Trump, AI, Climate, Markets, AUKUS, Australia, Boeing, Space", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=5, column=1, columnspan=5, sticky="w")
 
+        self.val_son = tk.BooleanVar(value=False)
+        self.chk_son = ttk.Checkbutton(grid_frame, text="Enable SON 6-Attractor Mode", variable=self.val_son)
+        self.chk_son.grid(row=6, column=1, columnspan=2, sticky="w", pady=3)
+
+        self.val_search = tk.BooleanVar(value=False)
+        self.chk_search = ttk.Checkbutton(grid_frame, text="Enable Google Search Grounding", variable=self.val_search)
+        self.chk_search.grid(row=6, column=3, columnspan=3, sticky="w", pady=3)
+
         # Buttons
         self.btn_run_batch = tk.Button(
             inner, text="Run One-Shot Batch Evaluation", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
@@ -568,7 +576,7 @@ class AletheiaLauncherApp:
 
     def run_rebuild_store(self):
         python_bin = self.get_python_bin()
-        self.run_eval_subprocess_async([python_bin, "-u", "scratch/rebuild_registries.py"])
+        self.run_eval_subprocess_async([python_bin, "-u", "bluesky_bot/rebuild_registries.py"])
 
     def run_one_shot_batch(self):
         python_bin = self.get_python_bin()
@@ -594,6 +602,12 @@ class AletheiaLauncherApp:
         prefer = self.ent_prefer.get().strip()
         if prefer:
             args.extend(["--prefer", prefer])
+
+        if self.val_son.get():
+            args.append("--son")
+
+        if self.val_search.get():
+            args.append("--search")
 
         self.run_eval_subprocess_async(args)
 

@@ -143,9 +143,9 @@ print(f"Loaded {len(seen_historical_urls)} historical URLs and {len(seen_histori
 
 
 # --- 1. DYNAMIC STORY-LEVEL DE-DUPLICATION HEURISTIC ---
-seen_story_keywords = set()
+seen_stories_keywords_list = []
 
-def is_duplicate_story(text, url):
+def is_duplicate_story(text, url, check_batch=True):
     text_lower = text.lower()
     url_lower = url.strip().lower()
     
@@ -159,6 +159,9 @@ def is_duplicate_story(text, url):
         print(f"  -> Historical duplicate Story ID detected! Skipping: {subject_approx}")
         return True
 
+    if not check_batch:
+        return False
+
     # 2. Batch-level conceptual check
     words = set(re.findall(r'\b[a-z]{5,}\b', text_lower))
     stopwords = {
@@ -168,13 +171,14 @@ def is_duplicate_story(text, url):
         'episode', 'today', 'report', 'called', 'officials', 'confirmed', 'court', 'state'
     }
     high_value_keywords = words - stopwords
-    overlap = high_value_keywords & seen_story_keywords
     
-    if overlap:
-        print(f"  -> Batch-level conceptual duplicate detected! Skipping due to overlap of: {overlap}")
-        return True
+    for prev_keywords in seen_stories_keywords_list:
+        overlap = high_value_keywords & prev_keywords
+        if len(overlap) >= 5:
+            print(f"  -> Batch-level conceptual duplicate detected! Skipping due to overlap of: {overlap}")
+            return True
         
-    seen_story_keywords.update(high_value_keywords)
+    seen_stories_keywords_list.append(high_value_keywords)
     return False
 
 
@@ -449,7 +453,7 @@ if password:
                     continue
                     
                 # Perform unified de-duplication check using the actual article_url
-                if is_duplicate_story(text, article_url):
+                if is_duplicate_story(text, article_url, check_batch=False):
                     continue
                     
                 if author_handle in seen_bsky_authors:
@@ -495,7 +499,7 @@ if password:
                         continue
                     if not is_english(text):
                         continue
-                    if is_duplicate_story(text, article_url):
+                    if is_duplicate_story(text, article_url, check_batch=False):
                         continue
                         
                     bsky_candidates.append({

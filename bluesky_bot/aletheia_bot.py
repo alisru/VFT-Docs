@@ -59,12 +59,38 @@ def split_text(text, max_len=299):
             split_idx = text.rfind(' ', 0, max_len)
 
         if split_idx == -1:
+            # Force split if no space or newline
             split_idx = max_len
 
         chunks.append(text[:split_idx].strip())
         text = text[split_idx:].strip()
 
     return chunks
+
+def pack_posts(posts, max_len=299):
+    """
+    Packs a list of strings into final posts.
+    If a string splits and leaves a tail (carry_over), the tail is merged with the next string 
+    so we don't waste an entire Bluesky post on an orphaned 1 or 2 words.
+    """
+    final_posts = []
+    carry_over = ""
+    
+    for p in posts:
+        current = (carry_over + " " + p).strip() if carry_over else p.strip()
+        carry_over = ""
+            
+        if len(current) <= max_len:
+            final_posts.append(current)
+        else:
+            chunks = split_text(current, max_len)
+            final_posts.extend(chunks[:-1])
+            carry_over = chunks[-1]
+            
+    if carry_over:
+        final_posts.append(carry_over)
+        
+    return final_posts
 
 # Cache of target_urls we already have a story for. Built once per process by
 # scanning stories/ (+ subdirs); kept current by save_and_sync_story. The old

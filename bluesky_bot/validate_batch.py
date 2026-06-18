@@ -21,9 +21,9 @@ if script_dir not in sys.path:
     sys.path.append(script_dir)
 
 try:
-    from aletheia_bot import split_text
+    from aletheia_bot import pack_posts
 except ImportError as ie:
-    print(f"ERROR: Failed to import split_text from aletheia_bot: {ie}")
+    print(f"ERROR: Failed to import pack_posts from aletheia_bot: {ie}")
     sys.exit(1)
 
 def main():
@@ -89,10 +89,8 @@ def main():
             mode = cfg["mode"].lower()
             target_url = cfg.get("target_url", "")
 
-            # 1. Split posts and length validation
-            final_posts = []
-            for post in posts:
-                final_posts.extend(split_text(post))
+            # 1. Pack posts and length validation
+            final_posts = pack_posts(posts)
 
             for idx, post in enumerate(final_posts, 1):
                 if len(post) > 299:
