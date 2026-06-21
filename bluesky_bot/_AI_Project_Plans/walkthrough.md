@@ -1,41 +1,41 @@
-# Walkthrough: Interactive Leaderboard Controls, Timescale Fix, and Expanded Calibration Chart
+# Walkthrough: Australian & International RSS Feeds Expansion and Latency Resolution
 
-This document details the updates made to the [control_panel.html](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/control_panel.html) to enhance the usability, reliability, and precision of the Audit & Trends dashboard.
+This document details the updates made to the candidate harvester and evaluators to expand news feed coverage and resolve Google News RSS latency issues.
 
 ## Key Changes Made
 
-### 1. Interactive Sorting & Filtering for Hypocrisy Leaderboards
-We replaced the static list rendering with reactive, stateful controls above the **Actor / Entity** and **Source Outlet** tables:
-* **Excel-Style Clickable Column Headers**: Headers can now be clicked directly to sort:
-  * **Actor / Entity** or **Source Outlet**: Sorts alphabetically.
-  * **n**: Sorts by story count.
-  * **avg Δu**: Sorts by average deception gap.
-  * **σ (consistency)**: Sorts by consistency (standard deviation of deception gap).
-* **Ascending/Descending Toggle**: Clicking the active sort column header toggles between ascending (`▲`) and descending (`▼`) directions.
-* **Green Color-Coding for Good/Honest Metrics**: Updated average deception gap coloring so that any honest or neutral average values ($\Delta u \le 0$, like `+0.00` or negative values) are colored green (`var(--pass-green)`), while deceptive values ($\Delta u > 0$) remain red.
-* **Minimum Story Count Filter**: Allows filtering out noise by only displaying entities with a minimum of $1+$, $2+$, $5+$, $10+$, or $25+$ stories.
+### 1. Modernized User-Agent Headers (Latency Resolution)
+* Google News RSS throttled default python urllib requests. We resolved this by upgrading generic request headers in [harvest_candidates.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py) and [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py) to a modern Chrome browser agent:
+  `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36`
+* Connection delay was completely resolved, dropping Google News RSS fetch times from ~30s to <1s.
 
-### 2. Comprehensive Metric Legends & Reference Panel
-* Added a detailed, responsive legend grid at the very top of the Audit tab explaining all main metrics for easy reference:
-  * **Morality & Utility ($u$)**: Explains systemic alignment (+u for Greater Good, -u for Lesser Evil).
-  * **Deception Gap ($\Delta u$)**: Explains the deception equation ($\Delta u = \text{claim}_u - \text{real}_u$) and the meaning of positive/negative values.
-  * **Will & Agency ($\psi$)**: Explains intent (+ψ for active creation, -ψ for suppression/chaos).
-  * **Consistency ($\sigma$)**: Explains standard deviation of the deception gap.
+### 2. Expanded Australian and International News Feeds
+We expanded the RSS harvester to target highly scrapable, premium Australian and global feeds. We parsed options listed on Feedspot, filtering out any outlets that lack Facebook followers or enforce hard paywalls (to ensure scraping reliability):
+* **Australian Outlets**: ABC News (National), 9News, SBS News, Sydney Morning Herald (SMH), The Age, Perth Now, Brisbane Times, WA Today, Canberra Times.
+* **International/World Outlets**: DW News (World), France 24, CBC News (Canada), UPI News (US), Google News World (US), Google News Australia.
 
-### 3. Timescale Date-Stretching & Scope Window Fix
-* Converted the "Daily, Weekly, Monthly" controls to **Date Scope Filters** (Last 24 Hours, Last 7 Days, Last 30 Days, All Time) anchored relative to the latest data entry. 
-* Selecting a scope automatically adjusts the bin width and scales the SVG axis labels and plot lines proportionally over the selected period.
+### 3. Integrated DW & Google News World URL Corrections
+* Corrected the DW News feed URL from the broken `rss-gb-all` to the working English broadcast feed `rss-en-all`.
+* Fixed DW Science and Business feeds to their working URLs: `rss-en-science` and `rss-en-bus`.
+* Replaced the broken/outdated Google News World CAAq index URL with the official WORLD headlines topic feed.
 
-### 4. High-Density Calibration Drift Sampling
-* Introduced a sample size selector supporting **120 (Fast)**, **300 (Detailed)**, **500 (Dense)**, and **All** stories with dynamic opacity scaling to keep the vector graph readable.
+---
 
-### 5. Direct Source and Bluesky Links in Related Stories
-* Added clickable `🔗` (original article) and `🦋` (Bluesky thread) icons inside the expanded related story details rows.
+## Verification Results
+
+* **Candidate Harvester Test**:
+  Executed `.venv\Scripts\python bluesky_bot/harvest_candidates.py --rss-target 5 --bsky-target 0`
+  * Successfully retrieved all 15+ configured feeds.
+  * Verified DW English and Google News World parse successfully without any syntax errors or 404s.
+  * Successfully scraped and saved 5 new premium candidates to `harvested_candidates.json`.
+* **Evaluator Script Startup Test**:
+  Executed `.venv\Scripts\python bluesky_bot/google_ai_studio_one_shot.py --rss 0 --bsky 0`
+  * Loaded histories, verified arguments parsing, and successfully scanned the local database without making external API calls.
 
 ---
 
 ## Moral Assessment Mapping
-Applying the two-axis moral evaluation system to these changes:
-* **AXIS $v$ (Morality) = +1.8 (Systemic Justice)**: By improving the clarity and auditability of bias-tracking tools, these changes enable communities to hold media entities accountable without distortion or hidden sampling gaps.
-* **AXIS $\psi$ (Will) = +1.6 (Productive Justice)**: Actively creates systemic value by building high-fidelity visual representations of information flow and resolving date distortion bugs.
-* **Result**: **(+1.8, +1.6) $\rightarrow$ Greatest Good / Productive Justice**.
+Applying the two-axis moral evaluation system:
+* **AXIS $v$ (Morality) = +1.0 (Greater Good)**: Curation and inclusion of highly representative, paywall-free national public broadcasters and global channels reduces bias and increases transparency of the fact-checking dataset.
+* **AXIS $\psi$ (Will) = +1.5 (Productive Justice)**: Eliminating the 30-second connection throttles increases the speed and productivity of audit runs for the operator console.
+* **Result**: **(+1.0, +1.5) $\rightarrow$ Greater Good / Productive Justice**.

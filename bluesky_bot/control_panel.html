@@ -896,6 +896,22 @@
       color: var(--bsky-blue) !important;
       text-decoration-color: var(--bsky-blue) !important;
     }
+
+    /* Big Hegemony Map hover styling */
+    .hegemony-story-node:hover circle {
+      stroke: #ffffff;
+      stroke-width: 1.5px;
+      r: 6;
+      filter: drop-shadow(0 0 4px var(--bsky-blue));
+      transition: all 0.15s ease-in-out;
+    }
+    .hegemony-landmark-text {
+      font-size: 8px;
+      fill: var(--text-muted);
+      opacity: 0.55;
+      pointer-events: none;
+      user-select: none;
+    }
   </style>
 </head>
 <body>
@@ -1217,6 +1233,7 @@
 
   <!-- Include external stories database script -->
   <script src="stories_registry.js"></script>
+  <script src="../hegemony_db.js"></script>
 
   <!-- JavaScript Stories Registry & Controller -->
   <script>
@@ -1273,7 +1290,7 @@
         card.className = `story-card ${activeStory.id === story.id ? 'active' : ''}`;
         card.onclick = () => selectStory(story.id);
 
-        const isPass = story.verdict.toLowerCase().includes('pass');
+        const isPass = story.verdict.trim().toUpperCase().startsWith('PASS');
         const badgeClass = isPass ? 'badge-pass' : 'badge-fail';
         const badgeText = isPass ? 'PASS' : 'FAIL';
 
@@ -1347,7 +1364,23 @@
         feedContainer.appendChild(replyHeader);
       }
 
-      activeStory.posts.forEach((postText, index) => {
+      const posts = activeStory.posts || [];
+      if (!posts.length) {
+        // posts text not stored in registry — show links to live posts instead
+        const urls = activeStory.post_urls || [];
+        if (urls.length) {
+          const fallback = document.createElement('div');
+          fallback.style.cssText = 'padding:16px; color:var(--text-muted); font-family:var(--font-outfit); font-size:0.9rem;';
+          fallback.innerHTML = '<p style="margin:0 0 10px">Post text not stored — view live posts:</p>' +
+            urls.map((u, i) => `<div style="margin:4px 0"><a href="${u}" target="_blank" style="color:var(--bsky-blue)">Post ${i+1}</a></div>`).join('');
+          feedContainer.appendChild(fallback);
+        } else {
+          feedContainer.innerHTML = '<div style="padding:16px;color:var(--text-muted);font-family:var(--font-outfit)">No post data available.</div>';
+        }
+        return;
+      }
+
+      posts.forEach((postText, index) => {
         const postDiv = document.createElement('div');
         postDiv.className = 'post-container';
 
@@ -1371,7 +1404,7 @@
           postText = postText.replace('Brothekanon:\n', '');
         }
 
-        // Render embeds (graph image always on Post 1, link preview card on Post 2 if link exists)
+        // Render embeds (graph image always on Post 1, link preview card on Post 2 if link exists, grounding link card on the post containing "Source:")
         let embedTag = '';
         if (index === 0 && activeStory.graph_img) {
           // Graph always goes on Post 1 (index 0)
@@ -1396,6 +1429,26 @@
           }
           embedTag = `
             <a href="${activeStory.link}" target="_blank" class="post-link-card">
+              <div class="post-link-card-content">
+                <div class="post-link-card-domain">${domain}</div>
+                <div class="post-link-card-title">${title}</div>
+                <div class="post-link-card-description">${descText}</div>
+              </div>
+            </a>
+          `;
+        } else if (activeStory.grounding_url && postText.includes('Source: ')) {
+          // Render grounding link preview card on the post containing "Source:"
+          const gUrl = activeStory.grounding_url;
+          const title = "Verification Source | Aletheia Bot";
+          const descText = `Fact-check verification source for ${activeStory.subject}`;
+          let domain = '';
+          try {
+            domain = new URL(gUrl).hostname;
+          } catch(e) {
+            domain = 'verification-source';
+          }
+          embedTag = `
+            <a href="${gUrl}" target="_blank" class="post-link-card">
               <div class="post-link-card-content">
                 <div class="post-link-card-domain">${domain}</div>
                 <div class="post-link-card-title">${title}</div>
@@ -1448,7 +1501,7 @@
 
       // Render Meta Panel
       const metaPane = document.getElementById('metaPane');
-      const isPass = activeStory.verdict.toLowerCase().includes('pass');
+      const isPass = activeStory.verdict.trim().toUpperCase().startsWith('PASS');
       const verdictColor = isPass ? 'var(--pass-green)' : 'var(--fail-red)';
 
       // Resolve thread link for meta item
@@ -1907,7 +1960,8 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
             "status": "DYNAMICALLY IMPORTED DRY RUN",
             "verdict": storyData.posts[3] ? storyData.posts[3].replace("Verdict: ", "") : "FAIL — The Path of Deception",
             "graph_img": storyData.graph_img ? (storyData.graph_img.startsWith("graph_png/") ? storyData.graph_img : "graph_png/" + storyData.graph_img) : "graph_png/" + ((storyData.id || storyData.subject.toLowerCase().replace(/\s+/g, '_')) + "_graph.png"),
-            "posts": storyData.posts,
+             "posts": storyData.posts,
+            "grounding_url": storyData.grounding_url || "",
             "rkeys": storyData.rkeys || null,
             "post_urls": storyData.post_urls || null
           };
@@ -2427,6 +2481,10 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           ${auditSection('The Scales of Judgement', auditScalesOfJudgement(live, passCount, failCount, avgDeltaU))}
         </div>
 
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+          ${auditSection('Big Hegemony Map (Interactive Corpus Visualizer)', auditHegemonyMap(live))}
+        </div>
+
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
           ${auditSection('Reality u Score Distribution', auditHistogram(validForStats.map(s => s.real_u), -2, 2, 0.5, 'var(--reality-red)', 'var(--pass-green)'))}
           ${auditSection('Claim → Reality Gap (Δu) Distribution', auditHistogram(validForStats.map(s => s.claim_u - s.real_u), -1, 3, 0.5, 'var(--bsky-blue)', 'var(--claim-yellow)'))}
@@ -2838,6 +2896,122 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           </svg>
         </div>
         <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.3rem;">Date scope: ${_trendInterval === 'day' ? 'Last 24 hours' : _trendInterval === 'week' ? 'Last 7 days' : _trendInterval === 'month' ? 'Last 30 days' : 'All time'}. Hover chart to track precise coordinates.</div>
+      `;
+    }
+
+    function auditHegemonyMap(stories) {
+      const W = 600, H = 600, pad = 40;
+      // reversed Morality: +2.5 is left, -2.5 is right
+      const sx = u => 300 - (u / 2.5) * 260;
+      // standard Will: +2.5 is top, -2.5 is bottom
+      const sy = psi => 300 - (psi / 2.5) * 260;
+
+      const validStories = stories.filter(s => s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined && s.claim_psi !== null && s.claim_psi !== undefined && s.real_psi !== null && s.real_psi !== undefined);
+
+      // Render quadrant backgrounds
+      const qBackgrounds = `
+        <!-- Q1: Systemic Justice (Top Left) -->
+        <rect x="40" y="40" width="260" height="260" fill="var(--pass-green)" fill-opacity="0.015" rx="4"/>
+        <!-- Q4: Passive Service (Bottom Left) -->
+        <rect x="40" y="300" width="260" height="260" fill="var(--bsky-blue)" fill-opacity="0.015" rx="4"/>
+        <!-- Q2: Tyranny / Extraction (Top Right) -->
+        <rect x="300" y="40" width="260" height="260" fill="var(--reality-red)" fill-opacity="0.015" rx="4"/>
+        <!-- Q3: Coercive/Receptive Withdrawal (Bottom Right) -->
+        <rect x="300" y="300" width="260" height="260" fill="var(--claim-yellow)" fill-opacity="0.015" rx="4"/>
+      `;
+
+      // Render gridlines
+      let gridLines = '';
+      for (let v = -2.0; v <= 2.0; v += 0.5) {
+        if (v === 0) continue;
+        const xVal = sx(v);
+        const yVal = sy(v);
+        gridLines += `
+          <line x1="${xVal}" y1="40" x2="${xVal}" y2="560" stroke="var(--panel-border)" stroke-width="0.5" stroke-dasharray="2,4"/>
+          <line x1="40" y1="${yVal}" x2="560" y2="${yVal}" stroke="var(--panel-border)" stroke-width="0.5" stroke-dasharray="2,4"/>
+          <text x="${xVal}" y="295" font-size="7" fill="var(--text-muted)" text-anchor="middle">${v > 0 ? '+' : ''}${v}</text>
+          <text x="305" y="${yVal+3}" font-size="7" fill="var(--text-muted)">${v > 0 ? '+' : ''}${v}</text>
+        `;
+      }
+
+      // Render Quadrant Labels
+      const qLabels = `
+        <text x="50" y="55" font-size="8.5" font-weight="bold" fill="var(--pass-green)" opacity="0.6">I. Systemic Justice (Everyone)</text>
+        <text x="550" y="55" font-size="8.5" font-weight="bold" fill="var(--reality-red)" opacity="0.6" text-anchor="end">II. Tyranny & Extraction (Only Me)</text>
+        <text x="50" y="550" font-size="8.5" font-weight="bold" fill="var(--bsky-blue)" opacity="0.6">IV. Proactive Goodwill (Others)</text>
+        <text x="550" y="550" font-size="8.5" font-weight="bold" fill="var(--claim-yellow)" opacity="0.6" text-anchor="end">III. Receptive / Coercive Withdrawal</text>
+      `;
+
+      // Render Hegemony Landmarks
+      const landmarks = window.hegemonyLovesExternal || [
+        { name: "Agape", u: 2.0, p: 2.0 },
+        { name: "Philanthropia", u: 2.0, p: 1.5 },
+        { name: "Eros", u: -1.0, p: 1.5 },
+        { name: "Philarguria", u: -2.0, p: 0.5 },
+        { name: "Epithymia", u: -1.5, p: 1.0 },
+        { name: "Henosis", u: 2.0, p: 0.0 },
+        { name: "Eunoia", u: 1.5, p: 0.5 },
+        { name: "Eleos", u: 1.8, p: 1.5 },
+        { name: "Koinonia", u: 2.0, p: 1.0 }
+      ];
+
+      const landmarkElements = landmarks.map(l => {
+        const x = sx(l.u);
+        const y = sy(l.p || l.psi || 0);
+        return `
+          <circle cx="${x}" cy="${y}" r="2" fill="var(--text-muted)" opacity="0.25"/>
+          <text x="${x}" y="${y - 5}" class="hegemony-landmark-text" text-anchor="middle">${l.name}</text>
+        `;
+      }).join('');
+
+      // Render Story Nodes with Deception Vectors
+      const nodes = validStories.map(s => {
+        const x1 = sx(s.claim_u);
+        const y1 = sy(s.claim_psi);
+        const x2 = sx(s.real_u);
+        const y2 = sy(s.real_psi);
+        const color = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
+        
+        return `
+          <g class="hegemony-story-node" data-story-id="${s.id}" style="cursor:pointer;">
+            <!-- Deception Vector -->
+            <line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="var(--text-muted)" stroke-width="1.2" opacity="0.25" stroke-dasharray="2,3"/>
+            <!-- Claim Point -->
+            <circle cx="${x1.toFixed(1)}" cy="${y1.toFixed(1)}" r="2" fill="var(--claim-yellow)" opacity="0.5"/>
+            <!-- Reality Point -->
+            <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="4.2" fill="${color}"/>
+            <title>${s.subject}\nClaim: (${s.claim_u}, ${s.claim_psi}) -> Reality: (${s.real_u}, ${s.real_psi})\nVerdict: ${s.verdict}\n(Click to view details)</title>
+          </g>
+        `;
+      }).join('');
+
+      return `
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem; background:rgba(0,0,0,0.15); border-radius:8px; padding:1.2rem; border:1px solid var(--panel-border);">
+          <svg viewBox="0 0 ${W} ${H}" style="width:100%; max-width:${W}px; display:block; aspect-ratio:1;">
+            ${qBackgrounds}
+            
+            <!-- Axes -->
+            <line x1="300" y1="40" x2="300" y2="560" stroke="var(--panel-border)" stroke-width="1.5"/>
+            <line x1="40" y1="300" x2="560" y2="300" stroke="var(--panel-border)" stroke-width="1.5"/>
+            
+            ${gridLines}
+            ${qLabels}
+            ${landmarkElements}
+            ${nodes}
+
+            <!-- Axis Main Labels -->
+            <text x="300" y="32" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="middle">▲ Active Will (+ψ)</text>
+            <text x="300" y="578" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="middle">▼ Passive Will (-ψ)</text>
+            <text x="10" y="303" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="start">◀ Morality (+υ)</text>
+            <text x="590" y="303" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="end">Morality (-υ) ▶</text>
+          </svg>
+          <div style="font-size:0.75rem; color:var(--text-muted); text-align:center; max-width:520px; line-height:1.4; margin-top:0.5rem;">
+            <strong>Interactive Hegemony Map:</strong> Each story is plotted as a vector starting at its 
+            <span style="color:var(--claim-yellow); font-weight:bold;">Claim (yellow dot)</span> and ending at its 
+            <span style="font-weight:bold;">Reality (green/red dot)</span>. The length of the dotted connector represents its 
+            <strong>Deception Vector</strong>. Hover for details, or click a node to view the complete evaluation.
+          </div>
+        </div>
       `;
     }
 

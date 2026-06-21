@@ -495,6 +495,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
             {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"},
             {"name": "CNBC Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147"},
             {"name": "The Guardian Business", "url": "https://www.theguardian.com/business/rss"},
+            {"name": "DW Business", "url": "https://rss.dw.com/xml/rss-en-bus"},
         ],
         "politics": [
             {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
@@ -506,6 +507,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
             {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"},
             {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"},
             {"name": "The Guardian Science", "url": "https://www.theguardian.com/science/rss"},
+            {"name": "DW Science", "url": "https://rss.dw.com/xml/rss-en-science"},
         ],
         "world": [
             {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
@@ -513,15 +515,30 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
             {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
             {"name": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml"},
             {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+            {"name": "DW News World", "url": "https://rss.dw.com/xml/rss-en-all"},
+            {"name": "France 24", "url": "https://www.france24.com/en/rss"},
+            {"name": "CBC News", "url": "https://rss.cbc.ca/lineup/topstories.xml"},
+            {"name": "UPI News", "url": "https://rss.upi.com/news/news.rss"},
+            {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
         ],
         "general": [
+            {"name": "ABC News Australia", "url": "https://www.abc.net.au/news/feed/2942460/rss.xml"},
+            {"name": "9News Australia", "url": "https://www.9news.com.au/rss"},
+            {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed"},
+            {"name": "Sydney Morning Herald", "url": "https://www.smh.com.au/rss/feed.xml"},
+            {"name": "Perth Now", "url": "https://www.perthnow.com.au/feed"},
+            {"name": "The Age", "url": "https://www.theage.com.au/rss/feed.xml"},
+            {"name": "Brisbane Times", "url": "https://www.brisbanetimes.com.au/rss/feed.xml"},
+            {"name": "WA Today", "url": "https://www.watoday.com.au/rss/feed.xml"},
+            {"name": "Canberra Times", "url": "https://www.canberratimes.com.au/rss.xml"},
             {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
             {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"},
             {"name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
             {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
             {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml"},
             {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
-            {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed"},
+            {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+            {"name": "Google News Australia", "url": "https://news.google.com/rss?hl=en-AU&gl=AU&ceid=AU:en"},
         ],
     }
 
@@ -550,7 +567,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
         print(f"\nHarvesting from RSS feeds (Target: {target_rss})...")
         for feed in rss_feeds:
             print(f"Fetching from {feed['name']} RSS feed: {feed['url']}...")
-            req = urllib.request.Request(feed['url'], headers={'User-Agent': 'Mozilla/5.0'})
+            req = urllib.request.Request(feed['url'], headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'})
             try:
                 with urllib.request.urlopen(req, timeout=10) as response:
                     content = response.read()
@@ -783,7 +800,10 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     system_instruction = (
         "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation. "
         "Use Google Search ONLY to fact-check names, dates, and medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon persona. "
-        "You are strictly forbidden from inventing, guessing, or inferring specific details not explicitly written in the text or verified by search."
+        "You are strictly forbidden from inventing, guessing, or inferring specific details not explicitly written in the text or verified by search. "
+        "Adhere to a strict budget of AT MOST 1 search query per story to stay within API quota limits. "
+        "If you used Google Search to verify any information in your response for a candidate, you MUST append the emoji 🌐 at the end of the first post (post 1) of that candidate's thread, and you should mention/cite the verified facts or source details in the Alethekanon post (post 11) if relevant. "
+        "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 270 CHARACTERS. THIS IS A HARD LIMIT. BE CONCISE."
     )
 
     # Build the full user message: rules + candidates + strict JSON matrix output demand
@@ -803,8 +823,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    real_psi (float),\n"
         '    "mode",\n'
         "    [\n"
-        '      "post 1 (under 280 chars, ending with 1-2 hashtags)",\n'
-        '      "post 2 (under 280 chars)",\n'
+        '      "post 1 (under 260 chars, ending with 1-2 hashtags)",\n'
+        '      "post 2 (under 260 chars)",\n'
         "      ...\n"
         "      (exactly 13 posts)\n"
         "    ],\n"
@@ -869,6 +889,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "gemini-2.5-flash-lite",
         "gemini-3.5-flash",
         "gemini-3.1-flash-lite",
+        "vertex:gemini-3.1-flash-lite",
         "gemini-3-flash-preview",
         "gemma-4-31b-it",
         "gemma-4-26b-a4b-it",   
@@ -890,7 +911,54 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         try:
             if model.startswith("agnes"):
                 key = agnes_api_key or os.environ.get("AGNES_API_KEY")
-                return call_agnes_api(key, system_instruction, user_payload_str, model=model)
+                return call_agnes_api(key, system_instruction, user_payload_str, model=model), []
+            elif model.startswith("vertex:"):
+                # Dynamically import and initialize the new google-genai SDK for Vertex AI fallback
+                from google import genai as vertex_genai
+                from google.genai import types as vertex_types
+                
+                base_model = model.split(":", 1)[1]
+                vertex_key = os.environ.get("VERTEX_API_KEY")
+                project_id = os.environ.get("VERTEX_PROJECT_ID", "alethekanon")
+                location = os.environ.get("VERTEX_LOCATION", "us-central1")
+                
+                client_args = {
+                    "vertexai": True
+                }
+                if vertex_key:
+                    client_args["api_key"] = vertex_key
+                else:
+                    client_args["project"] = project_id
+                    client_args["location"] = location
+                
+                print(f"Initializing Vertex AI client (key present: {bool(vertex_key)})...")
+                v_client = vertex_genai.Client(**client_args)
+                
+                v_tools = None
+                if use_search:
+                    v_tools = [vertex_types.Tool(google_search=vertex_types.GoogleSearch())]
+                    
+                v_safety = [
+                    vertex_types.SafetySetting(category='HARM_CATEGORY_HATE_SPEECH', threshold='BLOCK_NONE'),
+                    vertex_types.SafetySetting(category='HARM_CATEGORY_HARASSMENT', threshold='BLOCK_NONE'),
+                    vertex_types.SafetySetting(category='HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold='BLOCK_NONE'),
+                    vertex_types.SafetySetting(category='HARM_CATEGORY_DANGEROUS_CONTENT', threshold='BLOCK_NONE'),
+                ]
+                
+                config = vertex_types.GenerateContentConfig(
+                    temperature=0.15,
+                    max_output_tokens=8192,
+                    system_instruction=system_instruction,
+                    tools=v_tools,
+                    safety_settings=v_safety
+                )
+                
+                response = v_client.models.generate_content(
+                    model=base_model,
+                    contents=user_payload_str,
+                    config=config
+                )
+                result_text = response.text.strip()
             else:
                 if not genai_client:
                     raise ValueError("Gemini API client not initialized.")
@@ -902,20 +970,11 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                 # Setup tools if search grounding is enabled
                 tools_list = None
                 if use_search:
-                    class PatchedTool:
-                        def __init__(self, proto):
-                            self._proto = proto
-                            self.function_declarations = []
-                        def to_proto(self):
-                            return self._proto
-
                     # Use 'google_search_retrieval' for 1.0/1.5 models, 'google_search' for 2.0+ models
                     if any(x in model for x in ["-1.5", "-1.0"]):
-                        tool_proto = genai.protos.Tool(google_search_retrieval={})
+                        tools_list = [genai.protos.Tool(google_search_retrieval={})]
                     else:
-                        tool_proto = genai.protos.Tool(google_search={})
-                    
-                    tools_list = [PatchedTool(tool_proto)]
+                        tools_list = [genai.protos.Tool(google_search={})]
 
                 model_instance = genai_client.GenerativeModel(
                     model_name=model,
@@ -943,33 +1002,51 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                 )
                 result_text = response.text.strip()
 
-                # Pre-flight JSON validation to trigger fallback on truncation/corruption
-                content = result_text
-                if content.startswith("```json"):
-                    content = content[7:]
-                elif content.startswith("```"):
-                    content = content[3:]
-                if content.endswith("```"):
-                    content = content[:-3]
-                content = content.strip()
+            # Pre-flight JSON validation to trigger fallback on truncation/corruption
+            content = result_text
+            if content.startswith("```json"):
+                content = content[7:]
+            elif content.startswith("```"):
+                content = content[3:]
+            if content.endswith("```"):
+                content = content[:-3]
+            content = content.strip()
 
-                start_idx = content.find("[")
-                end_idx = content.rfind("]")
-                if start_idx == -1 or end_idx == -1 or end_idx <= start_idx:
-                    raise ValueError("Model output does not contain a valid JSON array structure (likely truncated or blocked by safety filters).")
-                
-                try:
-                    json.loads(content[start_idx:end_idx+1])
-                except Exception as je:
-                    raise ValueError(f"Model output is not complete valid JSON (likely truncated): {je}")
+            start_idx = content.find("[")
+            end_idx = content.rfind("]")
+            if start_idx == -1 or end_idx == -1 or end_idx <= start_idx:
+                raise ValueError("Model output does not contain a valid JSON array structure (likely truncated or blocked by safety filters).")
+            
+            try:
+                json.loads(content[start_idx:end_idx+1])
+            except Exception as je:
+                raise ValueError(f"Model output is not complete valid JSON (likely truncated): {je}")
 
+            try:
+                usage = response.usage_metadata
+                tokens_str = f"(Prompt tokens: {usage.prompt_token_count}, Candidate tokens: {usage.candidates_token_count}, Total: {usage.total_token_count})"
+            except Exception:
+                tokens_str = ""
+            print(f"API call successful with model: {model} {tokens_str}")
+
+            # Check if search grounding was actually triggered and collect source URLs
+            grounding_urls = []
+            if use_search and response:
                 try:
-                    usage = response.usage_metadata
-                    tokens_str = f"(Prompt tokens: {usage.prompt_token_count}, Candidate tokens: {usage.candidates_token_count}, Total: {usage.total_token_count})"
-                except Exception:
-                    tokens_str = ""
-                print(f"API call successful with model: {model} {tokens_str}")
-                return result_text
+                    if hasattr(response, 'candidates') and response.candidates:
+                        cand = response.candidates[0]
+                        if hasattr(cand, 'grounding_metadata') and cand.grounding_metadata:
+                            gm = cand.grounding_metadata
+                            if hasattr(gm, 'grounding_chunks') and gm.grounding_chunks:
+                                for chunk in gm.grounding_chunks:
+                                    if hasattr(chunk, 'web') and chunk.web and hasattr(chunk.web, 'uri') and chunk.web.uri:
+                                        url = chunk.web.uri
+                                        if url not in grounding_urls:
+                                            grounding_urls.append(url)
+                except Exception as ge:
+                    print(f"  Warning checking grounding chunks: {ge}")
+
+            return result_text, grounding_urls
         except Exception as e:
             err_str = str(e).lower()
             if "429" in err_str or "exhausted" in err_str or "quota" in err_str:
@@ -1185,7 +1262,7 @@ def main():
     parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
     parser.add_argument("--chunk-size", type=int_or_default(3), default=3, help="Number of stories to process per API call (default: 3)")
-    parser.add_argument("--category", type=str, default="general", help="Category (or comma-separated categories) of news to harvest (default: general). E.g. 'politics,tech'")
+    parser.add_argument("--category", type=str, default="all", help="Category (or comma-separated categories) of news to harvest (default: all). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
     parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
     parser.add_argument("--prefer", type=str, default="", help=(
@@ -1217,64 +1294,48 @@ def main():
     print("GOOGLE AI STUDIO ONE-SHOT BATCH EVALUATOR")
     print("=" * 80)
     
-    load_dynamic_banned_domains()
+    import subprocess
     
-    seen_urls, seen_ids, seen_targets = load_historical_evaluations()
-    
-    candidates = harvest_news(args.rss, args.bsky, seen_urls, seen_ids, seen_targets, category=args.category, topic=args.topic, banned_topic=args.banned_topic)
+    harvest_script = os.path.join(script_dir, "harvest_candidates.py")
+    cmd = [
+        sys.executable,
+        harvest_script,
+        "--rss", str(args.rss),
+        "--bsky", str(args.bsky)
+    ]
+    if args.prefer:
+        cmd.extend(["--prefer", args.prefer])
+    if args.category:
+        cmd.extend(["--category", args.category])
+    if args.topic:
+        cmd.extend(["--topic", args.topic])
+    if args.banned_topic:
+        cmd.extend(["--banned-topic", args.banned_topic])
+        
+    print(f"Executing: {' '.join(cmd)}")
+    try:
+        subprocess.run(cmd, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error: Candidate harvesting script failed with exit code {e.returncode}")
+        sys.exit(1)
+        
+    scratch_candidates_path = os.path.join(script_dir, "harvested_candidates.json")
+    if not os.path.exists(scratch_candidates_path):
+        print(f"Error: {scratch_candidates_path} not found. Harvesting failed to generate output.")
+        sys.exit(1)
+        
+    try:
+        with open(scratch_candidates_path, "r", encoding="utf-8") as f:
+            candidates = json.load(f)
+    except Exception as e:
+        print(f"Error loading candidates from {scratch_candidates_path}: {e}")
+        sys.exit(1)
+        
     if not candidates:
-        print("\nNo new, non-duplicate candidates found. Exiting.")
+        print("\nNo candidates found or remaining. Exiting.")
         sys.exit(0)
         
-    print(f"\nHarvested {len(candidates)} total candidates.")
-    
-    # Scrape article bodies to provide rich reality context
-    print("\nScraping article bodies for harvested candidates...")
-    successful_candidates = []
-    dynamic_banlist_changed = False
-    
-    for idx, c in enumerate(candidates, 1):
-        url = c.get("url")
-        if url:
-            print(f"[{idx}/{len(candidates)}] Scraping content from: {url}")
-            article_text = scrape_article_text(url)
-            if article_text and not article_text.startswith("Error") and len(article_text.strip()) >= 200:
-                article_text_clean = article_text[:4000]
-                orig_text = c.get("text", "")
-                c["text"] = f"Stated Claim / Post Context:\n{orig_text}\n\nActual Article Body:\n{article_text_clean}"
-                print(f"  Scraped successfully ({len(article_text_clean)} chars).")
-                successful_candidates.append(c)
-            else:
-                print(f"  Scrape failed, returned empty, or had insufficient content (length: {len(article_text) if article_text else 0} chars). Skipping candidate.")
-                try:
-                    host = urllib.parse.urlparse(url.strip().lower()).hostname
-                    if host:
-                        # Strip common 'www.' prefix
-                        domain = host
-                        if domain.startswith("www."):
-                            domain = domain[4:]
-                        if domain and domain not in DYNAMIC_BANNED_DOMAINS and not is_domain_whitelisted(domain) and domain not in NON_NEWS_DOMAINS:
-                            DYNAMIC_BANNED_DOMAINS.add(domain)
-                            dynamic_banlist_changed = True
-                            print(f"  Added domain '{domain}' to dynamic scraping banlist.")
-                except Exception as ex:
-                    print(f"  Warning: Failed to extract domain for banlist: {ex}")
-        else:
-            print(f"[{idx}/{len(candidates)}] Candidate has no URL. Skipping candidate.")
-            
-    if dynamic_banlist_changed:
-        save_dynamic_banned_domains()
-
-    candidates = successful_candidates
-    if not candidates:
-        print("\nNo candidates remaining after filtering out failed scrapes. Exiting.")
-        sys.exit(0)
-
-    # Save a temporary copy of candidates for debugging/safety
-    scratch_candidates_path = os.path.join(workspace_dir, "scratch", "harvested_candidates.json")
-    with open(scratch_candidates_path, "w", encoding="utf-8") as f:
-        json.dump(candidates, f, indent=2, ensure_ascii=False)
-    print(f"Saved raw harvested candidates to {scratch_candidates_path}")
+    print(f"\nLoaded {len(candidates)} total candidates for evaluation.")
     
     genai_client = get_gemini_client()
     agnes_api_key = os.environ.get("AGNES_API_KEY")
@@ -1324,8 +1385,57 @@ def main():
                 print(f"  Retry {attempt - 1}: {len(remaining)} candidate(s) not returned — re-firing...")
                 time.sleep(3)
             try:
-                raw_text = run_one_shot_evaluations(genai_client, remaining, args.model, agnes_api_key=agnes_api_key, use_son=args.son, use_search=args.search)
+                raw_text, grounding_urls = run_one_shot_evaluations(genai_client, remaining, args.model, agnes_api_key=agnes_api_key, use_son=args.son, use_search=args.search)
                 parsed = transpose_flat_to_json(raw_text)
+                
+                # If search was actually used, append 🌐 and link grounding URL
+                if grounding_urls:
+                    print(f"  Google Search grounding detected with {len(grounding_urls)} source(s).")
+                    primary_url = grounding_urls[0]
+                    # Strip tracking parameters to save character space
+                    if "?" in primary_url:
+                        primary_url = primary_url.split("?")[0]
+                    primary_url = primary_url.strip()
+                    
+                    for item in parsed:
+                        if len(item) > 9 and isinstance(item[9], list) and len(item[9]) > 0:
+                            # 1. Append 🌐 emoji to first post
+                            first_post = item[9][0]
+                            if "🌐" not in first_post:
+                                item[9][0] = first_post.rstrip() + " 🌐"
+                            
+                            # 2. Append the grounding URL to a post without attachments.
+                            # Preferred target is post 11 (Alethekanon, index 10).
+                            # Fallback sequence: post 3 (Reality, index 2), post 12 (Awwthekanon, index 11), post 13 (Brothekanon, index 12), post 5 (Context, index 4).
+                            preferred_indices = [10, 2, 11, 12, 4]
+                            appended = False
+                            url_suffix = f"\n\nSource: {primary_url}"
+                            
+                            for idx in preferred_indices:
+                                if idx < len(item[9]):
+                                    current_text = item[9][idx]
+                                    if len(current_text) + len(url_suffix) <= 290:
+                                        item[9][idx] = current_text + url_suffix
+                                        appended = True
+                                        print(f"    Appended grounding source URL to post {idx+1}")
+                                        break
+                                        
+                            if not appended:
+                                # Fallback: search for the shortest post (excluding post 1) to fit it within 299 character limit
+                                shortest_idx = -1
+                                shortest_len = 9999
+                                for idx in range(1, len(item[9])):
+                                    current_text = item[9][idx]
+                                    if len(current_text) < shortest_len:
+                                        shortest_len = len(current_text)
+                                        shortest_idx = idx
+                                        
+                                if shortest_idx != -1:
+                                    current_text = item[9][shortest_idx]
+                                    if len(current_text) + len(url_suffix) <= 299:
+                                        item[9][shortest_idx] = current_text + url_suffix
+                                        print(f"    Appended grounding source URL to shortest post {shortest_idx+1} (backup)")
+
                 chunk_evals.extend(parsed)
 
                 # Find which candidates still haven't been evaluated (match by URL)
@@ -1345,6 +1455,21 @@ def main():
             print("  Promoting and generating graphs immediately...")
             rebuild_registries()
             print("  Registries successfully rebuilt for this chunk.")
+            
+            # Deduct successfully processed candidates from the queue file
+            queue_file_path = os.path.join(script_dir, "harvested_candidates.json")
+            if os.path.exists(queue_file_path):
+                try:
+                    with open(queue_file_path, 'r', encoding='utf-8') as f:
+                        q_data = json.load(f)
+                    if isinstance(q_data, list):
+                        # Filter out evaluated candidates
+                        trimmed_q = [c for c in q_data if c.get("url", "").strip().lower() not in evaluated_urls]
+                        with open(queue_file_path, 'w', encoding='utf-8') as f:
+                            json.dump(trimmed_q, f, indent=2, ensure_ascii=False)
+                        print(f"  Deducted {len(q_data) - len(trimmed_q)} evaluated candidates from queue. Remaining: {len(trimmed_q)}")
+                except Exception as qe:
+                    print(f"  Warning: Failed to update queue file: {qe}")
         
         all_evaluations.extend(chunk_evals)
             

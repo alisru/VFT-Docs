@@ -235,7 +235,10 @@ class AletheiaLauncherApp:
         self.lbl_hud_drafts.pack(side=tk.LEFT, padx=(0, 20))
 
         self.lbl_hud_failed = tk.Label(inner, text="❌ Failed: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
-        self.lbl_hud_failed.pack(side=tk.LEFT)
+        self.lbl_hud_failed.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_queue = tk.Label(inner, text="📥 Queue: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_queue.pack(side=tk.LEFT)
 
     def refresh_hud_stats(self):
         # 1. Parse env vars
@@ -299,6 +302,19 @@ class AletheiaLauncherApp:
         self.lbl_hud_live.config(text=f"📂 Live: {live_count}", fg=ACCENT_CYAN)
         self.lbl_hud_drafts.config(text=f"📝 Drafts: {draft_count}", fg=WARNING_COLOR)
         self.lbl_hud_failed.config(text=f"❌ Failed: {fail_count}", fg=DANGER_COLOR)
+
+        # Count harvested stories buffer (queue)
+        queue_count = 0
+        queue_path = "bluesky_bot/harvested_candidates.json"
+        if os.path.exists(queue_path):
+            try:
+                with open(queue_path, "r", encoding="utf-8") as f:
+                    q_data = json.load(f)
+                    if isinstance(q_data, list):
+                        queue_count = len(q_data)
+            except Exception:
+                pass
+        self.lbl_hud_queue.config(text=f"📥 Queue: {queue_count}", fg=SUCCESS_COLOR)
 
     def create_actions_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")

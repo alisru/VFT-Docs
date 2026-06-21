@@ -39,6 +39,8 @@ def split_text(text, max_len=299):
     """Splits text dynamically at the last newline or space before max_len.
     Avoids orphaning short header lines (e.g. 'Brothekanon:') by only
     splitting at a newline if the chunk before it is at least 80 chars.
+    Ensures that we don't leave a tiny orphaned tail (less than 25 chars)
+    by walking back to split at a previous space if needed.
     """
     if len(text) <= max_len:
         return [text]
@@ -57,6 +59,14 @@ def split_text(text, max_len=299):
 
         if split_idx == -1:
             split_idx = text.rfind(' ', 0, max_len)
+            if split_idx != -1:
+                # If splitting here leaves an orphaned word/tail of less than 25 chars,
+                # walk back to find a previous space that leaves a larger, readable tail.
+                while split_idx != -1 and (len(text) - split_idx) < 25:
+                    prev_space = text.rfind(' ', 0, split_idx)
+                    if prev_space == -1:
+                        break
+                    split_idx = prev_space
 
         if split_idx == -1:
             # Force split if no space or newline
@@ -207,72 +217,12 @@ def save_and_sync_story(thread_config, write_json=True):
     except Exception as e:
         print(f"Warning: Failed to update index.json at {index_path}: {e}")
 
-    # Update stories_registry.js in bot directory
-    for r_path in [bot_registry_path]:
-        try:
-            if not os.path.exists(r_path):
-                registry_data = []
-            else:
-                with open(r_path, "r", encoding="utf-8") as f:
-                    content = f.read().strip()
-                
-                prefix = "window.ALETHEIA_STORIES_REGISTRY = "
-                suffix = ";"
-                if content.startswith(prefix):
-                    json_str = content[len(prefix):]
-                    if json_str.endswith(suffix):
-                        json_str = json_str[:-len(suffix)]
-                    registry_data = json.loads(json_str)
-                else:
-                    registry_data = []
-            
-            # Ensure graph_img path points into graph_png/ folder
-            graph_img = thread_config.get("graph_img") or f"{story_id}_graph.png"
-            if graph_img and not graph_img.startswith("graph_png/"):
-                graph_img = f"graph_png/{graph_img}"
-                
-            # Formulate the updated registry element
-            registry_story = {
-                "id": story_id,
-                "subject": thread_config.get("subject"),
-                "link": thread_config.get("link"),
-                "claim_u": thread_config.get("claim_u"),
-                "claim_psi": thread_config.get("claim_psi"),
-                "real_u": thread_config.get("real_u"),
-                "real_psi": thread_config.get("real_psi"),
-                "mode": thread_config.get("mode", "root"),
-                "status": thread_config.get("status", "COMPLETED DRY RUN"),
-                "verdict": thread_config.get("verdict") or (thread_config.get("posts", ["", "", "", ""])[3].replace("Verdict: ", "") if len(thread_config.get("posts", [])) > 3 else "FAIL — The Path of Deception"),
-                "graph_img": graph_img,
-                "posts": thread_config.get("posts")
-            }
-            if "target_url" in thread_config:
-                registry_story["target_url"] = thread_config["target_url"]
-            if "rkeys" in thread_config:
-                registry_story["rkeys"] = thread_config["rkeys"]
-            if "post_urls" in thread_config:
-                registry_story["post_urls"] = thread_config["post_urls"]
-                
-            # Update or insert
-            found_idx = -1
-            for idx, item in enumerate(registry_data):
-                if item.get("subject") == registry_story["subject"] or item.get("id") == registry_story["id"]:
-                    found_idx = idx
-                    break
-                    
-            if found_idx != -1:
-                for k, v in registry_story.items():
-                    registry_data[found_idx][k] = v
-            else:
-                registry_data.insert(0, registry_story)
-                
-            # Write back JS file
-            new_content = f"window.ALETHEIA_STORIES_REGISTRY = {json.dumps(registry_data, indent=2, ensure_ascii=False)};\n"
-            with open(r_path, "w", encoding="utf-8") as f:
-                f.write(new_content)
-            print(f"Updated stories_registry.js at {r_path}")
-        except Exception as e:
-            print(f"Warning: Failed to update stories_registry.js at {r_path}: {e}")
+    # Rebuild registries using the single source of truth compiler
+    try:
+        from rebuild_registries import rebuild_registries
+        rebuild_registries()
+    except Exception as e:
+        print(f"Warning: Failed to rebuild registries: {e}")
 
 def resolve_facets_and_tags(text, link=None):
     """Parses text for hashtags and links, returning facets list and tags list."""
@@ -336,9 +286,7 @@ def post_thread(client, thread_config, live=False):
     if not posts:
         raise ValueError("Thread configuration contains no posts.")
         
-    final_posts = []
-    for post in posts:
-        final_posts.extend(split_text(post))
+    final_posts = pack_posts(posts, max_len=299)
         
     for idx, post in enumerate(final_posts, 1):
         if len(post) > 299:
@@ -385,6 +333,8 @@ def post_thread(client, thread_config, live=False):
                 embed_info = f" [Embed: Trajectory Graph]"
             elif idx == 2 and link:
                 embed_info = f" [Embed: Link Card -> {link}]"
+            elif "Source: " in post and thread_config.get("grounding_url"):
+                embed_info = f" [Embed: Grounding Card -> {thread_config.get('grounding_url')}]"
             print(f"\n[Post {idx}/{len(final_posts)}]{embed_info} ({len(post)} chars):\n{post}")
         thread_config["status"] = "COMPLETED DRY RUN"
     else:
@@ -423,6 +373,23 @@ def post_thread(client, thread_config, live=False):
                     print(f"Created link preview card embed for: {link}")
                 except Exception as ex:
                     print(f"Warning: Failed to create external link embed card: {ex}")
+
+            # Create Grounding Link Preview Card (if grounding_url is present)
+            grounding_url = thread_config.get("grounding_url", "")
+            grounding_embed = None
+            if grounding_url:
+                try:
+                    desc_text = f"Fact-check verification source for {subject}"
+                    grounding_embed = models.AppBskyEmbedExternal.Main(
+                        external=models.AppBskyEmbedExternal.External(
+                            title="Verification Source | Aletheia Bot",
+                            description=desc_text,
+                            uri=grounding_url
+                        )
+                    )
+                    print(f"Created grounding link preview card embed for: {grounding_url}")
+                except Exception as ex:
+                    print(f"Warning: Failed to create grounding external link embed card: {ex}")
 
             # first_post_embed always gets the trajectory graph_embed
             first_post_embed = graph_embed
@@ -521,6 +488,9 @@ def post_thread(client, thread_config, live=False):
                     # Attach the link preview card embed to the second post of the thread
                     current_embed = link_embed
                     print("Attaching link preview card embed to Part 2...")
+                elif "Source: " in text and grounding_embed is not None:
+                    current_embed = grounding_embed
+                    print(f"Attaching grounding link preview card embed to Part {i}...")
                 sub_facets, sub_tags = resolve_facets_and_tags(text)
                 try:
                     reply = client.com.atproto.repo.create_record(

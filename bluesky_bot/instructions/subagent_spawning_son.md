@@ -29,7 +29,7 @@ Sub-agents are fresh, stateless model instances spawned via the `invoke_subagent
   3. **Target Quota**: Retrieve exactly [Count, e.g. 20] premium, high-quality, diverse news candidates.
   4. **Format & Output**:
      - Write your output as a clean JSON array of candidate objects directly to the target candidate file:
-       `e:\Vector Field Theory\VFT Docs\scratch\harvested_candidates.json`
+       `e:\Vector Field Theory\VFT Docs\bluesky_bot\harvested_candidates.json`
      - Format: `[ { "url": "https://...", "text": "Raw text content of the post or article summary" } ]`
   5. **Immediate Exit**: Once the file is written, notify the parent orchestrator immediately and terminate. Do not perform any further analysis.
   ```

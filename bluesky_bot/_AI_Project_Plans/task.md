@@ -1,7 +1,8 @@
-# Active Task List: Strict Curated Actor Extraction and Backfill
+# Active Task List: Australian & International RSS Feeds Expansion and Latency Resolution
 
-- [x] Analyze the corpus proper nouns and filenames to build an expanded, comprehensive map of political actors, individuals, and nations.
-- [x] Rewrite `actor_extract.py` to prioritize strict dictionary matching using `ACTOR_MAP` and completely remove the heuristic fallback (preventing garbage entities).
-- [x] Create and run the backfill script `scratch/backfill_curated_actors.py` to re-tag all 1,565 story JSONs on disk, clearing out the old heuristic-generated trash.
-- [x] Rebuild the registries using `python rebuild_registries.py` to compile the cleaned actors list into `stories_registry.js`.
-- [x] Verify that the control panel's Actor/Entity sidebar is fully updated and free of garbage.
+- [ ] Upgrade User-Agent header in `harvest_candidates.py` to modern Chrome browser string to resolve Google News connection delay.
+- [ ] Upgrade User-Agent header in `google_ai_studio_one_shot.py` to modern Chrome browser string.
+- [ ] Add the newly identified Australian and international RSS feeds from Feedspot to the `rss_feeds` list in `harvest_candidates.py`.
+- [ ] Add the newly identified Australian and international RSS feeds to `_CATEGORY_FEEDS` in `google_ai_studio_one_shot.py`.
+- [ ] Run verification tests of candidate harvesting using `python bluesky_bot/harvest_candidates.py --rss-target 5 --bsky-target 0` to check yield and latency.
+- [ ] Verify category harvesting via `python bluesky_bot/google_ai_studio_one_shot.py --rss 5 --bsky 0 --dry-run` to make sure it loads category feeds correctly.

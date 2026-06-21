@@ -367,9 +367,9 @@ def rebuild_registries():
             "posts":     cfg.get("posts"),
             "created_at": created_at,
         }
-        for k in ["target_url", "rkeys", "post_urls", "actors", "category", "topic", "event",
+        for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "category", "topic", "event",
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
-                  "stated_forces", "actual_forces"]:
+                  "stated_forces", "actual_forces", "grounding_url"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 
@@ -391,6 +391,19 @@ def rebuild_registries():
         with open(registry_path, "w", encoding="utf-8") as f:
             f.write(registry_js)
         print(f"Compiled stories_registry.js ({len(combined)} stories, {len(active_live_stories)} live)")
+        
+        # Log how many stories are in the harvested stories buffer (queue)
+        queue_path = os.path.join(script_dir, "harvested_candidates.json")
+        pending_count = 0
+        if os.path.exists(queue_path):
+            try:
+                with open(queue_path, 'r', encoding='utf-8') as f:
+                    q_data = json.load(f)
+                    if isinstance(q_data, list):
+                        pending_count = len(q_data)
+            except Exception:
+                pass
+        print(f"Pending candidates in harvested stories buffer: {pending_count}")
     except Exception as e:
         print(f"Warning: Failed to write stories_registry.js: {e}")
 

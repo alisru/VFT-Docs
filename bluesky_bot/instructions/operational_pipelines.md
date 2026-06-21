@@ -35,12 +35,12 @@ Run the harvesting scripts locally inside the virtual environment to pull candid
 ```bash
 .venv\Scripts\python.exe bluesky_bot/harvest_candidates.py --rss-target 0 --bsky-target 40
 ```
-This writes the raw candidate feeds to `scratch/harvested_candidates.json`.
+This writes the raw candidate feeds to `bluesky_bot/harvested_candidates.json`.
 
 ### Step 2: Beehive Evaluation Loop (Dry Run)
 The parent (Queen) runs a parallel FIFO turn-based loop:
 
-1. Load `bluesky_bot/stories/harvested_candidates.json` and build a global FIFO queue.
+1. Load `bluesky_bot/harvested_candidates.json` and build a global FIFO queue.
 2. Spawn **5 parallel bees** (Bee 1 to Bee 5) using the `Beehive Evaluator Bee` system prompt from `subagent_spawning.md`. Workspace: `inherit`.
 3. Track individual metrics per bee: `stories_sent_to_bee_[id]` (for retirement checks) and `completed` (total).
 4. Initially pop and dispatch the first 5 stories to the 5 spawned bees respectively.

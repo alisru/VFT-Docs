@@ -29,7 +29,7 @@ This file is the master index and entry point for the Aletheia Bot. All operatio
 
 Run these scripts in order. You do not need to open the script files — the descriptions below are sufficient.
 
-* **`bluesky_bot/harvest_candidates.py`**: Logs into Bluesky, fetches fresh English news posts from verified feeds, de-duplicates against historical stories, and writes up to 25 candidates to `scratch/harvested_candidates.json`. Supports `--rss-target N` and `--bsky-target X` CLI arguments. Run this first.
+* **`bluesky_bot/harvest_candidates.py`**: Logs into Bluesky, fetches fresh English news posts from verified feeds, de-duplicates against historical stories, and writes up to 25 candidates to `bluesky_bot/harvested_candidates.json`. Supports `--rss-target N` and `--bsky-target X` CLI arguments. Run this first.
 * **`bluesky_bot/rebuild_registries.py`**: Clears old registries and recompiles all `factcheck_*.json` files in `bluesky_bot/stories/` into `stories_registry.js` and updates control panel indexes. Run this after sub-agents finish.
 * **`bluesky_bot/aletheia_bot.py`**: The core CLI posting engine. Validates character limits, uploads graphs, and posts threads live (`--live`) or dry-run (`--dry-run`). Used for individual story posting, not batch runs.
 * **`bluesky_bot/generate_graph.py`**: Matplotlib module called by sub-agents to draw trajectory graphs. Sub-agents call this directly — you do not need to touch it.

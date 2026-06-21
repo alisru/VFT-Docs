@@ -4,6 +4,67 @@ This document maintains the historical and active implementation plans for the A
 
 ---
 
+## Plan 18 (Active): Australian & International RSS Feeds Expansion and Latency Resolution
+
+### Goal Description
+Expand RSS candidate harvesting yield by adding highly scrapable, popular Australian (AUS) and international RSS feeds. Feeds are curated from Feedspot, filtering out any sources that lack Facebook followers or are behind hard paywalls (such as local News Corp papers) to ensure high scrapability. Simultaneously resolve the 10-30 second Google News RSS connection delays by replacing the generic browser User-Agent header with a modern desktop browser string.
+
+### User Review Required
+> [!NOTE]
+> We have filtered out all sources without Facebook followers or with hard paywalls.
+> The final selected premium Australian feeds all have >130K Facebook followers.
+> The Google News RSS feeds will now fetch instantly using the upgraded User-Agent header.
+
+### Proposed Changes
+
+#### 1. Upgrade User-Agent Request Headers
+**[MODIFY]** [harvest_candidates.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py)
+* Swap the generic `{'User-Agent': 'Mozilla/5.0'}` on line 348 with:
+  `'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'`
+
+**[MODIFY]** [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py)
+* Swap the generic `{'User-Agent': 'Mozilla/5.0'}` on line 553 with:
+  `'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'`
+
+#### 2. Expand RSS Feeds in Harvester
+**[MODIFY]** [harvest_candidates.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py)
+* Append the newly identified, high-following, and scrapable Australian and international RSS feeds to `rss_feeds` list (lines 332-340):
+  - ABC News Australia: `https://www.abc.net.au/news/feed/2942460/rss.xml` (FB: 5M)
+  - 9News: `https://www.9news.com.au/rss` (FB: 4M)
+  - Sydney Morning Herald (SMH): `https://www.smh.com.au/rss/feed.xml` (FB: 1.4M)
+  - Perth Now: `https://www.perthnow.com.au/feed` (FB: 654K)
+  - The Age: `https://www.theage.com.au/rss/feed.xml` (FB: 569K)
+  - Brisbane Times: `https://www.brisbanetimes.com.au/rss/feed.xml` (FB: 229K)
+  - WA Today: `https://www.watoday.com.au/rss/feed.xml` (FB: 188K)
+  - Canberra Times: `https://www.canberratimes.com.au/rss.xml` (FB: 132K)
+  - DW News (World): `https://rss.dw.com/xml/rss-gb-all` (Germany's public broadcaster)
+  - France 24: `https://www.france24.com/en/rss` (France's public broadcaster)
+  - CBC News (Canada): `https://rss.cbc.ca/lineup/topstories.xml` (Canada's public broadcaster)
+  - UPI News (US): `https://rss.upi.com/news/news.rss`
+  - Google News World (US): `https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNR3FYZHpWdEVnSnJieG9FUkNnQVAB?hl=en-US&gl=US&ceid=US:en`
+  - Google News Australia: `https://news.google.com/rss?hl=en-AU&gl=AU&ceid=AU:en`
+
+#### 3. Expand RSS Feeds in AI Studio Evaluator
+**[MODIFY]** [google_ai_studio_one_shot.py](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py)
+* Update `_CATEGORY_FEEDS` (lines 486-526) to include:
+  - Add DW Science to `"science"`: `https://rss.dw.com/xml/rss-gb-science-environment`
+  - Add DW Business to `"business"`: `https://rss.dw.com/xml/rss-gb-bus`
+  - Add DW Tech to `"tech"`: `https://rss.dw.com/xml/rss-gb-tech`
+  - Add DW World, France 24, Google News World, CBC News, UPI News to `"world"`
+  - Add ABC News, 9News, SMH, The Age, WA Today, Brisbane Times, Perth Now, Canberra Times, Google News Australia to `"general"`
+
+### Verification Plan
+* Run dry-run harvest candidate executions to ensure all feeds fetch quickly without timeout or errors:
+  - `python bluesky_bot/harvest_candidates.py --rss-target 10 --bsky-target 0`
+* Run the one-shot batch script (without API keys, or using the `--rss` harvest mode) to verify category harvesting:
+  - `python bluesky_bot/google_ai_studio_one_shot.py --rss 5 --bsky 0 --dry-run`
+
+### Moral Axis Audit
+* Calculated Coordinate: `(υ=+1.0, ψ=+1.5)` -> Greater Good & Productive Action.
+* Verdict: Curating only the highest-following and paywall-free Australian and global news feeds ensures rich and reliable reality sources for public audits.
+
+---
+
 ## Plan 17 (Active): Intelligent Actor Extraction via LLM
 
 ### Goal Description
@@ -82,7 +143,7 @@ Correct the axis mapping inside the `auditCalibration(stories)` function on the 
 
 ### Moral Axis Audit
 * Calculated Coordinate: `(υ=+1.0, ψ=+1.0)` -> Greater Good & Productive Action.
-* Verdict: Ensures that the user dashboard graphs show correct, standard coordinates, avoiding any user interpretation confusion.
+* Verdict: Ensures that the user dashboard graphs show correct, standard coordinates, avoiding any user confusion.
 
 ---
 
