@@ -1170,14 +1170,32 @@
             } else {
                 // Mode 2: Hegemony Map & 32 Isms Gravity Wells
                 
-                // 1. Insert 4 Macro Quadrant Nodes
+                // 1. Coordinates framework to lock the geometry of the Hegemony Map
+                const parentCoords = {
+                    "GG": { x: -400, y: -400 },
+                    "LE": { x: 400, y: -400 },
+                    "LG": { x: -400, y: 400 },
+                    "GE": { x: 400, y: 400 }
+                };
+
+                const targetOffsets = {
+                    "gg": { dx: -160, dy: -160 },
+                    "le": { dx: 160, dy: -160 },
+                    "lg": { dx: -160, dy: 160 },
+                    "ge": { dx: 160, dy: 160 }
+                };
+
+                // 1. Insert 4 Macro Quadrant Nodes (Locked in 4 corners)
                 Object.keys(QUADRANTS).forEach(quad => {
                     const qMeta = QUADRANTS[quad];
                     nodesArray.push({
                         id: `quadrant-${quad}`,
                         label: quad,
+                        x: parentCoords[quad].x,
+                        y: parentCoords[quad].y,
+                        fixed: true,
                         title: `${qMeta.name}\n${qMeta.isms}\n\n${qMeta.description}`,
-                        value: 20, // large size
+                        value: 22, // large size
                         color: {
                             background: qMeta.color,
                             border: qMeta.border,
@@ -1190,14 +1208,23 @@
                     });
                 });
 
-                // 2. Insert 16 Point Attractors connected to Quadrants
+                // 2. Insert 16 Point Attractors (Locked offsets relative to their parent)
                 Object.keys(HEGEMONY_POINTS).forEach(pointKey => {
                     const pt = HEGEMONY_POINTS[pointKey];
                     const ismsLabel = pt.isms.join(' / ');
                     
+                    const targetPart = pt.sub_vector.split('-')[1];
+                    const pCoord = parentCoords[pt.quadrant];
+                    const offset = targetOffsets[targetPart];
+                    const posX = pCoord.x + offset.dx;
+                    const posY = pCoord.y + offset.dy;
+
                     nodesArray.push({
                         id: `point-${pointKey}`,
                         label: ismsLabel.length > 20 ? ismsLabel.substring(0, 18) + '..' : ismsLabel,
+                        x: posX,
+                        y: posY,
+                        fixed: true,
                         title: `Vector Point: ${pointKey}\nNode Name: ${pt.name}\n\nPhilosophical Isms: ${pt.isms.join(', ')}\n\nDescription: ${pt.description}`,
                         value: 12, // medium size
                         color: {
@@ -1217,7 +1244,7 @@
                         from: `quadrant-${pt.quadrant}`,
                         to: `point-${pointKey}`,
                         type: 'attractor-parent',
-                        physics: true,
+                        physics: false, // Fixed positions, no physics calculations needed
                         width: 3.0,
                         length: 80,
                         color: { color: QUADRANTS[pt.quadrant].color, highlight: '#ffffff' }
