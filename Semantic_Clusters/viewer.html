@@ -563,14 +563,108 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
-
+ 
         ::-webkit-scrollbar-track {
             background: var(--bg-primary);
         }
-
+ 
         ::-webkit-scrollbar-thumb {
             background: var(--accent-color);
             border-radius: 4px;
+        }
+
+        /* Mode Selector and progressive progress styling */
+        .mode-selector-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mode-select {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .mode-select:focus {
+            border-color: var(--accent-color);
+        }
+        
+        .progress-overlay {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+            background-color: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.85rem;
+            display: none;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            font-family: var(--font-main);
+        }
+        
+        .progress-bar-container {
+            width: 120px;
+            height: 6px;
+            background-color: var(--bg-tertiary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background-color: var(--accent-hover);
+            transition: width 0.1s ease;
+        }
+
+        .hegemony-legend {
+            display: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.75rem;
+            font-size: 0.8rem;
+        }
+        
+        .hegemony-legend-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .legend-color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .hegemony-legend-text {
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+        
+        .hegemony-legend-text strong {
+            color: var(--text-primary);
         }
     </style>
 </head>
@@ -620,6 +714,12 @@
             <div class="graph-panel-layout">
                 <!-- Vis Network Canvas -->
                 <div class="graph-workspace">
+                    <div class="progress-overlay" id="graph-progress-overlay">
+                        <span id="progress-text">Loading layout...</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                        </div>
+                    </div>
                     <div id="network-canvas"></div>
                 </div>
                 
@@ -627,7 +727,23 @@
                 <div class="graph-sidebar">
                     <h3>Network Controls</h3>
                     
+                    <div class="mode-selector-container">
+                        <h4 style="font-size: 0.85rem; color: var(--text-secondary);">Visualization Mode</h4>
+                        <select id="graph-mode-select" class="mode-select" onchange="changeGraphMode(this.value)">
+                            <option value="semantic">Semantic Topic Overlap Mode</option>
+                            <option value="hegemony">Hegemony Map (32 Isms) Mode</option>
+                        </select>
+                    </div>
+
                     <div class="graph-controls">
+                        <div class="slider-label">
+                            <span>progressive load rate (edges/tick)</span>
+                            <span id="chunk-size-val">250</span>
+                        </div>
+                        <input type="range" id="chunk-size-slider" class="range-slider" min="50" max="2000" step="50" value="250" oninput="changeChunkSize(this.value)">
+                    </div>
+
+                    <div class="graph-controls" id="threshold-control-group">
                         <div class="physics-btn-group">
                             <button id="physics-toggle-btn" class="action-btn" onclick="togglePhysics()">Pause Physics</button>
                             <button class="action-btn" onclick="triggerStabilize()">Settle Layout</button>
@@ -663,7 +779,7 @@
                         </div>
                     </div>
 
-                    <div class="legend-box">
+                    <div class="legend-box" id="semantic-legend">
                         <div class="legend-item">
                             <div class="legend-color-line" style="background-color: #8b5cf6;"></div>
                             <span>Direct Topic Overlap (Force)</span>
@@ -675,6 +791,39 @@
                         <div class="legend-item">
                             <div class="legend-color-line" style="background-color: rgba(56, 189, 248, 0.45); height: 1.5px;"></div>
                             <span>General Underlay (3+ Shared Words)</span>
+                        </div>
+                    </div>
+
+                    <!-- Hegemony Legend (hidden by default) -->
+                    <div class="hegemony-legend" id="hegemony-legend">
+                        <h4 style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Hegemony Quadrants & Isms</h4>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #c084fc;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Greater Good (GG):</strong> Reality, History, Understanding, Communitarianism, Prudence
+                            </div>
+                        </div>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #38bdf8;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Lesser Good (LG):</strong> Learning (Stoicism/Empiricism), Imagination, Faith, Hope
+                            </div>
+                        </div>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #fb923c;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Lesser Evil (LE):</strong> Chaos (Nihilism), Hatred, Indulgence, Denial
+                            </div>
+                        </div>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #f87171;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Greater Evil (GE):</strong> Apathy, Corruption, Erasure (Delusion), Deceit
+                            </div>
+                        </div>
+                        <div class="legend-item" style="margin-top: 0.25rem;">
+                            <div class="legend-color-line" style="background-color: rgba(255, 255, 255, 0.15); height: 1px; width: 30px; margin-right: 0.5rem;"></div>
+                            <span style="font-size: 0.725rem; color: var(--text-secondary);">Faint links connect docs to their 16-point attractor gravity wells</span>
                         </div>
                     </div>
 
@@ -695,6 +844,7 @@
         let paragraphsData = [];
         let topicsMap = {};
         let documentsMap = {}; // Maps filename -> { topics: Set, path: String, keywords: Set }
+        let docIsmMappings = {}; // Maps filename -> { assigned_point, quadrant, isms, etc. }
         let network = null;
         let nodesDataSet = null;
         let edgesDataSet = null;
@@ -706,6 +856,41 @@
         let userKeywords = [];
         let selectedTopicIds = new Set();
         let lastSelectedDocId = null;
+        let graphMode = 'semantic'; // 'semantic' or 'hegemony'
+        let edgeChunkLoadingInterval = null;
+        let progressiveChunkSize = 250;
+
+        function changeChunkSize(val) {
+            progressiveChunkSize = parseInt(val);
+            document.getElementById('chunk-size-val').innerText = val;
+        }
+
+        // Hegemony Metadata definitions for UI display
+        const QUADRANTS = {
+            "GG": { name: "Greater Good (Reality Cluster)", color: "#c084fc", border: "#a78bfa", isms: "16 Optimisms", description: "The pursuit of objective truth, shared meaning, and fair social structure." },
+            "LG": { name: "Lesser Good (Human/Spirit Cluster)", color: "#38bdf8", border: "#0ea5e9", isms: "16 Optimisms", description: "The cultivation of the internal self, spiritual connection, and benevolent action." },
+            "LE": { name: "Lesser Evil (Social/Abstract Cluster)", color: "#fb923c", border: "#f97316", isms: "16 Pessimisms", description: "The rejection of meaning, active malice, closed-mindedness, and lack of self-control." },
+            "GE": { name: "Greater Evil (Base/Material Cluster)", color: "#f87171", border: "#ef4444", isms: "16 Pessimisms", description: "The passive allowance of harm, systemic corruption, distortion of communication, and erasure of truth." }
+        };
+
+        const HEGEMONY_POINTS = {
+            "gg-gg": { quadrant: "GG", name: "Reality / History", isms: ["Realism", "Historicism"], description: "Objective reality, facts, historical trajectory, and structural evolution." },
+            "gg-le": { quadrant: "GG", name: "Language / Psychology", isms: ["Relationalism", "Understanding"], description: "Communication, relational meaning, intersubjective understanding." },
+            "gg-ge": { quadrant: "GG", name: "Sociology / Society", isms: ["Collectivism", "Communitarianism"], description: "Empathy, community, social cohesion, collective systems." },
+            "gg-lg": { quadrant: "GG", name: "Internal Judgment / Religion", isms: ["Prudence", "Charity"], description: "Wisdom, careful judgment, benevolence, moral law, selfless love." },
+            "lg-gg": { quadrant: "LG", name: "Learning / Emotional-physics", isms: ["Empiricism", "Stoicism"], description: "Learning, temperance, emotional resilience, empirical observation." },
+            "lg-le": { quadrant: "LG", name: "Meta-Physics / Physics", isms: ["Imagination", "Objectivity"], description: "Relationship between abstract ideas and physical laws, creative imagination." },
+            "lg-ge": { quadrant: "LG", name: "Spirituality / Maths", isms: ["Faith", "Order"], description: "Spiritual connection, divine mathematical order, structural symmetry." },
+            "lg-lg": { quadrant: "LG", name: "Intelligence / Religion", isms: ["Hope", "Charity"], description: "Hopeful intelligence, spiritual aspiration, divine charity." },
+            "le-gg": { quadrant: "LE", name: "Maths / Spirituality", isms: ["Chaos", "Nihilism"], description: "Mathematical chaos, active rejection of meaning, nihilistic worldview." },
+            "le-le": { quadrant: "LE", name: "Religion / Intelligence", isms: ["Hatred", "Despair"], description: "Active malice, ideological hatred, despair, hopelessness." },
+            "le-ge": { quadrant: "LE", name: "Emotional-physics / Learning", isms: ["Indulgence", "Folly"], description: "Lack of self-control, folly, immediate gratification, emotional volatility." },
+            "le-lg": { quadrant: "LE", name: "Physics / Meta-Physics", isms: ["Denial", "Dogma"], description: "Denial of facts, rigid dogma, closed-mindedness, ideological blindness." },
+            "ge-gg": { quadrant: "GE", name: "Society / Sociology", isms: ["Anarchy", "Apathy"], description: "Societal apathy, passive allowance of harm, anarchy, social collapse." },
+            "ge-le": { quadrant: "GE", name: "Internal Judgment / The World", isms: ["Corruption", "Cowardice"], description: "Systemic corruption, personal cowardice, compromise, ethical failure." },
+            "ge-ge": { quadrant: "GE", name: "History / Reality", isms: ["Erasure", "Delusion"], description: "Historical erasure, self-delusion, complete denial of reality, revisionism." },
+            "ge-lg": { quadrant: "GE", name: "Psychology / Language", isms: ["Confusion", "Deceit"], description: "Deliberate deceit, manipulation, mental confusion, lying, gaslighting." }
+        };
 
         // Switch View Tabs
         function switchTab(tabId, btn) {
@@ -720,9 +905,35 @@
             }
         }
 
+        // Change between Semantic overlap and Hegemony Map modes
+        function changeGraphMode(newMode) {
+            graphMode = newMode;
+            
+            // Clean up any edge loading intervals
+            if (edgeChunkLoadingInterval) {
+                clearInterval(edgeChunkLoadingInterval);
+                edgeChunkLoadingInterval = null;
+            }
+
+            // Toggle legends visibility
+            if (newMode === 'hegemony') {
+                document.getElementById('semantic-legend').style.display = 'none';
+                document.getElementById('hegemony-legend').style.display = 'flex';
+                document.getElementById('threshold-control-group').style.display = 'none';
+            } else {
+                document.getElementById('semantic-legend').style.display = 'flex';
+                document.getElementById('hegemony-legend').style.display = 'none';
+                document.getElementById('threshold-control-group').style.display = 'block';
+            }
+
+            // Rebuild the graph
+            buildGraph();
+        }
+
         // Load JSON data
         async function loadData() {
             try {
+                // Fetch Paragraphs mapping
                 const response = await fetch('cluster_mapping.json');
                 if (!response.ok) throw new Error("Could not load cluster mapping JSON");
                 paragraphsData = await response.json();
@@ -781,6 +992,17 @@
                     });
                 });
 
+                // Fetch Hegemony Ism Mappings (optional secondary load)
+                try {
+                    const mapResponse = await fetch('doc_ism_mapping.json');
+                    if (mapResponse.ok) {
+                        docIsmMappings = await mapResponse.json();
+                        console.log("Hegemony classification mappings loaded.");
+                    }
+                } catch (e) {
+                    console.warn("doc_ism_mapping.json not available. Hegemony mode will fall back to dynamic display.");
+                }
+
                 document.getElementById('load-stats').innerText = 
                     `Index: ${paragraphsData.length} paras | ${Object.keys(topicsMap).length} clusters`;
                 
@@ -796,7 +1018,7 @@
             const list = document.getElementById('topic-list');
             list.innerHTML = '';
 
-            const sortedTopics = Object.values(sortedTopicsMap = Object.values(topicsMap).sort((a, b) => b.paragraphs.length - a.paragraphs.length));
+            const sortedTopics = Object.values(topicsMap).sort((a, b) => b.paragraphs.length - a.paragraphs.length);
 
             sortedTopics.forEach(topic => {
                 const tagsString = topic.keywords.join(', ');
@@ -863,98 +1085,207 @@
 
         // Tab 2: Build the vis.js Network Graph
         function buildGraph() {
+            // Cancel any running edge chunk additions
+            if (edgeChunkLoadingInterval) {
+                clearInterval(edgeChunkLoadingInterval);
+                edgeChunkLoadingInterval = null;
+            }
+
             const nodesArray = [];
             const allEdges = [];
-
             const docList = Object.keys(documentsMap);
-            docList.forEach(doc => {
-                const numTopics = documentsMap[doc].topics.size;
-                nodesArray.push({
-                    id: doc,
-                    label: doc.length > 25 ? doc.substring(0, 22) + '...' : doc,
-                    title: `${doc}\nTracks ${numTopics} semantic topics`,
-                    value: numTopics,
-                    color: {
-                        background: '#1e293b',
-                        border: '#8b5cf6',
-                        highlight: {
-                            background: '#8b5cf6',
-                            border: '#a78bfa'
-                        }
-                    },
-                    font: { color: '#f8fafc', face: 'Outfit', size: 14 }
+            
+            // Show Loading Indicator
+            const progressOverlay = document.getElementById('graph-progress-overlay');
+            const progressText = document.getElementById('progress-text');
+            const progressBarFill = document.getElementById('progress-bar-fill');
+            
+            progressOverlay.style.display = 'flex';
+            progressBarFill.style.width = '0%';
+            progressText.innerText = "Spawning Nodes...";
+
+            if (graphMode === 'semantic') {
+                // Mode 1: Traditional Semantic Overlap
+                docList.forEach(doc => {
+                    const numTopics = documentsMap[doc].topics.size;
+                    nodesArray.push({
+                        id: doc,
+                        label: doc.length > 25 ? doc.substring(0, 22) + '...' : doc,
+                        title: `${doc}\nTracks ${numTopics} semantic topics`,
+                        value: numTopics,
+                        color: {
+                            background: '#1e293b',
+                            border: '#8b5cf6',
+                            highlight: { background: '#8b5cf6', border: '#a78bfa' }
+                        },
+                        font: { color: '#f8fafc', face: 'Outfit', size: 14 }
+                    });
                 });
-            });
 
-            // Calculate overlap for all edges
-            for (let i = 0; i < docList.length; i++) {
-                for (let j = i + 1; j < docList.length; j++) {
-                    const doc1 = docList[i];
-                    const doc2 = docList[j];
+                // Calculate edge relations
+                for (let i = 0; i < docList.length; i++) {
+                    for (let j = i + 1; j < docList.length; j++) {
+                        const doc1 = docList[i];
+                        const doc2 = docList[j];
 
-                    const set1 = documentsMap[doc1].topics;
-                    const set2 = documentsMap[doc2].topics;
+                        const set1 = documentsMap[doc1].topics;
+                        const set2 = documentsMap[doc2].topics;
 
-                    const intersection = new Set([...set1].filter(x => set2.has(x)));
-                    const union = new Set([...set1, ...set2]);
-                    const similarity = intersection.size / union.size;
+                        const intersection = new Set([...set1].filter(x => set2.has(x)));
+                        const union = new Set([...set1, ...set2]);
+                        const similarity = intersection.size / union.size;
 
-                    // 1. Direct Topic-Level Edge
-                    if (similarity > 0) {
-                        allEdges.push({
-                            from: doc1,
-                            to: doc2,
-                            similarity: similarity, 
-                            type: 'topic',
-                            physics: true, 
-                            value: similarity * 6,
-                            title: `Topic Overlap: ${(similarity * 100).toFixed(0)}%\nShared Topics: ${Array.from(intersection).join(', ')}`,
-                            color: {
-                                color: '#8b5cf6',
-                                highlight: '#a78bfa'
-                            }
-                        });
-                    }
+                        if (similarity > 0) {
+                            allEdges.push({
+                                from: doc1,
+                                to: doc2,
+                                similarity: similarity, 
+                                type: 'topic',
+                                physics: true, 
+                                value: similarity * 6,
+                                title: `Topic Overlap: ${(similarity * 100).toFixed(0)}%\nShared Topics: ${Array.from(intersection).join(', ')}`,
+                                color: { color: '#8b5cf6', highlight: '#a78bfa' }
+                            });
+                        }
 
-                    // 2. Underlying Keyword-Level Edge (Only 3+ shared keywords)
-                    const kw1 = documentsMap[doc1].keywords;
-                    const kw2 = documentsMap[doc2].keywords;
-                    const kwIntersection = Array.from(kw1).filter(x => kw2.has(x));
-                    
-                    if (kwIntersection.length >= 3) {
-                        allEdges.push({
-                            from: doc1,
-                            to: doc2,
-                            similarity: 0.0, 
-                            type: 'keyword-3',
-                            physics: false, 
-                            title: `3+ Keywords Overlap\nShared: ${kwIntersection.slice(0, 5).join(', ')}...`,
-                            width: 1.0,
-                            color: {
-                                color: 'rgba(56, 189, 248, 0.45)', 
-                                highlight: '#38bdf8'
-                            }
-                        });
+                        // Underlying Keyword overlap
+                        const kw1 = documentsMap[doc1].keywords;
+                        const kw2 = documentsMap[doc2].keywords;
+                        const kwIntersection = Array.from(kw1).filter(x => kw2.has(x));
+                        
+                        if (kwIntersection.length >= 3) {
+                            allEdges.push({
+                                from: doc1,
+                                to: doc2,
+                                similarity: 0.0, 
+                                type: 'keyword-3',
+                                physics: false, 
+                                title: `3+ Keywords Overlap\nShared: ${kwIntersection.slice(0, 5).join(', ')}...`,
+                                width: 1.0,
+                                color: { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' }
+                            });
+                        }
                     }
                 }
+            } else {
+                // Mode 2: Hegemony Map & 32 Isms Gravity Wells
+                
+                // 1. Insert 4 Macro Quadrant Nodes
+                Object.keys(QUADRANTS).forEach(quad => {
+                    const qMeta = QUADRANTS[quad];
+                    nodesArray.push({
+                        id: `quadrant-${quad}`,
+                        label: quad,
+                        title: `${qMeta.name}\n${qMeta.isms}\n\n${qMeta.description}`,
+                        value: 20, // large size
+                        color: {
+                            background: qMeta.color,
+                            border: qMeta.border,
+                            highlight: { background: qMeta.border, border: '#ffffff' }
+                        },
+                        shape: 'diamond',
+                        isAttractor: true,
+                        attractorType: 'quadrant',
+                        font: { color: '#ffffff', face: 'Outfit', size: 18, bold: true }
+                    });
+                });
+
+                // 2. Insert 16 Point Attractors connected to Quadrants
+                Object.keys(HEGEMONY_POINTS).forEach(pointKey => {
+                    const pt = HEGEMONY_POINTS[pointKey];
+                    const ismsLabel = pt.isms.join(' / ');
+                    
+                    nodesArray.push({
+                        id: `point-${pointKey}`,
+                        label: ismsLabel.length > 20 ? ismsLabel.substring(0, 18) + '..' : ismsLabel,
+                        title: `Vector Point: ${pointKey}\nNode Name: ${pt.name}\n\nPhilosophical Isms: ${pt.isms.join(', ')}\n\nDescription: ${pt.description}`,
+                        value: 12, // medium size
+                        color: {
+                            background: '#1e293b',
+                            border: QUADRANTS[pt.quadrant].color,
+                            highlight: { background: QUADRANTS[pt.quadrant].color, border: '#ffffff' }
+                        },
+                        shape: 'dot',
+                        isAttractor: true,
+                        attractorType: 'point',
+                        pointKey: pointKey,
+                        font: { color: '#e2e8f0', face: 'Outfit', size: 12 }
+                    });
+
+                    // Direct connection from Point Attractor to parent Quadrant
+                    allEdges.push({
+                        from: `quadrant-${pt.quadrant}`,
+                        to: `point-${pointKey}`,
+                        type: 'attractor-parent',
+                        physics: true,
+                        width: 3.0,
+                        length: 80,
+                        color: { color: QUADRANTS[pt.quadrant].color, highlight: '#ffffff' }
+                    });
+                });
+
+                // 3. Add documents color-coded and assigned to their Ism points
+                docList.forEach(doc => {
+                    let quadColor = '#1e293b';
+                    let quadBorder = '#8b5cf6';
+                    let ismTitle = "Unclassified";
+                    
+                    const mapping = docIsmMappings[doc];
+                    if (mapping) {
+                        const quadMeta = QUADRANTS[mapping.quadrant];
+                        if (quadMeta) {
+                            quadColor = '#1e293b';
+                            quadBorder = quadMeta.color;
+                        }
+                        ismTitle = `Quadrant: ${mapping.quadrant_name} (${mapping.quadrant})\nIsms: ${mapping.isms.join(' / ')}`;
+                    }
+
+                    nodesArray.push({
+                        id: doc,
+                        label: doc.length > 25 ? doc.substring(0, 22) + '...' : doc,
+                        title: `${doc}\n${ismTitle}`,
+                        value: 5, // smaller document nodes
+                        color: {
+                            background: quadColor,
+                            border: quadBorder,
+                            highlight: { background: quadBorder, border: '#ffffff' }
+                        },
+                        font: { color: '#f8fafc', face: 'Outfit', size: 12 }
+                    });
+
+                    // Add physical spring pulling document node to its attractor point
+                    if (mapping) {
+                        allEdges.push({
+                            from: `point-${mapping.assigned_point}`,
+                            to: doc,
+                            type: 'attractor-spring',
+                            physics: true,
+                            length: 120,
+                            color: { color: 'rgba(255,255,255,0.06)', highlight: 'rgba(255,255,255,0.2)' }
+                        });
+                    }
+                });
             }
 
             nodesDataSet = new vis.DataSet(nodesArray);
-            edgesDataSet = new vis.DataSet(allEdges);
+            edgesDataSet = new vis.DataSet(); // Start empty for progressive injection
 
             // Filter Edge view dynamically
             edgesDataView = new vis.DataView(edgesDataSet, {
                 filter: function (edge) {
                     if (userKeywords.length > 0) {
-                        const kw1 = documentsMap[edge.from].keywords;
-                        const kw2 = documentsMap[edge.to].keywords;
-                        const shared = Array.from(kw1).filter(x => kw2.has(x));
-                        const matchesQuery = shared.some(k => userKeywords.includes(k));
-                        
-                        if (matchesQuery) {
-                            edge.color = { color: '#38bdf8', highlight: '#7dd3fc' };
-                            edge.width = 2.5;
-                            return true; 
+                        // Check if both from and to are documents before checking keywords
+                        const info1 = documentsMap[edge.from];
+                        const info2 = documentsMap[edge.to];
+                        if (info1 && info2) {
+                            const shared = Array.from(info1.keywords).filter(x => info2.keywords.has(x));
+                            const matchesQuery = shared.some(k => userKeywords.includes(k));
+                            
+                            if (matchesQuery) {
+                                edge.color = { color: '#38bdf8', highlight: '#7dd3fc' };
+                                edge.width = 2.5;
+                                return true; 
+                            }
                         }
                     }
 
@@ -968,6 +1299,11 @@
                         edge.color = { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' };
                         edge.width = 1.0;
                         return showKeywordUnderlay;
+                    }
+
+                    // Attractor edges are always displayed in hegemony mode
+                    if (edge.type === 'attractor-parent' || edge.type === 'attractor-spring') {
+                        return true;
                     }
 
                     return false;
@@ -991,63 +1327,172 @@
                 physics: {
                     solver: 'forceAtlas2Based',
                     forceAtlas2Based: {
-                        gravitationalConstant: -180, 
-                        centralGravity: 0.005,        
-                        springLength: 200,          
-                        springConstant: 0.08,
+                        gravitationalConstant: graphMode === 'hegemony' ? -220 : -180, 
+                        centralGravity: graphMode === 'hegemony' ? 0.002 : 0.005,        
+                        springLength: graphMode === 'hegemony' ? 140 : 200,          
+                        springConstant: graphMode === 'hegemony' ? 0.06 : 0.08,
                         damping: 0.75, 
                         avoidOverlap: 1.0           
                     },
-                    stabilization: { iterations: 150 }
+                    stabilization: { iterations: 80 }
                 },
                 interaction: { 
                     hover: true, 
                     tooltipDelay: 100,
-                    hideEdgesOnDrag: false, // Lines stay visible during drag
-                    hideEdgesOnZoom: false, // Lines stay visible during zoom
-                    hoverConnectedEdges: false, // Disable expensive edge-hover calculations to eliminate cursor lag
-                    selectConnectedEdges: false // Disable expensive edge-click highlights to prevent click lag
+                    hideEdgesOnDrag: true, // Hide edges during drag for maximum performance
+                    hideEdgesOnZoom: true, // Hide edges during zoom for maximum performance
+                    hoverConnectedEdges: false,
+                    selectConnectedEdges: false
                 }
             };
 
             network = new vis.Network(container, data, options);
 
+            // Progressive Edge Loading to completely eliminate load-lag
+            let currentEdgeIdx = 0;
+            const totalEdges = allEdges.length;
+
+            progressText.innerText = `Injecting Connections (0/${totalEdges})...`;
+
+            edgeChunkLoadingInterval = setInterval(() => {
+                if (currentEdgeIdx >= totalEdges) {
+                    clearInterval(edgeChunkLoadingInterval);
+                    edgeChunkLoadingInterval = null;
+                    progressOverlay.style.display = 'none';
+                    console.log(`Progressive Load Complete: ${totalEdges} connections injected.`);
+                    return;
+                }
+
+                const chunk = allEdges.slice(currentEdgeIdx, currentEdgeIdx + progressiveChunkSize);
+                edgesDataSet.add(chunk);
+                currentEdgeIdx += progressiveChunkSize;
+
+                const percent = Math.min(100, Math.floor((currentEdgeIdx / totalEdges) * 100));
+                progressBarFill.style.width = `${percent}%`;
+                progressText.innerText = `Injecting Connections (${Math.min(currentEdgeIdx, totalEdges)}/${totalEdges})...`;
+            }, 10);
+
             network.on("click", function (params) {
                 if (params.nodes.length > 0) {
-                    const docId = params.nodes[0];
-                    lastSelectedDocId = docId;
-                    showDocumentInfo(docId);
+                    const selectedNodeId = params.nodes[0];
+                    lastSelectedDocId = selectedNodeId;
+                    showDocumentInfo(selectedNodeId);
                 }
-            });
-            
-            network.on("stabilizationIterationsDone", function () {
-                console.log("Graph stabilized.");
             });
         }
 
-        // Show details of selected document and its connections
-        function showDocumentInfo(docId) {
+        // Show details of selected document, quadrant, or attractor point
+        function showDocumentInfo(nodeId) {
             const panel = document.getElementById('graph-info-panel');
-            const docInfo = documentsMap[docId];
+            
+            // Check if node is a quadrant attractor
+            if (nodeId.toString().startsWith('quadrant-')) {
+                const quadKey = nodeId.toString().replace('quadrant-', '');
+                const quadMeta = QUADRANTS[quadKey];
+                
+                // Get all documents mapped to this quadrant
+                const docsInQuad = Object.keys(docIsmMappings).filter(
+                    doc => docIsmMappings[doc].quadrant === quadKey
+                );
+
+                let listHTML = '';
+                docsInQuad.slice(0, 40).forEach(d => {
+                    listHTML += `
+                        <div class="connected-doc-item" onclick="selectAndFocusDoc('${d}')">
+                            <div class="connected-doc-name">${d}</div>
+                            <div class="connected-doc-meta">
+                                <span>Point: ${docIsmMappings[d].sub_vector}</span>
+                                <span>Isms: ${docIsmMappings[d].isms.join(', ')}</span>
+                            </div>
+                        </div>`;
+                });
+
+                panel.innerHTML = `
+                    <div class="selected-node-card" style="border-color: ${quadMeta.border}">
+                        <div class="selected-node-title" style="color: ${quadMeta.color}">${quadMeta.name}</div>
+                        <div class="selected-node-path" style="background-color: rgba(255,255,255,0.03); color: var(--text-primary);">
+                            ${quadMeta.isms} Core Attractor
+                        </div>
+                        <div class="selected-node-meta" style="margin-top: 0.5rem; line-height: 1.4;">
+                            ${quadMeta.description}
+                        </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem;">
+                            Clustered Files: <strong>${docsInQuad.length} documents</strong>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Assigned Files (Showing first 40)</h4>
+                        <div class="connected-docs-list">${listHTML || 'No files mapped yet.'}</div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Check if node is an individual point attractor
+            if (nodeId.toString().startsWith('point-')) {
+                const pointKey = nodeId.toString().replace('point-', '');
+                const pt = HEGEMONY_POINTS[pointKey];
+                const quadMeta = QUADRANTS[pt.quadrant];
+
+                // Get all documents mapped to this specific point
+                const docsInPoint = Object.keys(docIsmMappings).filter(
+                    doc => docIsmMappings[doc].assigned_point === pointKey
+                );
+
+                let listHTML = '';
+                docsInPoint.forEach(d => {
+                    listHTML += `
+                        <div class="connected-doc-item" onclick="selectAndFocusDoc('${d}')">
+                            <div class="connected-doc-name">${d}</div>
+                        </div>`;
+                });
+
+                panel.innerHTML = `
+                    <div class="selected-node-card" style="border-color: ${quadMeta.color}">
+                        <div class="selected-node-title">${pt.name}</div>
+                        <div class="selected-node-path" style="background-color: rgba(255,255,255,0.03); color: ${quadMeta.color}">
+                            Point ${pointKey} (${quadMeta.name})
+                        </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; line-height: 1.4; color: var(--text-secondary);">
+                            <strong>Philosophical Isms:</strong> ${pt.isms.join(' & ')}
+                            <br><br>
+                            ${pt.description}
+                        </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem;">
+                            Clustered Files: <strong>${docsInPoint.length} documents</strong>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Assigned Files</h4>
+                        <div class="connected-docs-list">${listHTML || 'No files mapped to this point.'}</div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Normal Document Node Details
+            const docInfo = documentsMap[nodeId];
+            if (!docInfo) return;
             const topics = Array.from(docInfo.topics).sort((a,b) => a-b);
             
-            // Build the dynamic toggle list for tracked concepts
+            // Build tracked concepts list
             let topicsHTML = '';
             topics.forEach(tid => {
                 const keywords = topicsMap[tid] ? topicsMap[tid].keywords.slice(0,3).join(', ') : 'no keywords';
                 const isActive = selectedTopicIds.has(tid);
                 topicsHTML += `
                     <div class="shared-topic-pill ${isActive ? 'active' : ''}" 
-                         onclick="toggleTopicSelection(${tid}, '${docId}')"
+                         onclick="toggleTopicSelection(${tid}, '${nodeId}')"
                          title="${keywords}">
                         #${tid}: ${keywords}
                     </div>`;
             });
 
+            // Get connected documents
             const connectedDocs = [];
             const docList = Object.keys(documentsMap);
             docList.forEach(otherDoc => {
-                if (otherDoc === docId) return;
+                if (otherDoc === nodeId) return;
 
                 const set1 = docInfo.topics;
                 const set2 = documentsMap[otherDoc].topics;
@@ -1084,7 +1529,6 @@
                 }
             });
 
-            // Sort connections
             connectedDocs.sort((a, b) => b.similarity - a.similarity);
 
             let connectionsHTML = '';
@@ -1110,15 +1554,33 @@
                 cleanPath = cleanPath.split(marker)[1];
             }
 
+            // Attractor/Ism Details Section
+            let hegemonyDetailsHTML = '';
+            const mapping = docIsmMappings[nodeId];
+            if (mapping) {
+                const quadMeta = QUADRANTS[mapping.quadrant];
+                hegemonyDetailsHTML = `
+                    <div style="margin-top: 0.75rem; border-top: 1px dashed var(--border-color); padding-top: 0.75rem; font-size: 0.85rem;">
+                        <span style="color: var(--text-secondary)">Hegemony Map Attractor:</span>
+                        <div style="font-weight: 600; color: ${quadMeta.color}; margin-top: 0.25rem;">
+                            ${mapping.quadrant_name} (${mapping.quadrant}) &rarr; ${mapping.node_name} (${mapping.sub_vector})
+                        </div>
+                        <div style="margin-top: 0.25rem; font-style: italic; color: var(--text-primary)">
+                            Isms: ${mapping.isms.join(' / ')}
+                        </div>
+                    </div>`;
+            }
+
             const clearBtnHTML = selectedTopicIds.size > 0 
-                ? `<button class="action-btn" onclick="clearTopicSelection('${docId}')" style="margin-top: 0.5rem; width: 100%;">Clear Topic Filter</button>` 
+                ? `<button class="action-btn" onclick="clearTopicSelection('${nodeId}')" style="margin-top: 0.5rem; width: 100%;">Clear Topic Filter</button>` 
                 : '';
 
             panel.innerHTML = `
                 <div class="selected-node-card">
-                    <div class="selected-node-title">${docId}</div>
+                    <div class="selected-node-title">${nodeId}</div>
                     <div class="selected-node-path">${cleanPath}</div>
                     <div class="selected-node-meta">Topics Tracked: <strong>${topics.length}</strong></div>
+                    ${hegemonyDetailsHTML}
                     <div style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <strong>Tracked Concepts:</strong>
@@ -1160,35 +1622,42 @@
             const docList = Object.keys(documentsMap);
             docList.forEach(doc => {
                 const docInfo = documentsMap[doc];
+                if (!docInfo) return; // skip attractor nodes
                 
                 if (selectedTopicIds.size > 0) {
                     const isMatch = Array.from(docInfo.topics).some(t => selectedTopicIds.has(t));
+                    let borderCol = '#8b5cf6';
+                    
+                    const mapping = docIsmMappings[doc];
+                    if (mapping && QUADRANTS[mapping.quadrant]) {
+                        borderCol = QUADRANTS[mapping.quadrant].color;
+                    }
                     
                     if (isMatch) {
                         nodesDataSet.update({
                             id: doc,
-                            color: {
-                                background: '#8b5cf6', 
-                                border: '#a78bfa'
-                            },
+                            color: { background: '#8b5cf6', border: '#ffffff' },
                             opacity: 1.0
                         });
                     } else {
                         nodesDataSet.update({
                             id: doc,
-                            color: {
-                                background: '#1e293b', 
-                                border: '#334155'
-                            },
+                            color: { background: '#1e293b', border: borderCol },
                             opacity: 0.12 
                         });
                     }
                 } else {
+                    let borderCol = '#8b5cf6';
+                    const mapping = docIsmMappings[doc];
+                    if (mapping && QUADRANTS[mapping.quadrant]) {
+                        borderCol = QUADRANTS[mapping.quadrant].color;
+                    }
+
                     nodesDataSet.update({
                         id: doc,
                         color: {
                             background: '#1e293b',
-                            border: '#8b5cf6'
+                            border: borderCol
                         },
                         opacity: 1.0
                     });
