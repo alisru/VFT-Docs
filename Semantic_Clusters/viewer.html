@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFT Semantic & Graph Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Load Vis.js for Network Visualization -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #8b5cf6;
+            --accent-hover: #a78bfa;
+            --border-color: #334155;
+            --card-bg: #1e293b;
+            --font-main: 'Outfit', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            background: linear-gradient(to right, #a78bfa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-primary);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            color: var(--text-primary);
+            background-color: var(--accent-color);
+        }
+
+        .header-meta {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .view-panel {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .view-panel.active {
+            display: flex;
+        }
+
+        /* Sidebar Style */
+        .sidebar {
+            width: 380px;
+            background-color: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .search-container {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+        }
+
+        .topic-list {
+            flex: 1;
+            overflow-y: auto;
+            list-style: none;
+        }
+
+        .topic-item {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .topic-item:hover {
+            background-color: rgba(139, 92, 246, 0.1);
+        }
+
+        .topic-item.active {
+            background-color: rgba(139, 92, 246, 0.2);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-id {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--accent-hover);
+        }
+
+        .para-count {
+            background-color: var(--bg-tertiary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .topic-tags {
+            font-size: 0.825rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            word-break: break-word;
+        }
+
+        /* Detail View Area */
+        .content-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: var(--bg-primary);
+        }
+
+        .content-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(30, 41, 59, 0.3);
+        }
+
+        .selected-topic-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .selected-topic-keywords {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .paragraphs-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .para-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.2s ease;
+        }
+
+        .para-card:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .para-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .file-link {
+            font-weight: 600;
+            color: var(--accent-hover);
+            text-decoration: none;
+        }
+
+        .file-link:hover {
+            text-decoration: underline;
+        }
+
+        .para-index {
+            font-family: var(--font-mono);
+            background-color: var(--bg-primary);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .para-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+            white-space: pre-wrap;
+        }
+
+        .highlight {
+            background-color: rgba(139, 92, 246, 0.3);
+            border-bottom: 2px solid var(--accent-color);
+            padding: 0 0.1rem;
+            border-radius: 2px;
+        }
+
+        /* Empty State */
+        .empty-state {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-secondary);
+            gap: 1rem;
+        }
+
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--text-secondary);
+            opacity: 0.5;
+        }
+
+        /* Graph Panel Layout */
+        .graph-panel-layout {
+            display: flex;
+            flex: 1;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .graph-workspace {
+            flex: 1;
+            height: 100%;
+            position: relative;
+            background-color: #0b0f19;
+        }
+
+        .graph-sidebar {
+            width: 380px;
+            background-color: var(--bg-secondary);
+            border-left: 1px solid var(--border-color);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            overflow-y: auto;
+        }
+
+        .graph-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .slider-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .range-slider {
+            width: 100%;
+            accent-color: var(--accent-color);
+        }
+
+        #network-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .selected-node-card {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .selected-node-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            word-break: break-all;
+            line-height: 1.4;
+        }
+
+        .selected-node-path {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent-hover);
+            word-break: break-all;
+            background-color: rgba(139, 92, 246, 0.1);
+            padding: 0.4rem;
+            border-radius: 4px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .selected-node-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .shared-topic-pill {
+            display: inline-block;
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            font-size: 0.725rem;
+            font-family: var(--font-mono);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            margin-right: 0.3rem;
+            margin-top: 0.3rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .shared-topic-pill:hover {
+            background-color: var(--accent-hover);
+            color: var(--bg-primary);
+        }
+
+        .shared-topic-pill.active {
+            background-color: var(--accent-color);
+            border-color: var(--accent-hover);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+        }
+
+        /* Connected Docs List */
+        .connected-docs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .connected-doc-item {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.6rem;
+            font-size: 0.825rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .connected-doc-item:hover {
+            border-color: var(--accent-color);
+            background-color: rgba(139, 92, 246, 0.05);
+        }
+
+        .connected-doc-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            word-break: break-all;
+        }
+
+        .connected-doc-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+        }
+
+        /* Legend Style */
+        .legend-box {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.75rem;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-color-line {
+            width: 30px;
+            height: 3px;
+            border-radius: 2px;
+        }
+
+        /* Toggle Checkbox */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 22px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--bg-tertiary);
+            transition: .3s;
+            border-radius: 22px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 3px;
+            bottom: 3px;
+            background-color: var(--text-primary);
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--accent-color);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(22px);
+        }
+
+        /* Generic buttons */
+        .action-btn {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 4px;
+            font-family: var(--font-main);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-hover);
+        }
+
+        .physics-btn-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .physics-btn-group button {
+            flex: 1;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>VFT Semantic Workspace</h1>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('topic-tab', this)">Topic Explorer</button>
+            <button class="tab-btn" onclick="switchTab('graph-tab', this)">Similarity Graph</button>
+        </div>
+        <div class="header-meta" id="load-stats">Loading database...</div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Tab 1: Topic Explorer -->
+        <div id="topic-tab" class="view-panel active">
+            <div class="sidebar">
+                <div class="search-container">
+                    <input type="text" id="search" class="search-box" placeholder="Filter topics by keyword...">
+                </div>
+                <ul class="topic-list" id="topic-list">
+                    <!-- Topics populated dynamically -->
+                </ul>
+            </div>
+
+            <div class="content-area">
+                <div class="content-header" id="content-header" style="display: none;">
+                    <div class="selected-topic-title" id="selected-topic-title">Topic ID</div>
+                    <div class="selected-topic-keywords" id="selected-topic-keywords">Keywords</div>
+                </div>
+
+                <div class="paragraphs-container" id="paragraphs-container">
+                    <div class="empty-state" id="empty-state">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                        <p>Select a semantic topic from the sidebar to view matching paragraphs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2: Document Similarity Graph -->
+        <div id="graph-tab" class="view-panel">
+            <div class="graph-panel-layout">
+                <!-- Vis Network Canvas -->
+                <div class="graph-workspace">
+                    <div id="network-canvas"></div>
+                </div>
+                
+                <!-- Side Panel Info & Controls -->
+                <div class="graph-sidebar">
+                    <h3>Network Controls</h3>
+                    
+                    <div class="graph-controls">
+                        <div class="physics-btn-group">
+                            <button id="physics-toggle-btn" class="action-btn" onclick="togglePhysics()">Pause Physics</button>
+                            <button class="action-btn" onclick="triggerStabilize()">Settle Layout</button>
+                        </div>
+
+                        <div class="toggle-container" style="margin-top: 0.25rem;">
+                            <span>Show Topic Connections</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="topic-connections-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="slider-label" id="threshold-label-container">
+                            <span>Topic Similarity Force</span>
+                            <span id="threshold-val">0.30</span>
+                        </div>
+                        <input type="range" id="threshold-slider" class="range-slider" min="0.01" max="0.90" step="0.01" value="0.30">
+                    </div>
+
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.25rem 0;">
+
+                    <div class="graph-controls">
+                        <h4 style="font-size: 0.85rem; color: var(--text-secondary);">Keyword Filter Workspace</h4>
+                        <input type="text" id="keyword-filter-input" class="search-box" placeholder="Filter by words (e.g. soul, physics)">
+                        
+                        <div class="toggle-container" style="margin-top: 0.25rem;">
+                            <span>Show Unfiltered Underlay (3+ words)</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="keyword-underlay-toggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="legend-box">
+                        <div class="legend-item">
+                            <div class="legend-color-line" style="background-color: #8b5cf6;"></div>
+                            <span>Direct Topic Overlap (Force)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color-line" style="background-color: #38bdf8; height: 2px;"></div>
+                            <span>Matches User Keyword Input (Cyan)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color-line" style="background-color: rgba(56, 189, 248, 0.45); height: 1.5px;"></div>
+                            <span>General Underlay (3+ Shared Words)</span>
+                        </div>
+                    </div>
+
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.25rem 0;">
+
+                    <div id="graph-info-panel">
+                        <h4 style="margin-bottom: 0.5rem;">Selected Document</h4>
+                        <div class="empty-state" style="padding: 1rem; border: 1px dashed var(--border-color); border-radius: 8px;">
+                            <p style="font-size: 0.85rem; text-align: center;">Click on a bubble in the map to analyze its semantic connections.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let paragraphsData = [];
+        let topicsMap = {};
+        let documentsMap = {}; // Maps filename -> { topics: Set, path: String, keywords: Set }
+        let network = null;
+        let nodesDataSet = null;
+        let edgesDataSet = null;
+        let edgesDataView = null;
+        let currentThreshold = 0.30;
+        let showTopicConnections = true;
+        let showKeywordUnderlay = false;
+        let isPhysicsRunning = true;
+        let userKeywords = [];
+        let selectedTopicIds = new Set();
+        let lastSelectedDocId = null;
+
+        // Switch View Tabs
+        function switchTab(tabId, btn) {
+            document.querySelectorAll('.view-panel').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+
+            if (tabId === 'graph-tab' && !network) {
+                setTimeout(buildGraph, 100);
+            }
+        }
+
+        // Load JSON data
+        async function loadData() {
+            try {
+                const response = await fetch('cluster_mapping.json');
+                if (!response.ok) throw new Error("Could not load cluster mapping JSON");
+                paragraphsData = await response.json();
+                
+                // Group paragraphs by topic ID and build documents mapping
+                paragraphsData.forEach(p => {
+                    if (p.topic_id === -1) return; // skip noise
+
+                    const docName = p.file.split(/[\\/]/).pop();
+
+                    // Map Topics
+                    if (!topicsMap[p.topic_id]) {
+                        topicsMap[p.topic_id] = {
+                            id: p.topic_id,
+                            paragraphs: [],
+                            keywords: []
+                        };
+                    }
+                    topicsMap[p.topic_id].paragraphs.push(p);
+
+                    // Map Documents
+                    if (!documentsMap[docName]) {
+                        documentsMap[docName] = {
+                            topics: new Set(),
+                            path: p.file,
+                            keywords: new Set()
+                        };
+                    }
+                    documentsMap[docName].topics.add(p.topic_id);
+                });
+
+                // Extract representative keywords for each topic
+                Object.values(topicsMap).forEach(topic => {
+                    const wordCounts = {};
+                    topic.paragraphs.forEach(p => {
+                        const words = p.text.toLowerCase().match(/\b[a-z]{4,}\b/g) || [];
+                        words.forEach(w => {
+                            if (['with', 'this', 'that', 'from', 'they', 'have', 'were', 'about', 'their', 'which'].includes(w)) return;
+                            wordCounts[w] = (wordCounts[w] || 0) + 1;
+                        });
+                    });
+                    
+                    topic.keywords = Object.entries(wordCounts)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 8)
+                        .map(entry => entry[0]);
+                });
+
+                // Build Document-level consolidated keyword sets
+                Object.keys(documentsMap).forEach(docName => {
+                    const doc = documentsMap[docName];
+                    doc.topics.forEach(tid => {
+                        if (topicsMap[tid]) {
+                            topicsMap[tid].keywords.forEach(kw => doc.keywords.add(kw));
+                        }
+                    });
+                });
+
+                document.getElementById('load-stats').innerText = 
+                    `Index: ${paragraphsData.length} paras | ${Object.keys(topicsMap).length} clusters`;
+                
+                renderTopics();
+            } catch (err) {
+                console.error(err);
+                document.getElementById('load-stats').innerText = "Error loading database";
+            }
+        }
+
+        // Render Topics in Sidebar (Tab 1)
+        function renderTopics(filterText = '') {
+            const list = document.getElementById('topic-list');
+            list.innerHTML = '';
+
+            const sortedTopics = Object.values(sortedTopicsMap = Object.values(topicsMap).sort((a, b) => b.paragraphs.length - a.paragraphs.length));
+
+            sortedTopics.forEach(topic => {
+                const tagsString = topic.keywords.join(', ');
+                
+                if (filterText && !tagsString.includes(filterText.toLowerCase()) && !topic.id.toString().includes(filterText)) {
+                    return;
+                }
+
+                const li = document.createElement('li');
+                li.className = 'topic-item';
+                li.innerHTML = `
+                    <div class="topic-header">
+                        <span class="topic-id">Topic #${topic.id}</span>
+                        <span class="para-count">${topic.paragraphs.length} paras</span>
+                    </div>
+                    <div class="topic-tags">${tagsString || 'no tags extracted'}</div>
+                `;
+                
+                li.onclick = () => selectTopic(topic.id, li);
+                list.appendChild(li);
+            });
+        }
+
+        function selectTopic(topicId, element) {
+            document.querySelectorAll('.topic-item').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+
+            const topic = topicsMap[topicId];
+            
+            document.getElementById('content-header').style.display = 'block';
+            document.getElementById('selected-topic-title').innerText = `Semantic Cluster #${topicId}`;
+            document.getElementById('selected-topic-keywords').innerText = `AI Keywords: ${topic.keywords.join(', ')}`;
+
+            const container = document.getElementById('paragraphs-container');
+            container.innerHTML = '';
+            
+            topic.paragraphs.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'para-card';
+                
+                let highlightedText = p.text;
+                topic.keywords.slice(0, 5).forEach(kw => {
+                    const regex = new RegExp(`\\b(${kw})\\b`, 'gi');
+                    highlightedText = highlightedText.replace(regex, '<span class="highlight">$1</span>');
+                });
+
+                card.innerHTML = `
+                    <div class="para-meta">
+                        <span class="file-link">${p.file.split(/[\\/]/).pop()}</span>
+                        <span class="para-index">Paragraph ${p.paragraph_index}</span>
+                    </div>
+                    <div class="para-text">${highlightedText}</div>
+                `;
+                container.appendChild(card);
+            });
+            
+            container.scrollTop = 0;
+        }
+
+        // Search Input listener
+        document.getElementById('search').addEventListener('input', (e) => {
+            renderTopics(e.target.value);
+        });
+
+        // Tab 2: Build the vis.js Network Graph
+        function buildGraph() {
+            const nodesArray = [];
+            const allEdges = [];
+
+            const docList = Object.keys(documentsMap);
+            docList.forEach(doc => {
+                const numTopics = documentsMap[doc].topics.size;
+                nodesArray.push({
+                    id: doc,
+                    label: doc.length > 25 ? doc.substring(0, 22) + '...' : doc,
+                    title: `${doc}\nTracks ${numTopics} semantic topics`,
+                    value: numTopics,
+                    color: {
+                        background: '#1e293b',
+                        border: '#8b5cf6',
+                        highlight: {
+                            background: '#8b5cf6',
+                            border: '#a78bfa'
+                        }
+                    },
+                    font: { color: '#f8fafc', face: 'Outfit', size: 14 }
+                });
+            });
+
+            // Calculate overlap for all edges
+            for (let i = 0; i < docList.length; i++) {
+                for (let j = i + 1; j < docList.length; j++) {
+                    const doc1 = docList[i];
+                    const doc2 = docList[j];
+
+                    const set1 = documentsMap[doc1].topics;
+                    const set2 = documentsMap[doc2].topics;
+
+                    const intersection = new Set([...set1].filter(x => set2.has(x)));
+                    const union = new Set([...set1, ...set2]);
+                    const similarity = intersection.size / union.size;
+
+                    // 1. Direct Topic-Level Edge
+                    if (similarity > 0) {
+                        allEdges.push({
+                            from: doc1,
+                            to: doc2,
+                            similarity: similarity, 
+                            type: 'topic',
+                            physics: true, 
+                            value: similarity * 6,
+                            title: `Topic Overlap: ${(similarity * 100).toFixed(0)}%\nShared Topics: ${Array.from(intersection).join(', ')}`,
+                            color: {
+                                color: '#8b5cf6',
+                                highlight: '#a78bfa'
+                            }
+                        });
+                    }
+
+                    // 2. Underlying Keyword-Level Edge (Only 3+ shared keywords)
+                    const kw1 = documentsMap[doc1].keywords;
+                    const kw2 = documentsMap[doc2].keywords;
+                    const kwIntersection = Array.from(kw1).filter(x => kw2.has(x));
+                    
+                    if (kwIntersection.length >= 3) {
+                        allEdges.push({
+                            from: doc1,
+                            to: doc2,
+                            similarity: 0.0, 
+                            type: 'keyword-3',
+                            physics: false, 
+                            title: `3+ Keywords Overlap\nShared: ${kwIntersection.slice(0, 5).join(', ')}...`,
+                            width: 1.0,
+                            color: {
+                                color: 'rgba(56, 189, 248, 0.45)', 
+                                highlight: '#38bdf8'
+                            }
+                        });
+                    }
+                }
+            }
+
+            nodesDataSet = new vis.DataSet(nodesArray);
+            edgesDataSet = new vis.DataSet(allEdges);
+
+            // Filter Edge view dynamically
+            edgesDataView = new vis.DataView(edgesDataSet, {
+                filter: function (edge) {
+                    if (userKeywords.length > 0) {
+                        const kw1 = documentsMap[edge.from].keywords;
+                        const kw2 = documentsMap[edge.to].keywords;
+                        const shared = Array.from(kw1).filter(x => kw2.has(x));
+                        const matchesQuery = shared.some(k => userKeywords.includes(k));
+                        
+                        if (matchesQuery) {
+                            edge.color = { color: '#38bdf8', highlight: '#7dd3fc' };
+                            edge.width = 2.5;
+                            return true; 
+                        }
+                    }
+
+                    if (edge.type === 'topic') {
+                        edge.color = { color: '#8b5cf6', highlight: '#a78bfa' };
+                        edge.width = edge.similarity * 6;
+                        return showTopicConnections && edge.similarity >= currentThreshold;
+                    } 
+                    
+                    if (edge.type === 'keyword-3') {
+                        edge.color = { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' };
+                        edge.width = 1.0;
+                        return showKeywordUnderlay;
+                    }
+
+                    return false;
+                }
+            });
+
+            const container = document.getElementById('network-canvas');
+            const data = {
+                nodes: nodesDataSet,
+                edges: edgesDataView
+            };
+
+            const options = {
+                nodes: {
+                    shape: 'dot',
+                    scaling: { min: 10, max: 30 }
+                },
+                edges: {
+                    smooth: false 
+                },
+                physics: {
+                    solver: 'forceAtlas2Based',
+                    forceAtlas2Based: {
+                        gravitationalConstant: -180, 
+                        centralGravity: 0.005,        
+                        springLength: 200,          
+                        springConstant: 0.08,
+                        damping: 0.75, 
+                        avoidOverlap: 1.0           
+                    },
+                    stabilization: { iterations: 150 }
+                },
+                interaction: { 
+                    hover: true, 
+                    tooltipDelay: 100,
+                    hideEdgesOnDrag: false, // Lines stay visible during drag
+                    hideEdgesOnZoom: false, // Lines stay visible during zoom
+                    hoverConnectedEdges: false, // Disable expensive edge-hover calculations to eliminate cursor lag
+                    selectConnectedEdges: false // Disable expensive edge-click highlights to prevent click lag
+                }
+            };
+
+            network = new vis.Network(container, data, options);
+
+            network.on("click", function (params) {
+                if (params.nodes.length > 0) {
+                    const docId = params.nodes[0];
+                    lastSelectedDocId = docId;
+                    showDocumentInfo(docId);
+                }
+            });
+            
+            network.on("stabilizationIterationsDone", function () {
+                console.log("Graph stabilized.");
+            });
+        }
+
+        // Show details of selected document and its connections
+        function showDocumentInfo(docId) {
+            const panel = document.getElementById('graph-info-panel');
+            const docInfo = documentsMap[docId];
+            const topics = Array.from(docInfo.topics).sort((a,b) => a-b);
+            
+            // Build the dynamic toggle list for tracked concepts
+            let topicsHTML = '';
+            topics.forEach(tid => {
+                const keywords = topicsMap[tid] ? topicsMap[tid].keywords.slice(0,3).join(', ') : 'no keywords';
+                const isActive = selectedTopicIds.has(tid);
+                topicsHTML += `
+                    <div class="shared-topic-pill ${isActive ? 'active' : ''}" 
+                         onclick="toggleTopicSelection(${tid}, '${docId}')"
+                         title="${keywords}">
+                        #${tid}: ${keywords}
+                    </div>`;
+            });
+
+            const connectedDocs = [];
+            const docList = Object.keys(documentsMap);
+            docList.forEach(otherDoc => {
+                if (otherDoc === docId) return;
+
+                const set1 = docInfo.topics;
+                const set2 = documentsMap[otherDoc].topics;
+                const intersection = new Set([...set1].filter(x => set2.has(x)));
+                const union = new Set([...set1, ...set2]);
+                const similarity = intersection.size / union.size;
+
+                if (showTopicConnections && similarity >= currentThreshold) {
+                    connectedDocs.push({
+                        name: otherDoc,
+                        similarity: similarity,
+                        sharedCount: intersection.size,
+                        type: 'Topic Match'
+                    });
+                } else {
+                    const kwIntersection = Array.from(docInfo.keywords).filter(x => documentsMap[otherDoc].keywords.has(x));
+                    const activeQueryMatch = userKeywords.length > 0 && kwIntersection.some(k => userKeywords.includes(k));
+                    
+                    if (activeQueryMatch) {
+                        connectedDocs.push({
+                            name: otherDoc,
+                            similarity: kwIntersection.length / (docInfo.keywords.size + documentsMap[otherDoc].keywords.size - kwIntersection.length),
+                            sharedCount: kwIntersection.length,
+                            type: `Match: ${userKeywords.filter(k=>kwIntersection.includes(k)).join(', ')}`
+                        });
+                    } else if (showKeywordUnderlay && kwIntersection.length >= 3) {
+                        connectedDocs.push({
+                            name: otherDoc,
+                            similarity: kwIntersection.length / (docInfo.keywords.size + documentsMap[otherDoc].keywords.size - kwIntersection.length),
+                            sharedCount: kwIntersection.length,
+                            type: `Shared Words: ${kwIntersection.slice(0, 3).join(', ')}`
+                        });
+                    }
+                }
+            });
+
+            // Sort connections
+            connectedDocs.sort((a, b) => b.similarity - a.similarity);
+
+            let connectionsHTML = '';
+            if (connectedDocs.length > 0) {
+                connectedDocs.forEach(c => {
+                    connectionsHTML += `
+                        <div class="connected-doc-item" onclick="selectAndFocusDoc('${c.name}')">
+                            <div class="connected-doc-name">${c.name}</div>
+                            <div class="connected-doc-meta">
+                                <span>${c.type}</span>
+                                <span>Overlap: <strong>${c.type.startsWith('Topic Match') ? (c.similarity * 100).toFixed(0) + '%' : c.sharedCount + ' words'}</strong></span>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                connectionsHTML = `<p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; margin-top: 0.5rem;">No connected nodes matching filter.</p>`;
+            }
+
+            let cleanPath = docInfo.path;
+            const marker = "VFT Docs\\";
+            if (cleanPath.includes(marker)) {
+                cleanPath = cleanPath.split(marker)[1];
+            }
+
+            const clearBtnHTML = selectedTopicIds.size > 0 
+                ? `<button class="action-btn" onclick="clearTopicSelection('${docId}')" style="margin-top: 0.5rem; width: 100%;">Clear Topic Filter</button>` 
+                : '';
+
+            panel.innerHTML = `
+                <div class="selected-node-card">
+                    <div class="selected-node-title">${docId}</div>
+                    <div class="selected-node-path">${cleanPath}</div>
+                    <div class="selected-node-meta">Topics Tracked: <strong>${topics.length}</strong></div>
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>Tracked Concepts:</strong>
+                        </div>
+                        <div style="margin-top: 0.25rem;">${topicsHTML}</div>
+                        ${clearBtnHTML}
+                    </div>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Connected Documents (${connectedDocs.length})</h4>
+                    <div class="connected-docs-list">${connectionsHTML}</div>
+                </div>
+            `;
+        }
+
+        // Toggle selections of semantic concepts
+        function toggleTopicSelection(topicId, docId) {
+            if (selectedTopicIds.has(topicId)) {
+                selectedTopicIds.delete(topicId);
+            } else {
+                selectedTopicIds.add(topicId);
+            }
+            
+            updateNodeHighlights();
+            showDocumentInfo(docId);
+        }
+
+        // Clear all filters across bubbles
+        function clearTopicSelection(docId) {
+            selectedTopicIds.clear();
+            updateNodeHighlights();
+            if (docId) showDocumentInfo(docId);
+        }
+
+        // Update bubble opacity and highlights based on selected topics
+        function updateNodeHighlights() {
+            if (!nodesDataSet) return;
+            
+            const docList = Object.keys(documentsMap);
+            docList.forEach(doc => {
+                const docInfo = documentsMap[doc];
+                
+                if (selectedTopicIds.size > 0) {
+                    const isMatch = Array.from(docInfo.topics).some(t => selectedTopicIds.has(t));
+                    
+                    if (isMatch) {
+                        nodesDataSet.update({
+                            id: doc,
+                            color: {
+                                background: '#8b5cf6', 
+                                border: '#a78bfa'
+                            },
+                            opacity: 1.0
+                        });
+                    } else {
+                        nodesDataSet.update({
+                            id: doc,
+                            color: {
+                                background: '#1e293b', 
+                                border: '#334155'
+                            },
+                            opacity: 0.12 
+                        });
+                    }
+                } else {
+                    nodesDataSet.update({
+                        id: doc,
+                        color: {
+                            background: '#1e293b',
+                            border: '#8b5cf6'
+                        },
+                        opacity: 1.0
+                    });
+                }
+            });
+        }
+
+        function selectAndFocusDoc(docId) {
+            network.selectNodes([docId]);
+            network.focus(docId, { scale: 1.0, animation: true });
+            lastSelectedDocId = docId;
+            showDocumentInfo(docId);
+        }
+
+        // Slider change listener - Filters edge view dynamically
+        document.getElementById('threshold-slider').addEventListener('input', (e) => {
+            currentThreshold = parseFloat(e.target.value);
+            document.getElementById('threshold-val').innerText = currentThreshold.toFixed(2);
+            if (edgesDataView) edgesDataView.refresh();
+
+            const selectedNodes = network.getSelectedNodes();
+            if (selectedNodes.length > 0) showDocumentInfo(selectedNodes[0]);
+        });
+
+        // Toggle Switch change listener for Keyword Underlay
+        document.getElementById('keyword-underlay-toggle').addEventListener('change', (e) => {
+            showKeywordUnderlay = e.target.checked;
+            if (edgesDataView) edgesDataView.refresh();
+
+            const selectedNodes = network.getSelectedNodes();
+            if (selectedNodes.length > 0) showDocumentInfo(selectedNodes[0]);
+        });
+
+        // Toggle Switch change listener for Topic Connections
+        document.getElementById('topic-connections-toggle').addEventListener('change', (e) => {
+            showTopicConnections = e.target.checked;
+            const thresholdContainer = document.getElementById('threshold-label-container');
+            const thresholdSlider = document.getElementById('threshold-slider');
+            
+            if (showTopicConnections) {
+                thresholdContainer.style.opacity = '1';
+                thresholdSlider.disabled = false;
+            } else {
+                thresholdContainer.style.opacity = '0.5';
+                thresholdSlider.disabled = true;
+            }
+
+            if (edgesDataView) edgesDataView.refresh();
+
+            const selectedNodes = network.getSelectedNodes();
+            if (selectedNodes.length > 0) showDocumentInfo(selectedNodes[0]);
+        });
+
+        // Keyword Filter Input Listener
+        document.getElementById('keyword-filter-input').addEventListener('input', (e) => {
+            userKeywords = e.target.value.toLowerCase().split(',')
+                .map(s => s.trim())
+                .filter(s => s.length > 0);
+            
+            if (edgesDataView) edgesDataView.refresh();
+
+            const selectedNodes = network.getSelectedNodes();
+            if (selectedNodes.length > 0) showDocumentInfo(selectedNodes[0]);
+        });
+
+        // Toggle physics engine dynamically (Pause / Resume Simulation)
+        function togglePhysics() {
+            if (!network) return;
+            const btn = document.getElementById('physics-toggle-btn');
+            
+            if (isPhysicsRunning) {
+                network.stopSimulation();
+                isPhysicsRunning = false;
+                btn.innerText = "Resume Physics";
+                btn.style.backgroundColor = "var(--bg-tertiary)";
+            } else {
+                network.startSimulation();
+                isPhysicsRunning = true;
+                btn.innerText = "Pause Physics";
+                btn.style.backgroundColor = "var(--accent-color)";
+            }
+        }
+
+        // Force layout engine to stabilize quickly and halt
+        function triggerStabilize() {
+            if (!network) return;
+            network.stabilize();
+        }
+
+        // Bootstrap load
+        loadData();
+    </script>
+</body>
+</html>
