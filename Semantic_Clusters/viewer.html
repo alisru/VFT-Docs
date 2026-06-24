@@ -845,6 +845,70 @@
         let topicsMap = {};
         let documentsMap = {}; // Maps filename -> { topics: Set, path: String, keywords: Set }
         let docIsmMappings = {}; // Maps filename -> { assigned_point, quadrant, isms, etc. }
+        let topicIsmMappings = {}; // Maps topic_id -> { assigned_point, quadrant, isms, etc. }
+
+        function getDocumentHegemonyMapping(docId) {
+            const docInfo = documentsMap[docId];
+            if (!docInfo || !docInfo.topics || docInfo.topics.size === 0) {
+                return null;
+            }
+            
+            const pointCounts = {};
+            const quadCounts = {};
+            
+            docInfo.topics.forEach(tid => {
+                const topicMapping = topicIsmMappings[tid];
+                if (topicMapping) {
+                    const pt = topicMapping.assigned_point;
+                    const quad = topicMapping.quadrant;
+                    pointCounts[pt] = (pointCounts[pt] || 0) + 1;
+                    quadCounts[quad] = (quadCounts[quad] || 0) + 1;
+                }
+            });
+            
+            // Find dominant point (highest density of topics)
+            let bestPoint = null;
+            let maxPointCount = 0;
+            Object.keys(pointCounts).forEach(pt => {
+                if (pointCounts[pt] > maxPointCount) {
+                    maxPointCount = pointCounts[pt];
+                    bestPoint = pt;
+                }
+            });
+            
+            // Find dominant quadrant
+            let bestQuad = null;
+            let maxQuadCount = 0;
+            Object.keys(quadCounts).forEach(quad => {
+                if (quadCounts[quad] > maxQuadCount) {
+                    maxQuadCount = quadCounts[quad];
+                    bestQuad = quad;
+                }
+            });
+            
+            if (!bestPoint) return null;
+            
+            const ptMeta = HEGEMONY_POINTS[bestPoint];
+            return {
+                assigned_point: bestPoint,
+                quadrant: bestQuad,
+                quadrant_name: QUADRANTS[bestQuad].name,
+                node_name: ptMeta.name,
+                sub_vector: bestPoint,
+                isms: ptMeta.isms,
+                density: maxPointCount / docInfo.topics.size
+            };
+        }
+
+        function computeDocIsmMappings() {
+            docIsmMappings = {};
+            Object.keys(documentsMap).forEach(doc => {
+                const mapping = getDocumentHegemonyMapping(doc);
+                if (mapping) {
+                    docIsmMappings[doc] = mapping;
+                }
+            });
+        }
         let network = null;
         let nodesDataSet = null;
         let edgesDataSet = null;
@@ -992,15 +1056,16 @@
                     });
                 });
 
-                // Fetch Hegemony Ism Mappings (optional secondary load)
+                // Fetch Hegemony Topic Mappings
                 try {
-                    const mapResponse = await fetch('doc_ism_mapping.json');
+                    const mapResponse = await fetch('topic_ism_mapping.json');
                     if (mapResponse.ok) {
-                        docIsmMappings = await mapResponse.json();
-                        console.log("Hegemony classification mappings loaded.");
+                        topicIsmMappings = await mapResponse.json();
+                        computeDocIsmMappings();
+                        console.log("Hegemony topic classification mappings loaded. Document coordinates computed.");
                     }
                 } catch (e) {
-                    console.warn("doc_ism_mapping.json not available. Hegemony mode will fall back to dynamic display.");
+                    console.warn("topic_ism_mapping.json not available. Hegemony mode will fall back to dynamic display.");
                 }
 
                 document.getElementById('load-stats').innerText = 
