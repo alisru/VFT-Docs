@@ -1213,7 +1213,7 @@
                     const pt = HEGEMONY_POINTS[pointKey];
                     const ismsLabel = pt.isms.join(' / ');
                     
-                    const targetPart = pt.sub_vector.split('-')[1];
+                    const targetPart = pointKey.split('-')[1];
                     const pCoord = parentCoords[pt.quadrant];
                     const offset = targetOffsets[targetPart];
                     const posX = pCoord.x + offset.dx;
