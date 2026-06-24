@@ -798,13 +798,13 @@
                     <div class="hegemony-legend" id="hegemony-legend">
                         <h4 style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Hegemony Quadrants & Isms</h4>
                         <div class="hegemony-legend-item">
-                            <div class="legend-color-dot" style="background-color: #c084fc;"></div>
+                            <div class="legend-color-dot" style="background-color: #10b981;"></div>
                             <div class="hegemony-legend-text">
                                 <strong>Greater Good (GG):</strong> Reality, History, Understanding, Communitarianism, Prudence
                             </div>
                         </div>
                         <div class="hegemony-legend-item">
-                            <div class="legend-color-dot" style="background-color: #38bdf8;"></div>
+                            <div class="legend-color-dot" style="background-color: #86efac;"></div>
                             <div class="hegemony-legend-text">
                                 <strong>Lesser Good (LG):</strong> Learning (Stoicism/Empiricism), Imagination, Faith, Hope
                             </div>
@@ -867,8 +867,8 @@
 
         // Hegemony Metadata definitions for UI display
         const QUADRANTS = {
-            "GG": { name: "Greater Good (Reality Cluster)", color: "#c084fc", border: "#a78bfa", isms: "16 Optimisms", description: "The pursuit of objective truth, shared meaning, and fair social structure." },
-            "LG": { name: "Lesser Good (Human/Spirit Cluster)", color: "#38bdf8", border: "#0ea5e9", isms: "16 Optimisms", description: "The cultivation of the internal self, spiritual connection, and benevolent action." },
+            "GG": { name: "Greater Good (Reality Cluster)", color: "#10b981", border: "#047857", isms: "16 Optimisms", description: "The pursuit of objective truth, shared meaning, and fair social structure." },
+            "LG": { name: "Lesser Good (Human/Spirit Cluster)", color: "#86efac", border: "#22c55e", isms: "16 Optimisms", description: "The cultivation of the internal self, spiritual connection, and benevolent action." },
             "LE": { name: "Lesser Evil (Social/Abstract Cluster)", color: "#fb923c", border: "#f97316", isms: "16 Pessimisms", description: "The rejection of meaning, active malice, closed-mindedness, and lack of self-control." },
             "GE": { name: "Greater Evil (Base/Material Cluster)", color: "#f87171", border: "#ef4444", isms: "16 Pessimisms", description: "The passive allowance of harm, systemic corruption, distortion of communication, and erasure of truth." }
         };
@@ -1172,17 +1172,17 @@
                 
                 // 1. Coordinates framework to lock the geometry of the Hegemony Map
                 const parentCoords = {
-                    "GG": { x: -400, y: -400 },
-                    "LE": { x: 400, y: -400 },
-                    "LG": { x: -400, y: 400 },
-                    "GE": { x: 400, y: 400 }
+                    "GG": { x: -700, y: -700 },
+                    "LE": { x: 700, y: -700 },
+                    "LG": { x: -700, y: 700 },
+                    "GE": { x: 700, y: 700 }
                 };
 
                 const targetOffsets = {
-                    "gg": { dx: -160, dy: -160 },
-                    "le": { dx: 160, dy: -160 },
-                    "lg": { dx: -160, dy: 160 },
-                    "ge": { dx: 160, dy: 160 }
+                    "gg": { dx: -220, dy: -220 },
+                    "le": { dx: 220, dy: -220 },
+                    "lg": { dx: -220, dy: 220 },
+                    "ge": { dx: 220, dy: 220 }
                 };
 
                 // 1. Insert 4 Macro Quadrant Nodes (Locked in 4 corners)
