@@ -27,32 +27,31 @@ def main():
     with open(file4_path, 'r', encoding='utf-8') as f:
         file4_content = f.read()
         
-    # Clean LaTeX conversion errors in File 3
-    print("Cleaning up LaTeX conversion errors...", flush=True)
+    # Clean LaTeX conversion errors in File 3 using visual map
+    print("Cleaning up LaTeX conversion errors based on docx images...", flush=True)
     
-    # Replace image1 with \Phi
+    # Replace image1 with $q$
     file3_content = file3_content.replace(
         '![](media/image1.png){width="9.716754155730534e-2in" height="0.25911417322834646in"}',
-        '$\\Phi$'
+        '$q$'
     )
-    # Replace image4 with \theta
+    # Replace image4 with $A_0$
     file3_content = file3_content.replace(
         '![](media/image4.png){width="0.23193350831146106in" height="0.2530183727034121in"}',
-        '$\\theta$'
+        '$A_0$'
     )
-    # Replace image5 with \phi
+    # Replace image5 with $A_1$
     file3_content = file3_content.replace(
         '![](media/image5.png){width="0.23193350831146106in" height="0.2530183727034121in"}',
-        '$\\phi$'
+        '$A_1$'
     )
-    # Replace image2 with \mathcal{L}
+    # Replace image2 with $A_2$
     file3_content = file3_content.replace(
         '![](media/image2.png){width="0.23193350831146106in" height="0.2530183727034121in"}',
-        '$\\mathcal{L}$'
+        '$A_2$'
     )
     
     # Clean up double headers/titles during compilation
-    # Strip main titles from sub-files so they read as consecutive sections
     file2_clean = file2_content.lstrip().replace("# The Geometry of Definition & The Totality Event Frame", "")
     file3_clean = file3_content.lstrip().replace("# The Ontology of Action and the Transmission of Will", "## Part 7: The Ontology of Action and the Transmission of Will")
     file4_clean = file4_content.lstrip().replace("# THE GEOMETRY OF TRUTH: Ancient vs. Modern Cosmology", "")

@@ -1178,7 +1178,7 @@ This makes the act of translation identical to the act of ecological migration. 
 
 In this context, birds serve as the ultimate operational analogue for ideas moving between environments. As mapped in the Seraphim Protocol, a fully realized idea must deploy all of its wings across the planes of reality to maintain flight. An eagle is the perfect symbol for a master translator or a fully inquired idea. The eagle can stand in almost any biome, from frozen peaks to coastal waters, because it understands how to manipulate the aerodynamic variables of reality.
 
-When a bird encounters a new environment (a new language or paradigm), it does not change the core truth of its skeleton (the $\Phi$-layer bone). Instead, it alters its Pitch ($\theta$) and adjusts the Flex of its wings ($\phi$) to ensure its feathers (c) can grip the new Laminar Flow ($\mathcal{L}$). The translation of a concept succeeds only if the \"bird\" can seamlessly alter its flight dynamics to generate lift in the new phonetic atmosphere it has entered.
+When a bird encounters a new environment (a new language or paradigm), it does not change the core truth of its skeleton (the $q$-layer bone). Instead, it alters its Pitch ($A_0$) and adjusts the Flex of its wings ($A_1$) to ensure its feathers (c) can grip the new Laminar Flow ($A_2$). The translation of a concept succeeds only if the \"bird\" can seamlessly alter its flight dynamics to generate lift in the new phonetic atmosphere it has entered.
 
 # The Revelation Taxonomy: The Four Creatures as Phonetic Kingdoms
 
