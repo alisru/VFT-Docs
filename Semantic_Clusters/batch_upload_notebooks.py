@@ -181,10 +181,16 @@ def main():
         # Ensure we have a notebook ID
         notebook_id = data.get("notebook_id")
         if not notebook_id:
-            # Check if it already exists online
-            if cat_name in online_notebooks:
-                notebook_id = online_notebooks[cat_name]
-                print(f"Found existing online notebook UUID: {notebook_id}")
+            # Check if it already exists online (case-insensitive check)
+            matched_uuid = None
+            for online_name, online_uuid in online_notebooks.items():
+                if online_name.strip().lower() == cat_name.strip().lower():
+                    matched_uuid = online_uuid
+                    break
+
+            if matched_uuid:
+                notebook_id = matched_uuid
+                print(f"Found existing online notebook UUID for '{cat_name}': {notebook_id}")
             else:
                 print(f"Creating new notebook online: '{cat_name}'...")
                 try:
@@ -212,6 +218,41 @@ def main():
             with open(manifest_path, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2)
 
+        # 3. Fetch existing sources in this notebook to guarantee zero file title duplication
+        print(f"Fetching existing sources inside notebook {notebook_id}...", flush=True)
+        existing_sources = {}
+        try:
+            get_res = client.call_tool("notebook_get", {"notebook_id": notebook_id})
+            sources_list = []
+            
+            # Extract list of sources supporting all possible structures
+            if "sources" in get_res:
+                sources_list = get_res["sources"]
+            elif "notebook" in get_res and "sources" in get_res["notebook"]:
+                sources_list = get_res["notebook"]["sources"]
+            else:
+                for content_item in get_res.get("content", []):
+                    text = content_item.get("text", "")
+                    if text.strip().startswith("{"):
+                        try:
+                            raw_json = json.loads(text)
+                            sources_list = raw_json.get("sources") or raw_json.get("notebook", {}).get("sources", [])
+                            if sources_list:
+                                break
+                        except Exception:
+                            pass
+            
+            if isinstance(sources_list, list):
+                for src in sources_list:
+                    src_title = src.get("title") or src.get("name")
+                    src_id = src.get("id") or src.get("source_id")
+                    if src_title and src_id:
+                        # Normalize title (lowercase and trimmed)
+                        existing_sources[src_title.strip().lower()] = src_id.strip()
+            print(f"Detected {len(existing_sources)} existing online sources in notebook.", flush=True)
+        except Exception as e:
+            print(f"Warning: Could not check existing sources: {e}. Proceeding carefully.")
+
         # Iterate files in manifest
         files = data.get("files", [])
         for i, file_entry in enumerate(files):
@@ -225,6 +266,20 @@ def main():
             full_path = os.path.join(workspace_root, rel_path)
             if not os.path.exists(full_path):
                 print(f"Warning: Local file not found: {full_path}. Skipping.")
+                continue
+
+            human_label = make_human_readable_label(os.path.basename(full_path))
+
+            # Strictly verify if a source with this title already exists in the notebook
+            normalized_label = human_label.strip().lower()
+            if normalized_label in existing_sources:
+                online_id = existing_sources[normalized_label]
+                print(f"[{i+1}/{len(files)}] Source '{human_label}' already exists online (ID: {online_id}). Skipping duplicate upload.", flush=True)
+                # Keep source tracking updated
+                file_entry["status"] = "uploaded"
+                file_entry["source_id"] = online_id
+                with open(manifest_path, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2)
                 continue
 
             # Handle deletion first if update is requested
@@ -246,7 +301,6 @@ def main():
                 with open(full_path, 'r', encoding='utf-8') as f:
                     content = f.read()
 
-                human_label = make_human_readable_label(os.path.basename(full_path))
                 upload_res = client.call_tool("notebook_add_text", {
                     "notebook_id": notebook_id,
                     "text": content,
