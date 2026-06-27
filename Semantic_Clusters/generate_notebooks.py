@@ -1,6 +1,7 @@
 import os
 import sys
 import math
+import re
 
 def classify_by_topic(rel_path, file_name):
     path_lower = rel_path.lower()
@@ -49,6 +50,15 @@ def get_sorting_key(rel_path):
             subfolder = parts[1]
     return (subfolder.lower(), os.path.basename(rel_path).lower())
 
+def normalize_filename(name):
+    # Strip extension
+    name = name.lower().replace(".md", "")
+    # Remove common copy suffixes: _1, _2, (1), (2), - Copy, etc.
+    name = re.sub(r'[\s_\-\(]+(1|2|3|4|copy)[\)]*$', '', name)
+    # Strip non-alphanumeric to resolve slight punctuation differences
+    name = "".join(c for c in name if c.isalnum())
+    return name
+
 def main():
     if sys.version_info >= (3, 7):
         sys.stdout.reconfigure(encoding='utf-8')
@@ -69,7 +79,7 @@ def main():
                     
     print(f"Found {len(all_md_files)} markdown documents.", flush=True)
     
-    # Categorize files
+    # Categorize files, checking for semantic name uniqueness
     notebooks = {
         "Metaphysics & Actualism": [],
         "Information Physics & Thermodynamics": [],
@@ -78,14 +88,33 @@ def main():
         "Unstructured Notes & Chat Logs": []
     }
     
-    for file_path in all_md_files:
+    seen_normalized_names = set()
+    skipped_duplicates_count = 0
+    
+    # Sort files physically to prioritize main folders (e.g. Physics/, Actualism/) over temp io/ staging folders
+    sorted_md_files = sorted(all_md_files, key=lambda x: (
+        1 if "io" in x.lower() else 0, # Prioritize structured folders first
+        x.lower()
+    ))
+    
+    for file_path in sorted_md_files:
         rel_path = os.path.relpath(file_path, workspace_root)
         file_name = os.path.basename(file_path)
         
         category = classify_by_topic(rel_path, file_name)
         if category == "SKIP":
             continue
+            
+        norm_name = normalize_filename(file_name)
+        if norm_name in seen_normalized_names:
+            print(f"  Skipped duplicate document in listing: '{rel_path}' (already indexed under '{norm_name}')", flush=True)
+            skipped_duplicates_count += 1
+            continue
+            
+        seen_normalized_names.add(norm_name)
         notebooks[category].append(rel_path)
+        
+    print(f"Filtered out {skipped_duplicates_count} duplicate files from registry listing.", flush=True)
         
     # Split any category over 300 files and map to formal names
     final_notebooks = {}
