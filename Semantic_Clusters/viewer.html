@@ -602,27 +602,31 @@
         
         .progress-overlay {
             position: absolute;
-            top: 1rem;
-            left: 1rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 10;
-            background-color: rgba(15, 23, 42, 0.9);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0.75rem 1.25rem;
-            font-size: 0.85rem;
+            background-color: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(139, 92, 246, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            font-size: 0.95rem;
             display: none;
+            flex-direction: column;
             align-items: center;
-            gap: 0.75rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
+            gap: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
             font-family: var(--font-main);
+            width: 320px;
+            text-align: center;
         }
         
         .progress-bar-container {
-            width: 120px;
-            height: 6px;
+            width: 100%;
+            height: 8px;
             background-color: var(--bg-tertiary);
-            border-radius: 3px;
+            border-radius: 4px;
             overflow: hidden;
         }
         
@@ -630,7 +634,7 @@
             height: 100%;
             width: 0%;
             background-color: var(--accent-hover);
-            transition: width 0.1s ease;
+            transition: width 0.05s ease;
         }
 
         .hegemony-legend {
@@ -738,9 +742,9 @@
                     <div class="graph-controls">
                         <div class="slider-label">
                             <span>progressive load rate (edges/tick)</span>
-                            <span id="chunk-size-val">250</span>
+                            <span id="chunk-size-val">1000</span>
                         </div>
-                        <input type="range" id="chunk-size-slider" class="range-slider" min="50" max="2000" step="50" value="250" oninput="changeChunkSize(this.value)">
+                        <input type="range" id="chunk-size-slider" class="range-slider" min="100" max="10000" step="100" value="1000" oninput="changeChunkSize(this.value)">
                     </div>
 
                     <div class="graph-controls" id="threshold-control-group">
@@ -762,6 +766,51 @@
                             <span id="threshold-val">0.30</span>
                         </div>
                         <input type="range" id="threshold-slider" class="range-slider" min="0.01" max="0.90" step="0.01" value="0.30">
+                    </div>
+
+                    <div class="graph-controls" id="hegemony-control-group" style="display: none;">
+                        <div class="physics-btn-group">
+                            <button id="hegemony-physics-toggle-btn" class="action-btn" onclick="togglePhysics()">Pause Physics</button>
+                            <button class="action-btn" onclick="triggerStabilize()">Settle Layout</button>
+                        </div>
+                        
+                        <div class="mode-selector-container" style="margin-top: 0.5rem;">
+                            <h4 style="font-size: 0.85rem; color: var(--text-secondary);">Attraction Mode</h4>
+                            <select id="hegemony-layout-select" class="mode-select" onchange="changeHegemonyLayout(this.value)">
+                                <option value="dominant">Dominant Point (Document-First)</option>
+                                <option value="spread">Hegemony Spread (Multi-Attractor)</option>
+                                <option value="granular">Granular Topic Spread (Word-First / Selected Doc)</option>
+                                <option value="sentence">Linguistic Sentence Compass (2D Scatterplot)</option>
+                            </select>
+                        </div>
+
+                        <div id="hegemony-doc-selector-container" class="mode-selector-container" style="margin-top: 0.5rem; display: none;">
+                            <h4 style="font-size: 0.85rem; color: var(--text-secondary);">Select Document to Map</h4>
+                            <select id="hegemony-doc-select" class="mode-select" onchange="selectHegemonyDoc(this.value)">
+                                <!-- Dynamically populated -->
+                            </select>
+                        </div>
+
+                        <div id="sentence-mode-selector-container" class="mode-selector-container" style="margin-top: 0.5rem; display: none;">
+                            <h4 style="font-size: 0.85rem; color: var(--text-secondary);">Sentence Display Scope</h4>
+                            <select id="sentence-scope-select" class="mode-select" onchange="changeSentenceScope(this.value)">
+                                <option value="selected">Selected Document (Full)</option>
+                                <option value="sampled">All Documents (Sampled 1 in 100)</option>
+                                <option value="filtered">Filtered by Keyword Search</option>
+                            </select>
+                        </div>
+
+                        <div class="slider-label" style="margin-top: 0.5rem;">
+                            <span>Topic Closeness Limit</span>
+                            <span id="hegemony-threshold-val">0.25</span>
+                        </div>
+                        <input type="range" id="hegemony-threshold-slider" class="range-slider" min="0.10" max="0.65" step="0.01" value="0.25" oninput="updateHegemonyThresholdLabel(this.value)" onchange="changeHegemonyThreshold(this.value)">
+                        
+                        <div class="slider-label" style="margin-top: 0.5rem;">
+                            <span>Concept Density Limit</span>
+                            <span id="hegemony-density-val">0.25</span>
+                        </div>
+                        <input type="range" id="hegemony-density-slider" class="range-slider" min="0.00" max="1.00" step="0.05" value="0.25" oninput="updateHegemonyDensityLabel(this.value)" onchange="changeHegemonyDensity(this.value)">
                     </div>
 
                     <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.25rem 0;">
@@ -827,6 +876,41 @@
                         </div>
                     </div>
 
+                    <!-- Sentence Legend (hidden by default) -->
+                    <div class="hegemony-legend" id="sentence-legend" style="display: none;">
+                        <h4 style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Sentence Linguistic Class</h4>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #3b82f6;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Axiom / Definition (Blue):</strong> Defines a concept, relation, or standard
+                            </div>
+                        </div>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #f59e0b;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Logic / Conditional (Orange):</strong> Conditional rules, modals, or implications
+                            </div>
+                        </div>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #10b981;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Example / Instance (Green):</strong> Concrete examples, cases, or applications
+                            </div>
+                        </div>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #ec4899;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Reference / Citation (Pink):</strong> External research, figures, or citations
+                            </div>
+                        </div>
+                        <div class="hegemony-legend-item">
+                            <div class="legend-color-dot" style="background-color: #94a3b8;"></div>
+                            <div class="hegemony-legend-text">
+                                <strong>Assertion (Slate):</strong> Core claims, assertions, or declarative statements
+                            </div>
+                        </div>
+                    </div>
+
                     <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.25rem 0;">
 
                     <div id="graph-info-panel">
@@ -846,6 +930,44 @@
         let documentsMap = {}; // Maps filename -> { topics: Set, path: String, keywords: Set }
         let docIsmMappings = {}; // Maps filename -> { assigned_point, quadrant, isms, etc. }
         let topicIsmMappings = {}; // Maps topic_id -> { assigned_point, quadrant, isms, etc. }
+        let sentenceRecords = []; // Stores loaded granular sentences
+        let cachedSemanticEdges = null;
+        let cachedHegemonyBaseNodes = null;
+        let cachedHegemonyBaseEdges = null;
+        let hegemonyThreshold = 0.25; // Filters which topics are allowed to guide documents
+        let hegemonyDensityLimit = 0.25; // Filters documents based on dominant topic density
+        let hegemonyLayout = 'dominant'; // 'dominant', 'spread', or 'granular', 'sentence'
+        let selectedHegemonyDocId = null; // Document selected for granular view
+        let sentenceScope = 'selected'; // 'selected', 'sampled', 'filtered'
+        let activeDocTab = 'overview';
+
+        function switchDocTab(tabName, docId) {
+            activeDocTab = tabName;
+            showDocumentInfo(docId);
+        }
+
+        function focusSentenceNode(index) {
+            if (graphMode !== 'hegemony' || hegemonyLayout !== 'sentence') {
+                const modeSelect = document.getElementById('graph-mode-select');
+                if (modeSelect) {
+                    modeSelect.value = 'hegemony';
+                    changeGraphMode('hegemony');
+                }
+                const layoutSelect = document.getElementById('hegemony-layout-select');
+                if (layoutSelect) {
+                    layoutSelect.value = 'sentence';
+                    changeHegemonyLayout('sentence');
+                }
+            }
+            const nodeKey = `sentence-${index}`;
+            setTimeout(() => {
+                if (network && nodesDataSet && nodesDataSet.get(nodeKey)) {
+                    network.selectNodes([nodeKey]);
+                    network.focus(nodeKey, { scale: 1.2, animation: true });
+                    showDocumentInfo(nodeKey);
+                }
+            }, 300);
+        }
 
         function getDocumentHegemonyMapping(docId) {
             const docInfo = documentsMap[docId];
@@ -855,16 +977,20 @@
             
             const pointCounts = {};
             const quadCounts = {};
+            let validTopicsCount = 0;
             
             docInfo.topics.forEach(tid => {
                 const topicMapping = topicIsmMappings[tid];
-                if (topicMapping) {
+                if (topicMapping && topicMapping.similarity >= hegemonyThreshold) {
                     const pt = topicMapping.assigned_point;
                     const quad = topicMapping.quadrant;
                     pointCounts[pt] = (pointCounts[pt] || 0) + 1;
                     quadCounts[quad] = (quadCounts[quad] || 0) + 1;
+                    validTopicsCount++;
                 }
             });
+            
+            if (validTopicsCount === 0) return null;
             
             // Find dominant point (highest density of topics)
             let bestPoint = null;
@@ -888,6 +1014,9 @@
             
             if (!bestPoint) return null;
             
+            const density = maxPointCount / validTopicsCount;
+            if (density < hegemonyDensityLimit) return null;
+            
             const ptMeta = HEGEMONY_POINTS[bestPoint];
             return {
                 assigned_point: bestPoint,
@@ -896,7 +1025,7 @@
                 node_name: ptMeta.name,
                 sub_vector: bestPoint,
                 isms: ptMeta.isms,
-                density: maxPointCount / docInfo.topics.size
+                density: density
             };
         }
 
@@ -922,7 +1051,9 @@
         let lastSelectedDocId = null;
         let graphMode = 'semantic'; // 'semantic' or 'hegemony'
         let edgeChunkLoadingInterval = null;
-        let progressiveChunkSize = 250;
+        let progressiveChunkSize = 1000;
+        let activeLegendKey = null;
+        let activeLegendState = 0; // 0: inactive, 1: dominant, 2: gradient
 
         function changeChunkSize(val) {
             progressiveChunkSize = parseInt(val);
@@ -979,19 +1110,49 @@
                 edgeChunkLoadingInterval = null;
             }
 
-            // Toggle legends visibility
+            // Toggle legends visibility and control groups
             if (newMode === 'hegemony') {
                 document.getElementById('semantic-legend').style.display = 'none';
-                document.getElementById('hegemony-legend').style.display = 'flex';
-                document.getElementById('threshold-control-group').style.display = 'none';
+                if (hegemonyLayout === 'sentence') {
+                    document.getElementById('hegemony-legend').style.display = 'none';
+                    document.getElementById('sentence-legend').style.display = 'flex';
+                } else {
+                    document.getElementById('hegemony-legend').style.display = 'flex';
+                    document.getElementById('sentence-legend').style.display = 'none';
+                }
+                document.getElementById('threshold-control-group').style.display = (hegemonyLayout === 'dominant' || hegemonyLayout === 'spread') ? 'block' : 'none';
+                document.getElementById('hegemony-control-group').style.display = 'block';
             } else {
                 document.getElementById('semantic-legend').style.display = 'flex';
                 document.getElementById('hegemony-legend').style.display = 'none';
+                document.getElementById('sentence-legend').style.display = 'none';
                 document.getElementById('threshold-control-group').style.display = 'block';
+                document.getElementById('hegemony-control-group').style.display = 'none';
             }
 
             // Rebuild the graph
             buildGraph();
+        }
+
+        function populateHegemonyDocSelect() {
+            const docSelect = document.getElementById('hegemony-doc-select');
+            if (docSelect) {
+                const currentVal = docSelect.value;
+                docSelect.innerHTML = '';
+                const sortedDocs = Object.keys(documentsMap).sort();
+                sortedDocs.forEach(d => {
+                    const opt = document.createElement('option');
+                    opt.value = d;
+                    opt.innerText = d;
+                    docSelect.appendChild(opt);
+                });
+                if (currentVal && documentsMap[currentVal]) {
+                    docSelect.value = currentVal;
+                } else if (sortedDocs.length > 0) {
+                    selectedHegemonyDocId = sortedDocs[0];
+                    docSelect.value = sortedDocs[0];
+                }
+            }
         }
 
         // Load JSON data
@@ -1063,19 +1224,205 @@
                         topicIsmMappings = await mapResponse.json();
                         computeDocIsmMappings();
                         console.log("Hegemony topic classification mappings loaded. Document coordinates computed.");
+                        populateHegemonyDocSelect();
                     }
                 } catch (e) {
                     console.warn("topic_ism_mapping.json not available. Hegemony mode will fall back to dynamic display.");
                 }
 
+                // Fetch Granular Sentences
+                try {
+                    const sentResponse = await fetch('granular_sentence_index.json');
+                    if (sentResponse.ok) {
+                        sentenceRecords = await sentResponse.json();
+                        console.log(`Loaded ${sentenceRecords.length} granular sentences.`);
+                        
+                        // Dynamically inject any files from sentences that are missing in documentsMap
+                        let added = false;
+                        sentenceRecords.forEach(sent => {
+                            const docName = sent.file.split(/[\\/]/).pop();
+                            if (!documentsMap[docName]) {
+                                documentsMap[docName] = {
+                                    topics: new Set(),
+                                    path: sent.file,
+                                    keywords: new Set()
+                                };
+                                added = true;
+                            }
+                        });
+                        
+                        if (added) {
+                            populateHegemonyDocSelect();
+                        }
+                    }
+                } catch (e) {
+                    console.warn("granular_sentence_index.json not available yet:", e);
+                }
+
                 document.getElementById('load-stats').innerText = 
                     `Index: ${paragraphsData.length} paras | ${Object.keys(topicsMap).length} clusters`;
                 
+                precalculateGraphs();
                 renderTopics();
             } catch (err) {
                 console.error(err);
                 document.getElementById('load-stats').innerText = "Error loading database";
             }
+        }
+
+        function precalculateGraphs() {
+            console.log("Precalculating connections cache...");
+            const docList = Object.keys(documentsMap);
+
+            // 1. Precalculate Semantic Overlap Edges
+            cachedSemanticEdges = [];
+            for (let i = 0; i < docList.length; i++) {
+                for (let j = i + 1; j < docList.length; j++) {
+                    const doc1 = docList[i];
+                    const doc2 = docList[j];
+
+                    const set1 = documentsMap[doc1].topics;
+                    const set2 = documentsMap[doc2].topics;
+
+                    const intersection = new Set([...set1].filter(x => set2.has(x)));
+                    const union = new Set([...set1, ...set2]);
+                    const similarity = union.size > 0 ? intersection.size / union.size : 0;
+
+                    if (similarity > 0) {
+                        cachedSemanticEdges.push({
+                            from: doc1,
+                            to: doc2,
+                            similarity: similarity, 
+                            type: 'topic',
+                            physics: true, 
+                            value: similarity * 6,
+                            title: `Topic Overlap: ${(similarity * 100).toFixed(0)}%\nShared Topics: ${Array.from(intersection).join(', ')}`,
+                            color: { color: '#8b5cf6', highlight: '#a78bfa' }
+                        });
+                    }
+
+                    const kw1 = documentsMap[doc1].keywords;
+                    const kw2 = documentsMap[doc2].keywords;
+                    const kwIntersection = Array.from(kw1).filter(x => kw2.has(x));
+                    
+                    if (kwIntersection.length >= 3) {
+                        cachedSemanticEdges.push({
+                            from: doc1,
+                            to: doc2,
+                            similarity: 0.0, 
+                            type: 'keyword-3',
+                            physics: false, 
+                            title: `3+ Keywords Overlap\nShared: ${kwIntersection.slice(0, 5).join(', ')}...`,
+                            width: 1.0,
+                            color: { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' }
+                        });
+                    }
+                }
+            }
+
+            // 2. Precalculate Hegemony Base Nodes (Quadrants, Attractors, Neutral)
+            cachedHegemonyBaseNodes = [];
+            cachedHegemonyBaseEdges = [];
+
+            const parentCoords = {
+                "GG": { x: -400, y: -400 },
+                "LE": { x: 400, y: -400 },
+                "LG": { x: -400, y: 400 },
+                "GE": { x: 400, y: 400 }
+            };
+
+            const targetOffsets = {
+                "gg": { dx: -160, dy: -160 },
+                "le": { dx: 160, dy: -160 },
+                "lg": { dx: -160, dy: 160 },
+                "ge": { dx: 160, dy: 160 }
+            };
+
+            // Quadrants
+            Object.keys(QUADRANTS).forEach(quad => {
+                const qMeta = QUADRANTS[quad];
+                cachedHegemonyBaseNodes.push({
+                    id: `quadrant-${quad}`,
+                    label: quad,
+                    x: parentCoords[quad].x,
+                    y: parentCoords[quad].y,
+                    fixed: true,
+                    title: `${qMeta.name}\n${qMeta.isms}\n\n${qMeta.description}`,
+                    value: 22,
+                    color: {
+                        background: qMeta.color,
+                        border: qMeta.border,
+                        highlight: { background: qMeta.border, border: '#ffffff' }
+                    },
+                    shape: 'diamond',
+                    isAttractor: true,
+                    attractorType: 'quadrant',
+                    font: { color: '#ffffff', face: 'Outfit', size: 18, bold: true }
+                });
+            });
+
+            // Point attractors
+            Object.keys(HEGEMONY_POINTS).forEach(pointKey => {
+                const pt = HEGEMONY_POINTS[pointKey];
+                const ismsLabel = pt.isms.join(' / ');
+                
+                const targetPart = pointKey.split('-')[1];
+                const pCoord = parentCoords[pt.quadrant];
+                const offset = targetOffsets[targetPart];
+                const posX = pCoord.x + offset.dx;
+                const posY = pCoord.y + offset.dy;
+
+                cachedHegemonyBaseNodes.push({
+                    id: `point-${pointKey}`,
+                    label: ismsLabel.length > 20 ? ismsLabel.substring(0, 18) + '..' : ismsLabel,
+                    x: posX,
+                    y: posY,
+                    fixed: true,
+                    title: `Vector Point: ${pointKey}\nNode Name: ${pt.name}\n\nPhilosophical Isms: ${pt.isms.join(', ')}\n\nDescription: ${pt.description}`,
+                    value: 12,
+                    color: {
+                        background: '#1e293b',
+                        border: QUADRANTS[pt.quadrant].color,
+                        highlight: { background: QUADRANTS[pt.quadrant].color, border: '#ffffff' }
+                    },
+                    shape: 'dot',
+                    isAttractor: true,
+                    attractorType: 'point',
+                    pointKey: pointKey,
+                    font: { color: '#e2e8f0', face: 'Outfit', size: 12 }
+                });
+
+                cachedHegemonyBaseEdges.push({
+                    from: `quadrant-${pt.quadrant}`,
+                    to: `point-${pointKey}`,
+                    type: 'attractor-parent',
+                    physics: false,
+                    width: 3.0,
+                    length: 80,
+                    color: { color: QUADRANTS[pt.quadrant].color, highlight: '#ffffff' }
+                });
+            });
+
+            // Neutral node
+            cachedHegemonyBaseNodes.push({
+                id: 'point-neutral',
+                label: 'Neutral Info',
+                x: 0,
+                y: 0,
+                fixed: true,
+                title: 'Neutral Info / Unclassified\nDocuments that do not meet limits sit here.',
+                value: 14,
+                color: {
+                    background: '#1e293b',
+                    border: '#475569',
+                    highlight: { background: '#475569', border: '#ffffff' }
+                },
+                shape: 'dot',
+                isAttractor: true,
+                attractorType: 'neutral',
+                font: { color: '#94a3b8', face: 'Outfit', size: 12, bold: true }
+            });
+            console.log("Precalculation complete.");
         }
 
         // Render Topics in Sidebar (Tab 1)
@@ -1148,8 +1495,68 @@
             renderTopics(e.target.value);
         });
 
+        // Helper to get coordinates for a given point key
+        function getPointCoords(pointKey) {
+            const parts = pointKey.split('-');
+            const parent = parts[0].toUpperCase();
+            const target = parts[1];
+            
+            const parentCoords = {
+                "GG": { x: -400, y: -400 },
+                "LE": { x: 400, y: -400 },
+                "LG": { x: -400, y: 400 },
+                "GE": { x: 400, y: 400 }
+            };
+
+            const targetOffsets = {
+                "gg": { dx: -160, dy: -160 },
+                "le": { dx: 160, dy: -160 },
+                "lg": { dx: -160, dy: 160 },
+                "ge": { dx: 160, dy: 160 }
+            };
+            
+            const pCoord = parentCoords[parent] || { x: 0, y: 0 };
+            const offset = targetOffsets[target] || { dx: 0, dy: 0 };
+            return {
+                x: pCoord.x + offset.dx,
+                y: pCoord.y + offset.dy
+            };
+        }
+
+        // Helper to calculate the sentence position based on weighted similarity mappings (sim^3)
+        function calculateSentencePosition(mappings) {
+            let totalWeight = 0;
+            let sumX = 0;
+            let sumY = 0;
+            
+            Object.keys(mappings).forEach(pointKey => {
+                const sim = mappings[pointKey];
+                if (sim > 0) {
+                    const w = Math.pow(sim, 3);
+                    const coords = getPointCoords(pointKey);
+                    sumX += coords.x * w;
+                    sumY += coords.y * w;
+                    totalWeight += w;
+                }
+            });
+            
+            if (totalWeight > 0) {
+                return {
+                    x: sumX / totalWeight,
+                    y: sumY / totalWeight
+                };
+            } else {
+                return { x: 0, y: 0 };
+            }
+        }
+
         // Tab 2: Build the vis.js Network Graph
         function buildGraph() {
+            isHighlightedState = false;
+            activeLegendKey = null;
+            activeLegendState = 0;
+            updateLegendUI();
+            
             // Cancel any running edge chunk additions
             if (edgeChunkLoadingInterval) {
                 clearInterval(edgeChunkLoadingInterval);
@@ -1187,226 +1594,487 @@
                     });
                 });
 
-                // Calculate edge relations
-                for (let i = 0; i < docList.length; i++) {
-                    for (let j = i + 1; j < docList.length; j++) {
-                        const doc1 = docList[i];
-                        const doc2 = docList[j];
+                // Calculate edge relations using cache if available
+                if (cachedSemanticEdges && cachedSemanticEdges.length > 0) {
+                    allEdges.push(...cachedSemanticEdges);
+                } else {
+                    for (let i = 0; i < docList.length; i++) {
+                        for (let j = i + 1; j < docList.length; j++) {
+                            const doc1 = docList[i];
+                            const doc2 = docList[j];
 
-                        const set1 = documentsMap[doc1].topics;
-                        const set2 = documentsMap[doc2].topics;
+                            const set1 = documentsMap[doc1].topics;
+                            const set2 = documentsMap[doc2].topics;
 
-                        const intersection = new Set([...set1].filter(x => set2.has(x)));
-                        const union = new Set([...set1, ...set2]);
-                        const similarity = intersection.size / union.size;
+                            const intersection = new Set([...set1].filter(x => set2.has(x)));
+                            const union = new Set([...set1, ...set2]);
+                            const similarity = intersection.size / union.size;
 
-                        if (similarity > 0) {
-                            allEdges.push({
-                                from: doc1,
-                                to: doc2,
-                                similarity: similarity, 
-                                type: 'topic',
-                                physics: true, 
-                                value: similarity * 6,
-                                title: `Topic Overlap: ${(similarity * 100).toFixed(0)}%\nShared Topics: ${Array.from(intersection).join(', ')}`,
-                                color: { color: '#8b5cf6', highlight: '#a78bfa' }
-                            });
-                        }
+                            if (similarity > 0) {
+                                allEdges.push({
+                                    from: doc1,
+                                    to: doc2,
+                                    similarity: similarity, 
+                                    type: 'topic',
+                                    physics: true, 
+                                    value: similarity * 6,
+                                    title: `Topic Overlap: ${(similarity * 100).toFixed(0)}%\nShared Topics: ${Array.from(intersection).join(', ')}`,
+                                    color: { color: '#8b5cf6', highlight: '#a78bfa' }
+                                });
+                            }
 
-                        // Underlying Keyword overlap
-                        const kw1 = documentsMap[doc1].keywords;
-                        const kw2 = documentsMap[doc2].keywords;
-                        const kwIntersection = Array.from(kw1).filter(x => kw2.has(x));
-                        
-                        if (kwIntersection.length >= 3) {
-                            allEdges.push({
-                                from: doc1,
-                                to: doc2,
-                                similarity: 0.0, 
-                                type: 'keyword-3',
-                                physics: false, 
-                                title: `3+ Keywords Overlap\nShared: ${kwIntersection.slice(0, 5).join(', ')}...`,
-                                width: 1.0,
-                                color: { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' }
-                            });
+                            // Underlying Keyword overlap
+                            const kw1 = documentsMap[doc1].keywords;
+                            const kw2 = documentsMap[doc2].keywords;
+                            const kwIntersection = Array.from(kw1).filter(x => kw2.has(x));
+                            
+                            if (kwIntersection.length >= 3) {
+                                allEdges.push({
+                                    from: doc1,
+                                    to: doc2,
+                                    similarity: 0.0, 
+                                    type: 'keyword-3',
+                                    physics: false, 
+                                    title: `3+ Keywords Overlap\nShared: ${kwIntersection.slice(0, 5).join(', ')}...`,
+                                    width: 1.0,
+                                    color: { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' }
+                                });
+                            }
                         }
                     }
                 }
             } else {
                 // Mode 2: Hegemony Map & 32 Isms Gravity Wells
                 
-                // 1. Coordinates framework to lock the geometry of the Hegemony Map
-                const parentCoords = {
-                    "GG": { x: -400, y: -400 },
-                    "LE": { x: 400, y: -400 },
-                    "LG": { x: -400, y: 400 },
-                    "GE": { x: 400, y: 400 }
-                };
+                // 1. Insert Attractor Nodes (using cache if available)
+                if (cachedHegemonyBaseNodes && cachedHegemonyBaseNodes.length > 0) {
+                    nodesArray.push(...cachedHegemonyBaseNodes);
+                    allEdges.push(...cachedHegemonyBaseEdges);
+                } else {
+                    // Coordinates framework to lock the geometry of the Hegemony Map
+                    const parentCoords = {
+                        "GG": { x: -400, y: -400 },
+                        "LE": { x: 400, y: -400 },
+                        "LG": { x: -400, y: 400 },
+                        "GE": { x: 400, y: 400 }
+                    };
 
-                const targetOffsets = {
-                    "gg": { dx: -160, dy: -160 },
-                    "le": { dx: 160, dy: -160 },
-                    "lg": { dx: -160, dy: 160 },
-                    "ge": { dx: 160, dy: 160 }
-                };
+                    const targetOffsets = {
+                        "gg": { dx: -160, dy: -160 },
+                        "le": { dx: 160, dy: -160 },
+                        "lg": { dx: -160, dy: 160 },
+                        "ge": { dx: 160, dy: 160 }
+                    };
 
-                // 1. Insert 4 Macro Quadrant Nodes (Locked in 4 corners)
-                Object.keys(QUADRANTS).forEach(quad => {
-                    const qMeta = QUADRANTS[quad];
-                    nodesArray.push({
-                        id: `quadrant-${quad}`,
-                        label: quad,
-                        x: parentCoords[quad].x,
-                        y: parentCoords[quad].y,
-                        fixed: true,
-                        title: `${qMeta.name}\n${qMeta.isms}\n\n${qMeta.description}`,
-                        value: 22, // large size
-                        color: {
-                            background: qMeta.color,
-                            border: qMeta.border,
-                            highlight: { background: qMeta.border, border: '#ffffff' }
-                        },
-                        shape: 'diamond',
-                        isAttractor: true,
-                        attractorType: 'quadrant',
-                        font: { color: '#ffffff', face: 'Outfit', size: 18, bold: true }
+                    // Insert 4 Macro Quadrant Nodes (Locked in 4 corners)
+                    Object.keys(QUADRANTS).forEach(quad => {
+                        const qMeta = QUADRANTS[quad];
+                        nodesArray.push({
+                            id: `quadrant-${quad}`,
+                            label: quad,
+                            x: parentCoords[quad].x,
+                            y: parentCoords[quad].y,
+                            fixed: true,
+                            title: `${qMeta.name}\n${qMeta.isms}\n\n${qMeta.description}`,
+                            value: 22,
+                            color: {
+                                background: qMeta.color,
+                                border: qMeta.border,
+                                highlight: { background: qMeta.border, border: '#ffffff' }
+                            },
+                            shape: 'diamond',
+                            isAttractor: true,
+                            attractorType: 'quadrant',
+                            font: { color: '#ffffff', face: 'Outfit', size: 18, bold: true }
+                        });
                     });
-                });
 
-                // 2. Insert 16 Point Attractors (Locked offsets relative to their parent)
-                Object.keys(HEGEMONY_POINTS).forEach(pointKey => {
-                    const pt = HEGEMONY_POINTS[pointKey];
-                    const ismsLabel = pt.isms.join(' / ');
-                    
-                    const targetPart = pointKey.split('-')[1];
-                    const pCoord = parentCoords[pt.quadrant];
-                    const offset = targetOffsets[targetPart];
-                    const posX = pCoord.x + offset.dx;
-                    const posY = pCoord.y + offset.dy;
+                    // Insert 16 Point Attractors (Locked offsets relative to their parent)
+                    Object.keys(HEGEMONY_POINTS).forEach(pointKey => {
+                        const pt = HEGEMONY_POINTS[pointKey];
+                        const ismsLabel = pt.isms.join(' / ');
+                        
+                        const targetPart = pointKey.split('-')[1];
+                        const pCoord = parentCoords[pt.quadrant];
+                        const offset = targetOffsets[targetPart];
+                        const posX = pCoord.x + offset.dx;
+                        const posY = pCoord.y + offset.dy;
 
+                        nodesArray.push({
+                            id: `point-${pointKey}`,
+                            label: ismsLabel.length > 20 ? ismsLabel.substring(0, 18) + '..' : ismsLabel,
+                            x: posX,
+                            y: posY,
+                            fixed: true,
+                            title: `Vector Point: ${pointKey}\nNode Name: ${pt.name}\n\nPhilosophical Isms: ${pt.isms.join(', ')}\n\nDescription: ${pt.description}`,
+                            value: 12,
+                            color: {
+                                background: '#1e293b',
+                                border: QUADRANTS[pt.quadrant].color,
+                                highlight: { background: QUADRANTS[pt.quadrant].color, border: '#ffffff' }
+                            },
+                            shape: 'dot',
+                            isAttractor: true,
+                            attractorType: 'point',
+                            pointKey: pointKey,
+                            font: { color: '#e2e8f0', face: 'Outfit', size: 12 }
+                        });
+
+                        // Direct connection from Point Attractor to parent Quadrant
+                        allEdges.push({
+                            from: `quadrant-${pt.quadrant}`,
+                            to: `point-${pointKey}`,
+                            type: 'attractor-parent',
+                            physics: false,
+                            width: 3.0,
+                            length: 80,
+                            color: { color: QUADRANTS[pt.quadrant].color, highlight: '#ffffff' }
+                        });
+                    });
+
+                    // Insert a Neutral Center Attractor Node at (0, 0)
                     nodesArray.push({
-                        id: `point-${pointKey}`,
-                        label: ismsLabel.length > 20 ? ismsLabel.substring(0, 18) + '..' : ismsLabel,
-                        x: posX,
-                        y: posY,
+                        id: 'point-neutral',
+                        label: 'Neutral Info',
+                        x: 0,
+                        y: 0,
                         fixed: true,
-                        title: `Vector Point: ${pointKey}\nNode Name: ${pt.name}\n\nPhilosophical Isms: ${pt.isms.join(', ')}\n\nDescription: ${pt.description}`,
-                        value: 12, // medium size
+                        title: 'Neutral Info / Unclassified\nDocuments that do not meet the Topic Closeness or Concept Density Limits are pulled here.',
+                        value: 14,
                         color: {
                             background: '#1e293b',
-                            border: QUADRANTS[pt.quadrant].color,
-                            highlight: { background: QUADRANTS[pt.quadrant].color, border: '#ffffff' }
+                            border: '#475569',
+                            highlight: { background: '#475569', border: '#ffffff' }
                         },
                         shape: 'dot',
                         isAttractor: true,
-                        attractorType: 'point',
-                        pointKey: pointKey,
-                        font: { color: '#e2e8f0', face: 'Outfit', size: 12 }
+                        attractorType: 'neutral',
+                        font: { color: '#94a3b8', face: 'Outfit', size: 12, bold: true }
                     });
+                }
 
-                    // Direct connection from Point Attractor to parent Quadrant
-                    allEdges.push({
-                        from: `quadrant-${pt.quadrant}`,
-                        to: `point-${pointKey}`,
-                        type: 'attractor-parent',
-                        physics: false, // Fixed positions, no physics calculations needed
-                        width: 3.0,
-                        length: 80,
-                        color: { color: QUADRANTS[pt.quadrant].color, highlight: '#ffffff' }
-                    });
-                });
+                // 3. Add documents based on layout
+                if (hegemonyLayout === 'granular') {
+                    // Mode 2C: Granular Topic Spread (Word-First / Selected Doc)
+                    const doc = selectedHegemonyDocId || Object.keys(documentsMap)[0];
+                    if (doc && documentsMap[doc]) {
+                        const docInfo = documentsMap[doc];
+                        
+                        // Add central Selected Document Node
+                        nodesArray.push({
+                            id: doc,
+                            label: doc.length > 30 ? doc.substring(0, 27) + '...' : doc,
+                            title: `${doc}\n(Selected Document)`,
+                            value: 18, // large size for focus
+                            color: {
+                                background: '#312e81',
+                                border: '#818cf8',
+                                highlight: { background: '#4338ca', border: '#ffffff' }
+                            },
+                            font: { color: '#ffffff', face: 'Outfit', size: 16, bold: true },
+                            shape: 'star',
+                            x: 0,
+                            y: 0 // Start in middle of attractors
+                        });
 
-                // 3. Add documents color-coded and assigned to their Ism points
-                docList.forEach(doc => {
-                    let quadColor = '#1e293b';
-                    let quadBorder = '#8b5cf6';
-                    let ismTitle = "Unclassified";
-                    
-                    const mapping = docIsmMappings[doc];
-                    if (mapping) {
-                        const quadMeta = QUADRANTS[mapping.quadrant];
-                        if (quadMeta) {
-                            quadColor = '#1e293b';
-                            quadBorder = quadMeta.color;
-                        }
-                        ismTitle = `Quadrant: ${mapping.quadrant_name} (${mapping.quadrant})\nIsms: ${mapping.isms.join(' / ')}`;
-                    }
+                        // For each topic in the document
+                        docInfo.topics.forEach(tid => {
+                            const topicMapping = topicIsmMappings[tid];
+                            if (topicMapping && topicMapping.similarity >= hegemonyThreshold) {
+                                const pt = topicMapping.assigned_point;
+                                const quad = topicMapping.quadrant;
+                                const quadMeta = QUADRANTS[quad];
+                                const keywords = topicsMap[tid] ? topicsMap[tid].keywords.slice(0, 4).join(', ') : '';
 
-                    nodesArray.push({
-                        id: doc,
-                        label: doc.length > 25 ? doc.substring(0, 22) + '...' : doc,
-                        title: `${doc}\n${ismTitle}`,
-                        value: 5, // smaller document nodes
-                        color: {
-                            background: quadColor,
-                            border: quadBorder,
-                            highlight: { background: quadBorder, border: '#ffffff' }
-                        },
-                        font: { color: '#f8fafc', face: 'Outfit', size: 12 }
-                    });
+                                // Add Topic Node
+                                nodesArray.push({
+                                    id: `topic-${tid}`,
+                                    label: `#${tid}: ${keywords}`,
+                                    title: `Topic #${tid}\nKeywords: ${keywords}\nAssigned Isms: ${topicMapping.isms.join(', ')}\nSimilarity: ${topicMapping.similarity.toFixed(4)}`,
+                                    value: 8,
+                                    color: {
+                                        background: '#1e293b',
+                                        border: quadMeta.color,
+                                        highlight: { background: quadMeta.color, border: '#ffffff' }
+                                    },
+                                    font: { color: '#cbd5e1', face: 'Outfit', size: 11 },
+                                    shape: 'dot'
+                                });
 
-                    // Add physical spring pulling document node to its attractor point
-                    if (mapping) {
-                        allEdges.push({
-                            from: `point-${mapping.assigned_point}`,
-                            to: doc,
-                            type: 'attractor-spring',
-                            physics: true,
-                            length: 120,
-                            color: { color: 'rgba(255,255,255,0.06)', highlight: 'rgba(255,255,255,0.2)' }
+                                // Connect Topic Node to its Hegemony Point Attractor
+                                allEdges.push({
+                                    from: `point-${pt}`,
+                                    to: `topic-${tid}`,
+                                    type: 'topic-attractor',
+                                    physics: true,
+                                    length: 100,
+                                    color: { color: 'rgba(255,255,255,0.15)', highlight: '#ffffff' }
+                                });
+
+                                // Connect Selected Document Node to Topic Node
+                                allEdges.push({
+                                    from: doc,
+                                    to: `topic-${tid}`,
+                                    type: 'doc-topic',
+                                    physics: true,
+                                    length: 160,
+                                    width: 2.0,
+                                    color: { color: '#818cf8', highlight: '#ffffff' }
+                                });
+                            }
                         });
                     }
-                });
-            }
+                } else if (hegemonyLayout === 'sentence') {
+                    // Mode 2D: Linguistic Sentence Compass (2D Scatterplot)
+                    const currentDoc = selectedHegemonyDocId || Object.keys(documentsMap)[0];
+                    const filterInput = document.getElementById('keyword-filter-input');
+                    const searchVal = filterInput ? filterInput.value.toLowerCase().trim() : '';
+                    
+                    let targetSentences = [];
+                    
+                    if (sentenceScope === 'selected') {
+                        // 1. Show all sentences for the selected document
+                        if (currentDoc) {
+                            sentenceRecords.forEach((sent, idx) => {
+                                const sentDocName = sent.file.split(/[\\/]/).pop();
+                                if (sentDocName === currentDoc) {
+                                    targetSentences.push({ sent, idx });
+                                }
+                            });
+                        }
+                    } else if (sentenceScope === 'filtered') {
+                        // 2. Show sentences matching the keyword search across all documents
+                        if (searchVal.length > 0) {
+                            const searchWords = searchVal.split(',').map(s => s.trim()).filter(s => s.length > 0);
+                            sentenceRecords.forEach((sent, idx) => {
+                                const textLower = sent.text.toLowerCase();
+                                const matches = searchWords.every(w => textLower.includes(w));
+                                if (matches) {
+                                    targetSentences.push({ sent, idx });
+                                }
+                            });
+                            if (targetSentences.length > 2000) {
+                                targetSentences = targetSentences.slice(0, 2000);
+                            }
+                        } else {
+                            // Prompt with a smaller sample (e.g. 500 sentences) if no search is active
+                            const step = Math.ceil(sentenceRecords.length / 500) || 1;
+                            for (let idx = 0; idx < sentenceRecords.length; idx += step) {
+                                targetSentences.push({ sent: sentenceRecords[idx], idx });
+                            }
+                        }
+                    } else {
+                        // 3. Sampled: show a representative sample across the entire corpus (e.g. 1 in 150 sentences to get ~2000 nodes)
+                        const step = Math.ceil(sentenceRecords.length / 2000) || 1;
+                        for (let idx = 0; idx < sentenceRecords.length; idx += step) {
+                            targetSentences.push({ sent: sentenceRecords[idx], idx });
+                        }
+                    }
 
-            nodesDataSet = new vis.DataSet(nodesArray);
-            edgesDataSet = new vis.DataSet(); // Start empty for progressive injection
+                    // Render target sentences
+                    targetSentences.forEach(({ sent, idx }) => {
+                        const coords = calculateSentencePosition(sent.hegemony_mappings);
+                        
+                        let sentColor = '#94a3b8'; // Default assertion color
+                        let sentBorder = '#cbd5e1';
+                        if (sent.type === 'definition') {
+                            sentColor = '#3b82f6';
+                            sentBorder = '#60a5fa';
+                        } else if (sent.type === 'conditional') {
+                            sentColor = '#f59e0b';
+                            sentBorder = '#fbbf24';
+                        } else if (sent.type === 'example') {
+                            sentColor = '#10b981';
+                            sentBorder = '#34d399';
+                        } else if (sent.type === 'reference') {
+                            sentColor = '#ec4899';
+                            sentBorder = '#f472b6';
+                        }
+                        
+                        nodesArray.push({
+                            id: `sentence-${idx}`,
+                            label: '', // Keep labels blank to prevent heavy clutter
+                            title: `${sent.type.toUpperCase()}: ${sent.text.length > 100 ? sent.text.substring(0, 97) + '...' : sent.text}\nFile: ${sent.file}`,
+                            x: coords.x,
+                            y: coords.y,
+                            fixed: true,
+                            value: 3.5,
+                            color: {
+                                background: sentColor,
+                                border: sentBorder,
+                                highlight: { background: '#ffffff', border: sentBorder }
+                            },
+                            shape: 'dot',
+                            font: { size: 0 }
+                        });
+                        
+                        // Faint edge connecting to dominant attractor
+                        let maxSim = -1;
+                        let bestPointKey = null;
+                        Object.keys(sent.hegemony_mappings).forEach(k => {
+                            if (sent.hegemony_mappings[k] > maxSim) {
+                                maxSim = sent.hegemony_mappings[k];
+                                bestPointKey = k;
+                            }
+                        });
+                        
+                        if (bestPointKey) {
+                            allEdges.push({
+                                from: `point-${bestPointKey}`,
+                                to: `sentence-${idx}`,
+                                type: 'sentence-attractor',
+                                physics: false,
+                                width: 0.8,
+                                color: { color: 'rgba(255, 255, 255, 0.05)', highlight: 'rgba(255, 255, 255, 0.2)' }
+                            });
+                        }
+                    });
+                } else {
+                    // Mode 2A & 2B: Dominant (Single-Point) or Spread (Multi-Attractor)
+                    docList.forEach(doc => {
+                        let quadColor = '#1e293b';
+                        let quadBorder = '#8b5cf6';
+                        let ismTitle = "Unclassified";
+                        
+                        const mapping = docIsmMappings[doc];
+                        if (mapping) {
+                            const quadMeta = QUADRANTS[mapping.quadrant];
+                            if (quadMeta) {
+                                quadColor = '#1e293b';
+                                quadBorder = quadMeta.color;
+                            }
+                            ismTitle = `Quadrant: ${mapping.quadrant_name} (${mapping.quadrant})\nIsms: ${mapping.isms.join(' / ')}`;
+                        }
 
-            // Filter Edge view dynamically
-            edgesDataView = new vis.DataView(edgesDataSet, {
-                filter: function (edge) {
-                    if (userKeywords.length > 0) {
-                        // Check if both from and to are documents before checking keywords
-                        const info1 = documentsMap[edge.from];
-                        const info2 = documentsMap[edge.to];
-                        if (info1 && info2) {
-                            const shared = Array.from(info1.keywords).filter(x => info2.keywords.has(x));
-                            const matchesQuery = shared.some(k => userKeywords.includes(k));
+                        nodesArray.push({
+                            id: doc,
+                            label: doc.length > 25 ? doc.substring(0, 22) + '...' : doc,
+                            title: `${doc}\n${ismTitle}`,
+                            value: 5, // smaller document nodes
+                            color: {
+                                background: quadColor,
+                                border: quadBorder,
+                                highlight: { background: quadBorder, border: '#ffffff' }
+                            },
+                            font: { color: '#f8fafc', face: 'Outfit', size: 12 }
+                        });
+
+                        if (hegemonyLayout === 'spread') {
+                            // Spread layout: Add springs to ALL points this document has valid topics in, weighted by topic count/ratio
+                            const docInfo = documentsMap[doc];
+                            const pointCountsForDoc = {};
+                            let totalValid = 0;
                             
-                            if (matchesQuery) {
-                                edge.color = { color: '#38bdf8', highlight: '#7dd3fc' };
-                                edge.width = 2.5;
-                                return true; 
+                            docInfo.topics.forEach(tid => {
+                                const topicMapping = topicIsmMappings[tid];
+                                if (topicMapping && topicMapping.similarity >= hegemonyThreshold) {
+                                    const pt = topicMapping.assigned_point;
+                                    pointCountsForDoc[pt] = (pointCountsForDoc[pt] || 0) + 1;
+                                    totalValid++;
+                                }
+                            });
+
+                            if (totalValid > 0) {
+                                Object.keys(pointCountsForDoc).forEach(pt => {
+                                    const count = pointCountsForDoc[pt];
+                                    const ratio = count / totalValid;
+                                    // Shorter spring = stronger pull. Vary length from 80 (highest ratio) to 200 (lowest ratio)
+                                    const springLength = 200 - (ratio * 120); 
+                                    allEdges.push({
+                                        from: `point-${pt}`,
+                                        to: doc,
+                                        type: 'attractor-spring',
+                                        physics: true,
+                                        length: springLength,
+                                        color: { 
+                                            color: `rgba(255,255,255,${0.03 + ratio * 0.15})`, 
+                                            highlight: 'rgba(255,255,255,0.4)' 
+                                        }
+                                    });
+                                });
+                            } else {
+                                // No valid topic mappings! Connect to neutral center node
+                                allEdges.push({
+                                    from: 'point-neutral',
+                                    to: doc,
+                                    type: 'attractor-spring',
+                                    physics: true,
+                                    length: 150,
+                                    color: { color: 'rgba(255,255,255,0.03)', highlight: 'rgba(255,255,255,0.1)' }
+                                });
+                            }
+                        } else {
+                            // Dominant layout (default): Add physical spring pulling document node to its single dominant attractor point (if mapped)
+                            if (mapping) {
+                                allEdges.push({
+                                    from: `point-${mapping.assigned_point}`,
+                                    to: doc,
+                                    type: 'attractor-spring',
+                                    physics: true,
+                                    length: 120,
+                                    color: { color: 'rgba(255,255,255,0.06)', highlight: 'rgba(255,255,255,0.2)' }
+                                });
+                            } else {
+                                // Doesn't pass dominant check! Connect to neutral center node
+                                allEdges.push({
+                                    from: 'point-neutral',
+                                    to: doc,
+                                    type: 'attractor-spring',
+                                    physics: true,
+                                    length: 150,
+                                    color: { color: 'rgba(255,255,255,0.03)', highlight: 'rgba(255,255,255,0.1)' }
+                                });
+                            }
+                        }
+                    });
+                }
+
+                // Add document-to-document connections in hegemony mode (physics disabled to prevent layout distortion)
+                if (hegemonyLayout === 'dominant' || hegemonyLayout === 'spread') {
+                    for (let i = 0; i < docList.length; i++) {
+                        for (let j = i + 1; j < docList.length; j++) {
+                            const doc1 = docList[i];
+                            const doc2 = docList[j];
+                            const set1 = documentsMap[doc1].topics;
+                            const set2 = documentsMap[doc2].topics;
+                            const intersection = new Set([...set1].filter(x => set2.has(x)));
+                            const union = new Set([...set1, ...set2]);
+                            const similarity = intersection.size / union.size;
+
+                            if (similarity > 0) {
+                                allEdges.push({
+                                    from: doc1,
+                                    to: doc2,
+                                    similarity: similarity,
+                                    type: 'topic',
+                                    physics: false, // CRITICAL: physics: false to preserve coordinates
+                                    value: similarity * 6,
+                                    title: `Topic Overlap: ${(similarity * 100).toFixed(0)}%\nShared Topics: ${Array.from(intersection).join(', ')}`,
+                                    color: { color: 'rgba(139, 92, 246, 0.25)', highlight: '#a78bfa' } // Fainter color to avoid clutter
+                                });
+                            }
+
+                            const kw1 = documentsMap[doc1].keywords;
+                            const kw2 = documentsMap[doc2].keywords;
+                            const kwIntersection = Array.from(kw1).filter(x => kw2.has(x));
+                            if (kwIntersection.length >= 3) {
+                                allEdges.push({
+                                    from: doc1,
+                                    to: doc2,
+                                    similarity: 0.0,
+                                    type: 'keyword-3',
+                                    physics: false,
+                                    title: `3+ Keywords Overlap\nShared: ${kwIntersection.slice(0, 5).join(', ')}...`,
+                                    width: 1.0,
+                                    color: { color: 'rgba(56, 189, 248, 0.15)', highlight: '#38bdf8' } // Faint
+                                });
                             }
                         }
                     }
-
-                    if (edge.type === 'topic') {
-                        edge.color = { color: '#8b5cf6', highlight: '#a78bfa' };
-                        edge.width = edge.similarity * 6;
-                        return showTopicConnections && edge.similarity >= currentThreshold;
-                    } 
-                    
-                    if (edge.type === 'keyword-3') {
-                        edge.color = { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' };
-                        edge.width = 1.0;
-                        return showKeywordUnderlay;
-                    }
-
-                    // Attractor edges are always displayed in hegemony mode
-                    if (edge.type === 'attractor-parent' || edge.type === 'attractor-spring') {
-                        return true;
-                    }
-
-                    return false;
                 }
-            });
+            }
 
             const container = document.getElementById('network-canvas');
-            const data = {
-                nodes: nodesDataSet,
-                edges: edgesDataView
-            };
 
             const options = {
                 nodes: {
@@ -1438,12 +2106,127 @@
                 }
             };
 
-            network = new vis.Network(container, data, options);
+            if (network) {
+                // Keep network instance alive, update nodes
+                nodesDataSet.clear();
+                nodesDataSet.add(nodesArray);
 
-            // Progressive Edge Loading to completely eliminate load-lag
+                // Update physics and interaction options
+                network.setOptions(options);
+
+                // Load edges
+                edgesDataSet.clear();
+                if (allEdges.length > 1500) {
+                    startProgressiveEdgeLoading(allEdges);
+                } else {
+                    edgesDataSet.add(allEdges);
+                    progressOverlay.style.display = 'none';
+                }
+
+                // Restore Selection
+                if (lastSelectedDocId && nodesDataSet.get(lastSelectedDocId)) {
+                    network.selectNodes([lastSelectedDocId]);
+                }
+            } else {
+                // First-time network initialization
+                nodesDataSet = new vis.DataSet(nodesArray);
+                edgesDataSet = new vis.DataSet();
+
+                // Filter Edge view dynamically
+                edgesDataView = new vis.DataView(edgesDataSet, {
+                    filter: function (edge) {
+                        if (userKeywords.length > 0) {
+                            const info1 = documentsMap[edge.from];
+                            const info2 = documentsMap[edge.to];
+                            if (info1 && info2) {
+                                const shared = Array.from(info1.keywords).filter(x => info2.keywords.has(x));
+                                const matchesQuery = shared.some(k => userKeywords.includes(k));
+                                if (matchesQuery) {
+                                    edge.color = { color: '#38bdf8', highlight: '#7dd3fc' };
+                                    edge.width = 2.5;
+                                    return true; 
+                                }
+                            }
+                        }
+
+                        if (edge.type === 'topic') {
+                            edge.color = { color: '#8b5cf6', highlight: '#a78bfa' };
+                            edge.width = edge.similarity * 6;
+                            return showTopicConnections && edge.similarity >= currentThreshold;
+                        } 
+                        
+                        if (edge.type === 'keyword-3') {
+                            edge.color = { color: 'rgba(56, 189, 248, 0.45)', highlight: '#38bdf8' };
+                            edge.width = 1.0;
+                            return showKeywordUnderlay;
+                        }
+
+                        if (edge.type === 'attractor-parent' || 
+                            edge.type === 'attractor-spring' || 
+                            edge.type === 'topic-attractor' || 
+                            edge.type === 'doc-topic' ||
+                            edge.type === 'sentence-attractor') {
+                            return true;
+                        }
+
+                        return false;
+                    }
+                });
+
+                const data = {
+                    nodes: nodesDataSet,
+                    edges: edgesDataView
+                };
+
+                network = new vis.Network(container, data, options);
+
+                // Bind click event
+                network.on("click", function (params) {
+                    if (params.nodes.length > 0) {
+                        const selectedNodeId = params.nodes[0];
+                        lastSelectedDocId = selectedNodeId;
+                        showDocumentInfo(selectedNodeId);
+
+                        if (graphMode === 'hegemony' && hegemonyLayout === 'granular' && documentsMap[selectedNodeId]) {
+                            selectedHegemonyDocId = selectedNodeId;
+                            document.getElementById('hegemony-doc-select').value = selectedNodeId;
+                            buildGraph();
+                        }
+                    } else {
+                        resetHighlighting();
+                    }
+                });
+
+                // Load edges
+                if (allEdges.length > 1500) {
+                    startProgressiveEdgeLoading(allEdges);
+                } else {
+                    edgesDataSet.add(allEdges);
+                    progressOverlay.style.display = 'none';
+                }
+
+                // Restore Selection
+                if (lastSelectedDocId && nodesDataSet.get(lastSelectedDocId)) {
+                    network.selectNodes([lastSelectedDocId]);
+                }
+            }
+        }
+
+        // Helper function for progressive loading of large edge sets
+        function startProgressiveEdgeLoading(edgesToLoad) {
+            if (edgeChunkLoadingInterval) {
+                clearInterval(edgeChunkLoadingInterval);
+            }
+            
+            const progressOverlay = document.getElementById('graph-progress-overlay');
+            const progressText = document.getElementById('progress-text');
+            const progressBarFill = document.getElementById('progress-bar-fill');
+            
+            progressOverlay.style.display = 'flex';
+            progressBarFill.style.width = '0%';
+            
             let currentEdgeIdx = 0;
-            const totalEdges = allEdges.length;
-
+            const totalEdges = edgesToLoad.length;
             progressText.innerText = `Injecting Connections (0/${totalEdges})...`;
 
             edgeChunkLoadingInterval = setInterval(() => {
@@ -1455,7 +2238,7 @@
                     return;
                 }
 
-                const chunk = allEdges.slice(currentEdgeIdx, currentEdgeIdx + progressiveChunkSize);
+                const chunk = edgesToLoad.slice(currentEdgeIdx, currentEdgeIdx + progressiveChunkSize);
                 edgesDataSet.add(chunk);
                 currentEdgeIdx += progressiveChunkSize;
 
@@ -1463,20 +2246,79 @@
                 progressBarFill.style.width = `${percent}%`;
                 progressText.innerText = `Injecting Connections (${Math.min(currentEdgeIdx, totalEdges)}/${totalEdges})...`;
             }, 10);
-
-            network.on("click", function (params) {
-                if (params.nodes.length > 0) {
-                    const selectedNodeId = params.nodes[0];
-                    lastSelectedDocId = selectedNodeId;
-                    showDocumentInfo(selectedNodeId);
-                }
-            });
         }
 
         // Show details of selected document, quadrant, or attractor point
         function showDocumentInfo(nodeId) {
             const panel = document.getElementById('graph-info-panel');
             
+            // Check if node is a sentence node
+            if (nodeId.toString().startsWith('sentence-')) {
+                const idx = parseInt(nodeId.toString().replace('sentence-', ''));
+                const sent = sentenceRecords[idx];
+                if (!sent) return;
+                
+                // Build projections list
+                let mappingsHTML = '';
+                const sortedMappings = Object.entries(sent.hegemony_mappings)
+                    .sort((a, b) => b[1] - a[1]);
+                    
+                sortedMappings.forEach(([pointKey, sim]) => {
+                    const pt = HEGEMONY_POINTS[pointKey];
+                    if (!pt) return;
+                    const quadMeta = QUADRANTS[pt.quadrant];
+                    const widthPercent = Math.max(0, Math.min(100, sim * 100));
+                    mappingsHTML += `
+                        <div class="hegemony-proj-row" data-point-key="${pointKey}" onclick="selectAndFocusAttractor('${pointKey}')" style="margin-top: 0.5rem; font-size: 0.8rem; cursor: pointer; padding: 0.25rem 0.4rem; border-radius: 4px; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.06)'" onmouseout="this.style.backgroundColor='transparent'">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.15rem;">
+                                <span style="color: ${quadMeta.color}; font-weight: 500;">${pt.name} (${pointKey})</span>
+                                <span style="font-family: var(--font-mono); color: var(--text-secondary);">${sim.toFixed(4)}</span>
+                            </div>
+                            <div style="width: 100%; height: 4px; background-color: var(--bg-primary); border-radius: 2px; overflow: hidden;">
+                                <div style="width: ${widthPercent}%; height: 100%; background-color: ${quadMeta.color};"></div>
+                            </div>
+                        </div>`;
+                });
+                
+                const typeColors = {
+                    "definition": { label: "Axiom / Definition", bg: "rgba(59, 130, 246, 0.2)", border: "#3b82f6" },
+                    "conditional": { label: "Logic / Conditional", bg: "rgba(245, 158, 11, 0.2)", border: "#f59e0b" },
+                    "example": { label: "Example / Instance", bg: "rgba(16, 185, 129, 0.2)", border: "#10b981" },
+                    "reference": { label: "Reference / Citation", bg: "rgba(236, 72, 153, 0.2)", border: "#ec4899" },
+                    "assertion": { label: "Assertion", bg: "rgba(148, 163, 184, 0.2)", border: "#94a3b8" }
+                };
+                const typeMeta = typeColors[sent.type] || typeColors["assertion"];
+
+                panel.innerHTML = `
+                    <div class="selected-node-card" style="border-color: ${typeMeta.border}">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-size: 0.725rem; font-family: var(--font-mono); color: var(--text-secondary);">SENTENCE NODE</span>
+                            <span style="font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.4rem; border-radius: 4px; background-color: ${typeMeta.bg}; color: ${typeMeta.border}; border: 1px solid ${typeMeta.border}">
+                                ${typeMeta.label}
+                            </span>
+                        </div>
+                        <div class="para-text" style="font-size: 1.05rem; line-height: 1.5; color: var(--text-primary); margin-bottom: 0.75rem;">
+                            ${sent.text}
+                        </div>
+                        <div class="selected-node-path" style="margin-top: 0.25rem;">
+                            File: ${sent.file.split(/[\\/]/).pop()}
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                            Paragraph ${sent.paragraph} &bull; Sentence ${sent.sentence}${sent.reference ? ` &bull; <strong style="color: #3b82f6;">Ref: ${sent.reference}</strong>` : ''}
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 1rem;">
+                        <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Hegemony Coordinate Projections</h4>
+                        <div style="max-height: 300px; overflow-y: auto; padding-right: 0.5rem;">
+                            ${mappingsHTML}
+                        </div>
+                    </div>
+                `;
+                updateLegendUI();
+                return;
+            }
+
             // Check if node is a quadrant attractor
             if (nodeId.toString().startsWith('quadrant-')) {
                 const quadKey = nodeId.toString().replace('quadrant-', '');
@@ -1523,6 +2365,43 @@
             // Check if node is an individual point attractor
             if (nodeId.toString().startsWith('point-')) {
                 const pointKey = nodeId.toString().replace('point-', '');
+                
+                if (pointKey === 'neutral') {
+                    // Find all documents that are connected to point-neutral (i.e. not classified or don't pass thresholds)
+                    const docList = Object.keys(documentsMap);
+                    const neutralDocs = docList.filter(doc => {
+                        return !docIsmMappings[doc];
+                    });
+
+                    let listHTML = '';
+                    neutralDocs.forEach(d => {
+                        listHTML += `
+                            <div class="connected-doc-item" onclick="selectAndFocusDoc('${d}')">
+                                <div class="connected-doc-name">${d}</div>
+                            </div>`;
+                    });
+
+                    panel.innerHTML = `
+                        <div class="selected-node-card" style="border-color: #475569">
+                            <div class="selected-node-title" style="color: #94a3b8">Neutral / Unclassified Info</div>
+                            <div class="selected-node-path" style="background-color: rgba(255,255,255,0.03); color: #94a3b8">
+                                Graph Center gravity well
+                            </div>
+                            <div style="margin-top: 0.5rem; font-size: 0.85rem; line-height: 1.4; color: var(--text-secondary);">
+                                Documents that do not have enough conceptual density or semantic similarity to map to the 16 Hegemony coordinates sit here.
+                            </div>
+                            <div style="margin-top: 0.5rem; font-size: 0.85rem;">
+                                Neutral Files: <strong>${neutralDocs.length} documents</strong>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Neutral Files</h4>
+                            <div class="connected-docs-list">${listHTML || 'No neutral files.'}</div>
+                        </div>
+                    `;
+                    return;
+                }
+
                 const pt = HEGEMONY_POINTS[pointKey];
                 const quadMeta = QUADRANTS[pt.quadrant];
 
@@ -1567,20 +2446,45 @@
             if (!docInfo) return;
             const topics = Array.from(docInfo.topics).sort((a,b) => a-b);
             
-            // Build tracked concepts list
-            let topicsHTML = '';
-            topics.forEach(tid => {
-                const keywords = topicsMap[tid] ? topicsMap[tid].keywords.slice(0,3).join(', ') : 'no keywords';
-                const isActive = selectedTopicIds.has(tid);
-                topicsHTML += `
-                    <div class="shared-topic-pill ${isActive ? 'active' : ''}" 
-                         onclick="toggleTopicSelection(${tid}, '${nodeId}')"
-                         title="${keywords}">
-                        #${tid}: ${keywords}
-                    </div>`;
+            // Count sentences in sentenceRecords for this document
+            const docSentences = sentenceRecords.filter(s => {
+                const sentDocName = s.file.split(/[\\/]/).pop();
+                return sentDocName === nodeId;
+            }).sort((a, b) => {
+                if (a.paragraph !== b.paragraph) return a.paragraph - b.paragraph;
+                return a.sentence - b.sentence;
             });
 
-            // Get connected documents
+            // Helper vector functions
+            const keys16 = ["gg-gg", "gg-le", "gg-ge", "gg-lg", "lg-gg", "lg-le", "lg-ge", "lg-lg", "le-gg", "le-le", "le-ge", "le-lg", "ge-gg", "ge-le", "ge-ge", "ge-lg"];
+            function get16DVector(mappings) {
+                return keys16.map(k => mappings[k] || 0.0);
+            }
+            function cosineSimilarity16D(v1, v2) {
+                let dot = 0.0, normA = 0.0, normB = 0.0;
+                for (let i = 0; i < 16; i++) {
+                    dot += v1[i] * v2[i];
+                    normA += v1[i] * v1[i];
+                    normB += v2[i] * v2[i];
+                }
+                if (normA === 0 || normB === 0) return 0.0;
+                return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+            }
+
+            // Get ordered paragraphs
+            const docParas = paragraphsData.filter(p => {
+                const pDoc = p.file.split(/[\\/]/).pop();
+                return pDoc === nodeId;
+            }).sort((a, b) => a.paragraph_index - b.paragraph_index);
+
+            // Clean path
+            let cleanPath = docInfo.path;
+            const marker = "VFT Docs\\";
+            if (cleanPath.includes(marker)) {
+                cleanPath = cleanPath.split(marker)[1];
+            }
+
+            // Connected docs
             const connectedDocs = [];
             const docList = Object.keys(documentsMap);
             docList.forEach(otherDoc => {
@@ -1590,9 +2494,9 @@
                 const set2 = documentsMap[otherDoc].topics;
                 const intersection = new Set([...set1].filter(x => set2.has(x)));
                 const union = new Set([...set1, ...set2]);
-                const similarity = intersection.size / union.size;
+                const similarity = union.size > 0 ? intersection.size / union.size : 0;
 
-                if (showTopicConnections && similarity >= currentThreshold) {
+                if (showTopicConnections && similarity >= currentThreshold && union.size > 0) {
                     connectedDocs.push({
                         name: otherDoc,
                         similarity: similarity,
@@ -1610,7 +2514,7 @@
                             sharedCount: kwIntersection.length,
                             type: `Match: ${userKeywords.filter(k=>kwIntersection.includes(k)).join(', ')}`
                         });
-                    } else if (showKeywordUnderlay && kwIntersection.length >= 3) {
+                    } else if (showKeywordUnderlay && kwIntersection.length >= 3 && docInfo.keywords.size > 0) {
                         connectedDocs.push({
                             name: otherDoc,
                             similarity: kwIntersection.length / (docInfo.keywords.size + documentsMap[otherDoc].keywords.size - kwIntersection.length),
@@ -1620,7 +2524,6 @@
                     }
                 }
             });
-
             connectedDocs.sort((a, b) => b.similarity - a.similarity);
 
             let connectionsHTML = '';
@@ -1633,57 +2536,491 @@
                                 <span>${c.type}</span>
                                 <span>Overlap: <strong>${c.type.startsWith('Topic Match') ? (c.similarity * 100).toFixed(0) + '%' : c.sharedCount + ' words'}</strong></span>
                             </div>
-                        </div>
-                    `;
+                        </div>`;
                 });
             } else {
                 connectionsHTML = `<p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; margin-top: 0.5rem;">No connected nodes matching filter.</p>`;
             }
 
-            let cleanPath = docInfo.path;
-            const marker = "VFT Docs\\";
-            if (cleanPath.includes(marker)) {
-                cleanPath = cleanPath.split(marker)[1];
-            }
+            // Tab Buttons HTML
+            const tabButtonsHTML = `
+                <div class="doc-tabs" style="display: flex; gap: 0.25rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.25rem; margin-top: 0.75rem; margin-bottom: 0.75rem;">
+                    <button class="doc-tab-btn" onclick="switchDocTab('overview', '${nodeId}')" style="flex: 1; font-family: var(--font-main); font-size: 0.75rem; padding: 0.4rem; border: none; background: none; color: ${activeDocTab === 'overview' ? 'var(--accent-hover)' : 'var(--text-secondary)'}; font-weight: 600; cursor: pointer; border-bottom: 2px solid ${activeDocTab === 'overview' ? 'var(--accent-color)' : 'transparent'}; transition: all 0.2s;">About</button>
+                    <button class="doc-tab-btn" onclick="switchDocTab('coherence', '${nodeId}')" style="flex: 1; font-family: var(--font-main); font-size: 0.75rem; padding: 0.4rem; border: none; background: none; color: ${activeDocTab === 'coherence' ? 'var(--accent-hover)' : 'var(--text-secondary)'}; font-weight: 600; cursor: pointer; border-bottom: 2px solid ${activeDocTab === 'coherence' ? 'var(--accent-color)' : 'transparent'}; transition: all 0.2s;">Coherence</button>
+                    <button class="doc-tab-btn" onclick="switchDocTab('core', '${nodeId}')" style="flex: 1; font-family: var(--font-main); font-size: 0.75rem; padding: 0.4rem; border: none; background: none; color: ${activeDocTab === 'core' ? 'var(--accent-hover)' : 'var(--text-secondary)'}; font-weight: 600; cursor: pointer; border-bottom: 2px solid ${activeDocTab === 'core' ? 'var(--accent-color)' : 'transparent'}; transition: all 0.2s;">Anchors</button>
+                    <button class="doc-tab-btn" onclick="switchDocTab('trajectory', '${nodeId}')" style="flex: 1; font-family: var(--font-main); font-size: 0.75rem; padding: 0.4rem; border: none; background: none; color: ${activeDocTab === 'trajectory' ? 'var(--accent-hover)' : 'var(--text-secondary)'}; font-weight: 600; cursor: pointer; border-bottom: 2px solid ${activeDocTab === 'trajectory' ? 'var(--accent-color)' : 'transparent'}; transition: all 0.2s;">Flow</button>
+                </div>
+            `;
 
-            // Attractor/Ism Details Section
-            let hegemonyDetailsHTML = '';
-            const mapping = docIsmMappings[nodeId];
-            if (mapping) {
-                const quadMeta = QUADRANTS[mapping.quadrant];
-                hegemonyDetailsHTML = `
-                    <div style="margin-top: 0.75rem; border-top: 1px dashed var(--border-color); padding-top: 0.75rem; font-size: 0.85rem;">
-                        <span style="color: var(--text-secondary)">Hegemony Map Attractor:</span>
-                        <div style="font-weight: 600; color: ${quadMeta.color}; margin-top: 0.25rem;">
-                            ${mapping.quadrant_name} (${mapping.quadrant}) &rarr; ${mapping.node_name} (${mapping.sub_vector})
-                        </div>
-                        <div style="margin-top: 0.25rem; font-style: italic; color: var(--text-primary)">
-                            Isms: ${mapping.isms.join(' / ')}
-                        </div>
-                    </div>`;
-            }
+            let tabContentHTML = '';
 
-            const clearBtnHTML = selectedTopicIds.size > 0 
-                ? `<button class="action-btn" onclick="clearTopicSelection('${nodeId}')" style="margin-top: 0.5rem; width: 100%;">Clear Topic Filter</button>` 
-                : '';
+            if (activeDocTab === 'overview') {
+                // RENDER OVERVIEW
+                let hegemonyDetailsHTML = '';
+                const mapping = docIsmMappings[nodeId];
+                if (mapping) {
+                    const quadMeta = QUADRANTS[mapping.quadrant];
+                    hegemonyDetailsHTML = `
+                        <div style="margin-top: 0.75rem; background-color: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.75rem; font-size: 0.85rem;">
+                            <span style="color: var(--text-secondary); font-size: 0.75rem;">HEGEMONY ATTRACTOR:</span>
+                            <div style="font-weight: 600; color: ${quadMeta.color}; margin-top: 0.25rem; font-size: 0.95rem;">
+                                ${mapping.quadrant_name} &rarr; ${mapping.node_name} (${mapping.sub_vector})
+                            </div>
+                            <div style="margin-top: 0.35rem; font-style: italic; color: var(--text-primary)">
+                                Isms: ${mapping.isms.join(' / ')}
+                            </div>
+                            <div style="margin-top: 0.35rem; color: var(--text-secondary); font-size: 0.75rem;">
+                                Attractor Concept Density: <strong>${(mapping.density * 100).toFixed(0)}%</strong>
+                            </div>
+                        </div>`;
+                } else if (docSentences.length > 0) {
+                    let avgMappings = {};
+                    docSentences.forEach(s => {
+                        Object.entries(s.hegemony_mappings).forEach(([k, v]) => {
+                            avgMappings[k] = (avgMappings[k] || 0) + v;
+                        });
+                    });
+                    
+                    let maxVal = -1;
+                    let bestKey = null;
+                    Object.entries(avgMappings).forEach(([k, v]) => {
+                        const avg = v / docSentences.length;
+                        if (avg > maxVal) {
+                            maxVal = avg;
+                            bestKey = k;
+                        }
+                    });
+                    
+                    if (bestKey && HEGEMONY_POINTS[bestKey]) {
+                        const pt = HEGEMONY_POINTS[bestKey];
+                        const quadMeta = QUADRANTS[pt.quadrant];
+                        hegemonyDetailsHTML = `
+                            <div style="margin-top: 0.75rem; background-color: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.75rem; font-size: 0.85rem;">
+                                <span style="color: var(--text-secondary); font-size: 0.75rem;">DYNAMIC ATTRACTOR (AVG OF SENTENCES):</span>
+                                <div style="font-weight: 600; color: ${quadMeta.color}; margin-top: 0.25rem; font-size: 0.95rem;">
+                                    ${quadMeta.name} &rarr; ${pt.name} (${bestKey})
+                                </div>
+                                <div style="margin-top: 0.35rem; font-style: italic; color: var(--text-primary)">
+                                    Isms: ${pt.isms.join(' / ')}
+                                </div>
+                                <div style="margin-top: 0.35rem; color: var(--text-secondary); font-size: 0.75rem;">
+                                    Average Attractor Affinity: <strong>${(maxVal / docSentences.length).toFixed(4)}</strong>
+                                </div>
+                            </div>`;
+                    }
+                }
+
+                let topicsHTML = '';
+                if (topics.length > 0) {
+                    topics.forEach(tid => {
+                        const keywords = topicsMap[tid] ? topicsMap[tid].keywords.slice(0,3).join(', ') : 'no keywords';
+                        const isActive = selectedTopicIds.has(tid);
+                        topicsHTML += `
+                            <div class="shared-topic-pill ${isActive ? 'active' : ''}" 
+                                 onclick="toggleTopicSelection(${tid}, '${nodeId}')"
+                                 title="${keywords}"
+                                 style="font-size: 0.75rem;">
+                                #${tid}: ${keywords}
+                            </div>`;
+                    });
+                } else if (docSentences.length > 0) {
+                    topicsHTML = `
+                        <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; padding: 0.5rem; background-color: rgba(255,255,255,0.01); border: 1px dashed var(--border-color); border-radius: 4px;">
+                            This dynamically loaded document contains <strong>${docSentences.length} mapped sentences</strong>, but has not yet been processed through UMAP/HDBSCAN paragraph topic-clustering.
+                        </div>`;
+                }
+
+                const clearBtnHTML = selectedTopicIds.size > 0 
+                    ? `<button class="action-btn" onclick="clearTopicSelection('${nodeId}')" style="margin-top: 0.5rem; width: 100%; font-size: 0.75rem;">Clear Active Topic Filters</button>` 
+                    : '';
+
+                tabContentHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary)">FILE LOCATION:</span>
+                            <div class="selected-node-path" style="margin-top: 0.15rem; font-size: 0.75rem;">${cleanPath}</div>
+                        </div>
+                        
+                        <div style="font-size: 0.8rem; color: var(--text-secondary);">
+                            <span style="font-size: 0.75rem;">METADATA SUMMARY:</span>
+                            <div style="margin-top: 0.25rem; display: flex; gap: 1rem;">
+                                <span>Paragraphs: <strong style="color: var(--text-primary);">${docParas.length}</strong></span>
+                                <span>Sentences: <strong style="color: var(--text-primary);">${docSentences.length}</strong></span>
+                                <span>Clusters: <strong style="color: var(--text-primary);">${topics.length}</strong></span>
+                            </div>
+                        </div>
+                        
+                        ${hegemonyDetailsHTML}
+                        
+                        <div style="margin-top: 0.25rem;">
+                            <span style="font-size: 0.75rem; color: var(--text-secondary)">ASSOCIATED TOPIC CLUSTERS:</span>
+                            <div style="margin-top: 0.35rem; display: flex; flex-wrap: wrap;">${topicsHTML}</div>
+                            ${clearBtnHTML}
+                        </div>
+                    </div>
+                `;
+            } else if (activeDocTab === 'coherence') {
+                // RENDER COHERENCE
+                let coherenceSum = 0;
+                let transitionsCount = 0;
+                let transHTML = '';
+                
+                // 1. Paragraph Coherence (Topic-based)
+                for (let i = 0; i < docParas.length - 1; i++) {
+                    const p1 = docParas[i];
+                    const p2 = docParas[i + 1];
+                    let sim = 0.3;
+                    if (p1.topic_id === p2.topic_id && p1.topic_id !== -1) {
+                        sim = 1.0;
+                    } else {
+                        const t1 = topicIsmMappings[p1.topic_id];
+                        const t2 = topicIsmMappings[p2.topic_id];
+                        if (t1 && t2) {
+                            if (t1.assigned_point === t2.assigned_point) sim = 0.85;
+                            else if (t1.quadrant === t2.quadrant) sim = 0.65;
+                            else if ((t1.quadrant === 'GG' || t1.quadrant === 'LG') && (t2.quadrant === 'GG' || t2.quadrant === 'LG')) sim = 0.45;
+                            else if ((t1.quadrant === 'GE' || t1.quadrant === 'LE') && (t2.quadrant === 'GE' || t2.quadrant === 'LE')) sim = 0.45;
+                        } else if (p1.topic_id === -1 || p2.topic_id === -1) {
+                            sim = 0.35;
+                        }
+                    }
+                    coherenceSum += sim;
+                    transitionsCount++;
+                    
+                    const isJump = sim < 0.35;
+                    const cleanP1 = p1.text.replace(/[#\-\*]/g, '').trim().substring(0, 30) + '...';
+                    const cleanP2 = p2.text.replace(/[#\-\*]/g, '').trim().substring(0, 30) + '...';
+                    transHTML += `
+                        <div style="padding: 0.35rem 0.5rem; background-color: rgba(255,255,255,0.01); border: 1px solid ${isJump ? 'rgba(239, 68, 68, 0.2)' : 'var(--border-color)'}; border-radius: 4px; font-size: 0.725rem; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="max-width: 75%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-secondary);">
+                                P${p1.paragraph_index} &rarr; P${p2.paragraph_index}: 
+                                <span style="color: var(--text-primary); font-style: italic;">"${cleanP1}" &rarr; "${cleanP2}"</span>
+                            </span>
+                            <span style="font-family: var(--font-mono); font-weight: 600; color: ${isJump ? '#ef4444' : '#10b981'};">
+                                ${sim.toFixed(2)} ${isJump ? '⚠' : ''}
+                            </span>
+                        </div>`;
+                }
+                const paraCoherence = transitionsCount > 0 ? coherenceSum / transitionsCount : 1.0;
+
+                // 2. Sentence Coherence (16D Profile-based)
+                let sentCoherence = null;
+                let sentTransHTML = '';
+                if (docSentences.length > 0) {
+                    let sCoherenceSum = 0;
+                    let sTransCount = 0;
+                    for (let i = 0; i < docSentences.length - 1; i++) {
+                        const s1 = docSentences[i];
+                        const s2 = docSentences[i + 1];
+                        const v1 = get16DVector(s1.hegemony_mappings);
+                        const v2 = get16DVector(s2.hegemony_mappings);
+                        const sim = cosineSimilarity16D(v1, v2);
+                        sCoherenceSum += sim;
+                        sTransCount++;
+                        
+                        if (i < 10) { // Limit detailed transition lists in sidebar to prevent bloat
+                            const isJump = sim < 0.75;
+                            const cleanS1 = s1.text.substring(0, 25) + '...';
+                            const cleanS2 = s2.text.substring(0, 25) + '...';
+                            sentTransHTML += `
+                                <div style="padding: 0.25rem 0.4rem; background-color: rgba(255,255,255,0.01); border: 1px solid ${isJump ? 'rgba(239, 68, 68, 0.15)' : 'rgba(51, 65, 85, 0.3)'}; border-radius: 4px; font-size: 0.7rem; display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="max-width: 75%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-secondary);">
+                                        S${s1.sentence} &rarr; S${s2.sentence}: 
+                                        <span style="color: var(--text-primary); font-style: italic;">"${cleanS1}" &rarr; "${cleanS2}"</span>
+                                    </span>
+                                    <span style="font-family: var(--font-mono); color: ${isJump ? '#fb923c' : '#86efac'};">
+                                        ${sim.toFixed(2)}
+                                    </span>
+                                </div>`;
+                        }
+                    }
+                    if (docSentences.length > 11) {
+                        sentTransHTML += `<div style="font-size: 0.65rem; color: var(--text-secondary); text-align: center; margin-top: 0.25rem;">+ ${docSentences.length - 11} more sentence transitions</div>`;
+                    }
+                    sentCoherence = sTransCount > 0 ? sCoherenceSum / sTransCount : 1.0;
+                }
+
+                // Coherence Status / Verdict
+                let verdict = "Unknown";
+                let verdictColor = "var(--text-secondary)";
+                const finalCoherence = sentCoherence !== null ? (paraCoherence * 0.4 + sentCoherence * 0.6) : paraCoherence;
+                
+                if (finalCoherence >= 0.80) {
+                    verdict = "Excellent Flow";
+                    verdictColor = "#10b981";
+                } else if (finalCoherence >= 0.60) {
+                    verdict = "Consistent Flow";
+                    verdictColor = "#86efac";
+                } else if (finalCoherence >= 0.40) {
+                    verdict = "Moderate/Fragmented";
+                    verdictColor = "#fb923c";
+                } else {
+                    verdict = "Jarring Transitions";
+                    verdictColor = "#ef4444";
+                }
+
+                tabContentHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.75rem; text-align: center;">
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">INTERNAL COHERENCE INDEX</div>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: ${verdictColor}; margin: 0.25rem 0;">
+                                ${(finalCoherence * 100).toFixed(0)}%
+                            </div>
+                            <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-primary);">
+                                Status: <span style="color: ${verdictColor}">${verdict}</span>
+                            </div>
+                        </div>
+
+                        <div style="font-size: 0.75rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Macro Paragraph Alignment:</span>
+                                <strong style="color: var(--text-primary);">${(paraCoherence * 100).toFixed(0)}%</strong>
+                            </div>
+                            ${sentCoherence !== null ? `
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Micro Logical (16D Profile) Flow:</span>
+                                <strong style="color: var(--text-primary);">${(sentCoherence * 100).toFixed(0)}%</strong>
+                            </div>` : ''}
+                        </div>
+
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary); display: block; margin-bottom: 0.35rem;">PARAGRAPH TRANSITIONS:</span>
+                            <div style="display: flex; flex-direction: column; gap: 0.35rem; max-height: 140px; overflow-y: auto; padding-right: 0.25rem;">
+                                ${transHTML || '<p style="font-style: italic; font-size: 0.75rem; color: var(--text-secondary);">No paragraph transitions.</p>'}
+                            </div>
+                        </div>
+
+                        ${sentCoherence !== null ? `
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary); display: block; margin-bottom: 0.35rem;">SENTENCE COGNITIVE FLOW PROFILES:</span>
+                            <div style="display: flex; flex-direction: column; gap: 0.25rem; max-height: 140px; overflow-y: auto; padding-right: 0.25rem;">
+                                ${sentTransHTML}
+                            </div>
+                        </div>` : ''}
+                    </div>
+                `;
+            } else if (activeDocTab === 'core') {
+                // RENDER CORE ANCHORS
+                let anchorsHTML = '';
+                
+                if (docSentences.length > 0) {
+                    // Compute profile centrality
+                    const centralities = docSentences.map((s, idx) => {
+                        let sum = 0.0;
+                        const vCurr = get16DVector(s.hegemony_mappings);
+                        docSentences.forEach((other, oIdx) => {
+                            if (idx === oIdx) return;
+                            const vOther = get16DVector(other.hegemony_mappings);
+                            sum += cosineSimilarity16D(vCurr, vOther);
+                        });
+                        const avg = docSentences.length > 1 ? sum / (docSentences.length - 1) : 1.0;
+                        return { sentence: s, score: avg, index: idx };
+                    });
+
+                    // Sort descending
+                    centralities.sort((a, b) => b.score - a.score);
+                    
+                    const topAnchors = centralities.slice(0, 3);
+                    topAnchors.forEach((anc, rank) => {
+                        const s = anc.sentence;
+                        const scorePct = (anc.score * 100).toFixed(0);
+                        anchorsHTML += `
+                            <div style="background-color: rgba(255,255,255,0.01); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.65rem; margin-top: 0.5rem; cursor: pointer; transition: all 0.2s;" 
+                                 onclick="focusSentenceNode(${anc.index})"
+                                 onmouseover="this.style.borderColor='var(--accent-hover)'" 
+                                 onmouseout="this.style.borderColor='var(--border-color)'">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                                    <span style="font-size: 0.7rem; font-weight: bold; color: var(--accent-hover);">CORE ANCHOR #${rank + 1}</span>
+                                    <span style="font-size: 0.7rem; font-family: var(--font-mono); background-color: var(--bg-tertiary); padding: 0.1rem 0.3rem; border-radius: 3px; color: var(--text-primary);">
+                                        Centrality: ${scorePct}%
+                                    </span>
+                                </div>
+                                <div style="font-size: 0.825rem; line-height: 1.4; color: var(--text-primary); font-style: italic;">
+                                    "${s.text}"
+                                </div>
+                                <div style="font-size: 0.65rem; color: var(--text-secondary); margin-top: 0.35rem; display: flex; justify-content: space-between;">
+                                    <span>Paragraph ${s.paragraph} &bull; Sentence ${s.sentence}</span>
+                                    <span style="color: var(--accent-hover);">Click to center node &rarr;</span>
+                                </div>
+                            </div>`;
+                    });
+                } else {
+                    // Fallback to topic centrality for paragraphs
+                    const paraCentralities = docParas.map((p, idx) => {
+                        let sum = 0.0;
+                        const tCurr = topicIsmMappings[p.topic_id];
+                        docParas.forEach((other, oIdx) => {
+                            if (idx === oIdx) return;
+                            const tOther = topicIsmMappings[other.topic_id];
+                            
+                            let sim = 0.2;
+                            if (p.topic_id === other.topic_id && p.topic_id !== -1) {
+                                sim = 1.0;
+                            } else if (tCurr && tOther) {
+                                if (tCurr.assigned_point === tOther.assigned_point) sim = 0.85;
+                                else if (tCurr.quadrant === tOther.quadrant) sim = 0.65;
+                            }
+                            sum += sim;
+                        });
+                        const avg = docParas.length > 1 ? sum / (docParas.length - 1) : 1.0;
+                        return { paragraph: p, score: avg, index: idx };
+                    });
+
+                    paraCentralities.sort((a, b) => b.score - a.score);
+                    const topParas = paraCentralities.slice(0, 2);
+                    
+                    topParas.forEach((anc, rank) => {
+                        const p = anc.paragraph;
+                        const scorePct = (anc.score * 100).toFixed(0);
+                        const cleanText = p.text.replace(/[#\-\*]/g, '').trim().substring(0, 140) + '...';
+                        anchorsHTML += `
+                            <div style="background-color: rgba(255,255,255,0.01); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.65rem; margin-top: 0.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                                    <span style="font-size: 0.7rem; font-weight: bold; color: var(--accent-hover);">CORE PARAGRAPH #${rank + 1}</span>
+                                    <span style="font-size: 0.7rem; font-family: var(--font-mono); background-color: var(--bg-tertiary); padding: 0.1rem 0.3rem; border-radius: 3px; color: var(--text-primary);">
+                                        Centrality: ${scorePct}%
+                                    </span>
+                                </div>
+                                <div style="font-size: 0.825rem; line-height: 1.4; color: var(--text-primary); font-style: italic;">
+                                    "${cleanText}"
+                                </div>
+                                <div style="font-size: 0.65rem; color: var(--text-secondary); margin-top: 0.35rem;">
+                                    Paragraph index: ${p.paragraph_index} &bull; Topic ID: ${p.topic_id}
+                                </div>
+                            </div>`;
+                    });
+                }
+
+                tabContentHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary)">DOCUMENT CORE ANCHORS:</span>
+                            <p style="font-size: 0.725rem; color: var(--text-secondary); margin-top: 0.15rem; line-height: 1.3;">
+                                These segments possess the highest mathematical average similarity to all other ideas in the document, representing the conceptual core.
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            ${anchorsHTML || '<p style="font-style: italic; font-size: 0.75rem; color: var(--text-secondary);">No anchors available.</p>'}
+                        </div>
+                    </div>
+                `;
+            } else if (activeDocTab === 'trajectory') {
+                // RENDER FLOW & TRAJECTORY
+                let trajectorySummaryHTML = '';
+                
+                const splitStages = (items) => {
+                    if (items.length === 0) return [[], [], []];
+                    const len = items.length;
+                    const s1End = Math.max(1, Math.round(len * 0.3));
+                    const s2End = Math.max(s1End + 1, Math.round(len * 0.7));
+                    return [
+                        items.slice(0, s1End),
+                        items.slice(s1End, s2End),
+                        items.slice(s2End)
+                    ];
+                };
+
+                const getStageAttractor = (stageItems, isSentences) => {
+                    if (stageItems.length === 0) return null;
+                    
+                    const scoreSums = {};
+                    stageItems.forEach(item => {
+                        if (isSentences) {
+                            Object.entries(item.hegemony_mappings).forEach(([k, v]) => {
+                                scoreSums[k] = (scoreSums[k] || 0) + v;
+                            });
+                        } else {
+                            const mapping = topicIsmMappings[item.topic_id];
+                            if (mapping) {
+                                const pt = mapping.assigned_point;
+                                scoreSums[pt] = (scoreSums[pt] || 0) + 1;
+                            }
+                        }
+                    });
+                    
+                    let bestKey = null;
+                    let maxVal = -1;
+                    Object.entries(scoreSums).forEach(([k, v]) => {
+                        if (v > maxVal) {
+                            maxVal = v;
+                            bestKey = k;
+                        }
+                    });
+                    return bestKey;
+                };
+
+                const isSents = docSentences.length > 0;
+                const stagesList = isSents ? splitStages(docSentences) : splitStages(docParas);
+                const stageNames = ["Beginning (Set-up)", "Middle (Core Idea)", "End (Resolve/Summary)"];
+                const colors = [];
+                
+                stagesList.forEach((stageItems, idx) => {
+                    const bestAttractorKey = getStageAttractor(stageItems, isSents);
+                    if (bestAttractorKey && HEGEMONY_POINTS[bestAttractorKey]) {
+                        const pt = HEGEMONY_POINTS[bestAttractorKey];
+                        const quadMeta = QUADRANTS[pt.quadrant];
+                        colors.push(quadMeta.color);
+                        
+                        trajectorySummaryHTML += `
+                            <div style="background-color: rgba(255,255,255,0.01); border-left: 3px solid ${quadMeta.color}; border-radius: 0 4px 4px 0; padding: 0.5rem; margin-top: 0.5rem;">
+                                <div style="font-size: 0.725rem; font-weight: bold; color: var(--text-secondary);">${stageNames[idx]}</div>
+                                <div style="font-weight: 600; color: ${quadMeta.color}; font-size: 0.825rem; margin-top: 0.15rem;">
+                                    ${pt.name} (${bestAttractorKey})
+                                </div>
+                                <div style="font-size: 0.725rem; color: var(--text-primary); margin-top: 0.15rem;">
+                                    Isms: ${pt.isms.join(' / ')}
+                                </div>
+                            </div>`;
+                    } else {
+                        colors.push("var(--bg-tertiary)");
+                        trajectorySummaryHTML += `
+                            <div style="background-color: rgba(255,255,255,0.01); border-left: 3px solid var(--bg-tertiary); border-radius: 0 4px 4px 0; padding: 0.5rem; margin-top: 0.5rem;">
+                                <div style="font-size: 0.725rem; font-weight: bold; color: var(--text-secondary);">${stageNames[idx]}</div>
+                                <div style="font-style: italic; color: var(--text-secondary); font-size: 0.75rem; margin-top: 0.15rem;">
+                                    Neutral / Unaligned concepts
+                                </div>
+                            </div>`;
+                    }
+                });
+
+                tabContentHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary)">CHRONOLOGICAL COGNITIVE PATH:</span>
+                            <p style="font-size: 0.725rem; color: var(--text-secondary); margin-top: 0.15rem; line-height: 1.3;">
+                                Visual representation of the document's conceptual flow from the introduction to the conclusion.
+                            </p>
+                        </div>
+                        
+                        <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-top: 0.25rem; margin-bottom: 0.5rem;">
+                            <div style="flex: 3; background-color: ${colors[0]};" title="Beginning Stage"></div>
+                            <div style="flex: 4; background-color: ${colors[1]};" title="Middle Stage"></div>
+                            <div style="flex: 3; background-color: ${colors[2]};" title="Ending Stage"></div>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            ${trajectorySummaryHTML}
+                        </div>
+                    </div>
+                `;
+            }
 
             panel.innerHTML = `
                 <div class="selected-node-card">
-                    <div class="selected-node-title">${nodeId}</div>
-                    <div class="selected-node-path">${cleanPath}</div>
-                    <div class="selected-node-meta">Topics Tracked: <strong>${topics.length}</strong></div>
-                    ${hegemonyDetailsHTML}
-                    <div style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <strong>Tracked Concepts:</strong>
-                        </div>
-                        <div style="margin-top: 0.25rem;">${topicsHTML}</div>
-                        ${clearBtnHTML}
+                    <div class="selected-node-title" style="font-size: 1.15rem; margin-bottom: 0.25rem;">${nodeId}</div>
+                    
+                    ${tabButtonsHTML}
+                    
+                    <div class="tab-panel-container" style="min-height: 200px;">
+                        ${tabContentHTML}
                     </div>
                 </div>
+                
                 <div style="margin-top: 1rem;">
-                    <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Connected Documents (${connectedDocs.length})</h4>
-                    <div class="connected-docs-list">${connectionsHTML}</div>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 0.9rem;">Connected Documents (${connectedDocs.length})</h4>
+                    <div class="connected-docs-list" style="max-height: 240px; overflow-y: auto; padding-right: 0.25rem;">
+                        ${connectionsHTML}
+                    </div>
                 </div>
             `;
         }
@@ -1764,6 +3101,81 @@
             showDocumentInfo(docId);
         }
 
+        function updateLegendUI() {
+            const rows = document.querySelectorAll('.hegemony-proj-row');
+            rows.forEach(row => {
+                const pk = row.getAttribute('data-point-key');
+                
+                row.style.border = 'none';
+                row.style.backgroundColor = 'transparent';
+                
+                const existingBadge = row.querySelector('.legend-state-badge');
+                if (existingBadge) {
+                    existingBadge.remove();
+                }
+
+                if (pk === activeLegendKey) {
+                    if (activeLegendState === 1) {
+                        row.style.border = '1px solid var(--accent-color)';
+                        row.style.backgroundColor = 'rgba(139, 92, 246, 0.15)';
+                        
+                        const flexTitle = row.querySelector('div[style*="display: flex; justify-content: space-between"]');
+                        if (flexTitle) {
+                            const badge = document.createElement('span');
+                            badge.className = 'legend-state-badge';
+                            badge.style.fontSize = '0.65rem';
+                            badge.style.fontWeight = 'bold';
+                            badge.style.color = '#3b82f6';
+                            badge.style.backgroundColor = 'rgba(59, 130, 246, 0.2)';
+                            badge.style.padding = '0.1rem 0.3rem';
+                            badge.style.borderRadius = '3px';
+                            badge.style.marginLeft = '0.5rem';
+                            badge.innerText = 'DOMINANT';
+                            flexTitle.insertBefore(badge, flexTitle.children[1]);
+                        }
+                    } else if (activeLegendState === 2) {
+                        row.style.border = '1px dashed var(--accent-color)';
+                        row.style.backgroundColor = 'rgba(139, 92, 246, 0.08)';
+                        
+                        const flexTitle = row.querySelector('div[style*="display: flex; justify-content: space-between"]');
+                        if (flexTitle) {
+                            const badge = document.createElement('span');
+                            badge.className = 'legend-state-badge';
+                            badge.style.fontSize = '0.65rem';
+                            badge.style.fontWeight = 'bold';
+                            badge.style.color = '#10b981';
+                            badge.style.backgroundColor = 'rgba(16, 185, 129, 0.2)';
+                            badge.style.padding = '0.1rem 0.3rem';
+                            badge.style.borderRadius = '3px';
+                            badge.style.marginLeft = '0.5rem';
+                            badge.innerText = 'GRADIENT';
+                            flexTitle.insertBefore(badge, flexTitle.children[1]);
+                        }
+                    }
+                }
+            });
+        }
+
+        function selectAndFocusAttractor(pointKey) {
+            if (activeLegendKey === pointKey) {
+                activeLegendState = (activeLegendState + 1) % 3;
+                if (activeLegendState === 0) {
+                    activeLegendKey = null;
+                }
+            } else {
+                activeLegendKey = pointKey;
+                activeLegendState = 1;
+            }
+
+            if (activeLegendState === 0) {
+                resetHighlighting();
+            } else {
+                highlightConnectedNodes(`point-${pointKey}`);
+            }
+
+            updateLegendUI();
+        }
+
         // Slider change listener - Filters edge view dynamically
         document.getElementById('threshold-slider').addEventListener('input', (e) => {
             currentThreshold = parseFloat(e.target.value);
@@ -1813,6 +3225,11 @@
 
             const selectedNodes = network.getSelectedNodes();
             if (selectedNodes.length > 0) showDocumentInfo(selectedNodes[0]);
+
+            // Rebuild graph if in sentence layout and filtered scope is selected
+            if (graphMode === 'hegemony' && hegemonyLayout === 'sentence' && sentenceScope === 'filtered') {
+                buildGraph();
+            }
         });
 
         // Toggle physics engine dynamically (Pause / Resume Simulation)
@@ -1837,6 +3254,430 @@
         function triggerStabilize() {
             if (!network) return;
             network.stabilize();
+        }
+
+        function updateHegemonyThresholdLabel(val) {
+            document.getElementById('hegemony-threshold-val').innerText = parseFloat(val).toFixed(2);
+        }
+
+        function updateHegemonyDensityLabel(val) {
+            document.getElementById('hegemony-density-val').innerText = parseFloat(val).toFixed(2);
+        }
+
+        function changeHegemonyThreshold(val) {
+            hegemonyThreshold = parseFloat(val);
+            updateHegemonyThresholdLabel(val);
+            computeDocIsmMappings();
+            buildGraph();
+        }
+
+        function changeHegemonyDensity(val) {
+            hegemonyDensityLimit = parseFloat(val);
+            updateHegemonyDensityLabel(val);
+            computeDocIsmMappings();
+            buildGraph();
+        }
+
+        function changeHegemonyLayout(newLayout) {
+            hegemonyLayout = newLayout;
+            const docSelectorContainer = document.getElementById('hegemony-doc-selector-container');
+            const sentenceScopeContainer = document.getElementById('sentence-mode-selector-container');
+            const hegemonyLegend = document.getElementById('hegemony-legend');
+            const sentenceLegend = document.getElementById('sentence-legend');
+            
+            if (newLayout === 'granular') {
+                docSelectorContainer.style.display = 'block';
+                if (sentenceScopeContainer) sentenceScopeContainer.style.display = 'none';
+                if (lastSelectedDocId && documentsMap[lastSelectedDocId]) {
+                    selectedHegemonyDocId = lastSelectedDocId;
+                    document.getElementById('hegemony-doc-select').value = lastSelectedDocId;
+                }
+                if (hegemonyLegend) hegemonyLegend.style.display = 'flex';
+                if (sentenceLegend) sentenceLegend.style.display = 'none';
+            } else if (newLayout === 'sentence') {
+                docSelectorContainer.style.display = (sentenceScope === 'selected') ? 'block' : 'none';
+                if (sentenceScopeContainer) sentenceScopeContainer.style.display = 'block';
+                if (hegemonyLegend) hegemonyLegend.style.display = 'none';
+                if (sentenceLegend) sentenceLegend.style.display = 'flex';
+            } else {
+                docSelectorContainer.style.display = 'none';
+                if (sentenceScopeContainer) sentenceScopeContainer.style.display = 'none';
+                if (hegemonyLegend) hegemonyLegend.style.display = 'flex';
+                if (sentenceLegend) sentenceLegend.style.display = 'none';
+            }
+
+            // Show connection threshold slider group only for document-level layouts
+            const thresholdGroup = document.getElementById('threshold-control-group');
+            if (thresholdGroup) {
+                thresholdGroup.style.display = (newLayout === 'dominant' || newLayout === 'spread') ? 'block' : 'none';
+            }
+
+            buildGraph();
+        }
+
+        function changeSentenceScope(newScope) {
+            sentenceScope = newScope;
+            const docSelectorContainer = document.getElementById('hegemony-doc-selector-container');
+            if (hegemonyLayout === 'sentence') {
+                docSelectorContainer.style.display = (newScope === 'selected') ? 'block' : 'none';
+            }
+            buildGraph();
+        }
+
+        function selectHegemonyDoc(docId) {
+            selectedHegemonyDocId = docId;
+            lastSelectedDocId = docId;
+            buildGraph();
+            showDocumentInfo(docId);
+        }
+
+        let isHighlightedState = false;
+
+        function highlightConnectedNodes(selectedNodeId) {
+            isHighlightedState = true;
+            
+            const nodeIdStr = selectedNodeId.toString();
+            const connectedNodeIds = new Set();
+            connectedNodeIds.add(selectedNodeId);
+
+            // Opacity maps to apply custom opacity to nodes
+            const customOpacities = {};
+            customOpacities[selectedNodeId] = 1.0;
+
+            let pointKey = null;
+            let maxSimVal = 0.01;
+
+            if (graphMode === 'hegemony' && hegemonyLayout === 'sentence' && nodeIdStr.startsWith('point-')) {
+                pointKey = nodeIdStr.replace('point-', '');
+                
+                if (activeLegendState === 1) {
+                    // Click 1: Dominant highlighting state (highest similarity percentage)
+                    sentenceRecords.forEach((sent, idx) => {
+                        const sNodeId = `sentence-${idx}`;
+                        let maxSim = -1;
+                        let bestPointKey = null;
+                        Object.keys(sent.hegemony_mappings).forEach(k => {
+                            if (sent.hegemony_mappings[k] > maxSim) {
+                                maxSim = sent.hegemony_mappings[k];
+                                bestPointKey = k;
+                            }
+                        });
+                        if (bestPointKey === pointKey) {
+                            connectedNodeIds.add(sNodeId);
+                            customOpacities[sNodeId] = 1.0;
+                        }
+                    });
+                } else if (activeLegendState === 2) {
+                    // Click 2: Gradient highlighting state
+                    // 1. Calculate max similarity for dynamic scaling
+                    sentenceRecords.forEach(sent => {
+                        const sim = sent.hegemony_mappings[pointKey] || 0;
+                        if (sim > maxSimVal) {
+                            maxSimVal = sim;
+                        }
+                    });
+
+                    // 2. Set connected node status and opacities
+                    sentenceRecords.forEach((sent, idx) => {
+                        const sNodeId = `sentence-${idx}`;
+                        const sim = sent.hegemony_mappings[pointKey] || 0;
+                        
+                        if (sim > 0) {
+                            connectedNodeIds.add(sNodeId);
+                            // Scale opacity from 0.08 to 1.0 based on relative strength
+                            customOpacities[sNodeId] = 0.08 + 0.92 * (sim / maxSimVal);
+                        }
+                    });
+                }
+
+                // Add parent quadrant
+                const pt = HEGEMONY_POINTS[pointKey];
+                if (pt) {
+                    connectedNodeIds.add(`quadrant-${pt.quadrant}`);
+                    customOpacities[`quadrant-${pt.quadrant}`] = 1.0;
+                }
+            } else {
+                // Default binary highlighting logic for other nodes or modes
+                if (graphMode === 'hegemony') {
+                    if (hegemonyLayout === 'sentence') {
+                        if (nodeIdStr.startsWith('quadrant-')) {
+                            const quadKey = nodeIdStr.replace('quadrant-', '');
+                            Object.keys(HEGEMONY_POINTS).forEach(pk => {
+                                if (HEGEMONY_POINTS[pk].quadrant === quadKey) {
+                                    connectedNodeIds.add(`point-${pk}`);
+                                    customOpacities[`point-${pk}`] = 1.0;
+                                    
+                                    // Calculate max sim for each point in this quadrant
+                                    let qMaxSim = 0.01;
+                                    sentenceRecords.forEach(sent => {
+                                        const sim = sent.hegemony_mappings[pk] || 0;
+                                        if (sim > qMaxSim) qMaxSim = sim;
+                                    });
+
+                                    sentenceRecords.forEach((sent, idx) => {
+                                        const sNodeId = `sentence-${idx}`;
+                                        let maxSim = -1;
+                                        let bestPointKey = null;
+                                        Object.keys(sent.hegemony_mappings).forEach(k => {
+                                            if (sent.hegemony_mappings[k] > maxSim) {
+                                                maxSim = sent.hegemony_mappings[k];
+                                                bestPointKey = k;
+                                            }
+                                        });
+                                        if (bestPointKey === pk) {
+                                            connectedNodeIds.add(sNodeId);
+                                            const sim = sent.hegemony_mappings[pk] || 0;
+                                            customOpacities[sNodeId] = 0.08 + 0.92 * (sim / qMaxSim);
+                                        }
+                                    });
+                                }
+                            });
+                        } else if (nodeIdStr.startsWith('sentence-')) {
+                            const idx = parseInt(nodeIdStr.replace('sentence-', ''));
+                            const sent = sentenceRecords[idx];
+                            if (sent) {
+                                let maxSim = -1;
+                                let bestPointKey = null;
+                                Object.keys(sent.hegemony_mappings).forEach(k => {
+                                    if (sent.hegemony_mappings[k] > maxSim) {
+                                        maxSim = sent.hegemony_mappings[k];
+                                        bestPointKey = k;
+                                    }
+                                });
+                                if (bestPointKey) {
+                                    connectedNodeIds.add(`point-${bestPointKey}`);
+                                    customOpacities[`point-${bestPointKey}`] = 1.0;
+                                    const pt = HEGEMONY_POINTS[bestPointKey];
+                                    if (pt) {
+                                        connectedNodeIds.add(`quadrant-${pt.quadrant}`);
+                                        customOpacities[`quadrant-${pt.quadrant}`] = 1.0;
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        // Document-Attractor Modes (Dominant, Spread, Granular):
+                        if (nodeIdStr.startsWith('point-')) {
+                            const pk = nodeIdStr.replace('point-', '');
+                            Object.keys(docIsmMappings).forEach(doc => {
+                                const mapping = docIsmMappings[doc];
+                                if (hegemonyLayout === 'dominant' && mapping.assigned_point === pk) {
+                                    connectedNodeIds.add(doc);
+                                    customOpacities[doc] = 1.0;
+                                } else if (hegemonyLayout === 'spread' && mapping.point_similarities && mapping.point_similarities[pk] >= hegemonyThreshold) {
+                                    connectedNodeIds.add(doc);
+                                    customOpacities[doc] = mapping.point_similarities[pk];
+                                } else if (hegemonyLayout === 'granular') {
+                                    if (mapping.assigned_point === pk) {
+                                        connectedNodeIds.add(doc);
+                                        customOpacities[doc] = 1.0;
+                                    }
+                                }
+                            });
+                            const pt = HEGEMONY_POINTS[pk];
+                            if (pt) {
+                                connectedNodeIds.add(`quadrant-${pt.quadrant}`);
+                                customOpacities[`quadrant-${pt.quadrant}`] = 1.0;
+                            }
+                        } else if (nodeIdStr.startsWith('quadrant-')) {
+                            const quadKey = nodeIdStr.replace('quadrant-', '');
+                            Object.keys(HEGEMONY_POINTS).forEach(pk => {
+                                if (HEGEMONY_POINTS[pk].quadrant === quadKey) {
+                                    connectedNodeIds.add(`point-${pk}`);
+                                    customOpacities[`point-${pk}`] = 1.0;
+                                    Object.keys(docIsmMappings).forEach(doc => {
+                                        if (docIsmMappings[doc].quadrant === quadKey) {
+                                            connectedNodeIds.add(doc);
+                                            customOpacities[doc] = 1.0;
+                                        }
+                                    });
+                                }
+                            });
+                        } else if (documentsMap[selectedNodeId]) {
+                            const mapping = docIsmMappings[selectedNodeId];
+                            if (mapping) {
+                                connectedNodeIds.add(`quadrant-${mapping.quadrant}`);
+                                customOpacities[`quadrant-${mapping.quadrant}`] = 1.0;
+                                if (hegemonyLayout === 'dominant') {
+                                    connectedNodeIds.add(`point-${mapping.assigned_point}`);
+                                    customOpacities[`point-${mapping.assigned_point}`] = 1.0;
+                                } else if (hegemonyLayout === 'spread') {
+                                    Object.keys(mapping.point_similarities).forEach(pk => {
+                                        if (mapping.point_similarities[pk] >= hegemonyThreshold) {
+                                            connectedNodeIds.add(`point-${pk}`);
+                                            customOpacities[`point-${pk}`] = mapping.point_similarities[pk];
+                                        }
+                                    });
+                                } else {
+                                    connectedNodeIds.add(`point-${mapping.assigned_point}`);
+                                    customOpacities[`point-${mapping.assigned_point}`] = 1.0;
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    // Semantic Graph Mode: Highlight direct connections
+                    const connectedEdges = network.getConnectedEdges(selectedNodeId);
+                    connectedEdges.forEach(edgeId => {
+                        const edge = edgesDataSet.get(edgeId);
+                        if (edge) {
+                            connectedNodeIds.add(edge.from);
+                            connectedNodeIds.add(edge.to);
+                            customOpacities[edge.from] = 1.0;
+                            customOpacities[edge.to] = 1.0;
+                        }
+                    });
+                }
+            }
+
+            // Apply style updates
+            // 1. Update Nodes: non-connected nodes will be made semi-translucent
+            const allNodes = nodesDataSet.get();
+            const nodesUpdates = [];
+            allNodes.forEach(node => {
+                const isConnected = connectedNodeIds.has(node.id);
+                
+                if (!node.originalColor) {
+                    node.originalColor = JSON.parse(JSON.stringify(node.color || {}));
+                    node.originalFont = JSON.parse(JSON.stringify(node.font || {}));
+                }
+
+                if (isConnected) {
+                    const op = customOpacities[node.id] !== undefined ? customOpacities[node.id] : 1.0;
+                    nodesUpdates.push({
+                        id: node.id,
+                        color: node.originalColor,
+                        font: { color: `rgba(226, 228, 240, ${op})` },
+                        opacity: op
+                    });
+                } else {
+                    let fadedBg = 'rgba(100, 116, 139, 0.15)';
+                    let fadedBorder = 'rgba(100, 116, 139, 0.1)';
+                    let fadedFontColor = 'rgba(148, 163, 184, 0.15)';
+                    
+                    nodesUpdates.push({
+                        id: node.id,
+                        color: {
+                            background: fadedBg,
+                            border: fadedBorder,
+                            highlight: { background: fadedBg, border: fadedBorder }
+                        },
+                        font: { color: fadedFontColor },
+                        opacity: 0.08
+                    });
+                }
+            });
+            nodesDataSet.update(nodesUpdates);
+
+            // 2. Update Edges: non-connected edges will be made semi-translucent
+            const allEdgesList = edgesDataSet.get();
+            const edgesUpdates = [];
+            allEdgesList.forEach(edge => {
+                if (!edge.originalColor) {
+                    edge.originalColor = (typeof edge.color === 'object') ? JSON.parse(JSON.stringify(edge.color)) : edge.color;
+                    edge.originalWidth = edge.width || 1;
+                }
+
+                if (pointKey && edge.from === `point-${pointKey}` && edge.to.startsWith('sentence-')) {
+                    const sIdx = parseInt(edge.to.replace('sentence-', ''));
+                    const sent = sentenceRecords[sIdx];
+                    if (sent) {
+                        if (activeLegendState === 1) {
+                            let maxSim = -1;
+                            let bestPointKey = null;
+                            Object.keys(sent.hegemony_mappings).forEach(k => {
+                                if (sent.hegemony_mappings[k] > maxSim) {
+                                    maxSim = sent.hegemony_mappings[k];
+                                    bestPointKey = k;
+                                }
+                            });
+                            
+                            if (bestPointKey === pointKey) {
+                                edgesUpdates.push({
+                                    id: edge.id,
+                                    color: { color: `rgba(255, 255, 255, 0.45)` },
+                                    width: 2.5
+                                });
+                            } else {
+                                edgesUpdates.push({
+                                    id: edge.id,
+                                    color: { color: 'rgba(148, 163, 184, 0.02)' },
+                                    width: 0.5
+                                });
+                            }
+                        } else {
+                            const sim = sent.hegemony_mappings[pointKey] || 0;
+                            const edgeOp = Math.max(0.02, (sim > 0 ? (sim / maxSimVal) * 0.45 : 0.02));
+                            edgesUpdates.push({
+                                id: edge.id,
+                                color: { color: `rgba(255, 255, 255, ${edgeOp})` },
+                                width: 0.5 + (sim > 0 ? (sim / maxSimVal) * 2.0 : 0)
+                            });
+                        }
+                    }
+                } else {
+                    const isFromConnected = connectedNodeIds.has(edge.from);
+                    const isToConnected = connectedNodeIds.has(edge.to);
+                    const isEdgeConnected = isFromConnected && isToConnected;
+
+                    if (isEdgeConnected) {
+                        edgesUpdates.push({
+                            id: edge.id,
+                            color: edge.originalColor,
+                            width: edge.originalWidth * 1.5
+                        });
+                    } else {
+                        edgesUpdates.push({
+                            id: edge.id,
+                            color: { color: 'rgba(148, 163, 184, 0.02)' },
+                            width: 0.5
+                        });
+                    }
+                }
+            });
+            edgesDataSet.update(edgesUpdates);
+        }
+
+        function resetHighlighting() {
+            activeLegendKey = null;
+            activeLegendState = 0;
+            updateLegendUI();
+
+            if (!isHighlightedState) return;
+            isHighlightedState = false;
+
+            // Restore all nodes
+            const allNodes = nodesDataSet.get();
+            const nodesUpdates = [];
+            allNodes.forEach(node => {
+                if (node.originalColor) {
+                    nodesUpdates.push({
+                        id: node.id,
+                        color: node.originalColor,
+                        font: node.originalFont,
+                        opacity: 1.0
+                    });
+                }
+            });
+            if (nodesUpdates.length > 0) {
+                nodesDataSet.update(nodesUpdates);
+            }
+
+            // Restore all edges
+            const allEdgesList = edgesDataSet.get();
+            const edgesUpdates = [];
+            allEdgesList.forEach(edge => {
+                if (edge.originalColor) {
+                    edgesUpdates.push({
+                        id: edge.id,
+                        color: edge.originalColor,
+                        width: edge.originalWidth
+                    });
+                }
+            });
+            if (edgesUpdates.length > 0) {
+                edgesDataSet.update(edgesUpdates);
+            }
         }
 
         // Bootstrap load

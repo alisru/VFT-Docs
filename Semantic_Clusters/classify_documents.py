@@ -3,7 +3,7 @@ import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-# 16-point Hegemony Map definitions with their 32 Philosophical Isms and descriptions
+# 16 Hegemony points definitions
 HEGEMONY_POINTS = {
     "gg-gg": {
         "quadrant": "GG",
@@ -138,24 +138,40 @@ HEGEMONY_POINTS = {
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     mapping_path = os.path.join(script_dir, "cluster_mapping.json")
-    output_path = os.path.join(script_dir, "doc_ism_mapping.json")
+    output_path = os.path.join(script_dir, "topic_ism_mapping.json")
 
     print(f"Loading {mapping_path}...")
     with open(mapping_path, 'r', encoding='utf-8') as f:
         paragraphs = json.load(f)
 
-    # Group paragraphs by file
-    doc_paras = {}
+    # Group paragraphs by Topic ID to extract consolidated keywords
+    topic_paras = {}
     for p in paragraphs:
-        file_path = p.get("file", "")
-        if not file_path:
+        tid = p.get("topic_id", -1)
+        if tid == -1:
             continue
-        doc_name = os.path.basename(file_path)
-        if doc_name not in doc_paras:
-            doc_paras[doc_name] = []
-        doc_paras[doc_name].append(p)
+        if tid not in topic_paras:
+            topic_paras[tid] = []
+        topic_paras[tid].append(p)
 
-    print(f"Grouped into {len(doc_paras)} documents.")
+    print(f"Found {len(topic_paras)} semantic topics.")
+
+    # Consolidate keywords for each topic
+    stop_words = {'with', 'this', 'that', 'from', 'they', 'have', 'were', 'about', 'their', 'which', 'there', 'what'}
+    topic_keywords = {}
+    for tid, paras in topic_paras.items():
+        word_counts = {}
+        for p in paras:
+            words = p.get("text", "").lower().split()
+            # simple alphanumeric cleanup
+            for w in words:
+                cleaned = "".join([c for c in w if c.isalpha()])
+                if len(cleaned) >= 4 and cleaned not in stop_words:
+                    word_counts[cleaned] = word_counts.get(cleaned, 0) + 1
+        
+        # Take top 15 words as semantic fingerprint
+        sorted_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:15]
+        topic_keywords[tid] = [w[0] for w in sorted_words]
 
     # Initialize SentenceTransformer
     print("Loading SentenceTransformer ('all-MiniLM-L6-v2')...")
@@ -173,39 +189,30 @@ def main():
     print("Embedding Hegemony Point descriptions...")
     point_embeddings = model.encode(point_texts, show_progress_bar=False)
 
-    doc_mappings = {}
-    doc_names = list(doc_paras.keys())
-    
-    # Process documents
-    print("Embedding and classifying documents...")
-    # Prepare text for each document: filename + content of first 3 paragraphs
-    doc_texts = []
-    for doc in doc_names:
-        paras = sorted(doc_paras[doc], key=lambda x: x.get("paragraph_index", 0))
-        sample_text = " ".join([p.get("text", "") for p in paras[:3]])
-        # Combine clean file title with text content
-        clean_title = doc.replace(".md", "").replace("_", " ").replace("-", " ")
-        combined_text = f"Title: {clean_title}. Content: {sample_text}"
-        doc_texts.append(combined_text)
+    # Embed the Topic Keyword signatures
+    tids = sorted(list(topic_keywords.keys()))
+    topic_signatures = [
+        f"Topic keywords: {', '.join(topic_keywords[tid])}"
+        for tid in tids
+    ]
+    print("Embedding semantic Topic keyword signatures...")
+    topic_embeddings = model.encode(topic_signatures, show_progress_bar=True)
 
-    # Batch encode document representations
-    doc_embeddings = model.encode(doc_texts, show_progress_bar=True)
-
-    # Compute similarity and classify
-    for idx, doc in enumerate(doc_names):
-        doc_emb = doc_embeddings[idx]
+    # Classify Topics
+    topic_mappings = {}
+    for idx, tid in enumerate(tids):
+        topic_emb = topic_embeddings[idx]
         
-        # Calculate cosine similarities
         similarities = []
         for p_emb in point_embeddings:
-            cos_sim = np.dot(doc_emb, p_emb) / (np.linalg.norm(doc_emb) * np.linalg.norm(p_emb))
+            cos_sim = np.dot(topic_emb, p_emb) / (np.linalg.norm(topic_emb) * np.linalg.norm(p_emb))
             similarities.append(float(cos_sim))
 
         best_idx = np.argmax(similarities)
         best_point_key = point_keys[best_idx]
         best_point = HEGEMONY_POINTS[best_point_key]
 
-        doc_mappings[doc] = {
+        topic_mappings[str(tid)] = {
             "assigned_point": best_point_key,
             "quadrant": best_point["quadrant"],
             "quadrant_name": best_point["quadrant_name"],
@@ -213,13 +220,13 @@ def main():
             "node_name": best_point["node_name"],
             "isms": best_point["isms"],
             "similarity": similarities[best_idx],
-            "all_scores": {point_keys[i]: similarities[i] for i in range(len(point_keys))}
+            "keywords": topic_keywords[tid]
         }
 
-    # Save mapping to json
+    # Save Topic mapping to json
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(doc_mappings, f, indent=2)
-    print(f"Successfully classified all documents and saved to {output_path}")
+        json.dump(topic_mappings, f, indent=2)
+    print(f"Successfully classified all topics and saved to {output_path}")
 
 if __name__ == "__main__":
     main()
