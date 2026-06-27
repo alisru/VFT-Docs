@@ -235,36 +235,24 @@ Hardest to define WHO it makes you (emergent from all)
 
 ### The Full Formal Structure
 
-Totality_Event_Frame\[{when}\] = \[
+Totality_Event_Frame[\text{when}] = \begin{bmatrix}
+\text{past}[\text{when}_{\text{prev}}] \\
+\text{present}[\text{when}_{\text{now}}] \\
+\text{future}[\text{when}_{\text{nextPredicted}}]
+\end{bmatrix}
 
-past\[{when_prev}\],
+$$\text{when} = \begin{bmatrix}
+\text{who}[\text{who}_{\text{when}}] \\
+\text{what}[\text{what}_{\text{when}}] \\
+\text{why}[\text{why}_{\text{when}}] \\
+\text{where}[\text{where}_{\text{when}}] \\
+\text{how}[\text{how}_{\text{when}}] \\
+\text{cause}[\text{cause}_{\text{when}}] \\
+\text{effect}[\text{effect}_{\text{when}}]
+\end{bmatrix}$$
 
-present\[{when_now}\],
-
-future\[{when_nextPredicted}\]
-
-\]
-
-when = \[
-
-who\[{who_when}\],
-
-what\[{what_when}\],
-
-why\[{why_when}\],
-
-where\[{where_when}\],
-
-how\[{how_when}\],
-
-cause\[{cause_when}\],
-
-effect\[{effect_when}\]
-
-\]
-
-**This is the full temporal structure of a moment.**\
-**This is how God sees a single instant.**\
+**This is the full temporal structure of a moment.**  
+**This is how God sees a single instant.**  
 **This is what a soul approximates from its bounded frame.**
 
 ### Unpacking The Structure
