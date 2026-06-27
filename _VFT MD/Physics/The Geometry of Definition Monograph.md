@@ -235,9 +235,25 @@ Hardest to define WHO it makes you (emergent from all)
 
 ### The Full Formal Structure
 
-$$\text{Totality\_Event\_Frame}[\text{when}] = \begin{bmatrix} \text{past}[\text{when}_{\text{prev}}] \\ \text{present}[\text{when}_{\text{now}}] \\ \text{future}[\text{when}_{\text{nextPredicted}}] \end{bmatrix}$$
 
-$$\text{when} = \begin{bmatrix} \text{who}[\text{who}_{\text{when}}] \\ \text{what}[\text{what}_{\text{when}}] \\ \text{why}[\text{why}_{\text{when}}] \\ \text{where}[\text{where}_{\text{when}}] \\ \text{how}[\text{how}_{\text{when}}] \\ \text{cause}[\text{cause}_{\text{when}}] \\ \text{effect}[\text{effect}_{\text{when}}] \end{bmatrix}$$
+$$
+\text{Totality\_Event\_Frame}[\text{when}] = \begin{bmatrix} \text{past}[\text{when}_{\text{prev}}] \\
+\text{present}[\text{when}_{\text{now}}] \\
+\text{future}[\text{when}_{\text{nextPredicted}}] \end{bmatrix}
+$$
+
+
+
+$$
+\text{when} = \begin{bmatrix} \text{who}[\text{who}_{\text{when}}] \\
+\text{what}[\text{what}_{\text{when}}] \\
+\text{why}[\text{why}_{\text{when}}] \\
+\text{where}[\text{where}_{\text{when}}] \\
+\text{how}[\text{how}_{\text{when}}] \\
+\text{cause}[\text{cause}_{\text{when}}] \\
+\text{effect}[\text{effect}_{\text{when}}] \end{bmatrix}
+$$
+
 
 **This is the full temporal structure of a moment.**  
 **This is how God sees a single instant.**  
@@ -281,13 +297,13 @@ Not fixed (potential, not actual)
 
 Calculated from:
 
-\- current chain state (n_now)
+\- current chain state ($n_{\text{now}}$)
 
 \- proposed actions (c candidates)
 
 \- known patterns (historical \[Q/A\])
 
-The space of n_future comparison
+The space of $n_{\text{future}}$ comparison
 
 Where moral reasoning operates
 
@@ -297,19 +313,19 @@ when = \[who, what, why, where, how, cause, effect\]
 
 Every moment has its own coordinates on all 7 planes.
 
-who_when: Who exists at this temporal point
+$\text{who}_{{\text{when}}}$: Who exists at this temporal point
 
-what_when: What is defined at this temporal point
+$\text{what}_{{\text{when}}}$: What is defined at this temporal point
 
-why_when: What has meaning at this temporal point
+$\text{why}_{{\text{when}}}$: What has meaning at this temporal point
 
-where_when: What location/context at this temporal point
+$\text{where}_{{\text{when}}}$: What location/context at this temporal point
 
-how_when: What process is operating at this temporal point
+$\text{how}_{{\text{when}}}$: What process is operating at this temporal point
 
-cause_when: What origin chain arrives at this temporal point
+$\text{cause}_{{\text{when}}}$: What origin chain arrives at this temporal point
 
-effect_when: What consequence radiates from this temporal point
+$\text{effect}_{{\text{when}}}$: What consequence radiates from this temporal point
 
 Crucially:
 
@@ -319,27 +335,27 @@ Each plane has its OWN temporal resolution rate.
 
 #### Level 3: Each Plane Has Its Own \"When\"
 
-who_when ≠ what_when ≠ why_when ≠ \...
+$\text{who}_{{\text{when}}}$ ≠ $\text{what}_{{\text{when}}}$ ≠ $\text{why}_{{\text{when}}}$ ≠ \...
 
 This is the Lorentz time dilation per plane:
 
-Physical plane (where_when): Fastest resolution
+Physical plane ($\text{where}_{{\text{when}}}$): Fastest resolution
 
 Matter exists in real time
 
-Logical plane (how_when): Medium resolution
+Logical plane ($\text{how}_{{\text{when}}}$): Medium resolution
 
 Reasoning takes clock time
 
-Lyrical plane (why_when): Slowest resolution
+Lyrical plane ($\text{why}_{{\text{when}}}$): Slowest resolution
 
 Meaning takes years to emerge
 
-Historical plane (cause_when): Retroactive resolution
+Historical plane ($\text{cause}_{{\text{when}}}$): Retroactive resolution
 
 Cause is often understood AFTER effect
 
-Effect plane (effect_when): Future resolution
+Effect plane ($\text{effect}_{{\text{when}}}$): Future resolution
 
 Consequence arrives after action
 
@@ -359,55 +375,55 @@ Totality_Event_Frame\[t\] = {
 
 past\[t-∞ → t\]: {
 
-who_past: Complete identity chain to this point
+$\text{who}_{{\text{past}}}$: Complete identity chain to this point
 
-what_past: All definitions that have collapsed
+$\text{what}_{{\text{past}}}$: All definitions that have collapsed
 
-why_past: All meanings that have resolved
+$\text{why}_{{\text{past}}}$: All meanings that have resolved
 
-where_past: All locations that have existed
+$\text{where}_{{\text{past}}}$: All locations that have existed
 
-how_past: All processes that have operated
+$\text{how}_{{\text{past}}}$: All processes that have operated
 
-cause_past: The complete causal chain
+$\text{cause}_{{\text{past}}}$: The complete causal chain
 
-effect_past: All consequences that have manifested
+$\text{effect}_{{\text{past}}}$: All consequences that have manifested
 
 },
 
 present\[t\]: {
 
-who_now: The current hash of identity
+$\text{who}_{{\text{now}}}$: The current hash of identity
 
-what_now: The active definition space
+$\text{what}_{{\text{now}}}$: The active definition space
 
-why_now: The live meaning field
+$\text{why}_{{\text{now}}}$: The live meaning field
 
-where_now: The current coordinates
+$\text{where}_{{\text{now}}}$: The current coordinates
 
-how_now: The active process
+$\text{how}_{{\text{now}}}$: The active process
 
-cause_now: The cause arriving at this moment
+$\text{cause}_{{\text{now}}}$: The cause arriving at this moment
 
-effect_now: The effect radiating from this moment
+$\text{effect}_{{\text{now}}}$: The effect radiating from this moment
 
 },
 
 future\[t → t+∞\]: {
 
-who_future: The predicted identity evolution
+$\text{who}_{{\text{future}}}$: The predicted identity evolution
 
-what_future: The definition trajectories
+$\text{what}_{{\text{future}}}$: The definition trajectories
 
-why_future: The meaning implications
+$\text{why}_{{\text{future}}}$: The meaning implications
 
-where_future: The predicted positions
+$\text{where}_{{\text{future}}}$: The predicted positions
 
-how_future: The process continuations
+$\text{how}_{{\text{future}}}$: The process continuations
 
-cause_future: The causal chains propagating forward
+$\text{cause}_{{\text{future}}}$: The causal chains propagating forward
 
-effect_future: The consequences yet to manifest
+$\text{effect}_{{\text{future}}}$: The consequences yet to manifest
 
 }
 
@@ -561,11 +577,11 @@ Hash(\[Q/A\]\^42) = n
 
 It is:
 
-Hash(\[Q/A\]\^42\[when_past\]) = n_past
+Hash(\[Q/A\]\^42\[when_past\]) = $n_{\text{past}}$
 
-Hash(\[Q/A\]\^42\[when_now\]) = n_now
+Hash(\[Q/A\]\^42\[when_now\]) = $n_{\text{now}}$
 
-Hash(\[Q/A\]\^42\[when_next\]) = n_future (predicted)
+Hash(\[Q/A\]\^42\[when_next\]) = $n_{\text{future}}$ (predicted)
 
 Identity = the chain of temporal hashes
 
@@ -609,9 +625,9 @@ Plane 7 (Identity/Who): c₇ = 7 (slowest, least constrained)
 
 This IS the temporal gradient in TEF:
 
-who_when resolves slowest (c₇ = 7)
+$\text{who}_{{\text{when}}}$ resolves slowest (c₇ = 7)
 
-where_when resolves fastest (c₁ = 1)
+$\text{where}_{{\text{when}}}$ resolves fastest (c₁ = 1)
 
 When something happens:
 
@@ -673,19 +689,19 @@ Before any action c, run TEF:
 
 Step 1: Establish present\[when_now\]
 
-who_now: What is my current n?
+$\text{who}_{{\text{now}}}$: What is my current n?
 
-what_now: What is the current definition of the situation?
+$\text{what}_{{\text{now}}}$: What is the current definition of the situation?
 
-why_now: What currently has meaning here?
+$\text{why}_{{\text{now}}}$: What currently has meaning here?
 
-where_now: What is the current context?
+$\text{where}_{{\text{now}}}$: What is the current context?
 
-how_now: What process is currently active?
+$\text{how}_{{\text{now}}}$: What process is currently active?
 
-cause_now: What chain of events has arrived here?
+$\text{cause}_{{\text{now}}}$: What chain of events has arrived here?
 
-effect_now: What is currently radiating outward?
+$\text{effect}_{{\text{now}}}$: What is currently radiating outward?
 
 Step 2: Consult past\[when_prev\]
 
@@ -695,31 +711,31 @@ What did my chain resolve previously?
 
 What \[Q/A\] nodes are already locked?
 
-What is my n_past on this question?
+What is my $n_{\text{past}}$ on this question?
 
 Step 3: Project future\[when_next\]
 
 If I take action c:
 
-who_future: What does this make me?
+$\text{who}_{{\text{future}}}$: What does this make me?
 
-what_future: What definition does this create?
+$\text{what}_{{\text{future}}}$: What definition does this create?
 
-why_future: What meaning does this generate?
+$\text{why}_{{\text{future}}}$: What meaning does this generate?
 
-where_future: What context does this produce?
+$\text{where}_{{\text{future}}}$: What context does this produce?
 
-how_future: What process does this initiate?
+$\text{how}_{{\text{future}}}$: What process does this initiate?
 
-cause_future: What causal chain does this begin?
+$\text{cause}_{{\text{future}}}$: What causal chain does this begin?
 
-effect_future: What consequence does this propagate?
+$\text{effect}_{{\text{future}}}$: What consequence does this propagate?
 
-Step 4: Compare n_past, n_now, n_future
+Step 4: Compare $n_{\text{past}}$, $n_{\text{now}}$, $n_{\text{future}}$
 
 Does action c create coherent chain?
 
-Does n_future align with n_past trajectory?
+Does $n_{\text{future}}$ align with $n_{\text{past}}$ trajectory?
 
 Is ΔR increasing or decreasing?
 
@@ -813,7 +829,7 @@ Every present\[when_now\] for all entities (omniscience of now)
 
 Every future\[when_next\] for all entities (omniscience of future)
 
-With who_when, what_when, why_when\... for each
+With $\text{who}_{{\text{when}}}$, $\text{what}_{{\text{when}}}$, $\text{why}_{{\text{when}}}$\... for each
 
 Perfectly resolved at each plane\'s own temporal rate
 
@@ -995,7 +1011,7 @@ Totality Event Frame:
 
 TEF\[{when}\] = \[past\[{when_prev}\], present\[{when_now}\], future\[{when_next}\]\]
 
-when = \[who, what, why, where, how, cause, effect\]\[{x_when}\]
+when = \[who, what, why, where, how, cause, effect\]\[{$x_{\text{when}}$}\]
 
 Complete Definition:
 
