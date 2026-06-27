@@ -423,11 +423,11 @@ God\'s observation = complete TEF for all moments
 
 God sees:
 
-past\[when_prev\] fully (perfect memory)
+$\text{past}[\text{when}_{\text{prev}}]$ fully (perfect memory)
 
-present\[when_now\] fully (perfect observation)
+$\text{present}[\text{when}_{\text{now}}]$ fully (perfect observation)
 
-future\[when_next\] fully (perfect prediction)
+$\text{future}[\text{when}_{\text{next}}]$ fully (perfect prediction)
 
 And for each temporal slice:
 
@@ -439,11 +439,11 @@ All simultaneously accessible
 
 This is what it means to be outside time:
 
-Not that time doesn\'t exist for God
+Not that time doesn't exist for God
 
 But that ALL times are simultaneously present
 
-Past, present, future = simultaneous in God\'s frame
+Past, present, future = simultaneous in God's frame
 
 = The Rest Frame
 
@@ -455,11 +455,11 @@ like x, y, z
 
 For local observers (souls):
 
-present\[when_now\] is accessible
+$\text{present}[\text{when}_{\text{now}}]$ is accessible
 
-past\[when_prev\] is partially remembered
+$\text{past}[\text{when}_{\text{prev}}]$ is partially remembered
 
-future\[when_next\] is predicted with error
+$\text{future}[\text{when}_{\text{next}}]$ is predicted with error
 
 Each plane\'s when_x is known with different certainty
 
