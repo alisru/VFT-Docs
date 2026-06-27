@@ -235,11 +235,11 @@ Hardest to define WHO it makes you (emergent from all)
 
 ### The Full Formal Structure
 
-Totality_Event_Frame[\text{when}] = \begin{bmatrix}
+$$\text{Totality\_Event\_Frame}[\text{when}] = \begin{bmatrix}
 \text{past}[\text{when}_{\text{prev}}] \\
 \text{present}[\text{when}_{\text{now}}] \\
 \text{future}[\text{when}_{\text{nextPredicted}}]
-\end{bmatrix}
+\end{bmatrix}$$
 
 $$\text{when} = \begin{bmatrix}
 \text{who}[\text{who}_{\text{when}}] \\
