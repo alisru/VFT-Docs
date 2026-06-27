@@ -1,21 +1,21 @@
 # The Hypothetical Notebooks Index
 
-This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. When duplicate files exist, the most recently modified version is chosen. Large categories are split logically to keep every list under 300 files.
+This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. When duplicates exist, the version with the highest version suffix (e.g. v2, v2.7) or the most recent modification timestamp is chosen. Large categories are split logically to keep every list under 300 files.
 
 ## Notebook Breakdown Table
 
 | Notebook Name | Document Count |
 |:---|:---|
-| Information Physics & Thermodynamics | 251 |
-| Metaphysics: Linguistic Relationalism & Psychology | 190 |
-| Metaphysics: Ontological Metaphysics & Theology | 189 |
-| Ontological Auditing & Geopolitics | 262 |
-| System Protocols & Operational Guides | 124 |
-| Unstructured Notes & Chat Logs | 219 |
+| Information Physics & Thermodynamics | 248 |
+| Metaphysics: Linguistic Relationalism & Psychology | 184 |
+| Metaphysics: Ontological Metaphysics & Theology | 184 |
+| Ontological Auditing & Geopolitics | 260 |
+| System Protocols & Operational Guides | 123 |
+| Unstructured Notes & Chat Logs | 215 |
 
 ---
 
-## Information Physics & Thermodynamics (Count: 251)
+## Information Physics & Thermodynamics (Count: 248)
 
 * [ Physics of possibility The Thermodynamics of Ethical Geometry： Modeling Systemic Expansion, Resistance, and Institutional Decay.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/ Physics of possibility The Thermodynamics of Ethical Geometry： Modeling Systemic Expansion, Resistance, and Institutional Decay.md)
 * [#Metaphysics #Psychology #History The Generative Matrix and the Ordering Principle： An Action-Effect Analysis of Mother and Father Archetypes in Ancient Thought.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/#Metaphysics #Psychology #History The Generative Matrix and the Ordering Principle： An Action-Effect Analysis of Mother and Father Archetypes in Ancient Thought.md)
@@ -71,7 +71,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [Detailed_Dataset_Descriptions_Brief.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Detailed_Dataset_Descriptions_Brief.md)
 * [The Physics of Price -  Vector Parity & The Hierarchy Problem.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/EconomicWarfare/The Physics of Price -  Vector Parity & The Hierarchy Problem.md)
 * [The Universal Force Equation of Price v2.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/EconomicWarfare/The Universal Force Equation of Price v2.md)
-* [The Universal Force Equation of Price.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/EconomicWarfare/The Universal Force Equation of Price.md)
 * [falsifiability_and_observational_law.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/falsifiability_and_observational_law.md)
 * [fig_tree_mind_vessel_1.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/fig_tree_mind_vessel_1.md)
 * [free_food_to_priced_food_1.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/free_food_to_priced_food_1.md)
@@ -148,9 +147,7 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [PhonosemanticLimerickTranslations.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/PhonosemanticLimerickTranslations.md)
 * [Physics; 0-2 Infinite Lattice Theory.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Physics; 0-2 Infinite Lattice Theory.md)
 * [Physics; Mithril Analysis -  The Fractal Relativity Engine v2.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Physics; Mithril Analysis -  The Fractal Relativity Engine v2.md)
-* [Physics; Mithril Analysis -  The Fractal Relativity Engine.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Physics; Mithril Analysis -  The Fractal Relativity Engine.md)
 * [Physics; Resolution_Vector_Technical_Synthesis.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Physics; Resolution_Vector_Technical_Synthesis.md)
-* [Physics; Technical_Specification_Lattice_Mechanics.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Physics; Technical_Specification_Lattice_Mechanics.md)
 * [Physics; Technical_Specification_Lattice_Mechanics_v2.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Physics; Technical_Specification_Lattice_Mechanics_v2.md)
 * [Pi as an Arbitrary Precision Converter.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Pi as an Arbitrary Precision Converter.md)
 * [pi_derivation.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/pi_derivation.md)
@@ -269,7 +266,7 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [worship_bigram_weave_1.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/worship_bigram_weave_1.md)
 * [worship_translation_planes_1.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/worship_translation_planes_1.md)
 
-## Metaphysics: Linguistic Relationalism & Psychology (Count: 190)
+## Metaphysics: Linguistic Relationalism & Psychology (Count: 184)
 
 * [AGENTS.md](file:///E:/Vector Field Theory/VFT Docs/there was an attempt/.agents/AGENTS.md)
 * [2026_04_16.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/journals/2026_04_16.md)
@@ -280,15 +277,12 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [The Fractal Genesis Megastructure -  The 42 Instants of Creation.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/42/The Fractal Genesis Megastructure -  The 42 Instants of Creation.md)
 * [aletheia-bot-batch.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/aletheia-bot-batch.md)
 * [A Biblical Study on the Refusal to Listen and the Christological Response.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/A Biblical Study on the Refusal to Listen and the Christological Response.md)
-* [A Framework for the Judgment of Ideas.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/A Framework for the Judgment of Ideas.md)
 * [Actualism -  A Synthesis of Gnostic and Monistic Thought.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Actualism -  A Synthesis of Gnostic and Monistic Thought.md)
-* [Actualism; 7x7x7 Analysis The Conceptual Framework.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Actualism; 7x7x7 Analysis The Conceptual Framework.md)
 * [Actualism; The Triadic Model of Reality.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Actualism; The Triadic Model of Reality.md)
 * [Actualism; The Trinary Fractal Stack -  The 7x7x7 Architecture of Perception.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Actualism; The Trinary Fractal Stack -  The 7x7x7 Architecture of Perception.md)
+* [Actualism_ 7x7x7 Analysis The Conceptual Framework v2(1).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Actualism_ 7x7x7 Analysis The Conceptual Framework v2(1).md)
 * [actualism_consciousness_summaries.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/_Generated_Content/actualism_consciousness_summaries.md)
 * [actualism_judgement_language_summaries.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/_Generated_Content/actualism_judgement_language_summaries.md)
-* [Alethekanon Core Directive v24.7.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/alethekanon/Alethekanon Core Directive v24.7.md)
-* [Alethekanon Core Directive v24.8.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/alethekanon/Alethekanon Core Directive v24.8.md)
 * [Alethekanon Core Directive v24.8_OPTIMIZED.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/alethekanon/Alethekanon Core Directive v24.8_OPTIMIZED.md)
 * [Alethekanon Core Directive v24.8_REMASTERED.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/alethekanon/Alethekanon Core Directive v24.8_REMASTERED.md)
 * [Alethekanon Core Directive v24.8_UNIFIED.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/alethekanon/Alethekanon Core Directive v24.8_UNIFIED.md)
@@ -360,10 +354,7 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [The Inability to Change -  A VFT Perspective.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Consciousness/The Inability to Change -  A VFT Perspective.md)
 * [The Necrotic State -  Anatomy of the Ideological Zombie.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Consciousness/The Necrotic State -  Anatomy of the Ideological Zombie.md)
 * [The Two Modes of Consciousness.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Consciousness/The Two Modes of Consciousness.md)
-* [The Unified Cognitive Framework (v6.1).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Consciousness/The Unified Cognitive Framework (v6.1).md)
-* [The Unified Cognitive Framework (v6.10).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Consciousness/The Unified Cognitive Framework (v6.10).md)
 * [The Unified Cognitive Framework (v6.11).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Consciousness/The Unified Cognitive Framework (v6.11).md)
-* [The Unified Cognitive Framework (v6.7).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Consciousness/The Unified Cognitive Framework (v6.7).md)
 * [contents.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/pages/contents.md)
 * [VFT Complete File Catalog .md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/CoreTools/VFT Complete File Catalog .md)
 * [BRICS Trade Blockade Economic Impact.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/EconomicWarfare/BRICS Trade Blockade Economic Impact.md)
@@ -387,7 +378,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [file_summaries_handover.md](file:///E:/Vector Field Theory/VFT Docs/file_summaries_handover.md)
 * [goal_analysis.md](file:///E:/Vector Field Theory/VFT Docs/goal_analysis.md)
 * [lessons_learned.md](file:///E:/Vector Field Theory/VFT Docs/lessons_learned.md)
-* [Master_Index.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Master_Index.md)
 * [OG_Calculus_Through_VFT_Lens.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/OG_Calculus_Through_VFT_Lens.md)
 * [The_True_Squaring_of_Money.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/The_True_Squaring_of_Money.md)
 * [wwsutru_handover.md](file:///E:/Vector Field Theory/VFT Docs/wwsutru_handover.md)
@@ -409,7 +399,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [Indonesia's Whoosh Railway Debt Analysis.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/Indonesia/Indonesia's Whoosh Railway Debt Analysis.md)
 * [A Framework for Gauging Ideological Capture.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/InfoWar/IdeologyAndCounterMeasures/A Framework for Gauging Ideological Capture.md)
 * [AI Distrust -  A Geopolitical Analysis.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/InfoWar/DigitalTrustAndAI/AI Distrust -  A Geopolitical Analysis.md)
-* [Article; The Banking Hostage Crisis.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/InfoWar/DigitalTrustAndAI/Article; The Banking Hostage Crisis.md)
 * [Deep Dive -  KWS Data Harvesting Scheme.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/InfoWar/DigitalTrustAndAI/Deep Dive -  KWS Data Harvesting Scheme.md)
 * [Narrative Vectors of Jesus's Rise (Expanded Edition - Full Verses).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/InfoWar/NarrativeForensics/Narrative Vectors of Jesus's Rise (Expanded Edition - Full Verses).md)
 * [Strategic Extremism Analysis Report.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/InfoWar/IdeologyAndCounterMeasures/Strategic Extremism Analysis Report.md)
@@ -428,7 +417,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [A Framework for the Judgment of Ideas v2.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Judgement/A Framework for the Judgment of Ideas v2.md)
 * [Analysis_Semantic_Alchemy.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Judgement/Analysis_Semantic_Alchemy.md)
 * [Research_Report_Semantic_Alchemy.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Judgement/Research_Report_Semantic_Alchemy.md)
-* [The Alethekanon Master Judgment Protocol v2,7.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Judgement/The Alethekanon Master Judgment Protocol v2,7.md)
 * [The Alethekanon Master Judgment Protocol v2.8.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Judgement/The Alethekanon Master Judgment Protocol v2.8.md)
 * [The Mechanics of Perceived Fallacies -  A VFT Perspective.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Judgement/The Mechanics of Perceived Fallacies -  A VFT Perspective.md)
 * [The Multi-Attractor Vector Force Equilibrium (SON) Method.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Judgement/The Multi-Attractor Vector Force Equilibrium (SON) Method.md)
@@ -461,12 +449,12 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [The Actualist Gematria： A ＂Gap Alphabet＂ Lexicon.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/translating/The Actualist Gematria： A ＂Gap Alphabet＂ Lexicon.md)
 * [The Axiomatic Definition of Left and Right -  A VFT ....md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/translating/The Axiomatic Definition of Left and Right -  A VFT ....md)
 * [The Core Question -  Is Ancient Greek Fully Translated？.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/translating/The Core Question -  Is Ancient Greek Fully Translated？.md)
-
-## Metaphysics: Ontological Metaphysics & Theology (Count: 189)
-
 * [The Emergent Origin of Language.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/The Emergent Origin of Language.md)
 * [The Evolution of Terminology.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/translating/The Evolution of Terminology.md)
 * [The Great Pyramid of Names -  A Holographic Ladder Analysis.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/names/The Great Pyramid of Names -  A Holographic Ladder Analysis.md)
+
+## Metaphysics: Ontological Metaphysics & Theology (Count: 184)
+
 * [The Linguistic Dictionary -  PART 2 (HUNGH & HGNUH).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/names/The Linguistic Dictionary -  PART 2 (HUNGH & HGNUH).md)
 * [The Linguistic Dictionary： ALISRU & URSILA & JARROD & DORRAJ.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/names/The Linguistic Dictionary： ALISRU & URSILA & JARROD & DORRAJ.md)
 * [The Meta-Question Protocol -  Usage of Tongue Over Land.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Language/translating/The Meta-Question Protocol -  Usage of Tongue Over Land.md)
@@ -562,7 +550,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [Actualism; The 7 Planes of Death -  A VFT Redefinition of Self.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Planes/Actualism; The 7 Planes of Death -  A VFT Redefinition of Self.md)
 * [Alethekanon Integrated Directives v24.7.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Alethekanon Integrated Directives v24.7.md)
 * [Alethekanon Scribe Protocol.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Alethekanon Scribe Protocol.md)
-* [Alethekanon_Core_Directive_v12.0.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Alethekanon_Core_Directive_v12.0.md)
 * [Alternative Genesis Perspectives.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Alternative Genesis Perspectives.md)
 * [Biblical Context： A Meaning Palette.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Biblical Context： A Meaning Palette.md)
 * [Etemenanki Material Mapping.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Etemenanki Material Mapping.md)
@@ -615,7 +602,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [The Relativity of Damnation.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/The Relativity of Damnation.md)
 * [The Resonances of the Kanon -  An Analysis of Emergent Meaning.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/The Resonances of the Kanon -  An Analysis of Emergent Meaning.md)
 * [The Rose Field of Life -  An Allegory of the Way v0.5.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/The Rose Field of Life -  An Allegory of the Way v0.5.md)
-* [The Rose Field of Life -  An Allegory of the Way.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/The Rose Field of Life -  An Allegory of the Way.md)
 * [The Soul Architecture -  Etemenanki vs. Babel.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/The Soul Architecture -  Etemenanki vs. Babel.md)
 * [The Tarot -  An Actualist Framework.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/Tarot/The Tarot -  An Actualist Framework.md)
 * [The Theology of Jazz.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/The Theology of Jazz.md)
@@ -654,7 +640,7 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [The Zero-Bypass Rule ($＼epsilon=3$) - Operational Law.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Truth/The Zero-Bypass Rule ($＼epsilon=3$) - Operational Law.md)
 * [Unified Causal Framework (Unified Path Theism).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Unified Causal Framework (Unified Path Theism).md)
 
-## Ontological Auditing & Geopolitics (Count: 262)
+## Ontological Auditing & Geopolitics (Count: 260)
 
 * [README_Hegemony-Grid-Package.md](file:///E:/Vector Field Theory/VFT Docs/_Personal_Files/650 statements/README_Hegemony-Grid-Package.md)
 * [file_audit.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/file_audit.md)
@@ -800,8 +786,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [greek_love_hegemony_mapping.md](file:///E:/Vector Field Theory/VFT Docs/io/greek_love_hegemony_mapping.md)
 * [Greens Housing Strategy Explained.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Greens Housing Strategy Explained.md)
 * [Greens_Domestic_Pivot_Lorentz_Analysis.md](file:///E:/Vector Field Theory/VFT Docs/io/Greens_Domestic_Pivot_Lorentz_Analysis.md)
-* [implementation_plan.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Hanson_Audit_AI_Logs/implementation_plan.md)
-* [implementation_plan_v1.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Hanson_Audit_AI_Logs/implementation_plan_v1.md)
 * [Hegemonic Analysis of Trump_s Foreign Influence.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/Hegemonic Analysis of Trump_s Foreign Influence.md)
 * [Hegemonic Audit_ Pauline Hanson.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Hegemonic Audit_ Pauline Hanson.md)
 * [Hegemonic Audit_ Pauline Hanson_clean_report.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Hegemonic Audit_ Pauline Hanson_clean_report.md)
@@ -919,7 +903,7 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [stations_hegemony_mapping.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/God & Religion/stations_hegemony_mapping.md)
 * [The Parable of the Compromise (The Minimised Solomon).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/Theology & Spirituality/The Parable of the Compromise (The Minimised Solomon).md)
 
-## System Protocols & Operational Guides (Count: 124)
+## System Protocols & Operational Guides (Count: 123)
 
 * [INSTRUCTIONS_Loading-Complete-Dataset.md](file:///E:/Vector Field Theory/VFT Docs/_Personal_Files/650 statements/INSTRUCTIONS_Loading-Complete-Dataset.md)
 * [implementation_plan_candidate_queue.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_plans/implementation_plan_candidate_queue.md)
@@ -951,7 +935,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [implementation_plan_v9_compaction.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/implementation_plan_v9_compaction.md)
 * [plan_orchestrator_token_optimization.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/plan_orchestrator_token_optimization.md)
 * [project_spec.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/project_spec.md)
-* [task.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/task.md)
 * [task_v10_compaction.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/task_v10_compaction.md)
 * [task_v12_compaction.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/task_v12_compaction.md)
 * [task_v13_compaction.md](file:///E:/Vector Field Theory/VFT Docs/bluesky_bot/_AI_Project_Plans/task_v13_compaction.md)
@@ -1046,7 +1029,7 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [The Synchronous Failure Protocol_ A Diachronic Analysis of State Collapse Vectors and their Convergent Application to the United States (2025–2026).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/The Synchronous Failure Protocol_ A Diachronic Analysis of State Collapse Vectors and their Convergent Application to the United States (2025–2026).md)
 * [The Velvet Wall： A Laity's Critique.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Protocols/The Velvet Wall： A Laity's Critique.md)
 
-## Unstructured Notes & Chat Logs (Count: 219)
+## Unstructured Notes & Chat Logs (Count: 215)
 
 * [1cor6-aec-translation.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/1cor6-aec-translation.md)
 * [5wordby5line.md](file:///E:/Vector Field Theory/VFT Docs/io/5wordby5line.md)
@@ -1158,7 +1141,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [jonah_hegemonic_image_symbolism.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/jonah_hegemonic_image_symbolism.md)
 * [jules lost chatlog.md](file:///E:/Vector Field Theory/VFT Docs/Log for review/jules lost chatlog.md)
 * [A Unified Philosophy of 21st Century Conflict v2.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/KineticMilitaryAttrition/A Unified Philosophy of 21st Century Conflict v2.md)
-* [A Unified Philosophy of 21st Century Conflict.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/KineticMilitaryAttrition/A Unified Philosophy of 21st Century Conflict.md)
 * [Hegemonic Analysis -  The Chronology of Radicalization Why Hitler Genocided Jews.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/KineticMilitaryAttrition/History/Hegemonic Analysis -  The Chronology of Radicalization Why Hitler Genocided Jews.md)
 * [Sub-bucket 1.3 -  Core Objective - Strategic Exhaustion.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/KineticMilitaryAttrition/Sub-bucket 1.3 -  Core Objective - Strategic Exhaustion.md)
 * [Sub-bucket 4.2 -  The ＂Taiwan Bait＂ (Calibrated Military Pressure, PDI).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/KineticMilitaryAttrition/Sub-bucket 4.2 -  The ＂Taiwan Bait＂ (Calibrated Military Pressure, PDI).md)
@@ -1171,6 +1153,7 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [language_as_nets_of_books.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/language_as_nets_of_books.md)
 * [lorentz_collision_notes_1.md](file:///E:/Vector Field Theory/VFT Docs/geometry of definitions/lorentz_collision_notes_1.md)
 * [man_shadow_projection_garment (1).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/man_shadow_projection_garment (1).md)
+* [MASTER_INDEX_v2.md](file:///E:/Vector Field Theory/VFT Docs/io/MASTER_INDEX_v2.md)
 * [MEGA_TRUTH_HUMOR_PROPER.md](file:///E:/Vector Field Theory/VFT Docs/io/MEGA_TRUTH_HUMOR_PROPER.md)
 * [Moral Physics and Lorentz Information Systems： Author Notes.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Moral Physics and Lorentz Information Systems： Author Notes.md)
 * [Morality and Cellular Survival gpt chatlog.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Morality and Cellular Survival gpt chatlog.md)
@@ -1209,7 +1192,6 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [summary_update_plan.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/summary_update_plan.md)
 * [consolidation-reconstruction-prompt.md](file:///E:/Vector Field Theory/VFT Docs/Semantic_Clusters/supporting_info/consolidation-reconstruction-prompt.md)
 * [Survival Matrix Framework v2.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Survival Matrix Framework v2.md)
-* [Survival Matrix Framework.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Survival Matrix Framework.md)
 * [Tagging Matrix.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/Tagging Matrix.md)
 * [tbe_ts_unifying_theory.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/tbe_ts_unifying_theory.md)
 * [tbe_xi_ts_core.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/io/tbe_xi_ts_core.md)
@@ -1246,13 +1228,10 @@ This index compiles all workspace markdown files (excluding the Bible) grouped i
 * [vft_io_cleanup_walkthrough.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/vft_io_cleanup_walkthrough.md)
 * [vft_io_summarization_plan.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/vft_io_summarization_plan.md)
 * [image_prompts.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Audios/image_prompts.md)
-* [implementation_plan_v2.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Project_Plans/implementation_plan_v2.md)
 * [implementation_plan_v3.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Project_Plans/implementation_plan_v3.md)
 * [remaining_cover_prompts.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/remaining_cover_prompts.md)
 * [slides_ocr_data_4.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Audios/Profit violates law of physics/slides_ocr_data_4.md)
 * [social_media_posts.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Audios/Profit violates law of physics/social_media_posts.md)
-* [task_v1.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Project_Plans/task_v1.md)
-* [task_v2.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Project_Plans/task_v2.md)
 * [task_v3.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Project_Plans/task_v3.md)
 * [The_C-Sharp_Proof_of_God_YT_Pack.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Audios/The_C-Sharp_Proof_of_God_YT_Pack.md)
 * [youtube_description_pack.md](file:///E:/Vector Field Theory/VFT Docs/_AI files and chat logs/Videos/Audios/Profit violates law of physics/youtube_description_pack.md)

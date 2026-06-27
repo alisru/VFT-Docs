@@ -52,9 +52,21 @@ def get_sorting_key(rel_path):
 
 def normalize_filename(name):
     name = name.lower().replace(".md", "")
+    # Remove version indicators like v2, v2.7, v12.0, etc.
+    name = re.sub(r'[\s_\-\(]+v\d+(?:[.,]\d+)*[\)]*$', '', name)
+    # Remove copy suffixes like _1, _2, (1), (2), - Copy, etc.
     name = re.sub(r'[\s_\-\(]+(1|2|3|4|copy)[\)]*$', '', name)
     name = "".join(c for c in name if c.isalnum())
     return name
+
+def extract_version(name):
+    # Search for version formats: v2, v2.7, v12.0, etc.
+    match = re.search(r'[\s_\-\(]+v(\d+)(?:[.,](\d+))?[\)]*$', name.lower().replace(".md", ""))
+    if match:
+        major = int(match.group(1))
+        minor = int(match.group(2)) if match.group(2) else 0
+        return (major, minor)
+    return (0, 0)
 
 def main():
     if sys.version_info >= (3, 7):
@@ -76,7 +88,7 @@ def main():
                     
     print(f"Found {len(all_md_files)} markdown documents.", flush=True)
     
-    # Store unique files mapped by normalized name: {norm_name: (rel_path, mtime, category)}
+    # Store unique files mapped by normalized name: {norm_name: (rel_path, version_tuple, mtime, category)}
     unique_registry = {}
     skipped_duplicates_count = 0
     
@@ -89,23 +101,34 @@ def main():
             continue
             
         norm_name = normalize_filename(file_name)
+        ver = extract_version(file_name)
         mtime = os.path.getmtime(file_path)
         
         if norm_name in unique_registry:
-            existing_path, existing_mtime, existing_cat = unique_registry[norm_name]
-            # If the new file is newer, replace the existing one
-            if mtime > existing_mtime:
-                print(f"  Replacing older version '{existing_path}' (mtime: {existing_mtime}) with newer version '{rel_path}' (mtime: {mtime})", flush=True)
-                unique_registry[norm_name] = (rel_path, mtime, category)
-            else:
-                print(f"  Skipping older duplicate: '{rel_path}' (existing newer file: '{existing_path}')", flush=True)
-            skipped_duplicates_count += 1
-        else:
-            unique_registry[norm_name] = (rel_path, mtime, category)
+            existing_path, existing_ver, existing_mtime, existing_cat = unique_registry[norm_name]
             
-    print(f"\nDeduplication complete: Kept {len(unique_registry)} unique files, filtered out {skipped_duplicates_count} older duplicates.", flush=True)
+            # 1. Compare version numbers first
+            if ver > existing_ver:
+                print(f"  Replacing older version '{existing_path}' (version: {existing_ver}) with newer version '{rel_path}' (version: {ver})", flush=True)
+                unique_registry[norm_name] = (rel_path, ver, mtime, category)
+                skipped_duplicates_count += 1
+            elif ver < existing_ver:
+                print(f"  Skipping older duplicate version: '{rel_path}' (version: {ver}) (existing version: '{existing_path}' version: {existing_ver})", flush=True)
+                skipped_duplicates_count += 1
+            else:
+                # 2. If versions are identical, compare modification timestamps (mtime)
+                if mtime > existing_mtime:
+                    print(f"  Replacing older timestamp '{existing_path}' (mtime: {existing_mtime}) with newer timestamp '{rel_path}' (mtime: {mtime})", flush=True)
+                    unique_registry[norm_name] = (rel_path, ver, mtime, category)
+                else:
+                    print(f"  Skipping older timestamp duplicate: '{rel_path}' (existing newer file: '{existing_path}')", flush=True)
+                skipped_duplicates_count += 1
+        else:
+            unique_registry[norm_name] = (rel_path, ver, mtime, category)
+            
+    print(f"\nDeduplication complete: Kept {len(unique_registry)} unique files, filtered out {skipped_duplicates_count} duplicates.", flush=True)
     
-    # Populate notebooks from the unique registry
+    # Populate notebooks
     notebooks = {
         "Metaphysics & Actualism": [],
         "Information Physics & Thermodynamics": [],
@@ -114,7 +137,7 @@ def main():
         "Unstructured Notes & Chat Logs": []
     }
     
-    for norm_name, (rel_path, mtime, category) in unique_registry.items():
+    for norm_name, (rel_path, ver, mtime, category) in unique_registry.items():
         notebooks[category].append(rel_path)
         
     # Split any category over 300 files and map to formal names
@@ -150,7 +173,7 @@ def main():
     
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write("# The Hypothetical Notebooks Index\n\n")
-        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. When duplicate files exist, the most recently modified version is chosen. Large categories are split logically to keep every list under 300 files.\n\n")
+        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. When duplicates exist, the version with the highest version suffix (e.g. v2, v2.7) or the most recent modification timestamp is chosen. Large categories are split logically to keep every list under 300 files.\n\n")
         
         f.write("## Notebook Breakdown Table\n\n")
         f.write("| Notebook Name | Document Count |\n|:---|:---|\n")
