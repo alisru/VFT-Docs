@@ -39,6 +39,38 @@ def classify_by_topic(rel_path, file_name):
         return "Unstructured Notes & Chat Logs"
     return "Metaphysics & Actualism"
 
+def get_sorting_key(rel_path):
+    path_lower = rel_path.lower()
+    file_name = os.path.basename(rel_path).lower()
+    parts = rel_path.split(os.sep)
+    
+    # Extract sub-folder name (e.g. actualism/philosophy -> philosophy)
+    subfolder = "general"
+    if len(parts) > 1:
+        # If the file is inside _VFT MD, look at the third part
+        if parts[0].lower() == "_vft md" and len(parts) > 2:
+            subfolder = parts[2]
+        elif parts[0].lower() != "_vft md":
+            subfolder = parts[1]
+            
+    # For temporary io files, route their subfolders semantically by filename keywords
+    if "io" in path_lower:
+        phys_keywords = ["physics", "thermodynamic", "entropy", "lattice", "price", "geometry", "tensor", "amplitude", "gravity"]
+        geo_keywords = ["audit", "hegemony", "greens", "albanese", "dutton", "epstein", "australia", "hanson", "rudd", "minimis"]
+        meta_keywords = ["soul", "theology", "metaphysics", "planes", "jesus", "christ", "god", "kingdom", "actualism"]
+        
+        if any(k in file_name for k in phys_keywords):
+            subfolder = "io-physics"
+        elif any(k in file_name for k in geo_keywords):
+            subfolder = "io-geopolitics"
+        elif any(k in file_name for k in meta_keywords):
+            subfolder = "io-metaphysics"
+        else:
+            subfolder = "io-unstaged"
+            
+    # Return (subfolder, filename) tuple to sort by subfolder first, then file name
+    return (subfolder.lower(), file_name)
+
 def main():
     if sys.version_info >= (3, 7):
         sys.stdout.reconfigure(encoding='utf-8')
@@ -76,7 +108,7 @@ def main():
         category = classify_by_topic(rel_path, file_name)
         notebooks[category].append(rel_path)
         
-    # Calibrate chunks to make sure every group is strictly under 300 files
+    # Calibrate chunks sorted by sub-categorization
     final_notebooks = {}
     for name, file_list in notebooks.items():
         count = len(file_list)
@@ -86,8 +118,10 @@ def main():
             final_notebooks[name] = file_list
         else:
             num_parts = math.ceil(count / 300)
-            print(f"Notebook '{name}' has {count} files. Splitting into {num_parts} sub-notebooks...", flush=True)
-            sorted_list = sorted(file_list, key=lambda x: x.lower())
+            print(f"Notebook '{name}' has {count} files. Splitting into {num_parts} sub-notebooks sorted by sub-categories...", flush=True)
+            
+            # Sort file list by sub-categorization key
+            sorted_list = sorted(file_list, key=get_sorting_key)
             part_size = math.ceil(count / num_parts)
             for i in range(num_parts):
                 part_files = sorted_list[i*part_size : (i+1)*part_size]
@@ -99,7 +133,7 @@ def main():
     
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write("# The Hypothetical Notebooks Index\n\n")
-        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into 6 logical semantic topics. Each category is split as necessary to contain fewer than 300 files.\n\n")
+        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into 6 logical semantic topics. Large books are split into parts grouped by their physical sub-folders and semantic categories.\n\n")
         
         f.write("## Notebook Breakdown Table\n\n")
         f.write("| Notebook Name | Document Count |\n|:---|:---|\n")
@@ -109,7 +143,7 @@ def main():
         
         for name, files in final_notebooks.items():
             f.write(f"## {name} (Count: {len(files)})\n\n")
-            for rel_path in sorted(files):
+            for rel_path in sorted(files, key=get_sorting_key):
                 full_path = os.path.join(workspace_root, rel_path).replace(os.sep, '/')
                 f.write(f"* [{os.path.basename(rel_path)}](file:///{full_path})\n")
             f.write("\n")
