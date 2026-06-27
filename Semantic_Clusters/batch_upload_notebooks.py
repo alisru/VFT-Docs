@@ -125,21 +125,39 @@ def main():
     # Parse notebooks if returned in result
     # Depending on how the notebooklm-mcp server formats results, it might return them in "content"
     # Parse notebooks if returned in result
-    # Supports both structured JSON (notebooks) and plaintext content list
+    # Supports both nested JSON string inside content text, structured JSON notebooks, and plaintext Name/ID lists
     online_notebooks = {}
     
-    # 1. Try structured JSON extraction first
-    notebooks = notebook_list_res.get("notebooks")
-    if isinstance(notebooks, list):
-        for nb in notebooks:
-            title = nb.get("title") or nb.get("name")
-            uuid = nb.get("id") or nb.get("notebook_id")
-            if title and uuid:
-                online_notebooks[title.strip()] = uuid.strip()
+    content_list = notebook_list_res.get("content", [])
     
-    # 2. Fallback to plaintext regex parsing
+    # 1. Try parsing double-serialized JSON string inside content text
+    for item in content_list:
+        text = item.get("text", "")
+        if text.strip().startswith("{"):
+            try:
+                raw_json = json.loads(text)
+                notebooks = raw_json.get("notebooks")
+                if isinstance(notebooks, list):
+                    for nb in notebooks:
+                        title = nb.get("title") or nb.get("name")
+                        uuid = nb.get("id") or nb.get("notebook_id")
+                        if title and uuid:
+                            online_notebooks[title.strip()] = uuid.strip()
+            except Exception:
+                pass
+
+    # 2. Try structured JSON extraction from root if present
     if not online_notebooks:
-        content_list = notebook_list_res.get("content", [])
+        notebooks = notebook_list_res.get("notebooks")
+        if isinstance(notebooks, list):
+            for nb in notebooks:
+                title = nb.get("title") or nb.get("name")
+                uuid = nb.get("id") or nb.get("notebook_id")
+                if title and uuid:
+                    online_notebooks[title.strip()] = uuid.strip()
+    
+    # 3. Fallback to plaintext regex parsing
+    if not online_notebooks:
         for item in content_list:
             text = item.get("text", "")
             matches = re.findall(r'Name:\s*(.*?)\r?\nID:\s*([a-f0-9\-]{36})', text, re.IGNORECASE)
