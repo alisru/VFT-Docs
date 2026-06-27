@@ -124,14 +124,27 @@ def main():
 
     # Parse notebooks if returned in result
     # Depending on how the notebooklm-mcp server formats results, it might return them in "content"
-    content_list = notebook_list_res.get("content", [])
+    # Parse notebooks if returned in result
+    # Supports both structured JSON (notebooks) and plaintext content list
     online_notebooks = {}
-    for item in content_list:
-        text = item.get("text", "")
-        # Match 'Name: ...\nID: ...' pattern
-        matches = re.findall(r'Name:\s*(.*?)\nID:\s*([a-f0-9\-]{36})', text, re.IGNORECASE)
-        for name, uuid in matches:
-            online_notebooks[name.strip()] = uuid.strip()
+    
+    # 1. Try structured JSON extraction first
+    notebooks = notebook_list_res.get("notebooks")
+    if isinstance(notebooks, list):
+        for nb in notebooks:
+            title = nb.get("title") or nb.get("name")
+            uuid = nb.get("id") or nb.get("notebook_id")
+            if title and uuid:
+                online_notebooks[title.strip()] = uuid.strip()
+    
+    # 2. Fallback to plaintext regex parsing
+    if not online_notebooks:
+        content_list = notebook_list_res.get("content", [])
+        for item in content_list:
+            text = item.get("text", "")
+            matches = re.findall(r'Name:\s*(.*?)\r?\nID:\s*([a-f0-9\-]{36})', text, re.IGNORECASE)
+            for name, uuid in matches:
+                online_notebooks[name.strip()] = uuid.strip()
 
     print(f"Detected online notebooks: {online_notebooks}", flush=True)
 
@@ -158,14 +171,19 @@ def main():
                 print(f"Creating new notebook online: '{cat_name}'...")
                 try:
                     create_res = client.call_tool("notebook_create", {"title": cat_name})
-                    create_text = "".join([c.get("text", "") for c in create_res.get("content", [])])
-                    # Parse UUID from output format e.g. "ID: <UUID>" or "with ID: <UUID>"
-                    uuid_match = re.search(r'(?:ID|UUID):\s*([a-f0-9\-]{36})|([a-f0-9\-]{36})', create_text, re.IGNORECASE)
-                    if uuid_match:
-                        notebook_id = uuid_match.group(1) or uuid_match.group(2)
+                    # Try structured ID extraction
+                    notebook_id = create_res.get("id") or create_res.get("notebook_id")
+                    
+                    if not notebook_id:
+                        create_text = "".join([c.get("text", "") for c in create_res.get("content", [])])
+                        uuid_match = re.search(r'(?:ID|UUID):\s*([a-f0-9\-]{36})|([a-f0-9\-]{36})', create_text, re.IGNORECASE)
+                        if uuid_match:
+                            notebook_id = uuid_match.group(1) or uuid_match.group(2)
+                    
+                    if notebook_id:
                         print(f"Successfully created notebook. UUID: {notebook_id}")
                     else:
-                        print(f"Failed to extract UUID from create response: {create_text}")
+                        print(f"Failed to extract UUID from create response: {create_res}")
                         continue
                 except Exception as e:
                     print(f"Error creating notebook: {e}")
