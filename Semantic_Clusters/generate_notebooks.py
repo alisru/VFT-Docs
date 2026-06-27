@@ -6,9 +6,9 @@ def classify_by_topic(rel_path, file_name):
     path_lower = rel_path.lower()
     name_lower = file_name.lower()
     
-    # 1. Drafts, Archives, and Duplicates
+    # 1. Drafts, Archives, and Duplicates (Skip entirely)
     if "_archive" in path_lower or "duplicate" in path_lower or "temp" in name_lower or "draft" in path_lower or "backup" in path_lower:
-        return "Drafts, Archives & Duplicates"
+        return "SKIP"
         
     # 2. Unstructured Notes & Chat Logs
     if "chatlog" in path_lower or "muses" in path_lower or "drawing_board" in path_lower or "notes" in name_lower or "temporary" in name_lower or "chat logs" in path_lower:
@@ -69,13 +69,12 @@ def main():
                     
     print(f"Found {len(all_md_files)} markdown documents.", flush=True)
     
-    # Categorize files using the original semantic classifier
+    # Categorize files
     notebooks = {
         "Metaphysics & Actualism": [],
         "Information Physics & Thermodynamics": [],
         "Ontological Auditing & Geopolitics": [],
         "System Protocols & Operational Guides": [],
-        "Drafts, Archives & Duplicates": [],
         "Unstructured Notes & Chat Logs": []
     }
     
@@ -84,6 +83,8 @@ def main():
         file_name = os.path.basename(file_path)
         
         category = classify_by_topic(rel_path, file_name)
+        if category == "SKIP":
+            continue
         notebooks[category].append(rel_path)
         
     # Split any category over 300 files and map to formal names
@@ -120,7 +121,7 @@ def main():
     
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write("# The Hypothetical Notebooks Index\n\n")
-        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into 8 formal, semantic notebooks. Large categories are split logically into distinct sub-notebooks to keep every list under 300 files.\n\n")
+        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. Large categories are split logically to keep every list under 300 files.\n\n")
         
         f.write("## Notebook Breakdown Table\n\n")
         f.write("| Notebook Name | Document Count |\n|:---|:---|\n")
