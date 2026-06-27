@@ -33,7 +33,7 @@ def main():
     all_md_files = []
     
     for root, dirs, files in os.walk(workspace_root):
-        dirs[:] = [d for d in dirs if d.lower() not in ['.git', '.agent', 'bible', 'node_modules', 'venv', 'env', 'geometry of definitions']]
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d.lower() not in ['venv', 'env', 'bible', 'node_modules', 'geometry of definitions', 'scratch', 'drawing board']]
         for file in files:
             if file.lower().endswith('.md'):
                 full_path = os.path.abspath(os.path.join(root, file))
