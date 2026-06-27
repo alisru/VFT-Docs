@@ -24,6 +24,7 @@ if sys.stderr and sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8'
 def audit_duplicates():
     parser = argparse.ArgumentParser(description="Audit and optionally delete duplicate Bluesky threads.")
     parser.add_argument("--limit", type=int, default=200, help="Number of root story replies to scan (default: 200)")
+    parser.add_argument("--skip", type=int, default=0, help="Number of root story replies to skip (default: 0)")
     parser.add_argument("--delete", action="store_true", help="Actually delete the duplicate threads from Bluesky")
     args = parser.parse_args()
 
@@ -41,13 +42,13 @@ def audit_duplicates():
         print(f"Login failed: {e}")
         sys.exit(1)
 
-    print(f"Fetching up to {args.limit} root story replies (replies to external posts) from author feed...")
+    print(f"Fetching up to {args.limit + args.skip} root story replies from author feed...")
     root_replies = []
     all_posts = []  # Store all posts to resolve child replies in duplicate threads
     cursor = None
     pages_fetched = 0
     
-    while len(root_replies) < args.limit:
+    while len(root_replies) < (args.limit + args.skip):
         params = {
             'actor': client.me.did,
             'limit': 100
@@ -124,7 +125,7 @@ def audit_duplicates():
                 post_info["parent_url"] = parent_url
                 root_replies.append(post_info)
                 
-                if len(root_replies) >= args.limit:
+                if len(root_replies) >= (args.limit + args.skip):
                     break
         
         pages_fetched += 1
@@ -132,13 +133,15 @@ def audit_duplicates():
         if not cursor:
             break
             
-    print(f"Retrieved {len(root_replies)} root replies across {pages_fetched} page(s).")
+    print(f"Retrieved {len(root_replies)} root replies total across {pages_fetched} page(s).")
     
-    print(f"\nAnalyzing {len(root_replies)} root replies...")
+    # Slice target replies based on skip offset
+    target_replies = root_replies[args.skip:]
+    print(f"Skipping first {args.skip} replies. Analyzing remaining {len(target_replies)} root replies...")
 
     # Group replies by target parent_uri
     parent_map = {}
-    for r in root_replies:
+    for r in target_replies:
         if r["parent_uri"]:
             parent_map.setdefault(r["parent_uri"], []).append(r)
 

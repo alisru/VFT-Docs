@@ -4,6 +4,273 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aletheia Bot — Psochic Hegemony Control Panel & Thread Viewer</title>
+  <!-- On-Screen Console Logger for Offline/Local Diagnostics -->
+  <script>
+    (function() {
+      const logs = [];
+      let errCount = 0;
+      let warnCount = 0;
+
+      function addLog(type, message, stack) {
+        logs.push({ type, message, stack, time: new Date().toLocaleTimeString() });
+        if (type === 'error') errCount++;
+        if (type === 'warn') warnCount++;
+        updateConsoleUI();
+      }
+
+      // Intercept window errors
+      window.addEventListener('error', function(e) {
+        addLog('error', `${e.message} at ${e.filename}:${e.lineno}:${e.colno}`, e.error ? e.error.stack : '');
+      });
+
+      window.addEventListener('unhandledrejection', function(e) {
+        addLog('error', `Unhandled Promise Rejection: ${e.reason}`, e.reason ? e.reason.stack : '');
+      });
+
+      // Intercept console
+      const origError = console.error;
+      console.error = function(...args) {
+        origError.apply(console, args);
+        addLog('error', args.map(a => typeof a === 'object' ? JSON.stringify(a) : a).join(' '));
+      };
+
+      const origWarn = console.warn;
+      console.warn = function(...args) {
+        origWarn.apply(console, args);
+        addLog('warn', args.map(a => typeof a === 'object' ? JSON.stringify(a) : a).join(' '));
+      };
+
+      const origInfo = console.info || console.log;
+      console.info = function(...args) {
+        origInfo.apply(console, args);
+        addLog('info', args.map(a => typeof a === 'object' ? JSON.stringify(a) : a).join(' '));
+      };
+
+      // Create and inject CSS
+      const style = document.createElement('style');
+      style.innerHTML = `
+        #onscreen-console-toggle {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 10000;
+          background: rgba(15, 23, 42, 0.85);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: #e2e8f0;
+          padding: 8px 14px;
+          border-radius: 9999px;
+          font-family: 'Outfit', sans-serif;
+          font-size: 0.75rem;
+          font-weight: 600;
+          cursor: pointer;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #onscreen-console-toggle.has-error {
+          border-color: #ef4444;
+          box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+          background: rgba(239, 68, 68, 0.2);
+        }
+        #onscreen-console-toggle.has-warning {
+          border-color: #f59e0b;
+          box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+          background: rgba(245, 158, 11, 0.2);
+        }
+        #onscreen-console-panel {
+          position: fixed;
+          bottom: 70px;
+          right: 20px;
+          width: 520px;
+          max-width: calc(100vw - 40px);
+          height: 380px;
+          max-height: calc(100vh - 120px);
+          z-index: 9999;
+          background: rgba(11, 15, 25, 0.96);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          font-family: 'Outfit', sans-serif;
+          transform: translateY(20px) scale(0.95);
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #onscreen-console-panel.active {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+          pointer-events: all;
+        }
+        .console-hdr {
+          padding: 10px 14px;
+          background: rgba(255, 255, 255, 0.02);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .console-title {
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: #94a3b8;
+        }
+        .console-actions {
+          display: flex;
+          gap: 6px;
+        }
+        .console-btn {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          color: #cbd5e1;
+          padding: 3px 8px;
+          border-radius: 4px;
+          font-size: 0.7rem;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.2s;
+        }
+        .console-btn:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+        }
+        .console-logs {
+          flex-grow: 1;
+          padding: 12px;
+          overflow-y: auto;
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.7rem;
+          line-height: 1.4;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          background: #060911;
+        }
+        .console-log-entry {
+          padding: 5px 8px;
+          border-radius: 4px;
+          word-break: break-all;
+          white-space: pre-wrap;
+          border-left: 3px solid transparent;
+        }
+        .console-log-error {
+          background: rgba(239, 68, 68, 0.08);
+          border-left-color: #ef4444;
+          color: #fca5a5;
+        }
+        .console-log-warn {
+          background: rgba(245, 158, 11, 0.08);
+          border-left-color: #f59e0b;
+          color: #fde047;
+        }
+        .console-log-info {
+          background: rgba(59, 130, 246, 0.08);
+          border-left-color: #3b82f6;
+          color: #93c5fd;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Create DOM elements on DOMContentLoaded
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.createElement('button');
+        toggle.id = 'onscreen-console-toggle';
+        toggle.innerHTML = `⚙️ Diagnostics <span id="onscreen-console-badge" style="background: rgba(255,255,255,0.15); padding: 1px 5px; border-radius: 10px; font-size: 0.65rem;">0</span>`;
+        
+        const panel = document.createElement('div');
+        panel.id = 'onscreen-console-panel';
+        panel.innerHTML = `
+          <div class="console-hdr">
+            <span class="console-title">System Diagnostics & Logs</span>
+            <div class="console-actions">
+              <button class="console-btn" id="console-clear-btn">Clear</button>
+              <button class="console-btn" id="console-close-btn">Hide</button>
+            </div>
+          </div>
+          <div class="console-logs" id="console-log-container">
+            <div style="color: #64748b; font-style: italic; font-size: 0.7rem; padding: 4px 8px;">No issues or errors detected.</div>
+          </div>
+        `;
+
+        document.body.appendChild(toggle);
+        document.body.appendChild(panel);
+
+        toggle.addEventListener('click', function() {
+          panel.classList.toggle('active');
+        });
+
+        document.getElementById('console-close-btn').addEventListener('click', function() {
+          panel.classList.remove('active');
+        });
+
+        document.getElementById('console-clear-btn').addEventListener('click', function() {
+          logs.length = 0;
+          errCount = 0;
+          warnCount = 0;
+          updateConsoleUI();
+        });
+
+        window.updateConsoleUI = function() {
+          const badge = document.getElementById('onscreen-console-badge');
+          const container = document.getElementById('console-log-container');
+          if (!badge || !container) return;
+
+          const total = errCount + warnCount;
+          badge.innerText = total;
+
+          if (errCount > 0) {
+            toggle.className = 'has-error';
+          } else if (warnCount > 0) {
+            toggle.className = 'has-warning';
+          } else {
+            toggle.className = '';
+          }
+
+          if (logs.length === 0) {
+            container.innerHTML = `<div style="color: #64748b; font-style: italic; font-size: 0.7rem; padding: 4px 8px;">No issues or errors detected.</div>`;
+            return;
+          }
+
+          container.innerHTML = logs.map(l => `
+            <div class="console-log-entry console-log-${l.type}">
+              <div style="font-size: 0.6rem; color: rgba(255,255,255,0.3); margin-bottom: 2px;">[${l.time}] [${l.type.toUpperCase()}]</div>
+              <div>${escapeHTML(l.message)}</div>
+              ${l.stack ? `<pre style="font-size: 0.6rem; color: rgba(255,255,255,0.4); margin-top: 4px; overflow-x: auto;">${escapeHTML(l.stack)}</pre>` : ''}
+            </div>
+          `).join('');
+
+          // Auto-scroll to bottom
+          container.scrollTop = container.scrollHeight;
+        };
+
+        function escapeHTML(str) {
+          return str.replace(/[&<>'"]/g, 
+            tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+          );
+        }
+
+        // Run initial update in case logs were added before DOMContentLoaded
+        updateConsoleUI();
+      });
+
+      function updateConsoleUI() {
+        if (window.updateConsoleUI) {
+          window.updateConsoleUI();
+        }
+      }
+    })();
+  </script>
+
   <!-- Outfit Font from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,6 +405,13 @@
       color: var(--pass-green);
       padding: 0.35rem 0.75rem;
       border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .status-badge.offline {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      color: var(--reality-red);
     }
 
     .status-pulse {
@@ -147,11 +421,24 @@
       border-radius: 50%;
       box-shadow: 0 0 8px var(--pass-green);
       animation: pulse 1.8s infinite;
+      transition: all 0.3s ease;
+    }
+
+    .status-badge.offline .status-pulse {
+      background: var(--reality-red);
+      box-shadow: 0 0 8px var(--reality-red);
+      animation: pulse-offline 1.8s infinite;
     }
 
     @keyframes pulse {
       0% { transform: scale(0.95); opacity: 0.5; }
       50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 12px var(--pass-green); }
+      100% { transform: scale(0.95); opacity: 0.5; }
+    }
+
+    @keyframes pulse-offline {
+      0% { transform: scale(0.95); opacity: 0.5; }
+      50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 12px var(--reality-red); }
       100% { transform: scale(0.95); opacity: 0.5; }
     }
 
@@ -358,7 +645,7 @@
     .tab-content {
       display: none;
       animation: fadeIn 0.3s ease;
-      height: 100%;
+      min-height: 100%;
     }
 
     .tab-content.active {
@@ -635,7 +922,7 @@
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
-      height: 100%;
+      min-height: 100%;
     }
 
     .grid-canvas-container {
@@ -926,9 +1213,9 @@
     </div>
     
     <div class="header-controls">
-      <div class="status-badge">
+      <div class="status-badge" id="systemStatusBadge">
         <div class="status-pulse"></div>
-        <span>SYSTEM CALIBRATED</span>
+        <span id="systemStatusText">SERVER ONLINE</span>
       </div>
       
       <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">
@@ -1242,6 +1529,19 @@
 
     let activeStory = STORIES_REGISTRY[0];
 
+    function updateServerStatus(isOnline) {
+      const badge = document.getElementById('systemStatusBadge');
+      const text = document.getElementById('systemStatusText');
+      if (!badge || !text) return;
+      if (isOnline) {
+        badge.classList.remove('offline');
+        text.innerText = 'SERVER ONLINE';
+      } else {
+        badge.classList.add('offline');
+        text.innerText = 'SERVER OFFLINE';
+      }
+    }
+
     // Toggle Themes (Light vs Dark)
     function toggleTheme() {
       const body = document.body;
@@ -1276,21 +1576,42 @@
     }
 
     // Render Story Cards in Sidebar
-    function renderStories(stories) {
-      const listContainer = document.getElementById('storyList');
-      listContainer.innerHTML = '';
+    let currentStoriesList = [];
+    const CARD_HEIGHT = 104; // Estimated average height of a story card including flex gap
+    const WINDOW_SIZE = 100; // Keep exactly 100 cards rendered in the DOM
+    let lastStartIndex = -1;
 
-      if (stories.length === 0) {
-        listContainer.innerHTML = '<div class="empty-state"><span class="empty-icon">🔍</span><span>No stories found</span></div>';
-        return;
+    function renderStoriesListVirtual() {
+      const listContainer = document.getElementById('storyList');
+      if (!listContainer || currentStoriesList.length === 0) return;
+
+      const scrollTop = listContainer.scrollTop;
+      const containerHeight = listContainer.clientHeight;
+
+      // Estimate how many are visible and the buffer window range
+      const visibleCount = Math.ceil(containerHeight / CARD_HEIGHT);
+      const firstVisibleIndex = Math.floor(scrollTop / CARD_HEIGHT);
+      
+      let startIndex = Math.max(0, firstVisibleIndex - Math.floor((WINDOW_SIZE - visibleCount) / 2));
+      let endIndex = Math.min(currentStoriesList.length, startIndex + WINDOW_SIZE);
+      
+      if (endIndex === currentStoriesList.length) {
+        startIndex = Math.max(0, endIndex - WINDOW_SIZE);
       }
 
-      stories.forEach(story => {
-        const card = document.createElement('div');
-        card.className = `story-card ${activeStory.id === story.id ? 'active' : ''}`;
-        card.onclick = () => selectStory(story.id);
+      // Only refresh the DOM if the sliding window indices actually shift
+      if (startIndex === lastStartIndex && listContainer.innerHTML !== '') return;
+      lastStartIndex = startIndex;
 
-        const isPass = story.verdict.trim().toUpperCase().startsWith('PASS');
+      const activeId = activeStory ? activeStory.id : null;
+      const topHeight = startIndex * CARD_HEIGHT;
+      const bottomHeight = (currentStoriesList.length - endIndex) * CARD_HEIGHT;
+
+      let html = `<div style="height: ${topHeight}px; width: 100%; flex-shrink: 0; background: transparent;"></div>`;
+
+      for (let i = startIndex; i < endIndex; i++) {
+        const story = currentStoriesList[i];
+        const isPass = story.verdict && story.verdict.trim().toUpperCase().startsWith('PASS');
         const badgeClass = isPass ? 'badge-pass' : 'badge-fail';
         const badgeText = isPass ? 'PASS' : 'FAIL';
 
@@ -1299,31 +1620,75 @@
         const ru = story.real_u !== null && story.real_u !== undefined ? story.real_u.toFixed(1) : '?';
         const rpsi = story.real_psi !== null && story.real_psi !== undefined ? story.real_psi.toFixed(1) : '?';
 
-        card.innerHTML = `
-          <div class="story-title">${story.subject}</div>
-          <div class="card-status">${story.status}</div>
-          <div class="card-footer">
-            <span class="card-badge ${badgeClass}">${badgeText}</span>
-            <span class="card-coordinates">(${cu}, ${cpsi}) ➔ (${ru}, ${rpsi})</span>
+        html += `
+          <div class="story-card ${activeId === story.id ? 'active' : ''}" data-story-id="${story.id}">
+            <div class="story-title">${story.subject || 'No Subject'}</div>
+            <div class="card-status">${story.status || ''}</div>
+            <div class="card-footer">
+              <span class="card-badge ${badgeClass}">${badgeText}</span>
+              <span class="card-coordinates">(${cu}, ${cpsi}) ➔ (${ru}, ${rpsi})</span>
+            </div>
           </div>
         `;
-        listContainer.appendChild(card);
-      });
+      }
+
+      html += `<div style="height: ${bottomHeight}px; width: 100%; flex-shrink: 0; background: transparent;"></div>`;
+      listContainer.innerHTML = html;
+    }
+
+    // Render Story Cards in Sidebar
+    function renderStories(stories) {
+      const listContainer = document.getElementById('storyList');
+      if (!listContainer) return;
+
+      currentStoriesList = stories;
+      lastStartIndex = -1; // Reset window cache
+
+      if (stories.length === 0) {
+        listContainer.innerHTML = '<div class="empty-state"><span class="empty-icon">🔍</span><span>No stories found</span></div>';
+        return;
+      }
+
+      // Reset scroll position on full list loads
+      listContainer.scrollTop = 0;
+      renderStoriesListVirtual();
     }
 
     // Filter Stories
     function filterStories() {
       const query = document.getElementById('searchInput').value.toLowerCase();
       renderStories(getFilteredStories(query));
+      if (activeStory) {
+        const exists = currentStoriesList.some(s => s.id === activeStory.id);
+        if (exists) {
+          selectStory(activeStory.id);
+        }
+      }
     }
 
     // Select Story
     function selectStory(storyId) {
       activeStory = STORIES_REGISTRY.find(s => s.id === storyId);
       
-      // Update sidebar card active states preserving search, status filters, and sorting
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      renderStories(getFilteredStories(query));
+      // Auto-scroll selected card into view if it was selected programmatically (e.g. from the map click)
+      const storyIndex = currentStoriesList.findIndex(s => s.id === storyId);
+      if (storyIndex !== -1) {
+        const listContainer = document.getElementById('storyList');
+        if (listContainer) {
+          const cardTop = storyIndex * CARD_HEIGHT;
+          const cardBottom = cardTop + CARD_HEIGHT;
+          const scrollTop = listContainer.scrollTop;
+          const containerHeight = listContainer.clientHeight;
+
+          if (cardTop < scrollTop || cardBottom > (scrollTop + containerHeight)) {
+            listContainer.scrollTop = cardTop - (containerHeight / 2) + (CARD_HEIGHT / 2);
+          }
+        }
+      }
+
+      // Force refresh virtual list classes
+      lastStartIndex = -1;
+      renderStoriesListVirtual();
       
       // Update Viewports
       renderEmulator();
@@ -1775,6 +2140,9 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       renderEmulator();
       const query = document.getElementById('searchInput').value.toLowerCase();
       renderStories(getFilteredStories(query));
+      if (activeStory) {
+        selectStory(activeStory.id);
+      }
     }
 
     function setStatusFilter(filter) {
@@ -1788,6 +2156,14 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       if (activeEl) activeEl.classList.add('active');
       const query = document.getElementById('searchInput').value.toLowerCase();
       renderStories(getFilteredStories(query));
+      if (activeStory) {
+        const exists = currentStoriesList.some(s => s.id === activeStory.id);
+        if (exists) {
+          selectStory(activeStory.id);
+        } else if (currentStoriesList.length > 0) {
+          selectStory(currentStoriesList[0].id);
+        }
+      }
     }
 
     function getFilteredStories(query) {
@@ -2021,6 +2397,89 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       return [];
     }
 
+    let storiesByActor = {};
+    let storiesByOutlet = {};
+    let storiesByCategory = {};
+    let storiesByTopic = {};
+
+    function rebuildIndexMaps() {
+      storiesByActor = {};
+      storiesByOutlet = {};
+      storiesByCategory = {};
+      storiesByTopic = {};
+
+      STORIES_REGISTRY.forEach(s => {
+        // Actor
+        if (Array.isArray(s.actors)) {
+          s.actors.forEach(a => {
+            const key = a.trim().toLowerCase();
+            if (key) {
+              if (!storiesByActor[key]) storiesByActor[key] = [];
+              storiesByActor[key].push(s);
+            }
+          });
+        }
+        // Outlet
+        if (s.link) {
+          try {
+            const host = new URL(s.link).hostname.replace(/^www\./, '').toLowerCase();
+            if (host) {
+              if (!storiesByOutlet[host]) storiesByOutlet[host] = [];
+              storiesByOutlet[host].push(s);
+            }
+          } catch(e) {}
+        }
+        // Category
+        if (s.category) {
+          s.category.split(',').forEach(c => {
+            const key = c.trim().toLowerCase();
+            if (key) {
+              if (!storiesByCategory[key]) storiesByCategory[key] = [];
+              storiesByCategory[key].push(s);
+            }
+          });
+        }
+        // Topic
+        if (s.topic) {
+          s.topic.split(',').forEach(t => {
+            const key = t.trim().toLowerCase();
+            if (key) {
+              if (!storiesByTopic[key]) storiesByTopic[key] = [];
+              storiesByTopic[key].push(s);
+            }
+          });
+        }
+      });
+    }
+
+    // Render and refresh stories list based on current registry state
+    function refreshRegistryUI() {
+      const flags = JSON.parse(localStorage.getItem('aletheia_flags') || '{}');
+      STORIES_REGISTRY.forEach((s, idx) => {
+        s._origIndex = idx;
+        if (flags[s.id]) s._flag = flags[s.id];
+      });
+
+      // Build Fast Index Maps for O(1) Leaderboard Lookups
+      rebuildIndexMaps();
+
+      if (STORIES_REGISTRY.length > 0) {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        renderStories(getFilteredStories(query));
+        
+        // Keep active story selected if it still exists in the registry
+        const activeId = activeStory ? activeStory.id : null;
+        const exists = STORIES_REGISTRY.some(s => s.id === activeId);
+        if (exists) {
+          selectStory(activeId);
+        } else {
+          selectStory(STORIES_REGISTRY[0].id);
+        }
+      } else {
+        document.getElementById('storyList').innerHTML = '<div class="empty-state"><span class="empty-icon">📁</span><span>Upload story JSONs to visualize</span></div>';
+      }
+    }
+
     // App Initialization
     window.onload = async () => {
 
@@ -2038,23 +2497,59 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         }
       });
 
-      // stories_registry.js is always the source of truth (rebuilt by rebuild_registries.py).
-      // Restore flags from localStorage and assign sort indices.
-      const flags = JSON.parse(localStorage.getItem('aletheia_flags') || '{}');
-      STORIES_REGISTRY.forEach((s, idx) => {
-        s._origIndex = idx;
-        if (flags[s.id]) s._flag = flags[s.id];
-      });
+      // Initial render from statically-loaded stories_registry.js
+      refreshRegistryUI();
 
-      // Render default list
-      if (STORIES_REGISTRY.length > 0) {
-        // Enforce chronological sorting as default initial state
-        const query = document.getElementById('searchInput').value.toLowerCase();
-        renderStories(getFilteredStories(query));
-        selectStory(STORIES_REGISTRY[0].id);
-      } else {
-        document.getElementById('storyList').innerHTML = '<div class="empty-state"><span class="empty-icon">📁</span><span>Upload story JSONs to visualize</span></div>';
+      // Attach click and scroll listeners for sliding-window virtual list rendering
+      const storyListEl = document.getElementById('storyList');
+      if (storyListEl) {
+        storyListEl.addEventListener('scroll', () => {
+          renderStoriesListVirtual();
+        });
+        storyListEl.addEventListener('click', (e) => {
+          const card = e.target.closest('.story-card');
+          if (card && card.dataset.storyId) {
+            selectStory(card.dataset.storyId);
+          }
+        });
       }
+
+      async function checkRegistryUpdates() {
+        try {
+          const res = await fetch('stories_registry.js', { cache: 'no-store' });
+          if (!res.ok) {
+            updateServerStatus(false);
+            return;
+          }
+          updateServerStatus(true);
+          const text = await res.text();
+          const jsonStart = text.indexOf('[');
+          const jsonEnd = text.lastIndexOf(']');
+          if (jsonStart !== -1 && jsonEnd !== -1) {
+            const jsonStr = text.substring(jsonStart, jsonEnd + 1);
+            const freshRegistry = JSON.parse(jsonStr);
+
+            // Compare registry states to detect updates
+            const changed = freshRegistry.length !== STORIES_REGISTRY.length ||
+                            (freshRegistry.length > 0 && STORIES_REGISTRY.length > 0 && freshRegistry[0].id !== STORIES_REGISTRY[0].id);
+
+            if (changed) {
+              console.log("Aletheia Control Panel: Registry update detected! Live-reloading...");
+              STORIES_REGISTRY.length = 0;
+              STORIES_REGISTRY.push(...freshRegistry);
+              refreshRegistryUI();
+            }
+          }
+        } catch (e) {
+          updateServerStatus(false);
+        }
+      }
+
+      // Initial check
+      checkRegistryUpdates();
+
+      // Periodically check stories_registry.js for backend updates (rebuilt by rebuild_registries.py)
+      setInterval(checkRegistryUpdates, 3000);
     };
 
     function showNotificationBanner(message, type) {
@@ -2964,23 +3459,49 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         `;
       }).join('');
 
-      // Render Story Nodes with Deception Vectors
-      const nodes = validStories.map(s => {
-        const x1 = sx(s.claim_u);
-        const y1 = sy(s.claim_psi);
-        const x2 = sx(s.real_u);
-        const y2 = sy(s.real_psi);
-        const color = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
+      // Render Story Nodes with Deception Vectors (Grouped to prevent DOM bloat and visual explosions)
+      const vectorGroups = {};
+      validStories.forEach(s => {
+        const key = `${s.claim_u.toFixed(2)},${s.claim_psi.toFixed(2)}->${s.real_u.toFixed(2)},${s.real_psi.toFixed(2)}`;
+        if (!vectorGroups[key]) {
+          vectorGroups[key] = {
+            claim_u: s.claim_u,
+            claim_psi: s.claim_psi,
+            real_u: s.real_u,
+            real_psi: s.real_psi,
+            stories: []
+          };
+        }
+        vectorGroups[key].stories.push(s);
+      });
+
+      const nodes = Object.values(vectorGroups).map(g => {
+        const x1 = sx(g.claim_u);
+        const y1 = sy(g.claim_psi);
+        const x2 = sx(g.real_u);
+        const y2 = sy(g.real_psi);
+        
+        const latestStory = g.stories[0];
+        const color = latestStory.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
+        
+        // Dynamically scale stroke-width and opacity, capped to prevent visual explosion
+        const strokeWidth = Math.min(5.0, 1.0 + Math.log2(g.stories.length) * 0.8);
+        const opacity = Math.min(0.8, 0.2 + 0.12 * Math.log2(g.stories.length));
+        
+        // Build tooltip content listing stories
+        const titles = g.stories.slice(0, 5).map(s => s.subject || s.id).join('\n• ');
+        const remaining = g.stories.length > 5 ? `\n• ... and ${g.stories.length - 5} more stories` : '';
+        const tooltip = `Vector: (${g.claim_u}, ${g.claim_psi}) ➔ (${g.real_u}, ${g.real_psi})\nStory Count: ${g.stories.length}\n\nStories:\n• ${titles}${remaining}\n\n(Click to view latest details)`;
         
         return `
-          <g class="hegemony-story-node" data-story-id="${s.id}" style="cursor:pointer;">
+          <g class="hegemony-story-node" data-story-id="${latestStory.id}" style="cursor:pointer;">
             <!-- Deception Vector -->
-            <line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="var(--text-muted)" stroke-width="1.2" opacity="0.25" stroke-dasharray="2,3"/>
+            <line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="var(--text-muted)" stroke-width="${strokeWidth.toFixed(1)}" opacity="${opacity.toFixed(2)}" stroke-dasharray="2,3"/>
             <!-- Claim Point -->
-            <circle cx="${x1.toFixed(1)}" cy="${y1.toFixed(1)}" r="2" fill="var(--claim-yellow)" opacity="0.5"/>
+            <circle cx="${x1.toFixed(1)}" cy="${y1.toFixed(1)}" r="${Math.min(4.0, 2.0 + Math.log2(g.stories.length) * 0.4).toFixed(1)}" fill="var(--claim-yellow)" opacity="0.6"/>
             <!-- Reality Point -->
-            <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="4.2" fill="${color}"/>
-            <title>${s.subject}\nClaim: (${s.claim_u}, ${s.claim_psi}) -> Reality: (${s.real_u}, ${s.real_psi})\nVerdict: ${s.verdict}\n(Click to view details)</title>
+            <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="${Math.min(7.0, 4.2 + Math.log2(g.stories.length) * 0.6).toFixed(1)}" fill="${color}"/>
+            <title>${tooltip}</title>
           </g>
         `;
       }).join('');
@@ -3022,11 +3543,40 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       const sx = x => pad + ((Math.max(xMin,Math.min(xMax,x)) - xMin)/(xMax-xMin))*(W-2*pad);
       const sy = y => pad + (1-(Math.max(yMin,Math.min(yMax,y)) - yMin)/(yMax-yMin))*(H-2*pad);
       const validStories = stories.filter(s => s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined && s.claim_psi !== null && s.claim_psi !== undefined && s.real_psi !== null && s.real_psi !== undefined);
-      const dots = validStories.map(s => {
+      // Group scatter dots by exact coordinate to prevent overplotting and DOM bloat
+      const scatterGroups = {};
+      validStories.forEach(s => {
         const du = s.claim_u - s.real_u;
         const dpsi = s.real_psi - s.claim_psi;
-        const color = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
-        return `<circle cx="${sx(du).toFixed(1)}" cy="${sy(dpsi).toFixed(1)}" r="2.5" fill="${color}" opacity="0.45"/>`;
+        const key = `${du.toFixed(2)},${dpsi.toFixed(2)}`;
+        if (!scatterGroups[key]) {
+          scatterGroups[key] = {
+            du,
+            dpsi,
+            count: 0,
+            passCount: 0,
+            stories: []
+          };
+        }
+        scatterGroups[key].count++;
+        if (s.real_u > 0) scatterGroups[key].passCount++;
+        scatterGroups[key].stories.push(s);
+      });
+
+      const dots = Object.values(scatterGroups).map(g => {
+        const color = g.passCount > (g.count / 2) ? 'var(--pass-green)' : 'var(--reality-red)';
+        
+        // Dynamically scale radius and opacity by concentration, capped to prevent visual explosion
+        const r = Math.min(8.0, 2.5 + Math.log2(g.count) * 0.8);
+        const opacity = Math.min(0.85, 0.4 + 0.1 * Math.log2(g.count));
+        
+        const titles = g.stories.slice(0, 5).map(s => s.subject || s.id).join('\n• ');
+        const remaining = g.stories.length > 5 ? `\n• ... and ${g.stories.length - 5} more stories` : '';
+        const tooltip = `Δu: ${g.du.toFixed(2)}, ψ-drift: ${g.dpsi.toFixed(2)}\nStory Count: ${g.count}\n\nStories:\n• ${titles}${remaining}`;
+        
+        return `<circle cx="${sx(g.du).toFixed(1)}" cy="${sy(g.dpsi).toFixed(1)}" r="${r.toFixed(1)}" fill="${color}" opacity="${opacity.toFixed(2)}" style="cursor:pointer;" onclick="selectStory('${g.stories[0].id}')">
+          <title>${tooltip}</title>
+        </circle>`;
       }).join('');
       return `<svg viewBox="0 0 ${W} ${H}" style="width:100%; max-width:${W}px; display:block;">
         <line x1="${sx(0)}" y1="${pad}" x2="${sx(0)}" y2="${H-pad}" stroke="var(--panel-border)"/>
@@ -3073,12 +3623,41 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         dotOpacity = 0.4;
       }
       
-      const arrows = sample.map(s => {
-        // Morality (u) is horizontal (X), Will (psi) is vertical (Y)
-        const x1=sc(s.claim_u), y1=scY(s.claim_psi), x2=sc(s.real_u), y2=scY(s.real_psi);
-        const color = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
-        return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${color}" stroke-width="0.8" opacity="${lineOpacity}"/>
-                <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="1.6" fill="${color}" opacity="${dotOpacity}"/>`;
+      // Group calibration trajectories to prevent overplotting and DOM bloat
+      const trajectoryGroups = {};
+      sample.forEach(s => {
+        const key = `${s.claim_u.toFixed(2)},${s.claim_psi.toFixed(2)}->${s.real_u.toFixed(2)},${s.real_psi.toFixed(2)}`;
+        if (!trajectoryGroups[key]) {
+          trajectoryGroups[key] = {
+            claim_u: s.claim_u,
+            claim_psi: s.claim_psi,
+            real_u: s.real_u,
+            real_psi: s.real_psi,
+            count: 0,
+            stories: []
+          };
+        }
+        trajectoryGroups[key].count++;
+        trajectoryGroups[key].stories.push(s);
+      });
+
+      const arrows = Object.values(trajectoryGroups).map(g => {
+        const x1=sc(g.claim_u), y1=scY(g.claim_psi), x2=sc(g.real_u), y2=scY(g.real_psi);
+        const color = g.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
+        
+        // Scale thickness and dot size based on frequency, capped to prevent visual explosion
+        const strokeWidth = Math.min(4.0, 0.8 + Math.log2(g.count) * 0.5);
+        const r = Math.min(5.0, 1.6 + Math.log2(g.count) * 0.4);
+        
+        const titles = g.stories.slice(0, 5).map(s => s.subject || s.id).join('\n• ');
+        const remaining = g.stories.length > 5 ? `\n• ... and ${g.stories.length - 5} more stories` : '';
+        const tooltip = `Vector: (${g.claim_u}, ${g.claim_psi}) ➔ (${g.real_u}, ${g.real_psi})\nTrajectory Count: ${g.count}\n\nStories:\n• ${titles}${remaining}`;
+        
+        return `<g style="cursor:pointer;" onclick="selectStory('${g.stories[0].id}')">
+                  <line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${color}" stroke-width="${strokeWidth.toFixed(1)}" opacity="${lineOpacity}"/>
+                  <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="${r.toFixed(1)}" fill="${color}" opacity="${dotOpacity}"/>
+                  <title>${tooltip}</title>
+                </g>`;
       }).join('');
       
       return `
@@ -3248,25 +3827,17 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           const displayStyle = isOpen ? 'block' : 'none';
           const arrowTransform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
           
-          const related = stories.filter(s => {
-            if (tableType === 'actor') {
-              return Array.isArray(s.actors) && s.actors.some(a => a.toLowerCase() === r.key.toLowerCase());
-            } else if (tableType === 'outlet') {
-              try {
-                const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '');
-                return host.toLowerCase() === r.key.toLowerCase();
-              } catch(e) {
-                return false;
-              }
-            } else if (tableType === 'category') {
-              if (!s.category) return false;
-              return s.category.split(',').map(c => c.trim().toLowerCase()).includes(r.key.toLowerCase());
-            } else if (tableType === 'topic') {
-              if (!s.topic) return false;
-              return s.topic.split(',').map(t => t.trim().toLowerCase()).includes(r.key.toLowerCase());
-            }
-            return false;
-          });
+          let related = [];
+          const rKeyLower = r.key.toLowerCase();
+          if (tableType === 'actor') {
+            related = storiesByActor[rKeyLower] || [];
+          } else if (tableType === 'outlet') {
+            related = storiesByOutlet[rKeyLower] || [];
+          } else if (tableType === 'category') {
+            related = storiesByCategory[rKeyLower] || [];
+          } else if (tableType === 'topic') {
+            related = storiesByTopic[rKeyLower] || [];
+          }
 
           return `
             <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}')">

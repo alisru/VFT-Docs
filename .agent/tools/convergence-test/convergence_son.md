@@ -190,13 +190,15 @@ To maintain structural resolution and prevent coordinate collapse, **every singl
    V_Qn = sum(P_magnitudes) / (sum(P_magnitudes) + n_F)
    (If P + F = 0, V_Qn = 1.0)
 
-6. **Integrity Score (R_net)**:
+6. **Integrity Score (R_net) & 7-Tier Scale**:
    R_net = 1 / (V_Q1 * V_Q2 * V_Q3 * V_Q4 * V_Q5 * V_Q6 * V_Q7)
-   *   1.0 = structurally coherent truth
-   *   1.0 - 2.0 = minor gaps, conditionally sound
-   *   2.0 - 10.0 = meaningful distortion
-   *   10.0 - 100.0 = significant failure
-   *   100.0+ = structurally tyrannical claim
+   *   **R_net = 1.0**: Absolute Truth (perfect alignment across all planes)
+   *   **1.0 < R_net ≤ 1.5**: Trustworthy (sound reasoning, negligible blanks)
+   *   **1.5 < R_net ≤ 2.0**: Conditionally Sound (mostly sound, minor gaps/blanks)
+   *   **2.0 < R_net ≤ 5.0**: Partially Distorted (minor failures or weak plane justifications)
+   *   **5.0 < R_net ≤ 10.0**: Meaningful Distortion (significant plane failures or spin)
+   *   **10.0 < R_net ≤ 100.0**: Severe Deception (major plane contradictions/hypocrisy)
+   *   **R_net > 100.0** (or Infinity): Baseless Lies (complete structural fabrication)
 
 7. **Object State Blanking Protocol**:
    When the subject is an inanimate object, raw tool, or concept without an operator:

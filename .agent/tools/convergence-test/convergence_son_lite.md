@@ -76,7 +76,7 @@ To maintain structural resolution and prevent coordinate collapse, **every singl
 *   **Inversion Detection**: S_LE >> 0, S_GE >> 0, or S_BP >> 0 pulls u < 0 (Co-optation). O_LE >> 0, O_GE >> 0, or O_BP >> 0 pushes u > 0 (Subversion).
 *   **Ambiguity (z)**: sum of B counts (max 49). **z-profile**: [B_Q1...B_Q7].
 *   **V_Qn**: sum(P_magnitudes) / (sum(P_magnitudes) + n_F). (If P + F = 0, V_Qn = 1.0).
-*   **R_net**: 1 / (V_Q1 * ... * V_Q7). (1.0 = truth, 2-10 = distortion, 100+ = tyranny).
+*   **R_net**: 1 / (V_Q1 * ... * V_Q7). 7-Tier Scale: 1.0=Absolute Truth, 1.0-1.5=Trustworthy, 1.5-2.0=Conditionally Sound, 2.0-5.0=Partially Distorted, 5.0-10.0=Meaningful Distortion, 10.0-100.0=Severe Deception, >100.0=Baseless Lies.
 *   **Object State Blanking**: If inanimate, set Q1, Q4, Q5, Q7 = B. Q3, Q6, Q2 = P/F. (z = 28, z-profile = [7, 0, 0, 7, 7, 0, 7]).
 *   **Qqci Precision**: Run SON per plane to find (u_j, ψ_j) at depth Q (Location) → q (Sense) → c (Use) → +i (Recursion). Addressing notation: Q1q5c4 (c4 of q5 of Q1).
 

@@ -4,30 +4,39 @@ This document defines the strict output schema and logical steps sequence for Al
 
 ---
 
-## 1. The 20-Key Conversational JSON Schema & Blueprint (Macro-Enabled)
+## 1. The 29-Key Conversational JSON Schema & Blueprint (Macro-Enabled)
 
 Every story config JSON file saved under `stories/` or `stories/live/` must be a list containing a single dictionary: `[ { ... } ]`. It must contain **only** the allowed keys in standard order:
 
-1. `"subject"`: Clean title of the news story.
-2. `"link"`: The actual external news article URL.
-3. `"claim_u"`: Stated claim Morality decimal (`-2.0` to `+2.0`).
-4. `"claim_psi"`: Stated claim Will decimal (`-2.0` to `+2.0`).
-5. `"real_u"`: Actual ground-level Morality decimal (`-2.0` to `+2.0`).
-6. `"real_psi"`: Actual ground-level Will decimal (`-2.0` to `+2.0`).
-7. `"mode"`: `"reply"` or `"root"`.
-8. `"target_url"`: The target Bluesky post URL we are replying to (only when `mode` is `"reply"`).
-9. `"stated_forces"`: A dictionary of the 6 attractor $[S, O, N]$ scores for the Stated Claim.
-10. `"actual_forces"`: A dictionary of the 6 attractor $[S, O, N]$ scores for the Actual Reality.
-11. `"posts"`: A list of exactly 13 strings (the logical steps detailed below).
-12. `"rkeys"`: (Optional) List of Bluesky post keys (added automatically when live).
-13. `"post_urls"`: (Optional) List of posted thread URLs (added automatically when live).
-14. `"status"`: `"COMPLETED DRY RUN"` or `"LIVE"`.
-15. `"id"`: Clean string slug serving as the unique identifier.
-16. `"macro_event"`: (Optional) Overarching macro context/venue name, or `""` if none.
-17. `"macro_claim_u"`: (Optional) Stated claim Morality decimal for the macro context, or null if none.
-18. `"macro_claim_psi"`: (Optional) Stated claim Will decimal for the macro context, or null if none.
-19. `"macro_real_u"`: (Optional) Actual ground-level Morality decimal for the macro context, or null if none.
-20. `"macro_real_psi"`: (Optional) Actual ground-level Will decimal for the macro context, or null if none.
+1. `"thinking"`: The detailed step-by-step thinking/scratchpad calculations (Phase 1 to 5).
+2. `"subject"`: Clean title of the news story.
+3. `"link"`: The actual external news article URL.
+4. `"claim_u"`: Stated claim Morality decimal (`-2.0` to `+2.0`).
+5. `"claim_psi"`: Stated claim Will decimal (`-2.0` to `+2.0`).
+6. `"real_u"`: Actual ground-level Morality decimal (`-2.0` to `+2.0`).
+7. `"real_psi"`: Actual ground-level Will decimal (`-2.0` to `+2.0`).
+8. `"mode"`: `"reply"` or `"root"`.
+9. `"target_url"`: The target Bluesky post URL we are replying to (only when `mode` is `"reply"`).
+10. `"stated_forces"`: A dictionary of the 6 attractor $[S, O, N]$ scores for the Stated Claim.
+11. `"actual_forces"`: A dictionary of the 6 attractor $[S, O, N]$ scores for the Actual Reality.
+12. `"posts"`: A list of exactly 13 strings (the logical steps detailed below).
+13. `"rkeys"`: (Optional) List of Bluesky post keys (added automatically when live).
+14. `"post_urls"`: (Optional) List of posted thread URLs (added automatically when live).
+15. `"status"`: `"COMPLETED DRY RUN"` or `"LIVE"`.
+16. `"id"`: Clean string slug serving as the unique identifier.
+17. `"macro_event"`: (Optional) Overarching macro context/venue name, or `""` if none.
+18. `"macro_claim_u"`: (Optional) Stated claim Morality decimal for the macro context, or null if none.
+19. `"macro_claim_psi"`: (Optional) Stated claim Will decimal for the macro context, or null if none.
+20. `"macro_real_u"`: (Optional) Actual ground-level Morality decimal for the macro context, or null if none.
+21. `"macro_real_psi"`: (Optional) Actual ground-level Will decimal for the macro context, or null if none.
+22. `"claim_rnet"`: Stated claim R_net integrity score (float).
+23. `"real_rnet"`: Actual ground-level R_net integrity score (float).
+24. `"claim_z"`: Stated claim uncertainty score (int).
+25. `"real_z"`: Actual ground-level uncertainty score (int).
+26. `"claim_z_profile"`: Stated claim blank counts array of 7 integers.
+27. `"real_z_profile"`: Actual ground-level blank counts array of 7 integers.
+28. `"claim_integrity"`: Stated claim 7-tier scale integrity label (string).
+29. `"real_integrity"`: Actual ground-level 7-tier scale integrity label (string).
 
 *Note: DO NOT include `subject_slug`, `verdict`, `graph_img`, or any other custom keys in the JSON config. These are handled dynamically by the registry builder.*
 
@@ -80,6 +89,8 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 
 ### Element 3: The Verdict
 * **Wording**: Clean verdict line using exact path names: `Verdict: [PASS/FAIL] — [Path Name].` followed by a rich, 1-2 sentence explanation of the trajectory's cause.
+* **Integrity Metrics**: Append a new line showing the integrity assessment and uncertainty score:
+  `Integrity: [real_integrity] (R_net: [real_rnet], Uncertainty z: [real_z])`
 
 ### Element 4: What's Happening (Context)
 * **Wording**: Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.
@@ -92,7 +103,8 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 * **Wording**: Explain the Plane Error simply in plain language (e.g. WHAT vs WHO), and expose the forensic bait-and-switch naturally under 280 characters.
 
 ### Element 7: The Social Physics Analysis
-* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Provide a clear, direct, conversational plain-English explanation of the social physics dynamics (e.g. selfishness, power, pretext/justification, projection) without relying on clunky jargon names or loops.
+* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Provide a clear, direct, conversational plain-English explanation of the social physics dynamics (e.g. selfishness, power, pretext/justification, projection).
+* **Jargon Ban**: You are STRICTLY forbidden from using raw technical jargon labels (such as "Smart Altruistic Loop", "Smart Selfish Loop") or nesting processes using arrow characters (e.g., "A → B → C"). Instead, explain these principles (empowerment, transparency, empathy, or pretexts and projection) as natural, narrative human dynamics.
 
 ### Element 8: The Trajectory & Destination
 * **Wording**: Phrased organically: `The Trajectory: The Path of [Path Name].\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward [Outcome/Terminal Zone]` followed by a brief 1-sentence mathematical explanation. Keep the entire combined post strictly under 275 characters.
@@ -154,11 +166,11 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
       "Custom hook one-liner setting the scene.\n\nExample Story\nEvidence: stated ideal, actual effect, actual ideal",
       "Stated claim details explaining intent organically.\nStated Judgement: (+1.0, 0.0) — Good Preference",
       "Actual reality details revealing structural actions organically.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nExplanation of structural outcome.",
+      "Verdict: FAIL — The Path of Deception.\nExplanation of structural outcome.\n\nIntegrity: Severe Deception (R_net: 12.5, Uncertainty z: 4)",
       "Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.",
       "The Bright Side:\nNuance or redeeming aspect of the situation.",
       "The Breakdown & Plane Error:\nExplanation of the plane error (WHAT vs WHO).\n\nIt is a structural bait-and-switch: they claim public benefit but extract strictly for themselves.",
-      "Social Physics Analysis:\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection.",
+      "Social Physics Analysis:\nBy replacing unilateral authority with shared creative ownership, the production minimized systemic friction. Rather than using actors as tools for a rigid goal, the transparent environment empowered them to contribute their own perspectives.",
       "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",
       "The Unavoidable Truth: Core truth text.\n\nThe Unavoidable Lie: Core lie text.",
       "Alethekanon:\nAnalytical reaction and structural audit in their voice.",

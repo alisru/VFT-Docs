@@ -197,7 +197,7 @@ def main():
                     candidates = [
                         os.path.join(args.folder, f)
                         for f in os.listdir(args.folder)
-                        if f.startswith("factcheck_") and f.endswith(".json")
+                        if (f.startswith("factcheck_") or f.startswith("roundup_")) and f.endswith(".json")
                     ]
                     candidates.sort(key=safe_getmtime)
                     for full_path in candidates:
@@ -279,6 +279,20 @@ def main():
                                         print(f"  Moved successfully posted file to {dest_path}")
                                 else:
                                     print(f"  Source file was already cleaned up/moved by posting process.")
+                                
+                                # If this is a roundup, also move the companion folder (roundup_slug/) to live/
+                                if filename.startswith("roundup_"):
+                                    slug = filename[len("roundup_"):-len(".json")]
+                                    companion_dir = os.path.join(os.path.dirname(path), f"roundup_{slug}")
+                                    if os.path.isdir(companion_dir):
+                                        dest_dir = os.path.join(args.move_to, f"roundup_{slug}")
+                                        try:
+                                            if os.path.exists(dest_dir):
+                                                shutil.rmtree(dest_dir)
+                                            shutil.move(companion_dir, dest_dir)
+                                            print(f"  Moved companion folder to {dest_dir}")
+                                        except Exception as ce:
+                                            print(f"  Warning: Failed to move companion folder: {ce}")
                             except Exception as e:
                                 print(f"  Warning: Failed to move file to live: {e}")
                                 
@@ -328,7 +342,7 @@ def main():
                 candidates = [
                     os.path.join(args.folder, f)
                     for f in os.listdir(args.folder)
-                    if f.startswith("factcheck_") and f.endswith(".json")
+                    if (f.startswith("factcheck_") or f.startswith("roundup_")) and f.endswith(".json")
                 ]
                 candidates.sort(key=safe_getmtime)
                 files_to_post.extend(candidates)
@@ -413,6 +427,19 @@ def main():
                             print(f"Moved successfully posted file to {dest_path}")
                     else:
                         print(f"Source file was already cleaned up/moved by posting process.")
+                    # If this is a roundup, also move the companion folder (roundup_slug/) to live/
+                    if filename.startswith("roundup_"):
+                        slug = filename[len("roundup_"):-len(".json")]
+                        companion_dir = os.path.join(os.path.dirname(path), f"roundup_{slug}")
+                        if os.path.isdir(companion_dir):
+                            dest_dir = os.path.join(args.move_to, f"roundup_{slug}")
+                            try:
+                                if os.path.exists(dest_dir):
+                                    shutil.rmtree(dest_dir)
+                                shutil.move(companion_dir, dest_dir)
+                                print(f"Moved companion folder to {dest_dir}")
+                            except Exception as ce:
+                                print(f"Warning: Failed to move companion folder: {ce}")
                 except Exception as e:
                     print(f"Warning: Failed to move file to {args.move_to}: {e}")
                 

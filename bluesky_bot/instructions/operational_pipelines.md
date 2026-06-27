@@ -54,6 +54,13 @@ The parent (Queen) runs a parallel FIFO turn-based loop:
 
 *Each bee writes its `factcheck_[id].json` directly to `bluesky_bot/stories/darkroom/`. The parent never parses JSON from chat.*
 
+### Step 2.5: Roundup Consolidation
+Group overlapping draft stories (same event, multiple outlets) into a single 14-step roundup thread:
+```bash
+.venv\Scripts\python.exe bluesky_bot/consolidate_roundups.py
+```
+This moves constituent draft JSONs to `stories/roundup_<slug>/` and creates a consolidated `roundup_<slug>.json` thread via AI.
+
 ### Step 3: Registry & Graph Rebuild
 Recompile the indexes, registry database, and automatically draw missing trajectory graphs:
 ```bash

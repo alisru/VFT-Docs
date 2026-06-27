@@ -318,9 +318,7 @@ def post_thread(client, thread_config, live=False):
     post_rkeys = []
     post_uris = []
 
-    if mode == "reply":
-        if not target_url:
-            raise ValueError("target_url is required when mode is 'reply'.")
+    if target_url:
         if _target_already_replied(target_url):
             print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
             raise RuntimeError("ALREADY_REPLIED")
@@ -399,86 +397,86 @@ def post_thread(client, thread_config, live=False):
 
             # 5. Determine Posting References based on Mode
             is_reply = False
-            if mode == "reply":
-                print(f"Resolving target post: {target_url}...")
-                try:
-                    target_handle, rkey = parse_bsky_url(target_url)
-                    resolver = IdResolver()
-                    target_did = resolver.handle.resolve(target_handle)
+            # Commented out reply-to-user logic to avoid spam/ban issues. We always post to our feed/timeline.
+            # if mode == "reply":
+            #     print(f"Resolving target post: {target_url}...")
+            #     try:
+            #         target_handle, rkey = parse_bsky_url(target_url)
+            #         resolver = IdResolver()
+            #         target_did = resolver.handle.resolve(target_handle)
+            # 
+            #         response = client.com.atproto.repo.get_record(
+            #             models.ComAtprotoRepoGetRecord.Params(
+            #                 repo=target_did,
+            #                 collection='app.bsky.feed.post',
+            #                 rkey=rkey
+            #             )
+            #         )
+            #         target_cid = response.cid
+            #         target_uri = response.uri
+            #         target_record = response.value
+            # 
+            #         if hasattr(target_record, 'reply') and target_record.reply:
+            #             root_ref = target_record.reply.root
+            #         else:
+            #             root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+            # 
+            #         parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+            # 
+            #         print("Resolved target reference correctly.")
+            #         is_reply = True
+            #     except Exception as e:
+            #         print(f"Warning: Failed to resolve reply target ({e}). Falling back to root thread mode on our timeline...")
+            #         is_reply = False
+            # 
+            # if is_reply:
+            #     # Post first reply
+            #     print("Posting Part 1 (Reply with Link Preview or Graph Embed)...")
+            #     try:
+            #         reply = client.com.atproto.repo.create_record(
+            #             models.ComAtprotoRepoCreateRecord.Data(
+            #                 repo=client.me.did,
+            #                 collection=models.ids.AppBskyFeedPost,
+            #                 record=models.AppBskyFeedPost.Record(
+            #                     created_at=client.get_current_time_iso(),
+            #                     text=final_posts[0],
+            #                     reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+            #                     embed=first_post_embed,
+            #                     facets=facets,
+            #                     tags=tags_list,
+            #                     langs=["en"]
+            #                 )
+            #             )
+            #         )
+            #         parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
+            #         post_uris.append(reply.uri)
+            #         post_rkeys.append(reply.uri.split('/')[-1])
+            #     except Exception as e:
+            #         raise RuntimeError(f"Failed to post root reply: {e}") from e
 
-                    response = client.com.atproto.repo.get_record(
-                        models.ComAtprotoRepoGetRecord.Params(
-                            repo=target_did,
-                            collection='app.bsky.feed.post',
-                            rkey=rkey
+            # Root Mode: Post standard new stand-alone post on profile timeline
+            print("Posting Part 1 (New Root Thread with Link Preview or Graph Embed)...")
+            try:
+                root_post = client.com.atproto.repo.create_record(
+                    models.ComAtprotoRepoCreateRecord.Data(
+                        repo=client.me.did,
+                        collection=models.ids.AppBskyFeedPost,
+                        record=models.AppBskyFeedPost.Record(
+                            created_at=client.get_current_time_iso(),
+                            text=final_posts[0],
+                            embed=first_post_embed,
+                            facets=facets,
+                            tags=tags_list,
+                            langs=["en"]
                         )
                     )
-                    target_cid = response.cid
-                    target_uri = response.uri
-                    target_record = response.value
-
-                    if hasattr(target_record, 'reply') and target_record.reply:
-                        root_ref = target_record.reply.root
-                    else:
-                        root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
-
-                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
-
-                    print("Resolved target reference correctly.")
-                    is_reply = True
-                except Exception as e:
-                    print(f"Warning: Failed to resolve reply target ({e}). Falling back to root thread mode on our timeline...")
-                    is_reply = False
-
-            if is_reply:
-                # Post first reply
-                print("Posting Part 1 (Reply with Link Preview or Graph Embed)...")
-                try:
-                    reply = client.com.atproto.repo.create_record(
-                        models.ComAtprotoRepoCreateRecord.Data(
-                            repo=client.me.did,
-                            collection=models.ids.AppBskyFeedPost,
-                            record=models.AppBskyFeedPost.Record(
-                                created_at=client.get_current_time_iso(),
-                                text=final_posts[0],
-                                reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
-                                embed=first_post_embed,
-                                facets=facets,
-                                tags=tags_list,
-                                langs=["en"]
-                            )
-                        )
-                    )
-                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
-                    post_uris.append(reply.uri)
-                    post_rkeys.append(reply.uri.split('/')[-1])
-                except Exception as e:
-                    raise RuntimeError(f"Failed to post root reply: {e}") from e
-
-            else:
-                # Root Mode: Post standard new stand-alone post on profile timeline
-                print("Posting Part 1 (New Root Thread with Link Preview or Graph Embed)...")
-                try:
-                    root_post = client.com.atproto.repo.create_record(
-                        models.ComAtprotoRepoCreateRecord.Data(
-                            repo=client.me.did,
-                            collection=models.ids.AppBskyFeedPost,
-                            record=models.AppBskyFeedPost.Record(
-                                created_at=client.get_current_time_iso(),
-                                text=final_posts[0],
-                                embed=first_post_embed,
-                                facets=facets,
-                                tags=tags_list,
-                                langs=["en"]
-                            )
-                        )
-                    )
-                    root_ref = models.ComAtprotoRepoStrongRef.Main(cid=root_post.cid, uri=root_post.uri)
-                    parent_ref = root_ref
-                    post_uris.append(root_post.uri)
-                    post_rkeys.append(root_post.uri.split('/')[-1])
-                except Exception as e:
-                    raise RuntimeError(f"Failed to post root thread: {e}") from e
+                )
+                root_ref = models.ComAtprotoRepoStrongRef.Main(cid=root_post.cid, uri=root_post.uri)
+                parent_ref = root_ref
+                post_uris.append(root_post.uri)
+                post_rkeys.append(root_post.uri.split('/')[-1])
+            except Exception as e:
+                raise RuntimeError(f"Failed to post root thread: {e}") from e
 
             # 6. Post subsequent thread parts sequentially
             for i, text in enumerate(final_posts[1:], start=2):

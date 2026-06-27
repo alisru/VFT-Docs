@@ -94,6 +94,7 @@ parser.add_argument("--prefer", type=str, default="", help=(
 parser.add_argument("--category", type=str, default="all", help="Category (or comma-separated categories) of news to harvest (default: all)")
 parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
 parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting")
+parser.add_argument("--enabled-feeds", type=str, default=None, help="Comma-separated feed names (or URLs) to enable for harvesting")
 
 args = parser.parse_args()
 
@@ -280,6 +281,7 @@ load_dynamic_banned_domains()
 print("Loading historical evaluations database to prevent duplicate judgements...")
 seen_historical_urls = set()
 seen_historical_ids = set()
+seen_historical_subjects = set()
 historical_domain_counts = {}
 
 # Load persistent harvested history file
@@ -290,7 +292,7 @@ if os.path.exists(harvested_history_path):
             history_data = json.load(f)
             if isinstance(history_data, list):
                 for url in history_data:
-                    seen_historical_urls.add(url.strip().lower())
+                    seen_historical_urls.add(normalize_url(url))
                 print(f"Loaded {len(history_data)} URLs from persistent harvested history.")
     except Exception as e:
         print(f"Warning: Failed to load harvested history: {e}")
@@ -314,7 +316,7 @@ for scan_dir in scan_dirs:
                 
                 url = config.get("link") or config.get("target_url")
                 if url:
-                    url_clean = url.strip().lower()
+                    url_clean = normalize_url(url)
                     seen_historical_urls.add(url_clean)
                     try:
                         host = urllib.parse.urlparse(url_clean).hostname
@@ -327,6 +329,9 @@ for scan_dir in scan_dirs:
                 story_id = config.get("id")
                 if story_id:
                     seen_historical_ids.add(story_id.strip().lower())
+                subject = config.get("subject")
+                if subject:
+                    seen_historical_subjects.add(subject.strip().lower())
         except Exception as e:
             print(f"Warning: Failed to load historical evaluations from {scan_dir}: {e}")
 
@@ -336,6 +341,7 @@ print(f"Loaded {len(seen_historical_urls)} historical URLs and {len(seen_histori
 existing_queue = []
 existing_queue_urls = set()
 existing_queue_ids = set()
+existing_queue_subjects = set()
 
 queue_path = os.path.join(bot_dir, 'harvested_candidates.json')
 if os.path.exists(queue_path):
@@ -345,11 +351,11 @@ if os.path.exists(queue_path):
             if isinstance(data, list):
                 for c in data:
                     url = c.get("url")
-                    if url and url.strip().lower() in seen_historical_urls:
+                    if url and normalize_url(url) in seen_historical_urls:
                         continue
                     existing_queue.append(c)
                     if url:
-                        existing_queue_urls.add(url.strip().lower())
+                        existing_queue_urls.add(normalize_url(url))
                     
                     text = c.get("text", "")
                     if text:
@@ -357,9 +363,12 @@ if os.path.exists(queue_path):
                             claim_part = text.split("\n\nActual Article Body:\n")[0]
                             claim_part = claim_part.replace("Stated Claim / Post Context:\n", "")
                             subj = claim_part[:30]
+                            title = claim_part.strip().lower()
                         else:
                             subj = text[:30]
+                            title = text.split("\n\n")[0].strip().lower()
                         existing_queue_ids.add(subj.lower().replace(" ", "_").replace("/", "_"))
+                        existing_queue_subjects.add(title)
                         
         print(f"Loaded {len(existing_queue)} existing pending candidates from queue.")
     except Exception as e:
@@ -374,16 +383,31 @@ TARGET_BSKY = max(0, TARGET_BSKY - existing_bsky_count)
 print(f"Top-up targets: RSS={TARGET_RSS} (needed), Bluesky={TARGET_BSKY} (needed)")
 
 # --- 1. DYNAMIC STORY-LEVEL DE-DUPLICATION HEURISTIC ---
+# Deduplication at harvest is intentionally narrow: only blocks the exact same article
+# from being evaluated twice (same URL, same title, same slug). Topic-level grouping
+# of different outlets covering the same event is handled downstream by consolidate_roundups.py.
 seen_stories_keywords_list = []
 
 def is_duplicate_story(text, url, check_batch=True):
     text_lower = text.lower()
-    url_lower = url.strip().lower()
-    
+    url_lower = normalize_url(url)
+
     if url_lower in seen_historical_urls:
         print(f"  -> Historical duplicate URL detected! Skipping: {url}")
         return True
-        
+
+    # Title deduplication: split text body (starts with the title) to check duplicate subjects
+    title = text.split("\n\n")[0].strip().lower()
+    if "stated claim / post context:\n" in title:
+        title = title.replace("stated claim / post context:\n", "").strip()
+
+    if title in seen_historical_subjects:
+        print(f"  -> Historical duplicate subject/title detected! Skipping: {title}")
+        return True
+    if title in existing_queue_subjects:
+        print(f"  -> Duplicate subject/title in pending queue detected! Skipping: {title}")
+        return True
+
     subject_approx = text[:30].lower().replace(" ", "_").replace("/", "_")
     if subject_approx in seen_historical_ids:
         print(f"  -> Historical duplicate Story ID detected! Skipping: {subject_approx}")
@@ -395,6 +419,10 @@ def is_duplicate_story(text, url, check_batch=True):
     if subject_approx in existing_queue_ids:
         print(f"  -> Duplicate Story ID in pending queue detected! Skipping: {subject_approx}")
         return True
+
+    # Mark as seen in this run to prevent the same story from different feeds being queued twice
+    seen_historical_urls.add(url_lower)
+    seen_historical_subjects.add(title)
 
     return False
 
@@ -523,6 +551,14 @@ rss_feeds = [
     {"name": "ABC News Australia Good News", "url": "https://www.abc.net.au/news/feed/101830674/rss.xml", "categories": ["uplifting", "general"]},
     {"name": "HuffPost Good News", "url": "https://www.huffpost.com/section/good-news/feed", "categories": ["uplifting", "general"]}
 ]
+
+if getattr(args, 'enabled_feeds', None):
+    enabled_names = [f.strip().lower() for f in args.enabled_feeds.split(",") if f.strip()]
+    filtered_feeds = []
+    for feed in rss_feeds:
+        if feed["name"].lower() in enabled_names or feed["url"].lower() in enabled_names:
+            filtered_feeds.append(feed)
+    rss_feeds = filtered_feeds
 
 rss_candidates = []
 
@@ -693,7 +729,7 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
             cands.append({
                 "url": article_url,
                 "target_url": post_url,
-                "mode": "reply",
+                "mode": "root",
                 "text": text,
                 "subject": text[:30].strip() + "..."
             })
@@ -783,7 +819,7 @@ if TARGET_BSKY > 0:
                         bsky_candidates.append({
                             "url": article_url,
                             "target_url": post_url,
-                            "mode": "reply",
+                            "mode": "root",
                             "text": text,
                             "subject": text[:30].strip() + "..."
                         })
@@ -835,7 +871,7 @@ if TARGET_BSKY > 0:
                             bsky_candidates.append({
                                 "url": article_url,
                                 "target_url": post_url,
-                                "mode": "reply",
+                                "mode": "root",
                                 "text": text,
                                 "subject": text[:30].strip() + "..."
                             })
@@ -934,11 +970,11 @@ if successful_final:
         except Exception:
             pass
             
-    existing_history_set = set(u.strip().lower() for u in history_urls)
+    existing_history_set = set(normalize_url(u) for u in history_urls)
     new_added_count = 0
     for c in successful_final:
         url = c.get("url")
-        if url and url.strip().lower() not in existing_history_set:
+        if url and normalize_url(url) not in existing_history_set:
             history_urls.append(url)
             new_added_count += 1
             

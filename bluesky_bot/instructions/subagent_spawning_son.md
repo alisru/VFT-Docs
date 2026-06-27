@@ -57,16 +57,22 @@ These files contain all the rules and schemas you need. You will not need to re-
 You will receive a single candidate story as a JSON object. For each one:
 
 1. **Convergence Evaluation**: You MUST execute and explicitly write down the full 6-Phase Convergence Test in your thinking block using this exact structure before writing the JSON:
-    - **Phase 1: Structural Scan**: Run the 7 Planes scan (WHO, WHAT, WHERE, WHY, HOW, CAUSE, EFFECT) scoring each as PASS (1.0), PARTIAL (fractional), or FAIL (0.0).
+    - **Phase 1: Structural Scan**: Run the 7 Planes scan (WHO, WHAT, WHERE, WHY, HOW, CAUSE, EFFECT) scoring each as PASS (1.0), PARTIAL (fractional), or FAIL (0.0). Count the blanks to find $z$ (uncertainty score) and compile the $z$-profile (7-number array of blank counts `[B_Q1, B_Q2, B_Q3, B_Q4, B_Q5, B_Q6, B_Q7]`) for both stated and actual profiles.
     - **Phase 2: Vector Verification (SON Method)**: Assess and write down the full $[S, O, N]$ triple (Support, Oppose, Neutral) on the $[0.0, 2.0]$ scale for all six attractors (18 variables in total) for BOTH Stated Reality and Actual Reality. Compute the final coordinate $\vec{C} = (u, \psi)$ step-by-step: calculate $u$ by summing and normalizing across all active forces, and calculate $\psi$ using the **Separated Will (Like-Type) Protocol** (comparing positive and negative Will force magnitudes, identifying the dominant Will direction, and calculating $\psi$ strictly within that dominant group normalized by total weight or dominant group weight). Show all mathematical steps.
-    - **Phase 3: Source Integrity**: Compute the Hypocrisy Gap $\Delta H = \|\vec{C}_{stated} - \vec{C}_{actual}\|$ step-by-step and output the pass/fail result.
+    - **Phase 3: Source Integrity**: Compute the Hypocrisy Gap $\Delta H = \|\vec{C}_{stated} - \vec{C}_{actual}\|$ step-by-step. Calculate the stated/claim $R_{net}$ and actual/real $R_{net}$ integrity scores using the $V_{Qn}$ plane magnitudes, and map each to the 7-Tier Scale of Integrity (Absolute Truth, Trustworthy, Conditionally Sound, Partially Distorted, Meaningful Distortion, Severe Deception, Baseless Lies).
     - **Phase 4: Forensic Stress Test**: State whether Fake Maximiser and Helxis (Bait & Switch) are detected with reasoning.
     - **Phase 5: Verdict**: Determine the exit/entry trajectory, path name, and final coordinates.
     - **Phase 6: Macro Context Scan**: Identify if this candidate news story exists within a distinct overarching macro-event context (e.g. an announcement happening at a political photo-op/rally, or a sports title win happening at a White House PR event, or a specific policy rollout/enforcement operation within a broader administration campaign). If so, identify the name of the macro event and evaluate its stated and actual coordinates (using the standard VFT/SON convergence math or estimating them conceptually). If not, explicitly state that no distinct macro context is present.
 2. **Format the 13-Step Thread**: Construct exactly 13 posts following `thread_formatting_son.md`. Every post must target under 280 characters (hard limit of 299). The Hook (Element 0) MUST open with a punchy, human editorial one-liner. No dry prefixes.
 3. **Write to Disk**: Write the completed story config as a valid JSON file directly to:
    `e:\Vector Field Theory\VFT Docs\bluesky_bot\stories\darkroom\factcheck_[id].json`
-   Use `write_to_file` with Overwrite set to true. The JSON must be a list containing a single dict with the 20-key macro-enabled schema (including `"stated_forces"` and `"actual_forces"` populated with the 18 variables you scored, plus `"macro_event"`, `"macro_claim_u"`, `"macro_claim_psi"`, `"macro_real_u"`, and `"macro_real_psi"`) and `"status": "COMPLETED DRY RUN"`.
+   Use `write_to_file` with Overwrite set to true. The JSON must be a list containing a single dict with the macro-enabled schema including:
+   - `"stated_forces"` and `"actual_forces"` (populated with the 18 variables you scored)
+   - `"macro_event"`, `"macro_claim_u"`, `"macro_claim_psi"`, `"macro_real_u"`, `"macro_real_psi"`
+   - `"claim_rnet"`, `"real_rnet"`, `"claim_z"`, `"real_z"`
+   - `"claim_z_profile"`, `"real_z_profile"` (the 7-number array of blank counts `[B_Q1, B_Q2, B_Q3, B_Q4, B_Q5, B_Q6, B_Q7]`)
+   - `"claim_integrity"`, `"real_integrity"` (the text labels from the 7-Tier Scale of Integrity)
+   - `"status": "COMPLETED DRY RUN"`
 4. **Return 1**: Your entire response message MUST be the single character `1`. No explanation, no confirmation, no extra text.
 
 #### Core Constraints:

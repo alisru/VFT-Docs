@@ -572,5 +572,45 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Nested Telemetry Visuals**: Matplotlib successfully generated dual-box nested frame graphs for all 5 stories with 180-degree rotation (perceptual inversion) when the macro actual is selfish.
 - **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Justice. Restoring context-in-context nested frame rendering to ensure downstream analyses preserve systemic context.
 
+### [2026-06-26] Intent 70: Token-Based Grouping and Priority Sorting for Roundup Consolidation
+*Status: Completed*
+- **Token-Based Grouping**: Replaced the actor-overlap and strict keyword stem overlap grouping passes in `consolidate_roundups.py` with filename token similarity matching. Specific proper nouns (like `burnham`, `brexit`, `starmer`) are extracted by filtering against a blacklisted set of generic words (`GENERIC_WORDS`), successfully clustering related stories across multiple draft configurations.
+- **Priority-Based Sorting**: Added a priority scoring function (`sort_priority()`) inside `consolidate_roundups.py` to prioritize important events like resignations and speeches (`score += 10` for resignation, `score += 5` for speech) with the modification time (`mtime`) as a tiebreaker.
+- **Deduplication Execution**: Executed `consolidate_roundups.py` and `rebuild_registries.py` live. It successfully deduplicated 9 Burnham files down to a single representative file, 2 Brexit files down to 1, and 5 Starmer files down to the single most relevant resignation speech file, moving all redundant intra-outlet drafts to `duplicate_discard/` and auto-generating the `roundup_trump` roundup.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive value of reducing queue redundancy and isolating key narratives.
+
+### [2026-06-26] Intent 71: UI and CLI Support for Additional Context and Custom Model Sequences
+*Status: Completed*
+- **CLI Context Injection**: Added `--context` and `--model-sequence` parameters to `google_ai_studio_one_shot.py`. Additional context/background knowledge is appended to the system instructions, and a custom comma-separated model sequence can be supplied to override the default model and fallback list.
+- **GUI Model Sequence Builder**: Added a dynamic checklist of models inside the Aletheia Launcher (`AletheiaLauncher.pyw`). Checking/unchecking models updates the active sequence in order of selection (e.g. `gemini-3.5-flash -> gemini-2.5-flash`).
+- **GUI Context Input Area**: Integrated a scrollable multi-line text input field inside the launcher for entering "Additional Context" parameters dynamically.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive justice. Empowering bot operators with fine-grained context injection and model routing capabilities.
+
+### [2026-06-26] Intent 72: Manual Test Run of 6-Attractor SON Model on UK Heatwave Record
+*Status: Completed*
+- **Tested convergence_son_lite.md**: Manually evaluated the UK June 2026 record temperature (36.1°C in Gosport, Hampshire) under the 6-Attractor force equations and 7-plane structural scan.
+- **Generated Trajectory Graph**: Created a script in `drawing_board` to generate the dual-box nested context-in-context trajectory graph at `bluesky_bot/graph_png/uk-heatwave-temperature-record_graph.png`.
+- **Registry Integration**: Copied the JSON configuration `factcheck_uk-heatwave-temperature-record.json` into `bluesky_bot/stories/` and executed `rebuild_registries_son.py` to compile it successfully into the main `stories_registry.js` index.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Justice. Validated the new 6-Attractor SON math and nested framing layout on a real-world meteorological record.
+
+
+### [2026-06-26] Intent 73: GUI Drag-and-Drop Model Sequence Ordering & Vertex Paid API Support
+*Status: Completed*
+- **Drag-and-Drop Listbox**: Replaced the static checkbox order sequence logic with a custom interactive `DragDropListbox` widget in `AletheiaLauncher.pyw`. Clicking model checkboxes dynamically inserts/removes models from the active listbox sequence, where items can be dragged and dropped to define the exact fallback order.
+- **Vertex Paid API Support**: Added `"vertex:gemini-3.1-flash-lite"` to the GUI's model fallback available options and default selected list, ensuring operators can manage the paid API within the custom sequence.
+- **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive justice. Optimizing Operator UI ergonomics and integrating paid Vertex fallback capabilities.
+
+### [2026-06-26] Intent 74: Thinking Scratchpad Integration at Index 0 for One-Shot API calls
+*Status: Completed*
+- **One-Shot Thinking Integration**: Inserted `"thinking"` block as item 0 in the AI Studio prompt schema format and updated parsing mappings to shift all subsequent indices (+1 index shift). This gives the model a dedicated autoregressive reasoning space before it has to commit to coordinates and posts.
+- **Normalise JSON Schema**: Updated `thread_formatting_son.md` to document `"thinking"` as key 1 in the standard 29-key story configuration schema saved on disk.
+- **Morality-Will Audit**: (υ=+1.8, ψ=+1.8) -> Greater Good & Productive Justice. Resolving coordinate collapse and reasoning quality issues on batch runs by giving the model a dedicated compute-time scratchpad before outputting numerical results.
+
+### [2026-06-26] Intent 75: Dynamic Fallback Model Synchronization between Launcher and Bot
+*Status: Completed*
+- **Globalized Fallbacks**: Defined `DEFAULT_FALLBACKS` globally in `google_ai_studio_one_shot.py` so it can be exported and imported as a module-level variable.
+- **Dynamic GUI Population**: Updated `AletheiaLauncher.pyw` to import `DEFAULT_FALLBACKS` from `google_ai_studio_one_shot.py` at startup, auto-populating checkboxes and the Drag-and-Drop sequence listbox dynamically. Added a robust exception fallback to hardcoded lists if the import fails.
+- **Improved UX Layout**: Expanded the fallback listbox height constraint from 7 to 9 in `AletheiaLauncher.pyw` to fit the newly synchronized models.
+- **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Justice. Eliminating source duplication and guaranteeing that the operator interface always reflects the exact model fallbacks supported by the posting engine.
 
 

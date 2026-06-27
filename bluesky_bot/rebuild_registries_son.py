@@ -367,9 +367,12 @@ def rebuild_registries():
             "posts":     cfg.get("posts"),
             "created_at": created_at,
         }
+        # CRITICAL WARNING: DO NOT remove "posts" or other metadata from this list to optimize file size.
+        # The control panel UI relies entirely on "posts" to render the thread emulator.
         for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "category", "topic", "event",
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
-                  "stated_forces", "actual_forces", "grounding_url"]:
+                  "stated_forces", "actual_forces", "grounding_url", "claim_rnet", "real_rnet",
+                  "claim_z", "real_z", "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 

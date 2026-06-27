@@ -9,81 +9,56 @@
 
 ---
 
-## Function
-The Four Quadrants & 16 Point Attractors model maps the moral and volitional topography of consciousness. By plotting moral beneficiaries (the υ axis) and volitional modes of action (the ψ axis) as coordinate fields, it provides a geometric landscape to analyze, categorize, and predict the behavior of ideas, actors, and systems within defined hegemonic gravity wells.
-
-## Construction
-The coordinate space is constructed by the intersection of the **Moral Axis (υ)** and the **Will Axis (ψ)**. This intersection creates a Cartesian moral topography divided into four primary quadrants, anchored by six fundamental attractor points (gravity wells) that pull systems toward their focal coordinate coordinates.
-
-### Attributes
-* **Moral Axis (υ)**: Tracks "Who benefits?" from Systemic Justice ($+2.0$, benefitting all) to Tyranny/Pure Extraction ($-2.0$, benefitting only the self).
-* **Will Axis (ψ)**: Tracks "Mode of action" from Proactive Will ($+2.0$, actively creating systemic value) to Suppressive/Destructive Will ($-2.0$, actively destroying or extracting value).
-* **The Center Point (0,0)**: Not an attractor, but a mass accumulation point. As general knowledge increases, it creates a centripetal gravitational pull toward the center.
-* **Worldview Scope ($c^2$)**: Modulates the effective distance and curvature of the field near each attractor.
-* **Well Depth ($\Phi$)**: Quantified as $\Phi_{\text{min}} = -\log P_{\text{max}}$. Deeper wells indicate stronger attractors.
+## 1. The Moral Topography (Function & Purpose)
+The **Four Quadrants & 16 Point Attractors** concept maps the moral and volitional topography of consciousness. By plotting moral beneficiaries (the υ axis) and volitional modes of action (the ψ axis) as Cartesian coordinate fields, it provides a geometric landscape to locate, analyze, and predict the behavior of ideas, actors, and systems. Rather than categorizing historical ideologies by their superficial labels, this model reveals the underlying energetic trajectories pulling them toward stable attractor states.
 
 ---
 
-## The Four Primary Quadrants & Attractors
+## 2. Axis Definitions & Attractor Anchors (Construction)
+The hegemonic coordinate system is constructed by the perpendicular intersection of two primary axes:
 
-### 1. The Greater Good ($+υ, +\psi$)
-* **Attractor Anchor ($A_1$)**: $(+1.0, +1.0)$
-* **Physical Analogue**: Asymptotic flat space.
-* **Philosophical Match**: Aristotle's *Eudaimonia* (Virtuous man), Aquinas' *Synderesis*, Rawls' communicative action. It represents active, generative value creation for all.
+* **The Morality Axis (υ)**: Calibrates "Who benefits?" from an action. It spans from Systemic Justice ($+2.0$, benefitting all beings) to Tyranny/Pure Extraction ($-2.0$, extracting value for the sole benefit of the self).
+* **The Will Axis (ψ)**: Measures "Mode of action." It spans from Proactive Will ($+2.0$, actively constructing and generating systemic value) to Suppressive Will ($-2.0$, restricting, preventing, or actively destroying structure).
 
-### 2. The Lesser Good ($+υ, -\psi$)
-* **Attractor Anchor ($A_2$)**: $(+1.0, -1.0)$
-* **Physical Analogue**: Stable equilibrium.
-* **Philosophical Match**: Epicurus' *Ataraxia* (undisturbedness) and Cynical Diogenes' barrel. It represents stable, moral passivity—correctly directed but low energy.
+### The Attractor Gravity Wells
+Within this coordinate space exist six primary gravity wells (attractor states) into which willpower and system trajectories naturally terminate:
 
-### 3. The Greatest Lie ($-υ, +\psi$)
-* **Attractor Anchor ($A_3$)**: $(-1.0, +1.0)$
-* **Physical Analogue**: Unstable maximum.
-* **Philosophical Match**: Sophistry, Foucault's power/knowledge capture, and Jungian Persona. Characterized by high proactive energy representing self-extraction as the collective good.
+1. **The Greater Good ($A_1$) [Coordinate: $+1.0, +1.0$]**: Analogous to asymptotic flat space. It is characterized by active, generative value creation for the benefit of all (corresponding to Aristotle's *Eudaimonia*).
+2. **The Lesser Good ($A_2$) [Coordinate: $+1.0, -1.0$]**: Analogous to stable equilibrium. It represents moral passivity—correctly oriented toward the collective benefit, but low in active energy (corresponding to Epicurean *Ataraxia*).
+3. **The Greatest Lie ($A_3$) [Coordinate: $-1.0, +1.0$]**: Analogous to an unstable maximum. It represents proactive energy serving extractive self-interest while utilizing the language or appearance of universal benefit (corresponding to historical Sophistry).
+4. **The Greater Evil ($A_4$) [Coordinate: $-1.0, -1.0$]**: Analogous to a gravitational singularity. It represents active, suppressive energy directed toward pure self-extraction and systemic collapse (corresponding to Tyranny).
+5. **The Lesser of Two Evils ($A_5$) [Coordinate: $+1.0, +0.5$]**.
+6. **The Greater of Two Evils ($A_6$) [Coordinate: $-1.0, +0.5$]**.
 
-### 4. The Greater Evil ($-υ, -\psi$)
-* **Attractor Anchor ($A_4$)**: $(-1.0, -1.0)$
-* **Physical Analogue**: Singularity.
-* **Philosophical Match**: Active tyranny, systemic collapse, and Jungian Shadow.
-
-### Intermediate Attractors
-* **The Lesser of Two Evils ($A_5$)**: $(+1.0, +0.5)$
-* **The Greater of Two Evils ($A_6$)**: $(-1.0, +0.5)$
+The center of the grid $(0, 0)$ is not an attractor but a mass accumulation point. As general knowledge in a system increases, it generates a centripetal gravitational pull that draws neutral vectors toward this origin.
 
 ---
 
-## Methods
+## 3. Topographical Mechanics (Methods of the Field)
 
 ### Coordinate Projection
-* **Input**: Action, actor, or idea statement.
-* **Calls**: [Concept_The_Hegemonikon].
-* **Procedure**:
-  1. Determine the beneficiary profile to establish the moral coordinate ($v \in [-2.0, +2.0]$).
-  2. Determine the mode of energy application to establish the volitional coordinate ($\psi \in [-2.0, +2.0]$).
-  3. Plot the coordinate $(v, \psi)$ on the Hegemonic Grid.
-* **Output**: Precise location within one of the four quadrants.
+Any concept, policy, or actor can be projected onto the grid by analyzing its functional attributes. The analyst isolates the primary beneficiary of the action to determine its υ coordinate, and measures the method of energy application to determine its ψ coordinate. The resulting Cartesian pair $(υ, ψ)$ visually locates the entity within the hegemonic landscape, exposing its true character.
 
-### Attractor Basin Competition (SON Convergence)
-* **Input**: Competing vector forces in a field.
-* **Calls**: [Concept_Worldview_Construction_Math].
-* **Procedure**:
-  1. Calculate the vector force equation for each attractor basin.
-  2. If gravity wells compete destructively, the total gradient cancels:
-     $$\vec{F}_{\text{total}} \approx 0$$
-  3. Detect local coordinate curvature to identify stability basins.
-* **Output**: The trajectory path and equilibrium state of the system.
+### Multi-Attractor Force Competition (SON Method)
+In a complex system, multiple gravity wells compete for control of the possibility space. The total force pulling a system's trajectory is the sum of the vector gradients of all active basins:
+$$\vec{F}_{\text{total}} = \sum \vec{F}_i$$
 
-## Boundary
-The Psochic Hegemony grid operates under the assumption of field continuity. If a system undergoes a phase transition into absolute chaotic noise (where entropy cancels all vector fields), the coordinate space collapses and gravity wells cease to pull.
+If competing gravity wells are evenly matched, their gradients cancel out ($\vec{F}_{\text{total}} \approx 0$), resulting in systemic stagnation. Resolving this state requires external coordination to tip the system into the basin of a dominant attractor.
 
-## Known Failure Modes
-* **Perceptual Inversion (The 0.5 Zone)**: Near the self-end of the spectrum, the ego distorts perception. Extraction feels like strength, service feels like burden, and cruelty feels like protection. This creates a false self-report where a $-υ$ actor believes they occupy a $+υ$ coordinate.
-* **Anarchy Collapse**: Movement into the extreme negative quadrant ($-\psi, -υ$) collapses the collective agent's ability to resist entropy, resulting in a systemic singularity from which no information can escape.
+---
+
+## 4. Boundaries & Perceptual Distortions
+
+### The 0.5 Ring (Perceptual Inversion)
+As a trajectory approaches the extractive end of the moral axis ($υ < -0.5$), the ego introduces severe perceptual distortion. Because the actor's worldview is closed to external feedback, extraction is perceived as strength, service is seen as a burden, and cruelty is rationalized as protection. This inversion prevents the actor from reporting their coordinates accurately, mistaking a $-υ$ position for a $+υ$ state.
+
+### Anarchy and Singularity Collapse
+If a system's trajectory enters the extreme negative quadrant ($-υ, -\psi$), the collective agent loses its capacity to resist entropic decay. The system collapses into the gravity well of the Greater Evil attractor, terminating in a social and logical singularity from which no coherent information can escape.
 
 ---
 
 ## Cross-references
-* **Axiom Source Papers**:
+* **Source Paragraphs**:
   * [Morality and Cellular Survival gpt chatlog.md](file:///E:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/io/Morality%20and%20Cellular%20Survival%20gpt%20chatlog.md)
   * [The Multi-Attractor Vector Force Equilibrium (SON) Method.md](file:///E:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Actualism/Judgement/The%20Multi-Attractor%20Vector%20Force%20Equilibrium%20(SON)%20Method.md)
   * [The Field Equations of Judgment.md](file:///E:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Actualism/Judgement/The%20Field%20Equations%20of%20Judgment.md)

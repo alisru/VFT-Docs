@@ -1,36 +1,30 @@
-# Implementation Plan: 7-Agent Parallel Plane Review
+# Implementation Plan: Hegemonic Audit Remediation (Pauline Hanson)
 
-Verify the structural and historical accuracy of the Pauline Hanson Hegemonic Audit by orchestrating 7 parallel review agents (one for each Plane). Each agent will fact-check, validate, and verify the consistency of the vectors in their assigned Plane against the Australian Kanon and historical evidence.
-
-## User Review Required
-
-> [!IMPORTANT]
-> The audit is highly detailed (349 vectors across 6,170 lines). Spawning 7 parallel agents allows us to divide-and-conquer the review, ensuring each plane gets dedicated attention.
-> Each agent will run in the background and report its findings, which we will compile into a final audit report.
+Remediate the file `_VFT MD/io/Hegemonic Audit_ Pauline Hanson.md` plane-by-plane to conform to the official 343 Australian Kanon vector names, coordinates, and the new three-field audit format (Description, Justification, Actuality).
 
 ## Proposed Changes
 
-We will create a dedicated project folder for logs and plans in the workspace:
-[Hanson_Audit_AI_Logs](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/io/Hanson_Audit_AI_Logs/)
+We will perform the remediation plane-by-plane to stay within output token limits while generating high-quality, custom `Actuality:` fields and missing vectors offline.
 
-### Subagent Definitions
-We will define a new subagent type `AuditPlaneReviewer` equipped with:
-- System instructions focused on structural rigor, the Australian Kanon framework, and Pauline Hanson's historical timeline.
-- Read-only access to search and view files.
+### Stage 1: Backup
+- Copy `_VFT MD/io/Hegemonic Audit_ Pauline Hanson.md` to `_VFT MD/io/Hanson_Audit_AI_Logs/Hegemonic Audit_ Pauline Hanson_backup.md`.
 
-### Subagent Orchestration
-We will invoke 7 subagents with specific tasks:
-- **Plane 1 Reviewer**: Lines 36 to 956 (`# **Plane 1: Who**`)
-- **Plane 2 Reviewer**: Lines 957 to 1903 (`# **Plane 2, Possible What**`)
-- **Plane 3 Reviewer**: Lines 1904 to 2811 (`# **Plane 3, Location where**`)
-- **Plane 4 Reviewer**: Lines 2812 to 3769 (`# **Plane 4, Lyrical Why**`)
-- **Plane 5 Reviewer**: Lines 3770 to 4286 (`# **Plane 5, Logical How**`)
-- **Plane 6 Reviewer**: Lines 4287 to 5198 (`# **Plane 6, Historical Cause**`)
-- **Plane 7 Reviewer**: Lines 5199 to 6119 (`# **Plane 7, Emotional Effect**`)
+### Stage 2: Plane 1 Remediation (Identity)
+- Re-align all incorrect names and coordinates in Plane 1 headers (lines 36 to 956).
+- Rename `Brief:` to `Description:` for all Plane 1 entries.
+- Add context-specific `Actuality:` fields (3-5 lines) for all Plane 1 entries (including alternate First Nations tracks).
+- Add any missing Plane 1 vectors:
+  - `Who.Why.Cause` (The Gold Rush)
+  - `Who.Cause.Cause` (Deep Time)
+  - `Who.Cause.Effect` (Multiculturalism)
 
-### Verification Plan
-Each agent will produce a structured report containing:
-1. **Quote Accuracy**: Verification of Hansard Maiden Speeches (1996, 2016), recent public statements, and Dec 2025 intelligence references (Western Sydney raids, Senate motions).
-2. **Structural Alignment**: Ensuring the HIT/FAIL assessment logically matches the Brief and Justification.
-3. **Coordinate Validation**: Ensuring the (υ, ψ) coordinates are aligned with the Kanon rules.
-4. **Discrepancy Log**: Listing any issues needing correction.
+### Stage 3: Planes 2 to 7 Remediation
+- Process Planes 2 through 7 sequentially in follow-up steps, correcting names, coordinates, and fields, and adding missing vectors.
+
+## Verification Plan
+
+### Automated Verification
+- Run a verification check on Plane 1 to ensure:
+  - Plane 1 contains exactly 49 standard vectors + 4 alternate First Nations tracks (53 vectors total).
+  - All Plane 1 names and coordinates match the compact JSON reference files exactly.
+  - All Plane 1 entries have `Description:`, `Justification:`, and `Actuality:` fields.

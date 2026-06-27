@@ -84,9 +84,15 @@ Designed to preserve your tokens/wallet. The AI agent performs evaluations in th
    * *This prints out the instruction templates. The Agent performs the Gnostic Convergence Tests, writes the standardized JSON files, and copies trajectory graphs.*
    * **STRICT RULE:** Every newly generated factcheck MUST be saved with `"status": "COMPLETED DRY RUN"` under `stories/`. **No live posting can occur at this stage.**
 
+2.5. **Roundup Consolidation:** Run the consolidation script to group overlapping draft stories (same event, multiple outlets) into a single 14-step roundup thread:
+   ```bash
+   .venv\Scripts\python.exe bluesky_bot/consolidate_roundups.py
+   ```
+   * *This moves constituent draft JSONs to `stories/roundup_<slug>/` and creates a consolidated `roundup_<slug>.json` thread via AI.*
+
 3. **Registry Compilation:** Compile and sync all registry databases to update the control panel:
    ```bash
-   .venv\Scripts\python.exe scratch/rebuild_registries.py
+   .venv\Scripts\python.exe bluesky_bot/rebuild_registries.py
    ```
 
 4. **User Review (Safety Gate):**

@@ -9,84 +9,63 @@
 
 ---
 
-## Function
-Ontological Auditing & the Helixis Tensor is the primary analytical framework to detect structural deception, measure cognitive dissonance, and quantify hypocrisy in narratives and actions. By parsing stated intents against actual outcomes, it calculates a Wisdom Metric and identifies patterns of ideological subversion.
-
-## Construction
-Built from the conceptual systems of the **Hegemony Grid** and the **Reality Tensor**. The auditing method employs a 343-vector matrix (structured in seven fractal planes of 49) to score behavior, combined with the three-layer Helixis Tensor to isolate and analyze deception pathways.
-
-### Attributes
-* **Hypocrisy Gap ($\Delta H$)**: The Euclidean distance between Subjective Consensus Vectors (Levels 1-3) and Objective V-Truth (Level 4).
-* **Wisdom Metric**: The ratio representing an agent's alignment with truth, formulated as:
-  $$\text{Wisdom} = \frac{1}{1 + \Delta H}$$
-* **Trinary Audit Scoring**:
-  * **Hit ($+1$)**: Active, proactive alignment with truth/value creation.
-  * **Fail ($-1$)**: Active suppression, extraction, or manipulation.
-  * **Miss ($0$)**: Non-engagement or passive stagnation.
-* **Cognitive Dissonance Factor ($D$)**: The delta between personal conviction (Personal Axis) and group consensus (Social Axis). A value of $|D| \ge 0.2$ indicates high systemic tension.
+## 1. Narrative Deconstruction (Function & Purpose)
+The **Ontological Auditing & Helixis Tensor** framework provides the primary analytical tools to detect structural deception, measure cognitive dissonance, and quantify hypocrisy in human narratives and actions. By parsing an agent's stated intents and justifications against their actual physical outcomes, this concept allows an investigator to expose hidden patterns of manipulation and calculate a mathematical metric of wisdom and alignment.
 
 ---
 
-## The Helixis Tensor (Deception Model)
+## 2. Theoretical Framework (Construction & Core Metrics)
+This auditing system is built upon the integration of the Psochic Hegemony Grid and the Reality Tensor, utilizing two primary quantitative models:
 
-Deception is identified by mapping an action or narrative into three structural layers:
-1. **The Bait**: The sympathetic, emotional, or populist hook.
-2. **The Cover**: The universalist moral justification or public frame.
-3. **The True Intent**: The hidden, extractive, or self-serving benefit.
+### The 343-Vector Audit Matrix
+To audit national or individual resonance, we deploy a matrix of 343 parameter vectors structured into seven fractal planes of 49. The agent's actions across these parameters are evaluated using a trinary scoring system:
+* **Hit ($+1$)**: Active, proactive alignment with truth and value creation.
+* **Fail ($-1$)**: Active suppression of information, extraction of value, or manipulation.
+* **Miss ($0$)**: Non-engagement or passive stagnation.
 
-The contradiction vector is computed as:
+### The Hypocrisy Gap ($\Delta H$) and Wisdom Metric
+The **Hypocrisy Gap ($\Delta H$)** is calculated as the Euclidean distance between the agent's subjective vector representations (Levels 1–3, capturing self-report and social consensus) and the objective truth vector (Level 4, capturing physical and systemic outcomes):
+$$\Delta H = \|V_{\text{Subjective}} - V_{\text{Truth}}\|$$
+
+Using this gap, we calculate the agent's **Wisdom Metric**, which measures their alignment with reality:
+$$\text{Wisdom} = \frac{1}{1 + \Delta H}$$
+
+---
+
+## 3. The Helixis Tensor (Deception Model)
+Deception is mapped using the **Helixis Tensor**, which deconstructs an agent's narrative or action into three operative layers:
+1. **The Bait**: The sympathetic, emotional, or populist hook designed to engage the target's receptivity.
+2. **The Cover**: The universalist moral justification or public framework used to validate the action.
+3. **The True Intent**: The actual, hidden extractive or self-serving benefit.
+
+We calculate the contradiction of the narrative by measuring the force vector difference between the public frame and the true intent:
 $$\text{Contradiction} = \|\vec{F}_{\text{framed}} - \vec{F}_{\text{intent}}\|$$
 
-### Deception Pathways & States
+### Deception Pathways and States
+By analyzing the relational configuration of who benefits (`You` or `Me`) vs. the target of the action (`you` or `me`), the Helixis Tensor maps four distinct paths:
 
-| Path Name | State Configuration | Description |
-|:----------|:--------------------|:------------|
-| **Grace** | `You:[me, you]` | Direct alignment with the Greater Good. |
-| **The Fall** | `You:[me, me]` | Stated benefit to others, actual benefit to self (Bait & Switch / Extraction). |
-| **Delusion** | `Me:[you, me]` | Self-deception; entering a partnership trap based on a false cover. |
-| **Redemption** | `Me:[me, you]` | Honest self-interest leading to collaborative output. |
+* **Grace (`You:[me, you]`)**: Stated benefit is mutual, and actual energy creates value for both. Terminates in the Greater Good.
+* **The Fall (`You:[me, me]`)**: Stated benefit is to you, but the actual benefit is captured by me. This is the classic "Bait & Switch" extraction.
+* **Delusion (`Me:[you, me]`)**: The agent believes they are helping others, but their action is captured by a deceptive cover that extracts value for a third party.
+* **Redemption (`Me:[me, you]`)**: Stated benefit is honest self-interest, but the action is structured to cooperatively generate value for others.
 
 ---
 
-## Methods
+## 4. Boundaries & Cognitive Dissonance
 
-### 343-Vector Audit Execution
-* **Input**: Narratives, policy outcomes, and action records of an agent.
-* **Calls**: [Concept_Four_Quadrants_and_Attractors].
-* **Procedure**:
-  1. Score the agent's actions across the 343 fractal parameters using the trinary schema ($+1$, $-1$, $0$).
-  2. Compute the subjective vector projections representing the agent's self-reports (L1-3).
-  3. Extract the objective truth vector ($V_{Truth}$, L4) based on measurable physical and systemic outcomes.
-  4. Compute the Hypocrisy Gap:
-     $$\Delta H = \|V_{\text{Subjective}} - V_{\text{Truth}}\|$$
-  5. Calculate the final Wisdom score.
-* **Output**: Detailed audit report containing the 42 scalar values measuring hypocrisy, wisdom, and hegemonic alignment.
+### Dissonance Thresholds
+Cognitive dissonance arises when an agent's personal conviction (Personal Axis) conflicts with their group consensus (Social Axis). When the dissonance vector magnitude exceeds a threshold ($|D| \ge 0.2$), the tension becomes too high for the mind to sustain. The Hegemonikon is forced to either re-evaluate its beliefs or invent a new subjective context to justify its trust.
 
-### Deception Pattern Matcher
-* **Input**: Narrative text and physical action profile.
-* **Calls**: [Concept_The_Hegemonikon].
-* **Procedure**:
-  1. Parse the text to extract the stated universal justification (The Cover).
-  2. Isolate the emotional hooks (The Bait).
-  3. Measure the physical beneficiary of the resources generated by the action (The True Intent).
-  4. If True Intent benefits the self while Cover claims to benefit all, flag as **Delusion Pattern**.
-  5. Calculate the Contradiction Vector.
-* **Output**: Deception classification and contradiction score.
-
-## Boundary
-The audit depends on the availability of verifiable physical outcomes to construct the Level 4 Objective Truth vector. If an agent operates in a completely closed information ecosystem where all objective feedback loops are censored, $\Delta H$ cannot be mathematically resolved and the Wisdom metric returns undefined.
-
-## Known Failure Modes
-* **Motivation Collapse**: When the Hypocrisy Gap $\Delta H$ is high, agents will actively reject internal calibration, choosing to force a new subjective context ($|D| \ge 0.2$) rather than align with V-Truth.
-* **Bait-and-Switch Saturation**: Over-reliance on the Cover layer to hide extractive True Intent creates systemic social dissonance, leading to trust policing and eventual network collapse.
+### The Verification Boundary
+The Ontological Audit requires access to verifiable physical data to construct the Level 4 Objective Truth vector. If an agent operates within a fully censored, closed information loop where all objective feedback is suppressed, $\Delta H$ cannot be resolved, and the Wisdom Metric returns undefined.
 
 ---
 
 ## Cross-references
-* **Axiom Source Papers**:
-  * [A Framework for the Judgment of Ideas.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Actualism/A Framework for the Judgment of Ideas.md)
-  * [Hegemonic Audit： 343-Vector Australianism Index for the Anti-Immigration Agent.md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Physics/Hegemonic Audit： 343-Vector Australianism Index for the Anti-Immigration Agent.md)
-  * [alethekanon_optimized (5).md](file:///E:/Vector Field Theory/VFT Docs/_VFT MD/Protocols/alethekanon_optimized (5).md)
+* **Source Paragraphs**:
+  * [A Framework for the Judgment of Ideas.md](file:///E:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Actualism/A%20Framework%20for%20the%20Judgment%20of%20Ideas.md)
+  * [Hegemonic Audit： 343-Vector Australianism Index for the Anti-Immigration Agent.md](file:///E:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Physics/Hegemonic%20Audit%EF%BC%9A%20343-Vector%20Australianism%20Index%20for%20the%20Anti-Immigration%20Agent.md)
+  * [alethekanon_optimized (5).md](file:///E:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Protocols/alethekanon_optimized%20(5).md)
 * **Associated Concepts**:
-  * [Concept_The_Hegemonikon](file:///E:/Vector Field Theory/VFT Docs/Semantic_Clusters/Concept_The_Hegemonikon.md)
-  * [Concept_Four_Quadrants_and_Attractors](file:///E:/Vector Field Theory/VFT Docs/Semantic_Clusters/Concept_Four_Quadrants_and_Attractors.md)
+  * [Concept_The_Hegemonikon](file:///E:/Vector%20Field%20Theory/VFT%20Docs/Semantic_Clusters/Concept_The_Hegemonikon.md)
+  * [Concept_Four_Quadrants_and_Attractors](file:///E:/Vector%20Field%20Theory/VFT%20Docs/Semantic_Clusters/Concept_Four_Quadrants_and_Attractors.md)

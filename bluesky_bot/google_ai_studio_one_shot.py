@@ -414,7 +414,7 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
             candidates.append({
                 "url": article_url,
                 "target_url": post_url,
-                "mode": "reply",
+                "mode": "root",
                 "text": text,
                 "subject": text[:80] + "..."
             })
@@ -728,7 +728,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                         candidates.append({
                             "url": article_url,
                             "target_url": post_url,
-                            "mode": "reply",
+                            "mode": "root",
                             "text": text,
                             "subject": text[:80] + "..."
                         })
@@ -739,9 +739,9 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
         else:
             print("Warning: BSKY_PASSWORD not found. Skipping Bluesky harvesting.")
             
-    # Separate candidates by mode
-    rss_cands = [c for c in candidates if c["mode"] == "root"]
-    bsky_cands = [c for c in candidates if c["mode"] == "reply"]
+    # Separate candidates by mode (checking target_url since all are root now)
+    rss_cands = [c for c in candidates if not c.get("target_url")]
+    bsky_cands = [c for c in candidates if c.get("target_url")]
 
     # Sort all RSS candidates by pub_date descending (newest first)
     import datetime
@@ -775,6 +775,17 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
     return final_cands
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
+DEFAULT_FALLBACKS = [
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "vertex:gemini-3.1-flash-lite",
+    "gemini-3-flash-preview",
+    "gemma-4-31b-it",
+    "gemma-4-26b-a4b-it",   
+]
+
 _RULES_CACHE = {}
 
 def _load_rules(use_son=False):
@@ -793,7 +804,7 @@ def _load_rules(use_son=False):
             _RULES_CACHE[f"{cache_key}_formatting"] = minify_markdown(f.read())
     return _RULES_CACHE[f"{cache_key}_convergence"], _RULES_CACHE[f"{cache_key}_formatting"]
 
-def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False):
+def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None):
     convergence_rules, formatting_rules = _load_rules(use_son=use_son)
         
     # System prompt: pure role declaration only
@@ -805,43 +816,77 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "If you used Google Search to verify any information in your response for a candidate, you MUST append the emoji 🌐 at the end of the first post (post 1) of that candidate's thread, and you should mention/cite the verified facts or source details in the Alethekanon post (post 11) if relevant. "
         "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 270 CHARACTERS. THIS IS A HARD LIMIT. BE CONCISE."
     )
+    if extra_context:
+        system_instruction += f"\n\nAdditional Context / Background Knowledge:\n{extra_context}"
 
     # Build the full user message: rules + candidates + strict JSON matrix output demand
     n = len(candidates)
+    expected_len = 25 if use_son else 17
     output_format = (
         f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE A SINGLE VALID JSON LIST OF LISTS. NO commentary, NO markdown formatting (other than JSON code fences if desired), NO explanation.\n"
-        f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly 16 items representing the evaluation of that candidate in this specific structure:\n"
+        f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly {expected_len} items representing the evaluation of that candidate in this specific structure:\n"
         "[\n"
         "  [\n"
-        '    "id",\n'
-        '    "subject",\n'
-        '    "link",\n'
-        '    "target_url",\n'
-        "    claim_u (float),\n"
-        "    claim_psi (float),\n"
-        "    real_u (float),\n"
-        "    real_psi (float),\n"
-        '    "mode",\n'
+        '    "thinking",                                // item[0]: detailed thinking/scratchpad calculations (Phase 1 to 5 calculations)\n'
+        '    "id",                                      // item[1]: clean story id slug\n'
+        '    "subject",                                 // item[2]: story subject\n'
+        '    "link",                                    // item[3]: story link\n'
+        '    "target_url",                              // item[4]: reply target post url\n'
+        "    claim_u (float),                           // item[5]: stated morality\n"
+        "    claim_psi (float),                         // item[6]: stated will\n"
+        "    real_u (float),                            // item[7]: actual morality\n"
+        "    real_psi (float),                          // item[8]: actual will\n"
+        '    "mode",                                    // item[9]: root or reply\n'
         "    [\n"
         '      "post 1 (under 260 chars, ending with 1-2 hashtags)",\n'
         '      "post 2 (under 260 chars)",\n'
         "      ...\n"
-        "      (exactly 13 posts)\n"
+        "      (exactly 13 posts)                       // item[10]: posts array\n"
         "    ],\n"
-        '    ["Actor / Org / Geopolitical tag", ...],  // item[10]: actors array\n'
-        '    "macro_event",                             // item[11]: overarching context name or "" if none\n'
-        "    macro_claim_u (float or null),             // item[12]: macro stated morality, null if none\n"
-        "    macro_claim_psi (float or null),           // item[13]: macro stated will, null if none\n"
-        "    macro_real_u (float or null),              // item[14]: macro actual morality, null if none\n"
-        "    macro_real_psi (float or null)             // item[15]: macro actual will, null if none\n"
+        '    ["Actor / Org / Geopolitical tag", ...],  // item[11]: actors array\n'
+        '    "macro_event",                             // item[12]: overarching context name or "" if none\n'
+        "    macro_claim_u (float or null),             // item[13]: macro stated morality, null if none\n"
+        "    macro_claim_psi (float or null),           // item[14]: macro stated will, null if none\n"
+        "    macro_real_u (float or null),              // item[15]: macro actual morality, null if none\n"
+        "    macro_real_psi (float or null)             // item[16]: macro actual will, null if none\n"
+    )
+    if use_son:
+        output_format += (
+            ",\n"
+            "    claim_rnet (float),                        // item[17]: stated R_net integrity score\n"
+            "    real_rnet (float),                         // item[18]: actual R_net integrity score\n"
+            "    claim_z (int),                             // item[19]: stated uncertainty score (blank count, sum of blank counts across planes)\n"
+            "    real_z (int),                              // item[20]: actual uncertainty score\n"
+            "    claim_z_profile (7-number array of ints),  // item[21]: stated blank profile [B_Q1, B_Q2, B_Q3, B_Q4, B_Q5, B_Q6, B_Q7]\n"
+            "    real_z_profile (7-number array of ints),   // item[22]: actual blank profile\n"
+            '    "claim_integrity",                         // item[23]: stated integrity label mapped from claim_rnet\n'
+            '    "real_integrity"                           // item[24]: actual integrity label mapped from real_rnet\n'
+        )
+    output_format += (
+        "\n"
         "  ]\n"
         "]\n\n"
         "CRITICAL FOR MACRO CONTEXT:\n"
-        "Identify if the candidate news story exists within a distinct overarching macro-event context (e.g. an announcement happening at a political photo-op/rally, or a sports title win happening at a White House PR event). If so, provide the macro-event name in item[11] and evaluate its stated and actual u/psi coordinates in items[12] to [15]. If no distinct macro-context exists, use empty string for item[11] and null for items[12] to [15].\n\n"
-        "item[10] = actors array: principal named individuals, orgs, nation-states, or blocs (CRINK/BRICS/NATO/AUKUS/G7/SCO/Five Eyes) the story is ABOUT. Canonical full names. Max 6. [] if none.\n\n"
+        "Identify if the candidate news story exists within a distinct overarching macro-event context (e.g. an announcement happening at a political photo-op/rally, or a sports title win happening at a White House PR event). If so, provide the macro-event name in item[12] and evaluate its stated and actual u/psi coordinates in items[13] to [16]. If no distinct macro-context exists, use empty string for item[12] and null for items[13] to [16].\n\n"
+        "item[11] = actors array: principal named individuals, orgs, nation-states, or blocs (CRINK/BRICS/NATO/AUKUS/G7/SCO/Five Eyes) the story is ABOUT. Canonical full names. Max 6. [] if none.\n\n"
+    )
+    if use_son:
+        output_format += (
+            "INTEGRITY TIER MAPPING FOR ITEMS [23] AND [24]:\n"
+            "Map claim_rnet to item[23] (claim_integrity) and real_rnet to item[24] (real_integrity) using these strict boundaries:\n"
+            "- R_net == 1.0: \"Absolute Truth\"\n"
+            "- 1.0 < R_net <= 1.5: \"Trustworthy\"\n"
+            "- 1.5 < R_net <= 2.0: \"Conditionally Sound\"\n"
+            "- 2.0 < R_net <= 5.0: \"Partially Distorted\"\n"
+            "- 5.0 < R_net <= 10.0: \"Meaningful Distortion\"\n"
+            "- 10.0 < R_net <= 100.0: \"Severe Deception\"\n"
+            "- R_net > 100.0: \"Baseless Lies\"\n\n"
+        )
+    output_format += (
         "EXAMPLE RESPONSE (for a single candidate, format exactly as JSON list of lists):\n"
         "[\n"
         "  [\n"
+        '    "Detailed Phase 1-5 structural scan and calculations...",\n'
         '    "my_slug_id",\n'
         '    "Story Title",\n'
         '    "https://...",\n'
@@ -871,7 +916,22 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    null,\n"
         "    null,\n"
         "    null,\n"
-        "    null\n"
+        "    null"
+    )
+    if use_son:
+        output_format += (
+            ",\n"
+            "    1.0,\n"
+            "    12.5,\n"
+            "    0,\n"
+            "    4,\n"
+            "    [0, 0, 0, 0, 0, 0, 0],\n"
+            "    [1, 0, 0, 2, 1, 0, 0],\n"
+            '    "Absolute Truth",\n'
+            '    "Severe Deception"'
+        )
+    output_format += (
+        "\n"
         "  ]\n"
         "]"
     )
@@ -884,25 +944,22 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     )
     
     # Try the specified model, fallback if rate-limited or fails
-    default_fallbacks = [
-        "gemini-2.5-flash",
-        "gemini-2.5-flash-lite",
-        "gemini-3.5-flash",
-        "gemini-3.1-flash-lite",
-        "vertex:gemini-3.1-flash-lite",
-        "gemini-3-flash-preview",
-        "gemma-4-31b-it",
-        "gemma-4-26b-a4b-it",   
-    ]
+    default_fallbacks = DEFAULT_FALLBACKS
     # Keep unique order, trying model_name first
     fallback_models = []
-    for m in [model_name] + default_fallbacks:
-        if m not in fallback_models:
-            fallback_models.append(m)
+    if model_sequence:
+        for m in model_sequence:
+            if m not in fallback_models:
+                fallback_models.append(m)
+    else:
+        for m in [model_name] + default_fallbacks:
+            if m not in fallback_models:
+                fallback_models.append(m)
             
     # Append Agnes AI at the very end of fallback list if key exists
     if agnes_api_key or os.environ.get("AGNES_API_KEY"):
-        fallback_models.append("agnes-2.0-flash")
+        if "agnes-2.0-flash" not in fallback_models:
+            fallback_models.append("agnes-2.0-flash")
         
     last_exception = None
     
@@ -1131,34 +1188,35 @@ def transpose_flat_to_json(flat_text):
     evaluations = []
     
     for idx, item in enumerate(data):
-        if not isinstance(item, list) or len(item) < 10:
-            print(f"Warning: Skipping item {idx} - expected a list of at least 10 elements (got {type(item).__name__ if not isinstance(item, list) else len(item)}).")
+        if not isinstance(item, list) or len(item) < 11:
+            print(f"Warning: Skipping item {idx} - expected a list of at least 11 elements (got {type(item).__name__ if not isinstance(item, list) else len(item)}).")
             continue
             
         try:
-            # Parse actors from item[10] if present (AI-provided), else empty list (fallback handled later)
+            # Parse actors from item[11] if present (AI-provided), else empty list (fallback handled later)
             ai_actors = []
-            if len(item) >= 11 and isinstance(item[10], list):
-                ai_actors = [str(a).strip() for a in item[10] if isinstance(a, str) and str(a).strip()]
+            if len(item) >= 12 and isinstance(item[11], list):
+                ai_actors = [str(a).strip() for a in item[11] if isinstance(a, str) and str(a).strip()]
 
             # Parse optional macro-context fields with fallback to None/empty
-            macro_event = str(item[11]).strip() if len(item) >= 12 and item[11] is not None else ""
-            macro_claim_u = float(item[12]) if len(item) >= 13 and item[12] is not None else None
-            macro_claim_psi = float(item[13]) if len(item) >= 14 and item[13] is not None else None
-            macro_real_u = float(item[14]) if len(item) >= 15 and item[14] is not None else None
-            macro_real_psi = float(item[15]) if len(item) >= 16 and item[15] is not None else None
+            macro_event = str(item[12]).strip() if len(item) >= 13 and item[12] is not None else ""
+            macro_claim_u = float(item[13]) if len(item) >= 14 and item[13] is not None else None
+            macro_claim_psi = float(item[14]) if len(item) >= 15 and item[14] is not None else None
+            macro_real_u = float(item[15]) if len(item) >= 16 and item[15] is not None else None
+            macro_real_psi = float(item[16]) if len(item) >= 17 and item[16] is not None else None
 
             story = {
-                "id": str(item[0]).strip(),
-                "subject": str(item[1]).strip(),
-                "link": str(item[2]).strip(),
-                "target_url": str(item[3]).strip(),
-                "claim_u": float(item[4]),
-                "claim_psi": float(item[5]),
-                "real_u": float(item[6]),
-                "real_psi": float(item[7]),
-                "mode": str(item[8]).strip(),
-                "posts": [str(p) for p in item[9]],
+                "thinking": str(item[0]).strip(),
+                "id": str(item[1]).strip(),
+                "subject": str(item[2]).strip(),
+                "link": str(item[3]).strip(),
+                "target_url": str(item[4]).strip(),
+                "claim_u": float(item[5]),
+                "claim_psi": float(item[6]),
+                "real_u": float(item[7]),
+                "real_psi": float(item[8]),
+                "mode": str(item[9]).strip(),
+                "posts": [str(p) for p in item[10]],
                 "actors": ai_actors,
                 "macro_event": macro_event,
                 "macro_claim_u": macro_claim_u,
@@ -1167,6 +1225,24 @@ def transpose_flat_to_json(flat_text):
                 "macro_real_psi": macro_real_psi,
                 "status": "COMPLETED DRY RUN"
             }
+
+            # Parse optional integrity and uncertainty fields (items 17 to 24)
+            if len(item) >= 18 and item[17] is not None:
+                story["claim_rnet"] = float(item[17])
+            if len(item) >= 19 and item[18] is not None:
+                story["real_rnet"] = float(item[18])
+            if len(item) >= 20 and item[19] is not None:
+                story["claim_z"] = int(item[19])
+            if len(item) >= 21 and item[20] is not None:
+                story["real_z"] = int(item[20])
+            if len(item) >= 22 and isinstance(item[21], list):
+                story["claim_z_profile"] = list(item[21])
+            if len(item) >= 23 and isinstance(item[22], list):
+                story["real_z_profile"] = list(item[22])
+            if len(item) >= 24 and item[23] is not None:
+                story["claim_integrity"] = str(item[23]).strip()
+            if len(item) >= 25 and item[24] is not None:
+                story["real_integrity"] = str(item[24]).strip()
             evaluations.append(story)
         except Exception as e:
             print(f"Warning: Failed to parse item {idx}: {e}")
@@ -1261,16 +1337,20 @@ def main():
     parser.add_argument("--rss", type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
+    parser.add_argument("--context", type=str, default=None, help="Additional context/background knowledge to send to the evaluator model")
+    parser.add_argument("--model-sequence", type=str, default=None, help="Comma-separated list of models to try in sequence (overriding default fallbacks)")
     parser.add_argument("--chunk-size", type=int_or_default(3), default=3, help="Number of stories to process per API call (default: 3)")
     parser.add_argument("--category", type=str, default="all", help="Category (or comma-separated categories) of news to harvest (default: all). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
     parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
+    parser.add_argument("--roundup", action="store_true", help="After evaluation, run consolidate_roundups to group overlapping stories into roundup threads (default: False)")
     parser.add_argument("--prefer", type=str, default="", help=(
         "Preferred outlets to prioritize. Comma-separated list of domains or numbers:\n"
         "1: Bloomberg, 2: NY Times, 3: The Saturday Paper, 4: Reuters, 5: BBC News,\n"
         "6: SMH, 7: TechCrunch, 8: Washington Post, 9: NPR.\n"
         "E.g., --prefer '1,2,5,theguardian.com'"
     ))
+    parser.add_argument("--enabled-feeds", type=str, default=None, help="Comma-separated feed names (or URLs) to enable for harvesting.")
     args = parser.parse_args()
     
     global PREFERRED_OUTLET_DOMAINS
@@ -1311,6 +1391,8 @@ def main():
         cmd.extend(["--topic", args.topic])
     if args.banned_topic:
         cmd.extend(["--banned-topic", args.banned_topic])
+    if args.enabled_feeds:
+        cmd.extend(["--enabled-feeds", args.enabled_feeds])
         
     print(f"Executing: {' '.join(cmd)}")
     try:
@@ -1385,7 +1467,14 @@ def main():
                 print(f"  Retry {attempt - 1}: {len(remaining)} candidate(s) not returned — re-firing...")
                 time.sleep(3)
             try:
-                raw_text, grounding_urls = run_one_shot_evaluations(genai_client, remaining, args.model, agnes_api_key=agnes_api_key, use_son=args.son, use_search=args.search)
+                model_seq = None
+                if args.model_sequence:
+                    model_seq = [m.strip() for m in args.model_sequence.split(",") if m.strip()]
+                raw_text, grounding_urls = run_one_shot_evaluations(
+                    genai_client, remaining, args.model, agnes_api_key=agnes_api_key, 
+                    use_son=args.son, use_search=args.search, 
+                    extra_context=args.context, model_sequence=model_seq
+                )
                 parsed = transpose_flat_to_json(raw_text)
                 
                 # If search was actually used, append 🌐 and link grounding URL
@@ -1398,11 +1487,11 @@ def main():
                     primary_url = primary_url.strip()
                     
                     for item in parsed:
-                        if len(item) > 9 and isinstance(item[9], list) and len(item[9]) > 0:
+                        if len(item) > 10 and isinstance(item[10], list) and len(item[10]) > 0:
                             # 1. Append 🌐 emoji to first post
-                            first_post = item[9][0]
+                            first_post = item[10][0]
                             if "🌐" not in first_post:
-                                item[9][0] = first_post.rstrip() + " 🌐"
+                                item[10][0] = first_post.rstrip() + " 🌐"
                             
                             # 2. Append the grounding URL to a post without attachments.
                             # Preferred target is post 11 (Alethekanon, index 10).
@@ -1412,10 +1501,10 @@ def main():
                             url_suffix = f"\n\nSource: {primary_url}"
                             
                             for idx in preferred_indices:
-                                if idx < len(item[9]):
-                                    current_text = item[9][idx]
+                                if idx < len(item[10]):
+                                    current_text = item[10][idx]
                                     if len(current_text) + len(url_suffix) <= 290:
-                                        item[9][idx] = current_text + url_suffix
+                                        item[10][idx] = current_text + url_suffix
                                         appended = True
                                         print(f"    Appended grounding source URL to post {idx+1}")
                                         break
@@ -1424,23 +1513,23 @@ def main():
                                 # Fallback: search for the shortest post (excluding post 1) to fit it within 299 character limit
                                 shortest_idx = -1
                                 shortest_len = 9999
-                                for idx in range(1, len(item[9])):
-                                    current_text = item[9][idx]
+                                for idx in range(1, len(item[10])):
+                                    current_text = item[10][idx]
                                     if len(current_text) < shortest_len:
                                         shortest_len = len(current_text)
                                         shortest_idx = idx
                                         
                                 if shortest_idx != -1:
-                                    current_text = item[9][shortest_idx]
+                                    current_text = item[10][shortest_idx]
                                     if len(current_text) + len(url_suffix) <= 299:
-                                        item[9][shortest_idx] = current_text + url_suffix
+                                        item[10][shortest_idx] = current_text + url_suffix
                                         print(f"    Appended grounding source URL to shortest post {shortest_idx+1} (backup)")
 
                 chunk_evals.extend(parsed)
 
                 # Find which candidates still haven't been evaluated (match by URL)
-                evaluated_urls = {e.get("link", "").strip().lower() for e in chunk_evals}
-                remaining = [c for c in remaining if c["url"].strip().lower() not in evaluated_urls]
+                evaluated_urls = {normalize_url(e.get("link", "")) for e in chunk_evals}
+                remaining = [c for c in remaining if normalize_url(c.get("url", "")) not in evaluated_urls]
 
                 print(f"  Got {len(parsed)} row(s). {len(remaining)} candidate(s) still missing.")
             except Exception as pe:
@@ -1464,7 +1553,7 @@ def main():
                         q_data = json.load(f)
                     if isinstance(q_data, list):
                         # Filter out evaluated candidates
-                        trimmed_q = [c for c in q_data if c.get("url", "").strip().lower() not in evaluated_urls]
+                        trimmed_q = [c for c in q_data if normalize_url(c.get("url", "")) not in evaluated_urls]
                         with open(queue_file_path, 'w', encoding='utf-8') as f:
                             json.dump(trimmed_q, f, indent=2, ensure_ascii=False)
                         print(f"  Deducted {len(q_data) - len(trimmed_q)} evaluated candidates from queue. Remaining: {len(trimmed_q)}")
@@ -1477,7 +1566,32 @@ def main():
     if not all_evaluations:
         print("ERROR: No evaluations returned across all chunks. Exiting.")
         sys.exit(1)
-        
+
+    # ── Post-batch: roundup consolidation ────────────────────────────────────
+    if args.roundup:
+        print("\n" + "=" * 80)
+        print("ROUNDUP CONSOLIDATION PASS")
+        print("=" * 80)
+        try:
+            from consolidate_roundups import consolidate
+            n_roundups = consolidate(
+                dry_run      = False,
+                min_outlets  = 2,
+                max_outlets  = 4,
+                actor_win    = 72,
+                keyword_win  = 48,
+                genai_client = genai_client,
+                model_name   = args.model,
+                agnes_api_key= agnes_api_key,
+            )
+            if n_roundups:
+                print(f"  Created {n_roundups} roundup(s). Rebuilding registries...")
+                rebuild_registries()
+            else:
+                print("  No roundup groups found — all stories post individually.")
+        except Exception as re_err:
+            print(f"  WARNING: Roundup consolidation failed: {re_err}")
+
     print("\nOne-Shot Batch Evaluation Pipeline Completed Successfully!")
 
 if __name__ == "__main__":

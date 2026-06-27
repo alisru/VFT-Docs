@@ -20,7 +20,7 @@ This file is the master index and entry point for the Aletheia Bot. All operatio
 
 * **NEVER POST LIVE BY DEFAULT**: Always default to a dry run. The publishing script must only send threads live when explicitly run with the `--live` flag after manual portfolio review.
 * **Character Caps & Bounds**: Every single step in the JSON posts list must target under **280 characters** to ensure safe spacing and alignment, with a hard validator limit of **299 characters** to prevent dynamic text-splitting errors.
-* **No Numbering**: Never prefix any step with `1/`, `2/`, `1/14` or any numerical indices. The thread must read as a seamless, organic story.
+* **No Numbering**: Never prefix any step with `1/`, `2/`, `1/13` or any numerical indices. The thread must read as a seamless, organic story.
 * **Clean URLs**: Always strip tracking query parameters (e.g. `?utm_source=...`) from URLs to save character space.
 
 ---
@@ -46,7 +46,7 @@ The modules below are **not for the parent agent**. They are listed here so you 
 * **File**: [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md)
 
 ### B. Thread Formatting & JSON Schema — *Sub-Agents Only*
-* **Purpose**: 13-key JSON schema, 14 logical steps, character rules, canonical example.
+* **Purpose**: 13-key JSON schema, 13 logical steps, character rules, canonical example.
 * **File**: [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md)
 
 ### C. Operational Processes & Pipelines — *Sub-Agents Only*

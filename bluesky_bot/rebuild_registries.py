@@ -22,6 +22,8 @@ def rebuild_registries():
         b = os.path.basename(p)
         if b.startswith("factcheck_") and b.endswith(".json"):
             return b[len("factcheck_"):-len(".json")]
+        if b.startswith("roundup_") and b.endswith(".json"):
+            return "roundup_" + b[len("roundup_"):-len(".json")]
         return None
 
     def safe_getmtime(p):
@@ -75,9 +77,15 @@ def rebuild_registries():
             except Exception as e:
                 print(f"Error promoting {slug} from darkroom: {e}")
 
-    # 1. Scan stories/ and stories/live/
-    draft_paths = glob.glob(os.path.join(stories_dir, "factcheck_*.json"))
-    live_paths  = glob.glob(os.path.join(live_dir,    "factcheck_*.json"))
+    # 1. Scan stories/ and stories/live/ — factcheck_* (individual) + roundup_* (multi-outlet)
+    draft_paths = (
+        glob.glob(os.path.join(stories_dir, "factcheck_*.json")) +
+        glob.glob(os.path.join(stories_dir, "roundup_*.json"))
+    )
+    live_paths  = (
+        glob.glob(os.path.join(live_dir, "factcheck_*.json")) +
+        glob.glob(os.path.join(live_dir, "roundup_*.json"))
+    )
 
     draft_filenames = [os.path.basename(p) for p in sorted(draft_paths, key=safe_getmtime)]
     live_filenames  = [os.path.basename(p) for p in sorted(live_paths,  key=safe_getmtime)]
@@ -201,9 +209,12 @@ def rebuild_registries():
             "graph_img": graph_img,
             "created_at": created_at,
         }
+        # CRITICAL WARNING: DO NOT remove "posts" or other metadata from this list to optimize file size.
+        # The control panel UI relies entirely on "posts" to render the thread emulator.
         for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "category", "topic", "event",
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
-                  "grounding_url"]:
+                  "grounding_url", "claim_rnet", "real_rnet", "claim_z", "real_z",
+                  "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 
