@@ -225,30 +225,37 @@ def main():
             get_res = client.call_tool("notebook_get", {"notebook_id": notebook_id})
             sources_list = []
             
-            # Extract list of sources supporting all possible structures
-            if "sources" in get_res:
-                sources_list = get_res["sources"]
-            elif "notebook" in get_res and "sources" in get_res["notebook"]:
-                sources_list = get_res["notebook"]["sources"]
-            else:
-                for content_item in get_res.get("content", []):
-                    text = content_item.get("text", "")
-                    if text.strip().startswith("{"):
-                        try:
-                            raw_json = json.loads(text)
-                            sources_list = raw_json.get("sources") or raw_json.get("notebook", {}).get("sources", [])
-                            if sources_list:
+            # Try parsing double-serialized JSON string inside content text
+            for content_item in get_res.get("content", []):
+                text = content_item.get("text", "")
+                if text.strip().startswith("{"):
+                    try:
+                        raw_json = json.loads(text)
+                        nb_data = raw_json.get("notebook")
+                        # Positional array parsing: notebook is [[title, [sources]]]
+                        if isinstance(nb_data, list) and len(nb_data) > 0:
+                            inner_nb = nb_data[0]
+                            if isinstance(inner_nb, list) and len(inner_nb) > 1:
+                                sources_list = inner_nb[1]
                                 break
-                        except Exception:
-                            pass
+                    except Exception as parse_e:
+                        print(f"Failed to parse inner notebook json: {parse_e}")
             
+            # Parse sources from positional arrays: src is [[id], title, ...]
             if isinstance(sources_list, list):
                 for src in sources_list:
-                    src_title = src.get("title") or src.get("name")
-                    src_id = src.get("id") or src.get("source_id")
-                    if src_title and src_id:
-                        # Normalize title (lowercase and trimmed)
-                        existing_sources[src_title.strip().lower()] = src_id.strip()
+                    if isinstance(src, list) and len(src) > 1:
+                        src_id_container = src[0]
+                        src_title = src[1]
+                        
+                        src_id = None
+                        if isinstance(src_id_container, list) and len(src_id_container) > 0:
+                            src_id = src_id_container[0]
+                        elif isinstance(src_id_container, str):
+                            src_id = src_id_container
+                            
+                        if src_title and src_id:
+                            existing_sources[src_title.strip().lower()] = src_id.strip()
             print(f"Detected {len(existing_sources)} existing online sources in notebook.", flush=True)
         except Exception as e:
             print(f"Warning: Could not check existing sources: {e}. Proceeding carefully.")
