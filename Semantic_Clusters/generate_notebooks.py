@@ -52,21 +52,27 @@ def get_sorting_key(rel_path):
 
 def normalize_filename(name):
     name = name.lower().replace(".md", "")
-    # Remove version indicators like v2, v2.7, v12.0, etc.
     name = re.sub(r'[\s_\-\(]+v\d+(?:[.,]\d+)*[\)]*$', '', name)
-    # Remove copy suffixes like _1, _2, (1), (2), - Copy, etc.
     name = re.sub(r'[\s_\-\(]+(1|2|3|4|copy)[\)]*$', '', name)
     name = "".join(c for c in name if c.isalnum())
     return name
 
 def extract_version(name):
-    # Search for version formats: v2, v2.7, v12.0, etc.
     match = re.search(r'[\s_\-\(]+v(\d+)(?:[.,](\d+))?[\)]*$', name.lower().replace(".md", ""))
     if match:
         major = int(match.group(1))
         minor = int(match.group(2)) if match.group(2) else 0
         return (major, minor)
     return (0, 0)
+
+def make_human_readable_label(filename):
+    # Remove extension
+    label = filename.replace(".md", "")
+    # Replace underscores and hyphens with spaces
+    label = label.replace("_", " ").replace("-", " ")
+    # Clean up double spaces
+    label = re.sub(r'\s+', ' ', label).strip()
+    return label
 
 def main():
     if sys.version_info >= (3, 7):
@@ -107,7 +113,6 @@ def main():
         if norm_name in unique_registry:
             existing_path, existing_ver, existing_mtime, existing_cat = unique_registry[norm_name]
             
-            # 1. Compare version numbers first
             if ver > existing_ver:
                 print(f"  Replacing older version '{existing_path}' (version: {existing_ver}) with newer version '{rel_path}' (version: {ver})", flush=True)
                 unique_registry[norm_name] = (rel_path, ver, mtime, category)
@@ -116,7 +121,6 @@ def main():
                 print(f"  Skipping older duplicate version: '{rel_path}' (version: {ver}) (existing version: '{existing_path}' version: {existing_ver})", flush=True)
                 skipped_duplicates_count += 1
             else:
-                # 2. If versions are identical, compare modification timestamps (mtime)
                 if mtime > existing_mtime:
                     print(f"  Replacing older timestamp '{existing_path}' (mtime: {existing_mtime}) with newer timestamp '{rel_path}' (mtime: {mtime})", flush=True)
                     unique_registry[norm_name] = (rel_path, ver, mtime, category)
@@ -173,7 +177,7 @@ def main():
     
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write("# The Hypothetical Notebooks Index\n\n")
-        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. When duplicates exist, the version with the highest version suffix (e.g. v2, v2.7) or the most recent modification timestamp is chosen. Large categories are split logically to keep every list under 300 files.\n\n")
+        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. Link display text is formatted to be human-readable and easily searchable. When duplicates exist, the version with the highest version suffix or the most recent modification timestamp is chosen. Large categories are split logically to keep every list under 300 files.\n\n")
         
         f.write("## Notebook Breakdown Table\n\n")
         f.write("| Notebook Name | Document Count |\n|:---|:---|\n")
@@ -186,7 +190,8 @@ def main():
             f.write(f"## {name} (Count: {len(files)})\n\n")
             for rel_path in sorted(files, key=get_sorting_key):
                 full_path = os.path.join(workspace_root, rel_path).replace(os.sep, '/')
-                f.write(f"* [{os.path.basename(rel_path)}](file:///{full_path})\n")
+                clean_label = make_human_readable_label(os.path.basename(rel_path))
+                f.write(f"* [{clean_label}](file:///{full_path})\n")
             f.write("\n")
             
     print("Registry generation complete!", flush=True)
