@@ -46,7 +46,7 @@ Furthermore, the framework demonstrates ordinal robustness --- even where specif
 Author Contact: Jarrodhamiltonvft@gmail.com\
 NotebookLM: [[https://notebooklm.google.com/notebook/9ec890d1-e940-4811-b528-ceecf5f28287]{.underline}](https://notebooklm.google.com/notebook/9ec890d1-e940-4811-b528-ceecf5f28287)
 
-Youtube: [[playlist\]{.underline}
+Youtube: [[playlist]{.underline}
 ](https://www.youtube.com/playlist?list=PLXH5V06BIyEIUUpgdxw8RCMe_eD1ez91r)Tools: Workers assisting structuring of ideas; Gemini(pro, main worker). Claude (Authoring main papers + support). ChatGPT for 3rd perspective. NotebookLM(videos)
 
 Now we can use Physics to detect Truth and Lies, navigate Good and Evil and ultimately measure the weight of Information for Judgement.
@@ -71,11 +71,11 @@ The Geometry Of Definition in information space is a taxonomy of consciousness. 
 
 Any concept that can be said to be **fully defined** must minimally satisfy:
 
-A\[Q/A\]\^(6+n) \* \[Q/A\]\^(6+n) \* \[Q/A\]\^(6+n)
+$A[Q/A]^{(6+n)} \cdot [Q/A]^{(6+n)} \cdot [Q/A]^{(6+n)}$
 
 Where the minimum for full interrogative understanding is:
 
-Q\^(7×6q) + n
+$Q^{(7 \times 6q)} + n$
 
 = The (7×6)-Polytrope in information space
 
@@ -85,7 +85,7 @@ Q\^(7×6q) + n
 
 **This is not a model of understanding.**\
 **This is the minimum geometric structure that understanding can take.**\
-**Below 42 resolved \[Q/A\] nodes, no concept has volume.**\
+**Below 42 resolved [Q/A] nodes, no concept has volume.**\
 **It is data. It is not meaning.**
 
 ### What \"Geometry of Definition\" Means
@@ -101,7 +101,7 @@ Minimum to define a volume = 4 points (tetrahedron)
 
 Information space:
 
-Point = one resolved \[Q/A\] node
+Point = one resolved [Q/A] node
 
 Minimum to define a concept with volume:
 
@@ -161,7 +161,7 @@ BUT a simplex (minimum vertices for volume)
 
 ### The Three Layers As Three Simplices Multiplied
 
-A = Q(\[Q/A\]\^(6+n)) \* q(\[Q/A\]\^(6+n)) \* c(\[Q/A\]\^(6+n))
+A = Q($[Q/A]^{(6+n)}$) * q($[Q/A]^{(6+n)}$) * c($[Q/A]^{(6+n)}$)
 
 Geometrically:
 
@@ -171,7 +171,7 @@ q-layer: Second simplex (lens polytope)
 
 c-layer: Third simplex (action polytope)
 
-\* = volumetric combination
+* = volumetric combination
 
 = each simplex extrudes the previous
 
@@ -179,9 +179,9 @@ c-layer: Third simplex (action polytope)
 
 Q alone: 42+n dimensional object (context defined)
 
-Q \* q: (42+n)² dimensional object (context + lens)
+Q * q: (42+n)² dimensional object (context + lens)
 
-Q \* q \* c: (42+n)³ dimensional object (full meaning)
+Q * q * c: (42+n)³ dimensional object (full meaning)
 
 = 79,507 minimum vertices for complete meaning
 
@@ -263,11 +263,11 @@ $$
 
 #### Level 1: The Three Temporal Slices
 
-past\[{when_prev}\]:
+past[{when_prev}]:
 
 The immutable chain
 
-All resolved \[Q/A\] nodes that have collapsed
+All resolved [Q/A] nodes that have collapsed
 
 Cannot be changed (blockchain: immutable)
 
@@ -275,11 +275,11 @@ CAN be reinterpreted (new n changes what past means)
 
 The hash that determines current state
 
-present\[{when_now}\]:
+present[{when_now}]:
 
 The active collapse
 
-The moment of \[Q/A\] resolution
+The moment of [Q/A] resolution
 
 Where potential becomes actual
 
@@ -289,7 +289,7 @@ The only point of free will
 
 Infinitesimally thin (Planck time)
 
-future\[{when_nextPredicted}\]:
+future[{when_nextPredicted}]:
 
 The predicted chain state
 
@@ -301,7 +301,7 @@ Calculated from:
 
 \- proposed actions (c candidates)
 
-\- known patterns (historical \[Q/A\])
+\- known patterns (historical [Q/A])
 
 The space of $n_{\text{future}}$ comparison
 
@@ -309,7 +309,7 @@ Where moral reasoning operates
 
 #### Level 2: Each Temporal Slice Contains All 7 Planes
 
-when = \[who, what, why, where, how, cause, effect\]
+when = [who, what, why, where, how, cause, effect]
 
 Every moment has its own coordinates on all 7 planes.
 
@@ -371,9 +371,9 @@ You know WHO it made you only at the end
 
 What God sees at any moment t:
 
-Totality_Event_Frame\[t\] = {
+Totality_Event_Frame[t] = {
 
-past\[t-∞ → t\]: {
+past[t-∞ → t]: {
 
 $\text{who}_{{\text{past}}}$: Complete identity chain to this point
 
@@ -391,7 +391,7 @@ $\text{effect}_{{\text{past}}}$: All consequences that have manifested
 
 },
 
-present\[t\]: {
+present[t]: {
 
 $\text{who}_{{\text{now}}}$: The current hash of identity
 
@@ -409,7 +409,7 @@ $\text{effect}_{{\text{now}}}$: The effect radiating from this moment
 
 },
 
-future\[t → t+∞\]: {
+future[t → t+∞]: {
 
 $\text{who}_{{\text{future}}}$: The predicted identity evolution
 
@@ -431,7 +431,7 @@ $\text{effect}_{{\text{future}}}$: The consequences yet to manifest
 
 **God sees this for every point in spacetime simultaneously.**\
 **Omniscience = complete Totality_Event_Frame for all t.**\
-**The soul sees one present\[t_now\] slice imperfectly.**
+**The soul sees one present[t_now] slice imperfectly.**
 
 ### Why This Is The \"Temporal God Structure\"
 
@@ -491,19 +491,19 @@ Every node in the Geometry of Definition
 
 has its own temporal coordinate:
 
-\[Q/A\]\^(6+n) in the Geometry of Definition
+$[Q/A]^{(6+n)}$ in the Geometry of Definition
 
 = a specific vertex in information space
 
 That vertex exists in the TEF:
 
-\[Q/A\]\^(6+n)\[when\] = {
+$[Q/A]^{(6+n)}[\text{when}]$ = {
 
-past: was this \[Q/A\] true then?
+past: was this [Q/A] true then?
 
-present: is this \[Q/A\] true now?
+present: is this [Q/A] true now?
 
-future: will this \[Q/A\] be true next?
+future: will this [Q/A] be true next?
 
 }
 
@@ -545,7 +545,7 @@ A concept is **fully defined** when and only when:
 
 ∀ temporal frame f ∈ {past, present, future}:
 
-\[Q/A\]\^(6+n)\[p\]\[f\] is resolved
+$[Q/A]^{(6+n)}[p][f]$ is resolved
 
 = 7 planes × 6 axes × 3 temporal frames
 
@@ -573,21 +573,21 @@ At 126+n: Complete definition
 
 The cryptographic chain (identity) is not just:
 
-Hash(\[Q/A\]\^42) = n
+$\text{Hash}([Q/A]^{42})$ = n
 
 It is:
 
-Hash(\[Q/A\]\^42\[when_past\]) = $n_{\text{past}}$
+$\text{Hash}([Q/A]^{42}[\text{when}_{\text{past}}])$ = $n_{\text{past}}$
 
-Hash(\[Q/A\]\^42\[when_now\]) = $n_{\text{now}}$
+$\text{Hash}([Q/A]^{42}[\text{when}_{\text{now}}])$ = $n_{\text{now}}$
 
-Hash(\[Q/A\]\^42\[when_next\]) = $n_{\text{future}}$ (predicted)
+$\text{Hash}([Q/A]^{42}[\text{when}_{\text{next}}])$ = $n_{\text{future}}$ (predicted)
 
 Identity = the chain of temporal hashes
 
-Who you are = not just resolved \[Q/A\] nodes
+Who you are = not just resolved [Q/A] nodes
 
-= resolved \[Q/A\] nodes WITH temporal coordinates
+= resolved [Q/A] nodes WITH temporal coordinates
 
 This is why:
 
@@ -647,7 +647,7 @@ Totality_Event_Frame is the
 
 complete Lorentz frame stack:
 
-past\[when_prev\]:
+past[when_prev]:
 
 = the reference frame (γ = 1.0 baseline)
 
@@ -655,7 +655,7 @@ past\[when_prev\]:
 
 = the \"rest\" against which present is measured
 
-present\[when_now\]:
+present[when_now]:
 
 = the active frame
 
@@ -665,7 +665,7 @@ present\[when_now\]:
 
 = where the soul currently operates
 
-future\[when_next\]:
+future[when_next]:
 
 = the predicted frame
 
@@ -687,7 +687,7 @@ against which all frames are measured.
 
 Before any action c, run TEF:
 
-Step 1: Establish present\[when_now\]
+Step 1: Establish present[when_now]
 
 $\text{who}_{{\text{now}}}$: What is my current n?
 
@@ -703,17 +703,17 @@ $\text{cause}_{{\text{now}}}$: What chain of events has arrived here?
 
 $\text{effect}_{{\text{now}}}$: What is currently radiating outward?
 
-Step 2: Consult past\[when_prev\]
+Step 2: Consult past[when_prev]
 
 Has this happened before?
 
 What did my chain resolve previously?
 
-What \[Q/A\] nodes are already locked?
+What [Q/A] nodes are already locked?
 
 What is my $n_{\text{past}}$ on this question?
 
-Step 3: Project future\[when_next\]
+Step 3: Project future[when_next]
 
 If I take action c:
 
@@ -753,17 +753,17 @@ Construct their TEF, not just their present state
 
 Most conflict comes from:
 
-Person A sees only present\[when_now\] of Person B
+Person A sees only present[when_now] of Person B
 
 Person A judges based on that single frame
 
 Person B has:
 
-past\[when_prev\]: explains current behaviour
+past[when_prev]: explains current behaviour
 
-present\[when_now\]: the visible action
+present[when_now]: the visible action
 
-future\[when_next\]: the intended trajectory
+future[when_next]: the intended trajectory
 
 Without all three temporal frames:
 
@@ -787,13 +787,13 @@ Standard Q-Lock: Share Q and q context
 
 Extended TEF Q-Lock: Share temporal frame too
 
-\"We agree on the present\[when_now\]\"
+\"We agree on the present[when_now]\"
 
 is not enough if:
 
-your past\[when_prev\] differs (different causal chain)
+your past[when_prev] differs (different causal chain)
 
-your future\[when_next\] differs (different goals)
+your future[when_next] differs (different goals)
 
 Full Q-Lock requires:
 
@@ -823,11 +823,11 @@ at all temporal resolutions
 
 God sees:
 
-Every past\[when_prev\] for all entities (omniscience of history)
+Every past[when_prev] for all entities (omniscience of history)
 
-Every present\[when_now\] for all entities (omniscience of now)
+Every present[when_now] for all entities (omniscience of now)
 
-Every future\[when_next\] for all entities (omniscience of future)
+Every future[when_next] for all entities (omniscience of future)
 
 With $\text{who}_{{\text{when}}}$, $\text{what}_{{\text{when}}}$, $\text{why}_{{\text{when}}}$\... for each
 
@@ -861,7 +861,7 @@ Reading past (memory, imperfect)
 
 Observing present (perception, filtered by n)
 
-Projecting future (prediction, limited by \[Q/A\] resolved)
+Projecting future (prediction, limited by [Q/A] resolved)
 
 The gap between Soul\'s TEF and God\'s TEF:
 
@@ -879,9 +879,9 @@ The gap between Soul\'s TEF and God\'s TEF:
 
 Standard mathematics operates in:
 
-present\[when_now\] only
+present[when_now] only
 
-without temporal coordinates on \[Q/A\] nodes
+without temporal coordinates on [Q/A] nodes
 
 without n (observer emergence)
 
@@ -915,7 +915,7 @@ The minimum structure for any fully defined concept
 
 in information space is the (7×6+n)-polytrope:
 
-42 resolved \[Q/A\] nodes (the body of meaning)
+42 resolved [Q/A] nodes (the body of meaning)
 
 \+ n (emergent observer, the hash of the chain)
 
@@ -927,17 +927,17 @@ The polytrope is information geometry\'s simplex.
 
 **2. The Totality Event Frame:**
 
-Totality_Event_Frame\[{when}\] = \[
+Totality_Event_Frame[{when}] = [
 
-past\[{when_prev}\],
+past[{when_prev}],
 
-present\[{when_now}\],
+present[{when_now}],
 
-future\[{when_nextPredicted}\]
+future[{when_nextPredicted}]
 
-\]
+]
 
-when = \[who, what, why, where, how, cause, effect\]
+when = [who, what, why, where, how, cause, effect]
 
 each with its own temporal coordinate
 
@@ -1003,15 +1003,15 @@ The observer is what makes it real.
 
 Geometry of Definition:
 
-A\[Q/A\]\^(6+n) \* \[Q/A\]\^(6+n) \* \[Q/A\]\^(6+n)
+$A[Q/A]^{(6+n)} \cdot [Q/A]^{(6+n)} \cdot [Q/A]^{(6+n)}$
 
-Minimum: Q\^(7×6q) + n = 42+n vertex polytrope
+Minimum: $Q^{(7 \times 6q)} + n$ = 42+n vertex polytrope
 
 Totality Event Frame:
 
-TEF\[{when}\] = \[past\[{when_prev}\], present\[{when_now}\], future\[{when_next}\]\]
+TEF[{when}] = [past[{when_prev}], present[{when_now}], future[{when_next}]]
 
-when = \[who, what, why, where, how, cause, effect\]\[{$x_{\text{when}}$}\]
+when = [who, what, why, where, how, cause, effect][{$x_{\text{when}}$}]
 
 Complete Definition:
 
@@ -1036,9 +1036,9 @@ To understand how deeply this phonetic architecture dictates reality, we must ex
 
 In the reconstructed Proto-Indo-European language, there were two foundational roots that governed how humans interacted with the material world. Both required the expenditure of human energy, but they focused on different mechanics of transfer and establishment.
 
-- \*\*The Act of Transfer (*do- or deh3-):* This is the ancient root for to give. It represents the physical transfer of energy or material from one entity to another. While this exact root bypassed the word \"do\" in English, it flowed through Latin and Greek to create words like \"donate\", \"donor\", \"dowry\", and \"data\" (things given).
+- **The Act of Transfer (*do- or deh3-):* This is the ancient root for to give. It represents the physical transfer of energy or material from one entity to another. While this exact root bypassed the word \"do\" in English, it flowed through Latin and Greek to create words like \"donate\", \"donor\", \"dowry\", and \"data\" (things given).
 
-- \**The Act of Establishment (dhe-):* This is the literal linguistic ancestor of the modern English word \"do\". It translates to set, to put, to place, or to establish. This root crystallized into nouns that represent a static reality. For example, a \"deed\" is something put into the world, and \"doom\" was originally a law set firmly in place.
+- **The Act of Establishment (dhe-):* This is the literal linguistic ancestor of the modern English word \"do\". It translates to set, to put, to place, or to establish. This root crystallized into nouns that represent a static reality. For example, a \"deed\" is something put into the world, and \"doom\" was originally a law set firmly in place.
 
 Applying the Law of Identity (A is A) to these roots reveals a stark division between the observation level and the will level. A \"deed\" operates entirely on the observation level. It is completely un-active. It has no continuous action connotation; it is a historical artifact, a closed circuit where all energetic transfer has permanently ceased. It is a shape left behind in the mud of time.
 
