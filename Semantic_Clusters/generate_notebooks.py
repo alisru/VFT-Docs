@@ -51,11 +51,8 @@ def get_sorting_key(rel_path):
     return (subfolder.lower(), os.path.basename(rel_path).lower())
 
 def normalize_filename(name):
-    # Strip extension
     name = name.lower().replace(".md", "")
-    # Remove common copy suffixes: _1, _2, (1), (2), - Copy, etc.
     name = re.sub(r'[\s_\-\(]+(1|2|3|4|copy)[\)]*$', '', name)
-    # Strip non-alphanumeric to resolve slight punctuation differences
     name = "".join(c for c in name if c.isalnum())
     return name
 
@@ -79,25 +76,11 @@ def main():
                     
     print(f"Found {len(all_md_files)} markdown documents.", flush=True)
     
-    # Categorize files, checking for semantic name uniqueness
-    notebooks = {
-        "Metaphysics & Actualism": [],
-        "Information Physics & Thermodynamics": [],
-        "Ontological Auditing & Geopolitics": [],
-        "System Protocols & Operational Guides": [],
-        "Unstructured Notes & Chat Logs": []
-    }
-    
-    seen_normalized_names = set()
+    # Store unique files mapped by normalized name: {norm_name: (rel_path, mtime, category)}
+    unique_registry = {}
     skipped_duplicates_count = 0
     
-    # Sort files physically to prioritize main folders (e.g. Physics/, Actualism/) over temp io/ staging folders
-    sorted_md_files = sorted(all_md_files, key=lambda x: (
-        1 if "io" in x.lower() else 0, # Prioritize structured folders first
-        x.lower()
-    ))
-    
-    for file_path in sorted_md_files:
+    for file_path in all_md_files:
         rel_path = os.path.relpath(file_path, workspace_root)
         file_name = os.path.basename(file_path)
         
@@ -106,15 +89,33 @@ def main():
             continue
             
         norm_name = normalize_filename(file_name)
-        if norm_name in seen_normalized_names:
-            print(f"  Skipped duplicate document in listing: '{rel_path}' (already indexed under '{norm_name}')", flush=True)
-            skipped_duplicates_count += 1
-            continue
-            
-        seen_normalized_names.add(norm_name)
-        notebooks[category].append(rel_path)
+        mtime = os.path.getmtime(file_path)
         
-    print(f"Filtered out {skipped_duplicates_count} duplicate files from registry listing.", flush=True)
+        if norm_name in unique_registry:
+            existing_path, existing_mtime, existing_cat = unique_registry[norm_name]
+            # If the new file is newer, replace the existing one
+            if mtime > existing_mtime:
+                print(f"  Replacing older version '{existing_path}' (mtime: {existing_mtime}) with newer version '{rel_path}' (mtime: {mtime})", flush=True)
+                unique_registry[norm_name] = (rel_path, mtime, category)
+            else:
+                print(f"  Skipping older duplicate: '{rel_path}' (existing newer file: '{existing_path}')", flush=True)
+            skipped_duplicates_count += 1
+        else:
+            unique_registry[norm_name] = (rel_path, mtime, category)
+            
+    print(f"\nDeduplication complete: Kept {len(unique_registry)} unique files, filtered out {skipped_duplicates_count} older duplicates.", flush=True)
+    
+    # Populate notebooks from the unique registry
+    notebooks = {
+        "Metaphysics & Actualism": [],
+        "Information Physics & Thermodynamics": [],
+        "Ontological Auditing & Geopolitics": [],
+        "System Protocols & Operational Guides": [],
+        "Unstructured Notes & Chat Logs": []
+    }
+    
+    for norm_name, (rel_path, mtime, category) in unique_registry.items():
+        notebooks[category].append(rel_path)
         
     # Split any category over 300 files and map to formal names
     final_notebooks = {}
@@ -132,7 +133,6 @@ def main():
             for i in range(num_parts):
                 part_files = sorted_list[i*part_size : (i+1)*part_size]
                 
-                # Formally map the split parts to descriptive names
                 if name == "Metaphysics & Actualism":
                     formal_name = "Metaphysics: Linguistic Relationalism & Psychology" if i == 0 else "Metaphysics: Ontological Metaphysics & Theology"
                 elif name == "Information Physics & Thermodynamics":
@@ -150,7 +150,7 @@ def main():
     
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write("# The Hypothetical Notebooks Index\n\n")
-        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. Large categories are split logically to keep every list under 300 files.\n\n")
+        f.write("This index compiles all workspace markdown files (excluding the Bible) grouped into formal, semantic notebooks. Duplicate and archived files are excluded from this registry. When duplicate files exist, the most recently modified version is chosen. Large categories are split logically to keep every list under 300 files.\n\n")
         
         f.write("## Notebook Breakdown Table\n\n")
         f.write("| Notebook Name | Document Count |\n|:---|:---|\n")
