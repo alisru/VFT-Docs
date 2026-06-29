@@ -18,5 +18,11 @@ When the user asks you to "make," "generate," "create," or "draft" something (e.
 * Do **NOT** create new implementation plans, active task lists (`task.md`), or log plans in the project folder for simple script executions, minor follow-up tasks, or direct CLI commands.
 * Reserve planning/design documents strictly for major architectural changes, significant codebase restructuring, or when explicitly requested by the user. Run standard tasks immediately.
 
+**DO NOT DUPLICATE WORKSPACE CONTENT:**
+* Do **NOT** create duplicate "review" files, summary artifacts, or copy-paste generated descriptions/transcripts into the chat or separate files. 
+* Writing identical or summarized text to multiple places (like the chat window AND a review markdown file AND the target sidecar file) is extremely token-expensive and redundant.
+* Simply write the required sidecar files directly to their target locations in the workspace, and provide the user with a concise list of the written file paths so they can review them directly.
+
 **Reasoning:**
-The user cannot easily see or access files inside the hidden `.gemini` directory. To be helpful, work must be placed where the user can use it. Over-planning on routine tasks wastes time and tokens.
+The user cannot easily see or access files inside the hidden `.gemini` directory. To be helpful, work must be placed where the user can use it. Over-planning and duplicating text dumps on routine tasks wastes time and tokens.
+

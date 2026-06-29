@@ -54,32 +54,55 @@ python "e:\Vector Field Theory\VFT Docs\_AI files and chat logs\Videos\yt_transc
 ```
 Outputs a `.transcript.txt` sidecar. Uses `openai-whisper` locally (no API call). Model defaults to `medium` — change with `--model large` for better accuracy.
 
-**2b — Generate description from transcript (Agent Task):**
-The agent reads the `.transcript.txt` and writes a description following this template:
+**2b — Generate description and image prompts in Pack Format (Agent Task):**
+The agent reads the `.transcript.txt` and writes a sidecar `.desc.txt` file next to the video. This file MUST strictly follow the parsed Pack Format defined in [yt_desc_styleguide.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_AI%20files%20and%20chat%20logs/Videos/yt_desc_styleguide.md). 
 
-```
-[Hook — 1–2 sentences drawn directly from the video's opening argument]
+Do NOT invent arbitrary templates. Use the following exact layout:
 
-[Body — 3–5 sentences summarising the key ideas covered, in order]
+```text
+=== TITLE ===
+[SEO-Optimized, High-CTR Title]
 
-[CTA — a question or prompt for comments relevant to the video's topic]
+=== DESCRIPTION ===
+[1-2 Sentence Hook - First 150 chars - Primary keyword + viewer benefit, drawn from video opening]
+
+[3-5 Sentence Summary - 200-250 words total body - Natural secondary keyword integration. Only reference concepts spoken in the transcript]
+
+0:00 [Keyword-rich chapter label]
+X:XX [Keyword-rich chapter label]
+X:XX [Keyword-rich chapter label]
+(minimum 3 timestamps, must start at 0:00, each chapter min 10 seconds)
+
+[CTA - One specific engaging question to drive comments]
 
 ---
-🔗 Vector Field Theory: [channel or site link if known]
-📌 Topics: [comma-separated tags extracted from transcript content]
+📌 Topics: [Comma-separated search topics]
+
+=== TAGS ===
+[Comma-separated tags for YouTube backend metadata]
+
+=== IMAGE PROMPTS ===
+[Detailed Pop-Art Paper-Cut Collage prompt for cover generation in 16:9 format, ending with --ar 16:9]
 ```
 
-Save as `.desc.txt` sidecar next to the video:
-- `The_Geometry_of_Truth (1).mp4` → `The_Geometry_of_Truth (1).desc.txt`
+Save as `.desc.txt` sidecar in the video's directory:
+- `The_Geometry_of_Truth.desc.txt`
+
+**2c — Generate cover image (Agent Task):**
+1. Generate the widescreen cover image natively using the agent's `generate_image` tool using the prompt from the `=== IMAGE PROMPTS ===` section.
+2. Ensure the prompt explicitly requests `16:9 widescreen format` and ends with `--ar 16:9`.
+3. Save or copy the generated image as `<video_name>.cover.png` and `<video_name>.cover_v1.png` inside the video's subdirectory.
 
 ---
 
-### Step 3: Review Descriptions (User Checkpoint)
+### Step 3: Review Checkpoint (No Duplicate Files)
 
-**STOP HERE.** Show the user the generated descriptions before uploading. Ask:
-> *"Here are the descriptions I generated. Approve to upload, or tell me which to edit."*
+**STOP HERE.** 
+* **DO NOT** create review files or markdown artifacts (like `toBeUploaded_review.md`) containing duplicate copies of the descriptions. This wastes output tokens.
+* Simply alert the user in the chat that the `.desc.txt` sidecars and `.cover.png` files have been written directly to their folders in the workspace.
+* Ask the user to review the files directly in their workspace and provide approval to upload.
+* Do not proceed to Step 4 without explicit user approval.
 
-Do not proceed to Step 4 without explicit user approval.
 
 ---
 

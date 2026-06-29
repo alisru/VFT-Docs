@@ -8,7 +8,8 @@ import re
 # Categories mapping
 CATEGORIES_SLUGS = {
     "Information Physics & Thermodynamics": "physics-thermodynamics",
-    "Metaphysics & Actualism": "metaphysics-actualism",
+    "Metaphysics: Linguistic Relationalism & Psychology": "metaphysics-linguistic-psychology",
+    "Metaphysics: Ontological Metaphysics & Theology": "metaphysics-ontological-theology",
     "Ontological Auditing & Geopolitics": "ontological-auditing-geopolitics",
     "System Protocols & Operational Guides": "system-protocols-operational-guides",
     "Unstructured Notes & Chat Logs": "unstructured-notes-chat-logs"
@@ -22,6 +23,7 @@ class NotebookLMClient:
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
+            encoding='utf-8',
             bufsize=1
         )
         self.request_id = 1
