@@ -72,6 +72,62 @@ def format_coord(val):
     s = f"{val:+.1f}" if val != 0 else "0.0"
     return s
 
+CITATIONS_MAP = {
+    "wiki": {"label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Pauline_Hanson"},
+    "ms96": {"label": "Maiden Speech (10 Sep 1996)", "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard"},
+    "onenation": {"label": "One Nation Policy Platform", "url": "https://www.onenation.org.au/policies"},
+    "netimes26": {"label": "National Economic Times NPC Address Coverage (June 2026)", "url": "https://www.nationaleconomictimes.com.au"},
+    "tvfy": {"label": "They Vote For You (Voting Record)", "url": "https://theyvoteforyou.org.au"},
+    "roymorgan26": {"label": "Roy Morgan Research Poll (Jan/Feb 2026)", "url": "https://www.roymorgan.com"},
+    "hawker26": {"label": "Sky News Interview / Hawker Poll (Feb 2026)", "url": "https://www.skynews.com.au"},
+    "demosau26": {"label": "DemosAU Primary Poll (Jan 2026)", "url": "https://demosau.com.au"},
+    "npc26": {"label": "National Press Club Speech (June 2026)", "url": "https://www.npc.org.au"},
+}
+
+DYN_CITATIONS = {}
+
+def parse_footnotes(text):
+    if not text:
+        return ""
+    def replace_citation(match):
+        key = match.group(1)
+        # Use dynamic citation URL if available in JSON, otherwise fallback to domain map
+        if key in DYN_CITATIONS:
+            url = DYN_CITATIONS[key]
+            label = f"Source: {key}"
+        else:
+            info = CITATIONS_MAP.get(key, {"label": f"Source: {key}", "url": "#"})
+            url = info["url"]
+            label = info["label"]
+        return f'<a href="{url}" target="_blank" class="inline-flex items-center justify-center px-1.5 py-0.2 ml-0.5 rounded text-[9px] font-mono font-bold bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 border border-amber-500/20 transition-all hover:scale-105" title="{label}">{key}</a>'
+    return re.sub(r'\[\^([a-zA-Z0-9\-]+)\]', replace_citation, text)
+
+def parse_markdown(text):
+    if not text:
+        return ""
+    text = parse_footnotes(text)
+    text = re.sub(r'\*\*(.*?)\*\*', r'<strong class="text-white font-semibold">\1</strong>', text)
+    text = re.sub(r'\*(.*?)\*', r'<em class="italic text-gray-300">\1</em>', text)
+    return text
+
+def parse_quote_markdown(text):
+    if not text:
+        return ""
+    def replace_citation(match):
+        key = match.group(1)
+        if key in DYN_CITATIONS:
+            url = DYN_CITATIONS[key]
+            label = f"Source: {key}"
+        else:
+            info = CITATIONS_MAP.get(key, {"label": f"Source: {key}", "url": "#"})
+            url = info["url"]
+            label = info["label"]
+        return f'<sup class="text-amber-500 hover:text-amber-400 font-mono text-[10px] ml-0.5"><a href="{url}" target="_blank" title="{label}">^</a></sup>'
+    text = re.sub(r'\[\^([a-zA-Z0-9\-]+)\]', replace_citation, text)
+    text = re.sub(r'\*\*(.*?)\*\*', r'<strong class="text-white font-semibold">\1</strong>', text)
+    text = re.sub(r'\*(.*?)\*', r'<em class="italic text-gray-300">\1</em>', text)
+    return text
+
 def clean_field_prefixes(text, is_desc=False):
     if not text:
         return ""
@@ -88,6 +144,9 @@ def clean_field_prefixes(text, is_desc=False):
 def generate_index_page(data):
     total_hits = 0
     total_fails = 0
+    total_v_sum = 0
+    total_psi_sum = 0
+    total_vectors = 0
     plane_cards_html = ""
     
     interrogative_map = {num: (label, inter) for num, label, inter in PLANES_MAP}
@@ -103,17 +162,18 @@ def generate_index_page(data):
         p_fails = sum(1 for v in vectors if v["verdict"] == "FAIL")
         total_hits += p_hits
         total_fails += p_fails
+        total_v_sum += sum(v["coordinates"]["v"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors)
+        total_psi_sum += sum(v["coordinates"]["psi"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors)
+        total_vectors += len(vectors)
         
         p_net = p_hits - p_fails
-        p_pct = (p_net / 49) * 100
-        
-        sum_v = sum(v["coordinates"]["v"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors)
-        sum_psi = sum(v["coordinates"]["psi"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors)
-        avg_v = sum_v / len(vectors)
-        avg_psi = sum_psi / len(vectors)
-        
+        p_pct = (p_net / len(vectors)) * 100
+
+        avg_v = sum(v["coordinates"]["v"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors) / len(vectors)
+        avg_psi = sum(v["coordinates"]["psi"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors) / len(vectors)
+
         quad_name, color = get_quadrant(avg_v, avg_psi)
-        
+
         border_hover = {
             "emerald": "hover:border-emerald-500/30",
             "blue": "hover:border-blue-500/30",
@@ -170,7 +230,9 @@ def generate_index_page(data):
         """
 
     net_score = total_hits - total_fails
-    alignment_percentage = (net_score / 343) * 100
+    alignment_percentage = (net_score / 347) * 100
+    overall_avg_v = total_v_sum / total_vectors if total_vectors else 0
+    overall_avg_psi = total_psi_sum / total_vectors if total_vectors else 0
     
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
@@ -249,6 +311,10 @@ def generate_index_page(data):
                             <span class="text-gray-500 text-xs block uppercase tracking-wider mb-1">MISSES</span>
                             <span class="text-gray-400 text-2xl font-black">0</span>
                         </div>
+                    </div>
+                    <div class="bg-gray-950 p-4 rounded-xl border border-gray-800 mt-4 max-w-xl mx-auto lg:mx-0">
+                        <span class="text-gray-500 text-xs block uppercase tracking-wider mb-1">AVERAGE COORDS (ALL 347)</span>
+                        <span class="text-amber-400 font-mono font-bold">υ: {overall_avg_v:+.2f}, ψ: {overall_avg_psi:+.2f}</span>
                     </div>
                 </div>
             </div>
@@ -349,34 +415,66 @@ def generate_plane_pages(data):
         p_name = plane["plane_name"]
         vectors = plane["vectors"]
         
+        # Collect all active citation keys on this plane
+        active_keys = set()
+        for v in vectors:
+            for text_field in [v.get("description", ""), v.get("justification", ""), v.get("actuality", ""), v.get("quote", "")]:
+                for key in re.findall(r'\[\^([a-zA-Z0-9\-]+)\]', text_field):
+                    active_keys.add(key)
+        
+        sources_html = ""
+        if active_keys:
+            sources_html += f"""
+            <!-- Sources Referenced Section -->
+            <div class="mt-20 bg-gray-900 border border-gray-800 rounded-3xl p-8 shadow-xl">
+                <h3 class="text-xl font-bold mb-6 font-serif text-white uppercase tracking-wider border-b border-gray-800 pb-3">Sources Referenced in Plane {p_num}</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-mono text-gray-400">
+            """
+            for key in sorted(active_keys):
+                url = DYN_CITATIONS.get(key, "#")
+                label = CITATIONS_MAP.get(key, {}).get("label", f"Source: {key}")
+                sources_html += f"""
+                    <li class="flex items-center gap-3">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-500 border border-amber-500/20">{key}</span>
+                        <a href="{url}" target="_blank" class="hover:text-amber-500 transition-colors truncate" title="{label}">{url}</a>
+                    </li>
+                """
+            sources_html += """
+                </ul>
+            </div>
+            """
+        
         p_hits = sum(1 for v in vectors if v["verdict"] == "HIT")
         p_fails = sum(1 for v in vectors if v["verdict"] == "FAIL")
         p_net = p_hits - p_fails
-        p_pct = (p_net / 49) * 100
-        
-        sum_v = sum(v["coordinates"]["v"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors)
-        sum_psi = sum(v["coordinates"]["psi"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors)
-        avg_v = sum_v / len(vectors)
-        avg_psi = sum_psi / len(vectors)
-        
+        p_pct = (p_net / len(vectors)) * 100
+
+        avg_v = sum(v["coordinates"]["v"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors) / len(vectors)
+        avg_psi = sum(v["coordinates"]["psi"] * (1 if v["verdict"] == "HIT" else -1) for v in vectors) / len(vectors)
+
         quad_name, color = get_quadrant(avg_v, avg_psi)
         
-        # Get final statement
-        final_statement = "Pauline Hanson acts as a Structural Regression on this Plane."
-        statements = {
-            1: "Pauline Hanson operates as a defensive, group-centric leveling agent, stoking structural friction in order to isolate identity within monocultural bounds.",
-            2: "Hanson stokes systemic friction across the constitutional rulebook, exploiting the High Court and local jurisdictions to campaign against federal integration.",
-            3: "Pauline Hanson operates as a highly regressive extraction advocate, actively denying ecological stewardship and treaty obligations to support corporate development.",
-            4: "Hanson stokes existential threat narratives to justify border fortification and protectionist isolationism, targeting the quiet fears of the electorate.",
-            5: "Hanson utilizes high-friction populist disruption and Senate leverage to bypass administrative standards, calling for direct democracy mechanisms.",
-            6: "Hanson stokes national pride around the 1788 colonial inception, defending traditional monarchist stability and history curricula from revision.",
-            7: "Pauline Hanson stokes suburban siege paranoia, stoking fear of cultural change and foreign control to maintain isolationist border defense."
-        }
-        final_statement = statements.get(p_num, final_statement)
+        # Get final statement from parsed final_verdict node
+        final_verdict_data = plane.get("final_verdict", {})
+        final_statement = final_verdict_data.get("statement", "")
+        if not final_statement:
+            statements = {
+                1: "Pauline Hanson operates as a defensive, group-centric leveling agent, stoking structural friction in order to isolate identity within monocultural bounds.",
+                2: "Hanson stokes systemic friction across the constitutional rulebook, exploiting the High Court and local jurisdictions to campaign against federal integration.",
+                3: "Pauline Hanson operates as a highly regressive extraction advocate, actively denying ecological stewardship and treaty obligations to support corporate development.",
+                4: "Hanson stokes existential threat narratives to justify border fortification and protectionist isolationism, targeting the quiet fears of the electorate.",
+                5: "Hanson utilizes high-friction populist disruption and Senate leverage to bypass administrative standards, calling for direct democracy mechanisms.",
+                6: "Hanson stokes national pride around the 1788 colonial inception, defending traditional monarchist stability and history curricula from revision.",
+                7: "Pauline Hanson stokes suburban siege paranoia, stoking fear of cultural change and foreign control to maintain isolationist border defense."
+            }
+            final_statement = statements.get(p_num, "Pauline Hanson acts as a Structural Regression on this Plane.")
+        else:
+            final_statement = parse_markdown(final_statement)
 
         # Generate vectors list html
         vectors_html = ""
         current_aspect = ""
+        toc_entries = []
         
         for v in vectors:
             addr_parts = v["address"].split('.')
@@ -395,8 +493,10 @@ def generate_plane_pages(data):
                     7: {"Who": "7.1 The Resulting Agents (Effect.Who)", "What": "7.2 The Resulting Institutions (Effect.What)", "Where": "7.3 The Resulting Geographies (Effect.Where)", "Why": "7.4 The Resulting Drives (Effect.Why)", "How": "7.5 The Resulting Methods (Effect.How)", "Cause": "7.6 The Resulting Origins (Effect.Cause)", "Effect": "7.7 The Resulting Outcomes (Effect.Effect)"}
                 }
                 sub_title = titles.get(p_num, {}).get(aspect, f"Section {aspect}")
+                anchor_id = f"sub-{aspect.lower()}"
+                toc_entries.append((anchor_id, sub_title))
                 vectors_html += f"""
-                <div class="col-span-1 lg:col-span-2 mt-12 mb-6">
+                <div class="col-span-1 lg:col-span-2 mt-12 mb-6" id="{anchor_id}">
                     <h2 class="text-2xl font-black text-amber-500 border-b border-gray-800 pb-3 font-serif">
                         {sub_title}
                     </h2>
@@ -412,18 +512,19 @@ def generate_plane_pages(data):
             
             quote_block = ""
             if v["quote"]:
+                parsed_quote = parse_quote_markdown(v['quote'])
                 quote_block = f"""
                 <div class="mb-4 pl-4 border-l-2 border-amber-500/30">
-                    <p class="text-sm italic text-gray-300 font-serif">"{v['quote']}"</p>
+                    <p class="text-sm italic text-gray-300 font-serif">"{parsed_quote}"</p>
                     {f'<span class="text-[10px] text-gray-500 mt-1 block">— {v["context"]}</span>' if v.get("context") else ''}
                 </div>
                 """
             
             clean_name = v["name"]
             
-            desc_text = clean_field_prefixes(v.get('description', ''), is_desc=True)
-            just_text = clean_field_prefixes(v.get('justification', ''), is_desc=False)
-            act_text = clean_field_prefixes(v.get('actuality', ''), is_desc=False)
+            desc_text = parse_markdown(clean_field_prefixes(v.get('description', ''), is_desc=True))
+            just_text = parse_markdown(clean_field_prefixes(v.get('justification', ''), is_desc=False))
+            act_text = parse_markdown(clean_field_prefixes(v.get('actuality', ''), is_desc=False))
             
             vectors_html += f"""
             <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-md flex flex-col justify-between hover:border-gray-700 transition-colors">
@@ -539,10 +640,27 @@ def generate_plane_pages(data):
             </div>
         </div>
 
-        <!-- Vectors Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {vectors_html}
+        <!-- TOC + Vectors layout -->
+        <div class="flex gap-8 items-start">
+
+            <!-- Sticky TOC Sidebar -->
+            <aside class="hidden xl:block w-56 flex-shrink-0 sticky top-20 self-start">
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-4">
+                    <p class="text-xs font-bold uppercase tracking-widest text-amber-500 mb-3">Jump to</p>
+                    <nav class="space-y-1">
+                        {"".join(f'<a href="#{eid}" class="block text-xs text-gray-400 hover:text-amber-400 transition-colors py-1 border-l-2 border-gray-800 hover:border-amber-500 pl-2 leading-tight">{etitle}</a>' for eid, etitle in toc_entries)}
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Vectors Grid -->
+            <div class="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {vectors_html}
+            </div>
+
         </div>
+
+        {sources_html}
 
     </main>
 
@@ -561,6 +679,9 @@ def run():
     print("Loading data...")
     with open(JSON_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
+    
+    global DYN_CITATIONS
+    DYN_CITATIONS = data.get("sources", {})
     
     print("Generating index Dashboard...")
     generate_index_page(data)

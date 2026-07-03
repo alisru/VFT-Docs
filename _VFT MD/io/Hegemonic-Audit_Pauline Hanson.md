@@ -23,15 +23,7 @@ The central question of this audit is not, *"Is Pauline Hanson a good or bad pol
 * 	Fails 	(Systemic Violations): 	130
 * 	Misses 	(Ignored Vectors): 	0
 
-According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (27.1%) of the nation's core structural, moral, and historical identity.
-* 	  
-   	**Hits 	(Structural Alignments):** 	223  
-* 	  
-   	**Fails 	(Systemic Violations):** 	123  
-* 	  
-   	**Misses 	(Ignored Vectors):** 	0
-
-According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just under one-third (28.9%) of the nation's core structural, moral, and historical identity.
+According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just over a quarter (27.1%) of the nation's core structural, moral, and historical identity.
 
 She does not represent the comprehensive Australian character, nor the optimistic, egalitarian "Fair Go" that built the modern Commonwealth. Instead, she is a highly specialized political agent who operates almost exclusively in the nation's structural "shadows." She flawlessly channels Australia's geographical paranoia, its colonial history of exclusion, and its working-class anxieties, but she fundamentally fails—and actively attacks—the nation's most celebrated unifying virtues.
 

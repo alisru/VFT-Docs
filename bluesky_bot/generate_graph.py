@@ -53,13 +53,13 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.set_yticks(y_ticks)
     
     x_labels = [
-        "Everyone\n(+2.0)",
+        "Everyone\n(+2.0)\nEgalitarian",
         "Others\n(+1.0)",
         "Other\n(+0.5)",
         "No One\n(0.0)",
         "My Group\n(-0.5)",
         "Me\n(-1.0)",
-        "Only Me\n(-2.0)"
+        "Only Me\n(-2.0)\nAnti-Egalitarian"
     ]
     y_labels = [
         "Active-\nActive (+2.0)",
@@ -86,6 +86,22 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     zone2 = patches.Rectangle((2.0, -2.0), -4.0, 4.0, fill=False, edgecolor='white', linestyle='-', linewidth=1.5, zorder=1)
     ax.add_patch(zone2)
 
+    # Alchemical Element & Quality Overlays (outside the white box, before graph arms)
+    alchemy_opts = dict(color='white', fontsize=9, fontstyle='italic', alpha=0.45, ha='center', va='center', zorder=0)
+    quality_opts = dict(color='white', fontsize=8, fontstyle='italic', alpha=0.35, ha='center', va='center', zorder=0)
+
+    # Corners
+    ax.text(2.22, 2.22, "AIR", **alchemy_opts)      # TL: Justice (hot + wet)
+    ax.text(-2.22, 2.22, "FIRE", **alchemy_opts)    # TR: Tyranny (hot + dry)
+    ax.text(2.22, -2.22, "WATER", **alchemy_opts)   # BL: Stagnation (cold + wet)
+    ax.text(-2.22, -2.22, "EARTH", **alchemy_opts)  # BR: Chaos (cold + dry)
+
+    # Axis Midpoints
+    ax.text(0.0, 2.15, "HOT", **quality_opts)       # Top
+    ax.text(0.0, -2.15, "COLD", **quality_opts)     # Bottom
+    ax.text(2.3, 0.0, "WET", **quality_opts)        # Left
+    ax.text(-2.3, 0.0, "DRY", **quality_opts)       # Right
+
     font_opts = {'color': 'white', 'fontsize': 10, 'ha': 'center', 'va': 'center'}
 
     # The Objective Boundary (Zone 1 Corners)
@@ -97,10 +113,10 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
 
     # The Strategic Extremes (Zone 2 Corners)
     # u=+2 is Left
-    ax.text(1.9, 1.9, "JUSTICE", color='white', fontsize=10, ha='left', va='top') # Outer TL
-    ax.text(-1.9, 1.9, "TYRANNY", color='white', fontsize=10, ha='right', va='top') # Outer TR
-    ax.text(1.9, -1.9, "STAGNATION", color='white', fontsize=10, ha='left', va='bottom') # Outer BL
-    ax.text(-1.9, -1.9, "CHAOS", color='white', fontsize=10, ha='right', va='bottom') # Outer BR
+    ax.text(1.9, 1.9, "JUSTICE\n(Joy)", color='white', fontsize=10, ha='left', va='top') # Outer TL
+    ax.text(-1.9, 1.9, "TYRANNY\n(Anger)", color='white', fontsize=10, ha='right', va='top') # Outer TR
+    ax.text(1.9, -1.9, "STAGNATION\n(Peace)", color='white', fontsize=10, ha='left', va='bottom') # Outer BL
+    ax.text(-1.9, -1.9, "CHAOS\n(Depression)", color='white', fontsize=10, ha='right', va='bottom') # Outer BR
 
     has_macro = macro_event and macro_event.strip()
     
@@ -223,12 +239,12 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.tick_params(colors='gray')
     ax.set_title(title_text, color='white', pad=25, fontsize=10)
 
-    # Legend (moved to bottom center)
-    legend = ax.legend(handles=legend_handles, loc='upper center', bbox_to_anchor=(0.5, -0.15),
-                       ncol=2 if len(legend_handles)<=2 else 4, facecolor='#111111', edgecolor='white', labelcolor='white', fontsize=8)
+    # Legend (moved to bottom left)
+    legend = ax.legend(handles=legend_handles, loc='upper left', bbox_to_anchor=(0.0, -0.15),
+                       ncol=1, facecolor='#111111', edgecolor='white', labelcolor='white', fontsize=8)
 
     # Watermark label
-    fig.text(0.5, 0.01, 'Psychic Hegemony Graph', ha='center', va='bottom',
+    fig.text(0.5, 0.01, 'Psochic Hegemony Graph: The map of Good and Evil', ha='center', va='bottom',
              color='#444444', fontsize=9, fontstyle='italic')
 
     plt.tight_layout()
