@@ -2,10 +2,14 @@ import json
 import re
 from pathlib import Path
 
-# Paths
-JSON_FILE = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/io/Hegemonic Audit_ Pauline Hanson.json")
-WEB_DIR = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/io/Hanson_Audit_Website")
+# Paths (resolved relative to this script's location: .../io/Hanson_Audit_AI_Logs/generate_website.py
+# so this runs correctly both on the user's Windows machine and in a Linux sandbox mount of the same folder)
+IO_DIR = Path(__file__).resolve().parent.parent  # generate_website.py lives in io/Hanson_Audit_AI_Logs/
+HANSON_DIR = IO_DIR / "Hanson_Audit"  # audit source docs/JSON live here
+JSON_FILE = HANSON_DIR / "Hegemonic Audit_ Pauline Hanson.json"
+WEB_DIR = IO_DIR / "Hanson_Audit_Website"
 WEB_DIR.mkdir(parents=True, exist_ok=True)
+ABOUT_MD_FILE = HANSON_DIR / "About_The_Kanon_Audit.md"
 
 # Canonical mapping
 PLANES_MAP = [
@@ -27,7 +31,9 @@ def get_nav(current_page):
         planes_nav += f'<a href="{filename}" class="px-3 py-2 rounded-lg text-sm font-semibold transition-all {active_class}">{num}. {label}</a>\n'
     
     home_active = "bg-gray-800 text-white" if current_page == "index.html" else "text-gray-300 hover:text-white hover:bg-gray-800"
-    
+    about_active = "bg-amber-600 text-white shadow-md" if current_page == "About.html" else "text-gray-300 hover:text-white hover:bg-gray-800"
+    about_link = f'<a href="About.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-all {about_active}">About</a>\n'
+
     return f"""
     <nav class="bg-gray-950 border-b border-gray-800 sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,6 +46,7 @@ def get_nav(current_page):
                 <div class="hidden lg:flex items-center space-x-2">
                     <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-all {home_active}">Dashboard</a>
                     {planes_nav}
+                    {about_link}
                 </div>
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center">
@@ -54,6 +61,7 @@ def get_nav(current_page):
         <div class="hidden lg:hidden bg-gray-950 border-t border-gray-800 px-2 pt-2 pb-3 space-y-1" id="mobile-menu">
             <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium {home_active}">Dashboard</a>
             {planes_nav}
+            {about_link}
         </div>
     </nav>
     """
@@ -100,7 +108,7 @@ def parse_footnotes(text):
             url = info["url"]
             label = info["label"]
         return f'<a href="{url}" target="_blank" class="inline-flex items-center justify-center px-1.5 py-0.2 ml-0.5 rounded text-[9px] font-mono font-bold bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 border border-amber-500/20 transition-all hover:scale-105" title="{label}">{key}</a>'
-    return re.sub(r'\[\^([a-zA-Z0-9\-]+)\]', replace_citation, text)
+    return re.sub(r'\[\^([a-zA-Z0-9_\-]+)\]', replace_citation, text)
 
 def parse_markdown(text):
     if not text:
@@ -123,7 +131,7 @@ def parse_quote_markdown(text):
             url = info["url"]
             label = info["label"]
         return f'<sup class="text-amber-500 hover:text-amber-400 font-mono text-[10px] ml-0.5"><a href="{url}" target="_blank" title="{label}">^</a></sup>'
-    text = re.sub(r'\[\^([a-zA-Z0-9\-]+)\]', replace_citation, text)
+    text = re.sub(r'\[\^([a-zA-Z0-9_\-]+)\]', replace_citation, text)
     text = re.sub(r'\*\*(.*?)\*\*', r'<strong class="text-white font-semibold">\1</strong>', text)
     text = re.sub(r'\*(.*?)\*', r'<em class="italic text-gray-300">\1</em>', text)
     return text
@@ -230,7 +238,7 @@ def generate_index_page(data):
         """
 
     net_score = total_hits - total_fails
-    alignment_percentage = (net_score / 347) * 100
+    alignment_percentage = (net_score / total_vectors) * 100 if total_vectors else 0
     overall_avg_v = total_v_sum / total_vectors if total_vectors else 0
     overall_avg_psi = total_psi_sum / total_vectors if total_vectors else 0
     
@@ -313,7 +321,7 @@ def generate_index_page(data):
                         </div>
                     </div>
                     <div class="bg-gray-950 p-4 rounded-xl border border-gray-800 mt-4 max-w-xl mx-auto lg:mx-0">
-                        <span class="text-gray-500 text-xs block uppercase tracking-wider mb-1">AVERAGE COORDS (ALL 347)</span>
+                        <span class="text-gray-500 text-xs block uppercase tracking-wider mb-1">AVERAGE COORDS (ALL {total_vectors})</span>
                         <span class="text-amber-400 font-mono font-bold">υ: {overall_avg_v:+.2f}, ψ: {overall_avg_psi:+.2f}</span>
                     </div>
                 </div>
@@ -419,7 +427,7 @@ def generate_plane_pages(data):
         active_keys = set()
         for v in vectors:
             for text_field in [v.get("description", ""), v.get("justification", ""), v.get("actuality", ""), v.get("quote", "")]:
-                for key in re.findall(r'\[\^([a-zA-Z0-9\-]+)\]', text_field):
+                for key in re.findall(r'\[\^([a-zA-Z0-9_\-]+)\]', text_field):
                     active_keys.add(key)
         
         sources_html = ""
@@ -675,6 +683,111 @@ def generate_plane_pages(data):
             f.write(html_content)
         print(f"File {filename} written successfully!")
 
+def render_about_markdown(md_text):
+    """Minimal Markdown -> styled HTML renderer for the About page.
+    Supports: '# ' / '## ' headers, blank-line-separated paragraphs,
+    **bold**, *italic*. Deliberately simple -- this is prose, not audit data."""
+    def inline(text):
+        text = re.sub(r'\*\*(.*?)\*\*', r'<strong class="text-white font-semibold">\1</strong>', text)
+        text = re.sub(r'\*(.*?)\*', r'<em class="italic text-gray-300">\1</em>', text)
+        return text
+
+    blocks = [b.strip() for b in md_text.strip().split("\n\n") if b.strip()]
+    html_parts = []
+    for block in blocks:
+        if block.startswith("## "):
+            html_parts.append(
+                f'<h2 class="text-2xl font-extrabold text-white mt-12 mb-4 border-b border-gray-800 pb-3">{inline(block[3:].strip())}</h2>'
+            )
+        elif block.startswith("# "):
+            html_parts.append(
+                f'<h1 class="text-4xl font-black text-white mb-6">{inline(block[2:].strip())}</h1>'
+            )
+        elif re.match(r'^\d+\.\s+\*\*', block):
+            # numbered list block (used for "The seven planes")
+            items = block.split("\n")
+            list_item_re = re.compile(r'^\d+\.\s+')
+            lis_parts = []
+            for item in items:
+                if item.strip():
+                    stripped_item = list_item_re.sub("", item.strip())
+                    lis_parts.append(f'<li class="mb-2">{inline(stripped_item)}</li>')
+            lis = "".join(lis_parts)
+            html_parts.append(f'<ol class="list-decimal list-inside text-gray-400 leading-relaxed space-y-1 mb-6 pl-2">{lis}</ol>')
+        else:
+            html_parts.append(f'<p class="text-gray-400 leading-relaxed text-lg mb-6">{inline(block)}</p>')
+    return "\n".join(html_parts)
+
+def generate_about_page():
+    if not ABOUT_MD_FILE.exists():
+        print(f"About markdown not found at {ABOUT_MD_FILE}, skipping About.html generation.")
+        return
+
+    with open(ABOUT_MD_FILE, "r", encoding="utf-8") as f:
+        md_text = f.read()
+
+    # First '# ' line becomes the hero title; rest renders as body
+    lines = md_text.strip().split("\n\n", 1)
+    title_block = lines[0].lstrip("# ").strip() if lines[0].startswith("# ") else "About This Audit"
+    body_md = lines[1] if len(lines) > 1 else ""
+    body_html = render_about_markdown(body_md)
+
+    html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Pauline Hanson Hegemonic Audit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        body {{
+            font-family: 'Outfit', sans-serif;
+            background-color: #030712;
+        }}
+        .font-mono {{
+            font-family: 'JetBrains+Mono', monospace;
+        }}
+    </style>
+</head>
+<body class="antialiased text-gray-200">
+
+    {get_nav("About.html")}
+
+    <!-- Hero / Header -->
+    <header class="bg-gray-950 border-b border-gray-800 relative overflow-hidden py-16">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.05),transparent_50%)] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <div class="inline-flex px-4 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                Methodology &amp; Framework
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
+                {title_block}
+            </h1>
+            <p class="text-xl text-gray-400 font-light max-w-3xl mx-auto leading-relaxed">
+                How the Australian Kanon works, how it was built, and how this audit measures a real actor against it.
+            </p>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-gray-900 border border-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl">
+            {body_html}
+        </div>
+    </main>
+
+    <footer class="bg-gray-950 border-t border-gray-800 py-12 mt-20 text-center text-gray-500 text-sm">
+        <p>© 2026 The Psochic Hegemony. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+"""
+    with open(WEB_DIR / "About.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print("About.html written successfully!")
+
 def run():
     print("Loading data...")
     with open(JSON_FILE, "r", encoding="utf-8") as f:
@@ -688,7 +801,10 @@ def run():
     
     print("Generating Plane Pages...")
     generate_plane_pages(data)
-    
+
+    print("Generating About page...")
+    generate_about_page()
+
     print("Website generation complete!")
 
 if __name__ == "__main__":

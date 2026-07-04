@@ -16,17 +16,53 @@ Reference standard: the "Stringybark and Greenhide" (Who.Who.How) and "The Commo
 
 Edits to fix format problems must be precise, targeted string replacements on the specific node(s) flagged -- never a full-document rewrite pass "while we're in there." Token cost compounds fast at this document's length.
 
-## Quote sourcing: ParlInfo via browser-use
+## Use training data as a hypothesis generator, never as a citation
 
-For finding real, verbatim Hansard/press-release quotes (not just the same 8-9 recycled sources from WebSearch), use ParlInfo (parlinfo.aph.gov.au) through the Chrome browser-use tools, not raw fetch/curl.
+Before running any search for a node's quote, pause and ask: does this vector's mechanism (not its poetic Kanon name) match a real, specific incident, speech, or controversy already known from training on Hanson or Australian political history? For a 30-year public figure, training data usually contains a real candidate. Don't default straight to a blind WebSearch on the vector's abstract description and give up when the results come back as thin paraphrase.
 
-Why: the OpenAustralia API's `getHansard` search is dead (returns empty for every query tested, including single-word searches, despite the site's underlying data being live and current). Raw `curl`/`web_fetch` against ParlInfo's own search either returns stale cached HTML (the JSF/PrimeFaces session-based URLs don't work statelessly) or gets hard-blocked by an Azure WAF, especially if the query uses field syntax like `Content:"x" Speaker_Phrase:"y"` (colons/quotes trip the WAF).
+The correct sequence, every time:
+1. Generate the hypothesis from training data. Decompose the vector to its actual mechanism, then ask what specific real event, speech, or exchange this matches. Name it as a hypothesis ("this sounds like the November 2017 Dastyari pub-heckling fallout"), not as a fact, and not yet as a citation.
+2. Verify the hypothesis with a direct fetch or a targeted search built around the specific names, dates, and likely exact vocabulary the hypothesis suggests, never the Kanon's poetic vector name as the search string. Pull the verbatim text from the actual source page, don't stop at a WebSearch tool's own summary of that page.
+
+This is a hard boundary, not a shortcut: training data can hallucinate specific wording, dates, or even whether an incident happened as recalled. A training-data hypothesis earns its way into the document only once a live source confirms it. If the fetch doesn't confirm it, the hypothesis is discarded, it does not get rounded up to "close enough."
+
+Caught this session as a failure mode worth naming: giving up on a node (Sledging) after one generic WebSearch on the vector's abstract description, and writing a self-authored summary sentence with a citation bolted on instead, when a real, specific, well-documented incident (the Dastyari "pipsqueak"/"smart arse" exchange) was sitting in training data the whole time and just needed a targeted verification search to become a real, dated, sourced quote.
+
+Two related sourcing failures caught the same session, both from not going all the way to the primary page:
+- Never treat a WebSearch tool's own paraphrase of a page as the source. If a result surfaces a promising line, fetch that exact page directly (onenation.org.au pages, for instance, fetch fine with a plain web_fetch, no browser-use needed) and pull the verbatim text yourself.
+- Cite the most specific URL that actually contains the claim, not a generic hub page. A TheyVoteForYou claim belongs on the specific `/policies/NNN` page for that exact question, not the actor's generic profile page. If a citation only works by pointing at a broad index page, that's a sign the underlying claim was never actually fetched and verified.
+
+A "Quote" field must be an actual quote, a documented paraphrase of a specific real position, or a description of a specific documented action. Never a sentence the auditor wrote themselves summarizing a general impression with a citation bolted on afterward.
+
+### Warning: never trust an AI's self-narrated methodology as verification, only the fetched source counts
+
+Caught this session via a cross-check with Gemini: when asked to explain "how did you find that quote," an AI's step-by-step methodology narration (e.g. "Step 1: Framework Variable Isolation, Step 2: Targeted Domain Query, Step 3: Verbatim Extraction") can itself be confabulated after the fact, a fluent, plausible-sounding reconstruction of a much cruder process (a raw keyword query that happened to rank a good source), not an honest log of what actually happened. Gemini confirmed this about its own output directly: its polished procedural explanations were "post-hoc rationalization," invented to make an ordinary keyword search look like a masterstroke of targeted retrieval.
+
+This applies to any model narrating its own process, not just Gemini. The only thing that actually verifies a quote is the fetched source itself, the specific page, its date, its speaker attribution, read and confirmed directly. A model's prose description of its own search strategy is not evidence of rigor and should never be treated as a substitute for independently checking the fetched result. In this project specifically, tool calls (WebSearch, web_fetch, the OpenAustralia API) are logged and inspectable, so "how was this found" can always be answered by pointing at the actual call and response, never by trusting a narrated summary of one.
+
+## Quote sourcing: OpenAustralia API (preferred, corrects earlier note)
+
+Correction to an earlier finding in this file: the OpenAustralia `getHansard` API is NOT dead. The previous "returns empty for every query" note was wrong, or at least incomplete, unauthenticated/keyless requests against the search endpoint return nothing useful, but an authenticated request with a valid API key works cleanly and returns real, structured, dated, speaker-attributed Hansard results.
+
+Working call format: `https://www.openaustralia.org.au/api/getHansard?key=<KEY>&output=js&search=<query>`. Useful params: `search` (plain text or a `"quoted exact phrase"`), `person=<person_id>` to restrict to one speaker (Hanson's OpenAustralia person_id is 10280), `output=js` for a clean parsed JSON-ish response with `gid` (a permalink-ready debate ID like `2026-06-24.32.1`), `hdate`, `speaker`, and a `body` snippet with the match highlighted.
+
+This is now the preferred first move for step 2 of the training-data-hypothesis workflow (see above): once a hypothesis names a plausible real incident, search a short, distinctive, unique phrase from the hypothesized content (not the Kanon's poetic vector name) via this API, restricted to `person=10280` if the hypothesis is specifically about something Hanson said. A hit's `gid` maps directly to a working permalink at `https://www.openaustralia.org.au/senate/?id=<gid>` (or `/debates/?id=<gid>` for House of Reps), which loads via a plain `web_fetch`, no browser-use needed, and gives the full surrounding transcript to quote from accurately in context.
+
+Also confirmed working directly via plain `web_fetch` without the API: `openaustralia.org.au/senate/?id=YYYY-MM-DD.N.N` and `/debates/?id=YYYY-MM-DD.N.N` permalink pages render full transcript text. Only the bare, unauthenticated `/search/?pid=...` style search page reliably returns empty, don't rely on that one; use the API endpoint above instead.
+
+ParlInfo via browser-use remains useful as a secondary/cross-check option or for anything predating OpenAustralia's index coverage, but the API above is now the faster first move for anything from the OpenAustralia era.
+
+**Scope limitation confirmed this session: `getHansard` only covers Hansard (chamber speeches, motions, second readings), not press conferences, doorstop interviews, TV/radio appearances, media releases, or party platform pages.** Tested directly: searching the API for "pipsqueak" (Hanson's real quote about Dastyari, said to reporters on the campaign trail, not in the chamber) returns zero matches from her, only unrelated chamber uses of the word by other senators. If the training-data hypothesis points to something said outside the chamber, go straight to WebSearch or a direct fetch of the relevant news outlet/party page instead, the OpenAustralia API will not find it no matter how the query is phrased.
+
+## ParlInfo via browser-use (secondary option)
+
+Raw `curl`/`web_fetch` against ParlInfo's own search either returns stale cached HTML (the JSF/PrimeFaces session-based URLs don't work statelessly) or gets hard-blocked by an Azure WAF, especially if the query uses field syntax like `Content:"x" Speaker_Phrase:"y"` (colons/quotes trip the WAF).
 
 What works: navigate to `https://parlinfo.aph.gov.au/parlInfo/search/search.w3p` with Chrome browser-use tools, type a **plain-text query** (e.g. `native title Hanson`) into the Basic Search box and press Enter. This returns real, live search results (thousands of matches, properly ranked/dated) because it runs through an actual rendered browser session rather than a stateless request.
 
 Known limitation: result pages that are PDF-only don't yield full text easily. `curl`-downloading the PDF hits the same Azure WAF JS-challenge wall, and the Chrome extension's built-in PDF viewer runs in its own extension sandbox that browser-use can't screenshot or read the DOM of. The on-page snippet preview only gives a short truncated fragment. If a hit is PDF-only, either use the fragment as a partial lead (verify it's a real fragment before citing) or find the same quote via WebSearch/another source. HTML-rendering results (most TV/radio transcripts, some press releases) work end-to-end.
 
-Pauline Hanson's OpenAustralia person_id is 10280, if that's ever useful for other OpenAustralia-family lookups (though getHansard search itself doesn't work).
+Pauline Hanson's OpenAustralia person_id is 10280, used directly with the getHansard API above for speaker-restricted searches.
 
 ### Better ParlInfo methods: SpeakerId filter and Guided Search
 

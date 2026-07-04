@@ -2818,7 +2818,7 @@ This is a hit because she accurately identifies and defends the supreme physical
 
 Actuality: The Home encodes the Australian cultural ideal of homeownership, the quarter-acre block as the material foundation of independence, family stability, and civic belonging. Hanson has made housing affordability a central platform issue, directly linking it to immigration. Her June 2026 NPC address cited rising rents and unaffordable house prices as a direct consequence of Albanese government immigration levels[^netimes26]. One Nation's ban on foreign freehold land purchases is explicitly framed as protecting the Home from overseas capital competition[^onenation]. Her opposition to negative gearing changes defends the investment architecture that makes the Home a wealth-building vehicle for existing owners[^netimes26]. The tension in her position, defending the Home for those who have it while restricting the policy changes that would make it accessible for those who don't, is the vector's key fault line. PARTIAL HIT.
 
-**(Why.What.Why) The Holiday (υ: \+0.5, ψ: \-0.2): FAIL.** **Quote:** [Documented position: Hanson's legislative record consistently opposes the industrial protections of trade unions, having voted against union entry rights, enterprise bargaining protections, and right of entry provisions on multiple Senate votes.] -They Vote For You[^tvfy]
+**(Why.What.Why) The Holiday (υ: \+0.5, ψ: \-0.2): FAIL.** **Quote:** "Pauline Hanson voted generally against increasing workplace protections." -TheyVoteForYou, voting record on workplace protections[^tvfy_workplaceprotect]
 
 Description: Hanson’s hyper-vigilant, crisis-driven persona completely rejects the cultural requirement for a period of suspended responsibility.
 
@@ -2838,7 +2838,7 @@ This is a miss because her permanent state of alarm fundamentally contradicts th
 
 Actuality: The Holiday encodes the Australian cultural institution of annual leave, the legislated right to rest that underpins the work-life balance central to Australian identity. Hanson's record on the Holiday is structurally negative: she has voted against casual worker protections, opposed Fair Work improvements, and supported deregulation of employment conditions that protect annual leave entitlements[^tvfy]. Her June 2026 NPC address calling for easier dismissal laws and describing workers as "lazy" attacks the employment security that makes the Holiday a reliable institution rather than a negotiated concession[^netimes26]. One Nation's anti-worker legislative record includes votes against protections for gig economy and casual workers who often lack paid leave entitlements entirely[^antiworker]. She defends the Holiday as a cultural value while voting to erode its legislative foundations. FAIL.
 
-**(Why.What.How) The Ute (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** [Documented position: Hanson has been among the most prominent opponents of electric vehicles and the government's EV strategy, opposing mandates and subsidies for EVs and arguing they are impractical for regional Australians.] -National Press Club Address (2026)[^npc26]
+**(Why.What.How) The Ute (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "Households are pushed into expensive technology and costly 'upgrades' they never asked for." -"'Net zero' is destroying Australia," Pauline Hanson's One Nation, onenation.org.au[^onenation_netzero]
 
 Description: She champions the rugged, multi-purpose utility vehicle as the supreme physical manifestation of Australian practicality.
 
@@ -2920,7 +2920,7 @@ This is a hit because she roots her entire political legitimacy in the raw, leve
 
 Actuality: The Pub encodes the democratic forum of Australian civic life, the front bar as the place where ordinary opinion is formed, tested, and expressed outside institutional settings. Hanson is the pre-eminent Pub politician of contemporary Australia. Her June 2026 NPC address was explicitly framed as bringing the Pub's verdict to the most elite media venue in the country, the outsider's voice given a Canberra platform for the first time in thirty years[^netimes26]. Her entire political method, direct speech, cultural references, rejection of technocratic language, is calibrated to the Pub's conversational norms[^wiki]. Her January 2026 polling surge to 23% is the Pub's political opinion quantified[^roymorgan26]. The Pub is the audience she has always played to and the forum she genuinely inhabits. HIT.
 
-**(Why.Where.What) The Beach (υ: \+0.6, ψ: \+0.3): HIT.** **Quote:** [Documented position: Hanson consistently invokes the beach, the BBQ, and backyard cricket as symbols of Australian cultural identity under threat from multiculturalism and immigration.] -Senate Speech: Protect Our Australian Way of Life (2018)[^senate18prot]
+**(Why.Where.What) The Beach (υ: \+0.6, ψ: \+0.3): HIT.** **Quote:** "Remember what sparked the riots in Cronulla: Muslims attacking Australian women for wearing bikinis at the beach in a hot Australian summer." -Senate Hansard, Statements by Senators, 24 June 2026[^oa_cronulla]
 
 Description: She fiercely defends the coastal fringe as a sacred zone of hedonistic freedom that must remain immune to foreign cultural modesty.
 
@@ -2980,7 +2980,7 @@ This is a hit because she accurately targets and defends the primary subsidized 
 
 Actuality: The Club encodes the voluntary associational life of Australian communities, the RSL, the football club, the bowls club, the social infrastructure that creates horizontal bonds outside family and work. Hanson consistently defends the Club as what is being destroyed by government overreach. Her Senate speeches on reducing regulatory burden for clubs and community organisations are authentic[^wiki]. Her June 2026 NPC address described community organisations as drowning in compliance requirements that have replaced practical civic engagement with bureaucratic process[^netimes26]. One Nation's platform to reduce red tape for small businesses and community organisations directly addresses the Club's structural challenges[^onenation]. Her defence of pokies in clubs, against harm reduction reforms, is the one area where she defends the Club's commercial model against public health arguments[^tvfy]. HIT.
 
-**(Why.Where.How) The Shed (υ: \+0.5, ψ: \+0.4): HIT.** **Quote:** [Documented position: Hanson has consistently defended the right of small manufacturers, tradies, and blue-collar workers to use petrol tools, drive utes, and operate businesses free from green regulations she frames as inner-city impositions.] -National Press Club Address (2026)[^npc26]
+**(Why.Where.How) The Shed (υ: \+0.5, ψ: \+0.4): HIT.** **Quote:** Hanson questioned why renewable energy projects could access concessional finance while "the bloke in the corner store" and young people starting businesses could not. -National Press Club Address, reported by New England Times, 17 June 2026[^netimes26]
 
 Description: She champions the solitary, practical workspace as the true engine room of Australian ingenuity and self-reliance.
 
@@ -3000,7 +3000,7 @@ This is a hit because she accurately channels the profound cultural respect for 
 
 Actuality: The Shed encodes the Australian culture of practical making, the garage workshop, the small fabricator, the tradie who builds and repairs rather than buys and discards. Hanson's defence of the Shed is genuine and consistent. Her opposition to foreign ownership and import competition is explicitly about protecting the domestic manufacturing and trade culture the Shed represents[^wiki]. One Nation's platform to restore domestic manufacturing, particularly in critical industries, is the Shed's economic policy equivalent[^onenation]. Her June 2026 NPC address on small business electricity costs and regulatory burden directly addresses the material conditions that make small-scale manufacturing viable[^netimes26]. Her defence of tradies against EV mandates extends the Shed's practical logic into transport policy. HIT.
 
-**(Why.Where.Cause) The Field (υ: \+0.6, ψ: \+0.6): HIT.** **Quote:** [Documented position: Hanson consistently frames political contest as a battle for survival of ordinary Australians against a corrupt establishment, using the language of sport and combat to describe political struggle.] -National Press Club Address (2026)[^npc26]
+**(Why.Where.Cause) The Field (υ: \+0.6, ψ: \+0.6): HIT.** **Quote:** "Since 1996, I have had a battle with the ABC." -Senate Hansard, Broadcasting Legislation Amendment Bill debate, 13 September 2017[^oa_abcbattle]
 
 Description: She heavily utilizes the language and binary morality of the sporting arena to frame her political crusades and nationalistic goals.
 
@@ -3020,7 +3020,7 @@ This is a hit because she accurately translates the ferocious competitive spirit
 
 Actuality: The Field encodes the sporting arena as a metaphor for fair competition, the level playing ground where rules apply equally and the best effort wins. Hanson consistently frames Australian politics as a Field where the rules have been rigged against ordinary people. Her 1996 Maiden Speech described a system where Aboriginal Australians and multicultural communities receive advantages ordinary Australians are denied, an uneven field[^ms96]. Her June 2026 NPC address described big business, immigration, and foreign capital as players being given a home ground advantage over Australian workers and families[^netimes26]. One Nation's anti-corruption and electoral integrity policies are Field-levelling measures, ensuring the rules apply to everyone[^onenation]. HIT on the metaphor, contested on the empirical claim.
 
-**(Why.Where.Effect) The Mall (υ: \-0.2, ψ: \+0.3): FAIL.** **Quote:** [Documented position: Hanson has consistently opposed foreign retail corporations and multinational chains displacing Australian-owned small businesses, framing local shops as cultural anchors of community life.] -One Nation Policy Platform[^onenation]
+**(Why.Where.Effect) The Mall (υ: \-0.2, ψ: \+0.3): FAIL.** **Quote:** One Nation's platform states it will pursue a tax regime that ensures multinational businesses pay their fair share of tax while operating in Australia. -"Multinational Taxation," onenation.org.au[^onenation_tax]
 
 Description: She explicitly attacks the sanitized, multinational consumer spaces that have become the primary modern arenas of Australian life.
 
@@ -3038,7 +3038,7 @@ Actuality: The Mall encodes the suburban commercial centre as both a practical s
 
 ## **4.4 The Motivation of the Drive (Why.Why)**
 
-**(Why.Why.Who) Mateship (υ: \+0.7, ψ: \+0.5): FAIL.** **Quote:** [Documented position: Hanson defines mateship as loyalty between people who share the same cultural background and national identity, opposing multiculturalism as a threat to authentic Australian bonds.] -Senate Speech: Protect Our Australian Way of Life (2018)[^senate18prot]
+**(Why.Why.Who) Mateship (υ: \+0.7, ψ: \+0.5): FAIL.** **Quote:** "To survive in peace and harmony, united and strong, we must have one people, one nation, one flag." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: She weaponizes the ultimate social bond of the nation, transforming a mechanism of universal solidarity into a strict gatekeeping tool.
 
@@ -3098,7 +3098,7 @@ This is a hit because she accurately manipulates the darkest, most insecure moti
 
 Actuality: The Cultural Cringe encodes Australia's historical tendency to defer to overseas cultural and intellectual authority, the sense that what is foreign is inherently superior to what is local. Hanson is the most consistent anti-Cringe politician in Australian history. Her Senate speeches have attacked UN conventions, international human rights frameworks, and foreign cultural imports consistently across her career[^wiki]. Her June 2026 NPC address called for withdrawal from UN frameworks and rejection of EU trade conditions linking commerce to climate compliance[^netimes26]. Her opposition to academic and media elites who defer to international progressive norms is the Cringe's political inverse, cultural nationalist pride as a defensive weapon[^netimes26]. However, her 2025-2026 alignment with American right-wing culture war framing introduces a new form of cultural dependence, the Cringe relocated from Britain to the United States[^hawker26]. PARTIAL HIT with an ironic contradiction.
 
-**(Why.Why.Why) She'll Be Right (υ: \+0.2, ψ: \-0.6): FAIL.** **Quote:** [Documented position: Hanson explicitly rejects fatalism in her political rhetoric, arguing that Australians must actively fight back against what she calls the destruction of their country by elites, framing urgency and action as the correct response.] -National Press Club Address (2026)[^npc26]
+**(Why.Why.Why) She'll Be Right (υ: \+0.2, ψ: \-0.6): FAIL.** **Quote:** "The real tragedy is people are frightened of what will happen to them if they just speak up." -National Press Club Address, reported by New England Times, 17 June 2026[^netimes26]
 
 Description: Hanson’s entire political methodology relies on the total destruction of the nation's traditional, apathetic optimism.
 
@@ -3138,7 +3138,7 @@ This is a hit because she successfully mapped her personal ambition onto the mos
 
 Actuality: "Have a Go" encodes the Australian encouragement of personal initiative and willingness to attempt the improbable against the odds. Hanson's biography is the canonical "have a go" story in Australian politics: fish-and-chip shop owner disendorsed by her party, wins her seat anyway, builds a national party, goes to prison, comes back, wins again[^wiki]. Her June 2026 NPC address was framed as the ultimate "have a go" vindication, the outsider who backed herself for thirty years and was proved right[^netimes26]. One Nation's platform on small business tax relief and reducing regulation explicitly enables the "have a go" ethic for working-class entrepreneurs[^onenation]. The contradiction is that her immigration policy, reducing arrivals and tightening cultural requirements, denies the "have a go" opportunity to those who want to attempt Australia from the outside. HIT on the persona, PARTIAL on the policy.
 
-**(Why.Why.Cause) Fear of Missing Out (υ: \-0.2, ψ: \+0.5): FAIL.** **Quote:** [Documented position: Hanson explicitly campaigns on fear that Australia is missing its last chance to reverse course -- on immigration, energy, and identity -- framing urgency as the defining feature of the current political moment.] -National Press Club Address (2026)[^npc26]
+**(Why.Why.Cause) Fear of Missing Out (υ: \-0.2, ψ: \+0.5): FAIL.** **Quote:** "It is possibly the last chance to save the dairy industry in Australia." -Senate Hansard, Saving Australian Dairy Bill 2019, Second Reading, 2 December 2019[^oa_dairylastchance]
 
 Description: She completely rejects the profound national anxiety of being disconnected from the global center of civilization.
 
@@ -3158,7 +3158,7 @@ This is a failure because her extreme isolationism contradicts the fundamental, 
 
 Actuality: Fear of Missing Out (FOMO) encodes the anxiety about being left behind as opportunities close, the urgency that drives both individual and collective action. Hanson's political engine runs entirely on FOMO. Her 1996 Maiden Speech explicitly stated Australia had "only 10 to 15 years left to turn things around"[^ms96]. Her June 2026 NPC address described the moment as the last opportunity to reverse demographic and cultural change before the window closes[^netimes26]. Her January 2026 polling surge to 23% was driven significantly by voters who fear missing the Australia they remember[^roymorgan26]. FOMO is her most powerful emotional instrument, she converts it from an individual anxiety into a civilisational one. HIT.
 
-**(Why.Why.Effect) The Good Life (υ: \+0.5, ψ: \-0.4): HIT.** **Quote:** [Documented position: Hanson consistently invokes the Good Life -- the BBQ, the backyard, the safe street, the affordable family home -- as what is being lost to immigration, multiculturalism, and green ideology.] -Senate Speech: Protect Our Australian Way of Life (2018)[^senate18prot]
+**(Why.Why.Effect) The Good Life (υ: \+0.5, ψ: \-0.4): HIT.** **Quote:** "These figures are appalling and totally un-Australian for a rich country such as ours." -National Press Club Address, reported by New England Times, 17 June 2026[^netimes26]
 
 Description: She perfectly identifies the ultimate, sedative goal of the Australian drive and promises to defend it from complex, modern threats.
 
@@ -3180,7 +3180,7 @@ Actuality: The Good Life encodes the Australian aspiration for material comfort,
 
 ## **4.5 The Method of the Drive (Why.How)**
 
-**(Why.How.Who) Shouting (υ: \+0.7, ψ: \+0.4): FAIL.** **Quote:** [Documented position: Hanson's political style is characterised by volume and directness -- she consistently speaks louder than other senators in chamber, uses plain language, and refuses to use political euphemism.] -National Press Club Address (2026)[^npc26]
+**(Why.How.Who) Shouting (υ: \+0.7, ψ: \+0.4): FAIL.** **Quote:** "It has got me into trouble on the odd occasion, but I am not going to stop saying what I think." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: She explicitly rejects the reciprocal, communal generosity demanded by the "Shouting" mechanism when applied beyond her strict ingroup.
 
@@ -3200,7 +3200,7 @@ This is a failure because she refuses to participate in the most basic, inclusiv
 
 Actuality: Shouting encodes the Australian cultural practice of raising the voice to be heard above the noise, the democratic insistence on being counted. Hanson's entire political method is based on shouting what the political class treats as whisper-only topics. Her 1996 Maiden Speech was itself a shout into the parliamentary chamber: immigration, Aboriginal affairs, foreign ownership, named loudly where others used euphemism[^ms96]. Her June 2026 NPC address described people being "frightened of what will happen to them if they just speak up", the shouter defending everyone else's right to shout[^netimes26]. Her November 2025 Senate burqa stunt is political shouting in its purest form: a visual shout that suspended the chamber for 90 minutes[^burqa25]. HIT.
 
-**(Why.How.What) Sledging (υ: \-0.3, ψ: \+0.5): HIT.** **Quote:** [Documented position: Hanson has used parliamentary and media theatre as political instruments -- wearing a burqa into the Senate chamber in 2017, staging walkouts, and using Question Time for confrontational political performance.] -NBC News (2025)[^burqa25]
+**(Why.How.What) Sledging (υ: \-0.3, ψ: \+0.5): HIT.** **Quote:** "I've got absolutely no time for him whatsoever - I think he's smart arse... What a joke he's nothing but a pipsqueak." -Reported by SBS News, 9 November 2017[^sbsdastyari]
 
 Description: She utilizes the tactical, highly visible insult to achieve the "Mental Disintegration" of her political and cultural opponents.
 
@@ -3220,7 +3220,7 @@ This is a hit because she ruthlessly employs the nation's premier method of psyc
 
 Actuality: Sledging encodes the Australian sporting practice of psychological destabilisation through targeted verbal and psychological attack, getting under your opponent's skin. Hanson is one of the most skilled political sledgers in Australian history. Her November 2025 Senate burqa stunt, wearing the garment into the chamber to demand its ban, is a masterclass in political sledging: it simultaneously mocked Islamic dress, provoked a 90-minute shutdown, generated global media, and resulted in censure that she immediately converted into a fundraising tool[^burqa25]. Her "Please explain?" moment in 1996 was a reverse sledge, turning the interviewer's question back on itself[^wiki]. Her June 2026 NPC reference to Energy Minister Chris Bowen as "Peanut Bowen" demonstrates that the sledging instinct remains fully operational at 72[^netimes26]. HIT.
 
-**(Why.How.Where) Queuing (υ: \+0.8, ψ: \-0.2): HIT.** **Quote:** [Documented position: Hanson has consistently described asylum seekers arriving by boat as queue jumpers and economic migrants, using the language of illegality and invasion to frame maritime arrivals.] -Senate Speech: Immigration Debate Cannot Be Silenced (2018)[^senate18imm]
+**(Why.How.Where) Queuing (υ: \+0.8, ψ: \-0.2): HIT.** **Quote:** "I am not against migration at all. You have to do it in a managed way. You have to bring in the right people who want to assimilate." -Reported by SBS News[^sbsmigration]
 
 Description: She weaponizes the sacred Australian geometry of the "Queue" to justify the harshest possible border protection policies.
 
@@ -3240,27 +3240,27 @@ This is a hit because she accurately channels the absolute, unyielding power of 
 
 Actuality: Queuing encodes the Australian cultural norm of orderly waiting, the fair queue as the physical expression of egalitarian respect for the rules. Hanson has made the queue one of her most powerful political metaphors. Her characterisation of asylum seekers as "queue jumpers" who bypass the orderly migration process has been a consistent rhetorical anchor for her border protection policy across her career[^wiki]. Her June 2026 NPC address defending immigration caps as protection of the orderly process frames the entire immigration system as a queue that must be defended against those who cheat[^netimes26]. One Nation's offshore processing and boat-turn-back policies enforce the queue as a physical reality[^onenation]. The queue metaphor is simple, powerful, and deeply resonant with the fairness ethic she claims to defend. HIT.
 
-**(Why.How.Why) Striking (υ: \+0.7, ψ: \+0.7): FAIL.** **Quote:** Hanson's Senate voting record shows consistent opposition to union entry rights, enterprise bargaining protections, and industrial disputation measures. -TheyVoteForYou, voting record[^tvfy]
+**(Why.How.Why) Striking (υ: \+0.7, ψ: \+0.7): HIT.** **Quote:** "But they're coming out with a sledgehammer against the unions." -Sky News, reported by The New Daily, 25 November 2019[^tnd_ensuringintegrity]
 
-Description: She actively seeks to disarm the working class of their primary historical lever against the power of capital and the state.
+Description: She blocked a government bill that would have made it significantly easier to deregister unions and disqualify their officials over industrial disputes.
 
-Her policy platform heavily favors restricting the right to collective withdrawal of labor, despite claiming to represent the "Battler."
+Her stated objection was proportionality, comparing the bill's three-strike deregistration trigger to the government's comparatively soft response to a major bank's money-laundering breaches.
 
-This strategy attacks the "Veto" mechanism that secured the Fair Go, siding with employers to ensure uninterrupted economic production.
+This decision preserved the union movement's structural capacity for collective withdrawal of labour at a moment when that capacity was under direct legislative threat.
 
-By undermining solidarity, she attempts to atomize the worker, stripping them of the only method that guarantees their dignity.
+She reached this position only after weeks of negotiation with both the government and the unions, refusing to be "pushed or badgered or bullied" by either side.
 
 **Justification:** The vector defines the collective veto achieved through active withdrawal of labor.
 
-Hanson’s anti-union stance fundamentally betrays the historical method by which the Australian drive secured its prosperity.
+By voting down the Ensuring Integrity Bill, Hanson preserved rather than dismantled the legal machinery unions rely on to call and sustain industrial action.
 
-She replaces the "Solidarity" of the collective with the vulnerable, isolated bargaining power of the individual.
+Her framing of the bill as a disproportionate "sledgehammer" is itself an active defence of the collective veto's legitimacy, not passive indifference to it.
 
-This is a failure because she actively attacks the most potent economic tool established by the Australian working class.
+This is a hit because the concrete legislative outcome protected the working class's most potent economic tool, regardless of her broader anti-union rhetoric elsewhere.
 
-Actuality: Striking encodes the industrial tool of collective work withdrawal, the organised refusal to labour that is the fundamental lever of worker power. Hanson has been one of the most consistent opponents of strike action in Australian parliamentary history. Her Senate voting record shows systematic support for legislation restricting union entry, increasing penalties for industrial action, and reducing the protected action framework[^tvfy]. Her June 2026 NPC address on workplace relations described businesses struggling to afford wage increases rather than workers struggling to secure them[^netimes26]. One Nation's anti-worker legislative record documents votes against multiple protections for collective bargaining[^antiworker]. She invokes the battler's language while voting to remove the battler's most powerful economic tool. FAIL.
+Actuality: Striking encodes the industrial tool of collective work withdrawal, the organised refusal to labour that is the fundamental lever of worker power. Hanson's record on this vector is a genuine split. In November 2019 she and Malcolm Roberts blindsided the Morrison government by voting with Labor and the Greens to defeat the Ensuring Integrity Bill, legislation that would have let courts deregister unions or disqualify officials over comparatively minor breaches, after weeks of negotiation collapsed over her demand for equivalent corporate accountability[^tnd_ensuringintegrity]. Industrial Relations Minister Christian Porter said afterward he believed the process had not been conducted in good faith[^theconv_ensuringintegrity]. Her broader Senate voting record still shows opposition to other worker protections and enterprise bargaining measures[^tvfy]. On the single most direct test of this vector, whether unions retain the legal capacity to strike, her vote protected it. HIT, with the caveat that this cuts against her more general anti-union voting pattern.
 
-**(Why.How.How) Improvising (υ: \+0.6, ψ: \+0.6): HIT.** **Quote:** [Documented position: Hanson's political style is characterised by improvisation and instinct -- she rarely uses prepared scripts, frequently digresses from formal speaking notes, and frames spontaneity as authenticity.] -National Press Club Address (2026)[^npc26]
+**(Why.How.How) Improvising (υ: \+0.6, ψ: \+0.6): HIT.** **Quote:** "My view on issues is based on commonsense, and my experience as a mother of four children, as a sole parent, and as a businesswoman running a fish and chip shop." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: She operates her entire political movement through the rough, functional logic of "Bricolage" and making do with limited resources.
 
@@ -3280,7 +3280,7 @@ This is a hit because she successfully applies the colonial method of rough repa
 
 Actuality: Improvising encodes the Australian cultural comfort with making do, adapting to conditions rather than following a rigid plan. Hanson's political method is fundamentally improvisational. Her June 2026 NPC address included off-script moments, audience asides, and direct responses to hecklers that no major party leader would risk[^netimes26]. Her 1996 Maiden Speech was delivered without a speechwriter, a maiden speech so unpolished it caused a national controversy precisely because of its unmediated directness[^ms96]. Her November 2025 Senate burqa stunt was reportedly decided that morning, improvisation as political theatre[^burqa25]. The improvised quality of her politics is simultaneously a strength (authenticity) and a weakness (policy inconsistency, legal risk, internal party chaos)[^wiki]. HIT.
 
-**(Why.How.Cause) Gambling (υ: \-0.3, ψ: \+0.4): HIT.** **Quote:** [Documented position: Hanson has defended the right of Australians to gamble, opposing pokies restrictions and minimum bet limits, framing gambling as a personal freedom issue and opposing nanny-state intervention.] -One Nation Policy Platform[^onenation]
+**(Why.How.Cause) Gambling (υ: \-0.3, ψ: \+0.4): HIT.** **Quote:** "I also agree with Senator Bernardi that gambling is a part of life." -Senate Hansard, Interactive Gambling Amendment Bill 2016, Second Reading, 20 March 2017[^oa_gamblingpartoflife]
 
 Description: She actively defends the predatory gambling industry, framing the massive extraction of working-class wealth as an issue of personal liberty rather than systemic exploitation.
 
@@ -3300,7 +3300,7 @@ This alignment represents a mechanical hit, as her trajectory serves to stabiliz
 
 Actuality: Gambling encodes the Australian cultural relationship with risk and chance, the punter's acceptance that luck is a legitimate force in life. Hanson's position on gambling is pragmatic and libertarian: she defends the right of Australians to gamble as a matter of personal choice and opposes government restrictions on pokies in clubs[^tvfy]. Her Senate voting record shows opposition to mandatory pre-commitment technology and other harm-reduction gambling reforms[^tvfy]. Her June 2026 NPC address used "gambling" language to describe government energy and immigration policy, framing policy risk as the real gambling threat while defending personal wagering as legitimate[^netimes26]. One Nation's anti-nanny-state platform explicitly defends gambling as an adult freedom[^onenation]. PARTIAL HIT, defends the right but not the practice.
 
-**(Why.How.Effect) Volunteering (υ: \+0.9, ψ: \+0.7): FAIL.** **Quote:** [Documented position: Hanson has consistently praised volunteer emergency services -- particularly rural fire brigades and SES -- framing volunteerism as an expression of the authentic Australian community spirit she argues is being destroyed by multiculturalism.] -Senate Speech: Protect Our Australian Way of Life (2018)[^senate18prot]
+**(Why.How.Effect) Volunteering (υ: \+0.9, ψ: \+0.7): FAIL.** **Quote:** "I do congratulate and honour the men and women, the firefighters and volunteers, who have risked their own lives to save properties." -Senate Hansard, Ministerial Statements: Australian Bushfires, 25 November 2019[^oa_bushfirevolunteers]
 
 Description: She consistently focuses on the failure of the state rather than celebrating or mobilizing the spontaneous, swarming relief of the community.
 
@@ -3342,7 +3342,7 @@ This is a hit because she accurately channels the historical trauma of the convi
 
 Actuality: The Stain encodes the colonial history of violence, dispossession, and exclusion as a moral burden on the national identity, the "black armband" view of history that Hanson has spent thirty years rejecting. Her 2018 Senate speech refusing to acknowledge the "black armband" of history is the most explicit restatement of the Stain-denial position in contemporary mainstream politics[^wiki]. Her opposition to the 2008 Apology, the Voice, treaty, and truth-telling processes all maintain the Stain's invisibility as the official position[^wiki]. Her June 2026 NPC address calling to abolish the National Indigenous Australians Agency removes the institutional acknowledgment that the Stain created ongoing obligations[^netimes26]. She has made Stain-denial a structural feature of One Nation's political identity. HIT on the denial vector, FAIL on the historical reality.
 
-**(Why.Cause.Who) Guilt \[First Nations Perspective\] (υ: \+0.6, ψ: \+0.5): FAIL.** **Quote:** [Documented position: Hanson has consistently denied the existence of the Stolen Generations as a systematic policy, arguing the removal of Aboriginal children was motivated by welfare concerns rather than racial policy.] -Wikipedia: Pauline Hanson[^wiki]
+**(Why.Cause.Who) Guilt \[First Nations Perspective\] (υ: \+0.6, ψ: \+0.5): FAIL.** **Quote:** "The majority of Aboriginals do not want handouts because they realise that welfare is killing them." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: She actively and aggressively works to maintain the denial of the true foundational trauma of the Australian continent.
 
@@ -3402,7 +3402,7 @@ This is a hit because she accurately maps her political identity onto the suprem
 
 Actuality: The Bush encodes the rural and regional interior as the authentic source of Australian identity, the space where the real Australia lives, outside the coastal urban bubble. Hanson's political identity is entirely Bush-oriented. Her June 2026 NPC address was explicitly addressed to the Bush communities being ignored by Canberra[^netimes26]. One Nation's platform on regional infrastructure, agricultural support, and energy policy is calibrated to the Bush's material needs[^onenation]. Her January 2026 polling surge to 23% was driven significantly by regional Queensland and WA voters, the Bush's electoral expression of its own political weight[^roymorgan26]. Her energy policy, coal and nuclear over renewables, is explicitly designed to preserve the Bush's economic model rather than transform it[^netimes26]. HIT, the Bush is her primary political constituency and her most authentic register.
 
-**(Why.Cause.Where) Abundance \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.4): FAIL.** **Quote:** [Documented position: Hanson consistently frames First Nations land management and custodial ecology as a romanticised myth, opposing native title on the grounds that modern land use and economic development should take priority.] -One Nation Policy Platform[^onenation]
+**(Why.Cause.Where) Abundance \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.4): FAIL.** **Quote:** "Indigenous heritage black tape holds our nation hostage only because we let it." -"Indigenous claims to end under One Nation policy," onenation.org.au, 7 March 2025[^onenation_toothfairy]
 
 Description: She explicitly rejects the pre-colonial reality that the continent was a fully managed, overflowing estate of resources.
 
@@ -3442,7 +3442,7 @@ This is a hit because she accurately channels the most powerful, unifying histor
 
 Actuality: The War encodes the defining national experience of sacrifice and collective effort under existential threat, the event that produced the Anzac myth and confirmed Australia's place in the world. Hanson's relationship to the War is reverential and exclusively backward-looking. Her Senate speeches have defended the flag, the Anzac tradition, and the RSL as non-negotiable national institutions[^wiki]. Her June 2026 NPC address discussed defence spending and Australia's alliance commitments in terms of the sacrificial obligation established by past wars[^netimes26]. One Nation's platform commits to defence spending and veteran support as foundational national obligations[^onenation]. Her defence of the flag against burning, her opposition to date change, and her ANZAC Day attendance are all consistent acts of War-vector maintenance. HIT.
 
-**(Why.Cause.Why) Resistance \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.8): FAIL.** **Quote:** [Documented position: Hanson has explicitly denied that colonisation involved invasion or the dispossession of a sovereign people, arguing instead that Aboriginal people benefited from British settlement and European civilisation.] -Maiden Speech, House of Representatives (1996)[^ms96]
+**(Why.Cause.Why) Resistance \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.8): FAIL.** **Quote:** "This nation is being divided into black and white, and the present system encourages this." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: She aggressively denies the reality of the 140-year Frontier War fought on Australian soil to secure the continent.
 
@@ -3584,7 +3584,7 @@ This is a hit because she accurately defends the ultimate physical terminus of t
 
 Actuality: The Suburb encodes the spatial form in which most Australians actually live, the low-density residential neighbourhood that is simultaneously the country's dominant built environment and the stage for its most intense cultural politics. Hanson's politics are calibrated to the Suburb's anxieties. Her June 2026 NPC address linked immigration to housing affordability and neighbourhood overcrowding, the Suburb under pressure from population growth[^netimes26]. One Nation's opposition to high-density infill development in favour of greenfield housing defends the Suburb's spatial form against urban consolidation[^onenation]. Her law-and-order platform addresses the Suburb's safety anxieties directly[^wiki]. Her January 2026 polling surge was significantly driven by outer-suburban voters in Queensland and WA[^roymorgan26]. HIT.
 
-**(Why.Effect.Why) Stability (υ: \+0.6, ψ: \-0.4): FAIL.** **Quote:** [Documented position: Hanson argues that the political system is fundamentally broken and captured by vested interests, framing One Nation as the only party that actually represents ordinary Australians' values and interests.] -National Press Club Address (2026)[^npc26]
+**(Why.Effect.Why) Stability (υ: \+0.6, ψ: \-0.4): FAIL.** **Quote:** "We have to overhaul our tax system. We are one of the highest taxed countries in the world." -National Press Club Address, reported by New England Times, 17 June 2026[^netimes26]
 
 Description: Hanson fundamentally rejects the peaceful stasis that is the ultimate, triumphant outcome of the moderating Australian drive.
 
@@ -3838,7 +3838,7 @@ She successfully weaponizes the highest legal instrument of the state to enforce
 
 Actuality: Hard Yakka encodes the Australian value of genuine physical effort, the culture of working hard and taking pride in what you produce. Hanson's biographical claim to Hard Yakka is genuine. She built and ran a fish-and-chip shop as a sole trader and single mother before entering politics, the material experience of Hard Yakka rather than a rhetorical claim to it[^wiki]. Her June 2026 NPC address drew on this biography explicitly as evidence that she understands what working Australians face[^netimes26]. One Nation's platform on small business tax relief, penalty rate defence for employers, and regulatory reduction is calibrated to the Hard Yakka class of owner-operator businesses[^onenation]. The contradiction is that her Senate voting record consistently works against the workers who perform the Hard Yakka for others rather than for themselves[^tvfy]. HIT on the personal claim, PARTIAL on the policy extension.
 
-**(How.What.How) The Stump Jump Plough (υ: \+0.7, ψ: \+0.6): HIT.** **Quote:** [Documented position: Hanson's political method is characterised by adaptive improvisation -- she frequently changes position on specific policies while maintaining consistent identity politics, framing inconsistency as pragmatism.] -National Press Club Address (2026)[^npc26]
+**(How.What.How) The Stump Jump Plough (υ: \+0.7, ψ: \+0.6): HIT.** **Quote:** "They didn't want to ban the burqa, yet they denied me the right to wear it on the floor of Parliament. There is no dress code on the floor of Parliament, yet I'm not allowed to wear it. So to me, it's been hypocritical." -Senate burqa protest, reported by NBC News, 2025[^burqa25]
 
 Description: She is a master of utilizing parliamentary privilege to inject radical, highly controversial statements directly into the permanent record.
 
@@ -3882,7 +3882,7 @@ Actuality: The Black Box encodes the systems whose internal workings are opaque,
 
 ## **5.3 The Architecture (How.Where)**
 
-**(How.Where.Who) The Polling Booth (υ: \+0.9, ψ: \+0.4): HIT.** **Quote:** [Documented position: Hanson has argued that the polling booth must be protected from manipulation and fraud, calling for voter ID requirements at all federal elections and opposing electronic voting systems.] -National Press Club Address (2026)[^npc26]
+**(How.Where.Who) The Polling Booth (υ: \+0.9, ψ: \+0.4): HIT.** **Quote:** One Nation claimed credit for the Morrison government's 2021 voter identification bill, requiring voters to produce ID at in-person polling, and supported it at the outset in the Senate. -Voter ID legislation, reported by The Canberra Times, 28 October 2021[^cantimes21voterid]
 
 Description: She treats the localized architecture of the primary school voting hall as the only legitimate arena of national power.
 
@@ -3896,7 +3896,7 @@ She successfully anchors her movement in the ubiquitous, unpretentious physical 
 
 Actuality: The Polling Booth encodes the physical site of democratic participation, the location where the secret ballot is cast and the citizen's will is registered. Hanson's relationship to the Polling Booth is ambivalent. Her electoral integrity platform treats the Polling Booth as under threat from fraud, preference manipulation, and administrative bias[^onenation]. Her June 2026 NPC address called for reforms to secure the Polling Booth's integrity against postal vote rorting[^netimes26]. However, her party's own preferential arrangements and its historical exploitation of preference flows introduces tension with her Polling Booth integrity rhetoric[^tvfy]. Her January 2026 polling surge to 23% is the Polling Booth's genuine endorsement of her platform by the electorate[^roymorgan26]. PARTIAL HIT.
 
-**(How.Where.What) The Picket Line (υ: \+0.7, ψ: \+0.7): FAIL.** **Quote:** [Documented position: Hanson consistently opposes industrial action and picket lines, supporting back-to-work orders and opposing protected action provisions that allow unions to strike without penalty.] -They Vote For You[^tvfy]
+**(How.Where.What) The Picket Line (υ: \+0.7, ψ: \+0.7): FAIL.** **Quote:** Voted generally against increasing workplace protections, including dispute resolution safeguards for workers, across her Senate divisions from 2020 to 2024. -They Vote For You, workplace protections policy record[^tvfy_251]
 
 Description: She routinely attacks the physical and procedural architecture of the judicial system, viewing it as fundamentally illegitimate.
 
@@ -4082,7 +4082,7 @@ Actuality: Comfort encodes the Australian aspiration for ease, security, and pre
 
 ## **5.5 The Mechanics (How.How)**
 
-**(How.How.Who) The Smoko (υ: \+0.6, ψ: \-0.2): FAIL.** **Quote:** [Documented position: Hanson has opposed nanny-state restrictions on smoking, junk food advertising, and alcohol, defending personal freedom of choice and framing public health regulations as government overreach.] -One Nation Policy Platform[^onenation]
+**(How.How.Who) The Smoko (υ: \+0.6, ψ: \-0.2): FAIL.** **Quote:** "It is currently illegal to purchase any e-liquids or e-cigarettes containing nicotine in Australia. It shouldn't be." -Senator Malcolm Roberts, One Nation, restating the party's support for deregulating vaping (2023)[^onenation_vaping]
 
 Description: She frequently rejects the essential "Merger and Acquisition" mechanics that allow the federal parliament to function.
 
@@ -4094,7 +4094,7 @@ She fails the vector by refusing to engage in the fundamental transactional meth
 
 **Justification:** The Smoko vector encodes the scheduled, dignified pause as a moderately moral, mildly suppressive method, the institutionalised break that acknowledges the worker's humanity and prevents unsustainable extraction of labour. Hanson fails this vector by rejecting the compromise mechanics essential to parliamentary function, treating necessary legislative negotiation as moral betrayal. The Smoko method requires periodic disengagement from productive conflict to allow sustainable continuation; her refusal to compromise introduces friction that prevents the legislative process from completing its cycle. She fails because her methodological absolutism, treating every negotiation as a zero-sum battle, converts the productive friction of democracy into a grinding halt that serves her constituency's symbolic preferences over their material interests.
 
-Actuality: The Smoko encodes the distinctly Australian workplace ritual of the cigarette break, the informal pause in labour that is simultaneously a health risk and a social institution. Hanson's relationship to the Smoko is libertarian: she opposes government restrictions on tobacco access and packaging requirements as nanny-state overreach[^tvfy]. Her Senate voting record includes opposition to plain packaging legislation extensions and tobacco tax increases[^tvfy]. However, the Smoko as a cultural practice has been eroded by the same workplace health and safety framework that she has not opposed, the Smoko is disappearing for reasons orthogonal to her platform. PARTIAL HIT on the libertarian defence, FAIL on protecting the institution.
+Actuality: The Smoko encodes the distinctly Australian workplace ritual of the cigarette break, the informal pause in labour that is simultaneously a health risk and a social institution. Hanson's relationship to the Smoko is inconsistent rather than purely libertarian: her Senate voting record shows she actually voted consistently for the 2018 Tobacco Plain Packaging Amendment Bill, the opposite of a blanket anti-regulation stance on tobacco[^tvfy_plainpack]. Her party's libertarian energy has instead gone into deregulating nicotine vaping products, which One Nation frames as a harm-reduction substitute for cigarettes rather than a health risk to be restricted[^onenation_vaping]. The Smoko as a cultural practice has also been eroded by the same workplace health and safety framework that she has not consistently opposed. PARTIAL HIT on the vaping deregulation position, FAIL on any coherent defence of smoking itself as an institution.
 
 **(How.How.What) The Roster (υ: \+0.6, ψ: \+0.3): HIT.** **Quote:** "The difference between Albanese, Chalmers and me is that I actually ran a small business. They have earned their income by working for Government, taking their salary from the taxpayer." -National Press Club Address (2026)[^npc26]
 
@@ -4166,7 +4166,7 @@ She successfully operates the mechanics of the "Spectacle," proving that causing
 
 Actuality: The Trial encodes the formal legal test of culpability, the adversarial method through which guilt and innocence are determined. Hanson's biography is inseparable from the Trial. Her 2003 conviction for electoral fraud and three months imprisonment was the most dramatic political Trial in contemporary Australian history[^wiki]. Her successful appeal on grounds of misdirection returned the Trial's verdict and converted her imprisonment into a political asset[^wiki]. She now invokes the Trial as a method for others: calling for prosecution of NDIS rorters, immigration system abusers, and government officials she accuses of misconduct[^netimes26]. The Trial is simultaneously the instrument used against her and the one she demands for her opponents. HIT.
 
-**(How.How.Effect) The Report (υ: \+0.2, ψ: \-0.4): HIT.** **Quote:** [Documented position: Hanson has called for multiple royal commissions and public inquiries -- into Aboriginal affairs, immigration, climate science, and foreign influence -- framing formal investigation as the mechanism for exposing systemic failure.] -One Nation Policy Platform[^onenation]
+**(How.How.Effect) The Report (υ: \+0.2, ψ: \-0.4): HIT.** **Quote:** Hanson raised concerns in Parliament over the lack of accountability in Aboriginal affairs, citing more than $30 billion spent annually with little scrutiny and 1,258 Aboriginal corporations that have failed to report properly, and has called for a Royal Commission into the sector. -One Nation, "Pauline Hanson Demands Accountability on $30B Aboriginal Spending", 2 September 2025[^onenation_aboriginalspend]
 
 Description: She explicitly rejects high-modernist planning and grand strategy, preferring the reactive, short-term mechanics of survival.
 
@@ -4196,7 +4196,7 @@ She successfully channels the darkest origin of the Australian method, utilizing
 
 Actuality: The Convict System encodes the foundational colonial transportation mechanism, the penal infrastructure that populated Australia with the involuntary migrants who became its settler core. Hanson's engagement with the Convict System is dual: she invokes it as a source of battler resilience and as historical precedent for strict law enforcement. Her Senate speeches on law and order draw implicitly on the Convict System's logic, Australia has always been tough on lawbreakers and should remain so[^wiki]. Her defence of Australian identity as forged through hardship rather than privilege connects to the Convict System's transformative narrative[^netimes26]. Her opposition to the colonial guilt narrative is partly a defence of the Convict inheritance, those people were not colonisers but prisoners[^ms96]. PARTIAL HIT.
 
-**(How.Cause.What) Flow \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.4): HIT.** **Quote:** [Documented position: Hanson has consistently opposed First Nations water rights claims, arguing that water licences should be allocated on economic merit rather than cultural or heritage grounds.] -One Nation Policy Platform[^onenation]
+**(How.Cause.What) Flow \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.4): HIT.** **Quote:** "It's wrong for the Federal Government to fund one side of a legal battle based solely on race, while councils, farmers, and landholders are left to fight without any support." -One Nation Senate petition, "Majority of Australia Under Native Title, Enough is Enough"[^onenation_nativetitlepetition]
 
 Description: She explicitly wraps her populist movement in the iconography and the rebellious methodology of the Eureka Stockade.
 
@@ -4210,7 +4210,7 @@ She successfully hacks the origin myth of the nation to mobilize her base agains
 
 Actuality: Flow [First Nations Perspective] encodes the First Nations understanding of waterways as living systems of cultural, spiritual, and ecological significance, the rivers, wetlands, and aquifers that are managed through 65,000 years of custodial knowledge. Hanson's approach to water is exclusively economic. Her Senate speeches on the Murray-Darling Basin support agricultural irrigation allocation over environmental flows[^wiki]. Her opposition to native title water rights removes the legal recognition that waterways are governed by custodial relationships rather than property rights[^tvfy]. One Nation's platform on dam construction and water allocation treats waterways as infrastructure assets to be engineered rather than living systems to be managed[^onenation]. FAIL, total inversion of the vector.
 
-**(How.Cause.Where) The Distance (υ: 0.0, ψ: \-0.4): HIT.** **Quote:** [Documented position: Hanson consistently argues that Australia's geographic isolation from Europe requires self-sufficiency in defence, manufacturing, and food production rather than reliance on global supply chains.] -National Press Club Address (2026)[^npc26]
+**(How.Cause.Where) The Distance (υ: 0.0, ψ: \-0.4): HIT.** **Quote:** "If a war hit our shores now I think we'd only last three days, maybe a week at the most. We need to be self-sufficient." -Speaking at News Corp's Future Townsville event, reported by The Courier Mail, 19 June 2026[^couriermail26defence]
 
 Description: She relies heavily on the rigid, arbitrary boundaries drawn by the colonial office to generate regional political friction.
 
@@ -4252,7 +4252,7 @@ She fails the vector because she attempts to destroy the foundational conflict m
 
 Actuality: The Survey encodes the systematic method of measuring population conditions, the census, the poll, the referendum, that provides the empirical basis for policy. Hanson's relationship to the Survey is selective. She demanded referendums on immigration and Aboriginal land rights through her career, then opposed the 2023 Voice referendum as divisive and unnecessary[^wiki]. She calls for data on immigration crime rates, welfare fraud statistics, and government waste, surveys she believes will vindicate her positions[^netimes26]. She opposed the Voice referendum partly because the likely outcome (a No vote if framed badly) was uncertain, the Survey only has value when its result is predictable[^wiki]. PARTIAL HIT.
 
-**(How.Cause.Cause) Navigation \[First Nations Perspective\] (υ: \+0.9, ψ: \+0.5): HIT.** **Quote:** [Documented position: Hanson has dismissed First Nations navigation and land management knowledge as primitive, opposing its inclusion in school curricula and framing traditional knowledge as inferior to Western science.] -Maiden Speech, House of Representatives (1996)[^ms96]
+**(How.Cause.Cause) Navigation \[First Nations Perspective\] (υ: \+0.9, ψ: \+0.5): HIT.** **Quote:** Hanson moved a Senate motion, passed 30 votes to 28, calling on the federal government to reject critical race theory in the national curriculum, opposing a curriculum reform said to be "preoccupied with the oppression, discrimination and struggles of Indigenous Australians." -Senate motion on the national curriculum, June 2021, reported by The Conversation[^conversation21crt]
 
 Description: She explicitly venerates the British, top-down origin of the state's legal methodology.
 
@@ -6447,6 +6447,17 @@ Actuality: Hanson has campaigned for Australia's withdrawal from the United Nati
 [^sbsnpc]: "Hanson casts One Nation as rising anti-establishment force in protest-hit Press Club speech", SBS News: https://www.sbs.com.au/news/article/hanson-one-nation-press-club-speech/5vo222osy
 [^sbspenalty17]: "Hanson calls off Senate voting strike", SBS News, 2017: https://www.sbs.com.au/news/hanson-calls-off-senate-voting-strike
 [^sbscensure]: "Pauline Hanson censured over remarks there are no 'good Muslims'", SBS News: https://www.sbs.com.au/news/article/pauline-hanson-censure-senate/enyywi9ge
+[^sbsmigration]: "'Bad people from bad countries': Taylor doubles down on migration crackdown", SBS News: https://www.sbs.com.au/news/article/bad-people-from-bad-countries-taylor-doubles-down-on-migration-crackdown/7fekzzmks
+[^onenation_tax]: "Multinational Taxation", Pauline Hanson's One Nation, onenation.org.au: https://www.onenation.org.au/tax
+[^sbsdastyari]: "'Smart-arse': Hanson refuses to condemn racial attack on 'pipsqueak' Dastyari", SBS News, 9 November 2017: https://www.sbs.com.au/news/article/smart-arse-hanson-refuses-to-condemn-racial-attack-on-pipsqueak-dastyari/ayil2jj77
+[^tnd_ensuringintegrity]: "Pauline Hanson yet to be convinced on 'sledgehammer' union bill", The New Daily, 25 November 2019: https://www.thenewdaily.com.au/work/2019/11/25/pauline-hanson-union-bill
+[^theconv_ensuringintegrity]: "View from The Hill: Did Hanson mislead the government on union bill or did it misread her?", The Conversation: https://theconversation.com/view-from-the-hill-did-hanson-mislead-the-government-on-union-bill-or-did-it-misread-her-128070
+[^onenation_netzero]: "'Net zero' is destroying Australia", Pauline Hanson's One Nation, onenation.org.au: https://www.onenation.org.au/net-zero-destroying-australia
+[^oa_abcbattle]: Pauline Hanson, Senate Hansard, Broadcasting Legislation Amendment (Broadcasting Reform) Bill 2017, Second Reading, 13 September 2017, via OpenAustralia: https://www.openaustralia.org.au/senate/?id=2017-09-13.65.1
+[^oa_dairylastchance]: Pauline Hanson, Senate Hansard, Saving Australian Dairy Bill 2019, Second Reading, 2 December 2019, via OpenAustralia: https://www.openaustralia.org.au/senate/?id=2019-12-02.7.1
+[^oa_gamblingpartoflife]: Pauline Hanson, Senate Hansard, Interactive Gambling Amendment Bill 2016, Second Reading, 20 March 2017, via OpenAustralia: https://www.openaustralia.org.au/senate/?id=2017-03-20.161.2
+[^oa_bushfirevolunteers]: Pauline Hanson, Senate Hansard, Ministerial Statements: Australian Bushfires, 25 November 2019, via OpenAustralia: https://www.openaustralia.org.au/senate/?id=2019-11-25.19.2
+[^oa_cronulla]: Pauline Hanson, Senate Hansard, Statements by Senators, 24 June 2026, via OpenAustralia: https://www.openaustralia.org.au/senate/?id=2026-06-24.31.1
 [^npc26]: Pauline Hanson, National Press Club Address, June 2026, reported by The Nightly: https://thenightly.com.au/politics/pauline-hansons-full-speech-at-the-national-press-club--c-22444111
 [^energy26]: "Hanson backs SA members on fracking, unveils gas policy", InDaily SA, 21 May 2026: https://www.indailysa.com.au/news/just-in/2026/05/21/hanson-backs-sa-members-on-fracking-unveils-gas-policy
 [^aim26]: "Fact-checking Pauline Hanson's 2026 National Press Club address", The AIMN: https://theaimn.net/fact-checking-pauline-hansons-2026-national-press-club-address/
@@ -6460,4 +6471,16 @@ Actuality: Hanson has campaigned for Australia's withdrawal from the United Nati
 [^wtc_afl25]: "Lies: Hanson urges Aussies to ignore Welcome to Country", onenation.org.au: https://www.onenation.org.au/lies-hanson-urges-aussies-to-ignore-welcome-to-country
 [^2gb19]: "Pauline Hanson rails against the water wastage destroying farmers' lives", 2GB, 2 December 2019: https://www.2gb.com/pauline-hanson-rails-against-the-water-wastage-destroying-farmers-lives/
 [^ladbible22]: "Pauline Hanson Tells Aboriginal And Torres Strait Islander People To 'Get Over It'", LADbible, 26 January 2022: https://www.ladbible.com/news/latest-pauline-hanson-tells-australian-first-nations-people-to-get-over-it-20220126
-[^phon22]: Pauline Hanson, address to the Australian Monarchist League conference, Facebook video via Pauline Hanson's Please
+[^phon22]: Pauline Hanson, address to the Australian Monarchist League conference, Facebook video via Pauline Hanson's Please Explain: https://www.facebook.com/watch/?v=1161243831175138
+[^austlii03]: R v Hanson; R v Ettridge [2003] QCA 488 (6 November 2003), Supreme Court of Queensland Court of Appeal: https://classic.austlii.edu.au/au/cases/qld/QCA/2003/488.html
+[^hansard22crown]: Hanson, Senator Pauline; Censure, Senate Hansard, Motions, 27 September 2022, via OpenAustralia: https://www.openaustralia.org.au/senate/?id=2022-09-27.103.2
+[^newdaily17]: "Pauline Hanson supports penalty rate cuts, Putin and anti-vax campaigners", The New Daily, 5 March 2017: https://www.thenewdaily.com.au/news/national/2017/03/05/pauline-hanson-supports-penalty-rate-cuts-putin-and-anti-vax-campaigners
+[^conversation17]: "Hanson stirs the sugar pot and backflips on penalty rates", The Conversation, 2017: https://theconversation.com/hanson-stirs-the-sugar-pot-and-backflips-on-penalty-rates-75251
+[^cantimes21voterid]: "Morrison government introduces voter identification laws backed by Pauline Hanson", The Canberra Times, 28 October 2021: https://www.canberratimes.com.au/story/7488468/govt-accused-of-trumpist-move-to-suppress-voting/
+[^tvfy_251]: "Pauline Hanson voted generally against increasing workplace protections", They Vote For You: https://theyvoteforyou.org.au/people/senate/queensland/pauline_hanson/policies/251
+[^onenation_vaping]: "Pauline Hanson's One Nation reaffirms its support for vaping", statement from Senator Malcolm Roberts, Dr Colin Mendelsohn, 2023: https://colinmendelsohn.com.au/one-nation/
+[^tvfy_plainpack]: "Pauline Hanson voted consistently for tobacco plain packaging", They Vote For You: https://theyvoteforyou.org.au/people/senate/queensland/pauline_hanson/policies/2
+[^onenation_aboriginalspend]: "Pauline Hanson Demands Accountability on $30B Aboriginal Spending", One Nation, 2 September 2025: https://www.onenation.org.au/hanson-aboriginal-spending-accountability
+[^onenation_nativetitlepetition]: "Majority of Australia Under Native Title, Enough is Enough", One Nation Senate petition: https://www.onenation.org.au/australia-native-title-enough
+[^couriermail26defence]: "Bulldozer Hanson keeps on rolling", originally published by Hayden Johnson, The Courier Mail, republished by Hancock Prospecting, 19 June 2026: https://www.hancockprospecting.com.au/bulldozer-hanson-keeps-on-rolling/
+[^conversation21crt]: "The Senate has voted to reject critical race theory from the national curriculum. What is it, and why does it matter?", The Conversation, June 2021: https://theconversation.com/the-senate-has-voted-to-reject-critical-race-theory-from-the-national-curriculum-what-is-it-and-why-does-it-matter-163102

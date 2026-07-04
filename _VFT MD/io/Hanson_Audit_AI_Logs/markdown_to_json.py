@@ -3,9 +3,24 @@ import json
 from pathlib import Path
 
 # Paths
-AUDIT_FILE = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/io/Hegemonic-Audit_Pauline Hanson_fixed.md")
+# The audit was split into one file per plane (plus a shared sources file) to avoid
+# full-document reads blowing past tool token limits during editing sessions.
+# These are concatenated below, in order, to reconstruct the single content string
+# the rest of this script's parsing logic expects -- the parsing itself is unchanged.
+IO_DIR = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/io")
+HANSON_DIR = IO_DIR / "Hanson_Audit"
+AUDIT_FILES = [
+    HANSON_DIR / "Plane_1_Identity.md",
+    HANSON_DIR / "Plane_2_Definition.md",
+    HANSON_DIR / "Plane_3_Land.md",
+    HANSON_DIR / "Plane_4_Drive.md",
+    HANSON_DIR / "Plane_5_Method.md",
+    HANSON_DIR / "Plane_6_Foundation.md",
+    HANSON_DIR / "Plane_7_Result.md",
+]
+SOURCES_FILE = HANSON_DIR / "Sources.md"
 KANON_DIR = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/Australia/Aus Kanon/compact JSON")
-OUTPUT_JSON = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/io/Hegemonic Audit_ Pauline Hanson.json")
+OUTPUT_JSON = HANSON_DIR / "Hegemonic Audit_ Pauline Hanson.json"
 
 PLANES = [
     (1, "Identity", "Who"),
@@ -44,9 +59,18 @@ def parse_audit_to_json():
     print("Loading canonical Kanon...")
     canonical = load_canonical_kanon()
 
-    print(f"Reading audit file: {AUDIT_FILE.name}")
-    with open(AUDIT_FILE, 'r', encoding='utf-8') as f:
-        content = f.read()
+    print("Reading split audit files (7 planes + sources)...")
+    parts_content = []
+    for audit_file in AUDIT_FILES:
+        if not audit_file.exists():
+            raise FileNotFoundError(f"Missing plane file: {audit_file}")
+        with open(audit_file, 'r', encoding='utf-8') as f:
+            parts_content.append(f.read())
+    if not SOURCES_FILE.exists():
+        raise FileNotFoundError(f"Missing sources file: {SOURCES_FILE}")
+    with open(SOURCES_FILE, 'r', encoding='utf-8') as f:
+        parts_content.append(f.read())
+    content = "\n\n".join(parts_content)
 
     # Split by plane headers to process plane by plane
     plane_headers = [
@@ -70,8 +94,8 @@ def parse_audit_to_json():
 
     # Parse source definitions at the end of the document
     sources = {}
-    sources_pattern = r'\[\^([a-zA-Z0-9\-]+)\]:\s*(https?://[^\s\)]+)'
-    for m in re.finditer(sources_pattern, content):
+    sources_pattern = r'^\[\^([a-zA-Z0-9_\-]+)\]:.*?(https?://\S+?)/?\s*$'
+    for m in re.finditer(sources_pattern, content, flags=re.MULTILINE):
         sources[m.group(1)] = m.group(2).strip()
 
     audit_data = {

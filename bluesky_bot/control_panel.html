@@ -1633,7 +1633,9 @@
       }
 
       html += `<div style="height: ${bottomHeight}px; width: 100%; flex-shrink: 0; background: transparent;"></div>`;
+      const savedScrollTop = listContainer.scrollTop;
       listContainer.innerHTML = html;
+      listContainer.scrollTop = savedScrollTop;
     }
 
     // Render Story Cards in Sidebar
@@ -1667,28 +1669,36 @@
     }
 
     // Select Story
-    function selectStory(storyId) {
+    function selectStory(storyId, scrollIntoView = true) {
       activeStory = STORIES_REGISTRY.find(s => s.id === storyId);
       
-      // Auto-scroll selected card into view if it was selected programmatically (e.g. from the map click)
-      const storyIndex = currentStoriesList.findIndex(s => s.id === storyId);
-      if (storyIndex !== -1) {
-        const listContainer = document.getElementById('storyList');
-        if (listContainer) {
-          const cardTop = storyIndex * CARD_HEIGHT;
-          const cardBottom = cardTop + CARD_HEIGHT;
-          const scrollTop = listContainer.scrollTop;
-          const containerHeight = listContainer.clientHeight;
+      const listContainer = document.getElementById('storyList');
+      if (listContainer) {
+        // 1. Remove active class from any existing active card in the DOM
+        const activeCards = listContainer.querySelectorAll('.story-card.active');
+        activeCards.forEach(card => card.classList.remove('active'));
 
-          if (cardTop < scrollTop || cardBottom > (scrollTop + containerHeight)) {
-            listContainer.scrollTop = cardTop - (containerHeight / 2) + (CARD_HEIGHT / 2);
+        // 2. Add active class to the newly selected card in the DOM if it's currently rendered
+        const newActiveCard = listContainer.querySelector(`[data-story-id="${storyId}"]`);
+        if (newActiveCard) {
+          newActiveCard.classList.add('active');
+        }
+
+        // 3. Auto-scroll selected card into view if it was selected programmatically (e.g. from the map click)
+        if (scrollIntoView) {
+          const storyIndex = currentStoriesList.findIndex(s => s.id === storyId);
+          if (storyIndex !== -1) {
+            const cardTop = storyIndex * CARD_HEIGHT;
+            const cardBottom = cardTop + CARD_HEIGHT;
+            const scrollTop = listContainer.scrollTop;
+            const containerHeight = listContainer.clientHeight;
+
+            if (cardTop < scrollTop || cardBottom > (scrollTop + containerHeight)) {
+              listContainer.scrollTop = cardTop - (containerHeight / 2) + (CARD_HEIGHT / 2);
+            }
           }
         }
       }
-
-      // Force refresh virtual list classes
-      lastStartIndex = -1;
-      renderStoriesListVirtual();
       
       // Update Viewports
       renderEmulator();
@@ -2509,7 +2519,7 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         storyListEl.addEventListener('click', (e) => {
           const card = e.target.closest('.story-card');
           if (card && card.dataset.storyId) {
-            selectStory(card.dataset.storyId);
+            selectStory(card.dataset.storyId, false);
           }
         });
       }
