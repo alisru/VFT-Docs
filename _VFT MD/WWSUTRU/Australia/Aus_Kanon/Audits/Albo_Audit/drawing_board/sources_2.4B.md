@@ -1,0 +1,4 @@
+- Node 1: "Documented action: Albanese championed the Future Made in Australia policy to build domestic manufacturing capacity and economic fairness." - ABC News (2024), "A 'future made in Australia' will be a key pitch from the government heading into the next election. So what is it all about?" https://www.abc.net.au/news/2024-05-16/what-is-the-government-future-made-in-australia-plan/103852302
+- Node 2: "There is a separation - a very clear separation - between the judiciary, the legal system, and the political system in this country..." - BrainyQuote (2010), https://www.brainyquote.com/authors/anthony-albanese-quotes
+- Node 3: "We are not a single-issue party that puts abstract policy ahead of the working lives of people." - BrainyQuote (2015), https://www.brainyquote.com/authors/anthony-albanese-quotes
+- Node 4: "What Australians expect of leaders is a bit of integrity." - BrainyQuote (2020), https://www.brainyquote.com/authors/anthony-albanese-quotes

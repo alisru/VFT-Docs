@@ -1,12 +1,14 @@
 we're working on the hanson hegemonic audit against the australian kanon, pls use the /kanon-audit skills and stay on /task
 
-ensure you record all sources used for the citations, I shouldn't need to say this but you gathered citations without recording the urls
+## Do not start autonomous multi-step work on a status update alone
+
+Caught in the Albanese audit session: the user said "see, I'm beginning working on the Albanese audit" — a status statement, not an instruction to act. That was read as a green light and turned into ~12 unrequested WebSearch calls plus several web_fetch calls grinding through 17 missing nodes with no go-ahead given. The user had not said "start," "go," "do it," or named a node.
+
+Rule: a message that describes what the user is about to do, or where things stand, is not itself a request for you to do the work. Do not launch a multi-tool-call research or edit campaign until the user gives an explicit instruction naming the task, the node(s), or the scope. If a message is ambiguous between "FYI" and "go," ask which one it is before spending tool calls, don't default to acting.
 
 ## Node prose format (violated repeatedly, do not violate again)
 
 Every node has exactly one Quote, in the header line only, never restated or supplemented elsewhere. If a node currently carries only a `[Documented position: ...]` placeholder, that is not a finished node -- it still needs a real quote before its Description/Justification/Actuality are rewritten around it. Don't build prose around an unsourced placeholder as if it were verified.
-
-Coordinates (υ, ψ) appear ONLY in the header line, e.g. `(υ: +0.8, ψ: +0.3)`. Never write `(+υ)`, `(-ψ)`, "strongly positive", "moderately proactive", or any restatement of the numeric coordinate inside Description, Justification, or Actuality. The body argues the case in plain language; the header carries the score.
 
 Each of Description, Justification, and Actuality is 3-5 sentences, each sentence adding new information -- not the same point restated from a different angle. Do not narrate the scoring mechanism inside the prose ("this channels the vector's proactive energy," "she matches both axes of the vector," "this successfully channels..."). State what she did, then state what it means. No methodology-narration filler.
 
@@ -15,24 +17,6 @@ Never use `--` (double hyphen) as an em-dash substitute anywhere in node prose, 
 Reference standard: the "Stringybark and Greenhide" (Who.Who.How) and "The Commonwealth" (Who.What.Effect) nodes are the correct target format -- concrete, punchy, no coordinate artifacts, no scoring-mechanism narration, 3-5 substantive sentences per section. Match that shape, not the bloated multi-paragraph shape used earlier in this project (e.g. the original "The Resident" node, ~15 paragraphs, since trimmed).
 
 Edits to fix format problems must be precise, targeted string replacements on the specific node(s) flagged -- never a full-document rewrite pass "while we're in there." Token cost compounds fast at this document's length.
-
-## Use training data as a hypothesis generator, never as a citation
-
-Before running any search for a node's quote, pause and ask: does this vector's mechanism (not its poetic Kanon name) match a real, specific incident, speech, or controversy already known from training on Hanson or Australian political history? For a 30-year public figure, training data usually contains a real candidate. Don't default straight to a blind WebSearch on the vector's abstract description and give up when the results come back as thin paraphrase.
-
-The correct sequence, every time:
-1. Generate the hypothesis from training data. Decompose the vector to its actual mechanism, then ask what specific real event, speech, or exchange this matches. Name it as a hypothesis ("this sounds like the November 2017 Dastyari pub-heckling fallout"), not as a fact, and not yet as a citation.
-2. Verify the hypothesis with a direct fetch or a targeted search built around the specific names, dates, and likely exact vocabulary the hypothesis suggests, never the Kanon's poetic vector name as the search string. Pull the verbatim text from the actual source page, don't stop at a WebSearch tool's own summary of that page.
-
-This is a hard boundary, not a shortcut: training data can hallucinate specific wording, dates, or even whether an incident happened as recalled. A training-data hypothesis earns its way into the document only once a live source confirms it. If the fetch doesn't confirm it, the hypothesis is discarded, it does not get rounded up to "close enough."
-
-Caught this session as a failure mode worth naming: giving up on a node (Sledging) after one generic WebSearch on the vector's abstract description, and writing a self-authored summary sentence with a citation bolted on instead, when a real, specific, well-documented incident (the Dastyari "pipsqueak"/"smart arse" exchange) was sitting in training data the whole time and just needed a targeted verification search to become a real, dated, sourced quote.
-
-Two related sourcing failures caught the same session, both from not going all the way to the primary page:
-- Never treat a WebSearch tool's own paraphrase of a page as the source. If a result surfaces a promising line, fetch that exact page directly (onenation.org.au pages, for instance, fetch fine with a plain web_fetch, no browser-use needed) and pull the verbatim text yourself.
-- Cite the most specific URL that actually contains the claim, not a generic hub page. A TheyVoteForYou claim belongs on the specific `/policies/NNN` page for that exact question, not the actor's generic profile page. If a citation only works by pointing at a broad index page, that's a sign the underlying claim was never actually fetched and verified.
-
-A "Quote" field must be an actual quote, a documented paraphrase of a specific real position, or a description of a specific documented action. Never a sentence the auditor wrote themselves summarizing a general impression with a citation bolted on afterward.
 
 ### Warning: never trust an AI's self-narrated methodology as verification, only the fetched source counts
 
@@ -46,7 +30,7 @@ Correction to an earlier finding in this file: the OpenAustralia `getHansard` AP
 
 Working call format: `https://www.openaustralia.org.au/api/getHansard?key=<KEY>&output=js&search=<query>`. Useful params: `search` (plain text or a `"quoted exact phrase"`), `person=<person_id>` to restrict to one speaker (Hanson's OpenAustralia person_id is 10280), `output=js` for a clean parsed JSON-ish response with `gid` (a permalink-ready debate ID like `2026-06-24.32.1`), `hdate`, `speaker`, and a `body` snippet with the match highlighted.
 
-This is now the preferred first move for step 2 of the training-data-hypothesis workflow (see above): once a hypothesis names a plausible real incident, search a short, distinctive, unique phrase from the hypothesized content (not the Kanon's poetic vector name) via this API, restricted to `person=10280` if the hypothesis is specifically about something Hanson said. A hit's `gid` maps directly to a working permalink at `https://www.openaustralia.org.au/senate/?id=<gid>` (or `/debates/?id=<gid>` for House of Reps), which loads via a plain `web_fetch`, no browser-use needed, and gives the full surrounding transcript to quote from accurately in context.
+This is now the preferred first move for step 2 of the training-data-hypothesis workflow (see the kanon-audit skill): once a hypothesis names a plausible real incident, search a short, distinctive, unique phrase from the hypothesized content (not the Kanon's poetic vector name) via this API, restricted to `person=10280` if the hypothesis is specifically about something Hanson said. A hit's `gid` maps directly to a working permalink at `https://www.openaustralia.org.au/senate/?id=<gid>` (or `/debates/?id=<gid>` for House of Reps), which loads via a plain `web_fetch`, no browser-use needed, and gives the full surrounding transcript to quote from accurately in context.
 
 Also confirmed working directly via plain `web_fetch` without the API: `openaustralia.org.au/senate/?id=YYYY-MM-DD.N.N` and `/debates/?id=YYYY-MM-DD.N.N` permalink pages render full transcript text. Only the bare, unauthenticated `/search/?pid=...` style search page reliably returns empty, don't rely on that one; use the API endpoint above instead.
 
@@ -76,16 +60,12 @@ This returns 1000+ real, dated hits of everything she's actually said in the cha
 
 Both methods return short on-page snippets in the results list (usually one sentence with the keyword in context) which are safe to quote directly since they render as plain text on the results page. Opening the full result may lead to a PDF-only document (see PDF limitation above) — if so, the results-page snippet itself, if it reads as a complete sentence, is citable; otherwise treat it as a partial lead only.
 
-### Search by mechanism, never by the Kanon's own name for the vector
+### Search by mechanism: two-search rule and orphaned quotes
 
-Repeated mistake, caught twice in one session: searching Hansard/ParlInfo/WebSearch using the Kanon's own poetic name or paraphrase for a vector ("Songlines Indigenous cultural heritage", "black armband view history", "state sovereignty water mining agricultural land") instead of the concrete real-world terminology a real document would use. These searches return zero results not because the quote doesn't exist, but because nobody except the Kanon calls it that -- the search string itself is fictional.
+In addition to the mechanism-decomposition method already in the kanon-audit skill (Move 2), two node-search rules not covered there:
 
-The correct four-step process, reverse-engineered from a session where the user showed a Gemini transcript doing this correctly for the Corowa Plan node:
-
-1. **Decompose the vector into mechanism variables first, before writing any search query.** Don't search on the vector's name ("The Corowa Plan") or its mythic description ("the People as the Architects"). Extract: who is the actor, what is the actual method/mechanism, what is the concrete instrument. For Corowa: actor = the People, method = popular initiative bypassing elites, instrument = direct democracy / citizen-initiated referendums.
-2. **Translate the mechanism into concrete policy terminology, not invented paraphrase.** Ask "what would this actually be called in a real platform page or Hansard entry" -- e.g. `"citizen initiated referendum"`, `"empowering the people"` -- not `"bottom-up popular initiative structural change"`. If the search string sounds like something only this document would say, it's wrong.
-3. **Run two separate searches per node when the vector implies a judgment call: one for alignment, one for opposition.** Don't stop at the first quote that seems to fit the verdict you expect. A node can have a real quote that supports HIT on one axis and a different real quote (often from a different source type -- Hansard vs. platform page) that supports FAIL on another. Search for both before deciding.
-4. **Verify attribution and context before use** -- confirm the quote belongs to Hanson or official party documents (not commentary about her), and that lifting the sentence doesn't invert its meaning.
+1. **Run two separate searches per node when the vector implies a judgment call: one for alignment, one for opposition.** Don't stop at the first quote that seems to fit the verdict you expect. A node can have a real quote that supports HIT on one axis and a different real quote (often from a different source type -- Hansard vs. platform page) that supports FAIL on another. Search for both before deciding.
+2. **Verify attribution and context before use** -- confirm the quote belongs to Hanson or official party documents (not commentary about her), and that lifting the sentence doesn't invert its meaning.
 
 Also watch for the inverse failure mode: after a node's Description/Justification has been rethemed to a *different* mechanism than it originally had, its Quote line can become orphaned -- still answering the *old* theme's search question instead of the current one. Before searching for a replacement quote on any node, re-read what the node's current D/J actually claims, not what its address name or an old paraphrase implies it should claim. (Caught this session: Where.Where.Where "The Saltbush" had been rethemed earlier in the session from "boat turnback/border sovereignty" to "career persistence through repeated setbacks," but its Quote line still carried the old boat-turnback paraphrase. A quote later found for boat-turnback policy (the Nauru regional-processing-country motion) belonged instead to Where.How.What "The Dingo Fence," whose theme actually is border infrastructure.)
 
