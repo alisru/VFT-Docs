@@ -224,23 +224,11 @@ This is a failure because she consistently and actively opposes the diplomatic i
 
 Actuality: Hanson's opposition to Australia's UN engagement is longstanding and specific: her 1996 Maiden Speech pledged to expose and seek repudiation of Australia's UN treaty commitments, and she has since called for withdrawal from UN human rights frameworks and reduced funding of multilateral bodies[^ms96]. Her platform treats independent diplomatic brokerage as a wasteful distraction from bilateral alliance relationships, favouring direct alignment with the US-UK axis over Australia's traditional middle-power mediating role[^onenation]. FAIL, she consistently opposes the brokerage function this vector defines as Australia's most distinctive diplomatic contribution.
 
-**(Effect.Where.How) Soft Power (υ: \+0.6, ψ: \+0.3): FAIL.** **Quote:** Hanson has argued that free trade agreements have facilitated the importation of cheap foreign labour at the expense of Australian workers, treating trade policy as a vector for wage suppression rather than economic growth. -Senate speeches and voting record, 2016-2026[^wiki][^tvfy]
+**(Effect.Where.How) Soft Power (υ: \+0.6, ψ: \+0.3): FAIL.** **Quote:** "If you are not prepared to become Australian and give this country your undivided loyalty, obey our laws, respect our culture and way of life, then I suggest you go back where you came from. If it would be any help, I will take you to the airport and wave you goodbye with sincere best wishes." -Maiden Speech, Senate, Hansard, 14 September 2016[^ms16]
 
-Description: She expends massive political energy attempting to deny and resist the inevitable economic destiny dictated by the map.
+Description: Soft Power measures whether Australia engages the world through attraction or through coercion. The Kanon's ideal, anchored in the "Where the bloody hell are you?" tourism campaign, treats global standing as something won by a genuine, welcoming pull toward a laid-back, non-threatening culture, the friendly neighbor rather than the bullying hegemon. Hanson's quote inverts that mechanism directly rather than simply ignoring it: she adopts the same folksy, casual, almost matey tone the friendly-neighbor brand depends on, then uses it to deliver an ultimatum. The pull of an open invitation is replaced with the push of a conditional threat, and the offer to personally drive someone to the airport dresses an eviction up as a neighborly favour. The welcome the ideal requires has been structurally converted into a threat wearing a welcome's clothes.
 
-Her rhetoric attempts to decouple the Australian economy from the reality of its immediate, booming spatial neighborhood.
-
-This strategy ignores the fact that the nation's wealth relies entirely on exporting resources to the massive markets to its north.
-
-By screaming about "foreign ownership," she forces the nation into an unnatural, high-friction posture that contradicts its spatial reality.
-
-**Justification:** The vector defines the proactive economic integration driven by the continent's actual geographic coordinates.
-
-Hanson's furious rejection of this outcome introduces massive structural delusion into her economic framework.
-
-She fails the imperative to integrate with the "Near North", preferring an impossible, isolationist economic fantasy.
-
-This is a failure because she actively fights the absolute, undeniable physical reality of the continent's modern wealth.
+**Justification:** The benefit axis sits toward the broad end because the ideal itself, an open, attractive national brand, is meant to draw in and benefit a wide range of outsiders, migrants, tourists, trading partners, rather than serve a narrow domestic faction. The energy axis sits toward proactive building because attraction has to be actively manufactured and offered, not merely permitted grudgingly. Hanson's quote keeps the broad-sounding language of hospitality, the friendly tone, the sincere best wishes, while replacing the proactive, inviting energy the ideal requires with a conditional threat of exclusion, substituting coercion for attraction rather than building it. That is a same-costume, opposite-mechanism failure: the rhetorical register of the friendly neighbor is preserved, but its function is reversed into a gatekeeping ultimatum, which is why this fails the ideal even though it is delivered in the ideal's own tone.
 
 Actuality: Hanson has consistently voted against and campaigned against free trade agreements on the grounds that they facilitate cheap foreign labour importation, treating trade liberalisation as a wage-suppression mechanism rather than a soft-power or growth instrument[^tvfy]. Her platform contains no soft-power strategy, cultural diplomacy, or export-of-values framework; her international posture is transactional and defensive rather than reputational[^wiki]. One Nation's foreign policy focuses on resource sovereignty and alliance loyalty rather than cultural or diplomatic influence-building[^onenation]. FAIL, she has no positive relationship with soft power as a strategic instrument.
 

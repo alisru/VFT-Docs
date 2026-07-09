@@ -1,5 +1,7 @@
 # Sources Verification Checklist
 
+> **SUPERSEDED 2026-07-09.** This file's data has been migrated into `quote_db/quote_verification_dump.sql` (see `quote_db/README.md`). A copy of this file as it stood at migration time is kept at `archive full/Sources_Verification_Checklist_superseded_20260709.md`. Do not update this file going forward — use `quote_db/db_cli.py update` instead. Left in place (not deleted) per standing instruction; content below is the pre-migration state, unchanged.
+
 Tracks the verification status of every footnote tag in `Sources.md`, so future sessions don't have to re-derive what's already been checked or accidentally re-trust something that turned out to be fabricated. Update this file every time a citation is fetched and checked, whether it passes or fails.
 
 Status key:

@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.transforms as mtransforms
+import numpy as np
+from matplotlib.colors import LinearSegmentedColormap
 
 def get_path_name(claim_u, claim_psi, real_u, real_psi):
     # Determine exit name and origin zone
@@ -78,6 +80,34 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.axhline(0, color='gray', linewidth=0.5)
     ax.axvline(0, color='gray', linewidth=0.5)
 
+    # Morality Gradient, split into two independent layers so they don't wash each other out:
+    # Layer 1 = pure green (Everyone, +u) -> red (Only Me, -u) saturation, bounded to +/-2.0.
+    #           Green fades 25% weaker toward the bottom-left (Lesser Good);
+    #           red fades 25% weaker toward the top-right (Greatest Lie).
+    # Layer 2 = a separate white glow centered on "No One" (u=0), independent of the red/green tuning.
+    grid_res = 256
+    gx = np.linspace(2.0, -2.0, grid_res)   # left=+2.0 (green) -> right=-2.0 (red)
+    gy = np.linspace(2.0, -2.0, grid_res)   # row 0=top(+2.0) -> last row=bottom(-2.0), matching imshow's default origin='upper'
+    U, PSI = np.meshgrid(gx, gy)
+
+    # Layer 1: green -> red (no white stop, so saturation is easy to read)
+    green_red_cmap = LinearSegmentedColormap.from_list('green_red_gradient', ['#00FF00', '#FF0000'])
+    t = (2.0 - U) / 4.0                     # 0 at u=+2.0 (green) -> 1 at u=-2.0 (red)
+    rgba_gr = green_red_cmap(t)
+    base_alpha_gr = 0.30
+    green_atten = 1.0 - 0.25 * np.clip(-PSI / 2.0, 0, 1)  # weaker toward bottom, on the green side
+    red_atten = 1.0 - 0.25 * np.clip(PSI / 2.0, 0, 1)     # weaker toward top, on the red side
+    atten = np.where(U > 0, green_atten, np.where(U < 0, red_atten, 1.0))
+    rgba_gr[..., 3] = base_alpha_gr * atten
+    ax.imshow(rgba_gr, extent=[2.0, -2.0, -2.0, 2.0], aspect='auto', zorder=0.05)
+
+    # Layer 2: independent white glow, peaking at u=0 and fading out toward u=+/-2.0
+    white_strength = np.clip(1.0 - np.abs(U) / 2.0, 0.0, 1.0) ** 2
+    rgba_white = np.zeros((grid_res, grid_res, 4))
+    rgba_white[..., 0:3] = 1.0
+    rgba_white[..., 3] = 0.35 * white_strength
+    ax.imshow(rgba_white, extent=[2.0, -2.0, -2.0, 2.0], aspect='auto', zorder=0.06)
+
     # Zone 1 (The Inner Horizon)
     zone1 = patches.Rectangle((1.0, -1.0), -2.0, 2.0, fill=False, edgecolor='white', linestyle='--', linewidth=1, zorder=1)
     ax.add_patch(zone1)
@@ -85,6 +115,16 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     # Zone 2 (The Outer Horizon)
     zone2 = patches.Rectangle((2.0, -2.0), -4.0, 4.0, fill=False, edgecolor='white', linestyle='-', linewidth=1.5, zorder=1)
     ax.add_patch(zone2)
+
+    # The Six Attractors of the Hegemony (vivid at the corners, pale toward the midline)
+    attractor_opts = dict(markeredgewidth=0, alpha=0.75, zorder=2)
+    ax.plot(1.0, 1.0, marker='o', color='#00FF00', markersize=32, **attractor_opts)   # Greater Good corner: vivid green
+    ax.plot(1.0, 0.0, marker='o', color='#98FB98', markersize=22, **attractor_opts)   # Right midline: pale green
+    ax.plot(1.0, -1.0, marker='o', color='#98FB98', markersize=16, **attractor_opts)  # Lesser Good corner: small pale green
+
+    ax.plot(-1.0, -1.0, marker='o', color='#FF0000', markersize=32, **attractor_opts) # Greater Evil corner: vivid red
+    ax.plot(-1.0, 0.0, marker='o', color='#FF9999', markersize=22, **attractor_opts)  # Left midline: pale red
+    ax.plot(-1.0, 1.0, marker='o', color='#FF9999', markersize=16, **attractor_opts)  # Greatest Lie corner: small pale red
 
     # Alchemical Element & Quality Overlays (outside the white box, before graph arms)
     alchemy_opts = dict(color='white', fontsize=9, fontstyle='italic', alpha=0.45, ha='center', va='center', zorder=0)

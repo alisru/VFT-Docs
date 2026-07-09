@@ -1,5 +1,7 @@
 # Node Verification Checklist
 
+> **SUPERSEDED 2026-07-09.** This file's data has been migrated into `quote_db/quote_verification_dump.sql` (see `quote_db/README.md`). A copy of this file as it stood at migration time is kept at `archive full/Nodes_Verification_Checklist_superseded_20260709.md`. Do not update this file going forward — use `quote_db/db_cli.py update` instead. Left in place (not deleted) per standing instruction; content below is the pre-migration state, unchanged.
+
 Tracks, per node address, whether that node's header quote has been independently fetched and checked against its cited source this project — separate from `Sources_Verification_Checklist.md`, which tracks the sources themselves. A source can be ✅ verified in general while a specific node still needs checking if the node's claim about what that source says hasn't itself been read against the fetch.
 
 Status key: ✅ verified this session (fetched, confirmed) · 🔧 fixed this session (was fabricated/mismatched, now corrected and verified) · ⚠️ flagged (real source but unresolved issue) · 🚩 suspect, not yet re-checked (uses a citation tag already proven bad elsewhere) · ⬜ not yet independently checked.
