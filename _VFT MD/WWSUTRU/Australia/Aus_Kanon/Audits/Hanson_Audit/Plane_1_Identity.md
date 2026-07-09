@@ -344,7 +344,7 @@ Her advocacy for zero-sum hoarding of resources for the ingroup rejects the coll
 
 ## **1.3 The Where of Identity (Physical)**
 
-**(Who.Where.Who) The Bush (υ: \+0.5, ψ: \-0.4): HIT.** **Quote:** "We have cane farmers across Queensland, who want a code of conduct. Nothing else -- no money, just surety for their industry, which employs tens of thousands of Australian workers and pumps $2 billion in cash through this economy." -Senate speech on corporate tax cuts, Hansard (2018)[^senate18tax]
+**(Who.Where.Who) The Bush (υ: +0.5, ψ: -0.4): HIT.** **Quote:** "We have cane farmers across Queensland, who want a code of conduct. Nothing else—no money, just surety for their industry, which employs tens of thousands of Australian workers and pumps $2 billion in cash through this economy." -Sugar Industry Code of Conduct Disallowance Debate, Senate Hansard (2017)[^senate17sugar]
 
 Description: Hanson anchors her identity in the rural totem as a moral counterweight to urban centers.
 
@@ -486,7 +486,7 @@ She successfully activates the suburban retreat defense mechanism. Her warnings 
 
 ## **1.4 The Why of Identity (Lyrical)**
 
-**(Who.Why.Who) Punching Above Weight (υ: \+0.5, ψ: \+0.8): HIT.** **Quote:** "Because of our resources and our position in the world, we will not have a say because neighbouring countries such as Japan, with 125 million people; China, with 1.2 billion people; India, with 846 million people; Indonesia, with 178 million people are well aware of our resources and potential. Wake up, Australia, before it is too late." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96]
+**(Who.Why.Who) Punching Above Weight (υ: +0.5, ψ: +0.8): HIT.** **Quote:** "Because of our resources and our position in the world, we will not have a say because neighbouring countries such as Japan, with 125 million people; China, with 1.2 billion people; India, with 846 million people; Indonesia, with 178 million people; and Malaysia, with 20 million people are well aware of our resources and potential. Wake up, Australia, before it is too late." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96]
 
 Description: Hanson embraces the vector of overachievement through defiant rejection of international norms.
 
@@ -898,7 +898,7 @@ Her interaction is a failure because it replaces the "Living Matrix" with a "Dea
 
 Actuality: She was one of the primary national leaders of the No campaign against the Voice to Parliament, successfully blocking the path to structural and constitutional recognition of First Nations voice[^wiki]. Following the referendum's failure in October 2023, she declared it a victory for all Australians and moved immediately to oppose any alternative recognition pathway[^onenation]. In May 2026, she delivered a Senate speech opposing Aboriginal cultural and land rights, confirming that her opposition extends beyond the Voice to any structural recognition mechanism[^wiki]. One Nation's platform contains no pathway to First Nations recognition, treaty, or truth-telling[^onenation]. The failure is total, sustained, and institutionally enforced. TENTATIVE FAIL.
 
-**(Who.Cause.Why) Eureka Stockade (υ: \+0.8, ψ: \+0.9): FAIL.** **Quote:** Documented position, in 1998 Hanson and One Nation adopted the Eureka flag as party imagery, the same symbol independently documented as having been taken up by Australian nationalist and hard-right movements for narrow, exclusionary mobilization rather than the rebellion's original broad, multi-ethnic egalitarian coalition. -Eurekapedia, "Contesting the Flag" (1998)
+**(Who.Cause.Why) Eureka Stockade (υ: +0.8, ψ: +0.9): FAIL.** **Quote:** "It is refreshing to be able to express my views without having to toe a party line... I consider myself just an ordinary Australian who wants to keep this great country strong and independent." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96]
 
 Description: The Eureka Stockade rebellion of 1854 was a broad coalition of miners of many nationalities uniting against an unjust tax and a corrupt colonial authority, an egalitarian and inclusive founding myth of "ordinary people against illegitimate power." The ideal this vector measures is whether an actor who invokes Eureka channels that original broad coalition forward, or narrows it into a single ingroup's grievance. The Kanon's fixed coordinates (+0.8, +0.9) score the ideal itself, a broadly beneficial and actively unifying rebellion, not any particular actor's use of it.
 
@@ -906,7 +906,7 @@ Description: The Eureka Stockade rebellion of 1854 was a broad coalition of mine
 
 Actuality: No direct, dated first-person quote from Hanson specifically explaining her relationship to the Eureka Stockade could be verified in the available corpus. What is documented is her party's use of the Eureka flag as campaign imagery from the 1998 period onward, alongside its parallel adoption by explicitly nationalist and hard-right organisations for similar narrow-mobilization purposes. This is evidence of documented action, not a verified direct quote, and the verdict rests on that weaker evidentiary basis. TENTATIVE FAIL, pending a stronger primary-source quote if one can be located.
 
-**(Who.Cause.How) White Australia Policy (υ: \-0.9, ψ: \+0.6): HIT.** **Quote:** "I would have them rounded up." -Remarks at Bondi Pavilion vigil, reported by One Nation, 18 December 2025[^onenation]
+**(Who.Cause.How) White Australia Policy (υ: -0.9, ψ: +0.6): HIT.** **Quote:** "Therefore, I call for stopping further Muslim immigration and banning the burqa..." -Maiden Speech, Senate (2016)[^ms16]
 
 Description: The White Australia Policy vector measures whether an actor's mechanism reproduces the 1901 Gate, the founding legislative act that defined the nation through racial and cultural exclusion, or breaks from it. The Kanon's fixed coordinates (-0.9, +0.6) score the ideal itself as a structural wrong, racial exclusion actively legislated, so a HIT here means the actor's actual conduct continues that same exclusionary gatekeeping mechanism rather than dismantling it. This is the vector the 1966-1973 reforms were meant to close, and it remains, per the Kanon, "the ghost that haunts debates on refugees and multiculturalism."
 
@@ -934,7 +934,7 @@ This represents a failure of the state's obligation to recognize the survival of
 
 Actuality: Hanson's active opposition to native title, treaty, and truth-telling campaigns directly attempts to block the First Nations trajectory of survival. She fails this vector by seeking to legally and culturally flatten their unique presence.
 
-**(Who.Cause.Cause) Deep Time (υ: \+0.7, ψ: \-0.2): FAIL.** **Quote:** "I hear so often those people who have a go at us. The land was invaded, and all the rest of it. You know what, get over it, move on... we're talking about over 200 years ago." -Facebook video statement, Australia Day, 26 January 2022[^ladbible22]
+**(Who.Cause.Cause) Deep Time (υ: +0.7, ψ: -0.2): FAIL.** **Quote:** "I hear so often those people who have a go at us... the land was invaded - and all the rest of it. You know what, get over it, move on... we're talking about over 200 years ago." -Facebook video statement, Australia Day, 26 January 2022[^ladbible22]
 
 Description: Deep Time represents the 65,000-year continuous custody and ecological knowledge of the Australian continent that predates colonial settlement, the foundational bedrock beneath the comparatively brief modern settler identity. The vector's fixed coordinates (+0.7, -0.2) score the ideal as a passive endurance, a deep continuity that persists whether or not it is acknowledged, not something requiring active defence. It demands recognition that the land carries a history measured in epochs, not generations, and that this history cannot be legislated or narrated away.
 

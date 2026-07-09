@@ -78,9 +78,11 @@ _last_docapi_call = 0.0
 # Discovery: DOC API (free, keyless)
 # ---------------------------------------------------------------------------
 
-def gdelt_docapi_search(actor_name, date_from=None, date_to=None, max_records=75):
+def gdelt_docapi_search(actor_name, date_from=None, date_to=None, max_records=75, extra_query=None):
     global _last_docapi_call
     query = f'"{actor_name}"'
+    if extra_query:
+        query += f' {extra_query}'
     params = {
         "query": query,
         "mode": "artlist",
@@ -226,7 +228,7 @@ def compute_article_fingerprint(headline, article_text):
     return "body:" + hashlib.sha1(norm_body.encode("utf-8")).hexdigest()
 
 
-def scrape_article(article_meta, actor_name, seen_fingerprints=None):
+def scrape_article(article_meta, actor_name, seen_fingerprints=None, extra_query=None):
     """Returns (records, fingerprint, is_duplicate).
     seen_fingerprints, if given, is a set of fingerprints already kept from
     prior articles/runs -- if this article's headline (or body, as
@@ -243,6 +245,11 @@ def scrape_article(article_meta, actor_name, seen_fingerprints=None):
     metadata = trafilatura.extract_metadata(downloaded)
     if not full_text:
         return [], None, False
+
+    if extra_query:
+        lower_text = full_text.lower()
+        if not all(word.lower() in lower_text for word in extra_query.split()):
+            return [], None, False
 
     headline = article_meta.get("title") or (metadata.title if metadata else None)
     fingerprint = compute_article_fingerprint(headline, full_text)
@@ -278,6 +285,7 @@ def main():
     ap.add_argument("--from", dest="date_from", default=None, help="Earliest date YYYY-MM-DD")
     ap.add_argument("--to", dest="date_to", default=None, help="Latest date YYYY-MM-DD")
     ap.add_argument("--max-articles", type=int, default=200, help="Max candidate articles to check")
+    ap.add_argument("--query", default=None, help="Additional keywords to require in the article (e.g. 'Payman solidarity')")
     ap.add_argument("--source", choices=["bigquery", "docapi"], default="bigquery",
                      help="Discovery backend: bigquery (deeper, needs GCP auth) or docapi (free, keyless)")
     ap.add_argument("--full-rescan", action="store_true",
@@ -313,9 +321,9 @@ def main():
         articles = gdelt_bigquery_search(args.name, args.date_from, args.date_to, args.max_articles)
         if articles is None:
             print("Falling back to the free DOC API instead.", file=sys.stderr)
-            articles = gdelt_docapi_search(args.name, args.date_from, args.date_to, args.max_articles)
+            articles = gdelt_docapi_search(args.name, args.date_from, args.date_to, args.max_articles, extra_query=args.query)
     else:
-        articles = gdelt_docapi_search(args.name, args.date_from, args.date_to, args.max_articles)
+        articles = gdelt_docapi_search(args.name, args.date_from, args.date_to, args.max_articles, extra_query=args.query)
 
     print(f"  Found {len(articles)} candidate articles.", file=sys.stderr)
 
@@ -329,7 +337,7 @@ def main():
         for i, art in enumerate(new_urls, 1):
             print(f"  [{i}/{len(new_urls)}] {art.get('domain')}: {art.get('url')}", file=sys.stderr)
             try:
-                records, fingerprint, is_dup = scrape_article(art, args.name, seen_fingerprints=seen_fingerprints)
+                records, fingerprint, is_dup = scrape_article(art, args.name, seen_fingerprints=seen_fingerprints, extra_query=args.query)
             except Exception as e:
                 print(f"    [warn] failed to process {art.get('url')}: {e}", file=sys.stderr)
                 records, fingerprint, is_dup = [], None, False

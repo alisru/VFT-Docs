@@ -74,3 +74,10 @@ _Last updated: 2026-07-05_
 **Status:** No excerpt found. Multiple news outlets covered the event â€” documented action fallback.
 
 ---
+
+### 2.5.1 What.How.Who — The Faceless Men
+**Source confirmed:** Press Conference responding to Senator Fatima Payman crossing the floor, July 2024.
+**Quote:** "No individual is bigger than the team, and Fatima Payman is welcome to return to participating in the team if she accepts she's a member of it."
+**Notes:** Found via direct web search. Perfectly hits the +psi / -upsilon coordinates of enforcing caucus discipline over the individual representative.
+---
+

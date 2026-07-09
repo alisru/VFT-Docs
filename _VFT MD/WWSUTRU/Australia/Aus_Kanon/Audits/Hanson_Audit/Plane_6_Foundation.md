@@ -2,7 +2,7 @@
 
 ## **6.1 The Ancestral Agents (Cause.Who)**
 
-**(Cause.Who.Who) The Convict (υ: \+0.2, ψ: \-0.5): HIT.** **Quote:** "I'm just an ordinary Australian, who is tired of seeing this country go backwards, and I'm prepared to stand up and say so." -National Press Club Address (2026)[^npc26]
+**(Cause.Who.Who) The Convict (υ: +0.2, ψ: -0.5): HIT.** **Quote:** "I call it standing up and fighting for what you believe in and not allowing the bastards to grind you down." -Maiden Speech, Senate, Hansard (2016)[^ms16]
 
 Description: She continuously resurrects the foundational resentment of the penal exile against the governing class.
 

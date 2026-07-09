@@ -15,13 +15,15 @@ If a scan turns up the same violation repeated across many nodes, fix every inst
 
 ## Node Header Format (canonical)
 
-**(Address) Vector Name (upsilon: +X.X, psi: +Y.Y): HIT/FAIL.** **Quote:** "quote text" -Source Context (year)
+**(Address) Vector Name (upsilon: +X.X, psi: +Y.Y): HIT/FAIL.** **Quote:** "quote text" -Source Context (year)[^shortkey]
 
 Rules:
 - Coords use escaped markdown: \+ or \- before the number
 - Quote is on the SAME LINE as the header -- no line break between header and quote
 - Source context must be meaningful: "Maiden Speech, House of Representatives, Hansard" not "Speech" or "Media statement"
 - No double-quote wrapping: NOT ""quote." (year)." -- that is the broken old format
+- Every header quote carries a footnote marker, e.g. [^ms96], immediately after the source context. Reuse the same key for the same source across nodes; give a new source a new short key.
+- Every distinct citation used anywhere in a node (header quote or Actuality) must resolve to an entry in that document's master footnote key (see Citation Key below). A marker with no matching key entry is a broken citation, not a stylistic choice.
 
 ## Body Section Format
 
@@ -31,7 +33,23 @@ Description: Context of the audit -- what this vector measures, what the canonic
 
 Justification: Why the quote and conduct result in a HIT or FAIL against the fixed coordinates. Must explain the upsilon and psi reasoning in plain language, not by inserting the symbols. Does not cite the quote directly -- analyses the vector concept independently.
 
-Actuality: The actor's actual output relative to their capacity over time. Actively search for the most recent verified quote or documented action relevant to this vector -- do not reuse the header quote. End with TENTATIVE FAIL if actuality contradicts the stated HIT/FAIL verdict.
+Actuality: The actor's actual output relative to their capacity over time. Actively search for the most recent verified quote or documented action relevant to this vector -- do not reuse the header quote. Every specific claim, date, or figure in this section must carry its own footnote marker (e.g. "...cannot be a multicultural society."[^netimes26]), reusing an existing key if the source repeats, adding a new key otherwise. End with TENTATIVE FAIL if actuality contradicts the stated HIT/FAIL verdict.
+
+> [!CAUTION]
+> **NO DUPLICATE CITATIONS OR EVENTS**: The Actuality section must be researched as a separate step from the Header Quote. You are strictly prohibited from using the same speech, interview, or document for both the Quote and the Actuality. The Actuality must document distinct, real-world *actions* (legislation, executive orders, funding, votes cast) and cite different sources than the header quote.
+
+## Citation Key (master footnote list, required)
+
+Every node quote and Actuality citation uses an inline marker (`[^shortkey]`), never a raw URL inline. Each document (or each Plane file, if split by plane) ends with a master key section resolving every marker used in that file, one line each:
+
+[^shortkey]: Full Source Name, Publication/Body, Date: URL
+
+Rules:
+- Every marker used anywhere in the body must have exactly one matching key line at the end of the file. No orphaned markers, no unused key lines.
+- Reuse the same key across every node that cites the same source (e.g. [^ms96] for the 1996 Maiden Speech everywhere it's quoted). Never mint a new key for a source already keyed.
+- The key line must be specific enough to independently verify: real title/description, real date, real URL, not a generic domain or hub link (see Quote Standards below on citing the specific page, not a parent page).
+- When adding, replacing, or verifying any quote, add or confirm its key line at the same time. Don't leave a citation pass for later, it's part of finishing the node.
+- Before declaring a document or plane done, grep every `[^` marker in the body and confirm each resolves to a key line, and grep every key line and confirm it's actually referenced at least once in the body (unused keys are dead weight, missing keys are broken citations).
 
 ## Coordinate System
 
@@ -67,6 +85,52 @@ Files: Plane_1_Identity_compact.json through Plane_7_Result_compact.json
 
 For other nations, load the equivalent JSON files from that nation's Kanon directory.
 
+## Local Sourcing Tools (check before WebSearch or a live API)
+
+Five scripts in `Aus Kanon/compact JSON/`, plus a local corpus file, cover most federal-politician sourcing without touching the network:
+
+- `query_hansard_corpus.py` -- queries `corpus_1998_to_2025.parquet` via duckdb. House of Representatives, 1998-03-02 to 2025-07-31, full speech text per row (not a snippet), instant, no network call, no cap. **First stop for anything said in the chamber by a House member in that range.**
+- **`search_oa.py` -- fast OpenAustralia `getHansard` phrase-search. The primary validation tool for the hypothesis-then-verify workflow.** Given a 4-8 word distinctive phrase from a training-data hypothesis, returns top hits with date, snippet, gid permalink, and optionally the full verbatim paragraph in two tool calls total. Use when the local parquet doesn't cover the actor (Senate, post-July 2025) or when you want to confirm a specific phrase exists before committing to a full scrape.
+  ```
+  python search_oa.py "distinctive phrase here" --person "Albanese" --fetch-full --top 3
+  python search_oa.py "phrase" --person-id 10280 --fetch-full   # Hanson, skip name lookup
+  ```
+  Known person_ids: Albanese=10007, Hanson=10280. Pass `--person-id` directly to skip the name-lookup API call.
+- `aph_scraper.py` -- live scrape directly against aph.gov.au's own Hansard search. No result cap, covers Senate + House + committees, reaches back through full Hansard history. Use for Senate, anything after July 2025, or anything the parquet + search_oa.py don't cover. Gives title/date/PDF link per match; full inline text extraction from the HTML page isn't solved yet, PDF is the reliable full-text source.
+- `hansard_scraper.py` -- OpenAustralia API bulk dump. Paginates all speeches for a person into a local JSONL. Use for pre-building a full corpus archive, not for per-node lookups (too slow for that). Superseded by `search_oa.py` for single-phrase validation.
+- `news_quote_scraper.py` -- for anything not said in the chamber: interviews, press, controversies. Extracts only quotes attributed to the actor plus short context, never full article bodies.
+
+## Raw Quote Verification Warning (CRITICAL CONSTRAINT)
+
+> [!WARNING]
+> **NO DO NOT ATTEMPT TO WRITE A JUSTIFICATION, DESCRIPTION, OR ACTUALITY UNTIL THE STUPID FUCKING QUOTE IS VERIFIED.**
+> 
+> You must isolate and verify the exact verbatim text of the candidate quote first. Print the raw quote, date, and source in the chat. Only after the quote is confirmed as real and verified may you draft the justification, description, or actuality and write the node to disk. Never guess, extrapolate, or write prose around an unverified quote.
+
+## Token Conservation and Search Limits (CRITICAL CONSTRAINT)
+
+> [!CAUTION]
+> **ABSOLUTE BAN ON SERIAL WEB SEARCHES**: You are strictly prohibited from running consecutive web searches in series across turns to "tweak" or "refine" results. Design a single, comprehensive parallel search query containing all the necessary queries at once and execute it once.
+> 
+> **MANDATORY FULL FILE INSPECTION**: When any search or fetch output is saved to a large file on disk, you are banned from searching again until you have inspected the entire file (using offsets if truncated) or run local grep searches on it to confirm the information is not there.
+> 
+> **LOCAL-FIRST SOURCING**: For parliamentary or legislative nodes, you must search the local database (`corpus_1998_to_2025.parquet` / `albanese_corpus.jsonl`) first using the local python scripts. Local python runs cost zero API/web tokens.
+> 
+> **NO MEMORY-BASED PROPOSING**: Never propose or draft any citation, URL, or date in the chat based on training-data memory without first validating it using a tool.
+
+## Search Cascade Hierarchy & Bifurcation Protocol
+
+Follow this strict fallback hierarchy when searching for and verifying quotes:
+1. **Local Parquet**: Use `query_hansard_corpus.py` for House of Representatives speeches (1998–2025). Zero network cost.
+2. **`search_oa.py` phrase-search**: Given a distinctive phrase from your training-data hypothesis, run `python search_oa.py "phrase" --person "Name" --fetch-full`. Returns verbatim text + permalink in ~2 seconds. Covers Senate + House via OpenAustralia; use for anything not in the local parquet.
+3. **Local APH Scraper**: Use `aph_scraper.py` for Senate speeches, committee transcripts, or post-July 2025 entries that `search_oa.py` doesn't surface.
+4. **Web Search**: Use standard web search (or `news_quote_scraper.py`) for news, interviews, and media statements.
+5. **Browser Fetch**: If standard search fails or URLs are truncated/redirected, launch the `browser_subagent` to render the page directly and extract the raw DOM.
+
+**Bifurcation for Government / APH Sites:**
+- **APH/Hansard Failures**: Skip standard search engines. Query via `aph_scraper.py` or use the browser to search the APH Hansard portal directly.
+- **PM/Department Site Failures**: If Cloudflare or redirects block standard fetch/search tools, use the browser subagent to load the page and extract the verbatim text.
+
 ## Dual-Address (First Nations Perspective) Nodes
 
 Some addresses have TWO nodes: a primary entry and a [First Nations Perspective] shadow entry. Both share the same address field.
@@ -93,7 +157,17 @@ The Kanon JSON name, coordinates, and description are the distilled answer. Read
 
 Find real evidence of the actor's own mechanism on this same shape, then compare the two shapes directly.
 
-How to find it: primary sources first, speeches, Hansard, policy documents, direct statements on record. Look for where the actor states their reasoning, not just their conclusion, the causal chain in their thinking, not just a position. Keyword grep on a news corpus is the wrong tool, and so is searching for the Kanon's poetic vector name as if the actor needs to use those literal words. You're finding wherever in the actor's real record the same mechanism is visible, even if it never mentions the vector's name at all. If nothing verifiable turns up, say so and use the weakest-evidence category honestly (documented paraphrase, then documented action) rather than manufacturing something that reads well.
+> [!IMPORTANT]
+> **Frame every search around this question, filled in concretely, never left abstract:**
+> **"In a quote, how does [actor] hit or fail the ideal identified in [node]?"**
+> 
+> **CRITICAL:** `[node]` does NOT mean the short node name. `[node]` means the **entire, unredacted text block of the Kanon node** (including its Description, Coordinates, 'Establishes' text, and Rationale). You must load the *whole* definition into your framing context so you evaluate against the complete architectural mechanism.
+> 
+> *The question is a framing device to keep the search actor-and-mechanism-specific, it is not itself a search string, don't type the Kanon's node name or poetic phrasing into a search box.*
+
+Then immediately translate [node]'s ideal into the real-world mechanism it names (see Move 1) before you search.
+
+How to find it: primary sources first, speeches, Hansard, policy documents, direct statements on record. Look for where the actor states their reasoning, not just their conclusion, the causal chain in their thinking, not just a position. Keyword grep on an unstructured news corpus is the wrong tool, and so is searching for the Kanon's poetic vector name as if the actor needs to use those literal words. This does NOT apply to the local Hansard corpus (`query_hansard_corpus.py`) -- that's a structured, dated, speaker-attributed, complete parliamentary record, not a fuzzy scrape, and keyword filtering against it is exactly the right approach for anything said in the chamber. You're finding wherever in the actor's real record the same mechanism is visible, even if it never mentions the vector's name at all. If nothing verifiable turns up, say so and use the weakest-evidence category honestly (documented paraphrase, then documented action) rather than manufacturing something that reads well.
 
 How to compare it: the actor can keep the ideal's surface grammar while inverting its actual shape, same costume, opposite mechanism. Check both axes of what you found against the Kanon's fixed coordinates, never assigned from the quote, never decided before the quote:
 
@@ -107,7 +181,9 @@ If the evidence clearly answers both axes, the verdict is sound. If it only addr
 Before running any search for a node's quote, pause and ask: does the vector's mechanism (not its poetic Kanon name) match a real, specific incident, speech, or controversy already known from training? For actors with substantial public records (long-serving politicians, major parties, historical figures), training data usually contains a real candidate, don't skip straight to a blind WebSearch on the vector's abstract description and give up when the results come back thin.
 
 The correct two-step sequence:
-1. **Generate the hypothesis from training data.** Decompose the vector to its mechanism (see Move 2), then ask what specific real-world event, speech, or exchange this actor is known for that matches that mechanism. Name it as a hypothesis: "this sounds like it could be the [specific incident/date/name]," not as a fact.
+1. **Generate the hypothesis from training data using explicit self-prompting.** You MUST explicitly write out this question in your thoughts before proceeding:
+   `"How does [actor] hit or miss [whole node JSON text] in a quote?"`
+   Where `[whole node JSON text]` is the complete, unredacted JSON definition of the node from the plane's JSON database. Evaluate this question to identify the specific real-world incident, speech, or exchange matching the mechanism.
 2. **Verify the hypothesis with a targeted fetch or search.** Build a precise query around the specific names, dates, and distinctive vocabulary the hypothesis suggests (e.g. actual likely phrases the actor would have used, not the Kanon's poetic vector name), then fetch the actual primary or named-outlet source and extract the verbatim text from it directly. The training-data hypothesis earns its way into the document only once a live source confirms it. It is never itself the citation, and it is never presented as verified fact before that fetch happens.
 
 This is a hard boundary, not a shortcut: training data can hallucinate specific wording, dates, and even whether an incident happened as recalled. Treat every training-data recollection as unconfirmed until the fetch step lands on a real, checkable source. If the fetch doesn't confirm the hypothesis, the hypothesis is discarded, it does not get rounded up to "close enough."
@@ -127,23 +203,8 @@ Run these checks with grep/python and report the results, don't just assert comp
 - Every Justification block has actual content (not empty)
 - No coordinate notation (υ, ψ, +0.x, -0.x) appears anywhere in body text
 - Sources are complete and no URLs are truncated
+- Every `[^marker]` in the body resolves to a key line in the master footnote list, and every key line is referenced by at least one marker in the body (see Citation Key above)
 - Verdict-weighted scoring is intact wherever alignment percentages or average coordinates are calculated: avg = sum(coord * (1 if HIT else -1)) / count. Raw unweighted averaging is always wrong for this audit.
-
-## Verification Call Budget — Hard Limit
-
-**Max 3 tool calls to verify any single node.** This applies to both direct auditing and subagent auditing. If 3 calls don't yield a confirmed quote, downgrade to documented paraphrase or documented action and write the node. Do not keep searching.
-
-Follow exactly one of these paths per node:
-
-**PATH A — Hansard source:** 1 DuckDB query via `run_command`. If not found, downgrade immediately.
-
-**PATH B — Non-Hansard, known URL:** 1 `web_fetch` (excerpt mode). If insufficient, 1 more `web_fetch` (full). Write node. Stop.
-
-**PATH C — Non-Hansard, no URL:** 1 `web_search` with 2–3 queries batched in a single call. If a URL surfaces and excerpt is thin, 1 `web_fetch`. Write node. Stop.
-
-**Forbidden:** Python `urllib`/`requests` scripts for web fetching. Rephrasing and retrying failed searches. Searching for the Kanon's poetic vector name. Exceeding 3 calls per node.
-
-**Source caching:** After any web fetch, write the raw excerpt + URL to `drawing_board/sources_raw.md` BEFORE writing the node. This ensures sources survive an interrupted session.
 
 ## Known Failure Modes (do not repeat)
 
