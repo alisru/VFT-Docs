@@ -1,0 +1,185 @@
+
+QQCI SEMANTIC LINKING EXPERIMENT 1
+symbolic engine, no training, no learned weights
+
+========================================================================
+A. ISOMORPHIC RETELLING
+========================================================================
+  domain validation: all Collapse Dictionary entries closed. OK
+
+  SOURCE (sea):
+    The fisherman built a boat from oak.
+    The fisherman sailed the boat to the reef.
+    The storm wrecked the boat.
+    The fisherman was rescued by the harbourmaster.
+    The fisherman gave the charts to the harbourmaster.
+    The harbourmaster taught the fisherman about tides.
+
+  CANONICAL FORM (what the story IS, stripped of setting):
+    maritime::@CREATE{agent:fisherman,patient:boat,source:oak}
+    maritime::@RELOCATE{agent:fisherman,destination:reef,patient:boat}
+    maritime::@TERMINATE{agent:storm,patient:boat}
+    maritime::@AID{agent:harbourmaster,patient:fisherman}
+    maritime::@TRANSFER{agent:fisherman,patient:charts,recipient:harbourmaster}
+    maritime::@INSTRUCT{agent:harbourmaster,recipient:fisherman,topic:tides}
+
+  PLANE-STATE TRACE (Actualism steps 2, 4, 6):
+    action       belief   system  functional identity    address
+    @CREATE      +?       chaos   driver_of_inquiry      L0:Q1.q2
+    @RELOCATE    +?       chaos   driver_of_inquiry      L0:Q3.q1
+    @TERMINATE   >        chaos   catalyst_of_collapse   L0:Q3.q6
+    @AID         =        order   stabiliser_of_truth    L0:Q1.q7
+    @TRANSFER    =        order   stabiliser_of_truth    L0:Q1.q2
+    @INSTRUCT    =        order   stabiliser_of_truth    L0:Q4.q5
+
+  RETOLD IN 'startup' DOMAIN:
+    The founder built a product from open source.
+    The founder launched the product to the market.
+    The recession destroyed the product.
+    The founder was backed by the investor.
+    The founder gave the equity to the investor.
+    The investor taught the founder about retention.
+    type-preserving bijection:
+      AGENT#1      -> founder
+      VESSEL#1     -> product
+      MATERIAL#1   -> open source
+      GROUND#1     -> market
+      FORCE#1      -> recession
+      PATRON#1     -> investor
+      TOKEN#1      -> equity
+      KNOWLEDGE#1  -> retention
+
+  RETOLD IN 'orbit' DOMAIN:
+    The engineer assembled a probe from alloy.
+    The engineer flew the probe to the asteroid.
+    The solar flare destroyed the probe.
+    The engineer was saved by the director.
+    The engineer sent the telemetry to the director.
+    The director warned the engineer about drift.
+    type-preserving bijection:
+      AGENT#1      -> engineer
+      VESSEL#1     -> probe
+      MATERIAL#1   -> alloy
+      GROUND#1     -> asteroid
+      FORCE#1      -> solar flare
+      PATRON#1     -> director
+      TOKEN#1      -> telemetry
+      KNOWLEDGE#1  -> drift
+
+========================================================================
+B. ROUND-TRIP STRUCTURAL IDENTITY (Actualism step 8)
+========================================================================
+  Retell, then re-parse the retelling and abstract it again.
+  If the framework captures what the story IS, the skeletons match.
+
+  sea -> startup  parsed 6/6 steps | structural identity 100.0%
+  sea -> orbit    parsed 6/6 steps | structural identity 100.0%
+
+  chain test  sea -> startup -> orbit  equals  sea -> orbit : YES
+
+  mean structural identity: 100.0%
+
+========================================================================
+C. PAIR DISCRIMINATION vs BAG-OF-WORDS BASELINE
+========================================================================
+  Paraphrase pairs SHOULD collapse to one referent.
+  Role-reversal pairs SHOULD NOT (same words, different transition).
+  Baseline calls a pair 'same' when BoW cosine >= 0.8.
+
+  PARAPHRASE  (expected: SAME)
+    OK BoW  cos=0.88 -> same   |  OK SAEL -> same
+        The harbourmaster rescued the fisherman.
+        The fisherman was rescued by the harbourmaster.
+    OK BoW  cos=0.93 -> same   |  OK SAEL -> same
+        The fisherman gave the charts to the harbourmaster.
+        The fisherman handed the charts to the harbourmaster.
+    OK BoW  cos=0.86 -> same   |  OK SAEL -> same
+        The storm wrecked the boat.
+        The storm destroyed the boat.
+    OK BoW  cos=0.86 -> same   |  OK SAEL -> same
+        The fisherman built a boat from oak.
+        The fisherman crafted a boat from oak.
+    OK BoW  cos=0.88 -> same   |  OK SAEL -> same
+        The storm wrecked the boat.
+        The boat was wrecked by the storm.
+
+  ROLE REVERSAL  (expected: DIFFERENT)
+    X  BoW  cos=1.00 -> same   |  OK SAEL -> diff
+        The storm wrecked the boat.
+        The boat wrecked the storm.
+        voxel A: maritime::@TERMINATE{agent:storm,patient:boat}
+        voxel B: maritime::@TERMINATE{agent:boat,patient:storm}
+    X  BoW  cos=1.00 -> same   |  OK SAEL -> diff
+        The fisherman gave the charts to the harbourmaster.
+        The harbourmaster gave the charts to the fisherman.
+        voxel A: maritime::@TRANSFER{agent:fisherman,patient:charts,recipient:harbourmaster}
+        voxel B: maritime::@TRANSFER{agent:harbourmaster,patient:charts,recipient:fisherman}
+    X  BoW  cos=1.00 -> same   |  OK SAEL -> diff
+        The harbourmaster rescued the fisherman.
+        The fisherman rescued the harbourmaster.
+        voxel A: maritime::@AID{agent:harbourmaster,patient:fisherman}
+        voxel B: maritime::@AID{agent:fisherman,patient:harbourmaster}
+    X  BoW  cos=1.00 -> same   |  OK SAEL -> diff
+        The fisherman sailed the boat to the reef.
+        The reef sailed the boat to the fisherman.
+        voxel A: maritime::@RELOCATE{agent:fisherman,destination:reef,patient:boat}
+        voxel B: maritime::@RELOCATE{agent:reef,destination:fisherman,patient:boat}
+
+  RESULT over 9 pairs:
+    bag-of-words baseline : 5/9  (56%)
+    SAEL canonical form   : 9/9  (100%)
+
+========================================================================
+D. PARALLAX INTERSECTION AND FALSE-FILL DETECTION
+========================================================================
+  Each active plane casts a constraint ray, not a verdict.
+  Material earns its place only where independent vantages intersect.
+
+  intersections (voxel, observers, strength, deepest first):
+    4 observers  depth=0.993  [WHO,WHAT,WHERE,CAUSE]
+      maritime::@CREATE{agent:fisherman,patient:boat,source:oak}
+    4 observers  depth=0.983  [WHO,WHERE,CAUSE,EFFECT]
+      maritime::@TERMINATE{agent:storm,patient:boat}
+    4 observers  depth=0.993  [WHO,WHY,HOW,CAUSE]
+      maritime::@INSTRUCT{agent:harbourmaster,recipient:fisherman,topic:tides}
+    4 observers  depth=0.985  [WHO,WHY,CAUSE,EFFECT]
+      maritime::@AID{agent:harbourmaster,patient:fisherman}
+    4 observers  depth=0.988  [WHO,WHERE,HOW,CAUSE]
+      maritime::@RELOCATE{agent:fisherman,destination:reef,patient:boat}
+    4 observers  depth=0.998  [WHO,WHAT,CAUSE,EFFECT]
+      maritime::@TRANSFER{agent:fisherman,patient:charts,recipient:harbourmaster}
+
+  stealth test: a claim with only one vantage supporting it
+    rays cast: 1  intersections found: 0  -> REJECTED (one-ray content)
+
+  fill cycle: all vantages agree (a real transition)
+    carved at L0:Q3.q6  state=carved
+    accrete WHO     engage=0.70 assert=1.00  sharpness=0.12  state=accreting
+    accrete WHERE   engage=1.00 assert=1.00  sharpness=0.25  state=accreting
+    accrete CAUSE   engage=1.00 assert=1.00  sharpness=1.00  state=filled
+    accrete EFFECT  engage=1.00 assert=1.00  sharpness=1.00  state=filled
+    mix readout (engagement): 27% Where, 27% Cause, 27% Effect, 19% Who
+    assertion disagreement  : 0.000
+    === reached, staircase overflows -> child at L0:Q3.q6.q4
+
+  fill cycle: one vantage dissents (stealth content)
+    carved at L0:Q3.q6  state=carved
+    accrete WHO     engage=0.70 assert=1.00  sharpness=0.12  state=accreting
+    accrete WHERE   engage=1.00 assert=1.00  sharpness=0.25  state=accreting
+    accrete CAUSE   engage=1.00 assert=1.00  sharpness=1.00  state=filled
+    accrete EFFECT  engage=1.00 assert=0.40  sharpness=1.00  state=false_fill  <-- dissenting vantage
+    mix readout (engagement): 27% Where, 27% Cause, 27% Effect, 19% Who
+    assertion disagreement  : 0.600
+    staircase gate correctly refused to overflow (state=false_fill)
+    up-channel: root reached, marked never_filled
+
+========================================================================
+SUMMARY
+========================================================================
+  B  round-trip structural identity : 100.0%
+  C  bag-of-words baseline accuracy : 56%
+  C  SAEL canonical form accuracy   : 100%
+
+  verdict: PASS
+  (PASS means: meaning survived domain translation, and canonical
+   collapse discriminated referents better than surface overlap.)

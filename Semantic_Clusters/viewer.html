@@ -679,6 +679,7 @@
         <div class="tabs">
             <button class="tab-btn active" onclick="switchTab('topic-tab', this)">Topic Explorer</button>
             <button class="tab-btn" onclick="switchTab('graph-tab', this)">Similarity Graph</button>
+            <button class="tab-btn" onclick="switchTab('docreader-tab', this)">&#128196; Doc Reader</button>
         </div>
         <div class="header-meta" id="load-stats">Loading database...</div>
     </header>
@@ -2150,7 +2151,11 @@
                         }
 
                         if (edge.type === 'topic') {
-                            edge.color = { color: '#8b5cf6', highlight: '#a78bfa' };
+                            if (graphMode === 'hegemony') {
+                                edge.color = { color: 'rgba(139, 92, 246, 0.25)', highlight: '#a78bfa' };
+                            } else {
+                                edge.color = { color: '#8b5cf6', highlight: '#a78bfa' };
+                            }
                             edge.width = edge.similarity * 6;
                             return showTopicConnections && edge.similarity >= currentThreshold;
                         } 
@@ -3683,5 +3688,984 @@
         // Bootstrap load
         loadData();
     </script>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         DOC READER TAB — CSS
+    ════════════════════════════════════════════════════════════════ -->
+    <style>
+        /* ── Doc Reader panel ──────────────────────────────────────── */
+        #docreader-tab {
+            display: none;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #docreader-tab.active { display: flex; }
+
+        .dr-sidebar {
+            width: 260px;
+            min-width: 200px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .dr-nav-header {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dr-nav-header span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            flex: 1;
+        }
+
+        .dr-view-toggle {
+            display: flex;
+            gap: 2px;
+            background: var(--bg-primary);
+            border-radius: 6px;
+            padding: 2px;
+        }
+
+        .dr-view-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.15s;
+            font-family: var(--font-main);
+        }
+
+        .dr-view-btn.active {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+        .dr-nav-scroll {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0.5rem 0;
+        }
+
+        /* ── Cards view ── */
+        .dr-folder-card {
+            margin: 0.3rem 0.6rem;
+            padding: 0.6rem 0.8rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .dr-folder-card:hover {
+            border-color: var(--accent-color);
+            background: rgba(139,92,246,0.06);
+        }
+
+        .dr-folder-card.active-nav {
+            border-color: var(--accent-color);
+            background: rgba(139,92,246,0.12);
+        }
+
+        .dr-folder-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .dr-folder-meta {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+        }
+
+        /* ── File item in cards view ── */
+        .dr-file-item {
+            margin: 0.15rem 0.6rem;
+            padding: 0.45rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .dr-file-item:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+        .dr-file-item.active-file { background: rgba(139,92,246,0.15); color: var(--accent-hover); }
+
+        /* ── Tree view ── */
+        .dr-tree-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 0.3rem;
+            transition: background 0.12s;
+        }
+
+        .dr-tree-item:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+        .dr-tree-item.active-file { color: var(--accent-hover); background: rgba(139,92,246,0.12); }
+
+        .dr-tree-children { padding-left: 1rem; }
+        .dr-tree-toggle { font-size: 0.6rem; transition: transform 0.15s; display: inline-block; }
+        .dr-tree-toggle.open { transform: rotate(90deg); }
+
+        /* ── Centre content area ── */
+        .dr-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: var(--bg-primary);
+        }
+
+        .dr-toolbar {
+            padding: 0.6rem 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--bg-secondary);
+            flex-shrink: 0;
+        }
+
+        .dr-breadcrumb {
+            flex: 1;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .dr-breadcrumb span { color: var(--accent-hover); }
+
+        .dr-semantic-btn {
+            padding: 0.35rem 0.9rem;
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            font-family: var(--font-main);
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .dr-semantic-btn.active {
+            background: rgba(139,92,246,0.2);
+            border-color: var(--accent-color);
+            color: var(--accent-hover);
+        }
+
+        .dr-doc-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem 2rem;
+            line-height: 1.75;
+            color: var(--text-primary);
+        }
+
+        /* Markdown rendering */
+        .dr-doc-body h1 { font-size: 1.5rem; font-weight: 700; margin: 1.5rem 0 0.75rem;
+            background: linear-gradient(to right, #a78bfa, #c084fc);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .dr-doc-body h2 { font-size: 1.2rem; font-weight: 600; margin: 1.2rem 0 0.5rem; color: #c084fc; }
+        .dr-doc-body h3 { font-size: 1rem; font-weight: 600; margin: 1rem 0 0.4rem; color: var(--accent-hover); }
+        .dr-doc-body p { margin: 0.5rem 0; }
+        .dr-doc-body code { background: var(--bg-tertiary); padding: 0.1em 0.4em; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85em; }
+        .dr-doc-body pre { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; overflow-x: auto; margin: 0.75rem 0; }
+        .dr-doc-body pre code { background: none; padding: 0; }
+        .dr-doc-body blockquote { border-left: 3px solid var(--accent-color); margin: 0.75rem 0; padding: 0.5rem 1rem; background: rgba(139,92,246,0.05); border-radius: 0 6px 6px 0; }
+        .dr-doc-body ul, .dr-doc-body ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+        .dr-doc-body li { margin: 0.25rem 0; }
+        .dr-doc-body table { border-collapse: collapse; width: 100%; margin: 0.75rem 0; }
+        .dr-doc-body th, .dr-doc-body td { border: 1px solid var(--border-color); padding: 0.5rem 0.75rem; text-align: left; }
+        .dr-doc-body th { background: var(--bg-secondary); color: var(--accent-hover); font-weight: 600; }
+        .dr-doc-body hr { border: none; border-top: 1px solid var(--border-color); margin: 1rem 0; }
+        .dr-doc-body a { color: var(--accent-hover); text-decoration: none; }
+        .dr-doc-body a:hover { text-decoration: underline; }
+
+        /* Paragraph semantic interaction */
+        .dr-para-block {
+            border-radius: 6px;
+            padding: 0.4rem 0.6rem;
+            margin: 0.1rem -0.6rem;
+            transition: background 0.15s;
+            position: relative;
+        }
+
+        .dr-para-block.semantic-ready {
+            cursor: pointer;
+        }
+
+        .dr-para-block.semantic-ready:hover {
+            background: rgba(139,92,246,0.08);
+        }
+
+        .dr-para-block.semantic-active {
+            background: rgba(139,92,246,0.18);
+            box-shadow: inset 3px 0 0 var(--accent-color);
+        }
+
+        /* ── Related panel ── */
+        .dr-related {
+            width: 0;
+            min-width: 0;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: width 0.25s ease, min-width 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .dr-related.open {
+            width: 320px;
+            min-width: 280px;
+        }
+
+        .dr-related-header {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .dr-related-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .dr-related-close:hover { color: var(--text-primary); }
+
+        .dr-related-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.5rem;
+        }
+
+        .dr-hit-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.7rem 0.9rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .dr-hit-card:hover {
+            border-color: var(--accent-color);
+            background: rgba(139,92,246,0.06);
+        }
+
+        .dr-hit-score {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            padding: 0.15rem 0.5rem;
+            border-radius: 20px;
+            margin-bottom: 0.35rem;
+        }
+
+        .dr-hit-score.high { background: rgba(34,197,94,0.15); color: #4ade80; }
+        .dr-hit-score.mid  { background: rgba(234,179,8,0.15); color: #facc15; }
+        .dr-hit-score.low  { background: rgba(148,163,184,0.15); color: #94a3b8; }
+
+        .dr-hit-file {
+            font-size: 0.7rem;
+            color: var(--accent-hover);
+            font-family: var(--font-mono);
+            margin-bottom: 0.3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .dr-hit-text {
+            font-size: 0.79rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .dr-hit-node {
+            font-size: 0.68rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 0.3rem;
+        }
+
+        .dr-empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            text-align: center;
+            padding: 1.5rem;
+            gap: 0.5rem;
+        }
+
+        .dr-empty-state .dr-empty-icon { font-size: 2rem; opacity: 0.4; }
+
+        .dr-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            gap: 0.5rem;
+        }
+
+        @keyframes dr-spin { to { transform: rotate(360deg); } }
+        .dr-spinner {
+            width: 16px; height: 16px;
+            border: 2px solid var(--border-color);
+            border-top-color: var(--accent-color);
+            border-radius: 50%;
+            animation: dr-spin 0.7s linear infinite;
+        }
+    </style>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         DOC READER TAB — HTML
+    ════════════════════════════════════════════════════════════════ -->
+    <div id="docreader-tab" class="view-panel">
+
+        <!-- Left: file navigator -->
+        <div class="dr-sidebar">
+            <div class="dr-nav-header">
+                <span id="dr-nav-location">_VFT MD</span>
+                <div class="dr-view-toggle">
+                    <button class="dr-view-btn active" id="dr-btn-cards" onclick="drSetView('cards')">Cards</button>
+                    <button class="dr-view-btn" id="dr-btn-tree" onclick="drSetView('tree')">Tree</button>
+                </div>
+            </div>
+            <!-- Concept Search Bar -->
+            <div class="dr-search-bar" style="padding: 0.5rem; border-bottom: 1px solid var(--border-color); display: flex; gap: 0.3rem;">
+                <input type="text" id="dr-search-input" placeholder="Search concept (e.g. consciousness)..." style="flex: 1; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.35rem 0.5rem; color: var(--text-primary); font-size: 0.76rem;" onkeydown="if(event.key==='Enter') drSearchConcept()">
+                <button onclick="drSearchConcept()" style="background: var(--accent-color); color: white; border: none; border-radius: 4px; padding: 0.35rem 0.6rem; font-size: 0.76rem; cursor: pointer; font-weight: 500;">Search</button>
+            </div>
+            <div class="dr-nav-scroll" id="dr-nav-scroll">
+                <div class="dr-loading"><div class="dr-spinner"></div> Loading files…</div>
+            </div>
+        </div>
+
+        <!-- Centre: document body -->
+        <div class="dr-content">
+            <div class="dr-toolbar">
+                <div class="dr-breadcrumb" id="dr-breadcrumb">Select a file to begin reading</div>
+                <button class="dr-semantic-btn" id="dr-semantic-btn" onclick="drToggleSemantic()">&#128279; Semantic Mode</button>
+            </div>
+            <div class="dr-doc-body" id="dr-doc-body">
+                <div class="dr-empty-state">
+                    <div class="dr-empty-icon">&#128196;</div>
+                    <div>Select a document from the sidebar</div>
+                    <div style="opacity:0.6;font-size:0.72rem">Enable Semantic Mode then click any paragraph to find related passages across the corpus</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: related passages (hidden until semantic click) -->
+        <div class="dr-related" id="dr-related-panel">
+            <div class="dr-related-header">
+                <span>Related Passages</span>
+                <button class="dr-related-close" onclick="drCloseRelated()" title="Close">&#10005;</button>
+            </div>
+            <div class="dr-related-scroll" id="dr-related-scroll">
+                <div class="dr-empty-state">
+                    <div class="dr-empty-icon">&#128279;</div>
+                    <div>Click a paragraph in Semantic Mode to find related passages</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         DOC READER TAB — JS
+    ════════════════════════════════════════════════════════════════ -->
+    <!-- marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        // ── State ─────────────────────────────────────────────────────
+        let drFileTree    = null;   // raw tree JSON from server
+        let drNavMode     = 'cards'; // 'cards' | 'tree'
+        let drCurrentPath = null;   // current folder path (relative)
+        let drCurrentFile = null;   // current file path (relative)
+        let drSemanticOn  = false;
+        let drActiveSentEl = null;  // currently selected sentence <span>
+        let drLoaded      = false;  // tree fetched?
+
+        const API = 'http://localhost:8001';
+
+        // ── Init: load tree when tab first activated ───────────────────
+        // Hook into the global switchTab function
+        const _origSwitchTab = window.switchTab;
+        window.switchTab = function(tabId, btn) {
+            _origSwitchTab(tabId, btn);
+            if (tabId === 'docreader-tab' && !drLoaded) {
+                drLoaded = true;
+                drFetchTree();
+            }
+        };
+
+        // ── Fetch file tree ────────────────────────────────────────────
+        async function drFetchTree() {
+            try {
+                const resp = await fetch(`${API}/api/filetree`);
+                drFileTree = await resp.json();
+                drRenderNav();
+            } catch(e) {
+                document.getElementById('dr-nav-scroll').innerHTML =
+                    `<div class="dr-empty-state"><div class="dr-empty-icon">&#9888;</div><div>Could not load file tree.<br><code>${e.message}</code></div></div>`;
+            }
+        }
+
+        // ── View toggle ────────────────────────────────────────────────
+        window.drSetView = function(mode) {
+            drNavMode = mode;
+            document.getElementById('dr-btn-cards').classList.toggle('active', mode === 'cards');
+            document.getElementById('dr-btn-tree').classList.toggle('active', mode === 'tree');
+            if (drFileTree) drRenderNav();
+        };
+
+        // ── Render sidebar navigation ──────────────────────────────────
+        function drRenderNav() {
+            const container = document.getElementById('dr-nav-scroll');
+            if (!drFileTree) return;
+            if (drNavMode === 'cards') {
+                // Find the active node in the tree
+                const node = drCurrentPath ? drFindNode(drFileTree, drCurrentPath) : drFileTree;
+                container.innerHTML = drBuildCards(node || drFileTree);
+            } else {
+                container.innerHTML = `<div style="padding:0.25rem 0">${drBuildTree(drFileTree, 0)}</div>`;
+            }
+        }
+
+        function drFindNode(node, targetPath) {
+            if (node.path === targetPath) return node;
+            if (node.children) {
+                for (const c of node.children) {
+                    const found = drFindNode(c, targetPath);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+
+        // ── Cards view builder ─────────────────────────────────────────
+        function drBuildCards(folderNode) {
+            let html = '';
+
+            // Back button (if not at root)
+            if (folderNode.path && folderNode.path !== '' && folderNode.path !== '.') {
+                html += `<div class="dr-file-item" onclick="drNavUp()" style="color:var(--accent-hover);font-weight:600;">
+                    <span>&#8592;</span> Back
+                </div>`;
+            }
+
+            const folders = (folderNode.children || []).filter(c => c.type === 'folder');
+            const files   = (folderNode.children || []).filter(c => c.type === 'file');
+
+            for (const f of folders) {
+                const docCount = (f.children || []).filter(c => c.type === 'file').length;
+                const subFolders = (f.children || []).filter(c => c.type === 'folder').length;
+                const meta = [docCount + ' file' + (docCount !== 1 ? 's' : ''), subFolders ? subFolders + ' folder' + (subFolders !== 1 ? 's' : '') : ''].filter(Boolean).join(' · ');
+                html += `<div class="dr-folder-card" onclick="drNavInto('${escJs(f.path)}')">
+                    <div class="dr-folder-name">&#128193; ${escHtml(f.name)}</div>
+                    <div class="dr-folder-meta">${meta}</div>
+                </div>`;
+            }
+
+            for (const f of files) {
+                const icon = f.ext === '.md' ? '&#128196;' : f.ext === '.json' ? '&#123;&#125;' : '&#128196;';
+                const active = drCurrentFile === f.path ? ' active-file' : '';
+                html += `<div class="dr-file-item${active}" onclick="drOpenFile('${escJs(f.path)}')" title="${escHtml(f.name)}">
+                    <span>${icon}</span>
+                    <span style="overflow:hidden;text-overflow:ellipsis">${escHtml(f.name)}</span>
+                </div>`;
+            }
+
+            if (!folders.length && !files.length) {
+                html = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128193;</div><div>Empty folder</div></div>';
+            }
+
+            return html;
+        }
+
+        window.drNavInto = function(path) {
+            drCurrentPath = path;
+            document.getElementById('dr-nav-location').textContent = path.split(/[\\/]/).pop() || '_VFT MD';
+            drRenderNav();
+        };
+
+        window.drNavUp = function() {
+            if (!drCurrentPath) return;
+            const parts = drCurrentPath.replace(/\\/g,'/').split('/');
+            parts.pop();
+            drCurrentPath = parts.join('/') || null;
+            document.getElementById('dr-nav-location').textContent =
+                drCurrentPath ? drCurrentPath.split(/[\\/]/).pop() : '_VFT MD';
+            drRenderNav();
+        };
+
+        // ── Tree view builder ──────────────────────────────────────────
+        function drBuildTree(node, depth) {
+            let html = '';
+            if (!node.children || node.children.length === 0) return html;
+            for (const child of node.children) {
+                const indent = depth * 14;
+                if (child.type === 'folder') {
+                    const uid = 'drt_' + child.path.replace(/[^a-z0-9]/gi,'_');
+                    html += `<div class="dr-tree-item" style="padding-left:${indent+6}px" onclick="drTreeToggle('${uid}')">
+                        <span class="dr-tree-toggle" id="tog_${uid}">&#9654;</span>
+                        <span>&#128193;</span>
+                        <span>${escHtml(child.name)}</span>
+                    </div>
+                    <div class="dr-tree-children" id="${uid}" style="display:none">
+                        ${drBuildTree(child, depth + 1)}
+                    </div>`;
+                } else {
+                    const active = drCurrentFile === child.path ? ' active-file' : '';
+                    html += `<div class="dr-tree-item${active}" style="padding-left:${indent+20}px" onclick="drOpenFile('${escJs(child.path)}')" title="${escHtml(child.name)}">
+                        <span>&#128196;</span>
+                        <span style="overflow:hidden;text-overflow:ellipsis">${escHtml(child.name)}</span>
+                    </div>`;
+                }
+            }
+            return html;
+        }
+
+        window.drTreeToggle = function(uid) {
+            const el  = document.getElementById(uid);
+            const tog = document.getElementById('tog_' + uid);
+            if (!el) return;
+            const open = el.style.display !== 'none';
+            el.style.display = open ? 'none' : 'block';
+            if (tog) tog.classList.toggle('open', !open);
+        };
+
+        // ── Open & render a file (sentence-level) ─────────────────────
+        window.drOpenFile = async function(relPath) {
+            drCurrentFile = relPath;
+            drActiveSentEl = null;
+            drCloseRelated();
+
+            const parts = relPath.replace(/\\/g, '/').split('/');
+            const name  = parts.pop();
+            document.getElementById('dr-breadcrumb').innerHTML =
+                `<span>_VFT MD</span>${parts.length ? ' / ' + parts.map(escHtml).join(' / ') : ''} / <strong style="color:var(--text-primary)">${escHtml(name)}</strong>`;
+
+            document.querySelectorAll('.dr-file-item, .dr-tree-item').forEach(el => el.classList.remove('active-file'));
+
+            const body = document.getElementById('dr-doc-body');
+            body.innerHTML = '<div class="dr-loading"><div class="dr-spinner"></div> Loading…</div>';
+
+            try {
+                // Fetch file content + sentence data in parallel
+                const [fileResp, sentResp] = await Promise.all([
+                    fetch(`${API}/api/file?path=${encodeURIComponent(relPath)}`),
+                    fetch(`${API}/api/file-sentences?path=${encodeURIComponent(relPath)}`)
+                ]);
+                if (!fileResp.ok) throw new Error(`HTTP ${fileResp.status}`);
+                const fileData = await fileResp.json();
+                const sentData = await sentResp.json();
+                drRenderDoc(fileData.content, relPath, sentData.ready ? sentData.data : null);
+                drRenderNav();
+            } catch(e) {
+                body.innerHTML = `<div class="dr-empty-state"><div class="dr-empty-icon">&#9888;</div><div>Failed to load.<br><code>${escHtml(e.message)}</code></div></div>`;
+            }
+        };
+
+        // Layer tag colour palette
+        const LAYER_COLORS = {
+            'Assertion':   '#8b5cf6',
+            'Definition':  '#06b6d4',
+            'Evidence':    '#10b981',
+            'Question':    '#f59e0b',
+            'Hypothesis':  '#ec4899',
+            'Conclusion':  '#3b82f6',
+            'Example':     '#84cc16',
+            'Transition':  '#94a3b8',
+        };
+        function layerColor(tag) {
+            return LAYER_COLORS[tag] || '#64748b';
+        }
+
+        function drRenderDoc(rawText, relPath, sentDataByPara) {
+            const ext  = relPath.split('.').pop().toLowerCase();
+            const body = document.getElementById('dr-doc-body');
+
+            if (ext !== 'md') {
+                body.innerHTML = `<pre style="white-space:pre-wrap;font-size:0.82rem;color:var(--text-secondary)">${escHtml(rawText)}</pre>`;
+                return;
+            }
+
+            // Split by paragraph (double newline)
+            const blocks = rawText.split(/\n{2,}/);
+            let paraIdx = 0;
+            let html = '';
+
+            blocks.forEach(block => {
+                const trimmed = block.trim();
+                if (!trimmed) return;
+
+                const sents = sentDataByPara ? (sentDataByPara[String(paraIdx)] || []) : [];
+                const firstSent = sents[0] || {};
+                const topicId   = firstSent.topic_id ?? '';
+                const nodeName  = firstSent.node_name || '';
+                const quadrant  = firstSent.quadrant || '';
+
+                // Topic badge (shown in semantic mode)
+                const badge = (nodeName && topicId !== '')
+                    ? `<div class="dr-topic-badge" title="Topic ${topicId} · ${quadrant}">&#128280; ${escHtml(nodeName)}</div>`
+                    : '';
+
+                if (sents.length > 0) {
+                    // Sentence-level: render each sentence as a clickable span
+                    let sentHtml = '';
+                    sents.forEach(s => {
+                        const col = layerColor(s.layer_tag);
+                        const layerDot = s.layer_tag
+                            ? `<span class="dr-layer-dot" style="background:${col}" title="${escHtml(s.layer_tag)}"></span>`
+                            : '';
+                        sentHtml += `<span class="dr-sentence"
+                            data-sid="${escAttr(s.sentence_id)}"
+                            data-layer="${escAttr(s.layer_tag)}"
+                            data-topic="${s.topic_id ?? ''}"
+                            onclick="drSentenceClick(this)">${layerDot}${escHtml(s.raw_text)} </span>`;
+                    });
+                    html += `<div class="dr-para-block" data-para-idx="${paraIdx}" data-topic="${topicId}">${badge}<p>${sentHtml}</p></div>`;
+                } else {
+                    // No sentence data yet (index still loading) — fallback to markdown render
+                    const rendered = marked.parse(trimmed);
+                    html += `<div class="dr-para-block" data-para-idx="${paraIdx}" data-topic="">${badge}${rendered}</div>`;
+                }
+
+                paraIdx++;
+            });
+
+            body.innerHTML = html || '<div class="dr-empty-state"><div class="dr-empty-icon">&#128196;</div><div>Empty document</div></div>';
+            drApplySemanticClasses();
+        }
+
+        // ── Semantic mode toggle ───────────────────────────────────────
+        window.drToggleSemantic = function() {
+            drSemanticOn = !drSemanticOn;
+            const btn = document.getElementById('dr-semantic-btn');
+            btn.classList.toggle('active', drSemanticOn);
+            btn.textContent = drSemanticOn ? '\uD83D\uDD17 Semantic ON' : '\uD83D\uDD17 Semantic Mode';
+            drApplySemanticClasses();
+            if (!drSemanticOn) { drCloseRelated(); drActiveSentEl = null; }
+        };
+
+        function drApplySemanticClasses() {
+            document.querySelectorAll('.dr-sentence').forEach(el => {
+                el.classList.toggle('semantic-ready', drSemanticOn);
+            });
+            document.querySelectorAll('.dr-topic-badge').forEach(el => {
+                el.style.display = drSemanticOn ? 'block' : 'none';
+            });
+        }
+
+        // ── Sentence click → cluster search ───────────────────────────
+        window.drSentenceClick = async function(el) {
+            if (!drSemanticOn) return;
+
+            if (drActiveSentEl) drActiveSentEl.classList.remove('semantic-active');
+            drActiveSentEl = el;
+            el.classList.add('semantic-active');
+
+            const sid = el.getAttribute('data-sid');
+            if (!sid) return;
+
+            const panel  = document.getElementById('dr-related-panel');
+            const scroll = document.getElementById('dr-related-scroll');
+            panel.classList.add('open');
+            scroll.innerHTML = '<div class="dr-loading"><div class="dr-spinner"></div> Finding related sentences…</div>';
+
+            try {
+                const resp = await fetch(`${API}/api/search`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ sentence_id: sid, limit: 15 })
+                });
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                drRenderSentenceHits(data, scroll);
+            } catch(e) {
+                scroll.innerHTML = `<div class="dr-empty-state"><div class="dr-empty-icon">&#9888;</div><div>Search error:<br><code>${escHtml(e.message)}</code></div></div>`;
+            }
+        };
+
+        window.drSearchConcept = async function() {
+            const input = document.getElementById('dr-search-input');
+            const query = input.value.trim();
+            if (!query) return;
+
+            const panel  = document.getElementById('dr-related-panel');
+            const scroll = document.getElementById('dr-related-scroll');
+            panel.classList.add('open');
+            scroll.innerHTML = '<div class="dr-loading"><div class="dr-spinner"></div> Searching vector database…</div>';
+
+            try {
+                const resp = await fetch(`${API}/api/search`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: query, limit: 25 })
+                });
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                drRenderSentenceHits(data, scroll);
+            } catch(e) {
+                scroll.innerHTML = `<div class="dr-empty-state"><div class="dr-empty-icon">&#9888;</div><div>Search error:<br><code>${escHtml(e.message)}</code></div></div>`;
+            }
+        };
+
+        function drRenderSentenceHits(data, container) {
+            const hits = data.hits || [];
+
+            if (!hits.length) {
+                container.innerHTML = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128203;</div><div>No matches found</div></div>';
+                return;
+            }
+
+            let html = '';
+            if (data.is_query) {
+                html += `<div class="dr-cluster-header" style="background:rgba(56,189,248,0.08); border-color:rgba(56,189,248,0.2)">
+                    <div class="dr-cluster-node" style="color:var(--accent-hover)">&#128269; Concept Search Results</div>
+                    <div class="dr-cluster-meta">Top semantic matches for "${escHtml(data.query)}"</div>
+                </div>`;
+            } else {
+                const topic = data.topic || {};
+                const total = data.total_in_cluster || 0;
+                if (topic.node_name) {
+                    const isms = (topic.isms || []).slice(0,3).map(i => `<span class="dr-ism-tag">${escHtml(i)}</span>`).join('');
+                    html += `<div class="dr-cluster-header">
+                        <div class="dr-cluster-node">&#128280; ${escHtml(topic.node_name)}</div>
+                        <div class="dr-cluster-meta">${escHtml(topic.quadrant_name || topic.quadrant)} · ${total.toLocaleString()} sentences in cluster</div>
+                        <div class="dr-cluster-isms">${isms}</div>
+                    </div>`;
+                }
+            }
+
+            // Group hits by source file
+            const byFile = {};
+            for (const h of hits) {
+                const key = h.rel_path || h.abs_file || 'Unknown';
+                if (!byFile[key]) byFile[key] = [];
+                byFile[key].push(h);
+            }
+
+            for (const [relPath, sents] of Object.entries(byFile)) {
+                const fileName = relPath.split(/[\/\\]/).pop();
+                html += `<div class="dr-hit-file-group">
+                    <div class="dr-hit-file-label" onclick="drOpenFile('${escJs(relPath)}')" title="${escHtml(relPath)}">&#128196; ${escHtml(fileName)}</div>`;
+                for (const h of sents) {
+                    const col = layerColor(h.layer_tag);
+                    const layerBadge = h.layer_tag
+                        ? `<span class="dr-layer-badge" style="background:${col}20;color:${col};border-color:${col}40">${escHtml(h.layer_tag)}</span>`
+                        : '';
+                    const scoreBadge = h.score !== undefined
+                        ? `<span class="dr-layer-badge" style="background:rgba(56,189,248,0.1);color:var(--accent-hover);border-color:rgba(56,189,248,0.25)">${(h.score * 100).toFixed(1)}% match</span>`
+                        : '';
+                    const nodeLabel = h.node_name
+                        ? `<span class="dr-layer-badge" style="background:rgba(139,92,246,0.1);color:#a78bfa;border-color:rgba(139,92,246,0.25)">${escHtml(h.node_name)}</span>`
+                        : '';
+                    html += `<div class="dr-hit-card" onclick="drHitClick('${escJs(relPath)}', ${h.para_idx})">
+                        <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+                            ${layerBadge} ${scoreBadge} ${nodeLabel}
+                        </div>
+                        <div class="dr-hit-text">${escHtml((h.raw_text || '').trim())}</div>
+                    </div>`;
+                }
+                html += `</div>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        // Navigate to a hit → open doc + scroll to paragraph
+        window.drHitClick = async function(relPath, paraIdx) {
+            await drOpenFile(relPath);
+            setTimeout(() => {
+                const block = document.querySelector(`.dr-para-block[data-para-idx="${paraIdx}"]`);
+                if (block) block.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 200);
+        };
+
+        window.drCloseRelated = function() {
+            document.getElementById('dr-related-panel').classList.remove('open');
+        };
+
+        // ── Utility ───────────────────────────────────────────────────
+        function escHtml(s) {
+            return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+        function escJs(s) {
+            return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+        }
+        function escAttr(s) {
+            return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        }
+
+    })();
+    </script>
+
+    <!-- Sentence-level styles -->
+    <style>
+        /* rename old drActiveParaEl ref */
+        .dr-sentence {
+            display: inline;
+            border-radius: 3px;
+            padding: 0 1px;
+            transition: background 0.12s;
+            cursor: default;
+            line-height: 1.9;
+        }
+        .dr-sentence.semantic-ready { cursor: pointer; }
+        .dr-sentence.semantic-ready:hover { background: rgba(139,92,246,0.12); border-radius: 3px; }
+        .dr-sentence.semantic-active { background: rgba(139,92,246,0.25); border-radius: 3px;
+            box-shadow: 0 0 0 1px var(--accent-color); }
+
+        .dr-layer-dot {
+            display: inline-block;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            margin-right: 3px;
+            vertical-align: middle;
+            opacity: 0;
+            transition: opacity 0.15s;
+            flex-shrink: 0;
+        }
+        .semantic-ready .dr-layer-dot { opacity: 1; }
+
+        .dr-topic-badge {
+            display: none;
+            font-size: 0.68rem;
+            color: var(--accent-hover);
+            font-family: var(--font-mono);
+            margin-bottom: 0.3rem;
+            opacity: 0.8;
+        }
+
+        /* Related panel sentence hits */
+        .dr-cluster-header {
+            padding: 0.6rem 0.75rem;
+            background: rgba(139,92,246,0.08);
+            border: 1px solid rgba(139,92,246,0.2);
+            border-radius: 8px;
+            margin-bottom: 0.6rem;
+        }
+        .dr-cluster-node {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent-hover);
+            margin-bottom: 0.2rem;
+        }
+        .dr-cluster-meta {
+            font-size: 0.68rem;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+        }
+        .dr-cluster-isms {
+            margin-top: 0.35rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+        .dr-ism-tag {
+            font-size: 0.65rem;
+            padding: 0.1rem 0.45rem;
+            background: rgba(139,92,246,0.15);
+            color: var(--accent-hover);
+            border-radius: 20px;
+            font-family: var(--font-mono);
+        }
+        .dr-hit-file-group { margin-bottom: 0.75rem; }
+        .dr-hit-file-label {
+            font-size: 0.72rem;
+            color: var(--accent-hover);
+            font-family: var(--font-mono);
+            padding: 0.3rem 0.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .dr-hit-file-label:hover { color: var(--text-primary); }
+        .dr-layer-badge {
+            display: inline-block;
+            font-size: 0.62rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 20px;
+            border: 1px solid;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+    </style>
 </body>
 </html>

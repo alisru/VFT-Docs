@@ -110,6 +110,14 @@ namespace TautonicLanguageEngine
             Answer = answer;
             MoralAlignment = new MoralScore(answer.TruthScore, vectorType);
         }
+
+        public Belief(MoralVectorDef vectorType, string answerWord, float score)
+        {
+            VectorType = vectorType;
+            Answer = new Meaning(answerWord);
+            Answer.TruthScore = score;
+            MoralAlignment = new MoralScore(score, vectorType);
+        }
     }
 
     // --- 3. The Idea Class (7-Vector Structure) ---

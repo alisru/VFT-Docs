@@ -204,7 +204,7 @@ This is a hit because she actively champions the foundational legal event of the
 
 Actuality: Hanson invokes Federation as the moment when Australians chose to govern themselves, a founding act of democratic self-determination that she presents as under threat from globalisation, immigration, and international treaty obligations[^wiki]. Her Maiden Speech call to "review its membership and funding of the UN" is the Federation logic of self-governance applied to the current international order[^ms96]. Her opposition to UN frameworks, international human rights conventions, and EU trade conditions treats Federation's self-governing principle as still requiring active defence[^onenation]. Her opposition to constitutional change to recognise First Nations peoples treats Federation's founding document as a settled compact rather than an evolving democratic instrument[^wiki]. HIT.
 
-**(Cause.What.Why) The Living Wage (υ: \+0.9, ψ: \+0.6): FAIL.** **Quote:** "Businesses don't want handouts. Businesses want lower taxes and less red tape so they can create real jobs for Australians." -Senate Speech: Flawed JobMaker (2020)[^senate20jm]
+**(Cause.What.Why) The Living Wage (υ: \+0.9, ψ: \+0.6): FAIL.** **Quote:** "Businesses don't want handouts. Businesses want Australian workers." -"Flawed Jobmaker Falls Short", Speech Transcript, senatorhanson.com.au, 10 November 2020[^senate20jm]
 
 Description: She actively attempts to dismantle the foundational legal methodology that guaranteed the Australian "Living Wage" in 1907\.
 
@@ -346,7 +346,7 @@ This is a failure because she actively dismisses and delegitimises the most spir
 
 Actuality: Hanson opposed the 1985 handback of Uluru to the Anangu people and has consistently treated its sacred significance as subordinate to its tourism value[^wiki]. Her opposition to the 2019 climbing closure, on the grounds that tourists should retain access, treated a sacred First Nations site as a public recreational asset[^wiki]. Her opposition to the Voice and treaty framed any formal recognition of First Nations connection to country as divisive rather than foundational[^senate21voice]. Her opposition to Welcome to Country at Uluru-adjacent events treats the Anangu's custodial relationship to the site as optional rather than binding[^wiki]. FAIL, she treats the most significant sacred site in Australia as a tourism brand rather than a living cultural foundation.
 
-**(Cause.Where.Why) Gallipoli (ANZAC Cove) (υ: \+0.6, ψ: \+0.7): HIT.** **Quote:** "My pride and patriotism were instilled in me from an early age when I watched the Australian flag raised every morning at school and sang the national anthem watching our athletes compete on the world stage." -Maiden Speech, House of Representatives (1996)[^ms96]
+**(Cause.Where.Why) Gallipoli (ANZAC Cove) (υ: \+0.6, ψ: \+0.7): HIT.** **Quote:** "My pride and patriotism were instilled in me from an early age when I watched the Australian flag raised every morning at school and sang the national anthem; watching our athletes compete on the world stage, proud to salute the Australian flag being raised to honour them as they took their place on podiums." -Maiden Speech, Senate, Hansard, 14 September 2016[^ms16]
 
 Description: She rhetorically relocates domestic political disputes into the horrific, historical geography of the First World War battlefield.
 
@@ -406,7 +406,7 @@ This is a hit because she accurately and aggressively channels the foundational 
 
 Actuality: Hanson channels the punitive logic of geographic isolation into her border protection policy: mandatory offshore detention, boat turnbacks, and harsh conditions designed to deter rather than process[^onenation]. Her Senate speeches defending offshore detention on Manus Island and Nauru echo the Norfolk Island model, extreme geographic isolation as the state's tool for managing those it wants removed from sight[^wiki]. One Nation's platform on offshore processing and mandatory detention treats geographic exclusion as the primary border protection instrument, the penal settlement's logic applied to the asylum system[^onenation]. HIT on operating the logic, FAIL on the humanitarian evaluation.
 
-**(Cause.Where.Effect) Parliament House (Canberra) (υ: \+0.8, ψ: \+0.6): HIT.** **Quote:** "I'm voting with the battlers, the people doing it tough, the ones the major parties have forgotten." -National Press Club Address (2026)[^npc26]
+**(Cause.Where.Effect) Parliament House (Canberra) (υ: \+0.8, ψ: \+0.6): HIT.** **Quote:** "My overriding concern and that of the people I talk to, is that politicians today are good at talking but not listening; they will do anything to get your vote but when that has been achieved, the voter is ignored. The public are sick and tired of being ignored." -National Press Club Address (2026)[^npc26]
 
 Description: She claims sovereignty belongs to the people while systematically using Parliament House as a theatre of disruption, performative protest, and institutional sabotage, undermining the very sovereignty the building embodies.
 
@@ -428,7 +428,7 @@ Actuality: Hanson has used Parliament House as a theatre of disruption rather th
 
 ## **6.4 The Historical Motivations (Cause.Why)**
 
-**(Cause.Why.Who) Survival (υ: \+0.5, ψ: \+0.5): HIT.** **Quote:** "We are heading down a dead-end road and it is time we turned around." -Maiden Speech, Senate (2016)[^ms16]
+**(Cause.Why.Who) Survival (υ: \+0.5, ψ: \+0.5): HIT.** **Quote:** "We need to reconsider the level and mix of permanent migrants to Australia because we are heading down a dead end road at 90 miles an hour and it is going to end in tears." -Maiden Speech, Senate (2016)[^ms16]
 
 Description: She embodies the foundational survival motivation in its dark inverse, not the stoic endurance of those who had to survive a lethal landscape, but the weaponisation of that survival logic to justify extreme cruelty toward those she sees as threats to the nation's continued existence.
 
@@ -508,7 +508,7 @@ This is a failure because she actively degrades the highest historical motivatio
 
 Actuality: Hanson invokes the Fair Go as the argument against equity: group-specific programs are unfair because they treat people differently, and true fairness requires identical treatment regardless of historical circumstance[^ms96]. Her 1996 Maiden Speech framing of "one law, one flag, one nation" is the Fair Go argument against recognition of prior sovereignty and structural disadvantage[^ms96]. Her call for Aboriginal spending to be assessed "on an individual needs basis" restates this as the Fair Go in its purely formal version[^onenation_aboriginalspend]. Her voting record against welfare increases, Medicare extensions, and Fair Work improvements denies the material conditions the Fair Go requires to be more than a slogan[^tvfy]. FAIL, deploys the ideal while dismantling its substance.
 
-**(Cause.Why.How) Mateship (υ: \+0.8, ψ: \+0.5): FAIL.** **Quote:** "It is about belonging, respect and commitment to fight for Australia. This will never be achieved by a republic." -Maiden Speech, House of Representatives (1996)[^ms96]
+**(Cause.Why.How) Mateship (υ: \+0.8, ψ: \+0.5): FAIL.** **Quote:** "It is about belonging, respect and commitment to fight for Australia. This will never be traded or given up for the mantras of diversity or tolerance." -Maiden Speech, Senate, Hansard, 14 September 2016[^ms16]
 
 Description: She invokes mateship constantly as a rhetorical touchstone while systematically destroying its foundational logic, the unconditional horizontal bond between equals, by attaching strict cultural, racial, and ideological conditions to who qualifies as a mate.
 
@@ -578,7 +578,7 @@ Description: The Bushman vector honours the archetype of practical self-reliance
 
 Actuality: Hanson's political identity is calibrated to the Bushman's ethic of self-reliance, practical intelligence, and contempt for city-based expertise[^wiki]. Her opposition to academic and technocratic authority on climate, immigration, and economics is the Bushman's rejection of theoretical knowledge over lived experience[^wiki]. One Nation's platform on regional infrastructure, agricultural support, and energy policy speaks directly to the Bushman's material conditions[^onenation]. HIT, she is the Bushman's political avatar in the Senate.
 
-**(Cause.How.What) The Shearers' Strike (υ: \+0.8, ψ: \+0.7): FAIL.** **Quote:** "Where has the spirit of the fair go gone? People used to leave their doors unlocked. Communities used to look after each other. That Australia still exists in the bush, but it is being destroyed in the cities." -National Press Club Address (2026)[^npc26]
+**(Cause.How.What) The Shearers' Strike (υ: \+0.8, ψ: \+0.7): FAIL.** **Quote:** "Labor's project to hijack the Australian economy for corrupt union bosses is becoming relentless." -Statements by Senators, Senate Hansard, 2 July 2026[^senate_cfmeu26]
 
 Description: Despite claiming to represent the working class, she actively attacks the historical founders of their economic dignity.
 
@@ -678,7 +678,7 @@ This is a hit because she accurately champions the historical motivation of colo
 
 Actuality: Hanson's opposition to the administrative state is in tension with her support for strong border control, law enforcement, and national security, functions that require exactly the kind of powerful executive bureaucracy the Colonial Secretary's Office represented[^wiki]. Her demand for a Royal Commission into the public service while simultaneously demanding stricter immigration enforcement, tougher border controls, and more vigorous deportation requires exactly the large, well-funded administrative apparatus she nominally opposes[^onenation_aboriginalspend]. One Nation's platform to cut the bureaucracy while expanding its coercive functions reveals the contradiction: she wants a small government that does big things[^onenation]. HIT on the administrative authority, FAIL on the coherence.
 
-**(Cause.How.Effect) Peaceful Federation (υ: \+0.8, ψ: \+0.4): FAIL.** **Quote:** "A truly multicultural country can never be strong or united." -Maiden Speech, Senate (2016)[^ms16]
+**(Cause.How.Effect) Peaceful Federation (υ: \+0.8, ψ: \+0.4): FAIL.** **Quote:** "A truly multicultural country can never be strong or united." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: The Peaceful Federation vector honours the 1901 achievement of uniting six separate colonies into one nation through negotiation and referendum rather than civil war or conquest. Hanson invokes this founding unity constantly, but her working definition of what holds the nation together is cultural and racial homogeneity rather than the federative compromise the founders actually built. Her platform treats multiculturalism itself as the thing that will unravel the federation, inverting a process built on colonies agreeing to share sovereignty into a demand that difference be suppressed to preserve cohesion. The founders' peaceful method required compromise between different interests; her method requires uniformity.
 
@@ -768,7 +768,7 @@ This is a failure because she has no relationship with the causal foundation thi
 
 Actuality: Hanson's engagement with Australia's pre-colonial ecological history is minimal, she has never acknowledged the megafauna extinction or its relationship to the first human arrivals in any policy context[^wiki]. Her environmental discourse skips the deep past entirely, treating the continent's ecology as something that begins with European settlement[^wiki]. This absence is structurally convenient: the Megafauna Extinction is the original proof that Indigenous Australians were transformative ecological agents over 65,000 years, a fact incompatible with her dismissal of their deep history and prior claim[^ms96]. Her opposition to Indigenous land management and her rejection of deep-time ecological knowledge as a basis for policy removes the foundational context the vector requires[^tvfy]. FAIL on engagement with the vector's content.
 
-**(Cause.Cause.How) Fire-Stick Farming (υ: \+0.8, ψ: \+0.6): FAIL.** **Quote:** "Reduced tariffs on foreign goods that compete with local products seem only to cost Australians their jobs. We must look after our own before lining the pockets of overseas countries and investors at the expense of our living standards and future." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96] -Senate Speech: Corporate Tax Cuts (2018)[^senate18tax]
+**(Cause.Cause.How) Fire-Stick Farming (υ: \+0.8, ψ: \+0.6): FAIL.** **Quote:** "Reduced tariffs on foreign goods that compete with local products seem only to cost Australians their jobs. We must look after our own before lining the pockets of overseas countries and investors at the expense of our living standards and future." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: She dismisses Indigenous fire-stick farming as a romantic fabrication of "green activists," refusing to acknowledge that 65,000 years of deliberate continental fire management was the most sophisticated landscape engineering operation in human history.
 
@@ -878,7 +878,7 @@ This is a hit because she accurately embodies the political expression of the su
 
 Actuality: Hanson has consistently framed immigration as the primary driver of housing unaffordability, arguing that migration-driven demand prices the ordinary Australian out of the suburban dream[^ms16]. Her platform cites rising rents and unaffordable house prices as a direct consequence of government immigration levels, the Suburban House under threat from population pressure[^onenation]. She opposed medium and high-density zoning changes in suburban areas as threats to the character of established communities[^wiki]. In 2023-2024 as housing prices and rents hit crisis levels she returned to this argument, citing the "Australian dream" of homeownership as the measure of whether the country was still working for ordinary people[^roymorgan26]. HIT on the diagnosis, PARTIAL on the remedy.
 
-**(Cause.Effect.Why) The Welfare State (υ: \+0.8, ψ: \+0.4): HIT.** **Quote:** "There is a handout mentality in the third and fourth generations of this nation." -Maiden Speech, House of Representatives (1996)[^ms96]
+**(Cause.Effect.Why) The Welfare State (υ: \+0.8, ψ: \+0.4): HIT.** **Quote:** "There is a handout mentality in the third and fourth generations of this nation—a handout mentality of people not working." -"Flawed Jobmaker Falls Short", Speech Transcript, senatorhanson.com.au, 10 November 2020[^senate20jm]
 
 Description: The Welfare State vector honours the post-Federation settlement that a safety net should exist as a durable structural outcome of the nation's founding compact, a result the state produces for citizens as a matter of course rather than charity. Hanson's rhetoric treats the modern welfare system as having curdled from that original safety net into an intergenerational "handout mentality," a structural outcome that has stopped functioning as intended. Her framing keeps the vector's core claim, that the state owes its citizens a durable material outcome, while narrowing who counts as a legitimate recipient of it. She defends the Welfare State's existence in the abstract while working to shrink its actual population of beneficiaries.
 

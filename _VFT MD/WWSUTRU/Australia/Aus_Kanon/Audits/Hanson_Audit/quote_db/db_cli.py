@@ -4,6 +4,11 @@ import sqlite3
 import datetime
 import argparse
 
+# Windows console defaults to cp1252, which can't print the Greek coordinate
+# symbols (upsilon/psi may appear in raw node fields) or emoji status marks.
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
+
 DB_PATH = r"E:\Vector Field Theory\VFT Docs\_VFT MD\WWSUTRU\Australia\Aus_Kanon\Audits\Hanson_Audit\quote_db\quote_verification.db"
 VALID_STATUSES = {"verified", "paraphrased", "fabricated", "needs_hansard", "no_citation", "unchecked"}
 

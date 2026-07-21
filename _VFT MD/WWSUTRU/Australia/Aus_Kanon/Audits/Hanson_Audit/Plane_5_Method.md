@@ -2,7 +2,7 @@
 
 ## **5.1 The Operators (How.Who)**
 
-**(How.Who.Who) The Bricoleur (υ: \+0.7, ψ: \+0.6): FAIL.** **Quote:** "They are incompetent and they are useless." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96]
+**(How.Who.Who) The Bricoleur (υ: \+0.7, ψ: \+0.6): FAIL.** **Quote:** "If they cannot rein in the budget with overpaid public servants—one being the head of Australia Post, who is on $4.8 million per year—foreign aid, welfare fraud, politicians lurks and perks, including former prime ministers, and backroom deals for government jobs, then get out of the job of running this country." -Maiden Speech, Senate (2016)[^ms16]
 
 Description: She explicitly attacks the primary, grinding engine of the Australian state: the impartial public service.
 
@@ -16,7 +16,7 @@ She fails the vector by rejecting the "Method of Process" that historically prev
 
 Actuality: The Bricoleur encodes the Australian method of improvised problem-solving, making do with available materials rather than waiting for the ideal tool. Hanson's political method is structurally bricoleurial: she has assembled One Nation from fragments of protectionist Labor, conservative Catholic social policy, and frontier nationalism, combining incompatible elements into a working electoral vehicle[^wiki]. Her 1996 Maiden Speech was itself a bricolage, economic protectionism, racial anxiety, and anti-elite resentment assembled without ideological framework[^ms96]. Her policy platform combines nuclear energy advocacy, anti-immigration populism, gas ownership nationalism, and native title scepticism in a single bricolage that defies standard left-right categorisation[^onenation]. The strength of bricolage is its adaptability; the weakness is its incoherence under scrutiny. HIT.
 
-**(How.Who.What) The Unionist (υ: \+0.8, ψ: \+0.7): FAIL.** **Quote:** "Australia needs a national government, not a corporate one, not a union one, and not an alternative lifestyle one." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96]
+**(How.Who.What) The Unionist (υ: \+0.8, ψ: \+0.7): FAIL.** **Quote:** "Australia needs a national government, not a corporate one, not a union one, and not an alternative lifestyle one." -Maiden Speech, Senate, Hansard, 14 September 2016[^ms16]
 
 Description: She explicitly names the union movement as a factional interest to be excluded from national government alongside corporate and lifestyle lobbies.
 
@@ -86,7 +86,7 @@ She fails the vector by attacking the primary structural operator that built the
 
 Actuality: The Drover encodes the itinerant rural worker who moves livestock across vast distances, the backbone of the pastoral economy and the embodiment of self-reliant bush labour. Hanson's defence of the Drover is genuine. Her Senate speeches on water rights, foreign agricultural land purchases, and rural energy costs address the material conditions that determine whether the Drover's work remains economically viable[^wiki]. One Nation's platform on domestic water management, agricultural land ownership restrictions, and regional infrastructure investment are all Drover-protection policies[^onenation]. Her June 2026 NPC address on food security and rural cost-of-living directly addressed the Drover's economic circumstances[^netimes26]. Her voting record on agricultural water allocations and rural infrastructure is among her more consistent pro-worker positions[^tvfy]. HIT.
 
-**(How.Who.Effect) The Scientist (υ: \+0.8, ψ: \+0.7): FAIL.** **Quote:** "The hoax of global warming, which is now climate change." -Senate speech, Hansard (2018)[^senate18prot]
+**(How.Who.Effect) The Scientist (υ: \+0.8, ψ: \+0.7): FAIL.** **Quote:** "Put bluntly, these figures derive because of one policy, above all others, the hoax of global warming which is now climate change." -National Press Club Address, 17 June 2026[^npc26]
 
 Description: She completely rejects the ancient, deep-time operators of the continent's ecological and spiritual systems.
 
@@ -116,7 +116,7 @@ She successfully operates the premier democratic instrument of the state to harv
 
 Actuality: The Ballot Paper encodes the foundational instrument of Australian democracy, the physical document through which the citizen's will is expressed. Hanson has made the integrity of the Ballot Paper one of her signature platform issues. One Nation's electoral integrity policy calls for voter ID, secured ballot counting, and reformed preference systems[^onenation]. Her June 2026 NPC address recounted her failed push for a national plebiscite on immigration numbers, framing the Senate's refusal to hold one as contempt for the Ballot Paper's role in letting citizens speak directly[^netimes26]. However, her support for preference systems that benefit minor conservative parties introduces a self-interest tension in her electoral integrity position[^tvfy]. Her overall commitment to the Ballot Paper as a protected instrument is genuine even where her specific reforms are contested. HIT.
 
-**(How.What.What) The Wage Case (υ: \+0.9, ψ: \+0.5): FAIL.** **Quote:** "In the 1960s, our wages increase ran at three per cent and unemployment at two per cent. Today we have our best economic managers telling us we must have a natural rate of unemployment of five per cent or the economy will overheat." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96]
+**(How.What.What) The Wage Case (υ: \+0.9, ψ: \+0.5): FAIL.** **Quote:** "In the 1960s, our wages increase ran at three per cent and unemployment at two per cent. Today, not only is there no wage increase, we have gone backwards and unemployment is officially 8.6 per cent." -Maiden Speech, House of Representatives, Hansard, 10 September 1996[^ms96]
 
 Description: She actively attacks the foundational legal instrument that guaranteed the Australian living wage.
 
@@ -144,7 +144,7 @@ She fails the vector because her methodology is inherently ideological, explicit
 
 Actuality: The Wifi encodes the modern infrastructure of connectivity, the digital equivalent of the road and the telegraph that integrates remote communities into the national economy. Hanson's relationship to the Wifi is contradictory. Her Senate speeches have raised regional connectivity as a genuine issue, the NBN's failure to reach rural communities, mobile blackspots, and the digital divide between metropolitan and regional Australia[^wiki]. However, her voting record includes opposition to the government investment frameworks that would fund regional connectivity infrastructure[^tvfy]. One Nation's platform on regional infrastructure is vague on digital connectivity specifically[^onenation]. She identifies the problem while opposing the solution method. FAIL.
 
-**(How.What.Why) Hard Yakka (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "I built my own business from nothing. I know what it takes to meet a payroll, to deal with red tape and tax. That is what qualifies me to speak for small business." -Maiden Speech, Senate (2016)[^ms16]
+**(How.What.Why) Hard Yakka (υ: \+0.6, ψ: \+0.5): HIT.** **Quote:** "My view on issues is based on commonsense, and my experience as a mother of four children, as a sole parent, and as a businesswoman running a fish and chip shop." -Maiden Speech, House of Representatives (1996)[^ms96]
 
 Description: She views the direct, binary vote of the population as the ultimate weapon to smash through complex legislative debate.
 
@@ -172,7 +172,7 @@ She successfully operates the primary recording instrument of the parliament to 
 
 Actuality: The Stump Jump Plough encodes the Australian tradition of adaptive invention, the 1876 South Australian innovation that allowed cultivation of land that conventional ploughs could not traverse. Hanson's political career is a stump-jump-plough biography: she has repeatedly adapted to obstacles that ended careers of more conventionally equipped politicians. Disendorsement in 1996 became a winning independent campaign[^wiki]. Criminal conviction in 2003 became a platform for comeback[^wiki]. Every censure has been converted into a fundraising asset. Her June 2026 NPC address, her first in thirty years at that venue, was the stump jump plough reaching cleared land after decades of rough terrain[^netimes26]. The adaptive method is authentic and consistent. HIT.
 
-**(How.What.Cause) The Boomerang (υ: \+0.8, ψ: \+0.5): HIT.** **Quote:** "Project Iron Boomerang, which would see the construction of steel smelters in the Pilbara and Bowen Basin, would unlock huge economic potential." -Senate speech, Hansard (2018)[^senate18tax]
+**(How.What.Cause) The Boomerang (υ: \+0.8, ψ: \+0.5): HIT.** **Quote:** "Another infrastructure scheme worth analysing is Project Iron Boomerang, which would see the construction of steel smelters near the coalfields of Central Queensland and near the iron ore mines of Western Australia, with the two areas connected by rail... It would generate $72 billion in income per year, plus $21 billion in tax revenues annually, and create an estimated 75,000 jobs." -"Flawed Jobmaker falls short," Senate speech transcript, 10 November 2020[^senate20jm]
 
 Description: She ruthlessly manipulates the algorithmic complexity of the Australian voting system to extract maximum political leverage.
 
@@ -272,19 +272,17 @@ She fails the vector because she attempts to block the evolution of the physical
 
 Actuality: The Lab encodes the scientific method as a physical and institutional practice, the site where hypotheses are tested against evidence under controlled conditions. Hanson's relationship to the Lab is consistently oppositional when its outputs conflict with her politics. Her rejection of climate science consensus treats decades of Lab-produced research as politically motivated fabrication[^wiki]. Her promotion of vaccine-adjacent safety questions treats the Lab's immunological consensus as a cover for pharmaceutical industry interests[^wiki]. Her June 2026 NPC address described scientific modelling of climate outcomes as "dodgy", a rejection of the Lab's methodological authority[^netimes26]. She accepts the Lab when it validates her positions and rejects it when it does not. FAIL.
 
-**(How.Where.Cause) The Shearing Shed (υ: \+0.5, ψ: \+0.6): FAIL.** **Quote:** "Any foreign ownership is regrettable, but why are we allowing the Chinese government, an oppressive communist regime, to buy up our land and agricultural assets?" -Senate speech, Hansard (2018)[^senate18prot]
+**(How.Where.Cause) The Shearing Shed (υ: \+0.5, ψ: \+0.6): HIT.** **Quote:** "I don't believe foreigners should own any housing in Australia or our farming land... My attitude is, I would stop them and I'd give you two years to sell your product. If you don't, it will be repossessed by the government." -Interview, 24 May 2026[^stockandland26]
 
-Description: She views the foundational architecture of the state education system as a hostile indoctrination camp.
+Description: The Shearing Shed encodes the communal, purpose-built workspace of collective pastoral production as a moderately moral, moderately active method, the specific architecture of organised agricultural labour that turns land, livestock, and coordinated effort into national output.
 
-Her narrative attacks the curriculum and the teachers, seeking to impose a rigid, conservative censorship on the classroom.
+Hanson's push to ban and forcibly repossess foreign-owned farmland is a direct, proactive act of defending this architecture, treating pastoral land as productive national infrastructure that must remain in Australian hands to keep the Shearing Shed's collective output domestically controlled.
 
-This strategy attempts to destroy the "Equalizer" function of public education, turning it into a partisan battleground.
+This strategy channels the vector's moderately proactive energy precisely: an active legislative demand (a two-year sell-up deadline backed by government repossession), not a passive grievance about ownership patterns.
 
-She fails the vector by actively attacking the primary architectural space designed to generate an informed, egalitarian citizenry.
+**Justification:** The vector establishes the Shearing Shed as the industrial core of the pastoral economy, land and labour organised into shared productive infrastructure. Hanson's demand for a total ban on foreign ownership of farmland, with government repossession as the enforcement mechanism, is a direct, active claim that this infrastructure belongs to the national collective rather than to whichever investor can purchase it. She matches both axes of the vector: moderate morality (protecting a national productive asset, not a purely self-interested claim) through moderately proactive will (a specific, enforceable policy, not commentary).
 
-**Justification:** The Shearing Shed vector encodes the communal, purpose-built workspace of collective production as a moderately moral, moderately active method, the specific architecture of organised labour that turns individual effort into coordinated output. Hanson fails this vector by attacking the state education system as a site of ideological corruption rather than recognising it as the communal infrastructure that equalises opportunity across class and geography. The Shearing Shed method requires collective investment in shared productive space; her method is to delegitimise the public institution and redirect resources toward private alternatives that serve only those who can afford them. She fails because her attack on the equaliser function destroys the vector's collective architecture.
-
-Actuality: The Shearing Shed encodes the industrial core of the pastoral economy, the site where the wool clip is taken and the agrarian productivity of Australia is concentrated. Hanson's defence of the Shearing Shed is consistent and genuine. Her Senate speeches have attacked live export bans, environmental restrictions on agricultural land use, and foreign competition in wool and livestock markets[^wiki]. One Nation's platform on agricultural water rights, land management, and domestic food security protection treats the Shearing Shed as critical national infrastructure[^onenation]. Her June 2026 NPC address on food security and rural economic decline addressed the conditions that determine whether the Shearing Shed remains viable[^netimes26]. HIT.
+Actuality: The Shearing Shed encodes the industrial core of the pastoral economy, the site where the wool clip is taken and the agrarian productivity of Australia is concentrated. Hanson's defence of the Shearing Shed is consistent and genuine. About 13 per cent of Australian farmland is foreign owned, and she has pushed for a total ban on further sales along with a 25-year cap on foreign leasehold and reinstated Foreign Investment Review Board scrutiny of agricultural land[^stockandland26]. Her Senate record includes opposition to foreign competition in wool and livestock markets[^wiki]. Her June 2026 NPC address on food security and rural economic decline addressed the conditions that determine whether the Shearing Shed remains viable[^netimes26]. HIT.
 
 **(How.Where.Effect) The School (υ: \+0.7, ψ: \+0.4): FAIL.** **Quote:** "This transgender ideology has penetrated almost every regulatory authority. It is explicitly subversive. There seem to be no boundaries and it has become part of the propaganda being imposed on kids in classrooms." -National Press Club Address (2026)[^npc26]
 
@@ -344,7 +342,7 @@ She successfully operates the nation's primary defensive rationale, mutating it 
 
 Actuality: Necessity encodes the Australian method of being forced into action by circumstance, the pragmatic response to a situation that has left no other option. Hanson's political pitch is always one of Necessity: the situation has become so bad that extraordinary measures are required. Her June 2026 NPC address framed the housing crisis, immigration surge, and energy transition as intersecting necessities demanding immediate action[^netimes26]. Her January 2026 polling surge to 23% is the electorate's verdict that Necessity has arrived[^roymorgan26]. One Nation's radical policy proposals, nuclear energy, mass deportation, treaty abolition, are all framed as Necessity responses to conditions that have passed the point of incremental reform[^onenation]. She is most effective when Necessity is genuine and least credible when she manufactures it. HIT.
 
-**(How.Why.Why) Fairness (υ: \+0.9, ψ: \+0.4): HIT.** **Quote:** "We are one united nation: one law for all, one language, one flag." -Senate speech "Protect Our Australian Way of Life", Hansard (2018)[^senate18prot]
+**(How.Why.Why) Fairness (υ: \+0.9, ψ: \+0.4): HIT.** **Quote:** "If we are to maintain social cohesion and economic prosperity we need people to read, write and speak English." -Senate speech "Protect Our Australian Way of Life" (2018)[^senate18prot]
 
 Description: She heavily relies on the historical rationale that the vulnerable Australian economy must be shielded by high walls.
 
@@ -486,7 +484,7 @@ She successfully operates the mechanics of the "Spectacle," proving that causing
 
 Actuality: The Trial encodes the formal legal test of culpability, the adversarial method through which guilt and innocence are determined. Hanson's biography is inseparable from the Trial. Her 2003 conviction for electoral fraud and three months imprisonment was the most dramatic political Trial in contemporary Australian history[^wiki]. Her successful appeal on grounds of misdirection returned the Trial's verdict and converted her imprisonment into a political asset[^wiki]. She now invokes the Trial as a method for others: her calls for a Royal Commission into Aboriginal affairs spending demand the same formal reckoning with evidence that she herself once faced[^onenation_aboriginalspend]. The Trial is simultaneously the instrument used against her and the one she demands for her opponents. This node's header quote is reused at How.Who.Why (The Whistleblower) and How.Where.Why (The Courtroom); see the Whistleblower node for the reuse rationale. HIT.
 
-**(How.How.Effect) The Report (υ: \+0.2, ψ: \-0.4): HIT.** **Quote:** Hanson raised concerns in Parliament over the lack of accountability in Aboriginal affairs, citing more than $30 billion spent annually with little scrutiny and 1,258 Aboriginal corporations that have failed to report properly, and has called for a Royal Commission into the sector. -One Nation, "Pauline Hanson Demands Accountability on $30B Aboriginal Spending", 2 September 2025[^onenation_aboriginalspend]
+**(How.How.Effect) The Report (υ: \+0.2, ψ: \-0.4): HIT.** **Quote:** "You made a comment that reports are handed in from these corporations. Why is that 1,258 Aboriginal and Torres Strait Islander corporations failed to lodge mandatory reports for the 2023-24 year? How many of these failed corporations are your agency still dealing with?" -Finance and Public Administration Legislation Committee (Senate Estimates), 7 October 2025[^senate_estimates_oct25]
 
 Description: She explicitly rejects high-modernist planning and grand strategy, preferring the reactive, short-term mechanics of survival.
 
@@ -560,7 +558,7 @@ Description: The Survey vector measures whether an actor engages consistently wi
 
 Actuality: The Survey encodes the systematic method of measuring population conditions, the census, the poll, the referendum, that provides the empirical basis for policy. Hanson's relationship to the Survey is selective. She demanded referendums on immigration and Aboriginal land rights through her career, then opposed the 2023 Voice referendum as divisive and unnecessary[^wiki]. Her demands for accountability data on Aboriginal affairs spending and non-reporting corporations are surveys she believes will vindicate her positions[^onenation_aboriginalspend]. She opposed the Voice referendum partly because the likely outcome (a No vote if framed badly) was uncertain, the Survey only has value when its result is predictable[^wiki]. HIT.
 
-**(How.Cause.Cause) Navigation \[First Nations Perspective\] (υ: \+0.9, ψ: \+0.5): HIT.** **Quote:** Hanson moved a Senate motion, passed 30 votes to 28, calling on the federal government to reject critical race theory in the national curriculum, opposing a curriculum reform said to be "preoccupied with the oppression, discrimination and struggles of Indigenous Australians." -Senate motion on the national curriculum, June 2021, reported by The Conversation[^conversation21crt]
+**(How.Cause.Cause) Navigation \[First Nations Perspective\] (υ: \+0.9, ψ: \+0.5): HIT.** **Quote:** "That the Senate calls on the Federal Government to reject critical race theory from the national curriculum." -Senate motion, moved by Senator Pauline Hanson, passed 30 votes to 28, 21 June 2021[^tvfy_crt21]
 
 Description: She explicitly venerates the British, top-down origin of the state's legal methodology.
 
@@ -590,7 +588,7 @@ Actuality: The Federation encodes the constitutional arrangement through which A
 
 ## **5.7 The Results (How.Effect)**
 
-**(How.Effect.Who) The Voter (υ: \+0.7, ψ: \+0.3): FAIL.** **Quote:** "My overriding concern, and that of the people I talk to, is that politicians today are good at talking but not listening." -Maiden Speech, House of Representatives, Hansard (1996)[^ms96]
+**(How.Effect.Who) The Voter (υ: \+0.7, ψ: \+0.3): FAIL.** **Quote:** "My overriding concern and that of the people I talk to, is that politicians today are good at talking but not listening; they will do anything to get your vote but when that has been achieved, the voter is ignored." -National Press Club Address, 17 June 2026[^npc26]
 
 Description: She actively attacks the ultimate, hard-won result of the Australian industrial methodology: the protected living wage.
 

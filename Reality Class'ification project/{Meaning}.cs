@@ -3,16 +3,37 @@ using System.Collections.Generic;
 
 namespace TautonicLanguageEngine
 {
+    using CharLayer = System.Collections.Generic.Dictionary<int, Meaning>;
+    using WordLayer = System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, Meaning>>;
+    using PhraseLayer = System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, Meaning>>>;
+    using LanguageLayer = System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, Dictionary<int, Meaning>>>>;
+    using TemporalLayer = System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, Dictionary<int, Meaning>>>>>;
+    using RegistryLayer = System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, Dictionary<int, Meaning>>>>>>;
+
     // --- Fundamental Meaning Type ---
-    public class Meaning
+    public partial class Meaning
     {
         public string Word { get; set; }              // Word form
         public string DefinitiveMeaning { get; set; } // Axomic meaning
         public string Pronunciation { get; set; }     // Optional phonetics
         public Polarity Polarity { get; set; }        // Positive / Negative / Neutral
+        public ModalPosition Position { get; set; } = ModalPosition.Are; // Modal Tile position
         public List<Meaning> SubMeanings { get; set; } // Derived / component meanings
         public List<(string RelatedWord, SemanticRelation Relation)> Related { get; set; }
         public float TruthScore { get; set; } = 1.0f; // VFT geometric alignment
+
+        public string GetModalCoordinates()
+        {
+            return Position switch
+            {
+                ModalPosition.Are => "0,0",
+                ModalPosition.CanBe => "+x,+y",
+                ModalPosition.NotAll => "-x,+y",
+                ModalPosition.NotReally => "-x,-y",
+                ModalPosition.WasLike => "+x,-y",
+                _ => "0,0"
+            };
+        }
 
         // Axomic / Semantic Registry Info
         public int AxomicID { get; set; }
@@ -78,14 +99,9 @@ namespace TautonicLanguageEngine
     // --- Polarity / Semantic Enums ---
     public enum Polarity { Neutral, Positive, Negative, Mixed }
     public enum SemanticRelation { Similar, Equivalent, Derivative, Opposite, None }
+    public enum ModalPosition { Are, CanBe, NotAll, NotReally, WasLike, InGap }
 
     // --- 6D Meta-Dictionary ---
-    using CharLayer = Dictionary<int, Meaning>;
-    using WordLayer = Dictionary<int, CharLayer>;
-    using PhraseLayer = Dictionary<int, WordLayer>;
-    using LanguageLayer = Dictionary<int, PhraseLayer>;
-    using TemporalLayer = Dictionary<int, LanguageLayer>;
-    using RegistryLayer = Dictionary<int, TemporalLayer>;
 
     public static class MeaningMetaRegistry
     {

@@ -7,7 +7,7 @@ from pathlib import Path
 # full-document reads blowing past tool token limits during editing sessions.
 # These are concatenated below, in order, to reconstruct the single content string
 # the rest of this script's parsing logic expects -- the parsing itself is unchanged.
-IO_DIR = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/io")
+IO_DIR = Path(__file__).resolve().parent.parent  # markdown_to_json.py lives in Audits/Hanson_Audit_AI_Logs/
 HANSON_DIR = IO_DIR / "Hanson_Audit"
 AUDIT_FILES = [
     HANSON_DIR / "Plane_1_Identity.md",
@@ -19,7 +19,7 @@ AUDIT_FILES = [
     HANSON_DIR / "Plane_7_Result.md",
 ]
 SOURCES_FILE = HANSON_DIR / "Sources.md"
-KANON_DIR = Path("e:/Vector Field Theory/VFT Docs/_VFT MD/WWSUTRU/Australia/Aus Kanon/compact JSON")
+KANON_DIR = IO_DIR.parent / "compact JSON"  # Aus_Kanon/compact JSON, sibling of Audits/
 OUTPUT_JSON = HANSON_DIR / "Hegemonic Audit_ Pauline Hanson.json"
 
 PLANES = [

@@ -44,13 +44,13 @@ namespace RealityClassificationProject
             StateVector finalState = FieldMath.ApplyGradientFlow(initialState, gradient, optimismIntensity);
 
             // Update the Idea's beliefs with the new coordinates
-            idea.Who.Score = finalState.Who;
-            idea.Where.Score = finalState.Where;
-            idea.What.Score = finalState.What;
-            idea.Why.Score = finalState.Why;
-            idea.How.Score = finalState.How;
-            idea.Cause.Score = finalState.Cause;
-            idea.Effect.Score = finalState.Effect;
+            idea.Who.Answer.TruthScore = finalState.Who;
+            idea.Where.Answer.TruthScore = finalState.Where;
+            idea.What.Answer.TruthScore = finalState.What;
+            idea.Why.Answer.TruthScore = finalState.Why;
+            idea.How.Answer.TruthScore = finalState.How;
+            idea.Cause.Answer.TruthScore = finalState.Cause;
+            idea.Effect.Answer.TruthScore = finalState.Effect;
 
             // Display final geometry
             GeometryVisualizer.PlotState(finalState, "Final State (After Optimism)");

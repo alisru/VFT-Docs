@@ -181,6 +181,7 @@ class AletheiaLauncherApp:
         self.style.configure("TFrame", background=BG_COLOR)
         self.style.configure("Card.TFrame", background=CARD_BG, relief="flat", borderwidth=0)
         self.style.configure("TCheckbutton", background=CARD_BG, foreground=TEXT_COLOR, font=self.font_body)
+        self.style.configure("TRadiobutton", background=CARD_BG, foreground=TEXT_COLOR, font=self.font_body)
 
         # Main Layout
         self.build_ui()
@@ -555,6 +556,17 @@ class AletheiaLauncherApp:
         self.chk_search = ttk.Checkbutton(grid_frame, text="Enable Google Search Grounding", variable=self.val_search)
         self.chk_search.grid(row=6, column=3, columnspan=3, sticky="w", pady=3)
 
+        tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=7, column=0, sticky="w", pady=3, padx=(0, 5))
+        batch_size_frame = tk.Frame(grid_frame, bg=CARD_BG)
+        batch_size_frame.grid(row=7, column=1, columnspan=5, sticky="w", pady=3)
+        self.batch_size_var = tk.StringVar(value="1")
+        r1 = ttk.Radiobutton(batch_size_frame, text="1 at a time", variable=self.batch_size_var, value="1", style="TRadiobutton")
+        r1.pack(side=tk.LEFT, padx=(0, 15))
+        r2 = ttk.Radiobutton(batch_size_frame, text="2 at a time", variable=self.batch_size_var, value="2", style="TRadiobutton")
+        r2.pack(side=tk.LEFT, padx=(0, 15))
+        r3 = ttk.Radiobutton(batch_size_frame, text="3 at a time", variable=self.batch_size_var, value="3", style="TRadiobutton")
+        r3.pack(side=tk.LEFT)
+
         # Model fallbacks selection frame with drag-and-drop ordering list
         model_frame = tk.Frame(inner, bg=CARD_BG)
         model_frame.pack(fill=tk.X, pady=(5, 5))
@@ -917,7 +929,8 @@ class AletheiaLauncherApp:
 
     def run_rebuild_store(self):
         python_bin = self.get_python_bin()
-        self.run_eval_subprocess_async([python_bin, "-u", "bluesky_bot/rebuild_registries.py"])
+        script = "bluesky_bot/rebuild_registries_son.py" if self.val_son.get() else "bluesky_bot/rebuild_registries.py"
+        self.run_eval_subprocess_async([python_bin, "-u", script])
 
     def update_sequence_from_listbox(self):
         self.selected_models = list(self.lst_sequence.get(0, tk.END))
@@ -971,6 +984,9 @@ class AletheiaLauncherApp:
 
         if self.val_search.get():
             args.append("--search")
+
+        if self.batch_size_var.get():
+            args.extend(["--chunk-size", self.batch_size_var.get()])
 
         context_val = self.txt_context.get("1.0", "end-1c").strip()
         if context_val:

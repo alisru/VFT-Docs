@@ -71,7 +71,15 @@ from generate_graph import draw_graph
 from aletheia_bot import save_and_sync_story
 
 # Import rebuild_registries logic
-from rebuild_registries import rebuild_registries
+def rebuild_registries_selector(use_son=False):
+    if use_son:
+        print("Invoking SON registry rebuilder...")
+        from rebuild_registries_son import rebuild_registries as rebuild_son
+        rebuild_son()
+    else:
+        print("Invoking standard registry rebuilder...")
+        from rebuild_registries import rebuild_registries as rebuild_std
+        rebuild_std()
 
 # Deterministic actor extraction for the live pipeline (LLM backfill handles history)
 from actor_extract import extract_actors
@@ -817,7 +825,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 270 CHARACTERS. THIS IS A HARD LIMIT. BE CONCISE."
     )
     if extra_context:
-        system_instruction += f"\n\nAdditional Context / Background Knowledge:\n{extra_context}"
+        system_instruction += f"\n\nCRITICAL: You must actively incorporate the following background knowledge and additional context when performing the audits:\n{extra_context}"
 
     # Build the full user message: rules + candidates + strict JSON matrix output demand
     n = len(candidates)
@@ -936,12 +944,17 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "]"
     )
 
-    user_payload_str = (
-        f"=== CONVERGENCE TEST RULES ===\n{convergence_rules}\n\n"
+    user_payload = [
+        f"=== CONVERGENCE TEST RULES ===\n{convergence_rules}\n\n",
         f"=== THREAD FORMATTING & SCHEMAS ===\n{formatting_rules}\n\n"
-        f"=== CANDIDATES TO EVALUATE ({n} total) ===\n{json.dumps(candidates, separators=(',', ':'), ensure_ascii=False)}\n\n"
+    ]
+    if extra_context:
+        user_payload.append(f"=== ADDITIONAL CONTEXT / BACKGROUND TO CONSIDER ===\n{extra_context}\n\n")
+    user_payload.extend([
+        f"=== CANDIDATES TO EVALUATE ({n} total) ===\n{json.dumps(candidates, separators=(',', ':'), ensure_ascii=False)}\n\n",
         f"{output_format}"
-    )
+    ])
+    user_payload_str = "".join(user_payload)
     
     # Try the specified model, fallback if rate-limited or fails
     default_fallbacks = DEFAULT_FALLBACKS
@@ -1339,7 +1352,7 @@ def main():
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
     parser.add_argument("--context", type=str, default=None, help="Additional context/background knowledge to send to the evaluator model")
     parser.add_argument("--model-sequence", type=str, default=None, help="Comma-separated list of models to try in sequence (overriding default fallbacks)")
-    parser.add_argument("--chunk-size", type=int_or_default(3), default=3, help="Number of stories to process per API call (default: 3)")
+    parser.add_argument("--chunk-size", type=int_or_default(1), default=1, help="Number of stories to process per API call (default: 1)")
     parser.add_argument("--category", type=str, default="all", help="Category (or comma-separated categories) of news to harvest (default: all). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
     parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
@@ -1542,7 +1555,7 @@ def main():
             chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic)
             print(f"  Processed {chunk_success}/{len(chunk_evals)} evaluations from chunk to darkroom.")
             print("  Promoting and generating graphs immediately...")
-            rebuild_registries()
+            rebuild_registries_selector(args.son)
             print("  Registries successfully rebuilt for this chunk.")
             
             # Deduct successfully processed candidates from the queue file
@@ -1586,7 +1599,7 @@ def main():
             )
             if n_roundups:
                 print(f"  Created {n_roundups} roundup(s). Rebuilding registries...")
-                rebuild_registries()
+                rebuild_registries_selector(args.son)
             else:
                 print("  No roundup groups found — all stories post individually.")
         except Exception as re_err:

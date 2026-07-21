@@ -22,13 +22,13 @@ The central question of this audit is not, *"Is Pauline Hanson a good or bad pol
 
 ## **The Bottom Line: Structural Alignment**
 
-**Final Alignment Score: 15.6%** (+55 Net Score out of 353 total vectors across all 7 planes)
+**Final Alignment Score: 16.1%** (+57 Net Score out of 353 total vectors across all 7 planes)
 
-* 	Hits 	(Structural Alignments): 	204
-* 	Fails 	(Systemic Violations): 	149
+* 	Hits 	(Structural Alignments): 	205
+* 	Fails 	(Systemic Violations): 	148
 * 	Misses 	(Ignored Vectors): 	0
 
-(Recount this session: the prior figures on this line, 23.9%/+83/347 and the stray duplicate +93/343, were stale relative to the actual per-plane node tallies once every Plane file's own header verdicts were counted directly. Per-plane totals: Plane 1: 53 vectors, 28 HIT, 25 FAIL, Net +3. Plane 2: 51 vectors, 33 HIT, 18 FAIL, Net +15. Plane 3: 49 vectors, 31 HIT, 18 FAIL, Net +13. Plane 4: 52 vectors, 38 HIT, 14 FAIL, Net +24. Plane 5: 49 vectors, 23 HIT, 26 FAIL, Net -3. Plane 6: 49 vectors, 30 HIT, 19 FAIL, Net +11. Plane 7: 50 vectors, 21 HIT, 29 FAIL, Net -8. Summed: 353 vectors, 204 HIT, 149 FAIL, Net +55, alignment 55/353 = 15.6%.)
+(Recount, this session: the prior figures on this line, 15.6%/+55/353, undercounted Plane 5 (Method) by one HIT/FAIL pair relative to the actual current node-by-node header verdicts in Plane_5_Method.md, confirmed directly against the quote database. Per-plane totals: Plane 1: 53 vectors, 28 HIT, 25 FAIL, Net +3. Plane 2: 51 vectors, 33 HIT, 18 FAIL, Net +15. Plane 3: 49 vectors, 31 HIT, 18 FAIL, Net +13. Plane 4: 52 vectors, 38 HIT, 14 FAIL, Net +24. Plane 5: 49 vectors, 24 HIT, 25 FAIL, Net -1. Plane 6: 49 vectors, 30 HIT, 19 FAIL, Net +11. Plane 7: 50 vectors, 21 HIT, 29 FAIL, Net -8. Summed: 353 vectors, 205 HIT, 148 FAIL, Net +57, alignment 57/353 = 16.1%.)
 
 According to the strict metrics of the Australian Kanon, Pauline Hanson aligns with just over one in seven (15.6%) of the nation's core structural, moral, and historical identity.
 
@@ -626,7 +626,7 @@ Actuality: She successfully mirrors the goldfield's focus on material fortune ov
 
 Hanson's strong support for the coal and mining industries reflects a commitment to extraction as the primary national wealth generator. At the Australian Energy Producers Conference in May 2026, she called for a 10% royalty on gas extraction to replace the PRRT, a pro-extraction reform. In June 2026, she called for a ban on wind farm energy and promoted nuclear power at the "world's cheapest price." She holds personal shareholdings in BCB Coal, directly aligning legislative advocacy with financial interest. The gold rush logic, find it, extract it, sell it, is the structural template of her entire economic framework.[^netimes26][^wiki]
 
-**(Who.Why.Effect) Sport (υ: \+0.6, ψ: \+0.7): FAIL.** **Quote:** "These welcomes are based on lies that Australia is not our home. So many people tell me they are just over it." -Senate statement responding to AFL Welcome to Country controversy, 18 September 2024[^onenation]
+**(Who.Why.Effect) Sport (υ: \+0.6, ψ: \+0.7): FAIL.** **Quote:** "These welcomes are based on lies that Australia is not our home. So many people tell me they are just over it." -Senate statement responding to AFL Welcome to Country controversy, 18 September 2024[^onenation_wtc24]
 
 Description: Sport functions in the Kanon as the nation's unifying secular religion, a shared psychic reset where competitive will is channelled into a collective ritual that transcends the divisions of ordinary political life. The vector's fixed coordinates (+0.6, +0.7) score this unifying, actively-shared function as broadly beneficial and constructive, sport as the occasion where the whole nation, regardless of politics, briefly becomes one crowd. Grand finals and international fixtures are treated in the Kanon as rare moments when partisan identity is meant to dissolve into shared civic identity.
 
@@ -914,7 +914,7 @@ Description: The White Australia Policy vector measures whether an actor's mecha
 
 Actuality: Hanson's "rounded up" remark is one data point in a career-long pattern of calling for state-enforced restriction or removal of specific national, religious, or ethnic groups, from her 1996 maiden-speech immigration demands through her 2016 Senate speech on Muslim immigration to her 2025 target of cutting immigration to 130,000 per year[^ms96][^wiki]. The mechanism is consistent across three decades: exclusion justified by group identity, backed by active political will to legislate or enforce it. The vector registers a sustained structural HIT.
 
-**(Who.Cause.How) Survival \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.6): FAIL.** **Quote:** "We have survived the lot. We are still here." -Lowitja O'Donoghue, Australian of the Year Address, 1984
+**(Who.Cause.How) Survival \[First Nations Perspective\] (υ: \+0.8, ψ: \+0.6): FAIL.** **Quote:** "We are all here now and we have to solve our differences and live together as Australians." -Lowitja O'Donoghue, Australian of the Year acceptance remarks[^odonoghue_aoy]
 
 Description: Survival represents the unyielding, continuous resistance of the First Nations to cultural and physical erasure by the colonial state.
 

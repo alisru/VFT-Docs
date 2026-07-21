@@ -1,0 +1,67 @@
+[
+  {
+    "thinking": "Phase 1: Burnham's policy shift is a classic political pivot. Phase 2: u=0.5, psi=0.5 (stated); u=-0.2, psi=0.2 (actual). Phase 3: ΔH=0.7 (Fail). Phase 4: Fake Maximiser detected (policy vs. fiscal rules). Phase 5: Path of Revelation.",
+    "id": "burnham_policy_analysis",
+    "subject": "Analysis: Burnham's policy choices reveal what kind of PM he wants to be",
+    "link": "https://www.bbc.co.uk/news/articles/c3r0x5nzg0eo?at_medium=RSS&at_campaign=rss",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.5,
+    "real_u": -0.2,
+    "real_psi": 0.2,
+    "mode": "root",
+    "posts": [
+      "Burnham's first act as PM is a pledge to end rough sleeping, but fiscal rules remain a tight leash. Evidence: Bold social intent, fiscal constraint, status quo maintenance. #Aletheia #UKPol 🌐",
+      "Burnham claims his priority is ending rough sleeping to show he is 'authentically Labour' and standing for the vulnerable. Stated Judgement: (+0.5, +0.5) — Good Preference",
+      "Reality shows he is constrained by existing fiscal rules, limiting his ability to fund new social programs without re-prioritizing. Resulting Judgement: (-0.2, +0.2) — Lesser Evil",
+      "Verdict: FAIL — The Path of Revelation. The gap between grand social promises and strict fiscal adherence reveals a performative political cycle. Integrity: Partially Distorted (R_net: 3.5, Uncertainty z: 2)",
+      "Andy Burnham has taken office as PM, signaling a shift toward 'Manchesterism' while attempting to balance social welfare pledges with the fiscal constraints inherited from his predecessor.",
+      "The Bright Side:\nHis focus on rough sleeping brings a long-neglected issue to the center of the national conversation, forcing a public debate on housing.",
+      "The Breakdown & Plane Error:\nThe error is in the WHAT (policy) vs. HOW (funding). He promises a new economy while binding himself to the old fiscal rules, creating a structural contradiction.",
+      "Social Physics Analysis:\nBy promising radical change while adhering to existing debt rules, the administration uses social empathy as a pretext to maintain institutional stability, avoiding the friction of true systemic reform.",
+      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The fiscal rules negate the social promise.",
+      "The Unavoidable Truth: Fiscal rules limit the scope of social change.\n\nThe Unavoidable Lie: That radical social change can happen without breaking the current fiscal framework.",
+      "Alethekanon:\nBurnham is attempting a delicate balancing act. He uses the language of social justice to build a coalition, but his reliance on existing fiscal constraints suggests a preference for stability over structural transformation.",
+      "Awwthekanon:\nIt is heart-wrenching to see the promise of ending homelessness used as a political tool. I hope the people on the streets see real help, not just another speech from a podium.",
+      "Brothekanon:\nClassic politician move. Promise the moon, then blame the budget for why you only got a rock. Let's see if he actually does anything or just keeps talking."
+    ],
+    "actors": [
+      "Andy Burnham",
+      "Labour Party",
+      "United Kingdom"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 3.5,
+    "claim_z": 0,
+    "real_z": 2,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Partially Distorted",
+    "category": "politics",
+    "topic": "UKPol",
+    "event": ""
+  }
+]

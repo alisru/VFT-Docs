@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.transforms as mtransforms
 import numpy as np
+import textwrap
 from matplotlib.colors import LinearSegmentedColormap
 
 def get_path_name(claim_u, claim_psi, real_u, real_psi):
@@ -80,33 +81,86 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.axhline(0, color='gray', linewidth=0.5)
     ax.axvline(0, color='gray', linewidth=0.5)
 
-    # Morality Gradient, split into two independent layers so they don't wash each other out:
-    # Layer 1 = pure green (Everyone, +u) -> red (Only Me, -u) saturation, bounded to +/-2.0.
-    #           Green fades 25% weaker toward the bottom-left (Lesser Good);
-    #           red fades 25% weaker toward the top-right (Greatest Lie).
-    # Layer 2 = a separate white glow centered on "No One" (u=0), independent of the red/green tuning.
+    # The Six Attractors of the Hegemony -- this list is the single source of truth. The
+    # background gradient is a field computed FROM these points (each one pulls color toward
+    # itself, weighted by its own size/vividness); the dots plotted afterward are drawn from the
+    # same list. Move a dot or change its weight and the boundary below moves with it -- nothing
+    # about the divide is a separately chosen shape.
+    green_attractors = [(1.0, 1.0, '#00FF00', 32), (1.0, 0.0, '#98FB98', 22), (1.0, -1.0, '#98FB98', 16)]
+    red_attractors = [(-1.0, -1.0, '#FF0000', 32), (-1.0, 0.0, '#FF9999', 22), (-1.0, 1.0, '#FF9999', 16)]
+
+    # Morality Gradient: green (Everyone, +u) <-> red (Only Me, -u), single blended background layer.
+    # At each point on the field, green's pull = sum of its three attractors' influence
+    # (gaussian falloff by distance, scaled by marker size); red's pull is computed the same way.
+    # Wherever one pull dominates, that color shows; wherever they're equal, white shows --
+    # plain background colormap, nothing painted separately. The boundary curve is just
+    # wherever green_pull == red_pull, which emerges from the attractor layout itself: green is
+    # vivid at psi=+1 and only faint at psi=-1, red is the mirror image, so the boundary
+    # naturally swings toward red at the top and toward green at the bottom.
+    #
+    # Two more emergent effects feed the same field:
+    # 1. "Like" reinforcement -- the judgement coordinates (stated claim, actual reality) boost
+    #    whichever color's attractors share their moral sign. A claim/reality that leans green
+    #    (+u) strengthens the green attractors' pull; one that leans red (-u) strengthens red's.
+    # 2. The judgement coordinates are themselves field sources, pulling color the same way the
+    #    six fixed attractors do -- weighted by how far they lean (a coordinate near u=0 barely
+    #    pulls at all; one near u=+/-2 pulls hard).
     grid_res = 256
     gx = np.linspace(2.0, -2.0, grid_res)   # left=+2.0 (green) -> right=-2.0 (red)
     gy = np.linspace(2.0, -2.0, grid_res)   # row 0=top(+2.0) -> last row=bottom(-2.0), matching imshow's default origin='upper'
     U, PSI = np.meshgrid(gx, gy)
 
-    # Layer 1: green -> red (no white stop, so saturation is easy to read)
-    green_red_cmap = LinearSegmentedColormap.from_list('green_red_gradient', ['#00FF00', '#FF0000'])
-    t = (2.0 - U) / 4.0                     # 0 at u=+2.0 (green) -> 1 at u=-2.0 (red)
-    rgba_gr = green_red_cmap(t)
-    base_alpha_gr = 0.30
-    green_atten = 1.0 - 0.25 * np.clip(-PSI / 2.0, 0, 1)  # weaker toward bottom, on the green side
-    red_atten = 1.0 - 0.25 * np.clip(PSI / 2.0, 0, 1)     # weaker toward top, on the red side
-    atten = np.where(U > 0, green_atten, np.where(U < 0, red_atten, 1.0))
-    rgba_gr[..., 3] = base_alpha_gr * atten
-    ax.imshow(rgba_gr, extent=[2.0, -2.0, -2.0, 2.0], aspect='auto', zorder=0.05)
+    field_sigma = 1.3
+    max_size = 32.0
 
-    # Layer 2: independent white glow, peaking at u=0 and fading out toward u=+/-2.0
-    white_strength = np.clip(1.0 - np.abs(U) / 2.0, 0.0, 1.0) ** 2
-    rgba_white = np.zeros((grid_res, grid_res, 4))
-    rgba_white[..., 0:3] = 1.0
-    rgba_white[..., 3] = 0.35 * white_strength
-    ax.imshow(rgba_white, extent=[2.0, -2.0, -2.0, 2.0], aspect='auto', zorder=0.06)
+    judgement_points = [(claim_u, claim_psi), (real_u, real_psi)]
+    green_lean = sum(max(ju, 0.0) / 2.0 for ju, _jp in judgement_points)  # 0..1 per point
+    red_lean = sum(max(-ju, 0.0) / 2.0 for ju, _jp in judgement_points)   # 0..1 per point
+    like_boost_strength = 0.6
+    green_boost = 1.0 + like_boost_strength * green_lean
+    red_boost = 1.0 + like_boost_strength * red_lean
+
+    def pull(attractors, boost=1.0):
+        total = np.zeros_like(U)
+        for au, apsi, _color, size in attractors:
+            weight = (size / max_size) * boost
+            dist_sq = (U - au) ** 2 + (PSI - apsi) ** 2
+            total += weight * np.exp(-dist_sq / (2.0 * field_sigma ** 2))
+        return total
+
+    # Judgement points sit directly on the green=+1 / white=0 / red=-1 spectrum via their own u
+    # (cv = u/2, clipped to [-1,1]). A point near u=+/-2 pulls almost entirely green or red; a
+    # point near u=0 pulls almost entirely white -- and that white pull is exaggerated (weighted
+    # harder than the green/red pull an equally-placed attractor would exert), so a judgement
+    # landing near "No One" visibly bleaches the field around it rather than just going quiet.
+    judgement_exaggeration = 2.0
+    white_exaggeration = 3.5
+
+    def judgement_pull():
+        green_total = np.zeros_like(U)
+        red_total = np.zeros_like(U)
+        white_total = np.zeros_like(U)
+        for ju, jpsi in judgement_points:
+            cv = np.clip(ju / 2.0, -1.0, 1.0)  # +1=green, 0=white, -1=red
+            dist_sq = (U - ju) ** 2 + (PSI - jpsi) ** 2
+            influence = np.exp(-dist_sq / (2.0 * field_sigma ** 2))
+            green_total += judgement_exaggeration * max(cv, 0.0) * influence
+            red_total += judgement_exaggeration * max(-cv, 0.0) * influence
+            white_total += white_exaggeration * (1.0 - abs(cv)) * influence
+        return green_total, red_total, white_total
+
+    j_green, j_red, j_white = judgement_pull()
+    green_pull = pull(green_attractors, green_boost) + j_green
+    red_pull = pull(red_attractors, red_boost) + j_red
+    white_pull = j_white
+
+    hegemony_cmap = LinearSegmentedColormap.from_list('hegemony_gradient', ['#00FF00', '#FFFFFF', '#FF0000'])
+    hue_t = red_pull / (green_pull + red_pull + 1e-9)  # 0=green dominant, 1=red dominant, ignoring white
+    rgba = hegemony_cmap(hue_t)
+    white_fraction = white_pull / (green_pull + red_pull + white_pull + 1e-9)
+    rgba[..., 0:3] = rgba[..., 0:3] * (1.0 - white_fraction[..., None]) + 1.0 * white_fraction[..., None]
+    rgba[..., 3] = 0.30
+    ax.imshow(rgba, extent=[2.0, -2.0, -2.0, 2.0], aspect='auto', zorder=0.05)
 
     # Zone 1 (The Inner Horizon)
     zone1 = patches.Rectangle((1.0, -1.0), -2.0, 2.0, fill=False, edgecolor='white', linestyle='--', linewidth=1, zorder=1)
@@ -116,15 +170,10 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     zone2 = patches.Rectangle((2.0, -2.0), -4.0, 4.0, fill=False, edgecolor='white', linestyle='-', linewidth=1.5, zorder=1)
     ax.add_patch(zone2)
 
-    # The Six Attractors of the Hegemony (vivid at the corners, pale toward the midline)
+    # Plot the same six attractors used to build the field above
     attractor_opts = dict(markeredgewidth=0, alpha=0.75, zorder=2)
-    ax.plot(1.0, 1.0, marker='o', color='#00FF00', markersize=32, **attractor_opts)   # Greater Good corner: vivid green
-    ax.plot(1.0, 0.0, marker='o', color='#98FB98', markersize=22, **attractor_opts)   # Right midline: pale green
-    ax.plot(1.0, -1.0, marker='o', color='#98FB98', markersize=16, **attractor_opts)  # Lesser Good corner: small pale green
-
-    ax.plot(-1.0, -1.0, marker='o', color='#FF0000', markersize=32, **attractor_opts) # Greater Evil corner: vivid red
-    ax.plot(-1.0, 0.0, marker='o', color='#FF9999', markersize=22, **attractor_opts)  # Left midline: pale red
-    ax.plot(-1.0, 1.0, marker='o', color='#FF9999', markersize=16, **attractor_opts)  # Greatest Lie corner: small pale red
+    for au, apsi, color, size in green_attractors + red_attractors:
+        ax.plot(au, apsi, marker='o', color=color, markersize=size, **attractor_opts)
 
     # Alchemical Element & Quality Overlays (outside the white box, before graph arms)
     alchemy_opts = dict(color='white', fontsize=9, fontstyle='italic', alpha=0.45, ha='center', va='center', zorder=0)
@@ -279,16 +328,30 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.tick_params(colors='gray')
     ax.set_title(title_text, color='white', pad=25, fontsize=10)
 
-    # Legend (moved to bottom left)
-    legend = ax.legend(handles=legend_handles, loc='upper left', bbox_to_anchor=(0.0, -0.15),
+    # Legend, still axes-attached (so it participates correctly in layout/cropping like before),
+    # but pushed with a negative x-anchor past the axes' own left edge -- which sits well inboard
+    # because of the y-axis label -- so it ends up flush against the actual canvas border instead.
+    legend = ax.legend(handles=legend_handles, loc='upper left', bbox_to_anchor=(-0.155, -0.13),
                        ncol=1, facecolor='#111111', edgecolor='white', labelcolor='white', fontsize=8)
+
+    # Description block, seated beside the legend on that same row (not centered across the full
+    # width, not stacked in its own row) so the canvas doesn't need to grow to fit it. Centered
+    # (not left-aligned/cramped) within the space between the legend's right edge and the axes,
+    # at a readable font size -- wrap width and position verified against actual rendered
+    # bounding boxes to stay clear of the watermark below and the xlabel above.
+    description_lines = (
+        textwrap.wrap('This graph asks and answers the question "Who does this idea benefit?" measuring Relative Morality.', 100)
+        + textwrap.wrap("Benefit is a vector where each unit is 'Scope of Potential'[Group direction, magnitude] cross spectrum of will [active activity to active passivity, magnitude]", 100)
+    )
+    description_x_center = 0.626  # midpoint between the legend's right edge (~0.30) and the axes right edge (~0.95)
+    fig.text(description_x_center, 0.058, '\n'.join(description_lines),
+              ha='center', va='center', color='#999999', fontsize=6.5, linespacing=1.4)
 
     # Watermark label
     fig.text(0.5, 0.01, 'Psochic Hegemony Graph: The map of Good and Evil', ha='center', va='bottom',
              color='#444444', fontsize=9, fontstyle='italic')
 
     plt.tight_layout()
-
     plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300, bbox_inches='tight')
     plt.close(fig)
 

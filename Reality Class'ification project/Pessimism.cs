@@ -58,13 +58,13 @@ namespace RealityClassificationProject
             distortedState.Why *= 0.5f;   // "Pointless anyway"
 
             // Update the Idea's beliefs with the distorted coordinates
-            idea.Who.Score = distortedState.Who;
-            idea.Where.Score = distortedState.Where;
-            idea.What.Score = distortedState.What;
-            idea.Why.Score = distortedState.Why;
-            idea.How.Score = distortedState.How;
-            idea.Cause.Score = distortedState.Cause;
-            idea.Effect.Score = distortedState.Effect;
+            idea.Who.Answer.TruthScore = distortedState.Who;
+            idea.Where.Answer.TruthScore = distortedState.Where;
+            idea.What.Answer.TruthScore = distortedState.What;
+            idea.Why.Answer.TruthScore = distortedState.Why;
+            idea.How.Answer.TruthScore = distortedState.How;
+            idea.Cause.Answer.TruthScore = distortedState.Cause;
+            idea.Effect.Answer.TruthScore = distortedState.Effect;
 
             // Display final geometry
             GeometryVisualizer.PlotState(distortedState, "Final State (After Pessimism)");
