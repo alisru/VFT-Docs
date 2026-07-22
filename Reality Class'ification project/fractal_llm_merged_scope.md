@@ -1,9 +1,11 @@
 # Scope Document: The Sub-Parametric Fractal LLM System, Merged Architecture
 
-Version: 0.2
-Date: 2026-07-16
+Version: 0.3
+Date: 2026-07-21
 Author: Jarrod (Al-Is-Ru), drafted with Claude
 Status: Working scope. Reconstructed from chat-recovered specification content (2026-07-03 session) plus mechanisms developed 2026-07-15 and 2026-07-16. Exact wording from the original Architectural Specification docx requires re-upload for verification; all spec-layer claims below are recovered from session records, not the source file. Sections 11 through 14 added 2026-07-16 (dual-fractal outputs, excavation-accretion, TS implementation, parallax monitoring). Section 9 rankings revised same date.
+
+2026-07-21 revision: the existing C# codebase (Idea, StateVector, FieldMath, IOperationMode, Optimism, Pessimism) was read in full for the first time and found to already contain several mechanisms this document had been developing as novel. Prior art was also searched and found. Sections 16 (prior art), 17 (fractal basis), 18 (working prototype) added. Section 19 is an ERRATA recording every claim in versions 0.1 and 0.2 now known to be wrong, and why. Read Section 19 before trusting any earlier section.
 
 ---
 
@@ -24,7 +26,11 @@ Status: Working scope. Reconstructed from chat-recovered specification content (
 13. Parallax Monitoring and the Meet-in-the-Middle Program (new, 2026-07-16)
 14. The Qqci Block — upgrading the MLP block (new, 2026-07-16)
 15. SAEL — the Canonical Action-Effect Form (new, 2026-07-19; full proposal in sael_proposal.md)
-16. Next Actions
+16. Prior Art — geometric transformers and what is already claimed (new, 2026-07-21)
+17. The Fractal Basis — Kronecker construction and sub-object sharing (new, 2026-07-21)
+18. The Working Prototype — what has actually been built and measured (new, 2026-07-21)
+19. ERRATA — claims from v0.1 and v0.2 now known to be wrong (new, 2026-07-21)
+20. Next Actions
 
 ---
 
@@ -173,10 +179,10 @@ Update 2026-07-16: TBE is no longer only philosophical. With the alphabet seeded
 
 ## 9. Open Engineering Problems, Ranked (revised 2026-07-16)
 
-1. Orthogonality enforcement. Keeping seven planes actually separable under training pressure remains the known-hard problem (the disentangled representation literature, beta-VAE and successors, shows clean separation trades against expressiveness). Candidate mechanisms: hard architectural separation into seven sub-networks, cross-correlation penalties, frozen plane axes with learning confined inside planes. The third option is most consistent with the fixed-metaclass decision. New since 2026-07-16: the SAE clustering test (Section 13) gives this problem an empirical entry point that requires no training run.
+1. ~~Orthogonality enforcement.~~ SOLVED BY CONSTRUCTION, 2026-07-21. This was ranked the hardest open problem: keeping seven planes separable under training pressure, against a disentangled-representation literature showing separation trades against expressiveness. The Kronecker basis (Section 17) removes the problem rather than mitigating it. Each plane owns a disjoint block of coordinates (Q4 spans dims 21-27 at depth 2, Q6 spans 35-41), the blocks are frozen, and sibling and cousin cells measure at exactly 0.000 correlation. Planes cannot entangle because they never share coordinates. No penalty term, no beta-VAE tradeoff. What remains is the weaker question of whether the FIXED axes are the right ones, which is Experiment -1 (Section 13.4), not an enforcement problem.
 2. False fill. The well fills with plausible-but-wrong material and reports ===, worse than ordinary hallucination because the system marks it resolved. Substantially mitigated but not closed by Section 13: continuous parallax monitoring during accretion (intersection-of-projections) catches one-vantage content while it is falling rather than after it settles. Residual risk: content that genuinely intersects from multiple vantages but is still wrong (correlated observer error). Mitigation for that residue: observer diversity, different base models with different inductive biases in the monitor fleet.
 3. Boundary inheritance (new). The inner recursion trusts the outer pool as its universe. If the outer accretion missed something essential, no inner refinement recovers it; the error is invisible from inside the boundary. This is the filter-bubble failure mode. Mitigation: the up-channel (Section 11): never-fills and cross-plane disagreement at level n+1 escalate to re-excavate and widen at level n. The up-channel is therefore architectural, not optional.
-4. The seven-metrics problem (new). "Falls in geometrically" requires a distance function, and a single metric would collapse the planes back into undifferentiated space. Seven per-plane metrics are required, reconciled at the mixing tier. Consistent with the design but a real cost: seven distance functions to get right, plus language-plane instances of each. Partial mitigation (Section 14.2): the contextual min-max gate normalises every plane's scores to position-in-own-range, making them dimensionless, so the seven metrics need only agree in normalised form, not in units.
+4. ~~The seven-metrics problem.~~ CLOSED 2026-07-21. Seven per-plane metrics were logged as a real cost, "seven distance functions to get right". They were already specified in the corpus (Actualism, The Trinary Fractal Stack) as each plane's Core Metric: Who = Directional Time, Why = Non-Euclidean Time, Cause = Linear Time, What = Resolution Time, Where = Euclidean Space, How = Computational Time, Effect = Energetic Time (Strain). Not seven arbitrary distance functions but seven named and different KINDS of measure, which is why a single metric was always going to be wrong. Remaining work is implementation, not design. Historic note (Section 14.2): the contextual min-max gate normalises every plane's scores to position-in-own-range, making them dimensionless, so the seven metrics need only agree in normalised form, not in units.
 5. Imposed ontology vs gradient descent. No published system holds a pre-imposed symbolic coordinate frame as literal geometric skeleton through training rather than as post-hoc labeling. The fixed-skeleton decision reduces but does not eliminate this risk: contents learned within frozen axes can still entangle. The meet-in-the-middle test (Section 13) is the cheapest falsifier: if no rotation of a trained model's SAE feature space produces plane-shaped clustering, the ontology is decorative.
 6. The Tautonics fork. Parser-layer variant vs trained-on-tautonic-units variant. Decision needed before Section 6 can be specified further. The translation-layer variant remains the lower-risk first build.
 7. Cellular Housekeeper tier specification. Requires the source docx. Partial relief: Section 13 assigns the housekeeper fleet its first concrete job (parallax monitors over accretion pools), which constrains the spec even without the source document.
@@ -209,6 +215,13 @@ Architectural consequence: the machine analogy is compute-per-tick, not context 
 New, 2026-07-16 session. This section unifies four mechanisms introduced separately: the water staircase, the semiconductor hole, the Hopfield basin, and the TS template. They are one machine described from different planes.
 
 ### 11.1 Excavation: the query carves a hole
+
+NOTE, 2026-07-21: this mechanism was NOT new. FieldMath.cs already implemented
+it as Possigravity: potential Phi = -log P, force F = -grad Phi, plus
+CalculateGradientVector and ApplyGradientFlow. Optimism.cs prints "Possigravity
+created a Gravity Well at Unity" and "all 7 planes bent toward the attractor
+basin". The section below is a re-derivation in different words of code that
+already existed in this project folder. See Section 19.1.
 
 Rather than a query actively searching a corpus, the TS carves a void with a shape, and surrounding unstructured information falls into it along a gradient, accreting into structure that the next tier of models works on. The physics anchor is the semiconductor hole: the absence of an electron behaves as a real positive charge carrier with its own dynamics. Absence is not nothing; absence is a carrier.
 
@@ -332,6 +345,12 @@ Nearest kin, for citation: softmax attention is a contextual compare-against-max
 
 ### 14.3 The concept vector: everything carries its own range
 
+WARNING, 2026-07-21: this subsection is WRONG as written and is retained only
+so the error is visible. It describes bipolar SignedSpans with invented poles.
+The project's actual geometry is unipolar around Unity, and the poles were
+already defined in {Idea}.cs. See Section 19.2 for the correction. The
+corrected version is Section 17.4.
+
 Schema, from the motivating example love = [(-love, ~love, +love), magnitude, context, reason, mechanic, cause, effect]:
 
 Every concept is a typed vector: for each of the 7 planes (per language tier), a SignedSpan (negative pole, current position, positive pole) plus magnitude, with modal position locating the claim on the tile and the QqciAddress supplying identity. The free-listed components map directly: context to Q2/Q3, reason to Q4, mechanic to Q5, cause to Q6, effect to Q7, with Q1 (whose) as the coordinate the informal list omits and the formal one requires: a concept vector without Q1 is a view from nowhere.
@@ -365,7 +384,346 @@ Open items owned by the proposal: the Q4 slot question (explicit reason paramete
 
 ---
 
-## 16. Next Actions
+## 16. Prior Art: Geometric Transformers and What Is Already Claimed
+
+Searched and fetched 2026-07-21. Full notes with verbatim quotes in
+qqci/RESEARCH_NOTES.md. Summary of what is no longer speculative:
+
+### 16.1 Sovereign-Lila-E8 (A. Kornienko, AGPLv3)
+
+github.com/meta-introspector/sovereign-lila-e8, DOI 10.5281/zenodo.18731390.
+Softly quantizes hidden states onto the 240 roots of E8 and adds geometric bias
+to attention. 40M parameters, TinyStories, free Colab GPU, loss 9.5 to 0.37,
+validation 0.46-0.6. Coherent to 512 tokens and extrapolates to 1500 without
+looping where Microsoft's comparable 33M/60M baseline hard-loops at 300-500.
+
+The decisive number: ABLATING the geometric attention bias raises validation
+loss by 0.0221, p < 0.001. That isolates the geometry from the model.
+
+This document's central bet -- that a fixed geometric structure imposed on
+attention beats an unstructured baseline at small scale -- has therefore
+already been tested by someone else and passed. It is prior art, not a
+prediction. Their motto: "Scale is the shadow, Geometry is the Light."
+
+Also relevant: their per-head geometry scales self-organise hierarchically
+across layers (early layers ignore geometry, middle layers use it most,
+later layers moderately), and their E8GraphResonator is an associative memory
+over the fixed root graph written during generation, which is Section 4's
+Hopfield-over-structure running in production code.
+
+### 16.2 Leech-LILA (same author) -- the buildable template
+
+zenodo.org/records/18784424. Replaces the learnable query and key projections
+with a FROZEN orthonormal basis derived from the Leech lattice by QR
+decomposition, block-diagonally repeated. Values stay learnable. Adds a
+resonance loss: for hidden state h split into blocks, resonance is the max
+absolute cosine similarity to any basis vector, and L_res = 1 - mean(s_k),
+with total L = L_CE + lambda * L_res, lambda around 0.01. Described as "a
+high-dimensional symmetry filter... preventing attention collapse" and "an
+anti-hallucination regularizer". Config d_model 192, 12 layers, 8 heads,
+head_dim 24, 40M params, val loss ~0.45. Working PyTorch code in the paper.
+
+This is the recipe to copy with our basis substituted for theirs. Critically,
+the resonance loss is the DIFFERENTIABLE FORM OF THE FILL GATE, which resolves
+the non-differentiability problem flagged in Section 14.2.
+
+### 16.3 The Curved Spacetime of Transformer Architectures
+
+arXiv 2511.03060, code at github.com/rdisipio/llm-curvature. Attention as a
+discrete connection performing parallel transport on a curved semantic
+manifold; layers as time slices; token paths as discrete geodesics;
+backpropagation as a least-action principle.
+
+Two things to take. First, "multi-head attention as an atlas of charts" -- each
+head a local chart, W_O the transition map -- which is a far better citation for
+Section 13's parallax framing than the webcam anecdote. Second, their stated
+limitation is our opening: "W_Q and W_K define the manifold but remain fixed
+once trained. A natural direction for future work is to explore architectures
+where these matrices adapt during inference." Query IS the Write plus
+attractor-deformation memory is a design for exactly that.
+
+### 16.4 What remains unclaimed
+
+- a NAMED basis. E8 roots and Leech vectors are anonymous; nobody can say what
+  root 137 means. The 7 planes can be said.
+- moral and functional content ON the axes (Sovereignty/Tyranny,
+  Truth-Telling/Delusion). No published geometric transformer carries semantics
+  on its basis vectors.
+- unipolar-around-Unity scoring where excess and deficit are the same sin.
+- R_net = 1/product as the coherence measure, which diverges to infinity when
+  one plane collapses. No published loss has this property.
+- the isomorphic-retelling verification capability (Section 18).
+
+Honest framing for any writeup: we are not proposing geometric attention, which
+now has prior art with published results. We are proposing that the geometry be
+NAMED AND MORALLY TYPED, and the claim to test is that a named basis costs
+little against an anonymous one while buying legibility.
+
+---
+
+## 17. The Fractal Basis: Kronecker Construction and Sub-Object Sharing
+
+New, 2026-07-21. Implemented and measured in qqci/fractal_basis.py.
+
+### 17.1 Construction
+
+A single 7x7 orthonormal generator B, obtained by QR decomposition of the
+42-Structure axis signature (Q1 unpaired Driver, six paired planes carrying
+their axis signs). The depth-d basis is the Kronecker power B (x) B (x) ... (x) B.
+
+Orthonormality is preserved at every depth because
+(A (x) B)^T (A (x) B) = (A^T A) (x) (B^T B) = I (x) I = I.
+Verified numerically to depth 4.
+
+Consequences, measured:
+
+- The entire hierarchy at any depth is generated from 49 floats. Leech-LILA
+  stores a 24x24 QR basis and counts avoiding 196,560 vectors as its efficiency
+  claim; this stores one 7x7 and generates unbounded depth.
+- Application is factored: a depth-d projection costs d small 7x7 multiplies via
+  the identity (A (x) B) vec(X) = vec(B X A^T), never materialising the
+  7^d x 7^d matrix. Verified equal to the full matmul to 1e-10.
+- The cell index IS the interrogative path. Cell 3*49+4*7+1 at depth 3 is
+  Q4.q5.q2, readable as "What of How of Why".
+- At depth 2 the 49 cells split into 7 diagonal (Qi.qi) and 42 off-diagonal
+  (Qi.qj). The 42-Structure is exactly the off-diagonal shell. This is
+  arithmetic (7 x 6 = 42), not numerology.
+
+### 17.2 Isomorphic fractions: sharing, not blending
+
+The correct reading of "part of one thing IS part of another thing": composites
+share specific sub-objects, the way 6/8 and 9/12 share the reduced form 3/4.
+Q4.q5 and Q6.q5 do not merely resemble each other at position two, they contain
+the SAME e5 factor. The Kronecker construction already implements this, which
+is why 49 floats suffice.
+
+Overcompleteness therefore lives in REUSE, not in atom count:
+
+    E8:   240 atoms, each used once.
+    Qqci: 7*d atoms, each participating in 7^(d-1) composites.
+
+    depth 3:    343 cells from 21 atoms, 49x reuse,      16x compression
+    depth 4:   2401 cells from 28 atoms, 343x reuse,     86x compression
+    depth 6: 117649 cells from 42 atoms, 16807x reuse, 2801x compression
+
+Depth 6 requires exactly 42 independent atoms (7 planes x 6 levels).
+
+This is also the potato-hardware argument made concrete: parameters are not
+stored per cell, they are stored per atom and composed. Weight tying is the
+construction, not an optimisation applied to it.
+
+### 17.3 The associative graph is free
+
+Lila-E8's GraphResonator must LEARN token-to-token relations by co-occurrence
+during generation, because its 240 roots have no intrinsic relationship to one
+another. Here the relations are given by construction: two cells are linked
+exactly when they share sub-objects, the link strength is how many, and the
+sharing mask says WHICH part is shared. At depth 3 a cell shares 2 of 3
+positions with 18 others and 1 of 3 with 108 more.
+
+Isomorphism is same-tail-different-head: Q4.q5.c2 and Q6.q5.c2 share .q5.c2,
+the same sub-structure with a rebound root. That is precisely the sea-to-startup
+retelling of Section 18: same skeleton, different bindings. The basis
+construction and the retelling engine are one operation.
+
+### 17.4 The concept vector, corrected
+
+Superseding the wrong version in Section 14.3. A word is stored as seven scores
+centred on Unity, using the poles already defined in {Idea}.cs:
+
+    1.0        the virtue realised
+    above 1.0  Excess of the sin
+    below 1.0  Deficit of the same sin
+
+    Who     Sovereignty   / Tyranny
+    Where   Thriving      / Mere Survival
+    What    Stewardship   / Greed
+    Why     Truth-Telling / Delusion
+    How     Wisdom        / Sophistry
+    Cause   Redemption    / Revisionism
+    Effect  Love/Unity    / Parasitism
+
+The geometry is UNIPOLAR AROUND UNITY, not bipolar. This is load-bearing: a
+bipolar span cannot express "too much and too little are the same failure",
+which is the entire moral content of the axes. Truth is the ratio of 1 and both
+directions away from it are the sin.
+
+A word's own coherence is then R_net = 1 / product of its seven scores, the
+Fractal Ratio Protocol from {Idea}.cs. Note the open question: applying
+Judgement to a noun may be a category error, since Judgement was defined for an
+Idea (a claim). Every noun currently reads INSULT because any deficit inflates
+1/product. Unresolved.
+
+### 17.5 A measured dead end
+
+Reading "isomorphic fractions" as INTERPOLATION between cells was tried and
+fails. Adding five interpolated directions per cell pair gave 145 directions per
+dimension (against E8's 30) but mutual coherence 0.9806 against E8's 0.5:
+near-duplicate atoms, so the dictionary cannot uniquely represent anything and
+the density is worthless. Restricting to pair sum and difference recovers 0.7071
+at 7 directions per dimension, which is the +-e_i +-e_j family making up 112 of
+E8's 240 roots, i.e. it reinvents a worse E8. Recorded so it is not retried.
+
+---
+
+## 18. The Working Prototype
+
+Built 2026-07-21, in qqci/. Symbolic, no training, no learned weights, CPU,
+under a second. Full output in qqci/RESULTS.txt, method and limits in
+qqci/README.md.
+
+Files: qqci_engine.py (7-plane metaclass, QqciAddress, registry, meta-registry,
+TruthState with carve/accrete/fill/staircase/up-channel, parallax intersection,
+Actualism belief states), vft.py (faithful port of Idea, StateVector, FieldMath,
+Judgement, Optimism, Pessimism, Polarity, Word), sael.py (Collapse Dictionary and
+parser), lexicon7.py (the 7D dictionary on VFT scores), isomorph.py (abstract,
+rebind, render), fractal_basis.py (Section 17), experiment.py and
+possibility_classification.py (the two runnable tests).
+
+Measured:
+
+- Isomorphic retelling sea -> startup and sea -> orbit, structure preserved.
+- Round-trip structural identity 100 percent, and the chain test passes
+  (sea -> startup -> orbit produces text identical to sea -> orbit).
+- Pair discrimination against a bag-of-words baseline: SAEL 9/9, BoW 5/9. The
+  baseline fails exactly and only on role reversal, where word multisets are
+  identical (cosine 1.00) so it calls "the storm wrecked the boat" and "the boat
+  wrecked the storm" the same event.
+- One-ray content rejected; late dissent reopens a filled hole as false_fill and
+  the staircase gate refuses to overflow.
+- Functional types are DERIVED from the 7-plane geometry, not authored: greedy
+  bijection 9/9 on both domains, unconstrained 9/9 orbit and 7/9 startup.
+- possibility_classification.py reproduces the C# scenario: initial R_net 1.1603
+  INSULT, Optimism 1.0671 TRUTH with entropy down, Pessimism 0.2356 ENTROPY.
+
+Honest limits, restated because they are easy to lose: the round-trip's eight
+properties are not eight independent checks (belief, identity, systemic and
+planes are all pure functions of action, so roughly three are independent); the
+parser is hand-seeded over constrained declarative English; the nine
+discrimination pairs are hand-built and bag-of-words is a weak baseline; and the
+189 lexicon scores were authored by someone who knew which pairs were expected,
+so they show the axes CAN carry the distinctions, not that the distinctions were
+discovered.
+
+Nothing here beats a real system on a real benchmark. What is established is
+that the design is internally coherent and correctly specified.
+
+---
+
+## 19. ERRATA
+
+Claims in versions 0.1 and 0.2 now known to be wrong. Recorded because a scope
+document that hides its corrections cannot be trusted on anything else.
+
+**19.1 Excavation and accretion were not new.** Sections 11.1 and 4 develop a
+carve-a-hole-and-let-material-fall-in mechanism at length. FieldMath.cs in this
+same project folder already implemented it as Possigravity: potential
+Phi = -log P, force F = -grad Phi, CalculateGradientVector, ApplyGradientFlow,
+BendTowardUnity. Optimism.cs prints "Possigravity created a Gravity Well at
+Unity". Cause: the source files were listed but never read.
+
+**19.2 The concept vector poles were invented.** Section 14.3 proposes bipolar
+SignedSpans and a later working session invented specific poles
+(patient..agent, immaterial..material). MoralVectorDef in {Idea}.cs already
+defined the real poles and they are unipolar around Unity. Corrected in 17.4.
+
+**19.3 Coherence as a mean is wrong.** Sections 4 and 12.4 describe net
+coherence as an average across planes. The project's formula is the Fractal
+Ratio Protocol, R_net = 1 / product of the seven scores. This is not a
+stylistic difference: a mean cannot diverge, and the fractal ratio goes to
+infinity when any single plane collapses to zero, which is precisely the
+failure mode the gate exists to catch. FIXED 2026-07-21 in
+TruthState.evaluate_fill; both fill branches still behave correctly and the
+full experiment still passes.
+
+**19.4 TruthScore was removed on a bad argument.** It was described as an
+inferior scalar to be replaced by CoherenceVector. It is Belief.Score, the
+per-vector distance from Unity that MoralScore reads to decide Virtue vs
+Excess-of-sin vs Deficit-of-sin. It was load-bearing. Restored.
+
+**19.5 The 7D dictionary question was answered with a category error.** An
+options list offered "6 scale layers plus plane as a 7th dimension" in the same
+message that correctly identified those six as scale and index dimensions, not
+semantic ones. The 7 planes are the semantic space; the scale layers are the
+address book; the two are orthogonal concerns and cannot be summed.
+
+**19.6 MeaningMetaRegistry was dropped in the port,** along with Polarity, Word,
+Judgement, ProcessSynergy, SubMeanings, Related, SemanticRelation, and
+Pronunciation. Restored; the meta-registry now exists as a separate scale index
+alongside the content-addressed registry, which is what 19.5 implies it should
+have been.
+
+**19.7 Engagement was conflated with assertion.** In the fill logic a weakly
+engaged plane was read as a dissenting one, so legitimate transitions were
+flagged false_fill. These are different quantities: engagement is how involved a
+plane is, assertion is what it says. A barely engaged plane is silent, not
+dissenting. Only assertions can disagree.
+
+**19.8 A filled TruthState refused new material,** which made false fill
+undetectable the instant it was marked resolved, defeating the mechanism's
+purpose. Fill is now provisional: agreeable material adds nothing, dissenting
+material reopens. Only TBE is terminal.
+
+**19.9 Orthogonality enforcement was ranked the hardest problem** (Section 9,
+risk 1) when the Kronecker construction dissolves it. Not wrong at the time, but
+the ranking stood for five days after the fix was available in principle.
+
+**19.10 The round-trip identity score was overstated.** Reported as 100 percent
+across eight structural properties, implying eight independent checks. Four are
+pure functions of the action check and cannot fail independently. The honest
+claim is roughly three independent checks.
+
+**19.12 The MeaningMetaRegistry was repeatedly and wrongly forced into the
+Qqci form.** The meta-dictionary has NO relation to Qqci and the user said so
+repeatedly. It is a separate nested store (Registry > Temporal > Language >
+Phrase > Word > Char > Meaning) whose scales hold that scale's CONTENT: the
+Language scale stores the language RULES (the `---word+++` spectrum, the
+collapse dictionaries, the NSM reduction), the Word scale words, the Char
+scale characters, and so on. It is not plane-valued. The seeing of
+`wordLayer: 7 // Effect` was mis-taken as proof the scales are plane readings
+and a whole "semantic-per-scale" / "plane per scale meaning graph" story was
+built on it across several turns; every version of that was wrong and was
+rejected. Do NOT index the meta-dictionary by plane. The
+`MeaningMetaRegistry` class in qqci_engine.py currently indexes by
+`root_plane` and is therefore wrong and must be corrected; layers.py carried
+the same error and must be corrected. The two systems are independent: a
+meaning HAS a Qqci form and is STORED IN the meta-dictionary, and neither is
+derived from the other.
+
+**19.13 The Trinary Stack was conflated with the Qqci address.** Actualism's
+n1/n2/n3 (Plane the Context, Sense the Input, Use the Output) is a distinct
+structure that also comes in sevens. The Qqci address is recursive
+plane-by-plane, same kind at every level, which is what the Kronecker
+construction assumes and therefore what it correctly implements.
+
+**19.14 Concept modelling was hardcoded and then reported as a finding.** The
+house/home worked example authored all fourteen depth-1 scores and then
+claimed "nobody told it that a home is a house whose Who has been raised".
+That was the input read back. Only the compounding exponent d*7^(d-1) is
+independent of the authored numbers. Corrected by tautonic.py, which derives
+the six paired-plane scores from the character tensor with nothing authored
+per word; measured mean absolute error against the hand-authored house was
+0.133, largest on Why and Where.
+
+**19.15 The corpus was never read.** _VFT MD contains
+Tautonic_Semantic_Dictionary_Full.md (the rank-0 character tensor: Greek
+anchor, Polarity, Encapsulation), nsm_reduction/core_dictionary.md (the
+---word+++ language rules and the NSM base anchors), the Contextual
+Dictionary .cs files, and the 7x7x7 Actualism framework documents. NSM was
+cited to the user as prior art they should look at while a working reduction
+of it sat in their own folder. The seven per-plane Core Metrics (Directional,
+Non-Euclidean, Linear, Resolution time; Euclidean space; Computational time;
+Energetic time) close Section 9 risk 4, which had been logged as an open cost.
+
+**19.11 The webcam stealth-detection story was dismissed as unverifiable** from
+training memory when it is real and was one search away (Consistently
+Inconsistent, pixel motion voxel projection, August 2025). The correct mechanism
+is intersection-of-projections, not the parallax-disagreement framing initially
+given.
+
+---
+
+## 20. Next Actions
 
 - Re-upload the Architectural Specification docx and the qqci-ionized-architecture markdown so spec-layer sections (3, 7) can be verified against source wording rather than session recovery.
 - Decide the Tautonics fork (Section 2 / Section 6). Translation-layer variant remains the recommended first build.
@@ -375,4 +733,9 @@ Open items owned by the proposal: the Q4 slot question (explicit reason paramete
 - Add SignedSpan to RealityClassification.v2.cs (Section 14.3) in the same code pass as the reverse component index.
 - Run Experiment 0.5 (Section 15 / sael_proposal.md): build the minimal SAEL parser for one context (commerce) and test isomorphic collapse against MRPC and PAWS paraphrase pairs.
 - Decide the SAEL Q4 slot question and fix the canonical action inventory per context (sael_proposal.md Section 7).
+- Build the trainable core: frozen Kronecker basis in the Q and K projections (Section 17), applied factored, weight-tied by shared sub-object, one head per plane. Three-term loss L = L_CE + lambda_geo * L_resonance + lambda_anchor * L_anchor, where resonance is Leech-LILA's verbatim and ANCHOR is the new term pinning the seed lexicon to known plane scores. The anchor term is the price of a named basis and has no counterpart in the Lila models, which need none because anonymity costs them nothing.
+- Populate the lexicon at scale. 27 hand-authored words does not scale. Options ranked: projection from a pretrained static embedding using seed contrasts (cheapest real dictionary today), seed-and-propagate over corpus co-occurrence (the classic Turney-Littman method, one axis becomes seven), or let the scores emerge from training under the resonance loss (the true E8 analogue, but needs the anchor set to exist first).
+- Resolve whether Judgement applies to nouns at all (Section 17.4). Every noun currently reads INSULT.
+- Derive domains.py functional types from the geometry instead of hand-authoring them, removing the last hand-typed layer from the prototype.
+- Port the engagement/assertion split and the provisional-fill rule back into RealityClassification.v2.cs, which still has the conflated version.
 - Survey current literature on structured Hopfield networks, hierarchical associative memory, and disentangled representation learning to position Section 4's novelty claim precisely.

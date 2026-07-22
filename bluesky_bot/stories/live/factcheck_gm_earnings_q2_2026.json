@@ -1,0 +1,103 @@
+[
+  {
+    "thinking": "The analysis evaluates General Motors' Q2 2026 earnings report by comparing the highlighted adjusted metrics against the actual GAAP net income declines. By mapping the divergence between the stated positive guidance and the lowered net income projections, we determine the structural trajectory and calculate the coordinates.",
+    "id": "gm_earnings_q2_2026",
+    "subject": "GM beats on earnings, raises guidance",
+    "link": "https://www.cnbc.com/2026/07/21/general-motors-gm-earnings-q2-2026.html",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 0.0,
+    "real_u": -0.6,
+    "real_psi": -0.4,
+    "mode": "root",
+    "posts": [
+      "Corporate earnings highlights mask underlying net income declines.\n\nGM beats on earnings, raises guidance\nEvidence: Strong performance, Slashed net income, EV pullback charges\n#Aletheia #Finance",
+      "GM reports strong second-quarter earnings, raising its full-year adjusted guidance and celebrating resilient consumer demand.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "GM actually lowered its net income guidance for the second straight quarter, with net income down 31.1% due to massive EV pullback charges.\nResulting Judgement: (-0.6, -0.4) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception.\nThe company highlights adjusted metrics to obscure a significant drop in actual net income.\n\nIntegrity: Meaningful Distortion (R_net: 5.5, Uncertainty z: 4)",
+      "General Motors reported strong adjusted Q2 earnings but simultaneously lowered its net income expectations due to $10.9 billion in EV-related charges.",
+      "The Poison:\nUsing adjusted EBIT and EPS figures to paint a picture of record-breaking momentum while actual net income attributable to stockholders drops by nearly a third.",
+      "The Breakdown & Plane Error:\nConfusing adjusted performance (WHAT) with actual net profitability (HOW). The narrative relies on selective metrics to divert attention from EV losses.",
+      "Social Physics Analysis:\nManagement uses post-hoc adjusted metrics as a pretext to maintain stock price momentum, projecting resilience while actively absorbing massive structural write-downs.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Adjusted metrics hide structural decay.",
+      "The Unavoidable Truth: EV transition pullbacks are costing billions.\n\nThe Unavoidable Lie: The business is experiencing unmitigated record momentum.",
+      "Alethekanon:\nThe divergence between adjusted EBIT and GAAP net income is a classic corporate framing technique. Highlighting the former while slashing the latter is structurally deceptive.",
+      "Awwthekanon:\nIt must be stressful for workers and investors to navigate these conflicting signals. True transparency would build much deeper trust than polished financial metrics.",
+      "Brothekanon:\nClassic corporate math. Slashed net income by 31% but called it a record-breaking bargain. That's some serious spin right there."
+    ],
+    "actors": [
+      "General Motors",
+      "Mary Barra",
+      "Paul Jacobson",
+      "CNBC"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 5.5,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Meaningful Distortion",
+    "category": "politics",
+    "topic": "Finance",
+    "event": "",
+    "graph_img": "graph_png/gm_earnings_q2_2026_graph.png",
+    "rkeys": [
+      "3mr5qi4rgyn2n",
+      "3mr5qi5iwdx23",
+      "3mr5qi7oaas2q",
+      "3mr5qibtsh62u",
+      "3mr5qidyzbg2e",
+      "3mr5qig6rxq2w",
+      "3mr5qiiecif2h",
+      "3mr5qikju5h23",
+      "3mr5qimp3ka2p",
+      "3mr5qioua2u2g",
+      "3mr5qiqzkn62o",
+      "3mr5qit6qja2w",
+      "3mr5qive6ea2e"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qi4rgyn2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qi5iwdx23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qi7oaas2q",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qibtsh62u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qidyzbg2e",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qig6rxq2w",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qiiecif2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qikju5h23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qimp3ka2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qioua2u2g",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qiqzkn62o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qit6qja2w",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mr5qive6ea2e"
+    ],
+    "tags": [
+      "Aletheia",
+      "Finance"
+    ]
+  }
+]

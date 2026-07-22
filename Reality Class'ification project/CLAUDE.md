@@ -1,0 +1,1 @@
+REMEMBER the end goal of this is to make a learning llm model, or some kind of new ai

@@ -15,7 +15,9 @@ No training. No learned weights. Everything is structure.
 
 from __future__ import annotations
 
+import datetime as _dt
 import hashlib
+import math
 from dataclasses import dataclass, field
 from enum import Enum, IntEnum
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
@@ -61,6 +63,15 @@ class ModalPosition(Enum):
     NOT_REALLY = "not_really"  # bottom-left: soft negation
     WAS_LIKE = "was_like"      # bottom-right: analogical past
     IN_GAP = "in_gap"          # between positions: triggers sub-frame drill
+
+
+class SemanticRelation(Enum):
+    """Kept from {Meaning}.cs. Derived from plane geometry, not authored."""
+    SIMILAR = "similar"
+    EQUIVALENT = "equivalent"
+    DERIVATIVE = "derivative"
+    OPPOSITE = "opposite"
+    NONE = "none"
 
 
 class BeliefState(Enum):
@@ -356,25 +367,115 @@ def gate(value: float, rng: ContextualRange, sharpness: float,
 
 @dataclass
 class Meaning:
+    """
+    Faithful port of Meaning from {Meaning}.cs, with three substitutions and
+    one addition, each noted:
+
+      Polarity   -> modal (ModalPosition) + spans. A four-value polarity enum
+                    cannot express a position on an axis; the signed span can,
+                    and subsumes it.
+      TruthScore -> coherence (CoherenceVector). A scalar cannot disagree with
+                    itself, so a scalar cannot detect false fill.
+      6 scale    -> address (QqciAddress). The interrogative path IS the
+        layers      identity; scale layers are the address book, not the space.
+      spans      -> NEW. The word's position on each of the 7 plane axes.
+                    This is where the meaning actually lives.
+
+    Kept from the original: Word, DefinitiveMeaning, Pronunciation,
+    SubMeanings, Related, and the AxomicID (now deterministic, not random).
+    """
     word: str
     address: QqciAddress
     rank: TensorRank = TensorRank.MEANING
     definitive: Optional[str] = None
+    pronunciation: Optional[str] = None
     components: Tuple[str, ...] = ()          # axomic IDs at rank - 1
-    spans: Dict[Plane, SignedSpan] = field(default_factory=dict)
+    sub_meanings: List["Meaning"] = field(default_factory=list)
+    related: List[Tuple[str, "SemanticRelation"]] = field(default_factory=list)
+    # The 7D position: one TruthScore per plane, centred on Unity.
+    # 1.0 = virtue realised, >1.0 = Excess of the sin, <1.0 = Deficit of it.
+    # This is the project's own geometry (MoralVectorDef / MoralScore) and it
+    # replaces the bipolar `spans` experiment, which could not express
+    # "too much and too little are the same failure".
+    plane_scores: Dict[Plane, float] = field(default_factory=dict)
+    spans: Dict[Plane, SignedSpan] = field(default_factory=dict)  # deprecated
     coherence: CoherenceVector = field(default_factory=CoherenceVector)
     modal: ModalPosition = ModalPosition.ARE
     payload: Optional[dict] = None            # rank-2 carries its SAEL tuple
+    carved_at: int = 0                        # temporal layer: day of year
 
     def __post_init__(self):
         if self.definitive is None:
             self.definitive = self.word
+        if self.carved_at == 0:
+            self.carved_at = _dt.datetime.utcnow().timetuple().tm_yday
 
     @property
     def axomic_id(self) -> str:
         # Compositional identity: a word IS its letters, a phrase IS its words.
         payload = ",".join(self.components) if self.components else self.word
         return axomic_id(self.address, payload)
+
+    def add_related(self, other: "Meaning", relation: "SemanticRelation") -> None:
+        self.related.append((other.word, relation))
+
+    # --- the 7D position: this IS the definition ---
+
+    def signed(self, p: Plane) -> Optional[float]:
+        s = self.spans.get(p)
+        return None if s is None else s.signed_value()
+
+    def vector(self) -> List[Optional[float]]:
+        """Signed value per plane, None where the plane is inactive."""
+        return [self.signed(p) for p in Plane]
+
+    def derived_address(self, language: int = 0) -> QqciAddress:
+        """
+        The address falls out of the content: the two strongest planes in
+        strength order. Derived, never assigned alongside the content.
+        """
+        ranked = sorted(
+            ((p, abs(v)) for p in Plane if (v := self.signed(p)) is not None),
+            key=lambda kv: (-kv[1], kv[0]))
+        if len(ranked) >= 2:
+            return QqciAddress.of(ranked[0][0], ranked[1][0], language=language)
+        if ranked:
+            return QqciAddress.of(ranked[0][0], language=language)
+        return QqciAddress.of(Plane.WHAT, language=language)
+
+    def readout(self) -> str:
+        return " ".join(
+            f"{p.name}:-" if (v := self.signed(p)) is None else f"{p.name}:{v:+.2f}"
+            for p in Plane)
+
+
+def FieldMath_fractal_ratio(scores: Sequence[float]) -> float:
+    """
+    R_net = 1 / product(scores). Duplicated from vft.FieldMath.fractal_ratio
+    so the engine has no import cycle with vft.py; the two must stay identical.
+    Returns infinity when any score is zero: one collapsed plane collapses the
+    whole state, which is the property a mean cannot express.
+    """
+    product = 1.0
+    for s in scores:
+        product *= s
+    if product == 0:
+        return math.inf
+    return 1.0 / product
+
+
+def plane_distance(a: Meaning, b: Meaning) -> float:
+    """
+    Distance over shared active planes. A plane active in one and absent in
+    the other takes a fixed penalty rather than being skipped: differing in
+    WHICH planes are active is itself a difference, and absence is meaningful.
+    """
+    shared = [p for p in Plane if p in a.spans and p in b.spans]
+    only = [p for p in Plane if (p in a.spans) != (p in b.spans)]
+    total = sum((a.signed(p) - b.signed(p)) ** 2 for p in shared)
+    total += 1.0 * len(only)
+    denom = len(shared) + len(only)
+    return math.sqrt(total / denom) if denom else 1.0
 
 
 class MeaningRegistry:
@@ -386,10 +487,13 @@ class MeaningRegistry:
     Includes the reverse component index that the C# version still owes.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, meta: Optional["MeaningMetaRegistry"] = None) -> None:
         self._by_id: Dict[str, Meaning] = {}
         self._by_word: Dict[str, List[str]] = {}
         self._by_component: Dict[str, List[str]] = {}  # component -> containers
+        # Every carve files itself in the address book too. Content and
+        # location are separate concerns kept deliberately in sync.
+        self.meta = meta if meta is not None else MeaningMetaRegistry()
 
     def carve_or_recall(self, word: str, address: QqciAddress,
                         rank: TensorRank = TensorRank.MEANING,
@@ -408,7 +512,15 @@ class MeaningRegistry:
         self._by_word.setdefault(word, []).append(mid)
         for c in probe.components:
             self._by_component.setdefault(c, []).append(mid)
+        self.meta.add_meaning(probe)
         return probe
+
+    def refile(self, m: Meaning) -> None:
+        """
+        Re-index a node whose content changed after carving (spans assigned,
+        definitive updated). The address book must not go stale.
+        """
+        self.meta.add_meaning(m)
 
     def get(self, axid: str) -> Optional[Meaning]:
         return self._by_id.get(axid)
@@ -458,6 +570,107 @@ class MeaningRegistry:
 # ---------------------------------------------------------------------------
 # TRUTHSTATE: the carved hole, the document template, the bounded pool.
 # ---------------------------------------------------------------------------
+
+class MeaningMetaRegistry:
+    """
+    The ADDRESS BOOK. Port of MeaningMetaRegistry from {Meaning}.cs.
+
+    This is a separate concern from MeaningRegistry and both must exist:
+      MeaningRegistry     content-addressed. Answers "what does this mean?"
+                          Identity is the plane vector and the interrogative
+                          path. This is the semantic space.
+      MeaningMetaRegistry scale-indexed. Answers "where does this node sit?"
+                          Language, rank, temporal, root plane. This is the
+                          filing system, and it carries no meaning at all.
+
+    Collapsing the two was a mistake: it made the scale layers look like
+    semantic dimensions, which is the category error that produced the
+    six-nested-dictionaries design in the first place.
+
+    The original nested the six layers, so a lookup was six dereferences and a
+    miss anywhere returned null. This uses parallel inverted indices instead,
+    so any SUBSET of coordinates can be queried (the original required all six
+    or none) and every lookup is O(1) per index plus a set intersection.
+    """
+
+    def __init__(self) -> None:
+        self._by_axomic: Dict[str, Meaning] = {}
+        self._by_language: Dict[int, set] = {}
+        self._by_rank: Dict[TensorRank, set] = {}
+        self._by_temporal: Dict[int, set] = {}
+        self._by_root_plane: Dict[Plane, set] = {}
+        self._by_word: Dict[str, set] = {}
+        self._by_definitive: Dict[str, set] = {}
+
+    # --- AddMeaning, but the coordinates are read off the node ---
+    def add_meaning(self, m: Meaning) -> str:
+        axid = m.axomic_id
+        self._by_axomic[axid] = m
+        self._by_language.setdefault(m.address.language, set()).add(axid)
+        self._by_rank.setdefault(m.rank, set()).add(axid)
+        self._by_temporal.setdefault(m.carved_at, set()).add(axid)
+        self._by_root_plane.setdefault(m.address.root, set()).add(axid)
+        self._by_word.setdefault(m.word, set()).add(axid)
+        self._by_definitive.setdefault(m.definitive or m.word, set()).add(axid)
+        return axid
+
+    # --- GetMeaning, but any subset of coordinates is a legal query ---
+    def get_meaning(self, *, axomic_id: Optional[str] = None,
+                    language: Optional[int] = None,
+                    rank: Optional[TensorRank] = None,
+                    temporal: Optional[int] = None,
+                    root_plane: Optional[Plane] = None,
+                    word: Optional[str] = None,
+                    definitive: Optional[str] = None) -> List[Meaning]:
+        if axomic_id is not None:
+            m = self._by_axomic.get(axomic_id)
+            return [m] if m else []
+
+        sets = []
+        if language is not None:
+            sets.append(self._by_language.get(language, set()))
+        if rank is not None:
+            sets.append(self._by_rank.get(rank, set()))
+        if temporal is not None:
+            sets.append(self._by_temporal.get(temporal, set()))
+        if root_plane is not None:
+            sets.append(self._by_root_plane.get(root_plane, set()))
+        if word is not None:
+            sets.append(self._by_word.get(word, set()))
+        if definitive is not None:
+            sets.append(self._by_definitive.get(definitive, set()))
+
+        if not sets:
+            return list(self._by_axomic.values())
+        hits = set.intersection(*sets) if len(sets) > 1 else sets[0]
+        return [self._by_axomic[a] for a in sorted(hits)]
+
+    # --- the two convenience lookups the original had ---
+    def get_by_word(self, word: str) -> List[Meaning]:
+        return self.get_meaning(word=word)
+
+    def get_by_meaning(self, definitive: str) -> List[Meaning]:
+        """
+        The original scanned all six nested levels to find one match and
+        returned the first. This is an index hit and returns ALL matches,
+        because several words legitimately share a definitive meaning: that
+        is what an equivalence class IS, and returning only the first
+        discards the collapse.
+        """
+        return self.get_meaning(definitive=definitive)
+
+    # --- what the flat original could not answer at all ---
+    def plane_census(self) -> Dict[Plane, int]:
+        """How many nodes are rooted at each plane. Coverage diagnostic."""
+        return {p: len(self._by_root_plane.get(p, set())) for p in Plane}
+
+    def rank_census(self) -> Dict[TensorRank, int]:
+        return {r: len(self._by_rank.get(r, set())) for r in TensorRank}
+
+    @property
+    def size(self) -> int:
+        return len(self._by_axomic)
+
 
 @dataclass
 class TruthState:
@@ -528,7 +741,11 @@ class TruthState:
             return self.state
 
         eps = 1e-9  # float guard: 1.00 - 0.70 is not exactly 0.30
-        net = sum(active.values()) / len(active)
+        # The Fractal Ratio Protocol: R_net = 1 / product(scores).
+        # NOT a mean. A mean cannot diverge; the fractal ratio goes to infinity
+        # when any single plane collapses to zero, which is exactly the failure
+        # this gate exists to catch. Using the mean here was a real bug.
+        net = FieldMath_fractal_ratio(list(active.values()))
         in_band = (1.0 - self.tolerance - eps) <= net <= (1.0 + self.tolerance + eps)
         agree = self.coherence.disagreement <= self.tolerance * 2 + eps
 
