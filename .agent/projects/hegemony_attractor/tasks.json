@@ -84,7 +84,7 @@
             "index": 2,
             "id": "task_2",
             "description": "Verify 7 Physics Sliders, 7 Inspector Cards, and Starvation Mechanics",
-            "status": "todo",
+            "status": "done",
             "data": null,
             "validation": {
                 "criteria": [],
@@ -92,9 +92,14 @@
             },
             "rules": [],
             "logs": [
-                "[2026-07-24T00:38:11.408741] Task created."
+                "[2026-07-24T00:38:11.408741] Task created.",
+                "[2026-07-24T00:39:52.420478] Started work.",
+                "[2026-07-24T00:39:52.575937] Marked as DONE.",
+                "[2026-07-24T00:39:52.575962] Lesson learned: Verified all 7 physics sliders, 7 inspector cards, starvation decay, and dual-fuel mechanics."
             ],
-            "lessons_learned": [],
+            "lessons_learned": [
+                "Verified all 7 physics sliders, 7 inspector cards, starvation decay, and dual-fuel mechanics."
+            ],
             "depends_on": [],
             "priority": 0,
             "tags": [
