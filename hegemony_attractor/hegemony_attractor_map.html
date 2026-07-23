@@ -893,12 +893,6 @@
         function updateSimulation(delta, time) {
             if (stormTurbulence > 0) stormTurbulence = Math.max(0, stormTurbulence - delta * 1.5);
 
-            attractors.forEach(att => {
-                if (att.foodPool !== undefined && att.foodPool < att.maxFood) {
-                    att.foodPool = Math.min(att.maxFood, att.foodPool + 1.5 * ambientYieldScale * delta);
-                }
-            });
-
             computeLayerMaps(time);
 
             // SECRETED PARTICLES
@@ -1178,8 +1172,7 @@
                         const dy = py - psiToPy(att.psi);
                         const distSq = dx * dx + dy * dy;
                         const radiusSq = att.radius * att.radius;
-                        const foodRatio = att.foodPool !== undefined ? (att.foodPool / att.maxFood) : 1.0;
-                        const effectiveMass = (att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass) * foodRatio;
+                        const effectiveMass = att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass;
                         const pot = -effectiveMass * Math.exp(-distSq / (2 * radiusSq));
 
                         if (att.type === 'goodTruth') { layerMapGood[idx] += pot; layerMapTruth[idx] += pot; }
