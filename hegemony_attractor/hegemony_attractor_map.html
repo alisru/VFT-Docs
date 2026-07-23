@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Psochic Hegemony Attractor Map | 4-Plane Climate Identity Engine</title>
+    <title>The Psochic Hegemony Attractor Map | Master Engine</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -165,9 +165,9 @@
             <div>
                 <h1 class="text-lg font-black tracking-tight flex items-center gap-2">
                     <span>THE PSOCHIC HEGEMONY ATTRACTOR MAP</span>
-                    <span class="badge badge-emerald">4-PLANE CLIMATE IDENTITY RESTORED</span>
+                    <span class="badge badge-emerald">MASTER ENGINE (DUAL FUEL &amp; PSOCHIC LIFECYCLE)</span>
                 </h1>
-                <p class="text-xs font-mono" style="color: #94a3b8;">Air | Fire | Water | Earth Home Biome Survival &amp; Climate Toxicity</p>
+                <p class="text-xs font-mono" style="color: #94a3b8;">Dual-Fuel Thrusters | 4-Phase Migration Lifecycle | Cytoplasm Coordinate Drift</p>
             </div>
         </div>
 
@@ -179,7 +179,7 @@
             </div>
             <div>FPS: <span id="fpsCounter" class="font-bold" style="color: #38bdf8;">60</span></div>
             <div>ORGANISMS: <span id="actorCount" class="font-bold" style="color: #fbbf24;">0</span></div>
-            <div>CLIMATE IDENTITY: <span class="font-bold" style="color: #4ade80;">4 PLANES ACTIVE</span></div>
+            <div>THRUSTERS: <span class="font-bold" style="color: #38bdf8;">DUAL FUEL (TRUTH / LIE)</span></div>
         </div>
     </header>
 
@@ -297,7 +297,7 @@
                 <button onclick="switchTab('inspector')" id="tabBtn-inspector" class="btn" style="flex: 1; text-align: center; padding: 0.6rem;">Organism Inspector</button>
             </div>
 
-            <!-- Tab 1: ALL PHYSICS CONTROLS RESTORED -->
+            <!-- Tab 1: ALL PHYSICS CONTROLS -->
             <div id="tabContent-controls" class="glass-card flex flex-col gap-4" style="padding: 1.25rem; max-height: 720px; overflow-y: auto;">
                 
                 <!-- Playback Controls -->
@@ -446,7 +446,7 @@
                 </div>
             </div>
 
-            <!-- Tab 3: FULL VERBOSE ORGANISM INSPECTOR (7 CARDS + 4-PLANE CLIMATE IDENTITY) -->
+            <!-- Tab 3: FULL VERBOSE ORGANISM INSPECTOR -->
             <div id="tabContent-inspector" class="hidden glass-card flex flex-col gap-3" style="padding: 1.25rem; overflow-y: auto;">
                 <div id="noActorSelectedState" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; color: #64748b;" class="gap-2">
                     <div style="font-size: 2.5rem;">🦠</div>
@@ -496,11 +496,11 @@
                         </div>
                     </div>
 
-                    <!-- CARD 2: REACTION PROPULSION THRUSTER ENGINE -->
+                    <!-- CARD 2: UNIVERSAL DUAL-FUEL REACTION THRUSTER ENGINE -->
                     <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(52,211,153,0.3); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex justify-between items-center">
                         <div>
-                            <span style="color: #4ade80; text-transform: uppercase; font-weight: 700; font-size: 0.65rem;">2. REACTION PROPULSION THRUSTER:</span>
-                            <div id="inspectorThrusterStatus" style="color: #fff; font-weight: 700;">Firing Fuel toward +∇ Food</div>
+                            <span style="color: #4ade80; text-transform: uppercase; font-weight: 700; font-size: 0.65rem;">2. DUAL-FUEL REACTION THRUSTER:</span>
+                            <div id="inspectorThrusterStatus" style="color: #fff; font-weight: 700;">Firing Fuel -> +∇ Target</div>
                         </div>
                         <div style="text-align: right;">
                             <span style="color: #94a3b8; text-transform: uppercase; font-weight: 700; font-size: 0.65rem;">THRUST FORCE:</span>
@@ -534,14 +534,14 @@
                         </div>
                     </div>
 
-                    <!-- CARD 4: CLIMATE IDENTITY & SURVIVAL RULES -->
+                    <!-- CARD 4: PSOCHIC MIGRATION & CLIMATE IDENTITY -->
                     <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(56,189,248,0.3); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex flex-col gap-1">
                         <div class="flex justify-between items-center font-bold">
-                            <span style="color: #38bdf8; text-transform: uppercase;">4. CLIMATE IDENTITY &amp; SURVIVAL RULES</span>
-                            <span id="inspectorSeekingTarget" class="badge badge-emerald">SEEKING NEEDED RESOURCE</span>
+                            <span style="color: #38bdf8; text-transform: uppercase;">4. PSOCHIC MIGRATION &amp; CLIMATE IDENTITY</span>
+                            <span id="inspectorSeekingTarget" class="badge badge-emerald">MIGRATION ACTIVE</span>
                         </div>
                         <div id="inspectorSeekingDetails" style="color: #cbd5e1; font-size: 0.75rem; margin-top: 2px;">
-                            Evaluating climate toxicity &amp; seeking target food.
+                            Evaluating cytoplasm coordinate drift (u_cell, psi_cell) &amp; migration.
                         </div>
                     </div>
 
@@ -704,7 +704,7 @@
         }
 
         // ==========================================
-        // 3. INITIALIZATION WITH EXPLICIT 4 CLIMATE IDENTITIES
+        // 3. INITIALIZATION
         // ==========================================
         window.addEventListener('DOMContentLoaded', () => {
             canvas = document.getElementById('attractorCanvas');
@@ -775,7 +775,7 @@
                 psi: psi,
                 radius: baseRadius,
                 vertices: vertices,
-                climateIdentity: climateIdentity, // 'air', 'fire', 'water', 'earth'
+                climateIdentity: climateIdentity,
                 wanderAngle: Math.random() * Math.PI * 2,
                 health: 100,
 
@@ -793,6 +793,7 @@
                     lie: (climateIdentity === 'fire' || climateIdentity === 'water') ? 20.0 : 5.0
                 },
 
+                activeFuelType: 'truth',
                 currentNeedTarget: 'dietFood',
                 sampledField: { good: 0, bad: 0, truth: 0, lie: 0 },
                 trail: [],
@@ -864,7 +865,7 @@
         }
 
         // ==========================================
-        // 5. MAIN PHYSICS LOOP (WITH 4-PLANE CLIMATE IDENTITY DIET & TOXICITY)
+        // 5. MAIN PHYSICS LOOP (MASTER ENGINE WITH DUAL FUEL & PSOCHIC MIGRATION DRIFT)
         // ==========================================
         function gameLoop(timestamp) {
             if (!lastTime) lastTime = timestamp;
@@ -933,9 +934,7 @@
                     lie: Math.max(0, Math.round(specAtCenter.lie + Math.abs(getLayerHeight(layerMapLie, clampedGX, clampedGY)) * 50))
                 };
 
-                // ==============================================================
-                // 1. 4-PLANE CLIMATE IDENTITY GRAZING & DIET SURVIVAL
-                // ==============================================================
+                // GRAZING
                 attractors.forEach(att => {
                     if (att.foodPool && att.foodPool > 0) {
                         const dist = Math.sqrt((cell.px - uToPx(att.u)) ** 2 + (cell.py - psiToPy(att.psi)) ** 2);
@@ -943,20 +942,10 @@
                             const grazeAmt = Math.min(att.foodPool, 4.0 * delta);
                             att.foodPool -= grazeAmt;
 
-                            if (cell.climateIdentity === 'air') {
-                                // Air: Grazes Bad food -> Converts to Truth fuel
+                            if (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') {
                                 if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt);
                                 else cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt * 0.5);
-                            } else if (cell.climateIdentity === 'fire') {
-                                // Fire: Grazes Good food -> Converts to Lie fuel
-                                if (att.type === 'goodTruth' || att.type === 'goodLie') cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt);
-                                else cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt * 0.5);
-                            } else if (cell.climateIdentity === 'water') {
-                                // Water: Grazes Bad food -> Converts to Lie fuel (Veil)
-                                if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt);
-                                else cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt * 0.5);
-                            } else if (cell.climateIdentity === 'earth') {
-                                // Earth: Grazes Good food -> Converts to Truth fuel
+                            } else {
                                 if (att.type === 'goodTruth' || att.type === 'goodLie') cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt);
                                 else cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt * 0.5);
                             }
@@ -964,23 +953,14 @@
                     }
                 });
 
-                // ==============================================================
-                // 2. METABOLIC FUEL CONVERSION PER CLIMATE IDENTITY
-                // ==============================================================
-                if (cell.climateIdentity === 'air' && cell.pocket.bad > 0) {
-                    const processAmt = Math.min(cell.pocket.bad, 2.5 * delta);
-                    cell.pocket.bad = Math.max(0, cell.pocket.bad - processAmt);
-                    cell.pocket.truth = Math.min(100, cell.pocket.truth + processAmt * metabolicEfficiencyScale);
-                } else if (cell.climateIdentity === 'fire' && cell.pocket.good > 0) {
-                    const processAmt = Math.min(cell.pocket.good, 2.5 * delta);
-                    cell.pocket.good = Math.max(0, cell.pocket.good - processAmt);
-                    cell.pocket.lie = Math.min(100, cell.pocket.lie + processAmt * metabolicEfficiencyScale);
-                } else if (cell.climateIdentity === 'water' && cell.pocket.bad > 0) {
-                    const processAmt = Math.min(cell.pocket.bad, 2.5 * delta);
+                // DUAL METABOLISM (Good -> Truth, Bad -> Lie)
+                if (cell.pocket.bad > 0) {
+                    const processAmt = Math.min(cell.pocket.bad, 2.0 * delta);
                     cell.pocket.bad = Math.max(0, cell.pocket.bad - processAmt);
                     cell.pocket.lie = Math.min(100, cell.pocket.lie + processAmt * metabolicEfficiencyScale);
-                } else if (cell.climateIdentity === 'earth' && cell.pocket.good > 0) {
-                    const processAmt = Math.min(cell.pocket.good, 2.5 * delta);
+                }
+                if (cell.pocket.good > 0) {
+                    const processAmt = Math.min(cell.pocket.good, 2.0 * delta);
                     cell.pocket.good = Math.max(0, cell.pocket.good - processAmt);
                     cell.pocket.truth = Math.min(100, cell.pocket.truth + processAmt * metabolicEfficiencyScale);
                 }
@@ -991,27 +971,32 @@
                 if (cell.pocket.bad > 0) cell.pocket.bad = Math.max(0, cell.pocket.bad - basalBurnRate);
 
                 // ==============================================================
-                // 3. CLIMATE TOXICITY DAMAGE WHEN IN OPPOSITE CLIMATE
+                // 1. PSOCHIC MIGRATION & CYTOPLASM COORDINATE DRIFT MATH
                 // ==============================================================
-                const currentLocClimate = getClimateIdentity(cell.u, cell.psi);
-                let isToxicClimate = false;
+                const totalEnergy = cell.pocket.good + cell.pocket.bad + cell.pocket.truth + cell.pocket.lie;
 
-                if (cell.climateIdentity === 'air' && currentLocClimate === 'earth') isToxicClimate = true;
-                if (cell.climateIdentity === 'fire' && currentLocClimate === 'water') isToxicClimate = true;
-                if (cell.climateIdentity === 'water' && currentLocClimate === 'fire') isToxicClimate = true;
-                if (cell.climateIdentity === 'earth' && currentLocClimate === 'air') isToxicClimate = true;
+                const u_cell = ((cell.pocket.good - cell.pocket.bad) / (totalEnergy + 1.0)) * 2.0;
+                const psi_cell = ((cell.pocket.truth - cell.pocket.lie) / (totalEnergy + 1.0)) * 2.0;
 
-                if (isToxicClimate) {
-                    cell.cores.airGoodTruth = Math.max(0, cell.cores.airGoodTruth - 4.0 * delta);
-                    cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 4.0 * delta);
+                const targetPx = uToPx(u_cell);
+                const targetPy = psiToPy(psi_cell);
+
+                // Continuous metabolic drift force
+                cell.vx += (targetPx - cell.px) * 0.015 * delta;
+                cell.vy += (targetPy - cell.py) * 0.015 * delta;
+
+                // TRUTH STARVATION & FIRE BODY DECAY IN FIRE/EARTH DOMAIN
+                const isFireOrEarthDomain = cell.u < 0;
+                if (isFireOrEarthDomain && cell.pocket.truth <= 0) {
+                    cell.cores.airGoodTruth = Math.max(0, cell.cores.airGoodTruth - 3.0 * delta);
+                    cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 3.0 * delta);
                 }
 
                 // STARVATION
-                const totalEnergy = cell.pocket.good + cell.pocket.bad + cell.pocket.truth + cell.pocket.lie;
                 if (totalEnergy <= 0) {
                     cell.cores.airGoodTruth = Math.max(0, cell.cores.airGoodTruth - 6.0 * delta);
                     cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 6.0 * delta);
-                } else if (!isToxicClimate) {
+                } else if (!isFireOrEarthDomain || cell.pocket.truth > 0) {
                     cell.cores.airGoodTruth = Math.min(100, cell.cores.airGoodTruth + 1.0 * delta);
                     cell.cores.earthBadTruth = Math.min(100, cell.cores.earthBadTruth + 1.0 * delta);
                 }
@@ -1024,18 +1009,16 @@
                     continue;
                 }
 
-                // ==============================================================
-                // 4. DYNAMIC NEED SEEKING PER CLIMATE IDENTITY
-                // ==============================================================
+                // DYNAMIC NEED SEEKING
                 let targetGradX = 0;
                 let targetGradY = 0;
                 let needMode = 'dietFood';
 
-                const fuelLevel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'earth') ? cell.pocket.truth : cell.pocket.lie;
+                const totalFuel = cell.pocket.truth + cell.pocket.lie;
                 const dietLevel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') ? cell.pocket.bad : cell.pocket.good;
                 const homeFoodLevel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') ? cell.pocket.good : cell.pocket.bad;
 
-                if (fuelLevel < 10.0 && dietLevel < 5.0) {
+                if (totalFuel < 10.0 && dietLevel < 5.0) {
                     needMode = 'dietFood';
                 } else if (homeFoodLevel < 10.0) {
                     needMode = 'homeFood';
@@ -1095,19 +1078,36 @@
                 const massInertia = 1.0 / cellMass;
                 const effectiveDrag = Math.pow(velocityDragScale, cellMass * 0.8);
 
-                // THRUSTER FIRING PER CLIMATE IDENTITY FUEL
-                const useTruthFuel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'earth');
-                const availableFuel = useTruthFuel ? cell.pocket.truth : cell.pocket.lie;
+                // ==============================================================
+                // 2. UNIVERSAL DUAL-FUEL THRUSTER ENGINE (TRUTH OR LIE FUEL)
+                // ==============================================================
+                let fuelToBurn = null;
+                if (cell.pocket.truth > 0 && cell.pocket.lie > 0) {
+                    fuelToBurn = cell.pocket.truth >= cell.pocket.lie ? 'truth' : 'lie';
+                } else if (cell.pocket.truth > 0) {
+                    fuelToBurn = 'truth';
+                } else if (cell.pocket.lie > 0) {
+                    fuelToBurn = 'lie';
+                }
 
-                if (availableFuel > 0) {
-                    const fuelBurn = Math.min(availableFuel, 3.5 * delta);
-                    if (useTruthFuel) cell.pocket.truth = Math.max(0, cell.pocket.truth - fuelBurn);
-                    else cell.pocket.lie = Math.max(0, cell.pocket.lie - fuelBurn);
+                cell.activeFuelType = fuelToBurn;
+
+                if (fuelToBurn === 'truth') {
+                    const fuelBurn = Math.min(cell.pocket.truth, 3.5 * delta);
+                    cell.pocket.truth = Math.max(0, cell.pocket.truth - fuelBurn);
 
                     cell.vx += Math.cos(foodAngle) * 0.6 * thrusterForceScale * massInertia;
                     cell.vy += Math.sin(foodAngle) * 0.6 * thrusterForceScale * massInertia;
 
-                    if (Math.random() < 0.35) spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), useTruthFuel ? 'truth' : 'lie');
+                    if (Math.random() < 0.35) spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), 'truth');
+                } else if (fuelToBurn === 'lie') {
+                    const fuelBurn = Math.min(cell.pocket.lie, 3.5 * delta);
+                    cell.pocket.lie = Math.max(0, cell.pocket.lie - fuelBurn);
+
+                    cell.vx += Math.cos(foodAngle) * 0.6 * thrusterForceScale * massInertia;
+                    cell.vy += Math.sin(foodAngle) * 0.6 * thrusterForceScale * massInertia;
+
+                    if (Math.random() < 0.35) spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), 'lie');
                 }
 
                 if (stormTurbulence > 0) {
@@ -1260,7 +1260,7 @@
                 ctx.fillText(att.name + poolText, px, py - 12);
             });
 
-            // Secretions
+            // Secreted Particles (Cyan for Truth, Amber for Lie)
             secretedParticles.forEach(p => {
                 ctx.fillStyle = p.type === 'lie' ? '#f59e0b' : '#38bdf8';
                 ctx.globalAlpha = p.life * 0.85;
@@ -1613,30 +1613,32 @@
                 }
             }
 
-            // CARD 2: REACTION THRUSTER
-            const useTruthFuel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'earth');
-            const availableFuel = useTruthFuel ? cell.pocket.truth : cell.pocket.lie;
-            const thrusterActive = availableFuel > 0;
-            
-            setDOMText('inspectorThrusterStatus', thrusterActive ? 
-                `Firing ${useTruthFuel ? 'Truth' : 'Lie'} Fuel -> +∇ ${cell.currentNeedTarget.toUpperCase()}` : 
-                "🔴 FUEL EXHAUSTED (0.0 U) - Thrusters Offline");
-            setDOMText('inspectorThrustForce', thrusterActive ? `${(1.5 * thrusterForceScale / cellMass).toFixed(2)}x ∇F (Mass Inertia)` : `0.0x (No Fuel)`);
+            // CARD 2: UNIVERSAL DUAL-FUEL REACTION THRUSTER
+            const activeFuel = cell.activeFuelType;
+            const forceVal = (1.5 * thrusterForceScale / cellMass).toFixed(2);
+            if (activeFuel === 'truth') {
+                setDOMText('inspectorThrusterStatus', '⚡ Firing TRUTH Fuel (Cyan Exhaust)');
+                setDOMText('inspectorThrustForce', `${forceVal}x ∇F (Mass Inertia)`);
+            } else if (activeFuel === 'lie') {
+                setDOMText('inspectorThrusterStatus', '🔥 Firing LIE Fuel (Amber Exhaust)');
+                setDOMText('inspectorThrustForce', `${forceVal}x ∇F (Mass Inertia)`);
+            } else {
+                setDOMText('inspectorThrusterStatus', '🔴 FUEL EXHAUSTED (0.0 U) - Thrusters Offline');
+                setDOMText('inspectorThrustForce', '0.0x (No Fuel)');
+            }
 
             // CARD 3: CORES
             setDOMText('airCoreVal', `Health: ${Math.round(cell.cores.airGoodTruth)}% (Repaired: G{T}, Damaged: B{T})`);
             setDOMText('earthCoreVal', `Health: ${Math.round(cell.cores.earthBadTruth)}% (Repaired: B{T}, Damaged: G{T})`);
 
-            // CARD 4: CLIMATE IDENTITY SURVIVAL & TOXICITY
+            // CARD 4: PSOCHIC MIGRATION & CLIMATE TOXICITY
             const currClimate = getClimateIdentity(cell.u, cell.psi);
             let toxicText = " (Climate Safe)";
-            if (cell.climateIdentity === 'air' && currClimate === 'earth') toxicText = " ⚠️ TOXIC EARTH CLIMATE SURGE!";
-            if (cell.climateIdentity === 'fire' && currClimate === 'water') toxicText = " ⚠️ TOXIC WATER CLIMATE SURGE!";
-            if (cell.climateIdentity === 'water' && currClimate === 'fire') toxicText = " ⚠️ TOXIC FIRE CLIMATE SURGE!";
-            if (cell.climateIdentity === 'earth' && currClimate === 'air') toxicText = " ⚠️ TOXIC AIR CLIMATE SURGE!";
+            const isFireOrEarth = cell.u < 0;
+            if (isFireOrEarth && cell.pocket.truth <= 0) toxicText = " ⚠️ FIRE BODY DECAY (Truth Starved)!";
 
             setDOMText('inspectorSeekingTarget', `HOME: ${cell.climateIdentity.toUpperCase()} | TARGET: ${cell.currentNeedTarget.toUpperCase()}`);
-            setDOMText('inspectorSeekingDetails', `Climate Identity: ${cell.climateIdentity.toUpperCase()}${toxicText}`);
+            setDOMText('inspectorSeekingDetails', `Current Plane: ${currClimate.toUpperCase()}${toxicText}`);
 
             // CARD 5: SAMPLED FIELD VOLUME
             setDOMText('inspectorSampledField', `Climate Good:${cell.sampledField.good}% | Truth:${cell.sampledField.truth}% | Bad:${cell.sampledField.bad}% | Lie:${cell.sampledField.lie}%`);
