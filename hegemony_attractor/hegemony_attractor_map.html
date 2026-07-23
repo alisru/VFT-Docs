@@ -165,9 +165,9 @@
             <div>
                 <h1 class="text-lg font-black tracking-tight flex items-center gap-2">
                     <span>THE PSOCHIC HEGEMONY ATTRACTOR MAP</span>
-                    <span class="badge badge-emerald">INFINITE FIELD RESOURCES</span>
+                    <span class="badge badge-emerald">MASTER ENGINE</span>
                 </h1>
-                <p class="text-xs font-mono" style="color: #94a3b8;">Infinite Field Potential Pools | Good Wet Air Actors | Selfish Dry Fire Actors</p>
+                <p class="text-xs font-mono" style="color: #94a3b8;">Good Wet Air Actors | Selfish Dry Fire Actors | Emergent 4-Phase Migration</p>
             </div>
         </div>
 
@@ -179,7 +179,6 @@
             </div>
             <div>FPS: <span id="fpsCounter" class="font-bold" style="color: #38bdf8;">60</span></div>
             <div>ORGANISMS: <span id="actorCount" class="font-bold" style="color: #fbbf24;">0</span></div>
-            <div>FIELD RESOURCES: <span class="font-bold" style="color: #4ade80;">INFINITE (∞)</span></div>
         </div>
     </header>
 
@@ -1231,7 +1230,7 @@
                 ctx.fillStyle = '#ffffff';
                 ctx.font = 'bold 11px "Outfit"';
                 ctx.textAlign = 'center';
-                ctx.fillText(att.name + ' (∞)', px, py - 12);
+                ctx.fillText(att.name, px, py - 12);
             });
 
             // Secreted Particles (Cyan for Truth, Amber for Lie)
@@ -1636,7 +1635,7 @@
             setDOMText('rad5Val', `${rad.rad5 >= 0 ? '+' : ''}${rad.rad5.toFixed(2)}`);
             setDOMText('rad6Val', `${rad.rad6 >= 0 ? '+' : ''}${rad.rad6.toFixed(2)}`);
 
-            // CARD 7: MEMBRANE VITALITY & LOG
+            // CARD 7: MEMBRANE VITALITY & EVENT LOG
             setDOMText('inspectorHealthVal', `${Math.round(cell.health)} / 100 HP`);
             const hpFill = document.getElementById('inspectorHealthFill');
             if (hpFill) {
