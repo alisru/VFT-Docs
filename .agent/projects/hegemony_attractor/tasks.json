@@ -112,6 +112,74 @@
                 "passes": [],
                 "root_cause": null
             }
+        },
+        {
+            "index": 3,
+            "id": "task_3",
+            "description": "Implement Altruistic (Truth from Lies via Good) and Selfish (Lies from Truth via Bad) Metabolic Extraction",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-07-24T00:49:37.384324] Task created.",
+                "[2026-07-24T00:49:41.496156] Started work.",
+                "[2026-07-24T00:50:12.284554] Marked as DONE.",
+                "[2026-07-24T00:50:12.284579] Lesson learned: Altruistic (Good extracts Truth from Lies) and Selfish (Bad extracts Lies from Truth) metabolic engine implemented successfully."
+            ],
+            "lessons_learned": [
+                "Altruistic (Good extracts Truth from Lies) and Selfish (Bad extracts Lies from Truth) metabolic engine implemented successfully."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "metabolism",
+                "extraction",
+                "ethics"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 4,
+            "id": "task_4",
+            "description": "Implement Dynamic Visual Size and Physical Mass Scaling per Held Resources",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-07-24T00:49:37.488873] Task created.",
+                "[2026-07-24T00:49:41.607602] Started work.",
+                "[2026-07-24T00:50:12.388965] Marked as DONE.",
+                "[2026-07-24T00:50:12.388989] Lesson learned: Dynamic visual radius (R) and physical mass (m) scaling per held resources implemented successfully."
+            ],
+            "lessons_learned": [
+                "Dynamic visual radius (R) and physical mass (m) scaling per held resources implemented successfully."
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "physics",
+                "canvas",
+                "mass"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
         }
     ]
 }

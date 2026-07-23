@@ -1,4 +1,4 @@
-# Master Design Document - The Psochic Hegemony Attractor Engine
+# Master Design Document - The Psochic Hegemony Attractor Engine (v40 - Additive Master Revision)
 
 This document is the **Permanent, Cumulative Master Design Document** for the Psochic Hegemony Attractor Map visualizer. It is strictly cumulative: no sections, equations, rules, or controls will ever be removed or overwritten.
 
@@ -34,11 +34,52 @@ All 7 real-time calibration sliders are permanently preserved in the Physics Con
 
 ---
 
-## 🦠 3. Full Verbose 7-Card Organism Inspector
+## 🧪 3. Altruistic vs Selfish Metabolic Extraction Mechanics (NEW ADDITION)
+
+1. **Altruistic Extraction (Good Core)**:
+   - Altruistic actors use Good energy ($E_{\text{good}}$) to **extract Truth from Lies**:
+     \[
+     E_{\text{lie}} \xrightarrow{E_{\text{good}}} E_{\text{truth}}
+     \]
+   - Converts deceptive/manipulative field inputs into verifiable Truth fuel.
+
+2. **Selfish Extraction (Bad Core)**:
+   - Selfish actors use Bad energy ($E_{\text{bad}}$) to **extract Lies from Truth**:
+     \[
+     E_{\text{truth}} \xrightarrow{E_{\text{bad}}} E_{\text{lie}}
+     \]
+   - Distorts verified Truth inputs into deceptive Lie fuel for self-serving propulsion.
+
+---
+
+## ⚖️ 4. Dynamic Visual Radius & Physical Mass Scaling per Held Resources (NEW ADDITION)
+
+Cells dynamically expand visually and physically based on total cytoplasm energy ($E_{\text{total}} = E_{\text{good}} + E_{\text{bad}} + E_{\text{truth}} + E_{\text{lie}}$):
+
+1. **Visual Canvas Radius ($R$)**:
+   \[
+   R = 16.0 + \sqrt{E_{\text{total}}} \times 2.2
+   \]
+   - A cell holding $0\text{U}$ energy has a lean visual radius of $16\text{px}$.
+   - A cell holding $100\text{U}$ energy visually swells to $38\text{px}$.
+
+2. **Physical Inertial Mass ($m$) & Medium Drag ($\mu_{\text{drag}}$)**:
+   \[
+   m = 1.0 + \frac{E_{\text{total}}}{20.0}
+   \]
+   \[
+   \text{Acceleration} = \mathbf{F}_{\text{thrust}} \times \frac{1.0}{m}
+   \]
+   - Resource-heavy cells visually loom large and move with heavy sluggish momentum.
+   - Resource-starved cells are visually tiny and sprint rapidly across the field.
+
+---
+
+## 🦠 5. Full Verbose 7-Card Organism Inspector
 
 Selecting any cell on the canvas displays 7 verbose telemetry cards:
 
-1. **Card 1: Cytoplasm Storage & Mass Inertia**: Displays stored Good, Bad, Truth, Lie, total energy, cell radius ($R = 20 + \sqrt{E_{\text{total}}} \times 1.5$), mass ($m = 1.0 + \frac{E_{\text{total}}}{30.0}$), and drag inertia.
+1. **Card 1: Cytoplasm Storage & Mass Inertia**: Displays stored Good, Bad, Truth, Lie, total energy, cell radius ($R = 16 + \sqrt{E_{\text{total}}} \times 2.2$), mass ($m = 1.0 + \frac{E_{\text{total}}}{20.0}$), and drag inertia.
 2. **Card 2: Reaction Propulsion Thruster Engine**: Firing state, force vector ($1.5\text{x} \nabla F / m$), and active exhaust particle color (Cyan/Blue for Truth, Amber/Gold for Lie).
 3. **Card 3: 4 Internal Micro-Hegemony Cores**: Health and repair state of Air, Fire, Water, and Earth cores.
 4. **Card 4: Climate Identity & Dynamic Need AI**: 4-Plane Climate Identity badge (Air, Fire, Water, Earth), current target need, and climate toxicity status.
@@ -48,7 +89,7 @@ Selecting any cell on the canvas displays 7 verbose telemetry cards:
 
 ---
 
-## 🍖 4. Resource Mechanics, Depletion & Starvation Physics
+## 🍖 6. Resource Mechanics, Depletion & Starvation Physics
 
 1. **Depletable Local Food Pools**: Attractors have finite food pools ($F_{\text{local}}$ shown e.g. `(150U)`). Grazing directly depletes node food reserves.
 2. **Basal Metabolic Burn**: Cells burn $1.0\text{U/s}$ of stored cytoplasm energy for basic core maintenance.
@@ -57,15 +98,14 @@ Selecting any cell on the canvas displays 7 verbose telemetry cards:
 
 ---
 
-## 🧠 5. Dynamic Need-Based Seeking & Mass Drag Physics
+## 🧠 7. Dynamic Need-Based Seeking & Mass Drag Physics
 
 1. **Dynamic Need-Based Seeking AI**: Organisms continuously evaluate their internal resource deficits (Fuel vs Diet Food vs Home Preference Food) and navigate toward the gradient of highest urgency.
-2. **Resource-Based Mass & Drag**: Cell radius ($R$) and mass ($m = 1.0 + \frac{E_{\text{total}}}{30.0}$) scale with cytoplasm energy. Heavily fed cells experience high mass inertia (sluggish acceleration), while hungry lean cells accelerate rapidly.
-3. **Opposite Field Repulsion Physics**: Good cells are repulsed by Bad potential nodes ($+\nabla \Phi_{\text{bad}}$ repulsion); Bad cells are repulsed by Good potential nodes ($+\nabla \Phi_{\text{good}}$ repulsion).
+2. **Opposite Field Repulsion Physics**: Good cells are repulsed by Bad potential nodes ($+\nabla \Phi_{\text{bad}}$ repulsion); Bad cells are repulsed by Good potential nodes ($+\nabla \Phi_{\text{good}}$ repulsion).
 
 ---
 
-## 🚀 6. Universal Dual-Fuel Reaction Thruster Engine
+## 🚀 8. Universal Dual-Fuel Reaction Thruster Engine
 
 Organisms of all climate identities can burn EITHER **Truth** fuel OR **Lie** fuel for reaction propulsion.
 
@@ -98,7 +138,7 @@ if (fuelToBurn === 'truth') {
 
 ---
 
-## 🔄 7. The 4-Phase Psochic Migration Lifecycle & Cytoplasm Coordinate Coupling
+## 🔄 9. The 4-Phase Psochic Migration Lifecycle & Cytoplasm Coordinate Coupling
 
 An organism's position and climate trajectory across the 4 planes are dynamically coupled to its internal cytoplasm composition ($E_{\text{good}}, E_{\text{bad}}, E_{\text{truth}}, E_{\text{lie}}$).
 
@@ -134,11 +174,9 @@ u_{\text{cell}} = \frac{E_{\text{good}} - E_{\text{bad}}}{E_{\text{total}} + 1.0
 
 ---
 
-## 🧪 8. Verification Plan
+## 🧪 10. Verification Plan
 
 ### Manual Verification
 1. Open [hegemony_attractor_map.html](file:///e:/Vector%20Field%20Theory/VFT%20Docs/hegemony_attractor/hegemony_attractor_map.html) in any modern web browser.
-2. Verify all 7 physics sliders respond in real-time.
-3. Inject Lie field nodes near an Air cell using the top mode bar.
-4. Inspect the organism to verify Card 2 shows dynamic dual-fuel thruster status.
-5. Observe the cell absorb Lie energy, drift southward into Water ($+u, -\psi$), digest Lie into Bad energy, and drift westward into Fire/Earth ($-u$).
+2. Observe Altruistic (Good) organisms extract Truth from Lies, and Selfish (Bad) organisms extract Lies from Truth.
+3. Feed an organism with abundant food and observe its visual canvas radius ($R$) swell dynamically from $16\text{px}$ up to $38\text{px}+$, accompanied by sluggish physical mass inertia.
