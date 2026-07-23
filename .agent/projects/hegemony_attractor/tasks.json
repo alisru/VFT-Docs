@@ -2,8 +2,8 @@
     "global_context": {
         "project_name": "hegemony_attractor",
         "project_rules": [],
-        "current_focus": "None",
-        "current_task_index": null,
+        "current_focus": "Fix center collapse by anchoring cytoplasm drift relative to home climate biomes and prioritizing native food patch seeking AI",
+        "current_task_index": 5,
         "mistakes_registry": [],
         "fuckup_prevention_checklist": [
             "Did I read the requirements fully?",
@@ -173,6 +173,36 @@
                 "physics",
                 "canvas",
                 "mass"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 5,
+            "id": "task_5",
+            "description": "Fix center collapse by anchoring cytoplasm drift relative to home climate biomes and prioritizing native food patch seeking AI",
+            "status": "in_progress",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-07-24T00:51:29.038255] Task created.",
+                "[2026-07-24T00:51:29.158408] Started work."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "ai",
+                "navigation",
+                "attractors"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
