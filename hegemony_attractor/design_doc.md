@@ -34,21 +34,45 @@ All 7 real-time calibration sliders are permanently preserved in the Physics Con
 
 ---
 
-## 🧪 3. Altruistic vs Selfish Metabolic Extraction Mechanics
+## 💨🔥 3. Selfish Fire (Dry) Actors vs Altruistic Air (Wet) Actors & Core Intended Migration Lifecycle
 
-1. **Altruistic Extraction (Good Core)**:
-   - Altruistic actors use Good energy ($E_{\text{good}}$) to **extract Truth from Lies**:
+### Actor Classifications:
+1. **Altruistic Good Wet Actors (Air / Good Preference)**:
+   - Live in **Air (+u, +ψ)** with Good preference ($+u$).
+   - **Altruistic Extraction**: Extracts Truth from Lies by using up Good energy:
      \[
-     E_{\text{lie}} \xrightarrow{E_{\text{good}}} E_{\text{truth}}
+     E_{\text{lie}} + E_{\text{good}} \xrightarrow{\text{Altruistic Core}} E_{\text{truth}} \text{ (Truth Fuel)}
      \]
-   - Converts deceptive/manipulative field inputs into verifiable Truth fuel ($+\psi$).
+   - Good energy ($E_{\text{good}}$) is sacrificed to cleanse Lie into Truth fuel.
 
-2. **Selfish Extraction (Bad Core)**:
-   - Selfish actors use Bad energy ($E_{\text{bad}}$) to **extract Lies from Truth**:
+2. **Selfish Bad Dry Actors (Fire / Bad Preference)**:
+   - Live in **Fire (-u, +ψ)** with Bad preference ($-u$).
+   - **Selfish Processing**: Processes Truth into Lies, actively converting Good energy into Bad energy:
      \[
-     E_{\text{truth}} \xrightarrow{E_{\text{bad}}} E_{\text{lie}}
+     E_{\text{truth}} + E_{\text{good}} \xrightarrow{\text{Selfish Core}} E_{\text{lie}} \text{ (Lie Fuel)} + E_{\text{bad}} \text{ (Bad Energy)}
      \]
-   - Distorts verified Truth inputs into deceptive Lie fuel ($-\psi$) for self-serving propulsion.
+   - Corrupts Good energy into Bad energy ($E_{\text{good}} \rightarrow E_{\text{bad}}$), pushing the cell into the Bad domain.
+
+---
+
+### 🔄 Core Intended Migration Lifecycle & Effect
+
+> *"so can you really think about this, the idea that if an organism starts off in good preference it'll want to progress through to lesser good due to the lie repulsion from GG, consuming lie produces bad within the organisms which should push it to GE where its use of lies and repulsion from truth sends it to the lesser evil until its starved of truth it needs to survive and its fire body slowly starves, or smth like that"*
+
+#### 1. Progression from Good Preference $(+1, 0)$ to Lesser Good $(+1, -1)$:
+- An organism starts in **Good Preference $(+1, 0)$**.
+- It absorbs/stores Lie energy ($E_{\text{lie}}$). Storing Lie energy creates **Lie Repulsion from Greater Good (GG $+1, +1$)**, pushing the cell southward into **Lesser Good / Water $(+1, -1)$**.
+
+#### 2. Westward Shift to Greater Evil / Fire $(-1, +1)$:
+- Selfish/corrupting processing converts stored Truth into Lies, converting Good energy into **Bad energy ($E_{\text{bad}}$)** inside the organism.
+- Accumulating Bad energy pushes the cell's balance westward across the axis into **Greater Evil / Fire $(-1, +1)$**.
+
+#### 3. Southward Shift to Lesser Evil / Earth $(-1, -1)$:
+- In Greater Evil, its use of Lies for thrusters and physical repulsion from Truth sends it southward into **Lesser Evil / Earth $(-1, -1)$**.
+
+#### 4. Truth Starvation & Fire Body Decay:
+- In Fire/Earth, the organism runs out of Truth fuel ($E_{\text{truth}} = 0.0\text{U}$).
+- Without Truth fuel to repair its Air Core, its **Fire body slowly starves and decays in HP** ($-3.0\text{ HP/s}$) until it migrates back toward Truth gradients to repair its Air Core or dies.
 
 ---
 
@@ -136,37 +160,10 @@ Selecting any cell on the canvas displays 7 verbose telemetry cards:
 
 Organisms of all climate identities can burn EITHER **Truth** fuel OR **Lie** fuel for reaction propulsion.
 
-### Thruster Logic:
-```javascript
-let fuelToBurn = null;
-if (cell.pocket.truth > 0 && cell.pocket.lie > 0) {
-    // Burn higher concentration fuel
-    fuelToBurn = cell.pocket.truth >= cell.pocket.lie ? 'truth' : 'lie';
-} else if (cell.pocket.truth > 0) {
-    fuelToBurn = 'truth';
-} else if (cell.pocket.lie > 0) {
-    fuelToBurn = 'lie';
-}
-
-if (fuelToBurn === 'truth') {
-    const fuelBurn = Math.min(cell.pocket.truth, 3.5 * delta);
-    cell.pocket.truth = Math.max(0, cell.pocket.truth - fuelBurn);
-    cell.vx += Math.cos(foodAngle) * 0.6 * thrusterForceScale * massInertia;
-    cell.vy += Math.sin(foodAngle) * 0.6 * thrusterForceScale * massInertia;
-    spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), 'truth');
-} else if (fuelToBurn === 'lie') {
-    const fuelBurn = Math.min(cell.pocket.lie, 3.5 * delta);
-    cell.pocket.lie = Math.max(0, cell.pocket.lie - fuelBurn);
-    cell.vx += Math.cos(foodAngle) * 0.6 * thrusterForceScale * massInertia;
-    cell.vy += Math.sin(foodAngle) * 0.6 * thrusterForceScale * massInertia;
-    spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), 'lie');
-}
-```
-
 ---
 
 ## 🧪 9. Verification Plan
 
 ### Manual Verification
 1. Open [hegemony_attractor_map.html](file:///e:/Vector%20Field%20Theory/VFT%20Docs/hegemony_attractor/hegemony_attractor_map.html) in any modern web browser.
-2. Verify all 4 points of the migration lifecycle and equations in real-time.
+2. Observe Good Wet (Air) actors and Bad Dry (Fire) actors execute the exact 4-phase migration loop.

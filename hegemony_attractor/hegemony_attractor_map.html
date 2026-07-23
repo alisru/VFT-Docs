@@ -165,9 +165,9 @@
             <div>
                 <h1 class="text-lg font-black tracking-tight flex items-center gap-2">
                     <span>THE PSOCHIC HEGEMONY ATTRACTOR MAP</span>
-                    <span class="badge badge-emerald">MASTER ENGINE (HOME CLIMATE ANCHOR &amp; NATIVE FOOD SEEKING)</span>
+                    <span class="badge badge-emerald">MASTER ENGINE (ALTRUISTIC AIR vs SELFISH FIRE)</span>
                 </h1>
-                <p class="text-xs font-mono" style="color: #94a3b8;">Home Climate Anchored Drift | Native Food Patch Seeking AI | Zero Center Collapse</p>
+                <p class="text-xs font-mono" style="color: #94a3b8;">Good Wet Air Actors | Selfish Dry Fire Actors | Emergent 4-Phase Migration</p>
             </div>
         </div>
 
@@ -179,7 +179,7 @@
             </div>
             <div>FPS: <span id="fpsCounter" class="font-bold" style="color: #38bdf8;">60</span></div>
             <div>ORGANISMS: <span id="actorCount" class="font-bold" style="color: #fbbf24;">0</span></div>
-            <div>SEEKING AI: <span class="font-bold" style="color: #38bdf8;">NATIVE FOOD PATCHES</span></div>
+            <div>ACTOR CLASSES: <span class="font-bold" style="color: #38bdf8;">AIR (WET) &amp; FIRE (DRY)</span></div>
         </div>
     </header>
 
@@ -511,17 +511,17 @@
                     <!-- CARD 3: 4 INTERNAL MICRO-HEGEMONY CORES & EXTRACTION ENGINE -->
                     <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(56,189,248,0.3); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex flex-col gap-2">
                         <div class="flex justify-between items-center font-bold">
-                            <span style="color: #38bdf8; text-transform: uppercase;">3. ALTRUISTIC vs SELFISH EXTRACTION ENGINE</span>
-                            <span id="inspectorExtractionBadge" class="badge badge-emerald">ALTRUISTIC: TRUTH FROM LIES</span>
+                            <span style="color: #38bdf8; text-transform: uppercase;">3. ALTRUISTIC AIR (WET) vs SELFISH FIRE (DRY) ENGINE</span>
+                            <span id="inspectorExtractionBadge" class="badge badge-emerald">AIR: TRUTH FROM LIES</span>
                         </div>
                         <div class="grid grid-cols-2 gap-2 text-xs" style="margin-top: 0.25rem;">
                             <div style="background: rgba(6,78,59,0.3); border: 1px solid rgba(52,211,153,0.3); padding: 0.4rem; border-radius: 0.5rem;">
-                                <div style="color: #4ade80; font-weight: 700;">🌱 Altruistic Core (Good)</div>
-                                <div id="airCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Extracts Truth from Lies</div>
+                                <div style="color: #4ade80; font-weight: 700;">💨 Air Core (Good Wet)</div>
+                                <div id="airCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Sacrifices Good -> Truth Fuel</div>
                             </div>
                             <div style="background: rgba(120,53,15,0.3); border: 1px solid rgba(245,158,11,0.3); padding: 0.4rem; border-radius: 0.5rem;">
-                                <div style="color: #fbbf24; font-weight: 700;">⚡ Selfish Core (Bad)</div>
-                                <div id="fireCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Extracts Lies from Truth</div>
+                                <div style="color: #fbbf24; font-weight: 700;">🔥 Fire Core (Selfish Dry)</div>
+                                <div id="fireCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Corrupts Good -> Bad Energy</div>
                             </div>
                             <div style="background: rgba(15,118,110,0.3); border: 1px solid rgba(45,212,191,0.3); padding: 0.4rem; border-radius: 0.5rem;">
                                 <div style="color: #2dd4bf; font-weight: 700;">🌊 Water Core (Good Lie)</div>
@@ -731,11 +731,11 @@
             ];
 
             actors = [
-                createFoodSeekingCell("Agape Cell", 1.0, 1.0),
+                createFoodSeekingCell("Agape Cell", 1.0, 0.0), // Good Preference (+1, 0)
                 createFoodSeekingCell("Zelos Cell", -1.0, 1.0),
                 createFoodSeekingCell("Ataraxia Cell", 1.0, -1.0),
                 createFoodSeekingCell("Tyrannis Cell", -1.0, -1.0),
-                createFoodSeekingCell("Philanthropia Cell", 1.5, 1.3)
+                createFoodSeekingCell("Philanthropia Cell", 1.0, 0.0) // Good Preference (+1, 0)
             ];
 
             secretedParticles = [];
@@ -749,7 +749,7 @@
             const climateIdentity = getClimateIdentity(u, psi);
 
             const initialPocket = {
-                good: (climateIdentity === 'air' || climateIdentity === 'water') ? 25.0 : 5.0,
+                good: (climateIdentity === 'air' || climateIdentity === 'water' || (u > 0 && psi === 0)) ? 25.0 : 5.0,
                 bad: (climateIdentity === 'fire' || climateIdentity === 'earth') ? 25.0 : 5.0,
                 truth: (climateIdentity === 'air' || climateIdentity === 'earth') ? 20.0 : 5.0,
                 lie: (climateIdentity === 'fire' || climateIdentity === 'water') ? 20.0 : 5.0
@@ -801,7 +801,7 @@
                 currentNeedTarget: 'dietFood',
                 sampledField: { good: 0, bad: 0, truth: 0, lie: 0 },
                 trail: [],
-                logs: [`Spawned Cell with ${climateIdentity.toUpperCase()} Climate Identity`]
+                logs: [`Spawned Cell at (${u.toFixed(1)}, ${psi.toFixed(1)})`]
             };
         }
 
@@ -869,7 +869,7 @@
         }
 
         // ==========================================
-        // 5. MAIN PHYSICS LOOP (HOME CLIMATE ANCHOR & NATIVE FOOD SEEKING AI)
+        // 5. MAIN PHYSICS LOOP (AIR WET vs FIRE DRY METABOLISM & MIGRATION)
         // ==========================================
         function gameLoop(timestamp) {
             if (!lastTime) lastTime = timestamp;
@@ -946,42 +946,35 @@
                             const grazeAmt = Math.min(att.foodPool, 4.0 * delta);
                             att.foodPool -= grazeAmt;
 
-                            if (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') {
-                                if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt);
+                            if (cell.u >= 0) { // Good preference / Air / Water
+                                if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.lie = Math.min(100, cell.pocket.lie + grazeAmt);
                                 else cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt * 0.5);
-                            } else {
-                                if (att.type === 'goodTruth' || att.type === 'goodLie') cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt);
+                            } else { // Bad preference / Fire / Earth
+                                if (att.type === 'goodTruth' || att.type === 'goodLie') cell.pocket.truth = Math.min(100, cell.pocket.truth + grazeAmt);
                                 else cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt * 0.5);
                             }
                         }
                     }
                 });
 
-                // ALTRUISTIC vs SELFISH EXTRACTION
+                // ==============================================================
+                // ALTRUISTIC AIR (WET) vs SELFISH FIRE (DRY) METABOLISM
+                // ==============================================================
+                // 1. ALTRUISTIC EXTRACTION (Good Core): Ingests Lie, uses up Good energy -> produces Truth fuel!
                 if (cell.pocket.good > 0 && cell.pocket.lie > 0) {
                     const extractAmt = Math.min(cell.pocket.lie, cell.pocket.good, 2.5 * delta);
                     cell.pocket.lie = Math.max(0, cell.pocket.lie - extractAmt);
-                    cell.pocket.good = Math.max(0, cell.pocket.good - extractAmt * 0.2);
+                    cell.pocket.good = Math.max(0, cell.pocket.good - extractAmt); // Uses up Good energy!
                     cell.pocket.truth = Math.min(100, cell.pocket.truth + extractAmt * metabolicEfficiencyScale);
                 }
 
-                if (cell.pocket.bad > 0 && cell.pocket.truth > 0) {
-                    const extractAmt = Math.min(cell.pocket.truth, cell.pocket.bad, 2.5 * delta);
-                    cell.pocket.truth = Math.max(0, cell.pocket.truth - extractAmt);
-                    cell.pocket.bad = Math.max(0, cell.pocket.bad - extractAmt * 0.2);
-                    cell.pocket.lie = Math.min(100, cell.pocket.lie + extractAmt * metabolicEfficiencyScale);
-                }
-
-                // Regular Diet Conversion
-                if (cell.pocket.bad > 0) {
-                    const processAmt = Math.min(cell.pocket.bad, 1.5 * delta);
-                    cell.pocket.bad = Math.max(0, cell.pocket.bad - processAmt);
-                    cell.pocket.lie = Math.min(100, cell.pocket.lie + processAmt * metabolicEfficiencyScale);
-                }
-                if (cell.pocket.good > 0) {
-                    const processAmt = Math.min(cell.pocket.good, 1.5 * delta);
+                // 2. SELFISH PROCESSING (Bad Core): Processes Truth -> Lies, converts Good energy into BAD energy!
+                if (cell.pocket.good > 0 && cell.pocket.truth > 0) {
+                    const processAmt = Math.min(cell.pocket.truth, cell.pocket.good, 2.5 * delta);
+                    cell.pocket.truth = Math.max(0, cell.pocket.truth - processAmt);
                     cell.pocket.good = Math.max(0, cell.pocket.good - processAmt);
-                    cell.pocket.truth = Math.min(100, cell.pocket.truth + processAmt * metabolicEfficiencyScale);
+                    cell.pocket.bad = Math.min(100, cell.pocket.bad + processAmt); // Converts Good to Bad!
+                    cell.pocket.lie = Math.min(100, cell.pocket.lie + processAmt * metabolicEfficiencyScale);
                 }
 
                 // BASAL BURN
@@ -992,32 +985,32 @@
                 // DYNAMIC VISUAL RADIUS & PHYSICAL MASS SCALING
                 const totalEnergy = cell.pocket.good + cell.pocket.bad + cell.pocket.truth + cell.pocket.lie;
                 cell.radius = 16.0 + Math.sqrt(totalEnergy) * 2.2;
-                const cellMass = 1.0 + (totalEnergy / 20.0);
+                const cellMass = 1.0 + (totalEnergy / 25.0);
 
                 // ==============================================================
-                // FIX: HOME CLIMATE ANCHORED CYTOPLASM DRIFT (ZERO CENTER COLLAPSE)
+                // DYNAMIC CYTOPLASM COORDINATES (NORMALIZED RATIOS)
                 // ==============================================================
-                const homeCoords = {
-                    air: { u: 1.0, psi: 1.0 },
-                    fire: { u: -1.0, psi: 1.0 },
-                    water: { u: 1.0, psi: -1.0 },
-                    earth: { u: -1.0, psi: -1.0 }
-                };
-                const home = homeCoords[cell.climateIdentity] || { u: 1.0, psi: 1.0 };
+                const goodBadDenom = Math.max(1.0, cell.pocket.good + cell.pocket.bad);
+                const truthLieDenom = Math.max(1.0, cell.pocket.truth + cell.pocket.lie);
 
-                // Shift relative to Home Climate position!
-                const u_shift = ((cell.pocket.good - cell.pocket.bad) / (totalEnergy + 1.0)) * 0.8;
-                const psi_shift = ((cell.pocket.truth - cell.pocket.lie) / (totalEnergy + 1.0)) * 0.8;
+                cell.u = (cell.pocket.good - cell.pocket.bad) / goodBadDenom;
+                cell.psi = (cell.pocket.truth - cell.pocket.lie) / truthLieDenom;
 
-                const u_cell = Math.max(-2.0, Math.min(2.0, home.u + u_shift));
-                const psi_cell = Math.max(-2.0, Math.min(2.0, home.psi + psi_shift));
+                // ==============================================================
+                // FIELD POTENTIAL REPULSION FORCES
+                // ==============================================================
+                const dh_good_x = (getLayerHeight(layerMapGood, clampedGX + 1, clampedGY) - getLayerHeight(layerMapGood, clampedGX - 1, clampedGY)) / 2;
+                const dh_good_y = (getLayerHeight(layerMapGood, clampedGX, clampedGY + 1) - getLayerHeight(layerMapGood, clampedGX, clampedGY - 1)) / 2;
 
-                const targetPx = uToPx(u_cell);
-                const targetPy = psiToPy(psi_cell);
+                const dh_truth_x = (getLayerHeight(layerMapTruth, clampedGX + 1, clampedGY) - getLayerHeight(layerMapTruth, clampedGX - 1, clampedGY)) / 2;
+                const dh_truth_y = (getLayerHeight(layerMapTruth, clampedGX, clampedGY + 1) - getLayerHeight(layerMapTruth, clampedGX, clampedGY - 1)) / 2;
 
-                // Soft metabolic drift bias
-                cell.vx += (targetPx - cell.px) * 0.005 * delta;
-                cell.vy += (targetPy - cell.py) * 0.005 * delta;
+                // Stored Lie experienced Repulsion from Truth potential (GG); Stored Bad experiences Repulsion from Good potential
+                const repulsionX = (-cell.pocket.lie * dh_truth_x - cell.pocket.bad * dh_good_x) * 0.08 / cellMass;
+                const repulsionY = (-cell.pocket.lie * dh_truth_y - cell.pocket.bad * dh_good_y) * 0.08 / cellMass;
+
+                cell.vx += repulsionX;
+                cell.vy += repulsionY;
 
                 // TRUTH STARVATION & FIRE BODY DECAY IN FIRE/EARTH DOMAIN
                 const isFireOrEarthDomain = cell.u < 0;
@@ -1043,24 +1036,22 @@
                     continue;
                 }
 
-                // ==============================================================
-                // FIX: NATIVE FOOD PATCH SEEKING AI
-                // ==============================================================
+                // NATIVE FOOD SEEKING AI
                 let targetAttractor = null;
                 let minDistToFood = 999999;
 
                 attractors.forEach(att => {
                     if (att.foodPool && att.foodPool > 10.0) {
-                        const isDietMatch = (cell.climateIdentity === 'air' || cell.climateIdentity === 'water')
+                        const isDietMatch = (cell.u >= 0)
                             ? (att.type === 'badLie' || att.type === 'badTruth')
                             : (att.type === 'goodTruth' || att.type === 'goodLie');
-                        const isHomeMatch = (cell.climateIdentity === 'air' || cell.climateIdentity === 'water')
+                        const isHomeMatch = (cell.u >= 0)
                             ? (att.type === 'goodTruth' || att.type === 'goodLie')
                             : (att.type === 'badLie' || att.type === 'badTruth');
 
                         if (isDietMatch || isHomeMatch) {
                             const attPx = uToPx(att.u);
-                            const attPy = psiToPy(att.psi);
+                            const attPy = psiToPy(att.psi); // FIXED TYPO: Used att.psi!
                             const dist = Math.sqrt((cell.px - attPx) ** 2 + (cell.py - attPy) ** 2);
                             if (dist < minDistToFood) {
                                 minDistToFood = dist;
@@ -1073,7 +1064,7 @@
                 let foodAngle = cell.wanderAngle;
                 if (targetAttractor) {
                     const attPx = uToPx(targetAttractor.u);
-                    const attPy = psiToPy(targetAttractor.u);
+                    const attPy = psiToPy(targetAttractor.psi);
                     foodAngle = Math.atan2(attPy - cell.py, attPx - cell.px);
                     cell.currentNeedTarget = targetAttractor.name;
                 } else {
@@ -1307,16 +1298,16 @@
                 ctx.closePath();
 
                 const gradient = ctx.createRadialGradient(cell.px, cell.py, 2, cell.px, cell.py, cell.radius);
-                if (cell.climateIdentity === 'air') {
+                if (cell.u >= 0 && cell.psi >= 0) { // Air
                     gradient.addColorStop(0, 'rgba(34, 197, 94, 0.8)');
                     gradient.addColorStop(1, 'rgba(56, 189, 248, 0.2)');
-                } else if (cell.climateIdentity === 'fire') {
+                } else if (cell.u <= 0 && cell.psi >= 0) { // Fire
                     gradient.addColorStop(0, 'rgba(239, 68, 68, 0.8)');
                     gradient.addColorStop(1, 'rgba(245, 158, 11, 0.2)');
-                } else if (cell.climateIdentity === 'water') {
+                } else if (cell.u >= 0 && cell.psi <= 0) { // Water
                     gradient.addColorStop(0, 'rgba(20, 184, 166, 0.8)');
                     gradient.addColorStop(1, 'rgba(56, 189, 248, 0.2)');
-                } else { // earth
+                } else { // Earth
                     gradient.addColorStop(0, 'rgba(244, 63, 94, 0.8)');
                     gradient.addColorStop(1, 'rgba(168, 85, 247, 0.2)');
                 }
@@ -1325,7 +1316,7 @@
                 ctx.fill();
 
                 const borderColors = { air: '#4ade80', fire: '#fbbf24', water: '#2dd4bf', earth: '#fda4af' };
-                ctx.strokeStyle = isSelected ? '#38bdf8' : (borderColors[cell.climateIdentity] || '#4ade80');
+                ctx.strokeStyle = isSelected ? '#38bdf8' : (borderColors[getClimateIdentity(cell.u, cell.psi)] || '#4ade80');
                 ctx.lineWidth = isSelected ? 3.0 : 2.0;
                 ctx.stroke();
 
@@ -1593,7 +1584,7 @@
                     water: { text: '🌊 WATER CLIMATE IDENTITY (Good Lie)', cls: 'badge badge-teal' },
                     earth: { text: '🪨 EARTH CLIMATE IDENTITY (Bad {Truth})', cls: 'badge badge-rose' }
                 };
-                const info = badgeMap[cell.climateIdentity] || badgeMap.air;
+                const info = badgeMap[getClimateIdentity(cell.u, cell.psi)] || badgeMap.air;
                 elemBadge.textContent = info.text;
                 elemBadge.className = info.cls;
             }
@@ -1605,7 +1596,7 @@
             setDOMText('pocketLieVal', `${cell.pocket.lie.toFixed(1)} U`);
 
             const totalEnergy = cell.pocket.good + cell.pocket.bad + cell.pocket.truth + cell.pocket.lie;
-            const cellMass = (1.0 + (totalEnergy / 20.0)).toFixed(2);
+            const cellMass = (1.0 + (totalEnergy / 25.0)).toFixed(2);
             
             const satStatus = document.getElementById('inspectorFissionStatus');
             if (satStatus) {
@@ -1632,20 +1623,20 @@
                 setDOMText('inspectorThrustForce', '0.0x (No Fuel)');
             }
 
-            // CARD 3: ALTRUISTIC vs SELFISH EXTRACTION STATUS
+            // CARD 3: ALTRUISTIC AIR (WET) vs SELFISH FIRE (DRY) STATUS
             const extBadge = document.getElementById('inspectorExtractionBadge');
             if (extBadge) {
-                if (cell.pocket.good > cell.pocket.bad) {
-                    extBadge.textContent = '🌱 ALTRUISTIC: TRUTH FROM LIES';
+                if (cell.u >= 0) {
+                    extBadge.textContent = '💨 ALTRUISTIC AIR (WET): TRUTH FROM LIES';
                     extBadge.className = 'badge badge-emerald';
                 } else {
-                    extBadge.textContent = '⚡ SELFISH: LIES FROM TRUTH';
+                    extBadge.textContent = '🔥 SELFISH FIRE (DRY): LIES FROM TRUTH';
                     extBadge.className = 'badge badge-amber';
                 }
             }
 
-            setDOMText('airCoreVal', cell.pocket.good > 0 ? `Active Good: Extracting Truth` : `Good Depleted`);
-            setDOMText('fireCoreVal', cell.pocket.bad > 0 ? `Active Bad: Extracting Lies` : `Bad Depleted`);
+            setDOMText('airCoreVal', cell.pocket.good > 0 ? `Good: Sacrifices -> Truth` : `Good Depleted`);
+            setDOMText('fireCoreVal', cell.pocket.bad > 0 ? `Bad: Corrupts Good -> Bad` : `Bad Depleted`);
 
             // CARD 4: PSOCHIC MIGRATION & CLIMATE TOXICITY
             const currClimate = getClimateIdentity(cell.u, cell.psi);
