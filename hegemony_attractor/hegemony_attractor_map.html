@@ -165,7 +165,7 @@
             <div>
                 <h1 class="text-lg font-black tracking-tight flex items-center gap-2">
                     <span>THE PSOCHIC HEGEMONY ATTRACTOR MAP</span>
-                    <span class="badge badge-emerald">MASTER ENGINE</span>
+                    <span class="badge badge-emerald">MASTER ENGINE (ALTRUISTIC AIR vs SELFISH FIRE)</span>
                 </h1>
                 <p class="text-xs font-mono" style="color: #94a3b8;">Good Wet Air Actors | Selfish Dry Fire Actors | Emergent 4-Phase Migration</p>
             </div>
@@ -179,6 +179,7 @@
             </div>
             <div>FPS: <span id="fpsCounter" class="font-bold" style="color: #38bdf8;">60</span></div>
             <div>ORGANISMS: <span id="actorCount" class="font-bold" style="color: #fbbf24;">0</span></div>
+            <div>ACTOR CLASSES: <span class="font-bold" style="color: #38bdf8;">AIR (WET) &amp; FIRE (DRY)</span></div>
         </div>
     </header>
 
@@ -703,7 +704,7 @@
         }
 
         // ==========================================
-        // 3. INITIALIZATION (INFINITE FIELD RESOURCES)
+        // 3. INITIALIZATION
         // ==========================================
         window.addEventListener('DOMContentLoaded', () => {
             canvas = document.getElementById('attractorCanvas');
@@ -722,12 +723,11 @@
         });
 
         function initDefaultSimulation() {
-            // Field Attractors have INFINITE resource capacity (Infinity)
             attractors = [
-                { id: 'gg', name: 'Good {Truth} Biome', greek: 'ἀγάπη', u: 1.0, psi: 1.0, type: 'goodTruth', radius: 90, mass: 3.0, foodPool: Infinity, maxFood: Infinity, isFixed: true },
-                { id: 'bl', name: 'Bad Lie Biome', greek: 'σοφιστεία', u: -1.0, psi: 1.0, type: 'badLie', radius: 90, mass: 3.0, foodPool: Infinity, maxFood: Infinity, isFixed: true },
-                { id: 'gl', name: 'Good Lie Biome', greek: 'ἀταραξία', u: 1.0, psi: -1.0, type: 'goodLie', radius: 90, mass: 3.0, foodPool: Infinity, maxFood: Infinity, isFixed: true },
-                { id: 'bt', name: 'Bad {Truth} Biome', greek: 'τυραννίς', u: -1.0, psi: -1.0, type: 'badTruth', radius: 90, mass: 3.0, foodPool: Infinity, maxFood: Infinity, isFixed: true }
+                { id: 'gg', name: 'Good {Truth} Biome', greek: 'ἀγάπη', u: 1.0, psi: 1.0, type: 'goodTruth', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true },
+                { id: 'bl', name: 'Bad Lie Biome', greek: 'σοφιστεία', u: -1.0, psi: 1.0, type: 'badLie', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true },
+                { id: 'gl', name: 'Good Lie Biome', greek: 'ἀταραξία', u: 1.0, psi: -1.0, type: 'goodLie', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true },
+                { id: 'bt', name: 'Bad {Truth} Biome', greek: 'τυραννίς', u: -1.0, psi: -1.0, type: 'badTruth', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true }
             ];
 
             actors = [
@@ -821,7 +821,7 @@
                 u: (Math.random() - 0.5) * 2.5,
                 psi: (Math.random() - 0.5) * 2.5,
                 type: Math.random() > 0.5 ? 'goodTruth' : 'badLie',
-                radius: 60, mass: 1.5, foodPool: Infinity, maxFood: Infinity, isFixed: false
+                radius: 60, mass: 1.5, foodPool: 100.0, maxFood: 100.0, isFixed: false
             });
 
             actors.forEach(cell => {
@@ -862,14 +862,14 @@
                 u: targetU + (Math.random() - 0.5) * 0.3,
                 psi: targetPsi + (Math.random() - 0.5) * 0.3,
                 type: type,
-                radius: 65, mass: 1.8, foodPool: Infinity, maxFood: Infinity, isFixed: false
+                radius: 65, mass: 1.8, foodPool: 120.0, maxFood: 120.0, isFixed: false
             });
 
             setDOMText('seekingStatus', `FLOODED ${type.toUpperCase()}`);
         }
 
         // ==========================================
-        // 5. MAIN PHYSICS LOOP (INFINITE FIELD GRAZING & UNCHANGING POTENTIALS)
+        // 5. MAIN PHYSICS LOOP (AIR WET vs FIRE DRY METABOLISM & MIGRATION)
         // ==========================================
         function gameLoop(timestamp) {
             if (!lastTime) lastTime = timestamp;
@@ -892,6 +892,12 @@
 
         function updateSimulation(delta, time) {
             if (stormTurbulence > 0) stormTurbulence = Math.max(0, stormTurbulence - delta * 1.5);
+
+            attractors.forEach(att => {
+                if (att.foodPool !== undefined && att.foodPool < att.maxFood) {
+                    att.foodPool = Math.min(att.maxFood, att.foodPool + 1.5 * ambientYieldScale * delta);
+                }
+            });
 
             computeLayerMaps(time);
 
@@ -932,11 +938,11 @@
                     lie: Math.max(0, Math.round(specAtCenter.lie + Math.abs(getLayerHeight(layerMapLie, clampedGX, clampedGY)) * 50))
                 };
 
-                // GRAZING FROM INFINITE UNCHANGING FIELD POTENTIAL POOLS
+                // GRAZING (Infinite/Constant Field Resources - No Depletion)
                 attractors.forEach(att => {
                     const dist = Math.sqrt((cell.px - uToPx(att.u)) ** 2 + (cell.py - psiToPy(att.psi)) ** 2);
                     if (dist < att.radius) {
-                        const grazeAmt = 4.0 * delta; // Constant non-depleting field intake
+                        const grazeAmt = 4.0 * delta;
 
                         if (cell.u >= 0) { // Good preference / Air / Water
                             if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.lie = Math.min(100, cell.pocket.lie + grazeAmt);
@@ -948,7 +954,10 @@
                     }
                 });
 
+                // ==============================================================
                 // ALTRUISTIC AIR (WET) vs SELFISH FIRE (DRY) METABOLISM
+                // ==============================================================
+                // 1. ALTRUISTIC EXTRACTION (Good Core): Ingests Lie, uses up Good energy -> produces Truth fuel!
                 if (cell.pocket.good > 0 && cell.pocket.lie > 0) {
                     const extractAmt = Math.min(cell.pocket.lie, cell.pocket.good, 2.5 * delta);
                     cell.pocket.lie = Math.max(0, cell.pocket.lie - extractAmt);
@@ -956,6 +965,7 @@
                     cell.pocket.truth = Math.min(100, cell.pocket.truth + extractAmt * metabolicEfficiencyScale);
                 }
 
+                // 2. SELFISH PROCESSING (Bad Core): Processes Truth -> Lies, converts Good energy into BAD energy!
                 if (cell.pocket.good > 0 && cell.pocket.truth > 0) {
                     const processAmt = Math.min(cell.pocket.truth, cell.pocket.good, 2.5 * delta);
                     cell.pocket.truth = Math.max(0, cell.pocket.truth - processAmt);
@@ -974,20 +984,25 @@
                 cell.radius = 16.0 + Math.sqrt(totalEnergy) * 2.2;
                 const cellMass = 1.0 + (totalEnergy / 25.0);
 
+                // ==============================================================
                 // DYNAMIC CYTOPLASM COORDINATES (NORMALIZED RATIOS)
+                // ==============================================================
                 const goodBadDenom = Math.max(1.0, cell.pocket.good + cell.pocket.bad);
                 const truthLieDenom = Math.max(1.0, cell.pocket.truth + cell.pocket.lie);
 
                 cell.u = (cell.pocket.good - cell.pocket.bad) / goodBadDenom;
                 cell.psi = (cell.pocket.truth - cell.pocket.lie) / truthLieDenom;
 
+                // ==============================================================
                 // FIELD POTENTIAL REPULSION FORCES
+                // ==============================================================
                 const dh_good_x = (getLayerHeight(layerMapGood, clampedGX + 1, clampedGY) - getLayerHeight(layerMapGood, clampedGX - 1, clampedGY)) / 2;
                 const dh_good_y = (getLayerHeight(layerMapGood, clampedGX, clampedGY + 1) - getLayerHeight(layerMapGood, clampedGX, clampedGY - 1)) / 2;
 
                 const dh_truth_x = (getLayerHeight(layerMapTruth, clampedGX + 1, clampedGY) - getLayerHeight(layerMapTruth, clampedGX - 1, clampedGY)) / 2;
                 const dh_truth_y = (getLayerHeight(layerMapTruth, clampedGX, clampedGY + 1) - getLayerHeight(layerMapTruth, clampedGX, clampedGY - 1)) / 2;
 
+                // Stored Lie experienced Repulsion from Truth potential (GG); Stored Bad experiences Repulsion from Good potential
                 const repulsionX = (-cell.pocket.lie * dh_truth_x - cell.pocket.bad * dh_good_x) * 0.08 / cellMass;
                 const repulsionY = (-cell.pocket.lie * dh_truth_y - cell.pocket.bad * dh_good_y) * 0.08 / cellMass;
 
@@ -1024,21 +1039,21 @@
 
                 attractors.forEach(att => {
                     const isDietMatch = (cell.u >= 0)
-                        ? (att.type === 'badLie' || att.type === 'badTruth')
-                        : (att.type === 'goodTruth' || att.type === 'goodLie');
-                    const isHomeMatch = (cell.u >= 0)
-                        ? (att.type === 'goodTruth' || att.type === 'goodLie')
-                        : (att.type === 'badLie' || att.type === 'badTruth');
+                            ? (att.type === 'badLie' || att.type === 'badTruth')
+                            : (att.type === 'goodTruth' || att.type === 'goodLie');
+                        const isHomeMatch = (cell.u >= 0)
+                            ? (att.type === 'goodTruth' || att.type === 'goodLie')
+                            : (att.type === 'badLie' || att.type === 'badTruth');
 
-                    if (isDietMatch || isHomeMatch) {
-                        const attPx = uToPx(att.u);
-                        const attPy = psiToPy(att.psi);
-                        const dist = Math.sqrt((cell.px - attPx) ** 2 + (cell.py - attPy) ** 2);
-                        if (dist < minDistToFood) {
-                            minDistToFood = dist;
-                            targetAttractor = att;
+                        if (isDietMatch || isHomeMatch) {
+                            const attPx = uToPx(att.u);
+                            const attPy = psiToPy(att.psi); // FIXED TYPO: Used att.psi!
+                            const dist = Math.sqrt((cell.px - attPx) ** 2 + (cell.py - attPy) ** 2);
+                            if (dist < minDistToFood) {
+                                minDistToFood = dist;
+                                targetAttractor = att;
+                            }
                         }
-                    }
                 });
 
                 let foodAngle = cell.wanderAngle;
@@ -1163,7 +1178,8 @@
                         const dy = py - psiToPy(att.psi);
                         const distSq = dx * dx + dy * dy;
                         const radiusSq = att.radius * att.radius;
-                        const effectiveMass = (att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass);
+                        const foodRatio = att.foodPool !== undefined ? (att.foodPool / att.maxFood) : 1.0;
+                        const effectiveMass = (att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass) * foodRatio;
                         const pot = -effectiveMass * Math.exp(-distSq / (2 * radiusSq));
 
                         if (att.type === 'goodTruth') { layerMapGood[idx] += pot; layerMapTruth[idx] += pot; }
@@ -1214,23 +1230,25 @@
 
                 const colorMap = { goodTruth: '#22c55e', badLie: '#d97706', goodLie: '#14b8a6', badTruth: '#ef4444' };
                 const mainColor = colorMap[att.type] || '#3b82f6';
+                const foodRatio = att.foodPool !== undefined ? Math.max(0.1, att.foodPool / att.maxFood) : 1.0;
 
                 ctx.fillStyle = mainColor;
-                ctx.globalAlpha = 0.25;
+                ctx.globalAlpha = 0.2 * foodRatio;
                 ctx.beginPath();
-                ctx.arc(px, py, att.radius * 0.6, 0, Math.PI * 2);
+                ctx.arc(px, py, att.radius * 0.6 * foodRatio, 0, Math.PI * 2);
                 ctx.fill();
 
                 ctx.globalAlpha = 1.0;
                 ctx.fillStyle = mainColor;
                 ctx.beginPath();
-                ctx.arc(px, py, 6, 0, Math.PI * 2);
+                ctx.arc(px, py, 6 * foodRatio, 0, Math.PI * 2);
                 ctx.fill();
 
                 ctx.fillStyle = '#ffffff';
                 ctx.font = 'bold 11px "Outfit"';
                 ctx.textAlign = 'center';
-                ctx.fillText(att.name, px, py - 12);
+                const poolText = att.foodPool !== undefined ? ` (${Math.round(att.foodPool)}U)` : '';
+                ctx.fillText(att.name + poolText, px, py - 12);
             });
 
             // Secreted Particles (Cyan for Truth, Amber for Lie)
@@ -1342,7 +1360,8 @@
 
                     attractors.forEach(att => {
                         const distSq = (px - uToPx(att.u)) ** 2 + (py - psiToPy(att.psi)) ** 2;
-                        const effectiveMass = (att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass);
+                        const foodRatio = att.foodPool !== undefined ? (att.foodPool / att.maxFood) : 1.0;
+                        const effectiveMass = (att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass) * foodRatio;
                         const weight = Math.exp(-distSq / (2 * sigmaSq)) * 2.5 * effectiveMass;
                         if (att.type === 'goodTruth') { dGood += weight; dTruth += weight; }
                         else if (att.type === 'badLie') { dBad += weight * 0.5; dLie += weight * 1.2; }
@@ -1464,7 +1483,7 @@
                     greek: 'ἔνεμα',
                     u, psi,
                     type: nodeType,
-                    radius: 75, mass: 2.5, foodPool: Infinity, maxFood: Infinity, isFixed: false
+                    radius: 75, mass: 2.5, foodPool: 120.0, maxFood: 120.0, isFixed: false
                 });
             } else if (clickMode === 'attractor') {
                 attractors.push({
@@ -1473,7 +1492,7 @@
                     greek: 'ἕλκον',
                     u, psi,
                     type: (u > 0 && psi > 0) ? 'goodTruth' : ((u < 0 && psi > 0) ? 'badLie' : ((u > 0 && psi < 0) ? 'goodLie' : 'badTruth')),
-                    radius: 75, mass: 2.0, foodPool: Infinity, maxFood: Infinity, isFixed: false
+                    radius: 75, mass: 2.0, foodPool: 150.0, maxFood: 150.0, isFixed: false
                 });
             }
         }
@@ -1635,7 +1654,7 @@
             setDOMText('rad5Val', `${rad.rad5 >= 0 ? '+' : ''}${rad.rad5.toFixed(2)}`);
             setDOMText('rad6Val', `${rad.rad6 >= 0 ? '+' : ''}${rad.rad6.toFixed(2)}`);
 
-            // CARD 7: MEMBRANE VITALITY & EVENT LOG
+            // CARD 7: MEMBRANE VITALITY & LOG
             setDOMText('inspectorHealthVal', `${Math.round(cell.health)} / 100 HP`);
             const hpFill = document.getElementById('inspectorHealthFill');
             if (hpFill) {
@@ -1746,7 +1765,7 @@
                 id: 'att_' + Math.random().toString(36).substr(2, 9),
                 name, greek: getGreekForName(name), u, psi,
                 type: (u > 0 && psi > 0) ? 'goodTruth' : ((u < 0 && psi > 0) ? 'badLie' : ((u > 0 && psi < 0) ? 'goodLie' : 'badTruth')),
-                radius: 75, mass: 2.0, foodPool: Infinity, maxFood: Infinity, isFixed: false
+                radius: 75, mass: 2.0, foodPool: 150.0, maxFood: 150.0, isFixed: false
             });
         }
     </script>
