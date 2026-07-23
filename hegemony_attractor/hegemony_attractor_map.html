@@ -1054,34 +1054,40 @@
                 const massInertia = 1.0 / cellMass;
                 const effectiveDrag = Math.pow(velocityDragScale, cellMass * 0.8);
 
-                // UNIVERSAL DUAL-FUEL THRUSTER ENGINE
-                let fuelToBurn = null;
-                if (cell.pocket.truth > 0 && cell.pocket.lie > 0) {
-                    fuelToBurn = cell.pocket.truth >= cell.pocket.lie ? 'truth' : 'lie';
-                } else if (cell.pocket.truth > 0) {
-                    fuelToBurn = 'truth';
-                } else if (cell.pocket.lie > 0) {
-                    fuelToBurn = 'lie';
-                }
+                // PROPORTIONAL DUAL-FUEL THRUSTER ENGINE
+                // Truth & Lie are directional fuels tied to the diagonal axes.
+                // Each fuel burns at a rate proportional to its share of total fuel —
+                // so Lie-heavy organisms burn Lie fast (Lie-axis travel: Water→Fire),
+                // while Truth-heavy organisms burn Truth fast (Truth-axis travel: Air→Earth).
+                // As one fuel depletes, the ratio shifts, naturally redirecting the organism
+                // back toward whichever axis still has fuel remaining.
+                const totalFuel = cell.pocket.truth + cell.pocket.lie;
+                const hasFuel = totalFuel > 0;
 
-                cell.activeFuelType = fuelToBurn;
+                // Dominant fuel for particle FX display
+                cell.activeFuelType = hasFuel
+                    ? (cell.pocket.truth >= cell.pocket.lie ? 'truth' : 'lie')
+                    : null;
 
-                if (fuelToBurn === 'truth') {
-                    const fuelBurn = Math.min(cell.pocket.truth, 3.5 * delta);
-                    cell.pocket.truth = Math.max(0, cell.pocket.truth - fuelBurn);
+                if (hasFuel) {
+                    const truthRatio = cell.pocket.truth / totalFuel;
+                    const lieRatio   = cell.pocket.lie   / totalFuel;
+                    const burnRate   = 3.5 * delta;
+
+                    const truthBurn = Math.min(cell.pocket.truth, burnRate * truthRatio);
+                    const lieBurn   = Math.min(cell.pocket.lie,   burnRate * lieRatio);
+
+                    cell.pocket.truth = Math.max(0, cell.pocket.truth - truthBurn);
+                    cell.pocket.lie   = Math.max(0, cell.pocket.lie   - lieBurn);
 
                     cell.vx += Math.cos(foodAngle) * 0.8 * thrusterForceScale * massInertia;
                     cell.vy += Math.sin(foodAngle) * 0.8 * thrusterForceScale * massInertia;
 
-                    if (Math.random() < 0.35) spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), 'truth');
-                } else if (fuelToBurn === 'lie') {
-                    const fuelBurn = Math.min(cell.pocket.lie, 3.5 * delta);
-                    cell.pocket.lie = Math.max(0, cell.pocket.lie - fuelBurn);
-
-                    cell.vx += Math.cos(foodAngle) * 0.8 * thrusterForceScale * massInertia;
-                    cell.vy += Math.sin(foodAngle) * 0.8 * thrusterForceScale * massInertia;
-
-                    if (Math.random() < 0.35) spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), 'lie');
+                    // Particle FX: colour matches dominant fuel being burned
+                    if (Math.random() < 0.35) {
+                        const fxType = cell.pocket.truth >= cell.pocket.lie ? 'truth' : 'lie';
+                        spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), fxType);
+                    }
                 }
 
                 if (stormTurbulence > 0) {
