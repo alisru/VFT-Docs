@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psochic Hegemony Attractor Map | 4-Plane Climate Identity Engine</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Decoupled VFT Local Database -->
+    <script src="../hegemony_db.js"></script>
+
+    <style>
+        :root {
+            --bg-dark: #04060a;
+            --panel-bg: rgba(11, 17, 32, 0.88);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --emerald: #22c55e;
+            --sky: #38bdf8;
+            --amber: #f59e0b;
+            --rose: #f43f5e;
+            --indigo: #6366f1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #f1f5f9;
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Panel */
+        .glass-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            border-radius: 1rem;
+        }
+
+        /* Smooth Canvas Container */
+        .canvas-container {
+            position: relative;
+            background: radial-gradient(circle at center, #070c18 0%, #020408 100%);
+            box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.85), 0 25px 60px rgba(0, 0, 0, 0.7);
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+
+        /* Header Layout */
+        header {
+            border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+            background: rgba(2, 6, 23, 0.9);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 0.85rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Utility Layout Classes */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .gap-1 { gap: 0.25rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+            .lg\:col-span-7 { grid-column: span 7 / span 7; }
+            .lg\:col-span-5 { grid-column: span 5 / span 5; }
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+        ::-webkit-scrollbar-thumb { background: rgba(51, 65, 85, 0.8); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.9); }
+
+        /* Typography & Badges */
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .font-bold { font-weight: 700; }
+        .font-black { font-weight: 900; }
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+
+        /* BUTTON STYLING: Dark Inactive / Solid Vibrant Sky Active */
+        .btn {
+            padding: 0.4rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(15, 23, 42, 0.8);
+            color: #94a3b8;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            color: #ffffff;
+            background: rgba(30, 41, 59, 0.9);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* PROPER ACTIVE SELECTION: Solid Sky Blue with White Text & Glow */
+        .btn-active {
+            background: #0284c7 !important;
+            color: #ffffff !important;
+            border-color: #38bdf8 !important;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+            font-weight: 700 !important;
+        }
+
+        .badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+        .badge-emerald { background: rgba(34, 197, 94, 0.1); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .badge-amber { background: rgba(245, 158, 11, 0.1); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .badge-teal { background: rgba(45, 212, 191, 0.1); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.3); }
+        .badge-rose { background: rgba(244, 63, 94, 0.1); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.3); }
+        
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="flex items-center gap-3">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, #34d399, #38bdf8, #d97706); padding: 2px;">
+                <div style="width: 100%; height: 100%; background: #020617; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #34d399; font-size: 0.85rem;" class="font-mono">
+                    VFT
+                </div>
+            </div>
+            <div>
+                <h1 class="text-lg font-black tracking-tight flex items-center gap-2">
+                    <span>THE PSOCHIC HEGEMONY ATTRACTOR MAP</span>
+                    <span class="badge badge-emerald">4-PLANE CLIMATE IDENTITY RESTORED</span>
+                </h1>
+                <p class="text-xs font-mono" style="color: #94a3b8;">Air | Fire | Water | Earth Home Biome Survival &amp; Climate Toxicity</p>
+            </div>
+        </div>
+
+        <!-- Telemetry Status Bar -->
+        <div class="flex items-center gap-6 font-mono text-xs" style="color: #94a3b8;">
+            <div class="flex items-center gap-2">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e;" class="animate-pulse"></span>
+                <span>PHYSICS: <span id="engineStatus" class="font-bold" style="color: #4ade80;">RUNNING</span></span>
+            </div>
+            <div>FPS: <span id="fpsCounter" class="font-bold" style="color: #38bdf8;">60</span></div>
+            <div>ORGANISMS: <span id="actorCount" class="font-bold" style="color: #fbbf24;">0</span></div>
+            <div>CLIMATE IDENTITY: <span class="font-bold" style="color: #4ade80;">4 PLANES ACTIVE</span></div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main style="flex: 1; padding: 1.5rem; max-width: 1920px; width: 100%; margin: 0 auto;" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- Left Column: High-Res Life Sim Environment Canvas (7 cols) -->
+        <section class="lg:col-span-7 flex flex-col gap-4">
+            
+            <!-- Canvas Frame -->
+            <div class="glass-card" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; position: relative;">
+                
+                <!-- Canvas Header Bar & Modes -->
+                <div class="flex items-center justify-between" style="padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs font-mono font-bold" style="color: #94a3b8; text-transform: uppercase; letter-spacing: 0.1em;">Multi-Dimensional Landscape</span>
+                        <div class="flex gap-1" style="background: rgba(15,23,42,0.9); padding: 0.25rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.08);">
+                            <button id="modeInspectBtn" onclick="setClickMode('inspect')" class="btn btn-active">Inspect Organism</button>
+                            <button id="modeActorBtn" onclick="setClickMode('actor')" class="btn">Seed Cell</button>
+                            <button id="modeResourceBtn" onclick="setClickMode('resource')" class="btn">Inject Field Node</button>
+                            <button id="modeAttractorBtn" onclick="setClickMode('attractor')" class="btn">Place Landmark</button>
+                        </div>
+                    </div>
+
+                    <!-- FIELD NODE TYPE PICKER DROPDOWN -->
+                    <div id="resourceTypePicker" class="hidden flex items-center gap-2 text-xs font-mono">
+                        <span style="color: #94a3b8;">Node Type:</span>
+                        <select id="resourceTypeSelect" style="background: rgba(15,23,42,0.9); border: 1px solid rgba(255,255,255,0.1); color: #f1f5f9; border-radius: 0.5rem; padding: 0.25rem 0.5rem; outline: none;">
+                            <option value="goodTruth">Good {Truth} (Green + Blue)</option>
+                            <option value="badLie">The Bad Lie (Red + Amber)</option>
+                            <option value="goodLie">Good Lie (LtGreen + Amber)</option>
+                            <option value="badTruth">The Bad {Truth} (Red + Blue)</option>
+                        </select>
+                    </div>
+
+                    <!-- Dimensional Phase Switcher -->
+                    <div class="flex items-center gap-1 font-mono text-xs">
+                        <span style="color: #94a3b8; font-size: 0.65rem;">Dimension:</span>
+                        <button onclick="setDimensionPlane('all')" id="dimBtn-all" class="btn btn-active" style="padding: 0.25rem 0.5rem;">Macro All</button>
+                        <button onclick="setDimensionPlane('air')" id="dimBtn-air" class="btn" style="padding: 0.25rem 0.5rem;">Air</button>
+                        <button onclick="setDimensionPlane('fire')" id="dimBtn-fire" class="btn" style="padding: 0.25rem 0.5rem;">Fire</button>
+                        <button onclick="setDimensionPlane('water')" id="dimBtn-water" class="btn" style="padding: 0.25rem 0.5rem;">Water</button>
+                        <button onclick="setDimensionPlane('earth')" id="dimBtn-earth" class="btn" style="padding: 0.25rem 0.5rem;">Earth</button>
+                    </div>
+                </div>
+
+                <!-- High-Res HD Canvas Element (720x720 Resolution) -->
+                <div class="canvas-container" style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center;">
+                    <canvas id="attractorCanvas" width="720" height="720" style="width: 100%; height: 100%; cursor: crosshair; object-fit: contain;"></canvas>
+                    
+                    <!-- Hover Cursor Telemetry Badge -->
+                    <div id="canvasCursorBadge" class="font-mono text-xs" style="position: absolute; bottom: 1rem; left: 1rem; pointer-events: none; background: rgba(2, 6, 23, 0.9); border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem 0.85rem; border-radius: 0.75rem; color: #38bdf8; opacity: 0; transition: opacity 0.2s ease; z-index: 30;">
+                        (u: +0.00, ψ: +0.00) | Local Field: Good:0% Bad:0% Truth:0% Lie:0%
+                    </div>
+
+                    <!-- Top/Bottom Axis Overlay -->
+                    <div class="font-mono text-xs font-bold" style="position: absolute; top: 0.75rem; left: 50%; transform: translateX(-50%); pointer-events: none; color: #38bdf8; background: rgba(2,6,23,0.8); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(56,189,248,0.3); z-index: 20;">
+                        OPTIMISM (+2ψ)
+                    </div>
+                    <div class="font-mono text-xs font-bold" style="position: absolute; bottom: 0.75rem; left: 50%; transform: translateX(-50%); pointer-events: none; color: #fbbf24; background: rgba(2,6,23,0.8); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(245,158,11,0.4); z-index: 20;">
+                        PESSIMISM (-2ψ)
+                    </div>
+
+                    <!-- PREFERENCE ANCHORS OVERLAY -->
+                    <div class="font-mono text-xs font-bold" style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); pointer-events: none; color: #4ade80; background: rgba(2,6,23,0.9); padding: 0.5rem 0.75rem; border-radius: 0.75rem; border: 1px solid rgba(34,197,94,0.4); z-index: 25; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                        GOOD PREFERENCE<br><span style="font-size: 0.6rem; color: #94a3b8; font-weight: 400;">(1,0): 100% Good, 50% Truth, 50% Lie</span>
+                    </div>
+                    <div class="font-mono text-xs font-bold" style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); pointer-events: none; color: #fda4af; background: rgba(2,6,23,0.9); padding: 0.5rem 0.75rem; border-radius: 0.75rem; border: 1px solid rgba(244,63,94,0.4); text-align: right; z-index: 25; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                        BAD PREFERENCE<br><span style="font-size: 0.6rem; color: #94a3b8; font-weight: 400;">(-1,0): 100% Bad, 50% Truth, 50% Lie</span>
+                    </div>
+
+                    <!-- Quadrant Climate Labels -->
+                    <div class="font-mono text-xs font-bold" style="position: absolute; top: 1rem; left: 1rem; pointer-events: none; color: #4ade80; background: rgba(2,6,23,0.8); padding: 0.4rem 0.6rem; border-radius: 0.75rem; border: 1px solid rgba(34,197,94,0.3); z-index: 20;">
+                        💨 AIR | GOOD {TRUTH} CLIMATE (1,1)
+                    </div>
+                    <div class="font-mono text-xs font-bold" style="position: absolute; top: 1rem; right: 1rem; pointer-events: none; color: #fbbf24; background: rgba(2,6,23,0.8); padding: 0.4rem 0.6rem; border-radius: 0.75rem; border: 1px solid rgba(245,158,11,0.3); text-align: right; z-index: 20;">
+                        🔥 FIRE | THE BAD LIE CLIMATE (-1,1)
+                    </div>
+                    <div class="font-mono text-xs font-bold" style="position: absolute; bottom: 1rem; left: 1rem; pointer-events: none; color: #2dd4bf; background: rgba(2,6,23,0.8); padding: 0.4rem 0.6rem; border-radius: 0.75rem; border: 1px solid rgba(45,212,191,0.3); z-index: 20;">
+                        🌊 WATER | GOOD LIE CLIMATE (1,-1)
+                    </div>
+                    <div class="font-mono text-xs font-bold" style="position: absolute; bottom: 1rem; right: 1rem; pointer-events: none; color: #fda4af; background: rgba(2,6,23,0.8); padding: 0.4rem 0.6rem; border-radius: 0.75rem; border: 1px solid rgba(244,63,94,0.3); text-align: right; z-index: 20;">
+                        🪨 EARTH | THE BAD {TRUTH} CLIMATE (-1,-1)
+                    </div>
+                </div>
+
+                <!-- Layer Togglers -->
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-2 text-xs font-semibold" style="margin-top: 0.25rem;">
+                    <button onclick="toggleLayer('climate')" id="layerClimateBtn" class="btn btn-active flex items-center justify-between">
+                        <span>Climate Map</span><span id="layerClimateStatus">ON</span>
+                    </button>
+                    <button onclick="toggleLayer('diagonals')" id="layerDiagonalBtn" class="btn btn-active flex items-center justify-between">
+                        <span>6 Radial Axes</span><span id="layerDiagonalStatus">ON</span>
+                    </button>
+                    <button onclick="toggleLayer('vectors')" id="layerVectorBtn" class="btn btn-active flex items-center justify-between">
+                        <span>Wind Vectors</span><span id="layerVectorStatus">ON</span>
+                    </button>
+                    <button onclick="toggleLayer('softBody')" id="layerSoftBodyBtn" class="btn btn-active flex items-center justify-between">
+                        <span>Organisms</span><span id="layerSoftBodyStatus">ON</span>
+                    </button>
+                    <button onclick="toggleLayer('trails')" id="layerTrailsBtn" class="btn btn-active flex items-center justify-between">
+                        <span>Thruster Exhaust</span><span id="layerTrailsStatus">ON</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: Dashboard & Inspector (5 cols) -->
+        <section class="lg:col-span-5 flex flex-col gap-4">
+            
+            <!-- Dashboard Tab Bar -->
+            <div class="glass-card flex text-xs font-bold" style="padding: 0.35rem; border-radius: 0.75rem;">
+                <button onclick="switchTab('controls')" id="tabBtn-controls" class="btn btn-active" style="flex: 1; text-align: center; padding: 0.6rem;">Physics Controls</button>
+                <button onclick="switchTab('explorer')" id="tabBtn-explorer" class="btn" style="flex: 1; text-align: center; padding: 0.6rem;">VFT Database</button>
+                <button onclick="switchTab('inspector')" id="tabBtn-inspector" class="btn" style="flex: 1; text-align: center; padding: 0.6rem;">Organism Inspector</button>
+            </div>
+
+            <!-- Tab 1: ALL PHYSICS CONTROLS RESTORED -->
+            <div id="tabContent-controls" class="glass-card flex flex-col gap-4" style="padding: 1.25rem; max-height: 720px; overflow-y: auto;">
+                
+                <!-- Playback Controls -->
+                <div class="flex flex-col gap-2">
+                    <div class="text-xs font-mono font-bold" style="color: #94a3b8; text-transform: uppercase;">1. Simulation Playback Controls</div>
+                    <div class="flex gap-2">
+                        <button onclick="togglePause()" id="pauseBtn" class="btn btn-active flex items-center justify-center gap-2" style="flex: 1; padding: 0.6rem; background: #16a34a !important; border-color: #22c55e !important;">
+                            <span id="pauseIcon">⏸</span> <span id="pauseText">Pause</span>
+                        </button>
+                        <button onclick="stepSimulation()" class="btn" style="padding: 0.6rem;">Step 1x</button>
+                        <button onclick="resetSimulation()" class="btn" style="padding: 0.6rem; background: rgba(225,29,72,0.2); color: #fda4af; border-color: rgba(225,29,72,0.4);">Reset Landscape</button>
+                    </div>
+                </div>
+
+                <!-- BLOOM & STORM CONTROLS -->
+                <div class="flex flex-col gap-2">
+                    <div class="text-xs font-mono font-bold" style="color: #94a3b8; text-transform: uppercase;">2. Environmental Weather Events</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <button onclick="triggerBloom()" class="btn" style="background: rgba(34,197,94,0.25); color: #4ade80; border-color: rgba(34,197,94,0.5); text-align: center; padding: 0.65rem; font-weight: 700;">
+                            🌱 TRIGGER FOOD BLOOM
+                        </button>
+                        <button onclick="triggerStorm()" class="btn" style="background: rgba(56,189,248,0.25); color: #38bdf8; border-color: rgba(56,189,248,0.5); text-align: center; padding: 0.65rem; font-weight: 700;">
+                            ⛈️ TRIGGER VECTOR STORM
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GLOBAL FIELD FLOODING CONTROLS -->
+                <div class="flex flex-col gap-2">
+                    <div class="text-xs font-mono font-bold" style="color: #94a3b8; text-transform: uppercase;">3. Global Field Flooding Actions</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <button onclick="floodField('goodTruth')" class="btn" style="background: rgba(34,197,94,0.2); color: #4ade80; border-color: rgba(34,197,94,0.4); text-align: left; padding: 0.6rem; font-weight: 700;">
+                            🌱 Flood Good {Truth}
+                        </button>
+                        <button onclick="floodField('badLie')" class="btn" style="background: rgba(245,158,11,0.2); color: #fbbf24; border-color: rgba(245,158,11,0.4); text-align: left; padding: 0.6rem; font-weight: 700;">
+                            ⚡ Flood Bad Lie
+                        </button>
+                        <button onclick="floodField('goodLie')" class="btn" style="background: rgba(45,212,191,0.2); color: #2dd4bf; border-color: rgba(45,212,191,0.4); text-align: left; padding: 0.6rem; font-weight: 700;">
+                            🌊 Flood Good Lie
+                        </button>
+                        <button onclick="floodField('badTruth')" class="btn" style="background: rgba(244,63,94,0.2); color: #fda4af; border-color: rgba(244,63,94,0.4); text-align: left; padding: 0.6rem; font-weight: 700;">
+                            🪨 Flood Bad {Truth}
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ALL 7 PHYSICS & GRAVITY CALIBRATION SLIDERS -->
+                <div class="flex flex-col gap-3" style="padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <div class="text-xs font-mono font-bold" style="color: #94a3b8; text-transform: uppercase;">4. All Physics &amp; Gravity Calibration Sliders</div>
+                    
+                    <!-- 1. Attractor Biome Mass / Field Strength -->
+                    <div class="flex flex-col gap-1 text-xs">
+                        <div class="flex justify-between font-semibold">
+                            <span>1. Attractor Biome Mass / Field Potential</span>
+                            <span id="attractorMassVal" class="font-mono" style="color: #38bdf8;">3.0x</span>
+                        </div>
+                        <input type="range" id="attractorMassSlider" min="0.5" max="6.0" step="0.1" value="3.0" oninput="updateSliders()" style="width: 100%; cursor: pointer;">
+                    </div>
+
+                    <!-- 2. Thruster Force Acceleration -->
+                    <div class="flex flex-col gap-1 text-xs">
+                        <div class="flex justify-between font-semibold">
+                            <span>2. Food Gradient Thruster Acceleration</span>
+                            <span id="thrusterVal" class="font-mono" style="color: #38bdf8;">1.5x</span>
+                        </div>
+                        <input type="range" id="thrusterSlider" min="0.2" max="4.0" step="0.1" value="1.5" oninput="updateSliders()" style="width: 100%; cursor: pointer;">
+                    </div>
+
+                    <!-- 3. Like-Pulls-Like Dimensional Gravity -->
+                    <div class="flex flex-col gap-1 text-xs">
+                        <div class="flex justify-between font-semibold">
+                            <span>3. Like-Pulls-Like Dimensional Gravity</span>
+                            <span id="homeGravityVal" class="font-mono" style="color: #4ade80;">1.2x</span>
+                        </div>
+                        <input type="range" id="homeGravitySlider" min="0.1" max="3.0" step="0.1" value="1.2" oninput="updateSliders()" style="width: 100%; cursor: pointer;">
+                    </div>
+
+                    <!-- 4. Membrane Elasticity & Wobble Stiffness -->
+                    <div class="flex flex-col gap-1 text-xs">
+                        <div class="flex justify-between font-semibold">
+                            <span>4. Membrane Elasticity &amp; Wobble Stiffness</span>
+                            <span id="membraneElasticityVal" class="font-mono" style="color: #fbbf24;">1.0x</span>
+                        </div>
+                        <input type="range" id="membraneElasticitySlider" min="0.2" max="3.0" step="0.1" value="1.0" oninput="updateSliders()" style="width: 100%; cursor: pointer;">
+                    </div>
+
+                    <!-- 5. Field Velocity Resistance / Drag -->
+                    <div class="flex flex-col gap-1 text-xs">
+                        <div class="flex justify-between font-semibold">
+                            <span>5. Field Velocity Resistance / Medium Drag</span>
+                            <span id="dragVal" class="font-mono" style="color: #fda4af;">0.92</span>
+                        </div>
+                        <input type="range" id="dragSlider" min="0.80" max="0.99" step="0.01" value="0.92" oninput="updateSliders()" style="width: 100%; cursor: pointer;">
+                    </div>
+
+                    <!-- 6. Ambient Biome Food Yield Rate -->
+                    <div class="flex flex-col gap-1 text-xs">
+                        <div class="flex justify-between font-semibold">
+                            <span>6. Ambient Biome Food Yield Rate</span>
+                            <span id="yieldRateVal" class="font-mono" style="color: #34d399;">1.0x</span>
+                        </div>
+                        <input type="range" id="yieldRateSlider" min="0.2" max="3.0" step="0.1" value="1.0" oninput="updateSliders()" style="width: 100%; cursor: pointer;">
+                    </div>
+
+                    <!-- 7. Metabolic Diet Conversion Efficiency -->
+                    <div class="flex flex-col gap-1 text-xs">
+                        <div class="flex justify-between font-semibold">
+                            <span>7. Metabolic Diet Fuel Conversion Efficiency</span>
+                            <span id="metabolicEffVal" class="font-mono" style="color: #2dd4bf;">1.0x</span>
+                        </div>
+                        <input type="range" id="metabolicEffSlider" min="0.2" max="3.0" step="0.1" value="1.0" oninput="updateSliders()" style="width: 100%; cursor: pointer;">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tab 2: VFT Database Explorer -->
+            <div id="tabContent-explorer" class="hidden glass-card flex flex-col gap-4" style="padding: 1.25rem; overflow: hidden;">
+                <div class="flex items-center justify-between">
+                    <div class="text-xs font-mono font-bold" style="color: #94a3b8; text-transform: uppercase;">VFT Hegemony Database (300+ Nodes)</div>
+                    <span class="badge badge-emerald">Loaded</span>
+                </div>
+
+                <div class="flex gap-2 text-xs">
+                    <input type="text" id="dbSearchInput" oninput="filterDatabase()" placeholder="Search by concept name..." style="flex: 1; background: rgba(15,23,42,0.9); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 0.5rem 0.75rem; border-radius: 0.5rem; outline: none;">
+                    <select id="dbQuadrantFilter" onchange="filterDatabase()" style="background: rgba(15,23,42,0.9); border: 1px solid rgba(255,255,255,0.1); color: #cbd5e1; padding: 0.5rem; border-radius: 0.5rem; outline: none;">
+                        <option value="all">All Dimensions</option>
+                        <option value="goodTruth">Air: Good {Truth}</option>
+                        <option value="badLie">Fire: Bad Lie</option>
+                        <option value="goodLie">Water: Good Lie</option>
+                        <option value="badTruth">Earth: Bad {Truth}</option>
+                    </select>
+                </div>
+
+                <div style="flex: 1; overflow-y: auto; border: 1px solid rgba(255,255,255,0.08); border-radius: 0.5rem; background: rgba(2,6,23,0.6); padding: 0.25rem;">
+                    <table style="width: 100%; text-align: left; font-size: 0.75rem; color: #cbd5e1;">
+                        <thead style="font-size: 0.65rem; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; background: rgba(15,23,42,0.9); color: #94a3b8; sticky: top;">
+                            <tr>
+                                <th style="padding: 0.5rem;">Name / Greek</th>
+                                <th style="padding: 0.5rem;">Coord (u, ψ)</th>
+                                <th style="padding: 0.5rem; text-align: right;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dbTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab 3: FULL VERBOSE ORGANISM INSPECTOR (7 CARDS + 4-PLANE CLIMATE IDENTITY) -->
+            <div id="tabContent-inspector" class="hidden glass-card flex flex-col gap-3" style="padding: 1.25rem; overflow-y: auto;">
+                <div id="noActorSelectedState" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; color: #64748b;" class="gap-2">
+                    <div style="font-size: 2.5rem;">🦠</div>
+                    <div class="font-bold text-sm" style="color: #94a3b8;">No Organism Selected</div>
+                    <p class="text-xs">Click any organism on the climate map to inspect all 7 Telemetry Cards in verbose detail.</p>
+                </div>
+
+                <div id="actorDetailContainer" class="hidden flex flex-col gap-3" style="flex: 1;">
+                    <!-- Organism Header Banner -->
+                    <div class="flex items-start justify-between" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.65rem;">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span id="inspectorActorGreek" class="font-mono text-xs" style="color: #38bdf8; font-style: italic;"></span>
+                                <span id="inspectorActorElement" class="badge badge-emerald">💨 AIR CLIMATE ORGANISM</span>
+                            </div>
+                            <h3 id="inspectorActorName" class="text-xl font-black" style="color: #fff;">Organism Name</h3>
+                        </div>
+                        <div class="font-mono text-right">
+                            <div id="inspectorActorCoord" class="text-sm font-bold" style="color: #4ade80;">(u: +0.00, ψ: +0.00)</div>
+                            <div id="inspectorActorZone" class="text-xs" style="color: #94a3b8;">Confusion Zone</div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 1: POCKET CYTOPLASM & RESOURCE-BASED MASS DRAG -->
+                    <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(56,189,248,0.3); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex flex-col gap-2">
+                        <div class="flex justify-between items-center font-bold">
+                            <span style="color: #38bdf8; text-transform: uppercase;">1. CYTOPLASM MASS &amp; INERTIAL DRAG</span>
+                            <span id="inspectorFissionStatus" class="badge badge-emerald">MASS: 1.50 | DRAG: HIGH</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs" style="margin-top: 0.25rem;">
+                            <div style="background: rgba(6,78,59,0.3); border: 1px solid rgba(52,211,153,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #4ade80; font-weight: 700;">Stored Good</div>
+                                <div id="pocketGoodVal" style="color: #fff; font-size: 0.85rem; font-weight: 700;">25.0 U</div>
+                            </div>
+                            <div style="background: rgba(136,19,55,0.3); border: 1px solid rgba(251,113,133,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #fda4af; font-weight: 700;">Stored Bad (Diet)</div>
+                                <div id="pocketBadVal" style="color: #fff; font-size: 0.85rem; font-weight: 700;">14.2 U</div>
+                            </div>
+                            <div style="background: rgba(12,74,110,0.3); border: 1px solid rgba(56,189,248,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #38bdf8; font-weight: 700;">Stored Truth (Fuel)</div>
+                                <div id="pocketTruthVal" style="color: #fff; font-size: 0.85rem; font-weight: 700;">30.0 U</div>
+                            </div>
+                            <div style="background: rgba(120,53,15,0.3); border: 1px solid rgba(245,158,11,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #fbbf24; font-weight: 700;">Stored Lie (Fuel)</div>
+                                <div id="pocketLieVal" style="color: #fff; font-size: 0.85rem; font-weight: 700;">10.0 U</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: REACTION PROPULSION THRUSTER ENGINE -->
+                    <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(52,211,153,0.3); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex justify-between items-center">
+                        <div>
+                            <span style="color: #4ade80; text-transform: uppercase; font-weight: 700; font-size: 0.65rem;">2. REACTION PROPULSION THRUSTER:</span>
+                            <div id="inspectorThrusterStatus" style="color: #fff; font-weight: 700;">Firing Fuel toward +∇ Food</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="color: #94a3b8; text-transform: uppercase; font-weight: 700; font-size: 0.65rem;">THRUST FORCE:</span>
+                            <div id="inspectorThrustForce" style="color: #2dd4bf; font-weight: 700;">1.5x ∇F</div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: 4 INTERNAL MICRO-HEGEMONY CORES -->
+                    <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(56,189,248,0.3); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex flex-col gap-2">
+                        <div class="flex justify-between items-center font-bold">
+                            <span style="color: #38bdf8; text-transform: uppercase;">3. 4 INTERNAL MICRO-HEGEMONY CORES</span>
+                            <span class="badge badge-emerald">CORES ACTIVE</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs" style="margin-top: 0.25rem;">
+                            <div style="background: rgba(6,78,59,0.3); border: 1px solid rgba(52,211,153,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #4ade80; font-weight: 700;">💨 Air Core (Good {Truth})</div>
+                                <div id="airCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Repaired: G{T} | Damaged: B{T}</div>
+                            </div>
+                            <div style="background: rgba(120,53,15,0.3); border: 1px solid rgba(245,158,11,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #fbbf24; font-weight: 700;">🔥 Fire Core (Bad Lie)</div>
+                                <div id="fireCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Lie Thruster Metabolism</div>
+                            </div>
+                            <div style="background: rgba(15,118,110,0.3); border: 1px solid rgba(45,212,191,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #2dd4bf; font-weight: 700;">🌊 Water Core (Good Lie)</div>
+                                <div id="waterCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Suppressive Membrane Veil</div>
+                            </div>
+                            <div style="background: rgba(136,19,55,0.3); border: 1px solid rgba(251,113,133,0.3); padding: 0.4rem; border-radius: 0.5rem;">
+                                <div style="color: #fda4af; font-weight: 700;">🪨 Earth Core (Bad {Truth})</div>
+                                <div id="earthCoreVal" style="color: #fff; font-size: 0.72rem; margin-top: 2px;">Repaired: B{T} | Damaged: G{T}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4: CLIMATE IDENTITY & SURVIVAL RULES -->
+                    <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(56,189,248,0.3); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex flex-col gap-1">
+                        <div class="flex justify-between items-center font-bold">
+                            <span style="color: #38bdf8; text-transform: uppercase;">4. CLIMATE IDENTITY &amp; SURVIVAL RULES</span>
+                            <span id="inspectorSeekingTarget" class="badge badge-emerald">SEEKING NEEDED RESOURCE</span>
+                        </div>
+                        <div id="inspectorSeekingDetails" style="color: #cbd5e1; font-size: 0.75rem; margin-top: 2px;">
+                            Evaluating climate toxicity &amp; seeking target food.
+                        </div>
+                    </div>
+
+                    <!-- CARD 5: SAMPLED FIELD VOLUME SAMPLING -->
+                    <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex flex-col gap-1">
+                        <div style="color: #38bdf8; text-transform: uppercase; font-weight: 700; font-size: 0.65rem;">5. SAMPLED FIELD VOLUME WITHIN MEMBRANE</div>
+                        <div id="inspectorSampledField" style="color: #cbd5e1;">Climate Good: 45% | Truth: 60% | Bad: 10% | Lie: 5%</div>
+                    </div>
+
+                    <!-- CARD 6: 6 RADIAL AXES DECOMPOSITION -->
+                    <div style="background: rgba(2,6,23,0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.75rem; padding: 0.75rem;" class="font-mono text-xs flex flex-col gap-1">
+                        <div style="color: #94a3b8; text-transform: uppercase; font-weight: 700; font-size: 0.65rem;">6. 6 RADIAL AXES DECOMPOSITION (0 - 2.0)</div>
+                        <div class="grid grid-cols-2 gap-2 text-xs" style="margin-top: 0.25rem;">
+                            <div><span style="color: #4ade80; font-weight: 700;">1. Good (+u):</span> <span id="rad1Val" style="color: #f1f5f9;">+1.00</span></div>
+                            <div><span style="color: #fda4af; font-weight: 700;">4. Bad (-u):</span> <span id="rad4Val" style="color: #f1f5f9;">0.00</span></div>
+                            <div><span style="color: #38bdf8; font-weight: 700;">2. Prod Truth (+T):</span> <span id="rad2Val" style="color: #f1f5f9;">+1.41</span></div>
+                            <div><span style="color: #f43f5e; font-weight: 700;">5. Destr Truth (-T):</span> <span id="rad5Val" style="color: #f1f5f9;">0.00</span></div>
+                            <div><span style="color: #fbbf24; font-weight: 700;">3. Active Lie (+L):</span> <span id="rad3Val" style="color: #f1f5f9;">0.00</span></div>
+                            <div><span style="color: #2dd4bf; font-weight: 700;">6. Suppr Veil (-L):</span> <span id="rad6Val" style="color: #f1f5f9;">0.00</span></div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 7: MEMBRANE VITALITY & EVENT LOG -->
+                    <div class="flex flex-col gap-2 font-mono text-xs" style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.5rem;">
+                        <div class="flex justify-between items-center">
+                            <span style="color: #94a3b8; font-weight: 700; text-transform: uppercase;">7. MEMBRANE VITALITY &amp; LOG</span>
+                            <span id="inspectorHealthVal" style="color: #4ade80; font-weight: 700;">100 / 100 HP</span>
+                        </div>
+                        <div style="height: 6px; width: 100%; background: rgba(15,23,42,0.9); border-radius: 9999px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                            <div id="inspectorHealthFill" style="height: 100%; width: 100%; background: #22c55e; transition: width 0.3s ease;"></div>
+                        </div>
+                        <div id="inspectorLogContainer" style="background: rgba(2,6,23,0.8); border: 1px solid rgba(255,255,255,0.08); padding: 0.5rem; border-radius: 0.5rem; font-size: 0.65rem; color: #cbd5e1; max-height: 90px; overflow-y: auto;">
+                            <div style="color: #64748b; font-style: italic;">No events logged yet.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // ==========================================
+        // 1. GLOBAL STATE & CONSTANTS
+        // ==========================================
+        const CANVAS_SIZE = 720;
+        const GRID_RES = 120;
+        
+        let canvas, ctx;
+        let isRunning = true;
+        let lastTime = 0;
+        let simTime = 0;
+        let fps = 60;
+        
+        let clickMode = 'inspect';
+        let activeDimensionPlane = 'all';
+        
+        // ALL 7 PHYSICS & GRAVITY PARAMETERS
+        let attractorMassScale = 3.0;
+        let thrusterForceScale = 1.5;
+        let homeGravityScale = 1.2;
+        let membraneElasticityScale = 1.0;
+        let velocityDragScale = 0.92;
+        let ambientYieldScale = 1.0;
+        let metabolicEfficiencyScale = 1.0;
+
+        let stormTurbulence = 0.0;
+
+        const layers = {
+            climate: true,
+            diagonals: true,
+            vectors: true,
+            topography: true,
+            softBody: true,
+            trails: true
+        };
+
+        let attractors = [];
+        let actors = [];
+        let secretedParticles = [];
+        let selectedActor = null;
+
+        const layerMapGood = new Float32Array(GRID_RES * GRID_RES);
+        const layerMapTruth = new Float32Array(GRID_RES * GRID_RES);
+        const layerMapBad = new Float32Array(GRID_RES * GRID_RES);
+        const layerMapLie = new Float32Array(GRID_RES * GRID_RES);
+
+        let vftDatabase = [];
+
+        function setDOMText(id, text) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = text;
+        }
+
+        // ==========================================
+        // 2. PARAMETRICS & CLIMATE FIELD MATH
+        // ==========================================
+        function computeParametricSpectrum(u, psi) {
+            let good = 0, bad = 0, truth = 0, lie = 0;
+
+            if (Math.abs(psi) < 0.2 && Math.abs(u - 1.0) < 0.3) return { good: 100, bad: 0, truth: 50, lie: 50 };
+            if (Math.abs(psi) < 0.2 && Math.abs(u + 1.0) < 0.3) return { good: 0, bad: 100, truth: 50, lie: 50 };
+
+            if (u >= 0 && psi >= 0) {
+                const uNorm = Math.min(2.0, u) / 1.0;
+                const psiNorm = Math.min(2.0, psi) / 1.0;
+                good = Math.min(100, Math.round(uNorm * 50 + psiNorm * 25));
+                truth = Math.min(100, Math.round(psiNorm * 50 + uNorm * 25));
+            } else if (u <= 0 && psi >= 0) {
+                const uAbs = Math.min(2.0, Math.abs(u)) / 1.0;
+                const psiNorm = Math.min(2.0, psi) / 1.0;
+                lie = Math.min(100, Math.round(psiNorm * 50 + uAbs * 25));
+                bad = Math.min(100, Math.round(uAbs * 25));
+            } else if (u <= 0 && psi <= 0) {
+                const uAbs = Math.min(2.0, Math.abs(u)) / 1.0;
+                const psiAbs = Math.min(2.0, Math.abs(psi)) / 1.0;
+                bad = Math.min(100, Math.round(uAbs * 50 + psiAbs * 25));
+                truth = Math.min(100, Math.round(psiAbs * 25));
+            } else {
+                const uNorm = Math.min(2.0, u) / 1.0;
+                const psiAbs = Math.min(2.0, Math.abs(psi)) / 1.0;
+                good = Math.min(100, Math.round(uNorm * 25));
+                lie = Math.min(100, Math.round(psiAbs * 25));
+            }
+
+            return { good, bad, truth, lie };
+        }
+
+        function compute6RadialAxes(u, psi) {
+            const rad1 = Math.max(0, u);
+            const rad2 = Math.max(0, (u + psi) / Math.SQRT2);
+            const rad3 = Math.max(0, (-u + psi) / Math.SQRT2);
+            const rad4 = Math.max(0, -u);
+            const rad5 = Math.max(0, (-u - psi) / Math.SQRT2);
+            const rad6 = Math.max(0, (u - psi) / Math.SQRT2);
+            return { rad1, rad2, rad3, rad4, rad5, rad6 };
+        }
+
+        function uToPx(u) { return (1.0 - (u / 2.0)) * (CANVAS_SIZE / 2.0); }
+        function pxToU(px) { return 2.0 * (1.0 - (px / (CANVAS_SIZE / 2.0))); }
+        function psiToPy(psi) { return (1.0 - (psi / 2.0)) * (CANVAS_SIZE / 2.0); }
+        function pyToPsi(py) { return 2.0 * (1.0 - (py / (CANVAS_SIZE / 2.0))); }
+
+        function getZoneName(u, psi) {
+            if (Math.abs(u) < 0.35 && Math.abs(psi) < 0.35) return "Confusion Zone";
+            if (u > 0 && psi > 0) return "Air: Good {Truth}";
+            if (u < 0 && psi > 0) return "Fire: The Bad Lie";
+            if (u > 0 && psi < 0) return "Water: Good Lie";
+            return "Earth: The Bad {Truth}";
+        }
+
+        function getClimateIdentity(u, psi) {
+            if (u >= 0 && psi >= 0) return 'air';
+            if (u <= 0 && psi >= 0) return 'fire';
+            if (u >= 0 && psi <= 0) return 'water';
+            return 'earth';
+        }
+
+        // ==========================================
+        // 3. INITIALIZATION WITH EXPLICIT 4 CLIMATE IDENTITIES
+        // ==========================================
+        window.addEventListener('DOMContentLoaded', () => {
+            canvas = document.getElementById('attractorCanvas');
+            ctx = canvas.getContext('2d');
+
+            if (window.hegemonyLovesExternal && Array.isArray(window.hegemonyLovesExternal)) {
+                vftDatabase = window.hegemonyLovesExternal;
+            }
+
+            canvas.addEventListener('mousemove', handleCanvasMouseMove);
+            canvas.addEventListener('click', handleCanvasClick);
+
+            renderDatabaseTable(vftDatabase);
+            initDefaultSimulation();
+            requestAnimationFrame(gameLoop);
+        });
+
+        function initDefaultSimulation() {
+            attractors = [
+                { id: 'gg', name: 'Good {Truth} Biome', greek: 'ἀγάπη', u: 1.0, psi: 1.0, type: 'goodTruth', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true },
+                { id: 'bl', name: 'Bad Lie Biome', greek: 'σοφιστεία', u: -1.0, psi: 1.0, type: 'badLie', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true },
+                { id: 'gl', name: 'Good Lie Biome', greek: 'ἀταραξία', u: 1.0, psi: -1.0, type: 'goodLie', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true },
+                { id: 'bt', name: 'Bad {Truth} Biome', greek: 'τυραννίς', u: -1.0, psi: -1.0, type: 'badTruth', radius: 90, mass: 3.0, foodPool: 150.0, maxFood: 200.0, isFixed: true }
+            ];
+
+            actors = [
+                createFoodSeekingCell("Agape Cell", 1.0, 1.0),
+                createFoodSeekingCell("Zelos Cell", -1.0, 1.0),
+                createFoodSeekingCell("Ataraxia Cell", 1.0, -1.0),
+                createFoodSeekingCell("Tyrannis Cell", -1.0, -1.0),
+                createFoodSeekingCell("Philanthropia Cell", 1.5, 1.3)
+            ];
+
+            secretedParticles = [];
+            selectActor(actors[0]);
+        }
+
+        function createFoodSeekingCell(name, u, psi) {
+            const px = uToPx(u);
+            const py = psiToPy(psi);
+            const baseRadius = 24;
+            const numVertices = 14;
+
+            const vertices = [];
+            for (let i = 0; i < numVertices; i++) {
+                const angle = (i / numVertices) * Math.PI * 2;
+                vertices.push({
+                    angle: angle,
+                    baseRadius: baseRadius,
+                    r: baseRadius,
+                    vx: 0, vy: 0,
+                    x: px + Math.cos(angle) * baseRadius,
+                    y: py + Math.sin(angle) * baseRadius
+                });
+            }
+
+            const climateIdentity = getClimateIdentity(u, psi);
+
+            return {
+                id: 'cell_' + Math.random().toString(36).substr(2, 9),
+                name: name,
+                greek: getGreekForName(name),
+                px: px,
+                py: py,
+                vx: (Math.random() - 0.5) * 1.0,
+                vy: (Math.random() - 0.5) * 1.0,
+                u: u,
+                psi: psi,
+                radius: baseRadius,
+                vertices: vertices,
+                climateIdentity: climateIdentity, // 'air', 'fire', 'water', 'earth'
+                wanderAngle: Math.random() * Math.PI * 2,
+                health: 100,
+
+                cores: {
+                    airGoodTruth: 100,
+                    earthBadTruth: 100,
+                    fireBadLie: 100,
+                    waterGoodLie: 100
+                },
+
+                pocket: {
+                    good: (climateIdentity === 'air' || climateIdentity === 'water') ? 25.0 : 5.0,
+                    bad: (climateIdentity === 'fire' || climateIdentity === 'earth') ? 25.0 : 5.0,
+                    truth: (climateIdentity === 'air' || climateIdentity === 'earth') ? 20.0 : 5.0,
+                    lie: (climateIdentity === 'fire' || climateIdentity === 'water') ? 20.0 : 5.0
+                },
+
+                currentNeedTarget: 'dietFood',
+                sampledField: { good: 0, bad: 0, truth: 0, lie: 0 },
+                trail: [],
+                logs: [`Spawned Cell with ${climateIdentity.toUpperCase()} Climate Identity`]
+            };
+        }
+
+        function getGreekForName(name) {
+            const found = vftDatabase.find(item => item.name.toLowerCase() === name.toLowerCase());
+            return found ? found.greek : 'ψυχή';
+        }
+
+        // ==========================================
+        // 4. BLOOM & STORM EVENTS
+        // ==========================================
+        function triggerBloom() {
+            attractors.push({
+                id: 'bloom_' + Math.random().toString(36).substr(2, 9),
+                name: 'Bloom Patch',
+                greek: 'ἀνθοφορία',
+                u: (Math.random() - 0.5) * 2.5,
+                psi: (Math.random() - 0.5) * 2.5,
+                type: Math.random() > 0.5 ? 'goodTruth' : 'badLie',
+                radius: 60, mass: 1.5, foodPool: 100.0, maxFood: 100.0, isFixed: false
+            });
+
+            actors.forEach(cell => {
+                cell.pocket.good = Math.min(100, cell.pocket.good + 15);
+                cell.pocket.bad = Math.min(100, cell.pocket.bad + 15);
+                cell.logs.unshift("🌱 Grazed Food Surge from Environment Bloom!");
+            });
+
+            setDOMText('seekingStatus', 'FOOD BLOOM SURGE ACTIVE');
+        }
+
+        function triggerStorm() {
+            stormTurbulence = 3.5;
+            actors.forEach(cell => {
+                cell.vx += (Math.random() - 0.5) * 8.0;
+                cell.vy += (Math.random() - 0.5) * 8.0;
+                cell.logs.unshift("⛈️ Vector Storm Turbulence Encountered!");
+            });
+
+            setDOMText('seekingStatus', 'VECTOR STORM TURBULENCE');
+        }
+
+        function floodField(type) {
+            actors.forEach(cell => {
+                if (type === 'goodTruth') { cell.pocket.good = Math.min(100, cell.pocket.good + 20); }
+                else if (type === 'badLie') { cell.pocket.bad = Math.min(100, cell.pocket.bad + 20); }
+                else if (type === 'goodLie') { cell.pocket.good = Math.min(100, cell.pocket.good + 20); }
+                else if (type === 'badTruth') { cell.pocket.bad = Math.min(100, cell.pocket.bad + 20); }
+            });
+
+            const targetU = (type === 'goodTruth' || type === 'goodLie') ? 1.0 : -1.0;
+            const targetPsi = (type === 'goodTruth' || type === 'badLie') ? 1.0 : -1.0;
+
+            attractors.push({
+                id: 'inj_' + Math.random().toString(36).substr(2, 9),
+                name: 'Transient Flood Node',
+                greek: 'ἔνεμα',
+                u: targetU + (Math.random() - 0.5) * 0.3,
+                psi: targetPsi + (Math.random() - 0.5) * 0.3,
+                type: type,
+                radius: 65, mass: 1.8, foodPool: 120.0, maxFood: 120.0, isFixed: false
+            });
+
+            setDOMText('seekingStatus', `FLOODED ${type.toUpperCase()}`);
+        }
+
+        // ==========================================
+        // 5. MAIN PHYSICS LOOP (WITH 4-PLANE CLIMATE IDENTITY DIET & TOXICITY)
+        // ==========================================
+        function gameLoop(timestamp) {
+            if (!lastTime) lastTime = timestamp;
+            const delta = (timestamp - lastTime) / 1000;
+            lastTime = timestamp;
+
+            if (delta > 0) {
+                fps = Math.round(1 / delta);
+                setDOMText('fpsCounter', fps);
+            }
+
+            if (isRunning) {
+                simTime += delta;
+                updateSimulation(delta, simTime);
+            }
+
+            renderSimulation();
+            requestAnimationFrame(gameLoop);
+        }
+
+        function updateSimulation(delta, time) {
+            if (stormTurbulence > 0) stormTurbulence = Math.max(0, stormTurbulence - delta * 1.5);
+
+            attractors.forEach(att => {
+                if (att.foodPool !== undefined && att.foodPool < att.maxFood) {
+                    att.foodPool = Math.min(att.maxFood, att.foodPool + 1.5 * ambientYieldScale * delta);
+                }
+            });
+
+            computeLayerMaps(time);
+
+            // SECRETED PARTICLES
+            for (let i = secretedParticles.length - 1; i >= 0; i--) {
+                const p = secretedParticles[i];
+                const homePx = uToPx(p.type === 'truth' ? 1.0 : -1.0);
+                const homePy = psiToPy(p.type === 'truth' ? 1.0 : 1.0);
+
+                const dx = homePx - p.px;
+                const dy = homePy - p.py;
+                const dist = Math.sqrt(dx * dx + dy * dy) + 0.001;
+
+                p.vx += (dx / dist) * 0.4 * homeGravityScale;
+                p.vy += (dy / dist) * 0.4 * homeGravityScale;
+
+                p.px += p.vx;
+                p.py += p.vy;
+                p.vx *= velocityDragScale;
+                p.vy *= velocityDragScale;
+
+                p.life -= delta * 0.3;
+                if (p.life <= 0) secretedParticles.splice(i, 1);
+            }
+
+            for (let i = actors.length - 1; i >= 0; i--) {
+                const cell = actors[i];
+                const gx = Math.floor((cell.px / CANVAS_SIZE) * GRID_RES);
+                const gy = Math.floor((cell.py / CANVAS_SIZE) * GRID_RES);
+                const clampedGX = Math.max(1, Math.min(GRID_RES - 2, gx));
+                const clampedGY = Math.max(1, Math.min(GRID_RES - 2, gy));
+
+                const specAtCenter = computeParametricSpectrum(cell.u, cell.psi);
+                cell.sampledField = {
+                    good: Math.max(0, Math.round(specAtCenter.good + Math.abs(getLayerHeight(layerMapGood, clampedGX, clampedGY)) * 50)),
+                    bad: Math.max(0, Math.round(specAtCenter.bad + Math.abs(getLayerHeight(layerMapBad, clampedGX, clampedGY)) * 50)),
+                    truth: Math.max(0, Math.round(specAtCenter.truth + Math.abs(getLayerHeight(layerMapTruth, clampedGX, clampedGY)) * 50)),
+                    lie: Math.max(0, Math.round(specAtCenter.lie + Math.abs(getLayerHeight(layerMapLie, clampedGX, clampedGY)) * 50))
+                };
+
+                // ==============================================================
+                // 1. 4-PLANE CLIMATE IDENTITY GRAZING & DIET SURVIVAL
+                // ==============================================================
+                attractors.forEach(att => {
+                    if (att.foodPool && att.foodPool > 0) {
+                        const dist = Math.sqrt((cell.px - uToPx(att.u)) ** 2 + (cell.py - psiToPy(att.psi)) ** 2);
+                        if (dist < att.radius) {
+                            const grazeAmt = Math.min(att.foodPool, 4.0 * delta);
+                            att.foodPool -= grazeAmt;
+
+                            if (cell.climateIdentity === 'air') {
+                                // Air: Grazes Bad food -> Converts to Truth fuel
+                                if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt);
+                                else cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt * 0.5);
+                            } else if (cell.climateIdentity === 'fire') {
+                                // Fire: Grazes Good food -> Converts to Lie fuel
+                                if (att.type === 'goodTruth' || att.type === 'goodLie') cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt);
+                                else cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt * 0.5);
+                            } else if (cell.climateIdentity === 'water') {
+                                // Water: Grazes Bad food -> Converts to Lie fuel (Veil)
+                                if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt);
+                                else cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt * 0.5);
+                            } else if (cell.climateIdentity === 'earth') {
+                                // Earth: Grazes Good food -> Converts to Truth fuel
+                                if (att.type === 'goodTruth' || att.type === 'goodLie') cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt);
+                                else cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt * 0.5);
+                            }
+                        }
+                    }
+                });
+
+                // ==============================================================
+                // 2. METABOLIC FUEL CONVERSION PER CLIMATE IDENTITY
+                // ==============================================================
+                if (cell.climateIdentity === 'air' && cell.pocket.bad > 0) {
+                    const processAmt = Math.min(cell.pocket.bad, 2.5 * delta);
+                    cell.pocket.bad = Math.max(0, cell.pocket.bad - processAmt);
+                    cell.pocket.truth = Math.min(100, cell.pocket.truth + processAmt * metabolicEfficiencyScale);
+                } else if (cell.climateIdentity === 'fire' && cell.pocket.good > 0) {
+                    const processAmt = Math.min(cell.pocket.good, 2.5 * delta);
+                    cell.pocket.good = Math.max(0, cell.pocket.good - processAmt);
+                    cell.pocket.lie = Math.min(100, cell.pocket.lie + processAmt * metabolicEfficiencyScale);
+                } else if (cell.climateIdentity === 'water' && cell.pocket.bad > 0) {
+                    const processAmt = Math.min(cell.pocket.bad, 2.5 * delta);
+                    cell.pocket.bad = Math.max(0, cell.pocket.bad - processAmt);
+                    cell.pocket.lie = Math.min(100, cell.pocket.lie + processAmt * metabolicEfficiencyScale);
+                } else if (cell.climateIdentity === 'earth' && cell.pocket.good > 0) {
+                    const processAmt = Math.min(cell.pocket.good, 2.5 * delta);
+                    cell.pocket.good = Math.max(0, cell.pocket.good - processAmt);
+                    cell.pocket.truth = Math.min(100, cell.pocket.truth + processAmt * metabolicEfficiencyScale);
+                }
+
+                // BASAL BURN
+                const basalBurnRate = 1.0 * delta;
+                if (cell.pocket.good > 0) cell.pocket.good = Math.max(0, cell.pocket.good - basalBurnRate);
+                if (cell.pocket.bad > 0) cell.pocket.bad = Math.max(0, cell.pocket.bad - basalBurnRate);
+
+                // ==============================================================
+                // 3. CLIMATE TOXICITY DAMAGE WHEN IN OPPOSITE CLIMATE
+                // ==============================================================
+                const currentLocClimate = getClimateIdentity(cell.u, cell.psi);
+                let isToxicClimate = false;
+
+                if (cell.climateIdentity === 'air' && currentLocClimate === 'earth') isToxicClimate = true;
+                if (cell.climateIdentity === 'fire' && currentLocClimate === 'water') isToxicClimate = true;
+                if (cell.climateIdentity === 'water' && currentLocClimate === 'fire') isToxicClimate = true;
+                if (cell.climateIdentity === 'earth' && currentLocClimate === 'air') isToxicClimate = true;
+
+                if (isToxicClimate) {
+                    cell.cores.airGoodTruth = Math.max(0, cell.cores.airGoodTruth - 4.0 * delta);
+                    cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 4.0 * delta);
+                }
+
+                // STARVATION
+                const totalEnergy = cell.pocket.good + cell.pocket.bad + cell.pocket.truth + cell.pocket.lie;
+                if (totalEnergy <= 0) {
+                    cell.cores.airGoodTruth = Math.max(0, cell.cores.airGoodTruth - 6.0 * delta);
+                    cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 6.0 * delta);
+                } else if (!isToxicClimate) {
+                    cell.cores.airGoodTruth = Math.min(100, cell.cores.airGoodTruth + 1.0 * delta);
+                    cell.cores.earthBadTruth = Math.min(100, cell.cores.earthBadTruth + 1.0 * delta);
+                }
+
+                cell.health = Math.round((cell.cores.airGoodTruth + cell.cores.earthBadTruth + cell.cores.fireBadLie + cell.cores.waterGoodLie) / 4);
+
+                if (cell.health <= 0) {
+                    if (selectedActor && selectedActor.id === cell.id) selectedActor = null;
+                    actors.splice(i, 1);
+                    continue;
+                }
+
+                // ==============================================================
+                // 4. DYNAMIC NEED SEEKING PER CLIMATE IDENTITY
+                // ==============================================================
+                let targetGradX = 0;
+                let targetGradY = 0;
+                let needMode = 'dietFood';
+
+                const fuelLevel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'earth') ? cell.pocket.truth : cell.pocket.lie;
+                const dietLevel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') ? cell.pocket.bad : cell.pocket.good;
+                const homeFoodLevel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') ? cell.pocket.good : cell.pocket.bad;
+
+                if (fuelLevel < 10.0 && dietLevel < 5.0) {
+                    needMode = 'dietFood';
+                } else if (homeFoodLevel < 10.0) {
+                    needMode = 'homeFood';
+                } else {
+                    needMode = 'dietFood';
+                }
+
+                cell.currentNeedTarget = needMode;
+
+                if (needMode === 'dietFood') {
+                    if (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') {
+                        targetGradX = -(getLayerHeight(layerMapBad, clampedGX + 1, clampedGY) - getLayerHeight(layerMapBad, clampedGX - 1, clampedGY)) / 2;
+                        targetGradY = -(getLayerHeight(layerMapBad, clampedGX, clampedGY + 1) - getLayerHeight(layerMapBad, clampedGX, clampedGY - 1)) / 2;
+                    } else {
+                        targetGradX = -(getLayerHeight(layerMapGood, clampedGX + 1, clampedGY) - getLayerHeight(layerMapGood, clampedGX - 1, clampedGY)) / 2;
+                        targetGradY = -(getLayerHeight(layerMapGood, clampedGX, clampedGY + 1) - getLayerHeight(layerMapGood, clampedGX, clampedGY - 1)) / 2;
+                    }
+                } else {
+                    if (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') {
+                        targetGradX = -(getLayerHeight(layerMapGood, clampedGX + 1, clampedGY) - getLayerHeight(layerMapGood, clampedGX - 1, clampedGY)) / 2;
+                        targetGradY = -(getLayerHeight(layerMapGood, clampedGX, clampedGY + 1) - getLayerHeight(layerMapGood, clampedGX, clampedGY - 1)) / 2;
+                    } else {
+                        targetGradX = -(getLayerHeight(layerMapBad, clampedGX + 1, clampedGY) - getLayerHeight(layerMapBad, clampedGX - 1, clampedGY)) / 2;
+                        targetGradY = -(getLayerHeight(layerMapBad, clampedGX, clampedGY + 1) - getLayerHeight(layerMapBad, clampedGX, clampedGY - 1)) / 2;
+                    }
+                }
+
+                // OPPOSITE REPULSION
+                let repulseX = 0;
+                let repulseY = 0;
+
+                if (cell.climateIdentity === 'air' || cell.climateIdentity === 'water') {
+                    repulseX = (getLayerHeight(layerMapBad, clampedGX + 1, clampedGY) - getLayerHeight(layerMapBad, clampedGX - 1, clampedGY)) / 2;
+                    repulseY = (getLayerHeight(layerMapBad, clampedGX, clampedGY + 1) - getLayerHeight(layerMapBad, clampedGX, clampedGY - 1)) / 2;
+                } else {
+                    repulseX = (getLayerHeight(layerMapGood, clampedGX + 1, clampedGY) - getLayerHeight(layerMapGood, clampedGX - 1, clampedGY)) / 2;
+                    repulseY = (getLayerHeight(layerMapGood, clampedGX, clampedGY + 1) - getLayerHeight(layerMapGood, clampedGX, clampedGY - 1)) / 2;
+                }
+
+                const netDirX = targetGradX + repulseX * 0.7;
+                const netDirY = targetGradY + repulseY * 0.7;
+
+                let foodAngle = Math.atan2(netDirY, netDirX);
+                let gradMag = Math.sqrt(netDirX * netDirX + netDirY * netDirY);
+
+                if (gradMag < 0.005) {
+                    cell.wanderAngle += (Math.random() - 0.5) * 0.3;
+                    foodAngle = cell.wanderAngle;
+                } else {
+                    cell.wanderAngle = foodAngle;
+                }
+
+                // MASS & DRAG SCALING
+                const cellMass = 1.0 + (totalEnergy / 30.0);
+                cell.radius = 20 + Math.sqrt(totalEnergy) * 1.5;
+
+                const massInertia = 1.0 / cellMass;
+                const effectiveDrag = Math.pow(velocityDragScale, cellMass * 0.8);
+
+                // THRUSTER FIRING PER CLIMATE IDENTITY FUEL
+                const useTruthFuel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'earth');
+                const availableFuel = useTruthFuel ? cell.pocket.truth : cell.pocket.lie;
+
+                if (availableFuel > 0) {
+                    const fuelBurn = Math.min(availableFuel, 3.5 * delta);
+                    if (useTruthFuel) cell.pocket.truth = Math.max(0, cell.pocket.truth - fuelBurn);
+                    else cell.pocket.lie = Math.max(0, cell.pocket.lie - fuelBurn);
+
+                    cell.vx += Math.cos(foodAngle) * 0.6 * thrusterForceScale * massInertia;
+                    cell.vy += Math.sin(foodAngle) * 0.6 * thrusterForceScale * massInertia;
+
+                    if (Math.random() < 0.35) spawnThrusterParticle(cell.px, cell.py, -Math.cos(foodAngle), -Math.sin(foodAngle), useTruthFuel ? 'truth' : 'lie');
+                }
+
+                if (stormTurbulence > 0) {
+                    cell.vx += (Math.random() - 0.5) * stormTurbulence * massInertia;
+                    cell.vy += (Math.random() - 0.5) * stormTurbulence * massInertia;
+                }
+
+                cell.px += cell.vx;
+                cell.py += cell.vy;
+                cell.vx *= effectiveDrag;
+                cell.vy *= effectiveDrag;
+
+                const margin = 30;
+                if (cell.px < margin) { cell.px = margin; cell.vx *= -0.5; }
+                if (cell.px > CANVAS_SIZE - margin) { cell.px = CANVAS_SIZE - margin; cell.vx *= -0.5; }
+                if (cell.py < margin) { cell.py = margin; cell.vy *= -0.5; }
+                if (cell.py > CANVAS_SIZE - margin) { cell.py = CANVAS_SIZE - margin; cell.vy *= -0.5; }
+
+                cell.u = pxToU(cell.px);
+                cell.psi = pyToPsi(cell.py);
+
+                // SOFT-BODY MEMBRANE DEFORMATION
+                const velMag = Math.sqrt(cell.vx * cell.vx + cell.vy * cell.vy);
+                const velAngle = Math.atan2(cell.vy, cell.vx);
+
+                cell.vertices.forEach((v, idx) => {
+                    v.baseRadius = cell.radius;
+                    const angleOffset = Math.cos(v.angle - velAngle);
+                    const targetR = v.baseRadius + (angleOffset * Math.min(12, velMag * 4) + Math.sin(time * 3.0 + idx) * 1.5) * membraneElasticityScale;
+                    v.r += (targetR - v.r) * 0.1 * membraneElasticityScale;
+                    v.x = cell.px + Math.cos(v.angle) * v.r;
+                    v.y = cell.py + Math.sin(v.angle) * v.r;
+                });
+
+                if (layers.trails) {
+                    cell.trail.push({ x: cell.px, y: cell.py });
+                    if (cell.trail.length > 20) cell.trail.shift();
+                }
+            }
+
+            setDOMText('actorCount', actors.length);
+            if (selectedActor) updateInspectorCard(selectedActor);
+        }
+
+        function spawnThrusterParticle(cx, cy, dirX, dirY, type) {
+            const speed = 2.0 + Math.random() * 2.0;
+            secretedParticles.push({
+                px: cx, py: cy,
+                vx: dirX * speed + (Math.random() - 0.5) * 0.5,
+                vy: dirY * speed + (Math.random() - 0.5) * 0.5,
+                type: type, life: 1.0
+            });
+        }
+
+        function computeLayerMaps(time) {
+            layerMapGood.fill(0);
+            layerMapTruth.fill(0);
+            layerMapBad.fill(0);
+            layerMapLie.fill(0);
+
+            for (let gy = 0; gy < GRID_RES; gy++) {
+                const py = (gy / GRID_RES) * CANVAS_SIZE;
+                for (let gx = 0; gx < GRID_RES; gx++) {
+                    const px = (gx / GRID_RES) * CANVAS_SIZE;
+                    const u = pxToU(px);
+                    const psi = pyToPsi(py);
+                    const idx = gy * GRID_RES + gx;
+
+                    const spec = computeParametricSpectrum(u, psi);
+                    layerMapGood[idx] = - (spec.good / 100.0);
+                    layerMapTruth[idx] = - (spec.truth / 100.0);
+                    layerMapBad[idx] = - (spec.bad / 100.0);
+                    layerMapLie[idx] = - (spec.lie / 100.0);
+
+                    attractors.forEach(att => {
+                        const dx = px - uToPx(att.u);
+                        const dy = py - psiToPy(att.psi);
+                        const distSq = dx * dx + dy * dy;
+                        const radiusSq = att.radius * att.radius;
+                        const foodRatio = att.foodPool !== undefined ? (att.foodPool / att.maxFood) : 1.0;
+                        const effectiveMass = (att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass) * foodRatio;
+                        const pot = -effectiveMass * Math.exp(-distSq / (2 * radiusSq));
+
+                        if (att.type === 'goodTruth') { layerMapGood[idx] += pot; layerMapTruth[idx] += pot; }
+                        else if (att.type === 'badLie') { layerMapBad[idx] += pot * 0.5; layerMapLie[idx] += pot * 1.0; }
+                        else if (att.type === 'goodLie') { layerMapGood[idx] += pot * 0.5; layerMapLie[idx] += pot * 0.8; }
+                        else if (att.type === 'badTruth') { layerMapBad[idx] += pot * 1.0; layerMapTruth[idx] += pot * 0.5; }
+                    });
+                }
+            }
+        }
+
+        function getLayerHeight(map, gx, gy) { return map[gy * GRID_RES + gx] || 0; }
+
+        // ==========================================
+        // 7. HIGH-RESOLUTION RENDERER
+        // ==========================================
+        function renderSimulation() {
+            ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+
+            if (layers.climate) renderResourceClimateLayer();
+
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(CANVAS_SIZE / 2, 0); ctx.lineTo(CANVAS_SIZE / 2, CANVAS_SIZE);
+            ctx.moveTo(0, CANVAS_SIZE / 2); ctx.lineTo(CANVAS_SIZE, CANVAS_SIZE / 2);
+            ctx.stroke();
+
+            if (layers.diagonals) {
+                ctx.lineWidth = 1.5;
+                ctx.setLineDash([4, 4]);
+
+                ctx.strokeStyle = 'rgba(59, 130, 246, 0.4)';
+                ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(CANVAS_SIZE, CANVAS_SIZE); ctx.stroke();
+
+                ctx.strokeStyle = 'rgba(217, 119, 6, 0.4)';
+                ctx.beginPath(); ctx.moveTo(0, CANVAS_SIZE); ctx.lineTo(CANVAS_SIZE, 0); ctx.stroke();
+                
+                ctx.setLineDash([]);
+            }
+
+            if (layers.vectors) renderVectorFlowLayer();
+
+            // Attractors
+            attractors.forEach(att => {
+                const px = uToPx(att.u);
+                const py = psiToPy(att.psi);
+
+                const colorMap = { goodTruth: '#22c55e', badLie: '#d97706', goodLie: '#14b8a6', badTruth: '#ef4444' };
+                const mainColor = colorMap[att.type] || '#3b82f6';
+                const foodRatio = att.foodPool !== undefined ? Math.max(0.1, att.foodPool / att.maxFood) : 1.0;
+
+                ctx.fillStyle = mainColor;
+                ctx.globalAlpha = 0.2 * foodRatio;
+                ctx.beginPath();
+                ctx.arc(px, py, att.radius * 0.6 * foodRatio, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.globalAlpha = 1.0;
+                ctx.fillStyle = mainColor;
+                ctx.beginPath();
+                ctx.arc(px, py, 6 * foodRatio, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 11px "Outfit"';
+                ctx.textAlign = 'center';
+                const poolText = att.foodPool !== undefined ? ` (${Math.round(att.foodPool)}U)` : '';
+                ctx.fillText(att.name + poolText, px, py - 12);
+            });
+
+            // Secretions
+            secretedParticles.forEach(p => {
+                ctx.fillStyle = p.type === 'lie' ? '#f59e0b' : '#38bdf8';
+                ctx.globalAlpha = p.life * 0.85;
+                ctx.beginPath();
+                ctx.arc(p.px, p.py, 3.5, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            ctx.globalAlpha = 1.0;
+
+            // Soft-Body Organisms with Climate Identity Colors
+            actors.forEach(cell => {
+                const isSelected = selectedActor && selectedActor.id === cell.id;
+
+                if (layers.trails && cell.trail.length > 1) {
+                    ctx.strokeStyle = isSelected ? 'rgba(56, 189, 248, 0.6)' : 'rgba(34, 197, 94, 0.25)';
+                    ctx.lineWidth = isSelected ? 2.5 : 1.5;
+                    ctx.beginPath();
+                    ctx.moveTo(cell.trail[0].x, cell.trail[0].y);
+                    for (let i = 1; i < cell.trail.length; i++) ctx.lineTo(cell.trail[i].x, cell.trail[i].y);
+                    ctx.stroke();
+                }
+
+                ctx.beginPath();
+                if (cell.vertices.length > 0) {
+                    const first = cell.vertices[0];
+                    const last = cell.vertices[cell.vertices.length - 1];
+                    const midX = (first.x + last.x) / 2;
+                    const midY = (first.y + last.y) / 2;
+                    ctx.moveTo(midX, midY);
+
+                    for (let i = 0; i < cell.vertices.length; i++) {
+                        const curr = cell.vertices[i];
+                        const next = cell.vertices[(i + 1) % cell.vertices.length];
+                        const nMidX = (curr.x + next.x) / 2;
+                        const nMidY = (curr.y + next.y) / 2;
+                        ctx.quadraticCurveTo(curr.x, curr.y, nMidX, nMidY);
+                    }
+                }
+                ctx.closePath();
+
+                const gradient = ctx.createRadialGradient(cell.px, cell.py, 2, cell.px, cell.py, cell.radius);
+                if (cell.climateIdentity === 'air') {
+                    gradient.addColorStop(0, 'rgba(34, 197, 94, 0.8)');
+                    gradient.addColorStop(1, 'rgba(56, 189, 248, 0.2)');
+                } else if (cell.climateIdentity === 'fire') {
+                    gradient.addColorStop(0, 'rgba(239, 68, 68, 0.8)');
+                    gradient.addColorStop(1, 'rgba(245, 158, 11, 0.2)');
+                } else if (cell.climateIdentity === 'water') {
+                    gradient.addColorStop(0, 'rgba(20, 184, 166, 0.8)');
+                    gradient.addColorStop(1, 'rgba(56, 189, 248, 0.2)');
+                } else { // earth
+                    gradient.addColorStop(0, 'rgba(244, 63, 94, 0.8)');
+                    gradient.addColorStop(1, 'rgba(168, 85, 247, 0.2)');
+                }
+
+                ctx.fillStyle = gradient;
+                ctx.fill();
+
+                const borderColors = { air: '#4ade80', fire: '#fbbf24', water: '#2dd4bf', earth: '#fda4af' };
+                ctx.strokeStyle = isSelected ? '#38bdf8' : (borderColors[cell.climateIdentity] || '#4ade80');
+                ctx.lineWidth = isSelected ? 3.0 : 2.0;
+                ctx.stroke();
+
+                // 4 INTERNAL MICRO-HEGEMONY CORES
+                const coreOffset = 7;
+                ctx.fillStyle = '#4ade80';
+                ctx.beginPath(); ctx.arc(cell.px - coreOffset, cell.py - coreOffset, 3.5, 0, Math.PI * 2); ctx.fill();
+
+                ctx.fillStyle = '#fbbf24';
+                ctx.beginPath(); ctx.arc(cell.px + coreOffset, cell.py - coreOffset, 3.5, 0, Math.PI * 2); ctx.fill();
+
+                ctx.fillStyle = '#2dd4bf';
+                ctx.beginPath(); ctx.arc(cell.px - coreOffset, cell.py + coreOffset, 3.5, 0, Math.PI * 2); ctx.fill();
+
+                ctx.fillStyle = '#fda4af';
+                ctx.beginPath(); ctx.arc(cell.px + coreOffset, cell.py + coreOffset, 3.5, 0, Math.PI * 2); ctx.fill();
+
+                ctx.fillStyle = isSelected ? '#38bdf8' : '#f1f5f9';
+                ctx.font = 'bold 11px "Outfit"';
+                ctx.textAlign = 'center';
+                ctx.fillText(cell.name, cell.px, cell.py + cell.radius + 14);
+            });
+        }
+
+        function renderResourceClimateLayer() {
+            const step = CANVAS_SIZE / GRID_RES;
+            const sigmaSq = 80 * 80;
+
+            for (let gy = 0; gy < GRID_RES; gy++) {
+                const py = (gy / GRID_RES) * CANVAS_SIZE;
+                for (let gx = 0; gx < GRID_RES; gx++) {
+                    const px = (gx / GRID_RES) * CANVAS_SIZE;
+                    const u = pxToU(px);
+                    const psi = pyToPsi(py);
+
+                    if (activeDimensionPlane === 'air' && !(u >= 0 && psi >= 0)) continue;
+                    if (activeDimensionPlane === 'fire' && !(u <= 0 && psi >= 0)) continue;
+                    if (activeDimensionPlane === 'water' && !(u >= 0 && psi <= 0)) continue;
+                    if (activeDimensionPlane === 'earth' && !(u <= 0 && psi <= 0)) continue;
+
+                    const spec = computeParametricSpectrum(u, psi);
+                    let dGood = spec.good / 100;
+                    let dTruth = spec.truth / 100;
+                    let dBad = spec.bad / 100;
+                    let dLie = spec.lie / 100;
+
+                    attractors.forEach(att => {
+                        const distSq = (px - uToPx(att.u)) ** 2 + (py - psiToPy(att.psi)) ** 2;
+                        const foodRatio = att.foodPool !== undefined ? (att.foodPool / att.maxFood) : 1.0;
+                        const effectiveMass = (att.isFixed ? att.mass * (attractorMassScale / 3.0) : att.mass) * foodRatio;
+                        const weight = Math.exp(-distSq / (2 * sigmaSq)) * 2.5 * effectiveMass;
+                        if (att.type === 'goodTruth') { dGood += weight; dTruth += weight; }
+                        else if (att.type === 'badLie') { dBad += weight * 0.5; dLie += weight * 1.2; }
+                        else if (att.type === 'goodLie') { dGood += weight * 0.5; dLie += weight * 0.8; }
+                        else if (att.type === 'badTruth') { dBad += weight * 1.2; dTruth += weight * 0.5; }
+                    });
+
+                    const totalWeight = dGood + dTruth + dBad + dLie + 0.001;
+
+                    const r = Math.round((dGood * 34 + dTruth * 59 + dBad * 239 + dLie * 217) / totalWeight);
+                    const g = Math.round((dGood * 197 + dTruth * 130 + dBad * 68 + dLie * 119) / totalWeight);
+                    const b = Math.round((dGood * 94 + dTruth * 246 + dBad * 68 + dLie * 6) / totalWeight);
+
+                    const intensity = Math.min(0.85, 0.2 + (totalWeight * 0.12));
+
+                    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${intensity})`;
+                    ctx.fillRect(gx * step, gy * step, step + 0.5, step + 0.5);
+                }
+            }
+        }
+
+        function renderVectorFlowLayer() {
+            const spacing = 36;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.lineWidth = 1;
+
+            for (let py = spacing / 2; py < CANVAS_SIZE; py += spacing) {
+                for (let px = spacing / 2; px < CANVAS_SIZE; px += spacing) {
+                    const gx = Math.floor((px / CANVAS_SIZE) * GRID_RES);
+                    const gy = Math.floor((py / CANVAS_SIZE) * GRID_RES);
+                    const clampedGX = Math.max(1, Math.min(GRID_RES - 2, gx));
+                    const clampedGY = Math.max(1, Math.min(GRID_RES - 2, gy));
+
+                    const dh_good_x = (getLayerHeight(layerMapGood, clampedGX + 1, clampedGY) - getLayerHeight(layerMapGood, clampedGX - 1, clampedGY)) / 2;
+                    const dh_good_y = (getLayerHeight(layerMapGood, clampedGX, clampedGY + 1) - getLayerHeight(layerMapGood, clampedGX, clampedGY - 1)) / 2;
+
+                    const dh_truth_x = (getLayerHeight(layerMapTruth, clampedGX + 1, clampedGY) - getLayerHeight(layerMapTruth, clampedGX - 1, clampedGY)) / 2;
+                    const dh_truth_y = (getLayerHeight(layerMapTruth, clampedGX, clampedGY + 1) - getLayerHeight(layerMapTruth, clampedGX, clampedGY - 1)) / 2;
+
+                    const dhdx = dh_good_x + dh_truth_x;
+                    const dhdy = dh_good_y + dh_truth_y;
+
+                    const len = Math.sqrt(dhdx * dhdx + dhdy * dhdy);
+                    if (len > 0.01) {
+                        const nx = (-dhdx / len) * 10;
+                        const ny = (-dhdy / len) * 10;
+
+                        ctx.beginPath();
+                        ctx.moveTo(px, py);
+                        ctx.lineTo(px + nx, py + ny);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // ==========================================
+        // 8. INTERACTIVE CANVAS HANDLERS & INJECTIONS
+        // ==========================================
+        function handleCanvasMouseMove(e) {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = CANVAS_SIZE / rect.width;
+            const scaleY = CANVAS_SIZE / rect.height;
+
+            const px = (e.clientX - rect.left) * scaleX;
+            const py = (e.clientY - rect.top) * scaleY;
+
+            const u = pxToU(px);
+            const psi = pyToPsi(py);
+            const spec = computeParametricSpectrum(u, psi);
+
+            const badge = document.getElementById('canvasCursorBadge');
+            if (badge) {
+                badge.style.opacity = '1';
+                badge.textContent = `(u: ${u >= 0 ? '+' : ''}${u.toFixed(2)}, ψ: ${psi >= 0 ? '+' : ''}${psi.toFixed(2)}) | Field: G:${spec.good}% B:${spec.bad}% T:${spec.truth}% L:${spec.lie}%`;
+            }
+        }
+
+        function handleCanvasClick(e) {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = CANVAS_SIZE / rect.width;
+            const scaleY = CANVAS_SIZE / rect.height;
+
+            const px = (e.clientX - rect.left) * scaleX;
+            const py = (e.clientY - rect.top) * scaleY;
+            const u = pxToU(px);
+            const psi = pyToPsi(py);
+
+            if (clickMode === 'inspect') {
+                let clickedActor = null;
+                let minDist = 30;
+                actors.forEach(cell => {
+                    const dist = Math.sqrt((cell.px - px) ** 2 + (cell.py - py) ** 2);
+                    if (dist < minDist) {
+                        minDist = dist;
+                        clickedActor = cell;
+                    }
+                });
+
+                if (clickedActor) selectActor(clickedActor);
+            } else if (clickMode === 'actor') {
+                const newCell = createFoodSeekingCell("Seeded Cell", u, psi);
+                actors.push(newCell);
+                selectActor(newCell);
+            } else if (clickMode === 'resource') {
+                const resSelect = document.getElementById('resourceTypeSelect');
+                const nodeType = resSelect ? resSelect.value : 'goodTruth';
+                
+                const names = {
+                    goodTruth: 'Injected Good {Truth}',
+                    badLie: 'Injected Bad Lie',
+                    goodLie: 'Injected Good Lie',
+                    badTruth: 'Injected Bad {Truth}'
+                };
+
+                attractors.push({
+                    id: 'inj_' + Math.random().toString(36).substr(2, 9),
+                    name: names[nodeType] || 'Injected Field Node',
+                    greek: 'ἔνεμα',
+                    u, psi,
+                    type: nodeType,
+                    radius: 75, mass: 2.5, foodPool: 120.0, maxFood: 120.0, isFixed: false
+                });
+            } else if (clickMode === 'attractor') {
+                attractors.push({
+                    id: 'att_' + Math.random().toString(36).substr(2, 9),
+                    name: 'Landmark',
+                    greek: 'ἕλκον',
+                    u, psi,
+                    type: (u > 0 && psi > 0) ? 'goodTruth' : ((u < 0 && psi > 0) ? 'badLie' : ((u > 0 && psi < 0) ? 'goodLie' : 'badTruth')),
+                    radius: 75, mass: 2.0, foodPool: 150.0, maxFood: 150.0, isFixed: false
+                });
+            }
+        }
+
+        function setDimensionPlane(plane) {
+            activeDimensionPlane = plane;
+            ['all', 'air', 'fire', 'water', 'earth'].forEach(p => {
+                const btn = document.getElementById(`dimBtn-${p}`);
+                if (btn) {
+                    if (p === plane) btn.className = "btn btn-active";
+                    else btn.className = "btn";
+                }
+            });
+            setDOMText('seekingStatus', plane === 'all' ? '+∇ FOOD DENSITY' : `${plane.toUpperCase()} PLANE PHASE SHIFT`);
+        }
+
+        function setClickMode(mode) {
+            clickMode = mode;
+            ['Inspect', 'Actor', 'Resource', 'Attractor'].forEach(m => {
+                const btn = document.getElementById(`mode${m}Btn`);
+                if (btn) {
+                    if (m.toLowerCase() === mode) btn.className = "btn btn-active";
+                    else btn.className = "btn";
+                }
+            });
+
+            const picker = document.getElementById('resourceTypePicker');
+            if (picker) picker.style.display = (mode === 'resource') ? 'flex' : 'none';
+        }
+
+        function toggleLayer(layerName) {
+            layers[layerName] = !layers[layerName];
+            const btn = document.getElementById(`layer${layerName.charAt(0).toUpperCase() + layerName.slice(1)}Btn`);
+            const status = document.getElementById(`layer${layerName.charAt(0).toUpperCase() + layerName.slice(1)}Status`);
+            if (status) status.textContent = layers[layerName] ? "ON" : "OFF";
+            if (btn) btn.className = layers[layerName] ? "btn btn-active flex items-center justify-between" : "btn flex items-center justify-between";
+        }
+
+        // ==========================================
+        // 9. VERBOSE DASHBOARD & INSPECTOR FUNCTIONS
+        // ==========================================
+        function switchTab(tabName) {
+            ['controls', 'explorer', 'inspector'].forEach(t => {
+                const btn = document.getElementById(`tabBtn-${t}`);
+                const content = document.getElementById(`tabContent-${t}`);
+                if (btn && content) {
+                    if (t === tabName) {
+                        btn.className = "btn btn-active";
+                        btn.style.flex = "1";
+                        btn.style.textAlign = "center";
+                        content.classList.remove('hidden');
+                    } else {
+                        btn.className = "btn";
+                        btn.style.flex = "1";
+                        btn.style.textAlign = "center";
+                        content.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        function selectActor(cell) {
+            selectedActor = cell;
+            const noSel = document.getElementById('noActorSelectedState');
+            const detail = document.getElementById('actorDetailContainer');
+            if (noSel) noSel.classList.add('hidden');
+            if (detail) detail.classList.remove('hidden');
+            updateInspectorCard(cell);
+            switchTab('inspector');
+        }
+
+        function updateInspectorCard(cell) {
+            setDOMText('inspectorActorName', cell.name);
+            setDOMText('inspectorActorGreek', cell.greek);
+            setDOMText('inspectorActorCoord', `(u: ${cell.u >= 0 ? '+' : ''}${cell.u.toFixed(2)}, ψ: ${cell.psi >= 0 ? '+' : ''}${cell.psi.toFixed(2)})`);
+            setDOMText('inspectorActorZone', getZoneName(cell.u, cell.psi));
+
+            // CLIMATE IDENTITY BADGE
+            const elemBadge = document.getElementById('inspectorActorElement');
+            if (elemBadge) {
+                const badgeMap = {
+                    air: { text: '💨 AIR CLIMATE IDENTITY (Good {Truth})', cls: 'badge badge-emerald' },
+                    fire: { text: '🔥 FIRE CLIMATE IDENTITY (Bad Lie)', cls: 'badge badge-amber' },
+                    water: { text: '🌊 WATER CLIMATE IDENTITY (Good Lie)', cls: 'badge badge-teal' },
+                    earth: { text: '🪨 EARTH CLIMATE IDENTITY (Bad {Truth})', cls: 'badge badge-rose' }
+                };
+                const info = badgeMap[cell.climateIdentity] || badgeMap.air;
+                elemBadge.textContent = info.text;
+                elemBadge.className = info.cls;
+            }
+
+            // CARD 1: POCKET STORAGE & MASS INERTIA
+            setDOMText('pocketGoodVal', `${cell.pocket.good.toFixed(1)} U`);
+            setDOMText('pocketBadVal', `${cell.pocket.bad.toFixed(1)} U`);
+            setDOMText('pocketTruthVal', `${cell.pocket.truth.toFixed(1)} U`);
+            setDOMText('pocketLieVal', `${cell.pocket.lie.toFixed(1)} U`);
+
+            const totalEnergy = cell.pocket.good + cell.pocket.bad + cell.pocket.truth + cell.pocket.lie;
+            const cellMass = (1.0 + (totalEnergy / 30.0)).toFixed(2);
+            
+            const satStatus = document.getElementById('inspectorFissionStatus');
+            if (satStatus) {
+                if (totalEnergy <= 0) {
+                    satStatus.textContent = `⚠️ STARVING (0.0 U)`;
+                    satStatus.className = "badge badge-rose";
+                } else {
+                    satStatus.textContent = `MASS: ${cellMass} | RADIUS: ${Math.round(cell.radius)}px`;
+                    satStatus.className = "badge badge-emerald";
+                }
+            }
+
+            // CARD 2: REACTION THRUSTER
+            const useTruthFuel = (cell.climateIdentity === 'air' || cell.climateIdentity === 'earth');
+            const availableFuel = useTruthFuel ? cell.pocket.truth : cell.pocket.lie;
+            const thrusterActive = availableFuel > 0;
+            
+            setDOMText('inspectorThrusterStatus', thrusterActive ? 
+                `Firing ${useTruthFuel ? 'Truth' : 'Lie'} Fuel -> +∇ ${cell.currentNeedTarget.toUpperCase()}` : 
+                "🔴 FUEL EXHAUSTED (0.0 U) - Thrusters Offline");
+            setDOMText('inspectorThrustForce', thrusterActive ? `${(1.5 * thrusterForceScale / cellMass).toFixed(2)}x ∇F (Mass Inertia)` : `0.0x (No Fuel)`);
+
+            // CARD 3: CORES
+            setDOMText('airCoreVal', `Health: ${Math.round(cell.cores.airGoodTruth)}% (Repaired: G{T}, Damaged: B{T})`);
+            setDOMText('earthCoreVal', `Health: ${Math.round(cell.cores.earthBadTruth)}% (Repaired: B{T}, Damaged: G{T})`);
+
+            // CARD 4: CLIMATE IDENTITY SURVIVAL & TOXICITY
+            const currClimate = getClimateIdentity(cell.u, cell.psi);
+            let toxicText = " (Climate Safe)";
+            if (cell.climateIdentity === 'air' && currClimate === 'earth') toxicText = " ⚠️ TOXIC EARTH CLIMATE SURGE!";
+            if (cell.climateIdentity === 'fire' && currClimate === 'water') toxicText = " ⚠️ TOXIC WATER CLIMATE SURGE!";
+            if (cell.climateIdentity === 'water' && currClimate === 'fire') toxicText = " ⚠️ TOXIC FIRE CLIMATE SURGE!";
+            if (cell.climateIdentity === 'earth' && currClimate === 'air') toxicText = " ⚠️ TOXIC AIR CLIMATE SURGE!";
+
+            setDOMText('inspectorSeekingTarget', `HOME: ${cell.climateIdentity.toUpperCase()} | TARGET: ${cell.currentNeedTarget.toUpperCase()}`);
+            setDOMText('inspectorSeekingDetails', `Climate Identity: ${cell.climateIdentity.toUpperCase()}${toxicText}`);
+
+            // CARD 5: SAMPLED FIELD VOLUME
+            setDOMText('inspectorSampledField', `Climate Good:${cell.sampledField.good}% | Truth:${cell.sampledField.truth}% | Bad:${cell.sampledField.bad}% | Lie:${cell.sampledField.lie}%`);
+
+            // CARD 6: 6 RADIAL AXES DECOMPOSITION
+            const rad = compute6RadialAxes(cell.u, cell.psi);
+            setDOMText('rad1Val', `${rad.rad1 >= 0 ? '+' : ''}${rad.rad1.toFixed(2)}`);
+            setDOMText('rad2Val', `${rad.rad2 >= 0 ? '+' : ''}${rad.rad2.toFixed(2)}`);
+            setDOMText('rad3Val', `${rad.rad3 >= 0 ? '+' : ''}${rad.rad3.toFixed(2)}`);
+            setDOMText('rad4Val', `${rad.rad4 >= 0 ? '+' : ''}${rad.rad4.toFixed(2)}`);
+            setDOMText('rad5Val', `${rad.rad5 >= 0 ? '+' : ''}${rad.rad5.toFixed(2)}`);
+            setDOMText('rad6Val', `${rad.rad6 >= 0 ? '+' : ''}${rad.rad6.toFixed(2)}`);
+
+            // CARD 7: MEMBRANE VITALITY & LOG
+            setDOMText('inspectorHealthVal', `${Math.round(cell.health)} / 100 HP`);
+            const hpFill = document.getElementById('inspectorHealthFill');
+            if (hpFill) {
+                hpFill.style.width = `${cell.health}%`;
+                hpFill.style.background = cell.health > 40 ? '#22c55e' : '#f43f5e';
+            }
+
+            const logContainer = document.getElementById('inspectorLogContainer');
+            if (logContainer) {
+                logContainer.innerHTML = cell.logs.map(log => `<div>• ${log}</div>`).join('');
+            }
+        }
+
+        // UPDATE ALL 7 PHYSICS SLIDERS REAL-TIME
+        function updateSliders() {
+            const mSlider = document.getElementById('attractorMassSlider');
+            if (mSlider) attractorMassScale = parseFloat(mSlider.value);
+            setDOMText('attractorMassVal', attractorMassScale.toFixed(1) + 'x');
+
+            const tSlider = document.getElementById('thrusterSlider');
+            if (tSlider) thrusterForceScale = parseFloat(tSlider.value);
+            setDOMText('thrusterVal', thrusterForceScale.toFixed(1) + 'x');
+
+            const hSlider = document.getElementById('homeGravitySlider');
+            if (hSlider) homeGravityScale = parseFloat(hSlider.value);
+            setDOMText('homeGravityVal', homeGravityScale.toFixed(1) + 'x');
+
+            const eSlider = document.getElementById('membraneElasticitySlider');
+            if (eSlider) membraneElasticityScale = parseFloat(eSlider.value);
+            setDOMText('membraneElasticityVal', membraneElasticityScale.toFixed(1) + 'x');
+
+            const dSlider = document.getElementById('dragSlider');
+            if (dSlider) velocityDragScale = parseFloat(dSlider.value);
+            setDOMText('dragVal', velocityDragScale.toFixed(2));
+
+            const ySlider = document.getElementById('yieldRateSlider');
+            if (ySlider) ambientYieldScale = parseFloat(ySlider.value);
+            setDOMText('yieldRateVal', ambientYieldScale.toFixed(1) + 'x');
+
+            const effSlider = document.getElementById('metabolicEffSlider');
+            if (effSlider) metabolicEfficiencyScale = parseFloat(effSlider.value);
+            setDOMText('metabolicEffVal', metabolicEfficiencyScale.toFixed(1) + 'x');
+        }
+
+        function togglePause() {
+            isRunning = !isRunning;
+            setDOMText('pauseText', isRunning ? 'Pause' : 'Resume');
+            setDOMText('pauseIcon', isRunning ? '⏸' : '▶');
+            setDOMText('engineStatus', isRunning ? 'RUNNING' : 'PAUSED');
+            const engStatus = document.getElementById('engineStatus');
+            if (engStatus) engStatus.style.color = isRunning ? '#4ade80' : '#fbbf24';
+        }
+
+        function stepSimulation() { updateSimulation(0.016, simTime + 0.016); renderSimulation(); }
+        function resetSimulation() { initDefaultSimulation(); }
+
+        function renderDatabaseTable(data) {
+            const tbody = document.getElementById('dbTableBody');
+            if (!tbody) return;
+            if (!data || data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="3" style="padding: 0.75rem; text-align: center; color: #64748b;">No database entries found.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = data.slice(0, 80).map(item => `
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 0.5rem;">
+                        <div style="color: #fff; font-weight: 600;">${item.name}</div>
+                        <div style="font-size: 0.65rem; color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-style: italic;">${item.greek || ''}</div>
+                    </td>
+                    <td style="padding: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: #4ade80;">
+                        (${item.u >= 0 ? '+' : ''}${item.u.toFixed(2)}, ${item.p >= 0 ? '+' : ''}${item.p.toFixed(2)})
+                    </td>
+                    <td style="padding: 0.5rem; text-align: right;">
+                        <button onclick="addDatabaseAttractor('${item.name}', ${item.u}, ${item.p})" class="btn" style="font-size: 0.65rem;">
+                            + Landmark
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function filterDatabase() {
+            const searchEl = document.getElementById('dbSearchInput');
+            const quadEl = document.getElementById('dbQuadrantFilter');
+            if (!searchEl || !quadEl) return;
+
+            const query = searchEl.value.toLowerCase();
+            const quad = quadEl.value;
+
+            const filtered = vftDatabase.filter(item => {
+                const matchesQuery = item.name.toLowerCase().includes(query) || (item.greek && item.greek.toLowerCase().includes(query));
+                let matchesQuad = true;
+
+                if (quad === 'goodTruth') matchesQuad = (item.u > 0 && item.p > 0);
+                else if (quad === 'badLie') matchesQuad = (item.u < 0 && item.p > 0);
+                else if (quad === 'goodLie') matchesQuad = (item.u > 0 && item.p < 0);
+                else if (quad === 'badTruth') matchesQuad = (item.u < 0 && item.p < 0);
+
+                return matchesQuery && matchesQuad;
+            });
+
+            renderDatabaseTable(filtered);
+        }
+
+        function addDatabaseAttractor(name, u, psi) {
+            attractors.push({
+                id: 'att_' + Math.random().toString(36).substr(2, 9),
+                name, greek: getGreekForName(name), u, psi,
+                type: (u > 0 && psi > 0) ? 'goodTruth' : ((u < 0 && psi > 0) ? 'badLie' : ((u > 0 && psi < 0) ? 'goodLie' : 'badTruth')),
+                radius: 75, mass: 2.0, foodPool: 150.0, maxFood: 150.0, isFixed: false
+            });
+        }
+    </script>
+</body>
+</html>

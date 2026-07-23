@@ -1,0 +1,102 @@
+{
+    "global_context": {
+        "project_name": "hegemony_attractor",
+        "project_rules": [],
+        "current_focus": "Project Start",
+        "current_task_index": null,
+        "mistakes_registry": [],
+        "fuckup_prevention_checklist": [
+            "Did I read the requirements fully?",
+            "Did I check the mistake registry?",
+            "Did I validate the output format?",
+            "Did I log my reasoning?"
+        ]
+    },
+    "tasks": [
+        {
+            "index": 0,
+            "id": "task_0",
+            "description": "Implement Dual-Fuel Thruster Engine (Truth OR Lie fuel)",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-07-24T00:38:11.146667] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "physics",
+                "thrusters"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 1,
+            "id": "task_1",
+            "description": "Implement 4-Phase Psochic Migration Lifecycle & Cytoplasm Coordinate Drift",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-07-24T00:38:11.288263] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "lifecycle",
+                "migration",
+                "physics"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 2,
+            "id": "task_2",
+            "description": "Verify 7 Physics Sliders, 7 Inspector Cards, and Starvation Mechanics",
+            "status": "todo",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-07-24T00:38:11.408741] Task created."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "testing",
+                "verification"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        }
+    ]
+}

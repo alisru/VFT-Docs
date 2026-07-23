@@ -1,0 +1,67 @@
+[
+  {
+    "thinking": "Phase 1-5: Analysis of UK business rates policy. Stated goal: support hospitality. Actual: redistribution of tax burden via vape shops. Plane error: Q2 (What) - failure modes suppressed. Vector: A_GP (Good Preference) vs A_LE (Lesser Evil). R_net: 1.8 (Conditionally Sound).",
+    "id": "uk_business_rates_cut",
+    "subject": "Government to cut business rates for pubs, clubs and music venues",
+    "link": "https://www.bbc.co.uk/news/articles/cq6dg816464o?at_medium=RSS&at_campaign=rss",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 0.5,
+    "real_u": 0.2,
+    "real_psi": -0.2,
+    "mode": "root",
+    "posts": [
+      "A tax cut for pubs arrives, but the funding source remains a point of contention. \nEvidence: Support hospitality, Redistribute tax, Economic relief\n#UKPol #Hospitality",
+      "The government announced a 20% business rates cut for pubs and small venues to save them money and prevent closures. \nStated Judgement: (1.0, 0.5) — Good Preference",
+      "The relief is funded by taxing vape shops, and many owners argue the cut is too small to offset previous massive cost hikes. \nResulting Judgement: (0.2, -0.2) — Lesser Good",
+      "Verdict: PASS — The Path of Redemption.\nWhile the relief is modest, it addresses a specific sector strain through transparent reallocation. \nIntegrity: Conditionally Sound (R_net: 1.8, Uncertainty z: 1)",
+      "The UK government is attempting to stabilize the hospitality sector by cutting business rates by 20%, funded by removing tax reliefs from vape shops and cracking down on online tax evasion.",
+      "The Bright Side:\nSmall venues gain a necessary buffer against rising operational costs, potentially saving local community hubs.",
+      "The Breakdown & Plane Error:\nThe error lies in Q2 (What); the government frames this as a total solution, ignoring that for many, the relief is insufficient to cover prior rate hikes.",
+      "Social Physics Analysis:\nBy shifting tax burdens from community-focused venues to industries with less local impact, the policy attempts to empower small businesses. It avoids projection by targeting specific tax loopholes rather than broad sectors.",
+      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a trajectory toward Redemption. The policy reduces strain on local businesses through targeted fiscal adjustment.",
+      "The Unavoidable Truth: Small venues are struggling with high overheads.\n\nThe Unavoidable Lie: This tax cut will solve the hospitality sector's financial crisis.",
+      "Alethekanon:\nFiscal policy is a blunt instrument. This is a minor correction, not a systemic fix, but it acknowledges the reality of the sector's decline.",
+      "Awwthekanon:\nIt is heartening to see the government listen to the plight of our local pubs, even if the help is just a small step toward healing.",
+      "Brothekanon:\nClassic government move: give a little, take a little. Better than nothing, but don't expect your pint to get cheaper anytime soon."
+    ],
+    "actors": [
+      "Andy Burnham",
+      "John Healey",
+      "UK Government"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.8,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Conditionally Sound",
+    "category": "politics",
+    "topic": "UKPol",
+    "event": ""
+  }
+]

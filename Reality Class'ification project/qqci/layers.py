@@ -13,10 +13,15 @@ B. THE DICTIONARY SCALES  --  the filing system
 
        Registry > Temporal > Language > Phrase > Word > Char > Meaning
 
-   Six dimensions saying WHERE AN ENTRY IS STORED. When
-   General_Contextual_Dictionary.cs writes `wordLayer: 7 // Effect`, that is
-   an index key: this entry is filed under plane 7 at word granularity. It is
-   not a semantic composition and it is not a transformer layer.
+   Six dimensions saying WHERE AN ENTRY IS STORED. Each scale stores THAT
+   SCALE'S CONTENT: Char holds characters, Word holds words, Phrase holds
+   phrases, Language holds the language RULES themselves (the collapse
+   dictionaries, NSM reduction, grammar), Temporal holds versioning,
+   Registry holds which contextual dictionary. When
+   General_Contextual_Dictionary.cs writes `wordLayer: 7 // Effect`, the 7
+   is an integer KEY, not a plane reading -- it does not mean "this word
+   reads Effect." It is not a semantic composition and it is not a
+   transformer layer.
 
 The two are orthogonal. A meaning has a Qqci form AND a filing location, the
 same way a book has a subject and a shelf number. Neither determines the other.
@@ -57,13 +62,13 @@ class Scale:
 
 SCALES: List[Scale] = [
     Scale(1, "Char", "one character",
-          "the plane this character is filed under",
+          "the character itself",
           "MeaningMetaRegistry (rank index) + tautonic.CHAR_TENSOR", "done"),
     Scale(2, "Word", "one word string",
-          "the plane this word is filed under",
-          "MeaningMetaRegistry.get_meaning(rank=WORD, root_plane=...)", "done"),
+          "the word itself",
+          "MeaningMetaRegistry.get_meaning(rank=WORD, word=...)", "done"),
     Scale(3, "Phrase", "one phrase or transition",
-          "the plane this phrase is filed under",
+          "the phrase itself",
           "MeaningMetaRegistry (rank=PHRASE) + sael.Transition", "done"),
     Scale(4, "Language", "one language system",
           "which language plane",

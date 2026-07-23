@@ -38,6 +38,17 @@ structure fits in seven dimensions AT ALL. If that is high, a 7-plane
 architecture is viable in principle regardless of our current assignment. If
 it is low, seven dimensions is simply too few and the fractal depth is doing
 all the work.
+
+KRONECKER-343
+-------------
+At k=343 this also builds the frozen 7x7x7 Kronecker basis (fractal_basis.
+cell_basis(3)) and re-expresses the SVD-343 subspace in it. This equality is
+a linear-algebra identity, not an empirical finding: reconstruction depends
+only on the column space a basis spans, and rotating by an orthonormal
+matrix does not change that space. What it actually demonstrates is that
+naming the coordinates (via the recursive, morally-typed Kronecker basis)
+costs nothing once the right subspace is known. Finding that subspace from
+words alone -- i.e. real word-to-cell assignment -- is still unsolved.
 """
 
 from __future__ import annotations
@@ -52,8 +63,9 @@ import numpy as np
 
 from qqci_engine import Plane
 from tautonic import ANCHOR_PLANE, CHAR_TENSOR, POLARITY_PUSH
+from fractal_basis import cell_basis
 
-CORPUS_DIR = "/sessions/admiring-sweet-albattani/mnt/_VFT MD"
+CORPUS_DIR = r"E:\Vector Field Theory\VFT Docs\_VFT MD"
 WORD_RE = re.compile(r"[a-z']+")
 
 
@@ -168,12 +180,20 @@ def main() -> None:
 
     rng = np.random.default_rng(0)
 
+    # C's columns are the "next word" axis that every B below compresses
+    # (proj = C @ B, then proj @ B.T decompresses). The Frobenius-optimal
+    # rank-k projector onto that axis comes from C's RIGHT singular vectors
+    # (C = U S Vt, C.T @ C = V S^2 V.T), not the left ones -- using U here
+    # would silently compress the wrong (context/row) axis.
+    _, _, Vt = np.linalg.svd(C, full_matrices=False)
+
     for k in (7, 49, 343):
-        # SVD-k: the ceiling for a k-dimensional linear compression
-        U, S, Vt = np.linalg.svd(C, full_matrices=False)
-        Ck = (U[:, :k] * S[:k]) @ Vt[:k]
+        # SVD-k: the ceiling for a k-dimensional linear compression of the
+        # next-word axis, expressed the same way (reconstruct()) as every
+        # other basis below, so all of them are comparable operations.
+        Vk = Vt[:k].T
         results[f"SVD-{k} (optimal ceiling)"] = perplexity(
-            row_normalise(Ck), test)
+            row_normalise(reconstruct(C, Vk)), test)
 
         # RANDOM-k: the floor
         R = orthonormalise(rng.normal(size=(V, k)).astype(np.float32))
@@ -185,6 +205,30 @@ def main() -> None:
             A = orthonormalise(plane_assignment(vocab))
             results["PLANE-7 (char-tensor assignment)"] = perplexity(
                 row_normalise(reconstruct(C, A)), test)
+
+        if k == 343:
+            # KRONECKER-343: re-express the SVD-343 subspace (the same
+            # next-word column space, found by SVD) in the frozen, named,
+            # recursive 7x7x7 Kronecker basis instead of raw singular
+            # vectors.
+            #
+            # This is GUARANTEED identical to SVD-343, not an empirical
+            # coincidence: reconstruct() = C @ B @ B.T depends only on the
+            # column SPACE spanned by B, and right-multiplying an
+            # orthonormal basis by another orthonormal matrix (the
+            # Kronecker rotation) does not change the space it spans.
+            # M343 @ M343.T == I, so Vk @ M343 spans exactly what Vk does.
+            # The content of this test is therefore: whichever 343-dim
+            # subspace turns out to matter, the named recursive basis can
+            # represent it losslessly -- the cost of naming the
+            # coordinates is zero once the subspace is known. It does NOT
+            # show the Kronecker structure finds a good subspace on its
+            # own; word-to-cell assignment (which subspace, in practice)
+            # remains the open problem (see HANDOVER.md).
+            M343 = cell_basis(3)
+            B_kron = Vk @ M343
+            results["Kronecker-343 (named basis, SVD subspace)"] = perplexity(
+                row_normalise(reconstruct(C, B_kron)), test)
 
     print("PERPLEXITY on held-out bigrams (LOWER is better)")
     print("=" * 62)

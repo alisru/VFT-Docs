@@ -580,8 +580,10 @@ class MeaningMetaRegistry:
                           Identity is the plane vector and the interrogative
                           path. This is the semantic space.
       MeaningMetaRegistry scale-indexed. Answers "where does this node sit?"
-                          Language, rank, temporal, root plane. This is the
-                          filing system, and it carries no meaning at all.
+                          Language, rank, temporal, word. This is the filing
+                          system, and it carries no meaning at all: it is
+                          never indexed by plane, since plane is a system-A
+                          (Qqci form) coordinate, not a filing key.
 
     Collapsing the two was a mistake: it made the scale layers look like
     semantic dimensions, which is the category error that produced the
@@ -598,7 +600,6 @@ class MeaningMetaRegistry:
         self._by_language: Dict[int, set] = {}
         self._by_rank: Dict[TensorRank, set] = {}
         self._by_temporal: Dict[int, set] = {}
-        self._by_root_plane: Dict[Plane, set] = {}
         self._by_word: Dict[str, set] = {}
         self._by_definitive: Dict[str, set] = {}
 
@@ -609,17 +610,18 @@ class MeaningMetaRegistry:
         self._by_language.setdefault(m.address.language, set()).add(axid)
         self._by_rank.setdefault(m.rank, set()).add(axid)
         self._by_temporal.setdefault(m.carved_at, set()).add(axid)
-        self._by_root_plane.setdefault(m.address.root, set()).add(axid)
         self._by_word.setdefault(m.word, set()).add(axid)
         self._by_definitive.setdefault(m.definitive or m.word, set()).add(axid)
         return axid
 
     # --- GetMeaning, but any subset of coordinates is a legal query ---
+    # No root_plane parameter: plane is a system-A (Qqci form) coordinate,
+    # not a filing key. Querying by plane belongs to MeaningRegistry /
+    # CoherenceVector, never to this filing index.
     def get_meaning(self, *, axomic_id: Optional[str] = None,
                     language: Optional[int] = None,
                     rank: Optional[TensorRank] = None,
                     temporal: Optional[int] = None,
-                    root_plane: Optional[Plane] = None,
                     word: Optional[str] = None,
                     definitive: Optional[str] = None) -> List[Meaning]:
         if axomic_id is not None:
@@ -633,8 +635,6 @@ class MeaningMetaRegistry:
             sets.append(self._by_rank.get(rank, set()))
         if temporal is not None:
             sets.append(self._by_temporal.get(temporal, set()))
-        if root_plane is not None:
-            sets.append(self._by_root_plane.get(root_plane, set()))
         if word is not None:
             sets.append(self._by_word.get(word, set()))
         if definitive is not None:
@@ -661,8 +661,16 @@ class MeaningMetaRegistry:
 
     # --- what the flat original could not answer at all ---
     def plane_census(self) -> Dict[Plane, int]:
-        """How many nodes are rooted at each plane. Coverage diagnostic."""
-        return {p: len(self._by_root_plane.get(p, set())) for p in Plane}
+        """
+        How many stored nodes are rooted at each plane. A read-only report
+        over each node's own system-A address, computed on demand rather
+        than maintained as a filing index: the meta-registry does not
+        organise storage by plane, it only reports on what is stored.
+        """
+        counts: Dict[Plane, int] = {p: 0 for p in Plane}
+        for m in self._by_axomic.values():
+            counts[m.address.root] += 1
+        return counts
 
     def rank_census(self) -> Dict[TensorRank, int]:
         return {r: len(self._by_rank.get(r, set())) for r in TensorRank}
