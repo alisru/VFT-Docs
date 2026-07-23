@@ -1,6 +1,6 @@
 # Master Design Document - The Psochic Hegemony Attractor Engine
 
-This document is the **Permanent, Cumulative Master Design Document** for the Psochic Hegemony Attractor Map visualizer. It is strictly cumulative: no sections, equations, rules, or controls will ever be removed or overwritten.
+This document is the **Permanent, Cumulative Master Design Document** for the Psochic Hegemony Attractor Map visualizer. It is strictly cumulative: no sections, equations, rules, or controls will ever be removed, renamed, or overwritten.
 
 ---
 
@@ -34,45 +34,21 @@ All 7 real-time calibration sliders are permanently preserved in the Physics Con
 
 ---
 
-## 💨🔥 3. Selfish Fire (Dry) Actors vs Altruistic Air (Wet) Actors & Core Intended Migration Lifecycle
+## 🧪 3. Altruistic vs Selfish Metabolic Extraction Mechanics
 
-### Actor Classifications:
-1. **Altruistic Good Wet Actors (Air / Good Preference)**:
-   - Live in **Air (+u, +ψ)** with Good preference ($+u$).
-   - **Altruistic Extraction**: Extracts Truth from Lies by using up Good energy:
+1. **Altruistic Extraction (Good Core / Air Wet Actors)**:
+   - Altruistic actors use Good energy ($E_{\text{good}}$) to **extract Truth from Lies** by consuming Good energy:
      \[
      E_{\text{lie}} + E_{\text{good}} \xrightarrow{\text{Altruistic Core}} E_{\text{truth}} \text{ (Truth Fuel)}
      \]
-   - Good energy ($E_{\text{good}}$) is sacrificed to cleanse Lie into Truth fuel.
+   - Sacrifices Good energy ($E_{\text{good}}$) to cleanse Lie into Truth fuel.
 
-2. **Selfish Bad Dry Actors (Fire / Bad Preference)**:
-   - Live in **Fire (-u, +ψ)** with Bad preference ($-u$).
-   - **Selfish Processing**: Processes Truth into Lies, actively converting Good energy into Bad energy:
+2. **Selfish Processing (Bad Core / Fire Dry Actors)**:
+   - Selfish actors process **Truth into Lies**, actively converting Good energy into Bad energy:
      \[
      E_{\text{truth}} + E_{\text{good}} \xrightarrow{\text{Selfish Core}} E_{\text{lie}} \text{ (Lie Fuel)} + E_{\text{bad}} \text{ (Bad Energy)}
      \]
    - Corrupts Good energy into Bad energy ($E_{\text{good}} \rightarrow E_{\text{bad}}$), pushing the cell into the Bad domain.
-
----
-
-### 🔄 Core Intended Migration Lifecycle & Effect
-
-> *"so can you really think about this, the idea that if an organism starts off in good preference it'll want to progress through to lesser good due to the lie repulsion from GG, consuming lie produces bad within the organisms which should push it to GE where its use of lies and repulsion from truth sends it to the lesser evil until its starved of truth it needs to survive and its fire body slowly starves, or smth like that"*
-
-#### 1. Progression from Good Preference $(+1, 0)$ to Lesser Good $(+1, -1)$:
-- An organism starts in **Good Preference $(+1, 0)$**.
-- It absorbs/stores Lie energy ($E_{\text{lie}}$). Storing Lie energy creates **Lie Repulsion from Greater Good (GG $+1, +1$)**, pushing the cell southward into **Lesser Good / Water $(+1, -1)$**.
-
-#### 2. Westward Shift to Greater Evil / Fire $(-1, +1)$:
-- Selfish/corrupting processing converts stored Truth into Lies, converting Good energy into **Bad energy ($E_{\text{bad}}$)** inside the organism.
-- Accumulating Bad energy pushes the cell's balance westward across the axis into **Greater Evil / Fire $(-1, +1)$**.
-
-#### 3. Southward Shift to Lesser Evil / Earth $(-1, -1)$:
-- In Greater Evil, its use of Lies for thrusters and physical repulsion from Truth sends it southward into **Lesser Evil / Earth $(-1, -1)$**.
-
-#### 4. Truth Starvation & Fire Body Decay:
-- In Fire/Earth, the organism runs out of Truth fuel ($E_{\text{truth}} = 0.0\text{U}$).
-- Without Truth fuel to repair its Air Core, its **Fire body slowly starves and decays in HP** ($-3.0\text{ HP/s}$) until it migrates back toward Truth gradients to repair its Air Core or dies.
 
 ---
 
@@ -130,6 +106,9 @@ u_{\text{cell}} = \frac{E_{\text{good}} - E_{\text{bad}}}{E_{\text{total}} + 1.0
 2. **Lie Repulsion from Greater Good (GG)**: Storing Lie energy ($E_{\text{lie}}$) creates a southward repulsive force ($-\psi$) pushing Air organisms out of Air ($+u, +\psi$) into Water ($+u, -\psi$).
 3. **Internal Bad Energy Generation**: Digesting Lie energy converts cytoplasm into Bad energy ($E_{\text{bad}}$), pushing the cell westward ($-u$) into Fire/Earth.
 4. **Truth Starvation & Fire Body Decay**: When a cell in the Fire/Earth domain reaches $0.0\text{U}$ Truth fuel, it cannot repair its Air Core, causing its Fire body to slowly starve ($-3.0\text{ HP/s}$) until it finds a Truth source or dies.
+
+### Core Intended Effect & Progression Note:
+> *"so can you really think about this, the idea that if an organism starts off in good preference it'll want to progress through to lesser good due to the lie repulsion from GG, consuming lie produces bad within the organisms which should push it to GE where its use of lies and repulsion from truth sends it to the lesser evil until its starved of truth it needs to survive and its fire body slowly starves, or smth like that"*
 
 ---
 
