@@ -128,8 +128,13 @@ def validate_story_file(path, compact=False):
             raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
 
         # Pack posts and length validation
-        is_compact = compact or cfg.get("compact", False)
-        if is_compact:
+        is_compact_single = compact == "single" or cfg.get("compact") == "single"
+        is_compact_thread = compact is True or cfg.get("compact") is True
+        is_compact = is_compact_single or is_compact_thread
+
+        if is_compact_single:
+            final_posts = cfg["posts"][:1]
+        elif is_compact_thread:
             final_posts = cfg["posts"][:4]
         else:
             final_posts = pack_posts(cfg["posts"])
@@ -168,10 +173,17 @@ def main():
     parser.add_argument("--min-delay", type=int, default=5, help="Minimum delay between different threads in seconds (default: 10)")
     parser.add_argument("--max-delay", type=int, default=10, help="Maximum delay between different threads in seconds (default: 30)")
     parser.add_argument("--live", action="store_true", help="Set to actually post live (dry-run by default)")
-    parser.add_argument("--compact", action="store_true", help="Post in compact mode (posts 1-4 as text, posts 5+ as summary card image)")
+    parser.add_argument("--compact", action="store_true", help="Post in compact thread mode (posts 1-4 as text, posts 5+ as summary card image)")
+    parser.add_argument("--compact-single", action="store_true", help="Post in compact single-post mode (only post 1 with graph and card images)")
     parser.add_argument("--move-to", type=str, default=os.path.join(script_dir, "stories", "live"), help="Folder to move successfully posted files to (default: bluesky_bot/stories/live)")
     parser.add_argument("--watch", action="store_true", help="Run in continuous daemon mode, watching the folder and posting any new files (default: False)")
     args = parser.parse_args()
+
+    compact_val = False
+    if args.compact_single:
+        compact_val = "single"
+    elif args.compact:
+        compact_val = True
 
     from dotenv import load_dotenv
     # Check root first, then script dir (bluesky_bot/.env)
@@ -230,7 +242,7 @@ def main():
                         print(f"\n[Watch] Validating and posting: {filename}")
                         
                         # Pre-flight validation
-                        is_valid, err_msg = validate_story_file(path, compact=args.compact)
+                        is_valid, err_msg = validate_story_file(path, compact=compact_val)
                         if not is_valid:
                             print(f"  [VALIDATION FAIL] {filename}: {err_msg}")
                             # Move to fail folder
@@ -260,7 +272,7 @@ def main():
                                     def custom_sleep(seconds):
                                         original_sleep(2.0 if seconds == 1 else seconds)
                                     time.sleep = custom_sleep
-                                    post_thread(client, cfg, live=args.live, compact=args.compact)
+                                    post_thread(client, cfg, live=args.live, compact=compact_val)
                                     success = True
                                 finally:
                                     time.sleep = original_sleep
@@ -407,7 +419,7 @@ def main():
                             def custom_sleep(seconds):
                                 original_sleep(2.0 if seconds == 1 else seconds)
                             time.sleep = custom_sleep
-                            post_thread(client, cfg, live=args.live, compact=args.compact)
+                            post_thread(client, cfg, live=args.live, compact=compact_val)
                             success = True
                         finally:
                             time.sleep = original_sleep

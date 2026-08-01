@@ -557,8 +557,12 @@ class AletheiaLauncherApp:
         self.chk_search.grid(row=6, column=3, columnspan=2, sticky="w", pady=3)
 
         self.val_compact = tk.BooleanVar(value=False)
-        self.chk_compact = ttk.Checkbutton(grid_frame, text="Enable Compact Image Mode", variable=self.val_compact)
-        self.chk_compact.grid(row=6, column=5, columnspan=1, sticky="w", pady=3)
+        self.chk_compact = ttk.Checkbutton(grid_frame, text="Compact Thread Mode", variable=self.val_compact)
+        self.chk_compact.grid(row=6, column=5, columnspan=1, sticky="w", pady=3, padx=(0, 10))
+
+        self.val_compact_single = tk.BooleanVar(value=False)
+        self.chk_compact_single = ttk.Checkbutton(grid_frame, text="Compact Single Mode", variable=self.val_compact_single)
+        self.chk_compact_single.grid(row=6, column=6, columnspan=1, sticky="w", pady=3)
 
         tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=7, column=0, sticky="w", pady=3, padx=(0, 5))
         batch_size_frame = tk.Frame(grid_frame, bg=CARD_BG)
@@ -746,8 +750,12 @@ class AletheiaLauncherApp:
         self.chk_watch.grid(row=0, column=4, sticky="w", pady=3, padx=(0, 20))
 
         self.val_post_compact = tk.BooleanVar(value=False)
-        self.chk_post_compact = ttk.Checkbutton(grid_frame, text="Post in Compact Mode", variable=self.val_post_compact)
-        self.chk_post_compact.grid(row=0, column=5, sticky="w", pady=3)
+        self.chk_post_compact = ttk.Checkbutton(grid_frame, text="Post Compact Thread", variable=self.val_post_compact)
+        self.chk_post_compact.grid(row=0, column=5, sticky="w", pady=3, padx=(0, 20))
+
+        self.val_post_compact_single = tk.BooleanVar(value=False)
+        self.chk_post_compact_single = ttk.Checkbutton(grid_frame, text="Post Compact Single", variable=self.val_post_compact_single)
+        self.chk_post_compact_single.grid(row=0, column=6, sticky="w", pady=3)
 
         self.btn_run_live = tk.Button(
             inner, text="Run Pre-Flight & Live Post Scheduler", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
@@ -996,6 +1004,9 @@ class AletheiaLauncherApp:
         if self.val_compact.get():
             args.append("--compact")
 
+        if self.val_compact_single.get():
+            args.append("--compact-single")
+
         if self.batch_size_var.get():
             args.extend(["--chunk-size", self.batch_size_var.get()])
 
@@ -1018,7 +1029,9 @@ class AletheiaLauncherApp:
                 # Step 1: Pre-flight validation
                 self.log_post("\n> Running Pre-Flight Validation...\n")
                 val_args = [python_bin, "-u", "bluesky_bot/validate_batch.py"]
-                if self.val_post_compact.get():
+                if self.val_post_compact_single.get():
+                    val_args.append("--compact-single")
+                elif self.val_post_compact.get():
                     val_args.append("--compact")
                 val_proc = subprocess.Popen(
                     val_args,
@@ -1041,7 +1054,9 @@ class AletheiaLauncherApp:
                 self.log_post("\n> Validation passed! Scheduling live batch posting...\n")
                 args = [python_bin, "-u", "bluesky_bot/post_batch.py", "--live"]
                 
-                if self.val_post_compact.get():
+                if self.val_post_compact_single.get():
+                    args.append("--compact-single")
+                elif self.val_post_compact.get():
                     args.append("--compact")
                 
                 min_delay = self.ent_min_delay.get().strip()

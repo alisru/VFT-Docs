@@ -29,7 +29,8 @@ except ImportError as ie:
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Batch Pre-Flight Validator")
-    parser.add_argument("--compact", action="store_true", help="Validate in compact mode")
+    parser.add_argument("--compact", action="store_true", help="Validate in compact thread mode")
+    parser.add_argument("--compact-single", action="store_true", help="Validate in compact single-post mode")
     args = parser.parse_args()
 
     stories_dir = os.path.join(script_dir, "stories")
@@ -95,8 +96,13 @@ def main():
             target_url = cfg.get("target_url", "")
 
             # 1. Pack posts and length validation
-            is_compact = args.compact or cfg.get("compact", False)
-            if is_compact:
+            is_compact_single = args.compact_single or cfg.get("compact") == "single"
+            is_compact_thread = args.compact or cfg.get("compact") is True
+            is_compact = is_compact_single or is_compact_thread
+
+            if is_compact_single:
+                final_posts = posts[:1]
+            elif is_compact_thread:
                 final_posts = posts[:4]
             else:
                 final_posts = pack_posts(posts)

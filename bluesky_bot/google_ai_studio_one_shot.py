@@ -1311,7 +1311,7 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
             story["id"] = slug
             story["status"] = "COMPLETED DRY RUN"
             if compact:
-                story["compact"] = True
+                story["compact"] = "single" if compact == "single" else True
 
             # Actors: AI-provided takes priority; fall back to deterministic extraction if empty
             if not story.get("actors"):
@@ -1369,6 +1369,7 @@ def main():
     parser = argparse.ArgumentParser(description="Google AI Studio One-Shot Batch Evaluator")
     parser.add_argument("--son", action="store_true", help="Use the 6-Attractor SON convergence model and formatting instructions")
     parser.add_argument("--compact", action="store_true", help="Enable compact posting mode formatting (lifting character limits on posts 4+ in API responses)")
+    parser.add_argument("--compact-single", action="store_true", help="Enable compact single-post mode formatting (lifting character limits on posts 4+ and tagging story as single-post compact)")
     parser.add_argument("--search", action="store_true", help="Enable Google Search Grounding to fact-check claims (default: False)")
     parser.add_argument("--rss", type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
@@ -1388,6 +1389,12 @@ def main():
     ))
     parser.add_argument("--enabled-feeds", type=str, default=None, help="Comma-separated feed names (or URLs) to enable for harvesting.")
     args = parser.parse_args()
+    
+    compact_val = False
+    if args.compact_single:
+        compact_val = "single"
+    elif args.compact:
+        compact_val = True
     
     global PREFERRED_OUTLET_DOMAINS
     if args.prefer:
@@ -1510,7 +1517,7 @@ def main():
                     genai_client, remaining, args.model, agnes_api_key=agnes_api_key, 
                     use_son=args.son, use_search=args.search, 
                     extra_context=args.context, model_sequence=model_seq,
-                    compact=args.compact
+                    compact=compact_val
                 )
                 parsed = transpose_flat_to_json(raw_text)
                 
@@ -1576,7 +1583,7 @@ def main():
             print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s). Skipping.")
 
         if chunk_evals:
-            chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic, compact=args.compact)
+            chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic, compact=compact_val)
             print(f"  Processed {chunk_success}/{len(chunk_evals)} evaluations from chunk to darkroom.")
             print("  Promoting and generating graphs immediately...")
             rebuild_registries_selector(args.son)

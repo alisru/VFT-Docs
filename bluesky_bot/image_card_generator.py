@@ -116,7 +116,7 @@ def wrap_text(text, font, max_width, draw):
     return lines
 
 def generate_compact_info_card(thread_config, output_path):
-    """Renders posts 4-12 of the thread config into a beautiful two-column dark-mode infographic card."""
+    """Renders posts of the thread config into a beautiful two-column dark-mode infographic card (including Claim, Reality, Verdict in single-post mode)."""
     subject = thread_config.get("subject", "Assessment Summary")
     posts = thread_config.get("posts", [])
     
@@ -130,8 +130,30 @@ def generate_compact_info_card(thread_config, output_path):
     border_color = "#25354F"
     text_color = "#E2E8F0"
     
-    # Define sections with clean titles, content (strip prefixes), and custom colors
-    sections = [
+    # Check if compact single-post mode is active (Claim, Reality, Verdict are added as visual cards)
+    is_single = thread_config.get("compact") == "single" or thread_config.get("compact_single", False)
+    
+    sections = []
+    if is_single:
+        sections.extend([
+            {
+                "label": "THE CLAIM",
+                "text": posts[1].replace("Claim:\n", "").replace("The Claim:\n", "").replace("Stated Judgement:\n", "").strip(),
+                "color": "#94A3B8" # Slate
+            },
+            {
+                "label": "THE REALITY",
+                "text": posts[2].replace("Reality:\n", "").replace("The Reality:\n", "").replace("Resulting Judgement:\n", "").strip(),
+                "color": "#38BDF8" # Sky Blue
+            },
+            {
+                "label": "THE VERDICT",
+                "text": posts[3].replace("Verdict:\n", "").replace("Stated Verdict:\n", "").strip(),
+                "color": "#FBBF24" # Yellow/Amber
+            }
+        ])
+
+    sections.extend([
         {
             "label": "CONTEXT",
             "text": posts[4].replace("What's happening:\n", "").replace("Context:\n", "").strip(),
@@ -162,7 +184,7 @@ def generate_compact_info_card(thread_config, output_path):
             "text": posts[9].replace("The Unavoidable Truth:", "Truth:").replace("The Unavoidable Lie:", "Lie:").strip(),
             "color": "#F59E0B" # Amber/Orange
         }
-    ]
+    ])
     
     personas = [
         {
@@ -217,10 +239,18 @@ def generate_compact_info_card(thread_config, output_path):
 
     grid_start_y = current_y
 
-    # Left Column cards layout (Sections 1, 2, 3)
+    # Split sections into Left and Right Columns dynamically
+    if is_single:
+        left_sections = sections[:5]  # Claim, Reality, Verdict, Context, Nuance
+        right_sections = sections[5:] # Breakdown, Social Physics, Trajectory, Unavoidables
+    else:
+        left_sections = sections[:3]  # Context, Nuance, Breakdown
+        right_sections = sections[3:] # Social Physics, Trajectory, Unavoidables
+
+    # Left Column cards layout
     left_layouts = []
     left_y = grid_start_y
-    for sec in sections[:3]:
+    for sec in left_sections:
         wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
         card_h = 25 + 15 + body_h + 25
@@ -233,10 +263,10 @@ def generate_compact_info_card(thread_config, output_path):
         })
         left_y += card_h + card_gap
 
-    # Right Column cards layout (Sections 4, 5, 6)
+    # Right Column cards layout
     right_layouts = []
     right_y = grid_start_y
-    for sec in sections[3:]:
+    for sec in right_sections:
         wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
         card_h = 25 + 15 + body_h + 25

@@ -286,8 +286,21 @@ def post_thread(client, thread_config, live=False, compact=False):
     if not posts:
         raise ValueError("Thread configuration contains no posts.")
         
-    is_compact = thread_config.get("compact", False) or compact
-    if is_compact:
+    is_compact_single = thread_config.get("compact") == "single" or compact == "single"
+    is_compact_thread = thread_config.get("compact") is True or compact is True
+    is_compact = is_compact_single or is_compact_thread
+
+    if is_compact_single:
+        final_posts = posts[:1]
+        if link:
+            ref_suffix = f"\n\nReference: {link}"
+            if len(final_posts[0]) + len(ref_suffix) <= 299:
+                final_posts[0] += ref_suffix
+            else:
+                ref_suffix = f"\n\n{link}"
+                if len(final_posts[0]) + len(ref_suffix) <= 299:
+                    final_posts[0] += ref_suffix
+    elif is_compact_thread:
         final_posts = posts[:4]
     else:
         final_posts = pack_posts(posts, max_len=299)
@@ -332,10 +345,13 @@ def post_thread(client, thread_config, live=False, compact=False):
         for idx, post in enumerate(final_posts, 1):
             embed_info = ""
             if idx == 1:
-                embed_info = f" [Embed: Trajectory Graph]"
+                if is_compact_single:
+                    embed_info = " [Embed: Trajectory Graph & Compact Summary Card]"
+                else:
+                    embed_info = " [Embed: Trajectory Graph]"
             elif idx == 2 and link:
                 embed_info = f" [Embed: Link Card -> {link}]"
-            elif idx == 4 and is_compact:
+            elif idx == 4 and is_compact_thread:
                 embed_info = f" [Embed: Compact Summary Card]"
             elif "Source: " in post and thread_config.get("grounding_url"):
                 embed_info = f" [Embed: Grounding Card -> {thread_config.get('grounding_url')}]"
@@ -435,8 +451,15 @@ def post_thread(client, thread_config, live=False, compact=False):
                 except Exception as ex:
                     print(f"Warning: Failed to create grounding external link embed card: {ex}")
 
-            # first_post_embed always gets the trajectory graph_embed
+            # first_post_embed gets the trajectory graph, and in compact-single mode, also gets the summary card
             first_post_embed = graph_embed
+            if is_compact_single and info_card_embed is not None:
+                joint_images = []
+                if graph_embed is not None and hasattr(graph_embed, "images"):
+                    joint_images.extend(graph_embed.images)
+                if info_card_embed is not None and hasattr(info_card_embed, "images"):
+                    joint_images.extend(info_card_embed.images)
+                first_post_embed = models.AppBskyEmbedImages.Main(images=joint_images)
 
             # 4. Resolve Links and Hashtags for facets (only on the first/root post)
             facets, tags_list = resolve_facets_and_tags(final_posts[0], link=link)
@@ -599,7 +622,8 @@ def post_thread(client, thread_config, live=False, compact=False):
 def main():
     parser = argparse.ArgumentParser(description="Unified Aletheia Bot CLI Engine")
     parser.add_argument("--config", required=True, help="Path to the JSON configuration file containing thread details.")
-    parser.add_argument("--compact", action="store_true", help="Force compact posting mode (posts 1-4 as text, posts 5+ as summary card image)")
+    parser.add_argument("--compact", action="store_true", help="Force compact thread posting mode (posts 1-4 as text, posts 5+ as summary card image)")
+    parser.add_argument("--compact-single", action="store_true", help="Force compact single-post mode (only post 1 with graph and card images)")
     
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--dry-run", action="store_true", help="Run in validation and dry-run mode (local graph, console logging).")
@@ -645,10 +669,16 @@ def main():
             print(f"Authentication failed: {e}")
             sys.exit(1)
 
+    compact_val = False
+    if args.compact_single:
+        compact_val = "single"
+    elif args.compact:
+        compact_val = True
+
     # Process all threads
     for thread in threads:
         try:
-            post_thread(client, thread, live=args.live, compact=args.compact)
+            post_thread(client, thread, live=args.live, compact=compact_val)
         except Exception as e:
             print(f"ERROR: {e}")
             sys.exit(1)
