@@ -116,7 +116,7 @@ def wrap_text(text, font, max_width, draw):
     return lines
 
 def generate_compact_info_card(thread_config, output_path):
-    """Renders posts 4-12 of the thread config into a beautiful dark-mode infographic card."""
+    """Renders posts 4-12 of the thread config into a beautiful two-column dark-mode infographic card."""
     subject = thread_config.get("subject", "Assessment Summary")
     posts = thread_config.get("posts", [])
     
@@ -186,66 +186,107 @@ def generate_compact_info_card(thread_config, output_path):
     temp_img = Image.new("RGB", (1, 1))
     temp_draw = ImageDraw.Draw(temp_img)
 
-    # 1. LAYOUT PASS: Compute dynamic heights
+    # 1. LAYOUT PASS: Compute grid dimensions and dynamic height
+    canvas_w = 1200
     x_left = 40
-    x_right = 960
-    card_w = x_right - x_left # 920px
-    text_w = card_w - 60 # 860px (30px card padding left/right)
+    x_right = canvas_w - x_left # 1160px
+    drawable_w = x_right - x_left # 1120px
     
-    line_h = 28 # Height per text line including spacing
-    gap = 25 # Gap between cards
+    # 2-Column Grid dimensions for Sections
+    col_gap = 30
+    col_w = (drawable_w - col_gap) // 2 # 545px
+    col_1_x_left = x_left
+    col_1_x_right = col_1_x_left + col_w
+    col_2_x_left = col_1_x_right + col_gap
+    col_2_x_right = col_2_x_left + col_w
+    
+    # Text wrapping widths
+    sec_text_w = col_w - 50 # 495px (25px padding left/right)
+    
+    # Sizing parameters
+    line_h = 28 # Height per text line
+    card_gap = 25 # Vertical space between stacked cards
     
     current_y = 50 # Start padding
 
-    # Title layout
-    title_lines = wrap_text(subject, fonts["bold_32"], card_w, temp_draw)
+    # Title layout (spans full width)
+    title_lines = wrap_text(subject, fonts["bold_32"], drawable_w, temp_draw)
     title_h = len(title_lines) * 38
     title_y_start = current_y
     current_y += title_h + 30 # Title margin
 
-    # Calculate height for each section card
-    section_layouts = []
-    for sec in sections:
-        wrapped_body = wrap_text(sec["text"], fonts["regular_20"], text_w, temp_draw)
+    grid_start_y = current_y
+
+    # Left Column cards layout (Sections 1, 2, 3)
+    left_layouts = []
+    left_y = grid_start_y
+    for sec in sections[:3]:
+        wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
-        card_h = 25 + 15 + body_h + 25 # Label height (25) + label margin (15) + body (body_h) + bottom padding (25)
+        card_h = 25 + 15 + body_h + 25
         
-        section_layouts.append({
+        left_layouts.append({
             "sec": sec,
-            "y": current_y,
+            "y": left_y,
             "h": card_h,
             "lines": wrapped_body
         })
-        current_y += card_h + gap
+        left_y += card_h + card_gap
 
-    # Header for Perspectives Panel
-    perspectives_header_y = current_y
-    current_y += 35 + 15 # Label (35) + gap (15)
-
-    # Calculate height for each persona block
-    persona_layouts = []
-    for per in personas:
-        wrapped_body = wrap_text(per["text"], fonts["regular_20"], text_w, temp_draw)
+    # Right Column cards layout (Sections 4, 5, 6)
+    right_layouts = []
+    right_y = grid_start_y
+    for sec in sections[3:]:
+        wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
-        card_h = 25 + 15 + body_h + 25 # Label height (25) + label margin (15) + body (body_h) + bottom padding (25)
+        card_h = 25 + 15 + body_h + 25
         
-        persona_layouts.append({
-            "per": per,
-            "y": current_y,
+        right_layouts.append({
+            "sec": sec,
+            "y": right_y,
             "h": card_h,
             "lines": wrapped_body
         })
-        current_y += card_h + 20 # Symmetrical spacing between persona cards
+        right_y += card_h + card_gap
 
-    # Add watermark/footer height
-    current_y += 40 # Footer margin
-    footer_y = current_y
-    current_y += 30 + 50 # Bottom padding (50)
+    # Grid bottom is the max of both columns
+    grid_end_y = max(left_y, right_y) - card_gap + 15
 
-    final_height = current_y
+    # Perspectives Panel Header
+    perspectives_header_y = grid_end_y
+    persona_start_y = perspectives_header_y + 35 + 25 # label (35) + padding (25)
+
+    # 3-Column Grid for perspectives
+    per_gap = 20
+    per_col_w = (drawable_w - (per_gap * 2)) // 3 # 360px
+    
+    per_x_positions = [
+        (x_left, x_left + per_col_w),
+        (x_left + per_col_w + per_gap, x_left + per_col_w + per_gap + per_col_w),
+        (x_left + (per_col_w + per_gap) * 2, x_left + (per_col_w + per_gap) * 2 + per_col_w)
+    ]
+    
+    per_text_w = per_col_w - 40 # 320px (20px card padding left/right)
+
+    # Measure persona card heights
+    persona_heights = []
+    persona_lines = []
+    for per in personas:
+        wrapped_body = wrap_text(per["text"], fonts["regular_20"], per_text_w, temp_draw)
+        body_h = len(wrapped_body) * line_h
+        card_h = 25 + 15 + body_h + 25
+        persona_heights.append(card_h)
+        persona_lines.append(wrapped_body)
+
+    # Make them all the same height (max) for perfect alignment
+    max_per_h = max(persona_heights)
+
+    # Footer position
+    footer_y = persona_start_y + max_per_h + 40
+    final_height = footer_y + 30 + 50 # padding/margins
 
     # 2. DRAWING PASS
-    img = Image.new("RGB", (1000, final_height), canvas_bg)
+    img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
     draw = ImageDraw.Draw(img)
 
     # Draw Title
@@ -254,36 +295,56 @@ def generate_compact_info_card(thread_config, output_path):
         draw.text((x_left, y), line, font=fonts["bold_32"], fill="#FFFFFF")
         y += 38
 
-    # Draw Sections
-    for layout in section_layouts:
+    # Draw Left Column
+    for layout in left_layouts:
         sec = layout["sec"]
         card_top = layout["y"]
         card_h = layout["h"]
         card_bottom = card_top + card_h
         
-        # Draw card card panel background
         draw.rounded_rectangle(
-            (x_left, card_top, x_right, card_bottom),
+            (col_1_x_left, card_top, col_1_x_right, card_bottom),
             radius=12, fill=card_bg, outline=border_color, width=1
         )
-        
-        # Draw accent strip on left border
         draw.rounded_rectangle(
-            (x_left + 1, card_top + 10, x_left + 7, card_bottom - 10),
+            (col_1_x_left + 1, card_top + 10, col_1_x_left + 7, card_bottom - 10),
             radius=3, fill=sec["color"]
         )
-        
-        # Draw card label header
         draw.text(
-            (x_left + 30, card_top + 22),
+            (col_1_x_left + 25, card_top + 22),
             sec["label"], font=fonts["bold_16"], fill=sec["color"]
         )
-        
-        # Draw card body text
         text_y = card_top + 55
         for line in layout["lines"]:
             draw.text(
-                (x_left + 30, text_y),
+                (col_1_x_left + 25, text_y),
+                line, font=fonts["regular_20"], fill=text_color
+            )
+            text_y += line_h
+
+    # Draw Right Column
+    for layout in right_layouts:
+        sec = layout["sec"]
+        card_top = layout["y"]
+        card_h = layout["h"]
+        card_bottom = card_top + card_h
+        
+        draw.rounded_rectangle(
+            (col_2_x_left, card_top, col_2_x_right, card_bottom),
+            radius=12, fill=card_bg, outline=border_color, width=1
+        )
+        draw.rounded_rectangle(
+            (col_2_x_left + 1, card_top + 10, col_2_x_left + 7, card_bottom - 10),
+            radius=3, fill=sec["color"]
+        )
+        draw.text(
+            (col_2_x_left + 25, card_top + 22),
+            sec["label"], font=fonts["bold_16"], fill=sec["color"]
+        )
+        text_y = card_top + 55
+        for line in layout["lines"]:
+            draw.text(
+                (col_2_x_left + 25, text_y),
                 line, font=fonts["regular_20"], fill=text_color
             )
             text_y += line_h
@@ -298,36 +359,28 @@ def generate_compact_info_card(thread_config, output_path):
         fill=border_color, width=1
     )
 
-    # Draw Persona blocks
-    for layout in persona_layouts:
-        per = layout["per"]
-        card_top = layout["y"]
-        card_h = layout["h"]
-        card_bottom = card_top + card_h
+    # Draw 3 perspective columns
+    for idx, per in enumerate(personas):
+        x_start, x_end = per_x_positions[idx]
+        card_top = persona_start_y
+        card_bottom = card_top + max_per_h
         
-        # Draw card card panel background
         draw.rounded_rectangle(
-            (x_left, card_top, x_right, card_bottom),
+            (x_start, card_top, x_end, card_bottom),
             radius=12, fill=card_bg, outline=border_color, width=1
         )
-        
-        # Draw accent strip on left border
         draw.rounded_rectangle(
-            (x_left + 1, card_top + 10, x_left + 7, card_bottom - 10),
+            (x_start + 1, card_top + 10, x_start + 7, card_bottom - 10),
             radius=3, fill=per["color"]
         )
-        
-        # Draw card label header
         draw.text(
-            (x_left + 30, card_top + 22),
+            (x_start + 20, card_top + 22),
             per["label"], font=fonts["bold_16"], fill=per["color"]
         )
-        
-        # Draw card body text
         text_y = card_top + 55
-        for line in layout["lines"]:
+        for line in persona_lines[idx]:
             draw.text(
-                (x_left + 30, text_y),
+                (x_start + 20, text_y),
                 line, font=fonts["regular_20"], fill=text_color
             )
             text_y += line_h
@@ -335,7 +388,7 @@ def generate_compact_info_card(thread_config, output_path):
     # Draw Footer
     draw.text(
         (x_left, footer_y),
-        "Alethekanon | Uncompromising Logic & Truth", font=fonts["mono_20"], fill="#475569"
+        "Aletheia Bot | Uncompromising Logic & Truth", font=fonts["mono_20"], fill="#475569"
     )
 
     # Save to disk

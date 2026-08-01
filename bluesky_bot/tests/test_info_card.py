@@ -11,12 +11,20 @@ if bot_dir not in sys.path:
 from image_card_generator import generate_compact_info_card
 
 def main():
-    story_path = os.path.join(bot_dir, "stories", "factcheck_andy_burnham_dog.json")
-    if not os.path.exists(story_path):
-        print(f"Error: Test story file not found at {story_path}")
+    import glob
+    stories_pattern = os.path.join(bot_dir, "stories", "factcheck_*.json")
+    story_files = glob.glob(stories_pattern)
+    if not story_files:
+        print("Error: No factcheck story files found in stories/")
         sys.exit(1)
+        
+    # Sort by modification time descending
+    story_files.sort(key=os.path.getmtime, reverse=True)
+    story_path = story_files[0]
+    filename = os.path.basename(story_path)
+    slug = filename[len("factcheck_"):-len(".json")]
 
-    print(f"Loading test story: {story_path}")
+    print(f"Loading most recent story: {story_path}")
     with open(story_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     
@@ -24,7 +32,7 @@ def main():
 
     output_dir = os.path.join(bot_dir, "graph_png")
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "andy_burnham_dog_info_card.png")
+    output_path = os.path.join(output_dir, f"{slug}_info_card.png")
 
     print(f"Rendering info card to: {output_path}")
     try:
