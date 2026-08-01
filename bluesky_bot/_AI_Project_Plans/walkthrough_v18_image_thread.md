@@ -1,55 +1,35 @@
-# Compact Posting Mode Implementation Walkthrough
+# Compact Posting Mode & On-The-Fly Conversion Walkthrough
 
-We have successfully implemented a new parallel path in the Bluesky bot system to support **Compact Posting Mode**. Rather than publishing a long 13-post text thread, this path posts the first 4 posts (Hook, Claim, Reality, Verdict) as text and compiles the remaining 9 posts (Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables, Alethe, Aww, Bro) into a single, high-fidelity dark-mode infographic card PNG. This image is attached to the 4th post (Verdict) with the full summaries contained in its Alt Text, resulting in a premium, 4-post thread on the timeline.
+We have successfully implemented and verified **Compact Posting Mode** with **On-the-Fly Image Conversion** across the entire Bluesky bot pipeline. Rather than publishing a long 13-post text thread, this mode publishes exactly 4 posts (Hook, Claim, Reality, Verdict) as native text, and packages the remaining 9 details (Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables, Alethe, Aww, and Bro) into a single, high-fidelity dark-mode infographic card PNG. This image is attached to the 4th post (Verdict) with the full summaries contained in its Alt Text.
+
+Importantly, **this works for both native compact stories and regular 13-post format stories**. If you run the posting scheduler with the `--compact` flag, it will automatically detect any missing visual card images and generate them *on-the-fly* before validation and posting.
+
+---
 
 ## Changes Made
 
-1.  **Image Generator Module (`image_card_generator.py`)**:
-    *   Designed a visual rendering engine in Python using the `Pillow` library.
-    *   Constructed a two-pass layout process: first measures text lines and container rectangles to dynamically calculate the overall canvas height, then draws the elements.
-    *   Created styled slate panels with rounded corners (`#141D2F` on `#0B0F19`) and colored left borders mapping to each actualism section.
-    *   Implemented separate perspective reaction boxes for Alethekanon, Awwthekanon, and Brothekanon stacked at the bottom of the card.
-    *   Added robust font loading routines (Segoe UI/Arial/Consolas) with try-except fallback to the system default font.
-2.  **API Prompt Adaptation (`google_ai_studio_one_shot.py`)**:
-    *   Added a `--compact` CLI argument.
-    *   When active, it dynamically modifies the system prompt limits and prepends a `COMPACT MODE DIRECTIVE` to the formatting rules, telling Gemini to output highly verbose, detailed narratives (400–800 characters) for posts 5–13 (indices 4–12) while keeping the first 4 posts under the 260-character limit.
-    *   Tags the resulting story JSON with `"compact": true` on disk.
-3.  **Staging Gate PNG Pre-generation (`rebuild_registries.py` & `rebuild_registries_son.py`)**:
-    *   Modified the darkroom promotion gates to detect the `"compact": true` metadata.
-    *   If active, it calls the `image_card_generator` to draw and write the visual card PNG directly to `graph_png/{slug}_info_card.png` at promotion time.
-4.  **Batch Validator Bypass (`validate_batch.py`)**:
-    *   Loads `"compact"` flag. If true, skips post-packing and limits length validation only to the first 4 elements (`posts[0:4]`).
-    *   Validates that both the trajectory graph and the summary card PNG exist in `graph_png/`.
-5.  **Thread Posting Engine (`aletheia_bot.py` & `post_batch.py`)**:
-    *   Added `--compact` CLI override parameters.
-    *   In `post_thread()`, if `compact` is active:
-        *   Slices `final_posts` to only `posts[:4]` (Hook, Claim, Reality, Verdict) without packing.
-        *   Uploads the staging `{slug}_info_card.png` to the Bluesky server.
-        *   Attaches the card embed to the 4th post (Part 4, Verdict, index 3).
-        *   Concatenates posts 4–12 into the image's Alt Text field (up to 10k character limits) for accessibility and search indexing.
-6.  **Operator GUI Checklist Box (`AletheiaLauncher.pyw`)**:
-    *   Integrated an "Enable Compact Image Mode" checkbutton in the One-Shot Batch Evaluator card.
-    *   Appends the `--compact` flag when triggering the python execution process.
+1.  **On-the-Fly Card Rendering Integration**:
+    *   **`aletheia_bot.py`**: In `post_thread()`, if `compact` mode is active, the engine checks for the `{story_id}_info_card.png` image on disk. If it's missing (which occurs when posting a regular 13-post JSON story in compact mode), it automatically imports and invokes the visual rendering engine to generate the PNG on-the-fly.
+    *   **`validate_batch.py`**: Added a `--compact` CLI argument. If validation is run in compact mode, and a story's card image does not exist, the validator generates it on-the-fly so the validation checklist passes cleanly.
+    *   **`post_batch.py`**: Updated `validate_story_file()` to accept the `compact` flag, resolving the status from the CLI command and generating missing card images at validation time.
+2.  **Live Post Scheduler GUI Option (`AletheiaLauncher.pyw`)**:
+    *   Added a "Post in Compact Mode" checkbox to the **Live Post Scheduler** (the second card in the GUI layout) next to the "Continuous Watch Mode" toggle.
+    *   When checked, the GUI automatically appends the `--compact` argument to the `validate_batch.py` and `post_batch.py` subprocess calls.
 
 ---
 
 ## Verification Results
 
-### 1. Card Rendering Test
-We ran `bluesky_bot/tests/test_info_card.py` to generate the card for the Larry the Cat/Andy Burnham story. It successfully wrapped lines, calculated canvas heights, and outputted the beautiful infographic PNG to `graph_png/andy_burnham_dog_info_card.png`.
-
-### 2. Posting Slice Logic & Dry-Run Logs
-We ran a local dry-run posting command inside the virtual environment:
+### 1. On-the-Fly Conversion & Slicing Test
+We tested this with a regular 13-post format JSON story `factcheck_bill_wilson_obituary.json` which did not have any pre-generated visual cards in `graph_png/`:
 ```powershell
-.venv\Scripts\python.exe bluesky_bot/aletheia_bot.py --config bluesky_bot/stories/factcheck_andy_burnham_dog.json --compact --dry-run
+.venv\Scripts\python.exe bluesky_bot/aletheia_bot.py --config bluesky_bot/stories/factcheck_bill_wilson_obituary.json --compact --dry-run
 ```
-*   **Result**: The engine successfully sliced the thread count from 13 to **4 posts**.
-*   *Post 1*: Hook (with Trajectory Graph Image embedded)
-*   *Post 2*: Claim (with BBC article URL link card embedded)
-*   *Post 3*: Reality (no embed)
-*   *Post 4*: Verdict (with the new Compact Summary Card image embedded)
-*   The dry-run validated and compiled successfully.
+*   **Result**: 
+    *   The posting engine correctly reported that the info card was missing and successfully logged: `Compact mode info card not found at ... Generating on-the-fly...`
+    *   The card was dynamically generated and written to `graph_png/bill_wilson_obituary_info_card.png`.
+    *   The output thread was successfully sliced to exactly **4 posts** (Post 1: Graph embed, Post 2: Link card embed, Post 3: standard text, Post 4: Compact summary card image embed).
 
-### 3. Batch Validation Check
+### 2. Batch Validation Success
 We ran the batch validator `bluesky_bot/validate_batch.py` inside the virtual environment:
 *   **Result**: All 88 story configs in the workspace passed validation, confirming that compact stories bypass the character limit on verbose sections and compile cleanly.

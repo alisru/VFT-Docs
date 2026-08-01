@@ -743,7 +743,11 @@ class AletheiaLauncherApp:
 
         self.val_watch = tk.BooleanVar(value=False)
         self.chk_watch = ttk.Checkbutton(grid_frame, text="Continuous Watch Mode", variable=self.val_watch)
-        self.chk_watch.grid(row=0, column=4, sticky="w", pady=3)
+        self.chk_watch.grid(row=0, column=4, sticky="w", pady=3, padx=(0, 20))
+
+        self.val_post_compact = tk.BooleanVar(value=False)
+        self.chk_post_compact = ttk.Checkbutton(grid_frame, text="Post in Compact Mode", variable=self.val_post_compact)
+        self.chk_post_compact.grid(row=0, column=5, sticky="w", pady=3)
 
         self.btn_run_live = tk.Button(
             inner, text="Run Pre-Flight & Live Post Scheduler", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
@@ -1013,8 +1017,11 @@ class AletheiaLauncherApp:
             try:
                 # Step 1: Pre-flight validation
                 self.log_post("\n> Running Pre-Flight Validation...\n")
+                val_args = [python_bin, "-u", "bluesky_bot/validate_batch.py"]
+                if self.val_post_compact.get():
+                    val_args.append("--compact")
                 val_proc = subprocess.Popen(
-                    [python_bin, "-u", "bluesky_bot/validate_batch.py"],
+                    val_args,
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     encoding="utf-8",
@@ -1033,6 +1040,9 @@ class AletheiaLauncherApp:
                 # Step 2: Post batch
                 self.log_post("\n> Validation passed! Scheduling live batch posting...\n")
                 args = [python_bin, "-u", "bluesky_bot/post_batch.py", "--live"]
+                
+                if self.val_post_compact.get():
+                    args.append("--compact")
                 
                 min_delay = self.ent_min_delay.get().strip()
                 if min_delay:

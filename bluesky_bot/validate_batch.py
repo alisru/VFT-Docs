@@ -27,6 +27,11 @@ except ImportError as ie:
     sys.exit(1)
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Batch Pre-Flight Validator")
+    parser.add_argument("--compact", action="store_true", help="Validate in compact mode")
+    args = parser.parse_args()
+
     stories_dir = os.path.join(script_dir, "stories")
     graph_dir = os.path.join(script_dir, "graph_png")
     fail_dir = os.path.join(stories_dir, "fail")
@@ -90,7 +95,7 @@ def main():
             target_url = cfg.get("target_url", "")
 
             # 1. Pack posts and length validation
-            is_compact = cfg.get("compact", False)
+            is_compact = args.compact or cfg.get("compact", False)
             if is_compact:
                 final_posts = posts[:4]
             else:
@@ -109,12 +114,17 @@ def main():
             if not os.path.exists(graph_filename):
                 raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}. Graphs must be pre-generated.")
 
-            # 2b. Info Card Check for Compact Mode
+            # 2b. Info Card Check for Compact Mode (Generate on-the-fly if missing)
             if is_compact:
                 info_card_filename = f"{story_id}_info_card.png"
                 info_card_path = os.path.join(graph_dir, info_card_filename)
                 if not os.path.exists(info_card_path):
-                    raise FileNotFoundError(f"Required compact info card image not found: {info_card_path}. Info cards must be pre-generated.")
+                    print(f"  Info card not found for {story_id}. Generating on-the-fly...")
+                    try:
+                        from image_card_generator import generate_compact_info_card
+                        generate_compact_info_card(cfg, info_card_path)
+                    except Exception as ice:
+                        raise RuntimeError(f"Failed to generate compact info card: {ice}")
 
             # 3. Mode reply check
             if mode == "reply" and not target_url:

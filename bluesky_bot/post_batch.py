@@ -111,7 +111,7 @@ def _sleep_with_countdown(seconds: int):
         print("\n[RATE LIMIT] Sleep interrupted by user.")
         raise
 
-def validate_story_file(path):
+def validate_story_file(path, compact=False):
     filename = os.path.basename(path)
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -128,7 +128,7 @@ def validate_story_file(path):
             raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
 
         # Pack posts and length validation
-        is_compact = cfg.get("compact", False)
+        is_compact = compact or cfg.get("compact", False)
         if is_compact:
             final_posts = cfg["posts"][:4]
         else:
@@ -146,11 +146,16 @@ def validate_story_file(path):
         if not os.path.exists(graph_filename):
             raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}.")
 
-        # Info Card Check
+        # Info Card Check (Generate on-the-fly if missing)
         if is_compact:
             info_card_filename = os.path.join(script_dir, "graph_png", f"{story_id}_info_card.png")
             if not os.path.exists(info_card_filename):
-                raise FileNotFoundError(f"Required compact summary info card image not found: {info_card_filename}.")
+                print(f"  Info card not found for {story_id}. Generating on-the-fly...")
+                try:
+                    from image_card_generator import generate_compact_info_card
+                    generate_compact_info_card(cfg, info_card_filename)
+                except Exception as ice:
+                    raise RuntimeError(f"Failed to generate compact info card: {ice}")
 
         return True, ""
     except Exception as e:
@@ -225,7 +230,7 @@ def main():
                         print(f"\n[Watch] Validating and posting: {filename}")
                         
                         # Pre-flight validation
-                        is_valid, err_msg = validate_story_file(path)
+                        is_valid, err_msg = validate_story_file(path, compact=args.compact)
                         if not is_valid:
                             print(f"  [VALIDATION FAIL] {filename}: {err_msg}")
                             # Move to fail folder

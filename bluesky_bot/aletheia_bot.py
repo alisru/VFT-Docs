@@ -361,7 +361,12 @@ def post_thread(client, thread_config, live=False, compact=False):
             if is_compact:
                 info_card_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card.png")
                 if not os.path.exists(info_card_filename):
-                    raise FileNotFoundError(f"Compact mode info card image not found: {info_card_filename}")
+                    print(f"Compact mode info card not found at {info_card_filename}. Generating on-the-fly...")
+                    try:
+                        from image_card_generator import generate_compact_info_card
+                        generate_compact_info_card(thread_config, info_card_filename)
+                    except Exception as e:
+                        raise RuntimeError(f"Failed to generate compact info card on-the-fly: {e}") from e
                 print("Uploading compact summary info card to Bluesky...")
                 try:
                     with open(info_card_filename, "rb") as f:

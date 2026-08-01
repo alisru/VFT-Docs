@@ -30,3 +30,6 @@
     - [x] Add `--compact` parameter to CLI parser
     - [x] Forward `compact=args.compact` when calling `post_thread`
 - [x] Verify everything using a dry-run batch execution
+- [x] Integrate compact posting mode toggle to Live Post Scheduler in `AletheiaLauncher.pyw`
+- [x] Support converting regular 13-post JSON stories to compact image format on-the-fly
+- [x] Dynamically generate visual cards on-the-fly in `validate_batch.py`, `post_batch.py`, and `aletheia_bot.py` if missing
