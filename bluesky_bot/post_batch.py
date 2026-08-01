@@ -128,7 +128,11 @@ def validate_story_file(path):
             raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
 
         # Pack posts and length validation
-        final_posts = pack_posts(cfg["posts"])
+        is_compact = cfg.get("compact", False)
+        if is_compact:
+            final_posts = cfg["posts"][:4]
+        else:
+            final_posts = pack_posts(cfg["posts"])
 
         for idx, post in enumerate(final_posts, 1):
             if len(post) > 299:
@@ -142,6 +146,12 @@ def validate_story_file(path):
         if not os.path.exists(graph_filename):
             raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}.")
 
+        # Info Card Check
+        if is_compact:
+            info_card_filename = os.path.join(script_dir, "graph_png", f"{story_id}_info_card.png")
+            if not os.path.exists(info_card_filename):
+                raise FileNotFoundError(f"Required compact summary info card image not found: {info_card_filename}.")
+
         return True, ""
     except Exception as e:
         return False, str(e)
@@ -153,6 +163,7 @@ def main():
     parser.add_argument("--min-delay", type=int, default=5, help="Minimum delay between different threads in seconds (default: 10)")
     parser.add_argument("--max-delay", type=int, default=10, help="Maximum delay between different threads in seconds (default: 30)")
     parser.add_argument("--live", action="store_true", help="Set to actually post live (dry-run by default)")
+    parser.add_argument("--compact", action="store_true", help="Post in compact mode (posts 1-4 as text, posts 5+ as summary card image)")
     parser.add_argument("--move-to", type=str, default=os.path.join(script_dir, "stories", "live"), help="Folder to move successfully posted files to (default: bluesky_bot/stories/live)")
     parser.add_argument("--watch", action="store_true", help="Run in continuous daemon mode, watching the folder and posting any new files (default: False)")
     args = parser.parse_args()
@@ -244,7 +255,7 @@ def main():
                                     def custom_sleep(seconds):
                                         original_sleep(2.0 if seconds == 1 else seconds)
                                     time.sleep = custom_sleep
-                                    post_thread(client, cfg, live=args.live)
+                                    post_thread(client, cfg, live=args.live, compact=args.compact)
                                     success = True
                                 finally:
                                     time.sleep = original_sleep
@@ -391,7 +402,7 @@ def main():
                             def custom_sleep(seconds):
                                 original_sleep(2.0 if seconds == 1 else seconds)
                             time.sleep = custom_sleep
-                            post_thread(client, cfg, live=args.live)
+                            post_thread(client, cfg, live=args.live, compact=args.compact)
                             success = True
                         finally:
                             time.sleep = original_sleep

@@ -9,6 +9,7 @@ def rebuild_registries():
     sys.path.append(script_dir)
 
     from generate_graph import draw_graph
+    from image_card_generator import generate_compact_info_card
 
     stories_dir = os.path.join(script_dir, "stories")
     live_dir    = os.path.join(stories_dir, "live")
@@ -66,6 +67,16 @@ def rebuild_registries():
                 )
             except Exception as ge:
                 print(f"Error generating graph for {slug} in darkroom: {ge}")
+
+            # Generate compact summary card if compact mode is enabled
+            if cfg.get("compact", False):
+                info_card_filename = f"{slug}_info_card.png"
+                info_card_path = os.path.join(graph_png_dir, info_card_filename)
+                try:
+                    print(f"Generating compact summary info card for {slug}...")
+                    generate_compact_info_card(cfg, info_card_path)
+                except Exception as ice:
+                    print(f"Error generating compact info card for {slug} in darkroom: {ice}")
 
             # Promote config to stories/
             dest_path = os.path.join(stories_dir, os.path.basename(p))

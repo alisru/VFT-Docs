@@ -90,7 +90,11 @@ def main():
             target_url = cfg.get("target_url", "")
 
             # 1. Pack posts and length validation
-            final_posts = pack_posts(posts)
+            is_compact = cfg.get("compact", False)
+            if is_compact:
+                final_posts = posts[:4]
+            else:
+                final_posts = pack_posts(posts)
 
             for idx, post in enumerate(final_posts, 1):
                 if len(post) > 299:
@@ -104,6 +108,13 @@ def main():
             graph_filename = os.path.join(graph_dir, graph_base_filename)
             if not os.path.exists(graph_filename):
                 raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}. Graphs must be pre-generated.")
+
+            # 2b. Info Card Check for Compact Mode
+            if is_compact:
+                info_card_filename = f"{story_id}_info_card.png"
+                info_card_path = os.path.join(graph_dir, info_card_filename)
+                if not os.path.exists(info_card_path):
+                    raise FileNotFoundError(f"Required compact info card image not found: {info_card_path}. Info cards must be pre-generated.")
 
             # 3. Mode reply check
             if mode == "reply" and not target_url:

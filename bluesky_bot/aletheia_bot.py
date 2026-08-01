@@ -264,7 +264,7 @@ def resolve_facets_and_tags(text, link=None):
     
     return (facets if facets else None), (tags_list if tags_list else None)
 
-def post_thread(client, thread_config, live=False):
+def post_thread(client, thread_config, live=False, compact=False):
     """Processes a single thread configuration (generating graph, validating, and posting)."""
     subject = thread_config.get("subject", "Assessment")
     posts = thread_config.get("posts", [])
@@ -286,7 +286,11 @@ def post_thread(client, thread_config, live=False):
     if not posts:
         raise ValueError("Thread configuration contains no posts.")
         
-    final_posts = pack_posts(posts, max_len=299)
+    is_compact = thread_config.get("compact", False) or compact
+    if is_compact:
+        final_posts = posts[:4]
+    else:
+        final_posts = pack_posts(posts, max_len=299)
         
     for idx, post in enumerate(final_posts, 1):
         if len(post) > 299:
@@ -331,6 +335,8 @@ def post_thread(client, thread_config, live=False):
                 embed_info = f" [Embed: Trajectory Graph]"
             elif idx == 2 and link:
                 embed_info = f" [Embed: Link Card -> {link}]"
+            elif idx == 4 and is_compact:
+                embed_info = f" [Embed: Compact Summary Card]"
             elif "Source: " in post and thread_config.get("grounding_url"):
                 embed_info = f" [Embed: Grounding Card -> {thread_config.get('grounding_url')}]"
             print(f"\n[Post {idx}/{len(final_posts)}]{embed_info} ({len(post)} chars):\n{post}")
@@ -349,6 +355,41 @@ def post_thread(client, thread_config, live=False):
                 print("Graph uploaded successfully.")
             except Exception as e:
                 raise RuntimeError(f"Failed to upload graph: {e}") from e
+
+            # Create Compact Mode Info Card Embed
+            info_card_embed = None
+            if is_compact:
+                info_card_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card.png")
+                if not os.path.exists(info_card_filename):
+                    raise FileNotFoundError(f"Compact mode info card image not found: {info_card_filename}")
+                print("Uploading compact summary info card to Bluesky...")
+                try:
+                    with open(info_card_filename, "rb") as f:
+                        card_img_data = f.read()
+                    card_upload = client.com.atproto.repo.upload_blob(card_img_data)
+                    
+                    # Construct alt text containing details of posts 4 to 12
+                    alt_parts = [
+                        "Aletheia Assessment Summary Details:",
+                        f"Context: {posts[4].replace('What\'s happening:\\n', '').replace('Context:\\n', '').strip()}",
+                        f"Nuance: {posts[5]}",
+                        f"Breakdown: {posts[6]}",
+                        f"Social Physics: {posts[7]}",
+                        f"Trajectory: {posts[8]}",
+                        f"The Unavoidables: {posts[9]}",
+                        f"Alethekanon: {posts[10]}",
+                        f"Awwthekanon: {posts[11]}",
+                        f"Brothekanon: {posts[12]}"
+                    ]
+                    card_alt = "\n\n".join(alt_parts)
+                    if len(card_alt) > 9900:
+                        card_alt = card_alt[:9897] + "..."
+                        
+                    card_images = [models.AppBskyEmbedImages.Image(alt=card_alt, image=card_upload.blob)]
+                    info_card_embed = models.AppBskyEmbedImages.Main(images=card_images)
+                    print("Compact summary info card uploaded successfully.")
+                except Exception as e:
+                    raise RuntimeError(f"Failed to upload compact info card: {e}") from e
 
             # Create External Link Preview Card
             link_embed = None
@@ -482,7 +523,11 @@ def post_thread(client, thread_config, live=False):
             for i, text in enumerate(final_posts[1:], start=2):
                 print(f"Posting Part {i}/{len(final_posts)}...")
                 current_embed = None
-                if i == 2 and link_embed is not None:
+                if is_compact and i == 4 and info_card_embed is not None:
+                    # Attach the compact summary card image embed to the fourth post of the thread
+                    current_embed = info_card_embed
+                    print("Attaching compact summary card embed to Part 4...")
+                elif i == 2 and link_embed is not None:
                     # Attach the link preview card embed to the second post of the thread
                     current_embed = link_embed
                     print("Attaching link preview card embed to Part 2...")
@@ -549,6 +594,7 @@ def post_thread(client, thread_config, live=False):
 def main():
     parser = argparse.ArgumentParser(description="Unified Aletheia Bot CLI Engine")
     parser.add_argument("--config", required=True, help="Path to the JSON configuration file containing thread details.")
+    parser.add_argument("--compact", action="store_true", help="Force compact posting mode (posts 1-4 as text, posts 5+ as summary card image)")
     
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--dry-run", action="store_true", help="Run in validation and dry-run mode (local graph, console logging).")
@@ -597,7 +643,7 @@ def main():
     # Process all threads
     for thread in threads:
         try:
-            post_thread(client, thread, live=args.live)
+            post_thread(client, thread, live=args.live, compact=args.compact)
         except Exception as e:
             print(f"ERROR: {e}")
             sys.exit(1)

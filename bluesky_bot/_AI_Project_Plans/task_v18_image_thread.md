@@ -1,0 +1,32 @@
+- [x] Create rendering module `bluesky_bot/image_card_generator.py`
+    - [x] Dynamic canvas height calculator
+    - [x] Multi-styled text block renderer (header, context, analysis, unavoidables)
+    - [x] Styled persona blocks (Alethe, Aww, Bro)
+- [x] Create test runner `bluesky_bot/tests/test_info_card.py`
+    - [x] Load `factcheck_andy_burnham_dog.json`
+    - [x] Call card generator and save to disk
+    - [x] Run test script and inspect generated PNG
+- [x] Implement Prompt & Config adjustments in `google_ai_studio_one_shot.py`
+    - [x] Add `--compact` CLI parameter
+    - [x] Modify `run_one_shot_evaluations()` to accept `compact` flag
+    - [x] Prepend `COMPACT MODE DIRECTIVE` override to `formatting_rules` inside evaluations
+    - [x] Adjust `system_instruction` hard limits for compact mode
+    - [x] In `process_evaluations()`, set `story["compact"] = True` if `compact` is active
+- [x] Integrate compact path into `bluesky_bot/rebuild_registries.py` and `rebuild_registries_son.py`
+    - [x] Detect `"compact"` key in darkroom story configs
+    - [x] If true, generate and save the info card image to `graph_png/` before JSON promotion
+- [x] Integrate compact path check into `bluesky_bot/validate_batch.py`
+    - [x] Read `"compact"` key from story configs
+    - [x] If true, limit post size validation to the first 4 elements (`posts[0:4]`)
+    - [x] Verify that both `{slug}_graph.png` and `{slug}_info_card.png` exist
+- [x] Integrate compact path into `bluesky_bot/aletheia_bot.py`
+    - [x] Check `"compact"` key in config (fallback to `--compact` CLI argument)
+    - [x] In `post_thread()`, if `compact` is active:
+        - [x] Upload `{slug}_info_card.png` to Bluesky and return the image embed
+        - [x] Slice `final_posts` to only contain elements 0 to 3
+        - [x] Attach card image embed to post index 3 (Part 4)
+        - [x] Concatenate posts 4-12 as image alt text
+- [x] Integrate compact path into `bluesky_bot/post_batch.py`
+    - [x] Add `--compact` parameter to CLI parser
+    - [x] Forward `compact=args.compact` when calling `post_thread`
+- [x] Verify everything using a dry-run batch execution

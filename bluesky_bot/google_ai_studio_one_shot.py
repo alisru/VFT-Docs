@@ -812,18 +812,38 @@ def _load_rules(use_son=False):
             _RULES_CACHE[f"{cache_key}_formatting"] = minify_markdown(f.read())
     return _RULES_CACHE[f"{cache_key}_convergence"], _RULES_CACHE[f"{cache_key}_formatting"]
 
-def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None):
+def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False):
     convergence_rules, formatting_rules = _load_rules(use_son=use_son)
         
+    # Prepend compact mode directive to formatting rules if active
+    if compact:
+        override_text = (
+            "=== COMPACT MODE DIRECTIVE ===\n"
+            "- Posts 1 to 4 (indices 0 to 3 in the posts array: Hook, Claim, Reality, Verdict) will be posted as standard text on Bluesky. They MUST be kept strictly under 260 characters each.\n"
+            "- Posts 5 to 13 (indices 4 to 12 in the posts array: Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables, Alethekanon, Awwthekanon, Brothekanon) will be rendered into a graphical image. They have NO character limits. They MUST be highly verbose, comprehensive, and detailed (typically 400-800 characters each) to explain the concepts fully. DO NOT compress or shorten them.\n\n"
+        )
+        formatting_rules = override_text + formatting_rules
+        formatting_rules = formatting_rules.replace("Keep every single step strictly under **275 characters**", "Keep the first 4 steps under **275 characters** (steps 5-13 have no limits)")
+
     # System prompt: pure role declaration only
-    system_instruction = (
-        "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation. "
-        "Use Google Search ONLY to fact-check names, dates, and medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon persona. "
-        "You are strictly forbidden from inventing, guessing, or inferring specific details not explicitly written in the text or verified by search. "
-        "Adhere to a strict budget of AT MOST 1 search query per story to stay within API quota limits. "
-        "If you used Google Search to verify any information in your response for a candidate, you MUST append the emoji 🌐 at the end of the first post (post 1) of that candidate's thread, and you should mention/cite the verified facts or source details in the Alethekanon post (post 11) if relevant. "
-        "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 270 CHARACTERS. THIS IS A HARD LIMIT. BE CONCISE."
-    )
+    if compact:
+        system_instruction = (
+            "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation. "
+            "Use Google Search ONLY to fact-check names, dates, and medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon persona. "
+            "You are strictly forbidden from inventing, guessing, or inferring specific details not explicitly written in the text or verified by search. "
+            "Adhere to a strict budget of AT MOST 1 search query per story to stay within API quota limits. "
+            "If you used Google Search to verify any information in your response for a candidate, you MUST append the emoji 🌐 at the end of the first post (post 1) of that candidate's thread, and you should mention/cite the verified facts or source details in the Alethekanon post (post 11) if relevant. "
+            "CRITICAL: Posts 1 to 4 (items 0 to 3 in the posts array) MUST be under 260 characters (hard limit) as they are posted as text. Posts 5 to 13 (items 4 to 12 in the posts array) have NO character limits and should be highly verbose, comprehensive, and detailed (typically 400-800 characters each) because they will be rendered into a high-fidelity visual image card."
+        )
+    else:
+        system_instruction = (
+            "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation. "
+            "Use Google Search ONLY to fact-check names, dates, and medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon persona. "
+            "You are strictly forbidden from inventing, guessing, or inferring specific details not explicitly written in the text or verified by search. "
+            "Adhere to a strict budget of AT MOST 1 search query per story to stay within API quota limits. "
+            "If you used Google Search to verify any information in your response for a candidate, you MUST append the emoji 🌐 at the end of the first post (post 1) of that candidate's thread, and you should mention/cite the verified facts or source details in the Alethekanon post (post 11) if relevant. "
+            "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 270 CHARACTERS. THIS IS A HARD LIMIT. BE CONCISE."
+        )
     if extra_context:
         system_instruction += f"\n\nCRITICAL: You must actively incorporate the following background knowledge and additional context when performing the audits:\n{extra_context}"
 
@@ -1277,7 +1297,7 @@ def extract_topic_from_posts(posts):
     return None
 
 # --- 4. SAVE TO DARKROOM ---
-def process_evaluations(evaluations, category="general", topic=None):
+def process_evaluations(evaluations, category="general", topic=None, compact=False):
     """Write evaluated story configs to stories/darkroom/ for graph generation and promotion by rebuild_registries."""
     darkroom_dir = os.path.join(script_dir, "stories", "darkroom")
     os.makedirs(darkroom_dir, exist_ok=True)
@@ -1290,6 +1310,8 @@ def process_evaluations(evaluations, category="general", topic=None):
                 slug = slug.replace(char, '')
             story["id"] = slug
             story["status"] = "COMPLETED DRY RUN"
+            if compact:
+                story["compact"] = True
 
             # Actors: AI-provided takes priority; fall back to deterministic extraction if empty
             if not story.get("actors"):
@@ -1346,6 +1368,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="Google AI Studio One-Shot Batch Evaluator")
     parser.add_argument("--son", action="store_true", help="Use the 6-Attractor SON convergence model and formatting instructions")
+    parser.add_argument("--compact", action="store_true", help="Enable compact posting mode formatting (lifting character limits on posts 4+ in API responses)")
     parser.add_argument("--search", action="store_true", help="Enable Google Search Grounding to fact-check claims (default: False)")
     parser.add_argument("--rss", type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
@@ -1486,7 +1509,8 @@ def main():
                 raw_text, grounding_urls = run_one_shot_evaluations(
                     genai_client, remaining, args.model, agnes_api_key=agnes_api_key, 
                     use_son=args.son, use_search=args.search, 
-                    extra_context=args.context, model_sequence=model_seq
+                    extra_context=args.context, model_sequence=model_seq,
+                    compact=args.compact
                 )
                 parsed = transpose_flat_to_json(raw_text)
                 
@@ -1552,7 +1576,7 @@ def main():
             print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s). Skipping.")
 
         if chunk_evals:
-            chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic)
+            chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic, compact=args.compact)
             print(f"  Processed {chunk_success}/{len(chunk_evals)} evaluations from chunk to darkroom.")
             print("  Promoting and generating graphs immediately...")
             rebuild_registries_selector(args.son)

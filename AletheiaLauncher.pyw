@@ -554,7 +554,11 @@ class AletheiaLauncherApp:
 
         self.val_search = tk.BooleanVar(value=False)
         self.chk_search = ttk.Checkbutton(grid_frame, text="Enable Google Search Grounding", variable=self.val_search)
-        self.chk_search.grid(row=6, column=3, columnspan=3, sticky="w", pady=3)
+        self.chk_search.grid(row=6, column=3, columnspan=2, sticky="w", pady=3)
+
+        self.val_compact = tk.BooleanVar(value=False)
+        self.chk_compact = ttk.Checkbutton(grid_frame, text="Enable Compact Image Mode", variable=self.val_compact)
+        self.chk_compact.grid(row=6, column=5, columnspan=1, sticky="w", pady=3)
 
         tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=7, column=0, sticky="w", pady=3, padx=(0, 5))
         batch_size_frame = tk.Frame(grid_frame, bg=CARD_BG)
@@ -984,6 +988,9 @@ class AletheiaLauncherApp:
 
         if self.val_search.get():
             args.append("--search")
+
+        if self.val_compact.get():
+            args.append("--compact")
 
         if self.batch_size_var.get():
             args.extend(["--chunk-size", self.batch_size_var.get()])
