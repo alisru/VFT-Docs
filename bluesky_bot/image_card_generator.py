@@ -38,6 +38,15 @@ def load_theme_fonts():
     if fonts["regular_20"] is None:
         fonts["regular_20"] = ImageFont.load_default()
         
+    fonts["regular_29"] = None
+    for n in regular_names:
+        f = get_font(n, 29)
+        if is_valid_font(f):
+            fonts["regular_29"] = f
+            break
+    if fonts["regular_29"] is None:
+        fonts["regular_29"] = ImageFont.load_default()
+
     fonts["regular_26"] = None
     for n in regular_names:
         f = get_font(n, 26)
@@ -66,6 +75,15 @@ def load_theme_fonts():
         fonts["regular_22"] = ImageFont.load_default()
 
     # Bold fonts
+    fonts["bold_39"] = None
+    for n in bold_names:
+        f = get_font(n, 39)
+        if is_valid_font(f):
+            fonts["bold_39"] = f
+            break
+    if fonts["bold_39"] is None:
+        fonts["bold_39"] = ImageFont.load_default()
+
     fonts["bold_36"] = None
     for n in bold_names:
         f = get_font(n, 36)
@@ -83,6 +101,15 @@ def load_theme_fonts():
             break
     if fonts["bold_32"] is None:
         fonts["bold_32"] = ImageFont.load_default()
+
+    fonts["bold_27"] = None
+    for n in bold_names:
+        f = get_font(n, 27)
+        if is_valid_font(f):
+            fonts["bold_27"] = f
+            break
+    if fonts["bold_27"] is None:
+        fonts["bold_27"] = ImageFont.load_default()
 
     fonts["bold_24"] = None
     for n in bold_names:
@@ -492,15 +519,15 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     sec_text_w = col_w - 40 # 505px (20px padding left/right)
     
     # Sizing parameters
-    line_h = 34 # Height per text line (perfect for size 26)
+    line_h = 38 # Height per text line (perfect for size 29)
     card_gap = 25
     
     current_y = 50
     # Title layouts (spans full width)
-    title_lines = wrap_text(subject, fonts["bold_36"], drawable_w, temp_draw)
-    subtitle_lines = wrap_text(subtitle, fonts["bold_24"], drawable_w, temp_draw)
+    title_lines = wrap_text(subject, fonts["bold_39"], drawable_w, temp_draw)
+    subtitle_lines = wrap_text(subtitle, fonts["bold_27"], drawable_w, temp_draw)
     
-    title_h = (len(title_lines) * 42) + 5 + (len(subtitle_lines) * 30)
+    title_h = (len(title_lines) * 46) + 5 + (len(subtitle_lines) * 34)
     title_y_start = current_y
     current_y += title_h + 30
     
@@ -514,9 +541,9 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     left_layouts = []
     left_y = grid_start_y
     for sec in left_sections:
-        wrapped_body = wrap_text(sec["text"], fonts["regular_26"], sec_text_w, temp_draw)
+        wrapped_body = wrap_text(sec["text"], fonts["regular_29"], sec_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
-        card_h = 25 + 20 + body_h + 25 # top pad + label + body + bottom pad
+        card_h = 25 + 24 + body_h + 25 # top pad + label + body + bottom pad
         
         left_layouts.append({
             "sec": sec,
@@ -532,9 +559,9 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     right_layouts = []
     right_y = grid_start_y
     for sec in right_sections:
-        wrapped_body = wrap_text(sec["text"], fonts["regular_26"], sec_text_w, temp_draw)
+        wrapped_body = wrap_text(sec["text"], fonts["regular_29"], sec_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
-        card_h = 25 + 20 + body_h + 25 # top pad + label + body + bottom pad
+        card_h = 25 + 24 + body_h + 25 # top pad + label + body + bottom pad
         
         right_layouts.append({
             "sec": sec,
@@ -556,12 +583,12 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     # Draw Title
     y = title_y_start
     for line in title_lines:
-        draw.text((x_left, y), line, fill="#F8FAFC", font=fonts["bold_36"])
-        y += 42
+        draw.text((x_left, y), line, fill="#F8FAFC", font=fonts["bold_39"])
+        y += 46
     y += 5
     for line in subtitle_lines:
-        draw.text((x_left, y), line, fill="#38BDF8", font=fonts["bold_24"])
-        y += 30
+        draw.text((x_left, y), line, fill="#38BDF8", font=fonts["bold_27"])
+        y += 34
         
     # Draw Left Column Card list
     for lay in left_layouts:
@@ -573,7 +600,7 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
         
     # Save image
     img.save(output_path, "PNG")
-    print(f"Split Info Card generated (2-column, size 26): {output_path}")
+    print(f"Split Info Card generated (2-column, size 29): {output_path}")
 
 def _draw_individual_card(draw, lay, fonts, card_bg, border_color, text_color, line_h):
     sec = lay["sec"]
@@ -599,22 +626,22 @@ def _draw_individual_card(draw, lay, fonts, card_bg, border_color, text_color, l
         fill=sec["color"]
     )
     
-    # Label / Header (24pt font)
+    # Label / Header (27pt font)
     draw.text(
         (x1 + 20, card_y + 22),
         sec["label"],
         fill=sec["color"],
-        font=fonts["bold_24"]
+        font=fonts["bold_27"]
     )
     
-    # Body text (26pt font)
-    text_y = card_y + 60
+    # Body text (29pt font)
+    text_y = card_y + 65
     for line in lines:
         draw.text(
             (x1 + 20, text_y),
             line,
             fill=text_color,
-            font=fonts["regular_26"]
+            font=fonts["regular_29"]
         )
         text_y += line_h
 
@@ -632,14 +659,14 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
     temp_img = Image.new("RGB", (1, 1))
     temp_draw = ImageDraw.Draw(temp_img)
     
-    line_h = 34 # Size 26 line height
+    line_h = 38 # Size 29 line height
     current_y = 50
     
     # Title layouts (spans full width)
-    title_lines = wrap_text(subject, fonts["bold_36"], drawable_w, temp_draw)
-    subtitle_lines = wrap_text("PART 3: PERSPECTIVE REACTIONS", fonts["bold_24"], drawable_w, temp_draw)
+    title_lines = wrap_text(subject, fonts["bold_39"], drawable_w, temp_draw)
+    subtitle_lines = wrap_text("PART 3: PERSPECTIVE REACTIONS", fonts["bold_27"], drawable_w, temp_draw)
     
-    title_h = (len(title_lines) * 42) + 5 + (len(subtitle_lines) * 30)
+    title_h = (len(title_lines) * 46) + 5 + (len(subtitle_lines) * 34)
     title_y_start = current_y
     current_y += title_h + 30
     
@@ -658,9 +685,9 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
     persona_heights = []
     persona_lines = []
     for per in personas:
-        wrapped_body = wrap_text(per["text"], fonts["regular_26"], per_text_w, temp_draw)
+        wrapped_body = wrap_text(per["text"], fonts["regular_29"], per_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
-        card_h = 25 + 20 + body_h + 25
+        card_h = 25 + 24 + body_h + 25
         persona_heights.append(card_h)
         persona_lines.append(wrapped_body)
         
@@ -675,12 +702,12 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
     # Draw Title
     y = title_y_start
     for line in title_lines:
-        draw.text((x_left, y), line, fill="#F8FAFC", font=fonts["bold_36"])
-        y += 42
+        draw.text((x_left, y), line, fill="#F8FAFC", font=fonts["bold_39"])
+        y += 46
     y += 5
     for line in subtitle_lines:
-        draw.text((x_left, y), line, fill="#38BDF8", font=fonts["bold_24"])
-        y += 30
+        draw.text((x_left, y), line, fill="#38BDF8", font=fonts["bold_27"])
+        y += 34
         
     # Draw the 3 columns
     for idx, per in enumerate(personas):
@@ -708,17 +735,17 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
             (x1 + 20, persona_start_y + 22),
             per["label"],
             fill=per["color"],
-            font=fonts["bold_24"]
+            font=fonts["bold_27"]
         )
         
         # Body text
-        text_y = persona_start_y + 60
+        text_y = persona_start_y + 65
         for line in lines:
             draw.text(
                 (x1 + 20, text_y),
                 line,
                 fill=text_color,
-                font=fonts["regular_26"]
+                font=fonts["regular_29"]
             )
             text_y += line_h
             
