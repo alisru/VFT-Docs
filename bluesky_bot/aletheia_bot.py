@@ -372,26 +372,45 @@ def post_thread(client, thread_config, live=False, compact=False):
             except Exception as e:
                 raise RuntimeError(f"Failed to upload graph: {e}") from e
 
-            # Create Compact Mode Info Card Embed
-            info_card_embed = None
+            # Create Compact Mode Info Card Embeds
+            info_card_images = []
             if is_compact:
-                info_card_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card.png")
-                if not os.path.exists(info_card_filename):
-                    print(f"Compact mode info card not found at {info_card_filename}. Generating on-the-fly...")
+                verdict_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_verdict.png")
+                analysis_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_analysis.png")
+                main_info_card = os.path.join(bot_graph_dir, f"{story_id}_info_card.png")
+                
+                if not os.path.exists(verdict_filename) or not os.path.exists(analysis_filename):
+                    print("Compact mode split info cards not found. Generating on-the-fly...")
                     try:
                         from image_card_generator import generate_compact_info_card
-                        generate_compact_info_card(thread_config, info_card_filename)
+                        generate_compact_info_card(thread_config, main_info_card)
                     except Exception as e:
-                        raise RuntimeError(f"Failed to generate compact info card on-the-fly: {e}") from e
-                print("Uploading compact summary info card to Bluesky...")
+                        raise RuntimeError(f"Failed to generate compact info cards on-the-fly: {e}") from e
+                
+                print("Uploading compact verdict and analysis split cards to Bluesky...")
+                # Upload Verdict Card (1-3)
                 try:
-                    with open(info_card_filename, "rb") as f:
-                        card_img_data = f.read()
-                    card_upload = client.com.atproto.repo.upload_blob(card_img_data)
+                    with open(verdict_filename, "rb") as f:
+                        v_img_data = f.read()
+                    v_upload = client.com.atproto.repo.upload_blob(v_img_data)
+                    info_card_images.append(
+                        models.AppBskyEmbedImages.Image(
+                            alt=f"Core Verdict Card for {subject}: Claim, Reality, and Verdict coordinates.",
+                            image=v_upload.blob
+                        )
+                    )
+                    print("Verdict split card uploaded successfully.")
+                except Exception as e:
+                    print(f"Warning: Failed to upload verdict split card: {e}")
+                
+                # Upload Analysis Card (4-13)
+                try:
+                    with open(analysis_filename, "rb") as f:
+                        a_img_data = f.read()
+                    a_upload = client.com.atproto.repo.upload_blob(a_img_data)
                     
-                    # Construct alt text containing details of posts 4 to 12
                     alt_parts = [
-                        "Aletheia Assessment Summary Details:",
+                        "System Analysis Details:",
                         f"Context: {posts[4].replace('What\'s happening:\\n', '').replace('Context:\\n', '').strip()}",
                         f"Nuance: {posts[5]}",
                         f"Breakdown: {posts[6]}",
@@ -406,11 +425,15 @@ def post_thread(client, thread_config, live=False, compact=False):
                     if len(card_alt) > 9900:
                         card_alt = card_alt[:9897] + "..."
                         
-                    card_images = [models.AppBskyEmbedImages.Image(alt=card_alt, image=card_upload.blob)]
-                    info_card_embed = models.AppBskyEmbedImages.Main(images=card_images)
-                    print("Compact summary info card uploaded successfully.")
+                    info_card_images.append(
+                        models.AppBskyEmbedImages.Image(
+                            alt=card_alt,
+                            image=a_upload.blob
+                        )
+                    )
+                    print("Analysis split card uploaded successfully.")
                 except Exception as e:
-                    raise RuntimeError(f"Failed to upload compact info card: {e}") from e
+                    print(f"Warning: Failed to upload analysis split card: {e}")
 
             # Create External Link Preview Card
             link_embed = None
@@ -451,14 +474,13 @@ def post_thread(client, thread_config, live=False, compact=False):
                 except Exception as ex:
                     print(f"Warning: Failed to create grounding external link embed card: {ex}")
 
-            # first_post_embed gets the trajectory graph, and in compact-single mode, also gets the summary card
+            # first_post_embed gets the trajectory graph, and in compact-single mode, also gets the summary cards
             first_post_embed = graph_embed
-            if is_compact_single and info_card_embed is not None:
+            if is_compact_single and len(info_card_images) > 0:
                 joint_images = []
                 if graph_embed is not None and hasattr(graph_embed, "images"):
                     joint_images.extend(graph_embed.images)
-                if info_card_embed is not None and hasattr(info_card_embed, "images"):
-                    joint_images.extend(info_card_embed.images)
+                joint_images.extend(info_card_images)
                 first_post_embed = models.AppBskyEmbedImages.Main(images=joint_images)
 
             # 4. Resolve Links and Hashtags for facets (only on the first/root post)

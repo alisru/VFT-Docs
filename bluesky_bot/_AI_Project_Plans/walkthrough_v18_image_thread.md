@@ -1,27 +1,21 @@
-# Hybrid 2-Column + Full-Width Bottom Split Infographic Walkthrough
+# Mobile-Optimized Split Verdict (1-3) & Analysis (4-13) Infographic Walkthrough
 
-We have updated the split visual cards to use a hybrid grid layout: a **2x2 grid at the top** and a **full-width card at the bottom** for Part 1 (Core) and Part 2 (Analysis). This highlights the text-heavy context and analysis sections while keeping the other elements balanced.
+We have updated the visual card engine to output the story in a highly-readable two-part split format optimized for mobile timelines. This includes:
+1.  **Card 1: Core Verdict Card (1-3)**: Focuses strictly on Hook, Claim, Reality, and Verdict, showing the coordinate details in the subtitle.
+2.  **Card 2: System Analysis & Perspectives Card (4-13)**: Groups Context, Nuance, Breakdown, Social Physics, Trajectory, and Unavoidables alongside the Trinary Perspectives reactions at the bottom, matching the classic unified structure but with a 3px font size bump.
 
 ---
 
-## Grid Layout Specifications
-*   **Part 1: Core Verdict**:
-    *   **Top 2x2 Grid**: Left column: Hook, Claim; Right column: Reality, Verdict.
-    *   **Bottom Row (Full-Width)**: Context (spans the entire drawable canvas width, giving it a prominent wide container).
-*   **Part 2: System Analysis**:
-    *   **Top 2x2 Grid**: Left column: Nuance, Breakdown; Right column: Trajectory, Unavoidables.
-    *   **Bottom Row (Full-Width)**: Social Physics Analysis (spans the entire canvas width, providing maximum room for text wrapping).
-*   **Part 3: Perspective Reactions**:
-    *   **3 Columns side-by-side**: Alethekanon, Awwthekanon, and Brothekanon reaction blocks aligned horizontally.
+## Alt Text & Metadata Integration
+*   The **Resulting Judgement Coordinates** `(v, psi) — Zone Anchor | Verdict Status` are dynamically extracted from the story data and embedded directly into the visual headers.
+*   The bot automatically uploads both images alongside the Trajectory Graph, creating a neat 3-image swipeable layout in the Bluesky feed.
 
-Below is the swipeable carousel showing how these hybrid grid split cards render:
+Below is the swipeable carousel showing the new split cards:
 
 ````carousel
-![Part 1: Core Verdict (Hybrid Grid)](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_core.png)
+![Part 1: Core Verdict Card](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_verdict.png)
 <!-- slide -->
-![Part 2: System Analysis (Hybrid Grid)](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_analysis.png)
-<!-- slide -->
-![Part 3: Perspective Reactions](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_perspectives.png)
+![Part 2: Analysis & Perspectives Card](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_analysis.png)
 ````
 
 ---
