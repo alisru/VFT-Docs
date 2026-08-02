@@ -421,3 +421,218 @@ def generate_compact_info_card(thread_config, output_path):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     img.save(output_path, "PNG")
     print(f"Info Card generated and saved successfully: {output_path}")
+
+    # Generate split cards for mobile view
+    core_path = output_path.replace(".png", "_core.png")
+    analysis_path = output_path.replace(".png", "_analysis.png")
+    perspectives_path = output_path.replace(".png", "_perspectives.png")
+    
+    _generate_split_card(subject, "PART 1: CORE VERDICT", sections[:5], fonts, core_path)
+    _generate_split_card(subject, "PART 2: SYSTEM ANALYSIS", sections[5:], fonts, analysis_path)
+    _generate_perspectives_card(subject, personas, fonts, perspectives_path)
+
+def _generate_split_card(subject, subtitle, sections, fonts, output_path):
+    canvas_bg = "#0B0F19"
+    card_bg = "#141D2F"
+    border_color = "#25354F"
+    text_color = "#E2E8F0"
+    canvas_w = 1200
+    x_left = 40
+    x_right = canvas_w - x_left
+    drawable_w = x_right - x_left
+    
+    # Create dummy draw interface to measure sizes
+    temp_img = Image.new("RGB", (1, 1))
+    temp_draw = ImageDraw.Draw(temp_img)
+    
+    line_h = 28
+    card_gap = 25
+    
+    current_y = 50
+    # Title layout (spans full width)
+    title_text = f"{subject}\n{subtitle}"
+    title_lines = wrap_text(title_text, fonts["bold_32"], drawable_w, temp_draw)
+    title_h = len(title_lines) * 38
+    title_y_start = current_y
+    current_y += title_h + 30
+    
+    card_start_y = current_y
+    
+    # Compute layouts for sections (single column, full width)
+    sec_text_w = drawable_w - 50 # 1070px
+    layouts = []
+    y_cursor = card_start_y
+    
+    for sec in sections:
+        wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
+        body_h = len(wrapped_body) * line_h
+        card_h = 25 + 15 + body_h + 25 # top pad + label + body + bottom pad
+        
+        layouts.append({
+            "sec": sec,
+            "y": y_cursor,
+            "h": card_h,
+            "lines": wrapped_body
+        })
+        y_cursor += card_h + card_gap
+        
+    final_height = y_cursor - card_gap + 50 # padding/margins
+    
+    # Create canvas
+    img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
+    draw = ImageDraw.Draw(img)
+    
+    # Draw Title
+    y = title_y_start
+    for line in title_lines:
+        draw.text((x_left, y), line, fill="#F1F5F9", font=fonts["bold_32"])
+        y += 38
+        
+    # Draw stacked cards
+    for lay in layouts:
+        sec = lay["sec"]
+        card_y = lay["y"]
+        card_h = lay["h"]
+        lines = lay["lines"]
+        
+        # Outer Card rectangle
+        draw.rounded_rectangle(
+            [x_left, card_y, x_right, card_y + card_h],
+            radius=12,
+            fill=card_bg,
+            outline=border_color,
+            width=1
+        )
+        
+        # Indicator line on the left side
+        draw.rounded_rectangle(
+            [x_left + 1, card_y + 10, x_left + 7, card_y + card_h - 10],
+            radius=3,
+            fill=sec["color"]
+        )
+        
+        # Label/Header
+        draw.text(
+            (x_left + 20, card_y + 22),
+            sec["label"],
+            fill=sec["color"],
+            font=fonts["bold_16"]
+        )
+        
+        # Body text
+        text_y = card_y + 55
+        for line in lines:
+            draw.text(
+                (x_left + 20, text_y),
+                line,
+                fill=text_color,
+                font=fonts["regular_20"]
+            )
+            text_y += line_h
+            
+    # Save image
+    img.save(output_path, "PNG")
+    print(f"Split Info Card generated: {output_path}")
+
+def _generate_perspectives_card(subject, personas, fonts, output_path):
+    canvas_bg = "#0B0F19"
+    card_bg = "#141D2F"
+    border_color = "#25354F"
+    text_color = "#E2E8F0"
+    canvas_w = 1200
+    x_left = 40
+    x_right = canvas_w - x_left
+    drawable_w = x_right - x_left
+    
+    # Create dummy draw interface to measure sizes
+    temp_img = Image.new("RGB", (1, 1))
+    temp_draw = ImageDraw.Draw(temp_img)
+    
+    line_h = 28
+    current_y = 50
+    
+    # Title layout (spans full width)
+    title_text = f"{subject}\nPART 3: PERSPECTIVE REACTIONS"
+    title_lines = wrap_text(title_text, fonts["bold_32"], drawable_w, temp_draw)
+    title_h = len(title_lines) * 38
+    title_y_start = current_y
+    current_y += title_h + 30
+    
+    persona_start_y = current_y
+    
+    # 3-Column Grid for perspectives
+    per_gap = 20
+    per_col_w = (drawable_w - (per_gap * 2)) // 3 # 360px
+    per_x_positions = [
+        (x_left, x_left + per_col_w),
+        (x_left + per_col_w + per_gap, x_left + per_col_w + per_gap + per_col_w),
+        (x_left + (per_col_w + per_gap) * 2, x_left + (per_col_w + per_gap) * 2 + per_col_w)
+    ]
+    per_text_w = per_col_w - 40 # 320px (20px card padding left/right)
+    
+    persona_heights = []
+    persona_lines = []
+    for per in personas:
+        wrapped_body = wrap_text(per["text"], fonts["regular_20"], per_text_w, temp_draw)
+        body_h = len(wrapped_body) * line_h
+        card_h = 25 + 15 + body_h + 25
+        persona_heights.append(card_h)
+        persona_lines.append(wrapped_body)
+        
+    max_per_h = max(persona_heights)
+    
+    final_height = persona_start_y + max_per_h + 50
+    
+    # Create canvas
+    img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
+    draw = ImageDraw.Draw(img)
+    
+    # Draw Title
+    y = title_y_start
+    for line in title_lines:
+        draw.text((x_left, y), line, fill="#F1F5F9", font=fonts["bold_32"])
+        y += 38
+        
+    # Draw the 3 columns
+    for idx, per in enumerate(personas):
+        x1, x2 = per_x_positions[idx]
+        lines = persona_lines[idx]
+        
+        # Card Background
+        draw.rounded_rectangle(
+            [x1, persona_start_y, x2, persona_start_y + max_per_h],
+            radius=12,
+            fill=card_bg,
+            outline=border_color,
+            width=1
+        )
+        
+        # Indicator top bar
+        draw.rounded_rectangle(
+            [x1 + 10, persona_start_y + 1, x1 + 10 + (x2 - x1 - 20), persona_start_y + 7],
+            radius=3,
+            fill=per["color"]
+        )
+        
+        # Label
+        draw.text(
+            (x1 + 20, persona_start_y + 22),
+            per["label"],
+            fill=per["color"],
+            font=fonts["bold_16"]
+        )
+        
+        # Body text
+        text_y = persona_start_y + 55
+        for line in lines:
+            draw.text(
+                (x1 + 20, text_y),
+                line,
+                fill=text_color,
+                font=fonts["regular_20"]
+            )
+            text_y += line_h
+            
+    # Save image
+    img.save(output_path, "PNG")
+    print(f"Split Perspectives Card generated: {output_path}")
