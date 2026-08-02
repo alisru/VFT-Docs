@@ -11,8 +11,9 @@ We have updated the split visual cards to maintain the premium **2-column grid l
     *   **Part 2: System Analysis**: 2 columns (Left: Nuance, Breakdown, Social Physics; Right: Trajectory, Unavoidables).
     *   **Part 3: Perspective Reactions**: 3 columns side-by-side.
 3.  **Increased Font Size**: 
-    *   Body text increased from **20pt to 22pt** (`regular_22`).
-    *   Header labels increased from **16pt to 20pt** (`bold_20`).
+    *   Body text increased from **20pt to 26pt** (`regular_26`).
+    *   Header labels increased from **16pt to 24pt** (`bold_24`).
+    *   Title header text increased to **36pt** (`bold_36`) with the Part subtitle highlighted in blue at **24pt** (`bold_24`).
     This makes the cards extremely crisp and readable on high-DPI mobile screens without any zoom.
 
 Below is the swipeable carousel showing the new 2-column split cards:
