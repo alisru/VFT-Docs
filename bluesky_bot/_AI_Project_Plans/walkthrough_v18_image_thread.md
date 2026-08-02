@@ -1,27 +1,25 @@
-# Mobile-Optimized 2-Column Split Infographic Walkthrough
+# Hybrid 2-Column + Full-Width Bottom Split Infographic Walkthrough
 
-We have updated the split visual cards to maintain the premium **2-column grid layout** while significantly increasing the readability for mobile devices.
+We have updated the split visual cards to use a hybrid grid layout: a **2x2 grid at the top** and a **full-width card at the bottom** for Part 1 (Core) and Part 2 (Analysis). This highlights the text-heavy context and analysis sections while keeping the other elements balanced.
 
 ---
 
-## Key Improvements
-1.  **Untruncated Titles**: Fixed the harvesting pipeline to parse full, clean story subjects (e.g. `"Hidden gems bloom in Western Australia"`) without truncation or trailing ellipsis (`...`).
-2.  **2-Column Aesthetic**: Split cards maintain the exact two-column aesthetic of the unified design:
-    *   **Part 1: Core Verdict**: 2 columns (Left: Hook, Claim, Reality; Right: Verdict, Context).
-    *   **Part 2: System Analysis**: 2 columns (Left: Nuance, Breakdown, Social Physics; Right: Trajectory, Unavoidables).
-    *   **Part 3: Perspective Reactions**: 3 columns side-by-side.
-3.  **Increased Font Size (+3px Bump)**: 
-    *   Body text increased to **29pt** (`regular_29`).
-    *   Header labels increased to **27pt** (`bold_27`).
-    *   Title header text increased to **39pt** (`bold_39`) with the Part subtitle highlighted in blue at **27pt** (`bold_27`).
-    This makes the cards extremely crisp and readable on high-DPI mobile screens without any zoom.
+## Grid Layout Specifications
+*   **Part 1: Core Verdict**:
+    *   **Top 2x2 Grid**: Left column: Hook, Claim; Right column: Reality, Verdict.
+    *   **Bottom Row (Full-Width)**: Context (spans the entire drawable canvas width, giving it a prominent wide container).
+*   **Part 2: System Analysis**:
+    *   **Top 2x2 Grid**: Left column: Nuance, Breakdown; Right column: Trajectory, Unavoidables.
+    *   **Bottom Row (Full-Width)**: Social Physics Analysis (spans the entire canvas width, providing maximum room for text wrapping).
+*   **Part 3: Perspective Reactions**:
+    *   **3 Columns side-by-side**: Alethekanon, Awwthekanon, and Brothekanon reaction blocks aligned horizontally.
 
-Below is the swipeable carousel showing the new 2-column split cards:
+Below is the swipeable carousel showing how these hybrid grid split cards render:
 
 ````carousel
-![Part 1: Core Verdict (2-Column)](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_core.png)
+![Part 1: Core Verdict (Hybrid Grid)](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_core.png)
 <!-- slide -->
-![Part 2: System Analysis (2-Column)](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_analysis.png)
+![Part 2: System Analysis (Hybrid Grid)](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_analysis.png)
 <!-- slide -->
 ![Part 3: Perspective Reactions](C:/Users/hungh/.gemini/antigravity/brain/b3441d49-6c57-4a6f-80a8-7437cd18cea1/orchids_bloom_wa_wildflowers_info_card_perspectives.png)
 ````

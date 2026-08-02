@@ -490,8 +490,19 @@ def generate_compact_info_card(thread_config, output_path):
     analysis_path = output_path.replace(".png", "_analysis.png")
     perspectives_path = output_path.replace(".png", "_perspectives.png")
     
+    # Core: Hook, Claim, Reality, Verdict, Context at the bottom
     _generate_split_card(subject, "PART 1: CORE VERDICT", sections[:5], fonts, core_path)
-    _generate_split_card(subject, "PART 2: SYSTEM ANALYSIS", sections[5:], fonts, analysis_path)
+    
+    # Analysis: Nuance, Breakdown, Trajectory, Unavoidables, Social Physics at the bottom
+    analysis_orig = sections[5:]
+    analysis_sections = [
+        analysis_orig[0],  # Nuance
+        analysis_orig[1],  # Breakdown
+        analysis_orig[3],  # Trajectory
+        analysis_orig[4],  # The Unavoidables
+        analysis_orig[2]   # Social Physics Analysis
+    ]
+    _generate_split_card(subject, "PART 2: SYSTEM ANALYSIS", analysis_sections, fonts, analysis_path)
     _generate_perspectives_card(subject, personas, fonts, perspectives_path)
 
 def _generate_split_card(subject, subtitle, sections, fonts, output_path):
@@ -533,11 +544,12 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     
     grid_start_y = current_y
     
-    # Splicing: left column gets first 3, right column gets remaining 2
-    left_sections = sections[:3]
-    right_sections = sections[3:]
+    # Splicing: left column gets first 2, right column gets next 2, bottom gets last 1
+    left_sections = sections[0:2]
+    right_sections = sections[2:4]
+    bottom_sec = sections[4]
     
-    # Measure left column
+    # Measure left column (Top Left)
     left_layouts = []
     left_y = grid_start_y
     for sec in left_sections:
@@ -554,8 +566,9 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
             "lines": wrapped_body
         })
         left_y += card_h + card_gap
+    left_grid_h = left_y - card_gap - grid_start_y
         
-    # Measure right column
+    # Measure right column (Top Right)
     right_layouts = []
     right_y = grid_start_y
     for sec in right_sections:
@@ -572,9 +585,27 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
             "lines": wrapped_body
         })
         right_y += card_h + card_gap
+    right_grid_h = right_y - card_gap - grid_start_y
         
-    grid_end_y = max(left_y, right_y) - card_gap + 15
-    final_height = grid_end_y + 40 # padding/margins
+    # Symmetrical grid bottom height
+    grid_h = max(left_grid_h, right_grid_h)
+    
+    # Measure bottom full-width block
+    bottom_y = grid_start_y + grid_h + card_gap
+    wrapped_bottom = wrap_text(bottom_sec["text"], fonts["regular_29"], drawable_w - 50, temp_draw)
+    bottom_body_h = len(wrapped_bottom) * line_h
+    bottom_card_h = 25 + 24 + bottom_body_h + 25
+    
+    bottom_layout = {
+        "sec": bottom_sec,
+        "x_left": x_left,
+        "x_right": x_right,
+        "y": bottom_y,
+        "h": bottom_card_h,
+        "lines": wrapped_bottom
+    }
+    
+    final_height = bottom_y + bottom_card_h + 40 # padding/margins
     
     # Create canvas
     img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
@@ -598,9 +629,12 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     for lay in right_layouts:
         _draw_individual_card(draw, lay, fonts, card_bg, border_color, text_color, line_h)
         
+    # Draw Bottom Full-Width Block
+    _draw_individual_card(draw, bottom_layout, fonts, card_bg, border_color, text_color, line_h)
+    
     # Save image
     img.save(output_path, "PNG")
-    print(f"Split Info Card generated (2-column, size 29): {output_path}")
+    print(f"Split Info Card generated (Grid + Bottom Span, size 29): {output_path}")
 
 def _draw_individual_card(draw, lay, fonts, card_bg, border_color, text_color, line_h):
     sec = lay["sec"]
