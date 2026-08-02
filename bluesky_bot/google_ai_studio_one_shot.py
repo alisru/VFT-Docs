@@ -419,12 +419,17 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
             if subject_approx in seen_ids:
                 continue
 
+            first_line = text.split('\n')[0].strip()
+            if ":" in first_line:
+                first_line = first_line.split(":")[0].strip()
+            subj_cleaned = first_line[:120] if len(first_line) > 0 else "Assessment Summary"
+
             candidates.append({
                 "url": article_url,
                 "target_url": post_url,
                 "mode": "root",
                 "text": text,
-                "subject": text[:80] + "..."
+                "subject": subj_cleaned
             })
             seen_urls.add(normalized)
             seen_targets.add(post_rkey)
@@ -733,12 +738,17 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                         if subject_approx in seen_ids:
                             continue
                             
+                        first_line = text.split('\n')[0].strip()
+                        if ":" in first_line:
+                            first_line = first_line.split(":")[0].strip()
+                        subj_cleaned = first_line[:120] if len(first_line) > 0 else "Assessment Summary"
+
                         candidates.append({
                             "url": article_url,
                             "target_url": post_url,
                             "mode": "root",
                             "text": text,
-                            "subject": text[:80] + "..."
+                            "subject": subj_cleaned
                         })
                         seen_urls.add(normalized)
                         seen_targets.add(post_rkey)

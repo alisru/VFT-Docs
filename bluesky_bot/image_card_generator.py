@@ -47,6 +47,15 @@ def load_theme_fonts():
     if fonts["regular_24"] is None:
         fonts["regular_24"] = ImageFont.load_default()
 
+    fonts["regular_22"] = None
+    for n in regular_names:
+        f = get_font(n, 22)
+        if is_valid_font(f):
+            fonts["regular_22"] = f
+            break
+    if fonts["regular_22"] is None:
+        fonts["regular_22"] = ImageFont.load_default()
+
     # Bold fonts
     fonts["bold_32"] = None
     for n in bold_names:
@@ -65,6 +74,15 @@ def load_theme_fonts():
             break
     if fonts["bold_24"] is None:
         fonts["bold_24"] = ImageFont.load_default()
+
+    fonts["bold_20"] = None
+    for n in bold_names:
+        f = get_font(n, 20)
+        if is_valid_font(f):
+            fonts["bold_20"] = f
+            break
+    if fonts["bold_20"] is None:
+        fonts["bold_20"] = ImageFont.load_default()
 
     fonts["bold_16"] = None
     for n in bold_names:
@@ -445,7 +463,18 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     temp_img = Image.new("RGB", (1, 1))
     temp_draw = ImageDraw.Draw(temp_img)
     
-    line_h = 28
+    # 2-Column Grid dimensions
+    col_gap = 30
+    col_w = (drawable_w - col_gap) // 2 # 545px
+    col_1_x_left = x_left
+    col_1_x_right = col_1_x_left + col_w
+    col_2_x_left = col_1_x_right + col_gap
+    col_2_x_right = col_2_x_left + col_w
+    
+    sec_text_w = col_w - 40 # 505px (20px padding left/right)
+    
+    # Sizing parameters
+    line_h = 30 # Height per text line (slightly taller for size 22)
     card_gap = 25
     
     current_y = 50
@@ -456,27 +485,50 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
     title_y_start = current_y
     current_y += title_h + 30
     
-    card_start_y = current_y
+    grid_start_y = current_y
     
-    # Compute layouts for sections (single column, full width)
-    sec_text_w = drawable_w - 50 # 1070px
-    layouts = []
-    y_cursor = card_start_y
+    # Splicing: left column gets first 3, right column gets remaining 2
+    left_sections = sections[:3]
+    right_sections = sections[3:]
     
-    for sec in sections:
-        wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
+    # Measure left column
+    left_layouts = []
+    left_y = grid_start_y
+    for sec in left_sections:
+        wrapped_body = wrap_text(sec["text"], fonts["regular_22"], sec_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
         card_h = 25 + 15 + body_h + 25 # top pad + label + body + bottom pad
         
-        layouts.append({
+        left_layouts.append({
             "sec": sec,
-            "y": y_cursor,
+            "x_left": col_1_x_left,
+            "x_right": col_1_x_right,
+            "y": left_y,
             "h": card_h,
             "lines": wrapped_body
         })
-        y_cursor += card_h + card_gap
+        left_y += card_h + card_gap
         
-    final_height = y_cursor - card_gap + 50 # padding/margins
+    # Measure right column
+    right_layouts = []
+    right_y = grid_start_y
+    for sec in right_sections:
+        wrapped_body = wrap_text(sec["text"], fonts["regular_22"], sec_text_w, temp_draw)
+        body_h = len(wrapped_body) * line_h
+        card_h = 25 + 15 + body_h + 25 # top pad + label + body + bottom pad
+        
+        right_layouts.append({
+            "sec": sec,
+            "x_left": col_2_x_left,
+            "x_right": col_2_x_right,
+            "y": right_y,
+            "h": card_h,
+            "lines": wrapped_body
+        })
+        right_y += card_h + card_gap
+        
+    grid_end_y = max(left_y, right_y) - card_gap + 15
+    final_height = grid_end_y + 40 # padding/margins
     
     # Create canvas
     img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
@@ -488,51 +540,60 @@ def _generate_split_card(subject, subtitle, sections, fonts, output_path):
         draw.text((x_left, y), line, fill="#F1F5F9", font=fonts["bold_32"])
         y += 38
         
-    # Draw stacked cards
-    for lay in layouts:
-        sec = lay["sec"]
-        card_y = lay["y"]
-        card_h = lay["h"]
-        lines = lay["lines"]
+    # Draw Left Column Card list
+    for lay in left_layouts:
+        _draw_individual_card(draw, lay, fonts, card_bg, border_color, text_color, line_h)
         
-        # Outer Card rectangle
-        draw.rounded_rectangle(
-            [x_left, card_y, x_right, card_y + card_h],
-            radius=12,
-            fill=card_bg,
-            outline=border_color,
-            width=1
-        )
+    # Draw Right Column Card list
+    for lay in right_layouts:
+        _draw_individual_card(draw, lay, fonts, card_bg, border_color, text_color, line_h)
         
-        # Indicator line on the left side
-        draw.rounded_rectangle(
-            [x_left + 1, card_y + 10, x_left + 7, card_y + card_h - 10],
-            radius=3,
-            fill=sec["color"]
-        )
-        
-        # Label/Header
-        draw.text(
-            (x_left + 20, card_y + 22),
-            sec["label"],
-            fill=sec["color"],
-            font=fonts["bold_16"]
-        )
-        
-        # Body text
-        text_y = card_y + 55
-        for line in lines:
-            draw.text(
-                (x_left + 20, text_y),
-                line,
-                fill=text_color,
-                font=fonts["regular_20"]
-            )
-            text_y += line_h
-            
     # Save image
     img.save(output_path, "PNG")
-    print(f"Split Info Card generated: {output_path}")
+    print(f"Split Info Card generated (2-column): {output_path}")
+
+def _draw_individual_card(draw, lay, fonts, card_bg, border_color, text_color, line_h):
+    sec = lay["sec"]
+    x1 = lay["x_left"]
+    x2 = lay["x_right"]
+    card_y = lay["y"]
+    card_h = lay["h"]
+    lines = lay["lines"]
+    
+    # Card outer box
+    draw.rounded_rectangle(
+        [x1, card_y, x2, card_y + card_h],
+        radius=12,
+        fill=card_bg,
+        outline=border_color,
+        width=1
+    )
+    
+    # Indicator bar on the left side
+    draw.rounded_rectangle(
+        [x1 + 1, card_y + 10, x1 + 7, card_y + card_h - 10],
+        radius=3,
+        fill=sec["color"]
+    )
+    
+    # Label / Header (20pt font)
+    draw.text(
+        (x1 + 20, card_y + 22),
+        sec["label"],
+        fill=sec["color"],
+        font=fonts["bold_20"]
+    )
+    
+    # Body text (22pt font)
+    text_y = card_y + 55
+    for line in lines:
+        draw.text(
+            (x1 + 20, text_y),
+            line,
+            fill=text_color,
+            font=fonts["regular_22"]
+        )
+        text_y += line_h
 
 def _generate_perspectives_card(subject, personas, fonts, output_path):
     canvas_bg = "#0B0F19"
@@ -548,7 +609,7 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
     temp_img = Image.new("RGB", (1, 1))
     temp_draw = ImageDraw.Draw(temp_img)
     
-    line_h = 28
+    line_h = 30 # Size 22 line height
     current_y = 50
     
     # Title layout (spans full width)
@@ -573,7 +634,7 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
     persona_heights = []
     persona_lines = []
     for per in personas:
-        wrapped_body = wrap_text(per["text"], fonts["regular_20"], per_text_w, temp_draw)
+        wrapped_body = wrap_text(per["text"], fonts["regular_22"], per_text_w, temp_draw)
         body_h = len(wrapped_body) * line_h
         card_h = 25 + 15 + body_h + 25
         persona_heights.append(card_h)
@@ -619,7 +680,7 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
             (x1 + 20, persona_start_y + 22),
             per["label"],
             fill=per["color"],
-            font=fonts["bold_16"]
+            font=fonts["bold_20"]
         )
         
         # Body text
@@ -629,7 +690,7 @@ def _generate_perspectives_card(subject, personas, fonts, output_path):
                 (x1 + 20, text_y),
                 line,
                 fill=text_color,
-                font=fonts["regular_20"]
+                font=fonts["regular_22"]
             )
             text_y += line_h
             
