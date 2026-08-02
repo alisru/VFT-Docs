@@ -130,28 +130,28 @@ def generate_compact_info_card(thread_config, output_path):
     border_color = "#25354F"
     text_color = "#E2E8F0"
     
-    # Check if compact single-post mode is active (Claim, Reality, Verdict are added as visual cards)
-    is_single = thread_config.get("compact") == "single" or thread_config.get("compact_single", False)
-    
-    sections = []
-    if is_single:
-        sections.extend([
-            {
-                "label": "THE CLAIM",
-                "text": posts[1].replace("Claim:\n", "").replace("The Claim:\n", "").replace("Stated Judgement:\n", "").strip(),
-                "color": "#94A3B8" # Slate
-            },
-            {
-                "label": "THE REALITY",
-                "text": posts[2].replace("Reality:\n", "").replace("The Reality:\n", "").replace("Resulting Judgement:\n", "").strip(),
-                "color": "#38BDF8" # Sky Blue
-            },
-            {
-                "label": "THE VERDICT",
-                "text": posts[3].replace("Verdict:\n", "").replace("Stated Verdict:\n", "").strip(),
-                "color": "#FBBF24" # Yellow/Amber
-            }
-        ])
+    sections = [
+        {
+            "label": "THE HOOK",
+            "text": posts[0].replace("Hook:\n", "").strip(),
+            "color": "#F472B6" # Pink/Magenta
+        },
+        {
+            "label": "THE CLAIM",
+            "text": posts[1].replace("Claim:\n", "").replace("The Claim:\n", "").replace("Stated Judgement:\n", "").strip(),
+            "color": "#94A3B8" # Slate
+        },
+        {
+            "label": "THE REALITY",
+            "text": posts[2].replace("Reality:\n", "").replace("The Reality:\n", "").replace("Resulting Judgement:\n", "").strip(),
+            "color": "#38BDF8" # Sky Blue
+        },
+        {
+            "label": "THE VERDICT",
+            "text": posts[3].replace("Verdict:\n", "").replace("Stated Verdict:\n", "").strip(),
+            "color": "#FBBF24" # Yellow/Amber
+        }
+    ]
 
     sections.extend([
         {
@@ -239,13 +239,9 @@ def generate_compact_info_card(thread_config, output_path):
 
     grid_start_y = current_y
 
-    # Split sections into Left and Right Columns dynamically
-    if is_single:
-        left_sections = sections[:5]  # Claim, Reality, Verdict, Context, Nuance
-        right_sections = sections[5:] # Breakdown, Social Physics, Trajectory, Unavoidables
-    else:
-        left_sections = sections[:3]  # Context, Nuance, Breakdown
-        right_sections = sections[3:] # Social Physics, Trajectory, Unavoidables
+    # Split sections into Left and Right Columns (5 sections each)
+    left_sections = sections[:5]  # Hook, Claim, Reality, Verdict, Context
+    right_sections = sections[5:] # Nuance, Breakdown, Social Physics, Trajectory, Unavoidables
 
     # Left Column cards layout
     left_layouts = []
