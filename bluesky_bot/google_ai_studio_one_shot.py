@@ -1381,6 +1381,7 @@ def main():
     parser.add_argument("--compact", action="store_true", help="Enable compact posting mode formatting (lifting character limits on posts 4+ in API responses)")
     parser.add_argument("--compact-single", action="store_true", help="Enable compact single-post mode formatting (lifting character limits on posts 4+ and tagging story as single-post compact)")
     parser.add_argument("--search", action="store_true", help="Enable Google Search Grounding to fact-check claims (default: False)")
+    parser.add_argument("--five-word", action="store_true", help="Enable 5-word limit mode")
     parser.add_argument("--rss", type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
     parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
