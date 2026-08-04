@@ -822,11 +822,21 @@ def _load_rules(use_son=False):
             _RULES_CACHE[f"{cache_key}_formatting"] = minify_markdown(f.read())
     return _RULES_CACHE[f"{cache_key}_convergence"], _RULES_CACHE[f"{cache_key}_formatting"]
 
-def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False):
+def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False):
     convergence_rules, formatting_rules = _load_rules(use_son=use_son)
         
-    # Prepend compact mode directive to formatting rules if active
-    if compact:
+    # Prepend compact mode directive or five-word directive to formatting rules if active
+    if five_word:
+        formatting_rules = (
+            "CRITICAL DIRECTIVE FOR FIVE-WORD MODE:\n"
+            "You are in FIVE-WORD MODE. Every single element/string in the 'posts' array (posts 0 to 12) MUST be exactly 5 words long. "
+            "No element may exceed 5 words. Plan your word selection meticulously.\n"
+            "Format of posts[3] (the Verdict post) MUST be exactly: 'stated [stated_u/psi] actual [real_u/psi] [pass/fail/neutral]'\n"
+            "Example of posts[3]: 'stated (+1.0, +1.0) actual (-0.5, -0.5) fail'\n"
+            "This counts as exactly 5 words: 'stated' (1), '(+1.0, +1.0)' (2), 'actual' (3), '(-0.5, -0.5)' (4), 'fail' (5).\n"
+            "Keep posts[4] as the 5-word Context post. Keep all other posts under 5 words too. Ensure the posts array has exactly 13 elements.\n"
+        )
+    elif compact:
         override_text = (
             "=== COMPACT MODE DIRECTIVE ===\n"
             "- Posts 1 to 4 (indices 0 to 3 in the posts array: Hook, Claim, Reality, Verdict) will be posted as standard text on Bluesky. They MUST be kept strictly under 260 characters each.\n"
@@ -836,7 +846,15 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         formatting_rules = formatting_rules.replace("Keep every single step strictly under **275 characters**", "Keep the first 4 steps under **275 characters** (steps 5-13 have no limits)")
 
     # System prompt: pure role declaration only
-    if compact:
+    if five_word:
+        system_instruction = (
+            "You are the Master Aletheia Auditor in Five-Word Mode. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation. "
+            "Use Google Search ONLY to fact-check names, dates, and medical/legal claims from the article. "
+            "Every single post in the 'posts' array (items 0 to 12) MUST be exactly 5 words long. No more, no less. "
+            "CRITICAL: The 'subject' field (item[2]) must be the full, non-truncated title/subject of the story based on the context. Never end the subject with '...' (ellipses) or truncate it. Reconstruct the full correct title if the input title is truncated. "
+            "CONCEPTUAL DIRECTIVE: You must always evaluate the REAL-WORLD EVENT and ACTORS themselves, rather than auditing the journalist's reporting or news outlet. Stated claims/ideals and actual realities must reflect the actions, intentions, and outcomes of the actors involved in the event itself. After evaluating the event, you can optionally analyze the reporting's accuracy or framing relative to the event in the Alethekanon analysis."
+        )
+    elif compact:
         system_instruction = (
             "You are the Master Aletheia Auditor. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no preamble, no explanation. "
             "Use Google Search ONLY to fact-check names, dates, and medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon persona. "
@@ -855,6 +873,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 270 CHARACTERS. THIS IS A HARD LIMIT. BE CONCISE."
         )
     if extra_context:
+
         system_instruction += f"\n\nCRITICAL: You must actively incorporate the following background knowledge and additional context when performing the audits:\n{extra_context}"
 
     # Build the full user message: rules + candidates + strict JSON matrix output demand
