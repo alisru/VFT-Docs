@@ -1525,11 +1525,87 @@ def main():
                     model_seq = [m.strip() for m in args.model_sequence.split(",") if m.strip()]
                 raw_text, grounding_urls = run_one_shot_evaluations(
                     genai_client, remaining, args.model, agnes_api_key=agnes_api_key, 
-                    use_son=args.son, use_search=args.search, 
+                    use_son=args.son, use_search=False, # Convergence pass is always search-free
                     extra_context=args.context, model_sequence=model_seq,
-                    compact=compact_val
+                    compact=compact_val, five_word=args.five_word
                 )
                 parsed = transpose_flat_to_json(raw_text)
+
+                # Conditional Second-Pass Fact-Checking Reflection for High Hypocrisy/Distortion
+                if args.search:
+                    reflected_parsed = []
+                    for idx, item in enumerate(parsed):
+                        trigger_reflection = False
+                        claim_rnet = 0.0
+                        real_rnet = 0.0
+                        hypocrisy = 0.0
+
+                        if args.son and isinstance(item, list) and len(item) >= 25:
+                            try:
+                                claim_rnet = float(item[17]) if item[17] is not None else 0.0
+                                real_rnet = float(item[18]) if item[18] is not None else 0.0
+                                hypocrisy = abs(real_rnet - claim_rnet)
+                            except (ValueError, TypeError):
+                                pass
+                            # Trigger if real R_net > 2.0 (distorted/deception) or delta > 2.0
+                            if real_rnet > 2.0 or hypocrisy > 2.0:
+                                trigger_reflection = True
+                        elif not args.son and isinstance(item, list) and len(item) >= 9:
+                            try:
+                                claim_u = float(item[5])
+                                claim_psi = float(item[6])
+                                real_u = float(item[7])
+                                real_psi = float(item[8])
+                                hypocrisy = abs(real_u - claim_u) + abs(real_psi - claim_psi)
+                            except (ValueError, TypeError):
+                                pass
+                            if hypocrisy > 1.5:
+                                trigger_reflection = True
+
+                        if trigger_reflection:
+                            desc = f"R_net={real_rnet:.2f}, delta={hypocrisy:.2f}" if args.son else f"hypocrisy={hypocrisy:.2f}"
+                            print(f"  [REFLECT] High hypocrisy/distortion detected ({desc}) for item {idx}: {item[2]}")
+                            print("  Executing second-pass fact-checking search grounding reflection...")
+
+                            orig_cand = None
+                            if idx < len(chunk):
+                                orig_cand = chunk[idx]
+                            else:
+                                url_clean = normalize_url(item[3])
+                                for c in chunk:
+                                    if normalize_url(c.get("url", "")) == url_clean:
+                                        orig_cand = c
+                                        break
+
+                            if orig_cand:
+                                reflection_context = (args.context or "") + (
+                                    f"\n\n[HYPOCRISY ALERT - REFLECTION REQUIRED]\n"
+                                    f"Your initial analysis detected high hypocrisy/distortion ({desc}).\n"
+                                    f"You MUST use Google Search Grounding to perform a deep fact-checking reflection. Search for concrete evidence about the actors' claims vs. actual outcomes. "
+                                    f"Ensure that all 13 posts are thoroughly grounded in these verified facts, exposing any deceit or empty rhetoric."
+                                )
+                                try:
+                                    ref_raw, ref_grounding = run_one_shot_evaluations(
+                                        genai_client, [orig_cand], args.model, agnes_api_key=agnes_api_key,
+                                        use_son=args.son, use_search=True, # Force search grounding ON
+                                        extra_context=reflection_context, model_sequence=model_seq,
+                                        compact=compact_val, five_word=args.five_word
+                                    )
+                                    ref_parsed = transpose_flat_to_json(ref_raw)
+                                    if ref_parsed and len(ref_parsed) > 0:
+                                        item = ref_parsed[0]
+                                        print(f"  [REFLECT SUCCESS] Successfully updated story '{item[2]}' with grounded facts.")
+                                        if ref_grounding:
+                                            if not grounding_urls:
+                                                grounding_urls = []
+                                            for u in ref_grounding:
+                                                if u not in grounding_urls:
+                                                    grounding_urls.append(u)
+                                except Exception as re:
+                                    print(f"  Warning: Reflection API call failed: {re}. Falling back to initial evaluation.")
+                        reflected_parsed.append(item)
+                    parsed = reflected_parsed
+
                 
                 # If search was actually used, append 🌐 and link grounding URL
                 if grounding_urls:
