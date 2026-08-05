@@ -627,6 +627,8 @@ let points = [
 ];
 let selectedIdx = 0;
 let hoverCoord = null;
+let cachedShaderCanvas = null;
+let cachedShaderKey = "";
 
 // ─────────────────────────────────────────────
 //  CANVAS SETUP (FORCE PERFECT SQUARE)
@@ -738,8 +740,7 @@ function draw() {
   const marginY = (H - gridSize) / 2;
 
   ctx.clearRect(0, 0, W, H);
-  ctx.fillStyle = document.getElementById('colorPageBg')?.value || '#07080c'; // Dynamic theme wrapper color
-  ctx.fillRect(0, 0, W, H);
+  ctx.clearRect(0, 0, W, H);
 
   const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
 
@@ -817,22 +818,109 @@ function draw() {
   // Clip all inner graph elements inside the rounded square card boundary
   ctx.clip();
 
-  // 1. Radial gradients
-  const [gCenterX, gCenterY] = modeRel ? toPixel(0.2, 0.2) : toPixel(1.2, 1.2);
-  const gGrad = ctx.createRadialGradient(gCenterX, gCenterY, 0, gCenterX, gCenterY, gridSize * 0.9);
-  gGrad.addColorStop(0, 'rgba(59, 222, 132, 0.55)');
-  gGrad.addColorStop(0.5, 'rgba(59, 222, 132, 0.22)');
-  gGrad.addColorStop(1, 'rgba(59, 222, 132, 0)');
-  ctx.fillStyle = gGrad;
-  ctx.fillRect(marginX, marginY, gridSize, gridSize);
+  // 1. VFT Mathematical Proximity Shading Field
+  const shadePot = document.getElementById('shadePotential') && document.getElementById('shadePotential').checked;
+  const shadeAnti = document.getElementById('shadeAntiPotential') && document.getElementById('shadeAntiPotential').checked;
+  const currentCacheKey = `${gridSize}_${shadePot ? 1 : 0}_${shadeAnti ? 1 : 0}`;
 
-  const [rCenterX, rCenterY] = modeRel ? toPixel(-2.2, -2.2) : toPixel(-1.2, -1.2);
-  const rGrad = ctx.createRadialGradient(rCenterX, rCenterY, 0, rCenterX, rCenterY, gridSize * 0.9);
-  rGrad.addColorStop(0, 'rgba(240, 80, 96, 0.55)');
-  rGrad.addColorStop(0.5, 'rgba(240, 80, 96, 0.22)');
-  rGrad.addColorStop(1, 'rgba(240, 80, 96, 0)');
-  ctx.fillStyle = rGrad;
-  ctx.fillRect(marginX, marginY, gridSize, gridSize);
+  if (!cachedShaderCanvas || cachedShaderKey !== currentCacheKey) {
+    cachedShaderCanvas = document.createElement('canvas');
+    cachedShaderCanvas.width = gridSize;
+    cachedShaderCanvas.height = gridSize;
+    const octx = cachedShaderCanvas.getContext('2d');
+    const imgData = octx.createImageData(gridSize, gridSize);
+    const data = imgData.data;
+
+    function getProx(u, psi, x1, y1, x2, y2) {
+      const dx = x2 - x1, dy = y2 - y1;
+      const len = Math.hypot(dx, dy);
+      if (len === 0) return { prox: 0, projU: x1 };
+      const ux = dx / len, uy = dy / len;
+      const along = Math.max(0, Math.min(len, (u - x1) * ux + (psi - y1) * uy));
+      const projU = x1 + ux * along;
+      const projPsi = y1 + uy * along;
+      const dist = Math.hypot(u - projU, psi - projPsi);
+      return { prox: Math.max(0, 1 - dist / len), projU };
+    }
+
+    for (let y = 0; y < gridSize; y++) {
+      for (let x = 0; x < gridSize; x++) {
+        const u = 2 - (x / gridSize) * 4;
+        const psi = 2 - (y / gridSize) * 4;
+
+        let gSum = 0;
+        let rSum = 0;
+
+        // Central axes (pure)
+        const { prox: pGood }  = getProx(u, psi, 0, 0, 2, 0);   gSum += pGood  * 1.0;
+        const { prox: pBad }   = getProx(u, psi, 0, 0, -2, 0);  rSum += pBad   * 1.0;
+        const { prox: pTruth } = getProx(u, psi, 0, 0, 0, 2);   gSum += pTruth * 1.0;
+        const { prox: pLies }  = getProx(u, psi, 0, 0, 0, -2);  rSum += pLies  * 1.0;
+
+        // Scale of Truth diagonal
+        const { prox: pST, projU: uST } = getProx(u, psi, 0, 0, 2, 2);
+        if (uST >= 0) gSum += pST * 1.0; else rSum += pST * 1.0;
+
+        // Edges
+        const { prox: pGE } = getProx(u, psi, 2, -2, 2, 2);   gSum += pGE * 1.0;
+        const { prox: pBE } = getProx(u, psi, -2, -2, -2, 2); rSum += pBE * 1.0;
+
+        const { prox: pTE, projU: uTE } = getProx(u, psi, -2, 2, 2, 2);
+        if (uTE >= 0) gSum += pTE * 1.0; else rSum += pTE * 1.0;
+
+        const { prox: pBotE, projU: uBotE } = getProx(u, psi, -2, -2, 2, -2);
+        if (uBotE >= 0) gSum += pBotE * 1.0; else rSum += pBotE * 1.0;
+
+        // Subdivision Arms
+        const { prox: pPP, projU: uPP } = getProx(u, psi, -2, 0, 2, 2);
+        if (uPP >= 0) gSum += pPP * 1.0; else rSum += pPP * 1.0;
+
+        const { prox: pCP, projU: uCP } = getProx(u, psi, -2, 0, 2, -2);
+        if (uCP >= 0) gSum += pCP * 0.5; else rSum += pCP * 0.5;
+
+        const { prox: pRA, projU: uRA } = getProx(u, psi, 2, 0, -2, 2);
+        if (uRA >= 0) gSum += pRA * 0.5; else rSum += pRA * 0.5;
+
+        const { prox: pReg, projU: uReg } = getProx(u, psi, 2, 0, -2, -2);
+        if (uReg >= 0) gSum += pReg * 1.0; else rSum += pReg * 1.0;
+
+        const { prox: pCS, projU: uCS } = getProx(u, psi, 0, 2, 2, -2);
+        if (uCS >= 0) gSum += pCS * 0.5; else rSum += pCS * 0.5;
+
+        const { prox: pRS, projU: uRS } = getProx(u, psi, 0, 2, -2, -2);
+        if (uRS >= 0) gSum += pRS * 1.0; else rSum += pRS * 1.0;
+
+        const { prox: pPA, projU: uPA } = getProx(u, psi, 0, -2, 2, 2);
+        if (uPA >= 0) gSum += pPA * 1.0; else rSum += pPA * 1.0;
+
+        const { prox: pReA, projU: uReA } = getProx(u, psi, 0, -2, -2, 2);
+        if (uReA >= 0) gSum += pReA * 0.5; else rSum += pReA * 0.5;
+
+        let g = Math.min(1.0, gSum / 4.0);
+        let r = Math.min(1.0, rSum / 4.0);
+        g = Math.pow(g, 1.3);
+        r = Math.pow(r, 1.3);
+
+        const diff = g - r;
+        const idx = (y * gridSize + x) * 4;
+        if (diff > 0) {
+          data[idx] = 59; data[idx+1] = 222; data[idx+2] = 132;
+          data[idx+3] = Math.min(255, diff * 125);
+        } else if (diff < 0) {
+          data[idx] = 240; data[idx+1] = 80; data[idx+2] = 96;
+          data[idx+3] = Math.min(255, Math.abs(diff) * 125);
+        } else {
+          data[idx+3] = 0;
+        }
+      }
+    }
+    octx.putImageData(imgData, 0, 0);
+    cachedShaderKey = currentCacheKey;
+  }
+
+  ctx.save();
+  ctx.drawImage(cachedShaderCanvas, marginX, marginY);
+  ctx.restore();
 
   // 2. Calibration targets
 
@@ -981,7 +1069,7 @@ function draw() {
     ctx.lineTo(pBLx, pBLy);
     ctx.lineTo(pMidRx, pMidRy);
     ctx.closePath();
-    if (document.getElementById('shadePotential').checked) {
+    if (document.getElementById('shadePotential') && document.getElementById('shadePotential').checked) {
       ctx.fillStyle = 'rgba(59, 222, 132, 0.05)';
       ctx.fill();
     }
@@ -995,7 +1083,7 @@ function draw() {
     ctx.lineTo(pBRx, pBRy);
     ctx.lineTo(pMidLx, pMidLy);
     ctx.closePath();
-    if (document.getElementById('shadeAntiPotential').checked) {
+    if (document.getElementById('shadeAntiPotential') && document.getElementById('shadeAntiPotential').checked) {
       ctx.fillStyle = 'rgba(240, 80, 96, 0.05)';
       ctx.fill();
     }
