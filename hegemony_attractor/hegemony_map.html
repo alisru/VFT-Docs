@@ -317,6 +317,7 @@
 
 <div class="main">
   <div class="canvas-wrap" id="canvasWrap">
+    <canvas id="shaderLayer" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;"></canvas>
     <canvas id="map"></canvas>
   </div>
 
@@ -407,6 +408,16 @@
           <label style="font-size: 10px; color: #e04080; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadeSuppressive"> Suppressive Area (Shaded)</label>
         </div>
         <label style="color:#3bde84"><input type="checkbox" id="modeRelative"> GG Relative Mode</label>
+      </div>
+    </div>
+
+    <!-- Zoom Control -->
+    <div class="side-section">
+      <div class="side-title">Zoom</div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:11px;">
+        <span style="color:var(--muted)">Zoom:</span>
+        <input type="range" id="zoomLevel" min="30" max="200" value="80" style="flex:1; accent-color:#3bde84;" />
+        <span id="zoomLabel" style="color:#3bde84; min-width:32px; text-align:right;">80%</span>
       </div>
     </div>
 
@@ -568,19 +579,20 @@ function classifyZone(v, psi) {
 
 function calculatePointParams(v, psi) {
   const zone = classifyZone(v, psi);
+  const _Rp = Math.SQRT2 * 2;
   const armsProj = [
-    { name: 'Productive ← Potential', x1: -2, y1: 0, x2: 2, y2: 2, isEdge: false },
-    { name: 'Constructive ← Potential', x1: -2, y1: 0, x2: 2, y2: -2, isEdge: false },
-    { name: 'Anti-Potential → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, isEdge: false },
-    { name: 'Anti-Potential → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, isEdge: false },
-    { name: 'Constructive ← Suppressive', x1: 0, y1: 2, x2: 2, y2: -2, isEdge: false },
-    { name: 'Suppressive → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, isEdge: false },
-    { name: 'Productive ← Active', x1: 0, y1: -2, x2: 2, y2: 2, isEdge: false },
-    { name: 'Active → Reductive', x1: 0, y1: -2, x2: -2, y2: 2, isEdge: false },
-    { name: 'Good Edge (LHS)', x1: 2, y1: -2, x2: 2, y2: 2, isEdge: true },
-    { name: 'Bad Edge (RHS)', x1: -2, y1: -2, x2: -2, y2: 2, isEdge: true },
-    { name: 'Top Edge (Active)', x1: -2, y1: 2, x2: 2, y2: 2, isEdge: true },
-    { name: 'Bottom Edge (Suppr.)', x1: -2, y1: -2, x2: 2, y2: -2, isEdge: true }
+    { name: 'Productive ← Potential',     x1: -_Rp, y1: 0,    x2: 2,    y2: 2,    isEdge: false },
+    { name: 'Constructive ← Potential',   x1: -_Rp, y1: 0,    x2: 2,    y2: -2,   isEdge: false },
+    { name: 'Anti-Potential → Reductive',  x1:  _Rp, y1: 0,    x2: -2,   y2: 2,    isEdge: false },
+    { name: 'Anti-Potential → Regressive', x1:  _Rp, y1: 0,    x2: -2,   y2: -2,   isEdge: false },
+    { name: 'Constructive ← Suppressive',  x1: 0,    y1:  _Rp, x2: 2,    y2: -2,   isEdge: false },
+    { name: 'Suppressive → Regressive',   x1: 0,    y1:  _Rp, x2: -2,   y2: -2,   isEdge: false },
+    { name: 'Productive ← Active',        x1: 0,    y1: -_Rp, x2: 2,    y2: 2,    isEdge: false },
+    { name: 'Active → Reductive',         x1: 0,    y1: -_Rp, x2: -2,   y2: 2,    isEdge: false },
+    { name: 'Good Edge (LHS)',              x1: 2,    y1: -2,   x2: 2,    y2: 2,    isEdge: true },
+    { name: 'Bad Edge (RHS)',               x1: -2,   y1: -2,   x2: -2,   y2: 2,    isEdge: true },
+    { name: 'Top Edge (Active)',            x1: -2,   y1: 2,    x2: 2,    y2: 2,    isEdge: true },
+    { name: 'Bottom Edge (Suppr.)',         x1: -2,   y1: -2,   x2: 2,    y2: -2,   isEdge: true }
   ];
 
   const projections = {};
@@ -635,14 +647,19 @@ let cachedShaderKey = "";
 // ─────────────────────────────────────────────
 const canvas = document.getElementById('map');
 const ctx = canvas.getContext('2d');
+const shaderLayer = document.getElementById('shaderLayer');
+const shaderCtx = shaderLayer.getContext('2d');
 const wrap = document.getElementById('canvasWrap');
 
 function resize() {
   const rect = wrap.getBoundingClientRect();
-  canvas.width  = rect.width * devicePixelRatio;
-  canvas.height = rect.height * devicePixelRatio;
-  canvas.style.width  = rect.width + 'px';
-  canvas.style.height = rect.height + 'px';
+  const w = rect.width * devicePixelRatio;
+  const h = rect.height * devicePixelRatio;
+  canvas.width  = w; canvas.height  = h;
+  shaderLayer.width = w; shaderLayer.height = h;
+  canvas.style.width  = rect.width + 'px';  canvas.style.height  = rect.height + 'px';
+  shaderLayer.style.width = rect.width + 'px'; shaderLayer.style.height = rect.height + 'px';
+  cachedShaderCanvas = null; // size changed, bust cache
   draw();
 }
 
@@ -735,12 +752,18 @@ function drawTextAlongLine(ctx, text, x1, y1, x2, y2, offsetSign, color, dpr) {
 function draw() {
   const W = canvas.width, H = canvas.height;
   const dpr = devicePixelRatio;
+  const zoomFactor = parseFloat(document.getElementById('zoomLevel')?.value || '80') / 100;
   const gridSize = Math.min(W, H) - 150 * dpr;
   const marginX = (W - gridSize) / 2;
   const marginY = (H - gridSize) / 2;
 
   ctx.clearRect(0, 0, W, H);
-  ctx.clearRect(0, 0, W, H);
+
+  // Apply global zoom centered on canvas midpoint
+  ctx.save();
+  ctx.translate(W / 2, H / 2);
+  ctx.scale(zoomFactor, zoomFactor);
+  ctx.translate(-W / 2, -H / 2);
 
   const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
 
@@ -814,21 +837,22 @@ function draw() {
   ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
   ctx.lineWidth = 1 * dpr;
   ctx.stroke();
-  
-  // Clip all inner graph elements inside the rounded square card boundary
-  ctx.clip();
 
-  // 1. VFT Mathematical Proximity Shading Field
-  const shadePot = document.getElementById('shadePotential') && document.getElementById('shadePotential').checked;
-  const shadeAnti = document.getElementById('shadeAntiPotential') && document.getElementById('shadeAntiPotential').checked;
-  const currentCacheKey = `${gridSize}_${shadePot ? 1 : 0}_${shadeAnti ? 1 : 0}`;
+  // ── DRAW VFT SHADER (before clip — covers full circle area) ──
+  const R = Math.SQRT2 * 2; // 2√2 — circle radius in coord units, apexes reach here
+  const rxPx = gridSize * Math.SQRT2 / 2; // circle radius in pixels
+  const shadePot = document.getElementById('shadePotential')?.checked;
+  const shadeAnti = document.getElementById('shadeAntiPotential')?.checked;
+  const currentCacheKey = `${Math.round(gridSize)}_${shadePot?1:0}_${shadeAnti?1:0}`;
 
   if (!cachedShaderCanvas || cachedShaderKey !== currentCacheKey) {
+    const shW = Math.ceil(rxPx * 2) + 4;
+    const shH = shW;
     cachedShaderCanvas = document.createElement('canvas');
-    cachedShaderCanvas.width = gridSize;
-    cachedShaderCanvas.height = gridSize;
+    cachedShaderCanvas.width = shW;
+    cachedShaderCanvas.height = shH;
     const octx = cachedShaderCanvas.getContext('2d');
-    const imgData = octx.createImageData(gridSize, gridSize);
+    const imgData = octx.createImageData(shW, shH);
     const data = imgData.data;
 
     function getProx(u, psi, x1, y1, x2, y2) {
@@ -843,13 +867,19 @@ function draw() {
       return { prox: Math.max(0, 1 - dist / len), projU };
     }
 
-    for (let y = 0; y < gridSize; y++) {
-      for (let x = 0; x < gridSize; x++) {
-        const u = 2 - (x / gridSize) * 4;
-        const psi = 2 - (y / gridSize) * 4;
+    const shaderOriginX = cx - rxPx - 2;
+    const shaderOriginY = cy - rxPx - 2;
 
-        let gSum = 0;
-        let rSum = 0;
+    for (let y = 0; y < shH; y++) {
+      for (let x = 0; x < shW; x++) {
+        // Map shader pixel to (u, psi) coord space via canvas position
+        const u   = 2 - ((shaderOriginX + x - marginX) / gridSize) * 4;
+        const psi = 2 - ((shaderOriginY + y - marginY) / gridSize) * 4;
+
+        // Skip pixels outside the circle (radius 2√2 in coord space)
+        if (u * u + psi * psi > 8.08) { data[(y * shW + x) * 4 + 3] = 0; continue; }
+
+        let gSum = 0, rSum = 0;
 
         // Central axes (pure)
         const { prox: pGood }  = getProx(u, psi, 0, 0, 2, 0);   gSum += pGood  * 1.0;
@@ -857,7 +887,7 @@ function draw() {
         const { prox: pTruth } = getProx(u, psi, 0, 0, 0, 2);   gSum += pTruth * 1.0;
         const { prox: pLies }  = getProx(u, psi, 0, 0, 0, -2);  rSum += pLies  * 1.0;
 
-        // Scale of Truth diagonal
+        // Scale of Truth diagonal (Green)
         const { prox: pST, projU: uST } = getProx(u, psi, 0, 0, 2, 2);
         if (uST >= 0) gSum += pST * 1.0; else rSum += pST * 1.0;
 
@@ -871,29 +901,29 @@ function draw() {
         const { prox: pBotE, projU: uBotE } = getProx(u, psi, -2, -2, 2, -2);
         if (uBotE >= 0) gSum += pBotE * 1.0; else rSum += pBotE * 1.0;
 
-        // Subdivision Arms
-        const { prox: pPP, projU: uPP } = getProx(u, psi, -2, 0, 2, 2);
+        // Subdivision Arms — apexes extended to circle (R = 2√2)
+        const { prox: pPP, projU: uPP } = getProx(u, psi, -R, 0, 2, 2);
         if (uPP >= 0) gSum += pPP * 1.0; else rSum += pPP * 1.0;
 
-        const { prox: pCP, projU: uCP } = getProx(u, psi, -2, 0, 2, -2);
+        const { prox: pCP, projU: uCP } = getProx(u, psi, -R, 0, 2, -2);
         if (uCP >= 0) gSum += pCP * 0.5; else rSum += pCP * 0.5;
 
-        const { prox: pRA, projU: uRA } = getProx(u, psi, 2, 0, -2, 2);
+        const { prox: pRA, projU: uRA } = getProx(u, psi, R, 0, -2, 2);
         if (uRA >= 0) gSum += pRA * 0.5; else rSum += pRA * 0.5;
 
-        const { prox: pReg, projU: uReg } = getProx(u, psi, 2, 0, -2, -2);
+        const { prox: pReg, projU: uReg } = getProx(u, psi, R, 0, -2, -2);
         if (uReg >= 0) gSum += pReg * 1.0; else rSum += pReg * 1.0;
 
-        const { prox: pCS, projU: uCS } = getProx(u, psi, 0, 2, 2, -2);
+        const { prox: pCS, projU: uCS } = getProx(u, psi, 0, R, 2, -2);
         if (uCS >= 0) gSum += pCS * 0.5; else rSum += pCS * 0.5;
 
-        const { prox: pRS, projU: uRS } = getProx(u, psi, 0, 2, -2, -2);
+        const { prox: pRS, projU: uRS } = getProx(u, psi, 0, R, -2, -2);
         if (uRS >= 0) gSum += pRS * 1.0; else rSum += pRS * 1.0;
 
-        const { prox: pPA, projU: uPA } = getProx(u, psi, 0, -2, 2, 2);
+        const { prox: pPA, projU: uPA } = getProx(u, psi, 0, -R, 2, 2);
         if (uPA >= 0) gSum += pPA * 1.0; else rSum += pPA * 1.0;
 
-        const { prox: pReA, projU: uReA } = getProx(u, psi, 0, -2, -2, 2);
+        const { prox: pReA, projU: uReA } = getProx(u, psi, 0, -R, -2, 2);
         if (uReA >= 0) gSum += pReA * 0.5; else rSum += pReA * 0.5;
 
         let g = Math.min(1.0, gSum / 4.0);
@@ -902,7 +932,7 @@ function draw() {
         r = Math.pow(r, 1.3);
 
         const diff = g - r;
-        const idx = (y * gridSize + x) * 4;
+        const idx = (y * shW + x) * 4;
         if (diff > 0) {
           data[idx] = 59; data[idx+1] = 222; data[idx+2] = 132;
           data[idx+3] = Math.min(255, diff * 125);
@@ -918,9 +948,16 @@ function draw() {
     cachedShaderKey = currentCacheKey;
   }
 
-  ctx.save();
-  ctx.drawImage(cachedShaderCanvas, marginX, marginY);
-  ctx.restore();
+  // Draw shader to dedicated background layer (with zoom transform applied)
+  shaderCtx.clearRect(0, 0, canvas.width, canvas.height);
+  shaderCtx.save();
+  shaderCtx.translate(canvas.width / 2, canvas.height / 2);
+  shaderCtx.scale(zoomFactor, zoomFactor);
+  shaderCtx.translate(-canvas.width / 2, -canvas.height / 2);
+  shaderCtx.drawImage(cachedShaderCanvas, cx - rxPx - 2, cy - rxPx - 2);
+  shaderCtx.restore();
+
+  // Inner graph elements draw without any clip — nothing restricted to card boundary
 
   // 2. Calibration targets
 
@@ -1060,14 +1097,20 @@ function draw() {
     const [pMidRx, pMidRy] = toPixel(-2, 0);
     const [pMidTx, pMidTy] = toPixel(0, 2);
     const [pMidBx, pMidBy] = toPixel(0, -2);
+    // Extended apexes on the systemic circle (R = 2√2 in coord space)
+    const _R = Math.SQRT2 * 2;
+    const [pApexLx, pApexLy] = toPixel(_R, 0);
+    const [pApexRx, pApexRy] = toPixel(-_R, 0);
+    const [pApexTx, pApexTy] = toPixel(0, _R);
+    const [pApexBx, pApexBy] = toPixel(0, -_R);
 
-    // 1. Potential Triangle (Solid Green)
+    // 1. Potential Triangle (apex pushed to circle)
     ctx.strokeStyle = 'rgba(59, 222, 132, 0.22)';
     ctx.setLineDash([]);
     ctx.beginPath();
     ctx.moveTo(pTLx, pTLy);
     ctx.lineTo(pBLx, pBLy);
-    ctx.lineTo(pMidRx, pMidRy);
+    ctx.lineTo(pApexRx, pApexRy);
     ctx.closePath();
     if (document.getElementById('shadePotential') && document.getElementById('shadePotential').checked) {
       ctx.fillStyle = 'rgba(59, 222, 132, 0.05)';
@@ -1075,13 +1118,13 @@ function draw() {
     }
     ctx.stroke();
 
-    // 2. Anti-Potential Triangle (Dashed Red)
+    // 2. Anti-Potential Triangle (apex pushed to circle)
     ctx.strokeStyle = 'rgba(240, 80, 96, 0.22)';
     ctx.setLineDash([4 * dpr, 4 * dpr]);
     ctx.beginPath();
     ctx.moveTo(pTRx, pTRy);
     ctx.lineTo(pBRx, pBRy);
-    ctx.lineTo(pMidLx, pMidLy);
+    ctx.lineTo(pApexLx, pApexLy);
     ctx.closePath();
     if (document.getElementById('shadeAntiPotential') && document.getElementById('shadeAntiPotential').checked) {
       ctx.fillStyle = 'rgba(240, 80, 96, 0.05)';
@@ -1089,13 +1132,13 @@ function draw() {
     }
     ctx.stroke();
 
-    // 3. Active Triangle (Solid Blue)
+    // 3. Active Triangle (apex pushed to circle)
     ctx.strokeStyle = 'rgba(48, 200, 224, 0.22)';
     ctx.setLineDash([]);
     ctx.beginPath();
     ctx.moveTo(pBLx, pBLy);
     ctx.lineTo(pBRx, pBRy);
-    ctx.lineTo(pMidTx, pMidTy);
+    ctx.lineTo(pApexTx, pApexTy);
     ctx.closePath();
     if (document.getElementById('shadeActive').checked) {
       ctx.fillStyle = 'rgba(48, 200, 224, 0.05)';
@@ -1103,13 +1146,13 @@ function draw() {
     }
     ctx.stroke();
 
-    // 4. Suppressive Triangle (Dashed Orange)
+    // 4. Suppressive Triangle (apex pushed to circle)
     ctx.strokeStyle = 'rgba(240, 160, 48, 0.22)';
     ctx.setLineDash([4 * dpr, 4 * dpr]);
     ctx.beginPath();
     ctx.moveTo(pTLx, pTLy);
     ctx.lineTo(pTRx, pTRy);
-    ctx.lineTo(pMidBx, pMidBy);
+    ctx.lineTo(pApexBx, pApexBy);
     ctx.closePath();
     if (document.getElementById('shadeSuppressive').checked) {
       ctx.fillStyle = 'rgba(240, 160, 48, 0.05)';
@@ -1125,16 +1168,17 @@ function draw() {
     ctx.save();
     ctx.lineWidth = 1 * dpr;
 
-    // Define 8 arms: x1,y1 is start, x2,y2 is end (V/Psi coords)
+    // Define 8 arms: apex at circle (R=2√2), base at corners
+    const _Ra = Math.SQRT2 * 2;
     const arms = [
-      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Productive', fullLabel: 'Productive ← Potential' },
-      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Constructive', fullLabel: 'Constructive ← Potential' },
-      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Potential', label: 'Reductive', fullLabel: 'Anti-Potential ➔ Reductive' },
-      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Potential', label: 'Regressive', fullLabel: 'Anti-Potential ➔ Regressive' },
-      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppressive', label: 'Constructive', fullLabel: 'Constructive ← Suppressive' },
-      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppressive', label: 'Regressive', fullLabel: 'Suppressive ➔ Regressive' },
-      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Productive', fullLabel: 'Productive ← Active' },
-      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Reductive', fullLabel: 'Active ➔ Reductive' }
+      { x1: -_Ra, y1: 0, x2: 2, y2: 2,   color: 'rgba(59, 222, 132, 0.35)',  dash: false, group: 'Potential',     label: 'Productive',   fullLabel: 'Productive ← Potential' },
+      { x1: -_Ra, y1: 0, x2: 2, y2: -2,  color: 'rgba(59, 222, 132, 0.35)',  dash: false, group: 'Potential',     label: 'Constructive', fullLabel: 'Constructive ← Potential' },
+      { x1:  _Ra, y1: 0, x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.35)',   dash: true,  group: 'Anti-Potential', label: 'Reductive',    fullLabel: 'Anti-Potential ➔ Reductive' },
+      { x1:  _Ra, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)',   dash: true,  group: 'Anti-Potential', label: 'Regressive',   fullLabel: 'Anti-Potential ➔ Regressive' },
+      { x1: 0, y1:  _Ra, x2: 2, y2: -2,  color: 'rgba(240, 160, 48, 0.35)',  dash: false, group: 'Suppressive',   label: 'Constructive', fullLabel: 'Constructive ← Suppressive' },
+      { x1: 0, y1:  _Ra, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)',  dash: false, group: 'Suppressive',   label: 'Regressive',   fullLabel: 'Suppressive ➔ Regressive' },
+      { x1: 0, y1: -_Ra, x2: 2, y2: 2,   color: 'rgba(48, 200, 224, 0.35)',  dash: true,  group: 'Active',        label: 'Productive',   fullLabel: 'Productive ← Active' },
+      { x1: 0, y1: -_Ra, x2: -2, y2: 2,  color: 'rgba(48, 200, 224, 0.35)',  dash: true,  group: 'Active',        label: 'Reductive',    fullLabel: 'Active ➔ Reductive' }
     ];
 
     // First pass: Draw main arm lines and tick marks
@@ -1645,19 +1689,20 @@ function draw() {
 
       // Draw projections and [dir, mag] readings directly on the 8 Subdivision Arms
       if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
+        const _Rd = Math.SQRT2 * 2;
         const armsProj = [
-          { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)', isEdge: false },  // Potential -> Productive
-          { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.8)', isEdge: false }, // Potential -> Constructive
-          { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.8)', isEdge: false },   // Anti-Potential -> Reductive
-          { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)', isEdge: false },  // Anti-Potential -> Regressive
-          { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)', isEdge: false },  // Suppressive -> Constructive
-          { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)', isEdge: false }, // Suppressive -> Regressive
-          { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)', isEdge: false },   // Active -> Productive
-          { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.8)', isEdge: false },  // Active -> Reductive
-          { x1: 2, y1: -2, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)', isEdge: true, name: 'Good' },   // Good Edge (LHS)
-          { x1: -2, y1: -2, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.8)', isEdge: true, name: 'Bad' },    // Bad Edge (RHS)
-          { x1: -2, y1: 2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)', isEdge: true, name: 'Top' },    // Top Edge
-          { x1: -2, y1: -2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)', isEdge: true, name: 'Bottom' }  // Bottom Edge
+          { x1: -_Rd, y1: 0,    x2: 2,  y2: 2,  color: 'rgba(59, 222, 132, 0.8)',  isEdge: false },
+          { x1: -_Rd, y1: 0,    x2: 2,  y2: -2, color: 'rgba(59, 222, 132, 0.8)',  isEdge: false },
+          { x1:  _Rd, y1: 0,    x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.8)',   isEdge: false },
+          { x1:  _Rd, y1: 0,    x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)',   isEdge: false },
+          { x1: 0,    y1:  _Rd, x2: 2,  y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false },
+          { x1: 0,    y1:  _Rd, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false },
+          { x1: 0,    y1: -_Rd, x2: 2,  y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false },
+          { x1: 0,    y1: -_Rd, x2: -2, y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false },
+          { x1: 2,    y1: -2,   x2: 2,  y2: 2,  color: 'rgba(59, 222, 132, 0.8)',  isEdge: true, name: 'Good' },
+          { x1: -2,   y1: -2,   x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.8)',   isEdge: true, name: 'Bad' },
+          { x1: -2,   y1: 2,    x2: 2,  y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: true, name: 'Top' },
+          { x1: -2,   y1: -2,   x2: 2,  y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: true, name: 'Bottom' }
         ];
 
         armsProj.forEach(arm => {
@@ -1761,6 +1806,8 @@ function draw() {
       drawTextWithBackground(ctx, pt.label, px, py + r + 6 * dpr, fsSmall, zone.color, true, 'center', 'top');
     }
   });
+
+  ctx.restore(); // end global zoom transform
 }
 
 // ─────────────────────────────────────────────
@@ -1797,19 +1844,20 @@ function updateReadout(v, psi, isPoint) {
   syncSliders(v, psi);
 
   // Calculate and display axis projections [dir, mag] or [left, dist, right] for edges
+  const _Ra = Math.SQRT2 * 2;
   const axes = [
-    { name: 'Productive ← Potential', x1: -2, y1: 0, x2: 2, y2: 2, color: '#3bde84', isEdge: false },
-    { name: 'Constructive ← Potential', x1: -2, y1: 0, x2: 2, y2: -2, color: '#3bde84', isEdge: false },
-    { name: 'Anti-Potential → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, color: '#f05060', isEdge: false },
-    { name: 'Anti-Potential → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, color: '#f05060', isEdge: false },
-    { name: 'Constructive ← Suppressive', x1: 0, y1: 2, x2: 2, y2: -2, color: '#e04080', isEdge: false },
-    { name: 'Suppressive → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, color: '#e04080', isEdge: false },
-    { name: 'Productive ← Active', x1: 0, y1: -2, x2: 2, y2: 2, color: '#30c8e0', isEdge: false },
-    { name: 'Active → Reductive', x1: 0, y1: -2, x2: -2, y2: 2, color: '#30c8e0', isEdge: false },
-    { name: 'Good Edge (LHS)', x1: 2, y1: -2, x2: 2, y2: 2, color: '#3bde84', isEdge: true },
-    { name: 'Bad Edge (RHS)', x1: -2, y1: -2, x2: -2, y2: 2, color: '#f05060', isEdge: true },
-    { name: 'Top Edge (Active)', x1: -2, y1: 2, x2: 2, y2: 2, color: '#30c8e0', isEdge: true },
-    { name: 'Bottom Edge (Suppr.)', x1: -2, y1: -2, x2: 2, y2: -2, color: '#e04080', isEdge: true }
+    { name: 'Productive ← Potential',     x1: -_Ra, y1: 0,    x2: 2,    y2: 2,    color: '#3bde84', isEdge: false },
+    { name: 'Constructive ← Potential',   x1: -_Ra, y1: 0,    x2: 2,    y2: -2,   color: '#3bde84', isEdge: false },
+    { name: 'Anti-Potential → Reductive',  x1:  _Ra, y1: 0,    x2: -2,   y2: 2,    color: '#f05060', isEdge: false },
+    { name: 'Anti-Potential → Regressive', x1:  _Ra, y1: 0,    x2: -2,   y2: -2,   color: '#f05060', isEdge: false },
+    { name: 'Constructive ← Suppressive',  x1: 0,    y1:  _Ra, x2: 2,    y2: -2,   color: '#e04080', isEdge: false },
+    { name: 'Suppressive → Regressive',   x1: 0,    y1:  _Ra, x2: -2,   y2: -2,   color: '#e04080', isEdge: false },
+    { name: 'Productive ← Active',        x1: 0,    y1: -_Ra, x2: 2,    y2: 2,    color: '#30c8e0', isEdge: false },
+    { name: 'Active → Reductive',         x1: 0,    y1: -_Ra, x2: -2,   y2: 2,    color: '#30c8e0', isEdge: false },
+    { name: 'Good Edge (LHS)',              x1: 2,    y1: -2,   x2: 2,    y2: 2,    color: '#3bde84', isEdge: true },
+    { name: 'Bad Edge (RHS)',               x1: -2,   y1: -2,   x2: -2,   y2: 2,    color: '#f05060', isEdge: true },
+    { name: 'Top Edge (Active)',            x1: -2,   y1: 2,    x2: 2,    y2: 2,    color: '#30c8e0', isEdge: true },
+    { name: 'Bottom Edge (Suppr.)',         x1: -2,   y1: -2,   x2: 2,    y2: -2,   color: '#e04080', isEdge: true }
   ];
 
   const container = document.getElementById('projsContainer');
@@ -2121,6 +2169,31 @@ document.getElementById('clearBtn').addEventListener('click', () => {
 
 window.addEventListener('resize', resize);
 resize();
+
+// Zoom slider listener
+const zoomSlider = document.getElementById('zoomLevel');
+const zoomLabel  = document.getElementById('zoomLabel');
+if (zoomSlider) {
+  zoomSlider.addEventListener('input', () => {
+    zoomLabel.textContent = zoomSlider.value + '%';
+    cachedShaderCanvas = null; // bust cache on zoom change
+    draw();
+  });
+}
+
+
+// Scroll wheel zoom
+canvas.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const delta = e.deltaY > 0 ? -4 : 4;
+  const sl = document.getElementById('zoomLevel');
+  const lb = document.getElementById('zoomLabel');
+  if (!sl) return;
+  sl.value = Math.max(30, Math.min(200, parseInt(sl.value) + delta));
+  lb.textContent = sl.value + '%';
+  cachedShaderCanvas = null;
+  draw();
+}, { passive: false });
 
 // Toggle Origin Mode listener
 document.getElementById('modeRelative').addEventListener('change', () => {
