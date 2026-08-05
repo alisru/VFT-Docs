@@ -396,7 +396,7 @@
         <label><input type="checkbox" id="showDiagonals" checked> Diagonal Axes</label>
         <label><input type="checkbox" id="showProjections" checked> Projection Guides</label>
         <label><input type="checkbox" id="show3x3Grid" checked> 3x3 Grid Matrix</label>
-        <label><input type="checkbox" id="showScopeTriangle" checked> Scope Triangle</label>
+        <label><input type="checkbox" id="showSubdivisionArms" checked> Subdivision Arms</label>
         <label><input type="checkbox" id="showMinkowski" checked> Minkowski Cones</label>
         <label><input type="checkbox" id="showStateTriangles" checked> State Triangles</label>
         <label style="color:#3bde84"><input type="checkbox" id="modeRelative"> GG Relative Mode</label>
@@ -830,29 +830,114 @@ function draw() {
     ctx.restore();
   }
 
-  // 6. Draw Potential Scope Triangle (Openness)
-  if (document.getElementById('showScopeTriangle') && document.getElementById('showScopeTriangle').checked) {
+  // 6. Draw State Triangles (Potential, Anti-Potential, Active, Suppressive)
+  if (document.getElementById('showStateTriangles') && document.getElementById('showStateTriangles').checked) {
     ctx.save();
-    
-    // Draw the triangle path
-    ctx.beginPath();
-    ctx.moveTo(marginX, marginY);
-    ctx.lineTo(marginX + gridSize, marginY + gridSize / 2);
-    ctx.lineTo(marginX, marginY + gridSize);
-    ctx.closePath();
-
-    // Fill with soft gradient fading from left (Everyone / Max Openness) to right (Only Me / Closed)
-    const scopeGrad = ctx.createLinearGradient(marginX, 0, marginX + gridSize, 0);
-    scopeGrad.addColorStop(0, 'rgba(59, 222, 132, 0.05)'); // Subtle green
-    scopeGrad.addColorStop(1, 'rgba(59, 222, 132, 0)');
-    ctx.fillStyle = scopeGrad;
-    ctx.fill();
-
-    // Subtle dashed border for the triangle
-    ctx.setLineDash([3 * dpr, 6 * dpr]);
-    ctx.strokeStyle = 'rgba(59, 222, 132, 0.15)';
     ctx.lineWidth = 1 * dpr;
+
+    // Get pixel locations for corners and centers of edges
+    const [pTLx, pTLy] = toPixel(2, 2);
+    const [pTRx, pTRy] = toPixel(-2, 2);
+    const [pBLx, pBLy] = toPixel(2, -2);
+    const [pBRx, pBRy] = toPixel(-2, -2);
+
+    const [pMidLx, pMidLy] = toPixel(2, 0);
+    const [pMidRx, pMidRy] = toPixel(-2, 0);
+    const [pMidTx, pMidTy] = toPixel(0, 2);
+    const [pMidBx, pMidBy] = toPixel(0, -2);
+
+    // 1. Potential Triangle (Solid Green)
+    ctx.strokeStyle = 'rgba(59, 222, 132, 0.22)';
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.moveTo(pTLx, pTLy);
+    ctx.lineTo(pBLx, pBLy);
+    ctx.lineTo(pMidRx, pMidRy);
+    ctx.closePath();
     ctx.stroke();
+
+    // 2. Anti-Potential Triangle (Dashed Red)
+    ctx.strokeStyle = 'rgba(240, 80, 96, 0.22)';
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+    ctx.beginPath();
+    ctx.moveTo(pTRx, pTRy);
+    ctx.lineTo(pBRx, pBRy);
+    ctx.lineTo(pMidLx, pMidLy);
+    ctx.closePath();
+    ctx.stroke();
+
+    // 3. Active Triangle (Solid Blue)
+    ctx.strokeStyle = 'rgba(48, 200, 224, 0.22)';
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.moveTo(pBLx, pBLy);
+    ctx.lineTo(pBRx, pBRy);
+    ctx.lineTo(pMidTx, pMidTy);
+    ctx.closePath();
+    ctx.stroke();
+
+    // 4. Suppressive Triangle (Dashed Orange)
+    ctx.strokeStyle = 'rgba(240, 160, 48, 0.22)';
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+    ctx.beginPath();
+    ctx.moveTo(pTLx, pTLy);
+    ctx.lineTo(pTRx, pTRy);
+    ctx.lineTo(pMidBx, pMidBy);
+    ctx.closePath();
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // 6b. Draw 8 Subdivision Arms
+  if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
+    ctx.save();
+    ctx.lineWidth = 1 * dpr;
+
+    // Define 8 arms: x1,y1 is start, x2,y2 is end (V/Psi coords)
+    const arms = [
+      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false },  // Potential -> Productive
+      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false }, // Potential -> Constructive
+      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true },   // Anti-Potential -> Reductive
+      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true },  // Anti-Potential -> Regressive
+      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false },  // Suppressive -> Constructive
+      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false }, // Suppressive -> Regressive
+      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true },   // Active -> Productive
+      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true }   // Active -> Reductive
+    ];
+
+    arms.forEach(arm => {
+      const [sx, sy] = toPixel(arm.x1, arm.y1);
+      const [ex, ey] = toPixel(arm.x2, arm.y2);
+
+      // Draw the main line
+      ctx.strokeStyle = arm.color;
+      if (arm.dash) {
+        ctx.setLineDash([3 * dpr, 3 * dpr]);
+      } else {
+        ctx.setLineDash([]);
+      }
+      ctx.beginPath();
+      ctx.moveTo(sx, sy);
+      ctx.lineTo(ex, ey);
+      ctx.stroke();
+
+      // Draw graduation ticks (every 20%)
+      const dx = ex - sx, dy = ey - sy;
+      const len = Math.hypot(dx, dy);
+      const nx = -dy / len, ny = dx / len;
+
+      ctx.setLineDash([]);
+      for (let pct = 0; pct <= 100; pct += 20) {
+        const t = pct / 100;
+        const tx = sx + dx * t;
+        const ty = sy + dy * t;
+        ctx.beginPath();
+        ctx.moveTo(tx - nx * 3 * dpr, ty - ny * 3 * dpr);
+        ctx.lineTo(tx + nx * 3 * dpr, ty + ny * 3 * dpr);
+        ctx.stroke();
+      }
+    });
 
     ctx.restore();
   }
@@ -1238,14 +1323,18 @@ function updateReadout(v, psi, isPoint) {
 
   // Calculate and display axis projections [dir, mag]
   const axes = [
-    { name: 'Productive (Air)', x1: 0, y1: 0, x2: 2, y2: 2, color: '#3bde84' },
-    { name: 'Constructive (Water)', x1: 0, y1: 0, x2: 2, y2: -2, color: '#30c8e0' },
-    { name: 'Reductive (Fire)', x1: 0, y1: 0, x2: -2, y2: 2, color: '#f05060' },
-    { name: 'Regressive (Earth)', x1: 0, y1: 0, x2: -2, y2: -2, color: '#e04080' },
-    { name: 'Morality (Everyone)', x1: 0, y1: 0, x2: 2, y2: 0, color: '#3bde84' },
-    { name: 'Morality (No-One Else)', x1: 0, y1: 0, x2: -2, y2: 0, color: '#f05060' },
-    { name: 'Will (Active)', x1: 0, y1: 0, x2: 0, y2: 2, color: '#30c8e0' },
-    { name: 'Will (Suppressive)', x1: 0, y1: 0, x2: 0, y2: -2, color: '#e04080' }
+    { name: 'Potential → Productive', x1: -2, y1: 0, x2: 2, y2: 2, color: '#3bde84' },
+    { name: 'Potential → Constructive', x1: -2, y1: 0, x2: 2, y2: -2, color: '#3bde84' },
+    { name: 'Anti-Pot. → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, color: '#f05060' },
+    { name: 'Anti-Pot. → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, color: '#f05060' },
+    { name: 'Suppr. → Constructive', x1: 0, y1: 2, x2: 2, y2: -2, color: '#e04080' },
+    { name: 'Suppr. → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, color: '#e04080' },
+    { name: 'Active → Productive', x1: 0, y1: -2, x2: 2, y2: 2, color: '#30c8e0' },
+    { name: 'Active → Reductive', x1: 0, y1: -2, x2: -2, y2: 2, color: '#30c8e0' },
+    { name: 'Good Edge (LHS)', x1: 2, y1: -2, x2: 2, y2: 2, color: '#3bde84' },
+    { name: 'Bad Edge (RHS)', x1: -2, y1: 2, x2: -2, y2: -2, color: '#f05060' },
+    { name: 'Top Edge (Active)', x1: -2, y1: 2, x2: 2, y2: 2, color: '#30c8e0' },
+    { name: 'Bottom Edge (Suppr.)', x1: -2, y1: -2, x2: 2, y2: -2, color: '#e04080' }
   ];
 
   const container = document.getElementById('projsContainer');
@@ -1381,8 +1470,9 @@ document.getElementById('showAxes').addEventListener('change', draw);
 document.getElementById('showDiagonals').addEventListener('change', draw);
 document.getElementById('showProjections').addEventListener('change', draw);
 document.getElementById('show3x3Grid').addEventListener('change', draw);
-document.getElementById('showScopeTriangle').addEventListener('change', draw);
+document.getElementById('showSubdivisionArms').addEventListener('change', draw);
 document.getElementById('showMinkowski').addEventListener('change', draw);
+document.getElementById('showStateTriangles').addEventListener('change', draw);
 
 document.getElementById('contextSelect').addEventListener('change', () => {
   const context = document.getElementById('contextSelect').value;
