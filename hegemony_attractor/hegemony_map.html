@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Psochic Hegemony Graph — Full Canonical Alignment</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+    :root {
+      --bg:       #0a0b0f;
+      --panel:    #12141c;
+      --border:   #1e2230;
+      --accent:   #5b6cf8;
+      --text:     #c8cde8;
+      --muted:    #4a5070;
+      --green:    #3bde84;
+      --red:      #f05060;
+      --amber:    #f0a030;
+      --cyan:     #30c8e0;
+      --rose:     #e04080;
+      --yellow:   #e8d050;
+      --purple:   #a070f0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--panel);
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    header .subtitle {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .spacer { flex: 1; }
+
+    .clear-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      padding: 5px 14px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .clear-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      overflow: hidden;
+    }
+
+    /* ── CANVAS AREA ── */
+    .canvas-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #07080c;
+      width: 100%;
+      height: 100%;
+    }
+
+    canvas {
+      cursor: crosshair;
+      display: block;
+    }
+
+    /* ── SIDE PANEL ── */
+    .side {
+      background: var(--panel);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .side-section {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .side-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    /* coordinate readout */
+    .coord-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .coord-display .label { color: var(--muted); font-size: 11px; }
+    .coord-display .val   { color: #fff; font-weight: 500; }
+    .coord-display .zone  { color: var(--yellow); font-size: 12px; margin-top: 4px; font-weight: 600; }
+    .coord-display .verdict { color: var(--muted); font-size: 10px; margin-top: 2px; line-height: 1.5; }
+
+    /* axis legend */
+    .axis-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .axis-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 11px;
+    }
+    .axis-sym {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      width: 20px;
+    }
+    .axis-desc { color: var(--muted); font-size: 10px; }
+
+    /* zone table */
+    .zone-table {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .zone-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+    .zone-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .zone-name  { font-weight: 600; font-size: 10px; min-width: 90px; }
+    .zone-coord { font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 9px; }
+
+    /* points list */
+    .points-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+    .point-entry {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 5px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .point-entry:hover { border-color: var(--accent); }
+    .point-entry.selected { border-color: var(--accent); background: rgba(91,108,248,0.1); }
+    .point-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .point-coords { color: var(--text); flex: 1; }
+    .point-zone { color: var(--muted); font-size: 9px; }
+    .point-del {
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 12px;
+      padding: 0 2px;
+      border-radius: 3px;
+    }
+    .point-del:hover { color: var(--red); }
+
+    .empty-hint {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      padding: 12px 0;
+      font-style: italic;
+    }
+
+    /* label input */
+    .label-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .label-input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      padding: 5px 8px;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .label-input:focus { border-color: var(--accent); }
+    .label-input::placeholder { color: var(--muted); }
+
+    /* Axis sliders styling */
+    .axis-sliders {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .slider-group label {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .slider-group input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--border);
+      outline: none;
+    }
+    .slider-group input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .slider-group input[type="range"]::-webkit-slider-thumb:hover {
+      background: #fff;
+    }
+    .slider-group.read-only {
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+    }
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    .layer-toggles {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .layer-toggles label {
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>The Psochic Hegemony Map</h1>
+    <div class="subtitle">Canonical Alignment (X: +2υ Left → -2υ Right | Y: +2ψ Top → -2ψ Bottom)</div>
+  </div>
+  <div class="spacer"></div>
+  <button class="clear-btn" id="clearBtn">Clear All</button>
+</header>
+
+<div class="main">
+  <div class="canvas-wrap" id="canvasWrap">
+    <canvas id="map"></canvas>
+  </div>
+
+  <div class="side">
+
+    <!-- Live coordinate readout -->
+    <div class="side-section">
+      <div class="side-title">Cursor / Last Point</div>
+      <div class="coord-display" id="coordDisplay">
+        <div><span class="label">υ (Morality) </span><span class="val" id="dispV">—</span></div>
+        <div><span class="label">ψ (Will)      </span><span class="val" id="dispPsi">—</span></div>
+        <div id="dispRelContainer" style="display:none; margin-top:5px; font-size:11px; color:#3bde84; font-family:'JetBrains Mono', monospace;">
+          <span class="label">Dist to Truth+ (1,1): </span><span class="val" id="dispRelDist">—</span>
+        </div>
+        <div id="dispContextRow" style="margin-top:5px; font-size:11px; color:#30c8e0; font-family:'JetBrains Mono', monospace;">
+          <span class="label">Context: </span><span class="val" id="dispContext">Natural State</span>
+        </div>
+        <div class="zone" id="dispZone">—</div>
+        <div class="verdict" id="dispVerdict">—</div>
+        <div class="axis-projections" id="axisProjections" style="margin-top: 10px; border-top: 1px solid #2a2d3d; padding-top: 8px;">
+          <div style="font-size: 10px; font-weight: bold; color: var(--muted); margin-bottom: 5px;">Axis Projections [dir, mag]</div>
+          <div id="projsContainer" style="display: flex; flex-direction: column; gap: 3.5px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #abb2bf;">
+            <!-- Dynamic projections -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Label input -->
+    <div class="side-section">
+      <div class="side-title">Label & Context</div>
+      <div class="label-row" style="display:flex; flex-direction:column; gap:10px;">
+        <input class="label-input" id="labelInput" placeholder="Actor / event name..." maxlength="40" />
+        <select class="label-input" id="contextSelect" style="background:#12141c; color:#fff; border:1px solid #2a2d3d; padding:8px 12px; border-radius:6px; cursor:pointer; font-size:11px; outline:none;">
+          <option value="Natural State" selected>Natural State (Baseline)</option>
+          <option value="Good Truth">Good Truth (Constructive Fact)</option>
+          <option value="Bad Truth">Bad Truth (Harmful Fact)</option>
+          <option value="Good Lie">Good Lie (Noble Lie / Comfort)</option>
+          <option value="Bad Lie">Bad Lie (Harmful Falsehood)</option>
+          <option value="Good Preference">Good Preference (Subjective Taste)</option>
+          <option value="Bad Preference">Bad Preference (Harmful Taste)</option>
+        </select>
+      </div>
+      <div class="axis-desc" style="font-size:10px;color:var(--muted)">Click anywhere on the map to plot a point</div>
+    </div>
+
+    <!-- Axis Projection Player -->
+    <div class="side-section">
+      <div class="side-title">Axis Projection Player</div>
+      <div class="axis-sliders">
+        <div class="slider-group">
+          <label>υ Morality (Benefit): <span id="valSliderV">0.00</span></label>
+          <input type="range" id="sliderV" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group">
+          <label>ψ Will (Action Energy): <span id="valSliderPsi">0.00</span></label>
+          <input type="range" id="sliderPsi" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group">
+          <label>Scale of Truth ( \ ): <span id="valSliderT">0.00</span></label>
+          <input type="range" id="sliderT" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group">
+          <label>Scale of Lies ( / ): <span id="valSliderL">0.00</span></label>
+          <input type="range" id="sliderL" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group read-only">
+          <label>Scale of Benefit × Will: <span id="valProduct" class="badge">0.00</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Layer Controls -->
+    <div class="side-section">
+      <div class="side-title">Visual Layers</div>
+      <div class="layer-toggles">
+        <label><input type="checkbox" id="showAxes" checked> Orthogonal Grid</label>
+        <label><input type="checkbox" id="showDiagonals" checked> Diagonal Axes</label>
+        <label><input type="checkbox" id="showProjections" checked> Projection Guides</label>
+        <label><input type="checkbox" id="show3x3Grid" checked> 3x3 Grid Matrix</label>
+        <label><input type="checkbox" id="showScopeTriangle" checked> Scope Triangle</label>
+        <label><input type="checkbox" id="showMinkowski" checked> Minkowski Cones</label>
+        <label><input type="checkbox" id="showStateTriangles" checked> State Triangles</label>
+        <label style="color:#3bde84"><input type="checkbox" id="modeRelative"> GG Relative Mode</label>
+      </div>
+    </div>
+
+    <!-- Axes legend -->
+    <div class="side-section">
+      <div class="side-title">Axes & Diagonal Scales</div>
+      <div class="axis-legend">
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--green)">υ</span>
+          <div>
+            <div>x-Morality (Horizontal)</div>
+            <div class="axis-desc">+2υ Left (Everyone) ← → −2υ Right (No-One Else)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--cyan)">ψ</span>
+          <div>
+            <div>y-Will (Vertical)</div>
+            <div class="axis-desc">+2ψ Top (Do / Active) ↑ ↓ −2ψ Bottom (Do Not / Passive)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--green)">\</span>
+          <div>
+            <div>Scale of Good and Evil (Truth & Progress)</div>
+            <div class="axis-desc">Top-Left (+2υ, +2ψ) → Bottom-Right (−2υ, −2ψ)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--red)">/</span>
+          <div>
+            <div>Scale of Lies & Regression (Scale of Nothing)</div>
+            <div class="axis-desc">Bottom-Left (+2υ, −2ψ) → Top-Right (−2υ, +2ψ)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--green)">▲</span>
+          <div>
+            <div>Cone of Possibility / Potential Scope</div>
+            <div class="axis-desc" style="color: #abb2bf; font-style: italic;">
+              Anything within the cone is a generator of possibility where potential over time is good; thus, RHS anchors (Lesser Good & Greater Evil) are shadows of good.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zones -->
+    <div class="side-section">
+      <div class="side-title">The 4 Quadrants</div>
+      <div class="zone-table">
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--green)"></div>
+          <span class="zone-name" style="color:var(--green)">Productive (Air)</span>
+          <span class="zone-coord">Top-Left (+1υ, +1ψ)</span>
+        </div>
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--red)"></div>
+          <span class="zone-name" style="color:var(--red)">Reductive (Fire)</span>
+          <span class="zone-coord">Top-Right (−1υ, +1ψ)</span>
+        </div>
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--cyan)"></div>
+          <span class="zone-name" style="color:var(--cyan)">Constructive (Water)</span>
+          <span class="zone-coord">Bottom-Left (+1υ, −1ψ)</span>
+        </div>
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--rose)"></div>
+          <span class="zone-name" style="color:var(--rose)">Regressive (Earth)</span>
+          <span class="zone-coord">Bottom-Right (−1υ, −1ψ)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plotted points list -->
+    <div class="side-section" style="flex:1">
+      <div class="side-title">Plotted Points</div>
+      <div class="points-list" id="pointsList">
+        <div class="empty-hint">No points yet</div>
+      </div>
+    </div>
+
+    <!-- Theory & Overview Explainer -->
+    <div class="side-section">
+      <div class="side-title">Discerning Hegemonic Consciousness</div>
+      <div class="axis-desc" style="font-size: 11px; line-height: 1.5; color: #abb2bf; text-align: justify; padding: 4px 0;">
+        This tool functions as an instrument for discerning consciousness, emotions, and judging information—acting as an unobservable information layer that exposes and removes hypocrisy.
+        <br><br>
+        For initial proof, look at the <em>Greater Good</em> and contrast it with the <em>Greater Evil</em>. One will somatically sense a tension or wrongness when attuned to core survival needs. Rescuers and support workers can feel these hegemonic vectors instantly with a full spectrum of emotion, experiencing how the <em>Lesser Evil</em> somatically feels less wrong than the <em>Greater Evil</em>, and the <em>Lesser Good</em> feels less right than the <em>Greater Good</em>.
+        <br><br>
+        While most take the sense of right and wrong for granted, it functions as a dynamic sensory array. Humans build 7 to 343+ dynamic senses by combining references like location, effect, and human definitions (e.g., the sense of a good house is built from location and structural effect).
+        <br><br>
+        This process of identifying the 'wrong' out of the 'right' creates a thermodynamic engine, lifecycle, or evolution of ideas. Ideas exist as a continuous process of identifying evil in good, then finding the good within that evil—identifying problems to build solutions. Here, the identified problem at the (−2,2) point becomes 100% visible, which makes even the smallest (2,2) solution or idea 100% in relative comparison.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────
+//  ZONE CLASSIFICATION (CANONICAL)
+// ─────────────────────────────────────────────
+const ZONES = [
+  {
+    name: 'Productive Quadrant (Air / Greater Good)',
+    coord: '(+1υ, +1ψ)',
+    color: '#3bde84',
+    verdict: 'The Good Truth — Active Creation for Everyone. Agape & Xenia.',
+    test: (v,p) => v > 0 && p > 0,
+  },
+  {
+    name: 'Reductive Quadrant (Fire / Lesser Evil)',
+    coord: '(−1υ, +1ψ)',
+    color: '#f05060',
+    verdict: 'The Bad Lie — Active Extraction / Greed Zone. Egotism ideas benefiting no-one else.',
+    test: (v,p) => v <= 0 && p > 0,
+  },
+  {
+    name: 'Constructive Quadrant (Water / Lesser Good)',
+    coord: '(+1υ, −1ψ)',
+    color: '#30c8e0',
+    verdict: 'The Good Lie — Passive Acceptance / Happyness Zone. Beneficial intent, passive energy.',
+    test: (v,p) => v > 0 && p <= 0,
+  },
+  {
+    name: 'Regressive Quadrant (Earth / Greater Evil)',
+    coord: '(−1υ, −1ψ)',
+    color: '#e04080',
+    verdict: 'The Bad Truth — Destructive / Sadness & Regression Zone. Stagnant or active collapse.',
+    test: (v,p) => v <= 0 && p <= 0,
+  },
+];
+
+function classifyZone(v, psi) {
+  if (v > 0 && psi > 0) return ZONES[0];  // Top-Left (Productive / Air)
+  if (v <= 0 && psi > 0) return ZONES[1]; // Top-Right (Reductive / Fire)
+  if (v > 0 && psi <= 0) return ZONES[2]; // Bottom-Left (Constructive / Water)
+  return ZONES[3];                         // Bottom-Right (Regressive / Earth)
+}
+
+// ─────────────────────────────────────────────
+//  STATE
+// ─────────────────────────────────────────────
+let points = [
+  { v: 1.0, psi: 1.0, label: "Sample Idea (Greater Good)", context: "Natural State" }
+];
+let selectedIdx = 0;
+let hoverCoord = null;
+
+// ─────────────────────────────────────────────
+//  CANVAS SETUP (FORCE PERFECT SQUARE)
+// ─────────────────────────────────────────────
+const canvas = document.getElementById('map');
+const ctx = canvas.getContext('2d');
+const wrap = document.getElementById('canvasWrap');
+
+function resize() {
+  const rect = wrap.getBoundingClientRect();
+  canvas.width  = rect.width * devicePixelRatio;
+  canvas.height = rect.height * devicePixelRatio;
+  canvas.style.width  = rect.width + 'px';
+  canvas.style.height = rect.height + 'px';
+  draw();
+}
+
+// Map canvas pixel to υ/ψ space
+function toCoord(px, py) {
+  const W = canvas.width, H = canvas.height;
+  const dpr = devicePixelRatio;
+  const gridSize = Math.min(W, H) - 150 * dpr;
+  const marginX = (W - gridSize) / 2;
+  const marginY = (H - gridSize) / 2;
+  
+  const v   = 2 - ((px - marginX) / gridSize) * 4;
+  const psi = 2 - ((py - marginY) / gridSize) * 4;
+
+  return [
+    Math.max(-2, Math.min(2, v)),
+    Math.max(-2, Math.min(2, psi))
+  ];
+}
+
+// Map υ/ψ to canvas pixel
+function toPixel(v, psi) {
+  const W = canvas.width, H = canvas.height;
+  const dpr = devicePixelRatio;
+  const gridSize = Math.min(W, H) - 150 * dpr;
+  const marginX = (W - gridSize) / 2;
+  const marginY = (H - gridSize) / 2;
+
+  const px = marginX + ((2 - v) / 4) * gridSize;
+  const py = marginY + ((2 - psi) / 4) * gridSize;
+
+  return [px, py];
+}
+
+// Helper to draw text with a clean background box to prevent overlap
+function drawTextWithBackground(ctx, text, x, y, fontSize, color, isBold, align, baseline) {
+  ctx.save();
+  ctx.font = `${isBold ? '600' : '400'} ${fontSize}px 'Inter', sans-serif`;
+  ctx.textAlign = align || 'center';
+  ctx.textBaseline = baseline || 'middle';
+  
+  const metrics = ctx.measureText(text);
+  const padX = 4 * devicePixelRatio;
+  const padY = 2.5 * devicePixelRatio;
+  const w = metrics.width;
+  const h = fontSize;
+  
+  let bx = x;
+  if (ctx.textAlign === 'center') bx = x - w / 2;
+  else if (ctx.textAlign === 'right') bx = x - w;
+  
+  let by = y;
+  if (ctx.textBaseline === 'middle') by = y - h / 2;
+  else if (ctx.textBaseline === 'bottom') by = y - h;
+  else if (ctx.textBaseline === 'top') by = y;
+
+  ctx.fillStyle = 'rgba(10, 11, 15, 0.85)';
+  ctx.fillRect(bx - padX, by - padY, w + padX * 2, h + padY * 2);
+  
+  ctx.fillStyle = color;
+  ctx.fillText(text, x, y);
+  ctx.restore();
+}
+
+function drawTextAlongLine(ctx, text, x1, y1, x2, y2, offsetSign, color, dpr) {
+  ctx.save();
+  let angle = Math.atan2(y2 - y1, x2 - x1);
+  if (angle < -Math.PI / 2 || angle > Math.PI / 2) {
+    angle += Math.PI;
+    const tempX = x1; x1 = x2; x2 = tempX;
+    const tempY = y1; y1 = y2; y2 = tempY;
+  }
+  const midX = (x1 + x2) / 2;
+  const midY = (y1 + y2) / 2;
+  ctx.translate(midX, midY);
+  ctx.rotate(angle);
+  ctx.fillStyle = color;
+  ctx.font = `600 ${Math.round(8 * dpr)}px 'JetBrains Mono', monospace`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.shadowColor = '#0a0b0f';
+  ctx.shadowBlur = 4 * dpr;
+  ctx.fillText(text, 0, offsetSign * 9 * dpr);
+  ctx.restore();
+}
+
+// ─────────────────────────────────────────────
+//  DRAW
+// ─────────────────────────────────────────────
+function draw() {
+  const W = canvas.width, H = canvas.height;
+  const dpr = devicePixelRatio;
+  const gridSize = Math.min(W, H) - 150 * dpr;
+  const marginX = (W - gridSize) / 2;
+  const marginY = (H - gridSize) / 2;
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#07080c'; // Subtle dark theme wrapper color
+  ctx.fillRect(0, 0, W, H);
+
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+
+  // ── DRAW SURROUNDING SYSTEMIC HORIZON CIRCLE ──
+  ctx.save();
+  const [cx, cy] = toPixel(0, 0);
+  const rx = gridSize * 0.707; // Circumscribed radius surrounding the entire square
+  ctx.beginPath();
+  ctx.arc(cx, cy, rx, 0, Math.PI * 2);
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+  ctx.lineWidth = 1 * dpr;
+  ctx.setLineDash([4 * dpr, 3 * dpr]);
+  ctx.stroke();
+  ctx.restore();
+
+  // ── DRAW THE CENTERED GRID SQUARE CARD ──
+  ctx.save();
+  ctx.fillStyle = '#0a0b0f'; // Grid box card background
+  ctx.beginPath();
+  ctx.roundRect(marginX, marginY, gridSize, gridSize, 12 * dpr);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+  ctx.lineWidth = 1 * dpr;
+  ctx.stroke();
+  
+  // Clip all inner graph elements inside the rounded square card boundary
+  ctx.clip();
+
+  // 1. Radial gradients
+  const [gCenterX, gCenterY] = modeRel ? toPixel(0.2, 0.2) : toPixel(1.2, 1.2);
+  const gGrad = ctx.createRadialGradient(gCenterX, gCenterY, 0, gCenterX, gCenterY, gridSize * 0.9);
+  gGrad.addColorStop(0, 'rgba(59, 222, 132, 0.24)');
+  gGrad.addColorStop(0.5, 'rgba(59, 222, 132, 0.08)');
+  gGrad.addColorStop(1, 'rgba(59, 222, 132, 0)');
+  ctx.fillStyle = gGrad;
+  ctx.fillRect(marginX, marginY, gridSize, gridSize);
+
+  const [rCenterX, rCenterY] = modeRel ? toPixel(-2.2, -2.2) : toPixel(-1.2, -1.2);
+  const rGrad = ctx.createRadialGradient(rCenterX, rCenterY, 0, rCenterX, rCenterY, gridSize * 0.9);
+  rGrad.addColorStop(0, 'rgba(240, 80, 96, 0.24)');
+  rGrad.addColorStop(0.5, 'rgba(240, 80, 96, 0.08)');
+  rGrad.addColorStop(1, 'rgba(240, 80, 96, 0)');
+  ctx.fillStyle = rGrad;
+  ctx.fillRect(marginX, marginY, gridSize, gridSize);
+
+  // 2. Calibration targets
+
+  if (modeRel) {
+    ctx.save();
+    ctx.setLineDash([2 * dpr, 6 * dpr]);
+    ctx.lineWidth = 1 * dpr;
+    [0.5, 1.0, 1.5, 2.0, 2.5, 2.83].forEach(r => {
+      if (r === 0.5) {
+        ctx.strokeStyle = 'rgba(240, 160, 48, 0.25)';
+      } else {
+        ctx.strokeStyle = 'rgba(59, 222, 132, 0.15)';
+      }
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * (gridSize / 4), 0, Math.PI * 2);
+      ctx.stroke();
+      drawTextWithBackground(ctx, `d=${r.toFixed(2)}`, cx + r * (gridSize / 4) * Math.cos(Math.PI/4), cy + r * (gridSize / 4) * Math.sin(Math.PI/4), Math.round(7.5 * dpr), 'rgba(255,255,255,0.4)', false, 'center', 'middle');
+    });
+    ctx.restore();
+  } else {
+    ctx.save();
+    ctx.setLineDash([2 * dpr, 6 * dpr]);
+    ctx.lineWidth = 1 * dpr;
+    
+    // Outer 2.0
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.beginPath(); ctx.arc(cx, cy, 2.0 * gridSize / 4, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.rect(cx - 2.0 * (gridSize / 4), cy - 2.0 * (gridSize / 4), 4.0 * (gridSize / 4), 4.0 * (gridSize / 4)); ctx.stroke();
+
+    // Middle 1.0
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+    ctx.beginPath(); ctx.arc(cx, cy, 1.0 * gridSize / 4, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.rect(cx - 1.0 * (gridSize / 4), cy - 1.0 * (gridSize / 4), 2.0 * (gridSize / 4), 2.0 * (gridSize / 4)); ctx.stroke();
+
+    // Inner 0.5
+    ctx.strokeStyle = 'rgba(240, 160, 48, 0.16)';
+    ctx.beginPath(); ctx.arc(cx, cy, 0.5 * gridSize / 4, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.rect(cx - 0.5 * (gridSize / 4), cy - 0.5 * (gridSize / 4), 1.0 * (gridSize / 4), 1.0 * (gridSize / 4)); ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // 3. Diagonal axes lines
+  if (document.getElementById('showDiagonals').checked) {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(240, 80, 96, 0.35)';
+    ctx.lineWidth = 1.5 * dpr;
+    const [pL1x, pL1y] = toPixel(2, -2);
+    const [pL2x, pL2y] = toPixel(-2, 2);
+    ctx.beginPath(); ctx.moveTo(pL1x, pL1y); ctx.lineTo(pL2x, pL2y); ctx.stroke();
+    ctx.restore();
+
+    ctx.save();
+    ctx.strokeStyle = 'rgba(59, 222, 132, 0.35)';
+    ctx.lineWidth = 1.5 * dpr;
+    const [pG1x, pG1y] = toPixel(2, 2);
+    const [pG2x, pG2y] = toPixel(-2, -2);
+    ctx.beginPath(); ctx.moveTo(pG1x, pG1y); ctx.lineTo(pG2x, pG2y); ctx.stroke();
+    ctx.restore();
+
+    // Scale names along the lines
+    const [pT1_x, pT1_y] = toPixel(1.7, 1.7);
+    const [pT2_x, pT2_y] = toPixel(0.5, 0.5);
+    drawTextAlongLine(ctx, 'Scale of Truth and Progress ➔', pT1_x, pT1_y, pT2_x, pT2_y, -1, 'rgba(59, 222, 132, 0.85)', dpr);
+    const [pL3_x, pL3_y] = toPixel(1.7, -1.7);
+    const [pL4_x, pL4_y] = toPixel(0.5, -0.5);
+    drawTextAlongLine(ctx, 'Scale of Lies and Regression ➔', pL3_x, pL3_y, pL4_x, pL4_y, -1, 'rgba(240, 80, 96, 0.85)', dpr);
+  }
+
+  // 4. Orthogonal Grid dashed lines and axes lines
+  if (document.getElementById('showAxes').checked) {
+    ctx.save();
+    ctx.setLineDash([2*dpr, 4*dpr]);
+    ctx.lineWidth = 0.5 * dpr;
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+    [-1, 1].forEach(tick => {
+      const [gx] = toPixel(tick, 0);
+      ctx.beginPath(); ctx.moveTo(gx, marginY); ctx.lineTo(gx, marginY + gridSize); ctx.stroke();
+      const [,gy] = toPixel(0, tick);
+      ctx.beginPath(); ctx.moveTo(marginX, gy); ctx.lineTo(marginX + gridSize, gy); ctx.stroke();
+    });
+    ctx.restore();
+    
+    ctx.save();
+    ctx.setLineDash([]);
+    const [ax1, ay] = toPixel( 2, 0);
+    const [ax2]     = toPixel(-2, 0);
+    ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.beginPath(); ctx.moveTo(ax1, ay); ctx.lineTo(ax2, ay); ctx.stroke();
+    const [vx, vy1] = toPixel(0,  2);
+    const [,   vy2] = toPixel(0, -2);
+    ctx.beginPath(); ctx.moveTo(vx, vy1); ctx.lineTo(vx, vy2); ctx.stroke();
+    ctx.restore();
+  }
+
+  // 5. 3x3 Grid Matrix dashed lines (dividing columns at v = ±0.67 and rows at psi = ±0.67)
+  if (document.getElementById('show3x3Grid') && document.getElementById('show3x3Grid').checked) {
+    ctx.save();
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    ctx.lineWidth = 1 * dpr;
+
+    // Vertical 3x3 grid lines at v = 0.67 and v = -0.67
+    [0.67, -0.67].forEach(vTick => {
+      const [gx] = toPixel(vTick, 0);
+      ctx.beginPath();
+      ctx.moveTo(gx, marginY);
+      ctx.lineTo(gx, marginY + gridSize);
+      ctx.stroke();
+    });
+
+    // Horizontal 3x3 grid lines at psi = 0.67 and psi = -0.67
+    [0.67, -0.67].forEach(psiTick => {
+      const [, gy] = toPixel(0, psiTick);
+      ctx.beginPath();
+      ctx.moveTo(marginX, gy);
+      ctx.lineTo(marginX + gridSize, gy);
+      ctx.stroke();
+    });
+
+    ctx.restore();
+  }
+
+  // 6. Draw Potential Scope Triangle (Openness)
+  if (document.getElementById('showScopeTriangle') && document.getElementById('showScopeTriangle').checked) {
+    ctx.save();
+    
+    // Draw the triangle path
+    ctx.beginPath();
+    ctx.moveTo(marginX, marginY);
+    ctx.lineTo(marginX + gridSize, marginY + gridSize / 2);
+    ctx.lineTo(marginX, marginY + gridSize);
+    ctx.closePath();
+
+    // Fill with soft gradient fading from left (Everyone / Max Openness) to right (Only Me / Closed)
+    const scopeGrad = ctx.createLinearGradient(marginX, 0, marginX + gridSize, 0);
+    scopeGrad.addColorStop(0, 'rgba(59, 222, 132, 0.05)'); // Subtle green
+    scopeGrad.addColorStop(1, 'rgba(59, 222, 132, 0)');
+    ctx.fillStyle = scopeGrad;
+    ctx.fill();
+
+    // Subtle dashed border for the triangle
+    ctx.setLineDash([3 * dpr, 6 * dpr]);
+    ctx.strokeStyle = 'rgba(59, 222, 132, 0.15)';
+    ctx.lineWidth = 1 * dpr;
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // 7. Draw Minkowski Cones (Future Cone Top-Left, Past Cone Bottom-Right)
+  if (document.getElementById('showMinkowski') && document.getElementById('showMinkowski').checked) {
+    ctx.save();
+    const radius = gridSize * 0.707; // Reaches to the circumscribed circle
+
+    const angleTL = Math.atan2(marginY - cy, marginX - cx);
+    const angleBR = Math.atan2(marginY + gridSize - cy, marginX + gridSize - cx);
+    const halfOpening = Math.PI / 8; // 45 degrees total opening angle
+
+    // Future Light Cone (pointing TL)
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
+    ctx.closePath();
+
+    const futGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+    futGrad.addColorStop(0, 'rgba(59, 222, 132, 0.14)');
+    futGrad.addColorStop(1, 'rgba(59, 222, 132, 0.01)');
+    ctx.fillStyle = futGrad;
+    ctx.fill();
+
+    // Past Light Cone (pointing BR)
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
+    ctx.closePath();
+
+    const pastGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+    pastGrad.addColorStop(0, 'rgba(224, 64, 128, 0.14)');
+    pastGrad.addColorStop(1, 'rgba(224, 64, 128, 0.01)');
+    ctx.fillStyle = pastGrad;
+    ctx.fill();
+
+    // Dash outlines for the cones
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+    ctx.lineWidth = 1 * dpr;
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+
+    // Draw Future Cone outline
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
+    ctx.closePath();
+    ctx.stroke();
+
+    // Draw Past Cone outline
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
+    ctx.closePath();
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // Restore context to remove clipping mask for unclipped labels & points!
+  ctx.restore();
+
+  // ── DRAW ALL LABELS, MARKS & DATA NODES (Unclipped) ──
+  const fs = Math.round(11 * dpr);
+  const fsSmall = Math.round(9 * dpr);
+  const labelFs = Math.round(11 * dpr);
+  const subFs = Math.round(8 * dpr);
+
+  const [ax1, ay] = toPixel( 2, 0);
+  const [vx, vy1] = toPixel(0,  2);
+
+  if (document.getElementById('showDiagonals').checked) {
+    // End labels for the diagonal axes (Progress/Regression additions) aligned with the graph card corners
+    // Aligned inward ('left' for left side, 'right' for right side) so they never clip
+    
+    // Truth+ / Progress+ (Top-Left corner, above the card)
+    drawTextWithBackground(ctx, 'Truth+', marginX, marginY - 22 * dpr, labelFs, '#3bde84', true, 'left', 'bottom');
+    drawTextWithBackground(ctx, '(Progress+)', marginX, marginY - 8 * dpr, subFs, 'rgba(59, 222, 132, 0.8)', false, 'left', 'bottom');
+
+    // Truth− / Progress− (Bottom-Right corner, below the card)
+    drawTextWithBackground(ctx, 'Truth−', marginX + gridSize, marginY + gridSize + 8 * dpr, labelFs, '#e04080', true, 'right', 'top');
+    drawTextWithBackground(ctx, '(Progress−)', marginX + gridSize, marginY + gridSize + 22 * dpr, subFs, 'rgba(224, 64, 128, 0.8)', false, 'right', 'top');
+
+    // Lie+ / Regression+ (Top-Right corner, above the card)
+    drawTextWithBackground(ctx, 'Lie+', marginX + gridSize, marginY - 22 * dpr, labelFs, '#f05060', true, 'right', 'bottom');
+    drawTextWithBackground(ctx, '(Regression+)', marginX + gridSize, marginY - 8 * dpr, subFs, 'rgba(240, 80, 96, 0.8)', false, 'right', 'bottom');
+
+    // Lie− / Regression− (Bottom-Left corner, below the card)
+    drawTextWithBackground(ctx, 'Lie−', marginX, marginY + gridSize + 8 * dpr, labelFs, '#30c8e0', true, 'left', 'top');
+    drawTextWithBackground(ctx, '(Regression−)', marginX, marginY + gridSize + 22 * dpr, subFs, 'rgba(48, 200, 224, 0.8)', false, 'left', 'top');
+  }
+
+  if (document.getElementById('showAxes').checked) {
+    // Center coordinates for the 3 columns and 3 rows of the 3x3 grid matrix
+    const col1X = toPixel(1.33, 0)[0];
+    const col2X = toPixel(0, 0)[0];
+    const col3X = toPixel(-1.33, 0)[0];
+
+    const row1Y = toPixel(0, 1.33)[1];
+    const row2Y = toPixel(0, 0)[1];
+    const row3Y = toPixel(0, -1.33)[1];
+
+    // 1. Column labels at the TOP of the grid box
+    drawTextWithBackground(ctx, '← ADDITIVE', col1X, marginY - 32 * dpr, subFs, 'rgba(59, 222, 132, 0.75)', false, 'center', 'middle');
+    drawTextWithBackground(ctx, 'Active', col1X, marginY - 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
+
+    drawTextWithBackground(ctx, 'Passive', col2X, marginY - 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
+
+    drawTextWithBackground(ctx, 'SUBTRACTIVE →', col3X, marginY - 32 * dpr, subFs, 'rgba(240, 80, 96, 0.75)', false, 'center', 'middle');
+    drawTextWithBackground(ctx, 'Suppressive', col3X, marginY - 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
+
+    // 2. Column labels at the BOTTOM of the grid box
+    drawTextWithBackground(ctx, 'Active', col1X, marginY + gridSize + 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
+    drawTextWithBackground(ctx, '← ADDITIVE', col1X, marginY + gridSize + 32 * dpr, subFs, 'rgba(59, 222, 132, 0.75)', false, 'center', 'middle');
+
+    drawTextWithBackground(ctx, 'Passive', col2X, marginY + gridSize + 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
+
+    drawTextWithBackground(ctx, 'Suppressive', col3X, marginY + gridSize + 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
+    drawTextWithBackground(ctx, 'SUBTRACTIVE →', col3X, marginY + gridSize + 32 * dpr, subFs, 'rgba(240, 80, 96, 0.75)', false, 'center', 'middle');
+
+    // 3. Row labels on the LEFT side of the grid box card
+    drawTextWithBackground(ctx, 'Active', marginX - 22 * dpr, row1Y, labelFs, '#30c8e0', true, 'right', 'middle');
+    drawTextWithBackground(ctx, 'Passive', marginX - 22 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
+    drawTextWithBackground(ctx, 'Suppressive', marginX - 22 * dpr, row3Y, labelFs, '#30c8e0', true, 'right', 'middle');
+
+    // 4. Grid numeric labels along the horizontal axis
+    [2, 1, 0, -1, -2].forEach(tick => {
+      const [tx] = toPixel(tick, 0);
+      const val = modeRel ? (tick - 1) : tick;
+      const label = val > 0 ? `+${val}υ` : `${val}υ`;
+      drawTextWithBackground(ctx, label, tx, ay + 14 * dpr, fsSmall, 'rgba(200,205,232,0.5)', false, 'center', 'middle');
+    });
+
+    // 5. Grid numeric labels along the vertical axis
+    [2, 1, 0, -1, -2].forEach(tick => {
+      const [,ty] = toPixel(0, tick);
+      const val = modeRel ? (tick - 1) : tick;
+      const label = val > 0 ? `+${val}ψ` : `${val}ψ`;
+      drawTextWithBackground(ctx, label, marginX - 8 * dpr, ty, fsSmall, 'rgba(200,205,232,0.5)', false, 'right', 'middle');
+    });
+
+    // 6. Descriptive Will labels in right margin gutter
+    const activeWillY = modeRel ? toPixel(0, 0.5)[1] : toPixel(0, 1.5)[1];
+    const passiveWillY = modeRel ? toPixel(0, -1.0)[1] : toPixel(0, 0)[1];
+    const suppressiveWillY = modeRel ? toPixel(0, -2.5)[1] : toPixel(0, -1.5)[1];
+
+    drawTextWithBackground(ctx, 'Active-Active Will (Productive)', marginX + gridSize + 15 * dpr, activeWillY, fsSmall, 'rgba(59, 222, 132, 0.85)', true, 'left', 'middle');
+    drawTextWithBackground(ctx, 'Passive-Passive Will (Confusion)', marginX + gridSize + 15 * dpr, passiveWillY, fsSmall, 'rgba(200, 205, 232, 0.75)', true, 'left', 'middle');
+    drawTextWithBackground(ctx, 'Suppressive Will (Active-Passive)', marginX + gridSize + 15 * dpr, suppressiveWillY, fsSmall, 'rgba(48, 200, 224, 0.85)', true, 'left', 'middle');
+
+    // 7. Axes Titles (positioned at a fixed 25px offset from the canvas boundaries to prevent overlays)
+    // Horizontal Axis Title: υ Morality (Benefit)
+    drawTextWithBackground(ctx, '← Opening / Creating Possibility      υ Morality (Benefit)      Closing Possibility ➔', W / 2, H - 25 * dpr, Math.round(10.5 * dpr), '#3bde84', true, 'center', 'middle');
+
+    // Vertical Axis Title: ψ Will (Action) with Foundation/Application indicators
+    ctx.save();
+    ctx.translate(25 * dpr, H / 2);
+    ctx.rotate(-Math.PI / 2);
+    drawTextWithBackground(ctx, '← FOUNDATION      ψ Will (Action)      APPLICATION ➔', 0, 0, Math.round(10.5 * dpr), '#30c8e0', true, 'center', 'middle');
+    ctx.restore();
+  }
+
+  // 8. Minkowski Cones text labels & hypersurface along regression diagonal
+  if (document.getElementById('showMinkowski') && document.getElementById('showMinkowski').checked) {
+    const labelFs = Math.round(9 * dpr);
+
+    // FUTURE LIGHT CONE (centered in the top-left quadrant at v=1, psi=1)
+    const [fx, fy] = toPixel(1, 1);
+    drawTextWithBackground(ctx, 'FUTURE LIGHT CONE', fx, fy - 6 * dpr, labelFs, 'rgba(59, 222, 132, 0.85)', true, 'center', 'middle');
+
+    // PAST LIGHT CONE (centered in the bottom-right quadrant at v=-1, psi=-1)
+    const [px, py] = toPixel(-1, -1);
+    drawTextWithBackground(ctx, 'PAST LIGHT CONE', px, py + 6 * dpr, labelFs, 'rgba(224, 64, 128, 0.85)', true, 'center', 'middle');
+
+    // OBSERVER (PRESENT) at (0,0)
+    drawTextWithBackground(ctx, 'OBSERVER (PRESENT)', cx, cy - 14 * dpr, labelFs, 'rgba(255, 255, 255, 0.95)', true, 'center', 'middle');
+
+    // Hypersurface of Present Time (along the TR-to-BL diagonal)
+    const [h1x, h1y] = toPixel(1.5, -1.5);
+    const [h2x, h2y] = toPixel(0.5, -0.5);
+    drawTextAlongLine(ctx, 'Hypersurface of Present Time ➔', h1x, h1y, h2x, h2y, 1, 'rgba(255, 255, 255, 0.65)', dpr);
+  }
+
+  // Quadrant headers (drawn inside the grid box card bounds)
+  const quadHeaders = [
+    { v: 1.8, psi: 1.85, header: 'PRODUCTIVE', sub: 'AIR · Agape', color: 'rgba(59,222,132,0.7)', align: 'left' },
+    { v:-1.8, psi: 1.85, header: 'REDUCTIVE', sub: 'FIRE · Ludus', color: 'rgba(240,80,96,0.7)', align: 'right' },
+    { v: 1.8, psi:-1.85, header: 'CONSTRUCTIVE', sub: 'WATER · Philia', color: 'rgba(48,200,224,0.7)', align: 'left' },
+    { v:-1.8, psi:-1.85, header: 'REGRESSIVE', sub: 'EARTH · Eros', color: 'rgba(224,64,128,0.7)', align: 'right' },
+  ];
+  quadHeaders.forEach(q => {
+    const [qx, qy] = toPixel(q.v, q.psi);
+    drawTextWithBackground(ctx, q.header, qx, qy, Math.round(9.5 * dpr), q.color, true, q.align, 'bottom');
+    drawTextWithBackground(ctx, q.sub, qx, qy + 4 * dpr, Math.round(8 * dpr), 'rgba(255,255,255,0.4)', false, q.align, 'top');
+  });
+
+  // Canonical Anchors
+  const canonicalAnchors = modeRel ? [
+    { v: 0, psi: 0, label: 'Greater Good', sub: 'The Good Truth', color: '#3bde84' },
+    { v:-2, psi: 0, label: 'Lesser Evil', sub: 'The Bad Lie', color: '#f05060' },
+    { v: 0, psi:-2, label: 'Lesser Good', sub: 'The Good Lie', color: '#30c8e0' },
+    { v:-2, psi:-2, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' }
+  ] : [
+    { v: 1, psi: 1, label: 'Greater Good', sub: 'The Good Truth', color: '#3bde84' },
+    { v:-1, psi: 1, label: 'Lesser Evil', sub: 'The Bad Lie', color: '#f05060' },
+    { v: 1, psi:-1, label: 'Lesser Good', sub: 'The Good Lie', color: '#30c8e0' },
+    { v:-1, psi:-1, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' }
+  ];
+  canonicalAnchors.forEach(a => {
+    const [ax, ay2] = toPixel(a.v, a.psi);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(ax, ay2, 6 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = a.color + '44';
+    ctx.fill();
+    ctx.strokeStyle = a.color;
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.stroke();
+    drawTextWithBackground(ctx, a.label, ax, ay2 - 14 * dpr, Math.round(9.5 * dpr), a.color, true, 'center', 'bottom');
+    drawTextWithBackground(ctx, a.sub, ax, ay2 + 14 * dpr, Math.round(8 * dpr), 'rgba(200,205,232,0.65)', false, 'center', 'top');
+    ctx.restore();
+  });
+
+  // Perceptual Inversion Anchors
+  const inversionAnchors = [
+    { v: 0.5,  psi: 0.5,  label: 'Perceived Greater Evil', color: 'rgba(224, 64, 128, 0.7)' },
+    { v:-0.5,  psi: 0.5,  label: 'Perceived Lesser Good',  color: 'rgba(48, 200, 224, 0.7)' },
+    { v: 0.5,  psi:-0.5,  label: 'Perceived Lesser Evil',  color: 'rgba(240, 80, 96, 0.7)' },
+    { v:-0.5,  psi:-0.5,  label: 'Perceived Greater Good', color: 'rgba(59, 222, 132, 0.7)' }
+  ];
+  inversionAnchors.forEach(a => {
+    const [ax, ay2] = toPixel(a.v, a.psi);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(ax, ay2, 4 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = a.color + '15';
+    ctx.fill();
+    ctx.strokeStyle = a.color;
+    ctx.setLineDash([2 * dpr, 2 * dpr]);
+    ctx.lineWidth = 1 * dpr;
+    ctx.stroke();
+    drawTextWithBackground(ctx, a.label, ax, ay2 + 10 * dpr, Math.round(7.5 * dpr), a.color, false, 'center', 'top');
+    ctx.restore();
+  });
+
+  // Center Node (Confusion / No-one)
+  {
+    const centerNodeV = modeRel ? -1 : 0;
+    const centerNodePsi = modeRel ? -1 : 0;
+    const [cx, cy] = toPixel(centerNodeV, centerNodePsi);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, 14 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(18, 20, 28, 0.95)';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(200, 205, 232, 0.4)';
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.stroke();
+    drawTextWithBackground(ctx, 'No-one', cx, cy - 4 * dpr, Math.round(8 * dpr), '#fff', true, 'center', 'middle');
+    drawTextWithBackground(ctx, 'Confusion', cx, cy + 5 * dpr, Math.round(7 * dpr), 'rgba(200,205,232,0.6)', false, 'center', 'middle');
+    ctx.restore();
+  }
+
+  // Active Point Projections
+  const activePt = hoverCoord ? {v: hoverCoord[0], psi: hoverCoord[1]} : (selectedIdx >= 0 ? points[selectedIdx] : null);
+  if (activePt && document.getElementById('showProjections').checked) {
+    const v = activePt.v;
+    const psi = activePt.psi;
+    const drawV = modeRel ? (v - 1) : v;
+    const drawPsi = modeRel ? (psi - 1) : psi;
+    const [px, py] = toPixel(drawV, drawPsi);
+    if (modeRel) {
+      const [tx, ty] = toPixel(0, 0);
+      ctx.save();
+      ctx.setLineDash([3 * dpr, 3 * dpr]);
+      ctx.strokeStyle = 'rgba(59, 222, 132, 0.85)';
+      ctx.lineWidth = 1.5 * dpr;
+      ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(px, py); ctx.stroke();
+      ctx.restore();
+      const midX = (tx + px) / 2;
+      const midY = (ty + py) / 2;
+      const dist = Math.sqrt(Math.pow(v - 1, 2) + Math.pow(psi - 1, 2));
+      drawTextWithBackground(ctx, `Dist: ${dist.toFixed(3)}`, midX, midY, Math.round(8.5 * dpr), '#3bde84', true, 'center', 'middle');
+    } else {
+      if (document.getElementById('showAxes').checked) {
+        const [pvx, pvy] = toPixel(v, 0);
+        const [ppsix, pppsiy] = toPixel(0, psi);
+        ctx.save();
+        ctx.setLineDash([3 * dpr, 3 * dpr]);
+        ctx.strokeStyle = 'rgba(59, 222, 132, 0.45)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(pvx, pvy); ctx.stroke();
+        ctx.strokeStyle = 'rgba(48, 200, 224, 0.45)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(ppsix, pppsiy); ctx.stroke();
+        ctx.restore();
+      }
+      if (document.getElementById('showDiagonals').checked) {
+        const T = (v + psi) / 2;
+        const [pTx, pTy] = toPixel(T, T);
+        const L = (psi - v) / 2;
+        const [pLx, pLy] = toPixel(-L, L);
+        ctx.save();
+        ctx.setLineDash([3 * dpr, 3 * dpr]);
+        ctx.strokeStyle = 'rgba(59, 222, 132, 0.6)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(pTx, pTy); ctx.stroke();
+        ctx.strokeStyle = 'rgba(240, 80, 96, 0.6)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(pLx, pLy); ctx.stroke();
+        ctx.beginPath(); ctx.arc(pTx, pTy, 4.5 * dpr, 0, Math.PI * 2); ctx.fillStyle = '#3bde84'; ctx.fill();
+        ctx.beginPath(); ctx.arc(pLx, pLy, 4.5 * dpr, 0, Math.PI * 2); ctx.fillStyle = '#f05060'; ctx.fill();
+        ctx.restore();
+        drawTextWithBackground(ctx, `T: ${T.toFixed(2)}`, pTx + 10 * dpr, pTy, Math.round(7.5 * dpr), '#3bde84', true, 'left', 'middle');
+        drawTextWithBackground(ctx, `L: ${L.toFixed(2)}`, pLx - 10 * dpr, pLy, Math.round(7.5 * dpr), '#f05060', true, 'right', 'middle');
+      }
+    }
+  }
+
+  // User Plotted Points
+  points.forEach((pt, i) => {
+    const drawV = modeRel ? (pt.v - 1) : pt.v;
+    const drawPsi = modeRel ? (pt.psi - 1) : pt.psi;
+    const [px, py] = toPixel(drawV, drawPsi);
+    const zone = classifyZone(pt.v, pt.psi);
+    const isSelected = i === selectedIdx;
+    const r = isSelected ? 9 * dpr : 7 * dpr;
+    if (isSelected) {
+      const grad = ctx.createRadialGradient(px, py, 0, px, py, 22 * dpr);
+      grad.addColorStop(0, zone.color + '55');
+      grad.addColorStop(1, 'transparent');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(px, py, 22 * dpr, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.beginPath();
+    ctx.arc(px, py, r, 0, Math.PI * 2);
+    ctx.fillStyle = zone.color + 'cc';
+    ctx.fill();
+    ctx.strokeStyle = zone.color;
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.stroke();
+    ctx.fillStyle = '#fff';
+    ctx.font = `600 ${Math.round(8 * dpr)}px 'Inter', sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(i + 1, px, py);
+    if (pt.label) {
+      drawTextWithBackground(ctx, pt.label, px, py + r + 6 * dpr, fsSmall, zone.color, true, 'center', 'top');
+    }
+  });
+}
+
+// ─────────────────────────────────────────────
+//  READOUT UPDATE
+// ─────────────────────────────────────────────
+function updateReadout(v, psi, isPoint) {
+  const vStr   = v   >= 0 ? `+${v.toFixed(2)}` : v.toFixed(2);
+  const psiStr = psi >= 0 ? `+${psi.toFixed(2)}` : psi.toFixed(2);
+  document.getElementById('dispV').textContent   = vStr;
+  document.getElementById('dispPsi').textContent = psiStr;
+
+  // Update context display based on active point or dropdown selection
+  const activePt = selectedIdx >= 0 && points[selectedIdx] ? points[selectedIdx] : null;
+  const contextVal = (isPoint && activePt) ? (activePt.context || 'Natural State') : document.getElementById('contextSelect').value;
+  document.getElementById('dispContext').textContent = contextVal;
+
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  const relDistContainer = document.getElementById('dispRelContainer');
+  if (modeRel) {
+    const dist = Math.sqrt(Math.pow(v - 1, 2) + Math.pow(psi - 1, 2));
+    document.getElementById('dispRelDist').textContent = dist.toFixed(3);
+    if (relDistContainer) {
+      relDistContainer.style.display = 'block';
+      relDistContainer.querySelector('.label').textContent = 'Dist to GG (1,1): ';
+    }
+  } else {
+    if (relDistContainer) relDistContainer.style.display = 'none';
+  }
+
+  const zone = classifyZone(v, psi);
+  document.getElementById('dispZone').textContent    = `→ ${zone.name} ${zone.coord}`;
+  document.getElementById('dispZone').style.color    = zone.color;
+  document.getElementById('dispVerdict').textContent = zone.verdict;
+  syncSliders(v, psi);
+
+  // Calculate and display axis projections [dir, mag]
+  const axes = [
+    { name: 'Productive (Air)', x1: 0, y1: 0, x2: 2, y2: 2, color: '#3bde84' },
+    { name: 'Constructive (Water)', x1: 0, y1: 0, x2: 2, y2: -2, color: '#30c8e0' },
+    { name: 'Reductive (Fire)', x1: 0, y1: 0, x2: -2, y2: 2, color: '#f05060' },
+    { name: 'Regressive (Earth)', x1: 0, y1: 0, x2: -2, y2: -2, color: '#e04080' },
+    { name: 'Morality (Everyone)', x1: 0, y1: 0, x2: 2, y2: 0, color: '#3bde84' },
+    { name: 'Morality (No-One Else)', x1: 0, y1: 0, x2: -2, y2: 0, color: '#f05060' },
+    { name: 'Will (Active)', x1: 0, y1: 0, x2: 0, y2: 2, color: '#30c8e0' },
+    { name: 'Will (Suppressive)', x1: 0, y1: 0, x2: 0, y2: -2, color: '#e04080' }
+  ];
+
+  const container = document.getElementById('projsContainer');
+  if (container) {
+    container.innerHTML = '';
+    axes.forEach(ax => {
+      const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
+      const len = Math.hypot(dx, dy);
+      const ux = dx / len, uy = dy / len;
+      const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
+      
+      const alongClamped = Math.max(0, Math.min(len, alongRaw));
+      const nxClamped = ax.x1 + ux * alongClamped;
+      const nyClamped = ax.y1 + uy * alongClamped;
+      const distClamped = Math.hypot(v - nxClamped, psi - nyClamped);
+
+      const dir = (alongRaw / len) * 100;
+      const mag = Math.max(0, 100 * (1 - distClamped / len));
+
+      const row = document.createElement('div');
+      row.style.display = 'flex';
+      row.style.justifyContent = 'space-between';
+      row.style.color = ax.color;
+      row.style.lineHeight = '1.3';
+      row.innerHTML = `<span>${ax.name}</span><span style="font-weight:bold;">[${dir.toFixed(0)}, ${mag.toFixed(0)}]</span>`;
+      container.appendChild(row);
+    });
+  }
+}
+
+function clearReadout() {
+  document.getElementById('dispV').textContent       = '—';
+  document.getElementById('dispPsi').textContent     = '—';
+  if (document.getElementById('dispRelDist')) {
+    document.getElementById('dispRelDist').textContent = '—';
+  }
+  document.getElementById('dispContext').textContent = '—';
+  document.getElementById('dispZone').textContent    = '—';
+  document.getElementById('dispZone').style.color    = 'var(--muted)';
+  document.getElementById('dispVerdict').textContent = '—';
+
+  const container = document.getElementById('projsContainer');
+  if (container) {
+    container.innerHTML = '<div style="color:var(--muted); text-align:center; padding: 4px 0;">—</div>';
+  }
+}
+
+// ── SLIDER INTERACTIVE CONTROLS ──
+let isSyncingSliders = false;
+function syncSliders(v, psi) {
+  if (isSyncingSliders) return;
+  isSyncingSliders = true;
+  
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  if (modeRel) {
+    const dx = 1 - v;
+    const dy = 1 - psi;
+    const R = Math.sqrt(dx*dx + dy*dy);
+    let theta = Math.atan2(dy, dx) * 180 / Math.PI;
+    if (theta < 0) theta += 360;
+    theta = Math.max(0, Math.min(360, theta));
+    
+    document.getElementById('sliderV').value = R;
+    document.getElementById('sliderPsi').value = theta;
+    document.getElementById('valSliderV').textContent = R.toFixed(2);
+    document.getElementById('valSliderPsi').textContent = theta.toFixed(1) + '°';
+  } else {
+    document.getElementById('sliderV').value = v;
+    document.getElementById('sliderPsi').value = psi;
+    const T = (v + psi) / 2;
+    const L = (psi - v) / 2;
+    document.getElementById('sliderT').value = T;
+    document.getElementById('sliderL').value = L;
+    document.getElementById('valSliderV').textContent = v.toFixed(2);
+    document.getElementById('valSliderPsi').textContent = psi.toFixed(2);
+    document.getElementById('valSliderT').textContent = T.toFixed(2);
+    document.getElementById('valSliderL').textContent = L.toFixed(2);
+    document.getElementById('valProduct').textContent = (v * psi).toFixed(2);
+  }
+  isSyncingSliders = false;
+}
+
+function handleSliderChange(type, value) {
+  if (isSyncingSliders) return;
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  let v = parseFloat(document.getElementById('sliderV').value);
+  let psi = parseFloat(document.getElementById('sliderPsi').value);
+  
+  if (modeRel) {
+    let R = parseFloat(document.getElementById('sliderV').value);
+    let theta = parseFloat(document.getElementById('sliderPsi').value);
+    if (type === 'V') R = value;
+    if (type === 'Psi') theta = value;
+    
+    const rad = theta * Math.PI / 180;
+    v = 1 - R * Math.cos(rad);
+    psi = 1 - R * Math.sin(rad);
+  } else {
+    if (type === 'T') {
+      const T = value;
+      const L = parseFloat(document.getElementById('sliderL').value);
+      v = T - L;
+      psi = T + L;
+    } else if (type === 'L') {
+      const L = value;
+      const T = parseFloat(document.getElementById('sliderT').value);
+      v = T - L;
+      psi = T + L;
+    } else if (type === 'V') {
+      v = value;
+    } else if (type === 'Psi') {
+      psi = value;
+    }
+  }
+  
+  v = Math.max(-2, Math.min(2, v));
+  psi = Math.max(-2, Math.min(2, psi));
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    points[selectedIdx].v = v;
+    points[selectedIdx].psi = psi;
+    renderPointsList();
+  }
+  updateReadout(v, psi, true);
+  syncSliders(v, psi);
+  draw();
+}
+
+document.getElementById('sliderV').addEventListener('input', e => handleSliderChange('V', parseFloat(e.target.value)));
+document.getElementById('sliderPsi').addEventListener('input', e => handleSliderChange('Psi', parseFloat(e.target.value)));
+document.getElementById('sliderT').addEventListener('input', e => handleSliderChange('T', parseFloat(e.target.value)));
+document.getElementById('sliderL').addEventListener('input', e => handleSliderChange('L', parseFloat(e.target.value)));
+document.getElementById('showAxes').addEventListener('change', draw);
+document.getElementById('showDiagonals').addEventListener('change', draw);
+document.getElementById('showProjections').addEventListener('change', draw);
+document.getElementById('show3x3Grid').addEventListener('change', draw);
+document.getElementById('showScopeTriangle').addEventListener('change', draw);
+document.getElementById('showMinkowski').addEventListener('change', draw);
+
+document.getElementById('contextSelect').addEventListener('change', () => {
+  const context = document.getElementById('contextSelect').value;
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    points[selectedIdx].context = context;
+    renderPointsList();
+    updateReadout(points[selectedIdx].v, points[selectedIdx].psi, true);
+  } else if (hoverCoord) {
+    updateReadout(hoverCoord[0], hoverCoord[1], false);
+  }
+});
+
+// ─────────────────────────────────────────────
+//  POINTS LIST
+// ─────────────────────────────────────────────
+function renderPointsList() {
+  const list = document.getElementById('pointsList');
+  if (points.length === 0) {
+    list.innerHTML = '<div class="empty-hint">No points yet</div>';
+    return;
+  }
+  list.innerHTML = '';
+  points.forEach((pt, i) => {
+    const zone = classifyZone(pt.v, pt.psi);
+    const entry = document.createElement('div');
+    entry.className = 'point-entry' + (i === selectedIdx ? ' selected' : '');
+    const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+    const vVal = modeRel ? (pt.v - 1) : pt.v;
+    const psiVal = modeRel ? (pt.psi - 1) : pt.psi;
+    const vStr = (vVal >= 0 ? '+' : '') + vVal.toFixed(2) + (modeRel ? 'υ_rel' : 'υ');
+    const psiStr = (psiVal >= 0 ? '+' : '') + psiVal.toFixed(2) + (modeRel ? 'ψ_rel' : 'ψ');
+    entry.innerHTML = `
+      <div class="point-dot" style="background:${zone.color}"></div>
+      <div class="point-coords">
+        <div>#${i+1} ${pt.label || ''}</div>
+        <div class="point-zone">(${vStr}, ${psiStr}) · ${zone.name.split(' ')[0]}</div>
+      </div>
+      <span class="point-del" data-idx="${i}" title="Remove">✕</span>
+    `;
+    entry.addEventListener('click', (e) => {
+      if (e.target.classList.contains('point-del')) {
+        const idx = parseInt(e.target.dataset.idx);
+        points.splice(idx, 1);
+        if (selectedIdx >= points.length) selectedIdx = points.length - 1;
+        renderPointsList();
+        draw();
+        return;
+      }
+      selectedIdx = i;
+      if (document.getElementById('contextSelect')) {
+        document.getElementById('contextSelect').value = pt.context || 'Natural State';
+      }
+      updateReadout(pt.v, pt.psi, true);
+      renderPointsList();
+      draw();
+    });
+    list.appendChild(entry);
+  });
+}
+
+// ─────────────────────────────────────────────
+//  EVENTS
+// ─────────────────────────────────────────────
+function getCanvasPos(e) {
+  const rect = canvas.getBoundingClientRect();
+  const dpr  = devicePixelRatio;
+  return [
+    (e.clientX - rect.left)  * dpr,
+    (e.clientY - rect.top)   * dpr,
+  ];
+}
+
+canvas.addEventListener('mousemove', e => {
+  const [px, py] = getCanvasPos(e);
+  const [v, psi] = toCoord(px, py);
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  const finalV = modeRel ? v + 1 : v;
+  const finalPsi = modeRel ? psi + 1 : psi;
+  hoverCoord = [finalV, finalPsi];
+  updateReadout(finalV, finalPsi, false);
+  draw();
+});
+
+canvas.addEventListener('mouseleave', () => {
+  hoverCoord = null;
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    const pt = points[selectedIdx];
+    updateReadout(pt.v, pt.psi, true);
+  } else {
+    clearReadout();
+  }
+  draw();
+});
+
+canvas.addEventListener('click', e => {
+  const [px, py] = getCanvasPos(e);
+  const [v, psi] = toCoord(px, py);
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  const finalV = modeRel ? v + 1 : v;
+  const finalPsi = modeRel ? psi + 1 : psi;
+  const label = document.getElementById('labelInput').value.trim();
+  const context = document.getElementById('contextSelect').value;
+  points.push({ v: finalV, psi: finalPsi, label, context });
+  selectedIdx = points.length - 1;
+  updateReadout(finalV, finalPsi, true);
+  renderPointsList();
+  draw();
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+  points = [];
+  selectedIdx = -1;
+  hoverCoord = null;
+  clearReadout();
+  renderPointsList();
+  draw();
+});
+
+window.addEventListener('resize', resize);
+resize();
+
+// Toggle Origin Mode listener
+document.getElementById('modeRelative').addEventListener('change', () => {
+  const modeRel = document.getElementById('modeRelative').checked;
+  const labelV = document.querySelector('#sliderV').previousElementSibling;
+  const labelPsi = document.querySelector('#sliderPsi').previousElementSibling;
+  const groupT = document.getElementById('sliderT').closest('.slider-group');
+  const groupL = document.getElementById('sliderL').closest('.slider-group');
+  const groupProd = document.getElementById('valProduct').closest('.slider-group');
+  
+  if (modeRel) {
+    // Switch to Radial Sliders centered on GG (1,1)
+    labelV.innerHTML = `Distance from GG (R): <span id="valSliderV">0.00</span>`;
+    labelPsi.innerHTML = `Deviation Angle (θ): <span id="valSliderPsi">0.0°</span>`;
+    
+    document.getElementById('sliderV').min = "0";
+    document.getElementById('sliderV').max = "2.83";
+    document.getElementById('sliderV').step = "0.01";
+    
+    document.getElementById('sliderPsi').min = "0";
+    document.getElementById('sliderPsi').max = "360";
+    document.getElementById('sliderPsi').step = "0.5";
+    
+    if (groupT) groupT.style.display = 'none';
+    if (groupL) groupL.style.display = 'none';
+    if (groupProd) groupProd.style.display = 'none';
+  } else {
+    // Restore standard Cartesian Sliders
+    labelV.innerHTML = `υ Morality (Benefit): <span id="valSliderV">0.00</span>`;
+    labelPsi.innerHTML = `ψ Will (Action Energy): <span id="valSliderPsi">0.00</span>`;
+    
+    document.getElementById('sliderV').min = "-2";
+    document.getElementById('sliderV').max = "2";
+    document.getElementById('sliderV').step = "0.01";
+    
+    document.getElementById('sliderPsi').min = "-2";
+    document.getElementById('sliderPsi').max = "2";
+    document.getElementById('sliderPsi').step = "0.01";
+    
+    if (groupT) groupT.style.display = 'block';
+    if (groupL) groupL.style.display = 'block';
+    if (groupProd) groupProd.style.display = 'block';
+  }
+  
+  draw();
+  renderPointsList();
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    updateReadout(points[selectedIdx].v, points[selectedIdx].psi, true);
+  } else if (hoverCoord) {
+    updateReadout(hoverCoord[0], hoverCoord[1], false);
+  } else {
+    clearReadout();
+  }
+});
+
+// Initial state updates for default point
+if (points.length > 0) {
+  updateReadout(points[0].v, points[0].psi, true);
+  renderPointsList();
+}
+</script>
+</body>
+</html>
