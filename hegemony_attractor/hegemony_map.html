@@ -182,8 +182,9 @@
     }
     .point-entry {
       display: flex;
-      align-items: center;
-      gap: 8px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
       font-size: 10px;
       font-family: 'JetBrains Mono', monospace;
       padding: 5px 8px;
@@ -481,8 +482,11 @@
     </div>
 
     <!-- Plotted points list -->
-    <div class="side-section" style="flex:1">
-      <div class="side-title">Plotted Points</div>
+    <div class="side-section" style="flex:1; display:flex; flex-direction:column;">
+      <div class="side-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span>Plotted Points</span>
+        <button class="btn" id="exportBtn" style="font-size:10px; padding:2px 8px; margin:0; line-height:1.2;">Export JSON</button>
+      </div>
       <div class="points-list" id="pointsList">
         <div class="empty-hint">No points yet</div>
       </div>
@@ -545,6 +549,59 @@ function classifyZone(v, psi) {
   if (v <= 0 && psi > 0) return ZONES[1]; // Top-Right (Reductive / Fire)
   if (v > 0 && psi <= 0) return ZONES[2]; // Bottom-Left (Constructive / Water)
   return ZONES[3];                         // Bottom-Right (Regressive / Earth)
+}
+
+function calculatePointParams(v, psi) {
+  const zone = classifyZone(v, psi);
+  const armsProj = [
+    { name: 'Productive ← Potential', x1: -2, y1: 0, x2: 2, y2: 2, isEdge: false },
+    { name: 'Constructive ← Potential', x1: -2, y1: 0, x2: 2, y2: -2, isEdge: false },
+    { name: 'Anti-Potential → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, isEdge: false },
+    { name: 'Anti-Potential → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, isEdge: false },
+    { name: 'Constructive ← Suppressive', x1: 0, y1: 2, x2: 2, y2: -2, isEdge: false },
+    { name: 'Suppressive → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, isEdge: false },
+    { name: 'Productive ← Active', x1: 0, y1: -2, x2: 2, y2: 2, isEdge: false },
+    { name: 'Active → Reductive', x1: 0, y1: -2, x2: -2, y2: 2, isEdge: false },
+    { name: 'Good Edge (LHS)', x1: 2, y1: -2, x2: 2, y2: 2, isEdge: true },
+    { name: 'Bad Edge (RHS)', x1: -2, y1: -2, x2: -2, y2: 2, isEdge: true },
+    { name: 'Top Edge (Active)', x1: -2, y1: 2, x2: 2, y2: 2, isEdge: true },
+    { name: 'Bottom Edge (Suppr.)', x1: -2, y1: -2, x2: 2, y2: -2, isEdge: true }
+  ];
+
+  const projections = {};
+  armsProj.forEach(arm => {
+    const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
+    const len = Math.hypot(dx, dy);
+    const ux = dx / len, uy = dy / len;
+    const alongRaw = (v - arm.x1) * ux + (psi - arm.y1) * uy;
+    const alongClamped = Math.max(0, Math.min(len, alongRaw));
+    const projV = arm.x1 + ux * alongClamped;
+    const projPsi = arm.y1 + uy * alongClamped;
+    const distClamped = Math.hypot(v - projV, psi - projPsi);
+
+    const dir = (alongRaw / len) * 100;
+    const mag = Math.max(0, 100 * (1 - distClamped / len));
+
+    if (arm.isEdge) {
+      let leftVal, rightVal;
+      if (arm.name.includes('Top') || arm.name.includes('Bottom')) {
+        leftVal = dir;
+        rightVal = 100 - dir;
+      } else {
+        leftVal = 100 - dir;
+        rightVal = dir;
+      }
+      projections[arm.name] = `[${Math.round(leftVal)}, ${Math.round(mag)}, ${Math.round(rightVal)}]`;
+    } else {
+      projections[arm.name] = `[${Math.round(dir)}, ${Math.round(mag)}]`;
+    }
+  });
+
+  return {
+    zone: zone.name,
+    verdict: zone.verdict,
+    projections
+  };
 }
 
 // ─────────────────────────────────────────────
@@ -967,14 +1024,14 @@ function draw() {
 
     // Define 8 arms: x1,y1 is start, x2,y2 is end (V/Psi coords)
     const arms = [
-      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Productive' },  // Potential -> Productive
-      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Constructive' }, // Potential -> Constructive
-      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Reductive' },   // Anti-Potential -> Reductive
-      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Regressive' },  // Anti-Potential -> Regressive
-      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Constructive' },  // Suppressive -> Constructive
-      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Regressive' }, // Suppressive -> Regressive
-      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Productive' },   // Active -> Productive
-      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Reductive' }    // Active -> Reductive
+      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Productive', fullLabel: 'Productive ← Potential' },
+      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Constructive', fullLabel: 'Constructive ← Potential' },
+      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Potential', label: 'Reductive', fullLabel: 'Anti-Potential ➔ Reductive' },
+      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Potential', label: 'Regressive', fullLabel: 'Anti-Potential ➔ Regressive' },
+      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppressive', label: 'Constructive', fullLabel: 'Constructive ← Suppressive' },
+      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppressive', label: 'Regressive', fullLabel: 'Suppressive ➔ Regressive' },
+      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Productive', fullLabel: 'Productive ← Active' },
+      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Reductive', fullLabel: 'Active ➔ Reductive' }
     ];
 
     // First pass: Draw main arm lines and tick marks
@@ -1036,7 +1093,7 @@ function draw() {
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
 
-      const labelText = `${arm.group} → ${arm.label}`;
+      const labelText = arm.fullLabel;
       const colorTransparent = arm.color.replace('0.35', '0.55');
 
       // Background outline halo
@@ -1669,13 +1726,13 @@ function updateReadout(v, psi, isPoint) {
 
   // Calculate and display axis projections [dir, mag] or [left, dist, right] for edges
   const axes = [
-    { name: 'Potential → Productive', x1: -2, y1: 0, x2: 2, y2: 2, color: '#3bde84', isEdge: false },
-    { name: 'Potential → Constructive', x1: -2, y1: 0, x2: 2, y2: -2, color: '#3bde84', isEdge: false },
-    { name: 'Anti-Pot. → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, color: '#f05060', isEdge: false },
-    { name: 'Anti-Pot. → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, color: '#f05060', isEdge: false },
-    { name: 'Suppr. → Constructive', x1: 0, y1: 2, x2: 2, y2: -2, color: '#e04080', isEdge: false },
-    { name: 'Suppr. → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, color: '#e04080', isEdge: false },
-    { name: 'Active → Productive', x1: 0, y1: -2, x2: 2, y2: 2, color: '#30c8e0', isEdge: false },
+    { name: 'Productive ← Potential', x1: -2, y1: 0, x2: 2, y2: 2, color: '#3bde84', isEdge: false },
+    { name: 'Constructive ← Potential', x1: -2, y1: 0, x2: 2, y2: -2, color: '#3bde84', isEdge: false },
+    { name: 'Anti-Potential → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, color: '#f05060', isEdge: false },
+    { name: 'Anti-Potential → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, color: '#f05060', isEdge: false },
+    { name: 'Constructive ← Suppressive', x1: 0, y1: 2, x2: 2, y2: -2, color: '#e04080', isEdge: false },
+    { name: 'Suppressive → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, color: '#e04080', isEdge: false },
+    { name: 'Productive ← Active', x1: 0, y1: -2, x2: 2, y2: 2, color: '#30c8e0', isEdge: false },
     { name: 'Active → Reductive', x1: 0, y1: -2, x2: -2, y2: 2, color: '#30c8e0', isEdge: false },
     { name: 'Good Edge (LHS)', x1: 2, y1: -2, x2: 2, y2: 2, color: '#3bde84', isEdge: true },
     { name: 'Bad Edge (RHS)', x1: -2, y1: -2, x2: -2, y2: 2, color: '#f05060', isEdge: true },
@@ -1859,6 +1916,7 @@ function renderPointsList() {
   }
   list.innerHTML = '';
   points.forEach((pt, i) => {
+    pt.params = calculatePointParams(pt.v, pt.psi);
     const zone = classifyZone(pt.v, pt.psi);
     const entry = document.createElement('div');
     entry.className = 'point-entry' + (i === selectedIdx ? ' selected' : '');
@@ -1867,13 +1925,32 @@ function renderPointsList() {
     const psiVal = modeRel ? (pt.psi - 1) : pt.psi;
     const vStr = (vVal >= 0 ? '+' : '') + vVal.toFixed(2) + (modeRel ? 'υ_rel' : 'υ');
     const psiStr = (psiVal >= 0 ? '+' : '') + psiVal.toFixed(2) + (modeRel ? 'ψ_rel' : 'ψ');
+
+    let detailsHtml = '';
+    if (i === selectedIdx && pt.params) {
+      detailsHtml = `
+        <div style="font-size:9px; color:#abb2bf; margin-top:5px; padding-top:4px; border-top:1px solid rgba(255,255,255,0.06); width: 100%;">
+          <div style="color:${zone.color}; font-weight:bold; margin-bottom: 4px; line-height:1.25;">${pt.params.verdict}</div>
+          <div style="display:grid; grid-template-columns: 1fr auto; gap:2px 8px; font-family:monospace; line-height:1.2;">
+            ${Object.entries(pt.params.projections).map(([name, val]) => `
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${name}">${name}</span>
+              <span style="font-weight:bold; color:#dcdfe4;">${val}</span>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
     entry.innerHTML = `
-      <div class="point-dot" style="background:${zone.color}"></div>
-      <div class="point-coords">
-        <div>#${i+1} ${pt.label || ''}</div>
-        <div class="point-zone">(${vStr}, ${psiStr}) · ${zone.name.split(' ')[0]}</div>
+      <div style="display:flex; align-items:center; width:100%;">
+        <div class="point-dot" style="background:${zone.color}"></div>
+        <div class="point-coords" style="flex:1;">
+          <div>#${i+1} ${pt.label || ''}</div>
+          <div class="point-zone">(${vStr}, ${psiStr}) · ${zone.name.split(' ')[0]}</div>
+        </div>
+        <span class="point-del" data-idx="${i}" title="Remove">✕</span>
       </div>
-      <span class="point-del" data-idx="${i}" title="Remove">✕</span>
+      ${detailsHtml}
     `;
     entry.addEventListener('click', (e) => {
       if (e.target.classList.contains('point-del')) {
@@ -1938,11 +2015,27 @@ canvas.addEventListener('click', e => {
   const finalPsi = modeRel ? psi + 1 : psi;
   const label = document.getElementById('labelInput').value.trim();
   const context = document.getElementById('contextSelect').value;
-  points.push({ v: finalV, psi: finalPsi, label, context });
+  const params = calculatePointParams(finalV, finalPsi);
+  points.push({ v: finalV, psi: finalPsi, label, context, params });
   selectedIdx = points.length - 1;
   updateReadout(finalV, finalPsi, true);
   renderPointsList();
   draw();
+});
+
+document.getElementById('exportBtn').addEventListener('click', () => {
+  if (points.length === 0) {
+    alert('No plotted points to export!');
+    return;
+  }
+  points.forEach(pt => {
+    pt.params = calculatePointParams(pt.v, pt.psi);
+  });
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(points, null, 2));
+  const dlAnchorElem = document.createElement('a');
+  dlAnchorElem.setAttribute("href", dataStr);
+  dlAnchorElem.setAttribute("download", "hegemony_points_export.json");
+  dlAnchorElem.click();
 });
 
 document.getElementById('clearBtn').addEventListener('click', () => {
