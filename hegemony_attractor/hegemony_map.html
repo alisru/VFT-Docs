@@ -399,6 +399,12 @@
         <label><input type="checkbox" id="showSubdivisionArms" checked> Subdivision Arms</label>
         <label><input type="checkbox" id="showMinkowski" checked> Minkowski Cones</label>
         <label><input type="checkbox" id="showStateTriangles" checked> State Triangles</label>
+        <div style="margin: 4px 0 8px 20px; padding-left: 8px; border-left: 1.5px solid #2a2d3d; display: flex; flex-direction: column; gap: 4px;">
+          <label style="font-size: 10px; color: #3bde84; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadePotential" checked> Potential Area (Shaded)</label>
+          <label style="font-size: 10px; color: #f05060; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadeAntiPotential"> Anti-Potential Area (Shaded)</label>
+          <label style="font-size: 10px; color: #30c8e0; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadeActive"> Active Area (Shaded)</label>
+          <label style="font-size: 10px; color: #e04080; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadeSuppressive"> Suppressive Area (Shaded)</label>
+        </div>
         <label style="color:#3bde84"><input type="checkbox" id="modeRelative"> GG Relative Mode</label>
       </div>
     </div>
@@ -854,6 +860,10 @@ function draw() {
     ctx.lineTo(pBLx, pBLy);
     ctx.lineTo(pMidRx, pMidRy);
     ctx.closePath();
+    if (document.getElementById('shadePotential').checked) {
+      ctx.fillStyle = 'rgba(59, 222, 132, 0.05)';
+      ctx.fill();
+    }
     ctx.stroke();
 
     // 2. Anti-Potential Triangle (Dashed Red)
@@ -864,6 +874,10 @@ function draw() {
     ctx.lineTo(pBRx, pBRy);
     ctx.lineTo(pMidLx, pMidLy);
     ctx.closePath();
+    if (document.getElementById('shadeAntiPotential').checked) {
+      ctx.fillStyle = 'rgba(240, 80, 96, 0.05)';
+      ctx.fill();
+    }
     ctx.stroke();
 
     // 3. Active Triangle (Solid Blue)
@@ -874,6 +888,10 @@ function draw() {
     ctx.lineTo(pBRx, pBRy);
     ctx.lineTo(pMidTx, pMidTy);
     ctx.closePath();
+    if (document.getElementById('shadeActive').checked) {
+      ctx.fillStyle = 'rgba(48, 200, 224, 0.05)';
+      ctx.fill();
+    }
     ctx.stroke();
 
     // 4. Suppressive Triangle (Dashed Orange)
@@ -884,6 +902,10 @@ function draw() {
     ctx.lineTo(pTRx, pTRy);
     ctx.lineTo(pMidBx, pMidBy);
     ctx.closePath();
+    if (document.getElementById('shadeSuppressive').checked) {
+      ctx.fillStyle = 'rgba(240, 160, 48, 0.05)';
+      ctx.fill();
+    }
     ctx.stroke();
 
     ctx.restore();
@@ -896,16 +918,17 @@ function draw() {
 
     // Define 8 arms: x1,y1 is start, x2,y2 is end (V/Psi coords)
     const arms = [
-      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false },  // Potential -> Productive
-      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false }, // Potential -> Constructive
-      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true },   // Anti-Potential -> Reductive
-      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true },  // Anti-Potential -> Regressive
-      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false },  // Suppressive -> Constructive
-      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false }, // Suppressive -> Regressive
-      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true },   // Active -> Productive
-      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true }   // Active -> Reductive
+      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Productive' },  // Potential -> Productive
+      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Constructive' }, // Potential -> Constructive
+      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Reductive' },   // Anti-Potential -> Reductive
+      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Regressive' },  // Anti-Potential -> Regressive
+      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Constructive' },  // Suppressive -> Constructive
+      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Regressive' }, // Suppressive -> Regressive
+      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Productive' },   // Active -> Productive
+      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Reductive' }    // Active -> Reductive
     ];
 
+    // First pass: Draw main arm lines and tick marks
     arms.forEach(arm => {
       const [sx, sy] = toPixel(arm.x1, arm.y1);
       const [ex, ey] = toPixel(arm.x2, arm.y2);
@@ -937,6 +960,48 @@ function draw() {
         ctx.lineTo(tx + nx * 3 * dpr, ty + ny * 3 * dpr);
         ctx.stroke();
       }
+    });
+
+    // Second pass: Draw rotated arm labels (using pair index spacing to prevent overlapping)
+    arms.forEach(arm => {
+      const [sx, sy] = toPixel(arm.x1, arm.y1);
+      const [ex, ey] = toPixel(arm.x2, arm.y2);
+      const dx = ex - sx, dy = ey - sy;
+
+      const sameCornerArms = arms.filter(a => a.x2 === arm.x2 && a.y2 === arm.y2);
+      const pairIndex = sameCornerArms.findIndex(a => a.group === arm.group);
+      const t = (pairIndex === 0) ? 0.22 : 0.82;
+
+      const lx = sx + dx * t;
+      const ly = sy + dy * t;
+
+      let angle = Math.atan2(dy, dx);
+      if (angle > Math.PI / 2 || angle < -Math.PI / 2) {
+        angle += Math.PI;
+      }
+
+      ctx.save();
+      ctx.translate(lx, ly);
+      ctx.rotate(angle);
+
+      ctx.font = `600 ${Math.round(6.5 * dpr)}px 'JetBrains Mono', monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      const labelText = `${arm.group} → ${arm.label}`;
+      const colorBrighter = arm.color.replace('0.35', '0.75');
+
+      // Background outline halo
+      ctx.strokeStyle = '#0a0b0f';
+      ctx.lineWidth = 2.5 * dpr;
+      ctx.lineJoin = 'round';
+      ctx.strokeText(labelText, 0, -6 * dpr);
+
+      // Foreground text
+      ctx.fillStyle = colorBrighter;
+      ctx.fillText(labelText, 0, -6 * dpr);
+
+      ctx.restore();
     });
 
     ctx.restore();
@@ -1473,6 +1538,10 @@ document.getElementById('show3x3Grid').addEventListener('change', draw);
 document.getElementById('showSubdivisionArms').addEventListener('change', draw);
 document.getElementById('showMinkowski').addEventListener('change', draw);
 document.getElementById('showStateTriangles').addEventListener('change', draw);
+document.getElementById('shadePotential').addEventListener('change', draw);
+document.getElementById('shadeAntiPotential').addEventListener('change', draw);
+document.getElementById('shadeActive').addEventListener('change', draw);
+document.getElementById('shadeSuppressive').addEventListener('change', draw);
 
 document.getElementById('contextSelect').addEventListener('change', () => {
   const context = document.getElementById('contextSelect').value;
