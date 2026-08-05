@@ -1052,6 +1052,156 @@ function draw() {
       ctx.restore();
     });
 
+    // ── DRAW CORNER LABELS ──
+    ctx.save();
+    ctx.font = `bold ${Math.round(11.5 * dpr)}px 'JetBrains Mono', monospace`;
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.45)'; // clean, semi-transparent white/grey labels
+
+    // Draw background halos
+    ctx.strokeStyle = '#0a0b0f';
+    ctx.lineWidth = 3.5 * dpr;
+    ctx.lineJoin = 'round';
+
+    // Productive (Top-Left)
+    ctx.textAlign = 'right';
+    ctx.strokeText('Productive', marginX - 10 * dpr, marginY - 12 * dpr);
+    ctx.fillText('Productive', marginX - 10 * dpr, marginY - 12 * dpr);
+
+    // Reductive (Top-Right)
+    ctx.textAlign = 'left';
+    ctx.strokeText('Reductive', marginX + gridSize + 10 * dpr, marginY - 12 * dpr);
+    ctx.fillText('Reductive', marginX + gridSize + 10 * dpr, marginY - 12 * dpr);
+
+    // Constructive (Bottom-Left)
+    ctx.textAlign = 'right';
+    ctx.strokeText('Constructive', marginX - 10 * dpr, marginY + gridSize + 16 * dpr);
+    ctx.fillText('Constructive', marginX - 10 * dpr, marginY + gridSize + 16 * dpr);
+
+    // Regressive (Bottom-Right)
+    ctx.textAlign = 'left';
+    ctx.strokeText('Regressive', marginX + gridSize + 10 * dpr, marginY + gridSize + 16 * dpr);
+    ctx.fillText('Regressive', marginX + gridSize + 10 * dpr, marginY + gridSize + 16 * dpr);
+    ctx.restore();
+
+    // ── DRAW EDGE NAMES ──
+    ctx.save();
+    ctx.font = `bold ${Math.round(8 * dpr)}px 'JetBrains Mono', monospace`;
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'center';
+
+    // Top: Reduct ↔ Product
+    ctx.fillStyle = 'rgba(59, 222, 132, 0.45)'; // Greenish
+    ctx.fillText('Reduct ↔ Product', marginX + gridSize / 2, marginY - 24 * dpr);
+
+    // Bottom: Regress ↔ Constr
+    ctx.fillStyle = 'rgba(240, 80, 96, 0.45)'; // Reddish
+    ctx.fillText('Regress ↔ Constr', marginX + gridSize / 2, marginY + gridSize + 32 * dpr);
+
+    // Left: Constr ↔ Product
+    ctx.save();
+    ctx.translate(marginX - 8 * dpr, marginY + gridSize / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillStyle = 'rgba(59, 222, 132, 0.45)';
+    ctx.fillText('Constr ↔ Product', 0, 0);
+    ctx.restore();
+
+    // Right: Reduct ↔ Regress
+    ctx.save();
+    ctx.translate(marginX + gridSize + 8 * dpr, marginY + gridSize / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillStyle = 'rgba(240, 80, 96, 0.45)';
+    ctx.fillText('Reduct ↔ Regress', 0, 0);
+    ctx.restore();
+
+    ctx.restore();
+
+    // ── DRAW COLORED EDGE LINES ──
+    ctx.save();
+    ctx.lineWidth = 2 * dpr;
+
+    // Top: Green
+    ctx.strokeStyle = '#0a7a3a';
+    ctx.beginPath(); ctx.moveTo(marginX, marginY); ctx.lineTo(marginX + gridSize, marginY); ctx.stroke();
+
+    // Bottom: Red
+    ctx.strokeStyle = '#7a1f1f';
+    ctx.beginPath(); ctx.moveTo(marginX, marginY + gridSize); ctx.lineTo(marginX + gridSize, marginY + gridSize); ctx.stroke();
+
+    // Left: Green
+    ctx.strokeStyle = '#0a7a3a';
+    ctx.beginPath(); ctx.moveTo(marginX, marginY); ctx.lineTo(marginX, marginY + gridSize); ctx.stroke();
+
+    // Right: Red
+    ctx.strokeStyle = '#7a1f1f';
+    ctx.beginPath(); ctx.moveTo(marginX + gridSize, marginY); ctx.lineTo(marginX + gridSize, marginY + gridSize); ctx.stroke();
+
+    ctx.restore();
+
+    // ── DRAW BIDIRECTIONAL TICKS AND TICK LABELS ──
+    ctx.save();
+    ctx.lineWidth = 1 * dpr;
+    ctx.font = `bold ${Math.round(6.5 * dpr)}px 'JetBrains Mono', monospace`;
+    ctx.textBaseline = 'middle';
+
+    for (let pct = 0; pct <= 100; pct += 10) {
+      const f = pct / 100;
+
+      // 1. Top Edge (Productive on Left = 100/0, Reductive on Right = 0/100)
+      const tx = marginX + gridSize * f;
+      ctx.strokeStyle = 'rgba(59, 222, 132, 0.35)'; // green tick line
+      ctx.beginPath();
+      ctx.moveTo(tx, marginY - 4 * dpr);
+      ctx.lineTo(tx, marginY + 4 * dpr);
+      ctx.stroke();
+
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(59, 222, 132, 0.55)'; // green pct
+      ctx.fillText(pct, tx, marginY - 16 * dpr);
+      ctx.fillStyle = 'rgba(90, 184, 122, 0.55)'; // light green 100-pct
+      ctx.fillText(100 - pct, tx, marginY - 9 * dpr);
+
+      // 2. Bottom Edge (Constructive on Left = 0/100, Regressive on Right = 100/0)
+      ctx.strokeStyle = 'rgba(240, 80, 96, 0.35)'; // red tick line
+      ctx.beginPath();
+      ctx.moveTo(tx, marginY + gridSize - 4 * dpr);
+      ctx.lineTo(tx, marginY + gridSize + 4 * dpr);
+      ctx.stroke();
+
+      ctx.fillStyle = 'rgba(240, 80, 96, 0.55)'; // red pct
+      ctx.fillText(pct, tx, marginY + gridSize + 14 * dpr);
+      ctx.fillStyle = 'rgba(192, 112, 112, 0.55)'; // light red 100-pct
+      ctx.fillText(100 - pct, tx, marginY + gridSize + 21 * dpr);
+
+      // 3. Left Edge (Constructive on Bottom = 0/100, Productive on Top = 100/0)
+      const ty = marginY + gridSize * f;
+      ctx.strokeStyle = 'rgba(59, 222, 132, 0.35)'; // green tick line
+      ctx.beginPath();
+      ctx.moveTo(marginX - 4 * dpr, ty);
+      ctx.lineTo(marginX + 4 * dpr, ty);
+      ctx.stroke();
+
+      ctx.textAlign = 'end';
+      ctx.fillStyle = 'rgba(59, 222, 132, 0.55)';
+      ctx.fillText(pct, marginX - 22 * dpr, ty);
+      ctx.fillStyle = 'rgba(90, 184, 122, 0.55)';
+      ctx.fillText(100 - pct, marginX - 9 * dpr, ty);
+
+      // 4. Right Edge (Regressive on Bottom = 100/0, Reductive on Top = 0/100)
+      ctx.strokeStyle = 'rgba(240, 80, 96, 0.35)'; // red tick line
+      ctx.beginPath();
+      ctx.moveTo(marginX + gridSize - 4 * dpr, ty);
+      ctx.lineTo(marginX + gridSize + 4 * dpr, ty);
+      ctx.stroke();
+
+      ctx.textAlign = 'start';
+      ctx.fillStyle = 'rgba(240, 80, 96, 0.55)';
+      ctx.fillText(pct, marginX + gridSize + 9 * dpr, ty);
+      ctx.fillStyle = 'rgba(192, 112, 112, 0.55)';
+      ctx.fillText(100 - pct, marginX + gridSize + 22 * dpr, ty);
+    }
+    ctx.restore();
+
     ctx.restore();
   }
 
@@ -1367,18 +1517,18 @@ function draw() {
       // Draw projections and [dir, mag] readings directly on the 8 Subdivision Arms
       if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
         const armsProj = [
-          { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)' },  // Potential -> Productive
-          { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.8)' }, // Potential -> Constructive
-          { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.8)' },   // Anti-Potential -> Reductive
-          { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)' },  // Anti-Potential -> Regressive
-          { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' },  // Suppressive -> Constructive
-          { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' }, // Suppressive -> Regressive
-          { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' },   // Active -> Productive
-          { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' },  // Active -> Reductive
-          { x1: 2, y1: -2, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)' },   // Good Edge (LHS)
-          { x1: -2, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)' },  // Bad Edge (RHS)
-          { x1: -2, y1: 2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' },   // Top Edge
-          { x1: -2, y1: -2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' }  // Bottom Edge
+          { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)', isEdge: false },  // Potential -> Productive
+          { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.8)', isEdge: false }, // Potential -> Constructive
+          { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.8)', isEdge: false },   // Anti-Potential -> Reductive
+          { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)', isEdge: false },  // Anti-Potential -> Regressive
+          { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)', isEdge: false },  // Suppressive -> Constructive
+          { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)', isEdge: false }, // Suppressive -> Regressive
+          { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)', isEdge: false },   // Active -> Productive
+          { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.8)', isEdge: false },  // Active -> Reductive
+          { x1: 2, y1: -2, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)', isEdge: true, name: 'Good' },   // Good Edge (LHS)
+          { x1: -2, y1: -2, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.8)', isEdge: true, name: 'Bad' },    // Bad Edge (RHS)
+          { x1: -2, y1: 2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)', isEdge: true, name: 'Top' },    // Top Edge
+          { x1: -2, y1: -2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)', isEdge: true, name: 'Bottom' }  // Bottom Edge
         ];
 
         armsProj.forEach(arm => {
@@ -1422,7 +1572,18 @@ function draw() {
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           
-          const labelText = `[${dir.toFixed(0)},${mag.toFixed(0)}]`;
+          let labelText = `[${dir.toFixed(0)},${mag.toFixed(0)}]`;
+          if (arm.isEdge) {
+            let leftVal, rightVal;
+            if (arm.name === 'Top' || arm.name === 'Bottom') {
+              leftVal = dir;
+              rightVal = 100 - dir;
+            } else {
+              leftVal = 100 - dir;
+              rightVal = dir;
+            }
+            labelText = `[${leftVal.toFixed(0)},${mag.toFixed(0)},${rightVal.toFixed(0)}]`;
+          }
           
           ctx.strokeStyle = '#0a0b0f';
           ctx.lineWidth = 3.5 * dpr;
@@ -1506,20 +1667,20 @@ function updateReadout(v, psi, isPoint) {
   document.getElementById('dispVerdict').textContent = zone.verdict;
   syncSliders(v, psi);
 
-  // Calculate and display axis projections [dir, mag]
+  // Calculate and display axis projections [dir, mag] or [left, dist, right] for edges
   const axes = [
-    { name: 'Potential → Productive', x1: -2, y1: 0, x2: 2, y2: 2, color: '#3bde84' },
-    { name: 'Potential → Constructive', x1: -2, y1: 0, x2: 2, y2: -2, color: '#3bde84' },
-    { name: 'Anti-Pot. → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, color: '#f05060' },
-    { name: 'Anti-Pot. → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, color: '#f05060' },
-    { name: 'Suppr. → Constructive', x1: 0, y1: 2, x2: 2, y2: -2, color: '#e04080' },
-    { name: 'Suppr. → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, color: '#e04080' },
-    { name: 'Active → Productive', x1: 0, y1: -2, x2: 2, y2: 2, color: '#30c8e0' },
-    { name: 'Active → Reductive', x1: 0, y1: -2, x2: -2, y2: 2, color: '#30c8e0' },
-    { name: 'Good Edge (LHS)', x1: 2, y1: -2, x2: 2, y2: 2, color: '#3bde84' },
-    { name: 'Bad Edge (RHS)', x1: -2, y1: 2, x2: -2, y2: -2, color: '#f05060' },
-    { name: 'Top Edge (Active)', x1: -2, y1: 2, x2: 2, y2: 2, color: '#30c8e0' },
-    { name: 'Bottom Edge (Suppr.)', x1: -2, y1: -2, x2: 2, y2: -2, color: '#e04080' }
+    { name: 'Potential → Productive', x1: -2, y1: 0, x2: 2, y2: 2, color: '#3bde84', isEdge: false },
+    { name: 'Potential → Constructive', x1: -2, y1: 0, x2: 2, y2: -2, color: '#3bde84', isEdge: false },
+    { name: 'Anti-Pot. → Reductive', x1: 2, y1: 0, x2: -2, y2: 2, color: '#f05060', isEdge: false },
+    { name: 'Anti-Pot. → Regressive', x1: 2, y1: 0, x2: -2, y2: -2, color: '#f05060', isEdge: false },
+    { name: 'Suppr. → Constructive', x1: 0, y1: 2, x2: 2, y2: -2, color: '#e04080', isEdge: false },
+    { name: 'Suppr. → Regressive', x1: 0, y1: 2, x2: -2, y2: -2, color: '#e04080', isEdge: false },
+    { name: 'Active → Productive', x1: 0, y1: -2, x2: 2, y2: 2, color: '#30c8e0', isEdge: false },
+    { name: 'Active → Reductive', x1: 0, y1: -2, x2: -2, y2: 2, color: '#30c8e0', isEdge: false },
+    { name: 'Good Edge (LHS)', x1: 2, y1: -2, x2: 2, y2: 2, color: '#3bde84', isEdge: true },
+    { name: 'Bad Edge (RHS)', x1: -2, y1: -2, x2: -2, y2: 2, color: '#f05060', isEdge: true },
+    { name: 'Top Edge (Active)', x1: -2, y1: 2, x2: 2, y2: 2, color: '#30c8e0', isEdge: true },
+    { name: 'Bottom Edge (Suppr.)', x1: -2, y1: -2, x2: 2, y2: -2, color: '#e04080', isEdge: true }
   ];
 
   const container = document.getElementById('projsContainer');
@@ -1539,12 +1700,25 @@ function updateReadout(v, psi, isPoint) {
       const dir = (alongRaw / len) * 100;
       const mag = Math.max(0, 100 * (1 - distClamped / len));
 
+      let labelText = `[${dir.toFixed(0)}, ${mag.toFixed(0)}]`;
+      if (ax.isEdge) {
+        let leftVal, rightVal;
+        if (ax.name.includes('Top') || ax.name.includes('Bottom')) {
+          leftVal = dir;
+          rightVal = 100 - dir;
+        } else {
+          leftVal = 100 - dir;
+          rightVal = dir;
+        }
+        labelText = `[${leftVal.toFixed(0)}, ${mag.toFixed(0)}, ${rightVal.toFixed(0)}]`;
+      }
+
       const row = document.createElement('div');
       row.style.display = 'flex';
       row.style.justifyContent = 'space-between';
       row.style.color = ax.color;
       row.style.lineHeight = '1.3';
-      row.innerHTML = `<span>${ax.name}</span><span style="font-weight:bold;">[${dir.toFixed(0)}, ${mag.toFixed(0)}]</span>`;
+      row.innerHTML = `<span>${ax.name}</span><span style="font-weight:bold;">${labelText}</span>`;
       container.appendChild(row);
     });
   }
