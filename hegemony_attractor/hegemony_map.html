@@ -1075,7 +1075,7 @@ function draw() {
 
       const sameCornerArms = arms.filter(a => a.x2 === arm.x2 && a.y2 === arm.y2);
       const pairIndex = sameCornerArms.findIndex(a => a.group === arm.group);
-      const t = (pairIndex === 0) ? 0.22 : 0.82;
+      const t = (pairIndex === 0) ? 0.11 : 0.82;
 
       const lx = sx + dx * t;
       const ly = sy + dy * t;
