@@ -1366,8 +1366,10 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
                 print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 13). Skipping.")
                 continue
 
-            # Character limit warnings
-            violations = [(i, len(p)) for i, p in enumerate(posts) if len(p) > 299]
+            # Character limit warnings (only check first 4 posts for compact mode)
+            is_compact = story.get("compact") is True or story.get("compact") == "single"
+            posts_to_check = posts[:4] if is_compact else posts
+            violations = [(i, len(p)) for i, p in enumerate(posts_to_check) if len(p) > 299]
             if violations:
                 print(f"WARNING: '{story.get('subject')}' has char violations at posts {violations}")
 

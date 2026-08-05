@@ -31,6 +31,7 @@ def main():
     parser = argparse.ArgumentParser(description="Batch Pre-Flight Validator")
     parser.add_argument("--compact", action="store_true", help="Validate in compact thread mode")
     parser.add_argument("--compact-single", action="store_true", help="Validate in compact single-post mode")
+    parser.add_argument("--five-word", action="store_true", help="Validate in 5-Word Mode")
     args = parser.parse_args()
 
     stories_dir = os.path.join(script_dir, "stories")
@@ -64,11 +65,20 @@ def main():
                 data = json.load(f)
             cfg = data[0] if isinstance(data, list) else data
 
+            # Exclusivity Filter:
+            config_five_word = cfg.get("five_word") is True
+            exec_five_word = args.five_word is True
+            if exec_five_word and not config_five_word:
+                continue
+            if config_five_word and not exec_five_word:
+                continue
+
             # Skip if already posted live
             status = cfg.get("status", "")
             if status and (status.startswith("LIVE") or "LIVE POSTED" in status):
                 print(f"  [SKIP] {filename} (Already posted live)")
                 continue
+
 
             # Validate complete JSON Schema
             required_keys = ["id", "subject", "link", "claim_u", "claim_psi", "real_u", "real_psi", "mode", "status", "posts"]
@@ -96,11 +106,27 @@ def main():
             target_url = cfg.get("target_url", "")
 
             # 1. Pack posts and length validation
-            is_compact_single = args.compact_single or cfg.get("compact") == "single"
-            is_compact_thread = args.compact or cfg.get("compact") is True
-            is_compact = is_compact_single or is_compact_thread
+            # Auto-detect mode from story config, falling back to command-line flags
+            config_five_word = cfg.get("five_word") is True
+            config_compact = cfg.get("compact")
+            has_config_compact = config_compact is True or config_compact == "single"
 
-            if is_compact_single:
+            is_five_word = config_five_word or args.five_word
+            is_compact_single = (config_compact == "single" or args.compact_single) and not is_five_word
+            is_compact_thread = (config_compact is True or args.compact) and not is_five_word
+            is_compact = is_compact_single or is_compact_thread
+            limit = 300 if (is_compact or is_five_word) else 299
+
+            # Validate every raw post in config under the dynamic limit (only check first 4 posts for compact mode)
+            posts_to_check = posts[:4] if is_compact else posts
+            for idx, post in enumerate(posts_to_check, 1):
+                if len(post) > limit:
+                    raise ValueError(f"Raw post {idx} in config exceeds {limit} characters ({len(post)} chars):\n{post}")
+
+            if is_five_word:
+                from aletheia_bot import pack_5word_posts
+                final_posts = pack_5word_posts(posts, max_len=limit)
+            elif is_compact_single:
                 final_posts = posts[:1]
             elif is_compact_thread:
                 final_posts = posts[:4]
@@ -108,8 +134,9 @@ def main():
                 final_posts = pack_posts(posts)
 
             for idx, post in enumerate(final_posts, 1):
-                if len(post) > 299:
-                    raise ValueError(f"Post {idx} exceeds 299 characters ({len(post)} chars):\n{post}")
+                if len(post) > limit:
+                    raise ValueError(f"Post {idx} exceeds {limit} characters ({len(post)} chars):\n{post}")
+
 
             # 2. Graph Check
             story_id = cfg["id"]
@@ -120,17 +147,30 @@ def main():
             if not os.path.exists(graph_filename):
                 raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}. Graphs must be pre-generated.")
 
-            # 2b. Info Card Check for Compact Mode (Generate on-the-fly if missing)
-            if is_compact:
-                info_card_filename = f"{story_id}_info_card.png"
-                info_card_path = os.path.join(graph_dir, info_card_filename)
-                if not os.path.exists(info_card_path):
-                    print(f"  Info card not found for {story_id}. Generating on-the-fly...")
+            # 2b. Info Card Check (Generate on-the-fly if missing)
+            if is_five_word:
+                five_word_card_path = os.path.join(graph_dir, f"{story_id}_info_card_five_word.png")
+                if not os.path.exists(five_word_card_path):
+                    print(f"  Five-word info card not found for {story_id}. Generating on-the-fly...")
                     try:
                         from image_card_generator import generate_compact_info_card
-                        generate_compact_info_card(cfg, info_card_path)
+                        base_path = os.path.join(graph_dir, f"{story_id}_info_card.png")
+                        generate_compact_info_card(cfg, base_path)
                     except Exception as ice:
-                        raise RuntimeError(f"Failed to generate compact info card: {ice}")
+                        raise RuntimeError(f"Failed to generate five-word info card: {ice}")
+            else:
+                v_card_path = os.path.join(graph_dir, f"{story_id}_info_card_verdict.png")
+                a_card_path = os.path.join(graph_dir, f"{story_id}_info_card_analysis.png")
+                if not os.path.exists(v_card_path) or not os.path.exists(a_card_path):
+                    print(f"  Split info cards not found for {story_id}. Generating on-the-fly...")
+                    try:
+                        from image_card_generator import generate_compact_info_card
+                        base_path = os.path.join(graph_dir, f"{story_id}_info_card.png")
+                        generate_compact_info_card(cfg, base_path)
+                    except Exception as ice:
+                        raise RuntimeError(f"Failed to generate split info cards: {ice}")
+
+
 
             # 3. Mode reply check
             if mode == "reply" and not target_url:

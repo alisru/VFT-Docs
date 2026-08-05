@@ -102,6 +102,30 @@ def pack_posts(posts, max_len=299):
         
     return final_posts
 
+def pack_5word_posts(posts, max_len=300):
+    """Packs 13 five-word posts into optimal 300-character posts by joining with newlines."""
+    grouped = []
+    current_chunk = []
+    current_len = 0
+    for p in posts:
+        line = p.strip()
+        if not line:
+            continue
+        line_len = len(line)
+        added_len = line_len + (1 if current_chunk else 0)
+        if current_len + added_len <= max_len:
+            current_chunk.append(line)
+            current_len += added_len
+        else:
+            if current_chunk:
+                grouped.append("\n".join(current_chunk))
+            current_chunk = [line]
+            current_len = line_len
+    if current_chunk:
+        grouped.append("\n".join(current_chunk))
+    return grouped
+
+
 # Cache of target_urls we already have a story for. Built once per process by
 # scanning stories/ (+ subdirs); kept current by save_and_sync_story. The old
 # inline scan re-read every story JSON on disk for EVERY thread posted.
@@ -264,7 +288,7 @@ def resolve_facets_and_tags(text, link=None):
     
     return (facets if facets else None), (tags_list if tags_list else None)
 
-def post_thread(client, thread_config, live=False, compact=False):
+def post_thread(client, thread_config, live=False, compact=False, five_word=False):
     """Processes a single thread configuration (generating graph, validating, and posting)."""
     subject = thread_config.get("subject", "Assessment")
     posts = thread_config.get("posts", [])
@@ -285,29 +309,44 @@ def post_thread(client, thread_config, live=False, compact=False):
     print("Performing dynamic splitting and pre-flight size validation...")
     if not posts:
         raise ValueError("Thread configuration contains no posts.")
-        
-    is_compact_single = thread_config.get("compact") == "single" or compact == "single"
-    is_compact_thread = thread_config.get("compact") is True or compact is True
-    is_compact = is_compact_single or is_compact_thread
 
-    if is_compact_single:
+    # Ensure compact/five-word mode settings align (auto-detected from config, falling back to arguments)
+    config_five_word = thread_config.get("five_word") is True
+    config_compact = thread_config.get("compact")
+    has_config_compact = config_compact is True or config_compact == "single"
+
+    is_five_word = config_five_word or (five_word is True)
+    is_compact_single = (config_compact == "single" or compact == "single") and not is_five_word
+    is_compact_thread = (config_compact is True or compact is True) and not is_five_word
+    is_compact = is_compact_single or is_compact_thread
+    limit = 300 if (is_compact or is_five_word) else 299
+        
+    # Validate every raw post in the config under the dynamic limit (only check first 4 posts for compact mode)
+    posts_to_check = posts[:4] if is_compact else posts
+    for idx, post in enumerate(posts_to_check, 1):
+        if len(post) > limit:
+            raise ValueError(f"Raw post {idx} in config exceeds {limit} characters ({len(post)} chars):\n{post}")
+
+    if is_five_word:
+        final_posts = pack_5word_posts(posts, max_len=limit)
+    elif is_compact_single:
         final_posts = posts[:1]
         if link:
             ref_suffix = f"\n\nReference: {link}"
-            if len(final_posts[0]) + len(ref_suffix) <= 299:
+            if len(final_posts[0]) + len(ref_suffix) <= limit:
                 final_posts[0] += ref_suffix
             else:
                 ref_suffix = f"\n\n{link}"
-                if len(final_posts[0]) + len(ref_suffix) <= 299:
+                if len(final_posts[0]) + len(ref_suffix) <= limit:
                     final_posts[0] += ref_suffix
     elif is_compact_thread:
         final_posts = posts[:4]
     else:
-        final_posts = pack_posts(posts, max_len=299)
+        final_posts = pack_posts(posts, max_len=limit)
         
     for idx, post in enumerate(final_posts, 1):
-        if len(post) > 299:
-            raise ValueError(f"Post {idx} exceeds 299 characters ({len(post)} chars) after splitting:\n{post}")
+        if len(post) > limit:
+            raise ValueError(f"Post {idx} exceeds {limit} characters ({len(post)} chars) after splitting:\n{post}")
     print(f"All posts successfully split and validated. Thread post count: {len(final_posts)}")
 
     # 2. Graph Check (No generation in posting script)
@@ -334,6 +373,8 @@ def post_thread(client, thread_config, live=False, compact=False):
 
     post_rkeys = []
     post_uris = []
+    info_card_images = []
+
 
     if target_url:
         if _target_already_replied(target_url):
@@ -372,8 +413,34 @@ def post_thread(client, thread_config, live=False, compact=False):
             except Exception as e:
                 raise RuntimeError(f"Failed to upload graph: {e}") from e
 
+            # Create Five-Word Mode Info Card Embeds
+            if is_five_word:
+                five_word_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_five_word.png")
+                if not os.path.exists(five_word_filename):
+                    print("Five-word mode info card not found. Generating on-the-fly...")
+                    try:
+                        from image_card_generator import generate_compact_info_card
+                        main_info_card = os.path.join(bot_graph_dir, f"{story_id}_info_card.png")
+                        generate_compact_info_card(thread_config, main_info_card)
+                    except Exception as e:
+                        raise RuntimeError(f"Failed to generate five-word info card on-the-fly: {e}") from e
+                
+                print("Uploading five-word terminal card to Bluesky...")
+                try:
+                    with open(five_word_filename, "rb") as f:
+                        fw_img_data = f.read()
+                    fw_upload = client.com.atproto.repo.upload_blob(fw_img_data)
+                    info_card_images.append(
+                        models.AppBskyEmbedImages.Image(
+                            alt=f"Terminal-style 5-word audit results card for {subject}.",
+                            image=fw_upload.blob
+                        )
+                    )
+                    print("Five-word terminal card uploaded successfully.")
+                except Exception as e:
+                    print(f"Warning: Failed to upload five-word terminal card: {e}")
+
             # Create Compact Mode Info Card Embeds
-            info_card_images = []
             if is_compact:
                 verdict_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_verdict.png")
                 analysis_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_analysis.png")
@@ -435,6 +502,7 @@ def post_thread(client, thread_config, live=False, compact=False):
                 except Exception as e:
                     print(f"Warning: Failed to upload analysis split card: {e}")
 
+
             # Create External Link Preview Card
             link_embed = None
             if link:
@@ -474,14 +542,18 @@ def post_thread(client, thread_config, live=False, compact=False):
                 except Exception as ex:
                     print(f"Warning: Failed to create grounding external link embed card: {ex}")
 
-            # first_post_embed gets the trajectory graph, and in compact-single mode, also gets the summary cards
+            # first_post_embed gets the trajectory graph, and in both compact and compact-single modes, also gets the summary cards
             first_post_embed = graph_embed
-            if is_compact_single and len(info_card_images) > 0:
+            if (is_compact or is_five_word) and len(info_card_images) > 0:
                 joint_images = []
                 if graph_embed is not None and hasattr(graph_embed, "images"):
                     joint_images.extend(graph_embed.images)
+                
+                # Attach all images (Graph + Summary Cards) to the first post
                 joint_images.extend(info_card_images)
+                        
                 first_post_embed = models.AppBskyEmbedImages.Main(images=joint_images)
+
 
             # 4. Resolve Links and Hashtags for facets (only on the first/root post)
             facets, tags_list = resolve_facets_and_tags(final_posts[0], link=link)
@@ -573,11 +645,7 @@ def post_thread(client, thread_config, live=False, compact=False):
             for i, text in enumerate(final_posts[1:], start=2):
                 print(f"Posting Part {i}/{len(final_posts)}...")
                 current_embed = None
-                if is_compact and i == 4 and info_card_embed is not None:
-                    # Attach the compact summary card image embed to the fourth post of the thread
-                    current_embed = info_card_embed
-                    print("Attaching compact summary card embed to Part 4...")
-                elif i == 2 and link_embed is not None:
+                if i == 2 and link_embed is not None:
                     # Attach the link preview card embed to the second post of the thread
                     current_embed = link_embed
                     print("Attaching link preview card embed to Part 2...")
