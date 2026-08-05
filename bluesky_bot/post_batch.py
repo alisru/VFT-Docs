@@ -27,6 +27,16 @@ if script_dir not in sys.path:
 from aletheia_bot import post_thread, pack_posts
 from atproto import Client
 
+def is_five_word_file(path):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        cfg = data[0] if isinstance(data, list) else data
+        return cfg.get("five_word") is True
+    except Exception:
+        return False
+
+
 
 def safe_getmtime(p):
     try:
@@ -153,14 +163,16 @@ def validate_story_file(path, compact=False):
 
         # Info Card Check (Generate on-the-fly if missing)
         if is_compact:
-            info_card_filename = os.path.join(script_dir, "graph_png", f"{story_id}_info_card.png")
-            if not os.path.exists(info_card_filename):
-                print(f"  Info card not found for {story_id}. Generating on-the-fly...")
+            v_card_path = os.path.join(script_dir, "graph_png", f"{story_id}_info_card_verdict.png")
+            a_card_path = os.path.join(script_dir, "graph_png", f"{story_id}_info_card_analysis.png")
+            if not os.path.exists(v_card_path) or not os.path.exists(a_card_path):
+                print(f"  Info cards not found for {story_id}. Generating on-the-fly...")
                 try:
                     from image_card_generator import generate_compact_info_card
-                    generate_compact_info_card(cfg, info_card_filename)
+                    base_path = os.path.join(script_dir, "graph_png", f"{story_id}_info_card.png")
+                    generate_compact_info_card(cfg, base_path)
                 except Exception as ice:
-                    raise RuntimeError(f"Failed to generate compact info card: {ice}")
+                    raise RuntimeError(f"Failed to generate compact info cards: {ice}")
 
         return True, ""
     except Exception as e:
@@ -175,9 +187,11 @@ def main():
     parser.add_argument("--live", action="store_true", help="Set to actually post live (dry-run by default)")
     parser.add_argument("--compact", action="store_true", help="Post in compact thread mode (posts 1-4 as text, posts 5+ as summary card image)")
     parser.add_argument("--compact-single", action="store_true", help="Post in compact single-post mode (only post 1 with graph and card images)")
+    parser.add_argument("--five-word", action="store_true", help="Post in 5-Word Mode")
     parser.add_argument("--move-to", type=str, default=os.path.join(script_dir, "stories", "live"), help="Folder to move successfully posted files to (default: bluesky_bot/stories/live)")
     parser.add_argument("--watch", action="store_true", help="Run in continuous daemon mode, watching the folder and posting any new files (default: False)")
     args = parser.parse_args()
+
 
     compact_val = False
     if args.compact_single:
@@ -227,7 +241,12 @@ def main():
                         for f in os.listdir(args.folder)
                         if (f.startswith("factcheck_") or f.startswith("roundup_")) and f.endswith(".json")
                     ]
+                    candidates = [
+                        c for c in candidates
+                        if is_five_word_file(c) == bool(args.five_word)
+                    ]
                     candidates.sort(key=safe_getmtime)
+
                     for full_path in candidates:
                         if full_path not in seen_files:
                             files_to_post.append(full_path)
@@ -272,7 +291,8 @@ def main():
                                     def custom_sleep(seconds):
                                         original_sleep(2.0 if seconds == 1 else seconds)
                                     time.sleep = custom_sleep
-                                    post_thread(client, cfg, live=args.live, compact=compact_val)
+                                    post_thread(client, cfg, live=args.live, compact=compact_val, five_word=args.five_word)
+
                                     success = True
                                 finally:
                                     time.sleep = original_sleep
@@ -362,6 +382,11 @@ def main():
                     files_to_post.append(path)
                 else:
                     print(f"Warning: File not found and skipped: {f}")
+            files_to_post = [
+                f for f in files_to_post
+                if is_five_word_file(f) == bool(args.five_word)
+            ]
+
         elif args.folder:
             if not os.path.exists(args.folder):
                 print(f"ERROR: Folder not found: {args.folder}")
@@ -372,8 +397,13 @@ def main():
                     for f in os.listdir(args.folder)
                     if (f.startswith("factcheck_") or f.startswith("roundup_")) and f.endswith(".json")
                 ]
+                candidates = [
+                    c for c in candidates
+                    if is_five_word_file(c) == bool(args.five_word)
+                ]
                 candidates.sort(key=safe_getmtime)
                 files_to_post.extend(candidates)
+
             except Exception as e:
                 print(f"ERROR: Failed to list and sort files in folder: {e}")
                 sys.exit(1)
@@ -419,7 +449,8 @@ def main():
                             def custom_sleep(seconds):
                                 original_sleep(2.0 if seconds == 1 else seconds)
                             time.sleep = custom_sleep
-                            post_thread(client, cfg, live=args.live, compact=compact_val)
+                            post_thread(client, cfg, live=args.live, compact=compact_val, five_word=args.five_word)
+
                             success = True
                         finally:
                             time.sleep = original_sleep

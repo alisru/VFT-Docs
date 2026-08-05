@@ -300,6 +300,8 @@ Even within a flawed or deceptive idea, there may be a kernel of truth or a shar
 
 Ideas are not static points on the map; they are dynamic forces with inherent trajectories. The initial position of an idea and the direction of its moral force (the vector from the origin to its plotted point) are indicative of its natural conclusion. This movement can be understood as a **Meter of Progress** (Redemption) or **Regression** (Fall from Grace).
 
+- **The Thermodynamic Engine of Idea Evolution (The Problem-Solution Cycle):** This process of identifying the "wrong" (evil) out of the "right" (good), and then identifying the "good" within that "evil" (the cycle of identifying problems and developing solutions), functions as a cognitive thermodynamic engine. When a problem is identified, it is rendered 100% visible at the $(-2, 2)$ point (active self-interest, tyranny, or extraction). In this state of maximum contrast, even the tiniest $(2, 2)$ solution or idea (active universal benefit, justice) becomes 100% visible and powerful in relative comparison, driving the evolutionary potential and movement of ideas toward resolution.
+
 - **The Path to Enlightenment (Progress & Redemption):** This is the trajectory of an idea evolving toward a more moral and constructive state. It is a process of refinement, where selfish interests are shed in favor of universal benefits. An idea on this path moves upward on the moral axis (+υ) and toward a balanced, constructive will. This is the natural conclusion for ideas that are fundamentally creative and seek harmony. Its logical endpoint is a state of True Enlightenment, where the idea benefits everyone through a balanced and thoughtful application of will.
 
 - **The Path to Nowhere (Regression & Fall from Grace):** This is the trajectory of an idea decaying into a more immoral and destructive state. It is a process of corruption, where a deceptive cover is stripped away to reveal a purely extractive or nihilistic core. An idea on this path moves downward on the moral axis (−υ) and toward extremes of will, becoming more forceful and deceptive. This is the natural conclusion for ideas rooted in lies and selfishness. Its logical endpoint is the Valley of Despair or the absolute immorality of the center point, where the idea offers nothing but destruction.
@@ -445,3 +447,9 @@ This section outlines a computational model for implementing the above framework
 4.  **Define Regression (Path to Nowhere):** A vector is on a path of regression if its trajectory, when extrapolated, moves towards the bottom-right quadrant or the origin. This is characterized by υ_t \< 0 and a tendency to move towards ψ_t \> 0. The logical conclusion is a state approaching the Greater Lie or the Nihilistic Singularity (0,0).
 
 5.  **Output:** Based on the initial vector F_t, classify the idea's trajectory as either "Progress/Redemption" or "Regression/Fall from Grace" and provide a projection of its logical endpoint within the Psochic Hegemony.
+
+6.  **Thermodynamic Potential (Evolutionary Drive):** Calculate the potential gradient ($\Delta E$) that drives the evolution of the idea from stasis to resolution.
+    *   Let the identified problem coordinate be $\vec{P} = (-2, 2)$ and the target solution coordinate be $\vec{S} = (2, 2)$.
+    *   The evolutionary potential difference is:
+        $$\Delta E = \|\vec{S} - \vec{P}\| = \sqrt{(2 - (-2))^2 + (2 - 2)^2} = 4.0$$
+    *   An idea's evolutionary force is proportional to its distance from the $(-2, 2)$ tyranny anchor, rendering even the smallest positive vector change highly visible in contrast.

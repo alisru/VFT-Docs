@@ -410,6 +410,21 @@
       </div>
     </div>
 
+    <!-- Theme Settings -->
+    <div class="side-section">
+      <div class="side-title">Theme Settings</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:11px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+          <span>Page Background:</span>
+          <input type="color" id="colorPageBg" value="#07080c" style="background:none; border:none; width:30px; height:20px; cursor:pointer;" />
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+          <span>Grid Card Background:</span>
+          <input type="color" id="colorCardBg" value="#0a0b0f" style="background:none; border:none; width:30px; height:20px; cursor:pointer;" />
+        </div>
+      </div>
+    </div>
+
     <!-- Axes legend -->
     <div class="side-section">
       <div class="side-title">Axes & Diagonal Scales</div>
@@ -723,7 +738,7 @@ function draw() {
   const marginY = (H - gridSize) / 2;
 
   ctx.clearRect(0, 0, W, H);
-  ctx.fillStyle = '#07080c'; // Subtle dark theme wrapper color
+  ctx.fillStyle = document.getElementById('colorPageBg')?.value || '#07080c'; // Dynamic theme wrapper color
   ctx.fillRect(0, 0, W, H);
 
   const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
@@ -791,7 +806,7 @@ function draw() {
 
   // ── DRAW THE CENTERED GRID SQUARE CARD ──
   ctx.save();
-  ctx.fillStyle = '#0a0b0f'; // Grid box card background
+  ctx.fillStyle = document.getElementById('colorCardBg')?.value || '#0a0b0f'; // Dynamic grid box card background
   ctx.beginPath();
   ctx.roundRect(marginX, marginY, gridSize, gridSize, 12 * dpr);
   ctx.fill();
@@ -805,16 +820,16 @@ function draw() {
   // 1. Radial gradients
   const [gCenterX, gCenterY] = modeRel ? toPixel(0.2, 0.2) : toPixel(1.2, 1.2);
   const gGrad = ctx.createRadialGradient(gCenterX, gCenterY, 0, gCenterX, gCenterY, gridSize * 0.9);
-  gGrad.addColorStop(0, 'rgba(59, 222, 132, 0.24)');
-  gGrad.addColorStop(0.5, 'rgba(59, 222, 132, 0.08)');
+  gGrad.addColorStop(0, 'rgba(59, 222, 132, 0.55)');
+  gGrad.addColorStop(0.5, 'rgba(59, 222, 132, 0.22)');
   gGrad.addColorStop(1, 'rgba(59, 222, 132, 0)');
   ctx.fillStyle = gGrad;
   ctx.fillRect(marginX, marginY, gridSize, gridSize);
 
   const [rCenterX, rCenterY] = modeRel ? toPixel(-2.2, -2.2) : toPixel(-1.2, -1.2);
   const rGrad = ctx.createRadialGradient(rCenterX, rCenterY, 0, rCenterX, rCenterY, gridSize * 0.9);
-  rGrad.addColorStop(0, 'rgba(240, 80, 96, 0.24)');
-  rGrad.addColorStop(0.5, 'rgba(240, 80, 96, 0.08)');
+  rGrad.addColorStop(0, 'rgba(240, 80, 96, 0.55)');
+  rGrad.addColorStop(0.5, 'rgba(240, 80, 96, 0.22)');
   rGrad.addColorStop(1, 'rgba(240, 80, 96, 0)');
   ctx.fillStyle = rGrad;
   ctx.fillRect(marginX, marginY, gridSize, gridSize);
@@ -879,11 +894,11 @@ function draw() {
     ctx.restore();
 
     // Scale names along the lines
-    const [pT1_x, pT1_y] = toPixel(1.7, 1.7);
-    const [pT2_x, pT2_y] = toPixel(0.5, 0.5);
+    const [pT1_x, pT1_y] = toPixel(1.3, 1.3);
+    const [pT2_x, pT2_y] = toPixel(1.9, 1.9);
     drawTextAlongLine(ctx, 'Scale of Truth and Progress ➔', pT1_x, pT1_y, pT2_x, pT2_y, -1, 'rgba(59, 222, 132, 0.85)', dpr);
-    const [pL3_x, pL3_y] = toPixel(1.7, -1.7);
-    const [pL4_x, pL4_y] = toPixel(0.5, -0.5);
+    const [pL3_x, pL3_y] = toPixel(1.3, -1.3);
+    const [pL4_x, pL4_y] = toPixel(1.9, -1.9);
     drawTextAlongLine(ctx, 'Scale of Lies and Regression ➔', pL3_x, pL3_y, pL4_x, pL4_y, -1, 'rgba(240, 80, 96, 0.85)', dpr);
   }
 
@@ -1108,39 +1123,69 @@ function draw() {
 
       ctx.restore();
     });
-
-    // ── DRAW CORNER LABELS ──
-    ctx.save();
-    ctx.font = `bold ${Math.round(11.5 * dpr)}px 'JetBrains Mono', monospace`;
-    ctx.textBaseline = 'middle';
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.45)'; // clean, semi-transparent white/grey labels
-
-    // Draw background halos
-    ctx.strokeStyle = '#0a0b0f';
-    ctx.lineWidth = 3.5 * dpr;
-    ctx.lineJoin = 'round';
-
-    // Productive (Top-Left)
-    ctx.textAlign = 'right';
-    ctx.strokeText('Productive', marginX - 10 * dpr, marginY - 12 * dpr);
-    ctx.fillText('Productive', marginX - 10 * dpr, marginY - 12 * dpr);
-
-    // Reductive (Top-Right)
-    ctx.textAlign = 'left';
-    ctx.strokeText('Reductive', marginX + gridSize + 10 * dpr, marginY - 12 * dpr);
-    ctx.fillText('Reductive', marginX + gridSize + 10 * dpr, marginY - 12 * dpr);
-
-    // Constructive (Bottom-Left)
-    ctx.textAlign = 'right';
-    ctx.strokeText('Constructive', marginX - 10 * dpr, marginY + gridSize + 16 * dpr);
-    ctx.fillText('Constructive', marginX - 10 * dpr, marginY + gridSize + 16 * dpr);
-
-    // Regressive (Bottom-Right)
-    ctx.textAlign = 'left';
-    ctx.strokeText('Regressive', marginX + gridSize + 10 * dpr, marginY + gridSize + 16 * dpr);
-    ctx.fillText('Regressive', marginX + gridSize + 10 * dpr, marginY + gridSize + 16 * dpr);
     ctx.restore();
+  }
 
+  // 7. Draw Minkowski Cones (Future Cone Top-Left, Past Cone Bottom-Right)
+  if (document.getElementById('showMinkowski') && document.getElementById('showMinkowski').checked) {
+    ctx.save();
+    const radius = gridSize * 0.707; // Reaches to the circumscribed circle
+
+    const angleTL = Math.atan2(marginY - cy, marginX - cx);
+    const angleBR = Math.atan2(marginY + gridSize - cy, marginX + gridSize - cx);
+    const halfOpening = Math.PI / 8; // 45 degrees total opening angle
+
+    // Future Light Cone (pointing TL)
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
+    ctx.closePath();
+
+    const futGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+    futGrad.addColorStop(0, 'rgba(59, 222, 132, 0.14)');
+    futGrad.addColorStop(1, 'rgba(59, 222, 132, 0.01)');
+    ctx.fillStyle = futGrad;
+    ctx.fill();
+
+    // Past Light Cone (pointing BR)
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
+    ctx.closePath();
+
+    const pastGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+    pastGrad.addColorStop(0, 'rgba(224, 64, 128, 0.14)');
+    pastGrad.addColorStop(1, 'rgba(224, 64, 128, 0.01)');
+    ctx.fillStyle = pastGrad;
+    ctx.fill();
+
+    // Dash outlines for the cones
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+    ctx.lineWidth = 1 * dpr;
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+
+    // Draw Future Cone outline
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
+    ctx.closePath();
+    ctx.stroke();
+
+    // Draw Past Cone outline
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
+    ctx.closePath();
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // Restore context to remove clipping mask for unclipped labels & points!
+  ctx.restore();
+
+  // ── DRAW ALL LABELS, MARKS & DATA NODES (Unclipped) ──
+  if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
     // ── DRAW EDGE NAMES ──
     ctx.save();
     ctx.font = `bold ${Math.round(8 * dpr)}px 'JetBrains Mono', monospace`;
@@ -1258,69 +1303,8 @@ function draw() {
       ctx.fillText(100 - pct, marginX + gridSize + 22 * dpr, ty);
     }
     ctx.restore();
-
-    ctx.restore();
   }
 
-  // 7. Draw Minkowski Cones (Future Cone Top-Left, Past Cone Bottom-Right)
-  if (document.getElementById('showMinkowski') && document.getElementById('showMinkowski').checked) {
-    ctx.save();
-    const radius = gridSize * 0.707; // Reaches to the circumscribed circle
-
-    const angleTL = Math.atan2(marginY - cy, marginX - cx);
-    const angleBR = Math.atan2(marginY + gridSize - cy, marginX + gridSize - cx);
-    const halfOpening = Math.PI / 8; // 45 degrees total opening angle
-
-    // Future Light Cone (pointing TL)
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
-    ctx.closePath();
-
-    const futGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
-    futGrad.addColorStop(0, 'rgba(59, 222, 132, 0.14)');
-    futGrad.addColorStop(1, 'rgba(59, 222, 132, 0.01)');
-    ctx.fillStyle = futGrad;
-    ctx.fill();
-
-    // Past Light Cone (pointing BR)
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
-    ctx.closePath();
-
-    const pastGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
-    pastGrad.addColorStop(0, 'rgba(224, 64, 128, 0.14)');
-    pastGrad.addColorStop(1, 'rgba(224, 64, 128, 0.01)');
-    ctx.fillStyle = pastGrad;
-    ctx.fill();
-
-    // Dash outlines for the cones
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
-    ctx.lineWidth = 1 * dpr;
-    ctx.setLineDash([4 * dpr, 4 * dpr]);
-
-    // Draw Future Cone outline
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
-    ctx.closePath();
-    ctx.stroke();
-
-    // Draw Past Cone outline
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
-    ctx.closePath();
-    ctx.stroke();
-
-    ctx.restore();
-  }
-
-  // Restore context to remove clipping mask for unclipped labels & points!
-  ctx.restore();
-
-  // ── DRAW ALL LABELS, MARKS & DATA NODES (Unclipped) ──
   const fs = Math.round(11 * dpr);
   const fsSmall = Math.round(9 * dpr);
   const labelFs = Math.round(11 * dpr);
@@ -1334,7 +1318,7 @@ function draw() {
     // Aligned inward ('left' for left side, 'right' for right side) so they never clip
     
     // Truth+ / Progress+ (Top-Left corner, above the card)
-    drawTextWithBackground(ctx, 'Truth+', marginX, marginY - 22 * dpr, labelFs, '#3bde84', true, 'left', 'bottom');
+    drawTextWithBackground(ctx, 'Truth+', marginX, marginY - 40 * dpr, labelFs, '#3bde84', true, 'left', 'bottom');
     drawTextWithBackground(ctx, '(Progress+)', marginX, marginY - 8 * dpr, subFs, 'rgba(59, 222, 132, 0.8)', false, 'left', 'bottom');
 
     // Truth− / Progress− (Bottom-Right corner, below the card)
@@ -1362,26 +1346,30 @@ function draw() {
 
     // 1. Column labels at the TOP of the grid box
     drawTextWithBackground(ctx, '← ADDITIVE', col1X, marginY - 32 * dpr, subFs, 'rgba(59, 222, 132, 0.75)', false, 'center', 'middle');
-    drawTextWithBackground(ctx, 'Active', col1X, marginY - 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
+    // drawTextWithBackground(ctx, 'Active', col1X, marginY - 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
 
-    drawTextWithBackground(ctx, 'Passive', col2X, marginY - 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
+    drawTextWithBackground(ctx, 'Active', col2X, marginY - 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
 
     drawTextWithBackground(ctx, 'SUBTRACTIVE →', col3X, marginY - 32 * dpr, subFs, 'rgba(240, 80, 96, 0.75)', false, 'center', 'middle');
-    drawTextWithBackground(ctx, 'Suppressive', col3X, marginY - 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
+    // drawTextWithBackground(ctx, 'Suppressive', col3X, marginY - 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
 
     // 2. Column labels at the BOTTOM of the grid box
-    drawTextWithBackground(ctx, 'Active', col1X, marginY + gridSize + 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
+    // drawTextWithBackground(ctx, 'Active', col1X, marginY + gridSize + 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
     drawTextWithBackground(ctx, '← ADDITIVE', col1X, marginY + gridSize + 32 * dpr, subFs, 'rgba(59, 222, 132, 0.75)', false, 'center', 'middle');
 
-    drawTextWithBackground(ctx, 'Passive', col2X, marginY + gridSize + 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
+    drawTextWithBackground(ctx, 'Suppressive', col2X, marginY + gridSize + 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
 
-    drawTextWithBackground(ctx, 'Suppressive', col3X, marginY + gridSize + 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
+    // drawTextWithBackground(ctx, 'Suppressive', col3X, marginY + gridSize + 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
     drawTextWithBackground(ctx, 'SUBTRACTIVE →', col3X, marginY + gridSize + 32 * dpr, subFs, 'rgba(240, 80, 96, 0.75)', false, 'center', 'middle');
 
-    // 3. Row labels on the LEFT side of the grid box card
-    drawTextWithBackground(ctx, 'Active', marginX - 22 * dpr, row1Y, labelFs, '#30c8e0', true, 'right', 'middle');
-    drawTextWithBackground(ctx, 'Passive', marginX - 22 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
-    drawTextWithBackground(ctx, 'Suppressive', marginX - 22 * dpr, row3Y, labelFs, '#30c8e0', true, 'right', 'middle');
+    // 3. Row labels on the LEFT and RIGHT side of the grid box card
+    // drawTextWithBackground(ctx, 'Active', marginX - 22 * dpr, row1Y, labelFs, '#30c8e0', true, 'right', 'middle');
+    drawTextWithBackground(ctx, 'Everyone', marginX - 22 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
+    drawTextWithBackground(ctx, 'No−One Else', marginX + gridSize + 86 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
+	
+    //drawTextWithBackground(ctx, 'N+', marginX, marginY - 22 * dpr, labelFs, '#3bde84', true, 'left', 'bottom');
+	
+    // drawTextWithBackground(ctx, 'Suppressive', marginX - 22 * dpr, row3Y, labelFs, '#30c8e0', true, 'right', 'middle');
 
     // 4. Grid numeric labels along the horizontal axis
     [2, 1, 0, -1, -2].forEach(tick => {
@@ -1396,17 +1384,10 @@ function draw() {
       const [,ty] = toPixel(0, tick);
       const val = modeRel ? (tick - 1) : tick;
       const label = val > 0 ? `+${val}ψ` : `${val}ψ`;
-      drawTextWithBackground(ctx, label, marginX - 8 * dpr, ty, fsSmall, 'rgba(200,205,232,0.5)', false, 'right', 'middle');
+      drawTextWithBackground(ctx, label,col2X, ty, fsSmall, 'rgba(200,205,232,0.5)', false, 'center', 'middle');
     });
 
-    // 6. Descriptive Will labels in right margin gutter
-    const activeWillY = modeRel ? toPixel(0, 0.5)[1] : toPixel(0, 1.5)[1];
-    const passiveWillY = modeRel ? toPixel(0, -1.0)[1] : toPixel(0, 0)[1];
-    const suppressiveWillY = modeRel ? toPixel(0, -2.5)[1] : toPixel(0, -1.5)[1];
 
-    drawTextWithBackground(ctx, 'Active-Active Will (Productive)', marginX + gridSize + 15 * dpr, activeWillY, fsSmall, 'rgba(59, 222, 132, 0.85)', true, 'left', 'middle');
-    drawTextWithBackground(ctx, 'Passive-Passive Will (Confusion)', marginX + gridSize + 15 * dpr, passiveWillY, fsSmall, 'rgba(200, 205, 232, 0.75)', true, 'left', 'middle');
-    drawTextWithBackground(ctx, 'Suppressive Will (Active-Passive)', marginX + gridSize + 15 * dpr, suppressiveWillY, fsSmall, 'rgba(48, 200, 224, 0.85)', true, 'left', 'middle');
 
     // 7. Axes Titles (positioned at a fixed 25px offset from the canvas boundaries to prevent overlays)
     // Horizontal Axis Title: υ Morality (Benefit)
@@ -1441,17 +1422,20 @@ function draw() {
     drawTextAlongLine(ctx, 'Hypersurface of Present Time ➔', h1x, h1y, h2x, h2y, 1, 'rgba(255, 255, 255, 0.65)', dpr);
   }
 
-  // Quadrant headers (drawn inside the grid box card bounds)
+  // Quadrant headers (drawn outside the grid box card bounds at their corners)
   const quadHeaders = [
-    { v: 1.8, psi: 1.85, header: 'PRODUCTIVE', sub: 'AIR · Agape', color: 'rgba(59,222,132,0.7)', align: 'left' },
-    { v:-1.8, psi: 1.85, header: 'REDUCTIVE', sub: 'FIRE · Ludus', color: 'rgba(240,80,96,0.7)', align: 'right' },
-    { v: 1.8, psi:-1.85, header: 'CONSTRUCTIVE', sub: 'WATER · Philia', color: 'rgba(48,200,224,0.7)', align: 'left' },
-    { v:-1.8, psi:-1.85, header: 'REGRESSIVE', sub: 'EARTH · Eros', color: 'rgba(224,64,128,0.7)', align: 'right' },
+    { x: marginX - 15 * dpr, y: marginY - 15 * dpr, header: 'Productive', sub: 'AIR - Agape', color: 'rgba(59, 222, 132, 0.75)', align: 'right', baseline: 'bottom' },
+    { x: marginX + gridSize + 15 * dpr, y: marginY - 15 * dpr, header: 'Reductive', sub: 'FIRE - Ludus', color: 'rgba(240, 80, 96, 0.75)', align: 'left', baseline: 'bottom' },
+    { x: marginX - 15 * dpr, y: marginY + gridSize + 15 * dpr, header: 'Constructive', sub: 'WATER - Philia', color: 'rgba(48, 200, 224, 0.75)', align: 'right', baseline: 'top' },
+    { x: marginX + gridSize + 15 * dpr, y: marginY + gridSize + 15 * dpr, header: 'Regressive', sub: 'EARTH - Eros', color: 'rgba(224, 64, 128, 0.75)', align: 'left', baseline: 'top' },
   ];
   quadHeaders.forEach(q => {
-    const [qx, qy] = toPixel(q.v, q.psi);
-    drawTextWithBackground(ctx, q.header, qx, qy, Math.round(9.5 * dpr), q.color, true, q.align, 'bottom');
-    drawTextWithBackground(ctx, q.sub, qx, qy + 4 * dpr, Math.round(8 * dpr), 'rgba(255,255,255,0.4)', false, q.align, 'top');
+    const headerBaseline = q.baseline;
+    const subBaseline = 'top';
+    const subOffset = (q.baseline === 'bottom') ? 4 * dpr : 14 * dpr;
+
+    drawTextWithBackground(ctx, q.header, q.x, q.y, Math.round(12.5 * dpr), q.color, true, q.align, headerBaseline);
+    drawTextWithBackground(ctx, q.sub, q.x, q.y + subOffset, Math.round(8.5 * dpr), 'rgba(255, 255, 255, 0.45)', false, q.align, subBaseline);
   });
 
   // Canonical Anchors
@@ -2102,6 +2086,16 @@ document.getElementById('modeRelative').addEventListener('change', () => {
   } else {
     clearReadout();
   }
+});
+
+// Color picker event listeners
+document.getElementById('colorPageBg').addEventListener('input', (e) => {
+  document.body.style.background = e.target.value;
+  draw();
+});
+document.getElementById('colorCardBg').addEventListener('input', (e) => {
+  document.documentElement.style.setProperty('--bg', e.target.value);
+  draw();
 });
 
 // Initial state updates for default point

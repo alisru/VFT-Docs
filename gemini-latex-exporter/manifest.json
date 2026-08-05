@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini LaTeX Docs Exporter",
+  "version": "1.0.0",
+  "description": "Export Gemini responses to Google Docs with clean, editable LaTeX text instead of fuzzy images.",
+  "permissions": [
+    "identity"
+  ],
+  "host_permissions": [
+    "https://gemini.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "content_gemini.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvqXErpFv7f54HjZwffnAZi6EiTpmuGG8qOiAjWNbYeHt7S4iKPTrOGw+T9phx2AfNbOc9+yHafmLp19j4J4rO45eToJkuT6Kmo9Xe+CjaPweBN2WHbbOkgFTWQmc8C8MUtJSRo0t9C8dJ+f+AQ3kGsKK11kWEPPPfLwqKV7nZyH1BNYDbSU2lf4QafR2Utjnf60c68Gb9W5+QUpPfG6aSS/rhb5O63l0oTr+jLzCJMpQ1n65P4qL9SkivN7wMEDzLfBNjfa4fsD/cH0yTeFd+89Uz9o5Cn5zDHnDJeNWIMuCHvYpsQsS3nv9pTwoax48wp9fJZVQpB9/OySnM+JMTQIDAQAB"
+}

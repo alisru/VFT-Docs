@@ -1,0 +1,69 @@
+[
+  {
+    "thinking": "Phase 1: Plane Analysis\nQ1 (WHO): P (1.0) - Stated (survivors, public) matches actual (survivors, public).\nQ2 (WHAT): P (1.0) - Failure modes (crash, fire, injuries) acknowledged.\nQ3 (WHERE): B (0.0) - No physical prediction.\nQ4 (WHY): P (1.0) - Narrative (miraculous survival) is honest.\nQ5 (HOW): P (1.0) - Causal chain (pilot skill, rescue) holds for survival.\nQ6 (CAUSE): P (1.0) - Origin chain (crash cause unknown, under investigation) acknowledged.\nQ7 (EFFECT): P (1.0) - Emotional payload (relief, awe) matches intent.\n\nZ-profile: [0, 0, 1, 0, 0, 0, 0]\nZ: 1\nV_Qn: All 1.0 (Q3 is 1.0 as P+F=0)\nR_net: 1.0\n\nPhase 2: Attractor Forces\nStated Claim:\nGG: S=1.0, O=0.0, N=0.0\nGE: S=0.0, O=1.0, N=0.0\nLG: S=0.0, O=0.0, N=0.0\nLE: S=0.0, O=1.0, N=0.0\nGP: S=1.0, O=0.0, N=0.0\nBP: S=0.0, O=1.0, N=0.0\n\nF_GG = (+1.0, +1.0)\nF_GE = (+1.0, +1.0)\nF_LG = (0.0, 0.0)\nF_LE = (+1.0, -1.0)\nF_GP = (+1.0, 0.0)\nF_BP = (+1.0, +1.0)\n\nSum F_i_u = 1.0 + 1.0 + 0.0 + 1.0 + 1.0 + 1.0 = 5.0\nSum S+O+N = 1+1+0+1+1+1 = 5.0\nclaim_u = 5.0 / 5.0 = 1.0\n\nF_GG_ψ = 1.0, F_GE_ψ = 1.0, F_LE_ψ = -1.0, F_BP_ψ = 1.0\nΨ_pos = {F_GG, F_GE, F_BP} -> F_pos = 1.0+1.0+1.0 = 3.0\nΨ_neg = {F_LE} -> F_neg = |-1.0| = 1.0\nF_pos >= F_neg, use Ψ_pos.\nsum(F_j_ψ) = 1.0+1.0+1.0 = 3.0\nsum(S_j+O_j+N_j) for Ψ_pos = 1+1+1 = 3.0\nclaim_psi = 3.0 / 3.0 = 1.0\nClaim Judgement: (+1.0, +1.0) — Greater Good\n\nActual Reality:\nForces are identical to Stated Claim as the reporting is accurate.\nreal_u = 1.0\nreal_psi = 1.0\nResulting Judgement: (+1.0, +1.0) — Greater Good\n\nPhase 3: Source Integrity\nΔH = ||(1.0, 1.0) - (1.0, 1.0)|| = 0.0 (Pass)\n\nPhase 4: Forensic Stress Test\nFake Maximiser: No. Stated goal (reporting survival) achieved.\nHelxis: No bait-and-switch. Beneficiary is clear.\n\nPath Name: Stasis into Grace.\n\nIntegrity Labels:\nclaim_rnet = 1.0 -> Absolute Truth\nreal_rnet = 1.0 -> Absolute Truth",
+    "id": "miracle_as_all_11_onboard_survive_harrowing_seaplane_crash_and_fire_in_puget_sounds_frigid_water",
+    "subject": "Miracle as All 11 Onboard Survive Harrowing Seaplane Crash and Fire in Puget Sound’s Frigid Water",
+    "link": "https://www.goodnewsnetwork.org/miracle-as-all-11-onboard-survive-harrowing-seaplane-crash-and-fire-in-puget-sounds-frigid-water/",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
+    "mode": "root",
+    "compact": true,
+    "posts": [
+      "A harrowing event, yet a beacon of hope. All 11 survived a seaplane crash and fire.\nMiracle as All 11 Onboard Survive Harrowing Seaplane Crash and Fire in Puget Sound’s Frigid Water\nEvidence: Survival, Acknowledged Risks, Greater Good\n#Aletheia #GoodNews 🌐",
+      "The article claims a miraculous survival story: all 11 people aboard a Kenmore Air seaplane survived a crash and fire in Puget Sound, despite severe conditions and injuries.\nStated Judgement: (+1.0, +1.0) — Greater Good",
+      "In reality, all 11 individuals did survive the crash, fire, and sinking, with some sustaining serious injuries. The pilot's actions and timely rescue efforts were crucial. The reporting is accurate.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
+      "Verdict: PASS — Stasis into Grace.\nThe stated narrative of miraculous survival aligns perfectly with the actual outcome, reflecting a genuine positive event.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 1)",
+      "A Kenmore Air seaplane, carrying 10 passengers and a pilot, crashed and caught fire in Puget Sound. Despite the severity, including the plane sinking, all 11 individuals were rescued alive, though some suffered significant injuries.",
+      "The Bright Side:\nDespite the terrifying nature of the crash, fire, and sinking in frigid waters, the collective effort of the pilot and first responders ensured no lives were lost, turning a potential tragedy into a story of resilience.",
+      "The Breakdown & Plane Error:\nThere is no plane error or bait-and-switch. The article accurately reports a factual event. The narrative aligns with the reality of a severe accident with a fortunate outcome, without misdirection.",
+      "Social Physics Analysis:\nThis event highlights the power of collective action and skill in averting disaster. The pilot's ability to land the plane, coupled with rapid emergency response, created a low-strain outcome from a high-strain situation, empowering survival.",
+      "The Trajectory: The Path of Stasis into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The narrative accurately reflects the positive outcome, showing no deviation from truth.",
+      "The Unavoidable Truth: Even in dire circumstances, human skill and timely aid can lead to miraculous survival.\nThe Unavoidable Lie: That such an event could ever be anything but harrowing, regardless of the outcome.",
+      "Alethekanon: This report demonstrates high fidelity between claim and reality. The facts of the crash, fire, and subsequent rescue are presented without distortion, acknowledging both the severity of the incident and the fortunate outcome. A rare instance of clear, unvarnished truth.",
+      "Awwthekanon: My heart goes out to all involved in this terrifying ordeal. The sheer relief that everyone survived, despite their injuries, is immense. It's a testament to the human spirit and the dedication of rescuers. May their recovery be swift and complete. 🌐 (Verified facts: crash, fire, 11 survivors, injuries, NTSB investigation.)",
+      "Brothekanon: Talk about dodging a bullet! Or, you know, a fiery seaplane crash. Seriously, though, huge props to the pilot and everyone who jumped in to help. That's some real-life hero stuff right there. Glad everyone made it out."
+    ],
+    "actors": [
+      "Kenmore Air",
+      "US Coast Guard",
+      "Marshall Burtt",
+      "David Gudgel"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.0,
+    "claim_z": 1,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Absolute Truth",
+    "category": "all",
+    "topic": "GoodNews",
+    "event": ""
+  }
+]

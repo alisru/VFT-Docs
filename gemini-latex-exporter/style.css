@@ -1,0 +1,73 @@
+/* Styles for Gemini LaTeX Exporter Chrome Extension */
+
+/* Custom styles for the cloned menu item in Gemini */
+.gemini-tex-exporter-btn {
+  border-left: 3px solid #8ab4f8 !important; /* Visual distinction from native exports */
+  font-weight: 500 !important;
+}
+
+.gemini-tex-exporter-btn:hover {
+  background-color: rgba(138, 180, 248, 0.08) !important;
+}
+
+/* Floating custom toast on Gemini Web interface */
+.gemini-tex-toast {
+  position: fixed;
+  bottom: -100px; /* Initially hidden below screen */
+  left: 24px;
+  z-index: 10000;
+  opacity: 0;
+  
+  /* Glassmorphism theme */
+  background: rgba(32, 33, 36, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f1f3f4;
+  
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  pointer-events: none;
+  
+  /* Slide-up transition */
+  transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15), opacity 0.3s ease;
+}
+
+/* Toast status colors */
+.gemini-tex-toast-info {
+  border-left: 4px solid #8ab4f8;
+}
+
+.gemini-tex-toast-success {
+  border-left: 4px solid #81c995;
+}
+
+.gemini-tex-toast-error {
+  border-left: 4px solid #f28b82;
+}
+
+/* Toast shown state */
+.gemini-tex-toast.gemini-tex-toast-show {
+  bottom: 24px;
+  opacity: 1;
+}
+
+.gemini-tex-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gemini-tex-toast-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gemini-tex-toast-text {
+  font-weight: 500;
+}

@@ -2,6 +2,19 @@ import os
 import sys
 import subprocess
 import re
+import json
+
+
+# Redirect stdout and stderr to dummy writers if running under pythonw.exe (where they are None)
+# to prevent prints, warnings, and library logs from crashing the application.
+if sys.stdout is None or sys.stderr is None:
+    class DummyWriter:
+        def write(self, *args, **kwargs): pass
+        def flush(self, *args, **kwargs): pass
+    if sys.stdout is None:
+        sys.stdout = DummyWriter()
+    if sys.stderr is None:
+        sys.stderr = DummyWriter()
 
 # Self-relaunch inside virtual environment if not already running there
 if sys.platform == "win32":
@@ -392,17 +405,19 @@ class AletheiaLauncherApp:
 
         self.lbl_hud_failed = tk.Label(inner, text="❌ Failed: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
         self.lbl_hud_failed.pack(side=tk.LEFT, padx=(0, 20))
-
         self.lbl_hud_queue = tk.Label(inner, text="📥 Queue: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
         self.lbl_hud_queue.pack(side=tk.LEFT)
 
     def refresh_hud_stats(self):
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        bot_dir = os.path.join(script_dir, "bluesky_bot")
+        
         # 1. Parse env vars
         env = {}
-        env_path = "bluesky_bot/.env"
+        env_path = os.path.join(bot_dir, ".env")
         if os.path.exists(env_path):
             try:
-                with open(env_path, "r") as f:
+                with open(env_path, "r", encoding="utf-8") as f:
                     for line in f:
                         line = line.strip()
                         if line and not line.startswith("#") and "=" in line:
@@ -419,14 +434,14 @@ class AletheiaLauncherApp:
         draft_count = 0
         fail_count = 0
         
-        live_dir = "bluesky_bot/stories/live"
+        live_dir = os.path.join(bot_dir, "stories", "live")
         if os.path.exists(live_dir):
             try:
                 live_count = len([f for f in os.listdir(live_dir) if f.endswith(".json")])
             except Exception:
                 pass
                 
-        stories_dir = "bluesky_bot/stories"
+        stories_dir = os.path.join(bot_dir, "stories")
         if os.path.exists(stories_dir):
             try:
                 # Exclude helper config files like index.json, filtered_candidates.json, harvested_candidates.json
@@ -436,8 +451,8 @@ class AletheiaLauncherApp:
                 ])
             except Exception:
                 pass
-
-        fail_dir = "bluesky_bot/stories/fail"
+ 
+        fail_dir = os.path.join(bot_dir, "stories", "fail")
         if os.path.exists(fail_dir):
             try:
                 fail_count = len([f for f in os.listdir(fail_dir) if f.endswith(".json")])
@@ -458,18 +473,24 @@ class AletheiaLauncherApp:
         self.lbl_hud_live.config(text=f"📂 Live: {live_count}", fg=ACCENT_CYAN)
         self.lbl_hud_drafts.config(text=f"📝 Drafts: {draft_count}", fg=WARNING_COLOR)
         self.lbl_hud_failed.config(text=f"❌ Failed: {fail_count}", fg=DANGER_COLOR)
-
+ 
         # Count harvested stories buffer (queue)
         queue_count = 0
-        queue_path = "bluesky_bot/harvested_candidates.json"
+        queue_path = os.path.join(bot_dir, "harvested_candidates.json")
         if os.path.exists(queue_path):
             try:
                 with open(queue_path, "r", encoding="utf-8") as f:
                     q_data = json.load(f)
                     if isinstance(q_data, list):
                         queue_count = len(q_data)
-            except Exception:
-                pass
+            except Exception as e:
+                import traceback
+                try:
+                    with open(os.path.join(bot_dir, "hud_error.txt"), "w", encoding="utf-8") as ef:
+                        ef.write(f"Error reading queue: {e}\n")
+                        traceback.print_exc(file=ef)
+                except Exception:
+                    pass
         self.lbl_hud_queue.config(text=f"📥 Queue: {queue_count}", fg=SUCCESS_COLOR)
 
     def create_actions_card(self, parent):
@@ -554,19 +575,19 @@ class AletheiaLauncherApp:
 
         self.val_search = tk.BooleanVar(value=False)
         self.chk_search = ttk.Checkbutton(grid_frame, text="Enable Google Search Grounding", variable=self.val_search)
-        self.chk_search.grid(row=6, column=3, columnspan=2, sticky="w", pady=3)
+        self.chk_search.grid(row=6, column=3, columnspan=3, sticky="w", pady=3)
 
         self.val_compact = tk.BooleanVar(value=False)
-        self.chk_compact = ttk.Checkbutton(grid_frame, text="Compact Thread Mode", variable=self.val_compact)
-        self.chk_compact.grid(row=6, column=5, columnspan=1, sticky="w", pady=3, padx=(0, 10))
+        self.chk_compact = ttk.Checkbutton(grid_frame, text="Enable Compact Mode", variable=self.val_compact)
+        self.chk_compact.grid(row=7, column=1, columnspan=3, sticky="w", pady=3)
 
-        self.val_compact_single = tk.BooleanVar(value=False)
-        self.chk_compact_single = ttk.Checkbutton(grid_frame, text="Compact Single Mode", variable=self.val_compact_single)
-        self.chk_compact_single.grid(row=6, column=6, columnspan=1, sticky="w", pady=3)
+        self.val_five_word = tk.BooleanVar(value=False)
+        self.chk_five_word = ttk.Checkbutton(grid_frame, text="Enable 5-Word Mode", variable=self.val_five_word)
+        self.chk_five_word.grid(row=7, column=4, columnspan=2, sticky="w", pady=3)
 
-        tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=7, column=0, sticky="w", pady=3, padx=(0, 5))
+        tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=8, column=0, sticky="w", pady=3, padx=(0, 5))
         batch_size_frame = tk.Frame(grid_frame, bg=CARD_BG)
-        batch_size_frame.grid(row=7, column=1, columnspan=5, sticky="w", pady=3)
+        batch_size_frame.grid(row=8, column=1, columnspan=5, sticky="w", pady=3)
         self.batch_size_var = tk.StringVar(value="1")
         r1 = ttk.Radiobutton(batch_size_frame, text="1 at a time", variable=self.batch_size_var, value="1", style="TRadiobutton")
         r1.pack(side=tk.LEFT, padx=(0, 15))
@@ -747,15 +768,20 @@ class AletheiaLauncherApp:
 
         self.val_watch = tk.BooleanVar(value=False)
         self.chk_watch = ttk.Checkbutton(grid_frame, text="Continuous Watch Mode", variable=self.val_watch)
-        self.chk_watch.grid(row=0, column=4, sticky="w", pady=3, padx=(0, 20))
+        self.chk_watch.grid(row=1, column=0, columnspan=2, sticky="w", pady=6)
 
         self.val_post_compact = tk.BooleanVar(value=False)
         self.chk_post_compact = ttk.Checkbutton(grid_frame, text="Post Compact Thread", variable=self.val_post_compact)
-        self.chk_post_compact.grid(row=0, column=5, sticky="w", pady=3, padx=(0, 20))
+        self.chk_post_compact.grid(row=1, column=2, columnspan=1, sticky="w", pady=6)
 
         self.val_post_compact_single = tk.BooleanVar(value=False)
         self.chk_post_compact_single = ttk.Checkbutton(grid_frame, text="Post Compact Single", variable=self.val_post_compact_single)
-        self.chk_post_compact_single.grid(row=0, column=6, sticky="w", pady=3)
+        self.chk_post_compact_single.grid(row=1, column=3, columnspan=1, sticky="w", pady=6)
+
+        self.val_post_five_word = tk.BooleanVar(value=False)
+        self.chk_post_five_word = ttk.Checkbutton(grid_frame, text="Post 5-Word Mode", variable=self.val_post_five_word)
+        self.chk_post_five_word.grid(row=1, column=4, columnspan=2, sticky="w", pady=6)
+
 
         self.btn_run_live = tk.Button(
             inner, text="Run Pre-Flight & Live Post Scheduler", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
@@ -1004,8 +1030,8 @@ class AletheiaLauncherApp:
         if self.val_compact.get():
             args.append("--compact")
 
-        if self.val_compact_single.get():
-            args.append("--compact-single")
+        if self.val_five_word.get():
+            args.append("--five-word")
 
         if self.batch_size_var.get():
             args.extend(["--chunk-size", self.batch_size_var.get()])
@@ -1029,10 +1055,13 @@ class AletheiaLauncherApp:
                 # Step 1: Pre-flight validation
                 self.log_post("\n> Running Pre-Flight Validation...\n")
                 val_args = [python_bin, "-u", "bluesky_bot/validate_batch.py"]
-                if self.val_post_compact_single.get():
+                if self.val_post_five_word.get():
+                    val_args.append("--five-word")
+                elif self.val_post_compact_single.get():
                     val_args.append("--compact-single")
                 elif self.val_post_compact.get():
                     val_args.append("--compact")
+
                 val_proc = subprocess.Popen(
                     val_args,
                     stdout=subprocess.PIPE,
@@ -1054,10 +1083,13 @@ class AletheiaLauncherApp:
                 self.log_post("\n> Validation passed! Scheduling live batch posting...\n")
                 args = [python_bin, "-u", "bluesky_bot/post_batch.py", "--live"]
                 
-                if self.val_post_compact_single.get():
+                if self.val_post_five_word.get():
+                    args.append("--five-word")
+                elif self.val_post_compact_single.get():
                     args.append("--compact-single")
                 elif self.val_post_compact.get():
                     args.append("--compact")
+
                 
                 min_delay = self.ent_min_delay.get().strip()
                 if min_delay:
@@ -1092,8 +1124,17 @@ class AletheiaLauncherApp:
         threading.Thread(target=posting_flow, daemon=True).start()
 
 if __name__ == "__main__":
-    # Ensure correct working directory context
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    root = tk.Tk()
-    app = AletheiaLauncherApp(root)
-    root.mainloop()
+    try:
+        # Ensure correct working directory context
+        os.chdir(os.path.dirname(os.path.abspath(__file__)))
+        root = tk.Tk()
+        app = AletheiaLauncherApp(root)
+        root.mainloop()
+    except Exception as e:
+        import traceback
+        try:
+            with open("bluesky_bot/launch_debug.txt", "a", encoding="utf-8") as lf:
+                lf.write(f"--- Main execution crash: {e} ---\n")
+                traceback.print_exc(file=lf)
+        except Exception:
+            pass

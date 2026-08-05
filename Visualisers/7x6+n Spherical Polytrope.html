@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7x6+n Spherical Polytrope (Bounded by 2c)</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #050508;
+            color: #eeeeee;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+        #ui-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(10, 10, 12, 0.95);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+            z-index: 10;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.05rem;
+            color: #ffffff;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        .slider-group {
+            margin-bottom: 15px;
+        }
+        .slider-group label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+            color: #ccc;
+        }
+        .axis-label {
+            font-weight: bold;
+            color: #fff;
+        }
+        .sub-label {
+            font-size: 0.65rem;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+        }
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+            background: #222;
+        }
+        .description {
+            font-size: 0.75rem;
+            color: #999;
+            line-height: 1.4;
+            margin-top: 20px;
+            border-top: 1px solid #333;
+            padding-top: 10px;
+        }
+        #legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(10, 10, 12, 0.8);
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            pointer-events: none;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .color-box {
+            width: 12px;
+            height: 12px;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ui-panel">
+        <h2>Spherical Q-Tensor Limit (t=0 to t=2)</h2>
+        
+        <!-- Q1 Driver -->
+        <div class="slider-group">
+            <label for="q1Slider">
+                <span class="axis-label">Q1: Meta-Physical (WHO)</span>
+                <span id="q1Val">1.00</span>
+            </label>
+            <div class="sub-label"><span>Angular Driver (Δ Vector)</span></div>
+            <input type="range" id="q1Slider" min="0" max="3" step="0.01" value="1.0">
+        </div>
+
+        <hr style="border-color: #222; margin: 15px 0;">
+
+        <!-- X Axis: Body -->
+        <div class="slider-group">
+            <label for="xSlider">
+                <span class="axis-label">Lateral Body Axis (X)</span>
+                <span id="xVal">0.00</span>
+            </label>
+            <div class="sub-label">
+                <span>Q3: Physical (WHERE)</span>
+                <span>Q2: Possible (WHAT)</span>
+            </div>
+            <input type="range" id="xSlider" min="-1" max="1" step="0.01" value="0">
+        </div>
+
+        <!-- Y Axis: Mind -->
+        <div class="slider-group">
+            <label for="ySlider">
+                <span class="axis-label">Longitudinal Mind Axis (Y)</span>
+                <span id="yVal">0.00</span>
+            </label>
+            <div class="sub-label">
+                <span>Q5: Logical (HOW)</span>
+                <span>Q4: Lyrical (WHY)</span>
+            </div>
+            <input type="range" id="ySlider" min="-1" max="1" step="0.01" value="0">
+        </div>
+
+        <!-- Z Axis: Soul -->
+        <div class="slider-group">
+            <label for="zSlider">
+                <span class="axis-label">Vertical Soul Axis (Z)</span>
+                <span id="zVal">0.00</span>
+            </label>
+            <div class="sub-label">
+                <span>Q7: Emotive (EFFECT)</span>
+                <span>Q6: Historical (CAUSE)</span>
+            </div>
+            <input type="range" id="zSlider" min="-1" max="1" step="0.01" value="0">
+        </div>
+        
+        <div class="description">
+            The +n dimension is remapped from an infinite line to a spherical angular component centered at 0c. The vector expands outwards to the 2c boundary (the black hole limit). The 7 layers represent the connected interrogatives of the Q-tensor array confined within this volume.
+        </div>
+    </div>
+
+    <div id="legend">
+        <div class="legend-item">
+            <div class="color-box" style="border: 1px solid #fff; background: transparent;"></div>
+            <span>0c (Origin / t=0)</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="border: 1px solid #00ff88; background: rgba(0, 255, 136, 0.1);"></div>
+            <span>1c (Physical Shell / t=1)</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background: #111; border: 1px solid #444;"></div>
+            <span>2c (Black Hole Limit / t=2)</span>
+        </div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script>
+        // UI Bindings
+        const q1Slider = document.getElementById('q1Slider');
+        const xSlider = document.getElementById('xSlider');
+        const ySlider = document.getElementById('ySlider');
+        const zSlider = document.getElementById('zSlider');
+        
+        const q1Val = document.getElementById('q1Val');
+        const xVal = document.getElementById('xVal');
+        const yVal = document.getElementById('yVal');
+        const zVal = document.getElementById('zVal');
+
+        const sliders = [
+            { el: q1Slider, text: q1Val },
+            { el: xSlider, text: xVal },
+            { el: ySlider, text: yVal },
+            { el: zSlider, text: zVal }
+        ];
+
+        sliders.forEach(slider => {
+            slider.el.addEventListener('input', () => {
+                let val = parseFloat(slider.el.value);
+                slider.text.textContent = val > 0 ? "+" + val.toFixed(2) : val.toFixed(2);
+                if (slider.el === q1Slider) slider.text.textContent = val.toFixed(2);
+            });
+        });
+
+        // Initialize WebGL Scene
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x050508, 0.01);
+
+        const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 15, 45);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+
+        // Illumination
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+        scene.add(ambientLight);
+
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
+        dirLight.position.set(20, 30, 20);
+        scene.add(dirLight);
+
+        // Constants mapping to the schema (0c -> 1c -> 2c)
+        const R_MAX = 20.0; // The 2c boundary (t=2)
+        const R_MID = 10.0; // The 1c boundary (t=1)
+
+        // Generate the 1c Boundary (The Physical / Light Band threshold)
+        const boundary1cGeo = new THREE.SphereGeometry(R_MID, 32, 32);
+        const boundary1cMat = new THREE.MeshBasicMaterial({
+            color: 0x00ff88,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.1
+        });
+        const boundary1cMesh = new THREE.Mesh(boundary1cGeo, boundary1cMat);
+        scene.add(boundary1cMesh);
+
+        // Generate the 2c Boundary (The Black Hole Limit)
+        const boundary2cGeo = new THREE.SphereGeometry(R_MAX, 64, 64);
+        const boundary2cMat = new THREE.MeshPhongMaterial({
+            color: 0x000000,
+            emissive: 0x0a0a0c,
+            transparent: true,
+            opacity: 0.6,
+            side: THREE.BackSide,
+            depthWrite: false
+        });
+        const boundary2cMesh = new THREE.Mesh(boundary2cGeo, boundary2cMat);
+        scene.add(boundary2cMesh);
+
+        // Geometry Setup: 7-Sheeted Structure
+        const layers = 7;
+        const internalFolds = 6;
+        const segmentsU = 300; // Resolution from origin to R_MAX
+        const segmentsV = 16;  // Cross-section resolution of the vector
+
+        const layerColors = [
+            0xff0000, // Who
+            0xff7f00, // What
+            0xffff00, // Where
+            0x00ff00, // Why
+            0x0000ff, // How
+            0x4b0082, // Cause
+            0x8b00ff  // Effect
+        ];
+
+        const geometries = [];
+
+        for(let i = 0; i < layers; i++) {
+            const geometry = new THREE.BufferGeometry();
+            const totalVertices = (segmentsU + 1) * (segmentsV + 1);
+            const positions = new Float32Array(totalVertices * 3);
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            const indices = [];
+            for (let u = 0; u < segmentsU; u++) {
+                for (let v = 0; v < segmentsV; v++) {
+                    const a = u * (segmentsV + 1) + v;
+                    const b = u * (segmentsV + 1) + v + 1;
+                    const c = (u + 1) * (segmentsV + 1) + v;
+                    const d = (u + 1) * (segmentsV + 1) + v + 1;
+                    indices.push(a, b, d);
+                    indices.push(a, d, c);
+                }
+            }
+            geometry.setIndex(indices);
+
+            const material = new THREE.MeshPhongMaterial({
+                color: layerColors[i],
+                emissive: new THREE.Color(layerColors[i]).multiplyScalar(0.3),
+                shininess: 100,
+                transparent: true,
+                opacity: 0.85,
+                side: THREE.FrontSide
+            });
+
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+            geometries.push(geometry);
+        }
+
+        // Core Mathematical Function mapping the vector to the Cartesian and Spherical limits
+        function calculateBasePosition(u, layer, forwardPhase, q1Delta, latX, lonY, vertZ) {
+            // u is the fraction from t=0 (0c) to t=2 (2c), mapped 0.0 to 1.0
+            const R = u * R_MAX; 
+            
+            const layerPhaseOffset = (layer / layers) * Math.PI * 2;
+            
+            // The +n dimension acting as an angular component, driven by Q1
+            const theta = u * Math.PI * 8.0 * q1Delta + layerPhaseOffset + forwardPhase;
+            
+            // Spherical volume filling to prevent it from remaining a flat disc
+            // Modulated by the Mind Axis (Y) to push the logic/lyricism vertically
+            const phi = Math.PI / 2 + Math.sin(u * Math.PI * 4 + layerPhaseOffset) * (0.8 + lonY * 0.5);
+
+            // Convert raw spherical coordinates to standard Cartesian relative to the center
+            let bx = R * Math.sin(phi) * Math.cos(theta);
+            let by = R * Math.cos(phi);
+            let bz = R * Math.sin(phi) * Math.sin(theta);
+
+            // Apply 42-Structure Dimensional Tensors
+            bx *= (1.0 + latX * 0.4); // Body Axis expands/contracts width
+            by *= (1.0 + lonY * 0.4); // Mind Axis expands/contracts height
+            bz *= (1.0 + vertZ * 0.4); // Soul Axis expands/contracts depth
+
+            return new THREE.Vector3(bx, by, bz);
+        }
+
+        function updateGeometries(time) {
+            const q1Delta = parseFloat(q1Slider.value);
+            const latX = parseFloat(xSlider.value);
+            const lonY = parseFloat(ySlider.value);
+            const vertZ = parseFloat(zSlider.value);
+
+            // Time flow driving the +n angle
+            const forwardPhase = time * 0.8;
+
+            for (let layer = 0; layer < layers; layer++) {
+                const posArray = geometries[layer].attributes.position.array;
+                let index = 0;
+                
+                const layerPhaseOffset = (layer / layers) * Math.PI * 2;
+
+                for (let i = 0; i <= segmentsU; i++) {
+                    const u = i / segmentsU; 
+                    
+                    // Fetch current base coordinate and a coordinate slightly ahead to calculate tangent
+                    const P = calculateBasePosition(u, layer, forwardPhase, q1Delta, latX, lonY, vertZ);
+                    const P_next = calculateBasePosition(u + 0.001, layer, forwardPhase, q1Delta, latX, lonY, vertZ);
+
+                    // Calculate the Frenet-Serret frame to accurately draw the vector tube
+                    const Tangent = new THREE.Vector3().subVectors(P_next, P).normalize();
+                    const UP = new THREE.Vector3(0, 1, 0);
+                    let Normal = new THREE.Vector3().crossVectors(UP, Tangent).normalize();
+                    
+                    // Singularity protection at the poles
+                    if (Normal.lengthSq() < 0.001) {
+                        Normal.set(1, 0, 0);
+                    }
+                    const Binormal = new THREE.Vector3().crossVectors(Tangent, Normal).normalize();
+
+                    // Tube thickness increases as it approaches the 2c limit
+                    let baseRadius = 0.1 + (u * 0.8);
+                    
+                    // 6-fold internal rippling to compactify the topological logic
+                    const internalFoldDistortion = Math.sin(u * Math.PI * 2 * internalFolds + layerPhaseOffset - time * 2) * 0.15;
+                    baseRadius += internalFoldDistortion;
+
+                    for (let j = 0; j <= segmentsV; j++) {
+                        const v = (j / segmentsV) * Math.PI * 2;
+
+                        const tubeX = Math.cos(v) * baseRadius;
+                        const tubeY = Math.sin(v) * baseRadius;
+
+                        const finalX = P.x + Normal.x * tubeX + Binormal.x * tubeY;
+                        const finalY = P.y + Normal.y * tubeX + Binormal.y * tubeY;
+                        const finalZ = P.z + Normal.z * tubeX + Binormal.z * tubeY;
+
+                        posArray[index++] = finalX;
+                        posArray[index++] = finalY;
+                        posArray[index++] = finalZ;
+                    }
+                }
+                geometries[layer].attributes.position.needsUpdate = true;
+                geometries[layer].computeVertexNormals();
+            }
+        }
+
+        const clock = new THREE.Clock();
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const elapsedTime = clock.getElapsedTime();
+            
+            updateGeometries(elapsedTime);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        window.onload = animate;
+    </script>
+</body>
+</html>

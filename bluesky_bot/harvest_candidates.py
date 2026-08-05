@@ -297,6 +297,8 @@ if os.path.exists(harvested_history_path):
     except Exception as e:
         print(f"Warning: Failed to load harvested history: {e}")
 
+seen_evaluated_urls = set()
+
 bot_stories_dir = os.path.join(bot_dir, 'stories')
 scan_dirs = [
     bot_stories_dir,
@@ -318,6 +320,7 @@ for scan_dir in scan_dirs:
                 if url:
                     url_clean = normalize_url(url)
                     seen_historical_urls.add(url_clean)
+                    seen_evaluated_urls.add(url_clean)
                     try:
                         host = urllib.parse.urlparse(url_clean).hostname
                         if host:
@@ -351,7 +354,7 @@ if os.path.exists(queue_path):
             if isinstance(data, list):
                 for c in data:
                     url = c.get("url")
-                    if url and normalize_url(url) in seen_historical_urls:
+                    if url and normalize_url(url) in seen_evaluated_urls:
                         continue
                     existing_queue.append(c)
                     if url:
@@ -378,8 +381,14 @@ existing_rss_count = sum(1 for c in existing_queue if "bsky.app" not in c.get("u
 existing_bsky_count = len(existing_queue) - existing_rss_count
 
 # Adjust targets based on existing queue size to top-up
-TARGET_RSS = max(0, TARGET_RSS - existing_rss_count)
-TARGET_BSKY = max(0, TARGET_BSKY - existing_bsky_count)
+# Prioritize clearing the existing queue first: if queue is non-empty, bypass scraping new ones.
+if len(existing_queue) > 0:
+    print(f"Queue is not empty ({len(existing_queue)} items). Bypassing new harvesting to clear queue first.")
+    TARGET_RSS = 0
+    TARGET_BSKY = 0
+else:
+    TARGET_RSS = max(0, TARGET_RSS - existing_rss_count)
+    TARGET_BSKY = max(0, TARGET_BSKY - existing_bsky_count)
 print(f"Top-up targets: RSS={TARGET_RSS} (needed), Bluesky={TARGET_BSKY} (needed)")
 
 # --- 1. DYNAMIC STORY-LEVEL DE-DUPLICATION HEURISTIC ---

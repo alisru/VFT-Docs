@@ -772,6 +772,8 @@
                 });
             }
 
+            const tendrilCount = Math.floor(3 + Math.random() * 4);
+
             return {
                 id: 'cell_' + Math.random().toString(36).substr(2, 9),
                 name: name,
@@ -801,7 +803,32 @@
                 currentNeedTarget: 'dietFood',
                 sampledField: { good: 0, bad: 0, truth: 0, lie: 0 },
                 trail: [],
-                logs: [`Spawned Cell at (${u.toFixed(1)}, ${psi.toFixed(1)})`]
+                logs: [`Spawned Cell at (${u.toFixed(1)}, ${psi.toFixed(1)})`],
+
+                // ---- GENETICS v0.1 ----
+                genetics: {
+                    tendrils: {
+                        count:         tendrilCount,
+                        maxLength:     40 + Math.random() * 60,
+                        passiveSpread: 0.4 + Math.random() * 0.5,
+                        growthRate:    0.6 + Math.random() * 0.8,
+                        affinity: {
+                            truth: (climateIdentity === 'air' || climateIdentity === 'earth') ? 0.8 : 0.3,
+                            lie:   (climateIdentity === 'fire' || climateIdentity === 'water') ? 0.8 : 0.3,
+                            good:  (climateIdentity === 'air' || climateIdentity === 'water') ? 0.7 : 0.2,
+                            bad:   (climateIdentity === 'fire' || climateIdentity === 'earth') ? 0.7 : 0.2,
+                        }
+                    }
+                },
+
+                // ---- TENDRILS (live state, initialised from genetics) ----
+                tendrils: Array.from({ length: tendrilCount }, (_, i) => ({
+                    angle:       (i / tendrilCount) * Math.PI * 2,
+                    length:      0,
+                    tipX:        px,
+                    tipY:        py,
+                    extracting:  null
+                }))
             };
         }
 
@@ -933,17 +960,26 @@
                 };
 
                 // AMBIENT CONTINUOUS FIELD GRAZING (Infinite/Constant Fields)
+                // Each attractor emits its native resource pair to any cell in range.
+                // The field radiates what it IS — actor metabolism handles the rest.
                 attractors.forEach(att => {
                     const dist = Math.sqrt((cell.px - uToPx(att.u)) ** 2 + (cell.py - psiToPy(att.psi)) ** 2);
                     if (dist < att.radius) {
-                        const grazeAmt = 4.0 * delta;
+                        const depth  = 1 - dist / att.radius; // deeper = more grazing
+                        const grazeAmt = 4.0 * depth * delta;
 
-                        if (cell.u >= 0) { // Good preference / Air / Water
-                            if (att.type === 'badLie' || att.type === 'badTruth') cell.pocket.lie = Math.min(100, cell.pocket.lie + grazeAmt);
-                            else cell.pocket.good = Math.min(100, cell.pocket.good + grazeAmt * 0.5);
-                        } else { // Bad preference / Fire / Earth
-                            if (att.type === 'goodTruth' || att.type === 'goodLie') cell.pocket.truth = Math.min(100, cell.pocket.truth + grazeAmt);
-                            else cell.pocket.bad = Math.min(100, cell.pocket.bad + grazeAmt * 0.5);
+                        if (att.type === 'goodTruth') {
+                            cell.pocket.good  = Math.min(100, cell.pocket.good  + grazeAmt);
+                            cell.pocket.truth = Math.min(100, cell.pocket.truth + grazeAmt);
+                        } else if (att.type === 'badLie') {
+                            cell.pocket.bad   = Math.min(100, cell.pocket.bad   + grazeAmt);
+                            cell.pocket.lie   = Math.min(100, cell.pocket.lie   + grazeAmt);
+                        } else if (att.type === 'goodLie') {
+                            cell.pocket.good  = Math.min(100, cell.pocket.good  + grazeAmt);
+                            cell.pocket.lie   = Math.min(100, cell.pocket.lie   + grazeAmt);
+                        } else if (att.type === 'badTruth') {
+                            cell.pocket.bad   = Math.min(100, cell.pocket.bad   + grazeAmt);
+                            cell.pocket.truth = Math.min(100, cell.pocket.truth + grazeAmt);
                         }
                     }
                 });
@@ -992,19 +1028,141 @@
                 cell.vx += repulsionX;
                 cell.vy += repulsionY;
 
-                // TRUTH STARVATION & FIRE BODY DECAY IN FIRE/EARTH DOMAIN
-                const isFireOrEarthDomain = cell.u < 0;
-                if (isFireOrEarthDomain && cell.pocket.truth <= 0) {
-                    cell.cores.airGoodTruth = Math.max(0, cell.cores.airGoodTruth - 3.0 * delta);
-                    cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 3.0 * delta);
+                // ==============================================================
+                // TENDRIL UPDATE — passive spread + active affinity bend
+                // ==============================================================
+                const gen = cell.genetics.tendrils;
+                cell.tendrils.forEach((t, ti) => {
+                    // --- Passive base angle: evenly spaced around body ---
+                    const passiveAngle = (ti / cell.tendrils.length) * Math.PI * 2;
+
+                    // --- Active component: bend toward best affinity attractor ---
+                    let bestScore = -Infinity;
+                    let bestAngle = passiveAngle;
+                    attractors.forEach(att => {
+                        const attPx = uToPx(att.u);
+                        const attPy = psiToPy(att.psi);
+                        const dx = attPx - cell.px;
+                        const dy = attPy - cell.py;
+                        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                        // Score by affinity to what this attractor provides
+                        let score = 0;
+                        if (att.type === 'goodTruth') score = gen.affinity.truth * 0.7 + gen.affinity.good * 0.3;
+                        if (att.type === 'badLie')   score = gen.affinity.lie   * 0.7 + gen.affinity.bad  * 0.3;
+                        if (att.type === 'goodLie')  score = gen.affinity.lie   * 0.5 + gen.affinity.good * 0.5;
+                        if (att.type === 'badTruth') score = gen.affinity.truth * 0.5 + gen.affinity.bad  * 0.5;
+                        score /= (dist / 200 + 1); // closer = higher score
+                        if (score > bestScore) { bestScore = score; bestAngle = Math.atan2(dy, dx); }
+                    });
+
+                    // Blend passive and active by passiveSpread
+                    const ps = gen.passiveSpread;
+                    // Interpolate angle (handle wrap-around via sin/cos)
+                    const blendedAngle = Math.atan2(
+                        ps * Math.sin(passiveAngle) + (1 - ps) * Math.sin(bestAngle),
+                        ps * Math.cos(passiveAngle) + (1 - ps) * Math.cos(bestAngle)
+                    );
+                    t.angle += (blendedAngle - t.angle) * gen.growthRate * delta * 2;
+
+                    // Grow/retract toward maxLength
+                    t.length = Math.min(gen.maxLength, t.length + gen.growthRate * 40 * delta);
+
+                    // Tip world position
+                    t.tipX = cell.px + Math.cos(t.angle) * t.length;
+                    t.tipY = cell.py + Math.sin(t.angle) * t.length;
+
+                    // --- Tip extraction: sample nearest attractor at tip position ---
+                    t.extracting = null;
+                    let minTipDist = Infinity;
+                    attractors.forEach(att => {
+                        const attPx = uToPx(att.u);
+                        const attPy = psiToPy(att.psi);
+                        const d = Math.sqrt((t.tipX - attPx) ** 2 + (t.tipY - attPy) ** 2);
+                        if (d < att.radius && d < minTipDist) {
+                            minTipDist = d;
+                            const tipGrazeAmt = (1 - d / att.radius) * 1.8 * delta; // falloff by depth
+                            if (cell.u >= 0) {
+                                // Good actor: sip Lie from bad zones, sip Good from good zones
+                                if (att.type === 'badLie' || att.type === 'badTruth') {
+                                    cell.pocket.lie = Math.min(100, cell.pocket.lie + tipGrazeAmt);
+                                    t.extracting = 'lie';
+                                } else {
+                                    cell.pocket.good = Math.min(100, cell.pocket.good + tipGrazeAmt * 0.6);
+                                    t.extracting = 'good';
+                                }
+                            } else {
+                                // Bad actor: sip Truth from good zones, sip Bad from bad zones
+                                if (att.type === 'goodTruth' || att.type === 'goodLie') {
+                                    cell.pocket.truth = Math.min(100, cell.pocket.truth + tipGrazeAmt);
+                                    t.extracting = 'truth';
+                                } else {
+                                    cell.pocket.bad = Math.min(100, cell.pocket.bad + tipGrazeAmt * 0.6);
+                                    t.extracting = 'bad';
+                                }
+                            }
+                        }
+                    });
+                });
+
+                // ==============================================================
+                // ZONE-BASED AMBIENT POCKET PRESSURE
+                // The field the cell is physically in presses on its cytoplasm.
+                // Water (Lie axis): Truth slowly bleeds out.
+                // Fire (Bad axis):  Good slowly bleeds out.
+                // Earth (both neg): both bleed. Air: gently restores Truth.
+                // ==============================================================
+                const currentZone = getClimateIdentity(cell.u, cell.psi);
+                const zonePressure = 2.2 * delta;
+                if (currentZone === 'water') {
+                    cell.pocket.truth = Math.max(0, cell.pocket.truth - zonePressure);
+                } else if (currentZone === 'fire') {
+                    cell.pocket.good  = Math.max(0, cell.pocket.good  - zonePressure);
+                } else if (currentZone === 'earth') {
+                    cell.pocket.truth = Math.max(0, cell.pocket.truth - zonePressure * 0.7);
+                    cell.pocket.good  = Math.max(0, cell.pocket.good  - zonePressure * 0.7);
+                } else { // air — sanctuary: slow Truth trickle
+                    cell.pocket.truth = Math.min(100, cell.pocket.truth + zonePressure * 0.4);
                 }
 
-                // STARVATION
+                // ==============================================================
+                // ZONE-AWARE WANT / NEED PRIORITY ENGINE
+                // Each zone produces a different behavioral priority:
+                //   AIR   (+u,+ψ): WANT Lie diet — organism healthy, seeking Lie to ingest
+                //   WATER (+u,-ψ): NEED Truth    — Truth is bleeding out, seek GG to replenish
+                //   FIRE  (-u,+ψ): WANT BadTruth — selfish actor drills Truth via Earth tendrils
+                //   EARTH (-u,-ψ): NEED GoodTruth — fully starved, must return to Truth source
+                // ==============================================================
+                const isFireOrEarthDomain = cell.u < 0;
+
+                let wantType = null;   // attractor type string the cell WANTS
+                let needType = null;   // attractor type string the cell NEEDS (overrides want)
+
+                if (currentZone === 'air') {
+                    wantType = 'badLie';    // Altruistic: WANT Lie to ingest & cleanse
+                } else if (currentZone === 'water') {
+                    wantType = 'badLie';
+                    // Truth bleeding — NEED to return to GG to replenish
+                    if (cell.pocket.truth < 20) needType = 'goodTruth';
+                } else if (currentZone === 'fire') {
+                    wantType = 'badTruth'; // Selfish: WANT to extract Truth from Earth safely
+                } else if (currentZone === 'earth') {
+                    wantType = 'badTruth';
+                    // Deeply starved — NEED Truth urgently
+                    if (cell.pocket.truth < 15) needType = 'goodTruth';
+                }
+
+                const activeTarget = needType || wantType;
+
+                // Core decay when starved
+                if (isFireOrEarthDomain && cell.pocket.truth <= 0) {
+                    cell.cores.airGoodTruth  = Math.max(0, cell.cores.airGoodTruth  - 3.0 * delta);
+                    cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 3.0 * delta);
+                }
                 if (totalEnergy <= 0) {
-                    cell.cores.airGoodTruth = Math.max(0, cell.cores.airGoodTruth - 6.0 * delta);
+                    cell.cores.airGoodTruth  = Math.max(0, cell.cores.airGoodTruth  - 6.0 * delta);
                     cell.cores.earthBadTruth = Math.max(0, cell.cores.earthBadTruth - 6.0 * delta);
-                } else if (!isFireOrEarthDomain || cell.pocket.truth > 0) {
-                    cell.cores.airGoodTruth = Math.min(100, cell.cores.airGoodTruth + 1.0 * delta);
+                } else if (currentZone === 'air') {
+                    cell.cores.airGoodTruth  = Math.min(100, cell.cores.airGoodTruth  + 1.0 * delta);
                     cell.cores.earthBadTruth = Math.min(100, cell.cores.earthBadTruth + 1.0 * delta);
                 }
 
@@ -1016,19 +1174,16 @@
                     continue;
                 }
 
-                // SURVIVAL IMPULSE STEERING WHEN STARVED OF TRUTH AT FIRE/EARTH
+                // Steer toward active target attractor
                 let targetAttractor = null;
                 let minDistToFood = 999999;
 
-                const needsHomeRepair = isFireOrEarthDomain && cell.pocket.truth <= 5.0;
-
                 attractors.forEach(att => {
-                    const isDietMatch = (cell.u >= 0)
-                        ? (att.type === 'badLie' || att.type === 'badTruth')
-                        : (att.type === 'goodTruth' || att.type === 'goodLie');
-                    const isHomeMatch = needsHomeRepair ? (att.type === 'goodTruth') : false;
-
-                    if (isDietMatch || isHomeMatch) {
+                    if (!activeTarget) return;
+                    const matches = (att.type === activeTarget) ||
+                        // widen goodTruth need to also accept goodLie as fallback
+                        (activeTarget === 'goodTruth' && att.type === 'goodLie' && cell.pocket.truth < 5);
+                    if (matches) {
                         const attPx = uToPx(att.u);
                         const attPy = psiToPy(att.psi);
                         const dist = Math.sqrt((cell.px - attPx) ** 2 + (cell.py - attPy) ** 2);
@@ -1259,6 +1414,29 @@
                     for (let i = 1; i < cell.trail.length; i++) ctx.lineTo(cell.trail[i].x, cell.trail[i].y);
                     ctx.stroke();
                 }
+
+                // ---- TENDRIL RENDER ----
+                const tipColors = { truth: '#38bdf8', lie: '#f59e0b', good: '#4ade80', bad: '#f43f5e' };
+                cell.tendrils.forEach(t => {
+                    if (t.length < 2) return;
+                    const tipCol = tipColors[t.extracting] || 'rgba(255,255,255,0.18)';
+                    // Shaft: thin, fading line from body to tip
+                    const grad = ctx.createLinearGradient(cell.px, cell.py, t.tipX, t.tipY);
+                    grad.addColorStop(0, 'rgba(255,255,255,0.0)');
+                    grad.addColorStop(0.4, t.extracting ? tipCol.replace(')', ',0.25)').replace('rgb', 'rgba') : 'rgba(255,255,255,0.08)');
+                    grad.addColorStop(1, t.extracting ? tipCol.replace(')', ',0.7)').replace('rgb', 'rgba') : 'rgba(255,255,255,0.12)');
+                    ctx.beginPath();
+                    ctx.moveTo(cell.px, cell.py);
+                    ctx.lineTo(t.tipX, t.tipY);
+                    ctx.strokeStyle = grad;
+                    ctx.lineWidth = t.extracting ? 1.8 : 0.9;
+                    ctx.stroke();
+                    // Tip dot
+                    ctx.beginPath();
+                    ctx.arc(t.tipX, t.tipY, t.extracting ? 3.5 : 1.8, 0, Math.PI * 2);
+                    ctx.fillStyle = t.extracting ? tipCol : 'rgba(255,255,255,0.2)';
+                    ctx.fill();
+                });
 
                 ctx.beginPath();
                 if (cell.vertices.length > 0) {

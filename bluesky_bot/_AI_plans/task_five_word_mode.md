@@ -1,0 +1,6 @@
+- `[x]` Implement 5-Word Mode checkbox and args assembler in AletheiaLauncher.pyw
+- `[x]` Add CLI flag and instructions overrides in google_ai_studio_one_shot.py
+- `[x]` Implement terminal-style _generate_five_word_card in image_card_generator.py
+- `[x]` Add pack_5word_posts and post_thread adjustments in aletheia_bot.py
+- `[x]` Add CLI flag and check logic in validate_batch.py and post_batch.py
+- `[x]` Test card rendering, validate drafts, and execute dry-runs

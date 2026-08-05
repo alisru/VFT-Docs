@@ -1286,6 +1286,7 @@
         <button class="tab-button" onclick="switchTab(event, 'map-tab')">🗺️ Interactive Map</button>
         <button class="tab-button" onclick="switchTab(event, 'composer-tab')">⚙️ Controller & Composer</button>
         <button class="tab-button" onclick="switchTab(event, 'audit-tab'); renderAuditTab()">📊 Audit & Trends</button>
+        <button class="tab-button" onclick="switchTab(event, 'source-tab'); fetchSourceText()">📰 Source Text</button>
       </div>
 
       <!-- Viewports -->
@@ -1301,6 +1302,15 @@
           <!-- Right Col: Metapanel -->
           <div class="story-meta-pane" id="metaPane">
             <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Tab 5: Source Text -->
+        <div id="source-tab" class="tab-content" style="padding: 20px; overflow-y: auto; height: 100%;">
+          <div id="sourceContent" style="font-family: var(--font-outfit, sans-serif); color: var(--text-primary, #e2e8f0);">
+            <div style="color: var(--text-muted, #64748b); padding: 40px; text-align: center;">
+              Select a story and click the Source Text tab to load the scraped article.
+            </div>
           </div>
         </div>
 
@@ -1620,17 +1630,22 @@
         const ru = story.real_u !== null && story.real_u !== undefined ? story.real_u.toFixed(1) : '?';
         const rpsi = story.real_psi !== null && story.real_psi !== undefined ? story.real_psi.toFixed(1) : '?';
 
+        const typeBadgeText = story.five_word ? '5-Word' : (story.mode === 'compact' ? 'Compact' : (story.mode === 'compact_single' ? 'Comp-1' : 'Std'));
+        const typeBadgeColor = story.five_word ? '#F472B6' : (story.mode === 'compact' ? '#38BDF8' : (story.mode === 'compact_single' ? '#818CF8' : '#34D399'));
+
         html += `
           <div class="story-card ${activeId === story.id ? 'active' : ''}" data-story-id="${story.id}">
             <div class="story-title">${story.subject || 'No Subject'}</div>
             <div class="card-status">${story.status || ''}</div>
             <div class="card-footer">
               <span class="card-badge ${badgeClass}">${badgeText}</span>
+              <span class="card-badge" style="background: rgba(255,255,255,0.05); color: ${typeBadgeColor}; border: 1px solid rgba(255,255,255,0.1); margin-left: 4px;">${typeBadgeText}</span>
               <span class="card-coordinates">(${cu}, ${cpsi}) ➔ (${ru}, ${rpsi})</span>
             </div>
           </div>
         `;
       }
+
 
       html += `<div style="height: ${bottomHeight}px; width: 100%; flex-shrink: 0; background: transparent;"></div>`;
       const savedScrollTop = listContainer.scrollTop;
@@ -1739,8 +1754,34 @@
         feedContainer.appendChild(replyHeader);
       }
 
-      const posts = activeStory.posts || [];
-      if (!posts.length) {
+      function pack5WordPosts(pList, maxLen = 300) {
+        const grouped = [];
+        let currentChunk = [];
+        let currentLen = 0;
+        for (const p of pList) {
+          const line = p.trim();
+          if (!line) continue;
+          const lineLen = line.length;
+          const addedLen = lineLen + (currentChunk.length ? 1 : 0);
+          if (currentLen + addedLen <= maxLen) {
+            currentChunk.push(line);
+            currentLen += addedLen;
+          } else {
+            if (currentChunk.length) {
+              grouped.push(currentChunk.join('\n'));
+            }
+            currentChunk = [line];
+            currentLen = lineLen;
+          }
+        }
+        if (currentChunk.length) {
+          grouped.push(currentChunk.join('\n'));
+        }
+        return grouped;
+      }
+
+      const rawPosts = activeStory.posts || [];
+      if (!rawPosts.length) {
         // posts text not stored in registry — show links to live posts instead
         const urls = activeStory.post_urls || [];
         if (urls.length) {
@@ -1755,7 +1796,31 @@
         return;
       }
 
-      posts.forEach((postText, index) => {
+      let displayPosts = [...rawPosts];
+      const isFiveWord = activeStory.five_word === true;
+      const isCompactSingle = activeStory.mode === 'compact_single';
+      const isCompactThread = activeStory.mode === 'compact';
+
+      if (isFiveWord) {
+        displayPosts = pack5WordPosts(rawPosts, 300);
+      } else if (isCompactSingle) {
+        displayPosts = rawPosts.slice(0, 1);
+        if (activeStory.link) {
+          const refSuffix = `\n\nReference: ${activeStory.link}`;
+          if (displayPosts[0].length + refSuffix.length <= 300) {
+            displayPosts[0] += refSuffix;
+          } else {
+            const shortSuffix = `\n\n${activeStory.link}`;
+            if (displayPosts[0].length + shortSuffix.length <= 300) {
+              displayPosts[0] += shortSuffix;
+            }
+          }
+        }
+      } else if (isCompactThread) {
+        displayPosts = rawPosts.slice(0, 4);
+      }
+
+      displayPosts.forEach((postText, index) => {
         const postDiv = document.createElement('div');
         postDiv.className = 'post-container';
 
@@ -1779,17 +1844,33 @@
           postText = postText.replace('Brothekanon:\n', '');
         }
 
-        // Render embeds (graph image always on Post 1, link preview card on Post 2 if link exists, grounding link card on the post containing "Source:")
+        // Render embeds (graph image + info cards on Post 1 for compact/five-word, link preview card on Post 2 if link exists for standard, grounding link card on the post containing "Source:")
         let embedTag = '';
-        if (index === 0 && activeStory.graph_img) {
-          // Graph always goes on Post 1 (index 0)
-          embedTag = `<img class="post-embed-image" src="${activeStory.graph_img}" alt="Psochic Hegemony Graph" onclick="openLightbox('${activeStory.graph_img}')">`;
-        } else if (index === 1 && activeStory.link && !activeStory.link.includes('bsky.app/profile')) {
+        if (index === 0) {
+          let embedImages = [];
+          if (activeStory.graph_img) {
+            embedImages.push(activeStory.graph_img);
+          }
+          if (isFiveWord) {
+            embedImages.push(`graph_png/${activeStory.id}_info_card_five_word.png`);
+          } else if (isCompactSingle || isCompactThread) {
+            embedImages.push(`graph_png/${activeStory.id}_info_card_verdict.png`);
+            embedImages.push(`graph_png/${activeStory.id}_info_card_analysis.png`);
+          }
+          
+          if (embedImages.length > 0) {
+            embedTag = `<div style="display: grid; grid-template-columns: repeat(${Math.min(embedImages.length, 2)}, 1fr); gap: 0.5rem; margin-top: 0.75rem;">`;
+            embedImages.forEach(img => {
+              embedTag += `<img class="post-embed-image" src="${img}" alt="Embed Media" style="margin: 0; aspect-ratio: 16/10; object-fit: cover;" onerror="this.style.display='none';" onclick="openLightbox('${img}')">`;
+            });
+            embedTag += `</div>`;
+          }
+        } else if (index === 1 && activeStory.link && !activeStory.link.includes('bsky.app/profile') && !isCompactSingle) {
           // Render link card embed on second post if link exists and is not a bsky profile link
           const title = activeStory.subject || 'External Link';
           let descText = '';
-          if (activeStory.posts && activeStory.posts.length > 4) {
-            descText = activeStory.posts[4].replace("What's happening:\n", "").trim();
+          if (rawPosts.length > 4) {
+            descText = rawPosts[4].replace("What's happening:\n", "").trim();
           } else {
             descText = `Alethekanon Psochic Hegemony Assessment for ${title}`;
           }
@@ -1832,6 +1913,7 @@
             </a>
           `;
         }
+
 
         // Resolve direct post link if live
         let postUrl = '';
@@ -1912,6 +1994,38 @@
       const isFlagged = activeStory._flag === 'flagged';
       const isReady = activeStory._flag === 'ready';
 
+      // Resolve asset cards dynamically
+      const assets = [
+        { label: 'Trajectory Graph', path: `graph_png/${activeStory.id}_graph.png` }
+      ];
+      if (activeStory.five_word) {
+        assets.push({ label: '5-Word Info Card', path: `graph_png/${activeStory.id}_info_card_five_word.png` });
+      } else {
+        assets.push({ label: 'Verdict Info Card', path: `graph_png/${activeStory.id}_info_card_verdict.png` });
+        assets.push({ label: 'Analysis Info Card', path: `graph_png/${activeStory.id}_info_card_analysis.png` });
+      }
+
+
+      const assetsHTML = `
+        <div style="margin-top: 1.25rem; border-top: 1px solid var(--panel-border); padding-top: 1rem;">
+          <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem;">Generated Assets</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem;">
+            ${assets.map(asset => `
+              <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${asset.label}">${asset.label}</span>
+                <img src="${asset.path}" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" 
+                     style="width: 100%; border-radius: 6px; border: 1px solid var(--panel-border); cursor: pointer; aspect-ratio: 16/10; object-fit: cover;" 
+                     onclick="openLightbox('${asset.path}')">
+                <div style="display: none; width: 100%; aspect-ratio: 16/10; background: rgba(255,255,255,0.02); border-radius: 6px; border: 1px dashed rgba(255,255,255,0.1); align-items: center; justify-content: center; font-size: 0.6rem; color: var(--text-muted); text-align: center; padding: 2px; font-weight: 500;">
+                  Not Found
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+
       metaPane.innerHTML = `
         <div class="meta-panel">
           <div class="meta-panel-title">
@@ -1924,6 +2038,12 @@
             <span class="meta-value" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">${activeStory.created_at}</span>
           </div>
           ` : ''}
+          <div class="meta-item">
+            <span class="meta-label">Post Type</span>
+            <span class="meta-value" style="font-weight: 600; color: ${activeStory.five_word ? '#F472B6' : (activeStory.mode === 'compact' ? '#38BDF8' : (activeStory.mode === 'compact_single' ? '#818CF8' : '#34D399'))}">
+              ${activeStory.five_word ? '5-Word Mode 📝' : (activeStory.mode === 'compact' ? 'Compact Mode ⚡' : (activeStory.mode === 'compact_single' ? 'Compact Single ⚡' : 'Standard Mode 🧵'))}
+            </span>
+          </div>
           <div class="meta-item">
             <span class="meta-label">Subject</span>
             <span class="meta-value">${activeStory.subject}</span>
@@ -1968,11 +2088,13 @@
             <span class="meta-label">Verdict trajectory</span>
             <span class="meta-value" style="font-weight:700;">${activeStory.verdict}</span>
           </div>
-          <div class="meta-item" style="display:flex; gap:0.5rem; margin-top:0.25rem;">
+          <div class="meta-item" style="display:flex; gap:0.5rem; margin-top:0.25rem; margin-bottom: 0.5rem;">
             <button onclick="markStory('ready')" style="flex:1; padding:0.45rem 0.5rem; border-radius:8px; border:1px solid rgba(16,185,129,0.4); background:${isReady ? 'rgba(16,185,129,0.25)' : 'transparent'}; color:${isReady ? '#10b981' : 'var(--text-muted)'}; cursor:pointer; font-size:0.8rem; font-family:var(--font-outfit); font-weight:600;">✅ Ready to Push</button>
             <button onclick="markStory('flagged')" style="flex:1; padding:0.45rem 0.5rem; border-radius:8px; border:1px solid rgba(239,68,68,0.4); background:${isFlagged ? 'rgba(239,68,68,0.2)' : 'transparent'}; color:${isFlagged ? '#ef4444' : 'var(--text-muted)'}; cursor:pointer; font-size:0.8rem; font-family:var(--font-outfit); font-weight:600;">🗑 Flag Failure</button>
           </div>
+          ${assetsHTML}
         </div>
+
 
         <div class="meta-panel">
           <div class="meta-panel-title">Character Limit Check</div>
@@ -2901,7 +3023,69 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       renderAuditTab();
     }
 
+    // ── Source Text Tab ───────────────────────────────────────────────────────
+    async function fetchSourceText() {
+      const container = document.getElementById('sourceContent');
+      if (!activeStory) {
+        container.innerHTML = `<div style="color:var(--text-muted);padding:40px;text-align:center;">No story selected.</div>`;
+        return;
+      }
+
+      const url = activeStory.link || '';
+      const subject = activeStory.subject || activeStory.id || 'Untitled';
+
+      container.innerHTML = `
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--panel-border);">
+          <div>
+            <div style="font-size:1.1rem;font-weight:700;color:var(--text-primary);">${subject}</div>
+            <a href="${url}" target="_blank" style="font-size:0.8rem;color:var(--bsky-blue);word-break:break-all;">${url}</a>
+          </div>
+        </div>
+        <div id="sourceTextBody" style="color:var(--text-muted);font-size:0.88rem;">
+          ⏳ Loading scraped source text...
+        </div>`;
+
+      if (!url) {
+        document.getElementById('sourceTextBody').innerHTML = '<em>No URL stored for this story.</em>';
+        return;
+      }
+
+      try {
+        const resp = await fetch(`http://localhost:8765/source?url=${encodeURIComponent(url)}`);
+        const data = await resp.json();
+
+        if (data.error) {
+          document.getElementById('sourceTextBody').innerHTML = `
+            <div style="color:#f87171;">⚠️ ${data.error}</div>
+            <div style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);">
+              Make sure <strong>source_server.py</strong> is running, or launch via <strong>launch_panel.bat</strong>.<br>
+              You can also <a href="${url}" target="_blank" style="color:var(--bsky-blue);">open the original article</a>.
+            </div>`;
+          return;
+        }
+
+        const paragraphs = (data.text || '').split('\n\n').filter(p => p.trim());
+        const renderedParas = paragraphs.map(p =>
+          `<p style="margin:0 0 14px;line-height:1.75;color:var(--text-primary);">${p.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</p>`
+        ).join('');
+
+        const ts = data.timestamp ? `<div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:16px;">Scraped: ${data.timestamp.split('T')[0]}</div>` : '';
+
+        document.getElementById('sourceTextBody').innerHTML = paragraphs.length
+          ? ts + renderedParas
+          : `<em style="color:#f87171;">No paragraph text was captured for this article (may be paywalled or JS-rendered).</em>`;
+
+      } catch(e) {
+        document.getElementById('sourceTextBody').innerHTML = `
+          <div style="color:#f87171;">⚠️ Could not connect to source server (localhost:8765).</div>
+          <div style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);">
+            Launch via <strong>launch_panel.bat</strong> to start both servers automatically.
+          </div>`;
+      }
+    }
+
     function renderAuditTab() {
+
       if (_auditRendered) return;
       _auditRendered = true;
 

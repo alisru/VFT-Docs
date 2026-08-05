@@ -186,12 +186,24 @@ def generate_compact_info_card(thread_config, output_path):
     if len(posts) < 13:
         raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13).")
 
+    if thread_config.get("five_word") is True:
+        # Load fonts, generate single 5-word terminal card
+        fonts = load_theme_fonts()
+        link = thread_config.get("link", "")
+        stated_u = thread_config.get("claim_u", 0.0)
+        stated_psi = thread_config.get("claim_psi", 0.0)
+        real_u = thread_config.get("real_u", 0.0)
+        real_psi = thread_config.get("real_psi", 0.0)
+        verdict_subtitle = f"Stated: ({stated_u:+.1f}, {stated_psi:+.1f}) | Actual: ({real_u:+.1f}, {real_psi:+.1f})"
+        
+        # Replace output_path extension to output f"{slug}_info_card_five_word.png"
+        five_word_output_path = output_path.replace(".png", "_five_word.png")
+        _generate_five_word_card(subject, verdict_subtitle, posts, fonts, link, five_word_output_path)
+        return
+
+
     # Load standard layout configuration
     fonts = load_theme_fonts()
-    canvas_bg = "#0B0F19"
-    card_bg = "#141D2F"
-    border_color = "#25354F"
-    text_color = "#E2E8F0"
     
     sections = [
         {
@@ -267,223 +279,6 @@ def generate_compact_info_card(thread_config, output_path):
         }
     ]
 
-    # Create dummy draw interface to measure sizes
-    temp_img = Image.new("RGB", (1, 1))
-    temp_draw = ImageDraw.Draw(temp_img)
-
-    # 1. LAYOUT PASS: Compute grid dimensions and dynamic height
-    canvas_w = 1200
-    x_left = 40
-    x_right = canvas_w - x_left # 1160px
-    drawable_w = x_right - x_left # 1120px
-    
-    # 2-Column Grid dimensions for Sections
-    col_gap = 30
-    col_w = (drawable_w - col_gap) // 2 # 545px
-    col_1_x_left = x_left
-    col_1_x_right = col_1_x_left + col_w
-    col_2_x_left = col_1_x_right + col_gap
-    col_2_x_right = col_2_x_left + col_w
-    
-    # Text wrapping widths
-    sec_text_w = col_w - 50 # 495px (25px padding left/right)
-    
-    # Sizing parameters
-    line_h = 28 # Height per text line
-    card_gap = 25 # Vertical space between stacked cards
-    
-    current_y = 50 # Start padding
-
-    # Title layout (spans full width)
-    title_lines = wrap_text(subject, fonts["bold_32"], drawable_w, temp_draw)
-    title_h = len(title_lines) * 38
-    title_y_start = current_y
-    current_y += title_h + 30 # Title margin
-
-    grid_start_y = current_y
-
-    # Split sections into Left and Right Columns (5 sections each)
-    left_sections = sections[:5]  # Hook, Claim, Reality, Verdict, Context
-    right_sections = sections[5:] # Nuance, Breakdown, Social Physics, Trajectory, Unavoidables
-
-    # Left Column cards layout
-    left_layouts = []
-    left_y = grid_start_y
-    for sec in left_sections:
-        wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
-        body_h = len(wrapped_body) * line_h
-        card_h = 25 + 15 + body_h + 25
-        
-        left_layouts.append({
-            "sec": sec,
-            "y": left_y,
-            "h": card_h,
-            "lines": wrapped_body
-        })
-        left_y += card_h + card_gap
-
-    # Right Column cards layout
-    right_layouts = []
-    right_y = grid_start_y
-    for sec in right_sections:
-        wrapped_body = wrap_text(sec["text"], fonts["regular_20"], sec_text_w, temp_draw)
-        body_h = len(wrapped_body) * line_h
-        card_h = 25 + 15 + body_h + 25
-        
-        right_layouts.append({
-            "sec": sec,
-            "y": right_y,
-            "h": card_h,
-            "lines": wrapped_body
-        })
-        right_y += card_h + card_gap
-
-    # Grid bottom is the max of both columns
-    grid_end_y = max(left_y, right_y) - card_gap + 15
-
-    # Perspectives Panel Header
-    perspectives_header_y = grid_end_y
-    persona_start_y = perspectives_header_y + 35 + 25 # label (35) + padding (25)
-
-    # 3-Column Grid for perspectives
-    per_gap = 20
-    per_col_w = (drawable_w - (per_gap * 2)) // 3 # 360px
-    
-    per_x_positions = [
-        (x_left, x_left + per_col_w),
-        (x_left + per_col_w + per_gap, x_left + per_col_w + per_gap + per_col_w),
-        (x_left + (per_col_w + per_gap) * 2, x_left + (per_col_w + per_gap) * 2 + per_col_w)
-    ]
-    
-    per_text_w = per_col_w - 40 # 320px (20px card padding left/right)
-
-    # Measure persona card heights
-    persona_heights = []
-    persona_lines = []
-    for per in personas:
-        wrapped_body = wrap_text(per["text"], fonts["regular_20"], per_text_w, temp_draw)
-        body_h = len(wrapped_body) * line_h
-        card_h = 25 + 15 + body_h + 25
-        persona_heights.append(card_h)
-        persona_lines.append(wrapped_body)
-
-    # Make them all the same height (max) for perfect alignment
-    max_per_h = max(persona_heights)
-
-    # Footer position
-    footer_y = persona_start_y + max_per_h + 40
-    final_height = footer_y + 30 + 50 # padding/margins
-
-    # 2. DRAWING PASS
-    img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
-    draw = ImageDraw.Draw(img)
-
-    # Draw Title
-    y = title_y_start
-    for line in title_lines:
-        draw.text((x_left, y), line, font=fonts["bold_32"], fill="#FFFFFF")
-        y += 38
-
-    # Draw Left Column
-    for layout in left_layouts:
-        sec = layout["sec"]
-        card_top = layout["y"]
-        card_h = layout["h"]
-        card_bottom = card_top + card_h
-        
-        draw.rounded_rectangle(
-            (col_1_x_left, card_top, col_1_x_right, card_bottom),
-            radius=12, fill=card_bg, outline=border_color, width=1
-        )
-        draw.rounded_rectangle(
-            (col_1_x_left + 1, card_top + 10, col_1_x_left + 7, card_bottom - 10),
-            radius=3, fill=sec["color"]
-        )
-        draw.text(
-            (col_1_x_left + 25, card_top + 22),
-            sec["label"], font=fonts["bold_16"], fill=sec["color"]
-        )
-        text_y = card_top + 55
-        for line in layout["lines"]:
-            draw.text(
-                (col_1_x_left + 25, text_y),
-                line, font=fonts["regular_20"], fill=text_color
-            )
-            text_y += line_h
-
-    # Draw Right Column
-    for layout in right_layouts:
-        sec = layout["sec"]
-        card_top = layout["y"]
-        card_h = layout["h"]
-        card_bottom = card_top + card_h
-        
-        draw.rounded_rectangle(
-            (col_2_x_left, card_top, col_2_x_right, card_bottom),
-            radius=12, fill=card_bg, outline=border_color, width=1
-        )
-        draw.rounded_rectangle(
-            (col_2_x_left + 1, card_top + 10, col_2_x_left + 7, card_bottom - 10),
-            radius=3, fill=sec["color"]
-        )
-        draw.text(
-            (col_2_x_left + 25, card_top + 22),
-            sec["label"], font=fonts["bold_16"], fill=sec["color"]
-        )
-        text_y = card_top + 55
-        for line in layout["lines"]:
-            draw.text(
-                (col_2_x_left + 25, text_y),
-                line, font=fonts["regular_20"], fill=text_color
-            )
-            text_y += line_h
-
-    # Draw Perspectives Header
-    draw.text(
-        (x_left, perspectives_header_y),
-        "TRINARY PERSPECTIVES", font=fonts["bold_24"], fill="#F8FAFC"
-    )
-    draw.line(
-        (x_left, perspectives_header_y + 35, x_right, perspectives_header_y + 35),
-        fill=border_color, width=1
-    )
-
-    # Draw 3 perspective columns
-    for idx, per in enumerate(personas):
-        x_start, x_end = per_x_positions[idx]
-        card_top = persona_start_y
-        card_bottom = card_top + max_per_h
-        
-        draw.rounded_rectangle(
-            (x_start, card_top, x_end, card_bottom),
-            radius=12, fill=card_bg, outline=border_color, width=1
-        )
-        draw.rounded_rectangle(
-            (x_start + 1, card_top + 10, x_start + 7, card_bottom - 10),
-            radius=3, fill=per["color"]
-        )
-        draw.text(
-            (x_start + 20, card_top + 22),
-            per["label"], font=fonts["bold_16"], fill=per["color"]
-        )
-        text_y = card_top + 55
-        for line in persona_lines[idx]:
-            draw.text(
-                (x_start + 20, text_y),
-                line, font=fonts["regular_20"], fill=text_color
-            )
-            text_y += line_h
-
-    # Draw Footer
-    draw.text(
-        (x_left, footer_y),
-        "Aletheia Bot | Uncompromising Logic & Truth", font=fonts["mono_20"], fill="#475569"
-    )
-
-    # Save to disk
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    img.save(output_path, "PNG")
-    print(f"Info Card generated and saved successfully: {output_path}")
 
     # Generate split cards for mobile view
     verdict_path = output_path.replace(".png", "_verdict.png")
@@ -527,10 +322,12 @@ def generate_compact_info_card(thread_config, output_path):
 
     # Verdict Card (1-3): Hook, Claim, Reality, Verdict
     _generate_verdict_card(subject, verdict_subtitle, sections[:4], fonts, verdict_path)
+
     
     # Analysis & Perspectives Card (4-13): Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables
     analysis_subtitle = f"SYSTEM ANALYSIS & PERSPECTIVES | {coords_str}"
     _generate_analysis_full_card(subject, analysis_subtitle, sections[4:], personas, fonts, analysis_path)
+
 
 def _generate_verdict_card(subject, subtitle, sections, fonts, output_path):
     canvas_bg = "#0B0F19"
@@ -755,3 +552,112 @@ def _draw_individual_card_v3(draw, lay, fonts, card_bg, border_color, text_color
     for line in lines:
         draw.text((x1 + 20, text_y), line, fill=text_color, font=fonts[body_font_key])
         text_y += line_h
+
+def _generate_five_word_card(subject, subtitle, posts, fonts, link, output_path):
+    canvas_bg = "#0B0F19"
+    card_bg = "#141D2F"
+    border_color = "#25354F"
+    text_color = "#E2E8F0"
+    canvas_w = 1100
+    canvas_h = 860
+    x_left = 40
+    x_right = canvas_w - x_left
+    drawable_w = x_right - x_left
+    
+    img = Image.new("RGB", (canvas_w, canvas_h), canvas_bg)
+    draw = ImageDraw.Draw(img)
+    
+    temp_img = Image.new("RGB", (1, 1))
+    temp_draw = ImageDraw.Draw(temp_img)
+    
+    # Wrap title within 1020px
+    title_lines = wrap_text(subject, fonts["bold_36"], drawable_w, temp_draw)
+    subtitle_lines = wrap_text(subtitle, fonts["bold_24"], drawable_w, temp_draw)
+    
+    y = 40
+    for line in title_lines:
+        draw.text((x_left, y), line, fill="#F8FAFC", font=fonts["bold_36"])
+        y += 42
+    y += 5
+    for line in subtitle_lines:
+        draw.text((x_left, y), line, fill="#38BDF8", font=fonts["bold_24"])
+        y += 30
+        
+    # Container coordinates
+    container_y1 = 160
+    container_y2 = 820
+    
+    # Draw Container Box
+    draw.rounded_rectangle([x_left, container_y1, x_right, container_y2], radius=16, fill=card_bg, outline=border_color, width=1)
+    
+    # Draw Left-side Terminal rows
+    line_configs = [
+        {"label": "HOOK", "color": "#F472B6"},
+        {"label": "CLAIM", "color": "#94A3B8"},
+        {"label": "REALITY", "color": "#38BDF8"},
+        {"label": "VERDICT", "color": "#FBBF24"},
+        {"label": "CONTEXT", "color": "#60A5FA"},
+        {"label": "NUANCE", "color": "#34D399"},
+        {"label": "BREAKDOWN", "color": "#F87171"},
+        {"label": "PHYSICS", "color": "#A78BFA"},
+        {"label": "TRAJECTORY", "color": "#FB923C"},
+        {"label": "LIMITS", "color": "#E879F9"},
+        {"label": "ALETHEIA", "color": "#2DD4BF"},
+        {"label": "AWWTHE", "color": "#F43F5E"},
+        {"label": "BROTHE", "color": "#F59E0B"},
+    ]
+    
+    row_start_y = container_y1 + 30
+    row_height = 45
+    
+    for idx, cfg in enumerate(line_configs):
+        if idx >= len(posts):
+            break
+        text = posts[idx].strip()
+        
+        # Clean clean prefixes from the generated text if the LLM outputted them
+        for prefix in ["Alethekanon:\n", "Awwthekanon:\n", "Brothekanon:\n", "The Bright Side:\n", "The Poison:\n", "Social Physics Analysis:\n", "The Trajectory: "]:
+            if text.startswith(prefix):
+                text = text[len(prefix):].strip()
+        if idx == 0 and "\n\n" in text:
+            text = text.split("\n\n")[0].strip()
+            
+        line_y = row_start_y + idx * row_height
+        
+        # Draw label
+        draw.text((x_left + 30, line_y), cfg["label"] + ":", fill=cfg["color"], font=fonts["bold_24"])
+        
+        # Draw 5-word text
+        wrapped_text_lines = wrap_text(text, fonts["regular_24"], 600, temp_draw)
+        text_y_offset = 0
+        for w_line in wrapped_text_lines[:2]: # Max 2 lines to fit row
+            draw.text((x_left + 230, line_y + text_y_offset), w_line, fill=text_color, font=fonts["regular_24"])
+            text_y_offset += 24
+            
+    # Draw QR Code if link is present
+    if link:
+        qr_img = _generate_qr_code(link, size=130)
+        if qr_img:
+            qr_x = x_right - 170
+            qr_y = container_y2 - 150
+            draw.text((qr_x, qr_y - 25), "SCAN SOURCE", fill="#64748B", font=fonts["bold_16"])
+            draw.rounded_rectangle([qr_x - 5, qr_y - 5, qr_x + 135, qr_y + 135], radius=8, fill=card_bg, outline=border_color, width=1)
+            img.paste(qr_img, (qr_x, qr_y))
+
+            
+    img.save(output_path, "PNG")
+    print(f"Five-Word Info Card generated: {output_path}")
+
+def _generate_qr_code(url, size=150):
+    try:
+        import qrcode
+        qr = qrcode.QRCode(version=1, box_size=10, border=1)
+        qr.add_data(url)
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="white", back_color="#141D2F")
+        img = img.convert("RGB")
+        return img.resize((size, size))
+    except Exception as e:
+        print(f"Warning: Failed to generate QR code image for url '{url}': {e}")
+        return None
+

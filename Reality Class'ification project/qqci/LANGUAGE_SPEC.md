@@ -494,3 +494,225 @@ If 12.2 and 12.4 pass, the language describes real structure and the model build
 justified with the anchor set (§8) in hand. If they fail, the failure is cheap and
 located before any training run — which is the whole point of specifying the
 language before the transformer.
+
+---
+
+## 16. Solutions adopted from adjacent fields (implemented, not cited)
+
+Each row is a problem this project had, an existing field that already solved
+it, and the file where their solution now runs.
+
+| our problem | who solved it | what was copied | implemented in |
+|---|---|---|---|
+| blank planes that fill from neighbours | **HPSG/LFG unification grammar** (Pollard & Sag) | typed feature structures; unspecified features unify from the partner; the conflict rule | `slots.py` `unify()` |
+| what a mostly-blank word (`big`, `really`) even IS | **DisCoCat** (Coecke, Sadrzadeh, Clark) | a word's type fixes its TENSOR SHAPE; composition is tensor contraction | `slots.py` — **an open plane IS an open tensor index; valence IS rank** |
+| which blanks are obligatory | **FrameNet** (Fillmore) | core vs peripheral frame elements | `Slot.required` |
+| `liquid-flow-stop-stop = solid` | **Qualitative Process Theory** (Forbus 1984) | processes as PRECONDITIONS + INFLUENCES over a quantity space | `slots.Process`, `primitives.PROCESSES` |
+| `Totality_Event_Frame[past, present, future]` | **Reichenbach (1947)** / ISO-TimeML | three times (speech/event/reference), not two | `primitives.TotalityEventFrame` |
+| needing an undefined starting point | **NSM semantic primes** (Wierzbicka) | a small CLOSED seed set; everything else paraphrased from it | `primitives.py` (the egg, 13 frames, size-asserted) |
+| routing blanks to fillers in a net | **Lila-E8** (RESEARCH_NOTES §1) | additive geometric BIAS on attention scores + ablation to prove it | `plane_attention.py` |
+| frozen basis, learnable values | **Leech-LILA** (RESEARCH_NOTES §2) | frozen orthonormal Q/K, learnable V | `plane_attention.PlaneAttention` |
+| one head per plane | **Curved Spacetime** (RESEARCH_NOTES §3) | multi-head attention as an atlas of local charts | `plane_attention` 7 heads |
+| predicting by plane before word | **Class-based LMs** (Brown et al. 1992) | `P(w'|w) ≈ P(c'|c)·P(w'|c')` | `plane_factored_predict()` |
+
+### 16.1 The one architectural contribution
+
+Standard attention routes by **similarity**: `A = softmax(QKᵀ/√d)`.
+This adds a term so it also routes by **complementarity**:
+
+    A_p = softmax( QKᵀ/√d  +  λ·C_p )
+    C_p[i,j] = 1  iff  token i is OPEN on plane p AND token j FILLS plane p
+
+A token attends to what **completes** it, not only to what resembles it.
+`big` is not similar to `house`; it *binds* to `house`. Cosine cannot express
+that; an open index seeking a bound one can. [MEASURED, `EXPERIMENTS.txt`]: in
+an adversarial case where a distractor is near-identical in vector space,
+similarity alone splits 0.330/0.335 (cannot tell them apart) while the gate
+routes 0.995 to the true filler and 0.003 to the distractor.
+
+---
+
+## 17. Hypotheses tested (real corpus, results as they came)
+
+Corpus: `_VFT MD`, 6,050,074 tokens. Plane labels: the corpus's own NSM
+reduction dictionaries (authored years earlier for translation, ignorant of
+bigram statistics). Full output in `EXPERIMENTS.txt`; rerun `run_experiments.py`.
+
+**Methodological control that changed a result.** The corpus CONTAINS the NSM
+dictionaries supplying the labels, and those files list synonyms adjacently
+(`hate, loathe, despise` — all EFFECT). Including them manufactured same-plane
+adjacency out of the label source's own formatting: H1 read z = −18.0 with
+them in and z = −5.2 with them excluded. `EXCLUDE_PATH` in `run_experiments.py`
+enforces the exclusion. **Two thirds of the original effect was an artefact.**
+
+| # | hypothesis | result | verdict |
+|---|---|---|---|
+| H1 | adjacent NSM-labelled words are MORE plane-diverse than chance | real 0.719 vs shuffled 0.772, **z = −5.17** | **FAILED** — adjacency favours SAME plane |
+| H2 | the 7 NAMED planes beat RANDOM 7-way classes of identical size at predicting the next class | named 4.308 vs random 4.679±0.429, 37/200 random did better, **p = 0.19** | **NULL** — not distinguishable from an arbitrary split |
+| H3 | the complementarity bias improves next-word ranking | MRR 0.4387 → 0.4182, **Δ = −0.0204** | **FAILED** (only 102 held-out bigrams; weak) |
+| H4 | composition saturates, valence strictly falls (DisCoCat) | 12/12 saturated, mean valence drop 5.00 | PASSED (structural, constructed — proves the algebra, not language) |
+| H5 | **operators avoid operators and seek hosts** | base rate 0.0121, rate after an operator 0.0042 = **0.34× base, z = −19.64** | **PASSED STRONGLY** |
+
+### 17.-1 WORD-TO-CELL, SOLVED MECHANICALLY (`derive_addresses.py`)
+
+Every address source in the project was unusable for a 343-cell test, and this
+should have been checked before any test was run:
+
+| source | words | usable? |
+|---|---|---|
+| NSM (`q4_meaning.py`) | 151 | **no** — 151 words over 343 cells is 0.4 words/cell |
+| `anchor_set.jsonl` | 14,258 | **no** — built by `build_trainset.py` from `tautonic.decompose`, i.e. **spelling**, which the handover records as measured useless (+0.042 gap = noise). It collapses to **5 distinct addresses for 14,258 words**, 7,335 in one cell |
+
+The handover already specified the fix: *"Plane scores must come from the
+CO-OCCURRENCE distribution... not from spelling and not from hand-authoring."*
+
+`derive_addresses.py` does exactly that. A Qqci address is recursive same-kind,
+so the assignment is a **7-ary tree of depth 3** — each level the same
+operation on a smaller pool, which is the bounded-pool recursion from the
+cowork thread:
+
+1. PPMI-weighted co-occurrence, symmetric window
+2. SVD to a dense space (the representation measured to retain 82%)
+3. k-means k=7 → the **Q** level
+4. recurse inside each cell → **q**, recurse again → **c**
+
+[MEASURED] 2,973 words, **338/343 cells occupied, 8.8 words/cell**. Real
+coverage. Cells are semantically coherent without being told anything:
+
+    Q1.q6.c2  caused, causes, causing, chaos, decay, entropy, extreme, force, friction
+    Q3.q6.c3  abraham, answered, brother, brothers, daughter, david, disciples, father
+    Q2.q7.c1  anti, attacks, authoritarian, captured, consensus, conservative, debate
+
+**Deliberately NOT named.** The clusters are numbered. Attaching the seven
+interrogatives to the seven top-level clusters is a separate claim needing its
+own evidence; naming them here would be the hand-authoring this construction
+exists to avoid.
+
+### 17.-0.5 THE 343 RESULT [MEASURED] (`validate_depth.py`)
+
+Addresses derived on the first 90% of the corpus; **every number below is
+measured on the held-out last 10%**, so cell coherence cannot be the
+clustering read back. 343/343 cells occupied, 8.7 words/cell.
+
+**V3 — each added level buys the same ~23%.** Held-out next-word perplexity:
+
+| context | perplexity | gain |
+|---|---|---|
+| none (unigram) | 682.9 | — |
+| Q (7) | 521.4 | −23.7% |
+| Q.q (49) | 398.0 | −23.7% |
+| **Q.q.c (343)** | **307.0** | **−22.9%** |
+
+A constant proportional gain per level of recursion. That is what "fractal"
+means quantitatively — self-similar return at every depth — and it is measured,
+not asserted.
+
+**V2 — named vs size-matched random cells. The separation GROWS with depth:**
+
+| depth | named | random | p | vs random |
+|---|---|---|---|---|
+| 1 (flat 7) | 6.544 | 6.394 | 0.75 | **0.98× — WORSE than random** |
+| 2 (49) | 32.236 | 34.425 | 0.030 | 1.07× better |
+| **3 (343)** | **94.177** | **113.087** | **0.0099** | **1.20× better, 0/100 random beat it** |
+
+At depth 1 the structure is *worse than an arbitrary partition*. At depth 3 no
+random partition out of 100 comes close (z = −8.25). This is the sharpest
+available statement of the project's core claim: **flat 7 is not merely
+insufficient, it is worthless; the structure exists only in the recursion.**
+
+**V1 — shared address vs held-out co-occurrence**, monotonic, and the signal
+concentrates at full depth:
+
+    shared none  0.465      Q  0.626      Q.q  0.729      Q.q.c  3.014   (6.48x baseline)
+
+### 17.0 CORRECTION: H1/H2/H3 tested FLAT 7 and are INVALID
+
+H1, H2 and H3 above used `int(plane)` — one of seven. That is flat 7, which
+`HANDOVER.md` names as the strawman ("the operative unit is Q.q.c, never Q")
+and which `bottleneck_test.py` measures on this machine at **2% retention vs
+82% for 343**. A flat-7 null licenses no conclusion about Qqci; it re-derives
+the known fact that seven dimensions are too few whatever they are named.
+**The verdicts in the table above and in the original 17.2 were wrong.**
+
+`depth_test.py` re-runs them at Q.q.c, using an address that was NOT authored
+for this test — all three levels are already in the NSM dictionary:
+
+    Q = plane of the base (7)   q = base within plane (7)   c = degree −3..+3 (exactly 7)
+
+`feel---` = Q7(Effect).q(feel).c(−3). 151 words carry a full Q.q.c.
+
+**D1 — graded adjacency. This is the result flat 7 destroyed.**
+
+| shared prefix | real | shuffled | z |
+|---|---|---|---|
+| none | 0.7185 | 0.7722 | −5.17 |
+| Q only | 0.0906 | 0.0860 | +0.65 |
+| Q.q | 0.0492 | 0.0693 | −4.38 |
+| **Q.q.c (full)** | **0.1417** | **0.0725** | **+9.16** |
+
+Words sharing the **full address** are adjacent at **1.95× chance, z = +9.16**.
+Words sharing **only the plane** are at chance (z = +0.65). Flat 7 lumps these
+together, and the mixture averages to the misleading −5.17 that H1 reported as
+"similarity attraction". The signal was never absent — the flat test could not
+represent it.
+
+**D2 — named cells vs random cells of identical size, per depth:**
+
+| depth | cells | words/occupied cell | named | random | p |
+|---|---|---|---|---|---|
+| 1 (flat) | 7 | 25.2 | 4.308 | 4.679 | 0.19 — null |
+| **2** | **49** | **6.0** | **10.388** | **12.525** | **0.0398 — named beats random** |
+| 3 | 343 | 2.8 | 18.797 | 21.078 | 0.0846 — data-starved |
+
+Separation appears exactly where the project said it would: **not at depth 1**.
+Depth 3 is under 3 words per occupied cell, so its weaker p is a coverage
+limit, not a negative.
+
+**D3 — sub-object sharing vs co-occurrence** (`fractal_basis.sharing_graph`'s
+own claim, which flat 7 cannot even express):
+
+    shared none  27.2      shared Q    20.1      shared Q.q  64.4      shared Q.q.c  77.7
+
+Sharing the plane ALONE is *below* baseline (20.1 vs 27.2). Sharing the deeper
+address is ~2.9× baseline. That is why every flat-7 test in this project has
+come back null or negative: **Q alone is anti-predictive; the address is
+strongly predictive.** The recursion is not decoration.
+
+### 17.1 What the results actually mean
+
+The split is sharp and it is not what was expected:
+
+- **Complementarity is REAL** — but it lives in **valence** (open vs filled
+  structure), not in **plane identity**. H5 tests valence-complementarity on
+  6M tokens with a proxy (`-ly` adverbs) that touches no authored label in
+  this project, and it passes overwhelmingly: an operator is *three times
+  less likely* than chance to be followed by another operator, exactly as
+  "a blank cannot fill a blank" predicts. Similarity-attraction predicts the
+  opposite and is refuted here.
+- **Address identity IS earning its place — at depth.** Corrected by D1/D2/D3
+  (§17.0): the full Q.q.c address predicts adjacency at z = +9.16 and beats
+  size-matched random cells at depth 2 (p = 0.04). The plane alone does not,
+  and is in fact slightly anti-predictive (D3: 20.1 vs 27.2 baseline).
+- **H1's flat-7 failure had two causes, and depth was the bigger one.** Raw
+  adjacency is also not a head-dependent relation, so it measures topical
+  coherence as well as composition; the fully correct version still wants
+  dependency-parsed pairs (§14). But the dominant error was collapsing Q.q.c
+  to Q, which mixed a +9.16 signal with a null one and reported the average.
+
+### 17.2 What this licenses building on
+
+BUILD ON — **valence** (open/filled structure): measured at z ≈ −19.6 on 6M
+tokens with a proxy touching no authored label (H5). `slots.py` and the
+complementarity gate rest on this.
+
+BUILD ON — **the full Q.q.c address**: z = +9.16 for adjacency, p = 0.04 vs
+random at depth 2 (D1, D2). Always the whole address.
+
+DO NOT BUILD ON — **the plane alone (Q)**. Measured null-to-negative at every
+turn: PLANE-7 at 12.9% of the way to optimal, SVD-7 at 2% retention, D2 depth-1
+p = 0.19, D3 sharing-Q *below* baseline. This is not a weakness of the seven
+interrogatives; it is that seven cells cannot carry language. Every future test
+must be run at depth, and any flat-7 result must be discarded rather than
+interpreted.
+
+---

@@ -221,15 +221,16 @@ def rebuild_registries():
             except Exception as ge:
                 print(f"Error generating graph for {slug} in darkroom: {ge}")
 
-            # Generate compact summary card if compact mode is enabled
-            if cfg.get("compact", False):
-                info_card_filename = f"{slug}_info_card.png"
-                info_card_path = os.path.join(graph_png_dir, info_card_filename)
-                try:
-                    print(f"Generating compact summary info card for {slug}...")
-                    generate_compact_info_card(cfg, info_card_path)
-                except Exception as ice:
-                    print(f"Error generating compact info card for {slug} in darkroom: {ice}")
+            # Generate summary info card(s) for all stories
+            info_card_filename = f"{slug}_info_card.png"
+            info_card_path = os.path.join(graph_png_dir, info_card_filename)
+            try:
+                print(f"Generating summary info card(s) for {slug}...")
+                generate_compact_info_card(cfg, info_card_path)
+            except Exception as ice:
+                print(f"Error generating info card for {slug} in darkroom: {ice}")
+
+
 
             # Promote config to stories/
             dest_path = os.path.join(stories_dir, os.path.basename(p))
@@ -383,9 +384,11 @@ def rebuild_registries():
         for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "category", "topic", "event",
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
                   "stated_forces", "actual_forces", "grounding_url", "claim_rnet", "real_rnet",
-                  "claim_z", "real_z", "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity"]:
+                  "claim_z", "real_z", "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
+                  "five_word", "compact"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
+
 
         if is_live:
             if not ("LIVE" in status.upper() or cfg.get("rkeys") or cfg.get("post_urls")):

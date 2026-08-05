@@ -1,0 +1,162 @@
+========================================================================
+HYPOTHESIS TESTS  --  real corpus, independent plane labels
+========================================================================
+corpus tokens      : 6,050,074
+NSM-labelled types : 151
+labelled tokens    : 77,385 (1.3%)
+
+------------------------------------------------------------------------
+H1  adjacent words carry DIFFERENT planes more often than chance?
+    (blank-filling predicts MORE diversity; similarity predicts LESS)
+    pairs                 : 1,016
+    real adjacent  differ : 0.7185
+    shuffled       differ : 0.7722  (sd 0.0104)
+    z                     : -5.17
+    VERDICT: supports SIMILARITY attraction, NOT the blank model.
+
+------------------------------------------------------------------------
+H2  are the NAMED planes a better predictive class than RANDOM
+    classes of identical size? (lower perplexity is better)
+    named planes      : 4.308
+    random partitions : 4.679 (sd 0.429, best 3.351)
+    random better/equal: 37/200   p = 0.1891   z = -0.87
+    VERDICT: NOT distinguishable from a random 7-way split.
+
+------------------------------------------------------------------------
+H3  does the complementarity BIAS improve next-word ranking?
+    held-out bigrams : 102  vocab 140
+    MRR similarity   : 0.4387
+    MRR + bias       : 0.4182
+    delta            : -0.0204
+    VERDICT: bias HURTS.
+
+------------------------------------------------------------------------
+H5  FAIR TEST: do OPERATORS avoid OPERATORS and seek hosts?
+    (-ly adverbs, identified without NSM or any authored label)
+    tokens                    : 6,050,074
+    base rate of operators    : 0.0121
+    rate right after operator : 0.0042   (0.34x base)
+    z                         : -19.64
+    VERDICT: operators AVOID operators. Supports COMPLEMENTARITY.
+
+------------------------------------------------------------------------
+H4  does composition saturate (DisCoCat: valence must fall)?
+    compositions      : 12
+    saturated results : 12
+    mean valence drop : 5.00
+    VERDICT: contraction behaves as a tensor calculus.
+THE EGG (seeded, authored, deliberately tiny)
+======================================================================
+  matter_states   2
+  substances      3
+  processes       3
+  operators       6
+  hosts           2
+  total_frames    13
+  seed stays small: True
+
+DERIVING A CONCEPT THAT WAS NEVER SEEDED
+======================================================================
+  seeded matter states : liquid, gas
+  'solid' seeded?      : False
+
+  liquid --[freeze]-->
+    WHO:?derived(1.00)  WHA:substance(1.00)  WHE:holds-own-shape(1.00)  WHY:matter-state(1.00)  HOW:static(1.00)  CAU:freeze(1.00)  EFF:resists(1.00)
+
+  recognised as (by content planes, identity ignored):
+    rock      100%
+    air       40%
+    gas       40%
+    liquid    40%
+
+OPERATOR CONTRACTION (a blank word binding to a host)
+======================================================================
+  'big'   valence 5 (open indices), saturated=False
+  'house' valence 0, saturated=True
+  contract -> 'big house' valence 0, saturated=True
+    WHO:big house(1.00)  WHA:dwelling(1.00)  WHE:built-structure(1.15)  WHY:shelter(1.00)  HOW:encloses(1.00)  CAU:built(1.00)  EFF:houses(1.00)
+
+TOTALITY EVENT FRAME (Reichenbach three times)
+======================================================================
+EVENT 'freeze'  (future is PREDICTED)
+  past     liquid
+  present  freezeing
+  future   freeze(liquid)
+    change WHO     liquid -> freeze(liquid)
+    change WHERE   takes-container-shape -> holds-own-shape
+    change HOW     flows -> static
+    change CAUSE   None -> freeze
+    change EFFECT  wets -> resists
+COMPLEMENTARITY-GATED ATTENTION
+======================================================================
+Standard attention routes by similarity. This adds a bias term so a
+token with an OPEN plane routes to a token that FILLS it.
+
+adversarial case: 'big' (OPEN on How) vs host filling How and a
+distractor near-identical in vector space but ALSO open on How:
+  similarity only : host 0.330   distractor 0.335
+  with gate       : host 0.995   distractor 0.003
+  gate routes blank -> filler: True
+
+PER-PLANE EXPLANATION for 'big' (what an anonymous model cannot say)
+  WHO     -> big          (0.50)
+  WHAT    -> house        (1.00)
+  WHERE   -> big          (0.50)
+  WHY     -> house        (1.00)
+  HOW     -> house        (1.00)
+  CAUSE   -> house        (1.00)
+  EFFECT  -> house        (1.00)
+==========================================================================
+DEPTH TESTS  --  Q.q.c (343), not flat Q (7)
+==========================================================================
+Flat 7 is the strawman HANDOVER.md names; bottleneck_test.py
+measures it at 2% retention vs 82% for 343. These are the same
+questions asked at the depth the project actually claims.
+
+corpus tokens        : 6,050,074
+words with Q.q.c     : 151
+labelled tokens      : 77,385
+
+--------------------------------------------------------------------------
+D1  graded adjacency: how much address do adjacent words SHARE?
+    (flat 7 can only see prefix 0 vs >0 and discards the rest)
+    pairs: 1,016
+    shared        real    shuffled       sd        z
+    none        0.7185      0.7722   0.0104    -5.17
+    Q           0.0906      0.0860   0.0070    +0.65
+    Q.q         0.0492      0.0693   0.0046    -4.38
+    Q.q.c       0.1417      0.0725   0.0076    +9.16
+
+--------------------------------------------------------------------------
+D2  named cells vs RANDOM cells of identical size, PER DEPTH
+    prediction: separation should grow with depth if the
+    recursion is load-bearing rather than decorative
+
+    depth 1  (7 cells, 6 occupied, 25.2 words/occupied cell)
+      named           : 4.308
+      random          : 4.679 (sd 0.429, best 3.351)
+      random >= named : 37/200   p = 0.1891   z = -0.87
+      -> not distinguishable
+
+    depth 2  (49 cells, 25 occupied, 6.0 words/occupied cell)
+      named           : 10.388
+      random          : 12.525 (sd 1.132, best 9.192)
+      random >= named : 7/200   p = 0.0398   z = -1.89
+      -> NAMED BEATS RANDOM
+
+    depth 3  (343 cells, 53 occupied, 2.8 words/occupied cell)
+      named           : 18.797
+      random          : 21.078 (sd 1.568, best 15.624)
+      random >= named : 16/200   p = 0.0846   z = -1.45
+      -> not distinguishable
+
+--------------------------------------------------------------------------
+D3  does SUB-OBJECT SHARING predict co-occurrence?
+    fractal_basis: cells are linked when they share sub-objects,
+    strength = how many. Flat 7 cannot express this at all.
+    shared       pairs   mean co-occur
+    none         9,108          27.222
+    Q            1,696          20.117
+    Q.q            346          64.350
+    Q.q.c          175          77.680
+    monotonic in shared depth: False

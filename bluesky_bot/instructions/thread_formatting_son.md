@@ -90,7 +90,7 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 ### Element 3: The Verdict
 * **Wording**: Clean verdict line using exact path names: `Verdict: [PASS/FAIL] — [Path Name].` followed by a rich, 1-2 sentence explanation of the trajectory's cause.
 * **Integrity Metrics**: Append a new line showing the integrity assessment and uncertainty score:
-  `Integrity: [real_integrity] (R_net: [real_rnet], Uncertainty z: [real_z])`
+  `Integrity: [real_integrity] (Hypocrisy: [real_rnet], Uncertainty z: [real_z])`
 
 ### Element 4: What's Happening (Context)
 * **Wording**: Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.
@@ -166,7 +166,7 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
       "Custom hook one-liner setting the scene.\n\nExample Story\nEvidence: stated ideal, actual effect, actual ideal",
       "Stated claim details explaining intent organically.\nStated Judgement: (+1.0, 0.0) — Good Preference",
       "Actual reality details revealing structural actions organically.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nExplanation of structural outcome.\n\nIntegrity: Severe Deception (R_net: 12.5, Uncertainty z: 4)",
+      "Verdict: FAIL — The Path of Deception.\nExplanation of structural outcome.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 4)",
       "Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.",
       "The Bright Side:\nNuance or redeeming aspect of the situation.",
       "The Breakdown & Plane Error:\nExplanation of the plane error (WHAT vs WHO).\n\nIt is a structural bait-and-switch: they claim public benefit but extract strictly for themselves.",

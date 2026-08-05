@@ -22,7 +22,7 @@
 | 3 | [The SOUL Model of Willpower](#3-the-soul-model-of-willpower) | Formal definitions, the willpower differential, the Homogeny Convention, TEF, Hegemonic grounding, Belief Equations, and the Lorentz regime. |
 | 3.0 | [The Cognitive Hardware Layer](#30-the-cognitive-hardware-layer-subjective-base-frame) | Every agent has a subjective base frame $c_{\text{base}}$ set by their processing capacity — equivalent to AI context window, RAM, and architecture. $L$ is derived from it. |
 | 3.1 | [Definitions — the SOUL Framework](#31-definitions-the-soul-framework) | Four elements: Supporting, Opposing, Unknown, and **$L$ (Location)** — the contextual deviation from ideal understanding, indexed by $c$. |
-| 3.2 | [The Willpower Differential](#32-the-willpower-differential) | $\mathbf{W}_c = (\|\mathcal{S}_c\| - \|\mathcal{O}_c\|)\ /\ (\|\mathcal{U}_c\| + L)$ — $L$ is the live contextual friction load; Homogeny Convention fires when $\|\mathcal{U}_c\| + L = 0$. |
+| 3.2 | [The Willpower Differential](#32-the-willpower-differential) | $\mathbf{W}_c = (\vert\mathcal{S}_c\vert - \vert\mathcal{O}_c\vert)\ /\ (\vert\mathcal{U}_c\vert + L)$ — $L$ is the live contextual friction load; Homogeny Convention fires when $\vert\mathcal{U}_c\vert + L = 0$. |
 | 3.3 | [TEF as Idea-State Encoding](#33-the-totality-event-frame-tef-as-idea-state-encoding) | Every idea encoded as a recursive temporal tensor — $L$ is the *where* root node, indexed by $c$. |
 | 3.4 | [Hegemonic Grounding](#34-hegemonic-grounding-the-upsilon-psi-axes-and-the-four-poles) | Each partition maps onto $(\upsilon, \psi)$ — the four poles define attractor states of willpower. |
 | 3.5 | [The VFT Belief Equations](#35-the-vft-belief-equations-acceptance-resistance-worldview) | Acceptance, DisbeliefResistance, Worldview, and SpK/SK ratio formalise partition assignment mechanics. |
@@ -161,7 +161,7 @@ Sweller (1988) identified three types of cognitive load: intrinsic (inherent com
 
 The Psochic Hegemony defines both vector axes of all idea-evaluation as concurrent, objective $(-2, +2)$ continuous scales (VFT Corpus: *The Axiom of Objective Truth*). The full Hegemonic Vector $\mathbf{F}$ is the superposition of two fundamental dualities:
 
-$$\mathbf{F}_{\text{Idea}} = (\mathbf{\upsilon}_{\text{Subjective}}, \mathbf{\psi}) \oplus (\mathbf{\upsilon}_{\text{Objective}}, \mathbf{\psi})$$
+$$\mathbf{F}_{\text{Idea}} = (\boldsymbol{\upsilon}_{\text{Subjective}}, \boldsymbol{\psi}) \oplus (\boldsymbol{\upsilon}_{\text{Objective}}, \boldsymbol{\psi})$$
 
 **The $\upsilon$ axis (Morality / Beneficiary):** Extends from $+2$ (Systemic Justice / Everyone) through $0$ (No one / Neutral) to $-2$ (Pure Extraction / Only me).
 
@@ -200,7 +200,7 @@ $L_{\text{min}}(c_{\text{base}})$ is the **hardware floor** — the minimum achi
 | Cognitive parameter | AI hardware equivalent | Role in SOUL model |
 |---|---|---|
 | $c_{\text{base}}$ — subjective frame floor | Model architecture / parameter count | Sets $L_{\text{min}}$ — the floor on all willpower output |
-| $W_{max}$ — context window | Context window (tokens) | Max concurrent $\|\mathcal{U}_c\|$ before overload |
+| $W_{max}$ — context window | Context window (tokens) | Max concurrent $\vert\mathcal{U}_c\vert$ before overload |
 | $\mathbb{W}$ — worldview density | Model weights / training data | Prior knowledge; Lorentz $C_{\text{worldview}}$ limit |
 | Acceptance rate | Inference speed (tokens/second) | Rate of $\mathcal{U}_c \to \mathcal{S}_c$ or $\mathcal{O}_c$ classification |
 | $C_{\text{worldview}}$ — Lorentz ceiling | GPU/TPU throughput | Maximum resistance before singularity |
@@ -333,7 +333,7 @@ The **four Hegemonic poles** (the $\pm1$ grid anchors) and the **inner center** 
 | Pole | $(\upsilon, \psi)$ | Willpower State | Notes |
 |---|---|---|---|
 | **Greater Good** | $(+1, +1)$ | Maximum productive willpower | $\mathcal{S}_c$ dominant, $\mathcal{U}_c$ collapsing, $L \to 0$ |
-| **Lesser Good** | $(+1, -1)$ | Willpower resolved — passive/stasis | $|\mathcal{U}_c| = 0$, $L = 0$ → Homogeny: $\mathbf{W}_c = |\mathcal{S}_c|$ |
+| **Lesser Good** | $(+1, -1)$ | Willpower resolved — passive/stasis | $\vert\mathcal{U}_c\vert = 0$, $L = 0$ → Homogeny: $\mathbf{W}_c = \vert\mathcal{S}_c\vert$ |
 | **Greatest Lie** | $(-1, +1)$ | High $\psi$ / negative $\upsilon$ | $L > 0$: items forced into $\mathcal{S}_c$ purely by ego-driven extraction logic ($\upsilon_{\text{Subjective}}$) |
 | **Greater Evil** | $(-1, -1)$ | Destructive collapse | Extraction paired with suppression / active destruction |
 | **No One** | $(0, 0)$ | Willpower collapsed / Neutral | $|\mathcal{U}_c| \to \infty$, denominator $\to \infty$, $\mathbf{W}_c \to 0$ (inner center) |
@@ -575,18 +575,18 @@ The diagnostic gap $\Delta\upsilon$ is maximal here, and $L$ is at its highest �
 | Domain | Contribution | Maps to Model |
 |---|---|---|
 | Friston (2010) | Free energy minimisation | Resolving $\mathcal{U}_c$ = descending free energy gradient |
-| Shannon (1948) | Entropy as uncertainty measure | $|\mathcal{U}_c|$ = epistemic entropy |
+| Shannon (1948) | Entropy as uncertainty measure | $\vert\mathcal{U}_c\vert$ = epistemic entropy |
 | Landauer (1961) | Physical cost of information processing | Metabolic cost of TEF resolution; forced erasure ≠ homogeny |
 | Sweller (1988) | Working memory limits | Processing context window $W_{max}$ |
 | Botvinick et al. (2001) | ACC conflict monitoring | Neural detection of $\mathcal{O}_c$ tension |
 | Festinger (1957) | Dissonance reduction motivation | Drive to collapse $\mathcal{U}_c$ |
-| Baumeister et al. (1998) | Ego depletion | Depletion = accumulated $|\mathcal{U}_c|$ resolution cost |
-| Inzlicht & Schmeichel (2012) | Motivational shift model | Willpower as $|\mathcal{S}_c| - |\mathcal{O}_c|$ differential |
+| Baumeister et al. (1998) | Ego depletion | Depletion = accumulated $\vert\mathcal{U}_c\vert$ resolution cost |
+| Inzlicht & Schmeichel (2012) | Motivational shift model | Willpower as $\vert\mathcal{S}_c\vert - \vert\mathcal{O}_c\vert$ differential |
 | Kahneman (2011) | Dual-process theory | System 1 = heuristic rejection; System 2 = TEF resolution |
 | VFT: Axiom of Objective Truth | Hegemonic Vector $(\upsilon, \psi)$ | Objective coordinate field for all partition assignments |
 | VFT: Belief Equations | Acceptance / DisbeliefResistance / Worldview | Quantitative partition assignment mechanics |
 | VFT: Lorentz Transform | Relativistic belief processing | Non-linear regime; insult = singularity = word salad threshold |
-| VFT: SOUL / Homogeny Convention | $L$, $|\mathcal{U}_c|+L=0 \Rightarrow$ denom $:=1$ | $L$ as live denominator load; zero as relative homogeny |
+| VFT: SOUL / Homogeny Convention | $L$, $\vert\mathcal{U}_c\vert+L=0 \Rightarrow \text{denom} := 1$ | $L$ as live denominator load; zero as relative homogeny |
 
 **Core thesis:** Willpower is the *active inference energy* required to reduce $|\mathcal{U}_c|$ under constraints imposed by $W_{max}$, $\mathbb{W}^2$, SpK/SK ratio, and the Location deviation $L$ — operating within the objective Hegemonic field $(\upsilon, \psi)$. It is thermodynamic (Landauer, 1961); differential ($|\mathcal{S}_c| - |\mathcal{O}_c|$); bounded by worldview architecture; relativistic at high resistance; and contextually loaded by $L$, a live friction term measuring deviation from ideal understanding.
 

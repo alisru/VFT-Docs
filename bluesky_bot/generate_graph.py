@@ -207,120 +207,21 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.text(1.9, -1.9, "STAGNATION\n(Peace)", color='white', fontsize=10, ha='left', va='bottom') # Outer BL
     ax.text(-1.9, -1.9, "CHAOS\n(Depression)", color='white', fontsize=10, ha='right', va='bottom') # Outer BR
 
-    has_macro = macro_event and macro_event.strip()
-    
-    if has_macro:
-        # Defaults for macro if not provided
-        m_claim_u = macro_claim_u if macro_claim_u is not None else 0.0
-        m_claim_psi = macro_claim_psi if macro_claim_psi is not None else 0.0
-        m_real_u = macro_real_u if macro_real_u is not None else 0.0
-        m_real_psi = macro_real_psi if macro_real_psi is not None else 0.0
+    # Standard Single-Level Graph Plotting
+    claim_point, = ax.plot(claim_u, claim_psi, marker='o', color='yellow', markersize=10, fillstyle='none', markeredgewidth=2, label="Stated Claim", zorder=3)
+    real_point, = ax.plot(real_u, real_psi, marker='*', color='red', markersize=15, label="Actual Reality", zorder=3)
 
-        # Check if micro and macro coordinates are identical
-        coordinates_match = (
-            claim_u == m_claim_u and
-            claim_psi == m_claim_psi and
-            real_u == m_real_u and
-            real_psi == m_real_psi
-        )
-        
-        if coordinates_match:
-            has_macro = False
+    # Draw Path
+    path_name = get_path_name(claim_u, claim_psi, real_u, real_psi)
 
-    if has_macro:
-        # 1. Plot Macro Points on Outer Grid
-        macro_claim_pt, = ax.plot(m_claim_u, m_claim_psi, marker='o', color='yellow', markersize=10, 
-                                  fillstyle='none', markeredgewidth=2, label="Macro Stated", zorder=3)
-        macro_real_pt, = ax.plot(m_real_u, m_real_psi, marker='*', color='red', markersize=15, 
-                                 label="Macro Actual", zorder=3)
-        
-        # Draw macro path arrow
-        ax.annotate("",
-                    xy=(m_real_u, m_real_psi), xycoords='data',
-                    xytext=(m_claim_u, m_claim_psi), textcoords='data',
-                    arrowprops=dict(arrowstyle="->", color="white", linestyle="dashed", linewidth=1.5, connectionstyle="arc3,rad=-0.2"),
-                    zorder=3)
+    ax.annotate("",
+                xy=(real_u, real_psi), xycoords='data',
+                xytext=(claim_u, claim_psi), textcoords='data',
+                arrowprops=dict(arrowstyle="->", color="white", linestyle="dashed", linewidth=1.5, connectionstyle="arc3,rad=-0.2"),
+                zorder=3)
 
-        # 2. Draw Nested Inner Box (represented as outer [-0.5, 0.5])
-        inner_box = patches.Rectangle((0.5, -0.5), -1.0, 1.0, fill=True, facecolor='#161616', 
-                                      edgecolor='white', linestyle='-', linewidth=1.5, zorder=2)
-        ax.add_patch(inner_box)
-
-        # Draw axes inside inner box
-        ax.plot([0.5, -0.5], [0.0, 0.0], color='gray', linestyle='-', linewidth=0.5, alpha=0.5, zorder=2)
-        ax.plot([0.0, 0.0], [-0.5, 0.5], color='gray', linestyle='-', linewidth=0.5, alpha=0.5, zorder=2)
-
-        # 3. Determine Inversion (horizontal reflection/mirroring if macro-context is selfish and a positive micro event occurs)
-        is_inverted = (m_real_u < 0) and (real_u > 0)
-
-        # 4. Write Inner Box Quadrant Labels (placed on direct 0.5 corners)
-        inner_label_opts = {'color': 'white', 'fontsize': 6, 'alpha': 0.5, 'zorder': 3}
-        ax.text(0.51, 0.51, "P-LE", ha='right', va='bottom', **inner_label_opts)   # TL corner
-        ax.text(-0.51, 0.51, "P-GG", ha='left', va='bottom', **inner_label_opts)  # TR corner
-        ax.text(0.51, -0.51, "P-GE", ha='right', va='top', **inner_label_opts)   # BL corner
-        ax.text(-0.51, -0.51, "P-LG", ha='left', va='top', **inner_label_opts)  # BR corner
-
-        # 5. Plot Micro Points inside the Inner Box (scaled by 0.5)
-        # Horizontally flipped if is_inverted is active
-        u_st_plot = (-claim_u if is_inverted else claim_u) * 0.5
-        psi_st_plot = claim_psi * 0.5
-        u_ac_plot = (-real_u if is_inverted else real_u) * 0.5
-        psi_ac_plot = real_psi * 0.5
-
-        micro_claim_pt, = ax.plot(u_st_plot, psi_st_plot, marker='o', color='yellow', markersize=6, 
-                                  fillstyle='none', markeredgewidth=1.5, label="Micro Stated", zorder=4)
-        micro_real_pt, = ax.plot(u_ac_plot, psi_ac_plot, marker='*', color='red', markersize=9, 
-                                 label="Micro Actual", zorder=4)
-
-        # Draw micro path dashed arrow
-        ax.annotate("",
-                    xy=(u_ac_plot, psi_ac_plot), xycoords='data',
-                    xytext=(u_st_plot, psi_st_plot), textcoords='data',
-                    arrowprops=dict(arrowstyle="->", color="white", linestyle="dashed", linewidth=1.0, connectionstyle="arc3,rad=-0.2"),
-                    zorder=4)
-
-        # 6. (Connection lines to corners disabled to declutter layout)
-        pass
-
-        legend_handles = [macro_claim_pt, macro_real_pt, micro_claim_pt, micro_real_pt]
-        path_name = get_path_name(claim_u, claim_psi, real_u, real_psi)
-        
-        macro_good = (m_real_u >= 0)
-        micro_good = (real_u >= 0)
-        if macro_good and micro_good:
-            frame_desc = "Standard Hegemony: Good Event in Good Macro Frame"
-        elif macro_good and not micro_good:
-            frame_desc = "Standard Hegemony: Bad Event in Good Macro Frame"
-        elif not macro_good and micro_good:
-            frame_desc = "Inverted Hegemony: Good Event in Bad Macro Frame"
-        else:
-            frame_desc = "Inverted Hegemony: Bad Event in Bad Macro Frame"
-
-        title_text = (
-            f"{title}\n"
-            f"Frame Type: {frame_desc}\n"
-            f"Projected Eventuality: {path_name}\n"
-            f"Micro: Stated ({claim_u:+.1f}, {claim_psi:+.1f}) | Actual ({real_u:+.1f}, {real_psi:+.1f})\n"
-            f"Macro [{macro_event}]: Stated ({m_claim_u:+.1f}, {m_claim_psi:+.1f}) | Actual ({m_real_u:+.1f}, {m_real_psi:+.1f})"
-        )
-    else:
-        # Standard Single-Level Graph Plotting
-        claim_point, = ax.plot(claim_u, claim_psi, marker='o', color='yellow', markersize=10, fillstyle='none', markeredgewidth=2, label="Stated Claim", zorder=3)
-        real_point, = ax.plot(real_u, real_psi, marker='*', color='red', markersize=15, label="Actual Reality", zorder=3)
-
-        # Draw Path
-        path_name = get_path_name(claim_u, claim_psi, real_u, real_psi)
-
-        ax.annotate("",
-                    xy=(real_u, real_psi), xycoords='data',
-                    xytext=(claim_u, claim_psi), textcoords='data',
-                    arrowprops=dict(arrowstyle="->", color="white", linestyle="dashed", linewidth=1.5, connectionstyle="arc3,rad=-0.2"),
-                    zorder=3)
-
-        legend_handles = [claim_point, real_point]
-        title_text = f"{title}\nProjected Eventuality: {path_name}\nStated: ({claim_u:+.1f}, {claim_psi:+.1f})  |  Actual: ({real_u:+.1f}, {real_psi:+.1f})"
-        if macro_event and macro_event.strip():
-            title_text += f"\nMacro Event: {macro_event}"
+    legend_handles = [claim_point, real_point]
+    title_text = f"{title}\nProjected Eventuality: {path_name}\nStated: ({claim_u:+.1f}, {claim_psi:+.1f})  |  Actual: ({real_u:+.1f}, {real_psi:+.1f})"
 
     # Axis labels
     ax.set_xlabel("Morality (υ)", color='white')

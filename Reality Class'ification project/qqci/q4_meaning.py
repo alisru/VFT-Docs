@@ -56,8 +56,8 @@ from qqci_engine import Plane
 from tautonic import SPECTRUM
 from vft import FieldMath, MoralVectors
 
-NSM_DIR = ("/sessions/admiring-sweet-albattani/mnt/_VFT MD/Actualism/"
-           "Language/translating/nsm_reduction")
+NSM_DIR = (r"E:\Vector Field Theory\VFT Docs\_VFT MD\Actualism"
+           r"\Language\translating\nsm_reduction")
 
 
 # --- which plane does each NSM base speak on? ---
