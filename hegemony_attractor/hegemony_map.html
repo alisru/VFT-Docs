@@ -1374,7 +1374,11 @@ function draw() {
           { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' },  // Suppressive -> Constructive
           { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' }, // Suppressive -> Regressive
           { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' },   // Active -> Productive
-          { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' }    // Active -> Reductive
+          { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' },  // Active -> Reductive
+          { x1: 2, y1: -2, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)' },   // Good Edge (LHS)
+          { x1: -2, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)' },  // Bad Edge (RHS)
+          { x1: -2, y1: 2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' },   // Top Edge
+          { x1: -2, y1: -2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' }  // Bottom Edge
         ];
 
         armsProj.forEach(arm => {
