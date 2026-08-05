@@ -1410,6 +1410,74 @@ function draw() {
         drawTextWithBackground(ctx, `T: ${T.toFixed(2)}`, pTx + 10 * dpr, pTy, Math.round(7.5 * dpr), '#3bde84', true, 'left', 'middle');
         drawTextWithBackground(ctx, `L: ${L.toFixed(2)}`, pLx - 10 * dpr, pLy, Math.round(7.5 * dpr), '#f05060', true, 'right', 'middle');
       }
+
+      // Draw projections and [dir, mag] readings directly on the 8 Subdivision Arms
+      if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
+        const armsProj = [
+          { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.8)' },  // Potential -> Productive
+          { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.8)' }, // Potential -> Constructive
+          { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.8)' },   // Anti-Potential -> Reductive
+          { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)' },  // Anti-Potential -> Regressive
+          { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' },  // Suppressive -> Constructive
+          { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)' }, // Suppressive -> Regressive
+          { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' },   // Active -> Productive
+          { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.8)' }    // Active -> Reductive
+        ];
+
+        armsProj.forEach(arm => {
+          const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
+          const len = Math.hypot(dx, dy);
+          const ux = dx / len, uy = dy / len;
+          const alongRaw = (v - arm.x1) * ux + (psi - arm.y1) * uy;
+          
+          const alongClamped = Math.max(0, Math.min(len, alongRaw));
+          const projV = arm.x1 + ux * alongClamped;
+          const projPsi = arm.y1 + uy * alongClamped;
+          const [projPx, projPy] = toPixel(projV, projPsi);
+
+          const distClamped = Math.hypot(v - projV, psi - projPsi);
+          const dir = (alongRaw / len) * 100;
+          const mag = Math.max(0, 100 * (1 - distClamped / len));
+
+          // Draw dashed guide line
+          ctx.save();
+          ctx.setLineDash([2 * dpr, 2 * dpr]);
+          ctx.strokeStyle = arm.color.replace('0.8', '0.45');
+          ctx.lineWidth = 0.8 * dpr;
+          ctx.beginPath();
+          ctx.moveTo(px, py);
+          ctx.lineTo(projPx, projPy);
+          ctx.stroke();
+
+          // Draw projection dot on axis
+          ctx.beginPath();
+          ctx.arc(projPx, projPy, 2.5 * dpr, 0, Math.PI * 2);
+          ctx.fillStyle = arm.color;
+          ctx.fill();
+
+          // Draw [dir, mag] text next to the dot (offset perpendicular to the arm)
+          const nx = -dy / len, ny = dx / len;
+          const textOffset = 9 * dpr;
+          const tx = projPx - nx * textOffset;
+          const ty = projPy - ny * textOffset;
+
+          ctx.font = `bold ${Math.round(6.5 * dpr)}px 'JetBrains Mono', monospace`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          
+          const labelText = `[${dir.toFixed(0)},${mag.toFixed(0)}]`;
+          
+          ctx.strokeStyle = '#0a0b0f';
+          ctx.lineWidth = 2.5 * dpr;
+          ctx.lineJoin = 'round';
+          ctx.strokeText(labelText, tx, ty);
+
+          ctx.fillStyle = arm.color;
+          ctx.fillText(labelText, tx, ty);
+
+          ctx.restore();
+        });
+      }
     }
   }
 
