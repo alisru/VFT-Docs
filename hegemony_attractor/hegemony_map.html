@@ -416,8 +416,40 @@
       <div class="side-title">Zoom</div>
       <div style="display:flex; align-items:center; gap:8px; font-size:11px;">
         <span style="color:var(--muted)">Zoom:</span>
-        <input type="range" id="zoomLevel" min="30" max="200" value="80" style="flex:1; accent-color:#3bde84;" />
+        <input type="range" id="zoomLevel" min="30" max="800" value="80" style="flex:1; accent-color:#3bde84;" />
         <span id="zoomLabel" style="color:#3bde84; min-width:32px; text-align:right;">80%</span>
+      </div>
+    </div>
+
+    <!-- Shader Blending Controls -->
+    <div class="side-section">
+      <div class="side-title">Shader Blending</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:11px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Divisor:</span>
+          <input type="range" id="shaderDiv" min="1.5" max="8.0" step="0.1" value="4.0" style="flex:1; accent-color:#3bde84;" />
+          <span id="shaderDivLabel" style="color:#3bde84; min-width:24px; text-align:right;">4.0</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Exponent:</span>
+          <input type="range" id="shaderExp" min="0.3" max="3.0" step="0.1" value="1.3" style="flex:1; accent-color:#3bde84;" />
+          <span id="shaderExpLabel" style="color:#3bde84; min-width:24px; text-align:right;">1.3</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Opacity:</span>
+          <input type="range" id="shaderOpac" min="30" max="250" step="5" value="125" style="flex:1; accent-color:#3bde84;" />
+          <span id="shaderOpacLabel" style="color:#3bde84; min-width:24px; text-align:right;">125</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Cancel Str:</span>
+          <input type="range" id="shaderCancel" min="0.0" max="2.0" step="0.1" value="1.0" style="flex:1; accent-color:#3bde84;" />
+          <span id="shaderCancelLabel" style="color:#3bde84; min-width:24px; text-align:right;">1.0</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Observer N:</span>
+          <input type="range" id="shaderLimit" min="1" max="8" step="1" value="8" style="flex:1; accent-color:#3bde84;" />
+          <span id="shaderLimitLabel" style="color:#3bde84; min-width:24px; text-align:right;">8</span>
+        </div>
       </div>
     </div>
 
@@ -663,16 +695,20 @@ function resize() {
   draw();
 }
 
-// Map canvas pixel to υ/ψ space
 function toCoord(px, py) {
   const W = canvas.width, H = canvas.height;
   const dpr = devicePixelRatio;
+  const zoomFactor = parseFloat(document.getElementById('zoomLevel')?.value || '80') / 100;
   const gridSize = Math.min(W, H) - 150 * dpr;
   const marginX = (W - gridSize) / 2;
   const marginY = (H - gridSize) / 2;
-  
-  const v   = 2 - ((px - marginX) / gridSize) * 4;
-  const psi = 2 - ((py - marginY) / gridSize) * 4;
+
+  // Unzoom the coordinates around the canvas center
+  const unzoomedX = (px - W / 2) / zoomFactor + W / 2;
+  const unzoomedY = (py - H / 2) / zoomFactor + H / 2;
+
+  const v   = 2 - ((unzoomedX - marginX) / gridSize) * 4;
+  const psi = 2 - ((unzoomedY - marginY) / gridSize) * 4;
 
   return [
     Math.max(-2, Math.min(2, v)),
@@ -843,11 +879,19 @@ function draw() {
   const rxPx = gridSize * Math.SQRT2 / 2; // circle radius in pixels
   const shadePot = document.getElementById('shadePotential')?.checked;
   const shadeAnti = document.getElementById('shadeAntiPotential')?.checked;
-  const currentCacheKey = `${Math.round(gridSize)}_${shadePot?1:0}_${shadeAnti?1:0}`;
+
+  const sDiv = parseFloat(document.getElementById('shaderDiv')?.value || '4.0');
+  const sExp = parseFloat(document.getElementById('shaderExp')?.value || '1.3');
+  const sOpac = parseFloat(document.getElementById('shaderOpac')?.value || '125');
+  const sCancel = parseFloat(document.getElementById('shaderCancel')?.value || '1.0');
+  const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '12');
+
+  // Cache is independent of gridSize/zoom factor now!
+  const currentCacheKey = `${shadePot?1:0}_${shadeAnti?1:0}_${sDiv}_${sExp}_${sOpac}_${sCancel}_${sLimit}`;
 
   if (!cachedShaderCanvas || cachedShaderKey !== currentCacheKey) {
-    const shW = Math.ceil(rxPx * 2) + 4;
-    const shH = shW;
+    const shW = 300; // Fixed resolution for buttery smooth zoom/scroll performance
+    const shH = 300;
     cachedShaderCanvas = document.createElement('canvas');
     cachedShaderCanvas.width = shW;
     cachedShaderCanvas.height = shH;
@@ -858,87 +902,80 @@ function draw() {
     function getProx(u, psi, x1, y1, x2, y2) {
       const dx = x2 - x1, dy = y2 - y1;
       const len = Math.hypot(dx, dy);
-      if (len === 0) return { prox: 0, projU: x1 };
+      if (len === 0) return { prox: 0, projU: x1, dir: 0 };
       const ux = dx / len, uy = dy / len;
-      const along = Math.max(0, Math.min(len, (u - x1) * ux + (psi - y1) * uy));
-      const projU = x1 + ux * along;
-      const projPsi = y1 + uy * along;
+      const along = (u - x1) * ux + (psi - y1) * uy;
+      const alongC = Math.max(0, Math.min(len, along));
+      const projU = x1 + ux * alongC;
+      const projPsi = y1 + uy * alongC;
       const dist = Math.hypot(u - projU, psi - projPsi);
-      return { prox: Math.max(0, 1 - dist / len), projU };
+      const dir = (along / len) * 100;
+      return { prox: Math.max(0, 1 - dist / len), projU, dir, dist };
     }
-
-    const shaderOriginX = cx - rxPx - 2;
-    const shaderOriginY = cy - rxPx - 2;
 
     for (let y = 0; y < shH; y++) {
       for (let x = 0; x < shW; x++) {
-        // Map shader pixel to (u, psi) coord space via canvas position
-        const u   = 2 - ((shaderOriginX + x - marginX) / gridSize) * 4;
-        const psi = 2 - ((shaderOriginY + y - marginY) / gridSize) * 4;
+        // Map shader pixel (x,y) to (u, psi) coordinate space (covering -R to R)
+        const u   = R - (x / shW) * (2 * R);
+        const psi = R - (y / shH) * (2 * R);
 
-        // Skip pixels outside the circle (radius 2√2 in coord space)
+        // Skip pixels outside the circle (radius R in coord space)
         if (u * u + psi * psi > 8.08) { data[(y * shW + x) * 4 + 3] = 0; continue; }
 
         let gSum = 0, rSum = 0;
 
-        // Central axes (pure)
-        const { prox: pGood }  = getProx(u, psi, 0, 0, 2, 0);   gSum += pGood  * 1.0;
-        const { prox: pBad }   = getProx(u, psi, 0, 0, -2, 0);  rSum += pBad   * 1.0;
-        const { prox: pTruth } = getProx(u, psi, 0, 0, 0, 2);   gSum += pTruth * 1.0;
-        const { prox: pLies }  = getProx(u, psi, 0, 0, 0, -2);  rSum += pLies  * 1.0;
+        // Collect the 8 subdivision arms (excluding all edges, diagonals, and central axes)
+        // t denotes type: 0 = pure Green, 1 = pure Red, 2 = Transition (Red -> Green), 3 = Transition (Green -> Red)
+        const axesData = [
+          { p: getProx(u, psi, -R, 0, 2, 2),   w: 1.0, t: 2 }, // PP
+          { p: getProx(u, psi, -R, 0, 2, -2),  w: 0.5, t: 2 }, // CP
+          { p: getProx(u, psi, R, 0, -2, 2),   w: 0.5, t: 3 }, // RA
+          { p: getProx(u, psi, R, 0, -2, -2),  w: 1.0, t: 3 }, // Reg
+          { p: getProx(u, psi, 0, R, 2, -2),   w: 0.5, t: 0 }, // CS (Green-aligned)
+          { p: getProx(u, psi, 0, R, -2, -2),  w: 1.0, t: 3 }, // RS
+          { p: getProx(u, psi, 0, -R, 2, 2),   w: 1.0, t: 2 }, // PA
+          { p: getProx(u, psi, 0, -R, -2, 2),  w: 0.5, t: 1 }  // ReA (Red-aligned)
+        ];
 
-        // Scale of Truth diagonal (Green)
-        const { prox: pST, projU: uST } = getProx(u, psi, 0, 0, 2, 2);
-        if (uST >= 0) gSum += pST * 1.0; else rSum += pST * 1.0;
+        // Sort axes by physical distance ascending (closest first)
+        axesData.sort((a, b) => a.p.dist - b.p.dist);
 
-        // Edges
-        const { prox: pGE } = getProx(u, psi, 2, -2, 2, 2);   gSum += pGE * 1.0;
-        const { prox: pBE } = getProx(u, psi, -2, -2, -2, 2); rSum += pBE * 1.0;
+        // Sum up contributions from the top N perceived axes
+        const activeCount = Math.min(8, sLimit);
+        for (let i = 0; i < activeCount; i++) {
+          const axis = axesData[i];
+          const prox = axis.p.prox;
+          const w = axis.w;
+          if (axis.t === 0) {
+            gSum += prox * w;
+          } else if (axis.t === 1) {
+            rSum += prox * w;
+          } else if (axis.t === 2) {
+            const t = Math.max(0, Math.min(1, axis.p.dir / 100));
+            gSum += prox * t * w;
+            rSum += prox * (1 - t) * w;
+          } else if (axis.t === 3) {
+            const t = Math.max(0, Math.min(1, axis.p.dir / 100));
+            gSum += prox * (1 - t) * w;
+            rSum += prox * t * w;
+          }
+        }
 
-        const { prox: pTE, projU: uTE } = getProx(u, psi, -2, 2, 2, 2);
-        if (uTE >= 0) gSum += pTE * 1.0; else rSum += pTE * 1.0;
+        let g = Math.min(1.0, gSum / sDiv);
+        let r = Math.min(1.0, rSum / sDiv);
+        g = Math.pow(g, sExp);
+        r = Math.pow(r, sExp);
 
-        const { prox: pBotE, projU: uBotE } = getProx(u, psi, -2, -2, 2, -2);
-        if (uBotE >= 0) gSum += pBotE * 1.0; else rSum += pBotE * 1.0;
-
-        // Subdivision Arms — apexes extended to circle (R = 2√2)
-        const { prox: pPP, projU: uPP } = getProx(u, psi, -R, 0, 2, 2);
-        if (uPP >= 0) gSum += pPP * 1.0; else rSum += pPP * 1.0;
-
-        const { prox: pCP, projU: uCP } = getProx(u, psi, -R, 0, 2, -2);
-        if (uCP >= 0) gSum += pCP * 0.5; else rSum += pCP * 0.5;
-
-        const { prox: pRA, projU: uRA } = getProx(u, psi, R, 0, -2, 2);
-        if (uRA >= 0) gSum += pRA * 0.5; else rSum += pRA * 0.5;
-
-        const { prox: pReg, projU: uReg } = getProx(u, psi, R, 0, -2, -2);
-        if (uReg >= 0) gSum += pReg * 1.0; else rSum += pReg * 1.0;
-
-        const { prox: pCS, projU: uCS } = getProx(u, psi, 0, R, 2, -2);
-        if (uCS >= 0) gSum += pCS * 0.5; else rSum += pCS * 0.5;
-
-        const { prox: pRS, projU: uRS } = getProx(u, psi, 0, R, -2, -2);
-        if (uRS >= 0) gSum += pRS * 1.0; else rSum += pRS * 1.0;
-
-        const { prox: pPA, projU: uPA } = getProx(u, psi, 0, -R, 2, 2);
-        if (uPA >= 0) gSum += pPA * 1.0; else rSum += pPA * 1.0;
-
-        const { prox: pReA, projU: uReA } = getProx(u, psi, 0, -R, -2, 2);
-        if (uReA >= 0) gSum += pReA * 0.5; else rSum += pReA * 0.5;
-
-        let g = Math.min(1.0, gSum / 4.0);
-        let r = Math.min(1.0, rSum / 4.0);
-        g = Math.pow(g, 1.3);
-        r = Math.pow(r, 1.3);
-
-        const diff = g - r;
+        // Cancellation: g and r pull against each other with variable cancel strength
+        // A cancellation of 1.0 is standard difference. If 0.0, both draw over each other without cancelling.
+        const diff = g - r * sCancel;
         const idx = (y * shW + x) * 4;
         if (diff > 0) {
           data[idx] = 59; data[idx+1] = 222; data[idx+2] = 132;
-          data[idx+3] = Math.min(255, diff * 125);
+          data[idx+3] = Math.min(255, diff * sOpac);
         } else if (diff < 0) {
           data[idx] = 240; data[idx+1] = 80; data[idx+2] = 96;
-          data[idx+3] = Math.min(255, Math.abs(diff) * 125);
+          data[idx+3] = Math.min(255, Math.abs(diff) * sOpac);
         } else {
           data[idx+3] = 0;
         }
@@ -954,7 +991,8 @@ function draw() {
   shaderCtx.translate(canvas.width / 2, canvas.height / 2);
   shaderCtx.scale(zoomFactor, zoomFactor);
   shaderCtx.translate(-canvas.width / 2, -canvas.height / 2);
-  shaderCtx.drawImage(cachedShaderCanvas, cx - rxPx - 2, cy - rxPx - 2);
+  // Stretched drawing of the cached shader canvas
+  shaderCtx.drawImage(cachedShaderCanvas, cx - rxPx - 2, cy - rxPx - 2, rxPx * 2 + 4, rxPx * 2 + 4);
   shaderCtx.restore();
 
   // Inner graph elements draw without any clip — nothing restricted to card boundary
@@ -1522,14 +1560,14 @@ function draw() {
 
 
     // 7. Axes Titles (positioned at a fixed 25px offset from the canvas boundaries to prevent overlays)
-    // Horizontal Axis Title: υ Morality (Benefit)
-    drawTextWithBackground(ctx, '← Opening / Creating Possibility      υ Morality (Benefit)      Closing Possibility ➔', W / 2, H - 25 * dpr, Math.round(10.5 * dpr), '#3bde84', true, 'center', 'middle');
+    // Horizontal Axis Title: υ Morality (Mind / Benefit)
+    drawTextWithBackground(ctx, '← Opening / Creating Possibility      υ Morality (Mind / Benefit)      Closing Possibility ➔', W / 2, H - 25 * dpr, Math.round(10.5 * dpr), '#3bde84', true, 'center', 'middle');
 
-    // Vertical Axis Title: ψ Will (Action) with Foundation/Application indicators
+    // Vertical Axis Title: ψ Will (Body / Action) with Foundation/Application indicators
     ctx.save();
     ctx.translate(25 * dpr, H / 2);
     ctx.rotate(-Math.PI / 2);
-    drawTextWithBackground(ctx, '← FOUNDATION      ψ Will (Action)      APPLICATION ➔', 0, 0, Math.round(10.5 * dpr), '#30c8e0', true, 'center', 'middle');
+    drawTextWithBackground(ctx, '← FOUNDATION      ψ Will (Body / Action)      APPLICATION ➔', 0, 0, Math.round(10.5 * dpr), '#30c8e0', true, 'center', 'middle');
     ctx.restore();
   }
 
@@ -1691,82 +1729,92 @@ function draw() {
       if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
         const _Rd = Math.SQRT2 * 2;
         const armsProj = [
-          { x1: -_Rd, y1: 0,    x2: 2,  y2: 2,  color: 'rgba(59, 222, 132, 0.8)',  isEdge: false },
-          { x1: -_Rd, y1: 0,    x2: 2,  y2: -2, color: 'rgba(59, 222, 132, 0.8)',  isEdge: false },
-          { x1:  _Rd, y1: 0,    x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.8)',   isEdge: false },
-          { x1:  _Rd, y1: 0,    x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)',   isEdge: false },
-          { x1: 0,    y1:  _Rd, x2: 2,  y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false },
-          { x1: 0,    y1:  _Rd, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false },
-          { x1: 0,    y1: -_Rd, x2: 2,  y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false },
-          { x1: 0,    y1: -_Rd, x2: -2, y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false },
-          { x1: 2,    y1: -2,   x2: 2,  y2: 2,  color: 'rgba(59, 222, 132, 0.8)',  isEdge: true, name: 'Good' },
-          { x1: -2,   y1: -2,   x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.8)',   isEdge: true, name: 'Bad' },
-          { x1: -2,   y1: 2,    x2: 2,  y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: true, name: 'Top' },
-          { x1: -2,   y1: -2,   x2: 2,  y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: true, name: 'Bottom' }
+          { x1: -_Rd, y1: 0,    x2: 2,  y2: 2,  color: 'rgba(59, 222, 132, 0.8)',  isEdge: false, name: 'Productive ← Potential' },
+          { x1: -_Rd, y1: 0,    x2: 2,  y2: -2, color: 'rgba(59, 222, 132, 0.8)',  isEdge: false, name: 'Constructive ← Potential' },
+          { x1:  _Rd, y1: 0,    x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.8)',   isEdge: false, name: 'Anti-Potential → Reductive' },
+          { x1:  _Rd, y1: 0,    x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)',   isEdge: false, name: 'Anti-Potential → Regressive' },
+          { x1: 0,    y1:  _Rd, x2: 2,  y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false, name: 'Constructive ← Suppressive' },
+          { x1: 0,    y1:  _Rd, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false, name: 'Suppressive → Regressive' },
+          { x1: 0,    y1: -_Rd, x2: 2,  y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false, name: 'Productive ← Active' },
+          { x1: 0,    y1: -_Rd, x2: -2, y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false, name: 'Active → Reductive' }
         ];
 
+        // Precalculate distances to each arm segment
         armsProj.forEach(arm => {
           const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
           const len = Math.hypot(dx, dy);
           const ux = dx / len, uy = dy / len;
           const alongRaw = (v - arm.x1) * ux + (psi - arm.y1) * uy;
-          
           const alongClamped = Math.max(0, Math.min(len, alongRaw));
           const projV = arm.x1 + ux * alongClamped;
           const projPsi = arm.y1 + uy * alongClamped;
-          const [projPx, projPy] = toPixel(projV, projPsi);
+          arm.dist = Math.hypot(v - projV, psi - projPsi);
+          arm.alongRaw = alongRaw;
+          arm.len = len;
+          arm.projV = projV;
+          arm.projPsi = projPsi;
+        });
 
-          const distClamped = Math.hypot(v - projV, psi - projPsi);
-          const dir = (alongRaw / len) * 100;
-          const mag = Math.max(0, 100 * (1 - distClamped / len));
+        // Sort by distance ascending
+        const sortedArms = [...armsProj].sort((a, b) => a.dist - b.dist);
+        const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '8');
+
+        armsProj.forEach(arm => {
+          const isCounted = sortedArms.indexOf(arm) < sLimit;
+          const [projPx, projPy] = toPixel(arm.projV, arm.projPsi);
+          const dir = (arm.alongRaw / arm.len) * 100;
+          const mag = Math.max(0, 100 * (1 - arm.dist / arm.len));
 
           // Draw dashed guide line
           ctx.save();
           ctx.setLineDash([2 * dpr, 2 * dpr]);
-          ctx.strokeStyle = arm.color.replace('0.8', '0.45');
+          ctx.strokeStyle = isCounted ? arm.color.replace('0.8', '0.45') : 'rgba(255, 255, 255, 0.05)';
           ctx.lineWidth = 0.8 * dpr;
           ctx.beginPath();
           ctx.moveTo(px, py);
           ctx.lineTo(projPx, projPy);
           ctx.stroke();
 
-          // Draw projection dot on axis
-          ctx.beginPath();
-          ctx.arc(projPx, projPy, 2.5 * dpr, 0, Math.PI * 2);
-          ctx.fillStyle = arm.color;
-          ctx.fill();
+          // Only draw projection dot and text labels for active (counted) axes
+          if (isCounted) {
+            ctx.beginPath();
+            ctx.arc(projPx, projPy, 2.5 * dpr, 0, Math.PI * 2);
+            ctx.fillStyle = arm.color;
+            ctx.fill();
 
-          // Draw [dir, mag] text next to the dot (offset perpendicular to the arm)
-          const nx = -dy / len, ny = dx / len;
-          const textOffset = 12 * dpr;
-          const tx = projPx - nx * textOffset;
-          const ty = projPy - ny * textOffset;
+            // Draw [dir, mag] text next to the dot (offset perpendicular to the arm)
+            const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
+            const len = arm.len;
+            const nx = -dy / len, ny = dx / len;
+            const textOffset = 12 * dpr;
+            const tx = projPx - nx * textOffset;
+            const ty = projPy - ny * textOffset;
 
-          ctx.font = `bold ${Math.round(10 * dpr)}px 'JetBrains Mono', monospace`;
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          
-          let labelText = `[${dir.toFixed(0)},${mag.toFixed(0)}]`;
-          if (arm.isEdge) {
-            let leftVal, rightVal;
-            if (arm.name === 'Top' || arm.name === 'Bottom') {
-              leftVal = dir;
-              rightVal = 100 - dir;
-            } else {
-              leftVal = 100 - dir;
-              rightVal = dir;
+            ctx.font = `bold ${Math.round(10 * dpr)}px 'JetBrains Mono', monospace`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            let labelText = `[${dir.toFixed(0)},${mag.toFixed(0)}]`;
+            if (arm.isEdge) {
+              let leftVal, rightVal;
+              if (arm.name.includes('Top') || arm.name.includes('Bottom')) {
+                leftVal = dir;
+                rightVal = 100 - dir;
+              } else {
+                leftVal = 100 - dir;
+                rightVal = dir;
+              }
+              labelText = `[${leftVal.toFixed(0)},${mag.toFixed(0)},${rightVal.toFixed(0)}]`;
             }
-            labelText = `[${leftVal.toFixed(0)},${mag.toFixed(0)},${rightVal.toFixed(0)}]`;
+            
+            ctx.strokeStyle = '#0a0b0f';
+            ctx.lineWidth = 3.5 * dpr;
+            ctx.lineJoin = 'round';
+            ctx.strokeText(labelText, tx, ty);
+
+            ctx.fillStyle = arm.color;
+            ctx.fillText(labelText, tx, ty);
           }
-          
-          ctx.strokeStyle = '#0a0b0f';
-          ctx.lineWidth = 3.5 * dpr;
-          ctx.lineJoin = 'round';
-          ctx.strokeText(labelText, tx, ty);
-
-          ctx.fillStyle = arm.color;
-          ctx.fillText(labelText, tx, ty);
-
           ctx.restore();
         });
       }
@@ -1843,7 +1891,7 @@ function updateReadout(v, psi, isPoint) {
   document.getElementById('dispVerdict').textContent = zone.verdict;
   syncSliders(v, psi);
 
-  // Calculate and display axis projections [dir, mag] or [left, dist, right] for edges
+  // Calculate and display axis projections [dir, mag] for the 8 subdivision arms
   const _Ra = Math.SQRT2 * 2;
   const axes = [
     { name: 'Productive ← Potential',     x1: -_Ra, y1: 0,    x2: 2,    y2: 2,    color: '#3bde84', isEdge: false },
@@ -1853,49 +1901,52 @@ function updateReadout(v, psi, isPoint) {
     { name: 'Constructive ← Suppressive',  x1: 0,    y1:  _Ra, x2: 2,    y2: -2,   color: '#e04080', isEdge: false },
     { name: 'Suppressive → Regressive',   x1: 0,    y1:  _Ra, x2: -2,   y2: -2,   color: '#e04080', isEdge: false },
     { name: 'Productive ← Active',        x1: 0,    y1: -_Ra, x2: 2,    y2: 2,    color: '#30c8e0', isEdge: false },
-    { name: 'Active → Reductive',         x1: 0,    y1: -_Ra, x2: -2,   y2: 2,    color: '#30c8e0', isEdge: false },
-    { name: 'Good Edge (LHS)',              x1: 2,    y1: -2,   x2: 2,    y2: 2,    color: '#3bde84', isEdge: true },
-    { name: 'Bad Edge (RHS)',               x1: -2,   y1: -2,   x2: -2,   y2: 2,    color: '#f05060', isEdge: true },
-    { name: 'Top Edge (Active)',            x1: -2,   y1: 2,    x2: 2,    y2: 2,    color: '#30c8e0', isEdge: true },
-    { name: 'Bottom Edge (Suppr.)',         x1: -2,   y1: -2,   x2: 2,    y2: -2,   color: '#e04080', isEdge: true }
+    { name: 'Active → Reductive',         x1: 0,    y1: -_Ra, x2: -2,   y2: 2,    color: '#30c8e0', isEdge: false }
   ];
 
   const container = document.getElementById('projsContainer');
   if (container) {
     container.innerHTML = '';
+    
+    // Precalculate distances
     axes.forEach(ax => {
       const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
       const len = Math.hypot(dx, dy);
       const ux = dx / len, uy = dy / len;
       const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
-      
       const alongClamped = Math.max(0, Math.min(len, alongRaw));
       const nxClamped = ax.x1 + ux * alongClamped;
       const nyClamped = ax.y1 + uy * alongClamped;
-      const distClamped = Math.hypot(v - nxClamped, psi - nyClamped);
+      ax.dist = Math.hypot(v - nxClamped, psi - nyClamped);
+      ax.alongRaw = alongRaw;
+      ax.len = len;
+    });
 
-      const dir = (alongRaw / len) * 100;
-      const mag = Math.max(0, 100 * (1 - distClamped / len));
+    // Sort by distance ascending
+    const sorted = [...axes].sort((a, b) => a.dist - b.dist);
+    const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '8');
+
+    axes.forEach(ax => {
+      const isCounted = sorted.indexOf(ax) < sLimit;
+      const dir = (ax.alongRaw / ax.len) * 100;
+      const mag = Math.max(0, 100 * (1 - ax.dist / ax.len));
 
       let labelText = `[${dir.toFixed(0)}, ${mag.toFixed(0)}]`;
-      if (ax.isEdge) {
-        let leftVal, rightVal;
-        if (ax.name.includes('Top') || ax.name.includes('Bottom')) {
-          leftVal = dir;
-          rightVal = 100 - dir;
-        } else {
-          leftVal = 100 - dir;
-          rightVal = dir;
-        }
-        labelText = `[${leftVal.toFixed(0)}, ${mag.toFixed(0)}, ${rightVal.toFixed(0)}]`;
-      }
 
       const row = document.createElement('div');
       row.style.display = 'flex';
       row.style.justifyContent = 'space-between';
-      row.style.color = ax.color;
       row.style.lineHeight = '1.3';
-      row.innerHTML = `<span>${ax.name}</span><span style="font-weight:bold;">${labelText}</span>`;
+      
+      if (isCounted) {
+        row.style.color = ax.color;
+        row.style.fontWeight = 'bold';
+        row.innerHTML = `<span>● ${ax.name}</span><span>${labelText}</span>`;
+      } else {
+        row.style.color = 'rgba(255,255,255,0.2)'; // Faded out
+        row.style.fontWeight = 'normal';
+        row.innerHTML = `<span>○ ${ax.name}</span><span>${labelText}</span>`;
+      }
       container.appendChild(row);
     });
   }
@@ -2013,6 +2064,26 @@ document.getElementById('shadePotential').addEventListener('change', draw);
 document.getElementById('shadeAntiPotential').addEventListener('change', draw);
 document.getElementById('shadeActive').addEventListener('change', draw);
 document.getElementById('shadeSuppressive').addEventListener('change', draw);
+
+// Shader Blending control listeners
+const inputs = [
+  { id: 'shaderDiv', label: 'shaderDivLabel' },
+  { id: 'shaderExp', label: 'shaderExpLabel' },
+  { id: 'shaderOpac', label: 'shaderOpacLabel' },
+  { id: 'shaderCancel', label: 'shaderCancelLabel' },
+  { id: 'shaderLimit', label: 'shaderLimitLabel' }
+];
+inputs.forEach(item => {
+  const el = document.getElementById(item.id);
+  const lbl = document.getElementById(item.label);
+  if (el && lbl) {
+    el.addEventListener('input', () => {
+      lbl.textContent = el.value;
+      cachedShaderCanvas = null; // bust shader cache
+      draw();
+    });
+  }
+});
 
 document.getElementById('contextSelect').addEventListener('change', () => {
   const context = document.getElementById('contextSelect').value;
@@ -2185,13 +2256,13 @@ if (zoomSlider) {
 // Scroll wheel zoom
 canvas.addEventListener('wheel', (e) => {
   e.preventDefault();
-  const delta = e.deltaY > 0 ? -4 : 4;
+  const delta = e.deltaY > 0 ? -15 : 15; // Larger step for faster scroll response
   const sl = document.getElementById('zoomLevel');
   const lb = document.getElementById('zoomLabel');
   if (!sl) return;
-  sl.value = Math.max(30, Math.min(200, parseInt(sl.value) + delta));
+  sl.value = Math.max(30, Math.min(800, parseInt(sl.value) + delta));
   lb.textContent = sl.value + '%';
-  cachedShaderCanvas = null;
+  // Note: we do NOT reset cachedShaderCanvas = null because the cache is independent of zoom factor now!
   draw();
 }, { passive: false });
 
