@@ -965,19 +965,19 @@ function draw() {
     ctx.save();
     ctx.lineWidth = 1 * dpr;
 
-    // Define 8 arms: x1,y1 is start, x2,y2 is end (V/Psi coords) with stated/verified density properties
+    // Define 8 arms: x1,y1 is start, x2,y2 is end (V/Psi coords)
     const arms = [
-      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Productive', stated: 69, verified: 33 },
-      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Constructive', stated: 69, verified: 33 },
-      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Reductive', stated: 63, verified: 85 },
-      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Regressive', stated: 80, verified: 80 },
-      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Constructive', stated: 0, verified: 0 },
-      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Regressive', stated: 0, verified: 0 },
-      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Productive', stated: 0, verified: 0 },
-      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Reductive', stated: 0, verified: 0 }
+      { x1: -2, y1: 0, x2: 2, y2: 2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Productive' },  // Potential -> Productive
+      { x1: -2, y1: 0, x2: 2, y2: -2, color: 'rgba(59, 222, 132, 0.35)', dash: false, group: 'Potential', label: 'Constructive' }, // Potential -> Constructive
+      { x1: 2, y1: 0, x2: -2, y2: 2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Reductive' },   // Anti-Potential -> Reductive
+      { x1: 2, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)', dash: true, group: 'Anti-Pot.', label: 'Regressive' },  // Anti-Potential -> Regressive
+      { x1: 0, y1: 2, x2: 2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Constructive' },  // Suppressive -> Constructive
+      { x1: 0, y1: 2, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)', dash: false, group: 'Suppr.', label: 'Regressive' }, // Suppressive -> Regressive
+      { x1: 0, y1: -2, x2: 2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Productive' },   // Active -> Productive
+      { x1: 0, y1: -2, x2: -2, y2: 2, color: 'rgba(48, 200, 224, 0.35)', dash: true, group: 'Active', label: 'Reductive' }    // Active -> Reductive
     ];
 
-    // First pass: Draw main arm lines, density ribbons, ticks, and end-dots
+    // First pass: Draw main arm lines and tick marks
     arms.forEach(arm => {
       const [sx, sy] = toPixel(arm.x1, arm.y1);
       const [ex, ey] = toPixel(arm.x2, arm.y2);
@@ -985,54 +985,7 @@ function draw() {
       const len = Math.hypot(dx, dy);
       const nx = -dy / len, ny = dx / len;
 
-      // 1. Draw Density Ribbons (if stated or verified are > 0)
-      const ribbonHalfWidth = 5 * dpr;
-      
-      if (arm.stated > 0) {
-        const statedT = arm.stated / 100;
-        const stx = sx + dx * statedT;
-        const sty = sy + dy * statedT;
-
-        // Draw Stated ribbon (20% opacity)
-        ctx.fillStyle = arm.color.replace('0.35', '0.12');
-        ctx.beginPath();
-        ctx.moveTo(sx - nx * ribbonHalfWidth, sy - ny * ribbonHalfWidth);
-        ctx.lineTo(stx - nx * ribbonHalfWidth, sty - ny * ribbonHalfWidth);
-        ctx.lineTo(stx + nx * ribbonHalfWidth, sty + ny * ribbonHalfWidth);
-        ctx.lineTo(sx + nx * ribbonHalfWidth, sy + ny * ribbonHalfWidth);
-        ctx.closePath();
-        ctx.fill();
-
-        // Draw Stated end circle
-        ctx.beginPath();
-        ctx.arc(stx, sty, 2.5 * dpr, 0, Math.PI * 2);
-        ctx.fillStyle = arm.color.replace('0.35', '0.45');
-        ctx.fill();
-      }
-
-      if (arm.verified > 0) {
-        const verifiedT = arm.verified / 100;
-        const vex = sx + dx * verifiedT;
-        const vey = sy + dy * verifiedT;
-
-        // Draw Verified ribbon (45% opacity)
-        ctx.fillStyle = arm.color.replace('0.35', '0.45');
-        ctx.beginPath();
-        ctx.moveTo(sx - nx * ribbonHalfWidth, sy - ny * ribbonHalfWidth);
-        ctx.lineTo(vex - nx * ribbonHalfWidth, vey - ny * ribbonHalfWidth);
-        ctx.lineTo(vex + nx * ribbonHalfWidth, vey + ny * ribbonHalfWidth);
-        ctx.lineTo(sx + nx * ribbonHalfWidth, sy + ny * ribbonHalfWidth);
-        ctx.closePath();
-        ctx.fill();
-
-        // Draw Verified end circle
-        ctx.beginPath();
-        ctx.arc(vex, vey, 2.5 * dpr, 0, Math.PI * 2);
-        ctx.fillStyle = arm.color.replace('0.35', '0.90');
-        ctx.fill();
-      }
-
-      // 2. Draw the main arm line
+      // Draw the main line
       ctx.strokeStyle = arm.color;
       if (arm.dash) {
         ctx.setLineDash([3 * dpr, 3 * dpr]);
@@ -1044,7 +997,7 @@ function draw() {
       ctx.lineTo(ex, ey);
       ctx.stroke();
 
-      // 3. Draw graduation ticks (every 20%)
+      // Draw graduation ticks (every 20%)
       ctx.setLineDash([]);
       for (let pct = 0; pct <= 100; pct += 20) {
         const t = pct / 100;
@@ -1079,12 +1032,12 @@ function draw() {
       ctx.translate(lx, ly);
       ctx.rotate(angle);
 
-      ctx.font = `bold ${Math.round(9.5 * dpr)}px 'JetBrains Mono', monospace`;
+      ctx.font = `bold ${Math.round(11.5 * dpr)}px 'JetBrains Mono', monospace`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
 
       const labelText = `${arm.group} → ${arm.label}`;
-      const colorTransparent = arm.color.replace('0.35', '0.45'); // 45% opacity label
+      const colorTransparent = arm.color.replace('0.35', '0.55');
 
       // Background outline halo
       ctx.strokeStyle = '#0a0b0f';
@@ -1457,18 +1410,18 @@ function draw() {
 
           // Draw [dir, mag] text next to the dot (offset perpendicular to the arm)
           const nx = -dy / len, ny = dx / len;
-          const textOffset = 9 * dpr;
+          const textOffset = 12 * dpr;
           const tx = projPx - nx * textOffset;
           const ty = projPy - ny * textOffset;
 
-          ctx.font = `bold ${Math.round(6.5 * dpr)}px 'JetBrains Mono', monospace`;
+          ctx.font = `bold ${Math.round(10 * dpr)}px 'JetBrains Mono', monospace`;
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           
           const labelText = `[${dir.toFixed(0)},${mag.toFixed(0)}]`;
           
           ctx.strokeStyle = '#0a0b0f';
-          ctx.lineWidth = 2.5 * dpr;
+          ctx.lineWidth = 3.5 * dpr;
           ctx.lineJoin = 'round';
           ctx.strokeText(labelText, tx, ty);
 
