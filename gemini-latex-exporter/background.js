@@ -18,8 +18,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 // getAuthToken(); launchWebAuthFlow() redirects to .chromiumapp.org, which can
 // only be registered on a Web application client.
 // This is the "gemini canvas" Web application client, which has
-//   https://mldaenkgmbajbpepfiegdjgnbedkiilf.chromiumapp.org/
-// registered as an authorized redirect URI. Do not swap this back to the
+//   https://ejmpkflngmhpfjnjbljdpaghdeflgelh.chromiumapp.org/
+// registered as an authorized redirect URI. That ID comes from the public key
+// in manifest.json; the original key was rotated after it leaked publicly, so
+// the old mldaenk... ID is dead. Do not swap this back to the
 // "gemini latex" Chrome Extension client (...-78kr...) — that one 400s with
 // redirect_uri_mismatch because it cannot register a .chromiumapp.org URI.
 const GOOGLE_CLIENT_ID = "130646946045-57merovpbkrq3anmuptt6daebo28u39h.apps.googleusercontent.com";
