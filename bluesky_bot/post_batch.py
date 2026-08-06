@@ -138,6 +138,7 @@ def validate_story_file(path, compact=False):
             raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
 
         # Pack posts and length validation
+        is_five_word = cfg.get("five_word") is True
         is_compact_single = compact == "single" or cfg.get("compact") == "single"
         is_compact_thread = compact is True or cfg.get("compact") is True
         is_compact = is_compact_single or is_compact_thread
@@ -162,7 +163,17 @@ def validate_story_file(path, compact=False):
             raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}.")
 
         # Info Card Check (Generate on-the-fly if missing)
-        if is_compact:
+        if is_five_word:
+            fw_card_path = os.path.join(script_dir, "graph_png", f"{story_id}_info_card_five_word.png")
+            if not os.path.exists(fw_card_path):
+                print(f"  Five-word info card not found for {story_id}. Generating on-the-fly...")
+                try:
+                    from image_card_generator import generate_compact_info_card
+                    base_path = os.path.join(script_dir, "graph_png", f"{story_id}_info_card.png")
+                    generate_compact_info_card(cfg, base_path)
+                except Exception as ice:
+                    raise RuntimeError(f"Failed to generate five-word info card: {ice}")
+        else:
             v_card_path = os.path.join(script_dir, "graph_png", f"{story_id}_info_card_verdict.png")
             a_card_path = os.path.join(script_dir, "graph_png", f"{story_id}_info_card_analysis.png")
             if not os.path.exists(v_card_path) or not os.path.exists(a_card_path):

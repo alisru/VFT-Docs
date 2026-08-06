@@ -386,14 +386,12 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
         for idx, post in enumerate(final_posts, 1):
             embed_info = ""
             if idx == 1:
-                if is_compact_single:
-                    embed_info = " [Embed: Trajectory Graph & Compact Summary Card]"
+                if is_five_word:
+                    embed_info = " [Embed: Trajectory Graph & Five-Word Info Card]"
                 else:
-                    embed_info = " [Embed: Trajectory Graph]"
+                    embed_info = " [Embed: Trajectory Graph & Compact Summary Cards (Verdict + Analysis)]"
             elif idx == 2 and link:
                 embed_info = f" [Embed: Link Card -> {link}]"
-            elif idx == 4 and is_compact_thread:
-                embed_info = f" [Embed: Compact Summary Card]"
             elif "Source: " in post and thread_config.get("grounding_url"):
                 embed_info = f" [Embed: Grounding Card -> {thread_config.get('grounding_url')}]"
             print(f"\n[Post {idx}/{len(final_posts)}]{embed_info} ({len(post)} chars):\n{post}")
@@ -440,8 +438,8 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 except Exception as e:
                     print(f"Warning: Failed to upload five-word terminal card: {e}")
 
-            # Create Compact Mode Info Card Embeds
-            if is_compact:
+            # Create Compact Mode Info Card Embeds (always generated and uploaded if not in five-word mode)
+            if is_compact or not is_five_word:
                 verdict_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_verdict.png")
                 analysis_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_analysis.png")
                 main_info_card = os.path.join(bot_graph_dir, f"{story_id}_info_card.png")
@@ -478,15 +476,15 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                     
                     alt_parts = [
                         "System Analysis Details:",
-                        f"Context: {posts[4].replace('What\'s happening:\\n', '').replace('Context:\\n', '').strip()}",
-                        f"Nuance: {posts[5]}",
-                        f"Breakdown: {posts[6]}",
-                        f"Social Physics: {posts[7]}",
-                        f"Trajectory: {posts[8]}",
-                        f"The Unavoidables: {posts[9]}",
-                        f"Alethekanon: {posts[10]}",
-                        f"Awwthekanon: {posts[11]}",
-                        f"Brothekanon: {posts[12]}"
+                        f"Context: {posts[4].replace('What\'s happening:\\n', '').replace('Context:\\n', '').strip() if len(posts) > 4 else ''}",
+                        f"Nuance: {posts[5] if len(posts) > 5 else ''}",
+                        f"Breakdown: {posts[6] if len(posts) > 6 else ''}",
+                        f"Social Physics: {posts[7] if len(posts) > 7 else ''}",
+                        f"Trajectory: {posts[8] if len(posts) > 8 else ''}",
+                        f"The Unavoidables: {posts[9] if len(posts) > 9 else ''}",
+                        f"Alethekanon: {posts[10] if len(posts) > 10 else ''}",
+                        f"Awwthekanon: {posts[11] if len(posts) > 11 else ''}",
+                        f"Brothekanon: {posts[12] if len(posts) > 12 else ''}"
                     ]
                     card_alt = "\n\n".join(alt_parts)
                     if len(card_alt) > 9900:
@@ -542,9 +540,9 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 except Exception as ex:
                     print(f"Warning: Failed to create grounding external link embed card: {ex}")
 
-            # first_post_embed gets the trajectory graph, and in both compact and compact-single modes, also gets the summary cards
+            # first_post_embed gets the trajectory graph, and also gets the summary cards if present
             first_post_embed = graph_embed
-            if (is_compact or is_five_word) and len(info_card_images) > 0:
+            if len(info_card_images) > 0:
                 joint_images = []
                 if graph_embed is not None and hasattr(graph_embed, "images"):
                     joint_images.extend(graph_embed.images)
