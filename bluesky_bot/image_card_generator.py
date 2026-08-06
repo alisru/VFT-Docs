@@ -326,7 +326,7 @@ def generate_compact_info_card(thread_config, output_path):
     
     # Analysis & Perspectives Card (4-13): Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables
     analysis_subtitle = f"SYSTEM ANALYSIS & PERSPECTIVES | {coords_str}"
-    _generate_analysis_full_card(subject, analysis_subtitle, sections[4:], personas, fonts, analysis_path)
+    _generate_analysis_full_card(subject, analysis_subtitle, sections[4:], personas, fonts, link, analysis_path)
 
 
 def _generate_verdict_card(subject, subtitle, sections, fonts, link, output_path):
@@ -427,7 +427,7 @@ def _generate_verdict_card(subject, subtitle, sections, fonts, link, output_path
     img.save(output_path, "PNG")
     print(f"Verdict Card generated: {output_path}")
 
-def _generate_analysis_full_card(subject, subtitle, sections, personas, fonts, output_path):
+def _generate_analysis_full_card(subject, subtitle, sections, personas, fonts, link, output_path):
     canvas_bg = "#0B0F19"
     card_bg = "#141D2F"
     border_color = "#25354F"
@@ -452,12 +452,15 @@ def _generate_analysis_full_card(subject, subtitle, sections, personas, fonts, o
     card_gap = 25
     
     current_y = 50
-    title_lines = wrap_text(subject, fonts["bold_36"], drawable_w, temp_draw)
-    subtitle_lines = wrap_text(subtitle, fonts["bold_24"], drawable_w, temp_draw)
+    title_wrap_w = drawable_w - 140 if link else drawable_w
+    title_lines = wrap_text(subject, fonts["bold_36"], title_wrap_w, temp_draw)
+    subtitle_lines = wrap_text(subtitle, fonts["bold_24"], title_wrap_w, temp_draw)
     
     title_h = (len(title_lines) * 42) + 5 + (len(subtitle_lines) * 30)
     title_y_start = current_y
     current_y += title_h + 30
+    if link and current_y < 180:
+        current_y = 180
     
     grid_start_y = current_y
     
@@ -517,6 +520,15 @@ def _generate_analysis_full_card(subject, subtitle, sections, personas, fonts, o
     img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
     draw = ImageDraw.Draw(img)
     
+    # Draw QR code in top-right corner if link is present
+    if link:
+        qr_img = _generate_qr_code(link, size=110)
+        if qr_img:
+            qr_x = x_right - 110
+            qr_y = 40
+            draw.rounded_rectangle([qr_x - 5, qr_y - 5, qr_x + 115, qr_y + 115], radius=6, fill=card_bg, outline=border_color, width=1)
+            img.paste(qr_img, (qr_x, qr_y))
+
     y = title_y_start
     for line in title_lines:
         draw.text((x_left, y), line, fill="#F8FAFC", font=fonts["bold_36"])
