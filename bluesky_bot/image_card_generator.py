@@ -182,6 +182,7 @@ def generate_compact_info_card(thread_config, output_path):
     """Renders posts of the thread config into a beautiful two-column dark-mode infographic card (including Claim, Reality, Verdict in single-post mode)."""
     subject = thread_config.get("subject", "Assessment Summary")
     posts = thread_config.get("posts", [])
+    link = thread_config.get("link", "")
     
     if len(posts) < 13:
         raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13).")
@@ -189,7 +190,6 @@ def generate_compact_info_card(thread_config, output_path):
     if thread_config.get("five_word") is True:
         # Load fonts, generate single 5-word terminal card
         fonts = load_theme_fonts()
-        link = thread_config.get("link", "")
         stated_u = thread_config.get("claim_u", 0.0)
         stated_psi = thread_config.get("claim_psi", 0.0)
         real_u = thread_config.get("real_u", 0.0)
@@ -321,7 +321,7 @@ def generate_compact_info_card(thread_config, output_path):
         verdict_subtitle = f"Resulting Judgement: {verdict_text}"
 
     # Verdict Card (1-3): Hook, Claim, Reality, Verdict
-    _generate_verdict_card(subject, verdict_subtitle, sections[:4], fonts, verdict_path)
+    _generate_verdict_card(subject, verdict_subtitle, sections[:4], fonts, link, verdict_path)
 
     
     # Analysis & Perspectives Card (4-13): Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables
@@ -329,7 +329,7 @@ def generate_compact_info_card(thread_config, output_path):
     _generate_analysis_full_card(subject, analysis_subtitle, sections[4:], personas, fonts, analysis_path)
 
 
-def _generate_verdict_card(subject, subtitle, sections, fonts, output_path):
+def _generate_verdict_card(subject, subtitle, sections, fonts, link, output_path):
     canvas_bg = "#0B0F19"
     card_bg = "#141D2F"
     border_color = "#25354F"
@@ -391,7 +391,8 @@ def _generate_verdict_card(subject, subtitle, sections, fonts, output_path):
     right_grid_h = right_y - card_gap - grid_start_y
         
     grid_h = max(left_grid_h, right_grid_h)
-    final_height = grid_start_y + grid_h + 40
+    footer_h = 160
+    final_height = grid_start_y + grid_h + footer_h
     
     img = Image.new("RGB", (canvas_w, final_height), canvas_bg)
     draw = ImageDraw.Draw(img)
@@ -410,6 +411,19 @@ def _generate_verdict_card(subject, subtitle, sections, fonts, output_path):
     for lay in right_layouts:
         _draw_individual_card_v3(draw, lay, fonts, card_bg, border_color, text_color, line_h, "bold_27", "regular_29", 65)
         
+    # Draw Footer with Watermark and QR code
+    footer_y = grid_start_y + grid_h + 30
+    draw.text((x_left, footer_y + 15), "Aletheia Bot | Uncompromising Logic & Truth", fill="#64748B", font=fonts["bold_27"])
+    draw.text((x_left, footer_y + 55), "Scan QR code to read the verified source article", fill="#475569", font=fonts["regular_22"])
+    
+    if link:
+        qr_img = _generate_qr_code(link, size=110)
+        if qr_img:
+            qr_x = x_right - 110
+            qr_y = footer_y + 10
+            draw.rounded_rectangle([qr_x - 5, qr_y - 5, qr_x + 115, qr_y + 115], radius=6, fill=card_bg, outline=border_color, width=1)
+            img.paste(qr_img, (qr_x, qr_y))
+            
     img.save(output_path, "PNG")
     print(f"Verdict Card generated: {output_path}")
 
