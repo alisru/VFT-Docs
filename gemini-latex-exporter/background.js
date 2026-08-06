@@ -13,57 +13,107 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
-// We will replace this Client ID string once you provide the new Web Application Client ID
-const GOOGLE_CLIENT_ID = "130646946045-78krafccvuidslabotp03v2s92st2u4k.apps.googleusercontent.com";
+// MUST be a "Web application" OAuth client, NOT a "Chrome Extension" client.
+// Chrome Extension clients only accept the chrome-extension:// redirect used by
+// getAuthToken(); launchWebAuthFlow() redirects to .chromiumapp.org, which can
+// only be registered on a Web application client.
+// This is the "gemini canvas" Web application client, which has
+//   https://mldaenkgmbajbpepfiegdjgnbedkiilf.chromiumapp.org/
+// registered as an authorized redirect URI. Do not swap this back to the
+// "gemini latex" Chrome Extension client (...-78kr...) — that one 400s with
+// redirect_uri_mismatch because it cannot register a .chromiumapp.org URI.
+const GOOGLE_CLIENT_ID = "130646946045-57merovpbkrq3anmuptt6daebo28u39h.apps.googleusercontent.com";
 
-async function getAuthToken() {
+const SCOPE = 'https://www.googleapis.com/auth/drive.file';
+const TOKEN_CACHE_KEY = 'oauthToken';
+
+// Run the implicit flow once. When interactive is false we add prompt=none, so
+// Google either returns a token immediately (existing session + existing grant)
+// or errors out without ever showing UI.
+function launchFlow(interactive) {
   const redirectUri = chrome.identity.getRedirectURL();
-  const scope = encodeURIComponent('https://www.googleapis.com/auth/drive.file');
-  
-  console.log("[OAuth Debug] Client ID:", GOOGLE_CLIENT_ID);
-  console.log("[OAuth Debug] Generated Redirect URI:", redirectUri);
-  
-  // Construct the Google OAuth 2.0 Web Auth URL
-  const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&response_type=token&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${scope}`;
-  console.log("[OAuth Debug] Full Auth URL:", authUrl);
+  const params = new URLSearchParams({
+    client_id: GOOGLE_CLIENT_ID,
+    response_type: 'token',
+    redirect_uri: redirectUri,
+    scope: SCOPE
+  });
+  if (!interactive) params.set('prompt', 'none');
+
+  const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
 
   return new Promise((resolve, reject) => {
-    // Launch standard web authorization flow (Brave compatible)
-    chrome.identity.launchWebAuthFlow({
-      url: authUrl,
-      interactive: true
-    }, function(redirectUrl) {
-      if (chrome.runtime.lastError) {
-        reject(new Error(chrome.runtime.lastError.message));
+    chrome.identity.launchWebAuthFlow({ url: authUrl, interactive }, (redirectUrl) => {
+      if (chrome.runtime.lastError || !redirectUrl) {
+        const msg = chrome.runtime.lastError
+          ? chrome.runtime.lastError.message
+          : "No redirect URL returned.";
+        reject(new Error(msg));
         return;
       }
-      
-      if (!redirectUrl) {
-        reject(new Error("Authorization failed. No redirect URL returned."));
+
+      // Token comes back in the hash fragment (#access_token=...&expires_in=...)
+      const hash = new URLSearchParams(new URL(redirectUrl).hash.substring(1));
+      const token = hash.get('access_token');
+      if (!token) {
+        reject(new Error(hash.get('error') || "Access token was not returned by Google."));
         return;
       }
-      
-      try {
-        // Extract access_token from the URL hash fragment (#access_token=...)
-        const url = new URL(redirectUrl);
-        const params = new URLSearchParams(url.hash.substring(1));
-        const token = params.get('access_token');
-        
-        if (token) {
-          resolve(token);
-        } else {
-          reject(new Error("Access token was not returned by Google."));
-        }
-      } catch (err) {
-        reject(new Error("Failed to parse redirect URL: " + err.message));
-      }
+
+      // expires_in is seconds; keep a 60s safety margin so we never send a
+      // token that expires mid-flight.
+      const expiresIn = parseInt(hash.get('expires_in') || '3600', 10);
+      resolve({ token, expiresAt: Date.now() + (expiresIn - 60) * 1000 });
     });
   });
 }
 
-async function handleDocCreation(title, html) {
-  const token = await getAuthToken();
+// Cached token -> silent re-auth -> interactive sign-in. Only the last one
+// shows a window, and it should be rare.
+async function getAuthToken(forceRefresh = false) {
+  if (!forceRefresh) {
+    const cached = (await chrome.storage.session.get(TOKEN_CACHE_KEY))[TOKEN_CACHE_KEY];
+    if (cached && cached.expiresAt > Date.now()) {
+      return cached.token;
+    }
+  }
 
+  let result;
+  try {
+    result = await launchFlow(false);
+  } catch (silentErr) {
+    console.log("[OAuth] Silent refresh unavailable, prompting:", silentErr.message);
+    result = await launchFlow(true);
+  }
+
+  await chrome.storage.session.set({ [TOKEN_CACHE_KEY]: result });
+  return result.token;
+}
+
+async function handleDocCreation(title, html) {
+  let response = await uploadDoc(await getAuthToken(), title, html);
+
+  // A cached token can be revoked server-side before its stated expiry.
+  // Drop it and do one clean retry rather than surfacing a confusing 401.
+  if (response.status === 401) {
+    await chrome.storage.session.remove(TOKEN_CACHE_KEY);
+    response = await uploadDoc(await getAuthToken(true), title, html);
+  }
+
+  if (!response.ok) {
+    const errText = await response.text();
+    throw new Error(`Drive API error: ${response.status} - ${errText}`);
+  }
+
+  const fileData = await response.json();
+  const docUrl = `https://docs.google.com/document/d/${fileData.id}/edit`;
+
+  await chrome.tabs.create({ url: docUrl });
+
+  return docUrl;
+}
+
+async function uploadDoc(token, title, html) {
   const boundary = '-------314159265358979323846';
   const delimiter = "\r\n--" + boundary + "\r\n";
   const closeDelimiter = "\r\n--" + boundary + "--";
@@ -82,7 +132,7 @@ async function handleDocCreation(title, html) {
     `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>${html}</body></html>` +
     closeDelimiter;
 
-  const response = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+  return fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer ' + token,
@@ -90,18 +140,4 @@ async function handleDocCreation(title, html) {
     },
     body: multipartRequestBody
   });
-
-  if (!response.ok) {
-    const errText = await response.text();
-    throw new Error(`Drive API error: ${response.status} - ${errText}`);
-  }
-
-  const fileData = await response.json();
-  const fileId = fileData.id;
-  
-  const docUrl = `https://docs.google.com/document/d/${fileId}/edit`;
-  
-  await chrome.tabs.create({ url: docUrl });
-
-  return docUrl;
 }

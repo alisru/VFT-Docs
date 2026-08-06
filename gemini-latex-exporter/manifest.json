@@ -4,10 +4,12 @@
   "version": "1.0.0",
   "description": "Export Gemini responses to Google Docs with clean, editable LaTeX text instead of fuzzy images.",
   "permissions": [
-    "identity"
+    "identity",
+    "storage"
   ],
   "host_permissions": [
-    "https://gemini.google.com/*"
+    "https://gemini.google.com/*",
+    "https://www.googleapis.com/*"
   ],
   "background": {
     "service_worker": "background.js"

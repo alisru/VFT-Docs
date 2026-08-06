@@ -106,9 +106,34 @@ function createTexExportBtn(exportItem) {
   exportItem.parentNode.insertBefore(texItem, exportItem.nextSibling);
 }
 
+// The open canvas, if there is one. Gemini renders it in a panel that is
+// completely separate from the chat transcript:
+//   immersive-panel > extended-response-panel > immersive-editor
+//     > #extended-response-markdown-content > .ProseMirror
+// Reading from here is what keeps Gemini's chat preamble ("I cannot directly
+// create a canvas document for you, but...") out of the exported doc — that
+// sentence lives in the chat message, never in the canvas.
+function findCanvasContent() {
+  const panel = document.querySelector('immersive-panel');
+  if (!panel || panel.offsetParent === null) return null;
+
+  return panel.querySelector('#extended-response-markdown-content .ProseMirror')
+      || panel.querySelector('#extended-response-markdown-content')
+      || panel.querySelector('.ProseMirror[aria-label="Canvas editor"]');
+}
+
+// Canvas titles itself in the panel toolbar; much better than a date stamp.
+function findCanvasTitle() {
+  const panel = document.querySelector('immersive-panel');
+  if (!panel) return null;
+  const heading = panel.querySelector('toolbar h2.title-text, .toolbar h2');
+  const title = heading && heading.textContent.trim();
+  return title || null;
+}
+
 function findAssociatedMessageContent(button) {
   if (!button) return null;
-  
+
   // Walk up to find the common wrapper, then look for message-content
   let parent = button.parentElement;
   while (parent && parent !== document.body) {
@@ -127,55 +152,94 @@ function findAssociatedMessageContent(button) {
   return null;
 }
 
+// Pull the LaTeX source out of a rendered math node.
+// Order matters — most reliable source first:
+//   1. data-math  : the canvas keeps verbatim LaTeX here on <math-block>/<math-inline>
+//   2. .math-src  : only populated while the node has focus, so usually empty
+//   3. annotation / alttext : the MathML paths, absent from the canvas because
+//      it runs KaTeX in HTML-only output mode (no .katex-mathml is emitted)
+function extractTeX(el) {
+  const data = el.getAttribute && el.getAttribute('data-math');
+  if (data && data.trim()) return data.trim();
+
+  const src = el.querySelector('.math-src');
+  if (src && src.textContent.trim()) return src.textContent.trim();
+
+  const annotation = el.querySelector('annotation[encoding="application/x-tex"]');
+  if (annotation && annotation.textContent.trim()) return annotation.textContent.trim();
+
+  const math = el.querySelector('math[alttext]');
+  if (math && math.getAttribute('alttext').trim()) return math.getAttribute('alttext').trim();
+
+  return null;
+}
+
+// Display math becomes its own monospace paragraph. A bare text node would not
+// work: the \n we used to emit collapses to a space in HTML, so the equation
+// ran into the surrounding prose once Docs imported it.
+function makeBlockTeX(tex) {
+  const p = document.createElement('p');
+  p.style.fontFamily = "'Courier New', monospace";
+  p.textContent = `$$${tex}$$`;
+  return p;
+}
+
 function replaceKaTeX(root) {
-  // 1. Replace display math blocks first (block equations)
-  const displays = root.querySelectorAll('.katex-display');
-  displays.forEach(display => {
-    const annotation = display.querySelector('annotation[encoding="application/x-tex"]');
-    if (annotation) {
-      const tex = annotation.textContent.trim();
-      const textNode = document.createTextNode(`\n$$\n${tex}\n$$\n`);
-      display.parentNode.replaceChild(textNode, display);
+  // 0. Canvas math nodes. These wrap the KaTeX spans, so they must be handled
+  //    before the legacy passes below or we would strip their contents first.
+  root.querySelectorAll('math-block, math-inline').forEach(node => {
+    const tex = extractTeX(node);
+    if (!tex) return;
+
+    const isBlock = node.tagName.toLowerCase() === 'math-block'
+                 || !!node.querySelector('.katex-display');
+    const replacement = isBlock
+      ? makeBlockTeX(tex)
+      : document.createTextNode(` $${tex}$ `);
+    node.parentNode.replaceChild(replacement, node);
+  });
+
+  // 1. Bare KaTeX display blocks (chat transcript, or any canvas node that
+  //    was not wrapped in a math-block).
+  root.querySelectorAll('.katex-display').forEach(display => {
+    const tex = extractTeX(display);
+    if (tex) display.parentNode.replaceChild(makeBlockTeX(tex), display);
+  });
+
+  // 2. Bare inline KaTeX.
+  let unresolved = 0;
+  root.querySelectorAll('.katex').forEach(inline => {
+    if (!inline.parentNode) return; // Already removed by a display replacement
+
+    const tex = extractTeX(inline);
+    if (tex) {
+      inline.parentNode.replaceChild(document.createTextNode(` $${tex}$ `), inline);
     } else {
-      const math = display.querySelector('math');
-      if (math && math.getAttribute('alttext')) {
-        const tex = math.getAttribute('alttext').trim();
-        const textNode = document.createTextNode(`\n$$\n${tex}\n$$\n`);
-        display.parentNode.replaceChild(textNode, display);
-      }
+      // Nothing left to recover the source from; the rendered glyphs will be
+      // exported as Unicode. Worth knowing about rather than failing silently.
+      unresolved++;
     }
   });
 
-  // 2. Replace inline math elements
-  const inlines = root.querySelectorAll('.katex');
-  inlines.forEach(inline => {
-    if (!inline.parentNode) return; // Already removed by a display block replacement
-    
-    const annotation = inline.querySelector('annotation[encoding="application/x-tex"]');
-    if (annotation) {
-      const tex = annotation.textContent.trim();
-      const textNode = document.createTextNode(` $${tex}$ `);
-      inline.parentNode.replaceChild(textNode, inline);
-    } else {
-      const math = inline.querySelector('math');
-      if (math && math.getAttribute('alttext')) {
-        const tex = math.getAttribute('alttext').trim();
-        const textNode = document.createTextNode(` $${tex}$ `);
-        inline.parentNode.replaceChild(textNode, inline);
-      }
-    }
-  });
+  if (unresolved) {
+    console.warn(`[Gemini LaTeX Exporter] ${unresolved} math element(s) had no recoverable LaTeX source; exported as rendered text.`);
+  }
 }
 
 async function handleTeXExport() {
-  const msgContent = findAssociatedMessageContent(lastClickedShareButton);
+  // Prefer the canvas: it holds the document itself, with none of the
+  // conversational framing Gemini wraps around it in the chat transcript.
+  const fromCanvas = findCanvasContent();
+  const msgContent = fromCanvas || findAssociatedMessageContent(lastClickedShareButton);
+
   if (!msgContent) {
     showToast("Could not locate response content.", "error");
     return;
   }
-  
+  console.log(`[Gemini LaTeX Exporter] Source: ${fromCanvas ? 'canvas' : 'chat message'}`);
+
   showToast("Preparing document...", "info");
-  
+
   // Clone content to leave the UI untouched
   const clone = msgContent.cloneNode(true);
   
@@ -202,11 +266,10 @@ async function handleTeXExport() {
   });
   
   const htmlContent = clone.innerHTML;
-  
-  // Generate a friendly document title using current date
-  const dateStr = new Date().toLocaleDateString();
-  const docTitle = `Gemini LaTeX Export - ${dateStr}`;
-  
+
+  // Name the doc after the canvas when we can; fall back to a date stamp.
+  const docTitle = findCanvasTitle() || `Gemini LaTeX Export - ${new Date().toLocaleDateString()}`;
+
   showToast("Exporting to Google Docs...", "info");
   
   chrome.runtime.sendMessage({
