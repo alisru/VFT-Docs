@@ -1,7 +1,4 @@
-# Task List: Batch Notebook Uploads
-
-- `[ ]` Initialize target JSON file-lists (`notebook-[slug]-filelist.json`) for the 5 categories
-- `[ ]` Implement batch upload script (`batch_upload_notebooks.py`)
-- `[ ]` Run dry-run to verify the manifests parse correctly
-- `[ ]` Execute upload pipeline (updating status to `uploaded` and tracking source IDs)
-- `[ ]` Create walkthrough report summarizing the completed sync
+- `[x]` Implement `/api/timeline` in `start_viewer.py` to scan files, read creation times, compute dominant VFT topics, and return them sorted.
+- `[x]` Update HTML structure in `viewer.html` to add the Timeline tab panel and sidebar filters.
+- `[x]` Implement JS logic in `viewer.html` to fetch `/api/timeline` and render the interactive cards.
+- `[x]` Verify that file clicks on the timeline open in the doc reader, and filters work.

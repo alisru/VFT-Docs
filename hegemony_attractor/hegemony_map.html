@@ -338,7 +338,7 @@
         <div class="zone" id="dispZone">—</div>
         <div class="verdict" id="dispVerdict">—</div>
         <div class="axis-projections" id="axisProjections" style="margin-top: 10px; border-top: 1px solid #2a2d3d; padding-top: 8px;">
-          <div style="font-size: 10px; font-weight: bold; color: var(--muted); margin-bottom: 5px;">Axis Projections [dir, mag]</div>
+          <div style="font-size: 10px; font-weight: bold; color: var(--muted); margin-bottom: 5px;">Axis Projections [+dir, mag, -dir]</div>
           <div id="projsContainer" style="display: flex; flex-direction: column; gap: 3.5px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #abb2bf;">
             <!-- Dynamic projections -->
           </div>
@@ -447,8 +447,8 @@
         </div>
         <div style="display:flex; align-items:center; gap:8px;">
           <span style="color:var(--muted); width:75px;">Observer N:</span>
-          <input type="range" id="shaderLimit" min="1" max="8" step="1" value="8" style="flex:1; accent-color:#3bde84;" />
-          <span id="shaderLimitLabel" style="color:#3bde84; min-width:24px; text-align:right;">8</span>
+          <input type="range" id="shaderLimit" min="1" max="20" step="1" value="20" style="flex:1; accent-color:#3bde84;" />
+          <span id="shaderLimitLabel" style="color:#3bde84; min-width:24px; text-align:right;">20</span>
         </div>
       </div>
     </div>
@@ -609,26 +609,43 @@ function classifyZone(v, psi) {
   return ZONES[3];                         // Bottom-Right (Regressive / Earth)
 }
 
+const _Ra = Math.SQRT2 * 2;
+const GLOBAL_VFT_AXES = [
+  // 1. Central Orthogonal Axes (Continuous)
+  { name: 'Good ↔ Bad',                         x1: -2,   y1: 0,    x2: 2,    y2: 0,    color: '#3bde84' },
+  { name: 'Active ↔ Suppressive',                       x1: 0,    y1: -2,   x2: 0,    y2: 2,    color: '#30c8e0' },
+
+  // 1.5 Moral Horizon Vertical Axes (Separate Y-Axes parallel to Will axis)
+  { name: 'Others Axis (u = 1)',         x1: 1,    y1: -2,   x2: 1,    y2: 2,    color: '#3bde84' },
+  { name: 'Other Axis (u = 0.5)',        x1: 0.5,  y1: -2,   x2: 0.5,  y2: 2,    color: '#3bde84' },
+  { name: 'My Group Axis (u = -0.5)',    x1: -0.5, y1: -2,   x2: -0.5, y2: 2,    color: '#f05060' },
+  { name: 'Me Axis (u = -1)',            x1: -1,   y1: -2,   x2: -1,   y2: 2,    color: '#f05060' },
+
+  // 2. Diagonal Scales (Continuous)
+  { name: 'Truth ↔ Anti-Truth',                     x1: -2,   y1: -2,   x2: 2,    y2: 2,    color: '#3bde84' },
+  { name: 'Lies ↔ Anti-Lies',                      x1: 2,    y1: -2,   x2: -2,   y2: 2,    color: '#f05060' },
+
+  // 3. Subdivision Arms
+  { name: 'Productive ↔ Potential',     x1: -_Ra, y1: 0,    x2: 2,    y2: 2,    color: '#3bde84' },
+  { name: 'Constructive ↔ Potential',   x1: -_Ra, y1: 0,    x2: 2,    y2: -2,   color: '#3bde84' },
+  { name: 'Anti-Potential ↔ Reductive',  x1:  _Ra, y1: 0,    x2: -2,   y2: 2,    color: '#f05060' },
+  { name: 'Anti-Potential ↔ Regressive', x1:  _Ra, y1: 0,    x2: -2,   y2: -2,   color: '#f05060' },
+  { name: 'Constructive ↔ Suppressive',  x1: 0,    y1:  _Ra, x2: 2,    y2: -2,   color: '#e04080' },
+  { name: 'Suppressive ↔ Regressive',   x1: 0,    y1:  _Ra, x2: -2,   y2: -2,   color: '#e04080' },
+  { name: 'Productive ↔ Active',        x1: 0,    y1: -_Ra, x2: 2,    y2: 2,    color: '#30c8e0' },
+  { name: 'Active ↔ Reductive',         x1: 0,    y1: -_Ra, x2: -2,   y2: 2,    color: '#30c8e0' },
+
+  // 4. Edges
+  { name: 'Productive ↔ Constructive',            x1: 2,    y1: -2,   x2: 2,    y2: 2,    color: '#3bde84' },
+  { name: 'Reductive ↔ Regressive',             x1: -2,   y1: -2,   x2: -2,   y2: 2,    color: '#f05060' },
+  { name: 'Productive ↔ Reductive',          x1: -2,   y1: 2,    x2: 2,    y2: 2,    color: '#30c8e0' },
+  { name: 'Constructive ↔ Regressive',       x1: -2,   y1: -2,   x2: 2,    y2: -2,   color: '#e04080' }
+];
+
 function calculatePointParams(v, psi) {
   const zone = classifyZone(v, psi);
-  const _Rp = Math.SQRT2 * 2;
-  const armsProj = [
-    { name: 'Productive ← Potential',     x1: -_Rp, y1: 0,    x2: 2,    y2: 2,    isEdge: false },
-    { name: 'Constructive ← Potential',   x1: -_Rp, y1: 0,    x2: 2,    y2: -2,   isEdge: false },
-    { name: 'Anti-Potential → Reductive',  x1:  _Rp, y1: 0,    x2: -2,   y2: 2,    isEdge: false },
-    { name: 'Anti-Potential → Regressive', x1:  _Rp, y1: 0,    x2: -2,   y2: -2,   isEdge: false },
-    { name: 'Constructive ← Suppressive',  x1: 0,    y1:  _Rp, x2: 2,    y2: -2,   isEdge: false },
-    { name: 'Suppressive → Regressive',   x1: 0,    y1:  _Rp, x2: -2,   y2: -2,   isEdge: false },
-    { name: 'Productive ← Active',        x1: 0,    y1: -_Rp, x2: 2,    y2: 2,    isEdge: false },
-    { name: 'Active → Reductive',         x1: 0,    y1: -_Rp, x2: -2,   y2: 2,    isEdge: false },
-    { name: 'Good Edge (LHS)',              x1: 2,    y1: -2,   x2: 2,    y2: 2,    isEdge: true },
-    { name: 'Bad Edge (RHS)',               x1: -2,   y1: -2,   x2: -2,   y2: 2,    isEdge: true },
-    { name: 'Top Edge (Active)',            x1: -2,   y1: 2,    x2: 2,    y2: 2,    isEdge: true },
-    { name: 'Bottom Edge (Suppr.)',         x1: -2,   y1: -2,   x2: 2,    y2: -2,   isEdge: true }
-  ];
-
   const projections = {};
-  armsProj.forEach(arm => {
+  GLOBAL_VFT_AXES.forEach(arm => {
     const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
     const len = Math.hypot(dx, dy);
     const ux = dx / len, uy = dy / len;
@@ -637,23 +654,10 @@ function calculatePointParams(v, psi) {
     const projV = arm.x1 + ux * alongClamped;
     const projPsi = arm.y1 + uy * alongClamped;
     const distClamped = Math.hypot(v - projV, psi - projPsi);
-
-    const dir = (alongRaw / len) * 100;
+    const dir = Math.max(0, Math.min(100, (alongRaw / len) * 100));
     const mag = Math.max(0, 100 * (1 - distClamped / len));
 
-    if (arm.isEdge) {
-      let leftVal, rightVal;
-      if (arm.name.includes('Top') || arm.name.includes('Bottom')) {
-        leftVal = dir;
-        rightVal = 100 - dir;
-      } else {
-        leftVal = 100 - dir;
-        rightVal = dir;
-      }
-      projections[arm.name] = `[${Math.round(leftVal)}, ${Math.round(mag)}, ${Math.round(rightVal)}]`;
-    } else {
-      projections[arm.name] = `[${Math.round(dir)}, ${Math.round(mag)}]`;
-    }
+    projections[arm.name] = `[${Math.round(dir)}, ${Math.round(mag)}, ${Math.round(100 - dir)}]`;
   });
 
   return {
@@ -673,6 +677,11 @@ let selectedIdx = 0;
 let hoverCoord = null;
 let cachedShaderCanvas = null;
 let cachedShaderKey = "";
+let panX = 0;
+let panY = 0;
+let isPanning = false;
+let startPanX = 0;
+let startPanY = 0;
 
 // ─────────────────────────────────────────────
 //  CANVAS SETUP (FORCE PERFECT SQUARE)
@@ -703,9 +712,9 @@ function toCoord(px, py) {
   const marginX = (W - gridSize) / 2;
   const marginY = (H - gridSize) / 2;
 
-  // Unzoom the coordinates around the canvas center
-  const unzoomedX = (px - W / 2) / zoomFactor + W / 2;
-  const unzoomedY = (py - H / 2) / zoomFactor + H / 2;
+  // Unpan and unzoom the coordinates around the canvas center
+  const unzoomedX = ((px - panX) - W / 2) / zoomFactor + W / 2;
+  const unzoomedY = ((py - panY) - H / 2) / zoomFactor + H / 2;
 
   const v   = 2 - ((unzoomedX - marginX) / gridSize) * 4;
   const psi = 2 - ((unzoomedY - marginY) / gridSize) * 4;
@@ -795,8 +804,9 @@ function draw() {
 
   ctx.clearRect(0, 0, W, H);
 
-  // Apply global zoom centered on canvas midpoint
+  // Apply global pan and zoom centered on canvas midpoint
   ctx.save();
+  ctx.translate(panX, panY);
   ctx.translate(W / 2, H / 2);
   ctx.scale(zoomFactor, zoomFactor);
   ctx.translate(-W / 2, -H / 2);
@@ -884,7 +894,7 @@ function draw() {
   const sExp = parseFloat(document.getElementById('shaderExp')?.value || '1.3');
   const sOpac = parseFloat(document.getElementById('shaderOpac')?.value || '125');
   const sCancel = parseFloat(document.getElementById('shaderCancel')?.value || '1.0');
-  const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '12');
+  const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '20');
 
   // Cache is independent of gridSize/zoom factor now!
   const currentCacheKey = `${shadePot?1:0}_${shadeAnti?1:0}_${sDiv}_${sExp}_${sOpac}_${sCancel}_${sLimit}`;
@@ -985,9 +995,10 @@ function draw() {
     cachedShaderKey = currentCacheKey;
   }
 
-  // Draw shader to dedicated background layer (with zoom transform applied)
+  // Draw shader to dedicated background layer (with pan and zoom transform applied)
   shaderCtx.clearRect(0, 0, canvas.width, canvas.height);
   shaderCtx.save();
+  shaderCtx.translate(panX, panY);
   shaderCtx.translate(canvas.width / 2, canvas.height / 2);
   shaderCtx.scale(zoomFactor, zoomFactor);
   shaderCtx.translate(-canvas.width / 2, -canvas.height / 2);
@@ -1076,6 +1087,32 @@ function draw() {
       ctx.beginPath(); ctx.moveTo(gx, marginY); ctx.lineTo(gx, marginY + gridSize); ctx.stroke();
       const [,gy] = toPixel(0, tick);
       ctx.beginPath(); ctx.moveTo(marginX, gy); ctx.lineTo(marginX + gridSize, gy); ctx.stroke();
+    });
+    ctx.restore();
+
+    // Draw 4 Moral Horizon Vertical Lines (Others, Other, My Group, Me)
+    ctx.save();
+    ctx.setLineDash([3 * dpr, 3 * dpr]);
+    ctx.lineWidth = 0.8 * dpr;
+    const horizons = [
+      { u: 1.0,  label: 'Others',   color: 'rgba(59, 222, 132, 0.25)' },
+      { u: 0.5,  label: 'Other',    color: 'rgba(59, 222, 132, 0.25)' },
+      { u: -0.5, label: 'My Group', color: 'rgba(240, 80, 96, 0.25)' },
+      { u: -1.0, label: 'Me',       color: 'rgba(240, 80, 96, 0.25)' }
+    ];
+    horizons.forEach(h => {
+      const [gx] = toPixel(h.u, 0);
+      ctx.strokeStyle = h.color;
+      ctx.beginPath();
+      ctx.moveTo(gx, marginY);
+      ctx.lineTo(gx, marginY + gridSize);
+      ctx.stroke();
+
+      // Subtle boundary labels drawn just inside the top grid edge
+      ctx.font = `bold ${Math.round(7 * dpr)}px 'JetBrains Mono', monospace`;
+      ctx.fillStyle = h.color.replace('0.25', '0.6');
+      ctx.textAlign = 'center';
+      ctx.fillText(h.label, gx, marginY + 12 * dpr);
     });
     ctx.restore();
     
@@ -1535,8 +1572,10 @@ function draw() {
     // 3. Row labels on the LEFT and RIGHT side of the grid box card
     // drawTextWithBackground(ctx, 'Active', marginX - 22 * dpr, row1Y, labelFs, '#30c8e0', true, 'right', 'middle');
     drawTextWithBackground(ctx, 'Everyone', marginX - 22 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
+    drawTextWithBackground(ctx, 'Latent Altruism', marginX - 5 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
     drawTextWithBackground(ctx, 'No−One Else', marginX + gridSize + 86 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
-	
+    drawTextWithBackground(ctx, 'Latent Selfishness', marginX + gridSize + 250 * dpr, row2Y, labelFs, 'rgba(240, 80, 96, 0.75)', true, 'right', 'middle');
+	// header: 'Reductive', sub: 'FIRE - Ludus', color: 'rgba(240, 80, 96, 0.75)', align: 'left', baseline: 'bottom'
     //drawTextWithBackground(ctx, 'N+', marginX, marginY - 22 * dpr, labelFs, '#3bde84', true, 'left', 'bottom');
 	
     // drawTextWithBackground(ctx, 'Suppressive', marginX - 22 * dpr, row3Y, labelFs, '#30c8e0', true, 'right', 'middle');
@@ -1725,50 +1764,39 @@ function draw() {
         drawTextWithBackground(ctx, `L: ${L.toFixed(2)}`, pLx - 10 * dpr, pLy, Math.round(7.5 * dpr), '#f05060', true, 'right', 'middle');
       }
 
-      // Draw projections and [dir, mag] readings directly on the 8 Subdivision Arms
+      // Draw projections and [dir+, mag, dir-] readings directly on the counted axes (excluding central/diagonal ones starting at 0,0 to prevent clutter)
       if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
-        const _Rd = Math.SQRT2 * 2;
-        const armsProj = [
-          { x1: -_Rd, y1: 0,    x2: 2,  y2: 2,  color: 'rgba(59, 222, 132, 0.8)',  isEdge: false, name: 'Productive ← Potential' },
-          { x1: -_Rd, y1: 0,    x2: 2,  y2: -2, color: 'rgba(59, 222, 132, 0.8)',  isEdge: false, name: 'Constructive ← Potential' },
-          { x1:  _Rd, y1: 0,    x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.8)',   isEdge: false, name: 'Anti-Potential → Reductive' },
-          { x1:  _Rd, y1: 0,    x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.8)',   isEdge: false, name: 'Anti-Potential → Regressive' },
-          { x1: 0,    y1:  _Rd, x2: 2,  y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false, name: 'Constructive ← Suppressive' },
-          { x1: 0,    y1:  _Rd, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.8)',  isEdge: false, name: 'Suppressive → Regressive' },
-          { x1: 0,    y1: -_Rd, x2: 2,  y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false, name: 'Productive ← Active' },
-          { x1: 0,    y1: -_Rd, x2: -2, y2: 2,  color: 'rgba(48, 200, 224, 0.8)',  isEdge: false, name: 'Active → Reductive' }
-        ];
+        const canvasAxes = GLOBAL_VFT_AXES.filter(ax => !(ax.x1 === 0 && ax.y1 === 0));
 
-        // Precalculate distances to each arm segment
-        armsProj.forEach(arm => {
-          const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
+        // Precalculate distances to each axis segment
+        canvasAxes.forEach(ax => {
+          const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
           const len = Math.hypot(dx, dy);
           const ux = dx / len, uy = dy / len;
-          const alongRaw = (v - arm.x1) * ux + (psi - arm.y1) * uy;
+          const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
           const alongClamped = Math.max(0, Math.min(len, alongRaw));
-          const projV = arm.x1 + ux * alongClamped;
-          const projPsi = arm.y1 + uy * alongClamped;
-          arm.dist = Math.hypot(v - projV, psi - projPsi);
-          arm.alongRaw = alongRaw;
-          arm.len = len;
-          arm.projV = projV;
-          arm.projPsi = projPsi;
+          ax.projV = ax.x1 + ux * alongClamped;
+          ax.projPsi = ax.y1 + uy * alongClamped;
+          ax.dist = Math.hypot(v - ax.projV, psi - ax.projPsi);
+          ax.alongRaw = alongRaw;
+          ax.len = len;
         });
 
         // Sort by distance ascending
-        const sortedArms = [...armsProj].sort((a, b) => a.dist - b.dist);
-        const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '8');
+        const sortedArms = [...canvasAxes].sort((a, b) => a.dist - b.dist);
+        const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '20');
 
-        armsProj.forEach(arm => {
-          const isCounted = sortedArms.indexOf(arm) < sLimit;
-          const [projPx, projPy] = toPixel(arm.projV, arm.projPsi);
-          const dir = (arm.alongRaw / arm.len) * 100;
-          const mag = Math.max(0, 100 * (1 - arm.dist / arm.len));
+        canvasAxes.forEach(ax => {
+          const isCounted = sortedArms.indexOf(ax) < sLimit;
+          const [projPx, projPy] = toPixel(ax.projV, ax.projPsi);
+          // Clamp dir percentage to [0, 100] since the projection point itself is clamped to segment endpoints
+          const dir = Math.max(0, Math.min(100, (ax.alongRaw / ax.len) * 100));
+          const mag = Math.max(0, 100 * (1 - ax.dist / ax.len));
 
           // Draw dashed guide line
           ctx.save();
           ctx.setLineDash([2 * dpr, 2 * dpr]);
-          ctx.strokeStyle = isCounted ? arm.color.replace('0.8', '0.45') : 'rgba(255, 255, 255, 0.05)';
+          ctx.strokeStyle = isCounted ? ax.color.replace('0.8', '0.45') : 'rgba(255, 255, 255, 0.05)';
           ctx.lineWidth = 0.8 * dpr;
           ctx.beginPath();
           ctx.moveTo(px, py);
@@ -1779,12 +1807,12 @@ function draw() {
           if (isCounted) {
             ctx.beginPath();
             ctx.arc(projPx, projPy, 2.5 * dpr, 0, Math.PI * 2);
-            ctx.fillStyle = arm.color;
+            ctx.fillStyle = ax.color;
             ctx.fill();
 
-            // Draw [dir, mag] text next to the dot (offset perpendicular to the arm)
-            const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
-            const len = arm.len;
+            // Draw text next to the dot (offset perpendicular to the axis)
+            const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
+            const len = ax.len;
             const nx = -dy / len, ny = dx / len;
             const textOffset = 12 * dpr;
             const tx = projPx - nx * textOffset;
@@ -1794,25 +1822,15 @@ function draw() {
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             
-            let labelText = `[${dir.toFixed(0)},${mag.toFixed(0)}]`;
-            if (arm.isEdge) {
-              let leftVal, rightVal;
-              if (arm.name.includes('Top') || arm.name.includes('Bottom')) {
-                leftVal = dir;
-                rightVal = 100 - dir;
-              } else {
-                leftVal = 100 - dir;
-                rightVal = dir;
-              }
-              labelText = `[${leftVal.toFixed(0)},${mag.toFixed(0)},${rightVal.toFixed(0)}]`;
-            }
+            // Universally output as [dir+, mag, dir-]
+            const labelText = `[${dir.toFixed(0)},${mag.toFixed(0)},${(100 - dir).toFixed(0)}]`;
             
             ctx.strokeStyle = '#0a0b0f';
             ctx.lineWidth = 3.5 * dpr;
             ctx.lineJoin = 'round';
             ctx.strokeText(labelText, tx, ty);
 
-            ctx.fillStyle = arm.color;
+            ctx.fillStyle = ax.color;
             ctx.fillText(labelText, tx, ty);
           }
           ctx.restore();
@@ -1891,25 +1909,13 @@ function updateReadout(v, psi, isPoint) {
   document.getElementById('dispVerdict').textContent = zone.verdict;
   syncSliders(v, psi);
 
-  // Calculate and display axis projections [dir, mag] for the 8 subdivision arms
-  const _Ra = Math.SQRT2 * 2;
-  const axes = [
-    { name: 'Productive ← Potential',     x1: -_Ra, y1: 0,    x2: 2,    y2: 2,    color: '#3bde84', isEdge: false },
-    { name: 'Constructive ← Potential',   x1: -_Ra, y1: 0,    x2: 2,    y2: -2,   color: '#3bde84', isEdge: false },
-    { name: 'Anti-Potential → Reductive',  x1:  _Ra, y1: 0,    x2: -2,   y2: 2,    color: '#f05060', isEdge: false },
-    { name: 'Anti-Potential → Regressive', x1:  _Ra, y1: 0,    x2: -2,   y2: -2,   color: '#f05060', isEdge: false },
-    { name: 'Constructive ← Suppressive',  x1: 0,    y1:  _Ra, x2: 2,    y2: -2,   color: '#e04080', isEdge: false },
-    { name: 'Suppressive → Regressive',   x1: 0,    y1:  _Ra, x2: -2,   y2: -2,   color: '#e04080', isEdge: false },
-    { name: 'Productive ← Active',        x1: 0,    y1: -_Ra, x2: 2,    y2: 2,    color: '#30c8e0', isEdge: false },
-    { name: 'Active → Reductive',         x1: 0,    y1: -_Ra, x2: -2,   y2: 2,    color: '#30c8e0', isEdge: false }
-  ];
 
   const container = document.getElementById('projsContainer');
   if (container) {
     container.innerHTML = '';
     
-    // Precalculate distances
-    axes.forEach(ax => {
+    // Precalculate distances using global axes list
+    GLOBAL_VFT_AXES.forEach(ax => {
       const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
       const len = Math.hypot(dx, dy);
       const ux = dx / len, uy = dy / len;
@@ -1923,15 +1929,16 @@ function updateReadout(v, psi, isPoint) {
     });
 
     // Sort by distance ascending
-    const sorted = [...axes].sort((a, b) => a.dist - b.dist);
-    const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '8');
+    const sorted = [...GLOBAL_VFT_AXES].sort((a, b) => a.dist - b.dist);
+    const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '20');
 
-    axes.forEach(ax => {
+    GLOBAL_VFT_AXES.forEach(ax => {
       const isCounted = sorted.indexOf(ax) < sLimit;
-      const dir = (ax.alongRaw / ax.len) * 100;
+      const dir = Math.max(0, Math.min(100, (ax.alongRaw / ax.len) * 100));
       const mag = Math.max(0, 100 * (1 - ax.dist / ax.len));
 
-      let labelText = `[${dir.toFixed(0)}, ${mag.toFixed(0)}]`;
+      // Universally format as 3D vector [dir+, mag, dir-]
+      const labelText = `[${dir.toFixed(0)}, ${mag.toFixed(0)}, ${(100 - dir).toFixed(0)}]`;
 
       const row = document.createElement('div');
       row.style.display = 'flex';
@@ -2176,18 +2183,41 @@ function getCanvasPos(e) {
   ];
 }
 
+canvas.addEventListener('mousedown', e => {
+  if (e.button === 1) { // Middle mouse click
+    isPanning = true;
+    const [px, py] = getCanvasPos(e);
+    startPanX = px - panX;
+    startPanY = py - panY;
+    e.preventDefault(); // Disable default autoscroll trigger
+  }
+});
+
+canvas.addEventListener('mouseup', e => {
+  if (e.button === 1) {
+    isPanning = false;
+  }
+});
+
 canvas.addEventListener('mousemove', e => {
   const [px, py] = getCanvasPos(e);
-  const [v, psi] = toCoord(px, py);
-  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
-  const finalV = modeRel ? v + 1 : v;
-  const finalPsi = modeRel ? psi + 1 : psi;
-  hoverCoord = [finalV, finalPsi];
-  updateReadout(finalV, finalPsi, false);
-  draw();
+  if (isPanning) {
+    panX = px - startPanX;
+    panY = py - startPanY;
+    draw();
+  } else {
+    const [v, psi] = toCoord(px, py);
+    const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+    const finalV = modeRel ? v + 1 : v;
+    const finalPsi = modeRel ? psi + 1 : psi;
+    hoverCoord = [finalV, finalPsi];
+    updateReadout(finalV, finalPsi, false);
+    draw();
+  }
 });
 
 canvas.addEventListener('mouseleave', () => {
+  isPanning = false;
   hoverCoord = null;
   if (selectedIdx >= 0 && points[selectedIdx]) {
     const pt = points[selectedIdx];

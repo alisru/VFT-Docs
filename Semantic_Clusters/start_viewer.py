@@ -393,6 +393,107 @@ def api_search():
     })
 
 
+@app.route("/api/timeline", methods=["GET"])
+def api_timeline():
+    if not _index_ready:
+        return jsonify({"error": "Index still loading, try again in a moment"}), 503
+
+    import os, datetime
+    from collections import Counter
+
+    # Exclusions configuration
+    exclude_prefixes = ("index_", "Master_Index", "temp_", "draft_")
+    exclude_folders = {"_AI_Project_Plans", "_chat_logs", ".gemini", ".git", ".agents"}
+
+    # 1. Extract primary VFT topic helper
+    def get_file_primary_topic(rel_path):
+        abs_path = VFT_MD_ROOT / rel_path
+        norm_f = _norm(str(abs_path))
+        topics = []
+        for key, p_info in para_lookup.items():
+            if key[0] == norm_f:
+                tid = p_info.get("topic_id")
+                if tid is not None:
+                    topics.append(tid)
+        if not topics:
+            return None
+        return Counter(topics).most_common(1)[0][0]
+
+    # Helper to extract H1 title or fall back to filename
+    def extract_title(abs_path, filename):
+        title = os.path.splitext(filename)[0]
+        try:
+            with open(abs_path, "r", encoding="utf-8", errors="ignore") as f:
+                for line in f:
+                    clean = line.strip()
+                    if clean.startswith("# "):
+                        title = clean[2:].strip()
+                        break
+        except Exception:
+            pass
+        return title
+
+    # 2. Scan directories dynamically for markdown files
+    files_timeline = []
+    for root, dirs, files in os.walk(str(VFT_MD_ROOT)):
+        # Prune excluded directories in-place
+        dirs[:] = [d for d in dirs if d not in exclude_folders and not d.startswith('.')]
+        
+        for file in files:
+            if not file.endswith('.md'):
+                continue
+            if any(file.startswith(prefix) for prefix in exclude_prefixes):
+                continue
+                
+            abs_path = Path(root) / file
+            
+            try:
+                rel_path = abs_path.relative_to(VFT_MD_ROOT).as_posix()
+            except Exception:
+                continue
+
+            try:
+                ctime = os.path.getctime(abs_path)
+                cdate = datetime.datetime.fromtimestamp(ctime)
+                date_str = cdate.strftime("%Y-%m-%d")
+                time_str = cdate.strftime("%H:%M:%S")
+            except Exception:
+                continue
+
+            tid = get_file_primary_topic(rel_path)
+            meta = topic_meta.get(str(tid), {}) if tid is not None else {}
+
+            node_name = meta.get("node_name", "")
+            quadrant = meta.get("quadrant", "")
+            quadrant_name = meta.get("quadrant_name", "")
+            isms = meta.get("isms", [])
+
+            if tid is None:
+                low = rel_path.lower()
+                if "plan" in low or "task" in low or "log" in low or "walkthrough" in low:
+                    node_name = "System / Project Plan"
+                else:
+                    node_name = "Unclassified Content"
+
+            files_timeline.append({
+                "relative_path": rel_path,
+                "title": extract_title(abs_path, file),
+                "ctime": ctime,
+                "date": date_str,
+                "time": time_str,
+                "topic_id": tid,
+                "node_name": node_name,
+                "quadrant": quadrant,
+                "quadrant_name": quadrant_name,
+                "isms": isms[:3]
+            })
+
+    # Sort reverse chronologically
+    files_timeline.sort(key=lambda x: x["ctime"], reverse=True)
+
+    return jsonify({"timeline": files_timeline})
+
+
 # ── Launch ─────────────────────────────────────────────────────────────────────
 
 def open_browser():
