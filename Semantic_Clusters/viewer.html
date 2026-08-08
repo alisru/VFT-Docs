@@ -4176,25 +4176,69 @@
                     <label style="display: block; font-size: 0.76rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; font-weight: 600;">VFT Node Theme</label>
                     <select id="timeline-node-select" onchange="drFilterTimeline()" style="width: 100%; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.45rem; color: var(--text-primary); font-size: 0.82rem;">
                         <option value="ALL">All Node Themes</option>
-                        <option value="Language / Psychology">Language / Psychology</option>
-                        <option value="History / Reality">History / Reality</option>
-                        <option value="Internal Judgment / The World">Internal Judgment / The World</option>
-                        <option value="Society / Sociology">Society / Sociology</option>
+                        <optgroup label="── Optimisms ──────────────────">
+                        <option value="Reality (Truth)">Reality (Truth)</option>
+                        <option value="History (Context)">History (Context)</option>
+                        <option value="Language (Connection)">Language (Connection)</option>
+                        <option value="Psychology (Understanding)">Psychology (Understanding)</option>
+                        <option value="The World (Fortitude)">The World (Fortitude)</option>
+                        <option value="Internal Judgment (Justice)">Internal Judgment (Justice)</option>
+                        <option value="Sociology (Empathy)">Sociology (Empathy)</option>
+                        <option value="Society itself (Community)">Society itself (Community)</option>
+                        <option value="Learning (Prudence)">Learning (Prudence)</option>
+                        <option value="Emotional-physics (Temperance)">Emotional-physics (Temperance)</option>
+                        <option value="Meta-Physics (Imagination)">Meta-Physics (Imagination)</option>
+                        <option value="Physics (Objectivity)">Physics (Objectivity)</option>
+                        <option value="Intelligence (Hope)">Intelligence (Hope)</option>
+                        <option value="Religion (Charity)">Religion (Charity)</option>
+                        <option value="Spirituality (Faith)">Spirituality (Faith)</option>
+                        <option value="Maths (Order)">Maths (Order)</option>
+                        </optgroup>
+                        <optgroup label="── Pessimisms / Isms ──────────">
+                        <option value="Chaos (Structurelessness)">Chaos (Structurelessness)</option>
+                        <option value="Nihilism (Belief in Nothing)">Nihilism (Belief in Nothing)</option>
+                        <option value="Hatred (Active Ill-Will)">Hatred (Active Ill-Will)</option>
+                        <option value="Despair (Negative Conviction)">Despair (Negative Conviction)</option>
+                        <option value="Denial (Rejection of Fact)">Denial (Rejection of Fact)</option>
+                        <option value="Dogma (Closed Mind)">Dogma (Closed Mind)</option>
+                        <option value="Indulgence (Lack of Control)">Indulgence (Lack of Control)</option>
+                        <option value="Folly (Willful Ignorance)">Folly (Willful Ignorance)</option>
+                        <option value="Anarchy (Dissolution)">Anarchy (Dissolution)</option>
+                        <option value="Apathy (Inability to Care)">Apathy (Inability to Care)</option>
+                        <option value="Corruption (Perversion of Morality)">Corruption (Perversion of Morality)</option>
+                        <option value="Cowardice (Refusal to Facts)">Cowardice (Refusal to Facts)</option>
+                        <option value="Confusion (Self-Ignorance)">Confusion (Self-Ignorance)</option>
+                        <option value="Deceit (Ill-Will)">Deceit (Ill-Will)</option>
+                        <option value="Erasure (Denial of Record)">Erasure (Denial of Record)</option>
+                        <option value="Delusion (The Greater Lie)">Delusion (The Greater Lie)</option>
+                        </optgroup>
+                        <optgroup label="── Other ───────────────────────">
                         <option value="System / Project Plan">System / Project Plan</option>
                         <option value="Unclassified Content">Unclassified Content</option>
+                        </optgroup>
                     </select>
                 </div>
             </div>
 
             <!-- Timeline Feed Workspace -->
             <div class="timeline-workspace" style="flex: 1; background: var(--bg-primary); display: flex; flex-direction: column; overflow: hidden; position: relative;">
-                <div class="timeline-header" style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); background: var(--bg-secondary); display: flex; justify-content: space-between; align-items: center;">
-                    <h2 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-primary);">Notes Creation History</h2>
+                <div class="timeline-header" style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); background: var(--bg-secondary); display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <h2 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-primary);">Notes Creation History</h2>
+                        <div style="display: flex; gap: 0.35rem; background: var(--bg-tertiary); padding: 0.2rem; border-radius: 6px; border: 1px solid var(--border-color);">
+                            <button id="cas-tl-mode-vertical" onclick="switchTimelineMode('vertical')" style="background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.25rem 0.6rem; font-size: 0.76rem; font-family: var(--font-mono); font-weight: 600; cursor: pointer;">☰ List View</button>
+                            <button id="cas-tl-mode-horizontal" onclick="switchTimelineMode('horizontal')" style="background: transparent; color: var(--text-secondary); border: 1px solid transparent; border-radius: 4px; padding: 0.25rem 0.6rem; font-size: 0.76rem; font-family: var(--font-mono); font-weight: 600; cursor: pointer;">box⊞ Grid View</button>
+                        </div>
+                    </div>
                     <span id="timeline-stats" style="font-size: 0.8rem; color: var(--text-secondary);">Loading timeline...</span>
                 </div>
 
                 <div id="timeline-scroll" style="flex: 1; overflow-y: auto; padding: 1.5rem 2rem; scroll-behavior: smooth;">
                     <div class="dr-loading"><div class="dr-spinner"></div> Loading timeline...</div>
+                </div>
+
+                <div id="timeline-grid-wrapper" style="display: none; flex: 1; overflow: auto; padding: 1.5rem 2rem; background: var(--bg-primary);">
+                    <!-- 2D matrix table will go here -->
                 </div>
             </div>
         </div>
@@ -4654,6 +4698,31 @@
             }
         };
 
+        function getTagColor(cat) {
+            if (!cat) return '#9ca3af';
+            const idx = VFT_32_CATEGORIES ? VFT_32_CATEGORIES.indexOf(cat) : -1;
+            if (idx >= 16) {
+                // Pessimism — warm red/amber spectrum
+                const pessimColors = [
+                    '#f87171','#fb923c','#fbbf24','#facc15',
+                    '#f472b6','#e879f9','#c084fc','#a78bfa',
+                    '#ef4444','#f97316','#eab308','#ec4899',
+                    '#d946ef','#a855f7','#8b5cf6','#7c3aed'
+                ];
+                return pessimColors[idx - 16] || '#f87171';
+            } else if (idx >= 0) {
+                // Optimism — cool teal/blue/green spectrum
+                const optimColors = [
+                    '#34d399','#2dd4bf','#38bdf8','#60a5fa',
+                    '#4ade80','#86efac','#6ee7b7','#a7f3d0',
+                    '#22d3ee','#818cf8','#a78bfa','#c4b5fd',
+                    '#10b981','#06b6d4','#3b82f6','#8b5cf6'
+                ];
+                return optimColors[idx] || '#34d399';
+            }
+            return '#9ca3af';
+        }
+
         function getQuadrantColor(q) {
             if (!q) return 'rgba(156, 163, 175, 0.15)';
             const qLower = q.toLowerCase();
@@ -4674,13 +4743,349 @@
             return '#9ca3af';
         }
 
+        let drTimelineViewMode = 'vertical'; // 'vertical' | 'horizontal'
+
+        window.switchTimelineMode = function(mode) {
+            drTimelineViewMode = mode;
+            const btnVert = document.getElementById('cas-tl-mode-vertical');
+            const btnHoriz = document.getElementById('cas-tl-mode-horizontal');
+            const listScroll = document.getElementById('timeline-scroll');
+            const gridWrapper = document.getElementById('timeline-grid-wrapper');
+
+            if (!btnVert || !btnHoriz || !listScroll || !gridWrapper) return;
+
+            if (mode === 'vertical') {
+                btnVert.style.background = 'var(--bg-secondary)';
+                btnVert.style.borderColor = 'var(--border-color)';
+                btnVert.style.color = 'var(--text-primary)';
+
+                btnHoriz.style.background = 'transparent';
+                btnHoriz.style.borderColor = 'transparent';
+                btnHoriz.style.color = 'var(--text-secondary)';
+
+                listScroll.style.display = 'block';
+                gridWrapper.style.display = 'none';
+            } else {
+                btnHoriz.style.background = 'var(--bg-secondary)';
+                btnHoriz.style.borderColor = 'var(--border-color)';
+                btnHoriz.style.color = 'var(--text-primary)';
+
+                btnVert.style.background = 'transparent';
+                btnVert.style.borderColor = 'transparent';
+                btnVert.style.color = 'var(--text-secondary)';
+
+                listScroll.style.display = 'none';
+                gridWrapper.style.display = 'block';
+            }
+            if (drTimelineData) {
+                drRenderTimeline(drTimelineData);
+            }
+        };
+
+        const VFT_32_CATEGORIES = [
+            // 16 Optimisms
+            "Reality (Truth)", "History (Context)", "Language (Connection)", "Psychology (Understanding)",
+            "The World (Fortitude)", "Internal Judgment (Justice)", "Sociology (Empathy)", "Society itself (Community)",
+            "Learning (Prudence)", "Emotional-physics (Temperance)", "Meta-Physics (Imagination)", "Physics (Objectivity)",
+            "Intelligence (Hope)", "Religion (Charity)", "Spirituality (Faith)", "Maths (Order)",
+            // 16 Pessimisms / Isms
+            "Chaos (Structurelessness)", "Nihilism (Belief in Nothing)", "Hatred (Active Ill-Will)", "Despair (Negative Conviction)",
+            "Denial (Rejection of Fact)", "Dogma (Closed Mind)", "Indulgence (Lack of Control)", "Folly (Willful Ignorance)",
+            "Anarchy (Dissolution)", "Apathy (Inability to Care)", "Corruption (Perversion of Morality)", "Cowardice (Refusal to Facts)",
+            "Confusion (Self-Ignorance)", "Deceit (Ill-Will)", "Erasure (Denial of Record)", "Delusion (The Greater Lie)"
+        ];
+
+        function getFileCategories(file) {
+            const matches = new Set();
+            const isms = (file.isms || []).map(i => i.toLowerCase());
+            const node = (file.node_name || '').toLowerCase();
+            const quad = (file.quadrant || '').toLowerCase();
+            const isPessimism = (quad === 'le' || quad === 'ge');
+
+            const hasIsm = (term) => isms.some(i => i.includes(term.toLowerCase()));
+            const hasNode = (term) => node.includes(term.toLowerCase());
+
+            if (isPessimism) {
+                if (hasIsm("chaos")) matches.add("Chaos (Structurelessness)");
+                if (hasIsm("nihilism")) matches.add("Nihilism (Belief in Nothing)");
+                if (hasIsm("hatred") || hasIsm("ill-will")) matches.add("Hatred (Active Ill-Will)");
+                if (hasIsm("despair") || hasIsm("negativ")) matches.add("Despair (Negative Conviction)");
+                if (hasIsm("denial") || hasIsm("fact")) matches.add("Denial (Rejection of Fact)");
+                if (hasIsm("dogma") || hasIsm("closed")) matches.add("Dogma (Closed Mind)");
+                if (hasIsm("indulgence") || hasIsm("control")) matches.add("Indulgence (Lack of Control)");
+                if (hasIsm("folly") || hasIsm("ignorance")) matches.add("Folly (Willful Ignorance)");
+                if (hasIsm("anarchy") || hasIsm("dissolut")) matches.add("Anarchy (Dissolution)");
+                if (hasIsm("apathy") || hasIsm("care")) matches.add("Apathy (Inability to Care)");
+                if (hasIsm("corruption") || hasIsm("pervers")) matches.add("Corruption (Perversion of Morality)");
+                if (hasIsm("cowardice") || hasIsm("refusal")) matches.add("Cowardice (Refusal to Facts)");
+                if (hasIsm("confusion") || hasIsm("self-ignorance")) matches.add("Confusion (Self-Ignorance)");
+                if (hasIsm("deceit")) matches.add("Deceit (Ill-Will)");
+                if (hasIsm("erasure") || hasIsm("record")) matches.add("Erasure (Denial of Record)");
+                if (hasIsm("delusion") || hasIsm("lie")) matches.add("Delusion (The Greater Lie)");
+            } else {
+                if (hasIsm("realism") || hasIsm("reality") || hasIsm("truth")) matches.add("Reality (Truth)");
+                if (hasIsm("historic") || hasIsm("history") || hasIsm("context")) matches.add("History (Context)");
+                if (hasIsm("language") || hasIsm("connect") || hasNode("language")) matches.add("Language (Connection)");
+                if (hasIsm("psychology") || hasIsm("understand") || hasNode("psychology")) matches.add("Psychology (Understanding)");
+                if (hasIsm("world") || hasIsm("fortitude") || hasIsm("nature") || hasIsm("ecology")) matches.add("The World (Fortitude)");
+                if (hasIsm("judgment") || hasIsm("justice") || hasIsm("conscience") || hasNode("judgment") || hasNode("conscience")) matches.add("Internal Judgment (Justice)");
+                if (hasIsm("sociology") || hasIsm("empathy")) matches.add("Sociology (Empathy)");
+                if (hasIsm("society") || hasIsm("community")) matches.add("Society itself (Community)");
+                if (hasIsm("learning") || hasIsm("prudence") || hasIsm("empiric")) matches.add("Learning (Prudence)");
+                if (hasIsm("physics") && !hasIsm("meta")) matches.add("Physics (Objectivity)");
+                if (hasIsm("temperance") || hasIsm("stoic") || hasIsm("emotional")) matches.add("Emotional-physics (Temperance)");
+                if (hasIsm("imagination") || (hasIsm("physics") && hasIsm("meta")) || (hasNode("physics") && hasNode("meta"))) matches.add("Meta-Physics (Imagination)");
+                if (hasIsm("hope") || hasIsm("intelligence")) matches.add("Intelligence (Hope)");
+                if (hasIsm("charity") || hasIsm("religion")) matches.add("Religion (Charity)");
+                if (hasIsm("faith") || hasIsm("spirit")) matches.add("Spirituality (Faith)");
+                if (hasIsm("order") || hasIsm("math")) matches.add("Maths (Order)");
+            }
+
+            if (matches.size === 0) {
+                if (node.includes("physics") && node.includes("meta")) {
+                    matches.add("Meta-Physics (Imagination)");
+                } else if (node.includes("physics")) {
+                    matches.add("Physics (Objectivity)");
+                } else if (node.includes("history")) {
+                    matches.add("History (Context)");
+                } else if (node.includes("reality")) {
+                    matches.add("Reality (Truth)");
+                } else if (node.includes("psychology")) {
+                    matches.add("Psychology (Understanding)");
+                } else if (node.includes("language") || node.includes("communication")) {
+                    matches.add("Language (Connection)");
+                } else if (node.includes("religion") || node.includes("spirituality")) {
+                    matches.add("Religion (Charity)");
+                    matches.add("Spirituality (Faith)");
+                } else if (node.includes("society") || node.includes("sociology")) {
+                    matches.add("Society itself (Community)");
+                    matches.add("Sociology (Empathy)");
+                } else if (node.includes("judgment") || node.includes("conscience") || node.includes("ethics")) {
+                    matches.add("Internal Judgment (Justice)");
+                }
+            }
+
+            return matches;
+          }
+
+        window.drRenderHorizontalGrid = function(items) {
+            const wrapper = document.getElementById('timeline-grid-wrapper');
+            if (!wrapper) return;
+            if (!items || !items.length) {
+                wrapper.innerHTML = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128269;</div><div>No files match the filters</div></div>';
+                return;
+            }
+
+            // 1. Gather all unique dates and sort them
+            const datesSet = new Set();
+            items.forEach(item => { if (item.date) datesSet.add(item.date); });
+            const sortedDates = Array.from(datesSet).sort(); // oldest → newest L→R
+
+            // 2. Map files to (Category -> Date) lists
+            const cellMap = {};
+            const activeRows = new Set();
+            items.forEach(item => {
+                const cats = getFileCategories(item);
+                cats.forEach(cat => {
+                    activeRows.add(cat);
+                    const key = `${cat}|${item.date}`;
+                    if (!cellMap[key]) cellMap[key] = [];
+                    cellMap[key].push(item);
+                });
+            });
+
+            // Interleaved pairs to match VFT Grid alignment
+            const OPTS = VFT_32_CATEGORIES.slice(0, 16);
+            const PESS = VFT_32_CATEGORIES.slice(16);
+            const orderedRows = [];
+            for (let i = 0; i < 16; i++) {
+                if (activeRows.has(OPTS[i])) orderedRows.push({ cat: OPTS[i], num: i + 1, isPessimism: false });
+                if (activeRows.has(PESS[i])) orderedRows.push({ cat: PESS[i], num: null,  isPessimism: true  });
+            }
+
+            if (orderedRows.length === 0) {
+                wrapper.innerHTML = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128269;</div><div>No classified files match the filters</div></div>';
+                return;
+            }
+
+            // Grid spacing parameters
+            const LEFT_W    = 240;   // Category label column width
+            const COL_W     = 220;   // Date column width
+            const ROW_H     = 42;    // Category row height
+            const HDR_H     = 40;    // Date header height
+            const CHIP_H    = 18;    // Chip height
+            const CHIP_W    = 180;   // Chip width
+
+            const riverW    = Math.max(sortedDates.length * COL_W, 600);
+            const totalH    = orderedRows.length * ROW_H;
+
+            // Generate Date Header Cells
+            let hdrCells = '';
+            sortedDates.forEach((date, di) => {
+                let label = date;
+                try { label = new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: '2-digit' }); } catch(e) {}
+                const cx = di * COL_W + COL_W / 2;
+                hdrCells += `<div style="position:absolute;left:${cx-80}px;top:0;width:160px;text-align:center;font-size:0.68rem;color:var(--text-secondary);font-family:var(--font-mono);line-height:${HDR_H}px;white-space:nowrap;font-weight:700;letter-spacing:0.04em;">${escHtml(label)}</div>`;
+                hdrCells += `<div style="position:absolute;left:${cx}px;top:${HDR_H-6}px;width:1px;height:6px;background:var(--border-color);"></div>`;
+            });
+
+            // Generate Left Column Labels
+            let labelCol = '';
+            orderedRows.forEach((row, ri) => {
+                const color    = getTagColor(row.cat);
+                const isOpt    = !row.isPessimism;
+                const label    = row.cat.split(' (')[0];
+                const subLabel = (row.cat.match(/\(([^)]+)\)/) || [])[1] || '';
+
+                labelCol += `
+                <div style="position:absolute;left:0;top:${ri * ROW_H}px;width:${LEFT_W}px;height:${ROW_H}px;display:flex;align-items:center;padding:0 0.5rem 0 ${isOpt ? '1.1rem' : '0.5rem'};border-bottom:1px solid rgba(255,255,255,0.03);border-right:2px solid var(--border-color);background:var(--bg-secondary);box-sizing:border-box;overflow:hidden;" title="${escAttr(row.cat)}">
+                    ${isOpt ? `<span style="font-size:0.55rem;color:var(--text-secondary);font-family:var(--font-mono);margin-right:0.3rem;vertical-align:middle;min-width:12px;">${row.num}</span>` : '<span style="display:inline-block;width:12px;margin-right:0.3rem;"></span>'}
+                    <span style="font-size:${isOpt?'0.72rem':'0.64rem'};color:${color}${isOpt?'':'cc'};font-family:var(--font-mono);font-weight:${isOpt?'600':'400'};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                        ${escHtml(label)}${subLabel ? `<span style="opacity:0.45;font-size:0.58rem;font-weight:400;"> (${escHtml(subLabel)})</span>` : ''}
+                    </span>
+                    ${row.isPessimism ? '<span style="font-size: 0.54rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 3px; padding: 0.05rem 0.2rem; margin-left:auto; font-weight: 400; font-family: var(--font-mono); font-size:0.52rem;">ISM</span>' : ''}
+                </div>`;
+            });
+
+            // Plot chips and collect positions for SVG paths
+            let chipsHtml = '';
+            const nodePositions = {}; // key: "Category|Date|fileIndex" -> {x, y}
+
+            orderedRows.forEach((row, ri) => {
+                const color  = getTagColor(row.cat);
+                const midY   = ri * ROW_H + ROW_H / 2;
+
+                sortedDates.forEach((date, di) => {
+                    const cellKey = `${row.cat}|${date}`;
+                    const files = cellMap[cellKey] || [];
+                    if (!files.length) return;
+
+                    const cx = di * COL_W + COL_W / 2;
+                    const N  = files.length;
+
+                    files.forEach((file, fi) => {
+                        // Stack multiple files vertically centered around midY inside the lane
+                        const offset = (fi - (N - 1) / 2) * (CHIP_H + 4);
+                        const chipY  = midY + offset;
+                        const chipX  = cx;
+
+                        nodePositions[`${row.cat}|${date}|${fi}`] = { x: chipX, y: chipY };
+
+                        const short = file.title.length > 22 ? file.title.slice(0, 22) + '\u2026' : file.title;
+                        chipsHtml += `
+                        <div onclick="drTimelineClick('${escJs(file.relative_path)}')"
+                             title="${escAttr(file.title)}"
+                             style="position:absolute;left:${chipX - CHIP_W/2}px;top:${chipY - CHIP_H/2}px;width:${CHIP_W}px;height:${CHIP_H}px;background:var(--bg-secondary);border:1px solid ${color}80;border-radius:4px;padding:0 6px;box-shadow:0 3px 6px rgba(0,0,0,0.2);display:flex;align-items:center;cursor:pointer;z-index:5;transition:border-color 0.15s,background 0.15s,transform 0.15s;box-sizing:border-box;"
+                             onmouseover="this.style.borderColor='${color}';this.style.background='${color}12';this.style.transform='translateY(-1px)';"
+                             onmouseout="this.style.borderColor='${color}80';this.style.background='var(--bg-secondary)';this.style.transform='none';">
+                            <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${color};margin-right:0.35rem;flex-shrink:0;"></span>
+                            <span style="font-size:0.59rem;color:var(--text-primary);font-family:var(--font-mono);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;">${escHtml(short)}</span>
+                        </div>`;
+                    });
+                });
+            });
+
+            // Build flowing river paths (horizontal base channels + dynamic document curves)
+            let svgContent = '';
+
+            orderedRows.forEach((row, ri) => {
+                const color = getTagColor(row.cat);
+                const midY  = ri * ROW_H + ROW_H / 2;
+
+                // 1. Draw continuous static horizontal background channel
+                svgContent += `<line x1="0" y1="${midY}" x2="${riverW}" y2="${midY}" stroke="${color}" stroke-width="${row.isPessimism ? '1.5' : '2.5'}" stroke-opacity="0.12" />`;
+
+                // 2. Trace chronological paths linking consecutive documents of this category
+                const fileDates = sortedDates.filter(d => cellMap[`${row.cat}|${d}`]);
+                for (let d = 0; d < fileDates.length - 1; d++) {
+                    const dateA = fileDates[d];
+                    const dateB = fileDates[d+1];
+
+                    const filesA = cellMap[`${row.cat}|${dateA}`];
+                    const filesB = cellMap[`${row.cat}|${dateB}`];
+
+                    // Draw connections between each stacked item to show clean flow currents
+                    filesA.forEach((_, fiA) => {
+                        const posA = nodePositions[`${row.cat}|${dateA}|${fiA}`];
+                        filesB.forEach((_, fiB) => {
+                            const posB = nodePositions[`${row.cat}|${dateB}|${fiB}`];
+
+                            // Smooth liquid S-curve (Bezier)
+                            const cp1X = posA.x + 80;
+                            const cp1Y = posA.y;
+                            const cp2X = posB.x - 80;
+                            const cp2Y = posB.y;
+
+                            svgContent += `
+                            <path d="M ${posA.x} ${posA.y} C ${cp1X} ${cp1Y}, ${cp2X} ${cp2Y}, ${posB.x} ${posB.y}"
+                                  fill="none"
+                                  stroke="${color}"
+                                  stroke-width="2.5"
+                                  stroke-opacity="0.65"
+                                  stroke-linecap="round" />`;
+                        });
+                    });
+                }
+            });
+
+            // Assemble into a fully sticky grid structure
+            wrapper.innerHTML = `
+            <div style="height: 100%; display: flex; flex-direction: column; overflow: hidden; font-family: var(--font-mono); position: relative;">
+                
+                <!-- Date Headers Row (Vertical fixed, horizontal scrollable) -->
+                <div style="display: flex; flex-shrink: 0; border-bottom: 2px solid var(--border-color); background: var(--bg-secondary); z-index: 10;">
+                    <div style="width: ${LEFT_W}px; flex-shrink: 0; border-right: 2px solid var(--border-color); height: ${HDR_H}px; background: var(--bg-secondary);"></div>
+                    <div id="river-header-viewport" style="flex: 1; overflow: hidden; height: ${HDR_H}px; position: relative;">
+                        <div style="width: ${riverW}px; height: ${HDR_H}px; position: relative;">
+                            ${hdrCells}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Scrollable Arena -->
+                <div id="river-main-viewport" style="flex: 1; overflow: auto; display: flex; background: var(--bg-primary);">
+                    
+                    <!-- Left Category Labels Pinned Column -->
+                    <div style="position: sticky; left: 0; width: ${LEFT_W}px; height: ${totalH}px; flex-shrink: 0; background: var(--bg-secondary); z-index: 8;">
+                        ${labelCol}
+                    </div>
+
+                    <!-- River lanes Canvas + Nodes (scrolling vertically and horizontally) -->
+                    <div style="width: ${riverW}px; height: ${totalH}px; position: relative; flex-shrink: 0;">
+                        <!-- SVG River currents -->
+                        <svg style="position: absolute; left: 0; top: 0; width: ${riverW}px; height: ${totalH}px; pointer-events: none; z-index: 2;">
+                            ${svgContent}
+                        </svg>
+                        
+                        <!-- Row dividers background grid -->
+                        ${orderedRows.map((_, ri) => `<div style="position: absolute; left: 0; top: ${ri * ROW_H}px; width: ${riverW}px; height: ${ROW_H}px; border-bottom: 1px solid rgba(255,255,255,0.03); box-sizing: border-box; pointer-events: none;"></div>`).join('')}
+
+                        <!-- HTML Interactive Chips -->
+                        ${chipsHtml}
+                    </div>
+
+                </div>
+            </div>`;
+
+            // Sync scrolling of the Top Date headers with the main timeline viewport
+            const mainViewport = wrapper.querySelector('#river-main-viewport');
+            const headerViewport = wrapper.querySelector('#river-header-viewport');
+            if (mainViewport && headerViewport) {
+                mainViewport.addEventListener('scroll', () => {
+                    headerViewport.scrollLeft = mainViewport.scrollLeft;
+                });
+            }
+        };
+
+
+
         window.drRenderTimeline = function(items) {
             const scroll = document.getElementById('timeline-scroll');
             const stats  = document.getElementById('timeline-stats');
 
             if (!items || !items.length) {
-                scroll.innerHTML = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128203;</div><div>No files found in workspace</div></div>';
-                stats.innerText = '0 files';
+                if (scroll) scroll.innerHTML = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128203;</div><div>No files found in workspace</div></div>';
+                if (stats) stats.innerText = '0 files';
                 return;
             }
 
@@ -4705,10 +5110,15 @@
                 return true;
             });
 
-            stats.innerText = `${filtered.length} files shown (${items.length} total)`;
+            if (stats) stats.innerText = `${filtered.length} files shown (${items.length} total)`;
+
+            if (drTimelineViewMode === 'horizontal') {
+                drRenderHorizontalGrid(filtered);
+                return;
+            }
 
             if (!filtered.length) {
-                scroll.innerHTML = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128269;</div><div>No files match the filters</div></div>';
+                if (scroll) scroll.innerHTML = '<div class="dr-empty-state"><div class="dr-empty-icon">&#128269;</div><div>No files match the filters</div></div>';
                 return;
             }
 
@@ -4757,7 +5167,7 @@
                 html += `</div>`;
             }
             html += `</div>`;
-            scroll.innerHTML = html;
+            if (scroll) scroll.innerHTML = html;
         };
 
         window.drFilterTimeline = function() {

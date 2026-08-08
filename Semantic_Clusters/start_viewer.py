@@ -39,10 +39,21 @@ VFT_MD_ROOT = Path("E:/Vector Field Theory/VFT Docs/_VFT MD")
 
 CLUSTER_MAP_PATH  = SCRIPT_DIR / "cluster_mapping.json"
 TOPIC_ISM_PATH    = SCRIPT_DIR / "topic_ism_mapping.json"
+DOC_ISM_PATH      = SCRIPT_DIR / "doc_ism_mapping.json"
 LAYER_TAGS_PATH   = SCRIPT_DIR / "layer_tags.json"
 SENTENCE_MAN_PATH = SCRIPT_DIR / "sentence_manifest.json"
+GDRIVE_DATES_PATH = SCRIPT_DIR / "gdrive_creation_dates.json"
 
 READABLE_EXTS = {".md", ".txt", ".js", ".py", ".json", ".html", ".cs"}
+
+gdrive_creation_dates = {}
+if GDRIVE_DATES_PATH.exists():
+    try:
+        with open(GDRIVE_DATES_PATH, "r", encoding="utf-8") as f:
+            gdrive_creation_dates = json.load(f)
+        print(f"Loaded {len(gdrive_creation_dates)} Google Drive creation dates.")
+    except Exception as e:
+        print(f"Warning: Failed to load Google Drive dates: {e}")
 
 # ── App ────────────────────────────────────────────────────────────────────────
 
@@ -55,6 +66,7 @@ para_lookup      = {}              # (norm_file, para_idx) → {topic_id, text}
 sent_file_idx    = defaultdict(lambda: defaultdict(list))  # norm_file → para_idx → [sent entries]
 sent_topic_idx   = defaultdict(list)  # topic_id → [sent entries]
 topic_meta       = {}              # str(topic_id) → metadata
+doc_ism_meta     = {}              # str(filename) → pre-computed VFT metadata
 layer_tags       = {}              # sentence_id → tag string
 sentence_records = []              # full sentence manifest array
 model            = None            # local SentenceTransformer model
@@ -67,7 +79,7 @@ def _norm(path: str) -> str:
 
 
 def _load_indexes():
-    global _index_ready, model, embeddings, layer_tags, sentence_records
+    global _index_ready, model, embeddings, layer_tags, sentence_records, doc_ism_meta
 
     # 1. Topic ISM metadata
     print("Loading topic_ism_mapping.json ...", flush=True)
@@ -76,6 +88,17 @@ def _load_indexes():
     for k, v in raw_meta.items():
         topic_meta[k] = v
     print(f"  {len(topic_meta):,} topics", flush=True)
+
+    # 1b. Document ISM metadata
+    print("Loading doc_ism_mapping.json ...", flush=True)
+    try:
+        with open(DOC_ISM_PATH, "r", encoding="utf-8") as f:
+            raw_doc_meta = json.load(f)
+        for k, v in raw_doc_meta.items():
+            doc_ism_meta[k.lower()] = v
+        print(f"  {len(doc_ism_meta):,} document mappings", flush=True)
+    except Exception as e:
+        print(f"  Warning: failed to load doc_ism_mapping.json: {e}", flush=True)
 
     # 2. Paragraph → topic_id lookup
     print("Loading cluster_mapping.json ...", flush=True)
@@ -405,15 +428,20 @@ def api_timeline():
     exclude_prefixes = ("index_", "Master_Index", "temp_", "draft_")
     exclude_folders = {"_AI_Project_Plans", "_chat_logs", ".gemini", ".git", ".agents"}
 
-    # 1. Extract primary VFT topic helper
+    # Helper to normalize path spaces, backslashes, and casing
+    def _clean_path(p):
+        return p.replace("\\", "/").replace(" ", "_").lower()
+
+    # 1. Extract primary VFT topic helper (ignores noise topic -1)
     def get_file_primary_topic(rel_path):
         abs_path = VFT_MD_ROOT / rel_path
-        norm_f = _norm(str(abs_path))
+        norm_f = _clean_path(str(abs_path))
         topics = []
         for key, p_info in para_lookup.items():
-            if key[0] == norm_f:
+            if _clean_path(key[0]) == norm_f:
                 tid = p_info.get("topic_id")
-                if tid is not None:
+                # Filter out unclustered noise topic (-1)
+                if tid is not None and tid != -1:
                     topics.append(tid)
         if not topics:
             return None
@@ -453,24 +481,53 @@ def api_timeline():
                 continue
 
             try:
-                ctime = os.path.getctime(abs_path)
-                cdate = datetime.datetime.fromtimestamp(ctime)
+                # Query original Google Drive creation dates by lowercase filename (stripped of extension)
+                filename_base = abs_path.stem.lower()
+                gdrive_date_str = gdrive_creation_dates.get(filename_base)
+                
+                if gdrive_date_str:
+                    cdate = datetime.datetime.fromisoformat(gdrive_date_str)
+                else:
+                    ctime = os.path.getctime(abs_path)
+                    cdate = datetime.datetime.fromtimestamp(ctime)
+                    
                 date_str = cdate.strftime("%Y-%m-%d")
                 time_str = cdate.strftime("%H:%M:%S")
             except Exception:
                 continue
 
-            tid = get_file_primary_topic(rel_path)
-            meta = topic_meta.get(str(tid), {}) if tid is not None else {}
+            # First, check if doc has a pre-computed classification mapping in doc_ism_meta
+            file_lower = file.lower()
+            meta = doc_ism_meta.get(file_lower)
+            if not meta:
+                # Fall back to matching cleaned relative path
+                meta = doc_ism_meta.get(_clean_path(rel_path))
 
-            node_name = meta.get("node_name", "")
-            quadrant = meta.get("quadrant", "")
-            quadrant_name = meta.get("quadrant_name", "")
-            isms = meta.get("isms", [])
+            node_name = ""
+            quadrant = ""
+            quadrant_name = ""
+            isms = []
+            tid = None
 
-            if tid is None:
+            if meta:
+                node_name = meta.get("node_name", "")
+                quadrant = meta.get("quadrant", "")
+                quadrant_name = meta.get("quadrant_name", "")
+                isms = meta.get("isms", [])
+            else:
+                # Compute dominant topic dynamically
+                tid = get_file_primary_topic(rel_path)
+                if tid is not None:
+                    t_meta = topic_meta.get(str(tid), {})
+                    node_name = t_meta.get("node_name", "")
+                    quadrant = t_meta.get("quadrant", "")
+                    quadrant_name = t_meta.get("quadrant_name", "")
+                    isms = t_meta.get("isms", [])
+
+            # System/Unclassified fallbacks
+            if not quadrant:
                 low = rel_path.lower()
-                if "plan" in low or "task" in low or "log" in low or "walkthrough" in low:
+                if ("plan" in low and "plane" not in low) or "task" in low or "log" in low or "walkthrough" in low:
                     node_name = "System / Project Plan"
                 else:
                     node_name = "Unclassified Content"

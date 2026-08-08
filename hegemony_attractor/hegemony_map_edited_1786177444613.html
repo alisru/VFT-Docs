@@ -1,0 +1,2928 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Psochic Hegemony Graph — Full Canonical Alignment</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+    :root {
+      --bg:       #0a0b0f;
+      --panel:    #12141c;
+      --border:   #1e2230;
+      --accent:   #5b6cf8;
+      --text:     #c8cde8;
+      --muted:    #4a5070;
+      --green:    #3bde84;
+      --red:      #f05060;
+      --amber:    #f0a030;
+      --cyan:     #30c8e0;
+      --rose:     #e04080;
+      --yellow:   #e8d050;
+      --purple:   #a070f0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--panel);
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    header .subtitle {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .spacer { flex: 1; }
+
+    .clear-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      padding: 5px 14px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .clear-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      overflow: hidden;
+    }
+
+    /* ── CANVAS AREA ── */
+    .canvas-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #07080c;
+      width: 100%;
+      height: 100%;
+    }
+
+    canvas {
+      cursor: crosshair;
+      display: block;
+    }
+
+    /* ── SIDE PANEL ── */
+    .side {
+      background: var(--panel);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .side-section {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .side-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    /* coordinate readout */
+    .coord-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .coord-display .label { color: var(--muted); font-size: 11px; }
+    .coord-display .val   { color: #fff; font-weight: 500; }
+    .coord-display .zone  { color: var(--yellow); font-size: 12px; margin-top: 4px; font-weight: 600; }
+    .coord-display .verdict { color: var(--muted); font-size: 10px; margin-top: 2px; line-height: 1.5; }
+
+    /* axis legend */
+    .axis-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .axis-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 11px;
+    }
+    .axis-sym {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      width: 20px;
+    }
+    .axis-desc { color: var(--muted); font-size: 10px; }
+
+    /* zone table */
+    .zone-table {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .zone-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+    .zone-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .zone-name  { font-weight: 600; font-size: 10px; min-width: 90px; }
+    .zone-coord { font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 9px; }
+
+    /* points list */
+    .points-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+    .point-entry {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 5px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .point-entry:hover { border-color: var(--accent); }
+    .point-entry.selected { border-color: var(--accent); background: rgba(91,108,248,0.1); }
+    .point-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .point-coords { color: var(--text); flex: 1; }
+    .point-zone { color: var(--muted); font-size: 9px; }
+    .point-del {
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 12px;
+      padding: 0 2px;
+      border-radius: 3px;
+    }
+    .point-del:hover { color: var(--red); }
+
+    .empty-hint {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      padding: 12px 0;
+      font-style: italic;
+    }
+
+    /* label input */
+    .label-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .label-input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      padding: 5px 8px;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .label-input:focus { border-color: var(--accent); }
+    .label-input::placeholder { color: var(--muted); }
+
+    /* Axis sliders styling */
+    .axis-sliders {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .slider-group label {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .slider-group input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--border);
+      outline: none;
+    }
+    .slider-group input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .slider-group input[type="range"]::-webkit-slider-thumb:hover {
+      background: #fff;
+    }
+    .slider-group.read-only {
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+    }
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    .layer-toggles {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .layer-toggles label {
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>The Psochic Hegemony Map</h1>
+    <div class="subtitle">Canonical Alignment (X: +2υ Left → -2υ Right | Y: +2ψ Top → -2ψ Bottom)</div>
+  </div>
+  <div class="spacer"></div>
+  <button class="clear-btn" id="clearBtn">Clear All</button>
+</header>
+
+<div class="main">
+  <div class="canvas-wrap" id="canvasWrap">
+    <canvas id="shaderLayer" style="position: absolute; top: 0px; left: 0px; width: 854px; height: 852px; pointer-events: none;" width="854" height="852"></canvas>
+    <canvas id="map" width="854" height="852" style="width: 854px; height: 852px;"></canvas>
+  </div>
+
+  <div class="side">
+
+    <!-- Live coordinate readout -->
+    <div class="side-section">
+      <div class="side-title">Cursor / Last Point</div>
+      <div class="coord-display" id="coordDisplay">
+        <div><span class="label">υ (Morality) </span><span class="val" id="dispV">+1.00</span></div>
+        <div><span class="label">ψ (Will)      </span><span class="val" id="dispPsi">+1.00</span></div>
+        <div id="dispRelContainer" style="display:none; margin-top:5px; font-size:11px; color:#3bde84; font-family:'JetBrains Mono', monospace;">
+          <span class="label">Dist to Truth+ (1,1): </span><span class="val" id="dispRelDist">—</span>
+        </div>
+        <div id="dispContextRow" style="margin-top:5px; font-size:11px; color:#30c8e0; font-family:'JetBrains Mono', monospace;">
+          <span class="label">Context: </span><span class="val" id="dispContext">Natural State</span>
+        </div>
+        <div class="zone" id="dispZone" style="color: rgb(59, 222, 132);">→ Productive Quadrant (Air / Greater Good) (+1υ, +1ψ)</div>
+        <div class="verdict" id="dispVerdict">The Good Truth — Active Creation for Everyone. Agape &amp; Xenia.</div>
+        <div class="axis-projections" id="axisProjections" style="margin-top: 10px; border-top: 1px solid #2a2d3d; padding-top: 8px;">
+          <div style="font-size: 10px; font-weight: bold; color: var(--muted); margin-bottom: 5px;">Axis Projections [+dir, mag, -dir]</div>
+          <div id="projsContainer" style="display: flex; flex-direction: column; gap: 3.5px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #abb2bf;"><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(59, 222, 132); font-weight: bold;"><span>● Good ↔ Bad</span><span>[75, 75, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(48, 200, 224); font-weight: bold;"><span>● Active ↔ Suppressive</span><span>[75, 75, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(59, 222, 132); font-weight: bold;"><span>● Others Axis (u = 1)</span><span>[75, 100, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(59, 222, 132); font-weight: bold;"><span>● Other Axis (u = 0.5)</span><span>[75, 88, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(240, 80, 96); font-weight: bold;"><span>● My Group Axis (u = -0.5)</span><span>[75, 63, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(240, 80, 96); font-weight: bold;"><span>● Me Axis (u = -1)</span><span>[75, 50, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(59, 222, 132); font-weight: bold;"><span>● Truth ↔ Anti-Truth</span><span>[75, 100, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(240, 80, 96); font-weight: bold;"><span>● Lies ↔ Anti-Lies</span><span>[50, 75, 50]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(59, 222, 132); font-weight: bold;"><span>● Productive ↔ Potential</span><span>[75, 90, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(59, 222, 132); font-weight: bold;"><span>● Constructive ↔ Potential</span><span>[60, 54, 40]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(240, 80, 96); font-weight: bold;"><span>● Anti-Potential ↔ Reductive</span><span>[40, 96, 60]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(240, 80, 96); font-weight: bold;"><span>● Anti-Potential ↔ Regressive</span><span>[25, 69, 75]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(224, 64, 128); font-weight: bold;"><span>● Constructive ↔ Suppressive</span><span>[40, 96, 60]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(224, 64, 128); font-weight: bold;"><span>● Suppressive ↔ Regressive</span><span>[25, 69, 75]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(48, 200, 224); font-weight: bold;"><span>● Productive ↔ Active</span><span>[75, 90, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(48, 200, 224); font-weight: bold;"><span>● Active ↔ Reductive</span><span>[60, 54, 40]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(59, 222, 132); font-weight: bold;"><span>● Productive ↔ Constructive</span><span>[75, 75, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(240, 80, 96); font-weight: bold;"><span>● Reductive ↔ Regressive</span><span>[75, 25, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(48, 200, 224); font-weight: bold;"><span>● Productive ↔ Reductive</span><span>[75, 75, 25]</span></div><div style="display: flex; justify-content: space-between; line-height: 1.3; color: rgb(224, 64, 128); font-weight: bold;"><span>● Constructive ↔ Regressive</span><span>[75, 25, 25]</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Label input -->
+    <div class="side-section">
+      <div class="side-title">Label &amp; Context</div>
+      <div class="label-row" style="display:flex; flex-direction:column; gap:10px;">
+        <input class="label-input" id="labelInput" placeholder="Actor / event name..." maxlength="40">
+        <select class="label-input" id="contextSelect" style="background:#12141c; color:#fff; border:1px solid #2a2d3d; padding:8px 12px; border-radius:6px; cursor:pointer; font-size:11px; outline:none;">
+          <option value="Natural State" selected="">Natural State (Baseline)</option>
+          <option value="Good Truth">Good Truth (Constructive Fact)</option>
+          <option value="Bad Truth">Bad Truth (Harmful Fact)</option>
+          <option value="Good Lie">Good Lie (Noble Lie / Comfort)</option>
+          <option value="Bad Lie">Bad Lie (Harmful Falsehood)</option>
+          <option value="Good Preference">Good Preference (Subjective Taste)</option>
+          <option value="Bad Preference">Bad Preference (Harmful Taste)</option>
+        </select>
+      </div>
+      <div class="axis-desc" style="font-size:10px;color:var(--muted)">Click anywhere on the map to plot a point</div>
+    </div>
+
+    <!-- Axis Projection Player -->
+    <div class="side-section">
+      <div class="side-title">Axis Projection Player</div>
+      <div class="axis-sliders">
+        <div class="slider-group">
+          <label>υ Morality (Benefit): <span id="valSliderV">1.00</span></label>
+          <input type="range" id="sliderV" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group">
+          <label>ψ Will (Action Energy): <span id="valSliderPsi">1.00</span></label>
+          <input type="range" id="sliderPsi" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group">
+          <label>Scale of Truth ( \ ): <span id="valSliderT">1.00</span></label>
+          <input type="range" id="sliderT" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group">
+          <label>Scale of Lies ( / ): <span id="valSliderL">0.00</span></label>
+          <input type="range" id="sliderL" min="-2" max="2" step="0.01" value="0">
+        </div>
+        <div class="slider-group read-only">
+          <label>Scale of Benefit × Will: <span id="valProduct" class="badge">1.00</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Layer Controls -->
+    <div class="side-section">
+      <div class="side-title">Visual Layers</div>
+      <div class="layer-toggles">
+        <label><input type="checkbox" id="showAxes" checked=""> Orthogonal Grid</label>
+        <label><input type="checkbox" id="showDiagonals" checked=""> Diagonal Axes</label>
+        <label><input type="checkbox" id="showProjections" checked=""> Projection Guides</label>
+        <label><input type="checkbox" id="show3x3Grid" checked=""> 3x3 Grid Matrix</label>
+        <label><input type="checkbox" id="showSubdivisionArms" checked=""> Subdivision Arms</label>
+        <label><input type="checkbox" id="showMinkowski" checked=""> Minkowski Cones</label>
+        <label><input type="checkbox" id="showStateTriangles" checked=""> State Triangles</label>
+        <div style="margin: 4px 0 8px 20px; padding-left: 8px; border-left: 1.5px solid #2a2d3d; display: flex; flex-direction: column; gap: 4px;">
+          <label style="font-size: 10px; color: #3bde84; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadePotential" checked=""> Potential Area (Shaded)</label>
+          <label style="font-size: 10px; color: #f05060; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadeAntiPotential"> Anti-Potential Area (Shaded)</label>
+          <label style="font-size: 10px; color: #30c8e0; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadeActive"> Active Area (Shaded)</label>
+          <label style="font-size: 10px; color: #e04080; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="shadeSuppressive"> Suppressive Area (Shaded)</label>
+        </div>
+        <label style="color:#3bde84"><input type="checkbox" id="modeRelative"> GG Relative Mode</label>
+      </div>
+    </div>
+
+    <!-- Labels & Custom Axes -->
+    <div class="side-section">
+      <div class="side-title">Labels &amp; Custom Axes</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:11px;">
+        <div style="display:flex; gap:6px; align-items:center;">
+          <span style="color:var(--muted); min-width:46px;">Preset:</span>
+          <select class="label-input" id="presetSelect" style="flex:1; padding:5px 8px;">
+            <option value="Default">Default</option>
+            <option value="Compact">Compact (Near Grid)</option>
+          </select>
+        </div>
+        <div style="display:flex; gap:6px;">
+          <button class="clear-btn" id="importPresetBtn" style="flex:1; padding:6px;">Import JSON…</button>
+          <input type="file" id="presetFileInput" accept="application/json" style="display:none;">
+          <button class="clear-btn" id="exportPresetBtn" style="flex:1; padding:6px;">Export JSON</button>
+        </div>
+        <button class="clear-btn" id="exportHtmlBtn" style="width:100%; padding:6px;">Export Full HTML (Save Source)</button>
+        <div style="font-size:9px; color:var(--muted); line-height:1.4;">Import/Export bundle both labels and custom axis lines. "Export Full HTML" bakes the current labels/lines into a new copy of this page as its new default — other panel settings (toggles, zoom, colors) are not captured.</div>
+
+        <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-weight:600;">Labels (<span id="labelCount">21</span>)</span>
+            <button class="clear-btn" id="addLabelBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Add</button>
+          </div>
+          <div id="labelEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:240px; overflow-y:auto;"><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="0" data-field="text" value="Truth+" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="0" data-field="color" value="#3bde84" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="0" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="0" data-field="x" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="0" data-field="y" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="0" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="0" data-field="oy" value="-40" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="1" data-field="text" value="(Progress+)" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="1" data-field="color" value="#3bde84" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="1" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="1" data-field="x" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="1" data-field="y" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="1" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="1" data-field="oy" value="-8" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="2" data-field="text" value="Truth−" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="2" data-field="color" value="#e04080" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="2" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="2" data-field="x" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="2" data-field="y" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="2" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="2" data-field="oy" value="8" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="3" data-field="text" value="(Progress−)" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="3" data-field="color" value="#e04080" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="3" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="3" data-field="x" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="3" data-field="y" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="3" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="3" data-field="oy" value="22" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="4" data-field="text" value="Lie+" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="4" data-field="color" value="#f05060" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="4" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="4" data-field="x" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="4" data-field="y" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="4" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="4" data-field="oy" value="-22" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="5" data-field="text" value="(Regression+)" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="5" data-field="color" value="#f05060" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="5" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="5" data-field="x" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="5" data-field="y" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="5" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="5" data-field="oy" value="-8" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="6" data-field="text" value="Lie−" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="6" data-field="color" value="#30c8e0" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="6" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="6" data-field="x" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="6" data-field="y" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="6" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="6" data-field="oy" value="8" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="7" data-field="text" value="(Regression−)" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="7" data-field="color" value="#30c8e0" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="7" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="7" data-field="x" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="7" data-field="y" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="7" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="7" data-field="oy" value="22" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="8" data-field="text" value="← ADDITIVE" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="8" data-field="color" value="#3bde84" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="8" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="8" data-field="x" value="1.33" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="8" data-field="y" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="8" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="8" data-field="oy" value="-32" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="9" data-field="text" value="Active" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="9" data-field="color" value="#c8cde8" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="9" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="9" data-field="x" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="9" data-field="y" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="9" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="9" data-field="oy" value="-14" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="10" data-field="text" value="SUBTRACTIVE →" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="10" data-field="color" value="#f05060" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="10" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="10" data-field="x" value="-1.33" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="10" data-field="y" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="10" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="10" data-field="oy" value="-32" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="11" data-field="text" value="← ADDITIVE" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="11" data-field="color" value="#3bde84" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="11" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="11" data-field="x" value="1.33" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="11" data-field="y" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="11" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="11" data-field="oy" value="32" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="12" data-field="text" value="Suppressive" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="12" data-field="color" value="#c8cde8" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="12" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="12" data-field="x" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="12" data-field="y" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="12" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="12" data-field="oy" value="14" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="13" data-field="text" value="SUBTRACTIVE →" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="13" data-field="color" value="#f05060" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="13" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="13" data-field="x" value="-1.33" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="13" data-field="y" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="13" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="13" data-field="oy" value="32" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="14" data-field="text" value="Everyone" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="14" data-field="color" value="#c8cde8" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="14" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="14" data-field="x" value="2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="14" data-field="y" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="14" data-field="ox" value="-22" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="14" data-field="oy" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="15" data-field="text" value="Latent Altruism" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="15" data-field="color" value="#c8cde8" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="15" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="15" data-field="x" value="2.8284271" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="15" data-field="y" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="15" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="15" data-field="oy" value="-16" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="16" data-field="text" value="No−One Else" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="16" data-field="color" value="#c8cde8" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="16" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="16" data-field="x" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="16" data-field="y" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="16" data-field="ox" value="86" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="16" data-field="oy" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="17" data-field="text" value="Latent Selfishness" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="17" data-field="color" value="#f05060" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="17" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="17" data-field="x" value="-2" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="17" data-field="y" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="17" data-field="ox" value="250" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="17" data-field="oy" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="18" data-field="text" value="FUTURE LIGHT CONE" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="18" data-field="color" value="#3bde84" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="18" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="18" data-field="x" value="1" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="18" data-field="y" value="1" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="18" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="18" data-field="oy" value="-6" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="19" data-field="text" value="PAST LIGHT CONE" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="19" data-field="color" value="#e04080" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="19" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="19" data-field="x" value="-1" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="19" data-field="y" value="-1" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="19" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="19" data-field="oy" value="6" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div><div style="border: 1px solid var(--border); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="20" data-field="text" value="OBSERVER (PRESENT)" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="20" data-field="color" value="#ffffff" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="20" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="20" data-field="x" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>y <input type="number" step="0.01" data-idx="20" data-field="y" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>ox <input type="number" step="1" data-idx="20" data-field="ox" value="0" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+        <label>oy <input type="number" step="1" data-idx="20" data-field="oy" value="-14" style="width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;"></label>
+      </div></div></div>
+        </div>
+
+        <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-weight:600;">Custom Axis Lines (<span id="axisCount">0</span>)</span>
+            <button class="clear-btn" id="addAxisBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Add</button>
+          </div>
+          <div id="axisEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:200px; overflow-y:auto;"><div class="empty-hint" style="padding:6px 0;">No custom lines yet</div></div>
+        </div>
+      </div>
+    </div>
+    <script type="application/json" id="vft-live-config">{"labels":[{"x":2,"y":2,"ox":0,"oy":-40,"text":"Truth+","fontSize":11,"color":"#3bde84","bold":true,"align":"left","baseline":"bottom","group":"showDiagonals"},{"x":2,"y":2,"ox":0,"oy":-8,"text":"(Progress+)","fontSize":8,"color":"rgba(59, 222, 132, 0.8)","bold":false,"align":"left","baseline":"bottom","group":"showDiagonals"},{"x":-2,"y":-2,"ox":0,"oy":8,"text":"Truth−","fontSize":11,"color":"#e04080","bold":true,"align":"right","baseline":"top","group":"showDiagonals"},{"x":-2,"y":-2,"ox":0,"oy":22,"text":"(Progress−)","fontSize":8,"color":"rgba(224, 64, 128, 0.8)","bold":false,"align":"right","baseline":"top","group":"showDiagonals"},{"x":-2,"y":2,"ox":0,"oy":-22,"text":"Lie+","fontSize":11,"color":"#f05060","bold":true,"align":"right","baseline":"bottom","group":"showDiagonals"},{"x":-2,"y":2,"ox":0,"oy":-8,"text":"(Regression+)","fontSize":8,"color":"rgba(240, 80, 96, 0.8)","bold":false,"align":"right","baseline":"bottom","group":"showDiagonals"},{"x":2,"y":-2,"ox":0,"oy":8,"text":"Lie−","fontSize":11,"color":"#30c8e0","bold":true,"align":"left","baseline":"top","group":"showDiagonals"},{"x":2,"y":-2,"ox":0,"oy":22,"text":"(Regression−)","fontSize":8,"color":"rgba(48, 200, 224, 0.8)","bold":false,"align":"left","baseline":"top","group":"showDiagonals"},{"x":1.33,"y":2,"ox":0,"oy":-32,"text":"← ADDITIVE","fontSize":8,"color":"rgba(59, 222, 132, 0.75)","bold":false,"align":"center","baseline":"middle","group":"showAxes"},{"x":0,"y":2,"ox":0,"oy":-14,"text":"Active","fontSize":11,"color":"rgba(200, 205, 232, 0.75)","bold":true,"align":"center","baseline":"middle","group":"showAxes"},{"x":-1.33,"y":2,"ox":0,"oy":-32,"text":"SUBTRACTIVE →","fontSize":8,"color":"rgba(240, 80, 96, 0.75)","bold":false,"align":"center","baseline":"middle","group":"showAxes"},{"x":1.33,"y":-2,"ox":0,"oy":32,"text":"← ADDITIVE","fontSize":8,"color":"rgba(59, 222, 132, 0.75)","bold":false,"align":"center","baseline":"middle","group":"showAxes"},{"x":0,"y":-2,"ox":0,"oy":14,"text":"Suppressive","fontSize":11,"color":"rgba(200, 205, 232, 0.75)","bold":true,"align":"center","baseline":"middle","group":"showAxes"},{"x":-1.33,"y":-2,"ox":0,"oy":32,"text":"SUBTRACTIVE →","fontSize":8,"color":"rgba(240, 80, 96, 0.75)","bold":false,"align":"center","baseline":"middle","group":"showAxes"},{"x":2,"y":0,"ox":-22,"oy":0,"text":"Everyone","fontSize":11,"color":"rgba(200, 205, 232, 0.75)","bold":true,"align":"right","baseline":"middle","group":"showAxes"},{"x":3.1084271,"y":-0.01,"ox":0,"oy":-16,"text":"Latent Altruism","fontSize":11,"color":"rgba(200, 205, 232, 0.75)","bold":true,"align":"center","baseline":"middle","group":"showAxes"},{"x":-2,"y":0,"ox":86,"oy":0,"text":"No−One Else","fontSize":11,"color":"rgba(200, 205, 232, 0.75)","bold":true,"align":"right","baseline":"middle","group":"showAxes"},{"x":-2,"y":0,"ox":250,"oy":0,"text":"Latent Selfishness","fontSize":11,"color":"rgba(240, 80, 96, 0.75)","bold":true,"align":"right","baseline":"middle","group":"showAxes"},{"x":1,"y":1,"ox":0,"oy":-6,"text":"FUTURE LIGHT CONE","fontSize":9,"color":"rgba(59, 222, 132, 0.85)","bold":true,"align":"center","baseline":"middle","group":"showMinkowski"},{"x":-1,"y":-1,"ox":0,"oy":6,"text":"PAST LIGHT CONE","fontSize":9,"color":"rgba(224, 64, 128, 0.85)","bold":true,"align":"center","baseline":"middle","group":"showMinkowski"},{"x":0,"y":0,"ox":0,"oy":-14,"text":"OBSERVER (PRESENT)","fontSize":9,"color":"rgba(255, 255, 255, 0.95)","bold":true,"align":"center","baseline":"middle","group":"showMinkowski"}],"customAxes":[]}</script>
+
+    <!-- Zoom Control -->
+    <div class="side-section">
+      <div class="side-title">Zoom</div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:11px;">
+        <span style="color:var(--muted)">Zoom:</span>
+        <input type="range" id="zoomLevel" min="30" max="800" value="80" style="flex:1; accent-color:#3bde84;">
+        <span id="zoomLabel" style="color:#3bde84; min-width:32px; text-align:right;">125%</span>
+      </div>
+    </div>
+
+    <!-- Shader Blending Controls -->
+    <div class="side-section">
+      <div class="side-title">Shader Blending</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:11px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Divisor:</span>
+          <input type="range" id="shaderDiv" min="1.5" max="8.0" step="0.1" value="4.0" style="flex:1; accent-color:#3bde84;">
+          <span id="shaderDivLabel" style="color:#3bde84; min-width:24px; text-align:right;">4.0</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Exponent:</span>
+          <input type="range" id="shaderExp" min="0.3" max="3.0" step="0.1" value="1.3" style="flex:1; accent-color:#3bde84;">
+          <span id="shaderExpLabel" style="color:#3bde84; min-width:24px; text-align:right;">1.3</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Opacity:</span>
+          <input type="range" id="shaderOpac" min="30" max="250" step="5" value="125" style="flex:1; accent-color:#3bde84;">
+          <span id="shaderOpacLabel" style="color:#3bde84; min-width:24px; text-align:right;">125</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Cancel Str:</span>
+          <input type="range" id="shaderCancel" min="0.0" max="2.0" step="0.1" value="1.0" style="flex:1; accent-color:#3bde84;">
+          <span id="shaderCancelLabel" style="color:#3bde84; min-width:24px; text-align:right;">1.0</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--muted); width:75px;">Observer N:</span>
+          <input type="range" id="shaderLimit" min="1" max="20" step="1" value="20" style="flex:1; accent-color:#3bde84;">
+          <span id="shaderLimitLabel" style="color:#3bde84; min-width:24px; text-align:right;">20</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme Settings -->
+    <div class="side-section">
+      <div class="side-title">Theme Settings</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:11px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+          <span>Page Background:</span>
+          <input type="color" id="colorPageBg" value="#07080c" style="background:none; border:none; width:30px; height:20px; cursor:pointer;">
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+          <span>Grid Card Background:</span>
+          <input type="color" id="colorCardBg" value="#0a0b0f" style="background:none; border:none; width:30px; height:20px; cursor:pointer;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Axes legend -->
+    <div class="side-section">
+      <div class="side-title">Axes &amp; Diagonal Scales</div>
+      <div class="axis-legend">
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--green)">υ</span>
+          <div>
+            <div>x-Morality (Horizontal)</div>
+            <div class="axis-desc">+2υ Left (Everyone) ← → −2υ Right (No-One Else)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--cyan)">ψ</span>
+          <div>
+            <div>y-Will (Vertical)</div>
+            <div class="axis-desc">+2ψ Top (Do / Active) ↑ ↓ −2ψ Bottom (Do Not / Passive)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--green)">\</span>
+          <div>
+            <div>Scale of Good and Evil (Truth &amp; Progress)</div>
+            <div class="axis-desc">Top-Left (+2υ, +2ψ) → Bottom-Right (−2υ, −2ψ)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--red)">/</span>
+          <div>
+            <div>Scale of Lies &amp; Regression (Scale of Nothing)</div>
+            <div class="axis-desc">Bottom-Left (+2υ, −2ψ) → Top-Right (−2υ, +2ψ)</div>
+          </div>
+        </div>
+        <div class="axis-row">
+          <span class="axis-sym" style="color:var(--green)">▲</span>
+          <div>
+            <div>Cone of Possibility / Potential Scope</div>
+            <div class="axis-desc" style="color: #abb2bf; font-style: italic;">
+              Anything within the cone is a generator of possibility where potential over time is good; thus, RHS anchors (Lesser Good &amp; Greater Evil) are shadows of good.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zones -->
+    <div class="side-section">
+      <div class="side-title">The 4 Quadrants</div>
+      <div class="zone-table">
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--green)"></div>
+          <span class="zone-name" style="color:var(--green)">Productive (Air)</span>
+          <span class="zone-coord">Top-Left (+1υ, +1ψ)</span>
+        </div>
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--red)"></div>
+          <span class="zone-name" style="color:var(--red)">Reductive (Fire)</span>
+          <span class="zone-coord">Top-Right (−1υ, +1ψ)</span>
+        </div>
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--cyan)"></div>
+          <span class="zone-name" style="color:var(--cyan)">Constructive (Water)</span>
+          <span class="zone-coord">Bottom-Left (+1υ, −1ψ)</span>
+        </div>
+        <div class="zone-row">
+          <div class="zone-dot" style="background:var(--rose)"></div>
+          <span class="zone-name" style="color:var(--rose)">Regressive (Earth)</span>
+          <span class="zone-coord">Bottom-Right (−1υ, −1ψ)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plotted points list -->
+    <div class="side-section" style="flex:1; display:flex; flex-direction:column;">
+      <div class="side-title" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span>Plotted Points</span>
+        <button class="btn" id="exportBtn" style="font-size:10px; padding:2px 8px; margin:0; line-height:1.2;">Export JSON</button>
+      </div>
+      <div class="points-list" id="pointsList"><div class="point-entry selected">
+      <div style="display:flex; align-items:center; width:100%;">
+        <div class="point-dot" style="background:#3bde84"></div>
+        <div class="point-coords" style="flex:1;">
+          <div>#1 Sample Idea (Greater Good)</div>
+          <div class="point-zone">(+1.00υ, +1.00ψ) · Productive</div>
+        </div>
+        <span class="point-del" data-idx="0" title="Remove">✕</span>
+      </div>
+      
+        <div style="font-size:9px; color:#abb2bf; margin-top:5px; padding-top:4px; border-top:1px solid rgba(255,255,255,0.06); width: 100%;">
+          <div style="color:#3bde84; font-weight:bold; margin-bottom: 4px; line-height:1.25;">The Good Truth — Active Creation for Everyone. Agape &amp; Xenia.</div>
+          <div style="display:grid; grid-template-columns: 1fr auto; gap:2px 8px; font-family:monospace; line-height:1.2;">
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Good ↔ Bad">Good ↔ Bad</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 75, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Active ↔ Suppressive">Active ↔ Suppressive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 75, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Others Axis (u = 1)">Others Axis (u = 1)</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 100, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Other Axis (u = 0.5)">Other Axis (u = 0.5)</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 88, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="My Group Axis (u = -0.5)">My Group Axis (u = -0.5)</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 63, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Me Axis (u = -1)">Me Axis (u = -1)</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 50, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Truth ↔ Anti-Truth">Truth ↔ Anti-Truth</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 100, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Lies ↔ Anti-Lies">Lies ↔ Anti-Lies</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[50, 75, 50]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Productive ↔ Potential">Productive ↔ Potential</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 90, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Constructive ↔ Potential">Constructive ↔ Potential</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[60, 54, 40]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Anti-Potential ↔ Reductive">Anti-Potential ↔ Reductive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[40, 96, 60]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Anti-Potential ↔ Regressive">Anti-Potential ↔ Regressive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[25, 69, 75]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Constructive ↔ Suppressive">Constructive ↔ Suppressive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[40, 96, 60]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Suppressive ↔ Regressive">Suppressive ↔ Regressive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[25, 69, 75]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Productive ↔ Active">Productive ↔ Active</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 90, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Active ↔ Reductive">Active ↔ Reductive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[60, 54, 40]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Productive ↔ Constructive">Productive ↔ Constructive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 75, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Reductive ↔ Regressive">Reductive ↔ Regressive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 25, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Productive ↔ Reductive">Productive ↔ Reductive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 75, 25]</span>
+            
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Constructive ↔ Regressive">Constructive ↔ Regressive</span>
+              <span style="font-weight:bold; color:#dcdfe4;">[75, 25, 25]</span>
+            
+          </div>
+        </div>
+      
+    </div></div>
+    </div>
+
+    <!-- Theory & Overview Explainer -->
+    <div class="side-section">
+      <div class="side-title">Discerning Hegemonic Consciousness</div>
+      <div class="axis-desc" style="font-size: 11px; line-height: 1.5; color: #abb2bf; text-align: justify; padding: 4px 0;">
+        This tool functions as an instrument for discerning consciousness, emotions, and judging information—acting as an unobservable information layer that exposes and removes hypocrisy.
+        <br><br>
+        For initial proof, look at the <em>Greater Good</em> and contrast it with the <em>Greater Evil</em>. One will somatically sense a tension or wrongness when attuned to core survival needs. Rescuers and support workers can feel these hegemonic vectors instantly with a full spectrum of emotion, experiencing how the <em>Lesser Evil</em> somatically feels less wrong than the <em>Greater Evil</em>, and the <em>Lesser Good</em> feels less right than the <em>Greater Good</em>.
+        <br><br>
+        While most take the sense of right and wrong for granted, it functions as a dynamic sensory array. Humans build 7 to 343+ dynamic senses by combining references like location, effect, and human definitions (e.g., the sense of a good house is built from location and structural effect).
+        <br><br>
+        This process of identifying the 'wrong' out of the 'right' creates a thermodynamic engine, lifecycle, or evolution of ideas. Ideas exist as a continuous process of identifying evil in good, then finding the good within that evil—identifying problems to build solutions. Here, the identified problem at the (−2,2) point becomes 100% visible, which makes even the smallest (2,2) solution or idea 100% in relative comparison.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────
+//  ZONE CLASSIFICATION (CANONICAL)
+// ─────────────────────────────────────────────
+const ZONES = [
+  {
+    name: 'Productive Quadrant (Air / Greater Good)',
+    coord: '(+1υ, +1ψ)',
+    color: '#3bde84',
+    verdict: 'The Good Truth — Active Creation for Everyone. Agape & Xenia.',
+    test: (v,p) => v > 0 && p > 0,
+  },
+  {
+    name: 'Reductive Quadrant (Fire / Lesser Evil)',
+    coord: '(−1υ, +1ψ)',
+    color: '#f05060',
+    verdict: 'The Bad Lie — Active Extraction / Greed Zone. Egotism ideas benefiting no-one else.',
+    test: (v,p) => v <= 0 && p > 0,
+  },
+  {
+    name: 'Constructive Quadrant (Water / Lesser Good)',
+    coord: '(+1υ, −1ψ)',
+    color: '#30c8e0',
+    verdict: 'The Good Lie — Passive Acceptance / Happyness Zone. Beneficial intent, passive energy.',
+    test: (v,p) => v > 0 && p <= 0,
+  },
+  {
+    name: 'Regressive Quadrant (Earth / Greater Evil)',
+    coord: '(−1υ, −1ψ)',
+    color: '#e04080',
+    verdict: 'The Bad Truth — Destructive / Sadness & Regression Zone. Stagnant or active collapse.',
+    test: (v,p) => v <= 0 && p <= 0,
+  },
+];
+
+function classifyZone(v, psi) {
+  if (v > 0 && psi > 0) return ZONES[0];  // Top-Left (Productive / Air)
+  if (v <= 0 && psi > 0) return ZONES[1]; // Top-Right (Reductive / Fire)
+  if (v > 0 && psi <= 0) return ZONES[2]; // Bottom-Left (Constructive / Water)
+  return ZONES[3];                         // Bottom-Right (Regressive / Earth)
+}
+
+const _Ra = Math.SQRT2 * 2;
+const GLOBAL_VFT_AXES = [
+  // 1. Central Orthogonal Axes (Continuous)
+  { name: 'Good ↔ Bad',                         x1: -2,   y1: 0,    x2: 2,    y2: 0,    color: '#3bde84' },
+  { name: 'Active ↔ Suppressive',                       x1: 0,    y1: -2,   x2: 0,    y2: 2,    color: '#30c8e0' },
+
+  // 1.5 Moral Horizon Vertical Axes (Separate Y-Axes parallel to Will axis)
+  { name: 'Others Axis (u = 1)',         x1: 1,    y1: -2,   x2: 1,    y2: 2,    color: '#3bde84' },
+  { name: 'Other Axis (u = 0.5)',        x1: 0.5,  y1: -2,   x2: 0.5,  y2: 2,    color: '#3bde84' },
+  { name: 'My Group Axis (u = -0.5)',    x1: -0.5, y1: -2,   x2: -0.5, y2: 2,    color: '#f05060' },
+  { name: 'Me Axis (u = -1)',            x1: -1,   y1: -2,   x2: -1,   y2: 2,    color: '#f05060' },
+
+  // 2. Diagonal Scales (Continuous)
+  { name: 'Truth ↔ Anti-Truth',                     x1: -2,   y1: -2,   x2: 2,    y2: 2,    color: '#3bde84' },
+  { name: 'Lies ↔ Anti-Lies',                      x1: 2,    y1: -2,   x2: -2,   y2: 2,    color: '#f05060' },
+
+  // 3. Subdivision Arms
+  { name: 'Productive ↔ Potential',     x1: -_Ra, y1: 0,    x2: 2,    y2: 2,    color: '#3bde84' },
+  { name: 'Constructive ↔ Potential',   x1: -_Ra, y1: 0,    x2: 2,    y2: -2,   color: '#3bde84' },
+  { name: 'Anti-Potential ↔ Reductive',  x1:  _Ra, y1: 0,    x2: -2,   y2: 2,    color: '#f05060' },
+  { name: 'Anti-Potential ↔ Regressive', x1:  _Ra, y1: 0,    x2: -2,   y2: -2,   color: '#f05060' },
+  { name: 'Constructive ↔ Suppressive',  x1: 0,    y1:  _Ra, x2: 2,    y2: -2,   color: '#e04080' },
+  { name: 'Suppressive ↔ Regressive',   x1: 0,    y1:  _Ra, x2: -2,   y2: -2,   color: '#e04080' },
+  { name: 'Productive ↔ Active',        x1: 0,    y1: -_Ra, x2: 2,    y2: 2,    color: '#30c8e0' },
+  { name: 'Active ↔ Reductive',         x1: 0,    y1: -_Ra, x2: -2,   y2: 2,    color: '#30c8e0' },
+
+  // 4. Edges
+  { name: 'Productive ↔ Constructive',            x1: 2,    y1: -2,   x2: 2,    y2: 2,    color: '#3bde84' },
+  { name: 'Reductive ↔ Regressive',             x1: -2,   y1: -2,   x2: -2,   y2: 2,    color: '#f05060' },
+  { name: 'Productive ↔ Reductive',          x1: -2,   y1: 2,    x2: 2,    y2: 2,    color: '#30c8e0' },
+  { name: 'Constructive ↔ Regressive',       x1: -2,   y1: -2,   x2: 2,    y2: -2,   color: '#e04080' }
+];
+
+// ─────────────────────────────────────────────
+//  CONFIG-DRIVEN LABELS & CUSTOM AXES
+//  (x, y) are in data/coord space, same as GLOBAL_VFT_AXES.
+//  (ox, oy) are a fine pixel nudge (pre-dpr) applied after projection.
+//  `group` (optional) ties visibility to an existing checkbox id.
+// ─────────────────────────────────────────────
+const DEFAULT_LABELS = [
+  { x: 2, y: 2, ox: 0, oy: -40, text: 'Truth+', fontSize: 11, color: '#3bde84', bold: true, align: 'left', baseline: 'bottom', group: 'showDiagonals' },
+  { x: 2, y: 2, ox: 0, oy: -8, text: '(Progress+)', fontSize: 8, color: 'rgba(59, 222, 132, 0.8)', bold: false, align: 'left', baseline: 'bottom', group: 'showDiagonals' },
+  { x: -2, y: -2, ox: 0, oy: 8, text: 'Truth−', fontSize: 11, color: '#e04080', bold: true, align: 'right', baseline: 'top', group: 'showDiagonals' },
+  { x: -2, y: -2, ox: 0, oy: 22, text: '(Progress−)', fontSize: 8, color: 'rgba(224, 64, 128, 0.8)', bold: false, align: 'right', baseline: 'top', group: 'showDiagonals' },
+  { x: -2, y: 2, ox: 0, oy: -22, text: 'Lie+', fontSize: 11, color: '#f05060', bold: true, align: 'right', baseline: 'bottom', group: 'showDiagonals' },
+  { x: -2, y: 2, ox: 0, oy: -8, text: '(Regression+)', fontSize: 8, color: 'rgba(240, 80, 96, 0.8)', bold: false, align: 'right', baseline: 'bottom', group: 'showDiagonals' },
+  { x: 2, y: -2, ox: 0, oy: 8, text: 'Lie−', fontSize: 11, color: '#30c8e0', bold: true, align: 'left', baseline: 'top', group: 'showDiagonals' },
+  { x: 2, y: -2, ox: 0, oy: 22, text: '(Regression−)', fontSize: 8, color: 'rgba(48, 200, 224, 0.8)', bold: false, align: 'left', baseline: 'top', group: 'showDiagonals' },
+
+  { x: 1.33, y: 2, ox: 0, oy: -32, text: '← ADDITIVE', fontSize: 8, color: 'rgba(59, 222, 132, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: 0, y: 2, ox: 0, oy: -14, text: 'Active', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: -1.33, y: 2, ox: 0, oy: -32, text: 'SUBTRACTIVE →', fontSize: 8, color: 'rgba(240, 80, 96, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: 1.33, y: -2, ox: 0, oy: 32, text: '← ADDITIVE', fontSize: 8, color: 'rgba(59, 222, 132, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: 0, y: -2, ox: 0, oy: 14, text: 'Suppressive', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: -1.33, y: -2, ox: 0, oy: 32, text: 'SUBTRACTIVE →', fontSize: 8, color: 'rgba(240, 80, 96, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+
+  { x: 2, y: 0, ox: -22, oy: 0, text: 'Everyone', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'right', baseline: 'middle', group: 'showAxes' },
+  { x: 2.8284271, y: 0, ox: 0, oy: -16, text: 'Latent Altruism', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: -2, y: 0, ox: 86, oy: 0, text: 'No−One Else', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'right', baseline: 'middle', group: 'showAxes' },
+  { x: -2, y: 0, ox: 250, oy: 0, text: 'Latent Selfishness', fontSize: 11, color: 'rgba(240, 80, 96, 0.75)', bold: true, align: 'right', baseline: 'middle', group: 'showAxes' },
+
+  { x: 1, y: 1, ox: 0, oy: -6, text: 'FUTURE LIGHT CONE', fontSize: 9, color: 'rgba(59, 222, 132, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
+  { x: -1, y: -1, ox: 0, oy: 6, text: 'PAST LIGHT CONE', fontSize: 9, color: 'rgba(224, 64, 128, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
+  { x: 0, y: 0, ox: 0, oy: -14, text: 'OBSERVER (PRESENT)', fontSize: 9, color: 'rgba(255, 255, 255, 0.95)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' }
+];
+
+// A "Compact" alternate preset — pulls the four horizon labels in close to the
+// grid edge instead of pushing them out to the circle apex, for smaller screens.
+const COMPACT_LABELS = JSON.parse(JSON.stringify(DEFAULT_LABELS)).map(l => {
+  if (l.text === 'Everyone') return { ...l, x: 2, y: 0, ox: -22, oy: 0 };
+  if (l.text === 'Latent Altruism') return { ...l, x: 2, y: 0, ox: -22, oy: 16 };
+  if (l.text === 'No−One Else') return { ...l, x: -2, y: 0, ox: 22, oy: 0 };
+  if (l.text === 'Latent Selfishness') return { ...l, x: -2, y: 0, ox: 22, oy: 16 };
+  return l;
+});
+
+const PRESETS = {
+  Default: { labels: DEFAULT_LABELS, customAxes: [] },
+  Compact: { labels: COMPACT_LABELS, customAxes: [] }
+};
+
+let GLOBAL_LABELS = JSON.parse(JSON.stringify(DEFAULT_LABELS));
+let CUSTOM_AXES = [];
+
+// Bootstrap from baked-in config, if this file was previously exported with edits
+(function bootstrapConfig() {
+  const cfgEl = document.getElementById('vft-live-config');
+  if (cfgEl && cfgEl.textContent.trim()) {
+    try {
+      const cfg = JSON.parse(cfgEl.textContent);
+      if (Array.isArray(cfg.labels)) GLOBAL_LABELS = cfg.labels;
+      if (Array.isArray(cfg.customAxes)) CUSTOM_AXES = cfg.customAxes;
+    } catch (e) { console.warn('Invalid embedded vft-live-config JSON', e); }
+  }
+})();
+
+function drawGlobalLabels(ctx, dpr) {
+  GLOBAL_LABELS.forEach(l => {
+    if (l.group && !document.getElementById(l.group)?.checked) return;
+    const [px, py] = toPixel(l.x, l.y);
+    drawTextWithBackground(ctx, l.text, px + (l.ox || 0) * dpr, py + (l.oy || 0) * dpr, Math.round(l.fontSize * dpr), l.color, !!l.bold, l.align, l.baseline);
+  });
+}
+
+function drawCustomAxes(ctx, dpr) {
+  if (!CUSTOM_AXES.length) return;
+  ctx.save();
+  ctx.lineWidth = 1.5 * dpr;
+  CUSTOM_AXES.forEach(a => {
+    const [x1, y1] = toPixel(a.x1, a.y1);
+    const [x2, y2] = toPixel(a.x2, a.y2);
+    ctx.strokeStyle = a.color || '#ffffff';
+    ctx.setLineDash(a.dash ? [4 * dpr, 4 * dpr] : []);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    if (a.label) {
+      drawTextWithBackground(ctx, a.label, (x1 + x2) / 2, (y1 + y2) / 2 - 8 * dpr, Math.round(8.5 * dpr), a.color || '#ffffff', true, 'center', 'middle');
+    }
+  });
+  ctx.restore();
+}
+
+function calculatePointParams(v, psi) {
+  const zone = classifyZone(v, psi);
+  const projections = {};
+  GLOBAL_VFT_AXES.forEach(arm => {
+    const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
+    const len = Math.hypot(dx, dy);
+    const ux = dx / len, uy = dy / len;
+    const alongRaw = (v - arm.x1) * ux + (psi - arm.y1) * uy;
+    const alongClamped = Math.max(0, Math.min(len, alongRaw));
+    const projV = arm.x1 + ux * alongClamped;
+    const projPsi = arm.y1 + uy * alongClamped;
+    const distClamped = Math.hypot(v - projV, psi - projPsi);
+    const dir = Math.max(0, Math.min(100, (alongRaw / len) * 100));
+    const mag = Math.max(0, 100 * (1 - distClamped / len));
+
+    projections[arm.name] = `[${Math.round(dir)}, ${Math.round(mag)}, ${Math.round(100 - dir)}]`;
+  });
+
+  return {
+    zone: zone.name,
+    verdict: zone.verdict,
+    projections
+  };
+}
+
+// ─────────────────────────────────────────────
+//  STATE
+// ─────────────────────────────────────────────
+let points = [
+  { v: 1.0, psi: 1.0, label: "Sample Idea (Greater Good)", context: "Natural State" }
+];
+let selectedIdx = 0;
+let hoverCoord = null;
+let cachedShaderCanvas = null;
+let cachedShaderKey = "";
+let panX = 0;
+let panY = 0;
+let isPanning = false;
+let startPanX = 0;
+let startPanY = 0;
+
+// ─────────────────────────────────────────────
+//  CANVAS SETUP (FORCE PERFECT SQUARE)
+// ─────────────────────────────────────────────
+const canvas = document.getElementById('map');
+const ctx = canvas.getContext('2d');
+const shaderLayer = document.getElementById('shaderLayer');
+const shaderCtx = shaderLayer.getContext('2d');
+const wrap = document.getElementById('canvasWrap');
+
+function resize() {
+  const rect = wrap.getBoundingClientRect();
+  const w = rect.width * devicePixelRatio;
+  const h = rect.height * devicePixelRatio;
+  canvas.width  = w; canvas.height  = h;
+  shaderLayer.width = w; shaderLayer.height = h;
+  canvas.style.width  = rect.width + 'px';  canvas.style.height  = rect.height + 'px';
+  shaderLayer.style.width = rect.width + 'px'; shaderLayer.style.height = rect.height + 'px';
+  cachedShaderCanvas = null; // size changed, bust cache
+  draw();
+}
+
+function toCoord(px, py) {
+  const W = canvas.width, H = canvas.height;
+  const dpr = devicePixelRatio;
+  const zoomFactor = parseFloat(document.getElementById('zoomLevel')?.value || '80') / 100;
+  const gridSize = Math.min(W, H) - 150 * dpr;
+  const marginX = (W - gridSize) / 2;
+  const marginY = (H - gridSize) / 2;
+
+  // Unpan and unzoom the coordinates around the canvas center
+  const unzoomedX = ((px - panX) - W / 2) / zoomFactor + W / 2;
+  const unzoomedY = ((py - panY) - H / 2) / zoomFactor + H / 2;
+
+  const v   = 2 - ((unzoomedX - marginX) / gridSize) * 4;
+  const psi = 2 - ((unzoomedY - marginY) / gridSize) * 4;
+
+  return [
+    Math.max(-2, Math.min(2, v)),
+    Math.max(-2, Math.min(2, psi))
+  ];
+}
+
+// Map υ/ψ to canvas pixel
+function toPixel(v, psi) {
+  const W = canvas.width, H = canvas.height;
+  const dpr = devicePixelRatio;
+  const gridSize = Math.min(W, H) - 150 * dpr;
+  const marginX = (W - gridSize) / 2;
+  const marginY = (H - gridSize) / 2;
+
+  const px = marginX + ((2 - v) / 4) * gridSize;
+  const py = marginY + ((2 - psi) / 4) * gridSize;
+
+  return [px, py];
+}
+
+// Helper to draw text with a clean background box to prevent overlap
+function drawTextWithBackground(ctx, text, x, y, fontSize, color, isBold, align, baseline) {
+  ctx.save();
+  ctx.font = `${isBold ? '600' : '400'} ${fontSize}px 'Inter', sans-serif`;
+  ctx.textAlign = align || 'center';
+  ctx.textBaseline = baseline || 'middle';
+  
+  const metrics = ctx.measureText(text);
+  const padX = 4 * devicePixelRatio;
+  const padY = 2.5 * devicePixelRatio;
+  const w = metrics.width;
+  const h = fontSize;
+  
+  let bx = x;
+  if (ctx.textAlign === 'center') bx = x - w / 2;
+  else if (ctx.textAlign === 'right') bx = x - w;
+  
+  let by = y;
+  if (ctx.textBaseline === 'middle') by = y - h / 2;
+  else if (ctx.textBaseline === 'bottom') by = y - h;
+  else if (ctx.textBaseline === 'top') by = y;
+
+  ctx.fillStyle = 'rgba(10, 11, 15, 0.85)';
+  ctx.fillRect(bx - padX, by - padY, w + padX * 2, h + padY * 2);
+  
+  ctx.fillStyle = color;
+  ctx.fillText(text, x, y);
+  ctx.restore();
+}
+
+function drawTextAlongLine(ctx, text, x1, y1, x2, y2, offsetSign, color, dpr) {
+  ctx.save();
+  let angle = Math.atan2(y2 - y1, x2 - x1);
+  if (angle < -Math.PI / 2 || angle > Math.PI / 2) {
+    angle += Math.PI;
+    const tempX = x1; x1 = x2; x2 = tempX;
+    const tempY = y1; y1 = y2; y2 = tempY;
+  }
+  const midX = (x1 + x2) / 2;
+  const midY = (y1 + y2) / 2;
+  ctx.translate(midX, midY);
+  ctx.rotate(angle);
+  ctx.fillStyle = color;
+  ctx.font = `600 ${Math.round(8 * dpr)}px 'JetBrains Mono', monospace`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.shadowColor = '#0a0b0f';
+  ctx.shadowBlur = 4 * dpr;
+  ctx.fillText(text, 0, offsetSign * 9 * dpr);
+  ctx.restore();
+}
+
+// ─────────────────────────────────────────────
+//  DRAW
+// ─────────────────────────────────────────────
+function draw() {
+  const W = canvas.width, H = canvas.height;
+  const dpr = devicePixelRatio;
+  const zoomFactor = parseFloat(document.getElementById('zoomLevel')?.value || '80') / 100;
+  const gridSize = Math.min(W, H) - 150 * dpr;
+  const marginX = (W - gridSize) / 2;
+  const marginY = (H - gridSize) / 2;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Apply global pan and zoom centered on canvas midpoint
+  ctx.save();
+  ctx.translate(panX, panY);
+  ctx.translate(W / 2, H / 2);
+  ctx.scale(zoomFactor, zoomFactor);
+  ctx.translate(-W / 2, -H / 2);
+
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+
+  // ── DRAW SURROUNDING SYSTEMIC HORIZON CIRCLE ──
+  ctx.save();
+  const [cx, cy] = toPixel(0, 0);
+  const rx = gridSize * 0.707; // Circumscribed radius surrounding the entire square
+  
+  // 1. Draw dashed circle boundary
+  ctx.beginPath();
+  ctx.arc(cx, cy, rx, 0, Math.PI * 2);
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+  ctx.lineWidth = 1 * dpr;
+  ctx.setLineDash([4 * dpr, 3 * dpr]);
+  ctx.stroke();
+
+  // 2. Draw degree markings and dashed rays
+  const degMarks = [0, 45, 90, 135, 180, 225, 270, 315];
+  ctx.font = `600 ${Math.round(8 * dpr)}px 'JetBrains Mono', monospace`;
+  ctx.fillStyle = 'rgba(153, 153, 153, 0.6)';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+
+  degMarks.forEach(deg => {
+    const rad = (deg * Math.PI) / 180;
+    const lx = cx + rx * Math.cos(rad);
+    const ly = cy + rx * Math.sin(rad);
+
+    // Draw dashed ray from center to circle boundary (except vertical/horizontal main axes)
+    if (deg % 90 !== 0) {
+      ctx.save();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+      ctx.lineWidth = 0.5 * dpr;
+      ctx.setLineDash([3 * dpr, 3 * dpr]);
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(lx, ly);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    // Draw tiny circle on boundary
+    ctx.beginPath();
+    ctx.arc(lx, ly, 2 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(153, 153, 153, 0.5)';
+    ctx.fill();
+
+    // Draw degree label
+    const textDist = rx + 14 * dpr;
+    const tx = cx + textDist * Math.cos(rad);
+    const ty = cy + textDist * Math.sin(rad);
+    ctx.fillStyle = 'rgba(153, 153, 153, 0.7)';
+    ctx.fillText(`${deg}°`, tx, ty);
+  });
+
+  // 3. Draw 1x and 2x systemic horizon markers
+  ctx.font = `bold ${Math.round(7.5 * dpr)}px 'JetBrains Mono', monospace`;
+  ctx.fillStyle = 'rgba(59, 222, 132, 0.5)';
+  ctx.textAlign = 'right';
+  ctx.fillText('1x', cx + gridSize / 2 - 4 * dpr, cy - 6 * dpr);
+  ctx.fillText('2x', cx + rx - 4 * dpr, cy - 6 * dpr);
+
+  ctx.restore();
+
+  // ── DRAW THE CENTERED GRID SQUARE CARD ──
+  ctx.save();
+  ctx.fillStyle = document.getElementById('colorCardBg')?.value || '#0a0b0f'; // Dynamic grid box card background
+  ctx.beginPath();
+  ctx.roundRect(marginX, marginY, gridSize, gridSize, 12 * dpr);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+  ctx.lineWidth = 1 * dpr;
+  ctx.stroke();
+
+  // ── DRAW VFT SHADER (before clip — covers full circle area) ──
+  const R = Math.SQRT2 * 2; // 2√2 — circle radius in coord units, apexes reach here
+  const rxPx = gridSize * Math.SQRT2 / 2; // circle radius in pixels
+  const shadePot = document.getElementById('shadePotential')?.checked;
+  const shadeAnti = document.getElementById('shadeAntiPotential')?.checked;
+
+  const sDiv = parseFloat(document.getElementById('shaderDiv')?.value || '4.0');
+  const sExp = parseFloat(document.getElementById('shaderExp')?.value || '1.3');
+  const sOpac = parseFloat(document.getElementById('shaderOpac')?.value || '125');
+  const sCancel = parseFloat(document.getElementById('shaderCancel')?.value || '1.0');
+  const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '20');
+
+  // Cache is independent of gridSize/zoom factor now!
+  const currentCacheKey = `${shadePot?1:0}_${shadeAnti?1:0}_${sDiv}_${sExp}_${sOpac}_${sCancel}_${sLimit}`;
+
+  if (!cachedShaderCanvas || cachedShaderKey !== currentCacheKey) {
+    const shW = 300; // Fixed resolution for buttery smooth zoom/scroll performance
+    const shH = 300;
+    cachedShaderCanvas = document.createElement('canvas');
+    cachedShaderCanvas.width = shW;
+    cachedShaderCanvas.height = shH;
+    const octx = cachedShaderCanvas.getContext('2d');
+    const imgData = octx.createImageData(shW, shH);
+    const data = imgData.data;
+
+    function getProx(u, psi, x1, y1, x2, y2) {
+      const dx = x2 - x1, dy = y2 - y1;
+      const len = Math.hypot(dx, dy);
+      if (len === 0) return { prox: 0, projU: x1, dir: 0 };
+      const ux = dx / len, uy = dy / len;
+      const along = (u - x1) * ux + (psi - y1) * uy;
+      const alongC = Math.max(0, Math.min(len, along));
+      const projU = x1 + ux * alongC;
+      const projPsi = y1 + uy * alongC;
+      const dist = Math.hypot(u - projU, psi - projPsi);
+      const dir = (along / len) * 100;
+      return { prox: Math.max(0, 1 - dist / len), projU, dir, dist };
+    }
+
+    for (let y = 0; y < shH; y++) {
+      for (let x = 0; x < shW; x++) {
+        // Map shader pixel (x,y) to (u, psi) coordinate space (covering -R to R)
+        const u   = R - (x / shW) * (2 * R);
+        const psi = R - (y / shH) * (2 * R);
+
+        // Skip pixels outside the circle (radius R in coord space)
+        if (u * u + psi * psi > 8.08) { data[(y * shW + x) * 4 + 3] = 0; continue; }
+
+        let gSum = 0, rSum = 0;
+
+        // Collect the 8 subdivision arms (excluding all edges, diagonals, and central axes)
+        // t denotes type: 0 = pure Green, 1 = pure Red, 2 = Transition (Red -> Green), 3 = Transition (Green -> Red)
+        const axesData = [
+          { p: getProx(u, psi, -R, 0, 2, 2),   w: 1.0, t: 2 }, // PP
+          { p: getProx(u, psi, -R, 0, 2, -2),  w: 0.5, t: 2 }, // CP
+          { p: getProx(u, psi, R, 0, -2, 2),   w: 0.5, t: 3 }, // RA
+          { p: getProx(u, psi, R, 0, -2, -2),  w: 1.0, t: 3 }, // Reg
+          { p: getProx(u, psi, 0, R, 2, -2),   w: 0.5, t: 0 }, // CS (Green-aligned)
+          { p: getProx(u, psi, 0, R, -2, -2),  w: 1.0, t: 3 }, // RS
+          { p: getProx(u, psi, 0, -R, 2, 2),   w: 1.0, t: 2 }, // PA
+          { p: getProx(u, psi, 0, -R, -2, 2),  w: 0.5, t: 1 }  // ReA (Red-aligned)
+        ];
+
+        // Sort axes by physical distance ascending (closest first)
+        axesData.sort((a, b) => a.p.dist - b.p.dist);
+
+        // Sum up contributions from the top N perceived axes
+        const activeCount = Math.min(8, sLimit);
+        for (let i = 0; i < activeCount; i++) {
+          const axis = axesData[i];
+          const prox = axis.p.prox;
+          const w = axis.w;
+          if (axis.t === 0) {
+            gSum += prox * w;
+          } else if (axis.t === 1) {
+            rSum += prox * w;
+          } else if (axis.t === 2) {
+            const t = Math.max(0, Math.min(1, axis.p.dir / 100));
+            gSum += prox * t * w;
+            rSum += prox * (1 - t) * w;
+          } else if (axis.t === 3) {
+            const t = Math.max(0, Math.min(1, axis.p.dir / 100));
+            gSum += prox * (1 - t) * w;
+            rSum += prox * t * w;
+          }
+        }
+
+        let g = Math.min(1.0, gSum / sDiv);
+        let r = Math.min(1.0, rSum / sDiv);
+        g = Math.pow(g, sExp);
+        r = Math.pow(r, sExp);
+
+        // Cancellation: g and r pull against each other with variable cancel strength
+        // A cancellation of 1.0 is standard difference. If 0.0, both draw over each other without cancelling.
+        const diff = g - r * sCancel;
+        const idx = (y * shW + x) * 4;
+        if (diff > 0) {
+          data[idx] = 59; data[idx+1] = 222; data[idx+2] = 132;
+          data[idx+3] = Math.min(255, diff * sOpac);
+        } else if (diff < 0) {
+          data[idx] = 240; data[idx+1] = 80; data[idx+2] = 96;
+          data[idx+3] = Math.min(255, Math.abs(diff) * sOpac);
+        } else {
+          data[idx+3] = 0;
+        }
+      }
+    }
+    octx.putImageData(imgData, 0, 0);
+    cachedShaderKey = currentCacheKey;
+  }
+
+  // Draw shader to dedicated background layer (with pan and zoom transform applied)
+  shaderCtx.clearRect(0, 0, canvas.width, canvas.height);
+  shaderCtx.save();
+  shaderCtx.translate(panX, panY);
+  shaderCtx.translate(canvas.width / 2, canvas.height / 2);
+  shaderCtx.scale(zoomFactor, zoomFactor);
+  shaderCtx.translate(-canvas.width / 2, -canvas.height / 2);
+  // Stretched drawing of the cached shader canvas
+  shaderCtx.drawImage(cachedShaderCanvas, cx - rxPx - 2, cy - rxPx - 2, rxPx * 2 + 4, rxPx * 2 + 4);
+  shaderCtx.restore();
+
+  // Inner graph elements draw without any clip — nothing restricted to card boundary
+
+  // 2. Calibration targets
+
+  if (modeRel) {
+    ctx.save();
+    ctx.setLineDash([2 * dpr, 6 * dpr]);
+    ctx.lineWidth = 1 * dpr;
+    [0.5, 1.0, 1.5, 2.0, 2.5, 2.83].forEach(r => {
+      if (r === 0.5) {
+        ctx.strokeStyle = 'rgba(240, 160, 48, 0.25)';
+      } else {
+        ctx.strokeStyle = 'rgba(59, 222, 132, 0.15)';
+      }
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * (gridSize / 4), 0, Math.PI * 2);
+      ctx.stroke();
+      drawTextWithBackground(ctx, `d=${r.toFixed(2)}`, cx + r * (gridSize / 4) * Math.cos(Math.PI/4), cy + r * (gridSize / 4) * Math.sin(Math.PI/4), Math.round(7.5 * dpr), 'rgba(255,255,255,0.4)', false, 'center', 'middle');
+    });
+    ctx.restore();
+  } else {
+    ctx.save();
+    ctx.setLineDash([2 * dpr, 6 * dpr]);
+    ctx.lineWidth = 1 * dpr;
+    
+    // Outer 2.0
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.beginPath(); ctx.arc(cx, cy, 2.0 * gridSize / 4, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.rect(cx - 2.0 * (gridSize / 4), cy - 2.0 * (gridSize / 4), 4.0 * (gridSize / 4), 4.0 * (gridSize / 4)); ctx.stroke();
+
+    // Middle 1.0
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+    ctx.beginPath(); ctx.arc(cx, cy, 1.0 * gridSize / 4, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.rect(cx - 1.0 * (gridSize / 4), cy - 1.0 * (gridSize / 4), 2.0 * (gridSize / 4), 2.0 * (gridSize / 4)); ctx.stroke();
+
+    // Inner 0.5
+    ctx.strokeStyle = 'rgba(240, 160, 48, 0.16)';
+    ctx.beginPath(); ctx.arc(cx, cy, 0.5 * gridSize / 4, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.rect(cx - 0.5 * (gridSize / 4), cy - 0.5 * (gridSize / 4), 1.0 * (gridSize / 4), 1.0 * (gridSize / 4)); ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // 3. Diagonal axes lines
+  if (document.getElementById('showDiagonals').checked) {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(240, 80, 96, 0.35)';
+    ctx.lineWidth = 1.5 * dpr;
+    const [pL1x, pL1y] = toPixel(2, -2);
+    const [pL2x, pL2y] = toPixel(-2, 2);
+    ctx.beginPath(); ctx.moveTo(pL1x, pL1y); ctx.lineTo(pL2x, pL2y); ctx.stroke();
+    ctx.restore();
+
+    ctx.save();
+    ctx.strokeStyle = 'rgba(59, 222, 132, 0.35)';
+    ctx.lineWidth = 1.5 * dpr;
+    const [pG1x, pG1y] = toPixel(2, 2);
+    const [pG2x, pG2y] = toPixel(-2, -2);
+    ctx.beginPath(); ctx.moveTo(pG1x, pG1y); ctx.lineTo(pG2x, pG2y); ctx.stroke();
+    ctx.restore();
+
+    // Scale names along the lines
+    const [pT1_x, pT1_y] = toPixel(1.3, 1.3);
+    const [pT2_x, pT2_y] = toPixel(1.9, 1.9);
+    drawTextAlongLine(ctx, 'Scale of Truth and Progress ➔', pT1_x, pT1_y, pT2_x, pT2_y, -1, 'rgba(59, 222, 132, 0.85)', dpr);
+    const [pL3_x, pL3_y] = toPixel(1.3, -1.3);
+    const [pL4_x, pL4_y] = toPixel(1.9, -1.9);
+    drawTextAlongLine(ctx, 'Scale of Lies and Regression ➔', pL3_x, pL3_y, pL4_x, pL4_y, -1, 'rgba(240, 80, 96, 0.85)', dpr);
+  }
+
+  // 4. Orthogonal Grid dashed lines and axes lines
+  if (document.getElementById('showAxes').checked) {
+    ctx.save();
+    ctx.setLineDash([2*dpr, 4*dpr]);
+    ctx.lineWidth = 0.5 * dpr;
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+    [-1, 1].forEach(tick => {
+      const [gx] = toPixel(tick, 0);
+      ctx.beginPath(); ctx.moveTo(gx, marginY); ctx.lineTo(gx, marginY + gridSize); ctx.stroke();
+      const [,gy] = toPixel(0, tick);
+      ctx.beginPath(); ctx.moveTo(marginX, gy); ctx.lineTo(marginX + gridSize, gy); ctx.stroke();
+    });
+    ctx.restore();
+
+    // Draw 4 Moral Horizon Vertical Lines (Others, Other, My Group, Me)
+    ctx.save();
+    ctx.setLineDash([3 * dpr, 3 * dpr]);
+    ctx.lineWidth = 0.8 * dpr;
+    const horizons = [
+      { u: 1.0,  label: 'Others',   color: 'rgba(59, 222, 132, 0.25)' },
+      { u: 0.5,  label: 'Other',    color: 'rgba(59, 222, 132, 0.25)' },
+      { u: -0.5, label: 'My Group', color: 'rgba(240, 80, 96, 0.25)' },
+      { u: -1.0, label: 'Me',       color: 'rgba(240, 80, 96, 0.25)' }
+    ];
+    horizons.forEach(h => {
+      const [gx] = toPixel(h.u, 0);
+      ctx.strokeStyle = h.color;
+      ctx.beginPath();
+      ctx.moveTo(gx, marginY);
+      ctx.lineTo(gx, marginY + gridSize);
+      ctx.stroke();
+
+      // Subtle boundary labels drawn just inside the top grid edge
+      ctx.font = `bold ${Math.round(7 * dpr)}px 'JetBrains Mono', monospace`;
+      ctx.fillStyle = h.color.replace('0.25', '0.6');
+      ctx.textAlign = 'center';
+      ctx.fillText(h.label, gx, marginY + 12 * dpr);
+    });
+    ctx.restore();
+    
+    ctx.save();
+    ctx.setLineDash([]);
+    const [ax1, ay] = toPixel( 2, 0);
+    const [ax2]     = toPixel(-2, 0);
+    ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.beginPath(); ctx.moveTo(ax1, ay); ctx.lineTo(ax2, ay); ctx.stroke();
+    const [vx, vy1] = toPixel(0,  2);
+    const [,   vy2] = toPixel(0, -2);
+    ctx.beginPath(); ctx.moveTo(vx, vy1); ctx.lineTo(vx, vy2); ctx.stroke();
+    ctx.restore();
+  }
+
+  // 5. 3x3 Grid Matrix dashed lines (dividing columns at v = ±0.67 and rows at psi = ±0.67)
+  if (document.getElementById('show3x3Grid') && document.getElementById('show3x3Grid').checked) {
+    ctx.save();
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    ctx.lineWidth = 1 * dpr;
+
+    // Vertical 3x3 grid lines at v = 0.67 and v = -0.67
+    [0.67, -0.67].forEach(vTick => {
+      const [gx] = toPixel(vTick, 0);
+      ctx.beginPath();
+      ctx.moveTo(gx, marginY);
+      ctx.lineTo(gx, marginY + gridSize);
+      ctx.stroke();
+    });
+
+    // Horizontal 3x3 grid lines at psi = 0.67 and psi = -0.67
+    [0.67, -0.67].forEach(psiTick => {
+      const [, gy] = toPixel(0, psiTick);
+      ctx.beginPath();
+      ctx.moveTo(marginX, gy);
+      ctx.lineTo(marginX + gridSize, gy);
+      ctx.stroke();
+    });
+
+    ctx.restore();
+  }
+
+  // 6. Draw State Triangles (Potential, Anti-Potential, Active, Suppressive)
+  if (document.getElementById('showStateTriangles') && document.getElementById('showStateTriangles').checked) {
+    ctx.save();
+    ctx.lineWidth = 1 * dpr;
+
+    // Get pixel locations for corners and centers of edges
+    const [pTLx, pTLy] = toPixel(2, 2);
+    const [pTRx, pTRy] = toPixel(-2, 2);
+    const [pBLx, pBLy] = toPixel(2, -2);
+    const [pBRx, pBRy] = toPixel(-2, -2);
+
+    const [pMidLx, pMidLy] = toPixel(2, 0);
+    const [pMidRx, pMidRy] = toPixel(-2, 0);
+    const [pMidTx, pMidTy] = toPixel(0, 2);
+    const [pMidBx, pMidBy] = toPixel(0, -2);
+    // Extended apexes on the systemic circle (R = 2√2 in coord space)
+    const _R = Math.SQRT2 * 2;
+    const [pApexLx, pApexLy] = toPixel(_R, 0);
+    const [pApexRx, pApexRy] = toPixel(-_R, 0);
+    const [pApexTx, pApexTy] = toPixel(0, _R);
+    const [pApexBx, pApexBy] = toPixel(0, -_R);
+
+    // 1. Potential Triangle (apex pushed to circle)
+    ctx.strokeStyle = 'rgba(59, 222, 132, 0.22)';
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.moveTo(pTLx, pTLy);
+    ctx.lineTo(pBLx, pBLy);
+    ctx.lineTo(pApexRx, pApexRy);
+    ctx.closePath();
+    if (document.getElementById('shadePotential') && document.getElementById('shadePotential').checked) {
+      ctx.fillStyle = 'rgba(59, 222, 132, 0.05)';
+      ctx.fill();
+    }
+    ctx.stroke();
+
+    // 2. Anti-Potential Triangle (apex pushed to circle)
+    ctx.strokeStyle = 'rgba(240, 80, 96, 0.22)';
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+    ctx.beginPath();
+    ctx.moveTo(pTRx, pTRy);
+    ctx.lineTo(pBRx, pBRy);
+    ctx.lineTo(pApexLx, pApexLy);
+    ctx.closePath();
+    if (document.getElementById('shadeAntiPotential') && document.getElementById('shadeAntiPotential').checked) {
+      ctx.fillStyle = 'rgba(240, 80, 96, 0.05)';
+      ctx.fill();
+    }
+    ctx.stroke();
+
+    // 3. Active Triangle (apex pushed to circle)
+    ctx.strokeStyle = 'rgba(48, 200, 224, 0.22)';
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.moveTo(pBLx, pBLy);
+    ctx.lineTo(pBRx, pBRy);
+    ctx.lineTo(pApexTx, pApexTy);
+    ctx.closePath();
+    if (document.getElementById('shadeActive').checked) {
+      ctx.fillStyle = 'rgba(48, 200, 224, 0.05)';
+      ctx.fill();
+    }
+    ctx.stroke();
+
+    // 4. Suppressive Triangle (apex pushed to circle)
+    ctx.strokeStyle = 'rgba(240, 160, 48, 0.22)';
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+    ctx.beginPath();
+    ctx.moveTo(pTLx, pTLy);
+    ctx.lineTo(pTRx, pTRy);
+    ctx.lineTo(pApexBx, pApexBy);
+    ctx.closePath();
+    if (document.getElementById('shadeSuppressive').checked) {
+      ctx.fillStyle = 'rgba(240, 160, 48, 0.05)';
+      ctx.fill();
+    }
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // 6b. Draw 8 Subdivision Arms
+  if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
+    ctx.save();
+    ctx.lineWidth = 1 * dpr;
+
+    // Define 8 arms: apex at circle (R=2√2), base at corners
+    const _Ra = Math.SQRT2 * 2;
+    const arms = [
+      { x1: -_Ra, y1: 0, x2: 2, y2: 2,   color: 'rgba(59, 222, 132, 0.35)',  dash: false, group: 'Potential',     label: 'Productive',   fullLabel: 'Productive ← Potential' },
+      { x1: -_Ra, y1: 0, x2: 2, y2: -2,  color: 'rgba(59, 222, 132, 0.35)',  dash: false, group: 'Potential',     label: 'Constructive', fullLabel: 'Constructive ← Potential' },
+      { x1:  _Ra, y1: 0, x2: -2, y2: 2,  color: 'rgba(240, 80, 96, 0.35)',   dash: true,  group: 'Anti-Potential', label: 'Reductive',    fullLabel: 'Anti-Potential ➔ Reductive' },
+      { x1:  _Ra, y1: 0, x2: -2, y2: -2, color: 'rgba(240, 80, 96, 0.35)',   dash: true,  group: 'Anti-Potential', label: 'Regressive',   fullLabel: 'Anti-Potential ➔ Regressive' },
+      { x1: 0, y1:  _Ra, x2: 2, y2: -2,  color: 'rgba(240, 160, 48, 0.35)',  dash: false, group: 'Suppressive',   label: 'Constructive', fullLabel: 'Constructive ← Suppressive' },
+      { x1: 0, y1:  _Ra, x2: -2, y2: -2, color: 'rgba(240, 160, 48, 0.35)',  dash: false, group: 'Suppressive',   label: 'Regressive',   fullLabel: 'Suppressive ➔ Regressive' },
+      { x1: 0, y1: -_Ra, x2: 2, y2: 2,   color: 'rgba(48, 200, 224, 0.35)',  dash: true,  group: 'Active',        label: 'Productive',   fullLabel: 'Productive ← Active' },
+      { x1: 0, y1: -_Ra, x2: -2, y2: 2,  color: 'rgba(48, 200, 224, 0.35)',  dash: true,  group: 'Active',        label: 'Reductive',    fullLabel: 'Active ➔ Reductive' }
+    ];
+
+    // First pass: Draw main arm lines and tick marks
+    arms.forEach(arm => {
+      const [sx, sy] = toPixel(arm.x1, arm.y1);
+      const [ex, ey] = toPixel(arm.x2, arm.y2);
+      const dx = ex - sx, dy = ey - sy;
+      const len = Math.hypot(dx, dy);
+      const nx = -dy / len, ny = dx / len;
+
+      // Draw the main line
+      ctx.strokeStyle = arm.color;
+      if (arm.dash) {
+        ctx.setLineDash([3 * dpr, 3 * dpr]);
+      } else {
+        ctx.setLineDash([]);
+      }
+      ctx.beginPath();
+      ctx.moveTo(sx, sy);
+      ctx.lineTo(ex, ey);
+      ctx.stroke();
+
+      // Draw graduation ticks (every 20%)
+      ctx.setLineDash([]);
+      for (let pct = 0; pct <= 100; pct += 20) {
+        const t = pct / 100;
+        const tx = sx + dx * t;
+        const ty = sy + dy * t;
+        ctx.beginPath();
+        ctx.moveTo(tx - nx * 3 * dpr, ty - ny * 3 * dpr);
+        ctx.lineTo(tx + nx * 3 * dpr, ty + ny * 3 * dpr);
+        ctx.stroke();
+      }
+    });
+
+    // Second pass: Draw rotated arm labels (using pair index spacing to prevent overlapping)
+    arms.forEach(arm => {
+      const [sx, sy] = toPixel(arm.x1, arm.y1);
+      const [ex, ey] = toPixel(arm.x2, arm.y2);
+      const dx = ex - sx, dy = ey - sy;
+
+      const sameCornerArms = arms.filter(a => a.x2 === arm.x2 && a.y2 === arm.y2);
+      const pairIndex = sameCornerArms.findIndex(a => a.group === arm.group);
+      const t = (pairIndex === 0) ? 0.11 : 0.82;
+
+      const lx = sx + dx * t;
+      const ly = sy + dy * t;
+
+      let angle = Math.atan2(dy, dx);
+      if (angle > Math.PI / 2 || angle < -Math.PI / 2) {
+        angle += Math.PI;
+      }
+
+      ctx.save();
+      ctx.translate(lx, ly);
+      ctx.rotate(angle);
+
+      ctx.font = `bold ${Math.round(11.5 * dpr)}px 'JetBrains Mono', monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      const labelText = arm.fullLabel;
+      const colorTransparent = arm.color.replace('0.35', '0.55');
+
+      // Background outline halo
+      ctx.strokeStyle = '#0a0b0f';
+      ctx.lineWidth = 3.5 * dpr;
+      ctx.lineJoin = 'round';
+      ctx.strokeText(labelText, 0, -8 * dpr);
+
+      // Foreground text
+      ctx.fillStyle = colorTransparent;
+      ctx.fillText(labelText, 0, -8 * dpr);
+
+      ctx.restore();
+    });
+    ctx.restore();
+  }
+
+  // 7. Draw Minkowski Cones (Future Cone Top-Left, Past Cone Bottom-Right)
+  if (document.getElementById('showMinkowski') && document.getElementById('showMinkowski').checked) {
+    ctx.save();
+    const radius = gridSize * 0.707; // Reaches to the circumscribed circle
+
+    const angleTL = Math.atan2(marginY - cy, marginX - cx);
+    const angleBR = Math.atan2(marginY + gridSize - cy, marginX + gridSize - cx);
+    const halfOpening = Math.PI / 8; // 45 degrees total opening angle
+
+    // Future Light Cone (pointing TL)
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
+    ctx.closePath();
+
+    const futGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+    futGrad.addColorStop(0, 'rgba(59, 222, 132, 0.14)');
+    futGrad.addColorStop(1, 'rgba(59, 222, 132, 0.01)');
+    ctx.fillStyle = futGrad;
+    ctx.fill();
+
+    // Past Light Cone (pointing BR)
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
+    ctx.closePath();
+
+    const pastGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+    pastGrad.addColorStop(0, 'rgba(224, 64, 128, 0.14)');
+    pastGrad.addColorStop(1, 'rgba(224, 64, 128, 0.01)');
+    ctx.fillStyle = pastGrad;
+    ctx.fill();
+
+    // Dash outlines for the cones
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+    ctx.lineWidth = 1 * dpr;
+    ctx.setLineDash([4 * dpr, 4 * dpr]);
+
+    // Draw Future Cone outline
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleTL - halfOpening, angleTL + halfOpening);
+    ctx.closePath();
+    ctx.stroke();
+
+    // Draw Past Cone outline
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angleBR - halfOpening, angleBR + halfOpening);
+    ctx.closePath();
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  // Restore context to remove clipping mask for unclipped labels & points!
+  ctx.restore();
+
+  // ── DRAW ALL LABELS, MARKS & DATA NODES (Unclipped) ──
+  if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
+    // ── DRAW EDGE NAMES ──
+    ctx.save();
+    ctx.font = `bold ${Math.round(8 * dpr)}px 'JetBrains Mono', monospace`;
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'center';
+
+    // Top: Reduct ↔ Product
+    ctx.fillStyle = 'rgba(59, 222, 132, 0.45)'; // Greenish
+    ctx.fillText('Reduct ↔ Product', marginX + gridSize / 2, marginY - 24 * dpr);
+
+    // Bottom: Regress ↔ Constr
+    ctx.fillStyle = 'rgba(240, 80, 96, 0.45)'; // Reddish
+    ctx.fillText('Regress ↔ Constr', marginX + gridSize / 2, marginY + gridSize + 32 * dpr);
+
+    // Left: Constr ↔ Product
+    ctx.save();
+    ctx.translate(marginX - 8 * dpr, marginY + gridSize / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillStyle = 'rgba(59, 222, 132, 0.45)';
+    ctx.fillText('Constr ↔ Product', 0, 0);
+    ctx.restore();
+
+    // Right: Reduct ↔ Regress
+    ctx.save();
+    ctx.translate(marginX + gridSize + 8 * dpr, marginY + gridSize / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillStyle = 'rgba(240, 80, 96, 0.45)';
+    ctx.fillText('Reduct ↔ Regress', 0, 0);
+    ctx.restore();
+
+    ctx.restore();
+
+    // ── DRAW COLORED EDGE LINES ──
+    ctx.save();
+    ctx.lineWidth = 2 * dpr;
+
+    // Top: Green
+    ctx.strokeStyle = '#0a7a3a';
+    ctx.beginPath(); ctx.moveTo(marginX, marginY); ctx.lineTo(marginX + gridSize, marginY); ctx.stroke();
+
+    // Bottom: Red
+    ctx.strokeStyle = '#7a1f1f';
+    ctx.beginPath(); ctx.moveTo(marginX, marginY + gridSize); ctx.lineTo(marginX + gridSize, marginY + gridSize); ctx.stroke();
+
+    // Left: Green
+    ctx.strokeStyle = '#0a7a3a';
+    ctx.beginPath(); ctx.moveTo(marginX, marginY); ctx.lineTo(marginX, marginY + gridSize); ctx.stroke();
+
+    // Right: Red
+    ctx.strokeStyle = '#7a1f1f';
+    ctx.beginPath(); ctx.moveTo(marginX + gridSize, marginY); ctx.lineTo(marginX + gridSize, marginY + gridSize); ctx.stroke();
+
+    ctx.restore();
+
+    // ── DRAW BIDIRECTIONAL TICKS AND TICK LABELS ──
+    ctx.save();
+    ctx.lineWidth = 1 * dpr;
+    ctx.font = `bold ${Math.round(6.5 * dpr)}px 'JetBrains Mono', monospace`;
+    ctx.textBaseline = 'middle';
+
+    for (let pct = 0; pct <= 100; pct += 10) {
+      const f = pct / 100;
+
+      // 1. Top Edge (Productive on Left = 100/0, Reductive on Right = 0/100)
+      const tx = marginX + gridSize * f;
+      ctx.strokeStyle = 'rgba(59, 222, 132, 0.35)'; // green tick line
+      ctx.beginPath();
+      ctx.moveTo(tx, marginY - 4 * dpr);
+      ctx.lineTo(tx, marginY + 4 * dpr);
+      ctx.stroke();
+
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(59, 222, 132, 0.55)'; // green pct
+      ctx.fillText(pct, tx, marginY - 16 * dpr);
+      ctx.fillStyle = 'rgba(90, 184, 122, 0.55)'; // light green 100-pct
+      ctx.fillText(100 - pct, tx, marginY - 9 * dpr);
+
+      // 2. Bottom Edge (Constructive on Left = 0/100, Regressive on Right = 100/0)
+      ctx.strokeStyle = 'rgba(240, 80, 96, 0.35)'; // red tick line
+      ctx.beginPath();
+      ctx.moveTo(tx, marginY + gridSize - 4 * dpr);
+      ctx.lineTo(tx, marginY + gridSize + 4 * dpr);
+      ctx.stroke();
+
+      ctx.fillStyle = 'rgba(240, 80, 96, 0.55)'; // red pct
+      ctx.fillText(pct, tx, marginY + gridSize + 14 * dpr);
+      ctx.fillStyle = 'rgba(192, 112, 112, 0.55)'; // light red 100-pct
+      ctx.fillText(100 - pct, tx, marginY + gridSize + 21 * dpr);
+
+      // 3. Left Edge (Constructive on Bottom = 0/100, Productive on Top = 100/0)
+      const ty = marginY + gridSize * f;
+      ctx.strokeStyle = 'rgba(59, 222, 132, 0.35)'; // green tick line
+      ctx.beginPath();
+      ctx.moveTo(marginX - 4 * dpr, ty);
+      ctx.lineTo(marginX + 4 * dpr, ty);
+      ctx.stroke();
+
+      ctx.textAlign = 'end';
+      ctx.fillStyle = 'rgba(59, 222, 132, 0.55)';
+      ctx.fillText(pct, marginX - 22 * dpr, ty);
+      ctx.fillStyle = 'rgba(90, 184, 122, 0.55)';
+      ctx.fillText(100 - pct, marginX - 9 * dpr, ty);
+
+      // 4. Right Edge (Regressive on Bottom = 100/0, Reductive on Top = 0/100)
+      ctx.strokeStyle = 'rgba(240, 80, 96, 0.35)'; // red tick line
+      ctx.beginPath();
+      ctx.moveTo(marginX + gridSize - 4 * dpr, ty);
+      ctx.lineTo(marginX + gridSize + 4 * dpr, ty);
+      ctx.stroke();
+
+      ctx.textAlign = 'start';
+      ctx.fillStyle = 'rgba(240, 80, 96, 0.55)';
+      ctx.fillText(pct, marginX + gridSize + 9 * dpr, ty);
+      ctx.fillStyle = 'rgba(192, 112, 112, 0.55)';
+      ctx.fillText(100 - pct, marginX + gridSize + 22 * dpr, ty);
+    }
+    ctx.restore();
+  }
+
+  const fs = Math.round(11 * dpr);
+  const fsSmall = Math.round(9 * dpr);
+  const labelFs = Math.round(11 * dpr);
+  const subFs = Math.round(8 * dpr);
+
+  const [ax1, ay] = toPixel( 2, 0);
+  const [vx, vy1] = toPixel(0,  2);
+
+  drawGlobalLabels(ctx, dpr);
+  drawCustomAxes(ctx, dpr);
+
+  if (document.getElementById('showAxes').checked) {
+    // Center coordinates for the 3 columns and 3 rows of the 3x3 grid matrix
+    const col1X = toPixel(1.33, 0)[0];
+    const col2X = toPixel(0, 0)[0];
+    const col3X = toPixel(-1.33, 0)[0];
+
+    const row1Y = toPixel(0, 1.33)[1];
+    const row2Y = toPixel(0, 0)[1];
+    const row3Y = toPixel(0, -1.33)[1];
+
+    // 4. Grid numeric labels along the horizontal axis
+    [2, 1, 0, -1, -2].forEach(tick => {
+      const [tx] = toPixel(tick, 0);
+      const val = modeRel ? (tick - 1) : tick;
+      const label = val > 0 ? `+${val}υ` : `${val}υ`;
+      drawTextWithBackground(ctx, label, tx, ay + 14 * dpr, fsSmall, 'rgba(200,205,232,0.5)', false, 'center', 'middle');
+    });
+
+    // 5. Grid numeric labels along the vertical axis
+    [2, 1, 0, -1, -2].forEach(tick => {
+      const [,ty] = toPixel(0, tick);
+      const val = modeRel ? (tick - 1) : tick;
+      const label = val > 0 ? `+${val}ψ` : `${val}ψ`;
+      drawTextWithBackground(ctx, label,col2X, ty, fsSmall, 'rgba(200,205,232,0.5)', false, 'center', 'middle');
+    });
+
+
+
+    // 7. Axes Titles (positioned at a fixed 25px offset from the canvas boundaries to prevent overlays)
+    // Horizontal Axis Title: υ Morality (Mind / Benefit)
+    drawTextWithBackground(ctx, '← Opening / Creating Possibility      υ Morality (Mind / Benefit)      Closing Possibility ➔', W / 2, H - 25 * dpr, Math.round(10.5 * dpr), '#3bde84', true, 'center', 'middle');
+
+    // Vertical Axis Title: ψ Will (Body / Action) with Foundation/Application indicators
+    ctx.save();
+    ctx.translate(25 * dpr, H / 2);
+    ctx.rotate(-Math.PI / 2);
+    drawTextWithBackground(ctx, '← FOUNDATION      ψ Will (Body / Action)      APPLICATION ➔', 0, 0, Math.round(10.5 * dpr), '#30c8e0', true, 'center', 'middle');
+    ctx.restore();
+  }
+
+  // 8. Minkowski Cones text labels & hypersurface along regression diagonal
+  if (document.getElementById('showMinkowski') && document.getElementById('showMinkowski').checked) {
+    const labelFs = Math.round(9 * dpr);
+
+    // FUTURE LIGHT CONE (centered in the top-left quadrant at v=1, psi=1)
+    const [fx, fy] = toPixel(1, 1);
+    drawTextWithBackground(ctx, 'FUTURE LIGHT CONE', fx, fy - 6 * dpr, labelFs, 'rgba(59, 222, 132, 0.85)', true, 'center', 'middle');
+
+    // PAST LIGHT CONE (centered in the bottom-right quadrant at v=-1, psi=-1)
+    const [px, py] = toPixel(-1, -1);
+    drawTextWithBackground(ctx, 'PAST LIGHT CONE', px, py + 6 * dpr, labelFs, 'rgba(224, 64, 128, 0.85)', true, 'center', 'middle');
+
+    // OBSERVER (PRESENT) at (0,0)
+    drawTextWithBackground(ctx, 'OBSERVER (PRESENT)', cx, cy - 14 * dpr, labelFs, 'rgba(255, 255, 255, 0.95)', true, 'center', 'middle');
+
+    // Hypersurface of Present Time (along the TR-to-BL diagonal)
+    const [h1x, h1y] = toPixel(1.5, -1.5);
+    const [h2x, h2y] = toPixel(0.5, -0.5);
+    drawTextAlongLine(ctx, 'Hypersurface of Present Time ➔', h1x, h1y, h2x, h2y, 1, 'rgba(255, 255, 255, 0.65)', dpr);
+  }
+
+  // Quadrant headers (drawn outside the grid box card bounds at their corners)
+  const quadHeaders = [
+    { x: marginX - 15 * dpr, y: marginY - 15 * dpr, header: 'Productive', sub: 'AIR - Agape', color: 'rgba(59, 222, 132, 0.75)', align: 'right', baseline: 'bottom' },
+    { x: marginX + gridSize + 15 * dpr, y: marginY - 15 * dpr, header: 'Reductive', sub: 'FIRE - Ludus', color: 'rgba(240, 80, 96, 0.75)', align: 'left', baseline: 'bottom' },
+    { x: marginX - 15 * dpr, y: marginY + gridSize + 15 * dpr, header: 'Constructive', sub: 'WATER - Philia', color: 'rgba(48, 200, 224, 0.75)', align: 'right', baseline: 'top' },
+    { x: marginX + gridSize + 15 * dpr, y: marginY + gridSize + 15 * dpr, header: 'Regressive', sub: 'EARTH - Eros', color: 'rgba(224, 64, 128, 0.75)', align: 'left', baseline: 'top' },
+  ];
+  quadHeaders.forEach(q => {
+    const headerBaseline = q.baseline;
+    const subBaseline = 'top';
+    const subOffset = (q.baseline === 'bottom') ? 4 * dpr : 14 * dpr;
+
+    drawTextWithBackground(ctx, q.header, q.x, q.y, Math.round(12.5 * dpr), q.color, true, q.align, headerBaseline);
+    drawTextWithBackground(ctx, q.sub, q.x, q.y + subOffset, Math.round(8.5 * dpr), 'rgba(255, 255, 255, 0.45)', false, q.align, subBaseline);
+  });
+
+  // Canonical Anchors
+  const canonicalAnchors = modeRel ? [
+    { v: 0, psi: 0, label: 'Greater Good', sub: 'The Good Truth', color: '#3bde84' },
+    { v:-2, psi: 0, label: 'Lesser Evil', sub: 'The Bad Lie', color: '#f05060' },
+    { v: 0, psi:-2, label: 'Lesser Good', sub: 'The Good Lie', color: '#30c8e0' },
+    { v:-2, psi:-2, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' }
+  ] : [
+    { v: 1, psi: 1, label: 'Greater Good', sub: 'The Good Truth', color: '#3bde84' },
+    { v:-1, psi: 1, label: 'Lesser Evil', sub: 'The Bad Lie', color: '#f05060' },
+    { v: 1, psi:-1, label: 'Lesser Good', sub: 'The Good Lie', color: '#30c8e0' },
+    { v:-1, psi:-1, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' }
+  ];
+  canonicalAnchors.forEach(a => {
+    const [ax, ay2] = toPixel(a.v, a.psi);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(ax, ay2, 6 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = a.color + '44';
+    ctx.fill();
+    ctx.strokeStyle = a.color;
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.stroke();
+    drawTextWithBackground(ctx, a.label, ax, ay2 - 14 * dpr, Math.round(9.5 * dpr), a.color, true, 'center', 'bottom');
+    drawTextWithBackground(ctx, a.sub, ax, ay2 + 14 * dpr, Math.round(8 * dpr), 'rgba(200,205,232,0.65)', false, 'center', 'top');
+    ctx.restore();
+  });
+
+  // Perceptual Inversion Anchors
+  const inversionAnchors = [
+    { v: 0.5,  psi: 0.5,  label: 'Perceived Greater Evil', color: 'rgba(224, 64, 128, 0.7)' },
+    { v:-0.5,  psi: 0.5,  label: 'Perceived Lesser Good',  color: 'rgba(48, 200, 224, 0.7)' },
+    { v: 0.5,  psi:-0.5,  label: 'Perceived Lesser Evil',  color: 'rgba(240, 80, 96, 0.7)' },
+    { v:-0.5,  psi:-0.5,  label: 'Perceived Greater Good', color: 'rgba(59, 222, 132, 0.7)' }
+  ];
+  inversionAnchors.forEach(a => {
+    const [ax, ay2] = toPixel(a.v, a.psi);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(ax, ay2, 4 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = a.color + '15';
+    ctx.fill();
+    ctx.strokeStyle = a.color;
+    ctx.setLineDash([2 * dpr, 2 * dpr]);
+    ctx.lineWidth = 1 * dpr;
+    ctx.stroke();
+    drawTextWithBackground(ctx, a.label, ax, ay2 + 10 * dpr, Math.round(7.5 * dpr), a.color, false, 'center', 'top');
+    ctx.restore();
+  });
+
+  // Center Node (Confusion / No-one)
+  {
+    const centerNodeV = modeRel ? -1 : 0;
+    const centerNodePsi = modeRel ? -1 : 0;
+    const [cx, cy] = toPixel(centerNodeV, centerNodePsi);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, 14 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(18, 20, 28, 0.95)';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(200, 205, 232, 0.4)';
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.stroke();
+    drawTextWithBackground(ctx, 'No-one', cx, cy - 4 * dpr, Math.round(8 * dpr), '#fff', true, 'center', 'middle');
+    drawTextWithBackground(ctx, 'Confusion', cx, cy + 5 * dpr, Math.round(7 * dpr), 'rgba(200,205,232,0.6)', false, 'center', 'middle');
+    ctx.restore();
+  }
+
+  // Active Point Projections
+  const activePt = hoverCoord ? {v: hoverCoord[0], psi: hoverCoord[1]} : (selectedIdx >= 0 ? points[selectedIdx] : null);
+  if (activePt && document.getElementById('showProjections').checked) {
+    const v = activePt.v;
+    const psi = activePt.psi;
+    const drawV = modeRel ? (v - 1) : v;
+    const drawPsi = modeRel ? (psi - 1) : psi;
+    const [px, py] = toPixel(drawV, drawPsi);
+    if (modeRel) {
+      const [tx, ty] = toPixel(0, 0);
+      ctx.save();
+      ctx.setLineDash([3 * dpr, 3 * dpr]);
+      ctx.strokeStyle = 'rgba(59, 222, 132, 0.85)';
+      ctx.lineWidth = 1.5 * dpr;
+      ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(px, py); ctx.stroke();
+      ctx.restore();
+      const midX = (tx + px) / 2;
+      const midY = (ty + py) / 2;
+      const dist = Math.sqrt(Math.pow(v - 1, 2) + Math.pow(psi - 1, 2));
+      drawTextWithBackground(ctx, `Dist: ${dist.toFixed(3)}`, midX, midY, Math.round(8.5 * dpr), '#3bde84', true, 'center', 'middle');
+    } else {
+      if (document.getElementById('showAxes').checked) {
+        const [pvx, pvy] = toPixel(v, 0);
+        const [ppsix, pppsiy] = toPixel(0, psi);
+        ctx.save();
+        ctx.setLineDash([3 * dpr, 3 * dpr]);
+        ctx.strokeStyle = 'rgba(59, 222, 132, 0.45)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(pvx, pvy); ctx.stroke();
+        ctx.strokeStyle = 'rgba(48, 200, 224, 0.45)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(ppsix, pppsiy); ctx.stroke();
+        ctx.restore();
+      }
+      if (document.getElementById('showDiagonals').checked) {
+        const T = (v + psi) / 2;
+        const [pTx, pTy] = toPixel(T, T);
+        const L = (psi - v) / 2;
+        const [pLx, pLy] = toPixel(-L, L);
+        ctx.save();
+        ctx.setLineDash([3 * dpr, 3 * dpr]);
+        ctx.strokeStyle = 'rgba(59, 222, 132, 0.6)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(pTx, pTy); ctx.stroke();
+        ctx.strokeStyle = 'rgba(240, 80, 96, 0.6)';
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(pLx, pLy); ctx.stroke();
+        ctx.beginPath(); ctx.arc(pTx, pTy, 4.5 * dpr, 0, Math.PI * 2); ctx.fillStyle = '#3bde84'; ctx.fill();
+        ctx.beginPath(); ctx.arc(pLx, pLy, 4.5 * dpr, 0, Math.PI * 2); ctx.fillStyle = '#f05060'; ctx.fill();
+        ctx.restore();
+        drawTextWithBackground(ctx, `T: ${T.toFixed(2)}`, pTx + 10 * dpr, pTy, Math.round(7.5 * dpr), '#3bde84', true, 'left', 'middle');
+        drawTextWithBackground(ctx, `L: ${L.toFixed(2)}`, pLx - 10 * dpr, pLy, Math.round(7.5 * dpr), '#f05060', true, 'right', 'middle');
+      }
+
+      // Draw projections and [dir+, mag, dir-] readings directly on the counted axes (excluding central/diagonal ones starting at 0,0 to prevent clutter)
+      if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
+        const canvasAxes = GLOBAL_VFT_AXES.filter(ax => !(ax.x1 === 0 && ax.y1 === 0));
+
+        // Precalculate distances to each axis segment
+        canvasAxes.forEach(ax => {
+          const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
+          const len = Math.hypot(dx, dy);
+          const ux = dx / len, uy = dy / len;
+          const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
+          const alongClamped = Math.max(0, Math.min(len, alongRaw));
+          ax.projV = ax.x1 + ux * alongClamped;
+          ax.projPsi = ax.y1 + uy * alongClamped;
+          ax.dist = Math.hypot(v - ax.projV, psi - ax.projPsi);
+          ax.alongRaw = alongRaw;
+          ax.len = len;
+        });
+
+        // Sort by distance ascending
+        const sortedArms = [...canvasAxes].sort((a, b) => a.dist - b.dist);
+        const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '20');
+
+        canvasAxes.forEach(ax => {
+          const isCounted = sortedArms.indexOf(ax) < sLimit;
+          const [projPx, projPy] = toPixel(ax.projV, ax.projPsi);
+          // Clamp dir percentage to [0, 100] since the projection point itself is clamped to segment endpoints
+          const dir = Math.max(0, Math.min(100, (ax.alongRaw / ax.len) * 100));
+          const mag = Math.max(0, 100 * (1 - ax.dist / ax.len));
+
+          // Draw dashed guide line
+          ctx.save();
+          ctx.setLineDash([2 * dpr, 2 * dpr]);
+          ctx.strokeStyle = isCounted ? ax.color.replace('0.8', '0.45') : 'rgba(255, 255, 255, 0.05)';
+          ctx.lineWidth = 0.8 * dpr;
+          ctx.beginPath();
+          ctx.moveTo(px, py);
+          ctx.lineTo(projPx, projPy);
+          ctx.stroke();
+
+          // Only draw projection dot and text labels for active (counted) axes
+          if (isCounted) {
+            ctx.beginPath();
+            ctx.arc(projPx, projPy, 2.5 * dpr, 0, Math.PI * 2);
+            ctx.fillStyle = ax.color;
+            ctx.fill();
+
+            // Draw text next to the dot (offset perpendicular to the axis)
+            const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
+            const len = ax.len;
+            const nx = -dy / len, ny = dx / len;
+            const textOffset = 12 * dpr;
+            const tx = projPx - nx * textOffset;
+            const ty = projPy - ny * textOffset;
+
+            ctx.font = `bold ${Math.round(10 * dpr)}px 'JetBrains Mono', monospace`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Universally output as [dir+, mag, dir-]
+            const labelText = `[${dir.toFixed(0)},${mag.toFixed(0)},${(100 - dir).toFixed(0)}]`;
+            
+            ctx.strokeStyle = '#0a0b0f';
+            ctx.lineWidth = 3.5 * dpr;
+            ctx.lineJoin = 'round';
+            ctx.strokeText(labelText, tx, ty);
+
+            ctx.fillStyle = ax.color;
+            ctx.fillText(labelText, tx, ty);
+          }
+          ctx.restore();
+        });
+      }
+    }
+  }
+
+  // User Plotted Points
+  points.forEach((pt, i) => {
+    const drawV = modeRel ? (pt.v - 1) : pt.v;
+    const drawPsi = modeRel ? (pt.psi - 1) : pt.psi;
+    const [px, py] = toPixel(drawV, drawPsi);
+    const zone = classifyZone(pt.v, pt.psi);
+    const isSelected = i === selectedIdx;
+    const r = isSelected ? 9 * dpr : 7 * dpr;
+    if (isSelected) {
+      const grad = ctx.createRadialGradient(px, py, 0, px, py, 22 * dpr);
+      grad.addColorStop(0, zone.color + '55');
+      grad.addColorStop(1, 'transparent');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(px, py, 22 * dpr, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.beginPath();
+    ctx.arc(px, py, r, 0, Math.PI * 2);
+    ctx.fillStyle = zone.color + 'cc';
+    ctx.fill();
+    ctx.strokeStyle = zone.color;
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.stroke();
+    ctx.fillStyle = '#fff';
+    ctx.font = `600 ${Math.round(8 * dpr)}px 'Inter', sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(i + 1, px, py);
+    if (pt.label) {
+      drawTextWithBackground(ctx, pt.label, px, py + r + 6 * dpr, fsSmall, zone.color, true, 'center', 'top');
+    }
+  });
+
+  ctx.restore(); // end global zoom transform
+}
+
+// ─────────────────────────────────────────────
+//  READOUT UPDATE
+// ─────────────────────────────────────────────
+function updateReadout(v, psi, isPoint) {
+  const vStr   = v   >= 0 ? `+${v.toFixed(2)}` : v.toFixed(2);
+  const psiStr = psi >= 0 ? `+${psi.toFixed(2)}` : psi.toFixed(2);
+  document.getElementById('dispV').textContent   = vStr;
+  document.getElementById('dispPsi').textContent = psiStr;
+
+  // Update context display based on active point or dropdown selection
+  const activePt = selectedIdx >= 0 && points[selectedIdx] ? points[selectedIdx] : null;
+  const contextVal = (isPoint && activePt) ? (activePt.context || 'Natural State') : document.getElementById('contextSelect').value;
+  document.getElementById('dispContext').textContent = contextVal;
+
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  const relDistContainer = document.getElementById('dispRelContainer');
+  if (modeRel) {
+    const dist = Math.sqrt(Math.pow(v - 1, 2) + Math.pow(psi - 1, 2));
+    document.getElementById('dispRelDist').textContent = dist.toFixed(3);
+    if (relDistContainer) {
+      relDistContainer.style.display = 'block';
+      relDistContainer.querySelector('.label').textContent = 'Dist to GG (1,1): ';
+    }
+  } else {
+    if (relDistContainer) relDistContainer.style.display = 'none';
+  }
+
+  const zone = classifyZone(v, psi);
+  document.getElementById('dispZone').textContent    = `→ ${zone.name} ${zone.coord}`;
+  document.getElementById('dispZone').style.color    = zone.color;
+  document.getElementById('dispVerdict').textContent = zone.verdict;
+  syncSliders(v, psi);
+
+
+  const container = document.getElementById('projsContainer');
+  if (container) {
+    container.innerHTML = '';
+    
+    // Precalculate distances using global axes list
+    GLOBAL_VFT_AXES.forEach(ax => {
+      const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
+      const len = Math.hypot(dx, dy);
+      const ux = dx / len, uy = dy / len;
+      const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
+      const alongClamped = Math.max(0, Math.min(len, alongRaw));
+      const nxClamped = ax.x1 + ux * alongClamped;
+      const nyClamped = ax.y1 + uy * alongClamped;
+      ax.dist = Math.hypot(v - nxClamped, psi - nyClamped);
+      ax.alongRaw = alongRaw;
+      ax.len = len;
+    });
+
+    // Sort by distance ascending
+    const sorted = [...GLOBAL_VFT_AXES].sort((a, b) => a.dist - b.dist);
+    const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '20');
+
+    GLOBAL_VFT_AXES.forEach(ax => {
+      const isCounted = sorted.indexOf(ax) < sLimit;
+      const dir = Math.max(0, Math.min(100, (ax.alongRaw / ax.len) * 100));
+      const mag = Math.max(0, 100 * (1 - ax.dist / ax.len));
+
+      // Universally format as 3D vector [dir+, mag, dir-]
+      const labelText = `[${dir.toFixed(0)}, ${mag.toFixed(0)}, ${(100 - dir).toFixed(0)}]`;
+
+      const row = document.createElement('div');
+      row.style.display = 'flex';
+      row.style.justifyContent = 'space-between';
+      row.style.lineHeight = '1.3';
+      
+      if (isCounted) {
+        row.style.color = ax.color;
+        row.style.fontWeight = 'bold';
+        row.innerHTML = `<span>● ${ax.name}</span><span>${labelText}</span>`;
+      } else {
+        row.style.color = 'rgba(255,255,255,0.2)'; // Faded out
+        row.style.fontWeight = 'normal';
+        row.innerHTML = `<span>○ ${ax.name}</span><span>${labelText}</span>`;
+      }
+      container.appendChild(row);
+    });
+  }
+}
+
+function clearReadout() {
+  document.getElementById('dispV').textContent       = '—';
+  document.getElementById('dispPsi').textContent     = '—';
+  if (document.getElementById('dispRelDist')) {
+    document.getElementById('dispRelDist').textContent = '—';
+  }
+  document.getElementById('dispContext').textContent = '—';
+  document.getElementById('dispZone').textContent    = '—';
+  document.getElementById('dispZone').style.color    = 'var(--muted)';
+  document.getElementById('dispVerdict').textContent = '—';
+
+  const container = document.getElementById('projsContainer');
+  if (container) {
+    container.innerHTML = '<div style="color:var(--muted); text-align:center; padding: 4px 0;">—</div>';
+  }
+}
+
+// ── SLIDER INTERACTIVE CONTROLS ──
+let isSyncingSliders = false;
+function syncSliders(v, psi) {
+  if (isSyncingSliders) return;
+  isSyncingSliders = true;
+  
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  if (modeRel) {
+    const dx = 1 - v;
+    const dy = 1 - psi;
+    const R = Math.sqrt(dx*dx + dy*dy);
+    let theta = Math.atan2(dy, dx) * 180 / Math.PI;
+    if (theta < 0) theta += 360;
+    theta = Math.max(0, Math.min(360, theta));
+    
+    document.getElementById('sliderV').value = R;
+    document.getElementById('sliderPsi').value = theta;
+    document.getElementById('valSliderV').textContent = R.toFixed(2);
+    document.getElementById('valSliderPsi').textContent = theta.toFixed(1) + '°';
+  } else {
+    document.getElementById('sliderV').value = v;
+    document.getElementById('sliderPsi').value = psi;
+    const T = (v + psi) / 2;
+    const L = (psi - v) / 2;
+    document.getElementById('sliderT').value = T;
+    document.getElementById('sliderL').value = L;
+    document.getElementById('valSliderV').textContent = v.toFixed(2);
+    document.getElementById('valSliderPsi').textContent = psi.toFixed(2);
+    document.getElementById('valSliderT').textContent = T.toFixed(2);
+    document.getElementById('valSliderL').textContent = L.toFixed(2);
+    document.getElementById('valProduct').textContent = (v * psi).toFixed(2);
+  }
+  isSyncingSliders = false;
+}
+
+function handleSliderChange(type, value) {
+  if (isSyncingSliders) return;
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  let v = parseFloat(document.getElementById('sliderV').value);
+  let psi = parseFloat(document.getElementById('sliderPsi').value);
+  
+  if (modeRel) {
+    let R = parseFloat(document.getElementById('sliderV').value);
+    let theta = parseFloat(document.getElementById('sliderPsi').value);
+    if (type === 'V') R = value;
+    if (type === 'Psi') theta = value;
+    
+    const rad = theta * Math.PI / 180;
+    v = 1 - R * Math.cos(rad);
+    psi = 1 - R * Math.sin(rad);
+  } else {
+    if (type === 'T') {
+      const T = value;
+      const L = parseFloat(document.getElementById('sliderL').value);
+      v = T - L;
+      psi = T + L;
+    } else if (type === 'L') {
+      const L = value;
+      const T = parseFloat(document.getElementById('sliderT').value);
+      v = T - L;
+      psi = T + L;
+    } else if (type === 'V') {
+      v = value;
+    } else if (type === 'Psi') {
+      psi = value;
+    }
+  }
+  
+  v = Math.max(-2, Math.min(2, v));
+  psi = Math.max(-2, Math.min(2, psi));
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    points[selectedIdx].v = v;
+    points[selectedIdx].psi = psi;
+    renderPointsList();
+  }
+  updateReadout(v, psi, true);
+  syncSliders(v, psi);
+  draw();
+}
+
+document.getElementById('sliderV').addEventListener('input', e => handleSliderChange('V', parseFloat(e.target.value)));
+document.getElementById('sliderPsi').addEventListener('input', e => handleSliderChange('Psi', parseFloat(e.target.value)));
+document.getElementById('sliderT').addEventListener('input', e => handleSliderChange('T', parseFloat(e.target.value)));
+document.getElementById('sliderL').addEventListener('input', e => handleSliderChange('L', parseFloat(e.target.value)));
+document.getElementById('showAxes').addEventListener('change', draw);
+document.getElementById('showDiagonals').addEventListener('change', draw);
+document.getElementById('showProjections').addEventListener('change', draw);
+document.getElementById('show3x3Grid').addEventListener('change', draw);
+document.getElementById('showSubdivisionArms').addEventListener('change', draw);
+document.getElementById('showMinkowski').addEventListener('change', draw);
+document.getElementById('showStateTriangles').addEventListener('change', draw);
+document.getElementById('shadePotential').addEventListener('change', draw);
+document.getElementById('shadeAntiPotential').addEventListener('change', draw);
+document.getElementById('shadeActive').addEventListener('change', draw);
+document.getElementById('shadeSuppressive').addEventListener('change', draw);
+
+// Shader Blending control listeners
+const inputs = [
+  { id: 'shaderDiv', label: 'shaderDivLabel' },
+  { id: 'shaderExp', label: 'shaderExpLabel' },
+  { id: 'shaderOpac', label: 'shaderOpacLabel' },
+  { id: 'shaderCancel', label: 'shaderCancelLabel' },
+  { id: 'shaderLimit', label: 'shaderLimitLabel' }
+];
+inputs.forEach(item => {
+  const el = document.getElementById(item.id);
+  const lbl = document.getElementById(item.label);
+  if (el && lbl) {
+    el.addEventListener('input', () => {
+      lbl.textContent = el.value;
+      cachedShaderCanvas = null; // bust shader cache
+      draw();
+    });
+  }
+});
+
+document.getElementById('contextSelect').addEventListener('change', () => {
+  const context = document.getElementById('contextSelect').value;
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    points[selectedIdx].context = context;
+    renderPointsList();
+    updateReadout(points[selectedIdx].v, points[selectedIdx].psi, true);
+  } else if (hoverCoord) {
+    updateReadout(hoverCoord[0], hoverCoord[1], false);
+  }
+});
+
+// ─────────────────────────────────────────────
+//  POINTS LIST
+// ─────────────────────────────────────────────
+function renderPointsList() {
+  const list = document.getElementById('pointsList');
+  if (points.length === 0) {
+    list.innerHTML = '<div class="empty-hint">No points yet</div>';
+    return;
+  }
+  list.innerHTML = '';
+  points.forEach((pt, i) => {
+    pt.params = calculatePointParams(pt.v, pt.psi);
+    const zone = classifyZone(pt.v, pt.psi);
+    const entry = document.createElement('div');
+    entry.className = 'point-entry' + (i === selectedIdx ? ' selected' : '');
+    const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+    const vVal = modeRel ? (pt.v - 1) : pt.v;
+    const psiVal = modeRel ? (pt.psi - 1) : pt.psi;
+    const vStr = (vVal >= 0 ? '+' : '') + vVal.toFixed(2) + (modeRel ? 'υ_rel' : 'υ');
+    const psiStr = (psiVal >= 0 ? '+' : '') + psiVal.toFixed(2) + (modeRel ? 'ψ_rel' : 'ψ');
+
+    let detailsHtml = '';
+    if (i === selectedIdx && pt.params) {
+      detailsHtml = `
+        <div style="font-size:9px; color:#abb2bf; margin-top:5px; padding-top:4px; border-top:1px solid rgba(255,255,255,0.06); width: 100%;">
+          <div style="color:${zone.color}; font-weight:bold; margin-bottom: 4px; line-height:1.25;">${pt.params.verdict}</div>
+          <div style="display:grid; grid-template-columns: 1fr auto; gap:2px 8px; font-family:monospace; line-height:1.2;">
+            ${Object.entries(pt.params.projections).map(([name, val]) => `
+              <span style="color:#8890ab; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${name}">${name}</span>
+              <span style="font-weight:bold; color:#dcdfe4;">${val}</span>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    entry.innerHTML = `
+      <div style="display:flex; align-items:center; width:100%;">
+        <div class="point-dot" style="background:${zone.color}"></div>
+        <div class="point-coords" style="flex:1;">
+          <div>#${i+1} ${pt.label || ''}</div>
+          <div class="point-zone">(${vStr}, ${psiStr}) · ${zone.name.split(' ')[0]}</div>
+        </div>
+        <span class="point-del" data-idx="${i}" title="Remove">✕</span>
+      </div>
+      ${detailsHtml}
+    `;
+    entry.addEventListener('click', (e) => {
+      if (e.target.classList.contains('point-del')) {
+        const idx = parseInt(e.target.dataset.idx);
+        points.splice(idx, 1);
+        if (selectedIdx >= points.length) selectedIdx = points.length - 1;
+        renderPointsList();
+        draw();
+        return;
+      }
+      selectedIdx = i;
+      if (document.getElementById('contextSelect')) {
+        document.getElementById('contextSelect').value = pt.context || 'Natural State';
+      }
+      updateReadout(pt.v, pt.psi, true);
+      renderPointsList();
+      draw();
+    });
+    list.appendChild(entry);
+  });
+}
+
+// ─────────────────────────────────────────────
+//  EVENTS
+// ─────────────────────────────────────────────
+function getCanvasPos(e) {
+  const rect = canvas.getBoundingClientRect();
+  const dpr  = devicePixelRatio;
+  return [
+    (e.clientX - rect.left)  * dpr,
+    (e.clientY - rect.top)   * dpr,
+  ];
+}
+
+canvas.addEventListener('mousedown', e => {
+  if (e.button === 1) { // Middle mouse click
+    isPanning = true;
+    const [px, py] = getCanvasPos(e);
+    startPanX = px - panX;
+    startPanY = py - panY;
+    e.preventDefault(); // Disable default autoscroll trigger
+  }
+});
+
+canvas.addEventListener('mouseup', e => {
+  if (e.button === 1) {
+    isPanning = false;
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  const [px, py] = getCanvasPos(e);
+  if (isPanning) {
+    panX = px - startPanX;
+    panY = py - startPanY;
+    draw();
+  } else {
+    const [v, psi] = toCoord(px, py);
+    const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+    const finalV = modeRel ? v + 1 : v;
+    const finalPsi = modeRel ? psi + 1 : psi;
+    hoverCoord = [finalV, finalPsi];
+    updateReadout(finalV, finalPsi, false);
+    draw();
+  }
+});
+
+canvas.addEventListener('mouseleave', () => {
+  isPanning = false;
+  hoverCoord = null;
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    const pt = points[selectedIdx];
+    updateReadout(pt.v, pt.psi, true);
+  } else {
+    clearReadout();
+  }
+  draw();
+});
+
+canvas.addEventListener('click', e => {
+  const [px, py] = getCanvasPos(e);
+  const [v, psi] = toCoord(px, py);
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  const finalV = modeRel ? v + 1 : v;
+  const finalPsi = modeRel ? psi + 1 : psi;
+  const label = document.getElementById('labelInput').value.trim();
+  const context = document.getElementById('contextSelect').value;
+  const params = calculatePointParams(finalV, finalPsi);
+  points.push({ v: finalV, psi: finalPsi, label, context, params });
+  selectedIdx = points.length - 1;
+  updateReadout(finalV, finalPsi, true);
+  renderPointsList();
+  draw();
+});
+
+document.getElementById('exportBtn').addEventListener('click', () => {
+  if (points.length === 0) {
+    alert('No plotted points to export!');
+    return;
+  }
+  points.forEach(pt => {
+    pt.params = calculatePointParams(pt.v, pt.psi);
+  });
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(points, null, 2));
+  const dlAnchorElem = document.createElement('a');
+  dlAnchorElem.setAttribute("href", dataStr);
+  dlAnchorElem.setAttribute("download", "hegemony_points_export.json");
+  dlAnchorElem.click();
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+  points = [];
+  selectedIdx = -1;
+  hoverCoord = null;
+  clearReadout();
+  renderPointsList();
+  draw();
+});
+
+window.addEventListener('resize', resize);
+resize();
+
+// Zoom slider listener
+const zoomSlider = document.getElementById('zoomLevel');
+const zoomLabel  = document.getElementById('zoomLabel');
+if (zoomSlider) {
+  zoomSlider.addEventListener('input', () => {
+    zoomLabel.textContent = zoomSlider.value + '%';
+    cachedShaderCanvas = null; // bust cache on zoom change
+    draw();
+  });
+}
+
+
+// Scroll wheel zoom
+canvas.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const delta = e.deltaY > 0 ? -15 : 15; // Larger step for faster scroll response
+  const sl = document.getElementById('zoomLevel');
+  const lb = document.getElementById('zoomLabel');
+  if (!sl) return;
+  sl.value = Math.max(30, Math.min(800, parseInt(sl.value) + delta));
+  lb.textContent = sl.value + '%';
+  // Note: we do NOT reset cachedShaderCanvas = null because the cache is independent of zoom factor now!
+  draw();
+}, { passive: false });
+
+// Toggle Origin Mode listener
+document.getElementById('modeRelative').addEventListener('change', () => {
+  const modeRel = document.getElementById('modeRelative').checked;
+  const labelV = document.querySelector('#sliderV').previousElementSibling;
+  const labelPsi = document.querySelector('#sliderPsi').previousElementSibling;
+  const groupT = document.getElementById('sliderT').closest('.slider-group');
+  const groupL = document.getElementById('sliderL').closest('.slider-group');
+  const groupProd = document.getElementById('valProduct').closest('.slider-group');
+  
+  if (modeRel) {
+    // Switch to Radial Sliders centered on GG (1,1)
+    labelV.innerHTML = `Distance from GG (R): <span id="valSliderV">0.00</span>`;
+    labelPsi.innerHTML = `Deviation Angle (θ): <span id="valSliderPsi">0.0°</span>`;
+    
+    document.getElementById('sliderV').min = "0";
+    document.getElementById('sliderV').max = "2.83";
+    document.getElementById('sliderV').step = "0.01";
+    
+    document.getElementById('sliderPsi').min = "0";
+    document.getElementById('sliderPsi').max = "360";
+    document.getElementById('sliderPsi').step = "0.5";
+    
+    if (groupT) groupT.style.display = 'none';
+    if (groupL) groupL.style.display = 'none';
+    if (groupProd) groupProd.style.display = 'none';
+  } else {
+    // Restore standard Cartesian Sliders
+    labelV.innerHTML = `υ Morality (Benefit): <span id="valSliderV">0.00</span>`;
+    labelPsi.innerHTML = `ψ Will (Action Energy): <span id="valSliderPsi">0.00</span>`;
+    
+    document.getElementById('sliderV').min = "-2";
+    document.getElementById('sliderV').max = "2";
+    document.getElementById('sliderV').step = "0.01";
+    
+    document.getElementById('sliderPsi').min = "-2";
+    document.getElementById('sliderPsi').max = "2";
+    document.getElementById('sliderPsi').step = "0.01";
+    
+    if (groupT) groupT.style.display = 'block';
+    if (groupL) groupL.style.display = 'block';
+    if (groupProd) groupProd.style.display = 'block';
+  }
+  
+  draw();
+  renderPointsList();
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    updateReadout(points[selectedIdx].v, points[selectedIdx].psi, true);
+  } else if (hoverCoord) {
+    updateReadout(hoverCoord[0], hoverCoord[1], false);
+  } else {
+    clearReadout();
+  }
+});
+
+// Color picker event listeners
+document.getElementById('colorPageBg').addEventListener('input', (e) => {
+  document.body.style.background = e.target.value;
+  draw();
+});
+document.getElementById('colorCardBg').addEventListener('input', (e) => {
+  document.documentElement.style.setProperty('--bg', e.target.value);
+  draw();
+});
+
+// ─────────────────────────────────────────────
+//  LABEL & CUSTOM AXIS EDITOR PANEL
+// ─────────────────────────────────────────────
+const NUM_INPUT_STYLE = 'width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;';
+
+function toHexColor(c) {
+  if (!c) return '#ffffff';
+  if (c.startsWith('#')) return c.length === 7 ? c : '#ffffff';
+  const m = c.match(/rgba?\(([^)]+)\)/);
+  if (m) {
+    const [r, g, b] = m[1].split(',').map(s => parseFloat(s.trim()));
+    return '#' + [r, g, b].map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('');
+  }
+  return '#ffffff';
+}
+
+function renderLabelEditor() {
+  const list = document.getElementById('labelEditorList');
+  document.getElementById('labelCount').textContent = GLOBAL_LABELS.length;
+  list.innerHTML = '';
+  GLOBAL_LABELS.forEach((l, i) => {
+    const row = document.createElement('div');
+    row.style.cssText = 'border:1px solid var(--border); border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px;';
+    row.innerHTML = `
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="${i}" data-field="text" value="${String(l.text).replace(/"/g, '&quot;')}" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="${i}" data-field="color" value="${toHexColor(l.color)}" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="${i}" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="${i}" data-field="x" value="${l.x}" style="${NUM_INPUT_STYLE}"></label>
+        <label>y <input type="number" step="0.01" data-idx="${i}" data-field="y" value="${l.y}" style="${NUM_INPUT_STYLE}"></label>
+        <label>ox <input type="number" step="1" data-idx="${i}" data-field="ox" value="${l.ox || 0}" style="${NUM_INPUT_STYLE}"></label>
+        <label>oy <input type="number" step="1" data-idx="${i}" data-field="oy" value="${l.oy || 0}" style="${NUM_INPUT_STYLE}"></label>
+      </div>`;
+    list.appendChild(row);
+  });
+}
+
+function renderAxisEditor() {
+  const list = document.getElementById('axisEditorList');
+  document.getElementById('axisCount').textContent = CUSTOM_AXES.length;
+  list.innerHTML = '';
+  if (CUSTOM_AXES.length === 0) {
+    list.innerHTML = '<div class="empty-hint" style="padding:6px 0;">No custom lines yet</div>';
+    return;
+  }
+  CUSTOM_AXES.forEach((a, i) => {
+    const row = document.createElement('div');
+    row.style.cssText = 'border:1px solid var(--border); border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px;';
+    row.innerHTML = `
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="${i}" data-field="label" value="${String(a.label || '').replace(/"/g, '&quot;')}" placeholder="line label…" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="${i}" data-field="color" value="${toHexColor(a.color)}" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <span data-idx="${i}" data-action="del-axis" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x1 <input type="number" step="0.01" data-idx="${i}" data-field="x1" value="${a.x1}" style="${NUM_INPUT_STYLE}"></label>
+        <label>y1 <input type="number" step="0.01" data-idx="${i}" data-field="y1" value="${a.y1}" style="${NUM_INPUT_STYLE}"></label>
+        <label>x2 <input type="number" step="0.01" data-idx="${i}" data-field="x2" value="${a.x2}" style="${NUM_INPUT_STYLE}"></label>
+        <label>y2 <input type="number" step="0.01" data-idx="${i}" data-field="y2" value="${a.y2}" style="${NUM_INPUT_STYLE}"></label>
+      </div>`;
+    list.appendChild(row);
+  });
+}
+
+document.getElementById('labelEditorList').addEventListener('input', (e) => {
+  const idx = e.target.dataset.idx, field = e.target.dataset.field;
+  if (idx === undefined || !field) return;
+  const l = GLOBAL_LABELS[idx];
+  if (!l) return;
+  if (field === 'text' || field === 'color') l[field] = e.target.value;
+  else l[field] = parseFloat(e.target.value) || 0;
+  draw();
+});
+document.getElementById('labelEditorList').addEventListener('click', (e) => {
+  if (e.target.dataset.action === 'del-label') {
+    GLOBAL_LABELS.splice(parseInt(e.target.dataset.idx), 1);
+    renderLabelEditor();
+    draw();
+  }
+});
+
+document.getElementById('axisEditorList').addEventListener('input', (e) => {
+  const idx = e.target.dataset.idx, field = e.target.dataset.field;
+  if (idx === undefined || !field) return;
+  const a = CUSTOM_AXES[idx];
+  if (!a) return;
+  if (field === 'label' || field === 'color') a[field] = e.target.value;
+  else a[field] = parseFloat(e.target.value) || 0;
+  draw();
+});
+document.getElementById('axisEditorList').addEventListener('click', (e) => {
+  if (e.target.dataset.action === 'del-axis') {
+    CUSTOM_AXES.splice(parseInt(e.target.dataset.idx), 1);
+    renderAxisEditor();
+    draw();
+  }
+});
+
+document.getElementById('addLabelBtn').addEventListener('click', () => {
+  GLOBAL_LABELS.push({ x: 0, y: 0, ox: 0, oy: 0, text: 'New Label', fontSize: 11, color: '#ffffff', bold: true, align: 'center', baseline: 'middle' });
+  renderLabelEditor();
+  draw();
+});
+document.getElementById('addAxisBtn').addEventListener('click', () => {
+  CUSTOM_AXES.push({ x1: -2, y1: 0, x2: 2, y2: 0, color: '#a070f0', label: 'New Axis' });
+  renderAxisEditor();
+  draw();
+});
+
+document.getElementById('presetSelect').addEventListener('change', (e) => {
+  const preset = PRESETS[e.target.value];
+  if (!preset) return;
+  GLOBAL_LABELS = JSON.parse(JSON.stringify(preset.labels));
+  CUSTOM_AXES = JSON.parse(JSON.stringify(preset.customAxes));
+  renderLabelEditor();
+  renderAxisEditor();
+  draw();
+});
+
+document.getElementById('importPresetBtn').addEventListener('click', () => {
+  document.getElementById('presetFileInput').click();
+});
+document.getElementById('presetFileInput').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const cfg = JSON.parse(reader.result);
+      if (!Array.isArray(cfg.labels)) throw new Error('Missing "labels" array');
+      GLOBAL_LABELS = cfg.labels;
+      CUSTOM_AXES = Array.isArray(cfg.customAxes) ? cfg.customAxes : [];
+      renderLabelEditor();
+      renderAxisEditor();
+      draw();
+    } catch (err) {
+      alert('Invalid preset JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+});
+
+document.getElementById('exportPresetBtn').addEventListener('click', () => {
+  const data = JSON.stringify({ labels: GLOBAL_LABELS, customAxes: CUSTOM_AXES }, null, 2);
+  const blob = new Blob([data], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `hegemony_preset_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('exportHtmlBtn').addEventListener('click', () => {
+  const cfgEl = document.getElementById('vft-live-config');
+  cfgEl.textContent = JSON.stringify({ labels: GLOBAL_LABELS, customAxes: CUSTOM_AXES });
+  const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `hegemony_map_edited_${Date.now()}.html`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+renderLabelEditor();
+renderAxisEditor();
+
+// Initial state updates for default point
+if (points.length > 0) {
+  updateReadout(points[0].v, points[0].psi, true);
+  renderPointsList();
+}
+</script>
+
+
+</body></html>

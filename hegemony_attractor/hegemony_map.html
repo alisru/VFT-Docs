@@ -411,6 +411,47 @@
       </div>
     </div>
 
+    <!-- Labels & Custom Axes -->
+    <div class="side-section">
+      <div class="side-title">Labels & Custom Axes</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:11px;">
+        <div style="display:flex; gap:6px; align-items:center;">
+          <span style="color:var(--muted); min-width:46px;">Preset:</span>
+          <select class="label-input" id="presetSelect" style="flex:1; padding:5px 8px;">
+            <option value="Default">Default</option>
+            <option value="Compact">Compact (Near Grid)</option>
+          </select>
+        </div>
+        <div style="display:flex; gap:6px;">
+          <button class="clear-btn" id="importPresetBtn" style="flex:1; padding:6px;">Import JSON…</button>
+          <input type="file" id="presetFileInput" accept="application/json" style="display:none;" />
+          <button class="clear-btn" id="exportPresetBtn" style="flex:1; padding:6px;">Export JSON</button>
+        </div>
+        <button class="clear-btn" id="exportHtmlBtn" style="width:100%; padding:6px;">Export Full HTML (Save Source)</button>
+        <div style="font-size:9px; color:var(--muted); line-height:1.4;">Import/Export bundle both labels and custom axis lines. "Export Full HTML" bakes the current labels/lines into a new copy of this page as its new default — other panel settings (toggles, zoom, colors) are not captured.</div>
+
+        <div style="font-size:9px; color:var(--muted); line-height:1.4;">Click a label or line on the map to select it. Drag to move, drag the little handle above a selected label to rotate it, or drag a selected line's endpoints. Delete/Backspace removes the selection, Esc deselects.</div>
+
+        <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-weight:600;">Labels (<span id="labelCount">0</span>)</span>
+            <button class="clear-btn" id="addLabelBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Add</button>
+          </div>
+          <div id="labelEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:240px; overflow-y:auto;"></div>
+        </div>
+
+        <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-weight:600;">Custom Axis Lines (<span id="axisCount">0</span>)</span>
+            <button class="clear-btn" id="addAxisBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Place New</button>
+          </div>
+          <div id="axisPlacementStatus" style="font-size:9px; color:#a070f0; min-height:12px; margin-bottom:4px;"></div>
+          <div id="axisEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:200px; overflow-y:auto;"></div>
+        </div>
+      </div>
+    </div>
+    <script type="application/json" id="vft-live-config"></script>
+
     <!-- Zoom Control -->
     <div class="side-section">
       <div class="side-title">Zoom</div>
@@ -459,11 +500,17 @@
       <div style="display:flex; flex-direction:column; gap:8px; font-size:11px;">
         <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
           <span>Page Background:</span>
-          <input type="color" id="colorPageBg" value="#07080c" style="background:none; border:none; width:30px; height:20px; cursor:pointer;" />
+          <div style="display:flex; align-items:center; gap:6px;">
+            <input type="range" id="opacityPageBg" min="0" max="100" value="100" title="Opacity" style="width:44px; accent-color:#5b6cf8;" />
+            <input type="color" id="colorPageBg" value="#07080c" style="background:none; border:none; width:30px; height:20px; cursor:pointer;" />
+          </div>
         </div>
         <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
           <span>Grid Card Background:</span>
-          <input type="color" id="colorCardBg" value="#0a0b0f" style="background:none; border:none; width:30px; height:20px; cursor:pointer;" />
+          <div style="display:flex; align-items:center; gap:6px;">
+            <input type="range" id="opacityCardBg" min="0" max="100" value="100" title="Opacity" style="width:44px; accent-color:#5b6cf8;" />
+            <input type="color" id="colorCardBg" value="#0a0b0f" style="background:none; border:none; width:30px; height:20px; cursor:pointer;" />
+          </div>
         </div>
       </div>
     </div>
@@ -642,10 +689,233 @@ const GLOBAL_VFT_AXES = [
   { name: 'Constructive ↔ Regressive',       x1: -2,   y1: -2,   x2: 2,    y2: -2,   color: '#e04080' }
 ];
 
+// ─────────────────────────────────────────────
+//  CONFIG-DRIVEN LABELS & CUSTOM AXES
+//  (x, y) are in data/coord space, same as GLOBAL_VFT_AXES.
+//  (ox, oy) are a fine pixel nudge (pre-dpr) applied after projection.
+//  `group` (optional) ties visibility to an existing checkbox id.
+// ─────────────────────────────────────────────
+const DEFAULT_LABELS = [
+  { x: 2, y: 2, ox: 0, oy: -40, text: 'Truth+', fontSize: 11, color: '#3bde84', bold: true, align: 'left', baseline: 'bottom', group: 'showDiagonals' },
+  { x: 2, y: 2, ox: 0, oy: -8, text: '(Progress+)', fontSize: 8, color: 'rgba(59, 222, 132, 0.8)', bold: false, align: 'left', baseline: 'bottom', group: 'showDiagonals' },
+  { x: -2, y: -2, ox: 0, oy: 8, text: 'Truth−', fontSize: 11, color: '#e04080', bold: true, align: 'right', baseline: 'top', group: 'showDiagonals' },
+  { x: -2, y: -2, ox: 0, oy: 22, text: '(Progress−)', fontSize: 8, color: 'rgba(224, 64, 128, 0.8)', bold: false, align: 'right', baseline: 'top', group: 'showDiagonals' },
+  { x: -2, y: 2, ox: 0, oy: -22, text: 'Lie+', fontSize: 11, color: '#f05060', bold: true, align: 'right', baseline: 'bottom', group: 'showDiagonals' },
+  { x: -2, y: 2, ox: 0, oy: -8, text: '(Regression+)', fontSize: 8, color: 'rgba(240, 80, 96, 0.8)', bold: false, align: 'right', baseline: 'bottom', group: 'showDiagonals' },
+  { x: 2, y: -2, ox: 0, oy: 8, text: 'Lie−', fontSize: 11, color: '#30c8e0', bold: true, align: 'left', baseline: 'top', group: 'showDiagonals' },
+  { x: 2, y: -2, ox: 0, oy: 22, text: '(Regression−)', fontSize: 8, color: 'rgba(48, 200, 224, 0.8)', bold: false, align: 'left', baseline: 'top', group: 'showDiagonals' },
+
+  { x: 1.33, y: 2, ox: 0, oy: -32, text: '← ADDITIVE', fontSize: 8, color: 'rgba(59, 222, 132, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: 0, y: 2, ox: 0, oy: -14, text: 'Active', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: -1.33, y: 2, ox: 0, oy: -32, text: 'SUBTRACTIVE →', fontSize: 8, color: 'rgba(240, 80, 96, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: 1.33, y: -2, ox: 0, oy: 32, text: '← ADDITIVE', fontSize: 8, color: 'rgba(59, 222, 132, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: 0, y: -2, ox: 0, oy: 14, text: 'Suppressive', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: -1.33, y: -2, ox: 0, oy: 32, text: 'SUBTRACTIVE →', fontSize: 8, color: 'rgba(240, 80, 96, 0.75)', bold: false, align: 'center', baseline: 'middle', group: 'showAxes' },
+
+  { x: 2, y: 0, ox: -22, oy: 0, text: 'Everyone', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'right', baseline: 'middle', group: 'showAxes' },
+  { x: 2.8284271, y: 0, ox: 0, oy: -16, text: 'Latent Altruism', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: -2, y: 0, ox: 86, oy: 0, text: 'No−One Else', fontSize: 11, color: 'rgba(200, 205, 232, 0.75)', bold: true, align: 'right', baseline: 'middle', group: 'showAxes' },
+  { x: -2, y: 0, ox: 250, oy: 0, text: 'Latent Selfishness', fontSize: 11, color: 'rgba(240, 80, 96, 0.75)', bold: true, align: 'right', baseline: 'middle', group: 'showAxes' },
+
+  { x: 1, y: 1, ox: 0, oy: -6, text: 'FUTURE LIGHT CONE', fontSize: 9, color: 'rgba(59, 222, 132, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
+  { x: -1, y: -1, ox: 0, oy: 6, text: 'PAST LIGHT CONE', fontSize: 9, color: 'rgba(224, 64, 128, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
+  { x: 0, y: 0, ox: 0, oy: -14, text: 'OBSERVER (PRESENT)', fontSize: 9, color: 'rgba(255, 255, 255, 0.95)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' }
+];
+
+// A "Compact" alternate preset — pulls the four horizon labels in close to the
+// grid edge instead of pushing them out to the circle apex, for smaller screens.
+const COMPACT_LABELS = JSON.parse(JSON.stringify(DEFAULT_LABELS)).map(l => {
+  if (l.text === 'Everyone') return { ...l, x: 2, y: 0, ox: -22, oy: 0 };
+  if (l.text === 'Latent Altruism') return { ...l, x: 2, y: 0, ox: -22, oy: 16 };
+  if (l.text === 'No−One Else') return { ...l, x: -2, y: 0, ox: 22, oy: 0 };
+  if (l.text === 'Latent Selfishness') return { ...l, x: -2, y: 0, ox: 22, oy: 16 };
+  return l;
+});
+
+const PRESETS = {
+  Default: { labels: DEFAULT_LABELS, customAxes: [] },
+  Compact: { labels: COMPACT_LABELS, customAxes: [] }
+};
+
+let GLOBAL_LABELS = JSON.parse(JSON.stringify(DEFAULT_LABELS));
+let CUSTOM_AXES = [];
+
+// Bootstrap from baked-in config, if this file was previously exported with edits
+(function bootstrapConfig() {
+  const cfgEl = document.getElementById('vft-live-config');
+  if (cfgEl && cfgEl.textContent.trim()) {
+    try {
+      const cfg = JSON.parse(cfgEl.textContent);
+      if (Array.isArray(cfg.labels)) GLOBAL_LABELS = cfg.labels;
+      if (Array.isArray(cfg.customAxes)) CUSTOM_AXES = cfg.customAxes;
+    } catch (e) { console.warn('Invalid embedded vft-live-config JSON', e); }
+  }
+})();
+
+// Built-in axes + user-drawn custom axes, merged into one trackable list.
+// An axis with `enabled === false` is skipped by projections/tracking but stays visible in the editor list.
+function getAllAxes() {
+  return GLOBAL_VFT_AXES.concat(CUSTOM_AXES);
+}
+
+// ─────────────────────────────────────────────
+//  SELECT / DRAG / ROTATE / CLICK-TO-PLACE STATE
+// ─────────────────────────────────────────────
+let selectedLabelIdx = -1;
+let selectedAxisIdx = -1;
+let draggingLabel = null;      // { idx, mode: 'move'|'rotate', startOx, startOy, startUx, startUy }
+let draggingAxisHandle = null; // { idx, endpoint: 1|2|'line', startX1, startY1, startX2, startY2, startDataX, startDataY }
+let placingAxis = null;        // { x1, y1 } once the first point is placed; null when inactive
+let placingAxisPreview = null; // [v, psi] of current mouse position while placing the second point
+let suppressNextClick = false;
+const ROTATE_HANDLE_R = 26; // px (pre-dpr) distance of the rotate handle above a selected label
+
+// Text box in LOCAL space, relative to the label's anchor point (0,0), pre-rotation.
+function getLabelLocalBox(l, dpr) {
+  const fontSize = Math.round(l.fontSize * dpr);
+  ctx.save();
+  ctx.font = `${l.bold ? '600' : '400'} ${fontSize}px 'Inter', sans-serif`;
+  const w = ctx.measureText(l.text).width;
+  ctx.restore();
+  const h = fontSize;
+  const align = l.align || 'center';
+  const baseline = l.baseline || 'middle';
+  let bx = 0;
+  if (align === 'center') bx = -w / 2;
+  else if (align === 'right') bx = -w;
+  let by = 0;
+  if (baseline === 'middle') by = -h / 2;
+  else if (baseline === 'bottom') by = -h;
+  const padX = 4 * dpr, padY = 2.5 * dpr;
+  return { bx: bx - padX, by: by - padY, w: w + padX * 2, h: h + padY * 2 };
+}
+
+// World (pre-pan/zoom) pixel position of a label's anchor point, including its ox/oy nudge.
+function getLabelAnchorPixel(l, dpr) {
+  const [px, py] = toPixel(l.x, l.y);
+  return [px + (l.ox || 0) * dpr, py + (l.oy || 0) * dpr];
+}
+
+function drawGlobalLabels(ctx, dpr) {
+  GLOBAL_LABELS.forEach((l, i) => {
+    if (l.group && !document.getElementById(l.group)?.checked) return;
+    const [x, y] = getLabelAnchorPixel(l, dpr);
+    const rot = (l.rotation || 0) * Math.PI / 180;
+    ctx.save();
+    ctx.translate(x, y);
+    if (rot) ctx.rotate(rot);
+    drawTextWithBackground(ctx, l.text, 0, 0, Math.round(l.fontSize * dpr), l.color, !!l.bold, l.align, l.baseline);
+
+    if (i === selectedLabelIdx) {
+      const box = getLabelLocalBox(l, dpr);
+      ctx.setLineDash([4 * dpr, 3 * dpr]);
+      ctx.strokeStyle = '#5b6cf8';
+      ctx.lineWidth = 1.5 * dpr;
+      ctx.strokeRect(box.bx, box.by, box.w, box.h);
+      ctx.setLineDash([]);
+
+      const handleY = -ROTATE_HANDLE_R * dpr;
+      ctx.beginPath();
+      ctx.moveTo(0, box.by);
+      ctx.lineTo(0, handleY);
+      ctx.strokeStyle = 'rgba(91,108,248,0.6)';
+      ctx.lineWidth = 1 * dpr;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(0, handleY, 5 * dpr, 0, Math.PI * 2);
+      ctx.fillStyle = '#5b6cf8';
+      ctx.fill();
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 1 * dpr;
+      ctx.stroke();
+    }
+    ctx.restore();
+  });
+}
+
+function drawCustomAxes(ctx, dpr) {
+  ctx.save();
+  ctx.lineWidth = 1.5 * dpr;
+  CUSTOM_AXES.forEach((a, i) => {
+    const [x1, y1] = toPixel(a.x1, a.y1);
+    const [x2, y2] = toPixel(a.x2, a.y2);
+    ctx.strokeStyle = a.color || '#ffffff';
+    ctx.globalAlpha = a.enabled === false ? 0.35 : 1;
+    ctx.setLineDash(a.dash ? [4 * dpr, 4 * dpr] : []);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    if (a.label && a.labelEnabled !== false) {
+      const t = a.labelT !== undefined ? a.labelT : 0.5;
+      const baseX = x1 + (x2 - x1) * t;
+      const baseY = y1 + (y2 - y1) * t;
+
+      // Normalize the line's angle so text is never upside-down
+      let normAngle = Math.atan2(y2 - y1, x2 - x1);
+      if (normAngle < -Math.PI / 2 || normAngle > Math.PI / 2) normAngle += Math.PI;
+
+      // Perpendicular offset (relative to the normalized angle, so it stays visually consistent)
+      const perp = (a.labelPerp !== undefined ? a.labelPerp : -9) * dpr;
+      const perpDirX = Math.cos(normAngle + Math.PI / 2);
+      const perpDirY = Math.sin(normAngle + Math.PI / 2);
+      const labelX = baseX + perpDirX * perp;
+      const labelY = baseY + perpDirY * perp;
+
+      const drawAngle = normAngle + (a.labelRotOffset || 0) * Math.PI / 180;
+
+      ctx.save();
+      ctx.translate(labelX, labelY);
+      ctx.rotate(drawAngle);
+      drawTextWithBackground(ctx, a.label, 0, 0, Math.round(8.5 * dpr), a.color || '#ffffff', true, 'center', 'middle');
+      ctx.restore();
+    }
+    ctx.globalAlpha = 1;
+    if (i === selectedAxisIdx) {
+      ctx.setLineDash([]);
+      [[x1, y1], [x2, y2]].forEach(([hx, hy]) => {
+        ctx.beginPath();
+        ctx.arc(hx, hy, 5 * dpr, 0, Math.PI * 2);
+        ctx.fillStyle = '#5b6cf8';
+        ctx.fill();
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 1 * dpr;
+        ctx.stroke();
+      });
+    }
+  });
+  ctx.setLineDash([]);
+  ctx.restore();
+
+  // Live preview while placing a new axis via click-to-place
+  if (placingAxis) {
+    const [px1, py1] = toPixel(placingAxis.x1, placingAxis.y1);
+    if (placingAxisPreview) {
+      const [px2, py2] = toPixel(placingAxisPreview[0], placingAxisPreview[1]);
+      ctx.save();
+      ctx.strokeStyle = 'rgba(160,112,240,0.7)';
+      ctx.lineWidth = 1.5 * dpr;
+      ctx.setLineDash([5 * dpr, 4 * dpr]);
+      ctx.beginPath();
+      ctx.moveTo(px1, py1);
+      ctx.lineTo(px2, py2);
+      ctx.stroke();
+      ctx.restore();
+    }
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(px1, py1, 5 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = '#a070f0';
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
 function calculatePointParams(v, psi) {
   const zone = classifyZone(v, psi);
   const projections = {};
-  GLOBAL_VFT_AXES.forEach(arm => {
+  getAllAxes().filter(ax => ax.enabled !== false).forEach(arm => {
     const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
     const len = Math.hypot(dx, dy);
     const ux = dx / len, uy = dy / len;
@@ -657,7 +927,7 @@ function calculatePointParams(v, psi) {
     const dir = Math.max(0, Math.min(100, (alongRaw / len) * 100));
     const mag = Math.max(0, 100 * (1 - distClamped / len));
 
-    projections[arm.name] = `[${Math.round(dir)}, ${Math.round(mag)}, ${Math.round(100 - dir)}]`;
+    projections[arm.name || arm.label || 'Custom Axis'] = `[${Math.round(dir)}, ${Math.round(mag)}, ${Math.round(100 - dir)}]`;
   });
 
   return {
@@ -816,7 +1086,7 @@ function draw() {
   // ── DRAW SURROUNDING SYSTEMIC HORIZON CIRCLE ──
   ctx.save();
   const [cx, cy] = toPixel(0, 0);
-  const rx = gridSize * 0.707; // Circumscribed radius surrounding the entire square
+  const rx = Math.max(0, gridSize * 0.707); // Circumscribed radius surrounding the entire square (clamped: transient resizes can momentarily shrink gridSize below 0)
   
   // 1. Draw dashed circle boundary
   ctx.beginPath();
@@ -876,7 +1146,11 @@ function draw() {
 
   // ── DRAW THE CENTERED GRID SQUARE CARD ──
   ctx.save();
-  ctx.fillStyle = document.getElementById('colorCardBg')?.value || '#0a0b0f'; // Dynamic grid box card background
+  {
+    const cardHex = document.getElementById('colorCardBg')?.value || '#0a0b0f';
+    const cardAlpha = parseInt(document.getElementById('opacityCardBg')?.value ?? '100', 10) / 100;
+    ctx.fillStyle = combineColorAlpha(cardHex, cardAlpha); // Dynamic grid box card background
+  }
   ctx.beginPath();
   ctx.roundRect(marginX, marginY, gridSize, gridSize, 12 * dpr);
   ctx.fill();
@@ -1520,26 +1794,8 @@ function draw() {
   const [ax1, ay] = toPixel( 2, 0);
   const [vx, vy1] = toPixel(0,  2);
 
-  if (document.getElementById('showDiagonals').checked) {
-    // End labels for the diagonal axes (Progress/Regression additions) aligned with the graph card corners
-    // Aligned inward ('left' for left side, 'right' for right side) so they never clip
-    
-    // Truth+ / Progress+ (Top-Left corner, above the card)
-    drawTextWithBackground(ctx, 'Truth+', marginX, marginY - 40 * dpr, labelFs, '#3bde84', true, 'left', 'bottom');
-    drawTextWithBackground(ctx, '(Progress+)', marginX, marginY - 8 * dpr, subFs, 'rgba(59, 222, 132, 0.8)', false, 'left', 'bottom');
-
-    // Truth− / Progress− (Bottom-Right corner, below the card)
-    drawTextWithBackground(ctx, 'Truth−', marginX + gridSize, marginY + gridSize + 8 * dpr, labelFs, '#e04080', true, 'right', 'top');
-    drawTextWithBackground(ctx, '(Progress−)', marginX + gridSize, marginY + gridSize + 22 * dpr, subFs, 'rgba(224, 64, 128, 0.8)', false, 'right', 'top');
-
-    // Lie+ / Regression+ (Top-Right corner, above the card)
-    drawTextWithBackground(ctx, 'Lie+', marginX + gridSize, marginY - 22 * dpr, labelFs, '#f05060', true, 'right', 'bottom');
-    drawTextWithBackground(ctx, '(Regression+)', marginX + gridSize, marginY - 8 * dpr, subFs, 'rgba(240, 80, 96, 0.8)', false, 'right', 'bottom');
-
-    // Lie− / Regression− (Bottom-Left corner, below the card)
-    drawTextWithBackground(ctx, 'Lie−', marginX, marginY + gridSize + 8 * dpr, labelFs, '#30c8e0', true, 'left', 'top');
-    drawTextWithBackground(ctx, '(Regression−)', marginX, marginY + gridSize + 22 * dpr, subFs, 'rgba(48, 200, 224, 0.8)', false, 'left', 'top');
-  }
+  drawGlobalLabels(ctx, dpr);
+  drawCustomAxes(ctx, dpr);
 
   if (document.getElementById('showAxes').checked) {
     // Center coordinates for the 3 columns and 3 rows of the 3x3 grid matrix
@@ -1550,35 +1806,6 @@ function draw() {
     const row1Y = toPixel(0, 1.33)[1];
     const row2Y = toPixel(0, 0)[1];
     const row3Y = toPixel(0, -1.33)[1];
-
-    // 1. Column labels at the TOP of the grid box
-    drawTextWithBackground(ctx, '← ADDITIVE', col1X, marginY - 32 * dpr, subFs, 'rgba(59, 222, 132, 0.75)', false, 'center', 'middle');
-    // drawTextWithBackground(ctx, 'Active', col1X, marginY - 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
-
-    drawTextWithBackground(ctx, 'Active', col2X, marginY - 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
-
-    drawTextWithBackground(ctx, 'SUBTRACTIVE →', col3X, marginY - 32 * dpr, subFs, 'rgba(240, 80, 96, 0.75)', false, 'center', 'middle');
-    // drawTextWithBackground(ctx, 'Suppressive', col3X, marginY - 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
-
-    // 2. Column labels at the BOTTOM of the grid box
-    // drawTextWithBackground(ctx, 'Active', col1X, marginY + gridSize + 14 * dpr, labelFs, '#3bde84', true, 'center', 'middle');
-    drawTextWithBackground(ctx, '← ADDITIVE', col1X, marginY + gridSize + 32 * dpr, subFs, 'rgba(59, 222, 132, 0.75)', false, 'center', 'middle');
-
-    drawTextWithBackground(ctx, 'Suppressive', col2X, marginY + gridSize + 14 * dpr, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'center', 'middle');
-
-    // drawTextWithBackground(ctx, 'Suppressive', col3X, marginY + gridSize + 14 * dpr, labelFs, '#f05060', true, 'center', 'middle');
-    drawTextWithBackground(ctx, 'SUBTRACTIVE →', col3X, marginY + gridSize + 32 * dpr, subFs, 'rgba(240, 80, 96, 0.75)', false, 'center', 'middle');
-
-    // 3. Row labels on the LEFT and RIGHT side of the grid box card
-    // drawTextWithBackground(ctx, 'Active', marginX - 22 * dpr, row1Y, labelFs, '#30c8e0', true, 'right', 'middle');
-    drawTextWithBackground(ctx, 'Everyone', marginX - 22 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
-    drawTextWithBackground(ctx, 'Latent Altruism', marginX - 5 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
-    drawTextWithBackground(ctx, 'No−One Else', marginX + gridSize + 86 * dpr, row2Y, labelFs, 'rgba(200, 205, 232, 0.75)', true, 'right', 'middle');
-    drawTextWithBackground(ctx, 'Latent Selfishness', marginX + gridSize + 250 * dpr, row2Y, labelFs, 'rgba(240, 80, 96, 0.75)', true, 'right', 'middle');
-	// header: 'Reductive', sub: 'FIRE - Ludus', color: 'rgba(240, 80, 96, 0.75)', align: 'left', baseline: 'bottom'
-    //drawTextWithBackground(ctx, 'N+', marginX, marginY - 22 * dpr, labelFs, '#3bde84', true, 'left', 'bottom');
-	
-    // drawTextWithBackground(ctx, 'Suppressive', marginX - 22 * dpr, row3Y, labelFs, '#30c8e0', true, 'right', 'middle');
 
     // 4. Grid numeric labels along the horizontal axis
     [2, 1, 0, -1, -2].forEach(tick => {
@@ -1766,7 +1993,7 @@ function draw() {
 
       // Draw projections and [dir+, mag, dir-] readings directly on the counted axes (excluding central/diagonal ones starting at 0,0 to prevent clutter)
       if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
-        const canvasAxes = GLOBAL_VFT_AXES.filter(ax => !(ax.x1 === 0 && ax.y1 === 0));
+        const canvasAxes = getAllAxes().filter(ax => ax.enabled !== false && !(ax.x1 === 0 && ax.y1 === 0));
 
         // Precalculate distances to each axis segment
         canvasAxes.forEach(ax => {
@@ -1914,8 +2141,9 @@ function updateReadout(v, psi, isPoint) {
   if (container) {
     container.innerHTML = '';
     
-    // Precalculate distances using global axes list
-    GLOBAL_VFT_AXES.forEach(ax => {
+    // Precalculate distances using the full (built-in + custom) axes list
+    const allAxes = getAllAxes();
+    allAxes.forEach(ax => {
       const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
       const len = Math.hypot(dx, dy);
       const ux = dx / len, uy = dy / len;
@@ -1928,14 +2156,17 @@ function updateReadout(v, psi, isPoint) {
       ax.len = len;
     });
 
-    // Sort by distance ascending
-    const sorted = [...GLOBAL_VFT_AXES].sort((a, b) => a.dist - b.dist);
+    // Sort by distance ascending (disabled axes never count toward the shader limit)
+    const trackable = allAxes.filter(ax => ax.enabled !== false);
+    const sorted = [...trackable].sort((a, b) => a.dist - b.dist);
     const sLimit = parseInt(document.getElementById('shaderLimit')?.value || '20');
 
-    GLOBAL_VFT_AXES.forEach(ax => {
-      const isCounted = sorted.indexOf(ax) < sLimit;
+    allAxes.forEach(ax => {
+      const isDisabled = ax.enabled === false;
+      const isCounted = !isDisabled && sorted.indexOf(ax) < sLimit;
       const dir = Math.max(0, Math.min(100, (ax.alongRaw / ax.len) * 100));
       const mag = Math.max(0, 100 * (1 - ax.dist / ax.len));
+      const name = ax.name || ax.label || 'Custom Axis';
 
       // Universally format as 3D vector [dir+, mag, dir-]
       const labelText = `[${dir.toFixed(0)}, ${mag.toFixed(0)}, ${(100 - dir).toFixed(0)}]`;
@@ -1944,16 +2175,29 @@ function updateReadout(v, psi, isPoint) {
       row.style.display = 'flex';
       row.style.justifyContent = 'space-between';
       row.style.lineHeight = '1.3';
-      
-      if (isCounted) {
+      row.style.cursor = 'pointer';
+      row.title = isDisabled ? 'Click to enable this axis' : 'Click to disable this axis';
+
+      if (isDisabled) {
+        row.style.color = 'rgba(255,255,255,0.2)';
+        row.style.fontWeight = 'normal';
+        row.style.textDecoration = 'line-through';
+        row.innerHTML = `<span>⊘ ${name}</span><span>off</span>`;
+      } else if (isCounted) {
         row.style.color = ax.color;
         row.style.fontWeight = 'bold';
-        row.innerHTML = `<span>● ${ax.name}</span><span>${labelText}</span>`;
+        row.innerHTML = `<span>● ${name}</span><span>${labelText}</span>`;
       } else {
         row.style.color = 'rgba(255,255,255,0.2)'; // Faded out
         row.style.fontWeight = 'normal';
-        row.innerHTML = `<span>○ ${ax.name}</span><span>${labelText}</span>`;
+        row.innerHTML = `<span>○ ${name}</span><span>${labelText}</span>`;
       }
+      row.addEventListener('click', () => {
+        ax.enabled = isDisabled ? true : false;
+        if (ax.x1 !== undefined && CUSTOM_AXES.includes(ax)) renderAxisEditor();
+        updateReadout(v, psi, isPoint);
+        draw();
+      });
       container.appendChild(row);
     });
   }
@@ -2183,41 +2427,258 @@ function getCanvasPos(e) {
   ];
 }
 
+// Undo pan/zoom only — lands in the same pre-transform pixel space that toPixel() produces.
+function unzoomPixel(px, py) {
+  const W = canvas.width, H = canvas.height;
+  const zoomFactor = parseFloat(document.getElementById('zoomLevel')?.value || '80') / 100;
+  return [
+    ((px - panX) - W / 2) / zoomFactor + W / 2,
+    ((py - panY) - H / 2) / zoomFactor + H / 2
+  ];
+}
+
+// Pre-transform pixel space -> data (v, psi) space, unclamped (can land outside ±2, e.g. at circle apexes).
+function unzoomedPixelToData(ux, uy) {
+  const W = canvas.width, H = canvas.height;
+  const dpr = devicePixelRatio;
+  const gridSize = Math.min(W, H) - 150 * dpr;
+  const marginX = (W - gridSize) / 2;
+  const marginY = (H - gridSize) / 2;
+  return [2 - ((ux - marginX) / gridSize) * 4, 2 - ((uy - marginY) / gridSize) * 4];
+}
+
+function toCoordUnclamped(px, py) {
+  const [ux, uy] = unzoomPixel(px, py);
+  return unzoomedPixelToData(ux, uy);
+}
+
+// Returns the index of the topmost visible label whose box contains (ux, uy) — pre-transform pixel space — or -1.
+function hitTestLabel(ux, uy) {
+  const dpr = devicePixelRatio;
+  for (let i = GLOBAL_LABELS.length - 1; i >= 0; i--) {
+    const l = GLOBAL_LABELS[i];
+    if (l.group && !document.getElementById(l.group)?.checked) continue;
+    const [x, y] = getLabelAnchorPixel(l, dpr);
+    const rot = (l.rotation || 0) * Math.PI / 180;
+    let localX = ux - x, localY = uy - y;
+    if (rot) {
+      const cos = Math.cos(-rot), sin = Math.sin(-rot);
+      const rx = localX * cos - localY * sin;
+      const ry = localX * sin + localY * cos;
+      localX = rx; localY = ry;
+    }
+    const box = getLabelLocalBox(l, dpr);
+    if (localX >= box.bx && localX <= box.bx + box.w && localY >= box.by && localY <= box.by + box.h) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function hitTestRotateHandle(idx, ux, uy) {
+  if (idx < 0 || !GLOBAL_LABELS[idx]) return false;
+  const dpr = devicePixelRatio;
+  const l = GLOBAL_LABELS[idx];
+  const [x, y] = getLabelAnchorPixel(l, dpr);
+  const rot = (l.rotation || 0) * Math.PI / 180;
+  const hy = -ROTATE_HANDLE_R * dpr;
+  const hxWorld = x - hy * Math.sin(rot);
+  const hyWorld = y + hy * Math.cos(rot);
+  return Math.hypot(ux - hxWorld, uy - hyWorld) <= 9 * dpr;
+}
+
+function distToSegment(px, py, x1, y1, x2, y2) {
+  const dx = x2 - x1, dy = y2 - y1;
+  const lenSq = dx * dx + dy * dy;
+  let t = lenSq === 0 ? 0 : ((px - x1) * dx + (py - y1) * dy) / lenSq;
+  t = Math.max(0, Math.min(1, t));
+  return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
+}
+
+function hitTestAxisEndpoint(idx, ux, uy) {
+  if (idx < 0 || !CUSTOM_AXES[idx]) return null;
+  const dpr = devicePixelRatio;
+  const a = CUSTOM_AXES[idx];
+  const [x1, y1] = toPixel(a.x1, a.y1);
+  const [x2, y2] = toPixel(a.x2, a.y2);
+  if (Math.hypot(ux - x1, uy - y1) <= 9 * dpr) return 1;
+  if (Math.hypot(ux - x2, uy - y2) <= 9 * dpr) return 2;
+  return null;
+}
+
+function hitTestAxisLine(ux, uy) {
+  const dpr = devicePixelRatio;
+  for (let i = CUSTOM_AXES.length - 1; i >= 0; i--) {
+    const a = CUSTOM_AXES[i];
+    const [x1, y1] = toPixel(a.x1, a.y1);
+    const [x2, y2] = toPixel(a.x2, a.y2);
+    if (distToSegment(ux, uy, x1, y1, x2, y2) <= 6 * dpr) return i;
+  }
+  return -1;
+}
+
+function setPlacementStatus(text) {
+  const el = document.getElementById('axisPlacementStatus');
+  if (el) el.textContent = text;
+}
+
 canvas.addEventListener('mousedown', e => {
-  if (e.button === 1) { // Middle mouse click
+  if (e.button === 1) { // Middle mouse click -> pan
     isPanning = true;
     const [px, py] = getCanvasPos(e);
     startPanX = px - panX;
     startPanY = py - panY;
     e.preventDefault(); // Disable default autoscroll trigger
+    return;
+  }
+  if (e.button !== 0 || placingAxis) return;
+
+  const [rawPx, rawPy] = getCanvasPos(e);
+  const [ux, uy] = unzoomPixel(rawPx, rawPy);
+
+  // 1. Rotate handle of the currently selected label
+  if (selectedLabelIdx >= 0 && hitTestRotateHandle(selectedLabelIdx, ux, uy)) {
+    draggingLabel = { idx: selectedLabelIdx, mode: 'rotate' };
+    suppressNextClick = true;
+    return;
+  }
+
+  // 2. Endpoint handle of the currently selected custom axis
+  if (selectedAxisIdx >= 0) {
+    const ep = hitTestAxisEndpoint(selectedAxisIdx, ux, uy);
+    if (ep) {
+      draggingAxisHandle = { idx: selectedAxisIdx, endpoint: ep };
+      suppressNextClick = true;
+      return;
+    }
+  }
+
+  // 3. Any label body -> select it and start moving
+  const labelHit = hitTestLabel(ux, uy);
+  if (labelHit >= 0) {
+    selectedLabelIdx = labelHit;
+    selectedAxisIdx = -1;
+    const l = GLOBAL_LABELS[labelHit];
+    draggingLabel = { idx: labelHit, mode: 'move', startOx: l.ox || 0, startOy: l.oy || 0, startUx: ux, startUy: uy };
+    suppressNextClick = true;
+    renderLabelEditor();
+    draw();
+    return;
+  }
+
+  // 4. Any custom axis line -> select it and start moving the whole line
+  const axisHit = hitTestAxisLine(ux, uy);
+  if (axisHit >= 0) {
+    selectedAxisIdx = axisHit;
+    selectedLabelIdx = -1;
+    const a = CUSTOM_AXES[axisHit];
+    draggingAxisHandle = { idx: axisHit, endpoint: 'line', startX1: a.x1, startY1: a.y1, startX2: a.x2, startY2: a.y2, startUx: ux, startUy: uy };
+    suppressNextClick = true;
+    renderAxisEditor();
+    draw();
+    return;
+  }
+
+  // 5. Empty space -> deselect (normal click-to-plot behavior still runs on 'click')
+  if (selectedLabelIdx >= 0 || selectedAxisIdx >= 0) {
+    selectedLabelIdx = -1;
+    selectedAxisIdx = -1;
+    draw();
   }
 });
 
 canvas.addEventListener('mouseup', e => {
-  if (e.button === 1) {
-    isPanning = false;
+  if (e.button === 1) { isPanning = false; return; }
+  if (e.button === 0) {
+    draggingLabel = null;
+    draggingAxisHandle = null;
   }
 });
 
 canvas.addEventListener('mousemove', e => {
-  const [px, py] = getCanvasPos(e);
+  const [rawPx, rawPy] = getCanvasPos(e);
+
   if (isPanning) {
-    panX = px - startPanX;
-    panY = py - startPanY;
+    panX = rawPx - startPanX;
+    panY = rawPy - startPanY;
     draw();
-  } else {
-    const [v, psi] = toCoord(px, py);
-    const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
-    const finalV = modeRel ? v + 1 : v;
-    const finalPsi = modeRel ? psi + 1 : psi;
-    hoverCoord = [finalV, finalPsi];
-    updateReadout(finalV, finalPsi, false);
-    draw();
+    return;
   }
+
+  if (draggingLabel) {
+    const [ux, uy] = unzoomPixel(rawPx, rawPy);
+    const dpr = devicePixelRatio;
+    const l = GLOBAL_LABELS[draggingLabel.idx];
+    if (draggingLabel.mode === 'move') {
+      l.ox = draggingLabel.startOx + (ux - draggingLabel.startUx) / dpr;
+      l.oy = draggingLabel.startOy + (uy - draggingLabel.startUy) / dpr;
+    } else if (draggingLabel.mode === 'rotate') {
+      const [ax, ay] = getLabelAnchorPixel(l, dpr);
+      l.rotation = Math.round(Math.atan2(ux - ax, ay - uy) * 180 / Math.PI);
+    }
+    renderLabelEditor();
+    draw();
+    return;
+  }
+
+  if (draggingAxisHandle) {
+    const [ux, uy] = unzoomPixel(rawPx, rawPy);
+    const a = CUSTOM_AXES[draggingAxisHandle.idx];
+    if (draggingAxisHandle.endpoint === 1) {
+      const [v, psi] = unzoomedPixelToData(ux, uy);
+      a.x1 = v; a.y1 = psi;
+    } else if (draggingAxisHandle.endpoint === 2) {
+      const [v, psi] = unzoomedPixelToData(ux, uy);
+      a.x2 = v; a.y2 = psi;
+    } else if (draggingAxisHandle.endpoint === 'line') {
+      const [v0, psi0] = unzoomedPixelToData(draggingAxisHandle.startUx, draggingAxisHandle.startUy);
+      const [v1, psi1] = unzoomedPixelToData(ux, uy);
+      const dv = v1 - v0, dpsi = psi1 - psi0;
+      a.x1 = draggingAxisHandle.startX1 + dv; a.y1 = draggingAxisHandle.startY1 + dpsi;
+      a.x2 = draggingAxisHandle.startX2 + dv; a.y2 = draggingAxisHandle.startY2 + dpsi;
+    }
+    renderAxisEditor();
+    draw();
+    return;
+  }
+
+  const [v, psi] = toCoord(rawPx, rawPy);
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  const finalV = modeRel ? v + 1 : v;
+  const finalPsi = modeRel ? psi + 1 : psi;
+  hoverCoord = [finalV, finalPsi];
+
+  if (placingAxis && placingAxis.x1 !== undefined) {
+    placingAxisPreview = toCoordUnclamped(rawPx, rawPy);
+  }
+
+  updateReadout(finalV, finalPsi, false);
+
+  // Cursor feedback for hoverable handles/labels/lines
+  if (placingAxis) {
+    canvas.style.cursor = 'crosshair';
+  } else {
+    const [ux, uy] = unzoomPixel(rawPx, rawPy);
+    if (selectedLabelIdx >= 0 && hitTestRotateHandle(selectedLabelIdx, ux, uy)) {
+      canvas.style.cursor = 'grab';
+    } else if (hitTestLabel(ux, uy) >= 0) {
+      canvas.style.cursor = 'move';
+    } else if (selectedAxisIdx >= 0 && hitTestAxisEndpoint(selectedAxisIdx, ux, uy)) {
+      canvas.style.cursor = 'grab';
+    } else if (hitTestAxisLine(ux, uy) >= 0) {
+      canvas.style.cursor = 'move';
+    } else {
+      canvas.style.cursor = 'crosshair';
+    }
+  }
+
+  draw();
 });
 
 canvas.addEventListener('mouseleave', () => {
   isPanning = false;
+  draggingLabel = null;
+  draggingAxisHandle = null;
   hoverCoord = null;
   if (selectedIdx >= 0 && points[selectedIdx]) {
     const pt = points[selectedIdx];
@@ -2229,7 +2690,38 @@ canvas.addEventListener('mouseleave', () => {
 });
 
 canvas.addEventListener('click', e => {
-  const [px, py] = getCanvasPos(e);
+  const [rawPx, rawPy] = getCanvasPos(e);
+
+  if (placingAxis) {
+    const [v, psi] = toCoordUnclamped(rawPx, rawPy);
+    if (placingAxis.x1 === undefined) {
+      placingAxis.x1 = v;
+      placingAxis.y1 = psi;
+      placingAxisPreview = [v, psi];
+      setPlacementStatus('Click a second point to finish the line (Esc to cancel)…');
+    } else {
+      CUSTOM_AXES.push({
+        x1: placingAxis.x1, y1: placingAxis.y1, x2: v, y2: psi,
+        color: '#a070f0', label: `Custom Axis ${CUSTOM_AXES.length + 1}`, enabled: true,
+        labelEnabled: true, labelT: 0.5, labelRotOffset: 0, labelPerp: -9
+      });
+      selectedAxisIdx = CUSTOM_AXES.length - 1;
+      selectedLabelIdx = -1;
+      placingAxis = null;
+      placingAxisPreview = null;
+      setPlacementStatus('');
+      renderAxisEditor();
+    }
+    draw();
+    return;
+  }
+
+  if (suppressNextClick) {
+    suppressNextClick = false;
+    return;
+  }
+
+  const [px, py] = [rawPx, rawPy];
   const [v, psi] = toCoord(px, py);
   const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
   const finalV = modeRel ? v + 1 : v;
@@ -2242,6 +2734,32 @@ canvas.addEventListener('click', e => {
   updateReadout(finalV, finalPsi, true);
   renderPointsList();
   draw();
+});
+
+window.addEventListener('keydown', e => {
+  const tag = document.activeElement && document.activeElement.tagName;
+  const typing = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+
+  if (e.key === 'Escape') {
+    if (placingAxis) { placingAxis = null; placingAxisPreview = null; setPlacementStatus(''); draw(); }
+    if (selectedLabelIdx >= 0 || selectedAxisIdx >= 0) { selectedLabelIdx = -1; selectedAxisIdx = -1; draw(); }
+    return;
+  }
+  if (!typing && (e.key === 'Delete' || e.key === 'Backspace')) {
+    if (selectedLabelIdx >= 0) {
+      GLOBAL_LABELS.splice(selectedLabelIdx, 1);
+      selectedLabelIdx = -1;
+      renderLabelEditor();
+      draw();
+      e.preventDefault();
+    } else if (selectedAxisIdx >= 0) {
+      CUSTOM_AXES.splice(selectedAxisIdx, 1);
+      selectedAxisIdx = -1;
+      renderAxisEditor();
+      draw();
+      e.preventDefault();
+    }
+  }
 });
 
 document.getElementById('exportBtn').addEventListener('click', () => {
@@ -2351,14 +2869,270 @@ document.getElementById('modeRelative').addEventListener('change', () => {
 });
 
 // Color picker event listeners
-document.getElementById('colorPageBg').addEventListener('input', (e) => {
-  document.body.style.background = e.target.value;
-  draw();
-});
+function applyPageBg() {
+  const hex = document.getElementById('colorPageBg').value;
+  const alpha = parseInt(document.getElementById('opacityPageBg').value, 10) / 100;
+  document.body.style.background = combineColorAlpha(hex, alpha);
+}
+document.getElementById('colorPageBg').addEventListener('input', () => { applyPageBg(); draw(); });
+document.getElementById('opacityPageBg').addEventListener('input', () => { applyPageBg(); draw(); });
+
 document.getElementById('colorCardBg').addEventListener('input', (e) => {
   document.documentElement.style.setProperty('--bg', e.target.value);
   draw();
 });
+document.getElementById('opacityCardBg').addEventListener('input', () => draw());
+
+// ─────────────────────────────────────────────
+//  LABEL & CUSTOM AXIS EDITOR PANEL
+// ─────────────────────────────────────────────
+const NUM_INPUT_STYLE = 'width:40px; background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:4px; font-size:9px; padding:2px;';
+
+function toHexColor(c) {
+  if (!c) return '#ffffff';
+  if (c.startsWith('#')) return c.length === 7 ? c : '#ffffff';
+  const m = c.match(/rgba?\(([^)]+)\)/);
+  if (m) {
+    const [r, g, b] = m[1].split(',').map(s => parseFloat(s.trim()));
+    return '#' + [r, g, b].map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('');
+  }
+  return '#ffffff';
+}
+
+function getColorAlpha(c) {
+  if (!c) return 1;
+  const m = c.match(/rgba?\(([^)]+)\)/);
+  if (m) {
+    const parts = m[1].split(',').map(s => parseFloat(s.trim()));
+    return parts.length >= 4 && !isNaN(parts[3]) ? parts[3] : 1;
+  }
+  return 1;
+}
+
+function combineColorAlpha(hex, alpha) {
+  const h = (hex && hex.length === 7) ? hex : '#ffffff';
+  const r = parseInt(h.slice(1, 3), 16), g = parseInt(h.slice(3, 5), 16), b = parseInt(h.slice(5, 7), 16);
+  const a = Math.max(0, Math.min(1, alpha));
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+
+function renderLabelEditor() {
+  const list = document.getElementById('labelEditorList');
+  document.getElementById('labelCount').textContent = GLOBAL_LABELS.length;
+  list.innerHTML = '';
+  GLOBAL_LABELS.forEach((l, i) => {
+    const row = document.createElement('div');
+    const selected = i === selectedLabelIdx;
+    row.style.cssText = `border:1px solid ${selected ? '#5b6cf8' : 'var(--border)'}; border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer;`;
+    row.dataset.idx = i;
+    row.dataset.action = 'select-label';
+    row.innerHTML = `
+      <div style="display:flex; gap:4px; align-items:center;">
+        <input class="label-input" data-idx="${i}" data-field="text" value="${String(l.text).replace(/"/g, '&quot;')}" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="${i}" data-field="color" value="${toHexColor(l.color)}" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <input type="range" min="0" max="100" data-idx="${i}" data-field="colorAlpha" value="${Math.round(getColorAlpha(l.color) * 100)}" title="Opacity" style="width:38px; accent-color:#5b6cf8;">
+        <span data-idx="${i}" data-action="del-label" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x <input type="number" step="0.01" data-idx="${i}" data-field="x" value="${l.x}" style="${NUM_INPUT_STYLE}"></label>
+        <label>y <input type="number" step="0.01" data-idx="${i}" data-field="y" value="${l.y}" style="${NUM_INPUT_STYLE}"></label>
+        <label>ox <input type="number" step="1" data-idx="${i}" data-field="ox" value="${l.ox || 0}" style="${NUM_INPUT_STYLE}"></label>
+        <label>oy <input type="number" step="1" data-idx="${i}" data-field="oy" value="${l.oy || 0}" style="${NUM_INPUT_STYLE}"></label>
+        <label>rot° <input type="number" step="1" data-idx="${i}" data-field="rotation" value="${l.rotation || 0}" style="${NUM_INPUT_STYLE}"></label>
+      </div>`;
+    list.appendChild(row);
+  });
+}
+
+function renderAxisEditor() {
+  const list = document.getElementById('axisEditorList');
+  document.getElementById('axisCount').textContent = CUSTOM_AXES.length;
+  list.innerHTML = '';
+  if (CUSTOM_AXES.length === 0) {
+    list.innerHTML = '<div class="empty-hint" style="padding:6px 0;">No custom lines yet</div>';
+    return;
+  }
+  CUSTOM_AXES.forEach((a, i) => {
+    const row = document.createElement('div');
+    const selected = i === selectedAxisIdx;
+    row.style.cssText = `border:1px solid ${selected ? '#5b6cf8' : 'var(--border)'}; border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer; ${a.enabled === false ? 'opacity:0.5;' : ''}`;
+    row.dataset.idx = i;
+    row.dataset.action = 'select-axis';
+    row.innerHTML = `
+      <div style="display:flex; gap:4px; align-items:center;">
+        <label style="display:flex; align-items:center;" title="${a.enabled === false ? 'Enable' : 'Disable'} this axis"><input type="checkbox" data-idx="${i}" data-field="enabled" ${a.enabled === false ? '' : 'checked'}></label>
+        <input class="label-input" data-idx="${i}" data-field="label" value="${String(a.label || '').replace(/"/g, '&quot;')}" placeholder="line label…" style="flex:1; padding:3px 6px; font-size:10px;">
+        <input type="color" data-idx="${i}" data-field="color" value="${toHexColor(a.color)}" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+        <input type="range" min="0" max="100" data-idx="${i}" data-field="colorAlpha" value="${Math.round(getColorAlpha(a.color) * 100)}" title="Opacity" style="width:38px; accent-color:#5b6cf8;">
+        <span data-idx="${i}" data-action="del-axis" class="point-del" title="Remove">✕</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+        <label>x1 <input type="number" step="0.01" data-idx="${i}" data-field="x1" value="${a.x1}" style="${NUM_INPUT_STYLE}"></label>
+        <label>y1 <input type="number" step="0.01" data-idx="${i}" data-field="y1" value="${a.y1}" style="${NUM_INPUT_STYLE}"></label>
+        <label>x2 <input type="number" step="0.01" data-idx="${i}" data-field="x2" value="${a.x2}" style="${NUM_INPUT_STYLE}"></label>
+        <label>y2 <input type="number" step="0.01" data-idx="${i}" data-field="y2" value="${a.y2}" style="${NUM_INPUT_STYLE}"></label>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap; border-top:1px dashed var(--border); padding-top:4px;">
+        <label style="display:flex; align-items:center; gap:2px;" title="Show/hide this line's label"><input type="checkbox" data-idx="${i}" data-field="labelEnabled" ${a.labelEnabled === false ? '' : 'checked'}> label</label>
+        <label title="Position along the line — 0=start, 1=end, can go beyond either end">pos <input type="number" step="0.05" data-idx="${i}" data-field="labelT" value="${a.labelT !== undefined ? a.labelT : 0.5}" style="${NUM_INPUT_STYLE}"></label>
+        <label title="Rotation offset added on top of the line's own angle">rot°+ <input type="number" step="1" data-idx="${i}" data-field="labelRotOffset" value="${a.labelRotOffset || 0}" style="${NUM_INPUT_STYLE}"></label>
+        <label title="Perpendicular distance from the line, px">perp <input type="number" step="1" data-idx="${i}" data-field="labelPerp" value="${a.labelPerp !== undefined ? a.labelPerp : -9}" style="${NUM_INPUT_STYLE}"></label>
+      </div>`;
+    list.appendChild(row);
+  });
+}
+
+document.getElementById('labelEditorList').addEventListener('input', (e) => {
+  const idx = e.target.dataset.idx, field = e.target.dataset.field;
+  if (idx === undefined || !field) return;
+  const l = GLOBAL_LABELS[idx];
+  if (!l) return;
+  if (field === 'text') l.text = e.target.value;
+  else if (field === 'color') l.color = combineColorAlpha(e.target.value, getColorAlpha(l.color));
+  else if (field === 'colorAlpha') l.color = combineColorAlpha(toHexColor(l.color), parseInt(e.target.value, 10) / 100);
+  else l[field] = parseFloat(e.target.value) || 0;
+  draw();
+});
+document.getElementById('labelEditorList').addEventListener('click', (e) => {
+  if (e.target.dataset.action === 'del-label') {
+    GLOBAL_LABELS.splice(parseInt(e.target.dataset.idx), 1);
+    if (selectedLabelIdx === parseInt(e.target.dataset.idx)) selectedLabelIdx = -1;
+    renderLabelEditor();
+    draw();
+    return;
+  }
+  const row = e.target.closest('[data-action="select-label"]');
+  if (row && e.target.tagName !== 'INPUT') {
+    selectedLabelIdx = parseInt(row.dataset.idx);
+    selectedAxisIdx = -1;
+    renderLabelEditor();
+    draw();
+  }
+});
+
+document.getElementById('axisEditorList').addEventListener('input', (e) => {
+  const idx = e.target.dataset.idx, field = e.target.dataset.field;
+  if (idx === undefined || !field) return;
+  const a = CUSTOM_AXES[idx];
+  if (!a) return;
+  if (field === 'enabled' || field === 'labelEnabled') a[field] = e.target.checked;
+  else if (field === 'label') a.label = e.target.value;
+  else if (field === 'color') a.color = combineColorAlpha(e.target.value, getColorAlpha(a.color));
+  else if (field === 'colorAlpha') a.color = combineColorAlpha(toHexColor(a.color), parseInt(e.target.value, 10) / 100);
+  else a[field] = parseFloat(e.target.value) || 0;
+  draw();
+});
+document.getElementById('axisEditorList').addEventListener('click', (e) => {
+  if (e.target.dataset.action === 'del-axis') {
+    CUSTOM_AXES.splice(parseInt(e.target.dataset.idx), 1);
+    if (selectedAxisIdx === parseInt(e.target.dataset.idx)) selectedAxisIdx = -1;
+    renderAxisEditor();
+    draw();
+    return;
+  }
+  const row = e.target.closest('[data-action="select-axis"]');
+  if (row && e.target.tagName !== 'INPUT') {
+    selectedAxisIdx = parseInt(row.dataset.idx);
+    selectedLabelIdx = -1;
+    renderAxisEditor();
+    draw();
+  }
+});
+
+document.getElementById('addLabelBtn').addEventListener('click', () => {
+  GLOBAL_LABELS.push({ x: 0, y: 0, ox: 0, oy: 0, rotation: 0, text: 'New Label', fontSize: 11, color: '#ffffff', bold: true, align: 'center', baseline: 'middle' });
+  selectedLabelIdx = GLOBAL_LABELS.length - 1;
+  selectedAxisIdx = -1;
+  renderLabelEditor();
+  draw();
+});
+document.getElementById('addAxisBtn').addEventListener('click', () => {
+  if (placingAxis) {
+    // Already placing -> treat as Cancel
+    placingAxis = null;
+    placingAxisPreview = null;
+    setPlacementStatus('');
+    draw();
+    return;
+  }
+  placingAxis = {};
+  placingAxisPreview = null;
+  selectedAxisIdx = -1;
+  selectedLabelIdx = -1;
+  setPlacementStatus('Click a first point on the map (Esc to cancel)…');
+  draw();
+});
+
+document.getElementById('presetSelect').addEventListener('change', (e) => {
+  const preset = PRESETS[e.target.value];
+  if (!preset) return;
+  GLOBAL_LABELS = JSON.parse(JSON.stringify(preset.labels));
+  CUSTOM_AXES = JSON.parse(JSON.stringify(preset.customAxes));
+  selectedLabelIdx = -1;
+  selectedAxisIdx = -1;
+  placingAxis = null;
+  placingAxisPreview = null;
+  setPlacementStatus('');
+  renderLabelEditor();
+  renderAxisEditor();
+  draw();
+});
+
+document.getElementById('importPresetBtn').addEventListener('click', () => {
+  document.getElementById('presetFileInput').click();
+});
+document.getElementById('presetFileInput').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const cfg = JSON.parse(reader.result);
+      if (!Array.isArray(cfg.labels)) throw new Error('Missing "labels" array');
+      GLOBAL_LABELS = cfg.labels;
+      CUSTOM_AXES = Array.isArray(cfg.customAxes) ? cfg.customAxes : [];
+      selectedLabelIdx = -1;
+      selectedAxisIdx = -1;
+      placingAxis = null;
+      placingAxisPreview = null;
+      setPlacementStatus('');
+      renderLabelEditor();
+      renderAxisEditor();
+      draw();
+    } catch (err) {
+      alert('Invalid preset JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+});
+
+document.getElementById('exportPresetBtn').addEventListener('click', () => {
+  const data = JSON.stringify({ labels: GLOBAL_LABELS, customAxes: CUSTOM_AXES }, null, 2);
+  const blob = new Blob([data], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `hegemony_preset_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('exportHtmlBtn').addEventListener('click', () => {
+  const cfgEl = document.getElementById('vft-live-config');
+  cfgEl.textContent = JSON.stringify({ labels: GLOBAL_LABELS, customAxes: CUSTOM_AXES });
+  const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `hegemony_map_edited_${Date.now()}.html`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+renderLabelEditor();
+renderAxisEditor();
 
 // Initial state updates for default point
 if (points.length > 0) {

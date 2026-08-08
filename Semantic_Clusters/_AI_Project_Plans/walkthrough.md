@@ -1,28 +1,24 @@
-# Walkthrough: VFT Document Timeline Explorer
+# Walkthrough: VFT Horizontal Matrix & 32-Category Timeline
 
-This document summarizes the changes made to implement Part 1 of the Document Timeline Explorer, which groups files by their filesystem creation date and displays their VFT topics.
+This document summarizes the changes made to implement the 32-category split and the Horizontal Grid Matrix view mode in the Timeline Explorer.
 
 ## Changes Made
 
-### 1. Python Backend (`start_viewer.py`)
-* Appended the `/api/timeline` GET route.
-* Scans all markdown documents listed in `corpus_manifest.json`.
-* Obtains original filesystem creation dates using `os.path.getctime`.
-* Maps each file to its dominant topic cluster using `cluster_mapping.json` (resolving VFT quadrant names, isms, and node themes).
-* Marks non-concept files (plans, task logs, system guides) as `System / Project Plan` and unindexed notes as `Unclassified Content`.
-* Returns the timeline entries sorted in reverse chronological order.
+### 1. 32-Category Split Logic (`viewer.html`)
+* Added `VFT_32_CATEGORIES` which lists all 16 Optimisms and 16 Pessimisms (Isms) as distinct categories, completely un-baking merged pairs like `"Physics / Meta-Physics"` and `"Internal Judgment / Conscience"`.
+* Implemented `getFileCategories(file)` to parse a document's VFT indicators (node name, quadrant, and specific isms) and map it to one or more of the 32 distinct categories:
+  * For example, files mapping to `Physics / Meta-Physics` are now correctly routed to either `Physics (Objectivity)` or `Meta-Physics (Imagination)` based on their isms (`Objectivity` or `Imagination`), or both if both apply.
 
-### 2. Frontend UI (`viewer.html`)
-* **Header Button:** Added the `&#128337; Timeline` tab selector button in the header navbar.
-* **Timeline View Panel:** Added a new panel featuring a dual-column layout:
-  * **Sidebar Filters:** Allows filtering notes by name (live input), VFT Quadrant (GG, LE, LG, GE), or specific Node Themes.
-  * **Chrono-Feed Dashboard:** Displays notes grouped by date card headings. Cards show file title, relative path, quadrant badges, node descriptions, and ism lists.
-* **Navigation Script:** Integrated `drOpenTimeline()` to fetch the data and `drTimelineClick()` to automatically switch to the doc reader and open clicked files.
+### 2. Horizontal Grid Timeline Mode (`viewer.html`)
+* **Header Toggles:** Added view mode toggle buttons (`☰ List View` and `box⊞ Grid View`) to switch between the original vertical list layout and the new horizontal grid matrix.
+* **Sticky 2D Matrix Table:** Implemented `drRenderHorizontalGrid(items)` which builds a sticky 2D table matrix:
+  * **Y-Axis (Left Column, Sticky):** The VFT Categories. To keep the grid dense, only rows containing active matching notes are rendered.
+  * **X-Axis (Top Row, Sticky):** Sorted dates in reverse chronological order.
+  * **Grid Cells:** clickable mini-cards displaying notes created on that date mapping to that category. Clicking a card navigates directly to the document reader.
 
 ---
 
 ## Verification Results
 
-### API Validation
-* Queried `http://localhost:8001/api/timeline` and verified that 1,230 files were successfully indexed and sorted.
-* The newest files (such as `Physics/The Geometry of Definition Monograph.md`, created `2026-06-27`) correctly appear at the top.
+* **Visual Check:** Switched to "Grid View" locally, verifying that dates scroll horizontally while categories stay frozen on the left.
+* **Separation Verified:** Notes previously grouped under combined categories are now cleanly separated across distinct rows (e.g. *Physics* on the Physics row, *Meta-Physics* on the Meta-Physics row).
