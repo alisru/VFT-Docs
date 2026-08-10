@@ -73,6 +73,32 @@
     }
     .clear-btn:hover { border-color: var(--accent); color: var(--accent); }
 
+    .text-popup {
+      position: fixed;
+      z-index: 1000;
+      width: 240px;
+      background: var(--panel);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+    }
+    .text-popup-btn {
+      flex-shrink: 0;
+      font-size: 10px;
+      font-weight: 600;
+      font-style: italic;
+      padding: 2px 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .text-popup-btn:hover { border-color: var(--accent); color: var(--accent); }
+
     .main {
       flex: 1;
       display: grid;
@@ -312,6 +338,9 @@
     <div class="subtitle">Canonical Alignment (X: +2υ Left → -2υ Right | Y: +2ψ Top → -2ψ Bottom)</div>
   </div>
   <div class="spacer"></div>
+  <label style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); margin-right:6px;" title="Master switch — off disables dragging on the canvas for every label/axis/shape, regardless of individual lock checkboxes. Panel editing still works."><input type="checkbox" id="editMode" checked> Edit Mode</label>
+  <button class="clear-btn" id="undoBtn" title="Undo (Ctrl+Z)">↶ Undo</button>
+  <button class="clear-btn" id="redoBtn" title="Redo (Ctrl+Shift+Z)">↷ Redo</button>
   <button class="clear-btn" id="clearBtn">Clear All</button>
 </header>
 
@@ -348,7 +377,10 @@
 
     <!-- Label input -->
     <div class="side-section">
-      <div class="side-title">Label & Context</div>
+      <div class="side-title" style="display:flex; justify-content:space-between; align-items:center;">
+        <span>Label & Context</span>
+        <button class="clear-btn" id="addPointBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Point</button>
+      </div>
       <div class="label-row" style="display:flex; flex-direction:column; gap:10px;">
         <input class="label-input" id="labelInput" placeholder="Actor / event name..." maxlength="40" />
         <select class="label-input" id="contextSelect" style="background:#12141c; color:#fff; border:1px solid #2a2d3d; padding:8px 12px; border-radius:6px; cursor:pointer; font-size:11px; outline:none;">
@@ -361,7 +393,8 @@
           <option value="Bad Preference">Bad Preference (Harmful Taste)</option>
         </select>
       </div>
-      <div class="axis-desc" style="font-size:10px;color:var(--muted)">Click anywhere on the map to plot a point</div>
+      <div id="pointPlacementStatus" style="font-size:9px; color:#3bde84; min-height:12px; margin-top:6px;"></div>
+      <div class="axis-desc" style="font-size:10px;color:var(--muted)">Click "+ Point", then click anywhere on the map to plot it</div>
     </div>
 
     <!-- Axis Projection Player -->
@@ -399,6 +432,8 @@
         <label><input type="checkbox" id="showProjections" checked> Projection Guides</label>
         <label><input type="checkbox" id="show3x3Grid" checked> 3x3 Grid Matrix</label>
         <label><input type="checkbox" id="showSubdivisionArms" checked> Subdivision Arms</label>
+        <label><input type="checkbox" id="showAxisTicks"> Axis Tick Marks (all axes)</label>
+        <label><input type="checkbox" id="showGroupScale" checked> Group Scale Axes (Me/My Group/Other/Others)</label>
         <label><input type="checkbox" id="showMinkowski" checked> Minkowski Cones</label>
         <label><input type="checkbox" id="showStateTriangles" checked> State Triangles</label>
         <div style="margin: 4px 0 8px 20px; padding-left: 8px; border-left: 1.5px solid #2a2d3d; display: flex; flex-direction: column; gap: 4px;">
@@ -430,25 +465,59 @@
         <button class="clear-btn" id="exportHtmlBtn" style="width:100%; padding:6px;">Export Full HTML (Save Source)</button>
         <div style="font-size:9px; color:var(--muted); line-height:1.4;">Import/Export bundle both labels and custom axis lines. "Export Full HTML" bakes the current labels/lines into a new copy of this page as its new default — other panel settings (toggles, zoom, colors) are not captured.</div>
 
-        <div style="font-size:9px; color:var(--muted); line-height:1.4;">Click a label or line on the map to select it. Drag to move, drag the little handle above a selected label to rotate it, or drag a selected line's endpoints. Delete/Backspace removes the selection, Esc deselects.</div>
+        <div style="font-size:9px; color:var(--muted); line-height:1.4;">Click a label or line on the map to select it. Drag to move, drag the little handle above a selected label to rotate it, or drag a selected line's endpoints. Delete removes the selection, Esc deselects.</div>
 
         <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
             <span style="font-weight:600;">Labels (<span id="labelCount">0</span>)</span>
             <button class="clear-btn" id="addLabelBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Add</button>
           </div>
+          <div id="labelPlacementStatus" style="font-size:9px; color:#5b6cf8; min-height:12px; margin-bottom:4px;"></div>
           <div id="labelEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:240px; overflow-y:auto;"></div>
         </div>
 
         <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <span style="font-weight:600;">Custom Axis Lines (<span id="axisCount">0</span>)</span>
-            <button class="clear-btn" id="addAxisBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Place New</button>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:4px;">
+            <span style="font-weight:600;">Custom Axes &amp; Shapes (<span id="axisCount">0</span>)</span>
+            <div style="display:flex; gap:4px; flex-wrap:wrap;">
+              <button class="clear-btn" data-shape-type="line" style="font-size:10px; padding:2px 6px; margin:0;">+ Line</button>
+              <button class="clear-btn" data-shape-type="curve" style="font-size:10px; padding:2px 6px; margin:0;">+ Curve</button>
+              <button class="clear-btn" data-shape-type="circle" style="font-size:10px; padding:2px 6px; margin:0;">+ Circle</button>
+              <button class="clear-btn" data-shape-type="rect" style="font-size:10px; padding:2px 6px; margin:0;">+ Rect</button>
+              <button class="clear-btn" data-shape-type="group" style="font-size:10px; padding:2px 6px; margin:0;">+ Group</button>
+              <button class="clear-btn" data-shape-type="triangle" style="font-size:10px; padding:2px 6px; margin:0;">+ Triangle</button>
+              <button class="clear-btn" data-shape-type="polygon" style="font-size:10px; padding:2px 6px; margin:0;">+ Polygon</button>
+            </div>
           </div>
+          <div style="font-size:9px; color:var(--muted); line-height:1.4; margin-bottom:4px;">All are tracked like built-in axes — they get their own [dir+, mag, dir-] readout in Axis Projections above. A curve's control point (yellow handle) bends it after placing; circles/rects use perimeter position for their child label. "Group" drops a mini sub-hegemony (4 separate, individually-tracked edges — Pr↔Rd, Rd↔Rg, Rg↔Co, Co↔Pr) that drags and deletes as one unit.</div>
           <div id="axisPlacementStatus" style="font-size:9px; color:#a070f0; min-height:12px; margin-bottom:4px;"></div>
-          <div id="axisEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:200px; overflow-y:auto;"></div>
+          <div id="axisEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:220px; overflow-y:auto;"></div>
+        </div>
+
+        <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-weight:600;">Groups (<span id="elementGroupCount">0</span>)</span>
+            <button class="clear-btn" id="addGroupBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ New Group</button>
+          </div>
+          <div style="font-size:9px; color:var(--muted); line-height:1.4; margin-bottom:4px;">Drag any label or axis/shape row above onto a group here to file it. Inside, you can edit and order them.</div>
+          <div id="elementGroupsList" style="display:flex; flex-direction:column; gap:6px;"></div>
+        </div>
+
+        <div style="margin-top:6px; border-top:1px solid var(--border); padding-top:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-weight:600;">Base Axes (<span id="baseAxisCount">20</span>)</span>
+          </div>
+          <div style="font-size:9px; color:var(--muted); line-height:1.4; margin-bottom:4px;">Core alignment axes of the VFT framework (plus custom-promoted ones). Disabling hides them from projections.</div>
+          <div id="baseAxisEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:220px; overflow-y:auto;"></div>
         </div>
       </div>
+    </div>
+
+    <!-- Base Axis Labels (labels tied to the 20 built-in axes / quadrant/subdivision/title text) -->
+    <div class="side-section">
+      <div class="side-title">Base Axis Labels (<span id="baseAxisLabelCount">0</span>)</div>
+      <div style="font-size:9px; color:var(--muted); line-height:1.4; margin-bottom:6px;">Every label baked into the base map — quadrant headers, subdivision-arm names, diagonal callouts, axis titles. Visibility of each still follows its Visual Layers toggle above; this list is just for repositioning/restyling them.</div>
+      <div id="baseAxisLabelEditorList" style="display:flex; flex-direction:column; gap:4px; max-height:320px; overflow-y:auto;"></div>
     </div>
     <script type="application/json" id="vft-live-config"></script>
 
@@ -614,6 +683,8 @@
   </div>
 </div>
 
+<div id="textOptionsPopup" class="text-popup" style="display:none;"></div>
+
 <script>
 // ─────────────────────────────────────────────
 //  ZONE CLASSIFICATION (CANONICAL)
@@ -657,7 +728,7 @@ function classifyZone(v, psi) {
 }
 
 const _Ra = Math.SQRT2 * 2;
-const GLOBAL_VFT_AXES = [
+let GLOBAL_VFT_AXES = [
   // 1. Central Orthogonal Axes (Continuous)
   { name: 'Good ↔ Bad',                         x1: -2,   y1: 0,    x2: 2,    y2: 0,    color: '#3bde84' },
   { name: 'Active ↔ Suppressive',                       x1: 0,    y1: -2,   x2: 0,    y2: 2,    color: '#30c8e0' },
@@ -688,6 +759,7 @@ const GLOBAL_VFT_AXES = [
   { name: 'Productive ↔ Reductive',          x1: -2,   y1: 2,    x2: 2,    y2: 2,    color: '#30c8e0' },
   { name: 'Constructive ↔ Regressive',       x1: -2,   y1: -2,   x2: 2,    y2: -2,   color: '#e04080' }
 ];
+const INITIAL_VFT_AXES = JSON.parse(JSON.stringify(GLOBAL_VFT_AXES));
 
 // ─────────────────────────────────────────────
 //  CONFIG-DRIVEN LABELS & CUSTOM AXES
@@ -719,7 +791,75 @@ const DEFAULT_LABELS = [
 
   { x: 1, y: 1, ox: 0, oy: -6, text: 'FUTURE LIGHT CONE', fontSize: 9, color: 'rgba(59, 222, 132, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
   { x: -1, y: -1, ox: 0, oy: 6, text: 'PAST LIGHT CONE', fontSize: 9, color: 'rgba(224, 64, 128, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
-  { x: 0, y: 0, ox: 0, oy: -14, text: 'OBSERVER (PRESENT)', fontSize: 9, color: 'rgba(255, 255, 255, 0.95)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' }
+  { x: 0, y: 0, ox: 0, oy: -14, text: 'OBSERVER (PRESENT)', fontSize: 9, color: 'rgba(255, 255, 255, 0.95)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
+
+  // Quadrant headers (corners, outside the grid box)
+  { x: 2, y: 2, ox: -15, oy: -15, text: 'Productive', fontSize: 12.5, color: 'rgba(59, 222, 132, 0.75)', bold: true, align: 'right', baseline: 'bottom', group: 'showAxes' },
+  { x: 2, y: 2, ox: -15, oy: -11, text: 'AIR - Agape', fontSize: 8.5, color: 'rgba(255, 255, 255, 0.45)', bold: false, align: 'right', baseline: 'top', group: 'showAxes' },
+  { x: -2, y: 2, ox: 15, oy: -15, text: 'Reductive', fontSize: 12.5, color: 'rgba(240, 80, 96, 0.75)', bold: true, align: 'left', baseline: 'bottom', group: 'showAxes' },
+  { x: -2, y: 2, ox: 15, oy: -11, text: 'FIRE - Ludus', fontSize: 8.5, color: 'rgba(255, 255, 255, 0.45)', bold: false, align: 'left', baseline: 'top', group: 'showAxes' },
+  { x: 2, y: -2, ox: -15, oy: 15, text: 'Constructive', fontSize: 12.5, color: 'rgba(48, 200, 224, 0.75)', bold: true, align: 'right', baseline: 'top', group: 'showAxes' },
+  { x: 2, y: -2, ox: -15, oy: 29, text: 'WATER - Philia', fontSize: 8.5, color: 'rgba(255, 255, 255, 0.45)', bold: false, align: 'right', baseline: 'top', group: 'showAxes' },
+  { x: -2, y: -2, ox: 15, oy: 15, text: 'Regressive', fontSize: 12.5, color: 'rgba(224, 64, 128, 0.75)', bold: true, align: 'left', baseline: 'top', group: 'showAxes' },
+  { x: -2, y: -2, ox: 15, oy: 29, text: 'EARTH - Eros', fontSize: 8.5, color: 'rgba(255, 255, 255, 0.45)', bold: false, align: 'left', baseline: 'top', group: 'showAxes' },
+
+  // Subdivision-arm edge names (top/bottom/left/right of the grid box)
+  { x: 0, y: 2, ox: 0, oy: -24, text: 'Reduct ↔ Product', fontSize: 8, color: 'rgba(59, 222, 132, 0.45)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: 0, y: -2, ox: 0, oy: 32, text: 'Regress ↔ Constr', fontSize: 8, color: 'rgba(240, 80, 96, 0.45)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: 2, y: 0, ox: -8, oy: 0, rotation: -90, text: 'Constr ↔ Product', fontSize: 8, color: 'rgba(59, 222, 132, 0.45)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: -2, y: 0, ox: 8, oy: 0, rotation: -90, text: 'Reduct ↔ Regress', fontSize: 8, color: 'rgba(240, 80, 96, 0.45)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+
+  // Screen-anchored axis titles (position is a fraction of canvas width/height, not a data coordinate)
+  { x: 0, y: 0, screenAnchor: { x: 0.5, y: 1 }, ox: 0, oy: -25, text: '← Opening / Creating Possibility      υ Morality (Mind / Benefit)      Closing Possibility ➔', fontSize: 10.5, color: '#3bde84', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+  { x: 0, y: 0, screenAnchor: { x: 0, y: 0.5 }, ox: 25, oy: 0, rotation: -90, text: '← FOUNDATION      ψ Will (Body / Action)      APPLICATION ➔', fontSize: 10.5, color: '#30c8e0', bold: true, align: 'center', baseline: 'middle', group: 'showAxes' },
+
+  // Group Scale Axes (Me / My Group / Other / Others) — bigger, sit below the grid's bottom edge.
+  // Toggle is "Group Scale Axes"; the vertical dashed lines themselves are drawn separately in draw().
+  { x: 1.0, y: -2, ox: 0, oy: 34, text: 'Others', fontSize: 10, color: 'rgba(59, 222, 132, 0.7)', bold: true, align: 'center', baseline: 'middle', group: 'showGroupScale' },
+  { x: 0.5, y: -2, ox: 0, oy: 34, text: 'Other', fontSize: 10, color: 'rgba(59, 222, 132, 0.7)', bold: true, align: 'center', baseline: 'middle', group: 'showGroupScale' },
+  { x: -0.5, y: -2, ox: 0, oy: 34, text: 'My Group', fontSize: 10, color: 'rgba(240, 80, 96, 0.7)', bold: true, align: 'center', baseline: 'middle', group: 'showGroupScale' },
+  { x: -1.0, y: -2, ox: 0, oy: 34, text: 'Me', fontSize: 10, color: 'rgba(240, 80, 96, 0.7)', bold: true, align: 'center', baseline: 'middle', group: 'showGroupScale' },
+
+  // Subdivision arm names (Productive ← Potential, Constructive ← Suppressive, etc.) — these used to
+  // be hand-drawn rotated text baked into draw()'s "arms" block; now real, draggable/editable labels
+  // sitting at the same spot along their own arm. Toggle is the existing "Subdivision Arms" checkbox.
+  { x: -2.2973, y: 0.22, ox: 0, oy: 0, rotation: 22.5, text: 'Productive ← Potential', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(59, 222, 132, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: -2.2973, y: -0.22, ox: 0, oy: 0, rotation: -22.5, text: 'Constructive ← Potential', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(59, 222, 132, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: 2.2973, y: 0.22, ox: 0, oy: 0, rotation: -22.5, text: 'Anti-Potential ➔ Reductive', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(240, 80, 96, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: 2.2973, y: -0.22, ox: 0, oy: 0, rotation: 22.5, text: 'Anti-Potential ➔ Regressive', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(240, 80, 96, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: 1.64, y: -1.1309, ox: 0, oy: 0, rotation: -67.5, text: 'Constructive ← Suppressive', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(240, 160, 48, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: -1.64, y: -1.1309, ox: 0, oy: 0, rotation: 67.5, text: 'Suppressive ➔ Regressive', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(240, 160, 48, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: 1.64, y: 1.1309, ox: 0, oy: 0, rotation: 67.5, text: 'Productive ← Active', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(48, 200, 224, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+  { x: -1.64, y: 1.1309, ox: 0, oy: 0, rotation: -67.5, text: 'Active ➔ Reductive', fontSize: 11.5, fontFamily: 'JetBrains Mono', color: 'rgba(48, 200, 224, 0.75)', bold: true, align: 'center', baseline: 'middle', group: 'showSubdivisionArms' },
+
+  // Diagonal scale captions — previously hand-drawn via drawTextAlongLine (no background box).
+  { x: 1.6, y: 1.6, ox: 0, oy: -10, rotation: 45, text: 'Scale of Truth and Progress ➔', fontSize: 8, fontFamily: 'JetBrains Mono', color: 'rgba(59, 222, 132, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showDiagonals' },
+  { x: 1.6, y: -1.6, ox: 0, oy: -10, rotation: -45, text: 'Scale of Lies and Regression ➔', fontSize: 8, fontFamily: 'JetBrains Mono', color: 'rgba(240, 80, 96, 0.85)', bold: true, align: 'center', baseline: 'middle', group: 'showDiagonals' },
+
+  // Minkowski hypersurface caption — previously hand-drawn via drawTextAlongLine (no background box).
+  { x: 1.0, y: -1.0, ox: 0, oy: -10, rotation: -45, text: 'Hypersurface of Present Time ➔', fontSize: 8, fontFamily: 'JetBrains Mono', color: 'rgba(255, 255, 255, 0.65)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
+
+  // Canonical Anchors (Greater Good / Lesser Evil / Lesser Good / Greater Evil) — previously hand-drawn
+  // next to the anchor-point circles. Positioned at the default (non-relative) v/psi=±1 coords; won't
+  // follow the circle if "GG Relative Mode" is toggled on (the circles alone still jump in that mode).
+  { x: 1, y: 1, ox: 0, oy: -14, text: 'Greater Good', fontSize: 9.5, color: '#3bde84', bold: true, align: 'center', baseline: 'bottom' },
+  { x: 1, y: 1, ox: 0, oy: 14, text: 'The Good Truth', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
+  { x: -1, y: 1, ox: 0, oy: -14, text: 'Lesser Evil', fontSize: 9.5, color: '#f05060', bold: true, align: 'center', baseline: 'bottom' },
+  { x: -1, y: 1, ox: 0, oy: 14, text: 'The Bad Lie', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
+  { x: 1, y: -1, ox: 0, oy: -14, text: 'Lesser Good', fontSize: 9.5, color: '#30c8e0', bold: true, align: 'center', baseline: 'bottom' },
+  { x: 1, y: -1, ox: 0, oy: 14, text: 'The Good Lie', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
+  { x: -1, y: -1, ox: 0, oy: -14, text: 'Greater Evil', fontSize: 9.5, color: '#e04080', bold: true, align: 'center', baseline: 'bottom' },
+  { x: -1, y: -1, ox: 0, oy: 14, text: 'The Bad Truth', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
+
+  // Perceptual Inversion Anchors — previously hand-drawn next to the small dashed circles.
+  { x: 0.5, y: 0.5, ox: 0, oy: 10, text: 'Perceived Greater Evil', fontSize: 7.5, color: 'rgba(224, 64, 128, 0.7)', bold: false, align: 'center', baseline: 'top' },
+  { x: -0.5, y: 0.5, ox: 0, oy: 10, text: 'Perceived Lesser Good', fontSize: 7.5, color: 'rgba(48, 200, 224, 0.7)', bold: false, align: 'center', baseline: 'top' },
+  { x: 0.5, y: -0.5, ox: 0, oy: 10, text: 'Perceived Lesser Evil', fontSize: 7.5, color: 'rgba(240, 80, 96, 0.7)', bold: false, align: 'center', baseline: 'top' },
+  { x: -0.5, y: -0.5, ox: 0, oy: 10, text: 'Perceived Greater Good', fontSize: 7.5, color: 'rgba(59, 222, 132, 0.7)', bold: false, align: 'center', baseline: 'top' },
+
+  // Center Node caption — previously hand-drawn on the "No-one" circle. Default (non-relative) position.
+  { x: 0, y: 0, ox: 0, oy: -4, text: 'No-one', fontSize: 8, color: '#ffffff', bold: true, align: 'center', baseline: 'middle' },
+  { x: 0, y: 0, ox: 0, oy: 5, text: 'Confusion', fontSize: 7, color: 'rgba(200,205,232,0.6)', bold: false, align: 'center', baseline: 'middle' }
 ];
 
 // A "Compact" alternate preset — pulls the four horizon labels in close to the
@@ -748,14 +888,81 @@ let CUSTOM_AXES = [];
       const cfg = JSON.parse(cfgEl.textContent);
       if (Array.isArray(cfg.labels)) GLOBAL_LABELS = cfg.labels;
       if (Array.isArray(cfg.customAxes)) CUSTOM_AXES = cfg.customAxes;
+      if (Array.isArray(cfg.promotedAxes)) {
+        GLOBAL_VFT_AXES = JSON.parse(JSON.stringify(INITIAL_VFT_AXES));
+        cfg.promotedAxes.forEach(ax => GLOBAL_VFT_AXES.push(ax));
+      }
     } catch (e) { console.warn('Invalid embedded vft-live-config JSON', e); }
   }
 })();
 
+// A rect's 4 corners in DATA space, honoring its rotation (degrees, about its own center).
+// Named the same way as Group: Pr=top-left, Rd=top-right, Rg=bottom-right, Co=bottom-left (pre-rotation).
+function rectCenter(a) {
+  const vMin = Math.min(a.x1, a.x2), vMax = Math.max(a.x1, a.x2);
+  const psiMin = Math.min(a.y1, a.y2), psiMax = Math.max(a.y1, a.y2);
+  return [(vMin + vMax) / 2, (psiMin + psiMax) / 2];
+}
+
+// Rotate a point in the rect's UNROTATED (local) frame out to world data-space, about its center.
+function rectRotatePoint(a, localV, localPsi) {
+  const [cx, cy] = rectCenter(a);
+  const rot = (a.rotation || 0) * Math.PI / 180;
+  const cos = Math.cos(rot), sin = Math.sin(rot);
+  const dx = localV - cx, dy = localPsi - cy;
+  return [cx + dx * cos - dy * sin, cy + dx * sin + dy * cos];
+}
+
+// Inverse: a world data-space point back into the rect's unrotated local frame (for resize-while-rotated).
+function rectInverseRotatePoint(a, worldV, worldPsi) {
+  const [cx, cy] = rectCenter(a);
+  const rot = -(a.rotation || 0) * Math.PI / 180;
+  const cos = Math.cos(rot), sin = Math.sin(rot);
+  const dx = worldV - cx, dy = worldPsi - cy;
+  return [cx + dx * cos - dy * sin, cy + dx * sin + dy * cos];
+}
+
+function getRectCorners(a) {
+  const vMin = Math.min(a.x1, a.x2), vMax = Math.max(a.x1, a.x2);
+  const psiMin = Math.min(a.y1, a.y2), psiMax = Math.max(a.y1, a.y2);
+  return {
+    Pr: rectRotatePoint(a, vMax, psiMax),
+    Rd: rectRotatePoint(a, vMin, psiMax),
+    Rg: rectRotatePoint(a, vMin, psiMin),
+    Co: rectRotatePoint(a, vMax, psiMin)
+  };
+}
+
+const RECT_SIDE_DEFS = [
+  { from: 'Pr', to: 'Rd', label: 'Pr↔Rd' },
+  { from: 'Rd', to: 'Rg', label: 'Rd↔Rg' },
+  { from: 'Rg', to: 'Co', label: 'Co↔Rg' },
+  { from: 'Co', to: 'Pr', label: 'Co↔Pr' }
+];
+
 // Built-in axes + user-drawn custom axes, merged into one trackable list.
+// Rects auto-expand into their 4 individually-tracked (rotation-aware) sides, named like Group's edges.
 // An axis with `enabled === false` is skipped by projections/tracking but stays visible in the editor list.
 function getAllAxes() {
-  return GLOBAL_VFT_AXES.concat(CUSTOM_AXES);
+  const expanded = [];
+  CUSTOM_AXES.forEach((a, ai) => {
+    if ((a.type || 'line') === 'rect') {
+      const corners = getRectCorners(a);
+      RECT_SIDE_DEFS.forEach((sd, si) => {
+        expanded.push({
+          name: sd.label,
+          x1: corners[sd.from][0], y1: corners[sd.from][1],
+          x2: corners[sd.to][0], y2: corners[sd.to][1],
+          color: a.color,
+          enabled: a.enabled !== false && (!a.sideEnabled || a.sideEnabled[si] !== false),
+          __parentRectIdx: ai, __sideIndex: si
+        });
+      });
+    } else {
+      expanded.push(a);
+    }
+  });
+  return GLOBAL_VFT_AXES.concat(expanded);
 }
 
 // ─────────────────────────────────────────────
@@ -764,17 +971,273 @@ function getAllAxes() {
 let selectedLabelIdx = -1;
 let selectedAxisIdx = -1;
 let draggingLabel = null;      // { idx, mode: 'move'|'rotate', startOx, startOy, startUx, startUy }
-let draggingAxisHandle = null; // { idx, endpoint: 1|2|'line', startX1, startY1, startX2, startY2, startDataX, startDataY }
-let placingAxis = null;        // { x1, y1 } once the first point is placed; null when inactive
+let draggingAxisHandle = null; // { idx, endpoint: 1|2|'c'|'r'|'line', startX1, startY1, startX2, startY2, startCx, startCy, startUx, startUy }
+let placingAxis = null;        // { type: 'line'|'curve'|'circle'|'rect', x1, y1 } once the first point is placed; null when inactive
 let placingAxisPreview = null; // [v, psi] of current mouse position while placing the second point
+let placingLabel = false;      // true while "+ Add" (label) is armed, waiting for a map click
+let placingLabelPreview = null; // [v, psi] of current mouse position while placing a new label
+let placingPoint = false;      // true while "+ Point" is armed, waiting for a map click
 let suppressNextClick = false;
 const ROTATE_HANDLE_R = 26; // px (pre-dpr) distance of the rotate handle above a selected label
+
+// ─────────────────────────────────────────────
+//  UNDO / REDO
+//  Whole-state snapshots (labels + custom axes/shapes + plotted points) — simple and robust
+//  given how small these arrays are. One snapshot per drag gesture, per add/delete, and per
+//  "edit session" of a form field (from focus to its first keystroke), not per mousemove/keystroke.
+// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────
+//  ELEMENT GROUPS (organizational — drag any label/axis/shape row onto a group
+//  to file it there; distinct from the legacy `.group` string used by the "+Group"
+//  sub-hegemony tool). Bulk toggle/color/delete; not synchronized canvas-dragging.
+// ─────────────────────────────────────────────
+let ELEMENT_GROUPS = [];
+let dragPayload = null; // { kind: 'label'|'axis', idx } while a row is being dragged
+
+let undoStack = [];
+let redoStack = [];
+let pendingFieldSnapshot = null;
+const UNDO_LIMIT = 100;
+
+function snapshotState() {
+  return {
+    labels: JSON.parse(JSON.stringify(GLOBAL_LABELS)),
+    axes: JSON.parse(JSON.stringify(CUSTOM_AXES)),
+    points: JSON.parse(JSON.stringify(points))
+  };
+}
+
+function pushUndo() {
+  undoStack.push(snapshotState());
+  if (undoStack.length > UNDO_LIMIT) undoStack.shift();
+  redoStack.length = 0;
+}
+
+function restoreSnapshot(snap) {
+  GLOBAL_LABELS = JSON.parse(JSON.stringify(snap.labels));
+  CUSTOM_AXES = JSON.parse(JSON.stringify(snap.axes));
+  points = JSON.parse(JSON.stringify(snap.points));
+  selectedLabelIdx = -1;
+  selectedAxisIdx = -1;
+  selectedIdx = points.length ? Math.min(selectedIdx, points.length - 1) : -1;
+  draggingLabel = null;
+  draggingAxisHandle = null;
+  placingAxis = null;
+  placingAxisPreview = null;
+  setPlacementStatus('');
+  renderLabelEditor();
+  renderAxisEditor();
+  renderPointsList();
+  if (selectedIdx >= 0 && points[selectedIdx]) updateReadout(points[selectedIdx].v, points[selectedIdx].psi, true);
+  else clearReadout();
+  draw();
+}
+
+function doUndo() {
+  if (!undoStack.length) return;
+  redoStack.push(snapshotState());
+  restoreSnapshot(undoStack.pop());
+}
+
+function doRedo() {
+  if (!redoStack.length) return;
+  undoStack.push(snapshotState());
+  restoreSnapshot(redoStack.pop());
+}
+
+// ─────────────────────────────────────────────
+//  UNIFIED AXIS/SHAPE PATH METRICS
+//  Every custom axis — straight line, curved bezier, circle, or rect — is
+//  treated as a path. computeAxisMetrics() returns nearest-point distance,
+//  position along the path (0..len), and total path length, uniformly,
+//  so all four types plug into the same Axis Projections tracking.
+// ─────────────────────────────────────────────
+// Cubic bezier — two independent control points (P1 near the start, P2 near the end),
+// the standard "pen tool" curve with a handle per endpoint instead of one shared handle.
+function cubicBezierPointData(a, t) {
+  const mt = 1 - t;
+  const a0 = mt * mt * mt, a1 = 3 * mt * mt * t, a2 = 3 * mt * t * t, a3 = t * t * t;
+  return [
+    a0 * a.x1 + a1 * a.cx1 + a2 * a.cx2 + a3 * a.x2,
+    a0 * a.y1 + a1 * a.cy1 + a2 * a.cy2 + a3 * a.y2
+  ];
+}
+
+function computeBezierMetrics(a, v, psi) {
+  const N = 48;
+  let bestT = 0, bestDist = Infinity, arcLen = 0, prevX, prevY;
+  for (let i = 0; i <= N; i++) {
+    const t = i / N;
+    const [x, y] = cubicBezierPointData(a, t);
+    const d = Math.hypot(v - x, psi - y);
+    if (d < bestDist) { bestDist = d; bestT = t; }
+    if (i > 0) arcLen += Math.hypot(x - prevX, y - prevY);
+    prevX = x; prevY = y;
+  }
+  let lo = Math.max(0, bestT - 1 / N), hi = Math.min(1, bestT + 1 / N);
+  for (let iter = 0; iter < 14; iter++) {
+    const t1 = lo + (hi - lo) / 3, t2 = hi - (hi - lo) / 3;
+    const [x1, y1] = cubicBezierPointData(a, t1), [x2, y2] = cubicBezierPointData(a, t2);
+    const d1 = Math.hypot(v - x1, psi - y1), d2 = Math.hypot(v - x2, psi - y2);
+    if (d1 < d2) hi = t2; else lo = t1;
+  }
+  bestT = (lo + hi) / 2;
+  const [bx, by] = cubicBezierPointData(a, bestT);
+  return { t: bestT, dist: Math.hypot(v - bx, psi - by), len: arcLen || 1e-6 };
+}
+
+function computeLineMetrics(ax, v, psi) {
+  const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
+  const len = Math.hypot(dx, dy) || 1e-6;
+  const ux = dx / len, uy = dy / len;
+  const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
+  const alongClamped = Math.max(0, Math.min(len, alongRaw));
+  const nx = ax.x1 + ux * alongClamped, ny = ax.y1 + uy * alongClamped;
+  return { dist: Math.hypot(v - nx, psi - ny), alongRaw, len, projV: nx, projPsi: ny, normX: -dy / len, normY: dx / len };
+}
+
+function computeCurveMetrics(ax, v, psi) {
+  const m = computeBezierMetrics(ax, v, psi);
+  const [px, py] = cubicBezierPointData(ax, m.t);
+  const mt = 1 - m.t;
+  const tx = 3 * mt * mt * (ax.cx1 - ax.x1) + 6 * mt * m.t * (ax.cx2 - ax.cx1) + 3 * m.t * m.t * (ax.x2 - ax.cx2);
+  const ty = 3 * mt * mt * (ax.cy1 - ax.y1) + 6 * mt * m.t * (ax.cy2 - ax.cy1) + 3 * m.t * m.t * (ax.y2 - ax.cy2);
+  const tlen = Math.hypot(tx, ty) || 1e-6;
+  return { dist: m.dist, alongRaw: m.t * m.len, len: m.len, projV: px, projPsi: py, normX: -ty / tlen, normY: tx / tlen };
+}
+
+// Closed loop: nearest point on the circle's boundary. dist = |distance-to-center - r|,
+// so points ON the circle are dist=0, and dist grows both inward (toward center) and outward.
+function computeCircleMetrics(ax, v, psi) {
+  const dxc = v - ax.cx, dyc = psi - ax.cy;
+  const distToCenter = Math.hypot(dxc, dyc) || 1e-6;
+  const angle = Math.atan2(dyc, dxc);
+  const t = ((angle / (2 * Math.PI)) + 1) % 1;
+  const r = Math.max(ax.r, 1e-6);
+  const circumference = 2 * Math.PI * r;
+  const px = ax.cx + r * Math.cos(angle), py = ax.cy + r * Math.sin(angle);
+  return { dist: Math.abs(distToCenter - r), alongRaw: t * circumference, len: circumference, projV: px, projPsi: py, normX: dxc / distToCenter, normY: dyc / distToCenter };
+}
+
+// Closed loop: nearest point on the rectangle's perimeter, walked clockwise from the top-left corner.
+function computeRectMetrics(ax, v, psi) {
+  const c = getRectCorners(ax);
+  const w = Math.abs(ax.x2 - ax.x1), h = Math.abs(ax.y2 - ax.y1);
+  const perim = 2 * (w + h) || 1e-6;
+  const edges = [[...c.Pr, ...c.Rd], [...c.Rd, ...c.Rg], [...c.Rg, ...c.Co], [...c.Co, ...c.Pr]];
+  let bestDist = Infinity, bestPx = c.Pr[0], bestPy = c.Pr[1], bestCum = 0, cum = 0, bestNx = 0, bestNy = -1;
+  edges.forEach(([ex1, ey1, ex2, ey2]) => {
+    const edx = ex2 - ex1, edy = ey2 - ey1;
+    const elen = Math.hypot(edx, edy) || 1e-6;
+    const eux = edx / elen, euy = edy / elen;
+    const along = (v - ex1) * eux + (psi - ey1) * euy;
+    const alongC = Math.max(0, Math.min(elen, along));
+    const px = ex1 + eux * alongC, py = ey1 + euy * alongC;
+    const d = Math.hypot(v - px, psi - py);
+    if (d < bestDist) { bestDist = d; bestPx = px; bestPy = py; bestCum = cum + alongC; bestNx = -euy; bestNy = eux; }
+    cum += elen;
+  });
+  const t = bestCum / perim;
+  return { dist: bestDist, alongRaw: t * perim, len: perim, projV: bestPx, projPsi: bestPy, normX: bestNx, normY: bestNy };
+}
+
+// Shared perimeter-walk nearest-point search for any closed polygon (3+ points, wraps to points[0]).
+function computePolygonMetrics(ax, v, psi) {
+  const pts = ax.points;
+  let perim = 0;
+  for (let i = 0; i < pts.length; i++) {
+    const p = pts[i], q = pts[(i + 1) % pts.length];
+    perim += Math.hypot(q[0] - p[0], q[1] - p[1]);
+  }
+  perim = perim || 1e-6;
+  let bestDist = Infinity, bestPx = pts[0][0], bestPy = pts[0][1], bestCum = 0, cum = 0, bestNx = 0, bestNy = -1;
+  for (let i = 0; i < pts.length; i++) {
+    const p = pts[i], q = pts[(i + 1) % pts.length];
+    const edx = q[0] - p[0], edy = q[1] - p[1];
+    const elen = Math.hypot(edx, edy) || 1e-6;
+    const eux = edx / elen, euy = edy / elen;
+    const along = (v - p[0]) * eux + (psi - p[1]) * euy;
+    const alongC = Math.max(0, Math.min(elen, along));
+    const px = p[0] + eux * alongC, py = p[1] + euy * alongC;
+    const d = Math.hypot(v - px, psi - py);
+    if (d < bestDist) { bestDist = d; bestPx = px; bestPy = py; bestCum = cum + alongC; bestNx = -euy; bestNy = eux; }
+    cum += elen;
+  }
+  const t = bestCum / perim;
+  return { dist: bestDist, alongRaw: t * perim, len: perim, projV: bestPx, projPsi: bestPy, normX: bestNx, normY: bestNy };
+}
+
+function computeAxisMetrics(ax, v, psi) {
+  const type = ax.type || 'line';
+  if (type === 'circle') return computeCircleMetrics(ax, v, psi);
+  if (type === 'rect') return computeRectMetrics(ax, v, psi);
+  if (type === 'curve') return computeCurveMetrics(ax, v, psi);
+  if (type === 'triangle' || type === 'polygon') return computePolygonMetrics(ax, v, psi);
+  return computeLineMetrics(ax, v, psi);
+}
+
+// Point + tangent-angle on a custom axis/shape's own path at fraction t (0..1) — used to
+// place & rotate a path's child label consistently across all four path types.
+function axisPathPointAndAngle(ax, t) {
+  const type = ax.type || 'line';
+  if (type === 'circle') {
+    const r = Math.max(ax.r, 1e-6);
+    const angle = t * 2 * Math.PI;
+    return { x: ax.cx + r * Math.cos(angle), y: ax.cy + r * Math.sin(angle), angle: angle + Math.PI / 2 };
+  }
+  if (type === 'rect') {
+    const c = getRectCorners(ax);
+    const w = Math.abs(ax.x2 - ax.x1), h = Math.abs(ax.y2 - ax.y1);
+    const perim = 2 * (w + h) || 1e-6;
+    let d = ((t % 1) + 1) % 1 * perim;
+    const edges = [[c.Pr, c.Rd], [c.Rd, c.Rg], [c.Rg, c.Co], [c.Co, c.Pr]];
+    for (const [p, q] of edges) {
+      const elen = Math.hypot(q[0] - p[0], q[1] - p[1]) || 1e-6;
+      if (d <= elen) {
+        const f = d / elen;
+        return { x: p[0] + (q[0] - p[0]) * f, y: p[1] + (q[1] - p[1]) * f, angle: Math.atan2(q[1] - p[1], q[0] - p[0]) };
+      }
+      d -= elen;
+    }
+    return { x: c.Pr[0], y: c.Pr[1], angle: 0 };
+  }
+  if (type === 'curve') {
+    const tt = Math.max(0, Math.min(1, t));
+    const [x, y] = cubicBezierPointData(ax, tt);
+    const mt = 1 - tt;
+    const tx = 3 * mt * mt * (ax.cx1 - ax.x1) + 6 * mt * tt * (ax.cx2 - ax.cx1) + 3 * tt * tt * (ax.x2 - ax.cx2);
+    const ty = 3 * mt * mt * (ax.cy1 - ax.y1) + 6 * mt * tt * (ax.cy2 - ax.cy1) + 3 * tt * tt * (ax.y2 - ax.cy2);
+    return { x, y, angle: Math.atan2(ty, tx) };
+  }
+  if (type === 'triangle' || type === 'polygon') {
+    const pts = ax.points;
+    let perim = 0;
+    for (let i = 0; i < pts.length; i++) {
+      const p = pts[i], q = pts[(i + 1) % pts.length];
+      perim += Math.hypot(q[0] - p[0], q[1] - p[1]);
+    }
+    perim = perim || 1e-6;
+    let d = ((t % 1) + 1) % 1 * perim;
+    for (let i = 0; i < pts.length; i++) {
+      const p = pts[i], q = pts[(i + 1) % pts.length];
+      const elen = Math.hypot(q[0] - p[0], q[1] - p[1]) || 1e-6;
+      if (d <= elen) {
+        const f = d / elen;
+        return { x: p[0] + (q[0] - p[0]) * f, y: p[1] + (q[1] - p[1]) * f, angle: Math.atan2(q[1] - p[1], q[0] - p[0]) };
+      }
+      d -= elen;
+    }
+    return { x: pts[0][0], y: pts[0][1], angle: 0 };
+  }
+  const tt = Math.max(0, Math.min(1, t));
+  return { x: ax.x1 + (ax.x2 - ax.x1) * tt, y: ax.y1 + (ax.y2 - ax.y1) * tt, angle: Math.atan2(ax.y2 - ax.y1, ax.x2 - ax.x1) };
+}
 
 // Text box in LOCAL space, relative to the label's anchor point (0,0), pre-rotation.
 function getLabelLocalBox(l, dpr) {
   const fontSize = Math.round(l.fontSize * dpr);
   ctx.save();
-  ctx.font = `${l.bold ? '600' : '400'} ${fontSize}px 'Inter', sans-serif`;
+  ctx.font = `${l.bold ? '600' : '400'} ${fontSize}px '${l.fontFamily || 'Inter'}', sans-serif`;
   const w = ctx.measureText(l.text).width;
   ctx.restore();
   const h = fontSize;
@@ -792,19 +1255,26 @@ function getLabelLocalBox(l, dpr) {
 
 // World (pre-pan/zoom) pixel position of a label's anchor point, including its ox/oy nudge.
 function getLabelAnchorPixel(l, dpr) {
+  if (l.screenAnchor) {
+    const px = l.screenAnchor.x * canvas.width, py = l.screenAnchor.y * canvas.height;
+    return [px + (l.ox || 0) * dpr, py + (l.oy || 0) * dpr];
+  }
   const [px, py] = toPixel(l.x, l.y);
   return [px + (l.ox || 0) * dpr, py + (l.oy || 0) * dpr];
 }
 
 function drawGlobalLabels(ctx, dpr) {
   GLOBAL_LABELS.forEach((l, i) => {
+    if (l.hidden) return;
     if (l.group && !document.getElementById(l.group)?.checked) return;
     const [x, y] = getLabelAnchorPixel(l, dpr);
     const rot = (l.rotation || 0) * Math.PI / 180;
     ctx.save();
     ctx.translate(x, y);
     if (rot) ctx.rotate(rot);
-    drawTextWithBackground(ctx, l.text, 0, 0, Math.round(l.fontSize * dpr), l.color, !!l.bold, l.align, l.baseline);
+    drawTextWithBackground(ctx, l.text, 0, 0, Math.round(l.fontSize * dpr), l.color, !!l.bold, l.align, l.baseline, {
+      fontFamily: l.fontFamily, glow: l.glow, shadow: l.shadow, bg: l.bg
+    });
 
     if (i === selectedLabelIdx) {
       const box = getLabelLocalBox(l, dpr);
@@ -834,47 +1304,215 @@ function drawGlobalLabels(ctx, dpr) {
   });
 }
 
+// Draws a path's child label, riding along its own path per labelT/labelRotOffset/labelPerp.
+// Draws small perpendicular tick marks + percentage labels along an axis/shape's own path,
+// using the same generic axisPathPointAndAngle sampling used for child labels — works uniformly
+// across lines, curves, circles, and rects (open or closed paths alike).
+function drawAxisTicksForOne(ctx, dpr, ax) {
+  const step = 0.1; // every 10%
+  const isClosed = (ax.type === 'circle' || ax.type === 'rect' || ax.type === 'triangle' || ax.type === 'polygon');
+  const count = isClosed ? 10 : 11; // closed paths: skip the duplicate 100%==0% tick
+  for (let i = 0; i < count; i++) {
+    const t = i * step;
+    const pt = axisPathPointAndAngle(ax, t);
+    const [px, py] = toPixel(pt.x, pt.y);
+    const eps = 0.004;
+    const ptA = axisPathPointAndAngle(ax, t - eps), ptB = axisPathPointAndAngle(ax, t + eps);
+    const [pxA, pyA] = toPixel(ptA.x, ptA.y), [pxB, pyB] = toPixel(ptB.x, ptB.y);
+    const tAngle = Math.atan2(pyB - pyA, pxB - pxA);
+    const perpAngle = tAngle + Math.PI / 2;
+    const tickLen = (i % 5 === 0 ? 6 : 3.5) * dpr;
+    const dx = Math.cos(perpAngle) * tickLen, dy = Math.sin(perpAngle) * tickLen;
+    ctx.beginPath();
+    ctx.moveTo(px - dx, py - dy);
+    ctx.lineTo(px + dx, py + dy);
+    ctx.stroke();
+    if (i % 5 === 0) {
+      const pct = Math.round(t * 100);
+      drawTextWithBackground(ctx, String(pct), px + dx * 1.8, py + dy * 1.8, Math.round(7 * dpr), ctx.strokeStyle, false, 'center', 'middle');
+    }
+  }
+}
+
+function drawAxisTicks(ctx, dpr) {
+  ctx.save();
+  ctx.lineWidth = 1 * dpr;
+  getAllAxes().forEach(ax => {
+    if (ax.enabled === false) return;
+    ctx.strokeStyle = (ax.color || '#ffffff').startsWith('#') ? ax.color : (ax.color || 'rgba(255,255,255,0.5)');
+    ctx.globalAlpha = 0.55;
+    try { drawAxisTicksForOne(ctx, dpr, ax); } catch (e) { /* skip any axis type not yet tick-aware */ }
+  });
+  ctx.globalAlpha = 1;
+  ctx.restore();
+}
+
+function drawAxisChildLabel(ctx, dpr, a) {
+  if (!a.label || a.labelEnabled === false) return;
+  const t = a.labelT !== undefined ? a.labelT : 0.5;
+  const dataPt = axisPathPointAndAngle(a, t);
+  const [baseX, baseY] = toPixel(dataPt.x, dataPt.y);
+
+  // Sample the path a tiny step further along (in data space, then project both points) to get
+  // the tangent's PIXEL-space angle directly — sidesteps any data/pixel sign-convention mixups.
+  const eps = 0.005;
+  const ptA = axisPathPointAndAngle(a, t - eps);
+  const ptB = axisPathPointAndAngle(a, t + eps);
+  const [pxA, pyA] = toPixel(ptA.x, ptA.y);
+  const [pxB, pyB] = toPixel(ptB.x, ptB.y);
+  let normAngle = Math.atan2(pyB - pyA, pxB - pxA);
+  if (normAngle < -Math.PI / 2 || normAngle > Math.PI / 2) normAngle += Math.PI;
+
+  const perp = (a.labelPerp !== undefined ? a.labelPerp : -9) * dpr;
+  const labelX = baseX + Math.cos(normAngle + Math.PI / 2) * perp;
+  const labelY = baseY + Math.sin(normAngle + Math.PI / 2) * perp;
+  const drawAngle = normAngle + (a.labelRotOffset || 0) * Math.PI / 180;
+
+  const labelColorHex = a.labelColor || a.color || '#ffffff';
+  const labelColorAlpha = a.labelColorAlpha !== undefined ? a.labelColorAlpha : 1;
+  const labelColorStr = labelColorAlpha < 1 ? combineColorAlpha(labelColorHex, labelColorAlpha) : labelColorHex;
+
+  ctx.save();
+  ctx.translate(labelX, labelY);
+  ctx.rotate(drawAngle);
+  drawTextWithBackground(ctx, a.label, 0, 0, Math.round((a.labelFontSize || 8.5) * dpr), labelColorStr, a.labelBold !== false, 'center', 'middle', {
+    fontFamily: a.labelFontFamily, glow: a.labelGlow, shadow: a.labelShadow, bg: a.labelBg
+  });
+  ctx.restore();
+}
+
 function drawCustomAxes(ctx, dpr) {
   ctx.save();
   ctx.lineWidth = 1.5 * dpr;
-  CUSTOM_AXES.forEach((a, i) => {
-    const [x1, y1] = toPixel(a.x1, a.y1);
-    const [x2, y2] = toPixel(a.x2, a.y2);
+  const shapesToDraw = CUSTOM_AXES.concat(GLOBAL_VFT_AXES.filter(ax => ax.isPromoted));
+  shapesToDraw.forEach((a, i) => {
+    const type = a.type || 'line';
     ctx.strokeStyle = a.color || '#ffffff';
-    ctx.globalAlpha = a.enabled === false ? 0.35 : 1;
+    ctx.fillStyle = a.color || '#ffffff';
     ctx.setLineDash(a.dash ? [4 * dpr, 4 * dpr] : []);
-    ctx.beginPath();
-    ctx.moveTo(x1, y1);
-    ctx.lineTo(x2, y2);
-    ctx.stroke();
-    if (a.label && a.labelEnabled !== false) {
-      const t = a.labelT !== undefined ? a.labelT : 0.5;
-      const baseX = x1 + (x2 - x1) * t;
-      const baseY = y1 + (y2 - y1) * t;
 
-      // Normalize the line's angle so text is never upside-down
-      let normAngle = Math.atan2(y2 - y1, x2 - x1);
-      if (normAngle < -Math.PI / 2 || normAngle > Math.PI / 2) normAngle += Math.PI;
+    const baseAlpha = a.enabled === false ? 0.35 : 1;
+    const fillWith = () => {
+      ctx.globalAlpha = baseAlpha * (a.fillAlpha !== undefined ? a.fillAlpha : 1);
+      ctx.fill();
+      ctx.globalAlpha = baseAlpha * (a.lineAlpha !== undefined ? a.lineAlpha : 1);
+    };
+    ctx.globalAlpha = baseAlpha * (a.lineAlpha !== undefined ? a.lineAlpha : 1);
 
-      // Perpendicular offset (relative to the normalized angle, so it stays visually consistent)
-      const perp = (a.labelPerp !== undefined ? a.labelPerp : -9) * dpr;
-      const perpDirX = Math.cos(normAngle + Math.PI / 2);
-      const perpDirY = Math.sin(normAngle + Math.PI / 2);
-      const labelX = baseX + perpDirX * perp;
-      const labelY = baseY + perpDirY * perp;
+    let x1, y1, x2, y2, cxPx, cyPx, c2xPx, c2yPx;
+    if (type === 'circle') {
+      [x1, y1] = toPixel(a.cx, a.cy);
+      const [ex, ey] = toPixel(a.cx + a.r, a.cy);
+      const rPx = Math.hypot(ex - x1, ey - y1);
+      ctx.beginPath();
+      ctx.arc(x1, y1, rPx, 0, Math.PI * 2);
+      if (a.filled) fillWith();
+      ctx.stroke();
+      x2 = ex; y2 = ey; // resize handle position
+    } else if (type === 'rect') {
+      const corners = getRectCorners(a);
+      const pPr = toPixel(corners.Pr[0], corners.Pr[1]);
+      const pRd = toPixel(corners.Rd[0], corners.Rd[1]);
+      const pRg = toPixel(corners.Rg[0], corners.Rg[1]);
+      const pCo = toPixel(corners.Co[0], corners.Co[1]);
+      ctx.beginPath();
+      ctx.moveTo(pPr[0], pPr[1]);
+      ctx.lineTo(pRd[0], pRd[1]);
+      ctx.lineTo(pRg[0], pRg[1]);
+      ctx.lineTo(pCo[0], pCo[1]);
+      ctx.closePath();
+      if (a.filled) fillWith();
+      ctx.stroke();
+      // Rotate-handle reference points: unrotated top-mid and center, then the actual handle
+      // position is derived in pixel space (outward from the CURRENT top edge midpoint).
+      x1 = pPr[0]; y1 = pPr[1]; x2 = pRd[0]; y2 = pRd[1];
+      cxPx = (pPr[0] + pRd[0] + pRg[0] + pCo[0]) / 4;
+      cyPx = (pPr[1] + pRd[1] + pRg[1] + pCo[1]) / 4;
+    } else if (type === 'curve') {
+      [x1, y1] = toPixel(a.x1, a.y1);
+      [x2, y2] = toPixel(a.x2, a.y2);
+      const [c1x, c1y] = toPixel(a.cx1, a.cy1);
+      const [c2x, c2y] = toPixel(a.cx2, a.cy2);
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.bezierCurveTo(c1x, c1y, c2x, c2y, x2, y2);
+      ctx.stroke();
+      if (i === selectedAxisIdx) {
+        ctx.save();
+        ctx.setLineDash([2 * dpr, 2 * dpr]);
+        ctx.strokeStyle = 'rgba(232,208,80,0.5)';
+        ctx.lineWidth = 1 * dpr;
+        ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(c1x, c1y); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x2, y2); ctx.lineTo(c2x, c2y); ctx.stroke();
+        ctx.restore();
+      }
+      cxPx = c1x; cyPx = c1y; // reused below for the handles array
+      c2xPx = c2x; c2yPx = c2y;
+    } else if (type === 'triangle' || type === 'polygon') {
+      const pts = a.points.map(p => toPixel(p[0], p[1]));
+      ctx.beginPath();
+      ctx.moveTo(pts[0][0], pts[0][1]);
+      for (let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
+      ctx.closePath();
+      if (a.filled) fillWith();
+      ctx.stroke();
 
-      const drawAngle = normAngle + (a.labelRotOffset || 0) * Math.PI / 180;
-
-      ctx.save();
-      ctx.translate(labelX, labelY);
-      ctx.rotate(drawAngle);
-      drawTextWithBackground(ctx, a.label, 0, 0, Math.round(8.5 * dpr), a.color || '#ffffff', true, 'center', 'middle');
-      ctx.restore();
+      if (a.showVertexAngles) {
+        const centroidV = a.points.reduce((s, p) => s + p[0], 0) / a.points.length;
+        const centroidPsi = a.points.reduce((s, p) => s + p[1], 0) / a.points.length;
+        a.points.forEach((p, vi) => {
+          const prev = a.points[(vi - 1 + a.points.length) % a.points.length];
+          const next = a.points[(vi + 1) % a.points.length];
+          const v1x = prev[0] - p[0], v1y = prev[1] - p[1];
+          const v2x = next[0] - p[0], v2y = next[1] - p[1];
+          const len1 = Math.hypot(v1x, v1y) || 1e-6, len2 = Math.hypot(v2x, v2y) || 1e-6;
+          const cosA = Math.max(-1, Math.min(1, (v1x * v2x + v1y * v2y) / (len1 * len2)));
+          const angleDeg = Math.round(Math.acos(cosA) * 180 / Math.PI);
+          const dirV = centroidV - p[0], dirPsi = centroidPsi - p[1];
+          const dlen = Math.hypot(dirV, dirPsi) || 1e-6;
+          const [lx, ly] = toPixel(p[0] + (dirV / dlen) * 0.16, p[1] + (dirPsi / dlen) * 0.16);
+          drawTextWithBackground(ctx, angleDeg + '°', lx, ly, Math.round(8 * dpr), a.color || '#ffffff', true, 'center', 'middle');
+        });
+      }
+      x1 = pts[0][0]; y1 = pts[0][1];
+    } else {
+      [x1, y1] = toPixel(a.x1, a.y1);
+      [x2, y2] = toPixel(a.x2, a.y2);
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
     }
+
+    drawAxisChildLabel(ctx, dpr, a);
     ctx.globalAlpha = 1;
-    if (i === selectedAxisIdx) {
+
+    if (i === selectedAxisIdx && !a.group) {
       ctx.setLineDash([]);
-      [[x1, y1], [x2, y2]].forEach(([hx, hy]) => {
+      if (type === 'rect') {
+        // Endpoint handles sit at the ACTUAL rotated positions of the stored (x1,y1)/(x2,y2) corners.
+        const [p1x, p1y] = toPixel(...rectRotatePoint(a, a.x1, a.y1));
+        const [p2x, p2y] = toPixel(...rectRotatePoint(a, a.x2, a.y2));
+        [[p1x, p1y], [p2x, p2y]].forEach(([hx, hy]) => {
+          ctx.beginPath();
+          ctx.arc(hx, hy, 5 * dpr, 0, Math.PI * 2);
+          ctx.fillStyle = '#5b6cf8';
+          ctx.fill();
+          ctx.strokeStyle = '#fff';
+          ctx.lineWidth = 1 * dpr;
+          ctx.stroke();
+        });
+        // Rotate handle: outward from the top-edge midpoint, in pixel space
+        const midX = (x1 + x2) / 2, midY = (y1 + y2) / 2;
+        const dx = midX - cxPx, dy = midY - cyPx;
+        const dlen = Math.hypot(dx, dy) || 1;
+        const hx = midX + (dx / dlen) * ROTATE_HANDLE_R * dpr;
+        const hy = midY + (dy / dlen) * ROTATE_HANDLE_R * dpr;
+        ctx.beginPath();
+        ctx.moveTo(midX, midY); ctx.lineTo(hx, hy);
+        ctx.strokeStyle = 'rgba(91,108,248,0.6)';
+        ctx.lineWidth = 1 * dpr;
+        ctx.stroke();
         ctx.beginPath();
         ctx.arc(hx, hy, 5 * dpr, 0, Math.PI * 2);
         ctx.fillStyle = '#5b6cf8';
@@ -882,24 +1520,103 @@ function drawCustomAxes(ctx, dpr) {
         ctx.strokeStyle = '#fff';
         ctx.lineWidth = 1 * dpr;
         ctx.stroke();
-      });
+      } else if (type === 'triangle' || type === 'polygon') {
+        a.points.forEach(p => {
+          const [hx, hy] = toPixel(p[0], p[1]);
+          ctx.beginPath();
+          ctx.arc(hx, hy, 5 * dpr, 0, Math.PI * 2);
+          ctx.fillStyle = '#5b6cf8';
+          ctx.fill();
+          ctx.strokeStyle = '#fff';
+          ctx.lineWidth = 1 * dpr;
+          ctx.stroke();
+        });
+      } else {
+        const handles = type === 'circle' ? [[x2, y2]]
+          : type === 'curve' ? [[x1, y1], [x2, y2], [cxPx, cyPx], [c2xPx, c2yPx]]
+          : [[x1, y1], [x2, y2]];
+        handles.forEach(([hx, hy], hi) => {
+          ctx.beginPath();
+          ctx.arc(hx, hy, 5 * dpr, 0, Math.PI * 2);
+          ctx.fillStyle = (type === 'curve' && hi >= 2) ? '#e8d050' : '#5b6cf8';
+          ctx.fill();
+          ctx.strokeStyle = '#fff';
+          ctx.lineWidth = 1 * dpr;
+          ctx.stroke();
+        });
+      }
     }
   });
+
+  // A selected group shows one handle per shared corner (deduplicated across its 4 edges).
+  const selA = selectedAxisIdx >= 0 ? CUSTOM_AXES[selectedAxisIdx] : null;
+  if (selA && selA.group) {
+    const corners = new Map();
+    CUSTOM_AXES.forEach(m => {
+      if (m.group !== selA.group) return;
+      corners.set(m.cornerFrom, toPixel(m.x1, m.y1));
+      corners.set(m.cornerTo, toPixel(m.x2, m.y2));
+    });
+    corners.forEach(([hx, hy]) => {
+      ctx.beginPath();
+      ctx.arc(hx, hy, 5 * dpr, 0, Math.PI * 2);
+      ctx.fillStyle = '#5b6cf8';
+      ctx.fill();
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 1 * dpr;
+      ctx.stroke();
+    });
+  }
+
   ctx.setLineDash([]);
   ctx.restore();
 
-  // Live preview while placing a new axis via click-to-place
+  // Live preview while placing a triangle/polygon (variable point count, accumulated via clicks)
+  if (placingAxis && (placingAxis.type === 'triangle' || placingAxis.type === 'polygon') && placingAxis.points && placingAxis.points.length) {
+    const pts = placingAxis.points.map(p => toPixel(p[0], p[1]));
+    ctx.save();
+    ctx.strokeStyle = 'rgba(160,112,240,0.7)';
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.setLineDash([5 * dpr, 4 * dpr]);
+    ctx.beginPath();
+    ctx.moveTo(pts[0][0], pts[0][1]);
+    for (let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
+    if (placingAxisPreview) {
+      const [pmx, pmy] = toPixel(placingAxisPreview[0], placingAxisPreview[1]);
+      ctx.lineTo(pmx, pmy);
+    }
+    ctx.stroke();
+    ctx.restore();
+    pts.forEach(([hx, hy]) => {
+      ctx.beginPath();
+      ctx.arc(hx, hy, 4 * dpr, 0, Math.PI * 2);
+      ctx.fillStyle = '#a070f0';
+      ctx.fill();
+    });
+    return;
+  }
+
+  // Live preview while placing a new axis/shape via click-to-place
   if (placingAxis) {
     const [px1, py1] = toPixel(placingAxis.x1, placingAxis.y1);
     if (placingAxisPreview) {
-      const [px2, py2] = toPixel(placingAxisPreview[0], placingAxisPreview[1]);
+      const [pv, ppsi] = placingAxisPreview;
       ctx.save();
       ctx.strokeStyle = 'rgba(160,112,240,0.7)';
       ctx.lineWidth = 1.5 * dpr;
       ctx.setLineDash([5 * dpr, 4 * dpr]);
       ctx.beginPath();
-      ctx.moveTo(px1, py1);
-      ctx.lineTo(px2, py2);
+      if (placingAxis.type === 'circle') {
+        const rPx = Math.hypot(toPixel(pv, ppsi)[0] - px1, toPixel(pv, ppsi)[1] - py1);
+        ctx.arc(px1, py1, rPx, 0, Math.PI * 2);
+      } else if (placingAxis.type === 'rect' || placingAxis.type === 'group') {
+        const [px2, py2] = toPixel(pv, ppsi);
+        ctx.rect(Math.min(px1, px2), Math.min(py1, py2), Math.abs(px2 - px1), Math.abs(py2 - py1));
+      } else {
+        const [px2, py2] = toPixel(pv, ppsi);
+        ctx.moveTo(px1, py1);
+        ctx.lineTo(px2, py2);
+      }
       ctx.stroke();
       ctx.restore();
     }
@@ -916,16 +1633,9 @@ function calculatePointParams(v, psi) {
   const zone = classifyZone(v, psi);
   const projections = {};
   getAllAxes().filter(ax => ax.enabled !== false).forEach(arm => {
-    const dx = arm.x2 - arm.x1, dy = arm.y2 - arm.y1;
-    const len = Math.hypot(dx, dy);
-    const ux = dx / len, uy = dy / len;
-    const alongRaw = (v - arm.x1) * ux + (psi - arm.y1) * uy;
-    const alongClamped = Math.max(0, Math.min(len, alongRaw));
-    const projV = arm.x1 + ux * alongClamped;
-    const projPsi = arm.y1 + uy * alongClamped;
-    const distClamped = Math.hypot(v - projV, psi - projPsi);
-    const dir = Math.max(0, Math.min(100, (alongRaw / len) * 100));
-    const mag = Math.max(0, 100 * (1 - distClamped / len));
+    const m = computeAxisMetrics(arm, v, psi);
+    const dir = Math.max(0, Math.min(100, (m.alongRaw / m.len) * 100));
+    const mag = Math.max(0, 100 * (1 - m.dist / m.len));
 
     projections[arm.name || arm.label || 'Custom Axis'] = `[${Math.round(dir)}, ${Math.round(mag)}, ${Math.round(100 - dir)}]`;
   });
@@ -1010,32 +1720,56 @@ function toPixel(v, psi) {
 }
 
 // Helper to draw text with a clean background box to prevent overlap
-function drawTextWithBackground(ctx, text, x, y, fontSize, color, isBold, align, baseline) {
+// opts (optional): { fontFamily, glow: {enabled,color,blur}, shadow: {enabled,color,blur,offsetX,offsetY} }
+function drawTextWithBackground(ctx, text, x, y, fontSize, color, isBold, align, baseline, opts) {
   ctx.save();
-  ctx.font = `${isBold ? '600' : '400'} ${fontSize}px 'Inter', sans-serif`;
+  const fontFamily = (opts && opts.fontFamily) || 'Inter';
+  ctx.font = `${isBold ? '600' : '400'} ${fontSize}px '${fontFamily}', sans-serif`;
   ctx.textAlign = align || 'center';
   ctx.textBaseline = baseline || 'middle';
-  
+
   const metrics = ctx.measureText(text);
   const padX = 4 * devicePixelRatio;
   const padY = 2.5 * devicePixelRatio;
   const w = metrics.width;
   const h = fontSize;
-  
+
   let bx = x;
   if (ctx.textAlign === 'center') bx = x - w / 2;
   else if (ctx.textAlign === 'right') bx = x - w;
-  
+
   let by = y;
   if (ctx.textBaseline === 'middle') by = y - h / 2;
   else if (ctx.textBaseline === 'bottom') by = y - h;
   else if (ctx.textBaseline === 'top') by = y;
 
-  ctx.fillStyle = 'rgba(10, 11, 15, 0.85)';
-  ctx.fillRect(bx - padX, by - padY, w + padX * 2, h + padY * 2);
-  
+  if (opts && opts.bg) {
+    ctx.fillStyle = 'rgba(10, 11, 15, 0.85)';
+    ctx.fillRect(bx - padX, by - padY, w + padX * 2, h + padY * 2);
+  }
+
+  if (opts && opts.glow && opts.glow.enabled) {
+    ctx.save();
+    ctx.shadowColor = opts.glow.color || color;
+    ctx.shadowBlur = (opts.glow.blur !== undefined ? opts.glow.blur : 6) * devicePixelRatio;
+    ctx.shadowOffsetX = 0; ctx.shadowOffsetY = 0;
+    ctx.fillStyle = color;
+    ctx.fillText(text, x, y);
+    ctx.fillText(text, x, y); // second pass intensifies the halo
+    ctx.restore();
+  }
+
+  ctx.save();
+  if (opts && opts.shadow && opts.shadow.enabled) {
+    ctx.shadowColor = opts.shadow.color || 'rgba(0,0,0,0.8)';
+    ctx.shadowBlur = (opts.shadow.blur !== undefined ? opts.shadow.blur : 3) * devicePixelRatio;
+    ctx.shadowOffsetX = (opts.shadow.offsetX !== undefined ? opts.shadow.offsetX : 2) * devicePixelRatio;
+    ctx.shadowOffsetY = (opts.shadow.offsetY !== undefined ? opts.shadow.offsetY : 2) * devicePixelRatio;
+  }
   ctx.fillStyle = color;
   ctx.fillText(text, x, y);
+  ctx.restore();
+
   ctx.restore();
 }
 
@@ -1341,13 +2075,7 @@ function draw() {
     ctx.beginPath(); ctx.moveTo(pG1x, pG1y); ctx.lineTo(pG2x, pG2y); ctx.stroke();
     ctx.restore();
 
-    // Scale names along the lines
-    const [pT1_x, pT1_y] = toPixel(1.3, 1.3);
-    const [pT2_x, pT2_y] = toPixel(1.9, 1.9);
-    drawTextAlongLine(ctx, 'Scale of Truth and Progress ➔', pT1_x, pT1_y, pT2_x, pT2_y, -1, 'rgba(59, 222, 132, 0.85)', dpr);
-    const [pL3_x, pL3_y] = toPixel(1.3, -1.3);
-    const [pL4_x, pL4_y] = toPixel(1.9, -1.9);
-    drawTextAlongLine(ctx, 'Scale of Lies and Regression ➔', pL3_x, pL3_y, pL4_x, pL4_y, -1, 'rgba(240, 80, 96, 0.85)', dpr);
+    // Scale names live in GLOBAL_LABELS now ("Scale of Truth and Progress ➔" / "Scale of Lies and Regression ➔").
   }
 
   // 4. Orthogonal Grid dashed lines and axes lines
@@ -1364,32 +2092,6 @@ function draw() {
     });
     ctx.restore();
 
-    // Draw 4 Moral Horizon Vertical Lines (Others, Other, My Group, Me)
-    ctx.save();
-    ctx.setLineDash([3 * dpr, 3 * dpr]);
-    ctx.lineWidth = 0.8 * dpr;
-    const horizons = [
-      { u: 1.0,  label: 'Others',   color: 'rgba(59, 222, 132, 0.25)' },
-      { u: 0.5,  label: 'Other',    color: 'rgba(59, 222, 132, 0.25)' },
-      { u: -0.5, label: 'My Group', color: 'rgba(240, 80, 96, 0.25)' },
-      { u: -1.0, label: 'Me',       color: 'rgba(240, 80, 96, 0.25)' }
-    ];
-    horizons.forEach(h => {
-      const [gx] = toPixel(h.u, 0);
-      ctx.strokeStyle = h.color;
-      ctx.beginPath();
-      ctx.moveTo(gx, marginY);
-      ctx.lineTo(gx, marginY + gridSize);
-      ctx.stroke();
-
-      // Subtle boundary labels drawn just inside the top grid edge
-      ctx.font = `bold ${Math.round(7 * dpr)}px 'JetBrains Mono', monospace`;
-      ctx.fillStyle = h.color.replace('0.25', '0.6');
-      ctx.textAlign = 'center';
-      ctx.fillText(h.label, gx, marginY + 12 * dpr);
-    });
-    ctx.restore();
-    
     ctx.save();
     ctx.setLineDash([]);
     const [ax1, ay] = toPixel( 2, 0);
@@ -1400,6 +2102,30 @@ function draw() {
     const [vx, vy1] = toPixel(0,  2);
     const [,   vy2] = toPixel(0, -2);
     ctx.beginPath(); ctx.moveTo(vx, vy1); ctx.lineTo(vx, vy2); ctx.stroke();
+    ctx.restore();
+  }
+
+  // 4b. Group Scale Axes — Me / My Group / Other / Others (own toggle, separate from Orthogonal Grid).
+  // Names are real GLOBAL_LABELS entries (group:'showGroupScale') so they're draggable/editable —
+  // only the dashed vertical line itself is drawn here.
+  if (document.getElementById('showGroupScale') && document.getElementById('showGroupScale').checked) {
+    ctx.save();
+    ctx.setLineDash([3 * dpr, 3 * dpr]);
+    ctx.lineWidth = 0.8 * dpr;
+    const horizons = [
+      { u: 1.0,  color: 'rgba(59, 222, 132, 0.25)' },
+      { u: 0.5,  color: 'rgba(59, 222, 132, 0.25)' },
+      { u: -0.5, color: 'rgba(240, 80, 96, 0.25)' },
+      { u: -1.0, color: 'rgba(240, 80, 96, 0.25)' }
+    ];
+    horizons.forEach(h => {
+      const [gx] = toPixel(h.u, 0);
+      ctx.strokeStyle = h.color;
+      ctx.beginPath();
+      ctx.moveTo(gx, marginY);
+      ctx.lineTo(gx, marginY + gridSize);
+      ctx.stroke();
+    });
     ctx.restore();
   }
 
@@ -1563,47 +2289,8 @@ function draw() {
       }
     });
 
-    // Second pass: Draw rotated arm labels (using pair index spacing to prevent overlapping)
-    arms.forEach(arm => {
-      const [sx, sy] = toPixel(arm.x1, arm.y1);
-      const [ex, ey] = toPixel(arm.x2, arm.y2);
-      const dx = ex - sx, dy = ey - sy;
-
-      const sameCornerArms = arms.filter(a => a.x2 === arm.x2 && a.y2 === arm.y2);
-      const pairIndex = sameCornerArms.findIndex(a => a.group === arm.group);
-      const t = (pairIndex === 0) ? 0.11 : 0.82;
-
-      const lx = sx + dx * t;
-      const ly = sy + dy * t;
-
-      let angle = Math.atan2(dy, dx);
-      if (angle > Math.PI / 2 || angle < -Math.PI / 2) {
-        angle += Math.PI;
-      }
-
-      ctx.save();
-      ctx.translate(lx, ly);
-      ctx.rotate(angle);
-
-      ctx.font = `bold ${Math.round(11.5 * dpr)}px 'JetBrains Mono', monospace`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-
-      const labelText = arm.fullLabel;
-      const colorTransparent = arm.color.replace('0.35', '0.55');
-
-      // Background outline halo
-      ctx.strokeStyle = '#0a0b0f';
-      ctx.lineWidth = 3.5 * dpr;
-      ctx.lineJoin = 'round';
-      ctx.strokeText(labelText, 0, -8 * dpr);
-
-      // Foreground text
-      ctx.fillStyle = colorTransparent;
-      ctx.fillText(labelText, 0, -8 * dpr);
-
-      ctx.restore();
-    });
+    // Arm NAMES are now real GLOBAL_LABELS entries (group:'showSubdivisionArms') so they can be
+    // dragged/edited individually — see DEFAULT_LABELS. Only the lines/ticks are drawn here.
     ctx.restore();
   }
 
@@ -1667,37 +2354,7 @@ function draw() {
 
   // ── DRAW ALL LABELS, MARKS & DATA NODES (Unclipped) ──
   if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
-    // ── DRAW EDGE NAMES ──
-    ctx.save();
-    ctx.font = `bold ${Math.round(8 * dpr)}px 'JetBrains Mono', monospace`;
-    ctx.textBaseline = 'middle';
-    ctx.textAlign = 'center';
-
-    // Top: Reduct ↔ Product
-    ctx.fillStyle = 'rgba(59, 222, 132, 0.45)'; // Greenish
-    ctx.fillText('Reduct ↔ Product', marginX + gridSize / 2, marginY - 24 * dpr);
-
-    // Bottom: Regress ↔ Constr
-    ctx.fillStyle = 'rgba(240, 80, 96, 0.45)'; // Reddish
-    ctx.fillText('Regress ↔ Constr', marginX + gridSize / 2, marginY + gridSize + 32 * dpr);
-
-    // Left: Constr ↔ Product
-    ctx.save();
-    ctx.translate(marginX - 8 * dpr, marginY + gridSize / 2);
-    ctx.rotate(-Math.PI / 2);
-    ctx.fillStyle = 'rgba(59, 222, 132, 0.45)';
-    ctx.fillText('Constr ↔ Product', 0, 0);
-    ctx.restore();
-
-    // Right: Reduct ↔ Regress
-    ctx.save();
-    ctx.translate(marginX + gridSize + 8 * dpr, marginY + gridSize / 2);
-    ctx.rotate(-Math.PI / 2);
-    ctx.fillStyle = 'rgba(240, 80, 96, 0.45)';
-    ctx.fillText('Reduct ↔ Regress', 0, 0);
-    ctx.restore();
-
-    ctx.restore();
+    // Edge names live in GLOBAL_LABELS now.
 
     // ── DRAW COLORED EDGE LINES ──
     ctx.save();
@@ -1794,8 +2451,24 @@ function draw() {
   const [ax1, ay] = toPixel( 2, 0);
   const [vx, vy1] = toPixel(0,  2);
 
-  drawGlobalLabels(ctx, dpr);
   drawCustomAxes(ctx, dpr);
+  if (document.getElementById('showAxisTicks')?.checked) drawAxisTicks(ctx, dpr);
+
+  if (placingLabel && placingLabelPreview) {
+    const [plx, ply] = toPixel(placingLabelPreview[0], placingLabelPreview[1]);
+    ctx.save();
+    ctx.strokeStyle = '#5b6cf8';
+    ctx.lineWidth = 1.5 * dpr;
+    ctx.beginPath();
+    ctx.moveTo(plx - 7 * dpr, ply); ctx.lineTo(plx + 7 * dpr, ply);
+    ctx.moveTo(plx, ply - 7 * dpr); ctx.lineTo(plx, ply + 7 * dpr);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(plx, ply, 9 * dpr, 0, Math.PI * 2);
+    ctx.setLineDash([3 * dpr, 3 * dpr]);
+    ctx.stroke();
+    ctx.restore();
+  }
 
   if (document.getElementById('showAxes').checked) {
     // Center coordinates for the 3 columns and 3 rows of the 3x3 grid matrix
@@ -1825,56 +2498,15 @@ function draw() {
 
 
 
-    // 7. Axes Titles (positioned at a fixed 25px offset from the canvas boundaries to prevent overlays)
-    // Horizontal Axis Title: υ Morality (Mind / Benefit)
-    drawTextWithBackground(ctx, '← Opening / Creating Possibility      υ Morality (Mind / Benefit)      Closing Possibility ➔', W / 2, H - 25 * dpr, Math.round(10.5 * dpr), '#3bde84', true, 'center', 'middle');
-
-    // Vertical Axis Title: ψ Will (Body / Action) with Foundation/Application indicators
-    ctx.save();
-    ctx.translate(25 * dpr, H / 2);
-    ctx.rotate(-Math.PI / 2);
-    drawTextWithBackground(ctx, '← FOUNDATION      ψ Will (Body / Action)      APPLICATION ➔', 0, 0, Math.round(10.5 * dpr), '#30c8e0', true, 'center', 'middle');
-    ctx.restore();
+    // Axis titles live in GLOBAL_LABELS now (screen-anchored entries).
   }
 
-  // 8. Minkowski Cones text labels & hypersurface along regression diagonal
-  if (document.getElementById('showMinkowski') && document.getElementById('showMinkowski').checked) {
-    const labelFs = Math.round(9 * dpr);
+  // 8. Minkowski hypersurface caption lives in GLOBAL_LABELS now ("Hypersurface of Present Time ➔").
 
-    // FUTURE LIGHT CONE (centered in the top-left quadrant at v=1, psi=1)
-    const [fx, fy] = toPixel(1, 1);
-    drawTextWithBackground(ctx, 'FUTURE LIGHT CONE', fx, fy - 6 * dpr, labelFs, 'rgba(59, 222, 132, 0.85)', true, 'center', 'middle');
+  // Quadrant headers live in GLOBAL_LABELS now.
 
-    // PAST LIGHT CONE (centered in the bottom-right quadrant at v=-1, psi=-1)
-    const [px, py] = toPixel(-1, -1);
-    drawTextWithBackground(ctx, 'PAST LIGHT CONE', px, py + 6 * dpr, labelFs, 'rgba(224, 64, 128, 0.85)', true, 'center', 'middle');
-
-    // OBSERVER (PRESENT) at (0,0)
-    drawTextWithBackground(ctx, 'OBSERVER (PRESENT)', cx, cy - 14 * dpr, labelFs, 'rgba(255, 255, 255, 0.95)', true, 'center', 'middle');
-
-    // Hypersurface of Present Time (along the TR-to-BL diagonal)
-    const [h1x, h1y] = toPixel(1.5, -1.5);
-    const [h2x, h2y] = toPixel(0.5, -0.5);
-    drawTextAlongLine(ctx, 'Hypersurface of Present Time ➔', h1x, h1y, h2x, h2y, 1, 'rgba(255, 255, 255, 0.65)', dpr);
-  }
-
-  // Quadrant headers (drawn outside the grid box card bounds at their corners)
-  const quadHeaders = [
-    { x: marginX - 15 * dpr, y: marginY - 15 * dpr, header: 'Productive', sub: 'AIR - Agape', color: 'rgba(59, 222, 132, 0.75)', align: 'right', baseline: 'bottom' },
-    { x: marginX + gridSize + 15 * dpr, y: marginY - 15 * dpr, header: 'Reductive', sub: 'FIRE - Ludus', color: 'rgba(240, 80, 96, 0.75)', align: 'left', baseline: 'bottom' },
-    { x: marginX - 15 * dpr, y: marginY + gridSize + 15 * dpr, header: 'Constructive', sub: 'WATER - Philia', color: 'rgba(48, 200, 224, 0.75)', align: 'right', baseline: 'top' },
-    { x: marginX + gridSize + 15 * dpr, y: marginY + gridSize + 15 * dpr, header: 'Regressive', sub: 'EARTH - Eros', color: 'rgba(224, 64, 128, 0.75)', align: 'left', baseline: 'top' },
-  ];
-  quadHeaders.forEach(q => {
-    const headerBaseline = q.baseline;
-    const subBaseline = 'top';
-    const subOffset = (q.baseline === 'bottom') ? 4 * dpr : 14 * dpr;
-
-    drawTextWithBackground(ctx, q.header, q.x, q.y, Math.round(12.5 * dpr), q.color, true, q.align, headerBaseline);
-    drawTextWithBackground(ctx, q.sub, q.x, q.y + subOffset, Math.round(8.5 * dpr), 'rgba(255, 255, 255, 0.45)', false, q.align, subBaseline);
-  });
-
-  // Canonical Anchors
+  // Canonical Anchors (marker circles only — the label/sub text lives in GLOBAL_LABELS now, at the
+  // default non-relative v/psi=±1 positions; they won't follow the GG-Relative-Mode circle jump)
   const canonicalAnchors = modeRel ? [
     { v: 0, psi: 0, label: 'Greater Good', sub: 'The Good Truth', color: '#3bde84' },
     { v:-2, psi: 0, label: 'Lesser Evil', sub: 'The Bad Lie', color: '#f05060' },
@@ -1896,12 +2528,10 @@ function draw() {
     ctx.strokeStyle = a.color;
     ctx.lineWidth = 1.5 * dpr;
     ctx.stroke();
-    drawTextWithBackground(ctx, a.label, ax, ay2 - 14 * dpr, Math.round(9.5 * dpr), a.color, true, 'center', 'bottom');
-    drawTextWithBackground(ctx, a.sub, ax, ay2 + 14 * dpr, Math.round(8 * dpr), 'rgba(200,205,232,0.65)', false, 'center', 'top');
     ctx.restore();
   });
 
-  // Perceptual Inversion Anchors
+  // Perceptual Inversion Anchors (marker circles only — text lives in GLOBAL_LABELS now)
   const inversionAnchors = [
     { v: 0.5,  psi: 0.5,  label: 'Perceived Greater Evil', color: 'rgba(224, 64, 128, 0.7)' },
     { v:-0.5,  psi: 0.5,  label: 'Perceived Lesser Good',  color: 'rgba(48, 200, 224, 0.7)' },
@@ -1919,11 +2549,10 @@ function draw() {
     ctx.setLineDash([2 * dpr, 2 * dpr]);
     ctx.lineWidth = 1 * dpr;
     ctx.stroke();
-    drawTextWithBackground(ctx, a.label, ax, ay2 + 10 * dpr, Math.round(7.5 * dpr), a.color, false, 'center', 'top');
     ctx.restore();
   });
 
-  // Center Node (Confusion / No-one)
+  // Center Node (Confusion / No-one) — text lives in GLOBAL_LABELS now.
   {
     const centerNodeV = modeRel ? -1 : 0;
     const centerNodePsi = modeRel ? -1 : 0;
@@ -1936,8 +2565,6 @@ function draw() {
     ctx.strokeStyle = 'rgba(200, 205, 232, 0.4)';
     ctx.lineWidth = 1.5 * dpr;
     ctx.stroke();
-    drawTextWithBackground(ctx, 'No-one', cx, cy - 4 * dpr, Math.round(8 * dpr), '#fff', true, 'center', 'middle');
-    drawTextWithBackground(ctx, 'Confusion', cx, cy + 5 * dpr, Math.round(7 * dpr), 'rgba(200,205,232,0.6)', false, 'center', 'middle');
     ctx.restore();
   }
 
@@ -1995,18 +2622,16 @@ function draw() {
       if (document.getElementById('showSubdivisionArms') && document.getElementById('showSubdivisionArms').checked) {
         const canvasAxes = getAllAxes().filter(ax => ax.enabled !== false && !(ax.x1 === 0 && ax.y1 === 0));
 
-        // Precalculate distances to each axis segment
+        // Precalculate distances to each axis's nearest path point
         canvasAxes.forEach(ax => {
-          const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
-          const len = Math.hypot(dx, dy);
-          const ux = dx / len, uy = dy / len;
-          const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
-          const alongClamped = Math.max(0, Math.min(len, alongRaw));
-          ax.projV = ax.x1 + ux * alongClamped;
-          ax.projPsi = ax.y1 + uy * alongClamped;
-          ax.dist = Math.hypot(v - ax.projV, psi - ax.projPsi);
-          ax.alongRaw = alongRaw;
-          ax.len = len;
+          const m = computeAxisMetrics(ax, v, psi);
+          ax.projV = m.projV;
+          ax.projPsi = m.projPsi;
+          ax.dist = m.dist;
+          ax.alongRaw = m.alongRaw;
+          ax.len = m.len;
+          ax.normX = m.normX;
+          ax.normY = m.normY;
         });
 
         // Sort by distance ascending
@@ -2037,13 +2662,10 @@ function draw() {
             ctx.fillStyle = ax.color;
             ctx.fill();
 
-            // Draw text next to the dot (offset perpendicular to the axis)
-            const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
-            const len = ax.len;
-            const nx = -dy / len, ny = dx / len;
+            // Draw text next to the dot (offset perpendicular to the axis's own path)
             const textOffset = 12 * dpr;
-            const tx = projPx - nx * textOffset;
-            const ty = projPy - ny * textOffset;
+            const tx = projPx - (ax.normX || 0) * textOffset;
+            const ty = projPy - (ax.normY || 0) * textOffset;
 
             ctx.font = `bold ${Math.round(10 * dpr)}px 'JetBrains Mono', monospace`;
             ctx.textAlign = 'center';
@@ -2100,6 +2722,10 @@ function draw() {
     }
   });
 
+  // Labels drawn last so they always sit on top of axes/shapes/points (incl. the selected-point
+  // glow halo), instead of getting buried under them.
+  drawGlobalLabels(ctx, dpr);
+
   ctx.restore(); // end global zoom transform
 }
 
@@ -2141,19 +2767,13 @@ function updateReadout(v, psi, isPoint) {
   if (container) {
     container.innerHTML = '';
     
-    // Precalculate distances using the full (built-in + custom) axes list
+    // Precalculate distances using the full (built-in + custom) axes/shapes list
     const allAxes = getAllAxes();
     allAxes.forEach(ax => {
-      const dx = ax.x2 - ax.x1, dy = ax.y2 - ax.y1;
-      const len = Math.hypot(dx, dy);
-      const ux = dx / len, uy = dy / len;
-      const alongRaw = (v - ax.x1) * ux + (psi - ax.y1) * uy;
-      const alongClamped = Math.max(0, Math.min(len, alongRaw));
-      const nxClamped = ax.x1 + ux * alongClamped;
-      const nyClamped = ax.y1 + uy * alongClamped;
-      ax.dist = Math.hypot(v - nxClamped, psi - nyClamped);
-      ax.alongRaw = alongRaw;
-      ax.len = len;
+      const m = computeAxisMetrics(ax, v, psi);
+      ax.dist = m.dist;
+      ax.alongRaw = m.alongRaw;
+      ax.len = m.len;
     });
 
     // Sort by distance ascending (disabled axes never count toward the shader limit)
@@ -2193,8 +2813,17 @@ function updateReadout(v, psi, isPoint) {
         row.innerHTML = `<span>○ ${name}</span><span>${labelText}</span>`;
       }
       row.addEventListener('click', () => {
-        ax.enabled = isDisabled ? true : false;
-        if (ax.x1 !== undefined && CUSTOM_AXES.includes(ax)) renderAxisEditor();
+        if (ax.__parentRectIdx !== undefined) {
+          // Virtual rect side — persist the toggle on the parent rect's sideEnabled array
+          const parent = CUSTOM_AXES[ax.__parentRectIdx];
+          if (parent) {
+            if (!parent.sideEnabled) parent.sideEnabled = [true, true, true, true];
+            parent.sideEnabled[ax.__sideIndex] = isDisabled ? true : false;
+          }
+        } else {
+          ax.enabled = isDisabled ? true : false;
+        }
+        if (CUSTOM_AXES.includes(ax) || ax.__parentRectIdx !== undefined) renderAxisEditor();
         updateReadout(v, psi, isPoint);
         draw();
       });
@@ -2309,6 +2938,8 @@ document.getElementById('showDiagonals').addEventListener('change', draw);
 document.getElementById('showProjections').addEventListener('change', draw);
 document.getElementById('show3x3Grid').addEventListener('change', draw);
 document.getElementById('showSubdivisionArms').addEventListener('change', draw);
+document.getElementById('showAxisTicks').addEventListener('change', draw);
+document.getElementById('showGroupScale').addEventListener('change', draw);
 document.getElementById('showMinkowski').addEventListener('change', draw);
 document.getElementById('showStateTriangles').addEventListener('change', draw);
 document.getElementById('shadePotential').addEventListener('change', draw);
@@ -2452,11 +3083,20 @@ function toCoordUnclamped(px, py) {
   return unzoomedPixelToData(ux, uy);
 }
 
+// True if the given canvas-space pixel falls inside the drawn circle (radius 2√2 in data
+// units — matches the constant used for the VFT shader/circle boundary). Used to stop clicks
+// on the empty canvas background (outside the actual map) from plotting points / placing labels.
+function isOnMap(px, py) {
+  const [v, psi] = toCoordUnclamped(px, py);
+  return Math.hypot(v, psi) <= Math.SQRT2 * 2;
+}
+
 // Returns the index of the topmost visible label whose box contains (ux, uy) — pre-transform pixel space — or -1.
 function hitTestLabel(ux, uy) {
   const dpr = devicePixelRatio;
   for (let i = GLOBAL_LABELS.length - 1; i >= 0; i--) {
     const l = GLOBAL_LABELS[i];
+    if (l.hidden) continue;
     if (l.group && !document.getElementById(l.group)?.checked) continue;
     const [x, y] = getLabelAnchorPixel(l, dpr);
     const rot = (l.rotation || 0) * Math.PI / 180;
@@ -2495,30 +3135,193 @@ function distToSegment(px, py, x1, y1, x2, y2) {
   return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
 }
 
+// Standard ray-casting point-in-polygon test, points as [[x,y], ...] pixel coords.
+function pointInPolygon(px, py, poly) {
+  let inside = false;
+  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+    const [xi, yi] = poly[i], [xj, yj] = poly[j];
+    const intersect = ((yi > py) !== (yj > py)) && (px < (xj - xi) * (py - yi) / (yj - yi) + xi);
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
 function hitTestAxisEndpoint(idx, ux, uy) {
   if (idx < 0 || !CUSTOM_AXES[idx]) return null;
   const dpr = devicePixelRatio;
   const a = CUSTOM_AXES[idx];
+  const type = a.type || 'line';
+  const tol = 9 * dpr;
+  if (type === 'circle') {
+    const [cx, cy] = toPixel(a.cx, a.cy);
+    const [ex, ey] = toPixel(a.cx + a.r, a.cy);
+    return Math.hypot(ux - ex, uy - ey) <= tol ? 'r' : null;
+  }
+  if (type === 'rect') {
+    const [p1x, p1y] = toPixel(...rectRotatePoint(a, a.x1, a.y1));
+    const [p2x, p2y] = toPixel(...rectRotatePoint(a, a.x2, a.y2));
+    if (Math.hypot(ux - p1x, uy - p1y) <= tol) return 1;
+    if (Math.hypot(ux - p2x, uy - p2y) <= tol) return 2;
+    const corners = getRectCorners(a);
+    const [prx, pry] = toPixel(corners.Pr[0], corners.Pr[1]);
+    const [rdx, rdy] = toPixel(corners.Rd[0], corners.Rd[1]);
+    const [rgx, rgy] = toPixel(corners.Rg[0], corners.Rg[1]);
+    const [cox, coy] = toPixel(corners.Co[0], corners.Co[1]);
+    const [ccx, ccy] = toPixel(...rectCenter(a));
+    const midX = (prx + rdx) / 2, midY = (pry + rdy) / 2;
+    const dx = midX - ccx, dy = midY - ccy;
+    const dlen = Math.hypot(dx, dy) || 1;
+    const hx = midX + (dx / dlen) * ROTATE_HANDLE_R * dpr;
+    const hy = midY + (dy / dlen) * ROTATE_HANDLE_R * dpr;
+    if (Math.hypot(ux - hx, uy - hy) <= tol) return 'rot';
+    return null;
+  }
+  if (type === 'triangle' || type === 'polygon') {
+    for (let vi = 0; vi < a.points.length; vi++) {
+      const [hx, hy] = toPixel(a.points[vi][0], a.points[vi][1]);
+      if (Math.hypot(ux - hx, uy - hy) <= tol) return 'v' + vi;
+    }
+    return null;
+  }
   const [x1, y1] = toPixel(a.x1, a.y1);
   const [x2, y2] = toPixel(a.x2, a.y2);
-  if (Math.hypot(ux - x1, uy - y1) <= 9 * dpr) return 1;
-  if (Math.hypot(ux - x2, uy - y2) <= 9 * dpr) return 2;
+  if (Math.hypot(ux - x1, uy - y1) <= tol) return 1;
+  if (Math.hypot(ux - x2, uy - y2) <= tol) return 2;
+  if (type === 'curve') {
+    const [c1x, c1y] = toPixel(a.cx1, a.cy1);
+    const [c2x, c2y] = toPixel(a.cx2, a.cy2);
+    if (Math.hypot(ux - c1x, uy - c1y) <= tol) return 'c1';
+    if (Math.hypot(ux - c2x, uy - c2y) <= tol) return 'c2';
+  }
   return null;
+}
+
+// Grouped edges share corners (cornerFrom/cornerTo), but only the currently-selected edge's own
+// two endpoints are "its" handles. This searches every sibling in the same group too, so any of
+// the group's 4 shared corners can be grabbed regardless of which specific edge is selected.
+function hitTestSelectedEndpoint(selIdx, ux, uy) {
+  const a = CUSTOM_AXES[selIdx];
+  if (!a) return null;
+  if (a.group) {
+    for (let i = 0; i < CUSTOM_AXES.length; i++) {
+      if (CUSTOM_AXES[i].group !== a.group) continue;
+      const ep = hitTestAxisEndpoint(i, ux, uy);
+      if (ep) return { idx: i, endpoint: ep };
+    }
+    return null;
+  }
+  const ep = hitTestAxisEndpoint(selIdx, ux, uy);
+  return ep ? { idx: selIdx, endpoint: ep } : null;
+}
+
+// When a grouped edge's endpoint is dragged, every sibling edge sharing that same named
+// corner gets its matching endpoint moved too, so the shape's corners stay connected.
+function syncGroupCorner(a, cornerName, v, psi) {
+  if (!a.group || cornerName === undefined) return;
+  CUSTOM_AXES.forEach(m => {
+    if (m === a || m.group !== a.group) return;
+    if (m.cornerFrom === cornerName) { m.x1 = v; m.y1 = psi; }
+    if (m.cornerTo === cornerName) { m.x2 = v; m.y2 = psi; }
+  });
 }
 
 function hitTestAxisLine(ux, uy) {
   const dpr = devicePixelRatio;
   for (let i = CUSTOM_AXES.length - 1; i >= 0; i--) {
     const a = CUSTOM_AXES[i];
-    const [x1, y1] = toPixel(a.x1, a.y1);
-    const [x2, y2] = toPixel(a.x2, a.y2);
-    if (distToSegment(ux, uy, x1, y1, x2, y2) <= 6 * dpr) return i;
+    const type = a.type || 'line';
+    if (type === 'circle') {
+      const [cx, cy] = toPixel(a.cx, a.cy);
+      const [ex, ey] = toPixel(a.cx + a.r, a.cy);
+      const rPx = Math.hypot(ex - cx, ey - cy);
+      const d = Math.hypot(ux - cx, uy - cy);
+      if (a.filled ? d <= rPx + 6 * dpr : Math.abs(d - rPx) <= 6 * dpr) return i;
+    } else if (type === 'rect') {
+      const corners = getRectCorners(a);
+      const poly = ['Pr', 'Rd', 'Rg', 'Co'].map(k => toPixel(corners[k][0], corners[k][1]));
+      if (a.filled && pointInPolygon(ux, uy, poly)) return i;
+      const hitEdge = poly.some((p, pi) => {
+        const q = poly[(pi + 1) % poly.length];
+        return distToSegment(ux, uy, p[0], p[1], q[0], q[1]) <= 6 * dpr;
+      });
+      if (hitEdge) return i;
+    } else if (type === 'curve') {
+      const [x1, y1] = toPixel(a.x1, a.y1);
+      const [c1x, c1y] = toPixel(a.cx1, a.cy1);
+      const [c2x, c2y] = toPixel(a.cx2, a.cy2);
+      const [x2, y2] = toPixel(a.x2, a.y2);
+      let hit = false;
+      for (let s = 0; s <= 24 && !hit; s++) {
+        const t = s / 24, mt = 1 - t;
+        const a0 = mt * mt * mt, a1 = 3 * mt * mt * t, a2 = 3 * mt * t * t, a3 = t * t * t;
+        const px = a0 * x1 + a1 * c1x + a2 * c2x + a3 * x2;
+        const py = a0 * y1 + a1 * c1y + a2 * c2y + a3 * y2;
+        if (Math.hypot(ux - px, uy - py) <= 6 * dpr) hit = true;
+      }
+      if (hit) return i;
+    } else if (type === 'triangle' || type === 'polygon') {
+      const poly = a.points.map(p => toPixel(p[0], p[1]));
+      if (a.filled && pointInPolygon(ux, uy, poly)) return i;
+      const hitEdge = poly.some((p, pi) => {
+        const q = poly[(pi + 1) % poly.length];
+        return distToSegment(ux, uy, p[0], p[1], q[0], q[1]) <= 6 * dpr;
+      });
+      if (hitEdge) return i;
+    } else {
+      const [x1, y1] = toPixel(a.x1, a.y1);
+      const [x2, y2] = toPixel(a.x2, a.y2);
+      if (distToSegment(ux, uy, x1, y1, x2, y2) <= 6 * dpr) return i;
+    }
+  }
+
+  // Fallback: clicking anywhere inside a group's bounding box grabs it for a whole-group move,
+  // not just when the cursor lands precisely on one of its edges.
+  const groups = {};
+  CUSTOM_AXES.forEach((a, i) => { if (a.group) (groups[a.group] = groups[a.group] || []).push(i); });
+  for (const g in groups) {
+    const idxs = groups[g];
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    idxs.forEach(i => {
+      const a = CUSTOM_AXES[i];
+      const [px1, py1] = toPixel(a.x1, a.y1), [px2, py2] = toPixel(a.x2, a.y2);
+      minX = Math.min(minX, px1, px2); maxX = Math.max(maxX, px1, px2);
+      minY = Math.min(minY, py1, py2); maxY = Math.max(maxY, py1, py2);
+    });
+    if (ux >= minX && ux <= maxX && uy >= minY && uy <= maxY) return idxs[0];
   }
   return -1;
 }
 
 function setPlacementStatus(text) {
   const el = document.getElementById('axisPlacementStatus');
+  if (el) el.textContent = text;
+}
+
+// Commits an in-progress polygon placement (3+ points already clicked) as a new shape.
+function finishPolygon() {
+  if (!placingAxis || placingAxis.type !== 'polygon' || !placingAxis.points || placingAxis.points.length < 3) return;
+  pushUndo();
+  CUSTOM_AXES.push({
+    type: 'polygon', points: placingAxis.points, color: '#a070f0', filled: false, lineAlpha: 1, fillAlpha: 1,
+    showVertexAngles: false, label: `Custom Polygon ${CUSTOM_AXES.length + 1}`, enabled: true,
+    labelEnabled: true, labelT: 0.5, labelRotOffset: 0, labelPerp: -9
+  });
+  selectedAxisIdx = CUSTOM_AXES.length - 1;
+  selectedLabelIdx = -1;
+  placingAxis = null;
+  placingAxisPreview = null;
+  setPlacementStatus('');
+  renderAxisEditor();
+  draw();
+}
+
+function setLabelPlacementStatus(text) {
+  const el = document.getElementById('labelPlacementStatus');
+  if (el) el.textContent = text;
+}
+
+function setPointPlacementStatus(text) {
+  const el = document.getElementById('pointPlacementStatus');
   if (el) el.textContent = text;
 }
 
@@ -2531,49 +3334,67 @@ canvas.addEventListener('mousedown', e => {
     e.preventDefault(); // Disable default autoscroll trigger
     return;
   }
-  if (e.button !== 0 || placingAxis) return;
+  if (e.button !== 0 || placingAxis || placingLabel || placingPoint) return;
 
   const [rawPx, rawPy] = getCanvasPos(e);
   const [ux, uy] = unzoomPixel(rawPx, rawPy);
 
-  // 1. Rotate handle of the currently selected label
-  if (selectedLabelIdx >= 0 && hitTestRotateHandle(selectedLabelIdx, ux, uy)) {
+  // Master switch: when off, nothing on the canvas can be dragged (labels or axes/shapes) —
+  // only the per-item lock checkboxes stay meaningful once this is back on. Selecting via the
+  // panel and editing fields there still always works regardless of this toggle.
+  const editModeOn = !document.getElementById('editMode') || document.getElementById('editMode').checked;
+
+  // 1. Rotate handle of the currently selected label (skip if locked or edit mode is off)
+  if (editModeOn && selectedLabelIdx >= 0 && !GLOBAL_LABELS[selectedLabelIdx]?.locked && hitTestRotateHandle(selectedLabelIdx, ux, uy)) {
+    pushUndo();
     draggingLabel = { idx: selectedLabelIdx, mode: 'rotate' };
     suppressNextClick = true;
     return;
   }
 
-  // 2. Endpoint handle of the currently selected custom axis
-  if (selectedAxisIdx >= 0) {
-    const ep = hitTestAxisEndpoint(selectedAxisIdx, ux, uy);
-    if (ep) {
-      draggingAxisHandle = { idx: selectedAxisIdx, endpoint: ep };
+  // 2. Endpoint handle of the currently selected custom axis (or any of its group siblings' corners)
+  if (editModeOn && selectedAxisIdx >= 0 && !CUSTOM_AXES[selectedAxisIdx]?.locked) {
+    const hit = hitTestSelectedEndpoint(selectedAxisIdx, ux, uy);
+    if (hit) {
+      pushUndo();
+      draggingAxisHandle = { idx: hit.idx, endpoint: hit.endpoint };
       suppressNextClick = true;
       return;
     }
   }
 
-  // 3. Any label body -> select it and start moving
+  // 3. Any label body -> select it (start moving unless locked or edit mode is off)
   const labelHit = hitTestLabel(ux, uy);
   if (labelHit >= 0) {
+    const l = GLOBAL_LABELS[labelHit];
     selectedLabelIdx = labelHit;
     selectedAxisIdx = -1;
-    const l = GLOBAL_LABELS[labelHit];
-    draggingLabel = { idx: labelHit, mode: 'move', startOx: l.ox || 0, startOy: l.oy || 0, startUx: ux, startUy: uy };
-    suppressNextClick = true;
+    if (editModeOn && !l.locked) {
+      pushUndo();
+      draggingLabel = { idx: labelHit, mode: 'move', startOx: l.ox || 0, startOy: l.oy || 0, startUx: ux, startUy: uy };
+      suppressNextClick = true;
+    }
     renderLabelEditor();
     draw();
     return;
   }
 
-  // 4. Any custom axis line -> select it and start moving the whole line
+  // 4. Any custom axis line/shape -> select it (start moving the whole thing, or its whole group,
+  //    unless locked or edit mode is off)
   const axisHit = hitTestAxisLine(ux, uy);
   if (axisHit >= 0) {
     selectedAxisIdx = axisHit;
     selectedLabelIdx = -1;
     const a = CUSTOM_AXES[axisHit];
-    draggingAxisHandle = { idx: axisHit, endpoint: 'line', startX1: a.x1, startY1: a.y1, startX2: a.x2, startY2: a.y2, startUx: ux, startUy: uy };
-    suppressNextClick = true;
+    if (editModeOn && !a.locked) {
+      pushUndo();
+      const groupMembers = a.group
+        ? CUSTOM_AXES.map((m, mi) => ({ m, mi })).filter(({ m }) => m.group === a.group)
+          .map(({ m, mi }) => ({ idx: mi, startX1: m.x1, startY1: m.y1, startX2: m.x2, startY2: m.y2 }))
+        : null;
+      draggingAxisHandle = { idx: axisHit, endpoint: 'line', startX1: a.x1, startY1: a.y1, startX2: a.x2, startY2: a.y2, startCx: a.cx, startCy: a.cy, startCx1: a.cx1, startCy1: a.cy1, startCx2: a.cx2, startCy2: a.cy2, startPoints: a.points ? a.points.map(p => [p[0], p[1]]) : null, startUx: ux, startUy: uy, groupMembers };
+      suppressNextClick = true;
+    }
     renderAxisEditor();
     draw();
     return;
@@ -2595,7 +3416,20 @@ canvas.addEventListener('mouseup', e => {
   }
 });
 
+let pendingMouseMoveEvent = null;
+let mouseMoveRafScheduled = false;
+
 canvas.addEventListener('mousemove', e => {
+  pendingMouseMoveEvent = e;
+  if (mouseMoveRafScheduled) return;
+  mouseMoveRafScheduled = true;
+  requestAnimationFrame(() => {
+    mouseMoveRafScheduled = false;
+    if (pendingMouseMoveEvent) handleCanvasMouseMove(pendingMouseMoveEvent);
+  });
+});
+
+function handleCanvasMouseMove(e) {
   const [rawPx, rawPy] = getCanvasPos(e);
 
   if (isPanning) {
@@ -2624,18 +3458,69 @@ canvas.addEventListener('mousemove', e => {
   if (draggingAxisHandle) {
     const [ux, uy] = unzoomPixel(rawPx, rawPy);
     const a = CUSTOM_AXES[draggingAxisHandle.idx];
-    if (draggingAxisHandle.endpoint === 1) {
+    const ep = draggingAxisHandle.endpoint;
+    if (ep === 1) {
       const [v, psi] = unzoomedPixelToData(ux, uy);
-      a.x1 = v; a.y1 = psi;
-    } else if (draggingAxisHandle.endpoint === 2) {
+      if ((a.type || 'line') === 'rect' && a.rotation) {
+        [a.x1, a.y1] = rectInverseRotatePoint(a, v, psi);
+      } else {
+        a.x1 = v; a.y1 = psi;
+      }
+      syncGroupCorner(a, a.cornerFrom, a.x1, a.y1);
+    } else if (ep === 2) {
       const [v, psi] = unzoomedPixelToData(ux, uy);
-      a.x2 = v; a.y2 = psi;
-    } else if (draggingAxisHandle.endpoint === 'line') {
+      if ((a.type || 'line') === 'rect' && a.rotation) {
+        [a.x2, a.y2] = rectInverseRotatePoint(a, v, psi);
+      } else {
+        a.x2 = v; a.y2 = psi;
+      }
+      syncGroupCorner(a, a.cornerTo, a.x2, a.y2);
+    } else if (ep === 'c1') {
+      const [v, psi] = unzoomedPixelToData(ux, uy);
+      a.cx1 = v; a.cy1 = psi;
+    } else if (ep === 'c2') {
+      const [v, psi] = unzoomedPixelToData(ux, uy);
+      a.cx2 = v; a.cy2 = psi;
+    } else if (ep === 'r') {
+      const [v, psi] = unzoomedPixelToData(ux, uy);
+      a.r = Math.max(0.02, Math.hypot(v - a.cx, psi - a.cy));
+    } else if (typeof ep === 'string' && ep[0] === 'v' && /^v\d+$/.test(ep)) {
+      const vi = parseInt(ep.slice(1), 10);
+      const [v, psi] = unzoomedPixelToData(ux, uy);
+      if (a.points && a.points[vi]) a.points[vi] = [v, psi];
+    } else if (ep === 'rot') {
+      // Rect rotation: angle between the drag point and the shape's unrotated "up" reference
+      // (top edge midpoint), both measured in pixel space so it matches the rotated corner geometry.
+      const [ccx, ccy] = rectCenter(a);
+      const psiMax = Math.max(a.y1, a.y2);
+      const [ccxPx, ccyPx] = toPixel(ccx, ccy);
+      const [refxPx, refyPx] = toPixel(ccx, psiMax);
+      const refAngle = Math.atan2(refyPx - ccyPx, refxPx - ccxPx);
+      const mouseAngle = Math.atan2(uy - ccyPx, ux - ccxPx);
+      a.rotation = Math.round((mouseAngle - refAngle) * 180 / Math.PI);
+    } else if (ep === 'line') {
       const [v0, psi0] = unzoomedPixelToData(draggingAxisHandle.startUx, draggingAxisHandle.startUy);
       const [v1, psi1] = unzoomedPixelToData(ux, uy);
       const dv = v1 - v0, dpsi = psi1 - psi0;
-      a.x1 = draggingAxisHandle.startX1 + dv; a.y1 = draggingAxisHandle.startY1 + dpsi;
-      a.x2 = draggingAxisHandle.startX2 + dv; a.y2 = draggingAxisHandle.startY2 + dpsi;
+      if (draggingAxisHandle.groupMembers) {
+        draggingAxisHandle.groupMembers.forEach(gm => {
+          const m = CUSTOM_AXES[gm.idx];
+          if (!m) return;
+          m.x1 = gm.startX1 + dv; m.y1 = gm.startY1 + dpsi;
+          m.x2 = gm.startX2 + dv; m.y2 = gm.startY2 + dpsi;
+        });
+      } else if ((a.type || 'line') === 'circle') {
+        a.cx = draggingAxisHandle.startCx + dv; a.cy = draggingAxisHandle.startCy + dpsi;
+      } else if (a.type === 'triangle' || a.type === 'polygon') {
+        a.points = draggingAxisHandle.startPoints.map(p => [p[0] + dv, p[1] + dpsi]);
+      } else {
+        a.x1 = draggingAxisHandle.startX1 + dv; a.y1 = draggingAxisHandle.startY1 + dpsi;
+        a.x2 = draggingAxisHandle.startX2 + dv; a.y2 = draggingAxisHandle.startY2 + dpsi;
+        if (a.type === 'curve') {
+          a.cx1 = draggingAxisHandle.startCx1 + dv; a.cy1 = draggingAxisHandle.startCy1 + dpsi;
+          a.cx2 = draggingAxisHandle.startCx2 + dv; a.cy2 = draggingAxisHandle.startCy2 + dpsi;
+        }
+      }
     }
     renderAxisEditor();
     draw();
@@ -2651,11 +3536,14 @@ canvas.addEventListener('mousemove', e => {
   if (placingAxis && placingAxis.x1 !== undefined) {
     placingAxisPreview = toCoordUnclamped(rawPx, rawPy);
   }
+  if (placingLabel) {
+    placingLabelPreview = toCoordUnclamped(rawPx, rawPy);
+  }
 
   updateReadout(finalV, finalPsi, false);
 
   // Cursor feedback for hoverable handles/labels/lines
-  if (placingAxis) {
+  if (placingAxis || placingLabel) {
     canvas.style.cursor = 'crosshair';
   } else {
     const [ux, uy] = unzoomPixel(rawPx, rawPy);
@@ -2663,7 +3551,7 @@ canvas.addEventListener('mousemove', e => {
       canvas.style.cursor = 'grab';
     } else if (hitTestLabel(ux, uy) >= 0) {
       canvas.style.cursor = 'move';
-    } else if (selectedAxisIdx >= 0 && hitTestAxisEndpoint(selectedAxisIdx, ux, uy)) {
+    } else if (selectedAxisIdx >= 0 && hitTestSelectedEndpoint(selectedAxisIdx, ux, uy)) {
       canvas.style.cursor = 'grab';
     } else if (hitTestAxisLine(ux, uy) >= 0) {
       canvas.style.cursor = 'move';
@@ -2673,38 +3561,146 @@ canvas.addEventListener('mousemove', e => {
   }
 
   draw();
-});
+}
 
 canvas.addEventListener('mouseleave', () => {
   isPanning = false;
   draggingLabel = null;
   draggingAxisHandle = null;
-  hoverCoord = null;
-  if (selectedIdx >= 0 && points[selectedIdx]) {
-    const pt = points[selectedIdx];
-    updateReadout(pt.v, pt.psi, true);
-  } else {
-    clearReadout();
-  }
+  // Deliberately NOT clearing hoverCoord/readout here — leaving the canvas (e.g. to click a
+  // sidebar checkbox) used to blank the Cursor/Last Point panel and Axis Projections list, which
+  // made it impossible to see what you were about to toggle. Keep showing the last hover position.
   draw();
 });
 
 canvas.addEventListener('click', e => {
   const [rawPx, rawPy] = getCanvasPos(e);
 
+  // Ignore clicks that land on the empty canvas background outside the drawn circle — only
+  // clicks actually on the map should plot points / place labels / place axes. Checked per-branch
+  // (rather than as one early return) so it never swallows a pending suppressNextClick reset.
+  if ((placingLabel || placingAxis) && !isOnMap(rawPx, rawPy)) return;
+
+  if (placingLabel) {
+    const [v, psi] = toCoordUnclamped(rawPx, rawPy);
+    pushUndo();
+    GLOBAL_LABELS.push({ x: v, y: psi, ox: 0, oy: 0, rotation: 0, text: 'New Label', fontSize: 11, color: '#ffffff', bold: true, align: 'center', baseline: 'middle' });
+    selectedLabelIdx = GLOBAL_LABELS.length - 1;
+    selectedAxisIdx = -1;
+    placingLabel = false;
+    placingLabelPreview = null;
+    setLabelPlacementStatus('');
+    renderLabelEditor();
+    draw();
+    return;
+  }
+
   if (placingAxis) {
     const [v, psi] = toCoordUnclamped(rawPx, rawPy);
+    const type = placingAxis.type || 'line';
+
+    if (type === 'triangle' || type === 'polygon') {
+      if (!placingAxis.points) placingAxis.points = [];
+      // A native dblclick fires two 'click' events first, both landing on (near) the same spot —
+      // treat that as "finish" rather than a legitimate fast click at a genuinely new position.
+      const nowMs = Date.now();
+      const lastPt = placingAxis.points[placingAxis.points.length - 1];
+      const isSamePos = lastPt && Math.hypot(v - lastPt[0], psi - lastPt[1]) < 0.03;
+      const isRepeatClick = placingAxis.points.length >= 3 && isSamePos && (nowMs - (placingAxis.lastClickTime || 0)) < 400;
+      placingAxis.lastClickTime = nowMs;
+      if (type === 'polygon' && isRepeatClick) {
+        finishPolygon();
+        return;
+      }
+      placingAxis.points.push([v, psi]);
+      placingAxisPreview = [v, psi];
+      if (type === 'triangle' && placingAxis.points.length >= 3) {
+        pushUndo();
+        CUSTOM_AXES.push({
+          type: 'triangle', points: placingAxis.points, color: '#a070f0', filled: false, lineAlpha: 1, fillAlpha: 1,
+          showVertexAngles: true, label: `Custom Triangle ${CUSTOM_AXES.length + 1}`, enabled: true,
+          labelEnabled: true, labelT: 0.5, labelRotOffset: 0, labelPerp: -9
+        });
+        selectedAxisIdx = CUSTOM_AXES.length - 1;
+        selectedLabelIdx = -1;
+        placingAxis = null;
+        placingAxisPreview = null;
+        setPlacementStatus('');
+        renderAxisEditor();
+      } else {
+        setPlacementStatus(type === 'triangle'
+          ? `Click point ${placingAxis.points.length + 1} of 3…`
+          : `Click to add points (${placingAxis.points.length} so far) — double-click, Enter, or Esc to finish/cancel…`);
+      }
+      draw();
+      return;
+    }
+
     if (placingAxis.x1 === undefined) {
       placingAxis.x1 = v;
       placingAxis.y1 = psi;
       placingAxisPreview = [v, psi];
-      setPlacementStatus('Click a second point to finish the line (Esc to cancel)…');
-    } else {
-      CUSTOM_AXES.push({
-        x1: placingAxis.x1, y1: placingAxis.y1, x2: v, y2: psi,
-        color: '#a070f0', label: `Custom Axis ${CUSTOM_AXES.length + 1}`, enabled: true,
-        labelEnabled: true, labelT: 0.5, labelRotOffset: 0, labelPerp: -9
+      setPlacementStatus(type === 'circle' ? 'Click again to set the radius (Esc to cancel)…' : 'Click a second point to finish (Esc to cancel)…');
+    } else if (type === 'group') {
+      pushUndo();
+      // A mini sub-hegemony: 4 individually-tracked edges around a bounding box, corners
+      // named the same way as the main map (Pr=Productive, Rd=Reductive, Rg=Regressive, Co=Constructive).
+      const vMin = Math.min(placingAxis.x1, v), vMax = Math.max(placingAxis.x1, v);
+      const psiMin = Math.min(placingAxis.y1, psi), psiMax = Math.max(placingAxis.y1, psi);
+      const corners = { Pr: [vMax, psiMax], Rd: [vMin, psiMax], Rg: [vMin, psiMin], Co: [vMax, psiMin] };
+      const existingGroups = new Set(CUSTOM_AXES.filter(a => a.group).map(a => a.group));
+      const groupName = `Group ${existingGroups.size + 1}`;
+      // Walk order (from -> to) determines the actual line geometry / connectivity;
+      // label is set separately to match the main map's own edge-naming convention
+      // (Productive↔Reductive, Reductive↔Regressive, Constructive↔Regressive, Productive↔Constructive).
+      [
+        { from: 'Pr', to: 'Rd', label: 'Pr↔Rd' },
+        { from: 'Rd', to: 'Rg', label: 'Rd↔Rg' },
+        { from: 'Rg', to: 'Co', label: 'Co↔Rg' },
+        { from: 'Co', to: 'Pr', label: 'Co↔Pr' }
+      ].forEach(({ from, to, label }) => {
+        CUSTOM_AXES.push({
+          type: 'line',
+          x1: corners[from][0], y1: corners[from][1], x2: corners[to][0], y2: corners[to][1],
+          cornerFrom: from, cornerTo: to,
+          color: '#e8d050', lineAlpha: 1, label, group: groupName, enabled: true,
+          labelEnabled: true, labelT: 0.5, labelRotOffset: 0, labelPerp: -9
+        });
       });
+      selectedAxisIdx = CUSTOM_AXES.length - 4;
+      selectedLabelIdx = -1;
+      placingAxis = null;
+      placingAxisPreview = null;
+      setPlacementStatus('');
+      renderAxisEditor();
+    } else {
+      const n = CUSTOM_AXES.length + 1;
+      const base = {
+        type, color: '#a070f0', lineAlpha: 1, label: `Custom ${type[0].toUpperCase()}${type.slice(1)} ${n}`, enabled: true,
+        labelEnabled: true, labelT: 0.5, labelRotOffset: 0, labelPerp: -9
+      };
+      if (type === 'circle') {
+        base.cx = placingAxis.x1; base.cy = placingAxis.y1;
+        base.r = Math.max(0.02, Math.hypot(v - placingAxis.x1, psi - placingAxis.y1));
+        base.filled = false; base.fillAlpha = 1;
+      } else if (type === 'rect') {
+        base.x1 = placingAxis.x1; base.y1 = placingAxis.y1; base.x2 = v; base.y2 = psi;
+        base.filled = false; base.fillAlpha = 1;
+        base.rotation = 0;
+        base.sideEnabled = [true, true, true, true];
+      } else if (type === 'curve') {
+        base.x1 = placingAxis.x1; base.y1 = placingAxis.y1; base.x2 = v; base.y2 = psi;
+        // Two independent control points (regular pen-tool style), starting at 1/3 and 2/3 along
+        // the line so the curve looks straight until you drag a handle out.
+        base.cx1 = placingAxis.x1 + (v - placingAxis.x1) / 3;
+        base.cy1 = placingAxis.y1 + (psi - placingAxis.y1) / 3;
+        base.cx2 = placingAxis.x1 + (v - placingAxis.x1) * 2 / 3;
+        base.cy2 = placingAxis.y1 + (psi - placingAxis.y1) * 2 / 3;
+      } else {
+        base.x1 = placingAxis.x1; base.y1 = placingAxis.y1; base.x2 = v; base.y2 = psi;
+      }
+      pushUndo();
+      CUSTOM_AXES.push(base);
       selectedAxisIdx = CUSTOM_AXES.length - 1;
       selectedLabelIdx = -1;
       placingAxis = null;
@@ -2721,18 +3717,28 @@ canvas.addEventListener('click', e => {
     return;
   }
 
+  if (!placingPoint) return;
+  if (!isOnMap(rawPx, rawPy)) return;
+
   const [px, py] = [rawPx, rawPy];
   const [v, psi] = toCoord(px, py);
   const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
   const finalV = modeRel ? v + 1 : v;
   const finalPsi = modeRel ? psi + 1 : psi;
-  const label = document.getElementById('labelInput').value.trim();
+  const labelInput = document.getElementById('labelInput');
+  const label = labelInput.value.trim();
   const context = document.getElementById('contextSelect').value;
   const params = calculatePointParams(finalV, finalPsi);
+  pushUndo();
   points.push({ v: finalV, psi: finalPsi, label, context, params });
   selectedIdx = points.length - 1;
   updateReadout(finalV, finalPsi, true);
   renderPointsList();
+  
+  // Clear input so successive points don't copy the same name
+  if (labelInput) labelInput.value = '';
+  
+  // Keep placingPoint active for persistent point-adding mode
   draw();
 });
 
@@ -2742,18 +3748,53 @@ window.addEventListener('keydown', e => {
 
   if (e.key === 'Escape') {
     if (placingAxis) { placingAxis = null; placingAxisPreview = null; setPlacementStatus(''); draw(); }
+    if (placingLabel) { placingLabel = false; placingLabelPreview = null; setLabelPlacementStatus(''); draw(); }
+    if (placingPoint) {
+      placingPoint = false;
+      setPointPlacementStatus('');
+      const btn = document.getElementById('addPointBtn');
+      if (btn) {
+        btn.style.borderColor = '';
+        btn.style.color = '';
+        btn.style.background = '';
+      }
+      draw();
+    }
     if (selectedLabelIdx >= 0 || selectedAxisIdx >= 0) { selectedLabelIdx = -1; selectedAxisIdx = -1; draw(); }
     return;
   }
-  if (!typing && (e.key === 'Delete' || e.key === 'Backspace')) {
+  if (e.key === 'Enter' && placingAxis && placingAxis.type === 'polygon') {
+    finishPolygon();
+    return;
+  }
+  // Ctrl/Cmd+Z to undo, Ctrl/Cmd+Shift+Z (or Ctrl+Y) to redo — only when not typing, so a text
+  // field's own native undo (editing what you just typed) takes precedence as expected.
+  if (!typing && (e.ctrlKey || e.metaKey) && (e.key === 'z' || e.key === 'Z')) {
+    e.preventDefault();
+    if (e.shiftKey) doRedo(); else doUndo();
+    return;
+  }
+  if (!typing && (e.ctrlKey || e.metaKey) && (e.key === 'y' || e.key === 'Y')) {
+    e.preventDefault();
+    doRedo();
+    return;
+  }
+  if (!typing && e.key === 'Delete') {
     if (selectedLabelIdx >= 0) {
+      pushUndo();
       GLOBAL_LABELS.splice(selectedLabelIdx, 1);
       selectedLabelIdx = -1;
       renderLabelEditor();
       draw();
       e.preventDefault();
     } else if (selectedAxisIdx >= 0) {
-      CUSTOM_AXES.splice(selectedAxisIdx, 1);
+      pushUndo();
+      const target = CUSTOM_AXES[selectedAxisIdx];
+      if (target && target.group) {
+        CUSTOM_AXES = CUSTOM_AXES.filter(a => a.group !== target.group);
+      } else {
+        CUSTOM_AXES.splice(selectedAxisIdx, 1);
+      }
       selectedAxisIdx = -1;
       renderAxisEditor();
       draw();
@@ -2778,6 +3819,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
 });
 
 document.getElementById('clearBtn').addEventListener('click', () => {
+  pushUndo();
   points = [];
   selectedIdx = -1;
   hoverCoord = null;
@@ -2800,6 +3842,26 @@ if (zoomSlider) {
   });
 }
 
+
+// Double-click a label or axis/shape on the canvas -> scroll its row into view in the side panel.
+canvas.addEventListener('dblclick', e => {
+  const [rawPx, rawPy] = getCanvasPos(e);
+  const [ux, uy] = unzoomPixel(rawPx, rawPy);
+
+  const labelHit = hitTestLabel(ux, uy);
+  if (labelHit >= 0) {
+    const listId = isBaseAxisLabel(GLOBAL_LABELS[labelHit]) ? 'baseAxisLabelEditorList' : 'labelEditorList';
+    const row = document.querySelector(`#${listId} [data-idx="${labelHit}"][data-action="select-label"]`);
+    if (row) row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  const axisHit = hitTestAxisLine(ux, uy);
+  if (axisHit >= 0) {
+    const row = document.querySelector(`#axisEditorList [data-idx="${axisHit}"][data-action="select-axis"]`);
+    if (row) row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
 
 // Scroll wheel zoom
 canvas.addEventListener('wheel', (e) => {
@@ -2916,158 +3978,773 @@ function combineColorAlpha(hex, alpha) {
   return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
+// Labels tagged with one of these `.group` values are baked-in text tied to the 20 built-in
+// axes (quadrant headers, subdivision arms, diagonals, axis titles) — they get listed in the
+// separate "Base Axis Labels" panel instead of the general "Labels" one. Labels added via
+// "+ Add" never set `.group`, so this filter is automatic going forward.
+function isBaseAxisLabel(l) { return !!l.group; }
+
+function buildLabelRow(l, i) {
+  const row = document.createElement('div');
+  const selected = i === selectedLabelIdx;
+  row.style.cssText = `border:1px solid ${selected ? '#5b6cf8' : 'var(--border)'}; border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer; ${l.groupId ? 'border-left:3px solid ' + (ELEMENT_GROUPS.find(g => g.id === l.groupId)?.color || '#5b6cf8') + ';' : ''}`;
+  row.dataset.idx = i;
+  row.dataset.action = 'select-label';
+  
+  const ungroupBtn = l.groupId ? `<span data-remove-kind="label" data-remove-idx="${i}" class="point-del" style="margin-right:4px; color:var(--amber);" title="Remove from Group">⊘</span>` : '';
+  
+  row.innerHTML = `
+    <div style="display:flex; gap:4px; align-items:center;">
+      <span class="drag-handle" title="Drag onto a group below" style="flex-shrink:0; cursor:grab; color:var(--muted); font-size:12px; user-select:none;">⠿</span>
+      <label style="flex-shrink:0; display:flex; align-items:center;" title="${l.locked ? 'Unlock (allow dragging on canvas)' : 'Lock (prevent dragging on canvas)'}"><input type="checkbox" data-idx="${i}" data-field="locked" ${l.locked ? 'checked' : ''}> 🔒</label>
+      <label style="flex-shrink:0; display:flex; align-items:center;" title="${l.hidden ? 'Show' : 'Hide'} this label"><input type="checkbox" data-idx="${i}" data-field="hidden" ${l.hidden ? '' : 'checked'}></label>
+      <input class="label-input" data-idx="${i}" data-field="text" value="${String(l.text).replace(/"/g, '&quot;')}" style="flex:1; min-width:0; padding:3px 6px; font-size:10px;">
+      <button type="button" class="text-popup-btn" data-idx="${i}" data-action="text-options" title="Text options (color, font, glow, shadow)">Aa</button>
+      ${ungroupBtn}
+      <span data-idx="${i}" data-action="del-label" class="point-del" style="flex-shrink:0;" title="Remove">✕</span>
+    </div>
+    <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
+      <label>x <input type="number" step="0.01" data-idx="${i}" data-field="x" value="${l.x}" style="${NUM_INPUT_STYLE}"></label>
+      <label>y <input type="number" step="0.01" data-idx="${i}" data-field="y" value="${l.y}" style="${NUM_INPUT_STYLE}"></label>
+      <label>ox <input type="number" step="1" data-idx="${i}" data-field="ox" value="${l.ox || 0}" style="${NUM_INPUT_STYLE}"></label>
+      <label>oy <input type="number" step="1" data-idx="${i}" data-field="oy" value="${l.oy || 0}" style="${NUM_INPUT_STYLE}"></label>
+      <label>rot° <input type="number" step="1" data-idx="${i}" data-field="rotation" value="${l.rotation || 0}" style="${NUM_INPUT_STYLE}"></label>
+    </div>`;
+  const handle = row.querySelector('.drag-handle');
+  handle.draggable = true;
+  handle.addEventListener('dragstart', (e) => { e.stopPropagation(); dragPayload = { kind: 'label', idx: i }; });
+  return row;
+}
+
 function renderLabelEditor() {
   const list = document.getElementById('labelEditorList');
-  document.getElementById('labelCount').textContent = GLOBAL_LABELS.length;
+  const baseList = document.getElementById('baseAxisLabelEditorList');
   list.innerHTML = '';
+  baseList.innerHTML = '';
+  let customCount = 0, baseCount = 0;
   GLOBAL_LABELS.forEach((l, i) => {
-    const row = document.createElement('div');
-    const selected = i === selectedLabelIdx;
-    row.style.cssText = `border:1px solid ${selected ? '#5b6cf8' : 'var(--border)'}; border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer;`;
-    row.dataset.idx = i;
-    row.dataset.action = 'select-label';
-    row.innerHTML = `
-      <div style="display:flex; gap:4px; align-items:center;">
-        <input class="label-input" data-idx="${i}" data-field="text" value="${String(l.text).replace(/"/g, '&quot;')}" style="flex:1; padding:3px 6px; font-size:10px;">
-        <input type="color" data-idx="${i}" data-field="color" value="${toHexColor(l.color)}" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
-        <input type="range" min="0" max="100" data-idx="${i}" data-field="colorAlpha" value="${Math.round(getColorAlpha(l.color) * 100)}" title="Opacity" style="width:38px; accent-color:#5b6cf8;">
-        <span data-idx="${i}" data-action="del-label" class="point-del" title="Remove">✕</span>
-      </div>
-      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
-        <label>x <input type="number" step="0.01" data-idx="${i}" data-field="x" value="${l.x}" style="${NUM_INPUT_STYLE}"></label>
-        <label>y <input type="number" step="0.01" data-idx="${i}" data-field="y" value="${l.y}" style="${NUM_INPUT_STYLE}"></label>
-        <label>ox <input type="number" step="1" data-idx="${i}" data-field="ox" value="${l.ox || 0}" style="${NUM_INPUT_STYLE}"></label>
-        <label>oy <input type="number" step="1" data-idx="${i}" data-field="oy" value="${l.oy || 0}" style="${NUM_INPUT_STYLE}"></label>
-        <label>rot° <input type="number" step="1" data-idx="${i}" data-field="rotation" value="${l.rotation || 0}" style="${NUM_INPUT_STYLE}"></label>
-      </div>`;
-    list.appendChild(row);
+    if (isBaseAxisLabel(l)) {
+      const row = buildLabelRow(l, i);
+      baseList.appendChild(row);
+      baseCount++;
+    } else {
+      customCount++;
+      if (!l.groupId) {
+        const row = buildLabelRow(l, i);
+        list.appendChild(row);
+      }
+    }
   });
+  document.getElementById('labelCount').textContent = customCount;
+  document.getElementById('baseAxisLabelCount').textContent = baseCount;
+}
+
+// Observer N (the shaderLimit slider) needs to be able to reach every trackable axis, not just
+// the original 20 built-in ones — grow its ceiling as custom axes/shapes/groups are added.
+function syncObserverNMax() {
+  const slider = document.getElementById('shaderLimit');
+  if (!slider) return;
+  const total = getAllAxes().length;
+  const newMax = Math.max(20, total);
+  if (parseInt(slider.max, 10) !== newMax) slider.max = newMax;
+}
+
+function renderAxisRowHtml(a, i, isBaseAxis) {
+  const type = a.type || 'line';
+  const selected = isBaseAxis ? false : (i === selectedAxisIdx);
+  const borderCol = selected ? '#5b6cf8' : (a.group ? 'rgba(232,208,80,0.35)' : 'var(--border)');
+  const opacity = a.enabled === false ? 'opacity:0.5;' : '';
+  const groupBorder = (!isBaseAxis && a.groupId) ? 'border-left:3px solid ' + (ELEMENT_GROUPS.find(g => g.id === a.groupId)?.color || '#5b6cf8') + ';' : '';
+  
+  let geomFields;
+  const numStyle = `width:45px; background:var(--bg); border:1px solid var(--border); color:#fff; font-family:'JetBrains Mono', monospace; font-size:9px; padding:2px 4px; border-radius:4px; outline:none; text-align:center;`;
+  if (type === 'circle') {
+    geomFields = `
+      <label>cx <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cx" value="${a.cx}" style="${numStyle}"></label>
+      <label>cy <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cy" value="${a.cy}" style="${numStyle}"></label>
+      <label>r <input type="number" step="0.01" min="0.02" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="r" value="${a.r}" style="${numStyle}"></label>
+      <label style="display:flex; align-items:center; gap:2px;" title="Fill the interior"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="filled" ${a.filled ? 'checked' : ''}> fill</label>`;
+  } else if (type === 'rect') {
+    const se = a.sideEnabled || [true, true, true, true];
+    const sideChecks = RECT_SIDE_DEFS.map((sd, si) =>
+      `<label style="display:flex; align-items:center; gap:1px;" title="${sd.label} side — tracked in Axis Projections"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideEnabled" ${se[si] !== false ? 'checked' : ''}> ${sd.label}</label>`
+    ).join('');
+    geomFields = `
+      <label>x1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x1" value="${a.x1}" style="${numStyle}"></label>
+      <label>y1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y1" value="${a.y1}" style="${numStyle}"></label>
+      <label>x2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x2" value="${a.x2}" style="${numStyle}"></label>
+      <label>y2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y2" value="${a.y2}" style="${numStyle}"></label>
+      <label>rot° <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="rotation" value="${a.rotation || 0}" style="${numStyle}"></label>
+      <label style="display:flex; align-items:center; gap:2px;" title="Fill the interior"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="filled" ${a.filled ? 'checked' : ''}> fill</label>
+      <div style="width:100%; display:flex; gap:6px; flex-wrap:wrap; font-size:8px; color:var(--muted); margin-top:2px;">${sideChecks}</div>`;
+  } else if (type === 'curve') {
+    geomFields = `
+      <label>x1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x1" value="${a.x1}" style="${numStyle}"></label>
+      <label>y1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y1" value="${a.y1}" style="${numStyle}"></label>
+      <label>x2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x2" value="${a.x2}" style="${numStyle}"></label>
+      <label>y2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y2" value="${a.y2}" style="${numStyle}"></label>
+      <label>cx1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cx1" value="${a.cx1}" style="${numStyle}"></label>
+      <label>cy1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cy1" value="${a.cy1}" style="${numStyle}"></label>
+      <label>cx2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cx2" value="${a.cx2}" style="${numStyle}"></label>
+      <label>cy2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cy2" value="${a.cy2}" style="${numStyle}"></label>`;
+  } else if (type === 'triangle' || type === 'polygon') {
+    const vertexFields = a.points.map((p, vi) =>
+      `<label>v${vi} <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="x" data-field="vertex" value="${p[0]}" style="${numStyle}"></label>` +
+      `<input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="y" data-field="vertex" value="${p[1]}" style="${numStyle}">`
+    ).join('');
+    geomFields = `
+      ${vertexFields}
+      <label style="display:flex; align-items:center; gap:2px;" title="Fill the interior"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="filled" ${a.filled ? 'checked' : ''}> fill</label>
+      <label style="display:flex; align-items:center; gap:2px;" title="Show the interior angle at each vertex"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="showVertexAngles" ${a.showVertexAngles ? 'checked' : ''}> ∠ angles</label>`;
+  } else {
+    geomFields = `
+      <label>x1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x1" value="${a.x1}" style="${numStyle}"></label>
+      <label>y1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y1" value="${a.y1}" style="${numStyle}"></label>
+      <label>x2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x2" value="${a.x2}" style="${numStyle}"></label>
+      <label>y2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y2" value="${a.y2}" style="${numStyle}"></label>`;
+  }
+
+  const canFill = type === 'circle' || type === 'rect' || type === 'triangle' || type === 'polygon';
+  const nameVal = isBaseAxis ? (a.name || a.label || '') : (a.label || a.name || '');
+
+  let actionBtn = '';
+  if (isBaseAxis) {
+    if (a.isPromoted) {
+      actionBtn = `<button type="button" class="text-popup-btn" data-is-base="true" data-idx="${i}" data-action="demote-axis" title="Demote to Custom Shape">Demote</button>`;
+    }
+  } else {
+    actionBtn = `<button type="button" class="text-popup-btn" data-is-base="false" data-idx="${i}" data-action="promote-axis" title="Promote to Base Axis">Promote</button>`;
+  }
+
+  const showDel = !isBaseAxis || a.isPromoted;
+  const ungroupBtn = (!isBaseAxis && a.groupId) ? `<span data-remove-kind="axis" data-remove-idx="${i}" class="point-del" style="margin-right:4px; color:var(--amber);" title="Remove from Group">⊘</span>` : '';
+  const delBtn = showDel ? `${ungroupBtn}<span data-idx="${i}" data-is-base="${isBaseAxis}" data-action="del-axis" class="point-del" style="flex-shrink:0;" title="Remove">✕</span>` : '';
+  const dragH = !isBaseAxis ? `<span class="drag-handle" title="Drag onto a group below" style="flex-shrink:0; cursor:grab; color:var(--muted); font-size:12px; user-select:none;">⠿</span>` : '';
+  const typeLabel = isBaseAxis ? (a.isPromoted ? 'promoted' : 'base') : (a.group ? a.group : type);
+  const typeColor = isBaseAxis ? '#3bde84' : (a.group ? '#e8d050' : 'var(--muted)');
+
+  return `
+    <div style="display:flex; gap:4px; align-items:center;">
+      ${dragH}
+      <span style="flex-shrink:0; font-size:8px; color:${typeColor}; text-transform:uppercase; letter-spacing:0.05em;" title="${typeLabel}">${typeLabel}</span>
+      <label style="flex-shrink:0; display:flex; align-items:center;" title="${a.locked ? 'Unlock (allow dragging on canvas)' : 'Lock (prevent dragging on canvas)'}"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="locked" ${a.locked ? 'checked' : ''}> 🔒</label>
+      <label style="flex-shrink:0; display:flex; align-items:center;" title="${a.enabled === false ? 'Enable' : 'Disable'} this axis"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="enabled" ${a.enabled === false ? '' : 'checked'}></label>
+      <input class="label-input" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="label" value="${String(nameVal).replace(/"/g, '&quot;')}" placeholder="label…" style="flex:1; min-width:0; padding:3px 6px; font-size:10px;">
+      ${delBtn}
+    </div>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <input type="color" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="color" value="${toHexColor(a.color)}" style="flex-shrink:0; width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
+      <span style="flex-shrink:0; font-size:9px; color:var(--muted);">line</span>
+      <input type="range" min="0" max="100" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="lineAlpha" value="${Math.round((a.lineAlpha !== undefined ? a.lineAlpha : 1) * 100)}" title="Line/stroke opacity" style="flex:1; accent-color:#5b6cf8;">
+      <span data-is-base="${isBaseAxis}" data-alpha-label="${i}" style="flex-shrink:0; font-size:9px; color:var(--muted); width:28px; text-align:right;">${Math.round((a.lineAlpha !== undefined ? a.lineAlpha : 1) * 100)}%</span>
+    </div>
+    ${canFill ? `
+    <div style="display:flex; gap:8px; align-items:center;">
+      <span style="flex-shrink:0; width:22px;"></span>
+      <span style="flex-shrink:0; font-size:9px; color:var(--muted);">fill</span>
+      <input type="range" min="0" max="100" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="fillAlpha" value="${Math.round((a.fillAlpha !== undefined ? a.fillAlpha : 1) * 100)}" title="Fill opacity" style="flex:1; accent-color:#5b6cf8;">
+      <span data-is-base="${isBaseAxis}" data-fill-alpha-label="${i}" style="flex-shrink:0; font-size:9px; color:var(--muted); width:28px; text-align:right;">${Math.round((a.fillAlpha !== undefined ? a.fillAlpha : 1) * 100)}%</span>
+    </div>` : ''}
+    <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">${geomFields}</div>
+    <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap; border-top:1px dashed var(--border); padding-top:4px;">
+      <label style="display:flex; align-items:center; gap:2px;" title="Show/hide this path's label"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="labelEnabled" ${a.labelEnabled === false ? '' : 'checked'}> label</label>
+      <label title="Position along the path — 0..1 fraction">pos <input type="number" step="0.05" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="labelT" value="${a.labelT !== undefined ? a.labelT : 0.5}" style="${numStyle}"></label>
+      <label title="Rotation offset">rot°+ <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="labelRotOffset" value="${a.labelRotOffset || 0}" style="${numStyle}"></label>
+      <label title="Perpendicular distance">perp <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="labelPerp" value="${a.labelPerp !== undefined ? a.labelPerp : -9}" style="${numStyle}"></label>
+      <button type="button" class="text-popup-btn" data-is-base="${isBaseAxis}" data-idx="${i}" data-action="text-options" title="Text options">Aa</button>
+      ${actionBtn}
+    </div>
+  `;
 }
 
 function renderAxisEditor() {
+  syncObserverNMax();
+  
+  // 1. Custom Axes
   const list = document.getElementById('axisEditorList');
   document.getElementById('axisCount').textContent = CUSTOM_AXES.length;
   list.innerHTML = '';
   if (CUSTOM_AXES.length === 0) {
-    list.innerHTML = '<div class="empty-hint" style="padding:6px 0;">No custom lines yet</div>';
-    return;
+    list.innerHTML = '<div class="empty-hint" style="padding:6px 0;">No custom axes or shapes yet</div>';
+  } else {
+    CUSTOM_AXES.forEach((a, i) => {
+      if (!a.groupId) {
+        const row = document.createElement('div');
+        const selected = i === selectedAxisIdx;
+        row.style.cssText = `border:1px solid ${selected ? '#5b6cf8' : (a.group ? 'rgba(232,208,80,0.35)' : 'var(--border)')}; border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer; ${a.enabled === false ? 'opacity:0.5;' : ''}`;
+        row.dataset.idx = i;
+        row.dataset.action = 'select-axis';
+        row.innerHTML = renderAxisRowHtml(a, i, false);
+        const handle = row.querySelector('.drag-handle');
+        if (handle) {
+          handle.draggable = true;
+          handle.addEventListener('dragstart', (e) => { e.stopPropagation(); dragPayload = { kind: 'axis', idx: i }; });
+        }
+        list.appendChild(row);
+      }
+    });
   }
-  CUSTOM_AXES.forEach((a, i) => {
-    const row = document.createElement('div');
-    const selected = i === selectedAxisIdx;
-    row.style.cssText = `border:1px solid ${selected ? '#5b6cf8' : 'var(--border)'}; border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer; ${a.enabled === false ? 'opacity:0.5;' : ''}`;
-    row.dataset.idx = i;
-    row.dataset.action = 'select-axis';
-    row.innerHTML = `
-      <div style="display:flex; gap:4px; align-items:center;">
-        <label style="display:flex; align-items:center;" title="${a.enabled === false ? 'Enable' : 'Disable'} this axis"><input type="checkbox" data-idx="${i}" data-field="enabled" ${a.enabled === false ? '' : 'checked'}></label>
-        <input class="label-input" data-idx="${i}" data-field="label" value="${String(a.label || '').replace(/"/g, '&quot;')}" placeholder="line label…" style="flex:1; padding:3px 6px; font-size:10px;">
-        <input type="color" data-idx="${i}" data-field="color" value="${toHexColor(a.color)}" style="width:22px; height:22px; padding:0; border:none; background:none; cursor:pointer;">
-        <input type="range" min="0" max="100" data-idx="${i}" data-field="colorAlpha" value="${Math.round(getColorAlpha(a.color) * 100)}" title="Opacity" style="width:38px; accent-color:#5b6cf8;">
-        <span data-idx="${i}" data-action="del-axis" class="point-del" title="Remove">✕</span>
-      </div>
-      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap;">
-        <label>x1 <input type="number" step="0.01" data-idx="${i}" data-field="x1" value="${a.x1}" style="${NUM_INPUT_STYLE}"></label>
-        <label>y1 <input type="number" step="0.01" data-idx="${i}" data-field="y1" value="${a.y1}" style="${NUM_INPUT_STYLE}"></label>
-        <label>x2 <input type="number" step="0.01" data-idx="${i}" data-field="x2" value="${a.x2}" style="${NUM_INPUT_STYLE}"></label>
-        <label>y2 <input type="number" step="0.01" data-idx="${i}" data-field="y2" value="${a.y2}" style="${NUM_INPUT_STYLE}"></label>
-      </div>
-      <div style="display:flex; gap:6px; align-items:center; font-size:9px; color:var(--muted); flex-wrap:wrap; border-top:1px dashed var(--border); padding-top:4px;">
-        <label style="display:flex; align-items:center; gap:2px;" title="Show/hide this line's label"><input type="checkbox" data-idx="${i}" data-field="labelEnabled" ${a.labelEnabled === false ? '' : 'checked'}> label</label>
-        <label title="Position along the line — 0=start, 1=end, can go beyond either end">pos <input type="number" step="0.05" data-idx="${i}" data-field="labelT" value="${a.labelT !== undefined ? a.labelT : 0.5}" style="${NUM_INPUT_STYLE}"></label>
-        <label title="Rotation offset added on top of the line's own angle">rot°+ <input type="number" step="1" data-idx="${i}" data-field="labelRotOffset" value="${a.labelRotOffset || 0}" style="${NUM_INPUT_STYLE}"></label>
-        <label title="Perpendicular distance from the line, px">perp <input type="number" step="1" data-idx="${i}" data-field="labelPerp" value="${a.labelPerp !== undefined ? a.labelPerp : -9}" style="${NUM_INPUT_STYLE}"></label>
-      </div>`;
-    list.appendChild(row);
-  });
+
+  // 2. Base Axes
+  const baseList = document.getElementById('baseAxisEditorList');
+  if (baseList) {
+    document.getElementById('baseAxisCount').textContent = GLOBAL_VFT_AXES.length;
+    baseList.innerHTML = '';
+    if (GLOBAL_VFT_AXES.length === 0) {
+      baseList.innerHTML = '<div class="empty-hint" style="padding:6px 0;">No base axes</div>';
+    } else {
+      GLOBAL_VFT_AXES.forEach((a, i) => {
+        const row = document.createElement('div');
+        row.style.cssText = `border:1px solid var(--border); border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer; ${a.enabled === false ? 'opacity:0.5;' : ''}`;
+        row.dataset.idx = i;
+        row.innerHTML = renderAxisRowHtml(a, i, true);
+        baseList.appendChild(row);
+      });
+    }
+  }
 }
 
-document.getElementById('labelEditorList').addEventListener('input', (e) => {
+function handleAxisEditorInput(e) {
   const idx = e.target.dataset.idx, field = e.target.dataset.field;
   if (idx === undefined || !field) return;
-  const l = GLOBAL_LABELS[idx];
-  if (!l) return;
-  if (field === 'text') l.text = e.target.value;
-  else if (field === 'color') l.color = combineColorAlpha(e.target.value, getColorAlpha(l.color));
-  else if (field === 'colorAlpha') l.color = combineColorAlpha(toHexColor(l.color), parseInt(e.target.value, 10) / 100);
-  else l[field] = parseFloat(e.target.value) || 0;
-  draw();
-});
-document.getElementById('labelEditorList').addEventListener('click', (e) => {
-  if (e.target.dataset.action === 'del-label') {
-    GLOBAL_LABELS.splice(parseInt(e.target.dataset.idx), 1);
-    if (selectedLabelIdx === parseInt(e.target.dataset.idx)) selectedLabelIdx = -1;
-    renderLabelEditor();
-    draw();
-    return;
-  }
-  const row = e.target.closest('[data-action="select-label"]');
-  if (row && e.target.tagName !== 'INPUT') {
-    selectedLabelIdx = parseInt(row.dataset.idx);
-    selectedAxisIdx = -1;
-    renderLabelEditor();
-    draw();
-  }
-});
-
-document.getElementById('axisEditorList').addEventListener('input', (e) => {
-  const idx = e.target.dataset.idx, field = e.target.dataset.field;
-  if (idx === undefined || !field) return;
-  const a = CUSTOM_AXES[idx];
+  const isBase = e.target.dataset.isBase === 'true';
+  const a = isBase ? GLOBAL_VFT_AXES[idx] : CUSTOM_AXES[idx];
   if (!a) return;
-  if (field === 'enabled' || field === 'labelEnabled') a[field] = e.target.checked;
-  else if (field === 'label') a.label = e.target.value;
-  else if (field === 'color') a.color = combineColorAlpha(e.target.value, getColorAlpha(a.color));
-  else if (field === 'colorAlpha') a.color = combineColorAlpha(toHexColor(a.color), parseInt(e.target.value, 10) / 100);
-  else a[field] = parseFloat(e.target.value) || 0;
+
+  if (field === 'enabled' || field === 'labelEnabled' || field === 'filled' || field === 'labelBold' || field === 'showVertexAngles' || field === 'locked') {
+    a[field] = e.target.checked;
+  }
+  else if (field === 'sideEnabled') {
+    if (!a.sideEnabled) a.sideEnabled = [true, true, true, true];
+    a.sideEnabled[parseInt(e.target.dataset.sideIdx, 10)] = e.target.checked;
+  }
+  else if (field === 'label') {
+    if (isBase) a.name = e.target.value;
+    else a.label = e.target.value;
+  }
+  else if (field === 'color') a.color = e.target.value;
+  else if (field === 'lineAlpha' || field === 'fillAlpha') {
+    a[field] = parseInt(e.target.value, 10) / 100;
+  }
+  else if (field === 'vertex') {
+    const vi = parseInt(e.target.dataset.vertexIdx, 10);
+    const axis = e.target.dataset.vertexAxis;
+    if (a.points && a.points[vi]) a.points[vi][axis === 'x' ? 0 : 1] = parseFloat(e.target.value) || 0;
+  }
+  else {
+    a[field] = parseFloat(e.target.value) || 0;
+    if (!isBase) {
+      if (field === 'x1' || field === 'y1') syncGroupCorner(a, a.cornerFrom, a.x1, a.y1);
+      else if (field === 'x2' || field === 'y2') syncGroupCorner(a, a.cornerTo, a.x2, a.y2);
+      if (a.group) {
+        CUSTOM_AXES.forEach((m, mi) => {
+          if (m === a || m.group !== a.group) return;
+          ['x1', 'y1', 'x2', 'y2'].forEach(f => {
+            const input = document.querySelector(`#axisEditorList input[data-idx="${mi}"][data-field="${f}"]`);
+            if (input && document.activeElement !== input) input.value = m[f];
+          });
+        });
+      }
+    }
+  }
+
+  const alphaLabel = document.querySelector(`[data-alpha-label="${idx}"][data-is-base="${isBase}"]`);
+  if (alphaLabel) alphaLabel.textContent = Math.round((a.lineAlpha !== undefined ? a.lineAlpha : 1) * 100) + '%';
+  const fillAlphaLabel = document.querySelector(`[data-fill-alpha-label="${idx}"][data-is-base="${isBase}"]`);
+  if (fillAlphaLabel) fillAlphaLabel.textContent = Math.round((a.fillAlpha !== undefined ? a.fillAlpha : 1) * 100) + '%';
   draw();
-});
-document.getElementById('axisEditorList').addEventListener('click', (e) => {
+}
+
+function handleAxisEditorClick(e) {
+  const isBase = e.target.dataset.isBase === 'true';
+  const idx = parseInt(e.target.dataset.idx, 10);
+
+  if (e.target.dataset.action === 'promote-axis') {
+    pushUndo();
+    const item = CUSTOM_AXES[idx];
+    if (item) {
+      item.isPromoted = true;
+      item.name = item.label || item.name || `Promoted Axis ${GLOBAL_VFT_AXES.length + 1}`;
+      GLOBAL_VFT_AXES.push(item);
+      CUSTOM_AXES.splice(idx, 1);
+      if (selectedAxisIdx === idx) selectedAxisIdx = -1;
+      renderAxisEditor();
+      updateReadout(hoverCoord ? hoverCoord[0] : 0, hoverCoord ? hoverCoord[1] : 0, false);
+      draw();
+    }
+    return;
+  }
+
+  if (e.target.dataset.action === 'demote-axis') {
+    pushUndo();
+    const item = GLOBAL_VFT_AXES[idx];
+    if (item) {
+      delete item.isPromoted;
+      item.label = item.name || item.label || `Demoted Axis ${CUSTOM_AXES.length + 1}`;
+      CUSTOM_AXES.push(item);
+      GLOBAL_VFT_AXES.splice(idx, 1);
+      renderAxisEditor();
+      updateReadout(hoverCoord ? hoverCoord[0] : 0, hoverCoord ? hoverCoord[1] : 0, false);
+      draw();
+    }
+    return;
+  }
+
   if (e.target.dataset.action === 'del-axis') {
-    CUSTOM_AXES.splice(parseInt(e.target.dataset.idx), 1);
-    if (selectedAxisIdx === parseInt(e.target.dataset.idx)) selectedAxisIdx = -1;
+    pushUndo();
+    if (isBase) {
+      GLOBAL_VFT_AXES.splice(idx, 1);
+    } else {
+      const target = CUSTOM_AXES[idx];
+      if (target && target.group) {
+        CUSTOM_AXES = CUSTOM_AXES.filter(a => a.group !== target.group);
+      } else {
+        CUSTOM_AXES.splice(idx, 1);
+      }
+      if (selectedAxisIdx === idx) selectedAxisIdx = -1;
+    }
     renderAxisEditor();
+    updateReadout(hoverCoord ? hoverCoord[0] : 0, hoverCoord ? hoverCoord[1] : 0, false);
     draw();
     return;
   }
+
+  if (e.target.dataset.action === 'text-options') {
+    const anchorRect = e.target.getBoundingClientRect();
+    if (isBase) {
+      openTextPopup(anchorRect, 'base-axis', idx);
+    } else {
+      selectedAxisIdx = idx;
+      selectedLabelIdx = -1;
+      renderAxisEditor();
+      draw();
+      openTextPopup(anchorRect, 'axis', idx);
+    }
+    return;
+  }
+
   const row = e.target.closest('[data-action="select-axis"]');
-  if (row && e.target.tagName !== 'INPUT') {
+  if (row && e.target.tagName !== 'INPUT' && !isBase) {
     selectedAxisIdx = parseInt(row.dataset.idx);
     selectedLabelIdx = -1;
     renderAxisEditor();
     draw();
   }
-});
+}
 
-document.getElementById('addLabelBtn').addEventListener('click', () => {
-  GLOBAL_LABELS.push({ x: 0, y: 0, ox: 0, oy: 0, rotation: 0, text: 'New Label', fontSize: 11, color: '#ffffff', bold: true, align: 'center', baseline: 'middle' });
-  selectedLabelIdx = GLOBAL_LABELS.length - 1;
-  selectedAxisIdx = -1;
-  renderLabelEditor();
+document.getElementById('axisEditorList').addEventListener('input', handleAxisEditorInput);
+document.getElementById('baseAxisEditorList').addEventListener('input', handleAxisEditorInput);
+document.getElementById('axisEditorList').addEventListener('click', handleAxisEditorClick);
+document.getElementById('baseAxisEditorList').addEventListener('click', handleAxisEditorClick);
+
+// ─────────────────────────────────────────────
+//  TEXT OPTIONS POPUP — shared by GLOBAL_LABELS rows and CUSTOM_AXES child-label rows.
+//  `kind` selects which backing fields get read/written: labels store color/bold/fontSize/
+//  fontFamily/glow/shadow directly; axis child-labels use the same set with a "label" prefix
+//  (labelColor, labelColorAlpha, labelBold, ...) so they don't collide with the axis's own
+//  stroke color / lineAlpha / fillAlpha controls.
+// ─────────────────────────────────────────────
+let textPopupState = null; // { kind: 'label'|'axis', idx }
+
+function getTextStyle(kind, obj) {
+  if (kind === 'label') {
+    return {
+      bg: !!obj.bg,
+      color: toHexColor(obj.color),
+      alpha: getColorAlpha(obj.color),
+      bold: !!obj.bold,
+      fontSize: obj.fontSize || 11,
+      fontFamily: obj.fontFamily || 'Inter',
+      glowEnabled: !!(obj.glow && obj.glow.enabled),
+      glowColor: toHexColor((obj.glow && obj.glow.color) || obj.color),
+      glowBlur: (obj.glow && obj.glow.blur !== undefined) ? obj.glow.blur : 6,
+      shadowEnabled: !!(obj.shadow && obj.shadow.enabled),
+      shadowColor: toHexColor((obj.shadow && obj.shadow.color) || '#000000'),
+      shadowBlur: (obj.shadow && obj.shadow.blur !== undefined) ? obj.shadow.blur : 3,
+      shadowOffsetX: (obj.shadow && obj.shadow.offsetX !== undefined) ? obj.shadow.offsetX : 2,
+      shadowOffsetY: (obj.shadow && obj.shadow.offsetY !== undefined) ? obj.shadow.offsetY : 2
+    };
+  }
+  return {
+    bg: !!obj.labelBg,
+    color: toHexColor(obj.labelColor || obj.color || '#ffffff'),
+    alpha: obj.labelColorAlpha !== undefined ? obj.labelColorAlpha : 1,
+    bold: obj.labelBold !== false,
+    fontSize: obj.labelFontSize || 8.5,
+    fontFamily: obj.labelFontFamily || 'Inter',
+    glowEnabled: !!(obj.labelGlow && obj.labelGlow.enabled),
+    glowColor: toHexColor((obj.labelGlow && obj.labelGlow.color) || obj.labelColor || obj.color || '#ffffff'),
+    glowBlur: (obj.labelGlow && obj.labelGlow.blur !== undefined) ? obj.labelGlow.blur : 6,
+    shadowEnabled: !!(obj.labelShadow && obj.labelShadow.enabled),
+    shadowColor: toHexColor((obj.labelShadow && obj.labelShadow.color) || '#000000'),
+    shadowBlur: (obj.labelShadow && obj.labelShadow.blur !== undefined) ? obj.labelShadow.blur : 3,
+    shadowOffsetX: (obj.labelShadow && obj.labelShadow.offsetX !== undefined) ? obj.labelShadow.offsetX : 2,
+    shadowOffsetY: (obj.labelShadow && obj.labelShadow.offsetY !== undefined) ? obj.labelShadow.offsetY : 2
+  };
+}
+
+function setTextStyleField(kind, obj, field, value) {
+  if (kind === 'label') {
+    if (field === 'bg') obj.bg = value;
+    else if (field === 'color') obj.color = combineColorAlpha(value, getColorAlpha(obj.color));
+    else if (field === 'alpha') obj.color = combineColorAlpha(toHexColor(obj.color), value);
+    else if (field === 'bold') obj.bold = value;
+    else if (field === 'fontSize') obj.fontSize = value;
+    else if (field === 'fontFamily') obj.fontFamily = value;
+    else if (field === 'glowEnabled') { obj.glow = obj.glow || {}; obj.glow.enabled = value; }
+    else if (field === 'glowColor') { obj.glow = obj.glow || {}; obj.glow.color = value; }
+    else if (field === 'glowBlur') { obj.glow = obj.glow || {}; obj.glow.blur = value; }
+    else if (field === 'shadowEnabled') { obj.shadow = obj.shadow || {}; obj.shadow.enabled = value; }
+    else if (field === 'shadowColor') { obj.shadow = obj.shadow || {}; obj.shadow.color = value; }
+    else if (field === 'shadowBlur') { obj.shadow = obj.shadow || {}; obj.shadow.blur = value; }
+    else if (field === 'shadowOffsetX') { obj.shadow = obj.shadow || {}; obj.shadow.offsetX = value; }
+    else if (field === 'shadowOffsetY') { obj.shadow = obj.shadow || {}; obj.shadow.offsetY = value; }
+    return;
+  }
+  if (field === 'bg') obj.labelBg = value;
+  else if (field === 'color') obj.labelColor = value;
+  else if (field === 'alpha') obj.labelColorAlpha = value;
+  else if (field === 'bold') obj.labelBold = value;
+  else if (field === 'fontSize') obj.labelFontSize = value;
+  else if (field === 'fontFamily') obj.labelFontFamily = value;
+  else if (field === 'glowEnabled') { obj.labelGlow = obj.labelGlow || {}; obj.labelGlow.enabled = value; }
+  else if (field === 'glowColor') { obj.labelGlow = obj.labelGlow || {}; obj.labelGlow.color = value; }
+  else if (field === 'glowBlur') { obj.labelGlow = obj.labelGlow || {}; obj.labelGlow.blur = value; }
+  else if (field === 'shadowEnabled') { obj.labelShadow = obj.labelShadow || {}; obj.labelShadow.enabled = value; }
+  else if (field === 'shadowColor') { obj.labelShadow = obj.labelShadow || {}; obj.labelShadow.color = value; }
+  else if (field === 'shadowBlur') { obj.labelShadow = obj.labelShadow || {}; obj.labelShadow.blur = value; }
+  else if (field === 'shadowOffsetX') { obj.labelShadow = obj.labelShadow || {}; obj.labelShadow.offsetX = value; }
+  else if (field === 'shadowOffsetY') { obj.labelShadow = obj.labelShadow || {}; obj.labelShadow.offsetY = value; }
+}
+
+function buildTextPopupHTML(style) {
+  const fonts = ['Inter', 'JetBrains Mono', 'Georgia', 'Arial', 'Courier New', 'Times New Roman'];
+  return `
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+      <span style="font-weight:600; font-size:11px;">Text Options</span>
+      <span id="textPopupClose" style="cursor:pointer; color:var(--muted); font-size:13px; line-height:1;" title="Close">✕</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:7px; font-size:9px; color:var(--muted);">
+      <label style="display:flex; align-items:center; gap:4px;" title="Solid dark box behind the text vs. plain transparent text"><input type="checkbox" data-field="bg" ${style.bg ? 'checked' : ''}> background box</label>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <input type="color" data-field="color" value="${style.color}" title="Color" style="flex-shrink:0; width:24px; height:24px; padding:0; border:none; background:none; cursor:pointer;">
+        <span style="flex-shrink:0;">opacity</span>
+        <input type="range" min="0" max="100" data-field="alpha" value="${Math.round(style.alpha * 100)}" style="flex:1; accent-color:#5b6cf8;">
+        <span id="textPopupAlphaLabel" style="flex-shrink:0; width:28px; text-align:right;">${Math.round(style.alpha * 100)}%</span>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <select data-field="fontFamily" style="${NUM_INPUT_STYLE}; width:auto; flex:1;">
+          ${fonts.map(f => `<option value="${f}" ${style.fontFamily === f ? 'selected' : ''}>${f}</option>`).join('')}
+        </select>
+        <label style="display:flex; align-items:center; gap:2px; flex-shrink:0;" title="Bold"><input type="checkbox" data-field="bold" ${style.bold ? 'checked' : ''}> <b>B</b></label>
+        <label style="flex-shrink:0;" title="Font size, px">sz <input type="number" step="1" min="4" max="72" data-field="fontSize" value="${style.fontSize}" style="${NUM_INPUT_STYLE}"></label>
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; border-top:1px dashed var(--border); padding-top:7px;">
+        <label style="display:flex; align-items:center; gap:2px;" title="Glow"><input type="checkbox" data-field="glowEnabled" ${style.glowEnabled ? 'checked' : ''}> glow</label>
+        <input type="color" data-field="glowColor" value="${style.glowColor}" title="Glow color" style="width:18px; height:18px; padding:0; border:none; background:none; cursor:pointer;">
+        <label>blur <input type="number" step="1" min="0" max="40" data-field="glowBlur" value="${style.glowBlur}" style="${NUM_INPUT_STYLE}"></label>
+      </div>
+      <div style="display:flex; gap:5px; align-items:center; flex-wrap:wrap;">
+        <label style="display:flex; align-items:center; gap:2px;" title="Drop shadow"><input type="checkbox" data-field="shadowEnabled" ${style.shadowEnabled ? 'checked' : ''}> shadow</label>
+        <input type="color" data-field="shadowColor" value="${style.shadowColor}" title="Shadow color" style="width:18px; height:18px; padding:0; border:none; background:none; cursor:pointer;">
+        <label>blur <input type="number" step="1" min="0" max="40" data-field="shadowBlur" value="${style.shadowBlur}" style="${NUM_INPUT_STYLE}"></label>
+        <label>x <input type="number" step="1" data-field="shadowOffsetX" value="${style.shadowOffsetX}" style="${NUM_INPUT_STYLE}"></label>
+        <label>y <input type="number" step="1" data-field="shadowOffsetY" value="${style.shadowOffsetY}" style="${NUM_INPUT_STYLE}"></label>
+      </div>
+    </div>`;
+}
+
+// anchorRect: a DOMRect (or rect-like object) to position the popup against — captured by the
+// caller BEFORE any re-render, since a re-render detaches the element the click originated on.
+function openTextPopup(anchorRect, kind, idx) {
+  const obj = kind === 'label' ? GLOBAL_LABELS[idx] : (kind === 'base-axis' ? GLOBAL_VFT_AXES[idx] : CUSTOM_AXES[idx]);
+  if (!obj) return;
+  textPopupState = { kind, idx };
+  const popup = document.getElementById('textOptionsPopup');
+  popup.innerHTML = buildTextPopupHTML(getTextStyle(kind, obj));
+  popup.style.display = 'block';
+  const popW = 240;
+  let left = anchorRect.left;
+  if (left + popW > window.innerWidth - 8) left = window.innerWidth - popW - 8;
+  popup.style.left = Math.max(8, left) + 'px';
+  popup.style.top = (anchorRect.bottom + 4) + 'px';
+  requestAnimationFrame(() => {
+    const pr = popup.getBoundingClientRect();
+    if (pr.bottom > window.innerHeight - 8) popup.style.top = Math.max(8, window.innerHeight - pr.height - 8) + 'px';
+  });
+  document.getElementById('textPopupClose').addEventListener('click', closeTextPopup);
+}
+
+function closeTextPopup() {
+  textPopupState = null;
+  const popup = document.getElementById('textOptionsPopup');
+  popup.style.display = 'none';
+  popup.innerHTML = '';
+}
+
+document.getElementById('textOptionsPopup').addEventListener('input', (e) => {
+  const field = e.target.dataset.field;
+  if (!field || !textPopupState) return;
+  const { kind, idx } = textPopupState;
+  const obj = kind === 'label' ? GLOBAL_LABELS[idx] : (kind === 'base-axis' ? GLOBAL_VFT_AXES[idx] : CUSTOM_AXES[idx]);
+  if (!obj) return;
+  let value;
+  if (e.target.type === 'checkbox') value = e.target.checked;
+  else if (field === 'alpha') {
+    value = parseInt(e.target.value, 10) / 100;
+    const lbl = document.getElementById('textPopupAlphaLabel');
+    if (lbl) lbl.textContent = Math.round(value * 100) + '%';
+  }
+  else if (field === 'fontSize' || field === 'glowBlur' || field === 'shadowBlur' || field === 'shadowOffsetX' || field === 'shadowOffsetY') {
+    value = parseFloat(e.target.value) || 0;
+  }
+  else value = e.target.value;
+  setTextStyleField(kind, obj, field, value);
   draw();
 });
-document.getElementById('addAxisBtn').addEventListener('click', () => {
-  if (placingAxis) {
-    // Already placing -> treat as Cancel
-    placingAxis = null;
-    placingAxisPreview = null;
-    setPlacementStatus('');
+
+document.addEventListener('mousedown', (e) => {
+  const popup = document.getElementById('textOptionsPopup');
+  if (popup.style.display === 'block' && !popup.contains(e.target) && !e.target.closest('[data-action="text-options"]')) {
+    closeTextPopup();
+  }
+});
+
+const GROUP_COLORS = ['#5b6cf8', '#3bde84', '#f05060', '#e8d050', '#30c8e0', '#e04080', '#a070f0'];
+
+function renderElementGroups() {
+  const list = document.getElementById('elementGroupsList');
+  if (!list) return;
+  document.getElementById('elementGroupCount').textContent = ELEMENT_GROUPS.length;
+  list.innerHTML = '';
+  if (ELEMENT_GROUPS.length === 0) {
+    list.innerHTML = '<div class="empty-hint" style="padding:6px 0;">No groups yet — click "+ New Group", then drag rows onto it</div>';
+    return;
+  }
+  ELEMENT_GROUPS.forEach(g => {
+    const members = [
+      ...GLOBAL_LABELS.map((l, i) => ({ kind: 'label', idx: i, el: l })).filter(m => m.el.groupId === g.id),
+      ...CUSTOM_AXES.map((a, i) => ({ kind: 'axis', idx: i, el: a })).filter(m => m.el.groupId === g.id)
+    ];
+    const card = document.createElement('div');
+    card.style.cssText = `border:1px solid ${g.color}; border-radius:6px; padding:6px; margin-bottom:6px; display:flex; flex-direction:column; gap:6px;`;
+    
+    // Header
+    const header = document.createElement('div');
+    header.style.cssText = `display:flex; align-items:center; gap:6px;`;
+    header.innerHTML = `
+      <input type="color" data-group-id="${g.id}" data-gfield="color" value="${g.color}" style="width:18px; height:18px; padding:0; border:none; background:none; cursor:pointer; flex-shrink:0;">
+      <input class="label-input" data-group-id="${g.id}" data-gfield="name" value="${String(g.name).replace(/"/g, '&quot;')}" style="flex:1; padding:3px 6px; font-size:10px;">
+      <span style="font-size:9px; color:var(--muted); flex-shrink:0;">${members.length}</span>
+      <span data-group-id="${g.id}" data-gaction="del-group" class="point-del" title="Delete group (ungroups members)">✕</span>
+    `;
+    card.appendChild(header);
+
+    // Actions
+    const actions = document.createElement('div');
+    actions.style.cssText = `display:flex; gap:4px;`;
+    actions.innerHTML = `
+      <button class="clear-btn" data-group-id="${g.id}" data-gaction="show-all" style="font-size:9px; padding:2px 6px; margin:0;">Show all</button>
+      <button class="clear-btn" data-group-id="${g.id}" data-gaction="hide-all" style="font-size:9px; padding:2px 6px; margin:0;">Hide all</button>
+    `;
+    card.appendChild(actions);
+
+    // Bounding drop zone
+    const zoneDiv = document.createElement('div');
+    zoneDiv.style.cssText = `display:flex; flex-direction:column; gap:4px; min-height:20px; border:1px dashed var(--border); border-radius:4px; padding:4px;`;
+    zoneDiv.dataset.dropZone = g.id;
+
+    if (members.length === 0) {
+      zoneDiv.innerHTML = '<div style="font-size:9px; color:var(--muted); text-align:center; padding:6px 0; pointer-events:none;">Drop rows here</div>';
+    } else {
+      members.forEach(m => {
+        let row;
+        if (m.kind === 'label') {
+          row = buildLabelRow(m.el, m.idx);
+        } else {
+          row = document.createElement('div');
+          const selected = m.idx === selectedAxisIdx;
+          row.style.cssText = `border:1px solid ${selected ? '#5b6cf8' : (m.el.group ? 'rgba(232,208,80,0.35)' : 'var(--border)')}; border-radius:6px; padding:6px; display:flex; flex-direction:column; gap:4px; cursor:pointer; ${m.el.enabled === false ? 'opacity:0.5;' : ''} border-left:3px solid ${g.color};`;
+          row.dataset.idx = m.idx;
+          row.dataset.action = 'select-axis';
+          row.innerHTML = renderAxisRowHtml(m.el, m.idx, false);
+          const handle = row.querySelector('.drag-handle');
+          if (handle) {
+            handle.draggable = true;
+            handle.addEventListener('dragstart', (e) => { e.stopPropagation(); dragPayload = { kind: 'axis', idx: m.idx }; });
+          }
+        }
+        zoneDiv.appendChild(row);
+      });
+    }
+    card.appendChild(zoneDiv);
+    list.appendChild(card);
+  });
+}
+
+document.getElementById('addGroupBtn').addEventListener('click', () => {
+  const id = 'g' + Date.now();
+  const color = GROUP_COLORS[ELEMENT_GROUPS.length % GROUP_COLORS.length];
+  ELEMENT_GROUPS.push({ id, name: `Group ${ELEMENT_GROUPS.length + 1}`, color });
+  renderElementGroups();
+});
+
+document.getElementById('elementGroupsList').addEventListener('dragover', (e) => {
+  if (e.target.closest('[data-drop-zone]')) e.preventDefault();
+});
+document.getElementById('elementGroupsList').addEventListener('drop', (e) => {
+  const zone = e.target.closest('[data-drop-zone]');
+  if (!zone || !dragPayload) return;
+  e.preventDefault();
+  const groupId = zone.dataset.dropZone;
+  if (dragPayload.kind === 'label' && GLOBAL_LABELS[dragPayload.idx]) GLOBAL_LABELS[dragPayload.idx].groupId = groupId;
+  else if (CUSTOM_AXES[dragPayload.idx]) CUSTOM_AXES[dragPayload.idx].groupId = groupId;
+  dragPayload = null;
+  renderElementGroups();
+  renderLabelEditor();
+  renderAxisEditor();
+  draw();
+});
+document.getElementById('elementGroupsList').addEventListener('input', (e) => {
+  const gid = e.target.dataset.groupId, gfield = e.target.dataset.gfield;
+  if (gid && gfield) {
+    const g = ELEMENT_GROUPS.find(x => x.id === gid);
+    if (!g) return;
+    g[gfield] = e.target.value;
+    renderElementGroups();
+    renderLabelEditor();
+    renderAxisEditor();
     draw();
     return;
   }
-  placingAxis = {};
-  placingAxisPreview = null;
-  selectedAxisIdx = -1;
+  
+  // Delegated member inputs
+  const isBase = e.target.dataset.isBase;
+  if (isBase !== undefined) {
+    handleAxisEditorInput(e);
+  } else {
+    handleLabelListInput(e);
+  }
+});
+document.getElementById('elementGroupsList').addEventListener('click', (e) => {
+  if (e.target.dataset.gaction === 'del-group') {
+    const gid = e.target.dataset.groupId;
+    GLOBAL_LABELS.forEach(l => { if (l.groupId === gid) l.groupId = null; });
+    CUSTOM_AXES.forEach(a => { if (a.groupId === gid) a.groupId = null; });
+    ELEMENT_GROUPS = ELEMENT_GROUPS.filter(g => g.id !== gid);
+    renderElementGroups(); renderLabelEditor(); renderAxisEditor(); draw();
+    return;
+  }
+  if (e.target.dataset.gaction === 'show-all' || e.target.dataset.gaction === 'hide-all') {
+    const gid = e.target.dataset.groupId;
+    const show = e.target.dataset.gaction === 'show-all';
+    GLOBAL_LABELS.forEach(l => { if (l.groupId === gid) l.hidden = !show; });
+    CUSTOM_AXES.forEach(a => { if (a.groupId === gid) a.enabled = show; });
+    renderLabelEditor(); renderAxisEditor(); draw();
+    return;
+  }
+  if (e.target.dataset.removeKind) {
+    const kind = e.target.dataset.removeKind, idx = parseInt(e.target.dataset.removeIdx, 10);
+    if (kind === 'label' && GLOBAL_LABELS[idx]) GLOBAL_LABELS[idx].groupId = null;
+    else if (CUSTOM_AXES[idx]) CUSTOM_AXES[idx].groupId = null;
+    renderElementGroups(); renderLabelEditor(); renderAxisEditor(); draw();
+    return;
+  }
+  
+  // Delegated member clicks
+  const isBase = e.target.dataset.isBase;
+  if (isBase !== undefined) {
+    handleAxisEditorClick(e);
+  } else if (e.target.dataset.idx !== undefined) {
+    handleLabelListClick(e);
+  }
+});
+
+document.getElementById('addPointBtn').addEventListener('click', () => {
+  if (placingPoint) {
+    // Exit point-placing mode
+    placingPoint = false;
+    setPointPlacementStatus('');
+    const btn = document.getElementById('addPointBtn');
+    if (btn) {
+      btn.style.borderColor = '';
+      btn.style.color = '';
+      btn.style.background = '';
+    }
+    draw();
+    return;
+  }
+  // Exit other placing modes
+  if (placingLabel) {
+    placingLabel = false;
+    placingLabelPreview = null;
+    setLabelPlacementStatus('');
+  }
+  if (placingAxis) {
+    placingAxis = null;
+    placingAxisPreview = null;
+    setPlacementStatus('');
+  }
+  placingPoint = true;
   selectedLabelIdx = -1;
-  setPlacementStatus('Click a first point on the map (Esc to cancel)…');
+  selectedAxisIdx = -1;
+  setPointPlacementStatus('Point Mode Active: Click on map to place points (Esc or click + Point again to exit)…');
+  const btn = document.getElementById('addPointBtn');
+  if (btn) {
+    btn.style.borderColor = 'var(--accent)';
+    btn.style.color = 'var(--accent)';
+    btn.style.background = 'rgba(91,108,248,0.1)';
+  }
   draw();
+});
+
+document.getElementById('addLabelBtn').addEventListener('click', () => {
+  if (placingLabel) {
+    // Already placing -> treat as Cancel
+    placingLabel = false;
+    placingLabelPreview = null;
+    setLabelPlacementStatus('');
+    draw();
+    return;
+  }
+  placingLabel = true;
+  placingLabelPreview = null;
+  selectedLabelIdx = -1;
+  selectedAxisIdx = -1;
+  setLabelPlacementStatus('Click on the map to place the new label (Esc to cancel)…');
+  draw();
+});
+document.querySelectorAll('[data-shape-type]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const type = btn.dataset.shapeType;
+    if (placingAxis && placingAxis.type === type) {
+      // Clicking the same active tool again -> cancel
+      placingAxis = null;
+      placingAxisPreview = null;
+      setPlacementStatus('');
+      draw();
+      return;
+    }
+    placingAxis = { type };
+    placingAxisPreview = null;
+    selectedAxisIdx = -1;
+    selectedLabelIdx = -1;
+    const hint = type === 'circle' ? 'Click to set the center (Esc to cancel)…' : 'Click a first point on the map (Esc to cancel)…';
+    setPlacementStatus(hint);
+    draw();
+  });
 });
 
 document.getElementById('presetSelect').addEventListener('change', (e) => {
   const preset = PRESETS[e.target.value];
   if (!preset) return;
+  pushUndo();
   GLOBAL_LABELS = JSON.parse(JSON.stringify(preset.labels));
   CUSTOM_AXES = JSON.parse(JSON.stringify(preset.customAxes));
+  GLOBAL_VFT_AXES = JSON.parse(JSON.stringify(INITIAL_VFT_AXES));
+  if (Array.isArray(preset.promotedAxes)) {
+    preset.promotedAxes.forEach(ax => GLOBAL_VFT_AXES.push(ax));
+  }
   selectedLabelIdx = -1;
   selectedAxisIdx = -1;
   placingAxis = null;
@@ -3089,8 +4766,13 @@ document.getElementById('presetFileInput').addEventListener('change', (e) => {
     try {
       const cfg = JSON.parse(reader.result);
       if (!Array.isArray(cfg.labels)) throw new Error('Missing "labels" array');
+      pushUndo();
       GLOBAL_LABELS = cfg.labels;
       CUSTOM_AXES = Array.isArray(cfg.customAxes) ? cfg.customAxes : [];
+      GLOBAL_VFT_AXES = JSON.parse(JSON.stringify(INITIAL_VFT_AXES));
+      if (Array.isArray(cfg.promotedAxes)) {
+        cfg.promotedAxes.forEach(ax => GLOBAL_VFT_AXES.push(ax));
+      }
       selectedLabelIdx = -1;
       selectedAxisIdx = -1;
       placingAxis = null;
@@ -3108,7 +4790,11 @@ document.getElementById('presetFileInput').addEventListener('change', (e) => {
 });
 
 document.getElementById('exportPresetBtn').addEventListener('click', () => {
-  const data = JSON.stringify({ labels: GLOBAL_LABELS, customAxes: CUSTOM_AXES }, null, 2);
+  const data = JSON.stringify({
+    labels: GLOBAL_LABELS,
+    customAxes: CUSTOM_AXES,
+    promotedAxes: GLOBAL_VFT_AXES.filter(ax => ax.isPromoted)
+  }, null, 2);
   const blob = new Blob([data], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -3120,7 +4806,11 @@ document.getElementById('exportPresetBtn').addEventListener('click', () => {
 
 document.getElementById('exportHtmlBtn').addEventListener('click', () => {
   const cfgEl = document.getElementById('vft-live-config');
-  cfgEl.textContent = JSON.stringify({ labels: GLOBAL_LABELS, customAxes: CUSTOM_AXES });
+  cfgEl.textContent = JSON.stringify({
+    labels: GLOBAL_LABELS,
+    customAxes: CUSTOM_AXES,
+    promotedAxes: GLOBAL_VFT_AXES.filter(ax => ax.isPromoted)
+  });
   const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
   const blob = new Blob([html], { type: 'text/html' });
   const url = URL.createObjectURL(blob);
@@ -3131,8 +4821,31 @@ document.getElementById('exportHtmlBtn').addEventListener('click', () => {
   URL.revokeObjectURL(url);
 });
 
+// One undo step per field "edit session" (focus -> first keystroke), not per keystroke —
+// covers every label/axis/shape editor field (text, x/y/color/opacity/etc.) via delegation.
+document.addEventListener('focusin', (e) => {
+  if (e.target.hasAttribute && e.target.hasAttribute('data-field')) {
+    pendingFieldSnapshot = snapshotState();
+  }
+});
+document.addEventListener('input', (e) => {
+  if (pendingFieldSnapshot && e.target.hasAttribute && e.target.hasAttribute('data-field')) {
+    undoStack.push(pendingFieldSnapshot);
+    if (undoStack.length > UNDO_LIMIT) undoStack.shift();
+    redoStack.length = 0;
+    pendingFieldSnapshot = null;
+  }
+});
+document.addEventListener('focusout', (e) => {
+  if (e.target.hasAttribute && e.target.hasAttribute('data-field')) pendingFieldSnapshot = null;
+});
+
+document.getElementById('undoBtn')?.addEventListener('click', doUndo);
+document.getElementById('redoBtn')?.addEventListener('click', doRedo);
+
 renderLabelEditor();
 renderAxisEditor();
+renderElementGroups();
 
 // Initial state updates for default point
 if (points.length > 0) {

@@ -93,7 +93,7 @@ parser.add_argument("--prefer", type=str, default="", help=(
 ))
 parser.add_argument("--category", type=str, default="all", help="Category (or comma-separated categories) of news to harvest (default: all)")
 parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
-parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting")
+parser.add_argument("--banned-topic", type=str, default=None, help="Comma-separated topics/keywords to exclude from harvesting (overrides/extends local banlist)")
 parser.add_argument("--enabled-feeds", type=str, default=None, help="Comma-separated feed names (or URLs) to enable for harvesting")
 
 args = parser.parse_args()
@@ -191,6 +191,54 @@ def save_dynamic_banned_domains():
     except Exception as e:
         print(f"Warning: Failed to save dynamic banned domains: {e}")
 
+def load_banned_topics():
+    default_categories = {
+        "sport": [
+            "sport", "sports", "football", "soccer", "basketball", "baseball", "tennis",
+            "golf", "olympics", "nfl", "nba", "mlb", "nhl", "premier league", "afl",
+            "rugby", "cricket", "formula 1", "f1", "athlete", "championship", "tournament",
+            "race", "racing", "boxing", "ufc", "mma", "tour de france"
+        ],
+        "travel": [
+            "travel", "tourism", "cruise", "vacation", "flight", "hotel", "resort",
+            "hostel", "packing list", "travel guide", "wanderlust", "sightseeing", "itinerary"
+        ],
+        "entertainment": [
+            "movie", "movies", "music", "song", "songs", "album", "concert", "gaming",
+            "actor", "actress", "hollywood", "cinema", "box office", "festival", "nintendo",
+            "playstation", "xbox", "tv show", "television", "celebrity", "celebrities",
+            "gossip", "kardashian", "pop star", "rapper", "theatre", "playbill", "netflix",
+            "hulu", "disney+", "streaming", "review"
+        ],
+        "obituaries": [
+            "obituary", "obituaries", "dies at", "passed away at", "death notice", "in memoriam",
+            "tribute to"
+        ],
+        "gardening": [
+            "gardening", "garden", "recipe", "recipes", "cooking", "fashion", "style", "runway"
+        ]
+    }
+    path = os.path.join(bot_dir, "banned_topics.json")
+    if not os.path.exists(path):
+        try:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(default_categories, f, indent=2, ensure_ascii=False)
+            print(f"Created default topic banlist map at {path}")
+        except Exception as e:
+            print(f"Warning: Failed to create default banned_topics.json: {e}")
+        return default_categories
+    else:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, dict):
+                    return data
+                elif isinstance(data, list):
+                    return {"custom": data}
+        except Exception as e:
+            print(f"Warning: Failed to load banned_topics.json: {e}")
+    return default_categories
+
 def is_news_url(url):
     if not url:
         return False
@@ -215,12 +263,14 @@ def is_banned(text, url, banned_keywords):
     text_lower = text.lower()
     url_lower = url.lower() if url else ""
     for bk in banned_keywords:
-        if bk in text_lower or (url_lower and bk in url_lower):
+        pattern = rf"\b{re.escape(bk)}\b"
+        if re.search(pattern, text_lower) or (url_lower and re.search(pattern, url_lower)):
             return True
         if " " in bk:
             variants = [bk.replace(" ", "-"), bk.replace(" ", "_"), bk.replace(" ", "")]
             for var in variants:
-                if var in text_lower or (url_lower and var in url_lower):
+                var_pattern = rf"\b{re.escape(var)}\b"
+                if re.search(var_pattern, text_lower) or (url_lower and re.search(var_pattern, url_lower)):
                     return True
     return False
 
@@ -573,7 +623,22 @@ rss_candidates = []
 
 requested_categories = [c.strip().lower() for c in (args.category or "all").split(",") if c.strip()]
 keywords = [k.strip().lower() for k in args.topic.split(",") if k.strip()] if args.topic else []
-banned_keywords = [k.strip().lower() for k in args.banned_topic.split(",") if k.strip()] if args.banned_topic else []
+
+banned_map = load_banned_topics()
+banned_keywords = []
+
+if args.banned_topic:
+    user_banned = [k.strip().lower() for k in args.banned_topic.split(",") if k.strip()]
+    for item in user_banned:
+        if item in banned_map:
+            banned_keywords.extend(banned_map[item])
+        else:
+            banned_keywords.append(item)
+else:
+    for cat, kws in banned_map.items():
+        banned_keywords.extend(kws)
+
+banned_keywords = list(dict.fromkeys([kw.lower() for kw in banned_keywords]))
 
 if TARGET_RSS > 0:
     for feed in rss_feeds:

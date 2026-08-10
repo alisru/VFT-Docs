@@ -1,0 +1,7 @@
+- [x] Update DEFAULT_FALLBACKS and refactor imports/client configuration in google_ai_studio_one_shot.py
+- [x] Implement command line parser argument for --thinking-level in google_ai_studio_one_shot.py
+- [x] Refactor run_one_shot_evaluations and dynamic ThinkingConfig mapping in google_ai_studio_one_shot.py
+- [x] Refactor legacy API client calls in consolidate_roundups.py
+- [x] Refactor legacy API client calls in fix_roundups.py
+- [x] Add combo_thinking UI selector and update model fallback lists in AletheiaLauncher.pyw
+- [x] Clean up temporary SDK test scripts and run verification checks

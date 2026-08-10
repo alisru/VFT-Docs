@@ -442,6 +442,8 @@ def call_ai_for_thread(capped, macro_label, avg_claim_u, avg_claim_psi, avg_real
 
     default_fallbacks = [
         "gemini-3.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.6-flash",
         "gemini-2.5-flash",
         "gemini-2.5-flash-lite",
         "gemini-3.1-flash-lite",
@@ -524,29 +526,35 @@ def call_ai_for_thread(capped, macro_label, avg_claim_u, avg_claim_psi, avg_real
                 if not genai_client:
                     raise ValueError("Gemini API client not initialized.")
                 
-                try:
-                    from google.generativeai.types import HarmCategory, HarmBlockThreshold
-                except ImportError:
-                    HarmCategory = None
-                    HarmBlockThreshold = None
-
-                safety_settings = None
-                if HarmCategory and HarmBlockThreshold:
-                    safety_settings = {
-                        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-                        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-                        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-                        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-                    }
+                from google.genai import types as genai_types
                 
-                model_instance = genai_client.GenerativeModel(
-                    model_name=model,
+                safety_settings = [
+                    genai_types.SafetySetting(
+                        category=genai_types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                        threshold=genai_types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                    genai_types.SafetySetting(
+                        category=genai_types.HarmCategory.HARM_CATEGORY_HARASSMENT,
+                        threshold=genai_types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                    genai_types.SafetySetting(
+                        category=genai_types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+                        threshold=genai_types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                    genai_types.SafetySetting(
+                        category=genai_types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+                        threshold=genai_types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                ]
+                
+                config = genai_types.GenerateContentConfig(
                     system_instruction=ROUNDUP_SYSTEM_PROMPT,
-                )
-                response = model_instance.generate_content(
-                    user_prompt,
-                    request_options={"timeout": 90},
                     safety_settings=safety_settings
+                )
+                response = genai_client.models.generate_content(
+                    model=model,
+                    contents=user_prompt,
+                    config=config
                 )
                 raw = response.text
                 print(f"    Thread generation: Gemini ({model}) call successful.")
@@ -784,9 +792,9 @@ def main():
     gemini_api_key = os.environ.get("GEMINI_API_KEY")
     if gemini_api_key:
         try:
-            import google.generativeai as genai_mod
-            genai_mod.configure(api_key=gemini_api_key)
-            genai_client = genai_mod
+            from google import genai as genai_mod
+            from google.genai import types as genai_types
+            genai_client = genai_mod.Client(api_key=gemini_api_key, http_options=genai_types.HttpOptions(timeout=90000))
         except Exception as e:
             print(f"Warning: Could not init Gemini client: {e}")
 

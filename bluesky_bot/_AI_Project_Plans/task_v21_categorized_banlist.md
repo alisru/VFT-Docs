@@ -1,0 +1,6 @@
+- [x] Restructure banned_topics.json into categories with new sport keywords
+- [x] Refactor load_banned_topics() and keyword resolution in harvest_candidates.py
+- [x] Refactor load_banned_topics() and keyword resolution in google_ai_studio_one_shot.py
+- [x] Implement dynamic startup populating in AletheiaLauncher.pyw
+- [x] Update and run verification tests in tests/test_banlist.py
+- [x] Run AletheiaLauncher.pyw to verify UI loading

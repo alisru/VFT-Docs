@@ -47,11 +47,17 @@ GDRIVE_DATES_PATH = SCRIPT_DIR / "gdrive_creation_dates.json"
 READABLE_EXTS = {".md", ".txt", ".js", ".py", ".json", ".html", ".cs"}
 
 gdrive_creation_dates = {}
+norm_gdrive_dates = {}
+
+def normalize_date_key(s):
+    return "".join(c for c in s.replace("_", "").replace("-", "").replace(" ", "").lower() if c.isalnum())
+
 if GDRIVE_DATES_PATH.exists():
     try:
         with open(GDRIVE_DATES_PATH, "r", encoding="utf-8") as f:
             gdrive_creation_dates = json.load(f)
-        print(f"Loaded {len(gdrive_creation_dates)} Google Drive creation dates.")
+        norm_gdrive_dates = {normalize_date_key(k): v for k, v in gdrive_creation_dates.items()}
+        print(f"Loaded {len(gdrive_creation_dates)} Google Drive creation dates (normalized lookup built).")
     except Exception as e:
         print(f"Warning: Failed to load Google Drive dates: {e}")
 
@@ -481,12 +487,14 @@ def api_timeline():
                 continue
 
             try:
-                # Query original Google Drive creation dates by lowercase filename (stripped of extension)
-                filename_base = abs_path.stem.lower()
-                gdrive_date_str = gdrive_creation_dates.get(filename_base)
+                # Query original Google Drive creation dates by normalized filename (stripped of symbols)
+                filename_base = abs_path.stem
+                norm_name = normalize_date_key(filename_base)
+                gdrive_date_str = norm_gdrive_dates.get(norm_name)
                 
                 if gdrive_date_str:
                     cdate = datetime.datetime.fromisoformat(gdrive_date_str)
+                    ctime = cdate.timestamp()
                 else:
                     ctime = os.path.getctime(abs_path)
                     cdate = datetime.datetime.fromtimestamp(ctime)

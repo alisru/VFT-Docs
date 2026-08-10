@@ -1,0 +1,132 @@
+[
+  {
+    "thinking": "Phase 1-5: Infantino denies affair allegations (S_LE=1.5). Reality involves documented departure payments (S_GE=1.2). u = -0.8, psi = -1.2. R_net = 15.0. Hypocrisy gap = 0.9. Path: Deception. 🌐",
+    "id": "infantino-affair-denial",
+    "subject": "Infantino denies 'defamatory' affair claims",
+    "link": "https://www.abc.net.au/news/2026-08-09/gianni-infantino-denies-reports-of-alleged-affair-while-at-uefa/107014076",
+    "target_url": "",
+    "claim_u": -1.0,
+    "claim_psi": -1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
+    "mode": "root",
+    "posts": [
+      "FIFA's leadership faces fresh scrutiny as allegations of past misconduct emerge. Gianni Infantino denies claims of an affair during his UEFA tenure.\nEvidence: Alleged affair, financial payouts, categorical denial.\n#FIFA #Infantino",
+      "Gianni Infantino has dismissed reports of an affair during his time at UEFA as 'categorically untrue' and 'defamatory', maintaining his innocence amid re-election bids.\nStated Judgement: (-1.00, -1.00) — Lesser Evil",
+      "Reality reveals documented departure payments and tuition fees for an employee, which UEFA confirms were made, casting doubt on the total denial of the circumstances.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — The Path of Deception.\nInfantino's denial ignores the documented financial reality, creating a high-strain hypocrisy gap.\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 2)",
+      "Gianni Infantino, FIFA president, is facing allegations from The Daily Telegraph regarding an affair and financial payouts while at UEFA. He denies all claims, while UEFA confirms payments were made to the employee.",
+      "The Poison:\nThe use of institutional funds for personal departure packages, even if 'regulated', creates a perception of systemic abuse of power.",
+      "The Breakdown & Plane Error:\nThe error is in the WHAT. Infantino claims the affair is the issue, but the structural issue is the use of institutional funds for personal settlements.",
+      "Social Physics Analysis:\nInfantino uses a classic pretext: framing the entire story as a 'defamatory' attack to avoid addressing the financial reality. This projection of victimhood masks the underlying power imbalance.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The denial of facts increases systemic strain.",
+      "The Unavoidable Truth: Institutional funds were paid to an employee upon departure.\n\nThe Unavoidable Lie: The payments were entirely unrelated to the nature of the professional relationship.",
+      "Alethekanon:\nInfantino's strategy is to collapse the complexity of the financial payout into a binary 'true/false' regarding the affair. It is a textbook diversionary tactic.",
+      "Awwthekanon:\nIt is sad to see leadership embroiled in such secrecy. Transparency is the only way to heal the trust that has been broken within the football community.",
+      "Brothekanon:\nClassic FIFA. Deny everything, blame the press, and hope the members in Africa and South America don't care. It's a bold strategy, let's see if it pays off."
+    ],
+    "actors": [
+      "Gianni Infantino",
+      "FIFA",
+      "UEFA",
+      "The Daily Telegraph"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 15.0,
+    "real_rnet": 15.0,
+    "claim_z": 1,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "claim_integrity": "Severe Deception",
+    "real_integrity": "Severe Deception",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "category": "general",
+    "topic": "FIFA",
+    "event": ""
+  }
+]

@@ -89,12 +89,11 @@ bot_env_path = os.path.join(script_dir, ".env")
 load_dotenv(bot_env_path)
 
 try:
-    import google.generativeai as genai
-    from google.generativeai.types import HarmCategory, HarmBlockThreshold
+    from google import genai
+    from google.genai import types
 except ImportError:
     genai = None
-    HarmCategory = None
-    HarmBlockThreshold = None
+    types = None
 
 # Per-request deadline for Gemini calls. Without it a rate-limited/stalled call
 # hangs with no client-side timeout instead of raising into the fallback path.
@@ -164,10 +163,14 @@ def get_gemini_client():
         print("Warning: GEMINI_API_KEY environment variable not found. Gemini models will be unavailable.")
         return None
     if genai is None:
-        print("Warning: Google Generative AI SDK is not installed. Gemini models will be unavailable.")
+        print("Warning: google-genai SDK is not installed. Gemini models will be unavailable.")
         return None
-    genai.configure(api_key=api_key)
-    return genai
+    try:
+        client = genai.Client(api_key=api_key)
+        return client
+    except Exception as e:
+        print(f"Warning: Failed to initialize genai.Client: {e}")
+        return None
 
 def normalize_url(url):
     if not url:
@@ -312,6 +315,54 @@ def save_dynamic_banned_domains():
     except Exception as e:
         print(f"Warning: Failed to save dynamic banned domains: {e}")
 
+def load_banned_topics():
+    default_categories = {
+        "sport": [
+            "sport", "sports", "football", "soccer", "basketball", "baseball", "tennis",
+            "golf", "olympics", "nfl", "nba", "mlb", "nhl", "premier league", "afl",
+            "rugby", "cricket", "formula 1", "f1", "athlete", "championship", "tournament",
+            "race", "racing", "boxing", "ufc", "mma", "tour de france"
+        ],
+        "travel": [
+            "travel", "tourism", "cruise", "vacation", "flight", "hotel", "resort",
+            "hostel", "packing list", "travel guide", "wanderlust", "sightseeing", "itinerary"
+        ],
+        "entertainment": [
+            "movie", "movies", "music", "song", "songs", "album", "concert", "gaming",
+            "actor", "actress", "hollywood", "cinema", "box office", "festival", "nintendo",
+            "playstation", "xbox", "tv show", "television", "celebrity", "celebrities",
+            "gossip", "kardashian", "pop star", "rapper", "theatre", "playbill", "netflix",
+            "hulu", "disney+", "streaming", "review"
+        ],
+        "obituaries": [
+            "obituary", "obituaries", "dies at", "passed away at", "death notice", "in memoriam",
+            "tribute to"
+        ],
+        "gardening": [
+            "gardening", "garden", "recipe", "recipes", "cooking", "fashion", "style", "runway"
+        ]
+    }
+    path = os.path.join(script_dir, "banned_topics.json")
+    if not os.path.exists(path):
+        try:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(default_categories, f, indent=2, ensure_ascii=False)
+            print(f"Created default topic banlist map at {path}")
+        except Exception as e:
+            print(f"Warning: Failed to create default banned_topics.json: {e}")
+        return default_categories
+    else:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, dict):
+                    return data
+                elif isinstance(data, list):
+                    return {"custom": data}
+        except Exception as e:
+            print(f"Warning: Failed to load banned_topics.json: {e}")
+    return default_categories
+
 def is_news_url(url):
     """Banlist gate: returns True for any real external http(s) URL not on the non-news denylist
 
@@ -348,14 +399,14 @@ def is_banned(text, url, banned_keywords):
     text_lower = text.lower()
     url_lower = url.lower() if url else ""
     for bk in banned_keywords:
-        # Check direct match of the keyword
-        if bk in text_lower or (url_lower and bk in url_lower):
+        pattern = rf"\b{re.escape(bk)}\b"
+        if re.search(pattern, text_lower) or (url_lower and re.search(pattern, url_lower)):
             return True
-        # If the keyword contains spaces, check hyphenated/underscored/condensed variants
         if " " in bk:
             variants = [bk.replace(" ", "-"), bk.replace(" ", "_"), bk.replace(" ", "")]
             for var in variants:
-                if var in text_lower or (url_lower and var in url_lower):
+                var_pattern = rf"\b{re.escape(var)}\b"
+                if re.search(var_pattern, text_lower) or (url_lower and re.search(var_pattern, url_lower)):
                     return True
     return False
 
@@ -571,7 +622,19 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
     if keywords:
         print(f"Applying topic filters (OR match): {keywords}")
         
-    banned_keywords = [k.strip().lower() for k in banned_topic.split(",") if k.strip()] if banned_topic else []
+    banned_map = load_banned_topics()
+    banned_keywords = []
+    if banned_topic:
+        user_banned = [k.strip().lower() for k in banned_topic.split(",") if k.strip()]
+        for item in user_banned:
+            if item in banned_map:
+                banned_keywords.extend(banned_map[item])
+            else:
+                banned_keywords.append(item)
+    else:
+        for cat, kws in banned_map.items():
+            banned_keywords.extend(kws)
+    banned_keywords = list(dict.fromkeys([kw.lower() for kw in banned_keywords]))
     if banned_keywords:
         print(f"Applying banned topic filters (excluding): {banned_keywords}")
     
@@ -794,9 +857,11 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
 DEFAULT_FALLBACKS = [
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.6-flash",
     "gemini-2.5-flash",
     "gemini-2.5-flash-lite",
-    "gemini-3.5-flash",
     "gemini-3.1-flash-lite",
     "vertex:gemini-3.1-flash-lite",
     "gemini-3-flash-preview",
@@ -822,7 +887,7 @@ def _load_rules(use_son=False):
             _RULES_CACHE[f"{cache_key}_formatting"] = minify_markdown(f.read())
     return _RULES_CACHE[f"{cache_key}_convergence"], _RULES_CACHE[f"{cache_key}_formatting"]
 
-def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False):
+def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False, thinking_level="MEDIUM"):
     convergence_rules, formatting_rules = _load_rules(use_son=use_son)
         
     # Prepend compact mode directive or five-word directive to formatting rules if active
@@ -878,13 +943,13 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
 
     # Build the full user message: rules + candidates + strict JSON matrix output demand
     n = len(candidates)
-    expected_len = 25 if use_son else 17
+    expected_len = 27 if use_son else 17
     output_format = (
         f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE A SINGLE VALID JSON LIST OF LISTS. NO commentary, NO markdown formatting (other than JSON code fences if desired), NO explanation.\n"
         f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly {expected_len} items representing the evaluation of that candidate in this specific structure:\n"
         "[\n"
         "  [\n"
-        '    "thinking",                                // item[0]: detailed thinking/scratchpad calculations (Phase 1 to 5 calculations)\n'
+        '    "thinking",                                // item[0]: detailed thinking block. You MUST write down the full 6-Phase Convergence scan here, including scoring the 18 variables of the 6 attractors with high-resolution decimals, and detailing your coordinate equations (u, psi), hypocrisy delta, and trajectory calculations step-by-step before outputting the rest of the array.\n'
         '    "id",                                      // item[1]: clean story id slug\n'
         '    "subject",                                 // item[2]: story subject\n'
         '    "link",                                    // item[3]: story link\n'
@@ -917,7 +982,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             "    claim_z_profile (7-number array of ints),  // item[21]: stated blank profile [B_Q1, B_Q2, B_Q3, B_Q4, B_Q5, B_Q6, B_Q7]\n"
             "    real_z_profile (7-number array of ints),   // item[22]: actual blank profile\n"
             '    "claim_integrity",                         // item[23]: stated integrity label mapped from claim_rnet\n'
-            '    "real_integrity"                           // item[24]: actual integrity label mapped from real_rnet\n'
+            '    "real_integrity",                          // item[24]: actual integrity label mapped from real_rnet\n'
+            '    stated_forces (object/dict),               // item[25]: {"GG": {"S": s, "O": o, "N": n}, ...} for stated claim\n'
+            '    actual_forces (object/dict)                // item[26]: {"GG": {"S": s, "O": o, "N": n}, ...} for actual reality\n'
         )
     output_format += (
         "\n"
@@ -929,6 +996,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     )
     if use_son:
         output_format += (
+            "FORCE SCORING GRANULARITY CRITICAL RULES:\n"
+            "- You MUST score the [S, O, N] force magnitudes for the 6 attractors as granular decimals (e.g. 0.2, 0.5, 0.8, 1.2, 1.5, 1.8) based on specific evidence in the text. Do NOT default to binary 0.0 or 1.0 values, as this causes coordinate collapse and loses analytical resolution.\n"
+            "- Ensure that the forces you output in items[25] and [26] are highly granular and match the math you write down in your thinking block (item[0]).\n\n"
             "INTEGRITY TIER MAPPING FOR ITEMS [23] AND [24]:\n"
             "Map claim_rnet to item[23] (claim_integrity) and real_rnet to item[24] (real_integrity) using these strict boundaries:\n"
             "- R_net == 1.0: \"Absolute Truth\"\n"
@@ -949,9 +1019,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '    "https://...",\n'
         '    "",\n'
         "    1.0,\n"
-        "    0.0,\n"
-        "    -1.0,\n"
-        "    -1.0,\n"
+        "    1.0,\n"
+        "    -0.89,\n"
+        "    -0.87,\n"
         '    "root",\n'
         "    [\n"
         '      "Hook text here.\\nEvidence: a, b, c\\n#Aletheia #Topic",\n'
@@ -985,7 +1055,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             "    [0, 0, 0, 0, 0, 0, 0],\n"
             "    [1, 0, 0, 2, 1, 0, 0],\n"
             '    "Absolute Truth",\n'
-            '    "Severe Deception"'
+            '    "Severe Deception",\n'
+            '    {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}},\n'
+            '    {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
         )
     output_format += (
         "\n"
@@ -1077,49 +1149,90 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     contents=user_payload_str,
                     config=config
                 )
-                result_text = response.text.strip()
+                
+                result_text = ""
+                if hasattr(response, 'candidates') and response.candidates:
+                    cand = response.candidates[0]
+                    if hasattr(cand, 'content') and cand.content and hasattr(cand.content, 'parts') and cand.content.parts:
+                        non_thought_parts = []
+                        for part in cand.content.parts:
+                            if getattr(part, 'thought', False):
+                                continue
+                            if hasattr(part, 'text') and part.text:
+                                non_thought_parts.append(part.text)
+                        result_text = "".join(non_thought_parts).strip()
+                
+                if not result_text and hasattr(response, 'text') and response.text:
+                    result_text = response.text.strip()
             else:
                 if not genai_client:
                     raise ValueError("Gemini API client not initialized.")
-                config = genai_client.types.GenerationConfig(
-                    temperature=0.15,
-                    max_output_tokens=8192
-                )
                 
-                # Setup tools if search grounding is enabled
+                safety_settings = [
+                    types.SafetySetting(
+                        category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                        threshold=types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                    types.SafetySetting(
+                        category=types.HarmCategory.HARM_CATEGORY_HARASSMENT,
+                        threshold=types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                    types.SafetySetting(
+                        category=types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+                        threshold=types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                    types.SafetySetting(
+                        category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+                        threshold=types.HarmBlockThreshold.BLOCK_NONE
+                    ),
+                ]
+                
                 tools_list = None
                 if use_search:
-                    # Use 'google_search_retrieval' for 1.0/1.5 models, 'google_search' for 2.0+ models
-                    if any(x in model for x in ["-1.5", "-1.0"]):
-                        tools_list = [genai.protos.Tool(google_search_retrieval={})]
-                    else:
-                        tools_list = [genai.protos.Tool(google_search={})]
+                    tools_list = [types.Tool(google_search=types.GoogleSearch())]
+                
+                thinking_config = None
+                if thinking_level != "OFF":
+                    model_lower = model.lower()
+                    if "gemini-3." in model_lower or "gemini-3-" in model_lower:
+                        thinking_config = types.ThinkingConfig(
+                            thinking_level=thinking_level.upper()
+                        )
+                    elif "gemini-2.5" in model_lower:
+                        budget_map = {"LOW": 1024, "MEDIUM": 2048, "HIGH": 4096}
+                        thinking_config = types.ThinkingConfig(
+                            thinking_budget=budget_map.get(thinking_level.upper(), 2048)
+                        )
 
-                model_instance = genai_client.GenerativeModel(
-                    model_name=model,
+                config = types.GenerateContentConfig(
+                    temperature=0.15,
+                    max_output_tokens=8192,
                     system_instruction=system_instruction,
-                    generation_config=config,
-                    tools=tools_list
+                    safety_settings=safety_settings,
+                    tools=tools_list,
+                    thinking_config=thinking_config
                 )
-                # Configure safety settings to prevent false-positive censorship of news content
-                safety_settings = None
-                if genai_client and HarmCategory and HarmBlockThreshold:
-                    safety_settings = {
-                        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-                        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-                        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-                        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-                    }
-
-                # Without a timeout the gRPC call has no client-side deadline, so a
-                # 429/quota stall hangs forever instead of raising into the except
-                # below (which is what rotates to the next fallback model).
-                response = model_instance.generate_content(
-                    user_payload_str,
-                    request_options={"timeout": GEMINI_TIMEOUT_SECS},
-                    safety_settings=safety_settings
+                
+                response = genai_client.models.generate_content(
+                    model=model,
+                    contents=user_payload_str,
+                    config=config
                 )
-                result_text = response.text.strip()
+                
+                result_text = ""
+                if hasattr(response, 'candidates') and response.candidates:
+                    cand = response.candidates[0]
+                    if hasattr(cand, 'content') and cand.content and hasattr(cand.content, 'parts') and cand.content.parts:
+                        non_thought_parts = []
+                        for part in cand.content.parts:
+                            if getattr(part, 'thought', False):
+                                continue
+                            if hasattr(part, 'text') and part.text:
+                                non_thought_parts.append(part.text)
+                        result_text = "".join(non_thought_parts).strip()
+                
+                if not result_text and hasattr(response, 'text') and response.text:
+                    result_text = response.text.strip()
 
             # Pre-flight JSON validation to trigger fallback on truncation/corruption
             content = result_text
@@ -1305,6 +1418,10 @@ def transpose_flat_to_json(flat_text):
                 story["claim_integrity"] = str(item[23]).strip()
             if len(item) >= 25 and item[24] is not None:
                 story["real_integrity"] = str(item[24]).strip()
+            if len(item) >= 26 and isinstance(item[25], dict):
+                story["stated_forces"] = item[25]
+            if len(item) >= 27 and isinstance(item[26], dict):
+                story["actual_forces"] = item[26]
             evaluations.append(story)
         except Exception as e:
             print(f"Warning: Failed to parse item {idx}: {e}")
@@ -1411,7 +1528,8 @@ def main():
     parser.add_argument("--chunk-size", type=int_or_default(1), default=1, help="Number of stories to process per API call (default: 1)")
     parser.add_argument("--category", type=str, default="all", help="Category (or comma-separated categories) of news to harvest (default: all). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
-    parser.add_argument("--banned-topic", type=str, default="gardening,sport,sports,football,soccer,basketball,baseball,tennis,golf,olympics,nfl,nba,movie,movies,music,song,album,concert,gaming,actor,actress,hollywood,cinema,box office,festival,nintendo,playstation,xbox,tv show,travel,tourism,cruise,vacation,flight,hotel", help="Comma-separated topics/keywords to exclude from harvesting (default: sports, entertainment, and travel keywords)")
+    parser.add_argument("--banned-topic", type=str, default=None, help="Comma-separated topics/keywords to exclude from harvesting (overrides/extends local banlist)")
+    parser.add_argument("--thinking-level", type=str, default="MEDIUM", choices=["OFF", "LOW", "MEDIUM", "HIGH"], help="Gemini API thinking level/mode (default: MEDIUM)")
     parser.add_argument("--roundup", action="store_true", help="After evaluation, run consolidate_roundups to group overlapping stories into roundup threads (default: False)")
     parser.add_argument("--prefer", type=str, default="", help=(
         "Preferred outlets to prioritize. Comma-separated list of domains or numbers:\n"
@@ -1549,7 +1667,8 @@ def main():
                     genai_client, remaining, args.model, agnes_api_key=agnes_api_key, 
                     use_son=args.son, use_search=False, # Convergence pass is always search-free
                     extra_context=args.context, model_sequence=model_seq,
-                    compact=compact_val, five_word=args.five_word
+                    compact=compact_val, five_word=args.five_word,
+                    thinking_level=args.thinking_level
                 )
                 parsed = transpose_flat_to_json(raw_text)
 
@@ -1611,7 +1730,8 @@ def main():
                                         genai_client, [orig_cand], args.model, agnes_api_key=agnes_api_key,
                                         use_son=args.son, use_search=True, # Force search grounding ON
                                         extra_context=reflection_context, model_sequence=model_seq,
-                                        compact=compact_val, five_word=args.five_word
+                                        compact=compact_val, five_word=args.five_word,
+                                        thinking_level=args.thinking_level
                                     )
                                     ref_parsed = transpose_flat_to_json(ref_raw)
                                     if ref_parsed and len(ref_parsed) > 0:

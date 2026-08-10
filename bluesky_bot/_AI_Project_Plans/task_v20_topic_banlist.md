@@ -1,0 +1,12 @@
+- [x] Create default banned_topics.json configuration file
+- [x] Modify harvest_candidates.py
+  - [x] Implement load_banned_topics() logic
+  - [x] Replace static argparse default for --banned-topic with None
+  - [x] Refactor is_banned() using regex word boundaries (\b)
+  - [x] Update keyword harvesting setup to load and merge keywords
+- [x] Modify google_ai_studio_one_shot.py
+  - [x] Update CLI arguments to replace default banned-topic string with None
+  - [x] Update backup harvest_news() and is_banned() implementation to stay in sync
+- [x] Verify implementation
+  - [x] Test is_banned checks (e.g. verify "transportation" is not blocked, verify "obituary" and "sports" are blocked)
+  - [x] Test automatic creation of default banned_topics.json file

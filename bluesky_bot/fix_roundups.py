@@ -3,7 +3,8 @@ import json
 import re
 import urllib.parse
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 stories_dir = os.path.join(script_dir, "stories")
@@ -11,8 +12,9 @@ stories_dir = os.path.join(script_dir, "stories")
 load_dotenv(os.path.join(script_dir, ".env"))
 gemini_api_key = os.environ.get("GEMINI_API_KEY")
 
+genai_client = None
 if gemini_api_key:
-    genai.configure(api_key=gemini_api_key)
+    genai_client = genai.Client(api_key=gemini_api_key, http_options=types.HttpOptions(timeout=90000))
 
 def clean_url(url):
     try:
@@ -151,11 +153,16 @@ OUTPUT: Return only a JSON array of 14 strings. No other text.
             )
             
             try:
-                model = genai.GenerativeModel(
-                    model_name="gemini-2.5-flash",
+                if not genai_client:
+                    raise ValueError("Gemini API client not initialized.")
+                config = types.GenerateContentConfig(
                     system_instruction=system_prompt,
                 )
-                response = model.generate_content(prompt)
+                response = genai_client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=prompt,
+                    config=config
+                )
                 raw = response.text.strip()
                 cleaned = re.sub(r'^```(?:json)?\s*|\s*```$', '', raw, flags=re.MULTILINE).strip()
                 parsed = json.loads(cleaned)

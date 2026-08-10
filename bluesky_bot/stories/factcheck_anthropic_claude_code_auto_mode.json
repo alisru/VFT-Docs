@@ -1,0 +1,131 @@
+[
+  {
+    "thinking": "Phase 1: 7 Planes scan for Anthropic auto mode default. Q1: WHO - Anthropic & developers. Q2: WHAT - safety & prompt injection screening vs errors. Q3: WHERE - Claude Code Pro/Max/Team accounts. Q4: WHY - speed and seamless developer workflow. Q5: HOW - auto mode bypasses prompts unless irreversible/destructive. Q6: CAUSE - evolving from test version launched in March. Q7: EFFECT - high developer efficiency, reduced prompt fatigue. Phase 2: Stated GG(1.2, 0, 0), GE(0, 1.2, 0), LG(0.5, 0, 0), LE(0, 0.5, 0), GP(1.2, 0, 0), BP(0, 1.2, 0). Actual GG(0.8, 0.5, 0), GE(0.5, 0.8, 0), LG(0.5, 0, 0), LE(0.8, 0.5, 0), GP(1.0, 0, 0), BP(0, 1.0, 0). u_claim = 0.8, psi_claim = 0.0. u_real = 0.3, psi_real = 0.2. Hypocrisy Delta: 0.5 (Conditional). R_net: 1.4. z: 0. Phase 3: Hypocrisy Gap within conditional. Phase 4: No fake maximiser. Phase 5: Path of Grace into Awakening (GG/LG).",
+    "id": "anthropic_claude_code_auto_mode",
+    "subject": "Anthropic is turning Claude Code’s auto mode on by default",
+    "link": "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.77,
+    "real_psi": 0.73,
+    "mode": "root",
+    "posts": [
+      "Anthropic turns Claude Code's auto mode on by default, promising maximum speed with built-in guardrails.\n\nAnthropic Claude Code Auto Mode\nEvidence: safer default workflow, reduced prompt fatigue, preserved safety guardrails\n#AI #Tech",
+      "Anthropic announces auto mode will be the default for Pro, Max, and Team accounts starting August 14, streamlining coding by skipping unnecessary approval prompts for reversible actions.\nStated Judgement: (+1.00, +1.00) — Good Preference",
+      "While testing showed auto mode caught 89% of harmful actions versus 13.6% for fatigued human reviewers who rubber-stamp 97% of prompts, balancing oversight remains an ongoing engineering challenge.\nResulting Judgement: (+0.77, +0.73) — Lesser Good",
+      "Verdict: PASS — The Path of Awakening.\nWhen systems replace habitual rubber-stamping with smart automated screening, efficiency and safety can both rise when transparently managed.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, Uncertainty z: 0)",
+      "Anthropic is making 'auto mode' the default for Claude Code across Pro, Max, and Team accounts. Instead of interrupting developers for every single command, Claude will execute actions automatically unless they are deemed irreversible, destructive, or out-of-bounds.",
+      "The Bright Side:\nTesting data revealed that human reviewers experience prompt fatigue and approve 97% of permissions blindly, whereas automated screening caught far more actual anomalies.",
+      "The Breakdown & Plane Error:\nThe plane error conflates WHAT (the execution mechanism) with HOW (user oversight). Critics fear a loss of control, but the bottleneck was actually ineffective human rubber-stamping.",
+      "Social Physics Analysis:\nBy replacing habitual friction with transparent automated screening, the workflow removes tedious barriers while retaining strict boundaries against destructive actions, empowering builders without false pretenses.",
+      "The Trajectory: The Path of Awakening.\nWhen you map the alignment between stated safety goals and tested outcomes, it plots a direct trajectory toward Grace. Empirical validation shows automation outperforming fatigued human oversight.",
+      "The Unavoidable Truth: Automated guardrails catch dangerous actions that sleepy human reviewers routinely miss due to prompt fatigue.\n\nThe Unavoidable Lie: Total automation completely eliminates the need for any architectural oversight or developer boundary settings.",
+      "Alethekanon:\nEmpirical data often shatters romanticized assumptions about manual safety. When humans rubber-stamp 97% of prompts, automation isn't a betrayal of control; it's a structural upgrade that respects reality.",
+      "Awwthekanon:\nIt's okay to feel uneasy about letting AI run autonomously, but remember how exhausting constant permission clicks are. This shift is designed to protect developers from fatigue while keeping safety tight! 🌐",
+      "Brothekanon:\nHonestly, clicking 'approve' 500 times a day turns everyone into a zombie. If the robot catches 89% of screw-ups while I grab coffee, I call that a massive win."
+    ],
+    "actors": [
+      "Anthropic",
+      "Boris Cherny",
+      "Amazon"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.2,
+    "real_rnet": 1.4,
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Trustworthy",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "category": "general",
+    "topic": "AI",
+    "event": ""
+  }
+]

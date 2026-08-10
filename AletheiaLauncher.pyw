@@ -113,21 +113,31 @@ class AletheiaLauncherApp:
         if bot_path not in sys.path:
             sys.path.append(bot_path)
 
+        default_banned_categories = "travel, sport, entertainment, obituaries, gardening"
         try:
-            from google_ai_studio_one_shot import DEFAULT_FALLBACKS
+            from google_ai_studio_one_shot import DEFAULT_FALLBACKS, load_banned_topics
             default_list = list(DEFAULT_FALLBACKS)
+            try:
+                banned_map = load_banned_topics()
+                if isinstance(banned_map, dict):
+                    default_banned_categories = ", ".join(list(banned_map.keys()))
+            except Exception as b_err:
+                print(f"Warning: Failed to load banned categories: {b_err}")
         except Exception as import_err:
             print(f"Warning: Failed to dynamically load models from bot script: {import_err}")
             default_list = [
+                "gemini-3.5-flash",
+                "gemini-3.5-flash-lite",
+                "gemini-3.6-flash",
                 "gemini-2.5-flash",
                 "gemini-2.5-flash-lite",
-                "gemini-3.5-flash",
                 "gemini-3.1-flash-lite",
                 "vertex:gemini-3.1-flash-lite",
                 "gemini-3-flash-preview",
                 "gemma-4-31b-it",
                 "gemma-4-26b-a4b-it",
             ]
+        self.default_banned_categories = default_banned_categories
 
         # Available models also include custom/agnes options
         self.available_models = list(default_list)
@@ -559,12 +569,17 @@ class AletheiaLauncherApp:
 
         tk.Label(grid_frame, text="Exclude Topics", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=3, sticky="w", pady=3, padx=(0, 5))
         self.ent_banned = tk.Entry(grid_frame, width=22, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
-        self.ent_banned.insert(0, "travel, sport, entertainment")
+        self.ent_banned.insert(0, self.default_banned_categories)
         self.ent_banned.grid(row=1, column=4, columnspan=2, sticky="ew", pady=3)
 
         tk.Label(grid_frame, text="Prioritize Outlets", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=3, padx=(0, 5))
-        self.ent_prefer = tk.Entry(grid_frame, width=28, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
-        self.ent_prefer.grid(row=2, column=1, columnspan=5, sticky="ew", pady=3)
+        self.ent_prefer = tk.Entry(grid_frame, width=15, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_prefer.grid(row=2, column=1, columnspan=2, sticky="ew", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Thinking Level", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=3, sticky="w", pady=3, padx=(0, 5))
+        self.combo_thinking = ttk.Combobox(grid_frame, width=15, values=["OFF", "LOW", "MEDIUM", "HIGH"], state="readonly", font=self.font_body)
+        self.combo_thinking.set("MEDIUM")
+        self.combo_thinking.grid(row=2, column=4, columnspan=2, sticky="ew", pady=3)
         tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SaturdayPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, columnspan=5, sticky="w")
         tk.Label(grid_frame, text="Categories: general, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=4, column=1, columnspan=5, sticky="w")
         tk.Label(grid_frame, text="Suggested Topics: Trump, AI, Climate, Markets, AUKUS, Australia, Boeing, Space", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=5, column=1, columnspan=5, sticky="w")
@@ -1020,6 +1035,10 @@ class AletheiaLauncherApp:
         prefer = self.ent_prefer.get().strip()
         if prefer:
             args.extend(["--prefer", prefer])
+
+        thinking = self.combo_thinking.get().strip()
+        if thinking:
+            args.extend(["--thinking-level", thinking])
 
         if self.val_son.get():
             args.append("--son")

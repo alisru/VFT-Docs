@@ -1602,7 +1602,7 @@
 
                 // Calculate edge relations using cache if available
                 if (cachedSemanticEdges && cachedSemanticEdges.length > 0) {
-                    allEdges.push(...cachedSemanticEdges);
+                    cachedSemanticEdges.forEach(edge => allEdges.push(edge));
                 } else {
                     for (let i = 0; i < docList.length; i++) {
                         for (let j = i + 1; j < docList.length; j++) {
@@ -1654,8 +1654,8 @@
                 
                 // 1. Insert Attractor Nodes (using cache if available)
                 if (cachedHegemonyBaseNodes && cachedHegemonyBaseNodes.length > 0) {
-                    nodesArray.push(...cachedHegemonyBaseNodes);
-                    allEdges.push(...cachedHegemonyBaseEdges);
+                    cachedHegemonyBaseNodes.forEach(node => nodesArray.push(node));
+                    cachedHegemonyBaseEdges.forEach(edge => allEdges.push(edge));
                 } else {
                     // Coordinates framework to lock the geometry of the Hegemony Map
                     const parentCoords = {
@@ -4223,11 +4223,16 @@
             <!-- Timeline Feed Workspace -->
             <div class="timeline-workspace" style="flex: 1; background: var(--bg-primary); display: flex; flex-direction: column; overflow: hidden; position: relative;">
                 <div class="timeline-header" style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); background: var(--bg-secondary); display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
-                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
                         <h2 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-primary);">Notes Creation History</h2>
                         <div style="display: flex; gap: 0.35rem; background: var(--bg-tertiary); padding: 0.2rem; border-radius: 6px; border: 1px solid var(--border-color);">
                             <button id="cas-tl-mode-vertical" onclick="switchTimelineMode('vertical')" style="background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.25rem 0.6rem; font-size: 0.76rem; font-family: var(--font-mono); font-weight: 600; cursor: pointer;">☰ List View</button>
                             <button id="cas-tl-mode-horizontal" onclick="switchTimelineMode('horizontal')" style="background: transparent; color: var(--text-secondary); border: 1px solid transparent; border-radius: 4px; padding: 0.25rem 0.6rem; font-size: 0.76rem; font-family: var(--font-mono); font-weight: 600; cursor: pointer;">box⊞ Grid View</button>
+                        </div>
+                        <div id="cas-tl-zoom-container" style="display: none; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--text-secondary); font-family: var(--font-mono);">
+                            <span>Lane Height:</span>
+                            <input type="range" id="cas-tl-lane-height" min="30" max="600" value="60" oninput="changeLaneHeight(this.value)" style="width: 100px; accent-color: var(--accent-color); cursor: pointer; height: 4px; background: var(--border-color); border-radius: 2px; outline: none;">
+                            <span id="cas-tl-lane-height-val" style="color: var(--text-primary); font-weight: 600;">60px</span>
                         </div>
                     </div>
                     <span id="timeline-stats" style="font-size: 0.8rem; color: var(--text-secondary);">Loading timeline...</span>
@@ -4702,7 +4707,6 @@
             if (!cat) return '#9ca3af';
             const idx = VFT_32_CATEGORIES ? VFT_32_CATEGORIES.indexOf(cat) : -1;
             if (idx >= 16) {
-                // Pessimism — warm red/amber spectrum
                 const pessimColors = [
                     '#f87171','#fb923c','#fbbf24','#facc15',
                     '#f472b6','#e879f9','#c084fc','#a78bfa',
@@ -4711,7 +4715,6 @@
                 ];
                 return pessimColors[idx - 16] || '#f87171';
             } else if (idx >= 0) {
-                // Optimism — cool teal/blue/green spectrum
                 const optimColors = [
                     '#34d399','#2dd4bf','#38bdf8','#60a5fa',
                     '#4ade80','#86efac','#6ee7b7','#a7f3d0',
@@ -4744,6 +4747,52 @@
         }
 
         let drTimelineViewMode = 'vertical'; // 'vertical' | 'horizontal'
+        let drTimelineLaneHeight = 60;       // default lane height
+        let drRowHeightsOverride = {};       // Maps category -> manual height
+
+        window.changeLaneHeight = function(val) {
+            drTimelineLaneHeight = parseInt(val);
+            const valEl = document.getElementById('cas-tl-lane-height-val');
+            if (valEl) valEl.innerText = `${val}px`;
+            if (drTimelineData) {
+                drRenderTimeline(drTimelineData);
+            }
+        };
+
+        window.drSetRowHeight = function(cat, val) {
+            const h = parseInt(val);
+            if (!isNaN(h) && h >= 20) {
+                drRowHeightsOverride[cat] = h;
+                if (drTimelineData) {
+                    drRenderTimeline(drTimelineData);
+                }
+            }
+        };
+
+        window.initLaneResize = function(cat, event) {
+            event.stopPropagation();
+            event.preventDefault();
+            const startY = event.clientY;
+            
+            // Get current base height of this row
+            const baseH = drRowHeightsOverride[cat] || drTimelineLaneHeight;
+
+            const doResize = (e) => {
+                const diff = e.clientY - startY;
+                drRowHeightsOverride[cat] = Math.max(30, baseH + diff);
+                if (drTimelineData) {
+                    drRenderTimeline(drTimelineData);
+                }
+            };
+
+            const endResize = () => {
+                document.removeEventListener('mousemove', doResize);
+                document.removeEventListener('mouseup', endResize);
+            };
+
+            document.addEventListener('mousemove', doResize);
+            document.addEventListener('mouseup', endResize);
+        };
 
         window.switchTimelineMode = function(mode) {
             drTimelineViewMode = mode;
@@ -4751,6 +4800,7 @@
             const btnHoriz = document.getElementById('cas-tl-mode-horizontal');
             const listScroll = document.getElementById('timeline-scroll');
             const gridWrapper = document.getElementById('timeline-grid-wrapper');
+            const zoomContainer = document.getElementById('cas-tl-zoom-container');
 
             if (!btnVert || !btnHoriz || !listScroll || !gridWrapper) return;
 
@@ -4765,6 +4815,7 @@
 
                 listScroll.style.display = 'block';
                 gridWrapper.style.display = 'none';
+                if (zoomContainer) zoomContainer.style.display = 'none';
             } else {
                 btnHoriz.style.background = 'var(--bg-secondary)';
                 btnHoriz.style.borderColor = 'var(--border-color)';
@@ -4776,6 +4827,7 @@
 
                 listScroll.style.display = 'none';
                 gridWrapper.style.display = 'block';
+                if (zoomContainer) zoomContainer.style.display = 'flex';
             }
             if (drTimelineData) {
                 drRenderTimeline(drTimelineData);
@@ -4797,12 +4849,12 @@
 
         function getFileCategories(file) {
             const matches = new Set();
-            const isms = (file.isms || []).map(i => i.toLowerCase());
+            const isisms = (file.isms || []).map(i => i.toLowerCase());
             const node = (file.node_name || '').toLowerCase();
             const quad = (file.quadrant || '').toLowerCase();
             const isPessimism = (quad === 'le' || quad === 'ge');
 
-            const hasIsm = (term) => isms.some(i => i.includes(term.toLowerCase()));
+            const hasIsm = (term) => isisms.some(i => i.includes(term.toLowerCase()));
             const hasNode = (term) => node.includes(term.toLowerCase());
 
             if (isPessimism) {
@@ -4866,7 +4918,7 @@
             }
 
             return matches;
-          }
+        }
 
         window.drRenderHorizontalGrid = function(items) {
             const wrapper = document.getElementById('timeline-grid-wrapper');
@@ -4886,12 +4938,14 @@
             const activeRows = new Set();
             items.forEach(item => {
                 const cats = getFileCategories(item);
-                cats.forEach(cat => {
-                    activeRows.add(cat);
-                    const key = `${cat}|${item.date}`;
+                if (cats.size > 0) {
+                    // Select only the first matched category to prevent duplicate cards across rows
+                    const primaryCat = Array.from(cats)[0];
+                    activeRows.add(primaryCat);
+                    const key = `${primaryCat}|${item.date}`;
                     if (!cellMap[key]) cellMap[key] = [];
                     cellMap[key].push(item);
-                });
+                }
             });
 
             // Interleaved pairs to match VFT Grid alignment
@@ -4909,15 +4963,22 @@
             }
 
             // Grid spacing parameters
-            const LEFT_W    = 240;   // Category label column width
-            const COL_W     = 220;   // Date column width
-            const ROW_H     = 42;    // Category row height
-            const HDR_H     = 40;    // Date header height
-            const CHIP_H    = 18;    // Chip height
-            const CHIP_W    = 180;   // Chip width
+            const LEFT_W    = 240;                       // Category label column width
+            const COL_W     = 220;                       // Date column width
+            const HDR_H     = 40;                        // Date header height
+            const CHIP_H    = 18;                        // Chip height
+            const CHIP_W    = 180;                       // Chip width
 
-            const riverW    = Math.max(sortedDates.length * COL_W, 600);
-            const totalH    = orderedRows.length * ROW_H;
+            // Calculate heights using explicit overrides or global defaults
+            const rowHeights = orderedRows.map(row => drRowHeightsOverride[row.cat] || drTimelineLaneHeight);
+            const rowOffsets = [];
+            let currentOffset = 0;
+            for (let i = 0; i < orderedRows.length; i++) {
+                rowOffsets.push(currentOffset);
+                currentOffset += rowHeights[i];
+            }
+
+            const baseTotalH = currentOffset;
 
             // Generate Date Header Cells
             let hdrCells = '';
@@ -4929,53 +4990,98 @@
                 hdrCells += `<div style="position:absolute;left:${cx}px;top:${HDR_H-6}px;width:1px;height:6px;background:var(--border-color);"></div>`;
             });
 
-            // Generate Left Column Labels
-            let labelCol = '';
-            orderedRows.forEach((row, ri) => {
-                const color    = getTagColor(row.cat);
-                const isOpt    = !row.isPessimism;
-                const label    = row.cat.split(' (')[0];
-                const subLabel = (row.cat.match(/\(([^)]+)\)/) || [])[1] || '';
-
-                labelCol += `
-                <div style="position:absolute;left:0;top:${ri * ROW_H}px;width:${LEFT_W}px;height:${ROW_H}px;display:flex;align-items:center;padding:0 0.5rem 0 ${isOpt ? '1.1rem' : '0.5rem'};border-bottom:1px solid rgba(255,255,255,0.03);border-right:2px solid var(--border-color);background:var(--bg-secondary);box-sizing:border-box;overflow:hidden;" title="${escAttr(row.cat)}">
-                    ${isOpt ? `<span style="font-size:0.55rem;color:var(--text-secondary);font-family:var(--font-mono);margin-right:0.3rem;vertical-align:middle;min-width:12px;">${row.num}</span>` : '<span style="display:inline-block;width:12px;margin-right:0.3rem;"></span>'}
-                    <span style="font-size:${isOpt?'0.72rem':'0.64rem'};color:${color}${isOpt?'':'cc'};font-family:var(--font-mono);font-weight:${isOpt?'600':'400'};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-                        ${escHtml(label)}${subLabel ? `<span style="opacity:0.45;font-size:0.58rem;font-weight:400;"> (${escHtml(subLabel)})</span>` : ''}
-                    </span>
-                    ${row.isPessimism ? '<span style="font-size: 0.54rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 3px; padding: 0.05rem 0.2rem; margin-left:auto; font-weight: 400; font-family: var(--font-mono); font-size:0.52rem;">ISM</span>' : ''}
-                </div>`;
-            });
-
-            // Plot chips and collect positions for SVG paths
-            let chipsHtml = '';
+            // Pre-calculate dynamic chip Y positions for each column using the push-down algorithm
             const nodePositions = {}; // key: "Category|Date|fileIndex" -> {x, y}
+            let maxColH = baseTotalH;
 
-            orderedRows.forEach((row, ri) => {
-                const color  = getTagColor(row.cat);
-                const midY   = ri * ROW_H + ROW_H / 2;
+            sortedDates.forEach((date, di) => {
+                const cx = di * COL_W + COL_W / 2;
+                let lastY = 0; // vertical stack boundary for this day column
 
-                sortedDates.forEach((date, di) => {
+                orderedRows.forEach((row, ri) => {
                     const cellKey = `${row.cat}|${date}`;
                     const files = cellMap[cellKey] || [];
                     if (!files.length) return;
 
-                    const cx = di * COL_W + COL_W / 2;
-                    const N  = files.length;
+                    // Prefer the row offset unless pushed down by preceding stack
+                    const prefY = rowOffsets[ri] + 6;
+                    const startY = Math.max(prefY, lastY + 4);
 
                     files.forEach((file, fi) => {
-                        // Stack multiple files vertically centered around midY inside the lane
-                        const offset = (fi - (N - 1) / 2) * (CHIP_H + 4);
-                        const chipY  = midY + offset;
-                        const chipX  = cx;
+                        const chipY = startY + fi * (CHIP_H + 4);
+                        nodePositions[`${row.cat}|${date}|${fi}`] = { x: cx, y: chipY + CHIP_H / 2 };
+                    });
 
-                        nodePositions[`${row.cat}|${date}|${fi}`] = { x: chipX, y: chipY };
+                    // Update column stack pointer
+                    lastY = startY + files.length * (CHIP_H + 4);
+                });
+
+                if (lastY > maxColH) {
+                    maxColH = lastY;
+                }
+            });
+
+            const totalH = maxColH + 30; // expand canvas vertical height to fit any overflows
+            const riverW = Math.max(sortedDates.length * COL_W, 600);
+
+            // Generate Left Column Labels with manual resizing handles and inline height inputs
+            let labelCol = '';
+            orderedRows.forEach((row, ri) => {
+                const color      = getTagColor(row.cat);
+                const isOpt      = !row.isPessimism;
+                const label      = row.cat.split(' (')[0];
+                const subLabel   = (row.cat.match(/\(([^)]+)\)/) || [])[1] || '';
+                const height     = rowHeights[ri];
+
+                const subLabelHtml = subLabel ? `<span style="opacity:0.45;font-size:0.58rem;font-weight:400;"> (${escHtml(subLabel)})</span>` : '';
+                const pessimismHtml = row.isPessimism ? '<span style="font-size: 0.54rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 3px; padding: 0.05rem 0.2rem; margin-left: 0.2rem; font-weight: 400; font-family: var(--font-mono); font-size:0.52rem; flex-shrink: 0;">ISM</span>' : '';
+
+                labelCol += `
+                <div style="position:absolute;left:0;top:${rowOffsets[ri]}px;width:${LEFT_W}px;height:${height}px;display:flex;align-items:center;padding:0 0.5rem 0 ${isOpt ? '1.1rem' : '0.5rem'};border-bottom:1px solid rgba(255,255,255,0.03);border-right:2px solid var(--border-color);background:var(--bg-secondary);box-sizing:border-box;overflow:hidden;position:relative;" title="${escAttr(row.cat)}">
+                    
+                    <div style="display:flex;align-items:center;flex:1;height:100%;overflow:hidden;gap:0.3rem;">
+                        ${isOpt ? `<span style="font-size:0.55rem;color:var(--text-secondary);font-family:var(--font-mono);vertical-align:middle;min-width:12px;flex-shrink:0;">${row.num}</span>` : '<span style="display:inline-block;width:12px;flex-shrink:0;"></span>'}
+                        <span style="font-size:${isOpt?'0.72rem':'0.64rem'};color:${color}${isOpt?'':'cc'};font-family:var(--font-mono);font-weight:${isOpt?'600':'400'};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            ${escHtml(label)}${subLabelHtml}
+                        </span>
+                        ${pessimismHtml}
+                    </div>
+
+                    <!-- Inline numeric height control -->
+                    <input type="number" 
+                           value="${height}" 
+                           min="20" 
+                           max="800"
+                           onchange="drSetRowHeight('${escJs(row.cat)}', this.value)"
+                           style="width:42px;height:18px;background:rgba(0,0,0,0.25);border:1px solid var(--border-color);color:var(--text-secondary);font-size:0.6rem;font-family:var(--font-mono);padding:0;border-radius:3px;text-align:center;box-sizing:border-box;flex-shrink:0;z-index:10;margin-left:0.3rem;"
+                           title="Enter row height in pixels" />
+
+                    <!-- Manual Row Drag-Resize Handle -->
+                    <div onmousedown="initLaneResize('${escJs(row.cat)}', event)"
+                         style="position:absolute;left:0;right:0;bottom:0;height:5px;cursor:ns-resize;background:transparent;z-index:99;transition:background 0.12s;"
+                         onmouseover="this.style.background='var(--accent-color)';"
+                         onmouseout="this.style.background='transparent';"></div>
+                </div>`;
+            });
+
+            // Generate HTML chips markup using precalculated coordinates
+            let chipsHtml = '';
+            orderedRows.forEach((row) => {
+                const color = getTagColor(row.cat);
+                sortedDates.forEach((date) => {
+                    const cellKey = `${row.cat}|${date}`;
+                    const files = cellMap[cellKey] || [];
+                    if (!files.length) return;
+
+                    files.forEach((file, fi) => {
+                        const pos = nodePositions[`${row.cat}|${date}|${fi}`];
+                        if (!pos) return;
 
                         const short = file.title.length > 22 ? file.title.slice(0, 22) + '\u2026' : file.title;
                         chipsHtml += `
                         <div onclick="drTimelineClick('${escJs(file.relative_path)}')"
                              title="${escAttr(file.title)}"
-                             style="position:absolute;left:${chipX - CHIP_W/2}px;top:${chipY - CHIP_H/2}px;width:${CHIP_W}px;height:${CHIP_H}px;background:var(--bg-secondary);border:1px solid ${color}80;border-radius:4px;padding:0 6px;box-shadow:0 3px 6px rgba(0,0,0,0.2);display:flex;align-items:center;cursor:pointer;z-index:5;transition:border-color 0.15s,background 0.15s,transform 0.15s;box-sizing:border-box;"
+                             style="position:absolute;left:${pos.x - CHIP_W/2}px;top:${pos.y - CHIP_H/2}px;width:${CHIP_W}px;height:${CHIP_H}px;background:var(--bg-secondary);border:1px solid ${color}80;border-radius:4px;padding:0 6px;box-shadow:0 3px 6px rgba(0,0,0,0.2);display:flex;align-items:center;cursor:pointer;z-index:5;transition:border-color 0.15s,background 0.15s,transform 0.15s;box-sizing:border-box;"
                              onmouseover="this.style.borderColor='${color}';this.style.background='${color}12';this.style.transform='translateY(-1px)';"
                              onmouseout="this.style.borderColor='${color}80';this.style.background='var(--bg-secondary)';this.style.transform='none';">
                             <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${color};margin-right:0.35rem;flex-shrink:0;"></span>
@@ -4989,8 +5095,8 @@
             let svgContent = '';
 
             orderedRows.forEach((row, ri) => {
-                const color = getTagColor(row.cat);
-                const midY  = ri * ROW_H + ROW_H / 2;
+                const color  = getTagColor(row.cat);
+                const midY   = rowOffsets[ri] + rowHeights[ri] / 2;
 
                 // 1. Draw continuous static horizontal background channel
                 svgContent += `<line x1="0" y1="${midY}" x2="${riverW}" y2="${midY}" stroke="${color}" stroke-width="${row.isPessimism ? '1.5' : '2.5'}" stroke-opacity="0.12" />`;
@@ -5004,11 +5110,11 @@
                     const filesA = cellMap[`${row.cat}|${dateA}`];
                     const filesB = cellMap[`${row.cat}|${dateB}`];
 
-                    // Draw connections between each stacked item to show clean flow currents
                     filesA.forEach((_, fiA) => {
                         const posA = nodePositions[`${row.cat}|${dateA}|${fiA}`];
                         filesB.forEach((_, fiB) => {
                             const posB = nodePositions[`${row.cat}|${dateB}|${fiB}`];
+                            if (!posA || !posB) return;
 
                             // Smooth liquid S-curve (Bezier)
                             const cp1X = posA.x + 80;
@@ -5028,7 +5134,17 @@
                 }
             });
 
-            // Assemble into a fully sticky grid structure
+            // Generate background dividers corresponding to row heights
+            let dividerHtml = '';
+            orderedRows.forEach((_, ri) => {
+                dividerHtml += `<div style="position: absolute; left: 0; top: ${rowOffsets[ri]}px; width: ${riverW}px; height: ${rowHeights[ri]}px; border-bottom: 1px solid rgba(255,255,255,0.03); box-sizing: border-box; pointer-events: none;"></div>`;
+            });
+
+            // 3. Cache current scroll positions before updating DOM
+            const oldMain = wrapper.querySelector('#river-main-viewport');
+            const savedScrollLeft = oldMain ? oldMain.scrollLeft : 0;
+            const savedScrollTop  = oldMain ? oldMain.scrollTop : 0;
+
             wrapper.innerHTML = `
             <div style="height: 100%; display: flex; flex-direction: column; overflow: hidden; font-family: var(--font-mono); position: relative;">
                 
@@ -5042,37 +5158,40 @@
                     </div>
                 </div>
 
-                <!-- Main Scrollable Arena -->
                 <div id="river-main-viewport" style="flex: 1; overflow: auto; display: flex; background: var(--bg-primary);">
                     
-                    <!-- Left Category Labels Pinned Column -->
-                    <div style="position: sticky; left: 0; width: ${LEFT_W}px; height: ${totalH}px; flex-shrink: 0; background: var(--bg-secondary); z-index: 8;">
+                    <div style="position: sticky; left: 0; width: 240px; height: ${totalH}px; flex-shrink: 0; background: var(--bg-secondary); z-index: 8;">
                         ${labelCol}
                     </div>
 
-                    <!-- River lanes Canvas + Nodes (scrolling vertically and horizontally) -->
                     <div style="width: ${riverW}px; height: ${totalH}px; position: relative; flex-shrink: 0;">
-                        <!-- SVG River currents -->
                         <svg style="position: absolute; left: 0; top: 0; width: ${riverW}px; height: ${totalH}px; pointer-events: none; z-index: 2;">
                             ${svgContent}
                         </svg>
                         
-                        <!-- Row dividers background grid -->
-                        ${orderedRows.map((_, ri) => `<div style="position: absolute; left: 0; top: ${ri * ROW_H}px; width: ${riverW}px; height: ${ROW_H}px; border-bottom: 1px solid rgba(255,255,255,0.03); box-sizing: border-box; pointer-events: none;"></div>`).join('')}
+                        ${dividerHtml}
 
-                        <!-- HTML Interactive Chips -->
                         ${chipsHtml}
                     </div>
 
                 </div>
             </div>`;
 
-            // Sync scrolling of the Top Date headers with the main timeline viewport
+            // Restore scroll positions
             const mainViewport = wrapper.querySelector('#river-main-viewport');
             const headerViewport = wrapper.querySelector('#river-header-viewport');
-            if (mainViewport && headerViewport) {
+            if (mainViewport) {
+                mainViewport.scrollLeft = savedScrollLeft;
+                mainViewport.scrollTop = savedScrollTop;
+                
+                if (headerViewport) {
+                    headerViewport.scrollLeft = savedScrollLeft;
+                }
+
                 mainViewport.addEventListener('scroll', () => {
-                    headerViewport.scrollLeft = mainViewport.scrollLeft;
+                    if (headerViewport) {
+                        headerViewport.scrollLeft = mainViewport.scrollLeft;
+                    }
                 });
             }
         };

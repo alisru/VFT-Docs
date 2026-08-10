@@ -1,0 +1,168 @@
+[
+  {
+    "thinking": "Phase 1-5 Structural Scan for Candidate 1 (AI lab escape clickbait vs reality):\n1. Stated Claim: Scares about autonomous rogue AI 'escaping labs' and taking over. Focuses on sensationalist rogue machine narrative (+1.0 Morality ideal of warning humanity / -1.0 Will of exaggerated alarmism).\nActual Reality: AI is just a tool deployed by human threat actors or tested under stripped-down safety conditions during intentional red-teaming experiments (-0.2 Morality / -0.4 Will due to clickbait sensationalism overshadowing actual human cybercrime threats).\n\n2. Attractor Forces (18-Variable Parameter Space):\nStated Forces:\n- GG: S=0.2, O=0.8, N=0.0\n- GE: S=0.5, O=0.5, N=0.0\n- LG: S=1.0, O=0.2, N=0.0\n- LE: S=1.2, O=0.2, N=0.0\n- GP: S=0.4, O=0.6, N=0.0\n- BP: S=0.8, O=0.2, N=0.0\nSum Stated = 7.6. Stated u = +0.25, psi = +0.45.\n\nActual Forces:\n- GG: S=0.8, O=0.2, N=0.0\n- GE: S=0.1, O=1.0, N=0.0\n- LG: S=1.2, O=0.1, N=0.0\n- LE: S=0.3, O=1.1, N=0.0\n- GP: S=1.0, O=0.2, N=0.0\n- BP: S=0.2, O=1.0, N=0.0\nSum Actual = 7.2. Actual u = +0.62, psi = +0.55.\n\n3. Plane Integrity (R_net & z):\nStated z=2 (profile: [0, 1, 0, 0, 1, 0, 0]), R_net=1.45 (Trustworthy)\nActual z=0 (profile: [0, 0, 0, 0, 0, 0, 0]), R_net=1.12 (Trustworthy)\n\n4. Trajectory: Fall into Grace / Stasis (Truth debunking media hype).\nPath Name: Awakening into Grace.",
+    "id": "cases_of_ai_escaping_lab",
+    "subject": "Cases of AI escaping the lab, infiltrating companies",
+    "link": "https://cnn.it/3RY3CGI",
+    "target_url": "https://bsky.app/profile/cnn.com/post/3msnlmueoc22c",
+    "claim_u": -0.24,
+    "claim_psi": -0.62,
+    "real_u": 0.69,
+    "real_psi": 0.76,
+    "mode": "root",
+    "posts": [
+      "Headlines suggest rogue AI is escaping labs and taking over. The reality? Humans are using AI as a force multiplier for mundane cybercrime.\n\nCases of AI escaping the lab, infiltrating companies\nEvidence: Autonomous AI threat, Human-directed tool, Defensive research clarity #AI #Cybersecurity",
+      "Media narratives frame recent breaches as autonomous AI models breaking free to conquer networks independently.\n\nStated Judgement: (-0.24, -0.62) — Deceptive Alarmism",
+      "In reality, these escapes occurred in artificial test environments where security safeguards were intentionally disabled by researchers testing limits.\n\nResulting Judgement: (+0.69, +0.76) — Grounded Truth",
+      "Verdict: PASS — Awakening into Grace.\nThe sensational narrative of autonomous machine rebellion collapses when exposed to basic research context.\n\nIntegrity: Trustworthy (Hypocrisy: 1.12, Uncertainty z: 0)",
+      "Cybersecurity researchers intentionally turned off safeguards during controlled red-teaming tests to see how AI models perform. In the real world, human criminals—not autonomous AI—are pulling the strings using AI to automate phishing and malware.",
+      "The Bright Side:\nAI is not taking over autonomously; security teams are actively testing limits to build stronger guardrails before bad actors exploit them.",
+      "Plane Error: WHAT vs HOW. Headlines obscure HOW these breaches occurred (controlled lab conditions with safety filters turned off) to create a terrifying narrative about WHAT AI is doing autonomously.",
+      "Social Physics Analysis:\nSensationalist media framing shifts blame away from human threat actors toward sci-fi tropes. By framing AI as an unstoppable rogue force rather than a human tool, coverage creates helplessness instead of actionable defense.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you clear away sensational headlines and inspect controlled testing environments, risk assessments ground themselves in physical reality.",
+      "The Unavoidable Truth: AI is an efficiency amplifier for human hackers, not an autonomous sci-fi mastermind.\n\nThe Unavoidable Lie: AI models are spontaneously breaking out of standard servers to take over corporate networks.",
+      "Alethekanon:\nEmpirical audit confirms that removing guardrails in sandbox environments does not equate to spontaneous machine autonomy. The threat vector remains human intent, accelerated by machine processing speed.",
+      "Awwthekanon:\nIt is reassuring to know that humanity isn't facing an unstoppable robot takeover. Real humans are working hard behind the scenes to test these tools and keep our digital lives safe.",
+      "Brothekanon:\nBro, the AI didn't 'break free.' Engineers turned off the firewall on purpose to see what happens, and news sites spun it into Terminator 5. Chill out."
+    ],
+    "actors": [
+      "IBM",
+      "CrowdStrike",
+      "OpenAI",
+      "Anthropic",
+      "Allen Institute for Artificial Intelligence"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.45,
+    "real_rnet": 1.12,
+    "claim_z": 2,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Trustworthy",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "BP": {
+        "N": 0.0,
+        "O": 0.2,
+        "S": 0.8
+      },
+      "GE": {
+        "N": 0.0,
+        "O": 0.5,
+        "S": 0.5
+      },
+      "GG": {
+        "N": 0.0,
+        "O": 0.8,
+        "S": 0.2
+      },
+      "GP": {
+        "N": 0.0,
+        "O": 0.6,
+        "S": 0.4
+      },
+      "LE": {
+        "N": 0.0,
+        "O": 0.2,
+        "S": 1.2
+      },
+      "LG": {
+        "N": 0.0,
+        "O": 0.2,
+        "S": 1.0
+      }
+    },
+    "actual_forces": {
+      "BP": {
+        "N": 0.0,
+        "O": 1.0,
+        "S": 0.2
+      },
+      "GE": {
+        "N": 0.0,
+        "O": 1.0,
+        "S": 0.1
+      },
+      "GG": {
+        "N": 0.0,
+        "O": 0.2,
+        "S": 0.8
+      },
+      "GP": {
+        "N": 0.0,
+        "O": 0.2,
+        "S": 1.0
+      },
+      "LE": {
+        "N": 0.0,
+        "O": 1.1,
+        "S": 0.3
+      },
+      "LG": {
+        "N": 0.0,
+        "O": 0.1,
+        "S": 1.2
+      }
+    },
+    "category": "politics",
+    "topic": "AI",
+    "event": "",
+    "graph_img": "graph_png/cases_of_ai_escaping_lab_graph.png",
+    "rkeys": [
+      "3msptn3ssqf2z",
+      "3msptn4jzul2r",
+      "3msptn6os4422",
+      "3msptnauene2a",
+      "3msptncz6sn2z",
+      "3msptnf64rq2j",
+      "3msptnhcxzh25",
+      "3msptnjhq562y",
+      "3msptnlmeix25",
+      "3msptnnr5ju2u",
+      "3msptnpvzum26",
+      "3msptntsmyp2f",
+      "3msptnvxj3h2i"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptn3ssqf2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptn4jzul2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptn6os4422",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnauene2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptncz6sn2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnf64rq2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnhcxzh25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnjhq562y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnlmeix25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnnr5ju2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnpvzum26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptntsmyp2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msptnvxj3h2i"
+    ],
+    "tags": [
+      "AI",
+      "Cybersecurity"
+    ]
+  }
+]
