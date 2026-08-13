@@ -88,11 +88,22 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 * **Ending**: Ends with: `Resulting Judgement: ([real_u], [real_psi]) — [Coordinate Label]`
 
 ### Element 3: The Verdict
-* **Wording**: Clean verdict line using exact path names: `Verdict: [PASS/FAIL] — [Path Name].` followed by a rich, 1-2 sentence explanation of the trajectory's cause.
+* **Wording**: Clean overall verdict line using exact path names: `Verdict: [PASS/FAIL] — [Path Name].` followed by a rich, 1-2 sentence explanation of the trajectory's cause.
 * **Integrity Metrics**: Append a new line showing the integrity assessment and uncertainty score:
   `Integrity: [real_integrity] (Hypocrisy: [real_rnet], Uncertainty z: [real_z])`
+* **IMPORTANT (Multi-Aspect Mode)**: Do NOT include any compact `Subs:` summary in this post. Sub-audit and aspect verdicts belong exclusively in the dedicated Sub-Audits Breakdown step (Element 4 in multi-aspect mode).
 
-### Element 4: What's Happening (Context)
+### Element 4 (Multi-Aspect Mode Only): Sub-Audits Breakdown
+* **Present only when in multi-aspect mode.** This is the dedicated step for aspect/actor-level verdicts.
+* **Wording**: List each evaluated sub-aspect or actor with its full name, PASS/FAIL/COND outcome, coordinates, and at least a 1-sentence explanation:
+  ```
+  Sub-Audits Breakdown:
+  - [Aspect A Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Detailed reasoning].
+  - [Aspect B Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Detailed reasoning].
+  ```
+* This is the ONLY place aspect verdicts appear. Do not repeat them in the Verdict post.
+
+### Element 4 (Standard) / Element 5 (Multi-Aspect): What's Happening (Context)
 * **Wording**: Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.
 
 ### Element 5: The Nuance

@@ -887,7 +887,7 @@ def _load_rules(use_son=False):
             _RULES_CACHE[f"{cache_key}_formatting"] = minify_markdown(f.read())
     return _RULES_CACHE[f"{cache_key}_convergence"], _RULES_CACHE[f"{cache_key}_formatting"]
 
-def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False, thinking_level="MEDIUM"):
+def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False, thinking_level="MEDIUM", use_multi_aspect=False):
     convergence_rules, formatting_rules = _load_rules(use_son=use_son)
         
     # Prepend compact mode directive or five-word directive to formatting rules if active
@@ -909,6 +909,22 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         )
         formatting_rules = override_text + formatting_rules
         formatting_rules = formatting_rules.replace("Keep every single step strictly under **275 characters**", "Keep the first 4 steps under **275 characters** (steps 5-13 have no limits)")
+
+    if use_son and use_multi_aspect:
+        multi_aspect_text = (
+            "=== MULTI-ASPECT VERDICT DIRECTIVE ===\n"
+            "- Post 4 (index 3 in the posts array: The Verdict) is the OVERALL verdict only. Format it as:\n"
+            "  Verdict: [PASS/FAIL] — [Path Name]. [1-2 sentence explanation of the trajectory's cause].\n"
+            "  Integrity: [real_integrity] (Hypocrisy: [real_rnet], z: [real_z])\n"
+            "  DO NOT include any sub-audit or Subs: summary in this post. That information belongs exclusively in the dedicated Sub-Audits Breakdown step.\n"
+            "  *Note: Post 4 MUST be kept strictly under 260 characters total.\n"
+            "- Post 5 (index 4 in the posts array: Sub-Audits Breakdown) is the dedicated aspect breakdown. It MUST list each sub-aspect/actor with its full name, PASS/FAIL/COND outcome, coordinates, and at least a 1-sentence explanation per aspect:\n"
+            "  Sub-Audits Breakdown:\n"
+            "  - [Aspect A Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Detailed reasoning explanation].\n"
+            "  - [Aspect B Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Detailed reasoning explanation].\n"
+            "- Post 6 (index 5) is the Context post. It contains the standard news event context explanation paragraph.\n\n"
+        )
+        formatting_rules = multi_aspect_text + formatting_rules
 
     # System prompt: pure role declaration only
     if five_word:
@@ -943,7 +959,31 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
 
     # Build the full user message: rules + candidates + strict JSON matrix output demand
     n = len(candidates)
-    expected_len = 27 if use_son else 17
+    expected_len = 28 if (use_son and use_multi_aspect) else (27 if use_son else 17)
+    
+    # Construct dynamic example posts list
+    example_posts_list = [
+        '"Hook text here.\\nEvidence: a, b, c\\n#Aletheia #Topic"',
+        '"Claim text.\\nStated Judgement: (+1.0, 0.0) — Good Preference"',
+        '"Reality text.\\nResulting Judgement: (-1.0, -1.0) — Greater Evil"',
+        '"Verdict: FAIL — The Path of Deception.\\nExplanation.\\n\\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)"',
+        '"Context paragraph."',
+        '"The Bright Side:\\nNuance."',
+        '"The Breakdown & Plane Error:\\nExplanation."',
+        '"**Social Physics Analysis:**\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection."',
+        '"The Trajectory: The Path of Deception.\\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence."',
+        '"The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie."',
+        '"Alethekanon:\\nAnalysis."',
+        '"Awwthekanon:\\nEmpathy."',
+        '"Brothekanon:\\nCasual take."'
+    ]
+    if use_son and use_multi_aspect:
+        # Insert dedicated Sub-Audits Breakdown step at index 4 (between Verdict and Context)
+        # This is the ONLY place aspect verdicts appear — NOT in the Verdict post
+        example_posts_list.insert(4, '"Sub-Audits Breakdown:\\n- Nigel Farage: FAIL (-0.94, -0.87) — Farage\'s statements consistently prioritize personal political capital over substantive policy truth.\\n- Electoral Messaging Integrity: FAIL (-0.94, -0.88) — Standard verification checks expose systematic disinformation in the messaging."')
+    
+    example_posts_str = ",\n      ".join(example_posts_list)
+
     output_format = (
         f"OUTPUT FORMAT — YOUR ENTIRE RESPONSE MUST BE A SINGLE VALID JSON LIST OF LISTS. NO commentary, NO markdown formatting (other than JSON code fences if desired), NO explanation.\n"
         f"The JSON array must contain exactly {n} elements (one per candidate, in the same order). Each element must be a list of exactly {expected_len} items representing the evaluation of that candidate in this specific structure:\n"
@@ -963,7 +1003,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '      "post 1 (under 260 chars, ending with 1-2 hashtags)",\n'
         '      "post 2 (under 260 chars)",\n'
         "      ...\n"
-        "      (exactly 13 posts)                       // item[10]: posts array\n"
+        f"      (exactly {14 if use_multi_aspect else 13} posts)                       // item[10]: posts array\n"
         "    ],\n"
         '    ["Actor / Org / Geopolitical tag", ...],  // item[11]: actors array\n'
         '    "macro_event",                             // item[12]: overarching context name or "" if none\n'
@@ -973,19 +1013,43 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    macro_real_psi (float or null)             // item[16]: macro actual will, null if none\n"
     )
     if use_son:
-        output_format += (
-            ",\n"
-            "    claim_rnet (float),                        // item[17]: stated R_net integrity score\n"
-            "    real_rnet (float),                         // item[18]: actual R_net integrity score\n"
-            "    claim_z (int),                             // item[19]: stated uncertainty score (blank count, sum of blank counts across planes)\n"
-            "    real_z (int),                              // item[20]: actual uncertainty score\n"
-            "    claim_z_profile (7-number array of ints),  // item[21]: stated blank profile [B_Q1, B_Q2, B_Q3, B_Q4, B_Q5, B_Q6, B_Q7]\n"
-            "    real_z_profile (7-number array of ints),   // item[22]: actual blank profile\n"
-            '    "claim_integrity",                         // item[23]: stated integrity label mapped from claim_rnet\n'
-            '    "real_integrity",                          // item[24]: actual integrity label mapped from real_rnet\n'
-            '    stated_forces (object/dict),               // item[25]: {"GG": {"S": s, "O": o, "N": n}, ...} for stated claim\n'
-            '    actual_forces (object/dict)                // item[26]: {"GG": {"S": s, "O": o, "N": n}, ...} for actual reality\n'
-        )
+        if use_multi_aspect:
+            output_format += (
+                ",\n"
+                "    claim_rnet (float),                        // item[17]: stated R_net integrity score\n"
+                "    real_rnet (float),                         // item[18]: actual R_net integrity score\n"
+                "    claim_z (int),                             // item[19]: stated uncertainty score (blank count, sum of blank counts across planes)\n"
+                "    real_z (int),                              // item[20]: actual uncertainty score\n"
+                "    claim_z_profile (7-number array of ints),  // item[21]: stated blank profile [B_Q1, B_Q2, B_Q3, B_Q4, B_Q5, B_Q6, B_Q7]\n"
+                "    real_z_profile (7-number array of ints),   // item[22]: actual blank profile\n"
+                '    "claim_integrity",                         // item[23]: stated integrity label mapped from claim_rnet\n'
+                '    "real_integrity",                          // item[24]: actual integrity label mapped from real_rnet\n'
+                '    stated_forces (object/dict),               // item[25]: {"GG": {"S": s, "O": o, "N": n}, ...} for stated claim\n'
+                '    actual_forces (object/dict),               // item[26]: {"GG": {"S": s, "O": o, "N": n}, ...} for actual reality\n'
+                '    aspects (list of dicts)                    // item[27]: list of 2-4 sub-audits/aspects/actors evaluated individually. Format:\n'
+                '                                               // [\n'
+                '                                               //   {\n'
+                '                                               //     "name": "Aspect/Actor Name (e.g. Sudan Government Intervention or Commercial Paywall)",\n'
+                '                                               //     "type": "actor" or "aspect",\n'
+                '                                               //     "stated_forces": {"GG": {"S": s, "O": o, "N": n}, ...},\n'
+                '                                               //     "actual_forces": {"GG": {"S": s, "O": o, "N": n}, ...}\n'
+                '                                               //   }\n'
+                '                                               // ]\n'
+            )
+        else:
+            output_format += (
+                ",\n"
+                "    claim_rnet (float),                        // item[17]: stated R_net integrity score\n"
+                "    real_rnet (float),                         // item[18]: actual R_net integrity score\n"
+                "    claim_z (int),                             // item[19]: stated uncertainty score (blank count, sum of blank counts across planes)\n"
+                "    real_z (int),                              // item[20]: actual uncertainty score\n"
+                "    claim_z_profile (7-number array of ints),  // item[21]: stated blank profile [B_Q1, B_Q2, B_Q3, B_Q4, B_Q5, B_Q6, B_Q7]\n"
+                "    real_z_profile (7-number array of ints),   // item[22]: actual blank profile\n"
+                '    "claim_integrity",                         // item[23]: stated integrity label mapped from claim_rnet\n'
+                '    "real_integrity",                          // item[24]: actual integrity label mapped from real_rnet\n'
+                '    stated_forces (object/dict),               // item[25]: {"GG": {"S": s, "O": o, "N": n}, ...} for stated claim\n'
+                '    actual_forces (object/dict)                // item[26]: {"GG": {"S": s, "O": o, "N": n}, ...} for actual reality\n'
+            )
     output_format += (
         "\n"
         "  ]\n"
@@ -1024,19 +1088,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    -0.87,\n"
         '    "root",\n'
         "    [\n"
-        '      "Hook text here.\\nEvidence: a, b, c\\n#Aletheia #Topic",\n'
-        '      "Claim text.\\nStated Judgement: (+1.0, 0.0) — Good Preference",\n'
-        '      "Reality text.\\nResulting Judgement: (-1.0, -1.0) — Greater Evil",\n'
-        '      "Verdict: FAIL — The Path of Deception.\\nExplanation.",\n'
-        '      "Context paragraph.",\n'
-        '      "The Bright Side:\\nNuance.",\n'
-        '      "The Breakdown & Plane Error:\\nExplanation.",\n'
-        '      "**Social Physics Analysis:**\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection.",\n'
-        '      "The Trajectory: The Path of Deception.\\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",\n'
-        '      "The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie.",\n'
-        '      "Alethekanon:\\nAnalysis.",\n'
-        '      "Awwthekanon:\\nEmpathy.",\n'
-        '      "Brothekanon:\\nCasual take."\n'
+        f"      {example_posts_str}\n"
         "    ],\n"
         '    ["Nigel Farage", "Reform UK", "United Kingdom"],\n'
         '    "",\n'
@@ -1046,19 +1098,48 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         "    null"
     )
     if use_son:
-        output_format += (
-            ",\n"
-            "    1.0,\n"
-            "    12.5,\n"
-            "    0,\n"
-            "    4,\n"
-            "    [0, 0, 0, 0, 0, 0, 0],\n"
-            "    [1, 0, 0, 2, 1, 0, 0],\n"
-            '    "Absolute Truth",\n'
-            '    "Severe Deception",\n'
-            '    {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}},\n'
-            '    {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
-        )
+        if use_multi_aspect:
+            output_format += (
+                ",\n"
+                "    1.0,\n"
+                "    12.5,\n"
+                "    0,\n"
+                "    4,\n"
+                "    [0, 0, 0, 0, 0, 0, 0],\n"
+                "    [1, 0, 0, 2, 1, 0, 0],\n"
+                '    "Absolute Truth",\n'
+                '    "Severe Deception",\n'
+                '    {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}},\n'
+                '    {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}},\n'
+                '    [\n'
+                '      {\n'
+                '        "name": "Nigel Farage Political Intervention",\n'
+                '        "type": "actor",\n'
+                '        "stated_forces": {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}},\n'
+                '        "actual_forces": {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
+                '      },\n'
+                '      {\n'
+                '        "name": "Electoral Messaging Integrity",\n'
+                '        "type": "aspect",\n'
+                '        "stated_forces": {"GG": {"S": 1.0, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.0, "N": 0.0}, "LG": {"S": 0.0, "O": 0.0, "N": 0.5}, "LE": {"S": 0.0, "O": 0.0, "N": 0.5}, "GP": {"S": 1.0, "O": 0.0, "N": 0.0}, "BP": {"S": 1.0, "O": 1.0, "N": 0.0}},\n'
+                '        "actual_forces": {"GG": {"S": 0.0, "O": 1.5, "N": 0.0}, "GE": {"S": 1.0, "O": 0.0, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
+                '      }\n'
+                '    ]\n'
+            )
+        else:
+            output_format += (
+                ",\n"
+                "    1.0,\n"
+                "    12.5,\n"
+                "    0,\n"
+                "    4,\n"
+                "    [0, 0, 0, 0, 0, 0, 0],\n"
+                "    [1, 0, 0, 2, 1, 0, 0],\n"
+                '    "Absolute Truth",\n'
+                '    "Severe Deception",\n'
+                '    {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}},\n'
+                '    {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
+            )
     output_format += (
         "\n"
         "  ]\n"
@@ -1422,6 +1503,11 @@ def transpose_flat_to_json(flat_text):
                 story["stated_forces"] = item[25]
             if len(item) >= 27 and isinstance(item[26], dict):
                 story["actual_forces"] = item[26]
+            if len(item) >= 28 and isinstance(item[27], list):
+                story["aspects"] = item[27]
+                story["multiAspect"] = True
+            elif use_multi_aspect:
+                story["multiAspect"] = True
             evaluations.append(story)
         except Exception as e:
             print(f"Warning: Failed to parse item {idx}: {e}")
@@ -1479,8 +1565,10 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
 
             # Post count validation
             posts = story.get("posts", [])
-            if len(posts) != 13:
-                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected 13). Skipping.")
+            is_multi_aspect = story.get("multiAspect") is True
+            expected_posts_len = 14 if is_multi_aspect else 13
+            if len(posts) != expected_posts_len:
+                print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected {expected_posts_len}). Skipping.")
                 continue
 
             # Character limit warnings (only check first 4 posts for compact mode)
@@ -1519,6 +1607,7 @@ def main():
     parser.add_argument("--compact", action="store_true", help="Enable compact posting mode formatting (lifting character limits on posts 4+ in API responses)")
     parser.add_argument("--compact-single", action="store_true", help="Enable compact single-post mode formatting (lifting character limits on posts 4+ and tagging story as single-post compact)")
     parser.add_argument("--search", action="store_true", help="Enable Google Search Grounding to fact-check claims (default: False)")
+    parser.add_argument("--multi-aspect", action="store_true", help="Enable Multi-Aspect and Multi-Actor convergence test audits")
     parser.add_argument("--five-word", action="store_true", help="Enable 5-word limit mode")
     parser.add_argument("--rss", type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
@@ -1668,7 +1757,8 @@ def main():
                     use_son=args.son, use_search=False, # Convergence pass is always search-free
                     extra_context=args.context, model_sequence=model_seq,
                     compact=compact_val, five_word=args.five_word,
-                    thinking_level=args.thinking_level
+                    thinking_level=args.thinking_level,
+                    use_multi_aspect=args.multi_aspect
                 )
                 parsed = transpose_flat_to_json(raw_text)
 
@@ -1731,7 +1821,8 @@ def main():
                                         use_son=args.son, use_search=True, # Force search grounding ON
                                         extra_context=reflection_context, model_sequence=model_seq,
                                         compact=compact_val, five_word=args.five_word,
-                                        thinking_level=args.thinking_level
+                                        thinking_level=args.thinking_level,
+                                        use_multi_aspect=args.multi_aspect
                                     )
                                     ref_parsed = transpose_flat_to_json(ref_raw)
                                     if ref_parsed and len(ref_parsed) > 0:
