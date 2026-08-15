@@ -916,13 +916,15 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             "- Post 4 (index 3 in the posts array: The Verdict) is the OVERALL verdict only. Format it as:\n"
             "  Verdict: [PASS/FAIL] — [Path Name]. [1-2 sentence explanation of the trajectory's cause].\n"
             "  Integrity: [real_integrity] (Hypocrisy: [real_rnet], z: [real_z])\n"
-            "  DO NOT include any sub-audit or Subs: summary in this post. That information belongs exclusively in the dedicated Sub-Audits Breakdown step.\n"
+            "  DO NOT include any sub-audit or Subs: summary in this post. That information belongs exclusively in the dedicated Sub-Audits step.\n"
             "  *Note: Post 4 MUST be kept strictly under 260 characters total.\n"
-            "- Post 5 (index 4 in the posts array: Sub-Audits Breakdown) is the dedicated aspect breakdown. It MUST list each sub-aspect/actor with its name, PASS/FAIL/COND outcome, coordinates, and a concise 1-line explanation per aspect. Keep each bullet brief so the ENTIRE combined post stays strictly under 270 characters:\n"
-            "  Sub-Audits Breakdown:\n"
-            "  - [Aspect A Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line reason].\n"
-            "  - [Aspect B Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line reason].\n"
-            "- Post 6 (index 5) is the Context post. It contains the standard news event context explanation paragraph.\n\n"
+            "- Post 5 (index 4 in the posts array: Sub-Audits Breakdown) is the dedicated aspect breakdown. Format DIRECTLY as concise bullet points (NO 'Sub-Audits Breakdown:' header prefix). Each bullet must be 1 short line under 60 chars:\n"
+            "  - [Aspect A Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line reason under 60 chars].\n"
+            "  - [Aspect B Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line reason under 60 chars].\n"
+            "  *Note: Keep the ENTIRE combined Post 5 strictly under 260 characters total.\n"
+            "- Post 6 (index 5) is the Context post. Keep it to 1-2 concise sentences under 260 characters.\n"
+            "- Post 11 (Unavoidables) MUST have exactly 1 concise sentence for The Unavoidable Truth and 1 concise sentence for The Unavoidable Lie (under 260 chars total).\n"
+            "- Post 12 (Alethekanon) MUST be at most 2 concise sentences (under 260 chars total).\n\n"
         )
         formatting_rules = multi_aspect_text + formatting_rules
 
@@ -972,15 +974,15 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         '"The Breakdown & Plane Error:\\nExplanation."',
         '"**Social Physics Analysis:**\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection."',
         '"The Trajectory: The Path of Deception.\\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence."',
-        '"The Unavoidable Truth: truth.\\n\\nThe Unavoidable Lie: lie."',
-        '"Alethekanon:\\nAnalysis."',
+        '"The Unavoidable Truth: truth in 1 sentence.\\n\\nThe Unavoidable Lie: lie in 1 sentence."',
+        '"Alethekanon:\\nStructural analysis in 1-2 concise sentences."',
         '"Awwthekanon:\\nEmpathy."',
         '"Brothekanon:\\nCasual take."'
     ]
     if use_son and use_multi_aspect:
-        # Insert dedicated Sub-Audits Breakdown step at index 4 (between Verdict and Context)
-        # This is the ONLY place aspect verdicts appear — NOT in the Verdict post
-        example_posts_list.insert(4, '"Sub-Audits Breakdown:\\n- Nigel Farage: FAIL (-0.94, -0.87) — Farage\'s statements consistently prioritize personal political capital over substantive policy truth.\\n- Electoral Messaging Integrity: FAIL (-0.94, -0.88) — Standard verification checks expose systematic disinformation in the messaging."')
+        # Insert dedicated Sub-Audits step at index 4 (between Verdict and Context)
+        # Direct bullet points without header prefix, concise lines
+        example_posts_list.insert(4, '"- Nigel Farage: FAIL (-0.94, -0.87) — Prioritizes political capital over truth.\\n- Electoral Messaging: FAIL (-0.94, -0.88) — Disinformation exposed."')
     
     example_posts_str = ",\n      ".join(example_posts_list)
 

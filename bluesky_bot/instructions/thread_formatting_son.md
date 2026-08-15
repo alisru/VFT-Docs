@@ -74,10 +74,10 @@ Format:
 To maintain the strict 13-element limit on disk, the bot must output the `"posts"` array mapped exactly as follows:
 
 ### Element 0: The Hook
-* **Wording**: Starts with a custom, punchy, human-style editorial scene-setter one-liner (e.g., exposing a structural framing or irony). Follow it with the clean news subject title (no "Subject:" prefix) and the evidence standards line.
+* **Wording**: Starts with a custom, punchy, human-style editorial scene-setter one-liner (1 concise sentence). Follow it with the news subject title (use a concise shortened title if the headline is long) and the evidence line.
 * **Metrics**: State the three core actualism parameters: `Evidence: [Stated Ideal in 2-5 words], [Actual Effect in 2-5 words], [Actual Ideal in 2-5 words]`
 * **Hashtags**: End the post with 1-2 relevant hashtags (e.g. #Aletheia, #Tech, #USPol) to boost search visibility.
-* **Character limit**: Keep the entire post strictly under 275 characters.
+* **Character limit**: Keep the entire post strictly under 260 characters.
 
 ### Element 1: The Claim
 * **Wording**: Explains the stated claim organically as a natural paragraph.
@@ -95,16 +95,15 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 
 ### Element 4 (Multi-Aspect Mode Only): Sub-Audits Breakdown
 * **Present only when in multi-aspect mode.** This is the dedicated step for aspect/actor-level verdicts.
-* **Wording**: List each evaluated sub-aspect or actor with its full name, PASS/FAIL/COND outcome, coordinates, and at least a 1-sentence explanation:
+* **Wording**: List each evaluated sub-aspect or actor directly as a concise bullet point (NO 'Sub-Audits Breakdown:' header prefix):
   ```
-  Sub-Audits Breakdown:
-  - [Aspect A Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Detailed reasoning].
-  - [Aspect B Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Detailed reasoning].
+  - [Aspect A Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Short takeaway under 60 chars].
+  - [Aspect B Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Short takeaway under 60 chars].
   ```
-* This is the ONLY place aspect verdicts appear. Do not repeat them in the Verdict post.
+* Keep each bullet brief so the ENTIRE combined post stays strictly under 260 characters. This is the ONLY place aspect verdicts appear. Do not repeat them in the Verdict post.
 
 ### Element 4 (Standard) / Element 5 (Multi-Aspect): What's Happening (Context)
-* **Wording**: Clear, non-technical context paragraph explaining the news event so the reader understands what is being evaluated.
+* **Wording**: Clear, non-technical context paragraph explaining the news event in 1-2 concise sentences (under 260 characters).
 
 ### Element 5: The Nuance
 * **Wording**: Find the bright side (if negative) or poison (if positive).
@@ -121,13 +120,14 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 * **Wording**: Phrased organically: `The Trajectory: The Path of [Path Name].\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward [Outcome/Terminal Zone]` followed by a brief 1-sentence mathematical explanation. Keep the entire combined post strictly under 275 characters.
 
 ### Element 9: The Unavoidables
-* **Format**:
-  > The Unavoidable Truth: [truth text]
+* **Format**: The Unavoidable Truth must be exactly 1 concise sentence. The Unavoidable Lie must be exactly 1 concise sentence.
+  > The Unavoidable Truth: [1 concise sentence]
   > 
-  > The Unavoidable Lie: [lie text]
+  > The Unavoidable Lie: [1 concise sentence]
+* Keep the entire combined post strictly under 260 characters.
 
 ### Element 10: Alethekanon Reaction (Logical Analyst Persona)
-* **Format**: `Alethekanon:\n[One paragraph in their voice]`
+* **Format**: `Alethekanon:\n[1-2 concise analytical sentences in persona under 260 characters total]`
 
 ### Element 11: Awwthekanon Reaction (Empathetic Healer Persona)
 * **Format**: `Awwthekanon:\n[One paragraph in their voice]`
