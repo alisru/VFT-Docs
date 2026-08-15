@@ -918,10 +918,10 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             "  Integrity: [real_integrity] (Hypocrisy: [real_rnet], z: [real_z])\n"
             "  DO NOT include any sub-audit or Subs: summary in this post. That information belongs exclusively in the dedicated Sub-Audits Breakdown step.\n"
             "  *Note: Post 4 MUST be kept strictly under 260 characters total.\n"
-            "- Post 5 (index 4 in the posts array: Sub-Audits Breakdown) is the dedicated aspect breakdown. It MUST list each sub-aspect/actor with its full name, PASS/FAIL/COND outcome, coordinates, and a concise 5-10 word summary per aspect, keeping the entire post strictly under 250 characters:\n"
+            "- Post 5 (index 4 in the posts array: Sub-Audits Breakdown) is the dedicated aspect breakdown. It MUST list each sub-aspect/actor with its name, PASS/FAIL/COND outcome, coordinates, and a concise 1-line explanation per aspect. Keep each bullet brief so the ENTIRE combined post stays strictly under 270 characters:\n"
             "  Sub-Audits Breakdown:\n"
-            "  - [Aspect A Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Concise 5-10 word explanation].\n"
-            "  - [Aspect B Full Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Concise 5-10 word explanation].\n"
+            "  - [Aspect A Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line reason].\n"
+            "  - [Aspect B Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line reason].\n"
             "- Post 6 (index 5) is the Context post. It contains the standard news event context explanation paragraph.\n\n"
         )
         formatting_rules = multi_aspect_text + formatting_rules
@@ -951,7 +951,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             "You are strictly forbidden from inventing, guessing, or inferring specific details not explicitly written in the text or verified by search. "
             "Adhere to a strict budget of AT MOST 1 search query per story to stay within API quota limits. "
             "If you used Google Search to verify any information in your response for a candidate, you MUST append the emoji 🌐 at the end of the first post (post 1) of that candidate's thread, and you should mention/cite the verified facts or source details in the Alethekanon post (post 11) if relevant. "
-            "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 250 CHARACTERS (TARGET ~200-240 CHARACTERS). THIS IS A HARD LIMIT. BE CONCISE."
+            "CRITICAL: EVERY SINGLE POST IN THE THREAD MUST BE UNDER 270 CHARACTERS. THIS IS A HARD LIMIT. BE CONCISE."
         )
     if extra_context:
 
@@ -1515,21 +1515,6 @@ def transpose_flat_to_json(flat_text):
             
     return evaluations
 
-def smart_truncate(text, limit=299):
-    """Cleanly truncate text at sentence/line/word boundary to strictly stay under character limit."""
-    if not text or len(text) <= limit:
-        return text
-    # Try cutting at clean sentence or line boundaries
-    for sep in ['\n\n', '\n', '. ', '! ', '? ', '; ']:
-        idx = text.rfind(sep, 0, limit - 3)
-        if idx > limit // 2:
-            return text[:idx + (len(sep) if sep.endswith(' ') else 0)].rstrip()
-    # Fall back to word boundary cut
-    idx = text.rfind(' ', 0, limit - 3)
-    if idx > limit // 2:
-        return text[:idx].rstrip() + '...'
-    return text[:limit - 3].rstrip() + '...'
-
 # --- 4. SAVE TO DARKROOM ---
 def extract_topic_from_posts(posts):
     if not posts or not isinstance(posts, list) or len(posts) == 0:
@@ -1543,7 +1528,6 @@ def extract_topic_from_posts(posts):
             return tag
     return None
 
-# --- 4. SAVE TO DARKROOM ---
 def process_evaluations(evaluations, category="general", topic=None, compact=False):
     """Write evaluated story configs to stories/darkroom/ for graph generation and promotion by rebuild_registries."""
     darkroom_dir = os.path.join(script_dir, "stories", "darkroom")
@@ -1586,13 +1570,12 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
                 print(f"ERROR: Story '{story.get('subject')}' has {len(posts)} posts (expected {expected_posts_len}). Skipping.")
                 continue
 
-            # Character limit auto-sanitization (only check first 4 posts for compact mode)
+            # Character limit warnings (only check first 4 posts for compact mode)
             is_compact = story.get("compact") is True or story.get("compact") == "single"
-            posts_to_check_len = 4 if is_compact else len(posts)
-            for i in range(posts_to_check_len):
-                if i < len(posts) and len(posts[i]) > 299:
-                    print(f"  Auto-sanitizing overlength post {i+1} ({len(posts[i])} chars -> <=299 chars) for '{story.get('subject')}'")
-                    posts[i] = smart_truncate(posts[i], 299)
+            posts_to_check = posts[:4] if is_compact else posts
+            violations = [(i, len(p)) for i, p in enumerate(posts_to_check) if len(p) > 299]
+            if violations:
+                print(f"WARNING: '{story.get('subject')}' has char violations at posts {violations}")
             story["posts"] = posts
 
             # Write to darkroom — rebuild_registries will generate the graph and promote it
@@ -1652,7 +1635,6 @@ def main():
     if args.policy_report:
         try:
             from policy_extract import DEFAULT_LEDGER_PATH
-            import json
             if os.path.exists(DEFAULT_LEDGER_PATH):
                 with open(DEFAULT_LEDGER_PATH, "r", encoding="utf-8") as f:
                     ledger_data = json.load(f)
