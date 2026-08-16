@@ -148,46 +148,8 @@ class AletheiaLauncherApp:
         self.selected_models = [m for m in default_list if m != "agnes-2.0-flash"]
         self.model_vars = {}
 
-        # Load RSS feeds statically from harvester script
-        self.feed_definitions = self.load_rss_feeds_from_script()
-        if not self.feed_definitions:
-            # Fallback list of feeds if script parsing failed
-            self.feed_definitions = {
-                "ABC News Australia": "https://www.abc.net.au/news/feed/2942460/rss.xml",
-                "9News Australia": "https://www.9news.com.au/rss",
-                "SBS News": "https://www.sbs.com.au/news/feed",
-                "Sydney Morning Herald": "https://www.smh.com.au/rss/feed.xml",
-                "Perth Now": "https://www.perthnow.com.au/feed",
-                "The Age": "https://www.theage.com.au/rss/feed.xml",
-                "Brisbane Times": "https://www.brisbanetimes.com.au/rss/feed.xml",
-                "WA Today": "https://www.watoday.com.au/rss/feed.xml",
-                "Canberra Times": "https://www.canberratimes.com.au/rss.xml",
-                "BBC News": "http://feeds.bbci.co.uk/news/rss.xml",
-                "NYT Home": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-                "The Guardian UK": "https://www.theguardian.com/uk/rss",
-                "The Guardian World": "https://www.theguardian.com/world/rss",
-                "NPR News": "https://feeds.npr.org/1001/rss.xml",
-                "Al Jazeera": "https://www.aljazeera.com/xml/rss/all.xml",
-                "Google News World": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en",
-                "Google News Australia": "https://news.google.com/rss?hl=en-AU&gl=AU&ceid=AU:en",
-                "BBC Tech": "http://feeds.bbci.co.uk/news/technology/rss.xml",
-                "NYT Tech": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
-                "TechCrunch": "https://techcrunch.com/feed/",
-                "The Guardian Tech": "https://www.theguardian.com/technology/rss",
-                "BBC Business": "http://feeds.bbci.co.uk/news/business/rss.xml",
-                "NYT Business": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
-                "CNBC Business": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147",
-                "The Guardian Business": "https://www.theguardian.com/business/rss",
-                "DW Business": "https://rss.dw.com/xml/rss-en-bus",
-                "BBC Politics": "http://feeds.bbci.co.uk/news/politics/rss.xml",
-                "NYT Politics": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-                "NPR Politics": "https://feeds.npr.org/1014/rss.xml",
-                "The Guardian Politics": "https://www.theguardian.com/politics/rss",
-                "BBC Science": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
-                "NYT Science": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
-                "The Guardian Science": "https://www.theguardian.com/science/rss",
-                "DW Science": "https://rss.dw.com/xml/rss-en-science",
-            }
+        # Load RSS feeds and Category mapping statically/dynamically from harvester script
+        self.category_feeds, self.feed_definitions = self.load_rss_feeds_from_script()
         self.feed_vars = {}
 
         # Set clean modern font
@@ -234,21 +196,116 @@ class AletheiaLauncherApp:
 
     def load_rss_feeds_from_script(self):
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        harvester_path = os.path.join(script_dir, "bluesky_bot", "harvest_candidates.py")
-        feeds = {}
-        if os.path.exists(harvester_path):
+        oneshot_path = os.path.join(script_dir, "bluesky_bot", "google_ai_studio_one_shot.py")
+        category_feeds = {}
+        all_feeds = {}
+        if os.path.exists(oneshot_path):
             try:
-                with open(harvester_path, "r", encoding="utf-8") as f:
+                with open(oneshot_path, "r", encoding="utf-8") as f:
                     content = f.read()
-                matches = re.findall(
-                    r'\{\s*["\']name["\']\s*:\s*["\']([^"\']+)["\']\s*,\s*["\']url["\']\s*:\s*["\']([^"\']+)["\']',
-                    content
-                )
-                for name, url in matches:
-                    feeds[name] = url
+                for cat_match in re.finditer(r'["\']([a-zA-Z0-9_-]+)["\']\s*:\s*\[([^\]]+)\]', content):
+                    cat_name = cat_match.group(1).lower()
+                    if cat_name in ["china", "asia", "tech", "business", "politics", "science", "world", "general"]:
+                        block = cat_match.group(2)
+                        items = []
+                        for item_match in re.finditer(r'\{\s*["\']name["\']\s*:\s*["\']([^"\']+)["\']\s*,\s*["\']url["\']\s*:\s*["\']([^"\']+)["\']', block):
+                            fname = item_match.group(1)
+                            furl = item_match.group(2)
+                            items.append({"name": fname, "url": furl})
+                            all_feeds[fname] = furl
+                        if items:
+                            category_feeds[cat_name] = items
             except Exception as e:
-                print(f"Error statically parsing feeds: {e}")
-        return feeds
+                print(f"Error parsing category feeds from script: {e}")
+
+        # Fallback category feeds dictionary if empty
+        if not category_feeds:
+            category_feeds = {
+                "china": [
+                    {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+                    {"name": "SCMP Asia & World", "url": "https://www.scmp.com/rss/92/feed"},
+                    {"name": "SCMP Economy", "url": "https://www.scmp.com/rss/96/feed"},
+                    {"name": "SCMP Tech", "url": "https://www.scmp.com/rss/318206/feed"},
+                    {"name": "Sixth Tone", "url": "https://www.sixthtone.com/rss"},
+                    {"name": "Hong Kong Free Press", "url": "https://hongkongfp.com/feed/"},
+                    {"name": "China Daily News", "url": "http://www.chinadaily.com.cn/rss/china_rss.xml"},
+                    {"name": "China Daily Biz", "url": "http://www.chinadaily.com.cn/rss/bizchina_rss.xml"},
+                    {"name": "Google News China", "url": "https://news.google.com/rss/search?q=China+when:2d&hl=en-US&gl=US&ceid=US:en"},
+                    {"name": "Google News China Tech/Economy", "url": "https://news.google.com/rss/search?q=China+(economy+OR+tech+OR+diplomacy)+when:2d&hl=en-US&gl=US&ceid=US:en"},
+                ],
+                "asia": [
+                    {"name": "SCMP Asia & World", "url": "https://www.scmp.com/rss/92/feed"},
+                    {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+                    {"name": "Hong Kong Free Press", "url": "https://hongkongfp.com/feed/"},
+                    {"name": "Sixth Tone", "url": "https://www.sixthtone.com/rss"},
+                    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+                    {"name": "Google News Asia", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+                ],
+                "tech": [
+                    {"name": "BBC Tech", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml"},
+                    {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"},
+                    {"name": "TechCrunch", "url": "https://techcrunch.com/feed/"},
+                    {"name": "The Guardian Tech", "url": "https://www.theguardian.com/technology/rss"},
+                    {"name": "SCMP Tech", "url": "https://www.scmp.com/rss/318206/feed"},
+                ],
+                "business": [
+                    {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml"},
+                    {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"},
+                    {"name": "CNBC Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147"},
+                    {"name": "The Guardian Business", "url": "https://www.theguardian.com/business/rss"},
+                    {"name": "DW Business", "url": "https://rss.dw.com/xml/rss-en-bus"},
+                    {"name": "SCMP Economy", "url": "https://www.scmp.com/rss/96/feed"},
+                ],
+                "politics": [
+                    {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
+                    {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"},
+                    {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml"},
+                    {"name": "The Guardian Politics", "url": "https://www.theguardian.com/politics/rss"},
+                ],
+                "science": [
+                    {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"},
+                    {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"},
+                    {"name": "The Guardian Science", "url": "https://www.theguardian.com/science/rss"},
+                    {"name": "DW Science", "url": "https://rss.dw.com/xml/rss-en-science"},
+                ],
+                "world": [
+                    {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
+                    {"name": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"},
+                    {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+                    {"name": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml"},
+                    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+                    {"name": "DW News World", "url": "https://rss.dw.com/xml/rss-en-all"},
+                    {"name": "France 24", "url": "https://www.france24.com/en/rss"},
+                    {"name": "CBC News", "url": "https://rss.cbc.ca/lineup/topstories.xml"},
+                    {"name": "UPI News", "url": "https://rss.upi.com/news/news.rss"},
+                    {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+                    {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+                ],
+                "general": [
+                    {"name": "ABC News Australia", "url": "https://www.abc.net.au/news/feed/2942460/rss.xml"},
+                    {"name": "9News Australia", "url": "https://www.9news.com.au/rss"},
+                    {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed"},
+                    {"name": "Sydney Morning Herald", "url": "https://www.smh.com.au/rss/feed.xml"},
+                    {"name": "Perth Now", "url": "https://www.perthnow.com.au/feed"},
+                    {"name": "The Age", "url": "https://www.theage.com.au/rss/feed.xml"},
+                    {"name": "Brisbane Times", "url": "https://www.brisbanetimes.com.au/rss/feed.xml"},
+                    {"name": "WA Today", "url": "https://www.watoday.com.au/rss/feed.xml"},
+                    {"name": "Canberra Times", "url": "https://www.canberratimes.com.au/rss.xml"},
+                    {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
+                    {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"},
+                    {"name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
+                    {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+                    {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml"},
+                    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+                    {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+                    {"name": "Google News Australia", "url": "https://news.google.com/rss?hl=en-AU&gl=AU&ceid=AU:en"},
+                ],
+            }
+            for cname, flist in category_feeds.items():
+                for fitem in flist:
+                    all_feeds[fitem["name"]] = fitem["url"]
+
+        return category_feeds, all_feeds
 
     def log_eval(self, text):
         self.log_queue.put(("eval", text))
@@ -352,10 +409,13 @@ class AletheiaLauncherApp:
         # Row 1: Actions Header Card
         self.create_actions_card(left_panel)
 
-        # Row 2: Batch Evaluator Card
+        # Row 2: Research Probe & Historical Audits Card
+        self.create_probe_card(left_panel)
+
+        # Row 3: Batch Evaluator Card
         self.create_batch_card(left_panel)
 
-        # Row 3: Live Posting Card
+        # Row 4: Live Posting Card
         self.create_live_post_card(left_panel)
 
         # Apply mousewheel binding recursively
@@ -528,9 +588,66 @@ class AletheiaLauncherApp:
             btn_frame, text="Rebuild Stories Store", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
             relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_rebuild_store
         )
-        self.btn_rebuild.pack(side=tk.LEFT)
+        self.btn_rebuild.pack(side=tk.LEFT, padx=(0, 8))
         self.btn_rebuild.bind("<Enter>", lambda e: self.btn_rebuild.configure(bg=ACCENT_CYAN_HOVER))
         self.btn_rebuild.bind("<Leave>", lambda e: self.btn_rebuild.configure(bg=ACCENT_CYAN))
+
+        self.btn_chat_ui = tk.Button(
+            btn_frame, text="💬 Open Chat UI", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.open_chat_ui
+        )
+        self.btn_chat_ui.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_chat_ui.bind("<Enter>", lambda e: self.btn_chat_ui.configure(bg=BG_BUTTON_HOVER))
+        self.btn_chat_ui.bind("<Leave>", lambda e: self.btn_chat_ui.configure(bg=BG_BUTTON))
+
+        self.btn_policy_report = tk.Button(
+            btn_frame, text="📋 Policy Ledger", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_policy_report
+        )
+        self.btn_policy_report.pack(side=tk.LEFT)
+        self.btn_policy_report.bind("<Enter>", lambda e: self.btn_policy_report.configure(bg=BG_BUTTON_HOVER))
+        self.btn_policy_report.bind("<Leave>", lambda e: self.btn_policy_report.configure(bg=BG_BUTTON))
+
+    def create_probe_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="🔍 Research Probe & Historical Audits", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 6))
+
+        desc = tk.Label(inner, text="Harvest and judge historical events, specific actors in time, or named policy records.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
+        desc.pack(anchor="w", pady=(0, 8))
+
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 8))
+
+        tk.Label(grid_frame, text="Probe Query", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_probe_query = tk.Entry(grid_frame, width=32, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_probe_query.insert(0, "Hitler 1933")
+        self.ent_probe_query.grid(row=0, column=1, sticky="w", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Year", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=3, padx=(0, 5))
+        self.ent_probe_year = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_probe_year.grid(row=0, column=3, sticky="w", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Sources", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=4, sticky="w", pady=3, padx=(0, 5))
+        self.ent_probe_limit = tk.Entry(grid_frame, width=6, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_probe_limit.insert(0, "5")
+        self.ent_probe_limit.grid(row=0, column=5, sticky="w", pady=3)
+
+        btn_probe_frame = tk.Frame(inner, bg=CARD_BG)
+        btn_probe_frame.pack(fill=tk.X, pady=(4, 0))
+
+        self.btn_run_probe = tk.Button(
+            btn_probe_frame, text="🔍 Launch Research Probe", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=self.run_research_probe
+        )
+        self.btn_run_probe.pack(side=tk.LEFT)
+        self.btn_run_probe.bind("<Enter>", lambda e: self.btn_run_probe.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_run_probe.bind("<Leave>", lambda e: self.btn_run_probe.configure(bg=ACCENT_BLUE))
 
     def create_batch_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
@@ -562,6 +679,11 @@ class AletheiaLauncherApp:
         self.ent_category.insert(0, "general")
         self.ent_category.grid(row=0, column=5, sticky="w", pady=3)
 
+        btn_cat_explorer = tk.Button(grid_frame, text="📋 Feeds by Category", font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=ACCENT_CYAN, relief="flat", borderwidth=0, padx=6, pady=2, cursor="hand2", command=self.open_category_feeds_dialog)
+        btn_cat_explorer.grid(row=0, column=6, sticky="w", padx=(5, 0), pady=3)
+        btn_cat_explorer.bind("<Enter>", lambda e: btn_cat_explorer.configure(bg=BG_BUTTON_HOVER))
+        btn_cat_explorer.bind("<Leave>", lambda e: btn_cat_explorer.configure(bg=BG_BUTTON))
+
         # Col 2
         tk.Label(grid_frame, text="Topic Filter", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=3, padx=(0, 5))
         self.ent_topic = tk.Entry(grid_frame, width=15, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
@@ -580,9 +702,9 @@ class AletheiaLauncherApp:
         self.combo_thinking = ttk.Combobox(grid_frame, width=15, values=["OFF", "LOW", "MEDIUM", "HIGH"], state="readonly", font=self.font_body)
         self.combo_thinking.set("MEDIUM")
         self.combo_thinking.grid(row=2, column=4, columnspan=2, sticky="ew", pady=3)
-        tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SaturdayPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, columnspan=5, sticky="w")
-        tk.Label(grid_frame, text="Categories: general, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=4, column=1, columnspan=5, sticky="w")
-        tk.Label(grid_frame, text="Suggested Topics: Trump, AI, Climate, Markets, AUKUS, Australia, Boeing, Space", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=5, column=1, columnspan=5, sticky="w")
+        tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SatPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9, SCMP=10, SixthTone=11, HKFP=12)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, columnspan=6, sticky="w")
+        tk.Label(grid_frame, text="Categories: general, china, asia, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=4, column=1, columnspan=6, sticky="w")
+        tk.Label(grid_frame, text="Suggested Topics: Trump, AI, Climate, Markets, AUKUS, Australia, Boeing, Space", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=5, column=1, columnspan=6, sticky="w")
 
         self.val_son = tk.BooleanVar(value=False)
         self.chk_son = ttk.Checkbutton(grid_frame, text="Enable SON 6-Attractor Mode", variable=self.val_son)
@@ -594,11 +716,15 @@ class AletheiaLauncherApp:
 
         self.val_compact = tk.BooleanVar(value=False)
         self.chk_compact = ttk.Checkbutton(grid_frame, text="Enable Compact Mode", variable=self.val_compact)
-        self.chk_compact.grid(row=7, column=1, columnspan=3, sticky="w", pady=3)
+        self.chk_compact.grid(row=7, column=1, columnspan=2, sticky="w", pady=3)
 
         self.val_five_word = tk.BooleanVar(value=False)
         self.chk_five_word = ttk.Checkbutton(grid_frame, text="Enable 5-Word Mode", variable=self.val_five_word)
-        self.chk_five_word.grid(row=7, column=4, columnspan=2, sticky="w", pady=3)
+        self.chk_five_word.grid(row=7, column=3, columnspan=2, sticky="w", pady=3)
+
+        self.val_multi = tk.BooleanVar(value=False)
+        self.chk_multi = ttk.Checkbutton(grid_frame, text="Enable Multi-Aspect Audit", variable=self.val_multi)
+        self.chk_multi.grid(row=7, column=5, columnspan=2, sticky="w", pady=3)
 
         tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=8, column=0, sticky="w", pady=3, padx=(0, 5))
         batch_size_frame = tk.Frame(grid_frame, bg=CARD_BG)
@@ -653,7 +779,7 @@ class AletheiaLauncherApp:
         feeds_label = tk.Label(feeds_header, text="Active RSS Feeds (Deselect to exclude specific feeds):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
         feeds_label.pack(side=tk.LEFT)
         
-        # Select All / Select None buttons
+        # Select All / Select None / Category Explorer buttons
         def select_all_feeds():
             for var in self.feed_vars.values():
                 var.set(True)
@@ -671,6 +797,11 @@ class AletheiaLauncherApp:
         btn_sel_none.pack(side=tk.RIGHT, padx=4)
         btn_sel_none.bind("<Enter>", lambda e: btn_sel_none.configure(bg=BG_BUTTON_HOVER))
         btn_sel_none.bind("<Leave>", lambda e: btn_sel_none.configure(bg=BG_BUTTON))
+
+        btn_view_cats = tk.Button(feeds_header, text="📂 Category Explorer", font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=ACCENT_CYAN, relief="flat", borderwidth=0, padx=6, pady=2, cursor="hand2", command=self.open_category_feeds_dialog)
+        btn_view_cats.pack(side=tk.RIGHT, padx=4)
+        btn_view_cats.bind("<Enter>", lambda e: btn_view_cats.configure(bg=BG_BUTTON_HOVER))
+        btn_view_cats.bind("<Leave>", lambda e: btn_view_cats.configure(bg=BG_BUTTON))
 
         feeds_container = tk.Frame(inner, bg=CARD_BG)
         feeds_container.pack(fill=tk.X, pady=(0, 8))
@@ -912,8 +1043,150 @@ class AletheiaLauncherApp:
         t = threading.Thread(target=run_server, daemon=True)
         t.start()
 
+    def ensure_source_server(self):
+        python_bin = self.get_python_bin()
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        source_script = os.path.join(root_dir, "bluesky_bot", "source_server.py")
+        
+        import socket
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                if s.connect_ex(('localhost', 8765)) == 0:
+                    return  # Already running
+        except Exception:
+            pass
+
+        subprocess.Popen(
+            [python_bin, source_script],
+            cwd=os.path.join(root_dir, "bluesky_bot"),
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+        )
+
+    def ensure_chat_server(self):
+        python_bin = self.get_python_bin()
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        chat_script = os.path.join(root_dir, "bluesky_bot", "chat_server.py")
+        
+        import socket
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                if s.connect_ex(('localhost', 8766)) == 0:
+                    return  # Already running
+        except Exception:
+            pass
+
+        subprocess.Popen(
+            [python_bin, chat_script],
+            cwd=os.path.join(root_dir, "bluesky_bot"),
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+        )
+
+    def open_category_feeds_dialog(self):
+        dialog = tk.Toplevel(self.root)
+        dialog.title("RSS Feed Categories Explorer")
+        dialog.geometry("820x600")
+        dialog.configure(bg=BG_COLOR)
+        dialog.transient(self.root)
+
+        # Header
+        hdr = tk.Frame(dialog, bg=CARD_BG, padx=14, pady=10)
+        hdr.pack(fill=tk.X)
+        tk.Label(hdr, text="📂 RSS Feed Categories & Source Mapping", font=self.font_title, fg=ACCENT_CYAN, bg=CARD_BG).pack(anchor="w")
+        tk.Label(hdr, text="Browse the exact RSS feeds harvested under each category. Apply categories or sync feed selections instantly.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG).pack(anchor="w")
+
+        # Category Buttons Bar
+        cat_bar = tk.Frame(dialog, bg=BG_COLOR, padx=14, pady=8)
+        cat_bar.pack(fill=tk.X)
+        tk.Label(cat_bar, text="Categories:", font=self.font_subtitle, fg=TEXT_COLOR, bg=BG_COLOR).pack(side=tk.LEFT, padx=(0, 8))
+
+        # Main Display Area
+        content_frame = tk.Frame(dialog, bg=CARD_BG, padx=14, pady=10)
+        content_frame.pack(fill=tk.BOTH, expand=True, padx=14, pady=(0, 10))
+
+        cat_title_lbl = tk.Label(content_frame, text="", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        cat_title_lbl.pack(anchor="w", pady=(0, 6))
+
+        txt_box_frame = tk.Frame(content_frame, bg=BG_COLOR)
+        txt_box_frame.pack(fill=tk.BOTH, expand=True)
+        sb = tk.Scrollbar(txt_box_frame)
+        sb.pack(side=tk.RIGHT, fill=tk.Y)
+        feed_display = tk.Text(txt_box_frame, bg=BG_COLOR, fg=TEXT_COLOR, font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=sb.set, wrap="word")
+        feed_display.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        sb.config(command=feed_display.yview)
+
+        # Bottom Action Bar
+        act_bar = tk.Frame(dialog, bg=BG_COLOR, padx=14, pady=10)
+        act_bar.pack(fill=tk.X)
+
+        selected_cat_var = tk.StringVar(value="all")
+        cat_buttons = []
+
+        def show_cat(cat_key):
+            selected_cat_var.set(cat_key)
+            for btn, key in cat_buttons:
+                if key == cat_key:
+                    btn.configure(bg=ACCENT_BLUE, fg=TEXT_COLOR)
+                else:
+                    btn.configure(bg=BG_BUTTON, fg=TEXT_COLOR)
+
+            feed_display.delete("1.0", tk.END)
+            if cat_key == "all":
+                cat_title_lbl.config(text=f"All Configured Feeds Across All Categories ({len(self.feed_definitions)} unique feeds)")
+                for cname, flist in self.category_feeds.items():
+                    feed_display.insert(tk.END, f"=== CATEGORY: {cname.upper()} ({len(flist)} feeds) ===\n")
+                    for item in flist:
+                        feed_display.insert(tk.END, f"  • {item['name']:<32} {item['url']}\n")
+                    feed_display.insert(tk.END, "\n")
+            else:
+                flist = self.category_feeds.get(cat_key, [])
+                cat_title_lbl.config(text=f"Category: {cat_key.upper()} ({len(flist)} active feeds)")
+                feed_display.insert(tk.END, f"Feeds harvested when --category {cat_key} is selected:\n\n")
+                for item in flist:
+                    feed_display.insert(tk.END, f"  • {item['name']:<32} {item['url']}\n")
+
+        def apply_cat_to_launcher():
+            cat = selected_cat_var.get()
+            if cat and cat != "all":
+                self.ent_category.delete(0, tk.END)
+                self.ent_category.insert(0, cat)
+            elif cat == "all":
+                self.ent_category.delete(0, tk.END)
+                self.ent_category.insert(0, "general,china,asia,tech,business,politics,science,world")
+            dialog.destroy()
+
+        def select_only_cat_feeds():
+            cat = selected_cat_var.get()
+            if cat == "all":
+                for var in self.feed_vars.values():
+                    var.set(True)
+            else:
+                flist = self.category_feeds.get(cat, [])
+                cat_feed_names = {item["name"] for item in flist}
+                for fname, var in self.feed_vars.items():
+                    var.set(fname in cat_feed_names)
+            dialog.destroy()
+
+        all_cats = ["all"] + list(self.category_feeds.keys())
+        for c in all_cats:
+            b = tk.Button(cat_bar, text=c.upper(), font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=8, pady=3, cursor="hand2", command=lambda key=c: show_cat(key))
+            b.pack(side=tk.LEFT, padx=3)
+            cat_buttons.append((b, c))
+
+        btn_apply = tk.Button(act_bar, text="✅ Set Category in Launcher", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=apply_cat_to_launcher)
+        btn_apply.pack(side=tk.LEFT, padx=(0, 8))
+
+        btn_sel_feeds = tk.Button(act_bar, text="🎯 Select Only This Category's Feeds", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=select_only_cat_feeds)
+        btn_sel_feeds.pack(side=tk.LEFT, padx=(0, 8))
+
+        btn_close = tk.Button(act_bar, text="Close", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=dialog.destroy)
+        btn_close.pack(side=tk.RIGHT)
+
+        show_cat("all")
+
     def open_control_panel(self):
         self.ensure_local_server()
+        self.ensure_source_server()
+        self.ensure_chat_server()
         python_bin = self.get_python_bin()
         url = "http://localhost:8000/bluesky_bot/control_panel.html"
         
@@ -934,10 +1207,14 @@ class AletheiaLauncherApp:
     def set_eval_running(self, running):
         if running:
             self.btn_run_batch.configure(state=tk.DISABLED)
+            if hasattr(self, 'btn_run_probe'):
+                self.btn_run_probe.configure(state=tk.DISABLED)
             self.btn_rebuild.configure(state=tk.DISABLED)
             self.btn_kill_eval.configure(state=tk.NORMAL)
         else:
             self.btn_run_batch.configure(state=tk.NORMAL)
+            if hasattr(self, 'btn_run_probe'):
+                self.btn_run_probe.configure(state=tk.NORMAL)
             self.btn_rebuild.configure(state=tk.NORMAL)
             self.btn_kill_eval.configure(state=tk.DISABLED)
             self.root.after(1, self.refresh_hud_stats)
@@ -1052,6 +1329,9 @@ class AletheiaLauncherApp:
         if self.val_five_word.get():
             args.append("--five-word")
 
+        if self.val_multi.get():
+            args.append("--multi-aspect")
+
         if self.batch_size_var.get():
             args.extend(["--chunk-size", self.batch_size_var.get()])
 
@@ -1063,6 +1343,58 @@ class AletheiaLauncherApp:
             args.extend(["--model", self.selected_models[0]])
             args.extend(["--model-sequence", ",".join(self.selected_models)])
 
+        self.run_eval_subprocess_async(args)
+
+    def run_research_probe(self):
+        query = self.ent_probe_query.get().strip()
+        if not query:
+            return
+        python_bin = self.get_python_bin()
+        args = [
+            python_bin, "-u",
+            "bluesky_bot/google_ai_studio_one_shot.py",
+            "--probe", query
+        ]
+        year = self.ent_probe_year.get().strip()
+        if year:
+            args.extend(["--probe-year", year])
+            
+        limit = self.ent_probe_limit.get().strip()
+        if limit:
+            args.extend(["--rss", limit, "--bsky", "0"])
+
+        thinking = self.combo_thinking.get().strip()
+        if thinking:
+            args.extend(["--thinking-level", thinking])
+
+        if self.val_son.get():
+            args.append("--son")
+
+        if self.val_search.get():
+            args.append("--search")
+
+        if self.val_compact.get():
+            args.append("--compact")
+
+        if self.selected_models:
+            args.extend(["--model", self.selected_models[0]])
+            args.extend(["--model-sequence", ",".join(self.selected_models)])
+
+        self.run_eval_subprocess_async(args)
+
+    def open_chat_ui(self):
+        self.ensure_local_server()
+        self.ensure_chat_server()
+        url = "http://localhost:8000/bluesky_bot/aletheia_chat.html"
+        webbrowser.open(url)
+
+    def run_policy_report(self):
+        python_bin = self.get_python_bin()
+        args = [
+            python_bin, "-u",
+            "bluesky_bot/google_ai_studio_one_shot.py",
+            "--policy-report"
+        ]
         self.run_eval_subprocess_async(args)
 
     def run_live_post(self):
