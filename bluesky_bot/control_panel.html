@@ -645,11 +645,12 @@
     .tab-content {
       display: none;
       animation: fadeIn 0.3s ease;
-      min-height: 100%;
     }
 
     .tab-content.active {
       display: grid;
+      align-items: start;
+      align-content: start;
     }
 
     @keyframes fadeIn {
@@ -922,7 +923,8 @@
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
-      min-height: 100%;
+      align-items: start;
+      align-content: start;
     }
 
     .grid-canvas-container {
@@ -935,7 +937,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      min-height: 450px;
+      align-self: start;
     }
 
     .grid-svg {
@@ -950,6 +952,7 @@
       flex-direction: column;
       gap: 1.5rem;
       overflow-y: auto;
+      align-self: start;
     }
 
     /* Prompt Tab Viewport */
@@ -1217,6 +1220,10 @@
         <div class="status-pulse"></div>
         <span id="systemStatusText">SERVER ONLINE</span>
       </div>
+
+      <button class="theme-toggle" onclick="window.open('aletheia_chat.html', '_blank')" style="border-color: var(--bsky-blue); color: var(--bsky-blue); font-weight: 600;">
+        💬 Open AI Chatbot
+      </button>
       
       <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">
         🌙 Dark Mode
@@ -1238,6 +1245,10 @@
             <button onclick="filterByDomain('nytimes')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">NYT</button>
             <button onclick="filterByDomain('reuters')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">Reuters</button>
             <button onclick="filterByDomain('bbc')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">BBC</button>
+            <button onclick="filterByDomain('scmp.com')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">SCMP</button>
+            <button onclick="filterByDomain('sixthtone.com')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">Sixth Tone</button>
+            <button onclick="filterByDomain('hongkongfp.com')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">HKFP</button>
+            <button onclick="filterByDomain('chinadaily.com.cn')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">China Daily</button>
             <button onclick="filterByDomain('abc.net.au')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">ABC AU</button>
             <button onclick="filterByDomain('smh.com.au')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">SMH</button>
             <button onclick="filterByDomain('techcrunch')" class="filter-pill" style="font-size:0.68rem; padding:0.1rem 0.3rem; border-color:transparent; background:rgba(255,255,255,0.03);">TechCrunch</button>
@@ -1480,6 +1491,10 @@
                     <option value="https://www.thesaturdaypaper.com.au/">The Saturday Paper</option>
                     <option value="https://www.reuters.com/">Reuters</option>
                     <option value="https://www.bbc.com/news/">BBC News</option>
+                    <option value="https://www.scmp.com/">SCMP</option>
+                    <option value="https://www.sixthtone.com/">Sixth Tone</option>
+                    <option value="https://hongkongfp.com/">HKFP</option>
+                    <option value="http://www.chinadaily.com.cn/">China Daily</option>
                     <option value="https://www.smh.com.au/">SMH</option>
                     <option value="https://www.abc.net.au/news/">ABC News AU</option>
                     <option value="https://techcrunch.com/">TechCrunch</option>
@@ -2648,40 +2663,30 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
 
       async function checkRegistryUpdates() {
         try {
-          const res = await fetch('stories_registry.js', { cache: 'no-store' });
-          if (!res.ok) {
-            updateServerStatus(false);
-            return;
-          }
-          updateServerStatus(true);
-          const text = await res.text();
-          const jsonStart = text.indexOf('[');
-          const jsonEnd = text.lastIndexOf(']');
-          if (jsonStart !== -1 && jsonEnd !== -1) {
-            const jsonStr = text.substring(jsonStart, jsonEnd + 1);
-            const freshRegistry = JSON.parse(jsonStr);
-
-            // Compare registry states to detect updates
-            const changed = freshRegistry.length !== STORIES_REGISTRY.length ||
-                            (freshRegistry.length > 0 && STORIES_REGISTRY.length > 0 && freshRegistry[0].id !== STORIES_REGISTRY[0].id);
-
-            if (changed) {
-              console.log("Aletheia Control Panel: Registry update detected! Live-reloading...");
-              STORIES_REGISTRY.length = 0;
-              STORIES_REGISTRY.push(...freshRegistry);
-              refreshRegistryUI();
+          if (window.ALETHEIA_STORIES_REGISTRY && window.ALETHEIA_STORIES_REGISTRY.length > 0) {
+            updateServerStatus(true);
+            const text = document.getElementById('systemStatusText');
+            if (text) text.innerText = `ONLINE (${window.ALETHEIA_STORIES_REGISTRY.length} AUDITS)`;
+          } else {
+            const res = await fetch('http://localhost:8766/health').catch(() => null);
+            if (res && res.ok) {
+              updateServerStatus(true);
+            } else {
+              updateServerStatus(false);
             }
           }
         } catch (e) {
-          updateServerStatus(false);
+          if (window.ALETHEIA_STORIES_REGISTRY && window.ALETHEIA_STORIES_REGISTRY.length > 0) {
+            updateServerStatus(true);
+          }
         }
       }
 
       // Initial check
       checkRegistryUpdates();
 
-      // Periodically check stories_registry.js for backend updates (rebuilt by rebuild_registries.py)
-      setInterval(checkRegistryUpdates, 3000);
+      // Periodically check server status
+      setInterval(checkRegistryUpdates, 10000);
     };
 
     function showNotificationBanner(message, type) {
@@ -3050,20 +3055,39 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         return;
       }
 
-      try {
-        const resp = await fetch(`http://localhost:8765/source?url=${encodeURIComponent(url)}`);
-        const data = await resp.json();
+      // 1. Try static JSON endpoint on Vercel / Git (relative path)
+      let data = null;
+      const storyId = story.id || '';
+      const cleanSlug = storyId.replace(/^factcheck_/, '');
+      
+      const staticCandidates = [
+        `sources/${storyId}.json`,
+        `sources/factcheck_${cleanSlug}.json`,
+        `sources/${cleanSlug}.json`
+      ];
 
-        if (data.error) {
-          document.getElementById('sourceTextBody').innerHTML = `
-            <div style="color:#f87171;">⚠️ ${data.error}</div>
-            <div style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);">
-              Make sure <strong>source_server.py</strong> is running, or launch via <strong>launch_panel.bat</strong>.<br>
-              You can also <a href="${url}" target="_blank" style="color:var(--bsky-blue);">open the original article</a>.
-            </div>`;
-          return;
-        }
+      for (const sp of staticCandidates) {
+        try {
+          const sResp = await fetch(sp);
+          if (sResp.ok) {
+            data = await sResp.json();
+            break;
+          }
+        } catch(e) {}
+      }
 
+      // 2. Fallback to local source server if on localhost
+      if (!data && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+        try {
+          const resp = await fetch(`http://localhost:8765/source?url=${encodeURIComponent(url)}`);
+          if (resp.ok) {
+            const lData = await resp.json();
+            if (!lData.error) data = lData;
+          }
+        } catch(e) {}
+      }
+
+      if (data && data.text) {
         const paragraphs = (data.text || '').split('\n\n').filter(p => p.trim());
         const renderedParas = paragraphs.map(p =>
           `<p style="margin:0 0 14px;line-height:1.75;color:var(--text-primary);">${p.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</p>`
@@ -3074,12 +3098,18 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         document.getElementById('sourceTextBody').innerHTML = paragraphs.length
           ? ts + renderedParas
           : `<em style="color:#f87171;">No paragraph text was captured for this article (may be paywalled or JS-rendered).</em>`;
-
-      } catch(e) {
+      } else {
+        // 3. Graceful Static Web Fallback for Vercel / Hosted Environments
         document.getElementById('sourceTextBody').innerHTML = `
-          <div style="color:#f87171;">⚠️ Could not connect to source server (localhost:8765).</div>
-          <div style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);">
-            Launch via <strong>launch_panel.bat</strong> to start both servers automatically.
+          <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+            <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">📰 Primary Source Article</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">This investigation was conducted on the ground-truth reporting from:</div>
+            <a href="${url}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--bsky-blue); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">
+              🌐 Open Original Article ↗
+            </a>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-muted);line-height: 1.6;">
+            <strong>Aletheia Knowledge Base:</strong> The full text of this article was parsed and evaluated during the 5-phase Gnostic Actualism convergence test.
           </div>`;
       }
     }
