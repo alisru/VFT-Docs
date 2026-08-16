@@ -498,7 +498,10 @@ COMMON_OUTLETS = {
     "6": ["smh.com.au"],
     "7": ["techcrunch.com"],
     "8": ["washingtonpost.com"],
-    "9": ["npr.org"]
+    "9": ["npr.org"],
+    "10": ["scmp.com"],
+    "11": ["sixthtone.com"],
+    "12": ["hongkongfp.com"],
 }
 
 PREFERRED_OUTLET_DOMAINS = []
@@ -548,11 +551,32 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
     
     # Resolve category string (may be CSV) to a deduplicated list
     _CATEGORY_FEEDS = {
+        "china": [
+            {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+            {"name": "SCMP Asia & World", "url": "https://www.scmp.com/rss/92/feed"},
+            {"name": "SCMP Economy", "url": "https://www.scmp.com/rss/96/feed"},
+            {"name": "SCMP Tech", "url": "https://www.scmp.com/rss/318206/feed"},
+            {"name": "Sixth Tone", "url": "https://www.sixthtone.com/rss"},
+            {"name": "Hong Kong Free Press", "url": "https://hongkongfp.com/feed/"},
+            {"name": "China Daily News", "url": "http://www.chinadaily.com.cn/rss/china_rss.xml"},
+            {"name": "China Daily Biz", "url": "http://www.chinadaily.com.cn/rss/bizchina_rss.xml"},
+            {"name": "Google News China", "url": "https://news.google.com/rss/search?q=China+when:2d&hl=en-US&gl=US&ceid=US:en"},
+            {"name": "Google News China Tech/Economy", "url": "https://news.google.com/rss/search?q=China+(economy+OR+tech+OR+diplomacy)+when:2d&hl=en-US&gl=US&ceid=US:en"},
+        ],
+        "asia": [
+            {"name": "SCMP Asia & World", "url": "https://www.scmp.com/rss/92/feed"},
+            {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+            {"name": "Hong Kong Free Press", "url": "https://hongkongfp.com/feed/"},
+            {"name": "Sixth Tone", "url": "https://www.sixthtone.com/rss"},
+            {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+            {"name": "Google News Asia", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+        ],
         "tech": [
             {"name": "BBC Tech", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml"},
             {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"},
             {"name": "TechCrunch", "url": "https://techcrunch.com/feed/"},
             {"name": "The Guardian Tech", "url": "https://www.theguardian.com/technology/rss"},
+            {"name": "SCMP Tech", "url": "https://www.scmp.com/rss/318206/feed"},
         ],
         "business": [
             {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml"},
@@ -560,6 +584,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
             {"name": "CNBC Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147"},
             {"name": "The Guardian Business", "url": "https://www.theguardian.com/business/rss"},
             {"name": "DW Business", "url": "https://rss.dw.com/xml/rss-en-bus"},
+            {"name": "SCMP Economy", "url": "https://www.scmp.com/rss/96/feed"},
         ],
         "politics": [
             {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
@@ -583,6 +608,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
             {"name": "France 24", "url": "https://www.france24.com/en/rss"},
             {"name": "CBC News", "url": "https://rss.cbc.ca/lineup/topstories.xml"},
             {"name": "UPI News", "url": "https://rss.upi.com/news/news.rss"},
+            {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
             {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
         ],
         "general": [
