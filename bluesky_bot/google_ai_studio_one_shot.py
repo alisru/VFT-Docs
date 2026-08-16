@@ -883,12 +883,14 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
 DEFAULT_FALLBACKS = [
+    "gemini-3.7-flash",
     "gemini-3.5-flash",
     "gemini-3.5-flash-lite",
     "gemini-3.6-flash",
     "gemini-2.5-flash",
     "gemini-2.5-flash-lite",
     "gemini-3.1-flash-lite",
+    "vertex:gemini-3.7-flash",
     "vertex:gemini-3.1-flash-lite",
     "gemini-3-flash-preview",
     "gemma-4-31b-it",

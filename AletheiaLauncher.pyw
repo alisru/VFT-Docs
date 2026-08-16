@@ -126,12 +126,14 @@ class AletheiaLauncherApp:
         except Exception as import_err:
             print(f"Warning: Failed to dynamically load models from bot script: {import_err}")
             default_list = [
+                "gemini-3.7-flash",
                 "gemini-3.5-flash",
                 "gemini-3.5-flash-lite",
                 "gemini-3.6-flash",
                 "gemini-2.5-flash",
                 "gemini-2.5-flash-lite",
                 "gemini-3.1-flash-lite",
+                "vertex:gemini-3.7-flash",
                 "vertex:gemini-3.1-flash-lite",
                 "gemini-3-flash-preview",
                 "gemma-4-31b-it",
