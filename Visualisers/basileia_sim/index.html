@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Psochic Basileia - Simulation of Understanding</title>
+    <style>
+        :root {
+            --bg-color: #0b0a08;
+            --parchment: #e8dcbf;
+            --ink: #2b241c;
+            --gold: #d4af37;
+            --gold-bright: #ffd700;
+            --green-realm: #10b981;
+            --orange-realm: #f97316;
+            --red-realm: #ef4444;
+            --yellow-realm: #eab308;
+            --glass-bg: rgba(16, 14, 12, 0.90);
+            --glass-border: rgba(212, 175, 55, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            font-family: 'Cinzel', 'Palatino Linotype', 'Georgia', serif;
+            color: var(--parchment);
+        }
+
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Top HUD */
+        #hud-top {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 8px 24px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .hud-title-zone {
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--gold-bright);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hud-coords {
+            font-family: 'Courier New', monospace;
+            font-size: 0.92rem;
+            color: #e5e7eb;
+            background: rgba(0,0,0,0.5);
+            padding: 4px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hud-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #9ca3af;
+        }
+
+        .hud-stat-value {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Left Knowledge Spectrum HUD */
+        #hud-left {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            width: 320px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .panel-header {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 6px;
+        }
+
+        .comp-bar-container {
+            margin-bottom: 10px;
+        }
+
+        .comp-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            margin-bottom: 4px;
+            color: #e5e5e5;
+        }
+
+        .comp-bar-track {
+            width: 100%;
+            height: 9px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .comp-bar-fill {
+            height: 100%;
+            width: 0%;
+            transition: width 0.2s ease;
+            border-radius: 5px;
+        }
+
+        .pierce-hint {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 12px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* Right Minimap */
+        #hud-right {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        #minimap-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        #minimap-canvas {
+            width: 160px;
+            height: 160px;
+            border-radius: 10px;
+            display: block;
+            background: #141210;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-action {
+            background: rgba(26, 23, 20, 0.9);
+            border: 1px solid var(--glass-border);
+            color: var(--parchment);
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-family: inherit;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-action:hover {
+            background: var(--gold);
+            color: #000;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+        }
+
+        /* Controls Help Overlay */
+        #controls-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 10px 16px;
+            font-size: 0.78rem;
+            color: #a3a3a3;
+            line-height: 1.5;
+            z-index: 10;
+        }
+        #controls-overlay kbd {
+            background: #2a2723;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.75rem;
+        }
+
+        /* Mobile Virtual Joystick */
+        #joystick-zone {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 2px dashed rgba(212, 175, 55, 0.3);
+            display: none;
+            z-index: 20;
+            touch-action: none;
+        }
+        #joystick-knob {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--gold-bright), #8c6d12);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            #controls-overlay { display: none; }
+            #hud-left { width: 250px; bottom: 10px; left: 10px; padding: 12px; }
+            #hud-right { bottom: 10px; right: 10px; }
+            #minimap-canvas { width: 120px; height: 120px; }
+            #hud-top { padding: 6px 14px; gap: 10px; }
+            .hud-title-zone { font-size: 0.85rem; }
+            #joystick-zone { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvas-container">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Controls Overlay -->
+    <div id="controls-overlay">
+        <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or <kbd>&uarr;&larr;&darr;&rarr;</kbd> Move</div>
+        <div><kbd>Scroll Wheel</kbd> Zoom Map</div>
+        <div><kbd>M</kbd> Toggle Drone Audio</div>
+        <div style="margin-top: 4px; color: var(--gold-bright);">Travel outward to gain Understanding & pierce the walls</div>
+    </div>
+
+    <!-- Top HUD Banner -->
+    <div id="hud-top">
+        <div class="hud-title-zone">
+            <span id="zone-icon">🏛️</span>
+            <span id="zone-name">Temple of the Mind</span>
+        </div>
+        <div class="hud-coords" id="zone-coords">(&upsilon;: 0.0, &psi;: 0.0)</div>
+        <div class="hud-stat">
+            <span>Illuminated</span>
+            <span class="hud-stat-value" id="stat-illumination">6%</span>
+        </div>
+        <div class="hud-stat">
+            <span>Understanding</span>
+            <span class="hud-stat-value" id="stat-comprehension">0%</span>
+        </div>
+    </div>
+
+    <!-- Left Knowledge Spectrum -->
+    <div id="hud-left">
+        <div class="panel-header">
+            <span>Subjective Understanding</span>
+            <span id="apex-count">0/4 Realms</span>
+        </div>
+
+        <div class="comp-bar-container">
+            <div class="comp-bar-label">
+                <span>🌿 Phronetic (+&upsilon;, +&psi;) [Top-Left]</span>
+                <span id="comp-val-green">0%</span>
+            </div>
+            <div class="comp-bar-track">
+                <div class="comp-bar-fill" id="comp-bar-green" style="background: linear-gradient(90deg, #059669, #34d399);"></div>
+            </div>
+        </div>
+
+        <div class="comp-bar-container">
+            <div class="comp-bar-label">
+                <span>🔥 Solar Pyre (+&psi;, -&upsilon;) [Top-Right]</span>
+                <span id="comp-val-orange">0%</span>
+            </div>
+            <div class="comp-bar-track">
+                <div class="comp-bar-fill" id="comp-bar-orange" style="background: linear-gradient(90deg, #ea580c, #fb923c);"></div>
+            </div>
+        </div>
+
+        <div class="comp-bar-container">
+            <div class="comp-bar-label">
+                <span>🌋 Caldera (-&upsilon;, -&psi;) [Bottom-Right]</span>
+                <span id="comp-val-red">0%</span>
+            </div>
+            <div class="comp-bar-track">
+                <div class="comp-bar-fill" id="comp-bar-red" style="background: linear-gradient(90deg, #dc2626, #f87171);"></div>
+            </div>
+        </div>
+
+        <div class="comp-bar-container">
+            <div class="comp-bar-label">
+                <span>🏕️ Nomadic (+&upsilon;, -&psi;) [Bottom-Left]</span>
+                <span id="comp-val-yellow">0%</span>
+            </div>
+            <div class="comp-bar-track">
+                <div class="comp-bar-fill" id="comp-bar-yellow" style="background: linear-gradient(90deg, #ca8a04, #fde047);"></div>
+            </div>
+        </div>
+
+        <div class="pierce-hint" id="pierce-hint">
+            You begin inside the Orthodox Citadel. Outer walls block line of sight. Explore outward to pierce the stone with understanding.
+        </div>
+    </div>
+
+    <!-- Right Minimap & Controls -->
+    <div id="hud-right">
+        <div id="minimap-card">
+            <canvas id="minimap-canvas"></canvas>
+        </div>
+        <div class="action-buttons">
+            <button class="btn-action" id="btn-sound">🔊 Sound: Off</button>
+            <button class="btn-action" id="btn-recenter">📍 Center</button>
+        </div>
+    </div>
+
+    <!-- Mobile Virtual Joystick -->
+    <div id="joystick-zone">
+        <div id="joystick-knob"></div>
+    </div>
+
+    <script>
+    /**
+     * THE PSOCHIC BASILEIA SIMULATION
+     * High-Fidelity Map-Backed Cognitive Illumination & Line-of-Sight Engine
+     */
+
+    // --- SOUND SYNTHESIS ENGINE (Web Audio API) ---
+    class AudioDrone {
+        constructor() {
+            this.ctx = null;
+            this.masterGain = null;
+            this.oscillators = [];
+            this.isPlaying = false;
+        }
+
+        init() {
+            if (this.ctx) return;
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            this.ctx = new AudioContext();
+            this.masterGain = this.ctx.createGain();
+            this.masterGain.gain.setValueAtTime(0.01, this.ctx.currentTime);
+            this.masterGain.connect(this.ctx.destination);
+
+            const freqs = [110, 164.81, 220]; // A2 chord
+            freqs.forEach(f => {
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(f, this.ctx.currentTime);
+                gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+                osc.connect(gain);
+                gain.connect(this.masterGain);
+                osc.start();
+                this.oscillators.push({ osc, gain });
+            });
+        }
+
+        toggle() {
+            if (!this.ctx) this.init();
+            if (this.ctx.state === 'suspended') this.ctx.resume();
+            this.isPlaying = !this.isPlaying;
+            if (this.isPlaying) {
+                this.masterGain.gain.setTargetAtTime(0.18, this.ctx.currentTime, 0.5);
+            } else {
+                this.masterGain.gain.setTargetAtTime(0.0, this.ctx.currentTime, 0.3);
+            }
+            return this.isPlaying;
+        }
+
+        updateZone(zoneId) {
+            if (!this.isPlaying || !this.ctx) return;
+            let root = 110;
+            if (zoneId === 'green') root = 146.83;  // D3
+            else if (zoneId === 'orange') root = 130.81; // C3
+            else if (zoneId === 'red') root = 73.42;    // D2
+            else if (zoneId === 'yellow') root = 98.00; // G2
+            else root = 110; // A2
+
+            this.oscillators.forEach((o, idx) => {
+                const ratios = [1, 1.498, 2.0];
+                o.osc.frequency.setTargetAtTime(root * ratios[idx], this.ctx.currentTime, 1.0);
+            });
+        }
+    }
+
+    // --- MAP IMAGE ASSET ---
+    const mapImg = new Image();
+    mapImg.src = 'basileia_map.jpg';
+    let mapLoaded = false;
+    mapImg.onload = () => { mapLoaded = true; };
+
+    // --- WORLD GEOMETRY & STATE ---
+    const VIRTUAL_SIZE = 2000;
+    const CENTER = VIRTUAL_SIZE / 2; // 1000, 1000
+
+    const APEXES = {
+        green:  { x: 250, y: 250,  name: 'Phronetic Apex Sanctuary', realm: 'green' },
+        orange: { x: 1750, y: 250, name: 'Solar Apex Tower', realm: 'orange' },
+        red:    { x: 1750, y: 1750, name: 'Abyssal Calamity Chasm', realm: 'red' },
+        yellow: { x: 250, y: 1750, name: 'Nomadic Great Hearth', realm: 'yellow' }
+    };
+
+    const state = {
+        player: {
+            x: CENTER,
+            y: CENTER + 30, // Start in spacious central courtyard
+            vx: 0,
+            vy: 0,
+            speed: 5.5,
+            radius: 10,
+            baseVision: 340,
+            visionRadius: 340,
+            pulse: 0
+        },
+        camera: {
+            x: CENTER,
+            y: CENTER + 30,
+            zoom: 1.0,
+            targetZoom: 1.0
+        },
+        keys: {},
+        knowledge: {
+            green: 0,
+            orange: 0,
+            red: 0,
+            yellow: 0
+        },
+        walls: [],
+        fogCanvas: null,
+        fogCtx: null,
+        memoryCanvas: null,
+        memoryCtx: null,
+        currentZone: 'center',
+        audio: new AudioDrone()
+    };
+
+    // --- SETUP WALLS CALIBRATED EXACTLY TO THE BASILEIA MAP ---
+    function initWorld() {
+        // Offscreen memory canvas for permanent illumination trail
+        state.memoryCanvas = document.createElement('canvas');
+        state.memoryCanvas.width = VIRTUAL_SIZE;
+        state.memoryCanvas.height = VIRTUAL_SIZE;
+        state.memoryCtx = state.memoryCanvas.getContext('2d');
+        state.memoryCtx.fillStyle = '#000000';
+        state.memoryCtx.fillRect(0, 0, VIRTUAL_SIZE, VIRTUAL_SIZE);
+
+        const w = state.walls;
+
+        function addRingWall(radius, segments, openArcs, realmTag, reqKnowledge) {
+            const step = (Math.PI * 2) / segments;
+            for (let i = 0; i < segments; i++) {
+                const a1 = i * step;
+                const a2 = (i + 1) * step;
+                const midA = (a1 + a2) / 2;
+
+                let isOpen = false;
+                for (let arc of openArcs) {
+                    if (midA >= arc[0] && midA <= arc[1]) {
+                        isOpen = true;
+                        break;
+                    }
+                }
+
+                if (!isOpen) {
+                    w.push({
+                        p1: { x: CENTER + Math.cos(a1) * radius, y: CENTER + Math.sin(a1) * radius },
+                        p2: { x: CENTER + Math.cos(a2) * radius, y: CENTER + Math.sin(a2) * radius },
+                        realm: realmTag,
+                        reqKnowledge: reqKnowledge || 25,
+                        radius: radius
+                    });
+                }
+            }
+        }
+
+        // 1. Inner Sanctum Cathedral Archways (R = 85)
+        addRingWall(85, 16, [
+            [Math.PI * 0.40, Math.PI * 0.60],
+            [Math.PI * 0.90, Math.PI * 1.10],
+            [Math.PI * 1.40, Math.PI * 1.60],
+            [Math.PI * 1.90, Math.PI * 2.10]
+        ], 'orthodox_inner', 5);
+
+        // 2. Middle Ring Wall (R = 210) - Paved Courtyard Boundary
+        addRingWall(210, 24, [
+            [Math.PI * 0.40, Math.PI * 0.60],  // South exit
+            [Math.PI * 0.90, Math.PI * 1.10],  // West exit
+            [Math.PI * 1.40, Math.PI * 1.60],  // North exit
+            [Math.PI * 1.90, Math.PI * 2.10],  // East exit
+            [Math.PI * 0.15, Math.PI * 0.35],  // SE breach
+            [Math.PI * 1.65, Math.PI * 1.85]   // NE garden
+        ], 'orthodox_mid', 15);
+
+        // 3. Garden Terrace & Rampart Wall (R = 340)
+        addRingWall(340, 32, [
+            [Math.PI * 0.15, Math.PI * 0.45],  // Open breach to Caldera (SE)
+            [Math.PI * 1.60, Math.PI * 1.90],  // Open garden path to Solar Pyre (NE)
+            [Math.PI * 0.70, Math.PI * 0.85],  // River passage to Nomads (SW)
+            [Math.PI * 1.15, Math.PI * 1.30]   // Breached path to Forest (NW)
+        ], 'orthodox_garden', 25);
+
+        // 4. Outer Great Battlement (R = 490) - Calibrated to the 4 Quadrant Breaches
+        // - SE (0 to 1.57 rad): Crumbling stone breach to Caldera (Red)
+        // - NE (4.71 to 6.28 rad): Intact tower walkway to Solar Pyre (Orange)
+        // - NW (3.14 to 4.71 rad): Barbed wire / spiked barricade to Forest (Green)
+        // - SW (1.57 to 3.14 rad): Gate to Nomadic plains (Yellow)
+        const segments = 40;
+        const step = (Math.PI * 2) / segments;
+        for (let i = 0; i < segments; i++) {
+            const a1 = i * step;
+            const a2 = (i + 1) * step;
+            const midA = (a1 + a2) / 2;
+
+            let sectorRealm = 'orthodox';
+            if (midA >= Math.PI && midA < Math.PI * 1.5) sectorRealm = 'green';
+            else if (midA >= Math.PI * 1.5 && midA <= Math.PI * 2) sectorRealm = 'orange';
+            else if (midA >= 0 && midA < Math.PI * 0.5) sectorRealm = 'red';
+            else sectorRealm = 'yellow';
+
+            // Natural openings on map
+            const isOpenGate = (
+                (midA > 0.60 && midA < 0.95) ||  // Wide crumbling breach to Caldera
+                (midA > 1.65 && midA < 1.85) ||  // Nomad river gate
+                (midA > 3.80 && midA < 3.98) ||  // Narrow forest gap between barricades
+                (midA > 5.30 && midA < 5.60)     // Solar terrace road
+            );
+
+            if (!isOpenGate) {
+                w.push({
+                    p1: { x: CENTER + Math.cos(a1) * 490, y: CENTER + Math.sin(a1) * 490 },
+                    p2: { x: CENTER + Math.cos(a2) * 490, y: CENTER + Math.sin(a2) * 490 },
+                    realm: sectorRealm,
+                    reqKnowledge: 35,
+                    radius: 490
+                });
+            }
+        }
+
+        // Barricades in Northwest (Green quadrant entry)
+        w.push({ p1: { x: CENTER - 350, y: CENTER - 350 }, p2: { x: CENTER - 460, y: CENTER - 200 }, realm: 'green', reqKnowledge: 45 });
+        w.push({ p1: { x: CENTER - 200, y: CENTER - 460 }, p2: { x: CENTER - 350, y: CENTER - 350 }, realm: 'green', reqKnowledge: 45 });
+
+        // World Boundary
+        w.push({ p1: { x: 20, y: 20 }, p2: { x: VIRTUAL_SIZE - 20, y: 20 }, realm: 'world_edge' });
+        w.push({ p1: { x: VIRTUAL_SIZE - 20, y: 20 }, p2: { x: VIRTUAL_SIZE - 20, y: VIRTUAL_SIZE - 20 }, realm: 'world_edge' });
+        w.push({ p1: { x: VIRTUAL_SIZE - 20, y: VIRTUAL_SIZE - 20 }, p2: { x: 20, y: VIRTUAL_SIZE - 20 }, realm: 'world_edge' });
+        w.push({ p1: { x: 20, y: VIRTUAL_SIZE - 20 }, p2: { x: 20, y: 20 }, realm: 'world_edge' });
+    }
+
+    // --- RAYCASTING 2D VISIBILITY & PIERCING ENGINE ---
+    function getRayIntersection(rayOrigin, rayAngle, segment) {
+        const r_px = rayOrigin.x;
+        const r_py = rayOrigin.y;
+        const r_dx = Math.cos(rayAngle);
+        const r_dy = Math.sin(rayAngle);
+
+        const s_px = segment.p1.x;
+        const s_py = segment.p1.y;
+        const s_dx = segment.p2.x - segment.p1.x;
+        const s_dy = segment.p2.y - segment.p1.y;
+
+        const r_mag = Math.sqrt(r_dx * r_dx + r_dy * r_dy);
+        const s_mag = Math.sqrt(s_dx * s_dx + s_dy * s_dy);
+
+        if (r_dx / r_mag === s_dx / s_mag && r_dy / r_mag === s_dy / s_mag) return null;
+
+        const T2 = (r_dx * (s_py - r_py) + r_dy * (r_px - s_px)) / (s_dx * r_dy - s_dy * r_dx);
+        const T1 = (s_px + s_dx * T2 - r_px) / r_dx;
+
+        if (T1 > 0 && T2 >= 0 && T2 <= 1) {
+            return {
+                x: r_px + r_dx * T1,
+                y: r_py + r_dy * T1,
+                param: T1,
+                angle: rayAngle
+            };
+        }
+        return null;
+    }
+
+    function calculateVisibilityPolygon(origin, maxRadius) {
+        const points = [];
+        const uniqueAngles = [];
+        const activeOccluders = [];
+
+        state.walls.forEach(w => {
+            if (w.realm === 'world_edge') {
+                activeOccluders.push(w);
+                return;
+            }
+
+            let know = 0;
+            if (w.realm === 'green') know = state.knowledge.green;
+            else if (w.realm === 'orange') know = state.knowledge.orange;
+            else if (w.realm === 'red') know = state.knowledge.red;
+            else if (w.realm === 'yellow') know = state.knowledge.yellow;
+            else {
+                know = (state.knowledge.green + state.knowledge.orange + state.knowledge.red + state.knowledge.yellow) / 4;
+            }
+
+            const req = w.reqKnowledge || 30;
+            if (know < req) {
+                activeOccluders.push(w);
+            }
+        });
+
+        // Bounding circle
+        const circleSegments = 36;
+        for (let i = 0; i < circleSegments; i++) {
+            const a1 = (i / circleSegments) * Math.PI * 2;
+            const a2 = ((i + 1) / circleSegments) * Math.PI * 2;
+            activeOccluders.push({
+                p1: { x: origin.x + Math.cos(a1) * maxRadius, y: origin.y + Math.sin(a1) * maxRadius },
+                p2: { x: origin.x + Math.cos(a2) * maxRadius, y: origin.y + Math.sin(a2) * maxRadius }
+            });
+        }
+
+        activeOccluders.forEach(w => {
+            [w.p1, w.p2].forEach(p => {
+                const angle = Math.atan2(p.y - origin.y, p.x - origin.x);
+                uniqueAngles.push(angle - 0.0001, angle, angle + 0.0001);
+            });
+        });
+
+        uniqueAngles.sort((a, b) => a - b);
+
+        uniqueAngles.forEach(angle => {
+            let closestIntersect = null;
+            let minDistance = maxRadius;
+
+            activeOccluders.forEach(w => {
+                const intersect = getRayIntersection(origin, angle, w);
+                if (intersect && intersect.param < minDistance) {
+                    minDistance = intersect.param;
+                    closestIntersect = intersect;
+                }
+            });
+
+            if (closestIntersect) {
+                points.push(closestIntersect);
+            } else {
+                points.push({
+                    x: origin.x + Math.cos(angle) * maxRadius,
+                    y: origin.y + Math.sin(angle) * maxRadius,
+                    param: maxRadius,
+                    angle: angle
+                });
+            }
+        });
+
+        return points;
+    }
+
+    // --- RENDER MAP BACKDROP ---
+    function drawMapBackdrop(ctx) {
+        if (mapLoaded) {
+            ctx.drawImage(mapImg, 0, 0, VIRTUAL_SIZE, VIRTUAL_SIZE);
+        } else {
+            // Fallback parchment color
+            ctx.fillStyle = '#1c1915';
+            ctx.fillRect(0, 0, VIRTUAL_SIZE, VIRTUAL_SIZE);
+        }
+    }
+
+    // --- DRAW PIERCED WALL OVERLAYS ---
+    function drawPiercedWallIndicators(ctx) {
+        ctx.save();
+        state.walls.forEach(w => {
+            if (w.realm === 'world_edge') return;
+
+            let know = 0;
+            if (w.realm === 'green') know = state.knowledge.green;
+            else if (w.realm === 'orange') know = state.knowledge.orange;
+            else if (w.realm === 'red') know = state.knowledge.red;
+            else if (w.realm === 'yellow') know = state.knowledge.yellow;
+            else know = (state.knowledge.green + state.knowledge.orange + state.knowledge.red + state.knowledge.yellow) / 4;
+
+            const req = w.reqKnowledge || 30;
+            if (know >= req) {
+                // Pierced ethereal pathway
+                ctx.beginPath();
+                ctx.moveTo(w.p1.x, w.p1.y);
+                ctx.lineTo(w.p2.x, w.p2.y);
+                ctx.strokeStyle = 'rgba(255, 215, 0, 0.4)';
+                ctx.lineWidth = 4;
+                ctx.setLineDash([6, 6]);
+                ctx.stroke();
+                ctx.setLineDash([]);
+            }
+        });
+        ctx.restore();
+    }
+
+    // --- DRAW PLAYER WITH COGNITIVE TORCH ---
+    function drawPlayer(ctx) {
+        const p = state.player;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+
+        p.pulse = (p.pulse + 0.05) % (Math.PI * 2);
+        const pulseR = p.radius + Math.sin(p.pulse) * 3;
+
+        // Player Aura
+        const grad = ctx.createRadialGradient(0, 0, p.radius * 0.4, 0, 0, pulseR * 2.5);
+        grad.addColorStop(0, 'rgba(255, 245, 200, 1.0)');
+        grad.addColorStop(0.5, 'rgba(212, 175, 55, 0.7)');
+        grad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(0, 0, pulseR * 2.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Player Core Vessel
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(0, 0, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = '#d4af37';
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+
+        ctx.restore();
+    }
+
+    // --- DYNAMIC FOG OF WAR & LIGHTING ---
+    function updateMemoryAndFog(visPoly) {
+        const mCtx = state.memoryCtx;
+        const p = state.player;
+
+        // Record line of sight into persistent memory mask
+        mCtx.save();
+        mCtx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+        mCtx.beginPath();
+        if (visPoly.length > 0) {
+            mCtx.moveTo(visPoly[0].x, visPoly[0].y);
+            for (let i = 1; i < visPoly.length; i++) mCtx.lineTo(visPoly[i].x, visPoly[i].y);
+            mCtx.closePath();
+            mCtx.fill();
+        }
+        mCtx.restore();
+    }
+
+    function drawLightingAndFog(ctx, visPoly) {
+        ctx.save();
+
+        // 1. Dark Shadow & Fog overlay
+        ctx.fillStyle = 'rgba(10, 8, 6, 0.94)';
+        ctx.fillRect(0, 0, VIRTUAL_SIZE, VIRTUAL_SIZE);
+
+        // 2. Softly reveal previously explored memory trail
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.drawImage(state.memoryCanvas, 0, 0);
+
+        // 3. Brightly punch out active line-of-sight visibility polygon
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        if (visPoly.length > 0) {
+            ctx.moveTo(visPoly[0].x, visPoly[0].y);
+            for (let i = 1; i < visPoly.length; i++) {
+                ctx.lineTo(visPoly[i].x, visPoly[i].y);
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        ctx.globalCompositeOperation = 'source-over';
+
+        // 4. Torch warm light gradient within line of sight
+        const p = state.player;
+        const lightGrad = ctx.createRadialGradient(p.x, p.y, p.radius, p.x, p.y, p.visionRadius);
+        lightGrad.addColorStop(0, 'rgba(255, 245, 210, 0.25)');
+        lightGrad.addColorStop(0.6, 'rgba(212, 175, 55, 0.12)');
+        lightGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+        ctx.fillStyle = lightGrad;
+        ctx.beginPath();
+        if (visPoly.length > 0) {
+            ctx.moveTo(visPoly[0].x, visPoly[0].y);
+            for (let i = 1; i < visPoly.length; i++) {
+                ctx.lineTo(visPoly[i].x, visPoly[i].y);
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        ctx.restore();
+    }
+
+    // --- MINIMAP RENDERING ---
+    const minimapCanvas = document.getElementById('minimap-canvas');
+    const minimapCtx = minimapCanvas.getContext('2d');
+
+    function renderMinimap() {
+        minimapCanvas.width = 160;
+        minimapCanvas.height = 160;
+        const scale = 160 / VIRTUAL_SIZE;
+
+        if (mapLoaded) {
+            minimapCtx.drawImage(mapImg, 0, 0, 160, 160);
+        } else {
+            minimapCtx.fillStyle = '#141210';
+            minimapCtx.fillRect(0, 0, 160, 160);
+        }
+
+        // Overlay memory fog on minimap
+        minimapCtx.save();
+        minimapCtx.globalAlpha = 0.5;
+        minimapCtx.fillStyle = '#000';
+        minimapCtx.fillRect(0, 0, 160, 160);
+        minimapCtx.globalCompositeOperation = 'destination-out';
+        minimapCtx.drawImage(state.memoryCanvas, 0, 0, 160, 160);
+        minimapCtx.restore();
+
+        // Player Indicator
+        minimapCtx.fillStyle = '#ffffff';
+        minimapCtx.beginPath();
+        minimapCtx.arc(state.player.x * scale, state.player.y * scale, 4.5, 0, Math.PI * 2);
+        minimapCtx.fill();
+        minimapCtx.strokeStyle = '#ffd700';
+        minimapCtx.lineWidth = 1.5;
+        minimapCtx.stroke();
+    }
+
+    // --- GAME LOOP & UPDATES ---
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function update() {
+        const p = state.player;
+
+        const totalComp = (state.knowledge.green + state.knowledge.orange + state.knowledge.red + state.knowledge.yellow) / 4;
+        p.visionRadius = p.baseVision + totalComp * 3.5;
+        document.getElementById('stat-comprehension').textContent = Math.round(totalComp) + '%';
+
+        // Keyboard Movement
+        let dx = 0, dy = 0;
+        if (state.keys['KeyW'] || state.keys['ArrowUp']) dy -= 1;
+        if (state.keys['KeyS'] || state.keys['ArrowDown']) dy += 1;
+        if (state.keys['KeyA'] || state.keys['ArrowLeft']) dx -= 1;
+        if (state.keys['KeyD'] || state.keys['ArrowRight']) dx += 1;
+
+        if (dx !== 0 && dy !== 0) {
+            dx *= 0.7071;
+            dy *= 0.7071;
+        }
+
+        const nextX = p.x + dx * p.speed;
+        const nextY = p.y + dy * p.speed;
+
+        // Sliding collision response against unpierced walls
+        let collideX = false;
+        let collideY = false;
+
+        state.walls.forEach(w => {
+            let know = 0;
+            if (w.realm === 'green') know = state.knowledge.green;
+            else if (w.realm === 'orange') know = state.knowledge.orange;
+            else if (w.realm === 'red') know = state.knowledge.red;
+            else if (w.realm === 'yellow') know = state.knowledge.yellow;
+            else know = totalComp;
+
+            const req = w.reqKnowledge || 30;
+            const isSolid = know < req;
+
+            if (isSolid) {
+                const distToSegX = distToSegment({ x: nextX, y: p.y }, w.p1, w.p2);
+                if (distToSegX < p.radius + 4) collideX = true;
+
+                const distToSegY = distToSegment({ x: p.x, y: nextY }, w.p1, w.p2);
+                if (distToSegY < p.radius + 4) collideY = true;
+            }
+        });
+
+        if (!collideX) p.x = Math.max(p.radius + 30, Math.min(VIRTUAL_SIZE - p.radius - 30, nextX));
+        if (!collideY) p.y = Math.max(p.radius + 30, Math.min(VIRTUAL_SIZE - p.radius - 30, nextY));
+
+        // Smooth Camera Follow
+        state.camera.x += (p.x - state.camera.x) * 0.1;
+        state.camera.y += (p.y - state.camera.y) * 0.1;
+        state.camera.zoom += (state.camera.targetZoom - state.camera.zoom) * 0.1;
+
+        // Update Knowledge from Traversal Depth
+        updateApexTraversalKnowledge();
+
+        // Update Zone HUD
+        updateZoneAndHUD();
+    }
+
+    function distToSegment(p, v, w) {
+        const l2 = (w.x - v.x) ** 2 + (w.y - v.y) ** 2;
+        if (l2 === 0) return Math.hypot(p.x - v.x, p.y - v.y);
+        let t = ((p.x - v.x) * (w.x - v.x) + (p.y - v.y) * (w.y - v.y)) / l2;
+        t = Math.max(0, Math.min(1, t));
+        return Math.hypot(p.x - (v.x + t * (w.x - v.x)), p.y - (v.y + t * (w.y - v.y)));
+    }
+
+    function updateApexTraversalKnowledge() {
+        const p = state.player;
+        const maxDist = Math.hypot(CENTER - APEXES.green.x, CENTER - APEXES.green.y); // ~1060px
+
+        let reachedApexCount = 0;
+
+        Object.keys(APEXES).forEach(k => {
+            const a = APEXES[k];
+            const dist = Math.hypot(p.x - a.x, p.y - a.y);
+            const progress = Math.max(0, Math.min(100, Math.round(((maxDist - dist) / (maxDist - 80)) * 100)));
+
+            if (progress > state.knowledge[k]) {
+                state.knowledge[k] = progress;
+            }
+
+            if (state.knowledge[k] >= 90) reachedApexCount++;
+
+            document.getElementById(`comp-val-${k}`).textContent = state.knowledge[k] + '%';
+            document.getElementById(`comp-bar-${k}`).style.width = state.knowledge[k] + '%';
+        });
+
+        document.getElementById('apex-count').textContent = `${reachedApexCount}/4 Realms`;
+
+        const total = (state.knowledge.green + state.knowledge.orange + state.knowledge.red + state.knowledge.yellow) / 4;
+        const pHint = document.getElementById('pierce-hint');
+        if (total < 15) {
+            pHint.textContent = "Start in the courtyard. Travel toward the 4 corners to accumulate realm understanding.";
+        } else if (total < 40) {
+            pHint.textContent = "Understanding is opening the citadel walls. Rays pierce into the surrounding landscape.";
+        } else if (total < 75) {
+            pHint.textContent = "Deep perception achieved. Ancient ruins, rivers, and volcanic chasms are clearly visible.";
+        } else {
+            pHint.textContent = "Transcendent illumination: The entire Psochic Basileia is fully comprehended!";
+        }
+    }
+
+    function updateZoneAndHUD() {
+        const p = state.player;
+        const relX = p.x - CENTER;
+        const relY = p.y - CENTER;
+        const distFromCenter = Math.hypot(relX, relY);
+
+        let zoneName = "Temple of the Mind";
+        let zoneIcon = "🏛️";
+        let zoneTag = "center";
+        let uVal = 0.0;
+        let psiVal = 0.0;
+
+        if (distFromCenter < 490) {
+            zoneName = "Orthodox Basileia";
+            zoneIcon = "🏛️";
+            zoneTag = "center";
+            uVal = +(relX / 490).toFixed(2);
+            psiVal = -(relY / 490).toFixed(2);
+        } else {
+            if (relX < 0 && relY < 0) {
+                zoneName = "Phronetic Realm";
+                zoneIcon = "🌿";
+                zoneTag = "green";
+                uVal = +1.5;
+                psiVal = +1.2;
+            } else if (relX >= 0 && relY < 0) {
+                zoneName = "Solar Pyre of Will";
+                zoneIcon = "🔥";
+                zoneTag = "orange";
+                uVal = -1.3;
+                psiVal = +1.6;
+            } else if (relX >= 0 && relY >= 0) {
+                zoneName = "Caldera of Chaos";
+                zoneIcon = "🌋";
+                zoneTag = "red";
+                uVal = -1.5;
+                psiVal = -1.4;
+            } else {
+                zoneName = "Nomadic Frontier";
+                zoneIcon = "🏕️";
+                zoneTag = "yellow";
+                uVal = +1.4;
+                psiVal = -1.2;
+            }
+        }
+
+        if (state.currentZone !== zoneTag) {
+            state.currentZone = zoneTag;
+            state.audio.updateZone(zoneTag);
+        }
+
+        document.getElementById('zone-name').textContent = zoneName;
+        document.getElementById('zone-icon').textContent = zoneIcon;
+        document.getElementById('zone-coords').innerHTML = `(&upsilon;: ${uVal >= 0 ? '+' : ''}${uVal}, &psi;: ${psiVal >= 0 ? '+' : ''}${psiVal})`;
+    }
+
+    // --- MAIN RENDER CYCLE ---
+    function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.save();
+        ctx.translate(canvas.width / 2, canvas.height / 2);
+        ctx.scale(state.camera.zoom, state.camera.zoom);
+        ctx.translate(-state.camera.x, -state.camera.y);
+
+        // 1. Draw Authentic Basileia Map Artwork
+        drawMapBackdrop(ctx);
+
+        // 2. Pierced Wall Indicators
+        drawPiercedWallIndicators(ctx);
+
+        // 3. Calculate Raycasted Visibility Polygon
+        const visPoly = calculateVisibilityPolygon(state.player, state.player.visionRadius);
+
+        // 4. Update Permanent Exploration Memory
+        updateMemoryAndFog(visPoly);
+
+        // 5. Draw Dynamic Fog of War & Shadow-Casting Light
+        drawLightingAndFog(ctx, visPoly);
+
+        // 6. Draw Player Entity
+        drawPlayer(ctx);
+
+        ctx.restore();
+
+        // 7. Render Minimap
+        renderMinimap();
+
+        requestAnimationFrame(render);
+    }
+
+    // --- INPUT EVENT LISTENERS ---
+    window.addEventListener('keydown', e => {
+        state.keys[e.code] = true;
+        if (e.code === 'KeyM') toggleSound();
+    });
+
+    window.addEventListener('keyup', e => {
+        state.keys[e.code] = false;
+    });
+
+    window.addEventListener('wheel', e => {
+        e.preventDefault();
+        const zoomDelta = e.deltaY * -0.001;
+        state.camera.targetZoom = Math.max(0.5, Math.min(1.8, state.camera.targetZoom + zoomDelta));
+    }, { passive: false });
+
+    function toggleSound() {
+        const isPlaying = state.audio.toggle();
+        document.getElementById('btn-sound').textContent = isPlaying ? '🔊 Sound: On' : '🔇 Sound: Off';
+    }
+    document.getElementById('btn-sound').addEventListener('click', toggleSound);
+
+    document.getElementById('btn-recenter').addEventListener('click', () => {
+        state.camera.x = state.player.x;
+        state.camera.y = state.player.y;
+        state.camera.targetZoom = 1.0;
+    });
+
+    // Mobile Virtual Joystick
+    const jZone = document.getElementById('joystick-zone');
+    const jKnob = document.getElementById('joystick-knob');
+    let jActive = false;
+    let jOrigin = { x: 0, y: 0 };
+
+    jZone.addEventListener('touchstart', e => {
+        jActive = true;
+        const touch = e.touches[0];
+        const rect = jZone.getBoundingClientRect();
+        jOrigin = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+        moveJoystick(touch);
+    }, { passive: false });
+
+    window.addEventListener('touchmove', e => {
+        if (!jActive) return;
+        moveJoystick(e.touches[0]);
+    }, { passive: false });
+
+    window.addEventListener('touchend', () => {
+        if (!jActive) return;
+        jActive = false;
+        jKnob.style.transform = 'translate(0px, 0px)';
+        state.keys['KeyW'] = false;
+        state.keys['KeyS'] = false;
+        state.keys['KeyA'] = false;
+        state.keys['KeyD'] = false;
+    });
+
+    function moveJoystick(touch) {
+        const dx = touch.clientX - jOrigin.x;
+        const dy = touch.clientY - jOrigin.y;
+        const dist = Math.hypot(dx, dy);
+        const maxDist = 45;
+        const angle = Math.atan2(dy, dx);
+
+        const clampedDist = Math.min(dist, maxDist);
+        const knobX = Math.cos(angle) * clampedDist;
+        const knobY = Math.sin(angle) * clampedDist;
+        jKnob.style.transform = `translate(${knobX}px, ${knobY}px)`;
+
+        state.keys['KeyW'] = dy < -15;
+        state.keys['KeyS'] = dy > 15;
+        state.keys['KeyA'] = dx < -15;
+        state.keys['KeyD'] = dx > 15;
+    }
+
+    // --- INITIALIZATION ---
+    initWorld();
+    setInterval(update, 1000 / 60);
+    requestAnimationFrame(render);
+
+    </script>
+</body>
+</html>

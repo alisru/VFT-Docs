@@ -2,7 +2,7 @@ console.log("[Gemini LaTeX Exporter] Content script loaded on: " + window.locati
 
 let lastClickedShareButton = null;
 
-// Track the last clicked share/export button to identify the associated message later
+// Track the last clicked share/export or conversation actions button
 document.addEventListener('mousedown', (event) => {
   const btn = event.target.closest('button, [role="button"]');
   if (btn) {
@@ -11,9 +11,15 @@ document.addEventListener('mousedown', (event) => {
     const hasShareIcon = btn.querySelector('mat-icon, svg, .material-symbols') && 
                          (btn.innerHTML.includes('share') || btn.innerHTML.includes('export'));
     
-    if (ariaLabel.includes('share') || ariaLabel.includes('export') || 
-        btnText.includes('share') || btnText.includes('export') || hasShareIcon) {
+    const isShareOrExport = ariaLabel.includes('share') || ariaLabel.includes('export') || 
+                            btnText.includes('share') || btnText.includes('export') || hasShareIcon;
+                            
+    const isConversationMenu = ariaLabel.includes('conversation');
+    
+    if (isShareOrExport || isConversationMenu) {
       lastClickedShareButton = btn;
+    } else {
+      lastClickedShareButton = null;
     }
   }
 }, true);
@@ -33,22 +39,54 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 function checkForShareMenu(rootNode) {
   if (!rootNode || !rootNode.querySelectorAll) return;
+  if (!lastClickedShareButton) return;
   
-  // Query all potential menu item wrappers
+  const triggerLabel = (lastClickedShareButton.getAttribute('aria-label') || '').toLowerCase();
+  
+  if (triggerLabel.includes('conversation')) {
+    // Inject "Download Chat as MD" into the conversation actions menu
+    const candidates = Array.from(rootNode.querySelectorAll('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]'));
+    if (rootNode.matches && rootNode.matches('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]')) {
+      candidates.push(rootNode);
+    }
+    
+    const itemToClone = candidates.find(el => {
+      const txt = el.textContent.toLowerCase();
+      return txt.includes('delete') || txt.includes('rename') || txt.includes('pin') || el.getAttribute('role') === 'menuitem';
+    }) || candidates[0];
+    
+    if (itemToClone && !itemToClone.parentNode.querySelector('.gemini-chat-md-exporter-btn')) {
+      const text = itemToClone.textContent.trim();
+      let searchLabel = text;
+      if (text.includes('Delete')) searchLabel = 'Delete';
+      else if (text.includes('Rename')) searchLabel = 'Rename';
+      else if (text.includes('Pin')) searchLabel = 'Pin';
+      
+      const chatMdBtn = createButtonHelper(itemToClone, searchLabel, 'Download Chat as MD', 'gemini-chat-md-exporter-btn', async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const backdrop = document.querySelector('.cdk-overlay-backdrop');
+        if (backdrop) backdrop.click();
+        await handleChatExport();
+      });
+      
+      itemToClone.parentNode.appendChild(chatMdBtn);
+    }
+    return;
+  }
+  
+  // Query all potential share menu item wrappers
   const candidates = Array.from(rootNode.querySelectorAll('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]'));
-  
-  // Check the rootNode itself if it matches the role
   if (rootNode.matches && rootNode.matches('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]')) {
     candidates.push(rootNode);
   }
   
   for (const item of candidates) {
     const text = (item.textContent || '').trim();
-    // Check if the item contains the exact words with loose spacing
     const normalizedText = text.replace(/\s+/g, ' ');
     if (normalizedText.includes('Export to Docs') && !normalizedText.includes('TeX')) {
       if (!item.parentNode.querySelector('.gemini-tex-exporter-btn')) {
-        createTexExportBtn(item);
+        createTexExportBtns(item);
         break;
       }
     }
@@ -66,44 +104,55 @@ function findTextNodeWithValue(root, value) {
   return null;
 }
 
-function createTexExportBtn(exportItem) {
-  const texItem = exportItem.cloneNode(true);
-  texItem.classList.add('gemini-tex-exporter-btn');
+function createButtonHelper(templateItem, searchLabel, textLabel, className, onClick) {
+  const btn = templateItem.cloneNode(true);
+  btn.classList.add(className);
   
-  // Replace text in the cloned element
-  const textNode = findTextNodeWithValue(texItem, 'Export to Docs');
+  const textNode = findTextNodeWithValue(btn, searchLabel);
   if (textNode) {
-    textNode.textContent = 'Export to Docs (TeX)';
+    textNode.nodeValue = textNode.nodeValue.replace(searchLabel, textLabel);
   } else {
-    // Fallback search for text container
-    const elements = Array.from(texItem.querySelectorAll('*'));
+    // Fallback search in elements
+    const elements = Array.from(btn.querySelectorAll('*'));
     let replaced = false;
-    for (const el of [texItem, ...elements]) {
-      if (el.children.length === 0 && el.textContent.trim().includes('Export to Docs')) {
-        el.textContent = 'Export to Docs (TeX)';
+    for (const el of [btn, ...elements]) {
+      if (el.children.length === 0 && el.textContent.trim().includes(searchLabel)) {
+        el.textContent = el.textContent.replace(searchLabel, textLabel);
         replaced = true;
         break;
       }
     }
     if (!replaced) {
-      texItem.textContent = 'Export to Docs (TeX)';
+      btn.textContent = textLabel;
     }
   }
   
-  // Custom action on click
-  texItem.addEventListener('click', async (e) => {
+  btn.addEventListener('click', onClick);
+  return btn;
+}
+
+function createTexExportBtns(exportItem) {
+  // Create Export to Docs (TeX) button
+  const texBtn = createButtonHelper(exportItem, 'Export to Docs', 'Export to Docs (TeX)', 'gemini-tex-exporter-btn', async (e) => {
     e.preventDefault();
     e.stopPropagation();
-    
-    // Close the Google popup menu by clicking backdrop
     const backdrop = document.querySelector('.cdk-overlay-backdrop');
     if (backdrop) backdrop.click();
-    
     await handleTeXExport();
   });
-  
-  // Insert the TeX option right below the original Export to Docs option
-  exportItem.parentNode.insertBefore(texItem, exportItem.nextSibling);
+
+  // Create Download as MD (TeX) button
+  const mdBtn = createButtonHelper(exportItem, 'Export to Docs', 'Download as MD (TeX)', 'gemini-tex-md-btn', async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const backdrop = document.querySelector('.cdk-overlay-backdrop');
+    if (backdrop) backdrop.click();
+    await handleMdExport();
+  });
+
+  // Insert both right below the original Export to Docs button
+  exportItem.parentNode.insertBefore(mdBtn, exportItem.nextSibling);
+  exportItem.parentNode.insertBefore(texBtn, exportItem.nextSibling);
 }
 
 // The open canvas, if there is one. Gemini renders it in a panel that is
@@ -154,14 +203,31 @@ function findAssociatedMessageContent(button) {
 
 // Pull the LaTeX source out of a rendered math node.
 // Order matters — most reliable source first:
-//   1. data-math  : the canvas keeps verbatim LaTeX here on <math-block>/<math-inline>
+//   1. data-math/data-tex/data-latex on element or any ancestor wrapper
 //   2. .math-src  : only populated while the node has focus, so usually empty
-//   3. annotation / alttext : the MathML paths, absent from the canvas because
-//      it runs KaTeX in HTML-only output mode (no .katex-mathml is emitted)
+//   3. annotation / alttext : the MathML paths
 function extractTeX(el) {
-  const data = el.getAttribute && el.getAttribute('data-math');
-  if (data && data.trim()) return data.trim();
+  if (!el) return null;
 
+  // 1. Search data attributes on the element and its ancestors (up to root/body)
+  let current = el;
+  while (current && current.nodeType === Node.ELEMENT_NODE) {
+    const dataMath = current.getAttribute('data-math');
+    if (dataMath && dataMath.trim()) return dataMath.trim();
+
+    const dataTex = current.getAttribute('data-tex') || current.getAttribute('data-latex') || current.getAttribute('data-latex-source');
+    if (dataTex && dataTex.trim()) return dataTex.trim();
+
+    // Check title if it looks like LaTeX code
+    const title = current.getAttribute('title');
+    if (title && title.trim() && (title.includes('\\') || title.includes('_') || title.includes('^'))) {
+      return title.trim();
+    }
+
+    current = current.parentNode;
+  }
+
+  // 2. Search children for text source elements
   const src = el.querySelector('.math-src');
   if (src && src.textContent.trim()) return src.textContent.trim();
 
@@ -185,9 +251,12 @@ function makeBlockTeX(tex) {
 }
 
 function replaceKaTeX(root) {
-  // 0. Canvas math nodes. These wrap the KaTeX spans, so they must be handled
+  if (!root) return;
+
+  // 0. Canvas/Transcript custom math nodes. These wrap the KaTeX spans, so they must be handled
   //    before the legacy passes below or we would strip their contents first.
   root.querySelectorAll('math-block, math-inline').forEach(node => {
+    if (!node.parentNode) return;
     const tex = extractTeX(node);
     if (!tex) return;
 
@@ -202,8 +271,11 @@ function replaceKaTeX(root) {
   // 1. Bare KaTeX display blocks (chat transcript, or any canvas node that
   //    was not wrapped in a math-block).
   root.querySelectorAll('.katex-display').forEach(display => {
+    if (!display.parentNode) return;
     const tex = extractTeX(display);
-    if (tex) display.parentNode.replaceChild(makeBlockTeX(tex), display);
+    if (tex) {
+      display.parentNode.replaceChild(makeBlockTeX(tex), display);
+    }
   });
 
   // 2. Bare inline KaTeX.
@@ -285,6 +357,242 @@ async function handleTeXExport() {
       showToast("Export failed: " + errMsg, "error");
     }
   });
+}
+
+async function handleMdExport() {
+  const fromCanvas = findCanvasContent();
+  const msgContent = fromCanvas || findAssociatedMessageContent(lastClickedShareButton);
+
+  if (!msgContent) {
+    showToast("Could not locate response content.", "error");
+    return;
+  }
+  console.log(`[Gemini LaTeX Exporter] MD Source: ${fromCanvas ? 'canvas' : 'chat message'}`);
+
+  showToast("Converting to Markdown...", "info");
+
+  try {
+    const markdown = htmlToMarkdown(msgContent);
+
+    // Document Title
+    const title = findCanvasTitle() || `Gemini Export - ${new Date().toLocaleDateString()}`;
+    const filename = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.md`;
+
+    // Trigger download
+    const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 150);
+
+    dismissToast();
+    showToast("Markdown downloaded!", "success");
+  } catch (err) {
+    console.error("Markdown export failed:", err);
+    dismissToast();
+    showToast("Export failed: " + err.message, "error");
+  }
+}
+
+function htmlToMarkdown(element) {
+  const clone = element.cloneNode(true);
+  replaceKaTeX(clone);
+  
+  // Clean up code block headers and add attributes for pre-formatting
+  const codeHeaders = clone.querySelectorAll('.code-block-header');
+  codeHeaders.forEach(header => {
+    const langSpan = header.querySelector('span');
+    const langText = langSpan ? langSpan.textContent.trim() : '';
+    const pre = header.nextElementSibling;
+    if (pre && pre.tagName === 'PRE') {
+      pre.setAttribute('data-language', langText);
+    }
+    header.remove();
+  });
+
+  function processNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      return node.nodeValue;
+    }
+    if (node.nodeType !== Node.ELEMENT_NODE) {
+      return '';
+    }
+
+    let childrenVal = '';
+    node.childNodes.forEach(child => {
+      childrenVal += processNode(child);
+    });
+
+    const tagName = node.tagName;
+    switch (tagName) {
+      case 'H1':
+        return `\n\n# ${childrenVal.trim()}\n\n`;
+      case 'H2':
+        return `\n\n## ${childrenVal.trim()}\n\n`;
+      case 'H3':
+        return `\n\n### ${childrenVal.trim()}\n\n`;
+      case 'H4':
+        return `\n\n#### ${childrenVal.trim()}\n\n`;
+      case 'P':
+        return `\n\n${childrenVal.trim()}\n\n`;
+      case 'STRONG':
+      case 'B':
+        return `**${childrenVal.trim()}**`;
+      case 'EM':
+      case 'I':
+        return `*${childrenVal.trim()}*`;
+      case 'CODE':
+        if (node.parentNode && node.parentNode.tagName === 'PRE') {
+          return childrenVal;
+        }
+        return `\`${childrenVal.trim()}\``;
+      case 'PRE':
+        const lang = node.getAttribute('data-language') || '';
+        // Remove code block action buttons inside pre
+        const copyBtns = node.querySelectorAll('button, .copy-code-button');
+        copyBtns.forEach(b => b.remove());
+        const codeText = node.textContent.trim();
+        return `\n\n\`\`\`${lang}\n${codeText}\n\`\`\`\n\n`;
+      case 'UL':
+        return `\n${childrenVal}\n`;
+      case 'OL':
+        return `\n${childrenVal}\n`;
+      case 'LI':
+        const parent = node.parentNode ? node.parentNode.tagName : '';
+        if (parent === 'OL') {
+          const siblings = Array.from(node.parentNode.children);
+          const idx = siblings.indexOf(node) + 1;
+          return `${idx}. ${childrenVal.trim()}\n`;
+        }
+        return `* ${childrenVal.trim()}\n`;
+      case 'BR':
+        return '\n';
+      case 'A':
+        const href = node.getAttribute('href') || '';
+        return `[${childrenVal.trim()}](${href})`;
+      case 'TABLE':
+        return `\n\n${renderTableToMarkdown(node)}\n\n`;
+      default:
+        // Use window.getComputedStyle to detect block divs/spans
+        const display = window.getComputedStyle(node).display;
+        if (display === 'block') {
+          return `\n${childrenVal}\n`;
+        }
+        return childrenVal;
+    }
+  }
+
+  function renderTableToMarkdown(tableNode) {
+    let md = '';
+    const rows = Array.from(tableNode.querySelectorAll('tr'));
+    if (rows.length === 0) return '';
+
+    rows.forEach((row, rowIndex) => {
+      const cells = Array.from(row.querySelectorAll('th, td'));
+      let rowStr = '|';
+      cells.forEach(cell => {
+        rowStr += ` ${cell.textContent.trim().replace(/\|/g, '\\|')} |`;
+      });
+      md += rowStr + '\n';
+
+      if (rowIndex === 0 && row.querySelector('th')) {
+        let separator = '|';
+        cells.forEach(() => {
+          separator += ' --- |';
+        });
+        md += separator + '\n';
+      }
+    });
+    return md;
+  }
+
+  let markdown = processNode(clone);
+  
+  // Clean up duplicate whitespaces and lines
+  markdown = markdown
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+    
+  return markdown;
+}
+
+async function handleChatExport() {
+  showToast("Compiling chat transcript...", "info");
+  
+  try {
+    const containers = Array.from(document.querySelectorAll('.conversation-container'));
+    if (containers.length === 0) {
+      showToast("No chat transcript found.", "error");
+      return;
+    }
+    
+    let markdown = `# Gemini Chat Export - ${new Date().toLocaleDateString()}\n\n`;
+    
+    containers.forEach((container, index) => {
+      // Extract user query
+      const queryEl = container.querySelector('.query-text');
+      if (queryEl) {
+        let queryText = queryEl.textContent.replace(/\s+/g, ' ').trim();
+        // Remove Screen Reader label
+        if (queryText.startsWith('You said')) {
+          queryText = queryText.substring('You said'.length).trim();
+        }
+        markdown += `### User:\n${queryText}\n\n`;
+      }
+      
+      // Extract Gemini response
+      const msgContent = container.querySelector('message-content');
+      if (msgContent) {
+        const responseMd = htmlToMarkdown(msgContent);
+        markdown += `### Gemini:\n${responseMd}\n\n`;
+      }
+      
+      if (index < containers.length - 1) {
+        markdown += `---\n\n`;
+      }
+    });
+    
+    // Document Title
+    const firstQuery = containers[0].querySelector('.query-text');
+    let title = "gemini-chat-export";
+    if (firstQuery) {
+      let firstQueryText = firstQuery.textContent.replace(/\s+/g, ' ').trim();
+      if (firstQueryText.startsWith('You said')) {
+        firstQueryText = firstQueryText.substring('You said'.length).trim();
+      }
+      title = firstQueryText.toLowerCase().replace(/[^a-z0-9]+/g, '-').substring(0, 30);
+    }
+    
+    const filename = `${title}-chat.md`;
+    const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 150);
+    
+    dismissToast();
+    showToast("Chat downloaded!", "success");
+  } catch (err) {
+    console.error("Chat export failed:", err);
+    dismissToast();
+    showToast("Export failed: " + err.message, "error");
+  }
 }
 
 function showToast(message, type = "info") {

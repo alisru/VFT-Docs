@@ -93,8 +93,10 @@ def main():
                 raise ValueError("Key 'subject' must be a non-empty string.")
             if not isinstance(cfg["posts"], list):
                 raise ValueError("Key 'posts' must be a list.")
-            if len(cfg["posts"]) != 13:
-                raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
+            is_multi_aspect = cfg.get("multiAspect") is True
+            expected_posts_len = 14 if is_multi_aspect else 13
+            if len(cfg["posts"]) != expected_posts_len:
+                raise ValueError(f"Key 'posts' must contain exactly {expected_posts_len} elements (got {len(cfg['posts'])}).")
             for num_k in ["claim_u", "claim_psi", "real_u", "real_psi"]:
                 if not isinstance(cfg[num_k], (int, float)):
                     raise ValueError(f"Key '{num_k}' must be a number (got type {type(cfg[num_k]).__name__}).")
@@ -115,7 +117,7 @@ def main():
             is_compact_single = (config_compact == "single" or args.compact_single) and not is_five_word
             is_compact_thread = (config_compact is True or args.compact) and not is_five_word
             is_compact = is_compact_single or is_compact_thread
-            limit = 300 if (is_compact or is_five_word) else 299
+            limit = 300
 
             # Validate every raw post in config under the dynamic limit (only check first 4 posts for compact mode)
             posts_to_check = posts[:4] if is_compact else posts
@@ -138,14 +140,29 @@ def main():
                     raise ValueError(f"Post {idx} exceeds {limit} characters ({len(post)} chars):\n{post}")
 
 
-            # 2. Graph Check
+            # 2. Graph Check (Generate on-the-fly if missing)
             story_id = cfg["id"]
             for char in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
                 story_id = story_id.replace(char, '')
             graph_base_filename = f"{story_id}_graph.png"
             graph_filename = os.path.join(graph_dir, graph_base_filename)
             if not os.path.exists(graph_filename):
-                raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}. Graphs must be pre-generated.")
+                print(f"  Trajectory graph not found for {story_id}. Generating on-the-fly...")
+                try:
+                    from generate_graph import draw_graph
+                    draw_graph(
+                        cfg.get("claim_u", 0.0), cfg.get("claim_psi", 0.0),
+                        cfg.get("real_u",   0.0), cfg.get("real_psi",  0.0),
+                        cfg.get("subject", "Story"),
+                        graph_filename,
+                        macro_event=cfg.get("macro_event", ""),
+                        macro_claim_u=cfg.get("macro_claim_u"),
+                        macro_claim_psi=cfg.get("macro_claim_psi"),
+                        macro_real_u=cfg.get("macro_real_u"),
+                        macro_real_psi=cfg.get("macro_real_psi")
+                    )
+                except Exception as ge:
+                    raise RuntimeError(f"Failed to generate trajectory graph: {ge}")
 
             # 2b. Info Card Check (Generate on-the-fly if missing)
             if is_five_word:

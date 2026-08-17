@@ -185,7 +185,7 @@ def generate_compact_info_card(thread_config, output_path):
     link = thread_config.get("link", "")
     
     if len(posts) < 13:
-        raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13).")
+        raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13 or 14).")
 
     if thread_config.get("five_word") is True:
         # Load fonts, generate single 5-word terminal card
@@ -205,79 +205,161 @@ def generate_compact_info_card(thread_config, output_path):
     # Load standard layout configuration
     fonts = load_theme_fonts()
     
-    sections = [
-        {
-            "label": "THE HOOK",
-            "text": posts[0].replace("Hook:\n", "").strip(),
-            "color": "#F472B6" # Pink/Magenta
-        },
-        {
-            "label": "THE CLAIM",
-            "text": posts[1].replace("Claim:\n", "").replace("The Claim:\n", "").replace("Stated Judgement:\n", "").strip(),
-            "color": "#94A3B8" # Slate
-        },
-        {
-            "label": "THE REALITY",
-            "text": posts[2].replace("Reality:\n", "").replace("The Reality:\n", "").replace("Resulting Judgement:\n", "").strip(),
-            "color": "#38BDF8" # Sky Blue
-        },
-        {
-            "label": "THE VERDICT",
-            "text": posts[3].replace("Verdict:\n", "").replace("Stated Verdict:\n", "").strip(),
-            "color": "#FBBF24" # Yellow/Amber
-        }
-    ]
-
-    sections.extend([
-        {
-            "label": "CONTEXT",
-            "text": posts[4].replace("What's happening:\n", "").replace("Context:\n", "").strip(),
-            "color": "#38BDF8" # Teal
-        },
-        {
-            "label": "THE BRIGHT SIDE" if posts[5].lower().startswith("the bright side") else "THE POISON",
-            "text": posts[5].replace("The Bright Side:\n", "").replace("The Poison:\n", "").strip(),
-            "color": "#10B981" if posts[5].lower().startswith("the bright side") else "#EF4444" # Emerald Green or Rose Red
-        },
-        {
-            "label": "BREAKDOWN & PLANE ERROR",
-            "text": posts[6].replace("The Breakdown & Plane Error:\n", "").strip(),
-            "color": "#C084FC" # Purple
-        },
-        {
-            "label": "SOCIAL PHYSICS ANALYSIS",
-            "text": posts[7].replace("Social Physics Analysis:\n", "").strip(),
-            "color": "#60A5FA" # Light Blue
-        },
-        {
-            "label": "TRAJECTORY & DESTINATION",
-            "text": posts[8].replace("The Trajectory:", "").strip(),
-            "color": "#F472B6" # Magenta
-        },
-        {
-            "label": "THE UNAVOIDABLES",
-            "text": posts[9].replace("The Unavoidable Truth:", "Truth:").replace("The Unavoidable Lie:", "Lie:").strip(),
-            "color": "#F59E0B" # Amber/Orange
-        }
-    ])
+    is_multi_aspect = (len(posts) == 14)
     
-    personas = [
-        {
-            "label": "ALETHEKANON",
-            "text": posts[10].replace("Alethekanon:\n", "").strip(),
-            "color": "#38BDF8" # Sky Blue
-        },
-        {
-            "label": "AWWTHEKANON",
-            "text": posts[11].replace("Awwthekanon:\n", "").strip(),
-            "color": "#10B981" # Emerald Green
-        },
-        {
-            "label": "BROTHEKANON",
-            "text": posts[12].replace("Brothekanon:\n", "").strip(),
-            "color": "#F59E0B" # Amber
-        }
-    ]
+    if is_multi_aspect:
+        sections = [
+            {
+                "label": "THE HOOK",
+                "text": posts[0].replace("Hook:\n", "").strip(),
+                "color": "#F472B6" # Pink/Magenta
+            },
+            {
+                "label": "THE CLAIM",
+                "text": posts[1].replace("Claim:\n", "").replace("The Claim:\n", "").replace("Stated Judgement:\n", "").strip(),
+                "color": "#94A3B8" # Slate
+            },
+            {
+                "label": "THE REALITY",
+                "text": posts[2].replace("Reality:\n", "").replace("The Reality:\n", "").replace("Resulting Judgement:\n", "").strip(),
+                "color": "#38BDF8" # Sky Blue
+            },
+            {
+                "label": "THE VERDICT",
+                "text": posts[3].replace("Verdict:\n", "").replace("Stated Verdict:\n", "").strip(),
+                "color": "#FBBF24" # Yellow/Amber
+            },
+            {
+                "label": "SUB-AUDITS BREAKDOWN",
+                "text": posts[4].replace("Sub-Audits Breakdown:\n", "").replace("Sub-Audits:\n", "").strip(),
+                "color": "#A855F7"  # Deep Purple
+            }
+        ]
+
+        sections.extend([
+            {
+                "label": "CONTEXT",
+                "text": posts[5].replace("What's happening:\n", "").replace("Context:\n", "").strip(),
+                "color": "#38BDF8" # Teal
+            },
+            {
+                "label": "THE BRIGHT SIDE" if posts[6].lower().startswith("the bright side") else "THE POISON",
+                "text": posts[6].replace("The Bright Side:\n", "").replace("The Poison:\n", "").strip(),
+                "color": "#10B981" if posts[6].lower().startswith("the bright side") else "#EF4444" # Emerald Green or Rose Red
+            },
+            {
+                "label": "BREAKDOWN & PLANE ERROR",
+                "text": posts[7].replace("The Breakdown & Plane Error:\n", "").strip(),
+                "color": "#C084FC" # Purple
+            },
+            {
+                "label": "SOCIAL PHYSICS ANALYSIS",
+                "text": posts[8].replace("Social Physics Analysis:\n", "").strip(),
+                "color": "#60A5FA" # Light Blue
+            },
+            {
+                "label": "TRAJECTORY & DESTINATION",
+                "text": posts[9].replace("The Trajectory:", "").strip(),
+                "color": "#F472B6" # Magenta
+            },
+            {
+                "label": "THE UNAVOIDABLES",
+                "text": posts[10].replace("The Unavoidable Truth:", "Truth:").replace("The Unavoidable Lie:", "Lie:").strip(),
+                "color": "#F59E0B" # Amber/Orange
+            }
+        ])
+        
+        personas = [
+            {
+                "label": "ALETHEKANON",
+                "text": posts[11].replace("Alethekanon:\n", "").strip(),
+                "color": "#38BDF8" # Sky Blue
+            },
+            {
+                "label": "AWWTHEKANON",
+                "text": posts[12].replace("Awwthekanon:\n", "").strip(),
+                "color": "#10B981" # Emerald Green
+            },
+            {
+                "label": "BROTHEKANON",
+                "text": posts[13].replace("Brothekanon:\n", "").strip(),
+                "color": "#F59E0B" # Amber
+            }
+        ]
+    else:
+        sections = [
+            {
+                "label": "THE HOOK",
+                "text": posts[0].replace("Hook:\n", "").strip(),
+                "color": "#F472B6" # Pink/Magenta
+            },
+            {
+                "label": "THE CLAIM",
+                "text": posts[1].replace("Claim:\n", "").replace("The Claim:\n", "").replace("Stated Judgement:\n", "").strip(),
+                "color": "#94A3B8" # Slate
+            },
+            {
+                "label": "THE REALITY",
+                "text": posts[2].replace("Reality:\n", "").replace("The Reality:\n", "").replace("Resulting Judgement:\n", "").strip(),
+                "color": "#38BDF8" # Sky Blue
+            },
+            {
+                "label": "THE VERDICT",
+                "text": posts[3].replace("Verdict:\n", "").replace("Stated Verdict:\n", "").strip(),
+                "color": "#FBBF24" # Yellow/Amber
+            }
+        ]
+
+        sections.extend([
+            {
+                "label": "CONTEXT",
+                "text": posts[4].replace("What's happening:\n", "").replace("Context:\n", "").strip(),
+                "color": "#38BDF8" # Teal
+            },
+            {
+                "label": "THE BRIGHT SIDE" if posts[5].lower().startswith("the bright side") else "THE POISON",
+                "text": posts[5].replace("The Bright Side:\n", "").replace("The Poison:\n", "").strip(),
+                "color": "#10B981" if posts[5].lower().startswith("the bright side") else "#EF4444" # Emerald Green or Rose Red
+            },
+            {
+                "label": "BREAKDOWN & PLANE ERROR",
+                "text": posts[6].replace("The Breakdown & Plane Error:\n", "").strip(),
+                "color": "#C084FC" # Purple
+            },
+            {
+                "label": "SOCIAL PHYSICS ANALYSIS",
+                "text": posts[7].replace("Social Physics Analysis:\n", "").strip(),
+                "color": "#60A5FA" # Light Blue
+            },
+            {
+                "label": "TRAJECTORY & DESTINATION",
+                "text": posts[8].replace("The Trajectory:", "").strip(),
+                "color": "#F472B6" # Magenta
+            },
+            {
+                "label": "THE UNAVOIDABLES",
+                "text": posts[9].replace("The Unavoidable Truth:", "Truth:").replace("The Unavoidable Lie:", "Lie:").strip(),
+                "color": "#F59E0B" # Amber/Orange
+            }
+        ])
+        
+        personas = [
+            {
+                "label": "ALETHEKANON",
+                "text": posts[10].replace("Alethekanon:\n", "").strip(),
+                "color": "#38BDF8" # Sky Blue
+            },
+            {
+                "label": "AWWTHEKANON",
+                "text": posts[11].replace("Awwthekanon:\n", "").strip(),
+                "color": "#10B981" # Emerald Green
+            },
+            {
+                "label": "BROTHEKANON",
+                "text": posts[12].replace("Brothekanon:\n", "").strip(),
+                "color": "#F59E0B" # Amber
+            }
+        ]
 
 
     # Generate split cards for mobile view
@@ -320,13 +402,13 @@ def generate_compact_info_card(thread_config, output_path):
     else:
         verdict_subtitle = f"Resulting Judgement: {verdict_text}"
 
-    # Verdict Card (1-3): Hook, Claim, Reality, Verdict
-    _generate_verdict_card(subject, verdict_subtitle, sections[:4], fonts, link, verdict_path)
+    # Verdict Card: Hook, Claim, Reality, Verdict, plus Sub-Audits Breakdown if multi-aspect is active
+    _generate_verdict_card(subject, verdict_subtitle, sections[:5] if is_multi_aspect else sections[:4], fonts, link, verdict_path)
 
     
-    # Analysis & Perspectives Card (4-13): Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables
+    # Analysis & Perspectives Card: Context, Nuance, Breakdown, Social Physics, Trajectory, Unavoidables
     analysis_subtitle = f"SYSTEM ANALYSIS & PERSPECTIVES | {coords_str}"
-    _generate_analysis_full_card(subject, analysis_subtitle, sections[4:], personas, fonts, link, analysis_path)
+    _generate_analysis_full_card(subject, analysis_subtitle, sections[5:] if is_multi_aspect else sections[4:], personas, fonts, link, analysis_path)
 
 
 def _generate_verdict_card(subject, subtitle, sections, fonts, link, output_path):
@@ -391,6 +473,21 @@ def _generate_verdict_card(subject, subtitle, sections, fonts, link, output_path
     right_grid_h = right_y - card_gap - grid_start_y
         
     grid_h = max(left_grid_h, right_grid_h)
+    
+    # Horizontal card layout for Sub-Audits Breakdown if present
+    sub_layout = None
+    if len(sections) == 5:
+        sec = sections[4]
+        sec_text_w_full = drawable_w - 40
+        wrapped_body = wrap_text(sec["text"], fonts["regular_29"], sec_text_w_full, temp_draw)
+        body_h = len(wrapped_body) * line_h
+        card_h_sub = 25 + 24 + body_h + 25
+        sub_card_y = grid_start_y + grid_h + card_gap
+        sub_layout = {
+            "sec": sec, "x_left": x_left, "x_right": x_right, "y": sub_card_y, "h": card_h_sub, "lines": wrapped_body
+        }
+        grid_h += card_gap + card_h_sub
+
     footer_h = 160
     final_height = grid_start_y + grid_h + footer_h
     
@@ -410,6 +507,9 @@ def _generate_verdict_card(subject, subtitle, sections, fonts, link, output_path
         _draw_individual_card_v3(draw, lay, fonts, card_bg, border_color, text_color, line_h, "bold_27", "regular_29", 65)
     for lay in right_layouts:
         _draw_individual_card_v3(draw, lay, fonts, card_bg, border_color, text_color, line_h, "bold_27", "regular_29", 65)
+        
+    if sub_layout:
+        _draw_individual_card_v3(draw, sub_layout, fonts, card_bg, border_color, text_color, line_h, "bold_27", "regular_29", 65)
         
     # Draw Footer with Watermark and QR code
     footer_y = grid_start_y + grid_h + 30

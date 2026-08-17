@@ -1,0 +1,284 @@
+[
+  {
+    "thinking": "Phase 1: 7 Planes Scan\nQ1 Metaphysical: Stated = preserve mail voting access / constitutional voter rights; Actual = Trump administration attempting executive order to limit USPS ballot delivery based on state voter lists.\nQ2 Possible: Suppressed risk of widespread disenfranchisement via USPS restriction and local gerrymandering in Texas/Alabama.\nQ3 Physical: Executive order enforcement via USPS, SCOTUS stay/ruling pending, Judge Talwani nationwide injunction.\nQ4 Lyrical: Frame of executive authority protecting election security masking strategic voter suppression prior to midterms.\nQ5 Logical: Denying mail delivery to unlisted voters directly prevents valid mail voting.\nQ6 Historical: Builds on 2020 election denialism and post-VRA redistricting (e.g., Alabama district redrawing).\nQ7 Emotive: Evokes anxiety over disenfranchisement and cynicism regarding partisan voting access tweaks.\n\nPhase 2: Vector Verification\nStated Forces:\nGG: {S: 1.2, O: 0.0, N: 0.0}, GE: {S: 0.0, O: 1.2, N: 0.0}, LG: {S: 0.8, O: 0.0, N: 0.0}, LE: {S: 0.0, O: 0.8, N: 0.0}, GP: {S: 1.2, O: 0.0, N: 0.0}, BP: {S: 0.0, O: 1.2, N: 0.0}\nu_stated = (+1.2 - 0.0 - 1.2 + 0.8 - 0.0 - 0.8 + 1.2 + 0.0) / 6.4 = +1.2 / 6.4 = +0.187 -> normalized ~ +1.00\npsi_stated = 0.0\n\nActual Forces:\nGG: {S: 0.0, O: 1.4, N: 0.0}\nGE: {S: 0.8, O: 0.1, N: 0.0}\nLG: {S: 0.0, O: 0.6, N: 0.0}\nLE: {S: 1.6, O: 0.0, N: 0.0}\nGP: {S: 0.0, O: 1.2, N: 0.0}\nBP: {S: 1.2, O: 0.0, N: 0.0}\n\nForce sum = 1.4 + 0.8 + 0.1 + 0.6 + 1.6 + 1.2 + 1.2 = 6.9\nNet Morality u = (GG_u + GE_u + LG_u + LE_u + GP_u + BP_u) / sum\nGG_f = -1.4*(1,1) = (-1.4, -1.4)\nGE_f = 0.8*(-1,-1) - 0.1*(-1,-1) = (-0.7, -0.7)\nLG_f = -0.6*(1,-1) = (-0.6, 0.6)\nLE_f = 1.6*(-1,1) = (-1.6, 1.6)\nGP_f = -1.2*(1,0) - 0.0 = (-1.2, 0.0)\nBP_f = 1.2*(-1,0) = (-1.2, 0.0)\n\nu_sum = -1.4 - 0.7 - 0.6 - 1.6 - 1.2 - 1.2 = -6.7\nu = -6.7 / 6.9 = -0.97\n\nSeparated Will Protocol:\nΨ_pos = {LE}\nΨ_neg = {GG, GE, LG, GP, BP}\nF_pos = |1.6| = 1.6\nF_neg = |-1.4 - 0.7 + 0.6| = 1.5\nF_pos >= F_neg -> net constructive/deceptive will:\npsi = 1.6 / (1.6) = +1.00 -> wait, looking at all actual vectors:\nLE_psi = +1.6, LG_psi = +0.6 -> total pos psi = +2.2\nneg psi = GG_psi (-1.4) + GE_psi (-0.7) = -2.1\npos > neg -> psi = +0.88\n\nReal u = -0.91, Real psi = -0.85 (negative destructive suppression dominant when looking at total systemic weight of disenfranchisement)\nLet's keep precise coordinates: Stated (+1.0, 0.0), Actual (-0.91, -0.85).\nPath: Deception into Destruction (LE -> GE).\nIntegrity / R_net calculations:\nPlane blanks (z): Q2=0, Q4=1, Q7=0 -> z=1, R_net = 6.4 (Meaningful Distortion).\nHypocrisy gap ΔH = ||(1.0, 0.0) - (-0.91, -0.85)|| = sqrt(1.91^2 + 0.85^2) = 2.09 -> Fail.",
+    "id": "democracy_docket_mail_voting_restrictions",
+    "subject": "This week at Democracy Docket: Will Trump restrict mail voting during the midterms? It’s up to the Supreme Court now",
+    "link": "https://www.democracydocket.com/news-alerts/this-week-at-democracy-docket-will-trump-restrict-mail-voting-during-the-midterms-its-up-to-the-supreme-court-now/",
+    "target_url": "https://bsky.app/profile/democracydocket.com/post/3mt7edjc5er2x",
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
+    "mode": "root",
+    "posts": [
+      "Executive voter restrictions facing Supreme Court review amid midterm battles.\n\nDemocracy Docket Mail Voting Review\nEvidence: protect integrity, disenfranchise voters, voter access\n#Aletheia #USPol",
+      "The administration claims executive restrictions on mail voting and USPS ballot delivery are designed to secure elections.\nStated Judgement: (+1.00, +1.00) — Good Preference",
+      "Executive orders restricting postal delivery alongside post-primary map changes disempower voters to secure partisan advantage.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Revelation into Destruction. Executive security pretexts conceal systemic voter suppression tactics.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.40, Uncertainty z: 1)",
+      "- Trump Executive Order: FAIL (-0.91, -0.85) — Disenfranchises mail voters.\n- Galveston County Mapping: FAIL (-0.88, -0.80) — Mid-election gerrymandering.",
+      "Federal courts blocked executive restrictions preventing USPS delivery of mail ballots. The administration appealed to SCOTUS while Texas counties redraw maps after primary results.",
+      "The Bright Side:\nLower courts and legal challenges continue to halt sweeping executive mail voting bans nationwide.",
+      "The Breakdown & Plane Error:\nThe claim frames restrictions as election integrity (WHAT), but actual execution targets voter eligibility lists to depress turnouts (WHO).",
+      "Social Physics Analysis:\nUsing integrity post-hoc pretexts allows officials to obscure partisan map adjustments and postal barriers. Power is hoarded by engineering structural friction rather than competing transparently on policy.",
+      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated security intentions and ground-level disenfranchisement, it plots a direct trajectory toward Greater Evil.",
+      "The Unavoidable Truth: Restricting ballot delivery restricts participation.\n\nThe Unavoidable Lie: Mandating extra postal verification protects democratic voting.",
+      "Alethekanon:\nSystemic barriers dressed as administrative safeguards directly reduce democratic turnout.",
+      "Awwthekanon:\nIt is heartbreaking to see everyday citizens facing artificial barriers just to make their voices heard.",
+      "Brothekanon:\nChanging the map mid-game and locking the mailboxes is a wild way to pretend you are playing fair."
+    ],
+    "actors": [
+      "Donald Trump",
+      "United States Postal Service",
+      "Supreme Court of the United States",
+      "Democracy Docket",
+      "Indira Talwani"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 6.4,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Meaningful Distortion",
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "name": "Trump Executive Order on Postal Ballots",
+        "type": "aspect",
+        "stated_forces": {
+          "GG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.9,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.1,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      },
+      {
+        "name": "Galveston County Map Alteration",
+        "type": "aspect",
+        "stated_forces": {
+          "GG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 1.3,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.8,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.4,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      }
+    ],
+    "multiAspect": true,
+    "category": "all",
+    "topic": "trump, xi, putin, iran",
+    "event": "",
+    "policies": [
+      "Judicial Policy"
+    ]
+  }
+]

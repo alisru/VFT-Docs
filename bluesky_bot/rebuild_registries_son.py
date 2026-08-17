@@ -106,12 +106,62 @@ def calculate_son_coordinates(forces_dict):
         
     return round(u, 2), round(psi, 2)
 
+def calculate_aggregated_forces(aspects_list, force_key):
+    net_forces = {
+        att: {"S": 0.0, "O": 0.0, "N": 0.0}
+        for att in ['GG', 'GE', 'LG', 'LE', 'GP', 'BP']
+    }
+    n = len(aspects_list)
+    if n == 0:
+        return net_forces
+        
+    for aspect in aspects_list:
+        forces = aspect.get(force_key) or {}
+        for att in net_forces:
+            scores = forces.get(att) or {}
+            net_forces[att]["S"] += float(scores.get("S", 0.0))
+            net_forces[att]["O"] += float(scores.get("O", 0.0))
+            net_forces[att]["N"] += float(scores.get("N", 0.0))
+            
+    # Divide by n to get the average force
+    for att in net_forces:
+        net_forces[att]["S"] = round(net_forces[att]["S"] / n, 2)
+        net_forces[att]["O"] = round(net_forces[att]["O"] / n, 2)
+        net_forces[att]["N"] = round(net_forces[att]["N"] / n, 2)
+        
+    return net_forces
+
 def process_and_update_coordinates(cfg, file_path):
     """
     Checks if stated_forces or actual_forces exists, recalculates claim/real u/psi,
     updates them in cfg, and returns True if any change occurred.
     """
     updated = False
+    
+    # If aspects list is present, recalculate coordinates for each aspect and aggregate them
+    if "aspects" in cfg and isinstance(cfg["aspects"], list) and len(cfg["aspects"]) > 0:
+        aspects_changed = False
+        for aspect in cfg["aspects"]:
+            if "stated_forces" in aspect:
+                u, psi = calculate_son_coordinates(aspect["stated_forces"])
+                if aspect.get("claim_u") != u or aspect.get("claim_psi") != psi:
+                    aspect["claim_u"] = u
+                    aspect["claim_psi"] = psi
+                    aspects_changed = True
+            if "actual_forces" in aspect:
+                u, psi = calculate_son_coordinates(aspect["actual_forces"])
+                if aspect.get("real_u") != u or aspect.get("real_psi") != psi:
+                    aspect["real_u"] = u
+                    aspect["real_psi"] = psi
+                    aspects_changed = True
+                
+        new_stated = calculate_aggregated_forces(cfg["aspects"], "stated_forces")
+        new_actual = calculate_aggregated_forces(cfg["aspects"], "actual_forces")
+        
+        if aspects_changed or cfg.get("stated_forces") != new_stated or cfg.get("actual_forces") != new_actual:
+            cfg["stated_forces"] = new_stated
+            cfg["actual_forces"] = new_actual
+            updated = True
     
     # Recalculate Stated
     if "stated_forces" in cfg:
@@ -321,6 +371,29 @@ def rebuild_registries():
                 print(f"Auto-tagged missing actors for {slug}: {inferred}")
             except Exception as we:
                 print(f"Warning: Failed to write back auto-tagged actors to {authoritative_file}: {we}")
+
+        # Auto-backfill missing/empty policies and update policy ledger
+        if "policies" not in cfg:
+            from policy_extract import extract_policies, update_policy_ledger
+            scan_text = cfg.get("subject", "") + " " + " ".join(cfg.get("posts", [])[:3])
+            inferred_p = extract_policies(scan_text)
+            cfg["policies"] = inferred_p
+            try:
+                with open(authoritative_file, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+                print(f"Auto-tagged missing policies for {slug}: {inferred_p}")
+            except Exception as we:
+                print(f"Warning: Failed to write back auto-tagged policies to {authoritative_file}: {we}")
+            try:
+                update_policy_ledger(cfg)
+            except Exception as le:
+                print(f"Warning: Failed to update policy ledger for {slug}: {le}")
+        else:
+            try:
+                from policy_extract import update_policy_ledger
+                update_policy_ledger(cfg)
+            except Exception:
+                pass
 
         active_story_ids.add(slug)
 

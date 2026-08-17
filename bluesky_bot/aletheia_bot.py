@@ -35,7 +35,7 @@ def parse_bsky_url(url):
 
     return parts[handle_idx], parts[post_idx]
 
-def split_text(text, max_len=299):
+def split_text(text, max_len=300):
     """Splits text dynamically at the last newline or space before max_len.
     Avoids orphaning short header lines (e.g. 'Brothekanon:') by only
     splitting at a newline if the chunk before it is at least 80 chars.
@@ -77,7 +77,7 @@ def split_text(text, max_len=299):
 
     return chunks
 
-def pack_posts(posts, max_len=299):
+def pack_posts(posts, max_len=300):
     """
     Packs a list of strings into final posts.
     If a string splits and leaves a tail (carry_over), the tail is merged with the next string 
@@ -319,7 +319,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     is_compact_single = (config_compact == "single" or compact == "single") and not is_five_word
     is_compact_thread = (config_compact is True or compact is True) and not is_five_word
     is_compact = is_compact_single or is_compact_thread
-    limit = 300 if (is_compact or is_five_word) else 299
+    limit = 300
         
     # Validate every raw post in the config under the dynamic limit (only check first 4 posts for compact mode)
     posts_to_check = posts[:4] if is_compact else posts

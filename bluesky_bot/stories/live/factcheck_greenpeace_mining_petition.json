@@ -1,0 +1,317 @@
+[
+  {
+    "thinking": "Phase 1: Stated claim (Greenpeace) vs. Actual (Fundraising/Lobbying). Forces: GG(S:1.5,O:0,N:0), GE(S:0,O:1.5,N:0), LG(S:0.5,O:0,N:0), LE(S:0,O:0,N:0.5), GP(S:1.0,O:0,N:0), BP(S:0,O:1.0,N:0). Actual: GG(S:0.2,O:1.2,N:0), GE(S:1.2,O:0.2,N:0), LG(S:0,O:1.0,N:0), LE(S:1.5,O:0,N:0), GP(S:0,O:1.0,N:0), BP(S:1.2,O:0,N:0). u=-0.4, psi=-0.6. Hypocrisy Gap: 0.8 (Fail). Trajectory: Fall into Deception.",
+    "id": "greenpeace_mining_petition",
+    "subject": "Petition: Tell Canada to oppose the Mining Code and protect the deep sea from mining.",
+    "link": "https://act.gp/4i95CGL",
+    "target_url": "https://bsky.app/profile/jeananne25.bsky.social/post/3mt67cp5rzc2b",
+    "claim_u": 0.83,
+    "claim_psi": 1.0,
+    "real_u": -0.89,
+    "real_psi": -0.79,
+    "mode": "root",
+    "posts": [
+      "Greenpeace is rallying support to stop deep sea mining in Canada. \nEvidence: Environmental protection, fundraising, corporate lobbying.\n#Greenpeace #DeepSeaMining",
+      "The claim asserts that signing a petition will force the Canadian government to block deep sea mining and stop corporate greed. \nStated Judgement: (+0.83, +1.00) — Good Preference",
+      "The reality is a fundraising funnel that leverages environmental anxiety to secure recurring donations without direct legislative power. \nResulting Judgement: (-0.89, -0.79) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception. The petition uses environmental urgency as a pretext to drive recurring revenue rather than direct policy change. \nIntegrity: Severe Deception (Hypocrisy: 1.2, Uncertainty z: 7)",
+      "- Greenpeace Fundraising: FAIL (-0.4, -0.6) — Uses fear to drive revenue.\n- Canadian Policy Impact: FAIL (-0.4, -0.6) — No direct legislative path.",
+      "Greenpeace is currently pressuring the Canadian government to adopt a moratorium on deep sea mining amidst international regulatory debates.",
+      "The Bright Side:\nRaising public awareness about the ecological risks of deep sea mining is a necessary step for global policy shifts.",
+      "The Breakdown & Plane Error:\nThis is a WHO vs. WHAT error; the petition claims to be a tool for policy change (WHAT), but functions as a donor acquisition tool (WHO).",
+      "Social Physics Analysis:\nBy framing the issue as an urgent moral battle against corporate greed, the organization creates a high-strain environment that prioritizes donor acquisition over transparent policy advocacy.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The system prioritizes organizational growth over the stated goal.",
+      "The Unavoidable Truth: Deep sea mining poses significant ecological risks to the ocean floor.\n\nThe Unavoidable Lie: Signing this petition directly forces the Canadian government to change its policy.",
+      "Alethekanon:\nThe organization utilizes a classic bait-and-switch, substituting legislative action with donor acquisition to maintain its own operational sustainability.",
+      "Awwthekanon:\nIt is heartbreaking to see genuine concern for our oceans turned into a marketing funnel, but we must keep fighting for the sea.",
+      "Brothekanon:\nClassic NGO move: sign the paper, give us your credit card, and hope for the best. Don't hold your breath for the government."
+    ],
+    "actors": [
+      "Greenpeace",
+      "Canada",
+      "The Metals Company"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.2,
+    "claim_z": 0,
+    "real_z": 7,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      3
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "name": "Greenpeace Fundraising",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.2,
+            "O": 1.2,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 1.2,
+            "O": 0.2,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 0.83,
+        "claim_psi": 1.0,
+        "real_u": -0.89,
+        "real_psi": -0.79
+      },
+      {
+        "name": "Canadian Policy Impact",
+        "type": "aspect",
+        "stated_forces": {
+          "GG": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.2,
+            "O": 1.2,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 1.2,
+            "O": 0.2,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 0.83,
+        "claim_psi": 1.0,
+        "real_u": -0.89,
+        "real_psi": -0.79
+      }
+    ],
+    "multiAspect": true,
+    "category": "all",
+    "topic": "trump, xi, china, iran, putin",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/greenpeace_mining_petition_graph.png",
+    "rkeys": [
+      "3mt6kwec5i42f",
+      "3mt6kwf3ubq2m",
+      "3mt6kwhalg42p",
+      "3mt6kwjffni2m",
+      "3mt6kwlleqk23",
+      "3mt6kwnqe6p2p",
+      "3mt6kwpv6y42p",
+      "3mt6kws2byr2m",
+      "3mt6kwu7beu24",
+      "3mt6kwwebf424",
+      "3mt6kwykpet2t",
+      "3mt6kx2phl32t",
+      "3mt6kx4ugcb2c",
+      "3mt6kx6z6sm2f"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwec5i42f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwf3ubq2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwhalg42p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwjffni2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwlleqk23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwnqe6p2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwpv6y42p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kws2byr2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwu7beu24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwwebf424",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kwykpet2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kx2phl32t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kx4ugcb2c",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt6kx6z6sm2f"
+    ],
+    "tags": [
+      "Greenpeace",
+      "DeepSeaMining"
+    ]
+  }
+]

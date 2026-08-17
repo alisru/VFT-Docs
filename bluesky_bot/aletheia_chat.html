@@ -1,0 +1,2930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aletheia Bot — Intelligence, Topic Threading & Judgment Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #090d16;
+      --bg-surface: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --border-color: #334155;
+      --border-focus: #06b6d4;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-cyan: #06b6d4;
+      --accent-cyan-glow: rgba(6, 182, 212, 0.25);
+      --accent-blue: #3b82f6;
+      --accent-purple: #a855f7;
+      --accent-green: #10b981;
+      --accent-red: #ef4444;
+      --accent-amber: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top Header */
+    header {
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--accent-cyan);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+    }
+
+    .ctrl-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    select {
+      background: transparent;
+      border: none;
+      color: var(--accent-cyan);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    select option {
+      background: var(--bg-surface);
+      color: var(--text-main);
+    }
+
+    .toggle-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 6px 10px;
+      border-radius: 8px;
+      user-select: none;
+      transition: all 0.15s ease;
+    }
+
+    .toggle-btn:hover {
+      border-color: var(--accent-cyan);
+      color: #fff;
+    }
+
+    .toggle-btn input {
+      accent-color: var(--accent-cyan);
+      cursor: pointer;
+    }
+
+    .icon-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .icon-btn:hover {
+      border-color: var(--accent-cyan);
+      background: var(--bg-card-hover);
+    }
+
+    /* Main Container */
+    .app-container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    aside {
+      width: 320px;
+      background-color: var(--bg-surface);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .sidebar-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .tab-item {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .tab-item.active {
+      color: var(--accent-cyan);
+      border-bottom-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.05);
+    }
+
+    .sidebar-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .session-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+
+    .session-item:hover {
+      border-color: var(--accent-cyan);
+      background: var(--bg-card-hover);
+    }
+
+    .session-item.active {
+      border-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.1);
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
+    }
+
+    .session-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .session-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+    }
+
+    .session-delete {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 2px 4px;
+      font-size: 0.85rem;
+      opacity: 0.4;
+      transition: opacity 0.15s ease, color 0.15s ease;
+    }
+
+    .session-delete:hover {
+      opacity: 1;
+      color: var(--accent-red);
+    }
+
+    /* Nested Thread Tree in Sidebar */
+    .thread-tree {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 4px;
+      padding-left: 8px;
+      border-left: 2px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .thread-tree-node {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .thread-tree-node:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .thread-tree-node.active {
+      color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.15);
+      font-weight: 700;
+    }
+
+    .sidebar-footer {
+      padding: 10px 12px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main Chat Area */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-base);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Sticky Thread Navigator Bar */
+    .thread-nav-bar {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      z-index: 10;
+    }
+
+    .thread-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .thread-tag {
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--accent-cyan);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    .thread-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-merge {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--accent-green);
+      color: var(--accent-green);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-merge:hover {
+      background: var(--accent-green);
+      color: #000;
+    }
+
+    #dropOverlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 182, 212, 0.12);
+      border: 3px dashed var(--accent-cyan);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      z-index: 50;
+      backdrop-filter: blur(4px);
+    }
+
+    .messages-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .message {
+      display: flex;
+      gap: 12px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .message.user {
+      flex-direction: row-reverse;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .message.assistant .avatar {
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      color: #000;
+    }
+
+    .message.user .avatar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .bubble-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      max-width: 82%;
+    }
+
+    .message.user .bubble-wrapper {
+      align-items: flex-end;
+    }
+
+    .bubble {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-main);
+      word-break: break-word;
+    }
+
+    .message.user .bubble {
+      background: #1e3a8a;
+      border-color: #3b82f6;
+    }
+
+    .bubble-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .msg-act-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.15s ease;
+    }
+
+    .msg-act-btn:hover {
+      color: var(--accent-cyan);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Grounding Badges */
+    .grounding-badges {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .ground-badge {
+      font-size: 0.68rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .ground-audits {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid #3b82f6;
+      color: #60a5fa;
+    }
+
+    .ground-archives {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid #a855f7;
+      color: #c084fc;
+    }
+
+    /* Verdict Banner */
+    .coord-banner {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+
+    .coord-tag {
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    /* Thought Accordion */
+    .thought-accordion {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .thought-header {
+      padding: 8px 12px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    .thought-header:hover {
+      color: var(--accent-cyan);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .thought-body {
+      padding: 10px;
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      font-family: 'JetBrains Mono', monospace;
+      white-space: pre-wrap;
+      max-height: 200px;
+      overflow-y: auto;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Typing indicator */
+    .typing-dots {
+      display: flex;
+      gap: 4px;
+      padding: 4px 0;
+    }
+
+    .typing-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent-cyan);
+      animation: pulse 1.4s infinite ease-in-out both;
+    }
+
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+    @keyframes pulse {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+
+    /* Suggestions Bar */
+    .suggestions {
+      display: flex;
+      gap: 8px;
+      padding: 8px 24px;
+      overflow-x: auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(0, 0, 0, 0.15);
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .pill-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      border-radius: 9999px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .pill-btn:hover {
+      border-color: var(--accent-cyan);
+      color: #fff;
+      background: var(--bg-card-hover);
+    }
+
+    /* Attachment Preview Bar */
+    .attachment-preview-bar {
+      display: flex;
+      gap: 8px;
+      padding: 8px 24px;
+      overflow-x: auto;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .attachment-chip {
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--accent-cyan);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .attachment-chip-remove {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--accent-red);
+    }
+
+    /* Bottom Input Footer */
+    footer {
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .upload-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      border-radius: 8px;
+      padding: 10px 12px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.15s ease;
+    }
+
+    .upload-btn:hover {
+      border-color: var(--accent-cyan);
+      color: #fff;
+    }
+
+    .input-wrapper {
+      flex: 1;
+      position: relative;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 2px var(--accent-cyan-glow);
+    }
+
+    .send-btn {
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      border: none;
+      color: #000;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.15s ease;
+    }
+
+    .send-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .send-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Toast Notifications (Replaces intrusive alerts) */
+    .toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      pointer-events: none;
+    }
+
+    .toast-pill {
+      pointer-events: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: toastSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.3s ease;
+      max-width: 400px;
+      line-height: 1.4;
+    }
+
+    .toast-pill.toast-success {
+      border-color: var(--accent-green);
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+    }
+
+    .toast-pill.toast-error {
+      border-color: var(--accent-red);
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+    }
+
+    .toast-pill.toast-info {
+      border-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+    }
+
+    .toast-pill.toast-warn {
+      border-color: var(--accent-amber);
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+    }
+
+    @keyframes toastSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(30px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+
+    /* Drawer Modal */
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      width: 460px;
+      max-width: 95vw;
+      height: 100vh;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border-color);
+      box-shadow: -10px 0 25px rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer.open {
+      transform: translateX(0);
+    }
+
+    /* Drag and Drop Fallback Manager */
+    .fallback-drag-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 8px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .fallback-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 7px 10px;
+      user-select: none;
+      transition: all 0.15s ease;
+      cursor: grab;
+      gap: 8px;
+    }
+    .fallback-item:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .fallback-item:active {
+      cursor: grabbing;
+    }
+    .fallback-item.dragging {
+      opacity: 0.35;
+      border-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.1);
+    }
+    .fallback-item.drag-over {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 8px var(--accent-cyan-glow);
+      transform: scale(1.01);
+    }
+    .fallback-item.disabled {
+      opacity: 0.45;
+      background: rgba(0, 0, 0, 0.15);
+      border-style: dashed;
+    }
+    .fallback-handle {
+      color: var(--text-muted);
+      cursor: grab;
+      font-size: 1.1rem;
+      padding: 0 4px;
+      line-height: 1;
+    }
+    .fallback-rank {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      min-width: 24px;
+      text-align: center;
+    }
+    .fallback-rank.rank-1 {
+      background: rgba(6, 182, 212, 0.2);
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+    }
+    .provider-tag {
+      font-size: 0.65rem;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .provider-vertex {
+      background: rgba(59, 130, 246, 0.2);
+      color: #93c5fd;
+      border: 1px solid #3b82f6;
+    }
+    .provider-studio {
+      background: rgba(16, 185, 129, 0.2);
+      color: #6ee7b7;
+      border: 1px solid #10b981;
+    }
+    .preset-pill {
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border-color);
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .preset-pill:hover {
+      border-color: var(--accent-cyan);
+      color: #fff;
+      background: rgba(6, 182, 212, 0.15);
+    }
+    .preset-pill.active {
+      border-color: var(--accent-cyan);
+      color: #fff;
+      background: rgba(6, 182, 212, 0.25);
+      font-weight: 700;
+    }
+
+    /* Archive Cards & Viewer */
+    .archive-card {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 9px 11px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .archive-card:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.05);
+      transform: translateY(-1px);
+    }
+    .archive-category-badge {
+      font-size: 0.65rem;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    /* Multi-Select Floating Toolbar & Checkboxes */
+    .multi-select-bar {
+      position: sticky;
+      bottom: 12px;
+      left: 50%;
+      margin: 0 auto 8px auto;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--accent-cyan);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.7), 0 0 15px var(--accent-cyan-glow);
+      border-radius: 30px;
+      padding: 8px 18px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      z-index: 60;
+      width: max-content;
+      max-width: 95%;
+    }
+    .msg-select-check {
+      position: absolute;
+      top: 12px;
+      left: 8px;
+      cursor: pointer;
+      display: none;
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent-cyan);
+      z-index: 10;
+    }
+    .multi-select-mode .msg-select-check {
+      display: block;
+    }
+    .multi-select-mode .message {
+      padding-left: 32px;
+      position: relative;
+    }
+    .message.selected-msg .bubble {
+      border-color: var(--accent-cyan) !important;
+      box-shadow: 0 0 12px var(--accent-cyan-glow);
+      background: rgba(6, 182, 212, 0.08);
+    }
+
+    .drawer-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-body {
+      padding: 20px;
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .form-control {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 8px 12px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-cyan);
+    }
+
+    textarea.form-control {
+      min-height: 100px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="alethekanon.png" alt="Aletheia" onerror="this.style.display='none'">
+      <div>
+        <div class="brand-title">Aletheia Bot</div>
+        <div class="brand-subtitle">INTELLIGENCE & JUDGMENT CONSOLE</div>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <!-- Model Selector (Default to Vertex Auto-Fallback) -->
+      <div class="ctrl-pill">
+        <span class="ctrl-label">Model:</span>
+        <select id="modelSelect">
+          <optgroup label="🔄 Auto-Fallback Chains (Zero-Downtime)">
+            <option value="vertex:gemini-3.7-flash,gemini-3.5-flash,gemini-2.5-flash,gemini-3.1-flash-lite" selected>⚡ Auto-Chain (Vertex 3.7 ➔ 3.5 ➔ 2.5 ➔ Lite)</option>
+            <option value="gemini-3.7-flash,gemini-3.6-flash,gemini-3.5-flash,gemini-2.5-flash">⚡ AI Studio Chain (3.7 ➔ 3.6 ➔ 3.5 ➔ 2.5)</option>
+          </optgroup>
+          <optgroup label="☁️ Google Cloud Vertex AI">
+            <option value="vertex:gemini-3.7-flash">Vertex: Gemini 3.7 Flash ($0.75 / $3.75)</option>
+            <option value="vertex:gemini-3.6-flash">Vertex: Gemini 3.6 Flash ($1.50 / $7.50)</option>
+            <option value="vertex:gemini-3.5-flash">Vertex: Gemini 3.5 Flash ($1.50 / $9.00)</option>
+            <option value="vertex:gemini-3.5-flash-lite">Vertex: Gemini 3.5 Flash-Lite ($0.25 / $1.50)</option>
+            <option value="vertex:gemini-3.1-flash-lite">Vertex: Gemini 3.1 Flash-Lite ($0.25 / $1.50)</option>
+            <option value="vertex:gemini-2.5-flash">Vertex: Gemini 2.5 Flash ($0.30 / $2.50)</option>
+            <option value="vertex:gemini-2.5-flash-lite">Vertex: Gemini 2.5 Flash-Lite ($0.10 / $0.40)</option>
+            <option value="vertex:gemini-2.5-pro">Vertex: Gemini 2.5 Pro ($1.25 / $5.00)</option>
+          </optgroup>
+          <optgroup label="🔑 Google AI Studio API">
+            <option value="gemini-3.7-flash">Gemini 3.7 Flash ($0.75 / $3.75)</option>
+            <option value="gemini-3.6-flash">Gemini 3.6 Flash ($1.50 / $7.50)</option>
+            <option value="gemini-3.5-flash">Gemini 3.5 Flash ($1.50 / $9.00)</option>
+            <option value="gemini-3.5-flash-lite">Gemini 3.5 Flash-Lite ($0.25 / $1.50)</option>
+            <option value="gemini-3.1-flash-lite">Gemini 3.1 Flash-Lite ($0.25 / $1.50)</option>
+            <option value="gemini-3-flash-preview">Gemini 3 Flash Preview ($0.50 / $3.00)</option>
+            <option value="gemini-2.5-flash">Gemini 2.5 Flash ($0.30 / $2.50)</option>
+            <option value="gemini-2.5-flash-lite">Gemini 2.5 Flash-Lite ($0.10 / $0.40)</option>
+            <option value="gemini-2.5-pro">Gemini 2.5 Pro ($1.25 / $5.00)</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <!-- Thinking Depth -->
+      <div class="ctrl-pill">
+        <span class="ctrl-label">🧠 Thinking:</span>
+        <select id="thinkingSelect">
+          <option value="HIGH">High (Deep)</option>
+          <option value="MEDIUM" selected>Medium</option>
+          <option value="LOW">Low (Fast)</option>
+          <option value="OFF">Off</option>
+        </select>
+      </div>
+
+      <!-- Grounding Toggle -->
+      <label class="toggle-btn" title="Enable Google Search Grounding for live web verification">
+        <input type="checkbox" id="checkGrounding" checked>
+        <span>🌐 Live Search</span>
+      </label>
+
+      <!-- Story Canvas Toggle -->
+      <button class="icon-btn" onclick="toggleStoryCanvas()" style="border-color: var(--accent-amber); color: var(--accent-amber); font-weight: 600;">
+        📰 Story Canvas
+      </button>
+
+      <!-- Fallback Chain Manager Button -->
+      <button class="icon-btn" onclick="toggleFallbackDrawer()" style="border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 600;" title="Configure Drag-and-Drop Model Fallback Chain">
+        🔄 Fallback Chain
+      </button>
+
+      <!-- Settings Drawer Button -->
+      <button class="icon-btn" onclick="toggleSettingsDrawer()">⚙️ Settings</button>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <div class="app-container" id="chatDropZone">
+    <div id="dropOverlay">📁 Drop Files Here to Inspect & Discuss</div>
+
+    <!-- Sidebar -->
+    <aside>
+      <div class="sidebar-tabs">
+        <div class="tab-item active" id="tabSessions" onclick="switchSidebarTab('sessions')">💬 Chats & Trees</div>
+        <div class="tab-item" id="tabAudits" onclick="switchSidebarTab('audits')">📚 Audits DB</div>
+        <div class="tab-item" id="tabArchives" onclick="switchSidebarTab('archives')">📑 Archives</div>
+      </div>
+
+      <!-- Sessions List Tab -->
+      <div class="sidebar-content" id="sessionsView">
+        <button class="icon-btn" onclick="startNewSession()" style="width: 100%; justify-content: center; margin-bottom: 6px;">
+          + New Chat Session
+        </button>
+        <div id="sessionList" style="display: flex; flex-direction: column; gap: 6px;">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Audits DB Lookup Tab -->
+      <div class="sidebar-content" id="auditsView" style="display: none;">
+        <input type="text" id="auditSearchInput" placeholder="Filter 8,651 factchecks..." class="form-control" style="margin-bottom: 6px;" oninput="searchAuditsLive()">
+        <div id="auditResultsList" style="display: flex; flex-direction: column; gap: 6px;">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Archive Discussion Transcripts Tab -->
+      <div class="sidebar-content" id="archivesView" style="display: none;">
+        <input type="text" id="archiveSearchInput" placeholder="Filter 172+ AI chat logs..." class="form-control" style="margin-bottom: 6px;" oninput="filterArchivesList()">
+        
+        <!-- Category Filter Pills -->
+        <div id="archiveCategoryPills" style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px;">
+          <span class="preset-pill active" onclick="selectArchiveCategory('')">All</span>
+          <span class="preset-pill" onclick="selectArchiveCategory('🌌 Physics & Cosmology')">🌌 Physics</span>
+          <span class="preset-pill" onclick="selectArchiveCategory('🏛️ Politics & Hegemony')">🏛️ Politics</span>
+          <span class="preset-pill" onclick="selectArchiveCategory('🧠 Epistemology & Mind')">🧠 Epistemology</span>
+          <span class="preset-pill" onclick="selectArchiveCategory('📜 Axioms & Tautonics')">📜 Axioms</span>
+          <span class="preset-pill" onclick="selectArchiveCategory('💬 Discussion Transcripts')">💬 Transcripts</span>
+        </div>
+
+        <div id="archiveResultsList" style="display: flex; flex-direction: column; gap: 6px; overflow-y: auto; max-height: calc(100vh - 210px);">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <span id="serverStatusText">Connecting to localhost:8766...</span>
+      </div>
+    </aside>
+
+    <!-- Main Chat Workspace -->
+    <main>
+      <!-- Sticky Thread Breadcrumb Bar -->
+      <div class="thread-nav-bar" id="threadNavBar">
+        <div class="thread-breadcrumb">
+          <span style="color: var(--text-muted);">Session:</span>
+          <strong id="breadcrumbSessionTitle">Untitled</strong>
+          <span>/</span>
+          <span class="thread-tag" id="breadcrumbThreadName"># Main Trunk</span>
+        </div>
+        <div class="thread-nav-actions" style="display: flex; align-items: center; gap: 6px;">
+          <button class="btn-merge" id="btnMultiSelect" onclick="toggleMultiSelectMode()" style="background: rgba(6, 182, 212, 0.15); border: 1px solid var(--accent-cyan); color: var(--accent-cyan); font-size: 0.72rem; padding: 4px 10px; border-radius: 6px; cursor: pointer;">
+            ☑ Multi-Select
+          </button>
+          <button class="btn-merge" id="btnMergeThread" onclick="mergeActiveThread()" style="display: none;">
+            📥 Merge to Parent
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Container -->
+      <div class="messages-container" id="messagesContainer">
+        <!-- Message bubbles dynamically appended here -->
+      </div>
+
+      <!-- Multi-Select Floating Action Bar -->
+      <div class="multi-select-bar" id="multiSelectBar">
+        <span style="font-size: 0.78rem; font-weight: 700; color: #fff;" id="selectedCountText">0 Selected</span>
+        <button class="icon-btn" onclick="draftStoryFromSelected()" style="background: rgba(6, 182, 212, 0.25); border-color: var(--accent-cyan); color: #fff; font-weight: 700; font-size: 0.78rem; padding: 5px 12px;">
+          ⚡ Draft 14-Post Story
+        </button>
+        <button class="icon-btn" onclick="combineSelectedToInput()" style="font-size: 0.75rem; padding: 5px 10px;">
+          📋 Quote in Chat
+        </button>
+        <button class="icon-btn" onclick="clearSelectedMessages()" style="font-size: 0.75rem; padding: 5px 8px; color: var(--text-muted);">
+          ✕ Cancel
+        </button>
+      </div>
+
+      <!-- Suggestions Bar -->
+      <div class="suggestions" id="suggestionsBar">
+        <button class="pill-btn" onclick="sendSuggestion(this.innerText)">🧪 Run 6-Attractor SON convergence test on US Tariffs</button>
+        <button class="pill-btn" onclick="sendSuggestion(this.innerText)">Audit Australian housing debt crisis using 7 Planes</button>
+        <button class="pill-btn" onclick="sendSuggestion(this.innerText)">Evaluate today's macro trajectory</button>
+        <button class="pill-btn" onclick="sendSuggestion(this.innerText)">Recall discussion on generative gender roles</button>
+      </div>
+
+      <!-- Attachment Previews -->
+      <div class="attachment-preview-bar" id="attachmentPreviewBar" style="display: none;"></div>
+
+      <!-- Input Footer -->
+      <footer>
+        <button class="upload-btn" onclick="document.getElementById('fileInput').click()" title="Attach file or document">
+          📎
+        </button>
+        <input type="file" id="fileInput" multiple style="display: none;" onchange="handleFileSelect(event)">
+
+        <div class="input-wrapper">
+          <input type="text" id="userInput" placeholder="Ask a question, request a judgment, or analyze a policy..." onkeydown="if(event.key==='Enter' && !event.shiftKey) sendMessage()">
+        </div>
+
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          Send ↵
+        </button>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Archive Document Reader Drawer -->
+  <div class="drawer" id="archiveReaderDrawer" style="width: 620px; max-width: 95vw;">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px; min-width: 0;">
+        <span style="font-size: 1.15rem;">📑</span>
+        <div style="display: flex; flex-direction: column; min-width: 0;">
+          <h3 id="archiveReaderTitle" style="font-size: 0.92rem; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Archive Document</h3>
+          <span id="archiveReaderMeta" style="font-size: 0.68rem; color: var(--text-muted); font-family: monospace;">Loading...</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 6px;">
+        <button class="icon-btn" onclick="draftStoryFromActiveArchive()" style="border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 700;" title="Synthesize this entire archive transcript into a 14-post Aletheia thread">
+          ⚡ Draft Story
+        </button>
+        <button class="icon-btn" onclick="discussActiveArchiveInChat()" title="Feed this archive context into chat">
+          💬 Discuss
+        </button>
+        <button class="icon-btn" onclick="toggleArchiveReaderDrawer()">✕</button>
+      </div>
+    </div>
+    <div class="drawer-body">
+      <pre id="archiveReaderContent" style="white-space: pre-wrap; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #cbd5e1; line-height: 1.5; background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; border: 1px solid var(--border-color); overflow-y: auto; max-height: calc(100vh - 120px); user-select: text;"></pre>
+    </div>
+  </div>
+
+  <!-- Engine Controls Drawer -->
+  <div class="drawer" id="settingsDrawer" style="width: 380px; max-width: 95vw;">
+    <div class="drawer-header">
+      <h3 style="font-size: 1rem; font-weight: 700;">⚙️ Engine Controls</h3>
+      <button class="icon-btn" onclick="toggleSettingsDrawer()">✕</button>
+    </div>
+    <div class="drawer-body">
+      <div class="form-group">
+        <label class="form-label">Temperature (<span id="tempVal">0.3</span>)</label>
+        <input type="range" id="tempSlider" min="0" max="1" step="0.05" value="0.3" class="form-control" oninput="document.getElementById('tempVal').innerText=this.value; localStorage.setItem('aletheia_temp', this.value);">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Max Output Tokens</label>
+        <select id="maxTokensSelect" class="form-control" onchange="localStorage.setItem('aletheia_max_tokens', this.value)">
+          <option value="4096">4,096 tokens (~16k chars)</option>
+          <option value="8192" selected>8,192 tokens (~32k chars)</option>
+          <option value="16384">16,384 tokens (~64k chars)</option>
+          <option value="32768">32,768 tokens (~130k chars)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Custom System Instructions</label>
+        <textarea id="customInstText" class="form-control" style="min-height: 120px;" placeholder="Add specific persona or formatting rules..." oninput="localStorage.setItem('aletheia_custom_inst', this.value)"></textarea>
+      </div>
+
+      <div class="form-group" style="margin-top: 10px;">
+        <button class="icon-btn" onclick="exportChatMarkdown()" style="width: 100%; justify-content: center;">
+          💾 Export Active Chat to Markdown
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Fallback Priority Chain Drawer -->
+  <div class="drawer" id="fallbackDrawer" style="width: 480px; max-width: 95vw;">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.15rem;">🔄</span>
+        <h3 style="font-size: 1rem; font-weight: 700; color: #fff;">Model Fallback Priority</h3>
+      </div>
+      <button class="icon-btn" onclick="toggleFallbackDrawer()">✕</button>
+    </div>
+    <div class="drawer-body">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+        <span style="font-size: 0.78rem; font-weight: 600; color: #fff;">Failover Priority Stack</span>
+        <span style="font-size: 0.68rem; color: var(--accent-cyan); font-weight: 700;" id="activeModelsCountBadge">8 Models Active</span>
+      </div>
+      <div style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.35;">
+        Drag cards to set priority (#1 runs first). The engine cascades downward on 429 rate limit, quota cap, or 503 errors. Uncheck to exclude.
+      </div>
+
+      <!-- Quick Presets -->
+      <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; margin-bottom: 6px;">
+        <span class="preset-pill" onclick="applyFallbackPreset('balanced')">⚡ Balanced Default</span>
+        <span class="preset-pill" onclick="applyFallbackPreset('quality')">💎 Max Quality</span>
+        <span class="preset-pill" onclick="applyFallbackPreset('economy')">🪙 Ultra Economy</span>
+        <span class="preset-pill" onclick="applyFallbackPreset('studio')">🔑 AI Studio Only</span>
+        <span class="preset-pill" onclick="applyFallbackPreset('vertex')">☁️ Vertex AI Only</span>
+      </div>
+
+      <!-- Draggable List Container -->
+      <div id="fallbackDragList" class="fallback-drag-list">
+        <!-- Dynamically rendered with drag-and-drop -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Studio Canvas Drawer -->
+  <div class="drawer" id="storyCanvasDrawer" style="width: 560px; max-width: 95vw;">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.15rem;">📰</span>
+        <h3 style="font-size: 1rem; font-weight: 700; color: #fff;">Story Studio Canvas</h3>
+      </div>
+      <div style="display: flex; gap: 6px;">
+        <button class="icon-btn" onclick="initEmptyStoryCanvas()" title="Start a fresh blank story">
+          ✨ New
+        </button>
+        <button class="icon-btn" onclick="expandAllPostsToMax()" style="background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); border: 1px solid var(--accent-amber); font-weight: 700;" title="AI expands all 14 posts to fill near the 290 character limit">
+          ⚡ Fill to Max (285 chars)
+        </button>
+        <button class="icon-btn" onclick="saveDraftStoryFromCanvas()" style="background: var(--accent-green); color: #000; font-weight: 700; border: none;">
+          💾 Save Draft
+        </button>
+        <button class="icon-btn" onclick="copyStoryCanvasJSON()" title="Copy Thread JSON to clipboard">
+          📋 JSON
+        </button>
+        <button class="icon-btn" onclick="toggleStoryCanvas()">✕</button>
+      </div>
+    </div>
+    <div class="drawer-body" style="padding: 16px; gap: 14px;">
+      <!-- Draft Loader Dropdown -->
+      <div style="display: flex; gap: 8px; align-items: center; background: rgba(0,0,0,0.25); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">📂 LOAD DRAFT:</span>
+        <select id="canvasDraftSelector" class="form-control" style="font-size: 0.78rem; padding: 4px 8px;" onchange="loadDraftIntoCanvas(this.value)">
+          <option value="">-- Pick an existing draft story --</option>
+        </select>
+        <button class="icon-btn" onclick="refreshDraftsList()" title="Refresh drafts list" style="padding: 4px 8px;">🔄</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Subject / Headline</label>
+        <input type="text" id="canvasSubject" class="form-control" placeholder="Descriptive headline for this factcheck...">
+      </div>
+
+      <div class="form-group">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+          <label class="form-label">Source Article URL</label>
+          <div style="display: flex; gap: 6px;">
+            <button type="button" class="msg-act-btn" onclick="openGeneratedArticle()" style="color: var(--accent-gold); font-size: 0.72rem;" title="Open and read the generated source article HTML">
+              📰 View Article
+            </button>
+            <button type="button" class="msg-act-btn" onclick="setCanonicalVercelUrl()" style="color: var(--accent-cyan); font-size: 0.72rem;">
+              🔗 Vercel URL
+            </button>
+          </div>
+        </div>
+        <input type="text" id="canvasLink" class="form-control" placeholder="http://localhost:8766/articles/... or https://...">
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div class="form-group">
+          <label class="form-label">Stated Claim (υ, ψ)</label>
+          <div style="display: flex; gap: 6px;">
+            <input type="number" step="0.05" min="-2" max="2" id="canvasClaimU" class="form-control" placeholder="υ (0.8)">
+            <input type="number" step="0.05" min="-2" max="2" id="canvasClaimPsi" class="form-control" placeholder="ψ (0.9)">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Empirical Reality (υ, ψ)</label>
+          <div style="display: flex; gap: 6px;">
+            <input type="number" step="0.05" min="-2" max="2" id="canvasRealU" class="form-control" placeholder="υ (-0.6)">
+            <input type="number" step="0.05" min="-2" max="2" id="canvasRealPsi" class="form-control" placeholder="ψ (-0.4)">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Actors (comma-separated)</label>
+        <input type="text" id="canvasActors" class="form-control" placeholder="e.g. Trump, Albanese, Treasury">
+      </div>
+
+      <div style="border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 4px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <label class="form-label" style="color: var(--accent-cyan); font-weight: 700;">14 Thread Posts (Multi-Aspect SON Protocol)</label>
+          <span id="canvasPostsStatus" style="font-size: 0.72rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">14 posts</span>
+        </div>
+        <div id="canvasPostsContainer" style="display: flex; flex-direction: column; gap: 10px;">
+          <!-- 14 Post Cards Rendered Here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = 'http://localhost:8766';
+    let currentSessionId = null;
+    let currentThreadId = 'main';
+    let currentSessionData = null;
+    let currentAttachments = [];
+    let allAuditsCache = [];
+
+    // Elegant Toast Notification System (Replaces intrusive alerts)
+    function showToast(msg, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+      const t = document.createElement('div');
+      t.className = `toast-pill toast-${type}`;
+      let icon = 'ℹ️';
+      if (type === 'success') icon = '✅';
+      if (type === 'error') icon = '⚠️';
+      if (type === 'warn') icon = '⚡';
+      t.innerHTML = `<span>${icon}</span> <span>${msg}</span>`;
+      container.appendChild(t);
+      setTimeout(() => {
+        t.style.opacity = '0';
+        t.style.transform = 'translateY(-10px)';
+        setTimeout(() => t.remove(), 300);
+      }, 3200);
+    }
+
+    // Initialize UI on load
+    window.addEventListener('DOMContentLoaded', async () => {
+      // Load stored settings
+      const storedTemp = localStorage.getItem('aletheia_temp');
+      if (storedTemp) {
+        document.getElementById('tempSlider').value = storedTemp;
+        document.getElementById('tempVal').innerText = storedTemp;
+      }
+      const storedTokens = localStorage.getItem('aletheia_max_tokens');
+      if (storedTokens) {
+        document.getElementById('maxTokensSelect').value = storedTokens;
+      }
+      const storedInst = localStorage.getItem('aletheia_custom_inst');
+      if (storedInst) {
+        document.getElementById('customInstText').value = storedInst;
+      }
+
+      await checkHealth();
+      await refreshSessions();
+    });
+
+    async function checkHealth() {
+      const statusText = document.getElementById('serverStatusText');
+      try {
+        const res = await fetch(`${API_BASE}/health`);
+        if (res.ok) {
+          const data = await res.json();
+          statusText.innerText = `● ONLINE (${data.stories} audits · ${data.sessions} chats)`;
+          statusText.style.color = 'var(--accent-green)';
+        } else {
+          statusText.innerText = '○ OFFLINE (Click Open Chat UI in Launcher)';
+          statusText.style.color = 'var(--accent-red)';
+        }
+      } catch (e) {
+        statusText.innerText = '○ OFFLINE (Start chat_server.py)';
+        statusText.style.color = 'var(--accent-red)';
+      }
+    }
+
+    /* Tab Switching in Sidebar */
+    function switchSidebarTab(tab) {
+      document.getElementById('tabSessions').className = `tab-item ${tab === 'sessions' ? 'active' : ''}`;
+      document.getElementById('tabAudits').className = `tab-item ${tab === 'audits' ? 'active' : ''}`;
+      document.getElementById('tabArchives').className = `tab-item ${tab === 'archives' ? 'active' : ''}`;
+
+      document.getElementById('sessionsView').style.display = tab === 'sessions' ? 'flex' : 'none';
+      document.getElementById('auditsView').style.display = tab === 'audits' ? 'flex' : 'none';
+      document.getElementById('archivesView').style.display = tab === 'archives' ? 'flex' : 'none';
+
+      if (tab === 'audits' && allAuditsCache.length === 0) {
+        searchAuditsLive();
+      }
+      if (tab === 'archives' && cachedArchivesList.length === 0) {
+        loadArchivesList();
+      }
+    }
+
+    /* Sessions & Topic Threads Management */
+    async function refreshSessions() {
+      try {
+        const res = await fetch(`${API_BASE}/sessions`);
+        if (res.ok) {
+          const list = await res.json();
+          renderSessionList(list);
+          if (list.length > 0 && !currentSessionId) {
+            await switchSession(list[0].id);
+          } else if (list.length === 0) {
+            startNewSession();
+          }
+        }
+      } catch (e) {}
+    }
+
+    function renderSessionList(sessions) {
+      const container = document.getElementById('sessionList');
+      container.innerHTML = '';
+      sessions.forEach(s => {
+        const item = document.createElement('div');
+        item.className = `session-item ${s.id === currentSessionId ? 'active' : ''}`;
+        
+        let threadNodesHtml = '';
+        if (s.threads && s.threads.length > 0) {
+          threadNodesHtml = '<div class="thread-tree">';
+          s.threads.forEach(t => {
+            const isNodeActive = (s.id === currentSessionId && t.id === currentThreadId);
+            threadNodesHtml += `
+              <div class="thread-tree-node ${isNodeActive ? 'active' : ''}" onclick="event.stopPropagation(); switchThread('${s.id}', '${t.id}')">
+                <span>${t.name}</span>
+                <span>(${t.msg_count})</span>
+              </div>
+            `;
+          });
+          threadNodesHtml += '</div>';
+        }
+
+        item.innerHTML = `
+          <div class="session-header" onclick="switchSession('${s.id}')">
+            <span class="session-title">${s.title || 'Untitled Session'}</span>
+            <button class="session-delete" onclick="event.stopPropagation(); deleteSession('${s.id}')" title="Delete Session">✕</button>
+          </div>
+          ${threadNodesHtml}
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    async function switchSession(sessionId, threadId = 'main') {
+      currentSessionId = sessionId;
+      currentThreadId = threadId;
+      try {
+        const res = await fetch(`${API_BASE}/session?id=${sessionId}`);
+        if (res.ok) {
+          currentSessionData = await res.json();
+          currentThreadId = currentSessionData.active_thread_id || threadId;
+          updateThreadNav();
+          renderActiveThreadMessages();
+          refreshSessions();
+        }
+      } catch (e) {}
+    }
+
+    async function switchThread(sessionId, threadId) {
+      if (currentSessionId !== sessionId) {
+        await switchSession(sessionId, threadId);
+      } else {
+        currentThreadId = threadId;
+        if (currentSessionData) {
+          currentSessionData.active_thread_id = threadId;
+          await fetch(`${API_BASE}/session/save`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(currentSessionData)
+          });
+        }
+        updateThreadNav();
+        renderActiveThreadMessages();
+        refreshSessions();
+      }
+    }
+
+    function updateThreadNav() {
+      if (!currentSessionData) return;
+      document.getElementById('breadcrumbSessionTitle').innerText = currentSessionData.title || 'Untitled';
+      const threads = currentSessionData.threads || {};
+      const activeThread = threads[currentThreadId] || threads['main'] || {};
+      document.getElementById('breadcrumbThreadName').innerText = activeThread.name || '# Main Trunk';
+      
+      const mergeBtn = document.getElementById('btnMergeThread');
+      if (currentThreadId !== 'main') {
+        mergeBtn.style.display = 'flex';
+      } else {
+        mergeBtn.style.display = 'none';
+      }
+    }
+
+    function startNewSession() {
+      currentSessionId = 's_' + Math.random().toString(36).substring(2, 10);
+      currentThreadId = 'main';
+      currentSessionData = {
+        id: currentSessionId,
+        title: 'New Conversation',
+        active_thread_id: 'main',
+        narrative_spine: [],
+        threads: {
+          main: {
+            id: 'main',
+            name: 'Main Trunk',
+            parent_thread_id: null,
+            fork_message_index: 0,
+            messages: []
+          }
+        }
+      };
+      updateThreadNav();
+      renderActiveThreadMessages();
+    }
+
+    async function branchThreadAtMessage(msgIndex) {
+      const threadName = prompt('Enter a title for this topic branch:', '🏠 Topic Deep Dive');
+      if (!threadName) return;
+
+      try {
+        const res = await fetch(`${API_BASE}/session/thread/create`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            session_id: currentSessionId,
+            parent_thread_id: currentThreadId,
+            fork_message_index: msgIndex,
+            name: threadName
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          currentSessionData = data.session;
+          currentThreadId = data.thread_id;
+          updateThreadNav();
+          renderActiveThreadMessages();
+          refreshSessions();
+        }
+      } catch (e) {
+        showToast('Failed to create thread: ' + e, 'error');
+      }
+    }
+
+    async function mergeActiveThread() {
+      if (currentThreadId === 'main') return;
+      const confirmMerge = confirm(`Merge '${document.getElementById('breadcrumbThreadName').innerText}' into parent trunk?`);
+      if (!confirmMerge) return;
+
+      try {
+        const res = await fetch(`${API_BASE}/session/thread/merge`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            session_id: currentSessionId,
+            thread_id: currentThreadId
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          currentSessionData = data.session;
+          currentThreadId = currentSessionData.active_thread_id || 'main';
+          updateThreadNav();
+          renderActiveThreadMessages();
+          refreshSessions();
+        }
+      } catch (e) {
+        showToast('Failed to merge thread: ' + e, 'error');
+      }
+    }
+
+    async function regenerateFromIndex(msgIndex) {
+      if (!currentSessionData || !currentSessionData.threads) return;
+      const threads = currentSessionData.threads;
+      const activeThread = threads[currentThreadId] || threads['main'];
+      if (!activeThread || !activeThread.messages) return;
+
+      let promptText = '';
+      let targetUserIndex = -1;
+
+      if (activeThread.messages[msgIndex].role === 'user') {
+        promptText = activeThread.messages[msgIndex].content;
+        targetUserIndex = msgIndex;
+      } else if (msgIndex > 0 && activeThread.messages[msgIndex - 1].role === 'user') {
+        promptText = activeThread.messages[msgIndex - 1].content;
+        targetUserIndex = msgIndex - 1;
+      }
+
+      if (!promptText || targetUserIndex < 0) {
+        showToast('Could not find user prompt to regenerate.', 'warn');
+        return;
+      }
+
+      // Truncate messages back to targetUserIndex so the response is regenerated cleanly
+      activeThread.messages = activeThread.messages.slice(0, targetUserIndex);
+      renderActiveThreadMessages();
+
+      // Submit the prompt cleanly
+      sendMessage(promptText);
+    }
+
+    function editPromptAtIndex(msgIndex) {
+      if (!currentSessionData || !currentSessionData.threads) return;
+      const threads = currentSessionData.threads;
+      const activeThread = threads[currentThreadId] || threads['main'];
+      if (!activeThread || !activeThread.messages) return;
+
+      const msg = activeThread.messages[msgIndex];
+      if (!msg) return;
+
+      const input = document.getElementById('chatInput');
+      if (input) {
+        input.value = msg.content;
+        input.focus();
+      }
+
+      // Truncate active thread back to this index so when re-submitted it replaces the branch
+      activeThread.messages = activeThread.messages.slice(0, msgIndex);
+      renderActiveThreadMessages();
+    }
+
+    function renderActiveThreadMessages() {
+      const container = document.getElementById('messagesContainer');
+      container.innerHTML = '';
+      if (!currentSessionData || !currentSessionData.threads) return;
+
+      const threads = currentSessionData.threads;
+      const activeThread = threads[currentThreadId] || threads['main'];
+      if (!activeThread) return;
+
+      const messages = activeThread.messages || [];
+      messages.forEach((m, idx) => {
+        appendMessage(m.role, formatMarkdown(m.content), m.thought, m.coords, m.attachments, m.content, idx, m.retrieved_audits, m.retrieved_archives);
+      });
+    }
+
+    let sessionTotalTokens = 0;
+    let sessionTotalCostUsd = 0.0;
+
+    function updateSessionCostFooter() {
+      const footerEl = document.getElementById('serverStatusText');
+      if (footerEl) {
+        const costStr = (sessionTotalCostUsd < 0.01) ? `$${sessionTotalCostUsd.toFixed(5)}` : `$${sessionTotalCostUsd.toFixed(4)}`;
+        footerEl.innerHTML = `<span>🟢 Online</span> · <span style="color: var(--accent-green); font-weight: 600;">💰 Session: ${costStr}</span> <span style="color: var(--text-muted);">(${sessionTotalTokens.toLocaleString()} tok)</span>`;
+      }
+    }
+
+    function appendMessage(role, htmlContent, thoughtText = null, coords = null, attachments = null, rawText = '', msgIndex = null, auditsCount = 0, archivesCount = 0, usage = null) {
+      const container = document.getElementById('messagesContainer');
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `message ${role}`;
+
+      let bodyHtml = '';
+
+      // Grounding Badges
+      if (auditsCount > 0 || archivesCount > 0) {
+        bodyHtml += '<div class="grounding-badges">';
+        if (auditsCount > 0) {
+          bodyHtml += `<span class="ground-badge ground-audits">📚 ${auditsCount} Audits Grounded</span>`;
+        }
+        if (archivesCount > 0) {
+          bodyHtml += `<span class="ground-badge ground-archives">📑 ${archivesCount} Archive Logs Grounded</span>`;
+        }
+        bodyHtml += '</div>';
+      }
+
+      if (attachments && attachments.length > 0) {
+        attachments.forEach(a => {
+          bodyHtml += `<div class="attachment-chip" style="margin-bottom: 8px;">📄 ${a.name}</div>`;
+        });
+      }
+
+      if (coords && coords.u !== undefined && coords.psi !== undefined) {
+        const u = coords.u;
+        const psi = coords.psi;
+        const isPass = (u >= 0 && psi >= 0);
+        bodyHtml += `
+          <div class="coord-banner">
+            <div><strong>Verdict Coordinates:</strong> <span class="coord-tag">(${u.toFixed(2)}, ${psi.toFixed(2)})</span></div>
+            <div style="color: ${isPass ? 'var(--accent-green)' : 'var(--accent-red)'}; font-weight: 700;">${isPass ? '🟢 PASS' : '🔴 FAIL'}</div>
+          </div>
+        `;
+      }
+
+      if (thoughtText) {
+        bodyHtml += `
+          <div class="thought-accordion">
+            <div class="thought-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'">
+              <span>💭 Thought Process (${thoughtText.length} chars)</span>
+              <span>▼</span>
+            </div>
+            <div class="thought-body" style="display: none;">${thoughtText}</div>
+          </div>
+        `;
+      }
+
+      bodyHtml += `<div>${htmlContent}</div>`;
+
+      // Token & Cost Tracking Banner
+      if (usage && usage.total_tokens) {
+        const costVal = usage.cost_usd !== undefined ? usage.cost_usd : 0.0;
+        const costStr = (costVal < 0.01) ? `$${costVal.toFixed(5)}` : `$${costVal.toFixed(4)}`;
+        const modelLabel = usage.rates?.name || usage.model_used || 'Gemini';
+        bodyHtml += `
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; padding-top: 6px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.68rem; font-family: monospace; color: var(--text-muted);">
+            <span style="color: var(--accent-cyan); font-weight: 600;">⚡ ${modelLabel}</span>
+            <span>·</span>
+            <span>🪙 ${(usage.prompt_tokens || 0).toLocaleString()} in / ${(usage.completion_tokens || 0).toLocaleString()} out (${(usage.total_tokens || 0).toLocaleString()} total)</span>
+            <span>·</span>
+            <span style="color: var(--accent-green); font-weight: 700;">💰 est. ${costStr}</span>
+          </div>
+        `;
+        sessionTotalTokens += (usage.total_tokens || 0);
+        sessionTotalCostUsd += costVal;
+        updateSessionCostFooter();
+      }
+      const plainContent = rawText || htmlContent.replace(/<[^>]+>/g, '');
+
+      const avatar = document.createElement('div');
+      avatar.className = 'avatar';
+      avatar.innerText = role === 'user' ? 'YOU' : 'VFT';
+
+      const bubbleWrapper = document.createElement('div');
+      bubbleWrapper.className = 'bubble-wrapper';
+
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      bubble.innerHTML = bodyHtml;
+      bubbleWrapper.appendChild(bubble);
+
+      const actions = document.createElement('div');
+      actions.className = 'bubble-actions';
+
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'msg-act-btn';
+      copyBtn.innerText = '📋 Copy';
+      copyBtn.onclick = () => {
+        navigator.clipboard.writeText(plainContent).then(() => showToast('Copied message to clipboard!', 'success'));
+      };
+      actions.appendChild(copyBtn);
+      actions.appendChild(copyBtn);
+
+      if (msgIndex !== null && msgIndex !== undefined) {
+        if (role === 'user') {
+          const editBtn = document.createElement('button');
+          editBtn.className = 'msg-act-btn';
+          editBtn.innerText = '✏️ Edit';
+          editBtn.title = 'Edit this prompt in input';
+          editBtn.onclick = () => editPromptAtIndex(msgIndex);
+          actions.appendChild(editBtn);
+
+          const regenPromptBtn = document.createElement('button');
+          regenPromptBtn.className = 'msg-act-btn';
+          regenPromptBtn.style.color = 'var(--accent-cyan)';
+          regenPromptBtn.innerText = '🔄 Regenerate';
+          regenPromptBtn.title = 'Re-run this prompt and regenerate response';
+          regenPromptBtn.onclick = () => regenerateFromIndex(msgIndex);
+          actions.appendChild(regenPromptBtn);
+        } else {
+          const regenRespBtn = document.createElement('button');
+          regenRespBtn.className = 'msg-act-btn';
+          regenRespBtn.style.color = 'var(--accent-cyan)';
+          regenRespBtn.innerText = '🔄 Regenerate';
+          regenRespBtn.title = 'Regenerate response from preceding user prompt';
+          regenRespBtn.onclick = () => regenerateFromIndex(msgIndex);
+          actions.appendChild(regenRespBtn);
+
+          const draftBtn = document.createElement('button');
+          draftBtn.className = 'msg-act-btn';
+          draftBtn.style.color = 'var(--accent-amber)';
+          draftBtn.style.fontWeight = '600';
+          draftBtn.innerText = '✨ Draft Story';
+          draftBtn.onclick = () => draftStoryFromMessage(plainContent);
+          actions.appendChild(draftBtn);
+
+          const branchBtn = document.createElement('button');
+          branchBtn.className = 'msg-act-btn';
+          branchBtn.style.color = 'var(--accent-cyan)';
+          branchBtn.innerText = '🧵 Branch Thread';
+          branchBtn.onclick = () => branchThreadAtMessage(msgIndex);
+          actions.appendChild(branchBtn);
+        }
+      }
+
+      // Multi-Select Checkbox
+      const selectCheck = document.createElement('input');
+      selectCheck.type = 'checkbox';
+      selectCheck.className = 'msg-select-check';
+      selectCheck.title = 'Select message to draft story or quote';
+      selectCheck.onchange = (e) => {
+        onMessageSelectChange(msgDiv, plainContent, e.target.checked);
+      };
+      msgDiv.appendChild(selectCheck);
+
+      bubbleWrapper.appendChild(actions);
+      msgDiv.appendChild(avatar);
+      msgDiv.appendChild(bubbleWrapper);
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function formatMarkdown(text) {
+      return (text || '')
+        .replace(/```([a-z]*)\n([\s\S]*?)```/gim, '<pre style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px; overflow-x: auto; margin: 6px 0;"><code>$2</code></pre>')
+        .replace(/^### (.*$)/gim, '<h3 style="color: var(--accent-cyan); margin: 8px 0 4px;">$1</h3>')
+        .replace(/^## (.*$)/gim, '<h2 style="color: #fff; margin: 10px 0 6px;">$1</h2>')
+        .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+        .replace(/`([^`]+)`/gim, '<code style="background: rgba(255,255,255,0.08); padding: 2px 4px; border-radius: 4px; font-family: monospace;">$1</code>')
+        .replace(/\n\n/gim, '<br><br>')
+        .replace(/\n- /gim, '<br>• ')
+        .replace(/\n/gim, '<br>');
+    }
+
+    function copyTextToClipboard(encoded) {
+      const text = decodeURIComponent(encoded);
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Copied message to clipboard!', 'success');
+      });
+    }
+
+    /* Sending Messages */
+    async function sendMessage(overrideText = null) {
+      const input = document.getElementById('userInput');
+      const text = overrideText !== null ? overrideText : input.value.trim();
+      if (!text && currentAttachments.length === 0) return;
+
+      const model = document.getElementById('modelSelect').value;
+      const thinking = document.getElementById('thinkingSelect').value;
+      const useSearch = document.getElementById('checkGrounding').checked;
+      const temperature = parseFloat(document.getElementById('tempSlider').value || 0.3);
+      const maxTokens = parseInt(document.getElementById('maxTokensSelect').value || 8192);
+      const customInst = document.getElementById('customInstText').value || '';
+      const attachmentsToSend = [...currentAttachments];
+
+      // Add to UI immediately
+      appendMessage('user', text || '(Attached files)', null, null, attachmentsToSend, text);
+      if (overrideText === null) input.value = '';
+      currentAttachments = [];
+      document.getElementById('attachmentPreviewBar').style.display = 'none';
+
+      // Safety check: initialize session if not yet loaded
+      if (!currentSessionData || !currentSessionData.threads) {
+        startNewSession();
+      }
+      if (!currentSessionData.threads[currentThreadId]) {
+        currentThreadId = 'main';
+        if (!currentSessionData.threads['main']) {
+          currentSessionData.threads['main'] = {
+            id: 'main',
+            name: 'Main Trunk',
+            parent_thread_id: null,
+            fork_message_index: 0,
+            messages: []
+          };
+        }
+      }
+
+      // Save user turn to active thread
+      const activeThread = currentSessionData.threads[currentThreadId];
+      if (!activeThread.messages) {
+        activeThread.messages = [];
+      }
+      activeThread.messages.push({
+        role: 'user',
+        content: text,
+        attachments: attachmentsToSend,
+        timestamp: new Date().toISOString()
+      });
+
+      // Show typing indicator
+      const container = document.getElementById('messagesContainer');
+      const typingDiv = document.createElement('div');
+      typingDiv.id = 'typingIndicator';
+      typingDiv.className = 'message assistant';
+      typingDiv.innerHTML = `
+        <div class="avatar">VFT</div>
+        <div class="bubble-wrapper">
+          <div class="bubble">
+            <div class="typing-dots">
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+            </div>
+          </div>
+        </div>
+      `;
+      container.appendChild(typingDiv);
+      container.scrollTop = container.scrollHeight;
+
+      // Check if canvas story is loaded
+      let canvasPayload = null;
+      if (currentCanvasStory && document.getElementById('canvasSubject').value.trim()) {
+        canvasPayload = getCanvasStoryPayload();
+      }
+
+      let modelToSend = model;
+      if (model.includes(',')) {
+        modelToSend = getActiveFallbackSequence();
+      }
+
+      try {
+        const res = await fetch(`${API_BASE}/chat`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: text,
+            session_id: currentSessionId,
+            thread_id: currentThreadId,
+            model: modelToSend,
+            use_search: useSearch,
+            attachments: attachmentsToSend,
+            thinking_level: thinking,
+            temperature: temperature,
+            max_tokens: maxTokens,
+            custom_instructions: customInst,
+            canvas_story: canvasPayload
+          })
+        });
+
+        const typingEl = document.getElementById('typingIndicator');
+        if (typingEl) typingEl.remove();
+
+        if (res.ok) {
+          const data = await res.json();
+          let responseText = data.text || '';
+
+          // Check for AI-driven story draft update
+          const updateMatch = responseText.match(/```json:story_update([\s\S]*?)```/);
+          if (updateMatch) {
+            try {
+              const updatedStory = JSON.parse(updateMatch[1].trim());
+              populateStoryCanvas(updatedStory);
+              const drawer = document.getElementById('storyCanvasDrawer');
+              if (!drawer.classList.contains('open')) {
+                drawer.classList.add('open');
+              }
+              responseText = responseText.replace(updateMatch[0], `\n\n> 📰 **Story Canvas Updated by Bot** — Direct revisions applied to draft \`${updatedStory.subject}\` ([View in Story Canvas](javascript:toggleStoryCanvas())).`).trim();
+            } catch (err) {
+              console.warn('Failed to parse story_update JSON:', err);
+            }
+          }
+
+          const msgIdx = activeThread.messages.length;
+          appendMessage('assistant', formatMarkdown(responseText), data.thought, data.coords, null, responseText, msgIdx, data.retrieved_audits, data.retrieved_archives, data.usage);
+
+          activeThread.messages.push({
+            role: 'model',
+            content: responseText,
+            thought: data.thought,
+            coords: data.coords,
+            usage: data.usage,
+            retrieved_audits: data.retrieved_audits,
+            retrieved_archives: data.retrieved_archives,
+            timestamp: new Date().toISOString()
+          });
+
+          // Persist session
+          await fetch(`${API_BASE}/session/save`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(currentSessionData)
+          });
+          refreshSessions();
+        } else {
+          const err = await res.json();
+          appendMessage('assistant', `<span style="color: var(--accent-red);">Error: ${err.error || 'Server error'}</span>`);
+        }
+      } catch (e) {
+        const typingEl = document.getElementById('typingIndicator');
+        if (typingEl) typingEl.remove();
+        appendMessage('assistant', `<span style="color: var(--accent-red);">Connection failed: ${e}</span>`);
+      }
+    }
+
+    function sendSuggestion(text) {
+      sendMessage(text);
+    }
+
+    /* Live Search for Audits & Archives */
+    async function searchAuditsLive() {
+      const q = document.getElementById('auditSearchInput').value.trim();
+      const list = document.getElementById('auditResultsList');
+      try {
+        const res = await fetch(`${API_BASE}/audits/search?q=${encodeURIComponent(q || 'policy')}`);
+        if (res.ok) {
+          const cards = await res.json();
+          list.innerHTML = '';
+          cards.forEach(c => {
+            const card = document.createElement('div');
+            card.className = 'session-item';
+            card.innerHTML = `
+              <div style="font-size: 0.78rem; font-weight: 600; color: #fff;">${c.subject}</div>
+              <div style="font-size: 0.68rem; color: var(--accent-cyan); font-family: monospace;">Claim: (${c.claim_u}, ${c.claim_psi}) → Real: (${c.real_u}, ${c.real_psi})</div>
+            `;
+            card.onclick = () => sendMessage(`Inspect audit for: ${c.subject}`);
+            list.appendChild(card);
+          });
+        }
+      } catch (e) {}
+    }
+
+    /* Multi-Select Message Mode */
+    let isMultiSelectMode = false;
+    let selectedMessagesList = [];
+
+    function toggleMultiSelectMode() {
+      isMultiSelectMode = !isMultiSelectMode;
+      const container = document.getElementById('messagesContainer');
+      const btn = document.getElementById('btnMultiSelect');
+      if (isMultiSelectMode) {
+        container.classList.add('multi-select-mode');
+        btn.style.background = 'var(--accent-cyan)';
+        btn.style.color = '#000';
+        btn.innerText = '✕ Done Selecting';
+      } else {
+        container.classList.remove('multi-select-mode');
+        btn.style.background = 'rgba(6, 182, 212, 0.15)';
+        btn.style.color = 'var(--accent-cyan)';
+        btn.innerText = '☑ Multi-Select';
+        clearSelectedMessages();
+      }
+      updateMultiSelectBar();
+    }
+
+    function onMessageSelectChange(msgDiv, text, isChecked) {
+      if (isChecked) {
+        msgDiv.classList.add('selected-msg');
+        selectedMessagesList.push({ el: msgDiv, text: text });
+      } else {
+        msgDiv.classList.remove('selected-msg');
+        selectedMessagesList = selectedMessagesList.filter(item => item.el !== msgDiv);
+      }
+      updateMultiSelectBar();
+    }
+
+    function updateMultiSelectBar() {
+      const bar = document.getElementById('multiSelectBar');
+      const countEl = document.getElementById('selectedCountText');
+      if (selectedMessagesList.length > 0) {
+        bar.style.display = 'flex';
+        countEl.innerText = `${selectedMessagesList.length} Selected`;
+      } else {
+        bar.style.display = isMultiSelectMode ? 'flex' : 'none';
+        countEl.innerText = `0 Selected`;
+      }
+    }
+
+    function clearSelectedMessages() {
+      selectedMessagesList.forEach(item => {
+        item.el.classList.remove('selected-msg');
+        const chk = item.el.querySelector('.msg-select-check');
+        if (chk) chk.checked = false;
+      });
+      selectedMessagesList = [];
+      updateMultiSelectBar();
+      if (!isMultiSelectMode) {
+        document.getElementById('multiSelectBar').style.display = 'none';
+      }
+    }
+
+    function combineSelectedToInput() {
+      if (selectedMessagesList.length === 0) return;
+      const combined = selectedMessagesList.map((item, i) => `[Point ${i+1}]: ${item.text}`).join('\n\n');
+      const input = document.getElementById('userInput');
+      input.value = `Regarding these selected points:\n\n${combined}\n\n`;
+      input.focus();
+      toggleMultiSelectMode();
+    }
+
+    function draftStoryFromSelected() {
+      if (selectedMessagesList.length === 0) {
+        showToast('Please select at least one message using the checkboxes.', 'warn');
+        return;
+      }
+      const combined = selectedMessagesList.map((item, i) => `[Point ${i+1}]: ${item.text}`).join('\n\n');
+      const prompt = `Draft a complete 13-post Multi-Aspect Aletheia story thread and source news article synthesized from these selected conversation points:\n\n${combined}`;
+      toggleMultiSelectMode();
+      sendMessage(prompt);
+    }
+
+    /* Archive Browser & Document Reader */
+    let cachedArchivesList = [];
+    let activeArchiveDoc = null;
+    let selectedArchiveCategory = '';
+
+    async function loadArchivesList() {
+      try {
+        const res = await fetch(`${API_BASE}/archives/list`);
+        if (res.ok) {
+          const data = await res.json();
+          cachedArchivesList = data.archives || [];
+          renderArchivesList(cachedArchivesList);
+        }
+      } catch (e) {
+        console.warn('Failed to load archives list:', e);
+      }
+    }
+
+    function renderArchivesList(list) {
+      const container = document.getElementById('archiveResultsList');
+      if (!container) return;
+      container.innerHTML = '';
+
+      if (!list || list.length === 0) {
+        container.innerHTML = '<div style="font-size: 0.72rem; color: var(--text-muted); padding: 10px;">No archive documents found matching filter.</div>';
+        return;
+      }
+
+      list.forEach(doc => {
+        const card = document.createElement('div');
+        card.className = 'archive-card';
+        card.innerHTML = `
+          <div class="archive-card-header">
+            <strong style="font-size: 0.78rem; color: #fff; line-height: 1.3;">${doc.title}</strong>
+            <span class="archive-category-badge">${doc.category}</span>
+          </div>
+          <div style="font-size: 0.68rem; color: var(--text-muted); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+            ${doc.preview || 'No preview available.'}
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.64rem; color: var(--text-muted); font-family: monospace; margin-top: 4px;">
+            <span>📅 ${doc.date_formatted} · ${doc.size_formatted}</span>
+            <div style="display: flex; gap: 4px;">
+              <button class="msg-act-btn" onclick="event.stopPropagation(); openArchiveReader('${doc.filename}')" style="padding: 2px 5px; font-size: 0.62rem;" title="View raw source text">📄 Raw</button>
+              <button class="msg-act-btn" onclick="event.stopPropagation(); openArchiveAsInteractiveChat('${doc.session_id}', '${doc.filename}')" style="padding: 2px 6px; font-size: 0.62rem; color: var(--accent-cyan); font-weight: 700;" title="Load into interactive multi-turn chat viewer">💬 View Chat</button>
+            </div>
+          </div>
+        `;
+        card.onclick = () => openArchiveAsInteractiveChat(doc.session_id, doc.filename);
+        container.appendChild(card);
+      });
+    }
+
+    async function openArchiveAsInteractiveChat(sessionId, filename) {
+      if (!sessionId) return;
+      try {
+        const res = await fetch(`${API_BASE}/archives/session?id=${encodeURIComponent(sessionId)}&filename=${encodeURIComponent(filename || '')}`);
+        if (res.ok) {
+          currentSessionData = await res.json();
+          currentSessionId = currentSessionData.id || sessionId;
+          currentThreadId = currentSessionData.active_thread_id || 'main';
+          
+          updateThreadNav();
+          renderActiveThreadMessages();
+          
+          // Close reader drawer if open
+          const reader = document.getElementById('archiveReaderDrawer');
+          if (reader && reader.classList.contains('open')) {
+            reader.classList.remove('open');
+          }
+        } else {
+          showToast('Failed to load parsed chat session.', 'error');
+        }
+      } catch (e) {
+        showToast('Error opening archive chat: ' + e, 'error');
+      }
+    }
+
+    function filterArchivesList() {
+      const q = (document.getElementById('archiveSearchInput')?.value || '').toLowerCase().trim();
+      const filtered = cachedArchivesList.filter(doc => {
+        const matchesCat = !selectedArchiveCategory || doc.category === selectedArchiveCategory;
+        const matchesQ = !q || doc.title.toLowerCase().includes(q) || doc.filename.toLowerCase().includes(q) || (doc.preview && doc.preview.toLowerCase().includes(q));
+        return matchesCat && matchesQ;
+      });
+      renderArchivesList(filtered);
+    }
+
+    function selectArchiveCategory(cat) {
+      selectedArchiveCategory = cat;
+      const pills = document.querySelectorAll('#archiveCategoryPills .preset-pill');
+      pills.forEach(p => {
+        if ((!cat && p.innerText === 'All') || (cat && p.innerText.includes(cat.split(' ')[1] || cat))) {
+          p.classList.add('active');
+        } else {
+          p.classList.remove('active');
+        }
+      });
+      filterArchivesList();
+    }
+
+    async function openArchiveReader(filename) {
+      if (!filename) return;
+      try {
+        const res = await fetch(`${API_BASE}/archives/get?filename=${encodeURIComponent(filename)}`);
+        if (res.ok) {
+          activeArchiveDoc = await res.json();
+          document.getElementById('archiveReaderTitle').innerText = activeArchiveDoc.title;
+          document.getElementById('archiveReaderMeta').innerText = `${activeArchiveDoc.category} · ${(activeArchiveDoc.word_count || 0).toLocaleString()} words · ${activeArchiveDoc.date_formatted}`;
+          document.getElementById('archiveReaderContent').innerText = activeArchiveDoc.content;
+
+          const d = document.getElementById('archiveReaderDrawer');
+          if (!d.classList.contains('open')) {
+            d.classList.add('open');
+          }
+        }
+      } catch (e) {
+        showToast('Failed to read archive document: ' + e, 'error');
+      }
+    }
+
+    function toggleArchiveReaderDrawer() {
+      const d = document.getElementById('archiveReaderDrawer');
+      d.classList.toggle('open');
+    }
+
+    function draftStoryFromActiveArchive() {
+      if (!activeArchiveDoc) return;
+      const title = activeArchiveDoc.title;
+      const excerpt = activeArchiveDoc.content.substring(0, 4000);
+      const prompt = `Draft a comprehensive 14-post Aletheia story analyzing the core thesis and empirical trajectory of the archive document "${title}":\n\n${excerpt}`;
+      toggleArchiveReaderDrawer();
+      sendMessage(prompt);
+    }
+
+    function discussActiveArchiveInChat() {
+      if (!activeArchiveDoc) return;
+      const filename = activeArchiveDoc.filename;
+      toggleArchiveReaderDrawer();
+      sendMessage(`Recall and discuss theoretical context from archive log: ${filename}`);
+    }
+
+    /* Attachments */
+    function handleFileSelect(e) {
+      const files = Array.from(e.target.files);
+      files.forEach(f => {
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          currentAttachments.push({
+            name: f.name,
+            type: f.type,
+            data: evt.target.result.split(',')[1]
+          });
+          const bar = document.getElementById('attachmentPreviewBar');
+          bar.style.display = 'flex';
+          bar.innerHTML += `<div class="attachment-chip">📄 ${f.name}</div>`;
+        };
+        reader.readAsDataURL(f);
+      });
+    }
+
+    /* Drag-and-Drop Model Priority Manager */
+    const DEFAULT_MODEL_CHAIN = [
+      { id: "vertex:gemini-3.7-flash", name: "Gemini 3.7 Flash", provider: "vertex", inputPrice: 0.75, outputPrice: 3.75, enabled: true },
+      { id: "vertex:gemini-3.6-flash", name: "Gemini 3.6 Flash", provider: "vertex", inputPrice: 1.50, outputPrice: 7.50, enabled: true },
+      { id: "vertex:gemini-3.5-flash", name: "Gemini 3.5 Flash", provider: "vertex", inputPrice: 1.50, outputPrice: 9.00, enabled: true },
+      { id: "vertex:gemini-3.5-flash-lite", name: "Gemini 3.5 Flash-Lite", provider: "vertex", inputPrice: 0.25, outputPrice: 1.50, enabled: true },
+      { id: "vertex:gemini-3.1-flash-lite", name: "Gemini 3.1 Flash-Lite", provider: "vertex", inputPrice: 0.25, outputPrice: 1.50, enabled: true },
+      { id: "vertex:gemini-2.5-flash", name: "Gemini 2.5 Flash", provider: "vertex", inputPrice: 0.30, outputPrice: 2.50, enabled: true },
+      { id: "vertex:gemini-2.5-flash-lite", name: "Gemini 2.5 Flash-Lite", provider: "vertex", inputPrice: 0.10, outputPrice: 0.40, enabled: true },
+      { id: "gemini-3.7-flash", name: "Gemini 3.7 Flash", provider: "studio", inputPrice: 0.75, outputPrice: 3.75, enabled: true },
+      { id: "gemini-3.6-flash", name: "Gemini 3.6 Flash", provider: "studio", inputPrice: 1.50, outputPrice: 7.50, enabled: false },
+      { id: "gemini-3.5-flash", name: "Gemini 3.5 Flash", provider: "studio", inputPrice: 1.50, outputPrice: 9.00, enabled: false },
+      { id: "gemini-3.5-flash-lite", name: "Gemini 3.5 Flash-Lite", provider: "studio", inputPrice: 0.25, outputPrice: 1.50, enabled: false },
+      { id: "gemini-3.1-flash-lite", name: "Gemini 3.1 Flash-Lite", provider: "studio", inputPrice: 0.25, outputPrice: 1.50, enabled: false },
+      { id: "gemini-3-flash-preview", name: "Gemini 3 Flash Preview", provider: "studio", inputPrice: 0.50, outputPrice: 3.00, enabled: false },
+      { id: "gemini-2.5-flash", name: "Gemini 2.5 Flash", provider: "studio", inputPrice: 0.30, outputPrice: 2.50, enabled: false },
+      { id: "gemini-2.5-flash-lite", name: "Gemini 2.5 Flash-Lite", provider: "studio", inputPrice: 0.10, outputPrice: 0.40, enabled: false },
+      { id: "vertex:gemini-2.5-pro", name: "Gemini 2.5 Pro", provider: "vertex", inputPrice: 1.25, outputPrice: 5.00, enabled: false },
+      { id: "gemini-2.5-pro", name: "Gemini 2.5 Pro", provider: "studio", inputPrice: 1.25, outputPrice: 5.00, enabled: false }
+    ];
+
+    let currentModelChain = [];
+    let draggedItemIdx = null;
+
+    function initModelChain() {
+      try {
+        const saved = localStorage.getItem('aletheia_fallback_chain_v2');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            currentModelChain = parsed;
+            renderFallbackDragList();
+            return;
+          }
+        }
+      } catch (e) {}
+      currentModelChain = JSON.parse(JSON.stringify(DEFAULT_MODEL_CHAIN));
+      renderFallbackDragList();
+    }
+
+    function saveModelChain() {
+      try {
+        localStorage.setItem('aletheia_fallback_chain_v2', JSON.stringify(currentModelChain));
+      } catch (e) {}
+      renderFallbackDragList();
+    }
+
+    function getActiveFallbackSequence() {
+      const active = currentModelChain.filter(m => m.enabled).map(m => m.id);
+      return active.length > 0 ? active.join(',') : 'vertex:gemini-3.7-flash,gemini-3.5-flash';
+    }
+
+    function renderFallbackDragList() {
+      const container = document.getElementById('fallbackDragList');
+      if (!container) return;
+      container.innerHTML = '';
+
+      let rank = 1;
+      let activeCount = 0;
+
+      currentModelChain.forEach((item, idx) => {
+        if (item.enabled) activeCount++;
+        const card = document.createElement('div');
+        card.className = `fallback-item ${item.enabled ? '' : 'disabled'}`;
+        card.draggable = true;
+        card.dataset.index = idx;
+
+        const isRank1 = item.enabled && (rank === 1);
+        const rankLabel = item.enabled ? `#${rank++}` : '—';
+        const providerClass = item.provider === 'vertex' ? 'provider-vertex' : 'provider-studio';
+        const providerName = item.provider === 'vertex' ? 'Vertex AI' : 'AI Studio';
+
+        card.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
+            <span class="fallback-handle" title="Drag to reorder">⋮⋮</span>
+            <span class="fallback-rank ${isRank1 ? 'rank-1' : ''}">${rankLabel}</span>
+            <input type="checkbox" ${item.enabled ? 'checked' : ''} onchange="toggleFallbackItem(${idx}, this.checked)" title="Enable/disable in fallback sequence" style="cursor: pointer;">
+            <div style="display: flex; flex-direction: column; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <strong style="font-size: 0.78rem; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</strong>
+                <span class="provider-tag ${providerClass}">${providerName}</span>
+              </div>
+              <span style="font-size: 0.65rem; color: var(--text-muted); font-family: monospace;">$${item.inputPrice.toFixed(2)} in / $${item.outputPrice.toFixed(2)} out</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 3px;">
+            <button type="button" class="msg-act-btn" onclick="moveFallbackItem(${idx}, -1)" ${idx === 0 ? 'disabled' : ''} style="padding: 2px 6px; font-size: 0.65rem;" title="Move Up">▲</button>
+            <button type="button" class="msg-act-btn" onclick="moveFallbackItem(${idx}, 1)" ${idx === currentModelChain.length - 1 ? 'disabled' : ''} style="padding: 2px 6px; font-size: 0.65rem;" title="Move Down">▼</button>
+          </div>
+        `;
+
+        // Drag events
+        card.addEventListener('dragstart', (e) => {
+          draggedItemIdx = idx;
+          card.classList.add('dragging');
+          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('text/plain', idx);
+        });
+
+        card.addEventListener('dragend', () => {
+          card.classList.remove('dragging');
+          document.querySelectorAll('.fallback-item').forEach(el => el.classList.remove('drag-over'));
+        });
+
+        card.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = 'move';
+          card.classList.add('drag-over');
+        });
+
+        card.addEventListener('dragleave', () => {
+          card.classList.remove('drag-over');
+        });
+
+        card.addEventListener('drop', (e) => {
+          e.preventDefault();
+          card.classList.remove('drag-over');
+          const targetIdx = idx;
+          if (draggedItemIdx !== null && draggedItemIdx !== targetIdx) {
+            const movedItem = currentModelChain.splice(draggedItemIdx, 1)[0];
+            currentModelChain.splice(targetIdx, 0, movedItem);
+            saveModelChain();
+          }
+        });
+
+        container.appendChild(card);
+      });
+
+      const badge = document.getElementById('activeModelsCountBadge');
+      if (badge) {
+        badge.innerText = `${activeCount} Models Active`;
+      }
+    }
+
+    function toggleFallbackItem(idx, isChecked) {
+      if (currentModelChain[idx]) {
+        currentModelChain[idx].enabled = isChecked;
+        saveModelChain();
+      }
+    }
+
+    function moveFallbackItem(idx, direction) {
+      const targetIdx = idx + direction;
+      if (targetIdx < 0 || targetIdx >= currentModelChain.length) return;
+      const item = currentModelChain.splice(idx, 1)[0];
+      currentModelChain.splice(targetIdx, 0, item);
+      saveModelChain();
+    }
+
+    function applyFallbackPreset(preset) {
+      if (preset === 'balanced') {
+        const order = ['vertex:gemini-3.7-flash', 'vertex:gemini-3.6-flash', 'vertex:gemini-3.5-flash', 'vertex:gemini-2.5-flash', 'vertex:gemini-3.1-flash-lite', 'vertex:gemini-3.5-flash-lite'];
+        currentModelChain.forEach(m => {
+          m.enabled = order.includes(m.id);
+        });
+        currentModelChain.sort((a, b) => {
+          const idxA = order.indexOf(a.id);
+          const idxB = order.indexOf(b.id);
+          return (idxA !== -1 ? idxA : 99) - (idxB !== -1 ? idxB : 99);
+        });
+      } else if (preset === 'quality') {
+        const order = ['vertex:gemini-3.7-flash', 'vertex:gemini-2.5-pro', 'gemini-2.5-pro', 'vertex:gemini-3.6-flash', 'gemini-3.7-flash'];
+        currentModelChain.forEach(m => {
+          m.enabled = order.includes(m.id);
+        });
+        currentModelChain.sort((a, b) => {
+          const idxA = order.indexOf(a.id);
+          const idxB = order.indexOf(b.id);
+          return (idxA !== -1 ? idxA : 99) - (idxB !== -1 ? idxB : 99);
+        });
+      } else if (preset === 'economy') {
+        const order = ['vertex:gemini-2.5-flash-lite', 'gemini-2.5-flash-lite', 'vertex:gemini-3.1-flash-lite', 'vertex:gemini-3.5-flash-lite', 'vertex:gemini-2.5-flash'];
+        currentModelChain.forEach(m => {
+          m.enabled = order.includes(m.id);
+        });
+        currentModelChain.sort((a, b) => {
+          const idxA = order.indexOf(a.id);
+          const idxB = order.indexOf(b.id);
+          return (idxA !== -1 ? idxA : 99) - (idxB !== -1 ? idxB : 99);
+        });
+      } else if (preset === 'studio') {
+        currentModelChain.forEach(m => {
+          m.enabled = (m.provider === 'studio');
+        });
+      } else if (preset === 'vertex') {
+        currentModelChain.forEach(m => {
+          m.enabled = (m.provider === 'vertex');
+        });
+      }
+      saveModelChain();
+    }
+
+    function toggleSettingsDrawer() {
+      const d = document.getElementById('settingsDrawer');
+      d.classList.toggle('open');
+    }
+
+    function toggleFallbackDrawer() {
+      const d = document.getElementById('fallbackDrawer');
+      d.classList.toggle('open');
+    }
+
+    function exportChatMarkdown() {
+      if (!currentSessionData) return;
+      const activeThread = currentSessionData.threads[currentThreadId] || {};
+      let md = `# ${currentSessionData.title || 'Chat Session'}\n\n`;
+      md += `**Branch:** ${activeThread.name || 'Main'}\n`;
+      md += `**Exported:** ${new Date().toISOString()}\n\n---\n\n`;
+
+      (activeThread.messages || []).forEach(m => {
+        md += `### ${m.role === 'user' ? 'Operator' : 'Aletheia'}\n`;
+        md += `${m.content}\n\n`;
+      });
+
+      const blob = new Blob([md], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `chat_export_${currentThreadId}_${new Date().toISOString().substring(0,10)}.md`;
+      a.click();
+    }
+
+    /* Story Studio Canvas Management */
+    let currentCanvasStory = null;
+
+    function toggleStoryCanvas() {
+      const d = document.getElementById('storyCanvasDrawer');
+      d.classList.toggle('open');
+      if (d.classList.contains('open') && !currentCanvasStory) {
+        initEmptyStoryCanvas();
+      }
+    }
+
+    function initEmptyStoryCanvas() {
+      const emptyPosts = Array(14).fill('');
+      populateStoryCanvas({
+        id: 'new-story-' + Math.random().toString(36).substring(2, 7),
+        subject: '',
+        link: '',
+        claim_u: 0.8,
+        claim_psi: 0.9,
+        real_u: -0.5,
+        real_psi: -0.3,
+        actors: [],
+        posts: emptyPosts
+      });
+    }
+
+    function openGeneratedArticle() {
+      const link = (document.getElementById('canvasLink')?.value || '').trim();
+      if (!link) {
+        showToast('No source article URL set for this story.', 'warn');
+        return;
+      }
+      window.open(link, '_blank');
+    }
+
+    async function draftStoryFromMessage(input) {
+      let rawText = input;
+      try {
+        if (typeof input === 'string' && input.includes('%')) {
+          rawText = decodeURIComponent(input);
+        }
+      } catch (e) {
+        rawText = input;
+      }
+      const model = document.getElementById('modelSelect').value;
+      
+      // Open canvas and show loading message
+      const drawer = document.getElementById('storyCanvasDrawer');
+      drawer.classList.add('open');
+      document.getElementById('canvasSubject').value = 'Compiling story thread & news article with AI...';
+      document.getElementById('canvasPostsContainer').innerHTML = '<div style="padding: 24px; text-align: center; color: var(--accent-cyan); font-family: monospace;">⚡ Compiling 14-post Multi-Aspect thread & news article...</div>';
+
+      try {
+        const res = await fetch(`${API_BASE}/story/generate_from_chat`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: rawText, model: model })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.story) {
+            populateStoryCanvas(data.story);
+            showToast('14-post Multi-Aspect thread & news article compiled!', 'success');
+          } else {
+            showToast('Failed to parse generated story.', 'error');
+          }
+        } else {
+          const err = await res.json();
+          showToast('Error generating story: ' + (err.error || 'Server error'), 'error');
+        }
+      } catch (e) {
+        showToast('Connection failed: ' + e, 'error');
+      }
+    }
+
+    function populateStoryCanvas(story) {
+      currentCanvasStory = story;
+      document.getElementById('canvasSubject').value = story.subject || '';
+      document.getElementById('canvasLink').value = story.link || '';
+      document.getElementById('canvasClaimU').value = story.claim_u !== undefined ? story.claim_u : 0.8;
+      document.getElementById('canvasClaimPsi').value = story.claim_psi !== undefined ? story.claim_psi : 0.9;
+      document.getElementById('canvasRealU').value = story.real_u !== undefined ? story.real_u : -0.5;
+      document.getElementById('canvasRealPsi').value = story.real_psi !== undefined ? story.real_psi : -0.3;
+      document.getElementById('canvasActors').value = (story.actors || []).join(', ');
+
+      const container = document.getElementById('canvasPostsContainer');
+      container.innerHTML = '';
+
+      const postLabels = [
+        "0. Hook & Evidence (#hashtags)",
+        "1. The Stated Claim",
+        "2. The Actual Reality",
+        "3. Verdict & Integrity Metrics",
+        "4. Sub-Audits Breakdown",
+        "5. What's Happening (Context)",
+        "6. The Nuance (Bright Side / Poison)",
+        "7. The Breakdown & Plane Error",
+        "8. Social Physics Analysis",
+        "9. The Trajectory Geodesic",
+        "10. The Unavoidables (Truth & Lie)",
+        "11. Alethekanon (Analytical)",
+        "12. Awwthekanon (Empathetic)",
+        "13. Brothekanon (Casual)"
+      ];
+
+      const rawPosts = story.posts || [];
+      const posts = rawPosts.map(p => (p || '').replace(/^(?:Post\s*\d+[:.]?\s*|\d+[:.]\s*)/i, '').trim());
+      for (let i = 0; i < 14; i++) {
+        const text = posts[i] || '';
+        const card = document.createElement('div');
+        card.className = 'session-item';
+        card.style.cursor = 'default';
+        card.style.gap = '6px';
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <strong style="font-size: 0.75rem; color: var(--accent-cyan);">${postLabels[i] || `Post ${i+1}`}</strong>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <button type="button" class="msg-act-btn" onclick="expandSinglePostToMax(${i})" style="color: var(--accent-amber); font-size: 0.68rem;" title="Expand this single post to ~285 chars">⚡ Maximize</button>
+              <span id="charCount_${i}" style="font-size: 0.7rem; font-family: monospace; color: ${text.length > 290 ? 'var(--accent-red)' : 'var(--text-muted)'};">${text.length}/290 chars</span>
+            </div>
+          </div>
+          <textarea class="form-control" style="min-height: 70px; font-size: 0.8rem; line-height: 1.4;" oninput="updatePostCharCount(${i}, this)">${text}</textarea>
+        `;
+        container.appendChild(card);
+      }
+      try {
+        localStorage.setItem('aletheia_active_canvas', JSON.stringify(story));
+      } catch(e) {}
+    }
+
+    function updatePostCharCount(idx, textarea) {
+      const len = textarea.value.length;
+      const countEl = document.getElementById(`charCount_${idx}`);
+      if (countEl) {
+        countEl.innerText = `${len}/290 chars`;
+        countEl.style.color = (len > 290) ? 'var(--accent-red)' : 'var(--text-muted)';
+      }
+      if (currentCanvasStory && currentCanvasStory.posts) {
+        currentCanvasStory.posts[idx] = textarea.value;
+        try {
+          localStorage.setItem('aletheia_active_canvas', JSON.stringify(getCanvasStoryPayload()));
+        } catch(e) {}
+      }
+    }
+
+    function getCanvasStoryPayload() {
+      const textareas = document.querySelectorAll('#canvasPostsContainer textarea');
+      const posts = Array.from(textareas).map(t => t.value.trim());
+      const rawActors = document.getElementById('canvasActors').value;
+      const actors = rawActors.split(',').map(a => a.trim()).filter(a => a.length > 0);
+
+      const subject = document.getElementById('canvasSubject').value.trim();
+      let slug = currentCanvasStory?.id || '';
+      if (!slug || slug.startsWith('new-story')) {
+        slug = subject.toLowerCase().replace(/[^a-z0-9_-]/g, '-').substring(0, 40);
+      }
+
+      return {
+        id: slug,
+        subject: subject,
+        link: document.getElementById('canvasLink').value.trim(),
+        claim_u: parseFloat(document.getElementById('canvasClaimU').value) || 0.0,
+        claim_psi: parseFloat(document.getElementById('canvasClaimPsi').value) || 0.0,
+        real_u: parseFloat(document.getElementById('canvasRealU').value) || 0.0,
+        real_psi: parseFloat(document.getElementById('canvasRealPsi').value) || 0.0,
+        actors: actors,
+        posts: posts
+      };
+    }
+
+    async function saveDraftStoryFromCanvas() {
+      const story = getCanvasStoryPayload();
+      if (!story.subject) {
+        showToast('Please enter a headline subject for the story.', 'warn');
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API_BASE}/story/save_draft`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ story: story })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          showToast(`Saved draft to stories/${data.filename}`, 'success');
+        } else {
+          const err = await res.json();
+          showToast('Failed to save draft: ' + (err.error || 'Server error'), 'error');
+        }
+      } catch (e) {
+        showToast('Connection error: ' + e, 'error');
+      }
+    }
+
+    function copyStoryCanvasJSON() {
+      const story = getCanvasStoryPayload();
+      const jsonStr = JSON.stringify([story], null, 2);
+      navigator.clipboard.writeText(jsonStr).then(() => {
+        showToast('Copied complete thread JSON to clipboard!', 'success');
+      });
+    }
+
+    function setCanonicalVercelUrl() {
+      const subject = document.getElementById('canvasSubject').value.trim();
+      let slug = currentCanvasStory?.id || '';
+      if (!slug || slug.startsWith('new-story')) {
+        slug = subject.toLowerCase().replace(/[^a-z0-9_-]/g, '-').substring(0, 40);
+      }
+      if (!slug) {
+        showToast('Please enter a Subject headline first.', 'warn');
+        return;
+      }
+      const canonical = `https://wwsutru.vercel.app/?story=${slug}`;
+      document.getElementById('canvasLink').value = canonical;
+      if (currentCanvasStory) currentCanvasStory.link = canonical;
+    }
+
+    async function expandAllPostsToMax() {
+      const story = getCanvasStoryPayload();
+      if (!story.subject) {
+        showToast('Please enter a headline subject first.', 'warn');
+        return;
+      }
+      const model = document.getElementById('modelSelect').value;
+      const statusEl = document.getElementById('canvasPostsStatus');
+      if (statusEl) statusEl.innerText = '⚡ AI Maximizing all 14 posts to ~285 chars...';
+
+      try {
+        const res = await fetch(`${API_BASE}/story/expand_posts`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ story: story, model: model })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.story) {
+            populateStoryCanvas(data.story);
+            if (statusEl) statusEl.innerText = '✅ All 14 posts maximized to ~285 chars!';
+            showToast('All 14 posts maximized to ~285 chars!', 'success');
+          }
+        } else {
+          const err = await res.json();
+          showToast('Expansion failed: ' + (err.error || 'Server error'), 'error');
+        }
+      } catch (e) {
+        showToast('Connection error: ' + e, 'error');
+      }
+    }
+
+    async function expandSinglePostToMax(idx) {
+      const story = getCanvasStoryPayload();
+      const model = document.getElementById('modelSelect').value;
+      const countEl = document.getElementById(`charCount_${idx}`);
+      if (countEl) countEl.innerText = '⚡ Maximizing...';
+
+      try {
+        const res = await fetch(`${API_BASE}/story/expand_posts`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ story: story, model: model, post_index: idx })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.story) {
+            populateStoryCanvas(data.story);
+            showToast(`Post ${idx+1} maximized!`, 'success');
+          }
+        } else {
+          const err = await res.json();
+          showToast('Expansion failed: ' + (err.error || 'Server error'), 'error');
+        }
+      } catch (e) {
+        showToast('Connection error: ' + e, 'error');
+      }
+    }
+
+    async function refreshDraftsList() {
+      const sel = document.getElementById('canvasDraftSelector');
+      if (!sel) return;
+      try {
+        const res = await fetch(`${API_BASE}/story/drafts/list`);
+        if (res.ok) {
+          const drafts = await res.json();
+          sel.innerHTML = '<option value="">-- Pick an existing draft story --</option>';
+          drafts.forEach(d => {
+            const opt = document.createElement('option');
+            opt.value = d.filename;
+            opt.innerText = `${d.subject} (${d.filename})`;
+            sel.appendChild(opt);
+          });
+        }
+      } catch (e) {
+        console.warn('Failed to load drafts list:', e);
+      }
+    }
+
+    async function loadDraftIntoCanvas(filename) {
+      if (!filename) return;
+      try {
+        const res = await fetch(`${API_BASE}/story/drafts/get?filename=${encodeURIComponent(filename)}`);
+        if (res.ok) {
+          const story = await res.json();
+          populateStoryCanvas(story);
+          showToast(`Loaded draft: ${story.subject || filename}`, 'success');
+        } else {
+          showToast('Failed to load draft file.', 'error');
+        }
+      } catch (e) {
+        showToast('Error loading draft: ' + e, 'error');
+      }
+    }
+
+    // Load drafts & active canvas on startup
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(refreshDraftsList, 500);
+      setTimeout(loadArchivesList, 600);
+      initModelChain();
+      try {
+        const savedFallback = localStorage.getItem('aletheia_custom_fallback');
+        if (savedFallback && document.getElementById('customFallbackList')) {
+          document.getElementById('customFallbackList').value = savedFallback;
+        }
+        const savedInst = localStorage.getItem('aletheia_custom_inst');
+        if (savedInst && document.getElementById('customInstText')) {
+          document.getElementById('customInstText').value = savedInst;
+        }
+        const savedTemp = localStorage.getItem('aletheia_temp');
+        if (savedTemp && document.getElementById('tempSlider')) {
+          document.getElementById('tempSlider').value = savedTemp;
+          document.getElementById('tempVal').innerText = savedTemp;
+        }
+        const savedCanvas = localStorage.getItem('aletheia_active_canvas');
+        if (savedCanvas) {
+          const parsedStory = JSON.parse(savedCanvas);
+          if (parsedStory && (parsedStory.subject || (parsedStory.posts && parsedStory.posts.length > 0))) {
+            populateStoryCanvas(parsedStory);
+          }
+        }
+      } catch (e) {}
+    });
+  </script>
+</body>
+</html>

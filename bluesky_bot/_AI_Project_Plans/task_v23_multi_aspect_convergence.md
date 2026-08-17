@@ -1,0 +1,5 @@
+- [x] Patch google_ai_studio_one_shot.py to request the aspects array (Item 27) and update the example config
+- [x] Update transpose_flat_to_json to parse the new aspects array into the story dictionary
+- [x] Implement average force aggregation and sub-coordinate calculations in rebuild_registries_son.py
+- [x] Run test_banlist.py to verify imports and compile status
+- [x] Run a test dry-run batch call on the Sudan story to verify granular decimal coordinates are successfully generated

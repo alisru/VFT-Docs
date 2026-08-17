@@ -487,6 +487,7 @@
               <button class="clear-btn" data-shape-type="group" style="font-size:10px; padding:2px 6px; margin:0;">+ Group</button>
               <button class="clear-btn" data-shape-type="triangle" style="font-size:10px; padding:2px 6px; margin:0;">+ Triangle</button>
               <button class="clear-btn" data-shape-type="polygon" style="font-size:10px; padding:2px 6px; margin:0;">+ Polygon</button>
+              <button class="clear-btn" data-shape-type="minkowski" style="font-size:10px; padding:2px 6px; margin:0;">+ Minkowski</button>
             </div>
           </div>
           <div style="font-size:9px; color:var(--muted); line-height:1.4; margin-bottom:4px;">All are tracked like built-in axes — they get their own [dir+, mag, dir-] readout in Axis Projections above. A curve's control point (yellow handle) bends it after placing; circles/rects use perimeter position for their child label. "Group" drops a mini sub-hegemony (4 separate, individually-tracked edges — Pr↔Rd, Rd↔Rg, Rg↔Co, Co↔Pr) that drags and deletes as one unit.</div>
@@ -940,19 +941,81 @@ const RECT_SIDE_DEFS = [
   { from: 'Co', to: 'Pr', label: 'Co↔Pr' }
 ];
 
+const TRIANGLE_SIDE_DEFS = [
+  { from: 0, to: 1, label: 'Arm A (0→1)' },
+  { from: 0, to: 2, label: 'Arm B (0→2)' },
+  { from: 1, to: 2, label: 'Hypotenuse (1→2)' }
+];
+
+const MINKOWSKI_SIDE_DEFS = [
+  { label: 'Worldline' },
+  { label: 'Hypersurface' },
+  { label: 'Light Cone L' },
+  { label: 'Light Cone R' }
+];
+
 // Built-in axes + user-drawn custom axes, merged into one trackable list.
 // Rects auto-expand into their 4 individually-tracked (rotation-aware) sides, named like Group's edges.
+// Triangles auto-expand into their 3 individually-tracked sides.
+// Minkowski diagrams auto-expand into 4 spacetime tracked segments.
 // An axis with `enabled === false` is skipped by projections/tracking but stays visible in the editor list.
 function getAllAxes() {
   const expanded = [];
   CUSTOM_AXES.forEach((a, ai) => {
-    if ((a.type || 'line') === 'rect') {
+    const type = a.type || 'line';
+    if (type === 'rect') {
       const corners = getRectCorners(a);
       RECT_SIDE_DEFS.forEach((sd, si) => {
         expanded.push({
-          name: sd.label,
+          name: a.label ? `${a.label} (${sd.label})` : sd.label,
           x1: corners[sd.from][0], y1: corners[sd.from][1],
           x2: corners[sd.to][0], y2: corners[sd.to][1],
+          color: a.color,
+          enabled: a.enabled !== false && (!a.sideEnabled || a.sideEnabled[si] !== false),
+          __parentRectIdx: ai, __sideIndex: si
+        });
+      });
+    } else if (type === 'triangle' && a.points && a.points.length === 3) {
+      const sideLabels = a.sideLabels || [];
+      const sideColors = a.sideColors || [];
+      TRIANGLE_SIDE_DEFS.forEach((sd, si) => {
+        const sLabel = sideLabels[si] !== undefined ? sideLabels[si] : (a.label ? `${a.label} (${sd.label})` : sd.label);
+        const sColor = sideColors[si] || a.color || '#ffffff';
+        expanded.push({
+          name: sLabel,
+          x1: a.points[sd.from][0], y1: a.points[sd.from][1],
+          x2: a.points[sd.to][0], y2: a.points[sd.to][1],
+          color: sColor,
+          enabled: a.enabled !== false && (!a.sideEnabled || a.sideEnabled[si] !== false),
+          __parentRectIdx: ai, __sideIndex: si
+        });
+      });
+    } else if (type === 'minkowski') {
+      const dx = a.x2 - a.x1, dy = a.y2 - a.y1;
+      const len = Math.hypot(dx, dy) || 1e-6;
+      const sx = dx / len, sy = dy / len;     // Space unit vector (Hypersurface)
+      let tx = -sy, ty = sx;                  // Time unit vector (perpendicular)
+      if (ty < 0) { tx = -tx; ty = -ty; }     // Ensure time vector always points towards positive psi (future)
+      const Ox = (a.x1 + a.x2) / 2;
+      const Oy = (a.y1 + a.y2) / 2;           // Observer Origin (Midpoint)
+
+      const sides = [
+        // Worldline
+        { x1: Ox - tx * len/2, y1: Oy - ty * len/2, x2: Ox + tx * len/2, y2: Oy + ty * len/2 },
+        // Hypersurface (This is the user-drawn line!)
+        { x1: a.x1, y1: a.y1, x2: a.x2, y2: a.y2 },
+        // Light Cone L
+        { x1: Ox - (tx + sx) * len/2, y1: Oy - (ty + sy) * len/2, x2: Ox + (tx + sx) * len/2, y2: Oy + (ty + sy) * len/2 },
+        // Light Cone R
+        { x1: Ox - (tx - sx) * len/2, y1: Oy - (ty - sy) * len/2, x2: Ox + (tx - sx) * len/2, y2: Oy + (ty - sy) * len/2 }
+      ];
+
+      MINKOWSKI_SIDE_DEFS.forEach((sd, si) => {
+        const sideData = sides[si];
+        expanded.push({
+          name: a.label ? `${a.label} (${sd.label})` : sd.label,
+          x1: sideData.x1, y1: sideData.y1,
+          x2: sideData.x2, y2: sideData.y2,
           color: a.color,
           enabled: a.enabled !== false && (!a.sideEnabled || a.sideEnabled[si] !== false),
           __parentRectIdx: ai, __sideIndex: si
@@ -1450,12 +1513,48 @@ function drawCustomAxes(ctx, dpr) {
       c2xPx = c2x; c2yPx = c2y;
     } else if (type === 'triangle' || type === 'polygon') {
       const pts = a.points.map(p => toPixel(p[0], p[1]));
-      ctx.beginPath();
-      ctx.moveTo(pts[0][0], pts[0][1]);
-      for (let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
-      ctx.closePath();
-      if (a.filled) fillWith();
-      ctx.stroke();
+      if (a.filled) {
+        ctx.beginPath();
+        ctx.moveTo(pts[0][0], pts[0][1]);
+        for (let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
+        ctx.closePath();
+        fillWith();
+      }
+      if (type === 'triangle' && pts.length === 3) {
+        const sideColors = a.sideColors || [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+        const edges = [
+          { p1: pts[0], p2: pts[1], col: sideColors[0] || a.color || '#ffffff' },
+          { p1: pts[0], p2: pts[2], col: sideColors[1] || a.color || '#ffffff' },
+          { p1: pts[1], p2: pts[2], col: sideColors[2] || a.color || '#ffffff' }
+        ];
+        edges.forEach(edge => {
+          ctx.beginPath();
+          ctx.moveTo(edge.p1[0], edge.p1[1]);
+          ctx.lineTo(edge.p2[0], edge.p2[1]);
+          ctx.strokeStyle = edge.col;
+          ctx.stroke();
+        });
+      } else {
+        ctx.beginPath();
+        ctx.moveTo(pts[0][0], pts[0][1]);
+        for (let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
+        ctx.closePath();
+        ctx.strokeStyle = a.color || '#ffffff';
+        ctx.stroke();
+      }
+
+      if (type === 'triangle' && a.points.length === 3) {
+        const centroidV = a.points.reduce((s, p) => s + p[0], 0) / 3;
+        const centroidPsi = a.points.reduce((s, p) => s + p[1], 0) / 3;
+        a.points.forEach((p, vi) => {
+          const dirV = p[0] - centroidV, dirPsi = p[1] - centroidPsi;
+          const dlen = Math.hypot(dirV, dirPsi) || 1e-6;
+          const offsetDist = 0.14; // units
+          const [lx, ly] = toPixel(p[0] + (dirV / dlen) * offsetDist, p[1] + (dirPsi / dlen) * offsetDist);
+          const labelText = vi === 0 ? '0' : '1';
+          drawTextWithBackground(ctx, labelText, lx, ly, Math.round(9 * dpr), a.color || '#ffffff', true, 'center', 'middle');
+        });
+      }
 
       if (a.showVertexAngles) {
         const centroidV = a.points.reduce((s, p) => s + p[0], 0) / a.points.length;
@@ -1475,6 +1574,112 @@ function drawCustomAxes(ctx, dpr) {
         });
       }
       x1 = pts[0][0]; y1 = pts[0][1];
+    } else if (type === 'minkowski') {
+      const [p1x, p1y] = toPixel(a.x1, a.y1);
+      const [p2x, p2y] = toPixel(a.x2, a.y2);
+      const ox = (p1x + p2x) / 2;
+      const oy = (p1y + p2y) / 2;
+      const dx = p2x - p1x, dy = p2y - p1y;
+      const h = Math.hypot(dx, dy) || 1e-6;
+      
+      const sx = dx / h, sy = dy / h;
+      let tx = -sy, ty = sx;                  // Perpendicular time vector
+      if (ty > 0) { tx = -tx; ty = -ty; }     // In canvas space, negative Y is UP (future time direction)
+
+      const fx = ox + tx * h / 2, fy = oy + ty * h / 2;
+      const px = ox - tx * h / 2, py = oy - ty * h / 2;
+
+      // Diagonals endpoints (align with hypersurface boundaries)
+      const fd1x = ox + (tx + sx) * h / 2, fd1y = oy + (ty + sy) * h / 2;
+      const fd2x = ox + (tx - sx) * h / 2, fd2y = oy + (ty - sy) * h / 2;
+      
+      const pd1x = ox - (tx + sx) * h / 2, pd1y = oy - (ty + sy) * h / 2;
+      const pd2x = ox - (tx - sx) * h / 2, pd2y = oy - (ty - sy) * h / 2;
+
+      // Draw Cone Shading
+      ctx.save();
+      ctx.fillStyle = combineColorAlpha(a.color || '#a070f0', (a.fillAlpha !== undefined ? a.fillAlpha : 1) * 0.12);
+      
+      // Future cone
+      ctx.beginPath();
+      ctx.moveTo(ox, oy);
+      ctx.lineTo(fd1x, fd1y);
+      ctx.lineTo(fd2x, fd2y);
+      ctx.closePath();
+      ctx.fill();
+
+      // Past cone
+      ctx.beginPath();
+      ctx.moveTo(ox, oy);
+      ctx.lineTo(pd1x, pd1y);
+      ctx.lineTo(pd2x, pd2y);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+
+      // Draw Hypersurface of Present Time (User-drawn segment)
+      ctx.save();
+      ctx.strokeStyle = a.color || '#a070f0';
+      ctx.lineWidth = 2 * dpr;
+      ctx.beginPath();
+      ctx.moveTo(p1x, p1y);
+      ctx.lineTo(p2x, p2y);
+      ctx.stroke();
+      ctx.restore();
+
+      // Draw Diagonals (dashed boundary)
+      ctx.save();
+      ctx.strokeStyle = a.color || '#a070f0';
+      ctx.lineWidth = 1 * dpr;
+      ctx.setLineDash([4 * dpr, 2 * dpr]);
+      ctx.beginPath();
+      ctx.moveTo(pd1x, pd1y); ctx.lineTo(fd1x, fd1y);
+      ctx.moveTo(pd2x, pd2y); ctx.lineTo(fd2x, fd2y);
+      ctx.stroke();
+      ctx.restore();
+
+      // Draw Worldline (Observer Time Axis)
+      ctx.save();
+      ctx.strokeStyle = a.color || '#a070f0';
+      ctx.lineWidth = 1.5 * dpr;
+      ctx.beginPath();
+      ctx.moveTo(px, py);
+      ctx.lineTo(fx, fy);
+      ctx.stroke();
+      
+      // Arrowhead at fx, fy
+      ctx.fillStyle = a.color || '#a070f0';
+      ctx.beginPath();
+      const angle = Math.atan2(ty, tx);
+      const arrowLength = 7 * dpr;
+      const arrowWidth = 5 * dpr;
+      ctx.moveTo(fx, fy);
+      ctx.lineTo(fx - arrowLength * Math.cos(angle) + arrowWidth * Math.sin(angle), fy - arrowLength * Math.sin(angle) - arrowWidth * Math.cos(angle));
+      ctx.lineTo(fx - arrowLength * Math.cos(angle) - arrowWidth * Math.sin(angle), fy - arrowLength * Math.sin(angle) + arrowWidth * Math.cos(angle));
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+
+      // Draw Origin Observer Node
+      ctx.save();
+      ctx.fillStyle = a.color || '#a070f0';
+      ctx.beginPath();
+      ctx.arc(ox, oy, 3.5 * dpr, 0, 2 * Math.PI);
+      ctx.fill();
+      
+      // Label "NOW" at the origin
+      const labelDist = 12 * dpr;
+      drawTextWithBackground(ctx, "NOW", ox - tx * labelDist, oy - ty * labelDist, Math.round(8 * dpr), a.color || '#ffffff', true, 'center', 'middle');
+      ctx.restore();
+
+      // Draw boundary line labels
+      const mid1x = (ox + fd1x) / 2, mid1y = (oy + fd1y) / 2;
+      const mid2x = (ox + fd2x) / 2, mid2y = (oy + fd2y) / 2;
+      drawTextWithBackground(ctx, "c", mid1x - 6 * dpr, mid1y, Math.round(7 * dpr), 'rgba(255,255,255,0.4)', false, 'center', 'middle');
+      drawTextWithBackground(ctx, "c", mid2x + 6 * dpr, mid2y, Math.round(7 * dpr), 'rgba(255,255,255,0.4)', false, 'center', 'middle');
+
+      x1 = p1x; y1 = p1y;
+      x2 = p2x; y2 = p2y;
     } else {
       [x1, y1] = toPixel(a.x1, a.y1);
       [x2, y2] = toPixel(a.x2, a.y2);
@@ -1612,6 +1817,29 @@ function drawCustomAxes(ctx, dpr) {
       } else if (placingAxis.type === 'rect' || placingAxis.type === 'group') {
         const [px2, py2] = toPixel(pv, ppsi);
         ctx.rect(Math.min(px1, px2), Math.min(py1, py2), Math.abs(px2 - px1), Math.abs(py2 - py1));
+      } else if (placingAxis.type === 'minkowski') {
+        const [px2, py2] = toPixel(pv, ppsi);
+        const ox = (px1 + px2) / 2;
+        const oy = (py1 + py2) / 2;
+        const dx = px2 - px1, dy = py2 - py1;
+        const h = Math.hypot(dx, dy) || 1e-6;
+        const sx = dx / h, sy = dy / h;
+        let tx = -sy, ty = sx;
+        if (ty > 0) { tx = -tx; ty = -ty; } // Point UP on screen
+        
+        const fx = ox + tx * h / 2, fy = oy + ty * h / 2;
+        const px = ox - tx * h / 2, py = oy - ty * h / 2;
+        
+        const fd1x = ox + (tx + sx) * h / 2, fd1y = oy + (ty + sy) * h / 2;
+        const fd2x = ox + (tx - sx) * h / 2, fd2y = oy + (ty - sy) * h / 2;
+        
+        const pd1x = ox - (tx + sx) * h / 2, pd1y = oy - (ty + sy) * h / 2;
+        const pd2x = ox - (tx - sx) * h / 2, pd2y = oy - (ty - sy) * h / 2;
+
+        ctx.moveTo(px1, py1); ctx.lineTo(px2, py2);
+        ctx.moveTo(px, py); ctx.lineTo(fx, fy);
+        ctx.moveTo(pd1x, pd1y); ctx.lineTo(fd1x, fd1y);
+        ctx.moveTo(pd2x, pd2y); ctx.lineTo(fd2x, fd2y);
       } else {
         const [px2, py2] = toPixel(pv, ppsi);
         ctx.moveTo(px1, py1);
@@ -2301,7 +2529,7 @@ function draw() {
 
     const angleTL = Math.atan2(marginY - cy, marginX - cx);
     const angleBR = Math.atan2(marginY + gridSize - cy, marginX + gridSize - cx);
-    const halfOpening = Math.PI / 8; // 45 degrees total opening angle
+    const halfOpening = Math.PI / 4; // 90 degrees total opening angle (proper Minkowski c = 1 boundaries)
 
     // Future Light Cone (pointing TL)
     ctx.beginPath();
@@ -2814,10 +3042,13 @@ function updateReadout(v, psi, isPoint) {
       }
       row.addEventListener('click', () => {
         if (ax.__parentRectIdx !== undefined) {
-          // Virtual rect side — persist the toggle on the parent rect's sideEnabled array
+          // Virtual rect/triangle side — persist the toggle on the parent's sideEnabled array
           const parent = CUSTOM_AXES[ax.__parentRectIdx];
           if (parent) {
-            if (!parent.sideEnabled) parent.sideEnabled = [true, true, true, true];
+            if (!parent.sideEnabled) {
+              const maxSides = parent.type === 'triangle' ? 3 : 4;
+              parent.sideEnabled = new Array(maxSides).fill(true);
+            }
             parent.sideEnabled[ax.__sideIndex] = isDisabled ? true : false;
           }
         } else {
@@ -3688,6 +3919,10 @@ canvas.addEventListener('click', e => {
         base.filled = false; base.fillAlpha = 1;
         base.rotation = 0;
         base.sideEnabled = [true, true, true, true];
+      } else if (type === 'minkowski') {
+        base.x1 = placingAxis.x1; base.y1 = placingAxis.y1; base.x2 = v; base.y2 = psi;
+        base.filled = false; base.fillAlpha = 1;
+        base.sideEnabled = [true, true, true, true];
       } else if (type === 'curve') {
         base.x1 = placingAxis.x1; base.y1 = placingAxis.y1; base.x2 = v; base.y2 = psi;
         // Two independent control points (regular pen-tool style), starting at 1/3 and 2/3 along
@@ -4046,7 +4281,13 @@ function syncObserverNMax() {
   if (!slider) return;
   const total = getAllAxes().length;
   const newMax = Math.max(20, total);
-  if (parseInt(slider.max, 10) !== newMax) slider.max = newMax;
+  if (parseInt(slider.max, 10) !== newMax) {
+    slider.max = newMax;
+    slider.value = newMax;
+    const label = document.getElementById('shaderLimitLabel');
+    if (label) label.textContent = newMax;
+    cachedShaderCanvas = null; // bust shader cache since the limit grew
+  }
 }
 
 function renderAxisRowHtml(a, i, isBaseAxis) {
@@ -4087,7 +4328,50 @@ function renderAxisRowHtml(a, i, isBaseAxis) {
       <label>cy1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cy1" value="${a.cy1}" style="${numStyle}"></label>
       <label>cx2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cx2" value="${a.cx2}" style="${numStyle}"></label>
       <label>cy2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cy2" value="${a.cy2}" style="${numStyle}"></label>`;
-  } else if (type === 'triangle' || type === 'polygon') {
+  } else if (type === 'triangle') {
+    const vertexFields = a.points.map((p, vi) =>
+      `<label>v${vi} <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="x" data-field="vertex" value="${p[0]}" style="${numStyle}"></label>` +
+      `<input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="y" data-field="vertex" value="${p[1]}" style="${numStyle}">`
+    ).join('');
+    const se = a.sideEnabled || [true, true, true];
+    const sideLabels = a.sideLabels || ['Arm A (0→1)', 'Arm B (0→2)', 'Hypotenuse (1→2)'];
+    const sideColors = a.sideColors || [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+    const sideChecks = TRIANGLE_SIDE_DEFS.map((sd, si) => {
+      const sLabel = sideLabels[si] !== undefined ? sideLabels[si] : sd.label;
+      const sColor = sideColors[si] || a.color || '#ffffff';
+      return `
+        <div style="display:flex; align-items:center; gap:4px; margin-top:2px; width:100%;">
+          <label style="display:flex; align-items:center; gap:1px; flex-shrink:0; font-size:8px; width:85px;" title="${sd.label} side — tracked in Axis Projections">
+            <input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideEnabled" ${se[si] !== false ? 'checked' : ''}> 
+            ${sd.label.split(' ')[0]} ${sd.label.split(' ')[1] || ''}
+          </label>
+          <input type="text" class="label-input" placeholder="label..." data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideLabel" value="${String(sLabel).replace(/"/g, '&quot;')}" style="flex:1; padding:2px 4px; font-size:8px; height:16px;">
+          <input type="color" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideColor" value="${sColor}" style="width:14px; height:14px; padding:0; border:none; background:none; cursor:pointer; flex-shrink:0;" title="Side color">
+        </div>
+      `;
+    }).join('');
+    geomFields = `
+      ${vertexFields}
+      <div style="display:flex; gap:6px; align-items:center;">
+        <label style="display:flex; align-items:center; gap:2px;" title="Fill the interior"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="filled" ${a.filled ? 'checked' : ''}> fill</label>
+        <label style="display:flex; align-items:center; gap:2px;" title="Show the interior angle at each vertex"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="showVertexAngles" ${a.showVertexAngles ? 'checked' : ''}> ∠ angles</label>
+      </div>
+      <div style="width:100%; display:flex; flex-direction:column; gap:2px; margin-top:4px; border-top:1px dashed var(--border); padding-top:4px;">
+        <div style="font-size:8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Per-Axis settings:</div>
+        ${sideChecks}
+      </div>`;
+  } else if (type === 'minkowski') {
+    const se = a.sideEnabled || [true, true, true, true];
+    const sideChecks = MINKOWSKI_SIDE_DEFS.map((sd, si) =>
+      `<label style="display:flex; align-items:center; gap:1px;" title="${sd.label} side — tracked in Axis Projections"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideEnabled" ${se[si] !== false ? 'checked' : ''}> ${sd.label}</label>`
+    ).join('');
+    geomFields = `
+      <label>ox <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x1" value="${a.x1}" style="${numStyle}"></label>
+      <label>oy <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y1" value="${a.y1}" style="${numStyle}"></label>
+      <label>tx <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x2" value="${a.x2}" style="${numStyle}"></label>
+      <label>ty <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y2" value="${a.y2}" style="${numStyle}"></label>
+      <div style="width:100%; display:flex; gap:6px; flex-wrap:wrap; font-size:8px; color:var(--muted); margin-top:2px;">${sideChecks}</div>`;
+  } else if (type === 'polygon') {
     const vertexFields = a.points.map((p, vi) =>
       `<label>v${vi} <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="x" data-field="vertex" value="${p[0]}" style="${numStyle}"></label>` +
       `<input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="y" data-field="vertex" value="${p[1]}" style="${numStyle}">`
@@ -4215,14 +4499,27 @@ function handleAxisEditorInput(e) {
     a[field] = e.target.checked;
   }
   else if (field === 'sideEnabled') {
-    if (!a.sideEnabled) a.sideEnabled = [true, true, true, true];
+    if (!a.sideEnabled) {
+      const maxSides = a.type === 'triangle' ? 3 : 4;
+      a.sideEnabled = new Array(maxSides).fill(true);
+    }
     a.sideEnabled[parseInt(e.target.dataset.sideIdx, 10)] = e.target.checked;
+  }
+  else if (field === 'sideLabel') {
+    if (!a.sideLabels) a.sideLabels = ['Arm A (0→1)', 'Arm B (0→2)', 'Hypotenuse (1→2)'];
+    a.sideLabels[parseInt(e.target.dataset.sideIdx, 10)] = e.target.value;
+  }
+  else if (field === 'sideColor') {
+    if (!a.sideColors) a.sideColors = [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+    a.sideColors[parseInt(e.target.dataset.sideIdx, 10)] = e.target.value;
   }
   else if (field === 'label') {
     if (isBase) a.name = e.target.value;
     else a.label = e.target.value;
   }
-  else if (field === 'color') a.color = e.target.value;
+  else if (field === 'color') {
+    a.color = e.target.value;
+  }
   else if (field === 'lineAlpha' || field === 'fillAlpha') {
     a[field] = parseInt(e.target.value, 10) / 100;
   }

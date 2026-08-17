@@ -1,0 +1,314 @@
+[
+  {
+    "thinking": "Phase 1-5 structural scan completed. Evaluated AIPAC campaign spending and political influence. Stated claim frames engagement as educational lobbying (+0.5, 0.0), while actual reality demonstrates heavy super PAC intervention reshaping primaries (-0.4, -0.5). R_net = 1.6 (Conditionally Sound), Uncertainty z = 3.",
+    "id": "aipac-didnt-always-spend-on-campaigns-now-it-faces-criticism-over-money-in-politics",
+    "subject": "AIPAC didn't always spend on campaigns. Now it faces criticism over money in politics",
+    "link": "https://www.npr.org/2026/08/13/nx-s1-5923565/aipac-didnt-always-spend-on-campaigns-now-it-faces-criticism-over-money-in-politics",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.54,
+    "real_psi": -0.59,
+    "mode": "root",
+    "posts": [
+      "Super PAC spending transforms traditional lobbying into high-stakes electoral warfare, igniting intense debates over money in politics.\n\nAIPAC didn't always spend on campaigns. Now it faces criticism over money in politics\nEvidence: educational lobbying, massive PAC spending, campaign friction",
+      "AIPAC frames its engagement strictly around strengthening the bipartisan U.S.-Israel partnership through traditional education and policy advocacy.\nStated Judgement: (+1.00, +1.00) — Good Preference",
+      "The organization's affiliated super PAC deploys tens of millions in primary contests, functioning as a polarizing heavy-hitter that shapes electoral outcomes and draws severe scrutiny.\nResulting Judgement: (-0.54, -0.59) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception.\nHeavy super PAC interventions bypass traditional advocacy, co-opting primary contests while fueling legitimate public backlash over dark money.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, Uncertainty z: 3)",
+      "Sub-Audits Breakdown:\n- AIPAC Super PAC Intervention: FAIL (-0.5, -0.6) — Massive financial deployment distorts local primary dynamics and fuels special-interest anxieties.",
+      "The American Israel Public Affairs Committee (AIPAC) has evolved from a traditional lobbying and educational organization into a major campaign spender through affiliated super PACs, injecting millions into contested Democratic primaries.",
+      "The Poison:\nBy transforming foreign policy debates into proxy wars funded by external super PACs, special interest spending deepens voter cynicism and alienates grassroots communities.",
+      "The Breakdown & Plane Error:\nThis represents a WHAT vs. WHO plane error, confusing educational lobbying with direct electoral expenditure.\n\nIt is a structural shift: policy advocacy replaced by heavy financial intervention.",
+      "Social Physics Analysis:\nWhen outsized financial power enters democratic contests, it substitutes top-down financial leverage for genuine community consensus. This creates high-strain environments where voters feel manipulated by special interests.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Financial dominance overwrites grassroots representation.",
+      "The Unavoidable Truth: Super PAC spending exerts measurable influence on primary contests, regardless of whether individual high-profile bets succeed or fail.",
+      "Alethekanon:\nMoney in politics alters the evolutionary pressure of elections. When lobbying groups pivot to direct campaign bombardment, they trade moral persuasion for transactional dominance, inviting inevitable backlash.",
+      "Awwthekanon:\nIt hurts to watch regular voters' voices drowned out by millions in outside spending. Communities deserve to choose their representatives without feeling like corporate or foreign policy wallets bought the megaphone.",
+      "Brothekanon:\nImagine telling someone in the 1950s that a foreign policy lobby would be dropping tens of millions on local senate primaries like they're trying to whale a gacha game. Wild timeline."
+    ],
+    "actors": [
+      "AIPAC",
+      "United Democracy Project",
+      "Abdul El-Sayed",
+      "Van Jones"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.2,
+    "real_rnet": 1.6,
+    "claim_z": 2,
+    "real_z": 3,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Trustworthy",
+    "real_integrity": "Conditionally Sound",
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "name": "AIPAC Super PAC Intervention",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 0.8,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.8,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 0.8,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.1,
+            "O": 0.9,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.8,
+            "O": 0.2,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.1,
+            "O": 0.7,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.9,
+            "O": 0.1,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.1,
+            "O": 0.9,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.9,
+            "O": 0.1,
+            "N": 0.0
+          }
+        },
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": -0.76,
+        "real_psi": -0.77
+      },
+      {
+        "name": "Public Discourse on Campaign Finance",
+        "type": "aspect",
+        "stated_forces": {
+          "GG": {
+            "S": 0.8,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 0.8,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.8,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 0.8,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.3,
+            "O": 0.7,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.4,
+            "O": 0.4,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.3,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.7,
+            "O": 0.3,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.3,
+            "O": 0.7,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.7,
+            "O": 0.3,
+            "N": 0.0
+          }
+        },
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": -0.32,
+        "real_psi": -0.55
+      }
+    ],
+    "multiAspect": true,
+    "category": "politics",
+    "topic": "Elections",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/aipac-didnt-always-spend-on-campaigns-now-it-faces-criticism-over-money-in-politics_graph.png",
+    "rkeys": [
+      "3mt44wbivcq2s",
+      "3mt44wc7arc2p",
+      "3mt44weee4t2j",
+      "3mt44wgjexl2t",
+      "3mt44wiooqe2j",
+      "3mt44wktwkm2t",
+      "3mt44wmzpve2t",
+      "3mt44wqnmzq2s",
+      "3mt44wssomg2p",
+      "3mt44wuxruz24",
+      "3mt44wx4ryl2j",
+      "3mt44wzbzew2p",
+      "3mt44x3h6lz24",
+      "3mt44x5mej62f"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wbivcq2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wc7arc2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44weee4t2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wgjexl2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wiooqe2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wktwkm2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wmzpve2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wqnmzq2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wssomg2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wuxruz24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wx4ryl2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44wzbzew2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44x3h6lz24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt44x5mej62f"
+    ]
+  }
+]

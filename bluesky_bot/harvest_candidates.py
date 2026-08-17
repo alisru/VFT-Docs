@@ -25,16 +25,36 @@ if sys.stderr and sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8'
     except Exception:
         pass
 
-class ParagraphExtractor(HTMLParser):
+class ArticleContentExtractor(HTMLParser):
     def __init__(self):
         super().__init__()
         self.in_p = False
         self.paragraphs = []
         self.current_para = []
+        
+        self.in_title = False
+        self.title_data = []
+        self.meta_desc = ""
+        self.meta_og_title = ""
+        self.meta_og_desc = ""
 
     def handle_starttag(self, tag, attrs):
         if tag == 'p':
             self.in_p = True
+        elif tag == 'title':
+            self.in_title = True
+        elif tag == 'meta':
+            attrs_dict = dict(attrs)
+            name = attrs_dict.get('name', '').lower()
+            prop = attrs_dict.get('property', '').lower()
+            content = attrs_dict.get('content', '').strip()
+            if content:
+                if name == 'description' or prop == 'description':
+                    self.meta_desc = content
+                elif prop == 'og:description' or name == 'og:description':
+                    self.meta_og_desc = content
+                elif prop == 'og:title' or name == 'og:title':
+                    self.meta_og_title = content
 
     def handle_endtag(self, tag):
         if tag == 'p':
@@ -43,25 +63,37 @@ class ParagraphExtractor(HTMLParser):
             if para_text:
                 self.paragraphs.append(para_text)
             self.current_para = []
+        elif tag == 'title':
+            self.in_title = False
 
     def handle_data(self, data):
         if self.in_p:
             self.current_para.append(data)
+        elif self.in_title:
+            self.title_data.append(data)
 
-def scrape_article_text(url):
+    def get_results(self):
+        title = "".join(self.title_data).strip()
+        final_title = self.meta_og_title or title or "News Story"
+        final_desc = self.meta_og_desc or self.meta_desc or ""
+        body = "\n\n".join(self.paragraphs)
+        return final_title, final_desc, body
+
+def scrape_article_content(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
     }
     try:
         response = requests.get(url, headers=headers, timeout=10)
         if response.status_code != 200:
-            return f"Error: Status code {response.status_code}"
+            return None, None, f"Error: Status code {response.status_code}"
         
-        parser = ParagraphExtractor()
+        parser = ArticleContentExtractor()
         parser.feed(response.text)
-        return "\n\n".join(parser.paragraphs)
+        title, desc, body = parser.get_results()
+        return title, desc, body
     except Exception as e:
-        return f"Error: {e}"
+        return None, None, f"Error: {e}"
 
 script_dir = os.path.dirname(os.path.abspath(__file__))  # e:\Vector Field Theory\VFT Docs\bluesky_bot
 root_dir = os.path.dirname(script_dir)                  # e:\Vector Field Theory\VFT Docs
@@ -997,15 +1029,28 @@ for idx, c in enumerate(all_final, 1):
     url = c.get("url")
     if url:
         print(f"[{idx}/{len(all_final)}] Scraping content from: {url}")
-        article_text = scrape_article_text(url)
-        if article_text and not article_text.startswith("Error") and len(article_text.strip()) >= 200:
-            article_text_clean = article_text[:4000]
-            orig_text = c.get("text", "")
+        title, desc, body = scrape_article_content(url)
+        if body and not body.startswith("Error") and len(body.strip()) >= 200:
+            article_text_clean = body[:4000]
+            
+            # Check if this candidate is from Bluesky
+            target_url = c.get("target_url", "")
+            is_bsky = bool(target_url and "bsky.app" in target_url)
+            
+            if is_bsky:
+                # Use article's own title & description for the Stated Claim / Post Context
+                orig_text = f"{title}\n\n{desc}".strip()
+                # Update subject to the article title so the story JSON inherits it
+                c["subject"] = title
+            else:
+                orig_text = c.get("text", "")
+                
             c["text"] = f"Stated Claim / Post Context:\n{orig_text}\n\nActual Article Body:\n{article_text_clean}"
             print(f"  Scraped successfully ({len(article_text_clean)} chars).")
             successful_final.append(c)
         else:
-            print(f"  Scrape failed, returned empty, or had insufficient content (length: {len(article_text) if article_text else 0} chars). Skipping candidate.")
+            err_msg = body if (body and body.startswith("Error")) else "insufficient content"
+            print(f"  Scrape failed or returned empty: {err_msg}. Skipping candidate.")
             try:
                 host = urllib.parse.urlparse(url.strip().lower()).hostname
                 if host:

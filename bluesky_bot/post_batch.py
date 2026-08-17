@@ -134,8 +134,10 @@ def validate_story_file(path, compact=False):
         if missing_keys:
             raise ValueError(f"Missing required JSON schema keys: {missing_keys}")
 
-        if len(cfg["posts"]) != 13:
-            raise ValueError(f"Key 'posts' must contain exactly 13 elements (got {len(cfg['posts'])}).")
+        is_multi_aspect = cfg.get("multiAspect") is True
+        expected_posts_len = 14 if is_multi_aspect else 13
+        if len(cfg["posts"]) != expected_posts_len:
+            raise ValueError(f"Key 'posts' must contain exactly {expected_posts_len} elements (got {len(cfg['posts'])}).")
 
         # Pack posts and length validation
         is_five_word = cfg.get("five_word") is True
@@ -151,8 +153,8 @@ def validate_story_file(path, compact=False):
             final_posts = pack_posts(cfg["posts"])
 
         for idx, post in enumerate(final_posts, 1):
-            if len(post) > 299:
-                raise ValueError(f"Post {idx} exceeds 299 characters ({len(post)} chars):\n{post}")
+            if len(post) > 300:
+                raise ValueError(f"Post {idx} exceeds 300 characters ({len(post)} chars):\n{post}")
 
         # Graph Check
         story_id = cfg["id"]
@@ -160,7 +162,22 @@ def validate_story_file(path, compact=False):
             story_id = story_id.replace(char, '')
         graph_filename = os.path.join(script_dir, "graph_png", f"{story_id}_graph.png")
         if not os.path.exists(graph_filename):
-            raise FileNotFoundError(f"Required trajectory graph image not found: {graph_filename}.")
+            print(f"  Trajectory graph not found for {story_id}. Generating on-the-fly...")
+            try:
+                from generate_graph import draw_graph
+                draw_graph(
+                    cfg.get("claim_u", 0.0), cfg.get("claim_psi", 0.0),
+                    cfg.get("real_u",   0.0), cfg.get("real_psi",  0.0),
+                    cfg.get("subject", "Story"),
+                    graph_filename,
+                    macro_event=cfg.get("macro_event", ""),
+                    macro_claim_u=cfg.get("macro_claim_u"),
+                    macro_claim_psi=cfg.get("macro_claim_psi"),
+                    macro_real_u=cfg.get("macro_real_u"),
+                    macro_real_psi=cfg.get("macro_real_psi")
+                )
+            except Exception as ge:
+                raise RuntimeError(f"Failed to generate trajectory graph: {ge}")
 
         # Info Card Check (Generate on-the-fly if missing)
         if is_five_word:

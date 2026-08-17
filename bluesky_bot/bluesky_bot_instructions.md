@@ -2,6 +2,10 @@
 
 This file is the master index and entry point for the Aletheia Bot. All operational, framework, formatting, and sub-agent protocols are split into modular files to conserve token budget and isolate context.
 
+* **Complete Technical Specification & Philosophy:** [TECHNICAL_SPECIFICATION_AND_PHILOSOPHY.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/TECHNICAL_SPECIFICATION_AND_PHILOSOPHY.md)
+* **Psochic Hegemony Convergence Test:** [Convergence-test-v2.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/.agent/tools/convergence-test/Convergence-test-v2.md)
+* **Thread Formatting & Standard:** [thread_formatting.md](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/instructions/thread_formatting.md)
+
 ---
 
 > [!CAUTION]

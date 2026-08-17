@@ -168,6 +168,29 @@ def rebuild_registries():
             except Exception as we:
                 print(f"Warning: Failed to write back auto-tagged actors to {authoritative_file}: {we}")
 
+        # Auto-backfill missing/empty policies and update policy ledger
+        if "policies" not in cfg:
+            from policy_extract import extract_policies, update_policy_ledger
+            scan_text = cfg.get("subject", "") + " " + " ".join(cfg.get("posts", [])[:3])
+            inferred_p = extract_policies(scan_text)
+            cfg["policies"] = inferred_p
+            try:
+                with open(authoritative_file, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+                print(f"Auto-tagged missing policies for {slug}: {inferred_p}")
+            except Exception as we:
+                print(f"Warning: Failed to write back auto-tagged policies to {authoritative_file}: {we}")
+            try:
+                update_policy_ledger(cfg)
+            except Exception as le:
+                print(f"Warning: Failed to update policy ledger for {slug}: {le}")
+        else:
+            try:
+                from policy_extract import update_policy_ledger
+                update_policy_ledger(cfg)
+            except Exception:
+                pass
+
         active_story_ids.add(slug)
 
         # Generate graph if missing

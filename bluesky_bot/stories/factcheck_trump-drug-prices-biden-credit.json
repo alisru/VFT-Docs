@@ -1,0 +1,287 @@
+[
+  {
+    "thinking": "Phase 1-5 structural audit: Trump displays headline on drug price drops, claiming personal credit while omitting experts attribute it to Biden's IRA. R_net = 18.5 (Severe Deception). u_real = -0.78, psi_real = -0.82. Trajectory: Revelation into Deception.",
+    "id": "trump-drug-prices-biden-credit",
+    "subject": "Trump shows off article on lower drug prices that says Biden deserves credit, not him",
+    "link": "https://share.newsbreak.com/jbe9vmoz?s=i16",
+    "target_url": "https://bsky.app/profile/orishaz.bsky.social/post/3mt7nzv3cms2v",
+    "claim_u": 0.75,
+    "claim_psi": 0.89,
+    "real_u": -1.0,
+    "real_psi": -1.0,
+    "mode": "root",
+    "posts": [
+      "The White House claims credit for record prescription drug price drops while omitting the article's core finding.\n\nTrump Touts Drug Prices\nEvidence: selective headline display, IRA attribution omitted, credit claimed\n#Aletheia #USPol",
+      "The administration presents recent prescription drug price drops as direct proof of presidential policy success.\nStated Judgement: (+0.75, +0.89) — Greater Good",
+      "The cited article explicitly credits Biden's Inflation Reduction Act Medicare negotiations for the price reduction, exposing selective framing.\nResulting Judgement: (-1.00, -1.00) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception. Claiming personal credit for a political rival's legislative policy through selective quotation.\nIntegrity: Severe Deception (Hypocrisy: 18.5, Uncertainty z: 2)",
+      "- White House Communications: FAIL (-0.85, -0.9) — Selective omission of facts.\n- Independent Health Experts: PASS (0.8, 0.5) — Accurate policy attribution.",
+      "The White House promoted a Washington Post headline showing record drops in drug prices, ignoring experts who credited Biden's 2022 law.",
+      "The Bright Side:\nPrescription drug prices are indeed dropping significantly, offering tangible financial relief to elderly Americans regardless of political spin.",
+      "The Breakdown & Plane Error:\nConfusing WHO achieved the policy (WHAT vs WHO). It is a classic bait-and-switch where a headline is brandished as a prop while its context is suppressed.",
+      "Social Physics Analysis:\nBy masking policy origins to hoard political credit, the administration relies on post-hoc pretexts and projection, subverting transparent public discourse.",
+      "The Trajectory: The Path of Deception.\nWhen you map selective attribution against ground-level policy authorship, it plots a direct trajectory toward Deception. Misrepresenting sources distorts public trust.",
+      "The Unavoidable Truth: The price drop stems from Medicare negotiation provisions in Biden's 2022 law.\n\nThe Unavoidable Lie: The current administration's initiatives drove the historical price decline.",
+      "Alethekanon:\nBrandishing a truncated press clipping as personal proof while editing out the actual policy source is institutional gaslighting.🌐",
+      "Awwthekanon:\nIt is frustrating when genuine financial relief for seniors gets hijacked for political posturing instead of celebrated honestly.",
+      "Brothekanon:\nNothing beats holding up the first five lines of a newspaper article like a magic trick and pretending the rest doesn't exist."
+    ],
+    "actors": [
+      "Donald Trump",
+      "Joe Biden",
+      "Karoline Leavitt",
+      "Steven Cheung",
+      "Richard Frank",
+      "Stacie Dusetzina",
+      "White House"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 18.5,
+    "claim_z": 0,
+    "real_z": 2,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "name": "White House Communications",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      },
+      {
+        "name": "Headline Attribution Integrity",
+        "type": "aspect",
+        "stated_forces": {
+          "GG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 0.5,
+        "claim_psi": 0.78,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      }
+    ],
+    "multiAspect": true,
+    "category": "all",
+    "topic": "trump, xi, putin, iran",
+    "event": "",
+    "policies": [
+      "Healthcare Policy",
+      "Cost of Living"
+    ]
+  }
+]

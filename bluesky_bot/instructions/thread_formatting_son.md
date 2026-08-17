@@ -60,18 +60,42 @@ Format:
 
 ---
 
-## 3. Conversational Formatting Rules (No Robotic Prefixes)
+## 3. Conversational Formatting & ELI18 Language Standard
 
-* **BAN on Robotic Titles**: Do not start steps with dry prefixes like `Subject:`, `The Claim:`, `The Reality:`, or `What's happening:`. (Headers explicitly outlined in the 13 steps below are permitted).
+* **ELI18 Reading Level (Target Voice)**:
+  - Write at an engaging, articulate undergraduate / high-school senior level (ELI18).
+  - **No Point Loss**: Preserve full analytical precision, exact figures, names, and two-axis coordinates `(υ, ψ)`, but explain them with crystal-clear, accessible sentence structures.
+  - **Anti-Jargon & Anti-Gatekeeping**: Strictly ban obscure academic pretension, impenetrable Latinisms, and circular jargon loops (e.g. do not say "smart altruistic loop" or "metaphysical teleological error"—say "empowering local communities with transparent funding" or "confusing the tool for the decision-maker").
+  - **Vivid, Relatable Dynamics**: Ground structural analysis, institutional friction, and social physics in relatable human reality (e.g. who captures the profit, who bears the burden, and where the bait-and-switch takes place).
+* **BAN on Numbered Prefixes**: NEVER write `Post 1:`, `Post 2:`, `1. Hook:`, or any numeric labels at the start of posts. Each array element must be clean editorial text.
+* **BAN on Robotic Titles**: Do not start steps with dry prefixes like `Subject:`, `The Claim:`, `The Reality:`, or `What's happening:`. (Headers explicitly outlined in the steps below are permitted).
+* **Character Budget**: Keep each individual post strictly under 280 characters (hard max 290) to ensure seamless posting to Bluesky.
 * **Natural Human Flow**: Write in clean, conversational Plain English. Use headers only when they are clean and natural (e.g. `The Bright Side:`, `The Poison:`).
 * **Character Caps**: Keep every single step strictly under **275 characters** in the JSON config to prevent dynamic text-splitting errors.
 * **NO Orphan Words**: DO NOT split sentences arbitrarily or waste array elements. If a sentence fits in the current post, include it. Do NOT make a single post containing just 1 or 2 words (like 'dysfunction.'). Write continuously and naturally, only hard-splitting concepts when approaching the 275-character limit.
 
 ---
 
-## 4. The 13 Logical Steps Mapping
+## 4. The Logical Steps Mapping
 
-To maintain the strict 13-element limit on disk, the bot must output the `"posts"` array mapped exactly as follows:
+### Standard Mode (13 Posts, Elements 0–12):
+- **Element 0:** The Hook
+- **Element 1:** The Claim
+- **Element 2:** The Reality
+- **Element 3:** The Verdict
+- **Element 4:** What's Happening (Context)
+- **Element 5:** The Nuance
+- **Element 6:** The Breakdown & Plane Error
+- **Element 7:** The Social Physics Analysis
+- **Element 8:** The Trajectory & Destination
+- **Element 9:** The Unavoidables (Truth & Lie)
+- **Element 10:** Alethekanon
+- **Element 11:** Awwthekanon
+- **Element 12:** Brothekanon
+
+---
+
+### Multi-Aspect Mode (14 Posts, Elements 0–13):
 
 ### Element 0: The Hook
 * **Wording**: Starts with a custom, punchy, human-style editorial scene-setter one-liner (1 concise sentence). Follow it with the news subject title (use a concise shortened title if the headline is long) and the evidence line.
@@ -91,48 +115,49 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
 * **Wording**: Clean overall verdict line using exact path names: `Verdict: [PASS/FAIL] — [Path Name].` followed by a rich, 1-2 sentence explanation of the trajectory's cause.
 * **Integrity Metrics**: Append a new line showing the integrity assessment and uncertainty score:
   `Integrity: [real_integrity] (Hypocrisy: [real_rnet], Uncertainty z: [real_z])`
-* **IMPORTANT (Multi-Aspect Mode)**: Do NOT include any compact `Subs:` summary in this post. Sub-audit and aspect verdicts belong exclusively in the dedicated Sub-Audits Breakdown step (Element 4 in multi-aspect mode).
 
-### Element 4 (Multi-Aspect Mode Only): Sub-Audits Breakdown
-* **Present only when in multi-aspect mode.** This is the dedicated step for aspect/actor-level verdicts.
-* **Wording**: List each evaluated sub-aspect or actor directly as a concise bullet point (NO 'Sub-Audits Breakdown:' header prefix):
-  ```
+### Element 4: Sub-Audits Breakdown
+* **Wording**: List each evaluated sub-aspect or actor directly as a concise bullet point:
+  ```text
+  Sub-Audits Breakdown:
   - [Aspect A Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Short takeaway under 60 chars].
   - [Aspect B Name]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Short takeaway under 60 chars].
   ```
-* Keep each bullet brief so the ENTIRE combined post stays strictly under 260 characters. This is the ONLY place aspect verdicts appear. Do not repeat them in the Verdict post.
+* Keep each bullet brief so the entire combined post stays strictly under 260 characters.
 
-### Element 4 (Standard) / Element 5 (Multi-Aspect): What's Happening (Context)
+### Element 5: What's Happening (Context)
 * **Wording**: Clear, non-technical context paragraph explaining the news event in 1-2 concise sentences (under 260 characters).
 
-### Element 5: The Nuance
+### Element 6: The Nuance
 * **Wording**: Find the bright side (if negative) or poison (if positive).
 * **Format**: Phrased as: `The Bright Side:\n[nuance]` or `The Poison:\n[nuance]`.
 
-### Element 6: The Breakdown, Plane Error & Switch
+### Element 7: The Breakdown, Plane Error & Switch
 * **Wording**: Explain the Plane Error simply in plain language (e.g. WHAT vs WHO), and expose the forensic bait-and-switch naturally under 280 characters.
 
-### Element 7: The Social Physics Analysis
-* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Provide a clear, direct, conversational plain-English explanation of the social physics dynamics (e.g. selfishness, power, pretext/justification, projection).
-* **Jargon Ban**: You are STRICTLY forbidden from using raw technical jargon labels (such as "Smart Altruistic Loop", "Smart Selfish Loop") or nesting processes using arrow characters (e.g., "A → B → C"). Instead, explain these principles (empowerment, transparency, empathy, or pretexts and projection) as natural, narrative human dynamics.
+### Element 8: The Social Physics Analysis
+* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Provide a clear, direct, conversational plain-English explanation of the social physics dynamics.
+* **Jargon Ban**: Strictly zero jargon loops (e.g. "Smart Altruistic Loop") or raw arrows (`A -> B`). Explain empowerment, transparency, or pretext and projection as natural human dynamics.
 
-### Element 8: The Trajectory & Destination
+### Element 9: The Trajectory & Destination
 * **Wording**: Phrased organically: `The Trajectory: The Path of [Path Name].\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward [Outcome/Terminal Zone]` followed by a brief 1-sentence mathematical explanation. Keep the entire combined post strictly under 275 characters.
 
-### Element 9: The Unavoidables
-* **Format**: The Unavoidable Truth must be exactly 1 concise sentence. The Unavoidable Lie must be exactly 1 concise sentence.
-  > The Unavoidable Truth: [1 concise sentence]
-  > 
-  > The Unavoidable Lie: [1 concise sentence]
+### Element 10: The Unavoidables
+* **Format**:
+  ```text
+  The Unavoidable Truth: [1 concise sentence]
+
+  The Unavoidable Lie: [1 concise sentence]
+  ```
 * Keep the entire combined post strictly under 260 characters.
 
-### Element 10: Alethekanon Reaction (Logical Analyst Persona)
+### Element 11: Alethekanon Reaction (Logical Analyst Persona)
 * **Format**: `Alethekanon:\n[1-2 concise analytical sentences in persona under 260 characters total]`
 
-### Element 11: Awwthekanon Reaction (Empathetic Healer Persona)
+### Element 12: Awwthekanon Reaction (Empathetic Healer Persona)
 * **Format**: `Awwthekanon:\n[One paragraph in their voice]`
 
-### Element 12: Brothekanon Reaction (Casual Observer Persona)
+### Element 13: Brothekanon Reaction (Casual Observer Persona)
 * **Format**: `Brothekanon:\n[One paragraph in their voice]`
 
 ---

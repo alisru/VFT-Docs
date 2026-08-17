@@ -10,6 +10,26 @@
   background-color: rgba(138, 180, 248, 0.08) !important;
 }
 
+/* Custom styles for the Markdown export button */
+.gemini-tex-md-btn {
+  border-left: 3px solid #81c995 !important; /* Visual distinction (greenish) */
+  font-weight: 500 !important;
+}
+
+.gemini-tex-md-btn:hover {
+  background-color: rgba(129, 201, 149, 0.08) !important;
+}
+
+/* Custom styles for the whole Chat history actions menu Markdown button */
+.gemini-chat-md-exporter-btn {
+  border-left: 3px solid #f2994a !important; /* Visual distinction (orange/gold) */
+  font-weight: 500 !important;
+}
+
+.gemini-chat-md-exporter-btn:hover {
+  background-color: rgba(242, 153, 74, 0.08) !important;
+}
+
 /* Floating custom toast on Gemini Web interface */
 .gemini-tex-toast {
   position: fixed;

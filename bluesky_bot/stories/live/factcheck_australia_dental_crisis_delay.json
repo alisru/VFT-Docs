@@ -1,0 +1,318 @@
+[
+  {
+    "thinking": "Phase 1: 7 Planes Scan\nQ1 (WHO): Stated beneficiary is the Australian public (oral health); actual beneficiary is political convenience (delaying funding/action to balance budgets).\nQ2 (WHAT): Failure modes (rising emergency room costs, systemic decay) are suppressed by delaying the National Oral Health Plan.\nQ3 (WHERE): Parliament House, Canberra; hospital emergency departments.\nQ4 (WHY): Honest narrative? No, the government delays the plan while public health deteriorates.\nQ5 (HOW): Causal chain: Delaying preventive care -> higher emergency costs -> systemic failure.\nQ6 (CAUSE): Consultations occurred in 2024; the plan is delayed in 2026.\nQ7 (EFFECT): Public pain and financial strain.\n\nPhase 2: Vector Verification\nStated Forces:\nGG: S=1.5, O=0.0, N=0.0\nGE: S=0.0, O=1.5, N=0.0\nLG: S=1.0, O=0.0, N=0.0\nLE: S=0.0, O=1.0, N=0.0\nGP: S=1.5, O=0.0, N=0.0\nBP: S=0.0, O=1.5, N=0.0\nStated u = 1.0, psi = 1.0 (Greater Good)\n\nActual Forces:\nGG: S=0.0, O=1.5, N=0.0\nGE: S=0.5, O=0.0, N=0.0\nLG: S=0.0, O=1.0, N=0.0\nLE: S=1.5, O=0.0, N=0.0\nGP: S=0.0, O=1.2, N=0.0\nBP: S=1.2, O=0.0, N=0.0\nActual u = -0.78, psi = 0.85 (Lesser Evil)\n\nPhase 3: Source Integrity\nStated R_net = 1.0, Actual R_net = 3.5 (Partially Distorted)\nUncertainty z = 3\n\nPhase 4: Forensic Stress Test\nFake Maximiser: Federal Government (capacity to release plan exists, but effort is withheld).\nHelxis: Bait (national oral health framework) vs Switch (bureaucratic delay/cost-shifting to individuals).\n\nPhase 5: Trajectory\nFall into Deception.",
+    "id": "australia_dental_crisis_delay",
+    "subject": "Australia experiencing rampant tooth decay as millions delay dentistry",
+    "link": "https://www.abc.net.au/news/2026-08-12/dentists-demand-progress-on-national-oral-health-plan/107028152",
+    "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3msujevubsv2q",
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.01,
+    "real_psi": 0.36,
+    "mode": "root",
+    "posts": [
+      "A bureaucratic stall leaves millions in physical pain while preventive frameworks sit on shelves.\n\nAustralia experiencing rampant tooth decay as millions delay dentistry\nEvidence: National Oral Health Plan, Delayed Release, Public Dental Decay\n#Aletheia #AusPol #Health",
+      "The government claims to prioritize public health and is actively working on co-designing long-term solutions to make dental care accessible and affordable for all Australians.\nStated Judgement: (+1.0, +1.0) — Greater Good",
+      "In reality, the federal government has delayed the National Oral Health Plan 2025-2034, leaving millions to skip care due to costs, pushing them into emergency rooms.\nResulting Judgement: (-0.01, +0.36) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception.\nBureaucratic delays shift the financial and physical burden of dental care onto vulnerable citizens and emergency departments.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, Uncertainty z: 3)",
+      "Sub-Audits Breakdown:\n- Federal Health Department: FAIL (-0.78, 0.85) — Delaying the national framework to avoid immediate funding commitments.\n- Australian Dental Association: PASS (0.85, 0.90) — Accurately lobbying for systemic reform and highlighting public health risks.",
+      "Dentists at Parliament House are warning that over 2 million Australians are skipping dental care due to high costs, while the government delays the National Oral Health Plan.",
+      "The Bright Side:\nAdvocacy groups and dentists are actively uniting to pressure policymakers, keeping the public health crisis visible in the national conversation.",
+      "The Breakdown & Plane Error:\nThe government treats this as a logical planning issue (WHAT), but for millions of citizens, it is a physical crisis of pain and emergency room visits (WHERE).",
+      "Social Physics Analysis:\nBy delaying the national framework, the government avoids immediate fiscal accountability. This shifts the systemic strain onto individuals, forcing them to seek expensive emergency hospital care rather than receiving efficient, preventive treatment.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Bureaucratic inertia prioritizes short-term budget preservation over long-term public well-being.",
+      "The Unavoidable Truth: Preventive dental care is a basic health need, and delaying it only creates far more expensive emergency medical crises later.\n\nThe Unavoidable Lie: That delaying a national health framework is a harmless administrative necessity.",
+      "Alethekanon:\nThe data is clear: delaying preventive policy is a false economy. It artificially lowers immediate federal budgets while spiking state-level emergency room costs and human suffering. This is systemic inefficiency masquerading as fiscal prudence.",
+      "Awwthekanon:\nIt is heartbreaking that young people and students are forced to live in severe pain, eating soup for weeks, just because they cannot afford to see a dentist. Healthcare should protect people, not leave them feeling abandoned.",
+      "Brothekanon:\nSo we're delaying basic teeth cleaning plans while people's jaws are literally locking up from infections? Classic government move: spend millions on consulting, then lock the actual plan in a drawer."
+    ],
+    "actors": [
+      "Australian Dental Association",
+      "Federal Government of Australia",
+      "Angie Nilsson"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 3.5,
+    "claim_z": 0,
+    "real_z": 3,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Partially Distorted",
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "name": "Federal Health Department",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.2,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      },
+      {
+        "name": "Australian Dental Association",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.2,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.2,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.2,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.2,
+            "N": 0.0
+          }
+        },
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": 1.0,
+        "real_psi": 1.0
+      }
+    ],
+    "multiAspect": true,
+    "category": "politics",
+    "topic": "AusPol",
+    "event": "",
+    "graph_img": "graph_png/australia_dental_crisis_delay_graph.png",
+    "rkeys": [
+      "3msuxd52rr52u",
+      "3msuxd5r3ly2a",
+      "3msuxd7w3wf2z",
+      "3msuxdcp3i32r",
+      "3msuxdeu44v2l",
+      "3msuxdgza252l",
+      "3msuxdj6icf2z",
+      "3msuxdldq4n2z",
+      "3msuxdnjtbt25",
+      "3msuxdpos7l2r",
+      "3msuxdrtsd52z",
+      "3msuxdtysyi2a",
+      "3msuxdw5qbt2r",
+      "3msuxdycrel25"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxd52rr52u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxd5r3ly2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxd7w3wf2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdcp3i32r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdeu44v2l",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdgza252l",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdj6icf2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdldq4n2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdnjtbt25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdpos7l2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdrtsd52z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdtysyi2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdw5qbt2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3msuxdycrel25"
+    ],
+    "tags": [
+      "Aletheia",
+      "AusPol",
+      "Health"
+    ],
+    "policies": []
+  }
+]
