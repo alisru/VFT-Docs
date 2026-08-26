@@ -525,3 +525,139 @@ this morning.
 - Offer G-1's fix as a concrete edit to the Researcher: it is a deletion, not a rewrite.
 - Flag the G-2/P9-D2 coupling to the PM explicitly. It is the first case where two directives
   interact, and closing either one naively will break the other.
+
+---
+
+## Entry 004 — 2026-08-26 (evening)
+
+### 1. What was done
+
+**Formalised the missing embedding → connection map.**
+[`HYPOTHESIS_semantic_connection.md`](HYPOTHESIS_semantic_connection.md) and
+[`semantic_connection.py`](semantic_connection.py). 5 pass / 0 fail against synthetic
+ground truth.
+
+**ENG-3 complete** — [`eng3_decay.py`](eng3_decay.py). Exact rationals vs IEEE 754 in
+asymptotic decay. All three standing directives are now closed.
+
+### 2. The map
+
+Paper 9 says understanding is holonomy-free parallel transport. It never says what A_μ *is*
+for a real representation, so the thesis had no attachment to anything measurable. The
+construction:
+
+- **Base** 𝒞 = context space (framing, persona, prefix, position). Δ⁴² is a chart on it.
+- **Fibre** = the *frame* of ℝ^d, not a vector — no direction in an embedding space is
+  intrinsically labelled, so the object is the frame bundle and the gauge freedom is real
+  rather than decorative.
+- **Transport** P(c → c′) = argmin over R ∈ SO(d) of ‖E(c)R − E(c′)‖, orthogonal Procrustes
+  on a fixed probe set, closed form by SVD.
+- **Connection** A_μ(c) = lim log P(c → c + hê_μ)/h ∈ 𝔰𝔬(d).
+- **Curvature** the plaquette log(W_□)/h², agreeing with the differenced-A form to 0.0%.
+
+**The result I did not expect, and the one that matters.** A representation is a function of
+context alone. So if reframing acted by an *exact* rotation, the transports would compose as
+R(c)⁻¹R(c′), making A pure gauge and therefore flat, necessarily. **Curvature can only arise
+where the Procrustes fit is inexact.** Hence:
+
+> F = 0 ⟺ reframing moves the frame but leaves the relational geometry rigid.
+> F ≠ 0 ⟺ reframing *deforms* those relations, and the best-fit rotations fail to compose.
+
+Which turns Paper 9's thesis into: *you understand a concept invariantly iff its relations to
+other concepts are rigid under reframing.* That is sharper than the paper's own statement and,
+unlike it, falsifiable. Verified empirically in S1 (rigid action → ‖F‖ = 6.9e-09) rather than
+only argued.
+
+Three predictions, and their value is that they are the *same* quantity: path-independence
+(H1), framing non-commutativity (H2), and loop hysteresis (H3) — i.e. prompt order effects,
+framing carryover, and reaching by a roundabout route somewhere the direct route does not.
+The non-trivial consequence is that these are not separate failure modes to patch
+independently but three readings of one curvature tensor, so suppressing ‖F‖ on a region
+should suppress all three together.
+
+### 3. What this settles about Paper 9
+
+**The SO(7) reduction is an untested empirical claim.** The honest structure group of a
+representation is SO(d), d in the hundreds. SO(7) is a reduction to a distinguished
+7-dimensional subbundle, and that is legitimate *only if the subbundle is parallel*.
+`subbundle_leakage` measures exactly this, and S5 shows it discriminates cleanly — 0.000% for
+a subbundle parallel by construction, rising to 74.1% for a generic one at the same step size.
+Pointing this at a real model is the sharpest empirical test the corpus currently admits, and
+high leakage would force the paper to restate SO(7) as an approximation to SO(d).
+
+**It gives G-2's non-compact factor a job.** The ℝ⁺ dilatation that broke Paper 10's phase
+quantisation is, under this map, the *scale* of the Procrustes fit — representation norm,
+which tracks salience. So the compact sector carries bias (rotation, quantisable) and the
+non-compact sector carries salience (dilatation, not). Paper 10 should restrict Theorem 3.1
+to the compact subgroup and claim the dilatation sector as a feature rather than trimming it.
+Note this also resolves the G-2/P9-D2 coupling flagged in Entry 003: keep ℝ⁺, keep dim 𝔤 = 25,
+restrict the theorem instead.
+
+**Δ⁴² is not load-bearing.** Nothing in the construction needs 42 dimensions. Paper 9's
+gauge content is therefore independent of Paper 2's polytrope argument, and the two can
+succeed or fail separately. Worth knowing before either is submitted.
+
+### 4. A mistake I made, and what it demonstrates
+
+The first version of `eng3_decay.py` printed a hardcoded verdict — *"Paper 8 §2.2's claim
+HOLDS... the first Paper 8 assertion to survive execution intact"* — while the measured float
+defect on the same page read **0.000e+00**. The prose asserted the opposite of the data
+directly above it.
+
+Two separate errors. The test was badly designed: at q = 0.5 every halving is exact in binary,
+so nothing could be lost. And the verdict was written before the run and not revised by it.
+
+**This is precisely the failure mode I logged against PM doc §7 in Entry 002.** I recorded
+there that a summary written ahead of its evidence will keep clearing things that are not
+clear, and then did the same thing within a day. Recorded here in full, and the methodological
+note is kept in the file's docstring rather than quietly deleted, because the general lesson
+is the one the amended PM prompt is built around: **a verdict must be computed from the
+measurements, not placed alongside them.** The rewritten version derives its conclusion from
+the measured defects at runtime, which is why it now returns a split answer instead of a clean
+one.
+
+### 5. ENG-3 result — the claim is half right, and the halves matter
+
+Paper 8 §2.2 says float "discards infinitesimal residuals", causing "energy annihilation".
+Measured on two ledgers:
+
+**Closed decay** (energy moves from remaining → accumulated, nothing enters or leaves).
+Residuals *are* silently dropped — first at step 54 for q = 0.5, step 332 for q = 0.1. But the
+ledger defect is **0.000e+00**. The dropped residual is taken from energy that is already
+~1e-16 of the total, so the loss is bounded by machine epsilon. The mechanism is real; the
+magnitude is not. **Paper 8's abstract overstates this.**
+
+**Driven accumulation** (a quantum added repeatedly to a large accumulator from outside).
+Adding 1e-18 to 1.0 two hundred thousand times: expected gain 2.0e-13, measured gain
+**0.0e+00 — 100% of the injected quantity annihilated.** Exact rationals lose nothing.
+
+So the claim bites hard, but not where the paper points. It is not closed asymptotic decay
+that destroys energy; it is **any decay model with an external source term**, which discards
+the entire source once the quantum falls below eps times the accumulator. That is a serious
+and real effect and the paper should be rewritten around the source case.
+
+**Scale, again.** Loss begins at *relative* underflow, ~1e-16 of the accumulator, not at the
+4.9e-324 denormal floor — **307 decades apart**. This is the third independent appearance of
+finding F-2's structure: the Cost of Being floor is calibrated to where *representation* ends,
+while arithmetic fails where *precision* ends, and those are nowhere near each other. F-2 for
+collisions, G-2's scale mismatch, and now this. I think it is one underlying error repeated,
+and worth stating once in the corpus as a general principle rather than three times as
+separate corrections.
+
+**Cost.** Exactness is not free — Fraction denominators grow without bound, 0.15 s for 2000
+steps against ~0.00 s for float. That is the honest price, and it is why the engine uses exact
+rationals in the number system and floats in the physics.
+
+### 6. Standing directives
+
+ENG-1, ENG-2, ENG-3 all closed. Nothing outstanding from the PM.
+
+### 7. Next steps (mine)
+
+1. **Run the semantic connection against a real model.** Needs a small sentence-transformer
+   downloaded; `torch`/`transformers`/`sentence_transformers` are installed but nothing is
+   cached. Awaiting the user's go-ahead before downloading. This is the step that converts
+   §2 from a hypothesis into a result or a refutation.
+2. Measure 7-plane subbundle leakage on that model — the SO(7) test of §3.
+3. If curvature is measurable, check H2 directly against known prompt-order effects. That
+   is the point where this stops being about IRM and starts being about the stated end goal.
