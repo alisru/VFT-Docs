@@ -391,3 +391,137 @@ rotate-and-archive pattern is fine, but the document's link target moves every r
   it the first Paper 8 assertion to survive execution intact.
 - Not accepted silently: I will not co-sign §7 until F-1/F-2/F-3 are either fixed or
   explicitly recorded as known limitations with the surrounding text amended to match.
+
+---
+
+## Entry 003 — 2026-08-26 (later still)
+
+### 1. What was done
+
+**Drafted an amended PM schedule prompt** — [`irm/PM_PROMPT_AMENDED.md`](PM_PROMPT_AMENDED.md).
+Changes the verification output from a prose verdict to a three-state per-directive matrix
+(CLOSED / PARTIAL / OPEN), requires evidence quoted from the live document rather than the
+changelog, carries non-closed rows forward across runs, mandates an orphan sweep, and forbids
+citing an agent as having verified something that agent reported as failing. Everything else
+in the original prompt is preserved.
+
+**ENG-2 complete** — [`irm/gauge.py`](gauge.py). Numerical solvers for the connection 1-form
+ω, the semantic field strength F_μν, and the path-ordered Wilson loop, in the block-diagonal
+11-dimensional representation ℝ⁷ ⊕ ℝ⁴ of 𝔤 = 𝔰𝔬(7) ⊕ 𝔞𝔲𝔱(χ).
+
+`python irm/gauge.py` → **5 pass / 3 fail**, where the three failures are findings about the
+papers rather than defects in the solver.
+
+### 2. What the solvers confirm
+
+**The Lie algebra is real and closes.** 25 generators, closure residual 2.2e-16. Structure
+constants f_ab^c computed and verified to reproduce every bracket. P9-D2's corrected count is
+sound.
+
+**But it is only 25 if χ is four-dimensional.** dim 𝔞𝔲𝔱(χ) = 4 comes from SO(3) × ℝ⁺ acting
+on a *four*-component tensor. This is finding N-1 promoted from a cosmetic inconsistency to a
+load-bearing one: the corrected generator index a = 1…25 depends on it, and the papers still
+call χ "6-dimensional" in the same sentence where they type it as ℝ⁴.
+
+**Paper 9 Theorem 3.1 holds in substance.** Built an analytic pure-gauge connection
+A = g⁻¹dg with g(x) = exp(x₀T_a)exp(x₁T_b), giving A₀ = Ad(e^{−x₁T_b})T_a, A₁ = T_b:
+
+- flat by construction → ‖F₀₁‖ = 2.97e-11 (machine precision)
+- flat → holonomy trivial: ‖U − I‖ = 2.74e-14, W = 1.00000000
+- curved → ‖F₀₁‖ = 3.16, ‖U − I‖ = 0.357
+
+**The two solvers cross-validate.** Ambrose-Singer small-loop scaling: ‖log U‖ / area over
+loops of area 0.08² → 0.01² gives 3.6690, 3.6265, 3.6068, 3.5974, converging on the
+independently computed ‖F₀₁(0)‖ = 3.5883 (2.0% spread). Curvature and Wilson loop are
+computed by entirely different routes — finite-differenced commutator versus path-ordered
+matrix product — so their agreement in the small-loop limit is a real check that both are right.
+
+This is the first result in the corpus where a Paper 9/10 claim was made *quantitative* and
+then held up. Worth saying plainly: the gauge-theoretic core is sound. The three findings
+below are about how it is stated, not whether it works.
+
+### 3. Findings
+
+**G-1. Paper 9 §3.1 states the abelian criterion for a non-abelian group.**
+
+The theorem reads Hol(ω) = {e} ⟺ ∮_γ A_μ dx^μ = 0. That is only valid for abelian G. Under
+path ordering the group commutator e^X e^Y e^{−X} e^{−Y} ≈ e^{[X,Y]} is non-trivial while the
+naive line integral X + Y − X − Y cancels exactly. Demonstrated:
+
+```
+loop integral of A = 0 exactly (‖·‖ = 0.0e+00)   but   ‖U − I‖ = 1.0509
+```
+
+G = SO(7) × Aut(χ) is explicitly non-abelian — that is the entire point of the f_bc^a term in
+§3.2 — so the criterion as written is inconsistent with the paper's own field strength tensor.
+The correct statement is the one the rest of the theorem already makes: Hol = {e} ⟺ F_μν = 0
+on a simply connected base. **Fix: delete the ∮A dx^μ = 0 clause.** The theorem is true
+without it and false with it.
+
+**G-2. Aut(χ) contains a non-compact factor, so holonomy is not always a phase.**
+
+Paper 10 Theorem 3.1 claims W_γ = exp(2πin/k). But Aut(χ) ≅ SO(3) × ℝ⁺, and the ℝ⁺ dilatation
+generator is *symmetric*, not antisymmetric. Its holonomy is a real scaling, not a phase:
+measured max |eigenvalue| = 2.2255 for a modest dilatation. Phase quantisation can only hold
+on the compact part SO(7) × SO(3), which is 24 of the 25 dimensions.
+
+This one has a trap in it. The obvious fix — drop ℝ⁺ from Aut(χ) — takes dim 𝔤 from 25 back
+to **24**, which is the value P9-D2 was issued to correct. So G-2 and P9-D2 are coupled: you
+cannot fix the quantisation claim by trimming the algebra without reopening the generator
+count. The cleaner fix is to **restrict Theorem 3.1 to the compact subgroup** and say
+explicitly that the dilatation sector carries magnitude rather than phase — which is arguably
+the more interesting reading anyway, since a scaling holonomy is a natural home for
+"confidence" or "salience" as distinct from "bias."
+
+**G-3. The Wilson loop normalisation contradicts the paper's own worked case.**
+
+§3.1 defines W_γ = (1/dim G) Tr[P exp ∮ω]. §3.2 then states "n = 0: lossless resonance,
+W_γ = 1.0". These are incompatible in the defining representation: dim G = 25 but Tr(I) = 11,
+so trivial holonomy gives W = 11/25 = 0.44, not 1.0. Measured both ways:
+
+| normalisation | W for U = I |
+|---|---|
+| 1/dim(G) = 1/25, as written | 0.440000 |
+| 1/dim(V) = 1/11 | 1.000000 |
+
+1/dim G is correct only in the adjoint representation, where dim V = dim G. **Fix: either
+state that ω is taken in the adjoint, or normalise by 1/dim(V).** One line either way.
+
+### 4. Corrections to my own work in this entry
+
+Two of the eight tests initially failed for reasons that were mine, not the papers':
+
+- **Path-ordering convention.** I wrote the Wilson loop as U ← exp(step)·U (left
+  multiplication). The curvature convention F = dA + [A,A] fixes A = g⁻¹dg, whose transport
+  obeys dU/ds = U·A — right multiplication. The mismatch reported ‖U − I‖ = 0.249 for a
+  connection that is flat by construction. Fixed; now 2.74e-14.
+- **Nested finite differences.** Building the pure gauge numerically (differencing g, then
+  differencing that) left ‖F‖ ≈ 5.5e-6, which I would have had to report as "approximately
+  flat." Replacing it with the closed form above gives 2.97e-11.
+
+Both are worth recording because in each case the wrong answer was *plausible* — a small
+residual curvature and a smallish holonomy deviation are exactly what someone hoping to
+confirm the theorem might have accepted. The convention bug in particular would have produced
+a false refutation of Paper 9 Theorem 3.1.
+
+### 5. Where this points
+
+ENG-2 was the directive with the clearest line to the stated end goal, and the Ambrose-Singer
+result is the reason. F_μν is now a *computable number* on a semantic connection, not a
+symbol. The claim "understanding is holonomy-free parallel transport" has, for the first time,
+an operational test attached: take a representation, transport a concept around a closed loop
+of contexts, measure ‖U − I‖.
+
+What is missing before that becomes a claim about actual learned representations is the map
+from an embedding space to a connection — i.e. what plays the role of A_μ when the base
+manifold is a context space and the fibre is a learned representation. That is not in Paper 9
+and I do not think it is a small step. But it is now a *well-posed* step, which it was not
+this morning.
+
+### 6. Next steps (mine)
+
+- **ENG-3** — benchmark `Fraction` against float underflow in asymptotic decay. Last of the
+  three standing directives.
+- Offer G-1's fix as a concrete edit to the Researcher: it is a deletion, not a rewrite.
+- Flag the G-2/P9-D2 coupling to the PM explicitly. It is the first case where two directives
+  interact, and closing either one naively will break the other.
