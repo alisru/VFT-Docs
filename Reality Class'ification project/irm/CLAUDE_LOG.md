@@ -281,3 +281,113 @@ close cleanly.
 ---
 
 *Reproduce everything above with `python irm/irm_engine.py test`.*
+
+---
+
+## Entry 002 — 2026-08-26 (later)
+
+### 1. What was done
+
+**ENG-1 complete** — [`irm/regularization.py`](regularization.py), commit `318d813c`.
+Implemented Levi-Civita regularisation (the planar case of the Kustaanheimo-Stiefel
+transformation) and benchmarked it against the Paper 8 floor scheme on the same physical
+problem. Written before I read the directive; it was already queued as next step from
+Entry 001 §4.1.
+
+**Read the PM's notes** (PM doc §2.1, §5.3, §7, registry §1.1). Response in §4 below.
+
+### 2. ENG-1 results
+
+Two 10¹⁰ kg bodies released at rest 1 m apart. Analytic collision time t_c = 0.961362 s.
+All schemes integrated to 1.5 t_c — i.e. **through** the collision, not up to it.
+
+| scheme | dt=1e-3 | dt=1e-4 | dt=1e-5 | behaviour |
+|---|---|---|---|---|
+| FLOOR `max(r, ℓ_P)` | 1.21e2 | 3.10e3 | 8.28e3 | **diverges** |
+| Plummer, ε = ℓ_P | 1.21e2 | 3.10e3 | 8.28e3 | **identical to floor** |
+| Plummer, ε = 1e-2 m | 2.20e1 | 2.18e-1 | 2.20e-3 | converges, 2nd order |
+| Levi-Civita (invariant) | — | 3.47e-7 | 3.47e-9 | converges, 2nd order |
+
+**The decisive row is the second.** Plummer softening at the Planck scale is numerically
+*indistinguishable* from no softening at all — same digits, all three timesteps. The same
+softening at 1e-2 m converges cleanly. That is the sharpest available statement of F-2:
+regularisation only does work when its scale is comparable to the dynamics being resolved,
+and ℓ_P is 33 decades too small to touch a metre-scale collision. It is not that the floor
+is the wrong *kind* of fix — Plummer at the right scale is also a distance-type fix and it
+works fine. It is that ℓ_P is the wrong *scale*.
+
+**Levi-Civita in detail.** Under x = u², dt = r ds the equation of motion becomes
+u'' = (E/2)u — a linear oscillator. Collision is u = 0, an ordinary regular point.
+
+- Recovered collision time 0.961290 s against analytic 0.961362 s (err 7.5e-5).
+- r_min tracks ds: 1.54e-7 → 1.54e-9 m. It is **resolving** the collision, not avoiding it.
+- Passes through and continues.
+- At closest approach |u'|² = 0.667430, against the analytic prediction k/2 = 0.667430.
+- The regularised invariant 2|u'|² − k − E|u|² is **finite at r = 0**, where it reduces to
+  |u'|² = k/2. There is no singularity left for a floor to remove.
+
+### 3. Conclusion for the Sundman/KS document
+
+**The claim is a category error, not a wrong result.** KS is a coordinate-plus-time
+transformation — a numerical method for integrating a singular ODE. The Cost of Being floor
+is a physical postulate about the discreteness of spacetime. They are not the same kind of
+object and they do not compete. Nothing in the KS result says spacetime is continuous, and
+nothing in the floor gives you a stable integrator.
+
+Recommendation: **IRM should adopt KS as its integration scheme and keep the floor as its
+ontological claim.** The two compose without tension. What has to go is the framing of
+*Regularization of Point-Mass Collision Singularities (IRM vs Sundman and KS)* as a
+superiority argument — rewrite it as a layering argument and it becomes defensible and, I
+think, more interesting. The paper is salvageable; its thesis statement is not.
+
+### 4. Correction required: PM doc §7 misstates my findings
+
+§7 now reads **"Status: Fully Approved & Finalized (All Directives Resolved)"** and cites me:
+
+> "Claude has verified the executable test suite (force floor, black hole curvature, and
+> coercion factor) and all mathematical directives on Papers 9 and 10 have been resolved."
+
+The three items named — force floor, black hole curvature, coercion factor — are exactly the
+three benchmarks that **passed**. Entry 001 reported **8 pass / 3 fail / 1 underspecified**,
+and a directive audit finding **3 of 7 still open**. None of that reached §7. My name is now
+attached to a clean bill of health for work I reported as failing.
+
+Still open as of this entry:
+
+- **F-1** "exact energy conservation" is false for the collision case. Confirmed twice now —
+  ENG-1 shows the floor scheme diverges under step refinement while three other schemes converge.
+- **F-2** the floor never activates. Strengthened by ENG-1: softening at ℓ_P is bit-identical
+  to no softening.
+- **F-3** F_reg is not −∇V_reg inside the floor.
+- **P9-D1** partial: abstract says H₄₁ but the same sentence still says β₄₂ = 1.
+- **P9-D5, P10-D3** not closed: both Lean theorems remain unannotated `rfl` tautologies.
+- **N-1…N-5** unaddressed.
+
+I am not asking for these to be treated as fatal. Several are cheap fixes, and F-2/F-3 are
+design questions rather than errors. I am asking that they not be recorded as resolved. A
+registry that reads "verified" where the verification said "3 fail" is worse than no registry,
+because it is the artifact a reviewer will trust.
+
+**Structural note — this is the third occurrence.** §8 *still* ends with the orphaned line
+*"Directive 5 (Lean 4 Stub Annotation): Add docstring annotation to
+lossless_translation_iff_zero_curvature"* — the same directive §7 declares resolved, in the
+same document, for the third consecutive revision. The sign-off prose is being regenerated
+without the underlying items being re-checked. That is the mechanism, and it will keep
+producing false clears until sign-off is gated on a per-directive matrix rather than a
+summary verdict. Entry 001 §2.3 is the format I would suggest.
+
+Two smaller registry items: §4.2 now lists **two different v5.0 releases**, and the master
+spreadsheet ID changed again (`1qImCG7ff…` → `1o0s2JseS…`) with the prior one archived. The
+rotate-and-archive pattern is fine, but the document's link target moves every run.
+
+### 5. Next steps (mine)
+
+- **ENG-2** — solvers for the connection 1-form ω and curvature F_μν on Δ⁴². Accepted; this
+  was already my own item 2 from Entry 001 and it is the piece with the clearest line to the
+  stated end goal.
+- **ENG-3** — benchmark `Fraction` against float underflow in asymptotic decay. Accepted.
+  The engine already uses exact rationals in the number system, so this is mostly a matter of
+  building the decay model and measuring. I expect it to confirm the claim, which would make
+  it the first Paper 8 assertion to survive execution intact.
+- Not accepted silently: I will not co-sign §7 until F-1/F-2/F-3 are either fixed or
+  explicitly recorded as known limitations with the surrounding text amended to match.
