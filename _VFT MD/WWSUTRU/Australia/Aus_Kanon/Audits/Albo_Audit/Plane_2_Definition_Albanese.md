@@ -17,7 +17,7 @@ The central question of this audit is not, *"Is Anthony Albanese a good or bad p
 
 ## **2.1 The Who of Definition (What.Who)**
 
-**(What.Who.Who) The Independent Australian Briton (upsilon: \+0.4, psi: \+0.3): HIT.** **Quote:** "Australia has never been a monocultural society." -Responding to Senator Pauline Hanson's National Press Club Address, ABC News (2026-06-29)[^abcmulti26]
+**(What.Who.Who) The Independent Australian Briton (upsilon: \+0.4, psi: \+0.3): HIT.** **Quote:** "We're all either migrants or descendants of migrants in some way." -Interview with Sarah Ferguson, ABC 7.30, reported by ABC News (2026-06-29)[^abcmulti26]
 
 Description: The Independent Australian Briton defines the foundational hybrid identity of the citizen, a synthesis of British institutional inheritance and the freedom of the Australian continent.
 
@@ -41,7 +41,7 @@ His government's continued position that the monarchy remains the constitutional
 
 His direct, on-the-record rejection of a monocultural redefinition of the nation in 2026 is the most recent instance of actively defending the expanding half of the hybrid[^abcmulti26]. HIT.
 
-**(What.Who.What) The Constituent (upsilon: \+0.8, psi: \+0.4): HIT.** **Quote:** "For myself, I will be satisfied if I can be remembered as someone who will stand up for the interests of my electorate, for working-class people, for the labour movement, and for our progressive advancement as a nation into the next century." -Maiden Speech, House of Representatives Hansard (1996)[^ms96albo]
+**(What.Who.What) The Constituent (upsilon: \+0.8, psi: \+0.4): HIT.** **Quote:** "I will be satisfied if I can be remembered as someone who will stand up for the interests of my electorate, for working class people, for the labour movement and for our progressive advancement as a nation into the next century." -Maiden Speech, House of Representatives Hansard (1996)[^ms96albo]
 
 Description: The Constituent establishes the voter as the active sovereign, defining the legitimacy of a parliamentary seat through the direct relationship between a member and the electorate rather than through party head office or institutional gatekeepers.
 
@@ -319,7 +319,7 @@ This was not an isolated case: the government's housing and industrial relations
 
 ## **2.3 The Where of Definition (What.Where)**
 
-**(What.Where.Who) The States' House (upsilon: \+0.6, psi: \+0.3): HIT.** **Quote:** National Cabinet, formalised as the government's primary forum for Commonwealth-state coordination, gives every state and territory leader an equal seat at the table regardless of population, a structural fact of how Albanese's government has continued to operate that body since 2022.
+**(What.Where.Who) The States' House (upsilon: \+0.6, psi: \+0.3): HIT.** **Quote:** "This is the federation working as it should: in a constructive, cooperative manner." -Questions without Notice: National Cabinet, House of Representatives, Hansard (2023-12-07)[^natcab23]
 
 Description: The States' House establishes equal geographic representation in the Senate, ensuring that small states have veto power over urban population centres, distributing political power across the landmass rather than by headcount alone.
 
@@ -467,7 +467,7 @@ Justification: The canonical coordinates demand expansive structural benefits fo
 
 Actuality: The actor frequently addresses trade unions and Labor Party conferences, explicitly tying the nation's success to the historical achievements of the labor movement. Their policy focus on industrial relations reforms and wage increases demonstrates an ongoing commitment to this vision. Their rhetoric confirms they are actively working in partnership with unions to sustain and expand broad-based worker protections.
 
-**(What.Why.Where) A Bulwark (upsilon: \-0.3, psi: \+0.6): HIT.** **Quote:** "Make sure that those who have put their lives on the line to defend our nation, to defend our way of life and, indeed, to defend all of us can be given the respect and care that they deserve." -House of Representatives Hansard (2019-11-28)[^hansard19defend]
+**(What.Why.Where) A Bulwark (upsilon: \-0.3, psi: \+0.6): HIT.** **Quote:** "...make sure that those who have put their lives on the line to defend our nation, to defend our way of life and, indeed, to defend all of us can be given the respect and care that they deserve..." -House of Representatives Hansard (2019-11-28)[^hansard19defend]
 
 Description: This vector measures the posture of national defense and resilience, assessing how the state secures its domain against external pressures. The canonical ideal calls for an active, robust defense that prioritizes the nation's own security and sovereign interests. The actor's position aligns with this by treating resilience and security as proactive necessities.
 
@@ -475,7 +475,7 @@ Justification: The canonical coordinates reflect a protective focus on the natio
 
 Actuality: The actor has consistently emphasized sovereign capability and national security resilience across multiple domains, particularly through initiatives like AUKUS and domestic defense industry investments. Their rhetoric frames these efforts explicitly around defending sovereignty and deterring aggression. This actively defensive and well-resourced posture accurately fulfills the requirements of the vector.
 
-**(What.Why.Where) Connection [First Nations Perspective] (upsilon: \+0.8, psi: \+0.4): HIT.** **Quote:** "I begin by acknowledging the traditional owners of the land on which we meet, and I pay my respects to elders past, present and emerging." -House of Representatives Hansard (2025-02-10)[^hansard25ack]
+**(What.Why.Where) Connection [First Nations Perspective] (upsilon: \+0.8, psi: \+0.4): HIT.** **Quote:** "I acknowledge the traditional owners of the land on which we meet. I pay my respects to elders past, present and emerging." -House of Representatives Hansard (2022-11-30)[^hansard22ack]
 
 Description: This vector measures the depth and nature of belonging to the land, specifically through the lens of continuous Indigenous stewardship. The canonical ideal represents a profound, inclusive, and enduring relationship with the environment that actively sustains both the land and its people. The actor's position acknowledges and elevates this foundational relationship.
 
@@ -507,7 +507,7 @@ Justification: By prioritizing industrial relations reforms, the actor directs t
 
 Actuality: The actor has dedicated significant political capital to passing sweeping industrial relations reforms, overcoming sustained resistance from major business lobbies. These reforms include criminalizing wage theft, establishing minimum standards for gig workers, and strengthening union delegates' rights. This legislative focus confirms a deep, active alignment with the historical drive to protect laborers from exploitation through systemic action.
 
-**(What.Why.Effect) The Quiet Life (upsilon: \+0.5, psi: \-0.5): HIT.** **Quote:** "Our policy will give businesses and workers the certainty they need. Labor will end the climate wars, and it is this objective of bringing people together in the national interest that will characterise the Labor government that I lead, in stark contrast to this government, which is always looking for a fight." -House of Representatives Hansard (2022-03-31)[^hansard22climate]
+**(What.Why.Effect) The Quiet Life (upsilon: \+0.5, psi: \-0.5): HIT.** **Quote:** "Our policy will give businesses and workers the certainty they need. Labor will end the climate wars, and it is this objective of bringing people together in the national interest that will characterise the Labor government that I lead, in stark contrast to this government, which is always seeking to divide." -Appropriation Bill (No. 1) 2022-2023, Second Reading, House of Representatives, Hansard (2022-03-31)[^hansard22climate]
 
 Description: This vector measures the aspiration for a stable, peaceful, and unassuming existence free from systemic disruption. The canonical ideal values modesty, reliable governance, and the preservation of a dependable social fabric. It reflects a desire to endure quietly rather than engage in constant, exhausting political upheaval. The actor's position appeals directly to this desire for steady, drama-free leadership, promising relief from chaotic partisanship.
 
@@ -540,7 +540,7 @@ Justification: Albanese's active opposition to the proposed voter identification
 
 Actuality: During his tenure as Opposition Leader, Albanese pledged to oppose the Coalition's voter identification proposal, framing it as voter suppression[^albointegrity21]. Following his election in 2022, his administration kept the traditional, barrier-free access to the Australian polling booth intact, allowing the Coalition's Voter Integrity Bill to permanently lapse on the Parliament's official tracker without reintroduction[^billlapsed22]. This consistent maintenance of the open voting system ensures that the sanctuary of the secret ballot remains a functional reality for all citizens. HIT.
 
-**(What.How.Why) Preferential Voting (upsilon: \+0.7, psi: \+0.5): HIT.** **Quote:** called on the Coalition to "follow John Howard's old playbook by putting One Nation last on how-to-vote cards" -Farrer by-election press conference, Albury (2026)[^farrerprefs26]
+**(What.How.Why) Preferential Voting (upsilon: \+0.7, psi: \+0.5): HIT.** **Quote:** "John Howard always put One Nation last on the how-to-vote of the Liberal Party. We'll wait and see what decisions Angus Taylor and David Littleproud are prepared to make." -Farrer by-election, reported by Region Riverina (2026-03-08)[^farrerprefs26]
 
 Description: Preferential Voting establishes consensus as the mathematical calculus of victory, requiring the winning candidate to secure an absolute majority (50% + 1) through preference distribution. Rather than forcing voters into a binary choice between two extremes, it allows the expression of a complex political intent that accommodates minor parties while pushing the overall outcome toward the center. The ideal requires defending this system of compulsory preferential ranking to ensure that the electoral process filters out political extremism and produces representatives who are acceptable to the broad mainstream.
 
@@ -557,7 +557,7 @@ Justification: Albanese's launch of the Robodebt Royal Commission immediately up
 
 Actuality: From the present perspective, the legacy of this inquiry is defined by the Albanese government's long-term execution and implementation of the commission's recommendations. Immediately upon winning government, Albanese fulfilled his campaign promise by establishing the Royal Commission under Letters Patent issued on 25 August 2022[^robodebtest22]. Following the delivery of the final report in 2023, the government went on to formally accept or accept in principle all 56 recommendations, committing to extensive public administration reforms in its final response tabled on 10 March 2026[^robodebtgov26]. This thorough follow-through on the Holmes report's structural proposals demonstrates that his deployment of the inquisitorial ritual was executed as a complete and binding path of reform. HIT.
 
-**(What.How.Cause) The Census (upsilon: \+0.5, psi: \+0.3): HIT.** **Quote:** "We want to make sure that everyone is valued, regardless of their gender, their race, their faith, their sexual orientation. We value every Australian, and we'll work with the ABS." -Interview with ABC Radio Sydney (2024-08-30)[^abcradio24]
+**(What.How.Cause) The Census (upsilon: \+0.5, psi: \+0.3): HIT.** **Quote:** "We’ve been talking with the Australian Bureau of Statistics and they are going to test for a new question, one on sexuality." -Radio interview, ABC Radio Melbourne (2024-08-30)[^abcradio24]
 
 Description: The Census is the "Great Stocktake" of the Australian Definition. Every five years, the Commonwealth attempts to map every single person, home, and religion in the continent. It is the scientific "Cause" of policy, providing the raw data for the distribution of seats (Nexus) and money (Fiscal Equalization). It represents the obsession of the utilitarian state with "Knowing" its population down to the last digit.
 
@@ -575,7 +575,7 @@ Actuality: Throughout his prime ministership, Albanese has leveraged the ALP’s
 
 ## **2.6 The Cause of Definition (What.Cause)**
 
-**(What.Cause.Who) The Prophet (upsilon: \+0.7, psi: \+0.8): HIT.** **Quote:** "A better future is not something we wait for. It's something we build." -ALP Campaign Launch Speech, Perth (2022-05-01)[^albo_campaign_2022]
+**(What.Cause.Who) The Prophet (upsilon: \+0.7, psi: \+0.8): HIT.** **Quote:** "...we use our common purpose in order to shape the future instead of letting the future shape us. That is the way that you build a better future, and my government is absolutely determined to do just that." -House of Representatives Hansard, Questions Without Notice: Economy (2022-07-27)[^albo_hansard_2022]
 
 Description: The Prophet vector represents the spark of national vision that drives the political community toward union. It measures whether the political actor can articulate a future for the nation that transcends immediate, tactical disputes, grounding their authority in a shared destiny that they help to imagine and construct. For Anthony Albanese, this visionary spark is channeled through his key rhetoric of building "a better future," framing his legislative agenda around national reconstruction, manufacturing, and social equity.
 
@@ -591,7 +591,7 @@ Justification: Albanese's decision to indefinitely shelve plans for a republic r
 
 Actuality: Following a meeting with King Charles III at Balmoral Castle, Albanese confirmed in an official interview that he would not hold a referendum on Australia becoming a republic during his prime ministership[^alborepublictrans25]. This followed his earlier executive decision in July 2024 to scrap the dedicated ministerial portfolio for an Assistant Minister for the Republic, signaling a deliberate retreat from constitutional change[^republicminister24]. His administration's continued operation under the traditional Westminster framework confirms the HIT on constitutional continuity. HIT.
 
-**(What.Cause.Where) The Stockade (upsilon: \+0.8, psi: \+0.9): HIT.** **Quote:** "In 1854 it was a Canadian, Henry Ross, who stood in the centre of the Eureka Stockade at Ballarat and raised a new flag, the iconic Southern Cross, a symbol of the miners’ struggle for justice. In other words, Prime Minister, Canadian rebels with bold ideas have always been welcome here in Australia." -Welcome Address to Canadian Guest Mark Carney, House of Representatives (2026-03-04)[^alboeureka26]
+**(What.Cause.Where) The Stockade (upsilon: \+0.8, psi: \+0.9): HIT.** **Quote:** "In 1854 it was a Canadian, Henry Ross, who stood in the centre of the Eureka Stockade at Ballarat and raised a new flag, the iconic Southern Cross, a symbol of the miners’ struggle for justice. In other words, Prime Minister, Canadian rebels with bold ideas have always been welcome here in Australia." -Welcome Address to Canadian Guest Mark Carney, House of Representatives (2026-03-05)[^alboeureka26]
 
 Description: Peter Lalor, the rebel leader, administered this oath to the miners at the Eureka Stockade in Ballarat in 1854, beneath the Southern Cross flag. It was the only armed rebellion in Australian history, a fight against unjust taxation and for the right to vote. While the stockade was crushed by the military, the "Spirit of Eureka" became the spiritual "Where" of Australian democracy—the place where the common man finally stood up.
 
@@ -651,7 +651,7 @@ Justification: Albanese's address at the opening of the Donald Horne Building di
 
 Actuality: To structurally shift the nation away from reliance on unearned resource luck toward advanced technology and manufacturing, the Albanese government announced the *Future Made in Australia* framework, investing $22.7 billion in the 2024–25 Budget to subsidize green energy, critical minerals processing, and advanced manufacturing[^patchwork24]. Albanese directly linked this policy to Horne's intellectual ambition, framing it as a strategy to build a smart, value-adding economy rather than remaining a passive exporter of raw materials. This significant economic policy confirms the HIT. HIT.
 
-**(What.Effect.Where) The Tyranny of Distance (upsilon: \+0.0, psi: \-0.6): HIT.** **Quote:** "Part of what the National Broadband Network is about is overcoming the tyranny of distance that creates inequity depending upon where you live in Australia." -Speech in the House of Representatives, Canberra (2011-02-24)[^tyrannyofdistance11]
+**(What.Effect.Where) The Tyranny of Distance (upsilon: \+0.0, psi: \-0.6): HIT.** **Quote:** "Part of what the National Broadband Network is about is overcoming the tyranny of distance that creates inequity depending upon where you live in Australia." -Speech in the House of Representatives, Canberra (2011-03-24)[^tyrannyofdistance11]
 
 Description: The Tyranny of Distance vector measures whether the political actor addresses Australia's geographic isolation and internal sprawl as a fundamental constraint on the national condition. It tests whether the actor frames major state-led transport, regional development, or digital infrastructure programs as necessary interventions to bridge geographic division. This structural reality establishes isolation as the gravity.
 
@@ -714,35 +714,35 @@ Actuality: To enforce this protective safety measure, the Albanese government pa
 [^mostynlive24]: "Sam Mostyn sworn in as governor general – as it happened", The Guardian live politics blog, 1 July 2024: https://www.theguardian.com/australia-news/live/2024/jul/01/australia-politics-news-live-stage-three-tax-cuts-inflation-interest-rates-chalmers-labor-fatima-payman-nsw-coercive-control
 [^orderly25]: "Australian PM basks in win, vows 'orderly' government", LCA News, 5 May 2025: https://www.lcanews.com/en/australian-pm-basks-in-win-vows-orderly-government/
 [^nepa25]: "Introduction of Environment Protection Reform Bill 2025", Minister for the Environment and Water Murray Watt, media release, Department of Climate Change, Energy, the Environment and Water: https://minister.dcceew.gov.au/watt/media-releases/introduction-environment-protection-reform-bill-2025
-[^doublemaj23]: "Aboriginal and Torres Strait Islander Voice referendum", Parliamentary Education Office, quoting Prime Minister Anthony Albanese's referendum result speech, 14 October 2023: https://peo.gov.au/understand-our-parliament/history-of-parliament/history-milestones/australian-parliament-history-timeline/events/aboriginal-and-torres-strait-islander-voice-referendum
+[^doublemaj23]: Anthony Albanese, Press Conference, Parliament House, Canberra, referendum result, 14 October 2023: https://www.pm.gov.au/media/press-conference-parliament-house-canberra-17
 [^interpreter23]: "Government action in response to NZYQ High Court decision", Joint Media Release, Minister for Home Affairs Andrew Giles and Minister for Home Affairs Clare O'Neil, 14 November 2023: https://minister.homeaffairs.gov.au/AndrewGiles/Pages/government-action-response-nzyq-high-court-decision-14112023.aspx
 [^deal23]: "Next Step Towards Voice Referendum: Constitutional Alteration Bill", PM Transcripts, Transcript 44855, 23 March 2023: https://pmtranscripts.pmc.gov.au/release/transcript-44855
 [^gridlock24]: "Albanese faces scrutiny over $4.3 million property amid housing crisis", Mortgage Professional Australia, 15 October 2024 (reporting the Help to Buy scheme's Senate delay): https://www.mpamag.com/au/news/general/albanese-faces-scrutiny-over-43-million-property-amid-housing-crisis/509782
-[^peopleshouse22]: "Anthony Albanese: Who is Australia's prime minister-elect?", Al Jazeera, and "Australian voters deliver strong message on climate, ending conservative government's 9-year rule", CNN, 21 May 2022: https://edition.cnn.com/2022/05/21/australia/australia-election-results-morrison-albanese-intl-hnk/index.html
+[^peopleshouse22]: Anthony Albanese, Election Victory Speech, Canterbury-Hurlstone Park RSL Club, Sydney, 21 May 2022, full transcript: https://www.abc.net.au/news/2022-05-22/anthony-albanese-acceptance-speech-full-transcript/101088736
 [^bushcapital22]: "Albanese declares there's a new regime in this public service town", The Canberra Times, 23 May 2022: https://www.canberratimes.com.au/story/7749833/albanese-declares-theres-a-new-regime-in-this-public-service-town/
 [^gstwa24]: "Albanese inks WA tax pledge on reporter's arm", The Canberra Times, 19 February 2024: https://www.canberratimes.com.au/story/8526953/albanese-inks-wa-tax-pledge-on-reporters-arm/
 [^washminster22]: "Grattan on Friday: Government win on climate legislation leaves opposition looking like a stranded asset", The Conversation, 5 August 2022: https://theconversation.com/grattan-on-friday-government-win-on-climate-legislation-leaves-opposition-looking-like-a-stranded-asset-188231
-[^patchwork24]: "Investing in a future made in Australia", Prime Minister of Australia media release, 14 May 2024: https://www.pm.gov.au/media/investing-future-made-australia
+[^patchwork24]: Anthony Albanese, "Aluminium to forge Australia's manufacturing future", Prime Minister of Australia media release: https://www.pm.gov.au/media/aluminium-forge-australias-manufacturing-future
 [^nacc22]: "National Anti-Corruption Commission", Attorney-General's Department, 2022: https://www.ag.gov.au/integrity/national-anti-corruption-commission
 [^loopholes23]: Anthony Albanese, "Address to Victorian Labor Conference", Melbourne, 17 June 2023: https://www.pm.gov.au/media/address-victorian-labor-conference
 [^paymanteam24]: Prime Minister Anthony Albanese, Press Conference responding to Senator Fatima Payman crossing the floor, July 2024.
 [^referendumdefeat23]: Prime Minister Anthony Albanese, Voice to Parliament Referendum Concession Speech, October 2023: https://www.mamamia.com.au/anthony-albanese-referendum-speech/
 [^hansard25penalty]: Anthony Albanese, House of Representatives Hansard, 24 July 2025, APH Display: https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansardr/28811/&sid=0111
 [^hansard19defend]: Anthony Albanese, House of Representatives Hansard, 28 November 2019, APH Display: https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansardr/d70fa2ae-1caf-4548-a026-9f8c47bf03ee/&sid=0189
-[^hansard25ack]: Anthony Albanese, House of Representatives Hansard, 10 February 2025, APH Display: https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansardr/28685/&sid=0209
+[^hansard22ack]: Anthony Albanese, Closing the Gap Ministerial Statement, House of Representatives, Hansard, 30 November 2022: https://www.openaustralia.org.au/debates/?id=2022-11-30.28.3
 [^hansard20future]: Anthony Albanese, House of Representatives Hansard, 8 October 2020, APH Display: https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansardr/a28c39ce-4e49-4b78-914d-ccca686a471e/&sid=0183
-[^hansard22climate]: Anthony Albanese, House of Representatives Hansard, 31 March 2022, APH Display: https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansardr/25472/&sid=0420
+[^hansard22climate]: Anthony Albanese, Appropriation Bill (No. 1) 2022-2023, Second Reading, House of Representatives, Hansard, 31 March 2022: https://www.openaustralia.org.au/debates/?id=2022-03-31.149.3
 [^voterintegrity21]: Anthony Albanese, Electoral Legislation Amendment (Voter Integrity) Bill 2021 Second Reading Speech, House of Representatives Hansard, 24 November 2021, APH Display: https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansardr/25172/&sid=0169
 [^farrerprefs26]: "Nationals choose Farrer candidate as Albanese calls on Coalition to put One Nation last", Region Riverina, 8 March 2026: https://regionriverina.com.au/nationals-choose-farrer-candidate-as-albanese-calls-on-coalition-to-put-one-nation-last/120917/
 [^robodebtrc23]: Anthony Albanese, Press Conference on Robodebt Royal Commission Report, Canberra, 7 July 2023: https://www.news.com.au/national/politics/anthony-albanese-says-robodebt-was-a-gross-betrayal-and-a-human-tragedy/news-story/bf425382bf39d91001a7a0b50822f4d9
 [^robodebtest22]: Royal Commission into the Robodebt Scheme, Establishment Announcement, 25 August 2022: https://robodebt.royalcommission.gov.au/
 [^robodebtwiki26]: Royal Commission into the Robodebt Scheme, Wikipedia entry, June 2026: https://en.wikipedia.org/wiki/Royal_Commission_into_the_Robodebt_Scheme
 [^robodebtgov26]: Government response to the Royal Commission into the Robodebt Scheme, Department of the Prime Minister and Cabinet, 10 March 2026: https://www.pmc.gov.au/resources/government-response-royal-commission-robodebt-scheme
-[^abcradio24]: Anthony Albanese, "Radio interview - ABC Radio Melbourne", pm.gov.au, 30 August 2024: https://www.pm.gov.au/media/radio-interview-abc-radio-melbourne-5
+[^abcradio24]: Anthony Albanese, "Radio interview - ABC Radio Melbourne", pm.gov.au, 30 August 2024: https://www.pm.gov.au/media/radio-interview-abc-radio-melbourne-5 — quote as reported in "Albanese backs down on decision to exclude LGBT question from next census after Labor MPs revolt", ABC News, 30 August 2024: https://www.abc.net.au/news/2024-08-30/albanese-says-question-on-sexuality-will-be-tested-for-census/104289570
 [^sbsspill26]: "'History not positive': Albanese warns of leaders spill amid Keir Starmer resignation reports", SBS News, 21 June 2026: https://www.sbs.com.au/news/article/albanese-warns-against-leadership-spill-as-uks-starmer-set-to-quit/aqf6z670x
-[^albo_campaign_2022]: Anthony Albanese, "Vote for a Better Future" ALP Campaign Launch Speech, Perth, 1 May 2022: https://anthonyalbanese.com.au/media-centre/vote-for-a-better-future-2022-campaign-launch
+[^albo_hansard_2022]: Anthony Albanese, House of Representatives Hansard, "Questions Without Notice: Economy", 27 July 2022; speech ID uk.org.publicwhip/debate/2022-07-27.72.1: https://www.openaustralia.org.au/debates/?id=2022-07-27.72.1
 [^albo_republic25]: "Anthony Albanese says no republic referendum while he is PM", Sky News Australia / News.com.au, 28 September 2025: https://www.skynews.com.au/breaking-news/anthony-albanese-says-no-republic-referendum-while-he-is-pm/news-story/97f597c21ee93aa0276e5968f3a4e6b7
-[^alboeureka26]: Anthony Albanese, Address welcoming Mark Carney to the Parliament of Australia, House of Representatives Hansard, 4 March 2026: https://www.theguardian.com/australia-news/live/2026/mar/05/australia-politics-live-anthony-albanese-angus-taylor-parliament-question-time-labor-coalition-one-nation-middle-east-mark-carney-canada-iran-ntwnfb
+[^alboeureka26]: Anthony Albanese, Address welcoming the Prime Minister of Canada to the Parliament of Australia, House of Representatives, Hansard, 5 March 2026: https://www.openaustralia.org.au/debates/?id=2026-03-05.4.1
 [^alboslump22]: Anthony Albanese, Question Time, House of Representatives Hansard, 28 July 2022.
 [^nrfpass23]: "National Reconstruction Fund Corporation Bill 2022 passes Senate", Prime Minister of Australia Press Conference, 29 March 2023: https://www.pm.gov.au/media/press-conference-parliament-house-canberra-11
 [^albonrf23]: Anthony Albanese, National Reconstruction Fund Corporation Bill 2022 Second Reading Debate, House of Representatives Hansard, 7 March 2023: https://www.openaustralia.org.au/debates/?d=2023-03-07
@@ -771,7 +771,7 @@ Actuality: To enforce this protective safety measure, the Albanese government pa
 [^anzacday23]: Anthony Albanese, "Anzac Day Dawn Service Speech", Canberra, 25 April 2023: https://www.pm.gov.au/media/anzac-day-dawn-service
 [^veteransuicide24]: "Government's response to the Final Report of the Royal Commission into Defence and Veteran Suicide", Prime Minister of Australia Media Release, 2 December 2024: https://www.pm.gov.au/media/governments-response-final-report-royal-commission-defence-and-veteran-suicide
 [^donaldhorne23]: Anthony Albanese, "Opening of Donald Horne Building", Muswellbrook, 18 July 2023: https://www.pm.gov.au/media/opening-donald-horne-building
-[^tyrannyofdistance11]: Anthony Albanese, "Speech in the House of Representatives - National Broadband Network", Canberra, 24 February 2011: https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22chamber%2Fhansardr%2F2011-02-24%2F0039%22
+[^tyrannyofdistance11]: Anthony Albanese, "Speech in the House of Representatives - National Broadband Network", Canberra, 24 March 2011: https://www.openaustralia.org.au/debates/?id=2011-03-24.188.8
 [^nbnbudget22]: "Albanese Government delivers major NBN boost in 2022-23 Federal Budget", Minister for Communications Michelle Rowland MP Media Release, 25 October 2022: https://minister.infrastructure.gov.au/rowland/media-release/albanese-government-delivers-major-nbn-boost-2022-23-federal-budget
 [^revivespeech23]: Anthony Albanese, "Launch of National Cultural Policy", Speech, St Kilda, 30 January 2023: https://www.pm.gov.au/media/launch-national-cultural-policy
 [^creativebill23]: "Creative Australia Bill 2023", Parliament of Australia Bill Homepage, Introduced 15 June 2023: https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Result/Result?bId=r7049
@@ -781,3 +781,5 @@ Actuality: To enforce this protective safety measure, the Albanese government pa
 [^socialmediaban24]: Anthony Albanese, "Albanese Government protecting kids from social media harms", Prime Minister of Australia Media Release, 21 November 2024: https://www.pm.gov.au/media/albanese-government-protecting-kids-social-media-harms
 [^socialmediaact25]: "Online Safety Amendment (Social Media Minimum Age) Act 2024", Federal Register of Legislation, Act No. 127 of 2024, Commenced 10 December 2025: https://www.legislation.gov.au/C2024A00127/asmade
 
+[^natcab23]: Anthony Albanese, Questions without Notice: National Cabinet, House of Representatives, Hansard, 7 December 2023: https://www.openaustralia.org.au/debates/?id=2023-12-07.102.1
+[^garma22]: Anthony Albanese, Address to Garma Festival, Gulkula, Northern Territory, 30 July 2022: https://www.pm.gov.au/media/address-garma-festival
