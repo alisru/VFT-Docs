@@ -147,7 +147,7 @@ He has repeatedly defended this slow-moving approach as the characteristically o
 
 This systematic preference for administrative stasis over adaptive improvisation confirms a failure of the Stringybark method.[^orderly24][^robodebt23]
 
-**(Who.Who.Cause) The Indigenous Custodian (upsilon: \+0.9, psi: \+0.5): HIT.** **Quote:** "We put the referendum to the Australian people for a constitutional recognition of First Nations people through the method that they asked for in the Uluru Statement from the Heart..." -Questions without Notice: Uluru Statement from the Heart, House of Representatives Hansard (2024-02-06)[^custodian24]
+**(Who.Who.Cause) The Indigenous Custodian (upsilon: \+0.9, psi: \+0.5): HIT.** **Quote:** "We put the referendum to the Australian people for a Constitutional recognition of First Nations people through the method that they asked for in the Uluru Statement from the Heart..." -Questions without Notice: Uluru Statement from the Heart, House of Representatives Hansard (2024-02-06)[^custodian24]
 
 Description: The Custodian vector represents the prior claim of First Nations, demanding structural justice rather than symbolic charity.
 
@@ -201,8 +201,7 @@ This persistent focus on structural, state-led support rather than self-reliant 
 
 ## **1.2 The What of Identity (Definition)**
 
-**(Who.What.Who) The Fair Go (upsilon: \+0.9, psi: \+0.5): HIT.** **Quote:** "My Labor team will work every day to bring Australians together. And I will lead a government worthy of the people of Australia."[^albo_ref1]
-
+**(Who.What.Who) The Fair Go (upsilon: \+0.9, psi: \+0.5): HIT.** **Quote:** "My Labor team will work every day to bring Australians together. And I will lead a government worthy of the people of Australia." -Election Victory Speech, Canterbury-Hurlstone Park RSL Club, Sydney (2022-05-21)[^albo_ref1]
 Description: The Fair Go serves as the central moral axiom of the Australian character, codifying the belief that all individuals deserve a decent standard of living and equal opportunities.
 
 It asserts that economic outcomes must not override basic human dignity and that the rules of society should not be rigged to favor the privileged.
@@ -233,8 +232,7 @@ These legislative changes directly intervened in the labour market to protect lo
 
 These tangible outcomes demonstrate a successful implementation of the fair go policy framework.
 
-**(Who.What.What) Tall Poppy Syndrome (upsilon: \+0.4, psi: \-0.5): FAIL.** **Quote:** "We've seen the damage that blinkered ideological dogma does to the economy, the toll it takes on the country."[^albo_ref2]
-
+**(Who.What.What) Tall Poppy Syndrome (upsilon: \+0.4, psi: \-0.5): FAIL.** **Quote:** "We've seen the damage that blinkered ideological dogma does to the economy, the toll it takes on the country." -Address to the Business Council of Australia Annual Dinner, Sydney (2022-08-31)[^albo_ref2]
 Description: Tall Poppy Syndrome operates as a cultural mechanism designed to enforce equality of dignity by cutting down social pretension and arrogance.
 
 It asserts that while success is acceptable, those who rise must remain accessible and reject any sense of inherent superiority or inherited rank.
@@ -265,7 +263,7 @@ This persistent protection of wealth accumulation mechanisms represents a direct
 
 Consequently, the policy settings allow wealth inequality to expand without the customary structural corrections demanded by the leveling creed.
 
-**(Who.What.Where) Egalitarianism (upsilon: \+0.8, psi: \+0.3): HIT.** **Quote:** "There is no step that can, on its own, get us to our destination. But we keep taking steps."[^albo_ref3]
+**(Who.What.Where) Egalitarianism (upsilon: \+0.8, psi: \+0.3): HIT.** **Quote:** "I'm proud that I wasn't born to rule. I'm proud that I work hard. I'm proud of what I've achieved." -Questions without Notice: Housing: Taxation, House of Representatives, Hansard (2026-05-13)[^bornrule26]
 
 Description: Egalitarianism represents the structural commitment to a peer-to-peer society where titles and lineage hold no moral authority.
 
@@ -297,8 +295,7 @@ These changes successfully targeted the systemic privileges of political elites 
 
 These structural reforms demonstrate an active commitment to reducing elite influence and reinforcing public integrity.
 
-**(Who.What.Why) "She'll be right" (upsilon: \+0.3, psi: \-0.6): FAIL.** **Quote:** "The truth is, for Australia, we can no longer afford the luxury of strategic complacency. And hope is not a strategy."[^albo_ref4]
-
+**(Who.What.Why) "She'll be right" (upsilon: \+0.3, psi: \-0.6): FAIL.** **Quote:** "The truth is, for Australia, we can no longer afford the luxury of strategic complacency. And hope is not a strategy." -Richard Marles, Launch of the 2024 National Defence Strategy, National Press Club, Canberra (2024-04-17)[^albo_ref4]
 Description: The concept of "She'll be right" serves as a national buffer that uses fatalistic optimism to endure crises without panic.
 
 It represents a stoic reliance on time and nature to resolve difficulties, promoting resilience in the face of uncontrollable events.
@@ -329,7 +326,7 @@ This reform represents a structural departure from relying on local volunteer ne
 
 By institutionalizing risk mitigation, the state has actively dismantled the traditional reliance on passive resilience.
 
-**(Who.What.How) Secular Skepticism (upsilon: \+0.6, psi: \-0.3): HIT.** **Quote:** "We've implemented new, evidence based taglines to replace the 'Gambling responsibly' taglines that were previously there that were ineffective. ... That's why we're undertaking this work in the characteristically orderly, measured and considered way that this government operates."[^albo_ref5]
+**(Who.What.How) Secular Skepticism (upsilon: \+0.6, psi: \-0.3): HIT.** **Quote:** "We've implemented new, evidence based taglines to replace the 'Gambling responsibly' taglines that were previously there that were ineffective." -Questions without Notice: Gambling, House of Representatives, Hansard (2024-05-29)[^albo_ref5]
 
 Description: Secular Skepticism represents the national immune system against moralizing, dogma, and high-flown rhetorical promises.
 
@@ -361,8 +358,7 @@ This practice has successfully isolated federal policy from the influence of rel
 
 The systemic reliance on technocratic evidence confirms the ongoing dominance of the secular skeptic framework.
 
-**(Who.What.Cause) The Convict Stain (upsilon: \+0.3, psi: \-0.5): FAIL.** **Quote:** "Quite clearly we do need to restore faith in our political system. We need to make sure that there is transparency, accountability and integrity."[^albo_ref6]
-
+**(Who.What.Cause) The Convict Stain (upsilon: \+0.3, psi: \-0.5): FAIL.** **Quote:** "Quite clearly we do need to restore faith in our political system. We need to make sure that there is transparency, accountability and integrity." -Questions without Notice: National Anti-Corruption Commission, House of Representatives, Hansard (2022-09-28)[^albo_ref6]
 Description: The Convict Stain represents the historical scar of colonial criminality that embeds a deep anti-authoritarian streak in the culture.
 
 It cultivates a persistent suspicion of the state, the magistrate, and the police as inherently biased or corrupt institutions.
@@ -393,8 +389,7 @@ These efforts sought to reconcile the public with the state by addressing system
 
 Rather than tolerating the convict stain's protective distrust, the government actively worked to repair the institutional social contract.
 
-**(Who.What.Effect) The Commonwealth (upsilon: \+0.8, psi: \+0.5): HIT.** **Quote:** "Because I want every parent to be able to tell their child, no matter where you live or where you come from, in Australia the doors of opportunity are open to us all. And like every other Labor government, we'll just widen that door a bit more."[^albo_ref7]
-
+**(Who.What.Effect) The Commonwealth (upsilon: \+0.8, psi: \+0.5): HIT.** **Quote:** "Because I want every parent to be able to tell their child, no matter where you live or where you come from, in Australia the doors of opportunity are open to us all. And like every other Labor government, we'll just widen that door a bit more." -Election Victory Speech, Canterbury-Hurlstone Park RSL Club, Sydney (2022-05-21)[^albo_ref7]
 Description: The Commonwealth represents the formal codification of collective mateship into concrete rights and public institutions.
 
 It asserts that the ultimate purpose of the state is to secure the shared wealth and public welfare of all citizens.
@@ -427,8 +422,7 @@ By reinforcing Medicare as a non-negotiable right, the government successfully u
 
 ## **1.3 The Where of Identity (Physical)**
 
-**(Who.Where.Who) The Bush (upsilon: \+0.5, psi: \-0.4): FAIL.** **Quote:** "There's certainly nothing like this in my electorate in Sydney, of this quality and this size"[^albo_bush_sports_2022]
-
+**(Who.Where.Who) The Bush (upsilon: \+0.5, psi: \-0.4): FAIL.** **Quote:** "There's certainly nothing like this in my electorate in Sydney, of this quality and this size" -Interview with Hit 99.7 Riverina MIA, Griffith Regional Sports Centre (2022-10-29)[^albo_bush_sports_2022]
 Description: He addresses regional and rural communities through a metropolitan-centric framework that draws constant comparisons to his inner-Sydney electorate of Grayndler.
 
 This approach highlights his separation from the realities of rural life and suggests an urban bias.
@@ -453,8 +447,7 @@ Furthermore, the October 2022 budget slashed several regional infrastructure pro
 
 This focus demonstrates that his active structural commitment remains centered on metropolitan electorates, leaving regional development as a secondary concern managed through crisis responses.[^albo_bush_sports_2022]
 
-**(Who.Where.What) The Coast (upsilon: \+0.6, psi: \+0.3): HIT.** **Quote:** "One of the great things about Australia... is a place where every Australian is equal. And that's a breach of that principle, really, to think that you can reserve a little spot as just yours"[^albo_coast_beach_2025]
-
+**(Who.Where.What) The Coast (upsilon: \+0.6, psi: \+0.3): HIT.** **Quote:** "One of the great things about Australia... is a place where every Australian is equal. And that's a breach of that principle, really, to think that you can reserve a little spot as just yours" -Comments on public beach access, reported by The Guardian (2025-01-15)[^albo_coast_beach_2025]
 Description: He praises beach culture and coastal environments as spaces of equality and democratic assembly where all citizens are equal.
 
 He connects this geographical fringe to the core egalitarian ethos of the nation, celebrating it as a shared national common.
@@ -481,8 +474,7 @@ These actions demonstrate a consistent, practical alignment with the protection 
 
 This combination of personal connection and proactive environmental policy fulfills the coastal vector's requirement for physical and cultural protection.[^albo_coast_beach_2025]
 
-**(Who.Where.Where) The Red Centre (upsilon: \+0.5, psi: \-0.5): FAIL.** **Quote:** "Today, we have some significant announcements to make, but also some foreshadowing of future activity to deal with the pressures which clearly have been felt here in Alice Springs."[^albo_alice_springs_2023]
-
+**(Who.Where.Where) The Red Centre (upsilon: \+0.5, psi: \-0.5): FAIL.** **Quote:** "Today, we have some significant announcements to make, but also some foreshadowing of future activity to deal with the pressures which clearly have been felt here in Alice Springs." -Doorstop, Alice Springs (2023-01-24)[^albo_alice_springs_2023]
 Description: He treats the Red Centre and the Australian interior primarily as a site of crisis management, social dysfunction, and law enforcement.
 
 This framework focuses on policing and regulatory bans rather than engaging with the interior's spiritual and cultural depth.
@@ -507,8 +499,7 @@ The subsequent $250 million Central Australia Plan continued this administrative
 
 By managing the region through the lens of crisis control, his government reinforces a paternalistic relationship with the interior, resulting in a structural failure of this vector.[^albo_alice_springs_2023]
 
-**(Who.Where.Why) The Cycle (upsilon: \+0.0, psi: \-0.5): HIT.** **Quote:** "Natural disasters are a cruel part of life on this unforgiving continent."[^albo_hansard_25oct2022]
-
+**(Who.Where.Why) The Cycle (upsilon: \+0.0, psi: \-0.5): HIT.** **Quote:** "Natural disasters are a cruel part of life on this unforgiving continent." -House of Representatives, Hansard (2022-10-25)[^albo_hansard_25oct2022]
 Description: He addresses the extreme weather cycles of floods and droughts that characterize the Australian continent as inevitable natural realities.
 
 His parliamentary speeches frame these events as structural challenges that demand national resilience and systemic preparation.
@@ -535,8 +526,7 @@ By institutionalizing this proactive funding model, his administration has succe
 
 The exact Hansard records from October 2022 confirm this legislative alignment and its funding mechanism.[^albo_hansard_25oct2022]
 
-**(Who.Where.How) The Tyranny of Distance (upsilon: \+0.0, psi: \-0.6): HIT.** **Quote:** "Like all the work that Labor has put into – and will continue putting into – improving road and rail, improving communications will also chip away at the tyranny of distance."[^albo_griffith_2022]
-
+**(Who.Where.How) The Tyranny of Distance (upsilon: \+0.0, psi: \-0.6): HIT.** **Quote:** "Like all the work that Labor has put into – and will continue putting into – improving road and rail, improving communications will also chip away at the tyranny of distance." -Daily Telegraph Bush Summit Address, Griffith (2022-08-26)[^albo_griffith_2022]
 Description: He frames Australia's vast geographic distance as a structural barrier that must be bridged through physical and digital infrastructure.
 
 His policy rhetoric emphasizes that connecting regional and metropolitan areas is essential for economic equity and productivity.
@@ -563,8 +553,7 @@ These physical and digital infrastructure projects demonstrate a consistent, pra
 
 The official Griffith Bush Summit address of August 2022 confirms his long-term policy alignment with this vector.[^albo_griffith_2022]
 
-**(Who.Where.Cause) Terra Nullius (upsilon: \-0.9, psi: \+0.7): FAIL.** **Quote:** "Today we celebrate three decades of the landmark High Court decision Mabo v Qld (No 2) and honour the legacy of the man behind that ruling, Eddie Koiki Mabo. The High Court decision on 3 June 1992 forever changed the legal face of traditional land ownership for First Nations peoples."[^albo_mabo_2022]
-
+**(Who.Where.Cause) Terra Nullius (upsilon: \-0.9, psi: \+0.7): FAIL.** **Quote:** "Today we celebrate three decades of the landmark High Court decision Mabo v Qld (No 2) and honour the legacy of the man behind that ruling, Eddie Koiki Mabo. The High Court decision on 3 June 1992 forever changed the legal face of traditional land ownership for First Nations peoples." -Mabo Day 30th Anniversary Media Statement (2022-06-03)[^albo_mabo_2022]
 Description: He celebrates the dismantling of the doctrine of terra nullius and the recognition of native title as a fundamental legal truth.
 
 His rhetoric frames this decision as the foundation for modern land justice and national reconciliation.
@@ -591,8 +580,7 @@ By reinforcing legal divisions and separate land rights frameworks, his policy f
 
 His official media release from June 2022 confirms this legalistic focus over unified territorial identity.[^albo_mabo_2022]
 
-**(Who.Where.Effect) The Suburb (upsilon: \+0.4, psi: \-0.4): HIT.** **Quote:** "Our government believes that every Australian deserves the security of a roof over their head. It's something that's essential to people's quality of life. We know that a home to call your own, whether or not you own it, is about more than just a place to sleep. It gives you confidence, a sense of stability, a feeling of connection to your community."[^albo_hansard_15feb2023]
-
+**(Who.Where.Effect) The Suburb (upsilon: \+0.4, psi: \-0.4): HIT.** **Quote:** "Our government believes that every Australian deserves the security of a roof over their head. It's something that's essential to people's quality of life. We know that a home to call your own, whether or not you own it, is about more than just a place to sleep. It gives you confidence, a sense of stability, a feeling of connection to your community." -House of Representatives, Hansard (2023-02-15)[^albo_hansard_15feb2023]
 Description: He addresses the aspirations of suburban families for housing stability, secure shelter, and economic security.
 
 His rhetoric links secure housing to social cohesion, community connection, and individual opportunity.
@@ -621,8 +609,7 @@ The parliamentary Hansard transcripts from February 2023 and tax restructure rec
 
 ## **1.4 The Why of Identity (Motivation)**
 
-**(Who.Why.Who) Punching Above Weight (upsilon: \+0.5, psi: \+0.8): HIT.** **Quote:** "Natural advantages only get you to the start line. Winning the race, leading the world, requires investment and innovation and courage and commitment. And it is a race, no doubt about that."[^albo_minerals_2022]
-
+**(Who.Why.Who) Punching Above Weight (upsilon: \+0.5, psi: \+0.8): HIT.** **Quote:** "Natural advantages only get you to the start line. Winning the race, leading the world, requires investment and innovation and courage and commitment. And it is a race, no doubt about that." -Address to the Australian Minerals Industry Parliamentary Dinner, Parliament House, Canberra (2022-09-05)[^albo_minerals_2022]
 Description: Punching Above Weight represents the defining Australian strategic posture — a middle power that refuses to accept the limitations of its size and actively projects influence beyond what its geography or population would suggest.
 
 It demands an assertive, proactive will to participate in global architecture, to lead rather than follow, and to be present in rooms above one's apparent station.
@@ -647,8 +634,7 @@ He was the first Australian PM to address the IISS Shangri-La Dialogue in its ke
 
 These actions collectively demonstrate a sustained, executive-level commitment to punching above Australia's geographic weight in Indo-Pacific architecture.[^albo_shangri_la_2023][^albo_minerals_2022]
 
-**(Who.Why.What) The Lucky Country (upsilon: \+0.3, psi: \-0.4): FAIL.** **Quote:** "We are the world's largest exporter of the raw materials necessary for clean energy technologies, but for decades we've shipped these materials overseas and bought back manufactured goods at a premium. Our Government will invest to unlock more value from our minerals."[^albo_minerals_2022]
-
+**(Who.Why.What) The Lucky Country (upsilon: \+0.3, psi: \-0.4): FAIL.** **Quote:** "We are the world's largest exporter of the raw materials necessary for clean energy technologies, but for decades we've shipped these materials overseas and bought back manufactured goods at a premium. Our Government will invest to unlock more value from our minerals." -Address to the Australian Minerals Industry Parliamentary Dinner, Parliament House, Canberra (2022-09-05)[^albo_minerals_2022]
 Description: The Lucky Country — Donald Horne's damning diagnosis — names the Australian tendency to live off geological and geographic accident rather than structured national genius.
 
 It identifies a culture of passive extraction that ships raw wealth offshore and congratulates itself on the proceeds, while other nations add the value and capture the premium.
@@ -671,8 +657,7 @@ However, Australia's export basket in 2022–2024 remained overwhelmingly raw co
 
 The structural transformation from lucky extraction to manufactured value has not yet arrived, rendering this a genuine FAIL against the Kanon's demand for achieved, not aspirational, rupture.[^albo_minerals_2022][^albo_ref_fmia]
 
-**(Who.Why.Where) Populate or Perish (upsilon: \-0.2, psi: \+0.6): FAIL.** **Quote:** "Net overseas migration is anticipated to decrease from 510,000 in 2022-23 to 375,000 in the next fiscal year and further to 250,000 in 2024-25."[^albo_migration_2023]
-
+**(Who.Why.Where) Populate or Perish (upsilon: \-0.2, psi: \+0.6): FAIL.** **Quote:** "Net overseas migration is anticipated to decrease from 510,000 in 2022-23 to 375,000 in the next fiscal year and further to 250,000 in 2024-25." -Australian Government Migration Strategy, Department of Home Affairs (2023-12-11)[^albo_migration_2023]
 Description: Populate or Perish encodes the foundational anxiety of a vast continent defended by a small population — the existential fear that without continuous demographic growth, Australia cannot hold what it claims.
 
 Historically it drove post-war mass immigration programs and structured the entire architecture of Australian demographic policy around growth as a security imperative.
@@ -693,8 +678,7 @@ The policy was framed entirely around housing, infrastructure pressure, and labo
 
 This framing confirms a structural FAIL: the motivation is reactive rather than visionary.[^albo_migration_2023]
 
-**(Who.Why.Where shadow) Anteriority — First Nations Perspective (upsilon: \+0.9, psi: \+0.3): HIT.** **Quote:** "The welcome to country is such a powerful way to begin a new parliament... What a welcome to country does is holds out like a hand warmly and graciously extended. An opportunity for us to embrace and to show a profound love of home and country... It is a reminder as well of why we all belong here together, that we are stronger together and we belong."[^albo_wtc_2022]
-
+**(Who.Why.Where shadow) Anteriority — First Nations Perspective (upsilon: \+0.9, psi: \+0.3): HIT.** **Quote:** "The welcome to country is such a powerful way to begin a new parliament... What a welcome to country does is holds out like a hand warmly and graciously extended. An opportunity for us to embrace and to show a profound love of home and country... It is a reminder as well of why we all belong here together, that we are stronger together and we belong." -Welcome to Country remarks, Opening of the 47th Parliament (2022-07-26)[^albo_wtc_2022]
 Description: Anteriority — the shadow node on Populate or Perish — names the First Nations perspective on occupation and belonging: that the continent was never empty, never unclaimed, and that the deepest motivation for being here is not demographic anxiety but tens of thousands of years of continuous custodianship.
 
 Where Populate or Perish responds to fear of vacancy, Anteriority asserts that the land was never vacant — its custodians have always been here, and that prior occupation creates an ongoing obligation, not merely a historical footnote.
@@ -707,8 +691,7 @@ The moderate positive will coordinate maps the active protocol changes: mandator
 
 This is a structural HIT — he does not merely invoke Anteriority rhetorically, he embeds it in the procedural architecture of the Commonwealth.[^albo_wtc_2022]
 
-**(Who.Why.Why) "Have a Go, Ya Mug" (upsilon: \+0.7, psi: \+0.8): HIT.** **Quote:** "Vote for an Australia that believes the doors of opportunity should be open to every Australian, no matter where you live, who you pray to or who you love. Vote for hope and optimism over fear and division."[^albo_campaign_2022]
-
+**(Who.Why.Why) "Have a Go, Ya Mug" (upsilon: \+0.7, psi: \+0.8): HIT.** **Quote:** "Vote for an Australia that believes the doors of opportunity should be open to every Australian, no matter where you live, who you pray to or who you love. Vote for hope and optimism over fear and division." -ALP Campaign Launch Speech, Perth (2022-05-01)[^albo_campaign_2022]
 Description: Have a Go, Ya Mug encodes the Australian ideal of participatory aspiration — the belief that effort and courage in the arena, not inherited status or luck, should be rewarded.
 
 It is the affirmative companion to the Fair Go: where the Fair Go demands the rules be equal, Have a Go demands the individual enter the contest.
@@ -729,8 +712,7 @@ Actuality: The Albanese Government delivered free TAFE places (300,000 by 2024),
 
 These legislative outcomes confirm the vector as HIT: the rhetoric of having a go is backed by a practical rewriting of the terms on which effort is rewarded.[^albo_campaign_2022][^albo_ref1]
 
-**(Who.Why.How) The Cultural Cringe (upsilon: \-0.3, psi: \-0.5): FAIL.** **Quote:** "You have endured a decade in which opportunity wasn't so much missed as thrown away, capped by the years of the pandemic, in which the loss of opportunity was exacerbated by calculated neglect. Fittingly, our cultural policy for the next five years is called Revive."[^albo_revive_2023]
-
+**(Who.Why.How) The Cultural Cringe (upsilon: \-0.3, psi: \-0.5): FAIL.** **Quote:** "You have endured a decade in which opportunity wasn't so much missed as thrown away, capped by the years of the pandemic, in which the loss of opportunity was exacerbated by calculated neglect. Fittingly, our cultural policy for the next five years is called Revive." -Launch of the National Cultural Policy, Revive, The Espy, St Kilda (2023-01-30)[^albo_revive_2023]
 Description: The Cultural Cringe names Australia's habitual deference to overseas cultural validation — the belief that local art, thought, and expression is inherently second-rate until ratified by London, New York, or Los Angeles.
 
 It manifests as the systematic underfunding of domestic cultural infrastructure in favour of international imports, and as the structural incentive for Australian artists to leave rather than stay.
@@ -751,8 +733,7 @@ However, the government repeatedly deferred decisions on streaming platform cont
 
 This failure of distribution policy confirms a structural FAIL: building more local art while gifting the stage to overseas platforms is the cringe in legislative form.[^albo_revive_2023]
 
-**(Who.Why.Cause) The Gold Rush (upsilon: \+0.5, psi: \+0.7): HIT.** **Quote:** "There is a world of opportunity here for our country. We have an unmatched natural advantage in clean energy. The sunniest continent on earth, some of the strongest winds in the world – and all the minerals and metals needed to drive the energy transition... Natural advantages only get you to the start line. Winning the race, leading the world, requires investment and innovation and courage and commitment."[^albo_minerals_2022]
-
+**(Who.Why.Cause) The Gold Rush (upsilon: \+0.5, psi: \+0.7): HIT.** **Quote:** "There is a world of opportunity here for our country. We have an unmatched natural advantage in clean energy. The sunniest continent on earth, some of the strongest winds in the world – and all the minerals and metals needed to drive the energy transition... Natural advantages only get you to the start line. Winning the race, leading the world, requires investment and innovation and courage and commitment." -Address to the Australian Minerals Industry Parliamentary Dinner, Parliament House, Canberra (2022-09-05)[^albo_minerals_2022]
 Description: The Gold Rush encodes Australia's foundational motivation for economic expansion — the belief that fortune lies in the ground and in the act of rushing toward it before others do.
 
 It is the origin myth of Australian capitalism: the willingness to move fast, invest boldly, and claim the prize before the field catches up.
@@ -773,8 +754,7 @@ This includes the Critical Minerals Production Tax Incentive, the Critical Miner
 
 These investments confirm a structural HIT: the Gold Rush psychology is active, not nostalgic — he is running the race.[^albo_minerals_2022][^albo_minerals_2023]
 
-**(Who.Why.Effect) Sport (upsilon: \+0.6, psi: \+0.7): HIT.** **Quote:** "All Australians love John Farnham. John Farnham has been and continues to be a great Australian. He has not only provided entertainment for Australians over many decades, he also has been a contributor to the nation."[^albo_farnham_2023]
-
+**(Who.Why.Effect) Sport (upsilon: \+0.6, psi: \+0.7): HIT.** **Quote:** "All Australians love John Farnham. John Farnham has been and continues to be a great Australian. He has not only provided entertainment for Australians over many decades, he also has been a contributor to the nation." -Quoted in South Coast Register (2023-08-22)[^albo_farnham_2023]
 Description: Sport — and by extension, collective national performance — functions as the primary civic ritual through which Australians express shared identity, national pride, and emotional solidarity.
 
 It is the arena in which the Australian character is publicly tested, celebrated, and vindicated — where the Battler becomes the champion, the Underdog confounds the favourite, and the nation recognises itself in victory and in gallant defeat.
@@ -797,8 +777,7 @@ This confirms a structural HIT: the Sport vector's demand for genuine civic inve
 
 ## **1.5 The How of Identity (Method)**
 
-**(Who.How.Who) The Pub Test (upsilon: \+0.6, psi: \-0.3): HIT.** **Quote:** "The question is not whether it passes some ideological test. The question is: does it actually work for the people we serve? Does it make their lives better? That's the test."[^albo_hansard_putest_2023]
-
+**(Who.How.Who) The Pub Test (upsilon: \+0.6, psi: \-0.3): HIT.** **Quote:** "...it's easy to put out claims that would fail the pub test when your failure to act on vaccines and quarantine mean that half the nation's pubs are closed." -Matters of Public Importance: COVID-19, House of Representatives, Hansard (2021-09-02)[^pubtest21]
 Description: The Pub Test is the foundational epistemological standard of Australian political method — the demand that any policy, proposal, or principle be comprehensible and acceptable to an ordinary person discussing it over a beer.
 
 It rejects academic complexity, inside-the-Beltway jargon, and ideological purity in favour of plain-speaking practicality anchored in everyday life.
@@ -819,8 +798,7 @@ Actuality: His government's most successful legislation — the Secure Jobs, Bet
 
 His cost-of-living relief package (energy bill rebates, cheaper medicines, fee-free TAFE) was the purest expression of this standard: policies that pass the front-bar test because they produce a tangible, numbered outcome in people's everyday budgets.[^albo_hansard_putest_2023][^albo_ref1]
 
-**(Who.How.What) Compulsory Voting (upsilon: \+0.8, psi: \+0.5): HIT.** **Quote:** "Every Australian gets a say. Every Australian will have the opportunity to vote. This is what a democracy should look like."[^albo_voice_ref_2023]
-
+**(Who.How.What) Compulsory Voting (upsilon: \+0.8, psi: \+0.5): HIT.** **Quote:** "Surely, the electoral system should enfranchise as many eligible Australians as possible and be as transparent as possible." -Electoral and Referendum Amendment (Electoral Integrity and Other Measures) Bill 2005, Second Reading, House of Representatives, Hansard (2006-05-10)[^enfranchise06]
 Description: Compulsory voting is Australia's most structurally distinctive democratic method — the sovereign choice to transform voting from an optional right into a civic duty equivalent to taxation or jury service.
 
 Since its introduction in 1924, turnout has never fallen below 91%, creating a political system that must court the apathetic middle rather than energize partisan extremes.
@@ -841,8 +819,7 @@ Actuality: His government chose the referendum mechanism over parliamentary legi
 
 The decision to put the question directly to all 17 million enrolled voters — rather than legislating through Parliament — is the compulsory voting method in its purest form: every Australian bears the civic duty to decide.[^albo_voice_ref_2023]
 
-**(Who.How.Where) Pragmatism (upsilon: \+0.7, psi: \+0.5): HIT.** **Quote:** "We can't keep asking the question and expect a different answer. We have to just get on and do the work."[^albo_pragmatism_2022]
-
+**(Who.How.Where) Pragmatism (upsilon: \+0.7, psi: \+0.5): HIT.** **Quote:** "This is a challenge that should be beyond ideology or politics." -Questions without Notice: Artificial Intelligence, House of Representatives, Hansard (2026-08-20)[^beyondideology26]
 Description: Australian pragmatism is the methodological rejection of pure ideology — the demand that the test of any idea is whether it works in practice, on the ground, in the specific physical and social conditions of the continent.
 
 It has its origin in the colonial reality that there were no servants to call upon in the bush, no shops to purchase solutions, and no precedents to consult in a landscape that refused to behave like England.
@@ -865,8 +842,7 @@ Its outcomes (multi-employer bargaining, fee-free TAFE, visa reform) were not id
 
 This confirms a HIT: the pragmatic method is not merely rhetorical — it is the operational template of his government.[^albo_pragmatism_2022][^albo_ref1]
 
-**(Who.How.Why) The Sickie (upsilon: \+0.4, psi: \-0.4): FAIL.** **Quote:** "This government understands that workers are not just units of economic production. But the answer is not to check out — the answer is to change the conditions."[^albo_ir_2022]
-
+**(Who.How.Why) The Sickie (upsilon: \+0.4, psi: \-0.4): FAIL.** **Quote:** "...the changes to the definition of 'casual'; same job, same pay; the right to disconnect; and the increases for people on minimum award wages." -Questions without Notice: Taxation, House of Representatives, Hansard (2025-03-27)[^disconnect25]
 Description: The Sickie — the unauthorized mental health day — is the individual's passive micro-strike against the claim that the employer owns all of a person's productive time.
 
 It is the descendant of the 1856 eight-hour day victory, asserting that the soul cannot be purchased wholesale by capital and that bodily autonomy cannot be subordinated entirely to the clock-in.
@@ -887,7 +863,7 @@ Actuality: The Albanese Government's response to work-life balance was structura
 
 This legislative formalization replaces the informal valve of passive resistance with a regulated entitlement, confirming a structural FAIL of the Sickie's passive logic in favour of active institutional protection.[^albo_ir_2022][^albo_disconnect_2024]
 
-**(Who.How.How) The Royal Commission (upsilon: \+0.8, psi: \+0.7): HIT.** **Quote:** "This Royal Commission has done its job. It has laid bare the truth of what happened. Now it is our job to make sure it never happens again. And we accept all 56 recommendations."[^albo_robodebt_rc_2023]
+**(Who.How.How) The Royal Commission (upsilon: \+0.8, psi: \+0.7): HIT.** **Quote:** "...the robodebt royal commission did not find that cabinet processes were the problem. They found that ministers acted directly in contravention of the advice that they were given..." -Questions without Notice: Freedom of Information, House of Representatives, Hansard (2025-10-09)[^robodebtrc25]
 
 Description: The Royal Commission is Australia's highest-intensity method of democratic accountability — the compelled, forensic examination of institutional failure by a body with coercive powers equivalent to a court.
 
@@ -913,7 +889,7 @@ They funded implementation through the 2023–2024 Budget and established ongoin
 
 This comprehensive deployment and acceptance of the Royal Commission method — from establishment through full implementation — constitutes a clean structural HIT.[^albo_robodebt_rc_2023][^albo_ref6]
 
-**(Who.How.Cause) The Ticket of Leave (upsilon: \+0.6, psi: \+0.4): HIT.** **Quote:** "For too long, the message has been that if you were born poor, if you grew up in public housing, if your family didn't have money, that wasn't your ticket. Well, I'm here to tell you that's wrong. And our job is to make sure everyone gets one."[^albo_ticket_2022]
+**(Who.How.Cause) The Ticket of Leave (upsilon: \+0.6, psi: \+0.4): HIT.** **Quote:** "I grew up in a single-parent household, in public housing in inner Sydney, and the fact that I was able to rise to be the Leader of the House of Representatives shows this is a pretty good country, where people do get a fair go and where people do have opportunity." -Valedictory, House of Representatives, Hansard (2009-11-26)[^ticketleave09]
 
 Description: The Ticket of Leave is the founding method of Australian social mobility — the convict-era mechanism by which a prisoner could earn early freedom through demonstrated compliance and labour, establishing that status in this country is not fixed at birth but can be earned through effort within the system.
 
@@ -933,7 +909,7 @@ Actuality: The government's free TAFE program (300,000 places by 2024), the Hous
 
 These programs directly extend the social mobility mechanism to people currently priced out of participation, confirming a structural HIT.[^albo_ticket_2022][^albo_campaign_2022]
 
-**(Who.How.Effect) The Union (upsilon: \+0.7, psi: \+0.7): HIT.** **Quote:** "Unions built this country. They built the eight-hour day, they built the weekend, they built Medicare. The union movement is the reason that working people in this country have the lives they have. And this government will never forget that."[^albo_union_2022]
+**(Who.How.Effect) The Union (upsilon: \+0.7, psi: \+0.7): HIT.** **Quote:** "...trade unions have a critical role to play in our democracy. It is a vital role: the right to organise labour." -Fair Work (Registered Organisations) Amendment (Ensuring Integrity) Bill 2019, Second Reading, House of Representatives, Hansard (2019-07-31)[^unionrole19]
 
 Description: The Union is Australia's most powerful method of collective leverage — the organized aggregation of individual weakness into collective bargaining power capable of challenging capital.
 
@@ -1187,7 +1163,7 @@ Actuality: The Albanese Government's 2023 review of multicultural policy, the fi
 
 ## **1.7 The Effect of Identity (Result)**
 
-**(Who.Effect.Who) The Expat (upsilon: \+0.5, psi: \+0.5): FAIL.** **Quote:** "Papua New Guinea can always count on Australia, as we counted on them in our darkest hour. We share a future, and together we're building a partnership that will deliver peace, prosperity and opportunity for our people and for our region." -International Relations: Australia and Papua New Guinea, Hansard (2023-12-03)[^pngparl23]
+**(Who.Effect.Who) The Expat (upsilon: \+0.5, psi: \+0.5): FAIL.** **Quote:** "Papua New Guinea can always count on Australia, as we counted on them in our darkest hour. We share a future, and together we're building a partnership that will deliver peace, prosperity and opportunity for our people and for our region." -International Relations: Australia and Papua New Guinea, Hansard (2023-12-07)[^pngparl23]
 
 Description: The Expat vector measures whether the actor engages the "Global Australian" network, the informal diaspora of expatriate citizens and cultural figures who project Australian character outward into the world's centres of power, as a genuine instrument of national projection.
 
@@ -1357,7 +1333,7 @@ Actuality: Albanese made this statement in July 2023 after both the Australian m
 
 [^nauru2024]: Anthony Albanese, radio interview on Operation Sovereign Borders, Australian Radio Network, reported by RNZ, 19 February 2024: https://www.rnz.co.nz/news/world/509613/anthony-albanese-says-asylum-seeker-boat-arrival-unfortunate-but-government-not-to-blame
 
-[^pngparl23]: Anthony Albanese, "International Relations: Australia and Papua New Guinea", Hansard, Parliament of Australia, 3 December 2023: https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansardr/27533/&sid=0201
+[^pngparl23]: Anthony Albanese, "International Relations: Australia and Papua New Guinea", House of Representatives, Hansard, 7 December 2023: https://www.openaustralia.org.au/debates/?id=2023-12-07.85.3
 
 [^shangrila23]: Anthony Albanese, Keynote Address, 20th IISS Shangri-La Dialogue, Singapore, 2 June 2023: https://www.iiss.org/globalassets/media-library---content--migration/files/shangri-la-dialogue/2023/final-transcripts/keynote-address/anthony-albanese-prime-minister-australia---as-delivered_sld23.pdf
 
@@ -1371,4 +1347,36 @@ Actuality: Albanese made this statement in July 2023 after both the Australian m
 
 [^apology25]: Anthony Albanese, "Apology to the Stolen Generations Anniversary Breakfast", Prime Minister of Australia, 13 February 2025: https://www.pm.gov.au/media/apology-stolen-generations-anniversary-breakfast
 
-*Note: the pre-existing nodes in sections 1.1–1.5 and the two pre-existing Cause/Effect nodes (Multiculturalism, The Ashes) use [^markers] that are not yet resolved anywhere in this document. That gap predates this pass and was out of scope for it — flagged here rather than fixed silently.*
+*Note: every footnote marker in this document now resolves to a key line. Eight of those key lines are marked UNVERIFIED, meaning no primary source could be located for the quote or the Actuality claim they support. They are recorded rather than deleted so the gap stays visible and countable.*
+
+[^albo_hansard_putest_2023]: UNVERIFIED. Quote not present in the Commonwealth Hansard corpus (both chambers, 2006-2026) and no primary source located via press or transcript search. Needs a real source or a replacement quote before this node can be relied on.
+[^albo_voice_ref_2023]: UNVERIFIED. Quote not present in the Commonwealth Hansard corpus (both chambers, 2006-2026) and no primary source located via press or transcript search. Needs a real source or a replacement quote before this node can be relied on.
+[^albo_pragmatism_2022]: UNVERIFIED. Quote not present in the Commonwealth Hansard corpus (both chambers, 2006-2026) and no primary source located via press or transcript search. Needs a real source or a replacement quote before this node can be relied on.
+[^albo_ir_2022]: UNVERIFIED. Quote not present in the Commonwealth Hansard corpus (both chambers, 2006-2026) and no primary source located via press or transcript search. Needs a real source or a replacement quote before this node can be relied on.
+
+[^bornrule26]: Anthony Albanese, Questions without Notice: Housing: Taxation, House of Representatives, Hansard, 13 May 2026: https://www.openaustralia.org.au/debates/?id=2026-05-13.69.6
+[^robodebtrc25]: Anthony Albanese, Questions without Notice: Freedom of Information, House of Representatives, Hansard, 9 October 2025: https://www.openaustralia.org.au/debates/?id=2025-10-09.86.1
+[^ticketleave09]: Anthony Albanese, Valedictory, House of Representatives, Hansard, 26 November 2009: https://www.openaustralia.org.au/debates/?id=2009-11-26.40.1
+[^unionrole19]: Anthony Albanese, Fair Work (Registered Organisations) Amendment (Ensuring Integrity) Bill 2019, Second Reading, House of Representatives, Hansard, 31 July 2019: https://www.openaustralia.org.au/debates/?id=2019-07-31.24.3
+
+[^albo_robodebt_rc_2023]: UNVERIFIED. Cited in an Actuality section for Robodebt Royal Commission response, Albanese Government. No primary source located; not present in the Hansard corpus. Needs a real source before the claim it supports can be relied on.
+[^albo_ticket_2022]: UNVERIFIED. Cited in an Actuality section for housing and social mobility programs, Albanese Government. No primary source located; not present in the Hansard corpus. Needs a real source before the claim it supports can be relied on.
+[^albo_union_2022]: UNVERIFIED. Cited in an Actuality section for industrial relations legislation, Albanese Government. No primary source located; not present in the Hansard corpus. Needs a real source before the claim it supports can be relied on.
+[^albo_disconnect_2024]: UNVERIFIED. Cited in an Actuality section for right to disconnect provisions, Fair Work Legislation Amendment (Closing Loopholes No. 2) Act 2024. No primary source located; not present in the Hansard corpus. Needs a real source before the claim it supports can be relied on.
+
+[^pubtest21]: Anthony Albanese, Matters of Public Importance: COVID-19, House of Representatives, Hansard, 2 September 2021: https://www.openaustralia.org.au/debates/?id=2021-09-02.108.1
+[^enfranchise06]: Anthony Albanese, Electoral and Referendum Amendment (Electoral Integrity and Other Measures) Bill 2005, Second Reading, House of Representatives, Hansard, 10 May 2006: https://www.openaustralia.org.au/debates/?id=2006-05-10.17.1
+[^beyondideology26]: Anthony Albanese, Questions without Notice: Artificial Intelligence, House of Representatives, Hansard, 20 August 2026: https://www.openaustralia.org.au/debates/?id=2026-08-20.82.7
+[^disconnect25]: Anthony Albanese, Questions without Notice: Taxation, House of Representatives, Hansard, 27 March 2025: https://www.openaustralia.org.au/debates/?id=2025-03-27.66.4
+
+[^marcos24]: Anthony Albanese, President of the Republic of the Philippines: Address to Parliament, House of Representatives, Hansard, 29 February 2024: https://www.openaustralia.org.au/debates/?id=2024-02-29.4.1
+[^orderly24]: Anthony Albanese, Questions without Notice: Gambling, House of Representatives, Hansard, 29 May 2024: https://www.openaustralia.org.au/debates/?id=2024-05-29.93.1
+[^battler21]: Anthony Albanese, Bills: Appropriation Bill (No. 1) 2021-2022; Second Reading, House of Representatives, Hansard, 13 May 2021: https://www.openaustralia.org.au/debates/?id=2021-05-13.154.2
+[^kokoda24]: Anthony Albanese, Questions without Notice: Papua New Guinea, House of Representatives, Hansard, 14 May 2024: https://www.openaustralia.org.au/debates/?id=2024-05-14.97.1
+[^stunts24]: Anthony Albanese, Questions without Notice: Visa Cancellation, House of Representatives, Hansard, 3 June 2024: https://www.openaustralia.org.au/debates/?id=2024-06-03.88.1
+[^custodian24]: Anthony Albanese, Questions without Notice: Makarrata Commission, House of Representatives, Hansard, 6 February 2024: https://www.openaustralia.org.au/debates/?id=2024-02-06.58.4
+[^aspiration26]: Anthony Albanese, Questions without Notice: Albanese Government, House of Representatives, Hansard, 2 July 2026: https://www.openaustralia.org.au/debates/?id=2026-07-02.106.1
+[^albo_ref5]: Anthony Albanese, Questions without Notice: Gambling, House of Representatives, Hansard, 29 May 2024: https://www.openaustralia.org.au/debates/?id=2024-05-29.93.1
+[^albo_ref6]: Anthony Albanese, Questions without Notice: National Anti-Corruption Commission, House of Representatives, Hansard, 28 September 2022: https://www.openaustralia.org.au/debates/?id=2022-09-28.61.1
+[^albo_hansard_25oct2022]: Anthony Albanese, Statements on Indulgence: Australia: Floods, House of Representatives, Hansard, 25 October 2022: https://www.openaustralia.org.au/debates/?id=2022-10-25.35.3
+[^albo_hansard_15feb2023]: Anthony Albanese, Bills: Housing Australia Future Fund Bill 2023, National Housing Supply and Affordability Council Bill 2023, Treasury Laws Amendment (Housing Measures No. 1) Bill 2023; Second Reading, House of Representatives, Hansard, 15 February 2023: https://www.openaustralia.org.au/debates/?id=2023-02-15.114.1
