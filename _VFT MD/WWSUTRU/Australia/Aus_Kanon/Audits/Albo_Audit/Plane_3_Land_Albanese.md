@@ -113,7 +113,7 @@ Justification: The vector establishes a high negative morality and an active ene
 
 Actuality: His government introduced the *Constitution Alteration (Aboriginal and Torres Strait Islander Voice) Bill 2023* and conducted the national referendum in October 2023[^voicehansard23]. Although the referendum failed to pass, his government's central legislative agenda was built on filling the constitutional void with First Nations recognition, confirming his rejection of *Terra Nullius*'s legal erasure. FAIL.
 
-**(Where.What.Where) Custodianship [First Nations Perspective] (upsilon: \+0.9, psi: \+0.6): HIT.** **Quote:** "Look at the pride with which Indigenous Rangers go about their vital work. Inheritors of at least a 60,000-year-old tradition of caring for country, preserving the great natural treasures of this continent for future generations." -House of Representatives Hansard (2022)[^closingthegap22]
+**(Where.What.Where) Custodianship [First Nations Perspective] (upsilon: \+0.9, psi: \+0.6): HIT.** **Quote:** "Look at the pride with which Indigenous Rangers go about their vital work. Inheritors of at least a 60,000-year-old tradition of caring for country, preserving the great natural treasures of this continent for future generations." -Closing the Gap Ministerial Statement, House of Representatives, Hansard (2022-11-30)[^closingthegap22]
 
 Description: Custodianship establishes the First Nations relationship with the land as inclusionary custody: the land owns the people, and property rights are replaced by an obligation-based duty to protect and care for country.
 
@@ -180,7 +180,7 @@ Actuality: In late 2023, his government passed the *Water Amendment (Restoring O
 [^fdffund23]: Future Drought Fund: Building drought resilience in regional communities, Department of Agriculture, Fisheries and Forestry Media Release, 10 May 2023: https://www.agriculture.gov.au/agriculture-land/farm-food-drought/drought/future-drought-fund
 [^energyprice6618]: Anthony Albanese, Treasury Laws Amendment (Energy Price Relief Plan) Bill 2022 Second Reading Speech, House of Representatives Hansard, 15 December 2022: https://www.openaustralia.org.au/debates/?id=2022-12-15.12.2
 [^voicehansard23]: Anthony Albanese, Constitution Alteration (Abor Aboriginal and Torres Strait Islander Voice) 2023 Second Reading Speech, House of Representatives Hansard, 25 May 2023: https://www.openaustralia.org.au/debates/?id=2023-05-25.26.1
-[^closingthegap22]: Anthony Albanese, Closing the Gap Annual Report 2022 Speech, House of Representatives Hansard, 30 November 2022: https://www.openaustralia.org.au/debates/?id=2022-11-30.28.2
+[^closingthegap22]: Anthony Albanese, Closing the Gap Ministerial Statement, House of Representatives, Hansard, 30 November 2022: https://www.openaustralia.org.au/debates/?id=2022-11-30.28.3
 [^rangersmcarthur24]: 1,000 new jobs for expanded Indigenous Rangers program, Minister for Indigenous Australians Media Release, 31 October 2024: https://ministers.pmc.gov.au/mccarthy/2024/1000-new-jobs-expanded-indigenous-rangers-program
 [^hsrauthority18]: Anthony Albanese, High Speed Rail Authority Bill 2018 Second Reading Speech, House of Representatives Hansard, 15 October 2018: https://www.openaustralia.org.au/debates/?id=2018-10-15.7.2
 [^infrastructure1218]: Anthony Albanese, Questions Without Notice: Infrastructure Australia, House of Representatives Hansard, 13 February 2008: https://www.openaustralia.org.au/debates/?id=2008-02-13.63.2

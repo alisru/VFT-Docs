@@ -82,14 +82,98 @@ Files: Plane_1_Identity_compact.json through Plane_7_Result_compact.json
 
 For other nations, load the equivalent JSON files from that nation's Kanon directory.
 
-## Local Sourcing Tools (check before WebSearch or a live API)
+## Sourcing Tools (use in this order)
 
-Four scripts in `Aus Kanon/compact JSON/`, plus a local corpus file, cover most federal-politician sourcing without touching the network:
+### 0. Know what the corpus covers before concluding anything is missing
 
-- `query_hansard_corpus.py` -- queries `corpus_1998_to_2025.parquet` via duckdb. House of Representatives, 1998-03-02 to 2025-07-31, full speech text per row (not a snippet), instant, no network call, no cap. **First stop for anything said in the chamber by a House member in that range.**
-- `aph_scraper.py` -- live scrape directly against aph.gov.au's own Hansard search. No result cap, covers Senate + House + committees, reaches back through full Hansard history. Use for Senate, anything after July 2025, or anything the parquet doesn't cover. Gives title/date/PDF link per match; full inline text extraction from the HTML page isn't solved yet, PDF is the reliable full-text source.
-- `hansard_scraper.py` -- OpenAustralia API mirror. Superseded by the two above for anything in their coverage; caps at ~8000 results per person and its API snippet is only ~400 characters (this script now also fetches the full Hansard page per speech to get around that). Fallback only.
-- `news_quote_scraper.py` -- for anything not said in the chamber: interviews, press, controversies. Extracts only quotes attributed to the actor plus short context, never full article bodies.
+The single biggest failure in this project's history: the "first stop" tool for
+chamber quotes silently held no data for the actor being audited. The old
+`corpus_1998_to_2025.parquet` is **House of Representatives only** -- it holds 38
+Pauline Hanson speeches, all from 1998, and nothing from her entire Senate
+career. Every lookup came back empty, the auditor fell through to generic web
+search, and the gap got filled from memory.
+
+Call `corpus_coverage` (hansard MCP) first. "Not in Hansard" is only a finding
+once you know the corpus actually covers that person, chamber and period.
+
+### 1. The hansard MCP server -- first stop for anything said in the chamber
+
+Local DuckDB index over the full Commonwealth Hansard: **both chambers,
+2006-02-07 to the last sitting week, 3.1M paragraphs, 715k speeches.** Every
+result is citation-complete -- verbatim text, speaker, party, chamber, date,
+debate topic and a ParlInfo permalink.
+
+- `corpus_coverage` -- what is actually in range. Call first.
+- `get_speaker(name)` -- resolve a person before filtering. **Hansard's recorded
+  name is often not the common one** (Pauline Hanson is recorded as "Pauline Lee
+  Hanson"; searching the obvious name returns zero). `speakerid` is an *office*
+  id, so anyone who changes chamber holds several.
+- `verify_quote(quote, speaker)` -- the anti-fabrication gate. Returns verified /
+  verified-punctuation-differs / near miss / not found.
+- `search_hansard(query, speaker, chamber, date_from, date_to)` -- BM25 search
+  for a quote to cite. Search the actor's real vocabulary and the mechanism,
+  never the Kanon's poetic vector name.
+- `get_speech(speech_id)` -- full verbatim text for surrounding context.
+
+**Always pass `speaker` to `verify_quote`.** Members quote each other constantly.
+Searching Hanson's words unfiltered returns Sarah Hanson-Young reciting them in
+order to attack her, at 92% similarity, and Mehreen Faruqi doing the same in a
+censure motion. Citing either would attribute the line to the wrong senator
+while looking fully verified -- worse than finding nothing. Any hit flagged
+`is_quotation: true` is someone quoting, not speaking.
+
+### 2. `sources.py` -- everything NOT said in the chamber
+
+Press conferences, doorstops, interviews, media releases, party platforms and
+set-piece speeches are not in Hansard, and that is where most audit quotes come
+from (76 of 118 in the Albanese audit).
+
+- `python sources.py check "<quote>" <url>` -- is the quote actually on that
+  page? Fetches once, caches forever, then verbatim/punctuation/fuzzy match.
+- `python sources.py archive <url>` -- cache a source into `Sources_Archive/`.
+- `python sources.py wayback <url-pattern>` -- dated snapshots. **Party policy
+  pages are edited in place**, so cite the snapshot, not the live URL, or the
+  citation silently stops supporting the claim.
+- `python sources.py audit <plane.md> --sources Sources.md` -- check every
+  non-Hansard quote in a file against its own cited URL.
+
+Best primary sources by claim type: **PM Transcripts** (`pmtranscripts.pmc.gov.au`,
+official PM speeches/doorstops/interviews back to 1940) for any PM-level actor;
+the actor's own site; the party's specific policy sub-page (never the `/policies`
+hub); **They Vote For You** for voting-record claims.
+
+### 3. Live web search -- last, not first
+
+Only for the residual gap. Never treat a search tool's own summary of a page as
+the citation: fetch the page and pull the verbatim text, or run it through
+`sources.py check`.
+
+## Before Declaring a Plane Done: run the gate
+
+```bash
+python hansard/verify_quotes.py <plane files> --sources <Sources.md> --speaker "<surname>"
+```
+
+It exits non-zero on failures and checks things prose review cannot:
+
+- **DATE MISMATCH** -- right quote, wrong sitting day. Found two in the Albanese
+  audit, one citing a **Sunday** and one transposing February for March on a date
+  that *was* a real sitting day where he *did* speak on that topic. No human
+  reviewer catches these. Fixing one means fixing the header, the footnote text
+  **and the URL, which usually embeds the date**.
+- **NOT FOUND** -- do not repair, replace. If a quote was never a chamber quote,
+  check `sources.py` before concluding it is fabricated.
+- **NOT A QUOTE** -- an auditor-written summary with a citation bolted on.
+- **ORPHAN MARKER** / **NO CITATION** -- citation integrity.
+
+**Never invent a citation to clear a finding.** If a quote cannot be sourced,
+give its key an explicit `UNVERIFIED` line saying where you looked. A visible
+gap is honest; a manufactured citation is the exact failure the gate exists to
+catch.
+
+Words are the test, not punctuation. Hansard's transcription choices -- a comma,
+an em dash, a serial comma, "working-class" vs "working class" -- are not
+misquotation. A leading or trailing ellipsis is a truncation mark, not drift.
 
 ## Dual-Address (First Nations Perspective) Nodes
 

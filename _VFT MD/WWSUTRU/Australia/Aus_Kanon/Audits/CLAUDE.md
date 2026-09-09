@@ -141,3 +141,31 @@ A quick script confirms header verdict vs. Actuality's concluding verdict word a
 pattern = re.compile(r'υ:\s*([\\+\-0-9.]+),\s*ψ:\s*([\\+\-0-9.]+)\):\s*(HIT|FAIL|MISS)')
 ```
 (note: the markdown source escapes `+`/`-` as `\+`/`\-`, so the character class must include the backslash). Split the plane's text on `\n**(Where.` (or the relevant plane prefix) to isolate individual nodes, then compare each node's header verdict against the last HIT/FAIL word found after its `Actuality:` marker. Also run a `Counter` over the `**Quote:** ... -` capture group to catch duplicate quotes within the plane in the same pass. Treat every flagged mismatch as a prompt to read the full node, not as an automatic verdict flip — some "mismatches" are legitimate split verdicts already explained in prose (e.g. "HIT on the extraction logic, FAIL on the ecological reality") where the header correctly reflects the primary/generative-concept verdict.
+
+## Stopping early, and reporting the stop as a finding
+
+Three mistakes from the Albanese sourcing pass. All the same shape: quitting, then
+presenting the quit as a result. Mechanical errors are caught by
+`hansard/verify_quotes.py`; these are not, so they are here.
+
+1. **"Not in Hansard" is not a finding until the topic tools have been used.**
+   The Sickie node was declared unsourceable after two keyword searches. The
+   right quote was found minutes later via `list_topics` to get the real debate
+   heading (`Workplace Relations`), then `search_hansard` with a `topic` filter
+   and 3-5 `variants`. Do that before reporting NOT FOUND. The tools were built
+   for exactly this and were not used.
+
+2. **Do not report a defect you observed through your own truncated output.**
+   A citation URL was reported as truncated when the truncation was a 165-char
+   display slice in the inspection script. Re-read the raw file before calling
+   anything malformed.
+
+3. **A verified real quote beats a fabricated one, even if it is imperfect.**
+   Three real, verified replacements were withheld as "weaker" because each was
+   tied to a specific occasion rather than stating a general principle. Leaving
+   a fabricated quote in place while deferring is the worse outcome. Offer the
+   verified quote, state the caveat, let the user decide.
+
+Standing rule: when reporting that something could not be found, say which
+searches were run. If the answer is fewer than a `list_topics` call plus a
+multi-variant `search_hansard`, the search is not finished.
