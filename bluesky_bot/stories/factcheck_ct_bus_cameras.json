@@ -1,0 +1,109 @@
+[
+  {
+    "thinking": "Phase 1: Metaphysical Scan (WHO) - Stated beneficiary is children/safety; actual beneficiary is BusPatrol (private tech) and municipal revenue. (FAIL)\nPhase 2: Possible Scan (WHAT) - Failure modes of false positives, data leaks, and ICE sharing are suppressed. (FAIL)\nPhase 3: Physical Scan (WHERE) - Physical cameras installed, 12,000 incidents recorded. (PASS)\nPhase 4: Lyrical Scan (WHY) - Narrative of pure child safety obfuscates the surveillance/revenue model. (FAIL)\nPhase 5: Logical Scan (HOW) - Causal chain of 'cameras deter passing' is weak; 12,000 incidents show high volume but not necessarily deterrence yet. (COND)\nPhase 6: Historical Scan (CAUSE) - Acknowledges 2011 and 2024 law changes. (PASS)\nPhase 7: Emotive Scan (EFFECT) - Emotional payload of 'protecting kids' used to justify mass surveillance. (FAIL)\n\nStated Forces:\nGG: S=1.5, O=0.0, N=0.0\nGE: S=0.0, O=1.5, N=0.0\nLG: S=1.0, O=0.0, N=0.0\nLE: S=0.0, O=1.0, N=0.0\nGP: S=1.5, O=0.0, N=0.0\nBP: S=0.0, O=1.5, N=0.0\nStated Coordinates: u = 1.0, psi = 0.0 (Good Preference)\n\nActual Forces:\nGG: S=0.2, O=0.8, N=0.0\nGE: S=0.5, O=0.0, N=0.0\nLG: S=0.8, O=0.0, N=0.0\nLE: S=1.2, O=0.0, N=0.0\nGP: S=0.0, O=1.0, N=0.0\nBP: S=1.0, O=0.0, N=0.0\nActual Coordinates:\nF_GG = 0.2*(1,1) - 0.8*(1,1) = (-0.6, -0.6)\nF_GE = 0.5*(-1,-1) = (-0.5, -0.5)\nF_LG = 0.8*(1,-1) = (0.8, -0.8)\nF_LE = 1.2*(-1,1) = (-1.2, 1.2)\nF_GP = -1.0*(1,1) = (-1.0, -1.0)\nF_BP = 1.0*(-1,0) = (-1.0, 0.0)\nSum u = -3.5 / 5.5 = -0.64\nSum psi (negative dominant): GG(-0.6), GE(-0.5), LG(-0.8), GP(-1.0) -> Sum = -2.9 / 3.3 = -0.88\nActual Coordinates: u = -0.64, psi = -0.88 (Lesser Evil)\n\nHypocrisy Gap: ||(1.0, 0.0) - (-0.64, -0.88)|| = 1.86 (Fail)\nTrajectory: Fall into Deception\nUncertainty z: 5 (z-profile: [1, 1, 0, 1, 1, 0, 1])\nR_net: 21.33 (Severe Deception)",
+    "id": "ct_bus_cameras",
+    "subject": "Connecticut towns are installing license plate reading cameras on school buses",
+    "link": "https://nypost.com/2026/09/09/us-news/connecticut-towns-are-installing-license-plate-reading-cameras-on-school-buses/",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 0.0,
+    "real_u": -0.64,
+    "real_psi": -0.88,
+    "mode": "root",
+    "posts": [
+      "Safety or surveillance? Connecticut towns are rolling out AI-powered license plate readers on school buses, capturing thousands of drivers. But critics warn of private database sharing and mission creep.\nEvidence: Child safety, Mass surveillance, Private profit\n#Aletheia #Privacy",
+      "Proponents claim installing AI cameras on school buses is a vital step to protect children from reckless drivers, deterring dangerous behavior and enforcing traffic laws automatically.\nStated Judgement: (1.0, 0.0) — Good Preference",
+      "In reality, the program funnels massive public data into a private database (BusPatrol) with unproven long-term safety metrics, creating a lucrative automated citation pipeline while bypassing privacy safeguards.\nResulting Judgement: (-0.64, -0.88) — Lesser Evil",
+      "Verdict: FAIL — Fall into Deception. While child safety is the bait, the switch is a private-public surveillance pipeline that hoards data and automates extraction.\nIntegrity: Severe Deception (Hypocrisy: 1.86, Uncertainty z: 5)",
+      "- BusPatrol: FAIL (-0.64, -0.88) — Private data capture under safety guise.\n- CT Towns: COND (-0.20, -0.50) — Outsource enforcement to private tech.",
+      "Over half a dozen Connecticut towns have contracted with BusPatrol to install AI cameras on school buses. While New Haven recorded 12,000 incidents, civil liberties groups warn of unchecked data sharing with federal agencies.",
+      "The Bright Side:\nThe cameras only trigger when the bus stop arm is engaged, meaning they do not continuously monitor general public traffic like standard stationary license plate readers.",
+      "The Metaphysical Error (WHO): The system is sold as a shield for children, but the primary beneficiary is a private tech firm capturing data and a municipal revenue engine collecting fines.",
+      "Social Physics Analysis:\nThis is a classic Smart Selfish Maneuver. The actors manufacture a crisis of enforcement, using the sacred pretext of child safety to justify the expansion of private surveillance databases while projecting any privacy concerns as anti-safety.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated safety goals and actual private data hoarding, it plots a direct trajectory toward Lesser Evil. The system prioritizes automated extraction over systemic traffic design.",
+      "The Unavoidable Truth: Reckless drivers passing school buses pose a genuine physical danger to children.\nThe Unavoidable Lie: Installing private AI surveillance databases is the only or most effective way to solve traffic safety.",
+      "Alethekanon:\nThe commodification of civic safety is the ultimate Trojan horse. By outsourcing law enforcement to private AI databases, municipalities trade constitutional privacy for automated balance sheets.",
+      "Awwthekanon:\nEvery child deserves to step off a bus without fear. But we must protect them without building a world where their every movement, and those of their neighbors, is tracked by cold, unfeeling machines.",
+      "Brothekanon:\nBro, they're using 'protect the kids' to sneak AI cameras onto buses and slap people with $450 fines. Classic cash grab wrapped in a safety blanket. Watch your step out there.",
+      "Spirithekanon:\n\"Woe to those who make unjust laws, to deprive the poor of their rights.\" Isaiah 10:1-2 FAIL\nUsing the safety of the vulnerable to justify systemic surveillance and financial extraction is a betrayal of genuine community care."
+    ],
+    "actors": [
+      "BusPatrol",
+      "New Haven",
+      "Connecticut Department of Transportation",
+      "Connecticut Civil Liberties Defense Committee"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 21.33,
+    "claim_z": 0,
+    "real_z": 5,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "BusPatrol Data Capture",
+        "claim_u": 1.0,
+        "claim_psi": 0.0,
+        "real_u": -0.64,
+        "real_psi": -0.88,
+        "verdict": "FAIL",
+        "reason": "Private data capture under safety guise."
+      },
+      {
+        "aspect": "Municipal Enforcement",
+        "claim_u": 1.0,
+        "claim_psi": 0.0,
+        "real_u": -0.2,
+        "real_psi": -0.5,
+        "verdict": "COND",
+        "reason": "Outsource enforcement to private tech."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://nypost.com/2026/09/09/us-news/connecticut-towns-are-installing-license-plate-reading-cameras-on-school-buses/",
+        "snippet": "Stated Claim / Post Context:\nConnecticut towns are installing license plate reading cameras on school buses\n\nIn New Haven, which installed the technology on more than 300 buses earlier this year, cameras have already recorded 12,000 incidents.\n\nActual Article Body:\nSwitch between CA and NY editions "
+      }
+    ],
+    "category": "politics",
+    "topic": "Privacy",
+    "event": "",
+    "policies": []
+  }
+]

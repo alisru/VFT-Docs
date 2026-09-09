@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-09-09",
+  "last_updated": "2026-09-10",
   "policies": {
     "healthcare-policy": {
       "name": "Healthcare Policy",
@@ -1355,7 +1355,7 @@
       "slug": "welfare-policy",
       "first_seen": "2026-08-27",
       "last_updated": "2026-09-09",
-      "story_count": 22,
+      "story_count": 23,
       "stories": [
         "social_security_crisis",
         "senate_finance_social_security",
@@ -1378,10 +1378,11 @@
         "free_rider_kant_welfare",
         "washington_examiner_social_security_september",
         "october-social-security-direct-payment",
-        "dhs-investigates-eric-voter-rolls"
+        "dhs-investigates-eric-voter-rolls",
+        ",social-security-october-2026"
       ],
-      "avg_real_u": -0.445,
-      "avg_real_psi": -0.3031,
+      "avg_real_u": -0.3865,
+      "avg_real_psi": -0.2812,
       "verdicts": [
         "FAIL",
         "FAIL",
@@ -1404,9 +1405,10 @@
         "FAIL",
         "FAIL",
         "PASS",
-        "FAIL"
+        "FAIL",
+        "PASS"
       ],
-      "pass_count": 5,
+      "pass_count": 6,
       "fail_count": 17
     },
     "housing-policy": {
@@ -1581,7 +1583,7 @@
       "slug": "cost-of-living",
       "first_seen": "2026-08-27",
       "last_updated": "2026-09-09",
-      "story_count": 178,
+      "story_count": 179,
       "stories": [
         "burnham_spending_audit",
         "trump_farm_economy",
@@ -1760,10 +1762,11 @@
         "gop_midterm_economy_warning",
         "uniparty-fiddles-as-americas-middle-class-burns",
         "kfc-worker-tax-bill",
-        "billionaire-wealth-altrata-report-2026"
+        "billionaire-wealth-altrata-report-2026",
+        "gop-trump-midterm-convention"
       ],
-      "avg_real_u": -0.3907,
-      "avg_real_psi": -0.452,
+      "avg_real_u": -0.3927,
+      "avg_real_psi": -0.4539,
       "verdicts": [
         "FAIL",
         "FAIL",
@@ -1942,10 +1945,11 @@
         "FAIL",
         "FAIL",
         "FAIL",
+        "FAIL",
         "FAIL"
       ],
       "pass_count": 43,
-      "fail_count": 135
+      "fail_count": 136
     },
     "industrial-relations": {
       "name": "Industrial Relations",
@@ -2166,8 +2170,8 @@
       "name": "Immigration Policy",
       "slug": "immigration-policy",
       "first_seen": "2026-08-27",
-      "last_updated": "2026-09-06",
-      "story_count": 97,
+      "last_updated": "2026-09-09",
+      "story_count": 99,
       "stories": [
         "spain_ceuta_crisis",
         "biden-appointed-judge-blocks-trump-immigration-policy",
@@ -2265,10 +2269,12 @@
         "ceuta-crisis-three-moroccans-arrested-for-throwing-corrosive-cocktails-at-military",
         "dhs-haitian-alien-murder-2026",
         "ice-deports-gang-members-2026",
-        "arbeiterklasse_landtagswahlen"
+        "arbeiterklasse_landtagswahlen",
+        "republican-midterm-convention-dallas",
+        "kansas-democrat-adam-hamilton-border-agents"
       ],
-      "avg_real_u": -0.5615,
-      "avg_real_psi": -0.6769,
+      "avg_real_u": -0.5603,
+      "avg_real_psi": -0.6743,
       "verdicts": [
         "FAIL",
         "PASS",
@@ -2366,10 +2372,12 @@
         "FAIL",
         "FAIL",
         "FAIL",
+        "FAIL",
+        "FAIL",
         "FAIL"
       ],
       "pass_count": 15,
-      "fail_count": 82
+      "fail_count": 84
     },
     "ai-regulation": {
       "name": "AI Regulation",
@@ -3300,8 +3308,8 @@
       "name": "Education Policy",
       "slug": "education-policy",
       "first_seen": "2026-08-27",
-      "last_updated": "2026-08-29",
-      "story_count": 13,
+      "last_updated": "2026-09-09",
+      "story_count": 14,
       "stories": [
         "cps_trump_withhold_20m",
         "delhi_student_protest",
@@ -3315,10 +3323,11 @@
         "india_wangchuk_strike",
         "burnham_neet_initiative",
         "gina_hinojosa_campaign_public_education",
-        "treaty-6-alberta-independence"
+        "treaty-6-alberta-independence",
+        "nyc_homeschooling"
       ],
-      "avg_real_u": 0.0769,
-      "avg_real_psi": -0.0923,
+      "avg_real_u": 0.1193,
+      "avg_real_psi": -0.0143,
       "verdicts": [
         "FAIL",
         "PASS",
@@ -3332,9 +3341,10 @@
         "PASS",
         "PASS",
         "FAIL",
-        "FAIL"
+        "FAIL",
+        "PASS"
       ],
-      "pass_count": 6,
+      "pass_count": 7,
       "fail_count": 7
     }
   }
