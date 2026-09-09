@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VFT File Summaries Viewer</title>
+  <style>
+    :root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --bg-sidebar: #11161d;
+      --border-color: #30363d;
+      --text-main: #c9d1d9;
+      --text-muted: #8b949e;
+      --text-bright: #ffffff;
+      --accent: #58a6ff;
+      --accent-hover: #79c0ff;
+      --tag-bg: #1f242c;
+      --tag-border: #38434f;
+      --plane-q1: #f778ba;
+      --plane-q2: #a371f7;
+      --plane-q3: #58a6ff;
+      --plane-q4: #3fb950;
+      --plane-q5: #d29922;
+      --plane-q6: #f0883e;
+      --plane-q7: #ff7b72;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: var(--bg-sidebar);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .header-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-stats {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .main-container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 430px;
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .search-box {
+      padding: 14px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .search-input {
+      width: 100%;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 8px 12px;
+      color: var(--text-bright);
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--accent); }
+
+    .filter-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .filter-select {
+      flex: 1;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 6px 8px;
+      color: var(--text-main);
+      font-size: 0.8rem;
+      outline: none;
+    }
+
+    .file-list {
+      flex: 1;
+      overflow-y: auto;
+      list-style: none;
+    }
+
+    .file-item {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .file-item:hover { background-color: rgba(88, 166, 255, 0.08); }
+    .file-item.active {
+      background-color: rgba(88, 166, 255, 0.15);
+      border-left: 3px solid var(--accent);
+    }
+
+    .file-item-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin-bottom: 6px;
+      word-break: break-word;
+    }
+
+    .file-item-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-plane { background: #21262d; border: 1px solid #30363d; }
+    .badge-q1 { color: var(--plane-q1); border-color: var(--plane-q1); }
+    .badge-q2 { color: var(--plane-q2); border-color: var(--plane-q2); }
+    .badge-q3 { color: var(--plane-q3); border-color: var(--plane-q3); }
+    .badge-q4 { color: var(--plane-q4); border-color: var(--plane-q4); }
+    .badge-q5 { color: var(--plane-q5); border-color: var(--plane-q5); }
+    .badge-q6 { color: var(--plane-q6); border-color: var(--plane-q6); }
+    .badge-q7 { color: var(--plane-q7); border-color: var(--plane-q7); }
+
+    .badge-complete { background: rgba(63, 185, 80, 0.15); color: #3fb950; border: 1px solid #238636; }
+    .badge-redo { background: rgba(210, 153, 34, 0.15); color: #d29922; border: 1px solid #9e6a03; }
+
+    /* Content Area */
+    .content-pane {
+      flex: 1;
+      overflow-y: auto;
+      padding: 30px 40px;
+      background-color: var(--bg-main);
+    }
+
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .doc-header {
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .doc-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 8px;
+    }
+
+    .doc-path {
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+      word-break: break-all;
+    }
+
+    .doc-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .tag-chip {
+      background-color: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 12px;
+      padding: 3px 10px;
+      font-size: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .topics-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .topic-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .topic-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .topic-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-main);
+    }
+
+    .legacy-banner {
+      background: rgba(210, 153, 34, 0.12);
+      border: 1px solid #9e6a03;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      color: #e3b341;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .action-bar {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 6px 14px;
+      color: var(--text-bright);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn:hover {
+      background-color: #21262d;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  </style>
+  <script src="file_summaries_data.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-title">
+      <span>📐 Vector Field Theory</span>
+      <span style="color: var(--text-muted); font-weight: normal;">|</span>
+      <span>File Summaries Database</span>
+    </div>
+    <div class="header-stats" id="statsBar">
+      <span>Loading database...</span>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search files, topics, concepts..." />
+        <div class="filter-row">
+          <select id="statusFilter" class="filter-select">
+            <option value="">All Statuses</option>
+            <option value="complete">🟢 Complete (790)</option>
+            <option value="needs_redo">🟡 Needs Redo (376)</option>
+          </select>
+          <select id="planeFilter" class="filter-select">
+            <option value="">All Planes</option>
+            <option value="Q1">Q1 WHO</option>
+            <option value="Q2">Q2 WHAT</option>
+            <option value="Q3">Q3 WHERE</option>
+            <option value="Q4">Q4 WHY</option>
+            <option value="Q5">Q5 HOW</option>
+            <option value="Q6">Q6 CAUSE</option>
+            <option value="Q7">Q7 EFFECT</option>
+          </select>
+          <select id="nodeFilter" class="filter-select">
+            <option value="">All Nodes</option>
+          </select>
+        </div>
+      </div>
+      <ul class="file-list" id="fileList"></ul>
+    </aside>
+
+    <!-- Reading Pane -->
+    <main class="content-pane" id="contentPane">
+      <div class="empty-state">
+        <p>👈 Select a document from the left to view its summary and classification.</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    let dbData = window.VFT_SUMMARIES_DATA || {};
+    let fileKeys = [];
+    let selectedKey = null;
+
+    function init() {
+      fileKeys = Object.keys(dbData);
+      populateNodeFilter();
+      updateStats();
+      renderList();
+
+      if (fileKeys.length > 0) {
+        selectFile(fileKeys[0]);
+      }
+    }
+
+    function populateNodeFilter() {
+      const nodes = new Set();
+      fileKeys.forEach(k => {
+        if (dbData[k].node) nodes.add(dbData[k].node);
+      });
+      const nodeFilter = document.getElementById('nodeFilter');
+      nodeFilter.innerHTML = '<option value="">All Nodes</option>';
+      Array.from(nodes).sort().forEach(n => {
+        const opt = document.createElement('option');
+        opt.value = n;
+        opt.textContent = n;
+        nodeFilter.appendChild(opt);
+      });
+    }
+
+    function updateStats() {
+      const total = fileKeys.length;
+      const completeCount = fileKeys.filter(k => dbData[k].status === 'complete').length;
+      const redoCount = total - completeCount;
+      document.getElementById('statsBar').innerHTML = `
+        <span><strong>${total}</strong> Total</span>
+        <span style="color:#3fb950;">• <strong>${completeCount}</strong> Complete</span>
+        <span style="color:#d29922;">• <strong>${redoCount}</strong> Needs Redo</span>
+      `;
+    }
+
+    function getPlaneClass(planeStr) {
+      if (!planeStr) return 'badge-plane';
+      const p = planeStr.toUpperCase();
+      if (p.includes('Q1')) return 'badge-plane badge-q1';
+      if (p.includes('Q2')) return 'badge-plane badge-q2';
+      if (p.includes('Q3')) return 'badge-plane badge-q3';
+      if (p.includes('Q4')) return 'badge-plane badge-q4';
+      if (p.includes('Q5')) return 'badge-plane badge-q5';
+      if (p.includes('Q6')) return 'badge-plane badge-q6';
+      if (p.includes('Q7')) return 'badge-plane badge-q7';
+      return 'badge-plane';
+    }
+
+    function filterFiles() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const status = document.getElementById('statusFilter').value;
+      const plane = document.getElementById('planeFilter').value;
+      const node = document.getElementById('nodeFilter').value;
+
+      return fileKeys.filter(k => {
+        const item = dbData[k];
+        if (status && item.status !== status) return false;
+        if (plane && (!item.plane || !item.plane.includes(plane))) return false;
+        if (node && item.node !== node) return false;
+
+        if (search) {
+          const matchTitle = k.toLowerCase().includes(search);
+          const matchPath = (item.path || '').toLowerCase().includes(search);
+          const matchTags = (item.tags || []).some(t => t.toLowerCase().includes(search));
+          const matchRaw = (item.raw_summary || '').toLowerCase().includes(search);
+          const matchTopics = (item.summary_topics || []).some(t => 
+            (t.topic || '').toLowerCase().includes(search) || 
+            (t.description || '').toLowerCase().includes(search)
+          );
+          if (!matchTitle && !matchPath && !matchTags && !matchRaw && !matchTopics) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderList() {
+      const listEl = document.getElementById('fileList');
+      listEl.innerHTML = '';
+      const filtered = filterFiles();
+
+      filtered.forEach(k => {
+        const item = dbData[k];
+        const li = document.createElement('li');
+        li.className = 'file-item' + (k === selectedKey ? ' active' : '');
+        li.onclick = () => selectFile(k);
+
+        const planeClass = getPlaneClass(item.plane);
+        const planeBadge = item.plane ? `<span class="badge ${planeClass}">${item.plane.split(' ')[0]}</span>` : '';
+        const nodeBadge = item.node ? `<span class="badge badge-plane">${item.node}</span>` : '';
+        const statusBadge = item.status === 'complete' 
+          ? `<span class="badge badge-complete">✓ Complete</span>` 
+          : `<span class="badge badge-redo">⚠️ Redo</span>`;
+
+        li.innerHTML = `
+          <div class="file-item-title">${item.filename || k}</div>
+          <div class="file-item-meta">
+            ${statusBadge}
+            ${planeBadge}
+            ${nodeBadge}
+          </div>
+        `;
+        listEl.appendChild(li);
+      });
+    }
+
+    function selectFile(key) {
+      selectedKey = key;
+      const item = dbData[key];
+      if (!item) return;
+
+      renderList();
+
+      const contentEl = document.getElementById('contentPane');
+      const planeClass = getPlaneClass(item.plane);
+
+      let statusBadge = item.status === 'complete'
+        ? `<span class="badge badge-complete" style="font-size:0.8rem; padding: 4px 8px;">✓ Complete</span>`
+        : `<span class="badge badge-redo" style="font-size:0.8rem; padding: 4px 8px;">⚠️ Needs Redo (Legacy Format)</span>`;
+
+      let tagsHtml = (item.tags || []).map(t => `<span class="tag-chip">${t}</span>`).join('');
+      
+      let legacyBannerHtml = item.status === 'needs_redo' ? `
+        <div class="legacy-banner">
+          <strong>⚠️ Legacy / Incomplete Format:</strong> This entry is stored in its existing raw format and is queued to be re-summarized with the standard 2–3 sentence topic breakdown.
+        </div>
+      ` : '';
+
+      let topicsHtml = '';
+      if (item.summary_topics && item.summary_topics.length > 0) {
+        topicsHtml = item.summary_topics.map(t => `
+          <div class="topic-card">
+            <div class="topic-title">📌 ${t.topic || 'Finding'}</div>
+            <div class="topic-desc">${t.description || ''}</div>
+          </div>
+        `).join('');
+      } else if (item.raw_summary) {
+        topicsHtml = `
+          <div class="topic-card">
+            <div class="topic-title">📄 Raw Recorded Summary</div>
+            <div class="topic-desc">${item.raw_summary}</div>
+          </div>
+        `;
+      } else {
+        topicsHtml = '<p style="color:var(--text-muted);">No summary text recorded.</p>';
+      }
+
+      contentEl.innerHTML = `
+        <div class="doc-header">
+          <div class="doc-title">${item.filename || key}</div>
+          <div class="doc-path">${item.path || 'Workspace File'}</div>
+          <div class="doc-badges">
+            ${statusBadge}
+            ${item.plane ? `<span class="badge ${planeClass}" style="font-size:0.8rem; padding: 4px 8px;">${item.plane}</span>` : ''}
+            ${item.node ? `<span class="badge badge-plane" style="font-size:0.8rem; padding: 4px 8px;">Node: ${item.node}</span>` : ''}
+            ${item.quadrant ? `<span class="badge badge-plane" style="font-size:0.8rem; padding: 4px 8px;">Quadrant: ${item.quadrant}</span>` : ''}
+            ${item.date ? `<span class="badge badge-plane" style="font-size:0.8rem; padding: 4px 8px;">📅 ${item.date}</span>` : ''}
+          </div>
+          <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px;">
+            ${tagsHtml}
+          </div>
+        </div>
+
+        ${legacyBannerHtml}
+
+        <h3 style="color: var(--text-bright); margin-bottom: 16px; font-size: 1.1rem;">Thematic Breakdown & Summary</h3>
+        <div class="topics-container">
+          ${topicsHtml}
+        </div>
+
+        <div class="action-bar">
+          <button class="btn" onclick="copyMarkdown('${key.replace(/'/g, "\\'")}')">📋 Copy Markdown Block</button>
+        </div>
+      `;
+    }
+
+    function copyMarkdown(key) {
+      const item = dbData[key];
+      if (!item) return;
+
+      const summaryLines = (item.summary_topics || []).map(t => `${t.topic}: ${t.description}`).join('\\\n');
+      const md = `### [${item.filename}] (${item.date || '2026-05-24'})
+**Path**: ${item.path || item.filename}
+**Categories**: Plane: ${item.plane || 'Q2 WHAT'}; Node: ${item.node || 'Reality'}; Tags: ${(item.tags || []).join(', ')}
+**Summary**:
+${summaryLines || item.raw_summary || ''}`;
+
+      navigator.clipboard.writeText(md).then(() => {
+        alert('Copied Markdown block to clipboard!');
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', renderList);
+    document.getElementById('statusFilter').addEventListener('change', renderList);
+    document.getElementById('planeFilter').addEventListener('change', renderList);
+    document.getElementById('nodeFilter').addEventListener('change', renderList);
+
+    window.onload = init;
+  </script>
+</body>
+</html>
