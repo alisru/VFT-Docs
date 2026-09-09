@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QQCI Semantic Dictionary v2.0</title>
+<style>
+  :root {
+    --bg: #0b0d14;
+    --surface-1: #121622;
+    --surface-2: #191f30;
+    --surface-3: #222a40;
+    --border: #232b42;
+    --border-light: #2f3a59;
+    --text: #e6edf8;
+    --text-muted: #8493b2;
+    --text-subtle: #566485;
+    --accent: #6366f1;
+
+    /* Plane Themes */
+    --q1-color: #c084fc; --q1-bg: rgba(192, 132, 252, 0.08); --q1-border: rgba(192, 132, 252, 0.25);
+    --q2-color: #38bdf8; --q2-bg: rgba(56, 189, 248, 0.08); --q2-border: rgba(56, 189, 248, 0.25);
+    --q3-color: #34d399; --q3-bg: rgba(52, 211, 153, 0.08); --q3-border: rgba(52, 211, 153, 0.25);
+    --q4-color: #f472b6; --q4-bg: rgba(244, 114, 182, 0.08); --q4-border: rgba(244, 114, 182, 0.25);
+    --q5-color: #fbbf24; --q5-bg: rgba(251, 191, 36, 0.08); --q5-border: rgba(251, 191, 36, 0.25);
+    --q6-color: #f87171; --q6-bg: rgba(248, 113, 113, 0.08); --q6-border: rgba(248, 113, 113, 0.25);
+    --q7-color: #a78bfa; --q7-bg: rgba(167, 139, 250, 0.08); --q7-border: rgba(167, 139, 250, 0.25);
+
+    /* Modals */
+    --pos-are: #34d399;
+    --pos-canbe: #38bdf8;
+    --pos-waslike: #fbbf24;
+    --pos-notreally: #f87171;
+    --pos-notall: #f472b6;
+
+    /* PoS Tags */
+    --tag-noun: #38bdf8; --tag-noun-bg: rgba(56, 189, 248, 0.12);
+    --tag-verb: #34d399; --tag-verb-bg: rgba(52, 211, 153, 0.12);
+    --tag-adj: #fbbf24; --tag-adj-bg: rgba(251, 191, 36, 0.12);
+    --tag-adv: #f472b6; --tag-adv-bg: rgba(244, 114, 182, 0.12);
+    --tag-ger: #a78bfa; --tag-ger-bg: rgba(167, 139, 250, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* TOP HEADER */
+  header {
+    background: var(--surface-1);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-logo {
+    width: 28px; height: 28px; border-radius: 6px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.85rem; color: #fff;
+  }
+  .brand-title { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
+  .brand-ver { font-size: 0.75rem; color: var(--text-muted); background: var(--surface-2); padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+  
+  .header-actions { display: flex; align-items: center; gap: 12px; }
+  .btn-load {
+    background: var(--surface-2);
+    border: 1px solid var(--border-light);
+    color: var(--text);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .btn-load:hover { background: var(--surface-3); border-color: var(--accent); color: #fff; }
+  #file-input { display: none; }
+
+  /* MAIN LAYOUT */
+  .layout { display: flex; height: calc(100vh - 56px); }
+
+  /* SIDEBAR */
+  .sidebar {
+    width: 260px;
+    background: var(--surface-1);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+  }
+  .search-box { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+  .search-input {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: var(--text);
+    font-size: 0.85rem;
+    outline: none;
+  }
+  .search-input:focus { border-color: var(--accent); }
+  .word-list { flex: 1; overflow-y: auto; padding: 8px; }
+  .word-item {
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    transition: all 0.1s ease;
+  }
+  .word-item:hover { background: var(--surface-2); }
+  .word-item.active { background: var(--surface-3); border-left: 3px solid var(--accent); }
+  .word-item .tag {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+
+  /* CONTENT AREA */
+  .content-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px 36px 60px;
+    background: var(--bg);
+  }
+
+  /* HERO WORD SECTION */
+  .hero {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .hero-top { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+  .hero-word { font-size: 2.2rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+  .hero-q-badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .hero-pos-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+  .pos-pill {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--surface-2);
+    color: var(--text-muted);
+    border: 1px solid var(--border-light);
+    text-transform: uppercase;
+  }
+
+  .hero-def {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+
+  .ae-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .ae-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ae-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-subtle); }
+  .ae-val { font-size: 0.95rem; font-weight: 600; color: #fff; }
+
+  /* SECTION HEADINGS */
+  .section-wrap { margin-bottom: 28px; }
+  .section-head {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-subtle);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-head::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* GRAMMAR CARDS GRID */
+  .gram-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .gram-card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .gram-header-row { display: flex; justify-content: space-between; align-items: center; }
+  .gram-pos-title { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; }
+  .gram-forms-list { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 2px; }
+  .gram-form-chip { font-family: monospace; font-size: 0.82rem; background: var(--surface-2); padding: 2px 6px; border-radius: 4px; color: var(--text); }
+  .gram-role-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.35; }
+
+  /* PLANES TABLE */
+  .planes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+  }
+  .plane-row td {
+    background: var(--surface-1);
+    padding: 14px 16px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .plane-row td:first-child {
+    border-left: 1px solid var(--border);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 70px;
+  }
+  .plane-row td:last-child {
+    border-right: 1px solid var(--border);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 80px;
+    text-align: right;
+  }
+
+  .q-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.88rem;
+    font-weight: 800;
+  }
+
+  .meta-col { width: 170px; }
+  .meta-interrog { font-size: 0.95rem; font-weight: 700; color: #fff; line-height: 1.2; }
+  .meta-anchor { font-size: 0.75rem; color: var(--text-muted); }
+  .meta-plane { font-size: 0.7rem; color: var(--text-subtle); font-style: italic; }
+
+  .desc-col { font-size: 0.92rem; color: var(--text); line-height: 1.45; }
+
+  .pos-col { width: 110px; text-align: center; }
+  .pos-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .score-col { font-size: 0.95rem; font-weight: 700; font-family: monospace; }
+  .score-unity { color: #34d399; }
+  .score-drift { color: #fbbf24; }
+
+  /* SUB MEANINGS & DELTAS */
+  .sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .sub-card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sub-card-header { display: flex; justify-content: space-between; align-items: center; }
+  .sub-title { font-size: 1rem; font-weight: 700; color: #fff; }
+  .sub-anchor-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .deltas-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+  .delta-badge {
+    font-size: 0.72rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border-light);
+    color: var(--text-muted);
+    border-radius: 12px;
+    padding: 2px 9px;
+  }
+
+  /* RELATED WORDS CHIPS */
+  .rel-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .rel-item {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .rel-word { font-size: 0.9rem; font-weight: 600; color: #fff; }
+  .rel-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+  .rel-Equivalent { color: #34d399; background: rgba(52, 211, 153, 0.12); border: 1px solid rgba(52, 211, 153, 0.3); }
+  .rel-Similar    { color: #38bdf8; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); }
+  .rel-Derivative { color: #fbbf24; background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.3); }
+  .rel-Opposite   { color: #f87171; background: rgba(248, 113, 113, 0.12); border: 1px solid rgba(248, 113, 113, 0.3); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-logo">Q</div>
+    <div class="brand-title">QQCI Semantic Dictionary</div>
+    <div class="brand-ver" id="dict-version">v2.0</div>
+  </div>
+  <div class="header-actions">
+    <label class="btn-load" for="file-input">Open Dictionary JSON</label>
+    <input type="file" id="file-input" accept=".json">
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="search-box">
+      <input type="text" id="search-input" class="search-input" placeholder="Filter words...">
+    </div>
+    <div class="word-list" id="word-list"></div>
+  </aside>
+
+  <main class="content-area" id="main-content">
+    <!-- Populated by JS -->
+  </main>
+</div>
+
+<script src="./qqci_dictionary_v2.js"></script>
+
+<script>
+const PLANE_METAS = {
+  Q1: { color: 'var(--q1-color)', bg: 'var(--q1-bg)', border: 'var(--q1-border)' },
+  Q2: { color: 'var(--q2-color)', bg: 'var(--q2-bg)', border: 'var(--q2-border)' },
+  Q3: { color: 'var(--q3-color)', bg: 'var(--q3-bg)', border: 'var(--q3-border)' },
+  Q4: { color: 'var(--q4-color)', bg: 'var(--q4-bg)', border: 'var(--q4-border)' },
+  Q5: { color: 'var(--q5-color)', bg: 'var(--q5-bg)', border: 'var(--q5-border)' },
+  Q6: { color: 'var(--q6-color)', bg: 'var(--q6-bg)', border: 'var(--q6-border)' },
+  Q7: { color: 'var(--q7-color)', bg: 'var(--q7-bg)', border: 'var(--q7-border)' }
+};
+
+const POS_METAS = {
+  Are:       { color: 'var(--pos-are)', bg: 'rgba(52, 211, 153, 0.12)' },
+  CanBe:     { color: 'var(--pos-canbe)', bg: 'rgba(56, 189, 248, 0.12)' },
+  WasLike:   { color: 'var(--pos-waslike)', bg: 'rgba(251, 191, 36, 0.12)' },
+  NotReally: { color: 'var(--pos-notreally)', bg: 'rgba(248, 113, 113, 0.12)' },
+  NotAll:    { color: 'var(--pos-notall)', bg: 'rgba(244, 114, 182, 0.12)' }
+};
+
+const GRAM_COLORS = {
+  noun: 'var(--tag-noun)',
+  verb: 'var(--tag-verb)',
+  adjective: 'var(--tag-adj)',
+  adverb: 'var(--tag-adv)',
+  pronoun: 'var(--q1-color)',
+  preposition: 'var(--q3-color)',
+  conjunction: 'var(--q5-color)'
+};
+
+let dictData = null;
+let activeWord = null;
+let searchQuery = "";
+
+if (typeof QQCI_DICT !== 'undefined' && QQCI_DICT) {
+  loadDict(QQCI_DICT);
+} else {
+  fetch('./qqci_dictionary_v2.json')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(loadDict)
+    .catch(() => {});
+}
+
+document.getElementById('file-input').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try { loadDict(JSON.parse(ev.target.result)); }
+    catch(err) { alert('Invalid JSON: ' + err.message); }
+  };
+  reader.readAsText(file);
+});
+
+document.getElementById('search-input').addEventListener('input', e => {
+  searchQuery = e.target.value.toLowerCase();
+  renderWordList();
+});
+
+function loadDict(data) {
+  dictData = data;
+  if (data._meta && data._meta.version) {
+    document.getElementById('dict-version').textContent = 'v' + data._meta.version;
+  }
+  renderWordList();
+  const words = Object.keys(data.entries || {});
+  if (words.length > 0) selectWord(words[0]);
+}
+
+function renderWordList() {
+  const entries = dictData.entries || {};
+  const list = document.getElementById('word-list');
+  list.innerHTML = '';
+
+  Object.entries(entries).forEach(([word, entry]) => {
+    if (searchQuery && !word.toLowerCase().includes(searchQuery)) return;
+
+    const div = document.createElement('div');
+    div.className = 'word-item' + (word === activeWord ? ' active' : '');
+    div.innerHTML = `
+      <span>${word}</span>
+      <span class="tag" style="background:rgba(99, 102, 241, 0.15); color:#818cf8">ROOT</span>
+    `;
+    div.addEventListener('click', () => selectWord(word));
+    list.appendChild(div);
+  });
+}
+
+function selectWord(word) {
+  activeWord = word;
+  renderWordList();
+  renderEntry(word, dictData.entries[word]);
+}
+
+function renderEntry(word, entry) {
+  const isFund = entry.is_fundamental === true;
+  const anchorBadge = isFund ? `
+    <div class="hero-q-badge" style="background:rgba(99, 102, 241, 0.15); color:#818cf8; border: 1px solid rgba(99, 102, 241, 0.4)">
+      ROOT ANCHOR CONCEPT
+    </div>
+  ` : '';
+  
+  const posBadges = (entry.parts_of_speech || [])
+    .map(p => `<span class="pos-pill">${p}</span>`).join('');
+
+  const gramCards = Object.entries(entry.grammar || {}).map(([pType, gInfo]) => {
+    const gColor = GRAM_COLORS[pType.toLowerCase()] || 'var(--accent)';
+    const formsHtml = (gInfo.forms || (gInfo.form ? [gInfo.form] : []))
+      .map(f => `<span class="gram-form-chip">${f}</span>`).join('');
+
+    return `
+      <div class="gram-card">
+        <div class="gram-header-row">
+          <span class="gram-pos-title" style="color:${gColor}">${pType}</span>
+        </div>
+        <div class="gram-forms-list">${formsHtml}</div>
+        <div class="gram-role-text">${gInfo.role || ''}</div>
+        ${gInfo.example ? `<div style="font-size:0.75rem; color:var(--text-subtle); font-style:italic; margin-top:4px;">"${gInfo.example}"</div>` : ''}
+      </div>
+    `;
+  }).join('');
+
+  const planeRows = ['Q1','Q2','Q3','Q4','Q5','Q6','Q7'].map(qk => {
+    const p = entry.planes?.[qk] || {};
+    const qMeta = PLANE_METAS[qk];
+    const posMeta = POS_METAS[p.position] || POS_METAS.Are;
+    const scoreVal = p.truth_score ?? 1.0;
+    const scoreClass = scoreVal === 1.0 ? 'score-unity' : 'score-drift';
+
+    return `
+      <tr class="plane-row">
+        <td style="vertical-align:top;">
+          <div class="q-badge" style="background:${qMeta.bg}; color:${qMeta.color}; border: 1px solid ${qMeta.border}">
+            ${qk}
+          </div>
+        </td>
+        <td class="meta-col" style="vertical-align:top;">
+          <div class="meta-interrog">${p.interrogative || qk}</div>
+          <div class="meta-anchor">${p.anchor || ''}</div>
+          <div class="meta-plane">${(p.plane || dictData._meta?.planes?.[qk]?.plane) || ''}</div>
+        </td>
+        <td class="desc-col">
+          ${(p.answer || p.association) ? `
+          <div style="margin-bottom:8px;">
+            <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; color:var(--text-subtle); letter-spacing:0.06em;">1. Plane Answer ($q-Sense):</span>
+            <div style="font-size:0.92rem; color:#fff; font-weight:600; margin-top:2px;">${p.answer || p.association}</div>
+          </div>` : ''}
+          ${(p.word_in_context_of_plane || p.relative_store) ? `
+          <div style="background:rgba(255,255,255,0.03); border-left:3px solid ${qMeta.color}; padding:8px 12px; border-radius:0 6px 6px 0; margin-bottom:8px;">
+            <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; color:${qMeta.color}; letter-spacing:0.06em;">2. Word Under Context of Plane ($Q-Space):</span>
+            <div style="font-size:0.88rem; color:var(--text); margin-top:2px;">${p.word_in_context_of_plane || p.relative_store}</div>
+          </div>` : ''}
+          ${(p.action || p.effect) ? `
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:6px; background:rgba(0,0,0,0.2); padding:8px; border-radius:6px;">
+            <div>
+              <span style="font-size:0.65rem; font-weight:800; text-transform:uppercase; color:var(--text-subtle);">Plane Action:</span>
+              <div style="font-size:0.82rem; color:var(--text-muted);">${p.action || '—'}</div>
+            </div>
+            <div>
+              <span style="font-size:0.65rem; font-weight:800; text-transform:uppercase; color:var(--text-subtle);">Plane Effect:</span>
+              <div style="font-size:0.82rem; color:var(--text-muted);">${p.effect || '—'}</div>
+            </div>
+          </div>` : ''}
+        </td>
+        <td class="pos-col" style="vertical-align:top;">
+          <span class="pos-badge" style="color:${posMeta.color}; background:${posMeta.bg}">
+            ${p.position || 'Are'}
+          </span>
+        </td>
+        <td class="score-col ${scoreClass}" style="vertical-align:top;">
+          ${scoreVal.toFixed(2)}
+        </td>
+      </tr>
+    `;
+  }).join('');
+
+  const subCards = Object.entries(entry.sub_meanings || {}).map(([sw, sd]) => {
+    const qk = sd.anchor || 'Q3';
+    const qMeta = PLANE_METAS[qk] || PLANE_METAS.Q3;
+    const deltas = (sd.delta || []).map(d =>
+      `<span class="delta-badge">${d}</span>`
+    ).join('');
+    return `
+      <div class="sub-card">
+        <div class="sub-card-header">
+          <span class="sub-title">${sw}</span>
+          <span class="sub-anchor-tag" style="background:${qMeta.bg}; color:${qMeta.color}; border:1px solid ${qMeta.border}">Anchor: ${qk}</span>
+        </div>
+        <div class="deltas-wrap">${deltas}</div>
+      </div>
+    `;
+  }).join('');
+
+  const relChips = (entry.related || []).map(r => `
+    <div class="rel-item">
+      <span class="rel-word">${r.word}</span>
+      <span class="rel-tag rel-${r.relation}">${r.relation}</span>
+    </div>
+  `).join('');
+
+  document.getElementById('main-content').innerHTML = `
+    <div class="hero">
+      <div class="hero-top">
+        <div class="hero-word">${word}</div>
+        ${anchorBadge}
+        <div class="hero-pos-badges">${posBadges}</div>
+      </div>
+      <div class="hero-def">"${entry.definitive_meaning || ''}"</div>
+      <div class="ae-container">
+        <div class="ae-card">
+          <span class="ae-label">Fundamental Action</span>
+          <span class="ae-val">${entry.action || '—'}</span>
+        </div>
+        <div class="ae-card">
+          <span class="ae-label">Fundamental Effect</span>
+          <span class="ae-val">${entry.effect || '—'}</span>
+        </div>
+      </div>
+    </div>
+
+    ${gramCards ? `
+    <div class="section-wrap">
+      <div class="section-head">7 English Grammatical States & Operational Roles</div>
+      <div class="gram-grid">${gramCards}</div>
+    </div>` : ''}
+
+    <div class="section-wrap">
+      <div class="section-head">7-Plane Projection ($Q$-Space & $q$-Sense)</div>
+      <table class="planes-table">
+        <tbody>${planeRows}</tbody>
+      </table>
+    </div>
+
+    ${subCards ? `
+    <div class="section-wrap">
+      <div class="section-head">Sub-Meanings / Phenotypes (Anchor & Deltas)</div>
+      <div class="sub-grid">${subCards}</div>
+    </div>` : ''}
+
+    ${relChips ? `
+    <div class="section-wrap">
+      <div class="section-head">Related Words & Conceptual Topology</div>
+      <div class="rel-grid">${relChips}</div>
+    </div>` : ''}
+  `;
+}
+</script>
+</body>
+</html>

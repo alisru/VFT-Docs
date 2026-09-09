@@ -69,3 +69,8 @@ Subagents suffer from context amnesia and routinely fail to uphold rigid formatt
 - **No Poetic/Literal Search Strings**: Never query search engines or corpora using the poetic or historical name of a Kanon vector (e.g. "Weird Melancholy", "The Sunburnt Country", "The Never-Never"). You must translate the vector's underlying structural mechanism into its modern political/policy equivalents (e.g. postcode inequality, natural disasters, transition delays) before searching.
 - **Local Database Sourcing Priority**: For any quote validation, you must search the local database (`albanese_corpus.jsonl` or `.parquet`) first using standard local commands before running any web searches.
 - **Batch Verification URL Consolidation**: When fetching external source URLs for validation, always combine all URLs into a single parallel call to `Parallel-Search-MCP` (`web_fetch`) rather than running multiple sequential fetches across turns.
+
+## Trackable File Operations & IDE Diff Logging
+- **Mandatory IDE File Tools**: All file creations, updates, overwrites, and content generations within the workspace MUST be performed using Antigravity's native IDE tools (`write_to_file` and `replace_file_content`).
+- **Absolute Ban on Scripted File Writing**: Never use Python scripts (`open()`, `f.write()`), PowerShell commands (`Out-File`, `Set-Content`, `>`, `>>`), or shell redirects to generate or modify workspace files. All file writes must go through IDE tools so they produce tracked diff logs and remain undoable/revertible in the Antigravity UI.
+

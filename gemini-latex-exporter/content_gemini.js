@@ -1,26 +1,51 @@
 console.log("[Gemini LaTeX Exporter] Content script loaded on: " + window.location.href);
 
-let lastClickedShareButton = null;
+// Gemini renders every popup menu into a CDK overlay carrying role="menu".
+// Everything else that gets appended to the page mid-session — the "Files in
+// this chat" panel, the sidebar, canvas chips — is ordinary UI. Cloning a menu
+// item into those is what used to scatter stray "Download Chat as MD" buttons
+// around the app, so nothing outside a real menu is ever touched.
+const MENU_SELECTOR = '[role="menu"], .mat-mdc-menu-panel';
+const MENU_ITEM_SELECTOR = '[role="menuitem"], .mat-mdc-menu-item';
 
-// Track the last clicked share/export or conversation actions button
+// A trigger click is only good for the menu it opens. Holding on to it lets a
+// later, unrelated insertion masquerade as the menu we were waiting for.
+const TRIGGER_TTL_MS = 5000;
+
+let lastClickedShareButton = null;
+let lastClickedShareButtonAt = 0;
+
+function setTrigger(btn) {
+  lastClickedShareButton = btn || null;
+  lastClickedShareButtonAt = btn ? Date.now() : 0;
+}
+
+function getTrigger() {
+  if (!lastClickedShareButton) return null;
+  if (Date.now() - lastClickedShareButtonAt > TRIGGER_TTL_MS) {
+    setTrigger(null);
+    return null;
+  }
+  return lastClickedShareButton;
+}
+
+// Track the last clicked share/export or conversation actions button. Menu
+// items count as clicks too: picking one ("Files in this chat", "Share
+// conversation") means the conversation menu is done and must stop arming us.
 document.addEventListener('mousedown', (event) => {
-  const btn = event.target.closest('button, [role="button"]');
+  const btn = event.target.closest('button, [role="button"], [role="menuitem"]');
   if (btn) {
     const ariaLabel = (btn.getAttribute('aria-label') || '').toLowerCase();
     const btnText = (btn.textContent || '').toLowerCase();
-    const hasShareIcon = btn.querySelector('mat-icon, svg, .material-symbols') && 
+    const hasShareIcon = btn.querySelector('mat-icon, svg, .material-symbols') &&
                          (btn.innerHTML.includes('share') || btn.innerHTML.includes('export'));
-    
-    const isShareOrExport = ariaLabel.includes('share') || ariaLabel.includes('export') || 
+
+    const isShareOrExport = ariaLabel.includes('share') || ariaLabel.includes('export') ||
                             btnText.includes('share') || btnText.includes('export') || hasShareIcon;
-                            
+
     const isConversationMenu = ariaLabel.includes('conversation');
-    
-    if (isShareOrExport || isConversationMenu) {
-      lastClickedShareButton = btn;
-    } else {
-      lastClickedShareButton = null;
-    }
+
+    setTrigger(isShareOrExport || isConversationMenu ? btn : null);
   }
 }, true);
 
@@ -37,56 +62,67 @@ const observer = new MutationObserver((mutations) => {
 
 observer.observe(document.body, { childList: true, subtree: true });
 
+// The menu panel an inserted node belongs to, or null if it is not menu at all.
+// The node can be the panel itself, something rendered inside it, or a wrapper
+// the overlay was mounted into.
+function getMenuRoot(node) {
+  if (!node || node.nodeType !== Node.ELEMENT_NODE) return null;
+  if (node.matches && node.matches(MENU_SELECTOR)) return node;
+  const enclosing = node.closest && node.closest(MENU_SELECTOR);
+  if (enclosing) return enclosing;
+  return (node.querySelector && node.querySelector(MENU_SELECTOR)) || null;
+}
+
 function checkForShareMenu(rootNode) {
-  if (!rootNode || !rootNode.querySelectorAll) return;
-  if (!lastClickedShareButton) return;
-  
-  const triggerLabel = (lastClickedShareButton.getAttribute('aria-label') || '').toLowerCase();
-  
+  const trigger = getTrigger();
+  if (!trigger) return;
+
+  const menu = getMenuRoot(rootNode);
+  if (!menu) return;
+
+  const triggerLabel = (trigger.getAttribute('aria-label') || '').toLowerCase();
+
   if (triggerLabel.includes('conversation')) {
     // Inject "Download Chat as MD" into the conversation actions menu
-    const candidates = Array.from(rootNode.querySelectorAll('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]'));
-    if (rootNode.matches && rootNode.matches('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]')) {
-      candidates.push(rootNode);
-    }
-    
-    const itemToClone = candidates.find(el => {
-      const txt = el.textContent.toLowerCase();
-      return txt.includes('delete') || txt.includes('rename') || txt.includes('pin') || el.getAttribute('role') === 'menuitem';
-    }) || candidates[0];
-    
-    if (itemToClone && !itemToClone.parentNode.querySelector('.gemini-chat-md-exporter-btn')) {
-      const text = itemToClone.textContent.trim();
-      let searchLabel = text;
-      if (text.includes('Delete')) searchLabel = 'Delete';
-      else if (text.includes('Rename')) searchLabel = 'Rename';
-      else if (text.includes('Pin')) searchLabel = 'Pin';
-      
-      const chatMdBtn = createButtonHelper(itemToClone, searchLabel, 'Download Chat as MD', 'gemini-chat-md-exporter-btn', async (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const backdrop = document.querySelector('.cdk-overlay-backdrop');
-        if (backdrop) backdrop.click();
-        await handleChatExport();
-      });
-      
-      itemToClone.parentNode.appendChild(chatMdBtn);
-    }
+    if (menu.querySelector('.gemini-chat-md-exporter-btn')) return;
+
+    const items = Array.from(menu.querySelectorAll(MENU_ITEM_SELECTOR));
+    // Prefer a known item as the clone template. Menus fill in progressively,
+    // so falling back to whatever rendered first can clone a half-built row;
+    // only settle for the last item once the menu looks complete.
+    const itemToClone = items.find(el => /delete|rename|pin/i.test(el.textContent))
+                        || (items.length >= 3 ? items[items.length - 1] : null);
+    if (!itemToClone) return;
+
+    const text = itemToClone.textContent.trim();
+    let searchLabel = text;
+    if (text.includes('Delete')) searchLabel = 'Delete';
+    else if (text.includes('Rename')) searchLabel = 'Rename';
+    else if (text.includes('Pin')) searchLabel = 'Pin';
+
+    const chatMdBtn = createButtonHelper(itemToClone, searchLabel, 'Download Chat as MD', 'gemini-chat-md-exporter-btn', async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const backdrop = document.querySelector('.cdk-overlay-backdrop');
+      if (backdrop) backdrop.click();
+      await handleChatExport();
+    });
+
+    itemToClone.parentNode.appendChild(chatMdBtn);
+    setTrigger(null);
     return;
   }
-  
-  // Query all potential share menu item wrappers
-  const candidates = Array.from(rootNode.querySelectorAll('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]'));
-  if (rootNode.matches && rootNode.matches('[role="menuitem"], button, a, li, .mat-mdc-menu-item, [role="button"]')) {
-    candidates.push(rootNode);
-  }
-  
+
+  // Query all potential share menu item wrappers, within this menu only
+  const candidates = Array.from(menu.querySelectorAll(MENU_ITEM_SELECTOR + ', button, a'));
+
   for (const item of candidates) {
     const text = (item.textContent || '').trim();
     const normalizedText = text.replace(/\s+/g, ' ');
     if (normalizedText.includes('Export to Docs') && !normalizedText.includes('TeX')) {
-      if (!item.parentNode.querySelector('.gemini-tex-exporter-btn')) {
+      if (!menu.querySelector('.gemini-tex-exporter-btn')) {
         createTexExportBtns(item);
+        setTrigger(null);
         break;
       }
     }

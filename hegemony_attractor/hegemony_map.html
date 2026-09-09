@@ -338,7 +338,7 @@
     <div class="subtitle">Canonical Alignment (X: +2υ Left → -2υ Right | Y: +2ψ Top → -2ψ Bottom)</div>
   </div>
   <div class="spacer"></div>
-  <label style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); margin-right:6px;" title="Master switch — off disables dragging on the canvas for every label/axis/shape, regardless of individual lock checkboxes. Panel editing still works."><input type="checkbox" id="editMode" checked> Edit Mode</label>
+  <label style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); margin-right:6px;" title="Master switch — off disables dragging on the canvas for every label/axis/shape, regardless of individual lock checkboxes. Panel editing still works."><input type="checkbox" id="editMode"> Edit Mode</label>
   <button class="clear-btn" id="undoBtn" title="Undo (Ctrl+Z)">↶ Undo</button>
   <button class="clear-btn" id="redoBtn" title="Redo (Ctrl+Shift+Z)">↷ Redo</button>
   <button class="clear-btn" id="clearBtn">Clear All</button>
@@ -378,11 +378,11 @@
     <!-- Label input -->
     <div class="side-section">
       <div class="side-title" style="display:flex; justify-content:space-between; align-items:center;">
-        <span>Label & Context</span>
-        <button class="clear-btn" id="addPointBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Point</button>
+        <span>Actor / Point</span>
+        <button class="clear-btn" id="addPointBtn" style="font-size:10px; padding:2px 8px; margin:0;">+ Actor</button>
       </div>
       <div class="label-row" style="display:flex; flex-direction:column; gap:10px;">
-        <input class="label-input" id="labelInput" placeholder="Actor / event name..." maxlength="40" />
+        <input class="label-input" id="labelInput" placeholder="Actor / concept name..." maxlength="40" />
         <select class="label-input" id="contextSelect" style="background:#12141c; color:#fff; border:1px solid #2a2d3d; padding:8px 12px; border-radius:6px; cursor:pointer; font-size:11px; outline:none;">
           <option value="Natural State" selected>Natural State (Baseline)</option>
           <option value="Good Truth">Good Truth (Constructive Fact)</option>
@@ -393,8 +393,81 @@
           <option value="Bad Preference">Bad Preference (Harmful Taste)</option>
         </select>
       </div>
+
+      <!-- Actor Micro-Hegemony Growth Parameters -->
+      <div id="actorSlidersContainer" style="display:none; flex-direction:column; gap:8px; margin-top:10px; border-top:1px solid #2a2d3d; padding-top:10px;">
+        <div style="font-size:10px; font-weight:bold; color:var(--muted); display:flex; justify-content:space-between; align-items:center;">
+          <span>Actor Micro-Hegemony</span>
+          <span style="font-size:8.5px; color:#8890ab;">Growth Parameters</span>
+        </div>
+        
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Confusion (Center Pull):</span>
+            <span id="valActorConfusion" style="font-family:monospace; color:#38bdf8;">30%</span>
+          </label>
+          <input type="range" id="sliderActorConfusion" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Understanding (Expansion):</span>
+            <span id="valActorUnderstanding" style="font-family:monospace; color:#10b981;">30%</span>
+          </label>
+          <input type="range" id="sliderActorUnderstanding" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Greater Good (Top-Left):</span>
+            <span id="valActorGG" style="font-family:monospace; color:#3bde84;">30</span>
+          </label>
+          <input type="range" id="sliderActorGG" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Greater Evil (Top-Right):</span>
+            <span id="valActorGE" style="font-family:monospace; color:#f05060;">30</span>
+          </label>
+          <input type="range" id="sliderActorGE" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Good Preference (Left):</span>
+            <span id="valActorP1" style="font-family:monospace; color:#3bde84;">30</span>
+          </label>
+          <input type="range" id="sliderActorP1" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Bad Preference (Right):</span>
+            <span id="valActorP2" style="font-family:monospace; color:#f05060;">30</span>
+          </label>
+          <input type="range" id="sliderActorP2" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Lesser Good (Bottom-Left):</span>
+            <span id="valActorLG" style="font-family:monospace; color:#30c8e0;">30</span>
+          </label>
+          <input type="range" id="sliderActorLG" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="slider-group">
+          <label style="font-size:10px; display:flex; justify-content:space-between;">
+            <span>Lesser Evil (Bottom-Right):</span>
+            <span id="valActorLE" style="font-family:monospace; color:#e04080;">30</span>
+          </label>
+          <input type="range" id="sliderActorLE" min="0" max="100" step="1" value="30">
+        </div>
+      </div>
+
       <div id="pointPlacementStatus" style="font-size:9px; color:#3bde84; min-height:12px; margin-top:6px;"></div>
-      <div class="axis-desc" style="font-size:10px;color:var(--muted)">Click "+ Point", then click anywhere on the map to plot it</div>
+      <div class="axis-desc" style="font-size:10px;color:var(--muted)">Click "+ Actor", then click anywhere on the map to plot it</div>
     </div>
 
     <!-- Axis Projection Player -->
@@ -840,7 +913,7 @@ const DEFAULT_LABELS = [
   // Minkowski hypersurface caption — previously hand-drawn via drawTextAlongLine (no background box).
   { x: 1.0, y: -1.0, ox: 0, oy: -10, rotation: -45, text: 'Hypersurface of Present Time ➔', fontSize: 8, fontFamily: 'JetBrains Mono', color: 'rgba(255, 255, 255, 0.65)', bold: true, align: 'center', baseline: 'middle', group: 'showMinkowski' },
 
-  // Canonical Anchors (Greater Good / Lesser Evil / Lesser Good / Greater Evil) — previously hand-drawn
+  // Canonical Anchors (Greater Good / Lesser Evil / Lesser Good / Greater Evil / Preferences) — previously hand-drawn
   // next to the anchor-point circles. Positioned at the default (non-relative) v/psi=±1 coords; won't
   // follow the circle if "GG Relative Mode" is toggled on (the circles alone still jump in that mode).
   { x: 1, y: 1, ox: 0, oy: -14, text: 'Greater Good', fontSize: 9.5, color: '#3bde84', bold: true, align: 'center', baseline: 'bottom' },
@@ -851,6 +924,10 @@ const DEFAULT_LABELS = [
   { x: 1, y: -1, ox: 0, oy: 14, text: 'The Good Lie', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
   { x: -1, y: -1, ox: 0, oy: -14, text: 'Greater Evil', fontSize: 9.5, color: '#e04080', bold: true, align: 'center', baseline: 'bottom' },
   { x: -1, y: -1, ox: 0, oy: 14, text: 'The Bad Truth', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
+  { x: 1, y: 0, ox: 0, oy: -14, text: 'Good Preference', fontSize: 9.5, color: '#3bde84', bold: true, align: 'center', baseline: 'bottom' },
+  { x: 1, y: 0, ox: 0, oy: 14, text: 'Subjective Taste', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
+  { x: -1, y: 0, ox: 0, oy: -14, text: 'Bad Preference', fontSize: 9.5, color: '#f05060', bold: true, align: 'center', baseline: 'bottom' },
+  { x: -1, y: 0, ox: 0, oy: 14, text: 'Harmful Taste', fontSize: 8, color: 'rgba(200,205,232,0.65)', bold: false, align: 'center', baseline: 'top' },
 
   // Perceptual Inversion Anchors — previously hand-drawn next to the small dashed circles.
   { x: 0.5, y: 0.5, ox: 0, oy: 10, text: 'Perceived Greater Evil', fontSize: 7.5, color: 'rgba(224, 64, 128, 0.7)', bold: false, align: 'center', baseline: 'top' },
@@ -965,12 +1042,16 @@ function getAllAxes() {
     const type = a.type || 'line';
     if (type === 'rect') {
       const corners = getRectCorners(a);
+      const sideLabels = a.sideLabels || [];
+      const sideColors = a.sideColors || [];
       RECT_SIDE_DEFS.forEach((sd, si) => {
+        const sLabel = sideLabels[si] !== undefined ? sideLabels[si] : (a.label ? `${a.label} (${sd.label})` : sd.label);
+        const sColor = sideColors[si] || a.color || '#ffffff';
         expanded.push({
-          name: a.label ? `${a.label} (${sd.label})` : sd.label,
+          name: sLabel,
           x1: corners[sd.from][0], y1: corners[sd.from][1],
           x2: corners[sd.to][0], y2: corners[sd.to][1],
-          color: a.color,
+          color: sColor,
           enabled: a.enabled !== false && (!a.sideEnabled || a.sideEnabled[si] !== false),
           __parentRectIdx: ai, __sideIndex: si
         });
@@ -1035,6 +1116,7 @@ let selectedLabelIdx = -1;
 let selectedAxisIdx = -1;
 let draggingLabel = null;      // { idx, mode: 'move'|'rotate', startOx, startOy, startUx, startUy }
 let draggingAxisHandle = null; // { idx, endpoint: 1|2|'c'|'r'|'line', startX1, startY1, startX2, startY2, startCx, startCy, startUx, startUy }
+let draggingPoint = null;      // { idx, startUx, startUy, startBaseV, startBasePsi }
 let placingAxis = null;        // { type: 'line'|'curve'|'circle'|'rect', x1, y1 } once the first point is placed; null when inactive
 let placingAxisPreview = null; // [v, psi] of current mouse position while placing the second point
 let placingLabel = false;      // true while "+ Add" (label) is armed, waiting for a map click
@@ -1444,6 +1526,31 @@ function drawAxisChildLabel(ctx, dpr, a) {
   ctx.restore();
 }
 
+function drawEdgeLabel(ctx, dpr, p1, p2, label, col, t = 0.5, rotDeg = 0, perpDist = -9) {
+  if (!label) return;
+  const dx = p2[0] - p1[0], dy = p2[1] - p1[1];
+  const len = Math.hypot(dx, dy);
+  if (len < 1e-6) return;
+
+  const tClamped = Math.max(0, Math.min(1, t !== undefined ? t : 0.5));
+  const baseX = p1[0] + dx * tClamped;
+  const baseY = p1[1] + dy * tClamped;
+
+  let normAngle = Math.atan2(dy, dx);
+  if (normAngle < -Math.PI / 2 || normAngle > Math.PI / 2) normAngle += Math.PI;
+
+  const perp = (perpDist !== undefined ? perpDist : -9) * dpr;
+  const labelX = baseX + Math.cos(normAngle + Math.PI / 2) * perp;
+  const labelY = baseY + Math.sin(normAngle + Math.PI / 2) * perp;
+  const drawAngle = normAngle + (rotDeg || 0) * Math.PI / 180;
+
+  ctx.save();
+  ctx.translate(labelX, labelY);
+  ctx.rotate(drawAngle);
+  drawTextWithBackground(ctx, label, 0, 0, Math.round(8 * dpr), col || '#ffffff', true, 'center', 'middle');
+  ctx.restore();
+}
+
 function drawCustomAxes(ctx, dpr) {
   ctx.save();
   ctx.lineWidth = 1.5 * dpr;
@@ -1478,19 +1585,63 @@ function drawCustomAxes(ctx, dpr) {
       const pRd = toPixel(corners.Rd[0], corners.Rd[1]);
       const pRg = toPixel(corners.Rg[0], corners.Rg[1]);
       const pCo = toPixel(corners.Co[0], corners.Co[1]);
-      ctx.beginPath();
-      ctx.moveTo(pPr[0], pPr[1]);
-      ctx.lineTo(pRd[0], pRd[1]);
-      ctx.lineTo(pRg[0], pRg[1]);
-      ctx.lineTo(pCo[0], pCo[1]);
-      ctx.closePath();
-      if (a.filled) fillWith();
-      ctx.stroke();
-      // Rotate-handle reference points: unrotated top-mid and center, then the actual handle
-      // position is derived in pixel space (outward from the CURRENT top edge midpoint).
+      
+      // Rotate-handle reference points: unrotated top-mid and center
       x1 = pPr[0]; y1 = pPr[1]; x2 = pRd[0]; y2 = pRd[1];
       cxPx = (pPr[0] + pRd[0] + pRg[0] + pCo[0]) / 4;
       cyPx = (pPr[1] + pRd[1] + pRg[1] + pCo[1]) / 4;
+
+      if (a.filled) {
+        ctx.beginPath();
+        ctx.moveTo(pPr[0], pPr[1]);
+        ctx.lineTo(pRd[0], pRd[1]);
+        ctx.lineTo(pRg[0], pRg[1]);
+        ctx.lineTo(pCo[0], pCo[1]);
+        ctx.closePath();
+        fillWith();
+      }
+
+      // Edges with individual side colors and full label positioning
+      const sideColors = a.sideColors || [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+      const sideLabels = a.sideLabels || ['Pr↔Rd', 'Rd↔Rg', 'Co↔Rg', 'Co↔Pr'];
+      const sideT = a.sideT || [0.5, 0.5, 0.5, 0.5];
+      const sideRot = a.sideRot || [0, 0, 0, 0];
+      const sidePerp = a.sidePerp || [-9, -9, -9, -9];
+      const rectEdges = [
+        { p1: pPr, p2: pRd, label: sideLabels[0], col: sideColors[0] || a.color || '#ffffff', t: sideT[0], rot: sideRot[0], perp: sidePerp[0] },
+        { p1: pRd, p2: pRg, label: sideLabels[1], col: sideColors[1] || a.color || '#ffffff', t: sideT[1], rot: sideRot[1], perp: sidePerp[1] },
+        { p1: pRg, p2: pCo, label: sideLabels[2], col: sideColors[2] || a.color || '#ffffff', t: sideT[2], rot: sideRot[2], perp: sidePerp[2] },
+        { p1: pCo, p2: pPr, label: sideLabels[3], col: sideColors[3] || a.color || '#ffffff', t: sideT[3], rot: sideRot[3], perp: sidePerp[3] }
+      ];
+
+      rectEdges.forEach(edge => {
+        ctx.beginPath();
+        ctx.moveTo(edge.p1[0], edge.p1[1]);
+        ctx.lineTo(edge.p2[0], edge.p2[1]);
+        ctx.strokeStyle = edge.col;
+        ctx.stroke();
+
+        drawEdgeLabel(ctx, dpr, edge.p1, edge.p2, edge.label, edge.col, edge.t, edge.rot, edge.perp);
+      });
+
+      // Individual vertex labels (Pr, Rd, Rg, Co)
+      const vLabels = a.vertexLabels || ['Pr', 'Rd', 'Rg', 'Co'];
+      const cornerList = [
+        { p: pPr, vi: 0, def: 'Pr' },
+        { p: pRd, vi: 1, def: 'Rd' },
+        { p: pRg, vi: 2, def: 'Rg' },
+        { p: pCo, vi: 3, def: 'Co' }
+      ];
+      cornerList.forEach(c => {
+        const vLabel = vLabels[c.vi] !== undefined ? vLabels[c.vi] : c.def;
+        if (vLabel) {
+          const vdx = c.p[0] - cxPx, vdy = c.p[1] - cyPx;
+          const vlen = Math.hypot(vdx, vdy) || 1;
+          const vx = c.p[0] + (vdx / vlen) * (13 * dpr);
+          const vy = c.p[1] + (vdy / vlen) * (13 * dpr);
+          drawTextWithBackground(ctx, vLabel, vx, vy, Math.round(8.5 * dpr), a.color || '#ffffff', true, 'center', 'middle');
+        }
+      });
     } else if (type === 'curve') {
       [x1, y1] = toPixel(a.x1, a.y1);
       [x2, y2] = toPixel(a.x2, a.y2);
@@ -1521,11 +1672,17 @@ function drawCustomAxes(ctx, dpr) {
         fillWith();
       }
       if (type === 'triangle' && pts.length === 3) {
+        const centroidPxX = (pts[0][0] + pts[1][0] + pts[2][0]) / 3;
+        const centroidPxY = (pts[0][1] + pts[1][1] + pts[2][1]) / 3;
         const sideColors = a.sideColors || [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+        const sideLabels = a.sideLabels || ['Arm A (0→1)', 'Arm B (0→2)', 'Hypotenuse (1→2)'];
+        const sideT = a.sideT || [0.5, 0.5, 0.5];
+        const sideRot = a.sideRot || [0, 0, 0];
+        const sidePerp = a.sidePerp || [-9, -9, -9];
         const edges = [
-          { p1: pts[0], p2: pts[1], col: sideColors[0] || a.color || '#ffffff' },
-          { p1: pts[0], p2: pts[2], col: sideColors[1] || a.color || '#ffffff' },
-          { p1: pts[1], p2: pts[2], col: sideColors[2] || a.color || '#ffffff' }
+          { p1: pts[0], p2: pts[1], label: sideLabels[0], col: sideColors[0] || a.color || '#ffffff', t: sideT[0], rot: sideRot[0], perp: sidePerp[0] },
+          { p1: pts[0], p2: pts[2], label: sideLabels[1], col: sideColors[1] || a.color || '#ffffff', t: sideT[1], rot: sideRot[1], perp: sidePerp[1] },
+          { p1: pts[1], p2: pts[2], label: sideLabels[2], col: sideColors[2] || a.color || '#ffffff', t: sideT[2], rot: sideRot[2], perp: sidePerp[2] }
         ];
         edges.forEach(edge => {
           ctx.beginPath();
@@ -1533,6 +1690,21 @@ function drawCustomAxes(ctx, dpr) {
           ctx.lineTo(edge.p2[0], edge.p2[1]);
           ctx.strokeStyle = edge.col;
           ctx.stroke();
+
+          drawEdgeLabel(ctx, dpr, edge.p1, edge.p2, edge.label, edge.col, edge.t, edge.rot, edge.perp);
+        });
+
+        // Individual vertex labels (v0, v1, v2)
+        const vLabels = a.vertexLabels || ['0', '1', '2'];
+        a.points.forEach((p, vi) => {
+          const vLabel = vLabels[vi] !== undefined ? vLabels[vi] : (vi === 0 ? '0' : String(vi));
+          if (vLabel) {
+            const vdx = pts[vi][0] - centroidPxX, vdy = pts[vi][1] - centroidPxY;
+            const vlen = Math.hypot(vdx, vdy) || 1;
+            const vx = pts[vi][0] + (vdx / vlen) * (14 * dpr);
+            const vy = pts[vi][1] + (vdy / vlen) * (14 * dpr);
+            drawTextWithBackground(ctx, vLabel, vx, vy, Math.round(9 * dpr), a.color || '#ffffff', true, 'center', 'middle');
+          }
         });
       } else {
         ctx.beginPath();
@@ -1541,19 +1713,13 @@ function drawCustomAxes(ctx, dpr) {
         ctx.closePath();
         ctx.strokeStyle = a.color || '#ffffff';
         ctx.stroke();
-      }
-
-      if (type === 'triangle' && a.points.length === 3) {
-        const centroidV = a.points.reduce((s, p) => s + p[0], 0) / 3;
-        const centroidPsi = a.points.reduce((s, p) => s + p[1], 0) / 3;
-        a.points.forEach((p, vi) => {
-          const dirV = p[0] - centroidV, dirPsi = p[1] - centroidPsi;
-          const dlen = Math.hypot(dirV, dirPsi) || 1e-6;
-          const offsetDist = 0.14; // units
-          const [lx, ly] = toPixel(p[0] + (dirV / dlen) * offsetDist, p[1] + (dirPsi / dlen) * offsetDist);
-          const labelText = vi === 0 ? '0' : '1';
-          drawTextWithBackground(ctx, labelText, lx, ly, Math.round(9 * dpr), a.color || '#ffffff', true, 'center', 'middle');
-        });
+      } else {
+        ctx.beginPath();
+        ctx.moveTo(pts[0][0], pts[0][1]);
+        for (let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
+        ctx.closePath();
+        ctx.strokeStyle = a.color || '#ffffff';
+        ctx.stroke();
       }
 
       if (a.showVertexAngles) {
@@ -1876,10 +2042,48 @@ function calculatePointParams(v, psi) {
 }
 
 // ─────────────────────────────────────────────
+//  ACTOR SPOKES & POSITION SYNC
+// ─────────────────────────────────────────────
+const ACTOR_SPOKES = [
+  { key: 'pref2', label: 'P2', angleDeg: 0, ux: -1, uy: 0, color: '#f05060' },             // Bad Preference (Right)
+  { key: 'greaterEvil', label: 'GE', angleDeg: 45, ux: -Math.SQRT1_2, uy: Math.SQRT1_2, color: '#f05060' }, // Top-Right (Reductive)
+  { key: 'greaterGood', label: 'GG', angleDeg: 135, ux: Math.SQRT1_2, uy: Math.SQRT1_2, color: '#3bde84' }, // Top-Left (Productive)
+  { key: 'pref1', label: 'P1', angleDeg: 180, ux: 1, uy: 0, color: '#3bde84' },            // Good Preference (Left)
+  { key: 'lesserGood', label: 'LG', angleDeg: 225, ux: Math.SQRT1_2, uy: -Math.SQRT1_2, color: '#30c8e0' }, // Bottom-Left (Constructive)
+  { key: 'lesserEvil', label: 'LE', angleDeg: 315, ux: -Math.SQRT1_2, uy: -Math.SQRT1_2, color: '#e04080' } // Bottom-Right (Regressive)
+];
+
+function syncActorPosition(pt) {
+  if (!pt) return;
+  if (pt.v === undefined) pt.v = 0;
+  if (pt.psi === undefined) pt.psi = 0;
+  if (pt.confusion === undefined) pt.confusion = 30;
+  if (pt.understanding === undefined) pt.understanding = 30;
+  if (pt.greaterGood === undefined) pt.greaterGood = 30;
+  if (pt.lesserGood === undefined) pt.lesserGood = 30;
+  if (pt.greaterEvil === undefined) pt.greaterEvil = 30;
+  if (pt.lesserEvil === undefined) pt.lesserEvil = 30;
+  if (pt.pref1 === undefined) pt.pref1 = 30;
+  if (pt.pref2 === undefined) pt.pref2 = 30;
+}
+
+// ─────────────────────────────────────────────
 //  STATE
 // ─────────────────────────────────────────────
 let points = [
-  { v: 1.0, psi: 1.0, label: "Sample Idea (Greater Good)", context: "Natural State" }
+  {
+    v: 1.0, psi: 1.0,
+    label: "Sample Actor (Greater Good)",
+    context: "Natural State",
+    confusion: 30,
+    understanding: 30,
+    greaterGood: 30,
+    lesserGood: 30,
+    greaterEvil: 30,
+    lesserEvil: 30,
+    pref1: 30,
+    pref2: 30
+  }
 ];
 let selectedIdx = 0;
 let hoverCoord = null;
@@ -2739,12 +2943,16 @@ function draw() {
     { v: 0, psi: 0, label: 'Greater Good', sub: 'The Good Truth', color: '#3bde84' },
     { v:-2, psi: 0, label: 'Lesser Evil', sub: 'The Bad Lie', color: '#f05060' },
     { v: 0, psi:-2, label: 'Lesser Good', sub: 'The Good Lie', color: '#30c8e0' },
-    { v:-2, psi:-2, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' }
+    { v:-2, psi:-2, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' },
+    { v: 0, psi:-1, label: 'Good Preference', sub: 'Subjective Taste', color: '#3bde84' },
+    { v:-2, psi:-1, label: 'Bad Preference', sub: 'Harmful Taste', color: '#f05060' }
   ] : [
     { v: 1, psi: 1, label: 'Greater Good', sub: 'The Good Truth', color: '#3bde84' },
     { v:-1, psi: 1, label: 'Lesser Evil', sub: 'The Bad Lie', color: '#f05060' },
     { v: 1, psi:-1, label: 'Lesser Good', sub: 'The Good Lie', color: '#30c8e0' },
-    { v:-1, psi:-1, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' }
+    { v:-1, psi:-1, label: 'Greater Evil', sub: 'The Bad Truth', color: '#e04080' },
+    { v: 1, psi: 0, label: 'Good Preference', sub: 'Subjective Taste', color: '#3bde84' },
+    { v:-1, psi: 0, label: 'Bad Preference', sub: 'Harmful Taste', color: '#f05060' }
   ];
   canonicalAnchors.forEach(a => {
     const [ax, ay2] = toPixel(a.v, a.psi);
@@ -2916,13 +3124,65 @@ function draw() {
     }
   }
 
-  // User Plotted Points
+  // User Plotted Points / Actors
   points.forEach((pt, i) => {
+    syncActorPosition(pt);
     const drawV = modeRel ? (pt.v - 1) : pt.v;
     const drawPsi = modeRel ? (pt.psi - 1) : pt.psi;
     const [px, py] = toPixel(drawV, drawPsi);
     const zone = classifyZone(pt.v, pt.psi);
     const isSelected = i === selectedIdx;
+
+    // Draw Actor Micro-Hegemony Radar Polygon (spokes expanded by understanding, contracted by confusion)
+    const scaleFactor = Math.max(0, (1 + (pt.understanding || 0) / 100) * (1 - (pt.confusion || 0) / 100));
+    const spokePixels = ACTOR_SPOKES.map(spoke => {
+      const val = pt[spoke.key] !== undefined ? pt[spoke.key] : 30;
+      const rCoord = (val / 100) * 0.6 * scaleFactor;
+      const sv = pt.v + rCoord * spoke.ux;
+      const spsi = pt.psi + rCoord * spoke.uy;
+      const [spx, spy] = toPixel(modeRel ? sv - 1 : sv, modeRel ? spsi - 1 : spsi);
+      return { spx, spy, val, spoke, rCoord };
+    });
+
+    // Draw polygon fill and boundary
+    ctx.save();
+    ctx.beginPath();
+    spokePixels.forEach((sp, spi) => {
+      if (spi === 0) ctx.moveTo(sp.spx, sp.spy);
+      else ctx.lineTo(sp.spx, sp.spy);
+    });
+    ctx.closePath();
+    ctx.fillStyle = combineColorAlpha(zone.color, isSelected ? 0.20 : 0.08);
+    ctx.fill();
+    ctx.strokeStyle = combineColorAlpha(zone.color, isSelected ? 0.75 : 0.35);
+    ctx.lineWidth = (isSelected ? 1.5 : 1) * dpr;
+    ctx.stroke();
+
+    // Draw spoke lines radiating from actor center
+    spokePixels.forEach(sp => {
+      ctx.beginPath();
+      ctx.moveTo(px, py);
+      ctx.lineTo(sp.spx, sp.spy);
+      ctx.strokeStyle = combineColorAlpha(sp.spoke.color, isSelected ? 0.35 : 0.15);
+      ctx.lineWidth = 0.8 * dpr;
+      ctx.stroke();
+
+      if (isSelected) {
+        // Vertex dot
+        ctx.beginPath();
+        ctx.arc(sp.spx, sp.spy, 2.5 * dpr, 0, Math.PI * 2);
+        ctx.fillStyle = sp.spoke.color;
+        ctx.fill();
+
+        // Vertex label
+        const offX = (sp.spx - px) * 0.18;
+        const offY = (sp.spy - py) * 0.18;
+        drawTextWithBackground(ctx, `${sp.spoke.label}:${sp.val}`, sp.spx + offX, sp.spy + offY, Math.round(7.5 * dpr), sp.spoke.color, true, 'center', 'middle');
+      }
+    });
+    ctx.restore();
+
+    // Central Actor Point Dot
     const r = isSelected ? 9 * dpr : 7 * dpr;
     if (isSelected) {
       const grad = ctx.createRadialGradient(px, py, 0, px, py, 22 * dpr);
@@ -2940,6 +3200,16 @@ function draw() {
     ctx.strokeStyle = zone.color;
     ctx.lineWidth = 1.5 * dpr;
     ctx.stroke();
+
+    // Central Confusion Core (visual indicator of mass at the actor's center)
+    if ((pt.confusion || 0) > 0) {
+      const coreR = Math.max(1.5 * dpr, (r - 2.5 * dpr) * (pt.confusion / 100));
+      ctx.beginPath();
+      ctx.arc(px, py, coreR, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(56, 189, 248, 0.75)';
+      ctx.fill();
+    }
+
     ctx.fillStyle = '#fff';
     ctx.font = `600 ${Math.round(8 * dpr)}px 'Inter', sans-serif`;
     ctx.textAlign = 'center';
@@ -3177,6 +3447,15 @@ document.getElementById('shadePotential').addEventListener('change', draw);
 document.getElementById('shadeAntiPotential').addEventListener('change', draw);
 document.getElementById('shadeActive').addEventListener('change', draw);
 document.getElementById('shadeSuppressive').addEventListener('change', draw);
+document.getElementById('editMode')?.addEventListener('change', e => {
+  if (!e.target.checked) {
+    selectedLabelIdx = -1;
+    selectedAxisIdx = -1;
+    renderLabelEditor();
+    renderAxisEditor();
+    draw();
+  }
+});
 
 // Shader Blending control listeners
 const inputs = [
@@ -3198,7 +3477,15 @@ inputs.forEach(item => {
   }
 });
 
-document.getElementById('contextSelect').addEventListener('change', () => {
+document.getElementById('labelInput')?.addEventListener('input', e => {
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    points[selectedIdx].label = e.target.value;
+    renderPointsList();
+    draw();
+  }
+});
+
+document.getElementById('contextSelect')?.addEventListener('change', () => {
   const context = document.getElementById('contextSelect').value;
   if (selectedIdx >= 0 && points[selectedIdx]) {
     points[selectedIdx].context = context;
@@ -3210,16 +3497,68 @@ document.getElementById('contextSelect').addEventListener('change', () => {
 });
 
 // ─────────────────────────────────────────────
-//  POINTS LIST
+//  ACTOR SLIDERS UI SYNC & EVENT LISTENERS
+// ─────────────────────────────────────────────
+function syncActorSlidersUI(pt) {
+  const container = document.getElementById('actorSlidersContainer');
+  if (!container) return;
+  if (!pt || selectedIdx < 0 || selectedIdx >= points.length) {
+    container.style.display = 'none';
+    return;
+  }
+  container.style.display = 'flex';
+  syncActorPosition(pt);
+
+  const cEl = document.getElementById('sliderActorConfusion');
+  const uEl = document.getElementById('sliderActorUnderstanding');
+  const ggEl = document.getElementById('sliderActorGG');
+  const geEl = document.getElementById('sliderActorGE');
+  const p1El = document.getElementById('sliderActorP1');
+  const p2El = document.getElementById('sliderActorP2');
+  const lgEl = document.getElementById('sliderActorLG');
+  const leEl = document.getElementById('sliderActorLE');
+
+  if (cEl) { cEl.value = pt.confusion ?? 30; document.getElementById('valActorConfusion').textContent = (pt.confusion ?? 30) + '%'; }
+  if (uEl) { uEl.value = pt.understanding ?? 30; document.getElementById('valActorUnderstanding').textContent = (pt.understanding ?? 30) + '%'; }
+  if (ggEl) { ggEl.value = pt.greaterGood ?? 30; document.getElementById('valActorGG').textContent = pt.greaterGood ?? 30; }
+  if (geEl) { geEl.value = pt.greaterEvil ?? 30; document.getElementById('valActorGE').textContent = pt.greaterEvil ?? 30; }
+  if (p1El) { p1El.value = pt.pref1 ?? 30; document.getElementById('valActorP1').textContent = pt.pref1 ?? 30; }
+  if (p2El) { p2El.value = pt.pref2 ?? 30; document.getElementById('valActorP2').textContent = pt.pref2 ?? 30; }
+  if (lgEl) { lgEl.value = pt.lesserGood ?? 30; document.getElementById('valActorLG').textContent = pt.lesserGood ?? 30; }
+  if (leEl) { leEl.value = pt.lesserEvil ?? 30; document.getElementById('valActorLE').textContent = pt.lesserEvil ?? 30; }
+}
+
+function handleActorSliderInput(key, val, labelId, isPercent) {
+  if (selectedIdx < 0 || !points[selectedIdx]) return;
+  const pt = points[selectedIdx];
+  pt[key] = parseInt(val, 10);
+  const lbl = document.getElementById(labelId);
+  if (lbl) lbl.textContent = pt[key] + (isPercent ? '%' : '');
+  draw();
+}
+
+document.getElementById('sliderActorConfusion')?.addEventListener('input', e => handleActorSliderInput('confusion', e.target.value, 'valActorConfusion', true));
+document.getElementById('sliderActorUnderstanding')?.addEventListener('input', e => handleActorSliderInput('understanding', e.target.value, 'valActorUnderstanding', true));
+document.getElementById('sliderActorGG')?.addEventListener('input', e => handleActorSliderInput('greaterGood', e.target.value, 'valActorGG', false));
+document.getElementById('sliderActorGE')?.addEventListener('input', e => handleActorSliderInput('greaterEvil', e.target.value, 'valActorGE', false));
+document.getElementById('sliderActorP1')?.addEventListener('input', e => handleActorSliderInput('pref1', e.target.value, 'valActorP1', false));
+document.getElementById('sliderActorP2')?.addEventListener('input', e => handleActorSliderInput('pref2', e.target.value, 'valActorP2', false));
+document.getElementById('sliderActorLG')?.addEventListener('input', e => handleActorSliderInput('lesserGood', e.target.value, 'valActorLG', false));
+document.getElementById('sliderActorLE')?.addEventListener('input', e => handleActorSliderInput('lesserEvil', e.target.value, 'valActorLE', false));
+
+// ─────────────────────────────────────────────
+//  POINTS / ACTORS LIST
 // ─────────────────────────────────────────────
 function renderPointsList() {
   const list = document.getElementById('pointsList');
   if (points.length === 0) {
-    list.innerHTML = '<div class="empty-hint">No points yet</div>';
+    list.innerHTML = '<div class="empty-hint">No actors yet</div>';
+    syncActorSlidersUI(null);
     return;
   }
   list.innerHTML = '';
   points.forEach((pt, i) => {
+    syncActorPosition(pt);
     pt.params = calculatePointParams(pt.v, pt.psi);
     const zone = classifyZone(pt.v, pt.psi);
     const entry = document.createElement('div');
@@ -3249,7 +3588,7 @@ function renderPointsList() {
       <div style="display:flex; align-items:center; width:100%;">
         <div class="point-dot" style="background:${zone.color}"></div>
         <div class="point-coords" style="flex:1;">
-          <div>#${i+1} ${pt.label || ''}</div>
+          <div>#${i+1} ${pt.label || 'Actor ' + (i+1)}</div>
           <div class="point-zone">(${vStr}, ${psiStr}) · ${zone.name.split(' ')[0]}</div>
         </div>
         <span class="point-del" data-idx="${i}" title="Remove">✕</span>
@@ -3266,15 +3605,25 @@ function renderPointsList() {
         return;
       }
       selectedIdx = i;
+      if (document.getElementById('labelInput')) {
+        document.getElementById('labelInput').value = pt.label || '';
+      }
       if (document.getElementById('contextSelect')) {
         document.getElementById('contextSelect').value = pt.context || 'Natural State';
       }
+      syncActorSlidersUI(pt);
       updateReadout(pt.v, pt.psi, true);
       renderPointsList();
       draw();
     });
     list.appendChild(entry);
   });
+
+  if (selectedIdx >= 0 && points[selectedIdx]) {
+    syncActorSlidersUI(points[selectedIdx]);
+  } else {
+    syncActorSlidersUI(null);
+  }
 }
 
 // ─────────────────────────────────────────────
@@ -3523,6 +3872,33 @@ function hitTestAxisLine(ux, uy) {
   return -1;
 }
 
+function hitTestPoint(ux, uy) {
+  const dpr = devicePixelRatio;
+  const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
+  for (let i = points.length - 1; i >= 0; i--) {
+    const pt = points[i];
+    syncActorPosition(pt);
+    const drawV = modeRel ? (pt.v - 1) : pt.v;
+    const drawPsi = modeRel ? (pt.psi - 1) : pt.psi;
+    const [px, py] = toPixel(drawV, drawPsi);
+    
+    // 1. Center dot hit test
+    if (Math.hypot(ux - px, uy - py) <= 18 * dpr) return i;
+
+    // 2. Micro-hegemony envelope polygon hit test
+    const scaleFactor = Math.max(0, (1 + (pt.understanding || 0) / 100) * (1 - (pt.confusion || 0) / 100));
+    const poly = ACTOR_SPOKES.map(spoke => {
+      const val = pt[spoke.key] !== undefined ? pt[spoke.key] : 30;
+      const rCoord = (val / 100) * 0.6 * scaleFactor;
+      const sv = pt.v + rCoord * spoke.ux;
+      const spsi = pt.psi + rCoord * spoke.uy;
+      return toPixel(modeRel ? sv - 1 : sv, modeRel ? spsi - 1 : spsi);
+    });
+    if (pointInPolygon(ux, uy, poly)) return i;
+  }
+  return -1;
+}
+
 function setPlacementStatus(text) {
   const el = document.getElementById('axisPlacementStatus');
   if (el) el.textContent = text;
@@ -3570,10 +3946,10 @@ canvas.addEventListener('mousedown', e => {
   const [rawPx, rawPy] = getCanvasPos(e);
   const [ux, uy] = unzoomPixel(rawPx, rawPy);
 
-  // Master switch: when off, nothing on the canvas can be dragged (labels or axes/shapes) —
+  // Master switch: when off, nothing on the canvas can be dragged (labels or axes/shapes/points) —
   // only the per-item lock checkboxes stay meaningful once this is back on. Selecting via the
   // panel and editing fields there still always works regardless of this toggle.
-  const editModeOn = !document.getElementById('editMode') || document.getElementById('editMode').checked;
+  const editModeOn = !!(document.getElementById('editMode') && document.getElementById('editMode').checked);
 
   // 1. Rotate handle of the currently selected label (skip if locked or edit mode is off)
   if (editModeOn && selectedLabelIdx >= 0 && !GLOBAL_LABELS[selectedLabelIdx]?.locked && hitTestRotateHandle(selectedLabelIdx, ux, uy)) {
@@ -3594,39 +3970,61 @@ canvas.addEventListener('mousedown', e => {
     }
   }
 
-  // 3. Any label body -> select it (start moving unless locked or edit mode is off)
-  const labelHit = hitTestLabel(ux, uy);
-  if (labelHit >= 0) {
-    const l = GLOBAL_LABELS[labelHit];
-    selectedLabelIdx = labelHit;
-    selectedAxisIdx = -1;
-    if (editModeOn && !l.locked) {
-      pushUndo();
-      draggingLabel = { idx: labelHit, mode: 'move', startOx: l.ox || 0, startOy: l.oy || 0, startUx: ux, startUy: uy };
-      suppressNextClick = true;
+  // 3. Any label body -> select it (ONLY when edit mode is on)
+  if (editModeOn) {
+    const labelHit = hitTestLabel(ux, uy);
+    if (labelHit >= 0) {
+      const l = GLOBAL_LABELS[labelHit];
+      selectedLabelIdx = labelHit;
+      selectedAxisIdx = -1;
+      if (!l.locked) {
+        pushUndo();
+        draggingLabel = { idx: labelHit, mode: 'move', startOx: l.ox || 0, startOy: l.oy || 0, startUx: ux, startUy: uy };
+        suppressNextClick = true;
+      }
+      renderLabelEditor();
+      draw();
+      return;
     }
-    renderLabelEditor();
-    draw();
-    return;
   }
 
-  // 4. Any custom axis line/shape -> select it (start moving the whole thing, or its whole group,
-  //    unless locked or edit mode is off)
-  const axisHit = hitTestAxisLine(ux, uy);
-  if (axisHit >= 0) {
-    selectedAxisIdx = axisHit;
-    selectedLabelIdx = -1;
-    const a = CUSTOM_AXES[axisHit];
-    if (editModeOn && !a.locked) {
-      pushUndo();
-      const groupMembers = a.group
-        ? CUSTOM_AXES.map((m, mi) => ({ m, mi })).filter(({ m }) => m.group === a.group)
-          .map(({ m, mi }) => ({ idx: mi, startX1: m.x1, startY1: m.y1, startX2: m.x2, startY2: m.y2 }))
-        : null;
-      draggingAxisHandle = { idx: axisHit, endpoint: 'line', startX1: a.x1, startY1: a.y1, startX2: a.x2, startY2: a.y2, startCx: a.cx, startCy: a.cy, startCx1: a.cx1, startCy1: a.cy1, startCx2: a.cx2, startCy2: a.cy2, startPoints: a.points ? a.points.map(p => [p[0], p[1]]) : null, startUx: ux, startUy: uy, groupMembers };
-      suppressNextClick = true;
+  // 4. Any custom axis line/shape -> select it (ONLY when edit mode is on)
+  if (editModeOn) {
+    const axisHit = hitTestAxisLine(ux, uy);
+    if (axisHit >= 0) {
+      selectedAxisIdx = axisHit;
+      selectedLabelIdx = -1;
+      const a = CUSTOM_AXES[axisHit];
+      if (!a.locked) {
+        pushUndo();
+        const groupMembers = a.group
+          ? CUSTOM_AXES.map((m, mi) => ({ m, mi })).filter(({ m }) => m.group === a.group)
+            .map(({ m, mi }) => ({ idx: mi, startX1: m.x1, startY1: m.y1, startX2: m.x2, startY2: m.y2 }))
+          : null;
+        draggingAxisHandle = { idx: axisHit, endpoint: 'line', startX1: a.x1, startY1: a.y1, startX2: a.x2, startY2: a.y2, startCx: a.cx, startCy: a.cy, startCx1: a.cx1, startCy1: a.cy1, startCx2: a.cx2, startCy2: a.cy2, startPoints: a.points ? a.points.map(p => [p[0], p[1]]) : null, startUx: ux, startUy: uy, groupMembers };
+        suppressNextClick = true;
+      }
+      renderAxisEditor();
+      draw();
+      return;
     }
-    renderAxisEditor();
+  }
+
+  // 4.5. Any actor point -> select it (always interactive and draggable directly on canvas)
+  const ptHit = hitTestPoint(ux, uy);
+  if (ptHit >= 0) {
+    selectedIdx = ptHit;
+    selectedLabelIdx = -1;
+    selectedAxisIdx = -1;
+    const pt = points[ptHit];
+    if (document.getElementById('labelInput')) document.getElementById('labelInput').value = pt.label || '';
+    if (document.getElementById('contextSelect')) document.getElementById('contextSelect').value = pt.context || 'Natural State';
+    syncActorSlidersUI(pt);
+    updateReadout(pt.v, pt.psi, true);
+    renderPointsList();
+    pushUndo();
+    draggingPoint = { idx: ptHit, startUx: ux, startUy: uy, startV: pt.v, startPsi: pt.psi };
+    suppressNextClick = true;
     draw();
     return;
   }
@@ -3644,6 +4042,7 @@ canvas.addEventListener('mouseup', e => {
   if (e.button === 0) {
     draggingLabel = null;
     draggingAxisHandle = null;
+    draggingPoint = null;
   }
 });
 
@@ -3758,6 +4157,22 @@ function handleCanvasMouseMove(e) {
     return;
   }
 
+  if (draggingPoint) {
+    const pt = points[draggingPoint.idx];
+    if (pt) {
+      const [v0, psi0] = unzoomedPixelToData(draggingPoint.startUx, draggingPoint.startUy);
+      const [v1, psi1] = unzoomedPixelToData(rawPx, rawPy);
+      const dv = v1 - v0, dpsi = psi1 - psi0;
+      pt.v = Math.max(-2, Math.min(2, draggingPoint.startV + dv));
+      pt.psi = Math.max(-2, Math.min(2, draggingPoint.startPsi + dpsi));
+      updateReadout(pt.v, pt.psi, true);
+      syncSliders(pt.v, pt.psi);
+      renderPointsList();
+      draw();
+      return;
+    }
+  }
+
   const [v, psi] = toCoord(rawPx, rawPy);
   const modeRel = document.getElementById('modeRelative') && document.getElementById('modeRelative').checked;
   const finalV = modeRel ? v + 1 : v;
@@ -3778,13 +4193,16 @@ function handleCanvasMouseMove(e) {
     canvas.style.cursor = 'crosshair';
   } else {
     const [ux, uy] = unzoomPixel(rawPx, rawPy);
-    if (selectedLabelIdx >= 0 && hitTestRotateHandle(selectedLabelIdx, ux, uy)) {
-      canvas.style.cursor = 'grab';
-    } else if (hitTestLabel(ux, uy) >= 0) {
+    const editModeOn = !!(document.getElementById('editMode') && document.getElementById('editMode').checked);
+    if (hitTestPoint(ux, uy) >= 0) {
       canvas.style.cursor = 'move';
-    } else if (selectedAxisIdx >= 0 && hitTestSelectedEndpoint(selectedAxisIdx, ux, uy)) {
+    } else if (editModeOn && selectedLabelIdx >= 0 && hitTestRotateHandle(selectedLabelIdx, ux, uy)) {
       canvas.style.cursor = 'grab';
-    } else if (hitTestAxisLine(ux, uy) >= 0) {
+    } else if (editModeOn && hitTestLabel(ux, uy) >= 0) {
+      canvas.style.cursor = 'move';
+    } else if (editModeOn && selectedAxisIdx >= 0 && hitTestSelectedEndpoint(selectedAxisIdx, ux, uy)) {
+      canvas.style.cursor = 'grab';
+    } else if (editModeOn && hitTestAxisLine(ux, uy) >= 0) {
       canvas.style.cursor = 'move';
     } else {
       canvas.style.cursor = 'crosshair';
@@ -3798,6 +4216,7 @@ canvas.addEventListener('mouseleave', () => {
   isPanning = false;
   draggingLabel = null;
   draggingAxisHandle = null;
+  draggingPoint = null;
   // Deliberately NOT clearing hoverCoord/readout here — leaving the canvas (e.g. to click a
   // sidebar checkbox) used to blank the Cursor/Last Point panel and Axis Projections list, which
   // made it impossible to see what you were about to toggle. Keep showing the last hover position.
@@ -3963,11 +4382,27 @@ canvas.addEventListener('click', e => {
   const labelInput = document.getElementById('labelInput');
   const label = labelInput.value.trim();
   const context = document.getElementById('contextSelect').value;
-  const params = calculatePointParams(finalV, finalPsi);
+  const newActor = {
+    v: finalV,
+    psi: finalPsi,
+    label,
+    context,
+    confusion: 30,
+    understanding: 30,
+    greaterGood: 30,
+    lesserGood: 30,
+    greaterEvil: 30,
+    lesserEvil: 30,
+    pref1: 30,
+    pref2: 30
+  };
+  syncActorPosition(newActor);
+  newActor.params = calculatePointParams(newActor.v, newActor.psi);
   pushUndo();
-  points.push({ v: finalV, psi: finalPsi, label, context, params });
+  points.push(newActor);
   selectedIdx = points.length - 1;
-  updateReadout(finalV, finalPsi, true);
+  syncActorSlidersUI(newActor);
+  updateReadout(newActor.v, newActor.psi, true);
   renderPointsList();
   
   // Clear input so successive points don't copy the same name
@@ -4306,10 +4741,45 @@ function renderAxisRowHtml(a, i, isBaseAxis) {
       <label>r <input type="number" step="0.01" min="0.02" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="r" value="${a.r}" style="${numStyle}"></label>
       <label style="display:flex; align-items:center; gap:2px;" title="Fill the interior"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="filled" ${a.filled ? 'checked' : ''}> fill</label>`;
   } else if (type === 'rect') {
-    const se = a.sideEnabled || [true, true, true, true];
-    const sideChecks = RECT_SIDE_DEFS.map((sd, si) =>
-      `<label style="display:flex; align-items:center; gap:1px;" title="${sd.label} side — tracked in Axis Projections"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideEnabled" ${se[si] !== false ? 'checked' : ''}> ${sd.label}</label>`
+    const vLabels = a.vertexLabels || ['Pr', 'Rd', 'Rg', 'Co'];
+    const cornerNames = ['Pr (Top-Left)', 'Rd (Top-Right)', 'Rg (Bot-Right)', 'Co (Bot-Left)'];
+    const vertexFields = cornerNames.map((cName, vi) =>
+      `<div style="display:flex; align-items:center; gap:4px; margin-top:2px; width:100%;">
+         <label style="font-size:8px; width:65px; flex-shrink:0;" title="${cName}">${cName.split(' ')[0]}</label>
+         <input type="text" class="label-input" placeholder="Vertex label..." data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-field="vertexLabel" value="${String(vLabels[vi] !== undefined ? vLabels[vi] : vLabels[vi]).replace(/"/g, '&quot;')}" style="flex:1; padding:2px 4px; font-size:8px; height:16px;">
+       </div>`
     ).join('');
+    const se = a.sideEnabled || [true, true, true, true];
+    const sideLabels = a.sideLabels || ['Pr↔Rd', 'Rd↔Rg', 'Co↔Rg', 'Co↔Pr'];
+    const sideColors = a.sideColors || [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+    const sideChecks = RECT_SIDE_DEFS.map((sd, si) => {
+      const sLabel = sideLabels[si] !== undefined ? sideLabels[si] : sd.label;
+      const sColor = sideColors[si] || a.color || '#ffffff';
+      return `
+        <div style="display:flex; align-items:center; gap:4px; margin-top:2px; width:100%;">
+    const sideT = a.sideT || [0.5, 0.5, 0.5, 0.5];
+    const sideRot = a.sideRot || [0, 0, 0, 0];
+    const sidePerp = a.sidePerp || [-9, -9, -9, -9];
+    const sideChecks = RECT_SIDE_DEFS.map((sd, si) => {
+      const sLabel = sideLabels[si] !== undefined ? sideLabels[si] : sd.label;
+      const sColor = sideColors[si] || a.color || '#ffffff';
+      const sT = sideT[si] !== undefined ? sideT[si] : 0.5;
+      const sRot = sideRot[si] !== undefined ? sideRot[si] : 0;
+      const sPerp = sidePerp[si] !== undefined ? sidePerp[si] : -9;
+      return `
+        <div style="display:flex; align-items:center; gap:3px; margin-top:2px; width:100%; flex-wrap:wrap;">
+          <label style="display:flex; align-items:center; gap:1px; flex-shrink:0; font-size:8px; width:55px;" title="${sd.label} side">
+            <input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideEnabled" ${se[si] !== false ? 'checked' : ''}> 
+            ${sd.label}
+          </label>
+          <input type="text" class="label-input" placeholder="Edge label..." data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideLabel" value="${String(sLabel).replace(/"/g, '&quot;')}" style="flex:1; min-width:55px; padding:2px 4px; font-size:8px; height:16px;">
+          <label title="Position along edge (0..1)" style="font-size:8px; display:flex; align-items:center; gap:1px;">pos <input type="number" step="0.05" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideT" value="${sT}" style="${numStyle}; width:32px; padding:1px 2px; font-size:8px;"></label>
+          <label title="Rotation offset °" style="font-size:8px; display:flex; align-items:center; gap:1px;">rot° <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideRot" value="${sRot}" style="${numStyle}; width:28px; padding:1px 2px; font-size:8px;"></label>
+          <label title="Perpendicular offset px" style="font-size:8px; display:flex; align-items:center; gap:1px;">perp <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sidePerp" value="${sPerp}" style="${numStyle}; width:28px; padding:1px 2px; font-size:8px;"></label>
+          <input type="color" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideColor" value="${sColor}" style="width:14px; height:14px; padding:0; border:none; background:none; cursor:pointer; flex-shrink:0;" title="Side color">
+        </div>
+      `;
+    }).join('');
     geomFields = `
       <label>x1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x1" value="${a.x1}" style="${numStyle}"></label>
       <label>y1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y1" value="${a.y1}" style="${numStyle}"></label>
@@ -4317,7 +4787,14 @@ function renderAxisRowHtml(a, i, isBaseAxis) {
       <label>y2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="y2" value="${a.y2}" style="${numStyle}"></label>
       <label>rot° <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="rotation" value="${a.rotation || 0}" style="${numStyle}"></label>
       <label style="display:flex; align-items:center; gap:2px;" title="Fill the interior"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="filled" ${a.filled ? 'checked' : ''}> fill</label>
-      <div style="width:100%; display:flex; gap:6px; flex-wrap:wrap; font-size:8px; color:var(--muted); margin-top:2px;">${sideChecks}</div>`;
+      <div style="width:100%; display:flex; flex-direction:column; gap:2px; margin-top:4px; border-top:1px dashed var(--border); padding-top:4px;">
+        <div style="font-size:8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Vertex Labels:</div>
+        ${vertexFields}
+      </div>
+      <div style="width:100%; display:flex; flex-direction:column; gap:2px; margin-top:4px; border-top:1px dashed var(--border); padding-top:4px;">
+        <div style="font-size:8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Per-Edge Settings:</div>
+        ${sideChecks}
+      </div>`;
   } else if (type === 'curve') {
     geomFields = `
       <label>x1 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="x1" value="${a.x1}" style="${numStyle}"></label>
@@ -4329,35 +4806,52 @@ function renderAxisRowHtml(a, i, isBaseAxis) {
       <label>cx2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cx2" value="${a.cx2}" style="${numStyle}"></label>
       <label>cy2 <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="cy2" value="${a.cy2}" style="${numStyle}"></label>`;
   } else if (type === 'triangle') {
+    const vLabels = a.vertexLabels || ['0', '1', '2'];
     const vertexFields = a.points.map((p, vi) =>
-      `<label>v${vi} <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="x" data-field="vertex" value="${p[0]}" style="${numStyle}"></label>` +
-      `<input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="y" data-field="vertex" value="${p[1]}" style="${numStyle}">`
+      `<div style="display:flex; align-items:center; gap:3px; margin-top:2px; width:100%;">
+         <label style="font-size:8px; width:14px; flex-shrink:0;">v${vi}</label>
+         <input type="text" class="label-input" placeholder="Vertex label..." data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-field="vertexLabel" value="${String(vLabels[vi] !== undefined ? vLabels[vi] : (vi === 0 ? '0' : String(vi))).replace(/"/g, '&quot;')}" style="flex:1; padding:2px 4px; font-size:8px; height:16px;">
+         <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="x" data-field="vertex" value="${p[0]}" style="${numStyle}; width:38px;">
+         <input type="number" step="0.01" data-is-base="${isBaseAxis}" data-idx="${i}" data-vertex-idx="${vi}" data-vertex-axis="y" data-field="vertex" value="${p[1]}" style="${numStyle}; width:38px;">
+       </div>`
     ).join('');
     const se = a.sideEnabled || [true, true, true];
     const sideLabels = a.sideLabels || ['Arm A (0→1)', 'Arm B (0→2)', 'Hypotenuse (1→2)'];
     const sideColors = a.sideColors || [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+    const sideT = a.sideT || [0.5, 0.5, 0.5];
+    const sideRot = a.sideRot || [0, 0, 0];
+    const sidePerp = a.sidePerp || [-9, -9, -9];
     const sideChecks = TRIANGLE_SIDE_DEFS.map((sd, si) => {
       const sLabel = sideLabels[si] !== undefined ? sideLabels[si] : sd.label;
       const sColor = sideColors[si] || a.color || '#ffffff';
+      const sT = sideT[si] !== undefined ? sideT[si] : 0.5;
+      const sRot = sideRot[si] !== undefined ? sideRot[si] : 0;
+      const sPerp = sidePerp[si] !== undefined ? sidePerp[si] : -9;
       return `
-        <div style="display:flex; align-items:center; gap:4px; margin-top:2px; width:100%;">
-          <label style="display:flex; align-items:center; gap:1px; flex-shrink:0; font-size:8px; width:85px;" title="${sd.label} side — tracked in Axis Projections">
+        <div style="display:flex; align-items:center; gap:3px; margin-top:2px; width:100%; flex-wrap:wrap;">
+          <label style="display:flex; align-items:center; gap:1px; flex-shrink:0; font-size:8px; width:55px;" title="${sd.label} side">
             <input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideEnabled" ${se[si] !== false ? 'checked' : ''}> 
             ${sd.label.split(' ')[0]} ${sd.label.split(' ')[1] || ''}
           </label>
-          <input type="text" class="label-input" placeholder="label..." data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideLabel" value="${String(sLabel).replace(/"/g, '&quot;')}" style="flex:1; padding:2px 4px; font-size:8px; height:16px;">
+          <input type="text" class="label-input" placeholder="Edge label..." data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideLabel" value="${String(sLabel).replace(/"/g, '&quot;')}" style="flex:1; min-width:55px; padding:2px 4px; font-size:8px; height:16px;">
+          <label title="Position along edge (0..1)" style="font-size:8px; display:flex; align-items:center; gap:1px;">pos <input type="number" step="0.05" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideT" value="${sT}" style="${numStyle}; width:32px; padding:1px 2px; font-size:8px;"></label>
+          <label title="Rotation offset °" style="font-size:8px; display:flex; align-items:center; gap:1px;">rot° <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideRot" value="${sRot}" style="${numStyle}; width:28px; padding:1px 2px; font-size:8px;"></label>
+          <label title="Perpendicular offset px" style="font-size:8px; display:flex; align-items:center; gap:1px;">perp <input type="number" step="1" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sidePerp" value="${sPerp}" style="${numStyle}; width:28px; padding:1px 2px; font-size:8px;"></label>
           <input type="color" data-is-base="${isBaseAxis}" data-idx="${i}" data-side-idx="${si}" data-field="sideColor" value="${sColor}" style="width:14px; height:14px; padding:0; border:none; background:none; cursor:pointer; flex-shrink:0;" title="Side color">
         </div>
       `;
     }).join('');
     geomFields = `
-      ${vertexFields}
-      <div style="display:flex; gap:6px; align-items:center;">
+      <div style="width:100%; display:flex; flex-direction:column; gap:2px;">
+        <div style="font-size:8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Vertices:</div>
+        ${vertexFields}
+      </div>
+      <div style="display:flex; gap:6px; align-items:center; margin-top:3px;">
         <label style="display:flex; align-items:center; gap:2px;" title="Fill the interior"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="filled" ${a.filled ? 'checked' : ''}> fill</label>
         <label style="display:flex; align-items:center; gap:2px;" title="Show the interior angle at each vertex"><input type="checkbox" data-is-base="${isBaseAxis}" data-idx="${i}" data-field="showVertexAngles" ${a.showVertexAngles ? 'checked' : ''}> ∠ angles</label>
       </div>
       <div style="width:100%; display:flex; flex-direction:column; gap:2px; margin-top:4px; border-top:1px dashed var(--border); padding-top:4px;">
-        <div style="font-size:8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Per-Axis settings:</div>
+        <div style="font-size:8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Per-Edge Settings:</div>
         ${sideChecks}
       </div>`;
   } else if (type === 'minkowski') {
@@ -4506,12 +5000,33 @@ function handleAxisEditorInput(e) {
     a.sideEnabled[parseInt(e.target.dataset.sideIdx, 10)] = e.target.checked;
   }
   else if (field === 'sideLabel') {
-    if (!a.sideLabels) a.sideLabels = ['Arm A (0→1)', 'Arm B (0→2)', 'Hypotenuse (1→2)'];
+    if (!a.sideLabels) {
+      if (a.type === 'triangle') a.sideLabels = ['Arm A (0→1)', 'Arm B (0→2)', 'Hypotenuse (1→2)'];
+      else if (a.type === 'rect') a.sideLabels = ['Pr↔Rd', 'Rd↔Rg', 'Co↔Rg', 'Co↔Pr'];
+      else a.sideLabels = [];
+    }
     a.sideLabels[parseInt(e.target.dataset.sideIdx, 10)] = e.target.value;
   }
   else if (field === 'sideColor') {
-    if (!a.sideColors) a.sideColors = [a.color || '#ffffff', a.color || '#ffffff', a.color || '#ffffff'];
+    const maxSides = a.type === 'triangle' ? 3 : 4;
+    if (!a.sideColors) a.sideColors = new Array(maxSides).fill(a.color || '#ffffff');
     a.sideColors[parseInt(e.target.dataset.sideIdx, 10)] = e.target.value;
+  }
+  else if (field === 'sideT' || field === 'sideRot' || field === 'sidePerp') {
+    const arrKey = field === 'sideT' ? 'sideT' : (field === 'sideRot' ? 'sideRot' : 'sidePerp');
+    const maxSides = a.type === 'triangle' ? 3 : 4;
+    const defVal = field === 'sideT' ? 0.5 : (field === 'sideRot' ? 0 : -9);
+    if (!a[arrKey]) a[arrKey] = new Array(maxSides).fill(defVal);
+    a[arrKey][parseInt(e.target.dataset.sideIdx, 10)] = parseFloat(e.target.value) || 0;
+  }
+  else if (field === 'vertexLabel') {
+    const vi = parseInt(e.target.dataset.vertexIdx, 10);
+    if (!a.vertexLabels) {
+      if (a.type === 'triangle') a.vertexLabels = ['0', '1', '2'];
+      else if (a.type === 'rect') a.vertexLabels = ['Pr', 'Rd', 'Rg', 'Co'];
+      else a.vertexLabels = [];
+    }
+    a.vertexLabels[vi] = e.target.value;
   }
   else if (field === 'label') {
     if (isBase) a.name = e.target.value;

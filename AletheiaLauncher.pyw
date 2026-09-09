@@ -96,8 +96,29 @@ class AletheiaLauncherApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Aletheia Bot Operator Console")
-        self.root.geometry("1150x780")
         self.root.configure(bg=BG_COLOR)
+
+        # Load persistent window state (geometry, maximized, sash position)
+        self.last_normal_geometry = None
+        self.saved_state = self.load_launcher_state()
+        saved_geom = self.saved_state.get("geometry")
+        if saved_geom:
+            try:
+                self.root.geometry(saved_geom)
+                self.last_normal_geometry = saved_geom
+            except Exception:
+                self.root.geometry("1200x800")
+        else:
+            self.root.geometry("1200x800")
+
+        if self.saved_state.get("maximized"):
+            try:
+                self.root.state("zoomed")
+            except Exception:
+                pass
+
+        self.root.bind("<Configure>", self.on_window_configure)
+        self.root.protocol("WM_DELETE_WINDOW", self.on_close)
 
         # Set Window Icon
         self.set_window_icon()
@@ -154,6 +175,19 @@ class AletheiaLauncherApp:
         self.category_feeds, self.feed_definitions = self.load_rss_feeds_from_script()
         self.feed_vars = {}
 
+        # Spiritual Canon traditions taxonomy
+        self.tradition_definitions = [
+            ("christianity", "✝️ Christianity"),
+            ("hinduism", "🕉️ Hinduism"),
+            ("buddhism", "☸️ Buddhism"),
+            ("taoism", "☯️ Taoism"),
+            ("islam", "☪️ Islam / Sufi"),
+            ("indigenous", "🌿 Indigenous"),
+            ("stoicism", "🏛️ Stoic"),
+            ("other", "🌌 Universal"),
+        ]
+        self.tradition_vars = {}
+
         # Set clean modern font
         self.font_title = ("Segoe UI", 12, "bold")
         self.font_subtitle = ("Segoe UI", 10, "bold")
@@ -178,6 +212,74 @@ class AletheiaLauncherApp:
 
         # Start queue reader for console logs
         self.root.after(100, self.read_log_queue)
+
+        # Restore saved sash position
+        sash_x = self.saved_state.get("sash_pos", 620)
+        self.root.after(120, lambda: self.restore_sash_position(sash_x))
+
+    def get_state_file_path(self):
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        bot_dir = os.path.join(script_dir, "bluesky_bot")
+        target_dir = bot_dir if os.path.exists(bot_dir) else script_dir
+        return os.path.join(target_dir, "launcher_state.json")
+
+    def load_launcher_state(self):
+        state_path = self.get_state_file_path()
+        if os.path.exists(state_path):
+            try:
+                with open(state_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"Warning: Failed to load launcher state: {e}")
+        return {}
+
+    def save_launcher_state(self):
+        state_path = self.get_state_file_path()
+        try:
+            is_max = False
+            try:
+                is_max = (self.root.state() == "zoomed")
+            except Exception:
+                pass
+            
+            geom = self.last_normal_geometry if (is_max and self.last_normal_geometry) else self.root.geometry()
+            
+            sash_pos = None
+            if hasattr(self, 'paned_window'):
+                try:
+                    sash_pos = self.paned_window.sash_coord(0)[0]
+                except Exception:
+                    pass
+
+            state = {
+                "geometry": geom,
+                "maximized": is_max,
+                "sash_pos": sash_pos
+            }
+            with open(state_path, "w", encoding="utf-8") as f:
+                json.dump(state, f, indent=2)
+        except Exception as e:
+            print(f"Warning: Failed to save launcher state: {e}")
+
+    def on_window_configure(self, event):
+        if event.widget == self.root:
+            try:
+                if self.root.state() != "zoomed":
+                    self.last_normal_geometry = self.root.geometry()
+            except Exception:
+                pass
+
+    def on_close(self):
+        self.save_launcher_state()
+        self.root.destroy()
+
+    def restore_sash_position(self, target_x):
+        try:
+            self.root.update_idletasks()
+            if target_x and int(target_x) > 100:
+                self.paned_window.sash_place(0, int(target_x), 0)
+        except Exception as e:
+            print(f"Warning: Could not restore sash position: {e}")
 
     def get_python_bin(self):
         if os.path.exists(".venv/Scripts/python.exe"):
@@ -261,6 +363,12 @@ class AletheiaLauncherApp:
                 "politics": [
                     {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
                     {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"},
+                    {"name": "Fox News Politics", "url": "http://feeds.foxnews.com/foxnews/politics"},
+                    {"name": "Washington Examiner", "url": "https://www.washingtonexaminer.com/feed/"},
+                    {"name": "The Federalist", "url": "https://thefederalist.com/feed/"},
+                    {"name": "Washington Times", "url": "https://www.washingtontimes.com/rss/headlines/news/politics/"},
+                    {"name": "Daily Caller", "url": "https://dailycaller.com/feed/"},
+                    {"name": "Breitbart", "url": "https://feeds.feedburner.com/breitbart"},
                     {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml"},
                     {"name": "The Guardian Politics", "url": "https://www.theguardian.com/politics/rss"},
                 ],
@@ -273,6 +381,8 @@ class AletheiaLauncherApp:
                 "world": [
                     {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
                     {"name": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"},
+                    {"name": "Fox News Latest", "url": "http://feeds.foxnews.com/foxnews/latest"},
+                    {"name": "New York Post", "url": "https://nypost.com/news/feed/"},
                     {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
                     {"name": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml"},
                     {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
@@ -289,12 +399,17 @@ class AletheiaLauncherApp:
                     {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed"},
                     {"name": "Sydney Morning Herald", "url": "https://www.smh.com.au/rss/feed.xml"},
                     {"name": "Perth Now", "url": "https://www.perthnow.com.au/feed"},
+                    {"name": "Daily Mail Australia", "url": "https://www.dailymail.co.uk/auhome/index.rss"},
                     {"name": "The Age", "url": "https://www.theage.com.au/rss/feed.xml"},
                     {"name": "Brisbane Times", "url": "https://www.brisbanetimes.com.au/rss/feed.xml"},
                     {"name": "WA Today", "url": "https://www.watoday.com.au/rss/feed.xml"},
                     {"name": "Canberra Times", "url": "https://www.canberratimes.com.au/rss.xml"},
                     {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
                     {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"},
+                    {"name": "Fox News Latest", "url": "http://feeds.foxnews.com/foxnews/latest"},
+                    {"name": "New York Post", "url": "https://nypost.com/news/feed/"},
+                    {"name": "Washington Examiner", "url": "https://www.washingtonexaminer.com/feed/"},
+                    {"name": "The Federalist", "url": "https://thefederalist.com/feed/"},
                     {"name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
                     {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
                     {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml"},
@@ -361,14 +476,30 @@ class AletheiaLauncherApp:
     def build_ui(self):
         # Master padding container
         main_container = tk.Frame(self.root, bg=BG_COLOR)
-        main_container.pack(fill=tk.BOTH, expand=True, padx=20, pady=15)
+        main_container.pack(fill=tk.BOTH, expand=True, padx=12, pady=10)
 
-        # ----------------- Left Panel (Controls - Scrollable Canvas) -----------------
-        left_canvas = tk.Canvas(main_container, bg=BG_COLOR, highlightthickness=0)
-        left_scrollbar = ttk.Scrollbar(main_container, orient="vertical", command=left_canvas.yview)
+        # Master PanedWindow for interactive resizing with draggable center sash
+        self.paned_window = tk.PanedWindow(
+            main_container,
+            orient=tk.HORIZONTAL,
+            bg=BG_COLOR,
+            bd=0,
+            sashwidth=8,
+            sashrelief=tk.RAISED,
+            sashcursor="sb_h_double_arrow",
+            showhandle=False,
+            opaqueresize=True
+        )
+        self.paned_window.pack(fill=tk.BOTH, expand=True)
+
+        # ----------------- Left Panel Container -----------------
+        left_container = tk.Frame(self.paned_window, bg=BG_COLOR)
+        
+        left_canvas = tk.Canvas(left_container, bg=BG_COLOR, highlightthickness=0)
+        left_scrollbar = ttk.Scrollbar(left_container, orient="vertical", command=left_canvas.yview)
         
         left_canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 2))
-        left_scrollbar.pack(side=tk.LEFT, fill=tk.Y, padx=(0, 10))
+        left_scrollbar.pack(side=tk.RIGHT, fill=tk.Y, padx=(0, 4))
         
         left_canvas.configure(yscrollcommand=left_scrollbar.set)
         
@@ -425,11 +556,13 @@ class AletheiaLauncherApp:
         bind_mousewheel_recursive(left_panel)
 
         # ----------------- Right Panel (Dual Console Output) -----------------
-        right_panel = tk.Frame(main_container, bg=BG_COLOR)
-        right_panel.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(10, 0))
-
+        right_panel = tk.Frame(self.paned_window, bg=BG_COLOR)
         self.create_eval_console_card(right_panel)
         self.create_post_console_card(right_panel)
+
+        # Add both panels to the PanedWindow with minimum widths and stretch
+        self.paned_window.add(left_container, minsize=400, stretch="always")
+        self.paned_window.add(right_panel, minsize=350, stretch="always")
 
     def create_title_card(self, parent):
         frame = tk.Frame(parent, bg=BG_COLOR)
@@ -704,7 +837,7 @@ class AletheiaLauncherApp:
         self.combo_thinking = ttk.Combobox(grid_frame, width=15, values=["OFF", "LOW", "MEDIUM", "HIGH"], state="readonly", font=self.font_body)
         self.combo_thinking.set("MEDIUM")
         self.combo_thinking.grid(row=2, column=4, columnspan=2, sticky="ew", pady=3)
-        tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SatPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9, SCMP=10, SixthTone=11, HKFP=12)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, columnspan=6, sticky="w")
+        tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SatPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9, Fox=10, Mail=11, NYPost=12)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, columnspan=6, sticky="w")
         tk.Label(grid_frame, text="Categories: general, china, asia, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=4, column=1, columnspan=6, sticky="w")
         tk.Label(grid_frame, text="Suggested Topics: Trump, AI, Climate, Markets, AUKUS, Australia, Boeing, Space", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=5, column=1, columnspan=6, sticky="w")
 
@@ -714,7 +847,11 @@ class AletheiaLauncherApp:
 
         self.val_search = tk.BooleanVar(value=False)
         self.chk_search = ttk.Checkbutton(grid_frame, text="Enable Google Search Grounding", variable=self.val_search)
-        self.chk_search.grid(row=6, column=3, columnspan=3, sticky="w", pady=3)
+        self.chk_search.grid(row=6, column=3, columnspan=2, sticky="w", pady=3)
+
+        self.val_spiritual = tk.BooleanVar(value=False)
+        self.chk_spiritual = ttk.Checkbutton(grid_frame, text="Enable Spiritual Mode", variable=self.val_spiritual)
+        self.chk_spiritual.grid(row=6, column=5, columnspan=2, sticky="w", pady=3)
 
         self.val_compact = tk.BooleanVar(value=False)
         self.chk_compact = ttk.Checkbutton(grid_frame, text="Enable Compact Mode", variable=self.val_compact)
@@ -773,6 +910,47 @@ class AletheiaLauncherApp:
         # Populate Listbox in correct sequence
         for m in self.selected_models:
             self.lst_sequence.insert(tk.END, m)
+
+        # Spiritual Traditions Selection Frame
+        spiritual_frame = tk.Frame(inner, bg=CARD_BG)
+        spiritual_frame.pack(fill=tk.X, pady=(8, 2))
+
+        sp_header = tk.Frame(spiritual_frame, bg=CARD_BG)
+        sp_header.pack(fill=tk.X, pady=(0, 4))
+
+        sp_label = tk.Label(sp_header, text="🕊️ Spiritual Canon Traditions (Active when Spiritual Mode is ON):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        sp_label.pack(side=tk.LEFT)
+
+        def set_trad_preset(preset):
+            for k, var in self.tradition_vars.items():
+                if preset == "all":
+                    var.set(True)
+                elif preset == "clear":
+                    var.set(False)
+                elif preset == "core4":
+                    var.set(k in ["christianity", "hinduism", "buddhism", "taoism", "other"])
+                elif preset == "eastern":
+                    var.set(k in ["taoism", "buddhism", "hinduism", "other"])
+                elif preset == "nature":
+                    var.set(k in ["indigenous", "taoism", "other"])
+
+        for p_name, p_key in [("Core 4", "core4"), ("All", "all"), ("Eastern", "eastern"), ("Custodial", "nature"), ("Clear", "clear")]:
+            btn = tk.Button(sp_header, text=p_name, font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=5, pady=1, cursor="hand2", command=lambda pk=p_key: set_trad_preset(pk))
+            btn.pack(side=tk.RIGHT, padx=2)
+            btn.bind("<Enter>", lambda e, b=btn: b.configure(bg=BG_BUTTON_HOVER))
+            btn.bind("<Leave>", lambda e, b=btn: b.configure(bg=BG_BUTTON))
+
+        sp_chk_frame = tk.Frame(spiritual_frame, bg=BG_COLOR, bd=1, relief="flat", padx=8, pady=4)
+        sp_chk_frame.pack(fill=tk.X)
+
+        self.tradition_vars = {}
+        for idx, (t_key, t_label) in enumerate(self.tradition_definitions):
+            row = idx // 4
+            col = idx % 4
+            var = tk.BooleanVar(value=(t_key in ["christianity", "hinduism", "buddhism", "taoism", "other"]))
+            self.tradition_vars[t_key] = var
+            chk = ttk.Checkbutton(sp_chk_frame, text=t_label, variable=var, style="Feeds.TCheckbutton")
+            chk.grid(row=row, column=col, sticky="w", padx=8, pady=2)
 
         # RSS Feeds Selection Frame
         feeds_header = tk.Frame(inner, bg=CARD_BG)
@@ -1333,6 +1511,12 @@ class AletheiaLauncherApp:
 
         if self.val_multi.get():
             args.append("--multi-aspect")
+
+        if self.val_spiritual.get():
+            args.append("--spiritual")
+            selected_traditions = [k for k, v in self.tradition_vars.items() if v.get()]
+            if selected_traditions:
+                args.extend(["--spiritual-traditions", ",".join(selected_traditions)])
 
         if self.batch_size_var.get():
             args.extend(["--chunk-size", self.batch_size_var.get()])

@@ -8,6 +8,8 @@
 _Personal_Files/
 _Generated_Content/
 
+_VFT MD/bible/actualism_shorts
+
 bluesky_bot/archive_sessions_json
 bluesky_bot/chat_sessions
 bluesky_bot/chat_uploads
@@ -20,6 +22,7 @@ _AI files and chat logs/
 
 # --- Scratch & Temp Work ---
 scratch/
+drawing_board/
 .agent/temp/
 
 # --- API Keys & Credentials ---
@@ -68,5 +71,10 @@ Semantic_Clusters/granular_sentence_index.json
 Semantic_Clusters/interactive_topic_map.html
 
 _VFT MD/WWSUTRU/Australia/Aus_Kanon/corpus_1998_to_2025.parquet
+_VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/*.duckdb
+_VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/*.parquet
+!_VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/hansard_members.parquet
+_VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/xml/
+
 # Chrome extension signing keys - private, never commit
 *.pem
