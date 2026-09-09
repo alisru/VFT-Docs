@@ -1,0 +1,148 @@
+[
+  {
+    "thinking": "Phase 1-5 Convergence Scan:\nCandidate 1: Dallas Flock Cameras\nStated Claim: Abbott's directive halts funding to protect Fourth Amendment rights, leading to a shutdown of Flock cameras in Dallas.\nActual Reality: Dallas deactivates 321 state-funded cameras but keeps over 300 federally funded cameras active. The crackdown is highly selective and performative.\nStated Forces:\nGG: S=1.2, O=0.0, N=0.0\nGE: S=0.0, O=1.2, N=0.0\nLG: S=0.8, O=0.0, N=0.0\nLE: S=0.0, O=0.8, N=0.0\nGP: S=1.2, O=0.0, N=0.0\nBP: S=0.0, O=1.2, N=0.0\nStated u = 1.0, psi = 0.0\nActual Forces:\nGG: S=0.2, O=0.8, N=0.0\nGE: S=0.4, O=0.2, N=0.0\nLG: S=0.5, O=0.5, N=0.0\nLE: S=1.2, O=0.0, N=0.0\nGP: S=0.2, O=0.8, N=0.0\nBP: S=0.8, O=0.2, N=0.0\nActual u = -0.55, psi = -0.62\nHypocrisy Gap: Delta H = 1.66 (Fail)\nTrajectory: Revelation into Deception (Lesser Evil)\nR_net: 4.6 (Partially Distorted)\nUncertainty z: 1",
+    "id": "dallas_flock_cameras_abbott",
+    "subject": "Dallas shuts down hundreds of...",
+    "link": "https://www.washingtonexaminer.com/news/crime/4709670/dallas-shut-down-flock-camera-abbot/",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 0.0,
+    "real_u": -0.55,
+    "real_psi": -0.62,
+    "mode": "root",
+    "posts": [
+      "A selective privacy crackdown leaves half the surveillance grid intact. 🌐\n\nDallas shuts down hundreds of Flock cameras\nEvidence: Privacy Protection, Selective Deactivation, Political Posturing\n#Aletheia #USPol #Privacy",
+      "Texas Governor Greg Abbott directed state agencies to halt funding for Flock license plate readers, prompting Dallas to shut down hundreds of cameras to protect citizens' Fourth Amendment rights.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "Dallas is deactivating 321 state-funded cameras, but over 300 federally funded cameras remain fully active. The 'crackdown' selectively targets state grants while leaving the local surveillance grid operational.\nResulting Judgement: (-0.55, -0.62) — Lesser Evil",
+      "Verdict: FAIL — Revelation into Deception.\nAbbott's directive creates a public illusion of privacy protection while leaving half of Dallas's surveillance network fully operational.\n\nIntegrity: Partially Distorted (Hypocrisy: 1.66, z: 1)",
+      "- Greg Abbott: FAIL (-0.55, -0.62) — Performative defense.\n- Dallas Police: COND (0.10, -0.20) — Funding split.",
+      "Governor Abbott ordered state agencies to pause funding for Flock cameras over privacy concerns, leading Dallas to schedule the deactivation of 321 cameras by mid-September while keeping over 300 others active.",
+      "The Bright Side:\nThe funding freeze has forced a public conversation about the rapid, unregulated expansion of automated license plate readers and the potential misuse of citizen data.",
+      "The Breakdown & Plane Error:\nConfusing the source of funding (WHAT) with the actual presence of surveillance (WHO). The state claims to protect privacy, but only restricts its own ledger, leaving federal surveillance untouched.",
+      "Social Physics Analysis:\nFraming a partial funding cut as a total defense of civil liberties uses a righteous pretext to mask a selective policy. This performative privacy advocacy avoids addressing the systemic reality of ongoing federal surveillance.",
+      "The Trajectory: The Path of Revelation into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Selective enforcement dilutes genuine constitutional protections.",
+      "The Unavoidable Truth: Over 300 surveillance cameras remain active in Dallas despite the state ban.\n\nThe Unavoidable Lie: The funding freeze represents a comprehensive shutdown of automated license plate tracking.",
+      "Alethekanon:\nSelective enforcement of constitutional rights is not a defense of liberty; it is a tactical deployment of outrage. Halting state funds while leaving federal surveillance intact reveals a performative crackdown designed for headlines.",
+      "Awwthekanon:\nIt is disheartening when the safety of our neighborhoods and the privacy of our families are used as bargaining chips in political games. We deserve consistent protection that respects our rights and keeps us safe without dividing us.",
+      "Brothekanon:\nSo we're shutting down half the cameras to 'protect privacy' but keeping the other half because they're federally funded? That's like locking the front door but leaving the garage wide open. Classic political theater, bro.",
+      "Spirithekanon:\n\"A double-minded man is unstable in all his ways.\" James 1:8 PASS\nAbbott's selective privacy crackdown while leaving federal surveillance intact exposes a fractured, politically motivated policy."
+    ],
+    "actors": [
+      "Greg Abbott",
+      "Dallas Police Department",
+      "Flock Safety"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 4.6,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Partially Distorted",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "Greg Abbott performative privacy defense",
+        "claim_u": 1.0,
+        "claim_psi": 0.0,
+        "real_u": -0.55,
+        "real_psi": -0.62,
+        "verdict": "FAIL",
+        "reason": "Selective funding freeze leaves federal surveillance active."
+      },
+      {
+        "aspect": "Dallas Police Department funding split",
+        "claim_u": 1.0,
+        "claim_psi": 0.0,
+        "real_u": 0.1,
+        "real_psi": -0.2,
+        "verdict": "COND",
+        "reason": "Deactivating state-funded cameras while keeping federal ones."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.washingtonexaminer.com/news/crime/4709670/dallas-shut-down-flock-camera-abbot/",
+        "snippet": "Stated Claim / Post Context:\nDallas shuts down hundreds of Flock cameras after Abbott pauses funding\n\nThe Dallas Police Department announced Tuesday that it will shut down hundreds of Flock cameras after Texas Gov. Greg Abbott (R-TX) directed state agencies to halt funding for the automated license "
+      }
+    ],
+    "category": "politics",
+    "topic": "USPol",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/dallas_flock_cameras_abbott_graph.png",
+    "rkeys": [
+      "3multhonlrx2c",
+      "3multhpcetf2f",
+      "3multhrhapd2t",
+      "3multhtm3wk26",
+      "3multhvqynp2y",
+      "3multhxwreo27",
+      "3multi23vbw27",
+      "3multi4aoip2i",
+      "3multi6fim627",
+      "3multiakjlo27",
+      "3multicpfm424",
+      "3multieuau72i",
+      "3multigzdpl2t",
+      "3multij6gqs26",
+      "3multildllg27"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multhonlrx2c",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multhpcetf2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multhrhapd2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multhtm3wk26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multhvqynp2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multhxwreo27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multi23vbw27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multi4aoip2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multi6fim627",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multiakjlo27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multicpfm424",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multieuau72i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multigzdpl2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multij6gqs26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3multildllg27"
+    ],
+    "tags": [
+      "Aletheia",
+      "USPol",
+      "Privacy"
+    ]
+  }
+]

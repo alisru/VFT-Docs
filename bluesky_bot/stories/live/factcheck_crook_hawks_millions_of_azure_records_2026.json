@@ -1,0 +1,262 @@
+[
+  {
+    "thinking": "Phase 1: 7 Planes check. Q1-Q7 assessed. Phase 2: Vector verification. Stated forces and actual forces computed. Hypocrisy delta computed. Trajectory: Revelation into Deception.",
+    "id": "crook_hawks_millions_of_azure_records_2026",
+    "subject": "Crook hawks millions of records allegedly plundered from corporate Azure tenants",
+    "link": "https://www.theregister.com/security/2026/08/17/crook-hawks-millions-of-records-allegedly-plundered-from-corporate-azure-tenants/5288305?utm_source=dlvr.it&utm_medium=bluesky",
+    "target_url": "https://bsky.app/profile/theregister.com/post/3mtbmwo3uwg2w",
+    "claim_u": 0.8,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
+    "mode": "root",
+    "posts": [
+      "A hacker claims to hawk millions of corporate Azure records from giants like McDonald's, prompting urgent security verifications.\n\nAzure Tenants Breach\nEvidence: Claimed breach, Infostealer vector, Corporate denial\n#Security #Azure",
+      "Threat actor TheHatman claims to have siphoned millions of employee records from major enterprise Azure environments, sparking industry-wide concern.\nStated Judgement: (+0.80, +1.00) — Good Preference",
+      "While threat intelligence flags high data authenticity likely from infostealer malware, impacted firms report no active core system compromises.\nResulting Judgement: (-1.00, -1.00) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception. Extortion tactics and credential theft exploit systemic endpoint hygiene, amplifying fear without zero-day flaws.\nIntegrity: Severe Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
+      "- Corporate Tenants: COND (-0.5, -0.4) — Exposed via endpoint infostealers.\n- Threat Actor: FAIL (-1.0, -1.0) — Weaponizes leaked credential lists.",
+      "A cybercrook is advertising millions of employee records allegedly stolen from Azure tenants of major firms, though firms like TCS dispute direct breaches.",
+      "The Poison:\nExposing deep organizational charts and Global Admin details creates immediate phishing and social engineering vulnerabilities.",
+      "The Breakdown & Plane Error:\nConfusing endpoint infostealer infections with a systemic Azure cloud zero-day vulnerability.\n\nIt exploits third-party hygiene gaps rather than platform flaws.",
+      "Social Physics Analysis:\nThe attacker uses credential hoarding and fear-mongering to extract leverage, while targeted enterprises rely on defensive transparency to reassure markets.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through extortion.",
+      "The Unavoidable Truth: Infostealer malware on employee endpoints remains a massive corporate blind spot.\n\nThe Unavoidable Lie: The breach stems from a fundamental zero-day architectural flaw in Microsoft Azure.",
+      "Alethekanon:\nExtortionists weaponize harvested metadata to simulate high-level structural breaches, exploiting human rather than digital architecture.",
+      "Awwthekanon:\nIt is stressful when personal work data leaks. Companies must better protect employee privacy against invasive malware.",
+      "Brothekanon:\nClassic password spray and malware hustle. Always enable solid MFA and check your endpoints!",
+      "Spirithekanon:\n\"The wicked flee when no one pursueth\" (Proverbs 28:1) — FAIL (Emotive Plane)\nAmplifying fear through recycled data exploits anxieties for illicit gain."
+    ],
+    "actors": [
+      "TheHatman",
+      "McDonald's",
+      "Tata Consultancy Services",
+      "Vodafone",
+      "Microsoft",
+      "Hudson Rock"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.2,
+    "real_rnet": 8.5,
+    "claim_z": 1,
+    "real_z": 2,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "claim_integrity": "Conditionally Sound",
+    "real_integrity": "Meaningful Distortion",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "name": "Corporate Tenants",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 0.8,
+        "claim_psi": 1.0,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      },
+      {
+        "name": "Threat Actor TheHatman",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "LE": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "GP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.0,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 0.8,
+        "claim_psi": 1.0,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "category": "general",
+    "topic": "Security",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/crook_hawks_millions_of_azure_records_2026_graph.png",
+    "rkeys": [
+      "3mtegluzf2y24",
+      "3mteglvskve2p",
+      "3mteglxxwes23",
+      "3mtegm257ch2k",
+      "3mtegm4cevj2m",
+      "3mtegm6htyg24",
+      "3mtegman3jc23",
+      "3mtegmcs4mr2c",
+      "3mtegmexijg24",
+      "3mtegmh4t3q2f",
+      "3mtegmjceks23",
+      "3mtegmlhzcd2t",
+      "3mtegmnniw42s",
+      "3mtegmpsqyu2j",
+      "3mtegmry2gj2c"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegluzf2y24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mteglvskve2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mteglxxwes23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegm257ch2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegm4cevj2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegm6htyg24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegman3jc23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmcs4mr2c",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmexijg24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmh4t3q2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmjceks23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmlhzcd2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmnniw42s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmpsqyu2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtegmry2gj2c"
+    ],
+    "tags": [
+      "Security",
+      "Azure"
+    ]
+  }
+]

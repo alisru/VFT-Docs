@@ -62,70 +62,8 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": {
-      "GG": {
-        "S": 1.35,
-        "O": 0.0,
-        "N": 0.0
-      },
-      "GE": {
-        "S": 0.0,
-        "O": 1.35,
-        "N": 0.0
-      },
-      "LG": {
-        "S": 1.0,
-        "O": 0.0,
-        "N": 0.0
-      },
-      "LE": {
-        "S": 0.0,
-        "O": 1.0,
-        "N": 0.0
-      },
-      "GP": {
-        "S": 1.35,
-        "O": 0.0,
-        "N": 0.0
-      },
-      "BP": {
-        "S": 0.0,
-        "O": 1.35,
-        "N": 0.0
-      }
-    },
-    "actual_forces": {
-      "GG": {
-        "S": 1.65,
-        "O": 0.0,
-        "N": 0.0
-      },
-      "GE": {
-        "S": 0.0,
-        "O": 1.65,
-        "N": 0.0
-      },
-      "LG": {
-        "S": 1.2,
-        "O": 0.0,
-        "N": 0.0
-      },
-      "LE": {
-        "S": 0.0,
-        "O": 1.2,
-        "N": 0.0
-      },
-      "GP": {
-        "S": 1.65,
-        "O": 0.0,
-        "N": 0.0
-      },
-      "BP": {
-        "S": 0.0,
-        "O": 1.65,
-        "N": 0.0
-      }
-    },
+    "stated_forces": null,
+    "actual_forces": null,
     "aspects": [
       {
         "name": "Scientific Methodology",

@@ -1,0 +1,194 @@
+[
+  {
+    "thinking": "Phase 1: Scan. Q1: Who (Vance/Long). Q2: What (Quote). Q3: Where (Ohio). Q4: Why (Political). Q5: How (Redefinition). Q6: Cause (Populism). Q7: Effect (Safety). Forces: GG(0.5, 0.0, 0.0), GE(0.0, 0.5, 0.0), LG(0.0, 0.0, 0.5), LE(1.2, 0.0, 0.0), GP(1.5, 0.0, 0.0), BP(0.0, 1.2, 0.0). u=-0.2, psi=0.8. Rnet=5.5. z=1.",
+    "id": "vance-huey-long-2026",
+    "subject": "Who Was Huey Long?",
+    "link": "https://dailycaller.com/2026/08/22/who-was-huey-long-vance-quote-ohio",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.8,
+    "real_u": -0.2,
+    "real_psi": 0.8,
+    "mode": "root",
+    "posts": [
+      "JD Vance invokes Huey Long to discuss crime, but the historical context tells a different story. \nEvidence: Populist quote, safety framing, historical redistribution. #Aletheia #Politics",
+      "Vance claims the 'Every man a king' slogan supports his current public safety agenda. \nStated Judgement: (+0.5, +0.8) — Good Preference",
+      "Long's slogan was an economic redistribution plan, not a crime-fighting pledge. The framing is a political recontextualization. \nResulting Judgement: (-0.2, +0.8) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception.\nThe quote is used as a pretext to shift focus from economic policy to crime. \nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, Uncertainty z: 1)",
+      "Sub-Audits Breakdown:\n- JD Vance: FAIL (-0.2, +0.8) — Historical cherry-picking.\n- Daily Caller: PASS (-0.2, +0.8) — Corrects the context.",
+      "Vance spoke at a steel plant in Ohio, using the populist imagery of Huey Long to bolster his stance on border and crime policies.",
+      "The Poison:\nUsing a historical figure's economic slogan to justify a security-focused political agenda creates a false historical narrative.",
+      "The Breakdown & Plane Error:\nThis is a Lyrical (Q4) error; the narrative is obfuscated by misapplying a historical economic goal to a modern security problem.",
+      "Social Physics Analysis:\nBy projecting his own security agenda onto a historical populist, Vance attempts to borrow legitimacy while ignoring the actual, radical economic origins of the slogan.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The historical mismatch creates a high-strain narrative.",
+      "The Unavoidable Truth: Huey Long's slogan was about wealth redistribution.\nThe Unavoidable Lie: The slogan was originally about public safety.",
+      "Alethekanon:\nThe actor uses historical figures as props, disregarding their actual intent to serve a contemporary political goal.",
+      "Awwthekanon:\nIt is sad to see history used as a tool for division rather than a source of genuine wisdom for our shared future.",
+      "Brothekanon:\nClassic politician move—grab a cool-sounding quote and pretend it means whatever you need it to mean today.",
+      "Spirithekanon:\n\"Do not pervert justice; do not show partiality to the poor or favoritism to the great, but judge your neighbor fairly.\" (Leviticus 19:15) — FAIL (Logical Plane)\nTruth requires honoring the context of the past rather than twisting it for present gain."
+    ],
+    "actors": [
+      "JD Vance",
+      "Huey Long",
+      "Democratic Party"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.5,
+    "real_rnet": 5.5,
+    "claim_z": 1,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Conditionally Sound",
+    "real_integrity": "Meaningful Distortion",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "name": "JD Vance Historical Recontextualization",
+        "type": "actor",
+        "stated_forces": {
+          "GG": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.0,
+            "N": 0.5
+          },
+          "LE": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 0.0,
+            "O": 1.2,
+            "N": 0.0
+          }
+        },
+        "actual_forces": {
+          "GG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "GE": {
+            "S": 0.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "LG": {
+            "S": 0.0,
+            "O": 0.5,
+            "N": 0.0
+          },
+          "LE": {
+            "S": 1.5,
+            "O": 0.0,
+            "N": 0.0
+          },
+          "GP": {
+            "S": 0.0,
+            "O": 1.5,
+            "N": 0.0
+          },
+          "BP": {
+            "S": 1.2,
+            "O": 0.0,
+            "N": 0.0
+          }
+        },
+        "claim_u": 0.56,
+        "claim_psi": 1.0,
+        "real_u": -1.0,
+        "real_psi": -1.0
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "category": "politics",
+    "topic": "Politics",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/vance-huey-long-2026_graph.png",
+    "rkeys": [
+      "3mtq4aed5n624",
+      "3mtq4aezeiv2k",
+      "3mtq4ah6ocw2s",
+      "3mtq4ajdrbi2f",
+      "3mtq4alineq2f",
+      "3mtq4annv6y2f",
+      "3mtq4apthof27",
+      "3mtq4arymqc2m",
+      "3mtq4auakj42d",
+      "3mtq4awfpf22m",
+      "3mtq4aylsfn2k",
+      "3mtq4b2ra5a2f",
+      "3mtq4b4wh2n2b",
+      "3mtq4b73sim2d",
+      "3mtq4bbcv5r2v"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4aed5n624",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4aezeiv2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4ah6ocw2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4ajdrbi2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4alineq2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4annv6y2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4apthof27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4arymqc2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4auakj42d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4awfpf22m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4aylsfn2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4b2ra5a2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4b4wh2n2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4b73sim2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtq4bbcv5r2v"
+    ],
+    "tags": [
+      "Aletheia",
+      "Politics"
+    ]
+  }
+]

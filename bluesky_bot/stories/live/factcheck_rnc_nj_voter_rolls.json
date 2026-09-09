@@ -1,0 +1,147 @@
+[
+  {
+    "thinking": "Phase 1-5 Convergence Scan:\nStated Claim: RNC demands records from NJ officials over noncitizens on voter rolls under the guise of election integrity (u = 0.5, psi = 0.0).\nActual Reality: RNC weaponizes voter roll administrative glitches for political leverage while courts and officials note lack of standing and partisan pretexts (u = -0.7, psi = -0.8).\nForces Stated: GG(1.2,0,0), GE(0,1.2,0), LG(1,0,0), LE(0,0.8,0), GP(1.2,0), BP(0,1.2).\nForces Actual: GG(0,1.2,0), GE(0.8,0.2,0), LG(0,0.5,0), LE(1.5,0,0), GP(0,1.0), BP(1.0,0).\nR_net Stated = 1.0 (Absolute Truth), Actual R_net = 12.5 (Severe Deception).\nZ-profile actual: [1, 0, 0, 2, 1, 0, 0], uncertainty z = 4.\nHypocrisy Delta: ||1.0 - (-0.7)|| = 1.7 >= 0.7 (FAIL).\nTrajectory: Path of Deception (LE).",
+    "id": "rnc_nj_voter_rolls",
+    "subject": "RNC Threatens Legal Action Against New Jersey Officials Over Noncitizen Voter Rolls",
+    "link": "https://www.foxnews.com/politics/rnc-threatens-legal-action-against-new-jersey-officials-noncitizens-voter-rolls-notice",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.0,
+    "real_u": -0.7,
+    "real_psi": -0.8,
+    "mode": "root",
+    "posts": [
+      "The RNC gives New Jersey officials until Sept. 15 to hand over voter roll records or face a lawsuit over noncitizen registrations.\nEvidence: RNC demands records, NJ admits tech errors, courts reject standing\n#Aletheia #USPol",
+      "The RNC frames its legal threats as a noble defense of election integrity to purge noncitizens from voter rolls.\nStated Judgement: (+0.5, 0.0) — Good Preference",
+      "In reality, the RNC weaponizes past administrative software glitches to manufacture political conflict, ignoring legal standing limits.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil / Deception",
+      "Verdict: FAIL — The Path of Deception.\nPartisan entities leverage routine bureaucratic software errors to manufacture crisis narratives for political leverage.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Sub-Audits Breakdown:\n- RNC Legal Claims: FAIL (-0.7, -0.8) — Leverages software errors for partisan optics.\n- NJ Election Office: COND (-0.3, -0.2) — Administrative software glitches exposed.",
+      "The RNC issued legal notices to New Jersey election officials demanding records on noncitizen voter removals following software errors at the DMV.",
+      "The Bright Side:\nAdministrative audits successfully identified and resolved DMV software errors before the election.",
+      "The Breakdown & Plane Error:\nConfusing WHAT (administrative software error resolution) with WHO (partisan political posturing and legal threats).",
+      "Social Physics Analysis:\nRather than resolving technical errors transparently through administrative channels, political actors weaponize bureaucratic glitches as pretexts to project bad faith.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception.",
+      "The Unavoidable Truth: Administrative software errors resulted in a small number of noncitizens registering and voting in New Jersey.\n\nThe Unavoidable Lie: The RNC's legal threats are driven by neutral election integrity rather than partisan political posturing.",
+      "Alethekanon:\nPartisan actors weaponize administrative hiccups as pretexts for conflict, subverting institutional trust for political leverage. 🌐",
+      "Awwthekanon:\nIt is exhausting when real administrative challenges are turned into political weapons instead of being quietly fixed to help everyone trust the system.",
+      "Brothekanon:\nClassic political theater—take a DMV software glitch, slap a lawsuit on it, and turn it into a cable news showdown.",
+      "Spirithekanon:\n\"Dishonest scales are an abomination to the Lord, but a just weight is his delight.\" Proverbs 11:1 FAIL\nWeaponizing clerical errors for partisan theater distorts truth and fosters needless division."
+    ],
+    "actors": [
+      "Republican National Committee",
+      "New Jersey Republican Party",
+      "Mikie Sherrill"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 12.5,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "RNC Legal Claims",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.7,
+        "real_psi": -0.8,
+        "verdict": "FAIL",
+        "reason": "Leverages software errors for partisan optics."
+      },
+      {
+        "aspect": "NJ Election Office",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.3,
+        "real_psi": -0.2,
+        "verdict": "COND",
+        "reason": "Administrative software glitches exposed."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.foxnews.com/politics/rnc-threatens-legal-action-against-new-jersey-officials-noncitizens-voter-rolls-notice",
+        "snippet": "Stated Claim / Post Context:\nRNC threatens legal action against New Jersey officials over noncitizens on voter rolls: 'On notice'\n\nThe RNC threatened legal action against New Jersey election officials over noncitizen voter roll records, giving all until Sept. 15 to comply.\n\nActual Article Body:\nThis"
+      }
+    ],
+    "category": "politics",
+    "topic": "USPol",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/rnc_nj_voter_rolls_graph.png",
+    "rkeys": [
+      "3mu4yacp6zn2d",
+      "3mu4yadcumi2k",
+      "3mu4yafhqk72d",
+      "3mu4yahmqjj2k",
+      "3mu4yajrssh2b",
+      "3mu4yalwmyj2v",
+      "3mu4yao3lnz2k",
+      "3mu4yaqalp72d",
+      "3mu4yaspncg2b",
+      "3mu4yauumwe2f",
+      "3mu4yawzf5j24",
+      "3mu4yaz6egk2n",
+      "3mu4yb3dbev2s",
+      "3mu4yb5i5eb24",
+      "3mu4yb7nc7u2f"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yacp6zn2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yadcumi2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yafhqk72d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yahmqjj2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yajrssh2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yalwmyj2v",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yao3lnz2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yaqalp72d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yaspncg2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yauumwe2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yawzf5j24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yaz6egk2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yb3dbev2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yb5i5eb24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu4yb7nc7u2f"
+    ],
+    "tags": [
+      "Aletheia",
+      "USPol"
+    ]
+  }
+]

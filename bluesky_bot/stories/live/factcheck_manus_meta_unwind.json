@@ -63,70 +63,8 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Severe Deception",
-    "stated_forces": {
-      "GG": {
-        "S": 0.2,
-        "O": 1.0,
-        "N": 0.0
-      },
-      "GE": {
-        "S": 1.0,
-        "O": 0.2,
-        "N": 0.0
-      },
-      "LG": {
-        "S": 0.2,
-        "O": 0.8,
-        "N": 0.0
-      },
-      "LE": {
-        "S": 0.8,
-        "O": 0.2,
-        "N": 0.0
-      },
-      "GP": {
-        "S": 0.2,
-        "O": 1.0,
-        "N": 0.0
-      },
-      "BP": {
-        "S": 1.0,
-        "O": 0.2,
-        "N": 0.0
-      }
-    },
-    "actual_forces": {
-      "GG": {
-        "S": 0.2,
-        "O": 1.5,
-        "N": 0.0
-      },
-      "GE": {
-        "S": 1.5,
-        "O": 0.2,
-        "N": 0.0
-      },
-      "LG": {
-        "S": 0.2,
-        "O": 1.2,
-        "N": 0.0
-      },
-      "LE": {
-        "S": 1.5,
-        "O": 0.2,
-        "N": 0.0
-      },
-      "GP": {
-        "S": 0.2,
-        "O": 1.5,
-        "N": 0.0
-      },
-      "BP": {
-        "S": 1.5,
-        "O": 0.2,
-        "N": 0.0
-      }
-    },
+    "stated_forces": null,
+    "actual_forces": null,
     "aspects": [
       {
         "name": "Meta Compliance",

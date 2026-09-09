@@ -1,0 +1,147 @@
+[
+  {
+    "thinking": "Phase 1: Metaphysical Scan (WHO)\nStated beneficiary: The officer acting in self-defense.\nActual beneficiary: The officer escaping accountability for an unjustified shooting.\nPhase 2: Vector Verification\nStated Forces:\nGG: S=1.0, O=0.0, N=0.0\nGE: S=0.0, O=1.0, N=0.0\nLG: S=0.5, O=0.0, N=0.0\nLE: S=0.0, O=0.5, N=0.0\nGP: S=1.0, O=0.0, N=0.0\nBP: S=0.0, O=1.0, N=0.0\nu_stated = 1.0, psi_stated = 0.0\nActual Forces:\nGG: S=0.0, O=1.5, N=0.0\nGE: S=1.2, O=0.0, N=0.0\nLG: S=0.0, O=1.0, N=0.0\nLE: S=1.8, O=0.0, N=0.0\nGP: S=0.0, O=1.5, N=0.0\nBP: S=1.5, O=0.0, N=0.0\nu_actual = -1.0, psi_actual = -1.0\nPhase 3: Hypocrisy Gap\nStated Ideal: Self-defense and officer safety.\nActual Action: Fabricating a violent assault to cover up shooting an unarmed man through a closed door.\nDelta H = 2.0 (Fail)\nPhase 4: Forensic Stress Test\nFake Maximiser: Castro claimed a 3-minute life-or-death struggle, but video showed it lasted 11 seconds.\nHelxis: Stated protection of public safety vs. actual protection of personal liability.\nPhase 5: Trajectory\nExit: Fall, Entry: Destruction. Trajectory: The Path of Deception.",
+    "id": "ice_officer_lying_minneapolis",
+    "subject": "ICE officer pleads not guilty...",
+    "link": "https://nypost.com/2026/09/05/us-news/ice-officer-christian-castro-pleads-not-guilty-in-minneapolis-shooting/",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 0.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
+    "mode": "root",
+    "posts": [
+      "An ICE officer's fabricated tale of a brutal shovel assault is shattered by video evidence. Christian Castro pleads not guilty to lying about a Minneapolis shooting. Evidence: Self-defense claim, Fabricated assault, Unjustified shooting. #Aletheia #Justice 🌐",
+      "Castro claimed he was brutally assaulted with a broom and snow shovel, firing his weapon from his back in self-defense during a chaotic struggle.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "Video evidence revealed the struggle lasted only 11 seconds, and Castro was standing when he fired a single shot through a closed apartment door, hitting a fleeing man.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
+      "Verdict: FAIL — The Path of Deception.\nCastro fabricated a violent narrative to escape accountability for an unjustified shooting.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Sub-Audits Breakdown:\n- Christian Castro: FAIL (-1.00, -1.00) — Fabricated assault to justify shooting.\n- ICE Accountability: COND (-0.50, -0.30) — Internal review triggered by video.",
+      "ICE officer Christian Castro pleaded not guilty to federal charges of making false statements to investigators regarding a January 2026 shooting in Minneapolis.",
+      "The Poison:\nEven with body cameras and video evidence, the officer's immediate instinct was to construct an elaborate, highly detailed lie to justify a split-second failure of discipline.",
+      "The Breakdown & Plane Error:\nThis is a physical-to-metaphysical error. Castro attempted to rewrite the physical facts of the encounter (the duration and his posture) to construct a metaphysical justification of self-defense.",
+      "Social Physics Analysis:\nBy projecting a violent assault onto the victims, the officer attempted to shift the moral burden of the shooting. This post-hoc pretext was designed to maintain institutional authority at the expense of vulnerable individuals.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Fabricating evidence to cover up state violence actively contracts the possibility of justice.",
+      "The Unavoidable Truth: Video evidence remains the ultimate check on state-sanctioned violence.\n\nThe Unavoidable Lie: The claim that a closed door constitutes an active physical threat.",
+      "Alethekanon:\nCastro's defense collapsed because physical reality is non-negotiable. You cannot stretch an 11-second encounter into a 3-minute life-or-death struggle when the camera is rolling.",
+      "Awwthekanon:\nIt is terrifying to think of the family inside that home, including two tiny children, hearing a gunshot pierce their front door. True safety cannot be built on fear and falsehoods.",
+      "Brothekanon:\nBro tried to claim he was getting beat down with a snow shovel for three minutes, but the tape showed he was standing up the whole time. You can't outrun the video feed, man.",
+      "Spirithekanon:\n\"A false witness will not go unpunished, and he who breathes out lies will perish.\" Proverbs 19:9 PASS\nFabricating a violent assault to justify shooting an unarmed man through a door violates both human law and divine justice."
+    ],
+    "actors": [
+      "Christian Castro",
+      "U.S. Immigration and Customs Enforcement",
+      "Julio Cesar Sosa-Celis"
+    ],
+    "macro_event": "Operation Metro Surge",
+    "macro_claim_u": 1.0,
+    "macro_claim_psi": 1.0,
+    "macro_real_u": -0.8,
+    "macro_real_psi": -0.8,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 12.5,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "Christian Castro",
+        "claim_u": 1.0,
+        "claim_psi": 0.0,
+        "real_u": -1.0,
+        "real_psi": -1.0,
+        "verdict": "FAIL",
+        "reason": "Fabricated assault to justify shooting."
+      },
+      {
+        "aspect": "ICE Accountability",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.5,
+        "real_psi": -0.3,
+        "verdict": "COND",
+        "reason": "Internal review triggered by video."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://nypost.com/2026/09/05/us-news/ice-officer-christian-castro-pleads-not-guilty-in-minneapolis-shooting/",
+        "snippet": "Stated Claim / Post Context:\nICE officer pleads not guilty to lying about Minneapolis shooting involving Venezuelan man\n\nA judge ordered Castro released on a $75,000 unsecured bond and required him to wear an ankle monitor.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of o"
+      }
+    ],
+    "category": "politics",
+    "topic": "Justice",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/ice_officer_lying_minneapolis_graph.png",
+    "rkeys": [
+      "3mut4mok3qj2d",
+      "3mut4mpcku62x",
+      "3mut4mrhwht2y",
+      "3mut4mto2ws2u",
+      "3mut4mvtfk32m",
+      "3mut4mxzdsh25",
+      "3mut4n2iyqr2w",
+      "3mut4n4oztq2k",
+      "3mut4n6udqf2g",
+      "3mut4nazmgl2m",
+      "3mut4nd6x6l2m",
+      "3mut4nfeetq2k",
+      "3mut4nhjqkj25",
+      "3mut4njp2et2h",
+      "3mut4nlvaii2z"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4mok3qj2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4mpcku62x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4mrhwht2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4mto2ws2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4mvtfk32m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4mxzdsh25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4n2iyqr2w",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4n4oztq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4n6udqf2g",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4nazmgl2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4nd6x6l2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4nfeetq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4nhjqkj25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4njp2et2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mut4nlvaii2z"
+    ],
+    "tags": [
+      "Aletheia",
+      "Justice"
+    ]
+  }
+]
