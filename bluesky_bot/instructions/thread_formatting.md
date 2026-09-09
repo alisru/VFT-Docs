@@ -91,7 +91,8 @@ To maintain the strict 13-element limit on disk, the bot must output the `"posts
   > It is a structural bait-and-switch: they claim the benefit of private ownership, but the system is built to externalize all the risk and physical cost onto the essential workers who serve their community.
 
 ### Element 7: The Social Physics Analysis
-* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Provide a clear, direct, conversational plain-English explanation of the social physics dynamics (e.g. selfishness, power, pretext/justification, projection) without relying on clunky jargon names or loops.
+* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Ground your analysis directly in **The 42 of Social Physics**: audit the actors across the 4 Axes (Power vs. Empowerment, Justification vs. Transparency, Projection vs. Empathy, Manufactured Problems vs. Solutions).
+* **Actor Dynamics**: Expose whether actors are executing a **Smart Selfish Maneuver** (Secret Goal -> Pretext/Manufactured Crisis -> Distraction & Projection) or a **Smart Altruistic Maneuver** (Transparent Goal -> Empowerment -> Resolution via Empathy). Explain these mechanisms organically in plain, compelling English without clunky jargon formulas or raw arrows.
 * **Example**:
   > Social Physics Analysis:
   > The dog owners act out of personal selfishness to prioritize their comfort, using the pretext of private pet ownership to justify their negligence. By blaming the victims or animal unpredictability, they project a false image of innocence while running a silent extraction of public safety.

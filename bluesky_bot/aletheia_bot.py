@@ -18,8 +18,8 @@ import re
 import argparse
 import time
 from dotenv import load_dotenv
-from atproto import Client, models, IdResolver
 import shutil
+from atproto import Client, models
 
 # Load environment variables
 load_dotenv()
@@ -250,6 +250,7 @@ def save_and_sync_story(thread_config, write_json=True):
 
 def resolve_facets_and_tags(text, link=None):
     """Parses text for hashtags and links, returning facets list and tags list."""
+    from atproto import models
     facets = []
     tags_list = []
     
@@ -290,6 +291,7 @@ def resolve_facets_and_tags(text, link=None):
 
 def post_thread(client, thread_config, live=False, compact=False, five_word=False):
     """Processes a single thread configuration (generating graph, validating, and posting)."""
+    from atproto import Client, models
     subject = thread_config.get("subject", "Assessment")
     posts = thread_config.get("posts", [])
     link = thread_config.get("link", "")
@@ -321,16 +323,45 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     is_compact = is_compact_single or is_compact_thread
     limit = 300
         
-    # Validate every raw post in the config under the dynamic limit (only check first 4 posts for compact mode)
-    posts_to_check = posts[:4] if is_compact else posts
+    # Detect spiritual mode optionals
+    is_spiritual = thread_config.get("spiritual") is True or any(
+        isinstance(p, str) and p.strip().startswith("Spirithekanon:") for p in posts
+    )
+
+    # Validate and auto-fit posts in config under the dynamic limit
+    if is_compact:
+        posts_to_check = posts[:4]
+        if is_spiritual:
+            spiritual_post = None
+            for p in reversed(posts):
+                if isinstance(p, str) and (p.strip().startswith("Spirithekanon:") or '"' in p):
+                    if not p.strip().startswith("Spirithekanon:"):
+                        p = f"Spirithekanon:\n{p.strip()}"
+                    spiritual_post = p
+                    break
+            if spiritual_post:
+                posts_to_check = posts_to_check + [spiritual_post]
+    else:
+        posts_to_check = posts
+
+    # Auto-fit each post under 300 characters
+    fitted_posts = []
     for idx, post in enumerate(posts_to_check, 1):
         if len(post) > limit:
-            raise ValueError(f"Raw post {idx} in config exceeds {limit} characters ({len(post)} chars):\n{post}")
+            lines = post.split("\n")
+            while len("\n".join(lines)) > limit and len(lines) > 1:
+                lines.pop()
+            trimmed = "\n".join(lines).strip()
+            if len(trimmed) > limit:
+                trimmed = trimmed[:limit-3] + "..."
+            fitted_posts.append(trimmed)
+        else:
+            fitted_posts.append(post)
 
     if is_five_word:
         final_posts = pack_5word_posts(posts, max_len=limit)
     elif is_compact_single:
-        final_posts = posts[:1]
+        final_posts = fitted_posts[:1]
         if link:
             ref_suffix = f"\n\nReference: {link}"
             if len(final_posts[0]) + len(ref_suffix) <= limit:
@@ -340,9 +371,9 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 if len(final_posts[0]) + len(ref_suffix) <= limit:
                     final_posts[0] += ref_suffix
     elif is_compact_thread:
-        final_posts = posts[:4]
+        final_posts = fitted_posts
     else:
-        final_posts = pack_posts(posts, max_len=limit)
+        final_posts = pack_posts(fitted_posts, max_len=limit)
         
     for idx, post in enumerate(final_posts, 1):
         if len(post) > limit:
@@ -503,7 +534,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
 
             # Create External Link Preview Card
             link_embed = None
-            if link:
+            if link and (link.startswith("http://") or link.startswith("https://")):
                 try:
                     desc_text = ""
                     if len(final_posts) > 4:
@@ -526,7 +557,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
             # Create Grounding Link Preview Card (if grounding_url is present)
             grounding_url = thread_config.get("grounding_url", "")
             grounding_embed = None
-            if grounding_url:
+            if grounding_url and (grounding_url.startswith("http://") or grounding_url.startswith("https://")):
                 try:
                     desc_text = f"Fact-check verification source for {subject}"
                     grounding_embed = models.AppBskyEmbedExternal.Main(
@@ -539,6 +570,26 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                     print(f"Created grounding link preview card embed for: {grounding_url}")
                 except Exception as ex:
                     print(f"Warning: Failed to create grounding external link embed card: {ex}")
+
+            # Create Secondary Source Link Preview Card (if multi-source cluster sources are present)
+            cluster_sources = thread_config.get("cluster_sources") or []
+            secondary_url = ""
+            if len(cluster_sources) > 1:
+                secondary_url = cluster_sources[1].get("url", "")
+            secondary_embed = None
+            if secondary_url and (secondary_url.startswith("http://") or secondary_url.startswith("https://")):
+                try:
+                    sec_pub = cluster_sources[1].get("publisher") or "Alternative Reporting Outlet"
+                    secondary_embed = models.AppBskyEmbedExternal.Main(
+                        external=models.AppBskyEmbedExternal.External(
+                            title=f"{sec_pub} Source | Aletheia Bot",
+                            description=f"Comparative reporting source from {sec_pub}",
+                            uri=secondary_url
+                        )
+                    )
+                    print(f"Created secondary source link preview card embed for: {secondary_url}")
+                except Exception as ex:
+                    print(f"Warning: Failed to create secondary external link embed card: {ex}")
 
             # first_post_embed gets the trajectory graph, and also gets the summary cards if present
             first_post_embed = graph_embed
@@ -558,98 +609,106 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
 
             # 5. Determine Posting References based on Mode
             is_reply = False
-            # Commented out reply-to-user logic to avoid spam/ban issues. We always post to our feed/timeline.
-            # if mode == "reply":
-            #     print(f"Resolving target post: {target_url}...")
-            #     try:
-            #         target_handle, rkey = parse_bsky_url(target_url)
-            #         resolver = IdResolver()
-            #         target_did = resolver.handle.resolve(target_handle)
-            # 
-            #         response = client.com.atproto.repo.get_record(
-            #             models.ComAtprotoRepoGetRecord.Params(
-            #                 repo=target_did,
-            #                 collection='app.bsky.feed.post',
-            #                 rkey=rkey
-            #             )
-            #         )
-            #         target_cid = response.cid
-            #         target_uri = response.uri
-            #         target_record = response.value
-            # 
-            #         if hasattr(target_record, 'reply') and target_record.reply:
-            #             root_ref = target_record.reply.root
-            #         else:
-            #             root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
-            # 
-            #         parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
-            # 
-            #         print("Resolved target reference correctly.")
-            #         is_reply = True
-            #     except Exception as e:
-            #         print(f"Warning: Failed to resolve reply target ({e}). Falling back to root thread mode on our timeline...")
-            #         is_reply = False
-            # 
-            # if is_reply:
-            #     # Post first reply
-            #     print("Posting Part 1 (Reply with Link Preview or Graph Embed)...")
-            #     try:
-            #         reply = client.com.atproto.repo.create_record(
-            #             models.ComAtprotoRepoCreateRecord.Data(
-            #                 repo=client.me.did,
-            #                 collection=models.ids.AppBskyFeedPost,
-            #                 record=models.AppBskyFeedPost.Record(
-            #                     created_at=client.get_current_time_iso(),
-            #                     text=final_posts[0],
-            #                     reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
-            #                     embed=first_post_embed,
-            #                     facets=facets,
-            #                     tags=tags_list,
-            #                     langs=["en"]
-            #                 )
-            #             )
-            #         )
-            #         parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
-            #         post_uris.append(reply.uri)
-            #         post_rkeys.append(reply.uri.split('/')[-1])
-            #     except Exception as e:
-            #         raise RuntimeError(f"Failed to post root reply: {e}") from e
+            if mode == "reply" and target_url:
+                print(f"Resolving target post for direct reply: {target_url}...")
+                try:
+                    target_handle, rkey = parse_bsky_url(target_url)
+                    from atproto import IdResolver
+                    resolver = IdResolver()
+                    target_did = resolver.handle.resolve(target_handle)
 
-            # Root Mode: Post standard new stand-alone post on profile timeline
-            print("Posting Part 1 (New Root Thread with Link Preview or Graph Embed)...")
-            try:
-                root_post = client.com.atproto.repo.create_record(
-                    models.ComAtprotoRepoCreateRecord.Data(
-                        repo=client.me.did,
-                        collection=models.ids.AppBskyFeedPost,
-                        record=models.AppBskyFeedPost.Record(
-                            created_at=client.get_current_time_iso(),
-                            text=final_posts[0],
-                            embed=first_post_embed,
-                            facets=facets,
-                            tags=tags_list,
-                            langs=["en"]
+                    response = client.com.atproto.repo.get_record(
+                        models.ComAtprotoRepoGetRecord.Params(
+                            repo=target_did,
+                            collection='app.bsky.feed.post',
+                            rkey=rkey
                         )
                     )
-                )
-                root_ref = models.ComAtprotoRepoStrongRef.Main(cid=root_post.cid, uri=root_post.uri)
-                parent_ref = root_ref
-                post_uris.append(root_post.uri)
-                post_rkeys.append(root_post.uri.split('/')[-1])
-            except Exception as e:
-                raise RuntimeError(f"Failed to post root thread: {e}") from e
+                    target_cid = response.cid
+                    target_uri = response.uri
+                    target_record = response.value
+
+                    if hasattr(target_record, 'reply') and target_record.reply:
+                        root_ref = target_record.reply.root
+                    else:
+                        root_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+
+                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+
+                    print(f"Resolved target reference: {target_uri}")
+                    is_reply = True
+                except Exception as e:
+                    print(f"Warning: Failed to resolve reply target ({e}). Falling back to root thread mode on our timeline...")
+                    is_reply = False
+
+            if is_reply:
+                # Post targeted direct reply to the target post
+                print("Posting Part 1 (Targeted Reply to User with Graph Embed)...")
+                try:
+                    reply = client.com.atproto.repo.create_record(
+                        models.ComAtprotoRepoCreateRecord.Data(
+                            repo=client.me.did,
+                            collection=models.ids.AppBskyFeedPost,
+                            record=models.AppBskyFeedPost.Record(
+                                created_at=client.get_current_time_iso(),
+                                text=final_posts[0],
+                                reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+                                embed=first_post_embed,
+                                facets=facets,
+                                tags=tags_list,
+                                langs=["en"]
+                            )
+                        )
+                    )
+                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, uri=reply.uri)
+                    post_uris.append(reply.uri)
+                    post_rkeys.append(reply.uri.split('/')[-1])
+                except Exception as e:
+                    raise RuntimeError(f"Failed to post targeted root reply: {e}") from e
+            else:
+                # Root Mode: Post standard new stand-alone post on profile timeline
+                print("Posting Part 1 (New Root Thread with Link Preview or Graph Embed)...")
+                try:
+                    root_post = client.com.atproto.repo.create_record(
+                        models.ComAtprotoRepoCreateRecord.Data(
+                            repo=client.me.did,
+                            collection=models.ids.AppBskyFeedPost,
+                            record=models.AppBskyFeedPost.Record(
+                                created_at=client.get_current_time_iso(),
+                                text=final_posts[0],
+                                embed=first_post_embed,
+                                facets=facets,
+                                tags=tags_list,
+                                langs=["en"]
+                            )
+                        )
+                    )
+                    root_ref = models.ComAtprotoRepoStrongRef.Main(cid=root_post.cid, uri=root_post.uri)
+                    parent_ref = root_ref
+                    post_uris.append(root_post.uri)
+                    post_rkeys.append(root_post.uri.split('/')[-1])
+                except Exception as e:
+                    raise RuntimeError(f"Failed to post root thread: {e}") from e
 
             # 6. Post subsequent thread parts sequentially
             for i, text in enumerate(final_posts[1:], start=2):
                 print(f"Posting Part {i}/{len(final_posts)}...")
                 current_embed = None
                 if i == 2 and link_embed is not None:
-                    # Attach the link preview card embed to the second post of the thread
+                    # Attach the primary story link preview card embed to Part 2 (Stated Claim)
                     current_embed = link_embed
-                    print("Attaching link preview card embed to Part 2...")
-                elif "Source: " in text and grounding_embed is not None:
+                    print("Attaching primary link preview card embed to Part 2 (Stated Claim)...")
+                elif i == 3 and grounding_embed is not None:
+                    # Attach the grounding/fact-check verification card embed to Part 3 (Ground Reality)
                     current_embed = grounding_embed
-                    print(f"Attaching grounding link preview card embed to Part {i}...")
+                    print("Attaching grounding verification link card embed to Part 3 (Ground Reality)...")
+                elif i == 5 and secondary_embed is not None:
+                    # Attach the secondary comparative source card to Part 5 (Source Quality Scorecard)
+                    current_embed = secondary_embed
+                    print("Attaching secondary comparative source link card embed to Part 5 (Source Scorecard)...")
+                elif ("Alethekanon:" in text or "Source: " in text) and grounding_embed is not None and current_embed is None:
+                    current_embed = grounding_embed
+                    print(f"Attaching grounding link preview card embed to Part {i} (Alethekanon)...")
                 sub_facets, sub_tags = resolve_facets_and_tags(text)
                 try:
                     reply = client.com.atproto.repo.create_record(

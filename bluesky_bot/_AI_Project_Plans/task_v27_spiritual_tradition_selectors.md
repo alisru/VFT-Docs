@@ -1,0 +1,12 @@
+﻿# Tasks for v27 Spiritual Tradition Sub-Selectors
+- [x] 1. Update `google_ai_studio_one_shot.py`:
+  - [x] Add `--spiritual-traditions` argument to argparse.
+  - [x] Implement tradition catalog and dynamic prompt builder.
+  - [x] Update formatting rules and example strings.
+- [x] 2. Update `rebuild_registries_son.py`:
+  - [x] Add tradition classification parser to `spiritual_audit` extractor.
+- [x] 3. Update `control_panel.html`:
+  - [x] Add tradition pill/dropdown filter in story sidebar.
+  - [x] Add tradition badges to Spirithekanon posts in Thread Emulator.
+  - [x] Add tradition sub-selector checkboxes & presets in Composer & CLI Controller.
+- [x] 4. Rebuild registry and verify all UI and script integrations.

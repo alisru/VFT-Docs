@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.transforms as mtransforms
@@ -191,7 +193,7 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     ax.text(2.3, 0.0, "WET", **quality_opts)        # Left
     ax.text(-2.3, 0.0, "DRY", **quality_opts)       # Right
 
-    font_opts = {'color': 'white', 'fontsize': 10, 'ha': 'center', 'va': 'center'}
+    font_opts = {'color': 'white', 'fontsize': 10, 'ha': 'center', 'va': 'center', 'zorder': 4}
 
     # The Objective Boundary (Zone 1 Corners)
     # Note on placement: u is reversed, so +1.0 is Left.
@@ -202,10 +204,44 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
 
     # The Strategic Extremes (Zone 2 Corners)
     # u=+2 is Left
-    ax.text(1.9, 1.9, "JUSTICE\n(Joy)", color='white', fontsize=10, ha='left', va='top') # Outer TL
-    ax.text(-1.9, 1.9, "TYRANNY\n(Anger)", color='white', fontsize=10, ha='right', va='top') # Outer TR
-    ax.text(1.9, -1.9, "STAGNATION\n(Peace)", color='white', fontsize=10, ha='left', va='bottom') # Outer BL
-    ax.text(-1.9, -1.9, "CHAOS\n(Depression)", color='white', fontsize=10, ha='right', va='bottom') # Outer BR
+    ax.text(1.9, 1.9, "PRODUCTIVE\n(Joy)", color='white', fontsize=10, ha='left', va='top', zorder=4) # Outer TL
+    ax.text(-1.9, 1.9, "REDUCTIVE\n(Anger)", color='white', fontsize=10, ha='right', va='top', zorder=4) # Outer TR
+    ax.text(1.9, -1.9, "CONSTRUCTIVE\n(Peace)", color='white', fontsize=10, ha='left', va='bottom', zorder=4) # Outer BL
+    ax.text(-1.9, -1.9, "REGRESSIVE\n(Depression)", color='white', fontsize=10, ha='right', va='bottom', zorder=4) # Outer BR
+
+    # Helper to draw the exact Hegemony Cross (pivoted at 0,0)
+    # Line 1: Greater Evil (-1.0, -1.0) to Top-Left (2.0, 2.0)
+    # Line 2: Lesser Good (1.0, -1.0) to Lesser Evil (-1.0, 1.0)
+    def draw_hegemony_cross(ax, scale=1.0, rotation_deg=0.0, alpha=0.25, color='white', zorder=0.8):
+        # Base vector endpoints in (u, psi) data coordinates
+        # Long beam: from (-1.0 * scale, -1.0 * scale) to (2.0 * scale, 2.0 * scale)
+        # Crossbeam: from (1.0 * scale, -1.0 * scale) to (-1.0 * scale, 1.0 * scale)
+        rad = np.radians(rotation_deg)
+        cos_r, sin_r = np.cos(rad), np.sin(rad)
+
+        def rot(u, psi):
+            return u * cos_r - psi * sin_r, u * sin_r + psi * cos_r
+
+        p_ge_u, p_ge_psi = rot(-1.0 * scale, -1.0 * scale)
+        p_tl_u, p_tl_psi = rot(2.0 * scale, 2.0 * scale)
+        p_lg_u, p_lg_psi = rot(1.0 * scale, -1.0 * scale)
+        p_le_u, p_le_psi = rot(-1.0 * scale, 1.0 * scale)
+
+        lw = 14 * scale
+        cross_opts = dict(color=color, alpha=alpha, solid_capstyle='butt', zorder=zorder)
+        ax.plot([p_ge_u, p_tl_u], [p_ge_psi, p_tl_psi], linewidth=lw, **cross_opts)
+        ax.plot([p_lg_u, p_le_u], [p_lg_psi, p_le_psi], linewidth=lw, **cross_opts)
+
+    # 1. Background Cross (25% opacity, static upright, seated below dots and text)
+    draw_hegemony_cross(ax, scale=1.0, rotation_deg=0.0, alpha=0.25, color='#CCCCCC', zorder=0.8)
+
+    # 2. Dynamic Needle Cross (50% opacity, smaller, rotated to point along Resulting Judgement, below dots and text)
+    mag = np.hypot(real_u, real_psi)
+    if mag > 0.05:
+        # Base long beam points at 45 degrees (+u, +psi). Rotate delta angle so it aligns with (real_u, real_psi)
+        target_angle = np.degrees(np.arctan2(real_psi, real_u))
+        rot_angle = target_angle - 45.0
+        draw_hegemony_cross(ax, scale=0.55, rotation_deg=rot_angle, alpha=0.50, color='white', zorder=0.9)
 
     # Standard Single-Level Graph Plotting
     claim_point, = ax.plot(claim_u, claim_psi, marker='o', color='yellow', markersize=10, fillstyle='none', markeredgewidth=2, label="Stated Claim", zorder=3)
@@ -232,27 +268,27 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
     # Legend, still axes-attached (so it participates correctly in layout/cropping like before),
     # but pushed with a negative x-anchor past the axes' own left edge -- which sits well inboard
     # because of the y-axis label -- so it ends up flush against the actual canvas border instead.
-    legend = ax.legend(handles=legend_handles, loc='upper left', bbox_to_anchor=(-0.155, -0.13),
+    # Legend moved up to be flush with the row of tick labels (Everyone, Others, etc.)
+    legend = ax.legend(handles=legend_handles, loc='center left', bbox_to_anchor=(-0.165, -0.055),
                        ncol=1, facecolor='#111111', edgecolor='white', labelcolor='white', fontsize=8)
 
-    # Description block, seated beside the legend on that same row (not centered across the full
-    # width, not stacked in its own row) so the canvas doesn't need to grow to fit it. Centered
-    # (not left-aligned/cramped) within the space between the legend's right edge and the axes,
-    # at a readable font size -- wrap width and position verified against actual rendered
-    # bounding boxes to stay clear of the watermark below and the xlabel above.
+    # Reserve bottom 14% of canvas for description and watermark
+    plt.tight_layout(rect=[0, 0.14, 1, 1])
+
+    # Description block extending closer to the edges with increased readability and higher vertical placement
     description_lines = (
-        textwrap.wrap('This graph asks and answers the question "Who does this idea benefit?" measuring Relative Morality.', 100)
-        + textwrap.wrap("Benefit is a vector where each unit is 'Scope of Potential'[Group direction, magnitude] cross spectrum of will [active activity to active passivity, magnitude]", 100)
+        textwrap.wrap('This graph asks and answers the question "Who does this idea benefit?" measuring Relative Morality.', 112)
+        + textwrap.wrap("Benefit is a vector where each unit is 'Scope of Potential'[Group direction, magnitude] cross spectrum of will [active activity to active passivity, magnitude]", 112)
+        + textwrap.wrap("The Greater Cross points the way to Good and Joy, its smaller paths lead nowhere. The smaller cross points to the consequences of your choices and actions, the smaller paths what you could but didn't do.", 112)
+        + textwrap.wrap("Your responsibility is whether you'll choose to align with or against Good", 112)
     )
-    description_x_center = 0.626  # midpoint between the legend's right edge (~0.30) and the axes right edge (~0.95)
-    fig.text(description_x_center, 0.058, '\n'.join(description_lines),
-              ha='center', va='center', color='#999999', fontsize=6.5, linespacing=1.4)
+    fig.text(0.50, 0.082, '\n'.join(description_lines),
+             ha='center', va='center', color='#999999', fontsize=8.8, linespacing=1.3)
 
     # Watermark label
-    fig.text(0.5, 0.01, 'Psochic Hegemony Graph: The map of Good and Evil', ha='center', va='bottom',
+    fig.text(0.5, 0.012, 'Psochic Hegemony Graph: The map of Good and Evil', ha='center', va='bottom',
              color='#444444', fontsize=9, fontstyle='italic')
 
-    plt.tight_layout()
     plt.savefig(filename, facecolor=fig.get_facecolor(), dpi=300, bbox_inches='tight')
     plt.close(fig)
 

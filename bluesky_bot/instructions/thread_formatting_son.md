@@ -136,8 +136,8 @@ Format:
 * **Wording**: Explain the Plane Error simply in plain language (e.g. WHAT vs WHO), and expose the forensic bait-and-switch naturally under 280 characters.
 
 ### Element 8: The Social Physics Analysis
-* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Provide a clear, direct, conversational plain-English explanation of the social physics dynamics.
-* **Jargon Ban**: Strictly zero jargon loops (e.g. "Smart Altruistic Loop") or raw arrows (`A -> B`). Explain empowerment, transparency, or pretext and projection as natural human dynamics.
+* **Wording**: Begin with `Social Physics Analysis:\n` (NO bold Markdown `**`). Ground your analysis directly in **The 42 of Social Physics**: audit the actors across the 4 Axes (Power vs. Empowerment, Justification vs. Transparency, Projection vs. Empathy, Manufactured Problems vs. Solutions).
+* **Actor Dynamics**: Expose whether actors are executing a **Smart Selfish Maneuver** (Secret Goal -> Pretext/Manufactured Crisis -> Distraction & Projection) or a **Smart Altruistic Maneuver** (Transparent Goal -> Empowerment -> Resolution via Empathy). Explain these mechanisms organically in plain, compelling English without clunky jargon formulas or raw arrows.
 
 ### Element 9: The Trajectory & Destination
 * **Wording**: Phrased organically: `The Trajectory: The Path of [Path Name].\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward [Outcome/Terminal Zone]` followed by a brief 1-sentence mathematical explanation. Keep the entire combined post strictly under 275 characters.

@@ -4,6 +4,190 @@ import os
 import sys
 import datetime
 
+try:
+    import matplotlib
+    matplotlib.use('Agg')
+except Exception:
+    pass
+
+_CACHED_REGISTRY = None
+
+def build_registry_entry(slug, cfg, authoritative_file, is_live=False):
+    graph_filename = f"{slug}_graph.png"
+    graph_img = cfg.get("graph_img") or graph_filename
+    if not graph_img.startswith("graph_png/"):
+        graph_img = f"graph_png/{graph_img}"
+
+    verdict = cfg.get("verdict")
+    if not verdict and len(cfg.get("posts", [])) > 3:
+        verdict = cfg["posts"][3].replace("Verdict: ", "")
+    if not verdict:
+        verdict = "FAIL — The Path of Deception"
+
+    status = cfg.get("status", "")
+    try:
+        mtime = os.path.getmtime(authoritative_file)
+    except OSError:
+        mtime = 0.0
+    created_at = datetime.datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M:%S")
+
+    registry_story = {
+        "id":        slug,
+        "subject":   cfg.get("subject"),
+        "link":      cfg.get("link"),
+        "claim_u":   cfg.get("claim_u"),
+        "claim_psi": cfg.get("claim_psi"),
+        "real_u":    cfg.get("real_u"),
+        "real_psi":  cfg.get("real_psi"),
+        "mode":      cfg.get("mode", "root"),
+        "status":    status or "COMPLETED DRY RUN",
+        "verdict":   verdict,
+        "graph_img": graph_img,
+        "created_at": created_at,
+    }
+    for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "category", "topic", "event",
+              "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
+              "grounding_url", "claim_rnet", "real_rnet", "claim_z", "real_z",
+              "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
+              "five_word", "compact", "cluster_sources", "is_multi_source", "cross_source_dossier",
+              "aspects", "multiAspect", "spiritual", "spiritual_traditions", "stated_forces", "actual_forces"]:
+        if k in cfg:
+            registry_story[k] = cfg[k]
+
+    if is_live:
+        if not ("LIVE" in status.upper() or cfg.get("rkeys") or cfg.get("post_urls")):
+            registry_story["status"] = "LIVE POSTED"
+    else:
+        if "LIVE" in status.upper() or cfg.get("rkeys") or cfg.get("post_urls"):
+            registry_story["status"] = "COMPLETED DRY RUN"
+
+    return registry_story
+
+def promote_and_register_incremental(is_son=False):
+    global _CACHED_REGISTRY
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    stories_dir = os.path.join(script_dir, "stories")
+    darkroom_dir = os.path.join(stories_dir, "darkroom")
+    graph_png_dir = os.path.join(script_dir, "graph_png")
+
+    from generate_graph import draw_graph
+    from image_card_generator import generate_compact_info_card
+
+    darkroom_paths = glob.glob(os.path.join(darkroom_dir, "factcheck_*.json"))
+    if not darkroom_paths:
+        return 0
+
+    promoted_entries = []
+    for p in darkroom_paths:
+        b = os.path.basename(p)
+        slug = b[len("factcheck_"):-len(".json")] if b.startswith("factcheck_") and b.endswith(".json") else None
+        if not slug:
+            continue
+        try:
+            with open(p, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            cfg = data[0] if isinstance(data, list) else data
+        except Exception as e:
+            print(f"Error reading darkroom file {p}: {e}")
+            continue
+
+        if is_son:
+            try:
+                from rebuild_registries_son import process_and_update_coordinates
+                process_and_update_coordinates(cfg, p)
+            except Exception:
+                pass
+
+        graph_path = os.path.join(graph_png_dir, f"{slug}_graph.png")
+        try:
+            draw_graph(
+                cfg.get("claim_u", 0.0), cfg.get("claim_psi", 0.0),
+                cfg.get("real_u",   0.0), cfg.get("real_psi",  0.0),
+                cfg.get("subject", "Story"),
+                graph_path,
+                macro_event=cfg.get("macro_event", ""),
+                macro_claim_u=cfg.get("macro_claim_u"),
+                macro_claim_psi=cfg.get("macro_claim_psi"),
+                macro_real_u=cfg.get("macro_real_u"),
+                macro_real_psi=cfg.get("macro_real_psi")
+            )
+        except Exception as ge:
+            print(f"Error generating graph for {slug}: {ge}")
+
+        info_card_path = os.path.join(graph_png_dir, f"{slug}_info_card.png")
+        try:
+            generate_compact_info_card(cfg, info_card_path)
+        except Exception:
+            pass
+
+        dest_path = os.path.join(stories_dir, b)
+        try:
+            with open(dest_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            os.remove(p)
+            print(f"Promoted {slug} from darkroom to stories/")
+        except Exception as e:
+            print(f"Error promoting {slug}: {e}")
+            continue
+
+        reg_entry = build_registry_entry(slug, cfg, dest_path, is_live=False)
+        promoted_entries.append((b, reg_entry))
+
+    if promoted_entries:
+        # 1. Fast-prepend to stories/index.json
+        index_path = os.path.join(stories_dir, "index.json")
+        cur_index = []
+        if os.path.exists(index_path):
+            try:
+                with open(index_path, "r", encoding="utf-8") as f:
+                    cur_index = json.load(f)
+            except Exception:
+                cur_index = []
+        new_names = [name for name, _ in promoted_entries if name not in cur_index]
+        if new_names:
+            cur_index = new_names + cur_index
+            try:
+                with open(index_path, "w", encoding="utf-8") as f:
+                    json.dump(cur_index, f, indent=2, ensure_ascii=False)
+            except Exception as e:
+                print(f"Warning: Failed to update stories/index.json: {e}")
+
+        # 2. Fast-prepend to stories_registry.js
+        registry_path = os.path.join(script_dir, "stories_registry.js")
+        if _CACHED_REGISTRY is None:
+            _CACHED_REGISTRY = []
+            if os.path.exists(registry_path):
+                try:
+                    with open(registry_path, "r", encoding="utf-8") as f:
+                        raw = f.read().strip()
+                    prefix = "window.ALETHEIA_STORIES_REGISTRY = "
+                    if raw.startswith(prefix):
+                        raw_json = raw[len(prefix):].rstrip(";").strip()
+                        loaded = json.loads(raw_json)
+                        if isinstance(loaded, list):
+                            _CACHED_REGISTRY = loaded
+                except Exception as ex:
+                    print(f"Warning: Failed to parse existing stories_registry.js, initializing empty: {ex}")
+                    _CACHED_REGISTRY = []
+
+        if not isinstance(_CACHED_REGISTRY, list):
+            _CACHED_REGISTRY = []
+
+        new_reg_entries = [entry for _, entry in promoted_entries]
+        combined = new_reg_entries + [e for e in _CACHED_REGISTRY if isinstance(e, dict) and e.get("id") not in {x.get("id") for x in new_reg_entries}]
+        _CACHED_REGISTRY = combined
+
+        try:
+            with open(registry_path, "w", encoding="utf-8") as f:
+                f.write("window.ALETHEIA_STORIES_REGISTRY = ")
+                json.dump(combined, f, separators=(',', ':'), ensure_ascii=False)
+                f.write(";\n")
+            print(f"Fast-registered {len(promoted_entries)} stories to stories_registry.js (Total: {len(combined)})")
+        except Exception as e:
+            print(f"Warning: Failed to fast-write stories_registry.js: {e}")
+
+    return len(promoted_entries)
+
 def rebuild_registries():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     sys.path.append(script_dir)
@@ -269,11 +453,12 @@ def rebuild_registries():
     # 5. Write stories_registry.js (single file, next to control_panel.html)
     combined = active_live_stories + active_stories
     combined.sort(key=lambda x: x.get("created_at", ""), reverse=True)
-    registry_js = f"window.ALETHEIA_STORIES_REGISTRY = {json.dumps(combined, separators=(',', ':'), ensure_ascii=False)};\n"
     registry_path = os.path.join(script_dir, "stories_registry.js")
     try:
         with open(registry_path, "w", encoding="utf-8") as f:
-            f.write(registry_js)
+            f.write("window.ALETHEIA_STORIES_REGISTRY = ")
+            json.dump(combined, f, separators=(',', ':'), ensure_ascii=False)
+            f.write(";\n")
         print(f"Compiled stories_registry.js ({len(combined)} stories, {len(active_live_stories)} live)")
         
         # Log how many stories are in the harvested stories buffer (queue)

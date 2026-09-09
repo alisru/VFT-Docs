@@ -12,6 +12,8 @@ VERIFIED_NEWS_DOMAINS = {
     'reuters.com', 'apnews.com', 'nytimes.com', 'washingtonpost.com',
     'bbcnews.com', 'motherjones.com', 'goodnewsnetwork.org', 'theguardian.com',
     'bloomberg.com', 'npr.org', 'cnn.com', 'foxnews.com', 'wsj.com',
+    'dailymail.co.uk', 'nypost.com', 'washingtonexaminer.com', 'thefederalist.com',
+    'washingtontimes.com', 'dailycaller.com', 'breitbart.com',
     'latimes.com', 'abcnews.go.com', 'nbcnews.com', 'cbsnews.com',
     'alisru.bsky.social', 'alethekanon.bsky.social', 'judgement-bot.bsky.social',
     'theintercept.com', 'propublica.org', 'politico.com', 'axios.com'

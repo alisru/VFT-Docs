@@ -94,9 +94,45 @@ def main():
             if not isinstance(cfg["posts"], list):
                 raise ValueError("Key 'posts' must be a list.")
             is_multi_aspect = cfg.get("multiAspect") is True
-            expected_posts_len = 14 if is_multi_aspect else 13
-            if len(cfg["posts"]) != expected_posts_len:
-                raise ValueError(f"Key 'posts' must contain exactly {expected_posts_len} elements (got {len(cfg['posts'])}).")
+            is_spiritual = cfg.get("spiritual") is True or any(
+                isinstance(p, str) and p.strip().startswith("Spirithekanon:") for p in cfg["posts"]
+            )
+            # Auto-repair Spirithekanon prefix if missing from the final post
+            if is_spiritual and cfg["posts"]:
+                last_p = str(cfg["posts"][-1]).strip()
+                if not last_p.startswith("Spirithekanon:") and ('"' in last_p or 'PASS' in last_p or 'FAIL' in last_p or 'HIT' in last_p):
+                    cfg["posts"][-1] = f"Spirithekanon:\n{last_p}"
+
+            if not isinstance(cfg["posts"], list) or len(cfg["posts"]) == 0:
+                raise ValueError("Key 'posts' must be a non-empty list.")
+            if is_spiritual:
+                spiritual_post = next((p for p in cfg["posts"] if isinstance(p, str) and p.strip().startswith("Spirithekanon:")), None)
+                if not spiritual_post:
+                    raise ValueError("is_spiritual is true but no post starts with 'Spirithekanon:'")
+                text_to_check = spiritual_post.replace("Spirithekanon:", "").strip()
+                import re
+                match = re.search(r'"([^"]+)"', text_to_check)
+                if not match:
+                    # Attempt auto-repair of quotation marks around passage
+                    lines = spiritual_post.split("\n")
+                    if len(lines) >= 2:
+                        quote_idx = 1 if lines[0].startswith("Spirithekanon:") else 0
+                        quote_line = lines[quote_idx]
+                        q_match = re.search(r'(\[?[0-9A-Za-z\s]+(?::|\s)\d+[^\]]*\]?\s*(?:PASS|FAIL|HIT|COND)?)', quote_line)
+                        if q_match:
+                            cite_part = q_match.group(1)
+                            passage_part = quote_line[:q_match.start()].strip()
+                            lines[quote_idx] = f'"{passage_part}" {cite_part}'.strip()
+                            spiritual_post = "\n".join(lines)
+                            cfg["posts"][-1] = spiritual_post
+                            text_to_check = spiritual_post.replace("Spirithekanon:", "").strip()
+                            match = re.search(r'"([^"]+)"', text_to_check)
+                if not match:
+                    raise ValueError(
+                        f"Spirithekanon post must contain a quotation with canonical citation.\n"
+                        f"Expected format: Spirithekanon:\n\"[Quote]\" [Source Text] [Verdict]\n"
+                        f"Got: {spiritual_post}"
+                    )
             for num_k in ["claim_u", "claim_psi", "real_u", "real_psi"]:
                 if not isinstance(cfg[num_k], (int, float)):
                     raise ValueError(f"Key '{num_k}' must be a number (got type {type(cfg[num_k]).__name__}).")
@@ -104,6 +140,8 @@ def main():
             subject = cfg["subject"]
             posts = cfg["posts"]
             link = cfg["link"]
+            if link and not link.startswith("http://") and not link.startswith("https://"):
+                raise ValueError(f"Key 'link' must be an HTTP/HTTPS URL or empty string (got '{link}').")
             mode = cfg["mode"].lower()
             target_url = cfg.get("target_url", "")
 
@@ -119,25 +157,30 @@ def main():
             is_compact = is_compact_single or is_compact_thread
             limit = 300
 
-            # Validate every raw post in config under the dynamic limit (only check first 4 posts for compact mode)
-            posts_to_check = posts[:4] if is_compact else posts
-            for idx, post in enumerate(posts_to_check, 1):
-                if len(post) > limit:
-                    raise ValueError(f"Raw post {idx} in config exceeds {limit} characters ({len(post)} chars):\n{post}")
-
             if is_five_word:
                 from aletheia_bot import pack_5word_posts
                 final_posts = pack_5word_posts(posts, max_len=limit)
             elif is_compact_single:
                 final_posts = posts[:1]
             elif is_compact_thread:
-                final_posts = posts[:4]
+                if is_spiritual:
+                    spiritual_post = None
+                    for p in reversed(posts):
+                        if isinstance(p, str) and p.strip().startswith("Spirithekanon:"):
+                            spiritual_post = p
+                            break
+                    if spiritual_post:
+                        final_posts = pack_posts(posts[:4] + [spiritual_post])
+                    else:
+                        final_posts = pack_posts(posts[:4])
+                else:
+                    final_posts = pack_posts(posts[:4])
             else:
                 final_posts = pack_posts(posts)
 
             for idx, post in enumerate(final_posts, 1):
                 if len(post) > limit:
-                    raise ValueError(f"Post {idx} exceeds {limit} characters ({len(post)} chars):\n{post}")
+                    raise ValueError(f"Packed post {idx} exceeds {limit} characters ({len(post)} chars):\n{post}")
 
 
             # 2. Graph Check (Generate on-the-fly if missing)

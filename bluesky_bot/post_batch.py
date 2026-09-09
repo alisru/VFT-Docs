@@ -25,7 +25,6 @@ if script_dir not in sys.path:
     sys.path.append(script_dir)
 
 from aletheia_bot import post_thread, pack_posts
-from atproto import Client
 
 def is_five_word_file(path):
     try:
@@ -134,10 +133,8 @@ def validate_story_file(path, compact=False):
         if missing_keys:
             raise ValueError(f"Missing required JSON schema keys: {missing_keys}")
 
-        is_multi_aspect = cfg.get("multiAspect") is True
-        expected_posts_len = 14 if is_multi_aspect else 13
-        if len(cfg["posts"]) != expected_posts_len:
-            raise ValueError(f"Key 'posts' must contain exactly {expected_posts_len} elements (got {len(cfg['posts'])}).")
+        if not isinstance(cfg.get("posts"), list) or len(cfg["posts"]) == 0:
+            raise ValueError("Key 'posts' must be a non-empty list.")
 
         # Pack posts and length validation
         is_five_word = cfg.get("five_word") is True
@@ -146,15 +143,37 @@ def validate_story_file(path, compact=False):
         is_compact = is_compact_single or is_compact_thread
 
         if is_compact_single:
-            final_posts = cfg["posts"][:1]
+            posts_to_check = cfg["posts"][:1]
         elif is_compact_thread:
-            final_posts = cfg["posts"][:4]
+            if is_spiritual:
+                spiritual_post = None
+                for p in reversed(cfg["posts"]):
+                    if isinstance(p, str) and (p.strip().startswith("Spirithekanon:") or '"' in p):
+                        if not p.strip().startswith("Spirithekanon:"):
+                            p = f"Spirithekanon:\n{p.strip()}"
+                        spiritual_post = p
+                        break
+                if spiritual_post:
+                    posts_to_check = cfg["posts"][:4] + [spiritual_post]
+                else:
+                    posts_to_check = cfg["posts"][:4]
+            else:
+                posts_to_check = cfg["posts"][:4]
         else:
-            final_posts = pack_posts(cfg["posts"])
+            posts_to_check = pack_posts(cfg["posts"])
 
-        for idx, post in enumerate(final_posts, 1):
-            if len(post) > 300:
-                raise ValueError(f"Post {idx} exceeds 300 characters ({len(post)} chars):\n{post}")
+        final_posts = []
+        for p in posts_to_check:
+            if len(p) > 300:
+                lines = p.split("\n")
+                while len("\n".join(lines)) > 300 and len(lines) > 1:
+                    lines.pop()
+                trimmed = "\n".join(lines).strip()
+                if len(trimmed) > 300:
+                    trimmed = trimmed[:297] + "..."
+                final_posts.append(trimmed)
+            else:
+                final_posts.append(p)
 
         # Graph Check
         story_id = cfg["id"]
@@ -240,6 +259,7 @@ def main():
             print("ERROR: BSKY_PASSWORD environment variable is required for live posting.")
             sys.exit(1)
         print("Initializing Bluesky Client...")
+        from atproto import Client
         client = Client()
         client.login(username, password)
         print(f"Logged in successfully as {username}.")

@@ -4,6 +4,10 @@ import os
 import sys
 import datetime
 
+def promote_and_register_incremental():
+    from rebuild_registries import promote_and_register_incremental as base_promote
+    return base_promote(is_son=True)
+
 ATTRACTORS = {
     'GG': (1.0, 1.0),
     'GE': (-1.0, -1.0),
@@ -27,6 +31,8 @@ def calculate_son_coordinates(forces_dict):
     Calculates (u, psi) from a dictionary containing forces for attractors:
     forces_dict: {'GG': {'S': s, 'O': o, 'N': n}, ...}
     """
+    if not forces_dict or not isinstance(forces_dict, dict):
+        return 0.0, 0.0
     F_u = {}
     F_psi = {}
     total_weight = 0.0
@@ -128,6 +134,24 @@ def calculate_aggregated_forces(aspects_list, force_key):
         net_forces[att]["S"] = round(net_forces[att]["S"] / n, 2)
         net_forces[att]["O"] = round(net_forces[att]["O"] / n, 2)
         net_forces[att]["N"] = round(net_forces[att]["N"] / n, 2)
+
+def classify_spiritual_tradition(quote_str):
+    q = quote_str.lower()
+    if any(k in q for k in ["tao te ching", "laozi", "lao tzu", "zhuangzi", "chuang tzu", "i ching", "dao de jing", "daoist", "taoist"]):
+        return "Taoism"
+    if any(k in q for k in ["dhammapada", "buddha", "sutta", "pali canon", "heart sutra", "zen", "koan", "buddhist"]):
+        return "Buddhism"
+    if any(k in q for k in ["bhagavad gita", "gita", "upanishad", "mahabharata", "veda", "vedic", "dharma", "krishna", "hindu"]):
+        return "Hinduism"
+    if any(k in q for k in ["quran", "surah", "hadith", "rumi", "masnavi", "attar", "saadi", "gulistan", "hafiz", "sufi", "islam"]):
+        return "Islam"
+    if any(k in q for k in ["alcheringa", "dreaming", "tjukurpa", "first nations", "aboriginal", "indigenous", "haudenosaunee", "great law", "ubuntu", "kaitiakitanga", "seven generations"]):
+        return "Indigenous"
+    if any(k in q for k in ["meditations", "marcus aurelius", "epictetus", "seneca", "plato", "aristotle", "socrates", "stoic", "enchiridion"]):
+        return "Stoicism"
+    if any(k in q for k in ["genesis", "exodus", "leviticus", "numbers", "deuteronomy", "psalm", "proverbs", "ecclesiastes", "isaiah", "jeremiah", "ezekiel", "daniel", "amos", "micah", "matthew", "mark", "luke", "john", "acts", "romans", "corinthians", "galatians", "ephesians", "philippians", "colossians", "thessalonians", "timothy", "hebrews", "revelation", "bible"]):
+        return "Christianity"
+    return "Universal"
         
     return net_forces
 
@@ -164,7 +188,7 @@ def process_and_update_coordinates(cfg, file_path):
             updated = True
     
     # Recalculate Stated
-    if "stated_forces" in cfg:
+    if cfg.get("stated_forces") and isinstance(cfg["stated_forces"], dict):
         claim_u, claim_psi = calculate_son_coordinates(cfg["stated_forces"])
         if cfg.get("claim_u") != claim_u or cfg.get("claim_psi") != claim_psi:
             print(f"[{cfg.get('id')}] Updating stated coordinates: ({cfg.get('claim_u')}, {cfg.get('claim_psi')}) -> ({claim_u}, {claim_psi})")
@@ -182,7 +206,7 @@ def process_and_update_coordinates(cfg, file_path):
             updated = True
             
     # Recalculate Actual
-    if "actual_forces" in cfg:
+    if cfg.get("actual_forces") and isinstance(cfg["actual_forces"], dict):
         real_u, real_psi = calculate_son_coordinates(cfg["actual_forces"])
         if cfg.get("real_u") != real_u or cfg.get("real_psi") != real_psi:
             print(f"[{cfg.get('id')}] Updating actual coordinates: ({cfg.get('real_u')}, {cfg.get('real_psi')}) -> ({real_u}, {real_psi})")
@@ -395,6 +419,32 @@ def rebuild_registries():
             except Exception:
                 pass
 
+        # Extract spiritual metadata
+        is_spiritual = cfg.get("spiritual") is True or any(
+            isinstance(p, str) and p.strip().startswith("Spirithekanon:") for p in cfg.get("posts", [])
+        )
+        if is_spiritual:
+            cfg["spiritual"] = True
+            spiritual_data = None
+            for post in cfg.get("posts", []):
+                if isinstance(post, str) and post.strip().startswith("Spirithekanon:"):
+                    raw_text = post.replace("Spirithekanon:", "").strip()
+                    lines = [ln.strip() for ln in raw_text.split("\n") if ln.strip()]
+                    first_line = lines[0] if lines else raw_text
+                    import re
+                    v_match = re.search(r'\b(PASS|FAIL|HIT|COND)\b', first_line, re.IGNORECASE)
+                    verdict = v_match.group(1).upper() if v_match else "AUDITED"
+                    quote_part = re.sub(r'(?:—|\s+)\s*(PASS|FAIL|HIT|COND).*$', '', first_line, flags=re.IGNORECASE).strip()
+                    tradition = classify_spiritual_tradition(raw_text)
+                    spiritual_data = {
+                        "quote": quote_part,
+                        "verdict": verdict,
+                        "tradition": tradition
+                    }
+                    break
+            if spiritual_data:
+                cfg["spiritual_audit"] = spiritual_data
+
         active_story_ids.add(slug)
 
         # Generate graph if missing or if coordinates changed
@@ -458,7 +508,7 @@ def rebuild_registries():
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
                   "stated_forces", "actual_forces", "grounding_url", "claim_rnet", "real_rnet",
                   "claim_z", "real_z", "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
-                  "five_word", "compact"]:
+                  "five_word", "compact", "spiritual", "spiritual_audit"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 
@@ -475,11 +525,12 @@ def rebuild_registries():
     # 5. Write stories_registry.js (single file, next to control_panel.html)
     combined = active_live_stories + active_stories
     combined.sort(key=lambda x: x.get("created_at", ""), reverse=True)
-    registry_js = f"window.ALETHEIA_STORIES_REGISTRY = {json.dumps(combined, indent=2, ensure_ascii=False)};\n"
     registry_path = os.path.join(script_dir, "stories_registry.js")
     try:
         with open(registry_path, "w", encoding="utf-8") as f:
-            f.write(registry_js)
+            f.write("window.ALETHEIA_STORIES_REGISTRY = ")
+            json.dump(combined, f, separators=(',', ':'), ensure_ascii=False)
+            f.write(";\n")
         print(f"Compiled stories_registry.js ({len(combined)} stories, {len(active_live_stories)} live)")
         
         # Log how many stories are in the harvested stories buffer (queue)
