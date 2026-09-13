@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reality Classification v2 — AEC Invariant Catalog</title>
+  <style>
+    :root {
+      --bg: #090d13;
+      --card-bg: #121820;
+      --card-border: #222e3d;
+      --card-border-hover: #3b506b;
+      --text: #c5d1de;
+      --text-muted: #79889b;
+      --text-bright: #ffffff;
+      --accent: #38bdf8;
+      --accent-green: #34d399;
+      --accent-purple: #c084fc;
+      --accent-amber: #fbbf24;
+      --accent-red: #f87171;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 20px 28px;
+    }
+    header {
+      max-width: 1440px;
+      margin: 0 auto 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand h1 {
+      font-size: 22px;
+      color: var(--text-bright);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand h1 span {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .brand p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .stats {
+      display: flex;
+      gap: 12px;
+    }
+    .stat-badge {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    .stat-badge strong { color: var(--accent-green); }
+    .controls {
+      max-width: 1440px;
+      margin: 0 auto 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 320px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-bright);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #1b2431;
+      color: var(--text-bright);
+      border-color: var(--accent);
+    }
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 480px 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 1000px) {
+      main { grid-template-columns: 1fr; }
+    }
+    .list-pane {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      height: calc(100vh - 190px);
+      overflow-y: auto;
+      padding: 12px;
+    }
+    .aec-card {
+      background: #0d1218;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .aec-card:hover {
+      border-color: var(--card-border-hover);
+      transform: translateY(-1px);
+    }
+    .aec-card.selected {
+      border-color: var(--accent);
+      background: #141c26;
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .form-id {
+      font-size: 11px;
+      font-family: monospace;
+      font-weight: 700;
+      color: var(--accent-purple);
+      background: rgba(192, 132, 252, 0.12);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .closure-badge {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-amber);
+      background: rgba(251, 191, 36, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .action-sequence {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .action-sequence span {
+      color: var(--accent);
+    }
+    .card-strain-row {
+      font-size: 12px;
+      color: var(--accent-red);
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+    .card-effect-row {
+      font-size: 12px;
+      color: var(--accent-green);
+      margin-bottom: 10px;
+      display: flex;
+      gap: 6px;
+    }
+    .word-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .label-tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #1e293b;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .alias-tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #18202c;
+      color: var(--text-muted);
+    }
+    .detail-pane {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 28px;
+      height: calc(100vh - 190px);
+      overflow-y: auto;
+    }
+    .detail-empty {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .detail-header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .detail-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .detail-action-headline {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-bright);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .detail-action-headline span {
+      color: var(--accent);
+    }
+    .detail-process-desc {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .triad-box {
+      background: #0d1218;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .box-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .triad-step-grid {
+      display: grid;
+      grid-template-columns: 70px 1fr 1fr 1fr;
+      gap: 12px;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c2633;
+    }
+    .step-label {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    .step-action { color: var(--text-bright); font-weight: 600; }
+    .step-strain { color: var(--accent-red); }
+    .step-effect { color: var(--accent-green); }
+    .words-box {
+      background: #0d1218;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+    .planes-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .plane-card {
+      background: #0d1218;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 14px;
+    }
+    .plane-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .plane-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-purple);
+    }
+    .plane-interrog {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .plane-ans {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-green);
+      margin-bottom: 4px;
+    }
+    .plane-body {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>Reality Classification v2 <span>AEC Invariant Catalog</span></h1>
+      <p>Indexed by Action-Strain-Effect Invariant Forms. Surface words are applied to describe processes.</p>
+    </div>
+    <div class="stats">
+      <div class="stat-badge">AEC Invariant Forms: <strong id="stat-forms">0</strong></div>
+      <div class="stat-badge">Descriptive Words Mapped: <strong id="stat-words">0</strong></div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="search" class="search-input" placeholder="Search by Action, Strain, Effect, Word, or ID (e.g. 'lift', 'slip', 'store', 'AEC-045')...">
+    <button class="filter-btn active" data-filter="all">All Topologies</button>
+    <button class="filter-btn" data-filter="0">Level 0 (Open Axis)</button>
+    <button class="filter-btn" data-filter="1">Level 1 (Wall / Threshold)</button>
+    <button class="filter-btn" data-filter="2">Level 2 (Joint / Corner)</button>
+    <button class="filter-btn" data-filter="3">Level 3 (Pocket / Cradle)</button>
+    <button class="filter-btn" data-filter="4">Level 4 (Enclosure / Chamber)</button>
+  </div>
+
+  <main>
+    <div class="list-pane" id="aec-list"></div>
+    <div class="detail-pane" id="detail-view">
+      <div class="detail-empty">Select an AEC Invariant Form to inspect its physical-informational mechanics.</div>
+    </div>
+  </main>
+
+  <script src="./aec_dictionary.js"></script>
+
+  <script>
+    let aecData = null;
+    let selectedKey = null;
+    let currentFilter = "all";
+
+    function initViewer(data) {
+      aecData = data;
+      document.getElementById('stat-forms').textContent = aecData.metadata.total_aec_forms;
+      document.getElementById('stat-words').textContent = aecData.metadata.total_indexed_words;
+      
+      const keys = Object.keys(aecData.aec_forms);
+      if (keys.length > 0 && !selectedKey) {
+        selectedKey = keys[0];
+      }
+      renderList();
+      if (selectedKey) {
+        selectForm(selectedKey);
+      }
+    }
+
+    if (typeof window.AEC_DICT !== 'undefined' && window.AEC_DICT) {
+      initViewer(window.AEC_DICT);
+    } else {
+      fetch('aec_dictionary.json')
+        .then(r => r.json())
+        .then(initViewer)
+        .catch(err => {
+          console.error("Failed to load aec_dictionary:", err);
+        });
+    }
+
+    function renderList() {
+      const listEl = document.getElementById('aec-list');
+      listEl.innerHTML = '';
+      const query = document.getElementById('search').value.toLowerCase().trim();
+
+      const forms = aecData.aec_forms;
+      const wordIndex = aecData.word_index;
+
+      let matchedKeyFromWord = null;
+      if (query && wordIndex[query]) {
+        matchedKeyFromWord = wordIndex[query].aec_key;
+      }
+
+      Object.entries(forms).forEach(([key, f]) => {
+        const lvl = f.topology?.closure_level ?? 0;
+        if (currentFilter !== "all" && lvl.toString() !== currentFilter) {
+          return;
+        }
+
+        const id = f.form_id.toLowerCase();
+        const actions = f.invariant_triad.action.join(' ').toLowerCase();
+        const strains = f.invariant_triad.strain.join(' ').toLowerCase();
+        const effects = f.invariant_triad.effect.join(' ').toLowerCase();
+        const desc = f.definitive_process.toLowerCase();
+        const primary = (f.descriptive_words.primary_label || '').toLowerCase();
+        const aliases = (f.descriptive_words.aliases || []).map(a => a.toLowerCase());
+
+        const matches = !query ||
+          key === matchedKeyFromWord ||
+          id.includes(query) ||
+          actions.includes(query) ||
+          strains.includes(query) ||
+          effects.includes(query) ||
+          desc.includes(query) ||
+          primary.includes(query) ||
+          aliases.some(a => a.includes(query));
+
+        if (!matches) return;
+
+        const actionSteps = f.invariant_triad.action.join(' ➔ ');
+        const strainStr = f.invariant_triad.strain.join(', ');
+        const effectStr = f.invariant_triad.effect.join(', ');
+
+        const card = document.createElement('div');
+        card.className = `aec-card ${key === selectedKey ? 'selected' : ''}`;
+        card.innerHTML = `
+          <div class="card-top">
+            <span class="form-id">${f.form_id}</span>
+            <span class="closure-badge">Level ${lvl} (${f.topology?.boundary_type || ''})</span>
+          </div>
+          <div class="action-sequence">${actionSteps}</div>
+          <div class="card-strain-row">
+            <span style="opacity:0.6;">Straining against:</span>
+            <span>${strainStr}</span>
+          </div>
+          <div class="card-effect-row">
+            <span style="opacity:0.6;">Resolving to:</span>
+            <span>${effectStr}</span>
+          </div>
+          <div class="word-tags">
+            <span style="font-size:11px;color:var(--text-muted);margin-right:2px;">Described as:</span>
+            ${primary ? `<span class="label-tag">${primary}</span>` : ''}
+            ${aliases.map(a => `<span class="alias-tag">${a}</span>`).join('')}
+          </div>
+        `;
+        card.onclick = () => selectForm(key);
+        listEl.appendChild(card);
+      });
+    }
+
+    function selectForm(key) {
+      selectedKey = key;
+      renderList();
+      const f = aecData.aec_forms[key];
+      if (!f) return;
+
+      const detailEl = document.getElementById('detail-view');
+      const lvl = f.topology?.closure_level ?? 0;
+      const btype = f.topology?.boundary_type ?? "open";
+      const triad = f.invariant_triad;
+
+      // 3 Step Rows
+      let stepsHtml = '';
+      for (let i = 0; i < 3; i++) {
+        stepsHtml += `
+          <div class="triad-step-grid">
+            <span class="step-label">Step ${i+1}</span>
+            <span class="step-action">${triad.action[i] || '—'}</span>
+            <span class="step-strain">${triad.strain[i] || '—'}</span>
+            <span class="step-effect">${triad.effect[i] || '—'}</span>
+          </div>
+        `;
+      }
+
+      // Planes
+      let planesHtml = '';
+      const planes = f.planes || {};
+      ['Q1','Q2','Q3','Q4','Q5','Q6','Q7'].forEach(q => {
+        const pl = planes[q];
+        if (!pl) return;
+        planesHtml += `
+          <div class="plane-card">
+            <div class="plane-top">
+              <span class="plane-title">${q} (${pl.dimension} / ${pl.anchor})</span>
+              <span class="plane-interrog">${pl.interrogative}</span>
+            </div>
+            <div class="plane-ans">${pl.manifestation_answer || ''}</div>
+            <div class="plane-body">${pl.process_in_context || ''}</div>
+          </div>
+        `;
+      });
+
+      const primary = f.descriptive_words.primary_label || '';
+      const aliases = f.descriptive_words.aliases || [];
+
+      detailEl.innerHTML = `
+        <div class="detail-header">
+          <div class="detail-meta-row">
+            <span class="form-id" style="font-size:13px;padding:3px 8px;">${f.form_id}</span>
+            <span class="closure-badge">Topological Level ${lvl} (${btype})</span>
+            <span style="font-size:12px;color:var(--text-muted);">Concept: ${f.concept_type}</span>
+          </div>
+          <div class="detail-action-headline">
+            ${triad.action.join(' <span>➔</span> ')}
+          </div>
+          <div class="detail-process-desc">${f.definitive_process}</div>
+        </div>
+
+        <div class="triad-box">
+          <div class="box-title">Invariant Action-Strain-Effect Triad Matrix</div>
+          <div style="display:grid;grid-template-columns:70px 1fr 1fr 1fr;gap:12px;font-size:11px;text-transform:uppercase;color:var(--text-muted);font-weight:700;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid #222e3d;">
+            <span>Stage</span>
+            <span style="color:var(--text-bright);">Action Vector</span>
+            <span style="color:var(--accent-red);">Resisting Strain</span>
+            <span style="color:var(--accent-green);">Resolved Effect</span>
+          </div>
+          ${stepsHtml}
+        </div>
+
+        <div class="words-box">
+          <div class="box-title">Descriptive Language Mapped to this Process</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <strong style="font-size:12px;color:var(--text-muted);">Primary Label:</strong>
+            <span class="label-tag" style="font-size:13px;padding:4px 10px;">${primary || 'None Assigned'}</span>
+          </div>
+          ${aliases.length > 0 ? `
+            <div style="display:flex;align-items:center;gap:10px;">
+              <strong style="font-size:12px;color:var(--text-muted);">Surface Aliases:</strong>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                ${aliases.map(a => `<span class="alias-tag" style="font-size:12px;padding:3px 8px;">${a}</span>`).join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+
+        <div class="box-title" style="margin-bottom:14px;">7-Plane Reality Manifestation Matrix</div>
+        <div class="planes-container">
+          ${planesHtml}
+        </div>
+      `;
+    }
+
+    // Search and filter hooks
+    document.getElementById('search').addEventListener('input', renderList);
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        renderList();
+      });
+    });
+  </script>
+</body>
+</html>

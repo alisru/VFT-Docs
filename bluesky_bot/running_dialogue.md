@@ -647,6 +647,23 @@ No dry header. Just a punchy scene-setter, then the metadata.
   - Repaired all quarantined draft JSONs (`domestic-ai-safety-oversight-bill`, `tech-profit-shifting-audit`, `trump-statecraft-crink-alignment-audit`, `todd_blanche_jan6_hypocrisy`), restored them to `stories/`, and generated missing trajectory & split info cards.
 - **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Ensuring 100% pre-flight compliance across all generated drafts with zero schema degradation.
 
+### Intent 102: Elimination of Hardcoded Direct Reply Templates via Evaluator Fallback Sequence
+*Status: Completed*
+- **Ground-Truth Fact Sheet Extraction**: Built deterministic empirical data extraction in `bluesky_bot/audit_crossref.py` that queries 10,800+ audits and supplies verified numbers (domain, total cases, neg/pos %, mean coordinates, asymmetry ratio, verdict, and precedent case IDs) to the LLM.
+- **Zero Hardcoded Punchlines**: Eliminated canned strings (like `"slapping 'Period' on it is tribal cap"`). The language model synthesizes organic replies in the chosen persona (Brothekanon, Aletheia, Awwthekanon, Spirithekanon) directly addressing the target post's exact phrasing while adhering strictly to character budgets ($\le 285$ chars per post).
+- **Evaluator Fallback Sequence Integration**: Directly reuses `DEFAULT_FALLBACKS` (`gemini-3.8-flash`, `gemini-3.7-flash`, `gemini-2.5-flash`, etc.) with automatic failover (tested live with 503 failover from 3.7 to 2.5).
+- **Morality-Will Audit**: (υ=+1.9, ψ=+2.0) -> Systemic Justice / Productive Justice. Eliminating artificial canned scripts and grounding dynamic multi-post AI argumentation in immutable, verified audit database receipts.
 
-
-
+### Intent 103: Drag-and-Drop Perspective Queue for Multi-Reply Threads
+*Status: Completed*
+- **Continuous Narrative Budget ($N \times 280$ chars)**: Replaced rigid per-post outline checklists with a flexible narrative queue where Post 1 anchors the empirical receipt & card, while Posts 2..N flow naturally as an unconstrained perspective commentary.
+- **Ordered Perspective Queue**:
+  - Built support in `bluesky_bot/audit_crossref.py` for passing an ordered queue of perspective slots (`receipt`, `bro`, `aletheia`, `aww`, `spirit`, `custom:<focus>`).
+  - Added `--perspectives` CLI argument to `bluesky_bot/direct_reply_dispatcher.py` to allow passing delimited perspective queues.
+- **Drag-and-Drop Perspective Queue Box in Launcher (`AletheiaLauncher.pyw`)**:
+  - Replaced the static "Replies" combobox with a `DragDropListbox` populated with individual perspective items.
+  - Added dedicated quick-add toolbar buttons: `+ Brothekanon`, `+ Aletheia`, `+ Awwthekanon`, `+ Spirithekanon`, `+ Custom Focus`, plus `Remove` and `Reset`.
+  - Added a `Custom Focus` text field allowing operators to inject custom thematic angles (e.g., `"how culture war tribalism profits media conglomerates"`).
+  - Users can reorder perspective cards via drag-and-drop, directly dictating thread structure.
+- **Live Verification**: Tested 4-post sequence (`receipt` -> `bro` -> `spirit` -> `custom:how culture war tribalism profits media conglomerates`) on Gemini 3.8 Flash. Every post remained strictly under 280 characters with authentic perspective transitions and zero canned clichés.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Giving the operator total tactile control over narrative sequencing without compromising empirical anchoring or model creativity.

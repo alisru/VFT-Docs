@@ -126,6 +126,7 @@ class AletheiaLauncherApp:
         # Application state for parallel processes
         self.eval_process = None
         self.post_process = None
+        self.reply_process = None
         self.log_queue = queue.Queue()
 
         # Dynamically import available/default models from the one-shot script
@@ -147,6 +148,7 @@ class AletheiaLauncherApp:
         except Exception as import_err:
             print(f"Warning: Failed to dynamically load models from bot script: {import_err}")
             default_list = [
+                "gemini-3.8-flash",
                 "gemini-3.7-flash",
                 "gemini-3.5-flash",
                 "gemini-3.5-flash-lite",
@@ -430,11 +432,24 @@ class AletheiaLauncherApp:
     def log_post(self, text):
         self.log_queue.put(("post", text))
 
+    def log_reply(self, text):
+        self.log_queue.put(("reply", text))
+
+    def clear_reply_console(self):
+        if hasattr(self, 'reply_text'):
+            self.reply_text.delete("1.0", tk.END)
+
     def read_log_queue(self):
         try:
             while True:
                 target, msg = self.log_queue.get_nowait()
-                text_widget = self.eval_text if target == "eval" else self.post_text
+                if target == "eval":
+                    text_widget = self.eval_text
+                elif target == "reply":
+                    text_widget = getattr(self, "reply_text", self.post_text)
+                else:
+                    text_widget = self.post_text
+
                 if msg == '\r':
                     text_widget.delete("end-1c linestart", "end-1c")
                 else:
@@ -545,10 +560,13 @@ class AletheiaLauncherApp:
         # Row 2: Research Probe & Historical Audits Card
         self.create_probe_card(left_panel)
 
-        # Row 3: Batch Evaluator Card
+        # Row 3: Direct Target Post & Reply Dispatcher Card
+        self.create_direct_reply_card(left_panel)
+
+        # Row 4: Batch Evaluator Card
         self.create_batch_card(left_panel)
 
-        # Row 4: Live Posting Card
+        # Row 5: Live Posting Card
         self.create_live_post_card(left_panel)
 
         # Apply mousewheel binding recursively
@@ -783,6 +801,182 @@ class AletheiaLauncherApp:
         self.btn_run_probe.pack(side=tk.LEFT)
         self.btn_run_probe.bind("<Enter>", lambda e: self.btn_run_probe.configure(bg=ACCENT_BLUE_HOVER))
         self.btn_run_probe.bind("<Leave>", lambda e: self.btn_run_probe.configure(bg=ACCENT_BLUE))
+
+    def create_direct_reply_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="🎯 Direct Target Post & Reply Dispatcher", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 4))
+
+        desc = tk.Label(inner, text="Target any Bluesky post URL, select a bot persona and skill, cross-reference against the 10,800+ Audit DB, and post direct replies.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
+        desc.pack(anchor="w", pady=(0, 8))
+
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 8))
+
+        # Row 0: Target Post URL
+        tk.Label(grid_frame, text="Target URL", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reply_target_url = tk.Entry(grid_frame, width=54, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reply_target_url.grid(row=0, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
+
+        # Row 1: Bot Persona & Skill
+        tk.Label(grid_frame, text="Bot Persona", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.combo_reply_bot = ttk.Combobox(grid_frame, width=24, state="readonly", font=self.font_body, values=[
+            "⚖️ Aletheia Bot (judgement-bot)",
+            "🛹 Brothekanon (brothekanon)",
+            "🧸 Awwthekanon (awwthekanon)",
+            "🕊️ Spirithekanon (spirithekanon)"
+        ])
+        self.combo_reply_bot.set("⚖️ Aletheia Bot (judgement-bot)")
+        self.combo_reply_bot.grid(row=1, column=1, sticky="w", pady=4, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Skill", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=2, sticky="w", pady=4, padx=(0, 5))
+        self.combo_reply_skill = ttk.Combobox(grid_frame, width=32, state="readonly", font=self.font_body, values=[
+            "🏛️ From the Audit Archive (Crossref 10k DB)",
+            "🛹 Brothekanon Reality Check",
+            "🧸 Awwthekanon Empathy Lens",
+            "🕊️ Spirithekanon Scriptural Wisdom"
+        ])
+        self.combo_reply_skill.set("🏛️ From the Audit Archive (Crossref 10k DB)")
+        self.combo_reply_skill.grid(row=1, column=3, sticky="ew", pady=4)
+
+        # Row 2: Search Query Override & Optional Custom Focus
+        tk.Label(grid_frame, text="Search Query", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reply_query = tk.Entry(grid_frame, width=28, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reply_query.grid(row=2, column=1, sticky="ew", pady=4, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Custom Focus", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=2, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reply_custom_angle = tk.Entry(grid_frame, width=32, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reply_custom_angle.grid(row=2, column=3, sticky="ew", pady=4)
+
+        tk.Label(grid_frame, text="(Optional DB keyword override)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, sticky="w")
+        tk.Label(grid_frame, text="(Angle/theme to add to perspective queue)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=3, sticky="w")
+
+        # Row 4: Perspective Queue Drag-Drop Listbox & Toolbar
+        persp_frame = tk.Frame(inner, bg=CARD_BG)
+        persp_frame.pack(fill=tk.X, pady=(6, 4))
+
+        persp_hdr = tk.Frame(persp_frame, bg=CARD_BG)
+        persp_hdr.pack(fill=tk.X, pady=(0, 4))
+        tk.Label(persp_hdr, text="🧵 Perspective Thread Queue (Drag & Drop to reorder, up to 5 posts):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG).pack(side=tk.LEFT)
+
+        queue_toolbar = tk.Frame(persp_frame, bg=CARD_BG)
+        queue_toolbar.pack(fill=tk.X, pady=(0, 4))
+
+        def add_persp(label_text):
+            if self.lst_reply_queue.size() >= 5:
+                return
+            self.lst_reply_queue.insert(tk.END, label_text)
+
+        def add_custom_persp():
+            if self.lst_reply_queue.size() >= 5:
+                return
+            val = self.ent_reply_custom_angle.get().strip()
+            if val:
+                self.lst_reply_queue.insert(tk.END, f"🎯 Custom: {val}")
+                self.ent_reply_custom_angle.delete(0, tk.END)
+
+        def remove_selected_persp():
+            sel = self.lst_reply_queue.curselection()
+            if sel and sel[0] > 0:  # Prevent deleting root Post 1 receipt
+                self.lst_reply_queue.delete(sel[0])
+
+        def reset_persp_queue():
+            self.lst_reply_queue.delete(0, tk.END)
+            self.lst_reply_queue.insert(tk.END, "🏛️ Post 1: Empirical Receipt & Fact-Check Card")
+            self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Receipts")
+
+        btn_add_bro = tk.Button(queue_toolbar, text="+ Brothekanon", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🛹 Post: Brothekanon Street Reality"))
+        btn_add_bro.pack(side=tk.LEFT, padx=(0, 4))
+        btn_add_aletheia = tk.Button(queue_toolbar, text="+ Aletheia", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🏛️ Post: Aletheia Social Physics & Invariants"))
+        btn_add_aletheia.pack(side=tk.LEFT, padx=(0, 4))
+        btn_add_aww = tk.Button(queue_toolbar, text="+ Awwthekanon", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🧸 Post: Awwthekanon Empathetic Care"))
+        btn_add_aww.pack(side=tk.LEFT, padx=(0, 4))
+        btn_add_spirit = tk.Button(queue_toolbar, text="+ Spirithekanon", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🕊️ Post: Spirithekanon Scriptural Wisdom"))
+        btn_add_spirit.pack(side=tk.LEFT, padx=(0, 6))
+        btn_add_custom = tk.Button(queue_toolbar, text="+ Custom Focus", font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=ACCENT_CYAN, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=add_custom_persp)
+        btn_add_custom.pack(side=tk.LEFT, padx=(0, 6))
+
+        btn_del_persp = tk.Button(queue_toolbar, text="Remove", font=("Segoe UI", 8), bg=BG_BUTTON, fg=DANGER_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=remove_selected_persp)
+        btn_del_persp.pack(side=tk.RIGHT, padx=(4, 0))
+        btn_reset_persp = tk.Button(queue_toolbar, text="Reset", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_MUTED, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=reset_persp_queue)
+        btn_reset_persp.pack(side=tk.RIGHT)
+
+        # DragDrop Listbox for Perspective Queue
+        self.lst_reply_queue = DragDropListbox(
+            persp_frame, height=4, bg=BG_COLOR, fg=TEXT_COLOR, selectbackground=ACCENT_BLUE,
+            selectforeground=TEXT_COLOR, font=self.font_body, relief="flat", borderwidth=0,
+            highlightthickness=1, highlightbackground=BG_BUTTON
+        )
+        self.lst_reply_queue.pack(fill=tk.X, pady=(2, 4))
+        self.lst_reply_queue.insert(tk.END, "🏛️ Post 1: Empirical Receipt & Fact-Check Card")
+        self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Receipts")
+
+        # Row 5: AI Polish Toggle
+        self.val_reply_ai = tk.BooleanVar(value=True)
+        chk_reply_ai = ttk.Checkbutton(inner, text="✨ AI Persona Polish (Use Evaluator Fallback Sequence for Natural Synthesis across Queue)", variable=self.val_reply_ai, style="Feeds.TCheckbutton")
+        chk_reply_ai.pack(anchor="w", pady=(2, 4))
+
+        # Action Buttons
+        btn_frame = tk.Frame(inner, bg=CARD_BG)
+        btn_frame.pack(fill=tk.X, pady=(8, 0))
+
+        self.btn_inspect_reply = tk.Button(
+            btn_frame, text="🔍 Inspect & Draft Reply", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=lambda: self.run_direct_reply(live=False)
+        )
+        self.btn_inspect_reply.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_inspect_reply.bind("<Enter>", lambda e: self.btn_inspect_reply.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_inspect_reply.bind("<Leave>", lambda e: self.btn_inspect_reply.configure(bg=ACCENT_BLUE))
+
+        self.btn_post_live_reply = tk.Button(
+            btn_frame, text="🚀 Post Live Reply", font=self.font_body, bg=SUCCESS_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=lambda: self.run_direct_reply(live=True)
+        )
+        self.btn_post_live_reply.pack(side=tk.LEFT, padx=(0, 8))
+
+        self.btn_preview_card = tk.Button(
+            btn_frame, text="👁️ Preview Card Image", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.preview_latest_card
+        )
+        self.btn_preview_card.pack(side=tk.LEFT)
+        self.btn_preview_card.bind("<Enter>", lambda e: self.btn_preview_card.configure(bg=BG_BUTTON_HOVER))
+        self.btn_preview_card.bind("<Leave>", lambda e: self.btn_preview_card.configure(bg=BG_BUTTON))
+
+        # Reply Console / Dedicated Output Panel
+        console_hdr = tk.Frame(inner, bg=CARD_BG)
+        console_hdr.pack(fill=tk.X, pady=(12, 4))
+
+        tk.Label(console_hdr, text="💬 Direct Reply & Fact-Check Output", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG).pack(side=tk.LEFT)
+
+        self.btn_kill_reply = tk.Button(
+            console_hdr, text="Cancel", font=("Segoe UI", 8), bg=DANGER_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=self.kill_reply_process, state=tk.DISABLED
+        )
+        self.btn_kill_reply.pack(side=tk.RIGHT, padx=4)
+
+        btn_clear_reply = tk.Button(
+            console_hdr, text="Clear", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=self.clear_reply_console
+        )
+        btn_clear_reply.pack(side=tk.RIGHT)
+
+        reply_box_frame = tk.Frame(inner, bg=BG_COLOR)
+        reply_box_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 2))
+
+        reply_sb = tk.Scrollbar(reply_box_frame)
+        reply_sb.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.reply_text = tk.Text(
+            reply_box_frame, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, height=10,
+            font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=reply_sb.set, wrap="word"
+        )
+        self.reply_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        reply_sb.config(command=self.reply_text.yview)
 
     def create_batch_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
@@ -1659,6 +1853,172 @@ class AletheiaLauncherApp:
                 self.root.after(1, lambda: self.set_post_running(False))
 
         threading.Thread(target=posting_flow, daemon=True).start()
+
+    def run_post_cmd_async(self, cmd_args):
+        """Runs a command asynchronously, streaming its output directly into the post console."""
+        self.set_post_running(True)
+        def worker():
+            try:
+                self.log_post(f"\n> Running: {' '.join(cmd_args)}\n")
+                cmd_proc = subprocess.Popen(
+                    cmd_args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    encoding="utf-8",
+                    bufsize=1,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.post_process = cmd_proc
+                self.read_stream(cmd_proc.stdout, "post")
+                cmd_proc.wait()
+                exit_code = cmd_proc.returncode
+                self.log_post(f"\n--- Process finished with exit code {exit_code} ---\n")
+            except Exception as e:
+                self.log_post(f"\nError running process: {e}\n")
+            finally:
+                self.post_process = None
+                self.root.after(1, lambda: self.set_post_running(False))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def set_reply_running(self, running):
+        if running:
+            self.btn_inspect_reply.configure(state=tk.DISABLED)
+            self.btn_post_live_reply.configure(state=tk.DISABLED)
+            if hasattr(self, 'btn_kill_reply'):
+                self.btn_kill_reply.configure(state=tk.NORMAL)
+        else:
+            self.btn_inspect_reply.configure(state=tk.NORMAL)
+            self.btn_post_live_reply.configure(state=tk.NORMAL)
+            if hasattr(self, 'btn_kill_reply'):
+                self.btn_kill_reply.configure(state=tk.DISABLED)
+
+    def kill_reply_process(self):
+        if hasattr(self, 'reply_process') and self.reply_process:
+            self.log_reply("\n*** Terminating direct reply process... ***\n")
+            self.reply_process.terminate()
+
+    def run_reply_cmd_async(self, cmd_args):
+        """Runs a direct reply command asynchronously, streaming its output directly into the dedicated reply console."""
+        self.set_reply_running(True)
+        def worker():
+            try:
+                self.log_reply(f"\n> Running: {' '.join(cmd_args)}\n")
+                cmd_proc = subprocess.Popen(
+                    cmd_args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    encoding="utf-8",
+                    bufsize=1,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.reply_process = cmd_proc
+                self.read_stream(cmd_proc.stdout, "reply")
+                cmd_proc.wait()
+                exit_code = cmd_proc.returncode
+                self.log_reply(f"\n--- Direct reply finished with exit code {exit_code} ---\n")
+            except Exception as e:
+                self.log_reply(f"\nError running direct reply: {e}\n")
+            finally:
+                self.reply_process = None
+                self.root.after(1, lambda: self.set_reply_running(False))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def run_direct_reply(self, live=False):
+        """Executes or previews a targeted direct reply to a Bluesky post."""
+        target_url = self.ent_reply_target_url.get().strip()
+        if not target_url:
+            self.log_reply("\n[ERROR] Target Post URL cannot be empty. Please paste a valid Bluesky post URL.\n")
+            return
+
+        bot_val = self.combo_reply_bot.get().lower()
+        bot_key = "aletheia"
+        if "bro" in bot_val:
+            bot_key = "brothekanon"
+        elif "aww" in bot_val:
+            bot_key = "awwthekanon"
+        elif "spirit" in bot_val:
+            bot_key = "spirithekanon"
+
+        skill_val = self.combo_reply_skill.get().lower()
+        skill_key = "archive"
+        if "bro" in skill_val:
+            skill_key = "bro"
+        elif "aww" in skill_val:
+            skill_key = "aww"
+        elif "spirit" in skill_val:
+            skill_key = "spirit"
+
+        # Read ordered perspective queue from drag-and-drop listbox
+        queue_items = []
+        if hasattr(self, 'lst_reply_queue'):
+            for idx in range(self.lst_reply_queue.size()):
+                raw_item = self.lst_reply_queue.get(idx).strip()
+                # Clean up display emojis and map to key
+                if "receipt" in raw_item.lower() or "post 1:" in raw_item.lower():
+                    queue_items.append("receipt")
+                elif "bro" in raw_item.lower():
+                    queue_items.append("bro")
+                elif "aletheia" in raw_item.lower() or "physics" in raw_item.lower():
+                    queue_items.append("aletheia")
+                elif "aww" in raw_item.lower():
+                    queue_items.append("aww")
+                elif "spirit" in raw_item.lower():
+                    queue_items.append("spirit")
+                elif "custom:" in raw_item.lower():
+                    custom_val = raw_item.split(":", 1)[1].strip()
+                    queue_items.append(f"custom:{custom_val}")
+                else:
+                    queue_items.append(raw_item)
+
+        num_replies = len(queue_items) if queue_items else 1
+
+        cmd = [
+            python_bin, "-u",
+            "bluesky_bot/direct_reply_dispatcher.py",
+            "--target-url", target_url,
+            "--bot", bot_key,
+            "--skill", skill_key,
+            "--num-replies", str(num_replies)
+        ]
+        if queue_items:
+            cmd.extend(["--perspectives", ";".join(queue_items)])
+        if query_override:
+            cmd.extend(["--query", query_override])
+        if live:
+            cmd.append("--live")
+        if not self.val_reply_ai.get():
+            cmd.append("--no-ai")
+        if self.selected_models:
+            cmd.extend(["--model-sequence", ",".join(self.selected_models)])
+
+        self.run_reply_cmd_async(cmd)
+
+    def preview_latest_card(self):
+        """Opens the most recently generated Audit Archive Card in the default image viewer."""
+        try:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            graph_dir = os.path.join(script_dir, "bluesky_bot", "graph_png")
+            if not os.path.exists(graph_dir):
+                graph_dir = os.path.join(script_dir, "graph_png")
+
+            cards = [
+                os.path.join(graph_dir, f)
+                for f in os.listdir(graph_dir)
+                if f.endswith("_archive_card.png") or f.endswith("_factcheck_card.png")
+            ]
+            if not cards:
+                self.log_reply("\n[NOTICE] No Audit Archive Card images found yet. Run 'Inspect & Draft Reply' first.\n")
+                return
+
+            cards.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+            latest = cards[0]
+            self.log_reply(f"\n[PREVIEW] Opening latest card image: {latest}\n")
+            if sys.platform == "win32":
+                os.startfile(latest)
+            else:
+                subprocess.Popen(["xdg-open", latest])
+        except Exception as e:
+            self.log_reply(f"\nError previewing card image: {e}\n")
 
 if __name__ == "__main__":
     try:

@@ -140,7 +140,9 @@ def validate_story_file(path, compact=False):
         is_five_word = cfg.get("five_word") is True
         is_compact_single = compact == "single" or cfg.get("compact") == "single"
         is_compact_thread = compact is True or cfg.get("compact") is True
-        is_compact = is_compact_single or is_compact_thread
+        is_spiritual = cfg.get("spiritual") is True or any(
+            isinstance(p, str) and p.strip().startswith("Spirithekanon:") for p in cfg.get("posts", [])
+        )
 
         if is_compact_single:
             posts_to_check = cfg["posts"][:1]

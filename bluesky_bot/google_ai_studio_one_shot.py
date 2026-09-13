@@ -944,6 +944,7 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
 DEFAULT_FALLBACKS = [
+    "gemini-3.8-flash",
     "gemini-3.7-flash",
     "gemini-2.5-flash",
     "gemini-3.5-flash",
@@ -2099,7 +2100,7 @@ def main():
     parser.add_argument("--five-word", action="store_true", help="Enable 5-word limit mode")
     parser.add_argument("--rss", type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
     parser.add_argument("--bsky", type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
-    parser.add_argument("--model", type=str, default="gemini-3.5-flash", help="Generative model to use (default: gemini-3.5-flash)")
+    parser.add_argument("--model", type=str, default="gemini-3.8-flash", help="Generative model to use (default: gemini-3.8-flash)")
     parser.add_argument("--context", type=str, default=None, help="Additional context/background knowledge to send to the evaluator model")
     parser.add_argument("--model-sequence", type=str, default=None, help="Comma-separated list of models to try in sequence (overriding default fallbacks)")
     parser.add_argument("--chunk-size", type=int_or_default(1), default=1, help="Number of stories to process per API call (default: 1)")
