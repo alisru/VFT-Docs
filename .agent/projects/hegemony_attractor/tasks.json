@@ -2,8 +2,8 @@
     "global_context": {
         "project_name": "hegemony_attractor",
         "project_rules": [],
-        "current_focus": "Fix center collapse by anchoring cytoplasm drift relative to home climate biomes and prioritizing native food patch seeking AI",
-        "current_task_index": 5,
+        "current_focus": "Update cross-religion-translation skill with AEC-First invariants (Substrate Evacuation, Q2 Potential Space, 3-Step Action-Strain-Effect lockstep, Topological Closure Levels, Strict Plane Separation) and re-run Numbers 31",
+        "current_task_index": 6,
         "mistakes_registry": [],
         "fuckup_prevention_checklist": [
             "Did I read the requirements fully?",
@@ -203,6 +203,36 @@
                 "ai",
                 "navigation",
                 "attractors"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 6,
+            "id": "task_6",
+            "description": "Update cross-religion-translation skill with AEC-First invariants (Substrate Evacuation, Q2 Potential Space, 3-Step Action-Strain-Effect lockstep, Topological Closure Levels, Strict Plane Separation) and re-run Numbers 31",
+            "status": "in_progress",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-09-21T14:19:02.128347] Task created.",
+                "[2026-09-21T14:19:02.129871] Started work."
+            ],
+            "lessons_learned": [],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "translation",
+                "aec",
+                "scripture"
             ],
             "reasoning_trace": [],
             "auto_linked_mistakes": [],
