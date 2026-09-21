@@ -1,8 +1,8 @@
 # hegemony_attractor
 
-**Current Focus**: Update cross-religion-translation skill with AEC-First invariants (Substrate Evacuation, Q2 Potential Space, 3-Step Action-Strain-Effect lockstep, Topological Closure Levels, Strict Plane Separation) and re-run Numbers 31
+**Current Focus**: None
 
-**Progress**: 5/7 complete
+**Progress**: 6/7 complete
 
 ## Task List
 - [x] Implement Dual-Fuel Thruster Engine (Truth OR Lie fuel) `physics thrusters` <!-- id: 0 -->
@@ -11,6 +11,6 @@
 - [x] Implement Altruistic (Truth from Lies via Good) and Selfish (Lies from Truth via Bad) Metabolic Extraction `metabolism extraction ethics` <!-- id: 3 -->
 - [x] Implement Dynamic Visual Size and Physical Mass Scaling per Held Resources `physics canvas mass` <!-- id: 4 -->
 - [/] Fix center collapse by anchoring cytoplasm drift relative to home climate biomes and prioritizing native food patch seeking AI `ai navigation attractors` <!-- id: 5 -->
-- [/] Update cross-religion-translation skill with AEC-First invariants (Substrate Evacuation, Q2 Potential Space, 3-Step Action-Strain-Effect lockstep, Topological Closure Levels, Strict Plane Separation) and re-run Numbers 31 `translation aec scripture` <!-- id: 6 -->
+- [x] Update cross-religion-translation skill with AEC-First invariants (Substrate Evacuation, Q2 Potential Space, 3-Step Action-Strain-Effect lockstep, Topological Closure Levels, Strict Plane Separation) and re-run Numbers 31 `translation aec scripture` <!-- id: 6 -->
 
 ## Mistake Registry
