@@ -4,7 +4,7 @@ chat_id: "gemini-4e95e5ac9ec7cf48"
 chat_title: "Philosophical Stress Test for Genie Binding - Google Gemini"
 chat_url: "https://gemini.google.com/app/a399248c5e6ecf98?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all"
 type: "markdown"
-updated: "2026-10-05T11:15:34.224240+00:00"
+updated: "2026-10-05T11:16:28.927683+00:00"
 ---
 
 # Formal Analysis: The Genie Binding Problem & The Hegemonikon
