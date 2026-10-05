@@ -4,7 +4,7 @@ chat_id: "gemini-4d083188ab2d2afe"
 chat_title: "Dualism, Determinism, and Predeterminism - Google Gemini"
 chat_url: "https://gemini.google.com/app/9501865424b37c19?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all"
 type: "markdown"
-updated: "2026-10-05T11:19:13.652004+00:00"
+updated: "2026-10-05T11:35:08.080462+00:00"
 ---
 
 # Comparative Perspectives: Perspectival Ontologies Across History
