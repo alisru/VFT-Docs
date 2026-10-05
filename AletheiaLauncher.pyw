@@ -29,9 +29,11 @@ if sys.platform == "win32":
             venv_pyw = os.path.abspath(p)
             break
             
-    if venv_pyw and os.path.abspath(sys.executable).lower() != venv_pyw.lower():
+    in_venv = (sys.prefix != getattr(sys, "base_prefix", sys.prefix)) or (venv_pyw and os.path.dirname(os.path.abspath(sys.executable)).lower() == os.path.dirname(venv_pyw).lower())
+    if venv_pyw and not in_venv:
         try:
-            subprocess.Popen([venv_pyw] + sys.argv)
+            full_argv = [venv_pyw, os.path.abspath(__file__)] + sys.argv[1:]
+            subprocess.Popen(full_argv, cwd=script_dir)
             sys.exit(0)
         except Exception:
             pass
@@ -888,7 +890,7 @@ class AletheiaLauncherApp:
         def reset_persp_queue():
             self.lst_reply_queue.delete(0, tk.END)
             self.lst_reply_queue.insert(tk.END, "🏛️ Post 1: Empirical Receipt & Fact-Check Card")
-            self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Receipts")
+            self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Commentary")
 
         btn_add_bro = tk.Button(queue_toolbar, text="+ Brothekanon", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🛹 Post: Brothekanon Street Reality"))
         btn_add_bro.pack(side=tk.LEFT, padx=(0, 4))
@@ -914,7 +916,7 @@ class AletheiaLauncherApp:
         )
         self.lst_reply_queue.pack(fill=tk.X, pady=(2, 4))
         self.lst_reply_queue.insert(tk.END, "🏛️ Post 1: Empirical Receipt & Fact-Check Card")
-        self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Receipts")
+        self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Commentary")
 
         # Row 5: AI Polish Toggle
         self.val_reply_ai = tk.BooleanVar(value=True)
@@ -1925,73 +1927,83 @@ class AletheiaLauncherApp:
 
     def run_direct_reply(self, live=False):
         """Executes or previews a targeted direct reply to a Bluesky post."""
-        target_url = self.ent_reply_target_url.get().strip()
-        if not target_url:
-            self.log_reply("\n[ERROR] Target Post URL cannot be empty. Please paste a valid Bluesky post URL.\n")
-            return
+        try:
+            target_url = self.ent_reply_target_url.get().strip()
+            if not target_url:
+                self.log_reply("\n[ERROR] Target Post URL cannot be empty. Please paste a valid Bluesky post URL.\n")
+                return
 
-        bot_val = self.combo_reply_bot.get().lower()
-        bot_key = "aletheia"
-        if "bro" in bot_val:
-            bot_key = "brothekanon"
-        elif "aww" in bot_val:
-            bot_key = "awwthekanon"
-        elif "spirit" in bot_val:
-            bot_key = "spirithekanon"
+            bot_val = self.combo_reply_bot.get().lower()
+            bot_key = "aletheia"
+            if "bro" in bot_val:
+                bot_key = "brothekanon"
+            elif "aww" in bot_val:
+                bot_key = "awwthekanon"
+            elif "spirit" in bot_val:
+                bot_key = "spirithekanon"
 
-        skill_val = self.combo_reply_skill.get().lower()
-        skill_key = "archive"
-        if "bro" in skill_val:
-            skill_key = "bro"
-        elif "aww" in skill_val:
-            skill_key = "aww"
-        elif "spirit" in skill_val:
-            skill_key = "spirit"
+            skill_val = self.combo_reply_skill.get().lower()
+            skill_key = "archive"
+            if "bro" in skill_val:
+                skill_key = "bro"
+            elif "aww" in skill_val:
+                skill_key = "aww"
+            elif "spirit" in skill_val:
+                skill_key = "spirit"
 
-        # Read ordered perspective queue from drag-and-drop listbox
-        queue_items = []
-        if hasattr(self, 'lst_reply_queue'):
-            for idx in range(self.lst_reply_queue.size()):
-                raw_item = self.lst_reply_queue.get(idx).strip()
-                # Clean up display emojis and map to key
-                if "receipt" in raw_item.lower() or "post 1:" in raw_item.lower():
-                    queue_items.append("receipt")
-                elif "bro" in raw_item.lower():
-                    queue_items.append("bro")
-                elif "aletheia" in raw_item.lower() or "physics" in raw_item.lower():
-                    queue_items.append("aletheia")
-                elif "aww" in raw_item.lower():
-                    queue_items.append("aww")
-                elif "spirit" in raw_item.lower():
-                    queue_items.append("spirit")
-                elif "custom:" in raw_item.lower():
-                    custom_val = raw_item.split(":", 1)[1].strip()
-                    queue_items.append(f"custom:{custom_val}")
-                else:
-                    queue_items.append(raw_item)
+            query_override = self.ent_reply_query.get().strip() if hasattr(self, 'ent_reply_query') else ""
+            python_bin = self.get_python_bin()
 
-        num_replies = len(queue_items) if queue_items else 1
+            # Read ordered perspective queue from drag-and-drop listbox
+            queue_items = []
+            if hasattr(self, 'lst_reply_queue'):
+                for idx in range(self.lst_reply_queue.size()):
+                    raw_item = self.lst_reply_queue.get(idx).strip()
+                    r_low = raw_item.lower()
+                    # Clean up display emojis and map to key (specific personas FIRST)
+                    if "bro" in r_low:
+                        queue_items.append("bro")
+                    elif "aww" in r_low:
+                        queue_items.append("aww")
+                    elif "spirit" in r_low:
+                        queue_items.append("spirit")
+                    elif "aletheia" in r_low or "physics" in r_low:
+                        queue_items.append("aletheia")
+                    elif "custom:" in r_low or "angle:" in r_low:
+                        custom_val = raw_item.split(":", 1)[1].strip()
+                        queue_items.append(f"custom:{custom_val}")
+                    elif "receipt" in r_low or "post 1:" in r_low or "factcheck" in r_low or "card" in r_low:
+                        queue_items.append("receipt")
+                    else:
+                        queue_items.append(raw_item)
 
-        cmd = [
-            python_bin, "-u",
-            "bluesky_bot/direct_reply_dispatcher.py",
-            "--target-url", target_url,
-            "--bot", bot_key,
-            "--skill", skill_key,
-            "--num-replies", str(num_replies)
-        ]
-        if queue_items:
-            cmd.extend(["--perspectives", ";".join(queue_items)])
-        if query_override:
-            cmd.extend(["--query", query_override])
-        if live:
-            cmd.append("--live")
-        if not self.val_reply_ai.get():
-            cmd.append("--no-ai")
-        if self.selected_models:
-            cmd.extend(["--model-sequence", ",".join(self.selected_models)])
+            num_replies = len(queue_items) if queue_items else 1
 
-        self.run_reply_cmd_async(cmd)
+            cmd = [
+                python_bin, "-u",
+                "bluesky_bot/direct_reply_dispatcher.py",
+                "--target-url", target_url,
+                "--bot", bot_key,
+                "--skill", skill_key,
+                "--num-replies", str(num_replies)
+            ]
+            if queue_items:
+                cmd.extend(["--perspectives", ";".join(queue_items)])
+            if query_override:
+                cmd.extend(["--query", query_override])
+            if live:
+                cmd.append("--live")
+            if not self.val_reply_ai.get():
+                cmd.append("--no-ai")
+            if self.selected_models:
+                cmd.extend(["--model-sequence", ",".join(self.selected_models)])
+
+            self.run_reply_cmd_async(cmd)
+        except Exception as e:
+            import traceback
+            err = traceback.format_exc()
+            self.log_reply(f"\n[LAUNCHER GUI ERROR]:\n{err}\n")
+            self.set_reply_running(False)
 
     def preview_latest_card(self):
         """Opens the most recently generated Audit Archive Card in the default image viewer."""

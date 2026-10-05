@@ -71,10 +71,10 @@ def validate():
             if re.search(r'\b' + re.escape(j) + r'\b', node_text):
                 errs.append(f"Contains banned jargon: '{j}'")
 
-        # 5. Topology Checks
-        topo = node.get("topology", {})
-        if "closure_level" not in topo or "boundary_type" not in topo:
-            errs.append("Missing topology closure_level or boundary_type")
+        # 5. Operator Transformations Check
+        trans = node.get("transformations", {})
+        if "positive_manifestation" not in trans or "negative_inversion" not in trans or "directional_reverse" not in trans:
+            errs.append("Missing operator transformations (+upsilon, -upsilon, -)")
 
         # 6. Planes Check
         node_planes = node.get("planes", {})

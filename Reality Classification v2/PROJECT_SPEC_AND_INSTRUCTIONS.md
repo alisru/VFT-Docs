@@ -86,14 +86,12 @@ Every invariant process projects across all 7 dimensions of reality:
 
 ---
 
-### B. The Topological Closure Hierarchy
-Every invariant process operates on boundaries and is classified by its **Degree of Traversal Closure**:
+### B. The Operator Transformations Architecture
+An invariant process is substrate-neutral reality physics. Words map to it through three fundamental operator transformations:
 
-* **Level 0: Open Axis (—)**: Zero directions blocked. Continuous unconstrained traversal along a dimension (`move`, `go`, `flow`, `turn`, `rise`, `fall`).
-* **Level 1: Wall / Threshold (|)**: 1 direction blocked. A barrier or portal requiring crossing, unsealing, or blocking (`open`, `close`, `enter`, `leave`, `shield`).
-* **Level 2: Corner / Joint (L)**: 2 directions constrained or intersecting. Interaction, collision, mutual contact, or division (`join`, `strike`, `exchange`).
-* **Level 3: Pocket / Cradle (⊂)**: 3 directions closed, 1 open. Requires continuous active force or tensile binding to maintain retention (`hold` active grip, `bind`, `cradle`, `catch`).
-* **Level 4: Enclosure / Chamber (◻)**: All directions closed. Passive geometric containment across time without continuous energy expenditure (`have` passive custody, `store`, `shelter`, `fill`, `empty`).
+1. **Positive Manifestation (+υ)**: The process directed constructively to lower strain, build systemic harmony, and create mutual capacity.
+2. **Negative Inversion (-υ)**: The process distorted coercively to extract value, increase strain, or enforce tyranny/entropy.
+3. **Directional Reversal (-)**: The process executed in the inverse direction across the boundary (e.g. unsealing, unbinding, or clearing what was set).
 
 ---
 

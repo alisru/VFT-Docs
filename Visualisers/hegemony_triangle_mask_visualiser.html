@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 Independent Triangles Visualiser - Psochic Hegemony</title>
+  <script src="image_data.js"></script>
+  <style>
+    :root {
+      --bg: #090d13;
+      --panel: rgba(18, 24, 34, 0.95);
+      --border: rgba(240, 246, 252, 0.15);
+      --accent: #58a6ff;
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+    }
+
+    #workspace {
+      flex: 1;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #151d2a 0%, #070a0e 100%);
+    }
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* Floating Toolbar */
+    .toolbar {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      gap: 8px;
+      background: var(--panel);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      z-index: 10;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      align-items: center;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn.active {
+      background: #1f6feb;
+      border-color: #58a6ff;
+      color: #fff;
+    }
+
+    .btn-green {
+      background: #238636;
+      border-color: #2ea043;
+      color: #fff;
+    }
+    .btn-green:hover { background: #2ea043; }
+
+    .hint-badge {
+      font-size: 11px;
+      color: var(--accent);
+      background: rgba(88, 166, 255, 0.12);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    /* Sidebar */
+    #sidebar {
+      width: 420px;
+      height: 100%;
+      background: var(--panel);
+      backdrop-filter: blur(16px);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      z-index: 20;
+      box-shadow: -8px 0 24px rgba(0,0,0,0.5);
+    }
+
+    .sidebar-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sidebar-header h1 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .sidebar-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Triangle Card */
+    .triangle-card {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .triangle-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .triangle-card.selected {
+      background: rgba(88, 166, 255, 0.14);
+      border-color: var(--accent);
+      box-shadow: 0 0 14px rgba(88, 166, 255, 0.25);
+    }
+
+    .triangle-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .triangle-title {
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .status-badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .status-badge.active {
+      background: rgba(88, 166, 255, 0.25);
+      color: var(--accent);
+      border: 1px solid rgba(88, 166, 255, 0.4);
+    }
+
+    .status-badge.inactive {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    .v-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .v-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      gap: 6px;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .v-row strong {
+      color: var(--text-muted);
+    }
+
+    .coord-inp {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 11px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .coord-inp:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    /* Range controls */
+    .control-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .control-row .val {
+      font-family: monospace;
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 4px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="workspace">
+    <canvas id="view-canvas"></canvas>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-fit">Fit Screen</button>
+      <button class="btn" id="btn-100">100% Zoom</button>
+      <button class="btn" id="btn-zoom-in">+</button>
+      <button class="btn" id="btn-zoom-out">-</button>
+      <span style="border-right: 1px solid var(--border); margin: 0 4px;"></span>
+      <button class="btn" id="btn-toggle-handles">Toggle Handles [H]</button>
+      <button class="btn btn-green" id="btn-export">Export PNG</button>
+      <span class="hint-badge">💡 Shift + Click canvas to switch active triangle</span>
+    </div>
+  </div>
+
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <div>
+        <h1>4 Independent Triangles</h1>
+        <div style="font-size: 11px; color: var(--text-muted);">Shift+Click switches active triangle</div>
+      </div>
+      <button class="btn" id="btn-reset-all">Reset All</button>
+    </div>
+
+    <div class="sidebar-content">
+
+      <!-- Darkening Controls -->
+      <div class="section">
+        <div class="section-title">Darken Outside Selected Triangle</div>
+        
+        <div class="control-row">
+          <label>Darken Outside Opacity</label>
+          <span class="val" id="dark-val">85%</span>
+        </div>
+        <input type="range" id="dark-range" min="0" max="100" value="85">
+
+        <div class="control-row" style="margin-top: 10px;">
+          <label>Overlay Color</label>
+          <input type="color" id="dark-color" value="#000000" style="background:none; border:none; width:36px; height:24px; cursor:pointer;">
+        </div>
+
+        <div style="margin-top: 10px; display:flex; flex-direction:column; gap:6px;">
+          <label style="display:flex; justify-content:space-between; align-items:center; font-size:13px; cursor:pointer;">
+            <span>Show Other Triangle Outlines</span>
+            <input type="checkbox" id="chk-all-boundaries" checked style="cursor:pointer;">
+          </label>
+          <label style="display:flex; justify-content:space-between; align-items:center; font-size:13px; cursor:pointer;">
+            <span>Invert (Darken Inside)</span>
+            <input type="checkbox" id="chk-invert" style="cursor:pointer;">
+          </label>
+        </div>
+      </div>
+
+      <!-- 4 Triangles List -->
+      <div class="section">
+        <div class="section-title">
+          <span>Triangles (Click card to select)</span>
+        </div>
+        <div id="triangles-list"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const INITIAL_TRIANGLES = [
+      {
+        id: 'tri_ne',
+        name: 'Triangle 1: NE Half',
+        desc: 'Cut SW → NE (Upper-Right)',
+        color: '#58a6ff',
+        vertices: [
+          { label: 'V1 (NW)', x: 175, y: 208 },
+          { label: 'V2 (NE)', x: 806, y: 208 },
+          { label: 'V3 (SE)', x: 806, y: 840 }
+        ]
+      },
+      {
+        id: 'tri_sw',
+        name: 'Triangle 2: SW Half',
+        desc: 'Cut SW → NE (Lower-Left)',
+        color: '#3fb950',
+        vertices: [
+          { label: 'V1 (NW)', x: 175, y: 208 },
+          { label: 'V2 (SW)', x: 175, y: 840 },
+          { label: 'V3 (SE)', x: 806, y: 840 }
+        ]
+      },
+      {
+        id: 'tri_nw',
+        name: 'Triangle 3: NW Half',
+        desc: 'Cut NW → SE (Upper-Left)',
+        color: '#bc8cff',
+        vertices: [
+          { label: 'V1 (SW)', x: 175, y: 840 },
+          { label: 'V2 (NW)', x: 175, y: 208 },
+          { label: 'V3 (NE)', x: 806, y: 208 }
+        ]
+      },
+      {
+        id: 'tri_se',
+        name: 'Triangle 4: SE Half',
+        desc: 'Cut NW → SE (Lower-Right)',
+        color: '#f85149',
+        vertices: [
+          { label: 'V1 (SW)', x: 175, y: 840 },
+          { label: 'V2 (SE)', x: 806, y: 840 },
+          { label: 'V3 (NE)', x: 806, y: 208 }
+        ]
+      }
+    ];
+
+    let triangles = JSON.parse(JSON.stringify(INITIAL_TRIANGLES));
+    let selectedTriIndex = 0; // The active triangle
+    let selectedVertex = null; // { triIdx, vIdx }
+
+    // Mask settings
+    let darkenOpacity = 0.85;
+    let overlayColor = '#000000';
+    let showAllBoundaries = true;
+    let invertMask = false;
+    let showHandles = true;
+
+    // Viewport transform
+    let zoom = 1.0;
+    let panX = 0;
+    let panY = 0;
+    let isPanning = false;
+    let startPan = { x: 0, y: 0 };
+
+    // Dragging state
+    let draggingVertex = null; // { triIdx, vIdx }
+    let draggingTriangle = null; // { triIdx, startPt, initialVertices }
+
+    const container = document.getElementById('workspace');
+    const canvas = document.getElementById('view-canvas');
+    const ctx = canvas.getContext('2d');
+
+    const sourceImage = new Image();
+
+    function init() {
+      setupEvents();
+      renderSidebar();
+
+      sourceImage.onload = () => {
+        resizeCanvas();
+        fitToScreen();
+        render();
+      };
+
+      if (window.COMPASS_B64 && window.COMPASS_B64.startsWith('data:image')) {
+        sourceImage.src = window.COMPASS_B64;
+      } else {
+        sourceImage.src = 'psochic_hegemony_compass.png';
+      }
+    }
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = container.clientWidth * dpr;
+      canvas.height = container.clientHeight * dpr;
+      canvas.style.width = `${container.clientWidth}px`;
+      canvas.style.height = `${container.clientHeight}px`;
+      ctx.scale(dpr, dpr);
+      render();
+    }
+
+    function fitToScreen() {
+      if (!sourceImage.naturalWidth) return;
+      const pad = 40;
+      const sx = (container.clientWidth - pad * 2) / sourceImage.naturalWidth;
+      const sy = (container.clientHeight - pad * 2) / sourceImage.naturalHeight;
+      zoom = Math.min(sx, sy, 1.2);
+      panX = (container.clientWidth - sourceImage.naturalWidth * zoom) / 2;
+      panY = (container.clientHeight - sourceImage.naturalHeight * zoom) / 2;
+      render();
+    }
+
+    function screenToImage(sx, sy) {
+      return {
+        x: (sx - panX) / zoom,
+        y: (sy - panY) / zoom
+      };
+    }
+
+    function imageToScreen(ix, iy) {
+      return {
+        x: ix * zoom + panX,
+        y: iy * zoom + panY
+      };
+    }
+
+    function pointInTriangle(pt, v0, v1, v2) {
+      const dX = pt.x - v2.x;
+      const dY = pt.y - v2.y;
+      const dX21 = v2.x - v1.x;
+      const dY12 = v1.y - v2.y;
+      const D = dY12 * (v0.x - v2.x) + dX21 * (v0.y - v2.y);
+      const s = dY12 * dX + dX21 * dY;
+      const t = (v2.y - v0.y) * dX + (v0.x - v2.x) * dY;
+      if (D < 0) return s <= 0 && t <= 0 && s + t >= D;
+      return s >= 0 && t >= 0 && s + t <= D;
+    }
+
+    function render() {
+      const cw = container.clientWidth;
+      const ch = container.clientHeight;
+      ctx.save();
+      ctx.clearRect(0, 0, cw, ch);
+
+      if (!sourceImage.naturalWidth) {
+        ctx.restore();
+        return;
+      }
+
+      ctx.save();
+      ctx.translate(panX, panY);
+      ctx.scale(zoom, zoom);
+
+      // 1. Compass Image
+      ctx.drawImage(sourceImage, 0, 0);
+
+      // 2. Darken Outside of the SELECTED Triangle
+      const selTri = triangles[selectedTriIndex];
+      if (selTri && darkenOpacity > 0) {
+        const hex = overlayColor.replace('#', '');
+        const r = parseInt(hex.substring(0, 2), 16) || 0;
+        const g = parseInt(hex.substring(2, 4), 16) || 0;
+        const b = parseInt(hex.substring(4, 6), 16) || 0;
+
+        ctx.save();
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${darkenOpacity})`;
+
+        if (!invertMask) {
+          ctx.beginPath();
+          ctx.rect(0, 0, sourceImage.naturalWidth, sourceImage.naturalHeight);
+          ctx.moveTo(selTri.vertices[0].x, selTri.vertices[0].y);
+          ctx.lineTo(selTri.vertices[1].x, selTri.vertices[1].y);
+          ctx.lineTo(selTri.vertices[2].x, selTri.vertices[2].y);
+          ctx.closePath();
+          ctx.fill('evenodd');
+        } else {
+          ctx.beginPath();
+          ctx.moveTo(selTri.vertices[0].x, selTri.vertices[0].y);
+          ctx.lineTo(selTri.vertices[1].x, selTri.vertices[1].y);
+          ctx.lineTo(selTri.vertices[2].x, selTri.vertices[2].y);
+          ctx.closePath();
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+
+      // 3. Draw Triangle Boundaries
+      triangles.forEach((tri, tIdx) => {
+        const isSelected = (tIdx === selectedTriIndex);
+        if (!showAllBoundaries && !isSelected) return;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(tri.vertices[0].x, tri.vertices[0].y);
+        ctx.lineTo(tri.vertices[1].x, tri.vertices[1].y);
+        ctx.lineTo(tri.vertices[2].x, tri.vertices[2].y);
+        ctx.closePath();
+
+        if (isSelected) {
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 2.5 / zoom;
+          ctx.shadowColor = tri.color;
+          ctx.shadowBlur = 10 / zoom;
+          ctx.stroke();
+
+          ctx.fillStyle = hexToRgba(tri.color, 0.08);
+          ctx.fill();
+        } else {
+          ctx.strokeStyle = tri.color;
+          ctx.lineWidth = 1.5 / zoom;
+          ctx.setLineDash([6 / zoom, 4 / zoom]);
+          ctx.stroke();
+        }
+        ctx.restore();
+      });
+
+      // 4. Draw Draggable Vertices:
+      // Selected triangle has prominent handles.
+      // Other triangles only show subtle vertex hints if all boundaries are on.
+      if (showHandles) {
+        triangles.forEach((tri, tIdx) => {
+          const isSelected = (tIdx === selectedTriIndex);
+          if (!isSelected && !showAllBoundaries) return;
+
+          tri.vertices.forEach((v, vIdx) => {
+            const isThisVertActive = (selectedVertex && selectedVertex.triIdx === tIdx && selectedVertex.vIdx === vIdx);
+            const rad = (isSelected ? 9 : 5) / zoom;
+
+            ctx.save();
+            ctx.shadowColor = tri.color;
+            ctx.shadowBlur = isThisVertActive ? 16 / zoom : (isSelected ? 8 / zoom : 0);
+
+            // Outer ring
+            ctx.fillStyle = isSelected ? '#ffffff' : 'rgba(255,255,255,0.6)';
+            ctx.beginPath();
+            ctx.arc(v.x, v.y, rad + (isSelected ? 2 : 1) / zoom, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Inner dot
+            ctx.fillStyle = tri.color;
+            ctx.beginPath();
+            ctx.arc(v.x, v.y, rad - 1 / zoom, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Label for selected triangle vertices
+            if (isSelected) {
+              ctx.shadowBlur = 0;
+              ctx.fillStyle = '#ffffff';
+              ctx.font = `bold ${11 / zoom}px monospace`;
+              ctx.fillText(`${v.label} (${Math.round(v.x)}, ${Math.round(v.y)})`, v.x + 12 / zoom, v.y - 8 / zoom);
+            }
+            ctx.restore();
+          });
+        });
+      }
+
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function hexToRgba(hex, alpha) {
+      const clean = hex.replace('#', '');
+      const r = parseInt(clean.substring(0, 2), 16) || 0;
+      const g = parseInt(clean.substring(2, 4), 16) || 0;
+      const b = parseInt(clean.substring(4, 6), 16) || 0;
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
+
+    function setupEvents() {
+      window.addEventListener('resize', resizeCanvas);
+
+      canvas.addEventListener('mousedown', onMouseDown);
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseup', onMouseUp);
+      canvas.addEventListener('wheel', onWheel, { passive: false });
+
+      document.getElementById('btn-fit').addEventListener('click', fitToScreen);
+      document.getElementById('btn-100').addEventListener('click', () => {
+        zoom = 1.0;
+        panX = (container.clientWidth - sourceImage.naturalWidth) / 2;
+        panY = (container.clientHeight - sourceImage.naturalHeight) / 2;
+        render();
+      });
+      document.getElementById('btn-zoom-in').addEventListener('click', () => { zoom *= 1.25; render(); });
+      document.getElementById('btn-zoom-out').addEventListener('click', () => { zoom /= 1.25; render(); });
+
+      document.getElementById('btn-toggle-handles').addEventListener('click', () => {
+        showHandles = !showHandles;
+        document.getElementById('btn-toggle-handles').classList.toggle('active', !showHandles);
+        render();
+      });
+
+      document.getElementById('btn-export').addEventListener('click', exportPNG);
+
+      document.getElementById('dark-range').addEventListener('input', (e) => {
+        darkenOpacity = parseInt(e.target.value, 10) / 100;
+        document.getElementById('dark-val').textContent = `${e.target.value}%`;
+        render();
+      });
+
+      document.getElementById('dark-color').addEventListener('input', (e) => {
+        overlayColor = e.target.value;
+        render();
+      });
+
+      document.getElementById('chk-all-boundaries').addEventListener('change', (e) => {
+        showAllBoundaries = e.target.checked;
+        render();
+      });
+
+      document.getElementById('chk-invert').addEventListener('change', (e) => {
+        invertMask = e.target.checked;
+        render();
+      });
+
+      document.getElementById('btn-reset-all').addEventListener('click', () => {
+        triangles = JSON.parse(JSON.stringify(INITIAL_TRIANGLES));
+        selectedVertex = null;
+        renderSidebar();
+        render();
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'h' || e.key === 'H') {
+          showHandles = !showHandles;
+          render();
+          return;
+        }
+
+        if (selectedVertex) {
+          const v = triangles[selectedVertex.triIdx].vertices[selectedVertex.vIdx];
+          const step = e.shiftKey ? 10 : 1;
+          let moved = false;
+          if (e.key === 'ArrowUp') { v.y -= step; moved = true; }
+          if (e.key === 'ArrowDown') { v.y += step; moved = true; }
+          if (e.key === 'ArrowLeft') { v.x -= step; moved = true; }
+          if (e.key === 'ArrowRight') { v.x += step; moved = true; }
+          if (moved) {
+            e.preventDefault();
+            renderSidebar();
+            render();
+          }
+        }
+      });
+    }
+
+    function onMouseDown(e) {
+      const rect = canvas.getBoundingClientRect();
+      const sx = e.clientX - rect.left;
+      const sy = e.clientY - rect.top;
+      const imgPt = screenToImage(sx, sy);
+
+      // Pan viewport on middle-click or space
+      if (e.button === 1 || e.spaceKey || e.altKey) {
+        isPanning = true;
+        startPan = { x: sx - panX, y: sy - panY };
+        canvas.style.cursor = 'grabbing';
+        return;
+      }
+
+      if (e.button === 0) {
+        // --- 1. SHIFT + CLICK: SWITCH ACTIVE TRIANGLE ---
+        if (e.shiftKey) {
+          // Check if Shift-clicked on any triangle body or vertex
+          for (let i = 0; i < triangles.length; i++) {
+            const tri = triangles[i];
+            // Check vertex near click
+            for (let vIdx = 0; vIdx < tri.vertices.length; vIdx++) {
+              const scrPt = imageToScreen(tri.vertices[vIdx].x, tri.vertices[vIdx].y);
+              if (Math.hypot(sx - scrPt.x, sy - scrPt.y) <= 18) {
+                selectedTriIndex = i;
+                selectedVertex = { triIdx: i, vIdx };
+                draggingVertex = { triIdx: i, vIdx };
+                renderSidebar();
+                render();
+                return;
+              }
+            }
+            // Check inside triangle body
+            if (pointInTriangle(imgPt, tri.vertices[0], tri.vertices[1], tri.vertices[2])) {
+              selectedTriIndex = i;
+              selectedVertex = null;
+              renderSidebar();
+              render();
+              return;
+            }
+          }
+        }
+
+        // --- 2. NORMAL CLICK (NO SHIFT): INTERACT ONLY WITH CURRENTLY SELECTED TRIANGLE ---
+        const selTri = triangles[selectedTriIndex];
+
+        // A. Check if clicking on any of the SELECTED triangle's vertex handles
+        if (showHandles) {
+          for (let vIdx = 0; vIdx < selTri.vertices.length; vIdx++) {
+            const v = selTri.vertices[vIdx];
+            const scrPt = imageToScreen(v.x, v.y);
+            if (Math.hypot(sx - scrPt.x, sy - scrPt.y) <= 16) {
+              draggingVertex = { triIdx: selectedTriIndex, vIdx };
+              selectedVertex = { triIdx: selectedTriIndex, vIdx };
+              renderSidebar();
+              render();
+              return;
+            }
+          }
+        }
+
+        // B. Check if clicking INSIDE the SELECTED triangle body (move whole selected triangle)
+        if (pointInTriangle(imgPt, selTri.vertices[0], selTri.vertices[1], selTri.vertices[2])) {
+          selectedVertex = null;
+          draggingTriangle = {
+            triIdx: selectedTriIndex,
+            startPt: imgPt,
+            initialVertices: JSON.parse(JSON.stringify(selTri.vertices))
+          };
+          canvas.style.cursor = 'move';
+          return;
+        }
+
+        // C. Clicking outside selected triangle: pan viewport (DO NOT switch triangle!)
+        isPanning = true;
+        startPan = { x: sx - panX, y: sy - panY };
+        canvas.style.cursor = 'grabbing';
+      }
+    }
+
+    function onMouseMove(e) {
+      const rect = canvas.getBoundingClientRect();
+      const sx = e.clientX - rect.left;
+      const sy = e.clientY - rect.top;
+      const imgPt = screenToImage(sx, sy);
+
+      if (isPanning) {
+        panX = sx - startPan.x;
+        panY = sy - startPan.y;
+        render();
+        return;
+      }
+
+      // Drag single vertex of active triangle
+      if (draggingVertex) {
+        const tri = triangles[draggingVertex.triIdx];
+        const v = tri.vertices[draggingVertex.vIdx];
+        v.x = Math.round(imgPt.x);
+        v.y = Math.round(imgPt.y);
+        updateInputValues(draggingVertex.triIdx, draggingVertex.vIdx);
+        render();
+        return;
+      }
+
+      // Drag entire active triangle
+      if (draggingTriangle) {
+        const tri = triangles[draggingTriangle.triIdx];
+        const dx = Math.round(imgPt.x - draggingTriangle.startPt.x);
+        const dy = Math.round(imgPt.y - draggingTriangle.startPt.y);
+        tri.vertices.forEach((v, idx) => {
+          v.x = draggingTriangle.initialVertices[idx].x + dx;
+          v.y = draggingTriangle.initialVertices[idx].y + dy;
+        });
+        renderSidebar();
+        render();
+        return;
+      }
+
+      // Cursor feedback
+      if (showHandles) {
+        const selTri = triangles[selectedTriIndex];
+        let hover = false;
+        for (let v of selTri.vertices) {
+          const scrPt = imageToScreen(v.x, v.y);
+          if (Math.hypot(sx - scrPt.x, sy - scrPt.y) <= 16) {
+            hover = true;
+            break;
+          }
+        }
+        if (hover) {
+          canvas.style.cursor = 'pointer';
+          return;
+        }
+        if (pointInTriangle(imgPt, selTri.vertices[0], selTri.vertices[1], selTri.vertices[2])) {
+          canvas.style.cursor = 'move';
+          return;
+        }
+      }
+      canvas.style.cursor = 'default';
+    }
+
+    function onMouseUp() {
+      isPanning = false;
+      draggingVertex = null;
+      draggingTriangle = null;
+      canvas.style.cursor = 'default';
+    }
+
+    function onWheel(e) {
+      e.preventDefault();
+      const rect = canvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      const factor = e.deltaY < 0 ? 1.15 : 0.85;
+      const newZoom = Math.max(0.1, Math.min(10.0, zoom * factor));
+      panX = mx - (mx - panX) * (newZoom / zoom);
+      panY = my - (my - panY) * (newZoom / zoom);
+      zoom = newZoom;
+      render();
+    }
+
+    function renderSidebar() {
+      const container = document.getElementById('triangles-list');
+      container.innerHTML = '';
+
+      triangles.forEach((tri, tIdx) => {
+        const isSelected = (tIdx === selectedTriIndex);
+        const card = document.createElement('div');
+        card.className = `triangle-card ${isSelected ? 'selected' : ''}`;
+
+        card.innerHTML = `
+          <div class="triangle-header">
+            <div class="triangle-title">
+              <span class="badge-color" style="background:${tri.color};"></span>
+              <span>${tri.name}</span>
+            </div>
+            <span class="status-badge ${isSelected ? 'active' : 'inactive'}">
+              ${isSelected ? 'ACTIVE MASK' : 'Select'}
+            </span>
+          </div>
+          <div style="font-size:10px; color:var(--text-muted); margin-bottom:6px;">${tri.desc}</div>
+          <div class="v-inputs" id="v-inputs-${tIdx}">
+            ${tri.vertices.map((v, vIdx) => `
+              <div class="v-row">
+                <strong>${v.label}</strong>
+                <input type="number" class="coord-inp" data-tidx="${tIdx}" data-vidx="${vIdx}" data-axis="x" value="${Math.round(v.x)}" title="X coordinate">
+                <input type="number" class="coord-inp" data-tidx="${tIdx}" data-vidx="${vIdx}" data-axis="y" value="${Math.round(v.y)}" title="Y coordinate">
+              </div>
+            `).join('')}
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-top:8px;">
+            <button class="btn" style="padding:4px 8px; font-size:11px;" id="btn-reset-tri-${tIdx}">Reset This Triangle</button>
+            <span style="font-size:10px; color:var(--text-muted); align-self:center;">Drag body to move all 3</span>
+          </div>
+        `;
+
+        // Click card to select
+        card.addEventListener('click', (e) => {
+          if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'BUTTON') {
+            selectedTriIndex = tIdx;
+            selectedVertex = null;
+            renderSidebar();
+            render();
+          }
+        });
+
+        // Numeric inputs
+        card.querySelectorAll('.coord-inp').forEach(inp => {
+          inp.addEventListener('input', (e) => {
+            const t = parseInt(e.target.dataset.tidx, 10);
+            const v = parseInt(e.target.dataset.vidx, 10);
+            const axis = e.target.dataset.axis;
+            const val = parseFloat(e.target.value) || 0;
+            triangles[t].vertices[v][axis] = val;
+            render();
+          });
+          inp.addEventListener('focus', () => {
+            selectedTriIndex = tIdx;
+            selectedVertex = { triIdx: tIdx, vIdx: parseInt(inp.dataset.vidx, 10) };
+            render();
+          });
+        });
+
+        card.querySelector(`#btn-reset-tri-${tIdx}`).addEventListener('click', (e) => {
+          e.stopPropagation();
+          triangles[tIdx].vertices = JSON.parse(JSON.stringify(INITIAL_TRIANGLES[tIdx].vertices));
+          renderSidebar();
+          render();
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    function updateInputValues(tIdx, vIdx) {
+      const v = triangles[tIdx].vertices[vIdx];
+      const inps = document.querySelectorAll(`.coord-inp[data-tidx="${tIdx}"][data-vidx="${vIdx}"]`);
+      inps.forEach(inp => {
+        if (inp.dataset.axis === 'x') inp.value = Math.round(v.x);
+        if (inp.dataset.axis === 'y') inp.value = Math.round(v.y);
+      });
+    }
+
+    function exportPNG() {
+      if (!sourceImage.naturalWidth) return;
+      const expCanvas = document.createElement('canvas');
+      expCanvas.width = sourceImage.naturalWidth;
+      expCanvas.height = sourceImage.naturalHeight;
+      const eCtx = expCanvas.getContext('2d');
+
+      eCtx.drawImage(sourceImage, 0, 0);
+
+      const tri = triangles[selectedTriIndex];
+      if (darkenOpacity > 0 && tri) {
+        const hex = overlayColor.replace('#', '');
+        const r = parseInt(hex.substring(0, 2), 16) || 0;
+        const g = parseInt(hex.substring(2, 4), 16) || 0;
+        const b = parseInt(hex.substring(4, 6), 16) || 0;
+
+        eCtx.save();
+        eCtx.fillStyle = `rgba(${r}, ${g}, ${b}, ${darkenOpacity})`;
+        if (!invertMask) {
+          eCtx.beginPath();
+          eCtx.rect(0, 0, expCanvas.width, expCanvas.height);
+          eCtx.moveTo(tri.vertices[0].x, tri.vertices[0].y);
+          eCtx.lineTo(tri.vertices[1].x, tri.vertices[1].y);
+          eCtx.lineTo(tri.vertices[2].x, tri.vertices[2].y);
+          eCtx.closePath();
+          eCtx.fill('evenodd');
+        } else {
+          eCtx.beginPath();
+          eCtx.moveTo(tri.vertices[0].x, tri.vertices[0].y);
+          eCtx.lineTo(tri.vertices[1].x, tri.vertices[1].y);
+          eCtx.lineTo(tri.vertices[2].x, tri.vertices[2].y);
+          eCtx.closePath();
+          eCtx.fill();
+        }
+        eCtx.restore();
+      }
+
+      const link = document.createElement('a');
+      link.download = `psochic_compass_${tri.id}.png`;
+      link.href = expCanvas.toDataURL('image/png');
+      link.click();
+    }
+
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

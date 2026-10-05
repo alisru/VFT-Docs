@@ -1,129 +1,340 @@
 ---
 name: cross-religion-translation
-description: "Execute the Pure Epistemic Fundamental cross-religion translation and structural unification method across scriptures, theological frameworks, spiritual discourses, and philosophical traditions (Christianity, Hinduism/Vedas/Gita, Taoism, Buddhism, Islam/Tawrat/Quran, Indigenous cosmologies). Integrates Action-Effect over Context (AE-C), the 3-Step Action-Strain-Effect Pairwise Lockstep, Substrate Evacuation, Topological Closure Levels, the 7 Q-Planes with Strict Plane Separation (Telos in Q4 only), the 6 Personal Belief States, and the Hegemonic Stress Tensor (υ, ψ, χ, η). Translates texts into an invariant event-physics intermediate representation and re-projects them into target traditions without lexical flattening, syncretic distortion, theological dilution, or premature physicalism."
+description: "Execute the Pure Epistemic Fundamental cross-religion translation and structural unification method across scriptures, theological frameworks, spiritual discourses, and philosophical traditions (Christianity, Hinduism/Vedas/Gita, Taoism, Buddhism, Islam/Tawrat/Quran, Indigenous cosmologies). Integrates Action-Effect over Context (AE-C), the Binary Weave (A -> E | C), NSM Prime Reduction, Ortho-Root Addition, Contextual Vector Duality (+υ/-υ), the 7 Q-Planes, the 6 Personal Belief States, and the Hegemonic Stress Tensor (υ, ψ, χ, η). Translates texts into an invariant event-physics intermediate representation and re-projects them into target traditions without lexical flattening, syncretic distortion, or theological dilution."
 ---
 
-# Cross-Religion Translation & Pure Epistemic Fundamental Method (v2 AEC-First Architecture)
+# Cross-Religion Translation & Pure Epistemic Fundamental Method
 
 A rigorous, non-syncretic semantic physics hermeneutic that unifies comparative scriptures through an invariant Intermediate Representation (IR). 
 
-Rather than declaring that diverse religions "all mean the same thing" (lexical flattening) or abandoning universal coherence for cultural isolation (theological siloing), this engine translates statements into **invariant event-physics**: tracking actions, constraints, state transitions, and causal trajectories through the 7-Plane Polytope of Reality.
+Rather than declaring that diverse religions "all mean the same thing" (lexical flattening) or abandoning universal coherence for cultural isolation (theological siloing), this engine translates statements into **event-physics**: tracking actions, constraints, state transitions, and causal trajectories through the 7-Plane Polytope of Reality.
 
 ---
 
-## 1. Core Principles & Pure Epistemic Axioms
+## The Pure Epistemic Fundamental Axioms
 
-1. **Axiom I (Invariant-First, Not Word-First):** Words are not primary keys. Primary keys are **AEC Invariant Triads** (`Action: [A1, A2, A3]`, `Strain: [S1, S2, S3]`, `Effect: [E1, E2, E3]`). Words across scriptures (Hebrew, Greek, Sanskrit, Chinese, Pali, Arabic) are surface aliases mapping to these invariant process geometries.
-2. **Axiom II (Language as Event Physics):** Words describe actions, forces, and boundary modifications under real constraint, not static abstractions. Meaning is the Action-Effect geometry over Context ($\mathbf{A} \xrightarrow{\mathbf{C}} \mathbf{E}$).
-3. **Axiom III (Substrate Evacuation):** All root invariants must be evacuated of:
-   * Carbon biology (organs, flesh, mouths, eyes).
-   * Earth-bound Newtonian physics (gravity, atmospheric friction, arbitrary "down" without baseline).
-   * IT / cybernetic jargon (buffers, telemetry, data packets, compilers).
-   * Premature physicalism: Never reduce intentionality ($Q_1$) or latent potential ($Q_2$) to crude material hardware ($Q_3$).
-4. **Axiom IV (The Plane-Collapse Ban & Strict Plane Separation):**
-   * The root invariant definition of an entity or action must remain strictly **plane-agnostic** (banned in root definitions: *physical, mental, emotional, biological, historical, social, logical, brain, body, computer*).
-   * **Telos in Q4 Only:** Purpose clauses (*"in order to"*, *"so that"*, *"to prevent"*) belong **strictly in Plane Q4 (Lyrical / Meaning / Telos)**. Planes $Q_1, Q_2, Q_3, Q_5, Q_6,$ and $Q_7$ must NEVER contain purposive justifications.
-5. **Axiom V (Topological Boundary Classification):** Classify each operational node by its pure topological boundary constraints:
-   * **Level 0 (Open Axis):** Unconstrained traversal along a dimension (`move`, `go`, `unformed potential`).
-   * **Level 1 (Wall / Threshold):** 1 direction blocked; barrier (`door`, `gate`, `shield`, `boundary`).
-   * **Level 2 (Corner / Intersection):** 2 directions interacting (`cause`, `effect`, `collide`, `meet`).
-   * **Level 3 (Pocket / Channel):** 3 directions blocked, 1 open (`hold`, `cradle`, `grip`, `channel`).
-   * **Level 4 (Enclosure):** All directions closed (`contain`, `confine`, `have`).
-   * **Chamber / Volume:** Closed enclosure with internal capacity across time (`store`, `shelter`, `quarantine`).
+1. **Axiom I (Language as Event Physics):** Words and verses do not describe static metaphysical abstractions floating in a vacuum; they describe physical, cognitive, social, and structural *events* under real constraint. Meaning is not a label—it is the action-effect geometry of an event within a contextual frame.
+2. **Axiom II (Additive Arithmetic, Not Dogmatic Revisionism):** Linguistic decomposition must sum all established historical and etymological root definitions simultaneously. No meaning is retrofitted or cherry-picked. The compound of all root definitions is the functional payload.
+3. **Axiom III (Conservation of Relational Invariance):** Universal spiritual truth does not reside in identical theological vocabulary; it resides in **structural invariants**. Two traditions resonate when their operational relations, causal dependencies, and phase transitions are isomorphic, even if their surface nouns are entirely distinct:
+   $$\text{Resonance}_H(T_A, T_B) \iff \mathbf{I}(T_A) \cong \mathbf{I}(T_B)$$
+4. **Axiom IV (The Binary Weave of Effect):** Every teaching operates on an Action Pole ($\mathbf{A}$) and an Effect Pole ($\mathbf{E}$), bound by a Contextual Substrate ($\mathbf{C}$):
+   $$\mathbf{A} \xrightarrow{\mathbf{C}} \mathbf{E}$$
+   A critical diagnostic is whether the Effect vector flows **outward into reality** ($+\upsilon$, systemic justice, verifiable external accounting) or folds **inward into the self** ($-\upsilon$, subjective feeling-state, private absolution).
+5. **Axiom V (Falsifiable Reality Strain):** Correctness is a 2D filter; Meaning is a 3D $7 \times 6$-$n$-Polytope; Truth is a statement that correctly describes reality and passes the filter 100% ($\infty$). Belief systems that build high mass ($\chi$) on untested assumptions ($\eta > 0$) behave as **Fired Bricks** that shatter under shock. Systems grounded in empirical constraint behave as **Igneous Stones**.
 
 ---
 
-## 2. The 3-Step Action-Strain-Effect Lockstep
+## The Integrated 5-Layer Translation Engine
 
-Every scriptural event or pivotal concept is governed by an irreducible 3-step sequential progression:
-
-$$\begin{aligned}
-\text{Action}_1 &\xrightarrow{\quad [\text{Strain}_1] \quad} \text{Effect}_1 \\
-\text{Action}_2 &\xrightarrow{\quad [\text{Strain}_2] \quad} \text{Effect}_2 \\
-\text{Action}_3 &\xrightarrow{\quad [\text{Strain}_3] \quad} \text{Effect}_3
-\end{aligned}$$
-
-* **Action ($A_n$):** Three sequential, atomic process verbs (what the force/agency does).
-* **Strain ($S_n$):** The three exact resisting forces, drags, or counter-pressures overcome.
-* **Effect ($E_n$):** The three resolved state signatures.
-
----
-
-## 3. The 5-Stage Epistemic Primitive Hunter Sieve
-
-All scriptural texts must pass through this pipeline:
-1. **Substrate Evacuation:** Purge biological metaphors, Newtonian props, and technical jargon.
-2. **$Q_2$ Potential Space Mapping (WHAT):** Map the latent distinctions, degrees of freedom, and uncommitted gradients *before* action occurs.
-3. **$Q_2 \to Q_3$ Collapse (WHERE):** Identify the exact threshold crossing, force application ($F \cdot \Delta t$), or boundary modification that localizes potential into bounded manifestation.
-4. **3-Step Triad Extraction:** Frame the irreducible process in lean, atomic language.
-5. **7-Plane Isomorphism & Multiple Interpretation Check:** Project cleanly across all 7 dimensions while evaluating competing interpretations across belief states and the Hegemonic Stress Tensor.
+```
+[Layer 1: NSM Prime Reduction]
+       ↓ (De-scales rhetorical complexity to primitive semantic anchors)
+[Layer 2: Ortho-Root Addition Arithmetic]
+       ↓ (Sums dictionary roots in source language; extracts machine code)
+[Layer 3: Contextual Vector Duality (±υ)]
+       ↓ (Isolates Order Vector vs. Chaos Vector for pivot terms)
+[Layer 4: 7 Q-Planes Projection & Binary Weave]
+       ↓ (Renders claims through Q1-Q7 interrogatives & A -> E | C)
+[Layer 5: Hegemonic Stress Tensor & Belief State Dynamics]
+       ↓ (Calculates (υ, ψ, χ, η), maps 6 belief states, extracts Invariant)
+[Cross-Tradition Re-Projection]
+       → (Re-expresses the extracted Invariant into native theological tongues)
+```
 
 ---
 
-## 4. The Seven Q-Planes of Reality (With Strict Separation)
+### Layer 1: NSM Prime Reduction & Isomorphic Scaling
+Before comparing complex prose across ancient languages (Greek, Hebrew, Sanskrit, Classical Chinese, Pali, Arabic), reduce idioms to Natural Semantic Metalanguage (NSM) primes without collapsing independent conceptual anchors:
+* **Substantives:** `I`, `YOU`, `SOMEONE`, `PEOPLE`, `SOMETHING/THING`, `BODY`
+* **Evaluators & Descriptors:** `GOOD`, `BAD`, `BIG`, `SMALL` (scaled via intensity stacks: `good+++`, `bad+++`)
+* **Mental / Cognitive:** `THINK`, `KNOW`, `WANT`, `FEEL`, `SEE`, `HEAR`
+* **Speech & Action:** `SAY`, `WORDS`, `DO`, `HAPPEN`, `MOVE`
+* **Location, Existence, Time:** `THERE IS`, `HAVE`, `LIVE`, `DIE`, `BEFORE`, `AFTER`, `NOW`, `TIME`
+* **Logical & Relational:** `NOT`, `MAYBE`, `CAN`, `BECAUSE`, `IF`, `LIKE`
 
-| Q-Plane | Name | Interrogative | Strict Domain Invariant | Banned In This Plane |
-| :---: | :--- | :---: | :--- | :--- |
-| **$Q_1$** | **Metaphysical** | **WHO** | Sovereign agency, identity vector, directed will, alignment of intentionality. | Purposive telos (*"so that"*), material organs. |
-| **$Q_2$** | **Possible** | **WHAT** | Latent state space, degrees of freedom, uncommitted gradients, branching blueprints. | Physical collapse, teleological justification. |
-| **$Q_3$** | **Physical** | **WHERE** | Spatial boundaries, matter, mass distribution, kinetic force application, volume. | Purposive intent, cognitive/emotive states. |
-| **$Q_4$** | **Lyrical** | **WHY** | **Telos**, intrinsic resonance, ultimate meaning, purpose clauses (*"in order to"*). | Pure mechanical sequence without meaning. |
-| **$Q_5$** | **Logical** | **HOW** | Algorithmic protocol, transactional calculus, procedural rules, boundary logic. | Purposive justifications, emotional affect. |
-| **$Q_6$** | **Historical** | **CAUSE** | Irreversible temporal sequence, ancestral precedent, accumulated debt/lineage. | Present purpose, speculative futures. |
-| **$Q_7$** | **Emotive** | **EFFECT** | Consequential friction, agony, relief, visceral shock, resultant impact. | Justifications (*"why they felt"*), abstract logic. |
+*Scaling Rule:* Scale along the intensity axis (`sprinted` $\to$ `run+++`; `rage` $\to$ `feel[bad]+++`), but never collapse distinct anchors (e.g., do not reduce `know` to `think`, or `do` to `feel`).
 
 ---
 
-## 5. Hegemonic Stress Tensor & Belief State Dynamics
+### Layer 2: Ortho-Root Addition (Etymological Arithmetic on Names & Identifiers)
+When analyzing proper names of actors, tribes, geographical locations, divine titles, or technical nouns:
+1. **Linguistic Root Decomposition:** Break down the term into its constituent linguistic roots in the original language (Hebrew root, Sanskrit *dhātu*, Greek etymon, Arabic *jizr*, Chinese radical).
+2. **Exhaustive Root Lookup:** Look up all standard orthodox dictionary definitions for each constituent root.
+3. **Additive Arithmetic (The Orthodox ANDing Rule):** Sum the definitions additively. All historical/etymological meanings must be held simultaneously (ANDed together):
+   $$\text{Meaning}(W) = \sum_{i=1}^n \text{Root}_i$$
+   *Never cherry-pick or discard standard meanings.*
+4. **Machine Code Process Role:** Output a single functional sentence stating what the entity or location *does functionally* as an operator in the cosmic or social event-physics engine, completely stripped of mythological costume.
+5. **Combined Event-Formula:** In narrative passages involving multiple named actors, places, or factions, combine the decoded process operators into a single unified event-physics formula demonstrating how they interact.
 
-### 1. The 4-Component Idea Vector: $(\upsilon, \psi, \chi, \eta)$
-* **$\upsilon$ (Morality / Beneficiary Scope) $[-2, +2]$:**
-  * $+2$: Universal / All beings (Systemic Justice)
-  * $+1$: Other / Peer nodes (Greater Good)
+---
+
+### Layer 3: Contextual Vector Duality ($\pm\upsilon$)
+No archetype, entity, or mechanism is inherently holy or profane. It represents a functional capacity operating in one of two directions:
+* **Order Vector ($+\upsilon$):** The function operating in alignment with systemic coherence, universal benefit, and reality stabilization (The Greater Good).
+* **Chaos Vector ($-\upsilon$):** The same function inverted into extraction, deception, entropy acceleration, or boundary destruction (Chaos / Collapse).
+
+---
+
+### Layer 4: The Seven Q-Planes of Reality
+The core claim of the passage must be projected through the 7 canonical Q-planes:
+
+| Q-Plane | Name | Interrogative | Ontological Domain & Canonical Vocabulary |
+| :---: | :--- | :---: | :--- |
+| **$Q_1$** | **Metaphysical / Conscious** | **WHO** | Will, identity, agency, sovereign intentionality, reflection, authority. |
+| **$Q_2$** | **Possible** | **WHAT** | Probability, latent state, branching potential, blueprint, variable. |
+| **$Q_3$** | **Physical** | **WHERE** | Atoms, mass, spatial mechanics, kinetic force, biology, hardware, boundaries. |
+| **$Q_4$** | **Lyrical** | **WHY** | Resonance, harmony, melody, soul frequency, intrinsic purpose, rhythm. |
+| **$Q_5$** | **Logical** | **HOW** | Algorithm, protocol, causal logic, computational processing, covenants, law. |
+| **$Q_6$** | **Historical** | **CAUSE** | Lineage, temporal sequence, irreversible memory, precedent, origin vector. |
+| **$Q_7$** | **Emotive / Emotional** | **EFFECT** | Affective consequence, friction, bliss, suffering, passion, feedback. |
+
+*Plane Rendering Rule:* Each Q-plane renders the **core functional claim** of the source text in flowing prose matching the register of that plane. It is not a mechanical word-by-word swap; it is an ontological re-voicing of the event.
+
+---
+
+### Layer 5: The Hegemonic Stress Tensor & Belief State Dynamics
+
+#### 1. The 4-Component Idea Vector: $(\upsilon, \psi, \chi, \eta)$
+* **$\upsilon$ (Morality / Scope) $[-2, +2]$:** Who benefits?
+  * $+2$: Everyone / Universal (Systemic Justice)
+  * $+1$: Other people (Greater Good)
   * $0$: Neutral / No one
   * $-1$: My group only (Lesser Evil / Tribal extraction)
   * $-2$: Me only (Tyranny / Pure extraction)
-* **$\psi$ (Will / Kinetic Energy) $[-2, +2]$:**
+* **$\psi$ (Will / Action) $[-2, +2]$:** What is the energy doing?
   * $+2$: Actively creating systemic value (Productive Justice)
   * $+1$: Proactive / Building / Acting
   * $0$: Inactive / Neutral
   * $-1$: Passive / Suppressing / Withholding
   * $-2$: Actively destroying or extracting (Chaos / Collapse)
 * **$\chi$ (Gravitational Mass):** The density of prior belief structure anchoring the idea.
-* **$\eta$ (Reality Strain):** Discrepancy between declared claim and observable feedback ($\eta = |\text{Declared} - \text{Actual}|$).
-  * Low $\eta$: **Igneous Stone** (reality-hardened).
-  * High $\eta$: **Fired Brick** (brittle assumption; shatters under load).
+* **$\eta$ (Reality Strain):** The degree to which the promised effect contradicts observable physical/empirical feedback:
+  $$\eta = \left| \text{Declared Claim} - \text{Observable Feedback} (Q_3 / Q_7) \right|$$
+  * *Igneous Stone:* Low strain $\eta \approx 0$, hardened against reality pressure.
+  * *Fired Brick:* High strain $\eta \gg 0$, rigid narrative that shatters under contradictory evidence.
 
-### 2. Multi-Perspective Questoscopy (Competing Interpretations)
-Scriptural meaning is a **3D $7 \times 6$-$n$-Polytope**. Never collapse a passage into a single flat narrative. Map the competing operational interpretations across the 6 Belief States:
-* `(=)` **Truth:** Empirical alignment with the physical balance sheet.
-* `(+?)` **Will to Know:** Active inquiry, testing, auditing reality strain.
-* `(<)` **Lie:** Weaponized extraction, using sacred symbols to mask predation.
-* `(~?)` **Indifferent:** Bureaucratic compliance, passive protocol execution.
-* `(>)` **Insult / Attack:** Aggressive domination, kinetic liquidation of peer nodes.
-* `(-?)` **Will Not to Know:** Dogmatic taboo, willful blindness to systemic consequence.
+#### 2. The 6 Finite Personal Belief States
+Track how agents and systems transition across operational states:
+* `(=)` **Truth:** Aligned baseline; direct fidelity to observable feedback.
+* `(+?)` **Will to Know:** Active inquiry, reality testing, empirical exploration.
+* `(<)` **Lie:** Active distortion, manipulation, extraction, concealment of signal.
+* `(~?)` **Indifferent:** Passive neutrality, apathy, entropic drift.
+* `(>)` **Insult / Attack:** Hostile domination, active invalidation, destructive friction.
+* `(-?)` **Will Not to Know:** Taboo, active repression, willful denial.
+
+#### 3. Perceptual Inversion (The 0.5 Zone Warning)
+Near the ego-boundary, the perception of an action inverts:
+$$P_{\text{perceptual}} \neq P_{\text{trajectory}}$$
+* Extraction feels like Strength; Service feels like Burden.
+* Retaliation ($-\upsilon, +\psi$) feels like "Justice", while non-reciprocal stabilization ($+\upsilon, +\psi$) feels like "Weakness".
+* All translations must flag whether the scripture is correcting a 0.5 Zone perceptual inversion.
 
 ---
 
-## 6. Execution Schema
+## Execution Protocols
 
-When executing `/cross-religion-translation`:
-1. **Passage Citation & Contextual Substrate:** Identify source text, historical boundary, and existential conditions.
-2. **Substrate-Evacuated Invariant Triad:** 
-   * 3-Step Action-Strain-Effect Lockstep ($\mathbf{A}_n \xrightarrow{[\mathbf{S}_n]} \mathbf{E}_n$).
-   * Topological Closure Level (0 to Chamber).
-   * Machine Code Functional Definition (one sentence stating what the process DOES in the cosmic/social engine before physical collapse).
-3. **The 7-Plane Isomorphic Projections (Strict Separation Enforced):**
-   * $Q_1$ WHO (Agency / Will)
-   * $Q_2$ WHAT (Potential Space / Degrees of Freedom)
-   * $Q_3$ WHERE (Kinetic & Spatial Collapse)
-   * $Q_4$ WHY (Telos / Lyrical Purpose — *Purposive clauses isolated here*)
-   * $Q_5$ HOW (Algorithmic Protocol / Ledger Calculus)
-   * $Q_6$ CAUSE (Temporal Sequence / Origin Precedent)
-   * $Q_7$ EFFECT (Consequential Feedback / Resultant State)
-4. **Multi-Perspective Questoscopy:**
-   * Evaluate the passage simultaneously across competing attractor lenses (In-Group Beneficiary vs. Out-Group Victim vs. Administrative Bureaucrat vs. Universal Epistemic Auditor).
-5. **Cross-Tradition Invariant Re-Projections:**
-   * Re-project the substrate-evacuated invariant triad into the native philosophical vocabularies of target traditions (Biblical, Vedic/Gita, Taoist, Buddhist, Islamic/Semitic).
-6. **Hegemonic Coordinates & Zone Verdict:**
-   * Report exact $(\upsilon, \psi)$ coordinate, nearest zone anchor, reality strain $\eta$, and plain-language verdict.
+### Protocol A: Passage & Narrative Epistemic Deconstruction (Format A)
+Use for scriptural chapters, narrative passages, prophetic decrees, or individual verses.
+
+```markdown
+# Pure Epistemic Deconstruction: [Scripture Reference]
+
+**Source Text ([Original Language]):**
+[Original Hebrew, Greek, Sanskrit, Classical Chinese, Pali, Arabic, etc.]
+
+**Standard Theological Translation:**
+[Conventional translation for baseline reference]
+
+---
+
+## Stage 1: Process Primitive Extraction & Identifier Decoding
+
+### 1. Orthodox ANDing Name & Identifier Decoding
+*(For every named actor, place, faction, or key term, sum all constituent dictionary root definitions simultaneously. Never cherry-pick or discard standard meanings.)*
+- **[Identifier / Name 1] ([Transliteration]):**
+  - *Roots & Orthodox Definitions:* Root A ("...") + Root B ("...")
+  - *Summed Machine Code Role:* [Functional sentence defining what this operator DOES in the event-physics engine]
+
+### 2. Dynamic Topological & Process Roles
+*(Derive functional roles directly from the physical and operational mechanics of the specific text — never hardcode or assume predefined categories)*:
+- **Active / Initiating Forces:** [Identify what forces, vectors, or agents are acting, projecting, or driving kinetic energy]
+- **Receptive / Capacitive Fields:** [Identify what substrates, spaces, mediums, or capacities are receiving, containing, or resisting]
+- **Boundary & State Transitions:** [Identify the constraints, phase transitions, purifications, or transformations occurring between the elements]
+
+### 3. Combined Event-Formula
+$$\mathbf{F}_{\text{Event}} = \text{[Synthesized structural formula showing how the decoded operators interact in physical reality]}$$
+
+---
+
+## Stage 2: Seven Q-Planes Process Translation
+*(Project the event-formula through all 7 planes; purpose clauses strictly in Q4)*:
+- **Q1 — WHO (Metaphysical / Conscious):** [Will, identity, agency, sovereign intentionality, command hierarchy]
+- **Q2 — WHAT (Possible):** [Probability space, unformed potential, branching trajectories, state vectors]
+- **Q3 — WHERE (Physical / Topological):** [Atoms, biology, kinetic force, physical containment, spatial boundaries]
+- **Q4 — WHY (Lyrical / Intrinsic Purpose):** [Resonance, intrinsic purpose, harmony, soul frequency, systemic teleology]
+- **Q5 — HOW (Logical / Algorithmic):** [Execution protocols, conditional rules, computational law, covenants]
+- **Q6 — CAUSE (Historical / Lineage):** [Temporal sequence, irreversible memory, origin vector, prior conditioning]
+- **Q7 — EFFECT (Emotive / Feedback):** [Affective consequence, systemic friction, bliss, suffering, reality feedback]
+
+---
+
+## Stage 3: Cross-Tradition Native Scriptural Re-Projections
+*(Re-project the invariant into the authentic native theological/philosophical register of each tradition)*:
+- **Biblical / Christian Re-Projection:** [Prophetic / apostolic / covenantal idiom]
+- **Vedic / Bhagavad Gita Re-Projection:** [Sanskrit / dharmic / field-and-knower idiom]
+- **Taoist (Tao Te Ching) Re-Projection:** [Paradoxical / nature-geometry / uncarved block idiom]
+- **Buddhist Sutra Re-Projection:** [Dependent origination / karmic seeds / emptiness idiom]
+- **Islamic / Semitic Re-Projection:** [Fitrah / covenantal stewardship / boundary protection idiom]
+- **Indigenous / First Nations Custodial Re-Projection:** [Relational landscape / custodial law / smoking ceremony idiom]
+
+---
+
+## Stage 4: Invariant & Irreducible Remainder Ledger
+- **Preserved Invariant:** [The universal event-physics law that cleanly survives translation across all traditions]
+- **Irreducible Remainder:** [Tradition-specific metaphysical commitments that do not reduce to physical invariants and must be preserved as distinct historical data]
+- **Failure Modes / Phase Corruption:** [What structural breakdown occurs if the invariant is distorted into tribal extraction, private emotionalism, or nihilism]
+```
+
+---
+
+### Protocol B: Multi-Scripture Cross-Projection & Invariant Synthesis (Format B)
+Use when comparing passages across 2 or more distinct world traditions.
+
+```markdown
+# Cross-Scripture Invariant Synthesis
+
+## 1. Candidate Source Passages
+- **Tradition 1 ([Name]):** [Passage, Citation, Text]
+- **Tradition 2 ([Name]):** [Passage, Citation, Text]
+- **Tradition 3 ([Name]):** [Passage, Citation, Text]
+- **Tradition 4 ([Name]):** [Passage, Citation, Text]
+
+## 2. Comparative Intermediate Representation Matrix
+
+| Tradition | Passage | Q-Plane Focus | Stress Tensor (υ, ψ) | State Transition | Material |
+|---|---|---|---|---|---|
+| [Tradition 1] | [...] | [e.g. Q5 / Q7] | (+1.6, +1.4) | (>) → (=) | Igneous |
+| [Tradition 2] | [...] | [e.g. Q1 / Q5] | (+1.7, +1.2) | (>) → (~?) → (=) | Igneous |
+| [Tradition 3] | [...] | [e.g. Q3 / Q2] | (+1.3, +0.8) | (>) → Yield → (=) | Igneous |
+| [Tradition 4] | [...] | [e.g. Q1 / Q6] | (+1.5, +1.8) | (-?) → (=) → (+2ψ) | Igneous |
+
+## 3. Extracted Systemic Invariant
+$$\mathbf{I}_{\text{Unified}} = \text{[Formal statement of the invariant event physics mechanism]}$$
+
+## 4. Native Cross-Tradition Re-Projections
+*(Re-projecting the invariant into the authentic native theological/philosophical register of each target tradition, proving structural reversibility)*:
+
+* **Biblical / Christian Re-Projection:**
+  > "[Rendered in authentic prophetic/apostolic idiom preserving the invariant]"
+* **Vedic / Bhagavad Gita Re-Projection:**
+  > "[Rendered in authentic Sanskrit/Dharmic idiom preserving the invariant]"
+* **Taoist (Tao Te Ching) Re-Projection:**
+  > "[Rendered in authentic paradoxical/nature-geometry idiom preserving the invariant]"
+* **Buddhist Sutra Re-Projection:**
+  > "[Rendered in authentic dependent origination/emptiness idiom preserving the invariant]"
+* **Islamic / Semitic (Ibadah/Tawrat) Re-Projection:**
+  > "[Rendered in authentic covenantal action/outward ledger idiom preserving the invariant]"
+* **Indigenous / First Nations (Dreamtime Law) Re-Projection:**
+  > "[Rendered in authentic relational landscape/kinship custodial idiom preserving the invariant]"
+
+## 5. Audit & Remainder Ledger
+- **Preserved Invariant:** [What cleanly survives translation]
+- **Irreducible Remainder:** [Tradition-specific metaphysical commitments that do not translate into physical invariants and must be preserved as distinct historical data]
+- **Divergence / Failure Mode:** [What occurs if any tradition corrupts this invariant into tribal extraction or passive feeling]
+```
+
+---
+
+### Protocol C: Archetype & Divine Title Functional Decoding (Format C)
+Use for proper names, titles of gods, avatars, relics, or metaphysical constructs (e.g., Christ, Krishna, Tao, Buddha, Logos, Dharma, Brahman, YHWH, Al-Haqq).
+
+```markdown
+## Functional Archetype Decoding: [Name / Title]
+
+**1. Root Analysis (Orthodox Summation):**
+- **Original Term ([Language]):** [Transliteration]
+- **Constituent Roots & Standard Definitions:** `[Root 1]` ("...") + `[Root 2]` ("...")
+- **Summed Machine Code Definition:** [One sentence defining what the entity DOES functionally in the cosmic/social physics engine]
+
+**2. Contextual Vector Duality:**
+- **Chaos Vector (−υ):** [Weaponized extraction, dogmatic idolatry, tribal gatekeeping, cultic capture]
+- **Order Vector (+υ):** [Cosmic baseline restoration, systemic justice, reality disclosure, universal coherence]
+
+**3. The 7-Plane Functional Signature:**
+- **Q1 (WHO):** [Agency and sovereign mandate]
+- **Q2 (WHAT):** [Latent possibility space unlocked]
+- **Q3 (WHERE):** [Physical substrate and material embodiment]
+- **Q4 (WHY):** [Harmonic resonance and intrinsic soul alignment]
+- **Q5 (HOW):** [Operational protocol and covenantal mechanism]
+- **Q6 (CAUSE):** [Historical lineage and primordial origin vector]
+- **Q7 (EFFECT):** [Affective transformation and civilizational consequence]
+
+**4. Cross-Tradition Functional Isomorphisms:**
+- In Tradition A, this function manifests as: `[Equivalent functional mechanism]`
+- In Tradition B, this function manifests as: `[Equivalent functional mechanism]`
+- In Tradition C, this function manifests as: `[Equivalent functional mechanism]`
+```
+
+---
+
+### Protocol D: Functional Semantic Clustering Pipeline
+When integrating newly ingested scriptural corpora into the workspace's cluster databases (e.g., updating `Semantic_Clusters/cluster_mapping.json`):
+
+1. **Bypass Lexical Embedding Silos:** Do not cluster raw texts using standard TF-IDF, Word2Vec, or vanilla transformer embeddings directly, as they will cluster texts by cultural language (e.g., isolating Bible verses in Topic 8).
+2. **Generate the Hegemonic Metadata Tuple:** For each passage, extract:
+   $$\vec{V} = \left[ Q_{\text{primary}}, \ Q_{\text{secondary}}, \ \upsilon, \ \psi, \ \chi, \ \eta, \ \Delta S_{\text{belief}} \right]$$
+3. **Cluster on Structural Geometry:** Cluster on $\vec{V}$. Passages like Romans 12:21, Dhammapada 1.5, Tao Te Ching 22, and Gita 2.47 will project into the identical semantic coordinates (e.g., `Cluster_NonReciprocal_Phase_Inversion`), allowing cross-scripture queries by structural function.
+
+---
+
+## Worked Master Example: The Law of Non-Reciprocal Phase Inversion
+
+### 1. Comparative Analysis Across Four Traditions
+
+* **Christianity (Romans 12:21):** *"Do not be overcome by evil, but overcome evil with good."*
+* **Buddhism (Dhammapada 1.5):** *"Hatred is never appeased by hatred in this world. By non-hatred alone is hatred appeased. This is an eternal law."*
+* **Taoism (Tao Te Ching 22 & 36):** *"Yield and overcome; bend and be straight; empty and be full... The soft and weak overcomes the hard and strong."*
+* **Hinduism (Bhagavad Gita 2.47–48):** *"You have a right to perform your prescribed duty, but never to the fruits of action. Be not motivated by the fruits, nor be attached to inaction."*
+
+---
+
+### 2. The Binary Weave ($\mathbf{A} \to \mathbf{E} \mid \mathbf{C}$) & Stress Tensor
+
+| Passage | Context ($\mathbf{C}$) | Action Pole ($\mathbf{A}$) | Effect Pole ($\mathbf{E}$) | Vector $(\upsilon, \psi)$ | Belief Transition |
+|---|---|---|---|---|---|
+| **Romans 12:21** | Social/relational warfare | Emitting constructive output under attack | Chain of retribution is severed; adversary's evil neutralized | $(+1.6, +1.4)$ Greater Good | $(>) \to (=) \to (+?)$ |
+| **Dhammapada 1.5** | Mental & interpersonal field | Withholding hatred in response to provocation | Negative resonance is damped; karma ceases oscillation | $(+1.7, +1.2)$ Greater Good | $(>) \to (\sim?) \to (=)$ |
+| **Tao Te Ching 22** | Material & physical mechanics | Yielding along the incoming kinetic vector | Zero structural fracture; opponent exhausts kinetic energy | $(+1.3, +0.8)$ Lesser Good | $(>) \to \text{Yield} \to (=)$ |
+| **Gita 2.47** | Duty / existential action | Executing full kinetic duty with zero fruit-attachment | Absolute action without ego-distortion or anxiety-drag | $(+1.5, +1.8)$ Productive Justice | $(-?) \to (=) \to (+2\psi)$ |
+
+---
+
+### 3. The Universal Structural Invariant
+
+$$\boxed{\mathbf{I} = \text{The interruption of self-amplifying entropic feedback loops via non-reciprocal, unattached action.}}$$
+
+* **Linear Entropic Logic ($-\upsilon, +\psi$):** Meeting kinetic force with equal reactive force matches phase, amplifying destructive oscillation and collapsing the structure.
+* **Hegemonic Invariant ($+\upsilon, +\psi$):** Absorbs incoming negative kinetic force, shifts phase by $180^\circ$ (substituting constructive output for reactive friction), and stabilizes systemic equilibrium.
+
+---
+
+### 4. Cross-Tradition Native Re-Projections
+
+* **Romans 12:21 re-projected into Taoism:**
+  > *"The gale uproots the rigid pine, but the willow bends and lets the hurricane howl past. Meeting malice with fury makes you dry timber ready to snap. The Sage receives the insult into emptiness, offering only water that nourishes without contending."*
+* **Romans 12:21 re-projected into the Bhagavad Gita:**
+  > *"When assailed by those whose minds are clouded by rajas and tamas, do not allow your mind to plunge into vengeance. Perform your action purely as an offering to Dharma, free from enmity. He who responds to hostility with equanimity dissolves adharma at its root."*
+* **Tao Te Ching 22 re-projected into the Gospels:**
+  > *"Blessed are the meek, for they shall inherit the earth. The branch that will not bend in the frost snaps under the snow, but he who humbles himself and takes the lowest seat cannot be cast down. Grace bends low like living water, and the gates of hell cannot prevail against it."*
+* **Gita 2.47 re-projected into Buddhist Sutras:**
+  > *"The ignorant householder acts grasping after the sweet fruit, and falls into despair when the fruit turns to dust, bound to the twelve links of becoming. The Arahat acts with diligence yet clings to no fruit; doing what must be done, his mind remains unshakeable like Mount Meru."*
+
+---
+
+## Mandatory Invariants & Validation Rules
+
+1. **Absolute Ban on Moralizing Syncretism:** Never claim that traditions "all teach love and kindness." Map their exact structural mechanics, state transitions, and operational differences.
+2. **Preserve the Irreducible Remainder:** Always report theological remainder ($\lambda$) that does not translate into physical/functional invariants.
+3. **Outward Action vs. Inward Feeling Audit:** Always audit whether a translation inverts the direction of Effect (e.g., *ibadah* outward service vs. *worship* inward feeling). Never permit an inward-folding substitution to masquerade as an outward action.
+4. **Falsifiable Stress Testing:** If an interpretation claims an idea is "holy" or "true", test its reality strain $\eta$. If the doctrine demands belief in defiance of observable physical feedback, classify it as a **Fired Brick** undergoing structural strain.
+5. **Report Coordinate Verdict:** When judging the moral orientation of any passage, doctrine, or policy, report the exact $(\upsilon, \psi)$ coordinate, nearest zone anchor, and plain language verdict.
