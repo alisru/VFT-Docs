@@ -1,5 +1,5 @@
 ---
-title: "Jung vs VFT Philosophy ComparisonContentsShare & ExportCreate"
+title: "Jung vs VFT Philosophy Comparison"
 chat_id: "gemini-9511fdfda9c81c07"
 chat_title: "Jung vs. VFT Philosophy Comparison - Google Gemini"
 chat_url: "https://gemini.google.com/app/cbfc16ddf83b01f4?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all"
