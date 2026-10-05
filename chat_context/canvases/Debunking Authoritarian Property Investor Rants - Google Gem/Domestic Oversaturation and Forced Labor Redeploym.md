@@ -4,7 +4,7 @@ chat_id: "gemini-dd82cf235ec796b0"
 chat_title: "Debunking Authoritarian Property Investor Rants - Google Gemini"
 chat_url: "https://gemini.google.com/app/910f67ade2e57681?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all"
 type: "markdown"
-updated: "2026-10-05T11:40:23.725173+00:00"
+updated: "2026-10-05T11:42:11.504217+00:00"
 ---
 
 # Australia’s White-Collar Labor Glut: Modeling Domestic Career Reallocation Under Migration Cuts
