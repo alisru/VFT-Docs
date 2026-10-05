@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Chat Context Sync",
+  "version": "1.0.0",
+  "description": "Automatically syncs Gemini web conversations to your local Chat Context database.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "http://127.0.0.1:8765/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Chat Context Sync"
+  }
+}
