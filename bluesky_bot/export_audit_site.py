@@ -81,10 +81,27 @@ if os.path.exists(graph_src_dir):
     print(f"[OK] Bundled: {count} trajectory graph images in graph_png/")
 
 # Bundle static article sources from harvested_stories_log.jsonl
+import glob
 log_file = os.path.join(script_dir, "harvested_stories_log.jsonl")
 sources_dst_dir = os.path.join(dist_dir, "sources")
 if os.path.exists(log_file):
     os.makedirs(sources_dst_dir, exist_ok=True)
+    # Pre-build URL -> Story ID lookup so un-ID'd log entries match their stories
+    url_to_sid = {}
+    stories_glob = glob.glob(os.path.join(script_dir, "stories", "live", "*.json")) + glob.glob(os.path.join(script_dir, "stories", "*.json"))
+    for sp in stories_glob:
+        try:
+            with open(sp, "r", encoding="utf-8", errors="ignore") as sf:
+                sd = json.load(sf)
+                item = sd[0] if isinstance(sd, list) and sd else sd
+                if isinstance(item, dict):
+                    u = (item.get("link") or item.get("grounding_url") or item.get("target_url") or "").strip()
+                    sid_candidate = item.get("id") or os.path.splitext(os.path.basename(sp))[0]
+                    if u and sid_candidate:
+                        url_to_sid[u] = sid_candidate
+        except Exception:
+            pass
+
     sources_count = 0
     with open(log_file, "r", encoding="utf-8", errors="ignore") as f:
         for line in f:
@@ -94,6 +111,8 @@ if os.path.exists(log_file):
                     sid = obj.get("id") or ""
                     url = obj.get("url") or ""
                     text = obj.get("text") or ""
+                    if not sid and url in url_to_sid:
+                        sid = url_to_sid[url]
                     if text and (sid or url):
                         payload = {
                             "id": sid,

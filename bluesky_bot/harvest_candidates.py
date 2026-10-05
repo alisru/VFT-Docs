@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from atproto import Client, IdResolver
 import requests
 from html.parser import HTMLParser
+from scraped_cache import get_cached_article, save_cached_article
 
 # Ensure UTF-8 output encoding to prevent Unicode/Cp1252 printing errors on Windows
 if sys.stdout and sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
@@ -100,7 +101,16 @@ def scrape_via_tavily(url):
     except Exception as ex:
         return None, None, f"Tavily extract error: {ex}"
 
-def scrape_article_content(url):
+def scrape_article_content(url, check_cache=True):
+    if not url:
+        return None, None, "Error: No URL provided"
+
+    if check_cache:
+        c_title, c_desc, c_body = get_cached_article(url)
+        if c_body and len(c_body.strip()) >= 150:
+            print(f"  [Cache Hit] Scraped text found locally ({len(c_body)} chars). Skipping network scrape.")
+            return c_title or "Article", c_desc or "", c_body
+
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
     }
@@ -111,10 +121,12 @@ def scrape_article_content(url):
             parser.feed(response.text)
             title, desc, body = parser.get_results()
             if body and len(body.strip()) > 150:
+                save_cached_article(url, title, desc, body)
                 return title, desc, body
         # Fallback to Tavily if status != 200 or body was empty/blocked
         t_title, t_desc, t_body = scrape_via_tavily(url)
         if t_body and not t_body.startswith("Tavily error") and not t_body.startswith("Tavily extract error"):
+            save_cached_article(url, t_title or "Article", t_desc or "", t_body)
             return t_title or "Article", t_desc or "", t_body
             
         if response.status_code != 200:
@@ -124,6 +136,7 @@ def scrape_article_content(url):
         # If connection error / timeout, attempt Tavily fallback
         t_title, t_desc, t_body = scrape_via_tavily(url)
         if t_body and not t_body.startswith("Tavily error") and not t_body.startswith("Tavily extract error"):
+            save_cached_article(url, t_title or "Article", t_desc or "", t_body)
             return t_title or "Article", t_desc or "", t_body
         return None, None, f"Error: {e}"
 
@@ -289,6 +302,10 @@ NON_NEWS_DOMAINS = {
     'amazon.com', 'amzn.to', 'etsy.com', 'shopify.com', 'gofundme.com',
     'pinterest.com', 'tumblr.com', 'mastodon.social', 'snapchat.com',
     'coinbase.com', 'binance.com', 'pump.fun', 'opensea.io',
+    # Academic preprints and paper repositories (not news articles)
+    'arxiv.org', 'biorxiv.org', 'medrxiv.org', 'ssrn.com',
+    'researchgate.net', 'academia.edu', 'semanticscholar.org',
+    'doi.org', 'osf.io', 'philpapers.org', 'chemrxiv.org', 'techrxiv.org',
 }
 
 # Domains that consistently fail raw scraping due to paywalls, cloudflare blocks, etc.
@@ -447,10 +464,13 @@ def is_banned(text, url, banned_keywords):
 def is_english(text):
     if not text:
         return False
+    # Immediate check for CJK / East Asian characters across main and extension blocks
+    cjk_re = re.compile(r'[\u3040-\u309f\u30a0-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef\u1100-\u11ff\u3130-\u318f]')
+    if cjk_re.search(text):
+        return False
     cleaned_text = re.sub(r'https?://[^\s]+', '', text)
     cleaned_text = re.sub(r'\b[a-zA-Z0-9-]+\.[a-z]{2,}/[^\s]*', '', cleaned_text)
     
-    cjk_re = re.compile(r'[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef]')
     if cjk_re.search(cleaned_text):
         return False
         
@@ -485,10 +505,15 @@ def matches_category(text, url, feed_categories, requested_categories):
                     return True
     return False
 
+def sanitize_url(url):
+    if not url:
+        return ""
+    return re.sub(r'[\s\u200b\u00ad]+', '', str(url).strip())
+
 def normalize_url(url):
     if not url:
         return ""
-    url = url.strip()
+    url = sanitize_url(url)
     if "?" in url:
         url = url.split("?")[0]
     if "#" in url:
@@ -557,18 +582,19 @@ def run_harvest():
                     
                     config = data[0] if isinstance(data, list) else data
                 
-                    url = config.get("link") or config.get("target_url")
-                    if url:
-                        url_clean = normalize_url(url)
-                        seen_historical_urls.add(url_clean)
-                        seen_evaluated_urls.add(url_clean)
-                        try:
-                            host = urllib.parse.urlparse(url_clean).hostname
-                            if host:
-                                host = host.replace("www.", "")
-                                historical_domain_counts[host] = historical_domain_counts.get(host, 0) + 1
-                        except Exception:
-                            pass
+                    for field in ("link", "target_url", "grounding_url"):
+                        url_val = config.get(field)
+                        if url_val:
+                            url_clean = normalize_url(url_val)
+                            seen_historical_urls.add(url_clean)
+                            seen_evaluated_urls.add(url_clean)
+                            try:
+                                host = urllib.parse.urlparse(url_clean).hostname
+                                if host:
+                                    host = host.replace("www.", "")
+                                    historical_domain_counts[host] = historical_domain_counts.get(host, 0) + 1
+                            except Exception:
+                                pass
                     
                     story_id = config.get("id")
                     if story_id:
@@ -594,12 +620,13 @@ def run_harvest():
                 data = json.load(f)
                 if isinstance(data, list):
                     for c in data:
-                        url = c.get("url")
-                        if url and normalize_url(url) in seen_evaluated_urls:
+                        c_urls = {normalize_url(c.get("url", "")), normalize_url(c.get("target_url", ""))}
+                        c_urls.discard("")
+                        if any(u in seen_evaluated_urls for u in c_urls):
                             continue
                         existing_queue.append(c)
-                        if url:
-                            existing_queue_urls.add(normalize_url(url))
+                        for u in c_urls:
+                            existing_queue_urls.add(u)
                     
                         text = c.get("text", "")
                         if text:
@@ -622,14 +649,10 @@ def run_harvest():
     existing_bsky_count = len(existing_queue) - existing_rss_count
 
     # Adjust targets based on existing queue size to top-up
-    # Prioritize clearing the existing queue first: if queue is non-empty, bypass scraping new ones.
+    TARGET_RSS = max(0, TARGET_RSS - existing_rss_count)
+    TARGET_BSKY = max(0, TARGET_BSKY - existing_bsky_count)
     if len(existing_queue) > 0:
-        print(f"Queue is not empty ({len(existing_queue)} items). Bypassing new harvesting to clear queue first.")
-        TARGET_RSS = 0
-        TARGET_BSKY = 0
-    else:
-        TARGET_RSS = max(0, TARGET_RSS - existing_rss_count)
-        TARGET_BSKY = max(0, TARGET_BSKY - existing_bsky_count)
+        print(f"Existing queue has {len(existing_queue)} items (RSS: {existing_rss_count}, Bluesky: {existing_bsky_count}).")
     print(f"Top-up targets: RSS={TARGET_RSS} (needed), Bluesky={TARGET_BSKY} (needed)")
 
     # --- 1. DYNAMIC STORY-LEVEL DE-DUPLICATION HEURISTIC ---
@@ -850,6 +873,8 @@ def run_harvest():
                 
                     if len(text_body) < 45:
                         continue
+                    if not is_english(text_body):
+                        continue
                     if normalize_url(link_text) in seen_historical_urls:
                         continue
                 
@@ -956,6 +981,8 @@ def run_harvest():
                 if len(text) < 45 or text.startswith('@') or text.startswith('Alethekanon'):
                     continue
                 if getattr(post.record, 'reply', None) is not None:
+                    continue
+                if not is_english(text):
                     continue
 
                 article_url = extract_external_link(post)
@@ -1174,44 +1201,53 @@ def run_harvest():
 
     for idx, c in enumerate(all_final, 1):
         url = c.get("url")
-        if url:
-            print(f"[{idx}/{len(all_final)}] Scraping content from: {url}")
-            title, desc, body = scrape_article_content(url)
-            if body and not body.startswith("Error") and len(body.strip()) >= 200:
-                article_text_clean = body[:4000]
-            
-                # Check if this candidate is from Bluesky
-                target_url = c.get("target_url", "")
-                is_bsky = bool(target_url and "bsky.app" in target_url)
-            
-                if is_bsky:
-                    # Use article's own title & description for the Stated Claim / Post Context
-                    orig_text = f"{title}\n\n{desc}".strip()
-                    # Update subject to the article title so the story JSON inherits it
-                    c["subject"] = title
-                else:
-                    orig_text = c.get("text", "")
-                
-                c["text"] = f"Stated Claim / Post Context:\n{orig_text}\n\nActual Article Body:\n{article_text_clean}"
-                print(f"  Scraped successfully ({len(article_text_clean)} chars).")
-                successful_final.append(c)
-            else:
-                err_msg = body if (body and body.startswith("Error")) else "insufficient content"
-                print(f"  Scrape failed or returned empty: {err_msg}. Skipping candidate.")
-                try:
-                    host = urllib.parse.urlparse(url.strip().lower()).hostname
-                    if host:
-                        domain = host
-                        if domain.startswith("www."):
-                            domain = domain[4:]
-                        if domain and domain not in DYNAMIC_BANNED_DOMAINS and not is_domain_whitelisted(domain) and domain not in NON_NEWS_DOMAINS:
-                            DYNAMIC_BANNED_DOMAINS.add(domain)
-                            dynamic_banlist_changed = True
-                            print(f"  Added domain '{domain}' to dynamic scraping banlist.")
-                except Exception as ex:
-                    print(f"  Warning: Failed to extract domain for banlist: {ex}")
-        else:
+        if not url:
             print(f"[{idx}/{len(all_final)}] Candidate has no URL. Skipping candidate.")
+            continue
+
+        c_text = c.get("text", "")
+        if "Actual Article Body:\n" in c_text:
+            body_part = c_text.split("Actual Article Body:\n")[-1].strip()
+            if len(body_part) >= 200:
+                print(f"[{idx}/{len(all_final)}] [Candidate Body Exists] Reusing {len(body_part)} chars of existing article text for: {url}")
+                successful_final.append(c)
+                continue
+
+        print(f"[{idx}/{len(all_final)}] Scraping content from: {url}")
+        title, desc, body = scrape_article_content(url)
+        if body and not body.startswith("Error") and len(body.strip()) >= 200:
+            article_text_clean = body[:4000]
+        
+            # Check if this candidate is from Bluesky
+            target_url = c.get("target_url", "")
+            is_bsky = bool(target_url and "bsky.app" in target_url)
+        
+            if is_bsky:
+                # Use article's own title & description for the Stated Claim / Post Context
+                orig_text = f"{title}\n\n{desc}".strip()
+                # Update subject to the article title so the story JSON inherits it
+                c["subject"] = title
+            else:
+                orig_text = c.get("text", "")
+            
+            c["text"] = f"Stated Claim / Post Context:\n{orig_text}\n\nActual Article Body:\n{article_text_clean}"
+            print(f"  Scraped successfully ({len(article_text_clean)} chars).")
+            successful_final.append(c)
+        else:
+            err_msg = body if (body and body.startswith("Error")) else "insufficient content"
+            print(f"  Scrape failed or returned empty: {err_msg}. Skipping candidate.")
+            try:
+                host = urllib.parse.urlparse(url.strip().lower()).hostname
+                if host:
+                    domain = host
+                    if domain.startswith("www."):
+                        domain = domain[4:]
+                    if domain and domain not in DYNAMIC_BANNED_DOMAINS and not is_domain_whitelisted(domain) and domain not in NON_NEWS_DOMAINS:
+                        DYNAMIC_BANNED_DOMAINS.add(domain)
+                        dynamic_banlist_changed = True
+                        print(f"  Added domain '{domain}' to dynamic scraping banlist.")
+            except Exception as ex:
+                print(f"  Warning: Failed to extract domain for banlist: {ex}")
 
     if dynamic_banlist_changed:
         save_dynamic_banned_domains()
@@ -1250,6 +1286,42 @@ def run_harvest():
             print(f"Appended {new_added_count} URLs to persistent history: {harvested_history_path}")
         except Exception as e:
             print(f"Warning: Failed to save harvested history: {e}")
+
+        # Append newly harvested articles to harvested_stories_log.jsonl
+        log_file_path = os.path.join(bot_dir, "harvested_stories_log.jsonl")
+        logged_urls_set = set()
+        if os.path.exists(log_file_path):
+            try:
+                with open(log_file_path, "r", encoding="utf-8", errors="ignore") as lf:
+                    for line in lf:
+                        if line.strip():
+                            try:
+                                logged_urls_set.add(json.loads(line).get("url", "").strip())
+                            except Exception:
+                                pass
+            except Exception:
+                pass
+
+        logged_count = 0
+        try:
+            with open(log_file_path, "a", encoding="utf-8") as lf:
+                for c in successful_final:
+                    u = c.get("url", "").strip()
+                    if u and u not in logged_urls_set:
+                        entry = {
+                            "id": c.get("id", ""),
+                            "url": u,
+                            "title": c.get("subject") or c.get("title", ""),
+                            "text": c.get("text", ""),
+                            "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                        }
+                        lf.write(json.dumps(entry, ensure_ascii=False) + "\n")
+                        logged_urls_set.add(u)
+                        logged_count += 1
+            if logged_count > 0:
+                print(f"Appended {logged_count} scraped articles to source log: {log_file_path}")
+        except Exception as e:
+            print(f"Warning: Failed to append to harvested_stories_log.jsonl: {e}")
 
     print(f"\nFinal combined premium candidates count: {len(final_candidates)}")
     for idx, c in enumerate(final_candidates, 1):

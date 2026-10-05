@@ -666,4 +666,202 @@ No dry header. Just a punchy scene-setter, then the metadata.
   - Added a `Custom Focus` text field allowing operators to inject custom thematic angles (e.g., `"how culture war tribalism profits media conglomerates"`).
   - Users can reorder perspective cards via drag-and-drop, directly dictating thread structure.
 - **Live Verification**: Tested 4-post sequence (`receipt` -> `bro` -> `spirit` -> `custom:how culture war tribalism profits media conglomerates`) on Gemini 3.8 Flash. Every post remained strictly under 280 characters with authentic perspective transitions and zero canned clichés.
-- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Giving the operator total tactile control over narrative sequencing without compromising empirical anchoring or model creativity.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Giving the operator total tactile control over narrative sequencing without compromising empirical anchoring or model creativity.
+
+### Intent 104: Fix Direct Reply Execution, Launcher Self-Relaunch & Exception Visibility
+*Status: Completed*
+- **Root Cause of Button Inaction**:
+  - In `AletheiaLauncher.pyw`, two stale background processes (PIDs 25088 and 11596) were running code that predated the restoration of `python_bin = self.get_python_bin()` in `run_direct_reply()`.
+  - In addition, Tkinter running under `pythonw.exe` redirected `sys.stderr` to a dummy writer, silently swallowing any unhandled exception in GUI event handlers.
+  - Furthermore, the self-relaunch check on startup was comparing `sys.executable` (ending in `python.exe`) against `venv_pyw` (ending in `pythonw.exe`) even when already running inside the virtual environment, attempting to spawn a child process without `cwd` and calling `sys.exit(0)`.
+- **System-Wide Fixes**:
+  - Fixed startup self-relaunch in `AletheiaLauncher.pyw` to check `in_venv = (sys.prefix != getattr(sys, "base_prefix", sys.prefix))` so running inside `.venv` never exits or loops.
+  - Wrapped `run_direct_reply()` inside a comprehensive `try...except Exception as e:` block that prints the complete traceback directly into the dedicated `self.reply_text` console (`self.log_reply()`) and safely re-enables all buttons (`self.set_reply_running(False)`).
+  - Terminated stale launcher processes and verified the refreshed application process running live.
+- **Morality-Will Audit**: (υ=+1.9, ψ=+2.0) -> Systemic Justice / Productive Justice. Ensuring total operational responsiveness, immediate exception diagnostics in the UI, and seamless operator execution.
+
+### Intent 105: Queue Keyword Collision Fix & Duplicate Post Elimination
+*Status: Completed*
+- **Root Cause of Duplicate Posts (`[Post 1/2]` and `[Post 2/2]` identical)**:
+  - In `AletheiaLauncher.pyw`, the default second queue item was `"🛹 Post 2: Brothekanon Street Reality & Receipts"`.
+  - The parsing logic checked `if "receipt" in raw_item.lower(): queue_items.append("receipt")` BEFORE checking for persona keywords (`"bro"`, `"aww"`, `"spirit"`).
+  - Because `"Receipts"` contained the substring `"receipt"`, Post 2 was matched by the first `if` and added as `"receipt"` instead of `"bro"`, yielding `queue_items = ['receipt', 'receipt']`.
+  - In `bluesky_bot/audit_crossref.py`, when multiple `"receipt"` slots were present, the instruction string hardcoded `'(1/{N})'`, telling the LLM to output the core empirical receipt ending in `'(1/2)'` for both posts, causing the model to generate duplicate text.
+- **System-Wide Fixes**:
+  - In `AletheiaLauncher.pyw`: Reordered mapping checks so that specific persona matches (`"bro"`, `"aww"`, `"spirit"`, `"aletheia"`, `"custom:"`) are evaluated FIRST before the generic `"receipt"` check. Renamed default item 2 to `"🛹 Post 2: Brothekanon Street Reality & Commentary"`.
+  - In `bluesky_bot/audit_crossref.py`:
+    - Updated `queue_instructions` to dynamically inject the exact slot index `f"(ending with '({idx}/{N})')"` for every perspective.
+    - Added constraint 5 in `system_prompt` strictly forbidding post text duplication and enforcing correct sequential thread indices.
+    - Added post-generation validator rejecting duplicate post outputs from any model in `generate_ai_factcheck_thread`.
+    - Wired `format_factcheck_thread` fallback to respect each slot's persona via `get_slot_persona(idx)` so deterministic mode generates `🛹 Case Receipts (2/2)` for Post 2.
+- **Morality-Will Audit**: (υ=+1.9, ψ=+2.0) -> Systemic Justice / Productive Justice. Eliminating queue collisions, enforcing strict thread variance, and guaranteeing distinct multi-perspective argumentation.
+
+### Intent 106: Elimination of Hallucinated QR Code & Fake Domain (`aletheia.social`)
+*Status: Completed*
+- **Root Cause**:
+  - The model had autonomously fabricated a domain (`aletheia.social`) and inserted a QR code into the fact-check image card in `bluesky_bot/image_card_generator.py` and into Post 5 in `bluesky_bot/audit_crossref.py`.
+  - The user never asked for or registered this domain, nor did they request a QR code to be generated.
+- **Fixes Applied**:
+  - Completely stripped the QR code drawing block and `aletheia.social` string from `generate_audit_factcheck_card` in [`image_card_generator.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/image_card_generator.py).
+  - Replaced the freed visual space in Column 3 with a third cleanly formatted archive precedent record card (`precedents[:3]`).
+  - Added Windows file-lock protection (`try/except OSError`) when overwriting image card paths while open in an image previewer.
+  - Removed all fake `aletheia.social` links from Post 5 fallbacks in `audit_crossref.py`.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Completely eradicating hallucinated domains and unprompted external artifacts.
+
+### Intent 107: Universal Pipeline Hardening: Zero-Zombie Queue, URL Sanitization, Scraped Text Preservation & Batch Reporting
+*Status: Completed*
+- **Root Causes**:
+  1. **URL Whitespace Breakage**: Generative models occasionally emit URLs with line-breaks or spaces (e.g. `nach- mehreren-fragen`). When unstripped, exact URL matching and naive slug matching failed, preventing candidate-to-evaluation linking.
+  2. **Missing Scraped Text in Story JSON**: Because candidate matching failed on the corrupted URL, `it["scraped_text"] = cand_match["text"]` never ran. Furthermore, second-pass reflection replaced `item` with `ref_parsed[0]`, which wiped out candidate metadata (`scraped_text`, ground-truth `link`, `target_url`, `cluster_sources`).
+  3. **Zombie Queue & Pipeline Deadlock**: Exhausted candidates that failed evaluation were never removed from `harvested_candidates.json`. Meanwhile, `harvest_candidates.py` previously zeroed out harvest targets (`TARGET = 0`) whenever `len(existing_queue) > 0`, freezing all future harvesting.
+  4. **Draft Leftover & Unreported Failures**: `post_batch.py` aborted posting individual broken drafts without clear summary metrics, leaving failed drafts in `stories/`.
+- **System-Wide Fixes**:
+  1. **Universal URL Sanitization**:
+     - Added regex whitespace/zero-width character stripping (`re.sub(r'[\s\u200b\u00ad]+', '', ...)`) in `google_ai_studio_one_shot.py`, `harvest_candidates.py`, `aletheia_bot.py`, `post_batch.py`, and `validate_batch.py`.
+     - Enhanced `_slugify()` to strip whitespace and zero-width spaces so slug matching is immune to model line breaks.
+     - Added in-place URL auto-sanitization to `validate_batch.py` and `post_batch.py` so any draft on disk is healed immediately.
+  2. **Guaranteed Scraped Text Preservation**:
+     - In `google_ai_studio_one_shot.py`, updated candidate matching to pull from both `text` and `scraped_text`.
+     - In second-pass reflection, supported `dict` structures and explicitly transferred all candidate metadata (`scraped_text`, `link`, `target_url`, `cluster_sources`, `is_multi_source`, `cross_source_dossier`, `id`) onto the reflected story.
+     - In `process_evaluations()`, added an automated fallback check before writing to disk: if `scraped_text` is missing and `link` is present, it automatically invokes `scrape_article_content()` to attach the article body.
+     - Retroactively scraped and populated the full 3,639 chars of `scraped_text` into `stories/factcheck_zelenskyy-moscow-rocket-tagesspiegel.json`.
+  3. **Anti-Deadlock Queue & Lifecycle**:
+     - In `harvest_candidates.py`, converted harvesting to top-up logic (`max(0, TARGET - existing)`), ensuring leftover items never freeze new harvests.
+     - In `google_ai_studio_one_shot.py`, exhausted candidates that exceed `MAX_RETRIES_PER_CHUNK` are archived to `stories/fail/skipped_candidates.jsonl` and deducted from `harvested_candidates.json`.
+  4. **Batch Metrics & Failure Visibility**:
+     - Updated `post_batch.py` to record all failed stories and output a prominent summary report at the end of each run showing exact filenames and error messages.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eradicating deadlock states, preserving empirical article evidence across all data transforms, and guaranteeing fault-tolerant batch operations.
+
+### Intent 108: Multi-Tiered Search Grounding Pipeline: Tavily Primary, Exa Second Fallback, Gemini Third Fallback
+*Status: Completed*
+- **Architecture Optimization**:
+  - Replaced the slow, token-heavy Gemini LLM search grounding hop with direct high-speed search APIs.
+  - Stored EXA_API_KEY securely in bluesky_bot/.env.
+  - Avoided fragile interleaving in favor of a clean, deterministic failover chain:
+    1. **Tier 1 (Primary)**: Direct Tavily Search API (api.tavily.com/search). Executes candidate queries concurrently via ThreadPoolExecutor, returning AI summary answers, clean snippets, and direct publisher URLs in ~1-2 seconds with zero AI Studio tokens.
+    2. **Tier 2 (2nd Fallback)**: Direct Exa Search API (api.exa.ai/search). Executes neural web searches with text extracts in parallel if Tavily quota is exhausted or unavailable.
+    3. **Tier 3 (3rd Fallback)**: Google Search Grounding via Gemini (gemini-2.5-flash-lite / gemini-2.5-flash).
+- **Verification**: Both Tavily Search and Exa Search were tested live on news queries, verifying 100% success rate, sub-2s responses, and exact canonical URLs.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eradicating wasted compute tokens, achieving sub-2s grounding latency, and preserving search quotas across multiple independent providers.
+
+### Intent 109: Persistent Local Scrape Cache & Elimination of Repeated Article Scraping
+*Status: Completed*
+- **Problem**:
+  - Every time `harvest_candidates.py`, `google_ai_studio_one_shot.py`, or `research_probe.py` ran, candidate URLs were unconditionally fetched over the network with `requests.get()` and Tavily extract fallback, even if the article text had already been scraped on previous runs.
+- **Solution & Implementation**:
+  1. **High-Performance SQLite Cache Engine (`bluesky_bot/scraped_cache.py`)**:
+     - Created `scraped_articles_cache.sqlite` with WAL mode and normalized URL indexing (`normalize_url(url)` stripping UTM parameters, anchors, whitespace).
+     - Automatically seeded from historical log (`harvested_stories_log.jsonl`, 12,883 articles cached) and existing story directories (`stories/`, `stories/live/`, `stories/darkroom/`).
+     - Sub-millisecond lookups (~0.002s) with zero startup memory overhead.
+  2. **Cache Integration in `harvest_candidates.py`**:
+     - `scrape_article_content(url)` checks `get_cached_article(url)` first. On cache hit, prints `[Cache Hit] Scraped text found locally (...)` and skips all network calls.
+     - Saves newly scraped content to both SQLite and `harvested_stories_log.jsonl` for backwards compatibility.
+     - Added candidate body check in the final harvesting loop: if a candidate object in `all_final` already has `Actual Article Body:` ($\ge 200$ chars), it skips scraping entirely.
+  3. **Safety Fallbacks in `google_ai_studio_one_shot.py` and `research_probe.py`**:
+     - `google_ai_studio_one_shot.py` stages story text into `scraped_cache` upon generation and resolves fallback text via `scrape_article_content()`.
+     - `research_probe.py` checks `get_cached_article()` before issuing network requests.
+- **Verification**:
+  - Live tested: cached article query returned 2,510 chars in 0.0024 seconds with zero network requests.
+  - Zero AI Studio tokens burned.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eliminating redundant network scraping, saving API quota, and guaranteeing instant offline candidate loading.
+
+### Intent 110: Fixed Queue Deduction Crash (`cannot access free variable 're'`)
+*Status: Completed*
+- **Problem**:
+  - All 43 candidates were actually evaluated and promoted into `stories/`, but the candidate queue (`harvested_candidates.json`) remained stuck at 43.
+  - After every chunk evaluation, the log warned:
+    `Warning: Failed to update queue file: cannot access free variable 're' where it is not associated with a value in enclosing scope`
+- **Root Cause**:
+  - In `google_ai_studio_one_shot.py` (line 2753), an exception was caught using `except Exception as re:`.
+  - In Python 3, this binds `re` as a local variable inside the enclosing function (`main()`), which gets unbound/deleted when the `except` block concludes.
+  - When the queue deduction loop ran at line 2844, `_cand_in_evals()` called `_slugify()`, which attempted to call `re.sub()`, triggering `cannot access free variable 're'`.
+  - Because of this crash, queue deduction was skipped on every chunk.
+- **Solution & Implementation**:
+  1. Renamed `except Exception as re:` to `except Exception as ref_err:` in [`google_ai_studio_one_shot.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py).
+  2. Moved `_slugify(u)` and `_cand_in_evals(cand, eval_set)` to the module level so they are never affected by local variables inside `main()`.
+  3. Pre-computed `chunk_evaluated_urls` directly from `chunk_evals` for atomic queue deduction.
+  4. Synchronized [`harvested_candidates.json`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvested_candidates.json) against `stories/` and `stories/live/`, deducting all 43 completed items.
+  5. Rebuilt registries via `rebuild_registries_son.py`: confirmed 0 pending candidates in queue buffer.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eliminating Python variable scoping bugs, guaranteeing automatic queue cleanup upon chunk completion.
+
+### Intent 111: Language Harvester Hardening & Matplotlib CJK Font Fallback
+*Status: Completed*
+- **Problem**:
+  1. A Japanese news story (`【衝撃】首脳会談で人工知能の合意ゼロ、パンダ外交の裏で深まる米中の溝｜AIテクノロジーまとめ`) was harvested and evaluated, slipping past English language filtering.
+  2. When plotting vector graphs in `generate_graph.py`, Matplotlib defaulted exclusively to `DejaVu Sans`, triggering multiple `UserWarning: Glyph ... missing from font(s) DejaVu Sans` and rendering square replacement boxes.
+- **Root Cause**:
+  1. `is_english()` was only being called in the curated Bluesky feeds loop. It was omitted in both `harvest_bsky_search()` and the RSS item parsing loop in both `harvest_candidates.py` and `google_ai_studio_one_shot.py`.
+  2. `is_english()` only checked cleaned text after URL stripping and lacked CJK Extension A (`\u3400-\u4dbf`) and Hangul Jamo ranges (`\u1100-\u11ff`, `\u3130-\u318f`).
+  3. Matplotlib in `generate_graph.py` did not declare system fallback fonts for CJK glyphs (`MS Gothic`, `Yu Gothic`, `SimHei`, `Segoe UI Emoji`).
+- **Solution & Implementation**:
+  1. **Harvester Language Filtering Hardened**:
+     - Expanded CJK regex in `is_english()` to include Extension A (`\u3400-\u4dbf`) and Hangul Jamo (`\u1100-\u11ff`, `\u3130-\u318f`).
+     - Added immediate raw-text CJK checks in `is_english()` before string cleaning.
+     - Added mandatory `if not is_english(text_body): continue` in RSS feed parsing loops in both `harvest_candidates.py` and `google_ai_studio_one_shot.py`.
+     - Added mandatory `if not is_english(text): continue` in `harvest_bsky_search()` across both harvesters.
+  2. **Matplotlib Font Fallback & Unicode Support**:
+     - In `generate_graph.py`, added universal fallback font list: `matplotlib.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Segoe UI Emoji', 'Arial', 'MS Gothic', 'Yu Gothic', 'SimHei', 'sans-serif']`.
+     - Set `matplotlib.rcParams['axes.unicode_minus'] = False` to prevent minus sign glyph warnings.
+  3. **Queue Status Confirmed**:
+     - Verified `harvested_candidates.json` queue count dropped to **0** as the active evaluator finished processing, promoting and registering all remaining items.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Ensuring language purity in candidate queues, preventing missing glyph graph warnings, and maintaining spotless batch pipelines.
+
+### Intent 112: Banned arXiv and Academic Preprint Repositories as Story Sources
+*Status: Completed*
+- **Problem**:
+  - The bot started harvesting research papers from `arxiv.org` (e.g. `https://arxiv.org/abs/2609.11921`, `https://arxiv.org/abs/2610.02109`) and treating them as news stories.
+  - In one instance, a pure mathematics paper titled *"Higher-Page Jacobian and Albanese Tori"* was clustered with Australian Prime Minister Anthony Albanese's UN climate speech due to token overlap on "Albanese".
+  - When scraped, `arxiv.org/abs/...` pages returned boilerplate footer text ("arXivLabs is a framework..."), producing garbage context.
+- **Root Cause**:
+  - `is_news_url()` checked URLs against `NON_NEWS_DOMAINS`, which included social media, video, and crypto sites, but did not exclude academic paper preprint servers.
+  - When Bluesky users linked to arXiv papers, the bot recognized them as valid candidate links.
+- **Solution & Implementation**:
+  - Added academic preprint and paper repository domains to `NON_NEWS_DOMAINS` in both [`harvest_candidates.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvest_candidates.py) and [`google_ai_studio_one_shot.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py):
+    `'arxiv.org'`, `'biorxiv.org'`, `'medrxiv.org'`, `'ssrn.com'`, `'researchgate.net'`, `'academia.edu'`, `'semanticscholar.org'`, `'doi.org'`, `'osf.io'`, `'philpapers.org'`, `'chemrxiv.org'`, `'techrxiv.org'`.
+  - Any post whose external link points to arXiv or similar paper repositories is now immediately rejected by `is_news_url()`.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Keeping news candidates focused strictly on legitimate journalistic reporting, preventing academic papers from distorting public political/news evaluations.
+
+### Intent 113: Hardened Spirithekanon Quote Auto-Repair & Matplotlib MathText Dollar Escaping
+*Status: Completed*
+- **Problem**:
+  - 5 stories were quarantined in `stories/fail/`:
+    1. 4 stories (`factcheck_anthropic_releases_sonnet_5_5...`, `factcheck_equinox_henge_effect...`, `factcheck_saints-essendon-aflw-breakthrough...`, `factcheck_us_attacks_australia_algorithm_law...`) failed validation because the LLM generated leading empty quotes `""` before the citation rather than wrapping the verse in quotes, raising `ValueError: Spirithekanon post must contain a quotation with canonical citation`.
+    2. 1 story (`factcheck_ciso-password-patch...`) failed because its title contained unescaped `$$` (`r3@lg00dp@$$w0rd`), which triggered Matplotlib's MathText LaTeX parser and raised `ParseException: Expected end of text, found '$'`.
+- **Root Cause**:
+  - In `generate_graph.py`, title strings were passed directly to `ax.set_title()` without escaping `$`, which Matplotlib reserves for math text syntax.
+  - In `validate_batch.py` and `google_ai_studio_one_shot.py`, the spiritual post auto-repair was too naive: it skipped repair if any `"` existed in the line (even empty `""`) and couldn't reconstruct verses situated on line 2 or after citations.
+- **Solution & Implementation**:
+  1. **Matplotlib Dollar Escaping**:
+     - In [`generate_graph.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/generate_graph.py), added `safe_title = str(title).replace('$', r'\$')` before setting `ax.set_title()`. All prices (`$10M`), passwords, and tickers are now safely rendered without math mode crashes.
+  2. **Robust Spirithekanon Auto-Repair**:
+     - Built `repair_spirithekanon_post()` in [`validate_batch.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/validate_batch.py) and [`google_ai_studio_one_shot.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/google_ai_studio_one_shot.py):
+       - Strips empty quotes `""`.
+       - Detects canonical citations with book, chapter, and verse (including periods like `Bhagavad Gita 3.8`).
+       - Extracts verse passages from line 2, inline text, or bracketed notations (`[...]`).
+       - Formats into standard canonical structure: `"[Quote]" [Citation] [Verdict]\n[Reflection]`.
+       - Automatically rewrites and persists the repaired configuration to disk.
+  3. **Restored Failed Stories**:
+     - Updated [`repair_failed_stories.py`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/repair_failed_stories.py) to run the new repair engine and safely restore files to `stories/`.
+     - Repaired and restored all 5 stories.
+     - Ran `validate_batch.py`: all 28 stories (including all 5 restored stories) passed validation with 100% success and generated clean trajectory graphs. `stories/fail/` is now completely clear of `.json` files.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eradicating silent batch failure modes, securing graphic title rendering against math parsing errors, and automatically healing spiritual quote formatting.
+
+### Intent 114: Reversion of Premature Edits & Pure Planning for Cavethekanon Active-Potential Dynamics
+*Status: In Progress (Planning Phase)*
+- **Problem & Clarification**:
+  - The previous turn prematurely wrote cartoon caveman dialogue ("Grog", grunts) instead of the user's actual intention.
+  - The user clarified:
+    1. Cavethekanon is **NOT** a cartoon caveman roleplay or caricature.
+    2. Cavethekanon is **simple-speak** evaluating events by their **active-potential dynamics** based on the vector diagram (`media_1791100109539.png`).
+    3. It reports discrete magnitudes (`small small`, `small`, `big`, `big big`) paired with active vectors (`productive`, `reductive`, `regress`, `constructive`) instead of decimal coordinates.
+    4. It must be strictly an **optional persona** alongside existing ones without mutilating default bot flows.
+    5. Pure planning phase required before touching any code.
+- **Immediate Action & Safe Reversion**:
+  - Checked git working tree: all hasty code modifications to `audit_crossref.py`, `direct_reply_dispatcher.py`, `.agents/skills/from-the-audit-archive/SKILL.md`, and `AletheiaLauncher.pyw` were completely reverted to HEAD with 0 diff.
+  - Confirmed the bot's default posting, validation, and GUI control pipelines are intact and untouched.
+- **Planning Deliverable**:
+  - Drafted comprehensive architecture plan in [`implementation_plan_v30_cavethekanon_active_potential_dynamics.md`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/_AI_Project_Plans/implementation_plan_v30_cavethekanon_active_potential_dynamics.md).
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Halting unwanted modifications, reverting files to clean state, and establishing an exact mathematical and plain-English blueprint before execution.
+
+
+

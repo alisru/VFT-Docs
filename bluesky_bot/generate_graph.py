@@ -1,5 +1,9 @@
 import matplotlib
 matplotlib.use('Agg')
+matplotlib.rcParams['font.sans-serif'] = [
+    'DejaVu Sans', 'Segoe UI Emoji', 'Arial', 'MS Gothic', 'Yu Gothic', 'SimHei', 'sans-serif'
+]
+matplotlib.rcParams['axes.unicode_minus'] = False
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.transforms as mtransforms
@@ -257,7 +261,8 @@ def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
                 zorder=3)
 
     legend_handles = [claim_point, real_point]
-    title_text = f"{title}\nProjected Eventuality: {path_name}\nStated: ({claim_u:+.1f}, {claim_psi:+.1f})  |  Actual: ({real_u:+.1f}, {real_psi:+.1f})"
+    safe_title = str(title).replace('$', r'\$')
+    title_text = f"{safe_title}\nProjected Eventuality: {path_name}\nStated: ({claim_u:+.1f}, {claim_psi:+.1f})  |  Actual: ({real_u:+.1f}, {real_psi:+.1f})"
 
     # Axis labels
     ax.set_xlabel("Morality (υ)", color='white')

@@ -26,6 +26,58 @@ except ImportError as ie:
     print(f"ERROR: Failed to import pack_posts from aletheia_bot: {ie}")
     sys.exit(1)
 
+def repair_spirithekanon_post(sp_text):
+    if not isinstance(sp_text, str) or not sp_text.strip():
+        return sp_text
+    import re
+    # Strip empty quotes at start
+    cleaned = re.sub(r'""\s*', '', sp_text).strip()
+    
+    # Check if there is already a non-empty quote
+    to_check = cleaned.replace("Spirithekanon:", "").strip()
+    m = re.search(r'"([^"]+)"', to_check)
+    if m and len(m.group(1).strip()) > 2:
+        return cleaned
+
+    lines = [l.strip() for l in cleaned.split("\n") if l.strip()]
+    header = "Spirithekanon:"
+    content_lines = [l for l in lines if not l.startswith("Spirithekanon:")]
+    if not content_lines:
+        return sp_text
+
+    line0 = content_lines[0]
+    cite_match = re.search(r'([A-Za-z0-9\s:]+?\b\d+[\.:\d\-]*(?:\s*—\s*\d+[\.:\d\-]*)?)\s*(?:—|-)?\s*(PASS|FAIL|HIT|COND)(?:\s*\([^\)]*\))?', line0)
+    if cite_match and len(content_lines) > 1:
+        cite_str = cite_match.group(0).strip()
+        quote_cand = content_lines[1]
+        b_match = re.match(r'^\[(.*?)\]\s*(.*)$', quote_cand)
+        if b_match:
+            quote_text = b_match.group(1).strip()
+            reflection = b_match.group(2).strip()
+            rest = f"\n{reflection}" if reflection else ""
+            if len(content_lines) > 2:
+                rest += "\n" + "\n".join(content_lines[2:])
+            return f'{header}\n"{quote_text}" {cite_str}{rest}'
+        else:
+            quote_text = quote_cand
+            rest = ""
+            if len(content_lines) > 2:
+                rest = "\n" + "\n".join(content_lines[2:])
+            return f'{header}\n"{quote_text}" {cite_str}{rest}'
+
+    b_cite = re.search(r'([A-Za-z0-9\s:]+?\b\d+[\.:\d\-]*)', line0)
+    v_match = re.search(r'\b(PASS|FAIL|HIT|COND)(?:\s*\([^\)]*\))?', line0)
+    if b_cite and v_match and b_cite.end() < v_match.start():
+        cite_part = b_cite.group(1).strip()
+        quote_text = line0[b_cite.end():v_match.start()].strip(" —-:\t")
+        verdict_part = v_match.group(0).strip()
+        rest = ""
+        if len(content_lines) > 1:
+            rest = "\n" + "\n".join(content_lines[1:])
+        return f'{header}\n"{quote_text}" {cite_part} {verdict_part}{rest}'
+
+    return cleaned
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Batch Pre-Flight Validator")
@@ -106,27 +158,25 @@ def main():
             if not isinstance(cfg["posts"], list) or len(cfg["posts"]) == 0:
                 raise ValueError("Key 'posts' must be a non-empty list.")
             if is_spiritual:
-                spiritual_post = next((p for p in cfg["posts"] if isinstance(p, str) and p.strip().startswith("Spirithekanon:")), None)
-                if not spiritual_post:
+                sp_idx = next((i for i, p in enumerate(cfg["posts"]) if isinstance(p, str) and p.strip().startswith("Spirithekanon:")), None)
+                if sp_idx is None:
                     raise ValueError("is_spiritual is true but no post starts with 'Spirithekanon:'")
+                spiritual_post = cfg["posts"][sp_idx]
+                
+                repaired_sp = repair_spirithekanon_post(spiritual_post)
+                if repaired_sp != spiritual_post:
+                    spiritual_post = repaired_sp
+                    cfg["posts"][sp_idx] = repaired_sp
+                    try:
+                        with open(path, "w", encoding="utf-8") as fw:
+                            json.dump([cfg] if isinstance(data, list) else cfg, fw, indent=2, ensure_ascii=False)
+                        print(f"  [Auto-Repaired Spirithekanon] Formatted quotation marks in {filename}")
+                    except Exception as rwe:
+                        print(f"  Warning: Could not save repaired Spirithekanon post to {filename}: {rwe}")
+
                 text_to_check = spiritual_post.replace("Spirithekanon:", "").strip()
                 import re
                 match = re.search(r'"([^"]+)"', text_to_check)
-                if not match:
-                    # Attempt auto-repair of quotation marks around passage
-                    lines = spiritual_post.split("\n")
-                    if len(lines) >= 2:
-                        quote_idx = 1 if lines[0].startswith("Spirithekanon:") else 0
-                        quote_line = lines[quote_idx]
-                        q_match = re.search(r'(\[?[0-9A-Za-z\s]+(?::|\s)\d+[^\]]*\]?\s*(?:PASS|FAIL|HIT|COND)?)', quote_line)
-                        if q_match:
-                            cite_part = q_match.group(1)
-                            passage_part = quote_line[:q_match.start()].strip()
-                            lines[quote_idx] = f'"{passage_part}" {cite_part}'.strip()
-                            spiritual_post = "\n".join(lines)
-                            cfg["posts"][-1] = spiritual_post
-                            text_to_check = spiritual_post.replace("Spirithekanon:", "").strip()
-                            match = re.search(r'"([^"]+)"', text_to_check)
                 if not match:
                     raise ValueError(
                         f"Spirithekanon post must contain a quotation with canonical citation.\n"
@@ -136,6 +186,22 @@ def main():
             for num_k in ["claim_u", "claim_psi", "real_u", "real_psi"]:
                 if not isinstance(cfg[num_k], (int, float)):
                     raise ValueError(f"Key '{num_k}' must be a number (got type {type(cfg[num_k]).__name__}).")
+
+            # Auto-sanitize URLs in place
+            raw_link = cfg.get("link", "")
+            raw_target = cfg.get("target_url", "")
+            import re
+            clean_link = re.sub(r'[\s\u200b\u00ad]+', '', str(raw_link).strip()) if raw_link else ""
+            clean_target = re.sub(r'[\s\u200b\u00ad]+', '', str(raw_target).strip()) if raw_target else ""
+            if clean_link != raw_link or clean_target != raw_target:
+                cfg["link"] = clean_link
+                cfg["target_url"] = clean_target
+                try:
+                    with open(path, "w", encoding="utf-8") as fw:
+                        json.dump([cfg] if isinstance(data, list) else cfg, fw, indent=2, ensure_ascii=False)
+                    print(f"  [Auto-Sanitized URL] Stripped whitespace/illegal characters in {filename}")
+                except Exception as swe:
+                    print(f"  Warning: Could not save sanitized URL to {filename}: {swe}")
 
             subject = cfg["subject"]
             posts = cfg["posts"]

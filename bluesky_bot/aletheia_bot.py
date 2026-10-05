@@ -24,6 +24,33 @@ from atproto import Client, models
 # Load environment variables
 load_dotenv()
 
+def ensure_client_timeout(client, timeout=60.0, connect=20.0):
+    """Ensures that the atproto client's underlying httpx transport has an adequate timeout for image blob uploads."""
+    if client is not None and hasattr(client, "request") and hasattr(client.request, "_client"):
+        try:
+            import httpx
+            curr_timeout = getattr(client.request._client, "timeout", None)
+            curr_write = getattr(curr_timeout, "write", None) if curr_timeout else None
+            if curr_write is None or curr_write < timeout:
+                client.request._client.timeout = httpx.Timeout(timeout, connect=connect)
+        except Exception:
+            pass
+
+def safe_upload_blob(client, img_data, desc="blob", max_retries=3, delay=2.0):
+    """Uploads an image blob to Bluesky PDS with timeout enforcement, retries, and formatted errors."""
+    ensure_client_timeout(client)
+    last_exc = None
+    for attempt in range(max_retries):
+        try:
+            return client.com.atproto.repo.upload_blob(img_data)
+        except Exception as e:
+            last_exc = e
+            err_msg = str(e) or repr(e)
+            if attempt < max_retries - 1:
+                print(f"  [Blob Upload Retry] Failed to upload {desc} ({err_msg}). Retrying {attempt + 2}/{max_retries} in {delay}s...")
+                time.sleep(delay)
+    raise RuntimeError(f"Failed to upload {desc}: {str(last_exc) or repr(last_exc)}") from last_exc
+
 def parse_bsky_url(url):
     """Parses a bsky.app URL to extract the handle and the record key (rkey)."""
     parts = url.strip("/").split("/")
@@ -294,13 +321,15 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     from atproto import Client, models
     subject = thread_config.get("subject", "Assessment")
     posts = thread_config.get("posts", [])
-    link = thread_config.get("link", "")
+    link = re.sub(r'[\s\u200b\u00ad]+', '', str(thread_config.get("link", "")).strip())
+    thread_config["link"] = link
     claim_u = thread_config.get("claim_u", 0.0)
     claim_psi = thread_config.get("claim_psi", 0.0)
     real_u = thread_config.get("real_u", 0.0)
     real_psi = thread_config.get("real_psi", 0.0)
     mode = thread_config.get("mode", "root").lower()
-    target_url = thread_config.get("target_url", "")
+    target_url = re.sub(r'[\s\u200b\u00ad]+', '', str(thread_config.get("target_url", "")).strip())
+    thread_config["target_url"] = target_url
 
     print(f"\n==================================================")
     print(f"PROCESSING SUBJECT: {subject}")
@@ -430,17 +459,19 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     else:
         # --- LIVE POSTING CORE ---
         try:
+            ensure_client_timeout(client)
+
             # 3. Upload Graph Image
             print("Uploading trajectory graph to Bluesky...")
             try:
                 with open(graph_filename, "rb") as f:
                     img_data = f.read()
-                upload = client.com.atproto.repo.upload_blob(img_data)
+                upload = safe_upload_blob(client, img_data, desc=f"trajectory graph for {subject}")
                 images = [models.AppBskyEmbedImages.Image(alt=f"Alethekanon Psochic Hegemony Assessment Graph for {subject}", image=upload.blob)]
                 graph_embed = models.AppBskyEmbedImages.Main(images=images)
                 print("Graph uploaded successfully.")
             except Exception as e:
-                raise RuntimeError(f"Failed to upload graph: {e}") from e
+                raise RuntimeError(f"Failed to upload graph: {str(e) or repr(e)}") from e
 
             # Create Five-Word Mode Info Card Embeds
             if is_five_word:
@@ -458,7 +489,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 try:
                     with open(five_word_filename, "rb") as f:
                         fw_img_data = f.read()
-                    fw_upload = client.com.atproto.repo.upload_blob(fw_img_data)
+                    fw_upload = safe_upload_blob(client, fw_img_data, desc=f"five-word terminal card for {subject}")
                     info_card_images.append(
                         models.AppBskyEmbedImages.Image(
                             alt=f"Terminal-style 5-word audit results card for {subject}.",
@@ -467,7 +498,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                     )
                     print("Five-word terminal card uploaded successfully.")
                 except Exception as e:
-                    print(f"Warning: Failed to upload five-word terminal card: {e}")
+                    print(f"Warning: Failed to upload five-word terminal card: {str(e) or repr(e)}")
 
             # Create Compact Mode Info Card Embeds (always generated and uploaded if not in five-word mode)
             if is_compact or not is_five_word:
@@ -488,7 +519,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 try:
                     with open(verdict_filename, "rb") as f:
                         v_img_data = f.read()
-                    v_upload = client.com.atproto.repo.upload_blob(v_img_data)
+                    v_upload = safe_upload_blob(client, v_img_data, desc=f"verdict split card for {subject}")
                     info_card_images.append(
                         models.AppBskyEmbedImages.Image(
                             alt=f"Core Verdict Card for {subject}: Claim, Reality, and Verdict coordinates.",
@@ -497,13 +528,13 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                     )
                     print("Verdict split card uploaded successfully.")
                 except Exception as e:
-                    print(f"Warning: Failed to upload verdict split card: {e}")
+                    print(f"Warning: Failed to upload verdict split card: {str(e) or repr(e)}")
                 
                 # Upload Analysis Card (4-13)
                 try:
                     with open(analysis_filename, "rb") as f:
                         a_img_data = f.read()
-                    a_upload = client.com.atproto.repo.upload_blob(a_img_data)
+                    a_upload = safe_upload_blob(client, a_img_data, desc=f"analysis split card for {subject}")
                     
                     alt_parts = [
                         "System Analysis Details:",
@@ -529,7 +560,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                     )
                     print("Analysis split card uploaded successfully.")
                 except Exception as e:
-                    print(f"Warning: Failed to upload analysis split card: {e}")
+                    print(f"Warning: Failed to upload analysis split card: {str(e) or repr(e)}")
 
 
             # Create External Link Preview Card
@@ -810,6 +841,7 @@ def main():
         print(f"Authenticating with Bluesky as {handle}...")
         try:
             client = Client()
+            ensure_client_timeout(client)
             client.login(handle, password)
             print("Authentication successful!")
         except Exception as e:

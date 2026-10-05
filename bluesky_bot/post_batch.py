@@ -6,6 +6,7 @@ import random
 import shutil
 import argparse
 import datetime
+import re
 
 # Ensure UTF-8 output encoding to prevent Unicode/Cp1252 printing errors on Windows
 if sys.stdout and sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
@@ -132,6 +133,12 @@ def validate_story_file(path, compact=False):
         missing_keys = [k for k in required_keys if k not in cfg]
         if missing_keys:
             raise ValueError(f"Missing required JSON schema keys: {missing_keys}")
+
+        # Auto-sanitize URLs to eliminate accidental line-wrap spaces
+        if cfg.get("link"):
+            cfg["link"] = re.sub(r'[\s\u200b\u00ad]+', '', str(cfg["link"]).strip())
+        if cfg.get("target_url"):
+            cfg["target_url"] = re.sub(r'[\s\u200b\u00ad]+', '', str(cfg["target_url"]).strip())
 
         if not isinstance(cfg.get("posts"), list) or len(cfg["posts"]) == 0:
             raise ValueError("Key 'posts' must be a non-empty list.")
@@ -263,6 +270,12 @@ def main():
         print("Initializing Bluesky Client...")
         from atproto import Client
         client = Client()
+        if hasattr(client, "request") and hasattr(client.request, "_client"):
+            try:
+                import httpx
+                client.request._client.timeout = httpx.Timeout(60.0, connect=20.0)
+            except Exception:
+                pass
         client.login(username, password)
         print(f"Logged in successfully as {username}.")
     else:
@@ -472,6 +485,8 @@ def main():
         print("Within each thread, we will wait 2.0 seconds between posts to ensure Bluesky indexers align the thread perfectly.")
         
         any_posted = False
+        posted_count = 0
+        failed_stories = []
         for idx, path in enumerate(files_to_post, 1):
             filename = os.path.basename(path)
             print(f"\n==================================================")
@@ -484,6 +499,12 @@ def main():
                 with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                 cfg = data[0] if isinstance(data, list) else data
+
+                # Auto-sanitize URLs to eliminate whitespace/newline artifacts
+                if cfg.get("link"):
+                    cfg["link"] = re.sub(r'[\s\u200b\u00ad]+', '', str(cfg["link"]).strip())
+                if cfg.get("target_url"):
+                    cfg["target_url"] = re.sub(r'[\s\u200b\u00ad]+', '', str(cfg["target_url"]).strip())
 
                 # Skip if already posted live
                 status = cfg.get("status", "")
@@ -520,6 +541,7 @@ def main():
             except Exception as e:
                 if not success:
                     print(f"Failed to process {filename}: {e}")
+                    failed_stories.append((filename, str(e)))
                     continue
                 
             # Move successfully posted files if live and destination folder is provided
@@ -554,6 +576,7 @@ def main():
                 
             if success:
                 any_posted = True
+                posted_count += 1
 
             # Spacing delay between threads (only if there are more files remaining)
             if success and not already_replied and idx < total_files:
@@ -569,6 +592,14 @@ def main():
                     print("\nScheduler paused by user. Exiting.")
                     sys.exit(0)
 
+        print("\n==================================================")
+        print(f"BATCH POSTING SUMMARY: {posted_count}/{total_files} succeeded.")
+        if failed_stories:
+            print(f"WARNING: {len(failed_stories)} story file(s) failed:")
+            for f_name, f_err in failed_stories:
+                print(f"  • {f_name}: {f_err}")
+        print("==================================================")
+
         if any_posted:
             try:
                 print("\nRebuilding registries to update live and drafts counts...")
@@ -577,7 +608,10 @@ def main():
             except Exception as e:
                 print(f"Warning: Failed to rebuild registries: {e}")
 
-        print("\nAll scheduled batch threads completed successfully!")
+        if not failed_stories:
+            print("\nAll scheduled batch threads completed successfully!")
+        else:
+            print(f"\nBatch finished with {len(failed_stories)} failed thread(s). Review errors above.")
 
 if __name__ == "__main__":
     main()

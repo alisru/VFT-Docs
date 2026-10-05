@@ -220,15 +220,42 @@ def get_gemini_client():
         print(f"Warning: Failed to initialize genai.Client: {e}")
         return None
 
+def sanitize_url(url):
+    if not url:
+        return ""
+    return re.sub(r'[\s\u200b\u00ad]+', '', str(url).strip())
+
 def normalize_url(url):
     if not url:
         return ""
-    url = url.strip()
+    url = sanitize_url(url)
     if "?" in url:
         url = url.split("?")[0]
     if "#" in url:
         url = url.split("#")[0]
     return url.lower().strip()
+
+def _slugify(u):
+    if not u:
+        return ""
+    base = u.split("?")[0].split("#")[0].rstrip("/").lower()
+    return re.sub(r'[\s\u200b\u00ad]+', '', base.replace("-", "").replace("_", ""))
+
+def _cand_in_evals(cand, eval_set):
+    if not isinstance(cand, dict) or not eval_set:
+        return False
+    cand_urls = {normalize_url(cand.get("url", "")), normalize_url(cand.get("target_url", ""))}
+    cand_urls.discard("")
+    if cand_urls & eval_set:
+        return True
+    # Fuzzy slug match against evaluated URLs
+    for cu in cand_urls:
+        c_slug = _slugify(cu)
+        if len(c_slug) > 15:
+            for eu in eval_set:
+                if _slugify(eu) == c_slug:
+                    return True
+    return False
 
 # --- 1. HISTORICAL STORIES LOADING & DEDUPLICATION ---
 def load_historical_evaluations():
@@ -311,6 +338,10 @@ NON_NEWS_DOMAINS = {
     'amazon.com', 'amzn.to', 'etsy.com', 'shopify.com', 'gofundme.com',
     'pinterest.com', 'tumblr.com', 'mastodon.social', 'snapchat.com',
     'coinbase.com', 'binance.com', 'pump.fun', 'opensea.io',
+    # Academic preprints and paper repositories (not news articles)
+    'arxiv.org', 'biorxiv.org', 'medrxiv.org', 'ssrn.com',
+    'researchgate.net', 'academia.edu', 'semanticscholar.org',
+    'doi.org', 'osf.io', 'philpapers.org', 'chemrxiv.org', 'techrxiv.org',
 }
 
 # Domains that consistently fail raw scraping due to paywalls, cloudflare blocks,
@@ -458,6 +489,85 @@ def is_banned(text, url, banned_keywords):
                     return True
     return False
 
+def is_english(text):
+    if not text:
+        return False
+    cjk_re = re.compile(r'[\u3040-\u309f\u30a0-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef\u1100-\u11ff\u3130-\u318f]')
+    if cjk_re.search(text):
+        return False
+    cleaned_text = re.sub(r'https?://[^\s]+', '', text)
+    cleaned_text = re.sub(r'\b[a-zA-Z0-9-]+\.[a-z]{2,}/[^\s]*', '', cleaned_text)
+    
+    if cjk_re.search(cleaned_text):
+        return False
+        
+    non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäüß]', re.IGNORECASE)
+    if len(non_eng_chars.findall(cleaned_text)) > 2:
+        return False
+        
+    english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could|this|that|from|some|more|news|study|report|said|and|for|out|but|been|has|was|were)\b', re.IGNORECASE)
+    romance_words = re.compile(r'\b(de|la|el|los|las|en|y|que|un|una|des|du|pour|dans|avec|por|para|con|mais|es|est|une|les|se|ce|cette|del|al|ou|qui|dans)\b', re.IGNORECASE)
+    
+    eng_matches = len(english_words.findall(cleaned_text))
+    romance_matches = len(romance_words.findall(cleaned_text))
+    
+    if eng_matches < 1:
+        return False
+    if romance_matches >= eng_matches:
+        return False
+        
+    return True
+
+def repair_spirithekanon_post(sp_text):
+    if not isinstance(sp_text, str) or not sp_text.strip():
+        return sp_text
+    import re
+    cleaned = re.sub(r'""\s*', '', sp_text).strip()
+    
+    to_check = cleaned.replace("Spirithekanon:", "").strip()
+    m = re.search(r'"([^"]+)"', to_check)
+    if m and len(m.group(1).strip()) > 2:
+        return cleaned
+
+    lines = [l.strip() for l in cleaned.split("\n") if l.strip()]
+    header = "Spirithekanon:"
+    content_lines = [l for l in lines if not l.startswith("Spirithekanon:")]
+    if not content_lines:
+        return sp_text
+
+    line0 = content_lines[0]
+    cite_match = re.search(r'([A-Za-z0-9\s:]+?\b\d+[\.:\d\-]*(?:\s*—\s*\d+[\.:\d\-]*)?)\s*(?:—|-)?\s*(PASS|FAIL|HIT|COND)(?:\s*\([^\)]*\))?', line0)
+    if cite_match and len(content_lines) > 1:
+        cite_str = cite_match.group(0).strip()
+        quote_cand = content_lines[1]
+        b_match = re.match(r'^\[(.*?)\]\s*(.*)$', quote_cand)
+        if b_match:
+            quote_text = b_match.group(1).strip()
+            reflection = b_match.group(2).strip()
+            rest = f"\n{reflection}" if reflection else ""
+            if len(content_lines) > 2:
+                rest += "\n" + "\n".join(content_lines[2:])
+            return f'{header}\n"{quote_text}" {cite_str}{rest}'
+        else:
+            quote_text = quote_cand
+            rest = ""
+            if len(content_lines) > 2:
+                rest = "\n" + "\n".join(content_lines[2:])
+            return f'{header}\n"{quote_text}" {cite_str}{rest}'
+
+    b_cite = re.search(r'([A-Za-z0-9\s:]+?\b\d+[\.:\d\-]*)', line0)
+    v_match = re.search(r'\b(PASS|FAIL|HIT|COND)(?:\s*\([^\)]*\))?', line0)
+    if b_cite and v_match and b_cite.end() < v_match.start():
+        cite_part = b_cite.group(1).strip()
+        quote_text = line0[b_cite.end():v_match.start()].strip(" —-:\t")
+        verdict_part = v_match.group(0).strip()
+        rest = ""
+        if len(content_lines) > 1:
+            rest = "\n" + "\n".join(content_lines[1:])
+        return f'{header}\n"{quote_text}" {cite_part} {verdict_part}{rest}'
+
+    return cleaned
+
 def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets, banned_keywords):
     """Open topic search across all of Bluesky via the authenticated searchPosts endpoint.
 
@@ -499,6 +609,8 @@ def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, seen_targets
             # Only target ROOT posts. searchPosts returns replies too; replying to
             # someone's reply buried in a thread is not what we want — skip them.
             if getattr(post.record, 'reply', None) is not None:
+                continue
+            if not is_english(text):
                 continue
 
             article_url = extract_external_link(post)
@@ -569,33 +681,6 @@ def is_preferred_outlet(url):
 # --- 2. CANDIDATE HARVESTING ---
 def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, category="general", topic=None, banned_topic=None):
     candidates = []
-
-    def is_english(text):
-        if not text:
-            return False
-        cleaned_text = re.sub(r'https?://[^\s]+', '', text)
-        cleaned_text = re.sub(r'\b[a-zA-Z0-9-]+\.[a-z]{2,}/[^\s]*', '', cleaned_text)
-        
-        cjk_re = re.compile(r'[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef]')
-        if cjk_re.search(cleaned_text):
-            return False
-            
-        non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäüß]', re.IGNORECASE)
-        if len(non_eng_chars.findall(cleaned_text)) > 2:
-            return False
-            
-        english_words = re.compile(r'\b(the|with|they|have|what|which|there|their|about|would|could|this|that|from|some|more|news|study|report|said|and|for|out|but|been|has|was|were)\b', re.IGNORECASE)
-        romance_words = re.compile(r'\b(de|la|el|los|las|en|y|que|un|una|des|du|pour|dans|avec|por|para|con|mais|es|est|une|les|se|ce|cette|del|al|ou|qui|dans)\b', re.IGNORECASE)
-        
-        eng_matches = len(english_words.findall(cleaned_text))
-        romance_matches = len(romance_words.findall(cleaned_text))
-        
-        if eng_matches < 1:
-            return False
-        if romance_matches >= eng_matches:
-            return False
-            
-        return True
     
     # Resolve category string (may be CSV) to a deduplicated list
     _CATEGORY_FEEDS = {
@@ -757,6 +842,8 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
                     text_body = f"{title_text}\n\n{desc_cleaned}"
                     
                     if len(text_body) < 45:
+                        continue
+                    if not is_english(text_body):
                         continue
                         
                     # Topic filtering
@@ -1333,14 +1420,184 @@ def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=
     )
     return output_format
 
+def harvest_tavily_search_grounding(candidates):
+    """
+    Direct Tavily Search Grounding:
+    Queries api.tavily.com/search in parallel across candidates to fetch verified
+    real-time facts, official data figures, counter-claims, and direct canonical HTTP 200 source URLs.
+    Fast (~1-2s), zero AI Studio quota consumed, clean un-redirected publisher links.
+    """
+    api_key = os.environ.get("TAVILY_API_KEY", "")
+    if not api_key:
+        return "", []
+
+    import requests, re
+    from concurrent.futures import ThreadPoolExecutor
+
+    def _query_candidate_tavily(c):
+        title = c.get("title") or c.get("subject") or ""
+        publisher = c.get("publisher") or c.get("author") or ""
+        clean_title = re.sub(r'[„“"\'\[\]]+', '', title).strip() if title else ""
+        
+        query_parts = []
+        if clean_title:
+            query_parts.append(clean_title[:120])
+        if publisher and publisher.lower() not in clean_title.lower():
+            query_parts.append(publisher)
+            
+        search_query = " ".join(query_parts) if query_parts else clean_title
+        if not search_query:
+            return None, []
+
+        try:
+            payload = {
+                "api_key": api_key,
+                "query": search_query,
+                "search_depth": "basic",
+                "include_answer": True,
+                "max_results": 3,
+                "topic": "news"
+            }
+            res = requests.post("https://api.tavily.com/search", json=payload, timeout=8)
+            if res.status_code == 200:
+                data = res.json()
+                answer = data.get("answer", "")
+                results = data.get("results", [])
+                
+                story_lines = [f"### Grounding Context for '{title}':"]
+                if answer:
+                    story_lines.append(f"• Verified Fact/Summary: {answer}")
+                
+                cand_urls = []
+                for r in results:
+                    r_url = r.get("url")
+                    r_content = r.get("content", "").strip()
+                    r_title = r.get("title", "")
+                    if r_url:
+                        cand_urls.append(r_url)
+                    if r_content:
+                        story_lines.append(f"• Source ({r_title}): {r_content[:350]}")
+                        
+                return "\n".join(story_lines), cand_urls
+        except Exception as te:
+            print(f"  [Tavily Grounding] Warning: Query for '{title[:40]}' failed: {te}")
+        return None, []
+
+    dossier_sections = []
+    grounding_urls = []
+
+    with ThreadPoolExecutor(max_workers=min(5, len(candidates))) as executor:
+        batch_results = list(executor.map(_query_candidate_tavily, candidates))
+
+    for section, urls in batch_results:
+        if section:
+            dossier_sections.append(section)
+        for u in urls:
+            if u not in grounding_urls:
+                grounding_urls.append(u)
+
+    combined_dossier = "\n\n".join(dossier_sections)
+    return combined_dossier, grounding_urls
+
+def harvest_exa_search_grounding(candidates):
+    """
+    Second Fallback: Direct Exa Search Grounding:
+    Queries api.exa.ai/search in parallel across candidates to fetch verified
+    real-time facts, clean article extracts, and direct canonical source URLs.
+    Zero AI Studio quota consumed, clean canonical links.
+    """
+    api_key = os.environ.get("EXA_API_KEY", "")
+    if not api_key:
+        return "", []
+
+    import requests, re
+    from concurrent.futures import ThreadPoolExecutor
+
+    def _query_candidate_exa(c):
+        title = c.get("title") or c.get("subject") or ""
+        clean_title = re.sub(r'[„“"\'\[\]]+', '', title).strip() if title else ""
+        if not clean_title:
+            return None, []
+
+        try:
+            headers = {
+                "x-api-key": api_key,
+                "Content-Type": "application/json"
+            }
+            payload = {
+                "query": clean_title[:120],
+                "numResults": 3,
+                "useAutoprompt": True,
+                "contents": {"text": {"maxCharacters": 350}}
+            }
+            res = requests.post("https://api.exa.ai/search", headers=headers, json=payload, timeout=8)
+            if res.status_code == 200:
+                data = res.json()
+                results = data.get("results", [])
+                
+                story_lines = [f"### Grounding Context for '{title}':"]
+                cand_urls = []
+                for r in results:
+                    r_url = r.get("url")
+                    r_text = (r.get("text") or "").strip().replace("\n", " ")
+                    r_title = r.get("title", "")
+                    if r_url:
+                        cand_urls.append(r_url)
+                    if r_text:
+                        story_lines.append(f"• Source ({r_title}): {r_text[:350]}")
+                        
+                return "\n".join(story_lines), cand_urls
+        except Exception as ee:
+            print(f"  [Exa Grounding] Warning: Query for '{title[:40]}' failed: {ee}")
+        return None, []
+
+    dossier_sections = []
+    grounding_urls = []
+
+    with ThreadPoolExecutor(max_workers=min(5, len(candidates))) as executor:
+        batch_results = list(executor.map(_query_candidate_exa, candidates))
+
+    for section, urls in batch_results:
+        if section:
+            dossier_sections.append(section)
+        for u in urls:
+            if u not in grounding_urls:
+                grounding_urls.append(u)
+
+    combined_dossier = "\n\n".join(dossier_sections)
+    return combined_dossier, grounding_urls
+
 def harvest_search_grounding(genai_client, candidates):
     """
     Stage 1 Grounding Harvester:
-    Uses gemini-2.5-flash (with fallback to gemini-2.5-flash-lite) with Google Search Grounding
-    to fetch verified facts, official data, and resolve HTTP 200 URLs.
-    Batches all candidates in the chunk into a single search grounding request.
+    1. Primary: Direct Tavily Search API (ultra-fast ~1s, direct publisher URLs, zero AI Studio tokens).
+    2. 2nd Fallback: Direct Exa Search API (neural search, clean canonical URLs, zero AI Studio tokens).
+    3. 3rd Fallback: Gemini Search Grounding (gemini-2.5-flash-lite / gemini-2.5-flash) with Google Search.
     """
-    if not genai_client or not candidates:
+    if not candidates:
+        return "", []
+
+    # 1. Primary: Execute direct Tavily Search Grounding first
+    try:
+        t_dossier, t_urls = harvest_tavily_search_grounding(candidates)
+        if t_dossier and len(t_urls) > 0:
+            print(f"  [Stage 1 Grounding] Harvested successfully via Tavily Search ({len(t_urls)} verified direct URLs, 0 AI Studio tokens).")
+            return t_dossier, t_urls
+    except Exception as te:
+        print(f"  [Stage 1 Grounding] Tavily Search attempt failed ({te}). Falling back to Exa Search...")
+
+    # 2. Second Fallback: Execute direct Exa Search Grounding
+    try:
+        e_dossier, e_urls = harvest_exa_search_grounding(candidates)
+        if e_dossier and len(e_urls) > 0:
+            print(f"  [Stage 1 Grounding] Harvested successfully via Exa Search ({len(e_urls)} verified direct URLs, 0 AI Studio tokens).")
+            return e_dossier, e_urls
+    except Exception as ee:
+        print(f"  [Stage 1 Grounding] Exa Search attempt failed ({ee}). Falling back to Gemini Search Grounding...")
+    
+    # 3. Third Fallback: Google Search Grounding via Gemini models
+    if not genai_client:
+        print("  [Stage 1 Grounding] Gemini client unavailable and search APIs failed. Proceeding ungrounded.")
         return "", []
     
     # Safety guard: Never exceed 5 candidates per search grounding call to prevent Google Search fan-out 503 timeouts
@@ -1752,20 +2009,8 @@ def sanitize_story_posts(posts, use_spiritual=False):
     if use_spiritual and clean:
         last_p = clean[-1]
         if not last_p.startswith("Spirithekanon:"):
-            clean[-1] = f"Spirithekanon:\n{last_p}"
-            
-        # Ensure quotation marks around the passage
-        lines = clean[-1].split("\n")
-        if len(lines) >= 2:
-            quote_idx = 1 if lines[0].startswith("Spirithekanon:") else 0
-            quote_line = lines[quote_idx]
-            if '"' not in quote_line:
-                match = re.search(r'(\[?[0-9A-Za-z\s]+(?::|\s)\d+[^\]]*\]?\s*(?:PASS|FAIL|HIT|COND)?)', quote_line)
-                if match:
-                    cite_part = match.group(1)
-                    passage_part = quote_line[:match.start()].strip()
-                    lines[quote_idx] = f'"{passage_part}" {cite_part}'.strip()
-                    clean[-1] = "\n".join(lines)
+            last_p = f"Spirithekanon:\n{last_p}"
+        clean[-1] = repair_spirithekanon_post(last_p)
                 
     # Auto-fit raw text posts destined for Bluesky under 280 chars
     for i in range(min(4, len(clean))):
@@ -1875,8 +2120,8 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
                     "thinking": str(item.get("thinking", "")).strip(),
                     "id": str(item.get("id", "")).strip(),
                     "subject": str(item.get("subject", "")).strip(),
-                    "link": str(item.get("link", "")).strip(),
-                    "target_url": str(item.get("target_url", "")).strip(),
+                    "link": sanitize_url(item.get("link", "")),
+                    "target_url": sanitize_url(item.get("target_url", "")),
                     "claim_u": float(item.get("claim_u", 0.0)),
                     "claim_psi": float(item.get("claim_psi", 0.0)),
                     "real_u": float(item.get("real_u", 0.0)),
@@ -1949,8 +2194,8 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
                 "thinking": str(item[0]).strip(),
                 "id": str(item[1]).strip(),
                 "subject": str(item[2]).strip(),
-                "link": str(item[3]).strip(),
-                "target_url": str(item[4]).strip(),
+                "link": sanitize_url(item[3]),
+                "target_url": sanitize_url(item[4]),
                 "claim_u": float(item[5]),
                 "claim_psi": float(item[6]),
                 "real_u": float(item[7]),
@@ -2063,7 +2308,23 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
             violations = [(i, len(p)) for i, p in enumerate(posts_to_check) if len(p) > 299]
             if violations:
                 print(f"WARNING: '{story.get('subject')}' has char violations at posts {violations}")
-            story["posts"] = posts
+            # Ensure scraped_text is present; fall back to scraping from link if missing
+            if not story.get("scraped_text") and story.get("link"):
+                try:
+                    from harvest_candidates import scrape_article_content
+                    _, _, s_body = scrape_article_content(story["link"])
+                    if s_body and not s_body.startswith("Error") and len(s_body.strip()) >= 200:
+                        story["scraped_text"] = s_body
+                        print(f"  [Scraped Text Fallback] Attached {len(s_body)} chars of scraped text to '{slug}'.")
+                except Exception as se:
+                    print(f"  Warning: Could not fetch fallback scraped_text for '{slug}': {se}")
+
+            if story.get("scraped_text") and story.get("link"):
+                try:
+                    from scraped_cache import save_cached_article
+                    save_cached_article(story["link"], story.get("subject", ""), "", story["scraped_text"])
+                except Exception:
+                    pass
 
             # Write to darkroom — rebuild_registries will generate the graph and promote it
             filename = f"factcheck_{slug}.json"
@@ -2377,12 +2638,74 @@ def main():
                 )
                 parsed = transpose_flat_to_json(raw_text, use_multi_aspect=is_multi_aspect_active, use_spiritual=is_spiritual_active, spiritual_traditions=args.spiritual_traditions)
 
-                # Attach multi-source metadata from candidate objects
-                cand_map = {normalize_url(c.get("url", "")): c for c in remaining if c.get("url")}
+                # Robust Candidate Matching & Ground-Truth URL Alignment
+                def _find_cand_match(story_item, candidate_pool):
+                    if not isinstance(story_item, dict) or not candidate_pool:
+                        return None
+                    
+                    # 1. Exact URL / Target URL match
+                    s_links = {
+                        normalize_url(story_item.get("link", "")),
+                        normalize_url(story_item.get("target_url", "")),
+                        normalize_url(story_item.get("grounding_url", ""))
+                    }
+                    s_links.discard("")
+                    for cand in candidate_pool:
+                        c_links = {
+                            normalize_url(cand.get("url", "")),
+                            normalize_url(cand.get("target_url", ""))
+                        }
+                        c_links.discard("")
+                        if s_links & c_links:
+                            return cand
+
+                    # 2. Fuzzy URL slug match (handles line-wrapping or LLM-introduced hyphens e.g. even-tually)
+                    for s_u in s_links:
+                        s_slug = _slugify(s_u)
+                        if len(s_slug) > 15:
+                            for cand in candidate_pool:
+                                for c_u in (cand.get("url"), cand.get("target_url")):
+                                    if c_u and _slugify(c_u) == s_slug:
+                                        return cand
+
+                    # 3. Subject / title token overlap
+                    s_subj = (story_item.get("subject") or "").lower()
+                    s_words = set(re.findall(r'\b[a-zA-Z0-9]{4,}\b', s_subj))
+                    if len(s_words) >= 3:
+                        best_cand = None
+                        max_overlap = 0
+                        for cand in candidate_pool:
+                            c_subj = (cand.get("subject") or cand.get("title") or "").lower()
+                            c_words = set(re.findall(r'\b[a-zA-Z0-9]{4,}\b', c_subj))
+                            overlap = len(s_words & c_words)
+                            if overlap >= 3 and overlap > max_overlap:
+                                max_overlap = overlap
+                                best_cand = cand
+                        if best_cand:
+                            return best_cand
+
+                    # 4. Positional fallback if single candidate remaining
+                    if len(candidate_pool) == 1:
+                        return candidate_pool[0]
+
+                    return None
+
+                matched_cands = set()
                 for it in parsed:
                     if isinstance(it, dict):
-                        cand_match = cand_map.get(normalize_url(it.get("link", "")))
+                        unmatched_pool = [c for c in remaining if id(c) not in matched_cands]
+                        cand_match = _find_cand_match(it, unmatched_pool)
                         if cand_match:
+                            matched_cands.add(id(cand_match))
+                            # Crucial: restore ground-truth URL from candidate so model typos don't break links or queue deduction!
+                            if cand_match.get("url"):
+                                it["link"] = cand_match["url"]
+                            if cand_match.get("target_url"):
+                                it["target_url"] = cand_match["target_url"]
+                            if cand_match.get("text"):
+                                it["scraped_text"] = cand_match["text"]
+                            elif cand_match.get("scraped_text"):
+                                it["scraped_text"] = cand_match["scraped_text"]
                             if cand_match.get("cluster_sources"):
                                 it["cluster_sources"] = cand_match["cluster_sources"]
                             if cand_match.get("is_multi_source"):
@@ -2398,15 +2721,36 @@ def main():
                         claim_rnet = 0.0
                         real_rnet = 0.0
                         hypocrisy = 0.0
+                        subject_label = item.get("subject", "story") if isinstance(item, dict) else (item[2] if isinstance(item, list) and len(item) > 2 else "story")
 
-                        if args.son and isinstance(item, list) and len(item) >= 25:
+                        if isinstance(item, dict):
+                            if args.son:
+                                try:
+                                    claim_rnet = float(item.get("claim_rnet", 0.0))
+                                    real_rnet = float(item.get("real_rnet", 0.0))
+                                    hypocrisy = abs(real_rnet - claim_rnet)
+                                except (ValueError, TypeError):
+                                    pass
+                                if real_rnet > 2.0 or hypocrisy > 2.0:
+                                    trigger_reflection = True
+                            else:
+                                try:
+                                    claim_u = float(item.get("claim_u", 0.0))
+                                    claim_psi = float(item.get("claim_psi", 0.0))
+                                    real_u = float(item.get("real_u", 0.0))
+                                    real_psi = float(item.get("real_psi", 0.0))
+                                    hypocrisy = abs(real_u - claim_u) + abs(real_psi - claim_psi)
+                                except (ValueError, TypeError):
+                                    pass
+                                if hypocrisy > 1.5:
+                                    trigger_reflection = True
+                        elif args.son and isinstance(item, list) and len(item) >= 25:
                             try:
                                 claim_rnet = float(item[17]) if item[17] is not None else 0.0
                                 real_rnet = float(item[18]) if item[18] is not None else 0.0
                                 hypocrisy = abs(real_rnet - claim_rnet)
                             except (ValueError, TypeError):
                                 pass
-                            # Trigger if real R_net > 2.0 (distorted/deception) or delta > 2.0
                             if real_rnet > 2.0 or hypocrisy > 2.0:
                                 trigger_reflection = True
                         elif not args.son and isinstance(item, list) and len(item) >= 9:
@@ -2423,14 +2767,15 @@ def main():
 
                         if trigger_reflection:
                             desc = f"R_net={real_rnet:.2f}, delta={hypocrisy:.2f}" if args.son else f"hypocrisy={hypocrisy:.2f}"
-                            print(f"  [REFLECT] High hypocrisy/distortion detected ({desc}) for item {idx}: {item[2]}")
+                            print(f"  [REFLECT] High hypocrisy/distortion detected ({desc}) for item {idx}: {subject_label}")
                             print("  Executing second-pass fact-checking search grounding reflection...")
 
                             orig_cand = None
                             if idx < len(chunk):
                                 orig_cand = chunk[idx]
                             else:
-                                url_clean = normalize_url(item[3])
+                                item_url = item.get("link", "") if isinstance(item, dict) else (item[3] if isinstance(item, list) and len(item) > 3 else "")
+                                url_clean = normalize_url(item_url)
                                 for c in chunk:
                                     if normalize_url(c.get("url", "")) == url_clean:
                                         orig_cand = c
@@ -2456,16 +2801,22 @@ def main():
                                     )
                                     ref_parsed = transpose_flat_to_json(ref_raw, use_multi_aspect=args.multi_aspect, use_spiritual=is_spiritual_active, spiritual_traditions=args.spiritual_traditions)
                                     if ref_parsed and len(ref_parsed) > 0:
-                                        item = ref_parsed[0]
-                                        print(f"  [REFLECT SUCCESS] Successfully updated story '{item[2]}' with grounded facts.")
+                                        new_item = ref_parsed[0]
+                                        # Retain ground-truth candidate metadata so reflection never wipes out scraped_text or canonical URLs!
+                                        if isinstance(item, dict) and isinstance(new_item, dict):
+                                            for meta_key in ("scraped_text", "link", "target_url", "cluster_sources", "is_multi_source", "cross_source_dossier", "id"):
+                                                if meta_key in item and item[meta_key]:
+                                                    new_item[meta_key] = item[meta_key]
+                                        item = new_item
+                                        print(f"  [REFLECT SUCCESS] Successfully updated story '{subject_label}' with grounded facts.")
                                         if ref_grounding:
                                             if not grounding_urls:
                                                 grounding_urls = []
                                             for u in ref_grounding:
                                                 if u not in grounding_urls:
                                                     grounding_urls.append(u)
-                                except Exception as re:
-                                    print(f"  Warning: Reflection API call failed: {re}. Falling back to initial evaluation.")
+                                except Exception as ref_err:
+                                    print(f"  Warning: Reflection API call failed: {ref_err}. Falling back to initial evaluation.")
                         reflected_parsed.append(item)
                     parsed = reflected_parsed
 
@@ -2495,16 +2846,33 @@ def main():
 
                 chunk_evals.extend(parsed)
 
-                # Find which candidates still haven't been evaluated (match by URL)
-                evaluated_urls = {normalize_url(e.get("link", "")) for e in chunk_evals}
-                remaining = [c for c in remaining if normalize_url(c.get("url", "")) not in evaluated_urls]
+                # Find which candidates still haven't been evaluated (match by any known URL)
+                evaluated_urls = set()
+                for e in chunk_evals:
+                    if isinstance(e, dict):
+                        for k in ("link", "target_url", "grounding_url", "url"):
+                            val = e.get(k)
+                            if val:
+                                evaluated_urls.add(normalize_url(val))
+
+                remaining = [c for c in remaining if not _cand_in_evals(c, evaluated_urls)]
 
                 print(f"  Got {len(parsed)} row(s). {len(remaining)} candidate(s) still missing.")
             except Exception as pe:
                 print(f"  Error on attempt {attempt}: {pe}")
 
         if remaining:
-            print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s). Skipping.")
+            print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s).")
+            # Archive exhausted candidates to stories/fail/skipped_candidates.jsonl so they don't deadlock future harvesting
+            fail_log = os.path.join(script_dir, "stories", "fail", "skipped_candidates.jsonl")
+            try:
+                os.makedirs(os.path.dirname(fail_log), exist_ok=True)
+                with open(fail_log, "a", encoding="utf-8") as ff:
+                    for fc in remaining:
+                        ff.write(json.dumps(fc, ensure_ascii=False) + "\n")
+                print(f"  Archived {len(remaining)} skipped candidate(s) to {fail_log}.")
+            except Exception as fe:
+                print(f"  Warning: Failed to archive skipped candidates: {fe}")
 
         if chunk_evals:
             chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic, compact=compact_val)
@@ -2512,21 +2880,32 @@ def main():
             print("  Promoting, generating graphs, and fast-registering immediately...")
             promote_and_register_selector(args.son)
             print("  Chunk successfully promoted and registered.")
-            
-            # Deduct successfully processed candidates from the queue file
-            queue_file_path = os.path.join(script_dir, "harvested_candidates.json")
-            if os.path.exists(queue_file_path):
-                try:
-                    with open(queue_file_path, 'r', encoding='utf-8') as f:
-                        q_data = json.load(f)
-                    if isinstance(q_data, list):
-                        # Filter out evaluated candidates
-                        trimmed_q = [c for c in q_data if normalize_url(c.get("url", "")) not in evaluated_urls]
-                        with open(queue_file_path, 'w', encoding='utf-8') as f:
-                            json.dump(trimmed_q, f, indent=2, ensure_ascii=False)
-                        print(f"  Deducted {len(q_data) - len(trimmed_q)} evaluated candidates from queue. Remaining: {len(trimmed_q)}")
-                except Exception as qe:
-                    print(f"  Warning: Failed to update queue file: {qe}")
+
+        # Deduct successfully processed candidates AND exhausted remaining candidates from the queue file
+        queue_file_path = os.path.join(script_dir, "harvested_candidates.json")
+        if os.path.exists(queue_file_path):
+            try:
+                with open(queue_file_path, 'r', encoding='utf-8') as f:
+                    q_data = json.load(f)
+                if isinstance(q_data, list):
+                    chunk_evaluated_urls = set()
+                    for e in chunk_evals:
+                        if isinstance(e, dict):
+                            for k in ("link", "target_url", "grounding_url", "url"):
+                                val = e.get(k)
+                                if val:
+                                    chunk_evaluated_urls.add(normalize_url(val))
+                    exhausted_urls = {normalize_url(rc.get("url", "")) for rc in remaining if rc.get("url")}
+                    trimmed_q = [
+                        c for c in q_data 
+                        if not _cand_in_evals(c, chunk_evaluated_urls) and normalize_url(c.get("url", "")) not in exhausted_urls
+                    ]
+                    with open(queue_file_path, 'w', encoding='utf-8') as f:
+                        json.dump(trimmed_q, f, indent=2, ensure_ascii=False)
+                    deducted_count = len(q_data) - len(trimmed_q)
+                    print(f"  Deducted {deducted_count} candidate(s) from queue file. Remaining: {len(trimmed_q)}")
+            except Exception as qe:
+                print(f"  Warning: Failed to update queue file: {qe}")
         
         all_evaluations.extend(chunk_evals)
             

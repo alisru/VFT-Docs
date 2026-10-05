@@ -63,12 +63,27 @@ class ParagraphExtractor(HTMLParser):
 def scrape_article_text(url: str, timeout: int = 10) -> str:
     """Fetch and extract paragraph text from a URL."""
     try:
+        from scraped_cache import get_cached_article, save_cached_article
+        _, _, cached_body = get_cached_article(url)
+        if cached_body and len(cached_body.strip()) >= 150:
+            print(f"  [Cache Hit] Reusing local scraped text for: {url} ({len(cached_body)} chars)")
+            return cached_body[:8000]
+    except Exception:
+        pass
+
+    try:
         resp = requests.get(url, headers=HEADERS, timeout=timeout)
         if resp.status_code != 200:
             return ""
         parser = ParagraphExtractor()
         parser.feed(resp.text)
         text = "\n\n".join(parser.paragraphs)
+        if text and len(text.strip()) >= 150:
+            try:
+                from scraped_cache import save_cached_article
+                save_cached_article(url, "", "", text)
+            except Exception:
+                pass
         return text[:8000]
     except Exception as e:
         print(f"  [WARN] Failed to scrape {url}: {e}")

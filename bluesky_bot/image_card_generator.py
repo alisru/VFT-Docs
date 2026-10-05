@@ -209,7 +209,7 @@ def generate_compact_info_card(thread_config, output_path):
     link = thread_config.get("link", "")
     
     if len(posts) < 13:
-        raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13 or 14).")
+        raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13, 14, or 15).")
 
     if thread_config.get("five_word") is True:
         # Load fonts, generate single 5-word terminal card
@@ -229,7 +229,7 @@ def generate_compact_info_card(thread_config, output_path):
     # Load standard layout configuration
     fonts = load_theme_fonts()
     
-    is_multi_aspect = (len(posts) == 14)
+    is_multi_aspect = bool(thread_config.get("aspects")) or (len(posts) >= 14 and ("sub-audit" in posts[4].lower() or posts[4].strip().startswith("- ")))
     
     if is_multi_aspect:
         sections = [
@@ -1135,32 +1135,23 @@ def generate_audit_factcheck_card(fc_data, output_path):
     draw.text((c3_x1 + 15, col_y1 + 12), "TOP ARCHIVE PRECEDENTS", fill=accent_purple, font=fonts["bold_14"])
 
     precedents = fc_data.get("top_precedents", [])
-    py = col_y1 + 35
-    for p in precedents[:2]:
+    py = col_y1 + 38
+    for p in precedents[:3]:
         pid = str(p.get("id") or "RECORD").replace("_", "-")
-        if len(pid) > 22:
-            pid = pid[:19] + "..."
+        if len(pid) > 24:
+            pid = pid[:21] + "..."
         subj = str(p.get("subject") or "Historical Audit Record")
-        if len(subj) > 28:
-            subj = subj[:25] + "..."
+        if len(subj) > 30:
+            subj = subj[:27] + "..."
         ru = float(p.get("real_u", 0.0))
         rpsi = float(p.get("real_psi", 0.0))
         r_color = accent_green if ru >= 0 else accent_red
 
-        draw.rounded_rectangle([c3_x1 + 12, py, c3_x2 - 12, py + 58], radius=6, fill=card_inner, outline=border_color, width=1)
-        draw.text((c3_x1 + 18, py + 6), f"#{pid}", fill=text_white, font=fonts["bold_12"])
-        draw.text((c3_x1 + 18, py + 22), subj, fill=text_muted, font=fonts["regular_12"])
-        draw.text((c3_x1 + 18, py + 38), f"Vector: ({ru:+.2f}, {rpsi:+.2f})", fill=r_color, font=fonts["mono_12"])
-        py += 64
-
-    # QR Code at bottom of Column 3
-    qr_img = _generate_qr_code("https://aletheia.social", size=85)
-    if qr_img:
-        draw.rounded_rectangle([c3_x1 + 12, col_y2 - 95, c3_x1 + 102, col_y2 - 10], radius=6, fill=card_inner, outline=border_color, width=1)
-        img.paste(qr_img, (c3_x1 + 15, col_y2 - 92))
-        draw.text((c3_x1 + 112, col_y2 - 75), "VERIFY CORPUS", fill=accent_cyan, font=fonts["bold_12"])
-        draw.text((c3_x1 + 112, col_y2 - 55), "10,911 Audits Live", fill=text_muted, font=fonts["regular_12"])
-        draw.text((c3_x1 + 112, col_y2 - 38), "aletheia.social", fill=text_subtle, font=fonts["mono_12"])
+        draw.rounded_rectangle([c3_x1 + 12, py, c3_x2 - 12, py + 62], radius=6, fill=card_inner, outline=border_color, width=1)
+        draw.text((c3_x1 + 18, py + 8), f"#{pid}", fill=text_white, font=fonts["bold_12"])
+        draw.text((c3_x1 + 18, py + 25), subj, fill=text_muted, font=fonts["regular_12"])
+        draw.text((c3_x1 + 18, py + 43), f"Vector: ({ru:+.2f}, {rpsi:+.2f})", fill=r_color, font=fonts["mono_12"])
+        py += 70
 
     # 5. Bottom Systemic Event-Physics Invariant
     draw.rounded_rectangle([40, 465, width - 40, 580], radius=8, fill=card_inner, outline=border_color, width=1)
@@ -1178,7 +1169,18 @@ def generate_audit_factcheck_card(fc_data, output_path):
     draw.text((40, 615), "Primary Evidence: Aletheia 10,800+ Verified Audit Database", fill=text_muted, font=fonts["regular_14"])
     draw.text((width - 440, 615), "Vector Field Theory · Psochic Hegemony Audit", fill=text_subtle, font=fonts["mono_12"])
 
-    img.save(output_path, "PNG")
+    try:
+        img.save(output_path, "PNG")
+    except OSError:
+        base, ext = os.path.splitext(output_path)
+        alt_path = f"{base}_new{ext}"
+        img.save(alt_path, "PNG")
+        try:
+            import os
+            os.replace(alt_path, output_path)
+        except Exception:
+            output_path = alt_path
+
     print(f"Audit Fact-Check Card generated: {output_path}")
     return output_path
 
