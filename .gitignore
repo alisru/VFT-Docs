@@ -81,6 +81,7 @@ _VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/xml/
 # --- Local Caches & SQLite Databases ---
 bluesky_bot/scraped_articles_cache.sqlite
 chat_context/data/*.sqlite*
+chat_context/canvases/
 
 # Chrome extension signing keys - private, never commit
 *.pem
