@@ -1,10 +1,10 @@
 ---
-title: "Domestic Oversaturation and Forced Labor Redeployment Analysis"
+title: "Domestic Oversaturation and Forced Labor Redeployment AnalysisExport"
 chat_id: "gemini-dd82cf235ec796b0"
 chat_title: "Debunking Authoritarian Property Investor Rants - Google Gemini"
 chat_url: "https://gemini.google.com/app/910f67ade2e57681?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all"
 type: "markdown"
-updated: "2026-10-05T11:39:45.683457+00:00"
+updated: "2026-10-05T11:40:23.725173+00:00"
 ---
 
 # Australia’s White-Collar Labor Glut: Modeling Domestic Career Reallocation Under Migration Cuts
