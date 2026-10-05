@@ -1,5 +1,5 @@
 ---
-title: "Domestic Oversaturation and Forced Labor Redeployment AnalysisExport"
+title: "Domestic Oversaturation and Forced Labor Redeployment Analysis"
 chat_id: "gemini-dd82cf235ec796b0"
 chat_title: "Debunking Authoritarian Property Investor Rants - Google Gemini"
 chat_url: "https://gemini.google.com/app/910f67ade2e57681?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all"
