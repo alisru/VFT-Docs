@@ -1,0 +1,148 @@
+[
+  {
+    "thinking": "Thinking Phase: Analyzing ParaAnya output cache paper. Stated claim: accelerating parallel diffusion sampling without altering update rules. Actual reality: paper introduces an efficient cache method reducing NFE by 70%. Stated forces reflect methodological progress (GG/GP). Actual forces show solid technical empowerment and efficiency gains (GG). Integrity is trustworthy/absolute truth.",
+    "id": "paraanya-accelerating-parallel-diffusion",
+    "subject": "ParaAnya: Accelerating Parallel Diffusion Sampling with Plug-and-Play Output Caching",
+    "link": "https://arxiv.org/abs/2609.36522",
+    "target_url": "https://bsky.app/profile/csdc-bot.bsky.social/post/3mwpqdfjdio25",
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.9,
+    "real_psi": 0.8,
+    "mode": "root",
+    "posts": [
+      "Speeding up AI generation without breaking quality!\nEvidence: Cache reuse, 70% NFE reduction, Stable Diffusion v1.5\n#Aletheia #AI #Tech",
+      "ParaAnya introduces a plug-and-play output cache that accelerates parallel diffusion sampling while preserving underlying update rules.\nStated Judgement: (+1.0, +1.0) — Greater Good",
+      "Tests across four parallel samplers show ParaAnya cuts function evaluations by up to 70.1% and delivers substantial speedups while maintaining quality.\nResulting Judgement: (+0.9, +0.8) — Greater Good",
+      "Verdict: PASS — The Path of Grace.\nTechnical innovation successfully cuts computational bottlenecks while maintaining algorithmic integrity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "- Diffusion Sampling: PASS (0.9, 0.8) — Efficient output caching.\n- Computational Efficiency: PASS (0.9, 0.8) — Cuts redundant GPU work.",
+      "Diffusion models are computationally heavy due to sequential sampling. Parallel solvers help, but redundant steps remain. ParaAnya tackles this via intelligent output caching.",
+      "The Bright Side:\nSmart caching drops energy use and latency for generative AI workflows without sacrificing output quality.",
+      "The Breakdown & Plane Error:\nEvaluating technical efficiency on the physical and logical planes rather than political pretext.",
+      "Social Physics Analysis:\nThe researchers use a Smart Altruistic loop: transparently sharing technical improvements that empower the wider developer community to build faster, cheaper tools.",
+      "The Trajectory: The Path of Grace.\nWhen technical innovation solves actual friction transparently, it plots a direct trajectory toward Grace.",
+      "The Unavoidable Truth: Algorithmic caching can drastically cut generative AI compute costs.\n\nThe Unavoidable Lie: Raw scaling alone is always better than clever algorithmic engineering.",
+      "Alethekanon:\nTransparent technical optimization reducing waste is a rare win for computational efficiency.",
+      "Awwthekanon:\nIt's wonderful when researchers find clever ways to make heavy AI models run smoother and faster for everyone!",
+      "Brothekanon:\nLess waiting on heavy renders? Absolute win for anyone running diffusion locally.",
+      "Spirithekanon:\n\"Let your work be shown to your servants, and your glorious power to their children.\" Psalm 90:16 PASS\nOpenly sharing efficient solutions lifts burdens from the entire community."
+    ],
+    "actors": [
+      "arXiv",
+      "Stable Diffusion"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.0,
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "Diffusion Sampling",
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": 0.9,
+        "real_psi": 0.8,
+        "verdict": "PASS",
+        "reason": "Efficient output caching"
+      },
+      {
+        "aspect": "Computational Efficiency",
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": 0.9,
+        "real_psi": 0.8,
+        "verdict": "PASS",
+        "reason": "Cuts redundant GPU work"
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nParaAnya: Accelerating Parallel Diffusion Sampling with Plug-and-Play Output Caching\n\nDiffusion models have achieved remarkable success in generative tasks, but their inherently sequential sampling process introduces a severe computational bottleneck. Recent Parallel-in-Time (PinT) solvers attempt to mitigate this by parallelizing generation across a sliding window of timesteps, advancing the window only when step-wise changes stabilize. However, this overlapping window mechanism forces the network to repeatedly evaluate the same timesteps. When the input variations between iterations are minimal, these redundant evaluations lead to significant computational waste. To address this inefficiency, we propose ParaAnya, an output cache mechanism agnostic to the parallel sampling algorithm that can reduce the number of function evaluations (NFE). ParaAnya caches input-output pairs of diffusion models and reuses the cached output at overlapping timesteps. By dispatching only cache-miss timesteps to GPU workers, our approach eliminates redundant computation while preserving the structure of the underlying algorithms' update rules. We integrate ParaAnya into four representative parallel sampling algorithms and evaluate its performance on Stable Diffusion v1.5. Across four parallel samplers evaluated with DDIM on eight GPUs, ParaAnya provides $1.30$--$2.43\\times$ speedups over their uncached counterparts and reduces NFE by up to 70.1\\%, reaching up to a $5.62\\times$ speedup over single-GPU serial sampling while maintaining comparable CLIP scores.\n\nActual Article Body:\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\n\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\n\nHave an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://arxiv.org/abs/2609.36522",
+        "snippet": "Stated Claim / Post Context:\nParaAnya: Accelerating Parallel Diffusion Sampling with Plug-and-Play Output Caching\n\nDiffusion models have achieved remarkable success in generative tasks, but their inherently sequential sampling process introduces a severe computational bottleneck. Recent Parallel-in-"
+      }
+    ],
+    "category": "all",
+    "topic": "trump, xi, albanese",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/paraanya-accelerating-parallel-diffusion_graph.png",
+    "rkeys": [
+      "3mwqnozg7fa2z",
+      "3mwqnp253px2u",
+      "3mwqnp4buup27",
+      "3mwqnp6gn6l2x",
+      "3mwqnpap5iq2o",
+      "3mwqnpctylz2z",
+      "3mwqnpeyrqe2s",
+      "3mwqnph5ots2r",
+      "3mwqnpjclyx2y",
+      "3mwqnplhf4l2x",
+      "3mwqnpnm7br2p",
+      "3mwqnppqzdc27",
+      "3mwqnprvygy2z",
+      "3mwqnpu2pl72u",
+      "3mwqnpw7rlz2b"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnozg7fa2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnp253px2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnp4buup27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnp6gn6l2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnpap5iq2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnpctylz2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnpeyrqe2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnph5ots2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnpjclyx2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnplhf4l2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnpnm7br2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnppqzdc27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnprvygy2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnpu2pl72u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwqnpw7rlz2b"
+    ],
+    "tags": [
+      "Aletheia",
+      "AI",
+      "Tech"
+    ]
+  }
+]

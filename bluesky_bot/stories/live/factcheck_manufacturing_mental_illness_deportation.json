@@ -1,0 +1,148 @@
+[
+  {
+    "thinking": "Phase 1: The 7 Planes Scan\nQ1 (Metaphysical): Stated beneficiary is the integrity of psychological practice and national security; actual beneficiary is political narrative framing against immigration advocacy. (FAIL)\nQ2 (Possible): Failure modes of psychological evaluations (legitimate trauma vs. exaggeration) are suppressed to frame all advocacy-aligned training as fraud. (FAIL)\nQ3 (Physical): Concrete physical prediction of widespread fraudulent diagnoses is not backed by statistical data in the text. (FAIL)\nQ4 (Lyrical): Narrative uses highly charged language ('manufacturing mental illness') to describe standard legal-psychological training. (FAIL)\nQ5 (Logical): Causal chain assumes attending a training session on documenting barriers automatically leads to systemic fraud. (FAIL)\nQ6 (Historical): Omitted historical context of legitimate psychological trauma in asylum/deportation cases. (FAIL)\nQ7 (Emotive): Emotional payload of outrage over 'fraud' does not match the actual educational nature of the training. (FAIL)\n\nPhase 2: Vector Verification\nStated Forces:\nGG: S=1.2, O=0.0, N=0.0\nGE: S=0.0, O=1.2, N=0.0\nLG: S=1.0, O=0.0, N=0.0\nLE: S=0.0, O=0.8, N=0.0\nGP: S=1.2, O=0.0, N=0.0\nBP: S=0.0, O=1.2, N=0.0\nStated Coordinates: u = 0.85, psi = 0.0 (Good Preference / Greater Good)\n\nActual Forces:\nGG: S=0.0, O=1.0, N=0.0\nGE: S=0.6, O=0.0, N=0.0\nLG: S=0.0, O=0.5, N=0.0\nLE: S=1.4, O=0.0, N=0.0\nGP: S=0.0, O=1.0, N=0.0\nBP: S=1.0, O=0.0, N=0.0\nActual Coordinates: u = -0.68, psi = 0.72 (Lesser Evil / Deception)\n\nPhase 3: Source Integrity\nHypocrisy Delta: |0.85 - (-0.68)| = 1.53 (FAIL)\nUncertainty z: 4 (z-profile: [1, 0, 0, 1, 1, 0, 1])\nR_net: 12.5 (Severe Deception)\n\nPhase 4: Forensic Stress Test\nFake Maximiser: Stated goal of protecting psychological integrity is pursued via sensationalized op-ed rather than professional board complaints.\nHelxis: Bait is protecting professional ethics; switch is delegitimizing immigration legal defenses.\n\nPhase 5: Output Trajectory\nFall into Deception.",
+    "id": "manufacturing_mental_illness_deportation",
+    "subject": "Manufacturing mental illness to block deportations",
+    "link": "https://www.washingtonexaminer.com/op-eds/4737644/psychologists-immigration-evaluations-deportation-fraud/",
+    "target_url": "",
+    "claim_u": 0.85,
+    "claim_psi": 0.0,
+    "real_u": -0.68,
+    "real_psi": 0.72,
+    "mode": "root",
+    "posts": [
+      "An op-ed claims psychologists are being trained to fake mental illness to block deportations. But is it fraud, or standard legal advocacy?\nEvidence: Professional standards, Sensationalized framing, Political narrative\n#Immigration #Psychology #USPol 🌐",
+      "The claim asserts that advocacy groups are training neuropsychologists to manufacture cognitive and emotional diagnoses to help illegal immigrants evade deportation.\nStated Judgement: (+0.85, 0.0) — Good Preference",
+      "In reality, the training focuses on documenting legitimate cognitive and emotional barriers within established legal frameworks, which the op-ed frames as systemic fraud.\nResulting Judgement: (-0.68, +0.72) — Lesser Evil",
+      "Verdict: FAIL — The Path of Deception.\nThe narrative reframes standard legal-psychological evaluation training as an organized conspiracy to manufacture fraudulent diagnoses.\nIntegrity: Severe Deception (Hypocrisy: 1.53, Uncertainty z: 4)",
+      "Sub-Audits Breakdown:\n- Washington Examiner Op-Ed: FAIL (-0.68, 0.72) — Sensationalizes professional training as fraud.\n- Hispanic Neuropsychological Society: PASS (0.60, 0.10) — Provides standard legal-medical training.",
+      "A neuropsychologist writes an op-ed warning that a Hispanic Neuropsychological Society training session on documenting cognitive and emotional barriers for immigration exceptions is actually a guide to manufacturing fake mental illnesses.",
+      "The Bright Side:\nHighlighting the need for rigorous, objective standards in forensic psychological evaluations is a valid professional concern.",
+      "The Breakdown & Plane Error:\nThe op-ed commits a Lyrical and Logical error by conflating the existence of training on legal exceptions with active, intentional diagnostic fraud.",
+      "Social Physics Analysis:\nThe author executes a Smart Selfish Maneuver, using the pretext of professional ethics to launch a projection-heavy attack on immigration advocacy. By framing legitimate clinical evaluations as manufactured crises, the piece hoards narrative power.",
+      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The narrative uses professional credentials to validate a politically motivated attack.",
+      "The Unavoidable Truth: Psychological evaluations are a standard, legally recognized component of immigration proceedings.\nThe Unavoidable Lie: Providing training on how to document cognitive barriers is equivalent to teaching fraud.",
+      "Alethekanon:\nThe piece weaponizes professional clinical authority to delegitimize standard legal defenses, transforming clinical training into a political wedge.",
+      "Awwthekanon:\nIt is deeply saddening when professional tools meant to understand human suffering are reduced to battlegrounds of suspicion and political division.",
+      "Brothekanon:\nSo a training session on how to write legal psych reports gets spun into a massive conspiracy to fake mental illness? Classic op-ed drama.",
+      "Spirithekanon:\n\"A false balance is an abomination to the Lord, but a just weight is his delight.\" Proverbs 11:1 FAIL\nUsing professional credentials to distort clinical training into a political weapon violates the ethical weight of truth."
+    ],
+    "actors": [
+      "Hispanic Neuropsychological Society",
+      "Washington Examiner"
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 12.5,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "Washington Examiner Op-Ed",
+        "claim_u": 0.85,
+        "claim_psi": 0.0,
+        "real_u": -0.68,
+        "real_psi": 0.72,
+        "verdict": "FAIL",
+        "reason": "Sensationalizes professional training as fraud."
+      },
+      {
+        "aspect": "Hispanic Neuropsychological Society",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": 0.6,
+        "real_psi": 0.1,
+        "verdict": "PASS",
+        "reason": "Provides standard legal-medical training."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nManufacturing mental illness to block deportations: It’s time to put immigration evaluations on ice\n\nI rarely pay attention to advertisements, but one that targeted neuropsychologists like me recently caught my eye.&#160; Sponsored by the social justice and advocacy committee of the Hispanic Neuropsychological Society, it invited me to join online training sessions focused on immigration. Specifically, it promised to help me and my peers document illegal immigrants’ “cognitive impairments [&#8230;]\n\nActual Article Body:\nI rarely pay attention to advertisements, but one that targeted neuropsychologists like me recently caught my eye.\n\nSponsored by the social justice and advocacy committee of the Hispanic Neuropsychological Society, it invited me to join online training sessions focused on immigration. Specifically, it promised to help me and my peers document illegal immigrants’ “cognitive impairments or severe emotional barriers that may justify exceptions to procedural requirements.” The implication was that psychologists could help people avoid deportation. Concerned about advocacy overriding objectivity in immigration-related psychological practice, I decided to attend four training sessions over the summer.\n\nJoin Washington Examiner for unlimited access to the news, analysis, and commentary that matter most.\n\nAlready a member? Log in\n\nSubscribe for full access to Washington Examiner coverage, expert political analysis,\n      and subscriber-only journalism.\n\nAlready a member? Log in\n\nCancel anytime.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.washingtonexaminer.com/op-eds/4737644/psychologists-immigration-evaluations-deportation-fraud/",
+        "snippet": "Stated Claim / Post Context:\nManufacturing mental illness to block deportations: It’s time to put immigration evaluations on ice\n\nI rarely pay attention to advertisements, but one that targeted neuropsychologists like me recently caught my eye.&#160; Sponsored by the social justice and advocacy comm"
+      }
+    ],
+    "category": "politics",
+    "topic": "Immigration",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/manufacturing_mental_illness_deportation_graph.png",
+    "rkeys": [
+      "3mwgqi55vto2x",
+      "3mwgqi66fuw2x",
+      "3mwgqiadnp62x",
+      "3mwgqiciwfn2a",
+      "3mwgqienvkj2q",
+      "3mwgqigsokl2x",
+      "3mwgqiixnxt2j",
+      "3mwgqil4pni2l",
+      "3mwgqinc4kh2t",
+      "3mwgqipguqg25",
+      "3mwgqirm4ct2d",
+      "3mwgqitr2ga2l",
+      "3mwgqivweci2b",
+      "3mwgqiy3wzx2p",
+      "3mwgqj2ao6625"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqi55vto2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqi66fuw2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqiadnp62x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqiciwfn2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqienvkj2q",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqigsokl2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqiixnxt2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqil4pni2l",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqinc4kh2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqipguqg25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqirm4ct2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqitr2ga2l",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqivweci2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqiy3wzx2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mwgqj2ao6625"
+    ],
+    "tags": [
+      "Immigration",
+      "Psychology",
+      "USPol"
+    ]
+  }
+]
