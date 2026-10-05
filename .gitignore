@@ -46,9 +46,11 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+*.bak
 
 # --- Logs ---
 *.log
+bluesky_bot/launcher_test_*.txt
 
 # --- Gemini Agent Internal State ---
 .gemini/
@@ -75,6 +77,10 @@ _VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/*.duckdb
 _VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/*.parquet
 !_VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/hansard_members.parquet
 _VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/xml/
+
+# --- Local Caches & SQLite Databases ---
+bluesky_bot/scraped_articles_cache.sqlite
+chat_context/data/*.sqlite
 
 # Chrome extension signing keys - private, never commit
 *.pem

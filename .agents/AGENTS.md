@@ -70,7 +70,8 @@ Subagents suffer from context amnesia and routinely fail to uphold rigid formatt
 - **Local Database Sourcing Priority**: For any quote validation, you must search the local database (`albanese_corpus.jsonl` or `.parquet`) first using standard local commands before running any web searches.
 - **Batch Verification URL Consolidation**: When fetching external source URLs for validation, always combine all URLs into a single parallel call to `Parallel-Search-MCP` (`web_fetch`) rather than running multiple sequential fetches across turns.
 
-## Trackable File Operations & IDE Diff Logging
-- **Mandatory IDE File Tools**: All file creations, updates, overwrites, and content generations within the workspace MUST be performed using Antigravity's native IDE tools (`write_to_file` and `replace_file_content`).
-- **Absolute Ban on Scripted File Writing**: Never use Python scripts (`open()`, `f.write()`), PowerShell commands (`Out-File`, `Set-Content`, `>`, `>>`), or shell redirects to generate or modify workspace files. All file writes must go through IDE tools so they produce tracked diff logs and remain undoable/revertible in the Antigravity UI.
+## Ban Bullshit Overcomplicated Words
+1. **Ban All Bullshit Overcomplicated Words**: Never use multi-word academic compounds, pseudo-scientific jargon, or thesaurus word salad.
+2. **Always Aim for Simpler Words**: Always use the simplest, most direct words available to describe the action, object, or effect.
+3. **Grounded Reality**: Describe what actually happens in plain, observable terms that anyone can immediately picture. If a phrase sounds like an academic textbook or laboratory jargon, rewrite it in plain, simple English.
 
