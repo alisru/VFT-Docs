@@ -99,6 +99,24 @@
       "Aletheia",
       "Vatican"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Pope Leo XIV",
+        "role": "instigator"
+      },
+      {
+        "name": "Holy See",
+        "role": "instigator"
+      },
+      {
+        "name": "Lampedusa",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

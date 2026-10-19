@@ -140,6 +140,26 @@
       "Aletheia",
       "Tech",
       "SanDiego"
+    ],
+    "actor_roles": [
+      {
+        "name": "San Diego City Council",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Waymo",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "California Public Utilities Commission",
+        "role": "regulator"
+      }
     ]
   }
 ]

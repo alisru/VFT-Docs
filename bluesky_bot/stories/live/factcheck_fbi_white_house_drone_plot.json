@@ -73,6 +73,20 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "FBI",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

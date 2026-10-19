@@ -84,7 +84,14 @@ function chatRow(c) {
   const src = (c.source || 'file').toLowerCase();
   const badge = el('span', 'badge ' + src, src.slice(0, 3));
   const t = el('div', 't', c.title || c.id); t.title = c.title || c.id;
-  row.append(cb, badge, t, el('small', null, (c.updated || '').slice(5, 10)));
+  row.append(cb, badge, t);
+  if (c.n_canvases > 0) {
+    const cvBadge = el('span', 'badge', `🎨${c.n_canvases}`);
+    cvBadge.style.cssText = 'background:#2d2640;color:#c084fc;font-size:10px';
+    cvBadge.title = `${c.n_canvases} canvas file(s) saved`;
+    row.append(cvBadge);
+  }
+  row.append(el('small', null, (c.updated || '').slice(5, 10)));
   row.onclick = () => openChat(c.id);
   return row;
 }
@@ -113,6 +120,7 @@ function renderList() {
 async function openChat(id) {
   current = id; renderList();
   const c = await (await api('/api/chat/' + id)).json();
+  if (current !== id) return;
   const m = $('#main'); m.replaceChildren();
   const h = el('h3', null, c.title);
   const actions = el('div', null);
@@ -132,9 +140,154 @@ async function openChat(id) {
   }
   const meta = el('p', 'dim', `${c.source.toUpperCase()} · ${(c.started || '').slice(0, 10)} · ${c.messages.length} messages`);
   m.append(h, actions, meta);
-  c.messages.forEach(x => { const d = el('div', 'msg ' + x.role); d.append(el('div', 'r', x.role), document.createTextNode(x.text)); m.append(d); });
+
+  function renderCanvasCard(cv) {
+    const card = el('div', 'canvas-card');
+    card.id = 'canvas-' + (cv.id || cv.title.replace(/\W+/g, '-'));
+    card.style.cssText = 'margin:12px 0;padding:12px 14px;background:#13171f;border:1px solid #38bdf8;border-radius:8px;white-space:normal;box-shadow:0 4px 12px rgba(0,0,0,0.3)';
+
+    const topRow = el('div');
+    topRow.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:8px';
+
+    const leftInfo = el('div');
+    leftInfo.style.cssText = 'display:flex;align-items:center;gap:8px';
+    const icon = el('span', null, '🎨');
+    icon.style.fontSize = '16px';
+    const name = el('strong', null, cv.title);
+    name.style.cssText = 'color:#f8fafc;font-size:14px';
+    const badge = el('span', 'badge ' + (cv.type === 'code' ? 'claude' : 'gemini'), (cv.type || 'md').toUpperCase());
+    leftInfo.append(icon, name, badge);
+
+    const btnRow = el('div');
+    btnRow.style.cssText = 'display:flex;gap:6px';
+
+    const copyBtn = el('button', null, '📋 Copy Markdown');
+    copyBtn.style.cssText = 'font-size:11px;padding:3px 8px;cursor:pointer';
+    copyBtn.onclick = async () => {
+      await navigator.clipboard.writeText(cv.content);
+      copyBtn.textContent = '✓ Copied!';
+      setTimeout(() => { copyBtn.textContent = '📋 Copy Markdown'; }, 2000);
+    };
+
+    const toggleBtn = el('button', null, '👁️ Preview');
+    toggleBtn.style.cssText = 'font-size:11px;padding:3px 8px;cursor:pointer';
+
+    const preview = el('pre');
+    preview.style.cssText = 'max-height:360px;overflow:auto;background:#090d13;border:1px solid #1e293b;padding:12px;border-radius:6px;font-size:12px;display:none;margin-top:10px;white-space:pre-wrap;line-height:1.45;color:#e2e8f0;font-family:ui-monospace, monospace';
+    preview.textContent = cv.content;
+
+    toggleBtn.onclick = () => {
+      const isHidden = preview.style.display === 'none';
+      preview.style.display = isHidden ? 'block' : 'none';
+      toggleBtn.textContent = isHidden ? '✕ Hide Preview' : '👁️ Preview';
+    };
+
+    btnRow.append(copyBtn, toggleBtn);
+    topRow.append(leftInfo, btnRow);
+
+    const pathRow = el('div', 'dim');
+    pathRow.style.cssText = 'font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#64748b';
+    pathRow.textContent = `📁 File: ${cv.file_path || 'Saved Canvas Asset'}`;
+
+    card.append(topRow, pathRow, preview);
+    return card;
+  }
+
+  function renderMessageContent(text, canvases, referencedSet) {
+    const container = document.createDocumentFragment();
+    const canvasRegex = /\[\[CANVAS:\s*([^\]]+)\]\]/g;
+    let lastIndex = 0;
+    let match;
+
+    while ((match = canvasRegex.exec(text)) !== null) {
+      const preceding = text.slice(lastIndex, match.index);
+      if (preceding) {
+        container.append(document.createTextNode(preceding));
+      }
+      const rawTitle = match[1].trim();
+      const cleanTitle = rawTitle.replace(/\s*(Contents\s*Share\s*&\s*Export\s*Create|Contents|Share\s*&\s*Export|Share|Export|Download|Close|Create)\s*$/i, '').trim();
+      const matchedCv = (canvases || []).find(cv => {
+        const cvClean = (cv.title || '').replace(/\s*(Contents\s*Share\s*&\s*Export\s*Create|Contents|Share\s*&\s*Export|Share|Export|Download|Close|Create)\s*$/i, '').trim();
+        return cvClean.toLowerCase() === cleanTitle.toLowerCase() ||
+               cvClean.toLowerCase().includes(cleanTitle.toLowerCase()) ||
+               cleanTitle.toLowerCase().includes(cvClean.toLowerCase());
+      }) || (canvases && canvases.length === 1 ? canvases[0] : null);
+
+      if (matchedCv) {
+        if (referencedSet) referencedSet.add(matchedCv.id || matchedCv.title);
+        container.append(renderCanvasCard(matchedCv));
+      } else {
+        const fallback = el('div', 'canvas-card');
+        fallback.style.cssText = 'margin:10px 0;padding:8px 12px;background:#18181b;border:1px dashed #71717a;border-radius:6px;font-size:12px;color:#a1a1aa';
+        fallback.textContent = `🎨 Canvas: ${cleanTitle}`;
+        container.append(fallback);
+      }
+      lastIndex = canvasRegex.lastIndex;
+    }
+
+    const trailing = text.slice(lastIndex);
+    if (trailing) {
+      container.append(document.createTextNode(trailing));
+    }
+    return container;
+  }
+
+  const referencedCanvases = new Set();
+  const msgElements = c.messages.map(x => {
+    const d = el('div', 'msg ' + x.role);
+    d.append(el('div', 'r', x.role), renderMessageContent(x.text, c.canvases, referencedCanvases));
+    return d;
+  });
+
+  // Render Canvases Header Bar if present
+  if (c.canvases && c.canvases.length > 0) {
+    const cvBox = el('div', 'canvas-box');
+    cvBox.style.cssText = 'margin:12px 0 16px;padding:10px 12px;background:#181d24;border:1px solid #3b4252;border-radius:8px';
+
+    const topHeader = el('div');
+    topHeader.style.cssText = 'display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px';
+    const cvTitle = el('h4', null, `🎨 Canvases (${c.canvases.length})`);
+    cvTitle.style.cssText = 'margin:0;color:var(--acc);font-size:13px;display:inline-flex;align-items:center;gap:6px';
+    topHeader.append(cvTitle);
+
+    const pills = el('div');
+    pills.style.cssText = 'display:flex;gap:6px;flex-wrap:wrap';
+
+    c.canvases.forEach(cv => {
+      const isInline = referencedCanvases.has(cv.id || cv.title);
+      const pill = el('button', null, `${cv.title} ${isInline ? '↓' : ''}`);
+      pill.style.cssText = 'font-size:11px;padding:2px 8px;border-radius:12px;background:#202632;border:1px solid #475569;color:#e2e8f0;cursor:pointer';
+      pill.title = isInline ? 'Jump to inline canvas in chat' : 'View canvas';
+      pill.onclick = () => {
+        const targetId = 'canvas-' + (cv.id || cv.title.replace(/\W+/g, '-'));
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetEl.style.boxShadow = '0 0 0 2px #38bdf8';
+          setTimeout(() => { targetEl.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)'; }, 1500);
+        }
+      };
+      pills.append(pill);
+    });
+    topHeader.append(pills);
+    cvBox.append(topHeader);
+
+    // Fallback: if any canvas was not referenced inline, show its full card here
+    const unreferenced = c.canvases.filter(cv => !referencedCanvases.has(cv.id || cv.title));
+    if (unreferenced.length > 0) {
+      const fallbackContainer = el('div');
+      fallbackContainer.style.marginTop = '10px';
+      unreferenced.forEach(cv => fallbackContainer.append(renderCanvasCard(cv)));
+      cvBox.append(fallbackContainer);
+    }
+
+    m.append(cvBox);
+  }
+
+  msgElements.forEach(d => m.append(d));
   m.scrollTop = 0;
   const rel = await (await api('/api/related/' + id)).json();
+  if (current !== id) return;
   const r = $('#rel'); r.replaceChildren();
   rel.forEach(x => {
     const wrap = el('div');
@@ -176,16 +329,43 @@ document.querySelectorAll('.tabs button').forEach(b => {
 });
 $('#q').onkeydown = e => { if (e.key === 'Enter') doSearch(); };
 $('#sync').onclick = async () => { await post('/api/sync?threshold=0.80', {}); $('#status').textContent = 'sync queued'; };
-let lastState = 'idle';
+let lastRev = 0;
 async function poll() {
+  if (document.hidden) {
+    setTimeout(poll, 3000);
+    return;
+  }
+  let nextInterval = 3000;
   try {
     const s = await (await api('/api/status')).json();
-    if (s.state !== 'idle') $('#status').textContent = s.state === 'embedding' ? `embedding ${s.done}/${s.total} chats…` : s.state + '…';
-    else if (lastState !== 'idle') { $('#status').textContent = s.error ? 'sync error: ' + s.error : 'up to date'; load(); }
-    lastState = s.state;
+    if (s.rev && s.rev !== lastRev) {
+      lastRev = s.rev;
+      await load();
+      if (current) {
+        try {
+          const c = await (await api('/api/chat/' + current)).json();
+          if (c && c.id === current) {
+            const mCount = c.messages.length;
+            const cvCount = (c.canvases || []).length;
+            const existingMsgs = $('#main').querySelectorAll('.msg').length;
+            const existingCvs = $('#main').querySelectorAll('.canvas-card').length;
+            if (mCount !== existingMsgs || cvCount !== existingCvs) {
+              openChat(current);
+            }
+          }
+        } catch (e) {}
+      }
+    }
+    if (s.state !== 'idle') {
+      $('#status').textContent = s.state === 'embedding' ? `embedding ${s.done}/${s.total} chats…` : s.state + '…';
+      nextInterval = 1000;
+    } else {
+      $('#status').textContent = s.error ? 'sync error: ' + s.error : 'up to date';
+    }
   } catch (e) {}
-  setTimeout(poll, 2000);
+  setTimeout(poll, nextInterval);
 }
+document.addEventListener('visibilitychange', () => { if (!document.hidden) poll(); });
 poll();
 $('#pack').onclick = () => { if (!picked.size && !$('#pq').value.trim()) { $('#status').textContent = 'pick chats or type a question'; return; } copyPack({ chat_ids:[...picked], query:$('#pq').value }); };
 $('#clear').onclick = () => { picked.clear(); $('#count').textContent = '0 chats selected'; renderList(); };

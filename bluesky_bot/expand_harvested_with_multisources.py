@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import os, sys, json, re, time
 import urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from harvest_candidates import scrape_article_content, normalize_url
@@ -78,7 +78,7 @@ for idx, c in enumerate(candidates, 1):
         
         dossier_lines = [
             f"=== MULTI-SOURCE TOPIC CLUSTER: {subject} ===",
-            f"\n[Source 1 -- {primary_pub}] (URL: {primary_url}):\n{primary_text[:1000].strip()}"
+            f"\n[Source 1 -- {primary_pub}] (URL: {primary_url}):\n{primary_text.strip()}"
         ]
         
         for s_idx, alt in enumerate(alt_sources, 2):
@@ -92,7 +92,7 @@ for idx, c in enumerate(candidates, 1):
                 "url": alt_url,
                 "snippet": clean_body[:300].strip()
             })
-            dossier_lines.append(f"\n[Source {s_idx} -- {alt_pub}] (URL: {alt_url}):\n{clean_body[:1000].strip()}")
+            dossier_lines.append(f"\n[Source {s_idx} -- {alt_pub}] (URL: {alt_url}):\n{clean_body.strip()}")
             
         c["is_multi_source"] = True
         c["cluster_sources"] = cluster_sources

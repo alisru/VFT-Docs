@@ -252,6 +252,24 @@
       "Cybersecurity",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "White House",
+        "role": "instigator"
+      },
+      {
+        "name": "US Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "Homeland Security",
+        "role": "instigator"
+      }
+    ]
   }
 ]

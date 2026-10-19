@@ -263,6 +263,27 @@
       "Aletheia",
       "PublicSafety",
       "Charlotte"
+    ],
+    "actor_roles": [
+      {
+        "name": "City of Charlotte",
+        "role": "instigator"
+      },
+      {
+        "name": "Professional Security Services",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.95,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Iryna Zarutska",
+        "role": "instigator"
+      },
+      {
+        "name": "Charlotte Area Transit System",
+        "role": "instigator"
+      }
     ]
   }
 ]

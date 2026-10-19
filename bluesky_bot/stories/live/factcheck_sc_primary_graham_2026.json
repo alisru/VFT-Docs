@@ -251,6 +251,30 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Darline Graham",
+        "role": "instigator",
+        "sub_u": -0.72,
+        "sub_psi": 0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Ralph Norman",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Republican Party",
+        "role": "instigator"
+      },
+      {
+        "name": "South Carolina",
+        "role": "instigator"
+      }
+    ]
   }
 ]

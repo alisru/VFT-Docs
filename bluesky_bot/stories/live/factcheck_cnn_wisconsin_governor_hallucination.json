@@ -253,6 +253,31 @@
       "USPol",
       "MediaIntegrity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "CNN",
+        "role": "instigator",
+        "sub_u": -0.92,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Francesca Hong",
+        "role": "instigator"
+      },
+      {
+        "name": "David Crowley",
+        "role": "instigator"
+      },
+      {
+        "name": "Amy Klobuchar",
+        "role": "instigator"
+      },
+      {
+        "name": "Mike Lindell",
+        "role": "instigator"
+      }
+    ]
   }
 ]

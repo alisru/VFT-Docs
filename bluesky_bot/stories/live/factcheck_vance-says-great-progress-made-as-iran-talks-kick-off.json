@@ -100,6 +100,32 @@
       "IranTalks",
       "Diplomacy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "JD Vance",
+        "role": "instigator"
+      },
+      {
+        "name": "Qatar",
+        "role": "instigator"
+      },
+      {
+        "name": "Pakistan",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
+    ]
   }
 ]

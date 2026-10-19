@@ -251,6 +251,27 @@
       "KennedyCenter",
       "Trump"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Christopher Cooper",
+        "role": "instigator"
+      },
+      {
+        "name": "Joyce Beatty",
+        "role": "instigator"
+      },
+      {
+        "name": "Kennedy Center",
+        "role": "instigator",
+        "sub_u": -1.5,
+        "sub_psi": -1.8,
+        "sub_verdict": "FAIL"
+      }
+    ]
   }
 ]

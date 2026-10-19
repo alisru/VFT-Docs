@@ -252,6 +252,30 @@
       "Russia",
       "Japan"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Vladimir Putin",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Toshimitsu Motegi",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Japan",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

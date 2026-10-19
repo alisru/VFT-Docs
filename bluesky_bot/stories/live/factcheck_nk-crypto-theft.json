@@ -99,6 +99,24 @@
       "CyberSecurity",
       "NorthKorea"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "North Korea",
+        "role": "context"
+      },
+      {
+        "name": "Lazarus Group",
+        "role": "instigator"
+      },
+      {
+        "name": "TRM Labs",
+        "role": "instigator"
+      },
+      {
+        "name": "G7",
+        "role": "instigator"
+      }
+    ]
   }
 ]

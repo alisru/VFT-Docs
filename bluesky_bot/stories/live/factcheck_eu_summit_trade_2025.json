@@ -75,6 +75,28 @@
       "EU",
       "Trade"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "European Union",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "European Council",
+        "role": "instigator"
+      },
+      {
+        "name": "European Commission",
+        "role": "regulator"
+      }
+    ]
   }
 ]

@@ -149,6 +149,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Charlie Kirk",
+        "role": "instigator"
+      },
+      {
+        "name": "Turning Point USA",
+        "role": "instigator"
+      },
+      {
+        "name": "Fox News",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

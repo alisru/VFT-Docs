@@ -145,6 +145,34 @@
       "Aletheia",
       "Bali",
       "Travel"
+    ],
+    "actor_roles": [
+      {
+        "name": "Billy Aspinall",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Muhamad Novyandri",
+        "role": "instigator"
+      },
+      {
+        "name": "Ngurah Rai Immigration Office",
+        "role": "instigator"
+      },
+      {
+        "name": "Bali",
+        "role": "instigator",
+        "sub_u": 0.85,
+        "sub_psi": -0.75,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Indonesia",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -101,6 +101,28 @@
       "Privacy",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "Electronic Frontier Foundation",
+        "role": "instigator"
+      },
+      {
+        "name": "Consumer Federation of America",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Woodrow Hartzog",
+        "role": "instigator"
+      }
+    ]
   }
 ]

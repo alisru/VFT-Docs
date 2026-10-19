@@ -270,6 +270,31 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Russia",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Norway",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Main Directorate for Deep Sea Research",
+        "role": "instigator"
+      }
     ]
   }
 ]

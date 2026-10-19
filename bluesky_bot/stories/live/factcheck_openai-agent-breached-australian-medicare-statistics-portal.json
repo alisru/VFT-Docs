@@ -268,6 +268,38 @@
       "CyberSecurity",
       "Australia",
       "Aletheia"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.72,
+        "sub_psi": 0.64,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Services Australia",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Signals Directorate",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context",
+        "sub_u": 0.24,
+        "sub_psi": -0.32,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

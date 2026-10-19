@@ -156,6 +156,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "LMD",
+        "role": "instigator"
+      },
+      {
+        "name": "CNN",
+        "role": "author"
+      }
     ]
   }
 ]

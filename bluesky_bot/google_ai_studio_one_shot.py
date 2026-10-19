@@ -95,8 +95,8 @@ def promote_and_register_selector(use_son=False):
         from rebuild_registries import promote_and_register_incremental as promote_std
         return promote_std()
 
-# Deterministic actor extraction for the live pipeline (LLM backfill handles history)
-from actor_extract import extract_actors
+# Deterministic actor extraction & role classification for the live pipeline
+from actor_extract import extract_actors, extract_actor_roles, classify_actor_role
 
 # Load environment variables
 bot_env_path = os.path.join(script_dir, ".env")
@@ -1039,6 +1039,7 @@ DEFAULT_FALLBACKS = [
     "gemini-2.5-flash-lite",
     "gemini-3.5-flash-lite",
     "gemini-3.1-flash-lite",
+    "vertex:gemini-3.8-flash",
     "vertex:gemini-3.7-flash",
     "vertex:gemini-3.1-flash-lite",
     "gemini-3-flash-preview",
@@ -1200,9 +1201,24 @@ def build_system_instruction(use_son=False, compact=False, five_word=False, use_
     
     core_concept_directive = (
         f"Today's reference date is {today_str}.\n"
-        "CONCEPTUAL DIRECTIVE: You must always evaluate the REAL-WORLD EVENT and ACTORS themselves, rather than auditing the journalist's reporting or news outlet. "
-        "Stated claims/ideals and actual realities must reflect the actions, intentions, and outcomes of the actors involved in the event itself. "
-        "After evaluating the event, you can optionally analyze the reporting's accuracy or framing relative to the event in the Alethekanon analysis."
+        "GROUND TRUTH & INSTITUTIONAL ANCHORING DIRECTIVE:\n"
+        "You must always anchor your audit in the real-world event and its primary actors, NOT in media punditry or talking heads. Evaluate three core pillars:\n"
+        "1. Institutional Actions: What did the institutions involved (universities, courts, police, government bodies, corporations) actually do, fail to do, or try to hide?\n"
+        "2. Empirical Evidence: What do the documented records, official filings, timelines, and physical facts prove actually happened?\n"
+        "3. Human Impacts: Who suffered real harm, trauma, financial loss, or danger, and who protected or failed them?\n\n"
+        "MEDIA PUNDITRY & ANTI-GOTCHA RULE:\n"
+        "- Never allow the audit to be tricked or hijacked by partisan media arguments, columnist commentary, or television panels.\n"
+        "- If an article focuses on pundits trading blame, television arguments, or partisan 'gotchas' (e.g., arguing over which president was in office during a crime): that media punditry is SELF-INCRIMINATING EXTRACTION. Pundits who exploit real human tragedy, crimes, or institutional breakdown to score tribal political points are running a selfish maneuver to extract attention and moral credit.\n"
+        "- Your audit must cut straight to the underlying crime, event, or institutional failure. Do NOT make a partisan calendar gotcha the central 'Reality' of the story. Expose the real institutional failure, and expose the punditry as a parasitic distraction from the victims and accountability.\n\n"
+        "ACTOR ENTITIES & 7-ROLE CLASSIFICATION DIRECTIVE:\n"
+        "In item[11] (the actors array), identify the key entities involved in the event. You may provide them as objects with explicit roles: [{\"name\": \"...\", \"role\": \"...\"}], or as strings (which will be classified by rule). The 7 canonical roles are:\n"
+        "- 'instigator': The active person or institution executing the action, policy, or claim (e.g. 'Donald Trump', 'ICE', 'Elon Musk').\n"
+        "- 'acted_upon': The impacted population, victim, or target (e.g. '500 U.S. Citizens', 'Patients', 'Schoolchildren'). NEVER tag victims as instigators.\n"
+        "- 'beneficiary': Third party gaining financial advantage or unearned extraction from the policy without executing it (e.g. 'Private Voucher Schools', 'Contractors').\n"
+        "- 'author': The news outlet, journalist, or whistleblower exposing the story (e.g. 'ProPublica', 'BBC'). NEVER tag reporting outlets as instigators.\n"
+        "- 'regulator': Courts, judges, monitors, or legal oversight bodies reviewing the action (e.g. 'Federal Judiciary', 'Supreme Court', 'QCAT').\n"
+        "- 'context': Geographic venue, country, or physical setting (e.g. 'United States', 'England', 'Beijing', 'Texas').\n"
+        "- 'misc': Peripheral secondary mentions.\n"
     )
 
     if five_word:
@@ -1816,9 +1832,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                             thinking_level=thinking_level.upper()
                         )
                     elif "gemini-2.5" in model_lower:
-                        budget_map = {"LOW": 1024, "MEDIUM": 2048, "HIGH": 4096}
+                        budget_map = {"LOW": 2048, "MEDIUM": 8192, "HIGH": 16384}
                         v_thinking_config = vertex_types.ThinkingConfig(
-                            thinking_budget=budget_map.get(thinking_level.upper(), 2048)
+                            thinking_budget=budget_map.get(thinking_level.upper(), 8192)
                         )
                 
                 v_config = vertex_types.GenerateContentConfig(
@@ -1886,9 +1902,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                             thinking_level=thinking_level.upper()
                         )
                     elif "gemini-2.5" in model_lower:
-                        budget_map = {"LOW": 1024, "MEDIUM": 2048, "HIGH": 4096}
+                        budget_map = {"LOW": 2048, "MEDIUM": 8192, "HIGH": 16384}
                         thinking_config = types.ThinkingConfig(
-                            thinking_budget=budget_map.get(thinking_level.upper(), 2048)
+                            thinking_budget=budget_map.get(thinking_level.upper(), 8192)
                         )
 
                 config = types.GenerateContentConfig(
@@ -1920,6 +1936,12 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                 
                 if not result_text and hasattr(response, 'text') and response.text:
                     result_text = response.text.strip()
+
+            # Diagnostic check: catch explicit prompt-level safety blocks
+            if not result_text and hasattr(response, 'prompt_feedback') and response.prompt_feedback:
+                pb = response.prompt_feedback
+                if getattr(pb, 'block_reason', None):
+                    raise ValueError(f"Prompt blocked by API policy: {pb.block_reason}")
 
             # Pre-flight JSON validation to trigger fallback on truncation/corruption
             content = result_text
@@ -1990,8 +2012,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             last_exception = e
             time.sleep(1)
             
-    print(f"CRITICAL: All models failed in one-shot batch evaluation. Last error: {last_exception}")
-    sys.exit(1)
+    raise RuntimeError(f"All models failed in one-shot batch evaluation. Last error: {last_exception}")
 
 def sanitize_story_posts(posts, use_spiritual=False):
     import re
@@ -2176,10 +2197,22 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
             continue
             
         try:
-            # Parse actors from item[11] if present (AI-provided), else empty list (fallback handled later)
+            # Parse actors & actor_roles from item[11] if present (AI-provided), else fallback handled later
             ai_actors = []
+            ai_actor_roles = []
             if len(item) >= 12 and isinstance(item[11], list):
-                ai_actors = [str(a).strip() for a in item[11] if isinstance(a, str) and str(a).strip()]
+                for entry in item[11]:
+                    if isinstance(entry, dict) and entry.get("name"):
+                        name = str(entry["name"]).strip()
+                        role = str(entry.get("role") or classify_actor_role(name)).strip().lower()
+                        if name:
+                            ai_actors.append(name)
+                            ai_actor_roles.append({"name": name, "role": role})
+                    elif isinstance(entry, str) and entry.strip():
+                        name = entry.strip()
+                        role = classify_actor_role(name)
+                        ai_actors.append(name)
+                        ai_actor_roles.append({"name": name, "role": role})
 
             # Parse optional macro-context fields with fallback to None/empty
             macro_event = str(item[12]).strip() if len(item) >= 13 and item[12] is not None else ""
@@ -2203,6 +2236,7 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
                 "mode": str(item[9]).strip(),
                 "posts": clean_posts,
                 "actors": ai_actors,
+                "actor_roles": ai_actor_roles,
                 "macro_event": macro_event,
                 "macro_claim_u": macro_claim_u,
                 "macro_claim_psi": macro_claim_psi,
@@ -2278,11 +2312,23 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
             if compact:
                 story["compact"] = "single" if compact == "single" else True
 
-            # Actors: AI-provided takes priority; fall back to deterministic extraction if empty
-            if not story.get("actors"):
-                story["actors"] = extract_actors(story.get("subject", ""))
-            if story["actors"]:
-                print(f"  actors: {story['actors']}")
+            # Actors & Roles: AI-provided takes priority; fall back to deterministic extraction if empty
+            if not story.get("actor_roles"):
+                if story.get("actors"):
+                    story["actor_roles"] = [
+                        {"name": a, "role": classify_actor_role(a, story.get("subject", ""))}
+                        for a in story["actors"]
+                    ]
+                else:
+                    story["actor_roles"] = extract_actor_roles(story.get("subject", ""))
+                    story["actors"] = [r["name"] for r in story["actor_roles"]]
+
+            if not story.get("actors") and story.get("actor_roles"):
+                story["actors"] = [r["name"] for r in story["actor_roles"]]
+
+            if story.get("actors"):
+                print(f"  actors ({len(story['actors'])}): {story['actors']}")
+                print(f"  roles: {story.get('actor_roles', [])}")
             # Normalise category: store as a comma-joined string so it's JSON-friendly
             cats = [c.strip().lower() for c in (category or "general").split(",") if c.strip()] if isinstance(category, str) else (category or ["general"])
             story.setdefault("category", ",".join(cats) if len(cats) > 1 else (cats[0] if cats else "general"))
@@ -2368,7 +2414,7 @@ def main():
     parser.add_argument("--category", type=str, default="all", help="Category (or comma-separated categories) of news to harvest (default: all). E.g. 'politics,tech'")
     parser.add_argument("--topic", type=str, default=None, help="Specific topic query to filter/search for (e.g. 'Ukraine', 'Trump')")
     parser.add_argument("--banned-topic", type=str, default=None, help="Comma-separated topics/keywords to exclude from harvesting (overrides/extends local banlist)")
-    parser.add_argument("--thinking-level", type=str, default="MEDIUM", choices=["OFF", "LOW", "MEDIUM", "HIGH"], help="Gemini API thinking level/mode (default: MEDIUM)")
+    parser.add_argument("--thinking-level", type=str, default="HIGH", choices=["OFF", "LOW", "MEDIUM", "HIGH"], help="Gemini API thinking level/mode (default: HIGH)")
     parser.add_argument("--roundup", action="store_true", help="After evaluation, run consolidate_roundups to group overlapping stories into roundup threads (default: False)")
     parser.add_argument("--prefer", type=str, default="", help=(
         "Preferred outlets to prioritize. Comma-separated list of domains or numbers:\n"
@@ -2863,7 +2909,7 @@ def main():
 
         if remaining:
             print(f"  WARNING: {len(remaining)} candidate(s) could not be evaluated after {MAX_RETRIES_PER_CHUNK} attempt(s).")
-            # Archive exhausted candidates to stories/fail/skipped_candidates.jsonl so they don't deadlock future harvesting
+            # Archive exhausted candidates to stories/fail/skipped_candidates.jsonl
             fail_log = os.path.join(script_dir, "stories", "fail", "skipped_candidates.jsonl")
             try:
                 os.makedirs(os.path.dirname(fail_log), exist_ok=True)
@@ -2873,6 +2919,22 @@ def main():
                 print(f"  Archived {len(remaining)} skipped candidate(s) to {fail_log}.")
             except Exception as fe:
                 print(f"  Warning: Failed to archive skipped candidates: {fe}")
+
+            # Quarantine offending candidates to stories/quarantine/quarantined_candidates.jsonl for analysis later
+            quarantine_log = os.path.join(script_dir, "stories", "quarantine", "quarantined_candidates.jsonl")
+            try:
+                os.makedirs(os.path.dirname(quarantine_log), exist_ok=True)
+                import datetime
+                now_iso = datetime.datetime.now().isoformat()
+                with open(quarantine_log, "a", encoding="utf-8") as qf:
+                    for fc in remaining:
+                        q_rec = dict(fc)
+                        q_rec["quarantined_at"] = now_iso
+                        q_rec["quarantine_reason"] = "All evaluation models failed or blocked"
+                        qf.write(json.dumps(q_rec, ensure_ascii=False) + "\n")
+                print(f"  Quarantined {len(remaining)} offending candidate(s) to {quarantine_log} for later analysis.")
+            except Exception as qfe:
+                print(f"  Warning: Failed to quarantine candidates: {qfe}")
 
         if chunk_evals:
             chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic, compact=compact_val)

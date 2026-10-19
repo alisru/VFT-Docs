@@ -251,6 +251,23 @@
       "Quebec",
       "Identity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "CBC Montreal",
+        "role": "instigator",
+        "sub_u": 0.51,
+        "sub_psi": 0.03,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Sudha Krishnan",
+        "role": "instigator"
+      },
+      {
+        "name": "Quebec",
+        "role": "instigator"
+      }
+    ]
   }
 ]

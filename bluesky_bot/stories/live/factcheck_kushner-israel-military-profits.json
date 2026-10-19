@@ -145,6 +145,31 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jared Kushner",
+        "role": "instigator"
+      },
+      {
+        "name": "Affinity Partners",
+        "role": "instigator"
+      },
+      {
+        "name": "Phoenix Financial",
+        "role": "instigator"
+      },
+      {
+        "name": "Elbit Systems",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

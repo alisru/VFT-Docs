@@ -263,6 +263,27 @@
       "Iran",
       "MEK",
       "ForeignPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mojahedin-e Khalgh",
+        "role": "instigator"
+      },
+      {
+        "name": "Maryam Rajavi",
+        "role": "instigator"
+      },
+      {
+        "name": "Ehsan Mousavi",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

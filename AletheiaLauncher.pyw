@@ -158,6 +158,7 @@ class AletheiaLauncherApp:
                 "gemini-2.5-flash",
                 "gemini-2.5-flash-lite",
                 "gemini-3.1-flash-lite",
+                "vertex:gemini-3.8-flash",
                 "vertex:gemini-3.7-flash",
                 "vertex:gemini-3.1-flash-lite",
                 "gemini-3-flash-preview",
@@ -1031,7 +1032,7 @@ class AletheiaLauncherApp:
 
         tk.Label(grid_frame, text="Thinking Level", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=3, sticky="w", pady=3, padx=(0, 5))
         self.combo_thinking = ttk.Combobox(grid_frame, width=15, values=["OFF", "LOW", "MEDIUM", "HIGH"], state="readonly", font=self.font_body)
-        self.combo_thinking.set("MEDIUM")
+        self.combo_thinking.set("HIGH")
         self.combo_thinking.grid(row=2, column=4, columnspan=2, sticky="ew", pady=3)
         tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SatPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9, Fox=10, Mail=11, NYPost=12)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, columnspan=6, sticky="w")
         tk.Label(grid_frame, text="Categories: general, china, asia, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=4, column=1, columnspan=6, sticky="w")

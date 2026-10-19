@@ -147,6 +147,34 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Piddington Parish Council",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Home Office",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "instigator"
+      },
+      {
+        "name": "Lisa Nandy",
+        "role": "instigator"
+      },
+      {
+        "name": "Chris Philp",
+        "role": "instigator"
+      }
     ]
   }
 ]

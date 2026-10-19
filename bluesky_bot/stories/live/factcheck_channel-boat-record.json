@@ -164,6 +164,20 @@
     ],
     "policies": [
       "Immigration Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Home Office",
+        "role": "instigator"
+      },
+      {
+        "name": "Border Force",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
     ]
   }
 ]

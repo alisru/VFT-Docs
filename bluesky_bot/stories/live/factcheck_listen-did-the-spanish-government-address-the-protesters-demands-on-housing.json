@@ -151,6 +151,19 @@
     "tags": [
       "HousingCrisis",
       "Spain"
+    ],
+    "actor_roles": [
+      {
+        "name": "Spanish Government",
+        "role": "instigator"
+      },
+      {
+        "name": "EUobserver",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

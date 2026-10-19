@@ -1,8 +1,8 @@
 {
     "version": "1.0",
     "description": "Global Mistake Registry - Persists across conversations",
-    "last_updated": "2026-06-05T17:54:49.688357",
-    "mistake_count": 15,
+    "last_updated": "2026-10-14T14:42:12.596726",
+    "mistake_count": 20,
     "mistakes": [
         {
             "id": "ARC_001",
@@ -180,6 +180,71 @@
             "tags": [],
             "source_project": "Australian Kanon Generation",
             "synced_at": "2026-02-09T00:15:15.040743"
+        },
+        {
+            "id": "M016",
+            "name": "Notation Leaks in Public UI",
+            "structure": "Exposing internal dev shorthand and Greek notation in public-facing interfaces",
+            "example": "Showing {Everyone} and Will Be (+u, +psi) on user question pad",
+            "tags": [
+                "ui",
+                "jargon",
+                "notation"
+            ],
+            "source_project": "12axes_hegemony_pad",
+            "synced_at": "2026-10-14T14:42:12.596683"
+        },
+        {
+            "id": "M017",
+            "name": "Square Grid Reversion to Circle",
+            "structure": "Replacing explicit square geometry [-2, +2] with circular polar radar",
+            "example": "Rendering SVG circles and arcs instead of square horizon borders",
+            "tags": [
+                "ui",
+                "geometry",
+                "regression"
+            ],
+            "source_project": "12axes_hegemony_pad",
+            "synced_at": "2026-10-14T14:42:12.596712"
+        },
+        {
+            "id": "M018",
+            "name": "Premature Auto-Advance Snatching Input",
+            "structure": "Triggering timer-based navigation on drag or pointerDown instead of requiring explicit confirmation",
+            "example": "Advancing 200ms after user clicks pad while dragging",
+            "tags": [
+                "ui",
+                "ux",
+                "drag"
+            ],
+            "source_project": "12axes_hegemony_pad",
+            "synced_at": "2026-10-14T14:42:12.596716"
+        },
+        {
+            "id": "M019",
+            "name": "Dropping Axis Relative Context",
+            "structure": "Stripping out the explanation of what agreeing/disagreeing does to the active 12-axis balance",
+            "example": "Removing axis pole tension labels from question view",
+            "tags": [
+                "ui",
+                "quiz",
+                "context"
+            ],
+            "source_project": "12axes_hegemony_pad",
+            "synced_at": "2026-10-14T14:42:12.596719"
+        },
+        {
+            "id": "M020",
+            "name": "Unwanted Language Expansion and Bleed",
+            "structure": "Expanding into Spanish and mixing languages instead of keeping clean English for user and Portuguese for author",
+            "example": "Adding Spanish archetype translations and mixing languages",
+            "tags": [
+                "i18n",
+                "tokens",
+                "scope"
+            ],
+            "source_project": "12axes_hegemony_pad",
+            "synced_at": "2026-10-14T14:42:12.596722"
         }
     ],
     "lessons": [

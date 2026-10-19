@@ -249,6 +249,19 @@
     "tags": [
       "Google",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Josh Woodward",
+        "role": "instigator"
+      }
     ]
   }
 ]

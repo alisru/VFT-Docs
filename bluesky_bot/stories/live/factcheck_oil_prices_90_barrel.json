@@ -254,6 +254,27 @@
     ],
     "policies": [
       "Cost of Living"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Abbas Araghchi",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

@@ -66,6 +66,16 @@
     "category": "politics,world",
     "topic": "AI",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      }
+    ]
   }
 ]

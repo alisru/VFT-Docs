@@ -2884,8 +2884,29 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
     let _topicSortDir = 'desc';
     let _topicSort2Col = 'none';
     let _topicSort2Dir = 'asc';
-
+    let _actorRoleFilter = 'instigator'; // 'all', 'instigator', 'acted_upon', 'author', 'regulator', 'context'
     const _openLeaderboardDropdowns = new Set();
+    const _leaderboardPageSizes = { actor: 100, outlet: 100, category: 100, topic: 100 };
+    const _leaderboardSearches  = { actor: '', outlet: '', category: '', topic: '' };
+    let _statsCache = { all: {}, live: {} };
+
+    function setActorRoleFilter(val) {
+      _actorRoleFilter = val;
+      _statsCache = { all: {}, live: {} };
+      _leaderboardPageSizes['actor'] = 100;
+      updateLeaderboard('actor');
+    }
+
+    function setTableSearch(tableType, val) {
+      _leaderboardSearches[tableType] = (val || '').trim().toLowerCase();
+      _leaderboardPageSizes[tableType] = 100;
+      updateLeaderboard(tableType);
+    }
+
+    function showMoreTableRows(tableType) {
+      _leaderboardPageSizes[tableType] = (_leaderboardPageSizes[tableType] || 100) + 100;
+      updateLeaderboard(tableType);
+    }
 
     function updateLeaderboard(tableType) {
       const id = `${tableType}-leaderboard-container`;
@@ -3153,6 +3174,8 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
 
     function setAuditScope(scope) {
       _auditScope = scope;
+      _statsCache = { all: {}, live: {} };
+      _openLeaderboardDropdowns.clear();
       _auditRendered = false;
       renderAuditTab();
     }
@@ -3747,28 +3770,131 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       `;
     }
 
+    let _activeHegemonyVectorGroups = [];
+    function renderHegemonyMapCanvas(validStories) {
+      const canvas = document.getElementById('hegemonyVectorsCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, 600, 600);
+
+      const sx = u => 300 - (u / 2.5) * 260;
+      const sy = psi => 300 - (psi / 2.5) * 260;
+
+      const vectorGroups = {};
+      validStories.forEach(s => {
+        const key = `${s.claim_u.toFixed(2)},${s.claim_psi.toFixed(2)}->${s.real_u.toFixed(2)},${s.real_psi.toFixed(2)}`;
+        if (!vectorGroups[key]) {
+          vectorGroups[key] = {
+            claim_u: s.claim_u, claim_psi: s.claim_psi,
+            real_u: s.real_u, real_psi: s.real_psi,
+            count: 0,
+            stories: []
+          };
+        }
+        vectorGroups[key].count++;
+        vectorGroups[key].stories.push(s);
+      });
+
+      _activeHegemonyVectorGroups = Object.values(vectorGroups);
+
+      // Draw dashed connector lines
+      ctx.setLineDash([2, 3]);
+      ctx.strokeStyle = 'rgba(150, 150, 150, 0.35)';
+      _activeHegemonyVectorGroups.forEach(g => {
+        const x1 = sx(g.claim_u), y1 = sy(g.claim_psi);
+        const x2 = sx(g.real_u), y2 = sy(g.real_psi);
+        ctx.lineWidth = Math.min(4.0, 1.0 + Math.log2(g.count) * 0.5);
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+      });
+      ctx.setLineDash([]);
+
+      // Draw claim (yellow) points
+      ctx.fillStyle = '#eab308';
+      _activeHegemonyVectorGroups.forEach(g => {
+        const x1 = sx(g.claim_u), y1 = sy(g.claim_psi);
+        const r = Math.min(4.0, 2.0 + Math.log2(g.count) * 0.4);
+        ctx.beginPath();
+        ctx.arc(x1, y1, r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // Draw reality (green/red) points
+      _activeHegemonyVectorGroups.forEach(g => {
+        const x2 = sx(g.real_u), y2 = sy(g.real_psi);
+        const r = Math.min(6.5, 3.8 + Math.log2(g.count) * 0.5);
+        ctx.fillStyle = g.real_u > 0 ? '#10b981' : '#ef4444';
+        ctx.beginPath();
+        ctx.arc(x2, y2, r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // Bind interactive mouse hover & click
+      const tooltip = document.getElementById('hegemonyCanvasTooltip');
+      canvas.onmousemove = function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = (e.clientX - rect.left) * (600 / rect.width);
+        const mouseY = (e.clientY - rect.top) * (600 / rect.height);
+
+        let closest = null, minDist = 14;
+        for (let g of _activeHegemonyVectorGroups) {
+          const x2 = sx(g.real_u), y2 = sy(g.real_psi);
+          const d = Math.hypot(mouseX - x2, mouseY - y2);
+          if (d < minDist) { minDist = d; closest = g; }
+        }
+        if (closest && tooltip) {
+          const titles = closest.stories.slice(0, 4).map(s => s.subject || s.id).join('<br>• ');
+          const remaining = closest.stories.length > 4 ? `<br>• ...and ${closest.stories.length - 4} more` : '';
+          tooltip.innerHTML = `<strong>Vector:</strong> (${closest.claim_u}, ${closest.claim_psi}) ➔ (${closest.real_u}, ${closest.real_psi})<br><strong>Count:</strong> ${closest.count}<br><div style="margin-top:4px; color:#cbd5e1;">• ${titles}${remaining}</div><div style="font-size:0.65rem; color:var(--bsky-blue); margin-top:4px;">Click to view story ↗</div>`;
+          tooltip.style.left = Math.min(rect.width - 200, Math.max(10, (e.clientX - rect.left) + 12)) + 'px';
+          tooltip.style.top = Math.max(10, (e.clientY - rect.top) - 10) + 'px';
+          tooltip.style.display = 'block';
+          canvas.style.cursor = 'pointer';
+        } else if (tooltip) {
+          tooltip.style.display = 'none';
+          canvas.style.cursor = 'crosshair';
+        }
+      };
+
+      canvas.onmouseleave = function() {
+        if (tooltip) tooltip.style.display = 'none';
+      };
+
+      canvas.onclick = function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = (e.clientX - rect.left) * (600 / rect.width);
+        const mouseY = (e.clientY - rect.top) * (600 / rect.height);
+
+        let closest = null, minDist = 14;
+        for (let g of _activeHegemonyVectorGroups) {
+          const x2 = sx(g.real_u), y2 = sy(g.real_psi);
+          const d = Math.hypot(mouseX - x2, mouseY - y2);
+          if (d < minDist) { minDist = d; closest = g; }
+        }
+        if (closest && closest.stories.length > 0) {
+          switchTab({currentTarget: document.querySelector('.tab-button')}, 'emulator-tab');
+          document.querySelectorAll('.tab-button')[0].classList.add('active');
+          selectStory(closest.stories[0].id);
+        }
+      };
+    }
+
     function auditHegemonyMap(stories) {
       const W = 600, H = 600, pad = 40;
-      // reversed Morality: +2.5 is left, -2.5 is right
       const sx = u => 300 - (u / 2.5) * 260;
-      // standard Will: +2.5 is top, -2.5 is bottom
       const sy = psi => 300 - (psi / 2.5) * 260;
 
       const validStories = stories.filter(s => s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined && s.claim_psi !== null && s.claim_psi !== undefined && s.real_psi !== null && s.real_psi !== undefined);
 
-      // Render quadrant backgrounds
       const qBackgrounds = `
-        <!-- Q1: Systemic Justice (Top Left) -->
         <rect x="40" y="40" width="260" height="260" fill="var(--pass-green)" fill-opacity="0.015" rx="4"/>
-        <!-- Q4: Passive Service (Bottom Left) -->
         <rect x="40" y="300" width="260" height="260" fill="var(--bsky-blue)" fill-opacity="0.015" rx="4"/>
-        <!-- Q2: Tyranny / Extraction (Top Right) -->
         <rect x="300" y="40" width="260" height="260" fill="var(--reality-red)" fill-opacity="0.015" rx="4"/>
-        <!-- Q3: Coercive/Receptive Withdrawal (Bottom Right) -->
         <rect x="300" y="300" width="260" height="260" fill="var(--claim-yellow)" fill-opacity="0.015" rx="4"/>
       `;
 
-      // Render gridlines
       let gridLines = '';
       for (let v = -2.0; v <= 2.0; v += 0.5) {
         if (v === 0) continue;
@@ -3782,7 +3908,6 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         `;
       }
 
-      // Render Quadrant Labels
       const qLabels = `
         <text x="50" y="55" font-size="8.5" font-weight="bold" fill="var(--pass-green)" opacity="0.6">I. Systemic Justice (Everyone)</text>
         <text x="550" y="55" font-size="8.5" font-weight="bold" fill="var(--reality-red)" opacity="0.6" text-anchor="end">II. Tyranny & Extraction (Only Me)</text>
@@ -3790,7 +3915,6 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         <text x="550" y="550" font-size="8.5" font-weight="bold" fill="var(--claim-yellow)" opacity="0.6" text-anchor="end">III. Receptive / Coercive Withdrawal</text>
       `;
 
-      // Render Hegemony Landmarks
       const landmarks = window.hegemonyLovesExternal || [
         { name: "Agape", u: 2.0, p: 2.0 },
         { name: "Philanthropia", u: 2.0, p: 1.5 },
@@ -3812,73 +3936,26 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         `;
       }).join('');
 
-      // Render Story Nodes with Deception Vectors (Grouped to prevent DOM bloat and visual explosions)
-      const vectorGroups = {};
-      validStories.forEach(s => {
-        const key = `${s.claim_u.toFixed(2)},${s.claim_psi.toFixed(2)}->${s.real_u.toFixed(2)},${s.real_psi.toFixed(2)}`;
-        if (!vectorGroups[key]) {
-          vectorGroups[key] = {
-            claim_u: s.claim_u,
-            claim_psi: s.claim_psi,
-            real_u: s.real_u,
-            real_psi: s.real_psi,
-            stories: []
-          };
-        }
-        vectorGroups[key].stories.push(s);
-      });
-
-      const nodes = Object.values(vectorGroups).map(g => {
-        const x1 = sx(g.claim_u);
-        const y1 = sy(g.claim_psi);
-        const x2 = sx(g.real_u);
-        const y2 = sy(g.real_psi);
-        
-        const latestStory = g.stories[0];
-        const color = latestStory.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
-        
-        // Dynamically scale stroke-width and opacity, capped to prevent visual explosion
-        const strokeWidth = Math.min(5.0, 1.0 + Math.log2(g.stories.length) * 0.8);
-        const opacity = Math.min(0.8, 0.2 + 0.12 * Math.log2(g.stories.length));
-        
-        // Build tooltip content listing stories
-        const titles = g.stories.slice(0, 5).map(s => s.subject || s.id).join('\n• ');
-        const remaining = g.stories.length > 5 ? `\n• ... and ${g.stories.length - 5} more stories` : '';
-        const tooltip = `Vector: (${g.claim_u}, ${g.claim_psi}) ➔ (${g.real_u}, ${g.real_psi})\nStory Count: ${g.stories.length}\n\nStories:\n• ${titles}${remaining}\n\n(Click to view latest details)`;
-        
-        return `
-          <g class="hegemony-story-node" data-story-id="${latestStory.id}" style="cursor:pointer;">
-            <!-- Deception Vector -->
-            <line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="var(--text-muted)" stroke-width="${strokeWidth.toFixed(1)}" opacity="${opacity.toFixed(2)}" stroke-dasharray="2,3"/>
-            <!-- Claim Point -->
-            <circle cx="${x1.toFixed(1)}" cy="${y1.toFixed(1)}" r="${Math.min(4.0, 2.0 + Math.log2(g.stories.length) * 0.4).toFixed(1)}" fill="var(--claim-yellow)" opacity="0.6"/>
-            <!-- Reality Point -->
-            <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="${Math.min(7.0, 4.2 + Math.log2(g.stories.length) * 0.6).toFixed(1)}" fill="${color}"/>
-            <title>${tooltip}</title>
-          </g>
-        `;
-      }).join('');
+      setTimeout(() => renderHegemonyMapCanvas(validStories), 0);
 
       return `
         <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem; background:rgba(0,0,0,0.15); border-radius:8px; padding:1.2rem; border:1px solid var(--panel-border);">
-          <svg viewBox="0 0 ${W} ${H}" style="width:100%; max-width:${W}px; display:block; aspect-ratio:1;">
-            ${qBackgrounds}
-            
-            <!-- Axes -->
-            <line x1="300" y1="40" x2="300" y2="560" stroke="var(--panel-border)" stroke-width="1.5"/>
-            <line x1="40" y1="300" x2="560" y2="300" stroke="var(--panel-border)" stroke-width="1.5"/>
-            
-            ${gridLines}
-            ${qLabels}
-            ${landmarkElements}
-            ${nodes}
-
-            <!-- Axis Main Labels -->
-            <text x="300" y="32" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="middle">▲ Active Will (+ψ)</text>
-            <text x="300" y="578" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="middle">▼ Passive Will (-ψ)</text>
-            <text x="10" y="303" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="start">◀ Morality (+υ)</text>
-            <text x="590" y="303" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="end">Morality (-υ) ▶</text>
-          </svg>
+          <div style="position:relative; width:100%; max-width:${W}px; aspect-ratio:1;">
+            <svg viewBox="0 0 ${W} ${H}" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;">
+              ${qBackgrounds}
+              <line x1="300" y1="40" x2="300" y2="560" stroke="var(--panel-border)" stroke-width="1.5"/>
+              <line x1="40" y1="300" x2="560" y2="300" stroke="var(--panel-border)" stroke-width="1.5"/>
+              ${gridLines}
+              ${qLabels}
+              ${landmarkElements}
+              <text x="300" y="32" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="middle">▲ Active Will (+ψ)</text>
+              <text x="300" y="578" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="middle">▼ Passive Will (-ψ)</text>
+              <text x="10" y="303" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="start">◀ Morality (+υ)</text>
+              <text x="590" y="303" font-size="9" fill="var(--text-muted)" font-weight="bold" text-anchor="end">Morality (-υ) ▶</text>
+            </svg>
+            <canvas id="hegemonyVectorsCanvas" width="600" height="600" style="position:absolute; top:0; left:0; width:100%; height:100%; cursor:crosshair;"></canvas>
+            <div id="hegemonyCanvasTooltip" style="position:absolute; display:none; pointer-events:none; background:rgba(11,15,25,0.95); border:1px solid var(--panel-border); border-radius:6px; padding:6px 10px; font-size:0.72rem; color:#fff; z-index:10; max-width:280px; box-shadow:0 4px 12px rgba(0,0,0,0.6); line-height:1.4;"></div>
+          </div>
           <div style="font-size:0.75rem; color:var(--text-muted); text-align:center; max-width:520px; line-height:1.4; margin-top:0.5rem;">
             <strong>Interactive Hegemony Map:</strong> Each story is plotted as a vector starting at its 
             <span style="color:var(--claim-yellow); font-weight:bold;">Claim (yellow dot)</span> and ending at its 
@@ -4039,11 +4116,60 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       `;
     }
 
-    function toggleActorDropdown(actorId) {
+    function _renderDropdownStories(tableType, key) {
+      let related = [];
+      const rKeyLower = key.toLowerCase();
+      if (tableType === 'actor') related = storiesByActor[rKeyLower] || [];
+      else if (tableType === 'outlet') related = storiesByOutlet[rKeyLower] || [];
+      else if (tableType === 'category') related = storiesByCategory[rKeyLower] || [];
+      else if (tableType === 'topic') related = storiesByTopic[rKeyLower] || [];
+
+      if (!related.length) return '<div style="color:var(--text-muted); font-style:italic;">No stories found.</div>';
+
+      return `
+        <div style="display:flex; flex-direction:column; gap:0.3rem;">
+          ${related.map(s => {
+            const sDelta = (s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined) ? s.claim_u - s.real_u : 0;
+            const sColor = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
+            const sourceLink = s.link ? `<a href="${s.link}" target="_blank" onclick="event.stopPropagation()" title="Original Article" style="color:var(--bsky-blue); text-decoration:none; margin-right:6px;">🔗</a>` : '';
+            const bskyUrl = (s.post_urls && s.post_urls.length) ? s.post_urls[0] : (s.target_url ? s.target_url : null);
+            const bskyLink = bskyUrl ? `<a href="${bskyUrl}" target="_blank" onclick="event.stopPropagation()" title="Bluesky Thread" style="color:#0085ff; text-decoration:none; margin-right:6px;">🦋</a>` : '';
+            const linksSpan = (sourceLink || bskyLink) ? `<span style="font-size:0.85rem; display:inline-flex; align-items:center;">${sourceLink}${bskyLink}</span>` : '';
+
+            return `
+              <div data-story-id="${s.id}" style="display:flex; justify-content:space-between; align-items:center; padding:0.2rem 0.4rem; border-radius:4px; cursor:pointer;"
+                   onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
+                 <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:70%; display:inline-flex; align-items:center;">
+                  ${linksSpan}
+                  <span style="text-decoration:underline; color:var(--text-muted);">${s.subject || s.id}</span>
+                </span>
+                <span style="font-family:var(--font-mono); color:${sColor}; font-size:0.7rem; white-space:nowrap; margin-left:0.5rem;">
+                  u: ${fmt(s.real_u)} | Δu: ${fmt(sDelta)}
+                </span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    function toggleActorDropdown(actorId, tableType, rawKey) {
       const el = document.getElementById(actorId);
       const arrow = document.getElementById('arrow-' + actorId);
       if (!el) return;
       if (el.style.display === 'none') {
+        if (!el.innerHTML.trim() && rawKey) {
+          el.innerHTML = _renderDropdownStories(tableType, rawKey);
+          el.querySelectorAll('[data-story-id]').forEach(elLink => {
+            elLink.addEventListener('click', (e) => {
+              e.stopPropagation();
+              const id = elLink.getAttribute('data-story-id');
+              switchTab({currentTarget: document.querySelector('.tab-button')}, 'emulator-tab');
+              document.querySelectorAll('.tab-button')[0].classList.add('active');
+              selectStory(id);
+            });
+          });
+        }
         el.style.display = 'block';
         if (arrow) arrow.style.transform = 'rotate(90deg)';
         _openLeaderboardDropdowns.add(actorId);
@@ -4062,24 +4188,33 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         keys.forEach(k => {
           if (!k) return;
           const realPsi = (s.real_psi !== null && s.real_psi !== undefined) ? s.real_psi : 0;
-          (groups[k] = groups[k] || []).push({
-            delta: s.claim_u - s.real_u,
-            real_u: s.real_u,
-            real_psi: realPsi
-          });
+          if (!groups[k]) {
+            groups[k] = { sumDelta: 0, sumRealU: 0, sumRealPsi: 0, deltas: [] };
+          }
+          const delta = s.claim_u - s.real_u;
+          groups[k].sumDelta += delta;
+          groups[k].sumRealU += s.real_u;
+          groups[k].sumRealPsi += realPsi;
+          groups[k].deltas.push(delta);
         });
       });
-      return Object.entries(groups).map(([k, items]) => {
-        const deltas = items.map(x => x.delta);
-        const realUs = items.map(x => x.real_u);
-        const realPsis = items.map(x => x.real_psi);
-        const mDelta = avg(deltas);
-        const mRealU = avg(realUs);
-        const mRealPsi = avg(realPsis);
-        const variance = deltas.length > 1 ? avg(deltas.map(d => (d-mDelta)*(d-mDelta))) : 0;
+      return Object.entries(groups).map(([k, g]) => {
+        const n = g.deltas.length;
+        const mDelta = g.sumDelta / n;
+        const mRealU = g.sumRealU / n;
+        const mRealPsi = g.sumRealPsi / n;
+        let variance = 0;
+        if (n > 1) {
+          let sumSq = 0;
+          for (let i = 0; i < n; i++) {
+            const diff = g.deltas[i] - mDelta;
+            sumSq += diff * diff;
+          }
+          variance = sumSq / n;
+        }
         return { 
           key: k, 
-          n: deltas.length, 
+          n: n, 
           avgDelta: mDelta, 
           avgRealU: mRealU, 
           avgRealPsi: mRealPsi,
@@ -4088,14 +4223,53 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       });
     }
 
+    function _getStatsForTable(stories, tableType) {
+      const scope = _auditScope || 'all';
+      if (_statsCache[scope] && _statsCache[scope][tableType]) {
+        return _statsCache[scope][tableType];
+      }
+      let keyFn;
+      if (tableType === 'actor') {
+        keyFn = s => {
+          if (!Array.isArray(s.actors)) return [];
+          if (_actorRoleFilter === 'all') return s.actors;
+          const roles = s.actor_roles || [];
+          if (roles.length > 0) {
+            return roles.filter(r => (r.role || 'instigator') === _actorRoleFilter).map(r => r.name);
+          }
+          // Fallback if actor_roles not present
+          return s.actors;
+        };
+      } else if (tableType === 'outlet') {
+        keyFn = s => {
+          if (s._outlet) return [s._outlet];
+          try {
+            const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '').toLowerCase();
+            s._outlet = host;
+            return [host];
+          } catch(e) { return []; }
+        };
+      } else if (tableType === 'category') {
+        keyFn = s => s.category ? s.category.split(',').map(c => c.trim().toLowerCase()).filter(Boolean) : [];
+      } else if (tableType === 'topic') {
+        keyFn = s => s.topic ? s.topic.split(',').map(t => t.trim().toLowerCase()).filter(Boolean) : [];
+      }
+
+      const rows = _statsForGroups(stories, keyFn);
+      if (!_statsCache[scope]) _statsCache[scope] = {};
+      _statsCache[scope][tableType] = rows;
+      return rows;
+    }
+
     function _hypocrisyTable(stories, rows, labelHead, minN) {
-      let filtered = rows.filter(r => r.n >= minN);
-      
       const labelLower = labelHead.toLowerCase();
       let tableType = 'actor';
       if (labelLower.includes('outlet') || labelLower.includes('source')) tableType = 'outlet';
       else if (labelLower.includes('category')) tableType = 'category';
       else if (labelLower.includes('topic')) tableType = 'topic';
+      
+      const search = _leaderboardSearches[tableType] || '';
+      let filtered = rows.filter(r => r.n >= minN && (!search || r.key.toLowerCase().includes(search)));
       
       let sortCol, sortDir, sort2Col, sort2Dir, currentMinN;
       
@@ -4120,10 +4294,8 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       const onMinNChange = `setMinN('${tableType}', this.value)`;
       const clickFn = `handleHeaderClick('${tableType}', `;
 
-      // Sort rows: combo presets override single-column sort
-      // Two-level sort: primary (header click) then secondary (Then by dropdowns)
+      // Sort rows
       filtered.sort((a, b) => {
-        // Primary
         let primary;
         if (sortCol === 'key') {
           primary = sortDir === 'asc'
@@ -4134,7 +4306,6 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           primary = sortDir === 'asc' ? pa - pb : pb - pa;
         }
         if (primary !== 0) return primary;
-        // Secondary tiebreaker
         if (sort2Col === 'none') return 0;
         const sa = _colVal(a, sort2Col), sb = _colVal(b, sort2Col);
         return sort2Dir === 'asc' ? sa - sb : sb - sa;
@@ -4143,12 +4314,10 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       const getIndicator = (col) => {
         if (sortCol !== col) return '';
         const dir = sortDir === 'asc' ? ' ▲' : ' ▼';
-        // Show secondary indicator if active on this col
         const sec = (sort2Col === col) ? (sort2Dir === 'asc' ? '₂▲' : '₂▼') : '';
         return dir + sec;
       };
 
-      // "Then by" col options (exclude primary sort col so it's not redundant)
       const sort2ColOptions = [
         { val: 'none',          label: '—' },
         { val: 'n',             label: 'n' },
@@ -4165,12 +4334,14 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         <option value="desc" ${sort2Dir==='desc'?'selected':''}>▼ desc</option>
       </select>` : '';
 
+      const pageSize = _leaderboardPageSizes[tableType] || 100;
+      const paged = filtered.slice(0, pageSize);
+
       let tableContent = '';
-      if (!filtered.length) {
+      if (!paged.length) {
         tableContent = '<div style="grid-column: span 6; color:var(--text-muted); text-align:center; padding: 1rem 0;">No entries matching filters.</div>';
       } else {
-        tableContent = filtered.map((r, idx) => {
-          // Color is a smooth HSL spectrum: Green (hue 140) at 0 delta to Red (hue 0) at 3+ delta
+        tableContent = paged.map((r, idx) => {
           const ratio = Math.min(1.0, Math.max(0.0, (r.avgDelta || 0) / 3.0));
           const hue = Math.round(140 - (ratio * 140));
           const color = `hsl(${hue}, 80%, 48%)`;
@@ -4179,21 +4350,10 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           const isOpen = _openLeaderboardDropdowns.has(dropdownId);
           const displayStyle = isOpen ? 'block' : 'none';
           const arrowTransform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
-          
-          let related = [];
-          const rKeyLower = r.key.toLowerCase();
-          if (tableType === 'actor') {
-            related = storiesByActor[rKeyLower] || [];
-          } else if (tableType === 'outlet') {
-            related = storiesByOutlet[rKeyLower] || [];
-          } else if (tableType === 'category') {
-            related = storiesByCategory[rKeyLower] || [];
-          } else if (tableType === 'topic') {
-            related = storiesByTopic[rKeyLower] || [];
-          }
+          const safeKeyEscaped = r.key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 
           return `
-            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}')">
+            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}', '${tableType}', '${safeKeyEscaped}')">
               <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
             </span>
             <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
@@ -4203,52 +4363,54 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
             <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>
             
             <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
-              <div style="display:flex; flex-direction:column; gap:0.3rem;">
-                ${related.map(s => {
-                  const sDelta = (s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined) ? s.claim_u - s.real_u : 0;
-                  const sColor = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
-                  
-                  // Link indicators
-                  const sourceLink = s.link ? `<a href="${s.link}" target="_blank" onclick="event.stopPropagation()" title="Original Article" style="color:var(--bsky-blue); text-decoration:none; margin-right:6px;">🔗</a>` : '';
-                  const bskyUrl = (s.post_urls && s.post_urls.length) ? s.post_urls[0] : (s.target_url ? s.target_url : null);
-                  const bskyLink = bskyUrl ? `<a href="${bskyUrl}" target="_blank" onclick="event.stopPropagation()" title="Bluesky Thread" style="color:#0085ff; text-decoration:none; margin-right:6px;">🦋</a>` : '';
-                  const linksSpan = (sourceLink || bskyLink) ? `<span style="font-size:0.85rem; display:inline-flex; align-items:center;">${sourceLink}${bskyLink}</span>` : '';
-
-                  return `
-                    <div data-story-id="${s.id}" style="display:flex; justify-content:space-between; align-items:center; padding:0.2rem 0.4rem; border-radius:4px; cursor:pointer;"
-                         onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
-                       <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:70%; display:inline-flex; align-items:center;">
-                        ${linksSpan}
-                        <span style="text-decoration:underline; color:var(--text-muted);">${s.subject || s.id}</span>
-                      </span>
-                      <span style="font-family:var(--font-mono); color:${sColor}; font-size:0.7rem; white-space:nowrap; margin-left:0.5rem;">
-                        u: ${fmt(s.real_u)} | Δu: ${fmt(sDelta)}
-                      </span>
-                    </div>
-                  `;
-                }).join('')}
-              </div>
+              ${isOpen ? _renderDropdownStories(tableType, r.key) : ''}
             </div>
           `;
         }).join('');
       }
+
+      let showMoreFooter = '';
+      if (filtered.length > pageSize) {
+        showMoreFooter = `
+          <div onclick="showMoreTableRows('${tableType}')" style="grid-column: span 6; text-align: center; padding: 0.5rem; cursor: pointer; color: var(--bsky-blue); font-weight: 600; background: rgba(255,255,255,0.03); border: 1px dashed var(--panel-border); border-radius: 4px; margin: 4px 0; font-size: 0.75rem; user-select: none;">
+            Showing ${paged.length} of ${filtered.length} entries — Click to show next 100 ▾
+          </div>
+        `;
+      }
       
+      const roleSelect = tableType === 'actor' ? `
+        <div style="display:flex; align-items:center; gap:0.3rem;">
+          <span style="color:var(--text-muted);">Role:</span>
+          <select onchange="setActorRoleFilter(this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
+            <option value="instigator" ${_actorRoleFilter==='instigator'?'selected':''}>⚡ Instigators</option>
+            <option value="all"        ${_actorRoleFilter==='all'?'selected':''}>All Roles</option>
+            <option value="acted_upon" ${_actorRoleFilter==='acted_upon'?'selected':''}>🎯 Targets/Victims</option>
+            <option value="author"     ${_actorRoleFilter==='author'?'selected':''}>📰 Authors/Media</option>
+            <option value="regulator"  ${_actorRoleFilter==='regulator'?'selected':''}>⚖️ Regulators/Courts</option>
+            <option value="context"    ${_actorRoleFilter==='context'?'selected':''}>🗺️ Context/Nations</option>
+          </select>
+        </div>` : '';
+
       return `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; font-size:0.75rem; flex-wrap:wrap; gap:0.5rem;">
           <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
-            <span style="color:var(--text-muted);">Then by:</span>
+            <input type="text" placeholder="Filter ${labelHead.toLowerCase()}..." value="${_leaderboardSearches[tableType] || ''}" oninput="setTableSearch('${tableType}', this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.18rem 0.5rem; outline:none; font-size:0.72rem; width:130px; font-family:var(--font-outfit);">
+            <span style="color:var(--text-muted); margin-left:2px;">Then by:</span>
             ${sort2ColSelect}
             ${sort2DirSelect}
           </div>
-          <div style="display:flex; align-items:center; gap:0.4rem;">
-            <span style="color:var(--text-muted);">Min n:</span>
-            <select onchange="${onMinNChange}" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit);">
-              <option value="1" ${currentMinN===1?'selected':''}>1+</option>
-              <option value="2" ${currentMinN===2?'selected':''}>2+</option>
-              <option value="5" ${currentMinN===5?'selected':''}>5+</option>
-              <option value="10" ${currentMinN===10?'selected':''}>10+</option>
-              <option value="25" ${currentMinN===25?'selected':''}>25+</option>
-            </select>
+          <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
+            ${roleSelect}
+            <div style="display:flex; align-items:center; gap:0.3rem;">
+              <span style="color:var(--text-muted);">Min n:</span>
+              <select onchange="${onMinNChange}" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit);">
+                <option value="1" ${currentMinN===1?'selected':''}>1+</option>
+                <option value="2" ${currentMinN===2?'selected':''}>2+</option>
+                <option value="5" ${currentMinN===5?'selected':''}>5+</option>
+                <option value="10" ${currentMinN===10?'selected':''}>10+</option>
+                <option value="25" ${currentMinN===25?'selected':''}>25+</option>
+              </select>
+            </div>
           </div>
         </div>
         <div style="max-height: 400px; overflow-y: auto; padding-right: 0.5rem; border: 1px solid var(--panel-border); border-radius: 6px; background: rgba(0,0,0,0.12); margin-bottom: 0.5rem;">
@@ -4262,6 +4424,7 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
             <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'consistency')">σ${getIndicator('consistency')}</span>
             
             ${tableContent}
+            ${showMoreFooter}
           </div>
         </div>
       `;
@@ -4270,35 +4433,26 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
     function auditActorLeaderboard(stories) {
       const hasActors = stories.some(s => Array.isArray(s.actors) && s.actors.length);
       if (!hasActors) return '<div style="color:var(--text-muted); font-size:0.82rem;">No actor tags yet. Run enrich_stories.py (backfill) then rebuild_registries.py.</div>';
-      const rows = _statsForGroups(stories, s => Array.isArray(s.actors) ? s.actors : []);
+      const rows = _getStatsForTable(stories, 'actor');
       return _hypocrisyTable(stories, rows, 'Actor / Entity', _actorMinN);
     }
 
     function auditOutletHypocrisy(stories) {
-      const rows = _statsForGroups(stories, s => {
-        try { return [new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '')]; }
-        catch(e) { return []; }
-      });
+      const rows = _getStatsForTable(stories, 'outlet');
       return _hypocrisyTable(stories, rows, 'Source Outlet', _outletMinN);
     }
 
     function auditCategoryLeaderboard(stories) {
       const hasCategories = stories.some(s => s.category);
       if (!hasCategories) return '<div style="color:var(--text-muted); font-size:0.82rem;">No category tags found in stories.</div>';
-      const rows = _statsForGroups(stories, s => {
-        if (!s.category) return [];
-        return s.category.split(',').map(c => c.trim().toLowerCase()).filter(Boolean);
-      });
+      const rows = _getStatsForTable(stories, 'category');
       return _hypocrisyTable(stories, rows, 'Category', _categoryMinN);
     }
 
     function auditTopicLeaderboard(stories) {
       const hasTopics = stories.some(s => s.topic);
       if (!hasTopics) return '<div style="color:var(--text-muted); font-size:0.82rem;">No topic tags found in stories.</div>';
-      const rows = _statsForGroups(stories, s => {
-        if (!s.topic) return [];
-        return s.topic.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
-      });
+      const rows = _getStatsForTable(stories, 'topic');
       return _hypocrisyTable(stories, rows, 'Topic', _topicMinN);
     }
 

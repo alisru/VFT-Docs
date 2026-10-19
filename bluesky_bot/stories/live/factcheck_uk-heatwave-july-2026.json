@@ -97,6 +97,16 @@
       "Weather",
       "UK"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "UK Health Security Agency",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

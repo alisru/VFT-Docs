@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Charlie Cook",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Leila Fadel",
+        "role": "instigator"
+      },
+      {
+        "name": "NPR",
+        "role": "author"
+      },
+      {
+        "name": "U.S. Congress",
+        "role": "instigator"
+      }
     ]
   }
 ]

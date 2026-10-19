@@ -146,6 +146,34 @@
       "Aletheia",
       "AI",
       "TechPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "SEC",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Census Bureau",
+        "role": "instigator"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      }
     ]
   }
 ]

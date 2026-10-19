@@ -103,6 +103,32 @@
       "BCPoli",
       "Environment"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Alberta",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      },
+      {
+        "name": "Southern Resident Killer Whales",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Salmon",
+        "role": "instigator"
+      },
+      {
+        "name": "Migratory Birds",
+        "role": "instigator"
+      },
+      {
+        "name": "Trans Mountain Pipeline",
+        "role": "instigator"
+      }
+    ]
   }
 ]

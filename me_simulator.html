@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Me Simulator — Working Memory Decay</title>
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --panel: #161920;
+      --border: #262b36;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --accent: #38bdf8;
+      --redact-bg: #1e232d;
+      --redact-block: #07080a;
+      --danger: #f43f5e;
+      --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+
+    .title-group h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      background: rgba(244, 63, 94, 0.15);
+      color: var(--danger);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .title-group p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.35rem;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--panel);
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .control-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .control-item label {
+      font-weight: 500;
+      color: #cbd5e1;
+      white-space: nowrap;
+    }
+
+    input[type="range"] {
+      accent-color: var(--accent);
+      width: 90px;
+      cursor: pointer;
+    }
+
+    .val-readout {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-weight: 600;
+      min-width: 2.6rem;
+    }
+
+    button {
+      background: #1e2430;
+      color: #cbd5e1;
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: var(--font-sans);
+    }
+
+    button:hover {
+      background: #2a3242;
+      color: #fff;
+      border-color: #3b4459;
+    }
+
+    button.active {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    /* Editor Wrapper */
+    .editor-shell {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.2s ease;
+    }
+
+    .editor-shell:focus-within {
+      border-color: #3b485e;
+    }
+
+    /* Shared typography and geometry between textarea and mirror layer */
+    .editor-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      line-height: 1.75;
+      letter-spacing: 0.02em;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      overflow-y: auto;
+      tab-size: 2;
+    }
+
+    #InputArea {
+      z-index: 2;
+      background: transparent;
+      color: transparent;
+      caret-color: var(--accent);
+      border: none;
+      outline: none;
+      resize: none;
+    }
+
+    #InputArea::selection {
+      background: rgba(56, 189, 248, 0.22);
+      color: transparent;
+    }
+
+    #InputArea::placeholder {
+      color: #333c4d;
+    }
+
+    #RenderLayer {
+      z-index: 1;
+      pointer-events: none;
+      user-select: none;
+      color: var(--text);
+    }
+
+    /* Individual Character States */
+    .char {
+      position: relative;
+      display: inline;
+      border-radius: 3px;
+      transition: color 0.12s ease, background-color 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    /* Censoring state when age >= 30s and not under cursor/hover */
+    .char.censored {
+      color: transparent !important;
+      background-color: var(--redact-block);
+      box-shadow: 0 0 0 1px #1d222b inset;
+      border-radius: 2px;
+    }
+
+    /* Spaces shouldn't turn into solid blocks unless they are between redacted chars, or keep spaces subtle */
+    .char.is-space.censored {
+      background-color: rgba(7, 8, 10, 0.45);
+      box-shadow: none;
+    }
+
+    /* Flashlight / Cursor Reveal State */
+    .char.revealed {
+      color: #ffffff !important;
+      background-color: rgba(56, 189, 248, 0.16);
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.25);
+    }
+
+    .char.fading {
+      /* subtle visual cue in the last 5 seconds before blackout */
+      color: #94a3b8;
+    }
+
+    /* Status bar */
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      background: #12151b;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .stats-group {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .stat span {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .stat .redacted-count {
+      color: var(--danger);
+    }
+
+    .stat .active-count {
+      color: #4ade80;
+    }
+
+    .legend {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .swatch.fresh { background: #e2e8f0; }
+    .swatch.fading { background: #64748b; }
+    .swatch.dark { background: #07080a; border: 1px solid #334155; }
+    .swatch.cursor { background: var(--accent); }
+
+    /* Preset Bar for Human vs AI Context Window Comparison */
+    .preset-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: #12151b;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .preset-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .preset-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-right: 0.25rem;
+    }
+
+    .preset-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      background: #1a1f29;
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+      cursor: pointer;
+    }
+
+    .preset-btn .sub {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .preset-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: rgba(56, 189, 248, 0.5);
+      color: #fff;
+    }
+
+    .preset-btn.active .sub {
+      color: var(--accent);
+    }
+
+    .scale-note {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .scale-note strong {
+      color: var(--accent);
+    }
+
+    .mode-explainer {
+      font-size: 0.83rem;
+      color: #94a3b8;
+      background: rgba(56, 189, 248, 0.05);
+      border-left: 3px solid var(--accent);
+      padding: 0.55rem 0.85rem;
+      border-radius: 0 6px 6px 0;
+      line-height: 1.45;
+    }
+
+    .mode-explainer strong {
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <h1>
+          The Me Simulator
+          <span class="badge" id="ModeBadge">4s Character Decay</span>
+        </h1>
+        <p id="ModeSubtitle">Every character you type goes dark 4 seconds after creation unless your cursor or mouse is directly on it.</p>
+      </div>
+
+      <div class="controls">
+        <div class="control-item" id="DecayControlBox" title="How long each character stays visible before going dark">
+          <label for="DecaySlider">Decay Time:</label>
+          <input type="range" id="DecaySlider" min="1" max="60" value="4" step="1">
+          <span class="val-readout" id="DecayReadout">4s</span>
+        </div>
+
+        <div class="control-item" title="How many characters around the cursor/mouse (or in AI context window) are lit up">
+          <label for="RadiusSlider" id="RadiusLabel">Spotlight Size:</label>
+          <input type="range" id="RadiusSlider" min="0" max="64" value="16" step="1">
+          <span class="val-readout" id="RadiusReadout">±16 ch</span>
+        </div>
+
+        <div class="control-item" title="Speed at which pasted or sample text is typed out (5 chars = 1 word)">
+          <label for="SpeedSlider">Paste Typing Speed:</label>
+          <input type="range" id="SpeedSlider" min="30" max="600" value="120" step="10">
+          <span class="val-readout" id="SpeedReadout">120 WPM</span>
+        </div>
+
+        <button id="LoadAiHandsBtn" type="button">Why I Use AI</button>
+        <button id="LoadRawBtn" type="button">Load My Thoughts and Rant</button>
+        <button id="LoadTranslatedBtn" type="button">Load Translated Version</button>
+        <button id="ClearBtn" type="button">Clear</button>
+      </div>
+    </header>
+
+    <div class="preset-bar">
+      <div class="preset-group">
+        <span class="preset-label">Memory Mode:</span>
+        <button class="preset-btn active" data-preset="me" type="button">
+          🧠 Me (STM Decay) <span class="sub">4s · ±16 ch</span>
+        </button>
+        <button class="preset-btn" data-preset="gpt" type="button">
+          🤖 GPT-4o <span class="sub">128k = 3 ch</span>
+        </button>
+        <button class="preset-btn" data-preset="claude" type="button">
+          🤖 Claude <span class="sub">200k = 4 ch</span>
+        </button>
+        <button class="preset-btn" data-preset="gemini1m" type="button">
+          ✨ Gemini 1M <span class="sub">1M = 20 ch</span>
+        </button>
+        <button class="preset-btn" data-preset="gemini2m" type="button">
+          ✨ Gemini 2M <span class="sub">2M = 40 ch</span>
+        </button>
+      </div>
+      <div class="scale-note">
+        Scale: <strong>1 char = 50,000 tokens</strong>
+      </div>
+    </div>
+
+    <div class="mode-explainer" id="ModeExplainer">
+      <strong>Human Short-Term Memory Mode:</strong> Characters decay into darkness <strong>4 seconds</strong> after being written/read, leaving only a <strong>±16 character</strong> spotlight around your active focus (cursor or mouse hover). Move your focus back to re-read, and everything behind you goes dark again.
+    </div>
+
+    <div class="editor-shell" id="EditorShell">
+      <div id="RenderLayer" class="editor-layer" aria-hidden="true"></div>
+      <textarea
+        id="InputArea"
+        class="editor-layer"
+        placeholder="Start typing or paste any text here... Pasted text will type itself out at the selected WPM speed, and each character will go dark 4 seconds after it is typed unless your cursor or mouse is touching it."
+        spellcheck="false"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+      ></textarea>
+    </div>
+
+    <div class="status-bar">
+      <div class="stats-group">
+        <div class="stat">Total: <span id="TotalChars">0 ch</span> <small id="TotalTokens" style="color:var(--muted)">(0 tok)</small></div>
+        <div class="stat">In Active Memory: <span id="ActiveChars" class="active-count">0 ch</span> <small id="ActiveTokens" style="color:var(--muted)">(0 tok)</small></div>
+        <div class="stat">Gone Dark: <span id="RedactedChars" class="redacted-count">0 ch</span> <small id="RedactedTokens" style="color:var(--muted)">(0 tok)</small></div>
+        <div class="stat">Focus Index: <span id="CursorPos">none</span></div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item"><span class="swatch fresh"></span> Fresh</div>
+        <div class="legend-item"><span class="swatch fading"></span> Fading</div>
+        <div class="legend-item"><span class="swatch dark"></span> Gone Dark</div>
+        <div class="legend-item"><span class="swatch cursor"></span> Active Window / Spotlight</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const TOKENS_PER_CHAR = 50000;
+
+    const inputArea = document.getElementById('InputArea');
+    const renderLayer = document.getElementById('RenderLayer');
+    const decaySlider = document.getElementById('DecaySlider');
+    const decayReadout = document.getElementById('DecayReadout');
+    const decayControlBox = document.getElementById('DecayControlBox');
+    const radiusSlider = document.getElementById('RadiusSlider');
+    const radiusReadout = document.getElementById('RadiusReadout');
+    const radiusLabel = document.getElementById('RadiusLabel');
+    const speedSlider = document.getElementById('SpeedSlider');
+    const speedReadout = document.getElementById('SpeedReadout');
+    const loadAiHandsBtn = document.getElementById('LoadAiHandsBtn');
+    const loadRawBtn = document.getElementById('LoadRawBtn');
+    const loadTranslatedBtn = document.getElementById('LoadTranslatedBtn');
+    const clearBtn = document.getElementById('ClearBtn');
+    const modeBadge = document.getElementById('ModeBadge');
+    const modeSubtitle = document.getElementById('ModeSubtitle');
+    const modeExplainer = document.getElementById('ModeExplainer');
+    const presetBtns = document.querySelectorAll('.preset-btn');
+
+    const totalCharsEl = document.getElementById('TotalChars');
+    const totalTokensEl = document.getElementById('TotalTokens');
+    const activeCharsEl = document.getElementById('ActiveChars');
+    const activeTokensEl = document.getElementById('ActiveTokens');
+    const redactedCharsEl = document.getElementById('RedactedChars');
+    const redactedTokensEl = document.getElementById('RedactedTokens');
+    const cursorPosEl = document.getElementById('CursorPos');
+
+    // State: array of { char: string, createdAt: number, span: HTMLElement }
+    let charEntries = [];
+    let currentMode = 'me'; // 'me' | 'gpt' | 'claude' | 'gemini1m' | 'gemini2m'
+    let decayMs = 4 * 1000;
+    let spotlightRadius = 16; // In 'me' mode: ±radius around cursor. In AI mode: total rolling context window in chars
+    let typingWpm = 120; // Default typing rate (120 WPM = 10 chars/sec)
+    let hoveredCharIndex = -1;
+    let isInputFocused = false;
+
+    // Typewriter queue for pasted / sample text using accurate frame delta time
+    let typingRaf = null;
+    let activeStreamSource = null; // 'ai_hands' | 'raw' | 'translated' | 'paste' | null
+    let typingQueue = [];
+    let typingInsertIndex = 0;
+    let lastTypeFrameTime = 0;
+    let charTimeAccumulator = 0;
+
+    function stopTypewriter() {
+      if (typingRaf) {
+        cancelAnimationFrame(typingRaf);
+        typingRaf = null;
+      }
+      typingQueue = [];
+      charTimeAccumulator = 0;
+      activeStreamSource = null;
+      loadAiHandsBtn.textContent = 'Why I Use AI';
+      loadRawBtn.textContent = 'Load My Raw Thought';
+      loadTranslatedBtn.textContent = 'Load Translated Version';
+    }
+
+    function stepTypewriter(now) {
+      if (typingQueue.length === 0) {
+        stopTypewriter();
+        return;
+      }
+
+      const dt = Math.min(200, now - lastTypeFrameTime);
+      lastTypeFrameTime = now;
+      charTimeAccumulator += dt;
+
+      // 1 WPM = 5 characters per minute = 5/60 chars per second
+      // ms per character = 60000 / (typingWpm * 5) = 12000 / typingWpm
+      const msPerChar = 12000 / typingWpm;
+      const countToInsert = Math.floor(charTimeAccumulator / msPerChar);
+
+      if (countToInsert > 0) {
+        charTimeAccumulator -= countToInsert * msPerChar;
+        const chunk = typingQueue.splice(0, countToInsert).join('');
+        const val = inputArea.value;
+        const before = val.slice(0, typingInsertIndex);
+        const after = val.slice(typingInsertIndex);
+
+        inputArea.value = before + chunk + after;
+        typingInsertIndex += chunk.length;
+
+        syncTextWithTimestamps(inputArea.value, now);
+
+        if (isInputFocused) {
+          inputArea.setSelectionRange(typingInsertIndex, typingInsertIndex);
+        }
+
+        if (typingInsertIndex >= inputArea.value.length - 2) {
+          inputArea.scrollTop = inputArea.scrollHeight;
+          renderLayer.scrollTop = inputArea.scrollTop;
+        }
+
+        updateVisualStates();
+      }
+
+      if (typingQueue.length > 0) {
+        typingRaf = requestAnimationFrame(stepTypewriter);
+      } else {
+        stopTypewriter();
+      }
+    }
+
+    function startTypewriterStream(textToType, insertAt, sourceTag = 'paste') {
+      stopTypewriter();
+      if (!textToType) return;
+      activeStreamSource = sourceTag;
+      // Normalize Windows \r\n and \r to single \n so it never inserts duplicate line breaks
+      const normalized = textToType.replace(/\r\n?/g, '\n');
+      typingQueue = Array.from(normalized);
+      typingInsertIndex = typeof insertAt === 'number' ? insertAt : inputArea.value.length;
+      lastTypeFrameTime = performance.now();
+      charTimeAccumulator = 12000 / typingWpm; // emit 1st character immediately
+      typingRaf = requestAnimationFrame(stepTypewriter);
+    }
+
+    const PRESETS = {
+      me: {
+        type: 'human',
+        decaySec: 4,
+        windowChars: 16,
+        badge: '4s Character Decay',
+        subtitle: 'Every character you type goes dark 4 seconds after creation unless your cursor or mouse is directly on it.',
+        explainer: '<strong>Human Short-Term Memory Mode:</strong> Characters decay into darkness <strong>4 seconds</strong> after being written/read, leaving only a <strong>±16 character</strong> spotlight around your active focus (cursor or mouse hover). Move your focus back to re-read, and everything behind you goes dark again.'
+      },
+      gpt: {
+        type: 'ai',
+        decaySec: 4,
+        windowChars: 3, // 128k / 50k = 2.56 -> ~3 chars
+        tokenLabel: '128,000 tokens',
+        badge: 'GPT-4o · 128k Window (3 ch)',
+        subtitle: 'At 50,000 tokens per character, a 128k context window holds less than 3 characters at a time.',
+        explainer: '<strong>GPT-4o Context Mode (128k tokens = ~2.6 chars):</strong> At 50,000 tokens/char, GPT-4o can only see <strong>3 characters</strong> in its active window at once. Every new character pushes the oldest one off the cliff into darkness unless retrieved by a tool/search cursor.'
+      },
+      claude: {
+        type: 'ai',
+        decaySec: 4,
+        windowChars: 4, // 200k / 50k = 4 chars
+        tokenLabel: '200,000 tokens',
+        badge: 'Claude · 200k Window (4 ch)',
+        subtitle: 'At 50,000 tokens per character, a 200k context window is just 4 characters wide.',
+        explainer: '<strong>Claude Context Mode (200k tokens = 4 chars):</strong> At 50,000 tokens/char, Claude holds <strong>4 characters</strong> (one short word) in active memory before older context falls out of the window.'
+      },
+      gemini1m: {
+        type: 'ai',
+        decaySec: 4,
+        windowChars: 20, // 1M / 50k = 20 chars
+        tokenLabel: '1,000,000 tokens',
+        badge: 'Gemini Pro · 1M Window (20 ch)',
+        subtitle: 'At 50,000 tokens per character, a 1,000,000-token context window spans 20 characters (~3–4 words).',
+        explainer: '<strong>Gemini 1M Context Mode (1,000,000 tokens = 20 chars):</strong> Even with a massive 1M token window, at 50,000 tokens/char it only spans <strong>20 characters</strong> (~3–4 words) before older context goes dark.'
+      },
+      gemini2m: {
+        type: 'ai',
+        decaySec: 4,
+        windowChars: 40, // 2M / 50k = 40 chars
+        tokenLabel: '2,000,000 tokens',
+        badge: 'Gemini Pro · 2M Window (40 ch)',
+        subtitle: 'At 50,000 tokens per character, a 2,000,000-token context window spans 40 characters (~half a line).',
+        explainer: '<strong>Gemini 2M Context Mode (2,000,000 tokens = 40 chars):</strong> At 50,000 tokens/char, a 2M token window holds <strong>40 characters</strong> (about half a sentence) in active context at once.'
+      }
+    };
+
+    function formatTokens(charCount) {
+      const tokens = charCount * TOKENS_PER_CHAR;
+      if (tokens >= 1000000) {
+        return (tokens / 1000000).toFixed(2).replace(/\.00$/, '') + 'M tok';
+      }
+      if (tokens >= 1000) {
+        return (tokens / 1000).toFixed(0) + 'k tok';
+      }
+      return tokens + ' tok';
+    }
+
+    function applyPreset(presetKey) {
+      currentMode = presetKey;
+      const p = PRESETS[presetKey];
+      presetBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.preset === presetKey);
+      });
+
+      decayMs = p.decaySec * 1000;
+      decaySlider.value = p.decaySec;
+      decayReadout.textContent = p.decaySec + 's';
+
+      spotlightRadius = p.windowChars;
+      radiusSlider.value = p.windowChars;
+
+      if (p.type === 'human') {
+        decayControlBox.style.opacity = '1';
+        radiusLabel.textContent = 'Spotlight Size:';
+        radiusReadout.textContent = p.windowChars === 0 ? 'Exact' : `±${p.windowChars} ch`;
+      } else {
+        decayControlBox.style.opacity = '0.65';
+        radiusLabel.textContent = 'Context Window:';
+        radiusReadout.textContent = `${p.windowChars} ch (${formatTokens(p.windowChars)})`;
+      }
+
+      modeBadge.textContent = p.badge;
+      modeSubtitle.textContent = p.subtitle;
+      modeExplainer.innerHTML = p.explainer;
+      updateVisualStates();
+    }
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        applyPreset(btn.dataset.preset);
+      });
+    });
+
+    // Synchronize scroll between textarea and render layer
+    inputArea.addEventListener('scroll', () => {
+      renderLayer.scrollTop = inputArea.scrollTop;
+      renderLayer.scrollLeft = inputArea.scrollLeft;
+    });
+
+    // Track decay slider
+    decaySlider.addEventListener('input', (e) => {
+      const sec = parseInt(e.target.value, 10);
+      decayMs = sec * 1000;
+      decayReadout.textContent = sec + 's';
+      if (PRESETS[currentMode].type === 'human') {
+        modeBadge.textContent = sec + 's Character Decay';
+      }
+      updateVisualStates();
+    });
+
+    // Track spotlight radius / context window slider
+    radiusSlider.addEventListener('input', (e) => {
+      spotlightRadius = parseInt(e.target.value, 10);
+      if (PRESETS[currentMode].type === 'human') {
+        radiusReadout.textContent = spotlightRadius === 0 ? 'Exact' : `±${spotlightRadius} ch`;
+      } else {
+        radiusReadout.textContent = `${spotlightRadius} ch (${formatTokens(spotlightRadius)})`;
+      }
+      updateVisualStates();
+    });
+
+    // Track typing speed slider (WPM)
+    speedSlider.addEventListener('input', (e) => {
+      typingWpm = parseInt(e.target.value, 10);
+      speedReadout.textContent = `${typingWpm} WPM`;
+    });
+
+    // Intercept paste events so pasted text streams out at the selected typing rate
+    inputArea.addEventListener('paste', (e) => {
+      const pasted = (e.clipboardData || window.clipboardData).getData('text');
+      if (!pasted) return;
+      e.preventDefault();
+
+      const start = inputArea.selectionStart;
+      const end = inputArea.selectionEnd;
+
+      // If replacing a selection, remove the selected range first
+      if (start !== end) {
+        const val = inputArea.value;
+        inputArea.value = val.slice(0, start) + val.slice(end);
+        syncTextWithTimestamps(inputArea.value, performance.now());
+      }
+
+      startTypewriterStream(pasted, start, 'paste');
+    });
+
+    // Diff old charEntries against new string so existing characters keep their exact creation timestamps
+    function syncTextWithTimestamps(newText, now = performance.now()) {
+      const oldLen = charEntries.length;
+      const newLen = newText.length;
+
+      let prefix = 0;
+      while (
+        prefix < oldLen &&
+        prefix < newLen &&
+        charEntries[prefix].char === newText[prefix]
+      ) {
+        prefix++;
+      }
+
+      let suffix = 0;
+      while (
+        suffix < (oldLen - prefix) &&
+        suffix < (newLen - prefix) &&
+        charEntries[oldLen - 1 - suffix].char === newText[newLen - 1 - suffix]
+      ) {
+        suffix++;
+      }
+
+      const removeCount = oldLen - prefix - suffix;
+      const insertText = newText.slice(prefix, newLen - suffix);
+
+      // Remove deleted DOM nodes
+      for (let i = prefix; i < prefix + removeCount; i++) {
+        const entry = charEntries[i];
+        if (entry && entry.span && entry.span.parentNode === renderLayer) {
+          renderLayer.removeChild(entry.span);
+        }
+      }
+
+      const newItems = [];
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < insertText.length; i++) {
+        const ch = insertText[i];
+        const span = document.createElement('span');
+        span.className = 'char' + (ch === ' ' ? ' is-space' : '');
+        span.textContent = ch;
+        const item = {
+          char: ch,
+          createdAt: now,
+          span: span
+        };
+        newItems.push(item);
+        fragment.appendChild(span);
+      }
+
+      // Reference node for insertion
+      const refEntry = suffix > 0 ? charEntries[oldLen - suffix] : null;
+      const refNode = refEntry ? refEntry.span : null;
+      if (insertText.length > 0) {
+        renderLayer.insertBefore(fragment, refNode);
+      }
+
+      charEntries.splice(prefix, removeCount, ...newItems);
+    }
+
+    // Track mouse hover over specific character spans using coordinates
+    inputArea.addEventListener('mousemove', (e) => {
+      const elements = document.elementsFromPoint(e.clientX, e.clientY);
+      let foundIdx = -1;
+      for (const el of elements) {
+        if (el.classList && el.classList.contains('char')) {
+          foundIdx = charEntries.findIndex(item => item.span === el);
+          break;
+        }
+      }
+      if (foundIdx !== hoveredCharIndex) {
+        hoveredCharIndex = foundIdx;
+        updateVisualStates();
+      }
+    });
+
+    inputArea.addEventListener('mouseleave', () => {
+      hoveredCharIndex = -1;
+      updateVisualStates();
+    });
+
+    inputArea.addEventListener('input', () => {
+      syncTextWithTimestamps(inputArea.value, performance.now());
+      updateVisualStates();
+    });
+
+    inputArea.addEventListener('focus', () => {
+      isInputFocused = true;
+      updateVisualStates();
+    });
+
+    inputArea.addEventListener('blur', () => {
+      isInputFocused = false;
+      updateVisualStates();
+    });
+
+    // Update on caret movement (clicks, arrow keys, selection changes)
+    ['keyup', 'keydown', 'mouseup', 'mousedown', 'click', 'select'].forEach(evt => {
+      inputArea.addEventListener(evt, () => {
+        requestAnimationFrame(updateVisualStates);
+      });
+    });
+
+    document.addEventListener('selectionchange', () => {
+      if (document.activeElement === inputArea) {
+        updateVisualStates();
+      }
+    });
+
+    function getActiveIndices() {
+      const revealed = new Set();
+      const modeType = PRESETS[currentMode].type;
+
+      if (modeType === 'ai') {
+        const total = charEntries.length;
+        const winSize = spotlightRadius;
+
+        if (isInputFocused && inputArea.selectionStart !== inputArea.selectionEnd) {
+          const start = inputArea.selectionStart;
+          const end = Math.min(inputArea.selectionEnd, start + winSize);
+          for (let i = start; i < end; i++) revealed.add(i);
+        } else if (hoveredCharIndex !== -1) {
+          const half = Math.floor(winSize / 2);
+          const start = Math.max(0, hoveredCharIndex - half);
+          for (let i = start; i < start + winSize && i < total; i++) {
+            revealed.add(i);
+          }
+        } else {
+          const anchor = isInputFocused && typeof inputArea.selectionStart === 'number'
+            ? inputArea.selectionStart
+            : total;
+          const start = Math.max(0, anchor - winSize);
+          for (let i = start; i < anchor; i++) {
+            revealed.add(i);
+          }
+        }
+        return revealed;
+      }
+
+      // Human ('me') mode:
+      // 1. Caret / Selection inside textarea
+      if (isInputFocused) {
+        const start = inputArea.selectionStart;
+        const end = inputArea.selectionEnd;
+
+        if (start !== end) {
+          for (let i = start; i < end; i++) {
+            revealed.add(i);
+          }
+        } else if (typeof start === 'number') {
+          const centerLeft = start - 1;
+          const centerRight = start;
+          for (let offset = -spotlightRadius; offset <= spotlightRadius; offset++) {
+            revealed.add(centerLeft + offset);
+            revealed.add(centerRight + offset);
+          }
+        }
+      }
+
+      // 2. Mouse hover over character
+      if (hoveredCharIndex !== -1) {
+        for (let offset = -spotlightRadius; offset <= spotlightRadius; offset++) {
+          revealed.add(hoveredCharIndex + offset);
+        }
+      }
+
+      return revealed;
+    }
+
+    function updateVisualStates() {
+      const now = performance.now();
+      const revealedIndices = getActiveIndices();
+      const modeType = PRESETS[currentMode].type;
+      const warnWindowMs = Math.min(5000, decayMs * 0.25);
+
+      let activeCount = 0;
+      let redactedCount = 0;
+
+      for (let i = 0; i < charEntries.length; i++) {
+        const entry = charEntries[i];
+        const ch = entry.char;
+        if (ch === '\n') {
+          activeCount++;
+          continue;
+        }
+
+        const age = now - entry.createdAt;
+        const isExpired = modeType === 'ai' ? (age >= decayMs || !revealedIndices.has(i)) : (age >= decayMs);
+        const isNearExpiry = !isExpired && age >= (decayMs - warnWindowMs);
+        const isUnderCursor = revealedIndices.has(i);
+
+        const span = entry.span;
+
+        if (isExpired && !isUnderCursor) {
+          span.classList.add('censored');
+          span.classList.remove('revealed', 'fading');
+          redactedCount++;
+        } else if (isExpired && isUnderCursor) {
+          span.classList.remove('censored', 'fading');
+          span.classList.add('revealed');
+          activeCount++;
+        } else {
+          span.classList.remove('censored', 'revealed');
+          if (isNearExpiry) {
+            span.classList.add('fading');
+          } else {
+            span.classList.remove('fading');
+          }
+          activeCount++;
+        }
+      }
+
+      totalCharsEl.textContent = `${charEntries.length} ch`;
+      totalTokensEl.textContent = `(${formatTokens(charEntries.length)})`;
+      activeCharsEl.textContent = `${activeCount} ch`;
+      activeTokensEl.textContent = `(${formatTokens(activeCount)})`;
+      redactedCharsEl.textContent = `${redactedCount} ch`;
+      redactedTokensEl.textContent = `(${formatTokens(redactedCount)})`;
+
+      if (isInputFocused) {
+        const s = inputArea.selectionStart;
+        const e = inputArea.selectionEnd;
+        cursorPosEl.textContent = s === e ? `${s}` : `${s}–${e}`;
+      } else if (hoveredCharIndex !== -1) {
+        cursorPosEl.textContent = `hover @ ${hoveredCharIndex}`;
+      } else {
+        cursorPosEl.textContent = 'none';
+      }
+    }
+
+    const RAW_THOUGHT_TEXT =
+`This is what I'm dealing with here with my memory, this is what it's like trying to hold a train of thought in my mind, but it's like I can remember only what I just wrote as I write it
+Then how absolutely scared would you be to post anything you've written when you can hardly remember what you've just wrote. 
+
+How terrified would you be when you can only hold a train of thought at a time, and after you've reached the conclusion you've forgotten the journey
+
+How scared would you be that you said something wrong since you don't know what you just said. You only know that you did travel on that train, so you have to trust that however you got there makes sense.
+
+You can try reading what you've typed, but then you still forget what you've read in the next few moments, then if you need to ride the train again and investigate to make sure what you wrote makes sense, so you need to read it over and over again and hours and days go by. By this point I don't remember what I wrote one or two sentences ago
+
+So of course that leads me to over-explain like I'm doing here with this tool, where I made the worst text field imaginable that's completely useless for anything except the words in the moment, and that's my mind, this text box is a representation of my mind. If you stop reading and the black catches up that represents you lose the train of thought so you just forget everything -the topic and what you were talking about- so if I don't type what I've thought then it's likely I'll forget in the next 5-30s or if I consider another aspect of an idea or other part of a concept
+
+Which leads to accusations of being an autoregressive transformer, an AI model or my words being called AI slop, which isn't too far off considering that LLM's are a fantastic memory loss simulator that forgets everything after every prompt and has to re-read the conversation to continue.
+
+I'm not too sure if its a compliment to AI devs or an insult to myself that an AI model can achieve what I can naturally output and typically be more coherent. In fact I'd started off using AI to translate myself because of this fact but people hate — proper formatting — and often refuse to read
+
+So I end up writing a lot to explain myself to myself and to others, to pre-empt the debate because I use non-standard words
+
+My words are not your words. 
+
+My definitions are not your definitions. 
+
+You relate things to what you know, I relate to what I understand, you relate my words to things you think you know and I understand things completely differently to you or anyone else, so if I speak about a concept I'm talking from a completely different point of view - like anyone else. I don't even see things by their physical matter but their informational uses and relations
+
+It's insane when trying to share information from my perspective, from my understanding of everything I've spend every day for over a year, every single day working from morning until early morning researching and developing with this memory because I cannot stop trying to build a better day, to try and build tools for people to use to discern information, to understand, to win elections, to fight against selfish powerful anti-egalitarian children like Trump. 
+But people seem more content to fight the quality and length of my words over the content. A week long research spree is not 'masters and diplomas' and doesn't afford much attention in this era, for who can define everything in that time. 
+Trying to do the research and work in the first place is maddening enough, if it wasn't for AI I'd be left within this tiny context window floating along the screen, ingesting and forgetting information, like this text box being utterly useless for anything than a tool in the moment. To be a demonstration of why short term memory loss is awful and to help people relate to AI. At least AI's context window is the entire chat, but if you consider each character to be 50,000 tokens then you can see AI being similar to me
+
+It just hurts being handwaved away as "AI slop". Even though I know it's because people don't understand, they don't want to understand, they want to drink "What works" water and not "What's better". 
+
+They want to impose their definitions upon mine because they don't want to pay their time to learn a new language, a new interpretation of what symbols and words mean. 
+
+I grew up speaking english but I feel like a foreigner because the way I use my words is apparently so different it's like I'm speaking another language, because I am, I am speaking 'me', you speak 'you'
+
+Learning any system like Kant, Plato, Marx, Deleuze, Aristotle, is to learn both the language they speak, the contextual references and the relations betweens the symbols they use and the implied meanings. 
+To use programming terms. For Dictionary English, You.English != Me.English != Others.English
+
+So no, I could only dream of being an autoregressive transformer, my memory would be many times better
+
+If you think this text box is bad then speak it out loud in person then talk about some topic earlier on, to talk to anyone is to rely on their memory.
+
+One of the worst parts of Man is the imposition of definitions and the expectation of singular conformity as opposed to dynamic flexibility. 
+Even worse is forgetting that words are an effective algebra for meaning, that a word_a.. * word_b.. / word_c.. = intent, or actions->effect/context, that a word is a packet of structured information so refusing to read and decrying information while bragging one has refused to read is like complaining a 256k screen is broken when it's not even plugged in, then throwing away something that doesn't exist in reality yet because you refused to understand it 
+
+Truly the worst is when one is talking about the same intent but uses different words in a different combination, no matter however, it's all mappable but few are willing to translate
+
+I do sincerely apologize, I don't know what other words to use aside from this nonsensical extended vocabulary because I can only use whatever words falls in my head, remembering words to use that match my intent is hard enough
+
+When you're trying to explain a concept you have to hold multiple fragments of the idea, each idea has way that it was reached, so you have to remember the concept, the ideas comprising it and the methods, or how the idea was reached. Without recording information it will be forgotten, but to explain a concept you have to explain the ideas behind it, and to explain the ideas you have to explain how you reached them
+
+Imagine, this is my mind, try repeating what I thought after thinking about it, it's why everythings so messy and why I use AI. I thought what I'd do is I'd borrow a machine's hands so my thoughts don't die in the dark.
+
+Now that you've read up to here and you can't see where we started or how we got here, how confident are you to copy-paste this on social media and back it up when confronted over anything`;
+
+    const TRANSLATED_THOUGHT_TEXT =
+`This text box is a live simulation of my working memory.
+
+I can only see the thought I am writing in the exact moment I write it. Within 5 to 30 seconds—or the instant I shift focus to a new angle—everything behind me goes dark.
+
+Imagine how terrifying it is to publish anything when you can reach a conclusion, know you rode the train of thought to get there, and have already forgotten the journey. If I go back to check my own reasoning, the sentences I just verified fade before I reach the end of the paragraph. Hours turn into days just re-reading my own trail.
+
+That is why I write at length and over-explain: I am leaving breadcrumbs for myself as much as for you. People call my raw writing "autoregressive" or "AI slop," which is ironic—an LLM forgets everything between prompts and has to re-read the whole transcript to continue. Honestly, I wish I had an AI's context window; my memory would be many times larger. When I use AI to clean up my writing, people complain about the formatting; when I write raw, they complain about the length and vocabulary.
+
+I don't perceive things as static objects; I see them by their informational relations:
+word_a * word_b / word_c = intent (Action -> Effect / Context).
+Words are algebra for meaning. Dismissing someone's work because they use non-standard words—or bragging that you refused to read it—is like complaining a monitor is broken when you haven't plugged it in.
+
+Explaining any new concept requires holding three things at once: the concept, the component ideas, and the path used to reach them. Without externalizing all three immediately, they vanish into the dark.
+
+Look back up at the top of this box. You can't see where we started or how we got here. Now ask yourself: how confident would you feel posting this online and defending every line when challenged?`;
+
+    const AI_HANDS_TEXT =
+`I thought what I'd do is I'd borrow a machine's hands so my thoughts don't die in the dark.`;
+
+    loadAiHandsBtn.addEventListener('click', () => {
+      if (typingRaf && activeStreamSource === 'ai_hands') {
+        stopTypewriter();
+        return;
+      }
+
+      inputArea.value = '';
+      renderLayer.innerHTML = '';
+      charEntries = [];
+      updateVisualStates();
+
+      inputArea.focus();
+      startTypewriterStream(AI_HANDS_TEXT, 0, 'ai_hands');
+      loadAiHandsBtn.textContent = '⏹ Stop Stream';
+    });
+
+    loadRawBtn.addEventListener('click', () => {
+      if (typingRaf && activeStreamSource === 'raw') {
+        stopTypewriter();
+        return;
+      }
+
+      inputArea.value = '';
+      renderLayer.innerHTML = '';
+      charEntries = [];
+      updateVisualStates();
+
+      inputArea.focus();
+      startTypewriterStream(RAW_THOUGHT_TEXT, 0, 'raw');
+      loadRawBtn.textContent = '⏹ Stop Raw Stream';
+    });
+
+    loadTranslatedBtn.addEventListener('click', () => {
+      if (typingRaf && activeStreamSource === 'translated') {
+        stopTypewriter();
+        return;
+      }
+
+      inputArea.value = '';
+      renderLayer.innerHTML = '';
+      charEntries = [];
+      updateVisualStates();
+
+      inputArea.focus();
+      startTypewriterStream(TRANSLATED_THOUGHT_TEXT, 0, 'translated');
+      loadTranslatedBtn.textContent = '⏹ Stop Translated Stream';
+    });
+
+    clearBtn.addEventListener('click', () => {
+      stopTypewriter();
+      inputArea.value = '';
+      renderLayer.innerHTML = '';
+      charEntries = [];
+      inputArea.focus();
+      updateVisualStates();
+    });
+
+    // Auto-stream the AI Hands quote on initial load
+    window.addEventListener('DOMContentLoaded', () => {
+      inputArea.focus();
+      startTypewriterStream(AI_HANDS_TEXT, 0, 'ai_hands');
+      loadAiHandsBtn.textContent = '⏹ Stop Stream';
+    });
+
+    // Tick every 100ms for smooth per-character expiration
+    setInterval(updateVisualStates, 100);
+  </script>
+</body>
+</html>

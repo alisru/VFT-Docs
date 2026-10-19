@@ -270,6 +270,30 @@
       "Aletheia",
       "Ukraine",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Russian Armed Forces",
+        "role": "instigator",
+        "sub_u": -0.95,
+        "sub_psi": -0.98,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Coca-Cola Company",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
     ]
   }
 ]

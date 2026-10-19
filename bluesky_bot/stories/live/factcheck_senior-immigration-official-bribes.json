@@ -144,6 +144,30 @@
       "Aletheia",
       "Immigration",
       "Corruption"
+    ],
+    "actor_roles": [
+      {
+        "name": "Lukman Owolabi Ganiyu",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Adeniyi Akeem Somoye",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.75,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "USCIS",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      }
     ]
   }
 ]

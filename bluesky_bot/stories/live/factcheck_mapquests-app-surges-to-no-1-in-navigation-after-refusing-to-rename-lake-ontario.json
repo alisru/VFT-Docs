@@ -143,6 +143,23 @@
       "Aletheia",
       "MapQuest",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "MapQuest",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "System1",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
     ]
   }
 ]

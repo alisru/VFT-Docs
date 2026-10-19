@@ -99,6 +99,24 @@
       "CyberSecurity",
       "Google"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "Mandiant",
+        "role": "instigator"
+      },
+      {
+        "name": "Shane Huntley",
+        "role": "instigator"
+      },
+      {
+        "name": "John Hultquist",
+        "role": "instigator"
+      }
+    ]
   }
 ]

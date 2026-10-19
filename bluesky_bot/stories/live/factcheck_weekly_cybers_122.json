@@ -76,6 +76,28 @@
       "Aletheia",
       "TechPolicy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Keir Starmer",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

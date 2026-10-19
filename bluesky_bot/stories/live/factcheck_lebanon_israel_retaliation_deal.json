@@ -75,6 +75,32 @@
     "tags": [
       "MiddleEast"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Itamar Ben Gvir",
+        "role": "instigator"
+      },
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "instigator"
+      },
+      {
+        "name": "Hezbollah",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "Lebanon",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

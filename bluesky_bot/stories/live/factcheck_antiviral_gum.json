@@ -249,6 +249,19 @@
       "Health",
       "Science"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "University of Pennsylvania",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Henry Daniell",
+        "role": "instigator"
+      }
+    ]
   }
 ]

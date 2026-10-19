@@ -252,6 +252,31 @@
       "VAD",
       "HumanRights"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Sandra Sarantou",
+        "role": "instigator",
+        "sub_u": 1.5,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Kate Chaney",
+        "role": "instigator"
+      },
+      {
+        "name": "Sarah Hanson-Young",
+        "role": "instigator"
+      },
+      {
+        "name": "Labor Party",
+        "role": "instigator"
+      }
+    ]
   }
 ]

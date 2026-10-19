@@ -73,6 +73,20 @@
       "Aletheia",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator"
+      },
+      {
+        "name": "Brian Merchant",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -143,6 +143,26 @@
       "Aletheia",
       "Tesla",
       "Autopilot"
+    ],
+    "actor_roles": [
+      {
+        "name": "Tesla",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "NHTSA",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      }
     ]
   }
 ]

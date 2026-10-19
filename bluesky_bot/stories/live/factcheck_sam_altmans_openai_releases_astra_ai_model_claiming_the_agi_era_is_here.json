@@ -197,6 +197,27 @@
     "tags": [
       "Aletheia",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Greg Brockman",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator"
+      }
     ]
   }
 ]

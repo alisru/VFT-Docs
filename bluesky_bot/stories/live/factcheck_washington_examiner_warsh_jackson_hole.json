@@ -143,6 +143,23 @@
       "Aletheia",
       "Finance",
       "Fed"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kevin Warsh",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Reserve",
+        "role": "instigator"
+      },
+      {
+        "name": "Washington Examiner",
+        "role": "instigator",
+        "sub_u": 0.15,
+        "sub_psi": 0.45,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

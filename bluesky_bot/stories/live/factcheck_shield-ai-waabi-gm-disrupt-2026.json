@@ -145,6 +145,27 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Shield AI",
+        "role": "instigator"
+      },
+      {
+        "name": "Waabi",
+        "role": "instigator"
+      },
+      {
+        "name": "General Motors",
+        "role": "instigator"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author",
+        "sub_u": -0.1,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

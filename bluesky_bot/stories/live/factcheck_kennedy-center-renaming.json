@@ -252,6 +252,31 @@
       "Culture",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Kennedy Center Board",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Joyce Beatty",
+        "role": "instigator"
+      },
+      {
+        "name": "Rick Larsen",
+        "role": "instigator"
+      },
+      {
+        "name": "Sheldon Whitehouse",
+        "role": "instigator"
+      }
+    ]
   }
 ]

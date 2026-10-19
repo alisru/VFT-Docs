@@ -137,6 +137,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Washington Examiner",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Republican Party",
+        "role": "instigator"
+      }
     ]
   }
 ]

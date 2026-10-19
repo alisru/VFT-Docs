@@ -63,6 +63,20 @@
     "category": "general",
     "topic": "UAP",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States Department of Defense",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Bureau of Investigation",
+        "role": "author"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -263,6 +263,23 @@
     "tags": [
       "Aletheia",
       "IndustrialRelations"
+    ],
+    "actor_roles": [
+      {
+        "name": "Northern Territory Government",
+        "role": "instigator"
+      },
+      {
+        "name": "United Workers Union Northern Territory",
+        "role": "acted_upon",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Fair Work Commission",
+        "role": "regulator"
+      }
     ]
   }
 ]

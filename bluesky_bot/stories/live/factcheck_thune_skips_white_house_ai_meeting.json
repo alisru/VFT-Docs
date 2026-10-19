@@ -146,6 +146,23 @@
       "Aletheia",
       "USPol",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "John Thune",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Mike Johnson",
+        "role": "instigator"
+      }
     ]
   }
 ]

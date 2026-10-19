@@ -141,6 +141,27 @@
     "tags": [
       "Aletheia",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Australia",
+        "role": "context",
+        "sub_u": 0.1,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -101,6 +101,24 @@
     ],
     "policies": [
       "Immigration Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "ICE",
+        "role": "instigator"
+      },
+      {
+        "name": "Public Citizen",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "United States Department of Homeland Security",
+        "role": "instigator"
+      }
     ]
   }
 ]

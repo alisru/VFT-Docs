@@ -99,6 +99,20 @@
       "ThamesWater",
       "UKNews"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Thames Water",
+        "role": "instigator"
+      },
+      {
+        "name": "Chris Weston",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

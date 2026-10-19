@@ -99,6 +99,20 @@
       "TechNews",
       "Hardware"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Apple",
+        "role": "instigator"
+      },
+      {
+        "name": "Work Louder",
+        "role": "instigator"
+      }
+    ]
   }
 ]

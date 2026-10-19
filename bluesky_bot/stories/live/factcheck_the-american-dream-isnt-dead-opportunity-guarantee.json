@@ -196,6 +196,26 @@
     "tags": [
       "Aletheia",
       "Culture"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gallup",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "AP-NORC",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "American Public",
+        "role": "instigator"
+      }
     ]
   }
 ]

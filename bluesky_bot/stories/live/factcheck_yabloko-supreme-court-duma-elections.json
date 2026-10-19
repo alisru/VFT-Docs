@@ -254,6 +254,31 @@
     ],
     "policies": [
       "Judicial Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Russian Supreme Court",
+        "role": "instigator",
+        "sub_u": -1.9,
+        "sub_psi": -1.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Yabloko",
+        "role": "instigator"
+      },
+      {
+        "name": "Vladimir Putin",
+        "role": "instigator"
+      },
+      {
+        "name": "Alexey Zhuravlyov",
+        "role": "instigator"
+      },
+      {
+        "name": "Yulia Navalnaya",
+        "role": "instigator"
+      }
     ]
   }
 ]

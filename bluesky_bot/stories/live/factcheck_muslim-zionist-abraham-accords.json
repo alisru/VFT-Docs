@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "MiddleEast"
+    ],
+    "actor_roles": [
+      {
+        "name": "Abraham Accords",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "United Arab Emirates",
+        "role": "instigator"
+      },
+      {
+        "name": "Bahrain",
+        "role": "instigator"
+      }
     ]
   }
 ]

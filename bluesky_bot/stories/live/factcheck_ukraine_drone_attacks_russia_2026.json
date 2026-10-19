@@ -251,6 +251,27 @@
     "tags": [
       "Aletheia",
       "UkraineRussiaWar"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator"
+      },
+      {
+        "name": "Sergei Sobyanin",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -66,6 +66,20 @@
     "policies": [
       "NDIS",
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Aurora Healthcare",
+        "role": "instigator"
+      },
+      {
+        "name": "Queensland Health",
+        "role": "instigator"
+      },
+      {
+        "name": "NDIS",
+        "role": "instigator"
+      }
     ]
   }
 ]

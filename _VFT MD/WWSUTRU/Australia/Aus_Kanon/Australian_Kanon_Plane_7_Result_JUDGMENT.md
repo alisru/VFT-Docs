@@ -11,7 +11,7 @@
 
 | Vector | Entry | υ (Morality) | ψ (Will) | Judgment |
 |--------|-------|--------------|----------|----------|
-| Effect.Who.Who | **The Quiet Australian** | +0.3 | -0.4 | **Lesser Good** — Conformity that enables stability (+υ) but passivity (-ψ) limits progress. The "quiet" is comfortable withdrawal, not active virtue. |
+| Effect.Who.Who | **The Quiet Australian** | -0.4 | -0.5 | **Greater Evil** — Suburban voter (-υ) withdrawing into private tax shields (-ψ) at expense of public equity. Protection Trap. |
 | Effect.Who.What | **The Multicultural Citizen** | +0.8 | +0.5 | **Greater Good** — Universal inclusion (+υ) achieved through active dismantling of exclusion (+ψ). Plurality is virtuous expansion. |
 | Effect.Who.Where | **The Coastal Dweller** | +0.2 | -0.3 | **Lesser Good** — Describes geographic fact, not moral choice. Slight positive as concentration enables infrastructure. |
 | Effect.Who.Why | **The Aspirational** | -0.4 | +0.7 | **Greatest Lie** — High proactive will (+ψ) directed toward self-enrichment (-υ). "Getting ahead" is competitive extraction dressed as virtue. |
@@ -26,7 +26,7 @@
 | Vector | Entry | υ (Morality) | ψ (Will) | Judgment |
 |--------|-------|--------------|----------|----------|
 | Effect.Where.Who | **The Australian Diaspora** | +0.4 | +0.5 | **Good** — Soft power ambassadors (+υ) actively carrying values abroad (+ψ). Network of influence. |
-| Effect.Where.What | **The Commodity** | -0.3 | +0.6 | **Greatest Lie** — Active extraction (+ψ) that exports wealth exclusively (-υ). "Quarry of the World" serves buyers, not citizens. |
+| Effect.Where.What | **The Commodity** | -0.8 | +1.1 | **Greatest Lie** — Hyper-active non-renewable extraction (+ψ) exporting wealth exclusively to multinational interests (-υ). |
 | Effect.Where.Where | **The Alliance** | -0.2 | -0.5 | **Greater Evil** — Dependence (-υ too narrow) achieved through passive subordination (-ψ). Strategic servitude to Washington. |
 | Effect.Where.Why | **The Middle Power** | +0.7 | +0.5 | **Greater Good** — Brokerage serves universal peace (+υ) through active diplomacy (+ψ). Punching above weight for good. |
 | Effect.Where.How | **Soft Power** | +0.6 | +0.3 | **Good** — Attraction (+υ) through passive appeal (-ψ tending toward neutral). Seduction, not coercion. |
@@ -39,7 +39,7 @@
 
 | Vector | Entry | υ (Morality) | ψ (Will) | Judgment |
 |--------|-------|--------------|----------|----------|
-| Effect.What.Who | **The Home Owner** | -0.2 | +0.5 | **Greatest Lie** — Individual accumulation (-υ) framed as universal dream. Property is hoarded, not shared. |
+| Effect.What.Who | **The Home Owner** | -0.6 | +0.7 | **Greatest Lie** — Leveraged asset hoarding (+ψ) disguised as a universal dream (-υ). Intergenerational wealth extraction. |
 | Effect.What.What | **The Superannuation Balance** | +0.7 | +0.6 | **Greater Good** — Collective security (+υ) achieved through active policy (+ψ). Deferred Fair Go. |
 | Effect.What.Where | **The University Sector** | +0.3 | +0.5 | **Good** — Knowledge export (+υ) but revenue motive dilutes virtue. Commodified education. |
 | Effect.What.Why | **The Medicare Card** | +0.9 | +0.5 | **Greater Good** — Universal health (+υ) through active state provision (+ψ). Material Fair Go. |
@@ -100,7 +100,7 @@
 | Effect.Effect.Where | **Girt By Sea** | +0.4 | -0.3 | **Lesser Good** — Protection (+υ) through passive geography (-ψ). Moat given, not built. |
 | Effect.Effect.Why | **The Second Chance** | +0.8 | +0.5 | **Greater Good** — Hope (+υ) offered to arrivals (+ψ). Redemption mythology. |
 | Effect.Effect.Why | **Dispossession [First Nations Perspective]** | -0.8 | -0.7 | **Greater Evil** — Cost extracted from innocents (-υ) through violent suppression (-ψ). The shadow. |
-| Effect.Effect.How | **She'll Be Right** | +0.3 | -0.5 | **Lesser Good** — Resilience (+υ) through passive acceptance (-ψ). Complacency risk. |
+| Effect.Effect.How | **She'll Be Right** | -0.3 | -0.7 | **Greater Evil** — National complacency (-υ) allowing infrastructure and social compacts to decay (-ψ). |
 | Effect.Effect.Cause | **The Land** | +0.7 | -0.3 | **Lesser Good** — Gift inherited (+υ) requiring passive gratitude (-ψ). We just showed up. |
 | Effect.Effect.Effect | **Australia** | +0.6 | +0.4 | **Good** — The sum total. A net positive experiment, flawed but hopeful. |
 

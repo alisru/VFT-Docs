@@ -98,6 +98,20 @@
       "Environment",
       "Amazon"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "France",
+        "role": "context"
+      },
+      {
+        "name": "Monique Barbut",
+        "role": "instigator"
+      },
+      {
+        "name": "French Guiana",
+        "role": "instigator"
+      }
+    ]
   }
 ]

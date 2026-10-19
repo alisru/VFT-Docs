@@ -251,6 +251,27 @@
     "tags": [
       "Lebanon",
       "Hezbollah"
+    ],
+    "actor_roles": [
+      {
+        "name": "Hezbollah",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Sheikh Naim Qassem",
+        "role": "instigator"
+      },
+      {
+        "name": "Lebanese Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
     ]
   }
 ]

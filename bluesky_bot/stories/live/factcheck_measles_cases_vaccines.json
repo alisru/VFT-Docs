@@ -145,6 +145,31 @@
       "Aletheia",
       "PublicHealth",
       "Vaccines"
+    ],
+    "actor_roles": [
+      {
+        "name": "Robert F. Kennedy Jr.",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Centers for Disease Control and Prevention",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Health and Human Services",
+        "role": "instigator"
+      },
+      {
+        "name": "ProPublica",
+        "role": "author",
+        "sub_u": 0.9,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

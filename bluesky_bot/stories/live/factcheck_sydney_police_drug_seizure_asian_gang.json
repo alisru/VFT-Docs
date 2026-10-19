@@ -98,6 +98,16 @@
       "Sydney",
       "Crime"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "New South Wales Police Force",
+        "role": "instigator"
+      },
+      {
+        "name": "Sydney",
+        "role": "context"
+      }
+    ]
   }
 ]

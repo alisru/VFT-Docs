@@ -97,6 +97,16 @@
       "Climate",
       "Australia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Bureau of Meteorology",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

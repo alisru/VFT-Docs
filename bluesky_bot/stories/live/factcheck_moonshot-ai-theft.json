@@ -100,6 +100,28 @@
       "Aletheia",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Moonshot AI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      }
+    ]
   }
 ]

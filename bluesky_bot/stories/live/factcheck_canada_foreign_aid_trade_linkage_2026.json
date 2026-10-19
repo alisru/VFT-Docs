@@ -252,6 +252,26 @@
     ],
     "policies": [
       "Foreign Aid"
+    ],
+    "actor_roles": [
+      {
+        "name": "Carney Government",
+        "role": "instigator",
+        "sub_u": -0.45,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Canada",
+        "role": "context",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Results Canada",
+        "role": "instigator"
+      }
     ]
   }
 ]

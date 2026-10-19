@@ -250,6 +250,23 @@
       "Aletheia",
       "History"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Elvis Presley",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Viola Davis",
+        "role": "instigator"
+      },
+      {
+        "name": "Leo Fender",
+        "role": "instigator"
+      }
+    ]
   }
 ]

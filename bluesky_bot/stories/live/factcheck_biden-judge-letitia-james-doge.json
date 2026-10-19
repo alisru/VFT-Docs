@@ -145,6 +145,27 @@
       "Aletheia",
       "USPol",
       "Law"
+    ],
+    "actor_roles": [
+      {
+        "name": "Letitia James",
+        "role": "instigator"
+      },
+      {
+        "name": "Jeannette Vargas",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Fox News",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

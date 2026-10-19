@@ -249,6 +249,19 @@
       "MentalHealth",
       "MattHaig"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Matt Haig",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Andrea Haig",
+        "role": "instigator"
+      }
+    ]
   }
 ]

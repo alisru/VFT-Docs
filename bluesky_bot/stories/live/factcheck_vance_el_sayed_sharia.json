@@ -263,6 +263,30 @@
       "Aletheia",
       "USPol",
       "Midterms"
+    ],
+    "actor_roles": [
+      {
+        "name": "JD Vance",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Abdul El-Sayed",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Republican Party",
+        "role": "instigator"
+      }
     ]
   }
 ]

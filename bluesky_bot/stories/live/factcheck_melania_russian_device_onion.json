@@ -178,6 +178,23 @@
       "TheOnion",
       "Satire"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Melania Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "The Onion",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "National Security Agency",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -147,6 +147,27 @@
       "Aletheia",
       "USPol",
       "MAHA"
+    ],
+    "actor_roles": [
+      {
+        "name": "Robert F. Kennedy Jr.",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Department of Health and Human Services",
+        "role": "instigator"
+      },
+      {
+        "name": "KFF",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

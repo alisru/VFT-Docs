@@ -145,6 +145,23 @@
       "Aletheia",
       "Legal",
       "SCOTUS"
+    ],
+    "actor_roles": [
+      {
+        "name": "John Eastman",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.65,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "State Bar of California",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Supreme Court",
+        "role": "regulator"
+      }
     ]
   }
 ]

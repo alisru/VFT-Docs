@@ -102,6 +102,24 @@
     "policies": [
       "Trade Tariffs",
       "Trade Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      },
+      {
+        "name": "Mexico",
+        "role": "instigator"
+      },
+      {
+        "name": "USMCA",
+        "role": "instigator"
+      }
     ]
   }
 ]

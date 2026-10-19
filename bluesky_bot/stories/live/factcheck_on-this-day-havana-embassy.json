@@ -250,6 +250,23 @@
     "tags": [
       "History",
       "Diplomacy"
+    ],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Cuba",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Barack Obama",
+        "role": "instigator"
+      }
     ]
   }
 ]

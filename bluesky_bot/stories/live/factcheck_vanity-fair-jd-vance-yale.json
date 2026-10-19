@@ -144,6 +144,34 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "JD Vance",
+        "role": "instigator"
+      },
+      {
+        "name": "Chris Whipple",
+        "role": "instigator"
+      },
+      {
+        "name": "Leila Fadel",
+        "role": "instigator"
+      },
+      {
+        "name": "NPR",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Vanity Fair",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

@@ -144,6 +144,26 @@
       "Aletheia",
       "Scams",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Victoria Police",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Mandarin-speaking community",
+        "role": "instigator"
+      },
+      {
+        "name": "Cybercriminals",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

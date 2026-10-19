@@ -261,6 +261,23 @@
     "tags": [
       "Geopolitics",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "US State Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Chinese Embassy",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": 0.4,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Dominican Republic",
+        "role": "instigator"
+      }
     ]
   }
 ]

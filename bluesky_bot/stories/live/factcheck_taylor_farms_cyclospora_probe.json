@@ -251,6 +251,27 @@
     "tags": [
       "FoodSafety",
       "PublicHealth"
+    ],
+    "actor_roles": [
+      {
+        "name": "Taylor Farms",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Food and Drug Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "Centers for Disease Control and Prevention",
+        "role": "instigator"
+      },
+      {
+        "name": "Robert Garcia",
+        "role": "instigator"
+      }
     ]
   }
 ]

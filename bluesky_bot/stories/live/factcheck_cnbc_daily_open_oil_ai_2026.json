@@ -254,6 +254,42 @@
       "Aletheia",
       "Markets"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Jensen Huang",
+        "role": "instigator"
+      },
+      {
+        "name": "Mark Zuckerberg",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      }
+    ]
   }
 ]

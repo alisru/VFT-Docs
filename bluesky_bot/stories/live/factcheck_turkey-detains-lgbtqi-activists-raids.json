@@ -144,6 +144,30 @@
       "Aletheia",
       "Turkey",
       "HumanRights"
+    ],
+    "actor_roles": [
+      {
+        "name": "Recep Tayyip Erdogan",
+        "role": "instigator"
+      },
+      {
+        "name": "Turkish Government",
+        "role": "instigator",
+        "sub_u": -0.95,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Turkish Human Rights Association",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Kaos GL",
+        "role": "instigator"
+      }
     ]
   }
 ]

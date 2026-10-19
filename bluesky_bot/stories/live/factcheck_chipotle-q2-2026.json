@@ -97,6 +97,16 @@
       "Chipotle",
       "FoodSafety"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Chipotle Mexican Grill",
+        "role": "instigator"
+      },
+      {
+        "name": "Scott Boatwright",
+        "role": "instigator"
+      }
+    ]
   }
 ]

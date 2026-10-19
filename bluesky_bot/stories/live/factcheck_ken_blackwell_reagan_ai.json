@@ -145,6 +145,27 @@
       "Aletheia",
       "AI",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ken Blackwell",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Ronald Reagan",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
     ]
   }
 ]

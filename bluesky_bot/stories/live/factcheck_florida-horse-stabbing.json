@@ -250,6 +250,26 @@
       "AnimalCruelty",
       "Justice"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Shirley Zimmerley",
+        "role": "instigator",
+        "sub_u": -1.5,
+        "sub_psi": -1.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Wayne Ivey",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Brevard County Sheriff's Office",
+        "role": "instigator"
+      }
+    ]
   }
 ]

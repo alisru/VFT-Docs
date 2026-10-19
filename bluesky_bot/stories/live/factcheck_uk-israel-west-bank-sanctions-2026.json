@@ -143,6 +143,23 @@
       "Geopolitics",
       "UK",
       "Israel"
+    ],
+    "actor_roles": [
+      {
+        "name": "UK Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Ed Miliband",
+        "role": "instigator"
+      },
+      {
+        "name": "Israeli Government",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

@@ -126,6 +126,35 @@
     "tags": [
       "Aletheia",
       "USPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "The Federalist",
+        "role": "instigator",
+        "sub_u": -0.83,
+        "sub_psi": -0.92,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Legacy Media",
+        "role": "instigator"
+      },
+      {
+        "name": "Republicans",
+        "role": "instigator"
+      },
+      {
+        "name": "John Cornyn",
+        "role": "instigator"
+      },
+      {
+        "name": "Politico",
+        "role": "author"
+      },
+      {
+        "name": "Gallup",
+        "role": "instigator"
+      }
     ]
   }
 ]

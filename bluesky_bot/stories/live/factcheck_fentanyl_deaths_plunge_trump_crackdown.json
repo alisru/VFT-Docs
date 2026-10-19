@@ -264,6 +264,34 @@
       "Aletheia",
       "Politics",
       "PublicHealth"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "ICE",
+        "role": "instigator"
+      },
+      {
+        "name": "CDC",
+        "role": "instigator",
+        "sub_u": 1.2,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "DHS",
+        "role": "instigator"
+      }
     ]
   }
 ]

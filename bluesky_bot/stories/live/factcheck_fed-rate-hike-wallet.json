@@ -143,6 +143,20 @@
       "Aletheia",
       "Economy",
       "Fed"
+    ],
+    "actor_roles": [
+      {
+        "name": "Federal Reserve",
+        "role": "instigator"
+      },
+      {
+        "name": "US Consumers",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Banking Sector",
+        "role": "instigator"
+      }
     ]
   }
 ]

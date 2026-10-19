@@ -134,6 +134,23 @@
     "tags": [
       "Aletheia",
       "JonesAct"
+    ],
+    "actor_roles": [
+      {
+        "name": "Washington Examiner",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Sean Duffy",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

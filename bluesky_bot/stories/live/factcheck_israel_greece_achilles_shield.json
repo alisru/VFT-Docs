@@ -145,6 +145,38 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Israel",
+        "role": "context",
+        "sub_u": 1.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Greece",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Turkey",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel Katz",
+        "role": "instigator"
+      },
+      {
+        "name": "Nikos Dendias",
+        "role": "instigator"
+      },
+      {
+        "name": "Amichai Chikli",
+        "role": "instigator"
+      }
     ]
   }
 ]

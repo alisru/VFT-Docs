@@ -142,6 +142,22 @@
       "Aletheia",
       "Spain",
       "Migration"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ceuta Residents",
+        "role": "acted_upon",
+        "sub_u": 0.5,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Spanish Government",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

@@ -75,6 +75,28 @@
       "Aletheia",
       "Ukraine"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Frontline Robotics",
+        "role": "instigator"
+      },
+      {
+        "name": "DevDroid",
+        "role": "instigator"
+      },
+      {
+        "name": "NATO",
+        "role": "instigator"
+      }
+    ]
   }
 ]

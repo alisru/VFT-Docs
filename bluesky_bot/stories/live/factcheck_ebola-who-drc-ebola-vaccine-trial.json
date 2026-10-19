@@ -251,6 +251,27 @@
       "GlobalHealth",
       "Ebola"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "World Health Organization",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Democratic Republic of the Congo",
+        "role": "instigator"
+      },
+      {
+        "name": "Tedros Adhanom Ghebreyesus",
+        "role": "instigator"
+      },
+      {
+        "name": "Merck",
+        "role": "instigator"
+      }
+    ]
   }
 ]

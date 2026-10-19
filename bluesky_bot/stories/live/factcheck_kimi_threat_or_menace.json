@@ -102,6 +102,32 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Moonshot AI",
+        "role": "instigator"
+      },
+      {
+        "name": "David Sacks",
+        "role": "instigator"
+      },
+      {
+        "name": "Travis Kalanick",
+        "role": "instigator"
+      },
+      {
+        "name": "Dean Ball",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

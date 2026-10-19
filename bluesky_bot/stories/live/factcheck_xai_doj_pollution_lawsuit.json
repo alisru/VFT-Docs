@@ -75,6 +75,28 @@
       "Aletheia",
       "Environment"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "xAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "NAACP",
+        "role": "instigator"
+      },
+      {
+        "name": "Pentagon",
+        "role": "instigator"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -133,6 +133,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "The Heritage Foundation",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "The White House",
+        "role": "instigator"
+      }
     ]
   }
 ]

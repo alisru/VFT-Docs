@@ -149,6 +149,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "The Federalist",
+        "role": "instigator",
+        "sub_u": -0.65,
+        "sub_psi": -0.75,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Rural Voters",
+        "role": "instigator"
+      }
     ]
   }
 ]

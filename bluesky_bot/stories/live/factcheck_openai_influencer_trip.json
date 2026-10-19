@@ -82,6 +82,20 @@
       "Aletheia",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Charles Porch",
+        "role": "instigator"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author"
+      }
+    ]
   }
 ]

@@ -166,6 +166,24 @@
     ],
     "policies": [
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Sergey Brin",
+        "role": "instigator"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "California",
+        "role": "context"
+      },
+      {
+        "name": "Gavin Newsom",
+        "role": "author"
+      }
     ]
   }
 ]

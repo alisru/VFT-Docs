@@ -253,6 +253,31 @@
       "Tech",
       "Finance"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nvidia",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Jensen Huang",
+        "role": "instigator"
+      },
+      {
+        "name": "BlackRock",
+        "role": "instigator"
+      },
+      {
+        "name": "Blackstone",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

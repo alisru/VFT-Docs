@@ -142,6 +142,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Tom Tiffany",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Leonard Boltz",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

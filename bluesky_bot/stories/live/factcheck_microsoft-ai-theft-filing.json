@@ -146,6 +146,38 @@
       "AI",
       "Copyright",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Microsoft",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "The New York Times",
+        "role": "author"
+      },
+      {
+        "name": "Brent Hecht",
+        "role": "instigator"
+      },
+      {
+        "name": "Satya Nadella",
+        "role": "instigator"
+      },
+      {
+        "name": "Nick Turley",
+        "role": "instigator"
+      }
     ]
   }
 ]

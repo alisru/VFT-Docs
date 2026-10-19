@@ -150,6 +150,26 @@
       "Tech",
       "AI",
       "Copyright"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Microsoft",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "The New York Times",
+        "role": "author"
+      }
     ]
   }
 ]

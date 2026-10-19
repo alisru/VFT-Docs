@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "VicPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ben Carroll",
+        "role": "instigator"
+      },
+      {
+        "name": "Jess Wilson",
+        "role": "instigator"
+      },
+      {
+        "name": "Victorian Labor Party",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Victorian Coalition",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.6,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

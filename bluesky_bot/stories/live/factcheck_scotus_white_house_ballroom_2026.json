@@ -200,6 +200,23 @@
       "Aletheia",
       "SCOTUS",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Supreme Court",
+        "role": "regulator",
+        "sub_u": 0.0,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "National Trust for Historic Preservation",
+        "role": "instigator"
+      }
     ]
   }
 ]

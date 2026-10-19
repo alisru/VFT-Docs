@@ -198,6 +198,30 @@
       "Aletheia",
       "USPol",
       "Manufacturing"
+    ],
+    "actor_roles": [
+      {
+        "name": "Haley Stevens",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

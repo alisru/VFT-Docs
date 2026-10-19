@@ -266,6 +266,31 @@
       "Aletheia",
       "SCOTUS",
       "VotingRights"
+    ],
+    "actor_roles": [
+      {
+        "name": "Supreme Court",
+        "role": "regulator",
+        "sub_u": 0.3,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Homeland Security",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Postal Service",
+        "role": "author"
+      },
+      {
+        "name": "League of Women Voters",
+        "role": "instigator"
+      }
     ]
   }
 ]

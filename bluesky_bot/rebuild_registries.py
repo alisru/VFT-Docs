@@ -45,7 +45,7 @@ def build_registry_entry(slug, cfg, authoritative_file, is_live=False):
         "graph_img": graph_img,
         "created_at": created_at,
     }
-    for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "category", "topic", "event",
+    for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "actor_roles", "category", "topic", "event",
               "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
               "grounding_url", "claim_rnet", "real_rnet", "claim_z", "real_z",
               "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
@@ -340,15 +340,27 @@ def rebuild_registries():
             print(f"Error reading {authoritative_file}: {e}")
             continue
 
-        # Auto-backfill missing/empty actors using the deterministic actor_extract utility
+        # Auto-backfill missing/empty actors & actor_roles using the deterministic actor_extract utility
+        needs_actor_save = False
         if "actors" not in cfg:
-            from actor_extract import extract_actors
-            inferred = extract_actors(cfg.get("subject", ""))
-            cfg["actors"] = inferred
+            from actor_extract import extract_actors, extract_actor_roles
+            roles = extract_actor_roles(cfg.get("subject", ""))
+            cfg["actor_roles"] = roles
+            cfg["actors"] = [r["name"] for r in roles]
+            needs_actor_save = True
+            print(f"Auto-tagged missing actors for {slug}: {cfg['actors']}")
+        elif "actor_roles" not in cfg:
+            from actor_extract import classify_actor_role
+            cfg["actor_roles"] = [
+                {"name": a, "role": classify_actor_role(a, cfg.get("subject", ""))}
+                for a in cfg.get("actors", [])
+            ]
+            needs_actor_save = True
+
+        if needs_actor_save:
             try:
                 with open(authoritative_file, "w", encoding="utf-8") as f:
                     json.dump(data, f, indent=2, ensure_ascii=False)
-                print(f"Auto-tagged missing actors for {slug}: {inferred}")
             except Exception as we:
                 print(f"Warning: Failed to write back auto-tagged actors to {authoritative_file}: {we}")
 
@@ -430,7 +442,7 @@ def rebuild_registries():
         }
         # CRITICAL WARNING: DO NOT remove "posts" or other metadata from this list to optimize file size.
         # The control panel UI relies entirely on "posts" to render the thread emulator.
-        for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "category", "topic", "event",
+        for k in ["target_url", "rkeys", "post_urls", "posts", "actors", "actor_roles", "category", "topic", "event",
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
                   "grounding_url", "claim_rnet", "real_rnet", "claim_z", "real_z",
                   "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",

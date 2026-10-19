@@ -76,6 +76,32 @@
       "Aletheia",
       "Privacy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Government of Canada",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Citizen Lab",
+        "role": "acted_upon"
+      },
+      {
+        "name": "CCLA",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Department of Homeland Security",
+        "role": "instigator"
+      }
+    ]
   }
 ]

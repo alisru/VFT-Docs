@@ -1,0 +1,380 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\auto_scribe_extension\scribe_content.js. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -355,240 +355,142 @@
+     if (document.visibilityState === 'hidden') handleFlush();
+   });
+ 
+-  /**
+-   * Floating Quick-Recovery Widget
+-   */
+-  function ensureFloatingWidget() {
+-    if (widgetContainer) return widgetContainer;
+-    if (!config.showFloatingWidget) return null;
+-
+-    const wrap = document.createElement('div');
+-    wrap.id = '__auto_scribe_floating_widget';
+-    wrap.style.cssText = `
++  // -----------------------------------------------------------------
++  // In-Input Status Indicator (Bottom-Left of active text entry box)
++  // Simple icon: Circle when saving, Tick when saved
++  // -----------------------------------------------------------------
++
++  function ensureStyles() {
++    if (document.getElementById('__auto_scribe_styles')) return;
++    const style = document.createElement('style');
++    style.id = '__auto_scribe_styles';
++    style.textContent = `
++      @keyframes scribe-spin {
++        0% { transform: rotate(0deg); }
++        100% { transform: rotate(360deg); }
++      }
++    `;
++    (document.head || document.documentElement).appendChild(style);
++  }
++
++  function ensureIndicator() {
++    if (indicatorEl && document.contains(indicatorEl)) return indicatorEl;
++    ensureStyles();
++
++    const el = document.createElement('div');
++    el.id = '__auto_scribe_field_indicator';
++    el.title = 'Auto-Scribe';
++    el.style.cssText = `
+       position: fixed;
+-      bottom: 24px;
+-      right: 24px;
+-      z-index: 2147483645;
+-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+-      display: none;
+-      align-items: center;
++      z-index: 2147483647;
++      display: none;
++      align-items: center;
++      justify-content: center;
++      width: 18px;
++      height: 18px;
++      border-radius: 50%;
++      background: rgba(15, 23, 42, 0.88);
++      border: 1px solid rgba(255, 255, 255, 0.18);
++      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
++      pointer-events: none;
++      transition: opacity 0.3s ease;
++      opacity: 0;
+       user-select: none;
+     `;
+-
+-    // Pill badge button
+-    const pill = document.createElement('button');
+-    pill.style.cssText = `
+-      display: flex;
+-      align-items: center;
+-      gap: 6px;
+-      background: #181b21;
+-      color: #e2e8f0;
+-      border: 1px solid #334155;
+-      padding: 6px 12px;
+-      border-radius: 20px;
+-      box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+-      cursor: pointer;
+-      font-size: 12px;
+-      font-weight: 500;
+-      transition: all 0.2s ease;
+-    `;
+-    pill.innerHTML = `
+-      <span style="font-size: 14px;">✍️</span>
+-      <span class="__scribe_label">Scribed</span>
+-      <span class="__scribe_count" style="background:#2563eb;color:#fff;padding:1px 6px;border-radius:10px;font-size:11px;">0</span>
+-    `;
+-
+-    pill.onmouseenter = () => { pill.style.borderColor = '#60a5fa'; pill.style.transform = 'translateY(-1px)'; };
+-    pill.onmouseleave = () => { pill.style.borderColor = '#334155'; pill.style.transform = 'translateY(0)'; };
+-
+-    // Recovery Drawer (Popup panel)
+-    const drawer = document.createElement('div');
+-    drawer.className = '__scribe_drawer';
+-    drawer.style.cssText = `
+-      position: absolute;
+-      bottom: 42px;
+-      right: 0;
+-      width: 320px;
+-      max-height: 420px;
+-      background: #14171d;
+-      border: 1px solid #2d3748;
+-      border-radius: 12px;
+-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+-      display: none;
+-      flex-direction: column;
+-      overflow: hidden;
+-      color: #cbd5e1;
+-    `;
+-
+-    drawer.innerHTML = `
+-      <div style="padding: 10px 14px; background: #1a202c; border-bottom: 1px solid #2d3748; display: flex; justify-content: space-between; align-items: center;">
+-        <span style="font-weight: 600; font-size: 13px; color: #f8fafc;">✍️ Auto-Scribe Recovery</span>
+-        <button class="__scribe_close_btn" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:16px;">✕</button>
+-      </div>
+-      <div class="__scribe_drawer_list" style="padding: 10px; overflow-y: auto; max-height: 300px; display: flex; flex-direction: column; gap: 8px;">
+-        <div style="color: #64748b; font-size: 12px; text-align: center; padding: 12px;">Loading recent drafts...</div>
+-      </div>
+-      <div style="padding: 8px 12px; background: #161a22; border-top: 1px solid #2d3748; display: flex; justify-content: space-between;">
+-        <button class="__scribe_open_dash" style="background:#2563eb;color:#fff;border:none;padding:5px 10px;border-radius:6px;font-size:11px;cursor:pointer;font-weight:500;">Open Dashboard ↗</button>
+-        <span style="font-size: 11px; color: #64748b; align-self: center;">Saved to Disk & Browser</span>
+-      </div>
+-    `;
+-
+-    pill.onclick = (e) => {
+-      e.stopPropagation();
+-      const isVisible = drawer.style.display === 'flex';
+-      drawer.style.display = isVisible ? 'none' : 'flex';
+-      if (!isVisible) loadDrawerDrafts(drawer);
+-    };
+-
+-    drawer.querySelector('.__scribe_close_btn').onclick = (e) => {
+-      e.stopPropagation();
+-      drawer.style.display = 'none';
+-    };
+-
+-    drawer.querySelector('.__scribe_open_dash').onclick = () => {
+-      try {
+-        chrome.runtime.sendMessage({ action: 'OPEN_DASHBOARD' });
+-      } catch (err) {}
+-    };
+-
+-    wrap.appendChild(drawer);
+-    wrap.appendChild(pill);
+-    document.body.appendChild(wrap);
+-    widgetContainer = wrap;
+-
+-    // Close on outside click
+-    document.addEventListener('click', (e) => {
+-      if (!wrap.contains(e.target)) {
+-        drawer.style.display = 'none';
+-      }
+-    });
+-
+-    return wrap;
+-  }
+-
+-  function updateFloatingBadge(charCount, isSaved) {
+-    if (!config.showFloatingWidget) return;
+-    const wrap = ensureFloatingWidget();
+-    if (!wrap) return;
+-
+-    wrap.style.display = 'flex';
+-    const countEl = wrap.querySelector('.__scribe_count');
+-    const labelEl = wrap.querySelector('.__scribe_label');
+-    if (countEl) countEl.textContent = `${charCount}c`;
+-    if (labelEl) labelEl.textContent = isSaved ? 'Saved ✓' : 'Scribing...';
+-    if (labelEl) labelEl.style.color = isSaved ? '#4ade80' : '#93c5fd';
+-  }
+-
+-  function hideFloatingBadge() {
+-    if (widgetContainer) {
+-      widgetContainer.style.display = 'none';
+-    }
+-  }
+-
+-  function loadDrawerDrafts(drawer) {
+-    const list = drawer.querySelector('.__scribe_drawer_list');
+-    list.innerHTML = '<div style="color: #64748b; font-size: 12px; text-align: center; padding: 12px;">Loading...</div>';
+-
+-    chrome.runtime.sendMessage({ action: 'GET_DRAFTS' }, (res) => {
+-      if (chrome.runtime.lastError || !res || !res.drafts) {
+-        list.innerHTML = '<div style="color: #94a3b8; font-size: 12px; text-align: center; padding: 12px;">No drafts found.</div>';
+-        return;
+-      }
+-
+-      // Filter drafts for current site or url
+-      const siteDrafts = res.drafts.filter(d => d.site === currentHost).slice(0, 5);
+-
+-      if (siteDrafts.length === 0) {
+-        list.innerHTML = '<div style="color: #94a3b8; font-size: 12px; text-align: center; padding: 12px;">No drafts yet on this site.</div>';
+-        return;
+-      }
+-
+-      list.innerHTML = '';
+-      siteDrafts.forEach(d => {
+-        const item = document.createElement('div');
+-        item.style.cssText = `
+-          background: #1e2430;
+-          border: 1px solid #334155;
+-          border-radius: 6px;
+-          padding: 8px 10px;
+-          font-size: 12px;
+-          display: flex;
+-          flex-direction: column;
+-          gap: 4px;
+-        `;
+-
+-        const titleText = d.context_title || d.page_title || 'Untitled Draft';
+-        const preview = d.text ? d.text.slice(0, 100) + (d.text.length > 100 ? '...' : '') : '';
+-        const timeAgo = formatTimeAgo(d.updated_at);
+-
+-        item.innerHTML = `
+-          <div style="display:flex;justify-content:space-between;align-items:center;">
+-            <strong style="color:#f1f5f9;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:180px;">${escapeHtml(titleText)}</strong>
+-            <span style="color:#64748b;font-size:10px;">${timeAgo}</span>
+-          </div>
+-          <div style="color:#94a3b8;font-size:11px;line-height:1.4;white-space:pre-wrap;word-break:break-word;">${escapeHtml(preview)}</div>
+-          <div style="display:flex;gap:6px;margin-top:4px;">
+-            <button class="__copy_btn" style="flex:1;background:#334155;color:#e2e8f0;border:none;padding:3px 6px;border-radius:4px;cursor:pointer;font-size:11px;">📋 Copy</button>
+-            <button class="__restore_btn" style="flex:1;background:#1e3a8a;color:#93c5fd;border:none;padding:3px 6px;border-radius:4px;cursor:pointer;font-size:11px;">↩ Restore</button>
+-          </div>
+-        `;
+-
+-        // Copy handler
+-        item.querySelector('.__copy_btn').onclick = (e) => {
+-          e.stopPropagation();
+-          navigator.clipboard.writeText(d.text).then(() => {
+-            const btn = item.querySelector('.__copy_btn');
+-            btn.textContent = 'Copied! ✓';
+-            setTimeout(() => { btn.textContent = '📋 Copy'; }, 1500);
+-          });
+-        };
+-
+-        // Restore handler
+-        item.querySelector('.__restore_btn').onclick = (e) => {
+-          e.stopPropagation();
+-          if (activeElement) {
+-            restoreTextToElement(activeElement, d.text);
+-            drawer.style.display = 'none';
+-          } else {
+-            navigator.clipboard.writeText(d.text);
+-            alert('Draft copied to clipboard! Click inside your input field and press Ctrl+V to paste.');
+-          }
+-        };
+-
+-        list.appendChild(item);
+-      });
+-    });
+-  }
+-
+-  function restoreTextToElement(el, text) {
+-    if (!el) return;
+-    el.focus();
+-    if (el.tagName && (el.tagName.toLowerCase() === 'textarea' || el.tagName.toLowerCase() === 'input')) {
+-      el.value = text;
+-      el.dispatchEvent(new Event('input', { bubbles: true }));
+-      el.dispatchEvent(new Event('change', { bubbles: true }));
+-    } else if (el.isContentEditable) {
+-      document.execCommand('selectAll', false, null);
+-      document.execCommand('insertText', false, text);
+-    }
+-  }
+-
+-  function formatTimeAgo(isoString) {
+-    if (!isoString) return '';
+-    const diff = (Date.now() - new Date(isoString).getTime()) / 1000;
+-    if (diff < 60) return 'Just now';
+-    if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+-    if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+-    return `${Math.floor(diff / 86400)}d ago`;
+-  }
+-
+-  function escapeHtml(str) {
+-    return (str || '')
+-      .replace(/&/g, '&amp;')
+-      .replace(/</g, '&lt;')
+-      .replace(/>/g, '&gt;')
+-      .replace(/"/g, '&quot;');
+-  }
++    (document.body || document.documentElement).appendChild(el);
++    indicatorEl = el;
++    return el;
++  }
++
++  const CIRCLE_SVG = `
++    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="display:block;">
++      <circle cx="8" cy="8" r="5" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="24" stroke-dashoffset="6" style="animation: scribe-spin 0.85s linear infinite; transform-origin: center center;" />
++    </svg>
++  `;
++
++  const TICK_SVG = `
++    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="display:block;">
++      <path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
++    </svg>
++  `;
++
++  function positionIndicator(target) {
++    if (!target || !document.contains(target)) {
++      hideIndicator();
++      return;
++    }
++    const rect = target.getBoundingClientRect();
++    if (rect.width === 0 || rect.height === 0 || rect.bottom <= 0 || rect.top >= window.innerHeight) {
++      hideIndicator();
++      return;
++    }
++
++    const el = ensureIndicator();
++    const size = 18;
++    const paddingLeft = 8;
++    const paddingBottom = 6;
++
++    let left = rect.left + paddingLeft;
++    let top;
++
++    if (rect.height < 32) {
++      top = rect.top + (rect.height - size) / 2;
++    } else {
++      top = rect.bottom - size - paddingBottom;
++    }
++
++    el.style.left = `${Math.round(left)}px`;
++    el.style.top = `${Math.round(top)}px`;
++  }
++
++  function updateIndicator(state, target) {
++    if (!config.enabled || config.showIndicator === false) {
++      hideIndicator();
++      return;
++    }
++
++    const el = ensureIndicator();
++    clearTimeout(fadeTimeout);
++
++    positionIndicator(target || activeElement);
++
++    if (state === 'saving') {
++      el.innerHTML = CIRCLE_SVG;
++      el.title = 'Auto-Scribe: Scribing...';
++      el.style.display = 'flex';
++      el.style.opacity = '1';
++    } else if (state === 'saved') {
++      el.innerHTML = TICK_SVG;
++      el.title = 'Auto-Scribe: Saved ✓';
++      el.style.display = 'flex';
++      el.style.opacity = '1';
++
++      // Softly fade out after 3.5 seconds of inactivity
++      fadeTimeout = setTimeout(() => {
++        if (indicatorEl) indicatorEl.style.opacity = '0';
++      }, 3500);
++    }
++  }
++
++  function hideIndicator() {
++    clearTimeout(fadeTimeout);
++    if (indicatorEl) {
++      indicatorEl.style.display = 'none';
++      indicatorEl.style.opacity = '0';
++    }
++  }
++
++  // Smoothly track element position on scroll and resize
++  window.addEventListener('scroll', () => {
++    if (activeElement && indicatorEl && indicatorEl.style.display === 'flex') {
++      positionIndicator(activeElement);
++    }
++  }, { passive: true, capture: true });
++
++  window.addEventListener('resize', () => {
++    if (activeElement && indicatorEl && indicatorEl.style.display === 'flex') {
++      positionIndicator(activeElement);
++    }
++  }, { passive: true });
+ })();
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

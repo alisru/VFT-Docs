@@ -99,6 +99,24 @@
       "Shell",
       "EV"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Shell",
+        "role": "instigator"
+      },
+      {
+        "name": "BYD",
+        "role": "instigator"
+      },
+      {
+        "name": "Volkswagen",
+        "role": "instigator"
+      },
+      {
+        "name": "Renault",
+        "role": "instigator"
+      }
+    ]
   }
 ]

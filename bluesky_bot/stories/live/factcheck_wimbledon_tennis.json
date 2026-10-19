@@ -98,6 +98,20 @@
       "Wimbledon",
       "Tennis"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Daria Kasatkina",
+        "role": "instigator"
+      },
+      {
+        "name": "Naomi Osaka",
+        "role": "instigator"
+      },
+      {
+        "name": "Wimbledon",
+        "role": "context"
+      }
+    ]
   }
 ]

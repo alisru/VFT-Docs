@@ -250,6 +250,26 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Andy Burnham",
+        "role": "instigator",
+        "sub_u": -0.82,
+        "sub_psi": -0.75,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Zack Polanski",
+        "role": "instigator"
+      },
+      {
+        "name": "BBC",
+        "role": "author",
+        "sub_u": 0.2,
+        "sub_psi": 0.1,
+        "sub_verdict": "COND"
+      }
+    ]
   }
 ]

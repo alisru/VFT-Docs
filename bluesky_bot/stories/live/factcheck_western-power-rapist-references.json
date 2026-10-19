@@ -250,6 +250,23 @@
       "Aletheia",
       "Workplace"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Amber-Jade Sanderson",
+        "role": "instigator"
+      },
+      {
+        "name": "Jeffrey David Spinner",
+        "role": "instigator"
+      },
+      {
+        "name": "Western Power",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      }
+    ]
   }
 ]

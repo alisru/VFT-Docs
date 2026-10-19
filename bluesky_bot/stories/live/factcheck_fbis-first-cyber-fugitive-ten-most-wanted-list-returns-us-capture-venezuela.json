@@ -145,6 +145,27 @@
       "Aletheia",
       "LawEnforcement",
       "CyberSecurity"
+    ],
+    "actor_roles": [
+      {
+        "name": "Anibal Alexander Canelon Aguirre",
+        "role": "instigator"
+      },
+      {
+        "name": "Kash Patel",
+        "role": "instigator"
+      },
+      {
+        "name": "FBI",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Tren de Aragua",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -251,6 +251,27 @@
       "Ukraine",
       "Russia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context",
+        "sub_u": -0.42,
+        "sub_psi": -0.65,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Wildberries",
+        "role": "instigator"
+      },
+      {
+        "name": "Volodymyr Zelensky",
+        "role": "instigator"
+      }
+    ]
   }
 ]

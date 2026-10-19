@@ -249,6 +249,19 @@
       "USPol",
       "Law"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tyler Boebert",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.85,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Lauren Boebert",
+        "role": "instigator"
+      }
+    ]
   }
 ]

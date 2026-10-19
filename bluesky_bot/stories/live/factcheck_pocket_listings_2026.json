@@ -68,6 +68,24 @@
     "category": "general",
     "topic": "RealEstate",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Zillow",
+        "role": "instigator"
+      },
+      {
+        "name": "Compass",
+        "role": "instigator"
+      },
+      {
+        "name": "National Association of Realtors",
+        "role": "instigator"
+      },
+      {
+        "name": "Redfin",
+        "role": "instigator"
+      }
+    ]
   }
 ]

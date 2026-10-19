@@ -143,6 +143,27 @@
     "tags": [
       "California",
       "Environment"
+    ],
+    "actor_roles": [
+      {
+        "name": "San Diego City Council",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.4,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Scripps Institution of Oceanography",
+        "role": "instigator"
+      },
+      {
+        "name": "California Coastline Survey",
+        "role": "instigator"
+      },
+      {
+        "name": "Peter Kelly",
+        "role": "instigator"
+      }
     ]
   }
 ]

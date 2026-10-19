@@ -158,6 +158,23 @@
       "Aletheia",
       "USPol",
       "SCOTUS"
+    ],
+    "actor_roles": [
+      {
+        "name": "Supreme Court of the United States",
+        "role": "regulator",
+        "sub_u": 0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Missouri State Legislature",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
     ]
   }
 ]

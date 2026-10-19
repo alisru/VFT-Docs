@@ -75,6 +75,28 @@
       "Geopolitics",
       "MiddleEast"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "Hamas",
+        "role": "instigator"
+      },
+      {
+        "name": "Hezbollah",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

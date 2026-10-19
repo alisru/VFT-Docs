@@ -249,6 +249,19 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ro Khanna",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.1,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      }
+    ]
   }
 ]

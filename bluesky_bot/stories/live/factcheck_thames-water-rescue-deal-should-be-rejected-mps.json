@@ -270,6 +270,27 @@
       "Aletheia",
       "UKWater",
       "Environment"
+    ],
+    "actor_roles": [
+      {
+        "name": "Thames Water",
+        "role": "instigator"
+      },
+      {
+        "name": "EFRA Committee",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "London & Valley Water",
+        "role": "instigator"
+      },
+      {
+        "name": "Government of the United Kingdom",
+        "role": "instigator"
+      }
     ]
   }
 ]

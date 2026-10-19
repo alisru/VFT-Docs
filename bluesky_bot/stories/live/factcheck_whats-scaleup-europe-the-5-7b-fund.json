@@ -253,6 +253,37 @@
       "EU",
       "Space"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "European Commission",
+        "role": "regulator",
+        "sub_u": 0.7,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "EQT",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "ICEYE",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Rafal Modrzewski",
+        "role": "instigator"
+      },
+      {
+        "name": "Per Franzén",
+        "role": "instigator"
+      }
+    ]
   }
 ]

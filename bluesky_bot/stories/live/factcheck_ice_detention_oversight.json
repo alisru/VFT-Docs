@@ -74,6 +74,24 @@
       "ICE",
       "DHS"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "ICE",
+        "role": "instigator"
+      },
+      {
+        "name": "DHS",
+        "role": "instigator"
+      },
+      {
+        "name": "Richard Parias",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

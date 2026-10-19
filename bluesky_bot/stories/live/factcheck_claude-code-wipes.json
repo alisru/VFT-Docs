@@ -97,6 +97,16 @@
       "Aletheia",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Claude Code",
+        "role": "instigator"
+      }
+    ]
   }
 ]

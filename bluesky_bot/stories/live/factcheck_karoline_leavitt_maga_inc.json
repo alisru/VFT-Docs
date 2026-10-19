@@ -261,6 +261,23 @@
     "tags": [
       "Aletheia",
       "WhiteHouse"
+    ],
+    "actor_roles": [
+      {
+        "name": "Karoline Leavitt",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "MAGA Inc.",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

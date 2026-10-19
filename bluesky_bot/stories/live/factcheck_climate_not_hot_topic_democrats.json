@@ -274,6 +274,27 @@
       "Aletheia",
       "Climate",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Sunrise Movement",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": 0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Ed Markey",
+        "role": "instigator"
+      },
+      {
+        "name": "Sheldon Whitehouse",
+        "role": "instigator"
+      }
     ]
   }
 ]

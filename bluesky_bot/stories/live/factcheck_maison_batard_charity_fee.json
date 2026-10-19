@@ -144,6 +144,30 @@
       "Aletheia",
       "MaisonBatard",
       "Hospitality"
+    ],
+    "actor_roles": [
+      {
+        "name": "Chris Lucas",
+        "role": "instigator"
+      },
+      {
+        "name": "Lucas Collective",
+        "role": "instigator",
+        "sub_u": -0.78,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Collective Foundation",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Maison Bâtard",
+        "role": "instigator"
+      }
     ]
   }
 ]

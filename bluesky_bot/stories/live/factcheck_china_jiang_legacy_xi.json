@@ -251,6 +251,27 @@
     "tags": [
       "China",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Communist Party of China",
+        "role": "instigator"
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Jiang Zemin",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
     ]
   }
 ]

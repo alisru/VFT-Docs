@@ -253,6 +253,35 @@
       "Colombia",
       "Earthquake"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Wilson Barco",
+        "role": "instigator"
+      },
+      {
+        "name": "CNN",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Karol G",
+        "role": "instigator"
+      },
+      {
+        "name": "Shakira",
+        "role": "instigator"
+      },
+      {
+        "name": "Colombian Association of Capital Cities",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

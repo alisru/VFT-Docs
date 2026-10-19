@@ -145,6 +145,26 @@
       "Tech",
       "Miro",
       "BendingSpoons"
+    ],
+    "actor_roles": [
+      {
+        "name": "Bending Spoons",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.3,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Miro",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author"
+      }
     ]
   }
 ]

@@ -97,6 +97,16 @@
       "UKWeather",
       "Climate"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Met Office",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

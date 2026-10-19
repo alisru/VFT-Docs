@@ -146,6 +146,38 @@
       "Aletheia",
       "Australia",
       "Media"
+    ],
+    "actor_roles": [
+      {
+        "name": "Blanche d'Alpuget",
+        "role": "instigator"
+      },
+      {
+        "name": "Bob Hawke",
+        "role": "instigator"
+      },
+      {
+        "name": "Rosslyn Dillon",
+        "role": "instigator"
+      },
+      {
+        "name": "Louis Pratt",
+        "role": "instigator"
+      },
+      {
+        "name": "Hawke Family",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Daily Mail",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": 0.85,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

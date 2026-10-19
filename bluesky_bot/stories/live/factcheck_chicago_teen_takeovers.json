@@ -73,6 +73,20 @@
       "Chicago",
       "PublicSafety"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Chicago",
+        "role": "context"
+      },
+      {
+        "name": "Tim Carew",
+        "role": "instigator"
+      },
+      {
+        "name": "Ryan Wheeler",
+        "role": "instigator"
+      }
+    ]
   }
 ]

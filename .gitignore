@@ -13,7 +13,6 @@ _VFT MD/bible/actualism_shorts
 bluesky_bot/archive_sessions_json
 bluesky_bot/chat_sessions
 bluesky_bot/chat_uploads
-bluesky_bot/dist_audit_site
 bluesky_bot/duplicate_discard
 bluesky_bot/fail
 bluesky_bot/darkroom
@@ -80,6 +79,8 @@ _VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/xml/
 
 # --- Local Caches & SQLite Databases ---
 bluesky_bot/scraped_articles_cache.sqlite
+bluesky_bot/harvested_stories_log.jsonl
+bluesky_bot/harvested_stories_log.backup.jsonl
 chat_context/data/*.sqlite*
 chat_context/canvases/
 

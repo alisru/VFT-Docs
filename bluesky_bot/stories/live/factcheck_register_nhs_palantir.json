@@ -66,6 +66,24 @@
     "event": "",
     "policies": [
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "NHS England",
+        "role": "instigator"
+      },
+      {
+        "name": "Palantir Technologies",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Preet Kaur Gill",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -1,0 +1,618 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2607,6 +2607,7 @@
+     }
+ 
+     // Programmatic Vector Graphics & Infographic Cards Engine
++    // Faithful 1:1 Programmatic Vector Graphics & Infographic Cards Engine
+     function escapeHtml(str) {
+       if (!str) return '';
+       return String(str)
+@@ -2651,62 +2651,59 @@
+ 
+     function renderTrajectoryGraphSVG(story, isSmall) {
+       if (!story) return '';
+-      const cu = (story.claim_u !== null && story.claim_u !== undefined) ? Number(story.claim_u) : null;
+-      const cpsi = (story.claim_psi !== null && story.claim_psi !== undefined) ? Number(story.claim_psi) : null;
+-      const ru = (story.real_u !== null && story.real_u !== undefined) ? Number(story.real_u) : null;
+-      const rpsi = (story.real_psi !== null && story.real_psi !== undefined) ? Number(story.real_psi) : null;
+-      const pathName = (cu !== null && ru !== null) ? getPathNameJS(cu, cpsi, ru, rpsi) : 'Vector Map';
+-
+-      const W = 500, H = 500, CX = 250, CY = 250;
+-      const scale = 80; // 200px per 2.5 units = 80px per unit
+-
+-      const getX = (u) => CX - (u * scale);
+-      const getY = (psi) => CY - (psi * scale);
+-
+-      let vectorPath = '';
+-      let claimNode = '';
+-      let realNode = '';
+-
+-      if (cu !== null && cpsi !== null) {
+-        const cx = getX(cu), cy = getY(cpsi);
+-        claimNode = `
+-          <circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="7.5" fill="none" stroke="#facc15" stroke-width="2.5" />
+-          ${!isSmall ? `<text x="${cx.toFixed(1)}" y="${(cy - 12).toFixed(1)}" fill="#facc15" font-size="10" font-weight="700" text-anchor="middle" font-family="sans-serif">Claim (${cu > 0 ? '+' : ''}${cu.toFixed(1)}, ${cpsi > 0 ? '+' : ''}${cpsi.toFixed(1)})</text>` : ''}
+-        `;
+-      }
+-
+-      if (ru !== null && rpsi !== null) {
+-        const rx = getX(ru), ry = getY(rpsi);
+-        const starPts = getSvgStarPoints(rx, ry, 5, 9, 4.2);
+-        realNode = `
+-          <polygon points="${starPts}" fill="#ef4444" stroke="#ffffff" stroke-width="1.2" />
+-          ${!isSmall ? `<text x="${rx.toFixed(1)}" y="${(ry + 18).toFixed(1)}" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle" font-family="sans-serif">Reality (${ru > 0 ? '+' : ''}${ru.toFixed(1)}, ${rpsi > 0 ? '+' : ''}${rpsi.toFixed(1)})</text>` : ''}
+-        `;
+-      }
+-
+-      if (cu !== null && cpsi !== null && ru !== null && rpsi !== null) {
+-        const cx = getX(cu), cy = getY(cpsi);
+-        const rx = getX(ru), ry = getY(rpsi);
+-        const midX = (cx + rx) / 2 + (ry - cy) * 0.22;
+-        const midY = (cy + ry) / 2 - (rx - cx) * 0.22;
+-        vectorPath = `
+-          <path d="M ${cx.toFixed(1)} ${cy.toFixed(1)} Q ${midX.toFixed(1)} ${midY.toFixed(1)} ${rx.toFixed(1)} ${ry.toFixed(1)}" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#vArrow)" />
+-        `;
+-      }
+-
+-      const rnetText = story.real_rnet ? `R_net: ${Number(story.real_rnet).toFixed(1)}` : '';
+-      const zText = (story.real_z !== undefined && story.real_z !== null) ? `z: ${story.real_z}` : '';
+-      const badgeText = [rnetText, zText].filter(Boolean).join(' · ');
+-
+-      return `
+-        <svg viewBox="0 0 500 500" style="width:100%; height:100%; display:block; background:#111111; border-radius:8px; font-family:var(--font-outfit, sans-serif);" xmlns="http://www.w3.org/2000/svg">
++      const cu = (story.claim_u !== null && story.claim_u !== undefined) ? Number(story.claim_u) : 0.0;
++      const cpsi = (story.claim_psi !== null && story.claim_psi !== undefined) ? Number(story.claim_psi) : 0.0;
++      const ru = (story.real_u !== null && story.real_u !== undefined) ? Number(story.real_u) : 0.0;
++      const rpsi = (story.real_psi !== null && story.real_psi !== undefined) ? Number(story.real_psi) : 0.0;
++
++      const pathName = getPathNameJS(cu, cpsi, ru, rpsi);
++      const cu_str = (cu >= 0 ? '+' : '') + cu.toFixed(1);
++      const cpsi_str = (cpsi >= 0 ? '+' : '') + cpsi.toFixed(1);
++      const ru_str = (ru >= 0 ? '+' : '') + ru.toFixed(1);
++      const rpsi_str = (rpsi >= 0 ? '+' : '') + rpsi.toFixed(1);
++
++      // Canvas dimensions exactly mirroring generate_graph.py 8x8 figure
++      const CX = 520, CY = 435;
++      const scaleX = 152, scaleY = 128; // Data bounds [-2.5, 2.5] -> width ~760, height ~640
++      const getX = (u) => CX - (u * scaleX);
++      const getY = (psi) => CY - (psi * scaleY);
++
++      // Zone 2 Outer Box: u in [+2.0, -2.0], psi in [+2.0, -2.0]
++      const z2_left = getX(2.0), z2_right = getX(-2.0);
++      const z2_top = getY(2.0), z2_bottom = getY(-2.0);
++      const z2_w = z2_right - z2_left;
++      const z2_h = z2_bottom - z2_top;
++
++      // Zone 1 Inner Box: u in [+1.0, -1.0], psi in [+1.0, -1.0]
++      const z1_left = getX(1.0), z1_right = getX(-1.0);
++      const z1_top = getY(1.0), z1_bottom = getY(-1.0);
++      const z1_w = z1_right - z1_left;
++      const z1_h = z1_bottom - z1_top;
++
++      // Needle Cross angle
++      const targetAngle = Math.atan2(rpsi, ru) * (180 / Math.PI);
++      const needleRot = targetAngle - 45.0;
++
++      // Points coordinates
++      const claimX = getX(cu), claimY = getY(cpsi);
++      const realX = getX(ru), realY = getY(rpsi);
++      const starPoints = getSvgStarPoints(realX, realY, 5, 12, 5.5);
++
++      // Arc curve
++      const dx = realX - claimX, dy = realY - claimY;
++      const midX = (claimX + realX) / 2 + (dy * 0.22);
++      const midY = (claimY + realY) / 2 - (dx * 0.22);
++
++      return `
++        <svg viewBox="0 0 1000 1050" style="width:100%; height:100%; display:block; background:#111111; font-family:'DejaVu Sans', Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg">
+           <defs>
+-            <linearGradient id="hegGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+-              <stop offset="0%" stop-color="#00FF00" stop-opacity="0.18" />
+-              <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.04" />
+-              <stop offset="100%" stop-color="#FF0000" stop-opacity="0.18" />
++            <linearGradient id="hegColormap" x1="0%" y1="0%" x2="100%" y2="0%">
++              <stop offset="0%" stop-color="#00FF00" stop-opacity="0.30" />
++              <stop offset="48%" stop-color="#FFFFFF" stop-opacity="0.08" />
++              <stop offset="52%" stop-color="#FFFFFF" stop-opacity="0.08" />
++              <stop offset="100%" stop-color="#FF0000" stop-opacity="0.30" />
+             </linearGradient>
+-            <marker id="vArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
++            <marker id="arrowHead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+               <path d="M 0 1 L 10 5 L 0 9 z" fill="#ffffff" />
+             </marker>
+           </defs>
+@@ -2713,65 +2713,140 @@
+-          <!-- Gradient Backdrop -->
+-          <rect width="500" height="500" fill="#111111" />
+-          <rect width="500" height="500" fill="url(#heGrad)" />
+-
+-          <!-- Translucent Background Hegemony Cross -->
+-          <line x1="330" y1="330" x2="90" y2="90" stroke="rgba(255,255,255,0.14)" stroke-width="14" stroke-linecap="butt" />
+-          <line x1="170" y1="330" x2="330" y2="170" stroke="rgba(255,255,255,0.14)" stroke-width="14" stroke-linecap="butt" />
+-
+-          <!-- Zone 2 Outer Box (+2.0 to -2.0) -->
+-          <rect x="90" y="90" width="320" height="320" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" />
+-
+-          <!-- Zone 1 Inner Box (+1.0 to -1.0) -->
+-          <rect x="170" y="170" width="160" height="160" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.2" stroke-dasharray="4,4" />
+-
+-          <!-- Axes -->
+-          <line x1="90" y1="250" x2="410" y2="250" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
+-          <line x1="250" y1="90" x2="250" y2="410" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
+-
+-          <!-- Six Hegemony Attractors -->
++          <!-- Background Canvas -->
++          <rect width="1000" height="1050" fill="#111111" />
++
++          <!-- Top Header Block (Matches generate_graph.py exactly) -->
++          <g text-anchor="middle" fill="#FFFFFF">
++            <text x="500" y="38" font-size="18" font-weight="700">${escapeHtml(story.subject || 'Psochic Hegemony Assessment')}</text>
++            <text x="500" y="65" font-size="15" fill="#E2E8F0">Projected Eventuality: ${escapeHtml(pathName)}</text>
++            <text x="500" y="90" font-size="15" fill="#CBD5E1">Stated: (${cu_str}, ${cpsi_str}) | Actual: (${ru_str}, ${rpsi_str})</text>
++          </g>
++
++          <!-- Graph Area Background & Colormap -->
++          <rect x="140" y="115" width="760" height="640" fill="#111111" stroke="#333333" stroke-width="1" />
++          <rect x="${z2_left}" y="${z2_top}" width="${z2_w}" height="${z2_h}" fill="url(#hegColormap)" />
++
++          <!-- Grid Lines (dotted gray) -->
++          <!-- Horizontal grid lines -->
++          <line x1="140" y1="${getY(2.0)}" x2="900" y2="${getY(2.0)}" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="140" y1="${getY(1.0)}" x2="900" y2="${getY(1.0)}" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="140" y1="${getY(0.0)}" x2="900" y2="${getY(0.0)}" stroke="#777777" stroke-width="1" />
++          <line x1="140" y1="${getY(-1.0)}" x2="900" y2="${getY(-1.0)}" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="140" y1="${getY(-2.0)}" x2="900" y2="${getY(-2.0)}" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++
++          <!-- Vertical grid lines -->
++          <line x1="${getX(2.0)}" y1="115" x2="${getX(2.0)}" y2="755" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="${getX(1.0)}" y1="115" x2="${getX(1.0)}" y2="755" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="${getX(0.5)}" y1="115" x2="${getX(0.5)}" y2="755" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="${getX(0.0)}" y1="115" x2="${getX(0.0)}" y2="755" stroke="#777777" stroke-width="1" />
++          <line x1="${getX(-0.5)}" y1="115" x2="${getX(-0.5)}" y2="755" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="${getX(-1.0)}" y1="115" x2="${getX(-1.0)}" y2="755" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++          <line x1="${getX(-2.0)}" y1="115" x2="${getX(-2.0)}" y2="755" stroke="#555555" stroke-dasharray="2,3" stroke-width="0.8" />
++
++          <!-- 1. Background Hegemony Cross (Static 25% Opacity) -->
++          <line x1="${getX(-1.0)}" y1="${getY(-1.0)}" x2="${getX(2.0)}" y2="${getY(2.0)}" stroke="#CCCCCC" stroke-width="16" stroke-linecap="butt" opacity="0.25" />
++          <line x1="${getX(1.0)}" y1="${getY(-1.0)}" x2="${getX(-1.0)}" y2="${getY(1.0)}" stroke="#CCCCCC" stroke-width="16" stroke-linecap="butt" opacity="0.25" />
++
++          <!-- 2. Dynamic Needle Cross (Rotated toward Actual Reality, 50% Opacity) -->
++          <g transform="translate(${CX}, ${CY}) rotate(${needleRot.toFixed(1)})">
++            <line x1="${-scaleX * 0.55}" y1="${scaleY * 0.55}" x2="${scaleX * 1.1}" y2="${-scaleY * 1.1}" stroke="#FFFFFF" stroke-width="10" stroke-linecap="butt" opacity="0.45" />
++            <line x1="${scaleX * 0.55}" y1="${scaleY * 0.55}" x2="${-scaleX * 0.55}" y2="${-scaleY * 0.55}" stroke="#FFFFFF" stroke-width="10" stroke-linecap="butt" opacity="0.45" />
++          </g>
++
++          <!-- Zone 2 Outer Box (Solid White 1.5px) -->
++          <rect x="${z2_left}" y="${z2_top}" width="${z2_w}" height="${z2_h}" fill="none" stroke="#FFFFFF" stroke-width="1.5" />
++
++          <!-- Zone 1 Inner Box (Dashed White 1.0px) -->
++          <rect x="${z1_left}" y="${z1_top}" width="${z1_w}" height="${z1_h}" fill="none" stroke="#FFFFFF" stroke-width="1.0" stroke-dasharray="5,5" />
++
++          <!-- Attractor Dots (Single source of truth) -->
+           <!-- Green (+u) Left -->
+-          <circle cx="170" cy="170" r="10" fill="#00FF00" opacity="0.85" />
+-          <circle cx="170" cy="250" r="7.5" fill="#98FB98" opacity="0.75" />
+-          <circle cx="170" cy="330" r="6" fill="#98FB98" opacity="0.65" />
++          <circle cx="${getX(1.0)}" cy="${getY(1.0)}" r="18" fill="#00FF00" opacity="0.85" />
++          <circle cx="${getX(1.0)}" cy="${getY(0.0)}" r="13" fill="#98FB98" opacity="0.80" />
++          <circle cx="${getX(1.0)}" cy="${getY(-1.0)}" r="9" fill="#98FB98" opacity="0.75" />
+           <!-- Red (-u) Right -->
+-          <circle cx="330" cy="170" r="6" fill="#FF9999" opacity="0.65" />
+-          <circle cx="330" cy="250" r="7.5" fill="#FF9999" opacity="0.75" />
+-          <circle cx="330" cy="330" r="10" fill="#FF0000" opacity="0.85" />
+-
+-          <!-- Alchemical & Boundary Labels (Full Size Only) -->
+-          ${!isSmall ? `
+-            <text x="60" y="65" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">AIR</text>
+-            <text x="440" y="65" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">FIRE</text>
+-            <text x="60" y="445" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">WATER</text>
+-            <text x="440" y="445" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">EARTH</text>
+-
+-            <text x="250" y="75" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">HOT</text>
+-            <text x="250" y="430" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">COLD</text>
+-            <text x="65" y="253" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">WET</text>
+-            <text x="435" y="253" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">DRY</text>
+-
+-            <!-- Corner Anchors -->
+-            <text x="170" y="195" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Greater Good</text>
+-            <text x="330" y="195" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Greatest Lie</text>
+-            <text x="170" y="315" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Lesser Good</text>
+-            <text x="330" y="315" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Greater Evil</text>
+-
+-            <!-- Outer Axis Endpoints -->
+-            <text x="250" y="40" fill="#94a3b8" font-size="9" font-weight="700" text-anchor="middle">ACTIVE (+2.0)</text>
+-            <text x="250" y="475" fill="#94a3b8" font-size="9" font-weight="700" text-anchor="middle">COUNTERACTIVE (-2.0)</text>
+-            <text x="30" y="253" fill="#22c55e" font-size="8.5" font-weight="700" text-anchor="middle">INCLUSIVE</text>
+-            <text x="470" y="253" fill="#ef4444" font-size="8.5" font-weight="700" text-anchor="middle">EXCLUSIVE</text>
+-          ` : ''}
+-
+-          <!-- Trajectory Vector Elements -->
+-          ${vectorPath}
+-          ${claimNode}
+-          ${realNode}
+-
+-          <!-- Top Status Pill -->
++          <circle cx="${getX(-1.0)}" cy="${getY(1.0)}" r="9" fill="#FF9999" opacity="0.75" />
++          <circle cx="${getX(-1.0)}" cy="${getY(0.0)}" r="13" fill="#FF9999" opacity="0.80" />
++          <circle cx="${getX(-1.0)}" cy="${getY(-1.0)}" r="18" fill="#FF0000" opacity="0.85" />
++
++          <!-- Alchemical Overlays (Italic White) -->
++          <g fill="#FFFFFF" font-style="italic" opacity="0.45" font-size="12" text-anchor="middle">
++            <text x="180" y="145">AIR</text>
++            <text x="860" y="145">FIRE</text>
++            <text x="180" y="720">WATER</text>
++            <text x="860" y="720">EARTH</text>
++            <text x="${CX}" y="150" font-size="11" opacity="0.35">HOT</text>
++            <text x="${CX}" y="715" font-size="11" opacity="0.35">COLD</text>
++            <text x="175" y="${CY}" font-size="11" opacity="0.35">WET</text>
++            <text x="865" y="${CY}" font-size="11" opacity="0.35">DRY</text>
++          </g>
++
++          <!-- Zone 1 Corner Labels -->
++          <g fill="#FFFFFF" font-size="12" text-anchor="middle">
++            <text x="${getX(1.0) + 10}" y="${getY(1.0) - 15}">The Greater Good<tspan x="${getX(1.0) + 10}" dy="16">(Flow)</tspan></text>
++            <text x="${getX(-1.0) - 10}" y="${getY(1.0) - 15}">The Greatest Lie<tspan x="${getX(-1.0) - 10}" dy="16">(Greed)</tspan></text>
++            <text x="${getX(1.0) + 10}" y="${getY(-1.0) + 18}">The Lesser Good<tspan x="${getX(1.0) + 10}" dy="16">(Peace)</tspan></text>
++            <text x="${getX(-1.0) - 10}" y="${getY(-1.0) + 18}">The Greater Evil<tspan x="${getX(-1.0) - 10}" dy="16">(Void)</tspan></text>
++          </g>
++
++          <!-- Zone 2 Strategic Extreme Labels -->
++          <g fill="#FFFFFF" font-size="13">
++            <text x="${z2_left + 15}" y="${z2_top + 25}" text-anchor="start">PRODUCTIVE<tspan x="${z2_left + 15}" dy="18">(Joy)</tspan></text>
++            <text x="${z2_right - 15}" y="${z2_top + 25}" text-anchor="end">REDUCTIVE<tspan x="${z2_right - 15}" dy="18">(Anger)</tspan></text>
++            <text x="${z2_left + 15}" y="${z2_bottom - 35}" text-anchor="start">CONSTRUCTIVE<tspan x="${z2_left + 15}" dy="18">(Peace)</tspan></text>
++            <text x="${z2_right - 15}" y="${z2_bottom - 35}" text-anchor="end">REGRESSIVE<tspan x="${z2_right - 15}" dy="18">(Depression)</tspan></text>
++          </g>
++
++          <!-- Vector Trajectory Arc Arrow -->
++          <path d="M ${claimX} ${claimY} Q ${midX} ${midY} ${realX} ${realY}" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowHead)" />
++
++          <!-- Stated Claim Point (Yellow circle with bar) -->
++          <circle cx="${claimX}" cy="${claimY}" r="9" fill="none" stroke="#FFFF00" stroke-width="3" />
++          <line x1="${claimX - 9}" y1="${claimY}" x2="${claimX + 9}" y2="${claimY}" stroke="#FFFF00" stroke-width="2" />
++
++          <!-- Actual Reality Point (Red 5-pointed Star) -->
++          <polygon points="${starPoints}" fill="#FF0000" stroke="#FFFFFF" stroke-width="1.5" />
++
++          <!-- Axes Labels & Ticks -->
++          <!-- Y-axis Left Labels -->
++          <g fill="#FFFFFF" font-size="10.5" text-anchor="end">
++            <text x="130" y="${getY(2.0) - 5}">Active-<tspan x="130" dy="14">Active (+2.0)</tspan></text>
++            <text x="130" y="${getY(1.0) - 5}">Passive-<tspan x="130" dy="14">Active (+1.0)</tspan></text>
++            <text x="130" y="${getY(0.0) + 4}">Neutral (0.0)</text>
++            <text x="130" y="${getY(-1.0) - 5}">Passive-<tspan x="130" dy="14">Passive (-1.0)</tspan></text>
++            <text x="130" y="${getY(-2.0) - 5}">Active-<tspan x="130" dy="14">Passive (-2.0)</tspan></text>
++          </g>
++          <text x="25" y="${CY}" fill="#FFFFFF" font-size="14" font-weight="700" text-anchor="middle" transform="rotate(-90, 25, ${CY})">Will (ψ)</text>
++
++          <!-- X-axis Bottom Labels -->
++          <g fill="#FFFFFF" font-size="10.5" text-anchor="middle">
++            <text x="${getX(2.0)}" y="775">Everyone<tspan x="${getX(2.0)}" dy="14">(+2.0)</tspan><tspan x="${getX(2.0)}" dy="14">Egalitarian</tspan></text>
++            <text x="${getX(1.0)}" y="775">Others<tspan x="${getX(1.0)}" dy="14">(+1.0)</tspan></text>
++            <text x="${getX(0.5)}" y="775">Other<tspan x="${getX(0.5)}" dy="14">(+0.5)</tspan></text>
++            <text x="${getX(0.0)}" y="775">No One<tspan x="${getX(0.0)}" dy="14">(0.0)</tspan></text>
++            <text x="${getX(-0.5)}" y="775">My Group<tspan x="${getX(-0.5)}" dy="14">(-0.5)</tspan></text>
++            <text x="${getX(-1.0)}" y="775">Me<tspan x="${getX(-1.0)}" dy="14">(-1.0)</tspan></text>
++            <text x="${getX(-2.0)}" y="775">Only Me<tspan x="${getX(-2.0)}" dy="14">(-2.0)</tspan><tspan x="${getX(-2.0)}" dy="14">Anti-Egalitarian</tspan></text>
++          </g>
++          <text x="${CX}" y="835" fill="#FFFFFF" font-size="14" font-weight="700" text-anchor="middle">Morality (υ)</text>
++
++          <!-- Legend Box (Bottom Left, exactly as in generate_graph.py) -->
+           <g>
+-            <rect x="15" y="12" width="470" height="22" rx="5" fill="rgba(0,0,0,0.65)" stroke="rgba(255,255,255,0.15)" />
+-            <text x="250" y="27" fill="#f8fafc" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.5">${escapeHtml(pathName)} ${badgeText ? '· ' + badgeText : ''}</text>
++            <rect x="18" y="770" width="140" height="46" fill="#111111" stroke="#FFFFFF" stroke-width="1" />
++            <circle cx="33" cy="783" r="6" fill="none" stroke="#FFFF00" stroke-width="2" />
++            <line x1="27" y1="783" x2="39" y2="783" stroke="#FFFF00" stroke-width="1.5" />
++            <text x="45" y="787" fill="#FFFFFF" font-size="10.5" font-weight="600">Stated Claim</text>
++            <polygon points="${getSvgStarPoints(33, 803, 5, 8, 3.5)}" fill="#FF0000" stroke="#FFFFFF" stroke-width="0.8" />
++            <text x="45" y="806" fill="#FFFFFF" font-size="10.5" font-weight="600">Actual Reality</text>
++          </g>
++
++          <!-- Bottom Philosophical Commentary (Matches generate_graph.py exactly) -->
++          <g fill="#999999" font-size="11" text-anchor="middle">
++            <text x="500" y="870">This graph asks and answers the question "Who does this idea benefit?" measuring Relative Morality.</text>
++            <text x="500" y="888">Benefit is a vector where each unit is 'Scope of Potential'[Group direction, magnitude] cross spectrum of will</text>
++            <text x="500" y="906">[active activity to active passivity, magnitude]</text>
++            <text x="500" y="924">The Greater Cross points the way to Good and Joy, its smaller paths lead nowhere. The smaller cross points to</text>
++            <text x="500" y="942">the consequences of your choices and actions, the smaller paths what you could but didn't do.</text>
++            <text x="500" y="960">Your responsibility is whether you'll choose to align with or against Good</text>
++            <text x="500" y="978" font-style="italic" fill="#777777">Psochic Hegemony Graph: The map of Good and Evil</text>
+           </g>
+         </svg>
+       `;
+@@ -2783,67 +2783,82 @@
+       const claim = posts[1] ? posts[1].replace(/^(The\s+)?Claim:\s*|^Stated Judgement:\s*/i, '').trim() : '';
+       const reality = posts[2] ? posts[2].replace(/^(The\s+)?Reality:\s*|^Resulting Judgement:\s*/i, '').trim() : '';
+       const verdict = posts[3] ? posts[3].replace(/^(Stated\s+)?Verdict:\s*/i, '').trim() : (story.verdict || '');
+-      const context = posts[4] ? posts[4].replace(/^(Sub-Audits\s+Breakdown|Sub-Audits|What's happening|Context):\s*/i, '').trim() : '';
+-      const poison = (posts[5] && (posts[5].toLowerCase().includes('poison') || posts[5].toLowerCase().includes('bright side'))) ? posts[5] : (posts[6] || '');
+-
+-      const isPass = verdict.toUpperCase().startsWith('PASS');
+-      const badgeBg = isPass ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.15)';
+-      const badgeColor = isPass ? '#10b981' : '#ef4444';
+-      const badgeBorder = isPass ? 'rgba(16,185,129,0.3)' : 'rgba(239,68,68,0.3)';
+-
+-      const cu = story.claim_u !== null ? Number(story.claim_u).toFixed(1) : '?';
+-      const cpsi = story.claim_psi !== null ? Number(story.claim_psi).toFixed(1) : '?';
+-      const ru = story.real_u !== null ? Number(story.real_u).toFixed(1) : '?';
+-      const rpsi = story.real_psi !== null ? Number(story.real_psi).toFixed(1) : '?';
+-
+-      return `
+-        <div class="programmatic-card verdict-card" style="background:#0c1017; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:${isSmall ? '10px' : '16px'}; color:#e2e8f0; font-family:var(--font-outfit, sans-serif);">
+-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:8px;">
+-            <div>
+-              <div style="font-size:0.65rem; font-weight:700; color:#38bdf8; text-transform:uppercase; letter-spacing:0.8px;">Aletheia Verdict Card</div>
+-              <div style="font-size:${isSmall ? '0.82rem' : '0.98rem'}; font-weight:700; color:#f8fafc; margin-top:2px; line-height:1.3;">${escapeHtml(story.subject || 'Audit Summary')}</div>
+-            </div>
+-            <div style="background:${badgeBg}; color:${badgeColor}; border:1px solid ${badgeBorder}; border-radius:6px; padding:3px 8px; font-size:0.75rem; font-weight:700; white-space:nowrap; margin-left:8px;">
+-              ${isPass ? 'PASS' : 'FAIL'}
+-            </div>
+-          </div>
+-
+-          <div style="display:flex; gap:6px; font-size:0.68rem; margin-bottom:12px; flex-wrap:wrap;">
+-            <span style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:4px; padding:2px 6px;">Stated: <strong>(${cu}, ${cpsi})</strong></span>
+-            <span style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:4px; padding:2px 6px;">Actual: <strong style="color:${badgeColor}">(${ru}, ${rpsi})</strong></span>
+-            ${story.real_rnet ? `<span style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:4px; padding:2px 6px;">R_net: <strong>${Number(story.real_rnet).toFixed(1)}</strong></span>` : ''}
+-          </div>
+-
+-          <div style="display:flex; flex-direction:column; gap:8px;">
+-            ${claim ? `
+-              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #94a3b8; padding:6px 10px; border-radius:0 6px 6px 0;">
+-                <div style="font-size:0.65rem; font-weight:700; color:#94a3b8;">THE CLAIM</div>
+-                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(claim)}</div>
+-              </div>` : ''}
+-
+-            ${reality ? `
+-              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #38bdf8; padding:6px 10px; border-radius:0 6px 6px 0;">
+-                <div style="font-size:0.65rem; font-weight:700; color:#38bdf8;">THE REALITY</div>
+-                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(reality)}</div>
+-              </div>` : ''}
+-
+-            ${verdict ? `
+-              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #fbbf24; padding:6px 10px; border-radius:0 6px 6px 0;">
+-                <div style="font-size:0.65rem; font-weight:700; color:#fbbf24;">THE VERDICT</div>
+-                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(verdict)}</div>
+-              </div>` : ''}
+-
+-            ${(!isSmall && context) ? `
+-              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #a855f7; padding:6px 10px; border-radius:0 6px 6px 0;">
+-                <div style="font-size:0.65rem; font-weight:700; color:#a855f7;">SUB-AUDITS / CONTEXT</div>
+-                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(context)}</div>
+-              </div>` : ''}
+-
+-            ${(!isSmall && poison) ? `
+-              <div style="background:rgba(255,255,255,0.02); border-left:3px solid ${poison.toLowerCase().includes('bright side') ? '#10b981' : '#ef4444'}; padding:6px 10px; border-radius:0 6px 6px 0;">
+-                <div style="font-size:0.65rem; font-weight:700; color:${poison.toLowerCase().includes('bright side') ? '#10b981' : '#ef4444'};">${poison.toLowerCase().includes('bright side') ? 'THE BRIGHT SIDE' : 'THE POISON'}</div>
+-                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(poison.replace(/^(The\s+)?(Poison|Bright Side):\s*/i, ''))}</div>
+-              </div>` : ''}
++      const subAudits = posts[4] ? posts[4].replace(/^(Sub-Audits\s+Breakdown|Sub-Audits):\s*/i, '').trim() : '';
++
++      const cu = story.claim_u !== null ? Number(story.claim_u).toFixed(2) : '0.00';
++      const cpsi = story.claim_psi !== null ? Number(story.claim_psi).toFixed(2) : '0.00';
++      const ru = story.real_u !== null ? Number(story.real_u).toFixed(2) : '0.00';
++      const rpsi = story.real_psi !== null ? Number(story.real_psi).toFixed(2) : '0.00';
++
++      const isMultiAspect = Boolean(story.aspects) || (posts.length >= 14 && subAudits.length > 0);
++
++      return `
++        <div class="verdict-infographic-card" style="background:#0B0F19; border:1px solid #25354F; border-radius:12px; padding:${isSmall ? '16px' : '30px'}; color:#E2E8F0; font-family:'Segoe UI', Arial, sans-serif; box-sizing:border-box; width:100%;">
++          <!-- Header (Title & Subtitle) -->
++          <div style="margin-bottom:24px;">
++            <div style="font-size:${isSmall ? '1.05rem' : '1.45rem'}; font-weight:700; color:#F8FAFC; line-height:1.35; margin-bottom:8px;">
++              ${escapeHtml(story.subject || 'Assessment Summary')}
++            </div>
++            <div style="font-size:${isSmall ? '0.82rem' : '1.0rem'}; font-weight:700; color:#38BDF8; line-height:1.4;">
++              Resulting Judgement: (${ru}, ${rpsi}) — ${escapeHtml(story.verdict || 'Greater Evil')}
++            </div>
++          </div>
++
++          <!-- Two-Column Grid: Hook & Claim (Left), Reality & Verdict (Right) -->
++          <div style="display:grid; grid-template-columns:${isSmall ? '1fr' : '1fr 1fr'}; gap:18px;">
++            <!-- Column 1 -->
++            <div style="display:flex; flex-direction:column; gap:16px;">
++              <!-- The Hook -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#F472B6;"></div>
++                <div style="color:#F472B6; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">THE HOOK</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(hook)}</div>
++              </div>
++
++              <!-- The Claim -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#94A3B8;"></div>
++                <div style="color:#94A3B8; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">THE CLAIM</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(claim)}</div>
++              </div>
++            </div>
++
++            <!-- Column 2 -->
++            <div style="display:flex; flex-direction:column; gap:16px;">
++              <!-- The Reality -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#38BDF8;"></div>
++                <div style="color:#38BDF8; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">THE REALITY</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(reality)}</div>
++              </div>
++
++              <!-- The Verdict -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#FBBF24;"></div>
++                <div style="color:#FBBF24; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">THE VERDICT</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(verdict)}</div>
++              </div>
++            </div>
++          </div>
++
++          <!-- Sub-Audits Breakdown (Full Width) -->
++          ${isMultiAspect && subAudits ? `
++            <div style="margin-top:18px; background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++              <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#A855F7;"></div>
++              <div style="color:#A855F7; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">SUB-AUDITS BREAKDOWN</div>
++              <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(subAudits)}</div>
++            </div>
++          ` : ''}
++
++          <!-- Footer with Watermark -->
++          <div style="margin-top:24px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
++            <div>
++              <div style="color:#64748B; font-size:0.9rem; font-weight:700;">Aletheia Bot | Uncompromising Logic &amp; Truth</div>
++              <div style="color:#475569; font-size:0.75rem; margin-top:2px;">Scan QR code or open verification link to read primary source article</div>
++            </div>
++            <div style="border:1px solid #25354F; background:#141D2F; border-radius:6px; padding:4px 8px; font-size:0.72rem; color:#38BDF8; font-weight:600;">
++              VERIFIED CONVERGENCE
++            </div>
+           </div>
+         </div>
+       `;
+@@ -2851,19 +2851,133 @@
+     function renderAnalysisCardHTML(story, isSmall) {
+       if (!story) return '';
+       const posts = story.posts || [];
+-      const findPost = (kw) => posts.find(p => p.toLowerCase().includes(kw.toLowerCase())) || '';
+-
+-      const planeError = findPost('Breakdown') || findPost('Plane Error');
+-      const socialPhysics = findPost('Social Physics');
+-      const trajectory = findPost('Trajectory:');
+-      const unavoidables = findPost('Unavoidable');
+-      const alethekanon = findPost('Alethekanon:');
+-      const awwthekanon = findPost('Awwthekanon:');
+-      const brothekanon = findPost('Brothekanon:');
+-      const spirithekanon = findPost('Spirithekanon:');
+-
+-      return `
+-        <div class="programmatic-card analysis-card" style="background:#0c1017; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:${isSmall ? '10px' : '16px'}; color:#e2e8f0; font-family:var(--font-outfit, sans-serif);">
++      const isMultiAspect = Boolean(story.aspects) || (posts.length >= 14 && posts[4].toLowerCase().includes('sub-audit'));
++
++      // In image_card_generator.py:
++      // If multi-aspect: sections[5:] -> posts 5, 6, 7, 8, 9, 10
++      // If single-aspect: sections[4:] -> posts 4, 5, 6, 7, 8, 9
++      const baseIdx = isMultiAspect ? 5 : 4;
++      const contextText = posts[baseIdx] ? posts[baseIdx].replace(/^(Context|What's happening):\s*/i, '').trim() : '';
++      const poisonText = posts[baseIdx + 1] ? posts[baseIdx + 1].replace(/^(The\s+)?(Poison|Bright Side):\s*/i, '').trim() : '';
++      const isBrightSide = posts[baseIdx + 1] && posts[baseIdx + 1].toLowerCase().includes('bright side');
++      const breakdownText = posts[baseIdx + 2] ? posts[baseIdx + 2].replace(/^(The\s+)?Breakdown & Plane Error:\s*/i, '').trim() : '';
++      const socialPhysicsText = posts[baseIdx + 3] ? posts[baseIdx + 3].replace(/^Social Physics Analysis:\s*/i, '').trim() : '';
++      const trajectoryText = posts[baseIdx + 4] ? posts[baseIdx + 4].replace(/^(The\s+)?Trajectory:\s*/i, '').trim() : '';
++      const unavoidablesText = posts[baseIdx + 5] ? posts[baseIdx + 5].replace(/^The Unavoidable Truth:\s*/i, 'Truth: ').replace(/\n\s*The Unavoidable Lie:\s*/i, '\n\nLie: ').trim() : '';
++
++      // Personas
++      const pIdx = baseIdx + 6;
++      const alethekanon = posts[pIdx] ? posts[pIdx].replace(/^Alethekanon:\s*/i, '').trim() : '';
++      const awwthekanon = posts[pIdx + 1] ? posts[pIdx + 1].replace(/^Awwthekanon:\s*/i, '').trim() : '';
++      const brothekanon = posts[pIdx + 2] ? posts[pIdx + 2].replace(/^Brothekanon:\s*/i, '').trim() : '';
++      const spirithekanon = posts[pIdx + 3] ? posts[pIdx + 3].replace(/^Spirithekanon:\s*/i, '').trim() : '';
++
++      const ru = story.real_u !== null ? Number(story.real_u).toFixed(1) : '-0.8';
++      const rpsi = story.real_psi !== null ? Number(story.real_psi).toFixed(1) : '-0.8';
++
++      return `
++        <div class="analysis-infographic-card" style="background:#0B0F19; border:1px solid #25354F; border-radius:12px; padding:${isSmall ? '16px' : '30px'}; color:#E2E8F0; font-family:'Segoe UI', Arial, sans-serif; box-sizing:border-box; width:100%;">
++          <!-- Header -->
++          <div style="margin-bottom:24px;">
++            <div style="font-size:${isSmall ? '1.05rem' : '1.45rem'}; font-weight:700; color:#F8FAFC; line-height:1.35; margin-bottom:8px;">
++              ${escapeHtml(story.subject || 'Assessment Summary')}
++            </div>
++            <div style="font-size:${isSmall ? '0.82rem' : '1.0rem'}; font-weight:700; color:#38BDF8; line-height:1.4;">
++              SYSTEM ANALYSIS &amp; PERSPECTIVES | (${ru}, ${rpsi})
++            </div>
++          </div>
++
++          <!-- Two-Column Grid matching _generate_analysis_full_card -->
++          <div style="display:grid; grid-template-columns:${isSmall ? '1fr' : '1fr 1fr'}; gap:18px;">
++            <!-- Column 1 -->
++            <div style="display:flex; flex-direction:column; gap:16px;">
++              <!-- Context -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#38BDF8;"></div>
++                <div style="color:#38BDF8; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">CONTEXT</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(contextText)}</div>
++              </div>
++
++              <!-- The Poison or Bright Side -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:${isBrightSide ? '#10B981' : '#EF4444'};"></div>
++                <div style="color:${isBrightSide ? '#10B981' : '#EF4444'}; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">${isBrightSide ? 'THE BRIGHT SIDE' : 'THE POISON'}</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(poisonText)}</div>
++              </div>
++
++              <!-- Breakdown & Plane Error -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#C084FC;"></div>
++                <div style="color:#C084FC; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">BREAKDOWN &amp; PLANE ERROR</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(breakdownText)}</div>
++              </div>
++            </div>
++
++            <!-- Column 2 -->
++            <div style="display:flex; flex-direction:column; gap:16px;">
++              <!-- Social Physics Analysis -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#60A5FA;"></div>
++                <div style="color:#60A5FA; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">SOCIAL PHYSICS ANALYSIS</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(socialPhysicsText)}</div>
++              </div>
++
++              <!-- Trajectory & Destination -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#F472B6;"></div>
++                <div style="color:#F472B6; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">TRAJECTORY &amp; DESTINATION</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(trajectoryText)}</div>
++              </div>
++
++              <!-- The Unavoidables -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px 18px 16px 22px; position:relative;">
++                <div style="position:absolute; left:2px; top:12px; bottom:12px; width:6px; border-radius:3px; background:#F59E0B;"></div>
++                <div style="color:#F59E0B; font-size:0.92rem; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">THE UNAVOIDABLES</div>
++                <div style="color:#E2E8F0; font-size:0.86rem; line-height:1.55; white-space:pre-wrap;">${escapeHtml(unavoidablesText)}</div>
++              </div>
++            </div>
++          </div>
++
++          <!-- Bottom Section: TRINARY PERSPECTIVES -->
++          <div style="margin-top:28px;">
++            <div style="color:#F8FAFC; font-size:0.95rem; font-weight:700; letter-spacing:0.6px; padding-bottom:8px; border-bottom:1px solid #25354F; text-transform:uppercase;">
++              TRINARY PERSPECTIVES
++            </div>
++            <div style="display:grid; grid-template-columns:${isSmall ? '1fr' : (spirithekanon ? 'repeat(4, 1fr)' : 'repeat(3, 1fr)')}; gap:16px; margin-top:16px;">
++              <!-- Alethekanon -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px; position:relative; overflow:hidden;">
++                <div style="position:absolute; top:0; left:12px; right:12px; height:5px; border-radius:0 0 3px 3px; background:#38BDF8;"></div>
++                <div style="color:#38BDF8; font-size:0.88rem; font-weight:700; margin-bottom:8px; margin-top:4px;">ALETHEKANON</div>
++                <div style="color:#E2E8F0; font-size:0.84rem; line-height:1.5; white-space:pre-wrap;">${escapeHtml(alethekanon)}</div>
++              </div>
++
++              <!-- Awwthekanon -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px; position:relative; overflow:hidden;">
++                <div style="position:absolute; top:0; left:12px; right:12px; height:5px; border-radius:0 0 3px 3px; background:#10B981;"></div>
++                <div style="color:#10B981; font-size:0.88rem; font-weight:700; margin-bottom:8px; margin-top:4px;">AWWTHEKANON</div>
++                <div style="color:#E2E8F0; font-size:0.84rem; line-height:1.5; white-space:pre-wrap;">${escapeHtml(awwthekanon)}</div>
++              </div>
++
++              <!-- Brothekanon -->
++              <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px; position:relative; overflow:hidden;">
++                <div style="position:absolute; top:0; left:12px; right:12px; height:5px; border-radius:0 0 3px 3px; background:#F59E0B;"></div>
++                <div style="color:#F59E0B; font-size:0.88rem; font-weight:700; margin-bottom:8px; margin-top:4px;">BROTHEKANON</div>
++                <div style="color:#E2E8F0; font-size:0.84rem; line-height:1.5; white-space:pre-wrap;">${escapeHtml(brothekanon)}</div>
++              </div>
++
++              ${spirithekanon ? `
++                <!-- Spirithekanon -->
++                <div style="background:#141D2F; border:1px solid #25354F; border-radius:10px; padding:16px; position:relative; overflow:hidden;">
++                  <div style="position:absolute; top:0; left:12px; right:12px; height:5px; border-radius:0 0 3px 3px; background:#8B5CF6;"></div>
++                  <div style="color:#8B5CF6; font-size:0.88rem; font-weight:700; margin-bottom:8px; margin-top:4px;">SPIRITHEKANON</div>
++                  <div style="color:#E2E8F0; font-size:0.84rem; line-height:1.5; white-space:pre-wrap;">${escapeHtml(spirithekanon)}</div>
++                </div>
++              ` : ''}
++            </div>
++          </div>
++        </div>
++      `;
++    }
+           <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:8px;">
+             <div>
+               <div style="font-size:0.65rem; font-weight:700; color:#a855f7; text-transform:uppercase; letter-spacing:0.8px;">Aletheia Analysis Card</div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

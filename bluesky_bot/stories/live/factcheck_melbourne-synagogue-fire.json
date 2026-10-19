@@ -82,6 +82,24 @@
       "Crime",
       "Melbourne"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Victoria Police",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Federal Police",
+        "role": "instigator"
+      },
+      {
+        "name": "Adass Israel Synagogue",
+        "role": "instigator"
+      },
+      {
+        "name": "Melbourne",
+        "role": "context"
+      }
+    ]
   }
 ]

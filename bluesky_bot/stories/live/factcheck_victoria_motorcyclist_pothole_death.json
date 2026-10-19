@@ -143,6 +143,26 @@
       "Aletheia",
       "Victoria",
       "RoadSafety"
+    ],
+    "actor_roles": [
+      {
+        "name": "Victoria State Government",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "VicRoads",
+        "role": "instigator",
+        "sub_u": -0.88,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Victoria Police",
+        "role": "instigator"
+      }
     ]
   }
 ]

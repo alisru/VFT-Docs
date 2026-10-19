@@ -265,6 +265,31 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Abbas Araghchi",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context",
+        "sub_u": -0.45,
+        "sub_psi": -0.32,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
     ]
   }
 ]

@@ -144,6 +144,34 @@
     "tags": [
       "Aletheia",
       "WorldPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gadi Eisenkot",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Yashar",
+        "role": "instigator"
+      },
+      {
+        "name": "Likud",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
     ]
   }
 ]

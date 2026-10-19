@@ -100,6 +100,24 @@
       "Australia",
       "CyberSecurity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "EY",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Commonwealth Bank",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

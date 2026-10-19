@@ -83,6 +83,28 @@
       "Uber",
       "AutonomousVehicles"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Uber",
+        "role": "instigator"
+      },
+      {
+        "name": "Aurora",
+        "role": "instigator"
+      },
+      {
+        "name": "Waymo",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "Autobrains",
+        "role": "instigator"
+      }
+    ]
   }
 ]

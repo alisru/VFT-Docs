@@ -145,6 +145,27 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Iran",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Mohammad Bagher Ghalibaf",
+        "role": "instigator"
+      },
+      {
+        "name": "CENTCOM",
+        "role": "instigator"
+      }
     ]
   }
 ]

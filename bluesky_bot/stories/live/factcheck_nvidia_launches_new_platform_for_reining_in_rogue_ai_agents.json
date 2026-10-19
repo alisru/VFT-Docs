@@ -145,6 +145,27 @@
       "Aletheia",
       "AI",
       "Nvidia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nvidia",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Jensen Huang",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      }
     ]
   }
 ]

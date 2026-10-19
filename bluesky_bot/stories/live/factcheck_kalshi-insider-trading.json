@@ -99,6 +99,24 @@
       "Aletheia",
       "Finance"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Kalshi",
+        "role": "instigator"
+      },
+      {
+        "name": "Polymarket",
+        "role": "instigator"
+      },
+      {
+        "name": "PredictIt",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Election Commission",
+        "role": "regulator"
+      }
+    ]
   }
 ]

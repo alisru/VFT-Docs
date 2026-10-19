@@ -97,6 +97,16 @@
       "Aletheia",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Mistral AI",
+        "role": "instigator"
+      },
+      {
+        "name": "Arthur Mensch",
+        "role": "instigator"
+      }
+    ]
   }
 ]

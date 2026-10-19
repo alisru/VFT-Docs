@@ -269,6 +269,26 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Sen. Ruben Gallego",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Juntos PAC",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator",
+        "sub_u": 0.5,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

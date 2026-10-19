@@ -97,6 +97,16 @@
       "Jersey",
       "Privacy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Government of Jersey",
+        "role": "instigator"
+      },
+      {
+        "name": "Jersey Consumer Council",
+        "role": "acted_upon"
+      }
+    ]
   }
 ]

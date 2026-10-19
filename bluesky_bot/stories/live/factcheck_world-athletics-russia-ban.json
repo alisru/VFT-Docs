@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "Sports"
+    ],
+    "actor_roles": [
+      {
+        "name": "World Athletics",
+        "role": "instigator"
+      },
+      {
+        "name": "Sebastian Coe",
+        "role": "instigator",
+        "sub_u": 0.3,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Russian Athletics",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Court of Arbitration for Sport",
+        "role": "regulator"
+      }
     ]
   }
 ]

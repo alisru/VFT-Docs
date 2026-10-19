@@ -101,6 +101,24 @@
     ],
     "policies": [
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "NHS England",
+        "role": "instigator"
+      },
+      {
+        "name": "King's College London",
+        "role": "instigator"
+      },
+      {
+        "name": "Mencap",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
     ]
   }
 ]

@@ -99,6 +99,24 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Howard Lutnick",
+        "role": "instigator"
+      },
+      {
+        "name": "John Coleman",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -142,6 +142,26 @@
     "tags": [
       "Aletheia",
       "Housing"
+    ],
+    "actor_roles": [
+      {
+        "name": "Akhilesh Jah",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Woodland Hills Residents",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Los Angeles City Planning Commission",
+        "role": "regulator"
+      }
     ]
   }
 ]

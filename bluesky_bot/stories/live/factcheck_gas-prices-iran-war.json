@@ -81,6 +81,20 @@
       "Economy",
       "Energy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "AAA",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

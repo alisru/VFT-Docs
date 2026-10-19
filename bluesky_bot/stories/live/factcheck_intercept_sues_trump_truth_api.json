@@ -251,6 +251,27 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "The Intercept",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Freedom of the Press Foundation",
+        "role": "author"
+      },
+      {
+        "name": "Trump Media & Technology Group",
+        "role": "instigator"
+      }
+    ]
   }
 ]

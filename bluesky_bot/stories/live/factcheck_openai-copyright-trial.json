@@ -98,6 +98,20 @@
       "Law",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "The New York Times",
+        "role": "author"
+      },
+      {
+        "name": "The Daily News",
+        "role": "author"
+      }
+    ]
   }
 ]

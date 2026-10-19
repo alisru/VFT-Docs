@@ -251,6 +251,27 @@
     "tags": [
       "USNews",
       "Law"
+    ],
+    "actor_roles": [
+      {
+        "name": "Luigi Mangione",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Brian Thompson",
+        "role": "instigator"
+      },
+      {
+        "name": "UnitedHealthcare",
+        "role": "instigator"
+      },
+      {
+        "name": "United States Department of Justice",
+        "role": "instigator"
+      }
     ]
   }
 ]

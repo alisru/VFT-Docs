@@ -145,6 +145,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gallup",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Republican Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
     ]
   }
 ]

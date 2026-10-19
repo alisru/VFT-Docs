@@ -65,6 +65,20 @@
     "category": "world,politics",
     "topic": "AI",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

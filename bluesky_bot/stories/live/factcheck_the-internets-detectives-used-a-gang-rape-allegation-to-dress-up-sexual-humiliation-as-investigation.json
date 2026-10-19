@@ -271,6 +271,27 @@
       "Aletheia",
       "Cornell",
       "OnlineHarassment"
+    ],
+    "actor_roles": [
+      {
+        "name": "Cornell University",
+        "role": "instigator"
+      },
+      {
+        "name": "Kathy Hochul",
+        "role": "instigator"
+      },
+      {
+        "name": "Letitia James",
+        "role": "instigator"
+      },
+      {
+        "name": "The Journal",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

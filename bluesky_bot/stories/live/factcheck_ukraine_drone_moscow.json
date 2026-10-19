@@ -74,6 +74,24 @@
       "Aletheia",
       "UkraineRussiaWar"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Sergey Sobyanin",
+        "role": "instigator"
+      },
+      {
+        "name": "Andrei Vorobev",
+        "role": "instigator"
+      }
+    ]
   }
 ]

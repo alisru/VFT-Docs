@@ -63,6 +63,20 @@
     "category": "general",
     "topic": "121",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Stilgherrian",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

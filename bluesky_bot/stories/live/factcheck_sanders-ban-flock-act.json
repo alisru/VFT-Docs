@@ -145,6 +145,30 @@
       "Aletheia",
       "Privacy",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Bernie Sanders",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Flock Safety",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "US Federal Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Alexandria Ocasio-Cortez",
+        "role": "instigator"
+      }
     ]
   }
 ]

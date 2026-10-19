@@ -145,6 +145,31 @@
       "Aletheia",
       "AI",
       "TechPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Dario Amodei",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Mike Johnson",
+        "role": "instigator"
+      }
     ]
   }
 ]

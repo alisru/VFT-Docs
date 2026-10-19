@@ -74,6 +74,24 @@
       "Aletheia",
       "PublicHealth"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "DEA",
+        "role": "instigator"
+      },
+      {
+        "name": "UNODC",
+        "role": "instigator"
+      },
+      {
+        "name": "CDC",
+        "role": "instigator"
+      }
+    ]
   }
 ]

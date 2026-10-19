@@ -261,6 +261,23 @@
     "tags": [
       "NYC",
       "Aletheia"
+    ],
+    "actor_roles": [
+      {
+        "name": "NYPD",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "New York Post",
+        "role": "author"
+      },
+      {
+        "name": "Gansevoort Peninsula Park",
+        "role": "instigator"
+      }
     ]
   }
 ]

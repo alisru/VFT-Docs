@@ -252,6 +252,34 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ted Cruz",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Keith Self",
+        "role": "instigator"
+      },
+      {
+        "name": "Chip Roy",
+        "role": "instigator",
+        "sub_u": -0.88,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Mobashra Tazamal",
+        "role": "instigator"
+      },
+      {
+        "name": "Saher Selod",
+        "role": "instigator"
+      }
+    ]
   }
 ]

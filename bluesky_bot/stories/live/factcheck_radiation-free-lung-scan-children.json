@@ -250,6 +250,23 @@
     "tags": [
       "Health",
       "Innovation"
+    ],
+    "actor_roles": [
+      {
+        "name": "University of Sheffield",
+        "role": "instigator"
+      },
+      {
+        "name": "Sheffield Children's Hospital",
+        "role": "acted_upon",
+        "sub_u": 1.0,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "GE HealthCare",
+        "role": "instigator"
+      }
     ]
   }
 ]

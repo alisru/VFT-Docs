@@ -102,6 +102,28 @@
     ],
     "policies": [
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Lionel Messi",
+        "role": "instigator"
+      },
+      {
+        "name": "Leo Slattery",
+        "role": "instigator"
+      },
+      {
+        "name": "Argentina",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      },
+      {
+        "name": "Royal Children's Hospital",
+        "role": "acted_upon"
+      }
     ]
   }
 ]

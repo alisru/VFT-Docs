@@ -99,6 +99,24 @@
       "Russia",
       "Energy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Vladimir Putin",
+        "role": "instigator"
+      },
+      {
+        "name": "Alexander Novak",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
+    ]
   }
 ]

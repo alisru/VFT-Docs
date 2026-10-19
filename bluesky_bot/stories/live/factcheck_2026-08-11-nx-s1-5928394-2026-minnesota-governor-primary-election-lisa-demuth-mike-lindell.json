@@ -252,6 +252,31 @@
       "USPol",
       "Minnesota"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Lisa Demuth",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Mike Lindell",
+        "role": "instigator"
+      },
+      {
+        "name": "Amy Klobuchar",
+        "role": "instigator"
+      },
+      {
+        "name": "Kendall Qualls",
+        "role": "instigator"
+      },
+      {
+        "name": "Tim Walz",
+        "role": "instigator"
+      }
+    ]
   }
 ]

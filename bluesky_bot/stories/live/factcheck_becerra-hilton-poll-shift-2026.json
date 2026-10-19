@@ -261,6 +261,26 @@
     "tags": [
       "CalPolitics",
       "Election2026"
+    ],
+    "actor_roles": [
+      {
+        "name": "Xavier Becerra",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Steve Hilton",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "California",
+        "role": "context"
+      }
     ]
   }
 ]

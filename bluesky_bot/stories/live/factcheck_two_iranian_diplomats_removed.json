@@ -153,6 +153,35 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Marco Rubio",
+        "role": "instigator"
+      },
+      {
+        "name": "State Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Masoud Pezeshkian",
+        "role": "instigator"
+      },
+      {
+        "name": "United Nations",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context",
+        "sub_u": -0.5,
+        "sub_psi": -0.7,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

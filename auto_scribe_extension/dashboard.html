@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto-Scribe — Unposted Drafts Notebook</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-icon">✍️</span>
+        <span class="brand-title">Auto-Scribe</span>
+        <span class="brand-tag">Crash-Proof Archive</span>
+      </div>
+
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="global-search" placeholder="Search unposted drafts, topics, or sites...">
+        <button id="clear-search" class="clear-btn" style="display:none;">✕</button>
+      </div>
+
+      <div class="header-actions">
+        <div class="status-indicator" id="disk-sync-status" title="Direct PC Folder Sync Status">
+          <span class="dot" id="disk-sync-dot"></span>
+          <span id="disk-sync-text">Browser Database</span>
+        </div>
+        <button class="btn btn-outline" id="btn-export-json" title="Download all drafts as single JSON file">📥 Export JSON</button>
+        <button class="btn btn-outline" id="btn-export-zip" title="Download all drafts as a ZIP of Markdown files">📦 Export Markdown (.zip)</button>
+        <button class="btn btn-outline" id="btn-clean-duplicates" title="Merge and remove duplicate drafts">🧹 Clean Duplicates</button>
+        <button class="btn btn-primary" id="btn-settings-toggle">⚙️ Settings</button>
+      </div>
+    </header>
+
+    <!-- Main 3-Pane Body -->
+    <main class="app-main">
+      <!-- Left Pane: Sites & Filters -->
+      <aside class="sidebar-pane">
+        <div class="sidebar-stats">
+          <div class="stat-box">
+            <span class="stat-number" id="total-drafts-count">0</span>
+            <span class="stat-label">Saved Drafts</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number" id="total-words-count">0</span>
+            <span class="stat-label">Words Authored</span>
+          </div>
+        </div>
+
+        <div class="sidebar-section-title">Sites & Communities</div>
+        <div class="sites-list" id="sites-list">
+          <button class="site-nav-btn active" data-site="all">
+            <span class="site-icon">🌐</span>
+            <span class="site-name">All Sites</span>
+            <span class="site-count" id="all-sites-count">0</span>
+          </button>
+        </div>
+
+        <div class="sidebar-section-title" style="margin-top: 20px;">Length Filter</div>
+        <div class="filter-pills" id="length-filters">
+          <button class="pill-btn active" data-len="0">All Lengths</button>
+          <button class="pill-btn" data-len="100">Paragraphs (>100c)</button>
+          <button class="pill-btn" data-len="500">Essays (>500c)</button>
+          <button class="pill-btn" data-len="1500">Deep Dives (>1500c)</button>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="disk-quick-box">
+            <span class="disk-title">📁 Direct Disk Folder:</span>
+            <span class="disk-name" id="sidebar-disk-folder">Not selected</span>
+            <button class="btn btn-outline btn-sm" id="btn-sidebar-pick-folder" style="margin-top:6px;width:100%;">Choose Folder...</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Center Pane: Drafts Timeline Stream -->
+      <section class="stream-pane">
+        <div class="stream-header">
+          <div class="stream-title-row">
+            <h2 id="stream-active-site">All Sites</h2>
+            <span class="stream-count-badge" id="filtered-count-badge">0 drafts</span>
+          </div>
+          <div class="stream-controls" style="display:flex;align-items:center;gap:10px;">
+            <div class="sort-controls">
+              <span>Status:</span>
+              <select id="status-select">
+                <option value="all" selected>All</option>
+                <option value="draft">Drafts (Unposted)</option>
+                <option value="posted">Posted</option>
+              </select>
+            </div>
+            <div class="sort-controls">
+              <span>Group:</span>
+              <select id="group-select">
+                <option value="url" selected>Group by URL</option>
+                <option value="site">Group by Site</option>
+                <option value="flat">Flat List</option>
+              </select>
+            </div>
+            <button class="btn btn-outline btn-sm" id="btn-toggle-collapse-all" style="padding:3px 8px;font-size:11px;" title="Collapse or Expand all groups">Collapse All</button>
+            <div class="sort-controls">
+              <span>Sort:</span>
+              <select id="sort-select">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="longest">Longest (Words)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="stream-list" id="drafts-stream"></div>
+      </section>
+
+      <!-- Right Pane: Full Reading & Recovery Studio -->
+      <section class="reader-pane" id="reader-pane">
+        <div class="reader-empty" id="reader-empty">
+          <div class="empty-icon">📝</div>
+          <h3>Select a draft to view</h3>
+          <p>Browse through your unposted thoughts from Reddit, Facebook, Twitter/X, and forums.</p>
+        </div>
+
+        <div class="reader-content" id="reader-content" style="display: none;">
+          <div class="reader-meta-header">
+            <div class="reader-site-badge" id="reader-site-badge">reddit.com</div>
+            <h1 class="reader-title" id="reader-title">Untitled Draft</h1>
+            <div class="reader-url-row">
+              <span class="url-label">Source URL:</span>
+              <a href="#" target="_blank" class="reader-url-link" id="reader-url-link">https://reddit.com/...</a>
+            </div>
+
+            <div class="reader-stats-bar">
+              <span class="reader-stat" id="reader-stat-words">0 words</span>
+              <span class="reader-divider">•</span>
+              <span class="reader-stat" id="reader-stat-chars">0 characters</span>
+              <span class="reader-divider">•</span>
+              <span class="reader-stat" id="reader-stat-time">~1 min read</span>
+              <span class="reader-divider">•</span>
+              <span class="reader-stat" id="reader-stat-updated">Saved just now</span>
+            </div>
+
+            <div class="reader-action-toolbar">
+              <button class="btn btn-primary btn-lg" id="btn-copy-draft">
+                <span>📋</span>
+                <span id="copy-btn-text">Copy to Clipboard</span>
+              </button>
+              <button class="btn btn-outline" id="btn-toggle-status" title="Toggle Posted / Draft status">
+                <span id="toggle-status-icon">✓</span>
+                <span id="toggle-status-text">Mark as Posted</span>
+              </button>
+              <button class="btn btn-outline" id="btn-download-md">
+                <span>💾</span>
+                <span>Download .md</span>
+              </button>
+              <button class="btn btn-outline font-toggle" id="btn-toggle-font" title="Toggle Monospace / Prose font">
+                <span>Aa</span>
+              </button>
+              <button class="btn btn-danger" id="btn-delete-draft" title="Delete draft">
+                <span>🗑️</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="reader-text-wrapper">
+            <div class="reader-text" id="reader-text"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Settings Modal -->
+    <div class="modal-backdrop" id="settings-modal" style="display: none;">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2>Auto-Scribe Settings</h2>
+          <button class="modal-close-btn" id="btn-close-settings">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="setting-min-chars">
+              <strong>Minimum Character Threshold (n)</strong>
+              <p class="form-help">Only captures input with more than this many characters. Filters out search terms, usernames, logins, and short chatter.</p>
+            </label>
+            <div class="input-with-presets">
+              <input type="number" id="setting-min-chars" min="10" max="2000" step="10" value="50">
+              <div class="preset-chips">
+                <button type="button" class="preset-chip" data-val="30">30c</button>
+                <button type="button" class="preset-chip" data-val="50">50c</button>
+                <button type="button" class="preset-chip" data-val="100">100c</button>
+                <button type="button" class="preset-chip" data-val="250">250c</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="setting-debounce-ms">
+              <strong>Debounce Delay (milliseconds)</strong>
+              <p class="form-help">How long to wait after you pause typing before saving a snapshot.</p>
+            </label>
+            <input type="number" id="setting-debounce-ms" min="500" max="5000" step="250" value="1500">
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="setting-floating-widget" checked>
+              <span><strong>Show In-Input Status Indicator</strong> (Subtle circle when saving, tick when saved in bottom-right of editor)</span>
+            </label>
+          </div>
+
+          <!-- Storage & Export Options -->
+          <div class="form-group" style="background:var(--bg-card);padding:14px;border-radius:8px;border:1px solid var(--border-color);display:flex;flex-direction:column;gap:12px;">
+            <div>
+              <strong>Storage & Local PC Sync</strong>
+              <p class="form-help">Auto-saves crash-proof inside Chrome with zero CPU overhead. Sync all drafts to a PC folder on demand or export anytime.</p>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+              <button type="button" class="btn btn-outline btn-sm" id="btn-modal-pick-folder">📁 Choose PC Folder...</button>
+              <button type="button" class="btn btn-outline btn-sm" id="btn-sync-all-disk">Sync All Drafts to Folder</button>
+              <button type="button" class="btn btn-danger btn-sm" id="btn-disconnect-folder" style="display:none;">Disconnect</button>
+            </div>
+            <div id="modal-folder-path" style="font-size:12px;color:var(--text-muted)">Current Folder: None (Click 'Choose PC Folder' to connect)</div>
+          </div>
+
+          <div class="form-group">
+            <label for="setting-ignored-domains">
+              <strong>Blacklisted Domains</strong>
+              <p class="form-help">Comma-separated domains to never monitor (e.g. <code>accounts.google.com, bank.com</code>)</p>
+            </label>
+            <textarea id="setting-ignored-domains" rows="2" placeholder="accounts.google.com, chase.com"></textarea>
+          </div>
+
+          <div class="danger-zone">
+            <h3>Danger Zone</h3>
+            <button class="btn btn-danger" id="btn-clear-all-data">Clear All Saved Drafts</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="btn-cancel-settings">Cancel</button>
+          <button class="btn btn-primary" id="btn-save-settings">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

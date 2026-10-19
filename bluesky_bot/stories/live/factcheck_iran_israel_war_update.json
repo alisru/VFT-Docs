@@ -75,6 +75,28 @@
       "Aletheia",
       "WorldNews"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "NBC News",
+        "role": "author"
+      },
+      {
+        "name": "Democracy Now",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -77,6 +77,20 @@
     "policies": [
       "Trade Tariffs",
       "Cost of Living"
+    ],
+    "actor_roles": [
+      {
+        "name": "Australian Energy Market Commission",
+        "role": "regulator"
+      },
+      {
+        "name": "Australian Energy Regulator",
+        "role": "regulator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
     ]
   }
 ]

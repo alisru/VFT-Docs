@@ -262,6 +262,30 @@
     "tags": [
       "Aletheia",
       "Privacy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Katy Gallagher",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Government",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Meta Platforms, Inc.",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "University of Sydney",
+        "role": "instigator"
+      }
     ]
   }
 ]

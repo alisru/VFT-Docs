@@ -200,6 +200,31 @@
       "Aletheia",
       "Automotive",
       "Business"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jim Farley",
+        "role": "instigator"
+      },
+      {
+        "name": "Ford Motor Company",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Geely",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "instigator"
+      }
     ]
   }
 ]

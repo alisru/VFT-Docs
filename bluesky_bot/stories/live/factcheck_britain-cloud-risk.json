@@ -100,6 +100,28 @@
       "Tech",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Amazon Web Services",
+        "role": "instigator"
+      },
+      {
+        "name": "Microsoft",
+        "role": "instigator"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "Cyber Monitoring Centre",
+        "role": "regulator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

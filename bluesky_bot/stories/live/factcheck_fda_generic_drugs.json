@@ -96,6 +96,16 @@
       "Health",
       "Transparency"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "FDA",
+        "role": "regulator"
+      },
+      {
+        "name": "ProPublica",
+        "role": "author"
+      }
+    ]
   }
 ]

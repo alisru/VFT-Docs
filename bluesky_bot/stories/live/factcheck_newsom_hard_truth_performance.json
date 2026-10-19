@@ -149,6 +149,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gavin Newsom",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": 0.4,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "California",
+        "role": "context"
+      }
     ]
   }
 ]

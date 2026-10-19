@@ -250,6 +250,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Democratic National Committee",
+        "role": "instigator",
+        "sub_u": 0.78,
+        "sub_psi": 0.71,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

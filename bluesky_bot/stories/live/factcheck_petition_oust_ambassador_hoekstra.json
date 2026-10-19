@@ -257,6 +257,42 @@
     ],
     "policies": [
       "Trade Tariffs"
+    ],
+    "actor_roles": [
+      {
+        "name": "Lee Walker",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Pete Hoekstra",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Mark Carney",
+        "role": "instigator"
+      },
+      {
+        "name": "Dominic LeBlanc",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

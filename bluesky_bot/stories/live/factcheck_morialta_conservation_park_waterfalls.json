@@ -162,6 +162,20 @@
       "Aletheia",
       "Environment"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "SA Water",
+        "role": "instigator"
+      },
+      {
+        "name": "Bureau of Meteorology",
+        "role": "instigator"
+      },
+      {
+        "name": "Department for Environment and Water",
+        "role": "instigator"
+      }
+    ]
   }
 ]

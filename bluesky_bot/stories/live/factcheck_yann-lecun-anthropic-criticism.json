@@ -145,6 +145,27 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Yann LeCun",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Dario Amodei",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      }
     ]
   }
 ]

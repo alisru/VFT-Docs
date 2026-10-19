@@ -251,6 +251,30 @@
     "tags": [
       "Aletheia",
       "DPRK"
+    ],
+    "actor_roles": [
+      {
+        "name": "North Korea",
+        "role": "instigator",
+        "sub_u": -1.2,
+        "sub_psi": -1.1,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "South Korea",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
     ]
   }
 ]

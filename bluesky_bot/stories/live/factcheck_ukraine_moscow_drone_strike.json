@@ -75,6 +75,28 @@
       "Aletheia",
       "UkraineWar"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Vladimir Putin",
+        "role": "instigator"
+      },
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator"
+      },
+      {
+        "name": "Sergei Sobyanin",
+        "role": "instigator"
+      }
+    ]
   }
 ]

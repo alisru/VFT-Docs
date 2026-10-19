@@ -204,6 +204,26 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Federal Courts",
+        "role": "regulator"
+      },
+      {
+        "name": "Press Freedom Defense",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

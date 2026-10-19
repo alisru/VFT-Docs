@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "US Central Command",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

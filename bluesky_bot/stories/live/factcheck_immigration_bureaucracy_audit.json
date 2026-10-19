@@ -72,6 +72,16 @@
       "Aletheia",
       "Immigration"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States Department of Homeland Security",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Citizenship and Immigration Services",
+        "role": "acted_upon"
+      }
+    ]
   }
 ]

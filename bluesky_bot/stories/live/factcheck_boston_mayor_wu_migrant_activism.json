@@ -144,6 +144,23 @@
       "Aletheia",
       "USPol",
       "Boston"
+    ],
+    "actor_roles": [
+      {
+        "name": "Michelle Wu",
+        "role": "instigator"
+      },
+      {
+        "name": "City of Boston",
+        "role": "instigator"
+      },
+      {
+        "name": "Immigrants Lead Boston",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

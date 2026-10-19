@@ -137,6 +137,30 @@
       "Aletheia",
       "USPol",
       "Media"
+    ],
+    "actor_roles": [
+      {
+        "name": "Abdul El-Sayed",
+        "role": "instigator"
+      },
+      {
+        "name": "Kat Cammack",
+        "role": "instigator"
+      },
+      {
+        "name": "Fox News",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "NPR",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

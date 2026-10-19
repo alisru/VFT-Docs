@@ -264,6 +264,35 @@
     "tags": [
       "Aletheia",
       "CivilRights"
+    ],
+    "actor_roles": [
+      {
+        "name": "Eric André",
+        "role": "instigator"
+      },
+      {
+        "name": "Clayton English",
+        "role": "instigator"
+      },
+      {
+        "name": "Clayton County Police Department",
+        "role": "instigator",
+        "sub_u": -0.86,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "role": "instigator"
+      },
+      {
+        "name": "Delta Air Lines",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

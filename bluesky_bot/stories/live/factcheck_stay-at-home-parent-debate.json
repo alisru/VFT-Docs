@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "FamilyPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "J.D. Vance",
+        "role": "instigator"
+      },
+      {
+        "name": "Kevin Roberts",
+        "role": "instigator"
+      },
+      {
+        "name": "Charlie Kirk",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.3,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

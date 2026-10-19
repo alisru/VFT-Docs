@@ -12,7 +12,7 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Why.Who.Who | **The Volunteer** | +0.9 | +0.8 | **Greater Good** — Universal service (+υ) through crisis action (+ψ). The Binder. |
-| Why.Who.What | **The Bludger** | -0.6 | -0.5 | **Greater Evil** — Parasitic extraction (-υ) through refusal to contribute (-ψ). |
+| Why.Who.What | **The Bludger** | -0.8 | -0.6 | **Greater Evil** — Parasitic extraction (-υ) through deliberate refusal to contribute (-ψ). |
 | Why.Who.Where | **The Knocker** | -0.4 | -0.3 | **Lesser Evil** — Leveling impulse (-υ) through passive cutting (-ψ). |
 | Why.Who.Why | **The Digger** | +0.7 | +0.5 | **Greater Good** — Collective endurance (+υ) through persistent will (+ψ). |
 | Why.Who.How | **The Gambler** | -0.2 | +0.5 | **Tension** — Risk-taking (+ψ) often for selfish gain (-υ). Speculative. |
@@ -54,9 +54,9 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Why.Why.Who | **Mateship** | +0.7 | +0.5 | **Greater Good** — Horizontal loyalty (+υ) through binding chain (+ψ). |
-| Why.Why.What | **Tall Poppy Syndrome** | -0.4 | +0.4 | **Greatest Lie** — Active cutting (+ψ) serving mediocrity (-υ). |
-| Why.Why.Where | **Cultural Cringe** | -0.5 | -0.4 | **Greater Evil** — Self-doubt (-υ) through passive deference (-ψ). |
-| Why.Why.Why | **She'll Be Right** | +0.2 | -0.6 | **Lesser Good** — Acceptance (+υ) but passive brake (-ψ). |
+| Why.Why.What | **Tall Poppy Syndrome** | -0.4 | -0.6 | **Greater Evil** — Envious leveling (-υ) through suppressive cutting (-ψ) serving group mediocrity. |
+| Why.Why.Where | **Cultural Cringe** | -0.5 | -0.5 | **Greater Evil** — Internalized colonial inferiority (-υ) producing creative deference (-ψ). |
+| Why.Why.Why | **She'll Be Right** | -0.3 | -0.7 | **Greater Evil** — Fatalistic complacency (-υ) acting as a passive brake on systemic reform (-ψ). |
 | Why.Why.How | **Have a Go** | +0.6 | +0.7 | **Greater Good** — Participation (+υ) through active attempt (+ψ). |
 | Why.Why.Cause | **Fear of Missing Out** | -0.2 | +0.5 | **Tension** — Anxiety whip (+ψ) but insecurity-driven (-υ). |
 | Why.Why.Effect | **The Good Life** | +0.5 | -0.4 | **Lesser Good** — Hedonistic comfort (+υ) but sedative (-ψ). |

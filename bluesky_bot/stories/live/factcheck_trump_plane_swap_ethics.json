@@ -250,6 +250,23 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "John Brennan",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      }
+    ]
   }
 ]

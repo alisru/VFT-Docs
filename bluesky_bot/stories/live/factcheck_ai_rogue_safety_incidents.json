@@ -146,6 +146,28 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Hugging Face",
+        "role": "instigator"
+      },
+      {
+        "name": "Databricks",
+        "role": "instigator"
+      },
+      {
+        "name": "ControlAI",
+        "role": "instigator"
+      }
     ]
   }
 ]

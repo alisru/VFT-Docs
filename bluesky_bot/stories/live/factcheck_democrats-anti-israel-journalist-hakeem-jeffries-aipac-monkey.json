@@ -144,6 +144,34 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Rula Jebreal",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Hakeem Jeffries",
+        "role": "instigator"
+      },
+      {
+        "name": "Wajahat Ali",
+        "role": "instigator"
+      },
+      {
+        "name": "Congressional Black Caucus",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Ritchie Torres",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -145,6 +145,34 @@
       "Aletheia",
       "Polymarket",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump Jr.",
+        "role": "instigator"
+      },
+      {
+        "name": "1789 Capital",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Polymarket",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Kalshi",
+        "role": "instigator"
+      },
+      {
+        "name": "CFTC",
+        "role": "instigator"
+      }
     ]
   }
 ]

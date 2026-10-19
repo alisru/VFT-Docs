@@ -147,6 +147,27 @@
       "Aletheia",
       "Victoria",
       "Paramedics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Victorian Government",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Victorian Ambulance Union",
+        "role": "instigator"
+      },
+      {
+        "name": "Victoria Police",
+        "role": "instigator"
+      },
+      {
+        "name": "Ambellance Victoria",
+        "role": "instigator"
+      }
     ]
   }
 ]

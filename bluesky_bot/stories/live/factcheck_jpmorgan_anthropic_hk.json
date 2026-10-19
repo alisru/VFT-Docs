@@ -73,6 +73,20 @@
       "Aletheia",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "JPMorgan Chase",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Financial Times",
+        "role": "author"
+      }
+    ]
   }
 ]

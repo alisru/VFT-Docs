@@ -251,6 +251,27 @@
     "tags": [
       "Aletheia",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.3,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Gemini",
+        "role": "instigator"
+      },
+      {
+        "name": "Meduza",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
     ]
   }
 ]

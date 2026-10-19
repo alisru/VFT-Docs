@@ -99,6 +99,24 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Pete Hegseth",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Defense",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

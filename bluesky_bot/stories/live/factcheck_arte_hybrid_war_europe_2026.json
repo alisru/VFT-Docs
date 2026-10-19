@@ -144,6 +144,27 @@
       "Europe",
       "HybridWar",
       "Defense"
+    ],
+    "actor_roles": [
+      {
+        "name": "European Union",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "NATO",
+        "role": "instigator"
+      },
+      {
+        "name": "ARTE",
+        "role": "instigator",
+        "sub_u": 0.75,
+        "sub_psi": 0.55,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

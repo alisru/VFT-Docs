@@ -98,6 +98,20 @@
       "Health",
       "FDA"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "FDA",
+        "role": "regulator"
+      },
+      {
+        "name": "Swedish Match",
+        "role": "instigator"
+      },
+      {
+        "name": "World Health Organization",
+        "role": "instigator"
+      }
+    ]
   }
 ]

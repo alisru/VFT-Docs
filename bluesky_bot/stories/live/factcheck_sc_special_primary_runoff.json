@@ -253,6 +253,34 @@
       "SCPol",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Darline Graham Nordone",
+        "role": "instigator",
+        "sub_u": 0.52,
+        "sub_psi": 0.38,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Ralph Norman",
+        "role": "instigator",
+        "sub_u": 0.64,
+        "sub_psi": 0.46,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Henry McMaster",
+        "role": "instigator"
+      },
+      {
+        "name": "South Carolina",
+        "role": "instigator"
+      }
+    ]
   }
 ]

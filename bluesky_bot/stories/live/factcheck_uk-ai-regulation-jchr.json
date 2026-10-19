@@ -148,6 +148,35 @@
       "Aletheia",
       "AI",
       "UK"
+    ],
+    "actor_roles": [
+      {
+        "name": "Joint Committee on Human Rights",
+        "role": "instigator"
+      },
+      {
+        "name": "UK Parliament",
+        "role": "instigator"
+      },
+      {
+        "name": "UK Government",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Alex Sobel",
+        "role": "instigator"
+      },
+      {
+        "name": "Georgia Gould",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      }
     ]
   }
 ]

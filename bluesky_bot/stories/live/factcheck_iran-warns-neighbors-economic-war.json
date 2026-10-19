@@ -261,6 +261,23 @@
     "tags": [
       "Geopolitics",
       "Iran"
+    ],
+    "actor_roles": [
+      {
+        "name": "Iran",
+        "role": "instigator",
+        "sub_u": -1.6,
+        "sub_psi": -1.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Mohsen Rezaei",
+        "role": "instigator"
+      }
     ]
   }
 ]

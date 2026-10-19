@@ -71,7 +71,7 @@
 | How.How.What | **The Roster** | +0.6 | +0.3 | **Good** — Fair allocation (+υ) through industrial clock (+ψ). |
 | How.How.Where | **The Sickie** | +0.4 | -0.3 | **Tension** — Citizen veto (+υ) but leak in system (-ψ). |
 | How.How.Why | **The Meeting** | +0.4 | -0.4 | **Tension** — Formal trauma processing (+υ) but urgency dampener (-ψ). |
-| How.How.How | **The Shortcut** | -0.4 | +0.3 | **Greatest Lie** — Quick fix (+ψ) sacrificing excellence (-υ). |
+| How.How.How | **The Shortcut** | -0.5 | +0.2 | **Greatest Lie** — Pragmatic 'she'll do' fix (+ψ) sacrificing systemic excellence and safety (-υ). |
 | How.How.Cause | **The Trial** | +0.6 | +0.5 | **Good** — Pilot experiment (+υ) through state laboratory (+ψ). |
 | How.How.Effect | **The Report** | +0.2 | -0.4 | **Tension** — Memory device (+υ) but substitute for action (-ψ). |
 

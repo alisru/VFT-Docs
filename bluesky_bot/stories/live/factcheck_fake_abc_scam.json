@@ -74,6 +74,24 @@
       "ScamAlert",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "ABC News",
+        "role": "author"
+      },
+      {
+        "name": "Commonwealth Bank",
+        "role": "instigator"
+      },
+      {
+        "name": "Alan Kohler",
+        "role": "instigator"
+      },
+      {
+        "name": "Matt Comyn",
+        "role": "instigator"
+      }
+    ]
   }
 ]

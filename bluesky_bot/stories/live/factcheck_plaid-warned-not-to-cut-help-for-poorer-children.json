@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "WelshPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ken Skates",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Plaid Cymru",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Welsh Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Dafydd Trystan Davies",
+        "role": "instigator"
+      }
     ]
   }
 ]

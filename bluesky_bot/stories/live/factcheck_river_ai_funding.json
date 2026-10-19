@@ -253,6 +253,31 @@
       "AI",
       "Venture"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Igor Babuschkin",
+        "role": "instigator"
+      },
+      {
+        "name": "River AI",
+        "role": "instigator",
+        "sub_u": 0.45,
+        "sub_psi": 0.35,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "General Catalyst",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "AMP PBC",
+        "role": "instigator"
+      }
+    ]
   }
 ]

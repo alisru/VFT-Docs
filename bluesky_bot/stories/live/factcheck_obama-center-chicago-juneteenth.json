@@ -76,6 +76,24 @@
       "Chicago",
       "Juneteenth"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Barack Obama",
+        "role": "instigator"
+      },
+      {
+        "name": "Michelle Obama",
+        "role": "instigator"
+      },
+      {
+        "name": "Obama Presidential Center",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Chicago",
+        "role": "context"
+      }
+    ]
   }
 ]

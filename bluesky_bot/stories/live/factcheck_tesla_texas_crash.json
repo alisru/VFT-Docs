@@ -98,6 +98,20 @@
       "Tesla",
       "NTSB"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tesla",
+        "role": "instigator"
+      },
+      {
+        "name": "NTSB",
+        "role": "instigator"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      }
+    ]
   }
 ]

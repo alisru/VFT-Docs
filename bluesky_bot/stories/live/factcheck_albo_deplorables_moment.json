@@ -270,6 +270,37 @@
     "tags": [
       "Aletheia",
       "AusPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator",
+        "sub_u": -0.72,
+        "sub_psi": 0.65,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Peter van Onselen",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Pauline Hanson",
+        "role": "instigator"
+      },
+      {
+        "name": "One Nation",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": 0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Angus Taylor",
+        "role": "instigator"
+      }
     ]
   }
 ]

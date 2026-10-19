@@ -153,6 +153,31 @@
       "Aletheia",
       "Ukraine"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator"
+      },
+      {
+        "name": "Steve Witkoff",
+        "role": "instigator"
+      },
+      {
+        "name": "Jared Kushner",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.95,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
+    ]
   }
 ]

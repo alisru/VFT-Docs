@@ -143,6 +143,23 @@
     "tags": [
       "Germany",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Alternative for Germany",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "German Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Friedrich Merz",
+        "role": "instigator"
+      }
     ]
   }
 ]

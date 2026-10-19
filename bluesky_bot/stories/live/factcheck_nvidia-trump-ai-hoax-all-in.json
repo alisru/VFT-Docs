@@ -147,6 +147,31 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Jensen Huang",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Dario Amodei",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      }
     ]
   }
 ]

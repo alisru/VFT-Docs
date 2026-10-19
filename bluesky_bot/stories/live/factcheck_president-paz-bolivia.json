@@ -153,6 +153,30 @@
     "tags": [
       "Aletheia",
       "Bolivia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Rodrigo Paz",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Fernando Aramayo",
+        "role": "instigator"
+      },
+      {
+        "name": "Bolivia",
+        "role": "instigator",
+        "sub_u": -0.1,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

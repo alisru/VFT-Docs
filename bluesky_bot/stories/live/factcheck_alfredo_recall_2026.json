@@ -72,6 +72,16 @@
       "Health",
       "Recall"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "FDA",
+        "role": "regulator"
+      },
+      {
+        "name": "The Coffee Connexion Co. Inc.",
+        "role": "instigator"
+      }
+    ]
   }
 ]

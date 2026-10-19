@@ -274,6 +274,34 @@
       "Aletheia",
       "TradeWar",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Scott Bessent",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Mark Carney",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Canada",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

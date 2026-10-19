@@ -143,6 +143,26 @@
       "Aletheia",
       "Canada",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Elections Alberta",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Alberta",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Government of Canada",
+        "role": "instigator"
+      }
     ]
   }
 ]

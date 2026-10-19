@@ -251,6 +251,27 @@
       "Aletheia",
       "Geopolitics"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Lula da Silva",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Brazil",
+        "role": "instigator",
+        "sub_u": 0.52,
+        "sub_psi": -0.1,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

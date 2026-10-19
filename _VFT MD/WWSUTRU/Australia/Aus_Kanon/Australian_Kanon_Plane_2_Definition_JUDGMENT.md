@@ -11,7 +11,7 @@
 
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
-| What.Who.Who | **The Independent Australian Briton** | +0.4 | +0.3 | **Good** — Hybrid identity (+υ) through active synthesis (+ψ). Dual loyalty. |
+| What.Who.Who | **The Independent Australian Briton** | -0.4 | +0.2 | **Lesser Evil** — Hybrid colonial identity (-υ) maintaining deference to foreign crown hierarchy (+ψ). Bounded to Only My Group. |
 | What.Who.What | **The Constituent** | +0.8 | +0.4 | **Greater Good** — Universal franchise (+υ) through active participation (+ψ). Voter as sovereign. |
 | What.Who.Where | **The Resident** | +0.8 | +0.3 | **Greater Good** — Freedom of movement (+υ) through constitutional guarantee (+ψ). |
 | What.Who.Why | **The Mate** | +0.7 | +0.3 | **Greater Good** — Horizontal equality (+υ) through social geometry (+ψ). |
@@ -25,7 +25,7 @@
 
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
-| What.What.Who | **The Governor-General** | +0.3 | -0.4 | **Tension Point** — Safety valve (+υ) but unelected power (-ψ). Ghost in machine. |
+| What.What.Who | **The Governor-General** | +0.2 | -0.4 | **Lesser Good** — Unelected constitutional safety-valve (+υ) exercising passive reserve authority (-ψ). Structural constraint. |
 | What.What.What | **Peace, Order, and Good Government** | +0.6 | -0.4 | **Lesser Good** — Collective stability (+υ) through administrative constraint (-ψ). |
 | What.What.Where | **Supremacy** | +0.5 | +0.4 | **Good** — National unity (+υ) through clear hierarchy (+ψ). |
 | What.What.Why | **The Double Majority** | +0.6 | -0.5 | **Lesser Good** — Protects federation (+υ) through conservative resistance (-ψ). |
@@ -97,13 +97,13 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | What.Effect.Who | **The Anzac** | +0.6 | +0.7 | **Good** — Sacrifice (+υ) through valor (+ψ). National myth. |
-| What.Effect.What | **The Lucky Country** | +0.3 | -0.4 | **Lesser Good** — Wealth (+υ) through passive luck (-ψ). Mediocrity risk. |
+| What.Effect.What | **The Lucky Country** | -0.4 | -0.6 | **Greater Evil** — Unearned mineral luck (-υ) breeding second-rate leadership and complacent de-industrialization (-ψ). Path to Nowhere (BR). |
 | What.Effect.Where | **The Tyranny of Distance** | ±0.0 | -0.6 | **Constraint** — Geographic fact, not moral choice. Isolation gravity. |
 | What.Effect.Why | **The Cultural Cringe** | -0.4 | -0.5 | **Greater Evil** — Self-doubt (-υ) through passive inferiority (-ψ). |
 | What.Effect.How | **Mateship** | +0.7 | +0.4 | **Greater Good** — Horizontal loyalty (+υ) through active bond (+ψ). |
-| What.Effect.Cause | **The Great Silence** | -0.8 | -0.6 | **Greater Evil** — Active erasure (-υ) through deliberate forgetting (-ψ). Stanner. |
+| What.Effect.Cause | **The Great Silence** | -1.4 | -0.8 | **Greater Evil** — Active structural erasure (-υ) through deliberate institutional forgetting of frontier history (-ψ). |
 | What.Effect.Cause | **Voice [First Nations Perspective]** | +0.9 | +0.6 | **Greater Good** — Truth restored (+υ) through active return (+ψ). Breaking silence. |
-| What.Effect.Effect | **The Nanny State** | +0.4 | -0.5 | **Lesser Good** — Safety (+υ) through suppressive regulation (-ψ). |
+| What.Effect.Effect | **The Nanny State** | -0.4 | -0.6 | **Greater Evil** — Risk-averse paternalism (-υ) suppressing individual and civic initiative (-ψ) under guise of safety. |
 
 ---
 

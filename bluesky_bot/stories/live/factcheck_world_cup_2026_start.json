@@ -71,6 +71,24 @@
       "WorldCup",
       "Soccer"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "FIFA",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Mexico",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -195,6 +195,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "California Supreme Court",
+        "role": "regulator",
+        "sub_u": 0.9,
+        "sub_psi": 0.85,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Chad Bianco",
+        "role": "instigator"
+      },
+      {
+        "name": "Riverside County Sheriff's Department",
+        "role": "instigator"
+      },
+      {
+        "name": "California Attorney General",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -143,6 +143,26 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nvidia",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "MediaTek",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Alphabet",
+        "role": "instigator"
+      }
     ]
   }
 ]

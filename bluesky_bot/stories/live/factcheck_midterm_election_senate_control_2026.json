@@ -273,6 +273,31 @@
       "Aletheia",
       "USPol",
       "Elections"
+    ],
+    "actor_roles": [
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Republican Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Cook Political Report",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.1,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Jon Ossoff",
+        "role": "instigator"
+      },
+      {
+        "name": "Roy Cooper",
+        "role": "instigator"
+      }
     ]
   }
 ]

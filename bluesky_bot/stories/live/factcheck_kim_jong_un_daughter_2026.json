@@ -62,6 +62,16 @@
       "North Korea"
     ],
     "topic": "News",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Kim Jong Un",
+        "role": "instigator"
+      },
+      {
+        "name": "North Korea",
+        "role": "context"
+      }
+    ]
   }
 ]

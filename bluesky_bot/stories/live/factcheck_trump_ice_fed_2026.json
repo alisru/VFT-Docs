@@ -153,6 +153,31 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Lance Schroyer",
+        "role": "instigator"
+      },
+      {
+        "name": "Kevin Warsh",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Reserve",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "U.S. Immigration and Customs Enforcement",
+        "role": "instigator"
+      }
     ]
   }
 ]

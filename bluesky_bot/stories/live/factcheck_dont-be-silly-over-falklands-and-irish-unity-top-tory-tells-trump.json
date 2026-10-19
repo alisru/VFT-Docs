@@ -270,6 +270,30 @@
       "Aletheia",
       "Falklands",
       "USPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Tom Tugendhat",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Kemi Badenoch",
+        "role": "instigator"
+      },
+      {
+        "name": "Javier Milei",
+        "role": "instigator"
+      }
     ]
   }
 ]

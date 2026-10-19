@@ -346,6 +346,35 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Centers for Medicare & Medicaid Services",
+        "role": "instigator"
+      },
+      {
+        "name": "JD Vance",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "The Federalist",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Republican Party",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -264,6 +264,23 @@
       "Aletheia",
       "Immigration",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "State Department",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.92,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Department of Homeland Security",
+        "role": "instigator"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      }
     ]
   }
 ]

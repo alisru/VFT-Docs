@@ -1,0 +1,32 @@
+Title: Live Content
+
+Description: Fetched live
+
+Source: https://raw.githubusercontent.com/jujusharp/gemini-export/main/manifest.json
+
+---
+
+{
+  "manifest_version": 3,
+  "name": "AI Chat Exporter",
+  "version": "1.2.0",
+  "description": "Export your Gemini or ChatGPT chat history to Markdown, JSON, or text.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "https://chatgpt.com/*",
+    "https://*.google.com/*",
+    "https://*.googleusercontent.com/*",
+    "https://*.gstatic.com/*"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon.png",
+      "48
+

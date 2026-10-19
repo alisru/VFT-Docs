@@ -251,6 +251,27 @@
     "tags": [
       "Tech",
       "Transportation"
+    ],
+    "actor_roles": [
+      {
+        "name": "Aurora Innovation",
+        "role": "instigator"
+      },
+      {
+        "name": "Kodiak AI",
+        "role": "instigator"
+      },
+      {
+        "name": "California DMV",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Teamsters California",
+        "role": "instigator"
+      }
     ]
   }
 ]

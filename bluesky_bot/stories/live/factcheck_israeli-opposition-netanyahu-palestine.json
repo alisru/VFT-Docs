@@ -146,6 +146,34 @@
       "Aletheia",
       "Israel",
       "MiddleEast"
+    ],
+    "actor_roles": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Avigdor Liberman",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Likud",
+        "role": "instigator"
+      },
+      {
+        "name": "Yisrael Beytenu",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
     ]
   }
 ]

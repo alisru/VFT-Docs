@@ -151,6 +151,27 @@
     "tags": [
       "Aletheia",
       "Cornell"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jane Doe",
+        "role": "instigator"
+      },
+      {
+        "name": "Cornell University",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Chi Phi Fraternity",
+        "role": "instigator"
+      },
+      {
+        "name": "Kathy Hochul",
+        "role": "instigator"
+      }
     ]
   }
 ]

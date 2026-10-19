@@ -76,6 +76,24 @@
     "category": "general",
     "topic": "AIethics",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Alice Carrier",
+        "role": "instigator"
+      },
+      {
+        "name": "Kristie Carrier",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -100,6 +100,28 @@
       "Tech",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "Apple",
+        "role": "instigator"
+      },
+      {
+        "name": "Perplexity",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Opera",
+        "role": "instigator"
+      }
+    ]
   }
 ]

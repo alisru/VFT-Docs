@@ -100,6 +100,28 @@
       "Tennis",
       "Brisbane"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tennis Australia",
+        "role": "instigator"
+      },
+      {
+        "name": "Lleyton Hewitt",
+        "role": "instigator"
+      },
+      {
+        "name": "David Crisafulli",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      },
+      {
+        "name": "Poland",
+        "role": "instigator"
+      }
+    ]
   }
 ]

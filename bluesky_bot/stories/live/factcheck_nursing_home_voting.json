@@ -251,6 +251,27 @@
       "VotingRights",
       "CMS"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Elizabeth Warren",
+        "role": "instigator"
+      },
+      {
+        "name": "Alex Padilla",
+        "role": "instigator"
+      },
+      {
+        "name": "Mehmet Oz",
+        "role": "instigator"
+      },
+      {
+        "name": "CMS",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      }
+    ]
   }
 ]

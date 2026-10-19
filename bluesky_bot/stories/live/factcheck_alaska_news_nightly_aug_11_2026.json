@@ -251,6 +251,23 @@
       "Alaska",
       "News"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Alaska Public Media",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Casey Grove",
+        "role": "instigator"
+      },
+      {
+        "name": "Juneau",
+        "role": "instigator"
+      }
+    ]
   }
 ]

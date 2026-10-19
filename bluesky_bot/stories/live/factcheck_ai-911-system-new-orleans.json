@@ -250,6 +250,23 @@
       "NewOrleans",
       "AI911"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Orleans Parish Communication District",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.12,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Carbyne",
+        "role": "instigator"
+      },
+      {
+        "name": "New Orleans",
+        "role": "instigator"
+      }
+    ]
   }
 ]

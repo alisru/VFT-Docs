@@ -196,6 +196,22 @@
       "Aletheia",
       "Music",
       "Law"
+    ],
+    "actor_roles": [
+      {
+        "name": "Alanis Morissette",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Keren Urinov",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

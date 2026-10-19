@@ -147,6 +147,39 @@
       "Aletheia",
       "Ukraine",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Andriy Yermak",
+        "role": "instigator"
+      },
+      {
+        "name": "Iryna Mudra",
+        "role": "instigator"
+      },
+      {
+        "name": "Olha Stefanishyna",
+        "role": "instigator"
+      },
+      {
+        "name": "Mykhailo Fedorov",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
     ]
   }
 ]

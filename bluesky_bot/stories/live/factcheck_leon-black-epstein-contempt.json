@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Leon Black",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "House Oversight Committee",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Jeffrey Epstein",
+        "role": "instigator"
+      },
+      {
+        "name": "James Comer",
+        "role": "instigator"
+      }
     ]
   }
 ]

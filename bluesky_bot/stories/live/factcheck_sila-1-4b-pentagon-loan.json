@@ -163,6 +163,20 @@
       "Tech",
       "Defense"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Sila Nanotechnologies",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Department of Defense",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -145,6 +145,30 @@
       "Aletheia",
       "Tech",
       "Governance"
+    ],
+    "actor_roles": [
+      {
+        "name": "Dallas City Council",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "City Detect",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "NBC 5 Investigates",
+        "role": "instigator"
+      },
+      {
+        "name": "Chad West",
+        "role": "instigator"
+      }
     ]
   }
 ]

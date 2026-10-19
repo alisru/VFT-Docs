@@ -251,6 +251,23 @@
       "Alaska",
       "Health",
       "PublicPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Alaska Department of Health",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Alaska Behavioral Health",
+        "role": "instigator"
+      },
+      {
+        "name": "Chugachmiut",
+        "role": "instigator"
+      }
     ]
   }
 ]

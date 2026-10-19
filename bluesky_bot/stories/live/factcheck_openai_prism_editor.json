@@ -73,6 +73,20 @@
       "OpenAI",
       "Science"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Kevin Weil",
+        "role": "instigator"
+      },
+      {
+        "name": "MIT Technology Review",
+        "role": "instigator"
+      }
+    ]
   }
 ]

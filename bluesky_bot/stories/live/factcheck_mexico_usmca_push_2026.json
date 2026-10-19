@@ -147,6 +147,34 @@
       "Aletheia",
       "USMCA",
       "Trade"
+    ],
+    "actor_roles": [
+      {
+        "name": "Claudia Sheinbaum",
+        "role": "instigator",
+        "sub_u": 0.52,
+        "sub_psi": 0.45,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Mexico",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "USMCA",
+        "role": "instigator",
+        "sub_u": 0.45,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

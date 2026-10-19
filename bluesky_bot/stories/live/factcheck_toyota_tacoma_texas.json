@@ -99,6 +99,24 @@
       "Toyota",
       "Manufacturing"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Toyota",
+        "role": "instigator"
+      },
+      {
+        "name": "General Motors",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Mexico",
+        "role": "instigator"
+      }
+    ]
   }
 ]

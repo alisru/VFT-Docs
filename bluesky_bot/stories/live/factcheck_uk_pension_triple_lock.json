@@ -145,6 +145,31 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Andy Burnham",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Labour Party",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Sharon Graham",
+        "role": "instigator"
+      },
+      {
+        "name": "Nigel Farage",
+        "role": "instigator"
+      }
     ]
   }
 ]

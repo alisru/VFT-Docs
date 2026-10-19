@@ -250,6 +250,23 @@
     "tags": [
       "NIPSCO",
       "MidwestStorms"
+    ],
+    "actor_roles": [
+      {
+        "name": "NIPSCO",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "National Weather Service",
+        "role": "instigator"
+      },
+      {
+        "name": "Legacy Foundation",
+        "role": "instigator"
+      }
     ]
   }
 ]

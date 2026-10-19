@@ -152,6 +152,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mike Johnson",
+        "role": "instigator"
+      },
+      {
+        "name": "House of Representatives",
+        "role": "instigator"
+      },
+      {
+        "name": "Congress",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.87,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

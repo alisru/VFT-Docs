@@ -74,6 +74,24 @@
       "Aletheia",
       "Aviation"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Qantas",
+        "role": "instigator"
+      },
+      {
+        "name": "Vanessa Hudson",
+        "role": "instigator"
+      },
+      {
+        "name": "Airbus",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

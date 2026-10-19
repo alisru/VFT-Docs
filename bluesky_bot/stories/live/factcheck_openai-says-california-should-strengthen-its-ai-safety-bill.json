@@ -264,6 +264,23 @@
       "Aletheia",
       "AI",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": 0.3,
+        "sub_psi": 0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "California Legislature",
+        "role": "instigator"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author"
+      }
     ]
   }
 ]

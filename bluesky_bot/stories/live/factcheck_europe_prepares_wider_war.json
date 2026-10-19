@@ -144,6 +144,31 @@
     "tags": [
       "Aletheia",
       "Security"
+    ],
+    "actor_roles": [
+      {
+        "name": "Russia",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Denmark",
+        "role": "instigator"
+      },
+      {
+        "name": "Poland",
+        "role": "instigator"
+      },
+      {
+        "name": "France",
+        "role": "context"
+      },
+      {
+        "name": "NATO",
+        "role": "instigator"
+      }
     ]
   }
 ]

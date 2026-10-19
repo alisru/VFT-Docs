@@ -252,6 +252,27 @@
       "Ukraine",
       "Russia",
       "Conflict"
+    ],
+    "actor_roles": [
+      {
+        "name": "Russia",
+        "role": "instigator",
+        "sub_u": -1.5,
+        "sub_psi": -1.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "NATO",
+        "role": "instigator"
+      },
+      {
+        "name": "Wildberries",
+        "role": "instigator"
+      }
     ]
   }
 ]

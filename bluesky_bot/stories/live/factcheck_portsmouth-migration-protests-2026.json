@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "UKPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Hampshire Police",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.3,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "South Coast Patriots",
+        "role": "instigator"
+      },
+      {
+        "name": "Stand Up To Racism",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
     ]
   }
 ]

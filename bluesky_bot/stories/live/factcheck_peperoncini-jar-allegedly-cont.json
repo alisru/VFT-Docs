@@ -142,6 +142,22 @@
     "tags": [
       "Aletheia",
       "FoodSafety"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mezzetta",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "FDA",
+        "role": "regulator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

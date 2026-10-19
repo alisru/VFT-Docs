@@ -251,6 +251,27 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Karoline Leavitt",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Steven Cheung",
+        "role": "instigator"
+      },
+      {
+        "name": "Harrison Fields",
+        "role": "instigator"
+      }
+    ]
   }
 ]

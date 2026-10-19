@@ -196,6 +196,19 @@
       "USPol",
       "WashingtonDC"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "National Park Service",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
+    ]
   }
 ]

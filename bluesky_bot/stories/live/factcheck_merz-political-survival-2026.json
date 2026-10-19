@@ -141,6 +141,31 @@
     "tags": [
       "Germany",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Friedrich Merz",
+        "role": "instigator"
+      },
+      {
+        "name": "CDU",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "AfD",
+        "role": "instigator"
+      },
+      {
+        "name": "Die Linke",
+        "role": "instigator"
+      },
+      {
+        "name": "Germany",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -142,6 +142,26 @@
     "tags": [
       "Aletheia",
       "Econ"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kevin Warsh",
+        "role": "instigator",
+        "sub_u": 0.25,
+        "sub_psi": -0.15,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Federal Reserve",
+        "role": "instigator"
+      },
+      {
+        "name": "Breitbart",
+        "role": "author",
+        "sub_u": 0.05,
+        "sub_psi": -0.35,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

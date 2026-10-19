@@ -144,6 +144,26 @@
       "Aletheia",
       "Retail",
       "Economy"
+    ],
+    "actor_roles": [
+      {
+        "name": "General Mills",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Chewy",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Petco Health and Wellness Company, Inc.",
+        "role": "instigator"
+      }
     ]
   }
 ]

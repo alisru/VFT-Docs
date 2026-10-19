@@ -151,6 +151,27 @@
       "Aletheia",
       "Lebanon",
       "MiddleEast"
+    ],
+    "actor_roles": [
+      {
+        "name": "Israel Defense Forces",
+        "role": "instigator"
+      },
+      {
+        "name": "Hezbollah",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Lebanon",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
     ]
   }
 ]

@@ -73,6 +73,20 @@
       "Tennis",
       "Wimbledon"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Serena Williams",
+        "role": "instigator"
+      },
+      {
+        "name": "Venus Williams",
+        "role": "instigator"
+      },
+      {
+        "name": "Wimbledon",
+        "role": "context"
+      }
+    ]
   }
 ]

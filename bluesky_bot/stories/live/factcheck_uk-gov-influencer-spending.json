@@ -144,6 +144,34 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Her Majesty's Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Department for Education",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.7,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "HMRC",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "instigator"
+      },
+      {
+        "name": "Mike Wood",
+        "role": "instigator"
+      }
     ]
   }
 ]

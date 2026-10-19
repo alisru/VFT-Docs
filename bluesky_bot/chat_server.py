@@ -710,6 +710,7 @@ def call_llm_chat(message, history=None, model="vertex:gemini-3.7-flash", use_se
 
     # Append standard zero-downtime fallback cascade
     default_cascade = [
+        "vertex:gemini-3.8-flash",
         "vertex:gemini-3.7-flash",
         "gemini-3.5-flash",
         "gemini-3.5-flash-lite",
@@ -922,6 +923,8 @@ def call_llm_chat(message, history=None, model="vertex:gemini-3.7-flash", use_se
 
 # ── Model Pricing per 1 Million Tokens (USD) ──────────────────────────────────
 MODEL_PRICING = {
+    "gemini-3.8-flash": {"input": 0.75, "output": 3.75, "name": "Gemini 3.8 Flash"},
+    "vertex:gemini-3.8-flash": {"input": 0.75, "output": 3.75, "name": "Vertex: Gemini 3.8 Flash"},
     "gemini-3.7-flash": {"input": 0.75, "output": 3.75, "name": "Gemini 3.7 Flash"},
     "vertex:gemini-3.7-flash": {"input": 0.75, "output": 3.75, "name": "Vertex: Gemini 3.7 Flash"},
     "gemini-3.6-flash": {"input": 1.50, "output": 7.50, "name": "Gemini 3.6 Flash"},

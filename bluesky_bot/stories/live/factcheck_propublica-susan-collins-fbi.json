@@ -144,6 +144,34 @@
     "tags": [
       "USPol",
       "Ethics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Susan Collins",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Martin Kao",
+        "role": "instigator"
+      },
+      {
+        "name": "ProPublica",
+        "role": "author",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "FBI",
+        "role": "instigator"
+      }
     ]
   }
 ]

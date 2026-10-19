@@ -146,6 +146,23 @@
       "Aletheia",
       "AI",
       "CyberSecurity"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Services Australia",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Government",
+        "role": "instigator"
+      }
     ]
   }
 ]

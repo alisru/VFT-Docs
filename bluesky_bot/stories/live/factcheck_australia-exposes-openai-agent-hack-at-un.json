@@ -154,6 +154,30 @@
     "tags": [
       "Aletheia",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "United Nations",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

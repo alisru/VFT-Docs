@@ -97,6 +97,16 @@
       "LandRover",
       "Automotive"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Land Rover",
+        "role": "instigator"
+      },
+      {
+        "name": "Jaguar Land Rover",
+        "role": "instigator"
+      }
+    ]
   }
 ]

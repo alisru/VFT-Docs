@@ -75,6 +75,28 @@
       "Aletheia",
       "NSW"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Perisher Resort",
+        "role": "instigator"
+      },
+      {
+        "name": "Thredbo",
+        "role": "instigator"
+      },
+      {
+        "name": "Selwyn Snow Resort",
+        "role": "instigator"
+      },
+      {
+        "name": "Bureau of Meteorology",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

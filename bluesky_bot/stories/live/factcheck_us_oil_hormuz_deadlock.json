@@ -252,6 +252,27 @@
       "Energy",
       "Markets"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Trump Administration",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.78,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "ING Group",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -270,6 +270,27 @@
     "tags": [
       "Aletheia",
       "NorthKorea"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kim Jong Un",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "North Korea",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

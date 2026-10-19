@@ -97,6 +97,30 @@
     "category": "all",
     "topic": "albanese, australia",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Meta Platforms",
+        "role": "instigator",
+        "sub_u": -0.78,
+        "sub_psi": -0.81,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Katy Gallagher",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Public Service Commission",
+        "role": "regulator"
+      },
+      {
+        "name": "Australia",
+        "role": "context",
+        "sub_u": 0.45,
+        "sub_psi": -0.3,
+        "sub_verdict": "COND"
+      }
+    ]
   }
 ]

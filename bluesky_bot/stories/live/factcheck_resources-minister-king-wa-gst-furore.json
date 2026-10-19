@@ -253,6 +253,30 @@
     "tags": [
       "Aletheia",
       "AusPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Madeleine King",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Roger Cook",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Productivity Commission",
+        "role": "regulator",
+        "sub_u": -0.4,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

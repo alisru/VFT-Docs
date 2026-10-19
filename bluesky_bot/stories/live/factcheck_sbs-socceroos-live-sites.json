@@ -74,6 +74,24 @@
       "Socceroos",
       "WorldCup2026"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Australia",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Socceroos",
+        "role": "instigator"
+      },
+      {
+        "name": "SBS",
+        "role": "instigator"
+      }
+    ]
   }
 ]

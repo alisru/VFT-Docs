@@ -73,6 +73,20 @@
       "Ukraine",
       "Atesh"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Atesh",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
+    ]
   }
 ]

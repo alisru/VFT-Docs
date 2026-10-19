@@ -251,6 +251,27 @@
       "Aletheia",
       "Moldova"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Moldovan Foreign Ministry",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.65,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Moldovan Police",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
+    ]
   }
 ]

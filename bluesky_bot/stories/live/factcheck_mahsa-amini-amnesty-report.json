@@ -276,6 +276,30 @@
     "tags": [
       "HumanRights",
       "Iran"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mahsa Amini",
+        "role": "instigator"
+      },
+      {
+        "name": "Amnesty International",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Iranian Morality Police",
+        "role": "instigator"
+      },
+      {
+        "name": "Iranian Regime",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

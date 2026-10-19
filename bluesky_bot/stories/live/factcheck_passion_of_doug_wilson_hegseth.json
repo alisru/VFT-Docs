@@ -252,6 +252,34 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Doug Wilson",
+        "role": "instigator",
+        "sub_u": -1.2,
+        "sub_psi": -1.3,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Pete Hegseth",
+        "role": "instigator"
+      },
+      {
+        "name": "Christ Church",
+        "role": "instigator"
+      },
+      {
+        "name": "Pentagon",
+        "role": "instigator",
+        "sub_u": -1.5,
+        "sub_psi": -1.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Mother Jones",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -28,7 +28,6 @@
       "Spirithekanon:\n\"When a country is rebellious, it has many rulers, but a person of understanding and knowledge maintains stability.\" Proverbs 28:2 PASS\nTrue stability requires addressing real domestic grievances rather than blaming every voice of dissent on foreign shadows."
     ],
     "actors": [
-      "X",
       "OpenAI",
       "China"
     ],
@@ -133,6 +132,16 @@
     "tags": [
       "Aletheia",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
     ]
   }
 ]

@@ -252,6 +252,23 @@
     "tags": [
       "Apple",
       "TechPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Apple Inc.",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Epic Games",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. District Court of Northern California",
+        "role": "regulator"
+      }
     ]
   }
 ]

@@ -262,6 +262,30 @@
     "tags": [
       "Aletheia",
       "UKNews"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mohammed Abdullah",
+        "role": "instigator"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Dorset Police",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Nigel Farage",
+        "role": "instigator"
+      }
     ]
   }
 ]

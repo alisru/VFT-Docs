@@ -99,6 +99,24 @@
       "ThamesWater",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Thames Water",
+        "role": "instigator"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "instigator"
+      },
+      {
+        "name": "Ofwat",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

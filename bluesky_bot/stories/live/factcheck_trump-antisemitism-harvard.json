@@ -254,6 +254,35 @@
       "Aletheia",
       "Education",
       "Law"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Richard G. Stearns",
+        "role": "instigator"
+      },
+      {
+        "name": "Harvard University",
+        "role": "instigator"
+      },
+      {
+        "name": "Alan M. Garber",
+        "role": "instigator"
+      },
+      {
+        "name": "Harmeet Dhillon",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

@@ -73,6 +73,14 @@ Format:
 * **Natural Human Flow**: Write in clean, conversational Plain English. Use headers only when they are clean and natural (e.g. `The Bright Side:`, `The Poison:`).
 * **Character Caps**: Keep every single step strictly under **275 characters** in the JSON config to prevent dynamic text-splitting errors.
 * **NO Orphan Words**: DO NOT split sentences arbitrarily or waste array elements. If a sentence fits in the current post, include it. Do NOT make a single post containing just 1 or 2 words (like 'dysfunction.'). Write continuously and naturally, only hard-splitting concepts when approaching the 275-character limit.
+* **Ground Truth & Institutional Anchoring (3 Pillars)**:
+  - Always anchor the audit in the real-world event and its primary actors, NOT in media punditry or talking heads.
+  - **Institutional Actions**: Evaluate what institutions (universities, courts, police, agencies) actually did, failed to do, or hid.
+  - **Empirical Evidence**: Base reality on documented records, official filings, physical facts, and timelines.
+  - **Human Impacts**: Track who suffered real harm, trauma, or danger, and who protected or failed them.
+* **Media Punditry as Self-Incriminating Extraction**:
+  - Never let audits get baited by partisan gotchas or television debate panels.
+  - Media figures who exploit human tragedies or crimes to score cheap partisan points are running a self-incriminating extraction of attention and moral capital. Expose the real institutional event first, and expose the punditry as a parasitic distraction.
 
 ---
 

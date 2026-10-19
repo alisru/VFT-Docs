@@ -101,6 +101,32 @@
       "Aletheia",
       "Ukraine"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator"
+      },
+      {
+        "name": "Denys Shmyhal",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Energoatom",
+        "role": "instigator"
+      },
+      {
+        "name": "Naftogaz",
+        "role": "instigator"
+      }
+    ]
   }
 ]

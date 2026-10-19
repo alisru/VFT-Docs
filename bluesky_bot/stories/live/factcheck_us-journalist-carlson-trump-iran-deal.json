@@ -80,6 +80,32 @@
       "USPolitics",
       "IranDeal"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tucker Carlson",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
+    ]
   }
 ]

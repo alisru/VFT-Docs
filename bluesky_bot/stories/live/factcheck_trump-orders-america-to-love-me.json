@@ -156,6 +156,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Fox News",
+        "role": "author"
+      },
+      {
+        "name": "Dana White",
+        "role": "instigator"
+      }
     ]
   }
 ]

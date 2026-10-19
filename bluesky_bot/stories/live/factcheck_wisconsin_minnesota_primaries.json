@@ -253,6 +253,34 @@
       "Elections",
       "Democrats"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Francesca Hong",
+        "role": "instigator",
+        "sub_u": 0.22,
+        "sub_psi": 0.31,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Jessica Taylor",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator",
+        "sub_u": 0.28,
+        "sub_psi": 0.38,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Wisconsin",
+        "role": "instigator"
+      },
+      {
+        "name": "Minnesota",
+        "role": "instigator"
+      }
+    ]
   }
 ]

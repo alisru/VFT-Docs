@@ -81,6 +81,24 @@
       "Health",
       "FoodSafety"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Food and Drug Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "Centers for Disease Control and Prevention",
+        "role": "instigator"
+      },
+      {
+        "name": "Taylor Farms",
+        "role": "instigator"
+      },
+      {
+        "name": "Taco Bell",
+        "role": "instigator"
+      }
+    ]
   }
 ]

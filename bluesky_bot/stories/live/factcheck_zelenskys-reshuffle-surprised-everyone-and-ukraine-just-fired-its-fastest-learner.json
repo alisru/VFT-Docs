@@ -101,6 +101,32 @@
       "Ukraine",
       "Defense"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Mykhailo Fedorov",
+        "role": "instigator"
+      },
+      {
+        "name": "Volodymyr Zelensky",
+        "role": "instigator"
+      },
+      {
+        "name": "Oleksandr Syrskyi",
+        "role": "instigator"
+      },
+      {
+        "name": "Andrii Hnatov",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

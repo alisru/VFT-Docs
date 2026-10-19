@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Zohran Mamdani",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Department of Homeland Security",
+        "role": "instigator"
+      },
+      {
+        "name": "New York City",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -156,6 +156,27 @@
     "tags": [
       "PublicHealth",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "AHRQ",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "USPSTF",
+        "role": "instigator"
+      },
+      {
+        "name": "Michael Silverstein",
+        "role": "instigator"
+      }
     ]
   }
 ]

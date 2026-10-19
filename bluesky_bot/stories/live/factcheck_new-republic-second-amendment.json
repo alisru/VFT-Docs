@@ -144,6 +144,34 @@
     "tags": [
       "Aletheia",
       "2A"
+    ],
+    "actor_roles": [
+      {
+        "name": "The New Republic",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Breitbart News",
+        "role": "author",
+        "sub_u": 0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Matt Ford",
+        "role": "instigator"
+      },
+      {
+        "name": "AWR Hawkins",
+        "role": "instigator"
+      },
+      {
+        "name": "National Association for Gun Rights",
+        "role": "instigator"
+      }
     ]
   }
 ]

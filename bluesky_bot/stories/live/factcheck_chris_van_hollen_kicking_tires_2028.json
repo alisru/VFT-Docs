@@ -188,6 +188,22 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Chris Van Hollen",
+        "role": "instigator",
+        "sub_u": 0.05,
+        "sub_psi": 1.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

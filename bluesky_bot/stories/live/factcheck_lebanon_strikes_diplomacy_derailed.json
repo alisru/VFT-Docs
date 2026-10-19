@@ -76,6 +76,32 @@
       "Aletheia",
       "MiddleEast"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Jean-Noel Barrot",
+        "role": "instigator"
+      },
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "instigator"
+      },
+      {
+        "name": "Hezbollah",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

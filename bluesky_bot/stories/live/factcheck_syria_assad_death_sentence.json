@@ -253,6 +253,31 @@
       "Assad",
       "HumanRights"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Bashar al-Assad",
+        "role": "instigator"
+      },
+      {
+        "name": "Maher al-Assad",
+        "role": "instigator"
+      },
+      {
+        "name": "Atef Najib",
+        "role": "instigator"
+      },
+      {
+        "name": "Syria",
+        "role": "instigator",
+        "sub_u": 0.31,
+        "sub_psi": 0.42,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

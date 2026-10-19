@@ -74,6 +74,24 @@
       "Aletheia",
       "Health"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "England",
+        "role": "context"
+      },
+      {
+        "name": "UK Health Security Agency",
+        "role": "instigator"
+      },
+      {
+        "name": "Cancer Research UK",
+        "role": "instigator"
+      },
+      {
+        "name": "Queen Mary University of London",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -75,6 +75,28 @@
       "Aletheia",
       "Environment"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "California",
+        "role": "context"
+      },
+      {
+        "name": "Beijing",
+        "role": "context"
+      },
+      {
+        "name": "Warsaw",
+        "role": "instigator"
+      },
+      {
+        "name": "Amsterdam",
+        "role": "instigator"
+      },
+      {
+        "name": "Rotterdam",
+        "role": "instigator"
+      }
+    ]
   }
 ]

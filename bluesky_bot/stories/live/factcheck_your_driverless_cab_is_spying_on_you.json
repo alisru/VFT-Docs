@@ -145,6 +145,30 @@
       "Aletheia",
       "Privacy",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Waymo",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": 0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Zoox",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": 0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Tesla",
+        "role": "instigator"
+      },
+      {
+        "name": "Electronic Frontier Foundation",
+        "role": "instigator"
+      }
     ]
   }
 ]

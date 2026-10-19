@@ -252,6 +252,31 @@
       "CentralAsia",
       "Energy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "KEGOC",
+        "role": "instigator",
+        "sub_u": -0.1,
+        "sub_psi": -0.05,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Alatau Zharyq Company",
+        "role": "instigator"
+      },
+      {
+        "name": "Kazakhstan",
+        "role": "instigator"
+      },
+      {
+        "name": "Kyrgyzstan",
+        "role": "instigator"
+      },
+      {
+        "name": "Tajikistan",
+        "role": "instigator"
+      }
+    ]
   }
 ]

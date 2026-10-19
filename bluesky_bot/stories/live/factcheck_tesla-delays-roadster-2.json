@@ -198,6 +198,23 @@
       "Aletheia",
       "Tesla",
       "EVs"
+    ],
+    "actor_roles": [
+      {
+        "name": "Tesla",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      },
+      {
+        "name": "SpaceX",
+        "role": "instigator"
+      }
     ]
   }
 ]

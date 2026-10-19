@@ -99,6 +99,24 @@
       "Aletheia",
       "News"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "USA",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      }
+    ]
   }
 ]

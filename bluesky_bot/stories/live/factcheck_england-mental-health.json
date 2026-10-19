@@ -75,6 +75,20 @@
     ],
     "policies": [
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "National Health Service",
+        "role": "instigator"
+      },
+      {
+        "name": "England",
+        "role": "context"
+      },
+      {
+        "name": "BioticsAI",
+        "role": "instigator"
+      }
     ]
   }
 ]

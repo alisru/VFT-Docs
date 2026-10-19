@@ -250,6 +250,23 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nigel Farage",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator"
+      },
+      {
+        "name": "Parliamentary Commissioner for Standards",
+        "role": "regulator"
+      }
     ]
   }
 ]

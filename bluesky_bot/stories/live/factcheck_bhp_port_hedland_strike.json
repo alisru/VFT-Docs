@@ -69,6 +69,28 @@
     "event": "",
     "policies": [
       "Industrial Relations"
+    ],
+    "actor_roles": [
+      {
+        "name": "Madeleine King",
+        "role": "instigator"
+      },
+      {
+        "name": "BHP",
+        "role": "instigator"
+      },
+      {
+        "name": "Electrical Trades Union",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Manufacturing Workers' Union",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
     ]
   }
 ]

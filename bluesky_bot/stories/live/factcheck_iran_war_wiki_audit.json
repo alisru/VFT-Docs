@@ -75,6 +75,28 @@
       "Aletheia",
       "IranWar"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "Ali Khamenei",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
+    ]
   }
 ]

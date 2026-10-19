@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "Office of Legal Counsel",
+        "role": "instigator"
+      },
+      {
+        "name": "The Federalist",
+        "role": "instigator",
+        "sub_u": -0.44,
+        "sub_psi": 0.74,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -146,6 +146,23 @@
       "Aletheia",
       "EU",
       "MadeInEurope"
+    ],
+    "actor_roles": [
+      {
+        "name": "European Commission",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "European Parliament",
+        "role": "instigator"
+      },
+      {
+        "name": "European Union",
+        "role": "instigator"
+      }
     ]
   }
 ]

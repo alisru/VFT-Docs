@@ -269,6 +269,26 @@
       "Aletheia",
       "AI",
       "CyberSecurity"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.98,
+        "sub_psi": -0.86,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "RubyGems",
+        "role": "instigator"
+      },
+      {
+        "name": "The Verge",
+        "role": "instigator",
+        "sub_u": 0.72,
+        "sub_psi": 0.64,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

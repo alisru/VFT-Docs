@@ -100,6 +100,28 @@
       "CyberSecurity",
       "NetNut"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "FBI",
+        "role": "instigator"
+      },
+      {
+        "name": "Lumen",
+        "role": "instigator"
+      },
+      {
+        "name": "Shadowserver",
+        "role": "instigator"
+      },
+      {
+        "name": "NetNut",
+        "role": "instigator"
+      }
+    ]
   }
 ]

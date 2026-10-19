@@ -100,6 +100,28 @@
       "CyberSecurity",
       "Iran"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "FBI",
+        "role": "instigator"
+      },
+      {
+        "name": "NSA",
+        "role": "instigator"
+      },
+      {
+        "name": "CISA",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

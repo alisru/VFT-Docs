@@ -250,6 +250,23 @@
       "UKPol",
       "Farage"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nigel Farage",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.1,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator"
+      },
+      {
+        "name": "Count Binface",
+        "role": "instigator"
+      }
+    ]
   }
 ]

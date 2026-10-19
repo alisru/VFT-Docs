@@ -98,6 +98,20 @@
       "Tech",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Amazon Web Services",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -76,6 +76,28 @@
       "Poland",
       "Ukraine"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Karol Nawrocki",
+        "role": "instigator"
+      },
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator"
+      },
+      {
+        "name": "Poland",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

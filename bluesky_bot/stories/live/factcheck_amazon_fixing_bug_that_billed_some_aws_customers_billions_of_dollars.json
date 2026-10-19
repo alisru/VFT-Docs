@@ -97,6 +97,16 @@
       "AWS",
       "TechFail"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Amazon",
+        "role": "instigator"
+      },
+      {
+        "name": "Amazon Web Services (AWS)",
+        "role": "instigator"
+      }
+    ]
   }
 ]

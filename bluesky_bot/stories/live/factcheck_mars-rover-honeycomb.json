@@ -80,6 +80,16 @@
       "Mars",
       "NASA"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "NASA",
+        "role": "instigator"
+      },
+      {
+        "name": "Curiosity Rover",
+        "role": "instigator"
+      }
+    ]
   }
 ]

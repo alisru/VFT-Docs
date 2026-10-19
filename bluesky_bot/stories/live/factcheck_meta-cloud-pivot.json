@@ -101,6 +101,32 @@
       "Meta",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "SpaceX",
+        "role": "instigator"
+      },
+      {
+        "name": "xAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Amazon Web Services",
+        "role": "instigator"
+      },
+      {
+        "name": "Microsoft Azure",
+        "role": "instigator"
+      },
+      {
+        "name": "Google Cloud",
+        "role": "instigator"
+      }
+    ]
   }
 ]

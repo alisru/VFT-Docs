@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Auto-Scribe: Unposted Draft Archive",
+  "version": "1.0.0",
+  "description": "Crash-proof auto-scribe that captures meaningful unposted drafts (>n chars) across Reddit, Facebook, Twitter/X, and the web into a dedicated site-grouped dashboard.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scribe_content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Auto-Scribe",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "dashboard.html",
+    "open_in_tab": true
+  }
+}

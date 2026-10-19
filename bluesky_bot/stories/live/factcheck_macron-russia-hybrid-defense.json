@@ -196,6 +196,23 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Emmanuel Macron",
+        "role": "instigator"
+      },
+      {
+        "name": "France",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

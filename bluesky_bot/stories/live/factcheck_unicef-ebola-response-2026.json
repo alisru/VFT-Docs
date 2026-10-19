@@ -75,6 +75,28 @@
       "UNICEF",
       "Ebola"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "UNICEF",
+        "role": "instigator"
+      },
+      {
+        "name": "World Health Organization",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic Republic of the Congo",
+        "role": "instigator"
+      },
+      {
+        "name": "Uganda",
+        "role": "instigator"
+      },
+      {
+        "name": "European Commission",
+        "role": "regulator"
+      }
+    ]
   }
 ]

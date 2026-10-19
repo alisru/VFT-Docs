@@ -97,6 +97,16 @@
       "FoodSafety",
       "Health"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Food Safety Authority of Ireland",
+        "role": "instigator"
+      },
+      {
+        "name": "O'Brien Fine Foods",
+        "role": "instigator"
+      }
+    ]
   }
 ]

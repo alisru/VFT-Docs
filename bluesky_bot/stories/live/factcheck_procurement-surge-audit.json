@@ -98,6 +98,20 @@
       "Aletheia",
       "GovAudit"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Department of Finance",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Defence",
+        "role": "instigator"
+      },
+      {
+        "name": "Thales Australia",
+        "role": "instigator"
+      }
+    ]
   }
 ]

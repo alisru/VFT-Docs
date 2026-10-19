@@ -252,6 +252,34 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nigel Farage",
+        "role": "instigator",
+        "sub_u": -0.88,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator",
+        "sub_u": -0.82,
+        "sub_psi": -0.78,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Parliamentary Commissioner for Standards",
+        "role": "regulator"
+      },
+      {
+        "name": "Christopher Harborne",
+        "role": "instigator"
+      },
+      {
+        "name": "Tim Montgomerie",
+        "role": "instigator"
+      }
     ]
   }
 ]

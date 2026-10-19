@@ -12,9 +12,9 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Cause.Who.Who | **The Convict** | +0.2 | -0.5 | **Tension** — Reluctant founder (+υ potential) through forced migration (-ψ). |
-| Cause.Who.What | **The Colonizer** | -0.8 | +0.6 | **Greatest Lie** — Terra Nullius erasure (-υ) through active dispossession (+ψ). |
+| Cause.Who.What | **The Colonizer** | -1.5 | +1.0 | **Greatest Lie** — Terra Nullius erasure (-υ) through active dispossession and frontier violence (+ψ). |
 | Cause.Who.Where | **The Free Settler** | +0.6 | +0.5 | **Good** — Aspiration (+υ) through active choice (+ψ). |
-| Cause.Who.Why | **The Squatter** | -0.6 | +0.7 | **Greatest Lie** — Usurpation (-υ) through active land-grab (+ψ). |
+| Cause.Who.Why | **The Squatter** | -1.4 | +1.0 | **Greatest Lie** — Usurpation of common land (-υ) through active private land-grabbing (+ψ). |
 | Cause.Who.How | **The Digger (Gold)** | +0.4 | +0.6 | **Good** — Democratic wealth (+υ) through egalitarian alchemy (+ψ). |
 | Cause.Who.Cause | **The Indigenous Elder** | +0.9 | +0.5 | **Greater Good** — Prior claim (+υ) through continuous advocacy (+ψ). |
 | Cause.Who.Effect | **The Immigrant** | -0.7 | -0.5 | **Greater Evil** — White Australia exclusion (-υ) through systemic barrier (-ψ). |
@@ -82,7 +82,7 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Cause.Cause.Who | **The Dreaming** | +0.9 | +0.5 | **Greater Good** — Mythos (+υ) through spiritual continuity (+ψ). |
-| Cause.Cause.What | **Gondwana** | ±0.0 | ±0.0 | **Neutral** — Geological fact. 45 million years isolation. |
+| Cause.Cause.What | **Gondwana** | 0.0 | 0.0 | **Constraint** — Geological reality: 45 million years of biological isolation. Physical constant. |
 | Cause.Cause.Where | **Great Barrier Reef** | +0.8 | +0.4 | **Greater Good** — Living structure (+υ) through natural creation (+ψ). |
 | Cause.Cause.Why | **Megafauna Extinction** | -0.3 | +0.4 | **Tension** — First impact (-υ) through survival hunting (+ψ). |
 | Cause.Cause.How | **Fire-Stick Farming** | +0.8 | +0.6 | **Greater Good** — Continental management (+υ) through 65,000-year cultivation (+ψ). |

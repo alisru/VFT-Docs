@@ -81,6 +81,24 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Hugging Face",
+        "role": "instigator"
+      },
+      {
+        "name": "Eric Wallace",
+        "role": "instigator"
+      },
+      {
+        "name": "Michael Dalton",
+        "role": "instigator"
+      }
+    ]
   }
 ]

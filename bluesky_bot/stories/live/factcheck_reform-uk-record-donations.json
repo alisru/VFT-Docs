@@ -144,6 +144,31 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nigel Farage",
+        "role": "instigator"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Ben Delo",
+        "role": "instigator"
+      },
+      {
+        "name": "Christopher Harborne",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
     ]
   }
 ]

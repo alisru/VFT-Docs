@@ -73,6 +73,20 @@
       "Tech",
       "Tesco"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tesco",
+        "role": "instigator"
+      },
+      {
+        "name": "Broadcom",
+        "role": "instigator"
+      },
+      {
+        "name": "VMware",
+        "role": "instigator"
+      }
+    ]
   }
 ]

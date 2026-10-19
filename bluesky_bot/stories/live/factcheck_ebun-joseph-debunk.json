@@ -249,6 +249,19 @@
       "FactCheck",
       "Ireland"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ebun Joseph",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.1,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "The Journal",
+        "role": "instigator"
+      }
+    ]
   }
 ]

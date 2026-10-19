@@ -148,6 +148,34 @@
       "Aletheia",
       "UKPolitics",
       "Brexit"
+    ],
+    "actor_roles": [
+      {
+        "name": "Andy Burnham",
+        "role": "instigator",
+        "sub_u": -0.78,
+        "sub_psi": -0.75,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Ed Davey",
+        "role": "instigator"
+      },
+      {
+        "name": "Labour Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Liberal Democrats",
+        "role": "instigator",
+        "sub_u": -0.82,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
     ]
   }
 ]

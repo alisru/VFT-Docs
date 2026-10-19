@@ -262,6 +262,27 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "South Korea",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "North Korea",
+        "role": "context"
+      }
     ]
   }
 ]

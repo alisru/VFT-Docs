@@ -97,6 +97,16 @@
       "UkraineWar",
       "MilitaryAction"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

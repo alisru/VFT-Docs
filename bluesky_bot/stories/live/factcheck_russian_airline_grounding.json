@@ -99,6 +99,24 @@
       "Russia",
       "Aviation"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Kommersant",
+        "role": "instigator"
+      },
+      {
+        "name": "Aeroflot",
+        "role": "instigator"
+      },
+      {
+        "name": "S7 Airlines",
+        "role": "instigator"
+      }
+    ]
   }
 ]

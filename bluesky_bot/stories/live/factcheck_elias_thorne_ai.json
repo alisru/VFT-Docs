@@ -64,6 +64,16 @@
     "category": "general",
     "topic": "AI",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Amazon",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -249,6 +249,19 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "BBC",
+        "role": "author",
+        "sub_u": -0.42,
+        "sub_psi": 0.55,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Clacton Constituency",
+        "role": "instigator"
+      }
+    ]
   }
 ]

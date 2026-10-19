@@ -75,6 +75,28 @@
       "Aletheia",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Google DeepMind",
+        "role": "instigator"
+      },
+      {
+        "name": "Pause AI",
+        "role": "instigator"
+      },
+      {
+        "name": "Mercor",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -150,6 +150,23 @@
       "Aletheia",
       "PublicHealth",
       "Baltimore"
+    ],
+    "actor_roles": [
+      {
+        "name": "Brandon Scott",
+        "role": "instigator"
+      },
+      {
+        "name": "Baltimore City Health Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Baltimore",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

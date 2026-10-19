@@ -144,6 +144,30 @@
       "Aletheia",
       "USPol",
       "Immigration"
+    ],
+    "actor_roles": [
+      {
+        "name": "María Elvira Salazar",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "House Freedom Caucus",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Eliott Rodriguez",
+        "role": "instigator"
+      }
     ]
   }
 ]

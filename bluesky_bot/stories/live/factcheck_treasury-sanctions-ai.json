@@ -101,6 +101,32 @@
       "AI",
       "TechPolicy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Scott Bessent",
+        "role": "instigator"
+      },
+      {
+        "name": "Michael Kratsios",
+        "role": "instigator"
+      },
+      {
+        "name": "Moonshot AI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

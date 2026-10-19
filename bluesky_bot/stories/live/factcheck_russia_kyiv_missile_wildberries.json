@@ -99,6 +99,24 @@
       "Aletheia",
       "UkraineWar"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelensky",
+        "role": "instigator"
+      },
+      {
+        "name": "Vitaliy Klitschko",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

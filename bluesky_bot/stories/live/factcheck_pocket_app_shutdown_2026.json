@@ -251,6 +251,27 @@
     "tags": [
       "Tech",
       "Apps"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mozilla",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Pocket",
+        "role": "instigator"
+      },
+      {
+        "name": "Matter",
+        "role": "instigator"
+      },
+      {
+        "name": "Instapaper",
+        "role": "instigator"
+      }
     ]
   }
 ]

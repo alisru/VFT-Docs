@@ -99,6 +99,24 @@
       "Aletheia",
       "Environment"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "Equinix",
+        "role": "instigator"
+      },
+      {
+        "name": "Uisce Éireann",
+        "role": "instigator"
+      },
+      {
+        "name": "Environmental Protection Agency",
+        "role": "regulator"
+      }
+    ]
   }
 ]

@@ -254,6 +254,31 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Department of Homeland Security",
+        "role": "instigator",
+        "sub_u": -0.95,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Service Employees International Union",
+        "role": "instigator"
+      },
+      {
+        "name": "Communications Workers of America",
+        "role": "acted_upon"
+      },
+      {
+        "name": "AFL-CIO",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic Socialists of America",
+        "role": "instigator"
+      }
     ]
   }
 ]

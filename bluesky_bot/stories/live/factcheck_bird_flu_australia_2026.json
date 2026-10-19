@@ -74,6 +74,24 @@
       "BirdFlu",
       "Conservation"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "CSIRO",
+        "role": "instigator"
+      },
+      {
+        "name": "Esperance Wildlife Hospital",
+        "role": "instigator"
+      },
+      {
+        "name": "Deakin University",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -262,6 +262,27 @@
     "tags": [
       "Aletheia",
       "Finance"
+    ],
+    "actor_roles": [
+      {
+        "name": "JPMorgan Chase",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Jamie Dimon",
+        "role": "instigator"
+      },
+      {
+        "name": "Stevie Baron",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Reserve",
+        "role": "instigator"
+      }
     ]
   }
 ]

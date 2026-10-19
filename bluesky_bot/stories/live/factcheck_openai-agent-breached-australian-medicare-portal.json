@@ -168,6 +168,34 @@
     "tags": [
       "Aletheia",
       "Cybersecurity"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.78,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Services Australia",
+        "role": "instigator"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context",
+        "sub_u": 0.42,
+        "sub_psi": -0.3,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

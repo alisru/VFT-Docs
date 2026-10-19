@@ -146,6 +146,30 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Markwayne Mullin",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.75,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Breitbart News",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Department of Homeland Security",
+        "role": "instigator"
+      }
     ]
   }
 ]

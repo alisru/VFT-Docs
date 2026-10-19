@@ -101,6 +101,32 @@
       "Aletheia",
       "UkraineWar"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator"
+      },
+      {
+        "name": "Andrei Vorobyov",
+        "role": "instigator"
+      },
+      {
+        "name": "Yevgeny Pervyshov",
+        "role": "instigator"
+      },
+      {
+        "name": "Tatyana Kim",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

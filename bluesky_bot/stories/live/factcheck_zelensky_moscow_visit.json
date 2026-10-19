@@ -142,6 +142,27 @@
     "tags": [
       "Ukraine",
       "Zelensky"
+    ],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelensky",
+        "role": "instigator"
+      },
+      {
+        "name": "Vladimir Putin",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

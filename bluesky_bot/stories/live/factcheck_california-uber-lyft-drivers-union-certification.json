@@ -256,6 +256,41 @@
       "California",
       "Labor",
       "GigEconomy"
+    ],
+    "actor_roles": [
+      {
+        "name": "California Gig Workers Union",
+        "role": "acted_upon",
+        "sub_u": 0.7,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Uber",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Lyft",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "SEIU",
+        "role": "instigator"
+      },
+      {
+        "name": "Gavin Newsom",
+        "role": "author"
+      },
+      {
+        "name": "California Public Employment Relations Board",
+        "role": "instigator"
+      }
     ]
   }
 ]

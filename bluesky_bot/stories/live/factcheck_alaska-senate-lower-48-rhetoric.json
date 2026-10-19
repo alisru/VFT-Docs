@@ -155,6 +155,26 @@
       "Aletheia",
       "AlaskaPolitics"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Dan Sullivan",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Mary Peltola",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.6,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "United States Senate",
+        "role": "instigator"
+      }
+    ]
   }
 ]

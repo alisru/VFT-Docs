@@ -262,6 +262,30 @@
     "tags": [
       "Aletheia",
       "UkraineWar"
+    ],
+    "actor_roles": [
+      {
+        "name": "DG Industry",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Brave1",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
     ]
   }
 ]

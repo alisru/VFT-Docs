@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "China",
+        "role": "context",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Iran",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Saudi Arabia",
+        "role": "instigator"
+      },
+      {
+        "name": "Houthis",
+        "role": "instigator"
+      }
     ]
   }
 ]

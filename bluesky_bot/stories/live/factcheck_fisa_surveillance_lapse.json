@@ -63,6 +63,20 @@
     "category": "general",
     "topic": "FISA",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "FBI",
+        "role": "instigator"
+      },
+      {
+        "name": "National Security Agency",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -160,6 +160,30 @@
       "Aletheia",
       "USNews",
       "Security"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kamala Harris",
+        "role": "instigator"
+      },
+      {
+        "name": "Doug Emhoff",
+        "role": "instigator"
+      },
+      {
+        "name": "Fox News",
+        "role": "author",
+        "sub_u": -0.35,
+        "sub_psi": 0.45,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Washington Examiner",
+        "role": "instigator",
+        "sub_u": 0.55,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

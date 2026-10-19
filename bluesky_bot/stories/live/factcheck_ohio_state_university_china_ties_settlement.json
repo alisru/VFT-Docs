@@ -196,6 +196,26 @@
     "tags": [
       "Aletheia",
       "HigherEd"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ohio State University",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -1.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "C.K. Shum",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator",
+        "sub_u": 0.8,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

@@ -151,6 +151,29 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.65,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "SpaceX",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Project Suncatcher",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.65,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

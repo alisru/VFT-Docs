@@ -99,6 +99,24 @@
       "Wimbledon",
       "WorldCup"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "All England Club",
+        "role": "instigator"
+      },
+      {
+        "name": "Harry Kane",
+        "role": "instigator"
+      },
+      {
+        "name": "England",
+        "role": "context"
+      },
+      {
+        "name": "Barbora Krejcikova",
+        "role": "instigator"
+      }
+    ]
   }
 ]

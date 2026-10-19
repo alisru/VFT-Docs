@@ -253,6 +253,27 @@
     ],
     "policies": [
       "Housing Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Seattle City Council",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Katie Wilson",
+        "role": "instigator"
+      },
+      {
+        "name": "Bob Kettle",
+        "role": "instigator"
+      },
+      {
+        "name": "Rental Housing Association of Washington",
+        "role": "instigator"
+      }
     ]
   }
 ]

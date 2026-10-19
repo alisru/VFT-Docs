@@ -105,6 +105,27 @@
     "category": "all",
     "topic": "trump, xi, putin, albanese",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Government of Australia",
+        "role": "instigator"
+      },
+      {
+        "name": "Medicare Australia",
+        "role": "instigator"
+      }
+    ]
   }
 ]

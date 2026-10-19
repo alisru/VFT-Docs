@@ -135,6 +135,30 @@
       "Aletheia",
       "Apple",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Phil Schiller",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "John Ternus",
+        "role": "instigator"
+      },
+      {
+        "name": "Eddy Cue",
+        "role": "instigator"
+      },
+      {
+        "name": "Apple",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.7,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

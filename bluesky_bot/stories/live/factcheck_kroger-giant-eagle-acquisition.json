@@ -97,6 +97,16 @@
       "Business",
       "Kroger"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Kroger",
+        "role": "instigator"
+      },
+      {
+        "name": "Giant Eagle",
+        "role": "instigator"
+      }
+    ]
   }
 ]

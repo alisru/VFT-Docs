@@ -251,6 +251,30 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator",
+        "sub_u": -0.68,
+        "sub_psi": 0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Secret Service",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": 0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -151,6 +151,22 @@
     "tags": [
       "Climate",
       "Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Climate Council",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Federal Government of Australia",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.1,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

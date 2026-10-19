@@ -251,6 +251,30 @@
       "NATO",
       "Latvia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Latvia",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "NATO",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Finland",
+        "role": "instigator"
+      }
+    ]
   }
 ]

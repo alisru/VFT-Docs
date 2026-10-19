@@ -143,6 +143,27 @@
     "tags": [
       "911",
       "Justice"
+    ],
+    "actor_roles": [
+      {
+        "name": "Khalid Sheikh Mohammed",
+        "role": "instigator"
+      },
+      {
+        "name": "United States Department of Defense",
+        "role": "instigator"
+      },
+      {
+        "name": "Guantanamo Bay Military Commission",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "9/11 Victims' Families",
+        "role": "acted_upon"
+      }
     ]
   }
 ]

@@ -253,6 +253,31 @@
       "AusPol",
       "Energy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Rio Tinto",
+        "role": "instigator",
+        "sub_u": -0.92,
+        "sub_psi": -0.89,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Chris Minns",
+        "role": "instigator"
+      },
+      {
+        "name": "Tomago Aluminium",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

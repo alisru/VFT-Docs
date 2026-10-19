@@ -97,6 +97,16 @@
       "Weather",
       "Marianas"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "National Weather Service",
+        "role": "instigator"
+      },
+      {
+        "name": "Joint Typhoon Warning Center",
+        "role": "instigator"
+      }
+    ]
   }
 ]

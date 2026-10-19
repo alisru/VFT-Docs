@@ -100,6 +100,28 @@
       "Aviation",
       "AirIndia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Air India",
+        "role": "instigator"
+      },
+      {
+        "name": "Boeing",
+        "role": "instigator"
+      },
+      {
+        "name": "GE Aerospace",
+        "role": "instigator"
+      },
+      {
+        "name": "AAIB",
+        "role": "instigator"
+      },
+      {
+        "name": "NTSB",
+        "role": "instigator"
+      }
+    ]
   }
 ]

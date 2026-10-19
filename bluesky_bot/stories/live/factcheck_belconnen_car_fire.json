@@ -97,6 +97,16 @@
       "Canberra",
       "Safety"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "ACT Fire and Rescue",
+        "role": "instigator"
+      },
+      {
+        "name": "Canberra",
+        "role": "context"
+      }
+    ]
   }
 ]

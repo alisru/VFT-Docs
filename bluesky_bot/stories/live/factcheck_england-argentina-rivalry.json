@@ -100,6 +100,28 @@
       "WorldCup",
       "Football"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Lionel Messi",
+        "role": "instigator"
+      },
+      {
+        "name": "Lionel Scaloni",
+        "role": "instigator"
+      },
+      {
+        "name": "Thomas Tuchel",
+        "role": "instigator"
+      },
+      {
+        "name": "England",
+        "role": "context"
+      },
+      {
+        "name": "Argentina",
+        "role": "instigator"
+      }
+    ]
   }
 ]

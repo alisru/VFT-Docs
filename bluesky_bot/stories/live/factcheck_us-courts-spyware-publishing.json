@@ -251,6 +251,27 @@
     "tags": [
       "Privacy",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Administrative Office of the U.S. Courts",
+        "role": "regulator"
+      },
+      {
+        "name": "Ron Wyden",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Federal Bureau of Investigation",
+        "role": "author"
+      },
+      {
+        "name": "United States Federal Judiciary",
+        "role": "regulator"
+      }
     ]
   }
 ]

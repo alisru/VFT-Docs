@@ -145,6 +145,34 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jared Kushner",
+        "role": "instigator",
+        "sub_u": -0.88,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Affinity Partners",
+        "role": "instigator"
+      },
+      {
+        "name": "Phoenix Financial",
+        "role": "instigator"
+      },
+      {
+        "name": "Elbit Systems",
+        "role": "instigator"
+      },
+      {
+        "name": "CNN",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.75,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

@@ -82,6 +82,24 @@
       "Climate",
       "PNW"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Bob Ferguson",
+        "role": "instigator"
+      },
+      {
+        "name": "National Weather Service",
+        "role": "instigator"
+      },
+      {
+        "name": "Washington",
+        "role": "context"
+      },
+      {
+        "name": "Oregon",
+        "role": "instigator"
+      }
+    ]
   }
 ]

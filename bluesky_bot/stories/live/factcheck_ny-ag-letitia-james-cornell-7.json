@@ -146,6 +146,34 @@
       "Aletheia",
       "USPol",
       "Law"
+    ],
+    "actor_roles": [
+      {
+        "name": "Letitia James",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Kathy Hochul",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Steven McLaughlin",
+        "role": "instigator"
+      },
+      {
+        "name": "Cornell University",
+        "role": "instigator"
+      }
     ]
   }
 ]

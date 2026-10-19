@@ -101,6 +101,28 @@
       "France",
       "LePen"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Marine Le Pen",
+        "role": "instigator"
+      },
+      {
+        "name": "National Rally",
+        "role": "instigator"
+      },
+      {
+        "name": "Jordan Bardella",
+        "role": "instigator"
+      },
+      {
+        "name": "Nicolas Sarkozy",
+        "role": "instigator"
+      },
+      {
+        "name": "France",
+        "role": "context"
+      }
+    ]
   }
 ]

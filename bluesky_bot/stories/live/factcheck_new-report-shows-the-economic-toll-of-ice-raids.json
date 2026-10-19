@@ -142,6 +142,23 @@
     "tags": [
       "Aletheia",
       "Economy"
+    ],
+    "actor_roles": [
+      {
+        "name": "University of Illinois Chicago",
+        "role": "instigator"
+      },
+      {
+        "name": "Immigration and Customs Enforcement",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

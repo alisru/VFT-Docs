@@ -145,6 +145,38 @@
     "tags": [
       "Aletheia",
       "Finance"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ellie",
+        "role": "instigator",
+        "sub_u": 0.95,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Lee",
+        "role": "instigator"
+      },
+      {
+        "name": "Vinted",
+        "role": "instigator"
+      },
+      {
+        "name": "eBay",
+        "role": "instigator"
+      },
+      {
+        "name": "Facebook Marketplace",
+        "role": "instigator"
+      },
+      {
+        "name": "Good News Network",
+        "role": "author",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

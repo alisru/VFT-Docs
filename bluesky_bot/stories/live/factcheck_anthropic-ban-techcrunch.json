@@ -74,6 +74,24 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Amazon",
+        "role": "instigator"
+      },
+      {
+        "name": "United States Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      }
+    ]
   }
 ]

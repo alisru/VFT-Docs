@@ -144,6 +144,34 @@
     "tags": [
       "UKPolitics",
       "Aletheia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Anthony Lee",
+        "role": "instigator",
+        "sub_u": -0.92,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Laura Lee",
+        "role": "instigator",
+        "sub_u": -0.88,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Conservative Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Gambling Commission",
+        "role": "regulator"
+      },
+      {
+        "name": "Rishi Sunak",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -124,6 +124,23 @@
     "tags": [
       "Aletheia",
       "Transit"
+    ],
+    "actor_roles": [
+      {
+        "name": "NSW Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Sydney Metro",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Office of the National Rail Safety Regulator",
+        "role": "regulator"
+      }
     ]
   }
 ]

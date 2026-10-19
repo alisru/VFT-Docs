@@ -259,6 +259,35 @@
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtm2yo3n5r2s",
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtm2yqasxe2n",
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mtm2ysfww42v"
+    ],
+    "actor_roles": [
+      {
+        "name": "Eric Swalwell",
+        "role": "instigator"
+      },
+      {
+        "name": "Kevin McCarthy",
+        "role": "instigator"
+      },
+      {
+        "name": "Adam Schiff",
+        "role": "instigator"
+      },
+      {
+        "name": "Jerry Nadler",
+        "role": "instigator"
+      },
+      {
+        "name": "Christine Fang",
+        "role": "instigator"
+      },
+      {
+        "name": "FBI",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

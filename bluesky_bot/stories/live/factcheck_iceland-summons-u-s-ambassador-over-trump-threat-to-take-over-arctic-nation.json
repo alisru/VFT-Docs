@@ -145,6 +145,31 @@
       "Aletheia",
       "Iceland",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Billy Long",
+        "role": "instigator"
+      },
+      {
+        "name": "Thorgerdur Katrin Gunnarsdottir",
+        "role": "instigator"
+      },
+      {
+        "name": "Iceland",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

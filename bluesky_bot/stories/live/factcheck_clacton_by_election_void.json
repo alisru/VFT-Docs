@@ -249,6 +249,19 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "BBC News",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Clacton",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -143,6 +143,22 @@
       "Immigration",
       "Psychology",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Hispanic Neuropsychological Society",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.1,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Washington Examiner",
+        "role": "instigator",
+        "sub_u": -0.68,
+        "sub_psi": 0.72,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

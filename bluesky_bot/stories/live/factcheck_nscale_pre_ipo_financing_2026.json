@@ -199,6 +199,31 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nscale",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "Third Point",
+        "role": "instigator"
+      },
+      {
+        "name": "Goldman Sachs",
+        "role": "instigator"
+      }
     ]
   }
 ]

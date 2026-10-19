@@ -61,12 +61,29 @@
       "Wes Streeting",
       "Keir Starmer",
       "Elon Musk",
-      "X",
       "The Guardian"
     ],
     "category": "general",
     "topic": "UKPol",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Wes Streeting",
+        "role": "instigator"
+      },
+      {
+        "name": "Keir Starmer",
+        "role": "instigator"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      },
+      {
+        "name": "The Guardian",
+        "role": "author"
+      }
+    ]
   }
 ]

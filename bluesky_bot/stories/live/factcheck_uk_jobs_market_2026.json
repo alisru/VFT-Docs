@@ -73,6 +73,20 @@
       "Aletheia",
       "Economy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Office for National Statistics",
+        "role": "instigator"
+      },
+      {
+        "name": "Bank of England",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

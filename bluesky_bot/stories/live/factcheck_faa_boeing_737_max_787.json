@@ -98,6 +98,20 @@
       "Aletheia",
       "Aviation"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Boeing",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Aviation Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Government",
+        "role": "instigator"
+      }
+    ]
   }
 ]

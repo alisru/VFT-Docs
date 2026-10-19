@@ -250,6 +250,23 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Amanda Litman",
+        "role": "instigator"
+      },
+      {
+        "name": "Juana Summers",
+        "role": "instigator"
+      },
+      {
+        "name": "Run For Something",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

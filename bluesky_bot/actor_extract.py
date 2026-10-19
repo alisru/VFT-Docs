@@ -184,17 +184,102 @@ ACTOR_MAP = {
     r'\bTaiwan\b': "Taiwan",
 }
 
+# Explicit Role Classification Mappings
+KNOWN_PUBLISHERS = {
+    'propublica', 'bbc', 'bbc news', 'fox news', 'cnn', 'nytimes', 'new york times',
+    'reuters', 'bloomberg', 'the guardian', 'guardian', 'politico', 'the hill',
+    'scmp', 'sixth tone', 'hkfp', 'hong kong free press', 'china daily', 'abc news',
+    'cbs news', 'nbc news', 'cnbc', 'washington post', 'wapo', 'associated press',
+    'ap news', 'the saturday paper', 'smh', 'sydney morning herald', 'the age',
+    'techcrunch', 'npr', 'federalist', 'the federalist', 'breitbart', 'daily mail',
+    'al jazeera', 'axios', 'the intercept', 'rolling stone', 'wire', 'afp',
+    'financial times', 'ft', 'wall street journal', 'wsj', 'squirrel news',
+    'good news network', 'what went right', 'the assembly', 'arkansas times',
+    'mountain state spotlight', 'flatwater free press', 'optimist daily',
+}
+
+KNOWN_CONTEXT_GEOGRAPHY = {
+    'united states', 'united kingdom', 'australia', 'china', 'russia', 'iran',
+    'israel', 'ukraine', 'north korea', 'canada', 'france', 'taiwan', 'beijing',
+    'england', 'wales', 'scotland', 'texas', 'california', 'florida', 'new york',
+    'london', 'sydney', 'melbourne', 'canberra', 'wimbledon', 'red sea',
+    'gaza', 'west bank', 'washington', 'chicago', 'springfield', 'wasatch front',
+}
+
+KNOWN_REGULATORS = {
+    'high court', 'federal court', 'supreme court', 'fair work commission',
+    'doj', 'department of justice', 'fda', 'epa', 'environmental protection agency',
+    'cfpb', 'consumer financial protection bureau', 'sec', 'securities and exchange commission',
+    'ftc', 'federal trade commission', 'qcat', 'fcc', 'home office (uk)',
+    'court of appeal', 'district court', 'judiciary', 'federal judiciary',
+    'comcare', 'independent commission against corruption', 'icac',
+}
+
+
+def clean_roundup_subject(text):
+    """Truncate multi-headline roundups from aggregator URLs/titles to prevent bleed."""
+    if not text:
+        return ""
+    # Strip everything after aggregator delimiters like ' | ', ' — ', 'theft in england', etc.
+    cleaned = text
+    # Split on common multi-headline separators
+    for sep in [' - theft in england', ' — theft in', ', theft in', ' | theft in']:
+        if sep in cleaned.lower():
+            idx = cleaned.lower().find(sep)
+            cleaned = cleaned[:idx].strip()
+    return cleaned
+
+
+def classify_actor_role(actor_name, story_context=None):
+    """Assigns one of the 7 canonical roles to an entity name."""
+    if not actor_name:
+        return "misc"
+    
+    clean_name = str(actor_name).strip().lower()
+    
+    # 1. Author / Reporter / Publisher
+    if clean_name in KNOWN_PUBLISHERS or any(p in clean_name for p in ['reporting', 'investigation', 'news', 'press', 'times', 'post', 'herald', 'daily']):
+        return "author"
+        
+    # 2. Regulator / Court / Arbiter
+    if clean_name in KNOWN_REGULATORS or any(r in clean_name for r in ['court', 'commission', 'judiciary', 'regulator', 'tribunal', 'monitor']):
+        return "regulator"
+        
+    # 3. Context / Geography
+    if clean_name in KNOWN_CONTEXT_GEOGRAPHY:
+        return "context"
+        
+    # 4. Acted Upon / Victim patterns
+    if any(v in clean_name for v in ['victim', 'patient', 'resident', 'citizen', 'child', 'student', 'worker', 'consumer', 'tenant', 'inmate', 'survivor']):
+        return "acted_upon"
+        
+    # 5. Default to instigator for recognized political / corporate / institutional agents
+    return "instigator"
+
+
+def extract_actor_roles(text, max_actors=6):
+    """Return a list of dicts: [{'name': ..., 'role': ...}]"""
+    cleaned_text = clean_roundup_subject(text)
+    names = extract_actors(cleaned_text, max_actors=max_actors)
+    result = []
+    for name in names:
+        role = classify_actor_role(name, story_context=cleaned_text)
+        result.append({"name": name, "role": role})
+    return result
+
 
 def extract_actors(text, max_actors=6):
     """Return a de-duplicated list of probable actor/entity names from text."""
     if not text:
         return []
 
+    cleaned = clean_roundup_subject(text)
+
     # Run precise curated map matching ONLY (no heuristic fallback to prevent trash)
     matched = []
     for pattern, canonical in ACTOR_MAP.items():
         flags = 0 if canonical == "Xi Jinping" else re.IGNORECASE
-        if re.search(pattern, text, flags):
+        if re.search(pattern, cleaned, flags):
             if canonical not in matched:
                 matched.append(canonical)
     
@@ -206,7 +291,11 @@ if __name__ == '__main__':
         "Texas Gov. Greg Abbott is concerned that a new factory isn't expected to start",
         "President Biden and Donald Trump clash over the Bank of America bailout",
         "Elon Musk's Tesla faces scrutiny from the FDA over autopilot claims",
-        "Local council in Springfield approves new park funding",
+        "Beijing cuts air pollution by 69% - theft in England and Wales drops by 80%",
+        "ProPublica exposes over 500 U.S. citizens detained by ICE",
+        "Federal Court blocks EPA rule in United States",
     ]
     for s in samples:
-        print(f"{s[:55]:<57} -> {extract_actors(s)}")
+        print(f"Text: {s}")
+        print(f"  Actors: {extract_actors(s)}")
+        print(f"  Roles:  {extract_actor_roles(s)}\n")

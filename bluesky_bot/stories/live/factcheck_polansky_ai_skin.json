@@ -189,6 +189,23 @@
     "tags": [
       "Tech",
       "Biotech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Michael Polansky",
+        "role": "instigator"
+      },
+      {
+        "name": "Outer Biosciences",
+        "role": "regulator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Lady Gaga",
+        "role": "instigator"
+      }
     ]
   }
 ]

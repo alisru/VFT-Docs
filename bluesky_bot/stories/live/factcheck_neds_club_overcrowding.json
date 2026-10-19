@@ -136,6 +136,19 @@
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mucfphdsch2f",
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mucfpjinh42e"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ned's Club",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": -0.81,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "The Washington Times",
+        "role": "author"
+      }
+    ]
   }
 ]

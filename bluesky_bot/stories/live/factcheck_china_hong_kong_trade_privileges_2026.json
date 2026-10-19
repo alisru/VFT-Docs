@@ -101,6 +101,32 @@
       "Aletheia",
       "Trade"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "instigator"
+      },
+      {
+        "name": "John Lee",
+        "role": "instigator"
+      },
+      {
+        "name": "Carrie Lam",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

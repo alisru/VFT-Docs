@@ -251,6 +251,30 @@
     "tags": [
       "NRL",
       "RugbyLeague"
+    ],
+    "actor_roles": [
+      {
+        "name": "North Queensland Cowboys",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Parramatta Eels",
+        "role": "instigator"
+      },
+      {
+        "name": "Cronulla Sharks",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Canberra Raiders",
+        "role": "instigator"
+      }
     ]
   }
 ]

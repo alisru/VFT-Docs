@@ -251,6 +251,23 @@
       "Tech",
       "Bluesky"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Bluesky",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Toni Schneider",
+        "role": "instigator"
+      },
+      {
+        "name": "Similarweb",
+        "role": "instigator"
+      }
+    ]
   }
 ]

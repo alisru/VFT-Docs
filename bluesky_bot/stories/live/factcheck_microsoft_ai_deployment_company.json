@@ -101,6 +101,28 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Microsoft",
+        "role": "instigator"
+      },
+      {
+        "name": "Amazon Web Services",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Judson Althoff",
+        "role": "instigator"
+      }
+    ]
   }
 ]

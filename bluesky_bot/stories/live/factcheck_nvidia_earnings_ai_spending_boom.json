@@ -146,6 +146,35 @@
       "Aletheia",
       "Nvidia",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nvidia",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Jensen Huang",
+        "role": "instigator"
+      },
+      {
+        "name": "Amazon",
+        "role": "instigator"
+      },
+      {
+        "name": "Microsoft",
+        "role": "instigator"
+      },
+      {
+        "name": "Alphabet",
+        "role": "instigator"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -164,6 +164,28 @@
       "AI",
       "Cybersecurity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "IBM",
+        "role": "instigator"
+      },
+      {
+        "name": "CrowdStrike",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Allen Institute for Artificial Intelligence",
+        "role": "instigator"
+      }
+    ]
   }
 ]

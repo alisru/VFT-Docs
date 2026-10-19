@@ -201,6 +201,31 @@
       "Aletheia",
       "Energy",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "NextEra Energy",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "U.S. Department of Energy",
+        "role": "instigator"
+      },
+      {
+        "name": "John Ketchum",
+        "role": "instigator"
+      },
+      {
+        "name": "James Danly",
+        "role": "instigator"
+      }
     ]
   }
 ]

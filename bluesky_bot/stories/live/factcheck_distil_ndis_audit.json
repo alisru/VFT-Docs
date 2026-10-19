@@ -66,6 +66,16 @@
     "event": "",
     "policies": [
       "NDIS"
+    ],
+    "actor_roles": [
+      {
+        "name": "Distil Management",
+        "role": "instigator"
+      },
+      {
+        "name": "NDIS",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -98,6 +98,20 @@
       "Wimbledon",
       "Tennis"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Maya Joint",
+        "role": "instigator"
+      },
+      {
+        "name": "Serena Williams",
+        "role": "instigator"
+      },
+      {
+        "name": "Wimbledon",
+        "role": "context"
+      }
+    ]
   }
 ]

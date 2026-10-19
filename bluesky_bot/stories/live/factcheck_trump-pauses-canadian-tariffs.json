@@ -265,6 +265,27 @@
     "tags": [
       "Aletheia",
       "Trade"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Mark Carney",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context",
+        "sub_u": 0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

@@ -82,6 +82,20 @@
       "WhatsApp",
       "Meta"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "WhatsApp",
+        "role": "instigator"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author"
+      }
+    ]
   }
 ]

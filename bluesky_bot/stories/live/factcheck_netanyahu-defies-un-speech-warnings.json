@@ -144,6 +144,30 @@
       "Aletheia",
       "UNGA",
       "Israel"
+    ],
+    "actor_roles": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Zohran Mamdani",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Danny Danon",
+        "role": "instigator"
+      },
+      {
+        "name": "United Nations",
+        "role": "instigator"
+      }
     ]
   }
 ]

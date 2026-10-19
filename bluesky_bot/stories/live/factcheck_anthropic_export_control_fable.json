@@ -64,6 +64,24 @@
     "category": "general",
     "topic": "AI",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Commerce",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

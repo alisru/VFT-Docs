@@ -69,6 +69,24 @@
       "Aletheia",
       "Environment"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Oracle",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "STACK Infrastructure",
+        "role": "instigator"
+      },
+      {
+        "name": "New Mexico",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -143,6 +143,22 @@
     "tags": [
       "Aletheia",
       "SocialSecurity"
+    ],
+    "actor_roles": [
+      {
+        "name": "Social Security Administration",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Washington Examiner",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": 0.6,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

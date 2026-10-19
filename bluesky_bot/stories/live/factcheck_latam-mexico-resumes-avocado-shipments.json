@@ -251,6 +251,27 @@
       "Aletheia",
       "WorldNews"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Mexico",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Ronald Johnson",
+        "role": "instigator"
+      },
+      {
+        "name": "Omar García Harfuch",
+        "role": "instigator"
+      }
+    ]
   }
 ]

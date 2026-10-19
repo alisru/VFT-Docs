@@ -74,6 +74,24 @@
       "DeFi",
       "Crypto"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Aztec Network",
+        "role": "instigator"
+      },
+      {
+        "name": "SlowMist",
+        "role": "instigator"
+      },
+      {
+        "name": "BlockSec",
+        "role": "instigator"
+      },
+      {
+        "name": "Ethereum",
+        "role": "instigator"
+      }
+    ]
   }
 ]

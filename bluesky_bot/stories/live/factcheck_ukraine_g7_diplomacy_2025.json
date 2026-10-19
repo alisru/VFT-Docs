@@ -76,6 +76,32 @@
       "Ukraine",
       "G7"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelensky",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Emmanuel Macron",
+        "role": "instigator"
+      },
+      {
+        "name": "G7",
+        "role": "instigator"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
+    ]
   }
 ]

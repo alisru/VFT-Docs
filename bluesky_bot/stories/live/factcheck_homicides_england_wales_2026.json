@@ -73,6 +73,20 @@
       "Aletheia",
       "PublicSafety"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "NHS",
+        "role": "instigator"
+      },
+      {
+        "name": "Harvard University",
+        "role": "instigator"
+      },
+      {
+        "name": "The Hague District Court",
+        "role": "regulator"
+      }
+    ]
   }
 ]

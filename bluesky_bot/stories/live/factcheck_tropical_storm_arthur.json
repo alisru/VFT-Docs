@@ -75,6 +75,20 @@
       "Weather",
       "Climate"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tropical Storm Arthur",
+        "role": "instigator"
+      },
+      {
+        "name": "National Hurricane Center",
+        "role": "instigator"
+      },
+      {
+        "name": "NOAA",
+        "role": "instigator"
+      }
+    ]
   }
 ]

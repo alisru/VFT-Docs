@@ -74,6 +74,24 @@
       "Environment",
       "History"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Robin Hood",
+        "role": "instigator"
+      },
+      {
+        "name": "Royal Society for the Protection of Birds",
+        "role": "instigator"
+      },
+      {
+        "name": "Woodland Trust",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

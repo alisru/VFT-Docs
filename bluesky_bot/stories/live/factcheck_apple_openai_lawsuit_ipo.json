@@ -102,6 +102,28 @@
       "Apple",
       "OpenAI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Apple",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Kirsten Korosec",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthony Ha",
+        "role": "instigator"
+      },
+      {
+        "name": "Sean O'Kane",
+        "role": "instigator"
+      }
+    ]
   }
 ]

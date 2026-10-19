@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Chuck Grassley",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Kash Patel",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.7,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Federal Bureau of Investigation",
+        "role": "author"
+      },
+      {
+        "name": "United States Senate",
+        "role": "instigator"
+      }
     ]
   }
 ]

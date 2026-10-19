@@ -97,6 +97,16 @@
       "Sydney",
       "Police"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "NSW Police",
+        "role": "instigator"
+      },
+      {
+        "name": "Sydney",
+        "role": "context"
+      }
+    ]
   }
 ]

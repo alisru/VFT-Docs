@@ -252,6 +252,31 @@
     "tags": [
       "Aletheia",
       "SportsBusiness"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jeff Bezos",
+        "role": "instigator"
+      },
+      {
+        "name": "Eduardo Saverin",
+        "role": "instigator"
+      },
+      {
+        "name": "Amit Bhatia",
+        "role": "instigator"
+      },
+      {
+        "name": "Liverpool FC",
+        "role": "instigator"
+      },
+      {
+        "name": "Fenway Sports Group",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

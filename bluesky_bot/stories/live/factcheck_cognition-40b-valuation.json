@@ -251,6 +251,27 @@
       "Aletheia",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Cognition",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Scott Wu",
+        "role": "instigator"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -145,6 +145,33 @@
       "Tech",
       "AI",
       "Law"
+    ],
+    "actor_roles": [
+      {
+        "name": "The Seattle Times",
+        "role": "author"
+      },
+      {
+        "name": "Newsday",
+        "role": "author",
+        "sub_u": 0.2,
+        "sub_psi": 0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Microsoft",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

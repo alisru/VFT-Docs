@@ -166,6 +166,28 @@
     ],
     "policies": [
       "AI Regulation"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "Moonshot AI",
+        "role": "instigator"
+      },
+      {
+        "name": "UK AI Security Institute",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -146,6 +146,38 @@
     "tags": [
       "Aletheia",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Samsung",
+        "role": "instigator",
+        "sub_u": 0.3,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "SK Hynix",
+        "role": "instigator",
+        "sub_u": 0.3,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "South Korea",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

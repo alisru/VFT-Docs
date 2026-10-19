@@ -98,6 +98,20 @@
       "Cloudflare",
       "AI"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Cloudflare",
+        "role": "instigator"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "You.com",
+        "role": "instigator"
+      }
+    ]
   }
 ]

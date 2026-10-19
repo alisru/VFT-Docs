@@ -162,6 +162,20 @@
       "MarineLife",
       "SeaWorld"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "SeaWorld",
+        "role": "instigator"
+      },
+      {
+        "name": "Association of Zoos and Aquariums",
+        "role": "instigator"
+      },
+      {
+        "name": "Beluga Whales",
+        "role": "instigator"
+      }
+    ]
   }
 ]

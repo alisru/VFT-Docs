@@ -98,6 +98,20 @@
       "USPol",
       "Constitution"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Environmental Protection Agency",
+        "role": "regulator"
+      }
+    ]
   }
 ]

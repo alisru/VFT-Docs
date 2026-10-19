@@ -97,6 +97,16 @@
       "Aletheia",
       "Security"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Framework",
+        "role": "instigator"
+      },
+      {
+        "name": "Metabase",
+        "role": "instigator"
+      }
+    ]
   }
 ]

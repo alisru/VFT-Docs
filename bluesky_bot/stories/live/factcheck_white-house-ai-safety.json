@@ -144,6 +144,26 @@
       "Aletheia",
       "AI",
       "TechPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Major Tech Firms",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      }
     ]
   }
 ]

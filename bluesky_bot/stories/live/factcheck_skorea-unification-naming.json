@@ -98,6 +98,20 @@
       "Korea",
       "Diplomacy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "South Korea",
+        "role": "instigator"
+      },
+      {
+        "name": "North Korea",
+        "role": "context"
+      },
+      {
+        "name": "Unification Ministry",
+        "role": "instigator"
+      }
+    ]
   }
 ]

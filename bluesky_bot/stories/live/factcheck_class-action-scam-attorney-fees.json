@@ -143,6 +143,23 @@
     "tags": [
       "Law",
       "ClassAction"
+    ],
+    "actor_roles": [
+      {
+        "name": "Class Action Lawyers",
+        "role": "instigator"
+      },
+      {
+        "name": "Plaintiffs",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Federal Courts",
+        "role": "regulator"
+      }
     ]
   }
 ]

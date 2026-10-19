@@ -66,6 +66,24 @@
     "category": "general",
     "topic": "USPol",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "NYU Langone Medical Center",
+        "role": "instigator"
+      },
+      {
+        "name": "Lucile Packard Children's Hospital Stanford",
+        "role": "acted_upon"
+      }
+    ]
   }
 ]

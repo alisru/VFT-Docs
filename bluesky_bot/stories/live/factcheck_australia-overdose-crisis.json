@@ -74,6 +74,24 @@
       "Aletheia",
       "PublicHealth"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Penington Institute",
+        "role": "instigator"
+      },
+      {
+        "name": "John Ryan",
+        "role": "instigator"
+      },
+      {
+        "name": "Amy Peacock",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

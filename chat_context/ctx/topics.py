@@ -59,35 +59,35 @@ def _extract_candidates(text_list, min_len=3):
 
 
 def agglomerative_cluster(dist_matrix, threshold=0.78):
-    """Pure numpy agglomerative clustering with average linkage."""
+    """Pure numpy agglomerative clustering with average linkage via Lance-Williams update."""
     n = len(dist_matrix)
+    if n <= 1:
+        return [[i] for i in range(n)]
     clusters = {i: [i] for i in range(n)}
     active = set(range(n))
     d = dist_matrix.copy()
+    np.fill_diagonal(d, np.inf)
 
     while len(active) > 1:
-        act_list = sorted(active)
-        sub_d = d[np.ix_(act_list, act_list)]
-        np.fill_diagonal(sub_d, np.inf)
-
-        min_val = float(np.min(sub_d))
-        if min_val > threshold:
+        idx = np.unravel_index(np.argmin(d), d.shape)
+        c1, c2 = int(idx[0]), int(idx[1])
+        if d[c1, c2] > threshold:
             break
 
-        idx = np.unravel_index(np.argmin(sub_d), sub_d.shape)
-        c1, c2 = act_list[idx[0]], act_list[idx[1]]
+        # Lance-Williams average linkage update
+        n1, n2 = len(clusters[c1]), len(clusters[c2])
+        for other in active:
+            if other == c1 or other == c2:
+                continue
+            avg_dist = (n1 * d[c1, other] + n2 * d[c2, other]) / (n1 + n2)
+            d[c1, other] = avg_dist
+            d[other, c1] = avg_dist
 
         clusters[c1].extend(clusters[c2])
         del clusters[c2]
         active.remove(c2)
-
-        for other in active:
-            if other == c1:
-                continue
-            pts1, pts2 = clusters[c1], clusters[other]
-            avg_dist = float(dist_matrix[np.ix_(pts1, pts2)].mean())
-            d[c1, other] = avg_dist
-            d[other, c1] = avg_dist
+        d[c2, :] = np.inf
+        d[:, c2] = np.inf
 
     return list(clusters.values())
 

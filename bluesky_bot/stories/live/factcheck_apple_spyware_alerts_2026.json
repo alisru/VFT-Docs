@@ -250,6 +250,26 @@
       "Apple",
       "Security"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Apple",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Citizen Lab",
+        "role": "acted_upon",
+        "sub_u": 0.8,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Zack Whittaker",
+        "role": "instigator"
+      }
+    ]
   }
 ]

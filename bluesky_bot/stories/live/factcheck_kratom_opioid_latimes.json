@@ -74,6 +74,24 @@
       "Health",
       "Science"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "National Institutes of Health",
+        "role": "instigator"
+      },
+      {
+        "name": "University of Florida",
+        "role": "instigator"
+      },
+      {
+        "name": "Food and Drug Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "California",
+        "role": "context"
+      }
+    ]
   }
 ]

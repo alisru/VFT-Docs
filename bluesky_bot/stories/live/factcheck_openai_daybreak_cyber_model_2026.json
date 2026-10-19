@@ -165,6 +165,28 @@
       "AI",
       "Cybersecurity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Accenture",
+        "role": "instigator"
+      },
+      {
+        "name": "IBM",
+        "role": "instigator"
+      },
+      {
+        "name": "Cloudflare",
+        "role": "instigator"
+      },
+      {
+        "name": "Crowdstrike",
+        "role": "instigator"
+      }
+    ]
   }
 ]

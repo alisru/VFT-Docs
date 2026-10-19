@@ -147,6 +147,27 @@
       "Aletheia",
       "Canada",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mark Carney",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": 0.6,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

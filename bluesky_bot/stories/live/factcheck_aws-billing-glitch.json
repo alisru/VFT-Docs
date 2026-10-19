@@ -97,6 +97,16 @@
       "Tech",
       "AWS"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Amazon Web Services",
+        "role": "instigator"
+      },
+      {
+        "name": "Bill Radjewski",
+        "role": "instigator"
+      }
+    ]
   }
 ]

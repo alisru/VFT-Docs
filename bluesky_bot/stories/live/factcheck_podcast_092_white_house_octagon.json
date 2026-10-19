@@ -76,6 +76,32 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Barack Obama",
+        "role": "instigator"
+      },
+      {
+        "name": "Andrew Wilson",
+        "role": "instigator"
+      },
+      {
+        "name": "Matthew Distefano",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -75,6 +75,24 @@
       "Economy",
       "Finance"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Xi Jinping",
+        "role": "instigator"
+      },
+      {
+        "name": "People's Bank of China",
+        "role": "instigator"
+      },
+      {
+        "name": "China Securities Regulatory Commission",
+        "role": "regulator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

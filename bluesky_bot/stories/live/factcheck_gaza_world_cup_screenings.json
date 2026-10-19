@@ -75,6 +75,24 @@
       "Gaza",
       "HumanRights"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Egyptian Relief Committee",
+        "role": "instigator"
+      },
+      {
+        "name": "Gaza",
+        "role": "context"
+      },
+      {
+        "name": "Egypt",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
+    ]
   }
 ]

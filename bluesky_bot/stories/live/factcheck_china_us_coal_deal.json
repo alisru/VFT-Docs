@@ -270,6 +270,27 @@
     "tags": [
       "Aletheia",
       "Trade"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context",
+        "sub_u": 0.65,
+        "sub_psi": 0.55,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

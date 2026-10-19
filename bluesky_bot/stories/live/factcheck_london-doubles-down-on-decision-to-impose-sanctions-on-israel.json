@@ -144,6 +144,31 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Israel",
+        "role": "context",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "instigator"
+      },
+      {
+        "name": "Ed Miliband",
+        "role": "instigator"
+      },
+      {
+        "name": "Gideon Saar",
+        "role": "instigator"
+      }
     ]
   }
 ]

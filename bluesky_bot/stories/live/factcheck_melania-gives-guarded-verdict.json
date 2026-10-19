@@ -142,6 +142,19 @@
       "Melania",
       "USPol",
       "Aletheia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Melania Trump",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
     ]
   }
 ]

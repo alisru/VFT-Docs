@@ -75,6 +75,28 @@
       "Aletheia",
       "Palestine"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "Palestine",
+        "role": "instigator"
+      },
+      {
+        "name": "Gaza",
+        "role": "context"
+      },
+      {
+        "name": "Hezbollah",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

@@ -99,6 +99,24 @@
       "AI",
       "Music"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Suno",
+        "role": "instigator"
+      },
+      {
+        "name": "Udio",
+        "role": "instigator"
+      },
+      {
+        "name": "YouTube",
+        "role": "instigator"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      }
+    ]
   }
 ]

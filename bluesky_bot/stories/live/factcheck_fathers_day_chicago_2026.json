@@ -67,6 +67,16 @@
       "Chicago",
       "Family"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Chicago Tribune",
+        "role": "instigator"
+      },
+      {
+        "name": "Chicago",
+        "role": "context"
+      }
+    ]
   }
 ]

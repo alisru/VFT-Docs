@@ -75,6 +75,28 @@
       "Aletheia",
       "Energy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "CNBC",
+        "role": "author"
+      },
+      {
+        "name": "Lloyd's List Intelligence",
+        "role": "instigator"
+      },
+      {
+        "name": "Kpler",
+        "role": "instigator"
+      }
+    ]
   }
 ]

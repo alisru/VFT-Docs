@@ -262,6 +262,26 @@
       "Aletheia",
       "USPol",
       "LocalGov"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jean Kaczmarek",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Deb Conroy",
+        "role": "instigator"
+      },
+      {
+        "name": "DuPage County Board",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

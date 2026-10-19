@@ -251,6 +251,30 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Dave Rowan",
+        "role": "instigator",
+        "sub_u": -0.88,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator",
+        "sub_u": -0.65,
+        "sub_psi": -0.68,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Kirklees Council",
+        "role": "instigator"
+      },
+      {
+        "name": "John Bercow",
+        "role": "instigator"
+      }
+    ]
   }
 ]

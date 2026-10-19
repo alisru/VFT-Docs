@@ -147,6 +147,30 @@
       "Aletheia",
       "AusPol",
       "OneNation"
+    ],
+    "actor_roles": [
+      {
+        "name": "Pauline Hanson",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "One Nation",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Australian Labor Party",
+        "role": "instigator"
+      }
     ]
   }
 ]

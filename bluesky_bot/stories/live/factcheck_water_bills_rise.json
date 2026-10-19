@@ -252,6 +252,23 @@
     ],
     "policies": [
       "Climate Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ofwat",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Severn Trent Water",
+        "role": "instigator"
+      },
+      {
+        "name": "Thames Water",
+        "role": "instigator"
+      }
     ]
   }
 ]

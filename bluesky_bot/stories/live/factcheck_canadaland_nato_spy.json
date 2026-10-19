@@ -253,6 +253,31 @@
       "Aletheia",
       "Espionage"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Biwei Zhang",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Harrison Lowman",
+        "role": "instigator"
+      },
+      {
+        "name": "Jesse Brown",
+        "role": "instigator"
+      },
+      {
+        "name": "NATO",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      }
+    ]
   }
 ]

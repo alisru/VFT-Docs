@@ -261,6 +261,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "USPS",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Supreme Court",
+        "role": "regulator"
+      }
     ]
   }
 ]

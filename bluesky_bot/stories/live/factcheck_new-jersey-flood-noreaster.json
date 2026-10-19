@@ -151,6 +151,20 @@
       "Aletheia",
       "Weather",
       "NewJersey"
+    ],
+    "actor_roles": [
+      {
+        "name": "National Weather Service",
+        "role": "instigator"
+      },
+      {
+        "name": "New Jersey",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

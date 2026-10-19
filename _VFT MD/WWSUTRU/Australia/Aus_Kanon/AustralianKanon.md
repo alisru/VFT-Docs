@@ -560,7 +560,7 @@ ashes taken to Australia." - *The Sporting Times*, 1882.
                                                     binds (+ψ). Excludes
                                                     non-mates.
 
-  Who.Who.What       **The Larrikin** +0.5   +0.6   **Good** --- Deflates
+  Who.Who.What       **The Larrikin** +0.6   +0.6   **Greater Good** --- Deflates
                                                     hubris (+υ) through
                                                     active mockery (+ψ).
                                                     Anti-authoritarian
@@ -572,7 +572,7 @@ ashes taken to Australia." - *The Sporting Times*, 1882.
                                                     passive suffering
                                                     (-ψ).
 
-  Who.Who.Why        **The Anzac**    +0.5   +0.8   **Good** --- Sacrifice
+  Who.Who.Why        **The Anzac**    -0.4   +1.0   **Greatest Lie** --- Sacrifice
                                                     for nation (+υ)
                                                     through maximum will
                                                     (+ψ). Sacred myth.

@@ -271,6 +271,31 @@
       "Aletheia",
       "Surveillance",
       "Privacy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Flock Safety",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": 0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Garrett Langley",
+        "role": "instigator"
+      },
+      {
+        "name": "ACLU",
+        "role": "instigator"
+      },
+      {
+        "name": "Electronic Frontier Foundation",
+        "role": "instigator"
+      },
+      {
+        "name": "Institute for Justice",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -76,6 +76,32 @@
       "Aletheia",
       "CUSMA"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Melanie Joly",
+        "role": "instigator"
+      },
+      {
+        "name": "Mark Carney",
+        "role": "instigator"
+      },
+      {
+        "name": "Justin Trudeau",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

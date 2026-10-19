@@ -145,6 +145,23 @@
       "Aletheia",
       "Economy",
       "FederalReserve"
+    ],
+    "actor_roles": [
+      {
+        "name": "Federal Reserve",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "U.S. Retirees",
+        "role": "instigator"
+      },
+      {
+        "name": "Homeowners",
+        "role": "instigator"
+      }
     ]
   }
 ]

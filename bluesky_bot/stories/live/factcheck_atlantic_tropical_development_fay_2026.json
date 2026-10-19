@@ -143,6 +143,23 @@
       "Aletheia",
       "Weather",
       "Climate"
+    ],
+    "actor_roles": [
+      {
+        "name": "National Hurricane Center",
+        "role": "instigator"
+      },
+      {
+        "name": "NOAA",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Daily Caller",
+        "role": "author"
+      }
     ]
   }
 ]

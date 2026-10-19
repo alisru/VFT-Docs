@@ -151,6 +151,27 @@
     "tags": [
       "Aletheia",
       "TechEthics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Pope Leo XIV",
+        "role": "instigator"
+      },
+      {
+        "name": "Emmanuel Macron",
+        "role": "instigator"
+      },
+      {
+        "name": "UNESCO",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "United Nations",
+        "role": "instigator"
+      }
     ]
   }
 ]

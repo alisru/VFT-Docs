@@ -251,6 +251,27 @@
       "Sports",
       "Business"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Bob Iger",
+        "role": "instigator"
+      },
+      {
+        "name": "Joshua Kushner",
+        "role": "instigator"
+      },
+      {
+        "name": "Mark Walter",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Los Angeles Lakers",
+        "role": "instigator"
+      }
+    ]
   }
 ]

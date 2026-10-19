@@ -70,6 +70,28 @@
       "Aletheia",
       "Geopolitics"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Royal Marines",
+        "role": "instigator"
+      },
+      {
+        "name": "National Crime Agency",
+        "role": "instigator"
+      },
+      {
+        "name": "Royal Air Force",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

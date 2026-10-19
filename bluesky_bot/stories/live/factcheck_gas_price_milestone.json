@@ -76,6 +76,24 @@
     ],
     "policies": [
       "Cost of Living"
+    ],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "AAA",
+        "role": "instigator"
+      },
+      {
+        "name": "GasBuddy",
+        "role": "instigator"
+      }
     ]
   }
 ]

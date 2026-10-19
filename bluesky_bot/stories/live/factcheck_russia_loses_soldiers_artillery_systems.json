@@ -72,6 +72,24 @@
     "category": "general",
     "topic": "InfoWar",
     "event": "",
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ukrainska Pravda",
+        "role": "instigator"
+      },
+      {
+        "name": "General Staff of the Armed Forces of Ukraine",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

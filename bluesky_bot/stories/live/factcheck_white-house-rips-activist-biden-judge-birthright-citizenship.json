@@ -146,6 +146,27 @@
       "Aletheia",
       "USPol",
       "Constitution"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Deborah Boardman",
+        "role": "instigator"
+      },
+      {
+        "name": "White House",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Supreme Court of the United States",
+        "role": "regulator"
+      }
     ]
   }
 ]

@@ -76,6 +76,32 @@
       "Aletheia",
       "HumanRights"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United Nations",
+        "role": "instigator"
+      },
+      {
+        "name": "Antonio Guterres",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "Palestinian Territories",
+        "role": "instigator"
+      },
+      {
+        "name": "Hamas",
+        "role": "instigator"
+      },
+      {
+        "name": "Hezbollah",
+        "role": "instigator"
+      }
+    ]
   }
 ]

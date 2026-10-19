@@ -143,6 +143,26 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Michael Lines",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Social Media Victims Law Center",
+        "role": "acted_upon"
+      }
     ]
   }
 ]

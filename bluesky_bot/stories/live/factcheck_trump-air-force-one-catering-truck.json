@@ -250,6 +250,26 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "BBC Newscast",
+        "role": "author",
+        "sub_u": 0.0,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Washington Post",
+        "role": "author",
+        "sub_u": 0.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      }
+    ]
   }
 ]

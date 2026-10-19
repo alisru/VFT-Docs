@@ -270,6 +270,27 @@
       "RealEstate",
       "Georgia",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Eric Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Bidzina Ivanishvili",
+        "role": "instigator"
+      },
+      {
+        "name": "Irakli Kobakhidze",
+        "role": "instigator"
+      },
+      {
+        "name": "Trump Organization",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

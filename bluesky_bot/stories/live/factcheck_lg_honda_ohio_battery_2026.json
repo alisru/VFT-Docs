@@ -101,6 +101,28 @@
       "EV",
       "Energy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "LG Energy Solution",
+        "role": "instigator"
+      },
+      {
+        "name": "Honda",
+        "role": "instigator"
+      },
+      {
+        "name": "L-H Battery Company",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "South Korea",
+        "role": "instigator"
+      }
+    ]
   }
 ]

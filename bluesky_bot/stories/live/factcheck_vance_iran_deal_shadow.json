@@ -74,6 +74,24 @@
       "Vance",
       "IranDeal"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "JD Vance",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

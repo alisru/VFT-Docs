@@ -73,6 +73,20 @@
       "AI",
       "Psychology"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Claude",
+        "role": "instigator"
+      },
+      {
+        "name": "Socos Labs",
+        "role": "instigator"
+      }
+    ]
   }
 ]

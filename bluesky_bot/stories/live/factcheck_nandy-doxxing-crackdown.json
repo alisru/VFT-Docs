@@ -31,7 +31,6 @@
       "Lisa Nandy",
       "RNLI",
       "Meta",
-      "X",
       "UK Government"
     ],
     "macro_event": "",
@@ -135,6 +134,27 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Lisa Nandy",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "RNLI",
+        "role": "instigator"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "UK Government",
+        "role": "instigator"
+      }
     ]
   }
 ]

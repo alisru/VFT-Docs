@@ -253,6 +253,31 @@
       "Tech",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Andrew Tate",
+        "role": "instigator",
+        "sub_u": -0.92,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Tristan Tate",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Romania",
+        "role": "instigator"
+      }
+    ]
   }
 ]

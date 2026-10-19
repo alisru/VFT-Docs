@@ -146,6 +146,26 @@
       "Aletheia",
       "Economy",
       "LaborMarket"
+    ],
+    "actor_roles": [
+      {
+        "name": "Betsey Stevenson",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "U.S. Labor Department",
+        "role": "instigator"
+      },
+      {
+        "name": "NPR",
+        "role": "author",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

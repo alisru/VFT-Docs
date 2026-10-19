@@ -264,6 +264,27 @@
     "tags": [
       "Aletheia",
       "USPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Supreme Court",
+        "role": "regulator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "U.S. Postal Service",
+        "role": "author"
+      },
+      {
+        "name": "Ketanji Brown Jackson",
+        "role": "instigator"
+      }
     ]
   }
 ]

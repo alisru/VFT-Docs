@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "UkraineWar"
+    ],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelenskyy",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukroboronprom",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Russian Armed Forces",
+        "role": "instigator"
+      },
+      {
+        "name": "Serhii Koretskyi",
+        "role": "instigator"
+      }
     ]
   }
 ]

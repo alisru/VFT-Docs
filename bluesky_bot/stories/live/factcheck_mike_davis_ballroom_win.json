@@ -158,6 +158,27 @@
       "Aletheia",
       "USPol",
       "SCOTUS"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mike Davis",
+        "role": "instigator",
+        "sub_u": -0.78,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Supreme Court",
+        "role": "regulator"
+      },
+      {
+        "name": "John Roberts",
+        "role": "instigator"
+      }
     ]
   }
 ]

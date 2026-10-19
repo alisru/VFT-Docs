@@ -152,6 +152,27 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Services Australia",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Government",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -73,6 +73,20 @@
       "NYC",
       "CentralPark"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "New York Police Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Transport Workers Union",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Central Park Conservancy",
+        "role": "instigator"
+      }
+    ]
   }
 ]

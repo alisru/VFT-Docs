@@ -101,6 +101,32 @@
       "AI",
       "TechPolicy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ted Lieu",
+        "role": "instigator"
+      },
+      {
+        "name": "Nathaniel Moran",
+        "role": "instigator"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

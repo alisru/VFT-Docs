@@ -199,6 +199,31 @@
       "Aletheia",
       "USPol",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Dario Amodei",
+        "role": "instigator"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      },
+      {
+        "name": "David Sacks",
+        "role": "instigator"
+      }
     ]
   }
 ]

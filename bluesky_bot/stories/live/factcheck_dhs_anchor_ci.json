@@ -98,6 +98,20 @@
       "CyberSecurity",
       "DHS"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Department of Homeland Security",
+        "role": "instigator"
+      },
+      {
+        "name": "CISA",
+        "role": "instigator"
+      },
+      {
+        "name": "Markwayne Mullin",
+        "role": "instigator"
+      }
+    ]
   }
 ]

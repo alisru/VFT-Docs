@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Joe Biden",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Jill Biden",
+        "role": "instigator"
+      },
+      {
+        "name": "Spencer Cox",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

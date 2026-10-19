@@ -76,6 +76,32 @@
       "Aletheia",
       "Geopolitics"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Masoud Pezeshkian",
+        "role": "instigator"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

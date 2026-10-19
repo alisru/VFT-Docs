@@ -251,6 +251,20 @@
       "Security",
       "USGov"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Federal Bureau of Investigation",
+        "role": "author"
+      },
+      {
+        "name": "North Korea",
+        "role": "context"
+      },
+      {
+        "name": "United States Government",
+        "role": "instigator"
+      }
+    ]
   }
 ]

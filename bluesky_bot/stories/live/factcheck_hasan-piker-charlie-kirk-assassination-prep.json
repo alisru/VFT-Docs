@@ -270,6 +270,34 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Hasan Piker",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Charlie Kirk",
+        "role": "instigator"
+      },
+      {
+        "name": "The Federalist",
+        "role": "instigator",
+        "sub_u": -0.94,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Antifa",
+        "role": "instigator"
+      }
     ]
   }
 ]

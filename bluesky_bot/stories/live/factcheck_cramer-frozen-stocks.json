@@ -136,6 +136,23 @@
     "tags": [
       "Aletheia",
       "Finance"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jim Cramer",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "CNBC",
+        "role": "author"
+      },
+      {
+        "name": "Wall Street",
+        "role": "instigator"
+      }
     ]
   }
 ]

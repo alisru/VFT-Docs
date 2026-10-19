@@ -250,6 +250,23 @@
       "Aletheia",
       "Law"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Lawrence David",
+        "role": "instigator"
+      },
+      {
+        "name": "Public Interest Litigation Institute",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Attorney General of Quebec",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -144,6 +144,30 @@
       "Aletheia",
       "Tesla",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Tesla",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.75,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "NHTSA",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      },
+      {
+        "name": "Waymo",
+        "role": "instigator"
+      }
     ]
   }
 ]

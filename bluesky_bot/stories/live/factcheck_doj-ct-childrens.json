@@ -80,6 +80,20 @@
       "Health",
       "DOJ"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "Connecticut Children's Medical Center",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
+    ]
   }
 ]

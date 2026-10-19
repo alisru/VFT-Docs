@@ -68,6 +68,20 @@
       "Ukraine",
       "Russia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Euronews",
+        "role": "author"
+      }
+    ]
   }
 ]

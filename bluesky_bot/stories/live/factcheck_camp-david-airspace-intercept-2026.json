@@ -184,6 +184,23 @@
     "tags": [
       "Aletheia",
       "Defense"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "NORAD",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "United States Armed Forces",
+        "role": "instigator"
+      }
     ]
   }
 ]

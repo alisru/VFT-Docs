@@ -83,6 +83,24 @@
       "Health",
       "Outbreak"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Michigan Department of Health and Human Services",
+        "role": "instigator"
+      },
+      {
+        "name": "CDC",
+        "role": "instigator"
+      },
+      {
+        "name": "FDA",
+        "role": "regulator"
+      },
+      {
+        "name": "Taylor Farms",
+        "role": "instigator"
+      }
+    ]
   }
 ]

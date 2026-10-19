@@ -200,6 +200,38 @@
       "Aletheia",
       "AI",
       "Australia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Katy Gallagher",
+        "role": "instigator"
+      },
+      {
+        "name": "Richard Marles",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context",
+        "sub_u": 0.5,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

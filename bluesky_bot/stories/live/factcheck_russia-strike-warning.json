@@ -75,6 +75,28 @@
       "Ukraine",
       "Russia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Volodymyr Zelensky",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Belarus",
+        "role": "instigator"
+      },
+      {
+        "name": "Alexander Lukashenko",
+        "role": "instigator"
+      }
+    ]
   }
 ]

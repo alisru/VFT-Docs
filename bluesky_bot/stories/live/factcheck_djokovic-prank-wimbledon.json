@@ -98,6 +98,20 @@
       "Djokovic",
       "Wimbledon"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Novak Djokovic",
+        "role": "instigator"
+      },
+      {
+        "name": "Stefanos Tsitsipas",
+        "role": "instigator"
+      },
+      {
+        "name": "Wimbledon",
+        "role": "context"
+      }
+    ]
   }
 ]

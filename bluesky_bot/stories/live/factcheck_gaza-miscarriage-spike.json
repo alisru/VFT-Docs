@@ -98,6 +98,20 @@
       "Gaza",
       "Humanitarian"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United Nations",
+        "role": "instigator"
+      },
+      {
+        "name": "Gaza",
+        "role": "context"
+      },
+      {
+        "name": "Israel",
+        "role": "context"
+      }
+    ]
   }
 ]

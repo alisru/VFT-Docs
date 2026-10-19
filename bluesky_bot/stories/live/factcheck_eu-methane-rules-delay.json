@@ -135,6 +135,27 @@
     "tags": [
       "Aletheia",
       "Energy"
+    ],
+    "actor_roles": [
+      {
+        "name": "European Union",
+        "role": "instigator"
+      },
+      {
+        "name": "European Commission",
+        "role": "regulator"
+      },
+      {
+        "name": "Dan Jørgensen",
+        "role": "instigator"
+      },
+      {
+        "name": "EUobserver",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

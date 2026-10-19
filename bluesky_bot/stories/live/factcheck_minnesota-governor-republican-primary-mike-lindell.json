@@ -251,6 +251,27 @@
       "Minnesota",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Mike Lindell",
+        "role": "instigator",
+        "sub_u": -1.6,
+        "sub_psi": -1.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Lisa Demuth",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Ted Lieu",
+        "role": "instigator"
+      }
+    ]
   }
 ]

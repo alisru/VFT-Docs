@@ -134,6 +134,27 @@
     "tags": [
       "Aletheia",
       "PublicSafety"
+    ],
+    "actor_roles": [
+      {
+        "name": "The National Guard",
+        "role": "instigator"
+      },
+      {
+        "name": "Heal 901",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "State of Tennessee",
+        "role": "instigator"
+      },
+      {
+        "name": "The Trace",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -144,6 +144,27 @@
       "Aletheia",
       "FOIA",
       "SecondAmendment"
+    ],
+    "actor_roles": [
+      {
+        "name": "The Trace",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.95,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "Michael Bloomberg",
+        "role": "instigator"
+      },
+      {
+        "name": "Everytown for Gun Safety",
+        "role": "instigator"
+      }
     ]
   }
 ]

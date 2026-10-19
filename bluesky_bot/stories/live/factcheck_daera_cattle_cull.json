@@ -252,6 +252,26 @@
     ],
     "policies": [
       "Industrial Relations"
+    ],
+    "actor_roles": [
+      {
+        "name": "DAERA",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Ulster Farmers' Union",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Andrew Muir",
+        "role": "instigator"
+      }
     ]
   }
 ]

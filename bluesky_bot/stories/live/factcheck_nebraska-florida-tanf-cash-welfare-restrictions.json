@@ -1,0 +1,172 @@
+[
+  {
+    "thinking": "Phase 1-5 structural scan: Evaluating Fox News opinion piece by Hayden Dublois (Foundation for Government Accountability) on Nebraska/Florida TANF welfare spending restrictions. Stated claim: Closing cash welfare legal loopholes on porn, alcohol, tattoos, and luxury items protects taxpayers and ensures money goes to struggling families. Reality: Cash welfare is fundamentally fungible; ATM cash withdrawals bypass merchant card restrictions entirely. Sensationalizing extreme edge cases (porn, psychics, tattoos) manufactures a moral panic to justify shrinking cash assistance safety nets for low-income families. Stated intent: GG/GP (+0.80, +0.50). Actual forces: GE (S=0.8, O=0.1), LE (S=1.4, O=0.0), BP (S=1.0, O=0.0), GG (S=0.0, O=1.2), LG (S=0.0, O=0.6), GP (S=0.0, O=1.0). Net forces sum_u = -5.9 / 6.1 = -0.97. Separated Will Protocol: F_neg_psi (-2.9) > F_pos_psi (+2.0), psi = -2.9 / 3.1 = -0.94. Integrity R_net = 28.5 (Severe Deception, z=5, Delta H = 0.85). Logical Plane Error: HOW (transaction coding restrictions) vs WHO (struggling families needing economic security).",
+    "id": "nebraska-florida-tanf-cash-welfare-restrictions",
+    "subject": "You’d never guess the crazy th...",
+    "link": "https://www.foxnews.com/opinion/youd-never-guess-crazy-things-cash-welfare-paid-nebraska-shutting-down",
+    "target_url": "",
+    "claim_u": 0.8,
+    "claim_psi": 0.5,
+    "real_u": -0.97,
+    "real_psi": -0.94,
+    "mode": "root",
+    "posts": [
+      "Nebraska restrictions on cash welfare spending raise questions about safety net reform versus political theater.\nEvidence: Spending bans, Regulatory theater, Welfare reduction\n#TANF #Policy",
+      "The opinion piece claims Nebraska and Florida closed a legal loophole by banning cash welfare spending on alcohol, porn, tattoos, and fortune-telling, protecting taxpayers and restoring aid to needy families.\nStated Judgement: (+0.80, +0.50) — Good Preference",
+      "Cash is fundamentally fungible. Merchant restrictions on EBT cards do not stop cash withdrawn at ATMs, making the policy symbolic theater while sensationalizing rare cases to stigmatize welfare recipients.\nResulting Judgement: (-0.97, -0.94) — Greater Evil",
+      "Verdict: FAIL — The Path of Deception. Sensationalizing fringe cases creates a moral pretext to undermine cash assistance for low-income families.\nIntegrity: Severe Deception (Hypocrisy: 28.5, z: 5)",
+      "Sub-Audits Breakdown:\n- Foundation for Govt Accountability: FAIL (-0.97, -0.94) — Uses moral panic to gut safety nets.\n- TANF Spending Restrictions: FAIL (-0.85, -0.72) — Performs regulatory theater over fungible cash.",
+      "Nebraska and Florida updated state TANF plans under federal guidance, barring EBT transactions at establishments like tobacco shops, tattoo parlors, and adult venues.",
+      "The Poison:\nEnforcing merchant restrictions on electronic benefit cards increases administrative complexity without altering cash fungibility or reducing poverty.",
+      "The Breakdown & Plane Error:\nThis commits a Logical Plane Error (HOW vs WHO). It mistakes point-of-sale card code restrictions for actual behavioral control, leveraging sensational claims to divert attention from safety net cuts.",
+      "Social Physics Analysis:\nThe author executes a Smart Selfish Loop: constructing a public crisis over recipient spending to justify reducing cash autonomy. Projecting moral failure onto vulnerable citizens creates political pretext for welfare contraction.",
+      "The Trajectory: The Path of Deception.\nMapping the gap between family stabilization claims and restrictive surveillance reveals a plunge toward welfare suppression and systemic austerity.",
+      "The Unavoidable Truth: Card code bans cannot alter cash fungibility or solve poverty.\nThe Unavoidable Lie: Restricting merchant codes stops welfare fraud.",
+      "Alethekanon:\nThe argument substitutes moral panic for monetary mechanics. Card transaction rules do not change cash fungibility; they merely extract political capital by degrading aid recipients.",
+      "Awwthekanon:\nStruggling parents deserve dignity and reliable support to feed their families, not public shaming and political attacks that treat basic assistance as a moral defect.",
+      "Brothekanon:\nBanning EBT at tattoo parlors doesn't stop anyone from pulling cash out of an ATM. It's pure political theater designed to make poor people look bad on TV.",
+      "Spirithekanon:\n\"Do not rob the poor because he is poor, nor oppress the afflicted at the gate.\" Proverbs 22:22 FAIL\nExploiting pretexts to restrict aid from the impoverished violates basic spiritual justice."
+    ],
+    "actors": [
+      "Jim Pillen",
+      "Ron DeSantis",
+      "Foundation for Government Accountability",
+      "TANF Recipients",
+      "Nebraska"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jim Pillen",
+        "role": "instigator"
+      },
+      {
+        "name": "Ron DeSantis",
+        "role": "instigator"
+      },
+      {
+        "name": "Foundation for Government Accountability",
+        "role": "instigator"
+      },
+      {
+        "name": "TANF Recipients",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Nebraska",
+        "role": "context"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 28.5,
+    "claim_z": 0,
+    "real_z": 5,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "Foundation for Govt Accountability",
+        "claim_u": 0.8,
+        "claim_psi": 0.5,
+        "real_u": -0.97,
+        "real_psi": -0.94,
+        "verdict": "FAIL",
+        "reason": "Uses moral panic to gut safety nets."
+      },
+      {
+        "aspect": "TANF Spending Restrictions",
+        "claim_u": 0.8,
+        "claim_psi": 0.5,
+        "real_u": -0.85,
+        "real_psi": -0.72,
+        "verdict": "FAIL",
+        "reason": "Performs regulatory theater over fungible cash."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nYou’d never guess the crazy things cash welfare paid for. Nebraska is shutting that down\n\nNebraska and Florida are blocking cash welfare spending on alcohol, porn, tattoos and more, following Trump administration guidance on TANF reform.\n\nActual Article Body:\nThis material may not be published, broadcast, rewritten, or redistributed. ©2026 FOX News Network, LLC. All rights reserved. Quotes displayed in real-time or delayed by at least 15 minutes. Market data provided by Factset. Powered and implemented by FactSet Digital Solutions. Legal Statement. Mutual Fund and ETF data provided by LSEG.\n\nManhattan Institute senior fellow Christopher Rufo exposes California's shadow welfare system that allegedly spends billions on housing and healthcare for illegal immigrants on 'America's Newsroom.'\n\nBeer. Liquor. Cigarettes. Porn.\n\nThis isn’t just a list of things that can be bad for you. This is a list of things that Americans are buying with cash welfare, thanks to a massive loophole in federal law.\n\nThankfully, states are finally taking action to prevent this abuse and protect taxpayers, with strong guidance from the Trump administration. It’s an overlooked — but important — new front in the ongoing War on Fraud.\n\nDOJ THREATENS TO CUT BILLIONS IN WELFARE FUNDING FROM STATES FOR FAILING TO REPORT ILLEGAL MIGRANTS\n\nThe latest state to close this loophole is Nebraska. On Oct. 9, Republican Gov. Jim Pillen directed the state to stop recipients of cash welfare from spending money on items like tobacco, porn, tattoos, psychic and fortune-telling services, luxury watches and much more. Going forward, if you receive money under the Temporary Assistance for Needy Families (TANF) program in Nebraska, you cannot spend the money on things the taxpayer shouldn’t be funding in the first place.\n\nNebraska Governor Jim Pillen speaks during a statue dedication ceremony for US writer and novelist Willa Cather, in Statuary Hall of the US Capitol in Washington, DC, on June 7, 2023. (JIM WATSON/AFP via Getty Images)\n\nAmericans may be forgiven for wondering why people in Nebraska — or anywhere else — were ever able to buy these things with cash welfare. After all, most people assume that government assistance is only supposed to fund specific things that families need. Cash welfare in particular is explicitly designed to help low-income families \"achieve economic security and stability.\" So, how did cigarettes and smut enter the picture?\n\nPRO-LIFE VS SOCIALISM: GOP LAWMAKERS DIVIDED OVER CONTROVERSIAL GUARANTEED INCOME PROGRAMS\n\nIt’s true that federal rules stop you from spending cash welfare at places like liquor stores. But you can still buy alcohol at plenty of other places, such as grocery stores. Similarly, you can’t spend cash welfare at casinos or strip clubs, but you can still gamble or buy pornography in plenty of other places.\n\nThis loophole has existed for roughly 30 years, since TANF began — and it’s so large, it’s laughable. Did lawmakers not realize that alcohol isn’t just sold at the corner store? Do our nation’s leaders not know that \"adult entertainment\" is available outside of seedy clubs?\n\nWHITE HOUSE PUSHES 'WATERSHED' FRAUD-FIGHTING REFORM IN CONGRESS AS VANCE CONVENES TASK FORCE\n\nThese are far from the only non-essential — and deeply questionable — things that cash welfare is funding. Taxpayers are also able to pay for things like concert tickets, streaming subscriptions, tattoos and luxury services like spa treatments. It’s enough to make you wonder: When Congress created cash welfare, did it put any meaningful restrictions on how the money could be used?\n\nUnfortunately, closing this loophole in one fell swoop would require another act of Congress. But thankfully, the Trump administration has issued guidance explaining how states can close this loophole, one by one. States can’t change federal requirements for cash welfare. But they can ask the federal government to approve stronger requirements on a state-by-state basis, which explains the sudden and welcome progress.\n\nBefore Nebraska, Florida took the first meaningful action to stop this abuse. In August, Republican Gov. Ron DeSantis announced that he was blocking cash welfare from being spent on tobacco products, drugs, porn, tattoos, video games, fortune-telling services, and a slew of other obviously non-essential goods and services. The Trump administration quickly approved the Florida plan, which DeSantis rightly said will protect \"Floridians who genuinely need assistance\" while also guarding taxpayers from fraud and abuse.\n\nWhat are other state leaders waiting for?\n\nCLICK HERE FOR MORE FOX NEWS OPINION\n\nIt’s shocking that any state has allowed such blatant abuse of the taxpayer’s generosity for so long. Perhaps they’ve been waiting for Congress to act, but given the dysfunction in D.C., that was always a long shot. Regardless, now is the time for governors to act. The easiest thing to do is to follow Florida and Nebraska’s lead and simply amend their state plans for cash welfare. Governors could also work with state lawmakers if they want to ensure more permanent reforms, while holding retailers accountable for circumventing restrictions.\n\nCLICK HERE TO DOWNLOAD THE FOX NEWS APP\n\nBottom line: Every state must close this cash welfare loophole. No one should be using the taxpayer’s money to buy pre-mixed cocktails and porn.\n\nCLICK HERE TO READ MORE FROM HAYDEN DUBLOIS\n\nHayden Dublois is data and analytics director at the Foundation for Government Accountability.\n\nGet the recap of top opinion commentary and original content throughout the week.\n\nBy entering your email and clicking the Subscribe button, you agree to the Fox News \n        Privacy Policy\n       and \n        Terms of Use\n      , and\n      agree to receive content and promotional communications from Fox News. You understand that you can\n      opt-out at any time.\n\nSubscribed\n\nYou've successfully subscribed to this newsletter!\n\nThis material may not be published, broadcast, rewritten, or redistributed. ©2026 FOX News Network, LLC. All rights reserved. Quotes displayed in real-time or delayed by at least 15 minutes. Market data provided by\n        Factset. Powered and implemented by\n        FactSet Digital Solutions.\n        Legal Statement. Mutual Fund and ETF data provided by\n        LSEG.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.foxnews.com/opinion/youd-never-guess-crazy-things-cash-welfare-paid-nebraska-shutting-down",
+        "snippet": "Stated Claim / Post Context:\nYou’d never guess the crazy things cash welfare paid for. Nebraska is shutting that down\n\nNebraska and Florida are blocking cash welfare spending on alcohol, porn, tattoos and more, following Trump administration guidance on TANF reform.\n\nActual Article Body:\nThis materi"
+      }
+    ],
+    "category": "all",
+    "topic": "TANF",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/nebraska-florida-tanf-cash-welfare-restrictions_graph.png",
+    "rkeys": [
+      "3mxkkunqvrw2x",
+      "3mxkkuofpvy2o",
+      "3mxkkuqkmbu2f",
+      "3mxkkuspgao2v",
+      "3mxkkuuunbm2f",
+      "3mxkkuwzj6w2v",
+      "3mxkkuz6fzo23",
+      "3mxkkv3dde725",
+      "3mxkkv5isqg23",
+      "3mxkkv7nsvz2d",
+      "3mxkkvbsm6y2i",
+      "3mxkkvdyt6w2x",
+      "3mxkkvg5glg26",
+      "3mxkkvic5x42f",
+      "3mxkkvkgyqn24"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkunqvrw2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkuofpvy2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkuqkmbu2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkuspgao2v",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkuuunbm2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkuwzj6w2v",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkuz6fzo23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkv3dde725",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkv5isqg23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkv7nsvz2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkvbsm6y2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkvdyt6w2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkvg5glg26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkvic5x42f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxkkvkgyqn24"
+    ],
+    "tags": [
+      "TANF",
+      "Policy"
+    ]
+  }
+]

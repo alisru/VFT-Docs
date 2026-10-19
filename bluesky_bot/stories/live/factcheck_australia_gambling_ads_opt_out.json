@@ -264,6 +264,27 @@
       "Aletheia",
       "AusPol",
       "TechPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Australian Government",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Australian Communications and Media Authority",
+        "role": "instigator"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "Roblox",
+        "role": "instigator"
+      }
     ]
   }
 ]

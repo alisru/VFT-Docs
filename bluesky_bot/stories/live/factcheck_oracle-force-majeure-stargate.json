@@ -147,6 +147,27 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Oracle",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Blue Owl Capital",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "SoftBank",
+        "role": "instigator"
+      }
     ]
   }
 ]

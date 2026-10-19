@@ -144,6 +144,30 @@
       "CFL",
       "Football",
       "Roughriders"
+    ],
+    "actor_roles": [
+      {
+        "name": "Saskatchewan Roughriders",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Winnipeg Blue Bombers",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.3,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Tommy Stevens",
+        "role": "instigator"
+      },
+      {
+        "name": "Zach Collaros",
+        "role": "instigator"
+      }
     ]
   }
 ]

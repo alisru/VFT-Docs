@@ -68,6 +68,20 @@
       "AI",
       "Scams"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "UK Finance",
+        "role": "instigator"
+      },
+      {
+        "name": "Barclays",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

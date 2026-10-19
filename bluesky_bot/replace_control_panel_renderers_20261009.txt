@@ -1,0 +1,435 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2604,18 +2604,425 @@
+       downloadAnchor.remove();
+     }
+ 
+-    // Lightbox handlers
+-    function openLightbox(imgSrc) {
++    // Programmatic Vector Graphics & Infographic Cards Engine
++    function escapeHtml(str) {
++      if (!str) return '';
++      return String(str)
++        .replace(/&/g, '&amp;')
++        .replace(/</g, '&lt;')
++        .replace(/>/g, '&gt;')
++        .replace(/"/g, '&quot;')
++        .replace(/'/g, '&#039;');
++    }
++
++    function getPathNameJS(claim_u, claim_psi, real_u, real_psi) {
++      let exitName = "Reckoning", originZone = "Greater Evil";
++      if (claim_u > 0 && claim_psi > 0) { exitName = "Fall"; originZone = "Greater Good"; }
++      else if (claim_u <= 0 && claim_psi > 0) { exitName = "Revelation"; originZone = "Greatest Lie"; }
++      else if (claim_u > 0 && claim_psi <= 0) { exitName = "Awakening"; originZone = "Lesser Good"; }
++
++      let entryName = "Destruction", destZone = "Greater Evil";
++      if (real_u > 0 && real_psi > 0) { entryName = "Grace"; destZone = "Greater Good"; }
++      else if (real_u <= 0 && real_psi > 0) { entryName = "Deception"; destZone = "Greatest Lie"; }
++      else if (real_u > 0 && real_psi <= 0) { entryName = "Redemption"; destZone = "Lesser Good"; }
++
++      if (originZone === destZone) return "Stasis";
++      return `${exitName} into ${entryName}`;
++    }
++
++    function getSvgStarPoints(cx, cy, spikes, outerRadius, innerRadius) {
++      let rot = Math.PI / 2 * 3;
++      let x = cx, y = cy;
++      const step = Math.PI / spikes;
++      let points = [];
++      for (let i = 0; i < spikes; i++) {
++        x = cx + Math.cos(rot) * outerRadius;
++        y = cy + Math.sin(rot) * outerRadius;
++        points.push(`${x.toFixed(1)},${y.toFixed(1)}`);
++        rot += step;
++        x = cx + Math.cos(rot) * innerRadius;
++        y = cy + Math.sin(rot) * innerRadius;
++        points.push(`${x.toFixed(1)},${y.toFixed(1)}`);
++        rot += step;
++      }
++      return points.join(' ');
++    }
++
++    function renderTrajectoryGraphSVG(story, isSmall) {
++      if (!story) return '';
++      const cu = (story.claim_u !== null && story.claim_u !== undefined) ? Number(story.claim_u) : null;
++      const cpsi = (story.claim_psi !== null && story.claim_psi !== undefined) ? Number(story.claim_psi) : null;
++      const ru = (story.real_u !== null && story.real_u !== undefined) ? Number(story.real_u) : null;
++      const rpsi = (story.real_psi !== null && story.real_psi !== undefined) ? Number(story.real_psi) : null;
++      const pathName = (cu !== null && ru !== null) ? getPathNameJS(cu, cpsi, ru, rpsi) : 'Vector Map';
++
++      const W = 500, H = 500, CX = 250, CY = 250;
++      const scale = 80; // 200px per 2.5 units = 80px per unit
++
++      const getX = (u) => CX - (u * scale);
++      const getY = (psi) => CY - (psi * scale);
++
++      let vectorPath = '';
++      let claimNode = '';
++      let realNode = '';
++
++      if (cu !== null && cpsi !== null) {
++        const cx = getX(cu), cy = getY(cpsi);
++        claimNode = `
++          <circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="7.5" fill="none" stroke="#facc15" stroke-width="2.5" />
++          ${!isSmall ? `<text x="${cx.toFixed(1)}" y="${(cy - 12).toFixed(1)}" fill="#facc15" font-size="10" font-weight="700" text-anchor="middle" font-family="sans-serif">Claim (${cu > 0 ? '+' : ''}${cu.toFixed(1)}, ${cpsi > 0 ? '+' : ''}${cpsi.toFixed(1)})</text>` : ''}
++        `;
++      }
++
++      if (ru !== null && rpsi !== null) {
++        const rx = getX(ru), ry = getY(rpsi);
++        const starPts = getSvgStarPoints(rx, ry, 5, 9, 4.2);
++        realNode = `
++          <polygon points="${starPts}" fill="#ef4444" stroke="#ffffff" stroke-width="1.2" />
++          ${!isSmall ? `<text x="${rx.toFixed(1)}" y="${(ry + 18).toFixed(1)}" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle" font-family="sans-serif">Reality (${ru > 0 ? '+' : ''}${ru.toFixed(1)}, ${rpsi > 0 ? '+' : ''}${rpsi.toFixed(1)})</text>` : ''}
++        `;
++      }
++
++      if (cu !== null && cpsi !== null && ru !== null && rpsi !== null) {
++        const cx = getX(cu), cy = getY(cpsi);
++        const rx = getX(ru), ry = getY(rpsi);
++        const midX = (cx + rx) / 2 + (ry - cy) * 0.22;
++        const midY = (cy + ry) / 2 - (rx - cx) * 0.22;
++        vectorPath = `
++          <path d="M ${cx.toFixed(1)} ${cy.toFixed(1)} Q ${midX.toFixed(1)} ${midY.toFixed(1)} ${rx.toFixed(1)} ${ry.toFixed(1)}" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#vArrow)" />
++        `;
++      }
++
++      const rnetText = story.real_rnet ? `R_net: ${Number(story.real_rnet).toFixed(1)}` : '';
++      const zText = (story.real_z !== undefined && story.real_z !== null) ? `z: ${story.real_z}` : '';
++      const badgeText = [rnetText, zText].filter(Boolean).join(' · ');
++
++      return `
++        <svg viewBox="0 0 500 500" style="width:100%; height:100%; display:block; background:#111111; border-radius:8px; font-family:var(--font-outfit, sans-serif);" xmlns="http://www.w3.org/2000/svg">
++          <defs>
++            <linearGradient id="hegGrad" x1="0%" y1="0%" x2="100%" y2="0%">
++              <stop offset="0%" stop-color="#00FF00" stop-opacity="0.18" />
++              <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.04" />
++              <stop offset="100%" stop-color="#FF0000" stop-opacity="0.18" />
++            </linearGradient>
++            <marker id="vArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
++              <path d="M 0 1 L 10 5 L 0 9 z" fill="#ffffff" />
++            </marker>
++          </defs>
++
++          <!-- Gradient Backdrop -->
++          <rect width="500" height="500" fill="#111111" />
++          <rect width="500" height="500" fill="url(#heGrad)" />
++
++          <!-- Translucent Background Hegemony Cross -->
++          <line x1="330" y1="330" x2="90" y2="90" stroke="rgba(255,255,255,0.14)" stroke-width="14" stroke-linecap="butt" />
++          <line x1="170" y1="330" x2="330" y2="170" stroke="rgba(255,255,255,0.14)" stroke-width="14" stroke-linecap="butt" />
++
++          <!-- Zone 2 Outer Box (+2.0 to -2.0) -->
++          <rect x="90" y="90" width="320" height="320" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" />
++
++          <!-- Zone 1 Inner Box (+1.0 to -1.0) -->
++          <rect x="170" y="170" width="160" height="160" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.2" stroke-dasharray="4,4" />
++
++          <!-- Axes -->
++          <line x1="90" y1="250" x2="410" y2="250" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
++          <line x1="250" y1="90" x2="250" y2="410" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
++
++          <!-- Six Hegemony Attractors -->
++          <!-- Green (+u) Left -->
++          <circle cx="170" cy="170" r="10" fill="#00FF00" opacity="0.85" />
++          <circle cx="170" cy="250" r="7.5" fill="#98FB98" opacity="0.75" />
++          <circle cx="170" cy="330" r="6" fill="#98FB98" opacity="0.65" />
++          <!-- Red (-u) Right -->
++          <circle cx="330" cy="170" r="6" fill="#FF9999" opacity="0.65" />
++          <circle cx="330" cy="250" r="7.5" fill="#FF9999" opacity="0.75" />
++          <circle cx="330" cy="330" r="10" fill="#FF0000" opacity="0.85" />
++
++          <!-- Alchemical & Boundary Labels (Full Size Only) -->
++          ${!isSmall ? `
++            <text x="60" y="65" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">AIR</text>
++            <text x="440" y="65" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">FIRE</text>
++            <text x="60" y="445" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">WATER</text>
++            <text x="440" y="445" fill="rgba(255,255,255,0.35)" font-size="9" font-style="italic" text-anchor="middle">EARTH</text>
++
++            <text x="250" y="75" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">HOT</text>
++            <text x="250" y="430" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">COLD</text>
++            <text x="65" y="253" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">WET</text>
++            <text x="435" y="253" fill="rgba(255,255,255,0.3)" font-size="8" font-style="italic" text-anchor="middle">DRY</text>
++
++            <!-- Corner Anchors -->
++            <text x="170" y="195" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Greater Good</text>
++            <text x="330" y="195" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Greatest Lie</text>
++            <text x="170" y="315" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Lesser Good</text>
++            <text x="330" y="315" fill="rgba(255,255,255,0.85)" font-size="8.5" font-weight="600" text-anchor="middle">The Greater Evil</text>
++
++            <!-- Outer Axis Endpoints -->
++            <text x="250" y="40" fill="#94a3b8" font-size="9" font-weight="700" text-anchor="middle">ACTIVE (+2.0)</text>
++            <text x="250" y="475" fill="#94a3b8" font-size="9" font-weight="700" text-anchor="middle">COUNTERACTIVE (-2.0)</text>
++            <text x="30" y="253" fill="#22c55e" font-size="8.5" font-weight="700" text-anchor="middle">INCLUSIVE</text>
++            <text x="470" y="253" fill="#ef4444" font-size="8.5" font-weight="700" text-anchor="middle">EXCLUSIVE</text>
++          ` : ''}
++
++          <!-- Trajectory Vector Elements -->
++          ${vectorPath}
++          ${claimNode}
++          ${realNode}
++
++          <!-- Top Status Pill -->
++          <g>
++            <rect x="15" y="12" width="470" height="22" rx="5" fill="rgba(0,0,0,0.65)" stroke="rgba(255,255,255,0.15)" />
++            <text x="250" y="27" fill="#f8fafc" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.5">${escapeHtml(pathName)} ${badgeText ? '· ' + badgeText : ''}</text>
++          </g>
++        </svg>
++      `;
++    }
++
++    function renderVerdictCardHTML(story, isSmall) {
++      if (!story) return '';
++      const posts = story.posts || [];
++      const hook = posts[0] ? posts[0].replace(/^Hook:\s*/i, '').trim() : '';
++      const claim = posts[1] ? posts[1].replace(/^(The\s+)?Claim:\s*|^Stated Judgement:\s*/i, '').trim() : '';
++      const reality = posts[2] ? posts[2].replace(/^(The\s+)?Reality:\s*|^Resulting Judgement:\s*/i, '').trim() : '';
++      const verdict = posts[3] ? posts[3].replace(/^(Stated\s+)?Verdict:\s*/i, '').trim() : (story.verdict || '');
++      const context = posts[4] ? posts[4].replace(/^(Sub-Audits\s+Breakdown|Sub-Audits|What's happening|Context):\s*/i, '').trim() : '';
++      const poison = (posts[5] && (posts[5].toLowerCase().includes('poison') || posts[5].toLowerCase().includes('bright side'))) ? posts[5] : (posts[6] || '');
++
++      const isPass = verdict.toUpperCase().startsWith('PASS');
++      const badgeBg = isPass ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.15)';
++      const badgeColor = isPass ? '#10b981' : '#ef4444';
++      const badgeBorder = isPass ? 'rgba(16,185,129,0.3)' : 'rgba(239,68,68,0.3)';
++
++      const cu = story.claim_u !== null ? Number(story.claim_u).toFixed(1) : '?';
++      const cpsi = story.claim_psi !== null ? Number(story.claim_psi).toFixed(1) : '?';
++      const ru = story.real_u !== null ? Number(story.real_u).toFixed(1) : '?';
++      const rpsi = story.real_psi !== null ? Number(story.real_psi).toFixed(1) : '?';
++
++      return `
++        <div class="programmatic-card verdict-card" style="background:#0c1017; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:${isSmall ? '10px' : '16px'}; color:#e2e8f0; font-family:var(--font-outfit, sans-serif);">
++          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:8px;">
++            <div>
++              <div style="font-size:0.65rem; font-weight:700; color:#38bdf8; text-transform:uppercase; letter-spacing:0.8px;">Aletheia Verdict Card</div>
++              <div style="font-size:${isSmall ? '0.82rem' : '0.98rem'}; font-weight:700; color:#f8fafc; margin-top:2px; line-height:1.3;">${escapeHtml(story.subject || 'Audit Summary')}</div>
++            </div>
++            <div style="background:${badgeBg}; color:${badgeColor}; border:1px solid ${badgeBorder}; border-radius:6px; padding:3px 8px; font-size:0.75rem; font-weight:700; white-space:nowrap; margin-left:8px;">
++              ${isPass ? 'PASS' : 'FAIL'}
++            </div>
++          </div>
++
++          <div style="display:flex; gap:6px; font-size:0.68rem; margin-bottom:12px; flex-wrap:wrap;">
++            <span style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:4px; padding:2px 6px;">Stated: <strong>(${cu}, ${cpsi})</strong></span>
++            <span style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:4px; padding:2px 6px;">Actual: <strong style="color:${badgeColor}">(${ru}, ${rpsi})</strong></span>
++            ${story.real_rnet ? `<span style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:4px; padding:2px 6px;">R_net: <strong>${Number(story.real_rnet).toFixed(1)}</strong></span>` : ''}
++          </div>
++
++          <div style="display:flex; flex-direction:column; gap:8px;">
++            ${claim ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #94a3b8; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#94a3b8;">THE CLAIM</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(claim)}</div>
++              </div>` : ''}
++
++            ${reality ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #38bdf8; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#38bdf8;">THE REALITY</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(reality)}</div>
++              </div>` : ''}
++
++            ${verdict ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #fbbf24; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#fbbf24;">THE VERDICT</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(verdict)}</div>
++              </div>` : ''}
++
++            ${(!isSmall && context) ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #a855f7; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#a855f7;">SUB-AUDITS / CONTEXT</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(context)}</div>
++              </div>` : ''}
++
++            ${(!isSmall && poison) ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid ${poison.toLowerCase().includes('bright side') ? '#10b981' : '#ef4444'}; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:${poison.toLowerCase().includes('bright side') ? '#10b981' : '#ef4444'};">${poison.toLowerCase().includes('bright side') ? 'THE BRIGHT SIDE' : 'THE POISON'}</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(poison.replace(/^(The\s+)?(Poison|Bright Side):\s*/i, ''))}</div>
++              </div>` : ''}
++          </div>
++        </div>
++      `;
++    }
++
++    function renderAnalysisCardHTML(story, isSmall) {
++      if (!story) return '';
++      const posts = story.posts || [];
++      const findPost = (kw) => posts.find(p => p.toLowerCase().includes(kw.toLowerCase())) || '';
++
++      const planeError = findPost('Breakdown') || findPost('Plane Error');
++      const socialPhysics = findPost('Social Physics');
++      const trajectory = findPost('Trajectory:');
++      const unavoidables = findPost('Unavoidable');
++      const alethekanon = findPost('Alethekanon:');
++      const awwthekanon = findPost('Awwthekanon:');
++      const brothekanon = findPost('Brothekanon:');
++      const spirithekanon = findPost('Spirithekanon:');
++
++      return `
++        <div class="programmatic-card analysis-card" style="background:#0c1017; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:${isSmall ? '10px' : '16px'}; color:#e2e8f0; font-family:var(--font-outfit, sans-serif);">
++          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:8px;">
++            <div>
++              <div style="font-size:0.65rem; font-weight:700; color:#a855f7; text-transform:uppercase; letter-spacing:0.8px;">Aletheia Analysis Card</div>
++              <div style="font-size:${isSmall ? '0.82rem' : '0.98rem'}; font-weight:700; color:#f8fafc; margin-top:2px; line-height:1.3;">Social Physics &amp; Gnostic Actualism</div>
++            </div>
++            ${story.real_integrity ? `
++              <div style="background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.3); border-radius:6px; padding:3px 8px; font-size:0.75rem; font-weight:700; white-space:nowrap; margin-left:8px;">
++                ${escapeHtml(story.real_integrity)}
++              </div>` : ''}
++          </div>
++
++          <div style="display:flex; flex-direction:column; gap:8px;">
++            ${socialPhysics ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #fb923c; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#fb923c;">SOCIAL PHYSICS (SSM)</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(socialPhysics.replace(/^Social Physics Analysis:\s*/i, ''))}</div>
++              </div>` : ''}
++
++            ${(!isSmall && planeError) ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #06b6d4; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#06b6d4;">BREAKDOWN &amp; PLANE ERROR</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(planeError.replace(/^(The\s+)?Breakdown & Plane Error:\s*/i, ''))}</div>
++              </div>` : ''}
++
++            ${(!isSmall && trajectory) ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #f43f5e; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#f43f5e;">TRAJECTORY &amp; DESTINATION</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(trajectory.replace(/^(The\s+)?Trajectory:\s*/i, ''))}</div>
++              </div>` : ''}
++
++            ${(!isSmall && unavoidables) ? `
++              <div style="background:rgba(255,255,255,0.02); border-left:3px solid #10b981; padding:6px 10px; border-radius:0 6px 6px 0;">
++                <div style="font-size:0.65rem; font-weight:700; color:#10b981;">UNAVOIDABLE TRUTH &amp; LIE</div>
++                <div style="font-size:0.78rem; color:#cbd5e1; line-height:1.4; margin-top:2px;">${escapeHtml(unavoidables)}</div>
++              </div>` : ''}
++
++            ${(!isSmall && (alethekanon || awwthekanon || brothekanon || spirithekanon)) ? `
++              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:4px;">
++                ${alethekanon ? `<div style="background:rgba(56,189,248,0.06); border:1px solid rgba(56,189,248,0.2); border-radius:6px; padding:6px 8px; font-size:0.73rem; color:#e0f2fe;"><strong>🌐 Alethekanon:</strong> ${escapeHtml(alethekanon.replace(/^Alethekanon:\s*/i, ''))}</div>` : ''}
++                ${awwthekanon ? `<div style="background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.2); border-radius:6px; padding:6px 8px; font-size:0.73rem; color:#d1fae5;"><strong>🕊️ Awwthekanon:</strong> ${escapeHtml(awwthekanon.replace(/^Awwthekanon:\s*/i, ''))}</div>` : ''}
++                ${brothekanon ? `<div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.2); border-radius:6px; padding:6px 8px; font-size:0.73rem; color:#fef3c7;"><strong>☕ Brothekanon:</strong> ${escapeHtml(brothekanon.replace(/^Brothekanon:\s*/i, ''))}</div>` : ''}
++                ${spirithekanon ? `<div style="background:rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.2); border-radius:6px; padding:6px 8px; font-size:0.73rem; color:#ede9fe;"><strong>📜 Spirithekanon:</strong> ${escapeHtml(spirithekanon.replace(/^Spirithekanon:\s*/i, ''))}</div>` : ''}
++              </div>` : ''}
++          </div>
++        </div>
++      `;
++    }
++
++    function renderFiveWordCardHTML(story, isSmall) {
++      if (!story) return '';
++      const posts = story.posts || [];
++      const lines = posts.slice(0, 5).map(p => escapeHtml(p.trim())).filter(Boolean);
++      return `
++        <div class="programmatic-card five-word-card" style="background:#090d14; border:1px solid rgba(245,158,11,0.3); border-radius:10px; padding:${isSmall ? '10px' : '16px'}; color:#fef3c7; font-family:monospace;">
++          <div style="font-size:0.7rem; font-weight:700; color:#f59e0b; text-transform:uppercase; margin-bottom:8px; border-bottom:1px solid rgba(245,158,11,0.2); padding-bottom:4px;">
++            TERMINAL · 5-WORD AUDIT
++          </div>
++          <div style="font-size:0.8rem; line-height:1.5; white-space:pre-wrap;">${lines.join('\n\n')}</div>
++        </div>
++      `;
++    }
++
++    // Lightbox handlers supporting programmatic SVG and HTML cards
++    function openLightbox(target, title) {
+       const lightbox = document.getElementById('lightbox');
+       const lightboxImg = document.getElementById('lightboxImg');
+-      lightboxImg.src = imgSrc;
++      const lightboxContent = document.getElementById('lightboxContent');
++      const lightboxTitle = document.getElementById('lightboxTitle');
++      if (lightboxTitle) lightboxTitle.innerText = title || (activeStory ? activeStory.subject : 'Aletheia Vector Inspection');
++
++      if (typeof target === 'string' && (target.startsWith('http') || target.endsWith('.png') || target.endsWith('.jpg') || target.startsWith('data:image'))) {
++        lightboxContent.style.display = 'none';
++        lightboxContent.innerHTML = '';
++        lightboxImg.style.display = 'block';
++        lightboxImg.src = target;
++      } else {
++        lightboxImg.style.display = 'none';
++        lightboxImg.src = '';
++        lightboxContent.style.display = 'flex';
++        if (typeof target === 'string') {
++          lightboxContent.innerHTML = target;
++        } else if (target instanceof HTMLElement) {
++          lightboxContent.innerHTML = '';
++          lightboxContent.appendChild(target);
++        }
++      }
+       lightbox.classList.add('active');
+     }
+ 
+-    function closeLightbox() {
++    function openLightboxForStory(storyId, assetType) {
++      const story = STORIES_REGISTRY.find(s => s.id === storyId) || activeStory;
++      if (!story) return;
++
++      if (assetType === 'graph') {
++        const svgHtml = renderTrajectoryGraphSVG(story, false);
++        openLightbox(svgHtml, `${story.subject || 'Story'} · Trajectory Graph`);
++      } else if (assetType === 'verdict') {
++        const cardHtml = renderVerdictCardHTML(story, false);
++        openLightbox(cardHtml, `${story.subject || 'Story'} · Verdict Info Card`);
++      } else if (assetType === 'analysis') {
++        const cardHtml = renderAnalysisCardHTML(story, false);
++        openLightbox(cardHtml, `${story.subject || 'Story'} · Analysis Info Card`);
++      } else if (assetType === 'five_word') {
++        const cardHtml = renderFiveWordCardHTML(story, false);
++        openLightbox(cardHtml, `${story.subject || 'Story'} · 5-Word Summary Card`);
++      }
++    }
++
++    function closeLightbox(evt) {
++      if (evt && evt.target && evt.target.closest('#lightboxWrapper') && !evt.target.matches('button')) {
++        return;
++      }
+       document.getElementById('lightbox').classList.remove('active');
+     }
+ 
++    function downloadLightboxGraphic() {
++      const content = document.getElementById('lightboxContent');
++      const img = document.getElementById('lightboxImg');
++      const slug = activeStory ? (activeStory.id || 'aletheia_graphic') : 'aletheia_graphic';
++
++      if (img && img.style.display !== 'none' && img.src) {
++        const a = document.createElement('a');
++        a.href = img.src;
++        a.download = `${slug}_graphic.png`;
++        a.click();
++        return;
++      }
++
++      const svgEl = content ? content.querySelector('svg') : null;
++      if (svgEl) {
++        const svgData = new XMLSerializer().serializeToString(svgEl);
++        const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
++        const URLObj = window.URL || window.webkitURL || window;
++        const blobURL = URLObj.createObjectURL(svgBlob);
++        
++        const canvas = document.createElement('canvas');
++        canvas.width = 800;
++        canvas.height = 800;
++        const ctx = canvas.getContext('2d');
++        const image = new Image();
++        image.onload = function() {
++          ctx.drawImage(image, 0, 0, 800, 800);
++          URLObj.revokeObjectURL(blobURL);
++          const pngURL = canvas.toDataURL('image/png');
++          const a = document.createElement('a');
++          a.download = `${slug}_graph.png`;
++          a.href = pngURL;
++          a.click();
++        };
++        image.src = blobURL;
++        return;
++      }
++
++      // Fallback: Copy content text
++      alert("Asset copied to clipboard or magnified in view.");
++    }
++
+     // File Upload & Drag-and-Drop Dynamic Loader
+     function handleFileUpload(evt) {
+       const file = evt.target.files[0];
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

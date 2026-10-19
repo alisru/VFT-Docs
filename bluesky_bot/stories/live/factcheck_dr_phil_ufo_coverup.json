@@ -142,6 +142,26 @@
     "tags": [
       "Aletheia",
       "UFO"
+    ],
+    "actor_roles": [
+      {
+        "name": "Dr. Phil McGraw",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": 0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Pentagon",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Department of Defense",
+        "role": "instigator"
+      }
     ]
   }
 ]

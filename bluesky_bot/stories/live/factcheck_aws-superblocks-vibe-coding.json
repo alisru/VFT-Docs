@@ -83,6 +83,24 @@
       "AWS",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Amazon Web Services",
+        "role": "instigator"
+      },
+      {
+        "name": "Superblocks",
+        "role": "instigator"
+      },
+      {
+        "name": "Satya Nadella",
+        "role": "instigator"
+      },
+      {
+        "name": "Microsoft",
+        "role": "instigator"
+      }
+    ]
   }
 ]

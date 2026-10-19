@@ -75,6 +75,28 @@
       "Aletheia",
       "NYC"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "New York City",
+        "role": "instigator"
+      },
+      {
+        "name": "Transport Workers Union Local 100",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Zohran Mamdani",
+        "role": "instigator"
+      },
+      {
+        "name": "Shahana Hanif",
+        "role": "instigator"
+      },
+      {
+        "name": "Harvey Epstein",
+        "role": "instigator"
+      }
+    ]
   }
 ]

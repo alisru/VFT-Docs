@@ -269,6 +269,26 @@
       "Aletheia",
       "NYPD",
       "911"
+    ],
+    "actor_roles": [
+      {
+        "name": "Joseph Vigiano Jr.",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "NYPD",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "FDNY",
+        "role": "instigator"
+      }
     ]
   }
 ]

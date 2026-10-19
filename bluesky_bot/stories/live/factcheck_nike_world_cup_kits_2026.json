@@ -70,6 +70,24 @@
     "event": "",
     "policies": [
       "Trade Tariffs"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nike",
+        "role": "instigator"
+      },
+      {
+        "name": "Alliance for American Manufacturing",
+        "role": "instigator"
+      },
+      {
+        "name": "United Steelworkers",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
     ]
   }
 ]

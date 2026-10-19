@@ -252,6 +252,37 @@
       "Aletheia",
       "Chicago"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Marimar Martínez",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Chicago Police Department",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "ICE",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Border Patrol",
+        "role": "instigator"
+      },
+      {
+        "name": "Eileen O'Neill Burke",
+        "role": "instigator"
+      }
+    ]
   }
 ]

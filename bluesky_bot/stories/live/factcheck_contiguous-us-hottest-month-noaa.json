@@ -252,6 +252,23 @@
     ],
     "policies": [
       "Climate Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "NOAA",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Associated Press",
+        "role": "author"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

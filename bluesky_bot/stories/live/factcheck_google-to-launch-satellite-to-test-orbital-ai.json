@@ -134,6 +134,23 @@
     "tags": [
       "Aletheia",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator",
+        "sub_u": 0.85,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "SpaceX",
+        "role": "instigator"
+      },
+      {
+        "name": "Travis Beals",
+        "role": "instigator"
+      }
     ]
   }
 ]

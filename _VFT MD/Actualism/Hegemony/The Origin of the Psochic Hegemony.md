@@ -65,33 +65,17 @@ This dynamic highlights the relationship between opposing quadrants:
 
 The coordinate space of the Hegemony describes a set of geometric trajectories that map the paths of human history, theology, and philosophy.
 
-```
-       (+1, +1) Greater Good
-              ▲
-              │   * (2,2) Bliss Zone
-          ╭───┼───╮
-          │ ╭─┼─╮ │
-          │ │ ┼ │ │
-  ◄───────┼─┼─┼─┼─┼───────►
-          │ │ ┼ │ │
-          │ ╰─┼─╯ │
-          ╰───┼───╯
-              │
-              ▼
-       (-1, -1) Greater Evil
-```
-
-### The Inverted Mirror of the Extremes and the Tao's Dots
-*   The **Top-Left Corner ($+1, +1$)** (will to everyone) represents the **Greater Good / The Truth**.
-*   The **Bottom-Right Corner ($-1, -1$)** (will to self, suppressive) represents the **Greater Evil / The True Lie**.
-*   These are unfulfilled, extreme states that look visually and structurally similar to one another on the path map. They form the polar boundaries of the human experience.
-*   **The Tao's Dots Overlay:** The S-curve of the Tao is anchored by overlaying the opposite-colored "Yin-Yang dots" onto the **Greater Good** and **Greater Evil** spots (specifically, the red dot representing the Greater Evil is inside the green Greater Good quadrant, and the green dot representing the Greater Good is inside the red Greater Evil quadrant). These represent the internal presence of the opposite intent within the polar states.
-*   **The Overlaid Cross:** The **Cross** is overlaid on top of this structure, centered on these spots. It is formed by realizing the potentiality of the paths connecting the quadrants. In this geometry, every path is a dead end—leading to cyclical trap loops—**except the way leading towards $(2,2)$ (the Bliss/Productive Zone)**.
-*   **The Swastika & The Fractal Form:** The **Swastika** and its opposite naturally form the frame of the political compass. When mapped at higher resolutions, the **Fractal Form of 4 Hegemonies** shows how each quadrant contains a miniature version of the entire compass, revealing that the center is inverted (the micro-dynamics of the origin mirror the macro-dynamics of the universe).
+### The Unfulfilled Poles, the Tao, and the Cross
+*   The **Top-Left ($+1, +1$)** (more will to everyone) sits as the most good (**Greater Good**), while the **Bottom-Right ($-1, -1$)** sits as the most bad (**Greater Evil**).
+*   Within the inner hegemony, these two states are unfulfilled and look vaguely similar to one another—where the perceived Greater Good can lead into the Greater Evil and the inverse leads to the perceived reduction of self, trapping orthodox thinking in a cycle of conflict.
+*   **Scribing the Tao (`O`):** This relationship scribes the **Tao** across the inner hegemony, with the Tao's two dots overlaid directly onto the **Greater Good** ($+1, +1$) and **Greater Evil** ($-1, -1$) spots.
+*   **The Overlaid Cross (`X`):** From those spots, the **Cross** is overlaid by realizing the potentiality of the diagonal paths passing through the four quadrant anchors. Each of these paths is a dead end ("Paths to Nowhere" or mere compromise) **except the way towards $(2, 2)$ (the Greatest Good / The Way)**, which breaks out of the inner box.
+*   **The Swastika & The Fractal Form:** The **Swastika** and its opposite naturally form the outer **frame** of the political compass. When mapped as a **Fractal Form of 4 Hegemonies** (one sub-hegemony centered on each of the four quadrant anchors), the inner corners meet at the origin to reveal the **inverted center**—where the red (evil) seed sits inside the green quadrant and the green (good) seed sits inside the red quadrant.
+*   **The Thermodynamic Engine of Idea Evolution:** This process of identifying the "wrong" out of the "right" creates a thermodynamic engine—a lifecycle and evolution of ideas where concepts exist as the continuous process of identifying the evil within the good, and then the good within that evil (identifying problems and developing solutions). In this cycle, the identified problem becomes 100% visible at the $(-2, 2)$ point, which makes even the tiniest $(2, 2)$ solution or idea 100% in relative comparison.
 
 ---
 
-## 3. Somatic Attunement & the Proof of the Senses
+## 4. Somatic Attunement & the Proof of the Senses
 
 The Hegemony is validated not merely through intellectual assent, but through the direct somatic senses of the body. For the initial proof, the less you know, the better:
 
@@ -105,9 +89,7 @@ Most people take this internal sense of right and wrong as a given, failing to u
 
 ---
 
----
-
-## 4. The Double-Graph: Inner vs. Outer Hegemony
+## 5. The Double-Graph: Inner vs. Outer Hegemony
 
 The Psochic Hegemony functions as two graphs laid over one another, distinguishing between the boundary of what is known and what is believed.
 

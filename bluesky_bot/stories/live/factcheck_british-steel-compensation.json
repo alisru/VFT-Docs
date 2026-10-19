@@ -99,6 +99,24 @@
       "Aletheia",
       "Business"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Jingye Group",
+        "role": "instigator"
+      },
+      {
+        "name": "British Steel",
+        "role": "instigator"
+      },
+      {
+        "name": "UK Government",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

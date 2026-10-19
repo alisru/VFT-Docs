@@ -74,6 +74,24 @@
       "Aletheia",
       "Environment"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tulane University",
+        "role": "instigator"
+      },
+      {
+        "name": "French Polynesia",
+        "role": "instigator"
+      },
+      {
+        "name": "United Nations",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

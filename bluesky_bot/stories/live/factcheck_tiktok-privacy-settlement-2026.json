@@ -264,6 +264,35 @@
     "tags": [
       "Aletheia",
       "TechPrivacy"
+    ],
+    "actor_roles": [
+      {
+        "name": "TikTok",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "ByteDance",
+        "role": "instigator"
+      },
+      {
+        "name": "U.S. Department of Justice",
+        "role": "instigator"
+      },
+      {
+        "name": "Brett Shumate",
+        "role": "instigator"
+      },
+      {
+        "name": "Stanley Woodward Jr.",
+        "role": "instigator"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      }
     ]
   }
 ]

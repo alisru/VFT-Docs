@@ -1,0 +1,170 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan and calculations for Hochul/Freedom Scholarships candidate. Stated claim: Governor Kathy Hochul opts New York into federal education freedom tax credit scholarship program, benefiting 2.7M students without cutting public funding. Claim coords: (0.5, 0.0) — Good Preference. Actual reality: Program utilizes private tax credits to fund private/parochial school tuition and supplemental services, driving partisan divisions with teachers unions while opening up funding streams for non-public options. Actual coords: (-0.2, -0.5) — Conditionally Sound / Lesser Evil friction. R_net calculation yields conditional/distorted state due to union friction and policy pivot.",
+    "id": "hochul-freedom-scholarships-ny",
+    "subject": "Hochul officially opts NY into Trump admin's 'Freedom' scholarships for students",
+    "link": "https://nypost.com/2026/10/09/us-news/hochul-officially-opts-ny-into-trump-admins-freedom-scholarships-for-students/",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.0,
+    "real_u": -0.2,
+    "real_psi": -0.5,
+    "mode": "root",
+    "posts": [
+      "New York Governor Kathy Hochul opts the state into a federal scholarship tax credit program, bypassing fierce teachers union opposition.\nEvidence: Federal tax credit, private tuition support, union pushback\n#Aletheia #Education #USPol",
+      "Governor Hochul claims New York's participation in the federal tax credit program will bring millions in educational resources to public and private school families without budget cuts.\nStated Judgement: (+0.5, 0.0) — Good Preference",
+      "While funding relies on private donations for tax credits, the policy sparks fierce political backlash from teachers unions and Democratic leaders warning of private school subsidization.\nResulting Judgement: (-0.2, -0.5) — Lesser Evil",
+      "Verdict: COND — The Path of Redemption.\nBalancing fiscal pragmatism with intense political fallout from labor allies.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "- Governor Kathy Hochul: COND (0.3, -0.2) — Balances federal funds against union wrath.\n- Teachers Unions: FAIL (-0.7, -0.8) — Defends public monopoly against choice.",
+      "Governor Kathy Hochul announced New York will join the federal scholarship tax credit program, becoming the most prominent blue-state governor to opt in.",
+      "The Bright Side:\nFamilies gain supplemental funding and tuition flexibility without reducing direct state aid to public school budgets.",
+      "The Breakdown & Plane Error:\nConfusing administrative mechanism (tax credits vs vouchers) with institutional intent (school choice vs privatization).",
+      "Social Physics Analysis:\nHochul navigates a high-strain political friction between labor unions demanding public sector protection and families seeking educational options. Rather than a pure selfish extraction, it reflects pragmatic maneuvering under federal policy incentives.",
+      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and political fallout, it plots a trajectory toward conditional equilibrium. Mathematical resolution of conflicting institutional pressures.",
+      "The Unavoidable Truth: Federal tax credits provide tangible financial relief for families across public and private school settings.\n\nThe Unavoidable Lie: Participating in the program constitutes a direct defunding of state public education budgets.",
+      "Alethekanon:\nPragmatic policy shifts often trigger fierce ideological warfare between institutional gatekeepers and expanding options.",
+      "Awwthekanon:\nEvery family just wants their children to thrive and learn in an environment where they feel supported and safe.",
+      "Brothekanon:\nClassic political tightrope walk by Hochul—taking the federal cash while dodging union incoming fire.",
+      "Spirithekanon:\n\"Let us not grow weary in doing good, for in due season we shall reap if we do not lose heart.\" Galatians 6:9 PASS\nSteady perseverance through political storms yields lasting fruit for communities."
+    ],
+    "actors": [
+      "Kathy Hochul",
+      "United States Department of the Treasury",
+      "New York State",
+      "United Federation of Teachers"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kathy Hochul",
+        "role": "instigator"
+      },
+      {
+        "name": "United States Department of the Treasury",
+        "role": "instigator"
+      },
+      {
+        "name": "New York State",
+        "role": "instigator"
+      },
+      {
+        "name": "United Federation of Teachers",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.8,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Conditionally Sound",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "Governor Kathy Hochul",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": 0.3,
+        "real_psi": -0.2,
+        "verdict": "COND",
+        "reason": "Balances federal funds against union wrath."
+      },
+      {
+        "aspect": "Teachers Unions",
+        "claim_u": -0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.7,
+        "real_psi": -0.8,
+        "verdict": "FAIL",
+        "reason": "Defends public monopoly against choice."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nHochul officially opts NY into Trump admin’s ‘Freedom’  scholarships for students\n\nHochul faced fierce opposition from the teachers union.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search results.\n\n(function() {\n\tvar overlay = document.getElementById(\"nyp-player-lcp-overlay\");\n\tif (!overlay) {\n\t\treturn;\n\t}\n\tfunction hideOverlay() {\n\t\toverlay.remove();\n\t}\n\tfunction afterDCL() {\n\t\trequestAnimationFrame(hideOverlay);\n\t}\n\tif (document.readyState === \"loading\") {\n\t\tdocument.addEventListener(\"DOMContentLoaded\", afterDCL, { once: true });\n\t} else {\n\t\tafterDCL();\n\t}\n})();\n\nGov. Kathy Hochul is officially opting New York into a federal “education freedom” tax credit scholarship program championed by President Trump that could benefit more than 2.7 million New York public, parochial and private school students — despite opposition from the powerful teachers’ union.\n\nHochul announced Friday her backing of the program for the next school year after reviewing regulations issued last week by the Treasury Department and the IRS.\n\nThe Education Freedom Tax Credit approved by Congress and Trump last year provides a 100% federal tax credit to individuals for donations of up to $1,700 annually to approved scholarship-granting organizations.\n\nThe nonprofit groups would then offer scholarships, which families from all private schools could use to defray tuition costs.\n\nPublic school students are also eligible for scholarships to cover tutoring, after-school programs or transportation costs.\n\nUnder the law, the governor of each state has to decide whether to opt in or out of what the Trump administration calls the “school choice” program. Thirty mostly Republican-led states have already joined the program and Hochul becomes the most prominent Democratic governor from a large blue state to opt in.\n\n“I’ve been clear from the start that New York would participate in the federal scholarship tax credit program if, and only if, all schools and students, including those in our public schools, could benefit,” Hochul told The Post.\n\n“After a careful review of the federal regulations, we believe this program has the potential to bring millions of additional dollars to New York students and families without taking a single dollar from our state or local budgets.”\n\nHochul added, “I’m not going to leave money on the table when it could help our kids. I look forward to working with education leaders across the state to make sure these resources reach students in every community. My commitment to public education has not changed, and it never will.”\n\nHaving New York opt into the program has been the top policy priority of coalitions representing parochial schools — the Teach Coalition for Jewish schools or yeshivas and the New York Catholic Conference on behalf of their religious schools.\n\nBut leaders of the teachers’ unions and other public school advocates — including the NAACP and the NYCLU — claimed the program is a back-door privatization scheme aimed at siphoning taxpayer dollars from public schools.\n\nThe state’s legislative leaders — Senate Majority Leader Andrea Stewart Cousins (D-Yonkers) and Assembly Speaker Carl Heastie (D-Bronx) — this week joined the unions in opposing the Empire State’s participation in the program.\n\n“I am apprehensive about this federal proposal and have serious reservations about the potential impact it could have on public schools across New York State,” Stewart-Cousins said, while Heastie said the state should invest in public schools.\n\n“Public dollars should support public schools that serve all children and are accountable to the taxpayers who fund them,” he said.\n\nUnited Federation of Teachers President Mike Mulgrew blasted the move.\n\n“This isn’t about education,” Mulgrew said. “It is about the federal government worming its way into classrooms across the state.”\n\nBut Democrat Hochul, who is seeking re-election to a second term and is backed by the teachers unions, said she disagrees with her labor allies regarding the merits of the scholarship program.\n\nThe tax credit is funded by private donations and is not a voucher program. Taxpayer-funded vouchers can typically only be used toward tuition at non-public schools, whereas the federal tax-credit scholarship can be used by eligible students in public schools, her office said.\n\nDonors to a scholarship-granting organization will receive a federal tax credit equal to their contribution, an incentive to give. The only cost is measured in foregone lost federal tax revenue via the credit, the governor’s office said.\n\nStudents whose family income is within 300% of the area median income are eligible for scholarships through the program. Children from low-income families will be eligible for funds to pay for educational support they would not otherwise have access to, Hochul’s office said.\n\nMorning Report delivers the latest news, videos, photos and more.\n\nPlease provide a valid email.\n\nBy clicking above you agree to the Terms of Use and Privacy Policy.\n\nNever miss a story.\n\nHochul insisted she’s helping, not hurting, public school students by opting into the federal scholarship program.\n\n“Every parent wants their child to have a great education and the best possible chance to succeed. That’s what guides my decisions as Governor.\n\n“New York’s public schools are the backbone of communities across this state. That’s why I’ve made historic investments in public education, increasing school funding by more than $10 billion and fully funding Foundation Aid for the first time.”",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://nypost.com/2026/10/09/us-news/hochul-officially-opts-ny-into-trump-admins-freedom-scholarships-for-students/",
+        "snippet": "Stated Claim / Post Context:\nHochul officially opts NY into Trump admin’s ‘Freedom’  scholarships for students\n\nHochul faced fierce opposition from the teachers union.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search results.\n\n(function() {\n\tvar "
+      }
+    ],
+    "category": "all",
+    "topic": "Education",
+    "event": "",
+    "policies": [
+      "Industrial Relations"
+    ],
+    "graph_img": "graph_png/hochul-freedom-scholarships-ny_graph.png",
+    "rkeys": [
+      "3mxjjm4ipar24",
+      "3mxjjm53nup25",
+      "3mxjjm7blhj2j",
+      "3mxjjmbg5ba2x",
+      "3mxjjmdkwm22o",
+      "3mxjjmfpomy2x",
+      "3mxjjmhuhwf2x",
+      "3mxjjmjzewn23",
+      "3mxjjmm6k3f2f",
+      "3mxjjmof4p42d",
+      "3mxjjmqjo7s2p",
+      "3mxjjmsoj2a2x",
+      "3mxjjmutie22i",
+      "3mxjjmwyha52x",
+      "3mxjjmz57tj2j"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjm4ipar24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjm53nup25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjm7blhj2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmbg5ba2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmdkwm22o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmfpomy2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmhuhwf2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmjzewn23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmm6k3f2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmof4p42d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmqjo7s2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmsoj2a2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmutie22i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmwyha52x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxjjmz57tj2j"
+    ],
+    "tags": [
+      "Aletheia",
+      "Education",
+      "USPol"
+    ]
+  }
+]

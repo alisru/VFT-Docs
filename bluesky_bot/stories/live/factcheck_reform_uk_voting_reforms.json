@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "UKPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nigel Farage",
+        "role": "instigator",
+        "sub_u": -0.94,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Danny Kruger",
+        "role": "instigator"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator",
+        "sub_u": -0.94,
+        "sub_psi": -0.87,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Robert Jenrick",
+        "role": "instigator"
+      }
     ]
   }
 ]

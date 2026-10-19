@@ -73,6 +73,20 @@
       "MissingPerson",
       "Australia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nate Simpson",
+        "role": "instigator"
+      },
+      {
+        "name": "ACT Policing",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

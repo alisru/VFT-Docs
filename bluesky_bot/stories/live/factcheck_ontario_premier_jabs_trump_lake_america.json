@@ -274,6 +274,31 @@
       "Aletheia",
       "USCanada",
       "TradeWar"
+    ],
+    "actor_roles": [
+      {
+        "name": "Doug Ford",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.3,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Ontario",
+        "role": "instigator"
+      },
+      {
+        "name": "Canada",
+        "role": "context"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

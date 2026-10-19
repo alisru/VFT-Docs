@@ -99,6 +99,20 @@
       "Japan",
       "Economy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Bank of Japan",
+        "role": "instigator"
+      },
+      {
+        "name": "Japan",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

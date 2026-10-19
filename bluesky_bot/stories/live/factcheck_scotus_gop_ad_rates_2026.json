@@ -272,6 +272,31 @@
     "tags": [
       "SCOTUS",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Supreme Court of the United States",
+        "role": "regulator"
+      },
+      {
+        "name": "The Federalist",
+        "role": "instigator",
+        "sub_u": -0.69,
+        "sub_psi": 0.53,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Republican National Committee",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic National Committee",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Communications Commission",
+        "role": "regulator"
+      }
     ]
   }
 ]

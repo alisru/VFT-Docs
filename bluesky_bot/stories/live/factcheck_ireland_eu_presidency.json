@@ -76,6 +76,32 @@
       "EU",
       "Ireland"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Ireland",
+        "role": "instigator"
+      },
+      {
+        "name": "European Union",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "Germany",
+        "role": "instigator"
+      },
+      {
+        "name": "France",
+        "role": "context"
+      }
+    ]
   }
 ]

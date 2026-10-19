@@ -145,6 +145,27 @@
       "Aletheia",
       "NYPD",
       "PublicSafety"
+    ],
+    "actor_roles": [
+      {
+        "name": "Pamela Cisneros",
+        "role": "instigator"
+      },
+      {
+        "name": "NYPD",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Ryan Brito",
+        "role": "instigator"
+      },
+      {
+        "name": "Francis Gagliano",
+        "role": "instigator"
+      }
     ]
   }
 ]

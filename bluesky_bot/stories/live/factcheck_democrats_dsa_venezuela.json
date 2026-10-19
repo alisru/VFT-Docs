@@ -144,6 +144,23 @@
       "USPol",
       "Socialism",
       "Economy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Democratic Socialists of America",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Washington Examiner",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": 0.81,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

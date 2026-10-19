@@ -252,6 +252,31 @@
     "tags": [
       "Aletheia",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kog",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Gaël Delalleau",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "AMD",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -145,6 +145,23 @@
     "tags": [
       "Education",
       "Australia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Australian Education Union",
+        "role": "instigator"
+      },
+      {
+        "name": "ACT Government",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "ACT Education Directorate",
+        "role": "instigator"
+      }
     ]
   }
 ]

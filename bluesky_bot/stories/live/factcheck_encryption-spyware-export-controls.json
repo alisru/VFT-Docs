@@ -74,6 +74,24 @@
       "AI",
       "Cybersecurity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "United States White House",
+        "role": "instigator"
+      },
+      {
+        "name": "Commerce Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Phil Zimmermann",
+        "role": "instigator"
+      }
+    ]
   }
 ]

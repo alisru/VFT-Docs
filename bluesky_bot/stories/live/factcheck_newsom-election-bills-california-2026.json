@@ -142,6 +142,23 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gavin Newsom",
+        "role": "author"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "California",
+        "role": "context",
+        "sub_u": 0.7,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

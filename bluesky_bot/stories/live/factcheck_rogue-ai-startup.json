@@ -252,6 +252,31 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "Irregular",
+        "role": "instigator",
+        "sub_u": -0.1,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Sequoia Capital",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -99,6 +99,28 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "John Jumper",
+        "role": "instigator"
+      },
+      {
+        "name": "Demis Hassabis",
+        "role": "instigator"
+      },
+      {
+        "name": "Google DeepMind",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Noam Shazeer",
+        "role": "instigator"
+      }
+    ]
   }
 ]

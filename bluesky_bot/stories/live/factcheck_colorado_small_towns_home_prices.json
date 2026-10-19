@@ -244,6 +244,19 @@
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt2jma46jq2s",
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mt2jmcbbjo2k"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "LendingTree",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Colorado Homebuyers",
+        "role": "instigator"
+      }
+    ]
   }
 ]

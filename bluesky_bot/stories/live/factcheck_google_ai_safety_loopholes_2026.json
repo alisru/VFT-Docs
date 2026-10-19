@@ -143,6 +143,23 @@
       "Aletheia",
       "AI",
       "TechPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Google",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Character.AI",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -253,6 +253,35 @@
       "USPol",
       "CNN"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Karoline Leavitt",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.1,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Steven Cheung",
+        "role": "instigator"
+      },
+      {
+        "name": "Scott Jennings",
+        "role": "instigator"
+      },
+      {
+        "name": "Alina Habba",
+        "role": "instigator"
+      },
+      {
+        "name": "Lara Trump",
+        "role": "instigator"
+      }
+    ]
   }
 ]

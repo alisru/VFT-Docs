@@ -253,6 +253,35 @@
       "Aletheia",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nvidia",
+        "role": "instigator",
+        "sub_u": -0.82,
+        "sub_psi": 0.78,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Apollo Global Management",
+        "role": "instigator"
+      },
+      {
+        "name": "Blackstone",
+        "role": "instigator"
+      },
+      {
+        "name": "Goldman Sachs",
+        "role": "instigator"
+      },
+      {
+        "name": "AMD",
+        "role": "instigator"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      }
+    ]
   }
 ]

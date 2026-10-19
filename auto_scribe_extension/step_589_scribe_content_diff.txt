@@ -1,0 +1,404 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\auto_scribe_extension\scribe_content.js. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -209,7 +209,57 @@
+   }
+ 
+   /**
+-   * Send draft to background worker (or delete if text removed)
++   * Observe active editor mutations (catches programmatic clearing by website JS)
++   */
++  function observeElement(el) {
++    if (!el || !window.MutationObserver) return;
++    if (activeObserver) activeObserver.disconnect();
++
++    activeObserver = new MutationObserver(() => {
++      if (activeElement) {
++        evaluateTextChange(activeElement);
++      }
++    });
++
++    activeObserver.observe(el, {
++      childList: true,
++      subtree: true,
++      characterData: true
++    });
++  }
++
++  /**
++   * Delete draft from background storage
++   */
++  function deleteSavedDraft(id) {
++    if (!id) return;
++    try {
++      chrome.runtime.sendMessage({
++        action: 'DELETE_DRAFT',
++        id: id
++      });
++    } catch (e) {}
++  }
++
++  /**
++   * Mark draft as posted in background
++   */
++  function markDraftPosted(id) {
++    if (!id) return;
++    try {
++      chrome.runtime.sendMessage({
++        action: 'MARK_DRAFT_POSTED',
++        id: id
++      });
++      const targetEl = activeElement || lastActiveElement;
++      if (targetEl) {
++        updateIndicator('saved', targetEl);
++      }
++    } catch (e) {}
++  }
++
++  /**
++   * Save draft snapshot to storage
+    */
+   function persistDraft(el, text) {
+     if (!config.enabled) return;
+@@ -216,5 +216,6 @@
+       return;
+     }
++    if (!text || text.length < config.minChars) return;
+ 
+     const draftId = getSessionId(el);
+     lastActiveElement = el;
+@@ -221,22 +221,4 @@
+ 
+-    const prevSaved = savedDraftMap.get(el);
+-
+-    // If text was removed or emptied below threshold:
+-    if (!text || text.length < config.minChars) {
+-      // If user submitted/posted, don't delete
+-      if (submittedDrafts.has(draftId)) {
+-        return;
+-      }
+-      // If user manually cleared or deleted the text after it was previously saved:
+-      if (prevSaved && prevSaved.length >= config.minChars) {
+-        deleteSavedDraft(draftId);
+-        savedDraftMap.delete(el);
+-        lastSavedText = '';
+-        hideIndicator();
+-      }
+-      return;
+-    }
+-
+     const contextTitle = detectContext();
+     const wordCount = text.split(/\s+/).filter(Boolean).length;
+     const nowIso = new Date().toISOString();
+@@ -260,89 +260,66 @@
+         action: 'SAVE_DRAFT',
+         payload: payload
+       }, (res) => {
+-        if (chrome.runtime.lastError) {
+-          // Extension reloaded or service worker asleep
+-          return;
+-        }
++        if (chrome.runtime.lastError) return;
+         updateIndicator('saved', el);
+       });
+-    } catch (err) {
+-      // Ignore extension context invalidated
+-    }
+-  }
+-
+-  /**
+-   * Debounced input handler
+-   */
+-  function handleInput(e) {
+-    const el = e.target;
+-    if (!el || isSensitiveElement(el)) return;
+-
+-    activeElement = el;
+-    lastActiveElement = el;
+-    const text = extractText(el);
++    } catch (err) {}
++  }
++
++  /**
++   * Core evaluator: handles text changes, deletions, and post-submissions
++   */
++  function evaluateTextChange(target) {
++    const root = getEditableRoot(target);
++    if (!root || isSensitiveElement(root)) return;
++
++    activeElement = root;
++    lastActiveElement = root;
++
++    const text = extractText(root);
++    const draftId = getSessionId(root);
++    const prevSaved = savedDraftMap.get(root) || '';
+ 
+     if (text.length >= config.minChars) {
+-      updateIndicator('saving', el);
+-    } else {
+-      hideIndicator();
+-    }
+-
+-    clearTimeout(debounceTimer);
+-    debounceTimer = setTimeout(() => {
+-      persistDraft(el, text);
+-    }, config.debounceMs || 1500);
+-  }
+-
+-  /**
+-   * Flush draft immediately on blur or visibility change
+-   */
+-  function handleFlush() {
+-    clearTimeout(debounceTimer);
+-    if (activeElement) {
+-      const text = extractText(activeElement);
+-      const prevSaved = savedDraftMap.get(activeElement);
+-      if (text !== prevSaved) {
+-        persistDraft(activeElement, text);
+-      }
+-    }
+-  }
+-
+-  /**
+-   * Mark draft as posted in background
+-   */
+-  function markDraftPosted(id) {
+-    if (!id) return;
+-    submittedDrafts.add(id);
+-    setTimeout(() => submittedDrafts.delete(id), 10000);
+-    try {
+-      chrome.runtime.sendMessage({
+-        action: 'MARK_DRAFT_POSTED',
+-        id: id
+-      });
+-      const targetEl = activeElement || lastActiveElement;
+-      if (targetEl) {
+-        updateIndicator('saved', targetEl);
+-      }
+-    } catch (e) {}
+-  }
+-
+-  /**
+-   * Check if text was cleared after a submit action
+-   */
+-  function checkContentClearedAfterSubmit(el, draftId) {
+-    if (!draftId) return;
+-    [300, 800, 1500].forEach(delay => {
+-      setTimeout(() => {
+-        if (!el || !document.body.contains(el)) {
+-          // Element unmounted after submit (common in React/Facebook/Reddit)
++      updateIndicator('saving', root);
++      clearTimeout(debounceTimer);
++      debounceTimer = setTimeout(() => {
++        persistDraft(root, text);
++      }, config.debounceMs || 1500);
++    } else {
++      // Text dropped below threshold or is completely empty
++      hideIndicator();
++      clearTimeout(debounceTimer);
++
++      if (prevSaved && prevSaved.length >= config.minChars) {
++        const isRecentSubmit = (Date.now() - lastSubmitTime < 3500);
++        if (isRecentSubmit) {
++          // User posted/submitted!
+           markDraftPosted(draftId);
+-        } else {
+-          const currentText = extractText(el);
+-          if (currentText.length < 5 && lastSavedText.length >= config.minChars) {
+-            // Text was cleared out from editor, confirming submission
+-            markDraftPosted(draftId);
+-          }
++          savedDraftMap.delete(root);
++        } else {
++          // User manually cleared or erased!
++          deleteSavedDraft(draftId);
++          savedDraftMap.delete(root);
++        }
++      }
++    }
++  }
++
++  /**
++   * Schedule multi-interval post-submission verification
++   */
++  function schedulePostVerification(targetEl, did) {
++    lastSubmitTime = Date.now();
++    submittedDrafts.add(did);
++    [150, 400, 800, 1500, 2500].forEach(delay => {
++      setTimeout(() => {
++        if (!targetEl || !document.contains(targetEl)) {
++          // Element unmounted from DOM after submit
++          markDraftPosted(did);
++          savedDraftMap.delete(targetEl);
++        } else {
++          evaluateTextChange(targetEl);
+         }
+       }, delay);
+     });
+@@ -349,22 +349,29 @@
+ 
++  /**
++   * Keyboard submit handler
++   */
+   function handleKeydown(e) {
+-    // Ctrl+Enter or Cmd+Enter is the universal post shortcut
+-    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+-      const targetEl = activeElement || lastActiveElement;
+-      if (targetEl) {
+-        const did = getSessionId(targetEl);
+-        submittedDrafts.add(did);
+-        const text = extractText(targetEl);
+-        if (text.length >= config.minChars) {
+-          persistDraft(targetEl, text);
+-          checkContentClearedAfterSubmit(targetEl, did);
+-        }
+-      }
+-    }
+-  }
+-
++    const root = getEditableRoot(e.target);
++    if (!root) return;
++
++    const isCtrlEnter = e.key === 'Enter' && (e.ctrlKey || e.metaKey);
++    const isPlainEnter = e.key === 'Enter' && !e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey;
++
++    if (isCtrlEnter || (isPlainEnter && root.tagName.toLowerCase() !== 'textarea')) {
++      const did = getSessionId(root);
++      const text = extractText(root);
++      if (text.length >= config.minChars) {
++        persistDraft(root, text);
++        schedulePostVerification(root, did);
++      }
++    }
++  }
++
++  /**
++   * Click submit handler
++   */
+   function handleSubmitClick(e) {
+-    const btn = e.target.closest('button, [role="button"], input[type="submit"], [data-testid*="tweetButton"], [data-testid*="submit"]');
++    const btn = e.target.closest('button, [role="button"], input[type="submit"], a[role="button"], div[role="button"]');
+     if (!btn) return;
+ 
+     const btnText = (btn.innerText || btn.textContent || btn.value || '').trim().toLowerCase();
+@@ -371,37 +371,89 @@
++    const title = (btn.getAttribute('title') || '').trim().toLowerCase();
+     const testId = (btn.getAttribute('data-testid') || '').trim().toLowerCase();
+-
+-    const isMatch = /^(comment|post|reply|send|publish|tweet|submit|respond)$/i.test(btnText) ||
+-                    /^(comment|post|reply|send|publish|tweet|submit|respond)/i.test(ariaLabel) ||
+-                    testId.includes('tweetbutton') ||
+-                    testId.includes('submit') ||
+-                    btn.type === 'submit';
+-
+-    if (isMatch) {
+-      const targetEl = activeElement || lastActiveElement;
+-      if (targetEl) {
+-        const did = getSessionId(targetEl);
+-        submittedDrafts.add(did);
+-        checkContentClearedAfterSubmit(targetEl, did);
+-      }
+-    }
+-  }
+-
++    const className = (btn.className || '').toString().toLowerCase();
++
++    const pattern = /comment|post|reply|send|publish|tweet|submit|respond|share|arrow_upward|run/i;
++    const isSubmit = pattern.test(btnText) ||
++                     pattern.test(ariaLabel) ||
++                     pattern.test(title) ||
++                     pattern.test(testId) ||
++                     pattern.test(className) ||
++                     btn.type === 'submit' ||
++                     btn.querySelector('svg, [data-icon*="send"], [class*="send"]');
++
++    if (isSubmit) {
++      const target = activeElement || lastActiveElement;
++      if (target) {
++        const did = getSessionId(target);
++        schedulePostVerification(target, did);
++      }
++    }
++  }
++
++  /**
++   * Form submit handler
++   */
+   function handleFormSubmit(e) {
+-    const targetEl = activeElement || lastActiveElement;
+-    if (targetEl && e.target.contains(targetEl)) {
+-      const did = getSessionId(targetEl);
+-      submittedDrafts.add(did);
+-      markDraftPosted(did);
+-    }
+-  }
+-
+-  // Attach global event listeners
+-  document.addEventListener('input', handleInput, true);
+-  document.addEventListener('keyup', handleInput, true);
++    const target = activeElement || lastActiveElement;
++    if (target) {
++      const did = getSessionId(target);
++      schedulePostVerification(target, did);
++    }
++  }
++
++  /**
++   * Flush on blur or visibility change
++   */
++  function handleFlush() {
++    clearTimeout(debounceTimer);
++    if (activeElement) {
++      const text = extractText(activeElement);
++      const prevSaved = savedDraftMap.get(activeElement);
++      if (text !== prevSaved) {
++        if (text.length >= config.minChars) {
++          persistDraft(activeElement, text);
++        } else if (prevSaved && prevSaved.length >= config.minChars) {
++          evaluateTextChange(activeElement);
++        }
++      }
++    }
++  }
++
++  // Event Listeners
++  document.addEventListener('input', (e) => {
++    const root = getEditableRoot(e.target);
++    if (root && !isSensitiveElement(root)) {
++      observeElement(root);
++      evaluateTextChange(root);
++    }
++  }, true);
++
++  document.addEventListener('keyup', (e) => {
++    const root = getEditableRoot(e.target);
++    if (root && !isSensitiveElement(root)) {
++      evaluateTextChange(root);
++    }
++  }, true);
++
++  document.addEventListener('compositionend', (e) => {
++    const root = getEditableRoot(e.target);
++    if (root && !isSensitiveElement(root)) {
++      evaluateTextChange(root);
++    }
++  }, true);
++
++  document.addEventListener('focusin', (e) => {
++    const root = getEditableRoot(e.target);
++    if (root && !isSensitiveElement(root)) {
++      activeElement = root;
++      lastActiveElement = root;
++      observeElement(root);
++    }
++  }, true);
++
+   document.addEventListener('keydown', handleKeydown, true);
+   document.addEventListener('click', handleSubmitClick, true);
+   document.addEventListener('submit', handleFormSubmit, true);
+-  document.addEventListener('compositionend', handleInput, true);
+   document.addEventListener('blur', handleFlush, true);
+   window.addEventListener('beforeunload', handleFlush);
+   document.addEventListener('visibilitychange', () => {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

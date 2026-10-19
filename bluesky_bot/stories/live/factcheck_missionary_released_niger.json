@@ -251,6 +251,30 @@
     "tags": [
       "Niger",
       "HumanRights"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kevin Rideout",
+        "role": "instigator"
+      },
+      {
+        "name": "SIM International",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "U.S. State Department",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Niger",
+        "role": "instigator"
+      }
     ]
   }
 ]

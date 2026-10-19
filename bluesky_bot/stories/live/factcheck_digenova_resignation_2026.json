@@ -270,6 +270,27 @@
       "Aletheia",
       "DOJ",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Joe DiGenova",
+        "role": "instigator",
+        "sub_u": -0.95,
+        "sub_psi": -0.92,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Todd Blanche",
+        "role": "instigator"
+      },
+      {
+        "name": "Aakash Singh",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      }
     ]
   }
 ]

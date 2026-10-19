@@ -158,6 +158,27 @@
     "tags": [
       "Aletheia",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Services Australia",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -102,6 +102,32 @@
       "Trump",
       "Iran"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "Bahrain",
+        "role": "instigator"
+      },
+      {
+        "name": "Kuwait",
+        "role": "instigator"
+      },
+      {
+        "name": "NATO",
+        "role": "instigator"
+      }
+    ]
   }
 ]

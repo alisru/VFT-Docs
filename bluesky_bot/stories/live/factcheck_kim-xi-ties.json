@@ -99,6 +99,24 @@
       "Geopolitics",
       "China"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Kim Jong Un",
+        "role": "instigator"
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "instigator"
+      },
+      {
+        "name": "North Korea",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

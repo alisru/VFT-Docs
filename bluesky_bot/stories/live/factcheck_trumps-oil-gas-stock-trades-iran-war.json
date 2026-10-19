@@ -159,6 +159,30 @@
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu5kebxcic2k",
       "https://bsky.app/profile/judgement-bot.bsky.social/post/3mu5kee4dgf24"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "The White House",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": 0.3,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Joint Economic Committee",
+        "role": "instigator"
+      },
+      {
+        "name": "CBS News",
+        "role": "author",
+        "sub_u": -0.58,
+        "sub_psi": 0.65,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

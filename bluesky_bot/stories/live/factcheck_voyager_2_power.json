@@ -250,6 +250,26 @@
     "tags": [
       "NASA",
       "Space"
+    ],
+    "actor_roles": [
+      {
+        "name": "NASA",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Jet Propulsion Laboratory",
+        "role": "instigator"
+      },
+      {
+        "name": "Voyager 2",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

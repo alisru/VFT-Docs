@@ -81,6 +81,20 @@
       "Startups",
       "London"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Rowan Aldean",
+        "role": "instigator"
+      },
+      {
+        "name": "DeepMind",
+        "role": "instigator"
+      },
+      {
+        "name": "London",
+        "role": "context"
+      }
+    ]
   }
 ]

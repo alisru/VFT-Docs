@@ -146,6 +146,38 @@
       "Aletheia",
       "Venezuela",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nicolás Maduro",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.75,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Cilia Flores",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Delcy Rodríguez",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Venezuela",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

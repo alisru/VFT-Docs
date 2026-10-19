@@ -149,6 +149,26 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "James Talarico",
+        "role": "instigator"
+      },
+      {
+        "name": "The Federalist",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Fox News",
+        "role": "author",
+        "sub_u": -0.6,
+        "sub_psi": -0.7,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

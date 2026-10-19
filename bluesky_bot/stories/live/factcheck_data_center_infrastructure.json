@@ -98,6 +98,20 @@
       "DataCenters",
       "Infrastructure"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Data Centers",
+        "role": "instigator"
+      },
+      {
+        "name": "AI Industry",
+        "role": "instigator"
+      },
+      {
+        "name": "Local Communities",
+        "role": "instigator"
+      }
+    ]
   }
 ]

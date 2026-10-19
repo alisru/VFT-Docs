@@ -143,6 +143,26 @@
     "tags": [
       "Aletheia",
       "NewYork"
+    ],
+    "actor_roles": [
+      {
+        "name": "Supreme",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "New York City",
+        "role": "instigator"
+      },
+      {
+        "name": "NYC Tourism + Conventions",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

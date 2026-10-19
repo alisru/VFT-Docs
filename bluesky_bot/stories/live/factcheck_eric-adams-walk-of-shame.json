@@ -143,6 +143,26 @@
       "Aletheia",
       "NYC",
       "EricAdams"
+    ],
+    "actor_roles": [
+      {
+        "name": "Eric Adams",
+        "role": "instigator",
+        "sub_u": 0.0,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "New York Post",
+        "role": "instigator",
+        "sub_u": -0.45,
+        "sub_psi": -0.35,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "John Catsimatidis",
+        "role": "instigator"
+      }
     ]
   }
 ]

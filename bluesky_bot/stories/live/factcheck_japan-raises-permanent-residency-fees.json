@@ -144,6 +144,26 @@
       "Japan",
       "Immigration",
       "Aletheia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Sanae Takaichi",
+        "role": "instigator"
+      },
+      {
+        "name": "Japanese Government",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Foreign Residents of Japan",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

@@ -74,6 +74,24 @@
       "Aletheia",
       "NSWPolice"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "NSW Police",
+        "role": "instigator"
+      },
+      {
+        "name": "Law Enforcement Conduct Commission",
+        "role": "regulator"
+      },
+      {
+        "name": "Clover Moore",
+        "role": "instigator"
+      },
+      {
+        "name": "Alex Greenwich",
+        "role": "instigator"
+      }
+    ]
   }
 ]

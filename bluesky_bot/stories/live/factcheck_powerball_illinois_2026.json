@@ -249,6 +249,22 @@
       "Powerball",
       "Illinois"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Illinois Lottery",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Powerball Product Group",
+        "role": "instigator",
+        "sub_u": 0.1,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

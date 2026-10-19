@@ -98,6 +98,20 @@
       "Aletheia",
       "Transport"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Department for Transport",
+        "role": "instigator"
+      },
+      {
+        "name": "CoMoUK",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

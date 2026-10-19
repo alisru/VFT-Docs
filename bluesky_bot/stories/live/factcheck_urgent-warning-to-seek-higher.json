@@ -134,6 +134,19 @@
       "Aletheia",
       "Weather",
       "NewMexico"
+    ],
+    "actor_roles": [
+      {
+        "name": "National Weather Service",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "AccuWeather",
+        "role": "instigator"
+      }
     ]
   }
 ]

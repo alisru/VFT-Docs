@@ -97,6 +97,16 @@
       "ACTPolicing",
       "Vandalism"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "ACT Policing",
+        "role": "instigator"
+      },
+      {
+        "name": "Crime Stoppers",
+        "role": "instigator"
+      }
+    ]
   }
 ]

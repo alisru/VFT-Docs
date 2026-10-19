@@ -199,6 +199,31 @@
       "Aletheia",
       "AI",
       "TechPolicy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Dario Amodei",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Sam Altman",
+        "role": "instigator"
+      },
+      {
+        "name": "Elon Musk",
+        "role": "instigator"
+      },
+      {
+        "name": "Jacob Coxon",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -212,6 +212,23 @@
       "Aletheia",
       "AI",
       "Cybersecurity"
+    ],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Services Australia",
+        "role": "instigator"
+      }
     ]
   }
 ]

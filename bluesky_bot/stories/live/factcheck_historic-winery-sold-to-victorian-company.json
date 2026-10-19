@@ -142,6 +142,26 @@
     "tags": [
       "Business",
       "Wine"
+    ],
+    "actor_roles": [
+      {
+        "name": "Treasury Wine Estates",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Stonier Wines",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Seppelt Wines",
+        "role": "instigator"
+      }
     ]
   }
 ]

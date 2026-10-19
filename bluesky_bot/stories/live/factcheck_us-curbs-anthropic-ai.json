@@ -99,6 +99,28 @@
       "AI",
       "TechPolicy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "European Union",
+        "role": "instigator"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      },
+      {
+        "name": "G7",
+        "role": "instigator"
+      }
+    ]
   }
 ]

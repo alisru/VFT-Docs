@@ -82,6 +82,28 @@
       "Aletheia",
       "CyberSecurity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Tim Walz",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "FBI",
+        "role": "instigator"
+      },
+      {
+        "name": "CISA",
+        "role": "instigator"
+      }
+    ]
   }
 ]

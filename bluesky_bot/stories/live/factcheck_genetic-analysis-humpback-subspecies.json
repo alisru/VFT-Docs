@@ -135,6 +135,23 @@
       "Aletheia",
       "Science",
       "Conservation"
+    ],
+    "actor_roles": [
+      {
+        "name": "Wildlife Conservation Society",
+        "role": "instigator"
+      },
+      {
+        "name": "Rita Amaral",
+        "role": "instigator"
+      },
+      {
+        "name": "Oman",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

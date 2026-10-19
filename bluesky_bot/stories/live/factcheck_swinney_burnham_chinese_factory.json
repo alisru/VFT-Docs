@@ -254,6 +254,31 @@
     ],
     "policies": [
       "Renewable Energy"
+    ],
+    "actor_roles": [
+      {
+        "name": "John Swinney",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "instigator"
+      },
+      {
+        "name": "Ming Yang",
+        "role": "instigator"
+      },
+      {
+        "name": "Scottish Government",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
     ]
   }
 ]

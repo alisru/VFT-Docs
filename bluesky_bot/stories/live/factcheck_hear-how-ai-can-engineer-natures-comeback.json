@@ -143,6 +143,26 @@
       "Aletheia",
       "Tech",
       "AI"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ben Lamm",
+        "role": "instigator"
+      },
+      {
+        "name": "Colossal Biosciences",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author",
+        "sub_u": 0.7,
+        "sub_psi": 0.5,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

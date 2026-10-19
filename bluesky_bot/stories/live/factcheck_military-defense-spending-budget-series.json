@@ -261,6 +261,23 @@
     "tags": [
       "Aletheia",
       "Defense"
+    ],
+    "actor_roles": [
+      {
+        "name": "ProPublica",
+        "role": "author",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Department of Defense",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
     ]
   }
 ]

@@ -251,6 +251,27 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nigel Farage",
+        "role": "instigator",
+        "sub_u": -0.88,
+        "sub_psi": -0.91,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator"
+      },
+      {
+        "name": "Christopher Harborne",
+        "role": "instigator"
+      },
+      {
+        "name": "Metropolitan Police",
+        "role": "instigator"
+      }
+    ]
   }
 ]

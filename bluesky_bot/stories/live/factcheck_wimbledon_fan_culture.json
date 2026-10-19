@@ -99,6 +99,24 @@
       "Wimbledon",
       "Tennis"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Wimbledon",
+        "role": "context"
+      },
+      {
+        "name": "Andy Murray",
+        "role": "instigator"
+      },
+      {
+        "name": "Roger Federer",
+        "role": "instigator"
+      },
+      {
+        "name": "Novak Djokovic",
+        "role": "instigator"
+      }
+    ]
   }
 ]

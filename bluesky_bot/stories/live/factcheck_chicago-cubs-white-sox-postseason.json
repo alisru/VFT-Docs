@@ -143,6 +143,23 @@
     "tags": [
       "Aletheia",
       "Sports"
+    ],
+    "actor_roles": [
+      {
+        "name": "Chicago Cubs",
+        "role": "instigator"
+      },
+      {
+        "name": "Chicago White Sox",
+        "role": "instigator"
+      },
+      {
+        "name": "Chicago Tribune",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

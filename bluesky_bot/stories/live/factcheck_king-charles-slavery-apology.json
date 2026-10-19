@@ -145,6 +145,30 @@
       "RoyalFamily",
       "History",
       "Aletheia"
+    ],
+    "actor_roles": [
+      {
+        "name": "King Charles III",
+        "role": "instigator"
+      },
+      {
+        "name": "Buckingham Palace",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Government of Jamaica",
+        "role": "instigator"
+      },
+      {
+        "name": "British Government",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

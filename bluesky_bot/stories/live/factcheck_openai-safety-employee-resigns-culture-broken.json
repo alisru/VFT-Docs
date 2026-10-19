@@ -134,6 +134,22 @@
       "Aletheia",
       "AI",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "David Robinson",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.7,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.0,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

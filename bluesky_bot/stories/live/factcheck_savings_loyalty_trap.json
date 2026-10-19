@@ -73,6 +73,20 @@
       "Finance",
       "Savings"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Moneyfactscompare.co.uk",
+        "role": "instigator"
+      },
+      {
+        "name": "Bank of England",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
+    ]
   }
 ]

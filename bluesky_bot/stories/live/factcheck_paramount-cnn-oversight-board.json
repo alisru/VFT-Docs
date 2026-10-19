@@ -250,6 +250,27 @@
     "tags": [
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "David Ellison",
+        "role": "instigator"
+      },
+      {
+        "name": "Paramount",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Warner Bros. Discovery",
+        "role": "instigator"
+      },
+      {
+        "name": "CNN",
+        "role": "author"
+      }
+    ]
   }
 ]

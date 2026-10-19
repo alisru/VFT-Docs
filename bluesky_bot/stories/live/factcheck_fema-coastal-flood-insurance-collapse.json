@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "Environment"
+    ],
+    "actor_roles": [
+      {
+        "name": "FEMA",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "NPR",
+        "role": "author",
+        "sub_u": 0.7,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Dare County",
+        "role": "instigator"
+      },
+      {
+        "name": "Coastal Homeowners",
+        "role": "instigator"
+      }
     ]
   }
 ]

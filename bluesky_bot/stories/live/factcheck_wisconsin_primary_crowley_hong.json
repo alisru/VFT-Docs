@@ -251,6 +251,27 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "David Crowley",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Francesca Hong",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Wisconsin",
+        "role": "instigator"
+      }
+    ]
   }
 ]

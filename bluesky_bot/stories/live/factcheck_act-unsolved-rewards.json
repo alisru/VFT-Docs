@@ -147,6 +147,39 @@
       "ACT",
       "Justice",
       "TrueCrime"
+    ],
+    "actor_roles": [
+      {
+        "name": "ACT Government",
+        "role": "instigator",
+        "sub_u": 0.95,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "ACT Policing",
+        "role": "instigator"
+      },
+      {
+        "name": "Keren Rowland",
+        "role": "instigator"
+      },
+      {
+        "name": "Elizabeth Herfort",
+        "role": "instigator"
+      },
+      {
+        "name": "Megan Louise Mulquiney",
+        "role": "instigator"
+      },
+      {
+        "name": "Troy Hugh Forsyth",
+        "role": "instigator"
+      },
+      {
+        "name": "David Abuoi",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -198,6 +198,27 @@
       "Aletheia",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "MapQuest",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Apple",
+        "role": "instigator"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      }
+    ]
   }
 ]

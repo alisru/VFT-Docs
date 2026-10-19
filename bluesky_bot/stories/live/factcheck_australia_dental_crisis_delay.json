@@ -251,6 +251,23 @@
       "AusPol",
       "Health"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Australian Dental Association",
+        "role": "instigator",
+        "sub_u": 0.85,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Federal Government of Australia",
+        "role": "instigator"
+      },
+      {
+        "name": "Angie Nilsson",
+        "role": "instigator"
+      }
+    ]
   }
 ]

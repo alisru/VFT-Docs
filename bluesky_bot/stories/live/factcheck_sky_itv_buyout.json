@@ -98,6 +98,20 @@
       "Media",
       "SkyITV"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Sky",
+        "role": "instigator"
+      },
+      {
+        "name": "ITV",
+        "role": "instigator"
+      },
+      {
+        "name": "Comcast",
+        "role": "instigator"
+      }
+    ]
   }
 ]

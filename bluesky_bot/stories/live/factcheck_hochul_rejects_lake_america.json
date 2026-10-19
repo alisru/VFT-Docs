@@ -273,6 +273,31 @@
       "Aletheia",
       "USPol",
       "Canada"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Kathy Hochul",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": -0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Mark Carney",
+        "role": "instigator"
+      },
+      {
+        "name": "Tony Evers",
+        "role": "instigator"
+      },
+      {
+        "name": "Phil Scott",
+        "role": "instigator"
+      }
     ]
   }
 ]

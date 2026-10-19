@@ -272,6 +272,35 @@
       "Aletheia",
       "AIethics",
       "Congress"
+    ],
+    "actor_roles": [
+      {
+        "name": "U.S. Senate",
+        "role": "instigator"
+      },
+      {
+        "name": "Senate Sergeant at Arms",
+        "role": "instigator",
+        "sub_u": -0.62,
+        "sub_psi": -0.65,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Senate Committee on Rules and Administration",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Microsoft",
+        "role": "instigator"
+      }
     ]
   }
 ]

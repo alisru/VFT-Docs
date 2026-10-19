@@ -143,6 +143,27 @@
     "tags": [
       "USPol",
       "Elections2026"
+    ],
+    "actor_roles": [
+      {
+        "name": "Hakeem Jeffries",
+        "role": "instigator"
+      },
+      {
+        "name": "Jon Ossoff",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic National Committee",
+        "role": "instigator",
+        "sub_u": -0.68,
+        "sub_psi": -0.72,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      }
     ]
   }
 ]

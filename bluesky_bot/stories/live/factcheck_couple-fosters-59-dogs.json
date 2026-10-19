@@ -142,6 +142,26 @@
     "tags": [
       "GoodNews",
       "Community"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nicole Wordsworth",
+        "role": "instigator"
+      },
+      {
+        "name": "Gary Wordsworth",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Battersea Dogs Home",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

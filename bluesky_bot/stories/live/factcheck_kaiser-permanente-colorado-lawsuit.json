@@ -153,6 +153,19 @@
       "Aletheia",
       "Labor",
       "Healthcare"
+    ],
+    "actor_roles": [
+      {
+        "name": "Kaiser Permanente Colorado",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "United Food and Commercial Workers Local 7",
+        "role": "acted_upon"
+      }
     ]
   }
 ]

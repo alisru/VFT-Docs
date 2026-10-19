@@ -99,6 +99,24 @@
       "Olympics",
       "Aletheia"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "International Olympic Committee",
+        "role": "instigator"
+      },
+      {
+        "name": "Russian Olympic Committee",
+        "role": "instigator"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      }
+    ]
   }
 ]

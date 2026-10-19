@@ -145,6 +145,35 @@
     "tags": [
       "Aletheia",
       "UK"
+    ],
+    "actor_roles": [
+      {
+        "name": "Consumer Council for Water",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Ofwat",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Thames Water",
+        "role": "instigator"
+      },
+      {
+        "name": "South West Water",
+        "role": "instigator"
+      },
+      {
+        "name": "Water UK",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      }
     ]
   }
 ]

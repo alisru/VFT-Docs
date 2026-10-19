@@ -269,6 +269,26 @@
       "Aletheia",
       "Infrastructure",
       "California"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gavin Newsom",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "California High-Speed Rail Authority",
+        "role": "instigator"
+      },
+      {
+        "name": "Shafter City Council",
+        "role": "instigator",
+        "sub_u": 0.2,
+        "sub_psi": -0.1,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

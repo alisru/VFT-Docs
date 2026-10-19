@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "Cybersecurity"
+    ],
+    "actor_roles": [
+      {
+        "name": "ShareVault",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Oakland",
+        "role": "instigator"
+      },
+      {
+        "name": "San Francisco",
+        "role": "instigator"
+      },
+      {
+        "name": "San Jose",
+        "role": "instigator"
+      }
     ]
   }
 ]

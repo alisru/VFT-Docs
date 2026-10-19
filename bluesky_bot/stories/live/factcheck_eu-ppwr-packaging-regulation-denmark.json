@@ -251,6 +251,27 @@
       "Aletheia",
       "EUBusiness"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Dansk Industri",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Sine Linderstrøm",
+        "role": "instigator"
+      },
+      {
+        "name": "Simon Bendtsen",
+        "role": "instigator"
+      },
+      {
+        "name": "European Union",
+        "role": "instigator"
+      }
+    ]
   }
 ]

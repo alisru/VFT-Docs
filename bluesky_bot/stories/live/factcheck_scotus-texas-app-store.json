@@ -101,6 +101,20 @@
     "policies": [
       "Immigration Policy",
       "Judicial Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Supreme Court of the United States",
+        "role": "regulator"
+      },
+      {
+        "name": "Texas",
+        "role": "context"
+      },
+      {
+        "name": "State of Texas",
+        "role": "instigator"
+      }
     ]
   }
 ]

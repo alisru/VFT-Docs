@@ -253,6 +253,27 @@
     ],
     "policies": [
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "Peggy Flanagan",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.3,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Angie Craig",
+        "role": "instigator"
+      },
+      {
+        "name": "Bernie Sanders",
+        "role": "instigator"
+      },
+      {
+        "name": "Elizabeth Warren",
+        "role": "instigator"
+      }
     ]
   }
 ]

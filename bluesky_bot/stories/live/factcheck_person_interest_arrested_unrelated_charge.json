@@ -161,6 +161,16 @@
       "Crime",
       "JacksonMS"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Jackson Police Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Hinds County Detention Center",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -73,6 +73,20 @@
       "USPol",
       "Infrastructure"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Interior Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Lincoln Memorial",
+        "role": "instigator"
+      }
+    ]
   }
 ]

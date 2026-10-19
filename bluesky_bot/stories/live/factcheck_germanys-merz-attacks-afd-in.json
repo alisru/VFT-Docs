@@ -146,6 +146,31 @@
       "Germany",
       "AfD",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Friedrich Merz",
+        "role": "instigator"
+      },
+      {
+        "name": "Alice Weidel",
+        "role": "instigator"
+      },
+      {
+        "name": "CDU",
+        "role": "instigator"
+      },
+      {
+        "name": "AfD",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Germany",
+        "role": "instigator"
+      }
     ]
   }
 ]

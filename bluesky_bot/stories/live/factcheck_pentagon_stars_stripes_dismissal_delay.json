@@ -146,6 +146,38 @@
     "tags": [
       "Aletheia",
       "FreePress"
+    ],
+    "actor_roles": [
+      {
+        "name": "Pentagon",
+        "role": "instigator",
+        "sub_u": -1.2,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Stars and Stripes",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Lara Korte",
+        "role": "instigator"
+      },
+      {
+        "name": "Erik Slavin",
+        "role": "instigator"
+      },
+      {
+        "name": "Max Lederer",
+        "role": "instigator"
+      },
+      {
+        "name": "Trevor Neil McFadden",
+        "role": "instigator"
+      }
     ]
   }
 ]

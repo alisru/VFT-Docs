@@ -1,4 +1,5 @@
 """Chunking + local embeddings (fastembed / ONNX, runs offline after first model download)."""
+import gc
 import numpy as np
 
 MODEL_NAME = "BAAI/bge-small-en-v1.5"
@@ -11,14 +12,17 @@ def model():
     global _model
     if _model is None:
         from fastembed import TextEmbedding
-        _model = TextEmbedding(model_name=MODEL_NAME)
+        # Limit worker threads to 2 to prevent ONNX Runtime from allocating
+        # unbounded thread arenas across all 12 CPU cores (cuts memory from 5GB+ to <450MB)
+        _model = TextEmbedding(model_name=MODEL_NAME, threads=2)
     return _model
 
 
 def embed_texts(texts):
     if not texts:
         return np.zeros((0, 384), dtype=np.float32)
-    vecs = np.array(list(model().embed(texts)), dtype=np.float32)
+    # Constrain batch_size to 32 to cap ONNX intermediate tensor buffer allocations
+    vecs = np.array(list(model().embed(texts, batch_size=32)), dtype=np.float32)
     norms = np.linalg.norm(vecs, axis=1, keepdims=True)
     return vecs / np.clip(norms, 1e-9, None)
 
@@ -50,6 +54,7 @@ def embed_pending(con, progress=None):
     rows = con.execute("SELECT id FROM chats WHERE emb IS NULL").fetchall()
     if progress is not None:
         progress.update(done=0, total=len(rows))
+    embedded_count = 0
     for n, r in enumerate(rows):
         if progress is not None:
             progress["done"] = n
@@ -59,6 +64,9 @@ def embed_pending(con, progress=None):
         ).fetchall()
         chunks = chunk_messages([(m["role"], m["text"]) for m in msgs])
         if not chunks:
+            # Mark empty chats with b"" so they are not continually re-selected
+            con.execute("UPDATE chats SET emb=? WHERE id=?", (b"", cid))
+            con.commit()
             continue
         vecs = embed_texts(chunks)
         con.execute("DELETE FROM chunks WHERE chat_id=?", (cid,))
@@ -70,12 +78,16 @@ def embed_pending(con, progress=None):
         mean = mean / max(np.linalg.norm(mean), 1e-9)
         con.execute("UPDATE chats SET emb=? WHERE id=?", (mean.astype(np.float32).tobytes(), cid))
         con.commit()
+        embedded_count += 1
         print(f"[embed] {cid[:8]} {len(chunks)} chunks")
-    return len(rows)
+    if embedded_count > 0:
+        gc.collect()
+    return embedded_count
 
 
 def load_chat_vectors(con):
-    rows = con.execute("SELECT id, emb FROM chats WHERE emb IS NOT NULL").fetchall()
+    # Only load 384-dim float32 embeddings (384 * 4 bytes = 1536 bytes)
+    rows = con.execute("SELECT id, emb FROM chats WHERE emb IS NOT NULL AND length(emb) == 1536").fetchall()
     ids = [r["id"] for r in rows]
     mat = (
         np.vstack([np.frombuffer(r["emb"], dtype=np.float32) for r in rows])

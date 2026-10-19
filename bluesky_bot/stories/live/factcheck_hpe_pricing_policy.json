@@ -82,6 +82,28 @@
       "Tech",
       "HPE"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Hewlett Packard Enterprise",
+        "role": "instigator"
+      },
+      {
+        "name": "Micron",
+        "role": "instigator"
+      },
+      {
+        "name": "SK Hynix",
+        "role": "instigator"
+      },
+      {
+        "name": "Gartner",
+        "role": "instigator"
+      },
+      {
+        "name": "TrendForce",
+        "role": "instigator"
+      }
+    ]
   }
 ]

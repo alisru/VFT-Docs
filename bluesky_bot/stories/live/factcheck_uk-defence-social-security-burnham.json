@@ -145,6 +145,30 @@
     "tags": [
       "Aletheia",
       "UKPolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Andy Burnham",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Kemi Badenoch",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.7,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "UK Labour Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Conservative Party",
+        "role": "instigator"
+      }
     ]
   }
 ]

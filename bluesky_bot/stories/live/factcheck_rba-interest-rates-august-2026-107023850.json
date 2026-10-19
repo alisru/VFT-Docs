@@ -252,6 +252,19 @@
     ],
     "policies": [
       "Cost of Living"
+    ],
+    "actor_roles": [
+      {
+        "name": "Reserve Bank of Australia",
+        "role": "instigator",
+        "sub_u": 0.58,
+        "sub_psi": 0.05,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Australian Economy",
+        "role": "instigator"
+      }
     ]
   }
 ]

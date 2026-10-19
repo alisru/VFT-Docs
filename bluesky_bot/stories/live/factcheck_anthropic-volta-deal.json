@@ -82,6 +82,24 @@
       "AI",
       "TechCrunch"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Volta",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "Bitdeer",
+        "role": "instigator"
+      }
+    ]
   }
 ]

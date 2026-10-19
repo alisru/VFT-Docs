@@ -145,6 +145,31 @@
       "Aletheia",
       "AI",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jack Clark",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Dario Amodei",
+        "role": "instigator"
+      },
+      {
+        "name": "Geoffrey Hinton",
+        "role": "instigator"
+      }
     ]
   }
 ]

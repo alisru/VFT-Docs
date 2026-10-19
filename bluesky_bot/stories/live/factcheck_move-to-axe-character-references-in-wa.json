@@ -251,6 +251,27 @@
       "Aletheia",
       "AusLaw"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Western Power",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Amber-Jade Sanderson",
+        "role": "instigator"
+      },
+      {
+        "name": "Jeffrey David Spinner",
+        "role": "instigator"
+      },
+      {
+        "name": "Gair Landsborough",
+        "role": "instigator"
+      }
+    ]
   }
 ]

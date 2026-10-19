@@ -262,6 +262,30 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jon Ossoff",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Miles Taylor",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Natalie Harp",
+        "role": "instigator"
+      }
     ]
   }
 ]

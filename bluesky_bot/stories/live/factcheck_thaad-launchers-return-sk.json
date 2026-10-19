@@ -98,6 +98,24 @@
       "THAAD",
       "SKorea"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "South Korea",
+        "role": "instigator"
+      },
+      {
+        "name": "North Korea",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
+    ]
   }
 ]

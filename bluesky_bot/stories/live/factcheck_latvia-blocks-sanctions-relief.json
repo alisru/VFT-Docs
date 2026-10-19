@@ -146,6 +146,41 @@
       "Aletheia",
       "EU",
       "Sanctions"
+    ],
+    "actor_roles": [
+      {
+        "name": "Latvia",
+        "role": "instigator",
+        "sub_u": 0.85,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Alisher Usmanov",
+        "role": "instigator"
+      },
+      {
+        "name": "Mikhail Fridman",
+        "role": "instigator"
+      },
+      {
+        "name": "European Union",
+        "role": "instigator"
+      },
+      {
+        "name": "France",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": 0.6,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Luxembourg",
+        "role": "instigator",
+        "sub_u": -0.75,
+        "sub_psi": 0.6,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

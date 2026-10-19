@@ -251,6 +251,27 @@
       "USPol",
       "Wisconsin"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Francesca Hong",
+        "role": "instigator",
+        "sub_u": 0.6,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "David Crowley",
+        "role": "instigator"
+      },
+      {
+        "name": "Tony Evers",
+        "role": "instigator"
+      },
+      {
+        "name": "Democratic Party",
+        "role": "instigator"
+      }
+    ]
   }
 ]

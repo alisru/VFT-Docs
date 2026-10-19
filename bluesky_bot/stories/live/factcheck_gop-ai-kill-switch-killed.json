@@ -145,6 +145,26 @@
       "Aletheia",
       "Tech",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "John Kennedy",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.0,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Rand Paul",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "U.S. Congress",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -101,6 +101,32 @@
       "Aletheia",
       "PublicHealth"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Paris authorities",
+        "role": "instigator"
+      },
+      {
+        "name": "Sebastien Lecornu",
+        "role": "instigator"
+      },
+      {
+        "name": "Patrice Faure",
+        "role": "instigator"
+      },
+      {
+        "name": "Stephanie Rist",
+        "role": "instigator"
+      },
+      {
+        "name": "Emmanuel Gregoire",
+        "role": "instigator"
+      },
+      {
+        "name": "France",
+        "role": "context"
+      }
+    ]
   }
 ]

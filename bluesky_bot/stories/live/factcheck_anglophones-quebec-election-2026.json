@@ -143,6 +143,23 @@
       "Aletheia",
       "Quebec",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Quebec Liberal Party",
+        "role": "instigator"
+      },
+      {
+        "name": "Parti Québécois",
+        "role": "instigator"
+      },
+      {
+        "name": "Élections Québec",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.6,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

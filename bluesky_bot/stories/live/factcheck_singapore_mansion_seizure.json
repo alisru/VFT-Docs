@@ -101,6 +101,32 @@
       "Singapore",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Singapore Police Force",
+        "role": "instigator"
+      },
+      {
+        "name": "Wei Zhaolun",
+        "role": "instigator"
+      },
+      {
+        "name": "Aperia Group",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      }
+    ]
   }
 ]

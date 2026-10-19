@@ -260,6 +260,35 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Natalie Harp",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Susie Wiles",
+        "role": "instigator"
+      },
+      {
+        "name": "JD Vance",
+        "role": "instigator"
+      },
+      {
+        "name": "CNN",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Politico",
+        "role": "author"
+      }
     ]
   }
 ]

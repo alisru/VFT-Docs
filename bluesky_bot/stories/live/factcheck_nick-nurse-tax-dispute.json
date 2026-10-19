@@ -251,6 +251,23 @@
       "Sports",
       "Canada"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nick Nurse",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Roberta Nurse",
+        "role": "instigator"
+      },
+      {
+        "name": "Mike Collinge",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -98,6 +98,20 @@
       "Socceroos",
       "Lebanon"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Socceroos",
+        "role": "instigator"
+      },
+      {
+        "name": "Lebanon",
+        "role": "instigator"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
+    ]
   }
 ]

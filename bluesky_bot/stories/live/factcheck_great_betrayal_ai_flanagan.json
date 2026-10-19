@@ -145,6 +145,27 @@
       "Aletheia",
       "AI",
       "Australia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Richard Flanagan",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Anthony Albanese",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Government",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      }
     ]
   }
 ]

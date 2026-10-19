@@ -253,6 +253,31 @@
       "Cricket",
       "Australia",
       "Sport"
+    ],
+    "actor_roles": [
+      {
+        "name": "Steve Smith",
+        "role": "instigator"
+      },
+      {
+        "name": "Marnus Labuschagne",
+        "role": "instigator"
+      },
+      {
+        "name": "Josh Hazlewood",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.8,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Australia men's cricket team",
+        "role": "instigator"
+      },
+      {
+        "name": "Bangladesh men's cricket team",
+        "role": "instigator"
+      }
     ]
   }
 ]

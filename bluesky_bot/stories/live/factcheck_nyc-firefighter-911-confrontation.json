@@ -142,6 +142,26 @@
     "tags": [
       "Aletheia",
       "911Memorial"
+    ],
+    "actor_roles": [
+      {
+        "name": "Firefighter",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "FDNY",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Pro-Palestinian Protester",
+        "role": "instigator"
+      }
     ]
   }
 ]

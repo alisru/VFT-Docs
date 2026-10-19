@@ -249,6 +249,22 @@
       "MLB",
       "Sox"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Tim Anderson",
+        "role": "instigator",
+        "sub_u": 1.2,
+        "sub_psi": 0.9,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Chicago White Sox",
+        "role": "instigator",
+        "sub_u": 1.0,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

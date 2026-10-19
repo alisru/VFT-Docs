@@ -263,6 +263,34 @@
     "tags": [
       "Aletheia",
       "Entertainment"
+    ],
+    "actor_roles": [
+      {
+        "name": "Mark Ruffalo",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "David Ellison",
+        "role": "instigator"
+      },
+      {
+        "name": "Larry Ellison",
+        "role": "instigator"
+      },
+      {
+        "name": "Safra Catz",
+        "role": "instigator"
+      },
+      {
+        "name": "Paramount",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": -0.6,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

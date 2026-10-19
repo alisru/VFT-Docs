@@ -262,6 +262,30 @@
     "tags": [
       "BillMaher",
       "Politics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Bill Maher",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.6,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Natalie Harp",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Jon Ossoff",
+        "role": "instigator"
+      }
     ]
   }
 ]

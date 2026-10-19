@@ -100,6 +100,32 @@
       "Banking",
       "Finance"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "JPMorgan Chase",
+        "role": "instigator"
+      },
+      {
+        "name": "Goldman Sachs",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Reserve",
+        "role": "instigator"
+      },
+      {
+        "name": "Wells Fargo",
+        "role": "instigator"
+      },
+      {
+        "name": "Morgan Stanley",
+        "role": "instigator"
+      },
+      {
+        "name": "Bank of America",
+        "role": "instigator"
+      }
+    ]
   }
 ]

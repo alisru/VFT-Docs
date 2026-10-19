@@ -134,6 +134,23 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "H.R. McMaster",
+        "role": "instigator"
+      },
+      {
+        "name": "United States Armed Forces",
+        "role": "instigator"
+      },
+      {
+        "name": "Iraq",
+        "role": "instigator",
+        "sub_u": 0.4,
+        "sub_psi": 0.2,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

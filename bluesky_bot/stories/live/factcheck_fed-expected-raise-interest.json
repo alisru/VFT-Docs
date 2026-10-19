@@ -153,6 +153,23 @@
       "Economy",
       "Fed",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Federal Reserve",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Kevin Warsh",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      }
     ]
   }
 ]

@@ -175,6 +175,23 @@
     "tags": [
       "SCOTUS",
       "Aletheia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Samuel Alito",
+        "role": "instigator",
+        "sub_u": -0.94,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Supreme Court of the United States",
+        "role": "regulator"
+      },
+      {
+        "name": "Fox News",
+        "role": "author"
+      }
     ]
   }
 ]

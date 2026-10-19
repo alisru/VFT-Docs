@@ -257,6 +257,31 @@
       "UKPolitics",
       "Ukraine",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Andy Burnham",
+        "role": "instigator"
+      },
+      {
+        "name": "Vladimir Putin",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Russia",
+        "role": "context",
+        "sub_u": -0.5,
+        "sub_psi": -0.8,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Ukraine",
+        "role": "context"
+      }
     ]
   }
 ]

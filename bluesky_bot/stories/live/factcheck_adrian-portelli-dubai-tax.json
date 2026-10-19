@@ -145,6 +145,26 @@
       "Aletheia",
       "AusPol",
       "Tax"
+    ],
+    "actor_roles": [
+      {
+        "name": "Adrian Portelli",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": -0.57,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Karl Stefanovic",
+        "role": "instigator",
+        "sub_u": -0.3,
+        "sub_psi": -0.2,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
     ]
   }
 ]

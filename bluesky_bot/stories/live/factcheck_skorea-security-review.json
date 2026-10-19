@@ -99,6 +99,24 @@
       "Security",
       "NorthKorea"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "North Korea",
+        "role": "context"
+      },
+      {
+        "name": "South Korea",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Japan",
+        "role": "instigator"
+      }
+    ]
   }
 ]

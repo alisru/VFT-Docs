@@ -250,6 +250,23 @@
       "YouTube",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "YouTube",
+        "role": "instigator",
+        "sub_u": -0.85,
+        "sub_psi": -0.82,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Google",
+        "role": "instigator"
+      },
+      {
+        "name": "Alphabet Inc.",
+        "role": "instigator"
+      }
+    ]
   }
 ]

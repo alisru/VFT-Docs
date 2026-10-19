@@ -98,6 +98,20 @@
       "Aletheia",
       "Transport"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "New South Wales Police",
+        "role": "instigator"
+      },
+      {
+        "name": "ACT Fire and Rescue",
+        "role": "instigator"
+      },
+      {
+        "name": "EPA",
+        "role": "regulator"
+      }
+    ]
   }
 ]

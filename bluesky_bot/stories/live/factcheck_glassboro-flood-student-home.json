@@ -141,6 +141,22 @@
     "tags": [
       "Aletheia",
       "NewJersey"
+    ],
+    "actor_roles": [
+      {
+        "name": "Rowan University",
+        "role": "instigator",
+        "sub_u": 0.5,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Student Residents",
+        "role": "acted_upon",
+        "sub_u": -0.5,
+        "sub_psi": -0.5,
+        "sub_verdict": "COND"
+      }
     ]
   }
 ]

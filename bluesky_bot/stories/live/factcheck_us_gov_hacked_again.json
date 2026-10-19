@@ -99,6 +99,24 @@
       "Aletheia",
       "Cybersecurity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Department of Homeland Security",
+        "role": "instigator"
+      },
+      {
+        "name": "Mark Warner",
+        "role": "instigator"
+      },
+      {
+        "name": "CISA",
+        "role": "instigator"
+      },
+      {
+        "name": "Federal Bureau of Investigation",
+        "role": "author"
+      }
+    ]
   }
 ]

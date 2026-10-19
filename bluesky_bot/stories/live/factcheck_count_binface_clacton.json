@@ -249,6 +249,19 @@
       "Binface",
       "Clacton"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Count Binface",
+        "role": "instigator",
+        "sub_u": 0.7,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Clacton",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -253,6 +253,28 @@
       "Trump",
       "Security"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Secret Service",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "The Washington Post",
+        "role": "author"
+      },
+      {
+        "name": "BBC",
+        "role": "author"
+      }
+    ]
   }
 ]

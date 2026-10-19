@@ -154,6 +154,38 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Bill Barr",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Jeff Sessions",
+        "role": "instigator"
+      },
+      {
+        "name": "Michael Mukasey",
+        "role": "instigator"
+      },
+      {
+        "name": "Jeff Clark",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator"
+      },
+      {
+        "name": "D.C. Bar",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

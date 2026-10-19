@@ -100,6 +100,20 @@
     ],
     "policies": [
       "Healthcare Policy"
+    ],
+    "actor_roles": [
+      {
+        "name": "NHS",
+        "role": "instigator"
+      },
+      {
+        "name": "EndoSure",
+        "role": "instigator"
+      },
+      {
+        "name": "Endotest",
+        "role": "instigator"
+      }
     ]
   }
 ]

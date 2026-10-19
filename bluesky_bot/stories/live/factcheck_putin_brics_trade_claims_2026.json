@@ -156,6 +156,31 @@
     "tags": [
       "BRICS",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Vladimir Putin",
+        "role": "instigator"
+      },
+      {
+        "name": "BRICS",
+        "role": "instigator",
+        "sub_u": -0.42,
+        "sub_psi": -0.31,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Russia",
+        "role": "context"
+      },
+      {
+        "name": "G7",
+        "role": "instigator"
+      },
+      {
+        "name": "European Union",
+        "role": "instigator"
+      }
     ]
   }
 ]

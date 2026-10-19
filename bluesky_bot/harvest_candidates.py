@@ -248,7 +248,7 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
                     "url": url,
                     "snippet": text[:400].strip()
                 })
-                dossier_lines.append(f"\n[Source {idx} — {pub_name}] (URL: {url}):\n{text[:1200].strip()}")
+                dossier_lines.append(f"\n[Source {idx} — {pub_name}] (URL: {url}):\n{text.strip()}")
                 
             primary_c["cluster_sources"] = sources_summary
             primary_c["cross_source_dossier"] = "\n".join(dossier_lines)
@@ -1216,7 +1216,7 @@ def run_harvest():
         print(f"[{idx}/{len(all_final)}] Scraping content from: {url}")
         title, desc, body = scrape_article_content(url)
         if body and not body.startswith("Error") and len(body.strip()) >= 200:
-            article_text_clean = body[:4000]
+            article_text_clean = body.strip()
         
             # Check if this candidate is from Bluesky
             target_url = c.get("target_url", "")

@@ -250,6 +250,23 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Stella Creasy",
+        "role": "instigator"
+      },
+      {
+        "name": "Clifford Wilby",
+        "role": "instigator",
+        "sub_u": -0.92,
+        "sub_psi": -0.88,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Westminster Magistrates' Court",
+        "role": "regulator"
+      }
+    ]
   }
 ]

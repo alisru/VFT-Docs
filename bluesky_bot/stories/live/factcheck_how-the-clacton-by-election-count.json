@@ -249,6 +249,19 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Clacton Voters",
+        "role": "instigator"
+      },
+      {
+        "name": "Election Staff",
+        "role": "instigator",
+        "sub_u": 0.9,
+        "sub_psi": 0.85,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

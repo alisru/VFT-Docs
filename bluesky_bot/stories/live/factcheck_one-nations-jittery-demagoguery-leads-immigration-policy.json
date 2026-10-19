@@ -280,6 +280,23 @@
       "Aletheia",
       "AusPol",
       "Immigration"
+    ],
+    "actor_roles": [
+      {
+        "name": "Pauline Hanson",
+        "role": "instigator"
+      },
+      {
+        "name": "One Nation",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Australia",
+        "role": "context"
+      }
     ]
   }
 ]

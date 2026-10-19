@@ -25,7 +25,7 @@
 
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
-| Where.What.Who | **The Squatter** | -0.6 | +0.6 | **Greatest Lie** — Land seizure (+ψ) for private wealth (-υ). Bunyip aristocracy. |
+| Where.What.Who | **The Squatter** | -1.4 | +1.0 | **Greatest Lie** — Violent enclosure of indigenous land (+ψ) for private dynastic rentier accumulation (-υ). Greed Zone. |
 | Where.What.What | **The Void (Terra Nullius)** | -0.9 | +0.6 | **Greatest Lie** — Active legal erasure (+ψ) serving colonizers only (-υ). |
 | Where.What.Where | **Custodianship [First Nations Perspective]** | +0.9 | +0.6 | **Greater Good** — Active management (+ψ) for future generations (+υ). "Country is family." |
 | Where.What.Why | **The Crossing** | +0.4 | +0.7 | **Good** — Expanded access (+υ) through active exploration (+ψ). |
@@ -39,7 +39,7 @@
 
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
-| Where.Where.Who | **The Red Heart** | ±0.0 | -0.6 | **Neutral** — Geographic fact, not moral choice. The void. |
+| Where.Where.Who | **The Red Heart** | 0.0 | -0.5 | **Constraint** — Geological fact, not moral agency. Sublime arid reality imposing physical boundary. |
 | Where.Where.What | **Goyder's Line** | +0.6 | +0.4 | **Good** — Truthful limit (+υ) actively drawn (+ψ). Ignored at cost. |
 | Where.Where.Where | **The Saltbush** | +0.5 | -0.3 | **Lesser Good** — Life-saving adaptation (+υ) through passive endurance (-ψ). |
 | Where.Where.Why | **The River** | ±0.0 | -0.4 | **Neutral** — Ephemeral fact, not moral choice. Boom and bust. |
@@ -56,7 +56,7 @@
 | Where.Why.Who | **The Sun** | ±0.0 | +0.4 | **Neutral** — Energy engine, not moral choice. Radiation. |
 | Where.Why.What | **The Thirst** | +0.4 | -0.5 | **Lesser Good** — Drives conservation (+υ) through passive scarcity (-ψ). |
 | Where.Why.Where | **The Wet and The Dry** | ±0.0 | -0.4 | **Neutral** — Binary rhythm, not moral choice. |
-| Where.Why.Why | **The Flood** | +0.4 | +0.5 | **Good** — Ecological reset (+υ) through violent surge (+ψ). Yarri's heroism. |
+| Where.Why.Why | **The Flood** | 0.0 | +0.6 | **Constraint** — Natural violent ecological reset (+ψ); environmental force, not moral choice. |
 | Where.Why.How | **The Wind** | ±0.0 | +0.3 | **Neutral** — Kinetic force, not moral choice. |
 | Where.Why.Cause | **The Oscillation (El Niño)** | ±0.0 | -0.4 | **Neutral** — Planetary cause of boom/bust rhythm, not moral choice. Drives gambler's logic. |
 | Where.Why.Effect | **The Windmill** | +0.7 | +0.6 | **Greater Good** — Life-giving extraction (+υ) through active technology (+ψ). |
@@ -97,7 +97,7 @@
 | Vector | Entry | υ | ψ | Judgment |
 |--------|-------|---|---|----------|
 | Where.Effect.Who | **The Suburbanite** | +0.5 | -0.3 | **Lesser Good** — Domesticity (+υ) through passive retreat (-ψ). |
-| Where.Effect.What | **The Sprawl** | +0.3 | -0.4 | **Lesser Good** — Space (+υ) through passive dispersion (-ψ). |
+| Where.Effect.What | **The Sprawl** | -0.5 | -0.3 | **Greater Evil** — Low-density private land consumption (-υ) through atomized dispersion (-ψ). Depletes public resources. |
 | Where.Effect.Where | **The Coast (Rim)** | +0.4 | -0.3 | **Lesser Good** — Fertile zone (+υ) through passive clinging (-ψ). |
 | Where.Effect.Why | **The Lifestyle** | +0.5 | +0.3 | **Good** — Happiness pursuit (+υ) through active choice (+ψ). |
 | Where.Effect.How | **The BBQ** | +0.7 | +0.4 | **Greater Good** — Egalitarian ritual (+υ) through active gathering (+ψ). |

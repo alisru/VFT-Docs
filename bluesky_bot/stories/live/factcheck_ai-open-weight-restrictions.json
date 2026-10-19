@@ -101,6 +101,32 @@
       "AI",
       "Policy"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      },
+      {
+        "name": "Mistral AI",
+        "role": "instigator"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator"
+      },
+      {
+        "name": "Microsoft",
+        "role": "instigator"
+      },
+      {
+        "name": "Hugging Face",
+        "role": "instigator"
+      },
+      {
+        "name": "Moonshot AI",
+        "role": "instigator"
+      }
+    ]
   }
 ]

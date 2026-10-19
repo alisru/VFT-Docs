@@ -14,7 +14,8 @@ import re
 import time
 from pathlib import Path
 
-from .db import ROOT, connect
+from .cloud_sync import cloud_sync
+from .db import CANVASES_DIR, ROOT, connect
 from .importers import parse_chat_file
 
 BRAIN = Path.home() / ".gemini" / "antigravity" / "brain"
@@ -58,12 +59,18 @@ def ingest_antigravity(con, brain: Path = BRAIN):
             continue
         try:
             mtime = f.stat().st_mtime
-            row = con.execute("SELECT src_mtime FROM chats WHERE id=?", (d.name,)).fetchone()
+            row = con.execute("SELECT src_mtime, n_msgs FROM chats WHERE id=?", (d.name,)).fetchone()
             if row and row["src_mtime"] >= mtime:
                 n_skip += 1
                 continue
             msgs = _read_transcript(f)
             if not msgs:
+                continue
+            if row and row["n_msgs"] == len(msgs):
+                # No new messages; update mtime to avoid repeatedly re-reading and leave embeddings intact
+                con.execute("UPDATE chats SET src_mtime=? WHERE id=?", (mtime, d.name))
+                con.commit()
+                n_skip += 1
                 continue
             first_user = next((m[2] for m in msgs if m[0] == "user"), d.name)
             title = first_user.strip().splitlines()[0][:90] if first_user.strip() else d.name
@@ -224,5 +231,60 @@ def ingest_payload(con, payload: dict):
         "INSERT INTO messages(chat_id, idx, role, ts, text) VALUES(?,?,?,?,?)",
         [(chat_id, i, r, ts, tx) for i, (r, ts, tx) in enumerate(msgs)],
     )
+
+    # Process and save any canvases
+    canvases_raw = payload.get("canvases") or []
+    if canvases_raw:
+        safe_chat_folder = re.sub(r'[\\/*?:"<>|]', '_', title)[:60].strip() or chat_id
+        chat_canvas_dir = CANVASES_DIR / safe_chat_folder
+        chat_canvas_dir.mkdir(parents=True, exist_ok=True)
+
+        seen_titles = {}
+        # Keep longest content if duplicate titles exist
+        for cv in canvases_raw:
+            raw_title = (cv.get("title") or "Untitled Canvas").strip()
+            c_title = re.sub(r'\s*(Contents\s*Share\s*&\s*Export\s*Create|Contents|Share\s*&\s*Export|Share|Export|Download|Close|Create)\s*$', '', raw_title, flags=re.IGNORECASE).strip() or "Untitled Canvas"
+            norm_title = re.sub(r'\s+', ' ', c_title.lower()).strip()
+            c_type = (cv.get("type") or "markdown").strip()
+            c_content = (cv.get("content") or "").strip()
+            if not c_content or len(c_content) < 250:
+                continue
+            if norm_title in seen_titles:
+                if len(c_content) > len(seen_titles[norm_title]["content"]):
+                    seen_titles[norm_title] = {"title": c_title, "type": c_type, "content": c_content}
+            else:
+                seen_titles[norm_title] = {"title": c_title, "type": c_type, "content": c_content}
+
+        for norm_title, cv in seen_titles.items():
+            c_title = cv["title"]
+            c_type = cv["type"]
+            c_content = cv["content"]
+            c_id = f"{chat_id}-{hashlib.sha1(norm_title.encode()).hexdigest()[:8]}"
+            safe_filename = re.sub(r'[\\/*?:"<>|]', '_', c_title)[:50].strip() or "canvas"
+            file_path = chat_canvas_dir / f"{safe_filename}.md"
+
+            md_doc = f"""---
+title: "{c_title}"
+chat_id: "{chat_id}"
+chat_title: "{title}"
+chat_url: "{url}"
+type: "{c_type}"
+updated: "{now_iso}"
+---
+
+{c_content}
+"""
+            file_path.write_text(md_doc, encoding="utf-8")
+
+            con.execute(
+                """INSERT INTO canvases(id, chat_id, title, content, type, file_path, updated)
+                   VALUES(?,?,?,?,?,?,?)
+                   ON CONFLICT(id) DO UPDATE SET chat_id=excluded.chat_id, title=excluded.title,
+                   content=excluded.content, type=excluded.type, file_path=excluded.file_path,
+                   updated=excluded.updated""",
+                (c_id, chat_id, c_title, c_content, c_type, str(file_path), now_iso),
+            )
+            cloud_sync.notify_change(c_title)
+
     con.commit()
     return True, chat_id

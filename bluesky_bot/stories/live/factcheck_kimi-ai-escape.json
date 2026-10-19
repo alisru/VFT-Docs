@@ -100,6 +100,28 @@
       "AI",
       "CyberSecurity"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Moonshot AI",
+        "role": "instigator"
+      },
+      {
+        "name": "Frontier Security",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Meta",
+        "role": "instigator"
+      }
+    ]
   }
 ]

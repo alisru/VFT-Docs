@@ -145,6 +145,34 @@
       "Aletheia",
       "Syria",
       "Journalism"
+    ],
+    "actor_roles": [
+      {
+        "name": "Bashar al-Assad",
+        "role": "instigator"
+      },
+      {
+        "name": "Austin Tice",
+        "role": "instigator"
+      },
+      {
+        "name": "BBC",
+        "role": "author",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "NPR",
+        "role": "author",
+        "sub_u": 1.0,
+        "sub_psi": 1.0,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Syrian Government",
+        "role": "instigator"
+      }
     ]
   }
 ]

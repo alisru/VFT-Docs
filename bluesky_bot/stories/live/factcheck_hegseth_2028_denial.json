@@ -143,6 +143,30 @@
     "tags": [
       "Aletheia",
       "USPol"
+    ],
+    "actor_roles": [
+      {
+        "name": "Pete Hegseth",
+        "role": "instigator",
+        "sub_u": -0.7,
+        "sub_psi": 0.73,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "NBC News",
+        "role": "author",
+        "sub_u": 0.1,
+        "sub_psi": 0.4,
+        "sub_verdict": "COND"
+      },
+      {
+        "name": "Department of War",
+        "role": "instigator"
+      },
+      {
+        "name": "Republican Party",
+        "role": "instigator"
+      }
     ]
   }
 ]

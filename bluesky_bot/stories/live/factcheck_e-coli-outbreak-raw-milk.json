@@ -143,6 +143,23 @@
     "tags": [
       "Aletheia",
       "FoodSafety"
+    ],
+    "actor_roles": [
+      {
+        "name": "Sierra Nevada Cheese Company",
+        "role": "instigator"
+      },
+      {
+        "name": "FDA",
+        "role": "regulator",
+        "sub_u": 0.5,
+        "sub_psi": 0.4,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "CDC",
+        "role": "instigator"
+      }
     ]
   }
 ]

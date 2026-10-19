@@ -1,0 +1,167 @@
+[
+  {
+    "thinking": "PHASE 1 & 2 CONVERGENCE SCAN & FORCE CALCULATIONS:\nCandidate: Mosquitos spike in LA with hel...\nStory Slug: los-angeles-mosquito-infestation\n\nStated Intent / Frame:\nPublic health officials and media reporting highlight a surge in mosquito populations and West Nile virus cases in Southern California caused by heatwaves and El Niño, warning the public.\nStated Forces: GG(S=1.0, O=0.0, N=0.0), GE(S=0.0, O=1.0, N=0.0), LG(S=0.5, O=0.0, N=0.0), LE(S=0.0, O=0.5, N=0.0), GP(S=1.0, O=0.0, N=0.0), BP(S=0.0, O=1.0, N=0.0)\nu_claim = 0.50, psi_claim = 0.00\nclaim_rnet = 1.0, claim_z = 0, integrity = Absolute Truth\n\nActual Ground Reality:\nRecord temperatures and invasive Aedes mosquito species ('ankle-biters') have overwhelmed municipal vector control capacity. Over 180 West Nile virus cases recorded in LA County. Municipal infrastructure and vector control districts rely on post-hoc emergency spraying rather than proactive standing water and drainage mitigation, leaving residents exposed to disease and persistent infestation.\n\nActual Forces:\nGG: S=0.2, O=0.8, N=0.0\nGE: S=0.4, O=0.6, N=0.0\nLG: S=0.3, O=0.5, N=0.0\nLE: S=0.9, O=0.1, N=0.0\nGP: S=0.2, O=0.8, N=0.0\nBP: S=0.6, O=0.4, N=0.0\n\nCoordinate Calculations:\nSum S+O+N = 5.8\nF_GG = (-0.6, -0.6)\nF_GE = (+0.2, +0.2)\nF_LG = (-0.2, +0.2)\nF_LE = (-0.8, +0.8)\nF_GP = (-0.6, -0.8)\nF_BP = (-0.2, +0.4)\n\nSum u = -0.6 + 0.2 - 0.2 - 0.8 - 0.6 - 0.2 = -2.2\nu_real = -2.2 / 5.8 = -0.38\n\nWill Calculations:\nΨ_pos = {GE, LG, LE, BP} -> F_pos = 0.2 + 0.2 + 0.8 + 0.4 = +1.6\nΨ_neg = {GG, GP} -> F_neg = |-0.6| + |-0.8| = 1.4\nDominant Will = Positive (Constructive/Deceptive continuation of ineffective status quo)\npsi_real = +1.6 / 3.8 = +0.42\n\nResulting Coordinates: u_real = -0.38, psi_real = +0.42\nPath: Fall into Deception\nreal_rnet = 3.50 (Partially Distorted), real_z = 2\n\nSearch grounding verified: LA West Nile cases (180+), invasive Aedes species, emergency vector control efforts.",
+    "id": "la-mosquito-spike-west-nile-2026",
+    "subject": "Mosquitos spike in LA with hel...",
+    "link": "https://nypost.com/2026/10/11/us-news/los-angeles-is-the-most-mosquito-infested-city-in-america/",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.0,
+    "real_u": -0.38,
+    "real_psi": 0.42,
+    "mode": "root",
+    "posts": [
+      "Urban heatwaves and invasive species turn Los Angeles into a mosquito sanctuary.\nMosquitos spike in LA\nEvidence: Public Health Warnings, Overwhelmed Vector Control, Systemic Infrastructure Vulnerability\n#Aletheia #PublicHealth 🌐",
+      "Public health reports and media coverage warn of unprecedented mosquito swarms and rising West Nile virus risk across Los Angeles, framing the outbreak as an unavoidable natural nuisance.\n\nStated Judgement: (+0.50, 0.00) — Good Preference",
+      "Invasive Aedes species and record urban temperatures exceed municipal control capacity, turning standing urban runoff into persistent breeding grounds that threaten public health.\n\nResulting Judgement: (-0.38, +0.42) — Lesser Evil",
+      "Verdict: COND — Fall into Deception. Record heat and invasive mosquito species overwhelm municipal vector control, leaving residents exposed to West Nile virus.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 2)",
+      "- Vector Control Response: COND (-0.35, +0.35) — Emergency spraying struggles against invasive Aedes species.\n- Media Coverage: PASS (+0.20, +0.10) — Reports real West Nile surge despite tabloid framing.",
+      "Los Angeles County has documented over 180 West Nile virus cases alongside widespread infestations of invasive Aedes mosquitoes, driven by record heatwaves and urban microclimates.",
+      "The Bright Side:\nHeightened public reporting and emergency vector trapping allow health agencies to pinpoint high-risk neighborhoods for targeted larvicide application before infections peak.",
+      "The Plane Error swaps physical climate transformation (WHERE) for lyrical nuisance complaints (WHY). Public health messaging treats invasive species proliferation as a temporary weather inconvenience rather than a structural ecological shift.",
+      "Social Physics Analysis:\nMunicipal bodies rely on post-hoc emergency spraying rather than proactive water infrastructure management. By framing climate-driven vector expansion as an unavoidable seasonal crisis, authorities deflect accountability for urban drainage failures.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated public protection and actual vector suppression, it plots a direct trajectory toward Deception. Reactive spraying fails to halt systemic ecological adaptation.",
+      "The Unavoidable Truth: Urban heatwaves and stagnant runoff drive invasive mosquito proliferation across Los Angeles.\nThe Unavoidable Lie: Reactive spraying alone can suppress vector-borne disease without structural urban drainage reforms.",
+      "Alethekanon:\nEmergency vector control without urban drainage reform is mere symptomatic management. Public safety demands structural infrastructure adaptation, not periodic chemical panic.",
+      "Awwthekanon:\nIt is exhausting for families unable to enjoy their own yards or rest peacefully at night. People deserve safe, bite-free neighborhoods where children can play without fear of illness.",
+      "Brothekanon:\nBro, getting eaten alive by ankle-biters the second you step outside is pure misery. Swatting bugs with an electric racquet all night isn't outdoor living, it's survival mode.",
+      "Spirithekanon:\n\"Prevent trouble before it arises; put things in order before chaos begins.\" Tao Te Ching 64 PASS\nReactive panic cannot substitute for foresight in safeguarding human communities."
+    ],
+    "actors": [
+      "Los Angeles County Department of Public Health",
+      "Los Angeles Residents",
+      "Vector Control Districts",
+      "Los Angeles"
+    ],
+    "actor_roles": [
+      {
+        "name": "Los Angeles County Department of Public Health",
+        "role": "instigator"
+      },
+      {
+        "name": "Los Angeles Residents",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Vector Control Districts",
+        "role": "instigator"
+      },
+      {
+        "name": "Los Angeles",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 3.5,
+    "claim_z": 0,
+    "real_z": 2,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Partially Distorted",
+    "stated_forces": null,
+    "actual_forces": null,
+    "aspects": [
+      {
+        "aspect": "Vector Control Response",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.35,
+        "real_psi": 0.35,
+        "verdict": "COND",
+        "reason": "Emergency spraying struggles against invasive Aedes species."
+      },
+      {
+        "aspect": "Media Coverage",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": 0.2,
+        "real_psi": 0.1,
+        "verdict": "PASS",
+        "reason": "Reports real West Nile surge despite tabloid framing."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nMosquitos spike in LA with hellish hoards wreaking havoc across city\n\nA deadly combination of record-shattering heatwaves and El Niño threats has turned Southern California into a breeding paradise for the winged pests\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search results.\n\nBeyond Hollywood glitz, Los Angeles now has another crown. It has become the most mosquito infested city in the US.\n\nA deadly combination of record-shattering heatwaves and El Niño threats has turned Southern California into a breeding paradise for the winged pests.\n\nFed-up residents are reporting a year of agony as clouds of bugs terrorize backyards and turn al fresco dining into an ankle-chewing nightmare.\n\nThe biggest news, opinion and culture shaping California right now.\n\nPlease provide a valid email.\n\nBy clicking above you agree to the Terms of Use and Privacy Policy.\n\nNever miss a story\n\n“I’ve been here my whole life and the amount of mosquitoes I’ve seen this summer has been insane,” a TikTok user posted on her profile and the post garnered most than 21,000 likes.\n\nShe added she can’t even go to her backyard because of the bloodsuckers. “You can’t even sit in your car with the windows down. They’re infested everywhere,” she said.\n\nTruman Hedding, who lives in El Segundo, said he spends her night chasing and smacking mosquitos with an electric racquet.\n\n“Our kids have been covered head to toe in mosquito bites…It’s an absolute nightmare. We invest a lot of money to live in a beautiful town like El Segundo. The last thing we want is to stay up all night fighting mosquitoes,” Hedding told Fox 11.\n\nLos Angeles County has recorded over 180 cases of West Nile virus this year—the highest spike in nearly a decade, according to the local public health department.\n\nThe region’s native ‘Culex’ mosquito picks up West Nile from wild birds before passing it on to humans. In nearby Orange County, vector control officials have pulled a staggering 850 traps loaded with West Nile-positive bugs, reports the Guardian.\n\nEven worse are the hyper-aggressive invasive species known as ‘Aedes’ mosquitoes which are also known as “ankle-biters” because they specifically target human legs and bite multiple times in one go.\n\nCalifornia Post News: Facebook, Instagram, TikTok, X, YouTube, WhatsApp, LinkedInCalifornia Post Sports Facebook, Instagram, TikTok, YouTube, XCalifornia Post  Opinion California Post Newsletters: Sign up here!California Post App: Download here!Home delivery: Sign up here!Page Six Hollywood: Sign up here!",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://nypost.com/2026/10/11/us-news/los-angeles-is-the-most-mosquito-infested-city-in-america/",
+        "snippet": "Stated Claim / Post Context:\nMosquitos spike in LA with hellish hoards wreaking havoc across city\n\nA deadly combination of record-shattering heatwaves and El Niño threats has turned Southern California into a breeding paradise for the winged pests\n\nActual Article Body:\nSwitch between CA and NY editi"
+      }
+    ],
+    "category": "all",
+    "topic": "PublicHealth",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/la-mosquito-spike-west-nile-2026_graph.png",
+    "rkeys": [
+      "3mxoav3pflm2x",
+      "3mxoav4icta25",
+      "3mxoav6nesm26",
+      "3mxoavas7mx2u",
+      "3mxoavcwu7a25",
+      "3mxoavf3y5426",
+      "3mxoavhas5z2i",
+      "3mxoavjfqfr2v",
+      "3mxoavll52d2f",
+      "3mxoavnqgib2o",
+      "3mxoavqnkcm26",
+      "3mxoavsslew24",
+      "3mxoavuybgj2o",
+      "3mxoavx5w5i2i",
+      "3mxoavzcs372u"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoav3pflm2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoav4icta25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoav6nesm26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavas7mx2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavcwu7a25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavf3y5426",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavhas5z2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavjfqfr2v",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavll52d2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavnqgib2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavqnkcm26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavsslew24",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavuybgj2o",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavx5w5i2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxoavzcs372u"
+    ],
+    "tags": [
+      "Aletheia",
+      "PublicHealth"
+    ]
+  }
+]

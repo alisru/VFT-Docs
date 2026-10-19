@@ -101,6 +101,32 @@
       "AI",
       "TechPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "China",
+        "role": "context"
+      },
+      {
+        "name": "Scott Bessent",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Hugging Face",
+        "role": "instigator"
+      }
+    ]
   }
 ]

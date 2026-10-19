@@ -74,6 +74,24 @@
       "Israel",
       "Palestina"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Israel",
+        "role": "context"
+      },
+      {
+        "name": "Palestine",
+        "role": "instigator"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      },
+      {
+        "name": "Gaza",
+        "role": "context"
+      }
+    ]
   }
 ]

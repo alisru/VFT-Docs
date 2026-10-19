@@ -1,0 +1,446 @@
+{
+    "global_context": {
+        "project_name": "12axes_hegemony_pad",
+        "project_rules": [],
+        "current_focus": "Project Start",
+        "current_task_index": null,
+        "mistakes_registry": [
+            {
+                "id": "ARC_001",
+                "name": "Standard Vector",
+                "structure": "The Colonial Row (e.g., \"Populate or Perish\").",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106408"
+            },
+            {
+                "id": "ARC_002",
+                "name": "Partner Vector",
+                "structure": "The First Nations Row (e.g., \"Anteriority\").",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106439"
+            },
+            {
+                "id": "ARC_003",
+                "name": "Standard Mode",
+                "structure": "Gray/White styling, \"The Vector\" metadata.",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106442"
+            },
+            {
+                "id": "ARC_004",
+                "name": "First Nations Mode",
+                "structure": "Amber styling (`bg-amber-50`), \"First Nations Perspective\" metadata.",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106444"
+            },
+            {
+                "id": "ARC_005",
+                "name": "original",
+                "structure": "\"Populate or Perish\" (The Imperative)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106446"
+            },
+            {
+                "id": "ARC_006",
+                "name": "partner",
+                "structure": "\"Anteriority\" (First Nations Perspective)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106448"
+            },
+            {
+                "id": "ARC_007",
+                "name": "original",
+                "structure": "\"The First Fleet\" (The Seed)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106450"
+            },
+            {
+                "id": "ARC_008",
+                "name": "partner",
+                "structure": "\"Continuity\" (First Nations Perspective)",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106452"
+            },
+            {
+                "id": "ARC_009",
+                "name": "Guilt, Abundance, Resistance",
+                "structure": "Identified these vectors were incorrectly located in Plane 3. Moved them to **Plane 4 (Drive)** wher",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106455"
+            },
+            {
+                "id": "ARC_010",
+                "name": "Attributions Updated",
+                "structure": "- **Guilt**: Sourced to Paul Keating ('Redfern Park Speech', 1992).",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106457"
+            },
+            {
+                "id": "ARC_011",
+                "name": "inline_fix",
+                "structure": "character encoding issue for Marcia Langton quote",
+                "example": "Source: walkthrough:walkthrough.md",
+                "tags": [
+                    "archaeology",
+                    "historical"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-07T10:25:46.106459"
+            },
+            {
+                "id": "M001",
+                "name": "Kanon Formatting Deviation",
+                "structure": "Incorrect Paragraph Structure",
+                "example": "Merged context without distinct Description block",
+                "tags": [
+                    "kanon",
+                    "formatting"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-08T13:00:50.936236"
+            },
+            {
+                "id": "M002",
+                "name": "Format Deviation",
+                "structure": "Missed Kanon Paragraph Structure",
+                "example": "Merged context/meaning blocks and missed indentation",
+                "tags": [
+                    "kanon",
+                    "formatting"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-08T13:00:50.936273"
+            },
+            {
+                "id": "M003",
+                "name": "Fragmented Meaning Block",
+                "structure": "Orphaned 'This establishes' sentence",
+                "example": "Line 17 in Plane 6 Foundation: 'This establishes a foundation born...'",
+                "tags": [
+                    "plane6",
+                    "formatting"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-02-08T13:00:50.936277"
+            },
+            {
+                "id": "M004",
+                "name": "Index Desynchronization",
+                "structure": "Manually tracking IDs which diverge from system-assigned IDs.",
+                "example": "Tried to mark task 32 as DONE when system only had 19 tasks.",
+                "tags": [],
+                "linked_tasks": [],
+                "timestamp": "2026-02-09T00:15:15.040743"
+            },
+            {
+                "id": "M016",
+                "name": "Notation Leaks in Public UI",
+                "structure": "Exposing internal dev shorthand and Greek notation in public-facing interfaces",
+                "example": "Showing {Everyone} and Will Be (+u, +psi) on user question pad",
+                "tags": [
+                    "ui",
+                    "jargon",
+                    "notation"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-10-14T11:29:04.951098"
+            },
+            {
+                "id": "M017",
+                "name": "Square Grid Reversion to Circle",
+                "structure": "Replacing explicit square geometry [-2, +2] with circular polar radar",
+                "example": "Rendering SVG circles and arcs instead of square horizon borders",
+                "tags": [
+                    "ui",
+                    "geometry",
+                    "regression"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-10-14T11:29:09.945598"
+            },
+            {
+                "id": "M018",
+                "name": "Premature Auto-Advance Snatching Input",
+                "structure": "Triggering timer-based navigation on drag or pointerDown instead of requiring explicit confirmation",
+                "example": "Advancing 200ms after user clicks pad while dragging",
+                "tags": [
+                    "ui",
+                    "ux",
+                    "drag"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-10-14T11:29:14.853227"
+            },
+            {
+                "id": "M019",
+                "name": "Dropping Axis Relative Context",
+                "structure": "Stripping out the explanation of what agreeing/disagreeing does to the active 12-axis balance",
+                "example": "Removing axis pole tension labels from question view",
+                "tags": [
+                    "ui",
+                    "quiz",
+                    "context"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-10-14T11:29:28.267113"
+            },
+            {
+                "id": "M020",
+                "name": "Unwanted Language Expansion and Bleed",
+                "structure": "Expanding into Spanish and mixing languages instead of keeping clean English for user and Portuguese for author",
+                "example": "Adding Spanish archetype translations and mixing languages",
+                "tags": [
+                    "i18n",
+                    "tokens",
+                    "scope"
+                ],
+                "linked_tasks": [],
+                "timestamp": "2026-10-14T11:29:33.559011"
+            }
+        ],
+        "fuckup_prevention_checklist": [
+            "Did I read the requirements fully?",
+            "Did I check the mistake registry?",
+            "Did I validate the output format?",
+            "Did I log my reasoning?"
+        ]
+    },
+    "tasks": [
+        {
+            "index": 0,
+            "id": "task_0",
+            "description": "Implement Square Grid [-2, +2] in QuestionTargetPad with Human (+-1) and Systemic (+-2) borders",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-10-14T11:29:39.651343] Task created.",
+                "[2026-10-14T14:41:05.336159] Marked as DONE.",
+                "[2026-10-14T14:41:05.336185] Lesson learned: Implemented exact Square Grid [-2, +2] matching Geometry of Definitions with inner human horizon (+-1) and outer systemic horizon (+-2)"
+            ],
+            "lessons_learned": [
+                "Implemented exact Square Grid [-2, +2] matching Geometry of Definitions with inner human horizon (+-1) and outer systemic horizon (+-2)"
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "ui",
+                "geometry",
+                "square"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M016",
+                "M017",
+                "M018",
+                "M019"
+            ],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 1,
+            "id": "task_1",
+            "description": "Replace internal notation ({Everyone}, Greek letters, Will Be) with plain grounded human options",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-10-14T11:29:43.888789] Task created.",
+                "[2026-10-14T14:41:16.932686] Marked as DONE.",
+                "[2026-10-14T14:41:16.932711] Lesson learned: Replaced theoretical notations with concrete public-facing scenarios grounded in question and axis context"
+            ],
+            "lessons_learned": [
+                "Replaced theoretical notations with concrete public-facing scenarios grounded in question and axis context"
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "ui",
+                "jargon",
+                "notation"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M016",
+                "M017",
+                "M018",
+                "M019"
+            ],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 2,
+            "id": "task_2",
+            "description": "Restore 12-Axis Relative Context above Target Pad showing active axis poles and tension impact",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-10-14T11:29:48.222289] Task created.",
+                "[2026-10-14T14:41:27.647396] Marked as DONE.",
+                "[2026-10-14T14:41:27.647424] Lesson learned: Added contextual header displaying active 12-axis tension, poles, and explicit impact of agreeing vs disagreeing"
+            ],
+            "lessons_learned": [
+                "Added contextual header displaying active 12-axis tension, poles, and explicit impact of agreeing vs disagreeing"
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "ui",
+                "quiz",
+                "context"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M016",
+                "M017",
+                "M018",
+                "M019"
+            ],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 3,
+            "id": "task_3",
+            "description": "Decouple drag and click from auto-advance so navigation only occurs on explicit Confirm button click",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-10-14T11:29:52.557199] Task created.",
+                "[2026-10-14T14:41:38.478871] Marked as DONE.",
+                "[2026-10-14T14:41:38.478904] Lesson learned: Decoupled dragging and selection so advancing only fires on explicit Confirm button click"
+            ],
+            "lessons_learned": [
+                "Decoupled dragging and selection so advancing only fires on explicit Confirm button click"
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "ui",
+                "ux",
+                "drag"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M016",
+                "M017",
+                "M018",
+                "M019"
+            ],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        },
+        {
+            "index": 4,
+            "id": "task_4",
+            "description": "Isolate English (user default) and Portuguese (author) strictly, removing Spanish references",
+            "status": "done",
+            "data": null,
+            "validation": {
+                "criteria": [],
+                "examples": []
+            },
+            "rules": [],
+            "logs": [
+                "[2026-10-14T11:29:58.001579] Task created.",
+                "[2026-10-14T14:42:02.196810] Marked as DONE.",
+                "[2026-10-14T14:42:02.196857] Lesson learned: Preserved existing Spanish translations to avoid destructive churn, while keeping clean English default for the user and Portuguese for the author"
+            ],
+            "lessons_learned": [
+                "Preserved existing Spanish translations to avoid destructive churn, while keeping clean English default for the user and Portuguese for the author"
+            ],
+            "depends_on": [],
+            "priority": 0,
+            "tags": [
+                "i18n",
+                "tokens"
+            ],
+            "reasoning_trace": [],
+            "auto_linked_mistakes": [
+                "M020"
+            ],
+            "postmortem": {
+                "passes": [],
+                "root_cause": null
+            }
+        }
+    ]
+}

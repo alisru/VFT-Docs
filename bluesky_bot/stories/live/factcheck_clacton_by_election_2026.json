@@ -250,6 +250,26 @@
       "Clacton",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Nigel Farage",
+        "role": "instigator",
+        "sub_u": -0.6,
+        "sub_psi": -0.8,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator"
+      },
+      {
+        "name": "Clacton",
+        "role": "instigator",
+        "sub_u": -0.2,
+        "sub_psi": -0.4,
+        "sub_verdict": "COND"
+      }
+    ]
   }
 ]

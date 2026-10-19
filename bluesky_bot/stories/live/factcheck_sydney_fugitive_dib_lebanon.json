@@ -252,6 +252,27 @@
       "Crime",
       "Sydney"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "George Dib",
+        "role": "instigator"
+      },
+      {
+        "name": "Australian Federal Police",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "NSW Police Force",
+        "role": "instigator"
+      },
+      {
+        "name": "Lebanon",
+        "role": "instigator"
+      }
+    ]
   }
 ]

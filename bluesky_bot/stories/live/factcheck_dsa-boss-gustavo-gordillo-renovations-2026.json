@@ -262,6 +262,30 @@
     "tags": [
       "USPol",
       "NYC"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gustavo Gordillo",
+        "role": "instigator",
+        "sub_u": -1.0,
+        "sub_psi": -1.0,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Democratic Socialists of America",
+        "role": "instigator"
+      },
+      {
+        "name": "Landmarks Preservation Commission",
+        "role": "regulator"
+      },
+      {
+        "name": "Brooklyn Community Board 3",
+        "role": "instigator",
+        "sub_u": 0.8,
+        "sub_psi": 0.5,
+        "sub_verdict": "PASS"
+      }
     ]
   }
 ]

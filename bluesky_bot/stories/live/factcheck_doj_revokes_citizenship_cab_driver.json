@@ -143,6 +143,23 @@
       "Aletheia",
       "Justice",
       "DOJ"
+    ],
+    "actor_roles": [
+      {
+        "name": "Gurmeet Singh",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Justice",
+        "role": "regulator",
+        "sub_u": 1.0,
+        "sub_psi": 0.75,
+        "sub_verdict": "PASS"
+      },
+      {
+        "name": "Todd Blanche",
+        "role": "instigator"
+      }
     ]
   }
 ]

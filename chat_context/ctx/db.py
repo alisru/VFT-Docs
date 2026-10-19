@@ -4,6 +4,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "data" / "chats.sqlite"
 
+CANVASES_DIR = ROOT / "canvases"
+DRAFTS_DIR = ROOT / "drafts"
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS topics (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,17 +41,53 @@ CREATE TABLE IF NOT EXISTS chunks (
     emb BLOB
 );
 CREATE INDEX IF NOT EXISTS chunks_chat ON chunks(chat_id);
+CREATE TABLE IF NOT EXISTS canvases (
+    id TEXT PRIMARY KEY,
+    chat_id TEXT NOT NULL,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    type TEXT,
+    file_path TEXT,
+    updated TEXT NOT NULL,
+    FOREIGN KEY (chat_id) REFERENCES chats(id) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS idx_canvases_chat ON canvases(chat_id);
+CREATE TABLE IF NOT EXISTS drafts (
+    id TEXT PRIMARY KEY,
+    site TEXT NOT NULL,
+    url TEXT NOT NULL,
+    page_title TEXT,
+    context_title TEXT,
+    text TEXT NOT NULL,
+    char_count INTEGER,
+    word_count INTEGER,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    file_path TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_drafts_site ON drafts(site);
+CREATE INDEX IF NOT EXISTS idx_drafts_updated ON drafts(updated_at DESC);
 """
 
 
+def init_db():
+    """Run once on startup to configure WAL mode, tables, and migrations."""
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CANVASES_DIR.mkdir(parents=True, exist_ok=True)
+    DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
+    with sqlite3.connect(DB_PATH, timeout=30) as con:
+        con.execute("PRAGMA journal_mode=WAL")
+        con.executescript(SCHEMA)
+        cols = [r[1] for r in con.execute("PRAGMA table_info(chats)")]
+        if "url" not in cols:
+            con.execute("ALTER TABLE chats ADD COLUMN url TEXT")
+            con.commit()
+
+
 def connect():
+    """Fast connection factory for active queries."""
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(DB_PATH, timeout=30)
     con.row_factory = sqlite3.Row
-    con.execute("PRAGMA journal_mode=WAL")
-    con.executescript(SCHEMA)
-    cols = [r[1] for r in con.execute("PRAGMA table_info(chats)")]
-    if "url" not in cols:
-        con.execute("ALTER TABLE chats ADD COLUMN url TEXT")
-        con.commit()
+    con.execute("PRAGMA foreign_keys = ON")
     return con

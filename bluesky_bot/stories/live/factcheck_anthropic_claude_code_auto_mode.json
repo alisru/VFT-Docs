@@ -162,6 +162,20 @@
       "AI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Boris Cherny",
+        "role": "instigator"
+      },
+      {
+        "name": "Amazon",
+        "role": "instigator"
+      }
+    ]
   }
 ]

@@ -251,6 +251,27 @@
       "Aletheia",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Jamie Raskin",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "David Ellison",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Makan Delrahim",
+        "role": "instigator"
+      }
+    ]
   }
 ]

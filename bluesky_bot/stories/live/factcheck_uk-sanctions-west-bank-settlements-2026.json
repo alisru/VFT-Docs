@@ -143,6 +143,27 @@
     "tags": [
       "Aletheia",
       "Geopolitics"
+    ],
+    "actor_roles": [
+      {
+        "name": "Ed Miliband",
+        "role": "instigator"
+      },
+      {
+        "name": "Gideon Saar",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Israel",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.75,
+        "sub_verdict": "FAIL"
+      }
     ]
   }
 ]

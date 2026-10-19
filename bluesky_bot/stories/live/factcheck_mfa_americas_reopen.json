@@ -74,6 +74,24 @@
       "MFA",
       "History"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Museum of Fine Arts",
+        "role": "instigator"
+      },
+      {
+        "name": "George Washington",
+        "role": "instigator"
+      },
+      {
+        "name": "Paul Revere",
+        "role": "instigator"
+      },
+      {
+        "name": "Alan Michelson",
+        "role": "instigator"
+      }
+    ]
   }
 ]

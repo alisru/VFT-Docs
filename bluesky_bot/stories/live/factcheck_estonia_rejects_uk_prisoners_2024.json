@@ -253,6 +253,38 @@
       "Aletheia",
       "UKPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Liisa Pakosta",
+        "role": "instigator"
+      },
+      {
+        "name": "Nigel Farage",
+        "role": "instigator"
+      },
+      {
+        "name": "Reform UK",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Conservative Party",
+        "role": "instigator"
+      },
+      {
+        "name": "United Kingdom",
+        "role": "context"
+      },
+      {
+        "name": "Estonia",
+        "role": "instigator",
+        "sub_u": 0.95,
+        "sub_psi": 0.05,
+        "sub_verdict": "PASS"
+      }
+    ]
   }
 ]

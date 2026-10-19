@@ -190,6 +190,30 @@
     "tags": [
       "Education",
       "California"
+    ],
+    "actor_roles": [
+      {
+        "name": "Sanger Unified School District",
+        "role": "instigator",
+        "sub_u": -0.4,
+        "sub_psi": -0.5,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Reedley College",
+        "role": "instigator",
+        "sub_u": -0.5,
+        "sub_psi": -0.7,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Dennis Weichmann",
+        "role": "instigator"
+      },
+      {
+        "name": "Jose Soria",
+        "role": "instigator"
+      }
     ]
   }
 ]

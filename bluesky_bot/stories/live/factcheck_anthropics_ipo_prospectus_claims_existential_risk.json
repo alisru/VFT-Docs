@@ -146,6 +146,31 @@
       "Aletheia",
       "AI",
       "Tech"
+    ],
+    "actor_roles": [
+      {
+        "name": "Anthropic",
+        "role": "instigator",
+        "sub_u": -0.8,
+        "sub_psi": -0.9,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Dario Amodei",
+        "role": "instigator"
+      },
+      {
+        "name": "Wall Street",
+        "role": "instigator"
+      },
+      {
+        "name": "CNBC",
+        "role": "author"
+      },
+      {
+        "name": "Breitbart",
+        "role": "author"
+      }
     ]
   }
 ]

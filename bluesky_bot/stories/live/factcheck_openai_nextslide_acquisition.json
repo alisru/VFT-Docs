@@ -98,6 +98,20 @@
       "OpenAI",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "NextSlide",
+        "role": "instigator"
+      },
+      {
+        "name": "Ahmed Beshry",
+        "role": "instigator"
+      }
+    ]
   }
 ]

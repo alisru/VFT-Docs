@@ -163,6 +163,24 @@
       "PublicHealth",
       "USPol"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Robert F. Kennedy Jr.",
+        "role": "instigator"
+      },
+      {
+        "name": "Bill Cassidy",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ]
   }
 ]

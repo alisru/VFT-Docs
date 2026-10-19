@@ -99,6 +99,24 @@
       "Aletheia",
       "MentalHealth"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "The Week Junior",
+        "role": "instigator"
+      },
+      {
+        "name": "The King's Trust",
+        "role": "instigator"
+      },
+      {
+        "name": "John Smith Centre",
+        "role": "instigator"
+      },
+      {
+        "name": "The Children's Society",
+        "role": "acted_upon"
+      }
+    ]
   }
 ]

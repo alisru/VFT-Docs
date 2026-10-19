@@ -143,6 +143,23 @@
     "tags": [
       "Aletheia",
       "Finance"
+    ],
+    "actor_roles": [
+      {
+        "name": "Polymarket",
+        "role": "instigator",
+        "sub_u": -0.9,
+        "sub_psi": -0.95,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "State Farm",
+        "role": "instigator"
+      },
+      {
+        "name": "Pacific Palisades Residents",
+        "role": "acted_upon"
+      }
     ]
   }
 ]

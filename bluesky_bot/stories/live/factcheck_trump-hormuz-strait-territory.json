@@ -251,6 +251,27 @@
     "tags": [
       "Geopolitics",
       "Oil"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator",
+        "sub_u": -0.92,
+        "sub_psi": -0.85,
+        "sub_verdict": "FAIL"
+      },
+      {
+        "name": "Kazem Gharibabadi",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "Iran",
+        "role": "context"
+      }
     ]
   }
 ]

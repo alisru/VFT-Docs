@@ -72,6 +72,16 @@
       "Waymo",
       "Tech"
     ],
-    "policies": []
+    "policies": [],
+    "actor_roles": [
+      {
+        "name": "Waymo",
+        "role": "instigator"
+      },
+      {
+        "name": "NHTSA",
+        "role": "instigator"
+      }
+    ]
   }
 ]
