@@ -2634,31 +2634,6 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
     let storiesByCategory = {};
     let storiesByTopic = {};
 
-    const SHORTENER_MAP = {
-      'cnn.it': 'cnn.com',
-      'nyti.ms': 'nytimes.com',
-      'nbcnews.to': 'nbcnews.com',
-      'reut.rs': 'reuters.com',
-      'wapo.st': 'washingtonpost.com',
-      'abcn.ws': 'abcnews.go.com',
-      'cbsn.ws': 'cbsnews.com',
-      'fxn.ws': 'foxnews.com',
-      'ti.me': 'time.com',
-      'apne.ws': 'apnews.com',
-      'ft.trib.al': 'ft.com'
-    };
-    const GENERIC_SHORTENERS = ['trib.al', 'bit.ly', 'tinyurl.com', 'dlvr.it', 'buff.ly', 'ow.ly', 'ift.tt', 'tiny.cc', 'is.gd'];
-
-    function cleanOutletHost(host) {
-      if (!host || !host.includes('.')) return null;
-      if (SHORTENER_MAP[host]) return SHORTENER_MAP[host];
-      for (let i = 0; i < GENERIC_SHORTENERS.length; i++) {
-        const s = GENERIC_SHORTENERS[i];
-        if (host === s || host.endsWith('.' + s)) return null;
-      }
-      return host;
-    }
-
     function rebuildIndexMaps() {
       storiesByActor = {};
       storiesByOutlet = {};
@@ -2679,8 +2654,7 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         // Outlet
         if (s.link) {
           try {
-            const rawHost = new URL(s.link).hostname.replace(/^www\./, '').toLowerCase();
-            const host = cleanOutletHost(rawHost);
+            const host = new URL(s.link).hostname.replace(/^www\./, '').toLowerCase();
             if (host) {
               if (!storiesByOutlet[host]) storiesByOutlet[host] = [];
               storiesByOutlet[host].push(s);
@@ -2867,25 +2841,10 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
     let _topicSort2Col = 'none';
     let _topicSort2Dir = 'asc';
     let _actorRoleFilter = 'instigator'; // 'all', 'instigator', 'acted_upon', 'author', 'regulator', 'context'
-    let _outletMode = 'editorial'; // 'editorial' (Source Quality / Editorial Integrity), 'target' (Subject Distortion / Real-world Extraction)
     const _openLeaderboardDropdowns = new Set();
     const _leaderboardPageSizes = { actor: 100, outlet: 100, category: 100, topic: 100 };
     const _leaderboardSearches  = { actor: '', outlet: '', category: '', topic: '' };
     let _statsCache = { all: {}, live: {} };
-
-    function setOutletMode(val) {
-      _outletMode = val;
-      _statsCache = { all: {}, live: {} };
-      _leaderboardPageSizes['outlet'] = 100;
-      if (_outletMode === 'editorial') {
-        _outletSortCol = 'passRate';
-        _outletSortDir = 'desc';
-      } else {
-        _outletSortCol = 'avgDelta';
-        _outletSortDir = 'desc';
-      }
-      updateLeaderboard('outlet');
-    }
 
     function setActorRoleFilter(val) {
       _actorRoleFilter = val;
@@ -3043,15 +3002,11 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
     // Extract a numeric value from a row for a given sort column.
     // Round floats to 2 decimal places (matching displayed UI) to allow secondary tiebreakers to execute.
     function _colVal(r, col) {
-      if (col === 'n')            return r.n;
-      if (col === 'passRate')     return Math.round((r.passRate || 0) * 100) / 100;
-      if (col === 'expose')       return r.expose || 0;
-      if (col === 'constructive') return r.constructive || 0;
-      if (col === 'whitewash')    return (r.whitewash || 0) + (r.smear || 0);
-      if (col === 'avgDelta')     return Math.round((r.avgDelta || 0) * 100) / 100;
-      if (col === 'avgRealU')     return Math.round((r.avgRealU || 0) * 100) / 100;
-      if (col === 'avgRealPsi')   return Math.round((r.avgRealPsi || 0) * 100) / 100;
-      if (col === 'consistency')  return Math.round((r.consistency || 0) * 100) / 100;
+      if (col === 'n')           return r.n;
+      if (col === 'avgDelta')    return Math.round((r.avgDelta || 0) * 100) / 100;
+      if (col === 'avgRealU')    return Math.round((r.avgRealU || 0) * 100) / 100;
+      if (col === 'avgRealPsi')  return Math.round((r.avgRealPsi || 0) * 100) / 100;
+      if (col === 'consistency') return Math.round((r.consistency || 0) * 100) / 100;
       return 0;
     }
 
@@ -4157,40 +4112,21 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         <div style="display:flex; flex-direction:column; gap:0.3rem;">
           ${related.map(s => {
             const sDelta = (s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined) ? s.claim_u - s.real_u : 0;
+            const sColor = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
             const sourceLink = s.link ? `<a href="${s.link}" target="_blank" onclick="event.stopPropagation()" title="Original Article" style="color:var(--bsky-blue); text-decoration:none; margin-right:6px;">🔗</a>` : '';
             const bskyUrl = (s.post_urls && s.post_urls.length) ? s.post_urls[0] : (s.target_url ? s.target_url : null);
             const bskyLink = bskyUrl ? `<a href="${bskyUrl}" target="_blank" onclick="event.stopPropagation()" title="Bluesky Thread" style="color:#0085ff; text-decoration:none; margin-right:6px;">🦋</a>` : '';
             const linksSpan = (sourceLink || bskyLink) ? `<span style="font-size:0.85rem; display:inline-flex; align-items:center;">${sourceLink}${bskyLink}</span>` : '';
-
-            let badge = '';
-            let sColor = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
-            if (tableType === 'outlet' && _outletMode === 'editorial') {
-              const rep = auditStoryReporting(s);
-              if (rep.quadrant === 'expose') {
-                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(34,197,94,0.15); color:var(--pass-green); border:1px solid rgba(34,197,94,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">🛡️ EXPOSÉ (Bad as Bad)</span>`;
-                sColor = 'var(--pass-green)';
-              } else if (rep.quadrant === 'constructive') {
-                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(56,189,248,0.15); color:var(--bsky-blue); border:1px solid rgba(56,189,248,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">✨ PROGRESS (Good as Good)</span>`;
-                sColor = 'var(--bsky-blue)';
-              } else if (rep.quadrant === 'whitewash') {
-                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(239,68,68,0.15); color:var(--reality-red); border:1px solid rgba(239,68,68,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">🎭 WHITEWASH (Bad as Good)</span>`;
-                sColor = 'var(--reality-red)';
-              } else {
-                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">🎯 SMEAR (Good as Bad)</span>`;
-                sColor = 'var(--reality-red)';
-              }
-            }
 
             return `
               <div data-story-id="${s.id}" style="display:flex; justify-content:space-between; align-items:center; padding:0.2rem 0.4rem; border-radius:4px; cursor:pointer;"
                    onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
                  <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:70%; display:inline-flex; align-items:center;">
                   ${linksSpan}
-                  ${badge}
                   <span style="text-decoration:underline; color:var(--text-muted);">${s.subject || s.id}</span>
                 </span>
                 <span style="font-family:var(--font-mono); color:${sColor}; font-size:0.7rem; white-space:nowrap; margin-left:0.5rem;">
-                  u: ${fmt(s.real_u)} | claim: ${fmt(s.claim_u)}
+                  u: ${fmt(s.real_u)} | Δu: ${fmt(sDelta)}
                 </span>
               </div>
             `;
@@ -4226,68 +4162,8 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       }
     }
 
-    const COMMENTARY_CUES = [
-      'the article', 'the piece', 'the essay', 'the commentary', 'partisan commentary', 
-      'the op-ed', 'this piece', 'the headline', 'partisan media', 'media framing',
-      'media weaponized', 'punditry', 'culture war', 'weaponizing', 'romanticizing', 
-      'cherry-pick', 'fearmonger', 'manufacture outrage', 'manufacture existential', 
-      'manufacture an election crisis', 'sensationalist', 'stoking panic', 'stoke outrage',
-      'pundits', 'talking heads', 'partisan narrative'
-    ];
-
-    function auditStoryReporting(s) {
-      const ru = (s.real_u !== undefined && s.real_u !== null) ? s.real_u : 0;
-      const cu = (s.claim_u !== undefined && s.claim_u !== null) ? s.claim_u : 0;
-      const posts = Array.isArray(s.posts) ? s.posts : [];
-      const p3 = (posts[3] || '').toLowerCase();
-      
-      const isMediaFaulted = COMMENTARY_CUES.some(c => p3.includes(c));
-
-      // 1. Explicit author sub-audits
-      for (let pi = 3; pi <= Math.min(5, posts.length - 1); pi++) {
-        const p = posts[pi] || '';
-        if (p.includes('PASS') || p.includes('FAIL')) {
-          const lines = p.split('\n');
-          for (const l of lines) {
-            const ll = l.toLowerCase();
-            if (ll.includes('reporting') || ll.includes('coverage') || ll.includes('journalism') || ll.includes('investigation') || ll.includes('editorial') || ll.includes('article') || ll.includes('framing')) {
-              if (l.toUpperCase().includes('PASS')) return { verdict: 'PASS', quadrant: ru < 0 ? 'expose' : 'constructive' };
-              if (l.toUpperCase().includes('FAIL')) return { verdict: 'FAIL', quadrant: ru < 0 ? 'whitewash' : 'smear' };
-            }
-          }
-        }
-      }
-
-      // 2. Four Quadrants:
-      // Bad Event (real_u < -0.15)
-      if (ru < -0.15) {
-        if (isMediaFaulted) {
-          return { verdict: 'FAIL', quadrant: 'whitewash' }; // Bad event presented as good story / weaponized spin
-        } else {
-          return { verdict: 'PASS', quadrant: 'expose' }; // Bad event presented as bad story / honest watchdog
-        }
-      }
-      // Good Event (real_u > 0.15)
-      else if (ru > 0.15) {
-        if (isMediaFaulted || cu < -0.2) {
-          return { verdict: 'FAIL', quadrant: 'smear' }; // Good event presented as bad story / cynical smear
-        } else {
-          return { verdict: 'PASS', quadrant: 'constructive' }; // Good event presented as good story / honest progress
-        }
-      }
-      // Neutral Event
-      else {
-        if (isMediaFaulted || Math.abs(cu - ru) > 0.8) {
-          return { verdict: 'FAIL', quadrant: 'whitewash' };
-        } else {
-          return { verdict: 'PASS', quadrant: 'constructive' };
-        }
-      }
-    }
-
-    function _statsForGroups(stories, keyFn, isOutletEditorial = false) {
+    function _statsForGroups(stories, keyFn) {
       const groups = {};
-
       stories.forEach(s => {
         if (s.claim_u === null || s.claim_u === undefined || s.real_u === null || s.real_u === undefined) return;
         const keys = keyFn(s);
@@ -4295,27 +4171,15 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           if (!k) return;
           const realPsi = (s.real_psi !== null && s.real_psi !== undefined) ? s.real_psi : 0;
           if (!groups[k]) {
-            groups[k] = { 
-              sumDelta: 0, sumRealU: 0, sumRealPsi: 0, deltas: [],
-              expose: 0, constructive: 0, whitewash: 0, smear: 0
-            };
+            groups[k] = { sumDelta: 0, sumRealU: 0, sumRealPsi: 0, deltas: [] };
           }
           const delta = s.claim_u - s.real_u;
           groups[k].sumDelta += delta;
           groups[k].sumRealU += s.real_u;
           groups[k].sumRealPsi += realPsi;
           groups[k].deltas.push(delta);
-
-          if (isOutletEditorial) {
-            const rep = auditStoryReporting(s);
-            if (rep.quadrant === 'expose') groups[k].expose++;
-            else if (rep.quadrant === 'constructive') groups[k].constructive++;
-            else if (rep.quadrant === 'whitewash') groups[k].whitewash++;
-            else if (rep.quadrant === 'smear') groups[k].smear++;
-          }
         });
       });
-
       return Object.entries(groups).map(([k, g]) => {
         const n = g.deltas.length;
         const mDelta = g.sumDelta / n;
@@ -4330,36 +4194,21 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           }
           variance = sumSq / n;
         }
-
-        const totalEvals = g.expose + g.constructive + g.whitewash + g.smear;
-        const passes = g.expose + g.constructive;
-        const fails = g.whitewash + g.smear;
-        const passRate = totalEvals > 0 ? (passes / totalEvals) * 100 : 0;
-
         return { 
           key: k, 
           n: n, 
           avgDelta: mDelta, 
           avgRealU: mRealU, 
           avgRealPsi: mRealPsi,
-          consistency: Math.sqrt(variance),
-          expose: g.expose,
-          constructive: g.constructive,
-          whitewash: g.whitewash,
-          smear: g.smear,
-          passes: passes,
-          fails: fails,
-          totalEvals: totalEvals,
-          passRate: passRate
+          consistency: Math.sqrt(variance) 
         };
       });
     }
 
     function _getStatsForTable(stories, tableType) {
       const scope = _auditScope || 'all';
-      const cacheKey = tableType === 'outlet' ? `${tableType}_${_outletMode}` : (tableType === 'actor' ? `${tableType}_${_actorRoleFilter}` : tableType);
-      if (_statsCache[scope] && _statsCache[scope][cacheKey]) {
-        return _statsCache[scope][cacheKey];
+      if (_statsCache[scope] && _statsCache[scope][tableType]) {
+        return _statsCache[scope][tableType];
       }
       let keyFn;
       if (tableType === 'actor') {
@@ -4370,17 +4219,17 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           if (roles.length > 0) {
             return roles.filter(r => (r.role || 'instigator') === _actorRoleFilter).map(r => r.name);
           }
+          // Fallback if actor_roles not present
           return s.actors;
         };
       } else if (tableType === 'outlet') {
         keyFn = s => {
-          if (s._outlet !== undefined) return s._outlet ? [s._outlet] : [];
+          if (s._outlet) return [s._outlet];
           try {
-            const rawHost = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '').toLowerCase();
-            const host = cleanOutletHost(rawHost);
+            const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '').toLowerCase();
             s._outlet = host;
-            return host ? [host] : [];
-          } catch(e) { s._outlet = null; return []; }
+            return [host];
+          } catch(e) { return []; }
         };
       } else if (tableType === 'category') {
         keyFn = s => s.category ? s.category.split(',').map(c => c.trim().toLowerCase()).filter(Boolean) : [];
@@ -4388,9 +4237,9 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         keyFn = s => s.topic ? s.topic.split(',').map(t => t.trim().toLowerCase()).filter(Boolean) : [];
       }
 
-      const rows = _statsForGroups(stories, keyFn, tableType === 'outlet');
+      const rows = _statsForGroups(stories, keyFn);
       if (!_statsCache[scope]) _statsCache[scope] = {};
-      _statsCache[scope][cacheKey] = rows;
+      _statsCache[scope][tableType] = rows;
       return rows;
     }
 
@@ -4470,34 +4319,14 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       const pageSize = _leaderboardPageSizes[tableType] || 100;
       const paged = filtered.slice(0, pageSize);
 
-      const isOutletTable = tableType === 'outlet';
-      const isEditorialMode = isOutletTable && _outletMode === 'editorial';
-
-      const roleSelect = tableType === 'actor' ? `
-        <div style="display:flex; align-items:center; gap:0.3rem;">
-          <span style="color:var(--text-muted);">Role:</span>
-          <select onchange="setActorRoleFilter(this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
-            <option value="instigator" ${_actorRoleFilter==='instigator'?'selected':''}>⚡ Instigators</option>
-            <option value="all"        ${_actorRoleFilter==='all'?'selected':''}>All Roles</option>
-            <option value="acted_upon" ${_actorRoleFilter==='acted_upon'?'selected':''}>🎯 Targets/Victims</option>
-            <option value="author"     ${_actorRoleFilter==='author'?'selected':''}>📰 Authors/Media</option>
-            <option value="regulator"  ${_actorRoleFilter==='regulator'?'selected':''}>⚖️ Regulators/Courts</option>
-            <option value="context"    ${_actorRoleFilter==='context'?'selected':''}>🗺️ Context/Nations</option>
-          </select>
-        </div>` : (isOutletTable ? `
-        <div style="display:flex; align-items:center; gap:0.3rem;">
-          <span style="color:var(--text-muted);">Metric:</span>
-          <select onchange="setOutletMode(this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
-            <option value="editorial" ${_outletMode==='editorial'?'selected':''}>📰 Reporting Integrity (4 Quadrants)</option>
-            <option value="target"    ${_outletMode==='target'?'selected':''}>🔍 Subject Atrocities Covered (Target Harm)</option>
-          </select>
-        </div>` : '');
-
       let tableContent = '';
       if (!paged.length) {
         tableContent = '<div style="grid-column: span 6; color:var(--text-muted); text-align:center; padding: 1rem 0;">No entries matching filters.</div>';
       } else {
         tableContent = paged.map((r, idx) => {
+          const ratio = Math.min(1.0, Math.max(0.0, (r.avgDelta || 0) / 3.0));
+          const hue = Math.round(140 - (ratio * 140));
+          const color = `hsl(${hue}, 80%, 48%)`;
           const cleanKey = r.key.replace(/[^a-zA-Z0-9]/g, '-');
           const dropdownId = `dropdown-${tableType}-${cleanKey}`;
           const isOpen = _openLeaderboardDropdowns.has(dropdownId);
@@ -4505,49 +4334,20 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           const arrowTransform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
           const safeKeyEscaped = r.key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 
-          if (isEditorialMode) {
-            const passPct = r.passRate || 0;
-            const hue = Math.round((passPct / 100) * 120); // 0% = Red (0), 100% = Green (120)
-            const color = `hsl(${hue}, 80%, 48%)`;
-            const passText = `${passPct.toFixed(1)}%`;
-            const exposeCount = r.expose || 0;
-            const constrCount = r.constructive || 0;
-            const distCount = (r.whitewash || 0) + (r.smear || 0);
-
-            return `
-              <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}', '${tableType}', '${safeKeyEscaped}')">
-                <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
-              </span>
-              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${passText}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:var(--pass-green); font-weight:600;">${exposeCount}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:var(--bsky-blue); font-weight:600;">${constrCount}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:${distCount > 0 ? 'var(--reality-red)' : 'var(--text-muted)'}; font-weight:600;">${distCount}</span>
-              
-              <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
-                ${isOpen ? _renderDropdownStories(tableType, r.key) : ''}
-              </div>
-            `;
-          } else {
-            const ratio = Math.min(1.0, Math.max(0.0, (r.avgDelta || 0) / 3.0));
-            const hue = Math.round(140 - (ratio * 140));
-            const color = `hsl(${hue}, 80%, 48%)`;
-
-            return `
-              <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}', '${tableType}', '${safeKeyEscaped}')">
-                <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
-              </span>
-              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${fmt(r.avgDelta)}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealU)}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealPsi)}</span>
-              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>
-              
-              <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
-                ${isOpen ? _renderDropdownStories(tableType, r.key) : ''}
-              </div>
-            `;
-          }
+          return `
+            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}', '${tableType}', '${safeKeyEscaped}')">
+              <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
+            </span>
+            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
+            <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${fmt(r.avgDelta)}</span>
+            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealU)}</span>
+            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealPsi)}</span>
+            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>
+            
+            <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
+              ${isOpen ? _renderDropdownStories(tableType, r.key) : ''}
+            </div>
+          `;
         }).join('');
       }
 
@@ -4559,15 +4359,19 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           </div>
         `;
       }
-
-      const col3Header = isEditorialMode ? `Pass Rate${getIndicator('passRate')}` : `avg Δu${getIndicator('avgDelta')}`;
-      const col3Click = isEditorialMode ? `${clickFn}'passRate')` : `${clickFn}'avgDelta')`;
-      const col4Header = isEditorialMode ? `Exposé${getIndicator('expose')}` : `avg u${getIndicator('avgRealU')}`;
-      const col4Click = isEditorialMode ? `${clickFn}'expose')` : `${clickFn}'avgRealU')`;
-      const col5Header = isEditorialMode ? `Progress${getIndicator('constructive')}` : `avg ψ${getIndicator('avgRealPsi')}`;
-      const col5Click = isEditorialMode ? `${clickFn}'constructive')` : `${clickFn}'avgRealPsi')`;
-      const col6Header = isEditorialMode ? `Distortion${getIndicator('whitewash')}` : `σ${getIndicator('consistency')}`;
-      const col6Click = isEditorialMode ? `${clickFn}'whitewash')` : `${clickFn}'consistency')`;
+      
+      const roleSelect = tableType === 'actor' ? `
+        <div style="display:flex; align-items:center; gap:0.3rem;">
+          <span style="color:var(--text-muted);">Role:</span>
+          <select onchange="setActorRoleFilter(this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
+            <option value="instigator" ${_actorRoleFilter==='instigator'?'selected':''}>⚡ Instigators</option>
+            <option value="all"        ${_actorRoleFilter==='all'?'selected':''}>All Roles</option>
+            <option value="acted_upon" ${_actorRoleFilter==='acted_upon'?'selected':''}>🎯 Targets/Victims</option>
+            <option value="author"     ${_actorRoleFilter==='author'?'selected':''}>📰 Authors/Media</option>
+            <option value="regulator"  ${_actorRoleFilter==='regulator'?'selected':''}>⚖️ Regulators/Courts</option>
+            <option value="context"    ${_actorRoleFilter==='context'?'selected':''}>🗺️ Context/Nations</option>
+          </select>
+        </div>` : '';
 
       return `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; font-size:0.75rem; flex-wrap:wrap; gap:0.5rem;">
@@ -4596,10 +4400,10 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
             <!-- Clickable Headers (Standard Column Sorting) -->
             <span style="color:var(--text-muted); font-weight:600; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'key')">${labelHead}${getIndicator('key')}</span>
             <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'n')">n${getIndicator('n')}</span>
-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${col3Click}">${col3Header}</span>
-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${col4Click}">${col4Header}</span>
-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${col5Click}">${col5Header}</span>
-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${col6Click}">${col6Header}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'avgDelta')">avg Δu${getIndicator('avgDelta')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealU')">avg u${getIndicator('avgRealU')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealPsi')">avg ψ${getIndicator('avgRealPsi')}</span>
+            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'consistency')">σ${getIndicator('consistency')}</span>
             
             ${tableContent}
             ${showMoreFooter}
