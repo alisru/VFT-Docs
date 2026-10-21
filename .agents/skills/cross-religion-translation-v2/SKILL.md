@@ -1,6 +1,6 @@
 ---
 name: cross-religion-translation-v2
-description: Execute the Pure Epistemic Fundamental cross-religion translation method (v2). Action-Effect Process Potential pipeline: Word-for-Word Process Translation → Lexicon & Root Primitive Decomposition → 7 Q-Planes Process Potential Matrix → Grounded Canonical Cross-Tradition Re-projections → Invariant & Remainder Ledger.
+description: "Execute the Pure Epistemic Fundamental cross-religion translation method (v2). Action-Effect Process Potential pipeline: Word-for-Word Process Translation → Lexicon & Root Primitive Decomposition → 7 Q-Planes Process Potential Matrix → Grounded Canonical Cross-Tradition Re-projections → Invariant & Remainder Ledger."
 ---
 
 # Cross-Religion Translation v2 — Pure Epistemic Fundamental Method
