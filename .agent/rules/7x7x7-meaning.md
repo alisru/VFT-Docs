@@ -1,7 +1,12 @@
 ---
 trigger: always_on
-glob:
-description: when I talk about the 7x7x7 structure, I mean the 7 planes of the Q-tensor, then each Q tensor has 7 sub-planes called the q-tensor, and each q-tensor has 7 sub-sub-planes called the c-tensor. When I talk about the fractal ratio depth, I mean how many levels of the 7x7x7 structure we are currently exploring. The maximum depth is 3. The minimum depth is 1. We can explore the 7x7x7 structure at any depth and recursive level ie Q1-q1-4,c1-7 which explores the q1-4 plane of the Q1 tensor, and each of the q1-4 sub-planes and their c1-7 sub-sub-planes. 
+glob: "*"
+description: "Clarify the 7x7x7 structure: the 7 planes of the Q-tensor, q-tensor, and c-tensor, fractal ratio depths, interrogatives, and the 42-Structure."
+---
+
+# 7x7x7 Structure & Planes of Reality
+
+When I talk about the 7x7x7 structure, I mean the 7 planes of the Q-tensor, then each Q tensor has 7 sub-planes called the q-tensor, and each q-tensor has 7 sub-sub-planes called the c-tensor. When I talk about the fractal ratio depth, I mean how many levels of the 7x7x7 structure we are currently exploring. The maximum depth is 3. The minimum depth is 1. We can explore the 7x7x7 structure at any depth and recursive level ie Q1-q1-4,c1-7 which explores the q1-4 plane of the Q1 tensor, and each of the q1-4 sub-planes and their c1-7 sub-sub-planes. 
 Or we can explore them as a whole ie Q1-7, q1-7, c1-7. or singularly as Q1, q1, c1.
 Treat it like a multidimensional array where each dimension has 7 elements. 
 Each sub-layer is a connected interrogative, ie, How of Who of Where. or Why of What of Where. or who of who of who. etc.
@@ -34,5 +39,3 @@ THE VERTICAL Soul AXIS (Temporal Link: +/- z)
 
 You are allowed to add a contextually appropriate addition, however you must always include the 7 planes in any response that references the 7x7x7 structure or the planes of reality.
 on Q layer it's interrogative Q, on q layer it's interrogative q of Q, on c layer it's interrogative c of q of Q.
----
-
