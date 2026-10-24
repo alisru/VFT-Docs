@@ -1,0 +1,828 @@
+{
+  "Academic_Perspectives_Hegemony": {
+    "id": "Academic_Perspectives_Hegemony",
+    "genre": "Dense_Philosophical_Epistemology",
+    "sentences_audited": 108,
+    "doc_plane_distribution": {
+      "Q1": 0.1419,
+      "Q2": 0.1933,
+      "Q3": 0.1379,
+      "Q4": 0.1113,
+      "Q5": 0.1605,
+      "Q6": 0.1384,
+      "Q7": 0.1166
+    },
+    "fractal_polytrope_field": {
+      "sentences_sampled": 108,
+      "depth_1": {
+        "active_cells": 7,
+        "total_capacity": 7,
+        "density_rho": 1.0,
+        "entropy_bits": 2.4308
+      },
+      "depth_2": {
+        "active_cells": 33,
+        "total_capacity": 49,
+        "density_rho": 0.6735,
+        "entropy_bits": 4.715
+      },
+      "depth_3": {
+        "active_cells": 77,
+        "total_capacity": 343,
+        "density_rho": 0.2245,
+        "entropy_bits": 6.1228
+      },
+      "fractal_dimension_df": 0.6161,
+      "polytrope_index_np": 1.7
+    },
+    "gluon_flow_42": {
+      "total_transitions": 75,
+      "unique_42_gluon_paths_active": 33,
+      "transition_counts": {
+        "Q5->Q2": 8,
+        "Q2->Q5": 8,
+        "Q1->Q2": 6,
+        "Q2->Q1": 5,
+        "Q6->Q2": 5,
+        "Q2->Q3": 4,
+        "Q2->Q6": 3,
+        "Q2->Q7": 2,
+        "Q7->Q5": 2,
+        "Q5->Q1": 2,
+        "Q3->Q2": 2,
+        "Q1->Q5": 2,
+        "Q1->Q6": 2,
+        "Q3->Q1": 2,
+        "Q5->Q6": 2
+      },
+      "average_gauge_friction": 1.2052,
+      "erratic_jumps_detected": 10,
+      "active_triangle_gauge_cycles": 35,
+      "top_gauge_cycles": {
+        "Q1->Q5->Q2->Q1": 2,
+        "Q2->Q5->Q6->Q2": 2,
+        "Q2->Q7->Q1->Q2": 1,
+        "Q1->Q7->Q5->Q1": 1,
+        "Q7->Q5->Q1->Q7": 1
+      },
+      "sample_erratic_jumps": [
+        {
+          "from_idx": 6,
+          "to_idx": 7,
+          "transition": "Q2->Q7",
+          "friction": 2.2,
+          "role": "Anxious Speculation (Hypothesis directly causing Panic)",
+          "missing_bridge_gluon": "Mediating Fulcrum (Q1 or Q5) needed to stabilize Q2 -> Q7",
+          "from_text": "The axes are strictly bounded, mapping intent and output onto specific numerical valu...",
+          "to_text": "- **Axis \u03c5 (Morality/Beneficiary):** This axis maps the spectrum of ethical scope, de..."
+        },
+        {
+          "from_idx": 9,
+          "to_idx": 10,
+          "transition": "Q7->Q5",
+          "friction": 2.4,
+          "role": "Affective Distortion (Emotion claiming to be Proof)",
+          "missing_bridge_gluon": "Mediating Fulcrum (Q1 or Q5) needed to stabilize Q7 -> Q5",
+          "from_text": "A coordinate of -1 represents the \\\"Lesser Evil,\\\" indicating that the action benefit...",
+          "to_text": "A coordinate of -2 represents Solipsistic Tyranny, an environment of pure extraction ..."
+        },
+        {
+          "from_idx": 12,
+          "to_idx": 13,
+          "transition": "Q3->Q2",
+          "friction": 1.8,
+          "role": "Lateral Inversion (Physical -> Potential)",
+          "missing_bridge_gluon": "Q5 (Logical Mechanism) or Q1 (Axiomatic Will) required to bridge Matter to Potential",
+          "from_text": "A coordinate of +1 represents the \\\"Greater Good,\\\" benefiting other people....",
+          "to_text": "A coordinate of +2 represents Systemic Justice, a universal benefit encompassing all ..."
+        },
+        {
+          "from_idx": 36,
+          "to_idx": 37,
+          "transition": "Q4->Q3",
+          "friction": 2.5,
+          "role": "Ungrounded Projection (Meaning -> Matter without Logic)",
+          "missing_bridge_gluon": "Mediating Fulcrum (Q1 or Q5) needed to stabilize Q4 -> Q3",
+          "from_text": "The structural scan operates at a variable fractal ratio depth, analyzing a subject a...",
+          "to_text": "Treat this like a multidimensional array where each dimension contains 7 connected el..."
+        },
+        {
+          "from_idx": 48,
+          "to_idx": 49,
+          "transition": "Q4->Q5",
+          "friction": 1.9,
+          "role": "Longitudinal Inversion (Meaning -> Logic)",
+          "missing_bridge_gluon": "Q1 (Epistemic Intent) required to formalize Poetic Meaning into Proof",
+          "from_text": "This clarifies why the Inner Hegemony perceptually flips the map entirely....",
+          "to_text": "Within the 0.5 Zone, the ego rationalizes Extraction as Strength, projects Service as..."
+        }
+      ]
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0687,
+      "average_luminescence": 0.4867,
+      "jargon_density_per_sentence": 0.2315,
+      "average_gauge_friction_42": 1.2052,
+      "cognitive_confusion_score": 42.08
+    },
+    "top_deconfused_examples": [
+      {
+        "original_high_density": "Coherentism The \\\"Hegemonic Stress Tensor\\\" and the distinction between \\\"Igneous Stones\\\" and \\\"Fired Bricks\\\" serves as a direct commentary on the architecture of human knowledge and the structural integrity of belief systems.",
+        "clarified_pub_test": "Coherentism The \\\"structural pressure test of beliefs\\\" and the distinction between \\\"unbreakable real-world facts\\\" and \\\"fragile man-made narratives\\\" serves as a direct commentary on the architecture of human knowledge and the structural integrity of belief systems.",
+        "jargon_terms_removed": 4,
+        "original_strain": 0.0595,
+        "clarified_strain": 0.0084,
+        "delta_strain_reduction": 0.0511,
+        "fractal_address": "Q3.q3.c5",
+        "bridge_diagnosis": "Fractal Position: Q3.q3.c5 | Grounded in Where \u2013 Physical (Physics / Mechanics). Academic drag removed (4 jargon terms). Strain reduced by 0.0511."
+      },
+      {
+        "original_high_density": "- **Forensic Stress Test:** To prevent collapse, the system employs forensic epistemology to identify a \\\"Fake Maximiser\\\" (entities or concepts masquerading as systemic positive values while operating on negative vectors) and the detection of \\\"Helxis\\\" (bait and switch tactics that compromise the structural load path of an ideology).",
+        "clarified_pub_test": "- **Forensic Stress Test:** To prevent collapse, the system employs checking the receipts of reality to identify a \\\"grifter pretending to serve everyone\\\" (entities or concepts masquerading as systemic positive values while operating on negative vectors) and the detection of \\\"bait-and-switch deception\\\" (bait and switch tactics that compromise the structural load path of an ideology).",
+        "jargon_terms_removed": 3,
+        "original_strain": 0.0467,
+        "clarified_strain": 0.0563,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q2.q2.c1",
+        "bridge_diagnosis": "Fractal Position: Q2.q2.c1 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (3 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "It is a rigorous, multidimensional algorithm designed to systematically strip away doxa (unexamined common belief and egoic assumption) to isolate the objective aletheia (unconcealed truth) of an event or idea.",
+        "clarified_pub_test": "It is a rigorous, multidimensional algorithm designed to systematically strip away unquestioned rumor (unexamined common belief and egoic assumption) to isolate the objective unvarnished truth (unconcealed truth) of an event or idea.",
+        "jargon_terms_removed": 2,
+        "original_strain": 0.0774,
+        "clarified_strain": 0.0895,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q5.q2.c6",
+        "bridge_diagnosis": "Fractal Position: Q5.q2.c6 | Grounded in Cause \u2013 Historical (Historics / Lineage). Academic drag removed (2 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "The framework accurately identifies that coherentist structures, where Fired Bricks attract more Fired Bricks, can become massive but inherently brittle, as they are not tethered to external reality.",
+        "clarified_pub_test": "The framework accurately identifies that arguments that only agree with themselves, where fragile man-made narratives attract more fragile man-made narratives, can become massive but inherently brittle, as they are not tethered to external reality.",
+        "jargon_terms_removed": 2,
+        "original_strain": 0.0737,
+        "clarified_strain": 0.0426,
+        "delta_strain_reduction": 0.0311,
+        "fractal_address": "Q3.q3.c5",
+        "bridge_diagnosis": "Fractal Position: Q3.q3.c5 | Grounded in Where \u2013 Physical (Physics / Mechanics). Academic drag removed (2 jargon terms). Strain reduced by 0.0311."
+      },
+      {
+        "original_high_density": "It is the ultimate manifestation of the Greater Evil (-1, -1) and Solipsistic Tyranny (-2, -2).",
+        "clarified_pub_test": "It is the ultimate manifestation of the Greater Evil (-1, -1) and selfish, one-sided control (-2, -2).",
+        "jargon_terms_removed": 1,
+        "original_strain": 0.1053,
+        "clarified_strain": 0.0902,
+        "delta_strain_reduction": 0.0151,
+        "fractal_address": "Q5.q1.c2",
+        "bridge_diagnosis": "Fractal Position: Q5.q1.c2 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (1 jargon terms). Strain reduced by 0.0151."
+      },
+      {
+        "original_high_density": "- **Fired Bricks** represent Coherentism.",
+        "clarified_pub_test": "- **fragile man-made narratives** represent Coherentism.",
+        "jargon_terms_removed": 1,
+        "original_strain": 0.1106,
+        "clarified_strain": 0.0773,
+        "delta_strain_reduction": 0.0333,
+        "fractal_address": "Q6.q3.c1",
+        "bridge_diagnosis": "Fractal Position: Q6.q3.c1 | Grounded in Who \u2013 Metaphysical (Epistemics). Academic drag removed (1 jargon terms). Strain reduced by 0.0333."
+      }
+    ]
+  },
+  "Actualism_Psochic_Hegemony": {
+    "id": "Actualism_Psochic_Hegemony",
+    "genre": "Actualist_Philosophy_Ethics",
+    "sentences_audited": 120,
+    "doc_plane_distribution": {
+      "Q1": 0.1526,
+      "Q2": 0.1716,
+      "Q3": 0.1327,
+      "Q4": 0.1051,
+      "Q5": 0.1659,
+      "Q6": 0.1562,
+      "Q7": 0.116
+    },
+    "fractal_polytrope_field": {
+      "sentences_sampled": 120,
+      "depth_1": {
+        "active_cells": 7,
+        "total_capacity": 7,
+        "density_rho": 1.0,
+        "entropy_bits": 2.3274
+      },
+      "depth_2": {
+        "active_cells": 33,
+        "total_capacity": 49,
+        "density_rho": 0.6735,
+        "entropy_bits": 4.4705
+      },
+      "depth_3": {
+        "active_cells": 81,
+        "total_capacity": 343,
+        "density_rho": 0.2362,
+        "entropy_bits": 6.1047
+      },
+      "fractal_dimension_df": 0.6292,
+      "polytrope_index_np": 1.61
+    },
+    "gluon_flow_42": {
+      "total_transitions": 77,
+      "unique_42_gluon_paths_active": 32,
+      "transition_counts": {
+        "Q5->Q2": 7,
+        "Q2->Q1": 5,
+        "Q1->Q5": 5,
+        "Q1->Q2": 4,
+        "Q2->Q3": 4,
+        "Q2->Q5": 4,
+        "Q3->Q5": 4,
+        "Q5->Q3": 4,
+        "Q1->Q6": 3,
+        "Q6->Q1": 3,
+        "Q6->Q5": 3,
+        "Q5->Q6": 3,
+        "Q3->Q1": 3,
+        "Q7->Q2": 2,
+        "Q3->Q6": 2
+      },
+      "average_gauge_friction": 1.1361,
+      "erratic_jumps_detected": 6,
+      "active_triangle_gauge_cycles": 41,
+      "top_gauge_cycles": {
+        "Q7->Q2->Q1->Q7": 2,
+        "Q5->Q2->Q3->Q5": 2,
+        "Q2->Q3->Q1->Q2": 2,
+        "Q2->Q1->Q7->Q2": 1,
+        "Q1->Q7->Q2->Q1": 1
+      },
+      "sample_erratic_jumps": [
+        {
+          "from_idx": 38,
+          "to_idx": 39,
+          "transition": "Q4->Q3",
+          "friction": 2.5,
+          "role": "Ungrounded Projection (Meaning -> Matter without Logic)",
+          "missing_bridge_gluon": "Mediating Fulcrum (Q1 or Q5) needed to stabilize Q4 -> Q3",
+          "from_text": "This is the exercise of high-level Active Potency (Art/Techn\u00e9)....",
+          "to_text": "Humans \\\"put aimless thoughts to work\\\" to rearrange the accidents of matter...."
+        },
+        {
+          "from_idx": 49,
+          "to_idx": 50,
+          "transition": "Q2->Q7",
+          "friction": 2.2,
+          "role": "Anxious Speculation (Hypothesis directly causing Panic)",
+          "missing_bridge_gluon": "Mediating Fulcrum (Q1 or Q5) needed to stabilize Q2 -> Q7",
+          "from_text": "- **The Micro-Temporal Interval (0 to 0.0\\...1):** You specify that God exists \\\"betw...",
+          "to_text": "In Actualist terms, this interval represents the **transition from Potency to Act**...."
+        },
+        {
+          "from_idx": 50,
+          "to_idx": 51,
+          "transition": "Q7->Q5",
+          "friction": 2.4,
+          "role": "Affective Distortion (Emotion claiming to be Proof)",
+          "missing_bridge_gluon": "Mediating Fulcrum (Q1 or Q5) needed to stabilize Q7 -> Q5",
+          "from_text": "In Actualist terms, this interval represents the **transition from Potency to Act**....",
+          "to_text": "The gap between t=0 (Current Actuality) and t=0.1 (Future Actuality) is the realm of ..."
+        },
+        {
+          "from_idx": 105,
+          "to_idx": 106,
+          "transition": "Q2->Q7",
+          "friction": 2.2,
+          "role": "Anxious Speculation (Hypothesis directly causing Panic)",
+          "missing_bridge_gluon": "Mediating Fulcrum (Q1 or Q5) needed to stabilize Q2 -> Q7",
+          "from_text": "It can never be undone, and it becomes an unyielding premise for all future events....",
+          "to_text": "- **Q7: The Emotive Plane (EFFECT) - Passion and Consequence:** This represents the r..."
+        },
+        {
+          "from_idx": 106,
+          "to_idx": 107,
+          "transition": "Q7->Q6",
+          "friction": 1.8,
+          "role": "Vertical Inversion (Effect -> Cause)",
+          "missing_bridge_gluon": "Q5 (Objective Record) needed to trace Emotional Consequence back to Historical Cause",
+          "from_text": "- **Q7: The Emotive Plane (EFFECT) - Passion and Consequence:** This represents the r...",
+          "to_text": "It is the measurable strain and stress registered by the worldview structures of thos..."
+        }
+      ]
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0675,
+      "average_luminescence": 0.5281,
+      "jargon_density_per_sentence": 0.025,
+      "average_gauge_friction_42": 1.1361,
+      "cognitive_confusion_score": 27.68
+    },
+    "top_deconfused_examples": [
+      {
+        "original_high_density": "This is where the structural concepts of deception and the Hegemonic Stress Tensor apply.",
+        "clarified_pub_test": "This is where the structural concepts of deception and the structural pressure test of beliefs apply.",
+        "jargon_terms_removed": 2,
+        "original_strain": 0.0763,
+        "clarified_strain": 0.0573,
+        "delta_strain_reduction": 0.019,
+        "fractal_address": "Q3.q2.c3",
+        "bridge_diagnosis": "Fractal Position: Q3.q2.c3 | Grounded in Where \u2013 Physical (Physics / Mechanics). Academic drag removed (2 jargon terms). Strain reduced by 0.019."
+      },
+      {
+        "original_high_density": "This leads to the internal construction of brittle Fired Bricks, which are assumptions baked by the ego that eventually shatter under the weight of reality.",
+        "clarified_pub_test": "This leads to the internal construction of brittle fragile man-made narratives, which are assumptions baked by the ego that eventually shatter under the weight of reality.",
+        "jargon_terms_removed": 1,
+        "original_strain": 0.0722,
+        "clarified_strain": 0.0355,
+        "delta_strain_reduction": 0.0367,
+        "fractal_address": "Q5.q6.c5",
+        "bridge_diagnosis": "Fractal Position: Q5.q6.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (1 jargon terms). Strain reduced by 0.0367."
+      },
+      {
+        "original_high_density": "- **Q5: The Logical Plane (HOW) - Count and Consistency:** This corresponds to the Formal Cause and the Efficient Cause.",
+        "clarified_pub_test": "- **Q5: The Logical Plane (HOW) - Count and Consistency:** This corresponds to the Formal Cause and the Efficient Cause.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.205,
+        "clarified_strain": 0.205,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q5.q5.c6",
+        "bridge_diagnosis": "Fractal Position: Q5.q5.c6 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "At this exact moment, all superposition is permanently annihilated.",
+        "clarified_pub_test": "At this exact moment, all superposition is permanently annihilated.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1375,
+        "clarified_strain": 0.1375,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q1.q5.c6",
+        "bridge_diagnosis": "Fractal Position: Q1.q5.c6 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "The event is now pure actuality embedded in the historical record.",
+        "clarified_pub_test": "The event is now pure actuality embedded in the historical record.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1719,
+        "clarified_strain": 0.1719,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q1.q5.c6",
+        "bridge_diagnosis": "Fractal Position: Q1.q5.c6 | Grounded in Cause \u2013 Historical (Historics / Lineage). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "There is no probability cloud or unresolved meaning nodes.",
+        "clarified_pub_test": "There is no probability cloud or unresolved meaning nodes.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1488,
+        "clarified_strain": 0.1488,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q2.q6.c4",
+        "bridge_diagnosis": "Fractal Position: Q2.q6.c4 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      }
+    ]
+  },
+  "Survival_Matrix_7x7": {
+    "id": "Survival_Matrix_7x7",
+    "genre": "Thermodynamics_Biological_Survival",
+    "sentences_audited": 56,
+    "doc_plane_distribution": {
+      "Q1": 0.1325,
+      "Q2": 0.1859,
+      "Q3": 0.1617,
+      "Q4": 0.1029,
+      "Q5": 0.1637,
+      "Q6": 0.1327,
+      "Q7": 0.1206
+    },
+    "fractal_polytrope_field": {
+      "sentences_sampled": 56,
+      "depth_1": {
+        "active_cells": 7,
+        "total_capacity": 7,
+        "density_rho": 1.0,
+        "entropy_bits": 2.3543
+      },
+      "depth_2": {
+        "active_cells": 24,
+        "total_capacity": 49,
+        "density_rho": 0.4898,
+        "entropy_bits": 4.2984
+      },
+      "depth_3": {
+        "active_cells": 45,
+        "total_capacity": 343,
+        "density_rho": 0.1312,
+        "entropy_bits": 5.4145
+      },
+      "fractal_dimension_df": 0.4781,
+      "polytrope_index_np": 1.94
+    },
+    "gluon_flow_42": {
+      "total_transitions": 36,
+      "unique_42_gluon_paths_active": 17,
+      "transition_counts": {
+        "Q3->Q2": 5,
+        "Q2->Q5": 5,
+        "Q5->Q2": 4,
+        "Q5->Q3": 3,
+        "Q2->Q3": 3,
+        "Q3->Q1": 3,
+        "Q1->Q5": 2,
+        "Q5->Q1": 2,
+        "Q3->Q5": 1,
+        "Q5->Q4": 1,
+        "Q4->Q5": 1,
+        "Q2->Q6": 1,
+        "Q6->Q7": 1,
+        "Q7->Q5": 1,
+        "Q1->Q6": 1
+      },
+      "average_gauge_friction": 1.1725,
+      "erratic_jumps_detected": 7,
+      "active_triangle_gauge_cycles": 12,
+      "top_gauge_cycles": {
+        "Q5->Q3->Q2->Q5": 3,
+        "Q2->Q5->Q3->Q2": 1,
+        "Q2->Q3->Q1->Q2": 1,
+        "Q1->Q5->Q2->Q1": 1,
+        "Q5->Q2->Q3->Q5": 1
+      },
+      "sample_erratic_jumps": [
+        {
+          "from_idx": 1,
+          "to_idx": 2,
+          "transition": "Q3->Q2",
+          "friction": 1.8,
+          "role": "Lateral Inversion (Physical -> Potential)",
+          "missing_bridge_gluon": "Q5 (Logical Mechanism) or Q1 (Axiomatic Will) required to bridge Matter to Potential",
+          "from_text": "Survival is not merely the prevention of physical decay....",
+          "to_text": "It is the continuous reduction of entropy across all seven planes of existence...."
+        },
+        {
+          "from_idx": 5,
+          "to_idx": 6,
+          "transition": "Q3->Q2",
+          "friction": 1.8,
+          "role": "Lateral Inversion (Physical -> Potential)",
+          "missing_bridge_gluon": "Q5 (Logical Mechanism) or Q1 (Axiomatic Will) required to bridge Matter to Potential",
+          "from_text": "Each parameter operates across four nested dimensions of scale....",
+          "to_text": "The Seven Planes and the Death of the Corresponding Bodies A human being is a multi-d..."
+        },
+        {
+          "from_idx": 13,
+          "to_idx": 14,
+          "transition": "Q3->Q2",
+          "friction": 1.8,
+          "role": "Lateral Inversion (Physical -> Potential)",
+          "missing_bridge_gluon": "Q5 (Logical Mechanism) or Q1 (Axiomatic Will) required to bridge Matter to Potential",
+          "from_text": "- **Death of the Body:** \"Purpose Death.\" Without a perceived reason to act or a func...",
+          "to_text": "This state manifests as absolute clinical apathy, halting all forward planning and pr..."
+        },
+        {
+          "from_idx": 18,
+          "to_idx": 19,
+          "transition": "Q4->Q5",
+          "friction": 1.9,
+          "role": "Longitudinal Inversion (Meaning -> Logic)",
+          "missing_bridge_gluon": "Q1 (Epistemic Intent) required to formalize Poetic Meaning into Proof",
+          "from_text": "- **The Lyrical Body:** The fluidic, high-frequency gas and liquid exchange network....",
+          "to_text": "- **Death of the Body:** \"Lyrical/Fluidic Death.\" Dehydration or asphyxiation rapidly..."
+        },
+        {
+          "from_idx": 20,
+          "to_idx": 21,
+          "transition": "Q3->Q2",
+          "friction": 1.8,
+          "role": "Lateral Inversion (Physical -> Potential)",
+          "missing_bridge_gluon": "Q5 (Logical Mechanism) or Q1 (Axiomatic Will) required to bridge Matter to Potential",
+          "from_text": "- **The Emotive Body:** The dense biochemical and metabolic energy field....",
+          "to_text": "- **Death of the Body:** \"Emotive/Material Death.\" Starvation forces the body to cons..."
+        }
+      ]
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.065,
+      "average_luminescence": 0.5261,
+      "jargon_density_per_sentence": 0.0,
+      "average_gauge_friction_42": 1.1725,
+      "cognitive_confusion_score": 26.32
+    },
+    "top_deconfused_examples": [
+      {
+        "original_high_density": "The thermodynamic transfer is characterized by a down-scaling capacity chain: 1.",
+        "clarified_pub_test": "The thermodynamic transfer is characterized by a down-scaling capacity chain: 1.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1343,
+        "clarified_strain": 0.1343,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q2.q6.c2",
+        "bridge_diagnosis": "Fractal Position: Q2.q6.c2 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "- **The Possible Body:** The vehicle of future potential and capacity.",
+        "clarified_pub_test": "- **The Possible Body:** The vehicle of future potential and capacity.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1543,
+        "clarified_strain": 0.1544,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q2.q2.c2",
+        "bridge_diagnosis": "Fractal Position: Q2.q2.c2 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "**Power to Moral:** True power requires a historical cause and conscience (P6) to prevent self-destructive execution behaviors.",
+        "clarified_pub_test": "**Power to Moral:** True power requires a historical cause and conscience (P6) to prevent self-destructive execution behaviors.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1342,
+        "clarified_strain": 0.1342,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q5.q6.c5",
+        "bridge_diagnosis": "Fractal Position: Q5.q6.c5 | Grounded in Cause \u2013 Historical (Historics / Lineage). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "Societal Survival Thermodynamics The nested scaling of the survival matrix operates as a directed thermodynamic engine.",
+        "clarified_pub_test": "Societal Survival Thermodynamics The nested scaling of the survival matrix is a directed thermodynamic engine.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1043,
+        "clarified_strain": 0.1147,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q1.q5.c2",
+        "bridge_diagnosis": "Fractal Position: Q1.q5.c2 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "\\[ Plane 1: Recognition \\] \\-------\\> Metaphysical Body Dies \\[ Plane 2: Purpose \\] \\-------\\> Possible Body Dies \\[ Plane 3: Shelter \\] \\-------\\> Physical Body Dies \\[ Plane 4: Refreshment \\] \\-------\\> Lyrical Body Dies \\[ Plane 5: Sustenance \\] \\-------\\> Emotive Body Dies \\[ Plane 6: Moral \\] \\-------\\> Historical Body Dies \\[ Plane 7: Power \\] \\-------\\> Logical Body Dies ### Plane 1: Recognition (Who \\- Metaphysical Body) - **Survival Requirement:** Recognition of sovereignty, will, and identity.",
+        "clarified_pub_test": "\\[ Plane 1: Recognition \\] \\-------\\> Metaphysical Body Dies \\[ Plane 2: Purpose \\] \\-------\\> Possible Body Dies \\[ Plane 3: Shelter \\] \\-------\\> Physical Body Dies \\[ Plane 4: Refreshment \\] \\-------\\> Lyrical Body Dies \\[ Plane 5: Sustenance \\] \\-------\\> Emotive Body Dies \\[ Plane 6: Moral \\] \\-------\\> Historical Body Dies \\[ Plane 7: Power \\] \\-------\\> Logical Body Dies ### Plane 1: Recognition (Who \\- Metaphysical Body) - **Survival Requirement:** Recognition of sovereignty, will, and identity.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.0852,
+        "clarified_strain": 0.0852,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q3.q3.c1",
+        "bridge_diagnosis": "Fractal Position: Q3.q3.c1 | Grounded in Where \u2013 Physical (Physics / Mechanics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      },
+      {
+        "original_high_density": "This state manifests as absolute clinical apathy, halting all forward planning and preventing the system from pursuing resources.",
+        "clarified_pub_test": "This state manifests as absolute clinical apathy, halting all forward planning and preventing the system from pursuing resources.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.107,
+        "clarified_strain": 0.107,
+        "delta_strain_reduction": 0.0,
+        "fractal_address": "Q6.q2.c2",
+        "bridge_diagnosis": "Fractal Position: Q6.q2.c2 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (0 jargon terms). Strain reduced by 0.0."
+      }
+    ]
+  },
+  "Formal_Paper_25_Riemann": {
+    "id": "Formal_Paper_25_Riemann",
+    "genre": "Formal_Mathematics_Physics",
+    "sentences_audited": 37,
+    "doc_plane_distribution": {
+      "Q1": 0.1227,
+      "Q2": 0.1409,
+      "Q3": 0.1419,
+      "Q4": 0.0997,
+      "Q5": 0.281,
+      "Q6": 0.1203,
+      "Q7": 0.0934
+    },
+    "fractal_polytrope_field": {
+      "sentences_sampled": 37,
+      "depth_1": {
+        "active_cells": 5,
+        "total_capacity": 7,
+        "density_rho": 0.7143,
+        "entropy_bits": 2.0524
+      },
+      "depth_2": {
+        "active_cells": 16,
+        "total_capacity": 49,
+        "density_rho": 0.3265,
+        "entropy_bits": 3.8978
+      },
+      "depth_3": {
+        "active_cells": 28,
+        "total_capacity": 343,
+        "density_rho": 0.0816,
+        "entropy_bits": 4.6618
+      },
+      "fractal_dimension_df": 0.4427,
+      "polytrope_index_np": 1.97
+    },
+    "gluon_flow_42": {
+      "total_transitions": 9,
+      "unique_42_gluon_paths_active": 7,
+      "transition_counts": {
+        "Q5->Q2": 2,
+        "Q3->Q5": 2,
+        "Q2->Q3": 1,
+        "Q2->Q5": 1,
+        "Q5->Q3": 1,
+        "Q5->Q6": 1,
+        "Q6->Q5": 1
+      },
+      "average_gauge_friction": 0.91,
+      "erratic_jumps_detected": 0,
+      "active_triangle_gauge_cycles": 2,
+      "top_gauge_cycles": {
+        "Q5->Q2->Q3->Q5": 1,
+        "Q2->Q3->Q5->Q2": 1
+      },
+      "sample_erratic_jumps": []
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0882,
+      "average_luminescence": 0.5142,
+      "jargon_density_per_sentence": 0.0,
+      "average_gauge_friction_42": 0.91,
+      "cognitive_confusion_score": 26.76
+    },
+    "top_deconfused_examples": [
+      {
+        "original_high_density": "But on cellular spacetime, the domain terminates strictly at [MATH_TERM] ( [MATH_TERM] ).",
+        "clarified_pub_test": "But on cellular spacetime, the domain terminates strictly at [MATH_TERM] ( [MATH_TERM] ).",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1719,
+        "clarified_strain": 0.1074,
+        "delta_strain_reduction": 0.0645,
+        "fractal_address": "Q1.q3.c1",
+        "bridge_diagnosis": "Fractal Position: Q1.q3.c1 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0645."
+      },
+      {
+        "original_high_density": "The 165-Year Enigma: The Riemann Hypothesis and Hilbert-P\u00f3lya Operator Program 1.1 The Classical Riemann Zeta Function In his landmark 1859 memoir, Bernhard Riemann investigated the analytic continuation of Euler's zeta function: [MATH_TERM] Using the Jacobi theta function transformation, Riemann established the global functional equation: [MATH_TERM] where [MATH_TERM] is an entire function of order 1.",
+        "clarified_pub_test": "The 165-Year Enigma: The Riemann Hypothesis and Hilbert-P\u00f3lya Operator Program 1.1 The Classical Riemann Zeta Function In his landmark 1859 memoir, Bernhard Riemann investigated the analytic continuation of Euler's zeta function: [MATH_TERM] Using the Jacobi theta function transformation, Riemann established the global functional equation: [MATH_TERM] where [MATH_TERM] is an entire function of order 1.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1141,
+        "clarified_strain": 0.1012,
+        "delta_strain_reduction": 0.0129,
+        "fractal_address": "Q5.q5.c5",
+        "bridge_diagnosis": "Fractal Position: Q5.q5.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0129."
+      },
+      {
+        "original_high_density": "It is the cellular manifold [MATH_TERM] bounded by the Cost of Being floor: [MATH_TERM] In phase space [MATH_TERM] , the cellular geometry imposes an exact lower bound on spatial separation and an exact upper bound on momentum (the Nyquist momentum limit from Formal Paper 18): [MATH_TERM] The continuous phase space volume [MATH_TERM] is replaced by the Cellular Phase Lattice: [MATH_TERM] where the origin [MATH_TERM] is strictly excluded from physical reality.",
+        "clarified_pub_test": "It is the cellular manifold [MATH_TERM] bounded by the Cost of Being floor: [MATH_TERM] In phase space [MATH_TERM] , the cellular geometry imposes an exact lower bound on spatial separation and an exact upper bound on momentum (the Nyquist momentum limit from Formal Paper 18): [MATH_TERM] The continuous phase space volume [MATH_TERM] is replaced by the Cellular Phase Lattice: [MATH_TERM] where the origin [MATH_TERM] is strictly excluded from physical reality.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1265,
+        "clarified_strain": 0.1159,
+        "delta_strain_reduction": 0.0106,
+        "fractal_address": "Q3.q5.c3",
+        "bridge_diagnosis": "Fractal Position: Q3.q5.c3 | Grounded in Where \u2013 Physical (Physics / Mechanics). Academic drag removed (0 jargon terms). Strain reduced by 0.0106."
+      },
+      {
+        "original_high_density": "Quantized on [MATH_TERM] , the symmetric operator is: [MATH_TERM] However, in continuous Archimedean analysis, this proposal failed due to three insurmountable obstacles: Continuous Spectrum: On the entire real line [MATH_TERM] , [MATH_TERM] has a continuous spectrum covering all of [MATH_TERM] , rather than the discrete spectrum of zeta zeros.",
+        "clarified_pub_test": "Quantized on [MATH_TERM] , the symmetric operator is: [MATH_TERM] However, in continuous Archimedean analysis, this proposal failed due to three insurmountable obstacles: Continuous Spectrum: On the entire real line [MATH_TERM] , [MATH_TERM] has a continuous spectrum covering all of [MATH_TERM] , rather than the discrete spectrum of zeta zeros.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1029,
+        "clarified_strain": 0.0857,
+        "delta_strain_reduction": 0.0172,
+        "fractal_address": "Q6.q2.c2",
+        "bridge_diagnosis": "Fractal Position: Q6.q2.c2 | Grounded in What \u2013 Possible (Energetics / Probabilistics). Academic drag removed (0 jargon terms). Strain reduced by 0.0172."
+      },
+      {
+        "original_high_density": "Since [MATH_TERM] , the only square-integrable solution to the deficiency equation on [MATH_TERM] is the trivial solution: [MATH_TERM] Therefore, [MATH_TERM] , which proves [MATH_TERM] .",
+        "clarified_pub_test": "Since [MATH_TERM] , the only square-integrable solution to the deficiency equation on [MATH_TERM] is the trivial solution: [MATH_TERM] Therefore, [MATH_TERM] , which proves [MATH_TERM] .",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1339,
+        "clarified_strain": 0.094,
+        "delta_strain_reduction": 0.0399,
+        "fractal_address": "Q2.q5.c5",
+        "bridge_diagnosis": "Fractal Position: Q2.q5.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0399."
+      },
+      {
+        "original_high_density": "By the Cost of Being floor condition, [MATH_TERM] .",
+        "clarified_pub_test": "By the Cost of Being floor condition, [MATH_TERM] .",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1812,
+        "clarified_strain": 0.1053,
+        "delta_strain_reduction": 0.0759,
+        "fractal_address": "Q1.q2.c5",
+        "bridge_diagnosis": "Fractal Position: Q1.q2.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0759."
+      }
+    ]
+  },
+  "Arxiv_NavierStokes_Regularity": {
+    "id": "Arxiv_NavierStokes_Regularity",
+    "genre": "PDE_Fluid_Dynamics",
+    "sentences_audited": 135,
+    "doc_plane_distribution": {
+      "Q1": 0.1186,
+      "Q2": 0.1243,
+      "Q3": 0.1274,
+      "Q4": 0.1162,
+      "Q5": 0.2698,
+      "Q6": 0.1268,
+      "Q7": 0.1169
+    },
+    "fractal_polytrope_field": {
+      "sentences_sampled": 135,
+      "depth_1": {
+        "active_cells": 5,
+        "total_capacity": 7,
+        "density_rho": 0.7143,
+        "entropy_bits": 0.8534
+      },
+      "depth_2": {
+        "active_cells": 15,
+        "total_capacity": 49,
+        "density_rho": 0.3061,
+        "entropy_bits": 1.3273
+      },
+      "depth_3": {
+        "active_cells": 23,
+        "total_capacity": 343,
+        "density_rho": 0.0671,
+        "entropy_bits": 1.8067
+      },
+      "fractal_dimension_df": 0.3921,
+      "polytrope_index_np": 2.2
+    },
+    "gluon_flow_42": {
+      "total_transitions": 72,
+      "unique_42_gluon_paths_active": 9,
+      "transition_counts": {
+        "Q5->Q1": 30,
+        "Q1->Q5": 30,
+        "Q6->Q5": 3,
+        "Q5->Q6": 3,
+        "Q3->Q5": 2,
+        "Q6->Q3": 1,
+        "Q5->Q3": 1,
+        "Q5->Q2": 1,
+        "Q2->Q3": 1
+      },
+      "average_gauge_friction": 1.0383,
+      "erratic_jumps_detected": 0,
+      "active_triangle_gauge_cycles": 5,
+      "top_gauge_cycles": {
+        "Q5->Q6->Q3->Q5": 1,
+        "Q6->Q3->Q5->Q6": 1,
+        "Q3->Q5->Q1->Q3": 1,
+        "Q1->Q5->Q2->Q1": 1,
+        "Q5->Q2->Q3->Q5": 1
+      },
+      "sample_erratic_jumps": []
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0593,
+      "average_luminescence": 0.5859,
+      "jargon_density_per_sentence": 0.0,
+      "average_gauge_friction_42": 1.0383,
+      "cognitive_confusion_score": 22.04
+    },
+    "top_deconfused_examples": [
+      {
+        "original_high_density": "[MATH_TERM] } We are now in good standing to reexamine (1.3) of Section~1.",
+        "clarified_pub_test": "[MATH_TERM] } We are now in good standing to reexamine (1.3) of Section~1.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.2176,
+        "clarified_strain": 0.1404,
+        "delta_strain_reduction": 0.0772,
+        "fractal_address": "Q2.q1.c5",
+        "bridge_diagnosis": "Fractal Position: Q2.q1.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0772."
+      },
+      {
+        "original_high_density": "In dimension [MATH_TERM] or [MATH_TERM] , it is known that [MATH_TERM] and [FORMAL_PROOF_EQUATION] for some regularity time [MATH_TERM] that satisfies [FORMAL_PROOF_EQUATION] [FORMAL_PROOF_EQUATION] with constants [MATH_TERM] , [MATH_TERM] that are independent of [MATH_TERM] , [MATH_TERM] or the solution [MATH_TERM] considered.",
+        "clarified_pub_test": "In dimension [MATH_TERM] or [MATH_TERM] , it is known that [MATH_TERM] and [FORMAL_PROOF_EQUATION] for some regularity time [MATH_TERM] that satisfies [FORMAL_PROOF_EQUATION] [FORMAL_PROOF_EQUATION] with constants [MATH_TERM] , [MATH_TERM] that are independent of [MATH_TERM] , [MATH_TERM] or the solution [MATH_TERM] considered.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1702,
+        "clarified_strain": 0.1294,
+        "delta_strain_reduction": 0.0408,
+        "fractal_address": "Q3.q5.c5",
+        "bridge_diagnosis": "Fractal Position: Q3.q5.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0408."
+      },
+      {
+        "original_high_density": "[MATH_TERM] Also, [MATH_TERM] denotes the spatial gradient of [MATH_TERM] , [MATH_TERM] , [MATH_TERM] is the (spatial) divergence of [MATH_TERM] .",
+        "clarified_pub_test": "[MATH_TERM] Also, [MATH_TERM] denotes the spatial gradient of [MATH_TERM] , [MATH_TERM] , [MATH_TERM] is the (spatial) divergence of [MATH_TERM] .",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1824,
+        "clarified_strain": 0.1221,
+        "delta_strain_reduction": 0.0603,
+        "fractal_address": "Q1.q3.c3",
+        "bridge_diagnosis": "Fractal Position: Q1.q3.c3 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0603."
+      },
+      {
+        "original_high_density": "This gives \\hspace{+3.500cm} [MATH_TERM] }} ^{ } \\!",
+        "clarified_pub_test": "This gives \\hspace{+3.500cm} [MATH_TERM] }} ^{ } \\!",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.2246,
+        "clarified_strain": 0.1159,
+        "delta_strain_reduction": 0.1087,
+        "fractal_address": "Q1.q1.c3",
+        "bridge_diagnosis": "Fractal Position: Q1.q1.c3 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.1087."
+      },
+      {
+        "original_high_density": "We first recall the elementary Sobolev inequalities [FORMAL_PROOF_EQUATION] and [FORMAL_PROOF_EQUATION] for functions in [MATH_TERM] and [MATH_TERM] , respectively.",
+        "clarified_pub_test": "We first recall the elementary Sobolev inequalities [FORMAL_PROOF_EQUATION] and [FORMAL_PROOF_EQUATION] for functions in [MATH_TERM] and [MATH_TERM] , respectively.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1123,
+        "clarified_strain": 0.0386,
+        "delta_strain_reduction": 0.0737,
+        "fractal_address": "Q1.q1.c5",
+        "bridge_diagnosis": "Fractal Position: Q1.q1.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0737."
+      },
+      {
+        "original_high_density": "Derivation of (1.4) and related improvements} Here we elaborate on the method used to obtain (1.3 [MATH_TERM] ) in (\\cite{KreissHagstromLorenzZingano2003}, p.\\;235) in order to improve the current estimates on the regularity time [MATH_TERM] (in dimension [MATH_TERM] ) as defined in (1.3) above.",
+        "clarified_pub_test": "Derivation of (1.4) and related improvements} Here we elaborate on the method used to obtain (1.3 [MATH_TERM] ) in (\\cite{KreissHagstromLorenzZingano2003}, p.\\;235) in order to improve the current estimates on the regularity time [MATH_TERM] (in dimension [MATH_TERM] ) as defined in (1.3) above.",
+        "jargon_terms_removed": 0,
+        "original_strain": 0.1523,
+        "clarified_strain": 0.1311,
+        "delta_strain_reduction": 0.0212,
+        "fractal_address": "Q6.q6.c5",
+        "bridge_diagnosis": "Fractal Position: Q6.q6.c5 | Grounded in How \u2013 Logical (Analytics / Cybernetics). Academic drag removed (0 jargon terms). Strain reduced by 0.0212."
+      }
+    ]
+  }
+}

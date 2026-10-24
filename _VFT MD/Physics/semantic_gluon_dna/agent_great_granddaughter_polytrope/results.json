@@ -1,0 +1,505 @@
+{
+  "Academic_Perspectives_Hegemony": {
+    "id": "Academic_Perspectives_Hegemony",
+    "genre": "Dense_Philosophical_Epistemology",
+    "sentences_audited": 108,
+    "total_content_tokens": 1278,
+    "doc_plane_distribution": {
+      "Q1": 0.1409,
+      "Q2": 0.1696,
+      "Q3": 0.1384,
+      "Q4": 0.1236,
+      "Q5": 0.1734,
+      "Q6": 0.1332,
+      "Q7": 0.1209
+    },
+    "fractal_polytrope_field": {
+      "total_content_tokens": 1278,
+      "depth_1": {
+        "active_cells": 7,
+        "total_capacity": 7,
+        "density_rho": 1.0,
+        "entropy_bits": 1.7672
+      },
+      "depth_2": {
+        "active_cells": 19,
+        "total_capacity": 49,
+        "density_rho": 0.3878,
+        "entropy_bits": 1.9577
+      },
+      "depth_3": {
+        "active_cells": 21,
+        "total_capacity": 343,
+        "density_rho": 0.0612,
+        "entropy_bits": 1.9811
+      },
+      "polytrope_compression_ratio": 0.0679,
+      "polytrope_index_np": 0.33
+    },
+    "gluon_flow_42": {
+      "total_transitions": 80,
+      "unique_42_gluon_paths_active": 29,
+      "transition_counts": {
+        "Q5->Q2": 10,
+        "Q2->Q5": 9,
+        "Q2->Q1": 6,
+        "Q3->Q2": 4,
+        "Q5->Q7": 3,
+        "Q7->Q5": 3,
+        "Q5->Q1": 3,
+        "Q1->Q5": 3,
+        "Q2->Q3": 3,
+        "Q5->Q4": 3,
+        "Q4->Q5": 3,
+        "Q6->Q2": 3,
+        "Q7->Q2": 2,
+        "Q1->Q2": 2,
+        "Q1->Q3": 2
+      },
+      "average_jump_strain": 1.5387,
+      "erratic_jumps_detected": 17,
+      "sample_erratic_jumps": [
+        {
+          "from_sentence_idx": 13,
+          "to_sentence_idx": 14,
+          "transition": "Q3->Q2",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Lateral Body Axis (-x) -> Lateral Body Axis (+x))",
+          "from_text": "A coordinate of +2 represents Systemic Justice, a universal benefit encompassing...",
+          "to_text": "The spectrum flows clearly: Everyone, to Others, to A Being, to None, to My Grou..."
+        },
+        {
+          "from_sentence_idx": 23,
+          "to_sentence_idx": 24,
+          "transition": "Q2->Q3",
+          "distance": 2.0,
+          "issue": "Physical Instantiation (Possibility -> Matter)",
+          "from_text": "The \u00b12 coordinates represent the Systemic/Strategic horizon, mapping overarching...",
+          "to_text": "Coherentism\n\nThe \\\"Hegemonic Stress Tensor\\\" and the distinction between \\\"Igneo..."
+        },
+        {
+          "from_sentence_idx": 35,
+          "to_sentence_idx": 36,
+          "transition": "Q5->Q4",
+          "distance": 2.0,
+          "issue": "Semantic Interpretation (Logic -> Meaning)",
+          "from_text": "It is a rigorous, multidimensional algorithm designed to systematically strip aw...",
+          "to_text": "The structural scan operates at a variable fractal ratio depth, analyzing a subj..."
+        },
+        {
+          "from_sentence_idx": 41,
+          "to_sentence_idx": 42,
+          "transition": "Q3->Q2",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Lateral Body Axis (-x) -> Lateral Body Axis (+x))",
+          "from_text": "One might examine the How (5) of the Who (1) of the Where (3), representing a sp...",
+          "to_text": "- **Recursive Extension:** Upon reaching maximum depth, the process utilizes a +..."
+        },
+        {
+          "from_sentence_idx": 47,
+          "to_sentence_idx": 48,
+          "transition": "Q5->Q4",
+          "distance": 2.0,
+          "issue": "Semantic Interpretation (Logic -> Meaning)",
+          "from_text": "- To resolve this psychological pain, the mind deploys Defense Mechanisms, speci...",
+          "to_text": "This clarifies why the Inner Hegemony perceptually flips the map entirely...."
+        }
+      ]
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0598,
+      "jargon_density_per_sentence": 0.1296,
+      "average_jump_strain_42": 1.5387,
+      "cognitive_confusion_score": 31.65
+    },
+    "top_deconfused_examples": [
+      {
+        "original": "It is a rigorous, multidimensional algorithm designed to systematically strip away doxa (unexamined common belief and egoic assumption) to isolate the objective aletheia (unconcealed truth) of an event or idea.",
+        "clarified_pub_test": "It is a rigorous, multidimensional algorithm designed to systematically strip away untested popular opinion (unexamined common belief and egoic assumption) to isolate the objective unvarnished truth (unconcealed truth) of an event or idea.",
+        "jargon_count": 2,
+        "dominant_plane": "Q5",
+        "bridge_note": "Grounded in How \u2013 Logical (Analytics / Cybernetics)."
+      },
+      {
+        "original": "A phenomenologist, such as Edmund Husserl, would describe this as a method of Phenomenological Reduction or Epoch\u00e9.",
+        "clarified_pub_test": "A phenomenologist, such as Edmund Husserl, would describe this as a method of looking at what's really there without assumptions or setting aside bias.",
+        "jargon_count": 2,
+        "dominant_plane": "Q5",
+        "bridge_note": "Grounded in How \u2013 Logical (Analytics / Cybernetics)."
+      },
+      {
+        "original": "A coordinate of -2 represents Solipsistic Tyranny, an environment of pure extraction benefiting only the self.",
+        "clarified_pub_test": "A coordinate of -2 represents selfish domination, an environment of pure extraction benefiting only the self.",
+        "jargon_count": 1,
+        "dominant_plane": "Q5",
+        "bridge_note": "Grounded in How \u2013 Logical (Analytics / Cybernetics)."
+      },
+      {
+        "original": "The framework accurately identifies that coherentist structures, where Fired Bricks attract more Fired Bricks, can become massive but inherently brittle, as they are not tethered to external reality.",
+        "clarified_pub_test": "The framework accurately identifies that stories that only agree with themselves, where Fired Bricks attract more Fired Bricks, can become massive but inherently brittle, as they are not tethered to external reality.",
+        "jargon_count": 1,
+        "dominant_plane": "Q3",
+        "bridge_note": "Grounded in Where \u2013 Physical (Physics / Mechanics)."
+      },
+      {
+        "original": "It is the ultimate manifestation of the Greater Evil (-1, -1) and Solipsistic Tyranny (-2, -2).",
+        "clarified_pub_test": "It is the ultimate manifestation of the Greater Evil (-1, -1) and selfish domination (-2, -2).",
+        "jargon_count": 1,
+        "dominant_plane": "Q5",
+        "bridge_note": "Grounded in How \u2013 Logical (Analytics / Cybernetics)."
+      }
+    ]
+  },
+  "Actualism_Psochic_Hegemony": {
+    "id": "Actualism_Psochic_Hegemony",
+    "genre": "Actualist_Philosophy_Ethics",
+    "sentences_audited": 120,
+    "total_content_tokens": 1329,
+    "doc_plane_distribution": {
+      "Q1": 0.1317,
+      "Q2": 0.1583,
+      "Q3": 0.1386,
+      "Q4": 0.1365,
+      "Q5": 0.1614,
+      "Q6": 0.1491,
+      "Q7": 0.1244
+    },
+    "fractal_polytrope_field": {
+      "total_content_tokens": 1329,
+      "depth_1": {
+        "active_cells": 7,
+        "total_capacity": 7,
+        "density_rho": 1.0,
+        "entropy_bits": 1.8098
+      },
+      "depth_2": {
+        "active_cells": 20,
+        "total_capacity": 49,
+        "density_rho": 0.4082,
+        "entropy_bits": 2.0161
+      },
+      "depth_3": {
+        "active_cells": 22,
+        "total_capacity": 343,
+        "density_rho": 0.0641,
+        "entropy_bits": 2.0458
+      },
+      "polytrope_compression_ratio": 0.0735,
+      "polytrope_index_np": 0.34
+    },
+    "gluon_flow_42": {
+      "total_transitions": 97,
+      "unique_42_gluon_paths_active": 38,
+      "transition_counts": {
+        "Q5->Q2": 10,
+        "Q2->Q5": 9,
+        "Q6->Q2": 5,
+        "Q2->Q4": 4,
+        "Q5->Q6": 4,
+        "Q4->Q2": 4,
+        "Q4->Q5": 3,
+        "Q2->Q7": 3,
+        "Q3->Q6": 3,
+        "Q1->Q5": 3,
+        "Q3->Q1": 3,
+        "Q2->Q3": 3,
+        "Q7->Q5": 2,
+        "Q1->Q3": 2,
+        "Q2->Q1": 2
+      },
+      "average_jump_strain": 1.4867,
+      "erratic_jumps_detected": 12,
+      "sample_erratic_jumps": [
+        {
+          "from_sentence_idx": 1,
+          "to_sentence_idx": 2,
+          "transition": "Q4->Q5",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Longitudinal Mind Axis (+y) -> Longitudinal Mind Axis (-y))",
+          "from_text": "The core premise of Catholic Actualism dictates that everything in the created u...",
+          "to_text": "By precisely aligning the geometric and structural mechanics of the Psochic Hege..."
+        },
+        {
+          "from_sentence_idx": 18,
+          "to_sentence_idx": 19,
+          "transition": "Q5->Q4",
+          "distance": 2.0,
+          "issue": "Semantic Interpretation (Logic -> Meaning)",
+          "from_text": "Catholic Actualism provides a highly sophisticated mechanism for understanding t...",
+          "to_text": "Every created being is an inherent composite of actuality (what they are right n..."
+        },
+        {
+          "from_sentence_idx": 56,
+          "to_sentence_idx": 57,
+          "transition": "Q4->Q5",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Longitudinal Mind Axis (+y) -> Longitudinal Mind Axis (-y))",
+          "from_text": "He observes the \\\"hypothetical infinity\\\" of what *could* happen and wills (coll...",
+          "to_text": "This is the definition of Divine Concurrence (*Concursus Divinus*)...."
+        },
+        {
+          "from_sentence_idx": 70,
+          "to_sentence_idx": 71,
+          "transition": "Q6->Q7",
+          "distance": 2.0,
+          "issue": "Moral Consequence (History -> Emotive Effect)",
+          "from_text": "God does not have \\\"memory\\\" because memory implies retrieving data from the pas...",
+          "to_text": "God eternally *sees* all things in one single, simple act of intellect...."
+        },
+        {
+          "from_sentence_idx": 71,
+          "to_sentence_idx": 72,
+          "transition": "Q7->Q6",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Vertical Soul Axis (-z) -> Vertical Soul Axis (+z))",
+          "from_text": "God eternally *sees* all things in one single, simple act of intellect....",
+          "to_text": "He does not need to \\\"store\\\" data; He is the source of the data...."
+        }
+      ]
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0571,
+      "jargon_density_per_sentence": 0.0083,
+      "average_jump_strain_42": 1.4867,
+      "cognitive_confusion_score": 24.71
+    },
+    "top_deconfused_examples": [
+      {
+        "original": "This is where the structural concepts of deception and the Hegemonic Stress Tensor apply.",
+        "clarified_pub_test": "This is where the structural concepts of deception and the ruling / dominant Stress Tensor apply.",
+        "jargon_count": 1,
+        "dominant_plane": "Q3",
+        "bridge_note": "Grounded in Where \u2013 Physical (Physics / Mechanics)."
+      }
+    ]
+  },
+  "Formal_Paper_25_Riemann": {
+    "id": "Formal_Paper_25_Riemann",
+    "genre": "Formal_Mathematics_Physics",
+    "sentences_audited": 48,
+    "total_content_tokens": 1491,
+    "doc_plane_distribution": {
+      "Q1": 0.1401,
+      "Q2": 0.1504,
+      "Q3": 0.141,
+      "Q4": 0.1278,
+      "Q5": 0.1922,
+      "Q6": 0.1307,
+      "Q7": 0.1178
+    },
+    "fractal_polytrope_field": {
+      "total_content_tokens": 1491,
+      "depth_1": {
+        "active_cells": 7,
+        "total_capacity": 7,
+        "density_rho": 1.0,
+        "entropy_bits": 1.3967
+      },
+      "depth_2": {
+        "active_cells": 16,
+        "total_capacity": 49,
+        "density_rho": 0.3265,
+        "entropy_bits": 1.4999
+      },
+      "depth_3": {
+        "active_cells": 17,
+        "total_capacity": 343,
+        "density_rho": 0.0496,
+        "entropy_bits": 1.5047
+      },
+      "polytrope_compression_ratio": 0.0368,
+      "polytrope_index_np": 0.29
+    },
+    "gluon_flow_42": {
+      "total_transitions": 34,
+      "unique_42_gluon_paths_active": 14,
+      "transition_counts": {
+        "Q2->Q5": 4,
+        "Q5->Q1": 4,
+        "Q1->Q5": 4,
+        "Q5->Q3": 4,
+        "Q6->Q5": 3,
+        "Q5->Q2": 3,
+        "Q3->Q2": 3,
+        "Q2->Q3": 2,
+        "Q3->Q5": 2,
+        "Q3->Q6": 1,
+        "Q5->Q6": 1,
+        "Q5->Q4": 1,
+        "Q4->Q7": 1,
+        "Q7->Q5": 1
+      },
+      "average_jump_strain": 1.5176,
+      "erratic_jumps_detected": 6,
+      "sample_erratic_jumps": [
+        {
+          "from_sentence_idx": 2,
+          "to_sentence_idx": 3,
+          "transition": "Q2->Q3",
+          "distance": 2.0,
+          "issue": "Physical Instantiation (Possibility -> Matter)",
+          "from_text": "This research treatise establishes the complete constructive spectral resolution...",
+          "to_text": "First, we formulate the Cellular Phase Space Lattice on the manifold $(\\mathcal{..."
+        },
+        {
+          "from_sentence_idx": 15,
+          "to_sentence_idx": 16,
+          "transition": "Q2->Q3",
+          "distance": 2.0,
+          "issue": "Physical Instantiation (Possibility -> Matter)",
+          "from_text": "Non-Self-Adjoint Boundary at Origin: To obtain a discrete spectrum, one must tru...",
+          "to_text": "But at the boundary $x = 0$, the operator is singular; boundary conditions $x \\t..."
+        },
+        {
+          "from_sentence_idx": 23,
+          "to_sentence_idx": 24,
+          "transition": "Q3->Q2",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Lateral Body Axis (-x) -> Lateral Body Axis (+x))",
+          "from_text": "But on cellular spacetime, the domain terminates strictly at $x = \\ell_P$ ($u = ...",
+          "to_text": "By the Cost of Being floor condition, $\\psi(\\ell_P) = \\psi(u=0) = 0$...."
+        },
+        {
+          "from_sentence_idx": 37,
+          "to_sentence_idx": 38,
+          "transition": "Q3->Q2",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Lateral Body Axis (-x) -> Lateral Body Axis (+x))",
+          "from_text": "Therefore, $\\sigma = \\operatorname{Re}(s_0) = \\frac{1}{2}$ holds for every zero,...",
+          "to_text": "Non-trivial zeros off the line $\\operatorname{Re}(s) = \\frac{1}{2}$ would requir..."
+        },
+        {
+          "from_sentence_idx": 39,
+          "to_sentence_idx": 40,
+          "transition": "Q5->Q4",
+          "distance": 2.0,
+          "issue": "Semantic Interpretation (Logic -> Meaning)",
+          "from_text": "Standalone Python Solver & Lean 4 Formalization\n\n6.1 Python Numerical Simulation...",
+          "to_text": "SelfAdjointSpectralSolver: Computes eigenvalues $\\gamma_n$ and proves exact Herm..."
+        }
+      ]
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0438,
+      "jargon_density_per_sentence": 0.0,
+      "average_jump_strain_42": 1.5176,
+      "cognitive_confusion_score": 24.3
+    },
+    "top_deconfused_examples": []
+  },
+  "Arxiv_Attention_Transformer": {
+    "id": "Arxiv_Attention_Transformer",
+    "genre": "Computer_Science_AI",
+    "sentences_audited": 419,
+    "total_content_tokens": 3769,
+    "doc_plane_distribution": {
+      "Q1": 0.1463,
+      "Q2": 0.1512,
+      "Q3": 0.1504,
+      "Q4": 0.1316,
+      "Q5": 0.1523,
+      "Q6": 0.1386,
+      "Q7": 0.1296
+    },
+    "fractal_polytrope_field": {
+      "total_content_tokens": 3769,
+      "depth_1": {
+        "active_cells": 7,
+        "total_capacity": 7,
+        "density_rho": 1.0,
+        "entropy_bits": 0.8997
+      },
+      "depth_2": {
+        "active_cells": 19,
+        "total_capacity": 49,
+        "density_rho": 0.3878,
+        "entropy_bits": 1.0015
+      },
+      "depth_3": {
+        "active_cells": 22,
+        "total_capacity": 343,
+        "density_rho": 0.0641,
+        "entropy_bits": 1.0114
+      },
+      "polytrope_compression_ratio": 0.0363,
+      "polytrope_index_np": 0.34
+    },
+    "gluon_flow_42": {
+      "total_transitions": 282,
+      "unique_42_gluon_paths_active": 23,
+      "transition_counts": {
+        "Q1->Q5": 59,
+        "Q5->Q1": 58,
+        "Q3->Q1": 51,
+        "Q1->Q3": 48,
+        "Q1->Q2": 9,
+        "Q2->Q1": 7,
+        "Q5->Q3": 6,
+        "Q4->Q1": 5,
+        "Q3->Q5": 5,
+        "Q1->Q4": 4,
+        "Q1->Q6": 4,
+        "Q2->Q3": 4,
+        "Q5->Q2": 4,
+        "Q6->Q3": 3,
+        "Q6->Q1": 3
+      },
+      "average_jump_strain": 1.4267,
+      "erratic_jumps_detected": 6,
+      "sample_erratic_jumps": [
+        {
+          "from_sentence_idx": 114,
+          "to_sentence_idx": 115,
+          "transition": "Q3->Q2",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Lateral Body Axis (-x) -> Lateral Body Axis (+x))",
+          "from_text": "\\mbox{} \\hfill $\\Box$ \\\\\n\n\n\n\n\n\n}\n\n\n\\mbox{} \\vspace{-0.500cm} \\\\\n\n\n\n\nWe are now i...",
+          "to_text": "\\!Starting with $ n = 3 $\n\nand\n\nrecalling the\n\nLeray's regularity time $ \\:\\!t_{..."
+        },
+        {
+          "from_sentence_idx": 165,
+          "to_sentence_idx": 166,
+          "transition": "Q2->Q3",
+          "distance": 2.0,
+          "issue": "Physical Instantiation (Possibility -> Matter)",
+          "from_text": "So,\n\nall\n\nthe estimates\n\nin (2.8) above\n\ncan be done\n\non {\\em any\\/} interval\n\n$...",
+          "to_text": "t \\geq t_0 \\!\\;\\!\\geq t^{\\:\\!\\prime}$: \\\\\n\n\n\n\n\n\\mbox{} \\vspace{-0.900cm} \\\\\n\n\n\\m..."
+        },
+        {
+          "from_sentence_idx": 258,
+          "to_sentence_idx": 259,
+          "transition": "Q2->Q3",
+          "distance": 2.0,
+          "issue": "Physical Instantiation (Possibility -> Matter)",
+          "from_text": "\\!\\:\\!In the case $ n = 4 $,\n\nwe can then\n\nget~(2.19) as follows:\n\nfrom (2.20),\n...",
+          "to_text": "\\|\\, D \\:\\!\\mbox{u} \\,\n\n\\|_{\\mbox{}_{\\scriptstyle L^{2}(\\mathbb{R}^{4})}}\n\n} $ \\..."
+        },
+        {
+          "from_sentence_idx": 315,
+          "to_sentence_idx": 316,
+          "transition": "Q3->Q2",
+          "distance": 2.0,
+          "issue": "Axial Inversion Jump (Lateral Body Axis (-x) -> Lateral Body Axis (+x))",
+          "from_text": "d\\tau\n\n} $ \\\\\n\n\n\\mbox{} \\vspace{+0.175cm} \\\\\n\n\nfor some constant $ K_{\\!\\;\\!m} $...",
+          "to_text": "Recalling that\n\n$ {\\displaystyle\n\n\\;\\!..."
+        },
+        {
+          "from_sentence_idx": 316,
+          "to_sentence_idx": 317,
+          "transition": "Q2->Q3",
+          "distance": 2.0,
+          "issue": "Physical Instantiation (Possibility -> Matter)",
+          "from_text": "Recalling that\n\n$ {\\displaystyle\n\n\\;\\!...",
+          "to_text": "\\|\\, \\mbox{u} \\,\n\n\\|_{\\mbox{}_{\\scriptstyle L^{4}(\\mathbb{R}^{4})}}\n\n\\!\\;\\!\\leq\\..."
+        }
+      ]
+    },
+    "metrics": {
+      "average_intra_sentence_strain": 0.0239,
+      "jargon_density_per_sentence": 0.0,
+      "average_jump_strain_42": 1.4267,
+      "cognitive_confusion_score": 22.24
+    },
+    "top_deconfused_examples": []
+  }
+}
