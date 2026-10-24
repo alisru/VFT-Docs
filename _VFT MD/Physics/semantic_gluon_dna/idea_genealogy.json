@@ -1,8 +1,8 @@
 {
   "system": "Epistemic Sexual Dimorphism & Multi-Agent Breeding Program",
-  "version": "4.0.0",
-  "last_updated": "2026-10-25T03:05:00+11:00",
-  "active_generation": 6,
+  "version": "5.0.0",
+  "last_updated": "2026-10-25T09:15:00+11:00",
+  "active_generation": 7,
   "gender_spectrum_definition": {
     "epistemic_foundation": "Pure Epistemic Fundamental Translation Hermeneutic (Action-Effect Event Physics, A -> E | C)",
     "information_structure_axiom": "Genders are not anthropomorphic or biological labels; they are invariant information structures defined by the actions and computational avenues chosen by agents.",
@@ -454,5 +454,101 @@
         "verdict": "CULLED (Retired)"
       }
     ]
+  },
+  "lineage_roster_gen7": {
+    "paradigm_shift": "Pivot from heuristic string-cleaning scripts to real, executable PyTorch Semantic Gluon Attention neural module.",
+    "mathematical_equation": "S_ij = ( (Q_i K_j^T) / sqrt(d_k) + M_ij^valence - V_Cornell(r_ij) - Gamma_friction(P_i, P_j) ) * exp(-tau_ij) + M_ij^splicing",
+    "cohort_gen7": {
+      "competitor_1_patriarch_75m_25f": {
+        "agent_id": "1c6ea089-5826-4d6c-8dca-33c52f595f56",
+        "ratio": "75M/25F",
+        "archetype": "Strict Mathematical Invariant & Proof-Theater Detection Patriarch",
+        "deliverables": [
+          "semantic_gluon_attention.py",
+          "test_semantic_gluon_attention.py",
+          "report.md"
+        ],
+        "metrics": {
+          "intron_leakage": 0.0,
+          "sparsity_pct": 43.75,
+          "adamw_loss_reduction_pct": 62.05,
+          "valence_leakage_reduction_pct": 77.14,
+          "active_gradient_tensors": "36/36 (100%)",
+          "verdict": "RUNNER-UP - Proven straight-through splicing, proof-theater detection loss, and 77.14% valence leakage reduction"
+        }
+      },
+      "competitor_2_matriarch_25m_75f": {
+        "agent_id": "512c4bb0-2da2-4bc1-a85b-a79620e5448d",
+        "ratio": "25M/75F",
+        "archetype": "Continuous Modal Ray Manifold & Gauge Tension Matriarch",
+        "deliverables": [
+          "semantic_gluon_attention.py",
+          "test_semantic_gluon_attention.py",
+          "report.md"
+        ],
+        "metrics": {
+          "intron_leakage": 0.0,
+          "sparsity_pct": 96.09,
+          "adamw_loss_reduction_pct": 66.03,
+          "active_gradient_tensors": "44/44 (100%)",
+          "total_params": 1458962,
+          "verdict": "INNOVATOR - Pioneered continuous 4-modal ray resonance augmentation manifold and color charge coupling"
+        }
+      },
+      "competitor_3_arbiter_50m_50f": {
+        "agent_id": "ce78fe89-2252-4cc7-b10d-877ca3616bde",
+        "ratio": "50M/50F",
+        "archetype": "Vectorized Sparse Splicing & Balanced Equilibrium Arbiter",
+        "deliverables": [
+          "semantic_gluon_attention.py",
+          "test_semantic_gluon_attention.py",
+          "report.md"
+        ],
+        "metrics": {
+          "intron_leakage": 0.0,
+          "sparsity_pct": 93.75,
+          "adamw_loss_reduction_pct": 74.34,
+          "active_gradient_tensors": "26/26 (100%)",
+          "sparse_speedup": "1.41x (N=64) to 2.24x (N=256)",
+          "verdict": "WINNER (Promoted to Master Architecture) - Highest loss reduction (74.34%), vectorized sparse sub-sequence execution path, exact canonical 7-planes gauge friction tensor"
+        }
+      }
+    },
+    "gen7_bakeoff_leaderboard": [
+      {
+        "rank": 1,
+        "agent": "competitor_3_50m_50f",
+        "loss_reduction": "74.34%",
+        "speedup": "2.24x",
+        "verdict": "WINNER (Promoted to Master Architecture)"
+      },
+      {
+        "rank": 2,
+        "agent": "competitor_1_75m_25f",
+        "loss_reduction": "62.05%",
+        "speedup": "1.0x",
+        "verdict": "RUNNER-UP (Synthesized Invariant Losses)"
+      },
+      {
+        "rank": 3,
+        "agent": "competitor_2_25m_75f",
+        "loss_reduction": "66.03%",
+        "speedup": "1.06x",
+        "verdict": "INNOVATOR (Synthesized Modal Augmentation)"
+      }
+    ],
+    "master_synthesis": {
+      "status": "integrated_and_verified",
+      "target_files": [
+        "e:/Vector Field Theory/VFT Docs/polytrope_transformer/src/polytrope_layers.py",
+        "e:/Vector Field Theory/VFT Docs/polytrope_transformer/src/train_sequence_gluon.py"
+      ],
+      "verified_benchmarks": {
+        "total_parameters": 8992225,
+        "sequence_intron_leakage": 0.0,
+        "exon_attention_accuracy": 1.0,
+        "multi_epoch_adamw_loss_reduction_pct": 88.23
+      }
+    }
   }
 }
