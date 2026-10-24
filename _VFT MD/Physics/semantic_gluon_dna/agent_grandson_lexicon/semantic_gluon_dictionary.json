@@ -1,0 +1,588 @@
+[
+  {
+    "word": "therefore",
+    "cefr": "B2",
+    "tail_ingress": {
+      "requires_prior_evidence": true,
+      "requires_prior_definition": false,
+      "requires_prior_agent": false,
+      "weight": 2.5
+    },
+    "head_egress": {
+      "obligates_operational_proof": true,
+      "obligates_variable_binding": false,
+      "obligates_boundary_resolution": true,
+      "weight": 2.5
+    },
+    "modal_spread": {
+      "is_like": 0.05,
+      "may_be": 0.05,
+      "can_be": 0.1,
+      "will_be": 0.65,
+      "is_not": 0.05,
+      "cant_be": 0.05,
+      "wont_be": 0.03,
+      "was_like": 0.02
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "consequence",
+        "deduction",
+        "inevitability"
+      ],
+      "possible": [
+        "resolution",
+        "closure",
+        "demonstration"
+      ],
+      "metaphorical": [
+        "bridge",
+        "keystone",
+        "arrow"
+      ],
+      "forbidden": [
+        "non_sequitur",
+        "arbitrary_leap",
+        "unsupported_assertion"
+      ],
+      "precluded": [
+        "randomness",
+        "indecision"
+      ]
+    }
+  },
+  {
+    "word": "preclude",
+    "cefr": "C1",
+    "tail_ingress": {
+      "requires_prior_evidence": true,
+      "requires_prior_definition": true,
+      "requires_prior_agent": false,
+      "weight": 2.8
+    },
+    "head_egress": {
+      "obligates_operational_proof": true,
+      "obligates_variable_binding": false,
+      "obligates_boundary_resolution": true,
+      "weight": 3.0
+    },
+    "modal_spread": {
+      "is_like": 0.02,
+      "may_be": 0.03,
+      "can_be": 0.05,
+      "will_be": 0.15,
+      "is_not": 0.25,
+      "cant_be": 0.45,
+      "wont_be": 0.03,
+      "was_like": 0.02
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "impossibility",
+        "exclusion",
+        "boundary_lock"
+      ],
+      "possible": [
+        "falsification",
+        "filtering"
+      ],
+      "metaphorical": [
+        "wall",
+        "barrier",
+        "gate"
+      ],
+      "forbidden": [
+        "coexistence",
+        "simultaneous_truth"
+      ],
+      "precluded": [
+        "ambiguity",
+        "vagueness"
+      ]
+    }
+  },
+  {
+    "word": "necessitate",
+    "cefr": "C1",
+    "tail_ingress": {
+      "requires_prior_evidence": true,
+      "requires_prior_definition": true,
+      "requires_prior_agent": false,
+      "weight": 3.0
+    },
+    "head_egress": {
+      "obligates_operational_proof": true,
+      "obligates_variable_binding": true,
+      "obligates_boundary_resolution": true,
+      "weight": 3.2
+    },
+    "modal_spread": {
+      "is_like": 0.03,
+      "may_be": 0.02,
+      "can_be": 0.05,
+      "will_be": 0.7,
+      "is_not": 0.05,
+      "cant_be": 0.1,
+      "wont_be": 0.03,
+      "was_like": 0.02
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "compulsion",
+        "strict_implication",
+        "law"
+      ],
+      "possible": [
+        "generation",
+        "execution"
+      ],
+      "metaphorical": [
+        "gravity",
+        "clamp",
+        "rail"
+      ],
+      "forbidden": [
+        "optionality",
+        "contingency"
+      ],
+      "precluded": [
+        "indifference"
+      ]
+    }
+  },
+  {
+    "word": "isomorphic",
+    "cefr": "C2",
+    "tail_ingress": {
+      "requires_prior_evidence": true,
+      "requires_prior_definition": true,
+      "requires_prior_agent": false,
+      "weight": 3.5
+    },
+    "head_egress": {
+      "obligates_operational_proof": true,
+      "obligates_variable_binding": true,
+      "obligates_boundary_resolution": true,
+      "weight": 3.5
+    },
+    "modal_spread": {
+      "is_like": 0.55,
+      "may_be": 0.05,
+      "can_be": 0.25,
+      "will_be": 0.1,
+      "is_not": 0.02,
+      "cant_be": 0.01,
+      "wont_be": 0.01,
+      "was_like": 0.01
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "bijection",
+        "structure_preservation",
+        "invertibility"
+      ],
+      "possible": [
+        "cross_domain_mapping",
+        "duality"
+      ],
+      "metaphorical": [
+        "mirror",
+        "translation",
+        "twin"
+      ],
+      "forbidden": [
+        "loss_of_dimension",
+        "asymmetry"
+      ],
+      "precluded": [
+        "distortion",
+        "distortion_of_rules"
+      ]
+    }
+  },
+  {
+    "word": "conjecture",
+    "cefr": "B2",
+    "tail_ingress": {
+      "requires_prior_evidence": false,
+      "requires_prior_definition": true,
+      "requires_prior_agent": true,
+      "weight": 1.2
+    },
+    "head_egress": {
+      "obligates_operational_proof": true,
+      "obligates_variable_binding": false,
+      "obligates_boundary_resolution": false,
+      "weight": 2.0
+    },
+    "modal_spread": {
+      "is_like": 0.1,
+      "may_be": 0.65,
+      "can_be": 0.15,
+      "will_be": 0.05,
+      "is_not": 0.02,
+      "cant_be": 0.01,
+      "wont_be": 0.01,
+      "was_like": 0.01
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "uncertainty",
+        "open_horizon"
+      ],
+      "possible": [
+        "verification",
+        "refutation"
+      ],
+      "metaphorical": [
+        "seed",
+        "compass",
+        "horizon"
+      ],
+      "forbidden": [
+        "axiom",
+        "proven_fact"
+      ],
+      "precluded": [
+        "dogma"
+      ]
+    }
+  },
+  {
+    "word": "substance",
+    "cefr": "C1",
+    "tail_ingress": {
+      "requires_prior_evidence": false,
+      "requires_prior_definition": true,
+      "requires_prior_agent": false,
+      "weight": 2.2
+    },
+    "head_egress": {
+      "obligates_operational_proof": false,
+      "obligates_variable_binding": true,
+      "obligates_boundary_resolution": true,
+      "weight": 2.5
+    },
+    "modal_spread": {
+      "is_like": 0.4,
+      "may_be": 0.05,
+      "can_be": 0.2,
+      "will_be": 0.25,
+      "is_not": 0.05,
+      "cant_be": 0.02,
+      "wont_be": 0.01,
+      "was_like": 0.02
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "ontological_independence",
+        "substratum",
+        "persistence"
+      ],
+      "possible": [
+        "attribute",
+        "mode",
+        "manifestation"
+      ],
+      "metaphorical": [
+        "foundation",
+        "core",
+        "bedrock"
+      ],
+      "forbidden": [
+        "pure_illusion",
+        "ephemeral_shadow"
+      ],
+      "precluded": [
+        "transient_drift"
+      ]
+    }
+  },
+  {
+    "word": "axiom",
+    "cefr": "B2",
+    "tail_ingress": {
+      "requires_prior_evidence": false,
+      "requires_prior_definition": true,
+      "requires_prior_agent": true,
+      "weight": 1.0
+    },
+    "head_egress": {
+      "obligates_operational_proof": false,
+      "obligates_variable_binding": true,
+      "obligates_boundary_resolution": true,
+      "weight": 3.5
+    },
+    "modal_spread": {
+      "is_like": 0.2,
+      "may_be": 0.02,
+      "can_be": 0.1,
+      "will_be": 0.65,
+      "is_not": 0.01,
+      "cant_be": 0.01,
+      "wont_be": 0.0,
+      "was_like": 0.01
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "starting_point",
+        "non_derived",
+        "structural_rule"
+      ],
+      "possible": [
+        "theorems",
+        "derivations"
+      ],
+      "metaphorical": [
+        "root",
+        "anchor",
+        "postulate"
+      ],
+      "forbidden": [
+        "empirical_speculation",
+        "internal_contradiction"
+      ],
+      "precluded": [
+        "falsity_by_decree"
+      ]
+    }
+  },
+  {
+    "word": "contradiction",
+    "cefr": "B1",
+    "tail_ingress": {
+      "requires_prior_evidence": true,
+      "requires_prior_definition": true,
+      "requires_prior_agent": false,
+      "weight": 2.5
+    },
+    "head_egress": {
+      "obligates_operational_proof": true,
+      "obligates_variable_binding": false,
+      "obligates_boundary_resolution": true,
+      "weight": 3.0
+    },
+    "modal_spread": {
+      "is_like": 0.02,
+      "may_be": 0.03,
+      "can_be": 0.05,
+      "will_be": 0.05,
+      "is_not": 0.35,
+      "cant_be": 0.45,
+      "wont_be": 0.03,
+      "was_like": 0.02
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "logical_inconsistency",
+        "mutual_exclusion"
+      ],
+      "possible": [
+        "proof_by_contradiction",
+        "rejection"
+      ],
+      "metaphorical": [
+        "collision",
+        "short_circuit",
+        "paradox"
+      ],
+      "forbidden": [
+        "simultaneous_validity",
+        "harmony"
+      ],
+      "precluded": [
+        "coherence"
+      ]
+    }
+  },
+  {
+    "word": "is",
+    "cefr": "A1",
+    "tail_ingress": {
+      "requires_prior_evidence": false,
+      "requires_prior_definition": false,
+      "requires_prior_agent": false,
+      "weight": 0.1
+    },
+    "head_egress": {
+      "obligates_operational_proof": false,
+      "obligates_variable_binding": true,
+      "obligates_boundary_resolution": false,
+      "weight": 0.5
+    },
+    "modal_spread": {
+      "is_like": 0.25,
+      "may_be": 0.1,
+      "can_be": 0.15,
+      "will_be": 0.35,
+      "is_not": 0.05,
+      "cant_be": 0.05,
+      "wont_be": 0.02,
+      "was_like": 0.03
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "identity",
+        "presence"
+      ],
+      "possible": [
+        "predication",
+        "equivalence"
+      ],
+      "metaphorical": [
+        "equal_sign",
+        "point"
+      ],
+      "forbidden": [
+        "non_existence"
+      ],
+      "precluded": [
+        "nothingness"
+      ]
+    }
+  },
+  {
+    "word": "because",
+    "cefr": "A2",
+    "tail_ingress": {
+      "requires_prior_evidence": true,
+      "requires_prior_definition": false,
+      "requires_prior_agent": false,
+      "weight": 1.5
+    },
+    "head_egress": {
+      "obligates_operational_proof": false,
+      "obligates_variable_binding": false,
+      "obligates_boundary_resolution": false,
+      "weight": 1.5
+    },
+    "modal_spread": {
+      "is_like": 0.1,
+      "may_be": 0.15,
+      "can_be": 0.2,
+      "will_be": 0.4,
+      "is_not": 0.05,
+      "cant_be": 0.05,
+      "wont_be": 0.02,
+      "was_like": 0.03
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "causal_link",
+        "explanation"
+      ],
+      "possible": [
+        "justification",
+        "motive"
+      ],
+      "metaphorical": [
+        "cord",
+        "stem",
+        "anchor"
+      ],
+      "forbidden": [
+        "unrelated_fact"
+      ],
+      "precluded": [
+        "pure_coincidence"
+      ]
+    }
+  },
+  {
+    "word": "might",
+    "cefr": "B1",
+    "tail_ingress": {
+      "requires_prior_evidence": false,
+      "requires_prior_definition": false,
+      "requires_prior_agent": false,
+      "weight": 0.8
+    },
+    "head_egress": {
+      "obligates_operational_proof": false,
+      "obligates_variable_binding": false,
+      "obligates_boundary_resolution": false,
+      "weight": 1.0
+    },
+    "modal_spread": {
+      "is_like": 0.1,
+      "may_be": 0.7,
+      "can_be": 0.1,
+      "will_be": 0.02,
+      "is_not": 0.03,
+      "cant_be": 0.02,
+      "wont_be": 0.02,
+      "was_like": 0.01
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "possibility",
+        "uncertainty"
+      ],
+      "possible": [
+        "realization",
+        "testing"
+      ],
+      "metaphorical": [
+        "cloud",
+        "maybe",
+        "wave"
+      ],
+      "forbidden": [
+        "guarantee",
+        "deterministic_outcome"
+      ],
+      "precluded": [
+        "certainty"
+      ]
+    }
+  },
+  {
+    "word": "impossible",
+    "cefr": "B1",
+    "tail_ingress": {
+      "requires_prior_evidence": true,
+      "requires_prior_definition": true,
+      "requires_prior_agent": false,
+      "weight": 2.2
+    },
+    "head_egress": {
+      "obligates_operational_proof": true,
+      "obligates_variable_binding": false,
+      "obligates_boundary_resolution": true,
+      "weight": 2.8
+    },
+    "modal_spread": {
+      "is_like": 0.01,
+      "may_be": 0.01,
+      "can_be": 0.01,
+      "will_be": 0.02,
+      "is_not": 0.25,
+      "cant_be": 0.65,
+      "wont_be": 0.03,
+      "was_like": 0.02
+    },
+    "relative_vectors": {
+      "guaranteed": [
+        "exclusion",
+        "barrier",
+        "zero_probability"
+      ],
+      "possible": [
+        "redefinition",
+        "boundary_shift"
+      ],
+      "metaphorical": [
+        "wall",
+        "singularity",
+        "void"
+      ],
+      "forbidden": [
+        "manifestation",
+        "occurrence"
+      ],
+      "precluded": [
+        "ease"
+      ]
+    }
+  }
+]

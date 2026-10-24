@@ -1,0 +1,169 @@
+[
+  {
+    "genre": "Philosophy (Spinoza Style)",
+    "audit": {
+      "sentence": "Substance is in itself and is conceived through itself; therefore, one substance cannot be produced by another substance.",
+      "token_count": 18,
+      "cefr_profile": {
+        "dominant_tier": "A1",
+        "composite_score_1_to_6": 2.67,
+        "tier_breakdown": {
+          "C1": 3,
+          "A1": 7,
+          "B1": 6,
+          "B2": 2
+        }
+      },
+      "causal_valence_head_tail": {
+        "closed_obligations": 0.0,
+        "leaked_obligations": 2.5,
+        "conservation_ratio": 0.0
+      },
+      "modal_flux_spread": {
+        "is_like": 0.1895,
+        "may_be": 0.1145,
+        "can_be": 0.1478,
+        "will_be": 0.209,
+        "is_not": 0.0889,
+        "cant_be": 0.0821,
+        "wont_be": 0.0671,
+        "was_like": 0.1011
+      },
+      "colored_gluon_charges": {
+        "Red_Opposition": 0.0686,
+        "Green_Testing": 0.0526,
+        "Blue_Proof": 0.0957,
+        "Magenta_Model": 0.112
+      },
+      "optical_metrics": {
+        "optical_thickness_tau": 2.7775,
+        "luminescence_L": 0.0622
+      }
+    }
+  },
+  {
+    "genre": "Proof Theater (Fake Jargon)",
+    "audit": {
+      "sentence": "Therefore, the profound harmony of the universe naturally precludes all contradiction and proves the conjecture.",
+      "token_count": 15,
+      "cefr_profile": {
+        "dominant_tier": "A1",
+        "composite_score_1_to_6": 2.47,
+        "tier_breakdown": {
+          "B2": 4,
+          "A1": 6,
+          "B1": 5
+        }
+      },
+      "causal_valence_head_tail": {
+        "closed_obligations": 5.3,
+        "leaked_obligations": 8.7,
+        "conservation_ratio": 0.379
+      },
+      "modal_flux_spread": {
+        "is_like": 0.1261,
+        "may_be": 0.1635,
+        "can_be": 0.1348,
+        "will_be": 0.1759,
+        "is_not": 0.1174,
+        "cant_be": 0.1213,
+        "wont_be": 0.0812,
+        "was_like": 0.0799
+      },
+      "colored_gluon_charges": {
+        "Red_Opposition": 0.0853,
+        "Green_Testing": 0.0633,
+        "Blue_Proof": 0.115,
+        "Magenta_Model": 0.068
+      },
+      "optical_metrics": {
+        "optical_thickness_tau": 2.112,
+        "luminescence_L": 0.121
+      }
+    }
+  },
+  {
+    "genre": "Basic Conversational (A1/A2)",
+    "audit": {
+      "sentence": "Hey, I like this idea because it is easy and we can do it tomorrow.",
+      "token_count": 14,
+      "cefr_profile": {
+        "dominant_tier": "A1",
+        "composite_score_1_to_6": 1.5,
+        "tier_breakdown": {
+          "A1": 8,
+          "A2": 5,
+          "B1": 1
+        }
+      },
+      "causal_valence_head_tail": {
+        "closed_obligations": 0.0,
+        "leaked_obligations": 0.0,
+        "conservation_ratio": 0.0
+      },
+      "modal_flux_spread": {
+        "is_like": 0.1536,
+        "may_be": 0.1464,
+        "can_be": 0.1536,
+        "will_be": 0.1821,
+        "is_not": 0.0929,
+        "cant_be": 0.0929,
+        "wont_be": 0.0886,
+        "was_like": 0.09
+      },
+      "colored_gluon_charges": {
+        "Red_Opposition": 0.0677,
+        "Green_Testing": 0.0571,
+        "Blue_Proof": 0.1066,
+        "Magenta_Model": 0.0944
+      },
+      "optical_metrics": {
+        "optical_thickness_tau": 2.875,
+        "luminescence_L": 0.0564
+      }
+    }
+  },
+  {
+    "genre": "Mathematical Physics (Formal Navier-Stokes)",
+    "audit": {
+      "sentence": "By substituting the Sobolev inequality into the dyadic energy equation, the enstrophy remains uniformly bounded.",
+      "token_count": 15,
+      "cefr_profile": {
+        "dominant_tier": "B1",
+        "composite_score_1_to_6": 2.73,
+        "tier_breakdown": {
+          "A1": 4,
+          "C1": 1,
+          "B1": 6,
+          "B2": 3,
+          "A2": 1
+        }
+      },
+      "causal_valence_head_tail": {
+        "closed_obligations": 0.0,
+        "leaked_obligations": 3.7,
+        "conservation_ratio": 0.0
+      },
+      "modal_flux_spread": {
+        "is_like": 0.1601,
+        "may_be": 0.1362,
+        "can_be": 0.1362,
+        "will_be": 0.1617,
+        "is_not": 0.1036,
+        "cant_be": 0.1015,
+        "wont_be": 0.0908,
+        "was_like": 0.1098
+      },
+      "colored_gluon_charges": {
+        "Red_Opposition": 0.0657,
+        "Green_Testing": 0.0564,
+        "Blue_Proof": 0.0881,
+        "Magenta_Model": 0.0872
+      },
+      "optical_metrics": {
+        "optical_thickness_tau": 2.7725,
+        "luminescence_L": 0.0625
+      }
+    }
+  }
+]

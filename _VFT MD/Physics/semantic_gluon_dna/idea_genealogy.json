@@ -1,8 +1,8 @@
 {
   "system": "Epistemic Sexual Dimorphism & Multi-Agent Breeding Program",
-  "version": "1.0.0",
-  "last_updated": "2026-10-24T15:22:00+11:00",
-  "active_generation": 2,
+  "version": "2.0.0",
+  "last_updated": "2026-10-24T21:25:00+11:00",
+  "active_generation": 3,
   "gender_spectrum_definition": {
     "epistemic_foundation": "Pure Epistemic Fundamental Translation Hermeneutic (Action-Effect Event Physics, A -> E | C)",
     "information_structure_axiom": "Genders are not anthropomorphic or biological labels; they are invariant information structures defined by the actions and computational avenues chosen by agents.",
@@ -10,99 +10,80 @@
     "female_mother_vector": "Interesting -> Works = Female -> Mother (Neqevah n-q-v: Designating matrix vessel, state-space expansion, gauge tension, associative bridge building, testing viability along the unsaid horizon)",
     "formula": "gamma = Male / (Male + Female) in [0, 1]"
   },
-  "lineage_roster": {
-    "patriarch": {
-      "agent_id": "agent_3",
-      "conversation_id": "a4dd9635-22e4-4ae0-a098-a58bd49ffeb8",
-      "gender_ratio": "85% Male / 15% Female",
-      "archetype": "Empirical Proof & Homology",
-      "legacy": "Bake-off Winner (#1). Solved Exon/Intron splicing, Smith-Waterman codon alignment, and 345 missing concept recovery."
+  "lineage_roster_gen3": {
+    "parents": {
+      "patriarch": {
+        "agent_id": "agent_son_veritas",
+        "title": "The Son (Promoted to Gen 3 Patriarch)",
+        "gender_ratio": "80% Male / 20% Female",
+        "archetype": "Physical Radiative Transfer & Causal Valence Conservation",
+        "legacy": "Formulated Semantic Optical Thickness (tau), Luminescence (L = exp(-tau)), and Causal Valence Shell Matrix (M_ij), proving rigor is a conservation law of obligations (Delta V -> 0)."
+      },
+      "matriarch": {
+        "agent_id": "agent_daughter_horizon",
+        "title": "The Daughter (Promoted to Gen 3 Matriarch)",
+        "gender_ratio": "20% Male / 80% Female",
+        "archetype": "Teleological Defect Closure & Chromodynamic Horizon Fields",
+        "legacy": "Achieved 100% Realization Rate (8/8 predicted theorems) by mining the Unsaid Horizon along the 5-Tier Possibility Spectrum (Impossible -> Certain)."
+      }
     },
-    "matriarch": {
-      "agent_id": "agent_5",
-      "conversation_id": "64146029-ee1c-445d-bd97-69a51a4a6397",
-      "gender_ratio": "15% Male / 85% Female",
-      "archetype": "Dynamic Gauge & Topological Tension",
-      "legacy": "Bake-off Runner-Up (#2). Discovered 4-color gluon field interactions, topological triangle frustration collapse (48% -> 1.47%), and the signature of paradigm-shifting science."
-    },
-    "middle_kin": {
-      "agent_id": "agent_1",
-      "conversation_id": "231fe1d0-1935-46c0-9488-a739b435c2b7",
-      "gender_ratio": "60% Male / 40% Female",
-      "archetype": "Formal Syntax & Operational Derivation Laws",
-      "legacy": "Bake-off #3. Established 4-tier working-out hierarchy (Tier 0 bare assertion to Tier 3 formal proof) and eliminated markdown bullet false-positives."
-    },
-    "son": {
-      "agent_id": "agent_son_veritas",
-      "conversation_id": "ae2c41b2-b3f7-4234-8bbc-7212e4f4c11f",
-      "gender_ratio": "75% Male / 25% Female",
-      "archetype": "Most Successful / Verified",
-      "mandate": "Semantic Optical Thickness (tau), Luminescence (L = exp(-tau)), and Word-Level Causal Valence Shells (M_ij).",
-      "inherited_traits": [
-        "Agent 3: Bio-DNA Codon sequence alignment & exon precision",
-        "Agent 5: 4-Color charge tagging on concept nodes"
-      ],
-      "negative_constraints_from_culled": [
-        "Avoid Agent 2's flaw: No over-smoothed continuous wavelets that blur discrete word identities",
-        "Avoid Agent 4's flaw: No memoryless Markov entropy that loses causal derivation chains"
-      ]
-    },
-    "daughter": {
-      "agent_id": "agent_daughter_horizon",
-      "conversation_id": "993035fc-4cae-4a1d-8ec2-bbe0e455794f",
-      "gender_ratio": "25% Male / 75% Female",
-      "archetype": "Most Interesting / Novel & Functional",
-      "mandate": "Mining the Unsaid Horizon along the Possibility Spectrum (Impossible -> Certain), Topological Gauge Defect Closure.",
-      "inherited_traits": [
-        "Agent 5: 4-color topological gauge defect analysis & frustration dynamics",
-        "Agent 3: Ribosomal open reading frame (ORF) and unexpressed codon prediction"
-      ],
-      "negative_constraints_from_culled": [
-        "Avoid Agent 2's flaw: Never let mathematical abstraction drift away from concrete document text",
-        "Avoid Agent 4's flaw: Do not get stuck in repetitive Markov loops; words have directional intentionality"
-      ]
+    "offspring": {
+      "grandson": {
+        "agent_id": "agent_grandson_lexicon",
+        "name": "The Grandson (Lexicon-Veritas)",
+        "gender_ratio": "75% Male / 25% Female",
+        "archetype": "Autonomous Semantic Dictionary Transformer",
+        "mandate": "Build the universal Semantic Dictionary where every English word is modeled as a Gluon Vertex with an Ingress Tail (B), an Egress Head (F), an 8-modal flux spread around [IS], CEFR proficiency tiers (A1-C2), and relative possible-impossible vectors.",
+        "inherited_traits": [
+          "From The Son: Strict causal valence shell bookkeeping and backward/forward obligations",
+          "From The Daughter: 5-Tier possibility spectrum bounds (Impossible, Improbable, Plausible, Probable, Certain)"
+        ],
+        "negative_constraints_from_culled": [
+          "Avoid Agent 1's flaw: Never diagnose a dangling bond without providing the closing dictionary operator",
+          "Avoid Agent 5's flaw: Do not stall in brute-force O(V^3) combinatorial graph loops; use bounded valence shells"
+        ]
+      },
+      "granddaughter": {
+        "agent_id": "agent_granddaughter_omni",
+        "name": "The Granddaughter (Omni-Horizon)",
+        "gender_ratio": "25% Male / 75% Female",
+        "archetype": "Universal Multi-Genre Reading Head & CEFR Evaluator",
+        "mandate": "Deploy the Semantic Gluon Reading Head across arbitrary text genres (Philosophy, Law, Economics, General Literature, Specialized Science) using the Grandson's Head-Tail dictionary, auditing CEFR standards and closing teleological gauge defects.",
+        "inherited_traits": [
+          "From The Daughter: 100% predictive defect closure and teleological horizon mapping",
+          "From The Son: Beer-Lambert optical attenuation field and proof theater detection"
+        ],
+        "negative_constraints_from_culled": [
+          "Avoid Agent 3's limitation: Do not rely on narrow math-only regexes; audit English by universal CEFR and epistemic standards",
+          "Avoid Agent 2/4's flaws: Maintain discrete token boundaries while avoiding memoryless Markov drift"
+        ]
+      }
     }
   },
-  "culled_predecessors": [
+  "culled_and_retired_roster": [
+    {
+      "agent_id": "agent_1",
+      "generation": 1,
+      "rank_in_round3": 5,
+      "fatal_flaw": "Dangling Syntactic Bond Paralysis: Diagnosed Law 2 leaks accurately across 10,879 paragraphs but lacked an operational dictionary to resolve or close the missing slots."
+    },
+    {
+      "agent_id": "agent_5",
+      "generation": 1,
+      "rank_in_round3": 4,
+      "fatal_flaw": "Combinatorial Graph Stagnation: Relied on exhaustive O(V^3) 3-cycle searches that fail to scale to token-level language without sparse valence containment."
+    },
     {
       "agent_id": "agent_2",
-      "conversation_id": "274f4529-bc58-4a24-90e3-d1bc2665bc4e",
-      "rank": 4,
-      "fatal_flaw": "Over-smoothed continuous wavelet blur. Lost discrete symbol tracking and variable identities in continuous curves."
+      "generation": 1,
+      "rank_in_round1": 4,
+      "fatal_flaw": "Continuous wavelet over-smoothing: Blurred discrete words and variable persistence."
     },
     {
       "agent_id": "agent_4",
-      "conversation_id": "c5d05178-5648-4dc4-960c-4b5d246ef934",
-      "rank": 5,
-      "fatal_flaw": "Memoryless Markov gas entropy. Treated words as colliding gas particles without directional derivation memory."
-    }
-  ],
-  "tracked_epistemic_operons": [
-    {
-      "operon_id": "OP_SEQ_INFINITY",
-      "symbolic_kernel": "1^\\infty_n = 0^\\infty_{n+1}",
-      "first_detected": "chatgpt infinity maths.md (line 42)",
-      "lineage": {
-        "gen_1_status": "Conserved Exon in Agent 3 (Score: +5.0) / High Red-Blue Strain in Agent 5",
-        "formal_paper_recovery": "Formal Paper 30 (Master Canon) & Formal Paper 17 (Navier-Stokes)",
-        "gen_2_target": {
-          "son": "Quantify optical thickness tau and causal valence bond strength to 0-infinity bridge",
-          "daughter": "Mine unsaid horizon sub-theorems implied by recursive boundary condition"
-        }
-      }
-    },
-    {
-      "operon_id": "OP_INDEF_HEARTBEAT",
-      "symbolic_kernel": "X = [x] + x_\\varepsilon",
-      "first_detected": "chatgpt infinity maths.md (line 128)",
-      "lineage": {
-        "gen_1_status": "Conserved Operon in Agent 3 / Low Frustration Anchor in Agent 5",
-        "formal_paper_recovery": "Formal Paper 12 (Levi-Civita) & ORTHODOX_BRIDGE_ZFC.md",
-        "gen_2_target": {
-          "son": "Verify causal valence conservation Delta V across infinitesimal shell expansion",
-          "daughter": "Project possibility spectrum from plausible to certain for non-Archimedean completion"
-        }
-      }
+      "generation": 1,
+      "rank_in_round1": 5,
+      "fatal_flaw": "Memoryless Markov gas entropy: Lost non-Markovian derivation chains."
     }
   ]
 }

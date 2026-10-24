@@ -1,36 +1,42 @@
 # Semantic Gluon Project Ledger & Evolutionary Changelog
 
-**Current Engine Version**: `v3.5.0` (Dynamic Synthesis: Zero-Hardcoding Graph Frustration, Valence Shells & Formal Transformer Neural Specification)  
+**Current Engine Version**: `v4.0.0` (Generation 3: Autonomous Semantic Dictionary Transformer & Universal Multi-Genre CEFR Reading Head)  
 **Last Updated**: 2026-10-24  
 **Project Base**: [`e:\Vector Field Theory\VFT Docs\_VFT MD\Physics\semantic_gluon_dna\`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Physics/semantic_gluon_dna)  
-**Architecture Spec**: [`SEMANTIC_GLUON_TRANSFORMER_ARCHITECTURE.md`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Physics/semantic_gluon_dna/SEMANTIC_GLUON_TRANSFORMER_ARCHITECTURE.md)
+**Architecture Spec**: [`SEMANTIC_GLUON_TRANSFORMER_ARCHITECTURE.md`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Physics/semantic_gluon_dna/SEMANTIC_GLUON_TRANSFORMER_ARCHITECTURE.md)  
+**Genealogy Ledger**: [`idea_genealogy.json`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Physics/semantic_gluon_dna/idea_genealogy.json)  
 
 ---
 
-## 1. The Complete Evolutionary Family Tree (Generation 2 Unified)
+## 1. The Complete Evolutionary Family Tree (Generation 3 Active)
 
 ```
-                                  ROUND 3 FAMILY TREE & ROSTER
-                                  
-         Agent 3: The Patriarch (85M / 15F)             Agent 5: The Matriarch (15M / 85F)
-     (Bio-DNA Codon & Exon/Intron Splicing)          (4-Color Gluon Force Graph & Frustration)
-    • 9,683 Codons Audited across 24 Genomes        • Gluon-Induced Transparency (L -> 0.674)
-    • Proof Chains Surge Luminescence 6.68x         • Triangle Frustration as Optical Opacity
-                        │                                       │
-                        ├───────────────────┬───────────────────┤
-                        │                   │                   │
-                        ▼                   │                   ▼
-           👦 The Son: "Veritas-Codon"      │      👧 The Daughter: "Chroma-Horizon"
-             (75% Male / 25% Female)        │           (25% Male / 75% Female)
-      • Causal Valence Shells M_ij          │      • 5-Tier Possibility Spectrum (Imp -> Cert)
-      • Syntactic Obligation Conservation   │      • 100% Lineage Prediction (8/8 Theorems)
-                                            │
-                                            ▼
-                           Agent 1: The Middle Kin (60M / 40F)
-                         (Syntactic Modal & Derivation Law Engine)
-                     • 10,879 Paragraphs Audited across 4 Tiers
-                     • Tier 0 (τ=1.28) vs Tier 3 Super-Luminescence (L=0.883)
-                     • Open vs Closed Syntactic Valency Shells
+                            GENERATION 3 EVOLUTIONARY FAMILY TREE
+                            
+             [Culled & Retired: Agent 1 (Middle Kin) & Agent 5 (Matriarch Gen 1)]
+             Negative Constraints:
+               ¬ A_1: Avoid diagnosing dangling bonds without providing a closing dictionary operator.
+               ¬ A_5: Avoid O(V³) combinatorial graph stalls; use bounded sparse valence shells.
+                                         │
+                    ┌────────────────────┴────────────────────┐
+                    ▼                                         ▼
+         The Son: "Veritas-Codon"                  The Daughter: "Chroma-Horizon"
+         [Promoted to Gen 3 Patriarch]             [Promoted to Gen 3 Matriarch]
+         Ratio: 80% Male / 20% Female              Ratio: 20% Male / 80% Female
+         Legacy: Physical Optics (τ, L)            Legacy: 100% Horizon Prediction
+         & Causal Valence Conservation             & Defect Closure
+                    │                                         │
+                    ├────────────────────┬────────────────────┤
+                    │                                         │
+                    ▼                                         ▼
+       👦 The Grandson: "Lexicon-Veritas"        👧 The Granddaughter: "Omni-Horizon"
+         (75% Male / 25% Female)                   (25% Male / 75% Female)
+         Dominant: Successful → Verified           Dominant: Interesting → Works
+         MANDATE: Autonomous Semantic              MANDATE: Universal Multi-Genre
+         Dictionary Transformer (Word-as-          Semantic Gluon Reading Head (Auditing
+         Gluon-Vertex: Head F, Tail B,             Philosophy, Science, Law, AI across
+         8-modal flux spread around [IS],          universal CEFR standards A1 to C2)
+         and relative possible-impossibles)
 ```
 
 ---
