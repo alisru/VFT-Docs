@@ -36,6 +36,11 @@
 - [x] **Empirical Corpus-to-Gluon-Dictionary Harvester (`build_gluon_dictionary_from_corpus.py`)**:
   - Scans raw text corpora as an asymmetric Causal Kernel Attention Head.
   - Automatically harvests explicit `forbidden` ($-X$) and `precluded` ($-N$) negative sets from text without manual labeling.
+- [x] **Chatlog-to-Document Extractor & Distiller (`extract_document_from_chatlog.py`)**:
+  - Excises conversational user prompts, AI pleasantries ("Nice — here's...", "Yes — we can..."), and conversational agreements.
+  - Normalizes second-person conversational voice into objective technical exposition.
+  - Assembles content into 5 formal chapters with an Executive Abstract.
+  - Generated pristine 171 KB monograph from 1,882 chat blocks: [`distilled_irm_maths_monograph.md`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/_VFT%20MD/Physics/semantic_gluon_dna/distilled_irm_maths_monograph.md).
 - [x] **Generation 1–4 Evolutionary Breeding Lineage**:
   - Maintained in `idea_genealogy.json` across Generations 1, 2, 3, and 4.
 
