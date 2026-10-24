@@ -66,7 +66,23 @@
         "gender_ratio": "75% Male / 25% Female",
         "archetype": "Strict Proof Preservation & Cornell Confinement",
         "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling with strict proof defense (tau -> 0, zero lost lemmas).",
-        "negative_constraints": ["Avoid conservative exon hoarding; actively cull redundant blocks when similarity is high."]
+        "negative_constraints": [
+          "Avoid conservative exon hoarding; actively cull redundant blocks when similarity is high."
+        ],
+        "status": "benchmark_complete",
+        "rank": 1,
+        "benchmark_results": {
+          "shards_generated": 11,
+          "total_input_blocks": 1745,
+          "retained_blocks": 627,
+          "culled_blocks": 1118,
+          "culling_percentage": 64.07,
+          "c1_c2_jargon_reduction_pct": 80.0,
+          "avg_sentence_length": 14.2,
+          "cornell_string_snaps": 0,
+          "lemma_retention_pct": 100.0,
+          "report_path": "agent_gen5_75m_25f\\\\report.md"
+        }
       },
       "agent_gen5_65m_35f": {
         "agent_id": "agent_gen5_65m_35f",
@@ -74,7 +90,22 @@
         "gender_ratio": "65% Male / 35% Female",
         "archetype": "Continuous Lexicon Lookup & Kernel Attention",
         "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling using continuous probability tables and matrix lookups.",
-        "negative_constraints": ["Prevent memoryless Markov drift by enforcing causal valence conservation."]
+        "negative_constraints": [
+          "Prevent memoryless Markov drift by enforcing causal valence conservation."
+        ],
+        "status": "benchmark_complete",
+        "rank": 4,
+        "benchmark_results": {
+          "shards_generated": 6,
+          "words_pruned": 11494,
+          "culling_percentage": 35.61,
+          "c1_c2_jargon_reduction_pct": 98.09,
+          "flesch_reading_ease": 34.79,
+          "flesch_kincaid_grade": 12.9,
+          "cornell_string_snaps": 0,
+          "lemma_retention_pct": 100.0,
+          "report_path": "agent_gen5_65m_35f\\\\report.md"
+        }
       },
       "agent_gen5_50m_50f": {
         "agent_id": "agent_gen5_50m_50f",
@@ -82,7 +113,24 @@
         "gender_ratio": "50% Male / 50% Female",
         "archetype": "Asymptotic String Confinement & Exon Merging Arbiter",
         "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling balancing strict truth defense with aggressive redundancy culling.",
-        "negative_constraints": ["Ensure zero conversational dialogue framing leaks into reference documentation."]
+        "negative_constraints": [
+          "Ensure zero conversational dialogue framing leaks into reference documentation."
+        ],
+        "status": "benchmark_complete",
+        "rank": 3,
+        "benchmark_results": {
+          "shards_generated": 6,
+          "total_input_blocks": 1980,
+          "retained_blocks": 1158,
+          "culled_blocks": 822,
+          "culling_percentage": 41.52,
+          "c1_c2_jargon_reduction_pct": 95.45,
+          "flesch_reading_ease": 36.66,
+          "flesch_kincaid_grade": 12.18,
+          "cornell_string_snaps": 0,
+          "lemma_retention_pct": 100.0,
+          "report_path": "agent_gen5_50m_50f\\\\report.md"
+        }
       },
       "agent_gen5_40m_60f": {
         "agent_id": "agent_gen5_40m_60f",
@@ -90,7 +138,24 @@
         "gender_ratio": "40% Male / 60% Female",
         "archetype": "Complete-Linkage Clustering & Plain-English Translation",
         "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling using complete-linkage metric space clustering.",
-        "negative_constraints": ["Do not delete technical lemmas; simplify phrasing and split multi-clause sentences."]
+        "negative_constraints": [
+          "Do not delete technical lemmas; simplify phrasing and split multi-clause sentences."
+        ],
+        "status": "benchmark_complete",
+        "rank": 2,
+        "benchmark_results": {
+          "shards_generated": 7,
+          "total_input_blocks": 146,
+          "retained_blocks": 59,
+          "culled_blocks": 87,
+          "culling_percentage": 59.59,
+          "c1_c2_jargon_reduction_pct": 99.04,
+          "flesch_reading_ease": 42.75,
+          "flesch_kincaid_grade": 10.23,
+          "cornell_string_snaps": 0,
+          "lemma_retention_pct": 100.0,
+          "report_path": "agent_gen5_40m_60f\\\\report.md"
+        }
       },
       "agent_gen5_25m_75f": {
         "agent_id": "agent_gen5_25m_75f",
@@ -98,11 +163,82 @@
         "gender_ratio": "25% Male / 75% Female",
         "archetype": "State-Space Expansion & Cross-Plane Bridge Building",
         "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling testing dynamic cross-plane thematic bridges.",
-        "negative_constraints": ["Avoid single-linkage chaining that collapses distinct topics into giant blobs."]
+        "negative_constraints": [
+          "Avoid single-linkage chaining that collapses distinct topics into giant blobs."
+        ],
+        "status": "benchmark_complete",
+        "benchmark_results": {
+          "shards_generated": 8,
+          "total_input_blocks": 1864,
+          "retained_blocks": 1461,
+          "culled_blocks": 403,
+          "culling_percentage": 21.62,
+          "c1_c2_jargon_reduction_pct": 98.57,
+          "cornell_string_snaps": 0,
+          "lemma_retention_pct": 100.0,
+          "flesch_reading_ease": 37.59,
+          "flesch_kincaid_grade": 11.25,
+          "report_path": "agent_gen5_25m_75f\\\\report.md"
+        },
+        "rank": 5
       }
-    }
+    },
+    "gen5_bakeoff_leaderboard": [
+      {
+        "rank": 1,
+        "agent_id": "agent_gen5_75m_25f",
+        "ratio": "75M/25F",
+        "culling_pct": 64.07,
+        "shards": 11,
+        "verdict": "WINNER (Promoted to Gen 6 Patriarch) - Highest culling of chat noise, 100% proofs kept, 11 micro-monographs"
+      },
+      {
+        "rank": 2,
+        "agent_id": "agent_gen5_40m_60f",
+        "ratio": "40M/60F",
+        "culling_pct": 59.59,
+        "shards": 7,
+        "verdict": "RUNNER-UP (Promoted to Gen 6 Matriarch) - Best FKGL (10.23), Simpson overlap deduplication, two-stage hierarchical router"
+      },
+      {
+        "rank": 3,
+        "agent_id": "agent_gen5_50m_50f",
+        "ratio": "50M/50F",
+        "culling_pct": 41.52,
+        "shards": 6,
+        "verdict": "SCALER / EQUILIBRIUM ARBITER - Invariant Lemma Shield, conversational de-framing filter"
+      },
+      {
+        "rank": 4,
+        "agent_id": "agent_gen5_65m_35f",
+        "ratio": "65M/35F",
+        "culling_pct": 35.61,
+        "shards": 6,
+        "verdict": "CULLED - Lower de-duplication efficiency and higher retained word bloat (20k words)"
+      },
+      {
+        "rank": 5,
+        "agent_id": "agent_gen5_25m_75f",
+        "ratio": "25M/75F",
+        "culling_pct": 21.62,
+        "shards": 8,
+        "verdict": "CULLED - Lowest culling rate (retained 1,461 blocks), showing persistent exon hoarding"
+      }
+    ]
   },
   "culled_and_retired_roster": [
+    {
+      "agent_id": "agent_gen5_25m_75f",
+      "generation": 5,
+      "rank_in_gen5": 5,
+      "fatal_flaw": "Residual Exon Hoarding: Retained 1,461 blocks (only 21.62% culling) failing to actively purge redundant sections."
+    },
+    {
+      "agent_id": "agent_gen5_65m_35f",
+      "generation": 5,
+      "rank_in_gen5": 4,
+      "fatal_flaw": "Sub-Optimal Noise Compression: Retained 20,779 words (35.61% culling), lagging behind top-tier culling benchmarks."
+    },
     {
       "agent_id": "agent_great_grandson_qcd",
       "generation": 4,
