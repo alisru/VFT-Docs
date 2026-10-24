@@ -1,0 +1,79 @@
+{
+  "engine_version": "v1.0.0",
+  "agent": "agent_great_grandson_qcd",
+  "lineage": "Gen 4 Progeny: 75% Male / 25% Female (Sired by Grandson & Granddaughter)",
+  "qcd_physics_constants": {
+    "alpha_s": 0.35,
+    "sigma": 0.85,
+    "m_quark": 0.65,
+    "r_critical": 1.5294
+  },
+  "benchmarks": {
+    "7x7_survival_matrix_suite": {
+      "output_file": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Physics\\semantic_gluon_dna\\agent_great_grandson_qcd\\merged_7x7_survival_synthesized.md",
+      "source_docs": {
+        "7x7_survival_matrix.md": {
+          "total_blocks": 84,
+          "exons": 64,
+          "introns": 20,
+          "mean_rigor": 59.9
+        },
+        "7x7_survival_Qq.md": {
+          "total_blocks": 57,
+          "exons": 57,
+          "introns": 0,
+          "mean_rigor": 70.3
+        }
+      },
+      "input_blocks_total": 141,
+      "retained_exons_total": 101,
+      "culled_blocks_total": 40,
+      "compression_ratio": 0.716,
+      "splicing_metrics": {
+        "mean_tau": 1.852,
+        "mean_luminescence": 0.1597,
+        "mean_rigor_score": 66.69,
+        "white_hadron_propositions": 99,
+        "white_hadron_ratio": 0.98,
+        "string_snapping_events": 0
+      },
+      "string_snaps": []
+    },
+    "actualism_hegemony_suite": {
+      "output_file": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Physics\\semantic_gluon_dna\\agent_great_grandson_qcd\\merged_actualism_hegemony_synthesized.md",
+      "source_docs": {
+        "Actualism and the Psochic Hegemony.md": {
+          "total_blocks": 44,
+          "exons": 44,
+          "introns": 0,
+          "mean_rigor": 73.38
+        },
+        "Actualism; The Crucible of the Archetypal Good Person.md": {
+          "total_blocks": 66,
+          "exons": 56,
+          "introns": 10,
+          "mean_rigor": 65.5
+        },
+        "The Geometry of Actualism and the Polytrope.md": {
+          "total_blocks": 59,
+          "exons": 57,
+          "introns": 2,
+          "mean_rigor": 68.61
+        }
+      },
+      "input_blocks_total": 169,
+      "retained_exons_total": 165,
+      "culled_blocks_total": 4,
+      "compression_ratio": 0.976,
+      "splicing_metrics": {
+        "mean_tau": 1.8324,
+        "mean_luminescence": 0.1624,
+        "mean_rigor_score": 68.82,
+        "white_hadron_propositions": 165,
+        "white_hadron_ratio": 1.0,
+        "string_snapping_events": 0
+      },
+      "string_snaps": []
+    }
+  }
+}
