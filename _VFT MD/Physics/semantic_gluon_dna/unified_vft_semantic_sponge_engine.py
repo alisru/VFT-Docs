@@ -740,7 +740,11 @@ class SemanticExonBlock:
 # 9. UNIFIED VFT MASTER PRODUCTION ENGINE (v6.0.0)
 # ===========================================================================
 class UnifiedVFTSemanticSpongeEngine:
-    def __init__(self):
+    def __init__(self, input_docs: list = None, output_dir: Path = None, master_name: str = None):
+        self.input_docs = [Path(p) for p in input_docs] if input_docs else ALL_INPUT_DOCS
+        self.output_dir = Path(output_dir) if output_dir else SHARDS_DIR
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.master_name = master_name if master_name else "master_unified_synthesized_vft_sponge_v6.md"
         self.sponge = ScaledContinuousSemanticSponge()
         self.gluon_space = ThreeGluonHomogeneousGaugeSpace()
         self.force_engine = VFTUniversalForceEngine(k_coupling=1.0)
@@ -748,10 +752,10 @@ class UnifiedVFTSemanticSpongeEngine:
         self.extracted_math_lemmas = set()
 
     def ingest_corpus(self):
-        print(f"[*] Ingesting {len(ALL_INPUT_DOCS)} source documents into Unified Production Engine...")
+        print(f"[*] Ingesting {len(self.input_docs)} source documents into Unified Production Engine...")
         block_counter = 0
 
-        for doc_path in ALL_INPUT_DOCS:
+        for doc_path in self.input_docs:
             if not doc_path.exists():
                 print(f"[!] Warning: File {doc_path} not found!")
                 continue
@@ -940,7 +944,7 @@ class UnifiedVFTSemanticSpongeEngine:
                 shard_text_out.append(grounded_text + "\n\n")
 
             # Write individual shard markdown to disk
-            out_file = SHARDS_DIR / f"{s_id}.md"
+            out_file = self.output_dir / f"{s_id}.md"
             shard_content = "".join(shard_text_out)
             out_file.write_text(shard_content, encoding="utf-8")
             all_shard_outputs.append(shard_content)
@@ -967,10 +971,11 @@ class UnifiedVFTSemanticSpongeEngine:
             }
 
         # Write Consolidated Master Monograph
-        master_monograph_path = BASE_DIR / "master_unified_synthesized_vft_sponge_v6.md"
+        master_monograph_path = self.output_dir / self.master_name
         master_header = [
-            "# MASTER UNIFIED SYNTHESIZED MONOGRAPH (v6.0.0)\n\n",
+            f"# MASTER UNIFIED SYNTHESIZED MONOGRAPH (v6.0.0)\n\n",
             "## Vector Field Theory & Semantic Gluon Transformer Architecture\n\n",
+            f"> **Source Ingestion**: {len(self.input_docs)} documents synthesized via 11-Basin Topological Routing.\n",
             "> **Synthesis Provenance**: Unified from Generation 6 Cook-Off Benchmark (Rank 1 Patriarch 75M/25F, Rank 2 Matriarch 25M/75F, Rank 3 Arbiter 50M/50F).\n",
             "> **Core Equations**: Universal Force $F = k \\cdot \\sigma \\cdot V$, Cost of Being $(-\\infty + 1)$, SU(3) 3-Gluon Homogeneous Gauge Space, Continuous 120-Node Semantic Sponge on $\\mathbb{R}^7$.\n\n",
             "---\n\n"
@@ -1028,12 +1033,14 @@ class UnifiedVFTSemanticSpongeEngine:
         }
 
         # Write summaries to disk
-        (SHARDS_DIR / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
-        (BASE_DIR / "unified_results_v6.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+        (self.output_dir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+        if self.output_dir == SHARDS_DIR:
+            (BASE_DIR / "unified_results_v6.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
         print("\n" + "=" * 75)
         print(" MASTER PRODUCTION ENGINE SYNTHESIS COMPLETE (v6.0.0)")
         print("=" * 75)
+        print(f" Source Documents Ingested:       {len(self.input_docs)}")
         print(f" Total Input Blocks:              {total_input_blocks}")
         print(f" Retained Exons:                  {total_retained_exons}")
         print(f" Culled Introns:                  {total_culled_introns} ({summary['overall_culling_pct']}%)")
@@ -1043,13 +1050,39 @@ class UnifiedVFTSemanticSpongeEngine:
         print(f" Mean Dynamic Force F:            {summary['physics_metrics']['mean_dynamic_force_F']}")
         print(f" Mean Semantic Strain sigma:      {summary['physics_metrics']['mean_semantic_strain_sigma']}")
         print(f" Mean 3-Gluon Curvature kappa:    {summary['physics_metrics']['mean_3gluon_curvature_kappa']}")
-        print(f" Output Micro-Monographs:         11 files generated in master_vft_shards/")
-        print(f" Master Synthesized Monograph:    master_unified_synthesized_vft_sponge_v6.md")
+        print(f" Output Micro-Monographs:         11 files generated in {self.output_dir}")
+        print(f" Master Synthesized Monograph:    {master_monograph_path.name}")
         print("=" * 75)
 
         return summary
 
 
 if __name__ == "__main__":
-    engine = UnifiedVFTSemanticSpongeEngine()
+    import argparse
+    parser = argparse.ArgumentParser(description="Unified VFT Semantic Sponge Production Engine (v6.0.0)")
+    parser.add_argument("--input", "-i", nargs="+", help="Input files, wildcards, or directories to synthesize")
+    parser.add_argument("--output", "-o", default=None, help="Output directory for generated monograph shards")
+    parser.add_argument("--master-name", "-m", default=None, help="Filename for the consolidated master monograph")
+    args = parser.parse_args()
+
+    input_paths = []
+    if args.input:
+        for inp in args.input:
+            p = Path(inp)
+            if p.is_dir():
+                input_paths.extend(sorted(p.glob("*.md")))
+            elif "*" in inp:
+                parent = p.parent if str(p.parent) != "." else Path(".")
+                input_paths.extend(sorted(parent.glob(p.name)))
+            elif p.exists():
+                input_paths.append(p)
+            else:
+                print(f"[!] Warning: Path not found: {inp}")
+
+    out_dir = Path(args.output) if args.output else None
+    engine = UnifiedVFTSemanticSpongeEngine(
+        input_docs=input_paths if input_paths else None,
+        output_dir=out_dir,
+        master_name=args.master_name
+    )
     engine.run_synthesis()
