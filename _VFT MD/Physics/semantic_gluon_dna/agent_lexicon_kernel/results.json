@@ -1,0 +1,440 @@
+{
+  "engine_version": "v1.0",
+  "gender_ratio": "65% Male / 35% Female",
+  "corpus_metrics": {
+    "total_documents": 149,
+    "total_sentences": 73366,
+    "total_tokens": 474764,
+    "unique_lemmas_scaled": 450,
+    "build_time_seconds": 16.865
+  },
+  "performance_benchmarks": {
+    "dictionary_lookup_latency_microseconds": 0.129,
+    "kernel_attention_latency_microseconds": 1.717,
+    "total_nodes": 450,
+    "total_edges": 6863,
+    "average_edges_per_node": 15.25,
+    "graph_sparsity_pct": 96.61,
+    "edges_per_tier": {
+      "guaranteed": 1283,
+      "possible": 2235,
+      "metaphorical": 2189,
+      "forbidden": 529,
+      "precluded": 627
+    }
+  },
+  "sample_probes": {
+    "operator": {
+      "cefr": "B1",
+      "frequency": 251,
+      "tail_weight": 5.254,
+      "head_weight": 5.505,
+      "modal_spread": {
+        "will_be": 0.214,
+        "can_be": 0.214,
+        "is_like": 0.01,
+        "may_be": 0.01,
+        "is_not": 0.214,
+        "cant_be": 0.316,
+        "wont_be": 0.01,
+        "was_like": 0.01
+      },
+      "relative_vector_magnitudes": {
+        "guaranteed": [
+          {
+            "target": "state",
+            "magnitude": 0.248,
+            "coupling_g": 0.023,
+            "p_cond": 0.02,
+            "deductive_weight": 0.248,
+            "closing_token": "yields"
+          },
+          {
+            "target": "mathcal",
+            "magnitude": 0.223,
+            "coupling_g": 0.067,
+            "p_cond": 0.1,
+            "deductive_weight": 0.223,
+            "closing_token": "entails"
+          }
+        ],
+        "possible": [
+          {
+            "target": "boundary",
+            "magnitude": 0.747,
+            "co_occurrence_count": 40,
+            "closing_token": "embodies"
+          },
+          {
+            "target": "continuous",
+            "magnitude": 0.742,
+            "co_occurrence_count": 24,
+            "closing_token": "branches_to"
+          },
+          {
+            "target": "cellular",
+            "magnitude": 0.716,
+            "co_occurrence_count": 13,
+            "closing_token": "branches_to"
+          },
+          {
+            "target": "extension",
+            "magnitude": 0.703,
+            "co_occurrence_count": 8,
+            "closing_token": "permits"
+          },
+          {
+            "target": "defined",
+            "magnitude": 0.669,
+            "co_occurrence_count": 8,
+            "closing_token": "permits"
+          }
+        ],
+        "metaphorical": [
+          {
+            "target": "overline",
+            "magnitude": 0.487,
+            "structural_similarity": 0.324,
+            "closing_token": "mirrors"
+          },
+          {
+            "target": "irm",
+            "magnitude": 0.48,
+            "structural_similarity": 0.32,
+            "closing_token": "isomorphic_to"
+          },
+          {
+            "target": "continuous",
+            "magnitude": 0.462,
+            "structural_similarity": 0.308,
+            "closing_token": "mirrors"
+          },
+          {
+            "target": "cell",
+            "magnitude": 0.432,
+            "structural_similarity": 0.288,
+            "closing_token": "maps_to"
+          },
+          {
+            "target": "integrity",
+            "magnitude": 0.371,
+            "structural_similarity": 0.248,
+            "closing_token": "formalizes_as"
+          }
+        ],
+        "forbidden": [
+          {
+            "target": "state",
+            "magnitude": 0.76,
+            "clash_score": 0.76,
+            "closing_token": "precludes_strictly"
+          },
+          {
+            "target": "states",
+            "magnitude": 0.76,
+            "clash_score": 0.76,
+            "closing_token": "breaks"
+          },
+          {
+            "target": "validly",
+            "magnitude": 0.76,
+            "clash_score": 0.76,
+            "closing_token": "breaks"
+          }
+        ],
+        "precluded": [
+          {
+            "target": "reversible",
+            "magnitude": 0.8,
+            "exclusion_confidence": 0.8,
+            "closing_token": "bounds_outside"
+          },
+          {
+            "target": "commutative",
+            "magnitude": 0.8,
+            "exclusion_confidence": 0.8,
+            "closing_token": "partitions_away"
+          }
+        ]
+      }
+    },
+    "entropy": {
+      "cefr": "B1",
+      "frequency": 325,
+      "tail_weight": 5.215,
+      "head_weight": 5.254,
+      "modal_spread": {
+        "will_be": 0.92,
+        "can_be": 0.011,
+        "is_like": 0.011,
+        "may_be": 0.011,
+        "is_not": 0.011,
+        "cant_be": 0.011,
+        "wont_be": 0.011,
+        "was_like": 0.011
+      },
+      "relative_vector_magnitudes": {
+        "guaranteed": [
+          {
+            "target": "agreement",
+            "magnitude": 0.36,
+            "coupling_g": 0.085,
+            "p_cond": 0.058,
+            "deductive_weight": 0.36,
+            "closing_token": "entails"
+          },
+          {
+            "target": "protect",
+            "magnitude": 0.32,
+            "coupling_g": 0.065,
+            "p_cond": 0.058,
+            "deductive_weight": 0.32,
+            "closing_token": "satisfies"
+          },
+          {
+            "target": "must",
+            "magnitude": 0.275,
+            "coupling_g": 0.053,
+            "p_cond": 0.028,
+            "deductive_weight": 0.275,
+            "closing_token": "proves"
+          },
+          {
+            "target": "equations",
+            "magnitude": 0.25,
+            "coupling_g": 0.029,
+            "p_cond": 0.031,
+            "deductive_weight": 0.25,
+            "closing_token": "yields"
+          },
+          {
+            "target": "micro",
+            "magnitude": 0.234,
+            "coupling_g": 0.021,
+            "p_cond": 0.025,
+            "deductive_weight": 0.234,
+            "closing_token": "yields"
+          }
+        ],
+        "possible": [
+          {
+            "target": "internal",
+            "magnitude": 0.76,
+            "co_occurrence_count": 48,
+            "closing_token": "generates"
+          },
+          {
+            "target": "thermodynamic",
+            "magnitude": 0.759,
+            "co_occurrence_count": 31,
+            "closing_token": "branches_to"
+          },
+          {
+            "target": "highly",
+            "magnitude": 0.731,
+            "co_occurrence_count": 22,
+            "closing_token": "embodies"
+          },
+          {
+            "target": "high",
+            "magnitude": 0.721,
+            "co_occurrence_count": 32,
+            "closing_token": "generates"
+          },
+          {
+            "target": "systemic",
+            "magnitude": 0.685,
+            "co_occurrence_count": 25,
+            "closing_token": "branches_to"
+          }
+        ],
+        "metaphorical": [
+          {
+            "target": "change",
+            "magnitude": 0.417,
+            "structural_similarity": 0.278,
+            "closing_token": "mirrors"
+          },
+          {
+            "target": "internal",
+            "magnitude": 0.393,
+            "structural_similarity": 0.262,
+            "closing_token": "isomorphic_to"
+          },
+          {
+            "target": "high",
+            "magnitude": 0.392,
+            "structural_similarity": 0.261,
+            "closing_token": "isomorphic_to"
+          },
+          {
+            "target": "financial",
+            "magnitude": 0.368,
+            "structural_similarity": 0.246,
+            "closing_token": "mirrors"
+          },
+          {
+            "target": "active",
+            "magnitude": 0.363,
+            "structural_similarity": 0.242,
+            "closing_token": "formalizes_as"
+          }
+        ],
+        "forbidden": [
+          {
+            "target": "order",
+            "magnitude": 1.0,
+            "clash_score": 1.0,
+            "closing_token": "repels"
+          }
+        ],
+        "precluded": [
+          {
+            "target": "arbitrary_nullity_of_entropy",
+            "magnitude": 0.85,
+            "exclusion_confidence": 0.85,
+            "closing_token": "excludes"
+          }
+        ]
+      }
+    },
+    "infinity": {
+      "cefr": "B1",
+      "frequency": 413,
+      "tail_weight": 5.952,
+      "head_weight": 5.59,
+      "modal_spread": {
+        "will_be": 0.07,
+        "can_be": 0.259,
+        "is_like": 0.006,
+        "may_be": 0.07,
+        "is_not": 0.449,
+        "cant_be": 0.133,
+        "wont_be": 0.006,
+        "was_like": 0.006
+      },
+      "relative_vector_magnitudes": {
+        "guaranteed": [
+          {
+            "target": "but",
+            "magnitude": 0.203,
+            "coupling_g": 0.016,
+            "p_cond": 0.01,
+            "deductive_weight": 0.203,
+            "closing_token": "establishes"
+          }
+        ],
+        "possible": [
+          {
+            "target": "before",
+            "magnitude": 0.689,
+            "co_occurrence_count": 16,
+            "closing_token": "embodies"
+          },
+          {
+            "target": "number",
+            "magnitude": 0.684,
+            "co_occurrence_count": 22,
+            "closing_token": "allows"
+          },
+          {
+            "target": "numbers",
+            "magnitude": 0.683,
+            "co_occurrence_count": 15,
+            "closing_token": "embodies"
+          },
+          {
+            "target": "another",
+            "magnitude": 0.673,
+            "co_occurrence_count": 11,
+            "closing_token": "embodies"
+          },
+          {
+            "target": "infinite",
+            "magnitude": 0.66,
+            "co_occurrence_count": 14,
+            "closing_token": "embodies"
+          }
+        ],
+        "metaphorical": [
+          {
+            "target": "infinite",
+            "magnitude": 0.796,
+            "structural_similarity": 0.531,
+            "closing_token": "mirrors"
+          },
+          {
+            "target": "finite",
+            "magnitude": 0.667,
+            "structural_similarity": 0.445,
+            "closing_token": "maps_to"
+          },
+          {
+            "target": "number",
+            "magnitude": 0.548,
+            "structural_similarity": 0.366,
+            "closing_token": "formalizes_as"
+          },
+          {
+            "target": "numbers",
+            "magnitude": 0.518,
+            "structural_similarity": 0.346,
+            "closing_token": "isomorphic_to"
+          },
+          {
+            "target": "infinitesimals",
+            "magnitude": 0.458,
+            "structural_similarity": 0.306,
+            "closing_token": "maps_to"
+          }
+        ],
+        "forbidden": [
+          {
+            "target": "finite",
+            "magnitude": 1.0,
+            "clash_score": 1.0,
+            "closing_token": "breaks"
+          },
+          {
+            "target": "collapsed",
+            "magnitude": 0.76,
+            "clash_score": 0.76,
+            "closing_token": "repels"
+          },
+          {
+            "target": "physically",
+            "magnitude": 0.76,
+            "clash_score": 0.76,
+            "closing_token": "collapses"
+          }
+        ],
+        "precluded": [
+          {
+            "target": "close",
+            "magnitude": 1.0,
+            "exclusion_confidence": 1.0,
+            "closing_token": "partitions_away"
+          },
+          {
+            "target": "enough",
+            "magnitude": 0.8,
+            "exclusion_confidence": 0.8,
+            "closing_token": "distinguishes"
+          },
+          {
+            "target": "infinity",
+            "magnitude": 0.8,
+            "exclusion_confidence": 0.8,
+            "closing_token": "partitions_away"
+          },
+          {
+            "target": "result",
+            "magnitude": 0.8,
+            "exclusion_confidence": 0.8,
+            "closing_token": "excludes"
+          }
+        ]
+      }
+    }
+  }
+}
