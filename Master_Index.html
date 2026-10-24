@@ -4,324 +4,1681 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Project Index | VFT Docs</title>
+    <title>Master Project Index & Web of Things Landscape Explorer | VFT</title>
+
+    <script>
+        // Suppress Tailwind CDN production console warning
+        const _origWarn = console.warn;
+        console.warn = function (...args) {
+            if (args[0] && typeof args[0] === 'string' && args[0].includes('cdn.tailwindcss.com')) return;
+            _origWarn.apply(console, args);
+        };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
-        rel="stylesheet">
+    <!-- Loads data directly via script tag to avoid CORS restrictions on file:/// protocol -->
+    <script src="index_data.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-grid: #0b0f19;
+            --grid-line: rgba(255, 255, 255, 0.035);
+            --card-bg: rgba(23, 31, 48, 0.95);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8FAFC;
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            overflow: hidden;
+            height: 100vh;
         }
 
-        .font-serif {
-            font-family: 'Merriweather', serif;
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
         }
 
-        .tree-node-content:hover {
-            background-color: rgba(241, 245, 249, 1);
+        /* Landscape Mode Canvas */
+        .v-landscape {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: #0b0f19;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 48px 48px;
+            cursor: grab;
+            user-select: none;
         }
 
-        .folder-toggle {
-            transition: transform 0.2s ease;
+        .v-landscape.panning {
+            cursor: grabbing;
         }
 
-        .folder-toggle.open {
-            transform: rotate(90deg);
+        .map-world {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            transform-origin: 0 0;
+            transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
-        .search-highlight {
-            background-color: #FEF08A;
+        .v-landscape.panning .map-world {
+            transition: none;
+        }
+
+        /* SVG Bridges connecting the Web of Things */
+        .map-bridges {
+            position: absolute;
+            left: -16000px;
+            top: -16000px;
+            width: 32000px;
+            height: 32000px;
+            pointer-events: none;
+            z-index: 1;
+            overflow: visible;
+        }
+
+        .bridge-casing {
+            stroke: rgba(255, 255, 255, 0.06);
+            stroke-width: 12px;
+            stroke-linecap: round;
+            fill: none;
+        }
+
+        .bridge-plank {
+            stroke-width: 4px;
+            stroke-dasharray: 8 6;
+            stroke-linecap: butt;
+            fill: none;
+            opacity: 0.75;
+        }
+
+        .bridge-subcat {
+            stroke-width: 3px;
+            stroke-dasharray: 6 5;
+            stroke-linecap: round;
+            fill: none;
+            opacity: 0.85;
+        }
+
+        .bridge-viewer {
+            stroke: #38bdf8;
+            stroke-width: 2.5px;
+            stroke-dasharray: 4 4;
+            fill: none;
+            opacity: 0.9;
+        }
+
+        .bridge-adjacent {
+            stroke: rgba(14, 165, 233, 0.25);
+            stroke-width: 2.5px;
+            stroke-dasharray: 4 4;
+            fill: none;
+        }
+
+        /* Universal Spatial Room / Window Container */
+        .map-room {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: var(--room-w, 430px);
+            height: var(--room-h, 320px);
+            min-width: 280px;
+            min-height: 180px;
+            border: 2px solid var(--room-border, rgba(255, 255, 255, 0.12));
+            border-radius: 18px;
+            background: var(--card-bg);
+            box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            overflow: hidden;
+            backdrop-filter: blur(14px);
+            transition: border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+        }
+
+        .map-room:hover {
+            border-color: var(--room-accent, #818cf8);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 28px var(--room-glow, rgba(99, 102, 241, 0.25));
+            z-index: 25;
+        }
+
+        .map-room.active-room {
+            border-color: #38bdf8 !important;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35), 0 22px 52px rgba(0, 0, 0, 0.7) !important;
+            z-index: 30;
+        }
+
+        .map-room.nexus-room {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.98), rgba(15, 23, 42, 0.98));
+            border: 2px solid #6366f1;
+            box-shadow: 0 0 36px rgba(99, 102, 241, 0.3);
+        }
+
+        .map-room.sub-room {
+            background: rgba(26, 36, 56, 0.97);
+            border-style: dashed;
+        }
+
+        .map-room.viewer-window {
+            background: rgba(15, 23, 42, 0.98);
+            border-color: #38bdf8;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.75), 0 0 32px rgba(56, 189, 248, 0.2);
+            z-index: 40;
+        }
+
+        .map-room.dimmed {
+            opacity: 0.25;
+            filter: grayscale(80%);
+        }
+
+        .map-room-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            background: rgba(15, 23, 42, 0.75);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: move;
+        }
+
+        .map-room-files {
+            flex: 1;
+            overflow-y: auto;
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .v-landscape.room-card-mode .map-room-files {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 6px;
+        }
+
+        .room-file {
+            padding: 7px 9px;
+            border-radius: 9px;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .room-file:hover {
+            background: rgba(51, 65, 85, 0.75);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(2px);
+        }
+
+        .room-file .open-ext-btn {
+            opacity: 0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 10px;
+            transition: all 0.15s ease;
+        }
+
+        .room-file:hover .open-ext-btn {
+            opacity: 1;
+        }
+
+        .room-file .open-ext-btn:hover {
+            background: #38bdf8;
+            color: #fff;
+        }
+
+        /* Subcategory chips */
+        .subcat-chip {
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 500;
+            background: rgba(30, 41, 59, 0.8);
+            color: #cbd5e1;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            transition: all 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .subcat-chip:hover {
+            background: #334155;
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .subcat-chip.active-door {
+            background: #4f46e5 !important;
+            color: #fff !important;
+            border-color: #818cf8 !important;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Two-Rectangle Edge Lens Overlay */
+        .lens-inner-frame {
+            position: absolute;
+            inset: 64px;
+            border: 1.5px dashed rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            pointer-events: none;
+            z-index: 20;
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.28);
+        }
+
+        .lens-margin-layer {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 22;
+            overflow: hidden;
+        }
+
+        .lens-proxy {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            padding: 6px 12px;
+            background: #1e293b;
+            border: 2px solid var(--proxy-color, #6366f1);
+            border-radius: 20px;
+            pointer-events: auto;
+            cursor: pointer;
+            font-size: 11px;
             font-weight: 600;
-            padding: 0 2px;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 12px var(--proxy-glow, rgba(99, 102, 241, 0.3));
+            white-space: nowrap;
+            transition: transform 0.15s, background-color 0.15s;
         }
 
-        ::-webkit-scrollbar {
-            width: 8px;
+        .lens-proxy:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #334155;
+            z-index: 25;
         }
 
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
+        /* Map HUD (Floating Controls) */
+        .map-hud {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 45;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px);
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+        .hud-btn {
+            padding: 6px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s ease;
+        }
+
+        .hud-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+        }
+
+        .hud-btn.active {
+            background: #4f46e5;
+            border-color: #6366f1;
+            color: #fff;
+        }
+
+        /* Reader Content Styling */
+        .rendered-markdown {
+            font-size: 12px;
+            line-height: 1.65;
+            color: #e2e8f0;
+        }
+
+        .rendered-markdown h1 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 14px;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .rendered-markdown h2 {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #38bdf8;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        .rendered-markdown h3 {
+            font-size: 12px;
+            font-weight: 600;
+            color: #a5b4fc;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        .rendered-markdown p {
+            margin-bottom: 8px;
+        }
+
+        .rendered-markdown code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #38bdf8;
+            padding: 1px 4px;
             border-radius: 4px;
         }
 
+        .rendered-markdown pre {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 8px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+        }
+
+        .rendered-markdown blockquote {
+            border-left: 3px solid #6366f1;
+            padding-left: 10px;
+            color: #94a3b8;
+            font-style: italic;
+            margin: 8px 0;
+        }
+
+        .rendered-markdown ul {
+            list-style-type: disc;
+            padding-left: 18px;
+            margin-bottom: 8px;
+        }
+
+        .rendered-markdown a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.4);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 3px;
+        }
+
         ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(5px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            background: rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
 
-<body class="antialiased text-gray-800">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-gray-900 leading-none tracking-tight">VFT Project Index</h1>
-                    <p class="text-xs text-slate-500 mt-1 font-medium italic">"Mapping the substrate of Reality"</p>
-                </div>
-            </div>
+<body class="flex flex-col antialiased">
 
-            <div class="relative w-full md:w-96">
-                <input type="text" id="fileSearch" placeholder="Search titles & content..."
-                    class="w-full pl-10 pr-4 py-2 bg-slate-100 border border-transparent focus:bg-white focus:border-indigo-500 rounded-xl outline-none transition-all shadow-sm text-sm">
-                <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+    <!-- Header Navigation Bar -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 z-50 px-6 py-3 flex items-center justify-between gap-4">
+        <div class="flex items-center space-x-3 flex-shrink-0">
+            <div class="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
                 </svg>
             </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <h1 class="text-base font-bold text-white tracking-tight">VFT Master Index & Web of Things</h1>
+                    <span id="header-file-count" class="text-[10px] font-semibold px-2 py-0.5 bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-full">5,041 Files</span>
+                </div>
+                <p class="text-[11px] text-slate-400">Spatial graph of connected territories, sub-rooms, and in-canvas document readers</p>
+            </div>
+        </div>
+
+        <!-- Global Search Bar -->
+        <div class="relative flex-1 max-w-xl mx-4">
+            <input type="text" id="globalSearch" placeholder="Search files, topics, tags... Click any entry to open on canvas! (Press / to focus)"
+                class="w-full pl-10 pr-20 py-2 bg-slate-800/80 border border-slate-700/80 focus:border-indigo-500 focus:bg-slate-800 rounded-xl outline-none transition-all shadow-inner text-sm text-slate-200 placeholder-slate-400 font-medium">
+            <svg class="absolute left-3.5 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <div id="search-count-badge" class="hidden absolute right-3 top-2 text-[10px] font-semibold px-2 py-0.5 bg-slate-700 text-slate-300 rounded-full">
+                0 matches
+            </div>
+        </div>
+
+        <!-- View Mode Switcher -->
+        <div class="flex items-center space-x-2 bg-slate-800/80 p-1 rounded-xl border border-slate-700/80 flex-shrink-0">
+            <button id="btn-mode-landscape" class="px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 bg-indigo-600 text-white shadow-sm transition-all">
+                <span>🗺️</span>
+                <span>Web of Things</span>
+            </button>
+            <button id="btn-mode-tree" class="px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-all">
+                <span>☰</span>
+                <span>Tree & Search View</span>
+            </button>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <!-- Left: Tree View -->
-            <div
-                class="lg:col-span-4 bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden flex flex-col max-h-[calc(100vh-200px)]">
-                <div class="p-5 border-b border-slate-100 bg-slate-50/50 flex items-center justify-between">
-                    <h2 class="font-bold text-slate-700 text-sm uppercase tracking-wider">Project Explorer</h2>
-                    <span id="file-count"
-                        class="text-xs font-semibold px-2 py-1 bg-indigo-100 text-indigo-700 rounded-full">...
-                        files</span>
-                </div>
-                <div id="project-tree" class="p-4 overflow-y-auto flex-1 space-y-1 text-sm">
-                    <div class="flex items-center space-x-3 py-8 justify-center text-slate-400 italic">
-                        <svg class="animate-spin h-5 w-5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                            </circle>
-                            <path class="opacity-75" fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                            </path>
-                        </svg>
-                        <span>Loading...</span>
+    <!-- Main Workspace Container -->
+    <main class="relative flex-1 overflow-hidden">
+
+        <!-- VIEW 1: LANDSCAPE MAP MODE -->
+        <div id="landscape-view" class="absolute inset-0">
+            <div id="landscape-container" class="v-landscape">
+                <div id="map-world" class="map-world">
+                    <!-- SVG Bridges -->
+                    <svg id="bridgeSvg" class="map-bridges" viewBox="-16000 -16000 32000 32000">
+                        <g id="bridge-lines"></g>
+                    </svg>
+
+                    <!-- Central Nexus Room -->
+                    <div id="room-nexus" class="map-room nexus-room" style="--room-w: 430px; --room-h: 300px; left: 0px; top: 0px;">
+                        <div class="map-room-head">
+                            <span class="flex items-center gap-2 font-bold text-sm text-indigo-200">
+                                <span class="text-lg">🏰</span>
+                                <span>VFT Unified Nexus</span>
+                            </span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-indigo-500/30 text-indigo-300 rounded-full">CORE</span>
+                        </div>
+                        <div class="p-4 flex-1 flex flex-col justify-between text-xs">
+                            <p class="text-slate-300 leading-relaxed">
+                                Central navigational hub connecting the sovereign territories of Vector Field Theory. Click any subcategory doorway to branch out a child territory, or click a file to open it in-canvas!
+                            </p>
+                            <div class="grid grid-cols-3 gap-2 my-2" id="nexus-quick-jumps">
+                                <!-- Generated Quick Jumps -->
+                            </div>
+                            <div class="pt-2 border-t border-slate-700/60 flex items-center justify-between text-[11px] text-slate-400">
+                                <span id="nexus-server-status">● Mode: Local / Web</span>
+                                <button onclick="window.landscapeExplorer.tidyRooms()" class="text-indigo-400 hover:text-indigo-300 font-semibold">⊞ Tidy Map</button>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Dynamic Rooms & Windows Layer -->
+                    <div id="rooms-layer"></div>
+                </div>
+
+                <!-- Two-Rectangle Edge Lens Overlay -->
+                <div id="lens-inner-frame" class="lens-inner-frame"></div>
+                <div id="lens-margin-layer" class="lens-margin-layer"></div>
+
+                <!-- HUD Toolbar -->
+                <div class="map-hud">
+                    <button class="hud-btn" onclick="window.landscapeExplorer.resetWorldView()" title="Pull back to full landscape overview">
+                        <span>🗺️</span> World View
+                    </button>
+                    <button class="hud-btn" onclick="window.landscapeExplorer.zoomIn()" title="Zoom in">
+                        <span>+</span>
+                    </button>
+                    <button class="hud-btn" onclick="window.landscapeExplorer.zoomOut()" title="Zoom out">
+                        <span>-</span>
+                    </button>
+                    <div class="flex items-center gap-2 px-2 text-xs text-slate-400">
+                        <span>Scale:</span>
+                        <span id="hud-scale-text" class="font-mono text-slate-200 font-semibold w-10 text-right">58%</span>
+                    </div>
+                    <button id="btn-toggle-edgelens" class="hud-btn active" onclick="window.landscapeExplorer.toggleEdgeLens()" title="Toggle Perimeter Edge Lens for distant rooms">
+                        <span>🖼️</span> Edge Lens: ON
+                    </button>
+                    <button id="btn-toggle-roommode" class="hud-btn" onclick="window.landscapeExplorer.toggleRoomMode()" title="Toggle List Rows vs Grid Cards">
+                        <span>☷</span> Indoor: Rows
+                    </button>
+                    <button class="hud-btn" onclick="window.landscapeExplorer.closeAllBranches()" title="Close all opened sub-rooms and viewer windows">
+                        <span>✕</span> Clear Branches
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <!-- Right: Search Results / Content -->
-            <div class="lg:col-span-8 space-y-6">
-                <div id="search-info" class="bg-indigo-600 rounded-3xl p-6 text-white shadow-lg hidden">
-                    <h3 class="text-lg font-bold">Search Results</h3>
-                    <p id="search-stats" class="text-indigo-100 text-sm mt-1">Found X matches for "query"</p>
+        <!-- VIEW 2: TREE & SEARCH VIEW -->
+        <div id="tree-search-view" class="absolute inset-0 bg-slate-900 p-6 overflow-hidden hidden flex-col">
+            <div class="max-w-7xl w-full mx-auto grid grid-cols-12 gap-6 h-full">
+                <!-- Left: Hierarchy Tree -->
+                <div class="col-span-4 bg-slate-800/80 rounded-2xl border border-slate-700/80 p-4 flex flex-col h-full overflow-hidden">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-700/80">
+                        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400">Filesystem Explorer</h2>
+                        <span id="tree-files-count" class="text-[11px] font-mono text-indigo-400">Loading...</span>
+                    </div>
+                    <div id="project-tree" class="flex-1 overflow-y-auto space-y-1 mt-3 pr-2 text-xs"></div>
                 </div>
 
-                <div id="results-container" class="space-y-4">
-                    <!-- Default State -->
-                    <div id="default-state"
-                        class="bg-white rounded-3xl border border-dashed border-slate-300 p-12 text-center text-slate-400">
-                        <svg class="w-16 h-16 mx-auto mb-4 opacity-20" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                            </path>
-                        </svg>
-                        <p class="font-medium">Enter a search term to find files by content or title.</p>
-                        <p class="text-sm mt-2">Example: "plane" or "vector"</p>
+                <!-- Right: Search Results & Previews -->
+                <div class="col-span-8 bg-slate-800/80 rounded-2xl border border-slate-700/80 p-6 flex flex-col h-full overflow-hidden">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-700/80">
+                        <div class="flex items-center gap-2">
+                            <h3 id="search-title" class="text-sm font-bold text-white">All Documents & Deliverables</h3>
+                            <span id="search-results-stats" class="text-xs text-slate-400">Select a category or search</span>
+                        </div>
+                    </div>
+                    <div id="search-results-list" class="flex-1 overflow-y-auto space-y-3 mt-4 pr-2">
+                        <!-- File Cards -->
                     </div>
                 </div>
             </div>
         </div>
+
     </main>
 
+    <!-- Script Application Logic -->
     <script>
-        const treeContainer = document.getElementById('project-tree');
-        const resultsContainer = document.getElementById('results-container');
-        const searchInput = document.getElementById('fileSearch');
-        const searchInfo = document.getElementById('search-info');
-        const searchStats = document.getElementById('search-stats');
-        const defaultState = document.getElementById('default-state');
-        const fileCountEl = document.getElementById('file-count');
+        (function () {
+            let projectData = null;
+            let currentView = 'landscape'; // 'landscape' | 'tree'
 
-        let projectData = null;
-        let allFiles = [];
+            // Global references
+            const world = document.getElementById('map-world');
+            const container = document.getElementById('landscape-container');
+            const roomsLayer = document.getElementById('rooms-layer');
+            const bridgeLines = document.getElementById('bridge-lines');
+            const lensMargin = document.getElementById('lens-margin-layer');
+            const lensInnerFrame = document.getElementById('lens-inner-frame');
+            const globalSearch = document.getElementById('globalSearch');
+            const searchCountBadge = document.getElementById('search-count-badge');
+            const hudScaleText = document.getElementById('hud-scale-text');
 
-        // Fetch data from local server
-        fetch('index_data.json')
-            .then(res => res.json())
-            .then(data => {
-                projectData = data;
-                flattenFiles(data);
-                fileCountEl.textContent = `${allFiles.length} files`;
-                renderTree(projectData, treeContainer);
-            })
-            .catch(err => {
-                treeContainer.innerHTML = `<div class="p-4 bg-red-50 text-red-600 rounded-xl border border-red-100 italic">Error loading database. Make sure the local server is running.</div>`;
-                console.error(err);
-            });
+            // Landscape Camera State
+            let camX = 0, camY = 0, camZoom = 0.58;
+            let edgeLensOn = true;
+            let isPanning = false;
+            let startPanX = 0, startPanY = 0;
+            let roomCardMode = false;
+            let activeRoomId = 'room-nexus';
 
-        function flattenFiles(node) {
-            if (node.type === 'file') {
-                allFiles.push(node);
-            } else if (node.children) {
-                node.children.forEach(flattenFiles);
+            // Room Layout Store: id -> { id, name, icon, color, x, y, w, h, el, files, topicData, parentId, type }
+            const roomMap = new Map();
+            // Bridges: bridgeId -> { id, fromId, toId, color, type }
+            const bridgeMap = new Map();
+
+            // Track opened subcategory rooms and viewer windows
+            const openSubRooms = new Map(); // key: `${topicId}:${subcat}` -> roomId
+            const openViewers = new Map();  // key: filePath -> roomId
+
+            // Helper to clean identifiers
+            function slug(str) {
+                return String(str || '').replace(/[^a-zA-Z0-9_-]/g, '_');
             }
-        }
 
-        function renderTree(node, container, level = 0) {
-            if (!node) return;
-            if (node.children) {
-                container.innerHTML = '';
-                node.children.forEach(child => renderNode(child, container, level));
+            // Path resolver: ensures links resolve correctly regardless of whether this page is opened
+            // at the root (VFT Docs/Master_Index.html) or deep in (_VFT MD/System/Master_Index.html)
+            function getResolvedPath(relPath) {
+                if (!relPath) return '';
+                const norm = relPath.replace(/\\/g, '/');
+                const loc = window.location.pathname.replace(/\\/g, '/');
+                if (loc.includes('/_VFT MD/System') || loc.includes('/_VFT%20MD/System')) {
+                    return '../../' + norm;
+                }
+                return norm;
             }
-        }
 
-        function renderNode(node, container, level) {
-            const isDirectory = node.type === 'directory';
-            const nodeEl = document.createElement('div');
-            nodeEl.className = 'fade-in';
+            // Dual Data Loader: loads from window.VFT_INDEX_DATA (index_data.js) if available,
+            // or falls back to fetch('index_data.json') for HTTP servers
+            function loadDataAndStart() {
+                if (window.VFT_INDEX_DATA) {
+                    projectData = window.VFT_INDEX_DATA;
+                    document.getElementById('header-file-count').textContent = `${projectData.total_files.toLocaleString()} Files`;
+                    initApp();
+                } else {
+                    fetch('index_data.json')
+                        .then(res => res.json())
+                        .then(data => {
+                            projectData = data;
+                            document.getElementById('header-file-count').textContent = `${data.total_files.toLocaleString()} Files`;
+                            initApp();
+                        })
+                        .catch(err => {
+                            console.error('Error loading index_data.json:', err);
+                            document.getElementById('header-file-count').textContent = 'Data Load Error';
+                        });
+                }
+            }
 
-            const contentNode = document.createElement('div');
-            contentNode.className = `tree-node-content flex items-center p-2 rounded-xl cursor-pointer transition-colors ${isDirectory ? 'font-semibold text-slate-700' : 'text-slate-500'}`;
-            contentNode.style.paddingLeft = `${(level * 16) + 8}px`;
+            function initApp() {
+                buildNexusJumps();
+                layoutTopicRooms();
+                drawBridges();
+                updateCamera();
+                setupEventListeners();
+                buildTree();
+                renderSearchResults(projectData.files.slice(0, 100));
 
-            const icon = isDirectory ? `<svg class="folder-toggle w-4 h-4 mr-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>` : `<svg class="w-4 h-4 mr-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>`;
+                const isHttp = window.location.protocol.startsWith('http');
+                const sStatus = document.getElementById('nexus-server-status');
+                if (sStatus) {
+                    sStatus.textContent = isHttp ? '● Server: ' + window.location.host : '● Direct File View (file://)';
+                }
+            }
 
-            contentNode.innerHTML = `${icon}<span class="truncate text-xs font-medium">${node.name}</span>`;
-            nodeEl.appendChild(contentNode);
+            // Radial placement of 9 topics around Nexus
+            function layoutTopicRooms() {
+                roomsLayer.innerHTML = '';
+                roomMap.clear();
+                bridgeMap.clear();
+                openSubRooms.clear();
+                openViewers.clear();
 
-            if (isDirectory) {
-                const childrenContainer = document.createElement('div');
-                childrenContainer.className = 'hidden';
-                nodeEl.appendChild(childrenContainer);
+                // Nexus Room entry
+                roomMap.set('room-nexus', {
+                    id: 'room-nexus',
+                    name: 'VFT Unified Nexus',
+                    icon: '🏰',
+                    color: '#6366f1',
+                    x: 0,
+                    y: 0,
+                    w: 430,
+                    h: 300,
+                    el: document.getElementById('room-nexus'),
+                    files: [],
+                    type: 'nexus'
+                });
 
-                contentNode.onclick = (e) => {
-                    const arrow = contentNode.querySelector('.folder-toggle');
-                    const isOpen = !childrenContainer.classList.contains('hidden');
-                    if (isOpen) {
-                        childrenContainer.classList.add('hidden');
-                        arrow.classList.remove('open');
-                    } else {
-                        if (childrenContainer.innerHTML === '') {
-                            node.children.forEach(child => renderNode(child, childrenContainer, level + 1));
-                        }
-                        childrenContainer.classList.remove('hidden');
-                        arrow.classList.add('open');
+                const topics = projectData.topics;
+                const total = topics.length;
+
+                // Radial geometry
+                const radiusX = 1100;
+                const radiusY = 760;
+
+                topics.forEach((t, i) => {
+                    const angle = (i / total) * Math.PI * 2 - Math.PI / 2;
+                    const x = Math.round(Math.cos(angle) * radiusX);
+                    const y = Math.round(Math.sin(angle) * radiusY);
+                    const w = 450;
+                    const h = 340;
+
+                    const roomEl = createTopicRoomElement(t, x, y, w, h);
+                    roomsLayer.appendChild(roomEl);
+
+                    roomMap.set(t.id, {
+                        id: t.id,
+                        name: t.name,
+                        icon: t.icon,
+                        color: t.color,
+                        x, y, w, h,
+                        el: roomEl,
+                        files: t.files,
+                        topicData: t,
+                        type: 'topic'
+                    });
+
+                    // Add Nexus -> Topic Highway bridge
+                    bridgeMap.set(`bridge-nexus-${t.id}`, {
+                        id: `bridge-nexus-${t.id}`,
+                        fromId: 'room-nexus',
+                        toId: t.id,
+                        color: t.color,
+                        type: 'highway'
+                    });
+                });
+
+                // Add adjacent ring bridges between neighboring topic rooms
+                const topicIds = topics.map(t => t.id);
+                for (let i = 0; i < topicIds.length; i++) {
+                    const nextId = topicIds[(i + 1) % topicIds.length];
+                    bridgeMap.set(`bridge-ring-${i}`, {
+                        id: `bridge-ring-${i}`,
+                        fromId: topicIds[i],
+                        toId: nextId,
+                        color: '#38bdf8',
+                        type: 'ring'
+                    });
+                }
+            }
+
+            function createTopicRoomElement(t, x, y, w, h) {
+                const el = document.createElement('div');
+                el.className = 'map-room';
+                el.id = `room-${t.id}`;
+                el.style.left = `${x}px`;
+                el.style.top = `${y}px`;
+                el.style.setProperty('--room-w', `${w}px`);
+                el.style.setProperty('--room-h', `${h}px`);
+                el.style.setProperty('--room-accent', t.color);
+                el.style.setProperty('--room-border', `${t.color}66`);
+                el.style.setProperty('--room-glow', `${t.color}33`);
+
+                el.innerHTML = `
+                    <div class="map-room-head">
+                        <span class="flex items-center gap-2 font-bold text-xs text-white truncate max-w-[260px]">
+                            <span class="text-base">${t.icon}</span>
+                            <span class="truncate">${t.name}</span>
+                        </span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded-full font-bold" style="background:${t.color}22; color:${t.color}; border:1px solid ${t.color}44;">
+                                ${t.fileCount}
+                            </span>
+                            <button class="text-xs hover:text-white text-slate-400 p-1" title="Focus camera on this category" onclick="window.landscapeExplorer.focusRoom('${t.id}')">
+                                ⤢
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-3 pt-2 pb-1.5 border-b border-slate-700/50 bg-slate-900/40">
+                        <p class="text-[11px] text-slate-400 line-clamp-1">${t.desc}</p>
+                        <!-- Subcategory doorway chips: click to spawn a child room in the web of things! -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto py-1.5 scrollbar-none" id="subcats-${t.id}">
+                            ${t.subcategories.slice(0, 8).map(sc => `
+                                <span class="subcat-chip" data-topic="${t.id}" data-subcat="${sc.name}" onclick="window.landscapeExplorer.toggleSubcategoryRoom('${t.id}', '${sc.name}')" title="Click to branch out ${sc.name} as a new territory on the map">
+                                    📁 ${sc.name} (${sc.count})
+                                </span>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="map-room-files" id="files-${t.id}">
+                        ${renderRoomFileList(t.files, t.id)}
+                    </div>
+                `;
+
+                setupRoomDraggable(el, t.id);
+                return el;
+            }
+
+            // Generates file cards for room lists
+            function renderRoomFileList(files, sourceRoomId) {
+                return files.slice(0, 60).map(f => {
+                    const icon = getFileIcon(f.ext);
+                    const isHtmlApp = f.ext === 'html';
+                    const targetPath = getResolvedPath(f.path);
+                    return `
+                        <div class="room-file" onclick="window.landscapeExplorer.openFileViewer('${encodeURIComponent(JSON.stringify(f))}', '${sourceRoomId}')" title="${f.title}\nClick to open inside this HTML canvas!\n${f.summary}">
+                            <div class="flex items-center gap-2 min-w-0 flex-1">
+                                <span class="text-sm flex-shrink-0">${icon}</span>
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-center gap-1.5">
+                                        <h5 class="text-xs font-semibold text-slate-200 truncate">${f.title}</h5>
+                                        ${isHtmlApp ? `<span class="text-[8px] uppercase tracking-tighter px-1 bg-pink-500/20 text-pink-300 border border-pink-500/30 rounded font-bold">APP</span>` : ''}
+                                    </div>
+                                    <p class="text-[10px] text-slate-400 truncate font-mono">${f.name}</p>
+                                </div>
+                            </div>
+                            <button class="open-ext-btn" title="Open in new browser tab" onclick="event.stopPropagation(); window.open('${targetPath}', '_blank')">
+                                ↗
+                            </button>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Universal Drag Handler for all rooms & viewer windows
+            function setupRoomDraggable(el, roomId) {
+                const head = el.querySelector('.map-room-head');
+                head.addEventListener('mousedown', (e) => {
+                    if (e.target.closest('button')) return;
+                    e.stopPropagation();
+                    const startX = e.clientX;
+                    const startY = e.clientY;
+                    const item = roomMap.get(roomId);
+                    if (!item) return;
+
+                    const initX = item.x;
+                    const initY = item.y;
+
+                    // Bring to front
+                    for (const r of roomMap.values()) r.el.classList.remove('active-room');
+                    item.el.classList.add('active-room');
+
+                    function onMove(ev) {
+                        const dx = (ev.clientX - startX) / camZoom;
+                        const dy = (ev.clientY - startY) / camZoom;
+                        item.x = Math.round(initX + dx);
+                        item.y = Math.round(initY + dy);
+                        el.style.left = `${item.x}px`;
+                        el.style.top = `${item.y}px`;
+                        drawBridges();
+                        updateEdgeLens();
                     }
-                };
-            } else {
-                contentNode.onclick = () => window.open(node.path, '_blank');
+
+                    function onUp() {
+                        window.removeEventListener('mousemove', onMove);
+                        window.removeEventListener('mouseup', onUp);
+                    }
+
+                    window.addEventListener('mousemove', onMove);
+                    window.addEventListener('mouseup', onUp);
+                });
             }
 
-            container.appendChild(nodeEl);
-        }
+            // ==========================================
+            // LEVEL 2: SUBCATEGORY CHILD ROOM ENGINE
+            // ==========================================
+            function toggleSubcategoryRoom(topicId, subcatName) {
+                const key = `${topicId}:${subcatName}`;
+                const chip = document.querySelector(`.subcat-chip[data-topic="${topicId}"][data-subcat="${subcatName}"]`);
 
-        let searchTimeout;
-        searchInput.oninput = (e) => {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(() => {
-                const query = e.target.value.toLowerCase().trim();
-                if (!query) {
-                    searchInfo.classList.add('hidden');
-                    resultsContainer.innerHTML = '';
-                    resultsContainer.appendChild(defaultState);
+                // If already open, close it (toggle off)
+                if (openSubRooms.has(key)) {
+                    const roomId = openSubRooms.get(key);
+                    closeRoom(roomId);
+                    openSubRooms.delete(key);
+                    if (chip) chip.classList.remove('active-door');
                     return;
                 }
-                performSearch(query);
-            }, 300);
-        };
 
-        function performSearch(query) {
-            searchInfo.classList.remove('hidden');
-            if (document.getElementById('default-state')) document.getElementById('default-state').remove();
-            resultsContainer.innerHTML = '';
+                // Otherwise, spawn a new subcategory child room!
+                const parentRoom = roomMap.get(topicId);
+                if (!parentRoom) return;
 
-            const results = allFiles.map(file => {
-                let score = 0;
-                let snippets = [];
+                const parentTopic = parentRoom.topicData;
+                const subFiles = parentTopic.files.filter(f => f.subcat === subcatName);
+                if (!subFiles.length) return;
 
-                // Match in filename
-                if (file.name.toLowerCase().includes(query)) score += 100;
+                const roomId = `sub-${topicId}-${slug(subcatName)}`;
+                const w = 400;
+                const h = 320;
 
-                // Match in content
-                if (file.content) {
-                    const contentLower = file.content.toLowerCase();
-                    let pos = contentLower.indexOf(query);
-                    while (pos !== -1) {
-                        score += 5; // Content match score
-                        if (snippets.length < 3) {
-                            const start = Math.max(0, pos - 40);
-                            const end = Math.min(file.content.length, pos + query.length + 80);
-                            let snippet = file.content.substring(start, end);
-                            // Highlight
-                            const actualQuery = file.content.substring(pos, pos + query.length);
-                            snippet = snippet.replace(new RegExp(escapeRegExp(actualQuery), 'gi'), (match) => `<span class="search-highlight">${match}</span>`);
-                            snippets.push('...' + snippet + '...');
-                        }
-                        pos = contentLower.indexOf(query, pos + 1);
-                    }
-                }
-                return { ...file, score, snippets };
-            }).filter(f => f.score > 0).sort((a, b) => b.score - a.score);
+                // Position outward from parent room
+                const countFromParent = [...openSubRooms.keys()].filter(k => k.startsWith(`${topicId}:`)).length;
+                const baseAng = Math.atan2(parentRoom.y, parentRoom.x);
+                const spread = (countFromParent % 2 === 1 ? 1 : -1) * Math.ceil(countFromParent / 2) * 0.42;
+                const targetAng = baseAng + spread;
+                const dist = 520 + Math.floor(countFromParent / 3) * 60;
 
-            searchStats.textContent = `Found ${results.length} matches for "${query}"`;
+                const x = Math.round(parentRoom.x + Math.cos(targetAng) * dist);
+                const y = Math.round(parentRoom.y + Math.sin(targetAng) * dist);
 
-            if (results.length === 0) {
-                resultsContainer.innerHTML = `<div class="bg-white rounded-3xl p-12 text-center text-slate-400 border border-slate-200">No matches found.</div>`;
-                return;
+                const el = document.createElement('div');
+                el.className = 'map-room sub-room active-room';
+                el.id = roomId;
+                el.style.left = `${x}px`;
+                el.style.top = `${y}px`;
+                el.style.setProperty('--room-w', `${w}px`);
+                el.style.setProperty('--room-h', `${h}px`);
+                el.style.setProperty('--room-accent', parentRoom.color);
+                el.style.setProperty('--room-border', `${parentRoom.color}88`);
+                el.style.setProperty('--room-glow', `${parentRoom.color}44`);
+
+                el.innerHTML = `
+                    <div class="map-room-head">
+                        <span class="flex items-center gap-2 font-bold text-xs text-white truncate max-w-[240px]">
+                            <span class="text-sm">📁</span>
+                            <span class="truncate">${subcatName}</span>
+                        </span>
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded-full font-bold" style="background:${parentRoom.color}22; color:${parentRoom.color}; border:1px solid ${parentRoom.color}44;">
+                                ${subFiles.length}
+                            </span>
+                            <button class="text-xs hover:text-white text-slate-400 p-1" title="Focus camera" onclick="window.landscapeExplorer.focusRoom('${roomId}')">
+                                ⤢
+                            </button>
+                            <button class="text-xs hover:text-red-400 text-slate-400 p-1" title="Close this branch" onclick="window.landscapeExplorer.toggleSubcategoryRoom('${topicId}', '${subcatName}')">
+                                ✕
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-3 py-1.5 border-b border-slate-700/50 bg-slate-900/60 flex items-center justify-between text-[11px] text-slate-400">
+                        <span class="truncate">Branch of ${parentRoom.name.split('&')[0]}</span>
+                        <span class="text-[9px] font-mono text-indigo-400">SUB-TERRITORY</span>
+                    </div>
+                    <div class="map-room-files" id="files-${roomId}">
+                        ${renderRoomFileList(subFiles, roomId)}
+                    </div>
+                `;
+
+                roomsLayer.appendChild(el);
+                setupRoomDraggable(el, roomId);
+
+                roomMap.set(roomId, {
+                    id: roomId,
+                    name: subcatName,
+                    icon: '📁',
+                    color: parentRoom.color,
+                    x, y, w, h,
+                    el,
+                    files: subFiles,
+                    parentId: topicId,
+                    type: 'subroom'
+                });
+
+                // Add connecting branch bridge
+                const bridgeId = `bridge-sub-${roomId}`;
+                bridgeMap.set(bridgeId, {
+                    id: bridgeId,
+                    fromId: topicId,
+                    toId: roomId,
+                    color: parentRoom.color,
+                    type: 'subcat'
+                });
+
+                openSubRooms.set(key, roomId);
+                if (chip) chip.classList.add('active-door');
+
+                drawBridges();
+                updateEdgeLens();
+
+                // Smoothly focus or adjust camera if needed
+                window.landscapeExplorer.focusRoom(roomId);
             }
 
-            results.forEach(res => {
-                const card = document.createElement('div');
-                card.className = 'bg-white rounded-3xl p-6 shadow-sm border border-slate-200 hover:border-indigo-300 transition-all cursor-pointer fade-in';
-                card.onclick = () => window.open(res.path, '_blank');
+            // ==========================================
+            // LEVEL 3: IN-HTML FILE READER WINDOW ENGINE
+            // ==========================================
+            function openFileViewer(fileJsonEncoded, sourceRoomId) {
+                const file = JSON.parse(decodeURIComponent(fileJsonEncoded));
+                const viewerId = `viewer-${slug(file.path)}`;
+                const targetPath = getResolvedPath(file.path);
 
-                card.innerHTML = `
-                    <div class="flex items-start justify-between">
-                        <div class="flex items-center space-x-3">
-                            <div class="p-2 bg-slate-100 rounded-xl text-slate-500">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-800">${res.name}</h4>
-                                <p class="text-[10px] text-slate-400 font-mono mt-0.5">${res.path}</p>
-                            </div>
+                // If viewer for this file is already open, focus it
+                if (openViewers.has(file.path)) {
+                    window.landscapeExplorer.focusRoom(viewerId);
+                    return;
+                }
+
+                const sourceRoom = roomMap.get(sourceRoomId) || roomMap.get('room-nexus');
+                const w = 580;
+                const h = 440;
+
+                // Position offset from source room
+                const openViewerCount = openViewers.size;
+                const offsetX = (openViewerCount % 2 === 1 ? 520 : -520);
+                const offsetY = 80 + (openViewerCount * 40);
+                const x = Math.round(sourceRoom.x + offsetX);
+                const y = Math.round(sourceRoom.y + offsetY);
+
+                const isHtml = file.ext === 'html';
+                const icon = getFileIcon(file.ext);
+
+                const el = document.createElement('div');
+                el.className = 'map-room viewer-window active-room';
+                el.id = viewerId;
+                el.style.left = `${x}px`;
+                el.style.top = `${y}px`;
+                el.style.setProperty('--room-w', `${w}px`);
+                el.style.setProperty('--room-h', `${h}px`);
+
+                el.innerHTML = `
+                    <div class="map-room-head">
+                        <span class="flex items-center gap-2 font-bold text-xs text-white truncate max-w-[340px]">
+                            <span class="text-base">${icon}</span>
+                            <span class="truncate">${file.title}</span>
+                        </span>
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30 uppercase font-bold">
+                                ${file.ext}
+                            </span>
+                            <button class="text-xs hover:text-sky-300 text-slate-400 p-1" title="Open in separate browser tab" onclick="window.open('${targetPath}', '_blank')">
+                                ↗
+                            </button>
+                            <button class="text-xs hover:text-white text-slate-400 p-1" title="Maximize/Restore" onclick="window.landscapeExplorer.toggleMaximizeViewer('${viewerId}')">
+                                ⤢
+                            </button>
+                            <button class="text-xs hover:text-red-400 text-slate-400 p-1" title="Close document window" onclick="window.landscapeExplorer.closeViewer('${file.path.replace(/'/g, "\\'")}')">
+                                ✕
+                            </button>
                         </div>
-                        <span class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded-full tracking-tighter uppercase">SCORE: ${res.score}</span>
                     </div>
-                    ${res.snippets.length > 0 ? `
-                        <div class="mt-4 space-y-2">
-                            ${res.snippets.map(s => `<div class="text-[11px] text-slate-600 bg-slate-50 p-3 rounded-xl leading-relaxed italic border-l-4 border-indigo-400 font-serif">${s}</div>`).join('')}
+                    <div class="px-3 py-1 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between text-[10px] text-slate-400 font-mono">
+                        <span class="truncate max-w-[380px]">${file.path}</span>
+                        <span>${(file.size / 1024).toFixed(1)} KB</span>
+                    </div>
+                    <div class="flex-1 overflow-auto bg-slate-900/90 relative" id="body-${viewerId}">
+                        <div class="flex items-center justify-center h-full text-slate-400 gap-2 text-xs">
+                            <span class="animate-spin text-sky-400 text-lg">⏳</span> Loading file content...
                         </div>
-                    ` : ''}
+                    </div>
                 `;
-                resultsContainer.appendChild(card);
-            });
-        }
 
-        function escapeRegExp(string) {
-            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        }
+                roomsLayer.appendChild(el);
+                setupRoomDraggable(el, viewerId);
+
+                roomMap.set(viewerId, {
+                    id: viewerId,
+                    name: file.title,
+                    icon,
+                    color: '#38bdf8',
+                    x, y, w, h,
+                    el,
+                    files: [file],
+                    parentId: sourceRoomId,
+                    type: 'viewer'
+                });
+
+                // Add observation bridge from source room to file viewer window
+                const bridgeId = `bridge-view-${viewerId}`;
+                bridgeMap.set(bridgeId, {
+                    id: bridgeId,
+                    fromId: sourceRoomId,
+                    toId: viewerId,
+                    color: '#38bdf8',
+                    type: 'viewer'
+                });
+
+                openViewers.set(file.path, viewerId);
+
+                drawBridges();
+                updateEdgeLens();
+
+                // Asynchronously load and render the content directly inside the HTML window!
+                loadFileContentIntoViewer(file, targetPath, `body-${viewerId}`);
+
+                // Focus on the new reader window
+                window.landscapeExplorer.focusRoom(viewerId);
+            }
+
+            // Loads file content into viewer: renders HTML in iframe, or markdown/code in styled viewer
+            function loadFileContentIntoViewer(file, targetPath, containerId) {
+                const bodyEl = document.getElementById(containerId);
+                if (!bodyEl) return;
+
+                // 1. If HTML Visualizer or Web App: Embed live interactive iframe!
+                if (file.ext === 'html') {
+                    bodyEl.innerHTML = `
+                        <iframe src="${targetPath}" class="w-full h-full border-0 bg-slate-950" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+                    `;
+                    return;
+                }
+
+                // 2. If Markdown or Code or Text: Fetch and render inside the window!
+                fetch(targetPath)
+                    .then(res => {
+                        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                        return res.text();
+                    })
+                    .then(text => {
+                        if (file.ext === 'md') {
+                            const html = renderMarkdownToHtml(text);
+                            bodyEl.innerHTML = `<div class="p-5 rendered-markdown">${html}</div>`;
+                        } else {
+                            // Syntax code viewer
+                            const escaped = escapeHtml(text);
+                            bodyEl.innerHTML = `
+                                <div class="p-3">
+                                    <pre class="bg-black/60 p-4 rounded-xl border border-slate-800 text-[11px] font-mono text-sky-200 overflow-x-auto leading-relaxed"><code>${escaped}</code></pre>
+                                </div>
+                            `;
+                        }
+                    })
+                    .catch(err => {
+                        // Fallback: Show rich metadata & excerpt card if raw fetch is blocked (e.g. file:/// protocol sandbox)
+                        bodyEl.innerHTML = `
+                            <div class="p-6 text-xs space-y-4">
+                                <div class="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700/80">
+                                    <h4 class="font-bold text-sm text-white">${file.title}</h4>
+                                    <p class="text-slate-300 mt-2 leading-relaxed">${file.summary}</p>
+                                </div>
+                                <div class="p-3 bg-amber-950/40 border border-amber-500/30 rounded-xl text-amber-200 text-[11px] leading-relaxed">
+                                    <strong>Offline Browser Sandbox Notice:</strong><br>
+                                    Direct in-browser reading of raw local disk files is restricted by your browser's local sandbox.<br>
+                                    To read this file:
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <button onclick="window.open('${targetPath}', '_blank')" class="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-semibold flex items-center gap-2 shadow-lg shadow-sky-600/30">
+                                        <span>↗</span> Open File Directly
+                                    </button>
+                                    <button onclick="window.open('http://localhost:8000/Master_Index.html', '_blank')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl border border-slate-600 font-semibold">
+                                        Switch to Localhost:8000
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    });
+            }
+
+            // Zero-dependency client-side Markdown parser
+            function renderMarkdownToHtml(md) {
+                if (!md) return '';
+                let html = escapeHtml(md);
+
+                // Code blocks ```code```
+                html = html.replace(/```([a-zA-Z0-9_-]*)\n([\s\S]*?)```/g, (match, lang, code) => {
+                    return `<pre class="bg-black/60 p-3 rounded-xl border border-slate-800 text-[11px] font-mono text-indigo-200 overflow-x-auto my-3"><code>${code.trim()}</code></pre>`;
+                });
+
+                // Inline code `code`
+                html = html.replace(/`([^`]+)`/g, '<code class="bg-black/40 px-1.5 py-0.5 rounded text-sky-300 font-mono text-[11px]">$1</code>');
+
+                // Headers
+                html = html.replace(/^### (.*$)/gim, '<h3 class="text-xs font-bold text-indigo-300 mt-3 mb-1">$1</h3>');
+                html = html.replace(/^## (.*$)/gim, '<h2 class="text-sm font-bold text-sky-300 mt-4 mb-2 pb-1 border-b border-slate-800">$1</h2>');
+                html = html.replace(/^# (.*$)/gim, '<h1 class="text-base font-bold text-white mt-4 mb-2 pb-1.5 border-b border-slate-700">$1</h1>');
+
+                // Blockquotes
+                html = html.replace(/^\> (.*$)/gim, '<blockquote class="border-l-2 border-indigo-500 pl-3 italic text-slate-400 my-2">$1</blockquote>');
+
+                // Bold and Italic
+                html = html.replace(/\*\*([^*]+)\*\*/g, '<strong class="text-white font-bold">$1</strong>');
+                html = html.replace(/\*([^*]+)\*/g, '<em class="text-slate-300 italic">$1</em>');
+
+                // Lists
+                html = html.replace(/^\s*[-*]\s+(.*$)/gim, '<li class="ml-4 list-disc text-slate-300 my-0.5">$1</li>');
+
+                // Links
+                html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="text-sky-400 hover:underline">$1</a>');
+
+                // Paragraphs
+                html = html.replace(/\n\n+/g, '</p><p class="my-2">');
+
+                return `<p class="my-2">${html}</p>`;
+            }
+
+            function escapeHtml(str) {
+                return str
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#039;');
+            }
+
+            function closeRoom(roomId) {
+                const item = roomMap.get(roomId);
+                if (!item) return;
+
+                if (item.el && item.el.parentNode) {
+                    item.el.parentNode.removeChild(item.el);
+                }
+                roomMap.delete(roomId);
+
+                // Delete connecting bridges
+                for (const [bId, b] of bridgeMap.entries()) {
+                    if (b.fromId === roomId || b.toId === roomId) {
+                        bridgeMap.delete(bId);
+                    }
+                }
+
+                drawBridges();
+                updateEdgeLens();
+            }
+
+            function closeViewer(filePath) {
+                if (openViewers.has(filePath)) {
+                    const roomId = openViewers.get(filePath);
+                    closeRoom(roomId);
+                    openViewers.delete(filePath);
+                }
+            }
+
+            function getFileIcon(ext) {
+                switch (ext) {
+                    case 'html': return '🌐';
+                    case 'md': return '📄';
+                    case 'py': return '🐍';
+                    case 'json': return '📊';
+                    case 'csv': return '📈';
+                    case 'docx':
+                    case 'pdf': return '📑';
+                    default: return '📝';
+                }
+            }
+
+            function buildNexusJumps() {
+                const jumpsContainer = document.getElementById('nexus-quick-jumps');
+                jumpsContainer.innerHTML = projectData.topics.map(t => `
+                    <button class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/80 hover:border-indigo-400 text-left transition-all" onclick="window.landscapeExplorer.focusRoom('${t.id}')">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-sm">${t.icon}</span>
+                            <span class="font-bold text-[10px] text-slate-200 truncate">${t.name.split('&')[0]}</span>
+                        </div>
+                        <span class="text-[9px] text-slate-400 font-mono mt-0.5 block">${t.fileCount} items</span>
+                    </button>
+                `).join('');
+            }
+
+            // Draw Bridges connecting the Web of Things
+            function drawBridges() {
+                let svgHtml = '';
+
+                for (const b of bridgeMap.values()) {
+                    const r1 = roomMap.get(b.fromId);
+                    const r2 = roomMap.get(b.toId);
+                    if (!r1 || !r2) continue;
+
+                    if (b.type === 'highway') {
+                        svgHtml += `
+                            <line x1="${r1.x}" y1="${r1.y}" x2="${r2.x}" y2="${r2.y}" class="bridge-casing" />
+                            <line x1="${r1.x}" y1="${r1.y}" x2="${r2.x}" y2="${r2.y}" class="bridge-plank" style="stroke:${b.color};" />
+                        `;
+                    } else if (b.type === 'subcat') {
+                        svgHtml += `
+                            <line x1="${r1.x}" y1="${r1.y}" x2="${r2.x}" y2="${r2.y}" class="bridge-casing" style="stroke-width:8px;" />
+                            <line x1="${r1.x}" y1="${r1.y}" x2="${r2.x}" y2="${r2.y}" class="bridge-subcat" style="stroke:${b.color};" />
+                        `;
+                    } else if (b.type === 'viewer') {
+                        svgHtml += `
+                            <line x1="${r1.x}" y1="${r1.y}" x2="${r2.x}" y2="${r2.y}" class="bridge-viewer" />
+                        `;
+                    } else if (b.type === 'ring') {
+                        svgHtml += `
+                            <line x1="${r1.x}" y1="${r1.y}" x2="${r2.x}" y2="${r2.y}" class="bridge-adjacent" />
+                        `;
+                    }
+                }
+
+                bridgeLines.innerHTML = svgHtml;
+            }
+
+            // Camera & Edge Lens
+            function updateCamera() {
+                const cx = container.clientWidth / 2;
+                const cy = container.clientHeight / 2;
+                world.style.transform = `translate(${cx - camX * camZoom}px, ${cy - camY * camZoom}px) scale(${camZoom})`;
+                hudScaleText.textContent = `${Math.round(camZoom * 100)}%`;
+                updateEdgeLens();
+            }
+
+            function updateEdgeLens() {
+                lensMargin.innerHTML = '';
+                if (!edgeLensOn) {
+                    lensInnerFrame.style.display = 'none';
+                    return;
+                }
+                lensInnerFrame.style.display = 'block';
+
+                const cx = container.clientWidth / 2;
+                const cy = container.clientHeight / 2;
+                const margin = 70; // Inset band
+                const boundsLeft = margin;
+                const boundsRight = container.clientWidth - margin;
+                const boundsTop = margin;
+                const boundsBottom = container.clientHeight - margin;
+
+                for (const r of roomMap.values()) {
+                    // Screen position
+                    const sx = cx + (r.x - camX) * camZoom;
+                    const sy = cy + (r.y - camY) * camZoom;
+                    const sw = (r.w * camZoom) / 2;
+                    const sh = (r.h * camZoom) / 2;
+
+                    // If completely outside the inner rectangle
+                    const isInside = (sx - sw >= boundsLeft && sx + sw <= boundsRight && sy - sh >= boundsTop && sy + sh <= boundsBottom);
+                    if (!isInside) {
+                        const dx = sx - cx;
+                        const dy = sy - cy;
+                        const angle = Math.atan2(dy, dx);
+
+                        const halfW = (container.clientWidth - 2 * margin) / 2;
+                        const halfH = (container.clientHeight - 2 * margin) / 2;
+
+                        let px = cx, py = cy;
+                        const tan = Math.tan(angle);
+
+                        if (Math.abs(dx * halfH) > Math.abs(dy * halfW)) {
+                            px = dx > 0 ? cx + halfW : cx - halfW;
+                            py = cy + (dx > 0 ? 1 : -1) * halfW * tan;
+                        } else {
+                            py = dy > 0 ? cy + halfH : cy - halfH;
+                            px = cx + (dy > 0 ? 1 : -1) * halfH / tan;
+                        }
+
+                        const proxy = document.createElement('div');
+                        proxy.className = 'lens-proxy';
+                        proxy.style.left = `${px}px`;
+                        proxy.style.top = `${py}px`;
+                        proxy.style.setProperty('--proxy-color', r.color);
+                        proxy.style.setProperty('--proxy-glow', `${r.color}66`);
+                        proxy.innerHTML = `<span>${r.icon}</span><span>${r.name.split('&')[0]}</span>`;
+                        proxy.title = `Click to fly camera to ${r.name}`;
+                        proxy.onclick = () => window.landscapeExplorer.focusRoom(r.id);
+                        lensMargin.appendChild(proxy);
+                    }
+                }
+            }
+
+            // Panning & Wheel Zoom
+            function setupEventListeners() {
+                container.addEventListener('mousedown', (e) => {
+                    if (e.target.closest('.map-room') || e.target.closest('.lens-proxy') || e.target.closest('.map-hud')) return;
+                    isPanning = true;
+                    container.classList.add('panning');
+                    startPanX = e.clientX;
+                    startPanY = e.clientY;
+                });
+
+                window.addEventListener('mousemove', (e) => {
+                    if (!isPanning) return;
+                    const dx = e.clientX - startPanX;
+                    const dy = e.clientY - startPanY;
+                    startPanX = e.clientX;
+                    startPanY = e.clientY;
+
+                    camX -= dx / camZoom;
+                    camY -= dy / camZoom;
+                    updateCamera();
+                });
+
+                window.addEventListener('mouseup', () => {
+                    if (isPanning) {
+                        isPanning = false;
+                        container.classList.remove('panning');
+                    }
+                });
+
+                container.addEventListener('wheel', (e) => {
+                    const scrollable = e.target.closest('.map-room-files, .viewer-body, .overflow-y-auto, .overflow-auto');
+                    // When mouse hovers on a tile/room: regular wheel scrolls the tile, shift zooms
+                    if (scrollable && !e.shiftKey) {
+                        return; // Let native tile scrolling happen
+                    }
+
+                    e.preventDefault();
+                    const zoomFactor = e.deltaY < 0 ? 1.12 : 0.89;
+                    const newZoom = Math.max(0.25, Math.min(2.0, camZoom * zoomFactor));
+
+                    const rect = container.getBoundingClientRect();
+                    const mouseX = e.clientX - rect.left - container.clientWidth / 2;
+                    const mouseY = e.clientY - rect.top - container.clientHeight / 2;
+
+                    camX += mouseX / camZoom - mouseX / newZoom;
+                    camY += mouseY / camZoom - mouseY / newZoom;
+                    camZoom = newZoom;
+                    updateCamera();
+                }, { passive: false });
+
+                window.addEventListener('resize', () => {
+                    updateCamera();
+                });
+
+                // Mode toggles
+                document.getElementById('btn-mode-landscape').onclick = () => setView('landscape');
+                document.getElementById('btn-mode-tree').onclick = () => setView('tree');
+
+                // Global search handler
+                let searchTimer;
+                globalSearch.addEventListener('input', (e) => {
+                    clearTimeout(searchTimer);
+                    searchTimer = setTimeout(() => {
+                        performGlobalSearch(e.target.value.trim().toLowerCase());
+                    }, 250);
+                });
+
+                // Hotkey '/' to focus search
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === '/' && document.activeElement !== globalSearch) {
+                        e.preventDefault();
+                        globalSearch.focus();
+                    }
+                });
+            }
+
+            function setView(view) {
+                currentView = view;
+                const landEl = document.getElementById('landscape-view');
+                const treeEl = document.getElementById('tree-search-view');
+                const btnLand = document.getElementById('btn-mode-landscape');
+                const btnTree = document.getElementById('btn-mode-tree');
+
+                if (view === 'landscape') {
+                    landEl.classList.remove('hidden');
+                    treeEl.classList.add('hidden');
+                    btnLand.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 bg-indigo-600 text-white shadow-sm';
+                    btnTree.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 text-slate-400 hover:text-slate-200';
+                    updateCamera();
+                } else {
+                    landEl.classList.add('hidden');
+                    treeEl.classList.remove('hidden');
+                    treeEl.classList.add('flex');
+                    btnTree.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 bg-indigo-600 text-white shadow-sm';
+                    btnLand.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 text-slate-400 hover:text-slate-200';
+                }
+            }
+
+            function performGlobalSearch(query) {
+                if (!query) {
+                    searchCountBadge.classList.add('hidden');
+                    for (const r of roomMap.values()) {
+                        r.el.classList.remove('dimmed');
+                    }
+                    renderSearchResults(projectData.files.slice(0, 100));
+                    return;
+                }
+
+                const matches = projectData.files.filter(f => {
+                    return f.title.toLowerCase().includes(query) ||
+                        f.name.toLowerCase().includes(query) ||
+                        f.summary.toLowerCase().includes(query) ||
+                        f.path.toLowerCase().includes(query);
+                });
+
+                searchCountBadge.textContent = `${matches.length} matches`;
+                searchCountBadge.classList.remove('hidden');
+
+                const matchingTopics = new Set(matches.map(m => m.topic));
+                for (const r of roomMap.values()) {
+                    if (r.id === 'room-nexus') continue;
+                    if (matchingTopics.has(r.id)) {
+                        r.el.classList.remove('dimmed');
+                        const roomFiles = matches.filter(m => m.topic === r.id);
+                        const fileContainer = document.getElementById(`files-${r.id}`);
+                        if (fileContainer) fileContainer.innerHTML = renderRoomFileList(roomFiles, r.id);
+                    } else {
+                        r.el.classList.add('dimmed');
+                    }
+                }
+
+                renderSearchResults(matches);
+            }
+
+            function renderSearchResults(files) {
+                const list = document.getElementById('search-results-list');
+                const stats = document.getElementById('search-results-stats');
+                stats.textContent = `Showing ${files.length} documents`;
+
+                if (files.length === 0) {
+                    list.innerHTML = `<div class="p-8 text-center text-slate-500 text-xs">No documents match the search criteria.</div>`;
+                    return;
+                }
+
+                list.innerHTML = files.slice(0, 150).map(f => {
+                    const icon = getFileIcon(f.ext);
+                    const isApp = f.ext === 'html';
+                    const targetPath = getResolvedPath(f.path);
+                    return `
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700/60 hover:border-indigo-500/60 transition-all cursor-pointer flex items-start gap-3" onclick="window.landscapeExplorer.openFileViewer('${encodeURIComponent(JSON.stringify(f))}', 'room-nexus')">
+                            <span class="text-xl flex-shrink-0 mt-1">${icon}</span>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <h4 class="text-sm font-semibold text-slate-100 truncate">${f.title}</h4>
+                                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">${f.ext.toUpperCase()}</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">${f.summary}</p>
+                                <div class="flex items-center gap-3 mt-2 text-[10px] text-slate-500 font-mono">
+                                    <span>${f.path}</span>
+                                    <span>•</span>
+                                    <span>${(f.size / 1024).toFixed(1)} KB</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            function buildTree() {
+                const treeEl = document.getElementById('project-tree');
+                const fileCountEl = document.getElementById('tree-files-count');
+                fileCountEl.textContent = `${projectData.total_files} files`;
+
+                function renderTreeNode(node, level = 0) {
+                    const isDir = node.type === 'directory';
+                    const wrapper = document.createElement('div');
+
+                    const row = document.createElement('div');
+                    row.className = `flex items-center gap-1.5 py-1 px-2 rounded hover:bg-slate-700/50 cursor-pointer text-slate-300 transition-colors`;
+                    row.style.paddingLeft = `${level * 14 + 6}px`;
+
+                    const icon = isDir ? '📁' : getFileIcon(node.ext || 'md');
+                    row.innerHTML = `<span class="text-xs flex-shrink-0">${icon}</span><span class="truncate text-xs">${node.title || node.name}</span>`;
+
+                    wrapper.appendChild(row);
+
+                    if (isDir && node.children) {
+                        const childContainer = document.createElement('div');
+                        childContainer.className = 'hidden';
+
+                        row.onclick = () => {
+                            const isHidden = childContainer.classList.contains('hidden');
+                            if (isHidden) {
+                                childContainer.classList.remove('hidden');
+                                row.classList.add('text-indigo-400');
+                            } else {
+                                childContainer.classList.add('hidden');
+                                row.classList.remove('text-indigo-400');
+                            }
+                        };
+
+                        node.children.forEach(c => childContainer.appendChild(renderTreeNode(c, level + 1)));
+                        wrapper.appendChild(childContainer);
+                    } else {
+                        row.onclick = () => {
+                            const fileObj = {
+                                title: node.title || node.name,
+                                name: node.name,
+                                path: node.path,
+                                ext: node.ext || 'md',
+                                size: 0,
+                                summary: ''
+                            };
+                            window.landscapeExplorer.openFileViewer(encodeURIComponent(JSON.stringify(fileObj)), 'room-nexus');
+                        };
+                    }
+
+                    return wrapper;
+                }
+
+                treeEl.innerHTML = '';
+                if (projectData.tree && projectData.tree.children) {
+                    projectData.tree.children.forEach(c => treeEl.appendChild(renderTreeNode(c)));
+                }
+            }
+
+            // Public Landscape Controls API
+            window.landscapeExplorer = {
+                focusRoom: function (roomId) {
+                    const r = roomMap.get(roomId);
+                    if (!r) return;
+                    activeRoomId = roomId;
+                    for (const rm of roomMap.values()) rm.el.classList.toggle('active-room', rm.id === roomId);
+
+                    const targetX = r.x;
+                    const targetY = r.y;
+                    const targetZoom = Math.max(0.85, Math.min(1.2, camZoom));
+
+                    let step = 0;
+                    const totalSteps = 24;
+                    const initX = camX, initY = camY, initZ = camZoom;
+
+                    function anim() {
+                        step++;
+                        const t = step / totalSteps;
+                        const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                        camX = initX + (targetX - initX) * ease;
+                        camY = initY + (targetY - initY) * ease;
+                        camZoom = initZ + (targetZoom - initZ) * ease;
+                        updateCamera();
+                        if (step < totalSteps) requestAnimationFrame(anim);
+                    }
+                    requestAnimationFrame(anim);
+                },
+
+                resetWorldView: function () {
+                    camX = 0;
+                    camY = 0;
+                    camZoom = 0.48;
+                    updateCamera();
+                },
+
+                zoomIn: function () {
+                    camZoom = Math.min(2.0, camZoom * 1.25);
+                    updateCamera();
+                },
+
+                zoomOut: function () {
+                    camZoom = Math.max(0.25, camZoom * 0.8);
+                    updateCamera();
+                },
+
+                tidyRooms: function () {
+                    layoutTopicRooms();
+                    drawBridges();
+                    updateCamera();
+                },
+
+                toggleEdgeLens: function () {
+                    edgeLensOn = !edgeLensOn;
+                    const btn = document.getElementById('btn-toggle-edgelens');
+                    btn.className = `hud-btn ${edgeLensOn ? 'active' : ''}`;
+                    btn.innerHTML = `<span>🖼️</span> Edge Lens: ${edgeLensOn ? 'ON' : 'OFF'}`;
+                    updateEdgeLens();
+                },
+
+                toggleRoomMode: function () {
+                    roomCardMode = !roomCardMode;
+                    container.classList.toggle('room-card-mode', roomCardMode);
+                    const btn = document.getElementById('btn-toggle-roommode');
+                    btn.innerHTML = `<span>☷</span> Indoor: ${roomCardMode ? 'Cards' : 'Rows'}`;
+                },
+
+                toggleSubcategoryRoom: toggleSubcategoryRoom,
+                openFileViewer: openFileViewer,
+                closeViewer: closeViewer,
+
+                closeAllBranches: function () {
+                    for (const subId of openSubRooms.values()) closeRoom(subId);
+                    for (const viewId of openViewers.values()) closeRoom(viewId);
+                    openSubRooms.clear();
+                    openViewers.clear();
+                    document.querySelectorAll('.subcat-chip.active-door').forEach(c => c.classList.remove('active-door'));
+                    drawBridges();
+                    updateEdgeLens();
+                },
+
+                toggleMaximizeViewer: function (viewerId) {
+                    const r = roomMap.get(viewerId);
+                    if (!r) return;
+                    const isMax = r.el.dataset.maximized === 'true';
+                    if (isMax) {
+                        r.el.style.setProperty('--room-w', '580px');
+                        r.el.style.setProperty('--room-h', '440px');
+                        r.w = 580; r.h = 440;
+                        r.el.dataset.maximized = 'false';
+                    } else {
+                        r.el.style.setProperty('--room-w', '900px');
+                        r.el.style.setProperty('--room-h', '640px');
+                        r.w = 900; r.h = 640;
+                        r.el.dataset.maximized = 'true';
+                    }
+                    drawBridges();
+                    updateEdgeLens();
+                }
+            };
+
+            // Start application
+            loadDataAndStart();
+
+        })();
     </script>
 </body>
 
