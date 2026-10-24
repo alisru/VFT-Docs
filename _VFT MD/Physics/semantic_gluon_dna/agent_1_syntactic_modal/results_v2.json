@@ -1,0 +1,7495 @@
+{
+  "agent": "Agent 1 (Round 2): Syntactic Modal, Proof-Working-Out & 4 Derivation Laws v2.0",
+  "critique_of_unified_v1": [
+    "1. Eliminated the ':' / '=' fallback modal bug (lines 273-280 of unified_gluon_dna_engine.py) which tagged every markdown header/bullet with ':' as Constructive `is_like`, artificially inflating `Comprehensive Report - IRM.md`'s Outer/Inner ratio to 7.28.",
+    "2. Added a 5-component Working-Out / Proof-Chain Completeness Engine (`W_score` in [0,1]) tracking proof scaffolding, deductive connectors, multi-step symbolic manipulation, and named analytical machinery (Grönwall, Lipschitz, Sobolev, Levi-Civita, ZFC, Ultrafilter).",
+    "3. Coupled the 4 Verbatim Operational Derivation Laws with clause-order verification AND `W_score >= 0.28` (`proof_backed_rate`), separating bare rhetorical assertions from worked-out mathematical derivations."
+  ],
+  "group_benchmarks": {
+    "chat_exploratory": {
+      "count": 1,
+      "mean_iota": 0.4241,
+      "mean_outer_inner_ratio": 1.367,
+      "mean_w_score": 0.0623,
+      "mean_rigorous_working_out_ratio": 0.0111,
+      "mean_bare_assertion_ratio": 0.7983,
+      "mean_law_proof_backed_rates": {
+        "Law1_Reductive_cant_be": 0.0,
+        "Law2_Productive_will_be": 0.0,
+        "Law3_Regressive_wont_be": 0.0,
+        "Law4_Constructive_may_be": 0.0008
+      }
+    },
+    "irm_early_summary": {
+      "count": 1,
+      "mean_iota": 0.0299,
+      "mean_outer_inner_ratio": 4.219,
+      "mean_w_score": 0.0622,
+      "mean_rigorous_working_out_ratio": 0.0196,
+      "mean_bare_assertion_ratio": 0.8301,
+      "mean_law_proof_backed_rates": {
+        "Law1_Reductive_cant_be": 0.0,
+        "Law2_Productive_will_be": 0.0,
+        "Law3_Regressive_wont_be": 0.0,
+        "Law4_Constructive_may_be": 0.0
+      }
+    },
+    "irm_formal_papers_ensemble": {
+      "count": 14,
+      "mean_iota": -0.0654,
+      "mean_outer_inner_ratio": 3.457,
+      "mean_w_score": 0.0935,
+      "mean_rigorous_working_out_ratio": 0.087,
+      "mean_bare_assertion_ratio": 0.7429,
+      "mean_law_proof_backed_rates": {
+        "Law1_Reductive_cant_be": 0.0129,
+        "Law2_Productive_will_be": 0.0068,
+        "Law3_Regressive_wont_be": 0.0036,
+        "Law4_Constructive_may_be": 0.0027
+      }
+    },
+    "arxiv_benchmark_ensemble": {
+      "count": 8,
+      "mean_iota": 0.5606,
+      "mean_outer_inner_ratio": 1.908,
+      "mean_w_score": 0.1118,
+      "mean_rigorous_working_out_ratio": 0.1188,
+      "mean_bare_assertion_ratio": 0.6955,
+      "mean_law_proof_backed_rates": {
+        "Law1_Reductive_cant_be": 0.0004,
+        "Law2_Productive_will_be": 0.0003,
+        "Law3_Regressive_wont_be": 0.0006,
+        "Law4_Constructive_may_be": 0.0009
+      }
+    }
+  },
+  "cross_corpus_recovery": {
+    "chat_core_concepts_count": 128,
+    "early_report_survival_rate": 0.4531,
+    "full_formal_corpus_survival_rate": 0.5469,
+    "recovered_concepts_count": 12,
+    "still_unmerged_count": 58,
+    "top_recovered_in_formal_papers": [
+      {
+        "concept": "units",
+        "chat_I": 18,
+        "early_report_I": 0,
+        "formal_corpus_I": 1,
+        "recovered_in": "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre- (+1)"
+      },
+      {
+        "concept": "unit",
+        "chat_I": 10,
+        "early_report_I": 0,
+        "formal_corpus_I": 6,
+        "recovered_in": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f (+3), Computational_and_Ontological_Superiority_of_IRM_Over_ZFC (+1), Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t (+1), HYPOTHESIS_semantic_connection (+1)"
+      },
+      {
+        "concept": "digit set",
+        "chat_I": 9,
+        "early_report_I": 0,
+        "formal_corpus_I": 1,
+        "recovered_in": "Claude_Engineering___Verification_Log (+1)"
+      },
+      {
+        "concept": "every number",
+        "chat_I": 5,
+        "early_report_I": 0,
+        "formal_corpus_I": 2,
+        "recovered_in": "Claude_Engineering___Verification_Log (+1), Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit (+1)"
+      },
+      {
+        "concept": "continuum",
+        "chat_I": 5,
+        "early_report_I": 0,
+        "formal_corpus_I": 3,
+        "recovered_in": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f (+1), Claude_Engineering___Verification_Log (+1), Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit (+1)"
+      },
+      {
+        "concept": "ultrafilter",
+        "chat_I": 5,
+        "early_report_I": 0,
+        "formal_corpus_I": 4,
+        "recovered_in": "Claude_Engineering___Verification_Log (+3), ORTHODOX_BRIDGE_ZFC (+1)"
+      },
+      {
+        "concept": "tensor",
+        "chat_I": 4,
+        "early_report_I": 0,
+        "formal_corpus_I": 2,
+        "recovered_in": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f (+1), Claude_Engineering___Verification_Log (+1)"
+      },
+      {
+        "concept": "calculus",
+        "chat_I": 3,
+        "early_report_I": 0,
+        "formal_corpus_I": 2,
+        "recovered_in": "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre- (+1), Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc (+1)"
+      },
+      {
+        "concept": "field",
+        "chat_I": 3,
+        "early_report_I": 0,
+        "formal_corpus_I": 8,
+        "recovered_in": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f (+4), Claude_Engineering___Verification_Log (+3), Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t (+1)"
+      },
+      {
+        "concept": "identity",
+        "chat_I": 2,
+        "early_report_I": 0,
+        "formal_corpus_I": 3,
+        "recovered_in": "Claude_Engineering___Verification_Log (+1), Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi (+1), HYPOTHESIS_semantic_connection (+1)"
+      },
+      {
+        "concept": "laurent series",
+        "chat_I": 2,
+        "early_report_I": 0,
+        "formal_corpus_I": 1,
+        "recovered_in": "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit (+1)"
+      },
+      {
+        "concept": "non-standard analysis",
+        "chat_I": 2,
+        "early_report_I": 0,
+        "formal_corpus_I": 2,
+        "recovered_in": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f (+1), Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi (+1)"
+      }
+    ],
+    "top_still_unmerged_concepts": [
+      {
+        "concept": "rods units",
+        "chat_I": 19,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "variable name",
+        "chat_I": 6,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "chinese number",
+        "chat_I": 5,
+        "chat_E": 2,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "infinitesimal expansion",
+        "chat_I": 5,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "primitive unit",
+        "chat_I": 4,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "rod numerals",
+        "chat_I": 4,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "hahn series",
+        "chat_I": 4,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "indefinite number formalism",
+        "chat_I": 4,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "next number",
+        "chat_I": 3,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "hyperreal field",
+        "chat_I": 3,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "representation operator",
+        "chat_I": 3,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "hyperreal extension",
+        "chat_I": 3,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "rod units",
+        "chat_I": 3,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "nonprincipal ultrafilter",
+        "chat_I": 3,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "higher numbers",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "infinitesimal or infinite",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "derived numbers",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "usual number",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "value set",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "real field",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "value field",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "hyperreal model",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "infinitesimal and infinite",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "ordered field",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "your axiom",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "traditional chinese",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "nine chapters",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "mathematical art",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "lo shu",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      },
+      {
+        "concept": "your system",
+        "chat_I": 2,
+        "chat_E": 0,
+        "formal_corpus_E": 0,
+        "status": "STILL_OMITTED_FROM_ALL_IRM"
+      }
+    ]
+  },
+  "chat_analysis": {
+    "doc_id": "chat_infinity_maths",
+    "doc_group": "1_exploratory_chat",
+    "filename": "chatgpt infinity maths.md",
+    "n_paragraphs": 1626,
+    "n_sentences": 2391,
+    "n_windows": 2389,
+    "modal_counts": {
+      "is_like": 170,
+      "may_be": 37,
+      "will_be": 91,
+      "can_be": 152,
+      "is_not": 69,
+      "cant_be": 64,
+      "was_like": 35,
+      "wont_be": 14
+    },
+    "engine_summary": {
+      "C": 207,
+      "P": 243,
+      "R": 133,
+      "G": 49,
+      "total_modals": 632,
+      "iota": 0.4241,
+      "outer": 365,
+      "inner": 267
+    },
+    "outer_inner_ratio": 1.367,
+    "working_out_profile": {
+      "mean_w_score": 0.0623,
+      "rigorous_working_out_ratio": 0.0111,
+      "bare_assertion_ratio": 0.7983,
+      "tier_distribution": {
+        "Tier0_Bare_Assertion": 0.7983,
+        "Tier1_Exploratory_Sketch": 0.1907,
+        "Tier2_Operational_Derivation": 0.0105,
+        "Tier3_Formal_Proof_Chain": 0.0006
+      },
+      "feature_totals": {
+        "scaffolding_hits": 45,
+        "deductive_hits": 30,
+        "symbolic_hits": 1128,
+        "chained_eq_steps": 356,
+        "machinery_hits": 78,
+        "bare_assertion_hits": 3
+      }
+    },
+    "derivation_laws": {
+      "Law1_Reductive_cant_be": {
+        "mean_score": 0.091,
+        "completed_windows": 12,
+        "completion_rate": 0.005,
+        "proof_backed_windows": 0,
+        "proof_backed_rate": 0.0
+      },
+      "Law2_Productive_will_be": {
+        "mean_score": 0.0975,
+        "completed_windows": 11,
+        "completion_rate": 0.0046,
+        "proof_backed_windows": 0,
+        "proof_backed_rate": 0.0
+      },
+      "Law3_Regressive_wont_be": {
+        "mean_score": 0.0822,
+        "completed_windows": 4,
+        "completion_rate": 0.0017,
+        "proof_backed_windows": 0,
+        "proof_backed_rate": 0.0
+      },
+      "Law4_Constructive_may_be": {
+        "mean_score": 0.1033,
+        "completed_windows": 14,
+        "completion_rate": 0.0059,
+        "proof_backed_windows": 2,
+        "proof_backed_rate": 0.0008
+      }
+    },
+    "top_included_concepts": [
+      [
+        "number",
+        47
+      ],
+      [
+        "reality math",
+        35
+      ],
+      [
+        "rods units",
+        19
+      ],
+      [
+        "relative",
+        18
+      ],
+      [
+        "units",
+        18
+      ],
+      [
+        "numbers",
+        16
+      ],
+      [
+        "real numbers",
+        15
+      ],
+      [
+        "limit",
+        13
+      ],
+      [
+        "infinite series",
+        11
+      ],
+      [
+        "repeating series",
+        11
+      ],
+      [
+        "infinity",
+        10
+      ],
+      [
+        "unit",
+        10
+      ],
+      [
+        "digit set",
+        9
+      ],
+      [
+        "natural numbers",
+        8
+      ],
+      [
+        "real number",
+        8
+      ],
+      [
+        "framing operator",
+        8
+      ],
+      [
+        "frame",
+        8
+      ],
+      [
+        "fractal number",
+        7
+      ],
+      [
+        "series",
+        7
+      ],
+      [
+        "potential",
+        7
+      ],
+      [
+        "variable name",
+        6
+      ],
+      [
+        "axiom",
+        5
+      ],
+      [
+        "every number",
+        5
+      ],
+      [
+        "continuum",
+        5
+      ],
+      [
+        "zero",
+        5
+      ],
+      [
+        "chinese number",
+        5
+      ],
+      [
+        "ultrafilter",
+        5
+      ],
+      [
+        "infinite frame",
+        5
+      ],
+      [
+        "infinitesimal unit",
+        5
+      ],
+      [
+        "state",
+        5
+      ],
+      [
+        "definitive state",
+        5
+      ],
+      [
+        "implicative state",
+        5
+      ],
+      [
+        "infinitesimal",
+        5
+      ],
+      [
+        "infinitesimal expansion",
+        5
+      ],
+      [
+        "primitive unit",
+        4
+      ]
+    ],
+    "top_excluded_concepts": [
+      [
+        "reality math",
+        12
+      ],
+      [
+        "propagation operator",
+        9
+      ],
+      [
+        "absolute",
+        5
+      ],
+      [
+        "relative",
+        4
+      ],
+      [
+        "infinitesimal",
+        4
+      ],
+      [
+        "unit",
+        3
+      ],
+      [
+        "infinitesimal contains",
+        3
+      ],
+      [
+        "forbidden state",
+        3
+      ],
+      [
+        "new axiom",
+        3
+      ],
+      [
+        "limit",
+        2
+      ],
+      [
+        "number",
+        2
+      ],
+      [
+        "chinese number",
+        2
+      ],
+      [
+        "forbidden states",
+        2
+      ],
+      [
+        "vector field theory",
+        2
+      ],
+      [
+        "infinitesimal compared",
+        2
+      ],
+      [
+        "axiom",
+        2
+      ],
+      [
+        "relative infinities",
+        2
+      ],
+      [
+        "moral ledger",
+        2
+      ],
+      [
+        "infinitesimal number",
+        2
+      ],
+      [
+        "resolution operator",
+        2
+      ],
+      [
+        "actual",
+        1
+      ],
+      [
+        "encode numbers",
+        1
+      ],
+      [
+        "defined relative",
+        1
+      ],
+      [
+        "units",
+        1
+      ],
+      [
+        "chinese",
+        1
+      ],
+      [
+        "countable set",
+        1
+      ],
+      [
+        "building numbers",
+        1
+      ],
+      [
+        "framing operator",
+        1
+      ],
+      [
+        "zero unit",
+        1
+      ],
+      [
+        "infinity mirror",
+        1
+      ],
+      [
+        "instantaneous resolution infinite",
+        1
+      ],
+      [
+        "static values",
+        1
+      ],
+      [
+        "unified circle equation",
+        1
+      ],
+      [
+        "standard mathematics",
+        1
+      ],
+      [
+        "corrected fraction proof",
+        1
+      ]
+    ]
+  },
+  "irm_early_report_analysis": {
+    "doc_id": "irm_early_comprehensive_report",
+    "doc_group": "2_irm_early_summary",
+    "filename": "Comprehensive Report -  Infinity Indefinite Mathematics (IRM).md",
+    "n_paragraphs": 306,
+    "n_sentences": 515,
+    "n_windows": 513,
+    "modal_counts": {
+      "is_like": 42,
+      "may_be": 3,
+      "will_be": 35,
+      "can_be": 6,
+      "is_not": 44,
+      "cant_be": 17,
+      "was_like": 14,
+      "wont_be": 6
+    },
+    "engine_summary": {
+      "C": 45,
+      "P": 41,
+      "R": 61,
+      "G": 20,
+      "total_modals": 167,
+      "iota": 0.0299,
+      "outer": 135,
+      "inner": 32
+    },
+    "outer_inner_ratio": 4.219,
+    "working_out_profile": {
+      "mean_w_score": 0.0622,
+      "rigorous_working_out_ratio": 0.0196,
+      "bare_assertion_ratio": 0.8301,
+      "tier_distribution": {
+        "Tier0_Bare_Assertion": 0.8301,
+        "Tier1_Exploratory_Sketch": 0.1503,
+        "Tier2_Operational_Derivation": 0.0196,
+        "Tier3_Formal_Proof_Chain": 0.0
+      },
+      "feature_totals": {
+        "scaffolding_hits": 41,
+        "deductive_hits": 6,
+        "symbolic_hits": 119,
+        "chained_eq_steps": 28,
+        "machinery_hits": 14,
+        "bare_assertion_hits": 0
+      }
+    },
+    "derivation_laws": {
+      "Law1_Reductive_cant_be": {
+        "mean_score": 0.1046,
+        "completed_windows": 2,
+        "completion_rate": 0.0039,
+        "proof_backed_windows": 0,
+        "proof_backed_rate": 0.0
+      },
+      "Law2_Productive_will_be": {
+        "mean_score": 0.1222,
+        "completed_windows": 4,
+        "completion_rate": 0.0078,
+        "proof_backed_windows": 0,
+        "proof_backed_rate": 0.0
+      },
+      "Law3_Regressive_wont_be": {
+        "mean_score": 0.0983,
+        "completed_windows": 2,
+        "completion_rate": 0.0039,
+        "proof_backed_windows": 0,
+        "proof_backed_rate": 0.0
+      },
+      "Law4_Constructive_may_be": {
+        "mean_score": 0.0799,
+        "completed_windows": 0,
+        "completion_rate": 0.0,
+        "proof_backed_windows": 0,
+        "proof_backed_rate": 0.0
+      }
+    },
+    "top_included_concepts": [
+      [
+        "number",
+        12
+      ],
+      [
+        "infinitesimal field",
+        8
+      ],
+      [
+        "repeating series",
+        7
+      ],
+      [
+        "axiom",
+        6
+      ],
+      [
+        "series",
+        6
+      ],
+      [
+        "definitive state",
+        5
+      ],
+      [
+        "reality math",
+        5
+      ],
+      [
+        "infinity indefinite mathematics",
+        4
+      ],
+      [
+        "geometric exploration operator",
+        4
+      ],
+      [
+        "relative",
+        4
+      ],
+      [
+        "potential",
+        4
+      ],
+      [
+        "infinite series",
+        4
+      ],
+      [
+        "infinity mirror",
+        4
+      ],
+      [
+        "flaw",
+        4
+      ],
+      [
+        "standard proof",
+        4
+      ],
+      [
+        "corrected proof",
+        4
+      ],
+      [
+        "definitive states",
+        3
+      ],
+      [
+        "frame",
+        3
+      ],
+      [
+        "infinity",
+        3
+      ],
+      [
+        "implicative state",
+        3
+      ],
+      [
+        "infinitesimal",
+        3
+      ],
+      [
+        "numbers",
+        3
+      ],
+      [
+        "empty set",
+        3
+      ],
+      [
+        "infinitesimal recursion density",
+        3
+      ],
+      [
+        "nature",
+        2
+      ],
+      [
+        "state",
+        2
+      ],
+      [
+        "relative infinities",
+        2
+      ],
+      [
+        "scale",
+        2
+      ],
+      [
+        "real numbers",
+        2
+      ],
+      [
+        "framing operator",
+        2
+      ],
+      [
+        "defined frame",
+        2
+      ],
+      [
+        "possible unit",
+        2
+      ],
+      [
+        "infinitesimal unit",
+        2
+      ],
+      [
+        "defined state",
+        2
+      ],
+      [
+        "linear combination",
+        2
+      ]
+    ],
+    "top_excluded_concepts": [
+      [
+        "reality math",
+        4
+      ],
+      [
+        "absolute",
+        3
+      ],
+      [
+        "definitive state",
+        2
+      ],
+      [
+        "geometric exploration operator",
+        2
+      ],
+      [
+        "new axiom",
+        2
+      ],
+      [
+        "unit",
+        2
+      ],
+      [
+        "flaw",
+        2
+      ],
+      [
+        "number",
+        1
+      ],
+      [
+        "infinitesimal field",
+        1
+      ],
+      [
+        "generative vector",
+        1
+      ],
+      [
+        "transcendental number",
+        1
+      ],
+      [
+        "its potential",
+        1
+      ],
+      [
+        "classical view",
+        1
+      ],
+      [
+        "classical",
+        1
+      ],
+      [
+        "observable boundary",
+        1
+      ],
+      [
+        "infinitesimal fields",
+        1
+      ],
+      [
+        "stable boundary",
+        1
+      ],
+      [
+        "vector field theory",
+        1
+      ],
+      [
+        "building numbers",
+        1
+      ],
+      [
+        "infinity",
+        1
+      ],
+      [
+        "zero unit",
+        1
+      ],
+      [
+        "repeating block series",
+        1
+      ],
+      [
+        "state",
+        1
+      ],
+      [
+        "infinitesimal contains",
+        1
+      ],
+      [
+        "infinity mirror",
+        1
+      ],
+      [
+        "infinite numbers",
+        1
+      ],
+      [
+        "static values",
+        1
+      ],
+      [
+        "dynamic variables",
+        1
+      ],
+      [
+        "fundamental law",
+        1
+      ],
+      [
+        "physical law",
+        1
+      ],
+      [
+        "forbidden state",
+        1
+      ],
+      [
+        "algorithm",
+        1
+      ],
+      [
+        "forward transformation",
+        1
+      ],
+      [
+        "moral ledger",
+        1
+      ],
+      [
+        "moral state",
+        1
+      ]
+    ]
+  },
+  "irm_formal_papers": [
+    {
+      "doc_id": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f.md",
+      "n_paragraphs": 344,
+      "n_sentences": 400,
+      "n_windows": 398,
+      "modal_counts": {
+        "is_like": 22,
+        "may_be": 0,
+        "will_be": 9,
+        "can_be": 2,
+        "is_not": 9,
+        "cant_be": 6,
+        "was_like": 14,
+        "wont_be": 0
+      },
+      "engine_summary": {
+        "C": 22,
+        "P": 11,
+        "R": 15,
+        "G": 14,
+        "total_modals": 62,
+        "iota": 0.0645,
+        "outer": 54,
+        "inner": 8
+      },
+      "outer_inner_ratio": 6.75,
+      "working_out_profile": {
+        "mean_w_score": 0.0581,
+        "rigorous_working_out_ratio": 0.0291,
+        "bare_assertion_ratio": 0.8663,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.8663,
+          "Tier1_Exploratory_Sketch": 0.1047,
+          "Tier2_Operational_Derivation": 0.0203,
+          "Tier3_Formal_Proof_Chain": 0.0087
+        },
+        "feature_totals": {
+          "scaffolding_hits": 31,
+          "deductive_hits": 8,
+          "symbolic_hits": 149,
+          "chained_eq_steps": 46,
+          "machinery_hits": 39,
+          "bare_assertion_hits": 1
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0577,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0574,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0477,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.049,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "civita field",
+          9
+        ],
+        [
+          "infinitesimal reality math",
+          6
+        ],
+        [
+          "jarrod lyndsay",
+          4
+        ],
+        [
+          "strong triangle inequality",
+          4
+        ],
+        [
+          "power set",
+          4
+        ],
+        [
+          "field",
+          4
+        ],
+        [
+          "final coalgebra",
+          3
+        ],
+        [
+          "number",
+          3
+        ],
+        [
+          "unit",
+          3
+        ],
+        [
+          "base infinity",
+          3
+        ],
+        [
+          "alethekanon research institute",
+          3
+        ],
+        [
+          "axiomatic foundations",
+          2
+        ],
+        [
+          "recursive fractal number system",
+          2
+        ],
+        [
+          "ultrametric topology",
+          2
+        ],
+        [
+          "information geometry",
+          2
+        ],
+        [
+          "observer state",
+          2
+        ],
+        [
+          "active process limit conservation identities",
+          2
+        ],
+        [
+          "vector field theory",
+          2
+        ],
+        [
+          "measure",
+          2
+        ],
+        [
+          "unified number atom",
+          2
+        ],
+        [
+          "numbers",
+          2
+        ],
+        [
+          "scale number",
+          2
+        ],
+        [
+          "definition",
+          2
+        ],
+        [
+          "cost",
+          2
+        ],
+        [
+          "levi",
+          2
+        ],
+        [
+          "formal series",
+          2
+        ],
+        [
+          "observer tensor",
+          2
+        ],
+        [
+          "infinitesimal reality",
+          1
+        ],
+        [
+          "archimedean coalgebra",
+          1
+        ],
+        [
+          "archimedean final coalgebras",
+          1
+        ],
+        [
+          "free levi",
+          1
+        ],
+        [
+          "civita continuum",
+          1
+        ],
+        [
+          "research institute",
+          1
+        ],
+        [
+          "creative commons attribution",
+          1
+        ],
+        [
+          "quantum state",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "zero",
+          3
+        ],
+        [
+          "continuum",
+          2
+        ],
+        [
+          "propagation operator",
+          2
+        ],
+        [
+          "fraenkel set",
+          1
+        ],
+        [
+          "real continuum",
+          1
+        ],
+        [
+          "set topology",
+          1
+        ],
+        [
+          "static aggregates",
+          1
+        ],
+        [
+          "lebesgue measure",
+          1
+        ],
+        [
+          "structural breakdowns",
+          1
+        ],
+        [
+          "conservative limit",
+          1
+        ],
+        [
+          "unphysical boundary",
+          1
+        ],
+        [
+          "failure modes",
+          1
+        ],
+        [
+          "orthodox continuum analysis",
+          1
+        ],
+        [
+          "lossy quotient collapsing",
+          1
+        ],
+        [
+          "infinitesimal residual information",
+          1
+        ],
+        [
+          "underflow energy annihilation",
+          1
+        ],
+        [
+          "minute potential",
+          1
+        ],
+        [
+          "boundary singularities",
+          1
+        ],
+        [
+          "classical field",
+          1
+        ],
+        [
+          "infinite spacetime",
+          1
+        ],
+        [
+          "relative",
+          1
+        ],
+        [
+          "reference frame",
+          1
+        ],
+        [
+          "absolute",
+          1
+        ],
+        [
+          "infinitesimal frame",
+          1
+        ],
+        [
+          "infinitesimal interval reveals",
+          1
+        ],
+        [
+          "populated continuum",
+          1
+        ],
+        [
+          "measure",
+          1
+        ],
+        [
+          "unlike smooth infinitesimal analysis",
+          1
+        ],
+        [
+          "observation boundary",
+          1
+        ],
+        [
+          "state",
+          1
+        ],
+        [
+          "landauer",
+          1
+        ],
+        [
+          "irreducible boundary",
+          1
+        ],
+        [
+          "standard part recovery",
+          1
+        ],
+        [
+          "archimedean limit",
+          1
+        ],
+        [
+          "classical boundary singularities",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Claude_Engineering___Verification_Log",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Claude_Engineering___Verification_Log.md",
+      "n_paragraphs": 787,
+      "n_sentences": 3163,
+      "n_windows": 3161,
+      "modal_counts": {
+        "is_like": 62,
+        "may_be": 25,
+        "will_be": 63,
+        "can_be": 38,
+        "is_not": 288,
+        "cant_be": 184,
+        "was_like": 165,
+        "wont_be": 15
+      },
+      "engine_summary": {
+        "C": 87,
+        "P": 101,
+        "R": 472,
+        "G": 180,
+        "total_modals": 840,
+        "iota": -0.5524,
+        "outer": 578,
+        "inner": 262
+      },
+      "outer_inner_ratio": 2.206,
+      "working_out_profile": {
+        "mean_w_score": 0.0837,
+        "rigorous_working_out_ratio": 0.0597,
+        "bare_assertion_ratio": 0.7535,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7535,
+          "Tier1_Exploratory_Sketch": 0.1868,
+          "Tier2_Operational_Derivation": 0.0534,
+          "Tier3_Formal_Proof_Chain": 0.0064
+        },
+        "feature_totals": {
+          "scaffolding_hits": 113,
+          "deductive_hits": 58,
+          "symbolic_hits": 257,
+          "chained_eq_steps": 172,
+          "machinery_hits": 97,
+          "bare_assertion_hits": 2
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1122,
+          "completed_windows": 9,
+          "completion_rate": 0.0028,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.091,
+          "completed_windows": 6,
+          "completion_rate": 0.0019,
+          "proof_backed_windows": 1,
+          "proof_backed_rate": 0.0003
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.086,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0597,
+          "completed_windows": 1,
+          "completion_rate": 0.0003,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "formal paper",
+          12
+        ],
+        [
+          "theorem",
+          11
+        ],
+        [
+          "civita field",
+          11
+        ],
+        [
+          "frame",
+          8
+        ],
+        [
+          "number",
+          6
+        ],
+        [
+          "google doc",
+          6
+        ],
+        [
+          "curvature",
+          5
+        ],
+        [
+          "power set",
+          5
+        ],
+        [
+          "lean",
+          4
+        ],
+        [
+          "parameter vector",
+          4
+        ],
+        [
+          "executive abstract",
+          4
+        ],
+        [
+          "young explorers",
+          4
+        ],
+        [
+          "conservation law",
+          3
+        ],
+        [
+          "fully approved",
+          3
+        ],
+        [
+          "observer state",
+          3
+        ],
+        [
+          "ultrafilter",
+          3
+        ],
+        [
+          "lcp metric",
+          3
+        ],
+        [
+          "cantor series",
+          3
+        ],
+        [
+          "field",
+          3
+        ],
+        [
+          "infinitesimal atom d",
+          3
+        ],
+        [
+          "division",
+          3
+        ],
+        [
+          "actual",
+          3
+        ],
+        [
+          "engineer",
+          2
+        ],
+        [
+          "alethekanon research institute",
+          2
+        ],
+        [
+          "pure mathematics",
+          2
+        ],
+        [
+          "computational simulation",
+          2
+        ],
+        [
+          "propagation operator",
+          2
+        ],
+        [
+          "tensor algebra",
+          2
+        ],
+        [
+          "infinitesimal residuals",
+          2
+        ],
+        [
+          "directives",
+          2
+        ],
+        [
+          "annotate lean",
+          2
+        ],
+        [
+          "stub annotation",
+          2
+        ],
+        [
+          "wilson",
+          2
+        ],
+        [
+          "re-audited papers",
+          2
+        ],
+        [
+          "measure",
+          2
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "orthodox linker",
+          13
+        ],
+        [
+          "frame",
+          13
+        ],
+        [
+          "theorem",
+          12
+        ],
+        [
+          "field",
+          9
+        ],
+        [
+          "civita field",
+          7
+        ],
+        [
+          "number",
+          6
+        ],
+        [
+          "zero",
+          6
+        ],
+        [
+          "formal paper",
+          6
+        ],
+        [
+          "unit",
+          6
+        ],
+        [
+          "young explorers",
+          5
+        ],
+        [
+          "limit",
+          4
+        ],
+        [
+          "orthodox linker treatise",
+          4
+        ],
+        [
+          "actual",
+          3
+        ],
+        [
+          "probe set",
+          3
+        ],
+        [
+          "physical frame",
+          3
+        ],
+        [
+          "relative",
+          3
+        ],
+        [
+          "absolute",
+          3
+        ],
+        [
+          "planck",
+          2
+        ],
+        [
+          "cost",
+          2
+        ],
+        [
+          "mass collision singularities",
+          2
+        ],
+        [
+          "parameter vector",
+          2
+        ],
+        [
+          "lie algebra",
+          2
+        ],
+        [
+          "directives resolved",
+          2
+        ],
+        [
+          "spacetime",
+          2
+        ],
+        [
+          "role boundary",
+          2
+        ],
+        [
+          "pending revision",
+          2
+        ],
+        [
+          "google doc",
+          2
+        ],
+        [
+          "archimedean field",
+          2
+        ],
+        [
+          "principal ultrafilter",
+          2
+        ],
+        [
+          "smooth infinitesimal analysis",
+          2
+        ],
+        [
+          "infinitesimal",
+          2
+        ],
+        [
+          "director",
+          2
+        ],
+        [
+          "re-read papers",
+          2
+        ],
+        [
+          "mechanization blueprint",
+          2
+        ],
+        [
+          "power set",
+          2
+        ]
+      ]
+    },
+    {
+      "doc_id": "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC.md",
+      "n_paragraphs": 238,
+      "n_sentences": 256,
+      "n_windows": 254,
+      "modal_counts": {
+        "is_like": 8,
+        "may_be": 1,
+        "will_be": 5,
+        "can_be": 3,
+        "is_not": 8,
+        "cant_be": 20,
+        "was_like": 16,
+        "wont_be": 4
+      },
+      "engine_summary": {
+        "C": 9,
+        "P": 8,
+        "R": 28,
+        "G": 20,
+        "total_modals": 65,
+        "iota": -0.4769,
+        "outer": 37,
+        "inner": 28
+      },
+      "outer_inner_ratio": 1.321,
+      "working_out_profile": {
+        "mean_w_score": 0.087,
+        "rigorous_working_out_ratio": 0.0714,
+        "bare_assertion_ratio": 0.7563,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7563,
+          "Tier1_Exploratory_Sketch": 0.1723,
+          "Tier2_Operational_Derivation": 0.063,
+          "Tier3_Formal_Proof_Chain": 0.0084
+        },
+        "feature_totals": {
+          "scaffolding_hits": 11,
+          "deductive_hits": 7,
+          "symbolic_hits": 283,
+          "chained_eq_steps": 110,
+          "machinery_hits": 30,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1062,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0735,
+          "completed_windows": 1,
+          "completion_rate": 0.0039,
+          "proof_backed_windows": 1,
+          "proof_backed_rate": 0.0039
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0737,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0669,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "propagation operator",
+          7
+        ],
+        [
+          "infinitesimal reality math",
+          5
+        ],
+        [
+          "bounded lattice",
+          3
+        ],
+        [
+          "ontological superiority",
+          2
+        ],
+        [
+          "point singularities",
+          2
+        ],
+        [
+          "static point",
+          2
+        ],
+        [
+          "solid core",
+          2
+        ],
+        [
+          "layer thickness",
+          2
+        ],
+        [
+          "solid tip volume",
+          2
+        ],
+        [
+          "total paint volume",
+          2
+        ],
+        [
+          "scale numerical evaluation matrix",
+          2
+        ],
+        [
+          "zero",
+          2
+        ],
+        [
+          "asymptotic potential decay",
+          2
+        ],
+        [
+          "physics",
+          2
+        ],
+        [
+          "resolving boundary paradoxes",
+          1
+        ],
+        [
+          "asymptotic dissipation",
+          1
+        ],
+        [
+          "dynamic limit resolution",
+          1
+        ],
+        [
+          "asymptotic decay",
+          1
+        ],
+        [
+          "process limit",
+          1
+        ],
+        [
+          "mathematical foundations",
+          1
+        ],
+        [
+          "crisis",
+          1
+        ],
+        [
+          "set topology",
+          1
+        ],
+        [
+          "point measure zero",
+          1
+        ],
+        [
+          "line measure",
+          1
+        ],
+        [
+          "finite vol",
+          1
+        ],
+        [
+          "infinite area",
+          1
+        ],
+        [
+          "unphysical volume duplication",
+          1
+        ],
+        [
+          "limit truncation",
+          1
+        ],
+        [
+          "thickness boundary contradictions",
+          1
+        ],
+        [
+          "point underflow",
+          1
+        ],
+        [
+          "structural failures",
+          1
+        ],
+        [
+          "limit fallacy",
+          1
+        ],
+        [
+          "infinitesimal residual tail",
+          1
+        ],
+        [
+          "infinite boundary",
+          1
+        ],
+        [
+          "unified number atom",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "real continuum",
+          2
+        ],
+        [
+          "lebesgue measure",
+          2
+        ],
+        [
+          "painter",
+          2
+        ],
+        [
+          "point singularity",
+          2
+        ],
+        [
+          "declared relative",
+          2
+        ],
+        [
+          "measure",
+          2
+        ],
+        [
+          "ground state",
+          2
+        ],
+        [
+          "fraenkel set",
+          1
+        ],
+        [
+          "set topology",
+          1
+        ],
+        [
+          "static collections",
+          1
+        ],
+        [
+          "structural breakdowns",
+          1
+        ],
+        [
+          "physical boundary",
+          1
+        ],
+        [
+          "infinitesimal reality math",
+          1
+        ],
+        [
+          "standard calculus",
+          1
+        ],
+        [
+          "archimedean boundary",
+          1
+        ],
+        [
+          "layer differential geometry",
+          1
+        ],
+        [
+          "hyperreal quantity",
+          1
+        ],
+        [
+          "coulomb collision singularities",
+          1
+        ],
+        [
+          "integrable division",
+          1
+        ],
+        [
+          "real numbers",
+          1
+        ],
+        [
+          "archimedean property",
+          1
+        ],
+        [
+          "axiom",
+          1
+        ],
+        [
+          "insulate calculus",
+          1
+        ],
+        [
+          "bishop george berkeley",
+          1
+        ],
+        [
+          "zero aggregation paradox",
+          1
+        ],
+        [
+          "standard measure",
+          1
+        ],
+        [
+          "zero",
+          1
+        ],
+        [
+          "offer zero",
+          1
+        ],
+        [
+          "banach",
+          1
+        ],
+        [
+          "tarski paradox",
+          1
+        ],
+        [
+          "classical formulation",
+          1
+        ],
+        [
+          "every boundary",
+          1
+        ],
+        [
+          "infinitesimal thickness",
+          1
+        ],
+        [
+          "infinitesimal quantity",
+          1
+        ],
+        [
+          "strictly zero",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-.md",
+      "n_paragraphs": 139,
+      "n_sentences": 150,
+      "n_windows": 148,
+      "modal_counts": {
+        "is_like": 13,
+        "may_be": 1,
+        "will_be": 3,
+        "can_be": 1,
+        "is_not": 9,
+        "cant_be": 9,
+        "was_like": 8,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 14,
+        "P": 4,
+        "R": 18,
+        "G": 10,
+        "total_modals": 46,
+        "iota": -0.2174,
+        "outer": 33,
+        "inner": 13
+      },
+      "outer_inner_ratio": 2.538,
+      "working_out_profile": {
+        "mean_w_score": 0.091,
+        "rigorous_working_out_ratio": 0.036,
+        "bare_assertion_ratio": 0.7194,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7194,
+          "Tier1_Exploratory_Sketch": 0.2446,
+          "Tier2_Operational_Derivation": 0.0288,
+          "Tier3_Formal_Proof_Chain": 0.0072
+        },
+        "feature_totals": {
+          "scaffolding_hits": 4,
+          "deductive_hits": 8,
+          "symbolic_hits": 155,
+          "chained_eq_steps": 44,
+          "machinery_hits": 7,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1221,
+          "completed_windows": 1,
+          "completion_rate": 0.0068,
+          "proof_backed_windows": 1,
+          "proof_backed_rate": 0.0068
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1001,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0907,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0929,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "developing calculus towards infinitesimal reality math",
+          2
+        ],
+        [
+          "step derivation",
+          2
+        ],
+        [
+          "framing operator",
+          2
+        ],
+        [
+          "fundamental theorem",
+          2
+        ],
+        [
+          "calculus definition",
+          1
+        ],
+        [
+          "calculus wall",
+          1
+        ],
+        [
+          "calculus",
+          1
+        ],
+        [
+          "archimedean assumption",
+          1
+        ],
+        [
+          "actual",
+          1
+        ],
+        [
+          "real number",
+          1
+        ],
+        [
+          "archimedean axiom",
+          1
+        ],
+        [
+          "limit trick",
+          1
+        ],
+        [
+          "infinitesimal state",
+          1
+        ],
+        [
+          "limit",
+          1
+        ],
+        [
+          "static set",
+          1
+        ],
+        [
+          "weierstrass limit process calculus",
+          1
+        ],
+        [
+          "static point",
+          1
+        ],
+        [
+          "void set",
+          1
+        ],
+        [
+          "dynamic tree",
+          1
+        ],
+        [
+          "number atom",
+          1
+        ],
+        [
+          "cost",
+          1
+        ],
+        [
+          "difference quotient",
+          1
+        ],
+        [
+          "derivative operator",
+          1
+        ],
+        [
+          "elementary derivatives",
+          1
+        ],
+        [
+          "monomial derivative",
+          1
+        ],
+        [
+          "crucial",
+          1
+        ],
+        [
+          "conserved derivative atom",
+          1
+        ],
+        [
+          "definitive state",
+          1
+        ],
+        [
+          "macro rate",
+          1
+        ],
+        [
+          "infinitesimal tail",
+          1
+        ],
+        [
+          "curvature energy",
+          1
+        ],
+        [
+          "structural momentum",
+          1
+        ],
+        [
+          "curvature",
+          1
+        ],
+        [
+          "general power rule",
+          1
+        ],
+        [
+          "infinitesimal terms",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "zero",
+          4
+        ],
+        [
+          "continuum",
+          2
+        ],
+        [
+          "calculus starting point",
+          1
+        ],
+        [
+          "discrete rates",
+          1
+        ],
+        [
+          "indeterminate wall",
+          1
+        ],
+        [
+          "calculus algebra",
+          1
+        ],
+        [
+          "changes relative",
+          1
+        ],
+        [
+          "average rate",
+          1
+        ],
+        [
+          "arithmetic breakdown",
+          1
+        ],
+        [
+          "forbids division",
+          1
+        ],
+        [
+          "orthodox detour",
+          1
+        ],
+        [
+          "static logical workaround",
+          1
+        ],
+        [
+          "static point",
+          1
+        ],
+        [
+          "set fallacy",
+          1
+        ],
+        [
+          "limit",
+          1
+        ],
+        [
+          "static scalar",
+          1
+        ],
+        [
+          "lebesgue measure",
+          1
+        ],
+        [
+          "static inequalities",
+          1
+        ],
+        [
+          "non-zero cost",
+          1
+        ],
+        [
+          "literal zero",
+          1
+        ],
+        [
+          "abstract limit",
+          1
+        ],
+        [
+          "algebra",
+          1
+        ],
+        [
+          "division",
+          1
+        ],
+        [
+          "classical calculus",
+          1
+        ],
+        [
+          "structural pair",
+          1
+        ],
+        [
+          "infinite number",
+          1
+        ],
+        [
+          "infinity cannot be collapsed",
+          1
+        ],
+        [
+          "orthodox set",
+          1
+        ],
+        [
+          "infinity is treated",
+          1
+        ],
+        [
+          "static cardinal",
+          1
+        ],
+        [
+          "static constant",
+          1
+        ],
+        [
+          "ungrounded zero",
+          1
+        ],
+        [
+          "propagation operator",
+          1
+        ],
+        [
+          "local manifold",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi.md",
+      "n_paragraphs": 187,
+      "n_sentences": 210,
+      "n_windows": 208,
+      "modal_counts": {
+        "is_like": 15,
+        "may_be": 0,
+        "will_be": 5,
+        "can_be": 3,
+        "is_not": 15,
+        "cant_be": 5,
+        "was_like": 9,
+        "wont_be": 8
+      },
+      "engine_summary": {
+        "C": 15,
+        "P": 8,
+        "R": 20,
+        "G": 17,
+        "total_modals": 60,
+        "iota": -0.2333,
+        "outer": 44,
+        "inner": 16
+      },
+      "outer_inner_ratio": 2.75,
+      "working_out_profile": {
+        "mean_w_score": 0.0851,
+        "rigorous_working_out_ratio": 0.0695,
+        "bare_assertion_ratio": 0.7914,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7914,
+          "Tier1_Exploratory_Sketch": 0.139,
+          "Tier2_Operational_Derivation": 0.0481,
+          "Tier3_Formal_Proof_Chain": 0.0214
+        },
+        "feature_totals": {
+          "scaffolding_hits": 22,
+          "deductive_hits": 3,
+          "symbolic_hits": 213,
+          "chained_eq_steps": 129,
+          "machinery_hits": 33,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1061,
+          "completed_windows": 8,
+          "completion_rate": 0.0385,
+          "proof_backed_windows": 7,
+          "proof_backed_rate": 0.0337
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1084,
+          "completed_windows": 2,
+          "completion_rate": 0.0096,
+          "proof_backed_windows": 2,
+          "proof_backed_rate": 0.0096
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.116,
+          "completed_windows": 6,
+          "completion_rate": 0.0288,
+          "proof_backed_windows": 6,
+          "proof_backed_rate": 0.0288
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0925,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "civita field",
+          5
+        ],
+        [
+          "formal paper",
+          4
+        ],
+        [
+          "quotient continuum",
+          4
+        ],
+        [
+          "civita field embedding",
+          3
+        ],
+        [
+          "vershik coalgebra",
+          3
+        ],
+        [
+          "base process arithmetic",
+          3
+        ],
+        [
+          "jarrod lyndsay",
+          3
+        ],
+        [
+          "finite series",
+          3
+        ],
+        [
+          "infinitesimal reality math",
+          2
+        ],
+        [
+          "twin dragon",
+          2
+        ],
+        [
+          "zero choice",
+          2
+        ],
+        [
+          "truncation depth",
+          2
+        ],
+        [
+          "alethekanon research institute",
+          2
+        ],
+        [
+          "research institute",
+          1
+        ],
+        [
+          "creative commons attribution",
+          1
+        ],
+        [
+          "alternative continuum",
+          1
+        ],
+        [
+          "fraenkel set",
+          1
+        ],
+        [
+          "power set",
+          1
+        ],
+        [
+          "quotient architecture",
+          1
+        ],
+        [
+          "quotient refinement",
+          1
+        ],
+        [
+          "number atom",
+          1
+        ],
+        [
+          "irm number",
+          1
+        ],
+        [
+          "residual conservation",
+          1
+        ],
+        [
+          "archimedean valuation",
+          1
+        ],
+        [
+          "theorem formulation",
+          1
+        ],
+        [
+          "nilpotent infinitesimals",
+          1
+        ],
+        [
+          "smooth infinitesimal analysis",
+          1
+        ],
+        [
+          "cantor series",
+          1
+        ],
+        [
+          "vershik adic coalgebra",
+          1
+        ],
+        [
+          "mixed",
+          1
+        ],
+        [
+          "radix cantor series",
+          1
+        ],
+        [
+          "vershik adic systems",
+          1
+        ],
+        [
+          "fractal recursive bases",
+          1
+        ],
+        [
+          "gaussian integer base",
+          1
+        ],
+        [
+          "lebesgue measure",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "civita field",
+          4
+        ],
+        [
+          "cantor series expansion",
+          3
+        ],
+        [
+          "free constructibility",
+          2
+        ],
+        [
+          "smooth infinitesimal analysis",
+          2
+        ],
+        [
+          "power series",
+          2
+        ],
+        [
+          "levi",
+          2
+        ],
+        [
+          "quotient continuum",
+          1
+        ],
+        [
+          "vershik adic systems",
+          1
+        ],
+        [
+          "twin dragon fractal",
+          1
+        ],
+        [
+          "final coalgebras",
+          1
+        ],
+        [
+          "invertibility",
+          1
+        ],
+        [
+          "smooth infinitesimal analysis discard",
+          1
+        ],
+        [
+          "mechanized parity",
+          1
+        ],
+        [
+          "static point",
+          1
+        ],
+        [
+          "infinitesimal computation",
+          1
+        ],
+        [
+          "infinitesimal residual information",
+          1
+        ],
+        [
+          "support field",
+          1
+        ],
+        [
+          "quotient refinement",
+          1
+        ],
+        [
+          "real line",
+          1
+        ],
+        [
+          "scale number",
+          1
+        ],
+        [
+          "vershik adic dynamical systems",
+          1
+        ],
+        [
+          "twin dragon",
+          1
+        ],
+        [
+          "fractal boundary",
+          1
+        ],
+        [
+          "final coalgebra theorem",
+          1
+        ],
+        [
+          "observer state",
+          1
+        ],
+        [
+          "classical quotient map",
+          1
+        ],
+        [
+          "real continuum",
+          1
+        ],
+        [
+          "set topology",
+          1
+        ],
+        [
+          "limit",
+          1
+        ],
+        [
+          "infinitesimal reality math",
+          1
+        ],
+        [
+          "identity",
+          1
+        ],
+        [
+          "quotient algebra",
+          1
+        ],
+        [
+          "infinitesimal genealogical residues",
+          1
+        ],
+        [
+          "infinitesimal generator",
+          1
+        ],
+        [
+          "fraenkel set",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t.md",
+      "n_paragraphs": 461,
+      "n_sentences": 701,
+      "n_windows": 699,
+      "modal_counts": {
+        "is_like": 62,
+        "may_be": 6,
+        "will_be": 24,
+        "can_be": 23,
+        "is_not": 10,
+        "cant_be": 61,
+        "was_like": 12,
+        "wont_be": 8
+      },
+      "engine_summary": {
+        "C": 68,
+        "P": 47,
+        "R": 71,
+        "G": 20,
+        "total_modals": 206,
+        "iota": 0.1165,
+        "outer": 108,
+        "inner": 98
+      },
+      "outer_inner_ratio": 1.102,
+      "working_out_profile": {
+        "mean_w_score": 0.1218,
+        "rigorous_working_out_ratio": 0.0954,
+        "bare_assertion_ratio": 0.6139,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.6139,
+          "Tier1_Exploratory_Sketch": 0.2907,
+          "Tier2_Operational_Derivation": 0.0954,
+          "Tier3_Formal_Proof_Chain": 0.0
+        },
+        "feature_totals": {
+          "scaffolding_hits": 48,
+          "deductive_hits": 27,
+          "symbolic_hits": 435,
+          "chained_eq_steps": 140,
+          "machinery_hits": 163,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1109,
+          "completed_windows": 13,
+          "completion_rate": 0.0186,
+          "proof_backed_windows": 13,
+          "proof_backed_rate": 0.0186
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0973,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.08,
+          "completed_windows": 1,
+          "completion_rate": 0.0014,
+          "proof_backed_windows": 1,
+          "proof_backed_rate": 0.0014
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0998,
+          "completed_windows": 2,
+          "completion_rate": 0.0029,
+          "proof_backed_windows": 2,
+          "proof_backed_rate": 0.0029
+        }
+      },
+      "top_included_concepts": [
+        [
+          "formal paper",
+          49
+        ],
+        [
+          "zero",
+          9
+        ],
+        [
+          "formal papers",
+          7
+        ],
+        [
+          "infinitesimal reality math",
+          6
+        ],
+        [
+          "cellular manifold",
+          6
+        ],
+        [
+          "boundary",
+          6
+        ],
+        [
+          "vorticity",
+          5
+        ],
+        [
+          "proper enstrophy",
+          5
+        ],
+        [
+          "topological helicity invariance",
+          4
+        ],
+        [
+          "discrete helmholtz",
+          4
+        ],
+        [
+          "hodge projector",
+          4
+        ],
+        [
+          "cellular spacetime",
+          4
+        ],
+        [
+          "dynamo regularity",
+          4
+        ],
+        [
+          "total enstrophy",
+          4
+        ],
+        [
+          "cambridge university press",
+          4
+        ],
+        [
+          "global existence",
+          3
+        ],
+        [
+          "stokes regularity",
+          3
+        ],
+        [
+          "civita field",
+          3
+        ],
+        [
+          "spectral energy flux",
+          3
+        ],
+        [
+          "hydrodynamic spectral mass gap",
+          3
+        ],
+        [
+          "rham cohomology",
+          3
+        ],
+        [
+          "simons transgression form",
+          3
+        ],
+        [
+          "set continuum",
+          3
+        ],
+        [
+          "cellular spacetime manifold",
+          3
+        ],
+        [
+          "gradient tensor",
+          3
+        ],
+        [
+          "civita enstrophy",
+          3
+        ],
+        [
+          "zf set",
+          3
+        ],
+        [
+          "finite littlewood",
+          3
+        ],
+        [
+          "spatial intermittency",
+          3
+        ],
+        [
+          "structure function saturation",
+          3
+        ],
+        [
+          "magnetic enstrophy",
+          3
+        ],
+        [
+          "helicity conservation",
+          3
+        ],
+        [
+          "cellular metric",
+          3
+        ],
+        [
+          "velocity field",
+          3
+        ],
+        [
+          "acta mathematica",
+          3
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "formal paper",
+          7
+        ],
+        [
+          "zero",
+          6
+        ],
+        [
+          "time singularity",
+          5
+        ],
+        [
+          "resolvent operator",
+          2
+        ],
+        [
+          "cellular tate",
+          2
+        ],
+        [
+          "descent theorem",
+          2
+        ],
+        [
+          "coordinate horizon",
+          2
+        ],
+        [
+          "computational complexity bounds",
+          2
+        ],
+        [
+          "cellular spacetime",
+          2
+        ],
+        [
+          "boundary",
+          2
+        ],
+        [
+          "global beale",
+          2
+        ],
+        [
+          "shock singularity preclusion",
+          2
+        ],
+        [
+          "infinitesimal reality math",
+          1
+        ],
+        [
+          "vector field theory",
+          1
+        ],
+        [
+          "millennium prize problem",
+          1
+        ],
+        [
+          "exact dynamic enstrophy balance",
+          1
+        ],
+        [
+          "static difference quotient",
+          1
+        ],
+        [
+          "finite dyadic cascade descent theorem",
+          1
+        ],
+        [
+          "reynolds number",
+          1
+        ],
+        [
+          "lattice",
+          1
+        ],
+        [
+          "hypercomputation preclusion",
+          1
+        ],
+        [
+          "scale",
+          1
+        ],
+        [
+          "abelian vortex gauge theory",
+          1
+        ],
+        [
+          "wilson loop area law",
+          1
+        ],
+        [
+          "area law",
+          1
+        ],
+        [
+          "holographic ryu",
+          1
+        ],
+        [
+          "takayanagi bound",
+          1
+        ],
+        [
+          "turbulent entropy",
+          1
+        ],
+        [
+          "information density",
+          1
+        ],
+        [
+          "quantum hydrodynamic closure",
+          1
+        ],
+        [
+          "viscosity limit",
+          1
+        ],
+        [
+          "vanishing viscosity",
+          1
+        ],
+        [
+          "vacuum density",
+          1
+        ],
+        [
+          "quantum potential",
+          1
+        ],
+        [
+          "continuum singularity dilemma",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce.md",
+      "n_paragraphs": 80,
+      "n_sentences": 101,
+      "n_windows": 99,
+      "modal_counts": {
+        "is_like": 27,
+        "may_be": 0,
+        "will_be": 10,
+        "can_be": 5,
+        "is_not": 5,
+        "cant_be": 5,
+        "was_like": 4,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 27,
+        "P": 15,
+        "R": 10,
+        "G": 6,
+        "total_modals": 58,
+        "iota": 0.4483,
+        "outer": 46,
+        "inner": 12
+      },
+      "outer_inner_ratio": 3.833,
+      "working_out_profile": {
+        "mean_w_score": 0.1238,
+        "rigorous_working_out_ratio": 0.175,
+        "bare_assertion_ratio": 0.7375,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7375,
+          "Tier1_Exploratory_Sketch": 0.0875,
+          "Tier2_Operational_Derivation": 0.1125,
+          "Tier3_Formal_Proof_Chain": 0.0625
+        },
+        "feature_totals": {
+          "scaffolding_hits": 17,
+          "deductive_hits": 8,
+          "symbolic_hits": 206,
+          "chained_eq_steps": 82,
+          "machinery_hits": 14,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1982,
+          "completed_windows": 9,
+          "completion_rate": 0.0909,
+          "proof_backed_windows": 9,
+          "proof_backed_rate": 0.0909
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.2237,
+          "completed_windows": 5,
+          "completion_rate": 0.0505,
+          "proof_backed_windows": 5,
+          "proof_backed_rate": 0.0505
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.1851,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.2222,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "mills existence",
+          4
+        ],
+        [
+          "area law",
+          4
+        ],
+        [
+          "formal paper",
+          3
+        ],
+        [
+          "cellular lattice gauge theory",
+          3
+        ],
+        [
+          "constructive proof",
+          3
+        ],
+        [
+          "zf set",
+          3
+        ],
+        [
+          "ground state",
+          3
+        ],
+        [
+          "archimedean yang",
+          2
+        ],
+        [
+          "discrete wilson loop area law",
+          2
+        ],
+        [
+          "spectral mass gap",
+          2
+        ],
+        [
+          "modulo-c spacetime",
+          2
+        ],
+        [
+          "mass gap",
+          2
+        ],
+        [
+          "mass gap problem",
+          2
+        ],
+        [
+          "cellular lattice",
+          2
+        ],
+        [
+          "vacuum state",
+          2
+        ],
+        [
+          "cellular manifold",
+          2
+        ],
+        [
+          "mills theory",
+          2
+        ],
+        [
+          "haar measure",
+          2
+        ],
+        [
+          "potential",
+          2
+        ],
+        [
+          "weyl theorem",
+          2
+        ],
+        [
+          "excited state",
+          2
+        ],
+        [
+          "zero",
+          2
+        ],
+        [
+          "wilson loop area law",
+          2
+        ],
+        [
+          "yang",
+          1
+        ],
+        [
+          "clay mathematics institute millennium prize problem",
+          1
+        ],
+        [
+          "dimensional spacetime",
+          1
+        ],
+        [
+          "constructive field",
+          1
+        ],
+        [
+          "archimedean manifold",
+          1
+        ],
+        [
+          "lebesgue measure",
+          1
+        ],
+        [
+          "infinitesimal reality math",
+          1
+        ],
+        [
+          "archimedean cellular gauge theory",
+          1
+        ],
+        [
+          "integral measure",
+          1
+        ],
+        [
+          "cellular hamiltonian transfer matrix",
+          1
+        ],
+        [
+          "archimedean hilbert",
+          1
+        ],
+        [
+          "archimedean peter",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "mass scale",
+          2
+        ],
+        [
+          "continuous point",
+          1
+        ],
+        [
+          "set analysis fails",
+          1
+        ],
+        [
+          "scale",
+          1
+        ],
+        [
+          "zero",
+          1
+        ],
+        [
+          "gribov ambiguity",
+          1
+        ],
+        [
+          "large field",
+          1
+        ],
+        [
+          "infrared landau poles",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z.md",
+      "n_paragraphs": 124,
+      "n_sentences": 149,
+      "n_windows": 147,
+      "modal_counts": {
+        "is_like": 26,
+        "may_be": 4,
+        "will_be": 22,
+        "can_be": 1,
+        "is_not": 7,
+        "cant_be": 2,
+        "was_like": 3,
+        "wont_be": 0
+      },
+      "engine_summary": {
+        "C": 30,
+        "P": 23,
+        "R": 9,
+        "G": 3,
+        "total_modals": 65,
+        "iota": 0.6308,
+        "outer": 58,
+        "inner": 7
+      },
+      "outer_inner_ratio": 8.286,
+      "working_out_profile": {
+        "mean_w_score": 0.161,
+        "rigorous_working_out_ratio": 0.25,
+        "bare_assertion_ratio": 0.5242,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.5242,
+          "Tier1_Exploratory_Sketch": 0.2258,
+          "Tier2_Operational_Derivation": 0.2258,
+          "Tier3_Formal_Proof_Chain": 0.0242
+        },
+        "feature_totals": {
+          "scaffolding_hits": 25,
+          "deductive_hits": 18,
+          "symbolic_hits": 234,
+          "chained_eq_steps": 93,
+          "machinery_hits": 28,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1102,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1692,
+          "completed_windows": 2,
+          "completion_rate": 0.0136,
+          "proof_backed_windows": 2,
+          "proof_backed_rate": 0.0136
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.1033,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.1286,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "riemann hypothesis",
+          13
+        ],
+        [
+          "formal paper",
+          6
+        ],
+        [
+          "cellular berry",
+          5
+        ],
+        [
+          "keating hamiltonian",
+          4
+        ],
+        [
+          "trivial zero",
+          4
+        ],
+        [
+          "essential self",
+          3
+        ],
+        [
+          "adjoint operator",
+          3
+        ],
+        [
+          "theorem",
+          3
+        ],
+        [
+          "archimedean spectral realization",
+          2
+        ],
+        [
+          "adjoint fredholm determinants",
+          2
+        ],
+        [
+          "modulo-c spacetime",
+          2
+        ],
+        [
+          "complex plane",
+          2
+        ],
+        [
+          "riemann hypothesis theorem",
+          2
+        ],
+        [
+          "zero",
+          2
+        ],
+        [
+          "boundary",
+          2
+        ],
+        [
+          "operator",
+          2
+        ],
+        [
+          "scale",
+          2
+        ],
+        [
+          "cellular hamiltonian",
+          2
+        ],
+        [
+          "cellular spacetime",
+          2
+        ],
+        [
+          "dilation operator",
+          2
+        ],
+        [
+          "riemann zeta",
+          1
+        ],
+        [
+          "riemann zeta function",
+          1
+        ],
+        [
+          "clay mathematics institute millennium prize problem",
+          1
+        ],
+        [
+          "hamiltonian operator",
+          1
+        ],
+        [
+          "michael berry",
+          1
+        ],
+        [
+          "jon keating",
+          1
+        ],
+        [
+          "alain connes",
+          1
+        ],
+        [
+          "unphysical boundary",
+          1
+        ],
+        [
+          "infinitesimal reality math",
+          1
+        ],
+        [
+          "archimedean spectral geometry",
+          1
+        ],
+        [
+          "cellular phase space lattice",
+          1
+        ],
+        [
+          "manifold",
+          1
+        ],
+        [
+          "archimedean cellular berry",
+          1
+        ],
+        [
+          "momentum operator",
+          1
+        ],
+        [
+          "adjointness theorem",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "classical riemann zeta function",
+          1
+        ],
+        [
+          "symmetric operator",
+          1
+        ],
+        [
+          "continuous spectrum",
+          1
+        ],
+        [
+          "formal papers",
+          1
+        ],
+        [
+          "continuous manifold",
+          1
+        ],
+        [
+          "cellular manifold",
+          1
+        ],
+        [
+          "cellular momentum difference operator",
+          1
+        ],
+        [
+          "differential operator",
+          1
+        ],
+        [
+          "momentum operator",
+          1
+        ],
+        [
+          "cellular space",
+          1
+        ],
+        [
+          "number theory",
+          1
+        ],
+        [
+          "archimedean quantum physics",
+          1
+        ],
+        [
+          "random numbers",
+          1
+        ],
+        [
+          "cellular dilation operator",
+          1
+        ],
+        [
+          "discrete spacetime",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit.md",
+      "n_paragraphs": 120,
+      "n_sentences": 148,
+      "n_windows": 146,
+      "modal_counts": {
+        "is_like": 32,
+        "may_be": 7,
+        "will_be": 5,
+        "can_be": 5,
+        "is_not": 11,
+        "cant_be": 12,
+        "was_like": 9,
+        "wont_be": 3
+      },
+      "engine_summary": {
+        "C": 39,
+        "P": 10,
+        "R": 23,
+        "G": 12,
+        "total_modals": 84,
+        "iota": 0.1667,
+        "outer": 57,
+        "inner": 27
+      },
+      "outer_inner_ratio": 2.111,
+      "working_out_profile": {
+        "mean_w_score": 0.1333,
+        "rigorous_working_out_ratio": 0.175,
+        "bare_assertion_ratio": 0.6417,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.6417,
+          "Tier1_Exploratory_Sketch": 0.1833,
+          "Tier2_Operational_Derivation": 0.1583,
+          "Tier3_Formal_Proof_Chain": 0.0167
+        },
+        "feature_totals": {
+          "scaffolding_hits": 36,
+          "deductive_hits": 4,
+          "symbolic_hits": 140,
+          "chained_eq_steps": 61,
+          "machinery_hits": 17,
+          "bare_assertion_hits": 1
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.2049,
+          "completed_windows": 3,
+          "completion_rate": 0.0205,
+          "proof_backed_windows": 3,
+          "proof_backed_rate": 0.0205
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1801,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.1821,
+          "completed_windows": 3,
+          "completion_rate": 0.0205,
+          "proof_backed_windows": 3,
+          "proof_backed_rate": 0.0205
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.2072,
+          "completed_windows": 5,
+          "completion_rate": 0.0342,
+          "proof_backed_windows": 5,
+          "proof_backed_rate": 0.0342
+        }
+      },
+      "top_included_concepts": [
+        [
+          "formal paper",
+          14
+        ],
+        [
+          "infinitesimal reality math",
+          6
+        ],
+        [
+          "master mathematical canon",
+          4
+        ],
+        [
+          "axiom",
+          4
+        ],
+        [
+          "cosmological constant",
+          3
+        ],
+        [
+          "seven foundational axioms",
+          3
+        ],
+        [
+          "zero",
+          3
+        ],
+        [
+          "civita field",
+          3
+        ],
+        [
+          "active process limit conservation",
+          3
+        ],
+        [
+          "riemann hypothesis",
+          3
+        ],
+        [
+          "hodge conjecture",
+          3
+        ],
+        [
+          "axiomatic foundations",
+          2
+        ],
+        [
+          "theoretic unification",
+          2
+        ],
+        [
+          "complete resolution",
+          2
+        ],
+        [
+          "millennium prize problems",
+          2
+        ],
+        [
+          "state",
+          2
+        ],
+        [
+          "propagation operator",
+          2
+        ],
+        [
+          "cellular manifold",
+          2
+        ],
+        [
+          "shannon modulo",
+          2
+        ],
+        [
+          "sheeted riemann",
+          2
+        ],
+        [
+          "finsler covering foliation",
+          2
+        ],
+        [
+          "kinematic state",
+          2
+        ],
+        [
+          "horizon",
+          2
+        ],
+        [
+          "polytrope information simplex",
+          2
+        ],
+        [
+          "geometric volumes",
+          2
+        ],
+        [
+          "interrogative planes",
+          2
+        ],
+        [
+          "directional axes",
+          2
+        ],
+        [
+          "clay millennium prize problems",
+          2
+        ],
+        [
+          "quantum yang",
+          2
+        ],
+        [
+          "mills existence",
+          2
+        ],
+        [
+          "mass gap",
+          2
+        ],
+        [
+          "cellular transfer matrix",
+          2
+        ],
+        [
+          "area law",
+          2
+        ],
+        [
+          "dyer conjecture",
+          2
+        ],
+        [
+          "process number atom",
+          2
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "classical barrier",
+          4
+        ],
+        [
+          "formal paper",
+          3
+        ],
+        [
+          "zero cost",
+          2
+        ],
+        [
+          "floor",
+          2
+        ],
+        [
+          "axiom",
+          2
+        ],
+        [
+          "axioms",
+          2
+        ],
+        [
+          "contextual frame",
+          1
+        ],
+        [
+          "static whole",
+          1
+        ],
+        [
+          "infinite continuum",
+          1
+        ],
+        [
+          "time enstrophy",
+          1
+        ],
+        [
+          "cellular phase space",
+          1
+        ],
+        [
+          "origin singularity",
+          1
+        ],
+        [
+          "zero curvature",
+          1
+        ],
+        [
+          "betti numbers",
+          1
+        ],
+        [
+          "cellular spacetime",
+          1
+        ],
+        [
+          "without zero",
+          1
+        ],
+        [
+          "gaga theorem",
+          1
+        ],
+        [
+          "universal singularity elimination",
+          1
+        ],
+        [
+          "quantum gravity",
+          1
+        ],
+        [
+          "black hole singularity elimination",
+          1
+        ],
+        [
+          "black hole information paradox resolution",
+          1
+        ],
+        [
+          "discrete ryu",
+          1
+        ],
+        [
+          "entanglement",
+          1
+        ],
+        [
+          "radiation entropy",
+          1
+        ],
+        [
+          "zero",
+          1
+        ],
+        [
+          "infinitesimal reality math",
+          1
+        ],
+        [
+          "cellular spacetimes",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc.md",
+      "n_paragraphs": 283,
+      "n_sentences": 302,
+      "n_windows": 300,
+      "modal_counts": {
+        "is_like": 21,
+        "may_be": 0,
+        "will_be": 4,
+        "can_be": 0,
+        "is_not": 2,
+        "cant_be": 1,
+        "was_like": 5,
+        "wont_be": 7
+      },
+      "engine_summary": {
+        "C": 21,
+        "P": 4,
+        "R": 3,
+        "G": 12,
+        "total_modals": 40,
+        "iota": 0.25,
+        "outer": 32,
+        "inner": 8
+      },
+      "outer_inner_ratio": 4.0,
+      "working_out_profile": {
+        "mean_w_score": 0.0505,
+        "rigorous_working_out_ratio": 0.0177,
+        "bare_assertion_ratio": 0.8799,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.8799,
+          "Tier1_Exploratory_Sketch": 0.1025,
+          "Tier2_Operational_Derivation": 0.0177,
+          "Tier3_Formal_Proof_Chain": 0.0
+        },
+        "feature_totals": {
+          "scaffolding_hits": 12,
+          "deductive_hits": 2,
+          "symbolic_hits": 147,
+          "chained_eq_steps": 21,
+          "machinery_hits": 10,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0394,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0459,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0565,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0483,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "discrete boundary operator",
+          9
+        ],
+        [
+          "formal paper",
+          6
+        ],
+        [
+          "evaluator anchors",
+          6
+        ],
+        [
+          "bounded lattice mechanics",
+          5
+        ],
+        [
+          "quadratic level",
+          5
+        ],
+        [
+          "jarrod lyndsay",
+          4
+        ],
+        [
+          "ground state",
+          4
+        ],
+        [
+          "boundary",
+          4
+        ],
+        [
+          "quadratic projector",
+          3
+        ],
+        [
+          "infinitesimal reality math",
+          3
+        ],
+        [
+          "alethekanon research institute",
+          3
+        ],
+        [
+          "lipschitz continuity",
+          2
+        ],
+        [
+          "discrete state",
+          2
+        ],
+        [
+          "vector field theory",
+          2
+        ],
+        [
+          "physical space",
+          2
+        ],
+        [
+          "potential space",
+          2
+        ],
+        [
+          "possibility space",
+          2
+        ],
+        [
+          "set projector",
+          2
+        ],
+        [
+          "state",
+          2
+        ],
+        [
+          "topological invariants",
+          2
+        ],
+        [
+          "interference angle",
+          2
+        ],
+        [
+          "continuous-to",
+          2
+        ],
+        [
+          "boundary operator",
+          2
+        ],
+        [
+          "coinductive stream bisimulation",
+          2
+        ],
+        [
+          "morse theory",
+          2
+        ],
+        [
+          "theoretical computer science",
+          2
+        ],
+        [
+          "research institute",
+          1
+        ],
+        [
+          "creative commons attribution",
+          1
+        ],
+        [
+          "discrete lattice mechanics",
+          1
+        ],
+        [
+          "bounded manifold",
+          1
+        ],
+        [
+          "coinductive bisimulation",
+          1
+        ],
+        [
+          "lyapunov exponents",
+          1
+        ],
+        [
+          "archimedean regularization",
+          1
+        ],
+        [
+          "infinite lattice manifold",
+          1
+        ],
+        [
+          "spatial state",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "hamiltonian vector",
+          1
+        ],
+        [
+          "computational state",
+          1
+        ],
+        [
+          "differential calculus",
+          1
+        ],
+        [
+          "bounded state",
+          1
+        ],
+        [
+          "unphysical limit",
+          1
+        ],
+        [
+          "continuous dogma",
+          1
+        ],
+        [
+          "kretschmann curvature",
+          1
+        ],
+        [
+          "information density",
+          1
+        ],
+        [
+          "structural inertia",
+          1
+        ],
+        [
+          "translation boundary",
+          1
+        ],
+        [
+          "collapse boundary",
+          1
+        ],
+        [
+          "incommunicable singularity",
+          1
+        ],
+        [
+          "catch block",
+          1
+        ],
+        [
+          "definitive linear phase",
+          1
+        ],
+        [
+          "structural remainders",
+          1
+        ],
+        [
+          "vacuum collapse",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_.md",
+      "n_paragraphs": 262,
+      "n_sentences": 284,
+      "n_windows": 282,
+      "modal_counts": {
+        "is_like": 21,
+        "may_be": 0,
+        "will_be": 11,
+        "can_be": 3,
+        "is_not": 10,
+        "cant_be": 2,
+        "was_like": 7,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 21,
+        "P": 14,
+        "R": 12,
+        "G": 9,
+        "total_modals": 56,
+        "iota": 0.25,
+        "outer": 49,
+        "inner": 7
+      },
+      "outer_inner_ratio": 7.0,
+      "working_out_profile": {
+        "mean_w_score": 0.0632,
+        "rigorous_working_out_ratio": 0.042,
+        "bare_assertion_ratio": 0.8626,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.8626,
+          "Tier1_Exploratory_Sketch": 0.0954,
+          "Tier2_Operational_Derivation": 0.0344,
+          "Tier3_Formal_Proof_Chain": 0.0076
+        },
+        "feature_totals": {
+          "scaffolding_hits": 12,
+          "deductive_hits": 8,
+          "symbolic_hits": 213,
+          "chained_eq_steps": 67,
+          "machinery_hits": 10,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0655,
+          "completed_windows": 7,
+          "completion_rate": 0.0248,
+          "proof_backed_windows": 3,
+          "proof_backed_rate": 0.0106
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0809,
+          "completed_windows": 6,
+          "completion_rate": 0.0213,
+          "proof_backed_windows": 5,
+          "proof_backed_rate": 0.0177
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0626,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0656,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "information space",
+          8
+        ],
+        [
+          "formal paper",
+          6
+        ],
+        [
+          "algebraic topology",
+          5
+        ],
+        [
+          "principal g",
+          4
+        ],
+        [
+          "alethekanon research institute",
+          4
+        ],
+        [
+          "order simplicial homology",
+          3
+        ],
+        [
+          "gauge field theory",
+          3
+        ],
+        [
+          "semantic yang",
+          3
+        ],
+        [
+          "observer state",
+          3
+        ],
+        [
+          "semantic curvature",
+          3
+        ],
+        [
+          "abelian field",
+          3
+        ],
+        [
+          "information geometry",
+          3
+        ],
+        [
+          "jarrod lyndsay",
+          3
+        ],
+        [
+          "simplicial homology",
+          2
+        ],
+        [
+          "mills curvature",
+          2
+        ],
+        [
+          "infinitesimal reality math",
+          2
+        ],
+        [
+          "strength curvature",
+          2
+        ],
+        [
+          "inquiry axes",
+          2
+        ],
+        [
+          "boundary operator",
+          2
+        ],
+        [
+          "boundary",
+          2
+        ],
+        [
+          "betti invariants",
+          2
+        ],
+        [
+          "simplex homology",
+          2
+        ],
+        [
+          "boundary homology",
+          2
+        ],
+        [
+          "base manifold",
+          2
+        ],
+        [
+          "lie algebra",
+          2
+        ],
+        [
+          "semantic holonomy",
+          2
+        ],
+        [
+          "resonance theorem",
+          2
+        ],
+        [
+          "universal compilation invariant",
+          2
+        ],
+        [
+          "gauge field",
+          2
+        ],
+        [
+          "holonomy phase shift",
+          2
+        ],
+        [
+          "new york",
+          2
+        ],
+        [
+          "jarrod lyndsay hamilton",
+          1
+        ],
+        [
+          "creative commons attribution",
+          1
+        ],
+        [
+          "boundary operator nilpotence",
+          1
+        ],
+        [
+          "gauge symmetry",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "topological curvature",
+          1
+        ],
+        [
+          "geometric pathology",
+          1
+        ],
+        [
+          "classical vector embeddings",
+          1
+        ],
+        [
+          "static points",
+          1
+        ],
+        [
+          "euclidean vector",
+          1
+        ],
+        [
+          "zero",
+          1
+        ],
+        [
+          "ideological shear",
+          1
+        ],
+        [
+          "bias strain",
+          1
+        ],
+        [
+          "zero field",
+          1
+        ],
+        [
+          "vector field theory",
+          1
+        ],
+        [
+          "interrogative densities",
+          1
+        ],
+        [
+          "instantaneous identity",
+          1
+        ],
+        [
+          "quantum entanglement",
+          1
+        ],
+        [
+          "cognitive hysteresis lag",
+          1
+        ],
+        [
+          "classical information theory",
+          1
+        ],
+        [
+          "classical gauge theory",
+          1
+        ],
+        [
+          "total incommensurability",
+          1
+        ],
+        [
+          "semantic collapse",
+          1
+        ],
+        [
+          "algebraic topology",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "HYPOTHESIS_semantic_connection",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "HYPOTHESIS_semantic_connection.md",
+      "n_paragraphs": 54,
+      "n_sentences": 200,
+      "n_windows": 198,
+      "modal_counts": {
+        "is_like": 10,
+        "may_be": 3,
+        "will_be": 4,
+        "can_be": 7,
+        "is_not": 21,
+        "cant_be": 9,
+        "was_like": 3,
+        "wont_be": 1
+      },
+      "engine_summary": {
+        "C": 13,
+        "P": 11,
+        "R": 30,
+        "G": 4,
+        "total_modals": 58,
+        "iota": -0.1724,
+        "outer": 38,
+        "inner": 20
+      },
+      "outer_inner_ratio": 1.9,
+      "working_out_profile": {
+        "mean_w_score": 0.0697,
+        "rigorous_working_out_ratio": 0.0185,
+        "bare_assertion_ratio": 0.8148,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.8148,
+          "Tier1_Exploratory_Sketch": 0.1667,
+          "Tier2_Operational_Derivation": 0.0185,
+          "Tier3_Formal_Proof_Chain": 0.0
+        },
+        "feature_totals": {
+          "scaffolding_hits": 2,
+          "deductive_hits": 3,
+          "symbolic_hits": 37,
+          "chained_eq_steps": 6,
+          "machinery_hits": 0,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1263,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1045,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.1051,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.076,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "curvature",
+          2
+        ],
+        [
+          "semantic connection hypothesis",
+          1
+        ],
+        [
+          "formal paper",
+          1
+        ],
+        [
+          "actual",
+          1
+        ],
+        [
+          "engineer",
+          1
+        ],
+        [
+          "base manifold",
+          1
+        ],
+        [
+          "frame",
+          1
+        ],
+        [
+          "vector",
+          1
+        ],
+        [
+          "unit",
+          1
+        ],
+        [
+          "probe set",
+          1
+        ],
+        [
+          "identity",
+          1
+        ],
+        [
+          "geometric fact",
+          1
+        ],
+        [
+          "leakage measure",
+          1
+        ],
+        [
+          "semantic curvature",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "formal paper",
+          2
+        ],
+        [
+          "separate division",
+          1
+        ],
+        [
+          "representation geometry",
+          1
+        ],
+        [
+          "empirical semantics",
+          1
+        ],
+        [
+          "information space",
+          1
+        ],
+        [
+          "zero curvature",
+          1
+        ],
+        [
+          "identity",
+          1
+        ],
+        [
+          "probe set",
+          1
+        ],
+        [
+          "relative",
+          1
+        ],
+        [
+          "one curvature",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "ORTHODOX_BRIDGE_ZFC",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "ORTHODOX_BRIDGE_ZFC.md",
+      "n_paragraphs": 59,
+      "n_sentences": 212,
+      "n_windows": 210,
+      "modal_counts": {
+        "is_like": 2,
+        "may_be": 1,
+        "will_be": 5,
+        "can_be": 1,
+        "is_not": 28,
+        "cant_be": 11,
+        "was_like": 17,
+        "wont_be": 3
+      },
+      "engine_summary": {
+        "C": 3,
+        "P": 6,
+        "R": 39,
+        "G": 20,
+        "total_modals": 68,
+        "iota": -0.7353,
+        "outer": 52,
+        "inner": 16
+      },
+      "outer_inner_ratio": 3.25,
+      "working_out_profile": {
+        "mean_w_score": 0.1197,
+        "rigorous_working_out_ratio": 0.1017,
+        "bare_assertion_ratio": 0.5932,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.5932,
+          "Tier1_Exploratory_Sketch": 0.3051,
+          "Tier2_Operational_Derivation": 0.0847,
+          "Tier3_Formal_Proof_Chain": 0.0169
+        },
+        "feature_totals": {
+          "scaffolding_hits": 4,
+          "deductive_hits": 5,
+          "symbolic_hits": 27,
+          "chained_eq_steps": 26,
+          "machinery_hits": 34,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1239,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1077,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.1077,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0595,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "civita field",
+          3
+        ],
+        [
+          "power set",
+          2
+        ],
+        [
+          "engineer",
+          1
+        ],
+        [
+          "irm number",
+          1
+        ],
+        [
+          "zfc set",
+          1
+        ],
+        [
+          "levi",
+          1
+        ],
+        [
+          "formal series",
+          1
+        ],
+        [
+          "archimedean field",
+          1
+        ],
+        [
+          "s number",
+          1
+        ],
+        [
+          "infinitesimal residue",
+          1
+        ],
+        [
+          "ultrafilter",
+          1
+        ],
+        [
+          "lcp metric",
+          1
+        ],
+        [
+          "product metric",
+          1
+        ],
+        [
+          "adic absolute",
+          1
+        ],
+        [
+          "every theorem",
+          1
+        ],
+        [
+          "value physics",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "orthodox linker treatise",
+          5
+        ],
+        [
+          "descriptive set",
+          2
+        ],
+        [
+          "zero",
+          2
+        ],
+        [
+          "infinitesimal",
+          2
+        ],
+        [
+          "levi",
+          2
+        ],
+        [
+          "civita field",
+          2
+        ],
+        [
+          "orthodox linker",
+          2
+        ],
+        [
+          "number",
+          1
+        ],
+        [
+          "tullio levi",
+          1
+        ],
+        [
+          "citing ostrowski",
+          1
+        ],
+        [
+          "lcp metric",
+          1
+        ],
+        [
+          "classical descriptive set",
+          1
+        ],
+        [
+          "its field",
+          1
+        ],
+        [
+          "field",
+          1
+        ],
+        [
+          "archimedean field",
+          1
+        ],
+        [
+          "ontological superiority",
+          1
+        ],
+        [
+          "civita series",
+          1
+        ],
+        [
+          "real numbers",
+          1
+        ],
+        [
+          "zfc theorem",
+          1
+        ],
+        [
+          "quotient refinement",
+          1
+        ],
+        [
+          "real line",
+          1
+        ],
+        [
+          "standard analysis",
+          1
+        ],
+        [
+          "smooth infinitesimal analysis",
+          1
+        ],
+        [
+          "propagation operator",
+          1
+        ],
+        [
+          "term rewriting",
+          1
+        ],
+        [
+          "hyperreal reading costs",
+          1
+        ],
+        [
+          "principal ultrafilter",
+          1
+        ],
+        [
+          "boolean prime ideal",
+          1
+        ],
+        [
+          "exotic axiom",
+          1
+        ],
+        [
+          "stream calculus",
+          1
+        ],
+        [
+          "leave set",
+          1
+        ],
+        [
+          "irm numbers",
+          1
+        ],
+        [
+          "state",
+          1
+        ],
+        [
+          "founded set",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "PM_Prompt__Amended_-_Directive_Matrix_Protocol_",
+      "doc_group": "3_irm_formal_paper",
+      "filename": "PM_Prompt__Amended_-_Directive_Matrix_Protocol_.md",
+      "n_paragraphs": 13,
+      "n_sentences": 127,
+      "n_windows": 125,
+      "modal_counts": {
+        "is_like": 1,
+        "may_be": 1,
+        "will_be": 4,
+        "can_be": 3,
+        "is_not": 10,
+        "cant_be": 9,
+        "was_like": 4,
+        "wont_be": 1
+      },
+      "engine_summary": {
+        "C": 2,
+        "P": 7,
+        "R": 19,
+        "G": 5,
+        "total_modals": 33,
+        "iota": -0.4545,
+        "outer": 19,
+        "inner": 14
+      },
+      "outer_inner_ratio": 1.357,
+      "working_out_profile": {
+        "mean_w_score": 0.061,
+        "rigorous_working_out_ratio": 0.0769,
+        "bare_assertion_ratio": 0.8462,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.8462,
+          "Tier1_Exploratory_Sketch": 0.0769,
+          "Tier2_Operational_Derivation": 0.0769,
+          "Tier3_Formal_Proof_Chain": 0.0
+        },
+        "feature_totals": {
+          "scaffolding_hits": 0,
+          "deductive_hits": 2,
+          "symbolic_hits": 31,
+          "chained_eq_steps": 1,
+          "machinery_hits": 0,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.1016,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.075,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0729,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.052,
+          "completed_windows": 1,
+          "completion_rate": 0.008,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "value physics",
+          2
+        ],
+        [
+          "amended project manager",
+          1
+        ],
+        [
+          "engineer",
+          1
+        ],
+        [
+          "stub annotation",
+          1
+        ],
+        [
+          "project manager",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "fully approved",
+          2
+        ],
+        [
+          "directives",
+          2
+        ],
+        [
+          "project manager",
+          1
+        ],
+        [
+          "engineer",
+          1
+        ],
+        [
+          "claude engineering",
+          1
+        ],
+        [
+          "verification log",
+          1
+        ],
+        [
+          "google drive",
+          1
+        ],
+        [
+          "maintain master log",
+          1
+        ],
+        [
+          "spreadsheet ledger",
+          1
+        ],
+        [
+          "executive briefing",
+          1
+        ],
+        [
+          "off protocol",
+          1
+        ],
+        [
+          "fully verified",
+          1
+        ],
+        [
+          "actual",
+          1
+        ],
+        [
+          "pending revision",
+          1
+        ],
+        [
+          "value physics",
+          1
+        ],
+        [
+          "vpe series",
+          1
+        ]
+      ]
+    }
+  ],
+  "arxiv_benchmarks": [
+    {
+      "doc_id": "arxiv_1401.0388v2",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_1401.0388v2.md",
+      "n_paragraphs": 999,
+      "n_sentences": 1161,
+      "n_windows": 1159,
+      "modal_counts": {
+        "is_like": 14,
+        "may_be": 19,
+        "will_be": 125,
+        "can_be": 31,
+        "is_not": 8,
+        "cant_be": 5,
+        "was_like": 9,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 33,
+        "P": 156,
+        "R": 13,
+        "G": 11,
+        "total_modals": 213,
+        "iota": 0.7746,
+        "outer": 156,
+        "inner": 57
+      },
+      "outer_inner_ratio": 2.737,
+      "working_out_profile": {
+        "mean_w_score": 0.062,
+        "rigorous_working_out_ratio": 0.007,
+        "bare_assertion_ratio": 0.7828,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7828,
+          "Tier1_Exploratory_Sketch": 0.2102,
+          "Tier2_Operational_Derivation": 0.006,
+          "Tier3_Formal_Proof_Chain": 0.001
+        },
+        "feature_totals": {
+          "scaffolding_hits": 21,
+          "deductive_hits": 53,
+          "symbolic_hits": 612,
+          "chained_eq_steps": 43,
+          "machinery_hits": 69,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0262,
+          "completed_windows": 1,
+          "completion_rate": 0.0009,
+          "proof_backed_windows": 1,
+          "proof_backed_rate": 0.0009
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0618,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0243,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0401,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "eventual regularity",
+          16
+        ],
+        [
+          "zero",
+          10
+        ],
+        [
+          "limit",
+          10
+        ],
+        [
+          "hausdorff measure",
+          7
+        ],
+        [
+          "singular set",
+          7
+        ],
+        [
+          "potential",
+          6
+        ],
+        [
+          "regularity",
+          5
+        ],
+        [
+          "lebesgue measure",
+          5
+        ],
+        [
+          "differential equations",
+          4
+        ],
+        [
+          "partial regularity",
+          3
+        ],
+        [
+          "global regularity",
+          3
+        ],
+        [
+          "stokes equations",
+          3
+        ],
+        [
+          "operator",
+          2
+        ],
+        [
+          "free vector",
+          2
+        ],
+        [
+          "infinity",
+          2
+        ],
+        [
+          "theorem",
+          2
+        ],
+        [
+          "ascoli theorem",
+          2
+        ],
+        [
+          "non lin",
+          2
+        ],
+        [
+          "navier",
+          2
+        ],
+        [
+          "quansen jiu",
+          1
+        ],
+        [
+          "yanqing wang",
+          1
+        ],
+        [
+          "mathematical sciences",
+          1
+        ],
+        [
+          "capital normal university",
+          1
+        ],
+        [
+          "unknown vector",
+          1
+        ],
+        [
+          "ckn theorem",
+          1
+        ],
+        [
+          "absolute",
+          1
+        ],
+        [
+          "irregular point",
+          1
+        ],
+        [
+          "unit",
+          1
+        ],
+        [
+          "every set",
+          1
+        ],
+        [
+          "negative number",
+          1
+        ],
+        [
+          "leray",
+          1
+        ],
+        [
+          "harmonic analysis",
+          1
+        ],
+        [
+          "lions lemma",
+          1
+        ],
+        [
+          "fatou",
+          1
+        ],
+        [
+          "higher regularity",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "up theorem",
+          1
+        ],
+        [
+          "zygmund theorem",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "arxiv_1502.06936v2",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_1502.06936v2.md",
+      "n_paragraphs": 593,
+      "n_sentences": 7794,
+      "n_windows": 7792,
+      "modal_counts": {
+        "is_like": 41,
+        "may_be": 274,
+        "will_be": 142,
+        "can_be": 359,
+        "is_not": 229,
+        "cant_be": 57,
+        "was_like": 62,
+        "wont_be": 14
+      },
+      "engine_summary": {
+        "C": 315,
+        "P": 501,
+        "R": 286,
+        "G": 76,
+        "total_modals": 1178,
+        "iota": 0.3854,
+        "outer": 474,
+        "inner": 704
+      },
+      "outer_inner_ratio": 0.673,
+      "working_out_profile": {
+        "mean_w_score": 0.1894,
+        "rigorous_working_out_ratio": 0.2698,
+        "bare_assertion_ratio": 0.489,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.489,
+          "Tier1_Exploratory_Sketch": 0.2411,
+          "Tier2_Operational_Derivation": 0.2209,
+          "Tier3_Formal_Proof_Chain": 0.0489
+        },
+        "feature_totals": {
+          "scaffolding_hits": 58,
+          "deductive_hits": 284,
+          "symbolic_hits": 2162,
+          "chained_eq_steps": 1383,
+          "machinery_hits": 32,
+          "bare_assertion_hits": 3
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0425,
+          "completed_windows": 2,
+          "completion_rate": 0.0003,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0446,
+          "completed_windows": 2,
+          "completion_rate": 0.0003,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0391,
+          "completed_windows": 1,
+          "completion_rate": 0.0001,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0578,
+          "completed_windows": 6,
+          "completion_rate": 0.0008,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "infinity",
+          182
+        ],
+        [
+          "number",
+          75
+        ],
+        [
+          "limit",
+          45
+        ],
+        [
+          "zero",
+          30
+        ],
+        [
+          "real numbers",
+          29
+        ],
+        [
+          "numbers",
+          28
+        ],
+        [
+          "infinitary calculus",
+          28
+        ],
+        [
+          "gossamer numbers",
+          17
+        ],
+        [
+          "calculus",
+          17
+        ],
+        [
+          "real number",
+          17
+        ],
+        [
+          "ratio",
+          17
+        ],
+        [
+          "infinite numbers",
+          10
+        ],
+        [
+          "identity",
+          10
+        ],
+        [
+          "theorem",
+          10
+        ],
+        [
+          "series",
+          9
+        ],
+        [
+          "field",
+          9
+        ],
+        [
+          "reaching infinity",
+          8
+        ],
+        [
+          "algebra",
+          8
+        ],
+        [
+          "infinitesimal and infinitary",
+          7
+        ],
+        [
+          "gossamer number",
+          7
+        ],
+        [
+          "infinitesimal",
+          7
+        ],
+        [
+          "continuum",
+          7
+        ],
+        [
+          "rational numbers",
+          7
+        ],
+        [
+          "infinite number",
+          7
+        ],
+        [
+          "complex numbers",
+          5
+        ],
+        [
+          "finite numbers",
+          5
+        ],
+        [
+          "finite number",
+          4
+        ],
+        [
+          "positive number",
+          4
+        ],
+        [
+          "negative number",
+          4
+        ],
+        [
+          "order field",
+          4
+        ],
+        [
+          "positive numbers",
+          4
+        ],
+        [
+          "proposition",
+          4
+        ],
+        [
+          "operator",
+          4
+        ],
+        [
+          "definition",
+          4
+        ],
+        [
+          "scale",
+          4
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "infinity",
+          29
+        ],
+        [
+          "number",
+          22
+        ],
+        [
+          "numbers",
+          11
+        ],
+        [
+          "limit",
+          10
+        ],
+        [
+          "real numbers",
+          9
+        ],
+        [
+          "gossamer numbers",
+          7
+        ],
+        [
+          "infinitary calculus",
+          7
+        ],
+        [
+          "finite number",
+          6
+        ],
+        [
+          "rational number",
+          6
+        ],
+        [
+          "infinite number",
+          5
+        ],
+        [
+          "calculus",
+          4
+        ],
+        [
+          "infinitesimal",
+          4
+        ],
+        [
+          "gossamer number",
+          4
+        ],
+        [
+          "real number",
+          4
+        ],
+        [
+          "field",
+          4
+        ],
+        [
+          "archimedean number",
+          4
+        ],
+        [
+          "reaching infinity",
+          3
+        ],
+        [
+          "ratio",
+          3
+        ],
+        [
+          "algebraic number",
+          3
+        ],
+        [
+          "finite numbers",
+          3
+        ],
+        [
+          "operator",
+          3
+        ],
+        [
+          "infinitesimal and infinitary",
+          2
+        ],
+        [
+          "considering infinity",
+          2
+        ],
+        [
+          "algebraic numbers",
+          2
+        ],
+        [
+          "transcendental numbers",
+          2
+        ],
+        [
+          "irrational number",
+          2
+        ],
+        [
+          "transcendental number",
+          2
+        ],
+        [
+          "zero",
+          2
+        ],
+        [
+          "definition",
+          2
+        ],
+        [
+          "archimedean",
+          2
+        ],
+        [
+          "multiplicative identity",
+          2
+        ],
+        [
+          "delta proof",
+          2
+        ],
+        [
+          "comparison algebra",
+          1
+        ],
+        [
+          "use algebra",
+          1
+        ],
+        [
+          "actual",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "arxiv_1505.02628v2",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_1505.02628v2.md",
+      "n_paragraphs": 648,
+      "n_sentences": 844,
+      "n_windows": 842,
+      "modal_counts": {
+        "is_like": 7,
+        "may_be": 28,
+        "will_be": 41,
+        "can_be": 23,
+        "is_not": 3,
+        "cant_be": 2,
+        "was_like": 5,
+        "wont_be": 0
+      },
+      "engine_summary": {
+        "C": 35,
+        "P": 64,
+        "R": 5,
+        "G": 5,
+        "total_modals": 109,
+        "iota": 0.8165,
+        "outer": 56,
+        "inner": 53
+      },
+      "outer_inner_ratio": 1.057,
+      "working_out_profile": {
+        "mean_w_score": 0.0822,
+        "rigorous_working_out_ratio": 0.0154,
+        "bare_assertion_ratio": 0.7099,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7099,
+          "Tier1_Exploratory_Sketch": 0.2747,
+          "Tier2_Operational_Derivation": 0.0139,
+          "Tier3_Formal_Proof_Chain": 0.0015
+        },
+        "feature_totals": {
+          "scaffolding_hits": 8,
+          "deductive_hits": 28,
+          "symbolic_hits": 639,
+          "chained_eq_steps": 55,
+          "machinery_hits": 74,
+          "bare_assertion_hits": 1
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0227,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0391,
+          "completed_windows": 1,
+          "completion_rate": 0.0012,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0214,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0476,
+          "completed_windows": 1,
+          "completion_rate": 0.0012,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "global regularity",
+          9
+        ],
+        [
+          "form boundedness condition",
+          7
+        ],
+        [
+          "regularity",
+          7
+        ],
+        [
+          "stokes equations",
+          6
+        ],
+        [
+          "velocity field",
+          4
+        ],
+        [
+          "vorticity",
+          4
+        ],
+        [
+          "energy identity",
+          3
+        ],
+        [
+          "absolute",
+          3
+        ],
+        [
+          "imbedding theorem",
+          3
+        ],
+        [
+          "using lemma",
+          2
+        ],
+        [
+          "theorem",
+          2
+        ],
+        [
+          "axially symmetric navier",
+          1
+        ],
+        [
+          "axially symmetric",
+          1
+        ],
+        [
+          "zhen lei",
+          1
+        ],
+        [
+          "fudan university",
+          1
+        ],
+        [
+          "functions scale",
+          1
+        ],
+        [
+          "potential",
+          1
+        ],
+        [
+          "state",
+          1
+        ],
+        [
+          "vector",
+          1
+        ],
+        [
+          "new set",
+          1
+        ],
+        [
+          "implies regularity",
+          1
+        ],
+        [
+          "proving regularity",
+          1
+        ],
+        [
+          "small zero",
+          1
+        ],
+        [
+          "ping zhang",
+          1
+        ],
+        [
+          "ting zhang",
+          1
+        ],
+        [
+          "proved regularity",
+          1
+        ],
+        [
+          "certain zero",
+          1
+        ],
+        [
+          "laplacian",
+          1
+        ],
+        [
+          "gradient operator",
+          1
+        ],
+        [
+          "using theorem",
+          1
+        ],
+        [
+          "symmetric navier",
+          1
+        ],
+        [
+          "identity",
+          1
+        ],
+        [
+          "prove regularity",
+          1
+        ],
+        [
+          "using sobolev",
+          1
+        ],
+        [
+          "serrin",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "daoyuan fang",
+          1
+        ],
+        [
+          "bin han",
+          1
+        ],
+        [
+          "xinghong pan",
+          1
+        ],
+        [
+          "ting zhang",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "arxiv_1509.03798v1",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_1509.03798v1.md",
+      "n_paragraphs": 228,
+      "n_sentences": 1094,
+      "n_windows": 1092,
+      "modal_counts": {
+        "is_like": 40,
+        "may_be": 46,
+        "will_be": 90,
+        "can_be": 40,
+        "is_not": 61,
+        "cant_be": 16,
+        "was_like": 66,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 86,
+        "P": 130,
+        "R": 77,
+        "G": 68,
+        "total_modals": 361,
+        "iota": 0.1967,
+        "outer": 257,
+        "inner": 104
+      },
+      "outer_inner_ratio": 2.471,
+      "working_out_profile": {
+        "mean_w_score": 0.1563,
+        "rigorous_working_out_ratio": 0.1886,
+        "bare_assertion_ratio": 0.5658,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.5658,
+          "Tier1_Exploratory_Sketch": 0.2456,
+          "Tier2_Operational_Derivation": 0.1272,
+          "Tier3_Formal_Proof_Chain": 0.0614
+        },
+        "feature_totals": {
+          "scaffolding_hits": 31,
+          "deductive_hits": 50,
+          "symbolic_hits": 304,
+          "chained_eq_steps": 252,
+          "machinery_hits": 162,
+          "bare_assertion_hits": 3
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0867,
+          "completed_windows": 3,
+          "completion_rate": 0.0027,
+          "proof_backed_windows": 1,
+          "proof_backed_rate": 0.0009
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1019,
+          "completed_windows": 7,
+          "completion_rate": 0.0064,
+          "proof_backed_windows": 2,
+          "proof_backed_rate": 0.0018
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0799,
+          "completed_windows": 6,
+          "completion_rate": 0.0055,
+          "proof_backed_windows": 5,
+          "proof_backed_rate": 0.0046
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.1088,
+          "completed_windows": 11,
+          "completion_rate": 0.0101,
+          "proof_backed_windows": 4,
+          "proof_backed_rate": 0.0037
+        }
+      },
+      "top_included_concepts": [
+        [
+          "field",
+          35
+        ],
+        [
+          "archimedean field",
+          30
+        ],
+        [
+          "infinitesimal calculus",
+          29
+        ],
+        [
+          "ordered field",
+          28
+        ],
+        [
+          "power series",
+          8
+        ],
+        [
+          "new york",
+          8
+        ],
+        [
+          "valuation field",
+          7
+        ],
+        [
+          "section",
+          7
+        ],
+        [
+          "standard analysis",
+          7
+        ],
+        [
+          "real numbers",
+          6
+        ],
+        [
+          "algebra",
+          6
+        ],
+        [
+          "complete field",
+          6
+        ],
+        [
+          "asymptotic numbers",
+          6
+        ],
+        [
+          "ordered rings",
+          5
+        ],
+        [
+          "finite number",
+          5
+        ],
+        [
+          "totally ordered field",
+          5
+        ],
+        [
+          "ordered fields",
+          4
+        ],
+        [
+          "general topology",
+          4
+        ],
+        [
+          "amir alexander",
+          4
+        ],
+        [
+          "calculus",
+          4
+        ],
+        [
+          "archimedean property",
+          4
+        ],
+        [
+          "rational functions",
+          4
+        ],
+        [
+          "identity",
+          4
+        ],
+        [
+          "axiom",
+          4
+        ],
+        [
+          "closed field",
+          4
+        ],
+        [
+          "free ultrafilter",
+          4
+        ],
+        [
+          "leibniz transfer principle",
+          4
+        ],
+        [
+          "california polytechnic state university",
+          3
+        ],
+        [
+          "san luis obispo",
+          3
+        ],
+        [
+          "schwartz distributions",
+          3
+        ],
+        [
+          "purge",
+          3
+        ],
+        [
+          "totally ordered rings",
+          3
+        ],
+        [
+          "valuation metric",
+          3
+        ],
+        [
+          "infinite set",
+          3
+        ],
+        [
+          "euler infinitesimal calculus",
+          3
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "infinitesimal calculus",
+          17
+        ],
+        [
+          "field",
+          11
+        ],
+        [
+          "archimedean field",
+          7
+        ],
+        [
+          "ordered field",
+          7
+        ],
+        [
+          "axiom",
+          6
+        ],
+        [
+          "real numbers",
+          5
+        ],
+        [
+          "totally ordered field",
+          4
+        ],
+        [
+          "calculus",
+          4
+        ],
+        [
+          "algebra",
+          3
+        ],
+        [
+          "rational functions",
+          3
+        ],
+        [
+          "number",
+          3
+        ],
+        [
+          "euler calculus",
+          3
+        ],
+        [
+          "complete field",
+          2
+        ],
+        [
+          "standard real numbers",
+          2
+        ],
+        [
+          "standard analysis",
+          2
+        ],
+        [
+          "rigorous",
+          2
+        ],
+        [
+          "familiar field",
+          1
+        ],
+        [
+          "adic numbers",
+          1
+        ],
+        [
+          "his field",
+          1
+        ],
+        [
+          "proper field",
+          1
+        ],
+        [
+          "eventually zero",
+          1
+        ],
+        [
+          "first uniqueness result",
+          1
+        ],
+        [
+          "saturated field",
+          1
+        ],
+        [
+          "ultrafilter",
+          1
+        ],
+        [
+          "scale",
+          1
+        ],
+        [
+          "harmonic analysis",
+          1
+        ],
+        [
+          "infinitesimal amount",
+          1
+        ],
+        [
+          "infinitesimal annual income",
+          1
+        ],
+        [
+          "equivalent axiom",
+          1
+        ],
+        [
+          "differential calculus",
+          1
+        ],
+        [
+          "jesuit order",
+          1
+        ],
+        [
+          "modern calculus",
+          1
+        ],
+        [
+          "usual set",
+          1
+        ],
+        [
+          "finite numbers",
+          1
+        ],
+        [
+          "leibniz principle",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "arxiv_1701.05187v1",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_1701.05187v1.md",
+      "n_paragraphs": 580,
+      "n_sentences": 768,
+      "n_windows": 766,
+      "modal_counts": {
+        "is_like": 1,
+        "may_be": 11,
+        "will_be": 20,
+        "can_be": 24,
+        "is_not": 18,
+        "cant_be": 4,
+        "was_like": 26,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 12,
+        "P": 44,
+        "R": 22,
+        "G": 28,
+        "total_modals": 106,
+        "iota": 0.0566,
+        "outer": 65,
+        "inner": 41
+      },
+      "outer_inner_ratio": 1.585,
+      "working_out_profile": {
+        "mean_w_score": 0.0171,
+        "rigorous_working_out_ratio": 0.0017,
+        "bare_assertion_ratio": 0.9603,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.9603,
+          "Tier1_Exploratory_Sketch": 0.0379,
+          "Tier2_Operational_Derivation": 0.0017,
+          "Tier3_Formal_Proof_Chain": 0.0
+        },
+        "feature_totals": {
+          "scaffolding_hits": 17,
+          "deductive_hits": 10,
+          "symbolic_hits": 29,
+          "chained_eq_steps": 10,
+          "machinery_hits": 16,
+          "bare_assertion_hits": 3
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0464,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0524,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0445,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.053,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "calculus",
+          10
+        ],
+        [
+          "infinitesimal calculus",
+          7
+        ],
+        [
+          "limit",
+          6
+        ],
+        [
+          "real numbers",
+          4
+        ],
+        [
+          "new york",
+          3
+        ],
+        [
+          "pythagoreans",
+          2
+        ],
+        [
+          "infinitesimal definitions over",
+          2
+        ],
+        [
+          "ramat gan",
+          2
+        ],
+        [
+          "infinitesimal definition",
+          2
+        ],
+        [
+          "punctiform continuum",
+          2
+        ],
+        [
+          "field",
+          2
+        ],
+        [
+          "infinitesimal approach",
+          2
+        ],
+        [
+          "freshman calculus",
+          2
+        ],
+        [
+          "ordered field",
+          2
+        ],
+        [
+          "number",
+          2
+        ],
+        [
+          "real number",
+          2
+        ],
+        [
+          "mathematical",
+          2
+        ],
+        [
+          "bar ilan university",
+          1
+        ],
+        [
+          "luie polev",
+          1
+        ],
+        [
+          "ilan university",
+          1
+        ],
+        [
+          "monolithic absolute",
+          1
+        ],
+        [
+          "true infinitesimal calculus",
+          1
+        ],
+        [
+          "key calculus",
+          1
+        ],
+        [
+          "epsilon delta calculus",
+          1
+        ],
+        [
+          "neither archimedes",
+          1
+        ],
+        [
+          "archimedean continuum",
+          1
+        ],
+        [
+          "bernoullian continuum",
+          1
+        ],
+        [
+          "recently robinson",
+          1
+        ],
+        [
+          "terry tao",
+          1
+        ],
+        [
+          "judith grabiner",
+          1
+        ],
+        [
+          "simon stevin",
+          1
+        ],
+        [
+          "fraenkel set",
+          1
+        ],
+        [
+          "infinitesimal definitions",
+          1
+        ],
+        [
+          "infinite numbers",
+          1
+        ],
+        [
+          "infinite number",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "calculus",
+          2
+        ],
+        [
+          "infinitesimal calculus",
+          1
+        ],
+        [
+          "monolithic absolute",
+          1
+        ],
+        [
+          "errett bishop",
+          1
+        ],
+        [
+          "alain connes",
+          1
+        ],
+        [
+          "three calculus",
+          1
+        ],
+        [
+          "real number",
+          1
+        ],
+        [
+          "second law",
+          1
+        ],
+        [
+          "israel science foundation",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "arxiv_1706.10173v1",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_1706.10173v1.md",
+      "n_paragraphs": 1187,
+      "n_sentences": 1291,
+      "n_windows": 1289,
+      "modal_counts": {
+        "is_like": 8,
+        "may_be": 0,
+        "will_be": 8,
+        "can_be": 7,
+        "is_not": 2,
+        "cant_be": 1,
+        "was_like": 2,
+        "wont_be": 0
+      },
+      "engine_summary": {
+        "C": 8,
+        "P": 15,
+        "R": 3,
+        "G": 2,
+        "total_modals": 28,
+        "iota": 0.6429,
+        "outer": 20,
+        "inner": 8
+      },
+      "outer_inner_ratio": 2.5,
+      "working_out_profile": {
+        "mean_w_score": 0.0095,
+        "rigorous_working_out_ratio": 0.0008,
+        "bare_assertion_ratio": 0.9874,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.9874,
+          "Tier1_Exploratory_Sketch": 0.0118,
+          "Tier2_Operational_Derivation": 0.0008,
+          "Tier3_Formal_Proof_Chain": 0.0
+        },
+        "feature_totals": {
+          "scaffolding_hits": 4,
+          "deductive_hits": 3,
+          "symbolic_hits": 91,
+          "chained_eq_steps": 14,
+          "machinery_hits": 40,
+          "bare_assertion_hits": 0
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0071,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0097,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0067,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0083,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        }
+      },
+      "top_included_concepts": [
+        [
+          "regularity",
+          10
+        ],
+        [
+          "universidade federal",
+          6
+        ],
+        [
+          "rio grande",
+          4
+        ],
+        [
+          "porto alegre",
+          4
+        ],
+        [
+          "new york",
+          3
+        ],
+        [
+          "cambridge univ",
+          2
+        ],
+        [
+          "navier",
+          2
+        ],
+        [
+          "stokes equations",
+          2
+        ],
+        [
+          "vector",
+          1
+        ],
+        [
+          "s regularity",
+          1
+        ],
+        [
+          "positive measure",
+          1
+        ],
+        [
+          "fourier analysis",
+          1
+        ],
+        [
+          "nonlinear partial differential equations",
+          1
+        ],
+        [
+          "partial regularity",
+          1
+        ],
+        [
+          "pure appl",
+          1
+        ],
+        [
+          "global regularity",
+          1
+        ],
+        [
+          "computational fluid mechanics",
+          1
+        ],
+        [
+          "new mexico",
+          1
+        ],
+        [
+          "fluid mech",
+          1
+        ],
+        [
+          "mathematical theory",
+          1
+        ],
+        [
+          "viscous incompressible flow",
+          1
+        ],
+        [
+          "pures appl",
+          1
+        ],
+        [
+          "acta math",
+          1
+        ],
+        [
+          "nonlinear problems",
+          1
+        ],
+        [
+          "wisconsin press",
+          1
+        ],
+        [
+          "london math",
+          1
+        ],
+        [
+          "pablo gustavo albuquerque braz",
+          1
+        ],
+        [
+          "pires zingano",
+          1
+        ],
+        [
+          "paulo ricardo",
+          1
+        ],
+        [
+          "avila zingano",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "potential",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "arxiv_1803.06056v2",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_1803.06056v2.md",
+      "n_paragraphs": 1431,
+      "n_sentences": 1618,
+      "n_windows": 1616,
+      "modal_counts": {
+        "is_like": 121,
+        "may_be": 21,
+        "will_be": 63,
+        "can_be": 49,
+        "is_not": 5,
+        "cant_be": 3,
+        "was_like": 8,
+        "wont_be": 1
+      },
+      "engine_summary": {
+        "C": 142,
+        "P": 112,
+        "R": 8,
+        "G": 9,
+        "total_modals": 271,
+        "iota": 0.8745,
+        "outer": 197,
+        "inner": 74
+      },
+      "outer_inner_ratio": 2.662,
+      "working_out_profile": {
+        "mean_w_score": 0.0816,
+        "rigorous_working_out_ratio": 0.007,
+        "bare_assertion_ratio": 0.7379,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.7379,
+          "Tier1_Exploratory_Sketch": 0.2551,
+          "Tier2_Operational_Derivation": 0.007,
+          "Tier3_Formal_Proof_Chain": 0.0
+        },
+        "feature_totals": {
+          "scaffolding_hits": 17,
+          "deductive_hits": 84,
+          "symbolic_hits": 1300,
+          "chained_eq_steps": 270,
+          "machinery_hits": 53,
+          "bare_assertion_hits": 1
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0398,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0524,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0387,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0589,
+          "completed_windows": 7,
+          "completion_rate": 0.0043,
+          "proof_backed_windows": 3,
+          "proof_backed_rate": 0.0019
+        }
+      },
+      "top_included_concepts": [
+        [
+          "density",
+          12
+        ],
+        [
+          "initial density",
+          7
+        ],
+        [
+          "constant density",
+          5
+        ],
+        [
+          "pure appl",
+          5
+        ],
+        [
+          "velocity vector",
+          4
+        ],
+        [
+          "maximal regularity",
+          4
+        ],
+        [
+          "absolute",
+          4
+        ],
+        [
+          "global regularity",
+          4
+        ],
+        [
+          "differential equations",
+          4
+        ],
+        [
+          "regularity",
+          3
+        ],
+        [
+          "limit",
+          3
+        ],
+        [
+          "variable density",
+          2
+        ],
+        [
+          "low regularity",
+          2
+        ],
+        [
+          "extra regularity",
+          2
+        ],
+        [
+          "general density",
+          2
+        ],
+        [
+          "rough density",
+          2
+        ],
+        [
+          "regular density",
+          2
+        ],
+        [
+          "national natural science foundation",
+          2
+        ],
+        [
+          "rational mech",
+          2
+        ],
+        [
+          "bounded density",
+          2
+        ],
+        [
+          "applied mathematics",
+          1
+        ],
+        [
+          "complex systems",
+          1
+        ],
+        [
+          "mathematical sciences",
+          1
+        ],
+        [
+          "beijing normal university",
+          1
+        ],
+        [
+          "xiaoxin zheng",
+          1
+        ],
+        [
+          "systems science",
+          1
+        ],
+        [
+          "beihang university",
+          1
+        ],
+        [
+          "inhomogeneous navier",
+          1
+        ],
+        [
+          "navier",
+          1
+        ],
+        [
+          "partial differential equations",
+          1
+        ],
+        [
+          "millennium problem",
+          1
+        ],
+        [
+          "kinematic viscosity",
+          1
+        ],
+        [
+          "scalar density",
+          1
+        ],
+        [
+          "valued density",
+          1
+        ],
+        [
+          "dimensional vector",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "constant density",
+          1
+        ],
+        [
+          "regularity",
+          1
+        ],
+        [
+          "density",
+          1
+        ],
+        [
+          "rough density",
+          1
+        ],
+        [
+          "singularity",
+          1
+        ]
+      ]
+    },
+    {
+      "doc_id": "arxiv_2208.00415v2",
+      "doc_group": "4_arxiv_benchmark",
+      "filename": "arxiv_2208.00415v2.md",
+      "n_paragraphs": 139,
+      "n_sentences": 1632,
+      "n_windows": 1630,
+      "modal_counts": {
+        "is_like": 48,
+        "may_be": 54,
+        "will_be": 132,
+        "can_be": 71,
+        "is_not": 22,
+        "cant_be": 11,
+        "was_like": 13,
+        "wont_be": 0
+      },
+      "engine_summary": {
+        "C": 102,
+        "P": 203,
+        "R": 33,
+        "G": 13,
+        "total_modals": 351,
+        "iota": 0.7379,
+        "outer": 215,
+        "inner": 136
+      },
+      "outer_inner_ratio": 1.581,
+      "working_out_profile": {
+        "mean_w_score": 0.2961,
+        "rigorous_working_out_ratio": 0.4604,
+        "bare_assertion_ratio": 0.3309,
+        "tier_distribution": {
+          "Tier0_Bare_Assertion": 0.3309,
+          "Tier1_Exploratory_Sketch": 0.2086,
+          "Tier2_Operational_Derivation": 0.2878,
+          "Tier3_Formal_Proof_Chain": 0.1727
+        },
+        "feature_totals": {
+          "scaffolding_hits": 25,
+          "deductive_hits": 94,
+          "symbolic_hits": 875,
+          "chained_eq_steps": 329,
+          "machinery_hits": 89,
+          "bare_assertion_hits": 1
+        }
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.045,
+          "completed_windows": 5,
+          "completion_rate": 0.0031,
+          "proof_backed_windows": 2,
+          "proof_backed_rate": 0.0012
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.072,
+          "completed_windows": 2,
+          "completion_rate": 0.0012,
+          "proof_backed_windows": 1,
+          "proof_backed_rate": 0.0006
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0402,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "proof_backed_windows": 0,
+          "proof_backed_rate": 0.0
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0688,
+          "completed_windows": 4,
+          "completion_rate": 0.0025,
+          "proof_backed_windows": 3,
+          "proof_backed_rate": 0.0018
+        }
+      },
+      "top_included_concepts": [
+        [
+          "boundary",
+          45
+        ],
+        [
+          "regularity",
+          16
+        ],
+        [
+          "partial regularity",
+          11
+        ],
+        [
+          "velocity field",
+          11
+        ],
+        [
+          "maximal regularity",
+          6
+        ],
+        [
+          "extension operator",
+          6
+        ],
+        [
+          "limit",
+          5
+        ],
+        [
+          "singular set",
+          5
+        ],
+        [
+          "partial boundary",
+          3
+        ],
+        [
+          "lipschitz boundary",
+          3
+        ],
+        [
+          "flat boundary",
+          3
+        ],
+        [
+          "zero",
+          3
+        ],
+        [
+          "operator",
+          3
+        ],
+        [
+          "rational mech",
+          3
+        ],
+        [
+          "fluid mech",
+          3
+        ],
+        [
+          "boundary boundary",
+          2
+        ],
+        [
+          "minimal regularity",
+          2
+        ],
+        [
+          "boundary regularity",
+          2
+        ],
+        [
+          "local regularity",
+          2
+        ],
+        [
+          "number",
+          2
+        ],
+        [
+          "hausdorff measure",
+          2
+        ],
+        [
+          "stokes",
+          2
+        ],
+        [
+          "navier",
+          2
+        ],
+        [
+          "pure appl",
+          2
+        ],
+        [
+          "stokes equations",
+          2
+        ],
+        [
+          "function spaces",
+          2
+        ],
+        [
+          "modern birkh",
+          2
+        ],
+        [
+          "dominic breit",
+          1
+        ],
+        [
+          "watt university",
+          1
+        ],
+        [
+          "united kingdom",
+          1
+        ],
+        [
+          "density",
+          1
+        ],
+        [
+          "viscosity",
+          1
+        ],
+        [
+          "state",
+          1
+        ],
+        [
+          "negligible set",
+          1
+        ],
+        [
+          "measure",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "singular set",
+          2
+        ],
+        [
+          "partial regularity",
+          1
+        ],
+        [
+          "vector",
+          1
+        ],
+        [
+          "number",
+          1
+        ],
+        [
+          "regularity",
+          1
+        ],
+        [
+          "boundary",
+          1
+        ],
+        [
+          "data availability",
+          1
+        ],
+        [
+          "nonzero boundary",
+          1
+        ]
+      ]
+    }
+  ]
+}

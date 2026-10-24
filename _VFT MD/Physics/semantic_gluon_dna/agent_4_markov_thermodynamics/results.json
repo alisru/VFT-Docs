@@ -1,0 +1,4190 @@
+{
+  "agent": "Agent 4: Markov Transition Matrix, Concept Survival & Thermodynamic Maturity Engine",
+  "documents": {
+    "chat": {
+      "num_segments": 2496,
+      "engine_matrix": [
+        [
+          0.56016,
+          0.3065,
+          0.08374,
+          0.04959
+        ],
+        [
+          0.40064,
+          0.50268,
+          0.06337,
+          0.0333
+        ],
+        [
+          0.56521,
+          0.2029,
+          0.16425,
+          0.06764
+        ],
+        [
+          0.40944,
+          0.33858,
+          0.08662,
+          0.16536
+        ]
+      ],
+      "engine_counts": [
+        [
+          689,
+          377,
+          103,
+          61
+        ],
+        [
+          373,
+          468,
+          59,
+          31
+        ],
+        [
+          117,
+          42,
+          34,
+          14
+        ],
+        [
+          52,
+          43,
+          11,
+          21
+        ]
+      ],
+      "engine_stationary": {
+        "C": 0.4935,
+        "P": 0.3726,
+        "R": 0.083,
+        "G": 0.0509
+      },
+      "engine_empirical": {
+        "C": 0.4932,
+        "P": 0.373,
+        "R": 0.0829,
+        "G": 0.0509
+      },
+      "modal_matrix": [
+        [
+          5e-05,
+          0.39989,
+          5e-05,
+          0.24995,
+          5e-05,
+          0.19997,
+          0.05003,
+          0.10001
+        ],
+        [
+          0.00909,
+          0.55372,
+          0.0438,
+          0.26364,
+          0.03306,
+          0.04876,
+          0.00992,
+          0.03802
+        ],
+        [
+          1e-05,
+          0.663,
+          0.09783,
+          0.1413,
+          0.01088,
+          0.05435,
+          0.01088,
+          0.02175
+        ],
+        [
+          0.00477,
+          0.3671,
+          0.02384,
+          0.50774,
+          0.02026,
+          0.04291,
+          0.01669,
+          0.01669
+        ],
+        [
+          1e-05,
+          0.51312,
+          0.01317,
+          0.23683,
+          0.11842,
+          0.05264,
+          0.01317,
+          0.05264
+        ],
+        [
+          0.01527,
+          0.58012,
+          0.03054,
+          0.14504,
+          0.03817,
+          0.12214,
+          0.00764,
+          0.06107
+        ],
+        [
+          0.02943,
+          0.35289,
+          0.02943,
+          0.35289,
+          0.02943,
+          0.02943,
+          0.08824,
+          0.08824
+        ],
+        [
+          0.02151,
+          0.39783,
+          0.04302,
+          0.27956,
+          0.03227,
+          0.06452,
+          0.01076,
+          0.15054
+        ]
+      ],
+      "modal_counts": [
+        [
+          0,
+          8,
+          0,
+          5,
+          0,
+          4,
+          1,
+          2
+        ],
+        [
+          11,
+          670,
+          53,
+          319,
+          40,
+          59,
+          12,
+          46
+        ],
+        [
+          0,
+          61,
+          9,
+          13,
+          1,
+          5,
+          1,
+          2
+        ],
+        [
+          4,
+          308,
+          20,
+          426,
+          17,
+          36,
+          14,
+          14
+        ],
+        [
+          0,
+          39,
+          1,
+          18,
+          9,
+          4,
+          1,
+          4
+        ],
+        [
+          2,
+          76,
+          4,
+          19,
+          5,
+          16,
+          1,
+          8
+        ],
+        [
+          1,
+          12,
+          1,
+          12,
+          1,
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          37,
+          4,
+          26,
+          3,
+          6,
+          1,
+          14
+        ]
+      ],
+      "modal_stationary": {
+        "was_like": 0.008,
+        "is_like": 0.4855,
+        "may_be": 0.0369,
+        "will_be": 0.3357,
+        "can_be": 0.0305,
+        "is_not": 0.0525,
+        "cant_be": 0.0136,
+        "wont_be": 0.0373
+      },
+      "modal_empirical": {
+        "was_like": 0.008,
+        "is_like": 0.4852,
+        "may_be": 0.0369,
+        "will_be": 0.3361,
+        "can_be": 0.0304,
+        "is_not": 0.0525,
+        "cant_be": 0.0136,
+        "wont_be": 0.0373
+      },
+      "engine_entropy_rate": 1.5067,
+      "modal_entropy_rate": 1.8262,
+      "cw_canonical_flux": 0.2012,
+      "ccw_reverse_flux": 0.1952,
+      "net_cycle_vorticity": 0.006,
+      "full_4step_cw_cycles": 4,
+      "reductive_trap_stalls": 9,
+      "reductive_trap_rate": 0.0036,
+      "reductive_self_loop_prob": 0.1643,
+      "reductive_regressive_oscillation": 0.01,
+      "reductive_trap_locations": [
+        {
+          "seg_idx": 295,
+          "lines": "L533-L537",
+          "pattern": "R->R->G",
+          "modals": "is_not->is_not->wont_be",
+          "excerpt": "So yes — if someone tried to argue it’s false, they’d either:"
+        },
+        {
+          "seg_idx": 331,
+          "lines": "L598-L600",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "**Key difference:** Chinese systems didn’t formalise infinite sequences or infinitesimals — they were **practical and symbolic**, not axioma"
+        },
+        {
+          "seg_idx": 1020,
+          "lines": "L1894-L1898",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->can_be",
+          "excerpt": "- If the digits sk​ can be negative, the fractional tail can subtract as well as add, so the expansion naturally covers values both \\>0 and "
+        },
+        {
+          "seg_idx": 1392,
+          "lines": "L2254-L2254",
+          "pattern": "R->R->R",
+          "modals": "is_not->can_be->can_be",
+          "excerpt": "However, 0.999... is the Reality Math object \\[9\\]∞, which is the entire infinite set S."
+        },
+        {
+          "seg_idx": 1393,
+          "lines": "L2254-L2254",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->can_be",
+          "excerpt": "The proof shows that 1 is the definitive boundary of the infinite process 0.999..., not that they are the same entity."
+        },
+        {
+          "seg_idx": 1394,
+          "lines": "L2254-L2254",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->can_be",
+          "excerpt": "The process is separated from its boundary by the infinitesimal gap, 1∞."
+        },
+        {
+          "seg_idx": 1932,
+          "lines": "L3026-L3030",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->can_be",
+          "excerpt": "- **Individual as Pixel:** Each person’s {χ} is a pixel — infinitesimal relative to the collective whole, yet definitive within itself."
+        },
+        {
+          "seg_idx": 1952,
+          "lines": "L3056-L3060",
+          "pattern": "G->R->R",
+          "modals": "wont_be->is_not->is_not",
+          "excerpt": "- **Micro ↔ Macro identity:** The 6D conscious tensor that defines a person’s moral ledger also defines an infinitesimal of spacetime or ene"
+        },
+        {
+          "seg_idx": 2020,
+          "lines": "L3166-L3168",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->can_be",
+          "excerpt": "Rχ​:={\\[a,T\\]∣a digit sequence, T χ-sequence, and a convergence condition holds}."
+        }
+      ],
+      "productive_runaways": 276,
+      "productive_runaway_rate": 0.1107,
+      "productive_self_loop_prob": 0.5027,
+      "productive_runaway_locations": [
+        {
+          "seg_idx": 21,
+          "lines": "L33-L35",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "n→∞lim​an​=L"
+        },
+        {
+          "seg_idx": 25,
+          "lines": "L39-L43",
+          "pattern": "P->P->P",
+          "modals": "will_be->may_be->will_be",
+          "excerpt": "n→∞lim​1n∞​=n→∞lim​0n+1∞​"
+        },
+        {
+          "seg_idx": 115,
+          "lines": "L207-L211",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- S(0)=1."
+        },
+        {
+          "seg_idx": 134,
+          "lines": "L242-L246",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- Your 0 = Peano’s 0."
+        },
+        {
+          "seg_idx": 135,
+          "lines": "L244-L248",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- Your 1 = Peano’s S(0)."
+        },
+        {
+          "seg_idx": 176,
+          "lines": "L314-L318",
+          "pattern": "P->P->P",
+          "modals": "will_be->may_be->may_be",
+          "excerpt": "- **Infinite numbers:** numbers larger than any real."
+        },
+        {
+          "seg_idx": 201,
+          "lines": "L360-L365",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- Start with **constants:** 0,1."
+        },
+        {
+          "seg_idx": 240,
+          "lines": "L429-L433",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- Index_N = N the natural numbers."
+        },
+        {
+          "seg_idx": 310,
+          "lines": "L559-L564",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- Traditional Chinese mathematics often used **rod numerals** on counting boards."
+        },
+        {
+          "seg_idx": 311,
+          "lines": "L561-L566",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- Each number is represented by a **position** (the “place value”) and a **symbol** (the rod configuration)."
+        },
+        {
+          "seg_idx": 327,
+          "lines": "L586-L593",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "-------------------------------------------------------------------------------------------------------------------- **Feature**            "
+        },
+        {
+          "seg_idx": 328,
+          "lines": "L591-L596",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "Representation          \\[Variable_name, Value\\]         \\[Rod symbol, Position\\]"
+        },
+        {
+          "seg_idx": 404,
+          "lines": "L730-L734",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "✅ **Conclusion**:"
+        },
+        {
+          "seg_idx": 417,
+          "lines": "L755-L759",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\[0_1\\]           1                 1 rod in units                                  Single rod = 1"
+        },
+        {
+          "seg_idx": 418,
+          "lines": "L757-L761",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\[0_2\\]           2                 2 rods in units                                 Additive representation"
+        }
+      ],
+      "mean_iota": 0.7849,
+      "inclusive_segments": 2249,
+      "exclusive_segments": 247,
+      "inclusive_exclusive_ratio": 9.1053,
+      "mean_symbolic_density": 0.6398,
+      "understandability_index": 18.12,
+      "breakdown_zones": [
+        {
+          "start_line": 1432,
+          "end_line": 1455,
+          "seg_range": "762-773",
+          "window_modal_entropy": 0.811,
+          "symbolic_density": 4.6,
+          "constructive_ratio": 0.25,
+          "mean_iota": 1.0,
+          "breakdown_score": 8.298,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=4.60); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\[0_0.0.0.3\\]       0.003             \\[1_0.0.0.3\\]       1.003"
+        },
+        {
+          "start_line": 832,
+          "end_line": 861,
+          "seg_range": "456-467",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 2.866,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 6.082,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.87); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "-------------------------------------------------------------------------- **\\[0_n\\]**             **Value**               **Rod Numerals** ----------"
+        },
+        {
+          "start_line": 595,
+          "end_line": 617,
+          "seg_range": "330-341",
+          "window_modal_entropy": 1.626,
+          "symbolic_density": 3.041,
+          "constructive_ratio": 0.5,
+          "mean_iota": 0.511,
+          "breakdown_score": 5.727,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.04); Uncritical Inclusive (+I) Inflation (iota=+0.51)",
+          "sample_text": "Extensibility           Naturals → Reals → Hyperreals    Integers → decimals (via fraction rods) -----------------------------------------------------"
+        },
+        {
+          "start_line": 1340,
+          "end_line": 1363,
+          "seg_range": "714-725",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 2.583,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 5.687,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.58); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\[0_5.0.0.0\\]       5                 \\[1_5.0.0.0\\]       6"
+        },
+        {
+          "start_line": 3728,
+          "end_line": 3750,
+          "seg_range": "2364-2375",
+          "window_modal_entropy": 0.98,
+          "symbolic_density": 2.907,
+          "constructive_ratio": 0.417,
+          "mean_iota": 1.0,
+          "breakdown_score": 5.638,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.91); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "- This is a complete, self-consistent formalisation that any mathematician, AI, or researcher can follow."
+        },
+        {
+          "start_line": 1181,
+          "end_line": 1206,
+          "seg_range": "636-647",
+          "window_modal_entropy": -0.0,
+          "symbolic_density": 2.497,
+          "constructive_ratio": 0.0,
+          "mean_iota": 1.0,
+          "breakdown_score": 5.596,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=2.50); Productive Runaway without Verification (12/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "--------------------------------------------------------------------------- **\\[0_n.d.e.f\\]**   **Value**         **\\[1_n.d.e.f\\]**   **Value** ------"
+        },
+        {
+          "start_line": 804,
+          "end_line": 830,
+          "seg_range": "444-455",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 2.46,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 5.514,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.46); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "--------------------------------------------------------------------------------- **\\[0_n\\]**             **Value**               **Rod Numerals (Tens"
+        },
+        {
+          "start_line": 2584,
+          "end_line": 2606,
+          "seg_range": "1650-1661",
+          "window_modal_entropy": 1.325,
+          "symbolic_density": 2.892,
+          "constructive_ratio": 0.5,
+          "mean_iota": 0.722,
+          "breakdown_score": 5.487,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.89); Uncritical Inclusive (+I) Inflation (iota=+0.72)",
+          "sample_text": "- Normalize collapses repeating expansions into canonical \\[N\\]∞."
+        },
+        {
+          "start_line": 1277,
+          "end_line": 1302,
+          "seg_range": "684-695",
+          "window_modal_entropy": -0.0,
+          "symbolic_density": 2.403,
+          "constructive_ratio": 0.0,
+          "mean_iota": 1.0,
+          "breakdown_score": 5.464,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=2.40); Productive Runaway without Verification (12/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "- Value = sum of levels + base"
+        },
+        {
+          "start_line": 1208,
+          "end_line": 1231,
+          "seg_range": "648-659",
+          "window_modal_entropy": 0.65,
+          "symbolic_density": 2.386,
+          "constructive_ratio": 0.167,
+          "mean_iota": 1.0,
+          "breakdown_score": 5.318,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.39); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\[0_3.0.0.0\\]       3                 \\[1_3.0.0.0\\]       4"
+        },
+        {
+          "start_line": 1407,
+          "end_line": 1430,
+          "seg_range": "750-761",
+          "window_modal_entropy": 0.65,
+          "symbolic_density": 2.301,
+          "constructive_ratio": 0.167,
+          "mean_iota": 1.0,
+          "breakdown_score": 5.199,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.30); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "Value(\\[bn​.d.e.f\\])=b+n+10d​+100e​+1000f​"
+        },
+        {
+          "start_line": 3430,
+          "end_line": 3448,
+          "seg_range": "2196-2207",
+          "window_modal_entropy": 0.918,
+          "symbolic_density": 2.297,
+          "constructive_ratio": 0.333,
+          "mean_iota": 1.0,
+          "breakdown_score": 4.937,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.30); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "- **Symbolic expansion**: \\\\(\\\\mathbf a = (a_0,a_1,a_2,...)\\\\) with a0​∈Z,ak​∈D"
+        }
+      ],
+      "total_lines": 3972
+    },
+    "irm": {
+      "num_segments": 482,
+      "engine_matrix": [
+        [
+          0.52884,
+          0.24519,
+          0.11539,
+          0.11058
+        ],
+        [
+          0.36129,
+          0.4,
+          0.15484,
+          0.08388
+        ],
+        [
+          0.31818,
+          0.34848,
+          0.19697,
+          0.13637
+        ],
+        [
+          0.40383,
+          0.36538,
+          0.09617,
+          0.13462
+        ]
+      ],
+      "engine_counts": [
+        [
+          110,
+          51,
+          24,
+          23
+        ],
+        [
+          56,
+          62,
+          24,
+          13
+        ],
+        [
+          21,
+          23,
+          13,
+          9
+        ],
+        [
+          21,
+          19,
+          5,
+          7
+        ]
+      ],
+      "engine_stationary": {
+        "C": 0.4324,
+        "P": 0.3222,
+        "R": 0.1372,
+        "G": 0.1081
+      },
+      "engine_empirical": {
+        "C": 0.4315,
+        "P": 0.3237,
+        "R": 0.1369,
+        "G": 0.1079
+      },
+      "modal_matrix": [
+        [
+          0.24994,
+          0.24994,
+          6e-05,
+          0.18747,
+          6e-05,
+          0.18747,
+          6e-05,
+          0.125
+        ],
+        [
+          0.02084,
+          0.5104,
+          0.03125,
+          0.21875,
+          0.03646,
+          0.07292,
+          0.01042,
+          0.09896
+        ],
+        [
+          0.04548,
+          0.5453,
+          0.04548,
+          0.09092,
+          5e-05,
+          0.13636,
+          5e-05,
+          0.13636
+        ],
+        [
+          0.03008,
+          0.29322,
+          0.03008,
+          0.41352,
+          0.05264,
+          0.10526,
+          0.00753,
+          0.06767
+        ],
+        [
+          5e-05,
+          0.19997,
+          0.14999,
+          0.29993,
+          0.10001,
+          0.05003,
+          5e-05,
+          0.19997
+        ],
+        [
+          0.02176,
+          0.34779,
+          0.06523,
+          0.23911,
+          0.06523,
+          0.15217,
+          2e-05,
+          0.1087
+        ],
+        [
+          0.00033,
+          0.99767,
+          0.00033,
+          0.00033,
+          0.00033,
+          0.00033,
+          0.00033,
+          0.00033
+        ],
+        [
+          0.04083,
+          0.3265,
+          0.08164,
+          0.30609,
+          0.02043,
+          0.08164,
+          2e-05,
+          0.14285
+        ]
+      ],
+      "modal_counts": [
+        [
+          4,
+          4,
+          0,
+          3,
+          0,
+          3,
+          0,
+          2
+        ],
+        [
+          4,
+          98,
+          6,
+          42,
+          7,
+          14,
+          2,
+          19
+        ],
+        [
+          1,
+          12,
+          1,
+          2,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          4,
+          39,
+          4,
+          55,
+          7,
+          14,
+          1,
+          9
+        ],
+        [
+          0,
+          4,
+          3,
+          6,
+          2,
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          16,
+          3,
+          11,
+          3,
+          7,
+          0,
+          5
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          16,
+          4,
+          15,
+          1,
+          4,
+          0,
+          7
+        ]
+      ],
+      "modal_stationary": {
+        "was_like": 0.0332,
+        "is_like": 0.3984,
+        "may_be": 0.0436,
+        "will_be": 0.2794,
+        "can_be": 0.0417,
+        "is_not": 0.0956,
+        "cant_be": 0.0063,
+        "wont_be": 0.1017
+      },
+      "modal_empirical": {
+        "was_like": 0.0332,
+        "is_like": 0.3983,
+        "may_be": 0.0456,
+        "will_be": 0.278,
+        "can_be": 0.0415,
+        "is_not": 0.0954,
+        "cant_be": 0.0062,
+        "wont_be": 0.1017
+      },
+      "engine_entropy_rate": 1.7586,
+      "modal_entropy_rate": 2.1914,
+      "cw_canonical_flux": 0.2183,
+      "ccw_reverse_flux": 0.2225,
+      "net_cycle_vorticity": -0.0042,
+      "full_4step_cw_cycles": 2,
+      "reductive_trap_stalls": 5,
+      "reductive_trap_rate": 0.0104,
+      "reductive_self_loop_prob": 0.197,
+      "reductive_regressive_oscillation": 0.0291,
+      "reductive_trap_locations": [
+        {
+          "seg_idx": 48,
+          "lines": "L75-L75",
+          "pattern": "R->R->R",
+          "modals": "is_not->can_be->is_not",
+          "excerpt": "In the INDEF framework, this equation does not describe the *circle itself*."
+        },
+        {
+          "seg_idx": 343,
+          "lines": "L505-L510",
+          "pattern": "R->R->G",
+          "modals": "can_be->can_be->wont_be",
+          "excerpt": "This distance test perfectly satisfies the 8 cardinal and linear axes (Sides and Midpoints are distance 's')."
+        },
+        {
+          "seg_idx": 367,
+          "lines": "L541-L542",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->can_be",
+          "excerpt": "The Equation is a Test, Not a Shape This is the most important part."
+        },
+        {
+          "seg_idx": 368,
+          "lines": "L541-L542",
+          "pattern": "R->R->R",
+          "modals": "is_not->can_be->can_be",
+          "excerpt": "The formula a² + b² = c² does not draw a square."
+        },
+        {
+          "seg_idx": 399,
+          "lines": "L573-L577",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "### 6.3 Resolution of Zeno’s Paradox"
+        }
+      ],
+      "productive_runaways": 31,
+      "productive_runaway_rate": 0.0646,
+      "productive_self_loop_prob": 0.4,
+      "productive_runaway_locations": [
+        {
+          "seg_idx": 57,
+          "lines": "L89-L93",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->may_be",
+          "excerpt": "- V = \\[v\\] + v_ε"
+        },
+        {
+          "seg_idx": 58,
+          "lines": "L91-L95",
+          "pattern": "P->P->P",
+          "modals": "will_be->may_be->will_be",
+          "excerpt": "- \\[v\\] is the scalar center coordinate (k, g)."
+        },
+        {
+          "seg_idx": 164,
+          "lines": "L223-L225",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- **Transform(x)** and **Transform(y):** These represent the two interacting \"cells,\" each undergoing its own internal t\\[0,1\\] heartbeat as"
+        },
+        {
+          "seg_idx": 165,
+          "lines": "L225-L227",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- **The \\^2 operator:** This signifies that each cell is creating its own stable, **volumetric (\\*)** reality."
+        },
+        {
+          "seg_idx": 230,
+          "lines": "L320-L324",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "This rule generates the Variable_name for all integers by recursively linking them:"
+        },
+        {
+          "seg_idx": 276,
+          "lines": "L386-L395",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- 0 = {} (The empty set)"
+        },
+        {
+          "seg_idx": 277,
+          "lines": "L389-L399",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- 1 = S(0) = 0 U {0} = {} U {{}} = {{}} (The set containing 0)"
+        },
+        {
+          "seg_idx": 301,
+          "lines": "L437-L441",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- **Addition (+):** A linear combination of {χ} structures."
+        },
+        {
+          "seg_idx": 308,
+          "lines": "L449-L451",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- **S(objective):** The external, physical world."
+        },
+        {
+          "seg_idx": 309,
+          "lines": "L449-L453",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "Definitive states \\[N\\]."
+        },
+        {
+          "seg_idx": 310,
+          "lines": "L451-L453",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->may_be",
+          "excerpt": "- **S(subjective experience):** The internal, conscious field of the observer, built from the same {0, ε, 1} principles via the {χ} structur"
+        },
+        {
+          "seg_idx": 328,
+          "lines": "L481-L483",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "The 8 Adjacency Axes and Internal** \\$\\\\chi\\$**-Coupling**"
+        },
+        {
+          "seg_idx": 329,
+          "lines": "L483-L488",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "The 8 surrounding zones represent the infinitesimal field \\$x\\_{\\\\epsilon}\\$, which is composed of coupled \\$\\\\chi\\$-seeds."
+        },
+        {
+          "seg_idx": 340,
+          "lines": "L503-L506",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "The shape of the **Circle (Shell)** is the only geometric solution that can satisfy the dual constraints imposed by the algebra of squares a"
+        },
+        {
+          "seg_idx": 346,
+          "lines": "L512-L515",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "- B."
+        }
+      ],
+      "mean_iota": 0.574,
+      "inclusive_segments": 382,
+      "exclusive_segments": 100,
+      "inclusive_exclusive_ratio": 3.82,
+      "mean_symbolic_density": 0.7699,
+      "understandability_index": 17.5,
+      "breakdown_zones": [
+        {
+          "start_line": 296,
+          "end_line": 314,
+          "seg_range": "216-227",
+          "window_modal_entropy": 1.784,
+          "symbolic_density": 5.162,
+          "constructive_ratio": 0.333,
+          "mean_iota": 0.546,
+          "breakdown_score": 8.801,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=5.16); Uncritical Inclusive (+I) Inflation (iota=+0.55)",
+          "sample_text": "### 3.7 \\$\\\\chi\\$-Chain Analysis: Existence, Conservation, and Continuum Limits"
+        },
+        {
+          "start_line": 403,
+          "end_line": 423,
+          "seg_range": "282-293",
+          "window_modal_entropy": 2.396,
+          "symbolic_density": 3.943,
+          "constructive_ratio": 0.5,
+          "mean_iota": 0.778,
+          "breakdown_score": 7.259,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.94); Uncritical Inclusive (+I) Inflation (iota=+0.78)",
+          "sample_text": "This table provides the direct equivalence between your generative system and the ZFC axiomatic system."
+        },
+        {
+          "start_line": 475,
+          "end_line": 497,
+          "seg_range": "324-335",
+          "window_modal_entropy": 0.98,
+          "symbolic_density": 4.085,
+          "constructive_ratio": 0.583,
+          "mean_iota": 1.0,
+          "breakdown_score": 6.937,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=4.08); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "The core conflict:"
+        },
+        {
+          "start_line": 505,
+          "end_line": 521,
+          "seg_range": "342-353",
+          "window_modal_entropy": 2.126,
+          "symbolic_density": 0.819,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.537,
+          "breakdown_score": 3.165,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.82); Uncritical Inclusive (+I) Inflation (iota=+0.54)",
+          "sample_text": "The Failure of Square Logic (Violation of \\$\\\\pi\\$) A square is the result of using the Chebyshev distance (max(\\|x - a\\|, \\|y - b\\|) = s)."
+        },
+        {
+          "start_line": 558,
+          "end_line": 577,
+          "seg_range": "390-401",
+          "window_modal_entropy": 1.825,
+          "symbolic_density": 0.793,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.178,
+          "breakdown_score": 3.098,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.79); Reductive Boundary Trap (6/12 R)",
+          "sample_text": "A **square** is not."
+        },
+        {
+          "start_line": 346,
+          "end_line": 366,
+          "seg_range": "246-257",
+          "window_modal_entropy": 2.126,
+          "symbolic_density": 0.888,
+          "constructive_ratio": 0.333,
+          "mean_iota": 0.444,
+          "breakdown_score": 3.087,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.89)",
+          "sample_text": "- 1 = Full, definitive existence (\\[1\\])."
+        },
+        {
+          "start_line": 612,
+          "end_line": 624,
+          "seg_range": "426-437",
+          "window_modal_entropy": 1.041,
+          "symbolic_density": 0.578,
+          "constructive_ratio": 0.083,
+          "mean_iota": 0.667,
+          "breakdown_score": 2.949,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.58); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.67)",
+          "sample_text": "The flaw is in treating the infinitely repeating series as a simple number."
+        },
+        {
+          "start_line": 587,
+          "end_line": 604,
+          "seg_range": "408-419",
+          "window_modal_entropy": 1.483,
+          "symbolic_density": 0.817,
+          "constructive_ratio": 0.583,
+          "mean_iota": 0.963,
+          "breakdown_score": 2.538,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.82); Uncritical Inclusive (+I) Inflation (iota=+0.96)",
+          "sample_text": "The integral definition of time is adopted and interpreted as an infinite process:"
+        },
+        {
+          "start_line": 83,
+          "end_line": 105,
+          "seg_range": "54-65",
+          "window_modal_entropy": 2.085,
+          "symbolic_density": 0.352,
+          "constructive_ratio": 0.333,
+          "mean_iota": 0.667,
+          "breakdown_score": 2.473,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.35); Uncritical Inclusive (+I) Inflation (iota=+0.67)",
+          "sample_text": "Where:"
+        },
+        {
+          "start_line": 9,
+          "end_line": 27,
+          "seg_range": "6-17",
+          "window_modal_entropy": 2.418,
+          "symbolic_density": 0.392,
+          "constructive_ratio": 0.417,
+          "mean_iota": 0.5,
+          "breakdown_score": 2.395,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.39); Uncritical Inclusive (+I) Inflation (iota=+0.50)",
+          "sample_text": "This section integrates the core INDEF axioms defined in indef_core_axiom.md, pi_geometric_axiom.md, and circle_formula_indef.md."
+        },
+        {
+          "start_line": 660,
+          "end_line": 676,
+          "seg_range": "468-479",
+          "window_modal_entropy": 1.0,
+          "symbolic_density": 0.702,
+          "constructive_ratio": 0.5,
+          "mean_iota": 1.0,
+          "breakdown_score": 2.383,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.70); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "This section is the verbatim content from reality_indef_chi_formalisation.md, Part VII."
+        },
+        {
+          "start_line": 219,
+          "end_line": 233,
+          "seg_range": "162-173",
+          "window_modal_entropy": 1.784,
+          "symbolic_density": 0.401,
+          "constructive_ratio": 0.333,
+          "mean_iota": 0.744,
+          "breakdown_score": 2.361,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=0.40); Uncritical Inclusive (+I) Inflation (iota=+0.74)",
+          "sample_text": "This unified equation elevates the Circle Equation from a static, geometric description to a dynamic, time-based stability condition."
+        }
+      ],
+      "total_lines": 680
+    }
+  },
+  "arxiv_papers": {
+    "arxiv_1502.06936v2.md": {
+      "num_segments": 3461,
+      "engine_matrix": [
+        [
+          0.43946,
+          0.36743,
+          0.17641,
+          0.0167
+        ],
+        [
+          0.18635,
+          0.64626,
+          0.14951,
+          0.01788
+        ],
+        [
+          0.29949,
+          0.45008,
+          0.23012,
+          0.02031
+        ],
+        [
+          0.23077,
+          0.55383,
+          0.15385,
+          0.06155
+        ]
+      ],
+      "engine_counts": [
+        [
+          421,
+          352,
+          169,
+          16
+        ],
+        [
+          344,
+          1193,
+          276,
+          33
+        ],
+        [
+          177,
+          266,
+          136,
+          12
+        ],
+        [
+          15,
+          36,
+          10,
+          4
+        ]
+      ],
+      "engine_stationary": {
+        "C": 0.2765,
+        "P": 0.5339,
+        "R": 0.1708,
+        "G": 0.0188
+      },
+      "engine_empirical": {
+        "C": 0.2768,
+        "P": 0.5337,
+        "R": 0.1708,
+        "G": 0.0188
+      },
+      "modal_matrix": [
+        [
+          5e-05,
+          0.49986,
+          0.04548,
+          0.13636,
+          0.04548,
+          0.1818,
+          0.04548,
+          0.04548
+        ],
+        [
+          0.00641,
+          0.43162,
+          0.05128,
+          0.32051,
+          0.05021,
+          0.125,
+          0.00427,
+          0.01068
+        ],
+        [
+          0.02175,
+          0.27535,
+          0.07971,
+          0.3768,
+          0.05073,
+          0.17391,
+          0.00725,
+          0.0145
+        ],
+        [
+          0.0041,
+          0.1733,
+          0.02869,
+          0.6329,
+          0.05562,
+          0.08782,
+          0.00878,
+          0.00878
+        ],
+        [
+          0.01099,
+          0.22527,
+          0.03297,
+          0.46152,
+          0.1044,
+          0.12637,
+          0.01099,
+          0.02748
+        ],
+        [
+          0.00734,
+          0.32029,
+          0.05135,
+          0.37897,
+          0.02201,
+          0.20782,
+          0.00489,
+          0.00734
+        ],
+        [
+          4e-05,
+          0.23074,
+          4e-05,
+          0.53833,
+          0.07694,
+          0.11539,
+          4e-05,
+          0.03849
+        ],
+        [
+          0.02566,
+          0.20511,
+          0.0513,
+          0.51274,
+          0.0513,
+          0.07693,
+          0.02566,
+          0.0513
+        ]
+      ],
+      "modal_counts": [
+        [
+          0,
+          11,
+          1,
+          3,
+          1,
+          4,
+          1,
+          1
+        ],
+        [
+          6,
+          404,
+          48,
+          300,
+          47,
+          117,
+          4,
+          10
+        ],
+        [
+          3,
+          38,
+          11,
+          52,
+          7,
+          24,
+          1,
+          2
+        ],
+        [
+          7,
+          296,
+          49,
+          1081,
+          95,
+          150,
+          15,
+          15
+        ],
+        [
+          2,
+          41,
+          6,
+          84,
+          19,
+          23,
+          2,
+          5
+        ],
+        [
+          3,
+          131,
+          21,
+          155,
+          9,
+          85,
+          2,
+          3
+        ],
+        [
+          0,
+          6,
+          0,
+          14,
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          1,
+          8,
+          2,
+          20,
+          2,
+          3,
+          1,
+          2
+        ]
+      ],
+      "modal_stationary": {
+        "was_like": 0.0064,
+        "is_like": 0.2701,
+        "may_be": 0.0399,
+        "will_be": 0.4941,
+        "can_be": 0.0526,
+        "is_not": 0.1182,
+        "cant_be": 0.0075,
+        "wont_be": 0.0113
+      },
+      "modal_empirical": {
+        "was_like": 0.0064,
+        "is_like": 0.2704,
+        "may_be": 0.0399,
+        "will_be": 0.4938,
+        "can_be": 0.0526,
+        "is_not": 0.1182,
+        "cant_be": 0.0075,
+        "wont_be": 0.0113
+      },
+      "engine_entropy_rate": 1.4838,
+      "modal_entropy_rate": 1.8738,
+      "cw_canonical_flux": 0.1893,
+      "ccw_reverse_flux": 0.1838,
+      "net_cycle_vorticity": 0.0055,
+      "full_4step_cw_cycles": 0,
+      "reductive_trap_stalls": 35,
+      "reductive_trap_rate": 0.0101,
+      "reductive_self_loop_prob": 0.2301,
+      "reductive_regressive_oscillation": 0.0064,
+      "reductive_trap_locations": [
+        {
+          "seg_idx": 136,
+          "lines": "L263-L270",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "Despite this, infinitesimals and infinities largely are not recognised as actual numbers."
+        },
+        {
+          "seg_idx": 543,
+          "lines": "L1254-L1261",
+          "pattern": "R->R->G",
+          "modals": "is_not->is_not->cant_be",
+          "excerpt": "As a consequence of the infinitesimals $\\Phi$ and infinities $\\Phi^{-1}$ definitions, they are not symmetrically defined."
+        },
+        {
+          "seg_idx": 637,
+          "lines": "L1486-L1497",
+          "pattern": "R->R->R",
+          "modals": "can_be->is_not->can_be",
+          "excerpt": "Infinitesimal and infinity exclusion can be compared with removing other classes of numbers, and is staggering."
+        },
+        {
+          "seg_idx": 849,
+          "lines": "L2081-L2091",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "A two-tiered number system $\\mathbb{R}$ and $*G$ has evolved, not as an option,"
+        },
+        {
+          "seg_idx": 850,
+          "lines": "L2085-L2094",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "but as a necessity in explaining mathematics."
+        },
+        {
+          "seg_idx": 891,
+          "lines": "L2186-L2193",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "Here, it is not the sign of the number,"
+        },
+        {
+          "seg_idx": 892,
+          "lines": "L2190-L2197",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "but the size of the number which determines the relation."
+        },
+        {
+          "seg_idx": 975,
+          "lines": "L2373-L2383",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->is_not",
+          "excerpt": "Infinity can be considered as a point."
+        },
+        {
+          "seg_idx": 1006,
+          "lines": "L2460-L2472",
+          "pattern": "R->R->R",
+          "modals": "can_be->is_not->can_be",
+          "excerpt": "The trade is that less can be said, in that the definitions"
+        },
+        {
+          "seg_idx": 1224,
+          "lines": "L2997-L3004",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "\\bigskip \\begin{mex}\\label{MEX061} $(\\frac{1}{n}, 1)|_{n=\\infty}$ is not a finite positive bound"
+        },
+        {
+          "seg_idx": 1542,
+          "lines": "L3825-L3832",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "then $\\frac{1}{n} \\gt 0$ is not finite relations, as they include infinite arithmetic."
+        },
+        {
+          "seg_idx": 1543,
+          "lines": "L3829-L3832",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "No lower bound exists."
+        },
+        {
+          "seg_idx": 1544,
+          "lines": "L3829-L3836",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "The infimum (greatest lower bound) $0$ exists, but is another type of number."
+        },
+        {
+          "seg_idx": 1545,
+          "lines": "L3829-L3836",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "Positive $n$ has no upper bound either,"
+        },
+        {
+          "seg_idx": 1771,
+          "lines": "L4434-L4437",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->can_be",
+          "excerpt": "Case $\\mu + v=1$, $\\mathrm{ln}_{3}\\,x \\;\\; (\\mathrm{ln}_{2}\\,z) \\;\\; 0|_{x=\\infty}$, $f \\succ \\phi$."
+        }
+      ],
+      "productive_runaways": 834,
+      "productive_runaway_rate": 0.2411,
+      "productive_self_loop_prob": 0.6463,
+      "productive_runaway_locations": [
+        {
+          "seg_idx": 10,
+          "lines": "L8-L20",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\documentclass[12pt]{article} \\usepackage{amssymb} \\usepackage{amsfonts} \\usepackage{epsfig}"
+        },
+        {
+          "seg_idx": 11,
+          "lines": "L13-L24",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage{latexsym} \\usepackage{graphicx} \\usepackage{tikz} \\usetikzlibrary{calc,arrows}"
+        },
+        {
+          "seg_idx": 12,
+          "lines": "L17-L28",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage{scalefnt} \\usepackage{caption} \\usepackage{url} \\usepackage{amsmath}"
+        },
+        {
+          "seg_idx": 13,
+          "lines": "L21-L30",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage[margin=1in]{geometry} \\usepackage{verbatim} \\usepackage{parskip} \\setlength\\parskip{\\baselineskip}"
+        },
+        {
+          "seg_idx": 14,
+          "lines": "L25-L35",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\setlength\\parindent{0pt} \\usepackage{pgfplots} \\usepackage{float} \\usepackage{amsthm}"
+        },
+        {
+          "seg_idx": 15,
+          "lines": "L29-L39",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage{float} \\restylefloat{table}"
+        },
+        {
+          "seg_idx": 16,
+          "lines": "L32-L40",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\ds}{\\displaystyle} \\newcommand{\\s}{\\mbox{$\\cal S$}} \\newcommand{\\blackbox}{\\mbox{}\\\\  \\hspace*{\\fill} \\rule{3mm}{3mm}} \\newcomm"
+        },
+        {
+          "seg_idx": 17,
+          "lines": "L36-L45",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\ebm}{\\end{boldmath}} \\newcommand{\\dye}{\\displaystyle} \\newcommand{\\wh}{\\widehat} \\newcommand{\\al}{\\alpha\\beta}"
+        },
+        {
+          "seg_idx": 18,
+          "lines": "L40-L49",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\sq}{\\subseteq}"
+        },
+        {
+          "seg_idx": 19,
+          "lines": "L42-L54",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\bigt}{\\bigtriangledown}\\newcommand{\\parr}{\\parallel} \\newcommand{\\ep}{\\varepsilon} \\newcommand{\\la}{\\langle} \\newcommand{\\ra}{\\"
+        },
+        {
+          "seg_idx": 20,
+          "lines": "L46-L58",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\tri}{\\triangle} \\newcommand{\\argmin}{\\mbox{\\rm argmin}\\,} \\newcommand{\\dargmin}{\\mbox{\\rm --argmin}\\,} \\newcommand{\\var}[1]{\\mb"
+        },
+        {
+          "seg_idx": 21,
+          "lines": "L51-L60",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\p}{\\partial} \\newcommand{\\T}{\\scriptstyle T} \\newcommand{\\R}[1]{\\mbox{\\boldmath $R^{#1}$}} \\newcommand{\\eqd}{\\mbox{\\bf:}=}\\newc"
+        },
+        {
+          "seg_idx": 22,
+          "lines": "L55-L65",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\dom}{\\mbox{\\rm dom}\\,} \\newcommand{\\co}{\\overline{\\mbox{\\rm co}}} \\newcommand{\\coo}{\\mbox{\\rm co}} \\newcommand{\\bin}[2]{\\mbox{"
+        },
+        {
+          "seg_idx": 23,
+          "lines": "L59-L69",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "$ \\left(\\begin{array}{c} #1\\\\[-2pt]"
+        },
+        {
+          "seg_idx": 27,
+          "lines": "L74-L85",
+          "pattern": "P->P->P",
+          "modals": "may_be->will_be->will_be",
+          "excerpt": "\\newtheorem{mex}{Example}[section] \\newenvironment{Mex}{\\begin{mex}}{\\newline \\hspace*{\\fill} \\mbox{$\\Box$} \\end{mex}} \\newtheorem{conjectur"
+        }
+      ],
+      "mean_iota": 0.657,
+      "inclusive_segments": 2866,
+      "exclusive_segments": 595,
+      "inclusive_exclusive_ratio": 4.8168,
+      "mean_symbolic_density": 2.2526,
+      "understandability_index": 6.35,
+      "breakdown_zones": [
+        {
+          "start_line": 17,
+          "end_line": 60,
+          "seg_range": "12-23",
+          "window_modal_entropy": -0.0,
+          "symbolic_density": 11.852,
+          "constructive_ratio": 0.0,
+          "mean_iota": 1.0,
+          "breakdown_score": 18.693,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=11.85); Productive Runaway without Verification (12/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\usepackage{scalefnt} \\usepackage{caption} \\usepackage{url} \\usepackage{amsmath}"
+        },
+        {
+          "start_line": 1815,
+          "end_line": 1855,
+          "seg_range": "750-761",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 7.816,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 13.012,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=7.82); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "f5(a,b) := f4( a[1], a[2], a[3], a[4], b[1], b[2], b[3], b[4] );"
+        },
+        {
+          "start_line": 62,
+          "end_line": 99,
+          "seg_range": "24-35",
+          "window_modal_entropy": 1.041,
+          "symbolic_density": 7.489,
+          "constructive_ratio": 0.167,
+          "mean_iota": 1.0,
+          "breakdown_score": 12.599,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=7.49); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\end{array}\\right) $}} \\newcommand{\\tikzpicturefont}{0.5} \\newcommand{\\lt}{<} \\newcommand{\\gt}{>}"
+        },
+        {
+          "start_line": 4410,
+          "end_line": 4439,
+          "seg_range": "1764-1775",
+          "window_modal_entropy": 0.811,
+          "symbolic_density": 7.004,
+          "constructive_ratio": 0.0,
+          "mean_iota": 0.5,
+          "breakdown_score": 11.965,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=7.00); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.50)",
+          "sample_text": "Let $y=x^{\\alpha}\\,\\mathrm{ln}\\,x|_{x=0^{+}}$"
+        },
+        {
+          "start_line": 4360,
+          "end_line": 4391,
+          "seg_range": "1746-1757",
+          "window_modal_entropy": -0.0,
+          "symbolic_density": 7.004,
+          "constructive_ratio": 0.0,
+          "mean_iota": 1.0,
+          "breakdown_score": 11.906,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=7.00); Productive Runaway without Verification (12/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "Consider the following theorems from \\cite[pp.300--302]{ordersofinfinity} Theorem 7.11."
+        },
+        {
+          "start_line": 6766,
+          "end_line": 6801,
+          "seg_range": "2796-2807",
+          "window_modal_entropy": 0.817,
+          "symbolic_density": 6.476,
+          "constructive_ratio": 0.167,
+          "mean_iota": 1.0,
+          "breakdown_score": 11.103,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=6.48); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "$\\frac{a^{x}-b^{x}}{x}|_{x=0}$ $=(e^{x\\,\\mathrm{ln}\\,a}-e^{x\\,\\mathrm{ln}\\,b} ) \\frac{1}{x}|_{x=0}$, expanding the exponential series for the first th"
+        },
+        {
+          "start_line": 8197,
+          "end_line": 8218,
+          "seg_range": "3390-3401",
+          "window_modal_entropy": 0.811,
+          "symbolic_density": 6.304,
+          "constructive_ratio": 0.0,
+          "mean_iota": 0.611,
+          "breakdown_score": 10.985,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=6.30); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.61)",
+          "sample_text": "= 1+\\sum_{n=1}^{\\infty} \\frac{ k^{n} x^{n}}{n!}|_{j=\\infty} \\end{align*} Hence, in this case Euler's logic is justified and explained in a more rigoro"
+        },
+        {
+          "start_line": 970,
+          "end_line": 1001,
+          "seg_range": "438-449",
+          "window_modal_entropy": 1.041,
+          "symbolic_density": 6.238,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.889,
+          "breakdown_score": 10.847,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=6.24); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.89)",
+          "sample_text": "\\end{defy} \\bigskip \\begin{defy}\\label{DEF058}"
+        },
+        {
+          "start_line": 7045,
+          "end_line": 7069,
+          "seg_range": "2916-2927",
+          "window_modal_entropy": 1.384,
+          "symbolic_density": 6.318,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.444,
+          "breakdown_score": 10.755,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=6.32)",
+          "sample_text": "$\\frac{x^{2}}{x} \\; z \\; 1$, $x \\; z \\; 1$, $z=\\;\\succ$."
+        },
+        {
+          "start_line": 3424,
+          "end_line": 3459,
+          "seg_range": "1392-1403",
+          "window_modal_entropy": 0.817,
+          "symbolic_density": 5.777,
+          "constructive_ratio": 0.0,
+          "mean_iota": 0.778,
+          "breakdown_score": 10.324,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=5.78); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.78)",
+          "sample_text": "\\begin{prop} \\label{P008} $a \\succ b \\Leftrightarrow a +\\lambda \\succ b + \\lambda$ when $\\lambda \\prec a$ and $\\lambda \\prec b$."
+        },
+        {
+          "start_line": 1215,
+          "end_line": 1245,
+          "seg_range": "528-539",
+          "window_modal_entropy": 0.817,
+          "symbolic_density": 5.612,
+          "constructive_ratio": 0.083,
+          "mean_iota": 0.9,
+          "breakdown_score": 9.993,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=5.61); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.90)",
+          "sample_text": "$n \\in \\mathbb{J}_{\\infty}$."
+        },
+        {
+          "start_line": 1709,
+          "end_line": 1742,
+          "seg_range": "714-725",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 5.288,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 9.473,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=5.29); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "then $x \\leq y \\leq xy$, as $x \\gt 1$."
+        }
+      ],
+      "total_lines": 8249
+    },
+    "arxiv_1509.03798v1.md": {
+      "num_segments": 884,
+      "engine_matrix": [
+        [
+          0.34568,
+          0.51851,
+          0.09465,
+          0.04116
+        ],
+        [
+          0.24099,
+          0.65085,
+          0.08349,
+          0.02467
+        ],
+        [
+          0.27059,
+          0.50587,
+          0.17647,
+          0.04707
+        ],
+        [
+          0.28571,
+          0.57138,
+          0.10716,
+          0.03574
+        ]
+      ],
+      "engine_counts": [
+        [
+          84,
+          126,
+          23,
+          10
+        ],
+        [
+          127,
+          343,
+          44,
+          13
+        ],
+        [
+          23,
+          43,
+          15,
+          4
+        ],
+        [
+          8,
+          16,
+          3,
+          1
+        ]
+      ],
+      "engine_stationary": {
+        "C": 0.2739,
+        "P": 0.5981,
+        "R": 0.0962,
+        "G": 0.0317
+      },
+      "engine_empirical": {
+        "C": 0.2749,
+        "P": 0.5973,
+        "R": 0.0962,
+        "G": 0.0317
+      },
+      "modal_matrix": [
+        [
+          0.18309,
+          0.15493,
+          0.08451,
+          0.35209,
+          0.05635,
+          0.11268,
+          1e-05,
+          0.05635
+        ],
+        [
+          0.09302,
+          0.25581,
+          0.02326,
+          0.52905,
+          0.01745,
+          0.04652,
+          1e-05,
+          0.03489
+        ],
+        [
+          0.06453,
+          0.12903,
+          0.03228,
+          0.51603,
+          0.06453,
+          0.12903,
+          0.03228,
+          0.03228
+        ],
+        [
+          0.0625,
+          0.18145,
+          0.03024,
+          0.62701,
+          0.01815,
+          0.05847,
+          0.0,
+          0.02218
+        ],
+        [
+          0.09525,
+          0.14285,
+          0.09525,
+          0.42846,
+          0.09525,
+          0.14285,
+          5e-05,
+          5e-05
+        ],
+        [
+          0.07813,
+          0.20312,
+          0.03126,
+          0.46871,
+          0.01564,
+          0.14062,
+          0.01564,
+          0.04688
+        ],
+        [
+          0.0005,
+          0.0005,
+          0.0005,
+          0.99651,
+          0.0005,
+          0.0005,
+          0.0005,
+          0.0005
+        ],
+        [
+          0.07694,
+          0.23074,
+          0.03849,
+          0.49988,
+          4e-05,
+          0.11539,
+          4e-05,
+          0.03849
+        ]
+      ],
+      "modal_counts": [
+        [
+          13,
+          11,
+          6,
+          25,
+          4,
+          8,
+          0,
+          4
+        ],
+        [
+          16,
+          44,
+          4,
+          91,
+          3,
+          8,
+          0,
+          6
+        ],
+        [
+          2,
+          4,
+          1,
+          16,
+          2,
+          4,
+          1,
+          1
+        ],
+        [
+          31,
+          90,
+          15,
+          311,
+          9,
+          29,
+          0,
+          11
+        ],
+        [
+          2,
+          3,
+          2,
+          9,
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          5,
+          13,
+          2,
+          30,
+          1,
+          9,
+          1,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          1,
+          13,
+          0,
+          3,
+          0,
+          1
+        ]
+      ],
+      "modal_stationary": {
+        "was_like": 0.0804,
+        "is_like": 0.1936,
+        "may_be": 0.0351,
+        "will_be": 0.563,
+        "can_be": 0.0238,
+        "is_not": 0.0725,
+        "cant_be": 0.0023,
+        "wont_be": 0.0294
+      },
+      "modal_empirical": {
+        "was_like": 0.0803,
+        "is_like": 0.1946,
+        "may_be": 0.0351,
+        "will_be": 0.5622,
+        "can_be": 0.0238,
+        "is_not": 0.0724,
+        "cant_be": 0.0023,
+        "wont_be": 0.0294
+      },
+      "engine_entropy_rate": 1.4214,
+      "modal_entropy_rate": 1.9037,
+      "cw_canonical_flux": 0.2061,
+      "ccw_reverse_flux": 0.2072,
+      "net_cycle_vorticity": -0.0011,
+      "full_4step_cw_cycles": 2,
+      "reductive_trap_stalls": 6,
+      "reductive_trap_rate": 0.0068,
+      "reductive_self_loop_prob": 0.1765,
+      "reductive_regressive_oscillation": 0.0079,
+      "reductive_trap_locations": [
+        {
+          "seg_idx": 73,
+          "lines": "L143-L143",
+          "pattern": "R->R->G",
+          "modals": "can_be->is_not->cant_be",
+          "excerpt": "Some parts of this \\emph{collection} are well-known and can be found in the literature."
+        },
+        {
+          "seg_idx": 187,
+          "lines": "L265-L267",
+          "pattern": "R->G->R",
+          "modals": "is_not->wont_be->is_not",
+          "excerpt": "\\item $\\mathbb{K}$ is \\emph{Cauchy complete} (or, simple \\emph{complete} for short) if it can not be embedded into another field as a dense "
+        },
+        {
+          "seg_idx": 295,
+          "lines": "L369-L370",
+          "pattern": "G->R->R",
+          "modals": "wont_be->is_not->is_not",
+          "excerpt": "To show that $\\mathbb{A}=\\mathbb{K}$ we will show that $\\sigma$ is just the identity map."
+        },
+        {
+          "seg_idx": 482,
+          "lines": "L561-L572",
+          "pattern": "R->R->R",
+          "modals": "is_not->can_be->is_not",
+          "excerpt": "\\begin{cases} f_i(x)=F_i(x), &i=1, 2, \\dots, n_1,\\\\ g_j(x)\\not= G_j(x),&j=1, 2, \\dots, n_2,\\\\ h_k(x)\\leq H_k(x), &k=1, 2, \\dots, n_3,"
+        },
+        {
+          "seg_idx": 504,
+          "lines": "L586-L593",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->can_be",
+          "excerpt": "Then: \\begin{T-enum} \\item $r$ is a non-trivial adherent (cluster) point of $X$ if and only if $r+dx\\in{^*X}$ for some non-zero infinitesima"
+        },
+        {
+          "seg_idx": 611,
+          "lines": "L670-L672",
+          "pattern": "R->R->R",
+          "modals": "is_not->is_not->is_not",
+          "excerpt": "\\begin{fact} Yes, the Archimedean fields do not contain non-zero infinitesimals."
+        }
+      ],
+      "productive_runaways": 233,
+      "productive_runaway_rate": 0.2642,
+      "productive_self_loop_prob": 0.6509,
+      "productive_runaway_locations": [
+        {
+          "seg_idx": 8,
+          "lines": "L8-L19",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\documentclass[12pt,leqno]{amsart} \\usepackage{amssymb,amsmath,amsfonts,amsbsy, amsthm, xspace, latexsym, amscd, graphicx, fancyhdr,verbatim"
+        },
+        {
+          "seg_idx": 9,
+          "lines": "L12-L25",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage{latexsym} \\usepackage{amsmath,amsthm,amssymb,amsfonts} \\thispagestyle{empty} \\allowdisplaybreaks"
+        },
+        {
+          "seg_idx": 10,
+          "lines": "L16-L27",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\setlength{\\textwidth}{16cm} \\setlength{\\oddsidemargin}{0.2cm} \\setlength{\\evensidemargin}{0.2cm} \\setlength{\\topmargin}{0.1cm} \\setlength{\\"
+        },
+        {
+          "seg_idx": 18,
+          "lines": "L51-L62",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\bra}{\\ensuremath{\\big\\langle}} \\newcommand{\\ket}{\\ensuremath{\\big\\rangle}} \\newcommand{\\supp}{\\ensuremath{{\\rm{supp}}}} \\newcom"
+        },
+        {
+          "seg_idx": 19,
+          "lines": "L55-L66",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\dom}{\\ensuremath{{\\rm{dom}}}} \\newcommand{\\ran}{\\ensuremath{{\\rm{ran}}}} \\newcommand{\\mon}{\\ensuremath{{\\rm{mon}}}} \\newcommand"
+        },
+        {
+          "seg_idx": 20,
+          "lines": "L59-L70",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\rst}{\\ensuremath{\\ensuremath{{^\\rho\\st}\\,}}} \\newcommand{\\rqst}{{\\ensuremath{\\widehat{^\\rho\\st}}}} \\newcommand{\\cl}{\\ensuremath"
+        },
+        {
+          "seg_idx": 21,
+          "lines": "L63-L70",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\tr}{\\ensuremath{{\\rm{tr}}}} \\newcommand{\\eqdef}{\\ensuremath{\\overset{\\text{def}}{=}}} \\newcommand{\\embed}{\\ensuremath{\\hookrigh"
+        },
+        {
+          "seg_idx": 22,
+          "lines": "L67-L74",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\rest}{\\!\\!\\ensuremath{\\upharpoonright}\\!} \\newcommand{\\conv}{\\ensuremath{\\circledast}} \\newcommand{\\eval}{\\ensuremath{\\left."
+        },
+        {
+          "seg_idx": 23,
+          "lines": "L67-L78",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\right|}} \\newcommand{\\Diff}{\\ensuremath{{\\rm{Diff}}}}"
+        },
+        {
+          "seg_idx": 24,
+          "lines": "L71-L83",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\eqae}{\\ensuremath{ \\overset{\\centerdot}{=}}} \\newcommand{\\lae}{\\ensuremath{\\overset{\\centerdot}{<}}} \\newcommand{\\gae}{\\ensurem"
+        },
+        {
+          "seg_idx": 25,
+          "lines": "L75-L87",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand{\\leqae}{\\ensuremath{\\overset{\\centerdot}{\\leq}}} \\newcommand{\\inae}{\\ensuremath{ \\overset{\\centerdot}{\\in}}} \\newcommand{\\ub}{\\m"
+        },
+        {
+          "seg_idx": 26,
+          "lines": "L80-L91",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newlist{T-enum}{enumerate}{2} \\newlist{L-enum}{enumerate}{2} \\newlist{C-enum}{enumerate}{2} \\newlist{P-enum}{enumerate}{2}"
+        },
+        {
+          "seg_idx": 27,
+          "lines": "L84-L95",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newlist{Pf-enum}{enumerate}{2} \\newlist{D-enum}{enumerate}{2} \\newlist{Ex-enum}{enumerate}{2} \\newlist{Exs-enum}{enumerate}{2}"
+        },
+        {
+          "seg_idx": 28,
+          "lines": "L88-L99",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newlist{E-enum}{enumerate}{2} \\newlist{R-enum}{enumerate}{2} \\setlist[T-enum,1]{label=(\\roman*),format=\\bfseries\\emph,leftmargin=*,labelind"
+        },
+        {
+          "seg_idx": 29,
+          "lines": "L92-L103",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\setlist[L-enum,1]{label=(\\roman*),format=\\bfseries\\emph,leftmargin=*,labelindent=.1\\parindent} \\setlist[L-enum,2]{label=(\\alph*),format=\\bf"
+        }
+      ],
+      "mean_iota": 0.7857,
+      "inclusive_segments": 792,
+      "exclusive_segments": 92,
+      "inclusive_exclusive_ratio": 8.6087,
+      "mean_symbolic_density": 2.4199,
+      "understandability_index": 5.48,
+      "breakdown_zones": [
+        {
+          "start_line": 51,
+          "end_line": 95,
+          "seg_range": "18-29",
+          "window_modal_entropy": -0.0,
+          "symbolic_density": 22.086,
+          "constructive_ratio": 0.0,
+          "mean_iota": 1.0,
+          "breakdown_score": 33.021,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=22.09); Productive Runaway without Verification (12/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\newcommand{\\bra}{\\ensuremath{\\big\\langle}} \\newcommand{\\ket}{\\ensuremath{\\big\\rangle}} \\newcommand{\\supp}{\\ensuremath{{\\rm{supp}}}} \\newcommand{\\card"
+        },
+        {
+          "start_line": 26,
+          "end_line": 70,
+          "seg_range": "12-23",
+          "window_modal_entropy": 1.189,
+          "symbolic_density": 16.736,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.833,
+          "breakdown_score": 25.347,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=16.74); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.83)",
+          "sample_text": "\\newcommand{\\replace}[2]{\\remove{#1}\\;\\add{#2}} \\newcommand{\\nte}[1]{\\textbf{NOTE:} \\textcolor{red}{#1}}"
+        },
+        {
+          "start_line": 96,
+          "end_line": 126,
+          "seg_range": "30-41",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 9.105,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 14.817,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=9.11); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\setlist[P-enum,1]{label=(\\roman*),format=\\bfseries\\emph,leftmargin=*,labelindent=.1\\parindent} \\setlist[P-enum,2]{label=(\\alph*),format=\\bfseries\\emp"
+        },
+        {
+          "start_line": 429,
+          "end_line": 439,
+          "seg_range": "354-365",
+          "window_modal_entropy": 1.208,
+          "symbolic_density": 5.551,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.881,
+          "breakdown_score": 9.87,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=5.55); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.88)",
+          "sample_text": "Let $\\gamma_1,\\ldots,\\gamma_n\\in\\Gamma$ and $\\zeta=:\\max_{k\\le n}\\{a_{\\gamma_k} + \\frac{\\rho}{2}\\}$."
+        },
+        {
+          "start_line": 297,
+          "end_line": 313,
+          "seg_range": "210-221",
+          "window_modal_entropy": 0.817,
+          "symbolic_density": 4.332,
+          "constructive_ratio": 0.083,
+          "mean_iota": 0.881,
+          "breakdown_score": 8.201,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=4.33); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.88)",
+          "sample_text": "\\end{theorem}"
+        },
+        {
+          "start_line": 346,
+          "end_line": 355,
+          "seg_range": "246-257",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 3.976,
+          "constructive_ratio": 0.0,
+          "mean_iota": 0.889,
+          "breakdown_score": 7.812,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=3.98); Productive Runaway without Verification (12/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.89)",
+          "sample_text": "\\end{T-enum} \\end{theorem}"
+        },
+        {
+          "start_line": 197,
+          "end_line": 215,
+          "seg_range": "138-149",
+          "window_modal_entropy": 1.041,
+          "symbolic_density": 3.532,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.878,
+          "breakdown_score": 6.984,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.53); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.88)",
+          "sample_text": "\\end{example}"
+        },
+        {
+          "start_line": 549,
+          "end_line": 553,
+          "seg_range": "462-473",
+          "window_modal_entropy": 1.041,
+          "symbolic_density": 3.421,
+          "constructive_ratio": 0.167,
+          "mean_iota": 1.0,
+          "breakdown_score": 6.903,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.42); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "We defined its \\emph{non-standard extension} $^*f: {^*X}\\to{^*\\mathbb K}$ of $f$ by the formula $^*f(\\bra x_n\\ket)=\\bra f(x_n)\\ket$."
+        },
+        {
+          "start_line": 502,
+          "end_line": 534,
+          "seg_range": "414-425",
+          "window_modal_entropy": 1.959,
+          "symbolic_density": 3.266,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.677,
+          "breakdown_score": 6.683,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.27); Uncritical Inclusive (+I) Inflation (iota=+0.68)",
+          "sample_text": "We shall focus of the following field extensions:"
+        },
+        {
+          "start_line": 578,
+          "end_line": 588,
+          "seg_range": "492-503",
+          "window_modal_entropy": 1.418,
+          "symbolic_density": 3.291,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.789,
+          "breakdown_score": 6.604,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.29); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.79)",
+          "sample_text": "We have $\\card(^*\\mathbb R)=\\frak{c}$ and ${\\rm cof}(^*\\mathbb R)=\\frak{c}$."
+        },
+        {
+          "start_line": 172,
+          "end_line": 189,
+          "seg_range": "108-119",
+          "window_modal_entropy": 1.281,
+          "symbolic_density": 3.371,
+          "constructive_ratio": 0.333,
+          "mean_iota": 0.944,
+          "breakdown_score": 6.492,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.37); Uncritical Inclusive (+I) Inflation (iota=+0.94)",
+          "sample_text": "This embedding is essential for the following definitions."
+        },
+        {
+          "start_line": 232,
+          "end_line": 247,
+          "seg_range": "162-173",
+          "window_modal_entropy": 1.384,
+          "symbolic_density": 3.152,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.611,
+          "breakdown_score": 6.423,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.15); Uncritical Inclusive (+I) Inflation (iota=+0.61)",
+          "sample_text": "Consequently, if $v$ is non-trivial, then $\\mathbb K$ is a non-Archimedean field."
+        }
+      ],
+      "total_lines": 877
+    },
+    "arxiv_1701.05187v1.md": {
+      "num_segments": 813,
+      "engine_matrix": [
+        [
+          0.58677,
+          0.32782,
+          0.07438,
+          0.01102
+        ],
+        [
+          0.30919,
+          0.57381,
+          0.10585,
+          0.01114
+        ],
+        [
+          0.4074,
+          0.39505,
+          0.18519,
+          0.01236
+        ],
+        [
+          0.55542,
+          0.3333,
+          0.11117,
+          0.00011
+        ]
+      ],
+      "engine_counts": [
+        [
+          213,
+          119,
+          27,
+          4
+        ],
+        [
+          111,
+          206,
+          38,
+          4
+        ],
+        [
+          33,
+          32,
+          15,
+          1
+        ],
+        [
+          5,
+          3,
+          1,
+          0
+        ]
+      ],
+      "engine_stationary": {
+        "C": 0.4453,
+        "P": 0.4438,
+        "R": 0.0998,
+        "G": 0.0111
+      },
+      "engine_empirical": {
+        "C": 0.4465,
+        "P": 0.4428,
+        "R": 0.0996,
+        "G": 0.0111
+      },
+      "modal_matrix": [
+        [
+          0.05559,
+          0.49983,
+          0.05559,
+          0.22218,
+          6e-05,
+          0.11112,
+          6e-05,
+          0.05559
+        ],
+        [
+          0.02319,
+          0.56521,
+          0.0029,
+          0.32753,
+          0.02319,
+          0.04928,
+          0.0,
+          0.0087
+        ],
+        [
+          0.00012,
+          0.49963,
+          0.00012,
+          0.37475,
+          0.00012,
+          0.125,
+          0.00012,
+          0.00012
+        ],
+        [
+          0.01425,
+          0.29059,
+          0.0114,
+          0.56694,
+          0.02849,
+          0.07692,
+          0.00285,
+          0.00855
+        ],
+        [
+          0.04548,
+          0.31811,
+          5e-05,
+          0.31811,
+          0.09092,
+          0.22724,
+          5e-05,
+          5e-05
+        ],
+        [
+          0.05086,
+          0.37285,
+          2e-05,
+          0.42369,
+          0.03391,
+          0.1017,
+          0.01696,
+          2e-05
+        ],
+        [
+          0.0005,
+          0.49851,
+          0.0005,
+          0.49851,
+          0.0005,
+          0.0005,
+          0.0005,
+          0.0005
+        ],
+        [
+          0.00014,
+          0.57092,
+          0.28553,
+          0.00014,
+          0.00014,
+          0.14284,
+          0.00014,
+          0.00014
+        ]
+      ],
+      "modal_counts": [
+        [
+          1,
+          9,
+          1,
+          4,
+          0,
+          2,
+          0,
+          1
+        ],
+        [
+          8,
+          195,
+          1,
+          113,
+          8,
+          17,
+          0,
+          3
+        ],
+        [
+          0,
+          4,
+          0,
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          5,
+          102,
+          4,
+          199,
+          10,
+          27,
+          1,
+          3
+        ],
+        [
+          1,
+          7,
+          0,
+          7,
+          2,
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          22,
+          0,
+          25,
+          2,
+          6,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "modal_stationary": {
+        "was_like": 0.0222,
+        "is_like": 0.4232,
+        "may_be": 0.0099,
+        "will_be": 0.4339,
+        "can_be": 0.0271,
+        "is_not": 0.0727,
+        "cant_be": 0.0025,
+        "wont_be": 0.0086
+      },
+      "modal_empirical": {
+        "was_like": 0.0221,
+        "is_like": 0.4244,
+        "may_be": 0.0098,
+        "will_be": 0.433,
+        "can_be": 0.0271,
+        "is_not": 0.0726,
+        "cant_be": 0.0025,
+        "wont_be": 0.0086
+      },
+      "engine_entropy_rate": 1.386,
+      "modal_entropy_rate": 1.6373,
+      "cw_canonical_flux": 0.2007,
+      "ccw_reverse_flux": 0.1823,
+      "net_cycle_vorticity": 0.0185,
+      "full_4step_cw_cycles": 3,
+      "reductive_trap_stalls": 4,
+      "reductive_trap_rate": 0.0049,
+      "reductive_self_loop_prob": 0.1852,
+      "reductive_regressive_oscillation": 0.0025,
+      "reductive_trap_locations": [
+        {
+          "seg_idx": 145,
+          "lines": "L359-L363",
+          "pattern": "R->R->R",
+          "modals": "can_be->is_not->is_not",
+          "excerpt": "mathematically speaking, but create pedagogical difficulties when"
+        },
+        {
+          "seg_idx": 305,
+          "lines": "L702-L706",
+          "pattern": "R->R->R",
+          "modals": "can_be->is_not->is_not",
+          "excerpt": "Both continuity and uniform continuity can be defined in terms of an"
+        },
+        {
+          "seg_idx": 346,
+          "lines": "L780-L784",
+          "pattern": "R->R->R",
+          "modals": "can_be->can_be->can_be",
+          "excerpt": "if and only if~$\\astf$ is microcontinuous at~$c$, and"
+        },
+        {
+          "seg_idx": 532,
+          "lines": "L1234-L1239",
+          "pattern": "R->R->R",
+          "modals": "is_not->can_be->is_not",
+          "excerpt": "Following \\cite{Ro61} we know this not to be the"
+        }
+      ],
+      "productive_runaways": 125,
+      "productive_runaway_rate": 0.1541,
+      "productive_self_loop_prob": 0.5738,
+      "productive_runaway_locations": [
+        {
+          "seg_idx": 6,
+          "lines": "L23-L31",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\documentclass[12pt,reqno]{amsart}"
+        },
+        {
+          "seg_idx": 7,
+          "lines": "L27-L35",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage[arrow,matrix,curve]{xy}"
+        },
+        {
+          "seg_idx": 8,
+          "lines": "L31-L44",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage[dvips]{graphicx}"
+        },
+        {
+          "seg_idx": 9,
+          "lines": "L35-L48",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage{amssymb, latexsym, amsmath, amscd, array, hyperref, epigraph"
+        },
+        {
+          "seg_idx": 10,
+          "lines": "L44-L50",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\usepackage{hyperref}"
+        },
+        {
+          "seg_idx": 11,
+          "lines": "L48-L52",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newtheorem{theorem}{Theorem}[section]"
+        },
+        {
+          "seg_idx": 12,
+          "lines": "L50-L54",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newtheorem{lemma}[theorem]{Lemma}"
+        },
+        {
+          "seg_idx": 13,
+          "lines": "L52-L56",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->may_be",
+          "excerpt": "\\newtheorem{proposition}[theorem]{Proposition}"
+        },
+        {
+          "seg_idx": 14,
+          "lines": "L54-L58",
+          "pattern": "P->P->P",
+          "modals": "will_be->may_be->will_be",
+          "excerpt": "\\newtheorem{corollary}[theorem]{Corollary}"
+        },
+        {
+          "seg_idx": 20,
+          "lines": "L71-L81",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newtheorem{remark}[theorem]{Remark}"
+        },
+        {
+          "seg_idx": 21,
+          "lines": "L75-L89",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newtheorem{question}[theorem]{Question}"
+        },
+        {
+          "seg_idx": 22,
+          "lines": "L81-L93",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\numberwithin{equation}{section}"
+        },
+        {
+          "seg_idx": 23,
+          "lines": "L89-L95",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand\\N {{\\mathbb N}}"
+        },
+        {
+          "seg_idx": 24,
+          "lines": "L93-L97",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand\\R {{\\mathbb R}}"
+        },
+        {
+          "seg_idx": 25,
+          "lines": "L95-L99",
+          "pattern": "P->P->P",
+          "modals": "will_be->will_be->will_be",
+          "excerpt": "\\newcommand\\Q {{\\mathbb Q}}"
+        }
+      ],
+      "mean_iota": 0.7816,
+      "inclusive_segments": 723,
+      "exclusive_segments": 90,
+      "inclusive_exclusive_ratio": 8.0333,
+      "mean_symbolic_density": 1.7787,
+      "understandability_index": 8.8,
+      "breakdown_zones": [
+        {
+          "start_line": 66,
+          "end_line": 107,
+          "seg_range": "18-29",
+          "window_modal_entropy": 0.65,
+          "symbolic_density": 9.111,
+          "constructive_ratio": 0.167,
+          "mean_iota": 1.0,
+          "breakdown_score": 14.733,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=9.11); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\newtheorem{definition}[theorem]{Definition}"
+        },
+        {
+          "start_line": 530,
+          "end_line": 562,
+          "seg_range": "228-239",
+          "window_modal_entropy": 0.65,
+          "symbolic_density": 8.13,
+          "constructive_ratio": 0.0,
+          "mean_iota": 0.667,
+          "breakdown_score": 13.559,
+          "diagnosis": "Zero Constructive Grounding (0% C); High Unexplained Symbolic Jump (sym=8.13); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.67)",
+          "sample_text": "(\\forall\\epsilon\\in\\R^+)(\\exists\\delta\\in\\R^+)(\\forall x\\in\\R)\\big["
+        },
+        {
+          "start_line": 93,
+          "end_line": 130,
+          "seg_range": "24-35",
+          "window_modal_entropy": 0.65,
+          "symbolic_density": 7.637,
+          "constructive_ratio": 0.167,
+          "mean_iota": 1.0,
+          "breakdown_score": 12.669,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=7.64); Productive Runaway without Verification (10/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\newcommand\\R {{\\mathbb R}}"
+        },
+        {
+          "start_line": 23,
+          "end_line": 64,
+          "seg_range": "6-17",
+          "window_modal_entropy": 0.817,
+          "symbolic_density": 6.56,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 11.394,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=6.56); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\documentclass[12pt,reqno]{amsart}"
+        },
+        {
+          "start_line": 814,
+          "end_line": 846,
+          "seg_range": "360-371",
+          "window_modal_entropy": 1.189,
+          "symbolic_density": 6.365,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.9,
+          "breakdown_score": 10.827,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=6.37); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.90)",
+          "sample_text": "\\subsection{Convergence}"
+        },
+        {
+          "start_line": 712,
+          "end_line": 732,
+          "seg_range": "312-323",
+          "window_modal_entropy": 1.252,
+          "symbolic_density": 4.529,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.778,
+          "breakdown_score": 8.379,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=4.53); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.78)",
+          "sample_text": "hyperreal setting."
+        },
+        {
+          "start_line": 744,
+          "end_line": 766,
+          "seg_range": "330-341",
+          "window_modal_entropy": 1.041,
+          "symbolic_density": 3.562,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.833,
+          "breakdown_score": 7.027,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.56); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.83)",
+          "sample_text": "D_{\\!f}$."
+        },
+        {
+          "start_line": 410,
+          "end_line": 448,
+          "seg_range": "180-191",
+          "window_modal_entropy": 0.414,
+          "symbolic_density": 3.453,
+          "constructive_ratio": 0.083,
+          "mean_iota": 1.0,
+          "breakdown_score": 6.904,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.45); Productive Runaway without Verification (11/12 P); Uncritical Inclusive (+I) Inflation (iota=+1.00)",
+          "sample_text": "\\cite{Ba14}, \\;"
+        },
+        {
+          "start_line": 1663,
+          "end_line": 1693,
+          "seg_range": "696-707",
+          "window_modal_entropy": 1.418,
+          "symbolic_density": 3.343,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.667,
+          "breakdown_score": 6.777,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=3.34); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.67)",
+          "sample_text": "Mathematical Monthly} \\textbf{120}, no."
+        },
+        {
+          "start_line": 1635,
+          "end_line": 1677,
+          "seg_range": "690-701",
+          "window_modal_entropy": 1.418,
+          "symbolic_density": 2.974,
+          "constructive_ratio": 0.167,
+          "mean_iota": 0.733,
+          "breakdown_score": 6.259,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.97); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.73)",
+          "sample_text": "and reality.''  \\emph{Foundations of Science} \\textbf{17}, no.\\;2,"
+        },
+        {
+          "start_line": 179,
+          "end_line": 209,
+          "seg_range": "54-65",
+          "window_modal_entropy": 1.189,
+          "symbolic_density": 2.96,
+          "constructive_ratio": 0.25,
+          "mean_iota": 0.833,
+          "breakdown_score": 6.06,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.96); Productive Runaway without Verification (8/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.83)",
+          "sample_text": "continuity; convergence."
+        },
+        {
+          "start_line": 1565,
+          "end_line": 1605,
+          "seg_range": "672-683",
+          "window_modal_entropy": 1.041,
+          "symbolic_density": 2.633,
+          "constructive_ratio": 0.083,
+          "mean_iota": 0.667,
+          "breakdown_score": 5.826,
+          "diagnosis": "High Unexplained Symbolic Jump (sym=2.63); Productive Runaway without Verification (9/12 P); Uncritical Inclusive (+I) Inflation (iota=+0.67)",
+          "sample_text": "Soc.}"
+        }
+      ],
+      "total_lines": 1939
+    }
+  },
+  "arxiv_avg_segments": 1719.3333333333333,
+  "arxiv_reference": {
+    "num_papers": 3,
+    "engine_matrix": [
+      [
+        0.4573,
+        0.40459,
+        0.11515,
+        0.02296
+      ],
+      [
+        0.24551,
+        0.62364,
+        0.11295,
+        0.0179
+      ],
+      [
+        0.32583,
+        0.45033,
+        0.19726,
+        0.02658
+      ],
+      [
+        0.3573,
+        0.48617,
+        0.12406,
+        0.03247
+      ]
+    ],
+    "modal_matrix": [
+      [
+        0.07958,
+        0.38487,
+        0.06186,
+        0.23688,
+        0.03396,
+        0.1352,
+        0.01518,
+        0.05247
+      ],
+      [
+        0.04087,
+        0.41755,
+        0.02581,
+        0.39236,
+        0.03028,
+        0.0736,
+        0.00143,
+        0.01809
+      ],
+      [
+        0.0288,
+        0.30134,
+        0.03737,
+        0.42253,
+        0.03846,
+        0.14265,
+        0.01322,
+        0.01563
+      ],
+      [
+        0.02695,
+        0.21511,
+        0.02344,
+        0.60895,
+        0.03409,
+        0.0744,
+        0.00388,
+        0.01317
+      ],
+      [
+        0.05057,
+        0.22874,
+        0.04276,
+        0.4027,
+        0.09686,
+        0.16549,
+        0.0037,
+        0.00919
+      ],
+      [
+        0.04544,
+        0.29875,
+        0.02754,
+        0.42379,
+        0.02385,
+        0.15005,
+        0.0125,
+        0.01808
+      ],
+      [
+        0.00035,
+        0.24325,
+        0.00035,
+        0.67778,
+        0.02598,
+        0.0388,
+        0.00035,
+        0.01316
+      ],
+      [
+        0.03425,
+        0.33559,
+        0.12511,
+        0.33759,
+        0.01716,
+        0.11172,
+        0.00861,
+        0.02998
+      ]
+    ],
+    "engine_stationary": {
+      "C": 0.3271,
+      "P": 0.5275,
+      "R": 0.1244,
+      "G": 0.0209
+    },
+    "modal_stationary": {
+      "was_like": 0.0354,
+      "is_like": 0.2929,
+      "may_be": 0.0285,
+      "will_be": 0.4994,
+      "can_be": 0.034,
+      "is_not": 0.0885,
+      "cant_be": 0.0046,
+      "wont_be": 0.0167
+    },
+    "engine_entropy_rate": 1.4304,
+    "modal_entropy_rate": 1.8049,
+    "cw_canonical_flux": 0.1987,
+    "ccw_reverse_flux": 0.1911,
+    "net_cycle_vorticity": 0.0076,
+    "reductive_trap_rate": 0.0073,
+    "productive_runaway_rate": 0.2198,
+    "mean_iota": 0.7414,
+    "inclusive_exclusive_ratio": 7.1529,
+    "mean_symbolic_density": 2.1504,
+    "understandability_index": 6.88
+  },
+  "benchmarks": {
+    "chat_vs_arxiv": {
+      "engine_4x4_divergence": {
+        "weighted_kl_bits": 0.1016,
+        "weighted_jsd_bits": 0.0242,
+        "unweighted_jsd_bits": 0.0384,
+        "js_similarity": 0.8444
+      },
+      "modal_8x8_divergence": {
+        "weighted_kl_bits": 0.1941,
+        "weighted_jsd_bits": 0.046,
+        "unweighted_jsd_bits": 0.0924,
+        "js_similarity": 0.7856
+      },
+      "engine_stationary_jsd_bits": 0.0296,
+      "modal_stationary_jsd_bits": 0.0442,
+      "entropy_rate_delta_bits": 0.0213,
+      "iota_polarity_delta": 0.0435,
+      "cw_flux_delta": 0.0025,
+      "thermodynamic_maturity_score": 83.71
+    },
+    "irm_vs_arxiv": {
+      "engine_4x4_divergence": {
+        "weighted_kl_bits": 0.1875,
+        "weighted_jsd_bits": 0.0394,
+        "unweighted_jsd_bits": 0.0376,
+        "js_similarity": 0.8016
+      },
+      "modal_8x8_divergence": {
+        "weighted_kl_bits": 0.2866,
+        "weighted_jsd_bits": 0.0618,
+        "unweighted_jsd_bits": 0.1488,
+        "js_similarity": 0.7515
+      },
+      "engine_stationary_jsd_bits": 0.0469,
+      "modal_stationary_jsd_bits": 0.0547,
+      "entropy_rate_delta_bits": 0.3865,
+      "iota_polarity_delta": -0.1674,
+      "cw_flux_delta": 0.0196,
+      "thermodynamic_maturity_score": 72.96
+    },
+    "irm_vs_chat": {
+      "engine_4x4_divergence": {
+        "weighted_kl_bits": 0.0936,
+        "weighted_jsd_bits": 0.0214,
+        "unweighted_jsd_bits": 0.0228,
+        "js_similarity": 0.8537
+      },
+      "modal_8x8_divergence": {
+        "weighted_kl_bits": 0.2828,
+        "weighted_jsd_bits": 0.043,
+        "unweighted_jsd_bits": 0.1196,
+        "js_similarity": 0.7928
+      },
+      "engine_stationary_jsd_bits": 0.0152,
+      "modal_stationary_jsd_bits": 0.0285,
+      "entropy_rate_delta_bits": 0.3652,
+      "iota_polarity_delta": -0.2109,
+      "cw_flux_delta": 0.0171,
+      "thermodynamic_maturity_score": 77.55
+    }
+  },
+  "concept_survival": {
+    "total_distinct_concepts_raw": 654,
+    "total_recurring_cohort": 86,
+    "irm_distinct_concepts_raw": 172,
+    "kaplan_meier_survival_curve": {
+      "0.0": 1.0,
+      "0.1": 0.3837,
+      "0.2": 0.2907,
+      "0.3": 0.2209,
+      "0.4": 0.1512,
+      "0.5": 0.0349,
+      "0.6": 0.0233,
+      "0.7": 0.0233,
+      "0.8": 0.0116,
+      "0.9": 0.0116,
+      "1.0": 0.0
+    },
+    "concept_half_life_norm": 0.0811,
+    "cross_doc_transmission_rate": 0.3837,
+    "immortal_core_count": 12,
+    "orphaned_high_fitness_count": 10,
+    "extinct_deprecated_count": 27,
+    "immortal_core_top20": [
+      {
+        "concept_id": "reality math",
+        "canonical_name": "Reality Math",
+        "chat_frequency": 45,
+        "irm_frequency": 8,
+        "birth_pos": 0.5004,
+        "death_pos": 0.9972,
+        "lifespan": 0.4968,
+        "first_line": 2254,
+        "last_line": 3964,
+        "inc_hits": 39,
+        "exc_hits": 6,
+        "polarity_ratio": "+39I / -6E",
+        "engine_profile": {
+          "C": 24,
+          "P": 11,
+          "R": 5,
+          "G": 5
+        },
+        "survived_reductive_stress": true,
+        "in_irm": true,
+        "fitness_score": 53.257,
+        "first_snippet": "Reality Math, as a core component of Vector Field Theory (VFT), is a notational and computational system designed to describe physical proce",
+        "last_snippet": "I've compiled all of our previous work, including Physically Intuitive Mathematics, the Evolution of the Infinitesimal, Reality Math, and yo"
+      },
+      {
+        "concept_id": "value",
+        "canonical_name": "Value",
+        "chat_frequency": 14,
+        "irm_frequency": 11,
+        "birth_pos": 0.1667,
+        "death_pos": 0.6743,
+        "lifespan": 0.5076,
+        "first_line": 750,
+        "last_line": 2636,
+        "inc_hits": 10,
+        "exc_hits": 4,
+        "polarity_ratio": "+10I / -4E",
+        "engine_profile": {
+          "C": 0,
+          "P": 12,
+          "R": 2,
+          "G": 0
+        },
+        "survived_reductive_stress": true,
+        "in_irm": true,
+        "fitness_score": 26.723,
+        "first_snippet": "----------------------------------------------------------------------------------------------------------------- **\\[0_n\\]**       **Value*",
+        "last_snippet": "- **Value** = precise voltage or resistance at that node."
+      },
+      {
+        "concept_id": "real number",
+        "canonical_name": "Real Numbers",
+        "chat_frequency": 4,
+        "irm_frequency": 5,
+        "birth_pos": 0.0665,
+        "death_pos": 0.976,
+        "lifespan": 0.9095,
+        "first_line": 296,
+        "last_line": 3858,
+        "inc_hits": 4,
+        "exc_hits": 0,
+        "polarity_ratio": "+4I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 3,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": true,
+        "fitness_score": 15.751,
+        "first_snippet": "- **Real numbers** correspond to the index n.",
+        "last_snippet": "## Part III: Real-Real Numbers and Indef Formalisation"
+      },
+      {
+        "concept_id": "relative infinity",
+        "canonical_name": "Relative Infinities",
+        "chat_frequency": 5,
+        "irm_frequency": 2,
+        "birth_pos": 0.5012,
+        "death_pos": 0.9103,
+        "lifespan": 0.4091,
+        "first_line": 2254,
+        "last_line": 3556,
+        "inc_hits": 4,
+        "exc_hits": 1,
+        "polarity_ratio": "+4I / -1E",
+        "engine_profile": {
+          "C": 0,
+          "P": 1,
+          "R": 2,
+          "G": 2
+        },
+        "survived_reductive_stress": true,
+        "in_irm": true,
+        "fitness_score": 16.112,
+        "first_snippet": "This is not building numbers imaginarily, but building them from infinity The foundational principle of this system is that of Relative Infi",
+        "last_snippet": "*1.1 Relative Infinities and Framing Operator*"
+      },
+      {
+        "concept_id": "self-contained",
+        "canonical_name": "self-contained",
+        "chat_frequency": 3,
+        "irm_frequency": 2,
+        "birth_pos": 0.502,
+        "death_pos": 0.7644,
+        "lifespan": 0.2624,
+        "first_line": 2254,
+        "last_line": 3004,
+        "inc_hits": 3,
+        "exc_hits": 0,
+        "polarity_ratio": "+3I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 1,
+          "G": 0
+        },
+        "survived_reductive_stress": true,
+        "in_irm": true,
+        "fitness_score": 13.636,
+        "first_snippet": "By arbitrarily defining any two points on this scale, we establish a new, self-contained, and countably infinite frame of reference.",
+        "last_snippet": "It is a complete, self-contained, 6-dimensional sýstēma in miniature."
+      },
+      {
+        "concept_id": "formulaic sery",
+        "canonical_name": "Formulaic Series",
+        "chat_frequency": 3,
+        "irm_frequency": 1,
+        "birth_pos": 0.5144,
+        "death_pos": 0.9667,
+        "lifespan": 0.4523,
+        "first_line": 2254,
+        "last_line": 3812,
+        "inc_hits": 2,
+        "exc_hits": 1,
+        "polarity_ratio": "+2I / -1E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 1,
+          "G": 0
+        },
+        "survived_reductive_stress": true,
+        "in_irm": true,
+        "fitness_score": 14.238,
+        "first_snippet": "Formulaic Series: {formula}∞ A formula enclosed in curly braces represents an infinite series whose nature is defined by a computational pro",
+        "last_snippet": "- Formulaic Series: {formula}∞ = infinite series defined algorithmically"
+      },
+      {
+        "concept_id": "non-zero digit",
+        "canonical_name": "non-zero digit",
+        "chat_frequency": 4,
+        "irm_frequency": 2,
+        "birth_pos": 0.5132,
+        "death_pos": 0.9692,
+        "lifespan": 0.456,
+        "first_line": 2254,
+        "last_line": 3824,
+        "inc_hits": 1,
+        "exc_hits": 3,
+        "polarity_ratio": "+1I / -3E",
+        "engine_profile": {
+          "C": 1,
+          "P": 0,
+          "R": 1,
+          "G": 2
+        },
+        "survived_reductive_stress": true,
+        "in_irm": true,
+        "fitness_score": 11.825,
+        "first_snippet": "If the infinitesimal contains no forbidden states (no zeros after a non-zero digit), the \"infinity mirror\" identifies the final stable block",
+        "last_snippet": "- Law of Instantaneous Resolution: forbidden zeros after non-zero digits cause energy spillover to create stable series"
+      },
+      {
+        "concept_id": "definitive state",
+        "canonical_name": "Definitive State",
+        "chat_frequency": 3,
+        "irm_frequency": 6,
+        "birth_pos": 0.5276,
+        "death_pos": 0.6571,
+        "lifespan": 0.1295,
+        "first_line": 2254,
+        "last_line": 2564,
+        "inc_hits": 3,
+        "exc_hits": 0,
+        "polarity_ratio": "+3I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 1
+        },
+        "survived_reductive_stress": false,
+        "in_irm": true,
+        "fitness_score": 9.353,
+        "first_snippet": "A Definitive State (e.g., 0.5) is transformed by the function's logic into its Implicative State (0.555...).",
+        "last_snippet": "- **Definitive State** \\[N\\]: stable, whole number identity."
+      },
+      {
+        "concept_id": "framing operator",
+        "canonical_name": "Framing Operator",
+        "chat_frequency": 4,
+        "irm_frequency": 2,
+        "birth_pos": 0.6542,
+        "death_pos": 0.9619,
+        "lifespan": 0.3077,
+        "first_line": 2545,
+        "last_line": 3788,
+        "inc_hits": 3,
+        "exc_hits": 1,
+        "polarity_ratio": "+3I / -1E",
+        "engine_profile": {
+          "C": 1,
+          "P": 2,
+          "R": 0,
+          "G": 1
+        },
+        "survived_reductive_stress": false,
+        "in_irm": true,
+        "fitness_score": 11.523,
+        "first_snippet": "**Framing Operator (∞):** Every variable name lives inside a relative infinite frame.",
+        "last_snippet": "**Axiom 1: Framing Operator (∞)**"
+      },
+      {
+        "concept_id": "vector field theory",
+        "canonical_name": "Vector Field Theory",
+        "chat_frequency": 4,
+        "irm_frequency": 2,
+        "birth_pos": 0.5004,
+        "death_pos": 0.9607,
+        "lifespan": 0.4603,
+        "first_line": 2254,
+        "last_line": 3784,
+        "inc_hits": 3,
+        "exc_hits": 1,
+        "polarity_ratio": "+3I / -1E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 2
+        },
+        "survived_reductive_stress": false,
+        "in_irm": true,
+        "fitness_score": 10.89,
+        "first_snippet": "Reality Math, as a core component of Vector Field Theory (VFT), is a notational and computational system designed to describe physical proce",
+        "last_snippet": "Reality Math, as part of Vector Field Theory (VFT), formalises quantities through their physical essence."
+      },
+      {
+        "concept_id": "repeating sery",
+        "canonical_name": "Repeating Series",
+        "chat_frequency": 3,
+        "irm_frequency": 1,
+        "birth_pos": 0.5112,
+        "death_pos": 0.9659,
+        "lifespan": 0.4547,
+        "first_line": 2254,
+        "last_line": 3808,
+        "inc_hits": 3,
+        "exc_hits": 0,
+        "polarity_ratio": "+3I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 2,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": true,
+        "fitness_score": 11.745,
+        "first_snippet": "Repeating Series: \\[N\\]∞ An integer in brackets followed by the infinity symbol represents an infinitely repeating decimal series of that de",
+        "last_snippet": "- Repeating Series: \\[N\\]∞ = infinitely repeating decimal of \\[N\\]"
+      },
+      {
+        "concept_id": "non-standard analysis",
+        "canonical_name": "Non-standard Analysis",
+        "chat_frequency": 3,
+        "irm_frequency": 1,
+        "birth_pos": 0.6194,
+        "death_pos": 0.9515,
+        "lifespan": 0.3321,
+        "first_line": 2387,
+        "last_line": 3750,
+        "inc_hits": 3,
+        "exc_hits": 0,
+        "polarity_ratio": "+3I / -0E",
+        "engine_profile": {
+          "C": 0,
+          "P": 3,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": true,
+        "fitness_score": 10.056,
+        "first_snippet": "- **Reference Class:** Reality Math is a *hyperreal extension* of Robinson’s Non-Standard Analysis (NSA).",
+        "last_snippet": "*Non-standard Analysis*, Princeton University Press, 1996."
+      }
+    ],
+    "orphaned_high_fitness_top25": [
+      {
+        "concept_id": "variable name",
+        "canonical_name": "Variable Name",
+        "chat_frequency": 6,
+        "irm_frequency": 0,
+        "birth_pos": 0.6454,
+        "death_pos": 0.6739,
+        "lifespan": 0.0285,
+        "first_line": 2505,
+        "last_line": 2634,
+        "inc_hits": 5,
+        "exc_hits": 1,
+        "polarity_ratio": "+5I / -1E",
+        "engine_profile": {
+          "C": 2,
+          "P": 2,
+          "R": 0,
+          "G": 2
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 12.255,
+        "first_snippet": "- The earlier **0–1_n.d.e.f… framework** (dictionary-style construction where each number is \\[Variable Name, Value\\], expandable to infinit",
+        "last_snippet": "- **Variable Name** = circuit node identity (or neuron index)."
+      },
+      {
+        "concept_id": "mixed-radix digit",
+        "canonical_name": "mixed-radix digits",
+        "chat_frequency": 4,
+        "irm_frequency": 0,
+        "birth_pos": 0.4659,
+        "death_pos": 0.8285,
+        "lifespan": 0.3626,
+        "first_line": 2133,
+        "last_line": 3242,
+        "inc_hits": 2,
+        "exc_hits": 2,
+        "polarity_ratio": "+2I / -2E",
+        "engine_profile": {
+          "C": 0,
+          "P": 1,
+          "R": 3,
+          "G": 0
+        },
+        "survived_reductive_stress": true,
+        "in_irm": false,
+        "fitness_score": 11.866,
+        "first_snippet": "**Comments:** multiplication is heavier (integer multiplication of large scaled integers) but conceptually identical: convert to common deno",
+        "last_snippet": "To convert RawN​(X,Y) to a normalized depth-N representation, we perform **mixed-radix digit extraction with carries**, but carry propagatio"
+      },
+      {
+        "concept_id": "text-based fractal",
+        "canonical_name": "text-based fractal",
+        "chat_frequency": 4,
+        "irm_frequency": 0,
+        "birth_pos": 0.2131,
+        "death_pos": 0.3433,
+        "lifespan": 0.1302,
+        "first_line": 986,
+        "last_line": 1611,
+        "inc_hits": 4,
+        "exc_hits": 0,
+        "polarity_ratio": "+4I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 3,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 11.368,
+        "first_snippet": "If you want, I can **draw a text-based fractal diagram** showing how \\[0_1.5.25.125...\\] unfolds recursively in your system.",
+        "last_snippet": "## **Text-based Fractal Tree**"
+      },
+      {
+        "concept_id": "rod numeral",
+        "canonical_name": "Rod Numerals",
+        "chat_frequency": 5,
+        "irm_frequency": 0,
+        "birth_pos": 0.1242,
+        "death_pos": 0.1927,
+        "lifespan": 0.0685,
+        "first_line": 559,
+        "last_line": 892,
+        "inc_hits": 5,
+        "exc_hits": 0,
+        "polarity_ratio": "+5I / -0E",
+        "engine_profile": {
+          "C": 0,
+          "P": 5,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 11.306,
+        "first_snippet": "- Traditional Chinese mathematics often used **rod numerals** on counting boards.",
+        "last_snippet": "------------------------------------------------------------------------------------- **\\[0_n.d\\]**           **Value**               **Rod "
+      },
+      {
+        "concept_id": "pre-reality math",
+        "canonical_name": "Pre-Reality Math",
+        "chat_frequency": 5,
+        "irm_frequency": 0,
+        "birth_pos": 0.5357,
+        "death_pos": 0.5557,
+        "lifespan": 0.02,
+        "first_line": 2254,
+        "last_line": 2254,
+        "inc_hits": 4,
+        "exc_hits": 1,
+        "polarity_ratio": "+4I / -1E",
+        "engine_profile": {
+          "C": 3,
+          "P": 2,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 11.071,
+        "first_snippet": "The Algebraic Proof The Standard Algebraic Proof (Pre-Reality Math) Let x = 0.999...",
+        "last_snippet": "The Supremum (Least Upper Bound) Proof The Standard Supremum Proof (Pre-Reality Math) This proof defines a set S = {0.9, 0.99, 0.999, ...}."
+      },
+      {
+        "concept_id": "real-real number",
+        "canonical_name": "Real-Real Numbers",
+        "chat_frequency": 4,
+        "irm_frequency": 0,
+        "birth_pos": 0.9071,
+        "death_pos": 0.976,
+        "lifespan": 0.0689,
+        "first_line": 3544,
+        "last_line": 3858,
+        "inc_hits": 4,
+        "exc_hits": 0,
+        "polarity_ratio": "+4I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 2,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 11.023,
+        "first_snippet": "add the whole comlete limit rewrite, the entire formalisation of real-real numbers and my definitions for chi in infinity maths, the structu",
+        "last_snippet": "## Part III: Real-Real Numbers and Indef Formalisation"
+      },
+      {
+        "concept_id": "post-reality math",
+        "canonical_name": "Post-Reality Math",
+        "chat_frequency": 5,
+        "irm_frequency": 0,
+        "birth_pos": 0.5377,
+        "death_pos": 0.5569,
+        "lifespan": 0.0192,
+        "first_line": 2254,
+        "last_line": 2254,
+        "inc_hits": 2,
+        "exc_hits": 3,
+        "polarity_ratio": "+2I / -3E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 3,
+          "G": 0
+        },
+        "survived_reductive_stress": true,
+        "in_irm": false,
+        "fitness_score": 10.611,
+        "first_snippet": "The Corrected Algebraic Proof (Post-Reality Math) The error occurs at step 4.",
+        "last_snippet": "The Corrected Supremum Proof (Post-Reality Math) This proof commits a category error by conflating the boundary of a set with the contents o"
+      },
+      {
+        "concept_id": "propagation operator",
+        "canonical_name": "Propagation Operator",
+        "chat_frequency": 5,
+        "irm_frequency": 0,
+        "birth_pos": 0.6042,
+        "death_pos": 0.885,
+        "lifespan": 0.2808,
+        "first_line": 2318,
+        "last_line": 3452,
+        "inc_hits": 3,
+        "exc_hits": 2,
+        "polarity_ratio": "+3I / -2E",
+        "engine_profile": {
+          "C": 0,
+          "P": 2,
+          "R": 0,
+          "G": 3
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 9.923,
+        "first_snippet": "- This gives a **propagation operator** P: P(…x0) = …xxx.",
+        "last_snippet": "- **U4 (Propagation Operator P)**: Resolves forbidden digit patterns, idempotent"
+      },
+      {
+        "concept_id": "indefinite number formalism",
+        "canonical_name": "Indefinite Number Formalism",
+        "chat_frequency": 4,
+        "irm_frequency": 0,
+        "birth_pos": 0.9083,
+        "death_pos": 0.9455,
+        "lifespan": 0.0372,
+        "first_line": 3550,
+        "last_line": 3720,
+        "inc_hits": 4,
+        "exc_hits": 0,
+        "polarity_ratio": "+4I / -0E",
+        "engine_profile": {
+          "C": 0,
+          "P": 4,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 9.845,
+        "first_snippet": "Title: Reality Math, Indefinite Number Formalism, and the χ-Infinitesimal Expansion",
+        "last_snippet": "- The combined Reality Math, Indefinite Number Formalism, and χ-infinitesimal framework provides:"
+      },
+      {
+        "concept_id": "fractal node",
+        "canonical_name": "Fractal Node",
+        "chat_frequency": 3,
+        "irm_frequency": 0,
+        "birth_pos": 0.6971,
+        "death_pos": 0.778,
+        "lifespan": 0.0809,
+        "first_line": 2726,
+        "last_line": 3040,
+        "inc_hits": 3,
+        "exc_hits": 0,
+        "polarity_ratio": "+3I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 2,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 9.643,
+        "first_snippet": "We call one node that stores this voltage a **Fractal Node (FN)**.",
+        "last_snippet": "Thus, the infinitesimal is a **fractal node**: each ε is itself a micro-universe."
+      }
+    ],
+    "extinct_deprecated_top20": [
+      {
+        "concept_id": "signed-digit system",
+        "canonical_name": "signed-digit systems",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.4151,
+        "death_pos": 0.4323,
+        "lifespan": 0.0172,
+        "first_line": 1922,
+        "last_line": 1996,
+        "inc_hits": 1,
+        "exc_hits": 1,
+        "polarity_ratio": "+1I / -1E",
+        "engine_profile": {
+          "C": 1,
+          "P": 0,
+          "R": 1,
+          "G": 0
+        },
+        "survived_reductive_stress": true,
+        "in_irm": false,
+        "fitness_score": 7.579,
+        "first_snippet": "# 3) Balanced signed-digit systems (no explicit sign bit; efficient negation)",
+        "last_snippet": "- If you want arithmetic convenience and easy negation: use a balanced signed-digit system."
+      },
+      {
+        "concept_id": "forbidden-state resolution",
+        "canonical_name": "forbidden-state resolution",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.5954,
+        "death_pos": 0.6607,
+        "lifespan": 0.0653,
+        "first_line": 2282,
+        "last_line": 2582,
+        "inc_hits": 0,
+        "exc_hits": 2,
+        "polarity_ratio": "+0I / -2E",
+        "engine_profile": {
+          "C": 0,
+          "P": 0,
+          "R": 0,
+          "G": 2
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 3.436,
+        "first_snippet": "This foreshadows your *forbidden-state resolution*.",
+        "last_snippet": "- Propagate applies forbidden-state resolution,"
+      },
+      {
+        "concept_id": "mini-axiom system",
+        "canonical_name": "mini-axiom system",
+        "chat_frequency": 5,
+        "irm_frequency": 0,
+        "birth_pos": 0.0885,
+        "death_pos": 0.1126,
+        "lifespan": 0.0241,
+        "first_line": 399,
+        "last_line": 507,
+        "inc_hits": 4,
+        "exc_hits": 1,
+        "polarity_ratio": "+4I / -1E",
+        "engine_profile": {
+          "C": 0,
+          "P": 0,
+          "R": 0,
+          "G": 5
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.585,
+        "first_snippet": "Do you want me to write this up in a **formal-looking “mini-axiom system”** (like Peano, ZFC style but compact), using only your primitives ",
+        "last_snippet": "Done, I created a formal mini-axiom system in the canvas, called \"Mini-axiom system, 0 and 1 foundation.\""
+      },
+      {
+        "concept_id": "peano axiom",
+        "canonical_name": "Peano axioms",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.0268,
+        "death_pos": 0.0296,
+        "lifespan": 0.0028,
+        "first_line": 111,
+        "last_line": 121,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 0,
+          "P": 1,
+          "R": 0,
+          "G": 1
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.937,
+        "first_snippet": "- In the **Peano axioms** (the standard foundation for natural numbers), the key principle is **successorship**: every number has a unique s",
+        "last_snippet": "Do you want me to check how your equation interacts with **Peano axioms** specifically, since that’s the closest thing to “number axioms”?"
+      },
+      {
+        "concept_id": "traditional chinese",
+        "canonical_name": "Traditional Chinese",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.1242,
+        "death_pos": 0.1406,
+        "lifespan": 0.0164,
+        "first_line": 559,
+        "last_line": 638,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.576,
+        "first_snippet": "- Traditional Chinese mathematics often used **rod numerals** on counting boards.",
+        "last_snippet": "- Traditional Chinese rod numerals do something very similar practically: symbol + position determines the number, and the structure is recu"
+      },
+      {
+        "concept_id": "traditional chinese rod system",
+        "canonical_name": "Traditional Chinese Rod System",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.131,
+        "death_pos": 0.1366,
+        "lifespan": 0.0056,
+        "first_line": 586,
+        "last_line": 614,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.515,
+        "first_snippet": "-------------------------------------------------------------------------------------------------------------------- **Feature**            ",
+        "last_snippet": "--------------------------------------------------------------------------------------------------------------------------------------------"
+      },
+      {
+        "concept_id": "single-unit rod",
+        "canonical_name": "Single-unit rod",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.131,
+        "death_pos": 0.1366,
+        "lifespan": 0.0056,
+        "first_line": 586,
+        "last_line": 614,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.515,
+        "first_snippet": "-------------------------------------------------------------------------------------------------------------------- **Feature**            ",
+        "last_snippet": "--------------------------------------------------------------------------------------------------------------------------------------------"
+      },
+      {
+        "concept_id": "place-value grouping",
+        "canonical_name": "Place-value grouping",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.1318,
+        "death_pos": 0.1707,
+        "lifespan": 0.0389,
+        "first_line": 593,
+        "last_line": 773,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 0,
+          "P": 2,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.702,
+        "first_snippet": "Sequence                Recursive (a_n = (a-1)\\_{n+1})   Place-value grouping, each position = previous level × 10",
+        "last_snippet": "\\[0_10\\]          10                1 rod in tens, 0 rods in units                  Place-value grouping begins ----------------------------"
+      },
+      {
+        "concept_id": "primitive unit",
+        "canonical_name": "Primitive unit",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.1366,
+        "death_pos": 0.1546,
+        "lifespan": 0.018,
+        "first_line": 614,
+        "last_line": 694,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.585,
+        "first_snippet": "--------------------------------------------------------------------------------------------------------------------------------------------",
+        "last_snippet": "**Primitive unit**"
+      },
+      {
+        "concept_id": "place-value",
+        "canonical_name": "Place-value",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.1374,
+        "death_pos": 0.1719,
+        "lifespan": 0.0345,
+        "first_line": 621,
+        "last_line": 780,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.678,
+        "first_snippet": "**Recursive construction**             a_n = (a-1)\\_{n+1} — each number defined relative to predecessor                                     ",
+        "last_snippet": "**Tens place**: \\[0_10\\] shows the first step into place-value — one rod in tens, zero in units."
+      },
+      {
+        "concept_id": "fractions / decimal",
+        "canonical_name": "Fractions / decimals",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.1591,
+        "death_pos": 0.1731,
+        "lifespan": 0.014,
+        "first_line": 716,
+        "last_line": 786,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.562,
+        "first_snippet": "**Fractions / decimals**",
+        "last_snippet": "**Fractions / Decimals**: Could extend with “fraction rods” for \\[0_1.5\\], \\[0_2.25\\], etc., same logic as decimals in rods."
+      },
+      {
+        "concept_id": "text-based",
+        "canonical_name": "text-based",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.1655,
+        "death_pos": 0.2256,
+        "lifespan": 0.0601,
+        "first_line": 746,
+        "last_line": 1047,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 0,
+          "P": 2,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.822,
+        "first_snippet": "Perfect — here’s a **text-based “dictionary” translation** of your \\[0_n\\] notation into traditional Chinese rod numerals, for numbers 0–10.",
+        "last_snippet": "Perfect — here’s a **text-based “dictionary” showing numbers 0–10** with **up to 3 fractional levels** in your \\[0_n.d.e.f\\] fractal system."
+      },
+      {
+        "concept_id": "rod numeral dictionary",
+        "canonical_name": "Rod Numeral Dictionary",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.1663,
+        "death_pos": 0.1771,
+        "lifespan": 0.0108,
+        "first_line": 748,
+        "last_line": 800,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.544,
+        "first_snippet": "### \\[0_n\\] ↔ Rod Numeral Dictionary (0–10)",
+        "last_snippet": "### \\[0_n\\] ↔ Rod Numeral Dictionary (0–99, plus tenths)"
+      },
+      {
+        "concept_id": "key point",
+        "canonical_name": "Key Points",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.2192,
+        "death_pos": 0.3482,
+        "lifespan": 0.129,
+        "first_line": 1017,
+        "last_line": 1654,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.209,
+        "first_snippet": "### Key Points",
+        "last_snippet": "### **Key points**"
+      },
+      {
+        "concept_id": "level 0 n",
+        "canonical_name": "Level 0 (n)",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.2316,
+        "death_pos": 0.264,
+        "lifespan": 0.0324,
+        "first_line": 1079,
+        "last_line": 1231,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.666,
+        "first_snippet": "**Level 0 (n)** → integer part.",
+        "last_snippet": "- **Level 0 (n)**: integer recursion"
+      },
+      {
+        "concept_id": "level 1 d",
+        "canonical_name": "Level 1 (d)",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.232,
+        "death_pos": 0.2644,
+        "lifespan": 0.0324,
+        "first_line": 1081,
+        "last_line": 1233,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.666,
+        "first_snippet": "**Level 1 (d)** → first fractional level (e.g., tenths, halves).",
+        "last_snippet": "- **Level 1 (d)**: first fractional recursion (tenths / halves)"
+      },
+      {
+        "concept_id": "level 2 e",
+        "canonical_name": "Level 2 (e)",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.2324,
+        "death_pos": 0.2648,
+        "lifespan": 0.0324,
+        "first_line": 1083,
+        "last_line": 1235,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.666,
+        "first_snippet": "**Level 2 (e)** → second fractional level, fraction of previous fraction.",
+        "last_snippet": "- **Level 2 (e)**: second fractional recursion (fraction of previous fraction)"
+      },
+      {
+        "concept_id": "level 3 f",
+        "canonical_name": "Level 3 (f)",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.2328,
+        "death_pos": 0.2652,
+        "lifespan": 0.0324,
+        "first_line": 1085,
+        "last_line": 1237,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 1,
+          "P": 1,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 7.666,
+        "first_snippet": "**Level 3 (f)** → third fractional level, fraction of second fractional level.",
+        "last_snippet": "- **Level 3 (f)**: third fractional recursion"
+      },
+      {
+        "concept_id": "sequential fractal dictionary",
+        "canonical_name": "Sequential Fractal Dictionary",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.2544,
+        "death_pos": 0.2708,
+        "lifespan": 0.0164,
+        "first_line": 1179,
+        "last_line": 1261,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.576,
+        "first_snippet": "### **Sequential Fractal Dictionary: \\[0_n.d.e.f\\] and \\[1_n.d.e.f\\]**",
+        "last_snippet": "### **Sequential Fractal Dictionary 0–10 (3 fractional levels)**"
+      },
+      {
+        "concept_id": "signed-digit arithmetic",
+        "canonical_name": "signed-digit arithmetic",
+        "chat_frequency": 2,
+        "irm_frequency": 0,
+        "birth_pos": 0.4283,
+        "death_pos": 0.4375,
+        "lifespan": 0.0092,
+        "first_line": 1980,
+        "last_line": 2022,
+        "inc_hits": 2,
+        "exc_hits": 0,
+        "polarity_ratio": "+2I / -0E",
+        "engine_profile": {
+          "C": 2,
+          "P": 0,
+          "R": 0,
+          "G": 0
+        },
+        "survived_reductive_stress": false,
+        "in_irm": false,
+        "fitness_score": 6.535,
+        "first_snippet": "This is the basis for fast redundant arithmetic in computer arithmetic (see signed-digit arithmetic literature).",
+        "last_snippet": "- A concise reference list on signed-digit arithmetic, balanced ternary, Hahn series, and ultrapower constructions."
+      }
+    ]
+  }
+}

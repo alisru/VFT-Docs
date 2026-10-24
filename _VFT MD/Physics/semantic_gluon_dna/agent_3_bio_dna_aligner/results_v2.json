@@ -1,0 +1,3244 @@
+{
+  "agent": "Agent 3 (Round 2): Multi-Document Phylogenetic Tree & Working-Out Operon Aligner v2",
+  "critique_of_unified_engine_v1": [
+    "1. Single-Pair Myopia Fixed: v1 aligned only chat vs Comprehensive Report, misclassifying formal derivations (Levi-Civita 1^inf=d, Baire prefix ultrametric, [base_n.d.e.f] radix algebra, Planck c/l_P bounds) as 'dropped', when they actually speciated into the specialized Formal Papers (Papers 7, 9, 12, 17, 24, 25, 30, Axiomatic Foundations, ORTHODOX_BRIDGE_ZFC).",
+    "2. Working-Out Proof Sub-Flag Added: v1 treated a 1-line prose claim and a 6-step algebraic chain as identical codons. v2 adds a 4th nucleotide sub-flag: W (Working-Out Step-by-Step Derivation), F (Formal Equation), A (Prose Assertion).",
+    "3. Expanded 15-Gene Taxonomic Dictionary: Added LCF (Levi-Civita/Hahn), BAI (Baire Ultrametric), RAD (Radix n.d.e.f), PLK (Planck c/l_P), NVS (Navier-Stokes), and ZFC (Orthodox Bridge/Ultrafilter) to resolve specialized mathematical operons."
+  ],
+  "genome_metrics_table": [
+    {
+      "name": "chatgpt_infinity_maths",
+      "group": "0_Ancestral_Chat",
+      "total_lines": 3972,
+      "total_codons": 1882,
+      "coding_codons": 518,
+      "coding_density_pct": 27.52,
+      "intron_pct": 72.48,
+      "working_out_proof_codons": 21,
+      "working_out_proof_pct_of_coding": 4.05,
+      "formal_eq_pct_of_coding": 47.88,
+      "assertion_pct_of_coding": 48.07,
+      "proof_to_assertion_ratio": 0.582,
+      "gc_equiv_cp_pct": 58.87,
+      "maturation_index": 0.465,
+      "operon_coherence_pct": 56.67,
+      "avg_complexity": 7.01,
+      "gene_profile": {
+        "RAD": 180,
+        "ZFC": 94,
+        "IND": 83,
+        "LIM": 59,
+        "ALG": 46,
+        "CHI": 31,
+        "SEQ": 7,
+        "PLK": 6,
+        "CIR": 4,
+        "LCF": 3
+      }
+    },
+    {
+      "name": "Comprehensive_Report_IRM",
+      "group": "1_Synthesis_Report",
+      "total_lines": 680,
+      "total_codons": 315,
+      "coding_codons": 186,
+      "coding_density_pct": 59.05,
+      "intron_pct": 40.95,
+      "working_out_proof_codons": 8,
+      "working_out_proof_pct_of_coding": 4.3,
+      "formal_eq_pct_of_coding": 61.83,
+      "assertion_pct_of_coding": 33.87,
+      "proof_to_assertion_ratio": 1.04,
+      "gc_equiv_cp_pct": 76.19,
+      "maturation_index": 2.206,
+      "operon_coherence_pct": 64.86,
+      "avg_complexity": 9.33,
+      "gene_profile": {
+        "IND": 48,
+        "CHI": 31,
+        "CIR": 26,
+        "ALG": 20,
+        "LIM": 19,
+        "ZFC": 18,
+        "PI": 14,
+        "PLK": 5,
+        "RAD": 2,
+        "SEQ": 2
+      }
+    },
+    {
+      "name": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 961,
+      "total_codons": 481,
+      "coding_codons": 147,
+      "coding_density_pct": 30.56,
+      "intron_pct": 69.44,
+      "working_out_proof_codons": 12,
+      "working_out_proof_pct_of_coding": 8.16,
+      "formal_eq_pct_of_coding": 31.97,
+      "assertion_pct_of_coding": 59.86,
+      "proof_to_assertion_ratio": 0.403,
+      "gc_equiv_cp_pct": 46.99,
+      "maturation_index": 0.335,
+      "operon_coherence_pct": 32.88,
+      "avg_complexity": 5.72,
+      "gene_profile": {
+        "LCF": 24,
+        "ZFC": 22,
+        "RAD": 21,
+        "ALG": 18,
+        "CHI": 18,
+        "BAI": 9,
+        "IND": 8,
+        "LIM": 8,
+        "DIV": 7,
+        "PI": 6
+      }
+    },
+    {
+      "name": "Claude_Engineering___Verification_Log",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 3251,
+      "total_codons": 839,
+      "coding_codons": 252,
+      "coding_density_pct": 30.04,
+      "intron_pct": 69.96,
+      "working_out_proof_codons": 40,
+      "working_out_proof_pct_of_coding": 15.87,
+      "formal_eq_pct_of_coding": 66.67,
+      "assertion_pct_of_coding": 17.46,
+      "proof_to_assertion_ratio": 2.818,
+      "gc_equiv_cp_pct": 70.8,
+      "maturation_index": 0.88,
+      "operon_coherence_pct": 38.65,
+      "avg_complexity": 11.56,
+      "gene_profile": {
+        "ZFC": 41,
+        "CHI": 37,
+        "ALG": 32,
+        "LCF": 28,
+        "NVS": 26,
+        "PLK": 18,
+        "CIR": 17,
+        "RAD": 16,
+        "IND": 11,
+        "LIM": 8
+      }
+    },
+    {
+      "name": "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 533,
+      "total_codons": 139,
+      "coding_codons": 61,
+      "coding_density_pct": 43.88,
+      "intron_pct": 56.12,
+      "working_out_proof_codons": 21,
+      "working_out_proof_pct_of_coding": 34.43,
+      "formal_eq_pct_of_coding": 31.15,
+      "assertion_pct_of_coding": 34.43,
+      "proof_to_assertion_ratio": 1.452,
+      "gc_equiv_cp_pct": 41.73,
+      "maturation_index": 0.425,
+      "operon_coherence_pct": 53.33,
+      "avg_complexity": 14.39,
+      "gene_profile": {
+        "IND": 18,
+        "ZFC": 11,
+        "PI": 10,
+        "PLK": 4,
+        "CHI": 4,
+        "LCF": 4,
+        "ALG": 4,
+        "RAD": 3,
+        "DIV": 2,
+        "LIM": 1
+      }
+    },
+    {
+      "name": "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 299,
+      "total_codons": 92,
+      "coding_codons": 57,
+      "coding_density_pct": 61.96,
+      "intron_pct": 38.04,
+      "working_out_proof_codons": 13,
+      "working_out_proof_pct_of_coding": 22.81,
+      "formal_eq_pct_of_coding": 35.09,
+      "assertion_pct_of_coding": 42.11,
+      "proof_to_assertion_ratio": 0.958,
+      "gc_equiv_cp_pct": 45.65,
+      "maturation_index": 0.681,
+      "operon_coherence_pct": 50.0,
+      "avg_complexity": 10.01,
+      "gene_profile": {
+        "LIM": 21,
+        "ALG": 7,
+        "ZFC": 6,
+        "IND": 6,
+        "CHI": 5,
+        "DIV": 3,
+        "PLK": 3,
+        "CIR": 3,
+        "RAD": 2,
+        "LCF": 1
+      }
+    },
+    {
+      "name": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 523,
+      "total_codons": 258,
+      "coding_codons": 101,
+      "coding_density_pct": 39.15,
+      "intron_pct": 60.85,
+      "working_out_proof_codons": 19,
+      "working_out_proof_pct_of_coding": 18.81,
+      "formal_eq_pct_of_coding": 24.75,
+      "assertion_pct_of_coding": 56.44,
+      "proof_to_assertion_ratio": 0.553,
+      "gc_equiv_cp_pct": 30.62,
+      "maturation_index": 0.199,
+      "operon_coherence_pct": 54.0,
+      "avg_complexity": 9.06,
+      "gene_profile": {
+        "LCF": 27,
+        "ZFC": 20,
+        "IND": 18,
+        "DIV": 7,
+        "RAD": 7,
+        "ALG": 6,
+        "LIM": 6,
+        "PI": 4,
+        "EXP": 3,
+        "BAI": 2
+      }
+    },
+    {
+      "name": "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 929,
+      "total_codons": 465,
+      "coding_codons": 235,
+      "coding_density_pct": 50.54,
+      "intron_pct": 49.46,
+      "working_out_proof_codons": 16,
+      "working_out_proof_pct_of_coding": 6.81,
+      "formal_eq_pct_of_coding": 27.23,
+      "assertion_pct_of_coding": 65.96,
+      "proof_to_assertion_ratio": 0.31,
+      "gc_equiv_cp_pct": 64.09,
+      "maturation_index": 0.871,
+      "operon_coherence_pct": 51.71,
+      "avg_complexity": 6.32,
+      "gene_profile": {
+        "NVS": 131,
+        "PLK": 21,
+        "ALG": 17,
+        "LCF": 16,
+        "CHI": 13,
+        "LIM": 11,
+        "CIR": 10,
+        "DIV": 4,
+        "IND": 3,
+        "EXP": 3
+      }
+    },
+    {
+      "name": "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 167,
+      "total_codons": 84,
+      "coding_codons": 36,
+      "coding_density_pct": 42.86,
+      "intron_pct": 57.14,
+      "working_out_proof_codons": 12,
+      "working_out_proof_pct_of_coding": 33.33,
+      "formal_eq_pct_of_coding": 33.33,
+      "assertion_pct_of_coding": 33.33,
+      "proof_to_assertion_ratio": 1.5,
+      "gc_equiv_cp_pct": 57.14,
+      "maturation_index": 0.806,
+      "operon_coherence_pct": 54.29,
+      "avg_complexity": 15.46,
+      "gene_profile": {
+        "PLK": 9,
+        "ALG": 9,
+        "LCF": 6,
+        "EXP": 5,
+        "CIR": 5,
+        "LIM": 2
+      }
+    },
+    {
+      "name": "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 267,
+      "total_codons": 40,
+      "coding_codons": 27,
+      "coding_density_pct": 67.5,
+      "intron_pct": 32.5,
+      "working_out_proof_codons": 14,
+      "working_out_proof_pct_of_coding": 51.85,
+      "formal_eq_pct_of_coding": 29.63,
+      "assertion_pct_of_coding": 18.52,
+      "proof_to_assertion_ratio": 3.6,
+      "gc_equiv_cp_pct": 75.0,
+      "maturation_index": 0.667,
+      "operon_coherence_pct": 57.69,
+      "avg_complexity": 20.21,
+      "gene_profile": {
+        "ALG": 7,
+        "LCF": 6,
+        "PLK": 6,
+        "PI": 5,
+        "CHI": 3
+      }
+    },
+    {
+      "name": "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 261,
+      "total_codons": 131,
+      "coding_codons": 66,
+      "coding_density_pct": 50.38,
+      "intron_pct": 49.62,
+      "working_out_proof_codons": 21,
+      "working_out_proof_pct_of_coding": 31.82,
+      "formal_eq_pct_of_coding": 37.88,
+      "assertion_pct_of_coding": 30.3,
+      "proof_to_assertion_ratio": 1.675,
+      "gc_equiv_cp_pct": 64.89,
+      "maturation_index": 0.915,
+      "operon_coherence_pct": 44.62,
+      "avg_complexity": 13.68,
+      "gene_profile": {
+        "PLK": 24,
+        "LCF": 8,
+        "IND": 7,
+        "ALG": 4,
+        "CIR": 4,
+        "CHI": 4,
+        "ZFC": 3,
+        "EXP": 3,
+        "NVS": 3,
+        "LIM": 2
+      }
+    },
+    {
+      "name": "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 863,
+      "total_codons": 417,
+      "coding_codons": 54,
+      "coding_density_pct": 12.95,
+      "intron_pct": 87.05,
+      "working_out_proof_codons": 6,
+      "working_out_proof_pct_of_coding": 11.11,
+      "formal_eq_pct_of_coding": 40.74,
+      "assertion_pct_of_coding": 48.15,
+      "proof_to_assertion_ratio": 0.654,
+      "gc_equiv_cp_pct": 34.05,
+      "maturation_index": 0.121,
+      "operon_coherence_pct": 39.62,
+      "avg_complexity": 7.94,
+      "gene_profile": {
+        "ALG": 19,
+        "CHI": 8,
+        "LIM": 5,
+        "PI": 5,
+        "NVS": 4,
+        "RAD": 3,
+        "IND": 3,
+        "PLK": 2,
+        "CIR": 2,
+        "LCF": 1
+      }
+    },
+    {
+      "name": "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 755,
+      "total_codons": 67,
+      "coding_codons": 37,
+      "coding_density_pct": 55.22,
+      "intron_pct": 44.78,
+      "working_out_proof_codons": 16,
+      "working_out_proof_pct_of_coding": 43.24,
+      "formal_eq_pct_of_coding": 32.43,
+      "assertion_pct_of_coding": 24.32,
+      "proof_to_assertion_ratio": 2.444,
+      "gc_equiv_cp_pct": 67.16,
+      "maturation_index": 1.35,
+      "operon_coherence_pct": 50.0,
+      "avg_complexity": 16.54,
+      "gene_profile": {
+        "CHI": 18,
+        "ALG": 8,
+        "PLK": 4,
+        "ZFC": 2,
+        "PI": 2,
+        "CIR": 1,
+        "EXP": 1,
+        "IND": 1
+      }
+    },
+    {
+      "name": "HYPOTHESIS_semantic_connection",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 240,
+      "total_codons": 68,
+      "coding_codons": 20,
+      "coding_density_pct": 29.41,
+      "intron_pct": 70.59,
+      "working_out_proof_codons": 3,
+      "working_out_proof_pct_of_coding": 15.0,
+      "formal_eq_pct_of_coding": 45.0,
+      "assertion_pct_of_coding": 40.0,
+      "proof_to_assertion_ratio": 0.938,
+      "gc_equiv_cp_pct": 63.24,
+      "maturation_index": 0.609,
+      "operon_coherence_pct": 15.79,
+      "avg_complexity": 9.27,
+      "gene_profile": {
+        "CHI": 11,
+        "CIR": 6,
+        "ALG": 2,
+        "BAI": 1
+      }
+    },
+    {
+      "name": "ORTHODOX_BRIDGE_ZFC",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 241,
+      "total_codons": 72,
+      "coding_codons": 45,
+      "coding_density_pct": 62.5,
+      "intron_pct": 37.5,
+      "working_out_proof_codons": 5,
+      "working_out_proof_pct_of_coding": 11.11,
+      "formal_eq_pct_of_coding": 53.33,
+      "assertion_pct_of_coding": 35.56,
+      "proof_to_assertion_ratio": 1.062,
+      "gc_equiv_cp_pct": 66.67,
+      "maturation_index": 1.095,
+      "operon_coherence_pct": 70.45,
+      "avg_complexity": 10.28,
+      "gene_profile": {
+        "ZFC": 19,
+        "LCF": 9,
+        "BAI": 4,
+        "IND": 4,
+        "ALG": 3,
+        "RAD": 2,
+        "PLK": 1,
+        "DIV": 1,
+        "LIM": 1,
+        "EXP": 1
+      }
+    },
+    {
+      "name": "PM_Prompt__Amended_-_Directive_Matrix_Protocol_",
+      "group": "2_IRM_Formal_Corpus",
+      "total_lines": 128,
+      "total_codons": 15,
+      "coding_codons": 3,
+      "coding_density_pct": 20.0,
+      "intron_pct": 80.0,
+      "working_out_proof_codons": 1,
+      "working_out_proof_pct_of_coding": 33.33,
+      "formal_eq_pct_of_coding": 33.33,
+      "assertion_pct_of_coding": 33.33,
+      "proof_to_assertion_ratio": 1.5,
+      "gc_equiv_cp_pct": 53.33,
+      "maturation_index": 0.2,
+      "operon_coherence_pct": 100.0,
+      "avg_complexity": 14.68,
+      "gene_profile": {
+        "ALG": 2,
+        "RAD": 1
+      }
+    },
+    {
+      "name": "arxiv_1401.0388v2",
+      "group": "3_arXiv_Reference",
+      "total_lines": 3288,
+      "total_codons": 875,
+      "coding_codons": 142,
+      "coding_density_pct": 16.23,
+      "intron_pct": 83.77,
+      "working_out_proof_codons": 17,
+      "working_out_proof_pct_of_coding": 11.97,
+      "formal_eq_pct_of_coding": 70.42,
+      "assertion_pct_of_coding": 17.61,
+      "proof_to_assertion_ratio": 2.68,
+      "gc_equiv_cp_pct": 40.34,
+      "maturation_index": 0.212,
+      "operon_coherence_pct": 76.6,
+      "avg_complexity": 14.28,
+      "gene_profile": {
+        "LIM": 88,
+        "NVS": 38,
+        "IND": 6,
+        "CIR": 5,
+        "ALG": 3,
+        "PI": 2
+      }
+    },
+    {
+      "name": "arxiv_1502.06936v2",
+      "group": "3_arXiv_Reference",
+      "total_lines": 8249,
+      "total_codons": 596,
+      "coding_codons": 303,
+      "coding_density_pct": 50.84,
+      "intron_pct": 49.16,
+      "working_out_proof_codons": 113,
+      "working_out_proof_pct_of_coding": 37.29,
+      "formal_eq_pct_of_coding": 33.99,
+      "assertion_pct_of_coding": 28.71,
+      "proof_to_assertion_ratio": 1.891,
+      "gc_equiv_cp_pct": 82.05,
+      "maturation_index": 2.258,
+      "operon_coherence_pct": 56.29,
+      "avg_complexity": 17.4,
+      "gene_profile": {
+        "LIM": 125,
+        "ALG": 54,
+        "IND": 30,
+        "ZFC": 28,
+        "DIV": 12,
+        "SEQ": 12,
+        "RAD": 10,
+        "EXP": 10,
+        "LCF": 8,
+        "PI": 7
+      }
+    },
+    {
+      "name": "arxiv_1505.02628v2",
+      "group": "3_arXiv_Reference",
+      "total_lines": 1970,
+      "total_codons": 652,
+      "coding_codons": 147,
+      "coding_density_pct": 22.55,
+      "intron_pct": 77.45,
+      "working_out_proof_codons": 19,
+      "working_out_proof_pct_of_coding": 12.93,
+      "formal_eq_pct_of_coding": 63.27,
+      "assertion_pct_of_coding": 23.81,
+      "proof_to_assertion_ratio": 1.871,
+      "gc_equiv_cp_pct": 36.5,
+      "maturation_index": 0.254,
+      "operon_coherence_pct": 80.82,
+      "avg_complexity": 11.64,
+      "gene_profile": {
+        "LIM": 70,
+        "NVS": 60,
+        "EXP": 9,
+        "IND": 3,
+        "CIR": 2,
+        "PI": 2,
+        "ALG": 1
+      }
+    },
+    {
+      "name": "arxiv_1509.03798v1",
+      "group": "3_arXiv_Reference",
+      "total_lines": 877,
+      "total_codons": 232,
+      "coding_codons": 163,
+      "coding_density_pct": 70.26,
+      "intron_pct": 29.74,
+      "working_out_proof_codons": 43,
+      "working_out_proof_pct_of_coding": 26.38,
+      "formal_eq_pct_of_coding": 68.1,
+      "assertion_pct_of_coding": 5.52,
+      "proof_to_assertion_ratio": 10.944,
+      "gc_equiv_cp_pct": 76.29,
+      "maturation_index": 1.817,
+      "operon_coherence_pct": 65.43,
+      "avg_complexity": 20.25,
+      "gene_profile": {
+        "ALG": 44,
+        "LCF": 41,
+        "ZFC": 31,
+        "LIM": 26,
+        "IND": 16,
+        "PI": 2,
+        "SEQ": 1,
+        "DIV": 1,
+        "NVS": 1
+      }
+    },
+    {
+      "name": "arxiv_1701.05187v1",
+      "group": "3_arXiv_Reference",
+      "total_lines": 1939,
+      "total_codons": 687,
+      "coding_codons": 124,
+      "coding_density_pct": 18.05,
+      "intron_pct": 81.95,
+      "working_out_proof_codons": 0,
+      "working_out_proof_pct_of_coding": 0.0,
+      "formal_eq_pct_of_coding": 16.94,
+      "assertion_pct_of_coding": 83.06,
+      "proof_to_assertion_ratio": 0.102,
+      "gc_equiv_cp_pct": 10.19,
+      "maturation_index": 0.025,
+      "operon_coherence_pct": 48.78,
+      "avg_complexity": 3.84,
+      "gene_profile": {
+        "IND": 54,
+        "LIM": 45,
+        "ZFC": 16,
+        "ALG": 6,
+        "LCF": 2,
+        "DIV": 1
+      }
+    },
+    {
+      "name": "arxiv_1706.10173v1",
+      "group": "3_arXiv_Reference",
+      "total_lines": 5496,
+      "total_codons": 2314,
+      "coding_codons": 39,
+      "coding_density_pct": 1.69,
+      "intron_pct": 98.31,
+      "working_out_proof_codons": 1,
+      "working_out_proof_pct_of_coding": 2.56,
+      "formal_eq_pct_of_coding": 10.26,
+      "assertion_pct_of_coding": 87.18,
+      "proof_to_assertion_ratio": 0.088,
+      "gc_equiv_cp_pct": 7.26,
+      "maturation_index": 0.001,
+      "operon_coherence_pct": 84.21,
+      "avg_complexity": 4.69,
+      "gene_profile": {
+        "NVS": 35,
+        "IND": 2,
+        "PI": 1,
+        "ZFC": 1
+      }
+    },
+    {
+      "name": "arxiv_1803.06056v2",
+      "group": "3_arXiv_Reference",
+      "total_lines": 4985,
+      "total_codons": 2175,
+      "coding_codons": 217,
+      "coding_density_pct": 9.98,
+      "intron_pct": 90.02,
+      "working_out_proof_codons": 17,
+      "working_out_proof_pct_of_coding": 7.83,
+      "formal_eq_pct_of_coding": 79.26,
+      "assertion_pct_of_coding": 12.9,
+      "proof_to_assertion_ratio": 3.679,
+      "gc_equiv_cp_pct": 39.26,
+      "maturation_index": 0.131,
+      "operon_coherence_pct": 74.54,
+      "avg_complexity": 15.59,
+      "gene_profile": {
+        "PLK": 124,
+        "NVS": 43,
+        "IND": 16,
+        "EXP": 11,
+        "SEQ": 9,
+        "LIM": 6,
+        "ALG": 5,
+        "DIV": 2,
+        "LCF": 1
+      }
+    },
+    {
+      "name": "arxiv_2208.00415v2",
+      "group": "3_arXiv_Reference",
+      "total_lines": 1634,
+      "total_codons": 85,
+      "coding_codons": 26,
+      "coding_density_pct": 30.59,
+      "intron_pct": 69.41,
+      "working_out_proof_codons": 13,
+      "working_out_proof_pct_of_coding": 50.0,
+      "formal_eq_pct_of_coding": 46.15,
+      "assertion_pct_of_coding": 3.85,
+      "proof_to_assertion_ratio": 19.0,
+      "gc_equiv_cp_pct": 82.35,
+      "maturation_index": 1.1,
+      "operon_coherence_pct": 76.0,
+      "avg_complexity": 40.26,
+      "gene_profile": {
+        "NVS": 11,
+        "ALG": 6,
+        "PI": 6,
+        "CIR": 2,
+        "LIM": 1
+      }
+    }
+  ],
+  "gene_evolutionary_fate": {
+    "LCF": {
+      "gene_name": "Levi-Civita Field, Hahn Series & Non-Archimedean Valuation (1^inf = d)",
+      "chat_codons_total": 3,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 3,
+      "still_unmerged_in_chat": 0,
+      "upgraded_to_working_out_proof": 3,
+      "top_formal_papers": [
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 28,
+          "working_out_proofs": 5
+        },
+        {
+          "paper": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+          "codons": 27,
+          "working_out_proofs": 5
+        },
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 24,
+          "working_out_proofs": 2
+        }
+      ]
+    },
+    "BAI": {
+      "gene_name": "Baire Space, Prefix Ultrametric & Digit Tree Topology",
+      "chat_codons_total": 0,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 0,
+      "still_unmerged_in_chat": 0,
+      "upgraded_to_working_out_proof": 0,
+      "top_formal_papers": [
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 9,
+          "working_out_proofs": 0
+        },
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 6,
+          "working_out_proofs": 1
+        },
+        {
+          "paper": "ORTHODOX_BRIDGE_ZFC",
+          "codons": 4,
+          "working_out_proofs": 0
+        }
+      ]
+    },
+    "RAD": {
+      "gene_name": "Radix [base_n.d.e.f] Symbolic Dictionary & Carry Normalization",
+      "chat_codons_total": 180,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 133,
+      "still_unmerged_in_chat": 47,
+      "upgraded_to_working_out_proof": 128,
+      "top_formal_papers": [
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 21,
+          "working_out_proofs": 3
+        },
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 16,
+          "working_out_proofs": 1
+        },
+        {
+          "paper": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+          "codons": 7,
+          "working_out_proofs": 0
+        }
+      ]
+    },
+    "PLK": {
+      "gene_name": "Planck Scale Bounds (c/l_P), Relativistic Time Dilation & Quantum Shell",
+      "chat_codons_total": 6,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 3,
+      "still_unmerged_in_chat": 3,
+      "upgraded_to_working_out_proof": 3,
+      "top_formal_papers": [
+        {
+          "paper": "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit",
+          "codons": 24,
+          "working_out_proofs": 9
+        },
+        {
+          "paper": "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t",
+          "codons": 21,
+          "working_out_proofs": 1
+        },
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 18,
+          "working_out_proofs": 2
+        }
+      ]
+    },
+    "NVS": {
+      "gene_name": "Navier-Stokes Equations, Vorticity, Viscosity & Singularity Regularization",
+      "chat_codons_total": 0,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 0,
+      "still_unmerged_in_chat": 0,
+      "upgraded_to_working_out_proof": 0,
+      "top_formal_papers": [
+        {
+          "paper": "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t",
+          "codons": 131,
+          "working_out_proofs": 9
+        },
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 26,
+          "working_out_proofs": 1
+        },
+        {
+          "paper": "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc",
+          "codons": 4,
+          "working_out_proofs": 0
+        }
+      ]
+    },
+    "ZFC": {
+      "gene_name": "ZFC Set Theory, Ultrafilters, Peano Successor & Orthodox Bridge",
+      "chat_codons_total": 94,
+      "in_comprehensive_report": 15,
+      "recovered_in_formal_corpus": 73,
+      "still_unmerged_in_chat": 6,
+      "upgraded_to_working_out_proof": 72,
+      "top_formal_papers": [
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 41,
+          "working_out_proofs": 2
+        },
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 22,
+          "working_out_proofs": 0
+        },
+        {
+          "paper": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+          "codons": 20,
+          "working_out_proofs": 6
+        }
+      ]
+    },
+    "SEQ": {
+      "gene_name": "Recursive Sequence Hierarchy (1^inf_n = 0^inf_{n+1})",
+      "chat_codons_total": 7,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 0,
+      "still_unmerged_in_chat": 7,
+      "upgraded_to_working_out_proof": 0,
+      "top_formal_papers": []
+    },
+    "IND": {
+      "gene_name": "Indefinite Number Decomposition (X = [x] + x_eps)",
+      "chat_codons_total": 83,
+      "in_comprehensive_report": 31,
+      "recovered_in_formal_corpus": 52,
+      "still_unmerged_in_chat": 0,
+      "upgraded_to_working_out_proof": 83,
+      "top_formal_papers": [
+        {
+          "paper": "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC",
+          "codons": 18,
+          "working_out_proofs": 8
+        },
+        {
+          "paper": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+          "codons": 18,
+          "working_out_proofs": 2
+        },
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 11,
+          "working_out_proofs": 2
+        }
+      ]
+    },
+    "CHI": {
+      "gene_name": "Holographic Chi Vector & Tensor Geometry ({chi})",
+      "chat_codons_total": 31,
+      "in_comprehensive_report": 10,
+      "recovered_in_formal_corpus": 15,
+      "still_unmerged_in_chat": 6,
+      "upgraded_to_working_out_proof": 24,
+      "top_formal_papers": [
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 37,
+          "working_out_proofs": 9
+        },
+        {
+          "paper": "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_",
+          "codons": 18,
+          "working_out_proofs": 9
+        },
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 18,
+          "working_out_proofs": 1
+        }
+      ]
+    },
+    "PI": {
+      "gene_name": "Pi Exploration, Angular Closure & Polygon Exhaustion",
+      "chat_codons_total": 1,
+      "in_comprehensive_report": 1,
+      "recovered_in_formal_corpus": 0,
+      "still_unmerged_in_chat": 0,
+      "upgraded_to_working_out_proof": 1,
+      "top_formal_papers": [
+        {
+          "paper": "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC",
+          "codons": 10,
+          "working_out_proofs": 7
+        },
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 6,
+          "working_out_proofs": 2
+        },
+        {
+          "paper": "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z",
+          "codons": 5,
+          "working_out_proofs": 4
+        }
+      ]
+    },
+    "EXP": {
+      "gene_name": "Exponential Growth Operator (e & Compounding)",
+      "chat_codons_total": 1,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 1,
+      "still_unmerged_in_chat": 0,
+      "upgraded_to_working_out_proof": 1,
+      "top_formal_papers": [
+        {
+          "paper": "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce",
+          "codons": 5,
+          "working_out_proofs": 4
+        },
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 5,
+          "working_out_proofs": 3
+        },
+        {
+          "paper": "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit",
+          "codons": 3,
+          "working_out_proofs": 2
+        }
+      ]
+    },
+    "CIR": {
+      "gene_name": "Circle Loop Formula & Rotational Periodicity",
+      "chat_codons_total": 4,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 3,
+      "still_unmerged_in_chat": 1,
+      "upgraded_to_working_out_proof": 1,
+      "top_formal_papers": [
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 17,
+          "working_out_proofs": 4
+        },
+        {
+          "paper": "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t",
+          "codons": 10,
+          "working_out_proofs": 0
+        },
+        {
+          "paper": "HYPOTHESIS_semantic_connection",
+          "codons": 6,
+          "working_out_proofs": 2
+        }
+      ]
+    },
+    "LIM": {
+      "gene_name": "Limits, Differential Calculus & Series Convergence",
+      "chat_codons_total": 59,
+      "in_comprehensive_report": 7,
+      "recovered_in_formal_corpus": 32,
+      "still_unmerged_in_chat": 20,
+      "upgraded_to_working_out_proof": 36,
+      "top_formal_papers": [
+        {
+          "paper": "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-",
+          "codons": 21,
+          "working_out_proofs": 2
+        },
+        {
+          "paper": "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t",
+          "codons": 11,
+          "working_out_proofs": 0
+        },
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 8,
+          "working_out_proofs": 2
+        }
+      ]
+    },
+    "DIV": {
+      "gene_name": "Division by Zero, Indeterminate Forms & Singularity Resolution",
+      "chat_codons_total": 3,
+      "in_comprehensive_report": 0,
+      "recovered_in_formal_corpus": 3,
+      "still_unmerged_in_chat": 0,
+      "upgraded_to_working_out_proof": 3,
+      "top_formal_papers": [
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 7,
+          "working_out_proofs": 2
+        },
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 7,
+          "working_out_proofs": 1
+        },
+        {
+          "paper": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+          "codons": 7,
+          "working_out_proofs": 0
+        }
+      ]
+    },
+    "ALG": {
+      "gene_name": "Algebraic Structure, Rings, Fields & Linear Operators",
+      "chat_codons_total": 46,
+      "in_comprehensive_report": 4,
+      "recovered_in_formal_corpus": 27,
+      "still_unmerged_in_chat": 15,
+      "upgraded_to_working_out_proof": 27,
+      "top_formal_papers": [
+        {
+          "paper": "Claude_Engineering___Verification_Log",
+          "codons": 32,
+          "working_out_proofs": 6
+        },
+        {
+          "paper": "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc",
+          "codons": 19,
+          "working_out_proofs": 2
+        },
+        {
+          "paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+          "codons": 18,
+          "working_out_proofs": 2
+        }
+      ]
+    }
+  },
+  "recovered_in_formal_corpus_loci": [
+    {
+      "chat_lines": [
+        111,
+        111
+      ],
+      "chat_codon": "P-LF:ZFC",
+      "gene": "ZFC",
+      "chat_heading": "Why it’s not an axiom",
+      "chat_snippet": "- In the **Peano axioms** (the standard foundation for natural numbers), the key principle is **successorship**: every number has ",
+      "recovered_in_paper": "Claude_Engineering___Verification_Log",
+      "paper_lines": [
+        1092,
+        1093
+      ],
+      "paper_codon": "P-LW:ZFC",
+      "upgraded_to_working_out": true,
+      "paper_heading": "8. The ZFC \"superiority\" claim, and how to keep its content (AUD-ENG-10)",
+      "paper_snippet": "*Computational and Ontological Superiority of IRM Over ZFC* treats \"0.999… = 1\" and \"0.999… + 1∞ = [1]\" as rivals. They are claims",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        433,
+        433
+      ],
+      "chat_codon": "P-LF:ZFC",
+      "gene": "ZFC",
+      "chat_heading": "Primitives",
+      "chat_snippet": "- Index\\_\\*R = \\*R the hyperreal extension of R.",
+      "recovered_in_paper": "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi",
+      "paper_lines": [
+        513,
+        513
+      ],
+      "paper_codon": "P-LW:ZFC",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+      "paper_snippet": "@book{robinson1966nonstandard, author = {Robinson, Abraham}, title = {Non-standard Analysis}, publisher = {North-Holland Publishin",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        914,
+        914
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "**Key observations**",
+      "chat_snippet": "3. Recursive logic still applies: \\[0\\_{n+1}\\] = \\[0_n\\]\\_1 → add one rod in units, or carry to tens when units exceed 9.",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        974,
+        974
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "3. How it connects to your previous system",
+      "chat_snippet": "- \\[0_n.d.e.f...\\] = infinitely recursive representation",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1039,
+        1039
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "Key Points",
+      "chat_snippet": "If you want, I can **expand this into a full text “dictionary” showing \\[0_n.d.e.f\\] up to 3 fractional levels** for numbers 0–10,",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1227,
+        1227
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "**How to read it**",
+      "chat_snippet": "2. \\[1_n.d.e.f\\] → base 1 hierarchy = \\[0_n.d.e.f\\] + 1",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1361,
+        1361
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "**How to read**",
+      "chat_snippet": "1. \\[0_n.d.e.f\\] = base 0 hierarchy",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1363,
+        1363
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "**How to read**",
+      "chat_snippet": "2. \\[1_n.d.e.f\\] = base 1 hierarchy = \\[0_n.d.e.f\\] + 1",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1395,
+        1395
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "Base Levels",
+      "chat_snippet": "- \\[1_n.d.e.f\\] → base 1 = \\[0_n.d.e.f\\] + 1",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1419,
+        1419
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "Full Enumeration",
+      "chat_snippet": "- \\[1_n.d.e.f\\] = \\[0_n.d.e.f\\] + 1",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1461,
+        1461
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "**4. Hundreds & Thousands**",
+      "chat_snippet": "- \\[1_n.d.e.f\\] = add 1 to the integer part",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1477,
+        1477
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "**5. Full 0–10.999… Construction**",
+      "chat_snippet": "5. \\[0_n.d.e.f\\] = n + d/10 + e/100 + f/1000",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1479,
+        1479
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "**5. Full 0–10.999… Construction**",
+      "chat_snippet": "6. \\[1_n.d.e.f\\] = n + 1 + d/10 + e/100 + f/1000",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        1839,
+        1840
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "8. Examples",
+      "chat_snippet": "3. Variable bases: If b1​=10,b2​=2,b3​=3,… you get mixed radix expansions with denominators 10,10⋅2,10⋅2⋅3,…. Mixed radices are cl",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        2515,
+        2515
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "ChatGPT said:",
+      "chat_snippet": "- 0–1_n.d.e.f = the **grammar** of the number system (how names/values expand).",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        2763,
+        2763
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "2 — Adder: adding two Fractal Nodes (charge sharing + normalization)",
+      "chat_snippet": "**High-level idea:** bring two FN voltages onto a common summing capacitor via switches; result Vsum = V(A)+V(B) (scaled by capaci",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        2886,
+        2890
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "C — Hybrid approach with digit-by-digit partial products",
+      "chat_snippet": "for each i in 0..N: for each j in 0..N: p\\_{i+j} += a_i \\* b_j (compute in analog, store onto p node) end normalize carry over p n",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        3208,
+        3208
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "3. Axioms (formal)",
+      "chat_snippet": "**U5 (Normalisation N).** There is a map N:Rχ​→Rχ​, N=P∘CanonicalRepresentative, that returns a canonical normalized representativ",
+      "recovered_in_paper": "ORTHODOX_BRIDGE_ZFC",
+      "paper_lines": [
+        135,
+        138
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "5. Both 0.999… claims are true, of different objects (B-4)",
+      "paper_snippet": "``` π(0.999…) = 999…9 / 10⁴⁰ difference = 1/10⁴⁰ ≈ 1.0e-40 π(1.000…) = 1 non-zero at every finite truncation, limit 0 ```",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        3322,
+        3322
+      ],
+      "chat_codon": "P-LF:ZFC",
+      "gene": "ZFC",
+      "chat_heading": "Embedding into hyperreals (ultrapower)",
+      "chat_snippet": "Represent each Reality number as the sequence of finite truncations {XN​}N∈N​ where XN​ is the depth-N normalized pair. Form the u",
+      "recovered_in_paper": "Claude_Engineering___Verification_Log",
+      "paper_lines": [
+        1092,
+        1093
+      ],
+      "paper_codon": "P-LW:ZFC",
+      "upgraded_to_working_out": true,
+      "paper_heading": "8. The ZFC \"superiority\" claim, and how to keep its content (AUD-ENG-10)",
+      "paper_snippet": "*Computational and Ontological Superiority of IRM Over ZFC* treats \"0.999… = 1\" and \"0.999… + 1∞ = [1]\" as rivals. They are claims",
+      "homology_score": 6.9
+    },
+    {
+      "chat_lines": [
+        3352,
+        3352
+      ],
+      "chat_codon": "P-LF:RAD",
+      "gene": "RAD",
+      "chat_heading": "8. Worked example (3-level) — addition with χ tensors",
+      "chat_snippet": "- Level 3: 10 → set c3​=0, carry q3​=1. χ-spill: update level 2: T2​←T2​+S2​+q3​S(T3​).",
+      "recovered_in_paper": "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f",
+      "paper_lines": [
+        133,
+        133
+      ],
+      "paper_codon": "P-LW:RAD",
+      "upgraded_to_working_out": true,
+      "paper_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+      "paper_snippet": "Lemma 3.1 (Radix-Independence of the Recursive Representation): For any sequence of integer radices (b_k)_{k=1}^&infin; with b_k &",
+      "homology_score": 6.9
+    }
+  ],
+  "formal_paper_operon_alignments": {
+    "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": [
+      {
+        "operon_id": "OP-01",
+        "score": 22.2,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          2159,
+          2175
+        ],
+        "a_heading": "4. Handling infinities and infinitesimals (hyperreal extension)",
+        "b_line_range": [
+          81,
+          93
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 9,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:ZFC G-AA:INT G-LF:ZFC C-AA:ZFC G-AF:LIM P-AA:ALG C-AA:RAD C-AA:RAD",
+        "b_seq": "P-LF:ZFC P-LF:ZFC P-LF:ZFC P-LA:ALG G-AA:RAD G-AA:RAD C-LA:RAD",
+        "a_snippet": "## 4. Handling infinities and infinitesimals (hyperreal extension)",
+        "b_snippet": "0_1 = 1 (Primary Successor Step S(0))"
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 17.1,
+        "dominant_gene": "RAD",
+        "a_line_range": [
+          3352,
+          3356
+        ],
+        "a_heading": "8. Worked example (3-level) — addition with χ tensors",
+        "b_line_range": [
+          107,
+          111
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 3,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "P-LF:RAD P-LW:RAD P-LW:RAD",
+        "b_seq": "P-LF:RAD P-LF:RAD P-LF:RAD",
+        "a_snippet": "- Level 3: 10 → set c3​=0, carry q3​=1. χ-spill: update level 2: T2​←T2​+S2​+q3​S(T3​).",
+        "b_snippet": "d = s_1 &in; {0, ..., b_1 - 1} (Level 1 Digit): Primary partition (default radix b_1 = 10)."
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 17.0,
+        "dominant_gene": "RAD",
+        "a_line_range": [
+          3242,
+          3256
+        ],
+        "a_heading": "4.2 Digit extraction / carry and χ-spillover",
+        "b_line_range": [
+          127,
+          143
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 9,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "R-AF:RAD P-LW:RAD C-LF:RAD G-AA:INT P-LF:ALG P-LA:RAD",
+        "b_seq": "P-LF:RAD P-LF:RAD C-LA:CHI P-LW:RAD G-AA:LCF G-AA:INT C-LA:ALG P-LF:CHI",
+        "a_snippet": "To convert RawN​(X,Y) to a normalized depth-N representation, we perform **mixed-radix digit extraction with carries**, ",
+        "b_snippet": "[1_n.d.e.f...] = [0_n.d.e.f...] + 1.0"
+      },
+      {
+        "operon_id": "OP-04",
+        "score": 16.2,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          475,
+          487
+        ],
+        "a_heading": "Axioms for the hyperreal model (Index\\_\\*R)",
+        "b_line_range": [
+          13,
+          27
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 8,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-AA:ZFC C-WA:IND C-LA:ZFC C-LF:ALG C-LF:IND C-AA:ZFC P-AF:ZFC",
+        "b_seq": "P-HF:ZFC P-LW:LCF G-AA:INT G-AA:INT R-HA:ZFC R-LA:IND G-HA:ZFC P-HF:ZFC",
+        "a_snippet": "## Axioms for the hyperreal model (Index\\_\\*R)",
+        "b_snippet": "Standard mathematical analysis, formalized under Zermelo-Fraenkel set theory with Choice (ZFC) and the real continuum (ℝ"
+      },
+      {
+        "operon_id": "OP-05",
+        "score": 13.8,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          2302,
+          2308
+        ],
+        "a_heading": "2. Core Axioms (Rewritten in Formal Style)",
+        "b_line_range": [
+          229,
+          235
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 4,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "R-NA:ALG P-LF:IND C-AA:IND P-LF:IND",
+        "b_seq": "P-AA:LCF P-LF:IND P-LF:IND P-LW:ALG",
+        "a_snippet": "- ∞ is not an element of ℝ but an operator.",
+        "b_snippet": "Theorem 5.2 (Limit Tail Conservation): In the Levi-Civita field R:"
+      },
+      {
+        "operon_id": "OP-06",
+        "score": 12.2,
+        "dominant_gene": "CHI",
+        "a_line_range": [
+          3432,
+          3442
+        ],
+        "a_heading": "1. Data Structures",
+        "b_line_range": [
+          245,
+          251
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 6,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "P-LF:CHI P-LF:CHI C-AA:INT P-LW:INT P-LF:CHI G-AF:CHI",
+        "b_seq": "G-AA:CHI C-AA:CHI G-AA:CHI P-LF:CHI",
+        "a_snippet": "- **χ-tensor sequence**: \\\\(\\\\mathcal{T} = (T_0,T_1,T_2,...)\\\\), T_k \\\\in W)",
+        "b_snippet": "6. The 4-Component Internal Holographic Observer State Tensor (&chi; &in; &reals;^4)"
+      },
+      {
+        "operon_id": "OP-07",
+        "score": 11.2,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          1984,
+          1990
+        ],
+        "a_heading": "7) Hyperreal / infinitesimal embedding",
+        "b_line_range": [
+          323,
+          335
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 7,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "G-AA:IND C-AA:ZFC P-AA:LCF P-AA:ALG",
+        "b_seq": "G-AA:IND G-AA:INT G-AA:INT G-AA:ZFC G-AA:INT G-AA:LCF G-AA:ALG",
+        "a_snippet": "If you want infinitesimal differences around 0 represented inside the same syntactic system, do one of:",
+        "b_snippet": "Infinitesimal Reality Math (IRM)"
+      },
+      {
+        "operon_id": "OP-08",
+        "score": 11.1,
+        "dominant_gene": "RAD",
+        "a_line_range": [
+          2016,
+          2020
+        ],
+        "a_heading": "10) Next steps I can do for you right now",
+        "b_line_range": [
+          57,
+          63
+        ],
+        "b_heading": "Axiomatic Foundations of Infinitesimal Reality Math_ The [base_n.d.e.f...] Recursive Fract",
+        "codon_length": 4,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "P-AA:RAD C-AA:RAD C-LA:ZFC",
+        "b_seq": "P-LF:RAD G-AA:INT C-AA:RAD G-AA:ZFC",
+        "a_snippet": "- A formal specification and proof that (±) maps onto R for reasonable choices (fixed base, bounded digits), plus unique",
+        "b_snippet": "Number := [ Variable_Name, Value ]"
+      }
+    ],
+    "Claude_Engineering___Verification_Log": [
+      {
+        "operon_id": "OP-01",
+        "score": 19.7,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          238,
+          248
+        ],
+        "a_heading": "3. Mapping to Peano",
+        "b_line_range": [
+          1028,
+          1056
+        ],
+        "b_heading": "5. The pathway to ZFC",
+        "codon_length": 8,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:ZFC G-AA:ZFC P-LF:ZFC P-LF:ZFC P-LF:ZFC P-LF:ZFC",
+        "b_seq": "C-AA:ZFC C-AF:LCF P-LW:LCF C-LF:LCF P-LF:ZFC C-LF:LCF C-XA:ZFC C-HA:ZFC",
+        "a_snippet": "## 3. Mapping to Peano",
+        "b_snippet": "### 5. The pathway to ZFC"
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 16.3,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          1808,
+          1816
+        ],
+        "a_heading": "6. Relation to standard constructions of reals and hyperreals",
+        "b_line_range": [
+          1075,
+          1102
+        ],
+        "b_heading": "7. Base 10 costs the corpus its field (AUD-ENG-09)",
+        "codon_length": 7,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-AF:RAD G-AF:ZFC C-AF:ZFC P-AF:ZFC C-LA:ZFC",
+        "b_seq": "P-LF:RAD C-NF:LCF R-LF:BAI C-AA:ZFC P-LW:ZFC C-LF:RAD P-LA:ZFC",
+        "a_snippet": "- **Reals**: Every real number in an interval determined by (a0​,ak​ bounds) can be represented by an infinite sequence ",
+        "b_snippet": "If `[base_n.d.e.f…]` is meant as an *n*-adic ring, *n* is load-bearing: ℤ<sub>n</sub> is a domain **iff** *n* is prime. "
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 12.6,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          445,
+          449
+        ],
+        "a_heading": "Axioms for the natural-number model (Index_N)",
+        "b_line_range": [
+          2562,
+          2569
+        ],
+        "b_heading": "2. What the expression is",
+        "codon_length": 3,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-LF:ZFC P-LF:ZFC P-NF:ZFC",
+        "b_seq": "G-NF:ZFC P-LF:ZFC C-LF:ZFC",
+        "a_snippet": "N3. Successor definition, for all n ∈ N, define S(Rep(0, n)) := Rep(0, n+1).",
+        "b_snippet": "**\"−∞ + 1\" is not arithmetic on the symbol −∞. It is SUCCESSOR ON AN ORDER.**"
+      },
+      {
+        "operon_id": "OP-04",
+        "score": 11.6,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          2163,
+          2167
+        ],
+        "a_heading": "4. Handling infinities and infinitesimals (hyperreal extension)",
+        "b_line_range": [
+          1335,
+          1346
+        ],
+        "b_heading": "4. The sharpest finding: the two foundational papers contradict each other",
+        "codon_length": 3,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "G-LF:ZFC C-AA:ZFC G-AF:LIM",
+        "b_seq": "P-NA:ZFC C-LF:LCF P-NW:LCF",
+        "a_snippet": "**A. Ultrapower / Nonstandard Analysis route**",
+        "b_snippet": "Non-standard naturals come from an ultrapower. An ultrapower needs a non-principal ultrafilter on ℕ. That is not provabl"
+      },
+      {
+        "operon_id": "OP-05",
+        "score": 11.2,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          479,
+          483
+        ],
+        "a_heading": "Axioms for the hyperreal model (Index\\_\\*R)",
+        "b_line_range": [
+          1556,
+          1570
+        ],
+        "b_heading": "2. AUD-ENG-15 — done, not described",
+        "codon_length": 3,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-LA:ZFC C-LF:ALG C-LF:IND",
+        "b_seq": "P-LF:ZFC G-AA:LCF P-HW:IND",
+        "a_snippet": "H1. Index\\_\\*R is an ordered field extension of R containing infinitesimals and infinite elements, for instance, provide",
+        "b_snippet": "Paper 1 §5.2 proves Theorem 5.1 by evaluating to non-standard depth ω ∈ *ℕ\\ℕ. That is an ultrapower, needing a non-princ"
+      },
+      {
+        "operon_id": "OP-06",
+        "score": 11.1,
+        "dominant_gene": "ALG",
+        "a_line_range": [
+          3784,
+          3794
+        ],
+        "a_heading": "Part I: Physically Intuitive Mathematics (PIM)",
+        "b_line_range": [
+          2284,
+          2322
+        ],
+        "b_heading": "5. Formal Paper 16 — the headline theorem is `True` (AUD-ENG-32)",
+        "codon_length": 7,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-NA:ALG C-AA:INT C-AA:ALG G-LA:ALG C-AA:INT C-AA:IND",
+        "b_seq": "C-NF:ALG P-XF:INT C-LF:ALG R-NF:ALG G-LA:INT P-LF:ALG C-AA:IND",
+        "a_snippet": "**Introduction:** Standard mathematics is an abstract framework for quantities. Reality Math, as part of Vector Field Th",
+        "b_snippet": "- **`inner_horn_filler` drops the filler condition.** The field ends `∃ (F : SimplicialSet.StandardSimplex n ⟶ sSet), tr"
+      },
+      {
+        "operon_id": "OP-07",
+        "score": 10.7,
+        "dominant_gene": "RAD",
+        "a_line_range": [
+          2129,
+          2131
+        ],
+        "a_heading": "Multiplication (finite method)",
+        "b_line_range": [
+          3155,
+          3162
+        ],
+        "b_heading": "3. Part A — the aliasing is already in the solver, undeclared (A-1 to A-3)",
+        "codon_length": 2,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "P-LF:RAD P-LF:LIM",
+        "b_seq": "C-LF:RAD P-LW:LIM",
+        "a_snippet": "- Extract digits p0(2N)​,…,pN(2N)​ by dividing P2N​ by ∏i=k+12N​bi​ as above, but carefully grouping factors so that pro",
+        "b_snippet": "**A-1: `navier_stokes_cellular.py` is pseudo-spectral with no dealiasing.** Every spatial derivative is taken by FFT; th"
+      }
+    ],
+    "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": [
+      {
+        "operon_id": "OP-01",
+        "score": 35.0,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3020,
+          3042
+        ],
+        "a_heading": "1. Introduction: The Evolution of the Infinitesimal",
+        "b_line_range": [
+          121,
+          243
+        ],
+        "b_heading": "Computational and Ontological Superiority of IRM Over ZFC",
+        "codon_length": 14,
+        "proof_upgrades_count": 7,
+        "target_working_out_codons": 7,
+        "a_seq": "C-LF:IND C-AA:IND C-WF:IND C-LF:IND C-LF:IND C-NF:INT C-AA:CHI P-HF:IND",
+        "b_seq": "P-LW:IND P-LF:IND P-LF:IND P-LF:IND P-LW:IND G-AA:INT P-LW:PI P-LW:PI",
+        "a_snippet": "This axiom redefines the infinitesimal not as a dead “brick,” but as a **living seed** that encodes both relationality (",
+        "b_snippet": "In IRM, every boundary layer possesses a non-zero minimal physical thickness equal to the Cost of Being: $$\\text{Layer T"
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 19.1,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          238,
+          246
+        ],
+        "a_heading": "3. Mapping to Peano",
+        "b_line_range": [
+          1,
+          11
+        ],
+        "b_heading": "Computational and Ontological Superiority of IRM Over ZFC",
+        "codon_length": 6,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-AA:ZFC G-AA:ZFC P-LF:ZFC P-LF:ZFC P-LF:ZFC",
+        "b_seq": "C-AA:ZFC C-OA:ZFC G-AA:INT C-OF:ZFC R-LA:ZFC R-LW:PI",
+        "a_snippet": "## 3. Mapping to Peano",
+        "b_snippet": "# Computational and Ontological Superiority of IRM Over ZFC"
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 16.1,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          2304,
+          2308
+        ],
+        "a_heading": "2. Core Axioms (Rewritten in Formal Style)",
+        "b_line_range": [
+          51,
+          57
+        ],
+        "b_heading": "Computational and Ontological Superiority of IRM Over ZFC",
+        "codon_length": 4,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "P-LF:IND C-AA:IND P-LF:IND",
+        "b_seq": "P-LW:IND R-AA:IND G-AF:RAD P-LW:IND",
+        "a_snippet": "- For any defined set S, ∞ creates a frame Frame(S) = { all infinitesimal subdivisions of S }.",
+        "b_snippet": "The Limit Fallacy ($0.999\\dots = 1$): Standard analysis discards the infinitesimal residual tail ($10^{-\\omega} = 1\\inft"
+      },
+      {
+        "operon_id": "OP-04",
+        "score": 13.3,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3838,
+          3842
+        ],
+        "a_heading": "Part II: The Evolution of the Infinitesimal",
+        "b_line_range": [
+          451,
+          455
+        ],
+        "b_heading": "Computational and Ontological Superiority of IRM Over ZFC",
+        "codon_length": 3,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:IND C-AA:IND P-LF:IND",
+        "b_seq": "G-AA:IND P-LF:IND P-LF:IND",
+        "a_snippet": "## Part II: The Evolution of the Infinitesimal",
+        "b_snippet": "Limit Boundary ($0.999...$)"
+      },
+      {
+        "operon_id": "OP-05",
+        "score": 12.6,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          475,
+          483
+        ],
+        "a_heading": "Axioms for the hyperreal model (Index\\_\\*R)",
+        "b_line_range": [
+          483,
+          493
+        ],
+        "b_heading": "Computational and Ontological Superiority of IRM Over ZFC",
+        "codon_length": 6,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-AA:ZFC C-WA:IND C-LA:ZFC C-LF:ALG C-LF:IND",
+        "b_seq": "C-AA:ZFC P-LW:IND C-AF:PLK P-LF:ALG G-AA:INT G-AA:IND",
+        "a_snippet": "## Axioms for the hyperreal model (Index\\_\\*R)",
+        "b_snippet": "The formal expansion of the three benchmark calculation tasks demonstrates that Infinitesimal Reality Math (IRM) provide"
+      },
+      {
+        "operon_id": "OP-06",
+        "score": 12.0,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          160,
+          164
+        ],
+        "a_heading": "Relation to number axioms",
+        "b_line_range": [
+          85,
+          97
+        ],
+        "b_heading": "Computational and Ontological Superiority of IRM Over ZFC",
+        "codon_length": 3,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "G-LA:ZFC G-AA:ZFC C-AA:ZFC",
+        "b_seq": "P-LW:PI G-AA:ZFC P-LW:PI",
+        "a_snippet": "This is **very close to the Peano arithmetic style of defining numbers**:",
+        "b_snippet": "$$S = \\left{ (x, y, z) \\in \\mathbb{R}^3 ;\\middle|; x \\ge 1, ; y^2 + z^2 \\le \\frac{1}{x^2} \\right}$$ 1. Volume Calculatio"
+      }
+    ],
+    "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": [
+      {
+        "operon_id": "OP-01",
+        "score": 19.1,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3614,
+          3622
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          51,
+          59
+        ],
+        "b_heading": "Developing Calculus Towards Infinitesimal Reality Math (IRM) from Pre-Calculus",
+        "codon_length": 5,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "G-AA:ZFC G-AF:IND G-AA:IND P-LF:LIM G-AA:LIM",
+        "b_seq": "P-HF:ZFC C-AF:LCF P-AW:IND P-LF:ZFC G-AA:LIM",
+        "a_snippet": "*3.2 Hyperreal Corrected Proofs*",
+        "b_snippet": "To bypass the $\\frac{0}{0}$ breakdown, nineteenth-century orthodox mathematics (Cauchy, Weierstrass, Dedekind) introduce"
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 14.6,
+        "dominant_gene": "ALG",
+        "a_line_range": [
+          3556,
+          3564
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          177,
+          191
+        ],
+        "b_heading": "Developing Calculus Towards Infinitesimal Reality Math (IRM) from Pre-Calculus",
+        "codon_length": 5,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "G-AA:ALG C-AF:ALG G-LF:INT C-AF:IND C-AF:LIM",
+        "b_seq": "G-AA:ALG C-LA:ALG C-LW:ALG P-LF:IND P-AA:LIM",
+        "a_snippet": "*1.1 Relative Infinities and Framing Operator*",
+        "b_snippet": "4.2 The Framing Operator ($W$) and the Continuous Integral of Time"
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 14.2,
+        "dominant_gene": "ALG",
+        "a_line_range": [
+          3270,
+          3284
+        ],
+        "a_heading": "4.3 Raw addition result and final normalisation",
+        "b_line_range": [
+          235,
+          265
+        ],
+        "b_heading": "Developing Calculus Towards Infinitesimal Reality Math (IRM) from Pre-Calculus",
+        "codon_length": 8,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "G-XA:ALG P-LF:INT C-LA:CHI P-LF:INT G-LA:CHI P-LF:INT G-AA:LIM C-XA:ALG",
+        "b_seq": "R-XF:ALG P-NW:CHI G-AA:INT P-LW:CHI P-LF:LIM G-AA:ALG",
+        "a_snippet": "Finally apply the propagation/forbidden resolution operator P and then normalise N if needed:",
+        "b_snippet": "If an operation results in an ungrounded zero tail following a non-zero digit at infinite depth ($0.0\\dots40$), physical"
+      },
+      {
+        "operon_id": "OP-04",
+        "score": 14.0,
+        "dominant_gene": "LIM",
+        "a_line_range": [
+          3872,
+          3880
+        ],
+        "a_heading": "Limit Rewrite",
+        "b_line_range": [
+          117,
+          143
+        ],
+        "b_heading": "Developing Calculus Towards Infinitesimal Reality Math (IRM) from Pre-Calculus",
+        "codon_length": 5,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "C-AA:LIM P-LF:LIM P-LF:IND C-AA:INT P-LF:IND",
+        "b_seq": "G-AA:LIM P-LF:LIM P-LW:CHI P-LF:INT P-LW:CHI",
+        "a_snippet": "### Limit Rewrite",
+        "b_snippet": "The Crucial IRM Insight: The Conserved Derivative Atom"
+      },
+      {
+        "operon_id": "OP-05",
+        "score": 12.7,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3806,
+          3812
+        ],
+        "a_heading": "Notation",
+        "b_line_range": [
+          1,
+          7
+        ],
+        "b_heading": "Developing Calculus Towards Infinitesimal Reality Math (IRM) from Pre-Calculus",
+        "codon_length": 4,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "P-LF:IND P-LF:LIM P-LF:IND P-LF:LIM",
+        "b_seq": "C-AA:LIM G-AA:LIM G-AA:LIM C-AA:LIM",
+        "a_snippet": "- Infinitesimals: N∞ = 0.0...N (unresolved, infinitesimal)",
+        "b_snippet": "# Developing Calculus Towards Infinitesimal Reality Math (IRM) from Pre-Calculus"
+      },
+      {
+        "operon_id": "OP-06",
+        "score": 11.7,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          2165,
+          2169
+        ],
+        "a_heading": "4. Handling infinities and infinitesimals (hyperreal extension)",
+        "b_line_range": [
+          67,
+          71
+        ],
+        "b_heading": "Developing Calculus Towards Infinitesimal Reality Math (IRM) from Pre-Calculus",
+        "codon_length": 3,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:ZFC G-AF:LIM P-AA:ALG",
+        "b_seq": "G-HA:ZFC G-AA:LIM P-LF:RAD",
+        "a_snippet": "- Treat sequences of finite truncations (AN​) or sequences of expansions as elements of RN. Take an ultrafilter quotient",
+        "b_snippet": "[ ORTHODOX ZFC DETOUR ] [ THE IRM RESOLUTION ]"
+      }
+    ],
+    "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": [
+      {
+        "operon_id": "OP-01",
+        "score": 22.6,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          238,
+          248
+        ],
+        "a_heading": "3. Mapping to Peano",
+        "b_line_range": [
+          79,
+          89
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 6,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "C-AA:ZFC G-AA:ZFC P-LF:ZFC P-LF:ZFC P-LF:ZFC P-LF:ZFC",
+        "b_seq": "G-AA:BAI P-NW:BAI P-LW:ZFC G-AA:ZFC P-AF:ZFC P-AF:ZFC",
+        "a_snippet": "## 3. Mapping to Peano",
+        "b_snippet": "5.1 Ultrametric Distance on Cantor-Adic Streams"
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 18.6,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          483,
+          499
+        ],
+        "a_heading": "Axioms for the hyperreal model (Index\\_\\*R)",
+        "b_line_range": [
+          55,
+          75
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 13,
+        "proof_upgrades_count": 4,
+        "target_working_out_codons": 4,
+        "a_seq": "C-LF:IND C-AA:ZFC P-AF:ZFC C-AA:INT P-LF:ZFC C-AA:ALG C-AA:ZFC C-AA:INT",
+        "b_seq": "P-LF:IND P-NW:EXP P-WF:INT G-AA:ZFC G-AA:ZFC P-LW:ZFC G-AA:INT P-LW:ALG",
+        "a_snippet": "H3. Infinitesimals and infinities are detected by the unit gap: an index ε ∈ \\*R is an infinitesimal, ε ≠ 0, when 0 \\< \\",
+        "b_snippet": "Theorem 3.1 (Incompatibility of Nilpotent Infinitesimals with IRM): Smooth Infinitesimal Analysis (SIA, Lawvere-Kock), w"
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 15.9,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          2306,
+          2310
+        ],
+        "a_heading": "2. Core Axioms (Rewritten in Formal Style)",
+        "b_line_range": [
+          367,
+          371
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 3,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:IND P-LF:IND P-LF:IND",
+        "b_seq": "G-AA:IND P-LF:IND P-LF:IND",
+        "a_snippet": "**Axiom 2: Infinitesimal vs. Whole**",
+        "b_snippet": "Boundary Box Count $N(\\epsilon)$"
+      },
+      {
+        "operon_id": "OP-04",
+        "score": 13.6,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          1982,
+          1994
+        ],
+        "a_heading": "7) Hyperreal / infinitesimal embedding",
+        "b_line_range": [
+          25,
+          37
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 8,
+        "proof_upgrades_count": 4,
+        "target_working_out_codons": 4,
+        "a_seq": "C-AA:ZFC G-AA:IND C-AA:ZFC P-AA:LCF P-AA:ALG C-AA:INT P-AA:LIM",
+        "b_seq": "P-HW:PI G-AA:DIV P-NW:IND G-AF:LCF C-AA:LCF P-NW:LCF P-LW:LCF",
+        "a_snippet": "# 7) Hyperreal / infinitesimal embedding",
+        "b_snippet": "In standard real analysis, the real continuum $\\mathbb{R}$ is constructed as the quotient of Cauchy sequences of rationa"
+      },
+      {
+        "operon_id": "OP-05",
+        "score": 13.2,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          1810,
+          1816
+        ],
+        "a_heading": "6. Relation to standard constructions of reals and hyperreals",
+        "b_line_range": [
+          125,
+          135
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 6,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "G-AF:ZFC C-AF:ZFC P-AF:ZFC C-LA:ZFC",
+        "b_seq": "G-AF:ZFC G-AA:ZFC G-NF:LCF P-LF:IND G-AA:INT G-AA:ZFC",
+        "a_snippet": "- **Hyperreals / Infinitesimals**: To obtain hyperreal-like objects you may either",
+        "b_snippet": "Robinson Hyperreals (${}^*\\mathbb{R}$)"
+      },
+      {
+        "operon_id": "OP-06",
+        "score": 13.0,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3616,
+          3620
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          243,
+          249
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 4,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "G-AF:IND G-AA:IND P-LF:LIM",
+        "b_seq": "G-AA:IND G-AF:INT G-AA:IND G-AF:LIM",
+        "a_snippet": "- **0.999... ≠ 1:** Separated by 1∞.",
+        "b_snippet": "$0.9999\\dots9990$"
+      },
+      {
+        "operon_id": "OP-07",
+        "score": 12.1,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3550,
+          3558
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          153,
+          161
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 5,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "G-AA:IND C-LF:IND G-AA:INT G-AA:ALG C-AF:ALG",
+        "b_seq": "P-LF:LCF G-XA:IND G-AA:INT G-AA:ALG G-AF:LCF",
+        "a_snippet": "Title: Reality Math, Indefinite Number Formalism, and the χ-Infinitesimal Expansion",
+        "b_snippet": "Nilpotent ($\\epsilon^2 = 0$)"
+      },
+      {
+        "operon_id": "OP-08",
+        "score": 10.7,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          3666,
+          3668
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          103,
+          105
+        ],
+        "b_heading": "Formal Paper 12_ The Pre-Quotient Continuum, Levi-Civita Field Embedding, and Bratteli-Ver",
+        "codon_length": 2,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "G-AA:ZFC G-AF:IND",
+        "b_seq": "G-AA:ZFC G-AA:IND",
+        "a_snippet": "- Supports hyperreal operations across all decimal expansions.",
+        "b_snippet": "Set Theory / Foundation"
+      }
+    ],
+    "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": [
+      {
+        "operon_id": "OP-01",
+        "score": 11.7,
+        "dominant_gene": "LIM",
+        "a_line_range": [
+          3262,
+          3270
+        ],
+        "a_heading": "4.3 Raw addition result and final normalisation",
+        "b_line_range": [
+          87,
+          105
+        ],
+        "b_heading": "Formal Paper 25_ Non-Archimedean Spectral Realization of the Riemann Zeta Function_ The Ce",
+        "codon_length": 5,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "C-AA:LIM C-AA:CHI P-LF:INT C-LA:LIM G-XA:ALG",
+        "b_seq": "P-LW:PLK G-LF:CHI C-WW:LCF P-NF:ALG",
+        "a_snippet": "Define the full addition as the limit (stability) of these depth-N results:",
+        "b_snippet": "$$x \\ge x_{\\min} \\equiv \\ell_P = 1\\infty_x \\approx 1.616255 \\times 10^{-35}\\text{ m}$$ In phase space $(x, p)$, the cell"
+      }
+    ],
+    "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": [
+      {
+        "operon_id": "OP-01",
+        "score": 15.9,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3012,
+          3018
+        ],
+        "a_heading": "1. Introduction: The Evolution of the Infinitesimal",
+        "b_line_range": [
+          1,
+          9
+        ],
+        "b_heading": "Formal Paper 30_ The Master Mathematical Canon of Infinitesimal Reality Math_ Axiomatic Fo",
+        "codon_length": 5,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:IND C-AA:IND C-AA:CHI G-LA:IND",
+        "b_seq": "C-AA:IND C-AA:IND G-AA:INT C-AF:PLK C-LA:IND",
+        "a_snippet": "## 1. Introduction: The Evolution of the Infinitesimal",
+        "b_snippet": "# Formal Paper 30_ The Master Mathematical Canon of Infinitesimal Reality Math_ Axiomatic Foundations, Category-Theoreti"
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 13.0,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3026,
+          3036
+        ],
+        "a_heading": "2. Part 1 — The Social Infinitesimal: Relativity of {χ}",
+        "b_line_range": [
+          51,
+          65
+        ],
+        "b_heading": "Formal Paper 30_ The Master Mathematical Canon of Infinitesimal Reality Math_ Axiomatic Fo",
+        "codon_length": 8,
+        "proof_upgrades_count": 3,
+        "target_working_out_codons": 3,
+        "a_seq": "C-LF:IND C-LF:IND C-NF:INT C-AA:CHI P-HF:IND P-LF:IND",
+        "b_seq": "R-AA:PLK G-AA:IND C-AA:INT P-XW:CHI C-AA:INT P-NW:LCF C-AA:LIM P-NW:IND",
+        "a_snippet": "- **Individual as Pixel:** Each person’s {χ} is a pixel — infinitesimal relative to the collective whole, yet definitive",
+        "b_snippet": "Infinitesimal Reality Math (IRM) replaces dead static points with living computational processes, founding mathematics n"
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 10.8,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          1982,
+          1990
+        ],
+        "a_heading": "7) Hyperreal / infinitesimal embedding",
+        "b_line_range": [
+          85,
+          95
+        ],
+        "b_heading": "Formal Paper 30_ The Master Mathematical Canon of Infinitesimal Reality Math_ Axiomatic Fo",
+        "codon_length": 6,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:ZFC G-AA:IND C-AA:ZFC P-AA:LCF P-AA:ALG",
+        "b_seq": "P-AF:ZFC P-AA:INT C-AF:ZFC P-LF:PLK P-LF:LCF P-AF:BAI",
+        "a_snippet": "# 7) Hyperreal / infinitesimal embedding",
+        "b_snippet": "Theorem 3.1 (The Quadruple Adjunction of Reality Mathematics):There exists an exact quadruple categorical equivalence un"
+      },
+      {
+        "operon_id": "OP-04",
+        "score": 10.7,
+        "dominant_gene": "CHI",
+        "a_line_range": [
+          3918,
+          3920
+        ],
+        "a_heading": "Part V: Observable Reality Composition",
+        "b_line_range": [
+          81,
+          83
+        ],
+        "b_heading": "Formal Paper 30_ The Master Mathematical Canon of Infinitesimal Reality Math_ Axiomatic Fo",
+        "codon_length": 2,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "P-LF:CHI P-LF:ALG",
+        "b_seq": "P-LW:CHI G-AA:ALG",
+        "a_snippet": "- Subjective = conscious internal field, holographic {χ} structure",
+        "b_snippet": "Semantic meaning, decision complexity, and contextual understanding are multi-dimensional geometric volumes in the 42-di"
+      }
+    ],
+    "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": [
+      {
+        "operon_id": "OP-01",
+        "score": 13.7,
+        "dominant_gene": "LIM",
+        "a_line_range": [
+          3262,
+          3274
+        ],
+        "a_heading": "4.3 Raw addition result and final normalisation",
+        "b_line_range": [
+          7,
+          17
+        ],
+        "b_heading": "Formal Paper 7_ Discrete 0–2 Bounded Lattice Mechanics, The Try²{}Catch{} Quadratic Projec",
+        "codon_length": 7,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-AA:LIM C-AA:CHI P-LF:INT C-LA:LIM G-XA:ALG P-LF:INT C-LA:CHI",
+        "b_seq": "C-AA:LIM C-AF:LCF G-AA:INT C-HA:PLK P-LW:ALG G-AA:CHI",
+        "a_snippet": "Define the full addition as the limit (stability) of these depth-N results:",
+        "b_snippet": "MSC 2020 Classifications:- Primary: 06B05 (Structure and classification of lattices), 37B10 (Symbolic dynamics), 68Q85 ("
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 12.2,
+        "dominant_gene": "IND",
+        "a_line_range": [
+          3548,
+          3556
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          237,
+          281
+        ],
+        "b_heading": "Formal Paper 7_ Discrete 0–2 Bounded Lattice Mechanics, The Try²{}Catch{} Quadratic Projec",
+        "codon_length": 8,
+        "proof_upgrades_count": 3,
+        "target_working_out_codons": 3,
+        "a_seq": "G-AA:CHI G-AA:IND C-LF:IND G-AA:INT G-AA:ALG",
+        "b_seq": "P-LW:CHI C-AA:INT P-LW:IND G-AA:INT C-AF:INT P-LW:IND G-AA:INT G-AA:ALG",
+        "a_snippet": "Reality Indef Chi Formalisation",
+        "b_snippet": "$$\\mathcal{F}(X) = \\mathbb{Z} \\times \\mathbb{N}_0 \\times (\\mathcal{D} \\to X) \\times \\chi$$ where $\\mathcal{D} = \\{0, 1, "
+      }
+    ],
+    "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": [
+      {
+        "operon_id": "OP-01",
+        "score": 20.6,
+        "dominant_gene": "CHI",
+        "a_line_range": [
+          3432,
+          3442
+        ],
+        "a_heading": "1. Data Structures",
+        "b_line_range": [
+          91,
+          97
+        ],
+        "b_heading": "Formal Paper 9_ Higher-Order Simplicial Homology, Principal G-Bundles, and the Gauge Field",
+        "codon_length": 6,
+        "proof_upgrades_count": 3,
+        "target_working_out_codons": 3,
+        "a_seq": "P-LF:CHI P-LF:CHI C-AA:INT P-LW:INT P-LF:CHI G-AF:CHI",
+        "b_seq": "P-LW:CHI P-LW:CHI P-LW:CHI G-AA:CHI",
+        "a_snippet": "- **χ-tensor sequence**: \\\\(\\\\mathcal{T} = (T_0,T_1,T_2,...)\\\\), T_k \\\\in W)",
+        "b_snippet": "1. $\\text{SO}(7)$ Perspective Symmetry: The 21-dimensional special orthogonal Lie group rotating perspectives across the"
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 13.9,
+        "dominant_gene": "CHI",
+        "a_line_range": [
+          3586,
+          3590
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          151,
+          755
+        ],
+        "b_heading": "Formal Paper 9_ Higher-Order Simplicial Homology, Principal G-Bundles, and the Gauge Field",
+        "codon_length": 3,
+        "proof_upgrades_count": 3,
+        "target_working_out_codons": 3,
+        "a_seq": "C-AF:IND G-AA:CHI C-AF:CHI",
+        "b_seq": "P-WW:IND P-LW:PLK C-WW:CHI",
+        "a_snippet": "**2. Infinitesimal Expansion and χ-Axiom**",
+        "b_snippet": "$$\\Delta \\tau_{\\text{hysteresis}} = \\int_{\\mathbf{x}_{\\text{intent}}}^{\\mathbf{x}_{\\text{action}}} \\left( \\frac{1}{c_3} "
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 10.6,
+        "dominant_gene": "ALG",
+        "a_line_range": [
+          3784,
+          3790
+        ],
+        "a_heading": "Part I: Physically Intuitive Mathematics (PIM)",
+        "b_line_range": [
+          55,
+          59
+        ],
+        "b_heading": "Formal Paper 9_ Higher-Order Simplicial Homology, Principal G-Bundles, and the Gauge Field",
+        "codon_length": 4,
+        "proof_upgrades_count": 2,
+        "target_working_out_codons": 2,
+        "a_seq": "C-NA:ALG C-AA:INT C-AA:ALG G-LA:ALG",
+        "b_seq": "G-AA:ALG C-LW:ALG P-LW:ALG",
+        "a_snippet": "**Introduction:** Standard mathematics is an abstract framework for quantities. Reality Math, as part of Vector Field Th",
+        "b_snippet": "2.2 Simplicial Chain Complex & Boundary Operator"
+      }
+    ],
+    "ORTHODOX_BRIDGE_ZFC": [
+      {
+        "operon_id": "OP-01",
+        "score": 17.0,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          477,
+          495
+        ],
+        "a_heading": "Axioms for the hyperreal model (Index\\_\\*R)",
+        "b_line_range": [
+          128,
+          159
+        ],
+        "b_heading": "5. Both 0.999… claims are true, of different objects (B-4)",
+        "codon_length": 11,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-WA:IND C-LA:ZFC C-LF:ALG C-LF:IND C-AA:ZFC P-AF:ZFC C-AA:INT P-LF:ZFC",
+        "b_seq": "P-NF:IND C-LF:DIV P-LW:RAD G-AF:LIM R-HF:ZFC P-XF:ZFC G-AA:INT C-XA:ZFC",
+        "a_snippet": "We now relax the requirement that the unit difference must be the same everywhere, and allow infinitesimal and infinite ",
+        "b_snippet": "The archived *Computational and Ontological Superiority of IRM Over ZFC* treats \"0.999… = 1\" and \"0.999… + 1∞ = [1]\" as "
+      },
+      {
+        "operon_id": "OP-02",
+        "score": 12.8,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          238,
+          246
+        ],
+        "a_heading": "3. Mapping to Peano",
+        "b_line_range": [
+          1,
+          25
+        ],
+        "b_heading": "The Pathway to ZFC",
+        "codon_length": 9,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:ZFC G-AA:ZFC P-LF:ZFC P-LF:ZFC P-LF:ZFC",
+        "b_seq": "C-AA:ZFC G-HA:ZFC C-AF:INT G-AA:INT C-HA:ZFC C-LA:ZFC R-XF:INT C-LF:INT",
+        "a_snippet": "## 3. Mapping to Peano",
+        "b_snippet": "# The Pathway to ZFC"
+      },
+      {
+        "operon_id": "OP-03",
+        "score": 12.5,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          1982,
+          1988
+        ],
+        "a_heading": "7) Hyperreal / infinitesimal embedding",
+        "b_line_range": [
+          52,
+          74
+        ],
+        "b_heading": "2. The Levi-Civita field is the right home (B-3)",
+        "codon_length": 5,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "C-AA:ZFC G-AA:IND C-AA:ZFC P-AA:LCF",
+        "b_seq": "P-LF:IND P-NW:LCF G-LF:ZFC G-LA:INT C-LF:LCF",
+        "a_snippet": "# 7) Hyperreal / infinitesimal embedding",
+        "b_snippet": "Under the identification **1∞ = d**, IRM's number atom — a standard part plus a booked infinitesimal residue — *is* a Le"
+      },
+      {
+        "operon_id": "OP-04",
+        "score": 12.1,
+        "dominant_gene": "ALG",
+        "a_line_range": [
+          3452,
+          3456
+        ],
+        "a_heading": "3. Axioms",
+        "b_line_range": [
+          102,
+          108
+        ],
+        "b_heading": "4. Base 10 is not prime, and it costs the corpus its field (B-2)",
+        "codon_length": 3,
+        "proof_upgrades_count": 1,
+        "target_working_out_codons": 1,
+        "a_seq": "G-XF:ALG G-AF:RAD C-AF:ALG",
+        "b_seq": "C-NA:ALG C-LF:RAD P-LW:ALG",
+        "a_snippet": "- **U4 (Propagation Operator P)**: Resolves forbidden digit patterns, idempotent",
+        "b_snippet": "## 4. Base 10 is not prime, and it costs the corpus its field (B-2)"
+      },
+      {
+        "operon_id": "OP-05",
+        "score": 11.9,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          193,
+          197
+        ],
+        "a_heading": "ChatGPT said:",
+        "b_line_range": [
+          201,
+          217
+        ],
+        "b_heading": "8. Literature-only — stated, not executed, not evidence",
+        "codon_length": 3,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AA:ZFC C-AA:ZFC G-AA:ZFC",
+        "b_seq": "C-LF:ZFC C-NF:ZFC P-LF:LCF",
+        "a_snippet": "Perfect — let’s line your notation up against Peano step by step.",
+        "b_snippet": "**B-7. The hyperreal reading costs you choice.** *ℝ requires a non-principal ultrafilter on ℕ, which is not provable in "
+      },
+      {
+        "operon_id": "OP-06",
+        "score": 10.5,
+        "dominant_gene": "ZFC",
+        "a_line_range": [
+          1812,
+          1816
+        ],
+        "a_heading": "6. Relation to standard constructions of reals and hyperreals",
+        "b_line_range": [
+          83,
+          93
+        ],
+        "b_heading": "3. The ultrametric is Baire space, not a *p*-adic completion (B-1)",
+        "codon_length": 3,
+        "proof_upgrades_count": 0,
+        "target_working_out_codons": 0,
+        "a_seq": "C-AF:ZFC P-AF:ZFC C-LA:ZFC",
+        "b_seq": "R-HF:ZFC C-LF:BAI R-LF:ZFC",
+        "a_snippet": "1. allow sequences that are **non-terminating and non-convergent** in the usual sense but consider their equivalence cla",
+        "b_snippet": "But the orthodox home is **descriptive set theory**, not *p*-adic analysis, and the treatise currently points at the wro"
+      }
+    ]
+  },
+  "true_unmerged_chat_islands": [
+    {
+      "chat_line_range": [
+        619,
+        621
+      ],
+      "heading": "Textual Mapping: \\[Variable_name, Value\\] vs Chinese Rod System",
+      "num_codons": 2,
+      "coding_codons": 2,
+      "total_complexity": 22.38,
+      "dominant_gene": "RAD",
+      "dominant_gene_name": "Radix [base_n.d.e.f] Symbolic Dictionary & Carry Normalization",
+      "codon_seq": "C-AF:RAD P-LW:SEQ",
+      "snippet": "**Representation** \\[Variable_name, Value\\] — variable_name identifies the number, Value gives its magnitude \\[Rod symbol, Position\\] — rod symbol enc"
+    },
+    {
+      "chat_line_range": [
+        2656,
+        2660
+      ],
+      "heading": "3. **Addition and Multiplication in Voltages**",
+      "num_codons": 2,
+      "coding_codons": 2,
+      "total_complexity": 17.58,
+      "dominant_gene": "ALG",
+      "dominant_gene_name": "Algebraic Structure, Rings, Fields & Linear Operators",
+      "codon_seq": "C-MF:ALG P-AF:RAD",
+      "snippet": "- **Addition:** Two voltages summed (or currents summed at a node) directly implement ValX​+ValY​ and then your **propagation operator** could be a *f"
+    }
+  ],
+  "phylogenetic_distance_matrix": {
+    "chatgpt_infinity_maths": {
+      "chatgpt_infinity_maths": 0.0,
+      "Comprehensive_Report_IRM": 0.458,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.268,
+      "Claude_Engineering___Verification_Log": 0.425,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.403,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.454,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.432,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.913,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.831,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.837,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.745,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.563,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.743,
+      "HYPOTHESIS_semantic_connection": 0.847,
+      "ORTHODOX_BRIDGE_ZFC": 0.477,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.48,
+      "arxiv_1401.0388v2": 0.74,
+      "arxiv_1502.06936v2": 0.498,
+      "arxiv_1505.02628v2": 0.795,
+      "arxiv_1509.03798v1": 0.544,
+      "arxiv_1701.05187v1": 0.473,
+      "arxiv_1706.10173v1": 0.968,
+      "arxiv_1803.06056v2": 0.912,
+      "arxiv_2208.00415v2": 0.894
+    },
+    "Comprehensive_Report_IRM": {
+      "chatgpt_infinity_maths": 0.458,
+      "Comprehensive_Report_IRM": 0.0,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.431,
+      "Claude_Engineering___Verification_Log": 0.364,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.198,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.342,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.47,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.846,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.654,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.631,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.566,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.381,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.406,
+      "HYPOTHESIS_semantic_connection": 0.418,
+      "ORTHODOX_BRIDGE_ZFC": 0.612,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.741,
+      "arxiv_1401.0388v2": 0.688,
+      "arxiv_1502.06936v2": 0.456,
+      "arxiv_1505.02628v2": 0.765,
+      "arxiv_1509.03798v1": 0.493,
+      "arxiv_1701.05187v1": 0.265,
+      "arxiv_1706.10173v1": 0.95,
+      "arxiv_1803.06056v2": 0.831,
+      "arxiv_2208.00415v2": 0.73
+    },
+    "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": {
+      "chatgpt_infinity_maths": 0.268,
+      "Comprehensive_Report_IRM": 0.431,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.0,
+      "Claude_Engineering___Verification_Log": 0.135,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.365,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.458,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.185,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.812,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.533,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.388,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.55,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.374,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.456,
+      "HYPOTHESIS_semantic_connection": 0.596,
+      "ORTHODOX_BRIDGE_ZFC": 0.257,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.486,
+      "arxiv_1401.0388v2": 0.827,
+      "arxiv_1502.06936v2": 0.529,
+      "arxiv_1505.02628v2": 0.866,
+      "arxiv_1509.03798v1": 0.237,
+      "arxiv_1701.05187v1": 0.636,
+      "arxiv_1706.10173v1": 0.975,
+      "arxiv_1803.06056v2": 0.879,
+      "arxiv_2208.00415v2": 0.777
+    },
+    "Claude_Engineering___Verification_Log": {
+      "chatgpt_infinity_maths": 0.425,
+      "Comprehensive_Report_IRM": 0.364,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.135,
+      "Claude_Engineering___Verification_Log": -0.0,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.423,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.472,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.327,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.485,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.427,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.4,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.412,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.317,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.335,
+      "HYPOTHESIS_semantic_connection": 0.444,
+      "ORTHODOX_BRIDGE_ZFC": 0.302,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.563,
+      "arxiv_1401.0388v2": 0.754,
+      "arxiv_1502.06936v2": 0.59,
+      "arxiv_1505.02628v2": 0.702,
+      "arxiv_1509.03798v1": 0.302,
+      "arxiv_1701.05187v1": 0.685,
+      "arxiv_1706.10173v1": 0.661,
+      "arxiv_1803.06056v2": 0.649,
+      "arxiv_2208.00415v2": 0.548
+    },
+    "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": {
+      "chatgpt_infinity_maths": 0.403,
+      "Comprehensive_Report_IRM": 0.198,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.365,
+      "Claude_Engineering___Verification_Log": 0.423,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.0,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.564,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.25,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.889,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.753,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.556,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.516,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.559,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.646,
+      "HYPOTHESIS_semantic_connection": 0.836,
+      "ORTHODOX_BRIDGE_ZFC": 0.382,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.803,
+      "arxiv_1401.0388v2": 0.905,
+      "arxiv_1502.06936v2": 0.625,
+      "arxiv_1505.02628v2": 0.936,
+      "arxiv_1509.03798v1": 0.451,
+      "arxiv_1701.05187v1": 0.321,
+      "arxiv_1706.10173v1": 0.935,
+      "arxiv_1803.06056v2": 0.754,
+      "arxiv_2208.00415v2": 0.758
+    },
+    "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": {
+      "chatgpt_infinity_maths": 0.454,
+      "Comprehensive_Report_IRM": 0.342,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.458,
+      "Claude_Engineering___Verification_Log": 0.472,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.564,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.0,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.542,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.831,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.613,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.716,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.643,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.429,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.647,
+      "HYPOTHESIS_semantic_connection": 0.725,
+      "ORTHODOX_BRIDGE_ZFC": 0.639,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.712,
+      "arxiv_1401.0388v2": 0.198,
+      "arxiv_1502.06936v2": 0.044,
+      "arxiv_1505.02628v2": 0.349,
+      "arxiv_1509.03798v1": 0.361,
+      "arxiv_1701.05187v1": 0.216,
+      "arxiv_1706.10173v1": 0.979,
+      "arxiv_1803.06056v2": 0.808,
+      "arxiv_2208.00415v2": 0.803
+    },
+    "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": {
+      "chatgpt_infinity_maths": 0.432,
+      "Comprehensive_Report_IRM": 0.47,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.185,
+      "Claude_Engineering___Verification_Log": 0.327,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.25,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.542,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.0,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.86,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.623,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.552,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.583,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.675,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.837,
+      "HYPOTHESIS_semantic_connection": 0.952,
+      "ORTHODOX_BRIDGE_ZFC": 0.166,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.791,
+      "arxiv_1401.0388v2": 0.831,
+      "arxiv_1502.06936v2": 0.557,
+      "arxiv_1505.02628v2": 0.863,
+      "arxiv_1509.03798v1": 0.189,
+      "arxiv_1701.05187v1": 0.436,
+      "arxiv_1706.10173v1": 0.958,
+      "arxiv_1803.06056v2": 0.921,
+      "arxiv_2208.00415v2": 0.885
+    },
+    "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": {
+      "chatgpt_infinity_maths": 0.913,
+      "Comprehensive_Report_IRM": 0.846,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.812,
+      "Claude_Engineering___Verification_Log": 0.485,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.889,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.831,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.86,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.0,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.757,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.776,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.669,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.645,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.829,
+      "HYPOTHESIS_semantic_connection": 0.862,
+      "ORTHODOX_BRIDGE_ZFC": 0.896,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.885,
+      "arxiv_1401.0388v2": 0.538,
+      "arxiv_1502.06936v2": 0.859,
+      "arxiv_1505.02628v2": 0.312,
+      "arxiv_1509.03798v1": 0.806,
+      "arxiv_1701.05187v1": 0.915,
+      "arxiv_1706.10173v1": 0.04,
+      "arxiv_1803.06056v2": 0.532,
+      "arxiv_2208.00415v2": 0.179
+    },
+    "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": {
+      "chatgpt_infinity_maths": 0.831,
+      "Comprehensive_Report_IRM": 0.654,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.533,
+      "Claude_Engineering___Verification_Log": 0.427,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.753,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.613,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.623,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.757,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.0,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.226,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.231,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.406,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.635,
+      "HYPOTHESIS_semantic_connection": 0.762,
+      "ORTHODOX_BRIDGE_ZFC": 0.724,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.493,
+      "arxiv_1401.0388v2": 0.851,
+      "arxiv_1502.06936v2": 0.617,
+      "arxiv_1505.02628v2": 0.861,
+      "arxiv_1509.03798v1": 0.411,
+      "arxiv_1701.05187v1": 0.864,
+      "arxiv_1706.10173v1": 1.0,
+      "arxiv_1803.06056v2": 0.417,
+      "arxiv_2208.00415v2": 0.705
+    },
+    "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": {
+      "chatgpt_infinity_maths": 0.837,
+      "Comprehensive_Report_IRM": 0.631,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.388,
+      "Claude_Engineering___Verification_Log": 0.4,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.556,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.716,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.552,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.776,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.226,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.0,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.315,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.296,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.432,
+      "HYPOTHESIS_semantic_connection": 0.703,
+      "ORTHODOX_BRIDGE_ZFC": 0.706,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.497,
+      "arxiv_1401.0388v2": 0.974,
+      "arxiv_1502.06936v2": 0.737,
+      "arxiv_1505.02628v2": 0.985,
+      "arxiv_1509.03798v1": 0.39,
+      "arxiv_1701.05187v1": 0.94,
+      "arxiv_1706.10173v1": 0.989,
+      "arxiv_1803.06056v2": 0.527,
+      "arxiv_2208.00415v2": 0.589
+    },
+    "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": {
+      "chatgpt_infinity_maths": 0.745,
+      "Comprehensive_Report_IRM": 0.566,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.55,
+      "Claude_Engineering___Verification_Log": 0.412,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.516,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.643,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.583,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.669,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.231,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.315,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.0,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.642,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.608,
+      "HYPOTHESIS_semantic_connection": 0.782,
+      "ORTHODOX_BRIDGE_ZFC": 0.667,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.855,
+      "arxiv_1401.0388v2": 0.863,
+      "arxiv_1502.06936v2": 0.763,
+      "arxiv_1505.02628v2": 0.852,
+      "arxiv_1509.03798v1": 0.628,
+      "arxiv_1701.05187v1": 0.723,
+      "arxiv_1706.10173v1": 0.874,
+      "arxiv_1803.06056v2": 0.111,
+      "arxiv_2208.00415v2": 0.813
+    },
+    "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": {
+      "chatgpt_infinity_maths": 0.563,
+      "Comprehensive_Report_IRM": 0.381,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.374,
+      "Claude_Engineering___Verification_Log": 0.317,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.559,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.429,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.675,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.645,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.406,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.296,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.642,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.0,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.309,
+      "HYPOTHESIS_semantic_connection": 0.525,
+      "ORTHODOX_BRIDGE_ZFC": 0.78,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.196,
+      "arxiv_1401.0388v2": 0.687,
+      "arxiv_1502.06936v2": 0.433,
+      "arxiv_1505.02628v2": 0.701,
+      "arxiv_1509.03798v1": 0.35,
+      "arxiv_1701.05187v1": 0.685,
+      "arxiv_1706.10173v1": 0.81,
+      "arxiv_1803.06056v2": 0.804,
+      "arxiv_2208.00415v2": 0.386
+    },
+    "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": {
+      "chatgpt_infinity_maths": 0.743,
+      "Comprehensive_Report_IRM": 0.406,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.456,
+      "Claude_Engineering___Verification_Log": 0.335,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.646,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.647,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.837,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.829,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.635,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.432,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.608,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.309,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": -0.0,
+      "HYPOTHESIS_semantic_connection": 0.152,
+      "ORTHODOX_BRIDGE_ZFC": 0.843,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.649,
+      "arxiv_1401.0388v2": 0.98,
+      "arxiv_1502.06936v2": 0.811,
+      "arxiv_1505.02628v2": 0.986,
+      "arxiv_1509.03798v1": 0.713,
+      "arxiv_1701.05187v1": 0.909,
+      "arxiv_1706.10173v1": 0.992,
+      "arxiv_1803.06056v2": 0.793,
+      "arxiv_2208.00415v2": 0.784
+    },
+    "HYPOTHESIS_semantic_connection": {
+      "chatgpt_infinity_maths": 0.847,
+      "Comprehensive_Report_IRM": 0.418,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.596,
+      "Claude_Engineering___Verification_Log": 0.444,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.836,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.725,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.952,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.862,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.762,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.703,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.782,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.525,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.152,
+      "HYPOTHESIS_semantic_connection": -0.0,
+      "ORTHODOX_BRIDGE_ZFC": 0.965,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.859,
+      "arxiv_1401.0388v2": 0.971,
+      "arxiv_1502.06936v2": 0.925,
+      "arxiv_1505.02628v2": 0.988,
+      "arxiv_1509.03798v1": 0.907,
+      "arxiv_1701.05187v1": 0.987,
+      "arxiv_1706.10173v1": 1.0,
+      "arxiv_1803.06056v2": 0.994,
+      "arxiv_2208.00415v2": 0.866
+    },
+    "ORTHODOX_BRIDGE_ZFC": {
+      "chatgpt_infinity_maths": 0.477,
+      "Comprehensive_Report_IRM": 0.612,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.257,
+      "Claude_Engineering___Verification_Log": 0.302,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.382,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.639,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.166,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.896,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.724,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.706,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.667,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.78,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.843,
+      "HYPOTHESIS_semantic_connection": 0.965,
+      "ORTHODOX_BRIDGE_ZFC": -0.0,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.839,
+      "arxiv_1401.0388v2": 0.943,
+      "arxiv_1502.06936v2": 0.67,
+      "arxiv_1505.02628v2": 0.954,
+      "arxiv_1509.03798v1": 0.282,
+      "arxiv_1701.05187v1": 0.625,
+      "arxiv_1706.10173v1": 0.965,
+      "arxiv_1803.06056v2": 0.922,
+      "arxiv_2208.00415v2": 0.939
+    },
+    "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": {
+      "chatgpt_infinity_maths": 0.48,
+      "Comprehensive_Report_IRM": 0.741,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.486,
+      "Claude_Engineering___Verification_Log": 0.563,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.803,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.712,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.791,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.885,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.493,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.497,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.855,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.196,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.649,
+      "HYPOTHESIS_semantic_connection": 0.859,
+      "ORTHODOX_BRIDGE_ZFC": 0.839,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.0,
+      "arxiv_1401.0388v2": 0.972,
+      "arxiv_1502.06936v2": 0.635,
+      "arxiv_1505.02628v2": 0.99,
+      "arxiv_1509.03798v1": 0.47,
+      "arxiv_1701.05187v1": 0.926,
+      "arxiv_1706.10173v1": 1.0,
+      "arxiv_1803.06056v2": 0.966,
+      "arxiv_2208.00415v2": 0.619
+    },
+    "arxiv_1401.0388v2": {
+      "chatgpt_infinity_maths": 0.74,
+      "Comprehensive_Report_IRM": 0.688,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.827,
+      "Claude_Engineering___Verification_Log": 0.754,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.905,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.198,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.831,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.538,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.851,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.974,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.863,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.687,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.98,
+      "HYPOTHESIS_semantic_connection": 0.971,
+      "ORTHODOX_BRIDGE_ZFC": 0.943,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.972,
+      "arxiv_1401.0388v2": 0.0,
+      "arxiv_1502.06936v2": 0.181,
+      "arxiv_1505.02628v2": 0.05,
+      "arxiv_1509.03798v1": 0.642,
+      "arxiv_1701.05187v1": 0.382,
+      "arxiv_1706.10173v1": 0.602,
+      "arxiv_1803.06056v2": 0.823,
+      "arxiv_2208.00415v2": 0.597
+    },
+    "arxiv_1502.06936v2": {
+      "chatgpt_infinity_maths": 0.498,
+      "Comprehensive_Report_IRM": 0.456,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.529,
+      "Claude_Engineering___Verification_Log": 0.59,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.625,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.044,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.557,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.859,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.617,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.737,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.763,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.433,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.811,
+      "HYPOTHESIS_semantic_connection": 0.925,
+      "ORTHODOX_BRIDGE_ZFC": 0.67,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.635,
+      "arxiv_1401.0388v2": 0.181,
+      "arxiv_1502.06936v2": 0.0,
+      "arxiv_1505.02628v2": 0.327,
+      "arxiv_1509.03798v1": 0.316,
+      "arxiv_1701.05187v1": 0.23,
+      "arxiv_1706.10173v1": 0.981,
+      "arxiv_1803.06056v2": 0.896,
+      "arxiv_2208.00415v2": 0.753
+    },
+    "arxiv_1505.02628v2": {
+      "chatgpt_infinity_maths": 0.795,
+      "Comprehensive_Report_IRM": 0.765,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.866,
+      "Claude_Engineering___Verification_Log": 0.702,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.936,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.349,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.863,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.312,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.861,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.985,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.852,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.701,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.986,
+      "HYPOTHESIS_semantic_connection": 0.988,
+      "ORTHODOX_BRIDGE_ZFC": 0.954,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.99,
+      "arxiv_1401.0388v2": 0.05,
+      "arxiv_1502.06936v2": 0.327,
+      "arxiv_1505.02628v2": 0.0,
+      "arxiv_1509.03798v1": 0.713,
+      "arxiv_1701.05187v1": 0.506,
+      "arxiv_1706.10173v1": 0.352,
+      "arxiv_1803.06056v2": 0.745,
+      "arxiv_2208.00415v2": 0.424
+    },
+    "arxiv_1509.03798v1": {
+      "chatgpt_infinity_maths": 0.544,
+      "Comprehensive_Report_IRM": 0.493,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.237,
+      "Claude_Engineering___Verification_Log": 0.302,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.451,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.361,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.189,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.806,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.411,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.39,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.628,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.35,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.713,
+      "HYPOTHESIS_semantic_connection": 0.907,
+      "ORTHODOX_BRIDGE_ZFC": 0.282,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.47,
+      "arxiv_1401.0388v2": 0.642,
+      "arxiv_1502.06936v2": 0.316,
+      "arxiv_1505.02628v2": 0.713,
+      "arxiv_1509.03798v1": -0.0,
+      "arxiv_1701.05187v1": 0.465,
+      "arxiv_1706.10173v1": 0.962,
+      "arxiv_1803.06056v2": 0.927,
+      "arxiv_2208.00415v2": 0.701
+    },
+    "arxiv_1701.05187v1": {
+      "chatgpt_infinity_maths": 0.473,
+      "Comprehensive_Report_IRM": 0.265,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.636,
+      "Claude_Engineering___Verification_Log": 0.685,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.321,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.216,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.436,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.915,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.864,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.94,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.723,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.685,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.909,
+      "HYPOTHESIS_semantic_connection": 0.987,
+      "ORTHODOX_BRIDGE_ZFC": 0.625,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.926,
+      "arxiv_1401.0388v2": 0.382,
+      "arxiv_1502.06936v2": 0.23,
+      "arxiv_1505.02628v2": 0.506,
+      "arxiv_1509.03798v1": 0.465,
+      "arxiv_1701.05187v1": 0.0,
+      "arxiv_1706.10173v1": 0.951,
+      "arxiv_1803.06056v2": 0.879,
+      "arxiv_2208.00415v2": 0.92
+    },
+    "arxiv_1706.10173v1": {
+      "chatgpt_infinity_maths": 0.968,
+      "Comprehensive_Report_IRM": 0.95,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.975,
+      "Claude_Engineering___Verification_Log": 0.661,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.935,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.979,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.958,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.04,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 1.0,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.989,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.874,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.81,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.992,
+      "HYPOTHESIS_semantic_connection": 1.0,
+      "ORTHODOX_BRIDGE_ZFC": 0.965,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 1.0,
+      "arxiv_1401.0388v2": 0.602,
+      "arxiv_1502.06936v2": 0.981,
+      "arxiv_1505.02628v2": 0.352,
+      "arxiv_1509.03798v1": 0.962,
+      "arxiv_1701.05187v1": 0.951,
+      "arxiv_1706.10173v1": -0.0,
+      "arxiv_1803.06056v2": 0.671,
+      "arxiv_2208.00415v2": 0.208
+    },
+    "arxiv_1803.06056v2": {
+      "chatgpt_infinity_maths": 0.912,
+      "Comprehensive_Report_IRM": 0.831,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.879,
+      "Claude_Engineering___Verification_Log": 0.649,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.754,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.808,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.921,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.532,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.417,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.527,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.111,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.804,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.793,
+      "HYPOTHESIS_semantic_connection": 0.994,
+      "ORTHODOX_BRIDGE_ZFC": 0.922,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.966,
+      "arxiv_1401.0388v2": 0.823,
+      "arxiv_1502.06936v2": 0.896,
+      "arxiv_1505.02628v2": 0.745,
+      "arxiv_1509.03798v1": 0.927,
+      "arxiv_1701.05187v1": 0.879,
+      "arxiv_1706.10173v1": 0.671,
+      "arxiv_1803.06056v2": -0.0,
+      "arxiv_2208.00415v2": 0.728
+    },
+    "arxiv_2208.00415v2": {
+      "chatgpt_infinity_maths": 0.894,
+      "Comprehensive_Report_IRM": 0.73,
+      "Axiomatic_Foundations_of_Infinitesimal_Reality_Math__The__base_n.d.e.f": 0.777,
+      "Claude_Engineering___Verification_Log": 0.548,
+      "Computational_and_Ontological_Superiority_of_IRM_Over_ZFC": 0.758,
+      "Developing_Calculus_Towards_Infinitesimal_Reality_Math__IRM__from_Pre-": 0.803,
+      "Formal_Paper_12__The_Pre-Quotient_Continuum__Levi-Civita_Field_Embeddi": 0.885,
+      "Formal_Paper_17__Global_Existence__Uniqueness__and_C___Smoothness_of_t": 0.179,
+      "Formal_Paper_24__Non-Archimedean_Yang-Mills_Existence_and_Mass_Gap__Ce": 0.705,
+      "Formal_Paper_25__Non-Archimedean_Spectral_Realization_of_the_Riemann_Z": 0.589,
+      "Formal_Paper_30__The_Master_Mathematical_Canon_of_Infinitesimal_Realit": 0.813,
+      "Formal_Paper_7__Discrete_0_2_Bounded_Lattice_Mechanics__The_Try___Catc": 0.386,
+      "Formal_Paper_9__Higher-Order_Simplicial_Homology__Principal_G-Bundles_": 0.784,
+      "HYPOTHESIS_semantic_connection": 0.866,
+      "ORTHODOX_BRIDGE_ZFC": 0.939,
+      "PM_Prompt__Amended_-_Directive_Matrix_Protocol_": 0.619,
+      "arxiv_1401.0388v2": 0.597,
+      "arxiv_1502.06936v2": 0.753,
+      "arxiv_1505.02628v2": 0.424,
+      "arxiv_1509.03798v1": 0.701,
+      "arxiv_1701.05187v1": 0.92,
+      "arxiv_1706.10173v1": 0.208,
+      "arxiv_1803.06056v2": 0.728,
+      "arxiv_2208.00415v2": 0.0
+    }
+  }
+}

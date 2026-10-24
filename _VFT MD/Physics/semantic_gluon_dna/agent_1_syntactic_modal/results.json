@@ -1,0 +1,4378 @@
+{
+  "agent": "Agent 1: Syntactic Modal & Derivation-Law State Machine",
+  "architecture": {
+    "engines": {
+      "C": [
+        "is_like",
+        "may_be"
+      ],
+      "P": [
+        "will_be",
+        "can_be"
+      ],
+      "R": [
+        "is_not",
+        "cant_be"
+      ],
+      "G": [
+        "was_like",
+        "wont_be"
+      ]
+    },
+    "derivation_laws": {
+      "Law1_Reductive_cant_be": "was_like + can_be opposing is_like until is_not -> cant_be",
+      "Law2_Productive_will_be": "is_not + is_like opposing was_like until can_be -> will_be",
+      "Law3_Regressive_wont_be": "is_not + is_like opposing can_be until was_like -> wont_be",
+      "Law4_Constructive_may_be": "can_be + was_like until is_like -> may_be"
+    }
+  },
+  "chat_analysis": {
+    "doc_id": "chat_infinity_maths",
+    "doc_type": "dialogue_exploration",
+    "filename": "chatgpt infinity maths.md",
+    "n_paragraphs": 1626,
+    "n_sentences": 2341,
+    "n_windows": 2339,
+    "modal_counts": {
+      "is_like": 216,
+      "may_be": 37,
+      "will_be": 74,
+      "can_be": 125,
+      "is_not": 55,
+      "cant_be": 64,
+      "was_like": 35,
+      "wont_be": 14
+    },
+    "engine_summary": {
+      "C": 253,
+      "P": 199,
+      "R": 119,
+      "G": 49,
+      "total_modals": 620,
+      "iota": 0.4581,
+      "outer": 380,
+      "inner": 240
+    },
+    "derivation_laws": {
+      "Law1_Reductive_cant_be": {
+        "mean_score": 0.0985,
+        "completed_windows": 16,
+        "completion_rate": 0.0068,
+        "exemplars": [
+          {
+            "pos": 0.0142,
+            "score": 0.85,
+            "snippet": "We usually write something like an​, not with ∞ in the index. **Equality across successive terms** (an​=an+1​) is a perfectly valid recursive definition, but putting 1∞ and 0∞ into it makes it undefined unless you’ve cre"
+          },
+          {
+            "pos": 0.0148,
+            "score": 0.85,
+            "snippet": "**Equality across successive terms** (an​=an+1​) is a perfectly valid recursive definition, but putting 1∞ and 0∞ into it makes it undefined unless you’ve created a new symbolic system. - If you mean it literally as writ"
+          },
+          {
+            "pos": 0.4228,
+            "score": 0.95,
+            "snippet": "Standard examples and the general condition: - If at some level K you have a digit aK​ that is not maximal, you may be able to replace the tail (aK+1​,aK+2​,…) by a tail of maximal digits and increase aK​ by 1 to obtain "
+          }
+        ]
+      },
+      "Law2_Productive_will_be": {
+        "mean_score": 0.1045,
+        "completed_windows": 12,
+        "completion_rate": 0.0051,
+        "exemplars": [
+          {
+            "pos": 0.4228,
+            "score": 0.95,
+            "snippet": "Standard examples and the general condition: - If at some level K you have a digit aK​ that is not maximal, you may be able to replace the tail (aK+1​,aK+2​,…) by a tail of maximal digits and increase aK​ by 1 to obtain "
+          },
+          {
+            "pos": 0.4234,
+            "score": 0.95,
+            "snippet": "- If at some level K you have a digit aK​ that is not maximal, you may be able to replace the tail (aK+1​,aK+2​,…) by a tail of maximal digits and increase aK​ by 1 to obtain the same sum. Concretely, when all bk​≡b, the"
+          },
+          {
+            "pos": 0.5415,
+            "score": 0.75,
+            "snippet": "The Infinitesimal Proof The Standard Infinitesimal Proof (Pre-Reality Math) This is a proof by contradiction. Assume that 1 is not equal to 0.999.... Then the difference 1 - 0.999... must equal some positive number, x."
+          }
+        ]
+      },
+      "Law3_Regressive_wont_be": {
+        "mean_score": 0.0877,
+        "completed_windows": 6,
+        "completion_rate": 0.0026,
+        "exemplars": [
+          {
+            "pos": 0.0142,
+            "score": 0.75,
+            "snippet": "We usually write something like an​, not with ∞ in the index. **Equality across successive terms** (an​=an+1​) is a perfectly valid recursive definition, but putting 1∞ and 0∞ into it makes it undefined unless you’ve cre"
+          },
+          {
+            "pos": 0.0148,
+            "score": 0.75,
+            "snippet": "**Equality across successive terms** (an​=an+1​) is a perfectly valid recursive definition, but putting 1∞ and 0∞ into it makes it undefined unless you’ve created a new symbolic system. - If you mean it literally as writ"
+          },
+          {
+            "pos": 0.4228,
+            "score": 1.0,
+            "snippet": "Standard examples and the general condition: - If at some level K you have a digit aK​ that is not maximal, you may be able to replace the tail (aK+1​,aK+2​,…) by a tail of maximal digits and increase aK​ by 1 to obtain "
+          }
+        ]
+      },
+      "Law4_Constructive_may_be": {
+        "mean_score": 0.1121,
+        "completed_windows": 4,
+        "completion_rate": 0.0017,
+        "exemplars": [
+          {
+            "pos": 0.0166,
+            "score": 0.7833,
+            "snippet": "- To make it rigorous, you’d need to **drop the ∞ symbols** and just define an​=an+1​. Do you want me to try **formalising your exact symbolic version** (keeping the 1∞ and 0∞ but turning it into a proper definition), or"
+          },
+          {
+            "pos": 0.0172,
+            "score": 0.7833,
+            "snippet": "Do you want me to try **formalising your exact symbolic version** (keeping the 1∞ and 0∞ but turning it into a proper definition), or do you want me to **recast it into standard analysis terms** where it can be properly "
+          },
+          {
+            "pos": 0.1871,
+            "score": 0.8833,
+            "snippet": "**Fractions / Decimals**: Could extend with “fraction rods” for \\[0_1.5\\], \\[0_2.25\\], etc., same logic as decimals in rods. This dictionary makes the analogy **exactly visual in text**: \\[0_n\\] = rod symbol(s) in the co"
+          }
+        ]
+      }
+    },
+    "decile_trajectory": [
+      {
+        "decile": "0-10%",
+        "C": 27,
+        "P": 8,
+        "R": 9,
+        "G": 6,
+        "iota": 0.4,
+        "turbulence": 0.47,
+        "modals_per_clause": 0.1961
+      },
+      {
+        "decile": "10-20%",
+        "C": 15,
+        "P": 16,
+        "R": 5,
+        "G": 12,
+        "iota": 0.2917,
+        "turbulence": 0.4818,
+        "modals_per_clause": 0.1752
+      },
+      {
+        "decile": "20-30%",
+        "C": 8,
+        "P": 13,
+        "R": 0,
+        "G": 1,
+        "iota": 0.9091,
+        "turbulence": 0.3395,
+        "modals_per_clause": 0.0902
+      },
+      {
+        "decile": "30-40%",
+        "C": 10,
+        "P": 27,
+        "R": 0,
+        "G": 0,
+        "iota": 1.0,
+        "turbulence": 0.3613,
+        "modals_per_clause": 0.1434
+      },
+      {
+        "decile": "40-50%",
+        "C": 24,
+        "P": 25,
+        "R": 2,
+        "G": 2,
+        "iota": 0.8491,
+        "turbulence": 0.4351,
+        "modals_per_clause": 0.2008
+      },
+      {
+        "decile": "50-60%",
+        "C": 92,
+        "P": 47,
+        "R": 48,
+        "G": 15,
+        "iota": 0.3762,
+        "turbulence": 0.5008,
+        "modals_per_clause": 0.2979
+      },
+      {
+        "decile": "60-70%",
+        "C": 20,
+        "P": 17,
+        "R": 13,
+        "G": 4,
+        "iota": 0.3704,
+        "turbulence": 0.4826,
+        "modals_per_clause": 0.1538
+      },
+      {
+        "decile": "70-80%",
+        "C": 36,
+        "P": 27,
+        "R": 22,
+        "G": 5,
+        "iota": 0.4,
+        "turbulence": 0.4761,
+        "modals_per_clause": 0.2609
+      },
+      {
+        "decile": "80-90%",
+        "C": 15,
+        "P": 11,
+        "R": 16,
+        "G": 2,
+        "iota": 0.1818,
+        "turbulence": 0.4471,
+        "modals_per_clause": 0.1571
+      },
+      {
+        "decile": "90-100%",
+        "C": 6,
+        "P": 8,
+        "R": 4,
+        "G": 2,
+        "iota": 0.4,
+        "turbulence": 0.3287,
+        "modals_per_clause": 0.08
+      }
+    ],
+    "breakdown_zones": [],
+    "top_included_concepts": [
+      [
+        "number",
+        47
+      ],
+      [
+        "reality math",
+        37
+      ],
+      [
+        "relative",
+        20
+      ],
+      [
+        "rods units",
+        19
+      ],
+      [
+        "units",
+        18
+      ],
+      [
+        "numbers",
+        15
+      ],
+      [
+        "real numbers",
+        15
+      ],
+      [
+        "limit",
+        13
+      ],
+      [
+        "unit",
+        11
+      ],
+      [
+        "infinity",
+        10
+      ],
+      [
+        "digit set",
+        9
+      ],
+      [
+        "natural numbers",
+        8
+      ],
+      [
+        "real number",
+        8
+      ],
+      [
+        "framing operator",
+        8
+      ],
+      [
+        "frame",
+        8
+      ],
+      [
+        "potential",
+        8
+      ],
+      [
+        "axiom",
+        7
+      ],
+      [
+        "infinitesimal",
+        7
+      ],
+      [
+        "fractal number",
+        6
+      ],
+      [
+        "state",
+        6
+      ],
+      [
+        "variable name",
+        6
+      ],
+      [
+        "every number",
+        5
+      ],
+      [
+        "continuum",
+        5
+      ],
+      [
+        "zero",
+        5
+      ],
+      [
+        "chinese number",
+        5
+      ],
+      [
+        "infinite frame",
+        5
+      ],
+      [
+        "infinitesimal unit",
+        5
+      ],
+      [
+        "definitive state",
+        5
+      ],
+      [
+        "implicative state",
+        5
+      ],
+      [
+        "infinitesimal expansion",
+        5
+      ],
+      [
+        "primitive unit",
+        4
+      ],
+      [
+        "rod numerals",
+        4
+      ],
+      [
+        "r in brackets followed by the infinity symbol",
+        4
+      ],
+      [
+        "formally",
+        4
+      ],
+      [
+        "positive number",
+        4
+      ],
+      [
+        "evolution",
+        4
+      ],
+      [
+        "infinitesimal compared",
+        4
+      ],
+      [
+        "infinitesimal contains",
+        4
+      ],
+      [
+        "holographic infinitesimal",
+        4
+      ],
+      [
+        "tensor",
+        4
+      ],
+      [
+        "indefinite number formalism",
+        4
+      ],
+      [
+        "next number",
+        3
+      ],
+      [
+        "hyperreal field",
+        3
+      ],
+      [
+        "representation operator",
+        3
+      ],
+      [
+        "calculus",
+        3
+      ],
+      [
+        "field",
+        3
+      ],
+      [
+        "rod units",
+        3
+      ],
+      [
+        "hyperreal number",
+        3
+      ],
+      [
+        "vector field theory",
+        3
+      ],
+      [
+        "relative infinities",
+        3
+      ],
+      [
+        "repeating series",
+        3
+      ],
+      [
+        "formulaic series",
+        3
+      ],
+      [
+        "forbidden state",
+        3
+      ],
+      [
+        "algebraic transformation function",
+        3
+      ],
+      [
+        "boundary",
+        3
+      ],
+      [
+        "social infinitesimal",
+        3
+      ],
+      [
+        "new axiom",
+        3
+      ],
+      [
+        "physically intuitive mathematics",
+        3
+      ],
+      [
+        "higher numbers",
+        2
+      ],
+      [
+        "let n take continuous values",
+        2
+      ]
+    ],
+    "top_excluded_concepts": [
+      [
+        "reality math",
+        10
+      ],
+      [
+        "propagation operator",
+        8
+      ],
+      [
+        "absolute",
+        4
+      ],
+      [
+        "limit",
+        2
+      ],
+      [
+        "always defining forward via successor",
+        2
+      ],
+      [
+        "number",
+        2
+      ],
+      [
+        "discrete successor steps",
+        2
+      ],
+      [
+        "relative",
+        2
+      ],
+      [
+        "chinese number",
+        2
+      ],
+      [
+        "its purpose = just to compute a value",
+        2
+      ],
+      [
+        "= building numbers imaginarily",
+        2
+      ],
+      [
+        "forbidden state",
+        2
+      ],
+      [
+        "forbidden states",
+        2
+      ],
+      [
+        "unit",
+        2
+      ],
+      [
+        "= metaphorical",
+        2
+      ],
+      [
+        "infinitesimal = just a decimal placeholder",
+        2
+      ],
+      [
+        "infinitesimal",
+        2
+      ],
+      [
+        "universe = built of indivisible atoms of quantity",
+        2
+      ],
+      [
+        "actual",
+        1
+      ],
+      [
+        "represent number",
+        1
+      ],
+      [
+        "symbol relative",
+        1
+      ],
+      [
+        "encode numbers",
+        1
+      ],
+      [
+        "defined relative",
+        1
+      ],
+      [
+        "units",
+        1
+      ],
+      [
+        "chinese",
+        1
+      ],
+      [
+        "numbers",
+        1
+      ],
+      [
+        "countable set",
+        1
+      ],
+      [
+        "building numbers",
+        1
+      ],
+      [
+        "framing operator",
+        1
+      ],
+      [
+        "infinitesimal contains",
+        1
+      ],
+      [
+        "infinity mirror",
+        1
+      ],
+      [
+        "instantaneous resolution infinite",
+        1
+      ],
+      [
+        "static values",
+        1
+      ],
+      [
+        "unified circle equation",
+        1
+      ],
+      [
+        "standard mathematics",
+        1
+      ],
+      [
+        "corrected fraction proof",
+        1
+      ],
+      [
+        "paradox",
+        1
+      ],
+      [
+        "transformation rule",
+        1
+      ],
+      [
+        "application",
+        1
+      ],
+      [
+        "proof",
+        1
+      ],
+      [
+        "contradictory variables",
+        1
+      ],
+      [
+        "inescapable contradiction",
+        1
+      ],
+      [
+        "treated number",
+        1
+      ],
+      [
+        "ancient number",
+        1
+      ],
+      [
+        "full axiom",
+        1
+      ],
+      [
+        "operator",
+        1
+      ],
+      [
+        "forbidden state law",
+        1
+      ],
+      [
+        "propagation law",
+        1
+      ],
+      [
+        "encodes numbers",
+        1
+      ],
+      [
+        "infinitesimal cannot",
+        1
+      ],
+      [
+        "fractal number",
+        1
+      ],
+      [
+        "density",
+        1
+      ],
+      [
+        "new axiom",
+        1
+      ],
+      [
+        "moral ledger",
+        1
+      ],
+      [
+        "moral state",
+        1
+      ],
+      [
+        "spacetime",
+        1
+      ],
+      [
+        "conscious potential",
+        1
+      ],
+      [
+        "relative infinities",
+        1
+      ],
+      [
+        "socially relative",
+        1
+      ],
+      [
+        "western calculus",
+        1
+      ]
+    ],
+    "explicit_propositions_sample": [
+      {
+        "pos": 0.0345,
+        "type": "rather_than",
+        "excluded": "always defining forward via successor",
+        "included": "",
+        "snippet": "instead of always defining forward via successor, you"
+      },
+      {
+        "pos": 0.0615,
+        "type": "rather_than",
+        "excluded": "discrete successor steps",
+        "included": "let n take continuous values",
+        "snippet": "instead of discrete successor steps, you let n take continuous values"
+      },
+      {
+        "pos": 0.0788,
+        "type": "definition_inc",
+        "included": "real value",
+        "snippet": " now represents any real value "
+      },
+      {
+        "pos": 0.1458,
+        "type": "definition_inc",
+        "included": "integer n",
+        "snippet": "                    0_n represents integer n                                                        "
+      },
+      {
+        "pos": 0.2265,
+        "type": "definition_inc",
+        "included": "every fractional part is itself: recursive number",
+        "snippet": "- Every fractional part is itself defined as a recursive number "
+      },
+      {
+        "pos": 0.2591,
+        "type": "definition_inc",
+        "included": "naturally: decimals and fractions as a fractal hierarchy",
+        "snippet": "naturally represents decimals and fractions as a fractal hierarchy"
+      },
+      {
+        "pos": 0.5415,
+        "type": "contrast_not_but",
+        "excluded": "compute a value",
+        "included": "embed the physical nature of an interaction within",
+        "subject": "its purpose",
+        "snippet": " Its purpose is not just to compute a value, but to embed the physical nature of an interaction within the no"
+      },
+      {
+        "pos": 0.5415,
+        "type": "contrast_not_but",
+        "excluded": "building numbers imaginarily",
+        "included": "building them from infinity the foundational principle of th",
+        "subject": "",
+        "snippet": " This is not building numbers imaginarily, but building them from infinity The foundational principle of th"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "single",
+        "snippet": " This represents a single"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "notation 100∞: complete collection of all the infinitesimal 1∞ units that co",
+        "snippet": " The notation 100∞ represents the complete collection of all the infinitesimal 1∞ units that co"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "integer enclosed in brackets: stable",
+        "snippet": " An integer enclosed in brackets represents a stable"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "r in brackets followed by the infinity symbol: infinitely repeating decimal series of that defined state",
+        "snippet": "r in brackets followed by the infinity symbol represents an infinitely repeating decimal series of that defined state"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "r in brackets followed by the infinity symbol: infinitely repeating block series",
+        "snippet": "r in brackets followed by the infinity symbol represents an infinitely repeating block series"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "∞ a formula enclosed in curly braces: infinite series whose nature is defined by a computational pro",
+        "snippet": "∞ A formula enclosed in curly braces represents an infinite series whose nature is defined by a computational pro"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "linear combination the plus sign",
+        "snippet": " Linear Combination The plus sign represents a 2D"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "volumetric creation the multiplication sign",
+        "snippet": " Volumetric Creation The multiplication sign represents a 3D"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "m-dimensional genesis the power symbol: higher-dimensional",
+        "snippet": " M-Dimensional Genesis The power symbol represents a higher-dimensional"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "formally: limit of an infinite geometric series",
+        "snippet": " is formally defined as the limit of an infinite geometric series"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "formally: supremum of this set",
+        "snippet": " is formally defined as the supremum of this set"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "shorthand operator meaning",
+        "snippet": " is defined as a shorthand operator meaning "
+      },
+      {
+        "pos": 0.616,
+        "type": "definition_inc",
+        "included": "writing n∞: variable expands recursively in infinitesimal partitions",
+        "snippet": " Writing n∞ denotes that the variable expands recursively in infinitesimal partitions"
+      },
+      {
+        "pos": 0.7403,
+        "type": "contrast_not_but",
+        "excluded": "metaphorical",
+        "included": "",
+        "subject": "",
+        "snippet": " This is not metaphorical; it is the "
+      },
+      {
+        "pos": 0.7471,
+        "type": "contrast_not_but",
+        "excluded": "decimal placeholder",
+        "included": "micro-program that encodes its entire environment",
+        "subject": "infinitesimal",
+        "snippet": " An infinitesimal is not just a decimal placeholder, but a micro-program that encodes its entire environment"
+      },
+      {
+        "pos": 0.7588,
+        "type": "contrast_not_but",
+        "excluded": "built of indivisible atoms of quantity",
+        "included": "",
+        "subject": "universe",
+        "snippet": " the universe is not built of indivisible atoms of quantity, but of "
+      },
+      {
+        "pos": 0.8868,
+        "type": "definition_inc",
+        "included": "integer followed by ∞: unresolved infinitesimal",
+        "snippet": " An integer followed by ∞ represents an unresolved infinitesimal"
+      }
+    ]
+  },
+  "irm_analysis": {
+    "doc_id": "irm_comprehensive_report",
+    "doc_type": "formal_synthesis",
+    "filename": "Comprehensive Report -  Infinity Indefinite Mathematics (IRM).md",
+    "n_paragraphs": 306,
+    "n_sentences": 508,
+    "n_windows": 506,
+    "modal_counts": {
+      "is_like": 135,
+      "may_be": 3,
+      "will_be": 24,
+      "can_be": 4,
+      "is_not": 38,
+      "cant_be": 17,
+      "was_like": 14,
+      "wont_be": 5
+    },
+    "engine_summary": {
+      "C": 138,
+      "P": 28,
+      "R": 55,
+      "G": 19,
+      "total_modals": 240,
+      "iota": 0.3833,
+      "outer": 211,
+      "inner": 29
+    },
+    "derivation_laws": {
+      "Law1_Reductive_cant_be": {
+        "mean_score": 0.1783,
+        "completed_windows": 8,
+        "completion_rate": 0.0158,
+        "exemplars": [
+          {
+            "pos": 0.0557,
+            "score": 0.85,
+            "snippet": "#### 1.3 The Nature of Observation Observation, measurement, or interaction is the act of engaging *only* with the Definitive State \\[x\\]. The underlying generative process x_ε is implicit and cannot be measured directly"
+          },
+          {
+            "pos": 0.059,
+            "score": 0.85,
+            "snippet": "Observation, measurement, or interaction is the act of engaging *only* with the Definitive State \\[x\\]. The underlying generative process x_ε is implicit and cannot be measured directly, only its emergent effects (the Sh"
+          },
+          {
+            "pos": 0.177,
+            "score": 0.85,
+            "snippet": "Standard mathematics provides an abstract language to describe quantities. Reality Math, as a core component of Vector Field Theory (VFT), is a notational and computational system designed to describe physical processes "
+          }
+        ]
+      },
+      "Law2_Productive_will_be": {
+        "mean_score": 0.1921,
+        "completed_windows": 4,
+        "completion_rate": 0.0079,
+        "exemplars": [
+          {
+            "pos": 0.3672,
+            "score": 0.85,
+            "snippet": "- **The Collective as the Frame:** In a socio-economic context, the collective consciousness of \"everyone else\" constitutes the complete, definitive frame of reference (**\\[1\\]** or 100%). - **The Individual as the Pixel"
+          },
+          {
+            "pos": 0.3705,
+            "score": 0.85,
+            "snippet": "- **The Individual as the Pixel:** An individual's total moral and conscious state, as defined by their {χ} Moral Ledger, is a single \"pixel\" within that larger collective frame. - **The VFT Interpretation:** Therefore, "
+          },
+          {
+            "pos": 0.9246,
+            "score": 0.75,
+            "snippet": "- *Standard Proof:* 0.999... is the limit of the series Σ 9/10\\^n, which converges to 1. - *The Flaw:* Equates the destination of a limit with the object itself. - Corrected Proof (Reality Math): The gap between 1 and th"
+          }
+        ]
+      },
+      "Law3_Regressive_wont_be": {
+        "mean_score": 0.1692,
+        "completed_windows": 5,
+        "completion_rate": 0.0099,
+        "exemplars": [
+          {
+            "pos": 0.0656,
+            "score": 0.75,
+            "snippet": "#### 2.1 Redefining Pi (π) In the INDEF framework, π is not a static, transcendental number derived from a circle's properties. π is the **Geometric Exploration Operator**—it is the fundamental *action* or *process* of a"
+          },
+          {
+            "pos": 0.0689,
+            "score": 0.75,
+            "snippet": "In the INDEF framework, π is not a static, transcendental number derived from a circle's properties. π is the **Geometric Exploration Operator**—it is the fundamental *action* or *process* of a central point exploring al"
+          }
+        ]
+      },
+      "Law4_Constructive_may_be": {
+        "mean_score": 0.1834,
+        "completed_windows": 0,
+        "completion_rate": 0.0,
+        "exemplars": [
+          {
+            "pos": 0.0295,
+            "score": 0.7833,
+            "snippet": "- **X** is the **INDEF Object**: The complete, process-based reality of a \"thing.\" - **\\[x\\]** is the **Definitive State (Shell)**: The scalar, observable, classical value (e.g., a number, a position, a particle). This i"
+          },
+          {
+            "pos": 0.0328,
+            "score": 0.7833,
+            "snippet": "- **\\[x\\]** is the **Definitive State (Shell)**: The scalar, observable, classical value (e.g., a number, a position, a particle). This is the \"collapsed\" or \"resolved\" state. - **x_ε** is the **Infinitesimal Field (Hear"
+          },
+          {
+            "pos": 0.0656,
+            "score": 0.7833,
+            "snippet": "#### 2.1 Redefining Pi (π) In the INDEF framework, π is not a static, transcendental number derived from a circle's properties. π is the **Geometric Exploration Operator**—it is the fundamental *action* or *process* of a"
+          }
+        ]
+      }
+    },
+    "decile_trajectory": [
+      {
+        "decile": "0-10%",
+        "C": 22,
+        "P": 2,
+        "R": 5,
+        "G": 4,
+        "iota": 0.4545,
+        "turbulence": 0.4972,
+        "modals_per_clause": 0.6226
+      },
+      {
+        "decile": "10-20%",
+        "C": 13,
+        "P": 1,
+        "R": 6,
+        "G": 4,
+        "iota": 0.1667,
+        "turbulence": 0.6563,
+        "modals_per_clause": 0.3934
+      },
+      {
+        "decile": "20-30%",
+        "C": 20,
+        "P": 5,
+        "R": 11,
+        "G": 1,
+        "iota": 0.3514,
+        "turbulence": 0.5876,
+        "modals_per_clause": 0.4111
+      },
+      {
+        "decile": "30-40%",
+        "C": 19,
+        "P": 3,
+        "R": 7,
+        "G": 3,
+        "iota": 0.375,
+        "turbulence": 0.5639,
+        "modals_per_clause": 0.4848
+      },
+      {
+        "decile": "40-50%",
+        "C": 8,
+        "P": 2,
+        "R": 1,
+        "G": 0,
+        "iota": 0.8182,
+        "turbulence": 0.3942,
+        "modals_per_clause": 0.2115
+      },
+      {
+        "decile": "50-60%",
+        "C": 9,
+        "P": 1,
+        "R": 4,
+        "G": 0,
+        "iota": 0.4286,
+        "turbulence": 0.5734,
+        "modals_per_clause": 0.2545
+      },
+      {
+        "decile": "60-70%",
+        "C": 7,
+        "P": 1,
+        "R": 2,
+        "G": 0,
+        "iota": 0.6,
+        "turbulence": 0.4534,
+        "modals_per_clause": 0.2128
+      },
+      {
+        "decile": "70-80%",
+        "C": 13,
+        "P": 3,
+        "R": 7,
+        "G": 1,
+        "iota": 0.3333,
+        "turbulence": 0.6514,
+        "modals_per_clause": 0.375
+      },
+      {
+        "decile": "80-90%",
+        "C": 16,
+        "P": 3,
+        "R": 7,
+        "G": 3,
+        "iota": 0.3103,
+        "turbulence": 0.6375,
+        "modals_per_clause": 0.4085
+      },
+      {
+        "decile": "90-100%",
+        "C": 11,
+        "P": 7,
+        "R": 5,
+        "G": 3,
+        "iota": 0.3846,
+        "turbulence": 0.5173,
+        "modals_per_clause": 0.4127
+      }
+    ],
+    "breakdown_zones": [
+      {
+        "decile": "10-20%",
+        "iota": 0.1667,
+        "exclusive_ratio": 0.4167,
+        "turbulence": 0.6563,
+        "diagnosis": "High Modal Phase Turbulence"
+      },
+      {
+        "decile": "20-30%",
+        "iota": 0.3514,
+        "exclusive_ratio": 0.3243,
+        "turbulence": 0.5876,
+        "diagnosis": "High Modal Phase Turbulence"
+      },
+      {
+        "decile": "30-40%",
+        "iota": 0.375,
+        "exclusive_ratio": 0.3125,
+        "turbulence": 0.5639,
+        "diagnosis": "High Modal Phase Turbulence"
+      },
+      {
+        "decile": "50-60%",
+        "iota": 0.4286,
+        "exclusive_ratio": 0.2857,
+        "turbulence": 0.5734,
+        "diagnosis": "High Modal Phase Turbulence"
+      },
+      {
+        "decile": "70-80%",
+        "iota": 0.3333,
+        "exclusive_ratio": 0.3333,
+        "turbulence": 0.6514,
+        "diagnosis": "High Modal Phase Turbulence"
+      },
+      {
+        "decile": "80-90%",
+        "iota": 0.3103,
+        "exclusive_ratio": 0.3448,
+        "turbulence": 0.6375,
+        "diagnosis": "High Modal Phase Turbulence"
+      }
+    ],
+    "top_included_concepts": [
+      [
+        "number",
+        13
+      ],
+      [
+        "infinitesimal field",
+        8
+      ],
+      [
+        "reality math",
+        8
+      ],
+      [
+        "definitive state",
+        6
+      ],
+      [
+        "axiom",
+        6
+      ],
+      [
+        "geometric exploration operator",
+        5
+      ],
+      [
+        "standard proof",
+        5
+      ],
+      [
+        "corrected proof",
+        5
+      ],
+      [
+        "infinity indefinite mathematics",
+        4
+      ],
+      [
+        "relative",
+        4
+      ],
+      [
+        "potential",
+        4
+      ],
+      [
+        "r in brackets followed by the infinity symbol",
+        4
+      ],
+      [
+        "infinity mirror",
+        4
+      ],
+      [
+        "flaw",
+        4
+      ],
+      [
+        "definitive states",
+        3
+      ],
+      [
+        "state",
+        3
+      ],
+      [
+        "frame",
+        3
+      ],
+      [
+        "infinity",
+        3
+      ],
+      [
+        "implicative state",
+        3
+      ],
+      [
+        "infinitesimal",
+        3
+      ],
+      [
+        "numbers",
+        3
+      ],
+      [
+        "empty set",
+        3
+      ],
+      [
+        "infinitesimal recursion density",
+        3
+      ],
+      [
+        "nature",
+        2
+      ],
+      [
+        "embed the physical nature of an interaction within",
+        2
+      ],
+      [
+        "vector field theory",
+        2
+      ],
+      [
+        "= building them from infinity",
+        2
+      ],
+      [
+        "relative infinities",
+        2
+      ],
+      [
+        "scale",
+        2
+      ],
+      [
+        "real numbers",
+        2
+      ],
+      [
+        "framing operator",
+        2
+      ],
+      [
+        "defined frame",
+        2
+      ],
+      [
+        "possible unit",
+        2
+      ],
+      [
+        "infinitesimal unit",
+        2
+      ],
+      [
+        "integer enclosed in brackets",
+        2
+      ],
+      [
+        "stable",
+        2
+      ],
+      [
+        "defined state",
+        2
+      ],
+      [
+        "∞ a formula enclosed in curly braces",
+        2
+      ],
+      [
+        "linear combination the plus sign",
+        2
+      ],
+      [
+        "linear combination",
+        2
+      ],
+      [
+        "volumetric creation the multiplication sign",
+        2
+      ],
+      [
+        "volumetric creation",
+        2
+      ],
+      [
+        "game engine",
+        2
+      ],
+      [
+        "m-dimensional genesis the power symbol",
+        2
+      ],
+      [
+        "forbidden state",
+        2
+      ],
+      [
+        "algebraic transformation function",
+        2
+      ],
+      [
+        "circle equation",
+        2
+      ],
+      [
+        "infinitesimal compared",
+        2
+      ],
+      [
+        "infinitesimal contains",
+        2
+      ],
+      [
+        "holographic vectors",
+        2
+      ],
+      [
+        "number 5",
+        2
+      ],
+      [
+        "field until",
+        2
+      ],
+      [
+        "first object",
+        2
+      ],
+      [
+        "confusion zone",
+        2
+      ],
+      [
+        "generative rule",
+        2
+      ],
+      [
+        "natural numbers",
+        2
+      ],
+      [
+        "infinitesimal integration",
+        2
+      ],
+      [
+        "adjacency axes",
+        2
+      ],
+      [
+        "hegemony diagram",
+        2
+      ],
+      [
+        "algebra",
+        2
+      ]
+    ],
+    "top_excluded_concepts": [
+      [
+        "its purpose = just to compute a value",
+        2
+      ],
+      [
+        "= building numbers imaginarily",
+        2
+      ],
+      [
+        "absolute",
+        2
+      ],
+      [
+        "new axiom",
+        2
+      ],
+      [
+        "unit",
+        2
+      ],
+      [
+        "square",
+        2
+      ],
+      [
+        "flaw",
+        2
+      ],
+      [
+        "infinitesimal field",
+        1
+      ],
+      [
+        "transcendental number",
+        1
+      ],
+      [
+        "geometric exploration operator",
+        1
+      ],
+      [
+        "classical",
+        1
+      ],
+      [
+        "definitive state",
+        1
+      ],
+      [
+        "observable boundary",
+        1
+      ],
+      [
+        "infinitesimal fields",
+        1
+      ],
+      [
+        "stable boundary",
+        1
+      ],
+      [
+        "building numbers",
+        1
+      ],
+      [
+        "infinity",
+        1
+      ],
+      [
+        "infinitesimal contains",
+        1
+      ],
+      [
+        "infinity mirror",
+        1
+      ],
+      [
+        "infinite numbers",
+        1
+      ],
+      [
+        "reality math",
+        1
+      ],
+      [
+        "static values",
+        1
+      ],
+      [
+        "dynamic variables",
+        1
+      ],
+      [
+        "fundamental law",
+        1
+      ],
+      [
+        "physical law",
+        1
+      ],
+      [
+        "forbidden state",
+        1
+      ],
+      [
+        "algorithm",
+        1
+      ],
+      [
+        "forward transformation",
+        1
+      ],
+      [
+        "old model",
+        1
+      ],
+      [
+        "indivisible unit",
+        1
+      ],
+      [
+        "moral ledger",
+        1
+      ],
+      [
+        "moral state",
+        1
+      ],
+      [
+        "spacetime",
+        1
+      ],
+      [
+        "conscious potential",
+        1
+      ],
+      [
+        "static objects",
+        1
+      ],
+      [
+        "dynamic process",
+        1
+      ],
+      [
+        "numbers",
+        1
+      ],
+      [
+        "integral definition",
+        1
+      ],
+      [
+        "inescapable contradiction",
+        1
+      ]
+    ],
+    "explicit_propositions_sample": [
+      {
+        "pos": 0.177,
+        "type": "contrast_not_but",
+        "excluded": "compute a value",
+        "included": "embed the physical nature of an interaction within",
+        "subject": "its purpose",
+        "snippet": " Its purpose is not just to compute a value, but to embed the physical nature of an interaction within the no"
+      },
+      {
+        "pos": 0.1803,
+        "type": "contrast_not_but",
+        "excluded": "building numbers imaginarily",
+        "included": "building them from infinity",
+        "subject": "",
+        "snippet": "This is not building numbers imaginarily, but building them from infinity"
+      },
+      {
+        "pos": 0.2066,
+        "type": "definition_inc",
+        "included": "single",
+        "snippet": " This represents a single"
+      },
+      {
+        "pos": 0.2197,
+        "type": "definition_inc",
+        "included": "integer enclosed in brackets: stable",
+        "snippet": "\n  An integer enclosed in brackets represents a stable"
+      },
+      {
+        "pos": 0.2295,
+        "type": "definition_inc",
+        "included": "r in brackets followed by the infinity symbol: infinitely repeating decimal series of that defined state",
+        "snippet": "r in brackets followed by the infinity symbol represents an infinitely repeating decimal series of that defined state"
+      },
+      {
+        "pos": 0.2361,
+        "type": "definition_inc",
+        "included": "r in brackets followed by the infinity symbol: infinitely repeating block series",
+        "snippet": "r in brackets followed by the infinity symbol represents an infinitely repeating block series"
+      },
+      {
+        "pos": 0.2426,
+        "type": "definition_inc",
+        "included": "∞ a formula enclosed in curly braces: infinite series whose nature is defined by a computational pro",
+        "snippet": "∞\n  A formula enclosed in curly braces represents an infinite series whose nature is defined by a computational pro"
+      },
+      {
+        "pos": 0.2525,
+        "type": "definition_inc",
+        "included": "linear combination the plus sign",
+        "snippet": " Linear Combination\n  The plus sign represents a 2D"
+      },
+      {
+        "pos": 0.2557,
+        "type": "definition_inc",
+        "included": "volumetric creation the multiplication sign",
+        "snippet": "Volumetric Creation\n  The multiplication sign represents a 3D"
+      },
+      {
+        "pos": 0.259,
+        "type": "definition_inc",
+        "included": "m-dimensional genesis the power symbol: higher-dimensional",
+        "snippet": " M-Dimensional Genesis\n  The power symbol represents a higher-dimensional"
+      },
+      {
+        "pos": 0.4852,
+        "type": "definition_inc",
+        "included": "number 5",
+        "snippet": " The number 5 is defined as 0_5 "
+      },
+      {
+        "pos": 0.5443,
+        "type": "definition_inc",
+        "included": "field until: stable",
+        "snippet": "-field until it resolves into the stable"
+      },
+      {
+        "pos": 0.7443,
+        "type": "negation_exc",
+        "excluded": "square",
+        "snippet": " The square is rejected"
+      },
+      {
+        "pos": 0.8623,
+        "type": "definition_inc",
+        "included": "integral: hyperfinite sum of infinitesimal durations",
+        "snippet": " The integral represents the hyperfinite sum of infinitesimal durations "
+      },
+      {
+        "pos": 0.9377,
+        "type": "definition_inc",
+        "included": "supremum",
+        "snippet": " is defined as the supremum "
+      }
+    ]
+  },
+  "arxiv_baseline_summary": {
+    "n_papers": 3,
+    "mean_iota": 0.252,
+    "mean_derivation_laws": {
+      "Law1_Reductive_cant_be": {
+        "mean_score": 0.0714,
+        "mean_completion_rate": 0.0031
+      },
+      "Law2_Productive_will_be": {
+        "mean_score": 0.0832,
+        "mean_completion_rate": 0.004
+      },
+      "Law3_Regressive_wont_be": {
+        "mean_score": 0.067,
+        "mean_completion_rate": 0.0028
+      },
+      "Law4_Constructive_may_be": {
+        "mean_score": 0.0921,
+        "mean_completion_rate": 0.0042
+      }
+    }
+  },
+  "arxiv_papers": [
+    {
+      "doc_id": "arxiv_1502.06936v2",
+      "doc_type": "arxiv_paper",
+      "filename": "arxiv_1502.06936v2.md",
+      "n_paragraphs": 593,
+      "n_sentences": 7712,
+      "n_windows": 7710,
+      "modal_counts": {
+        "is_like": 164,
+        "may_be": 254,
+        "will_be": 104,
+        "can_be": 326,
+        "is_not": 184,
+        "cant_be": 56,
+        "was_like": 59,
+        "wont_be": 11
+      },
+      "engine_summary": {
+        "C": 418,
+        "P": 430,
+        "R": 240,
+        "G": 70,
+        "total_modals": 1158,
+        "iota": 0.4646,
+        "outer": 511,
+        "inner": 647
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0519,
+          "completed_windows": 6,
+          "completion_rate": 0.0008,
+          "exemplars": [
+            {
+              "pos": 0.0963,
+              "score": 0.95,
+              "snippet": "unlike real numbers, they can have radically different properties. So here is the contradiction,"
+            },
+            {
+              "pos": 0.3074,
+              "score": 0.85,
+              "snippet": "was discovered, and defined as a relation $\\succ$ (Definition \\ref{DEF006}) and $\\succeq$ (Definition \\ref{DEF005}). Here, it is not the sign of the number,"
+            },
+            {
+              "pos": 0.4071,
+              "score": 0.85,
+              "snippet": "expressed as an interval $\\frac{\\phi}{f} \\in [ \\mathbb{R}^{+}+\\Phi, +\\Phi^{-1}]$. We can see the first interval is a subinterval in the second, hence implication is confirmed, but that the second interval is not containe"
+            }
+          ]
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0557,
+          "completed_windows": 7,
+          "completion_rate": 0.0009,
+          "exemplars": [
+            {
+              "pos": 0.0963,
+              "score": 0.75,
+              "snippet": "unlike real numbers, they can have radically different properties. So here is the contradiction,"
+            },
+            {
+              "pos": 0.4071,
+              "score": 0.75,
+              "snippet": "expressed as an interval $\\frac{\\phi}{f} \\in [ \\mathbb{R}^{+}+\\Phi, +\\Phi^{-1}]$. We can see the first interval is a subinterval in the second, hence implication is confirmed, but that the second interval is not containe"
+            },
+            {
+              "pos": 0.4088,
+              "score": 0.75,
+              "snippet": "We can see the first interval is a subinterval in the second, hence implication is confirmed, but that the second interval is not contained in the first, then the `not implied' confirmed."
+            }
+          ]
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0481,
+          "completed_windows": 1,
+          "completion_rate": 0.0001,
+          "exemplars": []
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0713,
+          "completed_windows": 10,
+          "completion_rate": 0.0013,
+          "exemplars": [
+            {
+              "pos": 0.0203,
+              "score": 0.7833,
+              "snippet": "infinities. What we found was a need to fundamentally consider what numbers really are,"
+            },
+            {
+              "pos": 0.0203,
+              "score": 0.7833,
+              "snippet": "What we found was a need to fundamentally consider what numbers really are, and to find and then"
+            },
+            {
+              "pos": 0.0811,
+              "score": 0.7833,
+              "snippet": "created by infinite processes, \\textit{the real numbers do not contain an infinity}. We can imagine such a number with"
+            }
+          ]
+        }
+      },
+      "decile_trajectory": [
+        {
+          "decile": "0-10%",
+          "C": 28,
+          "P": 28,
+          "R": 17,
+          "G": 5,
+          "iota": 0.4359,
+          "turbulence": 0.5907,
+          "modals_per_clause": 0.1343
+        },
+        {
+          "decile": "10-20%",
+          "C": 39,
+          "P": 39,
+          "R": 40,
+          "G": 6,
+          "iota": 0.2581,
+          "turbulence": 0.6406,
+          "modals_per_clause": 0.1445
+        },
+        {
+          "decile": "20-30%",
+          "C": 27,
+          "P": 11,
+          "R": 3,
+          "G": 7,
+          "iota": 0.5833,
+          "turbulence": 0.5502,
+          "modals_per_clause": 0.0767
+        },
+        {
+          "decile": "30-40%",
+          "C": 51,
+          "P": 50,
+          "R": 18,
+          "G": 7,
+          "iota": 0.6032,
+          "turbulence": 0.6242,
+          "modals_per_clause": 0.1559
+        },
+        {
+          "decile": "40-50%",
+          "C": 33,
+          "P": 41,
+          "R": 18,
+          "G": 5,
+          "iota": 0.5258,
+          "turbulence": 0.6254,
+          "modals_per_clause": 0.1003
+        },
+        {
+          "decile": "50-60%",
+          "C": 23,
+          "P": 40,
+          "R": 24,
+          "G": 8,
+          "iota": 0.3263,
+          "turbulence": 0.6972,
+          "modals_per_clause": 0.0861
+        },
+        {
+          "decile": "60-70%",
+          "C": 59,
+          "P": 72,
+          "R": 30,
+          "G": 6,
+          "iota": 0.5689,
+          "turbulence": 0.5194,
+          "modals_per_clause": 0.1718
+        },
+        {
+          "decile": "70-80%",
+          "C": 59,
+          "P": 45,
+          "R": 31,
+          "G": 13,
+          "iota": 0.4054,
+          "turbulence": 0.6631,
+          "modals_per_clause": 0.2496
+        },
+        {
+          "decile": "80-90%",
+          "C": 44,
+          "P": 48,
+          "R": 30,
+          "G": 7,
+          "iota": 0.4264,
+          "turbulence": 0.6389,
+          "modals_per_clause": 0.1354
+        },
+        {
+          "decile": "90-100%",
+          "C": 55,
+          "P": 56,
+          "R": 29,
+          "G": 6,
+          "iota": 0.5205,
+          "turbulence": 0.6276,
+          "modals_per_clause": 0.1461
+        }
+      ],
+      "breakdown_zones": [
+        {
+          "decile": "0-10%",
+          "iota": 0.4359,
+          "exclusive_ratio": 0.2821,
+          "turbulence": 0.5907,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "10-20%",
+          "iota": 0.2581,
+          "exclusive_ratio": 0.371,
+          "turbulence": 0.6406,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "20-30%",
+          "iota": 0.5833,
+          "exclusive_ratio": 0.2083,
+          "turbulence": 0.5502,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "30-40%",
+          "iota": 0.6032,
+          "exclusive_ratio": 0.1984,
+          "turbulence": 0.6242,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "40-50%",
+          "iota": 0.5258,
+          "exclusive_ratio": 0.2371,
+          "turbulence": 0.6254,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "50-60%",
+          "iota": 0.3263,
+          "exclusive_ratio": 0.3368,
+          "turbulence": 0.6972,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "70-80%",
+          "iota": 0.4054,
+          "exclusive_ratio": 0.2973,
+          "turbulence": 0.6631,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "80-90%",
+          "iota": 0.4264,
+          "exclusive_ratio": 0.2868,
+          "turbulence": 0.6389,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "90-100%",
+          "iota": 0.5205,
+          "exclusive_ratio": 0.2397,
+          "turbulence": 0.6276,
+          "diagnosis": "High Modal Phase Turbulence"
+        }
+      ],
+      "top_included_concepts": [
+        [
+          "infinity",
+          179
+        ],
+        [
+          "number",
+          77
+        ],
+        [
+          "limit",
+          47
+        ],
+        [
+          "numbers",
+          31
+        ],
+        [
+          "infinitary calculus",
+          30
+        ],
+        [
+          "real numbers",
+          29
+        ],
+        [
+          "zero",
+          29
+        ],
+        [
+          "calculus",
+          18
+        ],
+        [
+          "real number",
+          17
+        ],
+        [
+          "ratio",
+          17
+        ],
+        [
+          "gossamer numbers",
+          16
+        ],
+        [
+          "infinite numbers",
+          10
+        ],
+        [
+          "field",
+          10
+        ],
+        [
+          "identity",
+          10
+        ],
+        [
+          "theorem",
+          10
+        ],
+        [
+          "infinite number",
+          9
+        ],
+        [
+          "infinitesimal and infinitary",
+          8
+        ],
+        [
+          "reaching infinity",
+          8
+        ],
+        [
+          "algebra",
+          8
+        ],
+        [
+          "infinitesimal",
+          7
+        ],
+        [
+          "rational numbers",
+          7
+        ],
+        [
+          "gossamer number",
+          6
+        ],
+        [
+          "continuum",
+          6
+        ],
+        [
+          "finite numbers",
+          6
+        ],
+        [
+          "complex numbers",
+          5
+        ],
+        [
+          "definition",
+          5
+        ],
+        [
+          "scale",
+          5
+        ],
+        [
+          "finite number",
+          4
+        ],
+        [
+          "positive number",
+          4
+        ],
+        [
+          "negative number",
+          4
+        ],
+        [
+          "order field",
+          4
+        ],
+        [
+          "positive numbers",
+          4
+        ],
+        [
+          "proposition",
+          4
+        ],
+        [
+          "operator",
+          4
+        ],
+        [
+          "du bois",
+          3
+        ],
+        [
+          "comparison algebra",
+          3
+        ],
+        [
+          "tiered calculus",
+          3
+        ],
+        [
+          "infinitesimal numbers",
+          3
+        ],
+        [
+          "natural numbers",
+          3
+        ],
+        [
+          "positive infinity",
+          3
+        ],
+        [
+          "negative infinity",
+          3
+        ],
+        [
+          "relative",
+          3
+        ],
+        [
+          "different number",
+          3
+        ],
+        [
+          "their ratio",
+          3
+        ],
+        [
+          "new number",
+          3
+        ],
+        [
+          "apply proposition",
+          3
+        ],
+        [
+          "division",
+          3
+        ],
+        [
+          "detailed number",
+          3
+        ],
+        [
+          "see theorem",
+          3
+        ],
+        [
+          "dimension number",
+          3
+        ],
+        [
+          "state",
+          3
+        ],
+        [
+          "over infinity",
+          3
+        ],
+        [
+          "epsilon",
+          3
+        ],
+        [
+          "delta proof",
+          3
+        ],
+        [
+          "infinitary calculus theory",
+          2
+        ],
+        [
+          "relations algebra",
+          2
+        ],
+        [
+          "function algebra",
+          2
+        ],
+        [
+          "infinitary number",
+          2
+        ],
+        [
+          "countable infinity",
+          2
+        ],
+        [
+          "algebraic numbers",
+          2
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "infinity",
+          34
+        ],
+        [
+          "number",
+          20
+        ],
+        [
+          "real numbers",
+          9
+        ],
+        [
+          "numbers",
+          8
+        ],
+        [
+          "gossamer numbers",
+          8
+        ],
+        [
+          "limit",
+          8
+        ],
+        [
+          "finite number",
+          6
+        ],
+        [
+          "rational number",
+          6
+        ],
+        [
+          "gossamer number",
+          5
+        ],
+        [
+          "infinitary calculus",
+          5
+        ],
+        [
+          "infinitesimal",
+          4
+        ],
+        [
+          "real number",
+          4
+        ],
+        [
+          "archimedean number",
+          4
+        ],
+        [
+          "reaching infinity",
+          3
+        ],
+        [
+          "ratio",
+          3
+        ],
+        [
+          "algebraic number",
+          3
+        ],
+        [
+          "zero",
+          3
+        ],
+        [
+          "infinite number",
+          3
+        ],
+        [
+          "calculus",
+          3
+        ],
+        [
+          "field",
+          3
+        ],
+        [
+          "operator",
+          3
+        ],
+        [
+          "saying a number becomes infinitely small",
+          2
+        ],
+        [
+          "single largest integer",
+          2
+        ],
+        [
+          "considering infinity",
+          2
+        ],
+        [
+          "algebraic numbers",
+          2
+        ],
+        [
+          "transcendental numbers",
+          2
+        ],
+        [
+          "irrational number",
+          2
+        ],
+        [
+          "transcendental number",
+          2
+        ],
+        [
+          "finite numbers",
+          2
+        ],
+        [
+          "= the sign of the number",
+          2
+        ],
+        [
+          "expressed separately",
+          2
+        ],
+        [
+          "argue that this = just an option",
+          2
+        ],
+        [
+          "asymptotic expansions = unique",
+          2
+        ],
+        [
+          "building the inequality",
+          2
+        ],
+        [
+          "working in reals",
+          2
+        ],
+        [
+          "infinitesimal quantities",
+          2
+        ],
+        [
+          "continuum",
+          2
+        ],
+        [
+          "archimedean",
+          2
+        ],
+        [
+          "solve with products",
+          2
+        ],
+        [
+          "dividing and forming the infinitesimals",
+          2
+        ],
+        [
+          "minimalistic sense = a finite inequality",
+          2
+        ],
+        [
+          "purge mathematics of complexity for certainty",
+          2
+        ],
+        [
+          "robert goldblatt",
+          2
+        ],
+        [
+          "second edition",
+          2
+        ],
+        [
+          "princeton university press",
+          2
+        ],
+        [
+          "nonstandard analysis",
+          2
+        ],
+        [
+          "comparison algebra",
+          1
+        ],
+        [
+          "use algebra",
+          1
+        ],
+        [
+          "actual",
+          1
+        ],
+        [
+          "modern algebra",
+          1
+        ],
+        [
+          "level set",
+          1
+        ],
+        [
+          "rational numbers",
+          1
+        ],
+        [
+          "irrational numbers",
+          1
+        ],
+        [
+          "natural number",
+          1
+        ],
+        [
+          "explicit infinity",
+          1
+        ],
+        [
+          "parent number",
+          1
+        ],
+        [
+          "child number",
+          1
+        ],
+        [
+          "without division",
+          1
+        ],
+        [
+          "infinity is non",
+          1
+        ],
+        [
+          "infinitesimal part",
+          1
+        ]
+      ],
+      "explicit_propositions_sample": [
+        {
+          "pos": 0.0625,
+          "type": "rather_than",
+          "excluded": "saying a number becomes infinitely small",
+          "included": "infinitely large",
+          "snippet": "Rather than saying\n a number becomes infinitely small, or\n infinitely large"
+        },
+        {
+          "pos": 0.0794,
+          "type": "contrast_not_but",
+          "excluded": "single largest integer",
+          "included": "class of integers",
+          "subject": "r because the existence of infinite integers",
+          "snippet": "r\n because the existence of infinite integers\n is not a single largest integer, but a class of\n integers"
+        },
+        {
+          "pos": 0.3074,
+          "type": "contrast_not_but",
+          "excluded": "sign of the number",
+          "included": "size of the number which determines the relation",
+          "subject": "",
+          "snippet": " it is not the sign of the number,\n but the size of the number which determines the relation"
+        },
+        {
+          "pos": 0.3074,
+          "type": "rather_than",
+          "excluded": "expressed separately",
+          "included": "packaged as a variable",
+          "snippet": "instead of being expressed separately, could\n be packaged as a variable"
+        },
+        {
+          "pos": 0.3074,
+          "type": "definition_inc",
+          "included": "relation",
+          "snippet": " and defined as a relation "
+        },
+        {
+          "pos": 0.3176,
+          "type": "definition_inc",
+          "included": "equivalent to little-o",
+          "snippet": "\n is defined as equivalent to little-o"
+        },
+        {
+          "pos": 0.3193,
+          "type": "contrast_not_but",
+          "excluded": "option",
+          "included": "fundamental part of calculus",
+          "subject": "argue",
+          "snippet": "\n we will argue that this is not just an option,\n but a fundamental part of calculus"
+        },
+        {
+          "pos": 0.3361,
+          "type": "contrast_not_but",
+          "excluded": "unique",
+          "included": "subject to orders of magnitude",
+          "subject": "asymptotic expansions",
+          "snippet": " asymptotic expansions\n are not unique, but subject to\n orders of magnitude"
+        },
+        {
+          "pos": 0.4493,
+          "type": "rather_than",
+          "excluded": "building the inequality",
+          "included": "inequality can be verified directly",
+          "snippet": "rather than building the inequality,\n the inequality can be verified directly"
+        },
+        {
+          "pos": 0.5726,
+          "type": "negation_exc",
+          "excluded": "",
+          "snippet": "\n If there is a contradiction"
+        },
+        {
+          "pos": 0.6132,
+          "type": "definition_inc",
+          "included": "truncating all the infinitesimals: standard part",
+          "snippet": "\n Truncating all the infinitesimals \n is defined as \n  the standard part "
+        },
+        {
+          "pos": 0.6199,
+          "type": "rather_than",
+          "excluded": "working in reals",
+          "included": "extending the reals which is implicitly done",
+          "snippet": "rather than\n working in reals, and extending\n the reals which is implicitly done "
+        },
+        {
+          "pos": 0.728,
+          "type": "negation_exc",
+          "excluded": "",
+          "snippet": " it is undefined"
+        },
+        {
+          "pos": 0.7551,
+          "type": "negation_exc",
+          "excluded": "",
+          "snippet": " it is impossible"
+        },
+        {
+          "pos": 0.7855,
+          "type": "definition_inc",
+          "included": "robably a consequence of multiplication: repeated addition",
+          "snippet": "robably a consequence of multiplication being defined as\n repeated addition"
+        },
+        {
+          "pos": 0.8361,
+          "type": "rather_than",
+          "excluded": "solve with products",
+          "included": "reason by exponential and logarithmic functions",
+          "snippet": "rather than solve with products, reason\n by exponential and logarithmic\n functions which are "
+        },
+        {
+          "pos": 0.8429,
+          "type": "rather_than",
+          "excluded": "dividing and forming the infinitesimals",
+          "included": "instead apply arguments of magnitude",
+          "snippet": "rather than \n dividing and forming the infinitesimals,\n instead apply arguments of magnitude"
+        },
+        {
+          "pos": 0.9105,
+          "type": "definition_inc",
+          "included": "since convergence: negation of divergence",
+          "snippet": "\n Since convergence is defined as the negation of divergence "
+        },
+        {
+          "pos": 0.9561,
+          "type": "definition_inc",
+          "included": "infinity: finite is interpreted as successive orders of numerical infi",
+          "snippet": "here infinity defined as not finite is\n interpreted as successive orders of numerical infi"
+        },
+        {
+          "pos": 0.9595,
+          "type": "contrast_not_but",
+          "excluded": "finite inequality",
+          "included": "inequality at infinity with infinitesimals",
+          "subject": "minimalistic sense",
+          "snippet": " \n in a minimalistic sense \n is not\n a finite inequality,\n but an inequality at infinity with infinitesimals"
+        },
+        {
+          "pos": 0.9831,
+          "type": "rather_than",
+          "excluded": "purge mathematics of complexity for certainty",
+          "included": "consideration of orderings we believe has led to new rea",
+          "snippet": "Rather than purge mathematics of complexity for certainty, a consideration of \n orderings we believe has led to new rea"
+        }
+      ]
+    },
+    {
+      "doc_id": "arxiv_1509.03798v1",
+      "doc_type": "arxiv_paper",
+      "filename": "arxiv_1509.03798v1.md",
+      "n_paragraphs": 228,
+      "n_sentences": 1072,
+      "n_windows": 1070,
+      "modal_counts": {
+        "is_like": 83,
+        "may_be": 46,
+        "will_be": 65,
+        "can_be": 25,
+        "is_not": 38,
+        "cant_be": 16,
+        "was_like": 69,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 129,
+        "P": 90,
+        "R": 54,
+        "G": 71,
+        "total_modals": 344,
+        "iota": 0.2733,
+        "outer": 255,
+        "inner": 89
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0982,
+          "completed_windows": 9,
+          "completion_rate": 0.0084,
+          "exemplars": [
+            {
+              "pos": 0.0793,
+              "score": 1.0,
+              "snippet": "Some parts of this \\emph{collection} are well-known and can be found in the literature. We believe however, that this is the first time that the whole collection has appeared together. In Section~\\ref{S: Completeness of "
+            },
+            {
+              "pos": 0.0793,
+              "score": 0.85,
+              "snippet": "We believe however, that this is the first time that the whole collection has appeared together. In Section~\\ref{S: Completeness of a Non-Archimedean Field}, we establish some basic results about the completeness of non-"
+            },
+            {
+              "pos": 0.3965,
+              "score": 0.85,
+              "snippet": "Indeed, for any $i\\in I$, if there were a $j\\in I$ such that $a_j>b_i$ then $[a_j,b_j]\\cap [a_i,b_i]=\\varnothing$ contradicting the F.I.P., thus $b_i$ is an upper bound of $A$. As well, $A$ is non-empty so that $c=:\\sup("
+            }
+          ]
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.1225,
+          "completed_windows": 12,
+          "completion_rate": 0.0112,
+          "exemplars": [
+            {
+              "pos": 0.141,
+              "score": 0.75,
+              "snippet": "Indeed,  if $\\mathbb K$ is a non-Archimedean field, then $\\mathcal F(\\mathbb K)$ is always an Archimedean ring (which is not a field), but it has non-zero infinitesimals (see Example~\\ref{Ex: Field of Rational Functions}"
+            },
+            {
+              "pos": 0.3965,
+              "score": 0.85,
+              "snippet": "Indeed, for any $i\\in I$, if there were a $j\\in I$ such that $a_j>b_i$ then $[a_j,b_j]\\cap [a_i,b_i]=\\varnothing$ contradicting the F.I.P., thus $b_i$ is an upper bound of $A$. As well, $A$ is non-empty so that $c=:\\sup("
+            },
+            {
+              "pos": 0.4405,
+              "score": 0.75,
+              "snippet": "Let $\\{x_n\\}$ be a Cauchy sequence in $\\mathbb K$. Define $\\{\\delta_n\\}$ by $\\delta_n=|x_n-x_{n+1}|$. If $\\{\\delta_n\\}$ is not eventually zero, then there is a subsequence $\\{\\delta_{n_k}\\}$ such that $\\delta_{n_k}>0$ fo"
+            }
+          ]
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0909,
+          "completed_windows": 9,
+          "completion_rate": 0.0084,
+          "exemplars": [
+            {
+              "pos": 0.0793,
+              "score": 0.85,
+              "snippet": "Some parts of this \\emph{collection} are well-known and can be found in the literature. We believe however, that this is the first time that the whole collection has appeared together. In Section~\\ref{S: Completeness of "
+            },
+            {
+              "pos": 0.6167,
+              "score": 0.75,
+              "snippet": "It is not hard to show that $\\mathcal M_{\\rho}(^*\\mathbb R)$ is a convex subring, and $\\mathcal N_{\\rho}(^*\\mathbb R)$ is a maximal convex ideal; thus $^{\\rho}\\mathbb R$ is an ordered field. Actually, $^\\rho\\mathbb{R}$ i"
+            },
+            {
+              "pos": 0.6916,
+              "score": 0.75,
+              "snippet": "What is known with certainty is the following: (a) $\\mathbb L$ is an Archimedean field and $^*\\mathbb L$ is a non-Archimedean field (in the modern terminology); (b)  ${^*\\mathbb L}$ is a proper order field extension of $"
+            }
+          ]
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.1315,
+          "completed_windows": 12,
+          "completion_rate": 0.0112,
+          "exemplars": [
+            {
+              "pos": 0.0793,
+              "score": 0.7833,
+              "snippet": "This characterization is in the form of a collection of ten equivalent statements borrowed from algebra, real analysis, general topology and non-standard analysis (Theorem~\\ref{T: Completeness of an Archimedean Field}). "
+            },
+            {
+              "pos": 0.0793,
+              "score": 1.0,
+              "snippet": "Some parts of this \\emph{collection} are well-known and can be found in the literature. We believe however, that this is the first time that the whole collection has appeared together. In Section~\\ref{S: Completeness of "
+            },
+            {
+              "pos": 0.0837,
+              "score": 0.7833,
+              "snippet": "One of the characterizations of the completeness of an Archimedean field presented in Theorem~\\ref{T: Completeness of an Archimedean Field} (due originally to Keisler~\\cite{jKeislerF}) is formulated in terms of infinites"
+            }
+          ]
+        }
+      },
+      "decile_trajectory": [
+        {
+          "decile": "0-10%",
+          "C": 7,
+          "P": 7,
+          "R": 9,
+          "G": 9,
+          "iota": -0.125,
+          "turbulence": 0.3377,
+          "modals_per_clause": 0.1435
+        },
+        {
+          "decile": "10-20%",
+          "C": 19,
+          "P": 7,
+          "R": 5,
+          "G": 0,
+          "iota": 0.6774,
+          "turbulence": 0.527,
+          "modals_per_clause": 0.2385
+        },
+        {
+          "decile": "20-30%",
+          "C": 6,
+          "P": 6,
+          "R": 2,
+          "G": 3,
+          "iota": 0.4118,
+          "turbulence": 0.6798,
+          "modals_per_clause": 0.191
+        },
+        {
+          "decile": "30-40%",
+          "C": 18,
+          "P": 23,
+          "R": 4,
+          "G": 2,
+          "iota": 0.7447,
+          "turbulence": 0.4812,
+          "modals_per_clause": 0.376
+        },
+        {
+          "decile": "40-50%",
+          "C": 8,
+          "P": 14,
+          "R": 4,
+          "G": 0,
+          "iota": 0.6923,
+          "turbulence": 0.5262,
+          "modals_per_clause": 0.1625
+        },
+        {
+          "decile": "50-60%",
+          "C": 25,
+          "P": 14,
+          "R": 4,
+          "G": 3,
+          "iota": 0.6957,
+          "turbulence": 0.5701,
+          "modals_per_clause": 0.2396
+        },
+        {
+          "decile": "60-70%",
+          "C": 25,
+          "P": 8,
+          "R": 14,
+          "G": 32,
+          "iota": -0.1646,
+          "turbulence": 0.5091,
+          "modals_per_clause": 0.4389
+        },
+        {
+          "decile": "70-80%",
+          "C": 20,
+          "P": 11,
+          "R": 12,
+          "G": 21,
+          "iota": -0.0312,
+          "turbulence": 0.4739,
+          "modals_per_clause": 0.3478
+        },
+        {
+          "decile": "80-90%",
+          "C": 1,
+          "P": 0,
+          "R": 0,
+          "G": 0,
+          "iota": 1.0,
+          "turbulence": 0.2039,
+          "modals_per_clause": 0.011
+        },
+        {
+          "decile": "90-100%",
+          "C": 0,
+          "P": 0,
+          "R": 0,
+          "G": 1,
+          "iota": -1.0,
+          "turbulence": 0.2039,
+          "modals_per_clause": 0.0115
+        }
+      ],
+      "breakdown_zones": [
+        {
+          "decile": "0-10%",
+          "iota": -0.125,
+          "exclusive_ratio": 0.5625,
+          "turbulence": 0.3377,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "20-30%",
+          "iota": 0.4118,
+          "exclusive_ratio": 0.2941,
+          "turbulence": 0.6798,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "50-60%",
+          "iota": 0.6957,
+          "exclusive_ratio": 0.1522,
+          "turbulence": 0.5701,
+          "diagnosis": "High Modal Phase Turbulence"
+        },
+        {
+          "decile": "60-70%",
+          "iota": -0.1646,
+          "exclusive_ratio": 0.5823,
+          "turbulence": 0.5091,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "70-80%",
+          "iota": -0.0312,
+          "exclusive_ratio": 0.5156,
+          "turbulence": 0.4739,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "90-100%",
+          "iota": -1.0,
+          "exclusive_ratio": 1.0,
+          "turbulence": 0.2039,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        }
+      ],
+      "top_included_concepts": [
+        [
+          "field",
+          37
+        ],
+        [
+          "archimedean field",
+          29
+        ],
+        [
+          "ordered field",
+          27
+        ],
+        [
+          "infinitesimal calculus",
+          25
+        ],
+        [
+          "real numbers",
+          8
+        ],
+        [
+          "standard analysis",
+          8
+        ],
+        [
+          "new york",
+          8
+        ],
+        [
+          "valuation field",
+          7
+        ],
+        [
+          "totally ordered field",
+          7
+        ],
+        [
+          "algebra",
+          6
+        ],
+        [
+          "complete field",
+          6
+        ],
+        [
+          "section",
+          5
+        ],
+        [
+          "ordered rings",
+          5
+        ],
+        [
+          "finite number",
+          5
+        ],
+        [
+          "asymptotic numbers",
+          5
+        ],
+        [
+          "ordered fields",
+          4
+        ],
+        [
+          "general topology",
+          4
+        ],
+        [
+          "amir alexander",
+          4
+        ],
+        [
+          "calculus",
+          4
+        ],
+        [
+          "archimedean property",
+          4
+        ],
+        [
+          "rational functions",
+          4
+        ],
+        [
+          "identity",
+          4
+        ],
+        [
+          "axiom",
+          4
+        ],
+        [
+          "closed field",
+          4
+        ],
+        [
+          "california polytechnic state university",
+          3
+        ],
+        [
+          "san luis obispo",
+          3
+        ],
+        [
+          "schwartz distributions",
+          3
+        ],
+        [
+          "valuation metric",
+          3
+        ],
+        [
+          "standard real numbers",
+          3
+        ],
+        [
+          "infinite set",
+          3
+        ],
+        [
+          "euler infinitesimal calculus",
+          3
+        ],
+        [
+          "dedekind fields",
+          3
+        ],
+        [
+          "cantor completeness",
+          3
+        ],
+        [
+          "first uniqueness result",
+          3
+        ],
+        [
+          "keisler transfer principle",
+          3
+        ],
+        [
+          "sava petrov",
+          3
+        ],
+        [
+          "leibniz transfer principle",
+          3
+        ],
+        [
+          "real analysis",
+          3
+        ],
+        [
+          "todor todorov",
+          2
+        ],
+        [
+          "hahn field",
+          2
+        ],
+        [
+          "usually spread throughout the literature of various",
+          2
+        ],
+        [
+          "totally ordered rings",
+          2
+        ],
+        [
+          "adic numbers",
+          2
+        ],
+        [
+          "maximal ideal",
+          2
+        ],
+        [
+          "associated metric",
+          2
+        ],
+        [
+          "index set",
+          2
+        ],
+        [
+          "metric",
+          2
+        ],
+        [
+          "number",
+          2
+        ],
+        [
+          "order field",
+          2
+        ],
+        [
+          "hans vernaeve",
+          2
+        ],
+        [
+          "eventually zero",
+          2
+        ],
+        [
+          "cardinal number",
+          2
+        ],
+        [
+          "second uniqueness result",
+          2
+        ],
+        [
+          "power series",
+          2
+        ],
+        [
+          "relative",
+          2
+        ],
+        [
+          "solution set",
+          2
+        ],
+        [
+          "leibniz completeness principle",
+          2
+        ],
+        [
+          "infinitesimal",
+          2
+        ],
+        [
+          "robinson field",
+          2
+        ],
+        [
+          "purge",
+          2
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "infinitesimal calculus",
+          21
+        ],
+        [
+          "field",
+          9
+        ],
+        [
+          "archimedean field",
+          8
+        ],
+        [
+          "ordered field",
+          8
+        ],
+        [
+          "axiom",
+          6
+        ],
+        [
+          "euler calculus",
+          4
+        ],
+        [
+          "calculus",
+          4
+        ],
+        [
+          "algebra",
+          3
+        ],
+        [
+          "rigorous",
+          3
+        ],
+        [
+          "rational functions",
+          3
+        ],
+        [
+          "real numbers",
+          3
+        ],
+        [
+          "definitions = new",
+          2
+        ],
+        [
+          "section",
+          2
+        ],
+        [
+          "complete field",
+          2
+        ],
+        [
+          "totally ordered field",
+          2
+        ],
+        [
+          "number",
+          2
+        ],
+        [
+          "familiar field",
+          1
+        ],
+        [
+          "adic numbers",
+          1
+        ],
+        [
+          "purge",
+          1
+        ],
+        [
+          "adic valuation",
+          1
+        ],
+        [
+          "theorem",
+          1
+        ],
+        [
+          "prime number",
+          1
+        ],
+        [
+          "totally ordered rings",
+          1
+        ],
+        [
+          "his field",
+          1
+        ],
+        [
+          "asymptotic numbers",
+          1
+        ],
+        [
+          "scale",
+          1
+        ],
+        [
+          "second uniqueness result",
+          1
+        ],
+        [
+          "harmonic analysis",
+          1
+        ],
+        [
+          "infinitesimal amount",
+          1
+        ],
+        [
+          "infinitesimal annual income",
+          1
+        ],
+        [
+          "equivalent axiom",
+          1
+        ],
+        [
+          "differential calculus",
+          1
+        ],
+        [
+          "jesuit order",
+          1
+        ],
+        [
+          "modern calculus",
+          1
+        ],
+        [
+          "usual set",
+          1
+        ],
+        [
+          "standard analysis",
+          1
+        ],
+        [
+          "finite numbers",
+          1
+        ],
+        [
+          "compactness theorem",
+          1
+        ],
+        [
+          "whole set",
+          1
+        ],
+        [
+          "completeness theorem",
+          1
+        ],
+        [
+          "filter axiom",
+          1
+        ],
+        [
+          "support calculus",
+          1
+        ],
+        [
+          "leibniz transfer principle",
+          1
+        ],
+        [
+          "leibniz principle",
+          1
+        ],
+        [
+          "usual numbers",
+          1
+        ],
+        [
+          "numbers",
+          1
+        ],
+        [
+          "elaborate set",
+          1
+        ],
+        [
+          "modern set",
+          1
+        ],
+        [
+          "infinitesimal",
+          1
+        ],
+        [
+          "infinitesimal relation",
+          1
+        ],
+        [
+          "teaching calculus",
+          1
+        ],
+        [
+          "theory",
+          1
+        ],
+        [
+          "classical valuation",
+          1
+        ],
+        [
+          "springer monographs",
+          1
+        ]
+      ],
+      "explicit_propositions_sample": [
+        {
+          "pos": 0.0793,
+          "type": "contrast_not_but",
+          "excluded": "",
+          "included": "usually spread throughout the literature of various",
+          "subject": "definitions",
+          "snippet": "  These definitions are not new, but they are usually spread throughout the literature of various"
+        },
+        {
+          "pos": 0.7709,
+          "type": "definition_inc",
+          "included": "inverse",
+          "snippet": " is defined as the inverse of "
+        }
+      ]
+    },
+    {
+      "doc_id": "arxiv_1701.05187v1",
+      "doc_type": "arxiv_paper",
+      "filename": "arxiv_1701.05187v1.md",
+      "n_paragraphs": 580,
+      "n_sentences": 747,
+      "n_windows": 745,
+      "modal_counts": {
+        "is_like": 16,
+        "may_be": 9,
+        "will_be": 12,
+        "can_be": 19,
+        "is_not": 20,
+        "cant_be": 4,
+        "was_like": 28,
+        "wont_be": 2
+      },
+      "engine_summary": {
+        "C": 25,
+        "P": 31,
+        "R": 24,
+        "G": 30,
+        "total_modals": 110,
+        "iota": 0.0182,
+        "outer": 76,
+        "inner": 34
+      },
+      "derivation_laws": {
+        "Law1_Reductive_cant_be": {
+          "mean_score": 0.0642,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "exemplars": []
+        },
+        "Law2_Productive_will_be": {
+          "mean_score": 0.0715,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "exemplars": []
+        },
+        "Law3_Regressive_wont_be": {
+          "mean_score": 0.0619,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "exemplars": []
+        },
+        "Law4_Constructive_may_be": {
+          "mean_score": 0.0734,
+          "completed_windows": 0,
+          "completion_rate": 0.0,
+          "exemplars": [
+            {
+              "pos": 0.3178,
+              "score": 0.7833,
+              "snippet": "Such fields can be constructed from sets of sequences of real numbers, similar to the construction of the real numbers from the rational An infinitesimal~$\\alpha\\in\\astr$ is a number satisfying~$|\\alpha|<r$"
+            },
+            {
+              "pos": 0.6822,
+              "score": 0.7833,
+              "snippet": "calculus routinely exploit such expressions. They would say things like ``the function~$f$ has limit~$L$ at a point~$a$ if we can make"
+            },
+            {
+              "pos": 0.6822,
+              "score": 0.7833,
+              "snippet": "They would say things like ``the function~$f$ has limit~$L$ at a point~$a$ if we can make $f(x)$ as close to~$L$ as we wish for all~$x$ sufficiently close to"
+            }
+          ]
+        }
+      },
+      "decile_trajectory": [
+        {
+          "decile": "0-10%",
+          "C": 2,
+          "P": 1,
+          "R": 2,
+          "G": 1,
+          "iota": 0.0,
+          "turbulence": 0.2626,
+          "modals_per_clause": 0.0769
+        },
+        {
+          "decile": "10-20%",
+          "C": 1,
+          "P": 2,
+          "R": 3,
+          "G": 8,
+          "iota": -0.5714,
+          "turbulence": 0.4578,
+          "modals_per_clause": 0.1707
+        },
+        {
+          "decile": "20-30%",
+          "C": 0,
+          "P": 2,
+          "R": 5,
+          "G": 4,
+          "iota": -0.6364,
+          "turbulence": 0.4184,
+          "modals_per_clause": 0.1341
+        },
+        {
+          "decile": "30-40%",
+          "C": 8,
+          "P": 7,
+          "R": 3,
+          "G": 1,
+          "iota": 0.5789,
+          "turbulence": 0.54,
+          "modals_per_clause": 0.2346
+        },
+        {
+          "decile": "40-50%",
+          "C": 3,
+          "P": 4,
+          "R": 4,
+          "G": 6,
+          "iota": -0.1765,
+          "turbulence": 0.4535,
+          "modals_per_clause": 0.1868
+        },
+        {
+          "decile": "50-60%",
+          "C": 5,
+          "P": 6,
+          "R": 1,
+          "G": 5,
+          "iota": 0.2941,
+          "turbulence": 0.4095,
+          "modals_per_clause": 0.2073
+        },
+        {
+          "decile": "60-70%",
+          "C": 6,
+          "P": 9,
+          "R": 5,
+          "G": 3,
+          "iota": 0.3043,
+          "turbulence": 0.5389,
+          "modals_per_clause": 0.2875
+        },
+        {
+          "decile": "70-80%",
+          "C": 0,
+          "P": 0,
+          "R": 1,
+          "G": 1,
+          "iota": -1.0,
+          "turbulence": 0.1825,
+          "modals_per_clause": 0.0163
+        },
+        {
+          "decile": "80-90%",
+          "C": 0,
+          "P": 0,
+          "R": 0,
+          "G": 1,
+          "iota": -1.0,
+          "turbulence": 0.1302,
+          "modals_per_clause": 0.0095
+        },
+        {
+          "decile": "90-100%",
+          "C": 0,
+          "P": 0,
+          "R": 0,
+          "G": 0,
+          "iota": 0.0,
+          "turbulence": 0.0,
+          "modals_per_clause": 0.0
+        }
+      ],
+      "breakdown_zones": [
+        {
+          "decile": "0-10%",
+          "iota": 0.0,
+          "exclusive_ratio": 0.5,
+          "turbulence": 0.2626,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "10-20%",
+          "iota": -0.5714,
+          "exclusive_ratio": 0.7857,
+          "turbulence": 0.4578,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "20-30%",
+          "iota": -0.6364,
+          "exclusive_ratio": 0.8182,
+          "turbulence": 0.4184,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "40-50%",
+          "iota": -0.1765,
+          "exclusive_ratio": 0.5882,
+          "turbulence": 0.4535,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "70-80%",
+          "iota": -1.0,
+          "exclusive_ratio": 1.0,
+          "turbulence": 0.1825,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "80-90%",
+          "iota": -1.0,
+          "exclusive_ratio": 1.0,
+          "turbulence": 0.1302,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        },
+        {
+          "decile": "90-100%",
+          "iota": 0.0,
+          "exclusive_ratio": 0.0,
+          "turbulence": 0.0,
+          "diagnosis": "Reductive/Regressive Critique Spike"
+        }
+      ],
+      "top_included_concepts": [
+        [
+          "calculus",
+          10
+        ],
+        [
+          "infinitesimal calculus",
+          7
+        ],
+        [
+          "limit",
+          6
+        ],
+        [
+          "real numbers",
+          4
+        ],
+        [
+          "new york",
+          3
+        ],
+        [
+          "pythagoreans",
+          2
+        ],
+        [
+          "infinitesimal definitions over",
+          2
+        ],
+        [
+          "ramat gan",
+          2
+        ],
+        [
+          "infinitesimal definition",
+          2
+        ],
+        [
+          "punctiform continuum",
+          2
+        ],
+        [
+          "field",
+          2
+        ],
+        [
+          "infinitesimal approach",
+          2
+        ],
+        [
+          "freshman calculus",
+          2
+        ],
+        [
+          "ordered field",
+          2
+        ],
+        [
+          "number",
+          2
+        ],
+        [
+          "real number",
+          2
+        ],
+        [
+          "mathematical",
+          2
+        ],
+        [
+          "bar ilan university",
+          1
+        ],
+        [
+          "luie polev",
+          1
+        ],
+        [
+          "ilan university",
+          1
+        ],
+        [
+          "monolithic absolute",
+          1
+        ],
+        [
+          "true infinitesimal calculus",
+          1
+        ],
+        [
+          "key calculus",
+          1
+        ],
+        [
+          "epsilon delta calculus",
+          1
+        ],
+        [
+          "archimedean continuum",
+          1
+        ],
+        [
+          "bernoullian continuum",
+          1
+        ],
+        [
+          "recently robinson",
+          1
+        ],
+        [
+          "terry tao",
+          1
+        ],
+        [
+          "judith grabiner",
+          1
+        ],
+        [
+          "simon stevin",
+          1
+        ],
+        [
+          "fraenkel set",
+          1
+        ],
+        [
+          "infinitesimal definitions",
+          1
+        ],
+        [
+          "infinite numbers",
+          1
+        ],
+        [
+          "infinite number",
+          1
+        ],
+        [
+          "new numbers",
+          1
+        ],
+        [
+          "infinitesimal times infinitesimal",
+          1
+        ],
+        [
+          "infinitesimal times infinite",
+          1
+        ],
+        [
+          "theorem",
+          1
+        ],
+        [
+          "certain number",
+          1
+        ],
+        [
+          "extended number",
+          1
+        ],
+        [
+          "identity",
+          1
+        ],
+        [
+          "infinitesimal and infinite",
+          1
+        ],
+        [
+          "elementary calculus",
+          1
+        ],
+        [
+          "real set",
+          1
+        ],
+        [
+          "pythagorians",
+          1
+        ],
+        [
+          "rational numbers",
+          1
+        ],
+        [
+          "rational number",
+          1
+        ],
+        [
+          "unit",
+          1
+        ],
+        [
+          "infinitesimal change",
+          1
+        ],
+        [
+          "otto toeplitz",
+          1
+        ],
+        [
+          "inviolable axiom",
+          1
+        ],
+        [
+          "integral calculus",
+          1
+        ],
+        [
+          "second law",
+          1
+        ],
+        [
+          "figure",
+          1
+        ],
+        [
+          "jacques bair",
+          1
+        ],
+        [
+          "dangerous mathematical theory shaped",
+          1
+        ],
+        [
+          "modern world",
+          1
+        ],
+        [
+          "infinitesimal mathematics",
+          1
+        ],
+        [
+          "mathematical society",
+          1
+        ],
+        [
+          "internatonal society",
+          1
+        ]
+      ],
+      "top_excluded_concepts": [
+        [
+          "calculus",
+          2
+        ],
+        [
+          "infinitesimal calculus",
+          1
+        ],
+        [
+          "monolithic absolute",
+          1
+        ],
+        [
+          "neither archimedes",
+          1
+        ],
+        [
+          "errett bishop",
+          1
+        ],
+        [
+          "alain connes",
+          1
+        ],
+        [
+          "three calculus",
+          1
+        ],
+        [
+          "real number",
+          1
+        ],
+        [
+          "israel science foundation",
+          1
+        ]
+      ],
+      "explicit_propositions_sample": []
+    }
+  ],
+  "cross_document_discovery": {
+    "chat_total_unique_I": 564,
+    "irm_total_unique_I": 301,
+    "concept_survival_rate": 0.2535,
+    "top_unmerged_concepts": [
+      {
+        "concept": "rods units",
+        "chat_included_count": 19,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "units",
+        "chat_included_count": 18,
+        "chat_excluded_count": 1,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "unit",
+        "chat_included_count": 11,
+        "chat_excluded_count": 2,
+        "irm_included_count": 0,
+        "irm_excluded_count": 2,
+        "status": "REJECTED_IN_IRM"
+      },
+      {
+        "concept": "digit set",
+        "chat_included_count": 9,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "variable name",
+        "chat_included_count": 6,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "every number",
+        "chat_included_count": 5,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "continuum",
+        "chat_included_count": 5,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "chinese number",
+        "chat_included_count": 5,
+        "chat_excluded_count": 2,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "infinitesimal expansion",
+        "chat_included_count": 5,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "primitive unit",
+        "chat_included_count": 4,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "rod numerals",
+        "chat_included_count": 4,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "formally",
+        "chat_included_count": 4,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "tensor",
+        "chat_included_count": 4,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "indefinite number formalism",
+        "chat_included_count": 4,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "next number",
+        "chat_included_count": 3,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "hyperreal field",
+        "chat_included_count": 3,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "representation operator",
+        "chat_included_count": 3,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "calculus",
+        "chat_included_count": 3,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "field",
+        "chat_included_count": 3,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "rod units",
+        "chat_included_count": 3,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "higher numbers",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "let n take continuous values",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "infinitesimal or infinite",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "derived numbers",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "usual number",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "value set",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "real field",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "value field",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "infinitesimal and infinite",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "ordered field",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "your axiom",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "traditional chinese",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "nine chapters",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "mathematical art",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      },
+      {
+        "concept": "lo shu",
+        "chat_included_count": 2,
+        "chat_excluded_count": 0,
+        "irm_included_count": 0,
+        "irm_excluded_count": 0,
+        "status": "UNMERGED_OMITTED"
+      }
+    ],
+    "direct_I_chat_cap_E_irm_conflicts": [
+      {
+        "concept": "unit",
+        "chat_I": 11,
+        "chat_E": 2,
+        "chat_polarity": 0.692,
+        "irm_I": 0,
+        "irm_E": 2,
+        "irm_polarity": -1.0,
+        "polarity_shift": -1.692
+      },
+      {
+        "concept": "new axiom",
+        "chat_I": 3,
+        "chat_E": 1,
+        "chat_polarity": 0.5,
+        "irm_I": 1,
+        "irm_E": 2,
+        "irm_polarity": -0.333,
+        "polarity_shift": -0.833
+      }
+    ],
+    "top_survived_concepts": [
+      {
+        "concept": "number",
+        "chat_I": 47,
+        "irm_I": 13
+      },
+      {
+        "concept": "reality math",
+        "chat_I": 37,
+        "irm_I": 8
+      },
+      {
+        "concept": "definitive state",
+        "chat_I": 5,
+        "irm_I": 6
+      },
+      {
+        "concept": "axiom",
+        "chat_I": 7,
+        "irm_I": 6
+      },
+      {
+        "concept": "relative",
+        "chat_I": 20,
+        "irm_I": 4
+      },
+      {
+        "concept": "potential",
+        "chat_I": 8,
+        "irm_I": 4
+      },
+      {
+        "concept": "r in brackets followed by the infinity symbol",
+        "chat_I": 4,
+        "irm_I": 4
+      },
+      {
+        "concept": "definitive states",
+        "chat_I": 2,
+        "irm_I": 3
+      },
+      {
+        "concept": "state",
+        "chat_I": 6,
+        "irm_I": 3
+      },
+      {
+        "concept": "frame",
+        "chat_I": 8,
+        "irm_I": 3
+      },
+      {
+        "concept": "infinity",
+        "chat_I": 10,
+        "irm_I": 3
+      },
+      {
+        "concept": "implicative state",
+        "chat_I": 5,
+        "irm_I": 3
+      },
+      {
+        "concept": "infinitesimal",
+        "chat_I": 7,
+        "irm_I": 3
+      },
+      {
+        "concept": "numbers",
+        "chat_I": 15,
+        "irm_I": 3
+      },
+      {
+        "concept": "embed the physical nature of an interaction within",
+        "chat_I": 2,
+        "irm_I": 2
+      },
+      {
+        "concept": "vector field theory",
+        "chat_I": 3,
+        "irm_I": 2
+      },
+      {
+        "concept": "relative infinities",
+        "chat_I": 3,
+        "irm_I": 2
+      },
+      {
+        "concept": "scale",
+        "chat_I": 2,
+        "irm_I": 2
+      },
+      {
+        "concept": "real numbers",
+        "chat_I": 15,
+        "irm_I": 2
+      },
+      {
+        "concept": "framing operator",
+        "chat_I": 8,
+        "irm_I": 2
+      },
+      {
+        "concept": "defined frame",
+        "chat_I": 2,
+        "irm_I": 2
+      },
+      {
+        "concept": "possible unit",
+        "chat_I": 2,
+        "irm_I": 2
+      },
+      {
+        "concept": "infinitesimal unit",
+        "chat_I": 5,
+        "irm_I": 2
+      },
+      {
+        "concept": "integer enclosed in brackets",
+        "chat_I": 2,
+        "irm_I": 2
+      },
+      {
+        "concept": "defined state",
+        "chat_I": 2,
+        "irm_I": 2
+      }
+    ],
+    "unmerged_explicit_propositions": [
+      {
+        "pos": 0.0615,
+        "type": "rather_than",
+        "excluded": "discrete successor steps",
+        "included": "let n take continuous values",
+        "snippet": "instead of discrete successor steps, you let n take continuous values"
+      },
+      {
+        "pos": 0.0788,
+        "type": "definition_inc",
+        "included": "real value",
+        "snippet": " now represents any real value "
+      },
+      {
+        "pos": 0.1458,
+        "type": "definition_inc",
+        "included": "integer n",
+        "snippet": "                    0_n represents integer n                                                        "
+      },
+      {
+        "pos": 0.2265,
+        "type": "definition_inc",
+        "included": "every fractional part is itself: recursive number",
+        "snippet": "- Every fractional part is itself defined as a recursive number "
+      },
+      {
+        "pos": 0.2591,
+        "type": "definition_inc",
+        "included": "naturally: decimals and fractions as a fractal hierarchy",
+        "snippet": "naturally represents decimals and fractions as a fractal hierarchy"
+      },
+      {
+        "pos": 0.5415,
+        "type": "contrast_not_but",
+        "excluded": "compute a value",
+        "included": "embed the physical nature of an interaction within",
+        "subject": "its purpose",
+        "snippet": " Its purpose is not just to compute a value, but to embed the physical nature of an interaction within the no"
+      },
+      {
+        "pos": 0.5415,
+        "type": "contrast_not_but",
+        "excluded": "building numbers imaginarily",
+        "included": "building them from infinity the foundational principle of th",
+        "subject": "",
+        "snippet": " This is not building numbers imaginarily, but building them from infinity The foundational principle of th"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "notation 100∞: complete collection of all the infinitesimal 1∞ units that co",
+        "snippet": " The notation 100∞ represents the complete collection of all the infinitesimal 1∞ units that co"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "integer enclosed in brackets: stable",
+        "snippet": " An integer enclosed in brackets represents a stable"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "r in brackets followed by the infinity symbol: infinitely repeating decimal series of that defined state",
+        "snippet": "r in brackets followed by the infinity symbol represents an infinitely repeating decimal series of that defined state"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "r in brackets followed by the infinity symbol: infinitely repeating block series",
+        "snippet": "r in brackets followed by the infinity symbol represents an infinitely repeating block series"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "∞ a formula enclosed in curly braces: infinite series whose nature is defined by a computational pro",
+        "snippet": "∞ A formula enclosed in curly braces represents an infinite series whose nature is defined by a computational pro"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "m-dimensional genesis the power symbol: higher-dimensional",
+        "snippet": " M-Dimensional Genesis The power symbol represents a higher-dimensional"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "formally: limit of an infinite geometric series",
+        "snippet": " is formally defined as the limit of an infinite geometric series"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "formally: supremum of this set",
+        "snippet": " is formally defined as the supremum of this set"
+      },
+      {
+        "pos": 0.5415,
+        "type": "definition_inc",
+        "included": "shorthand operator meaning",
+        "snippet": " is defined as a shorthand operator meaning "
+      },
+      {
+        "pos": 0.616,
+        "type": "definition_inc",
+        "included": "writing n∞: variable expands recursively in infinitesimal partitions",
+        "snippet": " Writing n∞ denotes that the variable expands recursively in infinitesimal partitions"
+      },
+      {
+        "pos": 0.7588,
+        "type": "contrast_not_but",
+        "excluded": "built of indivisible atoms of quantity",
+        "included": "",
+        "subject": "universe",
+        "snippet": " the universe is not built of indivisible atoms of quantity, but of "
+      },
+      {
+        "pos": 0.8868,
+        "type": "definition_inc",
+        "included": "integer followed by ∞: unresolved infinitesimal",
+        "snippet": " An integer followed by ∞ represents an unresolved infinitesimal"
+      }
+    ]
+  }
+}

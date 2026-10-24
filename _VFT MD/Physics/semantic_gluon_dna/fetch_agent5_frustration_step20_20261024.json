@@ -1,0 +1,258 @@
+Command exited with code 0.
+
+Command output:
+
+  #!/usr/bin/env python3
+  """
+> Agent 5 (Round 2): Dynamic [IS] Concept-Bond Graph & 4-Color Gluon Gauge Physics v2
+  - Critique of Global Modal Aggregation vs. Local-to-Global Causal Force Cascades
+  - Red-to-Blue Proof Resolution Ratio (R_{R->BM}) & Cascade Conversion Tracking
+> - Signed Triangle Frustration Resolution (chat -> IRM Report -> Formal Papers & ORTHODOX_BRIDGE_ZFC)
+  - Multi-Paper Knowledge Graph Coverage across the Full IRM Formal Corpus & Expanded arXiv Suite
+  """
+  
+  import os
+  import re
+      "consciousness_observer": [r"\bobserver\b", r"\bconscious(?:ness)?\b", r"\bperception\b", r"\bmeasurement\b", 
+r"\bframe\b"],
+      "dimension_transition": [r"\bdimension(?:al|s)?\b", r"\btransition\b", r"\bphase\b", r"\bprojection\b", 
+r"\bembedding\b"],
+      "number_line_continuum": [r"\bcontinuum\b", r"\breal line\b", r"\bnumber line\b", r"\bdiscrete\b", r"\bdense\b"],
+>     "symmetry_conservation": [r"\bsymmetr(?:y|ic)\b", r"\bconservation\b", r"\binvariance\b", r"\bgauge\b", 
+r"\bparity\b"],
+      "energy_mass_action": [r"\benergy\b", r"\bmass\b", r"\baction\b", r"\bmomentum\b", r"\bforce\b", 
+r"\bcoupling\b"],
+      "duality_inversion": [r"\bdual(?:ity)?\b", r"\binversion\b", r"\breciprocal\b", r"\bmirror\b", r"\bconjugate\b"],
+      "convergence_singularity": [r"\bconverg(?:e|ence|ent)\b", r"\bdiverg(?:e|ence|ent)\b", r"\bstabilit(?:y|ies)\b", 
+r"\bsingularit(?:y|ies)\b", r"\bblow-up\b", r"\bregularity\b"],
+      "information_encoding": [r"\binformation\b", r"\bencoding\b", r"\bstate\b", r"\bbit\b", r"\bcomplexity\b"],
+      "algebraic_structure": [r"\balgebra(?:ic)?\b", r"\bgroup\b", r"\bring\b", r"\bisomorphi(?:sm|c)\b", 
+r"\boperator\b", r"\bhomomorphism\b"],
+  
+  
+  def compute_4color_gluons(modal_counts):
+>     """Explicit 4-Color Gluon Gauge calculation from 8 Modal States."""
+      wb = modal_counts.get("will_be", 0.0)
+      cb = modal_counts.get("can_be", 0.0)
+      isn = modal_counts.get("is_not", 0.0)
+      cntb = modal_counts.get("cant_be", 0.0)
+      wntb = modal_counts.get("wont_be", 0.0)
+      betti_1 = max(0, E - V + betti_0)
+  
+      triangles_all = {}
+>     frustrated_list = []
+      balanced_list = []
+      node_list = sorted(nodes_dict.keys())
+      for i in range(len(node_list)):
+          u = node_list[i]
+          for j in range(i + 1, len(node_list)):
+                      tri_key = (u, v, w)
+                      triangles_all[tri_key] = prod
+                      if prod < 0:
+>                         frustrated_list.append(tri_key)
+                      else:
+                          balanced_list.append(tri_key)
+  
+      total_tri = len(triangles_all)
+>     frust_count = len(frustrated_list)
+      frust_ratio = round(frust_count / max(total_tri, 1), 4)
+  
+>     # Epistemic Hygiene Score: combines low triangle frustration + high Red-to-Blue proof resolution
+      epistemic_hygiene = round(
+          0.50 * (1.0 - frust_ratio) + 0.50 * proof_res["composite_proof_resolution_score"],
+          4
+      )
+  
+              "total_exclusion_flux": total_exc_edges,
+              "inclusion_exclusion_ratio": round(total_inc_edges / max(total_exc_edges, 1), 4),
+              "triangles_total": total_tri,
+>             "frustrated_triangles": frust_count,
+>             "frustration_ratio": frust_ratio,
+              "epistemic_hygiene_score": epistemic_hygiene
+          },
+          "nodes": nodes_dict,
+          "top_edges": edge_list[:40],
+          "all_edges": edge_list,
+          "triangles_map": triangles_all,
+>         "frustrated_triangles_list": [list(t) for t in frustrated_list[:50]]
+      }
+  
+  
+> def analyze_frustration_resolution_and_ecosystem_coverage(docs):
+      """
+>     1. Track exact frustrated triangles in `chat` and `irm` and check how `ORTHODOX_BRIDGE_ZFC`,
+         `Formal Paper 17 Navier-Stokes`, `Formal Paper 12 Levi-Civita`, etc. resolve them.
+      2. Track Multi-Paper Knowledge Graph Coverage across the entire `irm_formal_corpus`.
+      """
+      chat = docs["chat"]
+      irm = docs["irm"]
+          f_tris = fd["triangles_map"]
+          shared_with_seed = set(f_tris.keys()) & combined_seed_frust
+          resolved_in_paper = [t for t in shared_with_seed if f_tris[t] > 0]
+>         still_frustrated = [t for t in shared_with_seed if f_tris[t] < 0]
+          resolved_across_any_formal.update(resolved_in_paper)
+  
+          paper_triangle_audits.append({
+              "doc_id": fk,
+              "file_name": fd["file_name"],
+              "own_triangles_total": fd["topology_homology"]["triangles_total"],
+>             "own_frustrated_triangles": fd["topology_homology"]["frustrated_triangles"],
+>             "own_frustration_ratio": fd["topology_homology"]["frustration_ratio"],
+>             "seed_frustrated_triangles_encountered": len(shared_with_seed),
+>             "seed_frustrated_triangles_resolved": len(resolved_in_paper),
+              "seed_resolution_rate": round(len(resolved_in_paper) / max(len(shared_with_seed), 1), 4),
+              "sample_resolved_triads": [" <-> ".join(t) for t in resolved_in_paper[:6]]
+          })
+  
+>     paper_triangle_audits.sort(key=lambda x: (x["seed_frustrated_triangles_resolved"], -x["own_frustration_ratio"]), 
+reverse=True)
+  
+      # Multi-Paper Knowledge Graph Coverage of `chat` Concepts & Bonds
+      chat_nodes = chat["nodes"]
+      irm_nodes = irm["nodes"]
+  
+                  })
+  
+      return {
+>         "chat_frustrated_triangles_count": len(chat_frust),
+>         "irm_frustrated_triangles_count": len(irm_frust),
+>         "combined_seed_frustrated_count": len(combined_seed_frust),
+          "resolved_across_formal_corpus_count": len(resolved_across_any_formal),
+          "formal_corpus_triangle_resolution_rate": round(len(resolved_across_any_formal) / 
+max(len(combined_seed_frust), 1), 4),
+          "paper_triangle_audits": paper_triangle_audits,
+          "concept_coverage_matrix": concept_coverage_matrix,
+          "rescued_by_formal_corpus": rescued_by_formal_corpus,
+  
+  def generate_report_v2(docs, eco_audit):
+      lines = [
+>         "# Agent 5 (Round 2): 4-Color Gluon Gauge Physics, Proof Resolution Ratio & Full IRM Corpus Graph Audit",
+          "",
+          "## 1. Critique of `unified_gluon_dna_engine.py` & V2 Architectural Upgrades",
+          "",
+          "### 1.1 Architectural Flaw Identified in `unified_gluon_dna_engine.py`",
+          "In Round 1's `unified_gluon_dna_engine.py`, the 4-Color Gluon forces (`Red`, `Green`, `Blue`, `Magenta`) 
+were calculated by **globally summing modal counts across the entire document** (`wb = m.get('will_be', 0)`, `cntb = 
+m.get('cant_be', 0)`, etc.) and taking a single static square-root cross-term:",
+          "2. **Conflation of Co-Occurrence with Resolution**: In a rigorous proof (such as `ORTHODOX_BRIDGE_ZFC.md` 
+or `Formal Paper 17 Navier-Stokes`), stating a classical impossibility theorem (`cant_be` / blow-up singularity) 
+alongside an affirmative resolution (`will_be`) inflates the global Red score even when every single Red collision is 
+immediately discharged by a formal derivation.",
+          "",
+          "### 1.2 The V2 Upgrade: Local-to-Global Causal Force Cascades & Proof Resolution Ratio ($\\mathcal{R}_{R 
+\\to BM}$)",
+>         "In `gluon_transformer_v2.py`, we upgrade the Reading Head with a **2-tier Causal Gauge Tracker**:",
+          "- **Local Sliding-Window Cascade Tracker**: Whenever a concept node triggers a local dY"' **Red** 
+contradiction spike at chunk $k$, the Reading Head scans the downstream causal window $[k+1, k+W]$ ($\\Delta t \\le 
+0.12$) on shared concept nodes to verify whether the spike is mediated by dYY� **Green** operational testing 
+(`can_be`, `may_be`) and locked into dY"� **Blue** / dYY� **Magenta** axiomatic proof (`will_be`, `theorem`, `proof`, 
+`can_be`).",
+          "- **Node-Level Early-to-Late Proof Resolution Ratio ($\\rho_i$)**:",
+          "  $$\\rho_i = \\frac{\\text{Flux}_{\\text{Blue+Magenta}}^{\\text{late}}(i) + 0.35 \\cdot 
+\\text{Flux}_{\\text{Green}}^{\\text{mid}}(i)}{\\max\\left(\\text{Flux}_{\\text{Red}}^{\\text{early}}(i) + 
+\\text{Flux}_{\\text{Red}}^{\\text{late}}(i),\\, 0.5\\right)}$$",
+          "- **Composite Epistemic Hygiene Score ($\\mathcal{H}_{\\text{epistemic}}$)**:",
+          "  $$\\mathcal{H}_{\\text{epistemic}} = 0.50 \\cdot (1 - \\Phi_{\\text{frust}}) + 0.50 \\cdot 
+\\mathcal{R}_{R \\to BM}$$",
+>         "  where $\\Phi_{\\text{frust}}$ is the **Signed Triangle Frustration Ratio** of the `[IS]` graph and 
+$\\mathcal{R}_{R \\to BM}$ is the **Composite Proof Resolution Score**.",
+          "",
+          "---",
+          "",
+          "## 2. Master Benchmark Table: Chat vs. IRM Report vs. Full IRM Formal Corpus vs. Expanded arXiv Suite",
+          "",
+>         "| Document ID | Category | Chars | $V$ | $E$ | $+I/-E$ | Frustrated $\\Delta$ ($\\Phi_{\\text{frust}}$) | 
+dY"' Red | dYY� Green | dY"� Blue | dYY� Mag | Red Events | Cascade Resolved % | Node Proof Ratio $\\bar{\\rho}$ | 
+Proof Score $\\mathcal{R}_{R\\to BM}$ | Epistemic Hygiene $\\mathcal{H}$ |",
+          "| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
+:---: | :---: | :---: |"
+      ]
+  
+      # Sort order: chat, irm, irm_formal, arxiv
+      cat_order = {"dialogue": 0, "irm_synthesis": 1, "irm_formal": 2, "arxiv": 3}
+          pr = d["proof_resolution_metrics"]
+          lines.append(
+              f"| **{d['doc_id']}** | `{d['category']}` | {d['char_count']:,} | {th['vertices_V']} | {th['edges_E']} | 
+"
+>             f"{th['inclusion_exclusion_ratio']:.1f} | **{th['frustration_ratio']:.2%}** 
+({th['frustrated_triangles']}/{th['triangles_total']}) | "
+              f"{gf['Red']:.3f} | {gf['Green']:.3f} | {gf['Blue']:.3f} | {gf['Magenta']:.3f} | "
+              f"{pr['red_contradiction_events']} | **{pr['cascade_resolution_rate']:.1%}** | 
+`{pr['avg_node_proof_resolution_ratio']:.2f}` | "
+              f"**`{pr['composite_proof_resolution_score']:.3f}`** | **`{th['epistemic_hygiene_score']:.3f}`** |"
+          )
+  
+          "",
+          "---",
+          "",
+>         "## 3. Red-to-Blue Proof Resolution & Signed Triangle Frustration Audit",
+          "",
+>         "### 3.1 How the IRM Formal Papers Resolve Frustrated Triangles from `chat` and `Comprehensive Report - 
+IRM`",
+>         f"- **Total Frustrated Triangles in `chat`**: `{eco_audit['chat_frustrated_triangles_count']}`",
+>         f"- **Total Frustrated Triangles in `Comprehensive Report - IRM`**: 
+`{eco_audit['irm_frustrated_triangles_count']}`",
+>         f"- **Combined Seed Frustrated Triads (`chat` $\\cup$ `irm`)**: 
+`{eco_audit['combined_seed_frustrated_count']}`",
+>         f"- **Seed Frustrated Triads Formally Resolved Across `irm_formal_corpus`**: 
+**`{eco_audit['resolved_across_formal_corpus_count']}` (`{eco_audit['formal_corpus_triangle_resolution_rate']:.1%}` of 
+all encountered triads)**",
+          "",
+>         "| IRM Formal Paper | Own Triangles | Own Frustrated $\\Delta$ | Own Frustration % | Seed Frustrated 
+Encountered | Seed Frustrated Resolved | Seed Resolution Rate | Sample Resolved Concept Triads ($+I/+I/+I$) |",
+          "| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |"
+      ])
+  
+      for pa in eco_audit["paper_triangle_audits"]:
+          samples = "; ".join(f"`{s}`" for s in pa["sample_resolved_triads"][:3]) or "�?""
+          lines.append(
+>             f"| **{pa['doc_id']}** (`{pa['file_name'][:30]}`) | {pa['own_triangles_total']} | 
+{pa['own_frustrated_triangles']} | "
+>             f"**{pa['own_frustration_ratio']:.2%}** | {pa['seed_frustrated_triangles_encountered']} | "
+>             f"**{pa['seed_frustrated_triangles_resolved']}** | **{pa['seed_resolution_rate']:.1%}** | {samples} |"
+          )
+  
+      lines.extend([
+          "",
+          "---",
+              print(f"   -> {md_file.name} as [{doc_key}]")
+              docs[doc_key] = scan_document(doc_key, "arxiv", md_file)
+  
+>     print("4. Running Multi-Paper Triangle Frustration Resolution & Ecosystem Coverage Audit...")
+>     eco_audit = analyze_frustration_resolution_and_ecosystem_coverage(docs)
+  
+      # Strip bulk internal structures before saving JSON
+      json_docs = {}
+      for k, d in docs.items():
+          d_copy = dict(d)
+          json_docs[k] = d_copy
+  
+      payload = {
+>         "agent": "Agent 5 (Round 2): 4-Color Gluon Gauge Physics, Proof Resolution Ratio & Cross-Corpus Graph 
+Diffing v2",
+          "documents": json_docs,
+>         "ecosystem_frustration_and_coverage_audit": eco_audit
+      }
+  
+      results_v2_path = OUT_DIR / "results_v2.json"
+      report_v2_path = OUT_DIR / "report_v2.md"
+  
+          pr = d["proof_resolution_metrics"]
+          gf = d["global_gluon_forces"]["normalized"]
+          print(
+>             f"[{k:32s}] V={th['vertices_V']:2d} E={th['edges_E']:3d} Frust={th['frustration_ratio']:6.2%} | "
+              f"R={gf['Red']:.3f} G={gf['Green']:.3f} B={gf['Blue']:.3f} M={gf['Magenta']:.3f} | "
+              f"CascadeRes={pr['cascade_resolution_rate']:5.1%} NodePR={pr['avg_node_proof_resolution_ratio']:.2f} "
+              f"ProofScore={pr['composite_proof_resolution_score']:.3f} Hygiene={th['epistemic_hygiene_score']:.3f}"
+          )
+  
+>     print(f"\nSeed Frustrated Triangles (chat U irm): {eco_audit['combined_seed_frustrated_count']}")
+      print(f"Resolved Across IRM Formal Corpus: {eco_audit['resolved_across_formal_corpus_count']} 
+({eco_audit['formal_corpus_triangle_resolution_rate']:.1%})")
+      print(f"Rescued Concepts by IRM Formal Corpus: {[x['concept'] for x in eco_audit['rescued_by_formal_corpus']]}")
+      print(f"Genuinely Unmerged Concepts Across Ecosystem: {[x['concept'] for x in 
+eco_audit['genuinely_unmerged_across_ecosystem']]}")
+      print(f"Saved: {results_v2_path} and {report_v2_path}")
+  
+
+
