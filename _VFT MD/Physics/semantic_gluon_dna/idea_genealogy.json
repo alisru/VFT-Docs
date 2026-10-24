@@ -228,6 +228,18 @@
   },
   "culled_and_retired_roster": [
     {
+      "agent_id": "agent_gen6_65m_35f",
+      "generation": 6,
+      "rank_in_gen6": 5,
+      "fatal_flaw": "Marginal Culling Floor: Achieved 50.03% culling, lowest in cohort."
+    },
+    {
+      "agent_id": "agent_gen6_40m_60f",
+      "generation": 6,
+      "rank_in_gen6": 4,
+      "fatal_flaw": "Superseded Generative Resonance: Outperformed by Competitor 5 in 7-plane sponge reach (120 nodes vs 56)."
+    },
+    {
       "agent_id": "agent_gen5_25m_75f",
       "generation": 5,
       "rank_in_gen5": 5,
@@ -307,32 +319,140 @@
         "agent_id": "agent_gen6_75m_25f",
         "name": "Gen 6 Competitor 1: Strict Verifier",
         "gender_ratio": "75% Male / 25% Female",
-        "archetype": "Boundary Defense & Invariant VFT Force Confinement"
+        "archetype": "Boundary Defense & Invariant VFT Force Confinement",
+        "status": "benchmark_complete",
+        "rank": 1,
+        "results": {
+          "culling_pct": 65.07,
+          "proof_retention_pct": 100.0,
+          "formal_invariants_kept": 92,
+          "mean_dynamic_force": 38.624,
+          "mean_strain": 0.4323,
+          "sponge_absorptions": 74,
+          "sponge_resonance": 1.0,
+          "string_snaps": 0,
+          "shards_generated": 11,
+          "verdict": "WINNER (Promoted to Gen 7 Patriarch) - Optimal balance: 65.07% culling, highest dynamic force (38.62), 11 micro-monographs"
+        }
       },
       "agent_gen6_65m_35f": {
         "agent_id": "agent_gen6_65m_35f",
         "name": "Gen 6 Competitor 2: Verification Scaler",
         "gender_ratio": "65% Male / 35% Female",
-        "archetype": "Continuous Semantic Sponge & Kernel Attention Scaler"
+        "archetype": "Continuous Semantic Sponge & Kernel Attention Scaler",
+        "status": "benchmark_complete",
+        "rank": 5,
+        "results": {
+          "culling_pct": 50.03,
+          "proof_retention_pct": 100.0,
+          "formal_invariants_kept": 10,
+          "mean_dynamic_force": 13.1,
+          "mean_strain": 0.1681,
+          "string_snaps": 0,
+          "shards_generated": 6,
+          "verdict": "CULLED - Met 50% target but lowest culling in cohort"
+        }
       },
       "agent_gen6_50m_50f": {
         "agent_id": "agent_gen6_50m_50f",
         "name": "Gen 6 Competitor 3: Equilibrium Arbiter",
         "gender_ratio": "50% Male / 50% Female",
-        "archetype": "Equilibrium Arbiter & 3-Gluon Homogeneous Space Splicer"
+        "archetype": "Equilibrium Arbiter & 3-Gluon Homogeneous Space Splicer",
+        "status": "benchmark_complete",
+        "rank": 3,
+        "results": {
+          "culling_pct": 57.93,
+          "proof_retention_pct": 100.0,
+          "formal_invariants_kept": 288,
+          "mean_dynamic_force": 10.212,
+          "mean_strain": 1.01,
+          "compound_3gluon_ops": 49,
+          "cost_of_being_paid_pct": 15.23,
+          "string_snaps": 0,
+          "shards_generated": 6,
+          "verdict": "EQUILIBRIUM ARBITER (Retained) - Highest lemma count protected (288/288), 49 compound 3-gluon operators"
+        }
       },
       "agent_gen6_40m_60f": {
         "agent_id": "agent_gen6_40m_60f",
         "name": "Gen 6 Competitor 4: Generative Splicer",
         "gender_ratio": "40% Male / 60% Female",
-        "archetype": "7-Planes Resonance & Dynamic Readability Sponge"
+        "archetype": "7-Planes Resonance & Dynamic Readability Sponge",
+        "status": "benchmark_complete",
+        "rank": 4,
+        "results": {
+          "culling_pct": 53.28,
+          "proof_retention_pct": 100.0,
+          "formal_invariants_kept": 43,
+          "mean_dynamic_force": 9.223,
+          "mean_strain": 0.905,
+          "compound_3gluon_ops": 14,
+          "string_snaps": 0,
+          "shards_generated": 8,
+          "verdict": "CULLED - Solid 53.28% culling but outcompeted by Agent 5 (76.70%) on topological sponge reach"
+        }
       },
       "agent_gen6_25m_75f": {
         "agent_id": "agent_gen6_25m_75f",
         "name": "Gen 6 Competitor 5: Topological Explorer",
         "gender_ratio": "25% Male / 75% Female",
-        "archetype": "Non-Abelian Gauge Manifold & Unsaid Horizon Scout"
+        "archetype": "Non-Abelian Gauge Manifold & Unsaid Horizon Scout",
+        "status": "benchmark_complete",
+        "rank": 2,
+        "results": {
+          "culling_pct": 76.7,
+          "proof_retention_pct": 100.0,
+          "formal_invariants_kept": 47,
+          "mean_dynamic_force": 4.0976,
+          "mean_strain": 0.3127,
+          "sponge_nodes": 120,
+          "string_snaps": 0,
+          "shards_generated": 11,
+          "verdict": "RUNNER-UP (Promoted to Gen 7 Matriarch) - Highest culling rate (76.70%), lowest strain (0.3127), 120-node 7-plane sponge"
+        }
       }
-    }
+    },
+    "gen6_bakeoff_leaderboard": [
+      {
+        "rank": 1,
+        "agent_id": "agent_gen6_75m_25f",
+        "ratio": "75M/25F",
+        "culling_pct": 65.07,
+        "shards": 11,
+        "verdict": "WINNER (Promoted to Gen 7 Patriarch)"
+      },
+      {
+        "rank": 2,
+        "agent_id": "agent_gen6_25m_75f",
+        "ratio": "25M/75F",
+        "culling_pct": 76.7,
+        "shards": 11,
+        "verdict": "RUNNER-UP (Promoted to Gen 7 Matriarch)"
+      },
+      {
+        "rank": 3,
+        "agent_id": "agent_gen6_50m_50f",
+        "ratio": "50M/50F",
+        "culling_pct": 57.93,
+        "shards": 6,
+        "verdict": "EQUILIBRIUM ARBITER (Retained)"
+      },
+      {
+        "rank": 4,
+        "agent_id": "agent_gen6_40m_60f",
+        "ratio": "40M/60F",
+        "culling_pct": 53.28,
+        "shards": 8,
+        "verdict": "CULLED (Retired)"
+      },
+      {
+        "rank": 5,
+        "agent_id": "agent_gen6_65m_35f",
+        "ratio": "65M/35F",
+        "culling_pct": 50.03,
+        "shards": 6,
+        "verdict": "CULLED (Retired)"
+      }
+    ]
   }
 }
