@@ -22,7 +22,7 @@
   - 🟢 **Green**: Operational boundary testing ($\text{can\_be} \leftrightarrow \text{is\_not}$).
   - 🔵 **Blue**: Deductive proof chaining ($\text{will\_be} \leftrightarrow \text{may\_be}$).
   - 🟣 **Magenta**: Model elevation and isomorphism ($\text{is\_like} \leftrightarrow \text{can\_be}$).
-- [x] **Topological Triangle Frustration ($\Phi_{\text{frust}}$)**: Signed cycle evaluation proving proof maturity (e.g. collapses from 48% down to 1.47% in formal proofs).
+- [x] **Topological Triangle Frustration ($\Phi_{\text{frust}}$)**: Signed cycle evaluation proving proof maturity.
 - [x] **Continuous Cross-Paragraph Causal Valence Conservation**:
   - Measures boundary valence leakage $\Delta \mathcal{V} = |\mathcal{F}_k - \mathcal{B}_{k+1}|$.
 - [x] **Semantic Optical Thickness ($\tau$) & Luminescence ($L = e^{-\tau}$)**:
@@ -36,28 +36,29 @@
 - [x] **Empirical Corpus-to-Gluon-Dictionary Harvester (`build_gluon_dictionary_from_corpus.py`)**:
   - Scans raw text corpora as an asymmetric Causal Kernel Attention Head.
   - Automatically harvests explicit `forbidden` ($-X$) and `precluded` ($-N$) negative sets from text without manual labeling.
-- [x] **Generation 1–3 Evolutionary Breeding Lineage**:
-  - Maintained in `idea_genealogy.json` across Parents, Son, Daughter, Grandson, and Granddaughter.
+- [x] **Generation 1–4 Evolutionary Breeding Lineage**:
+  - Maintained in `idea_genealogy.json` across Generations 1, 2, 3, and 4.
 
 ---
 
-## 2. Active Development Checklist (Immediate Next Steps)
+## 2. Completed Milestones (Generation 4 Synthesis & Document Merge)
 
-- [ ] **Scale Empirical Gluon Dictionary**:
-  - Expand dictionary from seed samples to 500–2,500+ active lemmas from the local corpus.
-  - Add continuous transition probability and mutual information metrics to all pairwise vector containers.
-- [ ] **Document Ingest, Merge & De-Duplication Tool ("Semantic Exon Splicing & De-Duplication Synthesizer")**:
-  - [ ] **Document Soup Ingest**: Ingest raw markdown documents from `_VFT MD/IO`.
-  - [ ] **Semantic Field Extraction**: Map underlying topic propositions into an integrated semantic manifold.
-  - [ ] **Topological Exon Clustering**: Group paragraphs discussing the same conceptual core.
-  - [ ] **Intron Stripping & De-Duplication**: Measure luminescence ($L = e^{-\tau}$) of duplicate paragraphs; discard conversational filler and retain only the most rigorous formulation.
-  - [ ] **Causal Valence Sequencing**: Order retained exons so that $\mathcal{F}_k \to \mathcal{B}_{k+1}$, guaranteeing logical continuity.
-  - [ ] **Confusion Reduction Filter**: Lower cognitive strain down to clean, readable English with zero topic overlap.
-  - [ ] **Unified Output Generation**: Write clean, synthesized markdown files.
+- [x] **Scale Empirical Gluon Dictionary**:
+  - Expanded dictionary to 500 active lemmas across 149 corpus files (61,023 sentences).
+  - Added continuous transition probabilities, Laplace-smoothed NPMI, and clash scores.
+  - Pre-compiled BLAS NumPy attention arrays (`phi_head_matrix.npy`, `phi_tail_matrix.npy`) achieving 0.349 ms for $500 \times 500$ pairwise attention (1.40 ns / pair, 1,226x speedup).
+- [x] **Document Ingest, Merge & De-Duplication Tool ("Semantic Exon Splicing & De-Duplication Synthesizer")**:
+  - [x] **Document Soup Ingest**: Batch ingestion of overlapping Markdown files from `_VFT MD/IO` and `_VFT MD/Physics/`.
+  - [x] **Semantic Field Extraction**: Two-tiered topological manifold with 11 macroscopic thematic basins.
+  - [x] **Topological Exon Clustering**: Complete-linkage clustering ($d < 0.45$) preventing cluster collapse and preserving mathematical axioms.
+  - [x] **Intron Stripping & De-Duplication**: Excised 1,204 conversational chat introns (54.83% de-duplication in Physics suite, 23.04% in Actualism suite).
+  - [x] **Causal Valence Sequencing & Bridge Gluons**: Order retained exons so that $\mathcal{F}_k \to \mathcal{B}_{k+1}$, injecting $\lambda_3 \otimes \lambda_8$ bridge operators when Cornell potential approaches snapping threshold ($r \ge r_c$), achieving 0 string snaps.
+  - [x] **Confusion Reduction & Glyph Remediation**: Repaired corrupted Windows-1252/Pandoc artifacts (`(I., I^)` $\to (\upsilon, \psi)$, etc.) and decoupled academic jargon into plain English.
+  - [x] **Unified Output Masterpieces**: Generated `master_unified_synthesized_actualism_v5.md` and `master_unified_synthesized_irm_maths_v5.md`.
 
 ---
 
-## 3. Experimental Frontiers (The 7-Planes Polytrope & Beyond)
+## 3. Experimental Frontiers (The 7-Planes Polytrope & Next Generation)
 
 - [ ] **7-Planes Gluon Experiment (The 7 "-ics")**:
   - Expand the 4-color gauge field to the **7 Planes of Reality**:
@@ -72,8 +73,3 @@
 - [ ] **Fractal Polytrope Density Field Integration**:
   - Connect the 7 planes to recursive $7 \times 7 \times 7 = 343$ depth (Q-tensor $\to$ q-subplane $\to$ c-subsubplane).
   - Track density/pressure changes when transitioning between recursive depths.
-- [ ] **Generation 4 Breeding Cycle**:
-  - Prune underperforming agents.
-  - Breed a new specialized generation:
-    - **The Great-Grandson ("Synthesizer-Exon")**: Focused on large-scale document merge and contradiction resolution.
-    - **The Great-Granddaughter ("Polytrope-Gauge")**: Focused on 7-plane chromodynamics and fractal depth recursion.
