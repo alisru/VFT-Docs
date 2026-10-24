@@ -1,0 +1,99 @@
+{
+  "engine_version": "v1.0.0 (Pass 1)",
+  "agent": "agent_polytrope_splicer",
+  "gender_ratio": "40% Male / 60% Female (Dominant: Interesting -> Works)",
+  "qcd_physics_constants": {
+    "alpha_s": 0.35,
+    "sigma": 0.85,
+    "m_quark": 0.65,
+    "r_critical": 1.5294
+  },
+  "benchmarks": {
+    "actualism_hegemony_triad": {
+      "output_file": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Physics\\semantic_gluon_dna\\agent_polytrope_splicer\\merged_coherent_document.md",
+      "source_docs": {
+        "Actualism and the Psochic Hegemony.md": {
+          "total_blocks": 44,
+          "exons": 44,
+          "introns": 0,
+          "mean_rigor": 61.08
+        },
+        "Academic Perspectives on the Psochic Hegemony.md": {
+          "total_blocks": 45,
+          "exons": 45,
+          "introns": 0,
+          "mean_rigor": 59.78
+        },
+        "Actualism; The Crucible of the Archetypal Good Person.md": {
+          "total_blocks": 66,
+          "exons": 66,
+          "introns": 0,
+          "mean_rigor": 61.28
+        }
+      },
+      "input_blocks_total": 155,
+      "raw_introns_identified": 0,
+      "retained_exons_total": 3,
+      "culled_or_spliced_blocks": 152,
+      "deduplication_percentage": 98.06,
+      "splicing_metrics": {
+        "mean_optical_thickness_tau": 0.7666,
+        "mean_luminescence_L": 0.4646,
+        "mean_rigor_score": 70.93,
+        "white_hadron_propositions": 0,
+        "white_hadron_ratio": 0.0,
+        "string_snapping_events": 0
+      },
+      "7planes_distribution": {
+        "Q1": 0.0151,
+        "Q2": 0.0151,
+        "Q3": 0.0151,
+        "Q4": 0.1484,
+        "Q5": 0.1484,
+        "Q6": 0.3455,
+        "Q7": 0.3125
+      },
+      "string_snaps_sample": []
+    },
+    "irm_infinity_maths_duology": {
+      "output_file": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Physics\\semantic_gluon_dna\\agent_polytrope_splicer\\merged_irm_maths_coherent.md",
+      "source_docs": {
+        "chatgpt infinity maths.md": {
+          "total_blocks": 1570,
+          "exons": 1493,
+          "introns": 77,
+          "mean_rigor": 58.5
+        },
+        "Comprehensive Report -  Infinity Indefinite Mathematics (IRM).md": {
+          "total_blocks": 267,
+          "exons": 263,
+          "introns": 4,
+          "mean_rigor": 63.59
+        }
+      },
+      "input_blocks_total": 1837,
+      "raw_introns_identified": 81,
+      "retained_exons_total": 3,
+      "culled_or_spliced_blocks": 1834,
+      "deduplication_percentage": 99.84,
+      "splicing_metrics": {
+        "mean_optical_thickness_tau": 0.8211,
+        "mean_luminescence_L": 0.4428,
+        "mean_rigor_score": 59.95,
+        "white_hadron_propositions": 0,
+        "white_hadron_ratio": 0.0,
+        "string_snapping_events": 0
+      },
+      "7planes_distribution": {
+        "Q1": 0.0197,
+        "Q2": 0.0197,
+        "Q3": 0.3033,
+        "Q4": 0.0197,
+        "Q5": 0.0962,
+        "Q6": 0.5219,
+        "Q7": 0.0197
+      },
+      "string_snaps_sample": []
+    }
+  }
+}

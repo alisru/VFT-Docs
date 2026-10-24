@@ -1,0 +1,101 @@
+{
+  "engine_version": "v2.1.0 (Pass 2 Upgraded)",
+  "agent": "agent_polytrope_splicer",
+  "gender_ratio": "40% Male / 60% Female (Dominant: Interesting -> Works)",
+  "qcd_physics_constants": {
+    "alpha_s": 0.35,
+    "sigma": 0.85,
+    "m_quark": 0.65,
+    "r_critical": 1.5294
+  },
+  "benchmarks": {
+    "actualism_hegemony_triad": {
+      "output_file": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Physics\\semantic_gluon_dna\\agent_polytrope_splicer\\merged_coherent_document_v2.md",
+      "source_docs": {
+        "Actualism and the Psochic Hegemony.md": {
+          "total_blocks": 44,
+          "exons": 44,
+          "introns": 0,
+          "mean_rigor": 72.68
+        },
+        "Academic Perspectives on the Psochic Hegemony.md": {
+          "total_blocks": 45,
+          "exons": 45,
+          "introns": 0,
+          "mean_rigor": 71.15
+        },
+        "Actualism; The Crucible of the Archetypal Good Person.md": {
+          "total_blocks": 66,
+          "exons": 66,
+          "introns": 0,
+          "mean_rigor": 72.02
+        }
+      },
+      "input_blocks_total": 155,
+      "raw_introns_identified": 0,
+      "retained_exons_total": 129,
+      "culled_or_spliced_blocks": 26,
+      "deduplication_percentage": 16.77,
+      "splicing_metrics": {
+        "mean_optical_thickness_tau": 0.6465,
+        "mean_luminescence_L": 0.5274,
+        "mean_rigor_score": 72.88,
+        "white_hadron_propositions": 44,
+        "white_hadron_ratio": 0.341,
+        "string_snapping_events": 0,
+        "bridges_synthesized": 0
+      },
+      "7planes_distribution": {
+        "Q1": 0.1807,
+        "Q2": 0.1324,
+        "Q3": 0.1911,
+        "Q4": 0.1082,
+        "Q5": 0.1266,
+        "Q6": 0.1339,
+        "Q7": 0.127
+      },
+      "string_snaps_sample": []
+    },
+    "irm_infinity_maths_duology": {
+      "output_file": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Physics\\semantic_gluon_dna\\agent_polytrope_splicer\\merged_irm_maths_coherent_v2.md",
+      "source_docs": {
+        "chatgpt infinity maths.md": {
+          "total_blocks": 1365,
+          "exons": 1331,
+          "introns": 34,
+          "mean_rigor": 72.13
+        },
+        "Comprehensive Report -  Infinity Indefinite Mathematics (IRM).md": {
+          "total_blocks": 258,
+          "exons": 258,
+          "introns": 0,
+          "mean_rigor": 75.85
+        }
+      },
+      "input_blocks_total": 1623,
+      "raw_introns_identified": 34,
+      "retained_exons_total": 598,
+      "culled_or_spliced_blocks": 1025,
+      "deduplication_percentage": 63.15,
+      "splicing_metrics": {
+        "mean_optical_thickness_tau": 0.5511,
+        "mean_luminescence_L": 0.583,
+        "mean_rigor_score": 76.17,
+        "white_hadron_propositions": 192,
+        "white_hadron_ratio": 0.321,
+        "string_snapping_events": 0,
+        "bridges_synthesized": 0
+      },
+      "7planes_distribution": {
+        "Q1": 0.1084,
+        "Q2": 0.0831,
+        "Q3": 0.1989,
+        "Q4": 0.1816,
+        "Q5": 0.2424,
+        "Q6": 0.1166,
+        "Q7": 0.069
+      },
+      "string_snaps_sample": []
+    }
+  }
+}
