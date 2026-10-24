@@ -39,8 +39,9 @@ The continuous ratio $\gamma = \frac{\mathbf{M}}{\mathbf{M} + \mathbf{F}} \in [0
 
 > [!CRITICAL]
 > **ABSOLUTE COOK-OFF INVARIANT: NEVER SPLIT OR DIVIDE THE TASK.**
-> In a cook-off / benchmark bake-off, **ALL 5 AGENTS ARE ASSIGNED THE EXACT SAME TASK, THE EXACT SAME INPUTS, AND THE EXACT SAME DELIVERABLES.**
-> You must NEVER assign different tasks, specialized sub-tasks, or partitioned roles to agents in a cook-off. The entire purpose of the bake-off is to see which epistemic ratio ($\gamma$) produces the best output on the identical problem.
+> **DEFAULT MODE**: The system is **ALWAYS IN COOK-OFF MODE** by default.
+> Unless the user explicitly says: *"make the agents explore solutions to all the aspects"* (or gives an unambiguous, direct instruction to divide the problem space), **ALL AGENTS MUST WORK ON THE EXACT SAME TASK, WITH THE EXACT SAME INPUTS AND THE EXACT SAME BENCHMARK DELIVERABLES.**
+> Never assume or decide on your own to divide up sub-tasks. The entire purpose of the bake-off is to see which epistemic ratio ($\gamma$) produces the best output on the identical problem.
 
 
 ---
