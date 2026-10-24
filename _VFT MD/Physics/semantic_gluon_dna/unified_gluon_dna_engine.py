@@ -325,60 +325,129 @@ def analyze_document_v5(doc_id: str, path: Path, group: str) -> dict:
     }
 
 # ============================================================================
-# 5. PRODUCTION DOCUMENT MERGE & DE-DUPLICATION SYNTHESIZER
+# 5. PRODUCTION TWO-TIERED DOCUMENT MERGE & DE-DUPLICATION SYNTHESIZER
 # ============================================================================
-def merge_documents_production(input_paths: list, output_path: Path) -> dict:
+THEMATIC_BASINS_ACTUALISM = [
+    {"id": "A1_foundations", "title": "Part I: Foundational Ontology and the Hegemonic Origin", "keywords": ["origin of hegemony", "definition", "naming", "ontological foundation", "sovereign", "first definer", "genesis of constraint"]},
+    {"id": "A2_epistemic_traps", "title": "Part II: Epistemic Traps: The Sedated State, Naive Ideals, and Technē", "keywords": ["sedated state", "naive ideal", "techne", "epoche", "alienated abstraction", "structural capture", "ideology"]},
+    {"id": "A3_cartesian_plane", "title": "Part III: The Two-Axis Moral and Will Topology (upsilon, psi)", "keywords": ["cartesian", "upsilon", "psi", "moral plane", "greater good", "greatest lie", "lesser good", "greater evil", "0.5 zone", "perceptual inversion"]},
+    {"id": "A4_stress_tensor", "title": "Part IV: Structural Integrity: The Hegemonic Stress Tensor", "keywords": ["stress tensor", "igneous stones", "fired bricks", "foundationalism", "coherentism", "collapse under pressure", "forensic stress"]},
+    {"id": "A5_7planes_framework", "title": "Part V: The 7 Planes of Reality (The Q-Tensor) & 42-Structure", "keywords": ["7 planes", "q-tensor", "phenomenological reduction", "who", "what", "where", "why", "how", "cause", "effect", "driver"]},
+    {"id": "A6_human_crucible", "title": "Part VI: The Human Crucible: Neural Entropy & The Law of Rising Hearts", "keywords": ["crucible", "withering of ideas", "mess of confusion", "predictive processing", "allostatic load", "law of rising hearts", "metanoia"]}
+]
+
+THEMATIC_BASINS_MATH = [
+    {"id": "B1_indef_object", "title": "Chapter 1: The INDEF Object: Shells and the Infinitesimal Heartbeat", "keywords": ["indef object", "x = [x] + x_chi", "definitive state", "infinitesimal field", "heartbeat of reality", "non-standard analysis"]},
+    {"id": "B2_operational_calculus", "title": "Chapter 2: Operational Generative Calculus & Instantaneous Resolution", "keywords": ["infinity mirror", "instantaneous resolution", "network protocol", "unified circle", "physical interactions", "operators as physical"]},
+    {"id": "B3_chi_infinitesimals", "title": "Chapter 3: Holographic Chi-Infinitesimals and Conservation", "keywords": ["chi-chain", "social infinitesimal", "holographic infinitesimal", "continuum limits", "chi-infinitesimal integration"]},
+    {"id": "B4_constructors", "title": "Chapter 4: INDEF Constructors: Integer, Fractal, and Hyperreal Systems", "keywords": ["constructor", "integer constructor", "fractal constructor", "hyperreal definition", "zfc", "forwards infinitesimal"]},
+    {"id": "B5_geometric_physical", "title": "Chapter 5: Geometric and Physical Realization: Pi, Time, and Zeno", "keywords": ["8 adjacency", "pi as the geometric", "indef circle", "time dilation", "zeno", "time as the infinitesimal", "1infinity deficit"]}
+]
+
+def clean_remediate_text(raw_text: str) -> str:
+    t = raw_text.replace("(I., I^)", r"$(\upsilon, \psi)$").replace("(I.,I^)", r"$(\upsilon, \psi)$")
+    t = t.replace("x_I", r"$x_\chi$").replace('I"H', r"$\Delta H$").replace("+'", r"\to").replace("+->", r"\to")
+    t = re.sub(r"\bEpoch[A-Za-z0-9]*\b", "Epoché", t)
+    t = re.sub(r"\bTechn[A-Za-z0-9]*\b", "Technē", t)
+    t = re.sub(r"\[\[Skip to content\]\{.underline\}\]\([^)]+\)", "", t)
+    t = re.sub(r"\[\s*\]\([^)]+\)", "", t)
+    return t.strip()
+
+def is_block_intron(raw_text: str, content_words: set) -> bool:
+    has_math = bool(re.search(r"=|<=|>=|<|>|\\le|\\ge|\\nabla|\^2|\$\$|\\frac|X\s*=|\\chi|\\pi|\\lim", raw_text))
+    has_table = bool(re.search(r"\|.*\|.*\|", raw_text))
+    is_chat_noise = bool(re.search(r"(Chat history|##### You said|###### ChatGPT said|Let me unpack what you|can you turn this into a lim|Text-based Fractal Tree|Level [0-9]:|Truly I don\'t know you|Was this response better|conversation with ChatGPT)", raw_text, re.I))
+    is_short_fragment = len(content_words) < 7 and not has_math and not has_table
+    return is_chat_noise or is_short_fragment
+
+def merge_documents_production(input_paths: list, output_path: Path, basins: list, title: str) -> dict:
     all_blocks = []
     for p in input_paths:
         if p.exists():
             text = p.read_text(encoding="utf-8", errors="ignore")
-            # Strip Pandoc & Windows-1252 corruption
-            clean_text = text.replace("(I., I^)", "(upsilon, psi)").replace("x_I", "x_chi").replace('I"H', "Delta H").replace("+'", "->")
+            clean_text = clean_remediate_text(text)
             blocks = [b.strip() for b in re.split(r"\n\s*\n", clean_text) if b.strip()]
             for b in blocks:
-                # Intron stripping: skip chat scaffolding
-                if any(noise in b for noise in ["ChatGPT said:", "[[Skip to content]", "Level 0:", "Was this response better?"]):
-                    continue
                 all_blocks.append(b)
 
     total_input = len(all_blocks)
-    retained_exons = []
-    seen_fingerprints = []
+    basin_buckets = defaultdict(list)
 
+    # 1. Map blocks to macroscopic thematic basins
     for b in all_blocks:
         words = set(re.findall(r"\b[a-z]{3,}\b", b.lower()))
         content = words - STOPWORDS
-        if len(content) < 4:
+        
+        # Rigorous intron check
+        if is_block_intron(b, content):
             continue
 
-        # Check semantic overlap against champions
-        is_duplicate = False
-        for sf in seen_fingerprints:
-            overlap = len(content & sf) / max(len(content | sf), 1)
-            if overlap > 0.48:
-                is_duplicate = True
-                break
+        best_b = basins[0]["id"]
+        best_s = -1.0
+        b_lower = b.lower()
+        for basin in basins:
+            score = sum(2.0 for kw in basin["keywords"] if kw.lower() in b_lower)
+            if score > best_s:
+                best_s = score
+                best_b = basin["id"]
+        basin_buckets[best_b].append((b, content))
 
-        if not is_duplicate:
-            seen_fingerprints.append(content)
-            retained_exons.append(b)
+    # 2. De-duplicate intra-basin with complete-linkage overlap
+    retained_exons_by_basin = defaultdict(list)
+    culled_introns = 0
 
-    # Sequence exons along Causal Valence Flow (F_k -> B_{k+1})
+    for basin_id, items in basin_buckets.items():
+        # Sort by rigor / content density descending
+        items.sort(key=lambda item: len(item[1]), reverse=True)
+        kept_in_basin = []
+        for b, content in items:
+            is_dup = False
+            for _, kept_c in kept_in_basin:
+                overlap = len(content & kept_c) / max(len(content | kept_c), 1)
+                if overlap > 0.45:
+                    is_dup = True
+                    break
+            if is_dup:
+                culled_introns += 1
+            else:
+                kept_in_basin.append((b, content))
+        retained_exons_by_basin[basin_id] = [b for b, _ in kept_in_basin]
+
+    total_retained = sum(len(exons) for exons in retained_exons_by_basin.values())
+    total_culled = total_input - total_retained
+
+    # 3. Assemble chapters with connective gluon bridges
     output_lines = [
-        "# Synthesized Coherent Masterpiece (Production Merge v5.0.0)",
-        "**Generated by Unified Semantic Gluon & DNA Engine v5.0.0**",
-        f"**Input Blocks Ingested**: {total_input} | **Retained Pristine Exons**: {len(retained_exons)}",
-        f"**De-Duplication Rate**: {round(100.0 * (1.0 - len(retained_exons) / max(total_input, 1)), 2)}%\n",
+        f"# {title}",
+        "**Synthesized by Unified Semantic Gluon & DNA Engine v5.0.0**",
+        f"**Input Blocks Ingested**: {total_input} | **Retained Pristine Exons**: {total_retained}",
+        f"**De-Duplication & Intron Culling Rate**: {round(100.0 * total_culled / max(total_input, 1), 2)}%\n",
         "---\n"
     ]
-    output_lines.extend(retained_exons)
+
+    for basin in basins:
+        basin_exons = retained_exons_by_basin.get(basin["id"], [])
+        if not basin_exons:
+            continue
+
+        output_lines.append(f"\n## {basin['title']}\n")
+        for i in range(len(basin_exons)):
+            output_lines.append(basin_exons[i])
+            if i < len(basin_exons) - 1:
+                # Continuous Cornell Potential check
+                cr1, cg1, cb1, _ = compute_qcd_color_charges(basin_exons[i])
+                cr2, cg2, cb2, _ = compute_qcd_color_charges(basin_exons[i+1])
+                dist = math.sqrt((cr1 - cr2)**2 + (cg1 - cg2)**2 + (cb1 - cb2)**2)
+                _, snapped = compute_cornell_potential(dist)
+                if snapped:
+                    output_lines.append(f"\n> *[Bridging Gluon Operator $\\lambda_3 \\otimes \\lambda_8$]*: Mediating continuous transition across thematic manifold.\n")
 
     output_path.write_text("\n\n".join(output_lines), encoding="utf-8")
     return {
         "input_blocks": total_input,
-        "retained_exons": len(retained_exons),
-        "culled_introns": total_input - len(retained_exons),
-        "dedup_pct": round(100.0 * (1.0 - len(retained_exons) / max(total_input, 1)), 2),
+        "retained_exons": total_retained,
+        "culled_introns": total_culled,
+        "dedup_pct": round(100.0 * total_culled / max(total_input, 1), 2),
         "output_file": str(output_path)
     }
 
@@ -438,19 +507,32 @@ def main():
 
     print("=" * 115)
 
-    # Run Demonstration of Production Document Merge on IO Corpus
-    print("\n[PRODUCTION DEMONSTRATION]: Merging Overlapping IO Actualism Corpus...")
-    merge_inputs = [
+    # Run Production Document Merge on IO Actualism Corpus (Suite A)
+    print("\n[PRODUCTION SYNTHESIS 1]: Merging Actualism & Hegemony Triad (IO Corpus)...")
+    merge_inputs_a = [
         IO_DIR / "Actualism and the Psochic Hegemony.md",
         IO_DIR / "Academic Perspectives on the Psochic Hegemony.md",
         IO_DIR / "Actualism; The Crucible of the Archetypal Good Person.md"
     ]
-    merge_out = BASE_DIR / "master_unified_synthesized_actualism_v5.md"
-    res = merge_documents_production(merge_inputs, merge_out)
-    print(f"-> Ingested: {res['input_blocks']} raw blocks")
-    print(f"-> Retained: {res['retained_exons']} pristine exons ({res['culled_introns']} duplicates culled)")
-    print(f"-> De-Duplication Rate: {res['dedup_pct']}%")
-    print(f"-> Saved: {res['output_file']}")
+    merge_out_a = BASE_DIR / "master_unified_synthesized_actualism_v5.md"
+    res_a = merge_documents_production(merge_inputs_a, merge_out_a, THEMATIC_BASINS_ACTUALISM, "Actualism & The Psochic Hegemony: Unified Synthesized Masterwork")
+    print(f"-> Ingested: {res_a['input_blocks']} raw blocks")
+    print(f"-> Retained: {res_a['retained_exons']} pristine exons ({res_a['culled_introns']} duplicates culled)")
+    print(f"-> De-Duplication Rate: {res_a['dedup_pct']}%")
+    print(f"-> Saved: {res_a['output_file']}")
+
+    # Run Production Document Merge on Infinity & IRM Mathematics Corpus (Suite B)
+    print("\n[PRODUCTION SYNTHESIS 2]: Merging Infinity & IRM Mathematics Duology (Physics Corpus)...")
+    merge_inputs_b = [
+        CHAT_PATH,
+        IRM_SUMMARY_PATH
+    ]
+    merge_out_b = BASE_DIR / "master_unified_synthesized_irm_maths_v5.md"
+    res_b = merge_documents_production(merge_inputs_b, merge_out_b, THEMATIC_BASINS_MATH, "Infinity Indefinite Mathematics (IRM): Unified Masterwork")
+    print(f"-> Ingested: {res_b['input_blocks']} raw blocks")
+    print(f"-> Retained: {res_b['retained_exons']} pristine exons ({res_b['culled_introns']} chat introns culled)")
+    print(f"-> De-Duplication Rate: {res_b['dedup_pct']}%")
+    print(f"-> Saved: {res_b['output_file']}")
     print("===================================================================================================")
 
 
