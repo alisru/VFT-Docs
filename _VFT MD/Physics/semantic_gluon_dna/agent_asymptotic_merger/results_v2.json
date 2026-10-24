@@ -1,0 +1,184 @@
+{
+  "engine_version": "v2.0.0",
+  "agent": "agent_asymptotic_merger",
+  "gender_ratio": "50% Male / 50% Female",
+  "qcd_physics_constants": {
+    "alpha_s": 0.35,
+    "sigma": 0.85,
+    "m_quark": 0.65,
+    "r_critical": 1.5294117647058825
+  },
+  "aggregate_bakeoff_metrics": {
+    "total_input_blocks": 2010,
+    "total_retained_exons": 704,
+    "total_culled_blocks": 1306,
+    "overall_deduplication_pct": 64.98,
+    "overall_compression_ratio": 0.35,
+    "string_snapping_events": 0,
+    "mean_tau": 1.7304,
+    "mean_luminescence": 0.18,
+    "mean_rigor_score": 67.53,
+    "white_hadron_ratio": 0.9858
+  },
+  "suites": {
+    "Actualism_Hegemony_Suite": {
+      "suite_name": "Actualism_Hegemony_Suite",
+      "input_blocks_total": 155,
+      "retained_exons_total": 142,
+      "culled_blocks_total": 13,
+      "de_duplication_pct": 8.39,
+      "compression_ratio": 0.916,
+      "mean_tau": 1.7472,
+      "mean_luminescence": 0.1768,
+      "mean_rigor": 72.0,
+      "white_hadron_ratio": 1.0,
+      "string_snapping_events": 0,
+      "plane_distribution": {
+        "Who - Metaphysical": 51,
+        "Effect - Emotive": 9,
+        "Cause - Historical": 13,
+        "Where - Physical": 21,
+        "How - Logical": 22,
+        "What - Possible": 20,
+        "Why - Lyrical": 6
+      },
+      "source_stats": {
+        "Actualism and the Psochic Hegemony.md": {
+          "total_blocks": 44,
+          "exons": 44,
+          "introns": 0,
+          "mean_rigor": 74.77
+        },
+        "Academic Perspectives on the Psochic Hegemony.md": {
+          "total_blocks": 45,
+          "exons": 45,
+          "introns": 0,
+          "mean_rigor": 72.98
+        },
+        "Actualism; The Crucible of the Archetypal Good Person.md": {
+          "total_blocks": 66,
+          "exons": 57,
+          "introns": 9,
+          "mean_rigor": 65.33
+        }
+      },
+      "basin_results": [
+        {
+          "basin_id": "A1_actus_purus",
+          "title": "The Nature of the Original Definer as Pure Act (Actus Purus)",
+          "input_blocks": 57,
+          "retained_exons": 52,
+          "culled_blocks": 5
+        },
+        {
+          "basin_id": "A2_act_and_potency",
+          "title": "Human Beings as Entities of Act and Potency (Actus et Potentia)",
+          "input_blocks": 8,
+          "retained_exons": 8,
+          "culled_blocks": 0
+        },
+        {
+          "basin_id": "A3_hegemonic_plane",
+          "title": "The Cartesian Moral Plane: Coordinates, Zones, and Perceptual Inversion",
+          "input_blocks": 16,
+          "retained_exons": 15,
+          "culled_blocks": 1
+        },
+        {
+          "basin_id": "A4_stress_tensor",
+          "title": "Epistemic Structural Integrity: The Hegemonic Stress Tensor",
+          "input_blocks": 7,
+          "retained_exons": 7,
+          "culled_blocks": 0
+        },
+        {
+          "basin_id": "A5_7planes_framework",
+          "title": "The 7 Planes of Reality (The Q-Tensor) & The 42-Structure",
+          "input_blocks": 41,
+          "retained_exons": 41,
+          "culled_blocks": 0
+        },
+        {
+          "basin_id": "A6_human_crucible",
+          "title": "The Human Crucible: Neural Entropy, Predictive Processing, and Rising Hearts",
+          "input_blocks": 26,
+          "retained_exons": 19,
+          "culled_blocks": 7
+        }
+      ]
+    },
+    "Infinity_Mathematics_Suite": {
+      "suite_name": "Infinity_Mathematics_Suite",
+      "input_blocks_total": 1855,
+      "retained_exons_total": 562,
+      "culled_blocks_total": 1293,
+      "de_duplication_pct": 69.7,
+      "compression_ratio": 0.303,
+      "mean_tau": 1.7136,
+      "mean_luminescence": 0.1833,
+      "mean_rigor": 63.06,
+      "white_hadron_ratio": 0.9715,
+      "string_snapping_events": 0,
+      "plane_distribution": {
+        "How - Logical": 113,
+        "Why - Lyrical": 28,
+        "What - Possible": 49,
+        "Who - Metaphysical": 266,
+        "Cause - Historical": 39,
+        "Where - Physical": 64,
+        "Effect - Emotive": 3
+      },
+      "source_stats": {
+        "Comprehensive Report -  Infinity Indefinite Mathematics (IRM).md": {
+          "total_blocks": 265,
+          "exons": 202,
+          "introns": 63,
+          "mean_rigor": 59.85
+        },
+        "chatgpt infinity maths.md": {
+          "total_blocks": 1590,
+          "exons": 871,
+          "introns": 719,
+          "mean_rigor": 52.28
+        }
+      },
+      "basin_results": [
+        {
+          "basin_id": "B1_indef_object",
+          "title": "The INDEF Object: Definitive Shells and the Infinitesimal Heartbeat",
+          "input_blocks": 1648,
+          "retained_exons": 434,
+          "culled_blocks": 1214
+        },
+        {
+          "basin_id": "B2_operational_calculus",
+          "title": "Operational Generative Calculus: The Law of Instantaneous Resolution",
+          "input_blocks": 26,
+          "retained_exons": 15,
+          "culled_blocks": 11
+        },
+        {
+          "basin_id": "B3_chi_infinitesimals",
+          "title": "Holographic Chi-Infinitesimals and Chi-Chain Conservation",
+          "input_blocks": 32,
+          "retained_exons": 18,
+          "culled_blocks": 14
+        },
+        {
+          "basin_id": "B4_constructors",
+          "title": "The Indef Constructors: Integer, Fractal, and Hyperreal Systems",
+          "input_blocks": 46,
+          "retained_exons": 32,
+          "culled_blocks": 14
+        },
+        {
+          "basin_id": "B5_geometric_physical",
+          "title": "Geometric and Physical Consequences: 8-Adjacency Axes, Time Dilation, and Zeno",
+          "input_blocks": 103,
+          "retained_exons": 63,
+          "culled_blocks": 40
+        }
+      ]
+    }
+  }
+}

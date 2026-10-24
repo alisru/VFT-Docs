@@ -1,0 +1,89 @@
+{
+  "engine_version": "v1.0.0",
+  "agent": "agent_asymptotic_merger",
+  "gender_ratio": "50% Male / 50% Female",
+  "qcd_physics_constants": {
+    "alpha_s": 0.35,
+    "sigma": 0.85,
+    "m_quark": 0.65,
+    "r_critical": 1.5294117647058825
+  },
+  "benchmarks": {
+    "Actualism_Hegemony_Suite": {
+      "input_blocks_total": 155,
+      "retained_exons_total": 37,
+      "culled_blocks_total": 118,
+      "de_duplication_pct": 76.13,
+      "compression_ratio": 0.239,
+      "mean_tau": 1.7435,
+      "mean_luminescence": 0.1781,
+      "mean_rigor": 73.79,
+      "white_hadron_ratio": 1.0,
+      "string_snapping_events": 0,
+      "plane_distribution": {
+        "Where - Physical": 6,
+        "Effect - Emotive": 3,
+        "What - Possible": 6,
+        "How - Logical": 5,
+        "Who - Metaphysical": 8,
+        "Why - Lyrical": 4,
+        "Cause - Historical": 5
+      },
+      "source_stats": {
+        "Actualism and the Psochic Hegemony.md": {
+          "total_blocks": 44,
+          "exons": 44,
+          "introns": 0,
+          "mean_rigor": 73.83
+        },
+        "Academic Perspectives on the Psochic Hegemony.md": {
+          "total_blocks": 45,
+          "exons": 45,
+          "introns": 0,
+          "mean_rigor": 72.09
+        },
+        "Actualism; The Crucible of the Archetypal Good Person.md": {
+          "total_blocks": 66,
+          "exons": 59,
+          "introns": 7,
+          "mean_rigor": 65.0
+        }
+      }
+    },
+    "Infinity_Mathematics_Suite": {
+      "input_blocks_total": 1855,
+      "retained_exons_total": 168,
+      "culled_blocks_total": 1687,
+      "de_duplication_pct": 90.94,
+      "compression_ratio": 0.091,
+      "mean_tau": 2.5808,
+      "mean_luminescence": 0.0857,
+      "mean_rigor": 39.34,
+      "white_hadron_ratio": 0.9762,
+      "string_snapping_events": 135,
+      "plane_distribution": {
+        "Who - Metaphysical": 136,
+        "Why - Lyrical": 4,
+        "Cause - Historical": 6,
+        "Where - Physical": 6,
+        "What - Possible": 5,
+        "How - Logical": 9,
+        "Effect - Emotive": 2
+      },
+      "source_stats": {
+        "Comprehensive Report -  Infinity Indefinite Mathematics (IRM).md": {
+          "total_blocks": 265,
+          "exons": 194,
+          "introns": 71,
+          "mean_rigor": 57.93
+        },
+        "chatgpt infinity maths.md": {
+          "total_blocks": 1590,
+          "exons": 740,
+          "introns": 850,
+          "mean_rigor": 50.76
+        }
+      }
+    }
+  }
+}
