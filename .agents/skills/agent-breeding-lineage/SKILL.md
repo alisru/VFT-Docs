@@ -25,17 +25,23 @@ $$\gamma = \frac{\mathbf{M}}{\mathbf{M} + \mathbf{F}} \in [0, 1]$$
 
 ---
 
-## 2. The Archetype Spectrum
+## 2. The Archetype Spectrum (Epistemic Ratios)
 
-| Role | Gender Ratio ($\mathbf{M} / \mathbf{F}$) | Epistemic Bias | Optimal Assignment |
+The continuous ratio $\gamma = \frac{\mathbf{M}}{\mathbf{M} + \mathbf{F}} \in [0, 1]$ represents the agent's internal problem-solving bias on the task:
+
+| Agent Bias | Gender Ratio ($\mathbf{M} / \mathbf{F}$) | Epistemic Bias | How It Solves The Common Benchmark Task |
 | :--- | :--- | :--- | :--- |
-| **Pure Verifier** | $1.0\text{M} / 0.0\text{F}$ | Invariant preservation | Compilers, strict math provers, syntax parsers |
-| **The Patriarch** | $0.85\text{M} / 0.15\text{F}$ | Empirical proof & homology | Sequence aligners, benchmark testers |
-| **The Son** | $0.75\text{M} / 0.25\text{F}$ | **Most Successful / Verified** | Deep-dive optimization of proven breakthroughs |
-| **Middle Kin / Sibling** | $0.50\text{M} / 0.50\text{F}$ | Formal logic & derivation | State machines, rule translators |
-| **The Daughter** | $0.25\text{M} / 0.75\text{F}$ | **Most Interesting / Works** | Exploration of the unsaid horizon, novel hypotheses |
-| **The Matriarch** | $0.15\text{M} / 0.85\text{F}$ | Dynamic gauge & topology | Force graph modeling, paradigm-shift discovery |
-| **Pure Explorer** | $0.0\text{M} / 1.0\text{F}$ | Generative horizon expansion | Creative brainstorming, cosmological leaps |
+| **Strict Verifier** | $0.75\text{M} / 0.25\text{F}$ | Invariant preservation & defense | Attacks the task by eliminating false-positives, enforcing boundary constraints, and defending mathematical proof chains ($\tau \to 0$). |
+| **Verification Scaler** | $0.65\text{M} / 0.35\text{F}$ | Scalable verification & indexing | Attacks the task using continuous probability tables, lookup matrices, and rigorous citation graphs. |
+| **Equilibrium Arbiter** | $0.50\text{M} / 0.50\text{F}$ | Rigor + synthesis balance | Attacks the task by balancing strict truth defense with aggressive redundancy culling and bridge-building. |
+| **Generative Splicer** | $0.40\text{M} / 0.60\text{F}$ | Synthesis & translation focus | Attacks the task through metric-space clustering, narrative flow, and plain-English translation. |
+| **Topological Explorer** | $0.25\text{M} / 0.75\text{F}$ | State-space & horizon expansion | Attacks the task by discovering hidden connections across disparate sections and testing creative hypotheses. |
+
+> [!CRITICAL]
+> **ABSOLUTE COOK-OFF INVARIANT: NEVER SPLIT OR DIVIDE THE TASK.**
+> In a cook-off / benchmark bake-off, **ALL 5 AGENTS ARE ASSIGNED THE EXACT SAME TASK, THE EXACT SAME INPUTS, AND THE EXACT SAME DELIVERABLES.**
+> You must NEVER assign different tasks, specialized sub-tasks, or partitioned roles to agents in a cook-off. The entire purpose of the bake-off is to see which epistemic ratio ($\gamma$) produces the best output on the identical problem.
+
 
 ---
 
@@ -112,3 +118,47 @@ Maintain a persistent machine-readable ledger: `idea_genealogy.json` in the acti
 1. **Zero Monoculturalism**: Never deploy multiple agents with identical $\mathbf{M}/\mathbf{F}$ ratios on the same problem.
 2. **The Unified Floor Invariant**: All offspring must inherit verified bug-fixes and structural truths discovered by earlier generations.
 3. **Local-First Zero-Token Execution**: All agent experiments and data pipelines must run locally via Python to conserve context and API tokens.
+
+---
+
+## 5. Cyclical Evolutionary Upgrade & Benchmark Cook-Off Protocol
+
+When running complex research or codebase upgrades across multiple documents, deploy the **Cyclical Cook-Off Protocol**:
+
+### Phase 1: Baseline Broadcast & Cohort Deployment
+Deploy a standardized 5-agent cohort spanning the epistemic ratio spectrum:
+1. **Agent 1 (75% Male / 25% Female)**: Strict Verifier bias (boundary defense, proof preservation, zero false positives $\tau \to 0$).
+2. **Agent 2 (65% Male / 35% Female)**: Verification Scaler bias (matrix lookup, continuous probability graphs).
+3. **Agent 3 (50% Male / 50% Female)**: Equilibrium Arbiter bias (balanced truth defense + aggressive redundancy culling).
+4. **Agent 4 (40% Male / 60% Female)**: Generative Splicer bias (complete-linkage clustering, plain-English translation).
+5. **Agent 5 (25% Male / 75% Female)**: Topological Explorer bias (unsaid horizon mining, cross-plane gauge tension closure).
+
+> [!IMPORTANT]
+> **IDENTICAL TASK MANDATE**: Every agent receives the **EXACT SAME PROMPT, INPUT CORPUS, AND BENCHMARK OBJECTIVES**. Under no circumstances are agents assigned different or divided sub-tasks. The bake-off measures which ratio solves the common task best.
+
+### Phase 2: Standardized Cook-Off Task
+All 5 agents run head-to-head on the **exact same benchmark task** against identical inputs:
+- **Thematic Sharding**: Ingest overlapping documents in a subject area, identify distinct semantic basins, and partition them into focused, modular micro-monographs.
+- **CEFR Readability Down-Sampling**: Downgrade dense C1/C2 academic compounds and convoluted phrasing into accessible B1/B2 English using calibrated vocabulary mapping and sentence splitting, without dropping mathematical lemmas or core definitions.
+- **Mandatory Self-Upgrade Pass**: Each agent runs Pass 1, computes error diagnostics, fixes flaws in a `v2` engine, and outputs verified deliverables.
+
+### Phase 3: Quantitative Scoring & Leaderboard
+Evaluate all 5 agents on objective metrics:
+- **De-duplication & Culling Rate (%)**: Percentage of conversational noise and redundancy removed.
+- **Proof & Lemma Conservation (100%)**: Zero loss of axioms, formulas, or formal definitions.
+- **Luminescence ($L = e^{-\tau}$) & Rigor Score**: Semantic transparency and proof substantiation.
+- **Cornell String Tension Snaps ($r \ge r_c$)**: Zero hallucination or non-sequitur transitions.
+- **Readability & Confusion Reduction**: Quantifiable reduction in CEFR reading difficulty.
+
+### Phase 4: Leaderboard, Culling & Post-Mortem Logging
+- Rank agents 1 through 5.
+- Retain the top 3 (Promote to Parents / Scalers).
+- **Cull the bottom 2 performers** and record explicit post-mortem failure warnings in `idea_genealogy.json`.
+
+### Phase 5: Recombination (Breeding Next Generation)
+- Combine the winning verification mechanisms of the top male-leaning performer with the superior synthesis/clustering techniques of the top female-leaning performer.
+- Spawn the new Generation cohort equipped with negative constraints from the culled agents.
+
+### Phase 6: Unified Master Synthesis & Changelog
+- Synthesize winning code innovations into the unified master engine (e.g., `unified_gluon_dna_engine.py`).
+- Update the architecture paper, roadmap, and project ledger.

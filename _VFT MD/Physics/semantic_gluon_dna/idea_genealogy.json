@@ -1,8 +1,8 @@
 {
   "system": "Epistemic Sexual Dimorphism & Multi-Agent Breeding Program",
-  "version": "3.0.0",
-  "last_updated": "2026-10-24T22:55:00+11:00",
-  "active_generation": 4,
+  "version": "4.0.0",
+  "last_updated": "2026-10-25T01:12:00+11:00",
+  "active_generation": 5,
   "gender_spectrum_definition": {
     "epistemic_foundation": "Pure Epistemic Fundamental Translation Hermeneutic (Action-Effect Event Physics, A -> E | C)",
     "information_structure_axiom": "Genders are not anthropomorphic or biological labels; they are invariant information structures defined by the actions and computational avenues chosen by agents.",
@@ -10,115 +10,111 @@
     "female_mother_vector": "Interesting -> Works = Female -> Mother (Neqevah n-q-v: Designating matrix vessel, state-space expansion, gauge tension, associative bridge building, testing viability along the unsaid horizon)",
     "formula": "gamma = Male / (Male + Female) in [0, 1]"
   },
-  "lineage_roster_gen3": {
-    "parents": {
-      "patriarch": {
-        "agent_id": "agent_son_veritas",
-        "title": "The Son (Promoted to Gen 3 Patriarch)",
-        "gender_ratio": "80% Male / 20% Female",
-        "archetype": "Physical Radiative Transfer & Causal Valence Conservation",
-        "legacy": "Formulated Semantic Optical Thickness (tau), Luminescence (L = exp(-tau)), and Causal Valence Shell Matrix (M_ij), proving rigor is a conservation law of obligations (Delta V -> 0)."
-      },
-      "matriarch": {
-        "agent_id": "agent_daughter_horizon",
-        "title": "The Daughter (Promoted to Gen 3 Matriarch)",
-        "gender_ratio": "20% Male / 80% Female",
-        "archetype": "Teleological Defect Closure & Chromodynamic Horizon Fields",
-        "legacy": "Achieved 100% Realization Rate (8/8 predicted theorems) by mining the Unsaid Horizon along the 5-Tier Possibility Spectrum (Impossible -> Certain)."
-      }
-    },
-    "offspring": {
-      "grandson": {
-        "agent_id": "agent_grandson_lexicon",
-        "name": "The Grandson (Lexicon-Veritas)",
-        "gender_ratio": "75% Male / 25% Female",
-        "archetype": "Autonomous Semantic Dictionary Transformer",
-        "mandate": "Build the universal Semantic Dictionary where every English word is modeled as a Gluon Vertex with an Ingress Tail (B), an Egress Head (F), an 8-modal flux spread around [IS], CEFR proficiency tiers (A1-C2), and relative possible-impossible vectors.",
-        "inherited_traits": [
-          "From The Son: Strict causal valence shell bookkeeping and backward/forward obligations",
-          "From The Daughter: 5-Tier possibility spectrum bounds (Impossible, Improbable, Plausible, Probable, Certain)"
-        ],
-        "negative_constraints_from_culled": [
-          "Avoid Agent 1's flaw: Never diagnose a dangling bond without providing the closing dictionary operator",
-          "Avoid Agent 5's flaw: Do not stall in brute-force O(V^3) combinatorial graph loops; use bounded valence shells"
-        ]
-      },
-      "granddaughter": {
-        "agent_id": "agent_granddaughter_omni",
-        "name": "The Granddaughter (Omni-Horizon)",
-        "gender_ratio": "25% Male / 75% Female",
-        "archetype": "Universal Multi-Genre Reading Head & CEFR Evaluator",
-        "mandate": "Deploy the Semantic Gluon Reading Head across arbitrary text genres (Philosophy, Law, Economics, General Literature, Specialized Science) using the Grandson's Head-Tail dictionary, auditing CEFR standards and closing teleological gauge defects.",
-        "inherited_traits": [
-          "From The Daughter: 100% predictive defect closure and teleological horizon mapping",
-          "From The Son: Beer-Lambert optical attenuation field and proof theater detection"
-        ],
-        "negative_constraints_from_culled": [
-          "Avoid Agent 3's limitation: Do not rely on narrow math-only regexes; audit English by universal CEFR and epistemic standards",
-          "Avoid Agent 2/4's flaws: Maintain discrete token boundaries while avoiding memoryless Markov drift"
-        ]
-      }
-    }
+  "cyclical_upgrade_protocol": {
+    "phases": [
+      "1. Baseline Broadcast & Cohort Deployment",
+      "2. Standardized Cook-Off Benchmark",
+      "3. Quantitative Scoring & Metric Verification",
+      "4. Leaderboard, Culling & Post-Mortem Logging",
+      "5. Recombination (Breeding Next Generation)",
+      "6. Master Engine Unified Synthesis"
+    ],
+    "benchmark_tasks": [
+      "Thematic Sharding of Overlapping Documents into Targeted Micro-Monographs",
+      "CEFR Readability Down-Sampling (Academic C1/C2 -> Grounded B1/B2 Pub-Test)",
+      "QCD Cornell String Tension Confinement (Zero Snaps at r >= r_c)",
+      "Zero Loss of Mathematical Axioms or Core Definitions"
+    ]
   },
   "lineage_roster_gen4": {
+    "bakeoff_summary": {
+      "rank_1_winner": "agent_asymptotic_merger (50M/50F) - 64.98% de-duplication, 0 Cornell string snaps, 98.58% white singlet hadrons, 185 KB master synthesis",
+      "rank_2_runner_up": "agent_polytrope_splicer (40M/60F) - Complete-linkage clustering, 63.15% intron culling, zero loss of formal axioms",
+      "rank_3_scaler": "agent_lexicon_kernel (65M/35F) - 500-lemma continuous dictionary scaling, 1.40 ns BLAS attention",
+      "rank_4_culled": "agent_great_granddaughter_polytrope (25M/75F) - Single-linkage cluster collapse at d < 0.70",
+      "rank_5_culled": "agent_great_grandson_qcd (75M/25F) - Conservative exon hoarding/paralysis (retained 97.6% of text)"
+    }
+  },
+  "lineage_roster_gen5": {
     "parents": {
       "patriarch": {
-        "agent_id": "agent_grandson_lexicon",
-        "title": "The Grandson (Promoted to Gen 4 Patriarch)",
-        "gender_ratio": "75% Male / 25% Female",
-        "archetype": "Autonomous Semantic Dictionary Transformer & Kernel Attention Head"
+        "agent_id": "agent_asymptotic_merger",
+        "title": "Agent 4 (Promoted to Gen 5 Patriarch)",
+        "gender_ratio": "50% Male / 50% Female",
+        "archetype": "Asymptotic String Confinement & Exon Merging Arbiter",
+        "legacy": "Achieved 64.98% de-duplication across 2,010 blocks while driving Cornell string snaps to zero."
       },
       "matriarch": {
-        "agent_id": "agent_granddaughter_omni",
-        "title": "The Granddaughter (Promoted to Gen 4 Matriarch)",
-        "gender_ratio": "25% Male / 75% Female",
-        "archetype": "Universal Multi-Genre Reading Head & CEFR Evaluator"
+        "agent_id": "agent_polytrope_splicer",
+        "title": "Agent 5 (Promoted to Gen 5 Matriarch)",
+        "gender_ratio": "40% Male / 60% Female",
+        "archetype": "Complete-Linkage Polytrope Splicer & Confusion Reducer",
+        "legacy": "Pioneered complete-linkage metric space clustering (d < 0.48) and multi-plane narrative balance."
+      },
+      "foundational_scaler": {
+        "agent_id": "agent_lexicon_kernel",
+        "title": "Agent 3 (Lexicon Kernel Scaler)",
+        "gender_ratio": "65% Male / 35% Female",
+        "archetype": "Scaled Empirical Lemma Dictionary & Vectorized BLAS Attention"
       }
     },
-    "offspring": {
-      "great_grandson": {
-        "agent_id": "agent_great_grandson_qcd",
-        "name": "The Great-Grandson (Synthesizer-Exon / QCD-Gluon)",
+    "cohort_gen5": {
+      "benchmark_task_invariance": "ALL 5 AGENTS ARE ASSIGNED THE EXACT SAME TASK: Multi-document thematic sharding + redundancy culling + CEFR readability downsampling (Pass 1 -> v2 upgrade -> Pass 2).",
+      "agent_gen5_75m_25f": {
+        "agent_id": "agent_gen5_75m_25f",
+        "name": "Gen 5 Competitor 1: Strict Verifier",
         "gender_ratio": "75% Male / 25% Female",
-        "archetype": "Actual Gluon Physics (QCD SU(3) Color Confinement) & Document Merge Synthesizer",
-        "mandate": "Incorporate genuine QCD gluon physics (color octet, Cornell potential V(r) = -alpha_s/r + sigma*r, flux tube breakdown) into vector calculations and execute the Document Merge Tool on raw IO document soups to produce coherent, de-duplicated merged texts.",
-        "conversation_id": "b9ad353b-58f6-45c0-9605-b9ca84beccdb"
+        "archetype": "Strict Proof Preservation & Cornell Confinement",
+        "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling with strict proof defense (tau -> 0, zero lost lemmas).",
+        "negative_constraints": ["Avoid conservative exon hoarding; actively cull redundant blocks when similarity is high."]
       },
-      "great_granddaughter": {
-        "agent_id": "agent_great_granddaughter_polytrope",
-        "name": "The Great-Granddaughter (Polytrope-Gauge / 7-Planes)",
-        "gender_ratio": "25% Male / 75% Female",
-        "archetype": "7-Planes Polytrope Chromodynamics & Confusion Reduction Engine",
-        "mandate": "Ground semantic gluon flows in the 7 Planes of Reality (Who, What, Where, Why, How, Cause, Effect) mapped across the 42-structure and 7 '-ics', model fractal polytrope density scaling (343 subplanes), and build the cross-plane cognitive confusion reduction filter.",
-        "conversation_id": "75573e25-fb95-4485-abc4-c274e5f800af"
-      },
-      "agent_lexicon_kernel": {
-        "agent_id": "agent_lexicon_kernel",
-        "name": "Great-Grandkin A: Lexicon-Kernel",
+      "agent_gen5_65m_35f": {
+        "agent_id": "agent_gen5_65m_35f",
+        "name": "Gen 5 Competitor 2: Verification Scaler",
         "gender_ratio": "65% Male / 35% Female",
-        "archetype": "Massive Dictionary Scaler & Asymmetric Kernel Attention Head",
-        "mandate": "Scale the empirical gluon dictionary to thousands of active lemmas across IRM, ArXiv, and IO with continuous magnitude graphs and probability tensors.",
-        "conversation_id": "c13f295d-0ea0-4ccf-99dd-5bd89764625b"
+        "archetype": "Continuous Lexicon Lookup & Kernel Attention",
+        "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling using continuous probability tables and matrix lookups.",
+        "negative_constraints": ["Prevent memoryless Markov drift by enforcing causal valence conservation."]
       },
-      "agent_asymptotic_merger": {
-        "agent_id": "agent_asymptotic_merger",
-        "name": "Great-Grandkin B: Asymptotic-Merger",
+      "agent_gen5_50m_50f": {
+        "agent_id": "agent_gen5_50m_50f",
+        "name": "Gen 5 Competitor 3: Equilibrium Arbiter",
         "gender_ratio": "50% Male / 50% Female",
-        "archetype": "SU(3) Beta Function & Teleological String Tension Document Merger",
-        "mandate": "Standardized Bake-Off Benchmark: Ingest overlapping IO markdown documents, de-duplicate introns via Luminescence, enforce Cornell potential flux tube integrity, and output a clean merged document.",
-        "conversation_id": "b5ff0165-9e56-419e-a8dd-388fe5c0e817"
+        "archetype": "Asymptotic String Confinement & Exon Merging Arbiter",
+        "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling balancing strict truth defense with aggressive redundancy culling.",
+        "negative_constraints": ["Ensure zero conversational dialogue framing leaks into reference documentation."]
       },
-      "agent_polytrope_splicer": {
-        "agent_id": "agent_polytrope_splicer",
-        "name": "Great-Grandkin C: Polytrope-Splicer",
+      "agent_gen5_40m_60f": {
+        "agent_id": "agent_gen5_40m_60f",
+        "name": "Gen 5 Competitor 4: Generative Splicer",
         "gender_ratio": "40% Male / 60% Female",
-        "archetype": "Multi-Plane Polytrope Exon Splicing & Confusion Reduction Engine",
-        "mandate": "Standardized Bake-Off Benchmark: Ingest overlapping IO markdown documents, audit 7-Planes cross-plane strain, de-duplicate topic overlap, and output an upgraded merged document.",
-        "conversation_id": "fb279a24-9747-490f-9082-8e038ee93e7b"
+        "archetype": "Complete-Linkage Clustering & Plain-English Translation",
+        "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling using complete-linkage metric space clustering.",
+        "negative_constraints": ["Do not delete technical lemmas; simplify phrasing and split multi-clause sentences."]
+      },
+      "agent_gen5_25m_75f": {
+        "agent_id": "agent_gen5_25m_75f",
+        "name": "Gen 5 Competitor 5: Topological Explorer",
+        "gender_ratio": "25% Male / 75% Female",
+        "archetype": "State-Space Expansion & Cross-Plane Bridge Building",
+        "mandate": "Execute the full benchmark: thematic sharding, redundancy de-duplication, and CEFR down-sampling testing dynamic cross-plane thematic bridges.",
+        "negative_constraints": ["Avoid single-linkage chaining that collapses distinct topics into giant blobs."]
       }
     }
   },
   "culled_and_retired_roster": [
+    {
+      "agent_id": "agent_great_grandson_qcd",
+      "generation": 4,
+      "rank_in_gen4": 5,
+      "fatal_flaw": "Conservative Exon Hoarding / Paralysis: Retained 97.6% of text (only 2.4% de-duplication) due to excessive fear of losing necessary lemmas, failing to reduce reader confusion."
+    },
+    {
+      "agent_id": "agent_great_granddaughter_polytrope",
+      "generation": 4,
+      "rank_in_gen4": 4,
+      "fatal_flaw": "Single-Linkage Cluster Collapse: Over-generative associative tolerance merged 98% of distinct concepts into 3 giant blobs, lacking discrete multi-document file sharding."
+    },
     {
       "agent_id": "agent_1",
       "generation": 1,
