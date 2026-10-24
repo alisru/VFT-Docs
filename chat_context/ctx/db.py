@@ -41,6 +41,14 @@ CREATE TABLE IF NOT EXISTS chunks (
     emb BLOB
 );
 CREATE INDEX IF NOT EXISTS chunks_chat ON chunks(chat_id);
+
+CREATE VIRTUAL TABLE IF NOT EXISTS chunks_fts USING fts5(
+    text,
+    chat_id UNINDEXED,
+    content='chunks',
+    content_rowid='id'
+);
+
 CREATE TABLE IF NOT EXISTS canvases (
     id TEXT PRIMARY KEY,
     chat_id TEXT NOT NULL,
@@ -67,6 +75,13 @@ CREATE TABLE IF NOT EXISTS drafts (
 );
 CREATE INDEX IF NOT EXISTS idx_drafts_site ON drafts(site);
 CREATE INDEX IF NOT EXISTS idx_drafts_updated ON drafts(updated_at DESC);
+
+CREATE TABLE IF NOT EXISTS censored_chats (
+    chat_id TEXT PRIMARY KEY,
+    url TEXT,
+    created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_censored_url ON censored_chats(url);
 """
 
 
@@ -82,6 +97,22 @@ def init_db():
         if "url" not in cols:
             con.execute("ALTER TABLE chats ADD COLUMN url TEXT")
             con.commit()
+        # Ensure fragile triggers that cause "database disk image is malformed" are dropped
+        con.execute("DROP TRIGGER IF EXISTS chunks_ai")
+        con.execute("DROP TRIGGER IF EXISTS chunks_ad")
+        con.execute("DROP TRIGGER IF EXISTS chunks_au")
+        con.commit()
+
+        # Verify chunks_fts is populated
+        try:
+            fts_count = con.execute("SELECT count(*) FROM chunks_fts").fetchone()[0]
+            chunks_count = con.execute("SELECT count(*) FROM chunks").fetchone()[0]
+            if chunks_count > 0 and fts_count == 0:
+                con.execute("INSERT INTO chunks_fts(chunks_fts) VALUES('rebuild')")
+                con.commit()
+        except Exception as e:
+            print(f"[db] FTS5 check notice: {e}")
+
 
 
 def connect():

@@ -184,6 +184,12 @@ ACTOR_MAP = {
     r'\bTaiwan\b': "Taiwan",
 }
 
+KNOWN_DATA_SOURCES = {
+    'pew', 'pew research', 'pew research center', 'gallup', 'brookings',
+    'census bureau', 'us census', 'abs', 'australian bureau of statistics',
+    'ons', 'office for national statistics', 'kff', 'kaiser family foundation'
+}
+
 # Explicit Role Classification Mappings
 KNOWN_PUBLISHERS = {
     'propublica', 'bbc', 'bbc news', 'fox news', 'cnn', 'nytimes', 'new york times',
@@ -238,8 +244,12 @@ def classify_actor_role(actor_name, story_context=None):
     clean_name = str(actor_name).strip().lower()
     
     # 1. Author / Reporter / Publisher
-    if clean_name in KNOWN_PUBLISHERS or any(p in clean_name for p in ['reporting', 'investigation', 'news', 'press', 'times', 'post', 'herald', 'daily']):
+    if clean_name in KNOWN_PUBLISHERS or any(p in clean_name for p in ['reporting', 'investigation', 'news', 'press', 'times', 'post', 'herald', 'daily', 'federalist', 'wire']):
         return "author"
+
+    # 1.5 Research / Data / Polling Sources (Non-partisan statistical reference - NOT instigators)
+    if clean_name in KNOWN_DATA_SOURCES or any(s in clean_name for s in ['research center', 'polling', 'census', 'statistics', 'survey', 'think tank']):
+        return "context"
         
     # 2. Regulator / Court / Arbiter
     if clean_name in KNOWN_REGULATORS or any(r in clean_name for r in ['court', 'commission', 'judiciary', 'regulator', 'tribunal', 'monitor']):

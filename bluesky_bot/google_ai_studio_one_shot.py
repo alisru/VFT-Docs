@@ -77,9 +77,9 @@ from generate_graph import draw_graph
 from aletheia_bot import save_and_sync_story
 
 # Import rebuild_registries logic
-def rebuild_registries_selector(use_son=False):
-    if use_son:
-        print("Invoking SON registry rebuilder...")
+def rebuild_registries_selector(use_son=False, use_potential=False):
+    if use_son or use_potential:
+        print("Invoking SON/Potential registry rebuilder...")
         from rebuild_registries_son import rebuild_registries as rebuild_son
         rebuild_son()
     else:
@@ -87,8 +87,8 @@ def rebuild_registries_selector(use_son=False):
         from rebuild_registries import rebuild_registries as rebuild_std
         rebuild_std()
 
-def promote_and_register_selector(use_son=False):
-    if use_son:
+def promote_and_register_selector(use_son=False, use_potential=False):
+    if use_son or use_potential:
         from rebuild_registries_son import promote_and_register_incremental as promote_son
         return promote_son()
     else:
@@ -1047,11 +1047,14 @@ DEFAULT_FALLBACKS = [
 
 _RULES_CACHE = {}
 
-def _load_rules(use_son=False):
+def _load_rules(use_son=False, use_potential=False):
     """Read + minify the rules files once per process; they don't change mid-run."""
-    cache_key = "son" if use_son else "regular"
+    cache_key = "potential" if use_potential else ("son" if use_son else "regular")
     if cache_key not in _RULES_CACHE:
-        if use_son:
+        if use_potential:
+            convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_potential.md")
+            formatting_path = os.path.join(script_dir, "instructions", "thread_formatting_potential.md")
+        elif use_son:
             convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_lite.md")
             formatting_path = os.path.join(script_dir, "instructions", "thread_formatting_son.md")
         else:
@@ -1141,8 +1144,8 @@ def build_spiritual_directive(traditions_arg="all"):
         "  *Note: The entire Spirithekanon post must be kept under 280 characters total.\n\n"
     )
 
-def build_formatting_rules(use_son=False, compact=False, five_word=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
-    convergence_rules, formatting_rules = _load_rules(use_son=use_son)
+def build_formatting_rules(use_son=False, use_potential=False, compact=False, five_word=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
+    convergence_rules, formatting_rules = _load_rules(use_son=use_son, use_potential=use_potential)
         
     if five_word:
         formatting_rules = (
@@ -1164,7 +1167,7 @@ def build_formatting_rules(use_son=False, compact=False, five_word=False, use_mu
         formatting_rules = formatting_rules.replace("Keep every single step strictly under **275 characters**", "Keep the first 4 steps under **275 characters** (subsequent image card steps have no character limits, 400-800 chars)")
         formatting_rules = formatting_rules.replace("Keep each individual post strictly under 280 characters (hard max 290)", "Keep the first 4 steps strictly under 260 characters (subsequent image card steps have no character limits, 400-800 chars)")
 
-    if use_son and use_multi_aspect:
+    if (use_son or use_potential) and use_multi_aspect:
         multi_aspect_text = (
             "=== MULTI-ASPECT & MULTI-SOURCE DIRECTIVE ===\n"
             "- Post 4 (index 3 in the posts array: The Verdict) is the OVERALL verdict only. It evaluates the REAL-WORLD EVENT and ACTORS themselves. Format it as:\n"
@@ -1195,7 +1198,7 @@ SOCIAL_PHYSICS_DIRECTIVE = (
     "Cut through stated pretexts to reveal whether actors are running a Smart Selfish Maneuver (hidden extraction behind manufactured crises and projected blame) or acting towards genuine systemic empowerment."
 )
 
-def build_system_instruction(use_son=False, compact=False, five_word=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", extra_context=None):
+def build_system_instruction(use_son=False, use_potential=False, compact=False, five_word=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", extra_context=None):
     import datetime
     today_str = datetime.datetime.now().strftime("%Y-%m-%d")
     
@@ -1258,8 +1261,14 @@ def build_system_instruction(use_son=False, compact=False, five_word=False, use_
         instruction += f"\n\nCRITICAL: You must actively incorporate the following background knowledge and additional context when performing the audits:\n{extra_context}"
     return instruction
 
-def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
-    expected_len = 28 if (use_son and use_multi_aspect) else (27 if use_son else 17)
+def build_output_format(n, use_son=False, use_potential=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
+    is_son_or_potential = use_son or use_potential
+    if use_potential:
+        expected_len = 33 if use_multi_aspect else 32
+    elif use_son:
+        expected_len = 28 if use_multi_aspect else 27
+    else:
+        expected_len = 17
     
     example_posts_list = [
         '"Hook text here.\\nEvidence: a, b, c\\n#Aletheia #Topic"',
@@ -1276,7 +1285,7 @@ def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=
         '"Awwthekanon:\\nEmpathy."',
         '"Brothekanon:\\nCasual take."'
     ]
-    if use_son and use_multi_aspect:
+    if is_son_or_potential and use_multi_aspect:
         example_posts_list.insert(4, '"- Nigel Farage: FAIL (-0.94, -0.87) — Prioritizes political capital over truth.\\n- Electoral Messaging: FAIL (-0.94, -0.88) — Disinformation exposed."')
     
     if use_spiritual:
@@ -1309,7 +1318,7 @@ def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=
         "    null,                                      // item[15]: macro actual morality, null if none\n"
         "    null                                       // item[16]: macro actual will, null if none\n"
     )
-    if use_son:
+    if is_son_or_potential:
         if use_multi_aspect:
             output_format += (
                 ",\n"
@@ -1339,6 +1348,15 @@ def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=
                 '    {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}}, // item[25]: stated forces\n'
                 '    {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}  // item[26]: actual forces\n'
             )
+        if use_potential:
+            output_format += (
+                ",\n"
+                '    "will be",                                 // item modal_claim: Stated claim Modal node string ("is", "will be", "is like", "was like", "can be", "can\'t be", "May be", "Won\'t be", "is not")\n'
+                '    "is not",                                  // item modal_real: Actual ground reality Modal node string ("is", "will be", "is like", "was like", "can be", "can\'t be", "May be", "Won\'t be", "is not")\n'
+                '    "Top-Right to Bottom-Left Inversion",      // item modal_vector: Quadrant transition or trajectory description\n'
+                '    "Red Top (The Imperial Trap)",             // item geodesic: Dynamic Geodesic name (e.g. "Red Top (The Imperial Trap)", "Red Bottom (The PR Shield)", "Productive Geodesic", "Regressive Geodesic", "Magenta Vector", "None")\n'
+                '    true                                       // item central_is_barrier_crossed: boolean (true if trajectory crossed central IS barrier from +u to -u, else false)\n'
+            )
     output_format += (
         "\n"
         "  ]\n"
@@ -1347,7 +1365,7 @@ def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=
         "Identify if the candidate news story exists within a distinct overarching macro-event context (e.g. an announcement happening at a political photo-op/rally, or a sports title win happening at a White House PR event). If so, provide the macro-event name in item[12] and evaluate its stated and actual u/psi coordinates in items[13] to [16]. If no distinct macro-context exists, use empty string for item[12] and null for items[13] to [16].\n\n"
         "item[11] = actors array: principal named individuals, orgs, nation-states, or blocs (CRINK/BRICS/NATO/AUKUS/G7/SCO/Five Eyes) the story is ABOUT. Canonical full names. Max 6. [] if none.\n\n"
     )
-    if use_son:
+    if is_son_or_potential:
         output_format += (
             "FORCE SCORING GRANULARITY CRITICAL RULES:\n"
             "- You MUST score the [S, O, N] force magnitudes for the 6 attractors as granular decimals (e.g. 0.2, 0.5, 0.8, 1.2, 1.5, 1.8) based on specific evidence in the text. Do NOT default to binary 0.0 or 1.0 values, as this causes coordinate collapse and loses analytical resolution.\n"
@@ -1386,7 +1404,7 @@ def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=
         "    null,\n"
         "    null"
     )
-    if use_son:
+    if is_son_or_potential:
         if use_multi_aspect:
             output_format += (
                 ",\n"
@@ -1428,6 +1446,15 @@ def build_output_format(n, use_son=False, use_multi_aspect=False, use_spiritual=
                 '    "Severe Deception",\n'
                 '    {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}},\n'
                 '    {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
+            )
+        if use_potential:
+            output_format += (
+                ",\n"
+                '    "will be",\n'
+                '    "is not",\n'
+                '    "Top-Right to Bottom-Left Inversion",\n'
+                '    "Red Top (The Imperial Trap)",\n'
+                '    true\n'
             )
     output_format += (
         "\n"
@@ -1706,7 +1733,7 @@ def harvest_search_grounding(genai_client, candidates):
     print(f"  [Stage 1 Grounding] All grounding models failed ({last_err}). Proceeding with ungrounded context.")
     return "", []
 
-def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False, thinking_level="MEDIUM", use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", pre_grounded_dossier=None, pre_harvested_urls=None):
+def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_potential=False, use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False, thinking_level="MEDIUM", use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", pre_grounded_dossier=None, pre_harvested_urls=None):
     if pre_harvested_urls is None:
         pre_harvested_urls = []
     
@@ -1718,11 +1745,11 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         if grounded_dossier:
             extra_context = (extra_context + "\n\n" if extra_context else "") + f"=== VERIFIED REAL-TIME SEARCH GROUNDING DOSSIER ===\n{grounded_dossier}"
 
-    convergence_rules, formatting_rules = build_formatting_rules(use_son=use_son, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
-    system_instruction = build_system_instruction(use_son=use_son, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions, extra_context=extra_context)
+    convergence_rules, formatting_rules = build_formatting_rules(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+    system_instruction = build_system_instruction(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions, extra_context=extra_context)
     
     n = len(candidates)
-    output_format = build_output_format(n, use_son=use_son, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+    output_format = build_output_format(n, use_son=use_son, use_potential=use_potential, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
     
     # Prune duplicate payload fields from candidates before passing to LLM to save tokens
     clean_candidates = []
@@ -2061,7 +2088,7 @@ def sanitize_story_posts(posts, use_spiritual=False):
             
     return clean
 
-def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
+def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", use_potential=False):
     # Strip markdown fences if present
     content = flat_text.strip()
     if content.startswith("```json"):
@@ -2177,6 +2204,18 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
                     story["stated_forces"] = item["stated_forces"]
                 if "actual_forces" in item and isinstance(item["actual_forces"], dict):
                     story["actual_forces"] = item["actual_forces"]
+                if "modal_claim" in item and item["modal_claim"] is not None:
+                    story["modal_claim"] = str(item["modal_claim"]).strip()
+                if "modal_real" in item and item["modal_real"] is not None:
+                    story["modal_real"] = str(item["modal_real"]).strip()
+                if "modal_vector" in item and item["modal_vector"] is not None:
+                    story["modal_vector"] = str(item["modal_vector"]).strip()
+                if "geodesic" in item and item["geodesic"] is not None:
+                    story["geodesic"] = str(item["geodesic"]).strip()
+                if "central_is_barrier_crossed" in item and item["central_is_barrier_crossed"] is not None:
+                    story["central_is_barrier_crossed"] = bool(item["central_is_barrier_crossed"])
+                if use_potential or "modal_claim" in item or "geodesic" in item:
+                    story["potential_audit"] = True
                 if "aspects" in item and isinstance(item["aspects"], list):
                     story["aspects"] = item["aspects"]
                     story["multiAspect"] = True
@@ -2272,6 +2311,21 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
             elif use_multi_aspect:
                 story["multiAspect"] = True
             
+            # Parse optional modal potential fields
+            modal_offset = 28 if (len(item) >= 28 and isinstance(item[27], list)) else 27
+            if len(item) >= modal_offset + 1 and item[modal_offset] is not None:
+                story["modal_claim"] = str(item[modal_offset]).strip()
+            if len(item) >= modal_offset + 2 and item[modal_offset + 1] is not None:
+                story["modal_real"] = str(item[modal_offset + 1]).strip()
+            if len(item) >= modal_offset + 3 and item[modal_offset + 2] is not None:
+                story["modal_vector"] = str(item[modal_offset + 2]).strip()
+            if len(item) >= modal_offset + 4 and item[modal_offset + 3] is not None:
+                story["geodesic"] = str(item[modal_offset + 3]).strip()
+            if len(item) >= modal_offset + 5 and item[modal_offset + 4] is not None:
+                story["central_is_barrier_crossed"] = bool(item[modal_offset + 4])
+            if use_potential or len(item) >= modal_offset + 5:
+                story["potential_audit"] = True
+            
             if use_spiritual:
                 story["spiritual"] = True
                 story["spiritual_traditions"] = resolve_spiritual_traditions(spiritual_traditions)
@@ -2365,12 +2419,18 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
                 except Exception as se:
                     print(f"  Warning: Could not fetch fallback scraped_text for '{slug}': {se}")
 
-            if story.get("scraped_text") and story.get("link"):
+            if story.get("scraped_text"):
+                if story.get("link"):
+                    try:
+                        from scraped_cache import save_cached_article
+                        save_cached_article(story["link"], story.get("subject", ""), "", story["scraped_text"])
+                    except Exception:
+                        pass
                 try:
-                    from scraped_cache import save_cached_article
-                    save_cached_article(story["link"], story.get("subject", ""), "", story["scraped_text"])
-                except Exception:
-                    pass
+                    from shard_manager import save_story_source
+                    save_story_source(slug, story["scraped_text"], url=story.get("link"))
+                except Exception as se:
+                    print(f"  Warning: Could not save story source to shard for '{slug}': {se}")
 
             # Write to darkroom — rebuild_registries will generate the graph and promote it
             filename = f"factcheck_{slug}.json"
@@ -2398,6 +2458,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="Google AI Studio One-Shot Batch Evaluator")
     parser.add_argument("--son", action="store_true", help="Use the 6-Attractor SON convergence model and formatting instructions")
+    parser.add_argument("--potential", action="store_true", help="Use the 9-Node Modal & Temporal Potential convergence model (convergence_son_potential.md) and formatting instructions")
     parser.add_argument("--compact", action="store_true", help="Enable compact posting mode formatting (lifting character limits on posts 4+ in API responses)")
     parser.add_argument("--compact-single", action="store_true", help="Enable compact single-post mode formatting (lifting character limits on posts 4+ and tagging story as single-post compact)")
     parser.add_argument("--search", action="store_true", help="Enable Google Search Grounding to fact-check claims (default: False)")
@@ -2556,7 +2617,12 @@ def main():
     agnes_api_key = os.environ.get("AGNES_API_KEY")
     
     # Calculate simple token savings metrics
-    if args.son:
+    is_son_mode = args.son or args.potential
+
+    if args.potential:
+        convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_potential.md")
+        formatting_path = os.path.join(script_dir, "instructions", "thread_formatting_potential.md")
+    elif args.son:
         convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_lite.md")
         formatting_path = os.path.join(script_dir, "instructions", "thread_formatting_son.md")
     else:
@@ -2672,7 +2738,7 @@ def main():
                 is_multi_aspect_active = args.multi_aspect or any(c.get("is_multi_source") for c in remaining)
                 raw_text, grounding_urls = run_one_shot_evaluations(
                     genai_client, remaining, args.model, agnes_api_key=agnes_api_key, 
-                    use_son=args.son, use_search=args.search,
+                    use_son=is_son_mode, use_potential=args.potential, use_search=args.search,
                     extra_context=args.context, model_sequence=model_seq,
                     compact=compact_val, five_word=args.five_word,
                     thinking_level=args.thinking_level,
@@ -2682,7 +2748,7 @@ def main():
                     pre_grounded_dossier=cur_dossier,
                     pre_harvested_urls=cur_urls
                 )
-                parsed = transpose_flat_to_json(raw_text, use_multi_aspect=is_multi_aspect_active, use_spiritual=is_spiritual_active, spiritual_traditions=args.spiritual_traditions)
+                parsed = transpose_flat_to_json(raw_text, use_multi_aspect=is_multi_aspect_active, use_spiritual=is_spiritual_active, spiritual_traditions=args.spiritual_traditions, use_potential=args.potential)
 
                 # Robust Candidate Matching & Ground-Truth URL Alignment
                 def _find_cand_match(story_item, candidate_pool):
@@ -2770,7 +2836,7 @@ def main():
                         subject_label = item.get("subject", "story") if isinstance(item, dict) else (item[2] if isinstance(item, list) and len(item) > 2 else "story")
 
                         if isinstance(item, dict):
-                            if args.son:
+                            if is_son_mode:
                                 try:
                                     claim_rnet = float(item.get("claim_rnet", 0.0))
                                     real_rnet = float(item.get("real_rnet", 0.0))
@@ -2790,7 +2856,7 @@ def main():
                                     pass
                                 if hypocrisy > 1.5:
                                     trigger_reflection = True
-                        elif args.son and isinstance(item, list) and len(item) >= 25:
+                        elif is_son_mode and isinstance(item, list) and len(item) >= 25:
                             try:
                                 claim_rnet = float(item[17]) if item[17] is not None else 0.0
                                 real_rnet = float(item[18]) if item[18] is not None else 0.0
@@ -2799,7 +2865,7 @@ def main():
                                 pass
                             if real_rnet > 2.0 or hypocrisy > 2.0:
                                 trigger_reflection = True
-                        elif not args.son and isinstance(item, list) and len(item) >= 9:
+                        elif not is_son_mode and isinstance(item, list) and len(item) >= 9:
                             try:
                                 claim_u = float(item[5])
                                 claim_psi = float(item[6])
@@ -2812,7 +2878,7 @@ def main():
                                 trigger_reflection = True
 
                         if trigger_reflection:
-                            desc = f"R_net={real_rnet:.2f}, delta={hypocrisy:.2f}" if args.son else f"hypocrisy={hypocrisy:.2f}"
+                            desc = f"R_net={real_rnet:.2f}, delta={hypocrisy:.2f}" if is_son_mode else f"hypocrisy={hypocrisy:.2f}"
                             print(f"  [REFLECT] High hypocrisy/distortion detected ({desc}) for item {idx}: {subject_label}")
                             print("  Executing second-pass fact-checking search grounding reflection...")
 
@@ -2837,7 +2903,7 @@ def main():
                                 try:
                                     ref_raw, ref_grounding = run_one_shot_evaluations(
                                         genai_client, [orig_cand], args.model, agnes_api_key=agnes_api_key,
-                                        use_son=args.son, use_search=True, # Force search grounding ON
+                                        use_son=is_son_mode, use_potential=args.potential, use_search=True, # Force search grounding ON
                                         extra_context=reflection_context, model_sequence=model_seq,
                                         compact=compact_val, five_word=args.five_word,
                                         thinking_level=args.thinking_level,
@@ -2845,7 +2911,7 @@ def main():
                                         use_spiritual=is_spiritual_active,
                                         spiritual_traditions=args.spiritual_traditions
                                     )
-                                    ref_parsed = transpose_flat_to_json(ref_raw, use_multi_aspect=args.multi_aspect, use_spiritual=is_spiritual_active, spiritual_traditions=args.spiritual_traditions)
+                                    ref_parsed = transpose_flat_to_json(ref_raw, use_multi_aspect=args.multi_aspect, use_spiritual=is_spiritual_active, spiritual_traditions=args.spiritual_traditions, use_potential=args.potential)
                                     if ref_parsed and len(ref_parsed) > 0:
                                         new_item = ref_parsed[0]
                                         # Retain ground-truth candidate metadata so reflection never wipes out scraped_text or canonical URLs!
@@ -2940,7 +3006,7 @@ def main():
             chunk_success = process_evaluations(chunk_evals, category=args.category, topic=args.topic, compact=compact_val)
             print(f"  Processed {chunk_success}/{len(chunk_evals)} evaluations from chunk to darkroom.")
             print("  Promoting, generating graphs, and fast-registering immediately...")
-            promote_and_register_selector(args.son)
+            promote_and_register_selector(is_son_mode)
             print("  Chunk successfully promoted and registered.")
 
         # Deduct successfully processed candidates AND exhausted remaining candidates from the queue file
@@ -2995,14 +3061,14 @@ def main():
             )
             if n_roundups:
                 print(f"  Created {n_roundups} roundup(s). Rebuilding registries...")
-                rebuild_registries_selector(args.son)
+                rebuild_registries_selector(is_son_mode)
             else:
                 print("  No roundup groups found — all stories post individually.")
         except Exception as re_err:
             print(f"  WARNING: Roundup consolidation failed: {re_err}")
 
     print("\nBatch evaluation finished. Synchronizing final registries...")
-    rebuild_registries_selector(args.son)
+    rebuild_registries_selector(is_son_mode)
     print("\nOne-Shot Batch Evaluation Pipeline Completed Successfully!")
 
 if __name__ == "__main__":

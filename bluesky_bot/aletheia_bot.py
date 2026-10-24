@@ -225,6 +225,13 @@ def save_and_sync_story(thread_config, write_json=True):
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump([thread_config], f, indent=2, ensure_ascii=False)
             print(f"Saved JSON config to {filepath}")
+
+            # Sync primary source article text to the 16-shard web engine
+            try:
+                from shard_manager import sync_story_to_shard
+                sync_story_to_shard(story_id, url=thread_config.get("link") or thread_config.get("target_url"))
+            except Exception as se:
+                print(f"Warning: Failed to sync source text to shard for {story_id}: {se}")
             
             # If we are writing to live, remove the draft file from the parent directory if it exists
             if is_live:

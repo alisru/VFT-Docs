@@ -560,7 +560,7 @@ No dry header. Just a punchy scene-setter, then the metadata.
 ### [2026-06-17] Intent 68: Update SON Model Math for Preferences
 *Status: In Progress*
 - **Updated Preferences Force Math**: Redefined Good Preference ($GP$) and Bad Preference ($BP$) vector forces to correctly align with VFT physics. Support ($S$) acts as a neutral-will force (adds weight, keeps Will at $0.0$), Oppose ($O$) drives Will in the opposite direction (negative for GP, positive for BP), and Neutral ($N$) acts as pure weight dilution ($0.0$ force vector contribution).
-- **Code Implementation**: Updated `calculate_son_coordinates` in `rebuild_registries_son.py` to calculate preference coordinates using this corrected logic.
+- **Code Implementation**: Updated `calculate_son_coordinates` in `r`rebuild_registries_son.py`` to calculate preference coordinates using this corrected logic.
 - **Documentation Alignment**: Updated `convergence_son_lite.md` and `convergence_son.md` to document the new math formulas for preferences.
 - **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Action. Standardizing preference force mapping to eliminate mathematical discrepancies.
 
@@ -582,7 +582,7 @@ No dry header. Just a punchy scene-setter, then the metadata.
 ### [2026-06-26] Intent 71: UI and CLI Support for Additional Context and Custom Model Sequences
 *Status: Completed*
 - **CLI Context Injection**: Added `--context` and `--model-sequence` parameters to `google_ai_studio_one_shot.py`. Additional context/background knowledge is appended to the system instructions, and a custom comma-separated model sequence can be supplied to override the default model and fallback list.
-- **GUI Model Sequence Builder**: Added a dynamic checklist of models inside the Aletheia Launcher (`AletheiaLauncher.pyw`). Checking/unchecking models updates the active sequence in order of selection (e.g. `gemini-3.5-flash -> gemini-2.5-flash`).
+- **GUI Model Sequence Builder**: Added a dynamic checklist of models inside the Aletheia Launcher (``AletheiaLauncher.pyw``). Checking/unchecking models updates the active sequence in order of selection (e.g. `gemini-3.5-flash -> gemini-2.5-flash`).
 - **GUI Context Input Area**: Integrated a scrollable multi-line text input field inside the launcher for entering "Additional Context" parameters dynamically.
 - **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive justice. Empowering bot operators with fine-grained context injection and model routing capabilities.
 
@@ -590,13 +590,13 @@ No dry header. Just a punchy scene-setter, then the metadata.
 *Status: Completed*
 - **Tested convergence_son_lite.md**: Manually evaluated the UK June 2026 record temperature (36.1°C in Gosport, Hampshire) under the 6-Attractor force equations and 7-plane structural scan.
 - **Generated Trajectory Graph**: Created a script in `drawing_board` to generate the dual-box nested context-in-context trajectory graph at `bluesky_bot/graph_png/uk-heatwave-temperature-record_graph.png`.
-- **Registry Integration**: Copied the JSON configuration `factcheck_uk-heatwave-temperature-record.json` into `bluesky_bot/stories/` and executed `rebuild_registries_son.py` to compile it successfully into the main `stories_registry.js` index.
+- **Registry Integration**: Copied the JSON configuration `factcheck_uk-heatwave-temperature-record.json` into `bluesky_bot/stories/` and executed `r`rebuild_registries_son.py`` to compile it successfully into the main `stories_registry.js` index.
 - **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Justice. Validated the new 6-Attractor SON math and nested framing layout on a real-world meteorological record.
 
 
 ### [2026-06-26] Intent 73: GUI Drag-and-Drop Model Sequence Ordering & Vertex Paid API Support
 *Status: Completed*
-- **Drag-and-Drop Listbox**: Replaced the static checkbox order sequence logic with a custom interactive `DragDropListbox` widget in `AletheiaLauncher.pyw`. Clicking model checkboxes dynamically inserts/removes models from the active listbox sequence, where items can be dragged and dropped to define the exact fallback order.
+- **Drag-and-Drop Listbox**: Replaced the static checkbox order sequence logic with a custom interactive `DragDropListbox` widget in ``AletheiaLauncher.pyw``. Clicking model checkboxes dynamically inserts/removes models from the active listbox sequence, where items can be dragged and dropped to define the exact fallback order.
 - **Vertex Paid API Support**: Added `"vertex:gemini-3.1-flash-lite"` to the GUI's model fallback available options and default selected list, ensuring operators can manage the paid API within the custom sequence.
 - **Morality-Will Audit**: (υ=+1.0, ψ=+1.5) -> Greater Good / Productive justice. Optimizing Operator UI ergonomics and integrating paid Vertex fallback capabilities.
 
@@ -609,8 +609,8 @@ No dry header. Just a punchy scene-setter, then the metadata.
 ### [2026-06-26] Intent 75: Dynamic Fallback Model Synchronization between Launcher and Bot
 *Status: Completed*
 - **Globalized Fallbacks**: Defined `DEFAULT_FALLBACKS` globally in `google_ai_studio_one_shot.py` so it can be exported and imported as a module-level variable.
-- **Dynamic GUI Population**: Updated `AletheiaLauncher.pyw` to import `DEFAULT_FALLBACKS` from `google_ai_studio_one_shot.py` at startup, auto-populating checkboxes and the Drag-and-Drop sequence listbox dynamically. Added a robust exception fallback to hardcoded lists if the import fails.
-- **Improved UX Layout**: Expanded the fallback listbox height constraint from 7 to 9 in `AletheiaLauncher.pyw` to fit the newly synchronized models.
+- **Dynamic GUI Population**: Updated ``AletheiaLauncher.pyw`` to import `DEFAULT_FALLBACKS` from `google_ai_studio_one_shot.py` at startup, auto-populating checkboxes and the Drag-and-Drop sequence listbox dynamically. Added a robust exception fallback to hardcoded lists if the import fails.
+- **Improved UX Layout**: Expanded the fallback listbox height constraint from 7 to 9 in ``AletheiaLauncher.pyw`` to fit the newly synchronized models.
 - **Morality-Will Audit**: (υ=+1.5, ψ=+1.5) -> Greater Good / Productive Justice. Eliminating source duplication and guaranteeing that the operator interface always reflects the exact model fallbacks supported by the posting engine.
 
 ### [2026-08-15] Intent 77: Research Probe, Policy Auto-Tracking Ledger, Live Multimodal Chatbot with Persistent Memory & FastMCP Server
@@ -660,7 +660,7 @@ No dry header. Just a punchy scene-setter, then the metadata.
 - **Ordered Perspective Queue**:
   - Built support in `bluesky_bot/audit_crossref.py` for passing an ordered queue of perspective slots (`receipt`, `bro`, `aletheia`, `aww`, `spirit`, `custom:<focus>`).
   - Added `--perspectives` CLI argument to `bluesky_bot/direct_reply_dispatcher.py` to allow passing delimited perspective queues.
-- **Drag-and-Drop Perspective Queue Box in Launcher (`AletheiaLauncher.pyw`)**:
+- **Drag-and-Drop Perspective Queue Box in Launcher (``AletheiaLauncher.pyw``)**:
   - Replaced the static "Replies" combobox with a `DragDropListbox` populated with individual perspective items.
   - Added dedicated quick-add toolbar buttons: `+ Brothekanon`, `+ Aletheia`, `+ Awwthekanon`, `+ Spirithekanon`, `+ Custom Focus`, plus `Remove` and `Reset`.
   - Added a `Custom Focus` text field allowing operators to inject custom thematic angles (e.g., `"how culture war tribalism profits media conglomerates"`).
@@ -671,11 +671,11 @@ No dry header. Just a punchy scene-setter, then the metadata.
 ### Intent 104: Fix Direct Reply Execution, Launcher Self-Relaunch & Exception Visibility
 *Status: Completed*
 - **Root Cause of Button Inaction**:
-  - In `AletheiaLauncher.pyw`, two stale background processes (PIDs 25088 and 11596) were running code that predated the restoration of `python_bin = self.get_python_bin()` in `run_direct_reply()`.
+  - In ``AletheiaLauncher.pyw``, two stale background processes (PIDs 25088 and 11596) were running code that predated the restoration of `python_bin = self.get_python_bin()` in `run_direct_reply()`.
   - In addition, Tkinter running under `pythonw.exe` redirected `sys.stderr` to a dummy writer, silently swallowing any unhandled exception in GUI event handlers.
   - Furthermore, the self-relaunch check on startup was comparing `sys.executable` (ending in `python.exe`) against `venv_pyw` (ending in `pythonw.exe`) even when already running inside the virtual environment, attempting to spawn a child process without `cwd` and calling `sys.exit(0)`.
 - **System-Wide Fixes**:
-  - Fixed startup self-relaunch in `AletheiaLauncher.pyw` to check `in_venv = (sys.prefix != getattr(sys, "base_prefix", sys.prefix))` so running inside `.venv` never exits or loops.
+  - Fixed startup self-relaunch in ``AletheiaLauncher.pyw`` to check `in_venv = (sys.prefix != getattr(sys, "base_prefix", sys.prefix))` so running inside `.venv` never exits or loops.
   - Wrapped `run_direct_reply()` inside a comprehensive `try...except Exception as e:` block that prints the complete traceback directly into the dedicated `self.reply_text` console (`self.log_reply()`) and safely re-enables all buttons (`self.set_reply_running(False)`).
   - Terminated stale launcher processes and verified the refreshed application process running live.
 - **Morality-Will Audit**: (υ=+1.9, ψ=+2.0) -> Systemic Justice / Productive Justice. Ensuring total operational responsiveness, immediate exception diagnostics in the UI, and seamless operator execution.
@@ -683,12 +683,12 @@ No dry header. Just a punchy scene-setter, then the metadata.
 ### Intent 105: Queue Keyword Collision Fix & Duplicate Post Elimination
 *Status: Completed*
 - **Root Cause of Duplicate Posts (`[Post 1/2]` and `[Post 2/2]` identical)**:
-  - In `AletheiaLauncher.pyw`, the default second queue item was `"🛹 Post 2: Brothekanon Street Reality & Receipts"`.
+  - In ``AletheiaLauncher.pyw``, the default second queue item was `"🛹 Post 2: Brothekanon Street Reality & Receipts"`.
   - The parsing logic checked `if "receipt" in raw_item.lower(): queue_items.append("receipt")` BEFORE checking for persona keywords (`"bro"`, `"aww"`, `"spirit"`).
   - Because `"Receipts"` contained the substring `"receipt"`, Post 2 was matched by the first `if` and added as `"receipt"` instead of `"bro"`, yielding `queue_items = ['receipt', 'receipt']`.
   - In `bluesky_bot/audit_crossref.py`, when multiple `"receipt"` slots were present, the instruction string hardcoded `'(1/{N})'`, telling the LLM to output the core empirical receipt ending in `'(1/2)'` for both posts, causing the model to generate duplicate text.
 - **System-Wide Fixes**:
-  - In `AletheiaLauncher.pyw`: Reordered mapping checks so that specific persona matches (`"bro"`, `"aww"`, `"spirit"`, `"aletheia"`, `"custom:"`) are evaluated FIRST before the generic `"receipt"` check. Renamed default item 2 to `"🛹 Post 2: Brothekanon Street Reality & Commentary"`.
+  - In ``AletheiaLauncher.pyw``: Reordered mapping checks so that specific persona matches (`"bro"`, `"aww"`, `"spirit"`, `"aletheia"`, `"custom:"`) are evaluated FIRST before the generic `"receipt"` check. Renamed default item 2 to `"🛹 Post 2: Brothekanon Street Reality & Commentary"`.
   - In `bluesky_bot/audit_crossref.py`:
     - Updated `queue_instructions` to dynamically inject the exact slot index `f"(ending with '({idx}/{N})')"` for every perspective.
     - Added constraint 5 in `system_prompt` strictly forbidding post text duplication and enforcing correct sequential thread indices.
@@ -781,7 +781,7 @@ No dry header. Just a punchy scene-setter, then the metadata.
   2. Moved `_slugify(u)` and `_cand_in_evals(cand, eval_set)` to the module level so they are never affected by local variables inside `main()`.
   3. Pre-computed `chunk_evaluated_urls` directly from `chunk_evals` for atomic queue deduction.
   4. Synchronized [`harvested_candidates.json`](file:///e:/Vector%20Field%20Theory/VFT%20Docs/bluesky_bot/harvested_candidates.json) against `stories/` and `stories/live/`, deducting all 43 completed items.
-  5. Rebuilt registries via `rebuild_registries_son.py`: confirmed 0 pending candidates in queue buffer.
+  5. Rebuilt registries via `r`rebuild_registries_son.py``: confirmed 0 pending candidates in queue buffer.
 - **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eliminating Python variable scoping bugs, guaranteeing automatic queue cleanup upon chunk completion.
 
 ### Intent 111: Language Harvester Hardening & Matplotlib CJK Font Fallback
@@ -891,9 +891,9 @@ No dry header. Just a punchy scene-setter, then the metadata.
      - Canceled all live correction posting scripts per user order; entered pure read-only planning mode.
 - **Morality-Will Audit**: (υ=+1.8, ψ=+1.8) -> Systemic Justice / Productive Justice. Stopping ad-hoc band-aids to build a rigorous, repeatable quarantine and audit protocol that protects the system from partisan capture.
 
-### Intent 117: Synchronize Operator Console (AletheiaLauncher.pyw) and Verify 10 Quarantined Re-Audits
+### Intent 117: Synchronize Operator Console (`AletheiaLauncher.pyw`) and Verify 10 Quarantined Re-Audits
 *Status: Completed*
-- **AletheiaLauncher Updates (`AletheiaLauncher.pyw`)**:
+- **AletheiaLauncher Updates (``AletheiaLauncher.pyw``)**:
   - Inserted `"vertex:gemini-3.8-flash"` into the default model sequence and fallback chain.
   - Set default `self.combo_thinking` from `"MEDIUM"` to `"HIGH"` so all GUI launches use the unchoked 16,384-token thinking budget.
   - Synchronized `chat_server.py` with `vertex:gemini-3.8-flash` in its zero-downtime fallback cascade and updated `MODEL_PRICING` with Gemini 3.8 rates ($0.75/$3.75).
@@ -998,4 +998,152 @@ No dry header. Just a punchy scene-setter, then the metadata.
   - **Roundup Bleed**: England & Wales successfully stripped from Beijing air pollution and non-policy sports events.
 - **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Complete restoration of moral attribution invariant across the entire knowledge base.
 
+### Intent 126: 4-Quadrant Physics Engine & Reporting Integrity Audit
+*Status: Completed*
+- **Problem**:
+  - The reporting audit model previously conflated the *atrocity being investigated* with the *outlet's own honesty*, penalizing investigative outlets like ProPublica for covering high-extraction institutional crimes while giving puff-piece outlets artificially low hypocrisy deltas.
+- **Solution & Implementation**:
+  - Built the 4-Quadrant Physics Engine in `control_panel.html` and `dist_audit_site/index.html`:
+    - 🛡️ Exposé (Bad Event as Bad Story): $\text{real}\_\upsilon < -0.15 \land \text{exposing harm} \implies$ PASS.
+    - ✨ Progress (Good Event as Good Story): $\text{real}\_\upsilon > +0.15 \land \text{covering public benefit} \implies$ PASS.
+    - 🎭 Whitewash (Bad Event as Good Story): $\text{real}\_\upsilon < -0.15 \land \text{defending/romanticizing harm} \implies$ FAIL.
+    - 🎯 Smear (Good Event as Bad Story): $\text{real}\_\upsilon > +0.15 \land \text{attacking public benefit} \implies$ FAIL.
+  - Decoupled attribution errors, purged generic shorteners (`trib.al`, `bit.ly`), resolved branded shorteners (`nyti.ms` -> `nytimes.com`, `cnn.it` -> `cnn.com`), and eliminated 50% phantom default fallbacks.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice.
 
+### Intent 127: 16-Shard Source Text Partition & Oversized Scrape Log Untracking
+*Status: Completed*
+- **Problem**:
+  - `bluesky_bot/harvested_stories_log.jsonl` grew to 114.2 MB (>100 MB), exceeding GitHub's hard file size limit and blocking git push.
+  - On `wwsutru.vercel.app`, clicking "Source Text" threw `Uncaught ReferenceError: story is not defined` and `switchTab is not defined`.
+- **Solution & Implementation**:
+  1. **Source Text Partition Engine (`build_source_shards.py`)**:
+     - Built 16 deterministic JSON shards (`sources/shard_0.json` .. `shard_f.json`) partitioning 13,832 full primary source article bodies (~76.1 MB total, ~4.7 MB per shard).
+  2. **UI & Script Fixes (`control_panel.html` & `dist_audit_site/index.html`)**:
+     - Fixed `story.id` -> `activeStory.id` to prevent `ReferenceError`.
+     - Defined `switchTab` early in `<head>` to prevent premature click errors during script loading.
+     - Implemented fast on-demand client shard fetcher with in-memory caching (`window._SOURCE_SHARDS[shardKey]`), loading only ~4.7 MB on demand when clicking a story.
+  3. **Git Hygiene & Large File Resolution**:
+     - Added `bluesky_bot/harvested_stories_log.jsonl` and backups to `.gitignore`.
+     - Un-ignored `dist_audit_site/` so Vercel builds the complete bundle.
+     - Untracked `harvested_stories_log.jsonl` from git history while preserving the physical file (114 MB) intact on disk.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eliminating load bottlenecks and preserving complete epistemic transparency for readers.
+
+
+### Intent 128: 9-Node Modal & Temporal Potential Mode Integration across Bot Ecosystem
+*Status: Completed*
+- **Problem**:
+  - Naive evaluation models were susceptible to populist opinion frames and quadrant ambiguity when evaluating nuanced rhetorical op-eds (such as conservative anti-workplace critiques or corporate self-justifications).
+  - Needed to incorporate the newly proven Modal & Temporal Potential Convergence Model (`convergence_son_potential.md` with its 9-Node Modal State Machine: central `is` singularity, Zone 1 modal horizon `can be`, `can't be`, `May be`, `Won't be`, Zone 2 manifestation horizon `will be`, `is not`, `is like`, `was like`, 4 quadrant transitions, and cross-chamber dialectic geodesics) directly into the bot execution pipeline and control panel.
+- **Solution & Implementation**:
+  1. **Convergence Tool & Instruction Specs**:
+     - Created `convergence_son_potential.md` and `bluesky_bot/instructions/thread_formatting_potential.md` specifying the 34-key JSON schema with modal topology fields (`modal_claim`, `modal_real`, `modal_vector`, `geodesic`, `central_is_barrier_crossed`).
+  2. **One-Shot Evaluator (`google_ai_studio_one_shot.py`)**:
+     - Added ``--potential`` CLI flag to `argparse`.
+     - Updated `_load_rules` to dynamically cache and minify `convergence_son_potential.md` and `thread_formatting_potential.md`.
+     - Updated `build_formatting_rules`, `build_system_instruction`, and `build_output_format` to require the 5 modal potential fields (expected length 32/33).
+     - Updated `run_one_shot_evaluations` and `transpose_flat_to_json` to parse and preserve all modal potential fields from both dictionary and flat list responses.
+     - Updated reflection triggers, promotion, and registry rebuilders to recognize `is_son_mode = args.son or args.potential`.
+  3. **Web Console UI (`control_panel.html`)**:
+     - Added Convergence Engine Mode radio selector group in `#composer-tab`:
+       - `🌌 Potential Mode (9-Node Modal Topology)` (Default, ``--potential``)
+       - `⚡ SON Mode (6 Attractors)` (`--son`)
+       - `📜 Standard Mode` (Vanilla)
+     - Persists choice to `localStorage.getItem('aletheia_convergence_mode')`.
+     - Dynamically updates the terminal CLI command (`terminalCmd`) and AI Chat Instruction prompt (`chatPrompt`) on the fly when switching modes.
+     - Enriched `renderMapDynamics` to display `[Modal: claim → reality | Geodesic: name]`.
+  4. **Desktop GUI Integration (`AletheiaLauncher.pyw`)**:
+     - Added `Enable Potential Mode (Modal)` checkbox (`self.chk_potential`, default `True`) linked to `self.val_potential`.
+     - Added mutual toggle coordination handlers `on_potential_toggle` and `on_son_toggle` between Potential and SON modes.
+     - Refactored the options grid to cleanly fit all mode checkboxes and batch sizing.
+     - Updated `run_rebuild_store` to invoke `rebuild_registries_son.py` when either Potential or SON mode is active.
+     - Updated `run_one_shot_batch` and `run_research_probe` to append `--potential` when Potential mode is checked.
+  5. **Registry Builders (`rebuild_registries_son.py` & `rebuild_registries.py`)**:
+     - Added `"modal_claim", "modal_real", "modal_vector", "geodesic", "central_is_barrier_crossed", "potential_audit"` to the whitelist of metadata keys preserved into `stories_registry.js`.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Structural modal topology systematically exposes extraction without propaganda infection.
+
+
+### Intent 129: 1:1 Matplotlib Fidelity Canvas Graph Engine Integration in Control Panel
+*Status: Completed*
+- **Problem**:
+  - In `control_panel.html`, stories in the Thread Emulator relied on static `<img>` tags pointing to `graph_png/<id>_graph.png`. When offline, on local file paths, or when images had not yet been compiled on disk, `onerror="this.style.display='none'"` caused the trajectory graph to vanish completely from Post 1.
+  - Furthermore, the interactive map tab (`#map-tab`) used a crude SVG mockup with radial gradients and lacked the mathematical Hegemony Cross, the 6 Attractor dots, the 256x256 Gaussian morality field, and alchemical overlays.
+  - Previous client-side canvas attempts in `aletheia_canvas_renderer.js` had non-square aspect ratios (785x645 px) that distorted Zones 1 & 2 into rectangles, sheared rotated cross angles, and placed an incorrect black bar through the Stated Claim marker.
+- **Solution & Implementation**:
+  1. **Strict 1:1 Matplotlib Port (`aletheia_canvas_renderer.js`)**:
+     - Enforced a strictly square coordinate plot area (`plotSize = 670`, `plotLeft = 165`, `plotTop = 100`, `plotRight = 835`, `plotBottom = 770`) matching matplotlib `figsize=(8, 8)` so 1 unit of morality equals 1 unit of will with zero coordinate distortion.
+     - Implemented the 256x256 Gaussian Morality Field (`U, PSI` meshgrid) pulling from green (+u) and red (-u) attractors plus bleached white influence from judgement coordinates.
+     - Implemented exact mathematical Hegemony Cross rendering: static upright cross at 25% opacity (`scale=1.0`) and dynamic needle cross at 50% opacity (`scale=0.55`) rotated to point along `(real_u, real_psi)`.
+     - Rendered clean hollow yellow circle for Stated Claim and 5-pointed red star for Actual Reality with dashed arc connection and open arrow `->`.
+     - Mirrored updates to `bluesky_bot/dist_audit_site/aletheia_canvas_renderer.js`.
+  2. **Control Panel Integration (`control_panel.html`)**:
+     - Added `<script src="aletheia_canvas_renderer.js"></script>` to the main script imports.
+     - Updated `renderEmulator()`: Post 1 now directly embeds live HTML5 canvases (`postCanvas_graph`, `postCanvas_verdict`, `postCanvas_analysis` / `postCanvas_five_word`), guaranteeing that every news story always renders the full trajectory graph regardless of local PNG file presence.
+     - Updated Tab 2 (`#map-tab`): Replaced the crude SVG mockup with the live interactive canvas (`interactiveHegemonyCanvas`) powered by `AletheiaCanvas.drawGraphCanvas`.
+     - Updated `renderMetaPanel`: Rendered live mini-canvases for generated assets with instant click-to-magnify support.
+     - Added `openLightboxCanvas()` for full-screen inspection of high-res canvas graphs and cards.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Real-time client-side rendering ensures absolute visual fidelity and accessibility without file system fragility.
+
+### Intent 130: Potential Mode Inoculation, Smear Decoupling, and Tabloid Corrections
+*Status: Completed*
+- **Problem**:
+  - The bot fell for an entertainment clickbait rage-bait trap from Fox News on Amanda Seyfried, treating 3 anonymous tweets on X as material fact ($Q_3$) and issuing a `FAIL` verdict to the actress rather than auditing Fox News' tabloid extraction.
+  - The Potential Mode evaluator initially produced flat `±1.0`s due to binary corner force dumps being mechanically normalized by the registry rebuilder.
+  - Auditing the past 200 live stories identified 4 high-priority tabloid/punditry traps where targets were penalized based on media churn.
+- **Solution & Implementation**:
+  1. **Primary Hemispheres & 4 Dialectic Operational Formulas**:
+     - Updated `convergence_son_potential.md` and `thread_formatting_potential.md` with the primary hemisphere division: **Inclusive Solution (+u)** (`can be` $\to$ `will be`, `May be` $\to$ `is like`) vs **Exclusive Problem (-u)** (`can't be` $\to$ `is not`, `Won't be` $\to$ `was like`).
+     - Directly embedded the 4 dialectic operational formulas defining how actors transform or distort `IS`.
+  2. **Tabloid Smear Decoupling Rule**:
+     - Enforced rule that when an article's sole evidence consists of curated social media commentary (`viewers rip`, `fans slam`), the article is executing an Exclusive Reductive Smear. The reporting outlet is the audited actor, and the target cannot be assigned negative physical reality without verified empirical institutional records ($Q_3$).
+  3. **Anti-Corner-Collapse Rule**:
+     - Mandated fractional multi-vector force distribution (`0.1` to `1.6`) across at least 3–4 attractors to eliminate flat `±1.0` collapse.
+  4. **Live Bluesky Corrections & Re-audits**:
+     - Re-audited and published live correction threads on Bluesky with embedded verdict cards for:
+       - `amanda-seyfried-elizabeth-holmes-doc`: [3myepxau4c62e](https://bsky.app/profile/judgement-bot.bsky.social/post/3myepxau4c62e) + full 15-post thread [3myepxcn2lj26](https://bsky.app/profile/judgement-bot.bsky.social/post/3myepxcn2lj26)
+       - `rob-bontas-astonishing-response`: [3myevabrxgq2a](https://bsky.app/profile/judgement-bot.bsky.social/post/3myevabrxgq2a)
+       - `view-cohosts-defend-el-sayed`: [3myevaih7o42o](https://bsky.app/profile/judgement-bot.bsky.social/post/3myevaih7o42o)
+       - `exclusive-montana-gop-congressional-candidate-aaron-flint-warns-his-opponent-is-absolute-phony`: [3myevaoplr72f](https://bsky.app/profile/judgement-bot.bsky.social/post/3myevaoplr72f)
+       - `united-ceo-scott-kirby-wealth-tax`: [3myevaxiste2u](https://bsky.app/profile/judgement-bot.bsky.social/post/3myevaxiste2u)
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Rescuing targets from algorithmic smear echo chambers and holding media monopolies accountable for click-farming.
+
+### Intent 131: Shard Pipeline Integration, Commercial PR/Ad Filtering, and Bad Op-Ed Rollback
+*Status: Completed*
+- **Problem**:
+  - The Control Panel's "Source Text" tab was blank for newly audited stories because `shard_manager.py` (which populates the 16 web shards in `sources/shard_*.json`) was never called during staging (`google_ai_studio_one_shot.py`) or live registration (`aletheia_bot.py`).
+  - Harvester was ingesting commercial PR newswires, diet/lifestyle ads, and celebrity clickbait from outlets like Daily Mail (`/lifestyle/`, `/tvshowbiz/`) and treating them as breaking news events.
+  - A Canadian opinion piece (`talking-to-some-americans-hill-times`) had been posted live as a 14-post thread attacking the columnist for "subscription paywalls" and trading in flat 1.0 coordinates.
+- **Solution & Implementation**:
+  1. **Shard Pipeline Integration**:
+     - Wired `save_story_source()` into `google_ai_studio_one_shot.py:stage_story_to_darkroom` so every newly evaluated story immediately populates its web shard.
+     - Wired `sync_story_to_shard()` into `aletheia_bot.py:save_and_sync_story` so every story promoted to live updates both local and static distribution shards.
+  2. **PR, Ad, and Lifestyle Hard Blocking**:
+     - Added commercial PR distributors (`prnewswire.com`, `businesswire.com`, `globenewswire.com`, `prweb.com`, etc.) and deal aggregators (`slickdeals.net`, `producthunt.com`, etc.) to `NON_NEWS_DOMAINS` in `harvest_candidates.py`.
+     - Added URL path segment filtering in `is_news_url()` to automatically drop `/lifestyle/`, `/tvshowbiz/`, `/femail/`, `/shopping/`, `/deals/`, `/sponsored/`, `/partner-content/`, etc.
+     - Added regex pattern matching in `is_banned()` for promotional copy (`#ad`, `#sponsored`, `promoted post`, `paid partnership`, `promo code:`, `affiliate link`, etc.).
+     - Added queue validation when loading `existing_queue` from `harvested_candidates.json` and purged 6 existing junk items.
+  3. **Live Deletion & Quarantine**:
+     - Authenticated to ATProto and deleted all 14 posts of the `talking-to-some-americans-hill-times` thread from Bluesky in reverse chronological order.
+     - Moved `factcheck_talking-to-some-americans-hill-times.json` to `stories/quarantine/` and cleaned it from `stories/live/index.json`.
+     - Rebuilt `stories_registry.js` cleanly.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Eliminating commercial spam and advertorial churn from the audit corpus while guaranteeing source text accessibility.
+
+### Intent 132: /learn Persistence: Invariant Trajectory Direction, Anti-Paywall Bias, and Card Resiliency
+*Status: Completed*
+- **Problem**:
+  - `image_card_generator.py` crashed on 13-post sub-audit threads due to hardcoded `posts[13]` access, dumping 8 valid story drafts into `stories/fail/`.
+  - Spirithekanon scripture citations with split-line format were rejected by `validate_batch.py`, quarantining 2 stories into `fail/`.
+  - The evaluator suffered an epistemic split on harmless opinion pieces, penalizing normal subscription paywalls into negative coordinates `(-0.2, -0.4)` while hallucinating "The Path of Redemption" and "via Constructive" on a downward-plunging vector.
+- **Solution & Implementation**:
+  1. **Card Generator Resiliency**:
+     - Patched `image_card_generator.py` with dynamic `extract_personas_from_posts` prefix matching and responsive multi-column layout.
+     - Patched `validate_batch.py` with multi-line scripture auto-repair.
+     - Remediated and restored all 12 valid stories from `stories/fail/` to `stories/`, generated all split verdict and analysis cards, and verified that 100% of drafts passed pre-flight validation.
+  2. **Rule & Instruction Persistence (`/learn`)**:
+     - Updated `.agents/AGENTS.md` with section: `Aletheia Evaluator & Trajectory Invariants` establishing:
+       - **Deterministic Trajectory Mapping Invariant**: Banning inverted path labels; requiring downward vectors from $+u$ to $-u$ to strictly follow `The Path of Fall` / `Fall into Destruction`, and strictly forbidding "Redemption" or "Constructive" on negative moral crossings.
+       - **Anti-Paywall & Non-Scandal Op-ed Guardrail**: Forbidding negative coordinate penalties based on publication paywalls or conversational op-ed opinions.
+       - **Dynamic Multi-Aspect Card Invariant**: Mandating dynamic prefix-based persona extraction in all graphics renderers.
+     - Updated `.agent/tools/convergence-test/convergence_son_potential.md` with the deterministic path invariant and anti-paywall guardrail.
+     - Updated `bluesky_bot/instructions/thread_formatting_potential.md` to enforce mathematical consistency on Element 9 trajectory posts.
+- **Morality-Will Audit**: (υ=+2.0, ψ=+2.0) -> Systemic Justice / Productive Justice. Hard mathematical invariants eliminate hallucinated trajectory inversions and protect the integrity of the evaluation corpus.

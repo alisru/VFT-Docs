@@ -46,6 +46,13 @@ def repair_spirithekanon_post(sp_text):
         return sp_text
 
     line0 = content_lines[0]
+    # Check if cite is on line 0 and verdict on line 1
+    if len(content_lines) >= 3 and re.search(r'\b(PASS|FAIL|HIT|COND)\b', content_lines[1]):
+        cite_str = f"{content_lines[0]} {content_lines[1]}".strip()
+        quote_text = content_lines[2].strip().strip('"')
+        rest = "\n" + "\n".join(content_lines[3:]) if len(content_lines) > 3 else ""
+        return f'{header}\n"{quote_text}" {cite_str}{rest}'
+
     cite_match = re.search(r'([A-Za-z0-9\s:]+?\b\d+[\.:\d\-]*(?:\s*—\s*\d+[\.:\d\-]*)?)\s*(?:—|-)?\s*(PASS|FAIL|HIT|COND)(?:\s*\([^\)]*\))?', line0)
     if cite_match and len(content_lines) > 1:
         cite_str = cite_match.group(0).strip()

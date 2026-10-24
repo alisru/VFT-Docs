@@ -508,7 +508,8 @@ def rebuild_registries():
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
                   "stated_forces", "actual_forces", "grounding_url", "claim_rnet", "real_rnet",
                   "claim_z", "real_z", "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
-                  "five_word", "compact", "spiritual", "spiritual_audit"]:
+                  "five_word", "compact", "spiritual", "spiritual_audit",
+                  "modal_claim", "modal_real", "modal_vector", "geodesic", "central_is_barrier_crossed", "potential_audit"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 

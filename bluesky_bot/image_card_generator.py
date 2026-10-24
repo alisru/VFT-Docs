@@ -202,6 +202,33 @@ def wrap_text(text, font, max_width, draw):
             lines.append(' '.join(current_line))
     return lines
 
+def extract_personas_from_posts(posts):
+    """Dynamically extracts persona cards by prefix with safe bounds."""
+    persona_defs = [
+        ("Alethekanon:", "ALETHEKANON", "#38BDF8"),
+        ("Awwthekanon:", "AWWTHEKANON", "#10B981"),
+        ("Brothekanon:", "BROTHEKANON", "#F59E0B"),
+        ("Spirithekanon:", "SPIRITHEKANON", "#A855F7"),
+    ]
+    extracted = []
+    seen = set()
+    for prefix, label, color in persona_defs:
+        for p in posts:
+            if isinstance(p, str) and p.strip().startswith(prefix):
+                clean = p.replace(prefix, "").strip()
+                extracted.append({"label": label, "text": clean, "color": color})
+                seen.add(prefix)
+                break
+    # Fallback to trailing posts if no prefixes matched
+    if not extracted and len(posts) >= 13:
+        offset = 11 if len(posts) >= 14 else 10
+        labels = [("ALETHEKANON", "#38BDF8"), ("AWWTHEKANON", "#10B981"), ("BROTHEKANON", "#F59E0B")]
+        for idx, (label, color) in enumerate(labels):
+            p_idx = offset + idx
+            if p_idx < len(posts):
+                extracted.append({"label": label, "text": posts[p_idx].strip(), "color": color})
+    return extracted
+
 def generate_compact_info_card(thread_config, output_path):
     """Renders posts of the thread config into a beautiful two-column dark-mode infographic card (including Claim, Reality, Verdict in single-post mode)."""
     subject = thread_config.get("subject", "Assessment Summary")
@@ -293,23 +320,7 @@ def generate_compact_info_card(thread_config, output_path):
             }
         ])
         
-        personas = [
-            {
-                "label": "ALETHEKANON",
-                "text": posts[11].replace("Alethekanon:\n", "").strip(),
-                "color": "#38BDF8" # Sky Blue
-            },
-            {
-                "label": "AWWTHEKANON",
-                "text": posts[12].replace("Awwthekanon:\n", "").strip(),
-                "color": "#10B981" # Emerald Green
-            },
-            {
-                "label": "BROTHEKANON",
-                "text": posts[13].replace("Brothekanon:\n", "").strip(),
-                "color": "#F59E0B" # Amber
-            }
-        ]
+        personas = extract_personas_from_posts(posts)
     else:
         sections = [
             {
@@ -367,23 +378,7 @@ def generate_compact_info_card(thread_config, output_path):
             }
         ])
         
-        personas = [
-            {
-                "label": "ALETHEKANON",
-                "text": posts[10].replace("Alethekanon:\n", "").strip(),
-                "color": "#38BDF8" # Sky Blue
-            },
-            {
-                "label": "AWWTHEKANON",
-                "text": posts[11].replace("Awwthekanon:\n", "").strip(),
-                "color": "#10B981" # Emerald Green
-            },
-            {
-                "label": "BROTHEKANON",
-                "text": posts[12].replace("Brothekanon:\n", "").strip(),
-                "color": "#F59E0B" # Amber
-            }
-        ]
+        personas = extract_personas_from_posts(posts)
 
 
     # Generate split cards for mobile view
@@ -621,11 +616,11 @@ def _generate_analysis_full_card(subject, subtitle, sections, personas, fonts, l
     persona_start_y = perspectives_header_y + 60
     
     per_gap = 20
-    per_col_w = (drawable_w - (per_gap * 2)) // 3
+    n_per = max(1, len(personas))
+    per_col_w = (drawable_w - (per_gap * (n_per - 1))) // n_per
     per_x_positions = [
-        (x_left, x_left + per_col_w),
-        (x_left + per_col_w + per_gap, x_left + per_col_w + per_gap + per_col_w),
-        (x_left + (per_col_w + per_gap) * 2, x_left + (per_col_w + per_gap) * 2 + per_col_w)
+        (x_left + i * (per_col_w + per_gap), x_left + i * (per_col_w + per_gap) + per_col_w)
+        for i in range(n_per)
     ]
     per_text_w = per_col_w - 40
     
@@ -638,7 +633,7 @@ def _generate_analysis_full_card(subject, subtitle, sections, personas, fonts, l
         persona_heights.append(card_h)
         persona_lines.append(wrapped_body)
         
-    max_per_h = max(persona_heights)
+    max_per_h = max(persona_heights) if persona_heights else 100
     final_height = persona_start_y + max_per_h + 50
     
     img = Image.new("RGB", (canvas_w, final_height), canvas_bg)

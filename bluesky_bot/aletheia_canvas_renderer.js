@@ -84,12 +84,14 @@
     ctx.fillRect(0, 0, 1000, 1000);
 
     // Grid plotting boundaries (matplotlib tight_layout rect=[0, 0.14, 1, 1] on 1000x1000)
-    const plotLeft = 145;
-    const plotRight = 930;
-    const plotTop = 110;
-    const plotBottom = 755;
-    const plotWidth = plotRight - plotLeft;
-    const plotHeight = plotBottom - plotTop;
+    // STRICT SQUARE ASPECT RATIO matching matplotlib fig, ax = plt.subplots(figsize=(8, 8))
+    const plotSize = 670;
+    const plotLeft = 165;
+    const plotRight = plotLeft + plotSize; // 835
+    const plotTop = 100;
+    const plotBottom = plotTop + plotSize; // 770
+    const plotWidth = plotSize;
+    const plotHeight = plotSize;
 
     // Coordinate mapping: Left is +2.5, Right is -2.5. Top is +2.5, Bottom is -2.5
     function toCanvasX(u) {
@@ -235,29 +237,42 @@
     ctx.lineWidth = 2.0;
     ctx.strokeRect(toCanvasX(2.0), toCanvasY(2.0), toCanvasX(-2.0) - toCanvasX(2.0), toCanvasY(-2.0) - toCanvasY(2.0));
 
-    // Hegemony Cross (Background static upright cross)
-    function drawHegemonyCross(scale, rotDeg, alpha, color) {
+    // Hegemony Cross (Exact mathematical port of generate_graph.py draw_hegemony_cross)
+    function drawHegemonyCross(scale, rotationDeg, alpha, color) {
+      const rad = (rotationDeg * Math.PI) / 180.0;
+      const cos_r = Math.cos(rad);
+      const sin_r = Math.sin(rad);
+
+      function rot(u, psi) {
+        return [
+          u * cos_r - psi * sin_r,
+          u * sin_r + psi * cos_r
+        ];
+      }
+
+      const [p_ge_u, p_ge_psi] = rot(-1.0 * scale, -1.0 * scale);
+      const [p_tl_u, p_tl_psi] = rot(2.0 * scale, 2.0 * scale);
+      const [p_lg_u, p_lg_psi] = rot(1.0 * scale, -1.0 * scale);
+      const [p_le_u, p_le_psi] = rot(-1.0 * scale, 1.0 * scale);
+
       ctx.save();
-      ctx.translate(axisX0, axisY0);
-      ctx.rotate((rotDeg * Math.PI) / 180);
       ctx.strokeStyle = color;
       ctx.globalAlpha = alpha;
-      ctx.lineWidth = 14 * scale * (plotWidth / 500);
+      ctx.lineCap = 'butt';
+      ctx.lineWidth = 22 * scale;
 
-      const dX_unit = (plotWidth / 5.0) * scale;
-      const dY_unit = (plotHeight / 5.0) * scale;
-
-      // Long beam: from (-1,-1) to (2,2)
+      // Long beam: Greater Evil to Top-Left
       ctx.beginPath();
-      ctx.moveTo(-(-1.0) * dX_unit, -(-1.0) * dY_unit);
-      ctx.lineTo(-(2.0) * dX_unit, -(2.0) * dY_unit);
+      ctx.moveTo(toCanvasX(p_ge_u), toCanvasY(p_ge_psi));
+      ctx.lineTo(toCanvasX(p_tl_u), toCanvasY(p_tl_psi));
       ctx.stroke();
 
-      // Crossbeam: from (1,-1) to (-1,1)
+      // Crossbeam: Lesser Good to Lesser Evil
       ctx.beginPath();
-      ctx.moveTo(-(1.0) * dX_unit, -(-1.0) * dY_unit);
-      ctx.lineTo(-(-1.0) * dX_unit, -(1.0) * dY_unit);
+      ctx.moveTo(toCanvasX(p_lg_u), toCanvasY(p_lg_psi));
+      ctx.lineTo(toCanvasX(p_le_u), toCanvasY(p_le_psi));
       ctx.stroke();
+
       ctx.restore();
     }
 
@@ -267,7 +282,7 @@
     // 2. Dynamic Needle Cross (50% opacity, rotated along Resulting Judgement)
     const mag = Math.hypot(real_u, real_psi);
     if (mag > 0.05) {
-      const targetAngle = (Math.atan2(real_psi, real_u) * 180) / Math.PI;
+      const targetAngle = (Math.atan2(real_psi, real_u) * 180.0) / Math.PI;
       const rotAngle = targetAngle - 45.0;
       drawHegemonyCross(0.55, rotAngle, 0.50, 'white');
     }
@@ -335,20 +350,15 @@
     ctx.fillText("REGRESSIVE", toCanvasX(-1.9), toCanvasY(-1.9) - 18);
     ctx.fillText("(Depression)", toCanvasX(-1.9), toCanvasY(-1.9));
 
-    // Stated Claim (Yellow Ring with black bar)
+    // Stated Claim (Hollow Yellow Ring, exactly matching matplotlib marker='o', fillstyle='none')
     const clX = toCanvasX(claim_u), clY = toCanvasY(claim_psi);
     ctx.strokeStyle = '#FFFF00';
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 2.5;
     ctx.beginPath();
     ctx.arc(clX, clY, 8, 0, Math.PI * 2);
     ctx.stroke();
-    ctx.strokeStyle = '#111111';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(clX - 8, clY); ctx.lineTo(clX + 8, clY);
-    ctx.stroke();
 
-    // Actual Reality (Red 5-pointed star)
+    // Actual Reality (Red 5-pointed star, exactly matching matplotlib marker='*', color='red')
     const reX = toCanvasX(real_u), reY = toCanvasY(real_psi);
     function drawStar(cx, cy, spikes, outerRadius, innerRadius) {
       let rot = (Math.PI / 2) * 3;
@@ -371,31 +381,38 @@
       ctx.fillStyle = '#FF0000';
       ctx.fill();
     }
-    drawStar(reX, reY, 5, 12, 5);
+    drawStar(reX, reY, 5, 14, 6);
 
-    // Dashed Arc Arrow from Claim to Reality
-    ctx.save();
-    ctx.strokeStyle = 'white';
-    ctx.lineWidth = 2.0;
-    ctx.setLineDash([6, 4]);
-    const dx = reX - clX, dy = reY - clY;
-    const ctrlX = (clX + reX) / 2 + dy * 0.2;
-    const ctrlY = (clY + reY) / 2 - dx * 0.2;
-    ctx.beginPath();
-    ctx.moveTo(clX, clY);
-    ctx.quadraticCurveTo(ctrlX, ctrlY, reX, reY);
-    ctx.stroke();
-    ctx.restore();
+    // Dashed Arc Arrow from Claim to Reality (matching matplotlib connectionstyle="arc3,rad=-0.2")
+    const dist = Math.hypot(reX - clX, reY - clY);
+    if (dist > 5) {
+      ctx.save();
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = 2.0;
+      ctx.setLineDash([6, 4]);
 
-    // Arrowhead at Reality
-    const angle = Math.atan2(reY - ctrlY, reX - ctrlX);
-    ctx.fillStyle = 'white';
-    ctx.beginPath();
-    ctx.moveTo(reX, reY);
-    ctx.lineTo(reX - 12 * Math.cos(angle - Math.PI / 6), reY - 12 * Math.sin(angle - Math.PI / 6));
-    ctx.lineTo(reX - 12 * Math.cos(angle + Math.PI / 6), reY - 12 * Math.sin(angle + Math.PI / 6));
-    ctx.closePath();
-    ctx.fill();
+      // Calculate smooth arc with curvature rad=-0.2 (matching matplotlib)
+      const nx = -(reY - clY) / dist;
+      const ny = (reX - clX) / dist;
+      const ctrlX = (clX + reX) / 2.0 + nx * (-0.2 * dist);
+      const ctrlY = (clY + reY) / 2.0 + ny * (-0.2 * dist);
+
+      ctx.beginPath();
+      ctx.moveTo(clX, clY);
+      ctx.quadraticCurveTo(ctrlX, ctrlY, reX, reY);
+      ctx.stroke();
+      ctx.restore();
+
+      // Open Arrowhead at Reality matching matplotlib arrowstyle="->"
+      const endAngle = Math.atan2(reY - ctrlY, reX - ctrlX);
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = 2.0;
+      ctx.beginPath();
+      ctx.moveTo(reX - 12 * Math.cos(endAngle - Math.PI / 6), reY - 12 * Math.sin(endAngle - Math.PI / 6));
+      ctx.lineTo(reX, reY);
+      ctx.lineTo(reX - 12 * Math.cos(endAngle + Math.PI / 6), reY - 12 * Math.sin(endAngle + Math.PI / 6));
+      ctx.stroke();
+    }
 
     // Title Block at top (3 lines)
     ctx.textAlign = 'center';
@@ -463,33 +480,29 @@
       }
     }
 
-    // Legend Box (Bottom Left)
-    const legX = 20, legY = plotBottom + 10, legW = 120, legH = 46;
+    // Legend Box (Bottom Left, flush against coordinate label boundary)
+    const legX = 35, legY = plotBottom + 12, legW = 120, legH = 46;
     ctx.fillStyle = '#111111';
     ctx.strokeStyle = 'white';
     ctx.lineWidth = 1;
     ctx.fillRect(legX, legY, legW, legH);
     ctx.strokeRect(legX, legY, legW, legH);
 
-    // Stated Claim Icon in Legend
+    // Stated Claim Icon in Legend (Hollow Yellow Circle)
     ctx.strokeStyle = '#FFFF00';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.arc(legX + 16, legY + 14, 6, 0, Math.PI * 2);
     ctx.stroke();
-    ctx.strokeStyle = '#111111';
-    ctx.beginPath();
-    ctx.moveTo(legX + 10, legY + 14); ctx.lineTo(legX + 22, legY + 14);
-    ctx.stroke();
 
     ctx.textAlign = 'left';
     ctx.fillStyle = 'white';
     ctx.font = '10px "DejaVu Sans", Arial, sans-serif';
-    ctx.fillText("Stated Claim", legX + 30, legY + 18);
+    ctx.fillText("Stated Claim", legX + 28, legY + 18);
 
-    // Actual Reality Icon in Legend
+    // Actual Reality Icon in Legend (Red Star)
     drawStar(legX + 16, legY + 32, 5, 8, 3.5);
-    ctx.fillText("Actual Reality", legX + 30, legY + 36);
+    ctx.fillText("Actual Reality", legX + 28, legY + 36);
 
     // Description Block at bottom
     ctx.textAlign = 'center';

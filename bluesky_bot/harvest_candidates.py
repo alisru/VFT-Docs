@@ -306,6 +306,13 @@ NON_NEWS_DOMAINS = {
     'arxiv.org', 'biorxiv.org', 'medrxiv.org', 'ssrn.com',
     'researchgate.net', 'academia.edu', 'semanticscholar.org',
     'doi.org', 'osf.io', 'philpapers.org', 'chemrxiv.org', 'techrxiv.org',
+    # PR Newswires & Commercial Press Release Distributors
+    'prnewswire.com', 'businesswire.com', 'globenewswire.com', 'prweb.com',
+    'accesswire.com', 'marketwired.com', 'openpr.com', 'newswire.com',
+    'einpresswire.com', 'prlog.org', 'issuewire.com', '24-7pressrelease.com',
+    # Deals, coupons, affiliate & shopping aggregators
+    'slickdeals.net', 'dealnews.com', 'coupons.com', 'retailmenot.com',
+    'producthunt.com', 'kickstarter.com', 'indiegogo.com',
 }
 
 # Domains that consistently fail raw scraping due to paywalls, cloudflare blocks, etc.
@@ -426,6 +433,12 @@ def load_banned_topics():
             print(f"Warning: Failed to load banned_topics.json: {e}")
     return default_categories
 
+AD_OR_LIFESTYLE_PATH_SEGMENTS = {
+    'lifestyle', 'tvshowbiz', 'femail', 'shopping', 'deals', 'coupons',
+    'promotions', 'sponsored', 'advertisement', 'native-content',
+    'partner-content', 'affiliate', 'horoscopes', 'puzzles', 'recipes'
+}
+
 def is_news_url(url):
     if not url:
         return False
@@ -433,7 +446,9 @@ def is_news_url(url):
     if not u.startswith(('http://', 'https://')):
         return False
     try:
-        host = urllib.parse.urlparse(u).hostname or ""
+        parsed = urllib.parse.urlparse(u)
+        host = parsed.hostname or ""
+        path = parsed.path.lower()
     except Exception:
         return False
     if not host:
@@ -442,9 +457,29 @@ def is_news_url(url):
         return False
     if any(host == bad or host.endswith('.' + bad) for bad in DYNAMIC_BANNED_DOMAINS):
         return False
+    # Filter out lifestyle, celebrity showbiz, deals, shopping, and sponsored sections
+    path_parts = [p.strip() for p in path.split('/') if p.strip()]
+    if any(part in AD_OR_LIFESTYLE_PATH_SEGMENTS for part in path_parts):
+        return False
     return True
 
+AD_TEXT_PATTERNS = [
+    r'\b#ad\b', r'\b#sponsored\b', r'\b#partner\b', r'\b#affiliate\b',
+    r'\bsponsored post\b', r'\bpromoted post\b', r'\bpaid partnership\b',
+    r'\bpaid post\b', r'\bpartner content\b', r'\baffiliate link\b',
+    r'\buse code[:\s]', r'\bpromo code[:\s]', r'\bdiscount code[:\s]',
+    r'\border now\b', r'\bbuy now\b', r'\bexclusive discount\b'
+]
+
+def is_ad_text(text):
+    if not text:
+        return False
+    t_lower = text.lower()
+    return any(re.search(pat, t_lower) for pat in AD_TEXT_PATTERNS)
+
 def is_banned(text, url, banned_keywords):
+    if is_ad_text(text):
+        return True
     if not banned_keywords:
         return False
     text_lower = text.lower()
@@ -623,6 +658,8 @@ def run_harvest():
                         c_urls = {normalize_url(c.get("url", "")), normalize_url(c.get("target_url", ""))}
                         c_urls.discard("")
                         if any(u in seen_evaluated_urls for u in c_urls):
+                            continue
+                        if not is_news_url(c.get('url', '')) or is_banned(c.get('text', ''), c.get('url', ''), []):
                             continue
                         existing_queue.append(c)
                         for u in c_urls:

@@ -27,9 +27,21 @@ def embed_texts(texts):
     return vecs / np.clip(norms, 1e-9, None)
 
 
-def chunk_messages(msgs):
-    """msgs: list of (role, text). Returns list of chunk strings (<= ~CHUNK_CHARS)."""
+QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
+
+
+def embed_query(query: str):
+    """Embed search query with asymmetric retrieval instruction for BGE model family."""
+    q = (query or "").strip()
+    if not q:
+        return np.zeros((384,), dtype=np.float32)
+    return embed_texts([f"{QUERY_PREFIX}{q}"])[0]
+
+
+def chunk_messages(msgs, chat_title: str = ""):
+    """msgs: list of (role, text). Returns list of chunk strings (<= ~CHUNK_CHARS) with context framing."""
     chunks, cur = [], ""
+    title_prefix = f"[{chat_title}]\n" if chat_title and len(chat_title) < 120 else ""
     for role, text in msgs:
         block = f"[{role}] {text}"
         paras = block.split("\n\n")
@@ -43,7 +55,7 @@ def chunk_messages(msgs):
             if len(cur) + len(p) + 2 > CHUNK_CHARS and cur:
                 chunks.append(cur)
                 cur = ""
-            cur = (cur + "\n\n" + p) if cur else p
+            cur = (cur + "\n\n" + p) if cur else (title_prefix + p if not chunks else p)
     if cur:
         chunks.append(cur)
     return chunks
@@ -51,7 +63,7 @@ def chunk_messages(msgs):
 
 def embed_pending(con, progress=None):
     """Chunk + embed every chat that has no embedding yet. Returns number of chats done."""
-    rows = con.execute("SELECT id FROM chats WHERE emb IS NULL").fetchall()
+    rows = con.execute("SELECT id, title FROM chats WHERE emb IS NULL").fetchall()
     if progress is not None:
         progress.update(done=0, total=len(rows))
     embedded_count = 0
@@ -59,10 +71,11 @@ def embed_pending(con, progress=None):
         if progress is not None:
             progress["done"] = n
         cid = r["id"]
+        title = r["title"] or ""
         msgs = con.execute(
             "SELECT role, text FROM messages WHERE chat_id=? ORDER BY idx", (cid,)
         ).fetchall()
-        chunks = chunk_messages([(m["role"], m["text"]) for m in msgs])
+        chunks = chunk_messages([(m["role"], m["text"]) for m in msgs], chat_title=title)
         if not chunks:
             # Mark empty chats with b"" so they are not continually re-selected
             con.execute("UPDATE chats SET emb=? WHERE id=?", (b"", cid))
@@ -79,8 +92,9 @@ def embed_pending(con, progress=None):
         con.execute("UPDATE chats SET emb=? WHERE id=?", (mean.astype(np.float32).tobytes(), cid))
         con.commit()
         embedded_count += 1
-        print(f"[embed] {cid[:8]} {len(chunks)} chunks")
     if embedded_count > 0:
+        con.execute("INSERT INTO chunks_fts(chunks_fts) VALUES('rebuild')")
+        con.commit()
         gc.collect()
     return embedded_count
 

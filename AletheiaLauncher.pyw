@@ -1038,33 +1038,37 @@ class AletheiaLauncherApp:
         tk.Label(grid_frame, text="Categories: general, china, asia, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=4, column=1, columnspan=6, sticky="w")
         tk.Label(grid_frame, text="Suggested Topics: Trump, AI, Climate, Markets, AUKUS, Australia, Boeing, Space", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=5, column=1, columnspan=6, sticky="w")
 
+        self.val_potential = tk.BooleanVar(value=True)
+        self.chk_potential = ttk.Checkbutton(grid_frame, text="Enable Potential Mode (Modal)", variable=self.val_potential, command=self.on_potential_toggle)
+        self.chk_potential.grid(row=6, column=1, columnspan=2, sticky="w", pady=3)
+
         self.val_son = tk.BooleanVar(value=False)
-        self.chk_son = ttk.Checkbutton(grid_frame, text="Enable SON 6-Attractor Mode", variable=self.val_son)
-        self.chk_son.grid(row=6, column=1, columnspan=2, sticky="w", pady=3)
+        self.chk_son = ttk.Checkbutton(grid_frame, text="Enable SON 6-Attractor Mode", variable=self.val_son, command=self.on_son_toggle)
+        self.chk_son.grid(row=6, column=3, columnspan=2, sticky="w", pady=3)
 
         self.val_search = tk.BooleanVar(value=False)
         self.chk_search = ttk.Checkbutton(grid_frame, text="Enable Google Search Grounding", variable=self.val_search)
-        self.chk_search.grid(row=6, column=3, columnspan=2, sticky="w", pady=3)
+        self.chk_search.grid(row=6, column=5, columnspan=2, sticky="w", pady=3)
 
         self.val_spiritual = tk.BooleanVar(value=False)
         self.chk_spiritual = ttk.Checkbutton(grid_frame, text="Enable Spiritual Mode", variable=self.val_spiritual)
-        self.chk_spiritual.grid(row=6, column=5, columnspan=2, sticky="w", pady=3)
+        self.chk_spiritual.grid(row=7, column=1, columnspan=2, sticky="w", pady=3)
 
         self.val_compact = tk.BooleanVar(value=False)
         self.chk_compact = ttk.Checkbutton(grid_frame, text="Enable Compact Mode", variable=self.val_compact)
-        self.chk_compact.grid(row=7, column=1, columnspan=2, sticky="w", pady=3)
-
-        self.val_five_word = tk.BooleanVar(value=False)
-        self.chk_five_word = ttk.Checkbutton(grid_frame, text="Enable 5-Word Mode", variable=self.val_five_word)
-        self.chk_five_word.grid(row=7, column=3, columnspan=2, sticky="w", pady=3)
+        self.chk_compact.grid(row=7, column=3, columnspan=2, sticky="w", pady=3)
 
         self.val_multi = tk.BooleanVar(value=False)
         self.chk_multi = ttk.Checkbutton(grid_frame, text="Enable Multi-Aspect Audit", variable=self.val_multi)
         self.chk_multi.grid(row=7, column=5, columnspan=2, sticky="w", pady=3)
 
-        tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=8, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.val_five_word = tk.BooleanVar(value=False)
+        self.chk_five_word = ttk.Checkbutton(grid_frame, text="Enable 5-Word Mode", variable=self.val_five_word)
+        self.chk_five_word.grid(row=8, column=1, columnspan=2, sticky="w", pady=3)
+
+        tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=9, column=0, sticky="w", pady=3, padx=(0, 5))
         batch_size_frame = tk.Frame(grid_frame, bg=CARD_BG)
-        batch_size_frame.grid(row=8, column=1, columnspan=5, sticky="w", pady=3)
+        batch_size_frame.grid(row=9, column=1, columnspan=5, sticky="w", pady=3)
         self.batch_size_var = tk.StringVar(value="1")
         r1 = ttk.Radiobutton(batch_size_frame, text="1 at a time", variable=self.batch_size_var, value="1", style="TRadiobutton")
         r1.pack(side=tk.LEFT, padx=(0, 15))
@@ -1638,9 +1642,17 @@ class AletheiaLauncherApp:
             self.log_post("\n*** Terminating poster process... ***\n")
             self.post_process.terminate()
 
+    def on_potential_toggle(self):
+        if self.val_potential.get():
+            self.val_son.set(False)
+
+    def on_son_toggle(self):
+        if self.val_son.get():
+            self.val_potential.set(False)
+
     def run_rebuild_store(self):
         python_bin = self.get_python_bin()
-        script = "bluesky_bot/rebuild_registries_son.py" if self.val_son.get() else "bluesky_bot/rebuild_registries.py"
+        script = "bluesky_bot/rebuild_registries_son.py" if (self.val_son.get() or self.val_potential.get()) else "bluesky_bot/rebuild_registries.py"
         self.run_eval_subprocess_async([python_bin, "-u", script])
 
     def update_sequence_from_listbox(self):
@@ -1694,7 +1706,9 @@ class AletheiaLauncherApp:
         if thinking:
             args.extend(["--thinking-level", thinking])
 
-        if self.val_son.get():
+        if self.val_potential.get():
+            args.append("--potential")
+        elif self.val_son.get():
             args.append("--son")
 
         if self.val_search.get():
@@ -1750,7 +1764,9 @@ class AletheiaLauncherApp:
         if thinking:
             args.extend(["--thinking-level", thinking])
 
-        if self.val_son.get():
+        if self.val_potential.get():
+            args.append("--potential")
+        elif self.val_son.get():
             args.append("--son")
 
         if self.val_search.get():

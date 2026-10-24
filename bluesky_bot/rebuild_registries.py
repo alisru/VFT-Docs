@@ -50,7 +50,8 @@ def build_registry_entry(slug, cfg, authoritative_file, is_live=False):
               "grounding_url", "claim_rnet", "real_rnet", "claim_z", "real_z",
               "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
               "five_word", "compact", "cluster_sources", "is_multi_source", "cross_source_dossier",
-              "aspects", "multiAspect", "spiritual", "spiritual_traditions", "stated_forces", "actual_forces"]:
+              "aspects", "multiAspect", "spiritual", "spiritual_traditions", "stated_forces", "actual_forces",
+              "modal_claim", "modal_real", "modal_vector", "geodesic", "central_is_barrier_crossed", "potential_audit"]:
         if k in cfg:
             registry_story[k] = cfg[k]
 
@@ -446,7 +447,8 @@ def rebuild_registries():
                   "macro_event", "macro_claim_u", "macro_claim_psi", "macro_real_u", "macro_real_psi",
                   "grounding_url", "claim_rnet", "real_rnet", "claim_z", "real_z",
                   "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
-                  "five_word", "compact"]:
+                  "five_word", "compact",
+                  "modal_claim", "modal_real", "modal_vector", "geodesic", "central_is_barrier_crossed", "potential_audit"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 

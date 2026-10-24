@@ -1,19 +1,28 @@
 {
   "manifest_version": 3,
   "name": "Chat Context Sync",
-  "version": "1.2.0",
-  "description": "Automatically syncs Gemini web conversations and provides an offline context drawer.",
+  "version": "1.5.0",
+  "description": "Automatically syncs Gemini, Claude, and ChatGPT conversations and provides an offline context drawer.",
   "permissions": ["storage"],
   "host_permissions": [
     "https://gemini.google.com/*",
-    "http://127.0.0.1:8765/*"
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*",
+    "http://127.0.0.1/*",
+    "http://localhost/*"
   ],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://gemini.google.com/*"],
+      "matches": [
+        "https://gemini.google.com/*",
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*"
+      ],
       "js": ["content.js"],
       "run_at": "document_idle"
     }

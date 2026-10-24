@@ -3,13 +3,21 @@
   let lastSentHash = '';
   let debounceTimer = null;
   let statusBadge = null;
+  let isChatCensored = false;
 
   // --- Context Drawer & Prompt Injection System ---
   let drawerEl = null;
-  let currentTab = 'related'; // 'related' | 'search' | 'canvases'
+  let currentTab = 'related'; // 'related' | 'search' | 'canvases' | 'topics'
   let searchDebounceTimer = null;
   let currentResults = [];
-  let currentQuery = '';
+  let drawerTopicSort = localStorage.getItem('chat_ctx_drawer_topic_sort') || 'recent';
+  let drawerSearchSort = localStorage.getItem('chat_ctx_drawer_search_sort') || 'relevance';
+  let drawerSearchMode = localStorage.getItem('chat_ctx_drawer_search_mode') || 'hybrid';
+  let drawerSearchGroup = localStorage.getItem('chat_ctx_drawer_search_group') || 'chat';
+  let drawerSearchTopicId = null;
+  let drawerSearchTopicName = '';
+  let drawerSearchMustContain = '';
+  let drawerTreeData = null;
 
   function injectDrawerStyles() {
     if (document.getElementById('chat-context-drawer-styles')) return;
@@ -136,6 +144,83 @@
         border-color: #38bdf8;
         color: #7dd3fc;
       }
+      .ctx-sort-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 16px;
+        background: #141822;
+        border-bottom: 1px solid #1e2432;
+        font-size: 11px;
+      }
+      .ctx-sort-btn {
+        background: none;
+        border: none;
+        color: #64748b;
+        padding: 2px 7px;
+        border-radius: 4px;
+        font-size: 11px;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .ctx-sort-btn:hover {
+        color: #e2e8f0;
+        background: #1e2535;
+      }
+      .ctx-sort-btn.active {
+        background: #0284c7;
+        color: #fff;
+        font-weight: 600;
+      }
+      .ctx-topic-group {
+        border: 1px solid #232a38;
+        border-radius: 8px;
+        background: #161a23;
+        overflow: hidden;
+        margin-bottom: 8px;
+      }
+      .ctx-topic-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 12px;
+        background: #191f2b;
+        cursor: pointer;
+        gap: 6px;
+      }
+      .ctx-topic-header:hover {
+        background: #1f2736;
+      }
+      .ctx-topic-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: #38bdf8;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: 1;
+      }
+      .ctx-topic-body {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 6px 8px;
+        background: #11141a;
+      }
+      .ctx-topic-chat-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        background: #151820;
+        cursor: pointer;
+        gap: 6px;
+      }
+      .ctx-topic-chat-row:hover {
+        background: #1e2330;
+      }
       .ctx-bulk-bar {
         display: flex;
         gap: 8px;
@@ -235,6 +320,36 @@
         background: #3b1d54;
         color: #d8b4fe;
         border: 1px solid #7e22ce;
+      }
+      .ctx-badge-date {
+        background: #1e293b;
+        color: #94a3b8;
+        border: 1px solid #334155;
+      }
+      .ctx-badge-topic {
+        background: #1e1b4b;
+        color: #a5b4fc;
+        border: 1px solid #3730a3;
+        cursor: pointer;
+        max-width: 140px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ctx-badge-topic:hover {
+        background: #312e81;
+        color: #c7d2fe;
+      }
+      .ctx-badge-source {
+        background: #1f2937;
+        color: #9ca3af;
+        border: 1px solid #374151;
+        text-transform: uppercase;
+        font-size: 9px;
+      }
+      .ctx-badge-chunks {
+        background: #142938;
+        color: #7dd3fc;
+        border: 1px solid #0284c7;
       }
       .ctx-card-meta {
         font-size: 11px;
@@ -386,7 +501,10 @@
           <span>Chat Context & Knowledge</span>
           <span style="font-size:10px;font-weight:normal;color:#64748b;background:#1e2430;padding:2px 6px;border-radius:4px;">Alt+C</span>
         </div>
-        <button class="ctx-drawer-close" id="ctx-drawer-close-btn" title="Close Drawer (Esc)">✕</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <a href="http://127.0.0.1:8767" target="_blank" title="Open Full Dashboard & Export Suite" style="color:#94a3b8;font-size:11px;text-decoration:none;padding:3px 8px;border-radius:4px;border:1px solid #283040;transition:all 0.15s;" onmouseover="this.style.color='#38bdf8';this.style.borderColor='#38bdf8'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='#283040'">Dashboard ↗</a>
+          <button class="ctx-drawer-close" id="ctx-drawer-close-btn" title="Close Drawer (Esc)">✕</button>
+        </div>
       </div>
 
       <div class="ctx-search-box">
@@ -400,6 +518,43 @@
         <button class="ctx-tab-btn active" id="ctx-tab-related" data-tab="related">📌 Related</button>
         <button class="ctx-tab-btn" id="ctx-tab-search" data-tab="search">🔎 Search</button>
         <button class="ctx-tab-btn" id="ctx-tab-canvases" data-tab="canvases">🎨 Canvases</button>
+        <button class="ctx-tab-btn" id="ctx-tab-topics" data-tab="topics">🗂️ Topics</button>
+      </div>
+
+      <div class="ctx-sort-bar" id="ctx-topics-sort-bar" style="display:none;">
+        <span style="font-size:11px;color:#64748b;">Sort topics:</span>
+        <div style="display:flex;gap:4px;">
+          <button class="ctx-sort-btn active" data-sort="recent" title="Topics with newest caught chats first">Recent</button>
+          <button class="ctx-sort-btn" data-sort="name" title="Alphabetical A-Z">Name</button>
+          <button class="ctx-sort-btn" data-sort="count" title="Topics with most chats first">Count</button>
+        </div>
+      </div>
+
+      <div class="ctx-sort-bar" id="ctx-search-sort-bar" style="display:none;flex-direction:column;gap:6px;padding:8px 16px;background:#141822;border-bottom:1px solid #1e2432;">
+        <div style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+          <div style="display:flex;align-items:center;gap:4px;">
+            <span style="font-size:10px;color:#64748b;">Mode:</span>
+            <button class="ctx-sort-btn active" data-search-mode="hybrid" title="Semantic + Keyword Hybrid">⚡ Hybrid</button>
+            <button class="ctx-sort-btn" data-search-mode="semantic" title="Pure Dense Vector">🎯 Semantic</button>
+            <button class="ctx-sort-btn" data-search-mode="exact" title="Exact Terms FTS5">🔍 Exact</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <span style="font-size:10px;color:#64748b;">View:</span>
+            <button class="ctx-sort-btn active" data-search-group="chat" title="1 card per conversation">💬 Chat</button>
+            <button class="ctx-sort-btn" data-search-group="chunk" title="All chunk passages">📄 Chunks</button>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+          <div style="display:flex;align-items:center;gap:4px;">
+            <span style="font-size:10px;color:#64748b;">Sort:</span>
+            <button class="ctx-sort-btn active" data-search-sort="relevance" title="Highest match score first">🎯 Relevance</button>
+            <button class="ctx-sort-btn" data-search-sort="recent" title="Newest caught first">🕒 Recent</button>
+          </div>
+          <div id="ctx-search-topic-filter-tag" style="display:none;align-items:center;gap:4px;font-size:10px;background:#1e1b4b;color:#a5b4fc;border:1px solid #3730a3;padding:1px 6px;border-radius:4px;cursor:pointer;" title="Click to clear topic filter">
+            <span id="ctx-search-topic-filter-name">Topic</span>
+            <span>✕</span>
+          </div>
+        </div>
       </div>
 
       <div class="ctx-bulk-bar" id="ctx-bulk-bar" style="display:none;">
@@ -453,9 +608,78 @@
       btn.onclick = () => switchTab(btn.dataset.tab);
     });
 
+    // Topic sort buttons
+    drawerEl.querySelectorAll('#ctx-topics-sort-bar .ctx-sort-btn').forEach(btn => {
+      btn.onclick = () => {
+        drawerTopicSort = btn.dataset.sort;
+        localStorage.setItem('chat_ctx_drawer_topic_sort', drawerTopicSort);
+        drawerEl.querySelectorAll('#ctx-topics-sort-bar .ctx-sort-btn').forEach(b => {
+          b.classList.toggle('active', b.dataset.sort === drawerTopicSort);
+        });
+        if (drawerTreeData) {
+          renderTopicsTree(drawerTreeData);
+        }
+      };
+    });
+
+    // Search control buttons (Mode, Group, Sort)
+    drawerEl.querySelectorAll('#ctx-search-sort-bar .ctx-sort-btn').forEach(btn => {
+      btn.onclick = () => {
+        if (btn.dataset.searchMode) {
+          drawerSearchMode = btn.dataset.searchMode;
+          localStorage.setItem('chat_ctx_drawer_search_mode', drawerSearchMode);
+        } else if (btn.dataset.searchGroup) {
+          drawerSearchGroup = btn.dataset.searchGroup;
+          localStorage.setItem('chat_ctx_drawer_search_group', drawerSearchGroup);
+        } else if (btn.dataset.searchSort) {
+          drawerSearchSort = btn.dataset.searchSort;
+          localStorage.setItem('chat_ctx_drawer_search_sort', drawerSearchSort);
+        }
+        updateSearchControlUI();
+        const q = document.getElementById('ctx-search-input')?.value.trim();
+        if (q) executeSearch(q);
+      };
+    });
+
+    // Topic filter tag clear button
+    const topicTagEl = document.getElementById('ctx-search-topic-filter-tag');
+    if (topicTagEl) {
+      topicTagEl.onclick = () => {
+        drawerSearchTopicId = null;
+        drawerSearchTopicName = '';
+        topicTagEl.style.display = 'none';
+        const q = document.getElementById('ctx-search-input')?.value.trim();
+        if (q) executeSearch(q);
+      };
+    }
+
     // Bulk buttons
     document.getElementById('ctx-bulk-insert-btn').onclick = (e) => executeBulkPack('insert', e.currentTarget);
     document.getElementById('ctx-bulk-copy-btn').onclick = (e) => executeBulkPack('copy', e.currentTarget);
+  }
+
+  function updateSearchControlUI() {
+    const bar = document.getElementById('ctx-search-sort-bar');
+    if (!bar) return;
+    bar.querySelectorAll('[data-search-mode]').forEach(b => {
+      b.classList.toggle('active', b.dataset.searchMode === drawerSearchMode);
+    });
+    bar.querySelectorAll('[data-search-group]').forEach(b => {
+      b.classList.toggle('active', b.dataset.searchGroup === drawerSearchGroup);
+    });
+    bar.querySelectorAll('[data-search-sort]').forEach(b => {
+      b.classList.toggle('active', b.dataset.searchSort === drawerSearchSort);
+    });
+    const topicTagEl = document.getElementById('ctx-search-topic-filter-tag');
+    const topicNameEl = document.getElementById('ctx-search-topic-filter-name');
+    if (topicTagEl && topicNameEl) {
+      if (drawerSearchTopicId && drawerSearchTopicName) {
+        topicTagEl.style.display = 'flex';
+        topicNameEl.textContent = `🏷️ ${drawerSearchTopicName.slice(0, 20)}`;
+      } else {
+        topicTagEl.style.display = 'none';
+      }
+    }
   }
 
   function toggleDrawer(forceOpen) {
@@ -480,6 +704,13 @@
     drawerEl.querySelectorAll('.ctx-tab-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.tab === tab);
     });
+    const topicSortBar = document.getElementById('ctx-topics-sort-bar');
+    if (topicSortBar) topicSortBar.style.display = (tab === 'topics') ? 'flex' : 'none';
+    const searchSortBar = document.getElementById('ctx-search-sort-bar');
+    if (searchSortBar) {
+      searchSortBar.style.display = (tab === 'search') ? 'flex' : 'none';
+      updateSearchControlUI();
+    }
     if (triggerLoad) {
       loadActiveTab();
     }
@@ -515,6 +746,8 @@
       else showEmptyState('Type a query to search offline database');
     } else if (currentTab === 'canvases') {
       loadCanvases();
+    } else if (currentTab === 'topics') {
+      loadTopics();
     }
   }
 
@@ -543,7 +776,16 @@
     currentQuery = query;
     showLoading(`Searching for "${query}"...`);
 
-    chrome.runtime.sendMessage({ action: 'SEARCH_CHATS', query, k: 15 }, (response) => {
+    chrome.runtime.sendMessage({
+      action: 'SEARCH_CHATS',
+      query,
+      sort: drawerSearchSort,
+      mode: drawerSearchMode,
+      group_by: drawerSearchGroup,
+      topic_id: drawerSearchTopicId,
+      must_contain: drawerSearchMustContain,
+      k: 30
+    }, (response) => {
       if (chrome.runtime.lastError || !response || !response.success) {
         showEmptyState('Search error (server offline)');
         return;
@@ -562,6 +804,180 @@
       }
       currentResults = response.data || [];
       renderCards(currentResults, 'canvases');
+    });
+  }
+
+  function loadTopics() {
+    const sortBar = document.getElementById('ctx-topics-sort-bar');
+    if (sortBar) {
+      sortBar.style.display = 'flex';
+      sortBar.querySelectorAll('.ctx-sort-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.sort === drawerTopicSort);
+      });
+    }
+    const bulkBar = document.getElementById('ctx-bulk-bar');
+    if (bulkBar) bulkBar.style.display = 'none';
+
+    showLoading('Loading semantic topics...');
+    chrome.runtime.sendMessage({ action: 'GET_TOPICS_TREE' }, (response) => {
+      if (chrome.runtime.lastError || !response || !response.success) {
+        showEmptyState('Unable to load topics (server offline)');
+        return;
+      }
+      drawerTreeData = response.data;
+      renderTopicsTree(drawerTreeData);
+    });
+  }
+
+  function renderTopicsTree(tree) {
+    const content = document.getElementById('ctx-drawer-content');
+    if (!content) return;
+    if (!tree || !tree.topics || tree.topics.length === 0) {
+      showEmptyState('No semantic topics clustered yet');
+      return;
+    }
+
+    content.innerHTML = '';
+
+    let sortedTopics = [...tree.topics];
+    if (drawerTopicSort === 'recent') {
+      sortedTopics.sort((a, b) => (b.updated || '').localeCompare(a.updated || ''));
+    } else if (drawerTopicSort === 'name') {
+      sortedTopics.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    } else if (drawerTopicSort === 'count') {
+      sortedTopics.sort((a, b) => (b.count || b.chats.length) - (a.count || a.chats.length));
+    }
+
+    const renderGroup = (t, isUnsorted = false) => {
+      const group = document.createElement('div');
+      group.className = 'ctx-topic-group';
+
+      const header = document.createElement('div');
+      header.className = 'ctx-topic-header';
+
+      const titleWrap = document.createElement('div');
+      titleWrap.className = 'ctx-topic-title';
+      titleWrap.textContent = `${t.name} (${t.chats.length})`;
+      titleWrap.title = t.name;
+
+      const metaWrap = document.createElement('div');
+      metaWrap.style.cssText = 'display:flex;align-items:center;gap:6px;flex-shrink:0;';
+
+      if (t.updated) {
+        const dateEl = document.createElement('span');
+        dateEl.style.cssText = 'font-size:10px;color:#64748b;font-weight:normal;';
+        dateEl.textContent = t.updated.slice(5, 10);
+        dateEl.title = `Last caught: ${t.updated}`;
+        metaWrap.appendChild(dateEl);
+      }
+
+      if (!isUnsorted) {
+        const packBtn = document.createElement('button');
+        packBtn.className = 'ctx-card-btn';
+        packBtn.style.cssText = 'padding:2px 6px;font-size:10px;';
+        packBtn.textContent = '📥 Pack';
+        packBtn.title = 'Insert entire topic context pack into prompt';
+        packBtn.onclick = (e) => {
+          e.stopPropagation();
+          executeTopicPack(t.id, packBtn);
+        };
+        metaWrap.appendChild(packBtn);
+      }
+
+      header.appendChild(titleWrap);
+      header.appendChild(metaWrap);
+
+      const body = document.createElement('div');
+      body.className = 'ctx-topic-body';
+      body.style.display = 'none';
+
+      t.chats.forEach(c => {
+        const row = document.createElement('div');
+        row.className = 'ctx-topic-chat-row';
+
+        const rowTitle = document.createElement('span');
+        rowTitle.style.cssText = 'overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:#f1f5f9;';
+        rowTitle.textContent = (c.n_canvases > 0 ? '🎨 ' : '') + (c.title || c.id);
+        rowTitle.title = c.title || c.id;
+
+        const rowDate = document.createElement('span');
+        rowDate.style.cssText = 'font-size:10px;color:#64748b;margin:0 4px;flex-shrink:0;';
+        rowDate.textContent = (c.updated || '').slice(5, 10);
+
+        const rowBtn = document.createElement('button');
+        rowBtn.className = 'ctx-card-btn insert';
+        rowBtn.style.cssText = 'padding:1px 5px;font-size:10px;';
+        rowBtn.textContent = 'Insert';
+        rowBtn.onclick = (e) => {
+          e.stopPropagation();
+          insertChatIntoPrompt(c);
+          rowBtn.textContent = '✓';
+          setTimeout(() => { rowBtn.textContent = 'Insert'; }, 1500);
+        };
+
+        row.appendChild(rowTitle);
+        row.appendChild(rowDate);
+        row.appendChild(rowBtn);
+        body.appendChild(row);
+      });
+
+      header.onclick = () => {
+        const isHidden = body.style.display === 'none';
+        body.style.display = isHidden ? 'flex' : 'none';
+      };
+
+      group.appendChild(header);
+      group.appendChild(body);
+      return group;
+    };
+
+    const unsortedObj = tree.unsorted && tree.unsorted.length ? {
+      id: null,
+      name: 'Unsorted',
+      chats: tree.unsorted,
+      count: tree.unsorted.length,
+      updated: tree.unsorted_updated || tree.unsorted[0]?.updated || ''
+    } : null;
+
+    if (drawerTopicSort === 'recent' && unsortedObj) {
+      let placed = false;
+      sortedTopics.forEach(t => {
+        if (!placed && (unsortedObj.updated || '') >= (t.updated || '')) {
+          content.appendChild(renderGroup(unsortedObj, true));
+          placed = true;
+        }
+        content.appendChild(renderGroup(t));
+      });
+      if (!placed) {
+        content.appendChild(renderGroup(unsortedObj, true));
+      }
+    } else {
+      sortedTopics.forEach(t => content.appendChild(renderGroup(t)));
+      if (unsortedObj) {
+        content.appendChild(renderGroup(unsortedObj, true));
+      }
+    }
+  }
+
+  function executeTopicPack(topicId, btnEl) {
+    const orig = btnEl ? btnEl.textContent : '';
+    if (btnEl) btnEl.textContent = '...';
+    chrome.runtime.sendMessage({ action: 'GET_PACK', payload: { topic_id: topicId } }, (response) => {
+      if (response && response.success && response.text) {
+        insertIntoGeminiPrompt(response.text, 'Topic Context');
+        if (btnEl) btnEl.textContent = '✓ Inserted';
+      } else {
+        if (btnEl) btnEl.textContent = 'Error';
+      }
+      setTimeout(() => { if (btnEl) btnEl.textContent = orig; }, 1500);
+    });
+  }
+
+  function insertChatIntoPrompt(chat) {
+    chrome.runtime.sendMessage({ action: 'GET_PACK', payload: { chat_ids: [chat.id] } }, (response) => {
+      if (response && response.success && response.text) {
+        insertIntoGeminiPrompt(response.text, chat.title || 'Chat Context');
+      }
     });
   }
 
@@ -585,6 +1001,10 @@
       const title = item.title || item.chat_title || 'Untitled';
       const score = item.score !== undefined ? `${Math.round(item.score * 100)}% match` : null;
       const typeBadge = item.type ? `🎨 ${item.type}` : null;
+      const dateBadge = item.updated ? `<span class="ctx-card-badge ctx-badge-date" title="Caught: ${escapeHtml(item.updated)}">🕒 ${escapeHtml(item.updated.slice(0, 10))}</span>` : '';
+      const sourceBadge = item.source ? `<span class="ctx-card-badge ctx-badge-source">${escapeHtml(item.source)}</span>` : '';
+      const topicBadge = item.topic_name ? `<span class="ctx-card-badge ctx-badge-topic" title="Filter by topic: ${escapeHtml(item.topic_name)}" data-topic-id="${item.topic_id}" data-topic-name="${escapeHtml(item.topic_name)}">🏷️ ${escapeHtml(item.topic_name.slice(0, 25))}</span>` : '';
+      const chunksBadge = (item.matching_chunks && item.matching_chunks > 1) ? `<span class="ctx-card-badge ctx-badge-chunks">📄 ${item.matching_chunks}</span>` : '';
 
       let snippet = '';
       if (type === 'related') {
@@ -599,8 +1019,14 @@
       card.innerHTML = `
         <div class="ctx-card-header">
           <div class="ctx-card-title">${escapeHtml(title)}</div>
-          ${score ? `<span class="ctx-card-badge ctx-badge-score">${score}</span>` : ''}
-          ${typeBadge ? `<span class="ctx-card-badge ctx-badge-canvas">${typeBadge}</span>` : ''}
+          <div style="display:flex;gap:4px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
+            ${topicBadge}
+            ${chunksBadge}
+            ${sourceBadge}
+            ${dateBadge}
+            ${score ? `<span class="ctx-card-badge ctx-badge-score">${score}</span>` : ''}
+            ${typeBadge ? `<span class="ctx-card-badge ctx-badge-canvas">${typeBadge}</span>` : ''}
+          </div>
         </div>
         ${item.why?.shared && item.why.shared.length ? `
           <div class="ctx-card-meta">
@@ -614,6 +1040,18 @@
           <button class="ctx-card-btn" data-action="view">↗ View</button>
         </div>
       `;
+
+      // Topic badge click to filter
+      const topicEl = card.querySelector('.ctx-badge-topic');
+      if (topicEl) {
+        topicEl.onclick = (e) => {
+          e.stopPropagation();
+          drawerSearchTopicId = topicEl.dataset.topicId ? parseInt(topicEl.dataset.topicId) : null;
+          drawerSearchTopicName = topicEl.dataset.topicName || '';
+          updateSearchControlUI();
+          if (currentQuery) executeSearch(currentQuery);
+        };
+      }
 
       // Toggle expand on snippet click
       const snipEl = card.querySelector('.ctx-card-snippet');
@@ -640,7 +1078,7 @@
       const viewBtn = card.querySelector('[data-action="view"]');
       viewBtn.onclick = () => {
         const cid = item.chat_id || item.id;
-        window.open(`http://127.0.0.1:8765/?chat=${encodeURIComponent(cid)}`, '_blank');
+        window.open(`http://127.0.0.1:8767/?chat=${encodeURIComponent(cid)}`, '_blank');
       };
 
       content.appendChild(card);
@@ -749,11 +1187,102 @@
       performSync(true);
     };
 
+    const exportBtn = document.createElement('button');
+    exportBtn.id = 'chat-context-export-btn';
+    exportBtn.textContent = 'Export';
+    exportBtn.title = 'Download current chat as Markdown (.md)';
+    exportBtn.style.cssText = `
+      background: #1e2733;
+      border: 1px solid #3b4252;
+      color: #94a3b8;
+      border-radius: 12px;
+      padding: 2px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: color 0.15s, border-color 0.15s;
+    `;
+    exportBtn.onmouseenter = () => { exportBtn.style.color = '#38bdf8'; exportBtn.style.borderColor = '#38bdf8'; };
+    exportBtn.onmouseleave = () => { exportBtn.style.color = '#94a3b8'; exportBtn.style.borderColor = '#3b4252'; };
+    exportBtn.onclick = (e) => {
+      e.stopPropagation();
+      let chat;
+      try { chat = extractChat(); } catch (err) {}
+      if (chat && chat.id) {
+        window.open(`http://127.0.0.1:8767/api/export/chat/${chat.id}?format=markdown`, '_blank');
+      } else {
+        window.open('http://127.0.0.1:8767/api/export/all?format=zip', '_blank');
+      }
+    };
+
+    const censorBtn = document.createElement('button');
+    censorBtn.id = 'chat-context-censor-btn';
+    censorBtn.textContent = '⛔';
+    censorBtn.title = 'Censor conversation: remove all saved copies and prevent future saving';
+    censorBtn.style.cssText = `
+      background: #1e2733;
+      border: 1px solid #3b4252;
+      color: #ef4444;
+      border-radius: 12px;
+      padding: 2px 7px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+    `;
+    censorBtn.onmouseenter = () => { censorBtn.style.borderColor = '#ef4444'; censorBtn.style.background = '#2d1a20'; };
+    censorBtn.onmouseleave = () => {
+      censorBtn.style.borderColor = isChatCensored ? '#ef4444' : '#3b4252';
+      censorBtn.style.background = isChatCensored ? '#2d1a20' : '#1e2733';
+    };
+    censorBtn.onclick = (e) => {
+      e.stopPropagation();
+      let chat;
+      try { chat = extractChat(); } catch (err) {}
+      const targetUrl = chat?.url || window.location.href;
+      const targetId = chat?.id || '';
+      if (!confirm('Censor this chat?\n\nThis will remove all saved messages, chunks, and canvases from local storage, and stop future syncs for this conversation.')) {
+        return;
+      }
+      setStatus('syncing', 'Censoring...');
+      chrome.runtime.sendMessage({ action: 'CENSOR_CHAT', payload: { chat_id: targetId, url: targetUrl } }, (resp) => {
+        if (resp && resp.success) {
+          isChatCensored = true;
+          censorBtn.style.background = '#450a0a';
+          censorBtn.style.borderColor = '#ef4444';
+          censorBtn.title = 'Chat is censored (not saved)';
+          syncBtn.disabled = true;
+          syncBtn.style.opacity = '0.4';
+          syncBtn.title = 'Sync disabled: chat is censored';
+          setStatus('error', '⛔ Censored');
+        } else {
+          alert('Failed to censor chat: ' + (resp?.error || 'Unknown error'));
+          setStatus('error', 'Censor failed');
+        }
+      });
+    };
+
     widget.appendChild(indicator);
     widget.appendChild(text);
     widget.appendChild(searchIcon);
     widget.appendChild(syncBtn);
+    widget.appendChild(censorBtn);
+    widget.appendChild(exportBtn);
     document.body.appendChild(widget);
+
+    // Check if current chat is already censored
+    chrome.runtime.sendMessage({ action: 'CHECK_CENSORED', url: window.location.href }, (resp) => {
+      if (resp && resp.censored) {
+        isChatCensored = true;
+        censorBtn.style.background = '#450a0a';
+        censorBtn.style.borderColor = '#ef4444';
+        censorBtn.title = 'Chat is censored (not saved)';
+        syncBtn.disabled = true;
+        syncBtn.style.opacity = '0.4';
+        syncBtn.title = 'Sync disabled: chat is censored';
+        setStatus('error', '⛔ Censored');
+      }
+    });
   }
 
   function setStatus(state, msg) {
@@ -1026,9 +1555,151 @@
     return htmlToMarkdown(clone);
   }
 
-  function extractChat() {
-    const url = window.location.href;
-    if (!url.includes('/app/') && !url.includes('/share/')) return null;
+  function normalizeGeminiUrl(rawUrl) {
+    if (!rawUrl) return '';
+    try {
+      const u = new URL(rawUrl);
+      let cleanPath = u.pathname.replace(/\/+$/, '');
+      cleanPath = cleanPath.replace(/^\/u\/\d+(\/.*)?$/, '$1') || cleanPath;
+      return `${u.origin}${cleanPath}`;
+    } catch (e) {
+      return rawUrl.split('?')[0].split('#')[0].replace(/\/+$/, '');
+    }
+  }
+
+  function extractClaudeChat() {
+    const rawUrl = window.location.href;
+    const m = rawUrl.match(/\/chat\/([a-zA-Z0-9_-]+)/);
+    const convoId = m ? m[1] : '';
+    const chatId = convoId ? `claude-${convoId}` : undefined;
+    const url = convoId ? `https://claude.ai/chat/${convoId}` : rawUrl.split('?')[0];
+
+    let title = document.title.replace(/\s*-\s*Claude.*$/i, '').trim();
+    if (!title || title.toLowerCase() === 'claude') {
+      const h1 = document.querySelector('h1, [data-testid="chat-header"]');
+      if (h1 && h1.textContent.trim()) {
+        title = h1.textContent.trim();
+      }
+    }
+
+    const msgs = [];
+    const rows = document.querySelectorAll('[data-testid="transcript-row"]');
+    if (rows.length > 0) {
+      rows.forEach(r => {
+        const asst = r.querySelector('[data-testid="assistant-message"]') || r.querySelector('.font-claude-message');
+        const user = r.querySelector('[data-testid="user-message"]') || r.querySelector('.cds-user-message-body') || r.querySelector('.font-user-message');
+        if (asst) {
+          let text = asst.innerText.trim();
+          text = text.replace(/^Claude\s+responded:\s*/i, '').trim();
+          if (text) msgs.push({ role: 'assistant', text });
+        } else if (user) {
+          let text = user.innerText.trim();
+          text = text.replace(/^You\s+said:\s*/i, '').trim();
+          text = text.replace(/just now.*$/is, '').trim();
+          if (text) msgs.push({ role: 'user', text });
+        } else if (r.querySelector('[data-testid="user-message-edit"]')) {
+          let text = r.innerText.trim();
+          text = text.replace(/^You\s+said:\s*/i, '').trim();
+          text = text.replace(/just now.*$/is, '').trim();
+          if (text) msgs.push({ role: 'user', text });
+        }
+      });
+    } else {
+      // Fallback
+      const turns = document.querySelectorAll('[data-testid="assistant-message"], .font-claude-message, [data-testid="user-message"], .cds-user-message-body, .font-user-message');
+      turns.forEach(el => {
+        const isUser = el.matches('[data-testid="user-message"], .cds-user-message-body, .font-user-message');
+        let text = el.innerText.trim();
+        if (!isUser) text = text.replace(/^Claude\s+responded:\s*/i, '').trim();
+        else text = text.replace(/^You\s+said:\s*/i, '').trim();
+        if (text) msgs.push({ role: isUser ? 'user' : 'assistant', text });
+      });
+    }
+
+    if (msgs.length === 0) return null;
+
+    if (!title || title.toLowerCase() === 'claude') {
+      const firstUser = msgs.find(m => m.role === 'user');
+      title = (firstUser ? firstUser.text : msgs[0].text).slice(0, 60).replace(/\n/g, ' ').trim();
+    }
+
+    return {
+      id: chatId,
+      source: 'claude',
+      title: title || 'Claude Chat',
+      url: url,
+      messages: msgs,
+      canvases: []
+    };
+  }
+
+  function extractChatGPTChat() {
+    const rawUrl = window.location.href;
+    const m = rawUrl.match(/\/(?:c|share)\/([a-zA-Z0-9_-]+)/);
+    const convoId = m ? m[1] : '';
+    const chatId = convoId ? `chatgpt-${convoId}` : undefined;
+    const url = convoId ? `https://chatgpt.com/c/${convoId}` : rawUrl.split('?')[0];
+
+    let title = document.title.replace(/\s*-\s*ChatGPT.*$/i, '').trim();
+    if (!title || title.toLowerCase() === 'chatgpt') {
+      const activeNav = document.querySelector('nav a[class*="bg-token"], h1');
+      if (activeNav && activeNav.textContent.trim()) {
+        title = activeNav.textContent.trim();
+      }
+    }
+
+    const msgs = [];
+    const units = document.querySelectorAll('[data-chatgpt-search-unit-key]');
+    if (units.length > 0) {
+      units.forEach(u => {
+        const key = u.getAttribute('data-chatgpt-search-unit-key') || '';
+        const isUser = key.includes(':user');
+        let text = u.innerText.trim();
+        if (!isUser) {
+          text = text.replace(/^ChatGPT\s+said:\s*/i, '').trim();
+        }
+        if (text) msgs.push({ role: isUser ? 'user' : 'assistant', text });
+      });
+    } else {
+      // Fallback
+      const turns = document.querySelectorAll('[data-message-author-role], article, [data-user-message-bubble="true"]');
+      turns.forEach(t => {
+        const roleAttr = t.getAttribute('data-message-author-role');
+        const isUser = roleAttr === 'user' || t.matches('[data-user-message-bubble="true"]') || (t.className && t.className.includes('user-message'));
+        let text = t.innerText.trim();
+        if (!isUser) {
+          text = text.replace(/^ChatGPT\s+said:\s*/i, '').trim();
+        }
+        if (text && text.length > 1) {
+          msgs.push({ role: isUser ? 'user' : 'assistant', text });
+        }
+      });
+    }
+
+    if (msgs.length === 0) return null;
+
+    if (!title || title.toLowerCase() === 'chatgpt') {
+      const firstUser = msgs.find(m => m.role === 'user');
+      title = (firstUser ? firstUser.text : msgs[0].text).slice(0, 60).replace(/\n/g, ' ').trim();
+    }
+
+    return {
+      id: chatId,
+      source: 'chatgpt',
+      title: title || 'ChatGPT Chat',
+      url: url,
+      messages: msgs,
+      canvases: []
+    };
+  }
+
+  function extractGeminiChat() {
+    const rawUrl = window.location.href;
+    if (!rawUrl.includes('/app/') && !rawUrl.includes('/share/') && !rawUrl.includes('/gem/') && !rawUrl.includes('/task') && !rawUrl.includes('/prompt')) return null;
+    const url = normalizeGeminiUrl(rawUrl);
+    const m = url.match(/\/(?:app|share|task|tasks|prompt|gem\/[^/]+)\/([a-zA-Z0-9_-]+)/);
+    const convoId = m ? m[1] : '';
+    const chatId = convoId ? `gemini-${convoId}` : undefined;
 
     let title = document.title.replace(/\s*-\s*Gemini.*$/i, '').trim();
     if (!title || title.toLowerCase() === 'gemini') {
@@ -1106,18 +1777,32 @@
       const firstUser = msgs.find(m => m.role === 'user');
       if (firstUser) {
         title = firstUser.text.slice(0, 60).replace(/\n/g, ' ').trim();
+      } else if (msgs[0]) {
+        title = msgs[0].text.slice(0, 60).replace(/\n/g, ' ').trim();
       }
     }
 
     const canvases = extractCanvases();
 
     return {
+      id: chatId,
       source: 'gemini',
       title: title || 'Gemini Chat',
       url: url,
       messages: msgs,
       canvases: canvases
     };
+  }
+
+  function extractChat() {
+    const host = window.location.hostname;
+    if (host.includes('claude.ai')) {
+      return extractClaudeChat();
+    } else if (host.includes('chatgpt.com') || host.includes('openai.com')) {
+      return extractChatGPTChat();
+    } else {
+      return extractGeminiChat();
+    }
   }
 
   function extractCanvases() {
@@ -1172,13 +1857,6 @@
           if (editable) {
             content = htmlToMarkdown(editable);
             type = 'markdown';
-            // If title is missing or default, try getting it from the first heading of the document
-            if (!title || title.startsWith('Canvas ')) {
-              const firstHeading = editable.querySelector('h1, h2');
-              if (firstHeading && firstHeading.textContent.trim()) {
-                title = firstHeading.textContent.trim();
-              }
-            }
           }
         }
 
@@ -1191,8 +1869,44 @@
           }
         }
 
-        title = title.replace(/\s*(Contents\s*Share\s*&\s*Export\s*Create|Contents|Share\s*&\s*Export|Share|Export|Download|Close|Create)\s*$/i, '').replace(/\s+/g, ' ').trim() || `Canvas ${idx + 1}`;
         content = (content || '').trim();
+
+        // Clean toolbar residue from raw DOM title
+        title = title.replace(/\s*(Contents\s*Share\s*&\s*Export\s*Create|Contents|Share\s*&\s*Export|Share|Export|Download|Close|Create)\s*$/i, '').replace(/\s+/g, ' ').trim();
+
+        const isGenericTitle = !title || /^(canvas|artifact|card)\s*\d+$/i.test(title) || /^(untitled|canvas|document)$/i.test(title);
+
+        // Content-first title extraction: Check frontmatter, top # Heading, or HTML title
+        let contentTitle = '';
+        const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+        if (fmMatch) {
+          const tMatch = fmMatch[1].match(/^title:\s*["']?(.*?)["']?$/m);
+          if (tMatch && tMatch[1].trim()) {
+            contentTitle = tMatch[1].trim();
+          }
+        }
+
+        if (!contentTitle) {
+          const bodyText = fmMatch ? content.slice(fmMatch[0].length) : content;
+          const h1Match = bodyText.match(/^#\s+(.+)$/m);
+          if (h1Match && h1Match[1].trim()) {
+            contentTitle = h1Match[1].trim().replace(/^(?:H1|Title|Document)\s*:\s*/i, '').replace(/[*_`]/g, '').trim();
+          }
+        }
+
+        if (!contentTitle && type === 'code') {
+          const htmlMatch = content.match(/<title>(.*?)<\/title>/i);
+          if (htmlMatch && htmlMatch[1].trim()) {
+            contentTitle = htmlMatch[1].trim();
+          }
+        }
+
+        // Prioritize content title if DOM title is generic or if content heading is longer/more descriptive
+        if (contentTitle && (isGenericTitle || contentTitle.length > title.length)) {
+          title = contentTitle;
+        } else if (!title) {
+          title = `Canvas ${idx + 1}`;
+        }
 
         // Enforce genuine document threshold (minimum 250 characters; skip ASCII snippets)
         if (content && content.length >= 250) {
@@ -1248,6 +1962,10 @@
   }
 
   function performSync(isManual = false) {
+    if (isChatCensored) {
+      if (isManual) setStatus('error', '⛔ Censored');
+      return;
+    }
     let chat;
     try {
       chat = extractChat();
@@ -1270,10 +1988,19 @@
 
     setStatus('syncing', 'Syncing...');
 
-    chrome.runtime.sendMessage({ action: 'SYNC_CHAT', payload: chat }, (response) => {
+    const payloadWithFlags = { ...chat, is_manual: isManual };
+    chrome.runtime.sendMessage({ action: 'SYNC_CHAT', payload: payloadWithFlags }, (response) => {
       if (chrome.runtime.lastError || !response || !response.success) {
-        const errMsg = response?.error || chrome.runtime.lastError?.message || 'Server offline';
-        setStatus('error', 'Server offline');
+        const errMsg = response?.error || chrome.runtime.lastError?.message || 'Server error';
+        if (errMsg.includes('context invalidated') || errMsg.includes('Extension context')) {
+          setStatus('error', 'Reload tab');
+        } else if (errMsg.includes('Failed to fetch') || errMsg.includes('NetworkError')) {
+          setStatus('error', 'Server offline');
+        } else if (errMsg.includes('500')) {
+          setStatus('error', 'Server error (500)');
+        } else {
+          setStatus('error', 'Sync error');
+        }
         console.warn('[Chat Context Sync]', errMsg);
       } else {
         lastSentHash = currentHash;
@@ -1311,6 +2038,26 @@
     if (window.location.href !== lastUrl) {
       lastUrl = window.location.href;
       lastSentHash = ''; // Reset hash so the new chat syncs immediately
+      isChatCensored = false;
+      chrome.runtime.sendMessage({ action: 'CHECK_CENSORED', url: window.location.href }, (resp) => {
+        isChatCensored = !!resp?.censored;
+        const censorBtn = document.getElementById('chat-context-censor-btn');
+        const syncBtn = document.getElementById('chat-context-sync-btn');
+        if (censorBtn && syncBtn) {
+          if (isChatCensored) {
+            censorBtn.style.background = '#450a0a';
+            censorBtn.style.borderColor = '#ef4444';
+            syncBtn.disabled = true;
+            syncBtn.style.opacity = '0.4';
+            setStatus('error', '⛔ Censored');
+          } else {
+            censorBtn.style.background = '#1e2733';
+            censorBtn.style.borderColor = '#3b4252';
+            syncBtn.disabled = false;
+            syncBtn.style.opacity = '1';
+          }
+        }
+      });
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => performSync(false), 1200);
     }

@@ -75,3 +75,21 @@ Subagents suffer from context amnesia and routinely fail to uphold rigid formatt
 2. **Always Aim for Simpler Words**: Always use the simplest, most direct words available to describe the action, object, or effect.
 3. **Grounded Reality**: Describe what actually happens in plain, observable terms that anyone can immediately picture. If a phrase sounds like an academic textbook or laboratory jargon, rewrite it in plain, simple English.
 
+## Aletheia Evaluator & Trajectory Invariants
+
+### 1. Deterministic Trajectory & Path Name Invariant
+- Trajectory path names and modal geodesics are strictly deterministic functions of coordinate deltas:
+  - $\text{GG} \to \text{GE}$ ($(+, +) \to (-, -)$) is strictly **`Fall into Destruction` (The Path of Fall)**.
+  - $\text{GG} \to \text{LE}$ ($(+, +) \to (-, +)$) is strictly **`Fall into Deception` (The Path of Deception)**.
+  - $\text{GE} \to \text{LG}$ ($(-, -) \to (+, -)$) is strictly **`Reckoning into Redemption` (The Path of Redemption)**.
+  - $\text{LE} \to \text{GG}$ ($(-, +) \to (+, +)$) is strictly **`Revelation into Grace` (The Path of Awakening)**.
+- **Strict Prohibition**: You are strictly forbidden from labeling any trajectory crossing into the negative exclusive hemisphere ($-u$) as "The Path of Redemption" or using "via Constructive". Redemption strictly requires an upward vector toward systemic good ($+u$).
+
+### 2. Anti-Paywall & Non-Scandal Op-ed Guardrail
+- A publication requiring a paid subscription or paywall is normal publishing commerce, NOT material deception, physical fraud, or epistemic hypocrisy.
+- You must NEVER penalize an article or actor into negative coordinates `(-u, -\psi)` simply because the text is behind a paywall or because an author is expressing personal commentary.
+- If an article cannot be scraped due to paywalls or anti-bot protections, drop the candidate immediately. Never perform blind audits on paywalled headlines.
+
+### 3. Dynamic Card & Persona Resiliency
+- Image card renderers must never assume fixed post array lengths (e.g. `posts[13]`). Persona cards must be extracted dynamically by prefix matching (`Alethekanon:`, `Awwthekanon:`, `Brothekanon:`, `Spirithekanon:`) with dynamic multi-column layouts adapting to 1, 2, 3, or 4 personas.
+

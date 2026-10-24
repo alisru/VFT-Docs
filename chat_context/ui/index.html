@@ -18,7 +18,12 @@
   #related { border-left:1px solid var(--line); border-right:0; }
   .tabs { display:flex; gap:4px; margin-bottom:8px; }
   .topic { margin:6px 0; }
-  .topic > .th { color:var(--acc); font-weight:600; cursor:pointer; display:flex; justify-content:space-between; gap:6px; }
+  .topic > .th { color:var(--acc); font-weight:600; cursor:pointer; display:flex; justify-content:space-between; gap:6px; align-items:center; }
+  .topic-sort-bar { display:flex; align-items:center; justify-content:space-between; padding:4px 8px; margin-bottom:8px; background:#141820; border:1px solid var(--line); border-radius:6px; font-size:11px; }
+  .sort-btn { background:none; border:none; color:var(--dim); padding:2px 7px; border-radius:4px; font-size:11px; cursor:pointer; transition:all 0.15s; }
+  .sort-btn:hover { color:var(--text); background:#232936; }
+  .sort-btn.on { background:var(--acc); color:#000; font-weight:600; }
+  .topic-date-badge { font-size:10px; color:#64748b; font-weight:normal; }
   .chat { padding:3px 6px; border-radius:4px; cursor:pointer; display:flex; gap:6px; align-items:flex-start; }
   .chat:hover, .chat.sel { background:#262b34; }
   .chat .t { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -41,12 +46,44 @@
   .badge.file, .badge.json { background:#2a2f3a; color:#a0aec0; }
   .web-link { color:var(--acc); margin-left:10px; font-size:12px; text-decoration:none; }
   .web-link:hover { text-decoration:underline; }
+  .export-dropdown-wrap { position:relative; display:inline-block; }
+  .export-menu {
+    position:absolute; top:100%; right:0; margin-top:4px;
+    background:#1b212c; border:1px solid #2d3748; border-radius:6px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.5); z-index:1000; min-width:220px;
+    padding:4px 0; display:none;
+  }
+  .export-menu.open { display:block; }
+  .export-menu-item {
+    padding:8px 14px; font-size:12px; cursor:pointer; display:flex;
+    align-items:center; gap:8px; color:#cbd5e1;
+  }
+  .export-menu-item:hover { background:#283548; color:#fff; }
+  .export-group { display:inline-flex; align-items:center; gap:4px; margin-left:12px; vertical-align:middle; }
+  .export-chip {
+    background:#1f2937; border:1px solid #374151; color:#93c5fd;
+    font-size:11px; padding:2px 7px; border-radius:4px; cursor:pointer;
+    text-decoration:none; transition:all 0.15s; display:inline-block;
+  }
+  .export-chip:hover { background:#2563eb; color:#fff; border-color:#3b82f6; }
 </style>
 </head>
 <body>
 <header>
   <input id="q" placeholder="Search all chats by meaning, press Enter">
+  <button id="btn-search" title="Search all chats">🔍 Search</button>
   <button id="sync">Sync</button>
+  <div class="export-dropdown-wrap">
+    <button id="btn-export-all" title="Export all conversations">📥 Export All ▾</button>
+    <div id="export-all-menu" class="export-menu">
+      <div class="export-menu-item" data-fmt="zip" data-group="topic">📦 All Chats (ZIP, by Topic)</div>
+      <div class="export-menu-item" data-fmt="zip" data-group="flat">📦 All Chats (ZIP, Flat)</div>
+      <div class="export-menu-item" data-fmt="json">📄 All Chats (JSON Bundle)</div>
+      <div style="height:1px;background:#2a2b36;margin:4px 0;"></div>
+      <div class="export-menu-item" id="btn-sync-gdrive">☁️ Sync All to Google Drive</div>
+      <div class="export-menu-item" id="btn-sync-git">🐙 Push All to Git Repository</div>
+    </div>
+  </div>
   <span id="status" class="dim" style="align-self:center"></span>
 </header>
 <main>
@@ -55,6 +92,14 @@
       <button data-v="recent">Recent</button>
       <button data-v="all">All</button>
       <button data-v="topics" class="on">Topics</button>
+    </div>
+    <div id="topic-sort-bar" class="topic-sort-bar" style="display:none;">
+      <span class="dim" style="font-size:11px;">Sort:</span>
+      <div style="display:flex;gap:3px;">
+        <button class="sort-btn on" data-sort="recent" title="Topics with newest caught chats first">Recent</button>
+        <button class="sort-btn" data-sort="name" title="Alphabetical A-Z">Name</button>
+        <button class="sort-btn" data-sort="count" title="Topics with most chats first">Count</button>
+      </div>
     </div>
     <div id="list"></div>
   </aside>
@@ -65,12 +110,35 @@
   <span id="count" class="dim">0 chats selected</span>
   <input id="pq" placeholder="Optional: focus the pack on a question (picks the best excerpts)">
   <button id="pack">Copy context pack</button>
+  <button id="export-selected" style="display:none;background:#2563eb;color:#fff;" title="Export checked chats as a ZIP archive">📦 Export Selected (<span id="sel-count">0</span>)</button>
   <button id="clear">Clear</button>
 </footer>
 <script>
 const $ = s => document.querySelector(s);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 let data = null, view = localStorage.getItem('chat_ctx_tab') || 'recent', current = null, picked = new Set();
+
+function downloadUrl(url) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function updatePickedCount() {
+  $('#count').textContent = picked.size + ' chats selected';
+  const selBtn = $('#export-selected');
+  if (selBtn) {
+    if (picked.size > 0) {
+      selBtn.style.display = 'inline-block';
+      $('#sel-count').textContent = picked.size;
+    } else {
+      selBtn.style.display = 'none';
+    }
+  }
+}
 
 async function api(path, opts) { const r = await fetch(path, opts); if (!r.ok) throw new Error(path + ' ' + r.status); return r; }
 const post = (p, b) => api(p, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(b) });
@@ -80,7 +148,7 @@ async function load() { data = await (await api('/api/tree')).json(); renderList
 function chatRow(c) {
   const row = el('div', 'chat' + (current === c.id ? ' sel' : ''));
   const cb = el('input'); cb.type = 'checkbox'; cb.checked = picked.has(c.id);
-  cb.onclick = e => { e.stopPropagation(); cb.checked ? picked.add(c.id) : picked.delete(c.id); $('#count').textContent = picked.size + ' chats selected'; };
+  cb.onclick = e => { e.stopPropagation(); cb.checked ? picked.add(c.id) : picked.delete(c.id); updatePickedCount(); };
   const src = (c.source || 'file').toLowerCase();
   const badge = el('span', 'badge ' + src, src.slice(0, 3));
   const t = el('div', 't', c.title || c.id); t.title = c.title || c.id;
@@ -96,24 +164,100 @@ function chatRow(c) {
   return row;
 }
 
+let topicSort = localStorage.getItem('chat_ctx_topic_sort') || 'recent';
+
+function updateTopicSortUI() {
+  document.querySelectorAll('#topic-sort-bar .sort-btn').forEach(b => {
+    b.classList.toggle('on', b.dataset.sort === topicSort);
+  });
+}
+
 function renderList() {
   const box = $('#list'); box.replaceChildren();
   if (!data) return;
-  if (view === 'recent') data.recent.forEach(c => box.append(chatRow(c)));
-  else if (view === 'all') data.all.forEach(c => box.append(chatRow(c)));
-  else {
-    data.topics.forEach(t => {
+  const sortBar = $('#topic-sort-bar');
+  if (sortBar) sortBar.style.display = (view === 'topics') ? 'flex' : 'none';
+
+  if (view === 'recent') {
+    data.recent.forEach(c => box.append(chatRow(c)));
+  } else if (view === 'all') {
+    data.all.forEach(c => box.append(chatRow(c)));
+  } else {
+    // Semantic Topics Sorting
+    let sortedTopics = [...(data.topics || [])];
+    if (topicSort === 'recent') {
+      sortedTopics.sort((a, b) => (b.updated || '').localeCompare(a.updated || ''));
+    } else if (topicSort === 'name') {
+      sortedTopics.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    } else if (topicSort === 'count') {
+      sortedTopics.sort((a, b) => (b.count || b.chats.length) - (a.count || a.chats.length));
+    }
+
+    const renderTopicNode = (t, isUnsorted = false) => {
       const d = el('div', 'topic'), h = el('div', 'th');
-      h.append(el('span', null, `${t.name} (${t.chats.length})`));
-      const pk = el('button', null, 'pack'); pk.onclick = async e => { e.stopPropagation(); copyPack({ topic_id:t.id, query:$('#pq').value }); };
-      h.append(pk);
-      h.ondblclick = async () => { const n = prompt('Rename topic', t.name); if (n) { await post('/api/topic/rename', { id:t.id, name:n }); load(); } };
-      h.title = 'double-click to rename';
-      const body = el('div'); t.chats.forEach(c => body.append(chatRow(c)));
+      const titleSpan = el('span', null, `${t.name} (${t.chats.length})`);
+      titleSpan.style.cssText = 'overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1';
+
+      const rightBadges = el('div');
+      rightBadges.style.cssText = 'display:flex;align-items:center;gap:6px;flex-shrink:0';
+
+      if (t.updated) {
+        const timeBadge = el('small', 'topic-date-badge', t.updated.slice(5, 10));
+        timeBadge.title = `Last caught: ${t.updated}`;
+        rightBadges.append(timeBadge);
+      }
+
+      if (!isUnsorted) {
+        const pk = el('button', null, 'pack');
+        pk.onclick = async e => {
+          e.stopPropagation();
+          copyPack({ topic_id: t.id, query: $('#pq').value });
+        };
+        rightBadges.append(pk);
+        h.ondblclick = async () => {
+          const n = prompt('Rename topic', t.name);
+          if (n) {
+            await post('/api/topic/rename', { id: t.id, name: n });
+            load();
+          }
+        };
+        h.title = 'double-click to rename';
+      }
+
+      h.append(titleSpan, rightBadges);
+      const body = el('div');
+      t.chats.forEach(c => body.append(chatRow(c)));
       h.onclick = () => body.hidden = !body.hidden;
-      d.append(h, body); box.append(d);
-    });
-    if (data.unsorted.length) { const d = el('div', 'topic'); d.append(el('div', 'th', `Unsorted (${data.unsorted.length})`)); data.unsorted.forEach(c => d.append(chatRow(c))); box.append(d); }
+      d.append(h, body);
+      return d;
+    };
+
+    const unsortedObj = data.unsorted && data.unsorted.length ? {
+      id: null,
+      name: 'Unsorted',
+      chats: data.unsorted,
+      count: data.unsorted.length,
+      updated: data.unsorted_updated || (data.unsorted[0]?.updated || '')
+    } : null;
+
+    if (topicSort === 'recent' && unsortedObj) {
+      let placed = false;
+      sortedTopics.forEach(t => {
+        if (!placed && (unsortedObj.updated || '') >= (t.updated || '')) {
+          box.append(renderTopicNode(unsortedObj, true));
+          placed = true;
+        }
+        box.append(renderTopicNode(t));
+      });
+      if (!placed) {
+        box.append(renderTopicNode(unsortedObj, true));
+      }
+    } else {
+      sortedTopics.forEach(t => box.append(renderTopicNode(t)));
+      if (unsortedObj) {
+        box.append(renderTopicNode(unsortedObj, true));
+      }
+    }
   }
 }
 
@@ -133,11 +277,55 @@ async function openChat(id) {
     load();
   };
   actions.append(mv);
+
+  const censorBtn = el('button', null, '⛔ Censor');
+  censorBtn.title = 'Remove all copies of this chat and blacklist it from future saving';
+  censorBtn.style.cssText = 'color:#ef4444;border-color:#7f1d1d;background:#241419;margin-left:6px;';
+  censorBtn.onclick = async () => {
+    if (!confirm('Censor this chat?\n\nThis will permanently delete this conversation and its canvases from local storage, and blacklist it from ever being saved again.')) {
+      return;
+    }
+    censorBtn.disabled = true;
+    censorBtn.textContent = '⛔ Censoring…';
+    try {
+      await post('/api/chat/censor', { chat_id: id, url: c.url });
+      current = null;
+      $('#main').replaceChildren(el('p', 'dim', 'Chat censored and removed from storage.'));
+      await load();
+    } catch (e) {
+      alert('Error censoring chat: ' + e.message);
+      censorBtn.disabled = false;
+      censorBtn.textContent = '⛔ Censor';
+    }
+  };
+  actions.append(censorBtn);
   if (c.url) {
     const link = el('a', 'web-link', '🔗 Open on Web');
     link.href = c.url; link.target = '_blank'; link.rel = 'noreferrer';
     actions.append(link);
   }
+
+  const expGroup = el('div', 'export-group');
+  const expLabel = el('span', 'dim', 'Export:');
+  expLabel.style.fontSize = '12px';
+  expGroup.append(expLabel);
+
+  const formats = [
+    { label: 'Markdown', ext: 'markdown' },
+    { label: 'HTML', ext: 'html' },
+    { label: 'JSON', ext: 'json' },
+    { label: 'TXT', ext: 'txt' },
+    { label: 'ZIP', ext: 'zip' }
+  ];
+
+  formats.forEach(f => {
+    const chip = el('a', 'export-chip', f.label);
+    chip.href = `/api/export/chat/${id}?format=${f.ext}`;
+    chip.download = '';
+    chip.title = `Download conversation as ${f.label}`;
+    expGroup.append(chip);
+  });
+  actions.append(expGroup);
   const meta = el('p', 'dim', `${c.source.toUpperCase()} · ${(c.started || '').slice(0, 10)} · ${c.messages.length} messages`);
   m.append(h, actions, meta);
 
@@ -303,12 +491,257 @@ async function openChat(id) {
   });
 }
 
-async function doSearch() {
-  const q = $('#q').value.trim(); if (!q) return;
+let searchSort = localStorage.getItem('chat_ctx_search_sort') || 'relevance';
+let searchMode = localStorage.getItem('chat_ctx_search_mode') || 'hybrid';
+let searchGroup = localStorage.getItem('chat_ctx_search_group') || 'chat';
+let searchMustContain = '';
+let searchMinScore = 0;
+let searchTopicId = null;
+let searchTopicName = '';
+let searchSource = '';
+let lastSearchQuery = '';
+let lastSearchHits = [];
+
+function renderSearchResults() {
+  const m = $('#main'); m.replaceChildren();
+  if (!lastSearchQuery) return;
+
+  const header = el('div');
+  header.style.cssText = 'margin-bottom:16px;border-bottom:1px solid var(--line);padding-bottom:12px;display:flex;flex-direction:column;gap:10px;';
+  
+  // Row 1: Title and Core Toggles (Mode, View, Sort)
+  const row1 = el('div');
+  row1.style.cssText = 'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;';
+  
+  const title = el('h3', null, `Results for "${lastSearchQuery}" (${lastSearchHits.length} matches)`);
+  title.style.margin = '0';
+
+  const toggles = el('div');
+  toggles.style.cssText = 'display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12px;';
+
+  // Mode buttons
+  const modeWrap = el('div');
+  modeWrap.style.cssText = 'display:flex;align-items:center;gap:4px;';
+  modeWrap.append(el('span', 'dim', 'Mode:'));
+  ['hybrid:⚡ Hybrid', 'semantic:🎯 Semantic', 'exact:🔍 Exact'].forEach(item => {
+    const [val, label] = item.split(':');
+    const btn = el('button', 'sort-btn' + (searchMode === val ? ' on' : ''), label);
+    btn.onclick = () => {
+      searchMode = val;
+      localStorage.setItem('chat_ctx_search_mode', searchMode);
+      doSearch(lastSearchQuery);
+    };
+    modeWrap.append(btn);
+  });
+
+  // Group buttons
+  const groupWrap = el('div');
+  groupWrap.style.cssText = 'display:flex;align-items:center;gap:4px;';
+  groupWrap.append(el('span', 'dim', 'View:'));
+  ['chat:💬 Chat', 'chunk:📄 Chunks'].forEach(item => {
+    const [val, label] = item.split(':');
+    const btn = el('button', 'sort-btn' + (searchGroup === val ? ' on' : ''), label);
+    btn.onclick = () => {
+      searchGroup = val;
+      localStorage.setItem('chat_ctx_search_group', searchGroup);
+      doSearch(lastSearchQuery);
+    };
+    groupWrap.append(btn);
+  });
+
+  // Sort buttons
+  const sortWrap = el('div');
+  sortWrap.style.cssText = 'display:flex;align-items:center;gap:4px;';
+  sortWrap.append(el('span', 'dim', 'Sort:'));
+  ['relevance:🎯 Relevance', 'recent:🕒 Recent'].forEach(item => {
+    const [val, label] = item.split(':');
+    const btn = el('button', 'sort-btn' + (searchSort === val ? ' on' : ''), label);
+    btn.onclick = () => {
+      searchSort = val;
+      localStorage.setItem('chat_ctx_search_sort', searchSort);
+      doSearch(lastSearchQuery);
+    };
+    sortWrap.append(btn);
+  });
+
+  toggles.append(modeWrap, groupWrap, sortWrap);
+  row1.append(title, toggles);
+
+  // Row 2: Secondary Filters (Must Include, Topic, Source, Strictness Slider)
+  const row2 = el('div');
+  row2.style.cssText = 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#131720;padding:8px 12px;border-radius:6px;border:1px solid var(--line);font-size:12px;';
+
+  // Must contain input
+  const mustInput = el('input');
+  mustInput.placeholder = 'Must contain words…';
+  mustInput.value = searchMustContain;
+  mustInput.style.cssText = 'background:#1a202c;border:1px solid #2d3748;color:#fff;padding:4px 8px;border-radius:4px;font-size:11px;width:150px;';
+  mustInput.onkeydown = (e) => {
+    if (e.key === 'Enter') {
+      searchMustContain = mustInput.value.trim();
+      doSearch(lastSearchQuery);
+    }
+  };
+  mustInput.onblur = () => {
+    if (searchMustContain !== mustInput.value.trim()) {
+      searchMustContain = mustInput.value.trim();
+      doSearch(lastSearchQuery);
+    }
+  };
+
+  // Topic filter select
+  const topicSelect = el('select');
+  topicSelect.style.cssText = 'background:#1a202c;border:1px solid #2d3748;color:#cbd5e1;padding:4px 8px;border-radius:4px;font-size:11px;max-width:180px;';
+  const optAllTopics = el('option', null, 'All Topics');
+  optAllTopics.value = '';
+  topicSelect.append(optAllTopics);
+  if (data && data.topics) {
+    data.topics.forEach(t => {
+      const opt = el('option', null, `${t.name.slice(0, 25)} (${t.count})`);
+      opt.value = t.id;
+      if (searchTopicId && searchTopicId === t.id) opt.selected = true;
+      topicSelect.append(opt);
+    });
+  }
+  topicSelect.onchange = () => {
+    searchTopicId = topicSelect.value ? parseInt(topicSelect.value) : null;
+    doSearch(lastSearchQuery);
+  };
+
+  // Source filter select
+  const sourceSelect = el('select');
+  sourceSelect.style.cssText = 'background:#1a202c;border:1px solid #2d3748;color:#cbd5e1;padding:4px 8px;border-radius:4px;font-size:11px;';
+  const optAllSources = el('option', null, 'All Sources');
+  optAllSources.value = '';
+  sourceSelect.append(optAllSources);
+  ['gemini', 'antigravity', 'claude', 'chatgpt', 'file'].forEach(src => {
+    const opt = el('option', null, src.toUpperCase());
+    opt.value = src;
+    if (searchSource === src) opt.selected = true;
+    sourceSelect.append(opt);
+  });
+  sourceSelect.onchange = () => {
+    searchSource = sourceSelect.value;
+    doSearch(lastSearchQuery);
+  };
+
+  // Strictness slider
+  const sliderWrap = el('div');
+  sliderWrap.style.cssText = 'display:flex;align-items:center;gap:6px;margin-left:auto;';
+  const sliderLabel = el('span', 'dim', `Min match: ${searchMinScore}%`);
+  const slider = el('input');
+  slider.type = 'range';
+  slider.min = '0';
+  slider.max = '80';
+  slider.step = '5';
+  slider.value = searchMinScore;
+  slider.style.cssText = 'width:90px;cursor:pointer;';
+  slider.oninput = () => {
+    sliderLabel.textContent = `Min match: ${slider.value}%`;
+  };
+  slider.onchange = () => {
+    searchMinScore = parseInt(slider.value);
+    doSearch(lastSearchQuery);
+  };
+  sliderWrap.append(sliderLabel, slider);
+
+  // Clear filters button if any active
+  if (searchMustContain || searchTopicId || searchSource || searchMinScore > 0) {
+    const clearBtn = el('button', 'sort-btn', '✕ Reset Filters');
+    clearBtn.style.cssText = 'color:#f87171;padding:2px 6px;';
+    clearBtn.onclick = () => {
+      searchMustContain = '';
+      searchTopicId = null;
+      searchSource = '';
+      searchMinScore = 0;
+      doSearch(lastSearchQuery);
+    };
+    row2.append(clearBtn);
+  }
+
+  row2.append(mustInput, topicSelect, sourceSelect, sliderWrap);
+  header.append(row1, row2);
+  m.append(header);
+
+  if (!lastSearchHits.length) {
+    m.append(el('p', 'dim', 'No matching results found for this query and filter combination.'));
+    return;
+  }
+
+  lastSearchHits.forEach(h => {
+    const d = el('div', 'hit');
+    const topRow = el('div');
+    topRow.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:8px;flex-wrap:wrap;';
+
+    const t = el('h4', null, h.title);
+    t.style.cssText = 'margin:0;color:var(--acc);cursor:pointer;font-size:14px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
+    t.onclick = () => openChat(h.chat_id);
+
+    const meta = el('div');
+    meta.style.cssText = 'display:flex;align-items:center;gap:6px;flex-shrink:0;flex-wrap:wrap;';
+
+    // Topic badge
+    if (h.topic_name) {
+      const topicBadge = el('span', 'badge', `🏷️ ${h.topic_name.slice(0, 25)}`);
+      topicBadge.style.cssText = 'background:#1e1b4b;color:#a5b4fc;border:1px solid #3730a3;cursor:pointer;';
+      topicBadge.title = `Click to filter by topic: ${h.topic_name}`;
+      topicBadge.onclick = (e) => {
+        e.stopPropagation();
+        searchTopicId = h.topic_id;
+        doSearch(lastSearchQuery);
+      };
+      meta.append(topicBadge);
+    }
+
+    // Matching chunks badge
+    if (h.matching_chunks && h.matching_chunks > 1) {
+      const chunksBadge = el('span', 'badge', `📄 ${h.matching_chunks} passages`);
+      chunksBadge.style.cssText = 'background:#142938;color:#7dd3fc;border:1px solid #0284c7;';
+      meta.append(chunksBadge);
+    }
+
+    // Source badge
+    if (h.source) {
+      const srcBadge = el('span', 'badge ' + h.source, h.source);
+      meta.append(srcBadge);
+    }
+
+    // Date badge
+    if (h.updated) {
+      const dateBadge = el('small', 'topic-date-badge', h.updated.slice(0, 16).replace('T', ' '));
+      dateBadge.title = `Caught: ${h.updated}`;
+      meta.append(dateBadge);
+    }
+
+    // Score badge
+    const scoreBadge = el('span', 'badge', `${Math.round(h.score * 100)}% match`);
+    scoreBadge.style.cssText = 'background:#064e3b;color:#6ee7b7;border:1px solid #059669;font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600;';
+    meta.append(scoreBadge);
+
+    topRow.append(t, meta);
+
+    const bodyText = el('div');
+    bodyText.style.cssText = 'font-size:13px;line-height:1.45;color:#cbd5e1;white-space:pre-wrap;';
+    bodyText.textContent = h.text;
+
+    d.append(topRow, bodyText);
+    m.append(d);
+  });
+}
+
+async function doSearch(query) {
+  const q = (query !== undefined ? query : ($('#q').value || '')).trim();
+  if (!q) return;
+  lastSearchQuery = q;
   $('#status').textContent = 'searching…';
-  const hits = await (await api('/api/search?q=' + encodeURIComponent(q))).json();
-  const m = $('#main'); m.replaceChildren(el('h3', null, `Results for "${q}"`));
-  hits.forEach(h => { const d = el('div', 'hit'); const t = el('h4', null, `${h.title} · ${h.score}`); t.onclick = () => openChat(h.chat_id); d.append(t, document.createTextNode(h.text)); m.append(d); });
+  const topicParam = searchTopicId ? `&topic_id=${searchTopicId}` : '';
+  const sourceParam = searchSource ? `&source=${encodeURIComponent(searchSource)}` : '';
+  const mustParam = searchMustContain ? `&must_contain=${encodeURIComponent(searchMustContain)}` : '';
+  const minScoreParam = searchMinScore > 0 ? `&min_score=${searchMinScore / 100}` : '';
+  const url = `/api/search?q=${encodeURIComponent(q)}&sort=${searchSort}&mode=${searchMode}&group_by=${searchGroup}&k=40${topicParam}${sourceParam}${mustParam}${minScoreParam}`;
+  const hits = await (await api(url)).json();
+  lastSearchHits = hits;
+  renderSearchResults();
   $('#status').textContent = '';
 }
 
@@ -327,9 +760,26 @@ document.querySelectorAll('.tabs button').forEach(b => {
     renderList();
   };
 });
-$('#q').onkeydown = e => { if (e.key === 'Enter') doSearch(); };
-$('#sync').onclick = async () => { await post('/api/sync?threshold=0.80', {}); $('#status').textContent = 'sync queued'; };
-let lastRev = 0;
+
+document.querySelectorAll('#topic-sort-bar .sort-btn').forEach(b => {
+  b.onclick = () => {
+    topicSort = b.dataset.sort;
+    localStorage.setItem('chat_ctx_topic_sort', topicSort);
+    updateTopicSortUI();
+    renderList();
+  };
+});
+updateTopicSortUI();
+$('#sync').onclick = async () => {
+  $('#sync').disabled = true;
+  $('#status').textContent = '⚡ syncing now…';
+  try {
+    await post('/api/sync?threshold=0.80', {});
+    setTimeout(poll, 150);
+  } finally {
+    setTimeout(() => { $('#sync').disabled = false; }, 1000);
+  }
+};
 async function poll() {
   if (document.hidden) {
     setTimeout(poll, 3000);
@@ -368,7 +818,92 @@ async function poll() {
 document.addEventListener('visibilitychange', () => { if (!document.hidden) poll(); });
 poll();
 $('#pack').onclick = () => { if (!picked.size && !$('#pq').value.trim()) { $('#status').textContent = 'pick chats or type a question'; return; } copyPack({ chat_ids:[...picked], query:$('#pq').value }); };
-$('#clear').onclick = () => { picked.clear(); $('#count').textContent = '0 chats selected'; renderList(); };
+$('#pq').onkeydown = e => { if (e.key === 'Enter') $('#pack').click(); };
+$('#clear').onclick = () => { picked.clear(); updatePickedCount(); renderList(); };
+
+// Wire up search bar
+const qInput = $('#q');
+if (qInput) {
+  qInput.onkeydown = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      doSearch();
+    } else if (e.key === 'Escape') {
+      qInput.value = '';
+      if (current) openChat(current);
+      else $('#main').innerHTML = '<p class="dim">Pick a chat, or search.</p>';
+    }
+  };
+}
+const btnSearch = $('#btn-search');
+if (btnSearch) {
+  btnSearch.onclick = () => doSearch();
+}
+
+// Wire up Export All dropdown
+const expAllBtn = $('#btn-export-all');
+const expAllMenu = $('#export-all-menu');
+if (expAllBtn && expAllMenu) {
+  expAllBtn.onclick = (e) => {
+    e.stopPropagation();
+    expAllMenu.classList.toggle('open');
+  };
+  document.addEventListener('click', () => expAllMenu.classList.remove('open'));
+  expAllMenu.querySelectorAll('.export-menu-item').forEach(item => {
+    if (item.id === 'btn-sync-gdrive') {
+      item.onclick = async (e) => {
+        e.stopPropagation();
+        expAllMenu.classList.remove('open');
+        const st = $('#status');
+        if (st) st.textContent = '☁️ Syncing chats to Google Drive...';
+        try {
+          const res = await fetch('/api/export/sync-gdrive', { method: 'POST' });
+          const data = await res.json();
+          if (st) st.textContent = data.ok ? '✓ Google Drive synced' : '✗ Google Drive failed';
+          alert(data.message || (data.ok ? 'Synced to Google Drive' : 'Failed to sync'));
+        } catch (err) {
+          if (st) st.textContent = '✗ ' + err.message;
+          alert('Google Drive sync failed: ' + err.message);
+        }
+      };
+    } else if (item.id === 'btn-sync-git') {
+      item.onclick = async (e) => {
+        e.stopPropagation();
+        expAllMenu.classList.remove('open');
+        const st = $('#status');
+        if (st) st.textContent = '🐙 Pushing chats to Git...';
+        try {
+          const res = await fetch('/api/export/sync-git', { method: 'POST' });
+          const data = await res.json();
+          if (st) st.textContent = data.ok ? '✓ Git synced' : '✗ Git failed';
+          alert(data.message || (data.ok ? 'Pushed to Git' : 'Failed to push'));
+        } catch (err) {
+          if (st) st.textContent = '✗ ' + err.message;
+          alert('Git sync failed: ' + err.message);
+        }
+      };
+    } else {
+      item.onclick = (e) => {
+        e.stopPropagation();
+        const fmt = item.dataset.fmt;
+        if (!fmt) return;
+        const grp = item.dataset.group || 'topic';
+        expAllMenu.classList.remove('open');
+        downloadUrl(`/api/export/all?format=${fmt}&group_by=${grp}`);
+      };
+    }
+  });
+}
+
+// Wire up Export Selected button
+const expSelBtn = $('#export-selected');
+if (expSelBtn) {
+  expSelBtn.onclick = () => {
+    if (picked.size === 0) return;
+    const ids = Array.from(picked).join(',');
+    downloadUrl(`/api/export/all?format=zip&ids=${encodeURIComponent(ids)}`);
+  };
+}
 load();
 </script>
 </body>

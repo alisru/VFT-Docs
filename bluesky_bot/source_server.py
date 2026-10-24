@@ -69,33 +69,60 @@ class SourceHandler(BaseHTTPRequestHandler):
         if parsed.path == "/source":
             params = urllib.parse.parse_qs(parsed.query)
             url = params.get("url", [""])[0].strip()
+            sid = params.get("id", [""])[0].strip()
 
-            if not url:
-                self.send_json(400, {"error": "Missing 'url' parameter"})
+            if not url and not sid:
+                self.send_json(400, {"error": "Missing 'url' or 'id' parameter"})
                 return
 
-            # Try exact match first, then normalised (strip trailing slash, query params)
-            entry = SOURCE_INDEX.get(url)
-            if not entry:
-                # Try stripping query string
-                clean = url.split("?")[0].rstrip("/")
-                entry = SOURCE_INDEX.get(clean)
-            if not entry:
-                # Try prefix match (handle URL variations)
-                for key in SOURCE_INDEX:
-                    if key.rstrip("/").split("?")[0] == url.rstrip("/").split("?")[0]:
-                        entry = SOURCE_INDEX[key]
-                        break
+            text = ""
+            title = ""
 
-            if entry:
+            # 1. Try shard_manager / SQLite cache directly
+            try:
+                from shard_manager import get_text_from_cache
+                text = get_text_from_cache(story_id=sid, url=url)
+            except Exception:
+                pass
+
+            # 2. Try SOURCE_INDEX fallback
+            if not text and url:
+                entry = SOURCE_INDEX.get(url)
+                if not entry:
+                    clean = url.split("?")[0].rstrip("/")
+                    entry = SOURCE_INDEX.get(clean)
+                if not entry:
+                    for key in SOURCE_INDEX:
+                        if key.rstrip("/").split("?")[0] == url.rstrip("/").split("?")[0]:
+                            entry = SOURCE_INDEX[key]
+                            break
+                if entry:
+                    text = entry.get("text", "")
+                    title = entry.get("title", "")
+
+            # 3. Try reading shard file directly
+            if not text and sid:
+                try:
+                    from shard_manager import get_shard_key
+                    sk = get_shard_key(sid)
+                    sp = os.path.join(script_dir, "sources", f"shard_{sk}.json")
+                    if os.path.exists(sp):
+                        with open(sp, "r", encoding="utf-8") as sf:
+                            sdata = json.load(sf)
+                        clean_sid = sid.replace("factcheck_", "")
+                        text = sdata.get(clean_sid) or sdata.get(sid) or ""
+                except Exception:
+                    pass
+
+            if text:
                 self.send_json(200, {
-                    "url":   entry.get("url", ""),
-                    "title": entry.get("title", ""),
-                    "text":  entry.get("text", ""),
-                    "timestamp": entry.get("timestamp", "")
+                    "url":   url,
+                    "id":    sid,
+                    "title": title or sid or url,
+                    "text":  text
                 })
             else:
-                self.send_json(404, {"error": f"No scraped content found for: {url}"})
+                self.send_json(404, {"error": f"No scraped content found for: {url or sid}"})
             return
 
         self.send_response(404)
