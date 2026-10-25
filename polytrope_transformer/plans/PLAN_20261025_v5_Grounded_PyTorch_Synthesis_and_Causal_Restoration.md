@@ -30,10 +30,13 @@ This plan outlines the next critical phase:
 - Traced the complete trajectory from Phase 1 through Phase 5 (Cycles 1–101, Generations 1–7).
 - Audited all invariants: identified what made it into PyTorch vs what remained in heuristic relics.
 
-### Step 2: Temporal Causal Accumulator (Next Up)
-- Implement `TemporalCausalAccumulator(nn.Module)` in `src/polytrope_layers.py`.
-- Computes $\Sigma_{\text{cause}}(t) = \sum_{\tau \le t} \mathcal{F}_\tau - \mathcal{B}_\tau$.
-- Flags unsubstantiated conclusions when $\mathcal{B}_t > \Sigma_{\text{cause}}(t-1)$.
+### Step 2: Temporal Causal Accumulator & Dynamic Trajectory Cook-Off (ACTIVE)
+- Launched 3-Agent PyTorch Cook-off for the Dynamic Document Trajectory & Ribosomal Reading Head:
+  * Competitor 1 (Patriarch, 75M/25F, `ae4ad98c-e044-4588-baa2-241f6cefe765`): Strict proof defense, Derivation Law II Completeness Loss, zero false-positive working-out detection.
+  * Competitor 2 (Matriarch, 25M/75F, `7b9211f6-ac6a-4674-9428-547119e9ae84`): Continuous trajectory path integral, complexity wave entropy $H(t)$, and 4 colored force fields.
+  * Competitor 3 (Arbiter, 50M/50F, `092e640e-741a-48de-aa73-3b15c72966f4`): Vectorized Gumbel-Softmax codon transcription, running derivation prefix scan, and high-throughput execution.
+- Source of truth: `_VFT MD/Physics/Semantic_Gluon_and_Dynamic_Trajectory_Theory.md` (Sections 2, 3, 4, 5, 6, 7).
+- Benchmark requirement: Catching "maths without working out" with large insolvency penalties on ungrounded claims, passing grounded proofs with zero penalty, and running 25 epochs of real AdamW training.
 
 ### Step 3: Dense Pairwise Graph Training (Scheduled)
 - Implement `train_dense_gluon_graph.py`.
