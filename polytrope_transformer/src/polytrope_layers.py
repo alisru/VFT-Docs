@@ -157,6 +157,10 @@ class FractalPolytropeTransformer(nn.Module):
       4. Causal Z-axis projection (IS ALSO cause vs effect).
       5. Belief State Diagnostic Head (Operational Vector V, Cognitive Assumption A,
          Reality Strain eta, Framework Sanity Verdicts, and Worldview Scope E = mc^2).
+      6. Dynamic Document Trajectory Integrator (Path integral Sigma_D, polarity iota_D).
+      7. Ribosomal Reading Head (Codon emission, cumulative working-out ledger).
+      8. Derivation Law Completeness Loss (Mathematical detector of maths without working out).
+      9. Four Colored Gluon Gauge Forces (Red, Green, Blue, Magenta).
     """
     def __init__(self, embed_dim=384, num_heads=6):
         super().__init__()
@@ -166,6 +170,12 @@ class FractalPolytropeTransformer(nn.Module):
         self.modal_heads = ModalRayProjectionHead(embed_dim=embed_dim)
         self.causal_head = CausalProjectionHead(embed_dim=embed_dim)
         self.belief_head = BeliefStateDiagnosticHead(embed_dim=embed_dim)
+
+        # Dynamic Trajectory & Ribosomal Reading Head Suite
+        self.trajectory_integrator = DynamicTrajectoryIntegrator(embed_dim=embed_dim)
+        self.reading_head = RibosomalReadingHead(embed_dim=embed_dim)
+        self.color_forces = FourColoredGluonForces(embed_dim=embed_dim)
+        self.insolvency_loss_fn = DerivationLawCompletenessLoss()
 
     def forward(self, x, exon_mask=None, return_diagnostics=True):
         """
@@ -206,6 +216,19 @@ class FractalPolytropeTransformer(nn.Module):
             if return_diagnostics:
                 res["gluon_diagnostics"] = gluon_diag
                 res["belief_diagnostics"] = self.belief_head(attended_x)
+
+                # Dynamic Trajectory & Ribosomal Reading Diagnostics
+                traj_diag = self.trajectory_integrator(attended_x)
+                reading_diag = self.reading_head(attended_x, traj_diag)
+                forces_diag = self.color_forces(traj_diag["modal_probs"], traj_diag["topic_weights"])
+                insolvency_diag = self.insolvency_loss_fn(traj_diag, reading_diag)
+
+                res["trajectory_diagnostics"] = {
+                    "trajectory": traj_diag,
+                    "reading_head": reading_diag,
+                    "color_forces": forces_diag,
+                    "derivation_completeness": insolvency_diag
+                }
             return res
         else:
             routed_x, plane_probs, intent_probs = self.router(x)
@@ -899,4 +922,446 @@ class SemanticGluonTransformerBlock(nn.Module):
             x = x + attn_out
             x = x + self.mlp(self.norm2(x))
             return x
+
+
+# ==============================================================================
+# DYNAMIC TRAJECTORY & RIBOSOMAL READING HEAD SYNTHESIS (Cook-Off Master Synthesis)
+# Operationalizing Sections 2, 3, 4, 5, 6 of:
+# Semantic_Gluon_and_Dynamic_Trajectory_Theory.md
+# ==============================================================================
+
+class DynamicTrajectoryIntegrator(nn.Module):
+    """
+    Section 5 of Semantic Gluon & Dynamic Trajectory Theory:
+    Models continuous document motion through topic space via path integral:
+        Sigma_D = integral_0^1 w(t) * sigma(t) dt ≈ sum_t w(t) * sigma(t)
+    
+    Instantaneous operational charge vector:
+        sigma(t) = [c(t), p(t), r(t), g(t)]^T in Delta^3
+        - c(t): Constructive (Solution + Counteractive: is like / may be)
+        - p(t): Productive   (Solution + Active:        will be / can be)
+        - r(t): Reductive    (Problem + Active:         can't be / is not)
+        - g(t): Regressive   (Problem + Counteractive:  won't be / was like)
+
+    Outputs:
+        - Sigma_D: Integrated operational charge [B, 4]
+        - magnitude_D: ||Sigma_D|| = sqrt(C^2 + P^2 + R^2 + G^2)
+        - polarity_iota: ((C + P) - (R + G)) / (C + P + R + G + eps) in [-1, +1]
+        - arbiter_entropy: Shannon entropy across the 4 engines
+        - sigma_t: Instantaneous charge tensor [B, N, 4]
+        - modal_probs: 8-modal probabilities [B, N, 8]
+        - topic_weights: Continuous attention weights w(t) [B, N]
+    """
+    def __init__(self, embed_dim: int = 384, num_modals: int = 8, num_engines: int = 4):
+        super().__init__()
+        self.embed_dim = embed_dim
+        self.num_modals = num_modals
+        self.num_engines = num_engines
+
+        # Direct engine projection head
+        self.engine_head = nn.Sequential(
+            nn.Linear(embed_dim, embed_dim // 2),
+            nn.GELU(),
+            nn.Linear(embed_dim // 2, num_engines)
+        )
+
+        # 8-Modal boundary state head:
+        # 0: will_be, 1: can_be, 2: can't_be, 3: is_not,
+        # 4: won't_be, 5: was_like, 6: may_be, 7: is_like
+        self.modal_head = nn.Sequential(
+            nn.Linear(embed_dim, embed_dim // 2),
+            nn.GELU(),
+            nn.Linear(embed_dim // 2, num_modals)
+        )
+
+        # Continuous topical attention weight head w(t)
+        self.attn_head = nn.Sequential(
+            nn.Linear(embed_dim, embed_dim // 4),
+            nn.Tanh(),
+            nn.Linear(embed_dim // 4, 1)
+        )
+
+        # Invariant mapping matrix from 8 Modals to 4 Engines [8, 4]:
+        # Productive:   will_be (0), can_be (1)
+        # Reductive:    can't_be (2), is_not (3)
+        # Regressive:   won't_be (4), was_like (5)
+        # Constructive: may_be (6), is_like (7)
+        mapping = torch.zeros(num_modals, num_engines)
+        mapping[0, 1] = 1.0  # will_be -> P
+        mapping[1, 1] = 1.0  # can_be  -> P
+        mapping[2, 2] = 1.0  # can't_be -> R
+        mapping[3, 2] = 1.0  # is_not   -> R
+        mapping[4, 3] = 1.0  # won't_be -> G
+        mapping[5, 3] = 1.0  # was_like -> G
+        mapping[6, 0] = 1.0  # may_be   -> C
+        mapping[7, 0] = 1.0  # is_like  -> C
+        self.register_buffer("modal_to_engine", mapping)
+
+    def forward(
+        self,
+        x: torch.Tensor,
+        time_grid: Optional[torch.Tensor] = None
+    ) -> Dict[str, torch.Tensor]:
+        """
+        x: [B, N, D] sequence tensor
+        time_grid: optional [B, N] normalized sequence timestamps in [0, 1]
+        """
+        B, N, D = x.shape
+        device = x.device
+
+        # 1. Instantaneous 8-modal probabilities
+        modal_logits = self.modal_head(x)  # [B, N, 8]
+        modal_probs = F.softmax(modal_logits, dim=-1)
+
+        # 2. Instantaneous 4-engine operational charges
+        engine_logits = self.engine_head(x)  # [B, N, 4]
+        engine_direct = F.softmax(engine_logits, dim=-1)
+        engine_from_modals = torch.einsum('bni,ie->bne', modal_probs, self.modal_to_engine)
+        sigma_t = 0.5 * (engine_direct + engine_from_modals)  # [B, N, 4] in Delta^3
+
+        # 3. Path integral attention weights w(t)
+        attn_scores = self.attn_head(x).squeeze(-1)  # [B, N]
+        topic_weights = F.softmax(attn_scores, dim=-1)  # [B, N]
+
+        # 4. Total Bond Tensor Path Integral Sigma_D = sum_t w(t) * sigma(t)
+        Sigma_D = torch.einsum('bn,bne->be', topic_weights, sigma_t)  # [B, 4]
+        C, P, R, G = Sigma_D[:, 0], Sigma_D[:, 1], Sigma_D[:, 2], Sigma_D[:, 3]
+
+        # 5. Connection Magnitude ||Sigma_D|| = sqrt(C^2 + P^2 + R^2 + G^2)
+        magnitude_D = torch.sqrt(torch.sum(Sigma_D.pow(2), dim=-1) + 1e-8)  # [B]
+
+        # 6. Inclusive-Exclusive Polarity iota_D in [-1, +1]
+        # Inclusive: C + P; Exclusive: R + G
+        inclusive = C + P
+        exclusive = R + G
+        polarity_iota = (inclusive - exclusive) / (inclusive + exclusive + 1e-8)  # [B]
+
+        # 7. Arbiter Entropy across 4 engines
+        arbiter_entropy = -torch.sum(Sigma_D * torch.log(Sigma_D + 1e-8), dim=-1)  # [B]
+
+        return {
+            "Sigma_D": Sigma_D,
+            "magnitude_D": magnitude_D,
+            "polarity_iota": polarity_iota,
+            "arbiter_entropy": arbiter_entropy,
+            "sigma_t": sigma_t,
+            "modal_probs": modal_probs,
+            "topic_weights": topic_weights,
+            "C": C, "P": P, "R": R, "G": G
+        }
+
+
+class ComplexityWaveEstimator(nn.Module):
+    """
+    Section 6.3 of Semantic Gluon & Dynamic Trajectory Theory:
+    Measures document complexity wave H(t) and entropy convergence vs fragmentation:
+        H(t) = -sum_k p_k(t) log(p_k(t) + eps)
+    Calculates:
+        - linear drift slope beta = Cov(t, H) / Var(t) = dH/dt
+        - convergence ratio rho = H_late / H_early
+        - distinguishes axiomatic condensation (beta < 0, rho < 1.0)
+          from chaotic fragmentation (beta > 0, rho > 1.0).
+    """
+    def __init__(self):
+        super().__init__()
+
+    def forward(
+        self,
+        probs: torch.Tensor,
+        time_grid: Optional[torch.Tensor] = None
+    ) -> Dict[str, torch.Tensor]:
+        """
+        probs: [B, N, K] probability distribution across topics or modals
+        time_grid: [B, N] normalized timestamps in [0, 1]
+        """
+        B, N, K = probs.shape
+        device = probs.device
+
+        if time_grid is None:
+            time_grid = torch.linspace(0.0, 1.0, N, device=device).unsqueeze(0).expand(B, N)
+
+        # Instantaneous entropy H(t)
+        H_t = -torch.sum(probs * torch.log(probs + 1e-8), dim=-1)  # [B, N]
+
+        # Linear regression drift slope: beta = Cov(t, H) / Var(t)
+        t_mean = time_grid.mean(dim=-1, keepdim=True)
+        H_mean = H_t.mean(dim=-1, keepdim=True)
+
+        cov_t_H = torch.sum((time_grid - t_mean) * (H_t - H_mean), dim=-1)  # [B]
+        var_t = torch.sum((time_grid - t_mean).pow(2), dim=-1) + 1e-8       # [B]
+        entropy_slope = cov_t_H / var_t                                     # [B]
+
+        # Early vs Late entropy split (first third vs last third)
+        split_idx = max(N // 3, 1)
+        h_early = H_t[:, :split_idx].mean(dim=-1)
+        h_late = H_t[:, -split_idx:].mean(dim=-1)
+        delta_H = h_late - h_early
+        convergence_ratio = h_late / (h_early + 1e-8)
+
+        is_convergent = (entropy_slope < 0.0) & (convergence_ratio < 1.0)
+
+        return {
+            "H_t": H_t,
+            "entropy_slope": entropy_slope,
+            "h_early": h_early,
+            "h_late": h_late,
+            "delta_H": delta_H,
+            "convergence_ratio": convergence_ratio,
+            "is_convergent": is_convergent
+        }
+
+
+class RibosomalReadingHead(nn.Module):
+    """
+    Section 6 of Semantic Gluon & Dynamic Trajectory Theory:
+    Biological ribosome analogy: scans sequentially through token representations,
+    transcribing text into continuous and discrete Semantic DNA Codons:
+        Codon_i = <Q_i in {C,P,R,G}, M_i in {8 Modals}, iota_i in [-1, +1], H_i>
+
+    Maintains the causal cumulative working-out ledger with O(1) prefix sums:
+        A_{<t} = sum_{s < t} sigma(s) (1-step causal shift)
+    Computes antecedent working-out coverage:
+        W_antecedent(t) = min(C_{<t}, R_{<t}, G_{<t}) (strict three-pillar requirement)
+    Tracks Concept Survival Rate S_survival in [0, 1].
+    """
+    def __init__(self, embed_dim: int = 384, temperature: float = 1.0):
+        super().__init__()
+        self.embed_dim = embed_dim
+        self.temperature = temperature
+        self.complexity_estimator = ComplexityWaveEstimator()
+
+    def forward(
+        self,
+        x: torch.Tensor,
+        trajectory_outputs: Dict[str, torch.Tensor],
+        hard_discrete: bool = False
+    ) -> Dict[str, torch.Tensor]:
+        """
+        x: [B, N, D]
+        trajectory_outputs: output dict from DynamicTrajectoryIntegrator
+        """
+        B, N, D = x.shape
+        sigma_t = trajectory_outputs["sigma_t"]          # [B, N, 4]
+        modal_probs = trajectory_outputs["modal_probs"]  # [B, N, 8]
+
+        # 1. Discrete / Soft Codon Transcription via Gumbel-Softmax
+        if self.training:
+            modal_codons = F.gumbel_softmax(
+                torch.log(modal_probs + 1e-8),
+                tau=self.temperature,
+                hard=hard_discrete,
+                dim=-1
+            )
+        else:
+            if hard_discrete:
+                idx = torch.argmax(modal_probs, dim=-1)
+                modal_codons = F.one_hot(idx, num_classes=8).float()
+            else:
+                modal_codons = modal_probs
+
+        # Instantaneous Inclusive-Exclusive Polarity per codon
+        # Inclusive: C (0) + P (1); Exclusive: R (2) + G (3)
+        c_i = sigma_t[..., 0]
+        p_i = sigma_t[..., 1]
+        r_i = sigma_t[..., 2]
+        g_i = sigma_t[..., 3]
+        iota_codon = ((c_i + p_i) - (r_i + g_i)) / ((c_i + p_i + r_i + g_i) + 1e-8)  # [B, N]
+
+        # Codon Shannon Entropy
+        wave = self.complexity_estimator(modal_probs)
+        h_codon = wave["H_t"]  # [B, N]
+
+        # 2. Vectorized Causal Cumulative Working-Out Ledger A_{<t}
+        # 1-step causal shift: token t cannot consume its own derivation
+        cum_sigma = torch.cumsum(sigma_t, dim=1)  # [B, N, 4]
+        zeros = torch.zeros(B, 1, 4, device=x.device)
+        A_prior = torch.cat([zeros, cum_sigma[:, :-1, :]], dim=1)  # [B, N, 4]
+
+        C_prior = A_prior[..., 0]
+        P_prior = A_prior[..., 1]
+        R_prior = A_prior[..., 2]
+        G_prior = A_prior[..., 3]
+
+        # Law II three-pillar antecedent working out: min(C, R, G)
+        W_antecedent = torch.min(torch.min(C_prior, R_prior), G_prior)  # [B, N]
+
+        # 3. Concept Survival Rate S_survival in [0, 1]
+        # Concepts introduced in early inclusive phases that survive reductive stress
+        # and emerge into productive realization
+        split_idx = max(N // 2, 1)
+        early_intro = (c_i[:, :split_idx] + p_i[:, :split_idx]).mean(dim=-1)
+        late_prod = p_i[:, -split_idx:].mean(dim=-1)
+        late_regress = g_i[:, -split_idx:].mean(dim=-1)
+
+        concept_survival = (late_prod / (late_prod + late_regress + 1e-8)) * torch.clamp(early_intro, 0.0, 1.0)
+        concept_survival = torch.clamp(concept_survival, 0.0, 1.0)  # [B]
+
+        return {
+            "modal_codons": modal_codons,
+            "iota_codon": iota_codon,
+            "h_codon": h_codon,
+            "complexity_wave": wave,
+            "A_prior": A_prior,
+            "W_antecedent": W_antecedent,
+            "C_prior": C_prior,
+            "P_prior": P_prior,
+            "R_prior": R_prior,
+            "G_prior": G_prior,
+            "concept_survival_rate": concept_survival
+        }
+
+
+class DerivationLawCompletenessLoss(nn.Module):
+    """
+    Sections 3 & 6 of Semantic Gluon & Dynamic Trajectory Theory:
+    Mathematical detector of "Maths Without Working Out".
+    
+    Operational Derivation Law II (The Productive Law):
+      "If you want to define IS as something that will be you must go through a productive process
+       using what is not and is like opposing what it was like until it can be."
+      L_insolvency_law2(t) = ReLU(P_target(t) - kappa * W_antecedent(t))
+
+    Operational Derivation Law I (The Reductive Law):
+      "If you want to define IS as something that can't be you must go through a reductive process
+       using what it was like and can be opposing what its like until it's not."
+      L_insolvency_law1(t) = ReLU(R_target(t) - kappa * min(C_{<t}, P_{<t}, G_{<t}))
+    """
+    def __init__(self, kappa: float = 1.0, alpha_law1: float = 0.0):
+        super().__init__()
+        self.kappa = nn.Parameter(torch.tensor(kappa, dtype=torch.float32))
+        self.alpha_law1 = alpha_law1
+
+    def forward(
+        self,
+        trajectory_outputs: Dict[str, torch.Tensor],
+        reading_head_outputs: Dict[str, torch.Tensor]
+    ) -> Dict[str, torch.Tensor]:
+        modal_probs = trajectory_outputs["modal_probs"]  # [B, N, 8]
+        W_antecedent = reading_head_outputs["W_antecedent"]  # [B, N]
+        C_prior = reading_head_outputs["C_prior"]
+        P_prior = reading_head_outputs["P_prior"]
+        G_prior = reading_head_outputs["G_prior"]
+
+        effective_kappa = F.softplus(self.kappa)
+
+        # Law II: Productive Target = will_be (0) + 0.5 * can_be (1)
+        p_target = modal_probs[..., 0] + 0.5 * modal_probs[..., 1]  # [B, N]
+        insolvency_law2 = F.relu(p_target - effective_kappa * W_antecedent)  # [B, N]
+
+        # Law I: Reductive Target = can't_be (2) + 0.5 * is_not (3)
+        r_target = modal_probs[..., 2] + 0.5 * modal_probs[..., 3]  # [B, N]
+        W_law1 = torch.min(torch.min(C_prior, P_prior), G_prior)
+        insolvency_law1 = F.relu(r_target - effective_kappa * W_law1)
+
+        loss_law2 = insolvency_law2.mean()
+        loss_law1 = insolvency_law1.mean()
+        total_insolvency = loss_law2 + self.alpha_law1 * loss_law1
+
+        return {
+            "total_insolvency_loss": total_insolvency,
+            "law2_loss": loss_law2,
+            "law1_loss": loss_law1,
+            "insolvency_map": insolvency_law2,
+            "p_target": p_target,
+            "W_antecedent": W_antecedent
+        }
+
+
+class FourColoredGluonForces(nn.Module):
+    """
+    Section 4 of Semantic Gluon & Dynamic Trajectory Theory:
+    Four distinct colored cross-vectors acting as gluon force carriers mediating
+    quadrant interactions:
+        1. 🔴 Red Force:     will be <-> can't be  and  is like <-> won't be
+           (Active Opposition & Exclusion Strain - Critical Contradiction Flagger)
+        2. 🟢 Green Force:   can be <-> is not  and  may be <-> was like
+           (Possibility Testing & Negation Resolution - Research Gap Flagger)
+        3. 🔵 Blue Force:    will be -> may be  and  won't be -> is not
+           (Affirmative Realization Gap & Exclusion Pinning - Execution Maturity)
+        4. 🟣 Magenta Force: is like -> can be  and  was like -> can't be
+           (Analogical Elevation & Impossibility Locking - Rule Learning)
+    """
+    def __init__(self, embed_dim: int = 384):
+        super().__init__()
+        self.embed_dim = embed_dim
+
+    def forward(
+        self,
+        modal_probs: torch.Tensor,
+        topic_weights: Optional[torch.Tensor] = None
+    ) -> Dict[str, torch.Tensor]:
+        """
+        modal_probs: [B, N, 8]
+        8 Modals:
+          0: will_be,  1: can_be,   2: can't_be, 3: is_not,
+          4: won't_be, 5: was_like, 6: may_be,   7: is_like
+        """
+        m_will_be  = modal_probs[..., 0]
+        m_can_be   = modal_probs[..., 1]
+        m_cant_be  = modal_probs[..., 2]
+        m_is_not   = modal_probs[..., 3]
+        m_wont_be  = modal_probs[..., 4]
+        m_was_like = modal_probs[..., 5]
+        m_may_be   = modal_probs[..., 6]
+        m_is_like  = modal_probs[..., 7]
+
+        # 1. 🔴 Red Force (Active Opposition & Exclusion Strain)
+        red_force = 0.5 * (
+            (m_will_be * m_cant_be) +
+            (m_is_like * m_wont_be)
+        )  # [B, N]
+
+        # 2. 🟢 Green Force (Possibility Testing & Negation Resolution)
+        green_force = 0.5 * (
+            (m_can_be * m_is_not) +
+            (m_may_be * m_was_like)
+        )  # [B, N]
+
+        # 3. 🔵 Blue Force (Affirmative Realization Gap & Exclusion Pinning)
+        blue_force = 0.5 * (
+            (m_will_be * m_may_be) +
+            (m_wont_be * m_is_not)
+        )  # [B, N]
+
+        # 4. 🟣 Magenta Force (Analogical Elevation & Impossibility Locking)
+        magenta_force = 0.5 * (
+            (m_is_like * m_can_be) +
+            (m_was_like * m_cant_be)
+        )  # [B, N]
+
+        forces_tensor = torch.stack([red_force, green_force, blue_force, magenta_force], dim=1)  # [B, 4, N]
+
+        if topic_weights is not None:
+            # Integrate across document sequence
+            integrated_forces = torch.einsum('bn,bcn->bc', topic_weights, forces_tensor)  # [B, 4]
+        else:
+            integrated_forces = forces_tensor.mean(dim=-1)  # [B, 4]
+
+        return {
+            "forces_tensor": forces_tensor,
+            "integrated_forces": integrated_forces,
+            "red_opposition": integrated_forces[:, 0],
+            "green_testing": integrated_forces[:, 1],
+            "blue_realization": integrated_forces[:, 2],
+            "magenta_elevation": integrated_forces[:, 3]
+        }
+
+    def compute_semantic_git_shear(
+        self,
+        doc_a_modals: torch.Tensor,
+        doc_b_modals: torch.Tensor
+    ) -> torch.Tensor:
+        """
+        Section 7 (Case C: Semantic Merge Conflict):
+        Measures contradiction shear between Document A and Document B.
+        High shear when Doc A asserts 'will be' while Doc B asserts 'can't be'.
+        """
+        m_a_will = doc_a_modals[..., 0].mean(dim=-1)
+        m_b_cant = doc_b_modals[..., 2].mean(dim=-1)
+        m_b_will = doc_b_modals[..., 0].mean(dim=-1)
+        m_a_cant = doc_a_modals[..., 2].mean(dim=-1)
+
+        shear = (m_a_will * m_b_cant) + (m_b_will * m_a_cant)
+        return shear
+
 
