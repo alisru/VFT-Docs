@@ -415,22 +415,25 @@ class OrientedGluonFluxBondHead(nn.Module):
         causal_order = (indices.unsqueeze(0) - indices.unsqueeze(1))  # i - j
         chiral_mask = torch.where(causal_order >= 0, torch.zeros_like(M_color), -2.0 * torch.ones_like(M_color))
 
-        # 3. Cornell Confinement along causal Z
+        # 3. Cornell Confinement along causal Z (bounded regulator to prevent Coulomb singularity)
         r_ij = torch.abs(z.unsqueeze(2) - z.unsqueeze(1))  # [B, N, N]
+        r_bounded = torch.clamp(r_ij, min=0.1)
         alpha = F.relu(self.alpha_s) + 1e-5
         sig = F.relu(self.sigma) + 1e-5
-        V_cornell = (-alpha / (r_ij + self.eps)) + (sig * r_ij)
+        coulomb = -alpha / (r_bounded + self.eps)
+        string_tension = sig * r_ij
+        V_cornell = coulomb + string_tension
 
         # 4. String Snapping at r_critical (1.529)
         snapped_mask = (r_ij >= self.r_critical)
-        snap_barrier = torch.where(snapped_mask, 10.0 * (r_ij - self.r_critical).pow(2) + 5.0, torch.zeros_like(r_ij))
+        snap_barrier = torch.where(snapped_mask, 5.0 * (r_ij - self.r_critical).pow(2) + 2.0, torch.zeros_like(r_ij))
 
         # 5. Dangling Bond Penalty (unclosed 3' ingress without preceding 5' root)
         dangle_scale = F.softplus(self.dangle_penalty_scale)
         open_bond_penalty = torch.norm(B_ingress, dim=-1, keepdim=True) * 0.05
 
-        # Unified Oriented Gluon Flux Bond
-        G_flux_bond = (M_color + chiral_mask) - V_cornell - snap_barrier - (dangle_scale * open_bond_penalty)
+        # Unified Oriented Gluon Flux Bond (smooth physical scaling)
+        G_flux_bond = (M_color + chiral_mask) - (0.2 * V_cornell) - snap_barrier - (dangle_scale * open_bond_penalty)
 
         return B_ingress, F_egress, z, V_cornell, snapped_mask, G_flux_bond
 
