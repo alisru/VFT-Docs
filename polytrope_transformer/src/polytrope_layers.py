@@ -150,8 +150,13 @@ class CausalProjectionHead(nn.Module):
 class FractalPolytropeTransformer(nn.Module):
     """
     Full (7x6+n) Fractal Polytrope Transformer Model.
-    Integrates the sequence-level Semantic Gluon Attention block with the
-    token-level 42-cell Q-Plane intent router and modal ray projection heads.
+    Integrates:
+      1. Sequence-level Semantic Gluon Attention block with oriented 5' -> 3' flux bonds.
+      2. Token-level 42-cell Q-Plane intent router.
+      3. Modal ray projection heads (can_be, is_not, is_like, was_like).
+      4. Causal Z-axis projection (IS ALSO cause vs effect).
+      5. Belief State Diagnostic Head (Operational Vector V, Cognitive Assumption A,
+         Reality Strain eta, Framework Sanity Verdicts, and Worldview Scope E = mc^2).
     """
     def __init__(self, embed_dim=384, num_heads=6):
         super().__init__()
@@ -160,6 +165,7 @@ class FractalPolytropeTransformer(nn.Module):
         self.router = QPlaneIntentGate(embed_dim=embed_dim)
         self.modal_heads = ModalRayProjectionHead(embed_dim=embed_dim)
         self.causal_head = CausalProjectionHead(embed_dim=embed_dim)
+        self.belief_head = BeliefStateDiagnosticHead(embed_dim=embed_dim)
 
     def forward(self, x, exon_mask=None, return_diagnostics=True):
         """
@@ -199,13 +205,14 @@ class FractalPolytropeTransformer(nn.Module):
             }
             if return_diagnostics:
                 res["gluon_diagnostics"] = gluon_diag
+                res["belief_diagnostics"] = self.belief_head(attended_x)
             return res
         else:
             routed_x, plane_probs, intent_probs = self.router(x)
             base_coord, angles, rays = self.modal_heads(routed_x)
             cause_vec, effect_vec, z_val = self.causal_head(routed_x)
             
-            return {
+            res = {
                 "routed_embed": routed_x,
                 "plane_probs": plane_probs,
                 "intent_probs": intent_probs,
@@ -216,6 +223,9 @@ class FractalPolytropeTransformer(nn.Module):
                 "effect_vec": effect_vec,
                 "z_causal": z_val
             }
+            if return_diagnostics:
+                res["belief_diagnostics"] = self.belief_head(routed_x)
+            return res
 
 class GeodesicLoss(nn.Module):
     """
@@ -338,87 +348,116 @@ class RibosomalSplicingGate(nn.Module):
         return self.gate(x).squeeze(-1)
 
 
-class CausalValenceHead(nn.Module):
+class OrientedGluonFluxBondHead(nn.Module):
     """
-    Computes Ingress (B_i, backward requirements) and Egress (F_j, forward obligations)
-    vectors to ensure causal closure and penalize dangling claims.
-    """
-    def __init__(self, embed_dim: int = 384, valence_dim: int = 64):
-        super().__init__()
-        self.valence_dim = valence_dim
-        self.ingress_proj = nn.Linear(embed_dim, valence_dim, bias=False)
-        self.egress_proj = nn.Linear(embed_dim, valence_dim, bias=False)
-        self.dangle_penalty_scale = nn.Parameter(torch.tensor(0.2))
-
-    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-        """
-        x: [B, N, D]
-        Returns:
-            B_ingress: [B, N, valence_dim]
-            F_egress:  [B, N, valence_dim]
-            M_valence: [B, N, N] causal valence affinity matrix
-        """
-        B_ingress = self.ingress_proj(x)
-        F_egress = self.egress_proj(x)
-
-        # Scaled dot-product affinity between ingress of i and egress of j
-        M_raw = torch.bmm(B_ingress, F_egress.transpose(1, 2)) / math.sqrt(self.valence_dim)
-
-        # Directional causal modulation: egress tokens j typically precede or coincide with ingress tokens i
-        seq_len = x.size(1)
-        indices = torch.arange(seq_len, device=x.device)
-        causal_order = (indices.unsqueeze(0) - indices.unsqueeze(1))  # i - j
-        causal_mask = torch.where(causal_order >= 0, torch.zeros_like(M_raw), -0.5 * torch.ones_like(M_raw))
-
-        # Dangling claim penalty
-        dangle_scale = F.softplus(self.dangle_penalty_scale)
-        open_bond_penalty = torch.norm(B_ingress, dim=-1, keepdim=True) * 0.05
-
-        M_valence = M_raw + causal_mask - (dangle_scale * open_bond_penalty)
-        return B_ingress, F_egress, M_valence
-
-
-class CornellConfinementHead(nn.Module):
-    """
-    Computes the Cornell Confinement Potential along the causal Z-axis:
-        V_Cornell(r_{ij}) = -alpha_s / (r_{ij} + eps) + sigma * r_{ij}
-    Where r_{ij} = |z_i - z_j|.
-    Detects string snapping when r_{ij} >= r_critical (default 1.529).
+    Oriented Gluon Flux Bond Head:
+    Unifies the 5' -> 3' directional phosphodiester causal backbone with
+    the QCD Cornell Confinement potential.
+    
+    The Gluon Flux Tube forms between:
+      - 5' Egress Source (Token j, F_j in R^{d_v})
+      - 3' Ingress Sink   (Token i, B_i in R^{d_v})
+    
+    Governed by:
+      G_{ij}^{flux} = ( (B_i . F_j) / sqrt(d_v) ) * Theta(5' -> 3') - V_Cornell(r_{ij}) - Delta_snap
+    
+    Where:
+      - Theta(5' -> 3'): 0.0 for causal forward/coincident flow (i >= j), -2.0 for reverse unphysical leaps (j > i)
+      - V_Cornell(r_ij) = -alpha_s / (r_ij + eps) + sigma * r_ij along the causal Z-axis (|z_i - z_j|)
+      - Delta_snap: sharp repulsive barrier when r_ij >= r_critical (1.529), severing the flux bond
+      - Open Bond Penalty: penalizes unclosed ingress B_i (dangling 3' bond without 5' root)
     """
     def __init__(
         self,
         embed_dim: int = 384,
+        valence_dim: int = 64,
         alpha_s: float = 0.35,
         sigma: float = 0.85,
         r_critical: float = 1.529,
         eps: float = 1e-4
     ):
         super().__init__()
-        self.z_head = nn.Linear(embed_dim, 1)
-        self.alpha_s = nn.Parameter(torch.tensor(alpha_s))
-        self.sigma = nn.Parameter(torch.tensor(sigma))
+        self.valence_dim = valence_dim
         self.r_critical = r_critical
         self.eps = eps
 
-    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        # 5' Egress & 3' Ingress projections
+        self.ingress_proj = nn.Linear(embed_dim, valence_dim, bias=False)
+        self.egress_proj = nn.Linear(embed_dim, valence_dim, bias=False)
+        
+        # Causal Z-axis projection for Cornell potential
+        self.z_head = nn.Linear(embed_dim, 1)
+        self.alpha_s = nn.Parameter(torch.tensor(alpha_s))
+        self.sigma = nn.Parameter(torch.tensor(sigma))
+        self.dangle_penalty_scale = nn.Parameter(torch.tensor(0.2))
+
+    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
         """
         x: [B, N, D]
         Returns:
-            z: [B, N] causal positions
-            V_cornell: [B, N, N] Cornell potential
-            snapped_mask: [B, N, N] boolean tensor of snapped strings (r >= r_c)
+            B_ingress: [B, N, valence_dim]
+            F_egress:  [B, N, valence_dim]
+            z_causal:  [B, N]
+            V_cornell: [B, N, N]
+            snapped_mask: [B, N, N]
+            G_flux_bond: [B, N, N] unified oriented gluon bond matrix
         """
+        B, N, D = x.shape
+        B_ingress = self.ingress_proj(x)
+        F_egress = self.egress_proj(x)
         z = self.z_head(x).squeeze(-1)
-        r_ij = torch.abs(z.unsqueeze(2) - z.unsqueeze(1))
 
+        # 1. Scaled dot-product color-anticolor pairing: (B_i . F_j) / sqrt(d_v)
+        M_color = torch.bmm(B_ingress, F_egress.transpose(1, 2)) / math.sqrt(self.valence_dim)
+
+        # 2. 5' -> 3' Directional backbone orientation
+        indices = torch.arange(N, device=x.device)
+        causal_order = (indices.unsqueeze(0) - indices.unsqueeze(1))  # i - j
+        chiral_mask = torch.where(causal_order >= 0, torch.zeros_like(M_color), -2.0 * torch.ones_like(M_color))
+
+        # 3. Cornell Confinement along causal Z
+        r_ij = torch.abs(z.unsqueeze(2) - z.unsqueeze(1))  # [B, N, N]
         alpha = F.relu(self.alpha_s) + 1e-5
         sig = F.relu(self.sigma) + 1e-5
+        V_cornell = (-alpha / (r_ij + self.eps)) + (sig * r_ij)
 
-        coulomb = -alpha / (r_ij + self.eps)
-        string_tension = sig * r_ij
-        V_cornell = coulomb + string_tension
-
+        # 4. String Snapping at r_critical (1.529)
         snapped_mask = (r_ij >= self.r_critical)
+        snap_barrier = torch.where(snapped_mask, 10.0 * (r_ij - self.r_critical).pow(2) + 5.0, torch.zeros_like(r_ij))
+
+        # 5. Dangling Bond Penalty (unclosed 3' ingress without preceding 5' root)
+        dangle_scale = F.softplus(self.dangle_penalty_scale)
+        open_bond_penalty = torch.norm(B_ingress, dim=-1, keepdim=True) * 0.05
+
+        # Unified Oriented Gluon Flux Bond
+        G_flux_bond = (M_color + chiral_mask) - V_cornell - snap_barrier - (dangle_scale * open_bond_penalty)
+
+        return B_ingress, F_egress, z, V_cornell, snapped_mask, G_flux_bond
+
+
+class CausalValenceHead(nn.Module):
+    """
+    Computes Ingress (B_i) and Egress (F_j) vectors for backward compatibility.
+    """
+    def __init__(self, embed_dim: int = 384, valence_dim: int = 64):
+        super().__init__()
+        self.gluon_bond = OrientedGluonFluxBondHead(embed_dim=embed_dim, valence_dim=valence_dim)
+
+    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        B_ingress, F_egress, z, V_cornell, snapped_mask, G_flux = self.gluon_bond(x)
+        return B_ingress, F_egress, G_flux
+
+
+class CornellConfinementHead(nn.Module):
+    """
+    Computes Cornell Confinement along causal Z for backward compatibility.
+    """
+    def __init__(self, embed_dim: int = 384, alpha_s: float = 0.35, sigma: float = 0.85, r_critical: float = 1.529):
+        super().__init__()
+        self.gluon_bond = OrientedGluonFluxBondHead(embed_dim=embed_dim, alpha_s=alpha_s, sigma=sigma, r_critical=r_critical)
+
+    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        B_ingress, F_egress, z, V_cornell, snapped_mask, G_flux = self.gluon_bond(x)
         return z, V_cornell, snapped_mask
 
 
@@ -476,12 +515,132 @@ class LuminescenceAttenuationHead(nn.Module):
         return tau_ij, luminescence
 
 
+class BeliefStateDiagnosticHead(nn.Module):
+    """
+    Belief State Diagnostic Head:
+    Tracks the assumed belief state held within documents and sentences,
+    derived from 'The Unbelievable Truth: A Reader's Guide' and the VFT Cognitive Framework.
+    
+    Evaluates:
+      1. Operational Vector (V in [0, 1]): Physical possibility / empirical constraint (Q3 Physical).
+      2. Cognitive Assumption (A in [0, 1]): Worldview expectation / modeled possibility (Q2 What).
+      3. Assertion State (S in [0, 1]): Declared truth polarity (1 = Asserted True, 0 = Asserted False).
+      4. Reality Strain: eta = |V - A|
+           - eta < 0.2: Igneous Stone (reality-hardened coherence)
+           - eta > 0.6: Fired Brick (brittle dogma / delusion)
+      5. 4 Framework Verdicts:
+           - Sane (Progressive): V=1, A=1 (Productive execution; work succeeds)
+           - Sane (Calibrated):  V=0, A=0 (Accurate boundary awareness; energy preserved)
+           - Insane (Delusional): V=0, A=1 (Collapse against physical constraints; perpetual motion fallacy)
+           - Insane (Dogmatic):   V=1, A=0 (Orthodoxy denies functional anomalies to preserve doctrine)
+      6. Worldview Scope & Resistance (The E = mc^2 Psychological Field):
+           - Scientific Knowledge (SK) vs Spiritual Knowledge (SpK)
+           - Resistance = (SK / SpK) + (SpK / SK)
+           - Scope = 1 / Resistance in (0, 0.5] (Maximum Scope = 0.5 at SK = SpK)
+           - Answer = Idea Mass (m) * Scope:
+               Answer == 1.0 -> Truth (The "Click" / Amazing)
+               Answer < 1.0  -> Lie / Miss (or Funny near-miss paradox)
+               Answer > 1.0  -> Insult / Attack (High emotional energy collision)
+      7. 6 Personal Belief States:
+           - Truth (=), Will to Know (+?), Lie (<), Indifferent (~?), Insult (>), Will Not to Know (-?)
+    """
+    def __init__(self, embed_dim: int = 384):
+        super().__init__()
+        self.embed_dim = embed_dim
+
+        # Operational Vector Head (V: physical possibility from Q3 grounding)
+        self.v_head = nn.Sequential(
+            nn.Linear(embed_dim, embed_dim // 4),
+            nn.GELU(),
+            nn.Linear(embed_dim // 4, 1),
+            nn.Sigmoid()
+        )
+
+        # Cognitive Assumption Head (A: modeled possibility from Q2 expectation)
+        self.a_head = nn.Sequential(
+            nn.Linear(embed_dim, embed_dim // 4),
+            nn.GELU(),
+            nn.Linear(embed_dim // 4, 1),
+            nn.Sigmoid()
+        )
+
+        # Assertion Polarity Head (S: asserted true vs asserted false)
+        self.assertion_head = nn.Sequential(
+            nn.Linear(embed_dim, embed_dim // 4),
+            nn.GELU(),
+            nn.Linear(embed_dim // 4, 1),
+            nn.Sigmoid()
+        )
+
+        # Scientific Knowledge (SK) vs Spiritual Knowledge (SpK) heads for Worldview Scope
+        self.sk_head = nn.Linear(embed_dim, 1)
+        self.spk_head = nn.Linear(embed_dim, 1)
+
+        # Idea Mass Head (m)
+        self.mass_head = nn.Linear(embed_dim, 1)
+
+        # 6 Personal Belief States classifier
+        # 0: Truth (=), 1: Will to Know (+?), 2: Lie (<), 3: Indifferent (~?), 4: Insult (>), 5: Will Not to Know (-?)
+        self.belief_state_classifier = nn.Linear(embed_dim, 6)
+
+    def forward(self, x: torch.Tensor) -> Dict[str, Union[torch.Tensor, Dict[str, torch.Tensor]]]:
+        """
+        x: [B, D] or [B, N, D]
+        """
+        v = self.v_head(x).squeeze(-1)
+        a = self.a_head(x).squeeze(-1)
+        s = self.assertion_head(x).squeeze(-1)
+
+        # Reality Strain eta = |V - A|
+        eta = torch.abs(v - a)
+
+        # 4 Framework Verdict Probabilities
+        p_sane_progressive = v * a
+        p_sane_calibrated = (1.0 - v) * (1.0 - a)
+        p_insane_delusional = (1.0 - v) * a
+        p_insane_dogmatic = v * (1.0 - a)
+
+        # Worldview Scope & Resistance: E = mc^2
+        sk = F.softplus(self.sk_head(x).squeeze(-1)) + 0.1
+        spk = F.softplus(self.spk_head(x).squeeze(-1)) + 0.1
+        resistance = (sk / spk) + (spk / sk)
+        scope = 1.0 / resistance
+        mass = F.softplus(self.mass_head(x).squeeze(-1)) + 0.1
+        answer_energy = mass * scope
+
+        # 6 Personal Belief States logits & probabilities
+        belief_logits = self.belief_state_classifier(x)
+        belief_probs = F.softmax(belief_logits, dim=-1)
+
+        return {
+            "operational_vector_v": v,
+            "cognitive_assumption_a": a,
+            "assertion_polarity_s": s,
+            "reality_strain_eta": eta,
+            "verdict_probs": {
+                "sane_progressive": p_sane_progressive,
+                "sane_calibrated": p_sane_calibrated,
+                "insane_delusional": p_insane_delusional,
+                "insane_dogmatic": p_insane_dogmatic
+            },
+            "worldview": {
+                "sk": sk,
+                "spk": spk,
+                "resistance": resistance,
+                "scope": scope,
+                "mass": mass,
+                "answer_energy": answer_energy
+            },
+            "belief_state_probs": belief_probs
+        }
+
+
 class SemanticGluonAttention(nn.Module):
     """
     Semantic Gluon Attention Layer (nn.Module).
     Implements the full unified Gen 7 equation with Ribosomal Exon Splicing,
-    Causal Valence Shells, Cornell Potential Confinement, 7-Planes Gauge Friction,
-    and Optical Luminescence Attenuation.
+    Oriented 5' -> 3' Gluon Flux Bonds (Causal Valence + Cornell Confinement),
+    7-Planes Reality Gauge Friction, and Optical Luminescence Attenuation.
     """
     def __init__(
         self,
@@ -513,9 +672,10 @@ class SemanticGluonAttention(nn.Module):
 
         # Physics Sub-Heads
         self.splicing_gate = RibosomalSplicingGate(embed_dim=embed_dim)
-        self.valence_head = CausalValenceHead(embed_dim=embed_dim, valence_dim=valence_dim)
-        self.confinement_head = CornellConfinementHead(
+        # Unified Oriented 5' -> 3' Gluon Flux Bond Head
+        self.gluon_bond_head = OrientedGluonFluxBondHead(
             embed_dim=embed_dim,
+            valence_dim=valence_dim,
             alpha_s=alpha_s,
             sigma=sigma,
             r_critical=r_critical
@@ -524,8 +684,7 @@ class SemanticGluonAttention(nn.Module):
         self.luminescence_head = LuminescenceAttenuationHead(embed_dim=embed_dim, tau_0=tau_0)
 
         # Balancing scale parameters (learned)
-        self.valence_weight = nn.Parameter(torch.tensor(0.3))
-        self.cornell_weight = nn.Parameter(torch.tensor(0.5))
+        self.gluon_bond_weight = nn.Parameter(torch.tensor(0.4))
         self.friction_weight = nn.Parameter(torch.tensor(0.3))
 
     def compute_splicing_mask(
@@ -561,11 +720,9 @@ class SemanticGluonAttention(nn.Module):
         exon_probs = self.splicing_gate(x)
         splicing_mask, binary_exon_mask = self.compute_splicing_mask(exon_probs, exon_mask)
 
-        B_ingress, F_egress, M_valence = self.valence_head(x)
-        M_valence_expanded = M_valence.unsqueeze(1)
-
-        z, V_cornell, snapped_mask = self.confinement_head(x)
-        V_cornell_expanded = V_cornell.unsqueeze(1)
+        # Oriented 5' -> 3' Gluon Flux Bond (Valence + Cornell Confinement)
+        B_ingress, F_egress, z, V_cornell, snapped_mask, G_flux_bond = self.gluon_bond_head(x)
+        G_flux_expanded = G_flux_bond.unsqueeze(1)
 
         plane_probs, gamma_friction = self.gauge_head(x)
         gamma_expanded = gamma_friction.unsqueeze(1)
@@ -573,11 +730,10 @@ class SemanticGluonAttention(nn.Module):
         tau_ij, luminescence = self.luminescence_head(x)
         luminescence_expanded = luminescence.unsqueeze(1)
 
-        w_val = F.softplus(self.valence_weight)
-        w_cor = F.softplus(self.cornell_weight)
+        w_gluon = F.softplus(self.gluon_bond_weight)
         w_fric = F.softplus(self.friction_weight)
 
-        s_physical = s_base + (w_val * M_valence_expanded) - (w_cor * V_cornell_expanded) - (w_fric * gamma_expanded)
+        s_physical = s_base + (w_gluon * G_flux_expanded) - (w_fric * gamma_expanded)
         s_modulated = s_physical * luminescence_expanded
         s_final = s_modulated + splicing_mask
 
@@ -598,7 +754,8 @@ class SemanticGluonAttention(nn.Module):
             "binary_exon_mask": binary_exon_mask,
             "B_ingress": B_ingress,
             "F_egress": F_egress,
-            "M_valence": M_valence,
+            "M_valence": G_flux_bond,
+            "G_flux_bond": G_flux_bond,
             "z_causal": z,
             "V_cornell": V_cornell,
             "snapped_mask": snapped_mask,
