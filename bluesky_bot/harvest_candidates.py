@@ -378,13 +378,19 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
                 url = s.get("url", "")
                 text = s.get("text", "")
                 bias = get_outlet_bias(pub_name)
+                # Cap secondary sources in multi-source cluster dossier to 1,200 chars
+                s_clean = text.strip()
+                if idx > 1 and len(s_clean) > 1200:
+                    s_clean = s_clean[:1200].rsplit(" ", 1)[0] + "..."
+                elif idx == 1 and len(s_clean) > 2500:
+                    s_clean = s_clean[:2500].rsplit(" ", 1)[0] + "..."
                 sources_summary.append({
                     "publisher": pub_name,
                     "editorial_bias": bias,
                     "url": url,
-                    "snippet": text[:400].strip()
+                    "snippet": s_clean[:400].strip()
                 })
-                dossier_lines.append(f"\n[Source {idx} — {pub_name} (Bias: {bias})] (URL: {url}):\n{text.strip()}")
+                dossier_lines.append(f"\n[Source {idx} — {pub_name} (Bias: {bias})] (URL: {url}):\n{s_clean}")
                 
             primary_c["cluster_sources"] = sources_summary
             primary_c["cross_source_dossier"] = "\n".join(dossier_lines)
@@ -1284,11 +1290,13 @@ def run_harvest():
                 if subject_approx in seen_ids:
                     continue
 
+                post_date = getattr(post.record, 'created_at', None) or getattr(post, 'indexed_at', None)
                 cands.append({
                     "url": article_url,
                     "target_url": post_url,
                     "mode": "root",
                     "text": text,
+                    "pub_date": str(post_date) if post_date else None,
                     "subject": text[:30].strip() + "..."
                 })
                 seen_urls.add(normalized)
@@ -1374,11 +1382,13 @@ def run_harvest():
                             if author_handle in seen_bsky_authors:
                                 continue
                             
+                            post_date = getattr(item.post.record, 'created_at', None) or getattr(item.post, 'indexed_at', None)
                             bsky_candidates.append({
                                 "url": article_url,
                                 "target_url": post_url,
                                 "mode": "root",
                                 "text": text,
+                                "pub_date": str(post_date) if post_date else None,
                                 "subject": text[:30].strip() + "..."
                             })
                             seen_bsky_authors.add(author_handle)
@@ -1426,11 +1436,13 @@ def run_harvest():
                                 if is_duplicate_story(text, article_url, check_batch=False):
                                     continue
                                 
+                                post_date = getattr(item.post.record, 'created_at', None) or getattr(item.post, 'indexed_at', None)
                                 bsky_candidates.append({
                                     "url": article_url,
                                     "target_url": post_url,
                                     "mode": "root",
                                     "text": text,
+                                    "pub_date": str(post_date) if post_date else None,
                                     "subject": text[:30].strip() + "..."
                                 })
                         except Exception as ex:
@@ -1501,6 +1513,9 @@ def run_harvest():
 
         if body and not body.startswith("Error") and len(body.strip()) >= 200 and not is_paywall_or_ad:
             article_text_clean = body.strip()
+            # Cap single article text at 2,500 characters to prevent prompt token bloat
+            if len(article_text_clean) > 2500:
+                article_text_clean = article_text_clean[:2500].rsplit(" ", 1)[0] + "..."
         
             # Check if this candidate is from Bluesky
             target_url = c.get("target_url", "")

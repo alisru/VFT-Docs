@@ -222,6 +222,13 @@ def process_and_update_coordinates(cfg, file_path):
                     sgn_psi = "+" if real_psi >= 0 else ""
                     cfg["posts"][2] = post.split("Resulting Judgement:")[0] + f"Resulting Judgement: ({sgn_u}{real_u:.2f}, {sgn_psi}{real_psi:.2f}) — {label}"
             updated = True
+
+    if updated:
+        try:
+            from generate_graph import enforce_deterministic_trajectory
+            cfg = enforce_deterministic_trajectory(cfg)
+        except Exception as te:
+            print(f"Warning: Could not enforce deterministic trajectory in registry update: {te}")
             
     return updated
 

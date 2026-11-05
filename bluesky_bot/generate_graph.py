@@ -45,6 +45,71 @@ def get_path_name(claim_u, claim_psi, real_u, real_psi):
         
     return f"{exit_name} into {entry_name}"
 
+def enforce_deterministic_trajectory(story):
+    """
+    Enforces the Deterministic Trajectory Invariant programmatically.
+    Recalculates the exact mathematical path name from (claim_u, claim_psi) -> (real_u, real_psi).
+    Validates and overwrites:
+      - Post 3: Verdict line 'Verdict: [PASS/FAIL/CONDITIONAL] — [Path Name].'
+      - The Trajectory post: 'The Trajectory: The Path of [Path Name].'
+    Ensures that any trajectory where real_u <= 0 can NEVER contain 'Redemption'.
+    """
+    import re
+    try:
+        claim_u = float(story.get("claim_u", 0.0))
+        claim_psi = float(story.get("claim_psi", 0.0))
+        real_u = float(story.get("real_u", 0.0))
+        real_psi = float(story.get("real_psi", 0.0))
+    except (ValueError, TypeError):
+        return story
+
+    math_path = get_path_name(claim_u, claim_psi, real_u, real_psi)
+    posts = story.get("posts", [])
+    if not isinstance(posts, list) or len(posts) < 4:
+        return story
+
+    # 1. Post 3: The Verdict line
+    v_post = posts[3]
+    v_match = re.search(r"^(Verdict:\s*(?:PASS|FAIL|CONDITIONAL)\s*[-—–]\s*)([^.\n]+)(\.?)", v_post, flags=re.MULTILINE)
+    if v_match:
+        curr_label = v_match.group(2).strip()
+        needs_fix = False
+        if real_u <= 0 and "Redemption" in curr_label:
+            needs_fix = True
+        elif "Path of" in curr_label and not (math_path.lower() in curr_label.lower() or math_path.split()[-1].lower() in curr_label.lower()):
+            needs_fix = True
+            
+        if needs_fix:
+            new_label = f"The Path of {math_path}"
+            v_post = v_post[:v_match.start(2)] + new_label + v_post[v_match.end(2):]
+            posts[3] = v_post
+    elif real_u <= 0 and "Redemption" in v_post:
+        v_post = re.sub(r"The Path of Redemption", f"The Path of {math_path}", v_post)
+        v_post = re.sub(r"into Redemption", "into Destruction", v_post)
+        posts[3] = v_post
+
+    # 2. The Trajectory post
+    for idx, p in enumerate(posts):
+        if "The Trajectory:" in p:
+            t_match = re.search(r"^(The Trajectory:\s*The Path of\s*)([^.\n]+)(\.?)", p, flags=re.MULTILINE)
+            if t_match:
+                curr_t = t_match.group(2).strip()
+                if real_u <= 0 and "Redemption" in curr_t:
+                    p = p[:t_match.start(2)] + math_path + p[t_match.end(2):]
+                elif not (math_path.lower() in curr_t.lower() or math_path.split()[-1].lower() in curr_t.lower()):
+                    p = p[:t_match.start(2)] + math_path + p[t_match.end(2):]
+            elif real_u <= 0 and "Redemption" in p:
+                p = re.sub(r"The Path of Redemption", f"The Path of {math_path}", p)
+                
+            if real_u <= 0 and "via Constructive" in p:
+                p = re.sub(r"via Constructive", "via Destructive", p)
+                
+            posts[idx] = p
+            break
+
+    story["posts"] = posts
+    return story
+
 def draw_graph(claim_u, claim_psi, real_u, real_psi, title, filename,
                macro_event="", macro_claim_u=None, macro_claim_psi=None, macro_real_u=None, macro_real_psi=None):
     fig, ax = plt.subplots(figsize=(8, 8), facecolor='#111111')

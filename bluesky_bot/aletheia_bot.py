@@ -107,26 +107,19 @@ def split_text(text, max_len=300):
 def pack_posts(posts, max_len=300):
     """
     Packs a list of strings into final posts.
-    If a string splits and leaves a tail (carry_over), the tail is merged with the next string 
-    so we don't waste an entire Bluesky post on an orphaned 1 or 2 words.
+    Each logical post slot is kept distinct without bleeding trailing fragments
+    into subsequent steps.
     """
     final_posts = []
-    carry_over = ""
-    
     for p in posts:
-        current = (carry_over + " " + p).strip() if carry_over else p.strip()
-        carry_over = ""
-            
-        if len(current) <= max_len:
-            final_posts.append(current)
+        line = p.strip()
+        if not line:
+            continue
+        if len(line) <= max_len:
+            final_posts.append(line)
         else:
-            chunks = split_text(current, max_len)
-            final_posts.extend(chunks[:-1])
-            carry_over = chunks[-1]
-            
-    if carry_over:
-        final_posts.append(carry_over)
-        
+            chunks = split_text(line, max_len)
+            final_posts.extend(chunks)
     return final_posts
 
 def pack_5word_posts(posts, max_len=300):
@@ -543,18 +536,31 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                         a_img_data = f.read()
                     a_upload = safe_upload_blob(client, a_img_data, desc=f"analysis split card for {subject}")
                     
-                    alt_parts = [
-                        "System Analysis Details:",
-                        f"Context: {posts[4].replace('What\'s happening:\\n', '').replace('Context:\\n', '').strip() if len(posts) > 4 else ''}",
-                        f"Nuance: {posts[5] if len(posts) > 5 else ''}",
-                        f"Breakdown: {posts[6] if len(posts) > 6 else ''}",
-                        f"Social Physics: {posts[7] if len(posts) > 7 else ''}",
-                        f"Trajectory: {posts[8] if len(posts) > 8 else ''}",
-                        f"The Unavoidables: {posts[9] if len(posts) > 9 else ''}",
-                        f"Alethekanon: {posts[10] if len(posts) > 10 else ''}",
-                        f"Awwthekanon: {posts[11] if len(posts) > 11 else ''}",
-                        f"Brothekanon: {posts[12] if len(posts) > 12 else ''}"
-                    ]
+                    alt_parts = ["System Analysis Details:"]
+                    for p in posts[4:]:
+                        p_clean = p.strip()
+                        if p_clean.startswith("Sub-Audits") or p_clean.startswith("Aspects:"):
+                            alt_parts.append(f"Sub-Audits: {p_clean}")
+                        elif p_clean.startswith("The Bright Side:") or p_clean.startswith("The Poison:"):
+                            alt_parts.append(f"Nuance: {p_clean}")
+                        elif p_clean.startswith("The Breakdown") or p_clean.startswith("Plane Error:"):
+                            alt_parts.append(f"Breakdown: {p_clean}")
+                        elif p_clean.startswith("Social Physics Analysis:"):
+                            alt_parts.append(f"Social Physics: {p_clean}")
+                        elif p_clean.startswith("The Trajectory:"):
+                            alt_parts.append(f"Trajectory: {p_clean}")
+                        elif p_clean.startswith("The Unavoidable"):
+                            alt_parts.append(f"The Unavoidables: {p_clean}")
+                        elif p_clean.startswith("Alethekanon:"):
+                            alt_parts.append(p_clean)
+                        elif p_clean.startswith("Awwthekanon:"):
+                            alt_parts.append(p_clean)
+                        elif p_clean.startswith("Brothekanon:"):
+                            alt_parts.append(p_clean)
+                        elif p_clean.startswith("Spirithekanon:"):
+                            alt_parts.append(p_clean)
+                        else:
+                            alt_parts.append(f"Context: {p_clean}")
                     card_alt = "\n\n".join(alt_parts)
                     if len(card_alt) > 9900:
                         card_alt = card_alt[:9897] + "..."

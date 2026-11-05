@@ -149,6 +149,7 @@ Format:
 
 ### Element 9: The Trajectory & Destination
 * **Wording**: Phrased organically: `The Trajectory: The Path of [Path Name].\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward [Outcome/Terminal Zone]` followed by a brief 1-sentence mathematical explanation. Keep the entire combined post strictly under 275 characters.
+* **Deterministic Path Invariant**: The Path Name and Geodesic must strictly match the quadrant transition. GG -> GE is strictly The Path of Fall (or Fall into Destruction), and GG -> LE is The Path of Deception. You are STRICTLY FORBIDDEN from using The Path of Redemption or ia Constructive on any vector crossing into the negative exclusive hemisphere (-u). Redemption strictly requires an upward vector toward systemic good (+u).
 
 ### Element 10: The Unavoidables
 * **Format**:

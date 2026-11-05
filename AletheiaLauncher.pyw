@@ -566,7 +566,10 @@ class AletheiaLauncherApp:
         # Row 3: Direct Target Post & Reply Dispatcher Card
         self.create_direct_reply_card(left_panel)
 
-        # Row 4: Batch Evaluator Card
+        # Row 4: Story Re-Audit & Correction Dispatcher Card
+        self.create_reaudit_card(left_panel)
+
+        # Row 5: Batch Evaluator Card
         self.create_batch_card(left_panel)
 
         # Row 5: Live Posting Card
@@ -2048,6 +2051,107 @@ class AletheiaLauncherApp:
                 subprocess.Popen(["xdg-open", latest])
         except Exception as e:
             self.log_reply(f"\nError previewing card image: {e}\n")
+
+
+    def create_reaudit_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="🔄 Story Re-Audit & Correction Dispatcher", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 4))
+
+        desc = tk.Label(
+            inner,
+            text="Re-evaluate an existing story or post with fresh multi-source search grounding, correct trajectories, and post a linked Errata reply to Bluesky.",
+            font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG
+        )
+        desc.pack(anchor="w", pady=(0, 8))
+
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 8))
+
+        # Target Story / URL
+        tk.Label(grid_frame, text="Target Story / URL", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=4, padx=(0, 5))
+        
+        bot_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bluesky_bot")
+        live_dir = os.path.join(bot_dir, "stories", "live")
+        recent_stories = []
+        if os.path.exists(live_dir):
+            try:
+                story_files = [f for f in os.listdir(live_dir) if f.startswith("factcheck_") and f.endswith(".json")]
+                story_files.sort(key=lambda f: os.path.getmtime(os.path.join(live_dir, f)), reverse=True)
+                recent_stories = [f[len("factcheck_"):-len(".json")] for f in story_files[:30]]
+            except Exception:
+                pass
+
+        self.combo_reaudit_target = ttk.Combobox(grid_frame, width=54, font=self.font_body, values=recent_stories)
+        if "dems_flips_iowa_senate_thune_vow" in recent_stories:
+            self.combo_reaudit_target.set("dems_flips_iowa_senate_thune_vow")
+        elif recent_stories:
+            self.combo_reaudit_target.set(recent_stories[0])
+        self.combo_reaudit_target.grid(row=0, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
+
+        # Correction Reason & Focus
+        tk.Label(grid_frame, text="Editorial Focus / Reason", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reaudit_reason = tk.Entry(grid_frame, width=54, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reaudit_reason.insert(0, "Rebalance with wire sources; ground in verified civic event instead of partisan rhetoric")
+        self.ent_reaudit_reason.grid(row=1, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
+
+        # Model and options
+        tk.Label(grid_frame, text="Model", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.combo_reaudit_model = ttk.Combobox(grid_frame, width=20, state="readonly", font=self.font_body, values=[
+            "gemini-3.8-flash",
+            "gemini-2.5-flash",
+            "gemini-2.5-pro"
+        ])
+        self.combo_reaudit_model.set("gemini-3.8-flash")
+        self.combo_reaudit_model.grid(row=2, column=1, sticky="w", pady=4, padx=(0, 15))
+
+        self.val_reaudit_live = tk.BooleanVar(value=False)
+        self.chk_reaudit_live = ttk.Checkbutton(grid_frame, text="Post Errata Reply Directly to Bluesky", variable=self.val_reaudit_live)
+        self.chk_reaudit_live.grid(row=2, column=2, columnspan=2, sticky="w", pady=4)
+
+        # Buttons
+        btn_frame = tk.Frame(inner, bg=CARD_BG)
+        btn_frame.pack(fill=tk.X, pady=(6, 0))
+
+        self.btn_run_reaudit = tk.Button(
+            btn_frame, text="🔄 Launch Story Re-Audit", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=self.run_story_reaudit
+        )
+        self.btn_run_reaudit.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_run_reaudit.bind("<Enter>", lambda e: self.btn_run_reaudit.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_run_reaudit.bind("<Leave>", lambda e: self.btn_run_reaudit.configure(bg=ACCENT_BLUE))
+
+    def run_story_reaudit(self):
+        target = self.combo_reaudit_target.get().strip()
+        if not target:
+            self.log_eval("\n[ERROR] Target Story slug or Bluesky post URL cannot be empty.\n")
+            return
+
+        reason = self.ent_reaudit_reason.get().strip()
+        model = self.combo_reaudit_model.get().strip() or "gemini-3.8-flash"
+        python_bin = self.get_python_bin()
+
+        cmd = [
+            python_bin, "-u", "bluesky_bot/reaudit_story.py",
+            "--target", target,
+            "--reason", reason,
+            "--model", model
+        ]
+        if hasattr(self, 'val_potential') and self.val_potential.get():
+            cmd.append("--potential")
+        else:
+            cmd.append("--son")
+
+        if self.val_reaudit_live.get():
+            cmd.append("--live")
+
+        self.log_eval(f"\n> Launching Story Re-Audit: {' '.join(cmd)}\n")
+        self.run_eval_subprocess_async(cmd)
 
 if __name__ == "__main__":
     try:

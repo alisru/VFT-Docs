@@ -1257,8 +1257,7 @@ def build_system_instruction(use_son=False, use_potential=False, compact=False, 
         )
     if not five_word:
         instruction += f"\n\n{SOCIAL_PHYSICS_DIRECTIVE}"
-    if extra_context:
-        instruction += f"\n\nCRITICAL: You must actively incorporate the following background knowledge and additional context when performing the audits:\n{extra_context}"
+    # extra_context is injected into user_payload to avoid duplicate token consumption
     return instruction
 
 def build_output_format(n, use_son=False, use_potential=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
@@ -2395,6 +2394,13 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
                 story.setdefault("topic", t.strip())
 
             story.setdefault("event", "")
+
+            # Enforce Deterministic Trajectory Invariant (prevent LLM hallucinations)
+            try:
+                from generate_graph import enforce_deterministic_trajectory
+                story = enforce_deterministic_trajectory(story)
+            except Exception as te:
+                print(f"  Warning: Could not enforce deterministic trajectory for '{slug}': {te}")
 
             # Post count validation
             posts = story.get("posts", [])
