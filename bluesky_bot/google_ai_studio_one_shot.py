@@ -1178,7 +1178,7 @@ def build_formatting_rules(use_son=False, use_potential=False, compact=False, fi
             "- Post 5 (index 4 in the posts array: Source Quality Scorecard / Sub-Audits Breakdown) is the dedicated aspect & source breakdown. Format DIRECTLY as concise bullet points (NO header prefix). Each bullet must be 1 short line under 60 chars:\n"
             "  - [Outlet / Aspect A]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line framing/omission reason under 60 chars].\n"
             "  - [Outlet / Aspect B]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line framing/omission reason under 60 chars].\n"
-            "  *Note: If the story contains multiple reporting sources in the dossier, evaluate each news outlet's editorial integrity and framing bias as individual aspects. Keep the ENTIRE combined Post 5 strictly under 260 characters total.\n"
+            "  *Note: If the story contains multiple reporting sources in the dossier, evaluate each news outlet's editorial integrity, ideological slant, and framing bias as individual aspects. Never evaluate only one side of a partisan debate — always account for the outlets' stated bias tags and contrast competing editorial framing so the audit remains substrate-neutral and objective. Keep the ENTIRE combined Post 5 strictly under 260 characters total.\n"
             "- Post 6 (index 5) is the Context post. Keep it to 1-2 concise sentences under 260 characters.\n"
             "- The Unavoidables post MUST have exactly 1 concise sentence for The Unavoidable Truth and 1 concise sentence for The Unavoidable Lie (under 260 chars total).\n"
             "- The Alethekanon post MUST be at most 2 concise sentences (under 260 chars total).\n\n"

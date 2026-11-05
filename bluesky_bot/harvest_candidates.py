@@ -140,6 +140,89 @@ def scrape_article_content(url, check_cache=True):
             return t_title or "Article", t_desc or "", t_body
         return None, None, f"Error: {e}"
 
+def search_counter_sources_tavily(title, primary_url, primary_bias_family, max_results=3):
+    """
+    Active Perspective Search:
+    When an article is harvested, searches Tavily News to find 2-3 genuine
+    counter-perspectives (opposing political family and neutral wire/center)
+    to prevent one-sided partisan echo chambers.
+    """
+    api_key = os.environ.get("TAVILY_API_KEY", "")
+    if not api_key or not title:
+        return []
+
+    import re
+    clean_title = re.sub(r'[\'\"\[\]\(\)]+', '', title).strip()
+    # Strip trailing source names like '- Fox News' or '| CNN'
+    clean_title = re.sub(r'\s*[-|–]\s*[A-Za-z0-9\s]+$', '', clean_title).strip()
+    if len(clean_title) < 10:
+        return []
+
+    try:
+        payload = {
+            "api_key": api_key,
+            "query": clean_title[:140],
+            "search_depth": "basic",
+            "max_results": 7,
+            "topic": "news"
+        }
+        res = requests.post("https://api.tavily.com/search", json=payload, timeout=8)
+        if res.status_code != 200:
+            return []
+        data = res.json()
+        results = data.get("results", [])
+        if not results:
+            return []
+
+        primary_domain = ""
+        try:
+            primary_domain = urllib.parse.urlparse(primary_url).hostname or ""
+            if primary_domain.startswith("www."):
+                primary_domain = primary_domain[4:]
+        except Exception:
+            pass
+
+        counter_sources = []
+        seen_domains = {primary_domain}
+        seen_families = {primary_bias_family}
+
+        for r in results:
+            r_url = r.get("url", "")
+            r_title = r.get("title", "")
+            r_content = r.get("content", "").strip()
+            if not r_url or not r_content or len(r_content) < 150:
+                continue
+
+            try:
+                r_host = urllib.parse.urlparse(r_url).hostname or ""
+                if r_host.startswith("www."):
+                    r_host = r_host[4:]
+            except Exception:
+                continue
+
+            if not r_host or r_host in seen_domains:
+                continue
+
+            fam = get_outlet_bias_family(r_host)
+            # Prioritize picking an opposing or neutral family
+            if fam not in seen_families or fam in ('center', 'other') or len(seen_families) >= 2:
+                seen_domains.add(r_host)
+                seen_families.add(fam)
+                counter_sources.append({
+                    "publisher": r_host,
+                    "url": r_url,
+                    "title": r_title,
+                    "text": r_content,
+                    "editorial_bias": get_outlet_bias(r_host)
+                })
+            if len(counter_sources) >= max_results:
+                break
+
+        return counter_sources
+    except Exception as ex:
+        print(f"  [Active Search] Warning: Counter-perspective search failed for '{title[:35]}': {ex}")
+        return []
+
 def cluster_candidate_stories(candidates, similarity_threshold=0.35):
     """
     Groups candidates into topic clusters based on entity and title token overlap.
@@ -213,19 +296,70 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
         else:
             seen_publishers = set()
             distinct_sources = []
-            
+            seen_families = set()
+
+            # Pass 1: Prioritize picking sources from different bias families (left, right, center)
+            # to guarantee balanced ideological representation
             for c in cluster:
                 pub = c.get("publisher") or urllib.parse.urlparse(c.get("url", "")).hostname or ""
                 if pub.startswith("www."):
                     pub = pub[4:]
+                fam = get_outlet_bias_family(pub)
                 if pub and pub not in seen_publishers:
-                    seen_publishers.add(pub)
-                    distinct_sources.append(c)
-                elif not pub:
-                    distinct_sources.append(c)
+                    if fam not in seen_families:
+                        seen_publishers.add(pub)
+                        seen_families.add(fam)
+                        distinct_sources.append(c)
                 if len(distinct_sources) >= 3:
                     break
+
+            # Pass 2: If we still have slots (< 3), only add from the same bias family if there is genuinely no alternative
+            # BUT if all distinct sources share the EXACT same bias family (e.g. only Right-wing or only Left-wing),
+            # DO NOT create a synthetic "multi-source" cluster — keep them as single standalone stories
+            # so the audit does not pretend to be a multi-perspective consensus.
+            if len(distinct_sources) < 3:
+                for c in cluster:
+                    pub = c.get("publisher") or urllib.parse.urlparse(c.get("url", "")).hostname or ""
+                    if pub.startswith("www."):
+                        pub = pub[4:]
+                    if pub and pub not in seen_publishers:
+                        fam = get_outlet_bias_family(pub)
+                        # Only allow secondary source if we already have multiple families OR the outlet is neutral center/wire
+                        if len(seen_families) > 1 or fam in ('center', 'other'):
+                            seen_publishers.add(pub)
+                            distinct_sources.append(c)
+                    elif not pub and c not in distinct_sources and len(seen_families) > 1:
+                        distinct_sources.append(c)
+                    if len(distinct_sources) >= 3:
+                        break
+
+            # Anti-Echo Chamber Rule: If all candidates in the cluster belong to the EXACT same partisan family
+            # (e.g. Fox News + Breitbart = only 'right'), refuse to treat it as a multi-source consensus.
+            # Fall back to a single primary source.
+            partisan_families = {f for f in seen_families if f in ('left', 'right')}
+            if len(partisan_families) == 1 and 'center' not in seen_families and len(distinct_sources) > 1:
+                print(f"  [Anti-Echo Chamber] Demoting cluster '{cluster[0].get('subject')}' to single source: all {len(distinct_sources)} sources share same partisan bias ({list(partisan_families)[0]}).")
+                distinct_sources = [distinct_sources[0]]
                     
+            # Active Perspective Enrichment:
+            # If the cluster only has 1 perspective (or had to be demoted because of an echo-chamber),
+            # actively search Tavily News to find 1-2 opposing/wire counter-sources!
+            if len(distinct_sources) < 2:
+                prim = distinct_sources[0]
+                prim_subj = prim.get("subject") or prim.get("title") or ""
+                prim_url = prim.get("url") or ""
+                prim_pub = prim.get("publisher") or urllib.parse.urlparse(prim_url).hostname or ""
+                if prim_pub.startswith("www."):
+                    prim_pub = prim_pub[4:]
+                prim_fam = get_outlet_bias_family(prim_pub)
+
+                found_counters = search_counter_sources_tavily(prim_subj, prim_url, prim_fam, max_results=2)
+                if found_counters:
+                    for cs in found_counters:
+                        distinct_sources.append(cs)
+                        seen_publishers.add(cs["publisher"])
+                    print(f"  [Active Search Enriched] Found {len(found_counters)} counter-perspective source(s) for '{prim_subj[:35]}': {', '.join(cs['publisher'] for cs in found_counters)}")
+
             if len(distinct_sources) == 1:
                 c = distinct_sources[0]
                 c["is_multi_source"] = False
@@ -243,12 +377,14 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
                 pub_name = s.get("publisher") or urllib.parse.urlparse(s.get("url", "")).hostname or f"Source {idx}"
                 url = s.get("url", "")
                 text = s.get("text", "")
+                bias = get_outlet_bias(pub_name)
                 sources_summary.append({
                     "publisher": pub_name,
+                    "editorial_bias": bias,
                     "url": url,
                     "snippet": text[:400].strip()
                 })
-                dossier_lines.append(f"\n[Source {idx} — {pub_name}] (URL: {url}):\n{text.strip()}")
+                dossier_lines.append(f"\n[Source {idx} — {pub_name} (Bias: {bias})] (URL: {url}):\n{text.strip()}")
                 
             primary_c["cluster_sources"] = sources_summary
             primary_c["cross_source_dossier"] = "\n".join(dossier_lines)
@@ -433,10 +569,110 @@ def load_banned_topics():
             print(f"Warning: Failed to load banned_topics.json: {e}")
     return default_categories
 
+# Editorial & Political Bias Mapping for Outlets (AllSides / Ad Fontes standard consensus)
+OUTLET_BIAS_MAP = {
+    # Left / Lean Left
+    'theguardian.com': 'Left / Progressive',
+    'theguardian.co.uk': 'Left / Progressive',
+    'msnbc.com': 'Left',
+    'ms.now': 'Left',
+    'vox.com': 'Left',
+    'motherjones.com': 'Left',
+    'jacobin.com': 'Left / Democratic Socialist',
+    'thenation.com': 'Left',
+    'slate.com': 'Left / Progressive',
+    'huffpost.com': 'Left',
+    'democracynow.org': 'Left / Progressive',
+    'nytimes.com': 'Lean Left',
+    'washingtonpost.com': 'Lean Left',
+    'theatlantic.com': 'Lean Left',
+    'politico.com': 'Lean Left',
+    'cnn.com': 'Lean Left',
+    'cnbc.com': 'Lean Left',
+    'nbcnews.com': 'Lean Left',
+    'cbsnews.com': 'Lean Left',
+    'abcnews.go.com': 'Lean Left',
+    'npr.org': 'Lean Left / Public Broadcaster',
+    'theconversation.com': 'Lean Left / Academic',
+    'sbs.com.au': 'Lean Left / Public Broadcaster',
+    'thesaturdaypaper.com.au': 'Left / Progressive',
+    'ktoo.org': 'Lean Left / Public Broadcaster',
+    'adn.com': 'Center-Local',
+    
+    # Center / Wire / Institutional
+    'reuters.com': 'Center / Wire Service',
+    'apnews.com': 'Center / Wire Service',
+    'bbc.com': 'Center / Public Broadcaster',
+    'bbc.co.uk': 'Center / Public Broadcaster',
+    'dw.com': 'Center / Public Broadcaster',
+    'france24.com': 'Center / Public Broadcaster',
+    'aljazeera.com': 'Center / State-Funded International',
+    'bloomberg.com': 'Center / Financial Wire',
+    'wsj.com': 'Center / Financial (News) / Lean Right (Opinion)',
+    'ft.com': 'Center / Financial International',
+    'abc.net.au': 'Center / Public Broadcaster',
+    'cbc.ca': 'Center / Public Broadcaster',
+    'techcrunch.com': 'Center / Technology',
+    'theverge.com': 'Lean Left / Technology',
+    'arstechnica.com': 'Center / Technology',
+    'csmonitor.com': 'Center',
+    'usatoday.com': 'Center',
+    'hilltimes.com': 'Center / Parliamentary Reporting',
+    'thehill.com': 'Center',
+    'chicagotribune.com': 'Center / Regional',
+    'smh.com.au': 'Center / Regional',
+    'theage.com.au': 'Center / Regional',
+
+    # Lean Right / Right
+    'thefederalist.com': 'Right / Conservative',
+    'foxnews.com': 'Right / Conservative',
+    'nypost.com': 'Right / Tabloid Conservative',
+    'washingtonexaminer.com': 'Right / Conservative',
+    'washingtontimes.com': 'Right / Conservative',
+    'dailycaller.com': 'Right / Conservative',
+    'breitbart.com': 'Far Right / Populist Nationalist',
+    'dailywire.com': 'Right / Conservative',
+    'nationalreview.com': 'Right / Conservative',
+    'freebeacon.com': 'Right / Conservative',
+    'spectator.org': 'Right / Conservative',
+    'spectator.co.uk': 'Right / Conservative',
+    'dailymail.co.uk': 'Right / Tabloid Conservative',
+    'telegraph.co.uk': 'Right / Conservative',
+    'newsmax.com': 'Right / Conservative',
+    'oann.com': 'Far Right / Conservative',
+    'theepochtimes.com': 'Far Right / Anti-Communist',
+    'skynews.com.au': 'Right / Conservative'
+}
+
+def get_outlet_bias(domain_or_pub):
+    if not domain_or_pub:
+        return 'Independent / Unrated'
+    clean = domain_or_pub.lower().strip()
+    if clean.startswith('www.'):
+        clean = clean[4:]
+    if clean in OUTLET_BIAS_MAP:
+        return OUTLET_BIAS_MAP[clean]
+    for dom, bias in OUTLET_BIAS_MAP.items():
+        if clean == dom or clean.endswith('.' + dom):
+            return bias
+    return 'Independent / Unrated'
+
+def get_outlet_bias_family(domain_or_pub):
+    bias = get_outlet_bias(domain_or_pub)
+    b_low = bias.lower()
+    if 'left' in b_low:
+        return 'left'
+    if 'right' in b_low:
+        return 'right'
+    if 'center' in b_low or 'wire' in b_low:
+        return 'center'
+    return 'other'
+
 AD_OR_LIFESTYLE_PATH_SEGMENTS = {
     'lifestyle', 'tvshowbiz', 'femail', 'shopping', 'deals', 'coupons',
     'promotions', 'sponsored', 'advertisement', 'native-content',
-    'partner-content', 'affiliate', 'horoscopes', 'puzzles', 'recipes'
+    'partner-content', 'affiliate', 'horoscopes', 'puzzles', 'recipes',
+    'advertisements', 'ad', 'ads', 'sponsored-content', 'commercial', 'brand-spotlight'
 }
 
 def is_news_url(url):
@@ -468,7 +704,10 @@ AD_TEXT_PATTERNS = [
     r'\bsponsored post\b', r'\bpromoted post\b', r'\bpaid partnership\b',
     r'\bpaid post\b', r'\bpartner content\b', r'\baffiliate link\b',
     r'\buse code[:\s]', r'\bpromo code[:\s]', r'\bdiscount code[:\s]',
-    r'\border now\b', r'\bbuy now\b', r'\bexclusive discount\b'
+    r'\border now\b', r'\bbuy now\b', r'\bexclusive discount\b',
+    r'\bsponsored content\b', r'\bpaid advertisement\b', r'\badvertisement feature\b',
+    r'\bsubscribe to read\b', r'\benjoy unlimited website access\b',
+    r'\bexclusive content for subscribers\b', r'\bplease subscribe to continue reading\b'
 ]
 
 def is_ad_text(text):
@@ -826,14 +1065,16 @@ def run_harvest():
         # Politics
         {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml", "categories": ["politics"]},
         {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "categories": ["politics"]},
+        {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml", "categories": ["politics"]},
+        {"name": "The Guardian Politics", "url": "https://www.theguardian.com/politics/rss", "categories": ["politics"]},
+        {"name": "Politico", "url": "https://rss.politico.com/politics-news.xml", "categories": ["politics"]},
+        {"name": "The Hill", "url": "https://thehill.com/feed/", "categories": ["politics", "general"]},
         {"name": "Fox News Politics", "url": "http://feeds.foxnews.com/foxnews/politics", "categories": ["politics", "world", "general"]},
         {"name": "Washington Examiner", "url": "https://www.washingtonexaminer.com/feed/", "categories": ["politics", "general"]},
         {"name": "The Federalist", "url": "https://thefederalist.com/feed/", "categories": ["politics", "general"]},
         {"name": "Washington Times", "url": "https://www.washingtontimes.com/rss/headlines/news/politics/", "categories": ["politics", "general"]},
         {"name": "Daily Caller", "url": "https://dailycaller.com/feed/", "categories": ["politics", "general"]},
         {"name": "Breitbart", "url": "https://feeds.feedburner.com/breitbart", "categories": ["politics", "general"]},
-        {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml", "categories": ["politics"]},
-        {"name": "The Guardian Politics", "url": "https://www.theguardian.com/politics/rss", "categories": ["politics"]},
 
         # Science
         {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "categories": ["science"]},
@@ -1252,7 +1493,13 @@ def run_harvest():
 
         print(f"[{idx}/{len(all_final)}] Scraping content from: {url}")
         title, desc, body = scrape_article_content(url)
-        if body and not body.startswith("Error") and len(body.strip()) >= 200:
+        is_paywall_or_ad = False
+        if body:
+            b_lower = body.lower()
+            if any(re.search(pat, b_lower) for pat in AD_TEXT_PATTERNS):
+                is_paywall_or_ad = True
+
+        if body and not body.startswith("Error") and len(body.strip()) >= 200 and not is_paywall_or_ad:
             article_text_clean = body.strip()
         
             # Check if this candidate is from Bluesky

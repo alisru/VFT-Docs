@@ -1755,6 +1755,10 @@
       renderEmulator();
       renderMap();
       renderController();
+      const sourceTab = document.getElementById('source-tab');
+      if (sourceTab && sourceTab.classList.contains('active')) {
+        fetchSourceText();
+      }
     }
 
     // Render Bluesky Thread Emulator
@@ -3269,7 +3273,7 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
           const params = new URLSearchParams();
           if (url) params.set('url', url);
           if (cleanSlug) params.set('id', cleanSlug);
-          const resp = await fetch(`http://localhost:8765/source?`);
+          const resp = await fetch(`http://localhost:8765/source?${params.toString()}`);
           if (resp.ok) {
             const lData = await resp.json();
             if (lData && lData.text) articleText = lData.text;
