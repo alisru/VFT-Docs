@@ -9,13 +9,19 @@ _Personal_Files/
 _Generated_Content/
 
 _VFT MD/bible/actualism_shorts
-
+_VFT MD/Physics/semantic_gluon_dna
 bluesky_bot/archive_sessions_json
 bluesky_bot/chat_sessions
+bluesky_bot/dist_audit_site
+bluesky_bot/graph_png
 bluesky_bot/chat_uploads
 bluesky_bot/duplicate_discard
 bluesky_bot/fail
 bluesky_bot/darkroom
+bluesky_bot/dark
+bluesky_bot/aita/cards
+
+
 # --- AI Chat Logs & Video Assets ---
 _AI files and chat logs/
 
@@ -77,10 +83,18 @@ _VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/*.parquet
 !_VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/hansard_members.parquet
 _VFT MD/WWSUTRU/Australia/Aus_Kanon/hansard/xml/
 
-# --- Local Caches & SQLite Databases ---
+# --- Local Caches, Temp Files & Runtime Queues ---
 bluesky_bot/scraped_articles_cache.sqlite
 bluesky_bot/harvested_stories_log.jsonl
 bluesky_bot/harvested_stories_log.backup.jsonl
+bluesky_bot/.mpl_cache/
+bluesky_bot/launcher_state.json
+bluesky_bot/harvested_candidates.json
+bluesky_bot/aita/aita_queue.json
+bluesky_bot/stories_to_audit_list.json
+bluesky_bot/takedown_investigation_queue.json
+*_graph.png
+*.tmp
 chat_context/data/*.sqlite*
 chat_context/canvases/
 
